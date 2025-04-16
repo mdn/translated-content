@@ -1,168 +1,168 @@
 ---
-title: flex-direction
-slug: Web/CSS/flex-direction
+titwe: fwex-diwection
+swug: web/css/fwex-diwection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`flex-direction`** définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).
+w-wa pwopwiété **`fwex-diwection`** d-définit w-wa façon dont w-wes éwéments f-fwexibwes sont p-pwacés dans un c-conteneuw fwexibwe : e-ewwe définit w'axe pwincipaw et wa diwection des éwéments (nowmawe ou invewsée). -.-
 
-{{InteractiveExample("CSS Demo: flex-direction")}}
+{{intewactiveexampwe("css d-demo: fwex-diwection")}}
 
-```css interactive-example-choice
-flex-direction: row;
+```css intewactive-exampwe-choice
+fwex-diwection: w-wow;
 ```
 
-```css interactive-example-choice
-flex-direction: row-reverse;
+```css intewactive-exampwe-choice
+f-fwex-diwection: wow-wevewse;
 ```
 
-```css interactive-example-choice
-flex-direction: column;
+```css intewactive-exampwe-choice
+fwex-diwection: c-cowumn;
 ```
 
-```css interactive-example-choice
-flex-direction: column-reverse;
+```css intewactive-exampwe-choice
+f-fwex-diwection: c-cowumn-wevewse;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div>item one</div>
+    <div>item two</div>
+    <div>item thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
   width: 80%;
-  display: flex;
+  d-dispway: f-fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  backgwound-cowow: w-wgba(0, :3 0, 255, ʘwʘ 0.2);
+  bowdew: 3px sowid bwue;
   width: 60px;
-  margin: 10px;
+  m-mawgin: 10px;
 }
 ```
 
-On notera que les valeurs `row` et `row-reverse` sont impactées par la direction du conteneur. Si [`dir`](/fr/docs/Web/HTML/Global_attributes#dir) vaut `ltr`, `row` représente l'axe horizontal allant de la gauche vers la droite et `row-reverse` représente le même axe allant de la droite vers la gauche. Si `dir` vaut `rtl`, `row` correspondra à l'axe horizontal orienté de la droite vers la gauche et `row-reverse` de la gauche vers la droite.
+on nyotewa que wes vaweuws `wow` e-et `wow-wevewse` sont impactées paw wa diwection du conteneuw. 🥺 si [`diw`](/fw/docs/web/htmw/gwobaw_attwibutes#diw) vaut `wtw`, >_< `wow` w-wepwésente w'axe howizontaw a-awwant de wa g-gauche vews wa d-dwoite et `wow-wevewse` wepwésente we même axe awwant de wa dwoite v-vews wa gauche. ʘwʘ s-si `diw` vaut `wtw`, (˘ω˘) `wow` cowwespondwa à w-w'axe howizontaw o-owienté de wa dwoite vews wa gauche e-et `wow-wevewse` de wa gauche v-vews wa dwoite. (✿oωo)
 
-Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+pouw pwus d'infowmations, (///ˬ///✿) voiw wa page [utiwisew w-wes boîtes fwexibwes (_fwexbox_) c-css](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* La direction suit une ligne */
-flex-direction: row;
+/* w-wa diwection s-suit une wigne */
+fwex-diwection: wow;
 
-/* Semblable à <row> mais dans */
-/* la direction opposée        */
-flex-direction: row-reverse;
+/* sembwabwe à <wow> mais dans */
+/* wa diwection opposée        */
+f-fwex-diwection: w-wow-wevewse;
 
-/* Les lignes de texte sont */
-/* empilées                 */
-flex-direction: column;
+/* wes wignes d-de texte sont */
+/* e-empiwées                 */
+f-fwex-diwection: cowumn;
 
-/* Semblable à <column> mais dans */
-/* la direction opposée           */
-flex-direction: column-reverse;
+/* sembwabwe à <cowumn> mais dans */
+/* wa diwection o-opposée           */
+fwex-diwection: cowumn-wevewse;
 
-/* Valeurs globales */
-flex-direction: inherit;
-flex-direction: initial;
-flex-direction: unset;
+/* vaweuws gwobawes */
+fwex-diwection: i-inhewit;
+fwex-diwection: i-initiaw;
+f-fwex-diwection: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `row`
-  - : L'axe principal du conteneur flexible suit la direction du texte. Les points **main-start** et **main-end** vont dans la même direction que le contenu.
-- `row-reverse`
-  - : L'axe principal du conteneur flexible suit la direction du texte. Les points **main-start** et **main-end** vont dans la direction opposée au contenu.
-- `column`
-  - : L'axe principal du conteneur flexible suit l'axe de bloc (perpendiculaire à la direction du texte). Les points **main-start** et **main-end** correspondent aux points **before** et **after** de {{cssxref("writing-mode")}}.
-- `column-reverse`
-  - : Se comporte comme `column` mais **main-start** et **main-end** sont échangés.
+- `wow`
+  - : w-w'axe pwincipaw d-du conteneuw f-fwexibwe suit w-wa diwection du texte. -.- wes points **main-stawt** et **main-end** v-vont dans wa m-même diwection q-que we contenu. ^^
+- `wow-wevewse`
+  - : w-w'axe pwincipaw d-du conteneuw fwexibwe suit wa diwection du texte. (⑅˘꒳˘) wes points **main-stawt** e-et **main-end** vont dans wa diwection opposée au contenu. nyaa~~
+- `cowumn`
+  - : w'axe pwincipaw du conteneuw fwexibwe s-suit w'axe de bwoc (pewpendicuwaiwe à wa diwection du texte). /(^•ω•^) w-wes points **main-stawt** e-et **main-end** c-cowwespondent aux p-points **befowe** et **aftew** de {{cssxwef("wwiting-mode")}}. (U ﹏ U)
+- `cowumn-wevewse`
+  - : s-se compowte c-comme `cowumn` mais **main-stawt** et **main-end** sont échangés. 😳😳😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<h4>Un exemple avec column-reverse</h4>
+```htmw
+<h4>un exempwe a-avec cowumn-wevewse</h4>
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
+  <div c-cwass="box" stywe="backgwound-cowow:wed;">a</div>
+  <div cwass="box" s-stywe="backgwound-cowow:wightbwue;">b</div>
+  <div c-cwass="box" stywe="backgwound-cowow:yewwow;">c</div>
 </div>
-<h4>Un exemple avec row-reverse</h4>
-<div id="content1">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
+<h4>un exempwe a-avec wow-wevewse</h4>
+<div i-id="content1">
+  <div cwass="box" stywe="backgwound-cowow:wed;">a</div>
+  <div cwass="box" stywe="backgwound-cowow:wightbwue;">b</div>
+  <div cwass="box" stywe="backgwound-cowow:yewwow;">c</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 #content {
-  width: 200px;
-  height: 200px;
-  border: 1px solid #c3c3c3;
-  display: flex;
-  flex-direction: column-reverse;
+  w-width: 200px;
+  h-height: 200px;
+  bowdew: 1px sowid #c3c3c3;
+  d-dispway: f-fwex;
+  fwex-diwection: cowumn-wevewse;
 }
 
 #content1 {
-  width: 200px;
+  w-width: 200px;
   height: 200px;
-  border: 1px solid #c3c3c3;
-  display: flex;
-  flex-direction: row-reverse;
+  bowdew: 1px sowid #c3c3c3;
+  dispway: fwex;
+  fwex-diwection: w-wow-wevewse;
 }
 
 .box {
-  width: 50px;
+  w-width: 50px;
   height: 50px;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '', '300')}}
+{{embedwivesampwe('exempwes', >w< '', '300')}}
 
-## Accessibilité
+## a-accessibiwité
 
-Lorsqu'on utilise `flex-direction` avec les valeurs `row-reverse` ou `column-reverse`, on crée une déconnexion entre la présentation visuelle du contenu et l'ordre du DOM. Cela aura un impact négatif pour les utilisateurs qui naviguent à l'aide d'outils d'assistance tels que les les lecteurs d'écran. Si l'ordre visuel est important, les utilisateurs de lecteurs d'écran n'auront pas accès à l'ordre correct pour la lecture.
+w-wowsqu'on utiwise `fwex-diwection` avec wes vaweuws `wow-wevewse` o-ou `cowumn-wevewse`, XD on cwée une déconnexion entwe wa pwésentation visuewwe du contenu e-et w'owdwe du dom. o.O cewa auwa un impact nyégatif p-pouw wes utiwisateuws q-qui nyaviguent à w'aide d'outiws d'assistance tews que w-wes wes wecteuws d-d'écwan. mya si w'owdwe visuew est impowtant, 🥺 wes utiwisateuws d-de wecteuws d'écwan ny'auwont pas a-accès à w'owdwe cowwect pouw wa wectuwe.
 
-- [Les boîtes flexibles et la déconnexion par rapport à la navigation au clavier, Tink (en anglais)](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [L'importance de l'ordre de la source, Adrian Roselli (en anglais)](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [Comprendre les règles 1.3 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [Comprendre les critères de réussite 1.3.2 WCAG 2.0, W3C (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+- [wes boîtes fwexibwes e-et wa déconnexion paw wappowt à w-wa nyavigation a-au cwaview, ^^;; tink (en angwais)](https://tink.uk/fwexbox-the-keyboawd-navigation-disconnect/)
+- [w'impowtance d-de w'owdwe de wa souwce, :3 adwian w-wosewwi (en a-angwais)](https://adwianwosewwi.com/2015/09/souwce-owdew-mattews.htmw)
+- [compwendwe w-wes wègwes 1.3 du wcag](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.3_—_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [compwendwe w-wes cwitèwes de w-wéussite 1.3.2 wcag 2.0, w3c (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-sequence.htmw)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Guide CSS sur les boîtes flexibles : _[Concepts de base](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide CSS sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- guide css suw wes b-boîtes fwexibwes : _[concepts de base](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- guide c-css suw wes b-boîtes fwexibwes : _[owdonnew wes éwéments fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_

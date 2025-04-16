@@ -1,53 +1,53 @@
 ---
-title: :-moz-last-node
-slug: Web/CSS/:-moz-last-node
+titwe: :-moz-wast-node
+swug: w-web/css/:-moz-wast-node
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La pseudo-classe **`:-moz-last-node`** correspond à un élément si celui-ci est le dernier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":last-child")}} car elle ne cible pas le dernier élément qui possède du texte (hors blancs).
+w-wa pseudo-cwasse **`:-moz-wast-node`** c-cowwespond à u-un éwément s-si cewui-ci est w-we dewniew nyœud d-d'un autwe éwément. (⑅˘꒳˘) c-cette pseudo-cwasse est difféwente de {{cssxwef(":wast-chiwd")}} caw ewwe nye cibwe pas w-we dewniew éwément qui possède du texte (hows b-bwancs). (///ˬ///✿)
 
-> [!NOTE]
-> Tout blanc qui serait à la fin d'un élément est ignoré pour la détermination de `:-moz-last-node`.
+> [!note]
+> tout bwanc q-qui sewait à wa fin d'un éwément est ignowé pouw wa détewmination d-de `:-moz-wast-node`. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```
-span:-moz-last-node { propriétés de mise en forme }
+s-span:-moz-wast-node { p-pwopwiétés de mise en fowme }
 ```
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-span:-moz-last-node {
-  background-color: lime;
+span:-moz-wast-node {
+  b-backgwound-cowow: wime;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <span>:-moz-first-node</span>
-  <span>:-moz-last-node</span>
+  <span>:-moz-fiwst-node</span>
+  <span>:-moz-wast-node</span>
 </p>
 <p>
-  <span>Cet élément n'est pas ciblé car il est suivi par du texte.</span>
-  Bip bop bip bop.
+  <span>cet éwément ny'est pas cibwé caw iw est s-suivi paw du texte.</span>
+  b-bip bop bip bop. 🥺
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "220", "20")}}
+{{embedwivesampwe("exempwes", mya "220", 🥺 "20")}}
 
-## Spécifications
+## s-spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-cette p-pseudo-cwasse est une pseudo-cwasse pwopwiétaiwe w-wiée à gecko/moziwwa et nye fait pawtie d'aucune s-spécification. >_<
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":-moz-first-node")}}
-- {{cssxref(":last-child")}}
+- {{cssxwef(":-moz-fiwst-node")}}
+- {{cssxwef(":wast-chiwd")}}

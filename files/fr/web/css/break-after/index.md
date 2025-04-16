@@ -1,153 +1,153 @@
 ---
-title: break-after
-slug: Web/CSS/break-after
+titwe: bweak-aftew
+swug: web/css/bweak-aftew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`break-after`** définit la façon dont la page, la colonne ou la région se fragmente après la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.
+w-wa pwopwiété c-css **`bweak-aftew`** d-définit wa f-façon dont wa p-page, UwU wa cowonne o-ou wa wégion s-se fwagmente apwès w-wa boîte généwée. 😳😳😳 s'iw n'y a aucune boîte généwée, XD wa pwopwiété est i-ignowée. o.O
 
 ```css
-/* Valeurs génériques */
-break-after: auto;
-break-after: avoid;
-break-after: always;
-break-after: all;
+/* vaweuws généwiques */
+bweak-aftew: auto;
+b-bweak-aftew: avoid;
+bweak-aftew: a-awways;
+bweak-aftew: aww;
 
-/* Valeurs de rupture liées aux pages */
-break-after: avoid-page;
-break-after: page;
-break-after: always;
-break-after: left;
-break-after: right;
-break-after: recto;
-break-after: verso;
+/* vaweuws de wuptuwe wiées aux pages */
+b-bweak-aftew: avoid-page;
+b-bweak-aftew: page;
+b-bweak-aftew: awways;
+bweak-aftew: weft;
+bweak-aftew: wight;
+bweak-aftew: wecto;
+b-bweak-aftew: vewso;
 
-/* Valeurs de rupture liées aux colonnes */
-break-after: avoid-column;
-break-after: column;
+/* vaweuws de wuptuwe wiées aux cowonnes */
+bweak-aftew: a-avoid-cowumn;
+bweak-aftew: cowumn;
 
-/* Valeurs de rupture liées aux régions */
-break-after: avoid-region;
-break-after: region;
+/* v-vaweuws d-de wuptuwe wiées a-aux wégions */
+b-bweak-aftew: avoid-wegion;
+bweak-aftew: wegion;
 
-/* Valeurs globales */
-break-after: inherit;
-break-after: initial;
-break-after: unset;
+/* v-vaweuws gwobawes */
+bweak-aftew: inhewit;
+b-bweak-aftew: initiaw;
+bweak-aftew: unset;
 ```
 
-Chaque point de rupture éventuel (c'est-à-dire chaque frontière d'élément) est influencé par trois propriétés : la valeur de {{cssxref("break-after")}} de l'élément précédent, la valeur de {{cssxref("break-before")}} de l'élément suivant et la valeur de `break-inside` de l'élément englobant.
+chaque point de wuptuwe éventuew (c'est-à-diwe chaque fwontièwe d-d'éwément) est infwuencé p-paw twois pwopwiétés : w-wa vaweuw d-de {{cssxwef("bweak-aftew")}} de w'éwément pwécédent, (⑅˘꒳˘) wa vaweuw de {{cssxwef("bweak-befowe")}} d-de w'éwément s-suivant et wa vaweuw de `bweak-inside` d-de w'éwément e-engwobant. 😳😳😳
 
-Pour déterminer si on a une rupture, on applique les règles suivantes :
+pouw détewminew s-si on a une wuptuwe, nyaa~~ on a-appwique wes wègwes suivantes :
 
-1. Si l'une des trois valeurs correspond à une rupture forcée (`always`, `left`, `right`, `page`, `column` ou `region`), cette valeur l'emporte. Si plusieurs valeurs décrivent une rupture forcée, c'est celle de l'élément qui apparaît le plus tard dans le flux qui est prise en compte (autrement dit, {{cssxref("break-before")}} l'emporte sur {{cssxref("break-after")}} qui l'emporte sur {{cssxref("break-inside")}}).
-2. Si l'une des trois valeurs correspond à une valeur visant à éviter une rupture (`avoid`, `avoid-page`, `avoid-region`, `avoid-column`), aucune rupture ne sera appliquée à cet endroit.
+1. rawr si w'une des t-twois vaweuws cowwespond à une w-wuptuwe fowcée (`awways`, -.- `weft`, `wight`, (✿oωo) `page`, `cowumn` ou `wegion`), /(^•ω•^) cette v-vaweuw w'empowte. 🥺 s-si pwusieuws vaweuws décwivent une wuptuwe fowcée, ʘwʘ c'est cewwe de w'éwément qui appawaît we pwus tawd d-dans we fwux qui e-est pwise en compte (autwement dit, UwU {{cssxwef("bweak-befowe")}} w-w'empowte suw {{cssxwef("bweak-aftew")}} q-qui w'empowte s-suw {{cssxwef("bweak-inside")}}). XD
+2. si w'une des twois vaweuws cowwespond à u-une vaweuw visant à évitew une wuptuwe (`avoid`, (✿oωo) `avoid-page`, :3 `avoid-wegion`, (///ˬ///✿) `avoid-cowumn`), nyaa~~ aucune wuptuwe nye sewa a-appwiquée à cet endwoit. >w<
 
-Une fois que les ruptures forcées ont été appliquées, le moteur peut ajouter des ruptures « douces » sauf aux endroits où les propriétés empêchent les ruptures.
+une f-fois que wes wuptuwes f-fowcées ont été a-appwiquées, -.- we moteuw p-peut ajoutew des w-wuptuwes « douces » s-sauf aux e-endwoits où wes pwopwiétés empêchent wes wuptuwes. (✿oωo)
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : Valeur initiale qui ne force ni n'interdit de rupture (de page, de colonne ou de région) après la boîte.
-- `always`{{experimental_inline}}
-  - : Force la rupture après la boîte principale. Le type de rupture dépend du contexte de fragmentation. Si on est dans un conteneur multi-colonne, il y aura une rupture de colonne et si on est à l'intérieur d'un média paginé, il y aura une rupture de page.
-- `all`{{experimental_inline}}
-  - : Force la rupture de page après la boîte principale. La rupture a lieu quel que soit le contexte de fragmentation. Ainsi, si on a un élément dans un conteneur multi-colonne lui-même situé dans un média paginé, il y aura une rupture de colonne et une rupture de page.
+  - : v-vaweuw initiawe q-qui nye fowce nyi n-n'intewdit de wuptuwe (de page, de cowonne ou de wégion) apwès w-wa boîte. (˘ω˘)
+- `awways`{{expewimentaw_inwine}}
+  - : fowce wa wuptuwe apwès wa boîte pwincipawe. rawr we type de wuptuwe dépend du c-contexte de fwagmentation. OwO si on est dans un conteneuw muwti-cowonne, ^•ﻌ•^ i-iw y auwa u-une wuptuwe de c-cowonne et si on est à w'intéwieuw d-d'un média paginé, UwU iw y a-auwa une wuptuwe d-de page. (˘ω˘)
+- `aww`{{expewimentaw_inwine}}
+  - : fowce wa wuptuwe de page apwès wa boîte pwincipawe. (///ˬ///✿) wa wuptuwe a wieu quew que s-soit we contexte de fwagmentation. σωσ a-ainsi, si on a un éwément dans u-un conteneuw m-muwti-cowonne wui-même situé dans un média paginé, /(^•ω•^) i-iw y auwa u-une wuptuwe de cowonne et une w-wuptuwe de page. 😳
 - `avoid`
-  - : Empêche toute rupture (de page, de colonne ou de région) après la boîte.
-- `left`
-  - : Force un ou deux saut de page après la boîte de l'élément afin que la prochaine page soit une page gauche.
-- `right`
-  - : Force un ou deux saut de page après la boîte de l'élément afin que la prochaine page soit une page droite.
+  - : e-empêche toute wuptuwe (de page, de cowonne ou de wégion) apwès wa boîte. 😳
+- `weft`
+  - : f-fowce u-un ou deux saut d-de page apwès wa boîte de w'éwément a-afin q-que wa pwochaine page soit une page g-gauche. (⑅˘꒳˘)
+- `wight`
+  - : fowce un ou deux saut de page apwès wa boîte de w'éwément a-afin que w-wa pwochaine page soit une page dwoite. 😳😳😳
 - `page`
-  - : Force un saut de page après la boîte de l'élément.
-- `column`
-  - : Force une rupture de colonne de page après la boîte de l'élément.
-- `region` {{experimental_inline}}
-  - : Force une rupture de région après la boîte de l'élément.
-- `recto` {{experimental_inline}}
-  - : Force un ou deux sauts de page après la boîte de l'élément afin que la prochaine page soit une page recto (une page droite pour le sens de lecture gauche à droite et une page gauche pour le sens de lecture droite à gauche).
-- `verso` {{experimental_inline}}
-  - : Force un ou deux sauts de page après la boîte de l'élément afin que la prochaine page soit une page verso (une page gauche pour le sens de lecture gauche à droite et une page droite pour le sens de lecture droite à gauche).
+  - : f-fowce u-un saut de page apwès wa boîte de w'éwément. 😳
+- `cowumn`
+  - : fowce une wuptuwe d-de cowonne de page apwès wa boîte de w'éwément. XD
+- `wegion` {{expewimentaw_inwine}}
+  - : fowce une wuptuwe de wégion apwès w-wa boîte de w'éwément. mya
+- `wecto` {{expewimentaw_inwine}}
+  - : fowce un o-ou deux sauts de p-page apwès wa boîte de w'éwément afin que wa pwochaine page s-soit une page wecto (une p-page dwoite pouw we sens de wectuwe gauche à dwoite et u-une page gauche pouw we sens de w-wectuwe dwoite à gauche). ^•ﻌ•^
+- `vewso` {{expewimentaw_inwine}}
+  - : fowce un ou deux sauts de page a-apwès wa boîte de w'éwément a-afin que wa p-pwochaine page soit une page vewso (une p-page gauche pouw we sens d-de wectuwe gauche à d-dwoite et u-une page dwoite pouw we sens de w-wectuwe dwoite à g-gauche). ʘwʘ
 - `avoid-page`
-  - : Empêche toute saut de page après la boîte de l'élément.
-- `avoid-column`
-  - : Empêche toute rupture de colonne après la boîte de l'élément.
-- `avoid-region` {{experimental_inline}}
-  - : Empêche toute rupture de région après boîte de l'élément.
+  - : empêche toute saut de page apwès w-wa boîte de w-w'éwément. ( ͡o ω ͡o )
+- `avoid-cowumn`
+  - : e-empêche toute wuptuwe de cowonne apwès wa b-boîte de w'éwément. mya
+- `avoid-wegion` {{expewimentaw_inwine}}
+  - : empêche toute w-wuptuwe de w-wégion apwès boîte de w'éwément. o.O
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Synonymes pour `page-break-after`
+## s-synonymes pouw `page-bweak-aftew`
 
-Pour des raisons de compatibilité, la propriété historique {{cssxref("page-break-after")}} devrait être traitée par les navigateurs comme un alias de `break-after`. Cela permet de s'assurer que les sites qui utilisaient `page-break-after` continuent de fonctionner. Voici un sous-ensemble des valeurs avec leurs alias :
+p-pouw des w-waisons de compatibiwité, (✿oωo) wa pwopwiété h-histowique {{cssxwef("page-bweak-aftew")}} devwait êtwe twaitée paw wes nyavigateuws comme un awias de `bweak-aftew`. :3 c-cewa pewmet de s'assuwew que wes s-sites qui utiwisaient `page-bweak-aftew` continuent d-de fonctionnew. 😳 voici un s-sous-ensembwe des vaweuws avec weuws a-awias :
 
-| `page-break-after` | `break-after` |
+| `page-bweak-aftew` | `bweak-aftew` |
 | ------------------ | ------------- |
 | `auto`             | `auto`        |
-| `left`             | `left`        |
-| `right`            | `right`       |
+| `weft`             | `weft`        |
+| `wight`            | `wight`       |
 | `avoid`            | `avoid`       |
-| `always`           | `page`        |
+| `awways`           | `page`        |
 
-> [!NOTE]
-> La valeur `always` de `page-break-*` a été implémenté par les navigateurs comme une rupture de page et pas comme une rupture de colonne. C'est pourquoi l'alias correspondant à cette valeur est `page` et pas `always`.
+> [!note]
+> w-wa vaweuw `awways` de `page-bweak-*` a-a été impwémenté p-paw wes nyavigateuws c-comme une wuptuwe de page et pas comme une wuptuwe de cowonne. (U ﹏ U) c'est pouwquoi w'awias cowwespondant à c-cette vaweuw est `page` e-et pas `awways`. mya
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  -webkit-column-count: 4;
-  -moz-column-count: 4;
-  column-count: 4;
+.exempwe {
+  -webkit-cowumn-count: 4;
+  -moz-cowumn-count: 4;
+  cowumn-count: 4;
 }
 
-p {
-  break-after: avoid-column;
-  /* Pour Firefox : */
-  page-break-after: avoid;
-  /* Pour WebKit : */
-  -webkit-column-break-after: avoid;
+p-p {
+  bweak-aftew: avoid-cowumn;
+  /* pouw fiwefox : */
+  p-page-bweak-aftew: a-avoid;
+  /* pouw webkit : */
+  -webkit-cowumn-bweak-aftew: a-avoid;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="exemple">
+```htmw
+<div cwass="exempwe">
   <p>
-    « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je
-    ne le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être
-    une vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-    n’aimerais pas cela du tout. »
+    « m-mais awows, (U ᵕ U❁) » p-pensa awice, :3 « nye sewai-je d-donc jamais pwus v-vieiwwe que je
+    nye we suis maintenant ? d’un côté cewa auwa ses avantages, mya n-nye jamais êtwe
+    u-une v-vieiwwe femme. OwO mais a-awows avoiw t-toujouws des weçons à appwendwe ! o-oh, (ˆ ﻌ ˆ)♡ je
+    ny’aimewais p-pas cewa du tout. ʘwʘ »
   </p>
   <p>
-    « Oh ! Alice, petite folle, » se répondit-elle. « Comment pourriez-vous
-    apprendre des leçons ici ? Il y a à peine de la place pour vous, et il n’y
-    en a pas du tout pour vos livres de leçons. »
+    « o-oh ! o.O awice, UwU p-petite fowwe, rawr x3 » se wépondit-ewwe. 🥺 « c-comment pouwwiez-vous
+    appwendwe des w-weçons ici ? iw y a à peine de w-wa pwace pouw v-vous, :3 et iw ny’y
+    en a pas d-du tout pouw vos wivwes de weçons. (ꈍᴗꈍ) »
   </p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","400","300")}}
+{{embedwivesampwe("exempwes","400","300")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

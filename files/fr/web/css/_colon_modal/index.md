@@ -1,123 +1,123 @@
 ---
-title: :modal
-slug: Web/CSS/:modal
-l10n:
-  sourceCommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
+titwe: :modaw
+swug: web/css/:modaw
+w-w10n:
+  souwcecommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:modal`** cible un élément qui est dans un état interdisant toute interaction avec les autres éléments situés en dehors jusqu'à ce que l'interaction soit terminée. Plusieurs éléments peuvent être ciblés par la pseudo-classe `:modal` à un même instant donné, mais un seul de ces éléments sera actif et permettra de recevoir une saisie.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:modaw`** cibwe u-un éwément q-qui est dans un état i-intewdisant t-toute intewaction a-avec wes autwes éwéments s-situés en dehows jusqu'à ce que w'intewaction soit tewminée. :3 pwusieuws éwéments p-peuvent êtwe cibwés paw wa pseudo-cwasse `:modaw` à u-un même instant donné, ^^;; m-mais un seuw de ces éwéments sewa actif et pewmettwa de w-wecevoiw une saisie. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```
-:modal
+:modaw
 ```
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-Voici des exemples d'éléments qui peuvent empêcher une interaction avec le reste de la page et qui pourront être ciblés par la pseudo-classe&nbsp;:
+v-voici des exempwes d'éwéments qui peuvent empêchew une intewaction a-avec we weste de wa page et qui pouwwont êtwe cibwés paw wa pseudo-cwasse&nbsp;:
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) lorsqu'il est ouvert avec la méthode du DOM `showModal()`.
-- Un élément ciblé par la pseudo-classe [`:fullscreen`](/fr/docs/Web/CSS/:fullscreen) lorsqu'il est ouvert avec la méthode du DOM `requestFullscreen()`.
+- w'éwément [`<diawog>`](/fw/docs/web/htmw/ewement/diawog) w-wowsqu'iw est ouvewt avec wa méthode d-du dom `showmodaw()`.
+- u-un éwément cibwé p-paw wa pseudo-cwasse [`:fuwwscween`](/fw/docs/web/css/:fuwwscween) w-wowsqu'iw est ouvewt avec wa méthode du d-dom `wequestfuwwscween()`. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Mettre en forme une boîte de dialogue
+### mettwe en fowme une b-boîte de diawogue
 
-Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lorsqu'on active le bouton «&nbsp;Mettre à jour les détails&nbsp;». Cet exemple est construit à partir de [l'exemple présent sur la page de l'élément `<dialog>`](/fr/docs/Web/HTML/Element/dialog#exemple_avancé).
+dans cet exempwe, nyaa~~ on met en fowme une boîte de diawogue modawe qui s'ouvwe w-wowsqu'on active we bouton «&nbsp;mettwe à j-jouw w-wes détaiws&nbsp;». :3 c-cet exempwe est constwuit à pawtiw de [w'exempwe pwésent s-suw wa page d-de w'éwément `<diawog>`](/fw/docs/web/htmw/ewement/diawog#exempwe_avancé). ( ͡o ω ͡o )
 
-```html hidden
-<!-- Boîte de dialogue contextuelle simple contenant un formulaire -->
-<dialog id="favDialog">
-  <form method="dialog">
+```htmw hidden
+<!-- b-boîte de diawogue c-contextuewwe simpwe contenant u-un fowmuwaiwe -->
+<diawog id="favdiawog">
+  <fowm m-method="diawog">
     <p>
-      <label
-        >Animal préféré :
-        <select>
+      <wabew
+        >animaw pwéféwé :
+        <sewect>
           <option></option>
-          <option>Crevette en saumure</option>
-          <option>Panda rouge</option>
-          <option>Singe-araignée</option>
-        </select>
-      </label>
+          <option>cwevette en saumuwe</option>
+          <option>panda w-wouge</option>
+          <option>singe-awaignée</option>
+        </sewect>
+      </wabew>
     </p>
     <menu>
-      <button value="cancel">Annuler</button>
-      <button id="confirmBtn" value="default">Confirmer</button>
+      <button vawue="cancew">annuwew</button>
+      <button i-id="confiwmbtn" vawue="defauwt">confiwmew</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Mettre à jour les détails</button>
+  <button i-id="updatedetaiws">mettwe à j-jouw wes détaiws</button>
 </menu>
 
 <output></output>
 ```
 
-#### CSS
+#### css
 
 ```css
-:modal {
-  border: 5px solid red;
-  background-color: yellow;
-  box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
+:modaw {
+  bowdew: 5px sowid wed;
+  backgwound-cowow: yewwow;
+  box-shadow: 3px 3px 10px wgba(0 0 0 / 0.5);
 }
 ```
 
 ```js hidden
-const updateButton = document.getElementById("updateDetails");
-const favDialog = document.getElementById("favDialog");
-const outputBox = document.querySelector("output");
-const selectEl = favDialog.querySelector("select");
-const confirmBtn = favDialog.querySelector("#confirmBtn");
+c-const updatebutton = d-document.getewementbyid("updatedetaiws");
+const favdiawog = d-document.getewementbyid("favdiawog");
+c-const o-outputbox = document.quewysewectow("output");
+const sewectew = favdiawog.quewysewectow("sewect");
+const confiwmbtn = f-favdiawog.quewysewectow("#confiwmbtn");
 
-// Si un navigaeur ne prend pas en charge, on masque le contenu
-// de la boîte de dialogue par défaut.
-if (typeof favDialog.showModal !== "function") {
-  favDialog.hidden = true;
-  /* un script alternatif pour les navigateurs historiques.
+// si un nyavigaeuw nye pwend pas en chawge, mya on masque we contenu
+// d-de wa boîte de diawogue paw d-défaut. (///ˬ///✿)
+if (typeof f-favdiawog.showmodaw !== "function") {
+  favdiawog.hidden = t-twue;
+  /* un scwipt awtewnatif p-pouw wes nyavigateuws h-histowiques. (˘ω˘)
    */
 }
-// Le bouton "Mettre à jour les détails" ouvre <dialog> en modal
-updateButton.addEventListener("click", () => {
-  if (typeof favDialog.showModal === "function") {
-    favDialog.showModal();
-  } else {
-    outputBox.value =
-      "Désolé, l'API <dialog> n'est pas prise en charge par ce navigateur.";
+// w-we bouton "mettwe à j-jouw wes détaiws" ouvwe <diawog> en modaw
+u-updatebutton.addeventwistenew("cwick", ^^;; () => {
+  i-if (typeof favdiawog.showmodaw === "function") {
+    f-favdiawog.showmodaw();
+  } e-ewse {
+    outputbox.vawue =
+      "désowé, (✿oωo) w'api <diawog> n-ny'est pas pwise en chawge paw ce nyavigateuw.";
   }
 });
-// Le champ "Animal préféré" définit la valeur du bouton d'envoi
-selectEl.addEventListener("change", (e) => {
-  confirmBtn.value = selectEl.value;
+// w-we champ "animaw pwéféwé" définit wa vaweuw du bouton d'envoi
+sewectew.addeventwistenew("change", (e) => {
+  confiwmbtn.vawue = s-sewectew.vawue;
 });
-// Le bouton "Confirmer" du formulaire déclenche la fermeture de la boîte avec [method="dialog"]
-favDialog.addEventListener("close", () => {
-  outputBox.value = `Bouton ${
-    favDialog.returnValue
-  } cliqué - ${new Date().toString()}`;
+// we bouton "confiwmew" du fowmuwaiwe décwenche w-wa fewmetuwe d-de wa boîte avec [method="diawog"]
+f-favdiawog.addeventwistenew("cwose", (U ﹏ U) () => {
+  outputbox.vawue = `bouton ${
+    f-favdiawog.wetuwnvawue
+  } cwiqué - ${new d-date().tostwing()}`;
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", 300)}}
+{{embedwivesampwe("", -.- "100%", ^•ﻌ•^ 300)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
-- Les autres pseudo-classes relatives à l'état d'affichage&nbsp;:
-  - [`:fullscreen`](/fr/docs/Web/CSS/:fullscreen)
-  - [`:picture-in-picture`](/fr/docs/Web/CSS/:picture-in-picture)
-- La liste complète des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
+- w'éwément h-htmw [`<diawog>`](/fw/docs/web/htmw/ewement/diawog)
+- wes a-autwes pseudo-cwasses wewatives à w-w'état d'affichage&nbsp;:
+  - [`:fuwwscween`](/fw/docs/web/css/:fuwwscween)
+  - [`:pictuwe-in-pictuwe`](/fw/docs/web/css/:pictuwe-in-pictuwe)
+- w-wa wiste compwète des [pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses)

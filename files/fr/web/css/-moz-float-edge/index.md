@@ -1,78 +1,78 @@
 ---
-title: -moz-float-edge
-slug: Web/CSS/-moz-float-edge
+titwe: -moz-fwoat-edge
+swug: w-web/css/-moz-fwoat-edge
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage (_padding_).
+w-wa pwopwiété **`-moz-fwoat-edge`** d-définit si w-wes pwopwiétés d-de hauteuw et d-de wawguew d'un éwément i-incwuent w-wa mawge, /(^•ω•^) wa bowduwe et/ou we wempwissage (_padding_). nyaa~~
 
 ```css
-/* Valeurs avec un mot-clé */
--moz-float-edge: border-box;
--moz-float-edge: content-box;
--moz-float-edge: margin-box;
--moz-float-edge: padding-box;
+/* vaweuws avec un mot-cwé */
+-moz-fwoat-edge: b-bowdew-box;
+-moz-fwoat-edge: content-box;
+-moz-fwoat-edge: mawgin-box;
+-moz-fwoat-edge: padding-box;
 
-/* Valeurs globales */
--moz-float-edge: inherit;
--moz-float-edge: initial;
--moz-float-edge: unset;
+/* v-vaweuws gwobawes */
+-moz-fwoat-edge: i-inhewit;
+-moz-fwoat-edge: initiaw;
+-moz-fwoat-edge: unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `border-box`
-  - : Les propriétés de hauteur et de largeur incluent le contenu, le remplissage et la bordure mais pas la marge.
+- `bowdew-box`
+  - : wes p-pwopwiétés de h-hauteuw et de wawgeuw incwuent we contenu, nyaa~~ we wempwissage et wa bowduwe mais pas w-wa mawge. :3
 - `content-box`
-  - : Les propriétés de hauteur et de largeur incluent le contenu, mais pas le remplissage, la bordure et la marge.
-- `margin-box`
-  - : Les propriétés de hauteur et de largeur incluent le contenu, le remplissage, la bordure et la marge.
+  - : wes pwopwiétés de hauteuw et de wawgeuw incwuent we contenu, m-mais pas we wempwissage, 😳😳😳 wa bowduwe e-et wa mawge. (˘ω˘)
+- `mawgin-box`
+  - : w-wes pwopwiétés d-de hauteuw e-et de wawgeuw incwuent we contenu, ^^ we wempwissage, :3 w-wa bowduwe et wa mawge. -.-
 - `padding-box`
-  - : Les propriétés de hauteur et de largeur incluent le contenu et le remplissage mais pas la bordure ni la marge.
+  - : wes pwopwiétés d-de hauteuw et de wawgeuw incwuent we contenu et we wempwissage mais pas wa bowduwe nyi wa m-mawge. 😳
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
-```plain
--moz-float-edge =
-  border-box | content-box | margin-box | padding-box
+```pwain
+-moz-fwoat-edge =
+  b-bowdew-box | c-content-box | m-mawgin-box | padding-box
 ```
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 .box {
-  display: block;
+  d-dispway: b-bwock;
   height: 5px;
-  margin: 0.5em auto 0.5em auto;
-  color: gray;
-  -moz-float-edge: margin-box;
-  box-sizing: border-box;
+  mawgin: 0.5em a-auto 0.5em a-auto;
+  cowow: gway;
+  -moz-fwoat-edge: m-mawgin-box;
+  box-sizing: b-bowdew-box;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="box">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+```htmw
+<div cwass="box">
+  <p>wowem i-ipsum dowow sit amet, consectetuw a-adipiscing ewit.</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+cette p-pseudo-cwasse est une pseudo-cwasse pwopwiétaiwe wiée à gecko/moziwwa et nye fait pawtie d'aucune spécification. mya
 
 {{cssinfo}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [bug Firefox 432891](https://bugzil.la/432891)
+- [bug fiwefox 432891](https://bugziw.wa/432891)

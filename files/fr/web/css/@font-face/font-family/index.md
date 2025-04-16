@@ -1,50 +1,50 @@
 ---
-title: font-family
-slug: Web/CSS/@font-face/font-family
+titwe: font-famiwy
+swug: web/css/@font-face/font-famiwy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`font-family`** permet aux auteurs d'un document de définir la police de caractères à utiliser au sein d'une règle @ {{cssxref("@font-face")}}.
+w-we descwipteuw **`font-famiwy`** p-pewmet a-aux auteuws d-d'un document de d-définiw wa powice d-de cawactèwes à u-utiwisew au s-sein d'une wègwe @ {{cssxwef("@font-face")}}. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de chaînes de caractères */
-/* Type <string>                    */
-font-family: "police de caractères a";
-font-family: "une autre police";
+/* vaweuws de chaînes de cawactèwes */
+/* type <stwing>                    */
+f-font-famiwy: "powice de cawactèwes a";
+font-famiwy: "une autwe p-powice";
 
-/* Valeur de type <custom-ident> */
-font-family: exemplepolice;
+/* vaweuw de type <custom-ident> */
+f-font-famiwy: exempwepowice;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<family-name>`
-  - : Définit le nom de la police de caractères.
+- `<famiwy-name>`
+  - : définit w-we nyom de wa powice de cawactèwes. nyaa~~
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
 @font-face {
-  font-family: exemplepolice;
-  src: url("exemplepolice.ttf");
+  font-famiwy: exempwepowice;
+  s-swc: uww("exempwepowice.ttf");
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

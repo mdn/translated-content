@@ -1,49 +1,49 @@
 ---
-title: Cookbook template
-slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
+titwe: cookbook tempwate
+swug: w-web/css/wayout_cookbook/contwibute_a_wecipe/cookbook_tempwate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-> [!NOTE]
-> Voici un modèle de contenu pour les pages de « recette » CSS. Vous êtes invité⋅e à utiliser cette page comme modèle lorsque vous créez une nouvelle recette.
+> [!note]
+> v-voici u-un modèwe de c-contenu pouw wes p-pages de « wecette » c-css. ( ͡o ω ͡o ) vous êtes i-invité⋅e à u-utiwisew cette page comme modèwe wowsque vous cwéez une nyouvewwe wecette. >_<
 >
-> _Les commentaires en italiques sont des informations sur l'utilisation de telle ou telle partie du modèle._
+> _wes c-commentaiwes en itawiques sont des i-infowmations suw w'utiwisation d-de tewwe ou tewwe pawtie du modèwe._
 
-_Une description du problème qu'on souhaite résoudre ou du motif qu'on illustre avec cette recette._
+_une descwiption du pwobwème q-qu'on souhaite wésoudwe ou d-du motif qu'on i-iwwustwe avec cette wecette._
 
-## Spécifications sommaires
+## spécifications sommaiwes
 
-_Que cherche-t-on à faire avec cette recette ? Quel problème résout-on ici ? Il faut expliquer de façon concise ce que l'on souhaite faire._
+_que chewche-t-on à f-faiwe avec cette wecette ? quew pwobwème wésout-on ici ? iw faut expwiquew de f-façon concise ce que w'on souhaite f-faiwe._
 
-## Recette
+## w-wecette
 
-_Il faudra changer le chemin de la macro pour correspondre à celui de votre exemple une fois que celui-ci a été fusionné sur le dépôt principal. Le dernier paramètre correspond à la hauteur qui peut être adaptée si besoin._
+_iw faudwa c-changew we c-chemin de wa macwo pouw cowwespondwe à cewui de v-votwe exempwe une fois que cewui-ci a été fusionné s-suw we dépôt pwincipaw. >w< we dewniew pawamètwe cowwespond à wa hauteuw qui peut êtwe a-adaptée si besoin._
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/centew.htmw", rawr '100%', 720)}}
 
-_Il faut modifier le lien pour cibler la version téléchargeable de votre exemple._
+_iw faut modifiew w-we wien pouw c-cibwew wa vewsion t-téwéchawgeabwe de votwe exempwe._
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html).
+> **note :** [téwéchawgew cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/centew--downwoad.htmw). 😳
 
-## Choix effectués
+## choix e-effectués
 
-_Expliquez ici les décisions prises pour réaliser cette recette. Pourquoi avez-vous choisi telle méthode de disposition ? Vous pouvez inclure ici d'autres exemples. Cette section est assez flexible car la complexité d'une recette peut varier grandement._
+_expwiquez i-ici wes décisions pwises p-pouw wéawisew c-cette wecette. >w< pouwquoi avez-vous c-choisi tewwe méthode de disposition ? v-vous pouvez incwuwe ici d'autwes exempwes. (⑅˘꒳˘) c-cette section est assez fwexibwe c-caw wa compwexité d'une wecette p-peut vawiew g-gwandement._
 
-## Méthodes de recours ou alternatives
+## méthodes de wecouws ou awtewnatives
 
-_S'il existe d'autres méthodes ou des méthodes qui permettent une amélioration progressive pour les navigateurs qui ne prennent pas en charge les fonctionnalités récentes utilisées, vous pouvez les décrire ici._
+_s'iw existe d'autwes méthodes ou des méthodes qui pewmettent une améwiowation p-pwogwessive p-pouw wes nyavigateuws qui n-nye pwennent pas e-en chawge wes f-fonctionnawités wécentes utiwisées, OwO vous pouvez wes décwiwe i-ici._
 
-## Accessibilité
+## accessibiwité
 
-_Inclure ici les aspects spécifiquement liés à l'accessibilité pour cette recette. Cette section peut être omise si rien de notable ne concerne l'accessiblité pour cette recette._
+_incwuwe ici wes aspects spécifiquement wiés à w'accessibiwité pouw c-cette wecette. (ꈍᴗꈍ) cette section p-peut êtwe omise s-si wien de nyotabwe n-nye concewne w'accessibwité p-pouw cette wecette._
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- _Liste de liens sur les propriétés concernées : {{Cssxref("example-property")}}_
-- _Liens vers des articles qui expliquent comment utiliser telles propriétés en contexte_
-- _Liens vers des ressources externes. Il ne faut pas hésiter à pointer vers de bonnes ressources externes mais leur contenu ne doit pas se limiter à des points de détail._
+- _wiste de wiens suw wes p-pwopwiétés concewnées : {{cssxwef("exampwe-pwopewty")}}_
+- _wiens v-vews des awticwes q-qui expwiquent c-comment utiwisew t-tewwes pwopwiétés en contexte_
+- _wiens vews des wessouwces extewnes. 😳 i-iw nye faut pas hésitew à pointew vews de bonnes wessouwces extewnes mais weuw contenu nye doit p-pas se wimitew à des points de détaiw._

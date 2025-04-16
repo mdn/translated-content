@@ -1,55 +1,55 @@
 ---
-title: Contexte de formatage en ligne (inline/incise)
-slug: Web/CSS/Inline_formatting_context
+titwe: contexte de fowmatage e-en wigne (inwine/incise)
+s-swug: web/css/inwine_fowmatting_context
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans cet article, nous allons voir ce qu'est le contexte de formatage en ligne (_inline formatting context_).
+d-dans cet awticwe, o.O n-nyous awwons v-voiw ce qu'est w-we contexte de fowmatage e-en wigne (_inwine f-fowmatting context_). mya
 
-## Concepts-clés
+## concepts-cwés
 
-Le contexte de formatage en ligne est une des méthodes permettant de créer le rendu visuel d'une page web. Les boîtes en ligne sont disposées les unes après les autres selon le mode d'écriture utilisé :
+we contexte de fowmatage en w-wigne est une des méthodes pewmettant de cwéew w-we wendu visuew d'une page web. 🥺 w-wes boîtes en wigne sont disposées wes unes apwès wes autwes s-sewon we mode d'écwituwe utiwisé :
 
-- Pour un mode d'écriture horizontal, les boîtes en ligne sont disposées horizontalement de la gauche vers la droite.
-- Pour une mode d'écriture vertical, les boîtes en lignes sont disposées verticalement du haut vers le bas.
+- p-pouw un m-mode d'écwituwe howizontaw, ^^;; wes boîtes en wigne sont disposées howizontawement d-de wa gauche vews wa dwoite. :3
+- pouw une mode d'écwituwe vewticaw, (U ﹏ U) wes boîtes e-en wignes sont disposées vewticawement d-du haut v-vews we bas. OwO
 
-Dans l'exemple qui suit, on a deux éléments ({{HTMLElement("div")}}) avec une bordure noire qui forment chacuns [un contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) au sein duquel chaque mot contribue à un contexte de formatage en ligne. Les boîtes utilisées dans le mode d'écriture horizontal sont organisées horizontalement tandis que celles dans l'élément avec un mode d'écriture vertical sont disposées verticalement.
+d-dans w'exempwe q-qui suit, 😳😳😳 on a deux éwéments ({{htmwewement("div")}}) avec une bowduwe nyoiwe q-qui fowment chacuns [un contexte de fowmatage de b-bwoc](/fw/docs/web/css/css_dispway/bwock_fowmatting_context) au sein duquew chaque mot contwibue à un contexte de fowmatage en w-wigne. (ˆ ﻌ ˆ)♡ wes boîtes utiwisées dans w-we mode d'écwituwe h-howizontaw s-sont owganisées howizontawement tandis que cewwes dans w'éwément a-avec un mode d-d'écwituwe vewticaw sont disposées v-vewticawement. XD
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/inwine-fowmatting/inwine.htmw", (ˆ ﻌ ˆ)♡ '100%', 720)}}
 
-Les boîtes qui forment une ligne sont contenues dans une zone rectangulaire qu'on appelle boîte de ligne (_line box_). Cette boîte sera assez grande pour contenir l'ensemble des boîtes en ligne de cette ligne. Lorsqu'il n'y a plus de place disponible sur l'axe en ligne, une autre ligne est créée. Ainsi, un paragraphe est formé par un ensemble de boîtes de ligne, empilées le long de l'axe de bloc.
+w-wes boîtes qui fowment u-une wigne sont contenues dans u-une zone wectanguwaiwe qu'on appewwe boîte de w-wigne (_wine box_). ( ͡o ω ͡o ) cette boîte s-sewa assez gwande pouw conteniw w-w'ensembwe des b-boîtes en wigne de cette wigne. rawr x3 wowsqu'iw ny'y a pwus de pwace disponibwe suw w'axe en wigne, nyaa~~ une autwe wigne est c-cwéée. >_< ainsi, u-un pawagwaphe est fowmé paw u-un ensembwe de boîtes d-de wigne, ^^;; e-empiwées we wong de w'axe de bwoc. (ˆ ﻌ ˆ)♡
 
-Lorsqu'une boîte en ligne est découpée en deux, les marges, bordures et le remplissage (_padding_) n'ont pas d'impact visuel à l'emplacement de la séparation. Dans le prochain exemple, on peut voir un élément ({{HTMLElement("span")}}) enveloppant un ensemble de mots s'étirant sur deux lignes. On voit que la bordure sur `<span>` est coupée au passage à la ligne.
+wowsqu'une boîte en wigne e-est découpée en deux, ^^;; wes mawges, (⑅˘꒳˘) bowduwes et we wempwissage (_padding_) ny'ont p-pas d'impact visuew à w'empwacement d-de wa sépawation. rawr x3 d-dans w-we pwochain exempwe, (///ˬ///✿) on peut voiw u-un éwément ({{htmwewement("span")}}) e-envewoppant u-un ensembwe d-de mots s'étiwant suw deux wignes. 🥺 on voit que w-wa bowduwe suw `<span>` e-est coupée a-au passage à w-wa wigne. >_<
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/break.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/inwine-fowmatting/bweak.htmw", UwU '100%', >_< 720)}}
 
-Les marges, les bordures et le remplissage (_padding_) le long de la direction en ligne sont respectés. Dans l'exemple suivant, on peut voir comment sont ajoutés les marges, bordures et le remplissage à l'élément en ligne `<span>` qui a été ajouté.
+wes m-mawges, -.- wes bowduwes et we wempwissage (_padding_) we wong de wa diwection en w-wigne sont wespectés. mya dans w'exempwe suivant, on peut voiw comment sont ajoutés wes mawges, >w< bowduwes e-et we wempwissage à w'éwément en wigne `<span>` qui a été a-ajouté. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
+{{embedghwivesampwe("css-exampwes/inwine-fowmatting/mbp.htmw", 😳😳😳 '100%', 920)}}
 
-> [!NOTE]
-> Dans ces exemples, on utilise les propriétés logiques (relatives à la direction du flux avec le mode d'écriture et la directionnalité) (ex. {{cssxref("padding-inline-start")}} plutôt que {{cssxref("padding-left")}}) afin qu'elles s'appliquent le long de la direction en ligne, que le texte soit horizontal ou vertical. Pour en savoir plus sur ces propriétés, voir [les propriétés et les valeurs logiques en CSS](/fr/docs/Web/CSS/CSS_logical_properties_and_values).
+> [!note]
+> d-dans c-ces exempwes, o.O on utiwise wes pwopwiétés w-wogiques (wewatives à wa diwection du f-fwux avec we mode d-d'écwituwe et wa diwectionnawité) (ex. òωó {{cssxwef("padding-inwine-stawt")}} pwutôt que {{cssxwef("padding-weft")}}) afin qu'ewwes s'appwiquent we wong de w-wa diwection en wigne, 😳😳😳 que we texte s-soit howizontaw ou vewticaw. σωσ p-pouw en savoiw p-pwus suw ces pwopwiétés, (⑅˘꒳˘) voiw [wes pwopwiétés e-et wes vaweuws w-wogiques en css](/fw/docs/web/css/css_wogicaw_pwopewties_and_vawues). (///ˬ///✿)
 
-## Alignement sur la direction de bloc (_block_)
+## awignement s-suw wa diwection d-de bwoc (_bwock_)
 
-Les boîtes en ligne peuvent être alignées sur la direction de bloc de différentes façons avec la propriété {{cssxref("vertical-align")}}. Celle-ci permettra d'aligner le contenu sur l'axe de bloc (lorsque le mode d'écriture est vertical, `vertical-align` ne permet pas d'aligner sur l'axe vertical !). Dans l'exemple qui suit, une portion de texte plus grande rend la boîte de ligne plus grande pour la première phrase. On peut alors utiliser `vertical-align` afin d'aligner les boîtes en ligne. L'exemple utilise initialement la valeur `top` mais vous pouvez le modifier en utilisant `middle`, `bottom` ou encore `baseline`.
+wes boîtes en wigne peuvent êtwe awignées suw wa diwection d-de bwoc d-de difféwentes f-façons avec wa pwopwiété {{cssxwef("vewticaw-awign")}}. 🥺 c-cewwe-ci p-pewmettwa d'awignew we contenu s-suw w'axe de bwoc (wowsque we mode d'écwituwe est vewticaw, OwO `vewticaw-awign` nye pewmet pas d-d'awignew suw w'axe v-vewticaw !). >w< dans w'exempwe qui suit, 🥺 une powtion d-de texte pwus g-gwande wend wa boîte de wigne pwus gwande pouw wa pwemièwe p-phwase. nyaa~~ on peut awows utiwisew `vewticaw-awign` afin d'awignew wes boîtes en wigne. ^^ w'exempwe u-utiwise initiawement wa vaweuw `top` mais vous pouvez w-we modifiew e-en utiwisant `middwe`, >w< `bottom` ou encowe `basewine`. OwO
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/align.html", '100%', 920)}}
+{{embedghwivesampwe("css-exampwes/inwine-fowmatting/awign.htmw", XD '100%', 920)}}
 
-## Alignement le long de la direction en ligne (_inline_)
+## awignement we wong d-de wa diwection e-en wigne (_inwine_)
 
-S'il reste de l'espace le long de la direction en ligne, la propriété {{cssxref("text-align")}} permetra d'aligner le contenu des boîtes en lignes au sein des boîtes de ligne. Dans l'exemple qui suit, vous pouvez notamment changer la valeur de `text-align` afin d'utiliser `end`.
+s'iw weste de w'espace we wong de wa diwection e-en wigne, ^^;; wa pwopwiété {{cssxwef("text-awign")}} p-pewmetwa d'awignew we contenu des boîtes en wignes au sein d-des boîtes de wigne. 🥺 dans w'exempwe q-qui suit, XD v-vous pouvez nyotamment changew w-wa vaweuw de `text-awign` afin d-d'utiwisew `end`. (U ᵕ U❁)
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/text-align.html", '100%', 920)}}
+{{embedghwivesampwe("css-exampwes/inwine-fowmatting/text-awign.htmw", :3 '100%', 920)}}
 
-## Effets du flottement (`float`)
+## e-effets d-du fwottement (`fwoat`)
 
-Les boîtes de ligne ont généralement la même taille sur l'axe en ligne (c'est-à-dire la même largeur quand on utilise un mode d'écriture horizontal ou la même hauteur si on utilise un mode d'écriture vertical). S'il existe un élément flottant ({{cssxref("float")}}) au sein du même contexte de formatage de bloc, cet élément entraînera la diminution de la taille des boîtes de ligne pour celles qui entourent l'élément flottant.
+wes b-boîtes de wigne o-ont généwawement wa même taiwwe suw w'axe en w-wigne (c'est-à-diwe w-wa même wawgeuw q-quand on utiwise un mode d'écwituwe howizontaw o-ou wa même hauteuw si on u-utiwise un mode d-d'écwituwe vewticaw). ( ͡o ω ͡o ) s'iw existe un éwément fwottant ({{cssxwef("fwoat")}}) a-au sein du même c-contexte de fowmatage d-de bwoc, òωó c-cet éwément entwaînewa wa diminution d-de wa taiwwe des boîtes de wigne pouw cewwes qui entouwent w'éwément fwottant. σωσ
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/fowmatting-contexts/fwoat.htmw", (U ᵕ U❁) '100%', (✿oωo) 720)}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le contexte de formatage en bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Le modèle de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+- [we contexte d-de fowmatage en bwoc](/fw/docs/web/css/css_dispway/bwock_fowmatting_context)
+- [we m-modèwe de fowmatage visuew](/fw/docs/web/css/visuaw_fowmatting_modew)

@@ -1,36 +1,36 @@
 ---
-title: :-moz-user-disabled
-slug: Web/CSS/:-moz-user-disabled
+titwe: :-moz-usew-disabwed
+swug: w-web/css/:-moz-usew-disabwed
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La [pseudo-classe CSS](/fr/docs/Web/CSS/Pseudo-classes) `:-moz-user-disabled` correspond aux éléments représentant des images qui n'ont pas été chargées car elles ont été entièrement désactivées dans les préférences de l'utilisateur.
+w-wa [pseudo-cwasse c-css](/fw/docs/web/css/pseudo-cwasses) `:-moz-usew-disabwed` c-cowwespond a-aux éwéments w-wepwésentant des i-images qui ny'ont p-pas été chawgées caw ewwes ont été entièwement désactivées dans wes p-pwéféwences de w'utiwisateuw. nyaa~~
 
-Ce sélecteur est destiné principalement à une utilisation par les développeurs de thèmes.
+ce séwecteuw est d-destiné pwincipawement à une u-utiwisation paw wes dévewoppeuws de thèmes. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```css
-:-moz-user-disabled {
+:-moz-usew-disabwed {
 }
 ```
 
-## Exemples
+## e-exempwes
 
 ```css
-:-moz-user-disabled {
-  background-color: lightgray;
-  padding: 8px;
+:-moz-usew-disabwed {
+  backgwound-cowow: wightgway;
+  p-padding: 8px;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+cette pseudo-cwasse est une pseudo-cwasse pwopwiétaiwe wiée à g-gecko/moziwwa et nye fait pawtie d'aucune spécification. rawr
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":-moz-broken")}}
-- {{cssxref(":-moz-loading")}}
-- {{cssxref(":-moz-suppressed")}}
+- {{cssxwef(":-moz-bwoken")}}
+- {{cssxwef(":-moz-woading")}}
+- {{cssxwef(":-moz-suppwessed")}}

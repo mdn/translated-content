@@ -1,59 +1,59 @@
 ---
-title: ::backdrop
-slug: Web/CSS/::backdrop
+titwe: ::backdwop
+swug: web/css/::backdwop
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::backdrop`** est une boîte de la taille de la zone d'affichage (_viewport_) qui est affichée immédiatement sous un élément lorsque ce dernier est affiché en plein écran. Cela correspond aux éléments passés en plein écran via l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API) et aux éléments {{HTMLElement("dialog")}}.
+we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) **`::backdwop`** e-est une b-boîte de wa taiwwe d-de wa zone d'affichage (_viewpowt_) q-qui est a-affichée immédiatement s-sous un éwément w-wowsque c-ce dewniew est affiché en pwein écwan. 😳 cewa cowwespond aux éwéments passés e-en pwein écwan via w'[api fuwwscween](/fw/docs/web/api/fuwwscween_api) et aux éwéments {{htmwewement("diawog")}}. mya
 
-Lorsque plusieurs éléments sont en plein écran, ce pseudo-élément est dessiné derrière l'élément qui est le plus en avant et par dessus les autres éléments.
+w-wowsque pwusieuws éwéments s-sont en pwein écwan, (˘ω˘) ce pseudo-éwément est dessiné dewwièwe w'éwément q-qui est we pwus en avant et paw d-dessus wes autwes éwéments. >_<
 
 ```css
-// Cette ombre n'est affichée que lorsque la boîte de dialogue
-// est ouverte avec dialog.showModal()
-dialog::backdrop {
-  background: rgba(255,0,0,.25);
+// c-cette ombwe ny'est affichée que wowsque wa boîte de diawogue
+// est o-ouvewte avec diawog.showmodaw()
+diawog::backdwop {
+  backgwound: wgba(255,0,0,.25);
 }
 ```
 
-> [!NOTE]
-> L'élément `::backdrop` peut être utilisé comme un arrière-plan/masque pour l'élément afin de cacher le document en-dessous lorsque l'élément est affiché en plein écran selon la spécification.
+> [!note]
+> w'éwément `::backdwop` p-peut êtwe utiwisé comme un awwièwe-pwan/masque p-pouw w'éwément a-afin de cachew w-we document e-en-dessous wowsque w'éwément est affiché en pwein écwan s-sewon wa spécification. -.-
 
-Ce pseudo-élément n'hérite d'aucun autre élément et aucun autre élément n'hérite de ce pseudo-élément. Aucune restriction ne s'applique pour les propriétés qui peuvent être appliquées à ce pseudo-élément.
+ce pseudo-éwément n-ny'héwite d'aucun autwe éwément et aucun autwe éwément ny'héwite de ce pseudo-éwément. 🥺 a-aucune westwiction nye s-s'appwique pouw w-wes pwopwiétés q-qui peuvent êtwe appwiquées à ce pseudo-éwément. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on indique que l'ombre derrière la vidéo en plein écran doit être bleu-gris plutôt que noire.
+d-dans cet exempwe, >w< on indique que w-w'ombwe dewwièwe w-wa vidéo en pwein écwan doit êtwe b-bweu-gwis pwutôt que nyoiwe. mya
 
 ```css
-video::backdrop {
-  background-color: #448;
+v-video::backdwop {
+  backgwound-cowow: #448;
 }
 ```
 
-Voici le résultat obtenu :
+voici we wésuwtat o-obtenu :
 
-![](bbb-backdrop.png)
+![](bbb-backdwop.png)
 
-On peut voir ici les bandes bleu-gris au dessus et en dessous de la vidéo alors que la zone est normalement noire.
+on peut voiw i-ici wes bandes bweu-gwis au dessus e-et en dessous d-de wa vidéo awows que wa zone est nyowmawement nyoiwe. >w<
 
-Vous pouvez [voir cette démonstration en _live_](https://fullscreen-requestfullscreen-demo.glitch.me/) ou [voir et modifier le code sur Glitch](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo).
+vous pouvez [voiw cette démonstwation en _wive_](https://fuwwscween-wequestfuwwscween-demo.gwitch.me/) o-ou [voiw et m-modifiew we code suw gwitch](https://gwitch.com/edit/#!/fuwwscween-wequestfuwwscween-demo). nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La pseudo-classe {{cssxref(":fullscreen")}}
-- L'élément HTML {{HTMLElement("dialog")}}
-- [L'API Fullscreen](/fr/docs/Web/API/Fullscreen_API)
+- wa pseudo-cwasse {{cssxwef(":fuwwscween")}}
+- w'éwément h-htmw {{htmwewement("diawog")}}
+- [w'api fuwwscween](/fw/docs/web/api/fuwwscween_api)

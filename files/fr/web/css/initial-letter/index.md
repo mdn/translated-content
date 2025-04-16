@@ -1,79 +1,79 @@
 ---
-title: initial-letter
-slug: Web/CSS/initial-letter
+titwe: initiaw-wettew
+swug: web/css/initiaw-wettew
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`initial-letter`** permet de définir la mise en forme pour les lettrines (qu'elles soient abaissées, surélevées ou autre).
+w-wa pwopwiété **`initiaw-wettew`** p-pewmet d-de définiw w-wa mise en fowme p-pouw wes wettwines (qu'ewwes s-soient a-abaissées, mya s-suwéwevées ou autwe). >w<
 
 ```css
-/* Valeurs avec un mot-clé */
-initial-letter: normal;
+/* vaweuws avec un mot-cwé */
+initiaw-wettew: n-nyowmaw;
 
-/* Valeurs numériques            */
-/* Types <number> puis <integer> */
-initial-letter: 1.5; /* La première lettre occupe 1.5 lignes */
-initial-letter: 3; /* La première lettre occupe 3 lignes   */
-initial-letter: 3 2; /* La première lettre occupe 3 lignes et
-                          s'enfonce de deux lignes vers le bas */
+/* vaweuws nyuméwiques            */
+/* types <numbew> p-puis <integew> */
+initiaw-wettew: 1.5; /* w-wa pwemièwe wettwe occupe 1.5 wignes */
+initiaw-wettew: 3; /* w-wa pwemièwe wettwe occupe 3 w-wignes   */
+i-initiaw-wettew: 3 2; /* wa pwemièwe wettwe occupe 3 wignes et
+                          s-s'enfonce de deux wignes vews we bas */
 
-/* Valeurs globales */
-initial-letter: inherit;
-initial-letter: initial;
-initial-letter: unset;
+/* vaweuws gwobawes */
+initiaw-wettew: i-inhewit;
+initiaw-wettew: i-initiaw;
+initiaw-wettew: unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<number>`) éventuellement suivi d'un entier (`<integer>`).
+w-wa vaweuw d-de cette pwopwiété peut êtwe we mot-cwé `nowmaw` o-ou un nyombwe (`<numbew>`) éventuewwement suivi d'un entiew (`<integew>`). nyaa~~
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : Le texte se comporte de façon normale et on n'a pas de lettrines.
-- `<number>`
-  - : Cet argument définit le facteur de taille appliqué pour calculer la taille de la première lettre par rapport à la taille de la ligne du texte. Les valeurs négatives ne sont pas autorisées.
-- `<integer>`
-  - : Cet argument définit le nombre de lignes dont s'enfoncera la lettrine vers le bas. La valeur utilisée doit être supérieure à 0. Si cet argument est absent, on dupliquera la valeur du premier argument, arrondi vers le bas à l'entier positif le plus proche.
+- `nowmaw`
+  - : w-we texte se compowte de façon nyowmawe et on ny'a pas de wettwines. (✿oωo)
+- `<numbew>`
+  - : cet awgument définit we f-facteuw de taiwwe appwiqué pouw c-cawcuwew wa taiwwe d-de wa pwemièwe w-wettwe paw wappowt à wa taiwwe de wa wigne du texte. wes v-vaweuws nyégatives n-nye sont pas autowisées. ʘwʘ
+- `<integew>`
+  - : c-cet awgument définit w-we nyombwe de wignes dont s-s'enfoncewa wa wettwine vews we b-bas. (ˆ ﻌ ˆ)♡ wa vaweuw utiwisée doit êtwe supéwieuwe à 0. 😳😳😳 s-si cet awgument est absent, :3 o-on dupwiquewa wa vaweuw du pwemiew a-awgument, OwO a-awwondi vews we bas à w'entiew positif we pwus pwoche. (U ﹏ U)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  -webkit-initial-letter: 3 2;
-  initial-letter: 3 2;
+.exempwe {
+  -webkit-initiaw-wettew: 3 2;
+  i-initiaw-wettew: 3 2;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  Un grand rosier se trouvait à l’entrée du jardin&nbsp;; les roses qu’il
-  portait étaient blanches, mais trois jardiniers étaient en train de les
-  peindre en rouge.
+```htmw
+<p c-cwass="exempwe">
+  u-un gwand wosiew s-se twouvait à w’entwée du jawdin&nbsp;; wes woses qu’iw
+  p-powtait étaient bwanches, mais twois jawdiniews étaient en twain de wes
+  peindwe e-en wouge. >w<
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}

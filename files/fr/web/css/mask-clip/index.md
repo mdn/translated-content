@@ -1,95 +1,95 @@
 ---
-title: mask-clip
-slug: Web/CSS/mask-clip
+titwe: mask-cwip
+swug: web/css/mask-cwip
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-clip`** définit la zone qui est modifiée par un masque. Le contenu «&nbsp;peint&nbsp;» sera restreint à cette zone.
+w-wa p-pwopwiété [css](/fw/docs/web/css) **`mask-cwip`** d-définit wa z-zone qui est modifiée p-paw un masque. w-we contenu «&nbsp;peint&nbsp;» s-sewa westweint à c-cette zone. rawr
 
 ```css
-/* Valeurs de type <geometry-box> */
-mask-clip: content-box;
-mask-clip: padding-box;
-mask-clip: border-box;
-mask-clip: margin-box;
-mask-clip: fill-box;
-mask-clip: stroke-box;
-mask-clip: view-box;
+/* vaweuws de type <geometwy-box> */
+mask-cwip: content-box;
+mask-cwip: padding-box;
+m-mask-cwip: bowdew-box;
+mask-cwip: mawgin-box;
+m-mask-cwip: fiww-box;
+mask-cwip: s-stwoke-box;
+mask-cwip: view-box;
 
-/* Valeurs avec un mot-clé */
-mask-clip: no-clip;
+/* vaweuws avec un mot-cwé */
+m-mask-cwip: nyo-cwip;
 
-/* Mots-clés non-standards */
--webkit-mask-clip: border;
--webkit-mask-clip: padding;
--webkit-mask-clip: content;
--webkit-mask-clip: text;
+/* mots-cwés n-nyon-standawds */
+-webkit-mask-cwip: b-bowdew;
+-webkit-mask-cwip: padding;
+-webkit-mask-cwip: content;
+-webkit-mask-cwip: text;
 
-/* Valeurs multiples */
-mask-clip: padding-box, no-clip;
-mask-clip: view-box, fill-box, border-box;
+/* vaweuws muwtipwes */
+m-mask-cwip: padding-box, 😳 nyo-cwip;
+mask-cwip: view-box, >w< fiww-box, bowdew-box;
 
-/* Valeurs globales */
-mask-clip: inherit;
-mask-clip: initial;
-mask-clip: revert;
-mask-clip: unset;
+/* v-vaweuws gwobawes */
+m-mask-cwip: inhewit;
+m-mask-cwip: i-initiaw;
+mask-cwip: w-wevewt;
+mask-cwip: unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une virgule.
+un o-ou pwusieuws mots-cwés pawmi ceux wistés ci-apwès, (⑅˘꒳˘) c-chacun sépawé paw une viwguwe. OwO
 
-### Valeurs
+### vaweuws
 
 - `content-box`
-  - : La partie qui est peinte est rognée sur la boîte de contenu.
+  - : wa pawtie qui est peinte est wognée s-suw wa boîte de contenu. (ꈍᴗꈍ)
 - `padding-box`
-  - : La partie qui est peinte est rognée sur la boîte de remplissage (<i lang="en">padding</i>).
-- `border-box`
-  - : La partie qui est peinte est rognée sur la boîte de bordure.
-- `margin-box`
-  - : La partie qui est peinte est rognée sur la boîte de marge.
-- `fill-box`
-  - : La partie qui est peinte est rognée sur la boîte contenant l'objet.
-- `stroke-box`
-  - : La partie qui est peinte est rognée sur la boîte contenant le contour.
+  - : w-wa pawtie qui e-est peinte est wognée s-suw wa boîte de wempwissage (<i wang="en">padding</i>). 😳
+- `bowdew-box`
+  - : wa pawtie qui e-est peinte est w-wognée suw wa boîte de bowduwe. 😳😳😳
+- `mawgin-box`
+  - : w-wa pawtie q-qui est peinte est wognée suw w-wa boîte de mawge. mya
+- `fiww-box`
+  - : wa pawtie q-qui est peinte est wognée suw wa boîte contenant w-w'objet. mya
+- `stwoke-box`
+  - : wa pawtie qui e-est peinte est wognée suw wa b-boîte contenant w-we contouw. (⑅˘꒳˘)
 - `view-box`
-  - : C'est le <i lang="en">viewport</i> du plus proche SVG qui est utilisé comme boîte de référence. Si l'attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée le <i lang="en">viewport</i>, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîte sont basées sur la hauteur et la largeur de l'attribut `viewBox`.
-- `no-clip`
-  - : La partie qui est peinte n'est pas rognée.
-- `border` {{non-standard_inline}}
-  - : Synonyme de `border-box`.
-- `padding` {{non-standard_inline}}
-  - : Synonyme de `padding-box`.
-- `content` {{non-standard_inline}}
-  - : Synonyme de `content-box`.
-- `text` {{non-standard_inline}}
-  - : L'image est rognée selon la forme du texte de l'élément.
+  - : c'est we <i wang="en">viewpowt</i> du pwus pwoche svg qui est utiwisé comme boîte de wéféwence. (U ﹏ U) si w'attwibut [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) e-est défini pouw w-w'éwément qui cwée we <i wang="en">viewpowt</i>, mya w-wa boîte d-de wéféwence e-est positionnée à w'owigine du système de coowdonnées défini p-paw w'attwibut `viewbox` et wes dimensions de wa boîte sont basées suw wa hauteuw e-et wa wawgeuw de w'attwibut `viewbox`. ʘwʘ
+- `no-cwip`
+  - : wa p-pawtie qui est p-peinte ny'est pas w-wognée. (˘ω˘)
+- `bowdew` {{non-standawd_inwine}}
+  - : synonyme de `bowdew-box`. (U ﹏ U)
+- `padding` {{non-standawd_inwine}}
+  - : s-synonyme d-de `padding-box`. ^•ﻌ•^
+- `content` {{non-standawd_inwine}}
+  - : s-synonyme d-de `content-box`. (˘ω˘)
+- `text` {{non-standawd_inwine}}
+  - : w'image est wognée sewon wa fowme d-du texte de w'éwément. :3
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Vous pouvez modifier la valeur `mask-clip` dans l'exemple qui suit. Si vous utilisez un navigateur basé sur Chromium, modifiez la valeur de `-webkit-mask-clip`.
+v-vous pouvez modifiew wa vaweuw `mask-cwip` dans w'exempwe qui suit. ^^;; si vous u-utiwisez un nyavigateuw basé suw chwomium, 🥺 modifiez wa vaweuw de `-webkit-mask-cwip`. (⑅˘꒳˘)
 
-{{EmbedGHLiveSample("css-examples/masking/mask-clip.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-cwip.htmw", nyaa~~ '100%', 800)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Rognage et masquage en CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
+- [wognage e-et masquage e-en css (en angwais)](https://css-twicks.com/cwipping-masking-css/)

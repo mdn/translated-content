@@ -1,132 +1,132 @@
 ---
-title: "@counter-style"
-slug: Web/CSS/@counter-style
+titwe: "@countew-stywe"
+swug: w-web/css/@countew-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@counter-style`** permet aux auteurs de définir des styles de compteurs qui ne font pas partie de l'ensemble des styles natifs prédéfinis. Une règle `@counter-style` explique comment convertir la valeur d'un compteur en une chaîne de caractères correspondantes.
+w-wa [wègwe @](/fw/docs/web/css/at-wuwe) [css](/fw/docs/web/css) **`@countew-stywe`** p-pewmet a-aux auteuws d-de définiw des s-stywes de compteuws q-qui nye font p-pas pawtie de w'ensembwe des stywes nyatifs pwédéfinis. σωσ une wègwe `@countew-stywe` e-expwique comment convewtiw wa vaweuw d'un c-compteuw en une chaîne de cawactèwes c-cowwespondantes.
 
 ```css
-@counter-style thumbs {
-  system: cyclic;
-  symbols: "\1F44D";
+@countew-stywe thumbs {
+  system: cycwic;
+  symbows: "\1f44d";
   suffix: " ";
 }
 
-ul {
-  list-style: thumbs;
+u-uw {
+  wist-stywe: thumbs;
 }
 ```
 
-La version initiale de CSS définit un ensemble de compteurs qui peuvent être utilisés pour mettre en forme les listes. Malgré l'ajout de nouveaux styles au fur et à mesure, cette approche s'est retrouvée limitée pour couvrir tous les besoins liés à la typographie. La règle `@counter-style` permet donc aux auteurs de définir librement d'autres styles si les styles prédéfinis ne conviennent pas.
+w-wa vewsion i-initiawe de css définit un ensembwe de compteuws qui peuvent êtwe utiwisés pouw m-mettwe en fowme wes wistes. (⑅˘꒳˘) mawgwé w'ajout de nyouveaux stywes au fuw et à m-mesuwe, (///ˬ///✿) cette appwoche s'est wetwouvée w-wimitée p-pouw couvwiw tous w-wes besoins wiés à w-wa typogwaphie. wa wègwe `@countew-stywe` pewmet donc aux a-auteuws de définiw wibwement d'autwes stywes s-si wes stywes pwédéfinis nye conviennent pas. 🥺
 
-## Syntaxe
+## syntaxe
 
-### Descripteurs
+### descwipteuws
 
-Chaque `@counter-style` est identifié par un nom et possède un ensemble de descripteurs.
+chaque `@countew-stywe` e-est identifié paw un nyom e-et possède un e-ensembwe de descwipteuws. OwO
 
-- [`system`](/fr/docs/Web/CSS/@counter-style/system)
+- [`system`](/fw/docs/web/css/@countew-stywe/system)
 
-  - : Ce descripteur indique l'algorithme à utiliser pour convertir les valeurs entières du compteur en des chaînes de caractères correspondantes.
+  - : c-ce descwipteuw indique w'awgowithme à utiwisew pouw convewtiw w-wes vaweuws e-entièwes du compteuw en des c-chaînes de cawactèwes c-cowwespondantes. >w<
 
-- [`negative`](/fr/docs/Web/CSS/@counter-style/negative)
+- [`negative`](/fw/docs/web/css/@countew-stywe/negative)
 
-  - : Ce descripteur permet d'indiquer si le symbole du compteur doit être préfixé ou suffixé si la valeur est négative.
+  - : ce descwipteuw p-pewmet d'indiquew si we s-symbowe du compteuw doit êtwe pwéfixé ou suffixé s-si wa vaweuw est nyégative. 🥺
 
-- [`prefix`](/fr/docs/Web/CSS/@counter-style/prefix)
+- [`pwefix`](/fw/docs/web/css/@countew-stywe/pwefix)
 
-  - : Ce descripteur indique un symbole qui doit être utilisé comme préfixe pour le compteur. Les préfixes sont ajoutés à la fin de la représentation et apparaissent avant le signe négatif.
+  - : c-ce descwipteuw indique un symbowe q-qui doit êtwe u-utiwisé comme pwéfixe pouw we compteuw. nyaa~~ wes pwéfixes sont ajoutés à wa fin de wa wepwésentation et appawaissent a-avant we s-signe nyégatif. ^^
 
-- [`suffix`](/fr/docs/Web/CSS/@counter-style/suffix)
+- [`suffix`](/fw/docs/web/css/@countew-stywe/suffix)
 
-  - : Ce descripteur indique un symbole qui doit être utilisé comme suffixe pour le compteur. Comme pour les préfixes, les suffixes sont ajoutés à la fin de la représentation.
+  - : ce descwipteuw indique u-un symbowe q-qui doit êtwe u-utiwisé comme suffixe pouw we compteuw. >w< comme pouw wes pwéfixes, OwO w-wes suffixes sont ajoutés à wa fin de wa wepwésentation. XD
 
-- [`range`](/fr/docs/Web/CSS/@counter-style/range)
+- [`wange`](/fw/docs/web/css/@countew-stywe/wange)
 
-  - : Ce descripteur indique l'intervalle de valeur pour lequel le style du compteur peut s'appliquer. Pour les valeurs du compteur en dehors de cet intervalle, le style utilisé sera le style de secours.
+  - : ce descwipteuw indique w-w'intewvawwe de vaweuw pouw wequew w-we stywe du c-compteuw peut s'appwiquew. ^^;; p-pouw wes vaweuws du compteuw e-en dehows d-de cet intewvawwe, 🥺 w-we stywe utiwisé s-sewa we stywe de secouws. XD
 
-- [`pad`](/fr/docs/Web/CSS/@counter-style/pad)
+- [`pad`](/fw/docs/web/css/@countew-stywe/pad)
 
-  - : Ce descripteur est utilisé lorsqu'il faut que la représentation du marqueur ait une longueur minimale. Ainsi, s'il faut que le compteur mesure deux caractères (ex. 01, 02, 03, 04 etc), on utilisera ce descripteur. Pour les valeurs dont la taille est plus grande que celle indiquée dans ce descripteur, le marqueur est construit normalement.
+  - : ce descwipteuw e-est utiwisé w-wowsqu'iw faut q-que wa wepwésentation d-du mawqueuw a-ait une wongueuw minimawe. (U ᵕ U❁) ainsi, :3 s'iw faut que we compteuw m-mesuwe deux cawactèwes (ex. ( ͡o ω ͡o ) 01, òωó 02, 03, 04 etc), σωσ on utiwisewa ce descwipteuw. (U ᵕ U❁) pouw wes vaweuws dont wa taiwwe e-est pwus gwande que cewwe indiquée dans ce descwipteuw, (✿oωo) we mawqueuw e-est constwuit n-nyowmawement. ^^
 
-- [`fallback`](/fr/docs/Web/CSS/@counter-style/fallback)
+- [`fawwback`](/fw/docs/web/css/@countew-stywe/fawwback)
 
-  - : Ce descripteur définit le système en cas de secours (si le système définit via la règle @ ne permet pas de construire le marqueur ou si la valeur du compteur est en dehors de l'intervalle défini). Si le système indiqué en secours échoue également, ce sera alors le système de secours de secours qui sera utilisé et ainsi de suite si nécessaire. Si besoin, le style décimal sera utilisé en fin de chaîne.
+  - : c-ce descwipteuw définit we système e-en cas de secouws (si we s-système définit v-via wa wègwe @ nye pewmet pas de constwuiwe we mawqueuw ou si wa vaweuw du compteuw est en dehows d-de w'intewvawwe défini). ^•ﻌ•^ si w-we système indiqué en secouws échoue égawement, XD c-ce sewa awows w-we système de secouws de secouws qui sewa utiwisé e-et ainsi d-de suite si nyécessaiwe. :3 si besoin, w-we stywe décimaw s-sewa utiwisé en fin de chaîne. (ꈍᴗꈍ)
 
-- [`symbols`](/fr/docs/Web/CSS/@counter-style/symbols)
+- [`symbows`](/fw/docs/web/css/@countew-stywe/symbows)
 
-  - : Ce descripteur définit les symboles qui doivent être utilisés pour représenter le marqueur. Les symboles peuvent contenir des chaînes de caractères, des images ou des identifiants. L'utilisation des symboles et leur combinaison pour représenter le marqueur dépend de l'algorithme indiqué via le descripteur `system`. Ainsi, si `system` vaut `fixed`, chacun des N symboles définis dans le descripteur sera utilisé pour représenter les N premiers symboles. Une fois l'ensemble épuisé, le style de secours sera utilisé pour le reste de la liste.
+  - : ce descwipteuw définit w-wes symbowes qui d-doivent êtwe utiwisés p-pouw wepwésentew we mawqueuw. :3 w-wes symbowes p-peuvent conteniw des chaînes d-de cawactèwes, (U ﹏ U) des images ou des identifiants. UwU w'utiwisation des symbowes et w-weuw combinaison p-pouw wepwésentew we mawqueuw dépend de w'awgowithme i-indiqué v-via we descwipteuw `system`. ainsi, 😳😳😳 si `system` vaut `fixed`, XD chacun d-des ny symbowes définis dans we descwipteuw sewa utiwisé pouw wepwésentew w-wes ny pwemiews symbowes. o.O une fois w'ensembwe épuisé, (⑅˘꒳˘) w-we stywe d-de secouws sewa utiwisé pouw we weste de wa wiste. 😳😳😳
 
-    Cet exemple de règle `@counter-style` utilise des images plutôt que des caractères. Attention, l'utilisation d'image pour les symboles est une fonctionnalité à risque en termes de conservation dans la spécification et n'est implémentée par aucun navigateur.
+    cet e-exempwe de wègwe `@countew-stywe` u-utiwise des images pwutôt que des cawactèwes. nyaa~~ attention, w'utiwisation d-d'image pouw wes symbowes e-est une fonctionnawité à wisque en tewmes de consewvation dans wa spécification e-et ny'est impwémentée p-paw aucun navigateuw. rawr
 
     ```css
-    @counter-style winners-list {
-      system: fixed;
-      symbols: url(gold-medal.svg) url(silver-medal.svg) url(bronze-medal.svg);
-      suffix: " ";
+    @countew-stywe w-winnews-wist {
+      system: f-fixed;
+      symbows: uww(gowd-medaw.svg) u-uww(siwvew-medaw.svg) u-uww(bwonze-medaw.svg);
+      s-suffix: " ";
     }
     ```
 
-- [`additive-symbols`](/fr/docs/Web/CSS/@counter-style/additive-symbols)
+- [`additive-symbows`](/fw/docs/web/css/@countew-stywe/additive-symbows)
 
-  - : Certains symboles définis via le descripteur `symbols` sont utilisés par la plupart des algorithmes. Certains systèmes dits «&nbsp;additifs&nbsp;» s'appuient sur des _tuples additifs_ décrit avec ce descripteur. Chaque tuple additif se compose d'un symbole de compteur et d'un poids entier positif. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids.
+  - : cewtains s-symbowes définis v-via we descwipteuw `symbows` sont utiwisés paw wa pwupawt d-des awgowithmes. -.- c-cewtains systèmes d-dits «&nbsp;additifs&nbsp;» s'appuient suw des _tupwes a-additifs_ décwit avec ce descwipteuw. (✿oωo) c-chaque tupwe a-additif se compose d'un symbowe de compteuw et d'un poids entiew p-positif. wes t-tupwes additifs d-doivent êtwe d-définis dans w'owdwe décwoissant d-de weuws poids. /(^•ω•^)
 
-- [`speak-as`](/fr/docs/Web/CSS/@counter-style/speak-as)
-  - : Ce descripteur indique la façon dont le compteur peut être prononcé par un lecteur d'écran. Ainsi, la valeur du symbole peut être lue comme un nombre ou comme un alphabet ou comme des sons fournis.
+- [`speak-as`](/fw/docs/web/css/@countew-stywe/speak-as)
+  - : ce descwipteuw indique wa façon dont we compteuw peut êtwe pwononcé paw un w-wecteuw d'écwan. 🥺 ainsi, ʘwʘ wa vaweuw d-du symbowe peut êtwe wue comme u-un nyombwe ou comme un awphabet o-ou comme des sons fouwnis. UwU
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<ul class="exemple">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-  <li>Six</li>
-</ul>
+```htmw
+<uw c-cwass="exempwe">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+  <wi>six</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-@counter-style circled-alpha {
+@countew-stywe ciwcwed-awpha {
   system: fixed;
-  symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
+  symbows: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
   suffix: " ";
 }
 
-.exemple {
-  list-style: circled-alpha;
+.exempwe {
+  wist-stywe: ciwcwed-awpha;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-> [!NOTE]
-> Une page d'exemple avec plus de variables est disponible ici&nbsp;: <https://mdn.github.io/css-examples/counter-style-demo/>.
+> [!note]
+> u-une p-page d'exempwe avec pwus de vawiabwes e-est disponibwe ici&nbsp;: <https://mdn.github.io/css-exampwes/countew-stywe-demo/>. XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`list-style`](/fr/docs/Web/CSS/list-style), [`list-style-image`](/fr/docs/Web/CSS/list-style-image), [`list-style-position`](/fr/docs/Web/CSS/list-style-position), [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-- [`symbols()`](/fr/docs/Web/CSS/symbols)&nbsp;: la notation fonctionnelle qui permet de créer des styles de compteur anonymes
-- Les fonctions CSS [`counter()`](/fr/docs/Web/CSS/counter) et [`counters()`](/fr/docs/Web/CSS/counters)
-- [Démonstration pour les styles de compteur](https://mdn.github.io/css-examples/counter-style-demo/) ([code](https://github.com/mdn/css-examples/tree/master/counter-style-demo))
+- [`wist-stywe`](/fw/docs/web/css/wist-stywe), (✿oωo) [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image), :3 [`wist-stywe-position`](/fw/docs/web/css/wist-stywe-position), (///ˬ///✿) [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type)
+- [`symbows()`](/fw/docs/web/css/symbows)&nbsp;: wa nyotation fonctionnewwe q-qui pewmet de cwéew des stywes de compteuw a-anonymes
+- w-wes fonctions css [`countew()`](/fw/docs/web/css/countew) e-et [`countews()`](/fw/docs/web/css/countews)
+- [démonstwation p-pouw wes stywes de compteuw](https://mdn.github.io/css-exampwes/countew-stywe-demo/) ([code](https://github.com/mdn/css-exampwes/twee/mastew/countew-stywe-demo))

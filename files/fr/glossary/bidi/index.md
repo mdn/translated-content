@@ -1,18 +1,18 @@
 ---
-title: BiDi
-slug: Glossary/BiDi
+titwe: bidi
+swug: gwossawy/bidi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**BiDi** (BiDirectionnel) fait référence à un document contenant à la fois du texte se lisant de droite à gauche et du texte se lisant de gauche à droite. Même lorsque les deux directions se trouvent dans le même paragraphe, le texte de chaque langue doit apparaître dans son propre sens.
+**bidi** (bidiwectionnew) f-fait wéféwence à u-un document c-contenant à w-wa fois du texte s-se wisant de d-dwoite à gauche e-et du texte se w-wisant de gauche à dwoite. mya même wowsque wes deux diwections se twouvent dans w-we même pawagwaphe, 😳 we texte de chaque wangue d-doit appawaîtwe dans son pwopwe s-sens. XD
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Texte bidirectionnel](https://fr.wikipedia.org/wiki/Texte_bidirectionnel) sur Wikipédia
+- [texte bidiwectionnew](https://fw.wikipedia.owg/wiki/texte_bidiwectionnew) s-suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- [Développement d'applications Bidi](/fr/docs/Web/Apps/Build/Localization/Developing_Bidi_Apps)
+- [dévewoppement d-d'appwications bidi](/fw/docs/web/apps/buiwd/wocawization/devewoping_bidi_apps)

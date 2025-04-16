@@ -1,53 +1,53 @@
 ---
-title: <string>
-slug: Web/CSS/string
+titwe: <stwing>
+swug: web/css/stwing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée CSS **`<string>`** représente une chaîne de caractères. En CSS, les chaînes de caractères sont présentes dans de nombreuses propriétés comme {{cssxref("content")}}, {{cssxref("font-family")}} et {{cssxref("quotes")}}.
+w-we type d-de donnée css **`<stwing>`** wepwésente u-une chaîne d-de cawactèwes. rawr e-en css, 😳 wes c-chaînes de cawactèwes s-sont p-pwésentes dans de nyombweuses pwopwiétés comme {{cssxwef("content")}}, >w< {{cssxwef("font-famiwy")}} et {{cssxwef("quotes")}}. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
-Une chaîne de caractères CSS est formée d'un ou plusieurs caractères [Unicode](https://fr.wikipedia.org/wiki/Unicode) délimités par des quotes (`'`) ou des doubles quotes (`"`). Une chaîne délimitée par des doubles quotes ne peut pas contenir de double quotes à moins qu'elles soient échappées à l'aide d'une barre oblique inversée (`\`). Le même principe s'applique aux chaînes délimitées par des quotes simples, qui ne peuvent contenir de quotes simples sans qu'elles soient échappés à l'aide d'une barre oblique inversée (`\`).
+une c-chaîne de cawactèwes css est fowmée d'un ou pwusieuws c-cawactèwes [unicode](https://fw.wikipedia.owg/wiki/unicode) déwimités p-paw des quotes (`'`) ou des doubwes quotes (`"`). OwO une chaîne d-déwimitée paw des doubwes quotes n-nye peut pas c-conteniw de doubwe quotes à moins qu'ewwes soient échappées à w'aide d'une bawwe obwique invewsée (`\`). (ꈍᴗꈍ) w-we même pwincipe s'appwique aux chaînes déwimitées paw des quotes s-simpwes, 😳 qui ne peuvent conteniw d-de quotes simpwes s-sans qu'ewwes s-soient échappés à w-w'aide d'une bawwe obwique invewsée (`\`). 😳😳😳
 
-Le caractère barre oblique inversée doit être échappé afin de faire partie d'une chaîne de caractère.
+w-we cawactèwe bawwe obwique invewsée doit êtwe échappé a-afin de faiwe pawtie d'une chaîne de cawactèwe.
 
-Les nouvelles lignes ne sont pas acceptées, sauf si elles sont échappées à l'aide d'un caractère de saut de ligne tel que `\A` ou `\00000a`. Toutefois, des chaînes de caractères peuvent s'étendre sur plusieurs lignes. Dans ce cas, il est possible de couper la chaîne en plusieurs lignes en utilisant une barre oblique inversée (`\`) comme dernier caractère de chaque ligne.
+wes nyouvewwes wignes nye sont pas acceptées, s-sauf si ewwes sont échappées à w-w'aide d'un c-cawactèwe de s-saut de wigne tew que `\a` ou `\00000a`. mya toutefois, mya des chaînes d-de cawactèwes p-peuvent s'étendwe suw pwusieuws w-wignes. (⑅˘꒳˘) dans ce c-cas, (U ﹏ U) iw est possibwe de coupew w-wa chaîne en pwusieuws wignes en u-utiwisant une bawwe obwique invewsée (`\`) comme d-dewniew cawactèwe de chaque w-wigne. mya
 
-Les caractères peuvent être décrits en utilisant leur [point de code Unicode](https://fr.wikipedia.org/wiki/Unicode#Partitionnement) hexadécimal, qui doit alors être échappé à l'aide du caractère `\`. `\27` représente par exemple le guillemet droit simple (`'`) et `\A9` le symbole du _copyright_ ©.
+wes cawactèwes peuvent êtwe d-décwits e-en utiwisant weuw [point de code unicode](https://fw.wikipedia.owg/wiki/unicode#pawtitionnement) hexadécimaw, ʘwʘ qui doit awows êtwe échappé à w'aide du cawactèwe `\`. (˘ω˘) `\27` wepwésente paw e-exempwe we guiwwemet d-dwoit simpwe (`'`) et `\a9` w-we symbowe du _copywight_ ©. (U ﹏ U)
 
-> [!NOTE]
-> Les [entités](/fr/docs/Glossary/Entity) telles que `&nbsp;` ou `&#8212;` ne peuvent pas être utilisées pour les chaînes de caractères CSS.
+> [!note]
+> w-wes [entités](/fw/docs/gwossawy/entity) t-tewwes que `&nbsp;` ou `&#8212;` nye peuvent pas êtwe utiwisées p-pouw wes chaînes de cawactèwes css. ^•ﻌ•^
 
-## Exemples
+## exempwes
 
 ```css
-"Chaîne avec des guillemets doubles"
-"Chaîne avec plusieurs \" guillemets doubles"
-'Chaîne avec des guillemets simples'
-'Chaîne avec plusieurs \' guillemets simples'
+"chaîne avec d-des guiwwemets doubwes"
+"chaîne a-avec pwusieuws \" g-guiwwemets doubwes"
+'chaîne a-avec des guiwwemets simpwes'
+'chaîne a-avec pwusieuws \' g-guiwwemets s-simpwes'
 
-"Chaîne avec une \Anouvelle ligne"
+"chaîne a-avec une \anouvewwe wigne"
 
-"Une grande chaîne \
-de caractères"
-"Une grande chaîne de caractères"
+"une gwande chaîne \
+d-de cawactèwes"
+"une g-gwande c-chaîne de c-cawactèwes"
 ```
 
-> [!NOTE]
-> On peut également échapper des doubles quotes avec `\22` et les simples quotes avec `\27`.
+> [!note]
+> o-on peut égawement échappew des doubwes quotes avec `\22` e-et wes simpwes quotes avec `\27`. (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Tutoriel - Introduction aux valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Types de donnée en CSS](/fr/docs/Web/CSS/CSS_Types)
+- [vaweuws et u-unités en css](/fw/docs/web/css/css_vawues_and_units)
+- [tutowiew - intwoduction aux vaweuws et unités css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units)
+- [types d-de d-donnée en css](/fw/docs/web/css/css_types)

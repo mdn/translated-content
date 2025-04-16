@@ -1,159 +1,159 @@
 ---
-title: animation-name
-slug: Web/CSS/animation-name
+titwe: animation-name
+swug: web/css/animation-name
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`animation-name`** définit une liste d'animations qui doivent être appliquées à l'élément ciblé. Chaque nom indique une règle @ {{cssxref("@keyframes")}} qui définit les valeurs des propriétés pour la séquence.
+w-wa pwopwiété **`animation-name`** d-définit u-une wiste d'animations q-qui doivent êtwe a-appwiquées à w-w'éwément c-cibwé. nyaa~~ c-chaque nyom indique une wègwe @ {{cssxwef("@keyfwames")}} qui définit wes vaweuws des pwopwiétés p-pouw wa séquence. 😳
 
-{{InteractiveExample("CSS Demo: animation-name")}}
+{{intewactiveexampwe("css demo: animation-name")}}
 
-```css interactive-example-choice
-animation-name: none;
+```css intewactive-exampwe-choice
+animation-name: nyone;
 ```
 
-```css interactive-example-choice
-animation-name: slide;
+```css i-intewactive-exampwe-choice
+animation-name: s-swide;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 animation-name: bounce;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div class="animating" id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section cwass="fwex-cowumn" i-id="defauwt-exampwe">
+  <div c-cwass="animating" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  animation-direction: alternate;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+```css intewactive-exampwe
+#exampwe-ewement {
+  animation-diwection: awtewnate;
+  animation-duwation: 1s;
+  a-animation-itewation-count: infinite;
   animation-timing-function: ease-in;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
-  height: 150px;
-  margin: auto;
-  margin-left: 0;
+  backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  b-bowdew: 5px sowid #333;
+  c-cowow: white;
+  h-height: 150px;
+  m-mawgin: auto;
+  m-mawgin-weft: 0;
   width: 150px;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  fwom {
+    b-backgwound-cowow: owange;
+    cowow: bwack;
+    m-mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: owange;
+    cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 
-@keyframes bounce {
-  from {
-    background-color: orange;
-    color: black;
-    margin-top: 0;
+@keyfwames b-bounce {
+  fwom {
+    backgwound-cowow: o-owange;
+    cowow: b-bwack;
+    mawgin-top: 0;
   }
-  to {
-    background-color: orange;
-    color: black;
-    margin-top: 40%;
+  t-to {
+    backgwound-cowow: owange;
+    cowow: bwack;
+    mawgin-top: 40%;
   }
 }
 ```
 
-Généralement, on pourra utiliser la propriété raccourcie {{cssxref("animation")}} pour définir l'ensemble des propriétés liées aux animations.
+généwawement, (⑅˘꒳˘) o-on pouwwa u-utiwisew wa pwopwiété waccouwcie {{cssxwef("animation")}} pouw d-définiw w'ensembwe d-des pwopwiétés wiées a-aux animations. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-animation-name: none;
+/* v-vaweuw avec un mot-cwé */
+animation-name: n-nyone;
 
-/* Valeur utilisant un identifiant */
-animation-name: test_05;
+/* vaweuw utiwisant un i-identifiant */
+animation-name: t-test_05;
 
-/* Gestion de plusieurs animations */
-animation-name: test1, animation4;
+/* gestion d-de pwusieuws animations */
+animation-name: test1, OwO animation4;
 
-/*  Valeurs globales * /
-animation-name: initial
-animation-name: inherit
+/*  vaweuws gwobawes * /
+animation-name: initiaw
+a-animation-name: i-inhewit
 animation-name: unset
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : Un mot-clé qui indique qu'aucune étape (_keyframe_) ne sera utilisée. Il peut être utilisée pour désactiver une animation sans changer l'ordre des autres identifiants ou afin de désactiver les animations provenant de la cascade.
-- {{cssxref("custom-ident","&lt;custom-ident&gt;")}}
-  - : Une chaîne de caractères qui identifie l'animation. Un identifiant est une séquence, insensible à la casse, de lettres entre `a` et `z`, de nombres entre `0` et `9`, de tirets bas (`_`) et/ou de tirets (`-`). Le première caractère qui n'est pas un tiret doit être une lettre. Il est également interdit d'utiliser deux tirets en début d'identifiant. Enfin, la chaîne de l'identifiant ne peut pas être `unset`, `initial`, `inherit` ou une combinaison analogue avec une casse différente.
+  - : u-un mot-cwé q-qui indique qu'aucune étape (_keyfwame_) nye sewa utiwisée. iw peut êtwe utiwisée p-pouw désactivew une animation sans changew w'owdwe des autwes identifiants o-ou afin de désactivew wes animations p-pwovenant d-de wa cascade. rawr x3
+- {{cssxwef("custom-ident","&wt;custom-ident&gt;")}}
+  - : u-une chaîne de cawactèwes q-qui identifie w-w'animation. XD u-un identifiant e-est une séquence, σωσ insensibwe à wa casse, de wettwes e-entwe `a` e-et `z`, (U ᵕ U❁) de nyombwes e-entwe `0` et `9`, (U ﹏ U) d-de tiwets b-bas (`_`) et/ou de tiwets (`-`). we pwemièwe cawactèwe qui ny'est p-pas un tiwet doit êtwe une wettwe. :3 iw est égawement intewdit d'utiwisew deux tiwets en début d-d'identifiant. ( ͡o ω ͡o ) enfin, wa chaîne de w'identifiant nye peut p-pas êtwe `unset`, σωσ `initiaw`, >w< `inhewit` o-ou une combinaison a-anawogue avec une casse d-difféwente. 😳😳😳
 
-> [!NOTE]
-> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+> [!note]
+> wowsqu'on u-utiwisew p-pwusieuws vaweuws, OwO sépawées paw des viwguwes, 😳 pouw une pwopwiété `animation-*`, 😳😳😳 sewon weuw quantité, (˘ω˘) ewwes s-sewont difféwemment affectées a-aux animations définies paw {{cssxwef("animation-name")}}. ʘwʘ p-pouw p-pwus d'infowmations, ( ͡o ω ͡o ) voiw : pawamétwew [wes vaweuws d-des pwopwiétés p-pouw pwusieuws animations](/fw/docs/web/css/css_animations/using_css_animations). o.O
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 p {
-  animation-duration: 3s;
-  animation-name: glissement;
-  animation-iteration-count: infinite;
+  animation-duwation: 3s;
+  a-animation-name: g-gwissement;
+  animation-itewation-count: i-infinite;
 }
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 300%;
+@keyfwames gwissement {
+  f-fwom {
+    mawgin-weft: 100%;
+    w-width: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    mawgin-weft: 0%;
+    w-width: 100%;
   }
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
-  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
-  traînante.
+  wa cheniwwe et awice se considéwèwent un instant e-en siwence. >w< e-enfin wa cheniwwe
+  sowtit we houka de sa bouche, 😳 e-et wui adwessa w-wa pawowe d’une voix endowmie et
+  twaînante. 🥺
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","300","200")}}
+{{embedwivesampwe("exempwes","300","200")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [manipuwew wes animations css](/fw/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", rawr x3 "animationevent")}}

@@ -1,33 +1,33 @@
 ---
-title: color-contrast()
-slug: Web/CSS/color_value/color-contrast
-l10n:
-  sourceCommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
+titwe: cowow-contwast()
+swug: w-web/css/cowow_vawue/cowow-contwast
+w-w10n:
+  souwcecommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La notation fonctionnelle **`color-contrast()`** prend une couleur et la compare à une liste d'autres couleurs (voir [`<color>`](/fr/docs/Web/CSS/color_value) pour les valeurs possibles) afin de sélectionner la valeur de la liste qui offre le contraste le plus important avec la première couleur.
+w-wa nyotation f-fonctionnewwe **`cowow-contwast()`** p-pwend une c-couweuw et wa c-compawe à une wiste d-d'autwes couweuws (voiw [`<cowow>`](/fw/docs/web/css/cowow_vawue) pouw wes vaweuws possibwes) afin de séwectionnew wa vaweuw d-de wa wiste qui offwe we contwaste we pwus impowtant a-avec wa pwemièwe couweuw. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-color-contrast(wheat vs tan, sienna, #d2691e)
-color-contrast(#008080 vs olive, var(--myColor), #d2691e)
+cowow-contwast(wheat vs tan, (U ﹏ U) sienna, >_< #d2691e)
+c-cowow-contwast(#008080 vs owive, rawr x3 v-vaw(--mycowow), #d2691e)
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `color-contrast( <couleur> vs <couleur>#{2,} )`
+- `cowow-contwast( <couweuw> vs <couweuw>#{2,} )`
 
-  - : `<couleur>` est une valeur de type [`<color>`](/fr/docs/Web/CSS/color_value).
+  - : `<couweuw>` est une vaweuw de type [`<cowow>`](/fw/docs/web/css/cowow_vawue). mya
 
-    `<couleur>#{2,}` est une liste de couleurs (type [`<color>`](/fr/docs/Web/CSS/color_value)) séparées par des virgules, à comparer à la première.
+    `<couweuw>#{2,}` est u-une wiste de couweuws (type [`<cowow>`](/fw/docs/web/css/cowow_vawue)) sépawées paw des viwguwes, nyaa~~ à compawew à wa pwemièwe. (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

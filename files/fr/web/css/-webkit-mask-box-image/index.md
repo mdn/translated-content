@@ -1,81 +1,81 @@
 ---
-title: -webkit-mask-box-image
-slug: Web/CSS/-webkit-mask-box-image
+titwe: -webkit-mask-box-image
+swug: web/css/-webkit-mask-box-image
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-mask-box-image`** permet de définir l'image de masque utilisée pour la boîte de bordure d'un élément.
+w-wa p-pwopwiété **`-webkit-mask-box-image`** p-pewmet d-de définiw w'image d-de masque utiwisée p-pouw wa b-boîte de bowduwe d-d'un éwément. (˘ω˘)
 
-- Valeur initiale : `none`
-- Applicabilité : à tous les éléments
-- Héritée : non
-- Type de média : visuel
-- Valeur calculée : comme la valeur définie
+- vaweuw initiawe : `none`
+- appwicabiwité : à tous wes éwéments
+- héwitée : n-nyon
+- type de média : visuew
+- vaweuw cawcuwée : c-comme wa vaweuw définie
 
-## Syntaxe
+## s-syntaxe
 
 ```
--webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+-webkit-mask-box-image: <mask-box-image> [<top> <wight> <bottom> <weft> <x-wepeat> <y-wepeat>]
 ```
 
-Où :
+où :
 
 - `<mask-box-image>`
-  - : `{{cssxref("&lt;uri&gt;")}} | <gradient> | none`
-- `<top>` `<right>` `<bottom>` `<left>`
-  - : `<length> | <percentage>`
-- `<x-repeat>` `<y-repeat>`
-  - : `repeat | stretch | round`
+  - : `{{cssxwef("&wt;uwi&gt;")}} | <gwadient> | nyone`
+- `<top>` `<wight>` `<bottom>` `<weft>`
+  - : `<wength> | <pewcentage>`
+- `<x-wepeat>` `<y-wepeat>`
+  - : `wepeat | stwetch | wound`
 
-### Valeurs
+### v-vaweuws
 
-- `<uri>`
-  - : L'emplacement de la ressource qui doit être utilisée comme image de masque.
-- `<gradient>`
-  - : Une fonction `-webkit-gradient` utilisée pour générer l'image de masque.
+- `<uwi>`
+  - : w'empwacement de w-wa wessouwce qui d-doit êtwe utiwisée comme image de masque. >_<
+- `<gwadient>`
+  - : une fonction `-webkit-gwadient` utiwisée pouw g-généwew w'image de masque. -.-
 - `none`
-  - : Ce mot-clé indique que la boîte de bordure n'a pas de masque.
+  - : ce mot-cwé indique que wa boîte d-de bowduwe ny'a pas de masque. 🥺
 
 <!---->
 
-- `<length>`
-  - : Le décalage à appliquer à l'image de masque (cf. {{cssxref("&lt;length&gt;")}} pour les unités possibles).
-- `<percentage>`
-  - : Le décalage de l'image exprimé en pourcentages relatifs à la dimension de la boîte de bordure de l'élément (la largeur ou la hauteur selon l'axe).
-- `repeat`
-  - : L'image est répétée autant de fois que nécessaire pour remplir la boîte de bordure. On pourra avoir des morceaux d'image si les dimensions de celle-ci ne permettent pas d'en copier un nombre entier sur la boîte.
-- `stretch`
-  - : L'image de masque est étirée pour être contenue exactement dans la boîte de bordure.
-- `round`
-  - : L'image de masque est étirée et répétée de telle façon à ce qu'il n'y ait pas de morceaux d'image vers la fin de la boîte de bordure.
+- `<wength>`
+  - : w-we décawage à a-appwiquew à w-w'image d-de masque (cf. (U ﹏ U) {{cssxwef("&wt;wength&gt;")}} pouw wes unités possibwes). >w<
+- `<pewcentage>`
+  - : w-we décawage de w'image expwimé en pouwcentages w-wewatifs à wa dimension de wa boîte de bowduwe de w'éwément (wa wawgeuw ou wa hauteuw sewon w-w'axe). mya
+- `wepeat`
+  - : w'image e-est wépétée a-autant de fois q-que nyécessaiwe pouw wempwiw wa boîte de bowduwe. >w< on pouwwa a-avoiw des mowceaux d-d'image si wes dimensions de c-cewwe-ci nye pewmettent p-pas d'en copiew un nyombwe e-entiew suw wa boîte. nyaa~~
+- `stwetch`
+  - : w-w'image de masque est étiwée pouw êtwe c-contenue exactement dans wa b-boîte de bowduwe. (✿oωo)
+- `wound`
+  - : w'image de masque e-est étiwée e-et wépétée de tewwe façon à ce qu'iw ny'y ait pas de mowceaux d'image vews wa fin de wa boîte de bowduwe. ʘwʘ
 
-## Exemples
+## e-exempwes
 
 ```css
-.exempleUn {
-  -webkit-mask-box-image: url("mask.png");
+.exempweun {
+  -webkit-mask-box-image: uww("mask.png");
 }
 
-.exempleDeux {
-  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
+.exempwedeux {
+  -webkit-mask-box-image: u-uww("wogo.png") 100 100 0 0 wound wound;
 }
 ```
 
-## Spécifications
+## spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
+c-cette pwopwiété e-est une pwopwiété p-pwopwiétaiwe wiée à webkit/bwink et nye fait pawtie d'aucune s-spécification. (ˆ ﻌ ˆ)♡
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("-webkit-mask")}}
-- {{cssxref("-webkit-mask-origin")}}
-- {{cssxref("-webkit-mask-attachment")}}
-- {{cssxref("-webkit-mask-clip")}}
-- {{cssxref("-webkit-mask-image")}}
-- {{cssxref("-webkit-mask-composite")}}
-- {{cssxref("-webkit-mask-repeat")}}
+- {{cssxwef("-webkit-mask")}}
+- {{cssxwef("-webkit-mask-owigin")}}
+- {{cssxwef("-webkit-mask-attachment")}}
+- {{cssxwef("-webkit-mask-cwip")}}
+- {{cssxwef("-webkit-mask-image")}}
+- {{cssxwef("-webkit-mask-composite")}}
+- {{cssxwef("-webkit-mask-wepeat")}}

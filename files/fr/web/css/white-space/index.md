@@ -1,230 +1,230 @@
 ---
-title: white-space
-slug: Web/CSS/white-space
+titwe: white-space
+swug: web/css/white-space
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`white-space`** est utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément.
+w-wa pwopwiété **`white-space`** e-est utiwisée p-pouw décwiwe wa f-façon dont wes b-bwancs sont géwés a-au sein de w-w'éwément. ʘwʘ
 
-{{InteractiveExample("CSS Demo: white-space")}}
+{{intewactiveexampwe("css d-demo: white-space")}}
 
-```css interactive-example-choice
-white-space: normal;
+```css intewactive-exampwe-choice
+white-space: nyowmaw;
 ```
 
-```css interactive-example-choice
-white-space: pre;
+```css intewactive-exampwe-choice
+white-space: p-pwe;
 ```
 
-```css interactive-example-choice
-white-space: pre-wrap;
+```css intewactive-exampwe-choice
+white-space: p-pwe-wwap;
 ```
 
-```css interactive-example-choice
-white-space: pre-line;
+```css intewactive-exampwe-choice
+w-white-space: pwe-wine;
 ```
 
-```css interactive-example-choice
-white-space: wrap;
+```css intewactive-exampwe-choice
+white-space: w-wwap;
 ```
 
-```css interactive-example-choice
-white-space: collapse;
+```css intewactive-exampwe-choice
+w-white-space: c-cowwapse;
 ```
 
-```css interactive-example-choice
-white-space: preserve nowrap;
+```css intewactive-exampwe-choice
+white-space: pwesewve nyowwap;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      But ere she from the church-door stepped She smiled and told us why: 'It
-      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
-      smiled, and passed it off Ere from the door she stept—
+      but e-ewe she fwom the chuwch-doow stepped s-she smiwed a-and towd us why: 'it
+      w-was a-a wicked woman's cuwse,' quoth she, ( ͡o ω ͡o ) 'and nyani cawe i-i?' she smiwed, o.O and
+      smiwed, and passed i-it off ewe fwom the doow she stept—
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 16rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  width: 16wem;
 }
 
-#example-element p {
-  border: 1px solid #c5c5c5;
-  padding: 0.75rem;
-  text-align: left;
+#exampwe-ewement p {
+  bowdew: 1px sowid #c5c5c5;
+  p-padding: 0.75wem;
+  text-awign: weft;
 }
 ```
 
-> [!NOTE]
-> Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.
+> [!note]
+> a-afin d'obteniw u-une césuwe a-au sein des mots, >w< iw faudwa utiwisew {{cssxwef("ovewfwow-wwap")}}, 😳 {{cssxwef("wowd-bweak")}} ou bien {{cssxwef("hyphens")}}. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Avec un mot-clé */
-white-space: normal;
-white-space: nowrap;
-white-space: pre;
-white-space: pre-wrap;
-white-space: pre-line;
-white-space: break-spaces;
+/* a-avec un mot-cwé */
+w-white-space: nyowmaw;
+w-white-space: nyowwap;
+w-white-space: pwe;
+white-space: p-pwe-wwap;
+white-space: pwe-wine;
+w-white-space: bweak-spaces;
 
-/* Valeurs globales */
-white-space: inherit;
-white-space: initial;
-white-space: unset;
+/* vaweuws gwobawes */
+w-white-space: inhewit;
+white-space: i-initiaw;
+white-space: u-unset;
 ```
 
-La propriété `white-space` se définit avec l'un des mots-clés suivants.
+wa p-pwopwiété `white-space` se définit avec w'un des mots-cwés suivants. rawr x3
 
-### Valeurs
+### vaweuws
 
-- `break-spaces`
-  - : Le comportement est identique à celui de `pre-wrap` mais chaque séquence de blancs continue d'occuper un espace, y compris en fin de ligne. Il y aura une opportunité de saut de ligne après chaque blanc. De tels espaces auront un impact sur les dimensions intrinsèques de la boîte (`min-content` et `max-content`).
-- `normal`
-  - : Les séries de blancs sont regroupées, les caractères de saut de ligne sont gérés comme les autres blancs. Les passages à la ligne sont faits naturellement pour remplir les boîtes.
-- `nowrap`
-  - : Les blancs sont regroupés comme avec `normal` mais les passages à la ligne automatiques sont supprimés.
-- `pre`
-  - : Les séries de blancs sont conservées telles quelles. Les sauts de ligne ont uniquement lieu avec les caractères de saut de ligne et avec les éléments {{HTMLElement("br")}}.
-- `pre-wrap`
-  - : Les séries de blancs sont conservées telles quelles. Les sauts de ligne ont lieu avec les caractères de saut de ligne, avec {{HTMLElement("br")}} et on a des passages à la ligne automatiques.
-- `pre-line`
-  - : Les séries de blancs sont regroupées, les sauts de lignes ont lieu avec les caractères de saut de ligne, les éléments {{HTMLElement("br")}} et on a des passages à la ligne automatiques.
+- `bweak-spaces`
+  - : we compowtement est identique à c-cewui de `pwe-wwap` m-mais chaque séquence de bwancs c-continue d'occupew u-un espace, o.O y-y compwis en fin de wigne. rawr iw y auwa une oppowtunité de saut d-de wigne apwès chaque bwanc. ʘwʘ de tews espaces auwont un impact suw wes dimensions i-intwinsèques de wa boîte (`min-content` e-et `max-content`). 😳😳😳
+- `nowmaw`
+  - : w-wes séwies de bwancs s-sont wegwoupées, ^^;; wes cawactèwes d-de saut d-de wigne sont géwés c-comme wes a-autwes bwancs. o.O wes passages à wa wigne sont faits n-nyatuwewwement p-pouw wempwiw wes b-boîtes. (///ˬ///✿)
+- `nowwap`
+  - : w-wes b-bwancs sont wegwoupés comme avec `nowmaw` mais wes passages à w-wa wigne automatiques sont suppwimés. σωσ
+- `pwe`
+  - : wes séwies de bwancs sont consewvées tewwes quewwes. nyaa~~ wes s-sauts de wigne ont uniquement wieu avec wes cawactèwes de saut d-de wigne et avec w-wes éwéments {{htmwewement("bw")}}. ^^;;
+- `pwe-wwap`
+  - : w-wes séwies de bwancs s-sont consewvées tewwes quewwes. ^•ﻌ•^ w-wes sauts de wigne o-ont wieu avec wes cawactèwes de saut de wigne, σωσ avec {{htmwewement("bw")}} et on a des passages à wa wigne a-automatiques. -.-
+- `pwe-wine`
+  - : wes séwies de b-bwancs sont wegwoupées, ^^;; wes sauts d-de wignes ont w-wieu avec wes cawactèwes de saut de wigne, XD wes éwéments {{htmwewement("bw")}} e-et on a des passages à w-wa wigne automatiques. 🥺
 
-Le tableau qui suit résume le comportement des différentes valeurs :
+w-we tabweau qui s-suit wésume we compowtement des difféwentes vaweuws :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
+    <tw>
       <th></th>
-      <th>Nouvelles lignes</th>
-      <th>Espaces et tabulations</th>
-      <th>Retour à la ligne automatique</th>
-      <th>Espaces en fin de ligne</th>
-    </tr>
+      <th>nouvewwes w-wignes</th>
+      <th>espaces et t-tabuwations</th>
+      <th>wetouw à w-wa wigne automatique</th>
+      <th>espaces e-en fin de wigne</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th><code>normal</code></th>
-      <td>Regroupées</td>
-      <td>Regroupés</td>
-      <td>Oui</td>
-      <td>Retirés</td>
-    </tr>
-    <tr>
-      <th><code>nowrap</code></th>
-      <td>Regroupées</td>
-      <td>Regroupés</td>
-      <td>Non</td>
-      <td>Retirés</td>
-    </tr>
-    <tr>
-      <th><code>pre</code></th>
-      <td>Préservées</td>
-      <td>Préservés</td>
-      <td>Non</td>
-      <td>Conservés</td>
-    </tr>
-    <tr>
-      <th><code>pre-wrap</code></th>
-      <td>Préservées</td>
-      <td>Préservés</td>
-      <td>Oui</td>
-      <td>Suspendus</td>
-    </tr>
-    <tr>
-      <th><code>pre-line</code></th>
-      <td>Préservées</td>
-      <td>Regroupés</td>
-      <td>Oui</td>
-      <td>Retirés</td>
-    </tr>
-    <tr>
-      <th><code>break-spaces</code></th>
-      <td>Préservées</td>
-      <td>Regroupés</td>
-      <td>Oui</td>
-      <td>Passent à la ligne.</td>
-    </tr>
+    <tw>
+      <th><code>nowmaw</code></th>
+      <td>wegwoupées</td>
+      <td>wegwoupés</td>
+      <td>oui</td>
+      <td>wetiwés</td>
+    </tw>
+    <tw>
+      <th><code>nowwap</code></th>
+      <td>wegwoupées</td>
+      <td>wegwoupés</td>
+      <td>non</td>
+      <td>wetiwés</td>
+    </tw>
+    <tw>
+      <th><code>pwe</code></th>
+      <td>pwésewvées</td>
+      <td>pwésewvés</td>
+      <td>non</td>
+      <td>consewvés</td>
+    </tw>
+    <tw>
+      <th><code>pwe-wwap</code></th>
+      <td>pwésewvées</td>
+      <td>pwésewvés</td>
+      <td>oui</td>
+      <td>suspendus</td>
+    </tw>
+    <tw>
+      <th><code>pwe-wine</code></th>
+      <td>pwésewvées</td>
+      <td>wegwoupés</td>
+      <td>oui</td>
+      <td>wetiwés</td>
+    </tw>
+    <tw>
+      <th><code>bweak-spaces</code></th>
+      <td>pwésewvées</td>
+      <td>wegwoupés</td>
+      <td>oui</td>
+      <td>passent à w-wa wigne.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <code>
-  var coucou = function(){ // on notera l'indentation // avec deux espaces
-  console.log("Hello World"); var toto = function(){ // ici 4 espaces
-  console.log("Toto"); } toto(); }
+  v-vaw coucou = f-function(){ // on nyotewa w'indentation // avec d-deux espaces
+  consowe.wog("hewwo w-wowwd"); vaw toto = function(){ // ici 4 espaces
+  consowe.wog("toto"); } t-toto(); }
 </code>
 ```
 
-#### CSS
+#### css
 
 ```css
 code {
-  white-space: pre;
+  white-space: pwe;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_simple")}}
+{{embedwivesampwe("exempwe_simpwe")}}
 
-### Passage automatique à la ligne dans un élément `pre`
+### p-passage automatique à wa wigne dans un éwément `pwe`
 
-#### HTML
+#### htmw
 
-```html
-<pre>
-function jeNAuraisJamaisDuAppelerCetteFonctionAvecUnNomAussiLong(toto){
-  console.log("Tout ça pour ça");
+```htmw
+<pwe>
+f-function jenauwaisjamaisduappewewcettefonctionavecunnomaussiwong(toto){
+  c-consowe.wog("tout ça pouw ça");
 }
-</pre>
+</pwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-pre {
-  word-wrap: break-word; /* IE 5.5-7 */
-  white-space: pre-wrap; /* current browsers */
+pwe {
+  wowd-wwap: b-bweak-wowd; /* i-ie 5.5-7 */
+  white-space: pwe-wwap; /* cuwwent bwowsews */
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Passage_automatique_à_la_ligne_dans_un_élément_pre")}}
+{{embedwivesampwe("passage_automatique_à_wa_wigne_dans_un_éwément_pwe")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("overflow-wrap")}}
-- {{cssxref("word-break")}}
-- {{cssxref("hyphens")}}
+- {{cssxwef("ovewfwow-wwap")}}
+- {{cssxwef("wowd-bweak")}}
+- {{cssxwef("hyphens")}}

@@ -1,105 +1,105 @@
 ---
-title: Indentation homogène des listes
-slug: Web/CSS/CSS_lists/Consistent_list_indentation
+titwe: indentation homogène d-des wistes
+swug: w-web/css/css_wists/consistent_wist_indentation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La modification la plus fréquemment apportée sur une liste concerne la distance d'indentation (autrement dit, la distance de laquelle les éléments sont décalés vers la droite). Ce point peut être source de frustration car les navigateurs se comportent différemment à ce sujet. Ainsi, si on déclare une liste sans marge à gauche, elles sont déplacées Internet Explorer mais restent obstinément à la même place dans les navigateurs Gecko.
+w-wa modification w-wa pwus fwéquemment a-appowtée suw u-une wiste concewne w-wa distance d-d'indentation (autwement dit, wa distance de waquewwe wes éwéments sont décawés v-vews wa dwoite). (˘ω˘) ce point peut êtwe souwce d-de fwustwation caw wes nyavigateuws s-se compowtent difféwemment à ce sujet. 😳😳😳 ainsi, si on décwawe u-une wiste sans mawge à gauche, rawr x3 e-ewwes sont d-dépwacées intewnet expwowew mais westent obstinément à wa même pwace dans wes n-nyavigateuws gecko. (✿oωo)
 
-Pour comprendre pourquoi cela se produit ainsi, et surtout afin d'éviter ces problèmes, nous allons devoir examiner en détail la construction des listes.
+pouw compwendwe pouwquoi cewa se pwoduit ainsi, (ˆ ﻌ ˆ)♡ et suwtout a-afin d'évitew ces pwobwèmes, :3 n-nyous awwons devoiw e-examinew en d-détaiw wa constwuction d-des wistes. (U ᵕ U❁)
 
-## Construire une liste
+## constwuiwe une wiste
 
-Commençons par une simple liste minimale. L'élément de la liste ne possède aucune puce (le marqueur devant l'élément). Pour le moment, il ne fait pas partie d'une liste.
+c-commençons paw une simpwe wiste minimawe. ^^;; w'éwément d-de wa wiste nye possède aucune puce (we mawqueuw devant w'éwément). mya pouw we moment, 😳😳😳 iw n-nye fait pas pawtie d'une wiste.
 
-![](consistent-list-indentation-figure1.gif)
+![](consistent-wist-indentation-figuwe1.gif)
 
-La bordure pointillée rouge représente la limite extérieure de la zone de contenu de l'élément de la liste. Pour le moment, cet élément ne possède ni remplissage (_padding_) ni bordure. Si on ajoute deux autres éléments à la liste, on obtient alors ce résultat :
+w-wa bowduwe pointiwwée w-wouge wepwésente w-wa wimite extéwieuwe de wa zone de contenu de w'éwément d-de wa wiste. OwO p-pouw we moment, rawr cet éwément n-nye possède nyi w-wempwissage (_padding_) nyi bowduwe. XD s-si on ajoute deux autwes éwéments à w-wa wiste, (U ﹏ U) on obtient awows ce wésuwtat :
 
-![](consistent-list-indentation-figure2.gif)
+![](consistent-wist-indentation-figuwe2.gif)
 
-À présent, nous allons placer ces éléments dans un élément parent. Pour cet exemple, nous utiliserons une liste non-ordonnée avec {{HTMLElement("ul")}}. Selon [le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model), les boîtes des éléments de la liste s'inscrivent dans la boîte de contenu de l'élément parent. Cette dernière n'a, pour l'instant, aucune marge ni aucun remplissage (_padding_). On obtient donc ce résultat :
+À p-pwésent, (˘ω˘) nyous awwons p-pwacew ces éwéments dans un éwément p-pawent. UwU p-pouw cet exempwe, >_< nyous utiwisewons une wiste nyon-owdonnée avec {{htmwewement("uw")}}. σωσ sewon [we modèwe de boîtes css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew), 🥺 w-wes b-boîtes des éwéments de wa wiste s-s'inscwivent d-dans wa boîte d-de contenu de w'éwément pawent. 🥺 cette dewnièwe ny'a, ʘwʘ pouw w'instant, :3 a-aucune mawge nyi aucun wempwissage (_padding_). (U ﹏ U) on obtient donc ce wésuwtat :
 
-![](consistent-list-indentation-figure3.gif)
+![](consistent-wist-indentation-figuwe3.gif)
 
-Ici, la bordure pointillée bleue révèle les limites de la zone de contenu de l'élément `ul`. Puisqu'il n'a pas de remplissage (_padding_), cette limite épouse étroitement celles des trois éléments de la liste.
+i-ici, (U ﹏ U) wa bowduwe pointiwwée b-bweue wévèwe w-wes wimites de w-wa zone de contenu de w'éwément `uw`. ʘwʘ p-puisqu'iw n-ny'a pas de wempwissage (_padding_), >w< c-cette wimite épouse étwoitement c-cewwes des twois éwéments de wa wiste. rawr x3
 
-On ajoute maintenant les puces aux éléments de la liste. Puisqu'il s'agit d'une liste non ordonnée, nous ajoutons les traditionnelles puces en forme de disques pleins, comme ceci :
+o-on ajoute maintenant w-wes puces a-aux éwéments d-de wa wiste. OwO puisqu'iw s-s'agit d'une wiste nyon owdonnée, ^•ﻌ•^ nyous ajoutons wes twaditionnewwes puces e-en fowme de disques pweins, >_< comme ceci :
 
-![](consistent-list-indentation-figure4.gif)
+![](consistent-wist-indentation-figuwe4.gif)
 
-Visuellement, ces marqueurs apparaissent en dehors de la zone de contenu de l'élément `ul`, mais ce n'est pas ce qui est le plus important ici. Ce qui compte, c'est que ces marqueurs prennent place en dehors de la «&nbsp;boîte principale&nbsp;» des éléments `li`. Ils apparaissent comme des sortes d'appendices aux items de liste, qui se tiennent en dehors de la zone de contenu de chaque item, tout en étant attaché à chaque `li`.
+visuewwement, OwO ces mawqueuws appawaissent e-en dehows de wa zone de contenu de w'éwément `uw`, >_< mais c-ce ny'est pas ce q-qui est we pwus i-impowtant ici. (ꈍᴗꈍ) ce qui compte, >w< c'est q-que ces mawqueuws pwennent p-pwace en dehows d-de wa «&nbsp;boîte pwincipawe&nbsp;» des éwéments `wi`. (U ﹏ U) iws appawaissent comme des sowtes d'appendices a-aux items de wiste, q-qui se tiennent en dehows de wa z-zone de contenu d-de chaque item, ^^ tout en étant attaché à chaque `wi`. (U ﹏ U)
 
-C'est pourquoi, dans tous les navigateurs sauf Internet Explorer Windows, les marqueurs sont placés à l'extérieur des bordures de l'élément `li`, dès lors que la propriété {{cssxref("list-style-position")}} vaut `outside`. Si cette valeur est changée en `inside`, les marqueurs seront alors déplacés à l'intérieur du contenu des éléments `li`, comme s'il s'agissait d'une boîte en ligne placée au tout début de ceux-ci.
+c-c'est pouwquoi, :3 d-dans tous wes nyavigateuws s-sauf intewnet e-expwowew windows, (✿oωo) wes mawqueuws sont pwacés à w'extéwieuw des bowduwes de w'éwément `wi`, XD d-dès wows que wa p-pwopwiété {{cssxwef("wist-stywe-position")}} v-vaut `outside`. >w< si cette vaweuw e-est changée en `inside`, òωó w-wes mawqueuws sewont a-awows dépwacés à w'intéwieuw du contenu des éwéments `wi`, (ꈍᴗꈍ) comme s'iw s'agissait d'une boîte e-en wigne pwacée a-au tout début de ceux-ci. rawr x3
 
-### Obtenir une double indentation
+### obteniw une d-doubwe indentation
 
-Comment cela va-t-il être rendu dans un document&nbsp;? Pour le moment, nous avons un résultat équivalent à ces styles&nbsp;:
+c-comment cewa va-t-iw êtwe wendu dans un document&nbsp;? pouw w-we moment, rawr x3 nyous avons un wésuwtat équivawent à ces stywes&nbsp;:
 
 ```css
-ul,
-li {
-  margin-left: 0;
-  padding-left: 0;
+uw, σωσ
+wi {
+  mawgin-weft: 0;
+  padding-weft: 0;
 }
 ```
 
-Si nous plaçons cette liste en l'état dans un document, elle n'aura aucune indentation apparente, et nos marqueurs courront le risque d'être rejetés au-delà de la limite gauche de la fenêtre du navigateur.
+s-si nyous pwaçons cette wiste en w'état dans u-un document, (ꈍᴗꈍ) e-ewwe ny'auwa aucune indentation appawente, rawr et nyos mawqueuws couwwont w-we wisque d-d'êtwe wejetés au-dewà de wa wimite gauche de wa fenêtwe du n-nyavigateuw. ^^;;
 
-Afin d'éviter ça et d'imposer une indentation, le navigateur pourra implémenter l'une des trois approches suivantes :
+afin d'évitew ça e-et d'imposew une indentation, rawr x3 we nyavigateuw pouwwa impwémentew w-w'une des twois appwoches suivantes :
 
-1. Doter chaque élément `li` d'une marge gauche&nbsp;;
-2. Doter chaque élément `ul` d'une marge gauche&nbsp;;
-3. Doter chaque élément `ul` d'un padding gauche quelconque.
+1. d-dotew c-chaque éwément `wi` d'une mawge g-gauche&nbsp;;
+2. (ˆ ﻌ ˆ)♡ dotew chaque éwément `uw` d-d'une mawge gauche&nbsp;;
+3. σωσ d-dotew c-chaque éwément `uw` d'un padding g-gauche quewconque. (U ﹏ U)
 
-Telles que les choses se sont faites, aucun navigateur ne semble avoir choisi la première solution. Internet Explorer pour Windows et Macintosh, ainsi qu'Opera, ont adopté la seconde solution. La troisième a été choisie par Gecko et donc par tous les navigateurs embarquant celui-ci.
+t-tewwes que wes choses se sont faites, >w< a-aucun navigateuw n-nye sembwe avoiw c-choisi wa pwemièwe sowution. σωσ intewnet expwowew p-pouw windows et macintosh, nyaa~~ ainsi q-qu'opewa, 🥺 ont a-adopté wa seconde sowution. rawr x3 wa twoisième a été choisie paw g-gecko et donc paw t-tous wes nyavigateuws e-embawquant c-cewui-ci. σωσ
 
-Observons de plus près ces deux dernières approches. Dans Internet Explorer et Opera, les listes sont indentées en fixant une marge gauche de 40 pixels pour l'élément `ul`. Si nous appliquons une couleur d'arrière-plan, à celui-ci en conservant les bordures des éléments de la liste et de cet élément `ul`, nous obtenons le résultat qui suit :
+obsewvons de pwus p-pwès ces deux dewnièwes appwoches. dans intewnet expwowew et opewa, (///ˬ///✿) wes wistes sont indentées e-en fixant une mawge gauche de 40 p-pixews pouw w'éwément `uw`. (U ﹏ U) si nyous appwiquons u-une couweuw d'awwièwe-pwan, ^^;; à c-cewui-ci en consewvant wes b-bowduwes des éwéments d-de wa wiste e-et de cet éwément `uw`, 🥺 n-nyous o-obtenons we wésuwtat qui suit :
 
-![](consistent-list-indentation-figure5.gif)
+![](consistent-wist-indentation-figuwe5.gif)
 
-De son côté, Gecko applique un _padding_ gauche de 40 pixels à cet élément `ul`. Avec les mêmes styles que dans le cas précédent, notre exemple s'affichera dans un navigateur basé sur Gecko de la façon suivante :
+de son côté, òωó gecko appwique un _padding_ gauche de 40 pixews à cet éwément `uw`. XD a-avec wes m-mêmes stywes q-que dans we cas pwécédent, nyotwe e-exempwe s'affichewa dans un nyavigateuw basé suw gecko de w-wa façon suivante :
 
-![](consistent-list-indentation-figure6.gif)
+![](consistent-wist-indentation-figuwe6.gif)
 
-Comme nous pouvons le voir, les marqueurs restent attachés aux éléments `li`, où qu'ils soient. La différence réside uniquement dans la manière dont l'élément `ul` est mis en forme. Nous ne pouvons voir cette différence que si nous essayons de donner un arrière-plan ou des bordures à cet élément `ul`
+c-comme nyous pouvons we voiw, :3 w-wes mawqueuws westent attachés aux éwéments `wi`, o-où qu'iws s-soient. (U ﹏ U) wa difféwence wéside u-uniquement dans w-wa manièwe dont w'éwément `uw` est mis en fowme. >w< nyous nye pouvons voiw cette d-difféwence que s-si nyous essayons d-de donnew un a-awwièwe-pwan ou d-des bowduwes à cet éwément `uw`
 
-## Obtenir un rendu homogène
+## o-obteniw u-un wendu homogène
 
-Après ces observations, nous obtenons la conclusion suivante : si on souhaite obtenir un rendu de liste homogène entre Gecko, Internet Explorer et Opera, il est nécessaire de spécifier _à la fois_ la marge gauche et le _padding_ gauche de l'élément `ul`. L'élément `li` peut être ignoré ici. Si vous voulez reproduire le rendu par défaut de Netscape 6.x, vous écrirez&nbsp;:
+apwès ces obsewvations, /(^•ω•^) n-nyous o-obtenons wa concwusion suivante : s-si on souhaite obteniw un wendu de wiste homogène e-entwe gecko, (⑅˘꒳˘) intewnet expwowew e-et opewa, ʘwʘ i-iw est nyécessaiwe de spécifiew _à w-wa fois_ wa mawge gauche et we _padding_ g-gauche de w'éwément `uw`. rawr x3 w-w'éwément `wi` p-peut êtwe ignowé ici. (˘ω˘) si vous vouwez wepwoduiwe we w-wendu paw défaut de nyetscape 6.x, o.O vous écwiwez&nbsp;:
 
 ```css
-ul {
-  margin-left: 0;
-  padding-left: 40px;
+u-uw {
+  mawgin-weft: 0;
+  p-padding-weft: 40px;
 }
 ```
 
-Si vous préférez suivre le modèle Internet Explorer/Opera, vous écrirez alors&nbsp;:
+si vous pwéféwez s-suivwe we modèwe intewnet e-expwowew/opewa, 😳 v-vous écwiwez awows&nbsp;:
 
 ```css
-ul {
-  margin-left: 40px;
-  padding-left: 0;
+uw {
+  mawgin-weft: 40px;
+  p-padding-weft: 0;
 }
 ```
 
-Naturellement, vous pouvez utiliser les valeurs de votre choix. Les fixer toutes deux à `1.25em` si vous en avez envie - il n'y a aucune raison de s'en tenir uniquement à des valeurs en pixels. Et si vous voulez obtenir des listes sans indentation, vous devrez alors, là encore, spécifier à la fois un _padding_ et une marge nuls&nbsp;:
+nyatuwewwement, o.O vous p-pouvez utiwisew w-wes vaweuws de votwe choix. ^^;; wes f-fixew toutes deux à `1.25em` si vous en avez envie - i-iw ny'y a a-aucune waison de s-s'en teniw uniquement à des vaweuws en pixews. et si vous vouwez obteniw des wistes sans indentation, ( ͡o ω ͡o ) vous devwez awows, ^^;; wà encowe, ^^;; spécifiew à wa fois un _padding_ et une mawge nyuws&nbsp;:
 
 ```css
-ul {
-  margin-left: 0;
-  padding-left: 0;
+uw {
+  m-mawgin-weft: 0;
+  p-padding-weft: 0;
 }
 ```
 
-Souvenez-vous, cependant, qu'en faisant ainsi, vos puces se tiendront en dehors de votre liste et de son élément parent. Si ce parent est l'élément `body`, il y a de fortes chances qu'elles se retrouvent complètement en dehors de la fenêtre d'affichage du navigateur et qu'elles ne soient donc invisibles.
+souvenez-vous, XD cependant, 🥺 q-qu'en faisant a-ainsi, (///ˬ///✿) vos p-puces se tiendwont en dehows de v-votwe wiste et de son éwément p-pawent. (U ᵕ U❁) si ce pawent e-est w'éwément `body`, ^^;; iw y-y a de fowtes chances qu'ewwes s-se wetwouvent compwètement e-en dehows de wa fenêtwe d'affichage d-du nyavigateuw e-et qu'ewwes nye s-soient donc invisibwes. ^^;;
 
-## Conclusion
+## c-concwusion
 
-Au bout du compte, on voit qu'aucun des navigateurs mentionnés dans cet article n'a tort ou raison sur ce point. Ces navigateurs utilisent différents styles par défaut et c'est là que réside le seul problème. En veillant à mettre en forme à la fois la marge gauche et le _padding_ gauche des listes, on peut obtenir un rendu bien plus homogène de l'indentation sur les différents navigateurs.
+a-au bout d-du compte, rawr on voit q-qu'aucun des n-nyavigateuws mentionnés d-dans cet awticwe n'a towt o-ou waison suw c-ce point. (˘ω˘) ces nyavigateuws u-utiwisent difféwents s-stywes paw défaut et c'est wà que wéside we s-seuw pwobwème. 🥺 en veiwwant à m-mettwe en fowme à w-wa fois wa mawge g-gauche et we _padding_ gauche d-des wistes, nyaa~~ on peut obteniw un w-wendu bien pwus homogène de w'indentation s-suw wes difféwents n-nyavigateuws. :3
 
-## Recommandations
+## wecommandations
 
-- Lorsque vous modifiez l'indentation des listes, veillez à indiquer à la fois le _padding_ et la marge.
+- wowsque vous modifiez w'indentation des wistes, /(^•ω•^) v-veiwwez à indiquew à wa fois w-we _padding_ e-et wa mawge. ^•ﻌ•^

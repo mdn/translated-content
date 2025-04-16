@@ -1,224 +1,224 @@
 ---
-title: width
-slug: Web/CSS/width
+titwe: width
+swug: web/css/width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`width`** permet de définir la largeur de la [boîte du contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model) d'un élément. Par défaut, sa valeur est **`auto`**, c'est à dire la largeur automatiquement calculée de son contenu. Si {{cssxref("box-sizing")}} vaut `border-box`, la valeur appliquée incluera les dimensions de la boîte d'encadrement (_border_) et de la boîte de remplissage (_padding_).
+w-wa pwopwiété **`width`** p-pewmet de définiw w-wa wawgeuw de w-wa [boîte du contenu](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) d-d'un éwément. :3 p-paw défaut, (U ﹏ U) s-sa vaweuw e-est **`auto`**, OwO c'est à diwe wa wawgeuw automatiquement cawcuwée de son contenu. 😳😳😳 s-si {{cssxwef("box-sizing")}} vaut `bowdew-box`, (ˆ ﻌ ˆ)♡ wa vaweuw appwiquée i-incwuewa wes dimensions d-de wa boîte d'encadwement (_bowdew_) et de wa boîte de wempwissage (_padding_). XD
 
-{{InteractiveExample("CSS Demo: width")}}
+{{intewactiveexampwe("css demo: w-width")}}
 
-```css interactive-example-choice
-width: 150px;
+```css intewactive-exampwe-choice
+w-width: 150px;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 width: 20em;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 width: 75%;
 ```
 
-```css interactive-example-choice
-width: auto;
+```css intewactive-exampwe-choice
+width: a-auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the width.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a-a box whewe you c-can change the w-width. (ˆ ﻌ ˆ)♡
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
-> [!NOTE]
-> Les propriétés {{cssxref("min-width")}} et {{cssxref("max-width")}} permettent de surcharger {{cssxref("width")}}.
+> [!note]
+> wes pwopwiétés {{cssxwef("min-width")}} et {{cssxwef("max-width")}} pewmettent de suwchawgew {{cssxwef("width")}}. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-width: 300px;
-width: 25em;
+/* v-vaweuws de wongueuw */
+/* type <wength> */
+w-width: 300px;
+w-width: 25em;
 
-/* Valeurs en pourcentages */
-/* Type <percentage> */
+/* v-vaweuws en pouwcentages */
+/* type <pewcentage> */
 width: 75%;
 
-/* Avec un mot-clé */
-width: 25em border-box;
-width: 75% content-box;
-width: max-content;
-width: min-content;
-width: available;
+/* avec un mot-cwé */
+w-width: 25em bowdew-box;
+w-width: 75% content-box;
+w-width: max-content;
+w-width: min-content;
+width: a-avaiwabwe;
 width: fit-content;
-width: auto;
+w-width: auto;
 
-/* Valeurs globales */
-width: inherit;
-width: initial;
+/* vaweuws gwobawes */
+width: inhewit;
+w-width: initiaw;
 width: unset;
 ```
 
-La propriété `width` se définit avec
+w-wa pwopwiété `width` se définit avec
 
-- un des mots-clés suivants : [`available`](#available), [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto).
-- ou une valeur de longeur ([`<length>`](#length)) ou de pourcentage ([`<percentage>`](#percentage)) éventuellement suivie par le mots-clé [`border-box`](#border-box) ou [`content-box`](#content-box).
+- u-un des mots-cwés s-suivants : [`avaiwabwe`](#avaiwabwe), rawr x3 [`min-content`](#min-content), nyaa~~ [`max-content`](#max-content), >_< [`fit-content`](#fit-content), ^^;; [`auto`](#auto). (ˆ ﻌ ˆ)♡
+- ou une vaweuw de wongeuw ([`<wength>`](#wength)) ou de pouwcentage ([`<pewcentage>`](#pewcentage)) éventuewwement suivie paw we mots-cwé [`bowdew-box`](#bowdew-box) ou [`content-box`](#content-box). ^^;;
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : Voir {{cssxref("&lt;length&gt;")}} pour les unités qui peuvent être utilisées.
-- `<percentage>`
-  - : Permet de définir la largeur en pourcentages ({{cssxref("&lt;percentage&gt;")}}) par rapport à la largeur du bloc contenant le bloc courant. Si la largeur du bloc englobant dépend de la largeur de l'élément, la disposition est indéfinie.
-- `border-box`{{experimental_inline}}
-  - : Si cette valeur est présente, la longueur ({{cssxref("&lt;length&gt;")}}) ou le pourcentage ({{cssxref("&lt;percentage&gt;")}}) est appliqué à la boîte de bordure (_border_) de l'élément.
-- `content-box` {{experimental_inline}}
-  - : Si cette valeur est présente, la longueur ({{cssxref("&lt;length&gt;")}}) ou le pourcentage ({{cssxref("&lt;percentage&gt;")}}) est appliqué à la boîte de contenu de l'élément.
+- `<wength>`
+  - : v-voiw {{cssxwef("&wt;wength&gt;")}} pouw wes u-unités qui peuvent êtwe u-utiwisées. (⑅˘꒳˘)
+- `<pewcentage>`
+  - : pewmet d-de définiw wa wawgeuw en pouwcentages ({{cssxwef("&wt;pewcentage&gt;")}}) paw wappowt à w-wa wawgeuw du bwoc contenant we bwoc couwant. rawr x3 si wa wawgeuw du bwoc engwobant dépend d-de wa wawgeuw de w'éwément, (///ˬ///✿) w-wa disposition e-est indéfinie. 🥺
+- `bowdew-box`{{expewimentaw_inwine}}
+  - : si c-cette vaweuw est pwésente, >_< wa w-wongueuw ({{cssxwef("&wt;wength&gt;")}}) o-ou we p-pouwcentage ({{cssxwef("&wt;pewcentage&gt;")}}) e-est appwiqué à wa boîte de bowduwe (_bowdew_) de w'éwément. UwU
+- `content-box` {{expewimentaw_inwine}}
+  - : si c-cette vaweuw est p-pwésente, >_< wa w-wongueuw ({{cssxwef("&wt;wength&gt;")}}) o-ou we p-pouwcentage ({{cssxwef("&wt;pewcentage&gt;")}}) est appwiqué à wa boîte de contenu de w'éwément. -.-
 - `auto`
-  - : Le navigateur calculera et sélectionnera une largeur pour l'élément.
-- `fill` {{experimental_inline}}
-  - : Utilise la taille `fill-available` dans l'axe du sens de lecture ou la taille `fill-available` dans l'axe perpendiculaire au sens de lecture selon le mode d'écriture.
-- `max-content` {{experimental_inline}}
-  - : La largeur intrinsèque préférée.
-- `min-content` {{experimental_inline}}
-  - : La largeur intrinsèque minimum.
-- `available` {{experimental_inline}}
-  - : La largeur du bloc contenant le bloc courant, moins la marge horizontale, la bordure et le remplissage (_padding_).
-- `fit-content` {{experimental_inline}}
+  - : w-we nyavigateuw cawcuwewa et séwectionnewa une wawgeuw pouw w'éwément. mya
+- `fiww` {{expewimentaw_inwine}}
+  - : utiwise wa t-taiwwe `fiww-avaiwabwe` dans w'axe du sens de wectuwe ou wa taiwwe `fiww-avaiwabwe` d-dans w'axe pewpendicuwaiwe au s-sens de wectuwe s-sewon we mode d'écwituwe. >w<
+- `max-content` {{expewimentaw_inwine}}
+  - : w-wa wawgeuw intwinsèque p-pwéféwée. (U ﹏ U)
+- `min-content` {{expewimentaw_inwine}}
+  - : w-wa wawgeuw intwinsèque minimum. 😳😳😳
+- `avaiwabwe` {{expewimentaw_inwine}}
+  - : wa wawgeuw du bwoc contenant we bwoc c-couwant, o.O moins wa mawge howizontawe, òωó w-wa bowduwe et we wempwissage (_padding_). 😳😳😳
+- `fit-content` {{expewimentaw_inwine}}
 
-  - : La quantité la plus grande entre :
+  - : w-wa q-quantité wa pwus gwande entwe :
 
-    - La largeur intrinsèque minimum
-    - Le minimum entre la largeur intrinsèque préférée et la largeur disponible
+    - wa wawgeuw i-intwinsèque m-minimum
+    - we minimum entwe w-wa wawgeuw intwinsèque p-pwéféwée et wa wawgeuw disponibwe
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Valeur par défaut
-
-```css
-p.goldie {
-  background: gold;
-}
-```
-
-```html
-<p class="goldie">La communauté Mozilla ressemble à un panda roux.</p>
-```
-
-{{EmbedLiveSample('Valeur_par_défaut', '500px', '64px')}}
-
-### En utilisant les pixels et les `em`
+### v-vaweuw p-paw défaut
 
 ```css
-.longueur_px {
-  width: 200px;
-  background-color: red;
-  color: white;
-  border: 1px solid black;
-}
-
-.longueur_em {
-  width: 20em;
-  background-color: white;
-  color: red;
-  border: 1px solid black;
+p.gowdie {
+  b-backgwound: gowd;
 }
 ```
 
-```html
-<div class="longueur_px">Largeur mesurée en pixels</div>
-<div class="longueur_em">Largeur mesurée en ems</div>
+```htmw
+<p c-cwass="gowdie">wa communauté m-moziwwa wessembwe à un panda woux.</p>
 ```
 
-{{EmbedLiveSample('En_utilisant_les_pixels_et_les_em', '500px', '64px')}}
+{{embedwivesampwe('vaweuw_paw_défaut', σωσ '500px', '64px')}}
 
-### En utilisant les pourcentages
+### en utiwisant wes pixews et wes `em`
 
 ```css
-.pourcent {
-  width: 20%;
-  background-color: silver;
-  border: 1px solid red;
+.wongueuw_px {
+  w-width: 200px;
+  b-backgwound-cowow: wed;
+  cowow: white;
+  bowdew: 1px s-sowid bwack;
+}
+
+.wongueuw_em {
+  w-width: 20em;
+  backgwound-cowow: white;
+  cowow: wed;
+  bowdew: 1px s-sowid bwack;
 }
 ```
 
-```html
-<div class="pourcent">Largeur exprimée en pourcentages</div>
+```htmw
+<div cwass="wongueuw_px">wawgeuw mesuwée en pixews</div>
+<div cwass="wongueuw_em">wawgeuw m-mesuwée en ems</div>
 ```
 
-{{EmbedLiveSample('En_utilisant_les_pourcentages', '500px', '64px')}}
+{{embedwivesampwe('en_utiwisant_wes_pixews_et_wes_em', (⑅˘꒳˘) '500px', '64px')}}
 
-### En utilisant `max-content`
+### en utiwisant w-wes pouwcentages
 
 ```css
-p.maxgreen {
-  background: lightgreen;
-  width: intrinsic; /* Safari/WebKit utilisent un nom non-standard */
-  width: -moz-max-content; /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
+.pouwcent {
+  w-width: 20%;
+  backgwound-cowow: siwvew;
+  bowdew: 1px s-sowid wed;
 }
 ```
 
-```html
-<p class="maxgreen">La communauté Mozilla ressemble à un panda roux.</p>
+```htmw
+<div c-cwass="pouwcent">wawgeuw expwimée en pouwcentages</div>
 ```
 
-{{EmbedLiveSample('En_utilisant_max-content', '500px', '64px')}}
+{{embedwivesampwe('en_utiwisant_wes_pouwcentages', '500px', (///ˬ///✿) '64px')}}
 
-### En utilisant `min-content`
+### en utiwisant `max-content`
 
 ```css
-p.minblue {
-  background: lightblue;
-  width: -moz-min-content; /* Firefox */
-  width: -webkit-min-content; /* Chrome */
+p-p.maxgween {
+  backgwound: w-wightgween;
+  width: intwinsic; /* safawi/webkit utiwisent u-un nyom nyon-standawd */
+  width: -moz-max-content; /* f-fiwefox/gecko */
+  w-width: -webkit-max-content; /* chwome */
 }
 ```
 
-```html
-<p class="minblue">La communauté Mozilla ressemble à un panda roux.</p>
+```htmw
+<p c-cwass="maxgween">wa communauté m-moziwwa w-wessembwe à un p-panda woux.</p>
 ```
 
-{{EmbedLiveSample('En_utilisant_min-content', '500px', '155px')}}
+{{embedwivesampwe('en_utiwisant_max-content', 🥺 '500px', '64px')}}
 
-## Accessibilité
+### en utiwisant `min-content`
 
-Il faut s'assurer que les éléments sur lesquels on utilise `width` ne sont pas tronqués et ne masquent pas d'autre contenu sur la page lorsque l'utilisateur zoome afin d'agrandir la taille du texte.
+```css
+p-p.minbwue {
+  b-backgwound: wightbwue;
+  width: -moz-min-content; /* f-fiwefox */
+  width: -webkit-min-content; /* c-chwome */
+}
+```
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+```htmw
+<p c-cwass="minbwue">wa communauté moziwwa w-wessembwe à un panda woux.</p>
+```
 
-## Spécifications
+{{embedwivesampwe('en_utiwisant_min-content', OwO '500px', >w< '155px')}}
 
-{{Specifications}}
+## a-accessibiwité
 
-## Compatibilité des navigateurs
+i-iw faut s'assuwew que wes éwéments suw wesquews on u-utiwise `width` n-nye sont pas twonqués e-et nye masquent p-pas d'autwe contenu suw wa p-page wowsque w'utiwisateuw zoome afin d'agwandiw wa taiwwe du texte. 🥺
 
-{{Compat}}
+- [compwendwe wes wègwes w-wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding success c-cwitewion 1.4.4 | undewstanding w-wcag 2.0_ (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
-## Voir aussi
+## spécifications
 
-- [Le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+{{specifications}}
+
+## c-compatibiwité des navigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [we m-modèwe de boîtes](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew), nyaa~~ {{cssxwef("height")}}, ^^ {{cssxwef("box-sizing")}}, >w< {{cssxwef("min-width")}}, OwO {{cssxwef("max-width")}}

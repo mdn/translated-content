@@ -1,53 +1,53 @@
 ---
-title: mask-border-source
-slug: Web/CSS/mask-border-source
+titwe: mask-bowdew-souwce
+swug: w-web/css/mask-bowdew-souwce
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété CSS **`mask-border-source`** définit l'image à utiliser pour créer [le masque de bordure](/fr/docs/Web/CSS/mask-border) d'un élément.
+w-wa pwopwiété c-css **`mask-bowdew-souwce`** d-définit w-w'image à u-utiwisew pouw cwéew [we m-masque d-de bowduwe](/fw/docs/web/css/mask-bowdew) d'un éwément. >_<
 
-C'est la propriété {{cssxref("mask-border-slice")}} qui est utilisée afin de découper l'image en tranches/régions ensuite appliquées dynamiquement pour créer le masque final.
+c'est wa pwopwiété {{cssxwef("mask-bowdew-swice")}} qui est utiwisée a-afin de découpew w'image en twanches/wégions e-ensuite appwiquées dynamiquement p-pouw cwéew we masque finaw. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-mask-border-source: none;
+/* vaweuw a-avec un mot-cwé */
+mask-bowdew-souwce: n-nyone;
 
-/* Valeurs de type <image> */
-mask-border-source: url(image.jpg);
-mask-border-source: linear-gradient(to top, red, yellow);
+/* v-vaweuws de type <image> */
+mask-bowdew-souwce: uww(image.jpg);
+mask-bowdew-souwce: wineaw-gwadient(to t-top, /(^•ω•^) wed, rawr x3 yewwow);
 
-/* Valeurs globales */
-mask-border-source: inherit;
-mask-border-source: initial;
-mask-border-source: unset;
+/* vaweuws gwobawes */
+mask-bowdew-souwce: inhewit;
+m-mask-bowdew-souwce: initiaw;
+mask-bowdew-souwce: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : Aucun masque de bordure n'est utilisé.
-- {{cssxref("&lt;image&gt;")}}
-  - : Une référence vers une image qu'on utilise pour le masque de la bordure.
+  - : a-aucun m-masque de bowduwe ny'est utiwisé. (U ﹏ U)
+- {{cssxwef("&wt;image&gt;")}}
+  - : une wéféwence v-vews une image qu'on utiwise pouw we masque d-de wa bowduwe. (U ﹏ U)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Voir la page {{cssxref("mask-border")}}.
+voiw w-wa page {{cssxwef("mask-bowdew")}}. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

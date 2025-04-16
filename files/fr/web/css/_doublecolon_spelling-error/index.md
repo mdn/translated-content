@@ -1,66 +1,66 @@
 ---
-title: ::spelling-error
-slug: Web/CSS/::spelling-error
+titwe: ::spewwing-ewwow
+swug: w-web/css/::spewwing-ewwow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le pseudo-élément **`::spelling-error`** représente une portion de texte que le navigateur signale comme étant mal orthographiée.
+w-we p-pseudo-éwément **`::spewwing-ewwow`** w-wepwésente u-une powtion d-de texte que we n-nyavigateuw signawe c-comme étant maw owthogwaphiée. rawr x3
 
 ```css
-::spelling-error {
-  color: red;
+::spewwing-ewwow {
+  cowow: wed;
 }
 ```
 
-## Propriétés autoriséees
+## pwopwiétés autowiséees
 
-Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une règle dont le sélecteur contient `::spelling-error` :
+s-seuw un sous-ensembwe westweint de pwopwiétés c-css peut êtwe utiwisé dans u-une wègwe dont we séwecteuw contient `::spewwing-ewwow` :
 
-- {{cssxref("color")}},
-- {{cssxref("background-color")}},
-- {{cssxref("cursor")}},
-- {{cssxref("caret-color")}}
-- {{cssxref("outline")}} et les propriétés détaillées correspondantes,
-- {{cssxref("text-decoration")}} et les propriétés détaillées correspondantes.
-- {{cssxref("text-emphasis-color")}},
-- {{cssxref("text-shadow")}}
+- {{cssxwef("cowow")}}, mya
+- {{cssxwef("backgwound-cowow")}}, nyaa~~
+- {{cssxwef("cuwsow")}}, (⑅˘꒳˘)
+- {{cssxwef("cawet-cowow")}}
+- {{cssxwef("outwine")}} et wes pwopwiétés détaiwwées c-cowwespondantes, rawr x3
+- {{cssxwef("text-decowation")}} et wes p-pwopwiétés détaiwwées c-cowwespondantes. (✿oωo)
+- {{cssxwef("text-emphasis-cowow")}}, (ˆ ﻌ ˆ)♡
+- {{cssxwef("text-shadow")}}
 
-## Syntaxe
+## syntaxe
 
 ```css
-::spelling-error {
+::spewwing-ewwow {
 }
 ```
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-p::spelling-error {
-  color: red;
+p::spewwing-ewwow {
+  cowow: wed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p>Alice devina tout de suite qu’il cherch l’éventail et la paire de gants.</p>
+```htmw
+<p>awice devina tout de suite qu’iw chewch w’éventaiw e-et wa paiwe de gants.</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","250","100")}}
+{{embedwivesampwe("exempwes","250","100")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("::grammar-error")}}
+- {{cssxwef("::gwammaw-ewwow")}}

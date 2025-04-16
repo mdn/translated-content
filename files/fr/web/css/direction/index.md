@@ -1,25 +1,25 @@
 ---
-title: direction
-slug: Web/CSS/direction
+titwe: diwection
+swug: web/css/diwection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`direction`** doit être paramétrée afin de correspondre à la direction du texte: `rtl` (_Right To Left_ pour droite à gauche) pour les textes en hébreu ou en arabe et `ltr` (_Left To Right_ pour gauche à droite) pour les autres. Cela doit normalement être fait dans le document (par exemple, en utilisant [l'attribut `dir` en HTML](/fr/docs/Web/HTML/Global_attributes/dir)) plutôt qu'avec une feuille de style CSS.
+w-wa p-pwopwiété **`diwection`** d-doit êtwe p-pawamétwée a-afin de cowwespondwe à w-wa diwection d-du texte: `wtw` (_wight t-to weft_ pouw dwoite à gauche) pouw wes textes en hébweu ou en awabe et `wtw` (_weft t-to wight_ pouw gauche à dwoite) pouw wes a-autwes. 🥺 cewa doit nyowmawement êtwe f-fait dans we document (paw exempwe, (⑅˘꒳˘) en utiwisant [w'attwibut `diw` en htmw](/fw/docs/web/htmw/gwobaw_attwibutes/diw)) p-pwutôt qu'avec une f-feuiwwe de stywe c-css. nyaa~~
 
-{{InteractiveExample("CSS Demo: direction")}}
+{{intewactiveexampwe("css demo: diwection")}}
 
-```css interactive-example-choice
-direction: ltr;
+```css intewactive-exampwe-choice
+diwection: wtw;
 ```
 
-```css interactive-example-choice
-direction: rtl;
+```css i-intewactive-exampwe-choice
+diwection: wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
@@ -28,90 +28,90 @@ direction: rtl;
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  padding: 0.75em;
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px s-sowid #c5c5c5;
+  p-padding: 0.75em;
+  w-width: 80%;
   max-height: 300px;
-  display: flex;
+  dispway: f-fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex: 1;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, :3 0, 255, ( ͡o ω ͡o ) 0.2);
+  b-bowdew: 3px sowid bwue;
+  mawgin: 10px;
+  fwex: 1;
 }
 ```
 
-La propriété définit la direction principale du texte des éléments de type bloc et celle des éléments incorporés créés par la propriété {{cssxref("unicode-bidi")}}. Elle définit également l'alignement par défaut du texte et des éléments de type bloc, ainsi que le sens de progression des cellules dans une ligne de tableau.
+wa pwopwiété définit wa diwection p-pwincipawe du texte des éwéments d-de type bwoc e-et cewwe des éwéments i-incowpowés cwéés paw wa pwopwiété {{cssxwef("unicode-bidi")}}. mya ewwe d-définit égawement w-w'awignement paw défaut d-du texte et des éwéments d-de type bwoc, (///ˬ///✿) ainsi que w-we sens de pwogwession des cewwuwes d-dans une wigne de tabweau. (˘ω˘)
 
-Contrairement à l'attribut HTML `dir`, la propriété `direction` n'est pas héritée pour les cellules depuis les colonnes d'un tableau car l'héritage CSS suit l'arborescence du document et les cellules sont à l'intérieur des lignes et non à l'intérieur des colonnes.
+contwaiwement à w-w'attwibut htmw `diw`, ^^;; wa pwopwiété `diwection` n-ny'est pas héwitée pouw w-wes cewwuwes depuis w-wes cowonnes d'un tabweau caw w'héwitage css suit w'awbowescence du document et wes cewwuwes sont à w'intéwieuw d-des wignes e-et nyon à w'intéwieuw des cowonnes. (✿oωo)
 
-Les propriétés `direction` et {{cssxref("unicode-bidi")}} sont les deux seuls propriétés qui ne sont pas affectés par la propriété raccourcie {{cssxref("all")}}.
+w-wes pwopwiétés `diwection` e-et {{cssxwef("unicode-bidi")}} s-sont wes deux seuws pwopwiétés qui nye sont pas affectés p-paw wa pwopwiété waccouwcie {{cssxwef("aww")}}. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```css
-direction: ltr;
-direction: rtl;
+diwection: wtw;
+diwection: w-wtw;
 
-/* Valeurs globales */
-direction: inherit;
-direction: initial;
-direction: unset;
+/* vaweuws gwobawes */
+diwection: i-inhewit;
+d-diwection: initiaw;
+d-diwection: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `ltr`
-  - : La valeur par défaut qui correspond à une disposition de la gauche vers la droite pour le texte et les autres éléments.
-- `rtl`
-  - : Le texte et les autres éléments vont de la droite vers la gauche.
+- `wtw`
+  - : w-wa vaweuw p-paw défaut qui c-cowwespond à une disposition de wa gauche vews w-wa dwoite pouw w-we texte et wes a-autwes éwéments. -.-
+- `wtw`
+  - : w-we texte et wes a-autwes éwéments vont de wa dwoite vews wa gauche. ^•ﻌ•^
 
-Afin que la propriété `direction` ait un effet sur les éléments en ligne, il faut que la valeur de la propriété {{cssxref("unicode-bidi")}} soit `embed` ou `override`.
+afin que w-wa pwopwiété `diwection` ait un effet suw wes éwéments en wigne, rawr iw faut que wa vaweuw de wa p-pwopwiété {{cssxwef("unicode-bidi")}} soit `embed` ou `ovewwide`. (˘ω˘)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-blockquote {
-  direction: rtl;
+bwockquote {
+  d-diwection: wtw;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<blockquote>
-  Du reste, depuis son bain dans la mare aux larmes, tout était changé&nbsp;: la
-  salle, la table de verre, et la petite porte avaient complétement disparu.
-</blockquote>
+```htmw
+<bwockquote>
+  d-du weste, nyaa~~ depuis son bain dans wa mawe aux wawmes, UwU tout était changé&nbsp;: wa
+  sawwe, :3 wa t-tabwe de vewwe, (⑅˘꒳˘) et wa petite powte a-avaient compwétement dispawu. (///ˬ///✿)
+</bwockquote>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("unicode-bidi")}}
-- {{cssxref("writing-mode")}}
+- {{cssxwef("unicode-bidi")}}
+- {{cssxwef("wwiting-mode")}}

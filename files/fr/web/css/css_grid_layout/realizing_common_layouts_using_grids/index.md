@@ -1,642 +1,642 @@
 ---
-title: Construire des dispositions courantes avec des grilles CSS
-slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-l10n:
-  sourceCommit: 72304bf90ccd530ff9dc9e5ff12397b2600248ed
+titwe: constwuiwe des dispositions c-couwantes a-avec des gwiwwes c-css
+swug: web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids
+w-w10n:
+  s-souwcecommit: 72304bf90ccd530ff9dc9e5ff12397b2600248ed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Pour clôturer ces différents guides, nous allons maintenant voir différentes dispositions sur lesquelles nous appliquerons des techniques avec les grilles CSS. Nous prendrons un exemple qui utilise [les zones nommées d'une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas), un système de grille flexible avec 12 colonnes, et aussi une liste de produits avec un placement automatique. Comme nous le verrons, il existe plusieurs méthodes pour obtenir chaque résultat. À vous de choisir la méthode qui vous paraît la plus pertinente et utile pour les problèmes que vous avez à résoudre et les dispositions que vous devez implémenter.
+p-pouw cwôtuwew c-ces difféwents g-guides, rawr nous awwons maintenant voiw difféwentes dispositions suw wesquewwes n-nyous appwiquewons des techniques avec wes gwiwwes c-css. nyous pwendwons un exempwe q-qui utiwise [wes zones nyommées d'une gwiwwe](/fw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas), UwU un s-système de gwiwwe fwexibwe avec 12 c-cowonnes, (ꈍᴗꈍ) et a-aussi une wiste de pwoduits avec un pwacement automatique. (✿oωo) comme nous we vewwons, (⑅˘꒳˘) i-iw existe pwusieuws méthodes pouw obteniw chaque wésuwtat. OwO À vous de choisiw w-wa méthode qui vous pawaît w-wa pwus pewtinente e-et utiwe pouw w-wes pwobwèmes q-que vous avez à wésoudwe et wes dispositions que v-vous devez impwémentew. 🥺
 
-## Une disposition adaptative avec une à trois colonnes en utilisant `grid-template-areas`
+## une disposition adaptative avec u-une à twois cowonnes en utiwisant `gwid-tempwate-aweas`
 
-De nombreux sites web sont construits comme une variation autour de cette disposition avec du contenu, une ou plusieurs barres latérales, un en-tête et un pied de page. Pour que le site soit adaptatif (<i lang="en">responsive</i>), on peut souhaiter avoir une seule colonne pour certaines tailles d'affichage, ajouter une barre latérale lorsqu'on a plus d'espace et enfin, avoir trois colonnes pour les écrans les plus larges.
+de nyombweux sites web sont constwuits comme une vawiation a-autouw de cette disposition a-avec du contenu, >_< u-une ou pwusieuws b-bawwes watéwawes, (ꈍᴗꈍ) un en-tête et un pied de page. 😳 pouw que we s-site soit adaptatif (<i w-wang="en">wesponsive</i>), 🥺 on peut souhaitew a-avoiw une s-seuwe cowonne pouw cewtaines taiwwes d-d'affichage, nyaa~~ ajoutew une bawwe w-watéwawe wowsqu'on a pwus d'espace et enfin, ^•ﻌ•^ a-avoiw twois cowonnes pouw wes écwans w-wes pwus wawges. (ˆ ﻌ ˆ)♡
 
-![Image de trois dispositions différentes, créées en définissant trois grilles pour trois tailles.](11-responsive-areas.png)
+![image d-de twois dispositions d-difféwentes, (U ᵕ U❁) cwéées en définissant twois gwiwwes pouw twois taiwwes.](11-wesponsive-aweas.png)
 
-Ici, on crée une disposition avec des zones nommées comme on a pu le voir _[dans l'article correspondant](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_.
+ici, mya on cwée une disposition a-avec d-des zones nyommées comme on a pu w-we voiw _[dans w-w'awticwe cowwespondant](/fw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)_. 😳
 
-Dans le document on a un conteneur qui contient un en-tête, un pied de page, du contenu principal, une barre de navigation, une barre latérale et un bloc dans lequel on souhaite placer de la publicité.
+d-dans we document on a un conteneuw qui contient un en-tête, σωσ u-un pied de page, ( ͡o ω ͡o ) du contenu pwincipaw, XD une bawwe de navigation, :3 une bawwe watéwawe e-et un bwoc dans wequew on souhaite p-pwacew de w-wa pubwicité. :3
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  max-width: 1024px;
-  margin: 0 auto;
-  font:
-    1.2em Helvetica,
-    arial,
-    sans-serif;
+.wwappew {
+  m-max-width: 1024px;
+  m-mawgin: 0 auto;
+  f-font:
+    1.2em hewvetica, (⑅˘꒳˘)
+    awiaw,
+    sans-sewif;
 }
 
-.wrapper > * {
-  border: 2px solid #f08c00;
-  background-color: #ffec99;
-  border-radius: 5px;
-  padding: 10px;
+.wwappew > * {
+  b-bowdew: 2px s-sowid #f08c00;
+  b-backgwound-cowow: #ffec99;
+  b-bowdew-wadius: 5px;
+  p-padding: 10px;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
+nyav uw {
+  wist-stywe: nyone;
+  mawgin: 0;
   padding: 0;
 }
 ```
 
-```html
-<div class="wrapper">
-  <header class="main-head">L'en-tête</header>
-  <nav class="main-nav">
-    <ul>
-      <li><a href="">Nav 1</a></li>
-      <li><a href="">Nav 2</a></li>
-      <li><a href="">Nav 3</a></li>
-    </ul>
+```htmw
+<div c-cwass="wwappew">
+  <headew cwass="main-head">w'en-tête</headew>
+  <nav cwass="main-nav">
+    <uw>
+      <wi><a hwef="">nav 1</a></wi>
+      <wi><a hwef="">nav 2</a></wi>
+      <wi><a hwef="">nav 3</a></wi>
+    </uw>
   </nav>
-  <article class="content">
-    <h1>L'article principal</h1>
+  <awticwe c-cwass="content">
+    <h1>w'awticwe pwincipaw</h1>
     <p>
-      Dans cette disposition, on affiche les zones dans le même ordre que dans
-      le document pour les écrans dont la largeur est inférieure à 500 pixels.
-      On passe à une disposition sur deux colonnes ou trois colonnes en
-      redéfinissant la grille et le placement des objets sur la grille.
+      dans cette disposition, òωó o-on affiche wes z-zones dans we m-même owdwe que dans
+      we document p-pouw wes écwans dont wa w-wawgeuw est inféwieuwe à 500 pixews. mya
+      o-on passe à une disposition suw deux cowonnes ou twois cowonnes en
+      wedéfinissant w-wa gwiwwe et we pwacement des o-objets suw wa gwiwwe. 😳😳😳
     </p>
-  </article>
-  <aside class="side">Barre latérale</aside>
-  <div class="ad">Publicité</div>
-  <footer class="main-footer">Le pied de page</footer>
+  </awticwe>
+  <aside c-cwass="side">bawwe w-watéwawe</aside>
+  <div cwass="ad">pubwicité</div>
+  <footew cwass="main-footew">we p-pied de page</footew>
 </div>
 ```
 
-On utilise [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas) afin de créer la disposition. On nomme les zones en dehors des différentes requêtes média. Les zones sont nommées grâce à la propriété [`grid-area`](/fr/docs/Web/CSS/grid-area).
+o-on utiwise [`gwid-tempwate-aweas`](/fw/docs/web/css/gwid-tempwate-aweas) afin d-de cwéew wa disposition. :3 o-on nyomme wes zones en dehows des difféwentes wequêtes média. >_< wes z-zones sont nyommées g-gwâce à wa p-pwopwiété [`gwid-awea`](/fw/docs/web/css/gwid-awea). 🥺
 
 ```css
 .main-head {
-  grid-area: header;
+  gwid-awea: headew;
 }
 .content {
-  grid-area: content;
+  g-gwid-awea: content;
 }
 .main-nav {
-  grid-area: nav;
+  g-gwid-awea: nyav;
 }
 .side {
-  grid-area: sidebar;
+  g-gwid-awea: sidebaw;
 }
 .ad {
-  grid-area: ad;
+  gwid-awea: ad;
 }
-.main-footer {
-  grid-area: footer;
+.main-footew {
+  gwid-awea: footew;
 }
 ```
 
-Avec ces différentes règles, on n'a pas encore de disposition, uniquement des noms qu'on pourra utiliser. Ensuite, on définit la disposition qu'on aura par défaut et qui sera utilisée pour les mobiles. Dans cette règle, on garde le même ordre que celui utilisé dans le document (cf. [le guide sur les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)). On ne définit aucune piste (colonne ou ligne) mais cela suffit pour décrire une disposition sur une seule colonne, les lignes seront créées implicitement lorsqu'elles seront nécessaires.
+avec ces difféwentes w-wègwes, (ꈍᴗꈍ) on ny'a p-pas encowe de disposition, rawr x3 uniquement des nyoms q-qu'on pouwwa u-utiwisew. (U ﹏ U) ensuite, ( ͡o ω ͡o ) on définit wa disposition qu'on auwa paw défaut e-et qui sewa utiwisée pouw wes mobiwes. 😳😳😳 dans cette wègwe, 🥺 on gawde we même o-owdwe que cewui utiwisé dans we document (cf. òωó [we g-guide suw w-wes gwiwwes css et w'accessibiwité](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)). XD on nye définit aucune piste (cowonne o-ou w-wigne) mais cewa suffit pouw décwiwe une disposition suw une seuwe c-cowonne, XD wes wignes sewont cwéées i-impwicitement wowsqu'ewwes sewont nyécessaiwes. ( ͡o ω ͡o )
 
 ```css
-.wrapper {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas:
-    "header"
+.wwappew {
+  dispway: g-gwid;
+  gwid-gap: 20px;
+  gwid-tempwate-aweas:
+    "headew"
     "nav"
     "content"
-    "sidebar"
+    "sidebaw"
     "ad"
-    "footer";
+    "footew";
 }
 ```
 
-Après cette disposition par défaut pour les appareils mobiles, on peut ajouter une [requête média (<i lang="en">media query</i>)](/fr/docs/Web/CSS/CSS_media_queries) et redéfinir la disposition lorsqu'on a plus d'espace et qu'on peut afficher deux colonnes&nbsp;:
+a-apwès cette d-disposition paw défaut pouw w-wes appaweiws mobiwes, >w< on peut a-ajoutew une [wequête m-média (<i w-wang="en">media quewy</i>)](/fw/docs/web/css/css_media_quewies) e-et wedéfiniw wa d-disposition wowsqu'on a pwus d'espace et qu'on p-peut affichew deux c-cowonnes&nbsp;:
 
 ```css
 @media (min-width: 500px) {
-  .wrapper {
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas:
-      "header  header"
-      "nav     nav"
-      "sidebar content"
-      "ad      footer";
+  .wwappew {
+    g-gwid-tempwate-cowumns: 1fw 3fw;
+    gwid-tempwate-aweas:
+      "headew  headew"
+      "nav     n-nyav"
+      "sidebaw content"
+      "ad      f-footew";
   }
-  nav ul {
-    display: flex;
+  n-nyav uw {
+    dispway: fwex;
     justify-content: space-between;
   }
 }
 ```
 
-On peut voir la disposition organisée dans la valeur pour la propriété [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas). L'en-tête `header` s'étale sur deux colonnes et le bloc `nav` également. Sur la troisième ligne, on a la barre latérale (`sidebar`) à côté du contenu (`content`). Sur la quatrième ligne, on a le bloc pour la publicité (`ad`) qui apparaît sous la barre latérale et enfin le pied de page qui apparaît sous le contenu. On utilise une boîte flexible pour la barre de navigation afin de l'étaler sur une ligne homogène.
+o-on peut voiw wa d-disposition owganisée d-dans wa vaweuw p-pouw wa pwopwiété [`gwid-tempwate-aweas`](/fw/docs/web/css/gwid-tempwate-aweas). mya w'en-tête `headew` s-s'étawe suw deux cowonnes et we bwoc `nav` égawement. (ꈍᴗꈍ) suw wa twoisième wigne, -.- on a wa bawwe watéwawe (`sidebaw`) à c-côté du contenu (`content`). suw wa quatwième w-wigne, (⑅˘꒳˘) on a we bwoc pouw wa p-pubwicité (`ad`) qui appawaît s-sous wa bawwe watéwawe et enfin w-we pied de page q-qui appawaît s-sous we contenu. (U ﹏ U) o-on utiwise une b-boîte fwexibwe pouw wa bawwe de nyavigation afin de w'étawew suw une wigne homogène. σωσ
 
-Enfin, on ajoute une autre requête média pour la disposition avec trois colonnes&nbsp;:
+enfin, on ajoute une autwe w-wequête média p-pouw wa disposition a-avec twois cowonnes&nbsp;:
 
 ```css
 @media (min-width: 700px) {
-  .wrapper {
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas:
-      "header header  header"
-      "nav    content sidebar"
-      "nav    content ad"
-      "footer footer  footer";
+  .wwappew {
+    g-gwid-tempwate-cowumns: 1fw 4fw 1fw;
+    gwid-tempwate-aweas:
+      "headew headew  headew"
+      "nav    content sidebaw"
+      "nav    c-content ad"
+      "footew f-footew  footew";
   }
-  nav ul {
-    flex-direction: column;
+  n-nyav uw {
+    fwex-diwection: cowumn;
   }
 }
 ```
 
-Cette disposition en trois colonnes possède une première colonne qui s'étend sur `1fr`, une colonne centrale qui s'étend sur `4fr` et une dernière colonne qui mesure également `1fr`. Cela signifie que l'espace disponible dans le conteneur est découpé en 6 et que chacun de ces morceaux est affecté à une de ces pistes.
+c-cette disposition e-en twois cowonnes possède u-une pwemièwe cowonne q-qui s'étend suw `1fw`, une cowonne centwawe qui s'étend suw `4fw` et une d-dewnièwe cowonne q-qui mesuwe égawement `1fw`. :3 c-cewa signifie que w-w'espace disponibwe d-dans we conteneuw est découpé e-en 6 et que c-chacun de ces mowceaux est affecté à u-une de c-ces pistes.
 
-Dans cette disposition, la barre de navigation est affichée dans la colonne à gauche, à côté du contenu. Sur la colonne à droite, on a la barre latérale au-dessus de la publicité. Le pied de page, quant à lui, s'étale sur tout le bas du conteneur. Ici aussi, on utilise une boîte flexible en colonne pour la barre de navigation.
+dans cette disposition, /(^•ω•^) w-wa bawwe de navigation est affichée dans wa c-cowonne à gauche, σωσ à côté du c-contenu. (U ᵕ U❁) suw wa c-cowonne à dwoite, 😳 on a wa bawwe w-watéwawe au-dessus de wa pubwicité. ʘwʘ we pied d-de page, (⑅˘꒳˘) quant à w-wui, ^•ﻌ•^ s'étawe s-suw tout we bas du conteneuw. nyaa~~ ici aussi, on utiwise une boîte f-fwexibwe en cowonne pouw wa bawwe de nyavigation. XD
 
-{{EmbedLiveSample('', '800', '430')}}
+{{embedwivesampwe('', /(^•ω•^) '800', (U ᵕ U❁) '430')}}
 
-Cet exemple est assez simple mais permet d'illustrer comme utiliser une grille afin de réorganiser le contenu pour différentes tailles d'écran. On voit par exemple comment on déplace le bloc `ad` dans les différentes organisations. L'utilisation des noms pour les zones permet de prototyper rapidement de nouvelles dispositions. Vous pouvez toujours utiliser la grille pour agencer votre prototype, même si ce n'est pas la technologie que vous utiliserez pour votre site ou votre application en production.
+c-cet exempwe e-est assez simpwe mais pewmet d-d'iwwustwew comme utiwisew une g-gwiwwe afin de w-wéowganisew we contenu pouw difféwentes taiwwes d-d'écwan. mya on voit paw exempwe comment on dépwace w-we bwoc `ad` d-dans wes difféwentes owganisations. (ˆ ﻌ ˆ)♡ w-w'utiwisation des nyoms pouw w-wes zones pewmet d-de pwototypew w-wapidement de nyouvewwes dispositions. (✿oωo) vous pouvez toujouws utiwisew wa gwiwwe pouw agencew votwe pwototype, (✿oωo) même si ce ny'est pas wa technowogie que vous utiwisewez pouw votwe site ou votwe appwication en p-pwoduction. òωó
 
-## Une disposition flexible avec 12 colonnes
+## u-une disposition fwexibwe avec 12 cowonnes
 
-Si vous travaillez avec un <i lang="en">framework</i> ou avec un système de grille, vous êtes peut-être habitué·e à travailler sur une grille avec 12 ou 16 colonnes. On peut recréer ce genre de système avec une grille CSS. Pour commencer, on crée une grille avec 12 colonnes dont chaque piste mesure `1fr` et commence par une ligne intitulée `col-start`. Autrement dit, on aura 12 lignes verticales intitulées `col-start`.
+si v-vous twavaiwwez a-avec un <i wang="en">fwamewowk</i> o-ou avec un système de gwiwwe, (˘ω˘) v-vous êtes peut-êtwe habitué·e à t-twavaiwwew s-suw une gwiwwe avec 12 ou 16 cowonnes. (ˆ ﻌ ˆ)♡ o-on peut wecwéew ce genwe d-de système avec u-une gwiwwe css. ( ͡o ω ͡o ) pouw commencew, rawr x3 on cwée une g-gwiwwe avec 12 c-cowonnes dont chaque p-piste mesuwe `1fw` e-et commence p-paw une wigne i-intituwée `cow-stawt`. (˘ω˘) a-autwement d-dit, òωó on auwa 12 w-wignes vewticawes intituwées `cow-stawt`. ( ͡o ω ͡o )
 
-```css hidden
-.wrapper {
-  max-width: 1024px;
-  margin: 0 auto;
+```css h-hidden
+.wwappew {
+  m-max-width: 1024px;
+  m-mawgin: 0 auto;
   font:
-    1.2em Helvetica,
-    arial,
-    sans-serif;
+    1.2em h-hewvetica, σωσ
+    awiaw, (U ﹏ U)
+    sans-sewif;
 }
-.wrapper > * {
-  border: 2px solid #f08c00;
-  background-color: #ffec99;
-  border-radius: 5px;
-  padding: 10px;
+.wwappew > * {
+  bowdew: 2px s-sowid #f08c00;
+  backgwound-cowow: #ffec99;
+  b-bowdew-wadius: 5px;
+  p-padding: 10px;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-gap: 20px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(12, [cow-stawt] 1fw);
+  gwid-gap: 20px;
 }
 ```
 
-Pour voir comment ce système fonctionne, on place quatre éléments dans le conteneur&nbsp;:
+p-pouw voiw comment ce système f-fonctionne, rawr on pwace quatwe éwéments d-dans we conteneuw&nbsp;:
 
-```html
-<div class="wrapper">
-  <div class="item1">
-    Début à la première ligne verticale, s'étend sur 3 colonnes.
+```htmw
+<div cwass="wwappew">
+  <div cwass="item1">
+    début à wa pwemièwe w-wigne vewticawe, -.- s'étend suw 3 c-cowonnes. ( ͡o ω ͡o )
   </div>
-  <div class="item2">
-    Début à la ligne verticale 6, s'étend sur 4 colonnes et deux lignes.
+  <div c-cwass="item2">
+    début à wa wigne vewticawe 6, >_< s'étend s-suw 4 cowonnes et deux wignes. o.O
   </div>
-  <div class="item3">
-    Début à la ligne verticale 2 de la ligne 2, s'étend sur 2 colonnes.
+  <div c-cwass="item3">
+    d-début à w-wa wigne vewticawe 2 de wa wigne 2, σωσ s'étend s-suw 2 cowonnes. -.-
   </div>
-  <div class="item4">
-    Début à la ligne verticale 3, s'étend jusqu'à la fin de la grille.
+  <div c-cwass="item4">
+    début à wa w-wigne vewticawe 3, σωσ s'étend jusqu'à wa fin de wa g-gwiwwe. :3
   </div>
 </div>
 ```
 
-Et on place ces éléments sur la grille en utilisant les noms utilisés précédemment, avec le mot-clé `span`&nbsp;:
+et on pwace ces éwéments s-suw wa g-gwiwwe en utiwisant w-wes nyoms utiwisés pwécédemment, ^^ a-avec we m-mot-cwé `span`&nbsp;:
 
 ```css
 .item1 {
-  grid-column: col-start / span 3;
+  g-gwid-cowumn: c-cow-stawt / span 3;
 }
 .item2 {
-  grid-column: col-start 6 / span 4;
-  grid-row: 1 / 3;
+  g-gwid-cowumn: c-cow-stawt 6 / s-span 4;
+  gwid-wow: 1 / 3;
 }
 .item3 {
-  grid-column: col-start 2 / span 2;
-  grid-row: 2;
+  g-gwid-cowumn: c-cow-stawt 2 / s-span 2;
+  g-gwid-wow: 2;
 }
 .item4 {
-  grid-column: col-start 3 / -1;
-  grid-row: 3;
+  g-gwid-cowumn: cow-stawt 3 / -1;
+  g-gwid-wow: 3;
 }
 ```
 
-{{EmbedLiveSample('', '800', '450')}}
+{{embedwivesampwe('', òωó '800', (ˆ ﻌ ˆ)♡ '450')}}
 
-Comme nous l'avons vu dans [le guide sur le nommage des lignes](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines), on utilise les noms des lignes pour placer nos éléments. On a ici 12 lignes verticales avec le même nom, on utilise donc ce nom et l'indice qui indique le numéro. On pourrait tout aussi bien utiliser seulement le numéro si on voulait se passer des noms pour les lignes.
+comme nyous w-w'avons vu dans [we guide suw w-we nyommage des w-wignes](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines), XD on u-utiwise wes nyoms des wignes pouw pwacew nyos éwéments. òωó on a i-ici 12 wignes vewticawes a-avec we m-même nyom, on utiwise donc ce nyom et w'indice qui indique we n-nyuméwo. (ꈍᴗꈍ) on pouwwait t-tout aussi bien utiwisew s-seuwement we numéwo s-si on vouwait se passew des nyoms pouw wes wignes. UwU
 
-Plutôt que d'indiquer le numéro de la dernière ligne pour chaque élément, on a ici utilisé le mot-clé `span` pour indiquer la taille de chaque élément. Cette approche permet de revoir plus clairement la taille de chaque élément lorsqu'on ajoute une nouvelle disposition pour une nouvelle taille d'écran. Dans la capture qui suit, on peut voir comment les blocs sont positionnés sur la grille. Pour cela, on a utilisé [l'inspecteur de grille de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) qui indique de façon claire comment les objets sont placés.
+pwutôt q-que d'indiquew w-we nyuméwo de wa d-dewnièwe wigne p-pouw chaque éwément, >w< on a ici utiwisé we mot-cwé `span` p-pouw i-indiquew wa taiwwe de chaque éwément. ʘwʘ cette a-appwoche pewmet de wevoiw pwus cwaiwement wa taiwwe d-de chaque éwément wowsqu'on a-ajoute une nyouvewwe d-disposition pouw une nyouvewwe t-taiwwe d'écwan. :3 d-dans wa captuwe qui suit, ^•ﻌ•^ o-on peut voiw comment wes bwocs s-sont positionnés s-suw wa gwiwwe. (ˆ ﻌ ˆ)♡ p-pouw cewa, 🥺 on a-a utiwisé [w'inspecteuw de gwiwwe d-de fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw) q-qui i-indique de façon cwaiwe comment w-wes objets sont pwacés. OwO
 
-![Indication des objets placés sur la grille avec la mise en évidence des pistes de la grille.](11-grid-inspector-12col.png)
+![indication des objets p-pwacés suw wa g-gwiwwe avec wa m-mise en évidence des pistes de wa gwiwwe.](11-gwid-inspectow-12cow.png)
 
-Il y a certainement certaines différences fondamentales avec les systèmes que vous auriez pu utiliser précédemment. On voit par exemple qu'il n'est pas nécessaire d'ajouter de règles supplémentaires pour créer une ligne. Généralement, il faut ajouter des contrôles pour éviter que les éléments remontent sur les lignes au-dessus. Avec une grille CSS, ce n'est pas un problème, les lignes supérieures sont laissées vides. La disposition étant _stricte_, on peut très bien laisser des espaces dans notre plan. Il n'est pas non plus nécessaire de définir des classes spécifiques afin d'indenter les différents objets, il suffit ici d'indiquer la colonne de début et la colonne de fin.
+iw y a cewtainement cewtaines d-difféwences fondamentawes a-avec wes systèmes q-que vous auwiez pu utiwisew pwécédemment. 🥺 o-on voit paw exempwe qu'iw ny'est p-pas nyécessaiwe d-d'ajoutew de w-wègwes suppwémentaiwes p-pouw c-cwéew une wigne. OwO généwawement, (U ᵕ U❁) iw faut ajoutew des contwôwes pouw évitew que w-wes éwéments wemontent suw wes w-wignes au-dessus. ( ͡o ω ͡o ) avec une gwiwwe css, ^•ﻌ•^ ce ny'est pas un pwobwème, o.O w-wes wignes supéwieuwes sont waissées vides. (⑅˘꒳˘) wa disposition étant _stwicte_, (ˆ ﻌ ˆ)♡ on peut twès b-bien waissew d-des espaces dans nyotwe pwan. :3 iw n-ny'est pas nyon pwus nyécessaiwe de définiw des c-cwasses spécifiques a-afin d'indentew wes difféwents o-objets, /(^•ω•^) iw suffit ici d'indiquew w-wa cowonne de début et wa cowonne de fin. òωó
 
-## Construire une disposition avec ce système à 12 colonnes
+## constwuiwe u-une disposition avec ce système à 12 cowonnes
 
-Pour voir comment cette méthode fonctionne en pratique, nous allons créer le même plan que celui que nous avons vu avec les zones nommées et [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas) mais en utilisant désormais ce système à 12 colonnes. Commençons avec la même structure que celle utilisée plus haut avec les zones nommées&nbsp;:
+p-pouw voiw comment c-cette méthode f-fonctionne en pwatique, :3 nyous awwons cwéew w-we même pwan que cewui que nyous avons vu avec wes zones nyommées et [`gwid-tempwate-aweas`](/fw/docs/web/css/gwid-tempwate-aweas) m-mais en utiwisant d-désowmais c-ce système à 12 c-cowonnes. (˘ω˘) commençons avec wa même stwuctuwe q-que cewwe utiwisée p-pwus haut avec wes zones nyommées&nbsp;:
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  max-width: 1024px;
-  margin: 0 auto;
+.wwappew {
+  m-max-width: 1024px;
+  mawgin: 0 auto;
   font:
-    1.2em Helvetica,
-    arial,
-    sans-serif;
+    1.2em h-hewvetica, 😳
+    a-awiaw, σωσ
+    sans-sewif;
 }
 
-.wrapper > * {
-  border: 2px solid #f08c00;
-  background-color: #ffec99;
-  border-radius: 5px;
+.wwappew > * {
+  bowdew: 2px sowid #f08c00;
+  b-backgwound-cowow: #ffec99;
+  b-bowdew-wadius: 5px;
   padding: 10px;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
+n-nyav uw {
+  wist-stywe: nyone;
+  mawgin: 0;
   padding: 0;
 }
 ```
 
-```html
-<div class="wrapper">
-  <header class="main-head">L'en-tête</header>
-  <nav class="main-nav">
-    <ul>
-      <li><a href="">Nav 1</a></li>
-      <li><a href="">Nav 2</a></li>
-      <li><a href="">Nav 3</a></li>
-    </ul>
+```htmw
+<div cwass="wwappew">
+  <headew c-cwass="main-head">w'en-tête</headew>
+  <nav cwass="main-nav">
+    <uw>
+      <wi><a hwef="">nav 1</a></wi>
+      <wi><a hwef="">nav 2</a></wi>
+      <wi><a h-hwef="">nav 3</a></wi>
+    </uw>
   </nav>
-  <article class="content">
-    <h1>L'article principal</h1>
+  <awticwe cwass="content">
+    <h1>w'awticwe pwincipaw</h1>
     <p>
-      Dans cette disposition, on affiche les zones dans le même ordre que dans
-      le document pour les écrans dont la largeur est inférieure à 500 pixels.
-      On passe à une disposition sur deux colonnes ou trois colonnes en
-      redéfinissant la grille et le placement des objets sur la grille.
+      dans cette disposition, UwU o-on affiche wes z-zones dans we m-même owdwe que d-dans
+      we document p-pouw wes écwans dont wa w-wawgeuw est inféwieuwe à 500 pixews. -.-
+      on passe à une disposition s-suw deux cowonnes ou twois c-cowonnes en
+      wedéfinissant wa gwiwwe e-et we pwacement d-des objets suw wa gwiwwe. 🥺
     </p>
-  </article>
-  <aside class="side">Barre latérale</aside>
-  <div class="ad">Publicité</div>
-  <footer class="main-footer">Le pied de page</footer>
+  </awticwe>
+  <aside c-cwass="side">bawwe watéwawe</aside>
+  <div c-cwass="ad">pubwicité</div>
+  <footew c-cwass="main-footew">we pied de page</footew>
 </div>
 ```
 
-On initialise la grille avec nos 12 colonnes&nbsp;:
+o-on initiawise w-wa gwiwwe avec nyos 12 cowonnes&nbsp;:
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-gap: 20px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(12, 😳😳😳 [cow-stawt] 1fw);
+  gwid-gap: 20px;
 }
 ```
 
-Là encore, nous allons adapter la disposition en fonction de la taille de la zone d'affichage, mais ici nous utiliserons les colonnes nommées. Pour chaque type d'affichage, nous allons utiliser 12 colonnes et faire varier le nombre de pistes sur lequel s'étalent les objets à afficher.
+w-wà encowe, 🥺 nyous awwons a-adaptew wa disposition en fonction de wa taiwwe d-de wa zone d-d'affichage, ^^ mais i-ici nyous utiwisewons wes cowonnes n-nyommées. ^^;; p-pouw chaque type d'affichage, >w< nyous a-awwons utiwisew 12 cowonnes e-et faiwe vawiew we nombwe de pistes s-suw wequew s'étawent w-wes objets à affichew.
 
-Commençons par le mobile&nbsp;: on souhaite gérer les écrans les plus étroits par défaut. Ici aussi, on respecte l'ordre des éléments indiqués par le code source du document et tous les objets s'étalent tout au long de la grille.
+commençons paw we mobiwe&nbsp;: on souhaite g-géwew wes écwans w-wes pwus étwoits paw défaut. σωσ ici aussi, on wespecte w'owdwe d-des éwéments indiqués paw we c-code souwce du d-document et tous wes objets s'étawent tout au wong de wa gwiwwe. >w<
 
 ```css
-.wrapper > * {
-  grid-column: col-start / span 12;
+.wwappew > * {
+  gwid-cowumn: c-cow-stawt / span 12;
 }
 ```
 
-Pour la prochaine taille, on veut obtenir une disposition sur deux colonnes. Ici, l'en-tête et la barre de navigation occuperont toute une ligne horizontale, il n'est donc pas nécessaire d'indiquer de positionnement pour eux. La barre latérale commence sur la première ligne verticale intitulée `col-start` et s'étend sur 3 colonnes et commence à partir de la troisième ligne (les deux premières étant occupées par l'en-tête et la barre de navigation).
+pouw wa pwochaine t-taiwwe, (⑅˘꒳˘) on veut obteniw une d-disposition suw d-deux cowonnes. òωó ici, w'en-tête e-et wa bawwe de n-nyavigation occupewont t-toute une w-wigne howizontawe, (⑅˘꒳˘) i-iw ny'est donc p-pas nyécessaiwe d'indiquew de positionnement pouw eux. (ꈍᴗꈍ) wa bawwe watéwawe commence suw wa pwemièwe w-wigne vewticawe i-intituwée `cow-stawt` et s-s'étend suw 3 c-cowonnes et commence à p-pawtiw d-de wa twoisième wigne (wes deux pwemièwes étant occupées paw w'en-tête et wa b-bawwe de nyavigation). rawr x3
 
-Le panneau dédié à la publicité est affiché sous la barre latérale et commence à partir de la quatrième ligne. On a ensuite le contenu et le pied de page qui commencent à partir de la quatrième ligne verticale et s'étendent sur 9 pistes pour occuper le reste de la grille.
+w-we panneau dédié à wa pubwicité est affiché sous w-wa bawwe watéwawe e-et commence à p-pawtiw de wa quatwième wigne. ( ͡o ω ͡o ) on a ensuite we c-contenu et we pied de page qui commencent à pawtiw d-de wa quatwième w-wigne vewticawe et s'étendent suw 9 pistes p-pouw occupew we weste de wa gwiwwe.
 
 ```css
 @media (min-width: 500px) {
   .side {
-    grid-column: col-start / span 3;
-    grid-row: 3;
+    g-gwid-cowumn: c-cow-stawt / span 3;
+    gwid-wow: 3;
   }
   .ad {
-    grid-column: col-start / span 3;
-    grid-row: 4;
+    g-gwid-cowumn: c-cow-stawt / s-span 3;
+    gwid-wow: 4;
   }
   .content,
-  .main-footer {
-    grid-column: col-start 4 / span 9;
+  .main-footew {
+    g-gwid-cowumn: cow-stawt 4 / s-span 9;
   }
-  nav ul {
-    display: flex;
-    justify-content: space-between;
+  n-nyav uw {
+    dispway: f-fwex;
+    justify-content: s-space-between;
   }
 }
 ```
 
-Voyons alors la disposition sur trois colonnes. Pour ce plan, l'en-tête s'étale aussi sur toute la largeur de la grille, la barre de navigation devient verticale&nbsp;;&nbsp;à côté nous avons le contenu puis la barre latérale&nbsp;;&nbsp;le pied de page s'étale, lui aussi, sur toute la largeur du conteneur.
+voyons awows w-wa disposition suw twois cowonnes. UwU pouw ce pwan, ^^ w-w'en-tête s'étawe aussi suw t-toute wa wawgeuw de wa gwiwwe, (˘ω˘) w-wa bawwe de nyavigation d-devient vewticawe&nbsp;;&nbsp;à côté n-nyous avons we contenu puis wa bawwe watéwawe&nbsp;;&nbsp;we pied d-de page s'étawe, (ˆ ﻌ ˆ)♡ w-wui aussi, suw toute wa wawgeuw du conteneuw. OwO
 
 ```css
 @media (min-width: 700px) {
   .main-nav {
-    grid-column: col-start / span 2;
-    grid-row: 2 / 4;
+    g-gwid-cowumn: c-cow-stawt / span 2;
+    gwid-wow: 2 / 4;
   }
   .content {
-    grid-column: col-start 3 / span 8;
-    grid-row: 2 / 4;
+    g-gwid-cowumn: cow-stawt 3 / span 8;
+    gwid-wow: 2 / 4;
   }
   .side {
-    grid-column: col-start 11 / span 2;
-    grid-row: 2;
+    gwid-cowumn: c-cow-stawt 11 / s-span 2;
+    gwid-wow: 2;
   }
   .ad {
-    grid-column: col-start 11 / span 2;
-    grid-row: 3;
+    g-gwid-cowumn: c-cow-stawt 11 / span 2;
+    gwid-wow: 3;
   }
-  .main-footer {
-    grid-column: col-start / span 12;
+  .main-footew {
+    gwid-cowumn: cow-stawt / s-span 12;
   }
-  nav ul {
-    flex-direction: column;
+  n-nav uw {
+    f-fwex-diwection: c-cowumn;
   }
 }
 ```
 
-{{EmbedLiveSample('', '800', '430')}}
+{{embedwivesampwe('', 😳 '800', '430')}}
 
-On peut à nouveau profiter de [l'inspecteur de grille](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) pour voir comment se compose effectivement notre disposition&nbsp;:
+on peut à nyouveau pwofitew de [w'inspecteuw de gwiwwe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw) pouw voiw comment se compose effectivement n-nyotwe disposition&nbsp;:
 
-![Capture d'écran de la disposition avec les pistes de la grille qui sont mises en avant par l'inspecteur.](11-grid-inspector-12col-layout.png)
+![captuwe d-d'écwan d-de wa disposition a-avec wes pistes d-de wa gwiwwe qui s-sont mises en avant paw w'inspecteuw.](11-gwid-inspectow-12cow-wayout.png)
 
-On notera qu'il n'a pas été nécessaire de redéfinir explicitement la position de chaque élément pour chaque résolution. On a pu hériter des emplacements des résolutions précédentes. On gagne donc à travailler en considérant les résolutions mobiles en premier lieu. On tire également parti du placement automatique géré par la grille avec l'ordre, logique, des éléments du document. Dans le dernier exemple, nous allons voir comment le placement automatique sur la grille peut aider à positionner des objets.
+on n-nyotewa qu'iw n-ny'a pas été nyécessaiwe de wedéfiniw e-expwicitement w-wa position de chaque éwément pouw chaque w-wésowution. UwU on a pu héwitew des empwacements d-des wésowutions pwécédentes. 🥺 o-on gagne donc à t-twavaiwwew en considéwant wes w-wésowutions m-mobiwes en pwemiew w-wieu. 😳😳😳 on tiwe égawement pawti d-du pwacement automatique g-géwé paw wa gwiwwe a-avec w'owdwe, ʘwʘ wogique, /(^•ω•^) des éwéments d-du document. :3 d-dans we dewniew e-exempwe, :3 nyous awwons voiw comment w-we pwacement automatique suw wa gwiwwe peut a-aidew à positionnew des objets. mya
 
-## Une liste produit utilisant le placement automatique
+## une wiste pwoduit utiwisant we pwacement automatique
 
-De nombreuses dispositions sont essentiellement composées de cartes ou tuiles&nbsp;: des listes produit, des galeries d'image, etc. Avec une grille, on peut facilement créer ce genre de liste de façon adaptative, sans avoir à ajouter de [requêtes média](/fr/docs/Web/CSS/CSS_media_queries). Dans l'exemple qui suit, nous allons combiner les grilles CSS et les boîtes flexibles afin d'obtenir une liste de produits.
+de nombweuses dispositions s-sont essentiewwement composées de cawtes ou tuiwes&nbsp;: des wistes pwoduit, (///ˬ///✿) des gawewies d'image, (⑅˘꒳˘) etc. a-avec une gwiwwe, :3 on peut faciwement cwéew ce g-genwe de wiste de façon adaptative, /(^•ω•^) s-sans avoiw à ajoutew de [wequêtes média](/fw/docs/web/css/css_media_quewies). ^^;; d-dans w'exempwe qui suit, (U ᵕ U❁) nyous a-awwons combinew wes gwiwwes c-css et wes boîtes f-fwexibwes afin d'obteniw une wiste de pwoduits. (U ﹏ U)
 
-Le document utilisé contient une liste d'objets non ordonnée. Pour chaque produit, on a un titre, un texte dont la taille n'est pas fixe et un lien pour effectuer une action.
+w-we document utiwisé contient une wiste d'objets nyon owdonnée. mya p-pouw chaque pwoduit, ^•ﻌ•^ on a u-un titwe, (U ﹏ U) un texte dont wa taiwwe n-n'est pas fixe et un wien pouw e-effectuew une action. :3
 
-```html
-<ul class="listing">
-  <li>
-    <h2>Produit n°1</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
+```htmw
+<uw c-cwass="wisting">
+  <wi>
+    <h2>pwoduit ny°1</h2>
+    <div cwass="body">
+      <p>we d-descwiptif du pwoduit sewa écwit ici.</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div c-cwass="cta">
+      <a hwef="">faiwe quewque chose !</a>
     </div>
-  </li>
-  <li>
-    <h2>Produit n°2</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
+  </wi>
+  <wi>
+    <h2>pwoduit ny°2</h2>
+    <div cwass="body">
+      <p>we descwiptif d-du pwoduit sewa écwit i-ici.</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div cwass="cta">
+      <a h-hwef="">faiwe q-quewque chose !</a>
     </div>
-  </li>
-  <li class="wide">
-    <h2>Produit n°3</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
-      <p>Ce produit possède un descriptif beaucoup plus long.</p>
-      <p>Vraiment plus long</p>
-      <p>Peut-être faudrait-il le gérer différemment ?</p>
+  </wi>
+  <wi c-cwass="wide">
+    <h2>pwoduit ny°3</h2>
+    <div cwass="body">
+      <p>we descwiptif du pwoduit sewa écwit i-ici.</p>
+      <p>ce p-pwoduit possède un d-descwiptif beaucoup p-pwus wong.</p>
+      <p>vwaiment pwus wong</p>
+      <p>peut-êtwe f-faudwait-iw we géwew difféwemment ?</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div cwass="cta">
+      <a h-hwef="">faiwe quewque chose !</a>
     </div>
-  </li>
-  <li>
-    <h2>Produit n°4</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
+  </wi>
+  <wi>
+    <h2>pwoduit n-ny°4</h2>
+    <div c-cwass="body">
+      <p>we descwiptif du pwoduit sewa écwit i-ici.</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div cwass="cta">
+      <a hwef="">faiwe quewque chose !</a>
     </div>
-  </li>
-  <li>
-    <h2>Produit n°5</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
+  </wi>
+  <wi>
+    <h2>pwoduit n°5</h2>
+    <div cwass="body">
+      <p>we descwiptif du p-pwoduit sewa écwit i-ici.</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div cwass="cta">
+      <a h-hwef="">faiwe q-quewque chose !</a>
     </div>
-  </li>
-</ul>
+  </wi>
+</uw>
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 img {
   max-width: 100%;
-  display: block;
+  dispway: bwock;
 }
 body {
   font:
-    1.2em Helvetica,
-    arial,
-    sans-serif;
+    1.2em hewvetica, rawr x3
+    awiaw,
+    s-sans-sewif;
 }
 
-a:link,
+a:wink, 😳😳😳
 a:visited {
-  text-decoration: none;
-  color: #f08c00;
+  text-decowation: nyone;
+  cowow: #f08c00;
 }
 
-h2 {
-  background-color: #f08c00;
-  color: #fff;
-  text-align: center;
-  margin: 0;
+h-h2 {
+  backgwound-cowow: #f08c00;
+  c-cowow: #fff;
+  t-text-awign: centew;
+  mawgin: 0;
   padding: 20px;
 }
 ```
 
-Nous allons créer une grille avec un nombre de colonnes adaptable et chacune des colonnes sera flexible. On indique qu'une colonne doit avoir une largeur minimale de 200 pixels et que l'espace restant doit être réparti équitablement (toutes les colonnes auront donc la même largeur). Pour obtenir ce résultat, on utilise la fonction `minmax()` avec la notation `repeat` pour la propriété `grid-template-columns` qui permet de dimensionner les pistes.
+nyous awwons c-cwéew une gwiwwe a-avec un nyombwe d-de cowonnes adaptabwe et chacune d-des cowonnes sewa fwexibwe. >w< o-on indique qu'une cowonne doit avoiw u-une wawgeuw minimawe de 200 p-pixews et que w'espace westant doit êtwe wépawti équitabwement (toutes w-wes cowonnes auwont donc w-wa même wawgeuw). òωó p-pouw obteniw ce wésuwtat, 😳 o-on utiwise wa f-fonction `minmax()` avec wa nyotation `wepeat` pouw w-wa pwopwiété `gwid-tempwate-cowumns` qui pewmet d-de dimensionnew wes pistes. (✿oωo)
 
 ```css
-.listing {
-  list-style: none;
-  margin: 2em;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+.wisting {
+  w-wist-stywe: n-nyone;
+  mawgin: 2em;
+  dispway: gwid;
+  gwid-gap: 20px;
+  g-gwid-tempwate-cowumns: wepeat(auto-fiww, OwO minmax(200px, (U ﹏ U) 1fw));
 }
 ```
 
-Dès qu'on ajoute cette règle, les objets s'organisent sur la grille. Si on change la taille de la fenêtre, le nombre de colonnes s'adaptera, sans qu'il soit nécessaire d'ajouter des requêtes média ou de redéfinir la grille.
+dès qu'on ajoute cette wègwe, (ꈍᴗꈍ) wes objets s'owganisent suw wa gwiwwe. si on c-change wa taiwwe de wa fenêtwe, rawr we nyombwe de cowonnes s-s'adaptewa, ^^ sans qu'iw soit n-nyécessaiwe d'ajoutew des wequêtes média o-ou de wedéfiniw wa gwiwwe. rawr
 
-On peut ensuite améliorer chacune des boîtes en utilisant les boîtes flexibles. Pour les éléments de la liste, on utilise `display: flex` et `flex-direction` avec la valeur `column`. On ajoute une marge automatique pour la classe `.cta` afin que cette barre soit placée en bas de la boîte.
+on peut ensuite améwiowew c-chacune des boîtes en utiwisant wes boîtes f-fwexibwes. nyaa~~ pouw wes éwéments de wa wiste, nyaa~~ o-on utiwise `dispway: fwex` et `fwex-diwection` avec wa vaweuw `cowumn`. o.O o-on ajoute u-une mawge automatique pouw wa cwasse `.cta` afin q-que cette bawwe s-soit pwacée en bas de wa boîte. òωó
 
 ```css
-.listing li {
-  border: 1px solid #ffe066;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+.wisting w-wi {
+  bowdew: 1px s-sowid #ffe066;
+  bowdew-wadius: 5px;
+  dispway: fwex;
+  f-fwex-diwection: cowumn;
 }
-.listing .cta {
-  margin-top: auto;
-  border-top: 1px solid #ffe066;
+.wisting .cta {
+  mawgin-top: auto;
+  b-bowdew-top: 1px sowid #ffe066;
   padding: 10px;
-  text-align: center;
+  text-awign: c-centew;
 }
-.listing .body {
-  padding: 10px;
+.wisting .body {
+  p-padding: 10px;
 }
 ```
 
-Voici un exemple où l'utilisation des boîtes flexibles est pertinente par rapport à une autre grille&nbsp;: on ne fait qu'aligner ou organiser des objets sur un seul axe, ce qui est très bien géré avec une boîte flexible.
+v-voici un exempwe où w'utiwisation des boîtes fwexibwes est p-pewtinente paw wappowt à une autwe g-gwiwwe&nbsp;: on nye fait qu'awignew o-ou owganisew d-des objets suw un seuw axe, ^^;; ce qui est twès bien géwé avec une boîte fwexibwe. rawr
 
-{{EmbedLiveSample('', '800', '1000')}}
+{{embedwivesampwe('', ^•ﻌ•^ '800', '1000')}}
 
-## Empêcher les espaces avec `dense`
+## empêchew wes e-espaces avec `dense`
 
-Le résultat est plutôt abouti, mais on a parfois des cartes qui ont beaucoup plus de contenu. Si on veut que celles-ci soient plus larges (pour éviter qu'elles soient trop hautes), on peut les étaler sur deux pistes. Pour cela, on a utilisé la classe `wide` sur l'objet avec plus de contenu et on ajoute une règle [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end) avec la valeur `span 2`. Désormais, lorsque la grille devra placer un élément de ce type, elle lui affectera deux colonnes. Cela signifie aussi que pour certaines tailles d'affichage, on aura un trou dans la grille lorsqu'il n'y aura pas suffisamment d'espace pour placer un objet sur deux colonnes&nbsp;:
+w-we wésuwtat est pwutôt abouti, mais on a-a pawfois des cawtes qui ont beaucoup pwus de c-contenu. nyaa~~ si on veut q-que cewwes-ci s-soient pwus wawges (pouw évitew q-qu'ewwes soient t-twop hautes), nyaa~~ o-on peut wes étawew suw deux pistes. 😳😳😳 pouw cewa, 😳😳😳 o-on a utiwisé wa c-cwasse `wide` s-suw w'objet avec p-pwus de contenu e-et on ajoute une w-wègwe [`gwid-cowumn-end`](/fw/docs/web/css/gwid-cowumn-end) avec wa vaweuw `span 2`. σωσ d-désowmais, o.O w-wowsque wa gwiwwe d-devwa pwacew un éwément de ce type, σωσ ewwe w-wui affectewa deux cowonnes. nyaa~~ cewa signifie aussi q-que pouw cewtaines taiwwes d'affichage, rawr x3 on auwa u-un twou dans wa g-gwiwwe wowsqu'iw ny'y auwa pas suffisamment d'espace pouw pwacew u-un objet suw d-deux cowonnes&nbsp;:
 
-![La disposition crée des trous, car il n'y a pas d'espace pour disposer un élément qui s'étale sur deux pistes.](11-grid-auto-flow-sparse.png)
+![wa disposition c-cwée des t-twous, (///ˬ///✿) caw iw n'y a pas d'espace pouw disposew un éwément qui s-s'étawe suw deux p-pistes.](11-gwid-auto-fwow-spawse.png)
 
-Si on veut éviter ces trous, on peut utiliser la règle [`grid-auto-flow: dense`](/fr/docs/Web/CSS/grid-auto-flow) sur le conteneur de la grille. Attention à l'utilisation de cette valeur&nbsp;: l'ordre logique n'est plus respecté. Aussi, il faut _uniquement_ utiliser cette valeur lorsqu'il n'y a pas d'ordre pour les objets. Avec cette valeur, la navigation au clavier (_tab order_) continue de suivre l'ordre des éléments du document et pas l'ordre d'affichage des objets sur la grille. Cette méthode entraîne [certains problèmes d'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#un_ré-ordonnancement_visuel_et_non_logique) dont il faut avoir conscience.
+si on veut évitew ces t-twous, o.O on peut u-utiwisew wa wègwe [`gwid-auto-fwow: dense`](/fw/docs/web/css/gwid-auto-fwow) suw we conteneuw d-de wa gwiwwe. òωó attention à w'utiwisation de cette vaweuw&nbsp;: w'owdwe wogique ny'est pwus wespecté. OwO a-aussi, iw faut _uniquement_ utiwisew cette v-vaweuw wowsqu'iw n-ny'y a pas d'owdwe p-pouw wes objets. σωσ avec cette v-vaweuw, nyaa~~ wa nyavigation a-au cwaview (_tab o-owdew_) c-continue de suivwe w-w'owdwe des éwéments du document et pas w'owdwe d-d'affichage d-des objets suw w-wa gwiwwe. OwO cette méthode entwaîne [cewtains p-pwobwèmes d'accessibiwité](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity#un_wé-owdonnancement_visuew_et_non_wogique) d-dont iw f-faut avoiw conscience. ^^
 
-```html hidden
-<ul class="listing">
-  <li>
-    <h2>Produit n°1</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
+```htmw hidden
+<uw cwass="wisting">
+  <wi>
+    <h2>pwoduit n-ny°1</h2>
+    <div c-cwass="body">
+      <p>we d-descwiptif du p-pwoduit sewa écwit i-ici.</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div cwass="cta">
+      <a h-hwef="">faiwe quewque chose !</a>
     </div>
-  </li>
-  <li>
-    <h2>Produit n°2</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
+  </wi>
+  <wi>
+    <h2>pwoduit n-n°2</h2>
+    <div c-cwass="body">
+      <p>we descwiptif du pwoduit sewa écwit ici.</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div cwass="cta">
+      <a h-hwef="">faiwe q-quewque chose !</a>
     </div>
-  </li>
-  <li class="wide">
-    <h2>Produit n°3</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
-      <p>Ce produit possède un descriptif beaucoup plus long.</p>
-      <p>Vraiment plus long</p>
-      <p>Peut-être faudrait-il le gérer différemment ?</p>
+  </wi>
+  <wi cwass="wide">
+    <h2>pwoduit n-ny°3</h2>
+    <div c-cwass="body">
+      <p>we descwiptif du pwoduit s-sewa écwit ici.</p>
+      <p>ce p-pwoduit possède u-un descwiptif b-beaucoup pwus w-wong.</p>
+      <p>vwaiment p-pwus wong</p>
+      <p>peut-êtwe faudwait-iw w-we géwew difféwemment ?</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div cwass="cta">
+      <a hwef="">faiwe quewque chose !</a>
     </div>
-  </li>
-  <li>
-    <h2>Produit n°4</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
+  </wi>
+  <wi>
+    <h2>pwoduit n-ny°4</h2>
+    <div c-cwass="body">
+      <p>we descwiptif du pwoduit sewa écwit ici.</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div c-cwass="cta">
+      <a h-hwef="">faiwe quewque chose !</a>
     </div>
-  </li>
-  <li>
-    <h2>Produit n°5</h2>
-    <div class="body">
-      <p>Le descriptif du produit sera écrit ici.</p>
+  </wi>
+  <wi>
+    <h2>pwoduit ny°5</h2>
+    <div c-cwass="body">
+      <p>we descwiptif d-du pwoduit s-sewa écwit ici.</p>
     </div>
-    <div class="cta">
-      <a href="">Faire quelque chose !</a>
+    <div c-cwass="cta">
+      <a hwef="">faiwe quewque chose !</a>
     </div>
-  </li>
-</ul>
+  </wi>
+</uw>
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
 img {
-  max-width: 100%;
-  display: block;
+  m-max-width: 100%;
+  dispway: b-bwock;
 }
 
 body {
   font:
-    1.2em Helvetica,
-    arial,
-    sans-serif;
+    1.2em hewvetica, (///ˬ///✿)
+    a-awiaw, σωσ
+    sans-sewif;
 }
 
-a:link,
-a:visited {
-  text-decoration: none;
-  color: #f08c00;
+a:wink, rawr x3
+a-a:visited {
+  text-decowation: none;
+  cowow: #f08c00;
 }
 
-h2 {
-  background-color: #f08c00;
-  color: #fff;
-  text-align: center;
-  margin: 0;
+h-h2 {
+  backgwound-cowow: #f08c00;
+  cowow: #fff;
+  t-text-awign: centew;
+  mawgin: 0;
   padding: 20px;
 }
 
-.listing li {
-  border: 1px solid #ffe066;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+.wisting wi {
+  bowdew: 1px sowid #ffe066;
+  bowdew-wadius: 5px;
+  dispway: f-fwex;
+  fwex-diwection: c-cowumn;
 }
 
-.listing .cta {
-  margin-top: auto;
-  border-top: 1px solid #ffe066;
+.wisting .cta {
+  m-mawgin-top: a-auto;
+  bowdew-top: 1px sowid #ffe066;
   padding: 10px;
-  text-align: center;
+  text-awign: centew;
 }
 
-.listing .body {
-  padding: 10px;
+.wisting .body {
+  p-padding: 10px;
 }
 ```
 
 ```css
-.listing {
-  list-style: none;
-  margin: 2em;
-  display: grid;
-  grid-gap: 20px;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+.wisting {
+  wist-stywe: nyone;
+  mawgin: 2em;
+  dispway: g-gwid;
+  gwid-gap: 20px;
+  g-gwid-auto-fwow: d-dense;
+  g-gwid-tempwate-cowumns: wepeat(auto-fiww, (ˆ ﻌ ˆ)♡ minmax(200px, 1fw));
 }
-.listing .wide {
-  grid-column-end: span 2;
+.wisting .wide {
+  gwid-cowumn-end: span 2;
 }
 ```
 
-{{EmbedLiveSample('', '800', '900')}}
+{{embedwivesampwe('', 🥺 '800', '900')}}
 
-Cette technique de placement automatique peut s'avérer extrêmement utile si vous devez gérer du contenu produit fourni par un CMS, contenant un ensemble d'objets qui se ressemblent et auxquels vous ajoutez une classe lors de la génération en HTML.
+c-cette t-technique de pwacement automatique peut s'avéwew extwêmement u-utiwe si vous devez géwew du c-contenu pwoduit f-fouwni paw un cms, (⑅˘꒳˘) c-contenant un ensembwe d'objets qui se wessembwent et auxquews vous ajoutez une cwasse wows de w-wa généwation en htmw. 😳😳😳
 
-## Approfondir
+## appwofondiw
 
-La meilleure façon d'apprendre à utiliser les grilles CSS est de continuer à construire des exemples comme ceux que nous avons vus ici. Prenez un cas d'utilisation que vous auriez construit avec un _framework_ ou avec un autre mode de disposition et voyez si vous pouvez le construire à l'aide d'une grille. N'oubliez pas de trouver des exemples de disposition encore impossibles à construire avec les méthodes actuelles&nbsp;: prenez différentes sources d'inspiration comme les magazines et affiches. Le modèle de grille offre un nouvel éventail de possibilités et il serait dommage de rester sur nos acquis.
+w-wa meiwweuwe façon d'appwendwe à utiwisew wes gwiwwes c-css est de continuew à constwuiwe d-des exempwes comme ceux que nyous avons vus i-ici. /(^•ω•^) pwenez un c-cas d'utiwisation q-que vous auwiez c-constwuit avec u-un _fwamewowk_ ou avec un autwe m-mode de disposition e-et voyez si vous pouvez we c-constwuiwe à w'aide d'une gwiwwe. >w< ny'oubwiez p-pas de twouvew des exempwes de disposition e-encowe i-impossibwes à constwuiwe avec w-wes méthodes actuewwes&nbsp;: p-pwenez difféwentes souwces d'inspiwation comme wes magazines et a-affiches. ^•ﻌ•^ we modèwe d-de gwiwwe o-offwe un nouvew éventaiw d-de possibiwités et iw sewait dommage de westew suw nyos a-acquis. 😳😳😳
 
-- [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
-- [Apprendre les grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [CSS-Tricks&nbsp;: Un guide complet sur les grilles CSS (en anglais)](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- [Les grilles CSS par l'exemple (en anglais)](https://gridbyexample.com)
-- [Quackit&nbsp;: Exemples de dispositions avec les grilles CSS (en anglais)](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm)
+- [wes gwiwwes css](/fw/docs/web/css/css_gwid_wayout)
+- [appwendwe wes gwiwwes css](/fw/docs/weawn/css/css_wayout/gwids)
+- [css-twicks&nbsp;: u-un guide compwet suw wes gwiwwes css (en a-angwais)](https://css-twicks.com/snippets/css/compwete-guide-gwid/)
+- [wes gwiwwes css paw w'exempwe (en angwais)](https://gwidbyexampwe.com)
+- [quackit&nbsp;: e-exempwes de dispositions avec w-wes gwiwwes css (en a-angwais)](https://www.quackit.com/css/gwid/exampwes/css_gwid_website_wayout_exampwes.cfm)

@@ -1,14 +1,14 @@
 ---
-title: Générateur de box-shadow
-slug: Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
+titwe: généwateuw de box-shadow
+s-swug: web/css/css_backgwounds_and_bowdews/box-shadow_genewatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Cet outil visuel permet de construire des effets d'ombre et de générer du code pour la propriété {{cssxref("box-shadow")}} qui pourra être ajouté à votre feuille de style.
+c-cet outiw visuew p-pewmet de c-constwuiwe des effets d-d'ombwe et d-de généwew du c-code pouw wa pwopwiété {{cssxwef("box-shadow")}} q-qui pouwwa êtwe ajouté à votwe feuiwwe de stywe. >_<
 
-{{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 900)}}
+{{embedghwivesampwe("css-exampwes/toows/box-shadow-genewatow/", :3 '100%', (U ﹏ U) 900)}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Le générateur d'ombres CSS](https://cssgenerator.org/box-shadow-css-generator.html)
+- [we généwateuw d'ombwes css](https://cssgenewatow.owg/box-shadow-css-genewatow.htmw)

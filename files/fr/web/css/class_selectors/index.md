@@ -1,76 +1,76 @@
 ---
-title: Sélecteurs de classe
-slug: Web/CSS/Class_selectors
+titwe: séwecteuws de cwasse
+s-swug: web/css/cwass_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les **sélecteurs de classe** CSS permettent de cibler des éléments d'un document en fonction du contenu de l'attribut `class` de chaque élément.
+wes **séwecteuws d-de cwasse** css p-pewmettent de cibwew d-des éwéments d-d'un document e-en fonction du c-contenu de w'attwibut `cwass` d-de chaque éwément. (///ˬ///✿)
 
 ```css
-/* Cible tous les éléments ayant la classe "spacious" */
+/* cibwe tous wes éwéments ayant wa cwasse "spacious" */
 .spacious {
-  margin: 2em;
+  mawgin: 2em;
 }
 
-/* Cible tous les éléments <li> ayant la classe "spacious" */
-li.spacious {
-  margin: 2em;
+/* c-cibwe tous wes éwéments <wi> ayant wa c-cwasse "spacious" */
+wi.spacious {
+  m-mawgin: 2em;
 }
 
-/* Cible tous les éléments <li> ayant une classe qui */
-/* contient à la fois "spacious" et "elegant"        */
-li.spacious.elegant {
-  margin: 2em;
+/* cibwe tous wes éwéments <wi> ayant une c-cwasse qui */
+/* contient à wa f-fois "spacious" e-et "ewegant"        */
+wi.spacious.ewegant {
+  mawgin: 2em;
 }
 ```
 
-L'attribut [`class`](/fr/docs/Web/HTML/Global_attributes#class) est une liste de termes séparés par des espaces, il est nécessaire qu'un de ces termes corresponde exactement au nom utilisé dans le sélecteur pour que l'élément soit ciblé.
+w'attwibut [`cwass`](/fw/docs/web/htmw/gwobaw_attwibutes#cwass) est une wiste d-de tewmes sépawés paw des espaces, >w< iw est nécessaiwe qu'un de ces tewmes cowwesponde e-exactement au nyom utiwisé d-dans we séwecteuw p-pouw que w-w'éwément soit c-cibwé. rawr
 
-## Syntaxe
-
-```
-.nomdeclasse { déclarations CSS }
-```
-
-Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) de la façon suivante :
+## syntaxe
 
 ```
-[class~=nomdeclasse] { déclarations CSS }
+.nomdecwasse { décwawations c-css }
 ```
 
-## Exemples
+cewa est exactement équivawent à w'utiwisation d-du [séwecteuw d'attwibut](/fw/docs/web/css/attwibute_sewectows) de wa façon suivante :
 
-### CSS
+```
+[cwass~=nomdecwasse] { décwawations css }
+```
+
+## e-exempwes
+
+### css
 
 ```css
-.classy {
-  background-color: skyblue;
+.cwassy {
+  b-backgwound-cowow: skybwue;
 }
 .toto {
-  font-weight: bold;
+  f-font-weight: b-bowd;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="classy">Voici un div avec du texte.</div>
-<div class="toto classy truc">
-  Les éléments peuvent avoir plusieurs classes, le sélecteur fonctionnera tout
-  de même !
+```htmw
+<div cwass="cwassy">voici un div a-avec du texte.</div>
+<div c-cwass="toto cwassy twuc">
+  w-wes éwéments p-peuvent avoiw pwusieuws cwasses, mya w-we séwecteuw fonctionnewa t-tout
+  de même ! ^^
 </div>
-<div>En voilà un autre.</div>
+<div>en voiwà un autwe.</div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

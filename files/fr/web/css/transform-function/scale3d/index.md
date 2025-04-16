@@ -1,143 +1,143 @@
 ---
-title: scale3d()
-slug: Web/CSS/transform-function/scale3d
+titwe: scawe3d()
+swug: web/css/twansfowm-function/scawe3d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`scale3d()`** permet de modifier la taille d'un élément en appliquant une homothétie définie par un vecteur. Les composantes de ce vecteur permettent d'appliquer des échelles différentes selon les différentes dimensions.
+w-wa f-fonction **`scawe3d()`** p-pewmet d-de modifiew wa t-taiwwe d'un éwément e-en appwiquant u-une homothétie d-définie paw un vecteuw. o.O wes composantes de ce vecteuw pewmettent d'appwiquew d-des échewwes difféwentes sewon wes difféwentes d-dimensions. rawr
 
-{{InteractiveExample("CSS Demo: scale3d()")}}
+{{intewactiveexampwe("css demo: s-scawe3d()")}}
 
-```css interactive-example-choice
-transform: scale3d(1, 1, 1);
+```css intewactive-exampwe-choice
+twansfowm: scawe3d(1, ʘwʘ 1, 😳😳😳 1);
 ```
 
-```css interactive-example-choice
-transform: scale3d(1.3, 1.3, 1.3);
+```css intewactive-exampwe-choice
+t-twansfowm: scawe3d(1.3, ^^;; 1.3, 1.3);
 ```
 
-```css interactive-example-choice
-transform: scale3d(0.5, 1, 1.7);
+```css i-intewactive-exampwe-choice
+t-twansfowm: scawe3d(0.5, o.O 1, 1.7);
 ```
 
-```css interactive-example-choice
-transform: scale3d(-1.4, 0.4, 0.7);
+```css intewactive-exampwe-choice
+twansfowm: scawe3d(-1.4, (///ˬ///✿) 0.4, σωσ 0.7);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div c-cwass="face back">2</div>
+    <div c-cwass="face w-wight">3</div>
+    <div c-cwass="face w-weft">4</div>
+    <div cwass="face top">5</div>
+    <div cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 800px;
-  perspective-origin: 150% 150%;
+```css i-intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, nyaa~~ k-khaki);
+  pewspective: 800px;
+  pewspective-owigin: 150% 150%;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
   height: 100px;
-  perspective: 550px;
-  transform-style: preserve-3d;
+  pewspective: 550px;
+  t-twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  p-position: a-absowute;
+  backface-visibiwity: inhewit;
   font-size: 60px;
-  color: white;
+  cowow: w-white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  b-backgwound: wgba(90, ^^;; 90, 90, ^•ﻌ•^ 0.7);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: w-wgba(0, σωσ 210, -.- 0, 0.7);
+  twansfowm: wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: w-wgba(210, ^^;; 0, 0, 0.7);
+  twansfowm: w-wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: wgba(0, XD 0, 210, 0.7);
+  twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(210, 🥺 210, 0, 0.7);
+  t-twansfowm: w-wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: w-wgba(210, òωó 0, 210, (ˆ ﻌ ˆ)♡ 0.7);
+  t-twansfowm: wotatex(-90deg) twanswatez(50px);
 }
 ```
 
-La transformation appliquée est définie par un vecteur dont les coordonnées définissent l'amplitude de l'homothétie dans chaque direction. Si les trois coordonnées du vecteur sont égales, la transformation est isotropique et la forme de l'élément est conservée.
+wa t-twansfowmation appwiquée est définie paw un vecteuw dont wes coowdonnées définissent w-w'ampwitude de w'homothétie d-dans chaque d-diwection. -.- si w-wes twois coowdonnées du vecteuw s-sont égawes, :3 w-wa twansfowmation e-est isotwopique e-et wa fowme de w'éwément est consewvée. ʘwʘ
 
-Lorsque les composantes du vecteur sont en dehors de l'intervalle `[-1, 1]`, la transformation agrandit l'élément dans le sens des coordonnées. Lorsque les composantes sont dans cet intervalle, cela réduit l'élément.
+wowsque w-wes composantes d-du vecteuw s-sont en dehows d-de w'intewvawwe `[-1, 🥺 1]`, w-wa twansfowmation agwandit w'éwément dans we sens d-des coowdonnées. >_< wowsque wes composantes sont dans cet intewvawwe, ʘwʘ cewa wéduit w'éwément. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
-La fonction `scale3d()` s'utilise avec trois valeurs dont chacune représente l'intensité de la transformation selon chaque direction.
+wa fonction `scawe3d()` s'utiwise avec twois vaweuws dont chacune wepwésente w-w'intensité d-de wa twansfowmation s-sewon chaque diwection. (✿oωo)
 
 ```css
-scale3d(sx, sy, sz)
+s-scawe3d(sx, (///ˬ///✿) sy, sz)
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `sx`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'abscisse du vecteur définissant l'homothétie.
+  - : u-une vaweuw de type [`<numbew>`](/fw/docs/web/css/numbew) qui wepwésente w'abscisse du vecteuw définissant w'homothétie. rawr x3
 - `sy`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'ordonnée du vecteur définissant l'homothétie
+  - : u-une vaweuw de type [`<numbew>`](/fw/docs/web/css/numbew) qui w-wepwésente w'owdonnée du vecteuw d-définissant w-w'homothétie
 - `sz`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente la composante, selon l'axe Z, du vecteur définissant l'homothétie
+  - : une vaweuw de type [`<numbew>`](/fw/docs/web/css/numbew) q-qui wepwésente w-wa composante, sewon w'axe z-z, -.- du vecteuw d-définissant w'homothétie
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdonnées cawtésiennes suw ℝ<sup>2</sup></th>
+      <th scope="cow">coowdonnées h-homogènes s-suw ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées cawtésiennes s-suw ℝ<sup>3</sup></th>
+      <th s-scope="cow">coowdonnées homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2">
-        Cette transformation s'applique dans en 3 dimensions et ne peut pas être
-        représentée sur le plan.
+    <tw>
+      <td c-cowspan="2">
+        cette twansfowmation s'appwique dans en 3 dimensions e-et nye peut pas êtwe
+        w-wepwésentée suw we pwan. ^^
       </td>
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>sy</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -145,92 +145,92 @@ scale3d(sx, sy, sz)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### Avec origine non modifiée
+### a-avec owigine n-nyon modifiée
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="scaled">Mis à l'échelle</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="scawed">mis à w'échewwe</div>
 ```
 
-#### CSS
+#### css
+
+```css
+d-div {
+  width: 80px;
+  height: 80px;
+  backgwound-cowow: skybwue;
+}
+
+.scawed {
+  t-twansfowm: pewspective(500px) scawe3d(2, (⑅˘꒳˘) 0.7, 0.2) twanswatez(100px);
+  b-backgwound-cowow: p-pink;
+}
+```
+
+#### wésuwtat
+
+{{embedwivesampwe("avec_owigine_non_modifiée","100%","200")}}
+
+### avec owigine twanswatée
+
+#### h-htmw
+
+```htmw
+<div>nowmaw</div>
+<div c-cwass="scawed">mis à w'échewwe</div>
+```
+
+#### css
 
 ```css
 div {
-  width: 80px;
+  w-width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
-.scaled {
-  transform: perspective(500px) scale3d(2, 0.7, 0.2) translateZ(100px);
-  background-color: pink;
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Avec_origine_non_modifiée","100%","200")}}
-
-### Avec origine translatée
-
-#### HTML
-
-```html
-<div>Normal</div>
-<div class="scaled">Mis à l'échelle</div>
-```
-
-#### CSS
-
-```css
-div {
-  width: 80px;
-  height: 80px;
-  background-color: skyblue;
-}
-
-.scaled {
-  transform: perspective(500px) scale3d(2, 0.7, 0.2) translateZ(100px);
-  transform-origin: left;
-  background-color: pink;
+.scawed {
+  t-twansfowm: pewspective(500px) scawe3d(2, nyaa~~ 0.7, 0.2) twanswatez(100px);
+  t-twansfowm-owigin: weft;
+  backgwound-cowow: p-pink;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Avec_origine_translatée","100%","200")}}
+{{embedwivesampwe("avec_owigine_twanswatée","100%","200")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
-- [`translate3d()`](/fr/docs/Web/CSS/transform-function/translate3d)
-- [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)
+- [`scawez()`](/fw/docs/web/css/twansfowm-function/scawez)
+- [`twanswate3d()`](/fw/docs/web/css/twansfowm-function/twanswate3d)
+- [`wotate3d()`](/fw/docs/web/css/twansfowm-function/wotate3d)

@@ -1,80 +1,80 @@
 ---
-title: :required
-slug: Web/CSS/:required
+titwe: :wequiwed
+swug: web/css/:wequiwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:required`** permet de cibler un élément {{HTMLElement("input")}} pour lequel l'attribut [`required`](/fr/docs/Web/HTML/Element/input#required) est activé. Cela permet de mettre en forme les éléments obligatoires pour remplir correctement un formulaire.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:wequiwed`** p-pewmet de cibwew u-un éwément {{htmwewement("input")}} p-pouw wequew w-w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#wequiwed) e-est activé. 😳😳😳 c-cewa pewmet de m-mettwe en fowme wes éwéments obwigatoiwes pouw wempwiw cowwectement un fowmuwaiwe. (˘ω˘)
 
 ```css
-/* Cible les éléments <input> qui ont */
-/* l'attribut required */
-input:required {
-  border: 1px dashed red;
+/* c-cibwe wes éwéments <input> qui ont */
+/* w'attwibut wequiwed */
+i-input:wequiwed {
+  bowdew: 1px d-dashed wed;
 }
 ```
 
-> [!NOTE]
-> La pseudo-classe {{cssxref(":optional")}} pourra être utilisée pour mettre en forme les champs facultatifs.
+> [!note]
+> wa pseudo-cwasse {{cssxwef(":optionaw")}} pouwwa êtwe utiwisée p-pouw mettwe en fowme wes champs f-facuwtatifs. ^^
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 input {
-  border-width: 3px;
+  bowdew-width: 3px;
 }
-input:optional {
-  border-color: #008000;
+input:optionaw {
+  b-bowdew-cowow: #008000;
 }
-input:required {
-  border-color: #800000;
+input:wequiwed {
+  bowdew-cowow: #800000;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<form>
-  <label for="url-input">Tapez une URL :</label>
-  <input type="url" id="url-input" />
-  <br />
-  <br />
-  <label for="email-input">Tapez une adresse courriel :</label>
-  <input type="email" id="email-input" required />
-</form>
+```htmw
+<fowm>
+  <wabew fow="uww-input">tapez u-une uww :</wabew>
+  <input t-type="uww" i-id="uww-input" />
+  <bw />
+  <bw />
+  <wabew f-fow="emaiw-input">tapez u-une adwesse couwwiew :</wabew>
+  <input type="emaiw" id="emaiw-input" w-wequiwed />
+</fowm>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples','100%',150)}}
+{{embedwivesampwe('exempwes','100%',150)}}
 
-## Accessibilité
+## accessibiwité
 
-Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{htmlelement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut [`input`](/fr/docs/Web/HTML/Element/required#input). Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) pourront savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
+s-si un fowmuwaiwe ({{htmwewement("fowm")}}) contient des champs ({{htmwewement("input")}}) optionnews, :3 wes champs obwigatoiwes doivent êtwe indiqués avec w-w'attwibut [`input`](/fw/docs/web/htmw/ewement/wequiwed#input). -.- ainsi, 😳 wes pewsonnes u-utiwisant des o-outiws d'assistance (paw e-exempwe un wecteuw d'écwan) pouwwont savoiw que ces c-champs ont besoin d-d'un contenu vawide afin de pouvoiw e-envoyew we f-fowmuwaiwe. mya
 
-Les champs obligatoires devraient également être indiqués visuellement et cette indication ne doit pas uniquement être fournie avec une couleur. Généralement, un texte descriptif ou une icône est utilisé.
+wes champs obwigatoiwes d-devwaient égawement êtwe indiqués visuewwement e-et cette indication nye doit pas uniquement êtwe f-fouwnie avec une couweuw. (˘ω˘) g-généwawement, >_< un texte descwiptif o-ou une i-icône est utiwisé. -.-
 
-- [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [expwications des wecommendation wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.3 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":optional")}}
-- {{cssxref(":invalid")}}
-- {{cssxref(":valid")}}
-- [La validation des données d'un formulaire](/fr/docs/Learn/Forms/Form_validation)
+- {{cssxwef(":optionaw")}}
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":vawid")}}
+- [wa vawidation d-des données d-d'un fowmuwaiwe](/fw/docs/weawn/fowms/fowm_vawidation)

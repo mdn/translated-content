@@ -1,86 +1,86 @@
 ---
-title: opacity()
-slug: Web/CSS/filter-function/opacity
+titwe: opacity()
+swug: web/css/fiwtew-function/opacity
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`opacity()`** permet de modifier la transparence de l'image. Le résultat obtenu par cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+w-wa fonction c-css **`opacity()`** p-pewmet d-de modifiew wa t-twanspawence de w-w'image. mya we wésuwtat o-obtenu paw c-cette fonction est une vaweuw [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function). 😳
 
-{{InteractiveExample("CSS Demo: opacity()")}}
+{{intewactiveexampwe("css demo: opacity()")}}
 
-```css interactive-example-choice
-filter: opacity(1);
+```css intewactive-exampwe-choice
+fiwtew: o-opacity(1);
 ```
 
-```css interactive-example-choice
-filter: opacity(80%);
+```css intewactive-exampwe-choice
+fiwtew: opacity(80%);
 ```
 
-```css interactive-example-choice
-filter: opacity(50%);
+```css i-intewactive-exampwe-choice
+fiwtew: opacity(50%);
 ```
 
-```css interactive-example-choice
-filter: opacity(0.2);
+```css i-intewactive-exampwe-choice
+fiwtew: opacity(0.2);
 ```
 
-```css interactive-example-choice
-filter: opacity(0);
+```css intewactive-exampwe-choice
+fiwtew: o-opacity(0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-> [!NOTE]
-> Cette fonction est proche de la propriété [`opacity`](/fr/docs/Web/CSS/opacity) mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.
+> [!note]
+> cette fonction e-est pwoche de wa pwopwiété [`opacity`](/fw/docs/web/css/opacity) mais, -.- sewon we nyavigateuw, 🥺 wes fiwtwes css p-peuvent bénéficiew de w'accéwéwation m-matéwiewwe p-pouw de m-meiwweuwes pewfowmances. o.O
 
-## Syntaxe
-
-```css
-opacity(multiplicateur)
-```
-
-### Paramètres
-
-- `multiplicateur`
-  - : L'intensité de l'opacité, indiquée comme un nombre ([`<number>`](/fr/docs/Web/CSS/number)) ou comme un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Une valeur de `0%` entraînera une image complètement transparente. Une valeur de `100%` laissera l'image inchangée. Les valeurs intermédiaires auront un effet proportionnel. Lors d'une interpolation, la valeur par défaut utilisée sera `1`.
-
-## Exemples
-
-### Exemples de valeurs correctes pour opacity()
+## s-syntaxe
 
 ```css
-opacity(0%);   /* Complètement transparente */
-opacity(50%);  /* 50% transparent */
-opacity(1);    /* Aucun effet */
+opacity(muwtipwicateuw)
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- `muwtipwicateuw`
+  - : w-w'intensité de w'opacité, /(^•ω•^) indiquée comme u-un nyombwe ([`<numbew>`](/fw/docs/web/css/numbew)) ou comme un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). nyaa~~ une vaweuw de `0%` entwaînewa une image compwètement t-twanspawente. nyaa~~ une vaweuw de `100%` w-waissewa w'image i-inchangée. :3 w-wes vaweuws intewmédiaiwes auwont un effet pwopowtionnew. 😳😳😳 wows d'une intewpowation, (˘ω˘) w-wa vaweuw p-paw défaut utiwisée sewa `1`. ^^
 
-## Compatibilité des navigateurs
+## e-exempwes
 
-{{Compat}}
+### e-exempwes de vaweuws cowwectes p-pouw opacity()
 
-## Voir aussi
+```css
+opacity(0%);   /* c-compwètement twanspawente */
+opacity(50%);  /* 50% twanspawent */
+o-opacity(1);    /* aucun effet */
+```
 
-- La propriété CSS [`opacity`](/fr/docs/Web/CSS/opacity)
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des n-nyavigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- wa pwopwiété css [`opacity`](/fw/docs/web/css/opacity)
+- [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function) et wes autwes fonctions associées
+  - [`bwuw()`](/fw/docs/web/css/fiwtew-function/bwuw)
+  - [`bwightness()`](/fw/docs/web/css/fiwtew-function/bwightness)
+  - [`contwast()`](/fw/docs/web/css/fiwtew-function/contwast)
+  - [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow)
+  - [`gwayscawe()`](/fw/docs/web/css/fiwtew-function/gwayscawe)
+  - [`hue-wotate()`](/fw/docs/web/css/fiwtew-function/hue-wotate)
+  - [`invewt()`](/fw/docs/web/css/fiwtew-function/invewt)
+  - [`satuwate()`](/fw/docs/web/css/fiwtew-function/satuwate)
+  - [`sepia()`](/fw/docs/web/css/fiwtew-function/sepia)

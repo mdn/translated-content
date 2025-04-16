@@ -1,26 +1,26 @@
 ---
-title: ::-webkit-search-results-button
-slug: Web/CSS/::-webkit-search-results-button
+titwe: ::-webkit-seawch-wesuwts-button
+swug: w-web/css/::-webkit-seawch-wesuwts-button
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-search-results-button`** représente le bouton affiché sur le bord gauche d'un élément {{HTMLElement("input")}} de type `"search"` qui affiche un menu proposant les dernières recherches effectuées à l'utilisateur. Ce bouton et ce pseudo-élément ne sont pas standards et sont uniquement pris en charge par WebKit/Blink. Le bouton des résultats de recherche est uniquement affiché pour les éléments {{HTMLElement("input")}} qui possèdent [un attribut `results`](/fr/docs/Web/HTML/Element/input).
+w-we pseudo-éwément **`::-webkit-seawch-wesuwts-button`** w-wepwésente w-we bouton a-affiché suw we b-bowd gauche d'un éwément {{htmwewement("input")}} d-de type `"seawch"` q-qui affiche un menu pwoposant wes dewnièwes wechewches effectuées à w'utiwisateuw. (U ﹏ U) c-ce bouton et ce pseudo-éwément nye s-sont pas standawds et sont uniquement p-pwis en chawge paw webkit/bwink. >_< we bouton des wésuwtats d-de wechewche est uniquement affiché p-pouw wes éwéments {{htmwewement("input")}} q-qui possèdent [un attwibut `wesuwts`](/fw/docs/web/htmw/ewement/input). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```css
-selecteur::-webkit-search-results-button
+sewecteuw::-webkit-seawch-wesuwts-button
 ```
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+c-ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe wié à webkit/bwink et nye fait pawtie d-d'aucune spécification. mya
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref('::-webkit-search-cancel-button')}}
+- {{cssxwef('::-webkit-seawch-cancew-button')}}

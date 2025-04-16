@@ -1,137 +1,137 @@
 ---
-title: place-self
-slug: Web/CSS/place-self
+titwe: pwace-sewf
+swug: web/css/pwace-sewf
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`place-self`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de paramétrer les valeurs des propriétés {{cssxref("align-self")}} et {{cssxref("justify-self")}}. La première valeur sera utilisée pour `align-self` et la seconde pour `justify-self`. S'il n'y a pas de seconde valeur, la première sera également utilisée pour `justify-self`.
+wa p-pwopwiété **`pwace-sewf`** est u-une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui pewmet d-de pawamétwew w-wes vaweuws des p-pwopwiétés {{cssxwef("awign-sewf")}} e-et {{cssxwef("justify-sewf")}}. ^^;; wa pwemièwe vaweuw sewa utiwisée pouw `awign-sewf` et w-wa seconde pouw `justify-sewf`. (⑅˘꒳˘) s'iw ny'y a pas de seconde vaweuw, rawr x3 w-wa pwemièwe sewa égawement u-utiwisée pouw `justify-sewf`. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: place-self")}}
+{{intewactiveexampwe("css demo: pwace-sewf")}}
 
-```css interactive-example-choice
-place-self: stretch center;
+```css intewactive-exampwe-choice
+p-pwace-sewf: stwetch centew;
 ```
 
-```css interactive-example-choice
-place-self: center start;
+```css i-intewactive-exampwe-choice
+p-pwace-sewf: centew stawt;
 ```
 
-```css interactive-example-choice
-place-self: start end;
+```css intewactive-exampwe-choice
+pwace-sewf: stawt end;
 ```
 
-```css interactive-example-choice
-place-self: end center;
+```css i-intewactive-exampwe-choice
+pwace-sewf: end centew;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-<div class="example-container">
-<div class="transition-all" id="example-element">One</div>
-<div>Two</div>
-<div>Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+<div cwass="exampwe-containew">
+<div c-cwass="twansition-aww" i-id="exampwe-ewement">one</div>
+<div>two</div>
+<div>thwee</div>
 </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  width: 220px;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 80px;
-  grid-gap: 10px;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  w-width: 220px;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  gwid-auto-wows: 80px;
+  g-gwid-gap: 10px;
 }
 
-.example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+.exampwe-containew > div {
+  backgwound-cowow: wgba(0, 🥺 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-place-self: auto center;
-place-self: normal start;
+/* vaweuws avec un mot-cwé */
+p-pwace-sewf: a-auto centew;
+p-pwace-sewf: nowmaw stawt;
 
-/* Alignement géométrique */
-place-self: center normal;
-place-self: start auto;
-place-self: end normal;
-place-self: self-start auto;
-place-self: self-end normal;
-place-self: flex-start auto;
-place-self: flex-end normal;
-place-self: left auto;
-place-self: right normal;
+/* awignement géométwique */
+pwace-sewf: c-centew n-nyowmaw;
+pwace-sewf: stawt auto;
+p-pwace-sewf: end n-nyowmaw;
+pwace-sewf: sewf-stawt a-auto;
+pwace-sewf: sewf-end nyowmaw;
+p-pwace-sewf: fwex-stawt auto;
+pwace-sewf: fwex-end n-nyowmaw;
+pwace-sewf: weft a-auto;
+pwace-sewf: wight nyowmaw;
 
-/* Alignement relatif à la ligne de base */
-place-self: baseline normal;
-place-self: first baseline auto;
-place-self: last baseline normal;
-place-self: stretch auto;
+/* a-awignement w-wewatif à wa wigne de base */
+pwace-sewf: basewine nyowmaw;
+pwace-sewf: fiwst basewine auto;
+pwace-sewf: wast b-basewine nyowmaw;
+p-pwace-sewf: stwetch auto;
 
-/* Valeurs globales */
-place-self: inherit;
-place-self: initial;
-place-self: unset;
+/* v-vaweuws gwobawes */
+p-pwace-sewf: i-inhewit;
+pwace-sewf: initiaw;
+pwace-sewf: unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : La valeur utilise celle de {{cssxref("align-items")}} pour l'élément parent.
-- `normal`
+  - : w-wa vaweuw utiwise cewwe de {{cssxwef("awign-items")}} pouw w'éwément pawent. >_<
+- `nowmaw`
 
-  - : Ce mot-clé aura un sens différent selon le mode de disposition utilisé :
+  - : ce mot-cwé a-auwa un sens difféwent sewon we m-mode de disposition u-utiwisé :
 
-    - Pour les dispositions avec un positionnment absolu, ce mot-clé se comporte comme `start` pour les boîtes des éléments remplacés ou comme `stretch` pour les autres boîtes positionnées de façon absolue.
-    - Pour les éléments positionnés de façon statique au sein d'une disposition absolue, ce mot-clé agira comme `stretch`
-    - Pour les cellules de tableaux, ce mot-clé n'a pas de signification car cette propriété est ignorée.
-    - Pour les éléments disposés en blocs, cette propriété est ignorée.
-    - Pour les dispositions qui utilisent les boîtes flexibles, ce mot-clé n'a pas de signification car cette propriété est ignorée.
-    - Pour les dispositions qui utilisent une grille, ce mot-clé aura un comportement proche de `stretch`, sauf pour les boîtes qui ont des dimensions intrinsèques, dans ce cas, il est synonyme de `start`.
+    - p-pouw wes dispositions avec u-un positionnment a-absowu, UwU ce mot-cwé s-se compowte c-comme `stawt` pouw wes boîtes des éwéments w-wempwacés ou comme `stwetch` pouw w-wes autwes boîtes p-positionnées d-de façon absowue. >_<
+    - p-pouw wes éwéments positionnés de façon statique a-au sein d'une disposition absowue, -.- ce mot-cwé agiwa comme `stwetch`
+    - pouw wes cewwuwes de t-tabweaux, mya ce mot-cwé ny'a pas de signification caw cette pwopwiété e-est ignowée. >w<
+    - p-pouw w-wes éwéments disposés en bwocs, (U ﹏ U) c-cette pwopwiété est ignowée. 😳😳😳
+    - p-pouw wes d-dispositions qui utiwisent wes boîtes fwexibwes, o.O ce mot-cwé ny'a pas de signification caw cette p-pwopwiété est ignowée. òωó
+    - p-pouw wes dispositions qui utiwisent u-une gwiwwe, 😳😳😳 c-ce mot-cwé auwa un compowtement pwoche de `stwetch`, σωσ s-sauf p-pouw wes boîtes qui ont des dimensions i-intwinsèques, (⑅˘꒳˘) d-dans ce cas, (///ˬ///✿) iw est synonyme de `stawt`. 🥺
 
-- `self-start`
-  - : Les éléments sont alignés sur le bord du conteneur vers le début de l'axe en bloc.
-- `self-end`
-  - : Les éléments sont alignés sur le bord du conteneur vers la fin de l'axe en bloc.
-- `flex-start`
-  - : Le bord de l'élément flexible au début de l'axe en bloc est aligné avec le début de l'axe en bloc sur la ligne.
-- `flex-end`
-  - : Le bord de l'élément flexible à la fin de l'axe en bloc est aligné avec la fin de l'axe en bloc sur la ligne.
-- `center`
-  - : La boîte de marge de l'élément flexible est centrée sur la ligne par rapport à l'axe en bloc. Si la taille de l'élément est supérieure à celle du conteneur flexible, l'élément dépasse également dans chaque direction.
-- `baseline first baseline`
-  `last baseline`
-  - : Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse.
-    Si `first baseline` n'est pas prise en charge, la valeur correspondra à `start`, si `last baseline` n'est pas prise en charge, la valeur correspondra à `end`.
-- `stretch`
-  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en ligne, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
+- `sewf-stawt`
+  - : wes éwéments sont awignés s-suw we bowd du c-conteneuw vews w-we début de w'axe en bwoc. OwO
+- `sewf-end`
+  - : w-wes éwéments sont a-awignés suw we bowd du conteneuw v-vews wa fin de w'axe en bwoc. >w<
+- `fwex-stawt`
+  - : we bowd de w'éwément fwexibwe au début d-de w'axe en bwoc e-est awigné avec we début de w'axe en bwoc s-suw wa wigne. 🥺
+- `fwex-end`
+  - : w-we bowd de w'éwément fwexibwe à wa fin de w'axe en bwoc est a-awigné avec wa fin de w'axe en bwoc suw wa wigne. nyaa~~
+- `centew`
+  - : wa boîte de mawge de w'éwément f-fwexibwe est centwée suw wa wigne paw wappowt à w-w'axe en b-bwoc. ^^ si wa taiwwe de w'éwément est supéwieuwe à cewwe du conteneuw f-fwexibwe, >w< w-w'éwément dépasse égawement dans chaque diwection. OwO
+- `basewine fiwst basewine`
+  `wast basewine`
+  - : c-ces vaweuws pewmettent d-de définiw w'awignement paw wappowt à wa wigne de base pouw w-w'éwément du conteneuw avec w-wa wigne de base w-wa pwus haute ou wa pwus basse. XD
+    s-si `fiwst basewine` ny'est p-pas pwise en chawge, ^^;; w-wa vaweuw c-cowwespondwa à `stawt`, 🥺 si `wast b-basewine` ny'est p-pas pwise en chawge, XD wa vaweuw cowwespondwa à `end`. (U ᵕ U❁)
+- `stwetch`
+  - : s-si wa s-somme des taiwwes d-des éwéments est inféwieuwe à wa taiwwe du c-conteneuw pouw w'axe en wigne, :3 w-wes éwéments d-dimensionnés automatiquement sewont éwawgis de wa même wongueuw t-tout en wespectant w-wes contwaintes i-imposées p-paw {{cssxwef("max-height")}}/{{cssxwef("max-width")}} (ou paw wes f-fonctionnawités équivawentes), ( ͡o ω ͡o ) afin que w'ensembwe des éwéments wempwisse exactement we conteneuw. òωó
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)
-- Les propriétés détaillées correspondantes
+- guide suw wes gwiwwes : _[awignew d-des objets dans une gwiwwe](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- g-guide suw w-wes boîtes fwexibwes : _[wes c-concepts de bases](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- g-guide s-suw wes boîtes fwexibwes : _[awignew des objets dans un conteneuw fwexibwe](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- [we moduwe de spécification css box a-awignment](/fw/docs/web/css/css_box_awignment)
+- w-wes pwopwiétés d-détaiwwées cowwespondantes
 
-  - {{cssxref("align-self")}}
-  - {{cssxref("justify-self")}}
+  - {{cssxwef("awign-sewf")}}
+  - {{cssxwef("justify-sewf")}}

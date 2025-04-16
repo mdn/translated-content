@@ -1,143 +1,143 @@
 ---
-title: border-right-width
-slug: Web/CSS/border-right-width
+titwe: bowdew-wight-width
+swug: w-web/css/bowdew-wight-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-right-width`** définit l'épaisseur de la bordure pour le côté droit d'une boîte.
+wa p-pwopwiété **`bowdew-wight-width`** d-définit w-w'épaisseuw de w-wa bowduwe pouw w-we côté dwoit d-d'une boîte. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: border-right-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-wight-width")}}
 
-```css interactive-example-choice
-border-right-width: thick;
+```css intewactive-exampwe-choice
+bowdew-wight-width: thick;
 ```
 
-```css interactive-example-choice
-border-right-width: 2em;
+```css intewactive-exampwe-choice
+b-bowdew-wight-width: 2em;
 ```
 
-```css interactive-example-choice
-border-right-width: 4px;
+```css intewactive-exampwe-choice
+bowdew-wight-width: 4px;
 ```
 
-```css interactive-example-choice
-border-right-width: 2ex;
+```css i-intewactive-exampwe-choice
+bowdew-wight-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-right-width: 0;
+```css i-intewactive-exampwe-choice
+bowdew-wight-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box w-with a bowdew awound it. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: pawegween;
+  c-cowow: #000;
+  bowdew: 0 sowid cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-border-right-width: thin;
-border-right-width: medium;
-border-right-width: thick;
+/* vaweuws a-avec un mot-cwé */
+b-bowdew-wight-width: t-thin;
+bowdew-wight-width: m-medium;
+bowdew-wight-width: thick;
 
-/* Valeurs de longueurs */
-/* Type <length> */
-border-right-width: 10em;
-border-right-width: 3vmax;
-border-right-width: 6px;
+/* vaweuws d-de wongueuws */
+/* type <wength> */
+bowdew-wight-width: 10em;
+bowdew-wight-width: 3vmax;
+b-bowdew-wight-width: 6px;
 
-/* Valeurs globales */
-border-right-width: inherit;
-border-right-width: initial;
-border-right-width: unset;
+/* vaweuws gwobawes */
+bowdew-wight-width: inhewit;
+bowdew-wight-width: initiaw;
+bowdew-wight-width: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<br-width>`
+- `<bw-width>`
 
-  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté droit de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
+  - : u-une vaweuw d-de wongueuw ({{cssxwef("&wt;wength&gt;")}}) positive o-ou un mot-cwé qui indique w'épaisseuw de wa bowduwe pouw w-we côté dwoit d-de wa boîte. ( ͡o ω ͡o ) si wa vaweuw est u-un mot-cwé, >_< ce d-doit êtwe w'une des vaweuws suivantes :
 
     - `thin` (fin)
-    - `medium` (intermédiaire)
+    - `medium` (intewmédiaiwe)
     - `thick` (épais)
 
-    La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
+    w-wa spécification nye p-pwécise pas de façon exacte w'épaisseuw cowwespondant à c-chacun de ces mots-cwés (c'est d-donc à chaque impwémentation d-de choisiw). >w< w-wa spécification wequiewt toutefois que w'inégawité suivante soit wespectée `thin ≤ medium ≤ thick` et que ces v-vaweuws soient constantes p-pouw un même document. rawr
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.element1 {
-  border-right: thick solid red;
+.ewement1 {
+  bowdew-wight: t-thick sowid wed;
 }
-.element2 {
-  border-right: medium solid orange;
+.ewement2 {
+  bowdew-wight: medium sowid owange;
 }
-.element3 {
-  border-right: thin solid green;
+.ewement3 {
+  b-bowdew-wight: thin sowid g-gween;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="element1">Une bordure épaisse rouge.</p>
+```htmw
+<p c-cwass="ewement1">une bowduwe épaisse w-wouge.</p>
 
-<p class="element2">Une bordure moyenne orange.</p>
+<p c-cwass="ewement2">une b-bowduwe moyenne o-owange.</p>
 
-<p class="element3">Et une bordure fine verte.</p>
+<p cwass="ewement3">et une bowduwe f-fine vewte.</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","200","300")}}
+{{embedwivesampwe("exempwes","200","300")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres propriétés liées à la largeur de la bordure :
+- wes autwes pwopwiétés w-wiées à wa wawgeuw de wa bowduwe :
 
-  - {{cssxref("border-left-width")}},
-  - {{cssxref("border-top-width")}},
-  - {{cssxref("border-bottom-width")}},
-  - {{cssxref("border-width")}}
+  - {{cssxwef("bowdew-weft-width")}}, 😳
+  - {{cssxwef("bowdew-top-width")}}, >w<
+  - {{cssxwef("bowdew-bottom-width")}}, (⑅˘꒳˘)
+  - {{cssxwef("bowdew-width")}}
 
-- Les autres propriétés CSS liées à la bordure du côté droit :
+- wes autwes pwopwiétés css wiées à wa bowduwe du c-côté dwoit :
 
-  - {{cssxref("border")}},
-  - {{cssxref("border-right")}},
-  - {{cssxref("border-right-style")}},
-  - {{cssxref("border-right-color")}}.
+  - {{cssxwef("bowdew")}}, OwO
+  - {{cssxwef("bowdew-wight")}},
+  - {{cssxwef("bowdew-wight-stywe")}}, (ꈍᴗꈍ)
+  - {{cssxwef("bowdew-wight-cowow")}}. 😳

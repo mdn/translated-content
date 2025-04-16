@@ -1,44 +1,44 @@
 ---
-title: ::target-text
-slug: Web/CSS/::target-text
+titwe: ::tawget-text
+swug: web/css/::tawget-text
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::target-text`** représente le texte vers lequel l'écran vient de défiler, dans le cas où le navigateur prend en charge les fragments `scroll-to-text`. Il permet aux auteurs de mettre en valeur cette section de texte.
+w-we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) [css](/fw/docs/web/css) **`::tawget-text`** w-wepwésente w-we texte v-vews wequew w'écwan v-vient de défiwew, OwO d-dans we c-cas où we nyavigateuw p-pwend en chawge wes fwagments `scwoww-to-text`. (U ﹏ U) iw pewmet aux auteuws de mettwe en vaweuw c-cette section de texte. >_<
 
 ```css
-::target-text {
-  background-color: pink;
+::tawget-text {
+  backgwound-cowow: p-pink;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Mise en valeur de scroll-to-text
+### mise en vaweuw de scwoww-to-text
 
 ```css
-::target-text {
-  background-color: rebeccapurple;
-  color: white;
-  font-weight: bold;
+::tawget-text {
+  backgwound-cowow: w-webeccapuwpwe;
+  cowow: w-white;
+  font-weight: b-bowd;
 }
 ```
 
-Pour voir ce code CSS en action, suivez ce lien vers la [démonstration de scroll-to-text](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance).
+pouw voiw ce code css en action, rawr x3 suivez ce wien vews wa [démonstwation d-de scwoww-to-text](https://mdn.github.io/css-exampwes/tawget-text/index.htmw#:~:text=fwom%20the%20fowegoing%20wemawks%20we%20may%20gathew%20an%20idea%20of%20the%20impowtance). mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Text fragments (en anglais)](https://web.dev/text-fragments/)
+- [text fwagments (en a-angwais)](https://web.dev/text-fwagments/)

@@ -1,133 +1,133 @@
 ---
-title: border-top
-slug: Web/CSS/border-top
+titwe: bowdew-top
+swug: web/css/bowdew-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`border-top`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de paramétrer la bordure haute d'un élément.
+wa p-pwopwiété css **`bowdew-top`** e-est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui pewmet d-de pawamétwew w-wa bowduwe h-haute d'un éwément. OwO
 
-C'est une propriété raccourcie qui permet de définir les valeurs de :
+c-c'est une pwopwiété waccouwcie qui pewmet de définiw wes vaweuws de :
 
-- {{cssxref("border-top-width")}},
-- {{cssxref("border-top-style")}},
-- {{cssxref("border-top-color")}}.
+- {{cssxwef("bowdew-top-width")}}, (ꈍᴗꈍ)
+- {{cssxwef("bowdew-top-stywe")}}, 😳
+- {{cssxwef("bowdew-top-cowow")}}. 😳😳😳
 
-{{InteractiveExample("CSS Demo: border-top")}}
+{{intewactiveexampwe("css d-demo: bowdew-top")}}
 
-```css interactive-example-choice
-border-top: solid;
+```css intewactive-exampwe-choice
+bowdew-top: s-sowid;
 ```
 
-```css interactive-example-choice
-border-top: dashed red;
+```css intewactive-exampwe-choice
+b-bowdew-top: dashed wed;
 ```
 
-```css interactive-example-choice
-border-top: 1rem solid;
+```css intewactive-exampwe-choice
+bowdew-top: 1wem s-sowid;
 ```
 
-```css interactive-example-choice
-border-top: thick double #32a1ce;
+```css intewactive-exampwe-choice
+b-bowdew-top: t-thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+bowdew-top: 4mm widge wgba(211, mya 220, 50, mya 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this i-is a box with a bowdew awound i-it. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  c-cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-> [!NOTE]
-> Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
+> [!note]
+> wes twois vaweuws de w-wa pwopwiété waccouwcie peuvent êtwe définies dans ny'impowte quew owdwe et une ou deux d'entwe e-ewwes peuvent êtwe absentes. (U ﹏ U)
 >
-> Comme pour les autres propriétés raccourcies, `border-top` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
->
-> ```css
-> border-top-style: dotted;
-> border-top: thick green;
-> ```
->
-> est équivalent à :
+> c-comme pouw w-wes autwes pwopwiétés w-waccouwcies, mya `bowdew-top` définit toujouws wes vaweuws de toutes wes p-pwopwiétés qu'ewwe p-peut définiw, ʘwʘ même si cewwes-ci n-nye sont p-pas indiquées. (˘ω˘) pouw wes vaweuws q-qui nye sont pas indiquées, (U ﹏ U) on p-pwendwa wes vaweuws paw défaut. ^•ﻌ•^ ainsi :
 >
 > ```css
-> border-top-style: dotted;
-> border-top: none thick green;
+> b-bowdew-top-stywe: dotted;
+> b-bowdew-top: thick gween;
 > ```
 >
-> et la valeur {{cssxref("border-top-style")}} fournie avant `border-top` est ignorée.
+> e-est équivawent à :
 >
-> La valeur par défaut de {{cssxref("border-top-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
+> ```css
+> b-bowdew-top-stywe: dotted;
+> bowdew-top: nyone thick gween;
+> ```
+>
+> et wa vaweuw {{cssxwef("bowdew-top-stywe")}} fouwnie a-avant `bowdew-top` e-est ignowée. (˘ω˘)
+>
+> wa vaweuw p-paw défaut de {{cssxwef("bowdew-top-stywe")}} étant `none`, :3 si o-on nye définit p-pas we stywe de wa bowduwe, on auwa wa vaweuw paw défaut, ^^;; c'est-à-diwe q-qu'on auwa aucune bowduwe. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```css
-border-top: 1px;
-border-top: 2px dotted;
-border-top: medium dashed green;
+bowdew-top: 1px;
+bowdew-top: 2px d-dotted;
+bowdew-top: medium d-dashed gween;
 ```
 
-Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe quel ordre et une voire deux valeurs peuvent être omises.
+w-wes vaweuws d-de wa pwopwiété waccouwcie p-peuvent êtwe f-fouwnies dans ny'impowte q-quew owdwe e-et une voiwe deux vaweuws peuvent êtwe omises. (⑅˘꒳˘)
 
-### Valeurs
+### v-vaweuws
 
-- `<br-width>`
-  - : Voir {{cssxref("border-top-width")}}.
-- `<br-style>`
-  - : Voir {{cssxref("border-top-style")}}.
-- `<color>`
-  - : Voir {{cssxref("border-top-color")}}.
+- `<bw-width>`
+  - : v-voiw {{cssxwef("bowdew-top-width")}}. nyaa~~
+- `<bw-stywe>`
+  - : v-voiw {{cssxwef("bowdew-top-stywe")}}. :3
+- `<cowow>`
+  - : v-voiw {{cssxwef("bowdew-top-cowow")}}. ( ͡o ω ͡o )
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-.exemple {
-  border-top: 3px dotted orange;
+.exempwe {
+  bowdew-top: 3px dotted owange;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  « MARMELADE D’ORANGES. »
+```htmw
+<p cwass="exempwe">
+  en passant ewwe p-pwit suw un wayon un pot de confituwe powtant cette étiquette, mya
+  « m-mawmewade d-d’owanges. (///ˬ///✿) »
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","200","150")}}
+{{embedwivesampwe("exempwes","200","150")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

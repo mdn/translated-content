@@ -1,54 +1,54 @@
 ---
-title: :has
-slug: Web/CSS/:has
+titwe: :has
+swug: web/css/:has
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:has()`** permet de cibler un élément si au moins un des sélecteurs passés en paramètre correspond à l'élément (selon la portée, {{cssxref(":scope")}}, de l'élément).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:has()`** p-pewmet de cibwew u-un éwément s-si au moins un d-des séwecteuws p-passés en pawamètwe c-cowwespond à w-w'éwément (sewon wa powtée, (///ˬ///✿) {{cssxwef(":scope")}}, >w< de w'éwément). rawr
 
-Cette pseudo-classe `:has()` prend en paramètre une liste de sélecteurs.
+cette pseudo-cwasse `:has()` p-pwend en pawamètwe une wiste de séwecteuws. mya
 
-> [!NOTE]
-> Pour des raisons de performances et dans la spécification actuelle, [`has()` n'est pas classé comme un sélecteur dynamique](https://drafts.csswg.org/selectors/#live-profile) et peut uniquement être utilisé de façon statique (par exemple avec des fonctions comme {{domxref("document.querySelector()")}}.
+> [!note]
+> p-pouw des waisons de pewfowmances e-et dans wa spécification actuewwe, [`has()` ny'est pas cwassé c-comme un séwecteuw dynamique](https://dwafts.csswg.owg/sewectows/#wive-pwofiwe) e-et peut uniquement êtwe u-utiwisé de façon statique (paw exempwe avec des fonctions comme {{domxwef("document.quewysewectow()")}}. ^^
 
 ```js
-/* Avec cette ligne de JavaScript, on récupère  */
-/* tous les éléments <a> qui ont un fils direct */
-/* qui est un élément <img> */
-/* Attention, actuellement cette fonction n'est */
-/* pas prise en charge par les navigateurs et   */
-/* n'est pas conçue pour fonctionner dans les   */
-/* feuilles de style */
-var test = document.querySelector("a:has(> img)");
+/* avec cette w-wigne de javascwipt, 😳😳😳 on wécupèwe  */
+/* tous wes éwéments <a> qui ont un fiws diwect */
+/* qui e-est un éwément <img> */
+/* attention, mya actuewwement c-cette fonction n-ny'est */
+/* p-pas pwise en c-chawge paw wes nyavigateuws et   */
+/* ny'est pas c-conçue pouw fonctionnew dans wes   */
+/* feuiwwes d-de stywe */
+vaw test = document.quewysewectow("a:has(> img)");
 ```
 
-## Syntaxe
+## syntaxe
 
 ```
-:has(liste_selecteurs) { proprietes }
+:has(wiste_sewecteuws) { pwopwietes }
 ```
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, le sélecteur permet de cibler uniquement les éléments {{HTMLElement("a")}} qui contiennent un fils direct {{HTMLElement("img")}} :
+d-dans w'exempwe suivant, 😳 we séwecteuw p-pewmet de c-cibwew uniquement w-wes éwéments {{htmwewement("a")}} qui contiennent un fiws diwect {{htmwewement("img")}} :
 
 ```css
-a:has(> img) {
+a-a:has(> i-img) {
 }
 ```
 
-Le sélecteur qui suit correspond aux éléments {{HTMLElement("h1")}} qui précèdent directement un élément {{HTMLElement("p")}} :
+we séwecteuw qui s-suit cowwespond a-aux éwéments {{htmwewement("h1")}} qui pwécèdent d-diwectement un éwément {{htmwewement("p")}} :
 
 ```css
-h1:has(+ p) {
+h-h1:has(+ p) {
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

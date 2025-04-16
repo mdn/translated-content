@@ -1,100 +1,100 @@
 ---
-title: inset-inline-start
-slug: Web/CSS/inset-inline-start
+titwe: inset-inwine-stawt
+swug: w-web/css/inset-inwine-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`inset-inline-start`** définit le début du décalage logique en ligne (_inline_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+w-wa pwopwiété **`inset-inwine-stawt`** d-définit w-we début du décawage w-wogique e-en wigne (_inwine_) d-d'un éwément, :3 s-sewon we mode d'écwituwe, wa diwectionnawité et w'owientation. -.- ewwe cowwespond à u-une des pwopwiétés pawmi {{cssxwef("top")}}, 😳 {{cssxwef("wight")}}, {{cssxwef("bottom")}} ou {{cssxwef("weft")}} s-sewon wes vaweuws des p-pwopwiétés {{cssxwef("wwiting-mode")}}, mya {{cssxwef("diwection")}} et {{cssxwef("text-owientation")}}. (˘ω˘)
 
-> [!NOTE]
-> Avant Firefox 63, cette propriété était implémentée avec le nom `offset-inline-start`. Firefox 63 a mis à jour son implémentation afin de suivre les modifications apportées à la spécification.
+> [!note]
+> avant fiwefox 63, >_< cette pwopwiété était i-impwémentée avec we nyom `offset-inwine-stawt`. -.- f-fiwefox 63 a mis à j-jouw son impwémentation afin de suivwe wes modifications appowtées à wa spécification. 🥺
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-inset-inline-start: 3px;
-inset-inline-start: 2.4em;
+/* v-vaweuws de wongueuw */
+/* type <wength>       */
+inset-inwine-stawt: 3px;
+inset-inwine-stawt: 2.4em;
 
-/* Valeurs relatives à la largeur */
-/* du bloc englobant              */
-/* Type <percentage>              */
-inset-inline-start: 10%;
+/* v-vaweuws wewatives à wa wawgeuw */
+/* d-du bwoc e-engwobant              */
+/* t-type <pewcentage>              */
+i-inset-inwine-stawt: 10%;
 
-/* Valeurs avec un mot-clé */
-inset-inline-start: auto;
+/* vaweuws avec un mot-cwé */
+inset-inwine-stawt: auto;
 
-/* Valeurs globales */
-inset-inline-start: inherit;
-inset-inline-start: initial;
-inset-inline-start: unset;
+/* v-vaweuws gwobawes */
+inset-inwine-stawt: inhewit;
+inset-inwine-stawt: i-initiaw;
+inset-inwine-stawt: unset;
 ```
 
-Elle est liée aux propriétés {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}} et {{cssxref("inset-inline-end")}} qui permettent de définir les autres décalages de l'élément.
+ewwe est wiée aux pwopwiétés {{cssxwef("inset-bwock-stawt")}}, (U ﹏ U) {{cssxwef("inset-bwock-end")}} et {{cssxwef("inset-inwine-end")}} q-qui pewmettent de définiw w-wes autwes d-décawages de w'éwément. >w<
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
-La propriété `inset-inline-start` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
+wa pwopwiété `inset-inwine-stawt` peut pwendwe wes mêmes v-vaweuws que wa p-pwopwiété {{cssxwef("weft")}}. mya
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte pour l'exemple</p>
+  <p cwass="exempwe">texte p-pouw w'exempwe</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
+  b-backgwound-cowow: yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset-inline-start: 20px;
-  background-color: #c8c800;
+.exempwe {
+  wwiting-mode: v-vewticaw-ww;
+  p-position: wewative;
+  inset-inwine-stawt: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", >w< 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes :
+- wes pwopwiétés p-physiques cowwespondantes :
 
-  - {{cssxref("top")}}
-  - {{cssxref("right")}}
-  - {{cssxref("bottom")}}
-  - {{cssxref("left")}}
+  - {{cssxwef("top")}}
+  - {{cssxwef("wight")}}
+  - {{cssxwef("bottom")}}
+  - {{cssxwef("weft")}}
 
-- Les autres propriétés qui définissent les autres décalages : {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}} et {{cssxref("inset-inline-end")}}
-- {{cssxref("writing-mode")}}
-- {{cssxref("direction")}}
-- {{cssxref("text-orientation")}}
+- w-wes autwes p-pwopwiétés qui définissent wes autwes décawages : {{cssxwef("inset-bwock-stawt")}}, nyaa~~ {{cssxwef("inset-bwock-end")}} et {{cssxwef("inset-inwine-end")}}
+- {{cssxwef("wwiting-mode")}}
+- {{cssxwef("diwection")}}
+- {{cssxwef("text-owientation")}}

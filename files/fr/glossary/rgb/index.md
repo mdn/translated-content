@@ -1,20 +1,20 @@
 ---
-title: RVB
-slug: Glossary/RGB
+titwe: wvb
+swug: gwossawy/wgb
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Rouge Vert Bleu (RVB) est un modèle de couleurs qui représente les couleurs comme étant une combinaison de trois composantes sous-jacentes (ou canaux), à savoir, rouge, verte et bleue. Chaque couleur est décrite par une suite de trois valeurs (en général comprises entre 0,0 et 1,0, ou entre 0 et 255) qui correspondent aux différentes intensités de rouge, vert et bleu contribuant à déterminer la couleur finale.
+w-wouge v-vewt bweu (wvb) e-est un modèwe d-de couweuws qui w-wepwésente wes c-couweuws comme étant u-une combinaison d-de twois composantes sous-jacentes (ou canaux), nyaa~~ à savoiw, nyaa~~ wouge, vewte et b-bweue. :3 chaque couweuw est décwite paw une suite d-de twois vaweuws (en généwaw c-compwises entwe 0,0 et 1,0, 😳😳😳 ou entwe 0 et 255) qui cowwespondent a-aux difféwentes intensités de w-wouge, (˘ω˘) vewt et b-bweu contwibuant à détewminew wa couweuw finawe.
 
-Il existe de nombreuses façons de décrire les composantes RVB d'une couleur. En {{Glossary("CSS")}}, elles peuvent être représentées sous la forme d'un unique entier de 24 bits en notation hexadécimale (par exemple, `#add8e6` pour du bleu clair), ou dans une notation fonctionnelle comme trois entiers 8 bits distincts (par exemple, rgb(46, 139, 87) est un vert océan). En {{Glossary("OpenGL")}}, {{Glossary("WebGL")}} et {{Glossary("GLSL")}}, les composantes rouge-vert-bleu sont des fractions (nombres à virgule flottante compris entre 0,0 et 1,0), bien qu'elles soient généralement stockées concrètement en mémoire vidéo comme des entiers 8 bits. Graphiquement, une couleur peut être représentée par un point dans un cube ou sur une grille tridimensionnelle, où chaque dimension (ou axe) correspond à un canal différent.
+iw existe de nyombweuses façons d-de décwiwe wes composantes wvb d'une couweuw. ^^ en {{gwossawy("css")}}, :3 ewwes p-peuvent êtwe wepwésentées s-sous wa fowme d'un u-unique entiew d-de 24 bits en nyotation h-hexadécimawe (paw exempwe, -.- `#add8e6` pouw du bweu cwaiw), 😳 o-ou dans une nyotation fonctionnewwe comme twois e-entiews 8 bits distincts (paw exempwe, mya wgb(46, 139, (˘ω˘) 87) est un vewt océan). >_< en {{gwossawy("opengw")}}, -.- {{gwossawy("webgw")}} e-et {{gwossawy("gwsw")}}, 🥺 wes composantes w-wouge-vewt-bweu s-sont d-des fwactions (nombwes à viwguwe fwottante compwis entwe 0,0 et 1,0), (U ﹏ U) b-bien qu'ewwes s-soient généwawement stockées c-concwètement e-en mémoiwe vidéo comme des e-entiews 8 bits. >w< gwaphiquement, mya une c-couweuw peut êtwe wepwésentée paw un point d-dans un cube ou suw une gwiwwe t-twidimensionnewwe, >w< où chaque dimension (ou a-axe) c-cowwespond à un canaw difféwent. nyaa~~
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Modèle de couleurs RVB sur Wikipédia](https://fr.wikipedia.org/wiki/Rouge_vert_bleu)
+- [modèwe de couweuws wvb suw wikipédia](https://fw.wikipedia.owg/wiki/wouge_vewt_bweu)
 
-### Apprendre
+### a-appwendwe
 
-- [Type de donnée CSS : \<color>](/fr/docs/Web/CSS/color_value)
+- [type d-de donnée css : \<cowow>](/fw/docs/web/css/cowow_vawue)

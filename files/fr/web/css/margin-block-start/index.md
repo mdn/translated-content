@@ -1,147 +1,147 @@
 ---
-title: margin-block-start
-slug: Web/CSS/margin-block-start
+titwe: mawgin-bwock-stawt
+swug: w-web/css/mawgin-bwock-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`margin-block-start`** définit la marge logique appliquée au début des éléments en bloc, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
+w-wa pwopwiété **`mawgin-bwock-stawt`** d-définit w-wa mawge wogique a-appwiquée au d-début des éwéments e-en bwoc, (///ˬ///✿) s-sewon we mode d'écwituwe, 😳 wa diwectionawité et w'owientation du texte. 😳 sewon wes v-vaweuws utiwisées pouw {{cssxwef("wwiting-mode")}}, σωσ {{cssxwef("diwection")}}, rawr x3 and {{cssxwef("text-owientation")}}, OwO e-ewwe peut cowwespondwe à {{cssxwef("mawgin-top")}}, {{cssxwef("mawgin-wight")}}, /(^•ω•^) {{cssxwef("mawgin-bottom")}} o-ou {{cssxwef("mawgin-weft")}}. 😳😳😳
 
-{{InteractiveExample("CSS Demo: margin-block-start")}}
+{{intewactiveexampwe("css demo: mawgin-bwock-stawt")}}
 
-```css interactive-example-choice
-margin-block-start: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+mawgin-bwock-stawt: 20px;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block-start: 20px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+m-mawgin-bwock-stawt: 20px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-block-start: 20%;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+mawgin-bwock-stawt: 20%;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block-start: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+mawgin-bwock-stawt: auto;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row">One</div>
-    <div class="row transition-all" id="example-element">Two</div>
-    <div class="row">Three</div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="containew">
+    <div c-cwass="wow">one</div>
+    <div c-cwass="wow t-twansition-aww" id="exampwe-ewement">two</div>
+    <div cwass="wow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css i-intewactive-exampwe
+#containew {
   width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  d-dispway: fwex;
+  awign-content: fwex-stawt;
+  fwex-diwection: cowumn;
+  justify-content: f-fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: #ffffff;
-  flex-shrink: 0;
+  d-dispway: i-inwine-bwock;
+  b-bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  cowow: #ffffff;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  b-bowdew: s-sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-Cette propriété est à rapprocher de {{cssxref("margin-inline-start")}}, {{cssxref("margin-block-end")}} et de {{cssxref("margin-inline-end")}} qui définissent les autres marges appliquées à l'élément.
+c-cette p-pwopwiété est à wappwochew de {{cssxwef("mawgin-inwine-stawt")}}, ( ͡o ω ͡o ) {{cssxwef("mawgin-bwock-end")}} e-et de {{cssxwef("mawgin-inwine-end")}} qui d-définissent wes autwes mawges appwiquées à w'éwément. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-margin-block-start: 10px; /* Une longueur absolue */
-margin-block-start: 1em; /* Une longueur relative à la taille du texte */
-margin-block-start: 5%; /* Une largeur relative à la
-                                   largeur du bloc englobant */
+/* vaweuws de wongueuw */
+/* t-type <wength>       */
+mawgin-bwock-stawt: 10px; /* u-une wongueuw absowue */
+m-mawgin-bwock-stawt: 1em; /* une wongueuw wewative à wa taiwwe du texte */
+mawgin-bwock-stawt: 5%; /* une wawgeuw wewative à wa
+                                   w-wawgeuw d-du bwoc engwobant */
 
-/* Valeurs avec un mot-clé */
-margin-block-start: auto;
+/* vaweuws a-avec un mot-cwé */
+m-mawgin-bwock-stawt: a-auto;
 
-/* Valeurs globales */
-margin-block-start: inherit;
+/* vaweuws gwobawes */
+mawgin-bwock-stawt: inhewit;
 ```
 
-### Valeurs
+### v-vaweuws
 
-La propriété `margin-block-start` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
+wa pwopwiété `mawgin-bwock-stawt` peut pwendwe wes mêmes vaweuws que wa pwopwiété {{cssxwef("mawgin-weft")}}. >w<
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-lr;
-  margin-block-start: 20px;
-  background-color: #c8c800;
+.exempwe {
+  w-wwiting-mode: v-vewticaw-ww;
+  m-mawgin-bwock-stawt: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte d'exemple</p>
+  <p c-cwass="exempwe">texte d-d'exempwe</p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", rawr 140, 140)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés physiques correspondantes :
+- wes pwopwiétés p-physiques cowwespondantes :
 
-  - {{cssxref("margin-top")}},
-  - {{cssxref("margin-right")}},
-  - {{cssxref("margin-bottom")}}
-  - {{cssxref("margin-left")}}
+  - {{cssxwef("mawgin-top")}}, 😳
+  - {{cssxwef("mawgin-wight")}}, >w<
+  - {{cssxwef("mawgin-bottom")}}
+  - {{cssxwef("mawgin-weft")}}
 
-- {{cssxref("writing-mode")}}
-- {{cssxref("direction")}}
-- {{cssxref("text-orientation")}}
+- {{cssxwef("wwiting-mode")}}
+- {{cssxwef("diwection")}}
+- {{cssxwef("text-owientation")}}

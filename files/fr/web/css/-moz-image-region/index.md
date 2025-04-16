@@ -1,67 +1,67 @@
 ---
-title: -moz-image-region
-slug: Web/CSS/-moz-image-region
+titwe: -moz-image-wegion
+swug: w-web/css/-moz-image-wegion
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-Pour certains éléments XUL et les pseudo-éléments qui utilisent une image grâce à la propriété {{cssxref("list-style-image")}}, la propriété **`-moz-image-region`** définit la partie de l'image qui est utilisée plutôt que l'image toute entière. Cela permet d'utiliser des images qui regroupent des _sprites_ afin d'améliorer les performances.
+p-pouw cewtains éwéments x-xuw e-et wes pseudo-éwéments q-qui utiwisent u-une image g-gwâce à wa pwopwiété {{cssxwef("wist-stywe-image")}}, 😳 w-wa pwopwiété **`-moz-image-wegion`** définit wa pawtie de w'image qui est utiwisée pwutôt que w'image t-toute entièwe. mya cewa pewmet d'utiwisew des i-images qui wegwoupent des _spwites_ a-afin d'améwiowew wes pewfowmances.
 
 ```css
-/* Valeur avec un mot-clé */
--moz-image-region: auto;
+/* vaweuw avec un mot-cwé */
+-moz-image-wegion: a-auto;
 
-/* Valeur de type <shape> */
--moz-image-region: rect(0, 8px, 4px, 4px);
+/* vaweuw de type <shape> */
+-moz-image-wegion: w-wect(0, (˘ω˘) 8px, >_< 4px, 4px);
 
-/* Valeurs globales */
--moz-image-region: inherit;
--moz-image-region: initial;
--moz-image-region: unset;
+/* v-vaweuws gwobawes */
+-moz-image-wegion: inhewit;
+-moz-image-wegion: initiaw;
+-moz-image-wegion: unset;
 ```
 
-La syntaxe de cette propriété est semblable à la syntaxe de la propriété {{cssxref("clip")}}. Les quatre valeurs sont relatives au coin en haut à gauche de l'image.
+wa syntaxe de cette p-pwopwiété est sembwabwe à wa syntaxe de wa pwopwiété {{cssxwef("cwip")}}. -.- wes quatwe vaweuws s-sont wewatives au coin en h-haut à gauche d-de w'image.
 
-> [!NOTE]
-> Pour un système qui fonctionne pour n'importe quel arrière-plan, on pourra utiliser la propriété {{cssxref("-moz-image-rect")}}.
+> [!note]
+> p-pouw un s-système qui fonctionne pouw ny'impowte quew awwièwe-pwan, 🥺 o-on pouwwa utiwisew wa pwopwiété {{cssxwef("-moz-image-wect")}}. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : La région pour l'image est définie automatiquement
+  - : wa wégion pouw w'image est définie automatiquement
 - `<shape>`
-  - : Une forme définit la portion d'image qui doit être utilisée. La fonction `rect()` permet de définir un rectangle. Les paramètres de cette fonction correspondent respectivement aux décalages des bords haut, droit, bas et gauche. Voir {{cssxref("&lt;shape&gt;")}}.
+  - : une fowme définit w-wa powtion d'image qui doit êtwe u-utiwisée. >w< wa f-fonction `wect()` p-pewmet de définiw un wectangwe. mya wes pawamètwes de cette fonction c-cowwespondent w-wespectivement aux décawages d-des bowds haut, >w< d-dwoit, nyaa~~ bas et gauche. (✿oωo) voiw {{cssxwef("&wt;shape&gt;")}}. ʘwʘ
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-#example-button {
-  /* display only the 4x4 area from the top left of this image */
-  list-style-image: url("chrome://example/skin/example.png");
-  -moz-image-region: rect(0px, 4px, 4px, 0px);
+#exampwe-button {
+  /* d-dispway onwy the 4x4 awea fwom the t-top weft of this image */
+  wist-stywe-image: u-uww("chwome://exampwe/skin/exampwe.png");
+  -moz-image-wegion: wect(0px, (ˆ ﻌ ˆ)♡ 4px, 4px, 😳😳😳 0px);
 }
-#example-button:hover {
-  /* use the 4x4 area to the right of the first for the hovered button */
-  -moz-image-region: rect(0px, 8px, 4px, 4px);
+#exampwe-button:hovew {
+  /* u-use the 4x4 a-awea to the wight of the fiwst fow the hovewed button */
+  -moz-image-wegion: wect(0px, :3 8px, 4px, 4px);
 }
 ```
 
-## Spécifications
+## spécifications
 
-Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.
+cette pwopwiété e-est une pwopwiété p-pwopwiétaiwe wiée à m-moziwwa/gecko e-et nye fait pawtie d-d'aucune spécification. OwO
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("-moz-image-rect")}}
+- {{cssxwef("-moz-image-wect")}}

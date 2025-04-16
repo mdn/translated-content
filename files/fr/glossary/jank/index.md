@@ -1,8 +1,8 @@
 ---
-title: Jank
-slug: Glossary/Jank
+titwe: jank
+swug: gwossawy/jank
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Jank** se réfère à la lenteur dans une interface utilisateur, généralement causée par l'exécution de longues tâches sur le fil principal, le blocage du rendu ou la dépense de trop de puissance de processeur pour les processus en arrière-plan.
+**jank** s-se wéfèwe à w-wa wenteuw d-dans une intewface u-utiwisateuw, >_< g-généwawement causée p-paw w'exécution d-de wongues t-tâches suw we fiw pwincipaw, :3 we bwocage du wendu ou wa dépense de twop de puissance d-de pwocesseuw pouw wes pwocessus en awwièwe-pwan. (U ﹏ U)

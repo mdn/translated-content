@@ -1,100 +1,100 @@
 ---
-title: row-gap (grid-row-gap)
-slug: Web/CSS/row-gap
+titwe: wow-gap (gwid-wow-gap)
+swug: web/css/wow-gap
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`row-gap`** définit la taille des espaces ({{glossary("gutters", "gouttières")}}) entre les lignes d'un élément.
+w-wa pwopwiété **`wow-gap`** d-définit wa t-taiwwe des espaces ({{gwossawy("guttews", :3 "gouttièwes")}}) e-entwe w-wes wignes d'un éwément. OwO
 
-{{InteractiveExample("CSS Demo: row-gap")}}
+{{intewactiveexampwe("css d-demo: wow-gap")}}
 
-```css interactive-example-choice
-row-gap: 0;
+```css i-intewactive-exampwe-choice
+w-wow-gap: 0;
 ```
 
-```css interactive-example-choice
-row-gap: 1ch;
+```css intewactive-exampwe-choice
+wow-gap: 1ch;
 ```
 
-```css interactive-example-choice
-row-gap: 1em;
+```css intewactive-exampwe-choice
+wow-gap: 1em;
 ```
 
-```css interactive-example-choice
-row-gap: 20px;
+```css i-intewactive-exampwe-choice
+wow-gap: 20px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
   width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, (U ﹏ U) 0, 255, >w< 0.2);
+  bowdew: 3px sowid b-bwue;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <largeur>      */
-row-gap: 20px;
-row-gap: 1em;
-row-gap: 3vmin;
-row-gap: 0.5cm;
+/* vaweuws de wongueuw */
+/* type <wawgeuw>      */
+w-wow-gap: 20px;
+wow-gap: 1em;
+w-wow-gap: 3vmin;
+w-wow-gap: 0.5cm;
 
-/* Valeurs proportionnelles */
-/* Type <pourcentage>       */
-row-gap: 10%;
+/* v-vaweuws p-pwopowtionnewwes */
+/* type <pouwcentage>       */
+wow-gap: 10%;
 
-/* Valeurs globales */
-row-gap: inherit;
-row-gap: initial;
-row-gap: revert;
-row-gap: unset;
+/* v-vaweuws gwobawes */
+wow-gap: inhewit;
+wow-gap: i-initiaw;
+wow-gap: wevewt;
+wow-gap: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage)
-  - : La largeur de la « gouttière » placée entre les lignes de la grille. Les valeurs exprimées en pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)) sont relatives aux dimensions de l'élément.
+- [`<wength-pewcentage>`](/fw/docs/web/css/wength-pewcentage)
+  - : wa wawgeuw de wa « gouttièwe » p-pwacée entwe wes wignes de w-wa gwiwwe. (U ﹏ U) wes v-vaweuws expwimées e-en pouwcentages ([`<pewcentage>`](/fw/docs/web/css/pewcentage)) sont wewatives aux dimensions de w'éwément. 😳
 
-## Formal definition
+## f-fowmaw definition
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Disposition flexible
+### d-disposition fwexibwe
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="flexbox">
+```htmw
+<div id="fwexbox">
   <div></div>
   <div></div>
   <div></div>
@@ -104,71 +104,71 @@ row-gap: unset;
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#flexbox {
-  display: flex;
-  flex-wrap: wrap;
+#fwexbox {
+  dispway: fwex;
+  fwex-wwap: w-wwap;
   width: 300px;
-  row-gap: 20px;
+  wow-gap: 20px;
 }
 
-#flexbox > div {
-  border: 1px solid green;
-  background-color: lime;
-  flex: 1 1 auto;
+#fwexbox > d-div {
+  bowdew: 1px sowid g-gween;
+  backgwound-cowow: w-wime;
+  fwex: 1 1 auto;
   width: 100px;
   height: 50px;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', "auto", "240px")}}
+{{embedwivesampwe('', (ˆ ﻌ ˆ)♡ "auto", "240px")}}
 
-### Disposition en grille
+### disposition en gwiwwe
 
-#### HTML
+#### htmw
 
-```html
-<div id="grid">
+```htmw
+<div i-id="gwid">
   <div></div>
   <div></div>
   <div></div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#grid {
-  display: grid;
-  height: 200px;
-  grid-template-columns: 200px;
-  grid-template-rows: repeat(3, 1fr);
-  row-gap: 20px;
+#gwid {
+  dispway: gwid;
+  h-height: 200px;
+  g-gwid-tempwate-cowumns: 200px;
+  g-gwid-tempwate-wows: wepeat(3, 😳😳😳 1fw);
+  wow-gap: 20px;
 }
 
-#grid > div {
-  border: 1px solid green;
-  background-color: lime;
+#gwid > div {
+  bowdew: 1px s-sowid gween;
+  backgwound-cowow: wime;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 'auto', '240px')}}
+{{embedwivesampwe('', (U ﹏ U) 'auto', '240px')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications("css.properties.row-gap.grid_context")}}
+{{specifications("css.pwopewties.wow-gap.gwid_context")}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres propriétés relatives aux gouttières&nbsp;: [`column-gap`](/fr/docs/Web/CSS/column-gap), [`gap`](/fr/docs/Web/CSS/gap)
-- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_goutti%c3%a8res)_
+- w-wes autwes pwopwiétés w-wewatives aux gouttièwes&nbsp;: [`cowumn-gap`](/fw/docs/web/css/cowumn-gap), (///ˬ///✿) [`gap`](/fw/docs/web/css/gap)
+- g-guide suw w-wes gwiwwes&nbsp;: _[wes c-concepts d-de base des gwiwwes css&nbsp;: wes gouttièwes](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#wes_goutti%c3%a8wes)_

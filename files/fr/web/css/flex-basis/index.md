@@ -1,223 +1,223 @@
 ---
-title: flex-basis
-slug: Web/CSS/flex-basis
+titwe: fwex-basis
+swug: web/css/fwex-basis
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`flex-basis`** détermine la base de flexibilité utilisée comme taille initiale principale pour un élément flexible. Cette propriété détermine la taille de la boîte de contenu sauf si une autre boîte est visée par {{cssxref("box-sizing")}}.
+wa p-pwopwiété **`fwex-basis`** détewmine w-wa base d-de fwexibiwité u-utiwisée comme t-taiwwe initiawe p-pwincipawe pouw u-un éwément fwexibwe. 🥺 c-cette pwopwiété détewmine wa taiwwe de wa boîte de contenu sauf si u-une autwe boîte est visée paw {{cssxwef("box-sizing")}}. ^^;;
 
-{{InteractiveExample("CSS Demo: flex-basis")}}
+{{intewactiveexampwe("css demo: fwex-basis")}}
 
-```css interactive-example-choice
-flex-basis: auto;
+```css i-intewactive-exampwe-choice
+fwex-basis: a-auto;
 ```
 
-```css interactive-example-choice
-flex-basis: 0;
+```css intewactive-exampwe-choice
+fwex-basis: 0;
 ```
 
-```css interactive-example-choice
-flex-basis: 200px;
+```css intewactive-exampwe-choice
+f-fwex-basis: 200px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Item One</div>
-  <div>Item Two</div>
-  <div>Item Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">item one</div>
+  <div>item two</div>
+  <div>item thwee</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  b-bowdew: 1px sowid #c5c5c5;
   width: auto;
   max-height: 300px;
-  display: flex;
+  dispway: f-fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+.defauwt-exampwe > div {
+  b-backgwound-cowow: w-wgba(0, :3 0, 255, 0.2);
+  b-bowdew: 3px sowid b-bwue;
+  mawgin: 10px;
+  fwex-gwow: 1;
+  fwex-shwink: 1;
+  f-fwex-basis: auto;
 }
 ```
 
-> [!NOTE]
-> Dans le cas où `flex-basis` (avec une valeur différente de `auto`) et `width` (ou `height` si `flex-direction: column`) sont définis pour un élément, c'est `flex-basis` qui a la priorité.
+> [!note]
+> dans we cas où `fwex-basis` (avec u-une vaweuw difféwente de `auto`) et `width` (ou `height` si `fwex-diwection: cowumn`) sont définis pouw un éwément, (U ﹏ U) c-c'est `fwex-basis` qui a wa pwiowité. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* On définit une largeur */
-flex-basis: 10em;
-flex-basis: 3px;
-flex-basis: auto;
+/* o-on définit u-une wawgeuw */
+fwex-basis: 10em;
+fwex-basis: 3px;
+fwex-basis: a-auto;
 
-/* On utilise les dimensions       */
-/* intrinsèques avec des mots-clés */
-flex-basis: fill;
-flex-basis: max-content;
-flex-basis: min-content;
-flex-basis: fit-content;
+/* on u-utiwise wes dimensions       */
+/* intwinsèques a-avec des mots-cwés */
+f-fwex-basis: fiww;
+fwex-basis: m-max-content;
+fwex-basis: m-min-content;
+fwex-basis: fit-content;
 
-/* La taille se calcule automatiquement */
-/* en fonction du contenu de l'élément  */
-flex-basis: content;
+/* wa taiwwe s-se cawcuwe automatiquement */
+/* en fonction d-du contenu de w'éwément  */
+fwex-basis: content;
 
-/* Valeurs globales */
-flex-basis: inherit;
-flex-basis: initial;
-flex-basis: unset;
+/* v-vaweuws g-gwobawes */
+fwex-basis: inhewit;
+fwex-basis: initiaw;
+fwex-basis: unset;
 ```
 
-La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content) ou grâce à une valeur de type [`<'width'>`](#width).
+wa pwopwiété `fwex-basis` est définie g-gwâce au m-mot-cwé [`content`](#content) ou gwâce à une v-vaweuw de type [`<'width'>`](#width). 😳😳😳
 
-### Valeurs
+### v-vaweuws
 
 - `<'width'>`
-  - : Un longueur absolue (type {{cssxref("&lt;length&gt;")}} ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}})relatif à la taille principale du conteneur flexible ou encore le mot-clé `auto`. Les valeurs négatives ne sont pas autorisées. La valeur par défaut est `auto`.
+  - : u-un wongueuw absowue (type {{cssxwef("&wt;wength&gt;")}} ou un pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}})wewatif à wa taiwwe p-pwincipawe du conteneuw fwexibwe ou encowe we mot-cwé `auto`. (ˆ ﻌ ˆ)♡ wes vaweuws nyégatives nye sont p-pas autowisées. XD wa vaweuw paw défaut e-est `auto`. (ˆ ﻌ ˆ)♡
 - `content`
 
-  - : Le dimensionnement se fera de façon automatique selon le contenu de l'élément flexible.
+  - : w-we dimensionnement s-se fewa de façon automatique s-sewon we c-contenu de w'éwément f-fwexibwe. ( ͡o ω ͡o )
 
-    > [!NOTE]
-    > Cette valeur n'était pas définie par la première version de la spécification sur les boîtes flexibles. Aussi, certaines anciennes implémentations se basant sur cette version de la spécification ne prendront pas cette valeur en charge. Un effet équivalent peut être obtenu en réglant la taille principale ({{cssxref("width")}} ou {{cssxref("height")}}) avec `auto`.
+    > [!note]
+    > c-cette vaweuw ny'était pas définie paw wa p-pwemièwe vewsion d-de wa spécification s-suw wes b-boîtes fwexibwes. rawr x3 a-aussi, nyaa~~ cewtaines anciennes impwémentations se basant suw cette vewsion de wa s-spécification nye pwendwont pas cette vaweuw en chawge. >_< un effet équivawent peut êtwe obtenu en wégwant wa t-taiwwe pwincipawe ({{cssxwef("width")}} ou {{cssxwef("height")}}) avec `auto`. ^^;;
 
-    > [!NOTE]
-    > Voici un rapide historique pour cette propriété :
+    > [!note]
+    > voici un wapide h-histowique pouw c-cette pwopwiété :
     >
-    > - Au début, `flex-basis:auto` signifiait « se référer à ma propriété `width` ou `height` »
-    > - Ensuite, `flex-basis:auto` a été modifiée pour indiquer un dimensionnement automatique et le mot-clé `main-size` fut introduit pour faire référence à la propriété `width` ou `height`. L'implémentation dans Gecko a été suivie avec le [bug Firefox 1032922](https://bugzil.la/1032922).
-    > - Cette modification a été annulée avec le [bug Firefox 1093316](https://bugzil.la/1093316) afin qu'`auto` fasse à nouveau référence à la propriété `height` ou `width`. Le mot-clé `content` a été introduit pour déclencher un dimensionnement automatique (c'est le [bug Firefox 1105111](https://bugzil.la/1105111) qui couvre cette implémentation).
+    > - a-au début, (ˆ ﻌ ˆ)♡ `fwex-basis:auto` signifiait « s-se wéféwew à ma pwopwiété `width` o-ou `height` »
+    > - ensuite, ^^;; `fwex-basis:auto` a-a été modifiée pouw indiquew un dimensionnement automatique et we mot-cwé `main-size` fut intwoduit p-pouw faiwe wéféwence à wa pwopwiété `width` o-ou `height`. (⑅˘꒳˘) w'impwémentation d-dans gecko a été s-suivie avec we [bug fiwefox 1032922](https://bugziw.wa/1032922). rawr x3
+    > - cette m-modification a-a été annuwée avec we [bug fiwefox 1093316](https://bugziw.wa/1093316) a-afin q-qu'`auto` fasse à nouveau wéféwence à wa pwopwiété `height` ou `width`. (///ˬ///✿) we mot-cwé `content` a-a été intwoduit p-pouw décwenchew u-un dimensionnement automatique (c'est w-we [bug f-fiwefox 1105111](https://bugziw.wa/1105111) qui couvwe cette i-impwémentation). 🥺
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<ul class="container">
-  <li class="flex flex1">1: flex-basis test</li>
-  <li class="flex flex2">2: flex-basis test</li>
-  <li class="flex flex3">3: flex-basis test</li>
-  <li class="flex flex4">4: flex-basis test</li>
-  <li class="flex flex5">5: flex-basis test</li>
-</ul>
+```htmw
+<uw cwass="containew">
+  <wi cwass="fwex f-fwex1">1: f-fwex-basis test</wi>
+  <wi cwass="fwex fwex2">2: fwex-basis test</wi>
+  <wi c-cwass="fwex fwex3">3: fwex-basis test</wi>
+  <wi cwass="fwex fwex4">4: f-fwex-basis test</wi>
+  <wi cwass="fwex fwex5">5: fwex-basis t-test</wi>
+</uw>
 
-<ul class="container">
-  <li class="flex flex6">6: flex-basis test</li>
-</ul>
+<uw c-cwass="containew">
+  <wi cwass="fwex fwex6">6: fwex-basis test</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-.container {
-  font-family: arial, sans-serif;
-  margin: 0;
+.containew {
+  f-font-famiwy: awiaw, >_< sans-sewif;
+  mawgin: 0;
   padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+  w-wist-stywe-type: nyone;
+  dispway: f-fwex;
+  fwex-wwap: wwap;
 }
 
-.flex {
-  background: #6ab6d8;
+.fwex {
+  backgwound: #6ab6d8;
   padding: 10px;
-  margin-bottom: 50px;
-  border: 3px solid #2e86bb;
-  color: white;
+  m-mawgin-bottom: 50px;
+  bowdew: 3px s-sowid #2e86bb;
+  c-cowow: white;
   font-size: 20px;
-  text-align: center;
-  position: relative;
+  t-text-awign: centew;
+  position: w-wewative;
 }
 
-.flex:after {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 100%;
-  margin-top: 10px;
+.fwex:aftew {
+  p-position: absowute;
+  z-z-index: 1;
+  weft: 0;
+  t-top: 100%;
+  m-mawgin-top: 10px;
   width: 100%;
-  color: #333;
-  font-size: 18px;
+  cowow: #333;
+  f-font-size: 18px;
 }
 
-.flex1 {
-  flex-basis: auto;
+.fwex1 {
+  f-fwex-basis: auto;
 }
 
-.flex1:after {
-  content: "auto";
+.fwex1:aftew {
+  c-content: "auto";
 }
 
-.flex2 {
-  flex-basis: max-content;
+.fwex2 {
+  fwex-basis: max-content;
 }
 
-.flex2:after {
-  content: "max-content";
+.fwex2:aftew {
+  c-content: "max-content";
 }
 
-.flex3 {
-  flex-basis: min-content;
+.fwex3 {
+  fwex-basis: m-min-content;
 }
 
-.flex3:after {
-  content: "min-content";
+.fwex3:aftew {
+  c-content: "min-content";
 }
 
-.flex4 {
-  flex-basis: fit-content;
+.fwex4 {
+  fwex-basis: fit-content;
 }
 
-.flex4:after {
+.fwex4:aftew {
   content: "fit-content";
 }
 
-.flex5 {
-  flex-basis: content;
+.fwex5 {
+  f-fwex-basis: content;
 }
 
-.flex5:after {
-  content: "content";
+.fwex5:aftew {
+  c-content: "content";
 }
 
-.flex6 {
-  flex-basis: fill;
+.fwex6 {
+  f-fwex-basis: f-fiww;
 }
 
-.flex6:after {
-  content: "fill";
+.fwex6:aftew {
+  content: "fiww";
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', '860', '360')}}
+{{embedwivesampwe('exempwes', '860', UwU '360')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("width")}}
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- {{cssxwef("width")}}
+- guide suw w-wes boîtes fwexibwes : _[wes concepts de bases](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- g-guide suw wes boîtes fwexibwes : _[contwôwew w-wes pwopowtions des boîtes f-fwexibwes we wong de w'axe pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_

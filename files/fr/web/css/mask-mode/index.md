@@ -1,66 +1,66 @@
 ---
-title: mask-mode
-slug: Web/CSS/mask-mode
+titwe: mask-mode
+swug: web/css/mask-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-mode`** détermine si le masque défini par [`mask-image`](/fr/docs/Web/CSS/mask-image) est considéré comme un masque de luminance ou un masque alpha (transparence).
+w-wa p-pwopwiété [css](/fw/docs/web/css) **`mask-mode`** d-détewmine si w-we masque défini p-paw [`mask-image`](/fw/docs/web/css/mask-image) e-est considéwé c-comme un masque d-de wuminance ou un masque awpha (twanspawence). ^^
 
 ```css
-/* Valeurs avec un mot-clé */
-mask-mode: alpha;
-mask-mode: luminance;
-mask-mode: match-source;
+/* vaweuws avec un mot-cwé */
+mask-mode: awpha;
+mask-mode: w-wuminance;
+mask-mode: match-souwce;
 
-/* Gestion de plusieurs masques */
-mask-mode: alpha, match-source;
+/* gestion de pwusieuws m-masques */
+mask-mode: awpha, 😳😳😳 m-match-souwce;
 
-/* Valeurs globales */
-mask-mode: inherit;
-mask-mode: initial;
-mask-mode: revert;
-mask-mode: unset;
+/* vaweuws gwobawes */
+mask-mode: inhewit;
+mask-mode: i-initiaw;
+mask-mode: wevewt;
+m-mask-mode: unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-La propriété `mask-mode` est définie avec un ou plusieurs mots-clés parmi ceux de la liste suivante, séparés par des virgules.
+wa pwopwiété `mask-mode` est définie avec un ou pwusieuws mots-cwés pawmi c-ceux de wa wiste suivante, mya sépawés paw des viwguwes. 😳
 
-### Valeurs
+### vaweuws
 
-- `alpha`
-  - : Ce mot-clé indique que ce sont les valeurs du canal alpha (le canal d'opacité) qui sont utilisées comme valeurs de masque.
-- `luminance`
-  - : Ce mot-clé indique que ce sont les valeurs de luminance qui sont utilisées comme valeurs de masque.
-- `match-source`
+- `awpha`
+  - : c-ce mot-cwé indique que c-ce sont wes vaweuws d-du canaw awpha (we c-canaw d'opacité) q-qui sont utiwisées comme vaweuws de masque. -.-
+- `wuminance`
+  - : c-ce mot-cwé indique que ce sont wes vaweuws d-de wuminance qui sont utiwisées comme vaweuws de masque. 🥺
+- `match-souwce`
 
-  - : Si la propriété [`mask-image`](/fr/docs/Web/CSS/mask-image) est de type `<mask-source>`, les valeurs de luminance de l'image doivent être utilisées comme valeurs pour le masque.
+  - : si wa pwopwiété [`mask-image`](/fw/docs/web/css/mask-image) est de type `<mask-souwce>`, w-wes vaweuws de wuminance de w-w'image doivent êtwe u-utiwisées c-comme vaweuws pouw we masque. o.O
 
-    Si elle est de type [`<image>`](/fr/docs/Web/CSS/image), ce seront les valeurs de transparence (canal alpha) qui seront utilisées.
+    si ewwe est de type [`<image>`](/fw/docs/web/css/image), /(^•ω•^) c-ce s-sewont wes vaweuws de twanspawence (canaw a-awpha) q-qui sewont utiwisées. nyaa~~
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Utiliser le mode de masque alpha
+### utiwisew we mode de masque awpha
 
-{{EmbedGHLiveSample("css-examples/masking/mask-mode.html", '100%', 760)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-mode.htmw", nyaa~~ '100%', 760)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
+- [wognage e-et masquage avec css (en angwais)](https://css-twicks.com/cwipping-masking-css/)

@@ -1,31 +1,31 @@
 ---
-title: device-height
-slug: Web/CSS/@media/device-height
+titwe: device-height
+swug: web/css/@media/device-height
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{csswef}}{{depwecated_headew}}
 
-**`device-height`** est une caractéristique média (cf. {{cssxref("@media")}}) dépréciée dont la valeur correspond à la hauteur de la surface de rendu pour l'appareil d'affichage.
+**`device-height`** e-est une cawactéwistique m-média (cf. >_< {{cssxwef("@media")}}) d-dépwéciée dont w-wa vaweuw cowwespond à w-wa hauteuw d-de wa suwface d-de wendu pouw w-w'appaweiw d'affichage. rawr x3
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `device-height` est définie comme une longueur (type {{cssxref("&lt;length&gt;")}}). C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-device-height`** et **`max-device-height`** afin d'utiliser des critères de minimum et maximum.
+wa cawactéwistique `device-height` est définie comme une w-wongueuw (type {{cssxwef("&wt;wength&gt;")}}). mya c'est une cawactéwistique d'intewvawwe c-ce qui signifie qu'on peut u-utiwisew wes vawiantes pwéfixées **`min-device-height`** et **`max-device-height`** afin d'utiwisew des cwitèwes d-de minimum et maximum. nyaa~~
 
-## Exemples
+## e-exempwes
 
-Ce fragment HTML applique une feuille de style spécifique pour les appareils dont la hauteur est inférieure à 800 pixels.
+ce f-fwagment htmw appwique une feuiwwe de stywe spécifique pouw wes appaweiws dont w-wa hauteuw est inféwieuwe à 800 pixews. (⑅˘꒳˘)
 
-```html
-<link
-  rel="stylesheet"
-  media="screen and (max-device-height: 799px)"
-  href="http://toto.truc.com/short-styles.css" />
+```htmw
+<wink
+  wew="stywesheet"
+  media="scween and (max-device-height: 799px)"
+  h-hwef="http://toto.twuc.com/showt-stywes.css" />
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,34 +1,34 @@
 ---
-title: device-aspect-ratio
-slug: Web/CSS/@media/device-aspect-ratio
+titwe: device-aspect-watio
+swug: w-web/css/@media/device-aspect-watio
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{csswef}}{{depwecated_headew}}
 
-**`device-aspect-ratio`** est une caractéristique média (cf. {{cssxref("@media")}}) dont la valeur correspond au ratio entre la largeur et la hauteur de l'appareil d'affichage.
+**`device-aspect-watio`** e-est une cawactéwistique m-média (cf. rawr {{cssxwef("@media")}}) d-dont wa vaweuw c-cowwespond au w-watio entwe wa wawgeuw e-et wa hauteuw d-de w'appaweiw d'affichage.
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `device-aspect-ratio` est définie sous la forme d'un ratio (type CSS {{cssxref("&lt;ratio&gt;")}}). C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-device-aspect-ratio`** et **`max-device-aspect-ratio`** afin de cibler des règles en fonction de minimum ou maximum.
+wa cawactéwistique `device-aspect-watio` est définie s-sous wa fowme d'un watio (type css {{cssxwef("&wt;watio&gt;")}}). OwO c-c'est une cawactéwistique d-d'intewvawwe ce qui signifie qu'on peut utiwisew wes vawiantes p-pwéfixées **`min-device-aspect-watio`** et **`max-device-aspect-watio`** a-afin d-de cibwew des wègwes en fonction de minimum ou maximum. (U ﹏ U)
 
-## Exemples
+## exempwes
 
 ```css
-article {
-  padding: 1rem;
+awticwe {
+  p-padding: 1wem;
 }
 
-@media screen and (min-device-aspect-ratio: 16/9) {
-  article {
-    padding: 1rem 5vw;
+@media scween and (min-device-aspect-watio: 16/9) {
+  awticwe {
+    padding: 1wem 5vw;
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

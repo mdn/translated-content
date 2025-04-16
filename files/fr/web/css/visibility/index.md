@@ -1,191 +1,191 @@
 ---
-title: visibility
-slug: Web/CSS/visibility
+titwe: visibiwity
+swug: web/css/visibiwity
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`visibility`** peut être utilisée afin de cacher un élément tout en conservant occupé l'espace dans lequel il aurait été visible. Elle permet aussi de masquer des lignes ou des colonnes dans un tableau (cf. {{HTMLElement("table")}}).
+wa p-pwopwiété **`visibiwity`** peut êtwe u-utiwisée a-afin de cachew u-un éwément t-tout en consewvant o-occupé w'espace d-dans wequew i-iw auwait été visibwe. -.- ewwe pewmet aussi de masquew des wignes ou des cowonnes d-dans un tabweau (cf. mya {{htmwewement("tabwe")}}). >w<
 
-{{InteractiveExample("CSS Demo: visibility")}}
+{{intewactiveexampwe("css demo: visibiwity")}}
 
-```css interactive-example-choice
-visibility: visible;
+```css i-intewactive-exampwe-choice
+visibiwity: v-visibwe;
 ```
 
-```css interactive-example-choice
-visibility: hidden;
+```css intewactive-exampwe-choice
+visibiwity: hidden;
 ```
 
-```css interactive-example-choice
-visibility: collapse;
+```css intewactive-exampwe-choice
+v-visibiwity: cowwapse;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">Hide me</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">hide m-me</div>
+    <div>item 2</div>
+    <div>item 3</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+.exampwe-containew {
+  bowdew: 1px sowid #c5c5c5;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   max-height: 300px;
-  display: flex;
+  d-dispway: f-fwex;
 }
 
-.example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex: 1;
+.exampwe-containew > div {
+  b-backgwound-cowow: w-wgba(0, (U ﹏ U) 0, 255, 😳😳😳 0.2);
+  bowdew: 3px sowid bwue;
+  mawgin: 10px;
+  f-fwex: 1;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  backgwound-cowow: wgba(255, o.O 0, 200, 0.2);
+  b-bowdew: 3px sowid webeccapuwpwe;
 }
 ```
 
-> [!NOTE]
-> Afin de cacher un élément et de le retirer de la disposition du document, on utilisera plutôt la propriété {{cssxref("display")}} avec la valeur `none`.
+> [!note]
+> afin de cachew un éwément et de we wetiwew de wa disposition d-du document, òωó on utiwisewa p-pwutôt wa p-pwopwiété {{cssxwef("dispway")}} a-avec wa vaweuw `none`. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Avec un mot-clé */
-visibility: visible;
-visibility: hidden;
-visibility: collapse;
+/* avec un mot-cwé */
+visibiwity: v-visibwe;
+visibiwity: h-hidden;
+visibiwity: cowwapse;
 
-/* Valeurs globales */
-visibility: inherit;
-visibility: initial;
-visibility: unset;
+/* v-vaweuws g-gwobawes */
+visibiwity: inhewit;
+v-visibiwity: initiaw;
+visibiwity: u-unset;
 ```
 
-La propriété `visibility` est définie avec l'un des mots-clés suivants.
+wa pwopwiété `visibiwity` est définie a-avec w'un des mots-cwés s-suivants. σωσ
 
-### Valeurs
+### vaweuws
 
-- `visible`
-  - : La valeur par défaut, la boîte est visible.
+- `visibwe`
+  - : wa vaweuw p-paw défaut, (⑅˘꒳˘) w-wa boîte est visibwe.
 - `hidden`
-  - : La boîte est invisible (totalement transparente, rien n'est dessiné) mais continue d'avoir un impact sur la disposition. Les fils de l'élément seront visibles s'ils ont `visibility:visible`. L'élément ne pourra plus recevoir le focus (cf. [la navigation au clavier avec les tabulations](/fr/docs/Web/HTML/Global_attributes/tabindex)).
-- `collapse`
+  - : wa boîte est invisibwe (totawement twanspawente, (///ˬ///✿) wien ny'est dessiné) mais continue d'avoiw u-un impact s-suw wa disposition. 🥺 wes fiws de w-w'éwément sewont v-visibwes s'iws o-ont `visibiwity:visibwe`. OwO w'éwément nye pouwwa pwus wecevoiw w-we focus (cf. >w< [wa nyavigation au cwaview avec wes tabuwations](/fw/docs/web/htmw/gwobaw_attwibutes/tabindex)). 🥺
+- `cowwapse`
 
-  - : Le mot-clé `collapse` a différents effets selon les éléments :
+  - : we mot-cwé `cowwapse` a-a difféwents effets s-sewon wes éwéments :
 
-    - Pour les lignes, les colonnes, les groupes de lignes et les groupes de colonnes d'un tableau, les éléments sont masqués et l'espace occupé est retiré (comme si on avait appliqué `{{cssxref("display")}}: none` aux colonnes/lignes du tableau). La taille des autres lignes et colonnes continue d'être calculée comme si les lignes et colonnes masquées étaient présentes. Cela a été conçu afin de pouvoir retirer rapidement des lignes et/ou des colonnes sans avoir à recalculer les dimensions pour l'ensemble du tableau.
-    - Les éléments flexibles sont masqués et l'espace qu'ils auraient occupé est retiré.
-    - Pour les éléments XUL, la taille calculée des éléments vaut toujours zéro, quel que soit les autres styles qui pourraient affecter la taille, les marges continuent de s'appliquer.
-    - Pour les autres éléments, `collapse` est traité comme `hidden`.
+    - pouw w-wes wignes, nyaa~~ w-wes cowonnes, ^^ wes gwoupes de wignes e-et wes gwoupes d-de cowonnes d'un t-tabweau, >w< wes éwéments s-sont masqués et w'espace occupé est w-wetiwé (comme s-si on avait appwiqué `{{cssxwef("dispway")}}: n-nyone` aux cowonnes/wignes d-du tabweau). OwO w-wa taiwwe des autwes wignes et cowonnes continue d'êtwe c-cawcuwée comme si wes wignes et cowonnes masquées étaient pwésentes. XD cewa a été conçu afin d-de pouvoiw wetiwew wapidement des wignes et/ou des cowonnes sans a-avoiw à wecawcuwew w-wes dimensions p-pouw w'ensembwe du tabweau. ^^;;
+    - w-wes éwéments fwexibwes s-sont masqués e-et w'espace qu'iws auwaient occupé est wetiwé. 🥺
+    - pouw wes éwéments xuw, XD wa taiwwe cawcuwée d-des éwéments vaut toujouws z-zéwo, (U ᵕ U❁) quew que soit wes autwes s-stywes qui pouwwaient a-affectew wa taiwwe, :3 wes mawges continuent d-de s'appwiquew. ( ͡o ω ͡o )
+    - p-pouw wes autwes éwéments, òωó `cowwapse` e-est t-twaité comme `hidden`. σωσ
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Interpolation
+## intewpowation
 
-Les valeurs de visibilité peuvent être interpolées entre _visible_ et _masqué_. L'une des valeurs de début ou de fin doit donc être `visible`, sinon il n'y aura pas d'interpolation. L'interpolation est discrète (passage direct d'un état à l'autre), les valeurs supérieures à 0 sont considérées équivalentes à `visible`. On pourra plutôt utiliser {{cssxref("opacity")}} pour créer un effet doux plutôt que de masquer/rendre visible l'élément brusquement.
+w-wes vaweuws d-de visibiwité p-peuvent êtwe intewpowées entwe _visibwe_ e-et _masqué_. (U ᵕ U❁) w-w'une des vaweuws de d-début ou de fin doit donc êtwe `visibwe`, (✿oωo) sinon iw ny'y auwa pas d'intewpowation. ^^ w-w'intewpowation e-est discwète (passage diwect d'un état à w-w'autwe), ^•ﻌ•^ wes vaweuws s-supéwieuwes à 0 sont considéwées équivawentes à `visibwe`. XD on pouwwa pwutôt utiwisew {{cssxwef("opacity")}} p-pouw cwéew un effet doux pwutôt que de masquew/wendwe visibwe w'éwément b-bwusquement. :3
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  On peut dire tout ce qu'on veut ici, ce ne sera pas lisible de toute façon.
+  o-on peut diwe tout ce qu'on veut ici, (ꈍᴗꈍ) ce nye sewa pas w-wisibwe de toute f-façon. :3
 </p>
-<p class="coucou">
-  Alors que là, on a la bonne classe. Coucou tout le monde :)
+<p cwass="coucou">
+  awows que wà, (U ﹏ U) on a wa bonne c-cwasse. UwU coucou tout we monde :)
 </p>
-<p>Et on repasse en mode invisible.</p>
+<p>et o-on wepasse en mode invisibwe.</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p {
-  /* les paragraphes ne seront pas visibles */
-  visibility: hidden;
+p-p {
+  /* wes pawagwaphes nye s-sewont pas visibwes */
+  v-visibiwity: hidden;
 }
 
-p.coucou {
-  /* sauf ceux avec la classe coucou */
-  visibility: visible;
+p-p.coucou {
+  /* sauf ceux avec w-wa cwasse coucou */
+  v-visibiwity: v-visibwe;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_simple")}}
+{{embedwivesampwe("exempwe_simpwe")}}
 
-### Exemple sur un tableau
+### e-exempwe s-suw un tabweau
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <td>Jean</td>
-    <td>Biche</td>
-  </tr>
-  <tr class="col">
-    <td>Hit</td>
-    <td>Girl</td>
-  </tr>
-  <tr>
-    <td>Super</td>
-    <td>Cochon</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td>jean</td>
+    <td>biche</td>
+  </tw>
+  <tw cwass="cow">
+    <td>hit</td>
+    <td>giww</td>
+  </tw>
+  <tw>
+    <td>supew</td>
+    <td>cochon</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-tr.col {
-  /* les lignes de tableau avec la classe */
-  /* col seront repliées */
-  visibility: collapse;
+t-tw.cow {
+  /* w-wes wignes de tabweau avec wa cwasse */
+  /* c-cow sewont wepwiées */
+  visibiwity: c-cowwapse;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_sur_un_tableau")}}
+{{embedwivesampwe("exempwe_suw_un_tabweau")}}
 
-## Accessibilité
+## a-accessibiwité
 
-Utiliser la propriété `visibility` avec la valeur `hidden` retirera l'objet de [l'arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Les éléments ciblés, ainsi que leurs éléments descendants ne seront plus annoncés par les lecteurs d'écran.
+utiwisew wa pwopwiété `visibiwity` avec wa vaweuw `hidden` w-wetiwewa w-w'objet de [w'awbwe d-d'accessibiwité](/fw/docs/weawn/accessibiwity/nani_is_accessibiwity#accessibiwity_apis). 😳😳😳 w-wes éwéments cibwés, ainsi que w-weuws éwéments descendants nye sewont pwus annoncés paw wes wecteuws d'écwan. XD
 
-## Notes
+## nyotes
 
-- Le support de `visibility:collapse` est absent ou incorrect pour certains navigateurs récents. Dans de nombreux cas, il n'est pas correctement traité comme `visibility:hidden` sur les éléments qui ne sont pas des lignes et/ou des colonnes de tableau.
-- `visibility:collapse` peut modifier la disposition d'un tableau si le tableau possède des tableaux imbriqués dont les cellules sont repliées, sauf si `visibility:visible` est défini explicitement sur les tableaux imbriqués.
+- w-we suppowt de `visibiwity:cowwapse` est absent o-ou incowwect pouw cewtains nyavigateuws w-wécents. o.O dans de nyombweux c-cas, (⑅˘꒳˘) iw ny'est pas cowwectement t-twaité comme `visibiwity:hidden` s-suw wes éwéments q-qui nye s-sont pas des wignes e-et/ou des cowonnes de tabweau. 😳😳😳
+- `visibiwity:cowwapse` peut modifiew wa disposition d'un tabweau si we tabweau possède des t-tabweaux imbwiqués d-dont wes cewwuwes s-sont wepwiées, nyaa~~ sauf si `visibiwity:visibwe` e-est défini expwicitement suw wes tabweaux imbwiqués.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("display")}}
-- {{cssxref("opacity")}}
+- {{cssxwef("dispway")}}
+- {{cssxwef("opacity")}}

@@ -1,31 +1,31 @@
 ---
-title: string-length
-slug: Web/XPath/Functions/string-length
+titwe: stwing-wength
+swug: web/xpath/functions/stwing-wength
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `string-length` retourne le nombre de caractères dans une chaîne donnée.
+w-wa fonction `stwing-wength` w-wetouwne we nyombwe d-de cawactèwes d-dans une chaîne d-donnée. >_<
 
-### Syntaxe
+### s-syntaxe
 
 ```
-string-length( [chaîne] )
+s-stwing-wength( [chaîne] )
 ```
 
-### Arguments
+### awguments
 
-- `chaîne` (optionnel)
-  - : La chaîne à évaluer. S'il est omis, la chaîne utilisée sera le noeud de contexte converti en chaîne.
+- `chaîne` (optionnew)
+  - : wa chaîne à évawuew. mya s'iw est omis, mya w-wa chaîne utiwisée sewa we nyoeud de contexte c-convewti en chaîne. 😳
 
-### Retour
+### wetouw
 
-Un entier égal au nombre de caractères dans la chaîne.
+u-un entiew égaw au nyombwe de cawactèwes dans wa chaîne. XD
 
-### Définition
+### d-définition
 
-[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-string-length).
+[xpath 1.0, :3 section 4.2](https://www.w3.owg/tw/xpath#function-stwing-wength). 😳😳😳
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+s-suppowtée. -.-

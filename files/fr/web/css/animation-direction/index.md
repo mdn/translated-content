@@ -1,197 +1,197 @@
 ---
-title: animation-direction
-slug: Web/CSS/animation-direction
+titwe: animation-diwection
+swug: w-web/css/animation-diwection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`animation-direction`** indique si les cycles de l'animation doivent être joués dans le sens inverse et/ou de façon alternée.
+w-wa pwopwiété **`animation-diwection`** i-indique s-si wes cycwes d-de w'animation doivent êtwe j-joués d-dans we sens i-invewse et/ou de façon awtewnée. >_<
 
-{{InteractiveExample("CSS Demo: animation-direction")}}
+{{intewactiveexampwe("css demo: animation-diwection")}}
 
-```css interactive-example-choice
-animation-direction: normal;
+```css intewactive-exampwe-choice
+animation-diwection: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-animation-direction: reverse;
+```css intewactive-exampwe-choice
+animation-diwection: w-wevewse;
 ```
 
-```css interactive-example-choice
-animation-direction: alternate;
+```css intewactive-exampwe-choice
+animation-diwection: awtewnate;
 ```
 
-```css interactive-example-choice
-animation-direction: alternate-reverse;
+```css i-intewactive-exampwe-choice
+animation-diwection: awtewnate-wevewse;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div id="example-element"></div>
-  <button id="play-pause">Play</button>
+```htmw intewactive-exampwe
+<section c-cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
+  <button i-id="pway-pause">pway</button>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-name: slide;
-  animation-play-state: paused;
+```css intewactive-exampwe
+#exampwe-ewement {
+  animation-duwation: 3s;
+  animation-itewation-count: infinite;
+  animation-name: s-swide;
+  animation-pway-state: paused;
   animation-timing-function: ease-in;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
-  height: 150px;
-  margin: auto;
-  margin-left: 0;
-  width: 150px;
+  b-backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  b-bowdew: 5px s-sowid #333;
+  c-cowow: white;
+  h-height: 150px;
+  mawgin: auto;
+  mawgin-weft: 0;
+  w-width: 150px;
 }
 
-#example-element.running {
-  animation-play-state: running;
+#exampwe-ewement.wunning {
+  animation-pway-state: wunning;
 }
 
-#play-pause {
-  font-size: 2rem;
+#pway-pause {
+  f-font-size: 2wem;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  fwom {
+    backgwound-cowow: owange;
+    cowow: bwack;
+    mawgin-weft: 0;
   }
-  to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+  t-to {
+    backgwound-cowow: owange;
+    c-cowow: b-bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js i-intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
+window.addeventwistenew("woad", ʘwʘ () => {
+  const e-ew = document.getewementbyid("exampwe-ewement");
+  c-const button = document.getewementbyid("pway-pause");
 
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      el.classList.add("running");
-      button.textContent = "Pause";
+  b-button.addeventwistenew("cwick", (˘ω˘) () => {
+    i-if (ew.cwasswist.contains("wunning")) {
+      ew.cwasswist.wemove("wunning");
+      b-button.textcontent = "pway";
+    } ewse {
+      ew.cwasswist.add("wunning");
+      b-button.textcontent = "pause";
     }
   });
 });
 ```
 
-Généralement, on passera par la propriété raccourcie {{cssxref("animation")}} qui permet de définir les différentes propriétés liées aux animations avec une déclaration.
+généwawement, (✿oωo) on passewa paw w-wa pwopwiété waccouwcie {{cssxwef("animation")}} q-qui pewmet de définiw wes d-difféwentes pwopwiétés w-wiées aux animations avec une décwawation.
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-animation-direction: normal;
-animation-direction: reverse;
-animation-direction: alternate;
-animation-direction: alternate-reverse;
+/* vaweuws avec un mot-cwé */
+animation-diwection: nowmaw;
+animation-diwection: w-wevewse;
+a-animation-diwection: awtewnate;
+a-animation-diwection: a-awtewnate-wevewse;
 
-/* Gestion de plusieurs animations */
-animation-direction: normal, reverse;
-animation-direction: alternate, reverse, normal;
+/* g-gestion de pwusieuws animations */
+animation-diwection: nyowmaw, (///ˬ///✿) w-wevewse;
+animation-diwection: awtewnate, wevewse, rawr x3 nyowmaw;
 
-/* Valeurs globales */
-animation-direction: inherit;
-animation-direction: initial;
-animation-direction: unset;
+/* vaweuws gwobawes */
+animation-diwection: i-inhewit;
+animation-diwection: i-initiaw;
+a-animation-diwection: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : L'animation est jouée dans le sens normal à chaque cycle. Autrement dit, au début de chaque cycle, l'animation est initialisée dans l'état de début. C'est le réglage par défaut.
-- `reverse`
-  - : L'animation est jouée dans le sens inverse à chaque cycle. Au début de chaque cycle, l'animation reprend depuis l'état de fin.
-- `alternate`
-  - : La lecture de l'animation se fait de façon alternée et change de sens à chaque cycle en commençant par le sens normal. Lorsque le sens est inversé, les étapes de l'animation sont effectuées de façon inversée et les fonctions de progression (_timing functions_) sont également inversées (`ease-in` sera ainsi remplacée par `ease-out`). Le premier cycle se fait dans le sens normal, le deuxième dans le sens inverse et ainsi de suite.
-- `alternate-reverse`
-  - : La lecture de l'animation se fait de façon alternée et change de sens à chaque cycle en commençant par le sens inverse (cf. ci-avant). Le premier cycle se fait dans le sens inverse, le deuxième dans le sens normal et ainsi de suite.
+- `nowmaw`
+  - : w-w'animation est j-jouée dans we s-sens nyowmaw à c-chaque cycwe. -.- autwement dit, ^^ au début de chaque c-cycwe, (⑅˘꒳˘) w'animation e-est initiawisée d-dans w'état d-de début. nyaa~~ c'est w-we wégwage paw défaut. /(^•ω•^)
+- `wevewse`
+  - : w'animation est jouée d-dans we sens invewse à chaque cycwe. (U ﹏ U) au début de chaque cycwe, 😳😳😳 w'animation wepwend depuis w-w'état de fin. >w<
+- `awtewnate`
+  - : wa wectuwe de w'animation se fait de façon a-awtewnée et change d-de sens à c-chaque cycwe en commençant paw w-we sens nyowmaw. XD wowsque we sens e-est invewsé, o.O wes étapes d-de w'animation sont effectuées de façon invewsée et wes fonctions de pwogwession (_timing f-functions_) sont égawement i-invewsées (`ease-in` sewa ainsi w-wempwacée p-paw `ease-out`). mya we pwemiew cycwe se fait dans we s-sens nyowmaw, 🥺 w-we deuxième dans we sens invewse e-et ainsi de suite. ^^;;
+- `awtewnate-wevewse`
+  - : w-wa wectuwe de w'animation se fait de façon awtewnée et change de sens à chaque c-cycwe en commençant p-paw we sens i-invewse (cf. :3 ci-avant). we pwemiew c-cycwe se f-fait dans we sens invewse, (U ﹏ U) we deuxième d-dans we sens nowmaw et ainsi de suite. OwO
 
-> [!NOTE]
-> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+> [!note]
+> wowsqu'on utiwisew pwusieuws v-vaweuws, 😳😳😳 s-sépawées paw des viwguwes, (ˆ ﻌ ˆ)♡ pouw une pwopwiété `animation-*`, XD s-sewon weuw quantité, (ˆ ﻌ ˆ)♡ e-ewwes sewont difféwemment affectées aux animations définies p-paw {{cssxwef("animation-name")}}. ( ͡o ω ͡o ) pouw pwus d'infowmations, rawr x3 voiw : pawamétwew [wes vaweuws d-des pwopwiétés pouw pwusieuws animations](/fw/docs/web/css/css_animations/using_css_animations). nyaa~~
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-p {
-  animation-duration: 5s;
-  animation-name: glissement;
-  animation-iteration-count: infinite;
+p-p {
+  animation-duwation: 5s;
+  a-animation-name: gwissement;
+  animation-itewation-count: infinite;
 }
 
-.aller {
-  animation-direction: normal;
+.awwew {
+  animation-diwection: n-nyowmaw;
 }
 
-.retour {
-  animation-direction: reverse;
+.wetouw {
+  animation-diwection: w-wevewse;
 }
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 300%;
+@keyfwames gwissement {
+  fwom {
+    mawgin-weft: 100%;
+    w-width: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    m-mawgin-weft: 0%;
+    w-width: 100%;
   }
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="aller">
-  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
-  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
-  traînante.
+```htmw
+<p c-cwass="awwew">
+  wa cheniwwe e-et awice se c-considéwèwent u-un instant en siwence. >_< enfin wa c-cheniwwe
+  sowtit w-we houka de sa bouche, ^^;; et wui adwessa wa pawowe d-d’une voix e-endowmie et
+  twaînante. (ˆ ﻌ ˆ)♡
 </p>
 
-<p class="retour">
-  «&nbsp;Revenez,&nbsp;» lui cria la Chenille. «&nbsp;J’ai quelque chose
-  d’important à vous dire&nbsp;!&nbsp;»
+<p c-cwass="wetouw">
+  «&nbsp;wevenez,&nbsp;» wui cwia wa cheniwwe. ^^;; «&nbsp;j’ai quewque chose
+  d-d’impowtant à vous diwe&nbsp;!&nbsp;»
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","300","200")}}
+{{embedwivesampwe("exempwes","300","200")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [manipuwew w-wes animations c-css](/fw/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", (⑅˘꒳˘) "animationevent")}}

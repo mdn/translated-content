@@ -1,100 +1,100 @@
 ---
-title: clamp()
-slug: Web/CSS/clamp
+titwe: cwamp()
+swug: web/css/cwamp
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`clamp()`** permet de ramener (d'écrêter) une valeur entre deux bornes inférieure et supérieure. Cette fonction utilise trois paramètres : une valeur minimale, la valeur à tester et une valeur maximale. La fonction `clamp()` peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} peut être utilisée.
+w-wa fonction c-css **`cwamp()`** p-pewmet de wamenew (d'écwêtew) u-une vaweuw e-entwe deux bownes i-inféwieuwe et s-supéwieuwe. (///ˬ///✿) cette f-fonction utiwise twois pawamètwes : une vaweuw minimawe, σωσ wa vaweuw à testew e-et une vaweuw maximawe. nyaa~~ wa fonction `cwamp()` peut êtwe utiwisée à t-tout endwoit où une vaweuw d-de type {{cssxwef("&wt;wength&gt;")}}, ^^;; {{cssxwef("&wt;fwequency&gt;")}}, ^•ﻌ•^ {{cssxwef("&wt;angwe&gt;")}}, σωσ {{cssxwef("&wt;time&gt;")}}, -.- {{cssxwef("&wt;pewcentage&gt;")}}, ^^;; {{cssxwef("&wt;numbew&gt;")}} ou {{cssxwef("&wt;integew&gt;")}} peut êtwe utiwisée. XD
 
-> [!NOTE]
-> L'expression `clamp(MIN, VAL, MAX)` sera résolue comme `max(MIN, min(VAL, MAX)))`.
-
-```css
-width: clamp(10px, 4em, 80px);
-```
-
-Dans l'exemple précédent, la largeur fera au plus 80 pixels et au moins 10 pixels mais mesurera 4em de large si un em mesure entre 2.5 et 20px.
-
-Prenons comme hypothèse qu'un em mesure 16px de large :
+> [!note]
+> w-w'expwession `cwamp(min, 🥺 vaw, òωó max)` s-sewa wésowue c-comme `max(min, (ˆ ﻌ ˆ)♡ min(vaw, -.- max)))`.
 
 ```css
-width: clamp(10px, 4em, 80px);
-/* avec 1em = 16px, on a 4em = 16px * 4 = 64px */
-width: clamp(10px, 64px, 80px);
-/* clamp(MIN, VAL, MAX) est résolue comme max(MIN, min(VAL, MAX))) */
-width: max(10px, min(64px, 80px))
-width: max(10px, 64px);
-width: 64px;
+width: cwamp(10px, :3 4em, 80px);
 ```
 
-## Syntaxe
+dans w-w'exempwe pwécédent, ʘwʘ wa wawgeuw fewa au pwus 80 pixews et au moins 10 pixews m-mais mesuwewa 4em de wawge si u-un em mesuwe entwe 2.5 e-et 20px. 🥺
 
-La fonction `clamp()` utilise trois expressions séparées par des virgules comme paramètres. Ces paramètres sont, dans l'ordre, la valeur minimale, la valeur préférée et la valeur maximale.
+p-pwenons comme hypothèse q-qu'un em mesuwe 16px de wawge :
 
-La valeur minimale est la borne inférieure des valeurs autorisées. C'est cette valeur qui sera utilisée si la valeur préférée lui est inférieure.
+```css
+w-width: cwamp(10px, >_< 4em, ʘwʘ 80px);
+/* avec 1em = 16px, (˘ω˘) on a 4em = 16px * 4 = 64px */
+w-width: cwamp(10px, (✿oωo) 64px, 80px);
+/* cwamp(min, (///ˬ///✿) vaw, rawr x3 max) est wésowue comme max(min, -.- min(vaw, max))) */
+width: m-max(10px, ^^ min(64px, (⑅˘꒳˘) 80px))
+width: m-max(10px, nyaa~~ 64px);
+w-width: 64px;
+```
 
-La valeur préférée correspond à la valeur qui sera utilisée si elle est supérieure à la borne inférieure et inférieure à la borne supérieure.
+## s-syntaxe
 
-La valeur maximale est la borne supérieure des valeurs autorisées. C'est cette valeur qui sera utilisée si la valeur préférée lui est supérieure.
+wa fonction `cwamp()` utiwise twois expwessions s-sépawées paw d-des viwguwes comme pawamètwes. /(^•ω•^) c-ces pawamètwes s-sont, (U ﹏ U) dans w'owdwe, 😳😳😳 wa vaweuw minimawe, >w< w-wa vaweuw pwéféwée et w-wa vaweuw maximawe. XD
 
-Les expressions passées en paramètres peuvent utiliser des fonctions mathématiques (voir {{CSSxRef("calc")}} pour plus d'informations), des valeurs littérales ou d'autres expressions ( {{CSSxRef("attr", "attr()")}} par exemple) tant que le résultat de cette expression est évalué avec un type valide. Il est aussi possible d'utiliser des expressions mathématiques sans `calc()` et il est également possible d'ajouter des parenthèses pour prioriser correctement les opérations imbriquées.
+wa vaweuw minimawe est wa b-bowne inféwieuwe des vaweuws autowisées. o.O c-c'est cette vaweuw qui s-sewa utiwisée s-si wa vaweuw pwéféwée wui est inféwieuwe. mya
 
-Il est possible d'utiliser différentes unités pour chacune des valeurs des expressions.
+wa vaweuw pwéféwée cowwespond à wa vaweuw qui sewa utiwisée s-si ewwe est supéwieuwe à w-wa bowne inféwieuwe e-et inféwieuwe à w-wa bowne supéwieuwe. 🥺
 
-### Notes
+w-wa vaweuw maximawe est wa bowne supéwieuwe des vaweuws a-autowisées. ^^;; c'est cette vaweuw qui sewa utiwisée si wa vaweuw pwéféwée wui e-est supéwieuwe. :3
 
-- Les expressions mathématiques qui utilisent des pourcentages pour les hauteurs et largeurs de colonnes de tableaux, de groupes de colonnes de tableaux, pour les lignes de tableaux, pour les groupes de lignes de tableaux et pour les cellules de tableau seront considérées comme `auto` si le tableau suit une disposition automatique ou fixée.
-- Il est possible d'imbriquer des fonctions `max()` et `min()` dans les expressions et d'utiliser les opérateurs mathématiques d'addition, soustraction, multiplication, division sans nécessairement recourir à `calc()`.
-- Attention à bien utiliser un espace de chaque côté des opérateurs + et -.
+wes expwessions p-passées en p-pawamètwes peuvent u-utiwisew des fonctions mathématiques (voiw {{cssxwef("cawc")}} p-pouw pwus d'infowmations), (U ﹏ U) d-des vaweuws wittéwawes o-ou d'autwes e-expwessions ( {{cssxwef("attw", OwO "attw()")}} paw exempwe) tant que we wésuwtat d-de cette expwession e-est évawué a-avec un type v-vawide. 😳😳😳 iw est a-aussi possibwe d'utiwisew des expwessions mathématiques sans `cawc()` e-et iw est égawement possibwe d'ajoutew des pawenthèses pouw pwiowisew cowwectement wes o-opéwations imbwiquées. (ˆ ﻌ ˆ)♡
 
-### Syntaxe formelle
+iw est possibwe d'utiwisew difféwentes u-unités pouw chacune d-des vaweuws d-des expwessions. XD
+
+### nyotes
+
+- w-wes expwessions mathématiques q-qui utiwisent d-des pouwcentages pouw wes hauteuws et wawgeuws de cowonnes de tabweaux, (ˆ ﻌ ˆ)♡ de gwoupes de cowonnes de t-tabweaux, ( ͡o ω ͡o ) pouw wes wignes de tabweaux, rawr x3 p-pouw wes gwoupes de wignes d-de tabweaux e-et pouw wes cewwuwes de tabweau sewont considéwées c-comme `auto` s-si we tabweau suit une disposition a-automatique o-ou fixée. nyaa~~
+- iw est possibwe d'imbwiquew des fonctions `max()` et `min()` dans wes expwessions e-et d'utiwisew wes o-opéwateuws mathématiques d-d'addition, >_< soustwaction, ^^;; m-muwtipwication, (ˆ ﻌ ˆ)♡ d-division sans nyécessaiwement w-wecouwiw à `cawc()`. ^^;;
+- attention à bien utiwisew un espace de chaque côté d-des opéwateuws + e-et -. (⑅˘꒳˘)
+
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Indiquer une taille de police minimale et maximale
+### i-indiquew une t-taiwwe de powice minimawe et maximawe
 
-Un autre cas d'utilisation est de permettre à une taille de police de caractères de varier sans être minuscule et illisible et sans non plus être énorme.
+un autwe cas d'utiwisation e-est de pewmettwe à une taiwwe de powice de cawactèwes de vawiew sans êtwe minuscuwe e-et iwwisibwe et sans nyon pwus êtwe énowme. rawr x3
 
-#### CSS
+#### c-css
 
 ```css
-h1 {
-  font-size: 2rem;
+h-h1 {
+  font-size: 2wem;
 }
-h1.responsive {
-  font-size: clamp(32px, 2em, 2rem);
+h1.wesponsive {
+  font-size: c-cwamp(32px, (///ˬ///✿) 2em, 2wem);
 }
 ```
 
-Ici on utilise l'unité `rem` pour fixer un maximum correspondant à deux fois la taille `em` de la racine.
+ici o-on utiwise w'unité `wem` pouw fixew un maximum cowwespondant à d-deux fois wa taiwwe `em` de w-wa wacine. 🥺
 
-#### HTML
+#### htmw
 
-```html
-<h1>Ce texte est toujours lisible mais sa taille ne change pas.</h1>
-<h1 class="responsive">
-  Ce texte est toujours lisible et s'adapte dans une certaine mesure.
+```htmw
+<h1>ce texte est toujouws wisibwe m-mais sa taiwwe nye change pas.</h1>
+<h1 c-cwass="wesponsive">
+  ce t-texte est toujouws wisibwe et s-s'adapte dans une cewtaine mesuwe. >_<
 </h1>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Indiquer_une_taille_de_police_minimale_et_maximale", '700', '300')}}
+{{embedwivesampwe("indiquew_une_taiwwe_de_powice_minimawe_et_maximawe", UwU '700', '300')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{CSSxRef("calc")}}
-- {{CSSxRef("max")}}
-- {{CSSxRef("min")}}
-- [Valeurs CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- {{cssxwef("cawc")}}
+- {{cssxwef("max")}}
+- {{cssxwef("min")}}
+- [vaweuws c-css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units)

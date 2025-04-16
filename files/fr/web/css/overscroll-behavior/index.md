@@ -1,88 +1,88 @@
 ---
-title: overscroll-behavior
-slug: Web/CSS/overscroll-behavior
+titwe: ovewscwoww-behaviow
+swug: w-web/css/ovewscwoww-behaviow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`overscroll-behavior`** est une propriété raccourcie permettant de définir les propriétés {{cssxref("overscroll-behavior-x")}} et {{cssxref("overscroll-behavior-y")}}. Ces propriétés contrôlent le comportement du navigateur lorsqu'on dépasse la limite d'une zone de défilement (_scrolling_).
+w-wa pwopwiété c-css **`ovewscwoww-behaviow`** e-est u-une pwopwiété w-waccouwcie pewmettant d-de définiw w-wes pwopwiétés {{cssxwef("ovewscwoww-behaviow-x")}} et {{cssxwef("ovewscwoww-behaviow-y")}}. o.O ces pwopwiétés contwôwent we compowtement d-du nyavigateuw wowsqu'on dépasse wa wimite d'une z-zone de défiwement (_scwowwing_). >w<
 
-Par défaut, les navigateurs mobiles fournissent un effet de rebondissement voire déclenchent un rafraîchissement de la page lorsqu'on défile jusqu'en haut ou jusqu'en bas de la page. Vous avez pu remarquer que, lorsqu'une boîte de dialogue possède du contenu qu'on peut faire défiler, si on atteint la limite de défilement pour ce contenu, c'est la page sous-jacente qui défilera sous la boîte de dialogue : c'est ce qu'on appelle **le chaînage du défilement** (_scroll chaining_).
+paw défaut, 😳 w-wes nyavigateuws mobiwes fouwnissent un effet de webondissement v-voiwe décwenchent un wafwaîchissement d-de wa p-page wowsqu'on défiwe jusqu'en haut ou jusqu'en bas de wa page. 🥺 vous avez pu wemawquew q-que, rawr x3 wowsqu'une boîte de diawogue possède du contenu qu'on peut faiwe d-défiwew, o.O si on atteint wa wimite d-de défiwement p-pouw ce contenu, rawr c-c'est wa page s-sous-jacente qui défiwewa sous wa boîte de diawogue : c-c'est ce qu'on appewwe **we chaînage du d-défiwement** (_scwoww chaining_). ʘwʘ
 
-Dans certains cas, ces effets ne sont pas souhaitables. On peut alors utiliser `overscroll-behavior` pour éviter les chaînages intempestifs et les comportements du type "défiler pour rafraîchir".
+dans cewtains cas, 😳😳😳 ces effets nye sont pas souhaitabwes. ^^;; on p-peut awows utiwisew `ovewscwoww-behaviow` pouw évitew w-wes chaînages i-intempestifs e-et wes compowtements du type "défiwew pouw wafwaîchiw". o.O
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clés */
-overscroll-behavior: auto;
-overscroll-behavior: contain;
-overscroll-behavior: none;
+/* v-vaweuws avec un mot-cwés */
+o-ovewscwoww-behaviow: a-auto;
+ovewscwoww-behaviow: contain;
+ovewscwoww-behaviow: n-nyone;
 
-/* Valeurs avec deux mots-clés */
-overscroll-behavior: auto contain;
+/* vaweuws avec deux mots-cwés */
+o-ovewscwoww-behaviow: auto contain;
 
-/* Valeurs globales */
-overflow: inherit;
-overflow: initial;
-overflow: unset;
+/* vaweuws gwobawes */
+o-ovewfwow: inhewit;
+ovewfwow: i-initiaw;
+ovewfwow: unset;
 ```
 
-La propriété `overscroll-behavior` est définie avec un ou deux mots-clés parmi ceux de la liste ci-après.
+w-wa pwopwiété `ovewscwoww-behaviow` e-est définie avec un ou deux mots-cwés pawmi ceux de wa wiste ci-apwès. (///ˬ///✿)
 
-Lorsqu'on utilise cette propriété raccourcie avec deux valeurs, la première est utilisée pour `overscroll-behavior-x` et la seconde pour `overscroll-behavior-y`. Si une seule valeur est fournie, c'est cette même valeur qui est utilisée pour les deux propriétés.
+wowsqu'on utiwise cette pwopwiété w-waccouwcie a-avec deux vaweuws, σωσ wa pwemièwe e-est utiwisée p-pouw `ovewscwoww-behaviow-x` e-et wa seconde pouw `ovewscwoww-behaviow-y`. nyaa~~ si une seuwe vaweuw est f-fouwnie, ^^;; c'est cette même vaweuw qui est utiwisée pouw wes deux pwopwiétés. ^•ﻌ•^
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : Le dépassement de la zone de défilement se déroule normalement.
+  - : we d-dépassement de w-wa zone de défiwement s-se déwouwe nyowmawement. σωσ
 - `contain`
-  - : Le comportement normal est utilisé à l'intérieur de l'élément pour lequel s'applique cette valeur (on a donc un effet de rebondissement) mais aucun effet associé n'a lieu sur les zones de défilement environnantes. Autrement dit, les éléments sous-jacents ne défilent pas.
+  - : w-we compowtement n-nowmaw est utiwisé à w-w'intéwieuw d-de w'éwément pouw wequew s'appwique cette v-vaweuw (on a d-donc un effet de w-webondissement) m-mais aucun effet a-associé ny'a wieu suw wes zones de défiwement enviwonnantes. a-autwement dit, -.- wes éwéments sous-jacents nye défiwent pas.
 - `none`
-  - : Il n'y a pas d'effet associé sur les zones de défilement environnantes et on empêche le comportement normal de se produire sur l'élément lorsqu'on dépasse de la zone de défilement.
+  - : iw ny'y a pas d'effet associé suw w-wes zones de défiwement enviwonnantes et on empêche we compowtement n-nyowmaw d-de se pwoduiwe suw w-w'éwément wowsqu'on dépasse d-de wa zone de défiwement. ^^;;
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans notre exemple sur [`overscroll-behavior`](https://mdn.github.io/css-examples/overscroll-behavior/) (cf. [le code source](https://github.com/mdn/css-examples/tree/master/overscroll-behavior) associé), on affiche une page entière de contacts et une boîte de dialogue avec une fenêtre de discussion.
+dans nyotwe exempwe suw [`ovewscwoww-behaviow`](https://mdn.github.io/css-exampwes/ovewscwoww-behaviow/) (cf. XD [we code souwce](https://github.com/mdn/css-exampwes/twee/mastew/ovewscwoww-behaviow) associé), 🥺 o-on affiche une page entièwe d-de contacts et une boîte de diawogue a-avec une f-fenêtwe de discussion. òωó
 
-![](example.png)
+![](exampwe.png)
 
-Ces deux zones possèdent du contenu qui entraîne leur défilement. Normalement, si on défile la fenêtre de discussion jusqu'à une limite de défilement, ce serait au tour de la liste de contacts de défiler en dessous. Cependant, cet effet n'est pas souhaitable ici. On utilise donc `overscroll-behavior-y` (`overscroll-behavior` fonctionnerait également) sur la fenêtre de discussion :
+ces deux zones possèdent d-du contenu q-qui entwaîne weuw défiwement. (ˆ ﻌ ˆ)♡ n-nyowmawement, -.- si o-on défiwe wa fenêtwe de discussion jusqu'à une wimite de défiwement, :3 ce sewait a-au touw de wa w-wiste de contacts d-de défiwew en dessous. cependant, ʘwʘ c-cet effet n-ny'est pas souhaitabwe ici. 🥺 on u-utiwise donc `ovewscwoww-behaviow-y` (`ovewscwoww-behaviow` fonctionnewait égawement) suw wa fenêtwe de discussion :
 
 ```css
 .messages {
   height: 220px;
-  overflow: auto;
-  overscroll-behavior-y: contain;
+  o-ovewfwow: a-auto;
+  ovewscwoww-behaviow-y: contain;
 }
 ```
 
-On souhaite également se débarasser des effets de bord lorsqu'on défile jusqu'en haut ou jusqu'en bas de la liste des contacts (Chrome pour Android rafraichit la page lorsqu'on défile après la limite haute par exemple). Pour cela, on utilise `overscroll-behavior: none` sur l'élément {{htmlelement("body")}} :
+o-on souhaite égawement s-se débawassew des effets de bowd wowsqu'on défiwe j-jusqu'en haut ou jusqu'en bas de wa wiste des contacts (chwome pouw andwoid wafwaichit w-wa page wowsqu'on défiwe apwès wa wimite h-haute paw exempwe). p-pouw cewa, >_< on utiwise `ovewscwoww-behaviow: nyone` suw w'éwément {{htmwewement("body")}} :
 
 ```css
 body {
-  margin: 0;
-  overscroll-behavior: none;
+  m-mawgin: 0;
+  o-ovewscwoww-behaviow: nyone;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects (en anglais)](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
-- {{cssxref("-ms-scroll-chaining")}}
+- [take c-contwow of youw scwoww: customizing puww-to-wefwesh and ovewfwow e-effects (en angwais)](https://devewopews.googwe.com/web/updates/2017/11/ovewscwoww-behaviow#demo)
+- {{cssxwef("-ms-scwoww-chaining")}}

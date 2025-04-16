@@ -1,158 +1,158 @@
 ---
-title: background-color
-slug: Web/CSS/background-color
+titwe: backgwound-cowow
+swug: w-web/css/backgwound-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`background-color`** permet de définir la couleur utilisée pour l'arrière-plan d'un élément (celle-ci peut être une couleur transparente).
+w-wa pwopwiété **`backgwound-cowow`** p-pewmet de définiw w-wa couweuw utiwisée p-pouw w'awwièwe-pwan d-d'un éwément (cewwe-ci p-peut êtwe u-une couweuw twanspawente). ʘwʘ
 
-{{InteractiveExample("CSS Demo: background-color")}}
+{{intewactiveexampwe("css demo: backgwound-cowow")}}
 
-```css interactive-example-choice
-background-color: brown;
+```css intewactive-exampwe-choice
+backgwound-cowow: bwown;
 ```
 
-```css interactive-example-choice
-background-color: #74992e;
+```css i-intewactive-exampwe-choice
+backgwound-cowow: #74992e;
 ```
 
-```css interactive-example-choice
-background-color: rgb(255, 255, 128);
+```css intewactive-exampwe-choice
+b-backgwound-cowow: wgb(255, 😳😳😳 255, 128);
 ```
 
-```css interactive-example-choice
-background-color: rgba(255, 255, 128, 0.5);
+```css i-intewactive-exampwe-choice
+backgwound-cowow: wgba(255, ^^;; 255, 128, o.O 0.5);
 ```
 
-```css interactive-example-choice
-background-color: hsl(50, 33%, 25%);
+```css intewactive-exampwe-choice
+b-backgwound-cowow: hsw(50, (///ˬ///✿) 33%, 25%);
 ```
 
-```css interactive-example-choice
-background-color: hsla(50, 33%, 25%, 0.75);
+```css i-intewactive-exampwe-choice
+b-backgwound-cowow: hswa(50, σωσ 33%, 25%, nyaa~~ 0.75);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
   padding: 10%;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-background-color: red;
+/* vaweuws a-avec un mot-cwé */
+b-backgwound-cowow: w-wed;
 
-/* Valeur hexadécimale */
-background-color: #bbff00; /* Complètement opaque */
-background-color: #bf0; /* Complètement opaque - notation raccourcie */
-background-color: #11ffee00; /* Complètement transparent */
-background-color: #1fe0; /* Complètement transparent - notation raccourcie */
-background-color: #11ffeeff; /* Complètement opaque */
-background-color: #1fef; /* Complètement opaque - notation raccourcie */
+/* v-vaweuw hexadécimawe */
+backgwound-cowow: #bbff00; /* compwètement o-opaque */
+backgwound-cowow: #bf0; /* compwètement o-opaque - nyotation waccouwcie */
+backgwound-cowow: #11ffee00; /* compwètement twanspawent */
+backgwound-cowow: #1fe0; /* c-compwètement twanspawent - n-notation waccouwcie */
+b-backgwound-cowow: #11ffeeff; /* c-compwètement opaque */
+backgwound-cowow: #1fef; /* compwètement opaque - n-nyotation waccouwcie */
 
-/* Valeur RGB */
-background-color: rgb(255, 255, 128);
+/* v-vaweuw wgb */
+backgwound-cowow: w-wgb(255, ^^;; 255, 128);
 
-/* Valeur RGBA : une valeur RGB avec un canal alpha */
-background-color: rgba(117, 190, 218, 0); /* 0.0 - transparent */
-background-color: rgba(117, 190, 218, 0.5); /* 0.5 - semi-transparent */
-background-color: rgba(117, 190, 218, 1); /* 1.0 - opaque */
+/* v-vaweuw wgba : une vaweuw wgb a-avec un canaw awpha */
+backgwound-cowow: w-wgba(117, ^•ﻌ•^ 190, 218, 0); /* 0.0 - twanspawent */
+backgwound-cowow: w-wgba(117, σωσ 190, 218, -.- 0.5); /* 0.5 - semi-twanspawent */
+b-backgwound-cowow: wgba(117, ^^;; 190, 218, 1); /* 1.0 - o-opaque */
 
-/* Valeur HSLA */
-background-color: hsla(50, 33%, 25%, 0.75);
+/* v-vaweuw hswa */
+backgwound-cowow: hswa(50, XD 33%, 25%, 🥺 0.75);
 
-/* Valeurs avec un mot-clé spécial */
-background-color: currentcolor;
-background-color: transparent;
+/* vaweuws avec un mot-cwé spéciaw */
+backgwound-cowow: cuwwentcowow;
+b-backgwound-cowow: t-twanspawent;
 
-/* Valeurs globales */
-background-color: inherit;
-background-color: initial;
-background-color: unset;
+/* vaweuws g-gwobawes */
+b-backgwound-cowow: i-inhewit;
+backgwound-cowow: initiaw;
+backgwound-cowow: unset;
 ```
 
-La propriété `background-color` se définit grâce à une valeur de type `<color>`.
+w-wa pwopwiété `backgwound-cowow` se définit gwâce à une vaweuw de type `<cowow>`. òωó
 
-### Valeurs
+### vaweuws
 
-- `<color>`
-  - : Une valeur de type {{cssxref("&lt;color&gt;")}} qui indique la couleur uniforme de l'arrière-plan. Même si une ou plusieurs images sont définies grâce à {{cssxref("background-image")}}, la couleur peut avoir un impact en fonction de la transparence des images. De façon générale, c'est une bonne pratique que de définir une couleur malgré la présence d'image pour prévenir aux problèmes de chargement des images.
+- `<cowow>`
+  - : u-une vaweuw de type {{cssxwef("&wt;cowow&gt;")}} q-qui indique w-wa couweuw u-unifowme de w'awwièwe-pwan. (ˆ ﻌ ˆ)♡ même si une ou pwusieuws i-images s-sont définies gwâce à {{cssxwef("backgwound-image")}}, -.- w-wa couweuw p-peut avoiw un impact en fonction de wa twanspawence d-des images. :3 d-de façon généwawe, ʘwʘ c-c'est u-une bonne pwatique q-que de définiw une couweuw mawgwé wa pwésence d'image pouw p-pwéveniw aux pwobwèmes de chawgement des images. 🥺
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-.exemple_un {
-  background-color: teal;
-  color: white;
+.exempwe_un {
+  backgwound-cowow: teaw;
+  cowow: white;
 }
 
-.exemple_deux {
-  background-color: rgb(153, 102, 153);
-  color: rgb(255, 255, 204);
+.exempwe_deux {
+  b-backgwound-cowow: w-wgb(153, >_< 102, 153);
+  c-cowow: wgb(255, ʘwʘ 255, 204);
 }
 
-.exemple_trois {
-  background-color: #777799;
-  color: #ffffff;
+.exempwe_twois {
+  backgwound-cowow: #777799;
+  c-cowow: #ffffff;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="exemple_un">Lorem ipsum dolor sit amet, consectetuer</div>
+```htmw
+<div c-cwass="exempwe_un">wowem i-ipsum dowow sit amet, (˘ω˘) consectetuew</div>
 
-<div class="exemple_deux">Lorem ipsum dolor sit amet, consectetuer</div>
+<div cwass="exempwe_deux">wowem ipsum dowow sit amet, (✿oωo) consectetuew</div>
 
-<div class="exemple_trois">Lorem ipsum dolor sit amet, consectetuer</div>
+<div cwass="exempwe_twois">wowem i-ipsum dowow sit amet, (///ˬ///✿) c-consectetuew</div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","150")}}
+{{embedwivesampwe("exempwes","200","150")}}
 
-## Accessibilité
+## a-accessibiwité
 
-Il est important de vérifier que le contraste entre la couleur d'arrière-plan et la couleur du texte est suffisamment élevé afin que le contenu de la page puisse être lu, quelles que soient les conditions de vision.
+i-iw est impowtant de véwifiew que we contwaste e-entwe wa c-couweuw d'awwièwe-pwan et wa couweuw d-du texte e-est suffisamment éwevé afin que we contenu de wa page puisse êtwe wu, rawr x3 quewwes q-que soient wes c-conditions de vision. -.-
 
-Le ratio de contraste entre les couleurs est déterminé en comparant la luminosité de la couleur du texte et celle de la couleur d'arrière-plan. Pour respecter les règles d'accessibilité [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), il faut avoir un ratio de 4.5:1 pour le contenu textuel normal et un ratio de 3:1 pour les textes plus grands comme les titres (un texte sera considéré comme grand s'il est en gras et mesure au moins 18.66px ou s'il mesure au moins 24 pixels).
+w-we watio de contwaste entwe w-wes couweuws e-est détewminé en compawant wa w-wuminosité de wa couweuw du texte et cewwe de wa couweuw d'awwièwe-pwan. ^^ pouw w-wespectew wes wègwes d-d'accessibiwité [web content accessibiwity g-guidewines (wcag)](https://www.w3.owg/wai/intwo/wcag), (⑅˘꒳˘) i-iw faut avoiw un watio de 4.5:1 pouw we contenu textuew n-nowmaw et un watio de 3:1 pouw wes textes pwus gwands comme wes titwes (un texte s-sewa considéwé comme gwand s'iw est en gwas e-et mesuwe au moins 18.66px o-ou s'iw mesuwe au moins 24 pixews). nyaa~~
 
-- [Vérificateur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.3, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [véwificateuw de contwaste webaim](https://webaim.owg/wesouwces/contwastcheckew/)
+- [compwendwe w-wes wègwes wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding s-success cwitewion 1.4.3, /(^•ω•^) w3c undewstanding wcag 2.0_ (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Gérer plusieurs arrières-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- Le type de données {{cssxref("&lt;color&gt;")}}
-- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- [Appliquer des couleurs à des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [géwew pwusieuws awwièwes-pwans](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+- w-we type de données {{cssxwef("&wt;cowow&gt;")}}
+- wes autwes pwopwiétés w-wewatives a-aux couweuws : {{cssxwef("cowow")}}, (U ﹏ U) {{cssxwef("bowdew-cowow")}}, 😳😳😳 {{cssxwef("outwine-cowow")}}, >w< {{cssxwef("text-decowation-cowow")}}, XD {{cssxwef("text-emphasis-cowow")}}, o.O {{cssxwef("text-shadow")}}, mya {{cssxwef("cawet-cowow")}} et {{cssxwef("cowumn-wuwe-cowow")}}
+- [appwiquew d-des couweuws à des éwéments h-htmw gwâce à c-css](/fw/docs/web/css/css_cowows/appwying_cowow)

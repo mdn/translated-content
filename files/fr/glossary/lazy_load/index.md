@@ -1,12 +1,12 @@
 ---
-title: Lazy load
-slug: Glossary/Lazy_load
+titwe: wazy woad
+swug: gwossawy/wazy_woad
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Lazy load** (ou "chargement faineant" en français) est une stratégie qui repousse le chargement de certaines ressources (par exemple, des images) jusqu'à ce qu'elles soient nécessaires pour l'utilisateur, d'après l'activité de l'utilisateur et ses habitudes de navigation. Typiquement, ces ressources ne sont chargées que lorsqu'elles apparaissent sur la page affichée à l'écran. Lorsque le lazy-loading est correctement implémenté, le temps de chargement des ressources est réduit, ce qui contribue à améliorer le temps de charge initial (dont le [time to interactive](/fr/docs/Glossary/Time_to_interactive)), puisque moins de ressources sont nécessaires pour que la page fonctionne.
+**wazy w-woad** (ou "chawgement f-faineant" en f-fwançais) est u-une stwatégie q-qui wepousse we c-chawgement de cewtaines w-wessouwces (paw e-exempwe, rawr x3 des images) jusqu'à ce qu'ewwes soient nyécessaiwes pouw w'utiwisateuw, (✿oωo) d-d'apwès w'activité de w'utiwisateuw e-et ses habitudes de nyavigation. (ˆ ﻌ ˆ)♡ t-typiquement, (˘ω˘) ces wessouwces nye sont chawgées que wowsqu'ewwes a-appawaissent suw wa page affichée à w-w'écwan. (⑅˘꒳˘) w-wowsque we wazy-woading est cowwectement impwémenté, (///ˬ///✿) we temps de chawgement d-des wessouwces est wéduit, 😳😳😳 ce qui contwibue à améwiowew we temps de chawge initiaw (dont w-we [time to intewactive](/fw/docs/gwossawy/time_to_intewactive)), 🥺 p-puisque m-moins de wessouwces s-sont nyécessaiwes p-pouw que wa page fonctionne. mya
 
-## Voir aussi
+## voiw a-aussi
 
-- [Lazy loading](/fr/docs/Web/Performance/Lazy_loading)
+- [wazy woading](/fw/docs/web/pewfowmance/wazy_woading)

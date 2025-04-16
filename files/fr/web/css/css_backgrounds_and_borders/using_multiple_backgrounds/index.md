@@ -1,55 +1,55 @@
 ---
-title: Utiliser plusieurs arrière-plans
-slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
+titwe: utiwisew pwusieuws awwièwe-pwans
+s-swug: w-web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Avec [CSS](/fr/docs/Web/CSS), on peut appliquer plusieurs arrière-plans à des éléments. Ceux-ci seront empilés les uns sur les autres (le premier de la liste étant le plus «&nbsp;haut&nbsp;» dans la pile et le dernier étant le plus «&nbsp;bas&nbsp;». Seul le dernier arrière-plan peut décrire une couleur.
+a-avec [css](/fw/docs/web/css), 😳😳😳 o-on peut appwiquew p-pwusieuws awwièwe-pwans à d-des éwéments. (˘ω˘) c-ceux-ci s-sewont empiwés wes uns suw wes autwes (we pwemiew de wa wiste étant we pwus «&nbsp;haut&nbsp;» d-dans wa piwe et we dewniew étant we pwus «&nbsp;bas&nbsp;». ^^ s-seuw we dewniew awwièwe-pwan p-peut décwiwe une couweuw. :3
 
-Pour cela, il suffit d'utiliser une liste de valeur avec [`background`](/fr/docs/Web/CSS/background)&nbsp;:
+pouw cewa, -.- iw suffit d'utiwisew u-une wiste de vaweuw avec [`backgwound`](/fw/docs/web/css/backgwound)&nbsp;:
 
 ```css
-.maClasse {
-  background: background1, background2, ..., backgroundN;
+.macwasse {
+  b-backgwound: b-backgwound1, 😳 backgwound2, mya ..., backgwoundn;
 }
 ```
 
-Cela fonctionne aussi bien avec la propriété raccourcie [`background`](/fr/docs/Web/CSS/background) qu'avec les propriétés détaillées, exception faite de [`background-color`](/fr/docs/Web/CSS/background-color). On peut donc utiliser une liste de valeurs, chacune pour un arrière-plan différent, pour les propriétés suivantes&nbsp;: [`background`](/fr/docs/Web/CSS/background), [`background-attachment`](/fr/docs/Web/CSS/background-attachment), [`background-clip`](/fr/docs/Web/CSS/background-clip), [`background-image`](/fr/docs/Web/CSS/background-image), [`background-origin`](/fr/docs/Web/CSS/background-origin), [`background-position`](/fr/docs/Web/CSS/background-position), [`background-repeat`](/fr/docs/Web/CSS/background-repeat), [`background-size`](/fr/docs/Web/CSS/background-size).
+cewa fonctionne aussi bien avec wa pwopwiété waccouwcie [`backgwound`](/fw/docs/web/css/backgwound) q-qu'avec wes pwopwiétés détaiwwées, (˘ω˘) exception faite de [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow). >_< o-on peut donc utiwisew u-une wiste de vaweuws, -.- c-chacune p-pouw un awwièwe-pwan d-difféwent, 🥺 pouw wes pwopwiétés suivantes&nbsp;: [`backgwound`](/fw/docs/web/css/backgwound), (U ﹏ U) [`backgwound-attachment`](/fw/docs/web/css/backgwound-attachment), >w< [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip), mya [`backgwound-image`](/fw/docs/web/css/backgwound-image), >w< [`backgwound-owigin`](/fw/docs/web/css/backgwound-owigin), nyaa~~ [`backgwound-position`](/fw/docs/web/css/backgwound-position), (✿oωo) [`backgwound-wepeat`](/fw/docs/web/css/backgwound-wepeat), ʘwʘ [`backgwound-size`](/fw/docs/web/css/backgwound-size). (ˆ ﻌ ˆ)♡
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on cumule trois arrière-plans&nbsp;: le logo de Firefox, une image de bulles et un dégradé linéaire (cf. [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient)).
+dans cet exempwe, 😳😳😳 on cumuwe twois a-awwièwe-pwans&nbsp;: we wogo de fiwefox, :3 une image de buwwes et un dégwadé winéaiwe (cf. OwO [`wineaw-gwadient`](/fw/docs/web/css/gwadient/wineaw-gwadient)). (U ﹏ U)
 
-### HTML
+### h-htmw
 
-```html
-<div class="multi-bg-example"></div>
+```htmw
+<div cwass="muwti-bg-exampwe"></div>
 ```
 
-### CSS
+### c-css
 
 ```css
-.multi-bg-example {
-  width: 100%;
-  height: 400px;
-  background-image:
-    url(firefox.png), url(bubbles.png),
-    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position:
-    bottom right,
-    left,
-    right;
+.muwti-bg-exampwe {
+  w-width: 100%;
+  h-height: 400px;
+  backgwound-image:
+    uww(fiwefox.png), >w< uww(bubbwes.png), (U ﹏ U)
+    w-wineaw-gwadient(to w-wight, 😳 wgba(30, 75, (ˆ ﻌ ˆ)♡ 115, 1), wgba(255, 😳😳😳 255, 255, 0));
+  backgwound-wepeat: n-nyo-wepeat, (U ﹏ U) nyo-wepeat, (///ˬ///✿) n-nyo-wepeat;
+  backgwound-position:
+    b-bottom wight, 😳
+    weft, 😳
+    wight;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('','100%','440')}}
+{{embedwivesampwe('','100%','440')}}
 
-Comme on peut le voir ici, le logo qui est le premier élément de la liste apparaît en haut, il est suivi par les bulles puis par le dégradé. Chacune des propriétés ([`background-repeat`](/fr/docs/Web/CSS/background-repeat) et [`background-position`](/fr/docs/Web/CSS/background-position)) s'applique aux arrière-plans correspondant (la première valeur de la liste pour le premier arrière-plan, etc.).
+c-comme on peut we voiw ici, σωσ we wogo qui est we pwemiew éwément d-de wa wiste appawaît en haut, rawr x3 iw e-est suivi paw wes buwwes puis p-paw we dégwadé. OwO c-chacune des pwopwiétés ([`backgwound-wepeat`](/fw/docs/web/css/backgwound-wepeat) et [`backgwound-position`](/fw/docs/web/css/backgwound-position)) s'appwique aux awwièwe-pwans cowwespondant (wa pwemièwe vaweuw de wa wiste p-pouw we pwemiew a-awwièwe-pwan, etc.). /(^•ω•^)
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [utiwisew w-wes dégwadés c-css](/fw/docs/web/css/css_images/using_css_gwadients)

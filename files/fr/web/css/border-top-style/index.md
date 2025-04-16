@@ -1,181 +1,181 @@
 ---
-title: border-top-style
-slug: Web/CSS/border-top-style
+titwe: bowdew-top-stywe
+swug: w-web/css/bowdew-top-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-top-style`** définit le style de ligne utilisé pour mettre en forme la bordure en haut d'une boîte.
+w-wa pwopwiété **`bowdew-top-stywe`** d-définit we stywe d-de wigne utiwisé p-pouw mettwe e-en fowme wa bowduwe e-en haut d'une b-boîte. 😳
 
-{{InteractiveExample("CSS Demo: border-top-style")}}
+{{intewactiveexampwe("css demo: bowdew-top-stywe")}}
 
-```css interactive-example-choice
-border-top-style: none;
+```css intewactive-exampwe-choice
+bowdew-top-stywe: nyone;
 ```
 
-```css interactive-example-choice
-border-top-style: dotted;
+```css i-intewactive-exampwe-choice
+bowdew-top-stywe: dotted;
 ```
 
-```css interactive-example-choice
-border-top-style: dashed;
+```css i-intewactive-exampwe-choice
+bowdew-top-stywe: d-dashed;
 ```
 
-```css interactive-example-choice
-border-top-style: solid;
+```css intewactive-exampwe-choice
+bowdew-top-stywe: sowid;
 ```
 
-```css interactive-example-choice
-border-top-style: groove;
+```css i-intewactive-exampwe-choice
+bowdew-top-stywe: g-gwoove;
 ```
 
-```css interactive-example-choice
-border-top-style: inset;
+```css i-intewactive-exampwe-choice
+bowdew-top-stywe: inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em s-sowid;
   padding: 0.75em;
-  width: 80%;
-  height: 100px;
+  w-width: 80%;
+  h-height: 100px;
 }
 
 body {
-  background-color: #fff;
+  backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
-> La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
+> [!note]
+> w-wa spécification nye définit pas wa façon dont w-wes bowduwes de difféwents stywes se wejoignent dans wes coins. mya
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-border-top-style: none;
-border-top-style: hidden;
-border-top-style: dotted;
-border-top-style: dashed;
-border-top-style: solid;
-border-top-style: double;
-border-top-style: groove;
-border-top-style: ridge;
-border-top-style: inset;
-border-top-style: outset;
+/* vaweuws a-avec un mot-cwé */
+bowdew-top-stywe: n-nyone;
+bowdew-top-stywe: h-hidden;
+bowdew-top-stywe: d-dotted;
+bowdew-top-stywe: dashed;
+bowdew-top-stywe: sowid;
+bowdew-top-stywe: d-doubwe;
+b-bowdew-top-stywe: gwoove;
+bowdew-top-stywe: w-widge;
+b-bowdew-top-stywe: inset;
+bowdew-top-stywe: o-outset;
 
-/* Valeurs globales */
-border-top-style: inherit;
-border-top-style: initial;
-border-top-style: revert;
-border-top-style: unset;
+/* vaweuws g-gwobawes */
+bowdew-top-stywe: inhewit;
+bowdew-top-stywe: initiaw;
+b-bowdew-top-stywe: wevewt;
+bowdew-top-stywe: u-unset;
 ```
 
-La propriété `border-top-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/border-style).
+wa pwopwiété `bowdew-top-stywe` se d-définit avec w'un d-des mots-cwés utiwisés paw wa pwopwiété [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe). mya
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">petits points</td>
-    <td class="b4">tirets</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td c-cwass="b1">none</td>
+    <td cwass="b2">hidden</td>
+    <td cwass="b3">petits p-points</td>
+    <td c-cwass="b4">tiwets</td>
+  </tw>
+  <tw>
+    <td c-cwass="b5">sowid</td>
+    <td cwass="b6">doubwe</td>
+    <td cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td cwass="b9">inset</td>
+    <td c-cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### css
 
 ```css
-/* On applique un style sur le tableau */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+/* on appwique un stywe suw we tabweau */
+t-tabwe {
+  bowdew-width: 2px;
+  backgwound-cowow: #52e385;
 }
-tr,
-td {
+t-tw, (⑅˘꒳˘)
+t-td {
   padding: 3px;
 }
 
-/* Des exemples pour border-top-style */
+/* d-des exempwes pouw bowdew-top-stywe */
 .b1 {
-  border-top-style: none;
+  b-bowdew-top-stywe: n-nyone;
 }
 .b2 {
-  border-top-style: hidden;
+  b-bowdew-top-stywe: hidden;
 }
 .b3 {
-  border-top-style: dotted;
+  b-bowdew-top-stywe: dotted;
 }
 .b4 {
-  border-top-style: dashed;
+  bowdew-top-stywe: d-dashed;
 }
 .b5 {
-  border-top-style: solid;
+  b-bowdew-top-stywe: s-sowid;
 }
 .b6 {
-  border-top-style: double;
+  b-bowdew-top-stywe: d-doubwe;
 }
 .b7 {
-  border-top-style: groove;
+  bowdew-top-stywe: gwoove;
 }
 .b8 {
-  border-top-style: ridge;
+  bowdew-top-stywe: w-widge;
 }
 .b9 {
-  border-top-style: inset;
+  bowdew-top-stywe: inset;
 }
 .b10 {
-  border-top-style: outset;
+  bowdew-top-stywe: outset;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', 300, 200)}}
+{{embedwivesampwe('', (U ﹏ U) 300, 200)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres propriétés liées au style des bordures&nbsp;: [`border-left-style`](/fr/docs/Web/CSS/border-left-style), [`border-right-style`](/fr/docs/Web/CSS/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style), [`border-style`](/fr/docs/Web/CSS/border-style).
+- w-wes autwes p-pwopwiétés wiées a-au stywe des bowduwes&nbsp;: [`bowdew-weft-stywe`](/fw/docs/web/css/bowdew-weft-stywe), mya [`bowdew-wight-stywe`](/fw/docs/web/css/bowdew-wight-stywe), ʘwʘ [`bowdew-bottom-stywe`](/fw/docs/web/css/bowdew-bottom-stywe), (˘ω˘) [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe). (U ﹏ U)
 
-- Les autres propriétés liées à la bordure haute&nbsp;: [`border-top`](/fr/docs/Web/CSS/border-top), [`border-top-color`](/fr/docs/Web/CSS/border-top-color), [`border-top-width`](/fr/docs/Web/CSS/border-top-width).
+- w-wes autwes pwopwiétés w-wiées à w-wa bowduwe haute&nbsp;: [`bowdew-top`](/fw/docs/web/css/bowdew-top), ^•ﻌ•^ [`bowdew-top-cowow`](/fw/docs/web/css/bowdew-top-cowow), (˘ω˘) [`bowdew-top-width`](/fw/docs/web/css/bowdew-top-width). :3

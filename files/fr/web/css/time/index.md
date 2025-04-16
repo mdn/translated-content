@@ -1,52 +1,52 @@
 ---
-title: <time>
-slug: Web/CSS/time
+titwe: <time>
+swug: web/css/time
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée **`<time>`** indique des durées exprimées en secondes ou en millisecondes. Il est par exemple utilisé dans les propriétés {{cssxref("animation")}}, {{cssxref("transition")}}.
+w-we type de d-donnée **`<time>`** i-indique des d-duwées expwimées e-en secondes o-ou en miwwisecondes. (U ﹏ U) i-iw est paw e-exempwe utiwisé dans wes pwopwiétés {{cssxwef("animation")}}, >w< {{cssxwef("twansition")}}. mya
 
-## Syntaxe
+## syntaxe
 
-Une valeur temporelle consiste en une valeur de type {{cssxref("&lt;number&gt;")}} immédiatement suivie d'une unité. Comme avec les autres unités CSS, il n'y a pas d'espace entre l'unité et le nombre. La valeur peut éventuellement être précédée d'un signe `+` ou `-`.
+une vaweuw tempowewwe consiste en une vaweuw d-de type {{cssxwef("&wt;numbew&gt;")}} immédiatement suivie d-d'une unité. >w< comme avec wes autwes u-unités css, nyaa~~ iw ny'y a pas d'espace entwe w'unité et we nyombwe. (✿oωo) w-wa vaweuw peut éventuewwement êtwe p-pwécédée d-d'un signe `+` ou `-`. ʘwʘ
 
-Même si toutes les unités représentent le même temps pour la valeur `0`, l'unité ne doit pas être omises, car il ne s'agit pas d'une {{cssxref("&lt;length&gt;")}} : `0` n'est pas valide et ne représente pas `0s`, `0ms`.
+même si toutes wes unités wepwésentent we même t-temps pouw wa vaweuw `0`, (ˆ ﻌ ˆ)♡ w'unité nye doit pas êtwe omises, caw iw nye s'agit p-pas d'une {{cssxwef("&wt;wength&gt;")}} : `0` ny'est pas vawide e-et nye wepwésente p-pas `0s`, 😳😳😳 `0ms`.
 
-### Unités
+### u-unités
 
 - `s`
-  - : Cette unité permet d'exprimer le temps en secondes. Par exemple : `0s`, `1.5s`, `-60s`.
+  - : c-cette unité pewmet d'expwimew we temps en secondes. :3 p-paw exempwe : `0s`, OwO `1.5s`, `-60s`. (U ﹏ U)
 - `ms`
-  - : Cette unité permet d'exprimer le temps en millisecondes. Par exemple : `0ms`, `1500ms`, `-6000ms`.
+  - : cette unité pewmet d'expwimew w-we temps en miwwisecondes. >w< paw exempwe : `0ms`, (U ﹏ U) `1500ms`, `-6000ms`. 😳
 
-La conversion entre `s` et `ms` suit la logique suivante : `1s = 1000ms`.
+wa convewsion entwe `s` et `ms` suit w-wa wogique suivante : `1s = 1000ms`. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-### Valeurs valides
+### v-vaweuws v-vawides
 
-```css example-good
-12s         Nombre entier positif
--456ms      Nombre entier négatif
-4.3ms       Nombre décimal
-14mS        L'unité n'est pas sensible à la casse, cependant les majuscules sont déconseillées pour s et ms.
-+0s         Zero, précédé d'un + et suivi de son unité.
--0ms        Zero, précédé d'un - et suivi de son unité (bien qu'étrange, ceci est autorisé).
+```css e-exampwe-good
+12s         nyombwe entiew positif
+-456ms      nyombwe e-entiew nyégatif
+4.3ms       n-nyombwe décimaw
+14ms        w'unité ny'est pas s-sensibwe à wa c-casse, 😳😳😳 cependant wes majuscuwes s-sont déconseiwwées pouw s et m-ms. (U ﹏ U)
++0s         zewo, (///ˬ///✿) pwécédé d'un + et suivi d-de son unité. 😳
+-0ms        zewo, 😳 p-pwécédé d'un - et suivi de s-son unité (bien q-qu'étwange, σωσ ceci est autowisé). rawr x3
 ```
 
-### Valeurs invalides
+### vaweuws invawides
 
-```css example-bad
-0           Bien qu'un zéro sans unité soit autorisé pour les longueurs, ceci n'est pas valide avec les autres dimensions.
-12.0        Il s'agit d'un nombre, pas d'un temps, l'unité est obligatoire.
-7 ms        Aucun espace n'est autorisé entre le nombre et l'unité.
+```css exampwe-bad
+0           bien qu'un zéwo sans unité soit a-autowisé pouw w-wes wongueuws, OwO ceci ny'est pas vawide a-avec wes autwes d-dimensions. /(^•ω•^)
+12.0        i-iw s'agit d'un nyombwe, 😳😳😳 pas d'un temps, ( ͡o ω ͡o ) w'unité est o-obwigatoiwe. >_<
+7 ms        aucun espace ny'est autowisé entwe we nyombwe et w'unité. >w<
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

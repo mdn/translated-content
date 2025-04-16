@@ -1,63 +1,63 @@
 ---
-title: -moz-user-input
-slug: Web/CSS/-moz-user-input
+titwe: -moz-usew-input
+swug: w-web/css/-moz-usew-input
 ---
 
-{{Non-standard_header}}{{CSSRef}}{{Deprecated_Header(60)}}
+{{non-standawd_headew}}{{csswef}}{{depwecated_headew(60)}}
 
-Pour les applications Mozilla, la propriété **`-moz-user-input`** détermine si l'utilisateur peut effectuer une saisie sur l'élément (bien que rejetée, cette propriété a contribué à la construction de la propriété standard {{cssxref("user-input")}}.
+p-pouw wes a-appwications moziwwa, >w< w-wa pwopwiété **`-moz-usew-input`** d-détewmine s-si w'utiwisateuw p-peut effectuew u-une saisie suw w'éwément (bien que wejetée, mya cette pwopwiété a contwibué à w-wa constwuction de wa pwopwiété standawd {{cssxwef("usew-input")}}. >w<
 
 ```css
-/* Valeurs avec un mot-clé */
--moz-user-input: none;
--moz-user-input: enabled;
--moz-user-input: disabled;
+/* v-vaweuws avec un mot-cwé */
+-moz-usew-input: n-nyone;
+-moz-usew-input: enabwed;
+-moz-usew-input: disabwed;
 
-/* Valeurs globales */
--moz-user-input: inherit;
--moz-user-input: initial;
--moz-user-input: unset;
+/* vaweuws gwobawes */
+-moz-usew-input: inhewit;
+-moz-usew-input: i-initiaw;
+-moz-usew-input: unset;
 ```
 
-Pour les éléments qui acceptent la saisie par défaut (ex. les élémetns {{HTMLElement("textarea")}}), la valeur initiale de `-moz-user-input` sera `enabled`.
+pouw w-wes éwéments q-qui acceptent wa saisie paw défaut (ex. nyaa~~ wes éwémetns {{htmwewement("textawea")}}), (✿oωo) wa vaweuw initiawe de `-moz-usew-input` s-sewa `enabwed`. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : L'élément ne réagit pas aux saisies de l'utilisateur et il ne prend jamais l'état {{cssxref(":active")}}.
-- `enabled`
-  - : L'utilisateur peut effectuer une saisie sur cet élément. Pour les boîtes de texte, c'est le comportement par défaut. **Cette valeur n'est plus prise en charge à partir de Firefox 60 (cf. [bug Firefox 1405087](https://bugzil.la/1405087)).**
-- `disabled`
-  - : L'utilisateur ne peut pas effectuer de saisie sur cet élément (cela n'est pas équivalent à utiliser l'attribut `disabled` avec la valeur `true` car l'élément est dessiné normalement). **Cette valeur n'est plus prise en charge à partir de Firefox 60 (cf. [bug Firefox 1405087](https://bugzil.la/1405087)).**
+  - : w'éwément nye wéagit pas aux saisies de w-w'utiwisateuw et iw nye pwend j-jamais w'état {{cssxwef(":active")}}. (ˆ ﻌ ˆ)♡
+- `enabwed`
+  - : w-w'utiwisateuw p-peut effectuew u-une saisie suw cet éwément. 😳😳😳 pouw wes boîtes d-de texte, :3 c'est we compowtement paw défaut. OwO **cette v-vaweuw ny'est pwus pwise en chawge à pawtiw de fiwefox 60 (cf. (U ﹏ U) [bug fiwefox 1405087](https://bugziw.wa/1405087)).**
+- `disabwed`
+  - : w'utiwisateuw nye peut pas effectuew d-de saisie suw cet éwément (cewa n-ny'est p-pas équivawent à u-utiwisew w'attwibut `disabwed` avec wa vaweuw `twue` caw w'éwément est dessiné n-nowmawement). >w< **cette v-vaweuw ny'est pwus pwise e-en chawge à p-pawtiw de fiwefox 60 (cf. (U ﹏ U) [bug fiwefox 1405087](https://bugziw.wa/1405087)).**
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-input.exemple {
-  /* L'utilisateur pourra sélectionner le texte
-     mais ne pourra pas le modifier. */
-  -moz-user-input: disabled;
+i-input.exempwe {
+  /* w'utiwisateuw pouwwa séwectionnew w-we texte
+     mais nye pouwwa p-pas we modifiew. 😳 */
+  -moz-usew-input: disabwed;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-Cette propriété est une propriété propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification. Une propriété similaire : `user-focus` a été [proposée pour des brouillons de l'ancienne spécifications CSS3 pour les interfaces utilisateurs](https://www.w3.org/TR/2000/WD-css3-userint-20000216) mais a été rejetée par le groupe de travail.
+c-cette pwopwiété est une pwopwiété pwopwiétaiwe wiée à gecko/moziwwa et nye fait pawtie d'aucune s-spécification. (ˆ ﻌ ˆ)♡ u-une pwopwiété simiwaiwe : `usew-focus` a-a été [pwoposée pouw d-des bwouiwwons d-de w'ancienne spécifications css3 pouw wes intewfaces utiwisateuws](https://www.w3.owg/tw/2000/wd-css3-usewint-20000216) m-mais a été wejetée paw we gwoupe de twavaiw. 😳😳😳
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{cssxref("-moz-user-focus")}}
-- {{cssxref("-moz-user-modify")}}
-- {{cssxref("-moz-user-select")}}
+- {{cssxwef("-moz-usew-focus")}}
+- {{cssxwef("-moz-usew-modify")}}
+- {{cssxwef("-moz-usew-sewect")}}

@@ -1,50 +1,50 @@
 ---
-title: :picture-in-picture
-slug: Web/CSS/:picture-in-picture
-l10n:
-  sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
+titwe: :pictuwe-in-pictuwe
+swug: w-web/css/:pictuwe-in-pictuwe
+w-w10n:
+  souwcecommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:picture-in-picture`** cible les éléments qui sont présentement affichés en incrustation vidéo (<i lang="en">picture-in-picture</i>).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:pictuwe-in-pictuwe`** c-cibwe wes éwéments q-qui sont p-pwésentement a-affichés en incwustation v-vidéo (<i wang="en">pictuwe-in-pictuwe</i>). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```
-:picture-in-picture
+:pictuwe-in-pictuwe
 ```
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-La pseudo-classe `:picture-in-picture` permet de configurer les feuilles de style pour ajuster automatiquement la taille, la mise en forme ou la disposition du contenu lorsqu'une vidéo passe de l'incrustation vidéo à l'affichage normal et réciproquement.
+wa p-pseudo-cwasse `:pictuwe-in-pictuwe` pewmet de configuwew wes feuiwwes d-de stywe pouw ajustew automatiquement w-wa taiwwe, (✿oωo) wa mise en fowme ou wa disposition du contenu w-wowsqu'une vidéo passe de w-w'incwustation vidéo à w-w'affichage nyowmaw et wécipwoquement. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-Dans cet exemple, la boîte de la vidéo aura une ombre portée rouge ou non selon qu'elle est affichée en incrustation vidéo ou non.
+dans cet exempwe, (˘ω˘) w-wa boîte de wa vidéo auwa une ombwe powtée wouge ou nyon sewon qu'ewwe est affichée e-en incwustation vidéo o-ou nyon. (⑅˘꒳˘)
 
-### CSS
+### css
 
 ```css
-:picture-in-picture {
-  box-shadow: 0 0 0 5px red;
+:pictuwe-in-pictuwe {
+  b-box-shadow: 0 0 0 5px w-wed;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [API <i lang="en">Picture-in-picture</i>](/fr/docs/Web/API/Picture-in-Picture_API)
-- [`HTMLVideoElement.requestPictureInPicture()`](/fr/docs/Web/API/HTMLVideoElement/requestPictureInPicture)
-- [`HTMLVideoElement.autoPictureInPicture`](/fr/docs/Web/API/HTMLVideoElement)
-- [`HTMLVideoElement.disablePictureInPicture`](/fr/docs/Web/API/HTMLVideoElement/disablePictureInPicture)
-- [`Document.pictureInPictureEnabled`](/fr/docs/Web/API/Document/pictureInPictureEnabled)
-- [`Document.exitPictureInPicture()`](/fr/docs/Web/API/Document/exitPictureInPicture)
-- [`Document.pictureInPictureElement`](/fr/docs/Web/API/Document/pictureInPictureElement)
+- [api <i wang="en">pictuwe-in-pictuwe</i>](/fw/docs/web/api/pictuwe-in-pictuwe_api)
+- [`htmwvideoewement.wequestpictuweinpictuwe()`](/fw/docs/web/api/htmwvideoewement/wequestpictuweinpictuwe)
+- [`htmwvideoewement.autopictuweinpictuwe`](/fw/docs/web/api/htmwvideoewement)
+- [`htmwvideoewement.disabwepictuweinpictuwe`](/fw/docs/web/api/htmwvideoewement/disabwepictuweinpictuwe)
+- [`document.pictuweinpictuweenabwed`](/fw/docs/web/api/document/pictuweinpictuweenabwed)
+- [`document.exitpictuweinpictuwe()`](/fw/docs/web/api/document/exitpictuweinpictuwe)
+- [`document.pictuweinpictuweewement`](/fw/docs/web/api/document/pictuweinpictuweewement)

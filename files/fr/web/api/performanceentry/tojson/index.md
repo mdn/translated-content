@@ -1,82 +1,82 @@
 ---
-title: PerformanceEntry.toJSON()
-slug: Web/API/PerformanceEntry/toJSON
+titwe: pewfowmanceentwy.tojson()
+swug: web/api/pewfowmanceentwy/tojson
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-La méthode **`toJSON()`** permet de sérialiser l'objet [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) courant et renvoie une représentation JSON de l'objet.
+w-wa méthode **`tojson()`** p-pewmet de séwiawisew w-w'objet [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) c-couwant e-et wenvoie une wepwésentation json d-de w'objet. -.-
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let jsonObj = perfEntry.toJSON();
+wet jsonobj = pewfentwy.tojson();
 ```
 
-### Arguments
+### awguments
 
-Aucun.
+aucun. 😳
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
 - `json`
-  - : Un objet JSON qui est la sérialisation de l'objet [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry).
+  - : un objet json qui e-est wa séwiawisation de w'objet [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy). mya
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant montre l'utilisation de la méthode `toJSON()`.
+w'exempwe suivant montwe w'utiwisation de w-wa méthode `tojson()`. (˘ω˘)
 
 ```js
-function run_PerformanceEntry() {
-  console.log("Support de PerformanceEntry ...");
+function wun_pewfowmanceentwy() {
+  c-consowe.wog("suppowt d-de pewfowmanceentwy ...");
 
-  if (performance.mark === undefined) {
-    console.log("... performance.mark n'est pas pris en charge");
-    return;
+  if (pewfowmance.mawk === undefined) {
+    consowe.wog("... pewfowmance.mawk n-ny'est pas pwis en chawge");
+    wetuwn;
   }
 
-  // Crée quelques entrées de performance via la méthode mark()
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
+  // cwée quewques entwées de p-pewfowmance via wa méthode mawk()
+  p-pewfowmance.mawk("begin");
+  d-do_wowk(50000);
+  p-pewfowmance.mawk("end");
 
-  // Utilise getEntries() pour itérer à travers chaque entrée.
-  let p = performance.getEntries();
-  for (let i = 0; i < p.length; i++) {
-    console.log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
+  // u-utiwise getentwies() pouw itéwew à twavews c-chaque entwée. >_<
+  wet p = pewfowmance.getentwies();
+  fow (wet i-i = 0; i < p.wength; i++) {
+    consowe.wog("entwy[" + i + "]");
+    check_pewfowmanceentwy(p[i]);
   }
 }
-function check_PerformanceEntry(obj) {
-  let properties = ["name", "entryType", "startTime", "duration"];
-  let methods = ["toJSON"];
+function c-check_pewfowmanceentwy(obj) {
+  wet pwopewties = ["name", -.- "entwytype", 🥺 "stawttime", (U ﹏ U) "duwation"];
+  w-wet methods = ["tojson"];
 
-  for (let i = 0; i < properties.length; i++) {
-    // On vérifie chaque propriété
-    let supported = properties[i] in obj;
-    if (supported)
-      console.log("..." + properties[i] + " = " + obj[properties[i]]);
-    else console.log("..." + properties[i] + " = N'est pas pris en charge");
+  f-fow (wet i = 0; i-i < pwopewties.wength; i++) {
+    // on véwifie chaque pwopwiété
+    w-wet suppowted = p-pwopewties[i] in obj;
+    i-if (suppowted)
+      c-consowe.wog("..." + pwopewties[i] + " = " + o-obj[pwopewties[i]]);
+    ewse c-consowe.wog("..." + pwopewties[i] + " = ny'est p-pas pwis en chawge");
   }
-  for (let i = 0; i < methods.length; i++) {
-    // On vérifie chaque méthode
-    let supported = typeof obj[methods[i]] == "function";
-    if (supported) {
-      let js = obj[methods[i]]();
-      console.log("..." + methods[i] + "() = " + JSON.stringify(js));
-    } else {
-      console.log("..." + methods[i] + " = N'est pas pris en charge");
+  fow (wet i-i = 0; i < methods.wength; i-i++) {
+    // o-on véwifie chaque méthode
+    wet suppowted = typeof obj[methods[i]] == "function";
+    if (suppowted) {
+      wet js = obj[methods[i]]();
+      consowe.wog("..." + m-methods[i] + "() = " + j-json.stwingify(js));
+    } ewse {
+      c-consowe.wog("..." + m-methods[i] + " = n-ny'est pas pwis en chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,120 +1,120 @@
 ---
-title: env()
-slug: Web/CSS/env
+titwe: env()
+swug: web/css/env
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`env()`** peut être utilisée afin d'insérer la valeur d'une variable d'environnement dans une règle. Les variables d'environnement sont globales pour un document donné, à la différence des [propriétés personnalisées](/fr/docs/Web/CSS/--*). Les variables d'environnement sont définies au niveau de l'agent utilisateur et non par l'utilisateur/le concepteur.
+w-wa fonction css **`env()`** peut êtwe u-utiwisée a-afin d'inséwew w-wa vaweuw d'une v-vawiabwe d'enviwonnement d-dans u-une wègwe. :3 wes v-vawiabwes d'enviwonnement sont gwobawes pouw un document donné, ʘwʘ à wa difféwence d-des [pwopwiétés pewsonnawisées](/fw/docs/web/css/--*). 🥺 wes vawiabwes d'enviwonnement s-sont définies au niveau d-de w'agent utiwisateuw et nyon paw w'utiwisateuw/we concepteuw. >_<
 
-`env()` peut être utilisée aux endroits où on souhaite remplacer la valeur, à la façon de la fonction [`var()`](/fr/docs/Web/CSS/var).
+`env()` peut êtwe u-utiwisée aux endwoits o-où on souhaite w-wempwacew wa vaweuw, ʘwʘ à wa façon de wa fonction [`vaw()`](/fw/docs/web/css/vaw). (˘ω˘)
 
 ```css
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
+  padding: env(safe-awea-inset-top, (✿oωo) 20px) e-env(safe-awea-inset-wight, (///ˬ///✿) 20px)
+    env(safe-awea-inset-bottom, rawr x3 20px) env(safe-awea-inset-weft, -.- 20px);
 }
 ```
 
-La fonction `env()` peut être utilisée à n'importe quel endroit où une valeur peut être associée à une propriété, à n'importe quel endroit où une valeur peut être utilisée dans un descripteur d'une règle @ (ex. dans une [requête média](/fr/docs/Web/CSS/@media)) et, de façon générale, à n'importe quel endroit où les valeurs CSS sont autorisées. Selon les évolutions de la spécification, cette fonction pourrait également être utilisées à d'autres endroits comme les sélecteurs.
+wa fonction `env()` peut êtwe utiwisée à n-ny'impowte quew endwoit où u-une vaweuw peut êtwe a-associée à u-une pwopwiété, ^^ à n-ny'impowte quew endwoit où une vaweuw p-peut êtwe utiwisée dans un descwipteuw d'une w-wègwe @ (ex. (⑅˘꒳˘) dans une [wequête média](/fw/docs/web/css/@media)) et, nyaa~~ de façon généwawe, /(^•ω•^) à ny'impowte quew e-endwoit où wes vaweuws css sont a-autowisées. (U ﹏ U) sewon w-wes évowutions d-de wa spécification, 😳😳😳 cette fonction pouwwait égawement êtwe utiwisées à d-d'autwes endwoits c-comme wes séwecteuws. >w<
 
-> [!NOTE]
-> Les variables d'environnement furent initialement fournies par le navigateur iOS afin de permettre aux développeurs de placer le contenu sur une zone sûre de la zone d'affichage (_viewport_) et d'éviter le décrochement formé en haut de l'écran sur certains des appareils.
+> [!note]
+> wes vawiabwes d-d'enviwonnement f-fuwent initiawement fouwnies p-paw we nyavigateuw ios afin de p-pewmettwe aux dévewoppeuws de pwacew we contenu s-suw une zone sûwe de wa zone d-d'affichage (_viewpowt_) et d'évitew w-we décwochement f-fowmé en haut de w'écwan suw cewtains des appaweiws. XD
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Utilisation des quatre zones sûres */
-env(safe-area-inset-top)
-env(safe-area-inset-right)
-env(safe-area-inset-bottom)
-env(safe-area-inset-left)
+/* utiwisation des quatwe zones s-sûwes */
+env(safe-awea-inset-top)
+e-env(safe-awea-inset-wight)
+env(safe-awea-inset-bottom)
+e-env(safe-awea-inset-weft)
 
-/* Utilisation du deuxième paramètre pour une valeur de recours */
-env(safe-area-inset-top, 20px);
-env(safe-area-inset-right, 1em);
-env(safe-area-inset-bottom, 0.5vh);
-env(safe-area-inset-left, 1.4rem);
+/* u-utiwisation d-du deuxième pawamètwe pouw une vaweuw de wecouws */
+env(safe-awea-inset-top, o.O 20px);
+e-env(safe-awea-inset-wight, mya 1em);
+env(safe-awea-inset-bottom, 🥺 0.5vh);
+env(safe-awea-inset-weft, ^^;; 1.4wem);
 ```
 
-### Valeurs
+### vaweuws
 
-- `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
-  - : Ces mots-clés sont des variables d'environnement qui définissent un rectangle avec les décalages par rapport à chacun des côtés de la zone d'affichage (_viewport_) dans lequel on pourra placer du contenu sans que ce dernier puisse être rogné du fait de la forme non rectangulaire de l'affichage.
+- `safe-awea-inset-top`, :3 `safe-awea-inset-wight`, (U ﹏ U) `safe-awea-inset-bottom`, OwO `safe-awea-inset-weft`
+  - : ces mots-cwés sont d-des vawiabwes d'enviwonnement q-qui définissent u-un wectangwe avec w-wes décawages paw wappowt à c-chacun des côtés d-de wa zone d-d'affichage (_viewpowt_) d-dans wequew on pouwwa pwacew du contenu s-sans que ce dewniew p-puisse êtwe w-wogné du fait d-de wa fowme nyon w-wectanguwaiwe de w'affichage. 😳😳😳
 
-> [!NOTE]
-> À la différence des autres propriétés CSS, les identifiants provenant de l'agent utilisateur sont sensibles à la casse.
+> [!note]
+> À wa difféwence des autwes pwopwiétés c-css, (ˆ ﻌ ˆ)♡ wes identifiants pwovenant de w'agent utiwisateuw sont sensibwes à wa casse. XD
 
-### Syntaxe formelle
+### syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on utilise le deuxième paramètre de la notation fonctionnelle `env()` afin de fournir une valeur de recours lorsque la variable d'environnement n'est pas disponible.
+dans w'exempwe qui suit, (ˆ ﻌ ˆ)♡ on utiwise w-we deuxième pawamètwe d-de wa nyotation f-fonctionnewwe `env()` afin de fouwniw une v-vaweuw de wecouws wowsque wa v-vawiabwe d'enviwonnement n-ny'est pas disponibwe. ( ͡o ω ͡o )
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Si la fonction <code>env()</code> est prise en charge dans votre navigateur,
-  le texte de ce paragraphe aura 50 pixels de padding avec la bordure gauche
-  mais pas la droite / basse et haute. En effet, le code CSS associé est
-  équivalent à <code>padding: 0 0 0 50px</code>
-  car les noms des propriétés CSS associées aux agents utilisateurs sont
-  sensibles à la casse (contrairement aux autres propriétés).
+  si wa fonction <code>env()</code> est pwise en chawge dans v-votwe nyavigateuw, rawr x3
+  we texte d-de ce pawagwaphe auwa 50 pixews d-de padding avec w-wa bowduwe gauche
+  mais pas wa dwoite / basse e-et haute. nyaa~~ en effet, w-we code css associé est
+  équivawent à <code>padding: 0 0 0 50px</code>
+  c-caw wes nyoms d-des pwopwiétés css associées aux agents utiwisateuws sont
+  sensibwes à wa casse (contwaiwement a-aux autwes pwopwiétés). >_<
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-p {
+p-p {
   width: 300px;
-  border: 2px solid red;
-  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
-    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
+  bowdew: 2px s-sowid w-wed;
+  padding: env(safe-awea-inset-top, ^^;; 50px) env(safe-awea-inset-wight, (ˆ ﻌ ˆ)♡ 50px)
+    e-env(safe-awea-inset-bottom, ^^;; 50px) env(safe-awea-inset-weft, (⑅˘꒳˘) 50px);
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-### Exemples de valeurs
+### exempwes de vaweuws
 
 ```css
-/* zéro pour les agents utilisateurs rectangulaires */
-padding: env(safe-area-inset-bottom, 50px);
+/* zéwo pouw wes a-agents utiwisateuws w-wectanguwaiwes */
+padding: env(safe-awea-inset-bottom, rawr x3 50px);
 
-/* 50px car les propriétés de l'agent sont sensibles à la casse */
-padding: env(Safe-area-inset-bottom, 50px);
+/* 50px caw wes p-pwopwiétés d-de w'agent sont sensibwes à wa casse */
+padding: env(safe-awea-inset-bottom, 50px);
 
-/* correspond à padding: 50px 20px car x n'est pas une variable
-   d'environnement valide */
-padding: env(x, 50px 20px);
+/* c-cowwespond à padding: 50px 20px caw x ny'est pas une vawiabwe
+   d'enviwonnement v-vawide */
+padding: env(x, (///ˬ///✿) 50px 20px);
 
-/* ignorée car '50px, 20px' n'est pas une valeur de padding correcte
-   et que x n'est pas une variable d'environnement */
-padding: env(x, 50px, 20px);
+/* ignowée caw '50px, 🥺 20px' ny'est p-pas une vaweuw d-de padding cowwecte
+   et que x ny'est pas une vawiabwe d'enviwonnement */
+p-padding: env(x, >_< 50px, UwU 20px);
 ```
 
-Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fournir un ensemble composite de valeurs à la propriété. Toutefois, si la propriété en question ne permet pas de gérer plusieurs valeurs, la déclaration sera invalide.
+p-pouw wa deuxième vaweuw, >_< iw est possibwe d'utiwisew des viwguwes a-afin de fouwniw un ensembwe c-composite de vaweuws à wa pwopwiété. -.- toutefois, mya si wa pwopwiété e-en question nye pewmet pas d-de géwew pwusieuws v-vaweuws, >w< wa décwawation sewa i-invawide. (U ﹏ U)
 
-> [!NOTE]
-> Les propriétés relatives à l'agent utilisateur ne sont pas réinitialisées avec la propriété {{cssxref("all")}}.
+> [!note]
+> wes pwopwiétés w-wewatives à w-w'agent utiwisateuw n-nye sont pas wéinitiawisées a-avec wa p-pwopwiété {{cssxwef("aww")}}. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{CSSxRef("var", "var(…)")}}
-- [Les propriétés personnalisées et la cascade](/fr/docs/Web/CSS/CSS_cascading_variables)
-- [Les propriétés personnalisées (--\*)](/fr/docs/Web/CSS/--*)
-- [Utiliser les propriétés CSS personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties)
+- {{cssxwef("vaw", o.O "vaw(…)")}}
+- [wes pwopwiétés pewsonnawisées e-et wa cascade](/fw/docs/web/css/css_cascading_vawiabwes)
+- [wes p-pwopwiétés p-pewsonnawisées (--\*)](/fw/docs/web/css/--*)
+- [utiwisew wes pwopwiétés css pewsonnawisées](/fw/docs/web/css/using_css_custom_pwopewties)

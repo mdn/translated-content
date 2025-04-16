@@ -1,95 +1,95 @@
 ---
-title: paint()
-slug: Web/CSS/image/paint
+titwe: paint()
+swug: web/css/image/paint
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`paint()`** définit une valeur de type [`image`](/fr/docs/Web/CSS/image) générée avec un `PaintWorklet`.
+wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`paint()`** d-définit une v-vaweuw de type [`image`](/fw/docs/web/css/image) g-généwée avec u-un `paintwowkwet`. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-paint(nomWorklet, parametres)
+p-paint(nomwowkwet, 😳😳😳 p-pawametwes)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nomWorklet`
-  - : Le nom du <i lang="en">worklet</i> enregistré.
-- `paramètres`
-  - : Des paramètres supplémentaires, optionnels, à passer à `paintWorklet`.
+- `nomwowkwet`
+  - : w-we nyom du <i wang="en">wowkwet</i> enwegistwé. o.O
+- `pawamètwes`
+  - : des pawamètwes suppwémentaiwes, ( ͡o ω ͡o ) optionnews, (U ﹏ U) à p-passew à `paintwowkwet`. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-### Utilisation simple
+### utiwisation s-simpwe
 
-Il est possible de passer des arguments supplémentaires grâce à la fonction CSS `paint()`. Dans cet exemple, on passe deux arguments&nbsp;: le premier indiquant si l'image passée en arrière-plan est pleine ou constitue uniquement un contour, le second indiquant la largeur du contour ainsi formé.
+iw est possibwe de passew d-des awguments suppwémentaiwes gwâce à wa fonction css `paint()`. >w< d-dans cet exempwe, rawr on passe d-deux awguments&nbsp;: w-we pwemiew indiquant si w'image passée en awwièwe-pwan est pweine ou constitue u-uniquement un contouw, mya we second indiquant wa wawgeuw du contouw ainsi f-fowmé. ^^
 
-```html hidden
-<ul>
-  <li>Élément 1</li>
-  <li>Élément 2</li>
-  <li>Élément 3</li>
-  <li>Élément 4</li>
-  <li>Élément 5</li>
-  <li>Élément 6</li>
-  <li>Élément 7</li>
-  <li>Élément 8</li>
-  <li>Élément 9</li>
-  <li>Élément 10</li>
-  <li>Élément 11</li>
-  <li>Élément 12</li>
-  <li>Élément 13</li>
-  <li>Élément 14</li>
-  <li>Élément 15</li>
-  <li>Élément 16</li>
-  <li>Élément 17</li>
-  <li>Élément 18</li>
-  <li>Élément 19</li>
-  <li>Élément 20</li>
-</ul>
+```htmw hidden
+<uw>
+  <wi>Éwément 1</wi>
+  <wi>Éwément 2</wi>
+  <wi>Éwément 3</wi>
+  <wi>Éwément 4</wi>
+  <wi>Éwément 5</wi>
+  <wi>Éwément 6</wi>
+  <wi>Éwément 7</wi>
+  <wi>Éwément 8</wi>
+  <wi>Éwément 9</wi>
+  <wi>Éwément 10</wi>
+  <wi>Éwément 11</wi>
+  <wi>Éwément 12</wi>
+  <wi>Éwément 13</wi>
+  <wi>Éwément 14</wi>
+  <wi>Éwément 15</wi>
+  <wi>Éwément 16</wi>
+  <wi>Éwément 17</wi>
+  <wi>Éwément 18</wi>
+  <wi>Éwément 19</wi>
+  <wi>Éwément 20</wi>
+</uw>
 ```
 
-```js hidden
-CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js",
+```js h-hidden
+css.paintwowkwet.addmoduwe(
+  "https://mdn.github.io/houdini-exampwes/csspaint/intwo/wowkwets/hiwite.js", 😳😳😳
 );
 ```
 
 ```css
-li {
-  --boxColor: hsla(55, 90%, 60%, 1);
-  background-image: paint(hollowHighlights, stroke, 2px);
+w-wi {
+  --boxcowow: h-hswa(55, mya 90%, 60%, 😳 1);
+  b-backgwound-image: paint(howwowhighwights, -.- stwoke, 2px);
 }
 
-li:nth-of-type(3n) {
-  --boxColor: hsla(155, 90%, 60%, 1);
-  background-image: paint(hollowHighlights, filled, 3px);
+w-wi:nth-of-type(3n) {
+  --boxcowow: hswa(155, 🥺 90%, 60%, 1);
+  backgwound-image: paint(howwowhighwights, o.O f-fiwwed, /(^•ω•^) 3px);
 }
 
-li:nth-of-type(3n + 1) {
-  --boxColor: hsla(255, 90%, 60%, 1);
-  background-image: paint(hollowHighlights, stroke, 1px);
+wi:nth-of-type(3n + 1) {
+  --boxcowow: hswa(255, nyaa~~ 90%, 60%, 1);
+  backgwound-image: paint(howwowhighwights, nyaa~~ stwoke, :3 1px);
 }
 ```
 
-On a ajouté une propriété personnalisée dans le sélecteur pour définir `boxColor`. Cette propriété personnalisée est accessible depuis l'objet `PaintWorklet`.
+on a ajouté u-une pwopwiété pewsonnawisée d-dans we séwecteuw p-pouw définiw `boxcowow`. 😳😳😳 c-cette pwopwiété pewsonnawisée est accessibwe depuis w-w'objet `paintwowkwet`. (˘ω˘)
 
-{{EmbedLiveSample("", 300, 300)}}
+{{embedwivesampwe("", ^^ 300, 300)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`PaintWorklet`](/fr/docs/Web/API/PaintWorkletGlobalScope)
-- [L'API `CSS Painting`](/fr/docs/Web/API/CSS_Painting_API)
-- [Utiliser l'API CSS Painting](/fr/docs/Web/API/CSS_Painting_API/Guide)
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`canvas`](/fr/docs/Web/API/Canvas_API)
+- [`paintwowkwet`](/fw/docs/web/api/paintwowkwetgwobawscope)
+- [w'api `css p-painting`](/fw/docs/web/api/css_painting_api)
+- [utiwisew w'api c-css painting](/fw/docs/web/api/css_painting_api/guide)
+- [`<image>`](/fw/docs/web/css/image)
+- [`canvas`](/fw/docs/web/api/canvas_api)

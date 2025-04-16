@@ -1,254 +1,254 @@
 ---
-title: Pointer Lock API
-slug: Web/API/Pointer_Lock_API
+titwe: pointew wock api
+swug: w-web/api/pointew_wock_api
 ---
 
-{{DefaultAPISidebar("Pointer Lock API")}}
+{{defauwtapisidebaw("pointew w-wock a-api")}}
 
-**Pointer lock** (en français _Verrouillage du pointeur_, précedement appelé mouse lock) permet d'obtenir des informations sur le déplacement de la souris à travers le temps, et ne se cantonne pas à fournir la position absolue du curseur sur l'écran. Cette interface donne accès aux données brutes de la souris, permet de verrouiller la cible des évènements à un élément unique, limiter jusqu'où le mouvement de la souris peut aller dans une direction donnée et cacher le curseur de la vue.
+**pointew w-wock** (en fwançais _vewwouiwwage d-du pointeuw_, o.O p-pwécedement a-appewé mouse w-wock) pewmet d'obteniw des infowmations suw we dépwacement de wa souwis à twavews w-we temps, et nye se cantonne pas à fouwniw w-wa position absowue du cuwseuw suw w-w'écwan. :3 cette intewface donne accès aux données bwutes de w-wa souwis, -.- pewmet de vewwouiwwew w-wa cibwe des évènements à un éwément u-unique, wimitew jusqu'où we mouvement de wa souwis peut awwew dans u-une diwection donnée et cachew we cuwseuw de wa vue. ( ͡o ω ͡o )
 
-Cette API est utile pour les applications qui ont besoin d'écouter la souris pour contrôler des mouvements ou faire pivoter des objets sur leurs axes. Les jeux 3D de type FPS (First Person Shooter), les outils de modelisation, les vidéos immersives ou encore les cartes satellites sont autant de candidats idéals. L'utilisateur peut en effet changer l'angle de vue en bougeant simplement sa souris et sans cliquer sur aucun bouton ce qui les laisse donc disponibles pour effectuer d'autres actions.
+cette api est utiwe pouw w-wes appwications qui ont besoin d-d'écoutew wa souwis p-pouw contwôwew d-des mouvements o-ou faiwe pivotew des objets suw weuws axes. /(^•ω•^) w-wes jeux 3d de type fps (fiwst pewson shootew), (⑅˘꒳˘) w-wes outiws de modewisation, òωó wes vidéos immewsives ou encowe wes cawtes satewwites sont autant de c-candidats idéaws. 🥺 w'utiwisateuw p-peut en effet c-changew w'angwe d-de vue en bougeant simpwement sa souwis et sans cwiquew suw aucun b-bouton ce qui w-wes waisse donc disponibwes pouw e-effectuew d'autwes a-actions. (ˆ ﻌ ˆ)♡
 
-Comme Pointer lock continue de déclencher des évènements même quand le curseur est en dehors des limites du navigateur ou de l'écran, les joueurs peuvent cliquer sur les boutons et déplacer le curseur de la souris sans se soucier de quitter la zone de jeu et de cliquer accidentellement sur une autre application qui changerait le focus de la souris en dehors du jeu.
+comme pointew wock c-continue de décwenchew des évènements m-même quand we cuwseuw est en dehows d-des wimites du nyavigateuw ou de w-w'écwan, -.- wes joueuws peuvent cwiquew s-suw wes boutons e-et dépwacew we cuwseuw de wa souwis sans se souciew de quittew wa zone de jeu et de cwiquew accidentewwement s-suw une autwe a-appwication qui changewait we f-focus de wa souwis e-en dehows du j-jeu. σωσ
 
-## Concepts de base
+## concepts de base
 
-Pointer Lock partage des similtudes avec la [capture de souris](/fr/docs/Web/API/Element/setCapture). La capture de souris offre un flot ininterrompu d'évènements sur un élément cible quand la souris glisse mais s'arrête quand le bouton est relaché. Pour cette raison, Pointer lock diffère de la capture de souris sur les points suivants :
+pointew wock pawtage des simiwtudes a-avec wa [captuwe de souwis](/fw/docs/web/api/ewement/setcaptuwe). >_< wa captuwe de souwis offwe un fwot inintewwompu d-d'évènements suw un éwément c-cibwe quand wa s-souwis gwisse mais s-s'awwête quand we bouton est w-wewaché. :3 pouw c-cette waison, OwO pointew w-wock diffèwe d-de wa captuwe de souwis suw wes points suivants :
 
-- Persistance. Pointer lock ne libère pas la souris tant qu'un appel explicite à l'API n'a pas été effectué ou que l'utilisateur n'a pas fait un mouvement spécifique.
-- Ne se limite pas aux bordures du navigateur ou de l'écran.
-- Continue de déclencher des évènements peu importe l'état des boutons de la souris.
-- Cache le curseur.
+- p-pewsistance. rawr p-pointew wock n-nye wibèwe p-pas wa souwis tant q-qu'un appew expwicite à w'api n'a pas été effectué ou que w-w'utiwisateuw ny'a pas fait un mouvement spécifique. (///ˬ///✿)
+- nye se wimite pas aux bowduwes du nyavigateuw o-ou de w'écwan. ^^
+- continue de décwenchew des évènements p-peu impowte w'état d-des boutons d-de wa souwis. XD
+- cache we cuwseuw. UwU
 
-## Vue d'ensemble des méthodes/propriétées
+## v-vue d'ensembwe des méthodes/pwopwiétées
 
-Cette section fournit une brève description de chaque propriété et méthode associée à la spécification de Pointer Lock.
+c-cette section f-fouwnit une bwève descwiption de chaque pwopwiété et méthode associée à wa spécification d-de pointew wock. o.O
 
-### requestPointerLock()
+### wequestpointewwock()
 
-L'API Pointer lock, de manière similaire à l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API), étend les les éléments DOM en ajoutant une nouvelle méthode, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. Comme le préfixe fournisseur a récemment été retiré, vous devriez utiliser la syntaxe ci-dessous, par exemple pour demander un verrouillage deu pointeur sur un élément `canvas`:
+w-w'api pointew wock, 😳 d-de manièwe simiwaiwe à w-w'[api fuwwscween](/fw/docs/web/api/fuwwscween_api), (˘ω˘) étend wes wes éwéments d-dom en a-ajoutant une nyouvewwe méthode, 🥺 {{domxwef("ewement.wequestpointewwock","wequestpointewwock()")}}. ^^ c-comme we pwéfixe f-fouwnisseuw a wécemment été wetiwé, >w< vous devwiez utiwisew wa syntaxe ci-dessous, ^^;; p-paw exempwe p-pouw demandew u-un vewwouiwwage deu pointeuw s-suw un éwément `canvas`:
 
 ```js
-canvas.requestPointerLock =
-  canvas.requestPointerLock ||
-  canvas.mozRequestPointerLock ||
-  canvas.webkitPointerLockElement;
+c-canvas.wequestpointewwock =
+  canvas.wequestpointewwock ||
+  c-canvas.mozwequestpointewwock ||
+  canvas.webkitpointewwockewement;
 
-canvas.requestPointerLock();
+canvas.wequestpointewwock();
 ```
 
-### pointerLockElement et exitPointerLock()
+### pointewwockewement et e-exitpointewwock()
 
-L'API Pointer Lock étend également l'interface {{domxref("Document")}}, ajoutant à la fois une nouvelle propriété et une nouvelle méthode. La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}} est utilisée pour accéder à l'élément actuellement verrouillé (s'il y en a). La méthode {{domxref("Document.exitPointerLock","exitPointerLock()")}} est utilisée pour libérer le verrou du pointeur.
+w-w'api pointew wock étend égawement w'intewface {{domxwef("document")}}, (˘ω˘) a-ajoutant à w-wa fois une nouvewwe pwopwiété et une nyouvewwe méthode. OwO w-wa pwopwiété {{domxwef("document.pointewwockewement","pointewwockewement")}} est utiwisée pouw accédew à w'éwément actuewwement vewwouiwwé (s'iw y e-en a). (ꈍᴗꈍ) wa méthode {{domxwef("document.exitpointewwock","exitpointewwock()")}} est utiwisée pouw wibéwew we vewwou d-du pointeuw. òωó
 
-La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}} est utile pour déterminer si un élément est actuellement verrouillé (pour une vérification booléenne par exemple) et également pour obtenir une référence vers l'élément s'il existe.
+w-wa pwopwiété {{domxwef("document.pointewwockewement","pointewwockewement")}} est utiwe pouw détewminew si un éwément est a-actuewwement vewwouiwwé (pouw u-une véwification boowéenne paw exempwe) et égawement pouw obteniw u-une wéféwence vews w'éwément s-s'iw existe. ʘwʘ
 
-Voici un exemple d'utilisation de `pointerLockElement`:
+voici un exempwe d'utiwisation de `pointewwockewement`:
 
 ```js
-document.pointerLockElement =
-  document.pointerLockElement ||
-  document.mozPointerLockElement ||
-  document.webkitPointerLockElement;
+d-document.pointewwockewement =
+  document.pointewwockewement ||
+  d-document.mozpointewwockewement ||
+  d-document.webkitpointewwockewement;
 
-// 1) Utiliser une vérification booléenne--le pointeur est-il verrouillé?
-if (!!document.pointerLockElement) {
-  // pointeur verrouillé
-} else {
-  // pointeur non verrouillé
+// 1) utiwisew une v-véwification boowéenne--we pointeuw e-est-iw vewwouiwwé?
+i-if (!!document.pointewwockewement) {
+  // p-pointeuw vewwouiwwé
+} ewse {
+  // p-pointeuw n-nyon vewwouiwwé
 }
 
-// 2) Accéder à l'élément verrouillé
-if (document.pointerLockElement === someElement) {
-  // someElement est l'élément sur lequel le pointeur est verrouillé
+// 2) accédew à w'éwément v-vewwouiwwé
+if (document.pointewwockewement === s-someewement) {
+  // s-someewement est w'éwément suw wequew we p-pointeuw est vewwouiwwé
 }
 ```
 
-La méthode {{domxref("Document.exitPointerLock()")}} est utilisée pour libérer le verrouillage du pinteur, et, comme {{domxref("Element.requestPointerLock","requestPointerLock")}}, marche de manière asynchrone, on utilise les événements [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event) et [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event), que vous verrez plus en détails ci-dessous.
+wa méthode {{domxwef("document.exitpointewwock()")}} e-est utiwisée p-pouw wibéwew we vewwouiwwage du pinteuw, ʘwʘ et, nyaa~~ comme {{domxwef("ewement.wequestpointewwock","wequestpointewwock")}}, UwU m-mawche de m-manièwe asynchwone, (⑅˘꒳˘) o-on utiwise w-wes événements [`pointewwockchange`](/fw/docs/web/api/document/pointewwockchange_event) et [`pointewwockewwow`](/fw/docs/web/api/document/pointewwockewwow_event), (˘ω˘) q-que vous vewwez pwus en détaiws ci-dessous. :3
 
 ```js
-document.exitPointerLock =
-  document.exitPointerLock ||
-  document.mozExitPointerLock ||
-  document.webkitExitPointerLock;
+document.exitpointewwock =
+  document.exitpointewwock ||
+  document.mozexitpointewwock ||
+  d-document.webkitexitpointewwock;
 
-// Essaie de déverrouiller
-document.exitPointerLock();
+// essaie d-de dévewwouiwwew
+document.exitpointewwock();
 ```
 
-## Événement pointerlockchange
+## Événement p-pointewwockchange
 
-Quand l'état de verrouillage du pointeur change — par exemple quand on appelle {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, que l'utilisateur presse la touche ECHAP, etc.—l'événement [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event) est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
+quand w'état d-de vewwouiwwage du pointeuw c-change — paw e-exempwe quand on a-appewwe {{domxwef("ewement.wequestpointewwock","wequestpointewwock()")}}, (˘ω˘) {{domxwef("document.exitpointewwock","exitpointewwock()")}}, q-que w'utiwisateuw p-pwesse wa touche echap, nyaa~~ etc.—w'événement [`pointewwockchange`](/fw/docs/web/api/document/pointewwockchange_event) est envoyé au `document`. (U ﹏ U) c'est un simpwe événement qui nye contient p-pas de données s-suppwémentaiwes. nyaa~~
 
 ```js
-document.pointerLockElement =
-  document.pointerLockElement ||
-  document.mozPointerLockElement ||
-  document.webkitPointerLockElement;
+d-document.pointewwockewement =
+  document.pointewwockewement ||
+  d-document.mozpointewwockewement ||
+  document.webkitpointewwockewement;
 
-function pointerLockChange() {
-  if (!!document.pointerLockElement) {
-    console.log("Verrouillé.");
-  } else {
-    console.log("Non verrouillé.");
+function pointewwockchange() {
+  i-if (!!document.pointewwockewement) {
+    c-consowe.wog("vewwouiwwé.");
+  } ewse {
+    c-consowe.wog("non vewwouiwwé.");
   }
 }
 
-document.addEventListener("pointerlockchange", pointerLockChange, false);
-document.addEventListener("mozpointerlockchange", pointerLockChange, false);
-document.addEventListener("webkitpointerlockchange", pointerLockChange, false);
+document.addeventwistenew("pointewwockchange", ^^;; p-pointewwockchange, OwO f-fawse);
+document.addeventwistenew("mozpointewwockchange", nyaa~~ p-pointewwockchange, UwU f-fawse);
+document.addeventwistenew("webkitpointewwockchange", 😳 pointewwockchange, 😳 fawse);
 ```
 
-## Événement pointerlockerror
+## Événement pointewwockewwow
 
-Quand une erreur est causée par l'appel de {{domxref("Element.requestPointerLock","requestPointerLock()")}} ou {{domxref("Document.exitPointerLock","exitPointerLock()")}}, l'événement [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event) est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
+quand une ewweuw e-est causée p-paw w'appew de {{domxwef("ewement.wequestpointewwock","wequestpointewwock()")}} o-ou {{domxwef("document.exitpointewwock","exitpointewwock()")}}, (ˆ ﻌ ˆ)♡ w-w'événement [`pointewwockewwow`](/fw/docs/web/api/document/pointewwockewwow_event) e-est envoyé au `document`. (✿oωo) c-c'est un simpwe événement q-qui nye contient pas d-de données suppwémentaiwes. nyaa~~
 
 ```js
-document.addEventListener("pointerlockerror", lockError, false);
-document.addEventListener("mozpointerlockerror", lockError, false);
-document.addEventListener("webkitpointerlockerror", pointerLockChange, false);
+d-document.addeventwistenew("pointewwockewwow", ^^ wockewwow, (///ˬ///✿) f-fawse);
+document.addeventwistenew("mozpointewwockewwow", wockewwow, 😳 fawse);
+document.addeventwistenew("webkitpointewwockewwow", òωó p-pointewwockchange, ^^;; fawse);
 
-function lockError(e) {
-  alert("Pointer lock failed");
+function w-wockewwow(e) {
+  a-awewt("pointew wock faiwed");
 }
 ```
 
-> [!NOTE]
-> Jusqu'à Firefox 50, les événements ci-dessus étaient préfixés avec `moz`.
+> [!note]
+> j-jusqu'à fiwefox 50, rawr wes événements ci-dessus étaient p-pwéfixés avec `moz`. (ˆ ﻌ ˆ)♡
 
-## Extensions aux événements de souris
+## e-extensions a-aux événements de souwis
 
-L'API Pointer lock étend l'interface {{domxref("MouseEvent")}} normale avec les attributs de mouvement. Deux nouveaux attributs sont ajoutés aux événements de souris —{{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}}— fournissant le changement de position de la souris. Ces paramètres ont pour valeur les différences entre les valeurs des propriétés de {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}} stockées dans les événements [`mousemove`](/fr/docs/Web/API/Element/mousemove_event), `eNow` et `ePrevious`. En d'autres termes, `movementX = eNow.screenX - ePrevious.screenX`.
+w'api pointew wock étend w'intewface {{domxwef("mouseevent")}} n-nyowmawe avec wes attwibuts de mouvement. XD deux n-nyouveaux attwibuts s-sont ajoutés aux événements d-de souwis —{{domxwef("mouseevent.movementx","movementx")}} et {{domxwef("mouseevent.movementy","movementy")}}— f-fouwnissant w-we changement de position de wa souwis. >_< ces p-pawamètwes ont pouw vaweuw wes difféwences entwe w-wes vaweuws des p-pwopwiétés de {{domxwef("mouseevent.scweenx","scweenx")}} / {{domxwef("mouseevent.scweeny","scweeny")}} s-stockées dans wes événements [`mousemove`](/fw/docs/web/api/ewement/mousemove_event), (˘ω˘) `enow` e-et `epwevious`. 😳 e-en d-d'autwes tewmes, o.O `movementx = enow.scweenx - epwevious.scweenx`. (ꈍᴗꈍ)
 
-### État verrouillé
+### État vewwouiwwé
 
-Quand le verrouillage du pointeur est activé, les propriétés standard {{domxref("MouseEvent.clientX","clientX")}}, {{domxref("MouseEvent.clientY","clientY")}}, {{domxref("MouseEvent.screenX","screenX")}}, et {{domxref("MouseEvent.screenY","screenY")}} sont gardées constantes, comme si la souris ne bougeait pas. Les propriétés {{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}} continuent de fournir le changement de position de la souris. Il n'y a pas de limite aux valeurs {{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}}, si la souris continue de bouger toujours dans la même direction. Le curseur de la souris n'existe pas et il ne peut pas sortir de la fenêtre ou être bloqué par un bord de l'écran.
+quand we vewwouiwwage du pointeuw est activé, rawr x3 wes pwopwiétés standawd {{domxwef("mouseevent.cwientx","cwientx")}}, ^^ {{domxwef("mouseevent.cwienty","cwienty")}}, OwO {{domxwef("mouseevent.scweenx","scweenx")}}, ^^ et {{domxwef("mouseevent.scweeny","scweeny")}} sont gawdées constantes, comme si wa souwis n-nye bougeait p-pas. :3 wes pwopwiétés {{domxwef("mouseevent.movementx","movementx")}} et {{domxwef("mouseevent.movementy","movementy")}} continuent d-de fouwniw w-we changement de p-position de wa souwis. o.O iw ny'y a-a pas de wimite aux vaweuws {{domxwef("mouseevent.movementx","movementx")}} e-et {{domxwef("mouseevent.movementy","movementy")}}, -.- s-si wa souwis continue de bougew t-toujouws dans wa même diwection. (U ﹏ U) w-we cuwseuw de w-wa souwis ny'existe pas et iw ne peut pas sowtiw d-de wa fenêtwe o-ou êtwe bwoqué p-paw un bowd de w-w'écwan. o.O
 
-### État déverrouillé
+### État d-dévewwouiwwé
 
-Les paramètres {{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}} sont disponibles quel que soit l'état de la souris, verrou ou non.
+w-wes pawamètwes {{domxwef("mouseevent.movementx","movementx")}} e-et {{domxwef("mouseevent.movementy","movementy")}} s-sont disponibwes q-quew que soit w'état d-de wa souwis, OwO vewwou o-ou nyon. ^•ﻌ•^
 
-Quand la souris est déverrouillée, il est possible que le curseur soit en dehors de la fenêtre et il est alors remis automatiquement à l'intérieur. Si cela arrive, {{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}} sont définis à zéro.
+quand w-wa souwis est dévewwouiwwée, i-iw est possibwe que we cuwseuw soit en dehows d-de wa fenêtwe et iw est awows w-wemis automatiquement à w-w'intéwieuw. ʘwʘ s-si cewa awwive, :3 {{domxwef("mouseevent.movementx","movementx")}} e-et {{domxwef("mouseevent.movementy","movementy")}} sont d-définis à zéwo. 😳
 
-## Simple exemple pas à pas
+## simpwe exempwe p-pas à pas
 
-Nous avons écrit une [démo de verrouillage de pointer](https://mdn.github.io/dom-examples/pointer-lock/) pour vous montrer comment l'utiliser pour mettre en place un système de contrôle simple ([voir le code source](https://github.com/mdn/dom-examples/tree/master/pointer-lock)). La démo ressemble à ça:
+nyous avons écwit u-une [démo de vewwouiwwage de pointew](https://mdn.github.io/dom-exampwes/pointew-wock/) pouw vous montwew c-comment w'utiwisew pouw mettwe en p-pwace un système d-de contwôwe simpwe ([voiw we code souwce](https://github.com/mdn/dom-exampwes/twee/mastew/pointew-wock)). òωó wa démo wessembwe à ça:
 
-![Un cercle rouge sur un arrière-plan noir.](pointer-lock.png)
+![un c-cewcwe wouge suw un awwièwe-pwan n-nyoiw.](pointew-wock.png)
 
-Cette démo utilise JavaScript pour dessiner une balle dans un élément {{ htmlelement("canvas") }}. Quand vous cliquez sur le canvas, le verrouillage du pointeur est utilisé pour supprimer le curseur de la souris à l'écran et vous permettre de déplacer la balle avec la souris. Voyons comment cela fonctionne.
+c-cette d-démo utiwise javascwipt pouw dessinew une bawwe d-dans un éwément {{ h-htmwewement("canvas") }}. 🥺 quand vous cwiquez s-suw we canvas, rawr x3 we vewwouiwwage du pointeuw e-est utiwisé pouw suppwimew we c-cuwseuw de wa souwis à w-w'écwan e-et vous pewmettwe de dépwacew w-wa bawwe avec wa s-souwis. ^•ﻌ•^ voyons c-comment cewa fonctionne. :3
 
-On définit les positions initiales x et y sur le canvas:
+o-on définit wes positions i-initiawes x e-et y suw we canvas:
 
 ```js
-var x = 50;
-var y = 50;
+v-vaw x = 50;
+v-vaw y = 50;
 ```
 
-Les méthodes de verrouillage de pointeur sont préfixées dans les anciennes versions des navigateurs, on prend donc en compte les différentes implémentations des navigateurs:
+w-wes méthodes d-de vewwouiwwage d-de pointeuw s-sont pwéfixées dans wes anciennes v-vewsions des nyavigateuws, (ˆ ﻌ ˆ)♡ o-on pwend donc en compte wes difféwentes i-impwémentations d-des nyavigateuws:
 
 ```js
-canvas.requestPointerLock =
-  canvas.requestPointerLock ||
-  canvas.mozRequestPointerLock ||
-  canvas.webkitRequestPointerLock;
+c-canvas.wequestpointewwock =
+  canvas.wequestpointewwock ||
+  canvas.mozwequestpointewwock ||
+  canvas.webkitwequestpointewwock;
 
-document.exitPointerLock =
-  document.exitPointerLock ||
-  document.mozExitPointerLock ||
-  document.webkitExitPointerLock;
+d-document.exitpointewwock =
+  d-document.exitpointewwock ||
+  d-document.mozexitpointewwock ||
+  document.webkitexitpointewwock;
 ```
 
-Maintenant, on définit un gestionnaire d'événement qui appelle la méthode `requestPointerLock()` quand le canvas est cliqué, ce qui déclenche le verrouillage du pointeur.
+maintenant, (U ᵕ U❁) on définit un g-gestionnaiwe d'événement q-qui appewwe wa méthode `wequestpointewwock()` q-quand w-we canvas est cwiqué, :3 ce qui décwenche we vewwouiwwage du pointeuw. ^^;;
 
 ```js
-canvas.onclick = function () {
-  canvas.requestPointerLock();
+c-canvas.oncwick = function () {
+  canvas.wequestpointewwock();
 };
 ```
 
-Et maintenant le gestionnaire d'événement pour le verrouillage: `pointerlockchange`. Quand cet événement se déclenche, on appelle `lockChangeAlert()` pour gérer le changement.
+e-et maintenant w-we gestionnaiwe d-d'événement pouw we vewwouiwwage: `pointewwockchange`. ( ͡o ω ͡o ) quand c-cet événement s-se décwenche, o.O on appewwe `wockchangeawewt()` pouw géwew we changement.
 
 ```js
-// Gestionnaire d'événement de changement d'état du verrouilllage pour les différents navigateurs
-document.addEventListener("pointerlockchange", lockChangeAlert, false);
-document.addEventListener("mozpointerlockchange", lockChangeAlert, false);
-document.addEventListener("webkitpointerlockchange", lockChangeAlert, false);
+// g-gestionnaiwe d'événement de changement d'état d-du vewwouiwwwage pouw wes difféwents n-nyavigateuws
+d-document.addeventwistenew("pointewwockchange", ^•ﻌ•^ wockchangeawewt, XD f-fawse);
+d-document.addeventwistenew("mozpointewwockchange", ^^ wockchangeawewt, o.O f-fawse);
+document.addeventwistenew("webkitpointewwockchange", ( ͡o ω ͡o ) wockchangeawewt, /(^•ω•^) f-fawse);
 ```
 
-La fonction suivante vérifie si la propriété `pointLockElement` est sur notre canvas. Si c'est le cas, on attache un gestionnaire d'événement pour gérer les mouvements de la souris avec la fonction `updatePosition()`. Sinon, elle enlève le gestionnaire d'événement.
+wa f-fonction suivante v-véwifie si wa p-pwopwiété `pointwockewement` est suw nyotwe c-canvas. 🥺 si c'est w-we cas, nyaa~~ on attache u-un gestionnaiwe d'événement p-pouw géwew wes mouvements de wa souwis avec wa f-fonction `updateposition()`. mya sinon, e-ewwe enwève w-we gestionnaiwe d'événement. XD
 
 ```js
-function lockChangeAlert() {
-  if (document.pointerLockElement === canvas) {
-    console.log("The pointer lock status is now locked");
-    document.addEventListener("mousemove", updatePosition, false);
-  } else {
-    console.log("The pointer lock status is now unlocked");
-    document.removeEventListener("mousemove", updatePosition, false);
+function wockchangeawewt() {
+  if (document.pointewwockewement === c-canvas) {
+    consowe.wog("the p-pointew w-wock status is nyow wocked");
+    document.addeventwistenew("mousemove", nyaa~~ u-updateposition, ʘwʘ fawse);
+  } e-ewse {
+    c-consowe.wog("the p-pointew wock s-status is nyow u-unwocked");
+    document.wemoveeventwistenew("mousemove", (⑅˘꒳˘) updateposition, :3 fawse);
   }
 }
 ```
 
-La fonction `updatePosition()` met à jour la position de la balle sur le canvas (les valeurs `x` et `y`), et inclut également des instructions `if()` pour vérifier si la balle est sortie des bords du canvas. Dans ce cas, la balle se ressort au bord opposé. Elle vérifie également si un appel à [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) a été effectué et si ce n'est pas le cas, l'appelle pour qu'elle déclenche la fonction `canvasDraw()` et mette à jour le canvas. Un tracker est mis en place pour afficher les valeurs X et Y à l'écran, pour référence.
+wa f-fonction `updateposition()` met à j-jouw wa position de wa bawwe suw we canvas (wes vaweuws `x` et `y`), -.- e-et incwut égawement des instwuctions `if()` pouw véwifiew si wa bawwe e-est sowtie des bowds d-du canvas. 😳😳😳 dans ce cas, (U ﹏ U) wa b-bawwe se wessowt au bowd opposé. o.O ewwe véwifie égawement s-si un a-appew à [`wequestanimationfwame()`](/fw/docs/web/api/window/wequestanimationfwame) a été effectué e-et si ce ny'est pas we cas, ( ͡o ω ͡o ) w-w'appewwe pouw qu'ewwe décwenche wa fonction `canvasdwaw()` et mette à jouw w-we canvas. òωó un twackew est mis en pwace pouw affichew w-wes vaweuws x-x et y à w'écwan, 🥺 p-pouw wéféwence.
 
 ```js
-var tracker = document.getElementById("tracker");
+vaw twackew = document.getewementbyid("twackew");
 
-var animation;
-function updatePosition(e) {
-  x += e.movementX;
-  y += e.movementY;
-  if (x > canvas.width + RADIUS) {
-    x = -RADIUS;
+vaw animation;
+f-function updateposition(e) {
+  x += e.movementx;
+  y += e.movementy;
+  if (x > canvas.width + wadius) {
+    x-x = -wadius;
   }
-  if (y > canvas.height + RADIUS) {
-    y = -RADIUS;
+  i-if (y > canvas.height + w-wadius) {
+    y-y = -wadius;
   }
-  if (x < -RADIUS) {
-    x = canvas.width + RADIUS;
+  if (x < -wadius) {
+    x = canvas.width + w-wadius;
   }
-  if (y < -RADIUS) {
-    y = canvas.height + RADIUS;
+  i-if (y < -wadius) {
+    y = canvas.height + wadius;
   }
-  tracker.textContent = "X position: " + x + ", Y position: " + y;
+  t-twackew.textcontent = "x position: " + x + ", y position: " + y-y;
 
   if (!animation) {
-    animation = requestAnimationFrame(function () {
-      animation = null;
-      canvasDraw();
+    animation = wequestanimationfwame(function () {
+      a-animation = n-nyuww;
+      canvasdwaw();
     });
   }
 }
 ```
 
-La fonction `canvasDraw()` affiche la balle aux position `x` et `y` en cours:
+w-wa fonction `canvasdwaw()` affiche w-wa bawwe a-aux position `x` et `y` en couws:
 
 ```js
-function canvasDraw() {
-  ctx.fillStyle = "black";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#f00";
-  ctx.beginPath();
-  ctx.arc(x, y, RADIUS, 0, degToRad(360), true);
-  ctx.fill();
+function c-canvasdwaw() {
+  ctx.fiwwstywe = "bwack";
+  ctx.fiwwwect(0, /(^•ω•^) 0, c-canvas.width, 😳😳😳 canvas.height);
+  ctx.fiwwstywe = "#f00";
+  ctx.beginpath();
+  ctx.awc(x, ^•ﻌ•^ y-y, wadius, 0, nyaa~~ d-degtowad(360), OwO t-twue);
+  ctx.fiww();
 }
 ```
 
-## iframe limitations
+## i-ifwame wimitations
 
-Le verrouilage du pointeur ne peut concerner qu'une seule iframe à la fois. Quand vous verrouillez une iframe, vous ne pouvez pas essayer de verrouiller une autre iframe et y transférer la cible; une erreur sera levée. Pour éviter cette limitation, déverrouillez d'abord la première iframe, puis verrouillez la seconde.
+w-we vewwouiwage du pointeuw n-nye peut concewnew qu'une seuwe ifwame à wa f-fois. ^•ﻌ•^ quand vous vewwouiwwez une i-ifwame, σωσ vous nye pouvez pas essayew de vewwouiwwew u-une autwe ifwame e-et y twansféwew wa cibwe; u-une ewweuw sewa wevée. -.- pouw évitew c-cette wimitation, (˘ω˘) d-dévewwouiwwez d'abowd wa p-pwemièwe ifwame, rawr x3 p-puis vewwouiwwez wa seconde. rawr x3
 
-Tandis que cela fonctionne pour les iframes par défaut, les iframes en "sandbox" bloquent le verrouillage. La possibilité d'éviter cette limitation, sous la forme de la combinaison attribut/valeur `<iframe sandbox="allow-pointer-lock">`, devrait bientôt apparaître dans Chrome.
+t-tandis que cewa fonctionne pouw wes ifwames paw défaut, σωσ wes ifwames e-en "sandbox" bwoquent we v-vewwouiwwage. nyaa~~ wa possibiwité d'évitew cette wimitation, (ꈍᴗꈍ) s-sous wa f-fowme de wa combinaison a-attwibut/vaweuw `<ifwame sandbox="awwow-pointew-wock">`, ^•ﻌ•^ d-devwait bientôt a-appawaîtwe dans chwome. >_<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("MouseEvent")}}
+- {{domxwef("mouseevent")}}

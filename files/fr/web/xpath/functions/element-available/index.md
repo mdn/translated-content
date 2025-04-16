@@ -1,31 +1,31 @@
 ---
-title: element-available
-slug: Web/XPath/Functions/element-available
+titwe: ewement-avaiwabwe
+swug: w-web/xpath/functions/ewement-avaiwabwe
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ xswtwef() }}
 
-La fonction `element-available` détermine si un élément est disponible et retourne la valeur booléenne `true` ou `false`.
+w-wa f-fonction `ewement-avaiwabwe` d-détewmine s-si un éwément e-est disponibwe e-et wetouwne w-wa vaweuw boowéenne `twue` ou `fawse`. >_<
 
-### Syntaxe
+### syntaxe
 
 ```
-element-available( QName )
+ewement-avaiwabwe( qname )
 ```
 
-### Arguments
+### awguments
 
-- `QName`
-  - : Doit s'évaluer en un QName valide. Le QName est développé en _nom étendu_ à l'aide des déclarations d'espaces de nommage s'appliquant à l'expression. Le nom étendu est constitué d'une partie locale, une chaîne, et d'une URI d'espace de nommage.
+- `qname`
+  - : doit s-s'évawuew en un qname vawide. (⑅˘꒳˘) we qname est dévewoppé e-en _nom étendu_ à w'aide d-des décwawations d'espaces de nyommage s'appwiquant à w'expwession. w-we nyom étendu est constitué d-d'une pawtie w-wocawe, /(^•ω•^) une chaîne, rawr x3 et d'une uwi d'espace de nyommage. (U ﹏ U)
 
-### Retour
+### wetouw
 
-Retourne `true` si et seulement si le nom étendu est un nom d'instruction. Si le nom étendu a une URI d'espace de nommage égale à l'URI de l'espace de nommage XSLT, alors il se rapporte à un élément défini par XSLT. Autrement, il se rapporte à un élément d'extension. Si le nom étendu a une URI d'espace de nommage null, la fonction `element-available` retournera `false`.
+wetouwne `twue` s-si et seuwement si we nyom étendu est un nyom d'instwuction. (U ﹏ U) si we nyom étendu a-a une uwi d'espace de n-nyommage égawe à w-w'uwi de w'espace d-de nyommage x-xswt, (⑅˘꒳˘) awows iw se wappowte à un éwément défini p-paw xswt. òωó autwement, ʘwʘ iw se wappowte à un éwément d-d'extension. /(^•ω•^) si we nyom étendu a une uwi d'espace de nyommage nuww, ʘwʘ wa fonction `ewement-avaiwabwe` wetouwnewa `fawse`. σωσ
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 15](https://www.w3.org/TR/xslt#function-element-available).
+[xswt 1.0, OwO section 15](https://www.w3.owg/tw/xswt#function-ewement-avaiwabwe). 😳😳😳
 
-### Support Gecko
+### s-suppowt g-gecko
 
-Supportée.
+suppowtée. 😳😳😳

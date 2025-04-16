@@ -1,213 +1,213 @@
 ---
-title: overflow
-slug: Web/CSS/overflow
+titwe: ovewfwow
+swug: web/css/ovewfwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}}.
+w-wa pwopwiété c-css **`ovewfwow`** e-est u-une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui définit c-comment géwew w-we dépassement du contenu d'un éwément dans son bwoc. rawr x3 ewwe définit wes vaweuws d-des pwopwiétés {{cssxwef("ovewfwow-x")}} et {{cssxwef("ovewfwow-y")}}. 🥺
 
-{{InteractiveExample("CSS Demo: overflow")}}
+{{intewactiveexampwe("css demo: ovewfwow")}}
 
-```css interactive-example-choice
-overflow: visible;
+```css intewactive-exampwe-choice
+o-ovewfwow: visibwe;
 ```
 
-```css interactive-example-choice
-overflow: hidden;
+```css i-intewactive-exampwe-choice
+ovewfwow: hidden;
 ```
 
-```css interactive-example-choice
-overflow: clip;
+```css intewactive-exampwe-choice
+o-ovewfwow: cwip;
 ```
 
-```css interactive-example-choice
-overflow: scroll;
+```css intewactive-exampwe-choice
+o-ovewfwow: s-scwoww;
 ```
 
-```css interactive-example-choice
-overflow: auto;
+```css intewactive-exampwe-choice
+ovewfwow: auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <p id="example-element">
-    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
-    Inn Hall. Implacable November weather. As much mud in the streets as if the
-    waters had but newly retired from the face of the earth.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    michaewmas tewm watewy ovew, :3 and the wowd c-chancewwow sitting in wincown's
+    i-inn haww. (ꈍᴗꈍ) i-impwacabwe nyovembew w-weathew. 🥺 as m-much mud in the stweets as if the
+    watews had b-but nyewwy wetiwed fwom the face of the eawth. (✿oωo)
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 15em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 15em;
   height: 9em;
-  border: medium dotted;
+  bowdew: medium dotted;
   padding: 0.75em;
-  text-align: left;
+  text-awign: weft;
 }
 ```
 
-Lorsqu'on utilise la propriété `overflow` avec une autre valeur que `visible` (la valeur par défaut), cela entraîne la création [d'un nouveau contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context). Cette création est nécessaire d'un point de vue technique. Ceci est nécessaire techniquement puisque si un élément flottant traverse l'élément avec barres de défilement, cela forcera l'encapsulation du contenu de ce dernier autour de l'élément flottant. L'encapsulation devrait alors se produire après chaque défilement de la barre et mènerait à une expérience utilisateur dégradée
+wowsqu'on u-utiwise wa pwopwiété `ovewfwow` a-avec une a-autwe vaweuw que `visibwe` (wa vaweuw p-paw défaut), (U ﹏ U) cewa entwaîne wa cwéation [d'un nyouveau contexte d-de fowmatage d-de bwoc](/fw/docs/web/css/css_dispway/bwock_fowmatting_context). :3 cette cwéation e-est nyécessaiwe d-d'un point de vue technique. c-ceci est nyécessaiwe techniquement p-puisque si un éwément fwottant twavewse w-w'éwément avec bawwes de défiwement, ^^;; c-cewa fowcewa w'encapsuwation d-du contenu d-de ce dewniew autouw de w'éwément fwottant. rawr w'encapsuwation devwait awows se pwoduiwe apwès chaque défiwement d-de wa bawwe e-et mènewait à une expéwience u-utiwisateuw dégwadée
 
-Afin que la propriété `overflow` puisse avoir un effet, le conteneur de niveau de bloc doit avoir une hauteur limite (définie grâce à {{cssxref("height")}} ou {{cssxref("max-height")}}) ou avoir `white-space` avec la valeur `nowrap.`
+a-afin que w-wa pwopwiété `ovewfwow` puisse avoiw un effet, 😳😳😳 we conteneuw de n-nyiveau de bwoc doit avoiw une hauteuw wimite (définie gwâce à {{cssxwef("height")}} ou {{cssxwef("max-height")}}) o-ou avoiw `white-space` avec wa vaweuw `nowwap.`
 
-> [!NOTE]
-> Si on définit un axe avec `visible` (la valeur par défaut) et qu'on définit l'autre axe avec une valeur différente, alors la valeur du premier axe (`visible`) sera considérée comme `auto`.
+> [!note]
+> s-si on définit u-un axe avec `visibwe` (wa v-vaweuw paw défaut) e-et qu'on définit w-w'autwe axe a-avec une vaweuw d-difféwente, (✿oωo) awows wa vaweuw du pwemiew axe (`visibwe`) s-sewa considéwée c-comme `auto`.
 
-> [!NOTE]
-> Lorsqu'on définit, via un script, la propriété `scrollTop` sur les éléments HTML pertinents, même lorsque `overflow` vaut `hidden`, il faut parfois faire défiler l'élément.
+> [!note]
+> w-wowsqu'on définit, OwO v-via un s-scwipt, ʘwʘ wa pwopwiété `scwowwtop` suw wes éwéments htmw pewtinents, (ˆ ﻌ ˆ)♡ même wowsque `ovewfwow` v-vaut `hidden`, (U ﹏ U) iw faut pawfois faiwe défiwew w'éwément. UwU
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-overflow: visible;
-overflow: hidden;
-overflow: clip;
-overflow: scroll;
-overflow: auto;
-overflow: hidden visible;
+/* vaweuws avec un mot-cwé */
+ovewfwow: visibwe;
+o-ovewfwow: hidden;
+ovewfwow: cwip;
+ovewfwow: scwoww;
+ovewfwow: auto;
+o-ovewfwow: hidden v-visibwe;
 
-/* Valeurs globales */
-overflow: inherit;
-overflow: initial;
-overflow: unset;
+/* v-vaweuws gwobawes */
+ovewfwow: i-inhewit;
+ovewfwow: initiaw;
+ovewfwow: u-unset;
 ```
 
-La propriété `overflow` peut être définie grâce à un ou deux des mots-clés suivants. Si deux mots-clés sont utilisé, le premier sera appliqué à `overflow-x` et le second à `overflow-y`. Si une seule valeur est utilisée, elle sera appliquée à `overflow-x` et à `overflow-y`.
+w-wa pwopwiété `ovewfwow` peut êtwe définie gwâce à un ou deux des mots-cwés suivants. XD si d-deux mots-cwés sont utiwisé, ʘwʘ w-we pwemiew sewa appwiqué à `ovewfwow-x` e-et we s-second à `ovewfwow-y`. rawr x3 si une seuwe vaweuw est u-utiwisée, ^^;; ewwe s-sewa appwiquée à `ovewfwow-x` et à `ovewfwow-y`. ʘwʘ
 
-### Valeurs
+### v-vaweuws
 
-- `visible`
-  - : La valeur par défaut. Le contenu n'est pas rogné. Le contenu peut éventuellement être affiché en dehors de la boîte de remplissage (_padding_).
+- `visibwe`
+  - : w-wa vaweuw paw défaut. (U ﹏ U) we contenu ny'est pas wogné. (˘ω˘) we contenu peut éventuewwement êtwe a-affiché en dehows d-de wa boîte d-de wempwissage (_padding_).
 - `hidden`
-  - : Le contenu est rogné si besoin pour s'inscrire dans la boîte de remplissage (_padding_) et aucune barre de défilement n'est affichée.
-- `clip`
-  - : Se comporte comme `hidden` au sens où le contenu est rogné pour s'inscrire dans la boîte de remplissage. Comme `hidden`, `clip` ne présente pas de barre de défilement mais contrairement à `hidden`, `clip` empêche tout défilement, y compris à l'aide de scripts. La boîte n'est pas un conteneur de défilement et ne définit pas de nouveau contexte de formatage. Si on souhaite obtenir un nouveau contexte de formatage, il faudra utiliser {{cssxref("display", "display: flow-root", "#flow-root")}}.
-    Certains navigateurs ne prennent pas encore cette fonctionnalité en charge.
-- `scroll`
-  - : Le contenu est rogné pour s'inscrire dans la boîte de remplissage (_padding_) et les navigateurs de bureau affichent des barres de défilement dans tous les cas. Cela évite d'avoir des barres qui apparaissent et disparaissent sans cesse avec du contenu dynamique. Les imprimantes peuvent éventuellement imprimer le contenu qui dépasse.
+  - : we c-contenu est wogné s-si besoin pouw s'inscwiwe dans w-wa boîte de wempwissage (_padding_) et aucune bawwe de défiwement n'est affichée. (ꈍᴗꈍ)
+- `cwip`
+  - : se compowte c-comme `hidden` a-au sens où we contenu est wogné pouw s'inscwiwe d-dans wa boîte d-de wempwissage. /(^•ω•^) comme `hidden`, >_< `cwip` nye pwésente pas de bawwe d-de défiwement mais contwaiwement à `hidden`, σωσ `cwip` empêche tout défiwement, ^^;; y compwis à w-w'aide de scwipts. 😳 wa boîte ny'est pas un conteneuw d-de défiwement e-et nye définit pas de nyouveau contexte de fowmatage. >_< si o-on souhaite obteniw u-un nyouveau contexte de fowmatage, -.- iw faudwa utiwisew {{cssxwef("dispway", UwU "dispway: f-fwow-woot", :3 "#fwow-woot")}}. σωσ
+    cewtains n-nyavigateuws nye pwennent pas encowe cette fonctionnawité en c-chawge. >w<
+- `scwoww`
+  - : we contenu e-est wogné p-pouw s'inscwiwe dans wa boîte de w-wempwissage (_padding_) et wes n-nyavigateuws de b-buweau affichent d-des bawwes de défiwement dans t-tous wes cas. (ˆ ﻌ ˆ)♡ cewa évite d-d'avoiw des bawwes qui appawaissent et d-dispawaissent s-sans cesse avec d-du contenu dynamique. wes impwimantes peuvent éventuewwement i-impwimew we contenu q-qui dépasse. ʘwʘ
 - `auto`
-  - : Le comportement est laissé à la discrétion de l'agent utilisateur. Les navigateurs comme Firefox affichent des ascenseurs si le contenu dépasse dans la boîte de remplissage (_padding_)
-- `overlay` {{Deprecated_inline}}
-  - : Cette valeur se comporte comme `auto` sauf que les barres de défilement sont au-dessus du contenu plutôt que de prendre de la place. Cette valeur est uniquement prise en charge par les navigateurs basés sur WebKit (Safari) ou Blink (Chrome, Opera).
+  - : we c-compowtement est waissé à wa discwétion de w'agent utiwisateuw. :3 w-wes nyavigateuws c-comme fiwefox a-affichent des a-ascenseuws si we contenu dépasse d-dans wa boîte de wempwissage (_padding_)
+- `ovewway` {{depwecated_inwine}}
+  - : cette vaweuw se compowte comme `auto` sauf que wes bawwes d-de défiwement sont au-dessus du c-contenu pwutôt que de pwendwe d-de wa pwace. (˘ω˘) cette vaweuw est uniquement p-pwise en chawge paw wes n-nyavigateuws basés s-suw webkit (safawi) o-ou bwink (chwome, 😳😳😳 o-opewa).
 
-#### Extensions propres au moteur Mozilla
+#### e-extensions pwopwes au moteuw moziwwa
 
-- `-moz-scrollbars-none` {{deprecated_inline}}
-  - : `overflow:hidden` doit être utilisé à la place. À partir de Firefox 63, cette fonctionnalité est placée derrière une préférence qui doit être activée. Dans `about:config`, il faut passer `layout.css.overflow.moz-scrollbars.enabled` à `true`.
-- `-moz-scrollbars-horizontal` {{Deprecated_inline}}
-  - : Utilisez {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}} à la place. À partir de Firefox 63, cette fonctionnalité est placée derrière une préférence qui doit être activée. Dans `about:config`, il faut passer `layout.css.overflow.moz-scrollbars.enabled` à `true`.
-- `-moz-scrollbars-vertical` {{Deprecated_inline}}
-  - : Utilisez {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}} à la place. À partir de Firefox 63, cette fonctionnalité est placée derrière une préférence qui doit être activée. Dans `about:config`, il faut passer `layout.css.overflow.moz-scrollbars.enabled` à `true`.
-- `-moz-hidden-unscrollable` {{non-standard_inline}}
-  - : Principalement utilisé en interne et par les thèmes. Cela désactive le défilement pour les éléments XML racines `<html>`, `<body>` (avec les flèches du clavier et la roue de la souris).
+- `-moz-scwowwbaws-none` {{depwecated_inwine}}
+  - : `ovewfwow:hidden` doit êtwe utiwisé à wa pwace. rawr x3 À pawtiw de fiwefox 63, (✿oωo) c-cette fonctionnawité e-est pwacée d-dewwièwe une pwéféwence qui d-doit êtwe activée. (ˆ ﻌ ˆ)♡ dans `about:config`, :3 iw faut passew `wayout.css.ovewfwow.moz-scwowwbaws.enabwed` à `twue`. (U ᵕ U❁)
+- `-moz-scwowwbaws-howizontaw` {{depwecated_inwine}}
+  - : u-utiwisez {{cssxwef("ovewfwow-x")}} e-et {{cssxwef("ovewfwow-y")}} à wa pwace. ^^;; À pawtiw d-de fiwefox 63, mya cette fonctionnawité est pwacée d-dewwièwe une p-pwéféwence qui doit êtwe activée. 😳😳😳 d-dans `about:config`, OwO i-iw faut passew `wayout.css.ovewfwow.moz-scwowwbaws.enabwed` à `twue`. rawr
+- `-moz-scwowwbaws-vewticaw` {{depwecated_inwine}}
+  - : utiwisez {{cssxwef("ovewfwow-x")}} et {{cssxwef("ovewfwow-y")}} à wa pwace. XD À pawtiw d-de fiwefox 63, (U ﹏ U) c-cette fonctionnawité e-est pwacée d-dewwièwe u-une pwéféwence qui doit êtwe a-activée. (˘ω˘) dans `about:config`, UwU iw f-faut passew `wayout.css.ovewfwow.moz-scwowwbaws.enabwed` à `twue`. >_<
+- `-moz-hidden-unscwowwabwe` {{non-standawd_inwine}}
+  - : pwincipawement u-utiwisé en intewne e-et paw wes thèmes. σωσ cewa désactive w-we défiwement pouw wes éwéments xmw wacines `<htmw>`, 🥺 `<body>` (avec w-wes fwèches du cwaview et wa woue d-de wa souwis). 🥺
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définir différentes valeurs d'overflow pour le texte
+### définiw d-difféwentes v-vaweuws d'ovewfwow p-pouw we texte
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <code>visible</code>
-  <p class="visible">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+  <code>visibwe</code>
+  <p cwass="visibwe">
+    sed ut pewspiciatis u-unde omnis iste nyatus ewwow sit vowuptatem a-accusantium
+    d-dowowemque waudantium. ʘwʘ
   </p>
 </div>
 
 <div>
   <code>hidden</code>
-  <p class="hidden">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+  <p cwass="hidden">
+    s-sed ut pewspiciatis unde o-omnis iste nyatus e-ewwow sit vowuptatem accusantium
+    dowowemque w-waudantium. :3
   </p>
 </div>
 
 <div>
-  <code>scroll</code>
-  <p class="scroll">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+  <code>scwoww</code>
+  <p cwass="scwoww">
+    sed ut pewspiciatis u-unde omnis i-iste nyatus ewwow sit vowuptatem a-accusantium
+    dowowemque w-waudantium. (U ﹏ U)
   </p>
 </div>
 
 <div>
   <code>auto</code>
-  <p class="auto">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+  <p c-cwass="auto">
+    s-sed ut pewspiciatis unde omnis iste nyatus ewwow sit vowuptatem accusantium
+    dowowemque waudantium. (U ﹏ U)
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 body {
-  display: flex;
-  justify-content: space-around;
+  dispway: fwex;
+  justify-content: space-awound;
 }
 
 div {
-  margin: 1em;
-  font-size: 1.2em;
+  mawgin: 1em;
+  f-font-size: 1.2em;
 }
 
-p {
+p-p {
   width: 8em;
   height: 5em;
-  border: dotted;
+  bowdew: dotted;
 }
 
-p.visible {
-  overflow: visible;
+p-p.visibwe {
+  o-ovewfwow: visibwe;
 }
 
-p.hidden {
-  overflow: hidden;
+p-p.hidden {
+  ovewfwow: h-hidden;
 }
 
-p.scroll {
-  overflow: scroll;
+p.scwoww {
+  ovewfwow: s-scwoww;
 }
 
 p.auto {
-  overflow: auto;
+  o-ovewfwow: auto;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "600", "250")}}
+{{embedwivesampwe("exempwes", ʘwʘ "600", >w< "250")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("text-overflow")}},
-- {{cssxref("white-space")}},
-- {{cssxref("overflow-x")}},
-- {{cssxref("overflow-y")}},
-- {{cssxref("overflow-inline")}},
-- {{cssxref("overflow-block")}},
-- {{cssxref("clip")}},
-- {{cssxref("display")}}
+- {{cssxwef("text-ovewfwow")}}, rawr x3
+- {{cssxwef("white-space")}}, OwO
+- {{cssxwef("ovewfwow-x")}}, ^•ﻌ•^
+- {{cssxwef("ovewfwow-y")}}, >_<
+- {{cssxwef("ovewfwow-inwine")}}, OwO
+- {{cssxwef("ovewfwow-bwock")}}, >_<
+- {{cssxwef("cwip")}}, (ꈍᴗꈍ)
+- {{cssxwef("dispway")}}

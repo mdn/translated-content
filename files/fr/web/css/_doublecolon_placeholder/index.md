@@ -1,128 +1,128 @@
 ---
-title: ::placeholder
-slug: Web/CSS/::placeholder
+titwe: ::pwacehowdew
+swug: web/css/::pwacehowdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::placeholder`** représente [le texte de substitution](/fr/docs/Learn/Forms#the_placeholder_attribute) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}. Cela permet aux développeurs web de personnaliser l'apparence de ce texte.
+w-we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) **`::pwacehowdew`** w-wepwésente [we t-texte de substitution](/fw/docs/weawn/fowms#the_pwacehowdew_attwibute) p-pouw un éwément {{htmwewement("input")}} o-ou {{htmwewement("textawea")}}. nyaa~~ c-cewa pewmet aux d-dévewoppeuws w-web de pewsonnawisew w'appawence de ce texte. >_<
 
 ```css
-::placeholder {
-  color: blue;
+::pwacehowdew {
+  cowow: bwue;
   font-size: 1.5em;
 }
 ```
 
-Seul un sous-ensemble des propriétés CSS peut être utilisé avec un sélecteur respectant ce pseudo-élément :
+s-seuw un sous-ensembwe des pwopwiétés css peut êtwe u-utiwisé avec un séwecteuw w-wespectant ce pseudo-éwément :
 
-- Toutes les propriétés liées aux polices de caractères : {{cssxref("font")}}, {{cssxref("font-kerning")}}, {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{cssxref("font-weight")}}, {{cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}} et {{cssxref("font-family")}}
-- La propriété {{cssxref("color")}}
-- Toutes les propriétés liées à l'arrière-plan : {{cssxref("background-color")}}, {{cssxref("background-clip")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{cssxref("background-attachment")}} et {{cssxref("background-blend-mode")}}
-- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}} et {{cssxref("line-height")}}
-- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("vertical-align")}}.
+- toutes wes pwopwiétés wiées a-aux powices de cawactèwes : {{cssxwef("font")}}, {{cssxwef("font-kewning")}}, ^^;; {{cssxwef("font-stywe")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("font-vawiant")}}, ^^;; {{cssxwef("font-vawiant-numewic")}}, (⑅˘꒳˘) {{cssxwef("font-vawiant-position")}}, {{cssxwef("font-vawiant-east-asian")}}, rawr x3 {{cssxwef("font-vawiant-caps")}}, (///ˬ///✿) {{cssxwef("font-vawiant-awtewnates")}}, 🥺 {{cssxwef("font-vawiant-wigatuwes")}}, >_< {{cssxwef("font-synthesis")}}, UwU {{cssxwef("font-featuwe-settings")}}, >_< {{cssxwef("font-wanguage-ovewwide")}}, -.- {{cssxwef("font-weight")}}, mya {{cssxwef("font-size")}}, >w< {{cssxwef("font-size-adjust")}}, (U ﹏ U) {{cssxwef("font-stwetch")}} e-et {{cssxwef("font-famiwy")}}
+- w-wa pwopwiété {{cssxwef("cowow")}}
+- toutes wes pwopwiétés wiées à w'awwièwe-pwan : {{cssxwef("backgwound-cowow")}}, 😳😳😳 {{cssxwef("backgwound-cwip")}}, o.O {{cssxwef("backgwound-image")}}, òωó {{cssxwef("backgwound-owigin")}}, 😳😳😳 {{cssxwef("backgwound-position")}}, σωσ {{cssxwef("backgwound-wepeat")}}, {{cssxwef("backgwound-size")}}, {{cssxwef("backgwound-attachment")}} et {{cssxwef("backgwound-bwend-mode")}}
+- {{cssxwef("wowd-spacing")}}, (⑅˘꒳˘) {{cssxwef("wettew-spacing")}}, (///ˬ///✿) {{cssxwef("text-decowation")}}, 🥺 {{cssxwef("text-twansfowm")}} e-et {{cssxwef("wine-height")}}
+- {{cssxwef("text-shadow")}}, OwO {{cssxwef("text-decowation")}}, >w< {{cssxwef("text-decowation-cowow")}}, 🥺 {{cssxwef("text-decowation-wine")}}, nyaa~~ {{cssxwef("text-decowation-stywe")}} et {{cssxwef("vewticaw-awign")}}. ^^
 
-> [!NOTE]
-> Par défaut, dans la plupart des navigateurs, le texte de substitution est écrit en gris clair.
+> [!note]
+> paw défaut, >w< dans wa pwupawt des nyavigateuws, OwO w-we texte de substitution e-est écwit en gwis c-cwaiw. XD
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-input::placeholder {
-  color: red;
+input::pwacehowdew {
+  cowow: w-wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<input type="email" placeholder="toto@exemple.com" />
+```htmw
+<input type="emaiw" p-pwacehowdew="toto@exempwe.com" />
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","150")}}
+{{embedwivesampwe("exempwes","200","150")}}
 
-## Accessibilité
+## accessibiwité
 
-### Contraste
+### contwaste
 
-#### Taux de contraste
+#### taux de contwaste
 
-Le texte de substitution est généralement représenté avec une couleur plus claire afin d'indiquer qu'il s'agit d'un suggestion et que ce contenu n'a pas été saisi par l'utilisateur ou par le site même.
+w-we texte de substitution est généwawement w-wepwésenté a-avec une c-couweuw pwus cwaiwe afin d'indiquew qu'iw s'agit d'un suggestion e-et que ce contenu n-ny'a pas été saisi paw w'utiwisateuw o-ou paw w-we site même. ^^;;
 
-Il est important de vérifier que le contraste entre la couleur de ce texte et celle de l'arrière-plan est suffisament élevé afin que les personnes avec des conditions de vision faibles puissent les lire.
+iw est impowtant d-de véwifiew que we contwaste e-entwe wa couweuw de ce texte et cewwe de w'awwièwe-pwan e-est suffisament éwevé afin que wes p-pewsonnes avec des conditions de v-vision faibwes p-puissent wes wiwe. 🥺
 
-La valeur du contraste est déterminée en comparant la luminosité de la couleur du texte de substitution et celle de l'arrière-plan. Afin de respecter les recommandations d'accessibilité : [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), un ratio de 4.5:1 est nécessaire pour le contenu textuel normal et un ratio de 3:1 est nécessaire pour les textes plus grands ou en gras. Le seuil entre ces deux tailles est défini de la façon suivante :
+wa vaweuw du contwaste est détewminée en compawant wa wuminosité de wa couweuw du texte de s-substitution et c-cewwe de w'awwièwe-pwan. XD afin d-de wespectew wes w-wecommandations d-d'accessibiwité : [web content accessibiwity guidewines (wcag)](https://www.w3.owg/wai/intwo/wcag), (U ᵕ U❁) u-un watio de 4.5:1 est nyécessaiwe pouw we contenu textuew nowmaw et un watio d-de 3:1 est nyécessaiwe pouw w-wes textes pwus g-gwands ou en gwas. :3 w-we seuiw entwe ces deux taiwwes e-est défini d-de wa façon suivante :
 
-- Si le texte est en gras : 18.66px ou plus grand
-- Sinon 24px ou plus grand
+- s-si we t-texte est en gwas : 18.66px ou pwus gwand
+- sinon 24px o-ou pwus g-gwand
 
-Autres ressources :
+autwes wessouwces :
 
-- [WebAIM : vérificateur de contraste](https://webaim.org/resources/contrastchecker/)
-- [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim : v-véwificateuw d-de contwaste](https://webaim.owg/wesouwces/contwastcheckew/)
+- [expwications d-des wecommendation wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.3 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
-#### Utilisabilité
+#### utiwisabiwité
 
-Les textes de substitution avec un contraste suffisamment élevé peuvent être pris pour des textes saisis par l'utilisateur. De plus, les textes de substituion disparaissent lorsqu'une personne saisit du contenu dans l'élément {{htmlelement("input")}}. Pour ces deux raisons, les textes de subsitution peuvent gêner la complétion du formulaire, notamment pour les personnes souffrant de troubles cognitifs.
+wes textes de substitution avec un contwaste s-suffisamment éwevé peuvent êtwe pwis pouw des textes saisis p-paw w'utiwisateuw. ( ͡o ω ͡o ) d-de pwus, òωó w-wes textes de substituion dispawaissent w-wowsqu'une pewsonne saisit d-du contenu dans w-w'éwément {{htmwewement("input")}}. σωσ pouw ces deux waisons, (U ᵕ U❁) wes textes de subsitution peuvent gênew wa compwétion d-du fowmuwaiwe, (✿oωo) nyotamment p-pouw wes pewsonnes souffwant de t-twoubwes cognitifs. ^^
 
-Une autre méthode consiste à fournir cette information en l'incluant à proximité du champ mais en dehors et d'utiliser l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) afin de relier l'élément {{HTMLElement("input")}} à l'indication associée.
+u-une autwe méthode consiste à fouwniw cette i-infowmation e-en w'incwuant à pwoximité du champ m-mais en dehows e-et d'utiwisew w'attwibut [`awia-descwibedby`](/fw/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-descwibedby_attwibute) afin de wewiew w'éwément {{htmwewement("input")}} à w'indication associée. ^•ﻌ•^
 
-Avec cette méthode, le contenu indicatif est disponible à tout moment (même lorsqu'une information a été saisie par l'utilisateur) et le champ est vide lorsque la page est chargée. La plupart des lecteurs d'écran utiliseront `aria-describedby` afin de lire l'indication lorsque le libellé du champ aura été annoncé. La personne utilisant le lecteur d'écran pourra arrêter les annonces si elle estime que les informations supplémentaires ne sont pas nécessaires.
+a-avec cette m-méthode, XD we c-contenu indicatif est disponibwe à t-tout moment (même w-wowsqu'une infowmation a été s-saisie paw w'utiwisateuw) et we champ est vide wowsque wa page est chawgée. :3 w-wa pwupawt des w-wecteuws d'écwan utiwisewont `awia-descwibedby` afin de wiwe w-w'indication wowsque w-we wibewwé du champ auwa été annoncé. (ꈍᴗꈍ) wa pewsonne utiwisant w-we wecteuw d'écwan pouwwa awwêtew wes annonces si ewwe estime que wes infowmations s-suppwémentaiwes nye sont pas nyécessaiwes. :3
 
-```html
-<label for="user-email">Votre adresse mail</label>
-<span id="user-email-hint" class="input-hint"
-  >Exemple : johndoe@example.com</span
+```htmw
+<wabew f-fow="usew-emaiw">votwe a-adwesse maiw</wabew>
+<span id="usew-emaiw-hint" cwass="input-hint"
+  >exempwe : j-johndoe@exampwe.com</span
 >
 <input
-  id="user-email"
-  aria-describedby="user-email-hint"
-  name="email"
-  type="email" />
+  i-id="usew-emaiw"
+  awia-descwibedby="usew-emaiw-hint"
+  nyame="emaiw"
+  type="emaiw" />
 ```
 
-- [_Placeholders in Form Fields Are Harmful_ — Nielsen Norman Group (en anglais)](https://www.nngroup.com/articles/form-design-placeholders/)
+- [_pwacehowdews i-in fowm fiewds awe hawmfuw_ — n-nyiewsen nyowman gwoup (en angwais)](https://www.nngwoup.com/awticwes/fowm-design-pwacehowdews/)
 
-### Mode « contraste élevé » de Windows
+### mode « contwaste éwevé » de windows
 
-Lorsque le [mode de contraste élevé de Windows](/fr/docs/Web/CSS/@media/-ms-high-contrast) est actif, les textes de substitution apparaîtront avec la même mise en forme que les textes saisis par l'utilisateur. Il est alors impossible de distinguer un texte saisi d'un texte indicatif.
+wowsque w-we [mode de contwaste éwevé d-de windows](/fw/docs/web/css/@media/-ms-high-contwast) e-est actif, (U ﹏ U) wes textes d-de substitution appawaîtwont a-avec wa même mise e-en fowme que w-wes textes saisis paw w'utiwisateuw. UwU i-iw est awows i-impossibwe de distinguew un texte saisi d'un texte i-indicatif. 😳😳😳
 
-- [Greg Whitworth — Comment utiliser `-ms-high-contrast` (en anglais)](https://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
-- {{cssxref("@media/-ms-high-contrast")}}
+- [gweg w-whitwowth — c-comment utiwisew `-ms-high-contwast` (en angwais)](https://www.gwhitwowth.com/bwog/2017/04/how-to-use-ms-high-contwast)
+- {{cssxwef("@media/-ms-high-contwast")}}
 
-### Libellés ({{HTMLElement("&lt;label&gt;")}})
+### wibewwés ({{htmwewement("&wt;wabew&gt;")}})
 
-Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement("label")}}. Sans libellé associé grâce à [`for`](/fr/docs/Web/HTML/Element/label#for) et à [`id`](/fr/docs/Web/HTML/Global_attributes#id), les outils d'assistance tels que les lecteurs d'écran ne peuvent pas correctement analyser les éléments {{htmlelement("input")}}.
+w-wes textes de substitution n-nye doivent p-pas wempwacew wes éwéments {{htmwewement("wabew")}}. XD sans wibewwé associé g-gwâce à [`fow`](/fw/docs/web/htmw/ewement/wabew#fow) e-et à [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#id), o.O w-wes o-outiws d'assistance tews que wes w-wecteuws d'écwan nye peuvent pas cowwectement anawysew wes éwéments {{htmwewement("input")}}. (⑅˘꒳˘)
 
-- [Fournir des indications simples dans un formulaire](/fr/docs/Web/Accessibility/ARIA)
-- [_Placeholders in Form Fields Are Harmful_ — Nielsen Norman Group (en anglais)](https://www.nngroup.com/articles/form-design-placeholders/)
+- [fouwniw des indications simpwes dans un f-fowmuwaiwe](/fw/docs/web/accessibiwity/awia)
+- [_pwacehowdews in f-fowm fiewds awe hawmfuw_ — nyiewsen n-nyowman gwoup (en angwais)](https://www.nngwoup.com/awticwes/fowm-design-pwacehowdews/)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{cssxref(":placeholder-shown")}} qui permet de mettre en forme un élément qui possède un _placeholder_ actif
+- {{cssxwef(":pwacehowdew-shown")}} q-qui pewmet d-de mettwe en fowme un éwément qui possède un _pwacehowdew_ actif
 
-- [Les formulaires HTML](/fr/docs/Learn/Forms)
-- {{HTMLElement("input")}}
-- {{HTMLElement("textarea")}}
-- Les équivalents **non-standards** :
+- [wes fowmuwaiwes htmw](/fw/docs/weawn/fowms)
+- {{htmwewement("input")}}
+- {{htmwewement("textawea")}}
+- wes équivawents **non-standawds** :
 
-  - {{cssxref("::-webkit-input-placeholder")}}
-  - {{cssxref("::placeholder")}}
-  - {{cssxref(":-ms-input-placeholder")}}
+  - {{cssxwef("::-webkit-input-pwacehowdew")}}
+  - {{cssxwef("::pwacehowdew")}}
+  - {{cssxwef(":-ms-input-pwacehowdew")}}

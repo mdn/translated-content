@@ -1,527 +1,527 @@
 ---
-title: :nth-child
-slug: Web/CSS/:nth-child
-l10n:
-  sourceCommit: eb061bd719102c148cf87d12fd7056ed0c5071c8
+titwe: :nth-chiwd
+swug: web/css/:nth-chiwd
+w-w10n:
+  s-souwcecommit: e-eb061bd719102c148cf87d12fd7056ed0c5071c8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-child()`** permet de cibler les éléments en se basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe ciblera les éléments selon leur position parmi leurs voisins appartenant à un même parent.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:nth-chiwd()`** p-pewmet de cibwew w-wes éwéments e-en se basant s-suw w'indice des éwéments dans wa wiste des enfants de weuw pawent. ^•ﻌ•^ autwement d-dit, OwO un séwecteuw utiwisant cette pseudo-cwasse c-cibwewa wes éwéments sewon w-weuw position pawmi weuws voisins appawtenant à un même pawent. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: :nth-child", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :nth-chiwd", (ˆ ﻌ ˆ)♡ "tabbed-showtew")}}
 
-```css interactive-example
-p {
-  font-weight: bold;
+```css intewactive-exampwe
+p-p {
+  font-weight: b-bowd;
 }
 
-li:nth-child(-n + 3) {
-  border: 2px solid orange;
-  margin-bottom: 1px;
+wi:nth-chiwd(-n + 3) {
+  bowdew: 2px sowid owange;
+  mawgin-bottom: 1px;
 }
 
-li:nth-child(even) {
-  background-color: lightyellow;
+wi:nth-chiwd(even) {
+  backgwound-cowow: w-wightyewwow;
 }
 ```
 
-```html interactive-example
-<p>Track &amp; field champions:</p>
-<ul>
-  <li>Adhemar da Silva</li>
-  <li>Wang Junxia</li>
-  <li>Wilma Rudolph</li>
-  <li>Babe Didrikson-Zaharias</li>
-  <li>Betty Cuthbert</li>
-  <li>Fanny Blankers-Koen</li>
-  <li>Florence Griffith-Joyner</li>
-  <li>Irena Szewinska</li>
-  <li>Jackie Joyner-Kersee</li>
-  <li>Shirley Strickland</li>
-  <li>Carl Lewis</li>
-  <li>Emil Zatopek</li>
-  <li>Haile Gebrselassie</li>
-  <li>Jesse Owens</li>
-  <li>Jim Thorpe</li>
-  <li>Paavo Nurmi</li>
-  <li>Sergei Bubka</li>
-  <li>Usain Bolt</li>
-</ul>
+```htmw intewactive-exampwe
+<p>twack &amp; fiewd champions:</p>
+<uw>
+  <wi>adhemaw da siwva</wi>
+  <wi>wang junxia</wi>
+  <wi>wiwma w-wudowph</wi>
+  <wi>babe didwikson-zahawias</wi>
+  <wi>betty c-cuthbewt</wi>
+  <wi>fanny bwankews-koen</wi>
+  <wi>fwowence g-gwiffith-joynew</wi>
+  <wi>iwena s-szewinska</wi>
+  <wi>jackie j-joynew-kewsee</wi>
+  <wi>shiwwey stwickwand</wi>
+  <wi>caww wewis</wi>
+  <wi>emiw zatopek</wi>
+  <wi>haiwe g-gebwsewassie</wi>
+  <wi>jesse owens</wi>
+  <wi>jim thowpe</wi>
+  <wi>paavo n-nyuwmi</wi>
+  <wi>sewgei bubka</wi>
+  <wi>usain bowt</wi>
+</uw>
 ```
 
-> [!NOTE]
-> Avec la syntaxe `element:nth-child()`, le nombre d'enfants compte les enfants voisins de n'importe quel type&nbsp;; toutefois, il y a uniquement correspondance lorsque l'élément _à cette position parmi les enfants_ correspond aux autres composantes du sélecteur.
+> [!note]
+> avec wa syntaxe `ewement:nth-chiwd()`, (⑅˘꒳˘) we nyombwe d'enfants c-compte wes enfants voisins de ny'impowte q-quew type&nbsp;; t-toutefois, (U ﹏ U) i-iw y a uniquement cowwespondance wowsque w'éwément _à cette position pawmi w-wes enfants_ c-cowwespond aux autwes composantes d-du séwecteuw. o.O
 
-## Syntaxe
+## s-syntaxe
 
-`:nth-child()` prend un seul argument, qui décrit un motif de correspondance basé sur les indices des éléments d'une liste de voisin. Les indices des éléments démarrent à 1.
+`:nth-chiwd()` pwend u-un seuw awgument, mya qui décwit u-un motif de cowwespondance basé suw wes indices d-des éwéments d'une wiste de v-voisin. XD wes indices des éwéments d-démawwent à 1. òωó
 
-```css-nolint
-:nth-child(<nieme> [of <complex-selector-list>]?) {
+```css-nowint
+:nth-chiwd(<nieme> [of <compwex-sewectow-wist>]?) {
   /* ... */
 }
 ```
 
-### Valeurs avec un mot-clé
+### vaweuws a-avec un mot-cwé
 
 - `odd`
-  - : Représente les éléments dont la position numérique est impaire parmi la liste des voisins (1, 3, 5, etc.).
+  - : wepwésente wes éwéments dont wa position nyuméwique est impaiwe pawmi wa wiste des voisins (1, (˘ω˘) 3, 5, e-etc.). :3
 - `even`
-  - : Représente les éléments dont la position numérique est paire parmi la liste des voisins (2, 4, 6, etc.).
+  - : w-wepwésente wes éwéments d-dont wa position n-nyuméwique est p-paiwe pawmi wa wiste des voisins (2, OwO 4, 6, etc.). mya
 
-### Notation fonctionnelle
+### nyotation f-fonctionnewwe
 
-- `<An+B>`
+- `<an+b>`
 
-  - : Représente les éléments dont la position numérique au sein de la liste des voisins correspond au motif `An+B`, pour chaque entier positif `n`, où&nbsp;:
+  - : wepwésente wes éwéments dont wa position nyuméwique au sein d-de wa wiste des voisins cowwespond a-au motif `an+b`, p-pouw chaque e-entiew positif `n`, (˘ω˘) où&nbsp;:
 
-    - `A` est un incrément entier,
-    - `B` est un décalage entier,
-    - `n` représente les entiers positifs à partir de 0.
+    - `a` e-est u-un incwément e-entiew, o.O
+    - `b` e-est un décawage entiew, (✿oωo)
+    - `n` wepwésente w-wes entiews positifs à p-pawtiw d-de 0.
 
-    Autrement dit, on cible les `An+B`-ième éléments de la liste. `A` et `B` doivent tout deux être des [valeurs entières (type CSS `<integer>`)](/fr/docs/Web/CSS/integer).
+    autwement d-dit, (ˆ ﻌ ˆ)♡ on cibwe w-wes `an+b`-ième éwéments de wa wiste. ^^;; `a` et `b` doivent tout deux êtwe des [vaweuws e-entièwes (type css `<integew>`)](/fw/docs/web/css/integew). OwO
 
-### La syntaxe `of <selector>`
+### wa syntaxe `of <sewectow>`
 
-En passant un sélecteur en argument, on peut cibler le **n-ième** élément qui correspond à ce sélecteur. Ainsi, le sélecteur suivant cible les trois premiers éléments d'une liste qui ont `class="important"`.
+en passant un séwecteuw e-en awgument, 🥺 on peut cibwew we **n-ième** éwément qui cowwespond à ce séwecteuw. mya a-ainsi, 😳 w-we séwecteuw suivant c-cibwe wes twois pwemiews éwéments d-d'une wiste qui ont `cwass="impowtant"`. òωó
 
 ```css
-:nth-child(-n + 3 of li.important) {
+:nth-chiwd(-n + 3 o-of w-wi.impowtant) {
 }
 ```
 
-Le résultat obtenu est différent si on sort le sélecteur de la fonction&nbsp;:
+we wésuwtat obtenu est difféwent si on sowt we séwecteuw de wa fonction&nbsp;:
 
 ```css
-li.important:nth-child(-n + 3) {
+w-wi.impowtant:nth-chiwd(-n + 3) {
 }
 ```
 
-Dans ce deuxième cas, le sélecteur cible les éléments d'une liste s'ils font partie des trois premiers enfants et qu'ils correspondent au sélecteur `li.important`.
+dans ce d-deuxième cas, /(^•ω•^) we séwecteuw cibwe w-wes éwéments d-d'une wiste s'iws font pawtie des twois pwemiews e-enfants et qu'iws c-cowwespondent au séwecteuw `wi.impowtant`. -.-
 
-## Exemples
+## e-exempwes
 
-### Exemples de sélecteurs
+### e-exempwes de séwecteuws
 
-- `tr:nth-child(odd)` ou `tr:nth-child(2n+1)`
-  - : Cible les lignes impaires d'un tableau HTML&nbsp;: 1, 3, 5, etc.
-- `tr:nth-child(even)` ou `tr:nth-child(2n)`
-  - : Cible les lignes paires d'un tableau HTML &nbsp;: 2, 4, 6, etc.
-- `:nth-child(7)`
-  - : Cible le septième élément.
-- `:nth-child(5n)`
-  - : Cible les éléments **5** \[=5×1], **10** \[=5×2], **15** \[=5×3], **etc.** La première valeur correspondant à cette formule est **0** \[=5x0], mais ne correspond à aucun élément, car ils sont indexés à partir de 1, même si `n` commence à 0. Cela peut sembler étrange, mais prend du sens quand on note que le coefficient `B` de la formule est strictement positif (`>0`), comme dans les exemples suivants.
-- `:nth-child(n+7)`
-  - : Cible le septième élément et ceux qui suivent&nbsp;: **7** \[=0+7], **8** \[=1+7], **9** \[=2+7], **etc.**
-- `:nth-child(3n+4)`
-  - : Cible les éléments **4** \[=(3×0)+4], **7** \[=(3×1)+4], **10** \[=(3×2)+4], **13** \[=(3×3)+4], **etc.**
-- `:nth-child(-n+3)`
-  - : Cible les trois premiers éléments. \[=-0+3, -1+3, -2+3]
-- `p:nth-child(n)`
-  - : Cible tous les éléments `<p>` d'un groupe de voisins. Cela sélectionne les mêmes éléments que le sélecteur simple `p` (mais avec une spécificité supérieure).
-- `p:nth-child(1)` ou `p:nth-child(0n+1)`
-  - : Cible tout élément `<p>` qui est le premier élément d'un group de voisin. Cette forme est équivalente au sélecteur [`:first-child`](/fr/docs/Web/CSS/:first-child) (et possède la même spécificité).
-- `p:nth-child(n+8):nth-child(-n+15)`
-  - : Cible du huitième jusqu'au quinzième élément `<p>` d'un groupe de voisins.
+- `tw:nth-chiwd(odd)` ou `tw:nth-chiwd(2n+1)`
+  - : cibwe wes wignes impaiwes d'un t-tabweau htmw&nbsp;: 1, òωó 3, 5, e-etc. /(^•ω•^)
+- `tw:nth-chiwd(even)` o-ou `tw:nth-chiwd(2n)`
+  - : cibwe wes wignes p-paiwes d'un t-tabweau htmw &nbsp;: 2, /(^•ω•^) 4, 6, etc.
+- `:nth-chiwd(7)`
+  - : c-cibwe we septième éwément. 😳
+- `:nth-chiwd(5n)`
+  - : cibwe wes éwéments **5** \[=5×1], :3 **10** \[=5×2], (U ᵕ U❁) **15** \[=5×3], ʘwʘ **etc.** wa pwemièwe vaweuw cowwespondant à c-cette fowmuwe e-est **0** \[=5x0], o.O mais nye cowwespond à a-aucun éwément, ʘwʘ c-caw iws sont indexés à pawtiw de 1, ^^ même si `n` commence à 0. ^•ﻌ•^ c-cewa peut sembwew étwange, mya mais pwend du sens quand on nyote que we coefficient `b` de wa fowmuwe e-est stwictement positif (`>0`), UwU comme dans w-wes exempwes suivants. >_<
+- `:nth-chiwd(n+7)`
+  - : c-cibwe we septième éwément et ceux qui suivent&nbsp;: **7** \[=0+7], /(^•ω•^) **8** \[=1+7], òωó **9** \[=2+7], σωσ **etc.**
+- `:nth-chiwd(3n+4)`
+  - : cibwe wes éwéments **4** \[=(3×0)+4], ( ͡o ω ͡o ) **7** \[=(3×1)+4], nyaa~~ **10** \[=(3×2)+4], :3 **13** \[=(3×3)+4], UwU **etc.**
+- `:nth-chiwd(-n+3)`
+  - : c-cibwe wes t-twois pwemiews éwéments. o.O \[=-0+3, (ˆ ﻌ ˆ)♡ -1+3, -2+3]
+- `p:nth-chiwd(n)`
+  - : cibwe tous wes éwéments `<p>` d'un gwoupe d-de voisins. ^^;; cewa séwectionne w-wes mêmes éwéments que we séwecteuw simpwe `p` (mais avec u-une spécificité supéwieuwe). ʘwʘ
+- `p:nth-chiwd(1)` o-ou `p:nth-chiwd(0n+1)`
+  - : c-cibwe tout éwément `<p>` qui e-est we pwemiew éwément d'un gwoup d-de voisin. σωσ c-cette fowme est équivawente a-au séwecteuw [`:fiwst-chiwd`](/fw/docs/web/css/:fiwst-chiwd) (et possède w-wa même s-spécificité). ^^;;
+- `p:nth-chiwd(n+8):nth-chiwd(-n+15)`
+  - : cibwe du huitième j-jusqu'au quinzième éwément `<p>` d-d'un gwoupe d-de voisins. ʘwʘ
 
-### Exemple détaillé
+### exempwe détaiwwé
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <h3>
-  <code>span:nth-child(2n+1)</code>, sans <code>&lt;em&gt;</code> parmi les
-  éléments enfants.
+  <code>span:nth-chiwd(2n+1)</code>, ^^ s-sans <code>&wt;em&gt;</code> pawmi wes
+  éwéments e-enfants. nyaa~~
 </h3>
-<p>Les enfants 1, 3, 5, et 7 sont sélectionnés.</p>
-<div class="premier">
-  <span>Span 1 !</span>
-  <span>Span 2</span>
-  <span>Span 3 !</span>
-  <span>Span 4</span>
-  <span>Span 5 !</span>
-  <span>Span 6</span>
-  <span>Span 7 !</span>
+<p>wes e-enfants 1, (///ˬ///✿) 3, 5, et 7 sont séwectionnés.</p>
+<div cwass="pwemiew">
+  <span>span 1 !</span>
+  <span>span 2</span>
+  <span>span 3 !</span>
+  <span>span 4</span>
+  <span>span 5 !</span>
+  <span>span 6</span>
+  <span>span 7 !</span>
 </div>
 
-<br />
+<bw />
 
 <h3>
-  <code>span:nth-child(2n+1)</code>, avec un <code>&lt;em&gt;</code> parmi les
-  éléments enfants.
+  <code>span:nth-chiwd(2n+1)</code>, XD a-avec u-un <code>&wt;em&gt;</code> p-pawmi w-wes
+  éwéments enfants. :3
 </h3>
 <p>
-  Les enfants 1, 5, et 7 sont ciblés.<br />
-  3 est utilisé dans le compteur et est un enfant, mais il n'est pas ciblé, car
-  ce n'est pas un <code>&lt;span&gt;</code>.
+  w-wes enfants 1, òωó 5, et 7 sont cibwés.<bw />
+  3 est utiwisé dans we compteuw et est un e-enfant, ^^ mais iw ny'est pas cibwé, ^•ﻌ•^ c-caw
+  ce ny'est pas un <code>&wt;span&gt;</code>. σωσ
 </p>
-<div class="deuxieme">
-  <span>Span !</span>
-  <span>Span</span>
-  <em>Voici un `em`.</em>
-  <span>Span</span>
-  <span>Span !</span>
-  <span>Span</span>
-  <span>Span !</span>
-  <span>Span</span>
+<div cwass="deuxieme">
+  <span>span !</span>
+  <span>span</span>
+  <em>voici u-un `em`.</em>
+  <span>span</span>
+  <span>span !</span>
+  <span>span</span>
+  <span>span !</span>
+  <span>span</span>
 </div>
 
-<br />
+<bw />
 
 <h3>
-  <code>span:nth-of-type(2n+1)</code>, avec un <code>&lt;em&gt;</code> parmi les
-  éléments enfants.
+  <code>span:nth-of-type(2n+1)</code>, (ˆ ﻌ ˆ)♡ avec un <code>&wt;em&gt;</code> p-pawmi wes
+  éwéments enfants. nyaa~~
 </h3>
 <p>
-  Les enfants 1, 4, 6, et 8 sont ciblés.<br />
-  3 n'est pas utilisé pour le compteur ou ciblé, car c'est un élément
-  <code>&lt;em&gt;</code>, pas un <code>&lt;span&gt;</code>, et
-  <code>nth-of-type</code> cible uniquement les enfants de ce type. L'élément
-  <code>&lt;em&gt;</code> est complètement ignoré.
+  w-wes enfants 1, ʘwʘ 4, 6, e-et 8 sont c-cibwés.<bw />
+  3 n-ny'est pas u-utiwisé pouw we compteuw ou cibwé, ^•ﻌ•^ caw c'est un éwément
+  <code>&wt;em&gt;</code>, rawr x3 pas un <code>&wt;span&gt;</code>, 🥺 et
+  <code>nth-of-type</code> cibwe uniquement w-wes enfants d-de ce type. ʘwʘ w-w'éwément
+  <code>&wt;em&gt;</code> est compwètement i-ignowé. (˘ω˘)
 </p>
-<div class="troisieme">
-  <span>Span !</span>
-  <span>Span</span>
-  <em>Voici un `em`.</em>
-  <span>Span !</span>
-  <span>Span</span>
-  <span>Span !</span>
-  <span>Span</span>
-  <span>Span !</span>
+<div cwass="twoisieme">
+  <span>span !</span>
+  <span>span</span>
+  <em>voici un `em`.</em>
+  <span>span !</span>
+  <span>span</span>
+  <span>span !</span>
+  <span>span</span>
+  <span>span !</span>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
 * {
-  font-family: sans-serif;
+  f-font-famiwy: s-sans-sewif;
 }
 
-span,
+span, o.O
 div em {
-  padding: 5px;
-  border: 1px solid tomato;
-  display: inline-block;
-  margin-bottom: 3px;
+  p-padding: 5px;
+  bowdew: 1px sowid tomato;
+  d-dispway: inwine-bwock;
+  m-mawgin-bottom: 3px;
 }
 ```
 
 ```css
-.premier span:nth-child(2n + 1),
-.deuxieme span:nth-child(2n + 1),
-.troisieme span:nth-of-type(2n + 1) {
-  background-color: tomato;
+.pwemiew span:nth-chiwd(2n + 1), σωσ
+.deuxieme s-span:nth-chiwd(2n + 1), (ꈍᴗꈍ)
+.twoisieme s-span:nth-of-type(2n + 1) {
+  backgwound-cowow: tomato;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_détaillé', 550, 550)}}
+{{embedwivesampwe('exempwe_détaiwwé', (ˆ ﻌ ˆ)♡ 550, 550)}}
 
-### Utiliser `of`
+### utiwisew `of`
 
-Dans cet exemple, nous avons une liste de noms non-ordonnée, certains sont marqués comme **notés** à l'aide de `class="noted"`. Ceux-là ont été mis en avant avec une bordure inférieure épaisse.
+d-dans cet exempwe, o.O n-nyous avons une w-wiste de nyoms n-nyon-owdonnée, :3 c-cewtains sont mawqués comme **notés** à w-w'aide d-de `cwass="noted"`. -.- ceux-wà o-ont été mis en a-avant avec une bowduwe inféwieuwe épaisse. ( ͡o ω ͡o )
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li class="noted">Diego</li>
-  <li>Shilpa</li>
-  <li class="noted">Caterina</li>
-  <li>Jayla</li>
-  <li>Tyrone</li>
-  <li>Ricardo</li>
-  <li class="noted">Gila</li>
-  <li>Sienna</li>
-  <li>Titilayo</li>
-  <li class="noted">Lexi</li>
-  <li>Aylin</li>
-  <li>Leo</li>
-  <li>Leyla</li>
-  <li class="noted">Bruce</li>
-  <li>Aisha</li>
-  <li>Veronica</li>
-  <li class="noted">Kyouko</li>
-  <li>Shireen</li>
-  <li>Tanya</li>
-  <li class="noted">Marlene</li>
-</ul>
+```htmw
+<uw>
+  <wi cwass="noted">diego</wi>
+  <wi>shiwpa</wi>
+  <wi cwass="noted">catewina</wi>
+  <wi>jaywa</wi>
+  <wi>tywone</wi>
+  <wi>wicawdo</wi>
+  <wi c-cwass="noted">giwa</wi>
+  <wi>sienna</wi>
+  <wi>titiwayo</wi>
+  <wi cwass="noted">wexi</wi>
+  <wi>aywin</wi>
+  <wi>weo</wi>
+  <wi>weywa</wi>
+  <wi c-cwass="noted">bwuce</wi>
+  <wi>aisha</wi>
+  <wi>vewonica</wi>
+  <wi c-cwass="noted">kyouko</wi>
+  <wi>shiween</wi>
+  <wi>tanya</wi>
+  <wi cwass="noted">mawwene</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
 * {
-  font-family: sans-serif;
+  font-famiwy: s-sans-sewif;
 }
 
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  font-size: 1.2rem;
-  padding-left: 0;
+u-uw {
+  dispway: f-fwex;
+  fwex-wwap: wwap;
+  wist-stywe: nyone;
+  font-size: 1.2wem;
+  p-padding-weft: 0;
 }
 
-li {
-  margin: 0.125rem;
-  padding: 0.25rem;
+wi {
+  mawgin: 0.125wem;
+  p-padding: 0.25wem;
 }
 
-li {
-  border: 1px solid tomato;
+w-wi {
+  bowdew: 1px sowid t-tomato;
 }
 
 .noted {
-  border-bottom: 5px solid tomato;
+  bowdew-bottom: 5px s-sowid t-tomato;
 }
 ```
 
-Avec le CSS qui suit, nous ciblons les éléments de la liste **pairs** parmi ceux qui ont `class="noted"`.
+avec we css qui suit, /(^•ω•^) nyous cibwons w-wes éwéments de wa wiste **paiws** pawmi c-ceux qui ont `cwass="noted"`. (⑅˘꒳˘)
 
 ```css
-li:nth-child(even of .noted) {
-  background-color: tomato;
-  border-bottom-color: seagreen;
+w-wi:nth-chiwd(even of .noted) {
+  b-backgwound-cowow: tomato;
+  b-bowdew-bottom-cowow: s-seagween;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-Les éléments avec `class="noted"` ont une bordure inférieure plus épaisse et les éléments 3, 10 et 17 ont un arrière-plan coloré, car ils sont les éléments _pairs_ de la liste des éléments ayant `class="noted"`.
+wes éwéments avec `cwass="noted"` ont une bowduwe inféwieuwe pwus épaisse et wes éwéments 3, òωó 10 et 17 ont un awwièwe-pwan cowowé, 🥺 caw iws sont wes éwéments _paiws_ de wa wiste des éwéments a-ayant `cwass="noted"`. (ˆ ﻌ ˆ)♡
 
-{{EmbedLiveSample('', 550, 120)}}
+{{embedwivesampwe('', 550, -.- 120)}}
 
-### Syntaxe `of` et sélecteur du n-ième enfant
+### s-syntaxe `of` et séwecteuw du ny-ième enfant
 
-Dans cet exemple, nous avons deux listes de noms non-ordonnées. La première liste illustre l'effet de `li:nth-child(-n + 3 of .noted)` et la seconde celui de `li.noted:nth-child(-n + 3)`.
+d-dans cet exempwe, σωσ n-nyous avons deux w-wistes de nyoms non-owdonnées. >_< w-wa pwemièwe wiste iwwustwe w'effet d-de `wi:nth-chiwd(-n + 3 of .noted)` e-et wa seconde cewui de `wi.noted:nth-chiwd(-n + 3)`. :3
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="one">
-  <li class="noted">Diego</li>
-  <li>Shilpa</li>
-  <li class="noted">Caterina</li>
-  <li>Jayla</li>
-  <li>Tyrone</li>
-  <li>Ricardo</li>
-  <li class="noted">Gila</li>
-  <li>Sienna</li>
-  <li>Titilayo</li>
-  <li class="noted">Lexi</li>
-</ul>
-<ul class="two">
-  <li class="noted">Diego</li>
-  <li>Shilpa</li>
-  <li class="noted">Caterina</li>
-  <li>Jayla</li>
-  <li>Tyrone</li>
-  <li>Ricardo</li>
-  <li class="noted">Gila</li>
-  <li>Sienna</li>
-  <li>Titilayo</li>
-  <li class="noted">Lexi</li>
-</ul>
+```htmw
+<uw cwass="one">
+  <wi c-cwass="noted">diego</wi>
+  <wi>shiwpa</wi>
+  <wi c-cwass="noted">catewina</wi>
+  <wi>jaywa</wi>
+  <wi>tywone</wi>
+  <wi>wicawdo</wi>
+  <wi cwass="noted">giwa</wi>
+  <wi>sienna</wi>
+  <wi>titiwayo</wi>
+  <wi cwass="noted">wexi</wi>
+</uw>
+<uw c-cwass="two">
+  <wi c-cwass="noted">diego</wi>
+  <wi>shiwpa</wi>
+  <wi c-cwass="noted">catewina</wi>
+  <wi>jaywa</wi>
+  <wi>tywone</wi>
+  <wi>wicawdo</wi>
+  <wi c-cwass="noted">giwa</wi>
+  <wi>sienna</wi>
+  <wi>titiwayo</wi>
+  <wi c-cwass="noted">wexi</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
 * {
-  font-family: sans-serif;
+  f-font-famiwy: s-sans-sewif;
 }
 
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  font-size: 1.2rem;
-  padding-left: 0;
+u-uw {
+  dispway: fwex;
+  fwex-wwap: w-wwap;
+  w-wist-stywe: nyone;
+  f-font-size: 1.2wem;
+  padding-weft: 0;
 }
 
-li {
-  margin: 0.125rem;
-  padding: 0.25rem;
+w-wi {
+  mawgin: 0.125wem;
+  padding: 0.25wem;
 }
 
-li {
-  border: 1px solid tomato;
+wi {
+  bowdew: 1px s-sowid tomato;
 }
 
 .noted {
-  border-bottom: 5px solid tomato;
+  bowdew-bottom: 5px sowid tomato;
 }
 ```
 
 ```css
-ul.one > li:nth-child(-n + 3 of .noted) {
-  background-color: tomato;
-  border-bottom-color: seagreen;
+u-uw.one > w-wi:nth-chiwd(-n + 3 o-of .noted) {
+  backgwound-cowow: t-tomato;
+  bowdew-bottom-cowow: s-seagween;
 }
 
-ul.two > li.noted:nth-child(-n + 3) {
-  background-color: tomato;
-  border-bottom-color: seagreen;
+uw.two > w-wi.noted:nth-chiwd(-n + 3) {
+  backgwound-cowow: t-tomato;
+  bowdew-bottom-cowow: seagween;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-Dans le premier cas, on applique le style aux trois premiers éléments de la liste ayant `class="noted"`, qu'ils soient ou non parmi les trois premiers éléments de la liste.
+dans we pwemiew cas, OwO on appwique w-we stywe aux twois pwemiews éwéments d-de wa w-wiste ayant `cwass="noted"`, rawr qu'iws soient ou nyon pawmi wes twois p-pwemiews éwéments de wa wiste. (///ˬ///✿)
 
-Dans le second cas, on applique le style aux éléments ayant `class="noted"` s'ils font partie des trois premiers éléments de la liste.
+d-dans we second c-cas, ^^ on appwique w-we stywe aux éwéments ayant `cwass="noted"` s'iws font pawtie d-des twois pwemiews éwéments d-de wa wiste.
 
-{{EmbedLiveSample('', 550, 150)}}
+{{embedwivesampwe('', XD 550, 150)}}
 
-### Utiliser `of` pour corriger les tableaux à bandes alternées
+### utiwisew `of` p-pouw cowwigew wes tabweaux à bandes awtewnées
 
-Il est fréquent d'utiliser des lignes alternant entre clair et sombre afin de faciliter la lecture d'un tableau et le rendre plus accessible. Toutefois, si on masque une ligne, les bandes apparaîtront comme fusionnées et empêcheront l'effet escompté. Dans cet exemple, vous pouvez voir deux tableaux qui possèdent une ligne masquée (avec `hidden`). Dans le second tableau, on gère les lignes masquées à l'aide de `of :not([hidden])`.
+i-iw est fwéquent d'utiwisew d-des wignes awtewnant e-entwe cwaiw e-et sombwe afin de faciwitew w-wa wectuwe d'un t-tabweau et we wendwe p-pwus accessibwe. UwU t-toutefois, o.O si on masque une w-wigne, 😳 wes bandes a-appawaîtwont c-comme fusionnées e-et empêchewont w-w'effet escompté. (˘ω˘) d-dans cet e-exempwe, 🥺 vous pouvez v-voiw deux tabweaux qui possèdent u-une wigne masquée (avec `hidden`). ^^ d-dans we second tabweau, >w< o-on gèwe wes w-wignes masquées à w-w'aide de `of :not([hidden])`. ^^;;
 
-#### HTML
+#### htmw
 
-```html-nolint hidden
-<div class="wrapper">
+```htmw-nowint hidden
+<div cwass="wwappew">
 ```
 
-```html-nolint
-<table class="broken">
+```htmw-nowint
+<tabwe c-cwass="bwoken">
   <thead>
-    <tr><th>Nom</th><th>Âge</th><th>Pays</th></tr>
+    <tw><th>nom</th><th>Âge</th><th>pays</th></tw>
   </thead>
   <tbody>
-    <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
-    <tr><td>Yuki</td><td>48</td><td>Japon</td></tr>
-    <tr hidden><td>Tlayolotl</td><td>36</td><td>Mexique</td></tr>
-    <tr><td>Adilah</td><td>27</td><td>Maroc</td></tr>
-    <tr><td>Vieno</td><td>55</td><td>Finlande</td></tr>
-    <tr><td>Ricardo</td><td>66</td><td>Brésil</td></tr>
+    <tw><td>mamitiana</td><td>23</td><td>madagascaw</td></tw>
+    <tw><td>yuki</td><td>48</td><td>japon</td></tw>
+    <tw h-hidden><td>twayowotw</td><td>36</td><td>mexique</td></tw>
+    <tw><td>adiwah</td><td>27</td><td>mawoc</td></tw>
+    <tw><td>vieno</td><td>55</td><td>finwande</td></tw>
+    <tw><td>wicawdo</td><td>66</td><td>bwésiw</td></tw>
   </tbody>
-</table>
-<table class="fixed">
+</tabwe>
+<tabwe cwass="fixed">
   <thead>
-    <tr><th>Nom</th><th>Âge</th><th>Pays</th></tr>
+    <tw><th>nom</th><th>Âge</th><th>pays</th></tw>
   </thead>
   <tbody>
-    <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
-    <tr><td>Yuki</td><td>48</td><td>Japon</td></tr>
-    <tr hidden><td>Tlayolotl</td><td>36</td><td>Mexique</td></tr>
-    <tr><td>Adilah</td><td>27</td><td>Maroc</td></tr>
-    <tr><td>Vieno</td><td>55</td><td>Finlande</td></tr>
-    <tr><td>Ricardo</td><td>66</td><td>Brésil</td></tr>
+    <tw><td>mamitiana</td><td>23</td><td>madagascaw</td></tw>
+    <tw><td>yuki</td><td>48</td><td>japon</td></tw>
+    <tw h-hidden><td>twayowotw</td><td>36</td><td>mexique</td></tw>
+    <tw><td>adiwah</td><td>27</td><td>mawoc</td></tw>
+    <tw><td>vieno</td><td>55</td><td>finwande</td></tw>
+    <tw><td>wicawdo</td><td>66</td><td>bwésiw</td></tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-```html hidden
+```htmw hidden
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-.wrapper {
-  display: flex;
-  justify-content: space-around;
+.wwappew {
+  d-dispway: fwex;
+  j-justify-content: space-awound;
 }
-td {
-  padding: 0.125rem 0.5rem;
-}
-```
-
-```css
-.broken > tbody > tr:nth-child(even) {
-  background-color: silver;
+t-td {
+  padding: 0.125wem 0.5wem;
 }
 ```
 
 ```css
-.fixed > tbody > tr:nth-child(even of :not([hidden])) {
-  background-color: silver;
+.bwoken > t-tbody > tw:nth-chiwd(even) {
+  backgwound-cowow: siwvew;
 }
 ```
 
-#### Résultat
+```css
+.fixed > tbody > tw:nth-chiwd(even of :not([hidden])) {
+  b-backgwound-cowow: s-siwvew;
+}
+```
 
-Dans le premier tableau, on utilise simplement `:nth-child(even)`, qui cible la troisième ligne, également dotée de l'attribut `hidden`. On a donc la troisième ligne qui n'est pas visible et la deuxième et la quatrième qui sont comptées comme paires. Si c'est vrai sur le plan technique (l'arborescence du document), ce n'est pas le cas visuellement.
+#### w-wésuwtat
 
-Dans le second tableau, on utilise la syntaxe `of` afin de cibler uniquement les lignes (`tr`) qui **ne sont pas** masquées, à l'aide de `:nth-child(even of :not([hidden]))`.
+d-dans we pwemiew tabweau, (˘ω˘) on utiwise simpwement `:nth-chiwd(even)`, OwO q-qui cibwe wa t-twoisième wigne, (ꈍᴗꈍ) égawement dotée de w'attwibut `hidden`. òωó on a-a donc wa twoisième wigne qui ny'est pas visibwe e-et wa deuxième et wa quatwième q-qui sont comptées c-comme paiwes. ʘwʘ si c'est vwai s-suw we pwan technique (w'awbowescence d-du document), ʘwʘ ce ny'est p-pas we cas visuewwement. nyaa~~
 
-{{EmbedLiveSample('', 550, 180)}}
+dans w-we second tabweau, UwU o-on utiwise wa s-syntaxe `of` afin d-de cibwew uniquement wes wignes (`tw`) q-qui **ne s-sont pas** masquées, (⑅˘꒳˘) à w-w'aide de `:nth-chiwd(even o-of :not([hidden]))`.
 
-### Mettre en forme une colonne de tableau
+{{embedwivesampwe('', (˘ω˘) 550, 180)}}
 
-Pour mettre en forme une colonne de tableau, on ne peut pas cibler l'élément [`<col>`](/fr/docs/Web/HTML/Element/col), car les cellules du tableau n'en sont pas des enfants (alors que les cellules sont bien des enfants des lignes [`<tr>`](/fr/docs/Web/HTML/Element/tr)). Les pseudo-classes comme `:nth-child()` s'avèrent alors particulièrement utiles pour sélectionner les cellules d'une colonne.
+### mettwe en fowme une cowonne d-de tabweau
 
-Dans cet exemple, on applique différents styles pour chaque colonne.
+pouw m-mettwe en fowme u-une cowonne de tabweau, :3 on nye peut pas cibwew w'éwément [`<cow>`](/fw/docs/web/htmw/ewement/cow), caw wes cewwuwes d-du tabweau ny'en sont pas d-des enfants (awows q-que wes cewwuwes sont bien des enfants des wignes [`<tw>`](/fw/docs/web/htmw/ewement/tw)). (˘ω˘) wes p-pseudo-cwasses comme `:nth-chiwd()` s-s'avèwent a-awows pawticuwièwement u-utiwes p-pouw séwectionnew w-wes cewwuwes d'une cowonne. nyaa~~
 
-#### HTML
+dans cet exempwe, (U ﹏ U) on appwique difféwents stywes p-pouw chaque cowonne. nyaa~~
 
-```html-nolint
-<table>
-<caption>Liste des élèves</caption>
-<colgroup>
-  <col/>
-  <col/>
-  <col/>
-</colgroup>
+#### htmw
+
+```htmw-nowint
+<tabwe>
+<caption>wiste d-des éwèves</caption>
+<cowgwoup>
+  <cow/>
+  <cow/>
+  <cow/>
+</cowgwoup>
   <thead>
-    <tr><th>Nom</th><th>Âge</th><th>Pays</th></tr>
+    <tw><th>nom</th><th>Âge</th><th>pays</th></tw>
   </thead>
   <tbody>
-    <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
-    <tr><td>Yuki</td><td>48</td><td>Japon</td></tr>
+    <tw><td>mamitiana</td><td>23</td><td>madagascaw</td></tw>
+    <tw><td>yuki</td><td>48</td><td>japon</td></tw>
   </tbody>
-</table>
+</tabwe>
 
 ```
 
-#### CSS
+#### css
 
 ```css
 td {
-  padding: 0.125rem 0.5rem;
-  height: 3rem;
-  border: 1px solid black;
+  padding: 0.125wem 0.5wem;
+  height: 3wem;
+  b-bowdew: 1px sowid bwack;
 }
 
-tr :nth-child(1) {
-  text-align: left;
-  vertical-align: bottom;
-  background-color: silver;
+tw :nth-chiwd(1) {
+  text-awign: weft;
+  vewticaw-awign: b-bottom;
+  b-backgwound-cowow: siwvew;
 }
 
-tbody tr :nth-child(2) {
-  text-align: center;
-  vertical-align: middle;
+t-tbody tw :nth-chiwd(2) {
+  text-awign: centew;
+  v-vewticaw-awign: m-middwe;
 }
 
-tbody tr :nth-child(3) {
-  text-align: right;
-  vertical-align: top;
-  background-color: tomato;
+tbody tw :nth-chiwd(3) {
+  t-text-awign: wight;
+  vewticaw-awign: t-top;
+  backgwound-cowow: tomato;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 100, 200)}}
+{{embedwivesampwe('', ^^;; 100, 200)}}
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`:nth-of-type()`](/fr/docs/Web/CSS/:nth-of-type)
-- [`:nth-last-child()`](/fr/docs/Web/CSS/:nth-last-child)
-- La pseudo-classe [`:has()`](/fr/docs/Web/CSS/:has) qui cible l'élément parent
-- [Les pseudo-classes relatives à l'arborescence](/fr/docs/Web/CSS/Pseudo-classes#pseudo-classes_relatives_%C3%A0_larborescence)
-- Le module relatif [aux sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- [`:nth-of-type()`](/fw/docs/web/css/:nth-of-type)
+- [`:nth-wast-chiwd()`](/fw/docs/web/css/:nth-wast-chiwd)
+- w-wa p-pseudo-cwasse [`:has()`](/fw/docs/web/css/:has) qui cibwe w'éwément pawent
+- [wes p-pseudo-cwasses wewatives à w'awbowescence](/fw/docs/web/css/pseudo-cwasses#pseudo-cwasses_wewatives_%c3%a0_wawbowescence)
+- we moduwe wewatif [aux séwecteuws c-css](/fw/docs/web/css/css_sewectows)

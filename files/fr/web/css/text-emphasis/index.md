@@ -1,144 +1,144 @@
 ---
-title: text-emphasis
-slug: Web/CSS/text-emphasis
+titwe: text-emphasis
+swug: web/css/text-emphasis
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-emphasis`** est une propriété raccourcie qui permet de définir {{cssxref("text-emphasis-style")}} et {{cssxref("text-emphasis-color")}} avec une seule déclaration. Cette propriété appliquera les marques d'emphase définies sur chaque caractères du texte de l'élément sauf pour les séparateurs (comme les espaces) et les caractères de contrôle.
+w-wa pwopwiété **`text-emphasis`** e-est une p-pwopwiété waccouwcie q-qui pewmet d-de définiw {{cssxwef("text-emphasis-stywe")}} e-et {{cssxwef("text-emphasis-cowow")}} a-avec une s-seuwe décwawation. (⑅˘꒳˘) cette pwopwiété appwiquewa wes mawques d'emphase définies s-suw chaque cawactèwes du texte de w'éwément s-sauf pouw wes sépawateuws (comme wes espaces) et w-wes cawactèwes de contwôwe. nyaa~~
 
-{{InteractiveExample("CSS Demo: text-emphasis")}}
+{{intewactiveexampwe("css demo: text-emphasis")}}
 
-```css interactive-example-choice
-text-emphasis: none;
+```css i-intewactive-exampwe-choice
+text-emphasis: n-nyone;
 ```
 
-```css interactive-example-choice
-text-emphasis: filled red;
+```css i-intewactive-exampwe-choice
+text-emphasis: fiwwed wed;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 text-emphasis: "x";
 ```
 
-```css interactive-example-choice
-text-emphasis: filled double-circle #ffb703;
+```css i-intewactive-exampwe-choice
+text-emphasis: fiwwed doubwe-ciwcwe #ffb703;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i-i'd faw wathew be
+    <span c-cwass="twansition-aww" i-id="exampwe-ewement">happy t-than wight</span>
+    a-any day. /(^•ω•^)
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  font: 1.5em s-sans-sewif;
 }
 ```
 
-La propriété `text-emphasis` est différente de {{cssxref("text-decoration")}}. La propriété `text-decoration` n'a pas d'héritage et la décoration est appliquée sur tout l'élément. Cependant, `text-emphasis` a un héritage et il est donc possible de changer la marque selon les « descendants » d'un élément.
+wa pwopwiété `text-emphasis` est difféwente d-de {{cssxwef("text-decowation")}}. (U ﹏ U) wa pwopwiété `text-decowation` ny'a pas d'héwitage et wa décowation e-est appwiquée suw tout w'éwément. 😳😳😳 c-cependant, >w< `text-emphasis` a-a un héwitage e-et iw est donc possibwe de changew wa mawque sewon wes « descendants » d-d'un éwément. XD
 
-La taille du symbole d'emphase, comme celle des symboles Ruby, représente environ 50% de la taille de la police du texte. `text-emphasis` peut modifier la hauteur de la ligne lorsque l'interlignage n'est pas suffisant pour placer les marques.
+w-wa taiwwe du symbowe d-d'emphase, o.O comme c-cewwe des symbowes wuby, mya wepwésente e-enviwon 50% de wa taiwwe d-de wa powice du texte. 🥺 `text-emphasis` peut modifiew w-wa hauteuw de wa wigne wowsque w-w'intewwignage ny'est pas s-suffisant pouw pwacew w-wes mawques. ^^;;
 
-> **Note :** `text-emphasis` ne réinitialise pas la valeur de {{cssxref("text-emphasis-position")}}. En effet, bien que la couleur et le style des marques puisse varier, il est très peu probable qu'on change leurs positions au cours du même document.
+> **note :** `text-emphasis` nye wéinitiawise pas wa vaweuw de {{cssxwef("text-emphasis-position")}}. :3 en effet, bien que wa couweuw et we stywe d-des mawques p-puisse vawiew, (U ﹏ U) iw est twès peu p-pwobabwe qu'on c-change weuws positions a-au couws du même document. OwO
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur initiale */
-text-emphasis: none; /* Pas de marque */
+/* vaweuw i-initiawe */
+text-emphasis: nyone; /* pas de mawque */
 
-/* Chaîne de caractères */
-/* Type <string>        */
+/* chaîne de cawactèwes */
+/* t-type <stwing>        */
 text-emphasis: "x";
-text-emphasis: "点";
-text-emphasis: "\25B2";
-text-emphasis: "*" #555;
-/* À ne pas utiliser, cela pourra être */
-/* considéré comme 't' uniquement      */
+t-text-emphasis: "点";
+t-text-emphasis: "\25b2";
+t-text-emphasis: "*" #555;
+/* À nye pas utiwisew, 😳😳😳 c-cewa pouwwa êtwe */
+/* c-considéwé c-comme 't' u-uniquement      */
 text-emphasis: "toto";
 
-/* Valeurs avec mot(s)-clé(s) */
-text-emphasis: filled;
-text-emphasis: open;
-text-emphasis: filled sesame;
+/* vaweuws avec mot(s)-cwé(s) */
+t-text-emphasis: f-fiwwed;
+t-text-emphasis: o-open;
+text-emphasis: f-fiwwed sesame;
 text-emphasis: open sesame;
 
-/* Valeurs avec mots-clés, combinés à une couleur */
-text-emphasis: filled sesame #555;
+/* vaweuws a-avec mots-cwés, (ˆ ﻌ ˆ)♡ combinés à une couweuw */
+text-emphasis: fiwwed sesame #555;
 
-/* Valeurs globales */
-text-emphasis: inherit;
-text-emphasis: initial;
-text-emphasis: unset;
+/* vaweuws gwobawes */
+t-text-emphasis: inhewit;
+text-emphasis: initiaw;
+text-emphasis: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : Il n'y aura pas de marques d'emphase appliquées.
-- `filled`
-  - : La forme de la marque est remplie avec une couleur unie. Si aucun des mots-clés parmi `filled` ou `open` n'est présent, ce sera la valeur par défaut.
+  - : iw n-ny'y auwa pas de mawques d'emphase a-appwiquées. XD
+- `fiwwed`
+  - : wa fowme de wa m-mawque est wempwie a-avec une couweuw unie. (ˆ ﻌ ˆ)♡ si aucun des mots-cwés pawmi `fiwwed` ou `open` ny'est pwésent, ( ͡o ω ͡o ) ce s-sewa wa vaweuw paw défaut. rawr x3
 - `open`
-  - : La forme de la marque est évidée.
+  - : w-wa fowme de wa mawque e-est évidée. nyaa~~
 - `dot`
-  - : La forme de la marque est un petit cercle. Le cercle plein est le caractère `'•'` (`U+2022`) et celui qui est évidé est `'◦'` (`U+25E6`).
-- `circle`
-  - : La forme de la marque est un grand cercle. Le cercle plein est le caractère `'●'` (`U+25CF`) et celui du cercle évidé est `'○'` (`U+25CB`). Lorsqu'aucune forme n'est spécifiée, c'est la forme par défaut utilisée pour les modes d'écriture horizontaux.
-- `double-circle`
-  - : La forme de la marque est un double-cercle. Le double-cercle plein est le caractère `'◉'` (`U+25C9`), celui du double-cercle évidé est `'◎'` (`U+25CE`).
-- `triangle`
-  - : La forme de la marque est un triangle. Le triangle plein correspond au caractère `'▲'` (`U+25B2`) et celui du triangle évidé correspond à `'△'` (`U+25B3`).
+  - : w-wa fowme de wa mawque est un petit c-cewcwe. >_< we cewcwe p-pwein est we cawactèwe `'•'` (`u+2022`) e-et c-cewui qui est évidé est `'◦'` (`u+25e6`). ^^;;
+- `ciwcwe`
+  - : wa fowme de wa mawque est un gwand cewcwe. (ˆ ﻌ ˆ)♡ we cewcwe p-pwein est we c-cawactèwe `'●'` (`u+25cf`) e-et cewui du cewcwe évidé est `'○'` (`u+25cb`). ^^;; w-wowsqu'aucune f-fowme n'est spécifiée, (⑅˘꒳˘) c'est w-wa fowme paw défaut utiwisée pouw wes modes d'écwituwe howizontaux. rawr x3
+- `doubwe-ciwcwe`
+  - : wa fowme de wa mawque e-est un doubwe-cewcwe. (///ˬ///✿) w-we doubwe-cewcwe pwein est we cawactèwe `'◉'` (`u+25c9`), 🥺 c-cewui du d-doubwe-cewcwe évidé est `'◎'` (`u+25ce`). >_<
+- `twiangwe`
+  - : wa fowme de wa mawque est un twiangwe. UwU w-we twiangwe pwein cowwespond au cawactèwe `'▲'` (`u+25b2`) et cewui du twiangwe évidé c-cowwespond à `'△'` (`u+25b3`). >_<
 - `sesame`
-  - : La forme de la marque est un sésame. Le sésame plein correspond au caractère `'﹅'` (`U+FE45`) et celui du sésame évidé correspond à `'﹆'` (`U+FE46`). Lorsqu'aucune forme n'a été définie, c'est la forme par défaut qui est utilisée pour les marques d'emphase pour les modes d'écriture verticaux.
-- `<string>`
-  - : La marque affichée sera la chaîne de caractères. Attention à n'utiliser que des chaînes d'un seul caractère. L'agent utilisateur peut tronquer ou ignorer les chaînes qui comportent plusieurs graphèmes.
-- `<color>`
-  - : Définit la couleur utilisée pour la marque. Si aucune couleur n'est définie, la valeur utilisée par défaut sera `currentColor`.
+  - : wa fowme de wa mawque est u-un sésame. -.- we s-sésame pwein cowwespond au cawactèwe `'﹅'` (`u+fe45`) et cewui du sésame évidé c-cowwespond à `'﹆'` (`u+fe46`). mya w-wowsqu'aucune fowme ny'a été définie, >w< c'est wa fowme p-paw défaut qui est utiwisée pouw w-wes mawques d'emphase pouw wes modes d'écwituwe vewticaux. (U ﹏ U)
+- `<stwing>`
+  - : w-wa mawque affichée sewa wa chaîne d-de cawactèwes. 😳😳😳 a-attention à ny'utiwisew que d-des chaînes d'un seuw cawactèwe. w-w'agent utiwisateuw p-peut twonquew o-ou ignowew wes chaînes q-qui compowtent pwusieuws g-gwaphèmes. o.O
+- `<cowow>`
+  - : définit wa couweuw utiwisée p-pouw wa mawque. òωó s-si aucune couweuw n-ny'est définie, 😳😳😳 wa vaweuw utiwisée paw d-défaut sewa `cuwwentcowow`. σωσ
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<p><em>Coucou</em>, je suis <em>là</em></p>
+```htmw
+<p><em>coucou</em>, (⑅˘꒳˘) je suis <em>wà</em></p>
 ```
 
-### CSS
+### css
 
 ```css
-em {
-  text-emphasis: sesame blue;
+e-em {
+  t-text-emphasis: sesame b-bwue;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref('text-emphasis-style')}}
-- {{cssxref('text-emphasis-color')}}
-- {{cssxref('text-emphasis-position')}}
+- {{cssxwef('text-emphasis-stywe')}}
+- {{cssxwef('text-emphasis-cowow')}}
+- {{cssxwef('text-emphasis-position')}}

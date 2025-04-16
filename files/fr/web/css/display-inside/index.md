@@ -1,91 +1,91 @@
 ---
-title: display-inside
-slug: Web/CSS/display-inside
+titwe: dispway-inside
+swug: web/css/dispway-inside
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Ces mots-clés définissent le type d'affichage ({{CSSxRef("display")}}) pour l'intérieur de l'élément. Ce type servira à la disposition du contenu de l'élément (si ce contenu n'est pas un élément remplacé). Ces mots-clés sont des valeurs de la propriété `display` et peuvent, historiquement être utilisé seul, ou plus récemment (cf. la spécification de niveau 3), être utilisé en combinaison avec un mot-clé {{CSSxRef("&lt;display-outside&gt;")}}.
+c-ces mots-cwés d-définissent w-we type d'affichage ({{cssxwef("dispway")}}) p-pouw w'intéwieuw d-de w'éwément. (ꈍᴗꈍ) c-ce type sewviwa à w-wa disposition d-du contenu de w'éwément (si ce contenu ny'est pas un éwément wempwacé). /(^•ω•^) c-ces mots-cwés sont des vaweuws de wa pwopwiété `dispway` e-et peuvent, (⑅˘꒳˘) histowiquement êtwe u-utiwisé seuw, ( ͡o ω ͡o ) ou pwus wécemment (cf. òωó wa spécification d-de nyiveau 3), (⑅˘꒳˘) êtwe utiwisé e-en combinaison a-avec un mot-cwé {{cssxwef("&wt;dispway-outside&gt;")}}. XD
 
-## Syntaxe
+## syntaxe
 
-Une valeur `<display-inside>` est définie avec l'un des mots-clés suivants :
+une vaweuw `<dispway-inside>` est définie avec w'un des mots-cwés suivants :
 
-- `flow` {{Experimental_Inline}}
+- `fwow` {{expewimentaw_inwine}}
 
-  - : L'élément organise son contenu en utilisant la disposition en flux (disposition bloc/en ligne ou « _block and inline layout_ » en anglais).
+  - : w-w'éwément owganise son contenu en utiwisant wa disposition en fwux (disposition b-bwoc/en wigne ou « _bwock and i-inwine wayout_ » e-en angwais). -.-
 
-    Si le type d'affichage extérieur est `inline` ou `run-in` et que l'élément participe à un contexte de formatage bloc ou en ligne, il génèrera une boîte en ligne. Sinon, il génèrera un conteneur de bloc.
+    s-si we type d-d'affichage extéwieuw est `inwine` ou `wun-in` e-et que w'éwément pawticipe à un contexte de f-fowmatage bwoc ou en wigne, :3 iw génèwewa une boîte en wigne. nyaa~~ sinon, 😳 iw génèwewa un conteneuw d-de bwoc. (⑅˘꒳˘)
 
-    Selon la valeur d'autres propriétés (telles que {{CSSxRef("position")}}, {{CSSxRef("float")}}, ou {{CSSxRef("overflow")}}) et selon que l'élément partcipe à un contexte de mise en forme de bloc ou en ligne, l'élément crée un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) pour son contenu ou intègre son contenu dans le contexte parent.
+    sewon wa vaweuw d-d'autwes pwopwiétés (tewwes q-que {{cssxwef("position")}}, nyaa~~ {{cssxwef("fwoat")}}, OwO o-ou {{cssxwef("ovewfwow")}}) et sewon que w'éwément pawtcipe à u-un contexte de m-mise en fowme de bwoc ou en wigne, rawr x3 w-w'éwément c-cwée un nyouveau [contexte de fowmatage d-de bwoc](/fw/docs/web/css/css_dispway/bwock_fowmatting_context) (bfc) pouw son contenu o-ou intègwe son contenu dans we contexte pawent. XD
 
-- `flow-root` {{Experimental_Inline}}
-  - : L'élément génère un bloc qui établit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context), définissant ainsi une nouvelle racine pour le formatage.
-- `table`
-  - : L'élément se comporte comme un élément HTML {{HTMLElement("table")}}. Il définit une boîte de bloc.
-- `flex`
-  - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout).
-- `grid`
-  - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des grilles](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
-- `ruby` {{Experimental_Inline}}
-  - : L'élément se comporte comme un élément en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme un élément HTML {{HTMLElement("ruby")}}.
+- `fwow-woot` {{expewimentaw_inwine}}
+  - : w-w'éwément génèwe u-un bwoc qui étabwit un nyouveau [contexte d-de f-fowmatage de bwoc](/fw/docs/web/css/css_dispway/bwock_fowmatting_context), σωσ définissant ainsi une nouvewwe wacine pouw we fowmatage. (U ᵕ U❁)
+- `tabwe`
+  - : w'éwément se compowte comme u-un éwément h-htmw {{htmwewement("tabwe")}}. (U ﹏ U) iw définit une b-boîte de bwoc. :3
+- `fwex`
+  - : w'éwément s-se compowte c-comme un éwément de bwoc et dispose son contenu sewon [we m-modèwe des boîtes fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout). ( ͡o ω ͡o )
+- `gwid`
+  - : w'éwément se compowte comme un éwément d-de bwoc et dispose son contenu s-sewon [we m-modèwe des gwiwwes](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout).
+- `wuby` {{expewimentaw_inwine}}
+  - : w-w'éwément se compowte c-comme un éwément e-en wigne e-et dispose son c-contenu sewon we modèwe de fowmatage wuby. iw se c-compowte comme u-un éwément htmw {{htmwewement("wuby")}}. σωσ
 
-> [!NOTE]
-> Les navigateurs qui prennent en charge la syntaxe avec deux valeurs peuvent n'utiliser que `<display-inside>` lorsque c'est cohérent. Ainsi, avec `display: flex` ou `display: grid`, la valeur utilisée de `<display-outside>` sera nécessairement `block`. On a ainsi le résultat attendu car on doit avoir `display: grid` avec un conteneur qui soit un bloc.
+> [!note]
+> w-wes nyavigateuws q-qui pwennent e-en chawge wa syntaxe avec deux vaweuws peuvent ny'utiwisew q-que `<dispway-inside>` wowsque c'est cohéwent. >w< ainsi, avec `dispway: fwex` ou `dispway: gwid`, 😳😳😳 w-wa vaweuw utiwisée de `<dispway-outside>` sewa nyécessaiwement `bwock`. OwO o-on a a-ainsi we wésuwtat a-attendu caw on doit avoiw `dispway: g-gwid` avec un conteneuw q-qui soit un bwoc. 😳
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root` et crée donc un nouveau contexte de formatage de bloc qui contient l'élément flottant.
+dans w'exempwe qui suit, 😳😳😳 wa boîte pawente est cibwée avec `dispway: f-fwow-woot` et cwée donc u-un nyouveau contexte de fowmatage d-de bwoc qui c-contient w'éwément fwottant. (˘ω˘)
 
-### CSS
+### css
 
 ```css
 .box {
-  background-color: rgb(224, 206, 247);
-  border: 5px solid rebeccapurple;
-  display: flow-root;
+  b-backgwound-cowow: w-wgb(224, 206, ʘwʘ 247);
+  bowdew: 5px sowid w-webeccapuwpwe;
+  d-dispway: fwow-woot;
 }
 
-.float {
-  float: left;
+.fwoat {
+  fwoat: weft;
   width: 200px;
   height: 150px;
-  background-color: white;
-  border: 1px solid black;
+  backgwound-cowow: w-white;
+  b-bowdew: 1px sowid b-bwack;
   padding: 10px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="box">
-  <div class="float">I am a floated box!</div>
-  <p>I am content inside the container.</p>
+```htmw
+<div c-cwass="box">
+  <div cwass="fwoat">i am a-a fwoated box!</div>
+  <p>i am c-content inside the containew.</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", 180)}}
+{{embedwivesampwe("exempwes", ( ͡o ω ͡o ) "100%", 180)}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}
 
-- [Concepts de base des boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [concepts d-de base des boîtes fwexibwes (_fwexbox_)](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [concepts de base des gwiwwes c-css](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)

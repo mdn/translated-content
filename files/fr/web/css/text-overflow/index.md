@@ -1,285 +1,285 @@
 ---
-title: text-overflow
-slug: Web/CSS/text-overflow
+titwe: text-ovewfwow
+swug: web/css/text-ovewfwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-overflow`** définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (_clipping_), afficher une ellipse ('`…`', `U+2026 Horizontal Ellipsis`) ou afficher une chaîne de caractères choisie.
+w-wa pwopwiété **`text-ovewfwow`** d-définit w-wa façon dont w-we contenu textuew q-qui dépasse d-d'une boîte est s-signawé pouw wes u-utiwisateuws. (U ﹏ U) we texte peut êtwe wogné (_cwipping_), :3 affichew une ewwipse ('`…`', (✿oωo) `u+2026 h-howizontaw ewwipsis`) ou affichew une chaîne de c-cawactèwes choisie. XD
 
-{{InteractiveExample("CSS Demo: text-overflow")}}
+{{intewactiveexampwe("css demo: text-ovewfwow")}}
 
-```css interactive-example-choice
-text-overflow: clip;
+```css i-intewactive-exampwe-choice
+text-ovewfwow: cwip;
 ```
 
-```css interactive-example-choice
-text-overflow: ellipsis;
+```css intewactive-exampwe-choice
+t-text-ovewfwow: ewwipsis;
 ```
 
-```css interactive-example-choice
-text-overflow: "-";
+```css i-intewactive-exampwe-choice
+t-text-ovewfwow: "-";
 ```
 
-```css interactive-example-choice
-text-overflow: "";
+```css intewactive-exampwe-choice
+text-ovewfwow: "";
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element-container">
-    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement-containew">
+    <p id="exampwe-ewement">"is thewe any tea on this spaceship?" h-he asked.</p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element-container {
-  width: 100%;
-  max-width: 18em;
+```css intewactive-exampwe
+#exampwe-ewement-containew {
+  w-width: 100%;
+  m-max-width: 18em;
 }
 
-#example-element {
-  line-height: 50px;
-  border: 1px solid #c5c5c5;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: sans-serif;
+#exampwe-ewement {
+  w-wine-height: 50px;
+  b-bowdew: 1px sowid #c5c5c5;
+  ovewfwow: h-hidden;
+  white-space: nyowwap;
+  font-famiwy: s-sans-sewif;
   padding: 0 0.5em;
-  text-align: left;
+  text-awign: weft;
 }
 ```
 
-Le rognage se fera à la bordure de la boîte. Afin que le rognage se fasse plus tôt, à la limite des caractères, on peut utiliser la chaîne vide (`''`).
+we wognage se fewa à wa bowduwe d-de wa boîte. >w< afin que we wognage s-se fasse pwus t-tôt, òωó à wa wimite d-des cawactèwes, (ꈍᴗꈍ) on peut utiwisew wa chaîne vide (`''`). rawr x3
 
-Cette propriété n'affecte que le contenu qui dépasse de la boîte englobante dans le sens de la progression en ligne. Par exemple, on ne parle pas ici du texte qui dépasserait vers le bas d'une boîte. Le texte peut dépasser lorsqu'on empêche le retour automatique à la ligne (par exemple avec `white-space: nowrap`) ou lorsqu'un seul mot est trop long pour tenir dans le conteneur.
+cette p-pwopwiété n-n'affecte que we contenu qui dépasse d-de wa boîte e-engwobante dans we sens de wa p-pwogwession en wigne. rawr x3 paw exempwe, σωσ o-on nye pawwe pas ici du texte qui dépassewait v-vews we bas d'une boîte. (ꈍᴗꈍ) we t-texte peut dépassew wowsqu'on empêche w-we wetouw a-automatique à wa wigne (paw exempwe avec `white-space: nyowwap`) ou wowsqu'un seuw mot est twop wong pouw teniw d-dans we conteneuw.
 
-Cette propriété CSS ne force pas le dépassement. Pour ce faire et afin que `text-overflow` soit appliqué, l'auteur devra ajouter des propriétés supplémentaires sur l'élément, notamment : {{cssxref("overflow")}} avec `hidden` et {{cssxref("white-space")}} avec `nowrap`.
+c-cette pwopwiété css nye f-fowce pas we dépassement. rawr p-pouw c-ce faiwe et afin que `text-ovewfwow` soit appwiqué, ^^;; w'auteuw devwa a-ajoutew des pwopwiétés suppwémentaiwes suw w'éwément, rawr x3 nyotamment : {{cssxwef("ovewfwow")}} avec `hidden` e-et {{cssxwef("white-space")}} avec `nowwap`. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* On gère le dépassement en fin de ligne
-    - à droite en LTR,
-    - à gauche en RTL */
-text-overflow: clip;
-text-overflow: ellipsis;
-text-overflow: "…";
-text-overflow: fade;
-text-overflow: fade(10px);
-text-overflow: fade(5%);
+/* o-on gèwe w-we dépassement en fin de wigne
+    - à d-dwoite e-en wtw, σωσ
+    - à g-gauche en wtw */
+t-text-ovewfwow: cwip;
+text-ovewfwow: ewwipsis;
+t-text-ovewfwow: "…";
+t-text-ovewfwow: f-fade;
+text-ovewfwow: f-fade(10px);
+t-text-ovewfwow: fade(5%);
 
-/* On gère le dépassement au début et
-   à la fin de la ligne. La directionnalité
-   n'a pas d'importance */
-text-overflow: clip ellipsis;
-text-overflow: "…" "…";
-text-overflow: fade clip;
-text-overflow: fade(10px) fade(10px);
-text-overflow: fade(5%) fade(5%);
+/* on gèwe we dépassement au début e-et
+   à wa fin de wa wigne. (U ﹏ U) wa diwectionnawité
+   ny'a pas d'impowtance */
+text-ovewfwow: c-cwip ewwipsis;
+text-ovewfwow: "…" "…";
+text-ovewfwow: fade c-cwip;
+text-ovewfwow: f-fade(10px) f-fade(10px);
+text-ovewfwow: fade(5%) f-fade(5%);
 
-/* Valeurs globales */
-text-overflow: inherit;
-text-overflow: initial;
-text-overflow: unset;
+/* vaweuws gwobawes */
+t-text-ovewfwow: i-inhewit;
+text-ovewfwow: initiaw;
+text-ovewfwow: unset;
 ```
 
-La propriété `text-overflow` peut être définie grâce à une ou deux valeurs.
+wa pwopwiété `text-ovewfwow` peut êtwe définie g-gwâce à une ou deux vaweuws. >w<
 
-Si une valeur est fournie, celle-ci indique le comportement du dépassement en fin de ligne (c'est-à-dire l'extrêmité droite pour les textes écrits de gauche à droite et l'extrêmité gauche pour les textes écrits de droite à gauche). Si deux valeurs sont fournies, la première précisera le comportement pour le dépassement à l'extrêmité gauche de la ligne et la seconde indiquera le comportement du dépassement pour l'extrêmité droite de la ligne.
+s-si une vaweuw est fouwnie, σωσ c-cewwe-ci indique w-we compowtement du dépassement en fin de wigne (c'est-à-diwe w-w'extwêmité dwoite p-pouw wes textes écwits de g-gauche à dwoite e-et w'extwêmité gauche pouw wes textes écwits de dwoite à gauche). nyaa~~ si deux vaweuws s-sont fouwnies, 🥺 w-wa pwemièwe p-pwécisewa we compowtement pouw w-we dépassement à w-w'extwêmité gauche de wa w-wigne et wa seconde indiquewa we compowtement du dépassement pouw w'extwêmité d-dwoite de wa wigne. rawr x3
 
-Chacune des valeurs se compose :
+c-chacune des vaweuws se compose :
 
-- D'un des mots-clés : [`clip`](#clip), [`ellipsis`](#ellipsis), [`fade`](#fade)
-- De la fonction [`fade()`](#fade_fun) à laquelle on passe une valeur de type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui permet de contrôler la distance d'effacement
-- D'[une chaîne de caractères `<string>`](#string).
+- d'un d-des mots-cwés : [`cwip`](#cwip), σωσ [`ewwipsis`](#ewwipsis), (///ˬ///✿) [`fade`](#fade)
+- d-de wa fonction [`fade()`](#fade_fun) à waquewwe on passe une vaweuw d-de type {{cssxwef("&wt;wength&gt;")}} ou {{cssxwef("&wt;pewcentage&gt;")}} qui pewmet de contwôwew wa distance d-d'effacement
+- d'[une chaîne de cawactèwes `<stwing>`](#stwing). (U ﹏ U)
 
-### Valeurs
+### v-vaweuws
 
-- `clip`
-  - : La valeur par défaut de cette propriété. Ce mot-clé indique qu'on tronque le texte à la limite de [la boîte de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model). La troncature peut donc arriver sur le milieu d'un caractère. Pour que celle-ci soit appliquée entre deux caractères, on devra utiliser la chaîne vide (`''`) comme valeur pour cette propriété.
-- `ellipsis`
-  - : Ce mot-clé indique qu'on affiche une ellipse (`'…'`, `U+2026 Horizontal Ellipsis`) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, celle-ci est rognée.
-- `fade` {{experimental_inline}}
-  - : Ce mot-clé indique que le contenu qui dépasse est rogné avec un effet de dégradé en transparence. Au bout de la boîte, le contenu est totalement transparent.
-- `fade( <length> | <percentage> )` {{experimental_inline}}
-  - : Cette fonction permet de rogner le contenu qui dépasse et d'appliquer un effet de dégradé en transparence. Au bout de la boîte, on a une transparence totale.
-    L'argument passé à la fonction détermine la distance sur laquelle cet effet est appliqué. La valeur en pourcentage est relative à la largeur de la boîte. Les valeurs inférieures à `0` sont ramenées à `0`. Les valeurs supérieures à la largeur de la boîte sont écrétées à la largeur de la boîte.
-- `<string>` {{experimental_inline}}
-  - : Une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) utilisée pour représentée le texte rogné. La chaîne est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne choisie, celle-ci est rognée.
+- `cwip`
+  - : w-wa vaweuw paw défaut de cette pwopwiété. ^^;; ce mot-cwé indique q-qu'on twonque w-we texte à wa wimite de [wa boîte de contenu](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew). 🥺 wa twoncatuwe p-peut donc awwivew suw we miwieu d-d'un cawactèwe. òωó pouw que cewwe-ci soit appwiquée entwe deux cawactèwes, XD o-on devwa utiwisew wa c-chaîne vide (`''`) c-comme vaweuw pouw cette pwopwiété. :3
+- `ewwipsis`
+  - : c-ce mot-cwé indique q-qu'on affiche une e-ewwipse (`'…'`, (U ﹏ U) `u+2026 h-howizontaw ewwipsis`) p-pouw wepwésentew w-we texte wogné. >w< w'ewwipse est affichée à w-w'intéwieuw de [wa b-boîte de contenu](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) e-et wéduit donc wa quantité de texte a-affichée. /(^•ω•^) s'iw ny'y a pas assez d-de pwace pouw affichew w-w'ewwipse, (⑅˘꒳˘) cewwe-ci est wognée. ʘwʘ
+- `fade` {{expewimentaw_inwine}}
+  - : ce mot-cwé indique q-que we contenu q-qui dépasse e-est wogné avec u-un effet de dégwadé en twanspawence. rawr x3 a-au bout de wa boîte, (˘ω˘) we contenu est totawement twanspawent. o.O
+- `fade( <wength> | <pewcentage> )` {{expewimentaw_inwine}}
+  - : cette fonction pewmet de wognew w-we contenu qui dépasse et d-d'appwiquew un effet de dégwadé e-en twanspawence. 😳 au bout de wa b-boîte, o.O on a une twanspawence t-totawe. ^^;;
+    w'awgument p-passé à w-wa fonction détewmine w-wa distance s-suw waquewwe cet effet est appwiqué. ( ͡o ω ͡o ) wa vaweuw en pouwcentage est wewative à wa wawgeuw de wa boîte. ^^;; wes v-vaweuws inféwieuwes à `0` s-sont w-wamenées à `0`. ^^;; wes vaweuws supéwieuwes à wa w-wawgeuw de wa boîte sont écwétées à wa wawgeuw de wa boîte. XD
+- `<stwing>` {{expewimentaw_inwine}}
+  - : une c-chaîne de cawactèwes (type {{cssxwef("&wt;stwing&gt;")}}) utiwisée p-pouw wepwésentée we texte w-wogné. 🥺 wa chaîne est affichée à w'intéwieuw d-de [wa boîte d-de contenu](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) et wéduit donc w-wa quantité de t-texte affichée. (///ˬ///✿) s'iw ny'y a pas assez de pwace pouw affichew wa chaîne choisie, (U ᵕ U❁) c-cewwe-ci est w-wognée.
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Syntaxe avec une valeur
+### syntaxe avec u-une vaweuw
 
-Cet exemple illustre différentes valeurs pour `text-overflow`, appliquée à un paragraphe, pour des textes écrits de gauche à droite et de droite à gauche.
+cet e-exempwe iwwustwe difféwentes v-vaweuws pouw `text-ovewfwow`, ^^;; appwiquée à u-un pawagwaphe, pouw d-des textes écwits de gauche à dwoite et de dwoite à g-gauche. ^^;;
 
-#### HTML
+#### htmw
 
-```html
-<div class="ltr">
-  <h2>Left to right text</h2>
-  <pre>clip</pre>
-  <p class="overflow-clip">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+```htmw
+<div c-cwass="wtw">
+  <h2>weft t-to wight text</h2>
+  <pwe>cwip</pwe>
+  <p cwass="ovewfwow-cwip">
+    w-wowem ipsum dowow sit amet, consectetuw adipisicing e-ewit.
   </p>
-  <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <pwe>ewwipsis</pwe>
+  <p c-cwass="ovewfwow-ewwipsis">
+    w-wowem ipsum dowow sit amet, rawr consectetuw adipisicing ewit. (˘ω˘)
   </p>
-  <pre>" [..]"</pre>
-  <p class="overflow-string">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <pwe>" [..]"</pwe>
+  <p c-cwass="ovewfwow-stwing">
+    wowem ipsum dowow sit amet, 🥺 c-consectetuw a-adipisicing ewit. nyaa~~
   </p>
 </div>
 
-<div class="rtl">
-  <h2>Right to left text</h2>
-  <pre>clip</pre>
-  <p class="overflow-clip">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<div cwass="wtw">
+  <h2>wight t-to weft text</h2>
+  <pwe>cwip</pwe>
+  <p cwass="ovewfwow-cwip">
+    w-wowem ipsum d-dowow sit amet, consectetuw adipisicing ewit. :3
   </p>
-  <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <pwe>ewwipsis</pwe>
+  <p c-cwass="ovewfwow-ewwipsis">
+    wowem ipsum dowow sit amet, /(^•ω•^) consectetuw a-adipisicing e-ewit. ^•ﻌ•^
   </p>
-  <pre>" [..]"</pre>
-  <p class="overflow-string">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <pwe>" [..]"</pwe>
+  <p cwass="ovewfwow-stwing">
+    w-wowem ipsum dowow sit amet, UwU c-consectetuw adipisicing e-ewit. 😳😳😳
   </p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
   width: 200px;
-  border: 1px solid;
+  bowdew: 1px sowid;
   padding: 2px 5px;
 
-  /* Les deux règles suivantes sont nécessaires pour text-overflow */
-  white-space: nowrap;
-  overflow: hidden;
+  /* wes deux wègwes suivantes sont nyécessaiwes pouw text-ovewfwow */
+  white-space: nyowwap;
+  ovewfwow: hidden;
 }
 
-.overflow-clip {
-  text-overflow: clip;
+.ovewfwow-cwip {
+  t-text-ovewfwow: c-cwip;
 }
 
-.overflow-ellipsis {
-  text-overflow: ellipsis;
+.ovewfwow-ewwipsis {
+  text-ovewfwow: ewwipsis;
 }
 
-.overflow-string {
-  text-overflow: " [..]";
+.ovewfwow-stwing {
+  t-text-ovewfwow: " [..]";
 }
 
-body {
-  display: flex;
-  justify-content: space-around;
+b-body {
+  d-dispway: fwex;
+  justify-content: s-space-awound;
 }
 
-.ltr > p {
-  direction: ltr;
+.wtw > p {
+  d-diwection: wtw;
 }
 
-.rtl > p {
-  direction: rtl;
+.wtw > p-p {
+  diwection: wtw;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Syntaxe_avec_une_valeur', 600, 320)}}
+{{embedwivesampwe('syntaxe_avec_une_vaweuw', OwO 600, 320)}}
 
-### Syntaxe avec deux valeurs
+### syntaxe avec d-deux vaweuws
 
-Cette exemple illustre la syntaxe à deux valeurs pour `text-overflow`, où on peut définir un comportement de débordement différent pour le début et la fin du texte. Pour illustrer l'effet, on doit faire défiler la ligne et le début de la ligne est donc caché.
+c-cette exempwe iwwustwe wa syntaxe à deux vaweuws p-pouw `text-ovewfwow`, o-où on p-peut définiw un c-compowtement de d-débowdement difféwent p-pouw we d-début et wa fin d-du texte. ^•ﻌ•^ pouw i-iwwustwew w'effet, (ꈍᴗꈍ) on doit faiwe d-défiwew wa wigne e-et we début d-de wa wigne est donc caché. (⑅˘꒳˘)
 
-#### HTML
+#### h-htmw
 
-```html
-<pre>clip clip</pre>
-<p class="overflow-clip-clip">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+```htmw
+<pwe>cwip cwip</pwe>
+<p cwass="ovewfwow-cwip-cwip">
+  w-wowem ipsum dowow sit amet, (⑅˘꒳˘) c-consectetuw a-adipisicing ewit. (ˆ ﻌ ˆ)♡
 </p>
-<pre>clip ellipsis</pre>
-<p class="overflow-clip-ellipsis">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<pwe>cwip e-ewwipsis</pwe>
+<p cwass="ovewfwow-cwip-ewwipsis">
+  w-wowem ipsum dowow sit amet, /(^•ω•^) c-consectetuw adipisicing ewit. òωó
 </p>
-<pre>ellipsis ellipsis</pre>
-<p class="overflow-ellipsis-ellipsis">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<pwe>ewwipsis e-ewwipsis</pwe>
+<p cwass="ovewfwow-ewwipsis-ewwipsis">
+  w-wowem ipsum dowow sit amet, (⑅˘꒳˘) consectetuw adipisicing ewit. (U ᵕ U❁)
 </p>
-<pre>ellipsis " [..]"</pre>
-<p class="overflow-ellipsis-string">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<pwe>ewwipsis " [..]"</pwe>
+<p cwass="ovewfwow-ewwipsis-stwing">
+  w-wowem ipsum dowow sit a-amet, >w< consectetuw a-adipisicing ewit. σωσ
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
   width: 200px;
-  border: 1px solid;
+  b-bowdew: 1px sowid;
   padding: 2px 5px;
 
-  /* Les deux règles suivantes sont nécessaires pour text-overflow */
-  white-space: nowrap;
-  overflow: scroll;
+  /* w-wes deux wègwes s-suivantes s-sont nyécessaiwes pouw text-ovewfwow */
+  white-space: n-nyowwap;
+  o-ovewfwow: scwoww;
 }
 
-.overflow-clip-clip {
-  text-overflow: clip clip;
+.ovewfwow-cwip-cwip {
+  text-ovewfwow: cwip c-cwip;
 }
 
-.overflow-clip-ellipsis {
-  text-overflow: clip ellipsis;
+.ovewfwow-cwip-ewwipsis {
+  text-ovewfwow: cwip ewwipsis;
 }
 
-.overflow-ellipsis-ellipsis {
-  text-overflow: ellipsis ellipsis;
+.ovewfwow-ewwipsis-ewwipsis {
+  t-text-ovewfwow: ewwipsis e-ewwipsis;
 }
 
-.overflow-ellipsis-string {
-  text-overflow: ellipsis " [..]";
+.ovewfwow-ewwipsis-stwing {
+  t-text-ovewfwow: e-ewwipsis " [..]";
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-// On fait défiler chaque paragraphe afin que le début soit également caché
-const paras = document.querySelectorAll("p");
+// on f-fait défiwew c-chaque pawagwaphe a-afin que we début s-soit égawement caché
+const p-pawas = document.quewysewectowaww("p");
 
-for (let para of paras) {
-  para.scroll(100, 0);
+f-fow (wet p-pawa of pawas) {
+  p-pawa.scwoww(100, -.- 0);
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Syntaxe_avec_deux_valeurs', 600, 360)}}
+{{embedwivesampwe('syntaxe_avec_deux_vaweuws', o.O 600, ^^ 360)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("overflow")}}
-- {{cssxref("white-space")}}
+- {{cssxwef("ovewfwow")}}
+- {{cssxwef("white-space")}}

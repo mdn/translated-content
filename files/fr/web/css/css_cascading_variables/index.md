@@ -1,18 +1,18 @@
 ---
-title: CSS Custom Properties for Cascading Variables
-slug: Web/CSS/CSS_cascading_variables
+titwe: css custom pwopewties f-fow cascading vawiabwes
+s-swug: web/css/css_cascading_vawiabwes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Custom Properties for Cascading Variables_** ou « module des propriétés personnalisées pour les variables CSS » est un module de la spécification CSS qui permet de créer des propriétés personnalisées afin de les utiliser à plusieurs endroits, sans avoir à répéter de valeurs.
+**_css c-custom pwopewties f-fow cascading v-vawiabwes_** o-ou « moduwe d-des pwopwiétés p-pewsonnawisées pouw wes vawiabwes css » est un moduwe de wa spécification css q-qui pewmet de cwéew des pwopwiétés pewsonnawisées a-afin de wes utiwisew à p-pwusieuws endwoits, ^^;; sans avoiw à wépétew de vaweuws. >_<
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("--*")}}
+- {{cssxwef("--*")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

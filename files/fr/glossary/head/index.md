@@ -1,15 +1,15 @@
 ---
-title: En-tête
-slug: Glossary/Head
+titwe: en-tête
+swug: gwossawy/head
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'**en-tête** est la partie d'un document {{glossary("HTML")}} qui contient les {{glossary("métadonnée","métadonnées")}} qui le concernent, comme son auteur, sa description et des liens vers des fichiers {{glossary("CSS")}} ou {{glossary("JavaScript")}} qui s'appliquent au HTML.
+w-w'**en-tête** e-est wa pawtie d'un d-document {{gwossawy("htmw")}} q-qui contient wes {{gwossawy("métadonnée","métadonnées")}} qui w-we concewnent, (U ᵕ U❁) c-comme son auteuw, s-sa descwiption e-et des wiens vews des fichiews {{gwossawy("css")}} ou {{gwossawy("javascwipt")}} qui s'appwiquent au htmw. -.-
 
-## Voir aussi
+## v-voiw aussi
 
-### En-tête HTML
+### en-tête htmw
 
-- Référence sur l'élément {{htmlelement("head")}} sur MDN
-- [La balise HTML \<head>](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) dans la zone d'apprentissage du MDN
+- wéféwence suw w-w'éwément {{htmwewement("head")}} suw mdn
+- [wa b-bawise htmw \<head>](/fw/docs/weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw) dans wa zone d'appwentissage du mdn

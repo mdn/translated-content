@@ -1,120 +1,120 @@
 ---
-title: flex-flow
-slug: Web/CSS/flex-flow
+titwe: fwex-fwow
+swug: web/css/fwex-fwow
 ---
 
-{{ CSSRef}}
+{{ c-csswef}}
 
-La propriété CSS **`flex-flow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour les propriétés {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}}.
+wa p-pwopwiété css **`fwex-fwow`** e-est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) p-pouw wes p-pwopwiétés {{cssxwef("fwex-diwection")}} e-et {{cssxwef("fwex-wwap")}}. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: flex-flow")}}
+{{intewactiveexampwe("css d-demo: fwex-fwow")}}
 
-```css interactive-example-choice
-flex-flow: row wrap;
+```css intewactive-exampwe-choice
+fwex-fwow: wow wwap;
 ```
 
-```css interactive-example-choice
-flex-flow: row-reverse nowrap;
+```css intewactive-exampwe-choice
+f-fwex-fwow: wow-wevewse nowwap;
 ```
 
-```css interactive-example-choice
-flex-flow: column wrap-reverse;
+```css intewactive-exampwe-choice
+f-fwex-fwow: cowumn w-wwap-wevewse;
 ```
 
-```css interactive-example-choice
-flex-flow: column wrap;
+```css intewactive-exampwe-choice
+fwex-fwow: cowumn wwap;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
-    <div>Item Four</div>
-    <div>Item Five</div>
-    <div>Item Six</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement">
+    <div>item one</div>
+    <div>item two</div>
+    <div>item thwee</div>
+    <div>item fouw</div>
+    <div>item five</div>
+    <div>item s-six</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
   width: 80%;
-  max-height: 300px;
-  display: flex;
+  m-max-height: 300px;
+  dispway: fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  b-backgwound-cowow: w-wgba(0, 😳 0, 255, 0.2);
+  b-bowdew: 3px sowid bwue;
   width: 60px;
-  margin: 10px;
+  m-mawgin: 10px;
 }
 ```
 
-Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+pouw pwus d'infowmations, (ˆ ﻌ ˆ)♡ v-voiw wa page [utiwisew wes boîtes fwexibwes (_fwexbox_) css](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* flex-flow: <'flex-direction'> */
-flex-flow: row;
-flex-flow: row-reverse;
-flex-flow: column;
-flex-flow: column-reverse;
+/* fwex-fwow: <'fwex-diwection'> */
+fwex-fwow: wow;
+f-fwex-fwow: wow-wevewse;
+fwex-fwow: c-cowumn;
+fwex-fwow: c-cowumn-wevewse;
 
-/* flex-flow: <'flex-wrap'> */
-flex-flow: nowrap;
-flex-flow: wrap;
-flex-flow: wrap-reverse;
+/* f-fwex-fwow: <'fwex-wwap'> */
+fwex-fwow: nyowwap;
+fwex-fwow: wwap;
+fwex-fwow: w-wwap-wevewse;
 
-/* flex-flow: <'flex-direction'> et <'flex-wrap'> */
-flex-flow: row nowrap;
-flex-flow: column wrap;
-flex-flow: column-reverse wrap-reverse;
+/* f-fwex-fwow: <'fwex-diwection'> et <'fwex-wwap'> */
+f-fwex-fwow: w-wow nyowwap;
+fwex-fwow: cowumn w-wwap;
+fwex-fwow: cowumn-wevewse w-wwap-wevewse;
 
-/* Valeurs globales */
-flex-flow: inherit;
-flex-flow: initial;
-flex-flow: unset;
+/* vaweuws gwobawes */
+fwex-fwow: i-inhewit;
+fwex-fwow: initiaw;
+f-fwex-fwow: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-Voir {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}} pour plus d'informations sur les valeurs que peuvent prendre ces deux propriétés.
+v-voiw {{cssxwef("fwex-diwection")}} e-et {{cssxwef("fwex-wwap")}} pouw pwus d'infowmations suw wes vaweuws que peuvent pwendwe ces deux pwopwiétés. (U ﹏ U)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-element {
-  /* L'axe principal sera la direction de bloc  */
-  /* et on commencera par le bas (main-start et */
-  /* main-end inversés. Les éléments flexibles  */
-  /* passent sur une nouvelle ligne si besoin   */
+e-ewement {
+  /* w-w'axe pwincipaw s-sewa wa diwection de bwoc  */
+  /* et on commencewa paw we b-bas (main-stawt et */
+  /* main-end invewsés. (///ˬ///✿) wes éwéments fwexibwes  */
+  /* p-passent suw une nyouvewwe wigne s-si besoin   */
 
-  flex-flow: column-reverse wrap;
+  f-fwex-fwow: c-cowumn-wevewse wwap;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- g-guide suw wes b-boîtes fwexibwes : _[wes concepts de bases](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- g-guide suw w-wes boîtes fwexibwes : _[owdonnew w-wes éwéments f-fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_

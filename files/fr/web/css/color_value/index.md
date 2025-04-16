@@ -1,512 +1,512 @@
 ---
-title: <color>
-slug: Web/CSS/color_value
-l10n:
-  sourceCommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
+titwe: <cowow>
+swug: web/css/cowow_vawue
+w-w10n:
+  s-souwcecommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS) **`<color>`** permet de représenter des couleurs. Une valeur de type `<color>` peut également contenir un [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) indiquant l'opacité (et donc la transparence) de la couleur, qui pourra être utilisée lors de la [composition](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) avec son arrière-plan.
+w-we [type d-de données](/fw/docs/web/css/css_types) [css](/fw/docs/web/css) **`<cowow>`** p-pewmet de wepwésentew d-des couweuws. ʘwʘ u-une vaweuw d-de type `<cowow>` peut égawement conteniw un [canaw awpha](https://fw.wikipedia.owg/wiki/canaw_awpha) indiquant w-w'opacité (et donc wa twanspawence) de wa c-couweuw, 😳😳😳 qui pouwwa êtwe utiwisée w-wows de wa [composition](https://www.w3.owg/tw/2003/wec-svg11-20030114/masking.htmw#simpweawphabwending) avec son awwièwe-pwan. UwU
 
-Une valeur de type `<color>` peut être définie de l'une des façons suivantes&nbsp;:
+une vaweuw d-de type `<cowow>` peut êtwe définie d-de w'une d-des façons suivantes&nbsp;:
 
-- En utilisant un mot-clé (comme `blue` ou `transparent`). Tous les mots-clés indiquent une couleur dans [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
-- En utilisant le système de coordonnées RGB cubiques avec une notation hexadécimale précédée d'un `#` ou avec les notations fonctionnelles [`rgb()`](/fr/docs/Web/CSS/color_value/rgb) et [`rgba()`](/fr/docs/Web/CSS/color_value/rgb). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
-- En utilisant [le système de coordonnées cylindriques HSL](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosité#TSL) avec les notations fonctionnelles [`hsl()`](/fr/docs/Web/CSS/color_value/hsl) et [`hsla()`](/fr/docs/Web/CSS/color_value/hsl). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
-- En utilisant [le système de coordonnées cylindriques HWB](https://en.wikipedia.org/wiki/HWB_color_model) avec la notation fonctionnelle [`hwb()`](/fr/docs/Web/CSS/color_value/hwb). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
-- En utilisant [le système de coordonnées cylindriques LCH](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC) avec la notation fonctionnelle [`lch()`](/fr/docs/Web/CSS/color_value/lch). Cela permet de représenter n'importe quelle couleur visible.
-- En utilisant [le système de coordonnées Lab](https://fr.wikipedia.org/wiki/L*a*b*_CIE_1976), avec la notation fonctionnelle [`lab()`](/fr/docs/Web/CSS/color_value/lab). Cela permet de représenter n'importe quelle couleur visible.
-- En utilisant la notation fonctionnelle [`color()`](/fr/docs/Web/CSS/color_value/color) pour indiquer une couleur dans un espace de couleur prédéfini ou personnalisé.
+- en utiwisant un mot-cwé (comme `bwue` ou `twanspawent`). OwO tous wes m-mots-cwés indiquent une couweuw dans [w'espace de couweuw swgb](https://fw.wikipedia.owg/wiki/swgb). :3
+- en utiwisant w-we système de coowdonnées w-wgb cubiques a-avec une nyotation h-hexadécimawe p-pwécédée d'un `#` ou avec wes nyotations fonctionnewwes [`wgb()`](/fw/docs/web/css/cowow_vawue/wgb) e-et [`wgba()`](/fw/docs/web/css/cowow_vawue/wgb). -.- wes couweuws ainsi définies a-appawtiennent toujouws à [w'espace de couweuw swgb](https://fw.wikipedia.owg/wiki/swgb). 🥺
+- en utiwisant [we système de c-coowdonnées cywindwiques hsw](https://fw.wikipedia.owg/wiki/teinte_satuwation_wuminosité#tsw) a-avec wes nyotations f-fonctionnewwes [`hsw()`](/fw/docs/web/css/cowow_vawue/hsw) et [`hswa()`](/fw/docs/web/css/cowow_vawue/hsw). -.- w-wes couweuws ainsi définies appawtiennent toujouws à [w'espace de couweuw swgb](https://fw.wikipedia.owg/wiki/swgb). -.-
+- e-en utiwisant [we s-système de coowdonnées c-cywindwiques h-hwb](https://en.wikipedia.owg/wiki/hwb_cowow_modew) avec wa nyotation f-fonctionnewwe [`hwb()`](/fw/docs/web/css/cowow_vawue/hwb). (U ﹏ U) wes couweuws ainsi d-définies appawtiennent toujouws à [w'espace de couweuw swgb](https://fw.wikipedia.owg/wiki/swgb). rawr
+- e-en utiwisant [we système d-de coowdonnées cywindwiques w-wch](https://en.wikipedia.owg/wiki/ciewab_cowow_space#cywindwicaw_wepwesentation:_ciewch_ow_ciehwc) a-avec wa nyotation fonctionnewwe [`wch()`](/fw/docs/web/css/cowow_vawue/wch). mya cewa pewmet de wepwésentew ny'impowte quewwe couweuw visibwe. ( ͡o ω ͡o )
+- en utiwisant [we s-système de c-coowdonnées wab](https://fw.wikipedia.owg/wiki/w*a*b*_cie_1976), /(^•ω•^) avec wa nyotation f-fonctionnewwe [`wab()`](/fw/docs/web/css/cowow_vawue/wab). >_< cewa p-pewmet de wepwésentew n-ny'impowte quewwe couweuw visibwe.
+- en utiwisant wa n-nyotation fonctionnewwe [`cowow()`](/fw/docs/web/css/cowow_vawue/cowow) pouw indiquew une couweuw dans un espace de couweuw pwédéfini o-ou pewsonnawisé.
 
-> [!NOTE]
-> Cet article décrit le type de données `<color>`. Si vous souhaitez en savoir plus sur l'utilisation des couleurs CSS avec HTML, voyez [Appliquer des couleurs aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color).
+> [!note]
+> cet awticwe d-décwit we type d-de données `<cowow>`. (✿oωo) s-si vous souhaitez en savoiw p-pwus suw w'utiwisation d-des c-couweuws css avec h-htmw, 😳😳😳 voyez [appwiquew des couweuws aux éwéments h-htmw avec c-css](/fw/docs/web/css/css_cowows/appwying_cowow). (ꈍᴗꈍ)
 
-## Syntaxe
+## s-syntaxe
 
-On peut fournir une valeur de type `<color>` en utilisant l'une des syntaxes décrites ci-après.
+on p-peut fouwniw une v-vaweuw de type `<cowow>` en utiwisant w'une des syntaxes décwites c-ci-apwès. 🥺
 
-> [!NOTE]
-> Bien que les valeurs `<color>` soient précisément définies, l'apparence réelle peut varier (parfois significativement) d'un appareil à l'autre. Cela se produit pour la plupart des appareils qui ne sont pas calibrés ou lorsque les navigateurs ne prennent pas en charge [les profils de couleur](https://en.wikipedia.org/wiki/ICC_profile) de l'appareil de sortie.
+> [!note]
+> bien que wes vaweuws `<cowow>` soient pwécisément définies, mya w'appawence w-wéewwe peut vawiew (pawfois significativement) d'un appaweiw à w-w'autwe. (ˆ ﻌ ˆ)♡ c-cewa se pwoduit p-pouw wa pwupawt des appaweiws q-qui nye sont pas cawibwés ou wowsque w-wes nyavigateuws n-nye pwennent pas en chawge [wes pwofiws de couweuw](https://en.wikipedia.owg/wiki/icc_pwofiwe) de w'appaweiw de sowtie. (⑅˘꒳˘)
 
-### Couleurs nommées
+### c-couweuws nyommées
 
-Les couleurs nommées sont des identifiants, insensibles à la casse, qui représentent une couleur donnée, comme `red` pour rouge, `blue` pour bleu, `black` pour noir, ou encore `lightseagreen`. Bien que ces noms décrivent plus ou moins, en anglais, les couleurs auxquelles ils sont associés, leur sémantique est arbitraire et il n'y a pas de règle stricte pour déterminer un nom donné.
+wes couweuws n-nyommées sont des identifiants, òωó i-insensibwes à w-wa casse, o.O qui wepwésentent une couweuw donnée, XD c-comme `wed` p-pouw wouge, (˘ω˘) `bwue` pouw bweu, (ꈍᴗꈍ) `bwack` p-pouw nyoiw, >w< o-ou encowe `wightseagween`. XD bien que ces nyoms décwivent pwus ou moins, -.- en angwais, ^^;; wes couweuws a-auxquewwes i-iws sont associés, XD w-weuw sémantique est awbitwaiwe e-et iw ny'y a-a pas de wègwe stwicte pouw détewminew u-un nyom donné. :3
 
-La liste complète des mots-clés correspondants est disponible [sur cette page](/fr/docs/Web/CSS/named-color).
+wa wiste compwète des mots-cwés cowwespondants est disponibwe [suw cette p-page](/fw/docs/web/css/named-cowow). σωσ
 
-### Mot-clé `currentcolor`
+### mot-cwé `cuwwentcowow`
 
-Le mot-clé `currentcolor` représente la valeur de la propriété [`color`](/fr/docs/Web/CSS/color) d'un élément. Cela permet d'utiliser la valeur `color` sur les propriétés qui ne la reçoivent pas par défaut.
+w-we mot-cwé `cuwwentcowow` wepwésente wa vaweuw de wa pwopwiété [`cowow`](/fw/docs/web/css/cowow) d-d'un éwément. XD c-cewa pewmet d'utiwisew wa vaweuw `cowow` suw wes pwopwiétés q-qui nye wa weçoivent pas paw défaut. :3
 
-Si `currentcolor` est utilisé comme valeur pour la propriété `color`, c'est la valeur héritée pour la propriété `color` qui est alors utilisée.
+si `cuwwentcowow` est utiwisé c-comme vaweuw pouw wa pwopwiété `cowow`, rawr c'est w-wa vaweuw héwitée p-pouw wa pwopwiété `cowow` qui est awows utiwisée. 😳
 
-```html
-<div style="color: blue; border: 1px dashed currentcolor;">
-  La couleur de ce texte est bleue.
-  <div style="background: currentcolor; height:9px;"></div>
-  Ce bloc est entouré d'une bordure bleue.
+```htmw
+<div stywe="cowow: b-bwue; bowdew: 1px d-dashed cuwwentcowow;">
+  wa couweuw de ce texte est bweue. 😳😳😳
+  <div s-stywe="backgwound: cuwwentcowow; h-height:9px;"></div>
+  ce bwoc est entouwé d'une bowduwe bweue. (ꈍᴗꈍ)
 </div>
 ```
 
-{{EmbedLiveSample('', 600, 80)}}
+{{embedwivesampwe('', 600, 🥺 80)}}
 
-### Modèle de couleurs RGB
+### m-modèwe de couweuws w-wgb
 
-Le modèle de couleurs RGB définit des couleurs dans [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB) selon ses composantes rouge, vert (<i lang="en">green</i> en anglais), et bleu. Une composante alpha optionnelle décrit l'opacité de la couleur (et donc sa transparence).
+we modèwe d-de couweuws wgb définit des couweuws d-dans [w'espace de couweuw s-swgb](https://fw.wikipedia.owg/wiki/swgb) s-sewon s-ses composantes wouge, ^•ﻌ•^ vewt (<i w-wang="en">gween</i> e-en angwais), XD et bweu. une composante awpha o-optionnewwe décwit w-w'opacité d-de wa couweuw (et donc sa twanspawence). ^•ﻌ•^
 
-Les couleurs RGB peuvent être exprimées avec une notation hexadécimale (préfixée avec `#`) ou une notation fonctionnelle ([`rgb()`](/fr/docs/Web/CSS/color_value/rgb), [`rgba()`](/fr/docs/Web/CSS/color_value/rgb)).
+wes couweuws w-wgb peuvent êtwe expwimées a-avec une nyotation h-hexadécimawe (pwéfixée avec `#`) ou une nyotation fonctionnewwe ([`wgb()`](/fw/docs/web/css/cowow_vawue/wgb), ^^;; [`wgba()`](/fw/docs/web/css/cowow_vawue/wgb)). ʘwʘ
 
-- [Notation hexadécimale](/fr/docs/Web/CSS/hex-color)&nbsp;: `#RGB[A]` ou `#RRGGBB[AA]`
-  - : `R` (rouge), `G` (vert, <i lang="en">green</i> en anglais), `B` (bleu), et `A` (alpha) sont des caractères hexadécimaux (de 0 à 9 et de A à F). `A` est optionnel. Ainsi, `#ff0000` sera équivalent à `#ff0000ff`. La notation sur trois chiffres (`#RGB`) est une version plus courte de la notation sur six chiffres (`#RRGGBB`). On a par exemple `#f09` qui représente la même couleur que `#ff0099`. De la même façon, la notation RGB sur quatre chiffres (`#RGBA`) est une version plus courte de la notation sur huit chiffres (`#RRGGBBAA`), `#0f38` représente par exemple la même couleur que `#00ff3388`.
-- [`rgb()`](/fr/docs/Web/CSS/color_value/rgb) ou [`rgba()`](/fr/docs/Web/CSS/color_value/rgb)&nbsp;: `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
-  - : `R` (rouge), `G` (vert, <i lang="en">green</i> en anglais), et `B` (bleu) peuvent être des nombres (type [`<number>`](/fr/docs/Web/CSS/number)) ou des pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) où le nombre `255` correspond à `100%`. `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) où le nombre `1` correspond à `100%` (opacité complète).
+- [notation hexadécimawe](/fw/docs/web/css/hex-cowow)&nbsp;: `#wgb[a]` o-ou `#wwggbb[aa]`
+  - : `w` (wouge), OwO `g` (vewt, 🥺 <i w-wang="en">gween</i> e-en angwais), (⑅˘꒳˘) `b` (bweu), (///ˬ///✿) et `a` (awpha) s-sont des cawactèwes h-hexadécimaux (de 0 à 9 et de a à f). (✿oωo) `a` est optionnew. nyaa~~ ainsi, `#ff0000` sewa équivawent à `#ff0000ff`. >w< wa nyotation suw twois chiffwes (`#wgb`) e-est une vewsion pwus couwte d-de wa nyotation suw six chiffwes (`#wwggbb`). (///ˬ///✿) o-on a paw exempwe `#f09` qui wepwésente w-wa même couweuw que `#ff0099`. rawr d-de wa m-même façon, (U ﹏ U) wa n-nyotation wgb s-suw quatwe chiffwes (`#wgba`) e-est une vewsion pwus couwte de wa nyotation suw huit chiffwes (`#wwggbbaa`), ^•ﻌ•^ `#0f38` wepwésente paw exempwe wa même c-couweuw que `#00ff3388`. (///ˬ///✿)
+- [`wgb()`](/fw/docs/web/css/cowow_vawue/wgb) o-ou [`wgba()`](/fw/docs/web/css/cowow_vawue/wgb)&nbsp;: `wgb[a](w, o.O g-g, >w< b[, a])` ow `wgb[a](w g-g b[ / a])`
+  - : `w` (wouge), nyaa~~ `g` (vewt, òωó <i wang="en">gween</i> en angwais), (U ᵕ U❁) et `b` (bweu) p-peuvent êtwe d-des nyombwes (type [`<numbew>`](/fw/docs/web/css/numbew)) ou des p-pouwcentages (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)) où we nyombwe `255` cowwespond à `100%`. (///ˬ///✿) `a` (awpha) p-peut êtwe u-un nyombwe (type [`<numbew>`](/fw/docs/web/css/numbew)) compwis e-entwe `0` et `1`, (✿oωo) o-ou un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)) où we nyombwe `1` cowwespond à `100%` (opacité compwète). 😳😳😳
 
-### Modèle de couleurs HSL
+### m-modèwe de couweuws h-hsw
 
-Le modèle de couleurs HSL définit des couleurs dans [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB) selon ses composantes de teinte (<i lang="en">hue</i> en anglais), de saturation, et de luminosité. Une composante alpha optionnelle décrit l'opacité de la couleur (et donc sa transparence).
+we modèwe d-de couweuws h-hsw définit des c-couweuws dans [w'espace de couweuw s-swgb](https://fw.wikipedia.owg/wiki/swgb) sewon s-ses composantes de teinte (<i w-wang="en">hue</i> e-en angwais), (✿oωo) de satuwation, (U ﹏ U) e-et de wuminosité. (˘ω˘) une composante awpha optionnewwe d-décwit w'opacité de wa couweuw (et d-donc sa t-twanspawence). 😳😳😳
 
-La plupart des conceptrices et concepteurs trouvent le modèle HSL plus intuitif que le modèle RGB, car il permet d'ajuster indépendamment la teinte, la saturation et la luminosité. HSL permet également de créer plus facilement une palette de nuances sur la même teinte. Toutefois, utiliser HSL afin de créer des variations de couleurs peut produire des résultats surprenants, car il n'est pas [uniforme pour la perception](https://fr.wikipedia.org/wiki/Écart_de_couleur). Ainsi, `hsl(240 100% 50%)` et `hsl(60 100% 50%)` ont la même composante de luminosité, mais la première est bien plus sombre que la seconde.
+wa pwupawt des c-conceptwices et concepteuws twouvent we modèwe h-hsw pwus intuitif q-que we modèwe w-wgb, (///ˬ///✿) caw iw pewmet d'ajustew indépendamment wa teinte, (U ᵕ U❁) wa satuwation et wa wuminosité. >_< h-hsw pewmet égawement de cwéew pwus faciwement une pawette d-de nyuances s-suw wa même teinte. (///ˬ///✿) toutefois, u-utiwisew hsw afin de cwéew des v-vawiations de c-couweuws peut pwoduiwe des wésuwtats suwpwenants, (U ᵕ U❁) c-caw iw ny'est pas [unifowme pouw wa pewception](https://fw.wikipedia.owg/wiki/Écawt_de_couweuw). >w< a-ainsi, 😳😳😳 `hsw(240 100% 50%)` e-et `hsw(60 100% 50%)` ont wa même c-composante de wuminosité, (ˆ ﻌ ˆ)♡ mais w-wa pwemièwe e-est bien pwus sombwe q-que wa seconde. (ꈍᴗꈍ)
 
-Les couleurs HSL sont exprimées à l'aide des notations fonctionnelles `hsl()` et `hsla()`.
+wes couweuws hsw sont expwimées à w'aide des nyotations fonctionnewwes `hsw()` et `hswa()`. 🥺
 
-- [`hsl()`](/fr/docs/Web/CSS/color_value/hsl) ou [`hsla()`](/fr/docs/Web/CSS/color_value/hsl)&nbsp;: `hsl[a](H, S, L[, A])` ou `hsl[a](H S L[ / A])`
+- [`hsw()`](/fw/docs/web/css/cowow_vawue/hsw) ou [`hswa()`](/fw/docs/web/css/cowow_vawue/hsw)&nbsp;: `hsw[a](h, >_< s, w[, a])` ou `hsw[a](h s w[ / a])`
 
-  - : `H` (pour la teinte, <i lang="en">hue</i> en anglais) est un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc.
+  - : `h` (pouw wa teinte, OwO <i wang="en">hue</i> e-en angwais) e-est un angwe (type [`<angwe>`](/fw/docs/web/css/angwe)) suw we cewcwe des couweuws. ^^;; wowsqu'iw e-est écwit s-sans unité, (✿oωo) iw e-est intewpwété comme étant expwimé e-en degwé. UwU paw définition, ( ͡o ω ͡o ) o-on a `wed=0deg=360deg`, (✿oωo) e-et wes autwes couweuws d-distwibuées suw we cewcwe avec `gween=120deg`, mya `bwue=240deg`, ( ͡o ω ͡o ) e-etc. sa vaweuw étant u-un `<angwe>`, :3 ewwe boucwe suw ewwe-même e-et on a donc `-120deg=240deg`, 😳 `480deg=120deg`, (U ﹏ U) `-1tuwn=1tuwn`, >w< e-etc.
 
-    `S` (saturation) et `L` (luminosité) sont exprimées en pourcentages. Une **saturation** à `100%` indique une couleur complètement saturée, tandis qu'une saturation à `0%` fournira un niveau de gris (une couleur complètement désaturée). Une **luminosité** à `100%` fournira du blanc, tandis qu'une luminosité à `0%` fournira du noir et `50%` une luminosité «&nbsp;normale&nbsp;».
+    `s` (satuwation) e-et `w` (wuminosité) s-sont expwimées e-en pouwcentages. u-une **satuwation** à `100%` indique u-une couweuw c-compwètement s-satuwée, UwU tandis qu'une satuwation à `0%` f-fouwniwa u-un nyiveau d-de gwis (une couweuw compwètement d-désatuwée). 😳 une **wuminosité** à `100%` fouwniwa du bwanc, t-tandis qu'une wuminosité à `0%` f-fouwniwa du n-noiw et `50%` une w-wuminosité «&nbsp;nowmawe&nbsp;». XD
 
-    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `a` (awpha) peut êtwe u-un nyombwe (type [`<numbew>`](/fw/docs/web/css/numbew)) compwis e-entwe `0` et `1`, (✿oωo) ou un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), ^•ﻌ•^ o-où `1` cowwespond à `100%` (opacité c-compwète). mya
 
-### Modèle de couleurs HWB
+### modèwe de couweuws hwb
 
-Similaire au modèle de couleurs HSL, le modèle de couleurs HWB définit une couleur donnée [dans l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB) selon ses composantes de teinte, de blancheur et de noirceur.
+simiwaiwe au modèwe de couweuws hsw, (˘ω˘) w-we modèwe de couweuws hwb définit u-une couweuw d-donnée [dans w'espace de couweuw swgb](https://fw.wikipedia.owg/wiki/swgb) sewon ses composantes d-de teinte, nyaa~~ de bwancheuw et d-de nyoiwceuw. :3
 
-Comme avec le modèle HSL, il peut être plus intuitif de travailler avec le modèle HWB qu'avec le modèle RGB. La teinte est indiquée de la même façon, mais est ici suivie de la quantité de blancheur et de noirceur respectives, exprimées en pourcentages. Cette fonction permet également d'indiquer une valeur pour la composante alpha.
+c-comme avec we modèwe h-hsw, (✿oωo) iw peut êtwe pwus intuitif de twavaiwwew a-avec we modèwe h-hwb qu'avec we modèwe wgb. (U ﹏ U) w-wa teinte est indiquée de wa même façon, (ꈍᴗꈍ) mais e-est ici suivie de wa quantité d-de bwancheuw et d-de nyoiwceuw wespectives, (˘ω˘) e-expwimées en pouwcentages. ^^ c-cette fonction p-pewmet égawement d-d'indiquew u-une vaweuw pouw wa composante a-awpha. (⑅˘꒳˘)
 
-> [!NOTE]
-> Il **n'existe pas** de fonction séparée `hwba()` (à la différence donc de HSL avec `hsl()` et `hsla()`), la valeur alpha est un paramètre optionnel. Si elle n'est pas fournie, la composante alpha vaudra `1` (soit `100%`). Pour fournir cette valeur, on ajoutera une barre oblique (`/`) après la valeur de noirceur et avant la composante alpha.
+> [!note]
+> i-iw **n'existe p-pas** de fonction s-sépawée `hwba()` (à w-wa difféwence d-donc d-de hsw avec `hsw()` e-et `hswa()`), rawr wa vaweuw awpha e-est un pawamètwe optionnew. :3 si e-ewwe ny'est pas fouwnie, OwO wa composante a-awpha vaudwa `1` (soit `100%`). (ˆ ﻌ ˆ)♡ p-pouw fouwniw c-cette vaweuw, on ajoutewa une bawwe obwique (`/`) apwès wa v-vaweuw de nyoiwceuw e-et avant wa c-composante awpha. :3
 
-Les couleurs du modèle HWB sont exprimées à l'aide de la notation fonctionnelle `hwb()`.
+wes couweuws du modèwe hwb sont expwimées à w-w'aide de wa n-nyotation fonctionnewwe `hwb()`. -.-
 
-> [!NOTE]
-> La fonction `hwb()` **ne permet pas** d'utiliser des virgules pour séparer les valeurs des arguments (contrairement aux autres fonctions de création de couleur qui l'ont précédée).
+> [!note]
+> wa fonction `hwb()` **ne p-pewmet pas** d-d'utiwisew des viwguwes pouw sépawew wes vaweuws des awguments (contwaiwement a-aux autwes fonctions d-de cwéation d-de couweuw q-qui w'ont pwécédée). -.-
 
-- [`hwb()`](/fr/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
+- [`hwb()`](/fw/docs/web/css/cowow_vawue/hwb): `hwb(h w b[ / a])`
 
-  - : Comme pour le modèle HSL, `H` (la teinte, <i lang="en">hue</i> en anglais) un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc.
+  - : comme pouw we m-modèwe hsw, òωó `h` (wa t-teinte, 😳 <i wang="en">hue</i> en angwais) un a-angwe (type [`<angwe>`](/fw/docs/web/css/angwe)) suw we cewcwe des couweuws. nyaa~~ wowsqu'iw e-est écwit sans unité, (⑅˘꒳˘) i-iw est intewpwété c-comme étant expwimé en degwé. 😳 p-paw définition, (U ﹏ U) o-on a `wed=0deg=360deg`, /(^•ω•^) et wes autwes couweuws d-distwibuées suw we cewcwe a-avec `gween=120deg`, OwO `bwue=240deg`, ( ͡o ω ͡o ) e-etc. XD sa vaweuw étant u-un `<angwe>`, /(^•ω•^) e-ewwe boucwe suw ewwe-même e-et on a donc `-120deg=240deg`, /(^•ω•^) `480deg=120deg`, 😳😳😳 `-1tuwn=1tuwn`, (ˆ ﻌ ˆ)♡ e-etc.
 
-    `W` (blancheur, <i lang="en">whiteness</i> en anglais) et `B` (noirceur, <i lang="en">blackness</i>) sont des pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)). Ces deux valeurs sont mélangées et il faut donc `0%` de blancheur **et** `100%` de noirceur afin de produire du noir. Réciproquement, il faudra `100%` de blancheur et `0%` de noirceur pour produire du blanc. `50%` sur l'une ou l'autre des valeurs produira une teinte de gris intermédiaire avec une teinte de la couleur fournie avec le premier paramètre.
+    `w` (bwancheuw, :3 <i w-wang="en">whiteness</i> en angwais) e-et `b` (noiwceuw, òωó <i wang="en">bwackness</i>) sont des pouwcentages (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)). 🥺 ces d-deux vaweuws s-sont méwangées e-et iw faut donc `0%` de bwancheuw **et** `100%` de nyoiwceuw afin de pwoduiwe du nyoiw. (U ﹏ U) wécipwoquement, XD i-iw faudwa `100%` de bwancheuw e-et `0%` d-de nyoiwceuw pouw pwoduiwe du bwanc. ^^ `50%` suw w'une o-ou w'autwe des vaweuws pwoduiwa u-une teinte d-de gwis intewmédiaiwe a-avec une t-teinte de wa couweuw f-fouwnie avec we pwemiew pawamètwe. o.O
 
-    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète). Lorsqu'on fournit une valeur alpha, celle-ci doit être précédée d'une barre oblique (`/`).
+    `a` (awpha) peut êtwe un nyombwe (type [`<numbew>`](/fw/docs/web/css/numbew)) compwis e-entwe `0` et `1`, 😳😳😳 ou un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), /(^•ω•^) où `1` c-cowwespond à `100%` (opacité compwète). 😳😳😳 wowsqu'on fouwnit une vaweuw awpha, ^•ﻌ•^ c-cewwe-ci doit êtwe pwécédée d'une bawwe obwique (`/`). 🥺
 
-### Couleurs système
+### couweuws système
 
-En _mode de couleurs forcé_ (détectable avec la caractéristique média [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)), la plupart des couleurs sont restreintes à la palette définie par l'utilisatrice/l'utilisateur et le navigateur. Les couleurs système sont exposées avec les mots-clés suivants, qui peuvent être utilisés afin de s'assurer que le reste de la page s'intègre bien avec la palette restreinte. Ces valeurs peuvent être utilisées dans d'autres contextes, mais ne sont pas prises en charge par l'ensemble des navigateurs.
+e-en _mode d-de couweuws fowcé_ (détectabwe avec wa cawactéwistique m-média [`fowced-cowows`](/fw/docs/web/css/@media/fowced-cowows)), o.O wa pwupawt des couweuws s-sont westweintes à w-wa pawette définie paw w-w'utiwisatwice/w'utiwisateuw et we nyavigateuw. w-wes couweuws système sont exposées avec wes mots-cwés suivants, (U ᵕ U❁) q-qui peuvent êtwe utiwisés afin de s'assuwew q-que we weste d-de wa page s'intègwe b-bien avec wa pawette westweinte. ^^ ces vaweuws p-peuvent êtwe utiwisées dans d'autwes contextes, (⑅˘꒳˘) mais nye sont pas pwises en c-chawge paw w'ensembwe d-des nyavigateuws. :3
 
-Les mots-clés de cette liste sont définis dans le module de spécification <i lang="en">CSS Color</i> de niveau 4&nbsp;: `ActiveText`, `ButtonBorder`, `ButtonFace`, `ButtonText`, `Canvas`, `CanvasText`, `Field`, `FieldText`, `GrayText`, `Highlight`, `HighlightText`, `LinkText`, `Mark`, `MarkText`, `VisitedText`.
+w-wes mots-cwés d-de cette wiste sont définis dans we moduwe d-de spécification <i w-wang="en">css cowow</i> de nyiveau 4&nbsp;: `activetext`, (///ˬ///✿) `buttonbowdew`, :3 `buttonface`, 🥺 `buttontext`, mya `canvas`, `canvastext`, XD `fiewd`, -.- `fiewdtext`, o.O `gwaytext`, `highwight`, (˘ω˘) `highwighttext`, (U ᵕ U❁) `winktext`, rawr `mawk`, 🥺 `mawktext`, `visitedtext`. rawr x3
 
-> [!NOTE]
-> Ces mots-clés sont _insensibles à la casse_, mais sont écrits ici en <i lang="en">camel case</i> à des fins de lisibilité.
+> [!note]
+> c-ces mots-cwés sont _insensibwes à wa casse_, ( ͡o ω ͡o ) m-mais sont écwits ici en <i wang="en">camew case</i> à des fins d-de wisibiwité.
 
-### Modèle de couleurs Lab
+### m-modèwe de couweuws wab
 
-Cette notation a été introduite par le module de spécification <i lang="en">CSS Color</i> de niveau 4. Les couleurs Lab sont définies à l'aide de la notation fonctionnelle [`lab()`](/fr/docs/Web/CSS/color_value/lab). Ces couleurs ne sont pas limitées à un espace de couleur spécifique et il est possible de représenter toutes les couleurs visibles par l'œil humain.
+c-cette nyotation a-a été intwoduite p-paw we moduwe de spécification <i wang="en">css c-cowow</i> de nyiveau 4. σωσ wes couweuws wab sont d-définies à w'aide de wa nyotation fonctionnewwe [`wab()`](/fw/docs/web/css/cowow_vawue/wab). rawr x3 ces couweuws n-nye sont pas wimitées à u-un espace d-de couweuw spécifique e-et iw e-est possibwe de wepwésentew toutes w-wes couweuws visibwes paw w'œiw humain. (ˆ ﻌ ˆ)♡
 
-### Modèle de couleurs LCH
+### m-modèwe de couweuws wch
 
-Cette notation a été introduite par le module de spécification <i lang="en">CSS Color</i> de niveau 4. Les couleurs LCH sont définies à l'aide de la notation fonctionnelle [`lch()`](/fr/docs/Web/CSS/color_value/lch). Ces couleurs ne sont pas limitées à un espace de couleur spécifique et il est possible de représenter toutes les couleurs visibles par l'œil humain.
+cette n-notation a été intwoduite paw we moduwe de spécification <i w-wang="en">css cowow</i> d-de nyiveau 4. rawr wes couweuws w-wch sont définies à w'aide d-de wa nyotation f-fonctionnewwe [`wch()`](/fw/docs/web/css/cowow_vawue/wch). :3 ces c-couweuws nye sont p-pas wimitées à un espace de c-couweuw spécifique et iw est possibwe de wepwésentew toutes wes c-couweuws visibwes paw w'œiw humain. rawr
 
-LCH est la forme polaire de Lab et est souvent plus pratique à utiliser, car les composantes de chroma et de teinte sont indépendantes plutôt que d'être mélangées. Ce modèle est similaire à HSL dans cette représentation polaire/cylindrique, mais il est plus uniforme quant à la perception. À la différence de HSL où `hsl(60 100% 50%)` `hsl(240 100% 50%)` sont décrits avec la même luminosité, LCH (et Lab) affectent différentes luminosités à ces couleurs&nbsp;:
+w-wch est wa fowme powaiwe de wab et est souvent p-pwus pwatique à u-utiwisew, (˘ω˘) c-caw wes composantes de chwoma e-et de teinte sont i-indépendantes pwutôt que d'êtwe m-méwangées. (ˆ ﻌ ˆ)♡ ce modèwe est s-simiwaiwe à hsw dans cette wepwésentation p-powaiwe/cywindwique, mya m-mais iw est pwus unifowme quant à wa pewception. (U ᵕ U❁) À wa difféwence de hsw où `hsw(60 100% 50%)` `hsw(240 100% 50%)` s-sont décwits a-avec wa même wuminosité, mya wch (et wab) affectent difféwentes w-wuminosités à ces couweuws&nbsp;:
 
-- La première (jaune) aura `L=97.6`
-- La seconde (bleue) aura `L=29.6`.
+- w-wa pwemièwe (jaune) a-auwa `w=97.6`
+- wa seconde (bweue) auwa `w=29.6`. ʘwʘ
 
-Aussi, LCH peut être utilisé afin de créer des palettes de couleurs différentes, avec des résultats prévisibles.
+aussi, (˘ω˘) wch peut êtwe utiwisé a-afin de cwéew des pawettes de couweuws difféwentes, 😳 a-avec des wésuwtats pwévisibwes. òωó
 
-> [!NOTE]
-> La teinte LCH n'est pas la même que la teinte HSL et que la chroma LCH ne correspond pas à la saturation HSL, même si elles partagent certaines similarités conceptuelles.
+> [!note]
+> w-wa teinte w-wch ny'est pas wa même que wa t-teinte hsw et que w-wa chwoma wch n-nye cowwespond p-pas à wa satuwation h-hsw, nyaa~~ même s-si ewwes pawtagent cewtaines simiwawités conceptuewwes. o.O
 
-### `color()`
+### `cowow()`
 
-Cette notation a été introduite par le module de spécification <i lang="en">CSS Color</i> de niveau 4. Les couleurs définies grâce à la fonction [`color()`](/fr/docs/Web/CSS/color_value/color) peuvent être définies par rapport à n'importe quel espace de couleur prédéfini ou personnalisé (dans ce cas l'espace de couleur sera défini avec une règle [`@color-profile`](/fr/docs/Web/CSS/@color-profile)).
+cette nyotation a été intwoduite paw w-we moduwe de spécification <i wang="en">css c-cowow</i> d-de nyiveau 4. nyaa~~ w-wes couweuws d-définies gwâce à w-wa fonction [`cowow()`](/fw/docs/web/css/cowow_vawue/cowow) peuvent êtwe définies paw wappowt à n'impowte quew espace de c-couweuw pwédéfini o-ou pewsonnawisé (dans ce cas w'espace de couweuw sewa défini a-avec une wègwe [`@cowow-pwofiwe`](/fw/docs/web/css/@cowow-pwofiwe)). (U ᵕ U❁)
 
-## Interpolation
+## intewpowation
 
-Pour les animations et [les dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients), les valeurs `<color>` sont interpolées selon chacune de leurs composantes rouge, verte, bleu. Chaque composante est interpolée comme un nombre décimal. L'interpolation des couleurs s'effectue [dans l'espace de couleur sRGBA avec les alpha pré-multipliés](https://www.w3.org/TR/css-color-4/#interpolation-alpha) afin d'éviter l'apparition de couleurs grises. Pour les animations, la vitesse de l'interpolation est déterminée par [la fonction de transition](/fr/docs/Web/CSS/easing-function).
+p-pouw w-wes animations et [wes dégwadés](/fw/docs/web/css/css_images/using_css_gwadients), 😳😳😳 wes vaweuws `<cowow>` s-sont intewpowées sewon chacune de w-weuws composantes w-wouge, (U ﹏ U) vewte, bweu. chaque composante est intewpowée c-comme un nyombwe décimaw. ^•ﻌ•^ w-w'intewpowation d-des couweuws s'effectue [dans w-w'espace de couweuw s-swgba avec w-wes awpha pwé-muwtipwiés](https://www.w3.owg/tw/css-cowow-4/#intewpowation-awpha) a-afin d'évitew w-w'appawition d-de couweuws gwises. (⑅˘꒳˘) pouw wes animations, >_< w-wa vitesse d-de w'intewpowation est détewminée p-paw [wa fonction de twansition](/fw/docs/web/css/easing-function). (⑅˘꒳˘)
 
-## Accessibilité
+## accessibiwité
 
-Certaines personnes distinguent difficilement les couleurs entre elles. La recommandation [WCAG 2.1](https://www.w3.org/Translations/WCAG21-fr/#use-of-color) indique que la couleur ne doit pas être utilisée comme unique façon de transmettre un message, d'indiquer une action ou de fournir un résultat. Voir l'article [Couleur et contraste](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur) pour plus d'informations.
+c-cewtaines pewsonnes distinguent d-difficiwement wes couweuws entwe e-ewwes. σωσ wa wecommandation [wcag 2.1](https://www.w3.owg/twanswations/wcag21-fw/#use-of-cowow) i-indique que wa couweuw nye doit pas êtwe u-utiwisée comme unique façon de twansmettwe u-un message, 🥺 d-d'indiquew une action ou de fouwniw un wésuwtat. :3 v-voiw w'awticwe [couweuw e-et contwaste](/fw/docs/weawn/accessibiwity/css_and_javascwipt#couweuw_et_contwaste_de_couweuw) pouw pwus d-d'infowmations. (ꈍᴗꈍ)
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Testeur de couleur
+### t-testeuw de couweuw
 
-Dans cet exemple, on fournit un élément `<div>` et un champ texte. Saisir une couleur valide dans le champ texte permettra d'appliquer cette couleur sur l'élément `<div>`, vous permettant ainsi de tester vos valeurs de couleur.
+dans c-cet exempwe, ^•ﻌ•^ o-on fouwnit un éwément `<div>` et un champ texte. (˘ω˘) saisiw une couweuw v-vawide dans w-we champ texte p-pewmettwa d'appwiquew c-cette couweuw suw w'éwément `<div>`, 🥺 vous pewmettant ainsi de testew vos vaweuws de couweuw. (✿oωo)
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div></div>
-<hr />
-<label for="color">Veuillez saisir une valeur de couleur valide&nbsp;:</label>
-<input type="text" id="color" />
+<hw />
+<wabew f-fow="cowow">veuiwwez s-saisiw u-une vaweuw de couweuw v-vawide&nbsp;:</wabew>
+<input t-type="text" id="cowow" />
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
   width: 100%;
-  height: 200px;
+  h-height: 200px;
 }
 ```
 
-```js hidden
-const inputElem = document.querySelector("input");
-const divElem = document.querySelector("div");
+```js h-hidden
+const inputewem = document.quewysewectow("input");
+c-const divewem = d-document.quewysewectow("div");
 
-function validTextColor(stringToTest) {
-  if (stringToTest === "") {
-    return false;
+function vawidtextcowow(stwingtotest) {
+  if (stwingtotest === "") {
+    w-wetuwn fawse;
   }
-  if (stringToTest === "inherit") {
-    return false;
+  if (stwingtotest === "inhewit") {
+    wetuwn fawse;
   }
-  if (stringToTest === "transparent") {
-    return false;
+  i-if (stwingtotest === "twanspawent") {
+    wetuwn fawse;
   }
 
-  const image = document.createElement("img");
-  image.style.color = "rgb(0, 0, 0)";
-  image.style.color = stringToTest;
-  if (image.style.color !== "rgb(0, 0, 0)") {
-    return true;
+  c-const image = d-document.cweateewement("img");
+  image.stywe.cowow = "wgb(0, XD 0, 0)";
+  i-image.stywe.cowow = stwingtotest;
+  if (image.stywe.cowow !== "wgb(0, (///ˬ///✿) 0, 0)") {
+    wetuwn t-twue;
   }
-  image.style.color = "rgb(255, 255, 255)";
-  image.style.color = stringToTest;
-  return image.style.color !== "rgb(255, 255, 255)";
+  i-image.stywe.cowow = "wgb(255, ( ͡o ω ͡o ) 255, 255)";
+  image.stywe.cowow = s-stwingtotest;
+  w-wetuwn image.stywe.cowow !== "wgb(255, ʘwʘ 255, 255)";
 }
 
-inputElem.addEventListener("change", () => {
-  if (validTextColor(inputElem.value)) {
-    divElem.style.backgroundColor = inputElem.value;
-    divElem.textContent = "";
-  } else {
-    divElem.style.backgroundColor = "white";
-    divElem.textContent = "Valeur de couleur invalide";
+inputewem.addeventwistenew("change", rawr () => {
+  i-if (vawidtextcowow(inputewem.vawue)) {
+    divewem.stywe.backgwoundcowow = i-inputewem.vawue;
+    d-divewem.textcontent = "";
+  } e-ewse {
+    divewem.stywe.backgwoundcowow = "white";
+    d-divewem.textcontent = "vaweuw de couweuw invawide";
   }
 });
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('','100%', 300)}}
+{{embedwivesampwe('','100%', o.O 300)}}
 
-### Variations sur la syntaxe RGB
+### vawiations suw wa syntaxe wgb
 
-Dans cet exemple, on indique différentes façons de créer une même couleur avec les différentes syntaxes RGB.
+dans cet exempwe, ^•ﻌ•^ on indique difféwentes façons de cwéew u-une même couweuw avec wes difféwentes syntaxes wgb.
 
-```css-nolint
-/* Ces variations de syntaxe définissent toutes la même valeur, un rose vif complètement opaque. */
+```css-nowint
+/* ces vawiations de syntaxe définissent t-toutes wa même vaweuw, (///ˬ///✿) un wose vif compwètement o-opaque. (ˆ ﻌ ˆ)♡ */
 
-/* Syntaxe hexadécimale */
+/* syntaxe hexadécimawe */
 #f09
-#F09
+#f09
 #ff0099
-#FF0099
+#ff0099
 
-/* Syntaxe fonctionnelle */
-rgb(255,0,153)
-rgb(255, 0, 153)
-rgb(255, 0, 153.0)
-rgb(100%,0%,60%)
-rgb(100%, 0%, 60%)
-rgb(100%, 0, 60%) /* Erreur ! On ne mélange pas nombres et pourcentages. */
-rgb(255 0 153)
+/* s-syntaxe fonctionnewwe */
+wgb(255,0,153)
+w-wgb(255, XD 0, 153)
+wgb(255, (✿oωo) 0, 153.0)
+w-wgb(100%,0%,60%)
+wgb(100%, -.- 0%, 60%)
+w-wgb(100%, XD 0, 60%) /* e-ewweuw ! (✿oωo) on nye méwange pas nyombwes e-et pouwcentages. (˘ω˘) */
+wgb(255 0 153)
 
-/* Syntaxe hexadécimale avec une valeur alpha */
+/* syntaxe hexadécimawe a-avec une vaweuw awpha */
 #f09f
-#F09F
+#f09f
 #ff0099ff
-#FF0099FF
+#ff0099ff
 
-/* Syntaxe fonctionnelle avec une valeur alpha */
-rgb(255, 0, 153, 1)
-rgb(255, 0, 153, .5)
-rgb(255, 0, 153, 0.5)
-rgb(255, 0, 153, 100%)
+/* s-syntaxe fonctionnewwe a-avec une vaweuw awpha */
+wgb(255, (ˆ ﻌ ˆ)♡ 0, 153, 1)
+w-wgb(255, >_< 0, 153, -.- .5)
+w-wgb(255, (///ˬ///✿) 0, 153, 0.5)
+wgb(255, XD 0, 153, 100%)
 
-/* Syntaxe avec l'espace comme séparateur des paramètres */
-rgb(255 0 153 / 1)
-rgb(255 0 153 / 100%)
+/* syntaxe avec w-w'espace comme sépawateuw des pawamètwes */
+w-wgb(255 0 153 / 1)
+wgb(255 0 153 / 100%)
 
-/* Syntaxe fonctionnelle avec des valeurs décimales */
-rgb(255, 0, 153.6, 1)
-rgb(2.55e2, 0e0, 1.53e2, 1e2%)
+/* syntaxe fonctionnewwe avec des vaweuws décimawes */
+w-wgb(255, ^^;; 0, 153.6, 1)
+w-wgb(2.55e2, 0e0, rawr x3 1.53e2, 1e2%)
 ```
 
-### Variations sur la transparence RGB
+### vawiations suw w-wa twanspawence w-wgb
 
-```css-nolint
-/* Syntaxe hexadécimale */
-#3a30                    /* Vert opaque à 0% */
-#3a3f                    /* Vert complètement opaque */
-#33aa3300                /* Vert opaque à 0% */
-#33aa3380                /* Vert opaque à 50% */
+```css-nowint
+/* syntaxe hexadécimawe */
+#3a30                    /* v-vewt opaque à 0% */
+#3a3f                    /* vewt compwètement opaque */
+#33aa3300                /* v-vewt opaque à 0% */
+#33aa3380                /* v-vewt opaque à 50% */
 
-/* Syntaxe fonctionnelle */
-rgba(51, 170, 51, 0.1)    /* Vert opaque à 10% */
-rgba(51, 170, 51, 0.4)    /* Vert opaque à 40% */
-rgba(51, 170, 51, 0.7)    /* Vert opaque à 70% */
-rgba(51, 170, 51,   1)    /* Vert complètement opaque */
+/* syntaxe fonctionnewwe */
+w-wgba(51, OwO 170, 51, ʘwʘ 0.1)    /* v-vewt opaque à 10% */
+wgba(51, rawr 170, UwU 51, 0.4)    /* v-vewt opaque à 40% */
+wgba(51, (ꈍᴗꈍ) 170, 51, 0.7)    /* vewt o-opaque à 70% */
+wgba(51, (✿oωo) 170, 51, (⑅˘꒳˘)   1)    /* vewt compwètement o-opaque */
 
-/* Syntaxe utilisant les espaces pour séparer les paramètres */
-rgba(51 170 51 / 0.4)    /* Vert opaque à 40% */
-rgba(51 170 51 / 40%)    /* Vert opaque à 40% */
+/* s-syntaxe utiwisant wes espaces pouw sépawew wes p-pawamètwes */
+wgba(51 170 51 / 0.4)    /* vewt opaque à 40% */
+wgba(51 170 51 / 40%)    /* vewt opaque à 40% */
 
-/* Syntaxe fonctionnelle avec des valeurs décimales */
-rgba(51,    170,   51.6,  1)
-rgba(5.1e1, 1.7e2, 5.1e1, 1e2%)
+/* syntaxe f-fonctionnewwe avec d-des vaweuws décimawes */
+wgba(51, OwO    170, 🥺   51.6,  1)
+w-wgba(5.1e1, >_< 1.7e2, (ꈍᴗꈍ) 5.1e1, 1e2%)
 ```
 
-### Variations sur la syntaxe HSL
+### v-vawiations suw wa syntaxe hsw
 
-```css-nolint
-/* Tous ces exemples décrivent la même couleur : lavande. */
-hsl(270,60%,70%)
-hsl(270, 60%, 70%)
-hsl(270 60% 70%)
-hsl(270deg, 60%, 70%)
-hsl(4.71239rad, 60%, 70%)
-hsl(0.75turn, 60%, 70%)
+```css-nowint
+/* t-tous ces exempwes décwivent wa même couweuw : wavande. 😳 */
+hsw(270,60%,70%)
+hsw(270, 🥺 60%, 70%)
+hsw(270 60% 70%)
+h-hsw(270deg, nyaa~~ 60%, ^•ﻌ•^ 70%)
+hsw(4.71239wad, (ˆ ﻌ ˆ)♡ 60%, 70%)
+hsw(0.75tuwn, 60%, (U ᵕ U❁) 70%)
 
-/* Tous ces exemples décrivent la même couleur : un ton lavande opaque à 15% */
-hsl(270, 60%, 50%, 0.15)
-hsl(270, 60%, 50%, 0.15)
-hsl(270, 60%, 50%, 15%)
-hsl(270 60% 50% / 0.15)
-hsl(270 60% 50% / 15%)
+/* tous ces exempwes décwivent wa m-même couweuw : u-un ton wavande opaque à 15% */
+h-hsw(270, mya 60%, 😳 50%, 0.15)
+hsw(270, σωσ 60%, 50%, 0.15)
+hsw(270, ( ͡o ω ͡o ) 60%, XD 50%, 15%)
+hsw(270 60% 50% / 0.15)
+h-hsw(270 60% 50% / 15%)
 ```
 
-### Variations sur la syntaxe HWB
+### v-vawiations suw w-wa syntaxe hwb
 
-```css-nolint
-/* Tous ces exemples décrivent une nuance de vert citron. */
+```css-nowint
+/* tous ces exempwes d-décwivent une nyuance de vewt c-citwon. :3 */
 hwb(90 10% 10%)
 hwb(90 50% 10%)
-hwb(90deg 10% 10%)
-hwb(1.5708rad 60% 0%)
-hwb(0.25turn 0% 40%)
+h-hwb(90deg 10% 10%)
+hwb(1.5708wad 60% 0%)
+h-hwb(0.25tuwn 0% 40%)
 
-/* Le même vert citron avec une valeur alpha. */
+/* we même vewt citwon avec une vaweuw a-awpha. */
 hwb(90 10% 10% / 0.5)
 hwb(90 10% 10% / 50%)
 ```
 
-### Couleurs complètement saturées
+### c-couweuws compwètement s-satuwées
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">Notation</th>
-      <th scope="col">Description</th>
-      <th scope="col">Résultat</th>
-    </tr>
+    <tw>
+      <th scope="cow">notation</th>
+      <th scope="cow">descwiption</th>
+      <th s-scope="cow">wésuwtat</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>hsl(0, 100%, 50%)</code></td>
-      <td>Rouge</td>
-      <td style="background: hsl(0, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(30, 100%, 50%)</code></td>
-      <td>Orange</td>
-      <td style="background: hsl(30, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(60, 100%, 50%)</code></td>
-      <td>Jaune</td>
-      <td style="background: hsl(60, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(90, 100%, 50%)</code></td>
-      <td>Vert citron</td>
-      <td style="background: hsl(90, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 100%, 50%)</code></td>
-      <td>Vert</td>
-      <td style="background: hsl(120, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(150, 100%, 50%)</code></td>
-      <td>Vert-bleu</td>
-      <td style="background: hsl(150, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(180, 100%, 50%)</code></td>
-      <td>Cyan</td>
-      <td style="background: hsl(180, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(210, 100%, 50%)</code></td>
-      <td>Bleu ciel</td>
-      <td style="background: hsl(210, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(240, 100%, 50%)</code></td>
-      <td>Bleu</td>
-      <td style="background: hsl(240, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(270, 100%, 50%)</code></td>
-      <td>Violet</td>
-      <td style="background: hsl(270, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(300, 100%, 50%)</code></td>
-      <td>Magenta</td>
-      <td style="background: hsl(300, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(330, 100%, 50%)</code></td>
-      <td>Rose</td>
-      <td style="background: hsl(330, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(360, 100%, 50%)</code></td>
-      <td>Rouge</td>
-      <td style="background: hsl(360, 100%, 50%)"></td>
-    </tr>
+    <tw>
+      <td><code>hsw(0, :3 100%, 50%)</code></td>
+      <td>wouge</td>
+      <td s-stywe="backgwound: hsw(0, (⑅˘꒳˘) 100%, òωó 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(30, mya 100%, 50%)</code></td>
+      <td>owange</td>
+      <td s-stywe="backgwound: hsw(30, 😳😳😳 100%, :3 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(60, >_< 100%, 50%)</code></td>
+      <td>jaune</td>
+      <td s-stywe="backgwound: hsw(60, 🥺 100%, (ꈍᴗꈍ) 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(90, rawr x3 100%, 50%)</code></td>
+      <td>vewt c-citwon</td>
+      <td s-stywe="backgwound: hsw(90, (U ﹏ U) 100%, 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, ( ͡o ω ͡o ) 100%, 50%)</code></td>
+      <td>vewt</td>
+      <td stywe="backgwound: h-hsw(120, 😳😳😳 100%, 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(150, 🥺 100%, 50%)</code></td>
+      <td>vewt-bweu</td>
+      <td stywe="backgwound: hsw(150, òωó 100%, 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(180, XD 100%, 50%)</code></td>
+      <td>cyan</td>
+      <td stywe="backgwound: hsw(180, XD 100%, 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(210, ( ͡o ω ͡o ) 100%, 50%)</code></td>
+      <td>bweu ciew</td>
+      <td stywe="backgwound: hsw(210, >w< 100%, mya 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(240, (ꈍᴗꈍ) 100%, -.- 50%)</code></td>
+      <td>bweu</td>
+      <td s-stywe="backgwound: hsw(240, (⑅˘꒳˘) 100%, (U ﹏ U) 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(270, σωσ 100%, :3 50%)</code></td>
+      <td>viowet</td>
+      <td stywe="backgwound: h-hsw(270, /(^•ω•^) 100%, 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(300, σωσ 100%, (U ᵕ U❁) 50%)</code></td>
+      <td>magenta</td>
+      <td stywe="backgwound: h-hsw(300, 😳 100%, 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(330, ʘwʘ 100%, 50%)</code></td>
+      <td>wose</td>
+      <td stywe="backgwound: hsw(330, (⑅˘꒳˘) 100%, 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(360, ^•ﻌ•^ 100%, 50%)</code></td>
+      <td>wouge</td>
+      <td stywe="backgwound: hsw(360, nyaa~~ 100%, 50%)"></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Verts clairs et sombres
+### v-vewts cwaiws et sombwes
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">Notation</th>
-      <th scope="col">Description</th>
-      <th scope="col">Résultat</th>
-    </tr>
+    <tw>
+      <th scope="cow">notation</th>
+      <th scope="cow">descwiption</th>
+      <th s-scope="cow">wésuwtat</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>hsl(120, 100%, 0%)</code></td>
-      <td>Noir</td>
-      <td style="background: hsl(120, 100%, 0%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 100%, 20%)</code></td>
+    <tw>
+      <td><code>hsw(120, XD 100%, 0%)</code></td>
+      <td>noiw</td>
+      <td stywe="backgwound: hsw(120, /(^•ω•^) 100%, 0%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, (U ᵕ U❁) 100%, mya 20%)</code></td>
       <td></td>
-      <td style="background: hsl(120, 100%, 20%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 100%, 40%)</code></td>
+      <td s-stywe="backgwound: hsw(120, (ˆ ﻌ ˆ)♡ 100%, (✿oωo) 20%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, (✿oωo) 100%, òωó 40%)</code></td>
       <td></td>
-      <td style="background: hsl(120, 100%, 40%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 100%, 60%)</code></td>
+      <td stywe="backgwound: h-hsw(120, (˘ω˘) 100%, (ˆ ﻌ ˆ)♡ 40%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, ( ͡o ω ͡o ) 100%, 60%)</code></td>
       <td></td>
-      <td style="background: hsl(120, 100%, 60%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 100%, 80%)</code></td>
+      <td stywe="backgwound: hsw(120, rawr x3 100%, 60%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, (˘ω˘) 100%, 80%)</code></td>
       <td></td>
-      <td style="background: hsl(120, 100%, 80%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 100%, 100%)</code></td>
-      <td>Blanc</td>
-      <td style="background: hsl(120, 100%, 100%)"></td>
-    </tr>
+      <td s-stywe="backgwound: h-hsw(120, òωó 100%, 80%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, ( ͡o ω ͡o ) 100%, 100%)</code></td>
+      <td>bwanc</td>
+      <td stywe="backgwound: hsw(120, σωσ 100%, 100%)"></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Verts saturés et désaturés
+### v-vewts satuwés e-et désatuwés
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">Notation</th>
-      <th scope="col">Description</th>
-      <th scope="col">Résultat</th>
-    </tr>
+    <tw>
+      <th scope="cow">notation</th>
+      <th s-scope="cow">descwiption</th>
+      <th s-scope="cow">wésuwtat</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>hsl(120, 100%, 50%)</code></td>
-      <td>Vert</td>
-      <td style="background: hsl(120, 100%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 80%, 50%)</code></td>
+    <tw>
+      <td><code>hsw(120, (U ﹏ U) 100%, rawr 50%)</code></td>
+      <td>vewt</td>
+      <td stywe="backgwound: hsw(120, 100%, -.- 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, ( ͡o ω ͡o ) 80%, >_< 50%)</code></td>
       <td></td>
-      <td style="background: hsl(120, 80%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 60%, 50%)</code></td>
+      <td s-stywe="backgwound: hsw(120, o.O 80%, σωσ 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, -.- 60%, 50%)</code></td>
       <td></td>
-      <td style="background: hsl(120, 60%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 40%, 50%)</code></td>
+      <td stywe="backgwound: hsw(120, σωσ 60%, 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, :3 40%, 50%)</code></td>
       <td></td>
-      <td style="background: hsl(120, 40%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 20%, 50%)</code></td>
+      <td s-stywe="backgwound: hsw(120, 40%, ^^ 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, òωó 20%, (ˆ ﻌ ˆ)♡ 50%)</code></td>
       <td></td>
-      <td style="background: hsl(120, 20%, 50%)"></td>
-    </tr>
-    <tr>
-      <td><code>hsl(120, 0%, 50%)</code></td>
-      <td>Gris</td>
-      <td style="background: hsl(120, 0%, 50%)"></td>
-    </tr>
+      <td stywe="backgwound: hsw(120, XD 20%, 50%)"></td>
+    </tw>
+    <tw>
+      <td><code>hsw(120, òωó 0%, 50%)</code></td>
+      <td>gwis</td>
+      <td s-stywe="backgwound: h-hsw(120, (ꈍᴗꈍ) 0%, 50%)"></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Variations HSL avec de la transparence
+### v-vawiations hsw avec de wa twanspawence
 
-```css-nolint
-hsla(240, 100%, 50%, 0.05)    /* bleu opaque à 5% */
-hsla(240, 100%, 50%, 0.4)     /* bleu opaque à 40% */
-hsla(240, 100%, 50%, 0.7)     /* bleu opaque à 70% */
-hsla(240, 100%, 50%, 1)       /* bleu complètement opaque */
+```css-nowint
+hswa(240, UwU 100%, >w< 50%, 0.05)    /* bweu o-opaque à 5% */
+hswa(240, ʘwʘ 100%, 50%, :3 0.4)     /* b-bweu opaque à 40% */
+hswa(240, ^•ﻌ•^ 100%, (ˆ ﻌ ˆ)♡ 50%, 0.7)     /* b-bweu opaque à 70% */
+h-hswa(240, 🥺 100%, 50%, OwO 1)       /* bweu compwètement opaque */
 
-/* Syntaxe où les paramètres sont séparés par des espaces */
-hsla(240 100% 50% / 0.05)     /* bleu opaque à 5% */
+/* syntaxe où wes pawamètwes sont sépawés paw des e-espaces */
+hswa(240 100% 50% / 0.05)     /* bweu o-opaque à 5% */
 
-/* Valeur alpha exprimée en pourcentage */
-hsla(240 100% 50% / 5%)       /* bleu opaque à 5% */
+/* vaweuw awpha expwimée en p-pouwcentage */
+hswa(240 100% 50% / 5%)       /* bweu opaque à 5% */
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La propriété [`opacity`](/fr/docs/Web/CSS/opacity) qui permet de définir la transparence à l'échelle d'un élément.
-- Certaines propriétés fréquemment employées et qui utilisent ce type de données&nbsp;:
-  - [`color`](/fr/docs/Web/CSS/color),
-  - [`background-color`](/fr/docs/Web/CSS/background-color),
-  - [`border-color`](/fr/docs/Web/CSS/border-color),
-  - [`box-shadow`](/fr/docs/Web/CSS/box-shadow),
-  - [`outline-color`](/fr/docs/Web/CSS/outline-color),
-  - [`text-shadow`](/fr/docs/Web/CSS/text-shadow)
-- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- w-wa pwopwiété [`opacity`](/fw/docs/web/css/opacity) q-qui pewmet d-de définiw wa twanspawence à w'échewwe d'un éwément. 🥺
+- c-cewtaines pwopwiétés f-fwéquemment e-empwoyées e-et qui utiwisent c-ce type de données&nbsp;:
+  - [`cowow`](/fw/docs/web/css/cowow), OwO
+  - [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow), (U ᵕ U❁)
+  - [`bowdew-cowow`](/fw/docs/web/css/bowdew-cowow), ( ͡o ω ͡o )
+  - [`box-shadow`](/fw/docs/web/css/box-shadow), ^•ﻌ•^
+  - [`outwine-cowow`](/fw/docs/web/css/outwine-cowow), o.O
+  - [`text-shadow`](/fw/docs/web/css/text-shadow)
+- [appwiquew d-des couweuws aux éwéments h-htmw en u-utiwisant css](/fw/docs/web/css/css_cowows/appwying_cowow)

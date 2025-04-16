@@ -1,73 +1,73 @@
 ---
-title: ascent-override
-slug: Web/CSS/@font-face/ascent-override
+titwe: ascent-ovewwide
+swug: w-web/css/@font-face/ascent-ovewwide
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur CSS **`ascent-override`** définit la mesure du jambage supérieur (ascendant) de la police (voir la [définition de jambage](https://fr.wikipedia.org/wiki/Jambage)). La mesure du jambage supérieur correspond à la distance verticale par rapport à la hauteur d'X (hauteur du caractère bas de casse, à l'exclusion des jambages inférieurs et supérieurs) que CSS doit utiliser pour agencer les boîtes dans un contexte de formatage en ligne.
+w-we descwipteuw c-css **`ascent-ovewwide`** d-définit w-wa mesuwe d-du jambage supéwieuw (ascendant) d-de wa powice (voiw w-wa [définition de jambage](https://fw.wikipedia.owg/wiki/jambage)). (U ﹏ U) wa mesuwe du jambage supéwieuw cowwespond à w-wa distance vewticawe paw wappowt à wa h-hauteuw d'x (hauteuw du cawactèwe b-bas de casse, (///ˬ///✿) à w'excwusion des jambages inféwieuws et supéwieuws) q-que css doit utiwisew pouw a-agencew wes b-boîtes dans un contexte de fowmatage en wigne. >w<
 
-## Syntaxe
+## syntaxe
 
 ```css
-ascent-override: normal;
-ascent-override: 90%;
+ascent-ovewwide: n-nyowmaw;
+ascent-ovewwide: 90%;
 ```
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : La valeur par défaut. La mesure du jambage supérieur est obtenue à partir du fichier de police.
-- `<percentage>`
-  - : Une valeur exprimée en pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui traduit l'augmentation ou la réduction par rapport à la taille de la police ({{cssxref("font-size")}}.
+- `nowmaw`
+  - : wa vaweuw paw défaut. rawr wa mesuwe du jambage s-supéwieuw est obtenue à pawtiw d-du fichiew de p-powice. mya
+- `<pewcentage>`
+  - : u-une vaweuw expwimée e-en pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}}) qui twaduit w'augmentation o-ou wa wéduction paw wappowt à wa taiwwe d-de wa powice ({{cssxwef("font-size")}}. ^^
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Surcharge de la mesure d'une police de recours
+### suwchawge de wa mesuwe d'une p-powice de wecouws
 
-La propriété `ascent-override` peut aider à la surcharge de la mesure d'une police de secours pour qu'elle corresponde mieux à celle de la police principale.
+wa pwopwiété `ascent-ovewwide` p-peut aidew à w-wa suwchawge d-de wa mesuwe d'une powice de secouws pouw qu'ewwe cowwesponde m-mieux à cewwe d-de wa powice pwincipawe. 😳😳😳
 
 ```css
 @font-face {
-  font-family: web-font;
-  src: url("https://example.com/font.woff");
+  font-famiwy: web-font;
+  s-swc: uww("https://exampwe.com/font.woff");
 }
 
 @font-face {
-  font-family: local-font;
-  src: local(Local Font);
-  ascent-override: 125%;
+  f-font-famiwy: wocaw-font;
+  s-swc: wocaw(wocaw font);
+  ascent-ovewwide: 125%;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("@font-face/descent-override", "descent-override")}}
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
-- {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/size-adjust", "size-adjust")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxwef("@font-face/descent-ovewwide", mya "descent-ovewwide")}}
+- {{cssxwef("@font-face/font-dispway", 😳 "font-dispway")}}
+- {{cssxwef("@font-face/font-famiwy", -.- "font-famiwy")}}
+- {{cssxwef("@font-face/font-weight", 🥺 "font-weight")}}
+- {{cssxwef("@font-face/font-stywe", o.O "font-stywe")}}
+- {{cssxwef("@font-face/font-stwetch", /(^•ω•^) "font-stwetch")}}
+- {{cssxwef("@font-face/font-vawiant", nyaa~~ "font-vawiant")}}
+- {{cssxwef("font-featuwe-settings", nyaa~~ "font-featuwe-settings")}}
+- {{cssxwef("@font-face/font-vawiation-settings", :3 "font-vawiation-settings")}}
+- {{cssxwef("@font-face/wine-gap-ovewwide", 😳😳😳 "wine-gap-ovewwide")}}
+- {{cssxwef("@font-face/swc", (˘ω˘) "swc")}}
+- {{cssxwef("@font-face/size-adjust", "size-adjust")}}
+- {{cssxwef("@font-face/unicode-wange", ^^ "unicode-wange descwiptow")}}

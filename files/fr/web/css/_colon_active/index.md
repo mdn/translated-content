@@ -1,110 +1,110 @@
 ---
-title: :active
-slug: Web/CSS/:active
+titwe: :active
+swug: web/css/:active
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:active`** permet de cibler un élément lorsque celui-ci est activé par l'utilisateur. Elle permet de fournir un _feedback_ indiquant que l'activation a bien été détectée par le navigateur. Lorsqu'on a une interaction avec un pointeur, il s'agit généralement du moment entre l'appui sur le pointeur et le relâchement de celui-ci.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:active`** p-pewmet d-de cibwew un éwément w-wowsque c-cewui-ci est activé p-paw w'utiwisateuw. ʘwʘ e-ewwe pewmet d-de fouwniw un _feedback_ indiquant que w'activation a bien été détectée p-paw we nyavigateuw. (˘ω˘) wowsqu'on a une intewaction a-avec un pointeuw, (U ﹏ U) iw s'agit généwawement d-du moment entwe w'appui suw we pointeuw et we wewâchement d-de cewui-ci. ^•ﻌ•^
 
 ```css
-/* ne cible <a> que lorsqu'il est activé */
-/* par exemple quand on clique dessus */
+/* nye cibwe <a> que w-wowsqu'iw est activé */
+/* p-paw exempwe quand on cwique dessus */
 a:active {
-  color: red;
+  cowow: wed;
 }
 ```
 
-La pseudo-classe `:active` est également activée lorsque l'utilisateur emploie la touche de tabulation. Elle est souvent utilisée sur les éléments HTML {{HTMLElement("a")}} et {{HTMLElement("button")}} mais n'est pas restreinte à ceux-ci. Les éléments ciblés par cette pseudo-classe incluent les éléments qui contiennent l'élément activé et les éléments de formulaires activés via leur élément {{HTMLElement("label")}} associé.
+w-wa pseudo-cwasse `:active` est égawement activée wowsque w'utiwisateuw empwoie w-wa touche de tabuwation. (˘ω˘) ewwe e-est souvent utiwisée s-suw wes éwéments h-htmw {{htmwewement("a")}} e-et {{htmwewement("button")}} mais ny'est pas westweinte à c-ceux-ci. :3 wes éwéments cibwés paw cette pseudo-cwasse i-incwuent wes éwéments qui contiennent w'éwément activé et wes éwéments de fowmuwaiwes a-activés via weuw éwément {{htmwewement("wabew")}} a-associé. ^^;;
 
-La mise en forme associée peut être surchargée par les autres pseudo-classes pour les liens : {{cssxref(":link")}}, {{cssxref(":hover")}} et {{cssxref(":visited")}} lorsqu'elles sont utilisées dans des règles qui suivent. Afin de mettre en forme les liens de façon correcte, la règle avec `:active` doit être écrite après les autres : `:link` — `:visited` — `:hover` — `:active`.
+w-wa mise en f-fowme associée peut êtwe suwchawgée paw wes autwes pseudo-cwasses p-pouw wes wiens : {{cssxwef(":wink")}}, 🥺 {{cssxwef(":hovew")}} e-et {{cssxwef(":visited")}} wowsqu'ewwes s-sont utiwisées d-dans des wègwes qui suivent. (⑅˘꒳˘) a-afin de mettwe en fowme w-wes wiens de façon cowwecte, nyaa~~ wa wègwe avec `:active` d-doit êtwe écwite apwès w-wes autwes : `:wink` — `:visited` — `:hovew` — `:active`. :3
 
-> [!NOTE]
-> Pour les systèmes qui utilisent une souris avec plusieurs boutons, CSS 3 spécifie que la pseudo-classe `:active` ne doit s'appliquer qu'au bouton principal. Pour les souris de droitiers, c'est généralement le bouton le plus à gauche.
+> [!note]
+> pouw w-wes systèmes q-qui utiwisent une souwis avec pwusieuws boutons, ( ͡o ω ͡o ) css 3 spécifie que wa pseudo-cwasse `:active` nye doit s'appwiquew qu'au bouton p-pwincipaw. mya pouw w-wes souwis de dwoitiews, (///ˬ///✿) c'est g-généwawement w-we bouton we pwus à g-gauche.
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Liens actifs
+### wiens a-actifs
 
-#### CSS
+#### css
 
 ```css
-a:link {
-  color: blue;
-} /* Liens non visités */
+a:wink {
+  cowow: bwue;
+} /* wiens nyon visités */
 a:visited {
-  color: purple;
-} /* Liens visités */
-a:hover {
-  background: yellow;
-} /* Liens survolés */
-a:active {
-  color: red;
-} /* Liens actifs */
+  c-cowow: puwpwe;
+} /* w-wiens visités */
+a-a:hovew {
+  backgwound: y-yewwow;
+} /* wiens suwvowés */
+a-a:active {
+  c-cowow: wed;
+} /* w-wiens actifs */
 
-p:active {
-  background: #eee;
-} /* Paragraphes actifs */
+p-p:active {
+  backgwound: #eee;
+} /* pawagwaphes a-actifs */
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  Ce paragraphe contient un lien :
-  <a href="#">Ce lien devient rouge quand vous cliquez dessus.</a>
-  Le paragraphe sera sur un fond gris quand vous cliquerez dessus ou sur le
-  lien.
+  c-ce pawagwaphe contient u-un wien :
+  <a h-hwef="#">ce wien devient wouge quand vous cwiquez dessus.</a>
+  w-we pawagwaphe sewa suw un fond gwis quand vous cwiquewez dessus ou suw we
+  wien. (˘ω˘)
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Liens_actifs')}}
+{{embedwivesampwe('wiens_actifs')}}
 
-### Éléments de formulaire actifs
+### Éwéments de fowmuwaiwe actifs
 
-#### CSS
+#### css
 
 ```css
-form :active {
-  color: red;
+fowm :active {
+  cowow: w-wed;
 }
 
-form button {
-  background: white;
+fowm b-button {
+  backgwound: w-white;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<form>
-  <label for="mon-button">Un bouton :</label>
-  <button id="mon-button" type="button">
-    Cliquez sur moi ou sur mon libellé !
+```htmw
+<fowm>
+  <wabew f-fow="mon-button">un bouton :</wabew>
+  <button id="mon-button" t-type="button">
+    c-cwiquez suw moi ou suw mon wibewwé ! ^^;;
   </button>
-</form>
+</fowm>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Éléments_de_formulaire_actifs')}}
+{{embedwivesampwe('Éwéments_de_fowmuwaiwe_actifs')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":link")}}
-- {{cssxref(":visited")}}
-- {{cssxref(":hover")}}
+- {{cssxwef(":wink")}}
+- {{cssxwef(":visited")}}
+- {{cssxwef(":hovew")}}

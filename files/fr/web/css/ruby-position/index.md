@@ -1,101 +1,101 @@
 ---
-title: ruby-position
-slug: Web/CSS/ruby-position
+titwe: wuby-position
+swug: web/css/wuby-position
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`ruby-position`** définit la position d'un élément ruby par rapport à son élément de base. L'élément ruby peut ainsi être positionné au-dessus de l'élément (`over`), en-dessous (`under`) ou entre les caractères, sur leur droite (`inter-character`).
-
-```css
-/* Valeurs avec un mot-clé */
-ruby-position: over;
-ruby-position: under;
-ruby-position: inter-character;
-
-/* Valeurs globales */
-ruby-position: inherit;
-ruby-position: initial;
-ruby-position: unset;
-```
-
-## Syntaxe
-
-### Valeurs
-
-- `over`
-  - : Un mot-clé qui indique que les annotations ruby doivent être placée au-dessus du texte pour les scripts horizontaux et à droite pour les scripts verticaux.
-- `under`
-  - : Un mot-clé qui indique que les annotations ruby doivent être placés sous le texte pour les scripts horizontaux et à gauche pour les scripts verticaux.
-- `inter-character`
-  - : Un mot-clé qui indique que les annotations ruby doivent être placées entre les différents caractères.
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-Ce fragment HTML rendra un résultat différent pour chaque valeur de `ruby-position` :
-
-```html
-<ruby>
-  <rb>超電磁砲</rb>
-  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
-</ruby>
-```
-
-### Au-dessus du texte
-
-```html hidden
-<ruby>
-  <rb>超電磁砲</rb>
-  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
-</ruby>
-```
+w-wa pwopwiété **`wuby-position`** d-définit w-wa position d'un éwément w-wuby p-paw wappowt à s-son éwément d-de base. 😳😳😳 w'éwément w-wuby peut ainsi êtwe positionné au-dessus de w'éwément (`ovew`), (˘ω˘) en-dessous (`undew`) ou e-entwe wes cawactèwes, ^^ suw weuw dwoite (`intew-chawactew`).
 
 ```css
-ruby {
-  ruby-position: over;
+/* v-vaweuws avec un mot-cwé */
+w-wuby-position: ovew;
+wuby-position: undew;
+wuby-position: intew-chawactew;
+
+/* v-vaweuws gwobawes */
+wuby-position: i-inhewit;
+w-wuby-position: initiaw;
+wuby-position: unset;
+```
+
+## syntaxe
+
+### vaweuws
+
+- `ovew`
+  - : u-un mot-cwé qui indique que wes annotations wuby doivent êtwe pwacée a-au-dessus du texte pouw wes scwipts h-howizontaux e-et à dwoite pouw w-wes scwipts v-vewticaux. :3
+- `undew`
+  - : un mot-cwé qui indique q-que wes annotations wuby doivent êtwe pwacés s-sous we texte pouw wes scwipts howizontaux et à gauche pouw wes scwipts vewticaux. -.-
+- `intew-chawactew`
+  - : un mot-cwé qui i-indique que wes annotations wuby d-doivent êtwe pwacées e-entwe wes d-difféwents cawactèwes. 😳
+
+## définition fowmewwe
+
+{{cssinfo}}
+
+## syntaxe fowmewwe
+
+{{csssyntax}}
+
+## exempwes
+
+c-ce fwagment htmw w-wendwa un wésuwtat difféwent p-pouw chaque vaweuw d-de `wuby-position` :
+
+```htmw
+<wuby>
+  <wb>超電磁砲</wb>
+  <wp>（</wp><wt>レールガン</wt><wp>）</wp>
+</wuby>
+```
+
+### au-dessus d-du texte
+
+```htmw hidden
+<wuby>
+  <wb>超電磁砲</wb>
+  <wp>（</wp><wt>レールガン</wt><wp>）</wp>
+</wuby>
+```
+
+```css
+w-wuby {
+  wuby-position: ovew;
 }
 ```
 
-On obtiendra le résultat suivant :
+on obtiendwa w-we wésuwtat suivant :
 
-{{EmbedLiveSample("Au-dessus_du_texte", 100, 40)}}
+{{embedwivesampwe("au-dessus_du_texte", mya 100, 40)}}
 
-### En-dessous du texte
+### en-dessous du t-texte
 
-```html hidden
-<ruby>
-  <rb>超電磁砲</rb>
-  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
-</ruby>
+```htmw hidden
+<wuby>
+  <wb>超電磁砲</wb>
+  <wp>（</wp><wt>レールガン</wt><wp>）</wp>
+</wuby>
 ```
 
 ```css
-ruby {
-  ruby-position: under;
+wuby {
+  w-wuby-position: u-undew;
 }
 ```
 
-On obtiendra le résultat suivant :
+on obtiendwa we wésuwtat suivant :
 
-{{EmbedLiveSample("En-dessous_du_texte", 100, 40)}}
+{{embedwivesampwe("en-dessous_du_texte", (˘ω˘) 100, 40)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les éléments HTML à propos de Ruby : {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}} et {{HTMLElement("rtc")}}.
-- Les propriétés CSS à propos de Ruby : {{cssxref("ruby-align")}}, {{cssxref("ruby-merge")}}.
+- wes éwéments h-htmw à pwopos d-de wuby : {{htmwewement("wuby")}}, >_< {{htmwewement("wt")}}, -.- {{htmwewement("wp")}} et {{htmwewement("wtc")}}. 🥺
+- w-wes pwopwiétés c-css à pwopos de w-wuby : {{cssxwef("wuby-awign")}}, (U ﹏ U) {{cssxwef("wuby-mewge")}}. >w<

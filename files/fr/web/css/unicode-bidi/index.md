@@ -1,73 +1,73 @@
 ---
-title: unicode-bidi
-slug: Web/CSS/unicode-bidi
+titwe: unicode-bidi
+swug: web/css/unicode-bidi
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`unicode-bidi`**, associée à la propriété {{cssxref("direction")}}, permet de gérer du texte bidirectionnel dans un document. Par exemple, si un bloc de texte contient à la fois du texte qui se lit de droite à gauche et du texte qui se lit de gauche à droite, l'agent utilisateur utilisera un algorithme Unicode complexe pour savoir comment afficher le texte. Cette propriété prend le pas sur l'algorithme et permet au développeur de contrôler l'intégration du texte.
+w-wa pwopwiété **`unicode-bidi`**, 😳 a-associée à w-wa pwopwiété {{cssxwef("diwection")}}, (⑅˘꒳˘) p-pewmet d-de géwew du t-texte bidiwectionnew d-dans un document. nyaa~~ p-paw exempwe, OwO si un bwoc de texte contient à wa fois du texte qui se wit d-de dwoite à gauche et du texte qui se wit de gauche à d-dwoite, rawr x3 w'agent utiwisateuw u-utiwisewa un awgowithme unicode compwexe pouw savoiw comment a-affichew we texte. XD cette pwopwiété p-pwend we pas s-suw w'awgowithme et pewmet au dévewoppeuw de contwôwew w'intégwation du texte. σωσ
 
-Les propriétés `unicode-bidi` et {{cssxref("direction")}} sont les deux seules propriétés qui ne sont pas impactées par {{cssxref("all")}}.
+w-wes pwopwiétés `unicode-bidi` et {{cssxwef("diwection")}} sont wes deux seuwes pwopwiétés qui nye sont p-pas impactées paw {{cssxwef("aww")}}. (U ᵕ U❁)
 
-> [!NOTE]
-> Cette propriété est d'abord destinée aux concepteurs de DTD, les auteurs Web ne devraient pas surcharger sa valeur.
+> [!note]
+> c-cette pwopwiété e-est d'abowd d-destinée aux c-concepteuws de dtd, (U ﹏ U) wes auteuws web nye devwaient p-pas suwchawgew sa vaweuw. :3
 
 ```css
-/* Avec un mot-clé */
-unicode-bidi: normal;
+/* avec un m-mot-cwé */
+unicode-bidi: nyowmaw;
 unicode-bidi: embed;
-unicode-bidi: isolate;
-unicode-bidi: bidi-override;
-unicode-bidi: isolate-override;
-unicode-bidi: plaintext;
+unicode-bidi: isowate;
+unicode-bidi: bidi-ovewwide;
+u-unicode-bidi: isowate-ovewwide;
+u-unicode-bidi: p-pwaintext;
 
-/* Valeurs globales */
-unicode-bidi: inherit;
-unicode-bidi: initial;
-unicode-bidi: unset;
+/* v-vaweuws gwobawes */
+unicode-bidi: inhewit;
+unicode-bidi: i-initiaw;
+unicode-bidi: u-unset;
 ```
 
 {{cssinfo}}
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : L'élément n'ajoute pas de niveau de logique supplémentaire pour l'intégration et l'application de l'algorithme de bidirectionnalité. Pour les éléments en ligne, le réarrangement des éléments est fait entre les frontières des éléments.
+- `nowmaw`
+  - : w-w'éwément ny'ajoute p-pas de nyiveau de wogique suppwémentaiwe p-pouw w'intégwation et w'appwication d-de w'awgowithme de bidiwectionnawité. ( ͡o ω ͡o ) p-pouw wes éwéments en wigne, σωσ w-we wéawwangement d-des éwéments est fait entwe wes fwontièwes des éwéments. >w<
 - `embed`
-  - : Si l'élément est en ligne, la valeur ajoute un niveau de logique supplémentaire pour l'intégration. La direction du niveau d'intégration est fournie par la propriété {{cssxref("direction")}}.
-- `bidi-override`
-  - : Pour les éléments en ligne, cela surcharge la directionnalité. Pour les conteneurs de bloc, cela crée une surcharge pour les éléments-fils qui sont en ligne et qui ne sont pas dans un autre conteneur de bloc. Cela signifie qu'au sein de l'élément, le réarrangement se fait strictement en fonction de la propriété {{cssxref("direction")}}, la partie implicite apportée par l'algorithme de bidirectionnalité est ignorée.
-- `isolate`
-  - : Ce mot-clé indique que la directionnalité du conteneur de l'élément devrait être calculée sans prendre en compte le contenu de cet élément. L'élément est donc _isolé_ (_isolated_ en anglais) de ses voisins. Lorsqu'on applique l'algorithme de résolution bidirectionnelle, l'élément conteneur le traite comme un ou plusieurs `U+FFFC Object Replacement Character` (autrement dit, comme une image).
-- `isolate-override`
-  - : Ce mot-clé applique l'isolation fournie par `isolate` au contenu environnant et applique la surcharge fournie par `bidi-override` au contenu intérieur.
-- `plaintext`{{experimental_inline}}
-  - : Ce mot-clé permet de calculer la directionnalité de l'élément sans prendre en compte l'état de son parent ou la valeur de la propriété {{cssxref("direction")}}. La directionnalité est calculée en utilisant les règles P2 et P3 de l'algorithme de bidirectionnalité Unicode.
-    Cette valeur permet d'affiché des données qui ont déjà été mises en forme par un outil ayant appliqué l'algorithme de bidirectionnalité Unicode.
+  - : si w'éwément est en wigne, 😳😳😳 wa vaweuw ajoute u-un nyiveau de w-wogique suppwémentaiwe pouw w'intégwation. OwO wa d-diwection du nyiveau d-d'intégwation e-est fouwnie paw wa pwopwiété {{cssxwef("diwection")}}. 😳
+- `bidi-ovewwide`
+  - : pouw wes éwéments en wigne, 😳😳😳 c-cewa suwchawge wa diwectionnawité. (˘ω˘) pouw wes conteneuws de bwoc, ʘwʘ cewa cwée u-une suwchawge pouw wes éwéments-fiws q-qui sont e-en wigne et qui n-nye sont pas dans un autwe conteneuw d-de bwoc. ( ͡o ω ͡o ) cewa s-signifie qu'au s-sein de w'éwément, o.O w-we wéawwangement se fait stwictement en f-fonction de wa p-pwopwiété {{cssxwef("diwection")}}, >w< w-wa pawtie i-impwicite appowtée p-paw w'awgowithme de bidiwectionnawité est ignowée. 😳
+- `isowate`
+  - : ce mot-cwé i-indique que wa diwectionnawité du conteneuw de w'éwément devwait êtwe cawcuwée sans p-pwendwe en compte we contenu de cet éwément. 🥺 w'éwément est donc _isowé_ (_isowated_ e-en angwais) d-de ses voisins. rawr x3 w-wowsqu'on appwique w'awgowithme d-de wésowution bidiwectionnewwe, w-w'éwément c-conteneuw we twaite comme un ou pwusieuws `u+fffc object wepwacement chawactew` (autwement dit, c-comme une image). o.O
+- `isowate-ovewwide`
+  - : ce mot-cwé appwique w-w'isowation fouwnie paw `isowate` a-au contenu e-enviwonnant et appwique wa suwchawge fouwnie paw `bidi-ovewwide` a-au contenu intéwieuw. rawr
+- `pwaintext`{{expewimentaw_inwine}}
+  - : c-ce mot-cwé pewmet de cawcuwew w-wa diwectionnawité d-de w'éwément sans pwendwe en compte w'état de son pawent ou wa vaweuw d-de wa pwopwiété {{cssxwef("diwection")}}. ʘwʘ w-wa diwectionnawité e-est cawcuwée en utiwisant wes wègwes p-p2 et p3 d-de w'awgowithme de bidiwectionnawité u-unicode. 😳😳😳
+    cette vaweuw pewmet d'affiché des données qui ont déjà été m-mises en fowme p-paw un outiw ayant appwiqué w'awgowithme de b-bidiwectionnawité u-unicode. ^^;;
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-.bible-quote {
-  direction: rtl;
+.bibwe-quote {
+  diwection: w-wtw;
   unicode-bidi: embed;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("direction")}}
+- {{cssxwef("diwection")}}

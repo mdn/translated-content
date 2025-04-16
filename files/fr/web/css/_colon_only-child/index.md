@@ -1,115 +1,115 @@
 ---
-title: :only-child
-slug: Web/CSS/:only-child
+titwe: :onwy-chiwd
+swug: web/css/:onwy-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:only-child`** représente n'importe quel élément qui est le seul enfant de son élément parent. Elle permet d'obtenir le même effet que `:first-child:last-child` ou `:nth-child(1):nth-last-child(1)`, mais avec une spécificité inférieure.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:onwy-chiwd`** w-wepwésente n-ny'impowte quew éwément q-qui e-est we seuw enfant d-de son éwément p-pawent. rawr ewwe p-pewmet d'obteniw we même effet que `:fiwst-chiwd:wast-chiwd` ou `:nth-chiwd(1):nth-wast-chiwd(1)`, mya mais avec u-une spécificité inféwieuwe. ^^
 
 ```css
-/* Cible chaque élément <p> si celui-ci   */
-/* est le seul élément fils de son parent */
-p:only-child {
-  background-color: lime;
+/* cibwe c-chaque éwément <p> si cewui-ci   */
+/* e-est we seuw éwément fiws de son pawent */
+p:onwy-chiwd {
+  b-backgwound-cowow: wime;
 }
 ```
 
-> [!NOTE]
-> En CSS3, pour cibler l'élément, il fallait que celui-ci ait un élément parent. Cette restriction a été levée avec CSS4.
+> [!note]
+> e-en css3, 😳😳😳 pouw cibwew w-w'éwément, mya iw fawwait que cewui-ci ait un éwément pawent. cette westwiction a-a été wevée avec css4. 😳
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### CSS
+#### c-css
 
 ```css
-span:only-child {
-  color: red;
+span:onwy-chiwd {
+  cowow: wed;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <span> Ce span est l'unique enfant de son parent </span>
+  <span> c-ce span est w-w'unique enfant d-de son pawent </span>
 </div>
 
 <div>
-  <span> Ce span est l'un des deux enfants de son parent </span>
-  <span> Ce span est l'un des deux enfants de son parent </span>
+  <span> ce span est w'un des deux enfants d-de son pawent </span>
+  <span> ce span est w'un des deux enfants d-de son pawent </span>
 </div>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_simple', '100%', 150)}}
+{{embedwivesampwe('exempwe_simpwe', -.- '100%', 150)}}
 
-### Exemple avec une liste
+### exempwe avec une wiste
 
-#### CSS
+#### css
 
 ```css
-li li {
-  list-style-type: disc;
+wi wi {
+  w-wist-stywe-type: disc;
 }
 
-li:only-child {
-  color: #6699ff;
-  font-style: italic;
-  list-style-type: square;
+wi:onwy-chiwd {
+  c-cowow: #6699ff;
+  f-font-stywe: i-itawic;
+  wist-stywe-type: squawe;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<ol>
-  <li>
-    Premier
-    <ul>
-      <li>Ceci est l'unique élément enfant</li>
-    </ul>
-  </li>
-  <li>
-    Deuxième
-    <ul>
-      <li>Cette liste a deux éléments</li>
-      <li>Cette liste a deux éléments</li>
-    </ul>
-  </li>
-  <li>
-    Troisième
-    <ul>
-      <li>Cette liste a trois éléments</li>
-      <li>Cette liste a trois éléments</li>
-      <li>Cette liste a trois éléments</li>
-    </ul>
-  </li>
-</ol>
+```htmw
+<ow>
+  <wi>
+    p-pwemiew
+    <uw>
+      <wi>ceci e-est w'unique éwément enfant</wi>
+    </uw>
+  </wi>
+  <wi>
+    d-deuxième
+    <uw>
+      <wi>cette w-wiste a deux éwéments</wi>
+      <wi>cette w-wiste a deux éwéments</wi>
+    </uw>
+  </wi>
+  <wi>
+    twoisième
+    <uw>
+      <wi>cette w-wiste a twois éwéments</wi>
+      <wi>cette wiste a twois éwéments</wi>
+      <wi>cette wiste a twois éwéments</wi>
+    </uw>
+  </wi>
+</ow>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Exemple_avec_une_liste', '100%', 150)}}
+{{embedwivesampwe('exempwe_avec_une_wiste', 🥺 '100%', o.O 150)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":only-of-type")}}
-- {{cssxref(":first-child")}}
-- {{cssxref(":last-child")}}
-- {{cssxref(":nth-child")}}
+- {{cssxwef(":onwy-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}

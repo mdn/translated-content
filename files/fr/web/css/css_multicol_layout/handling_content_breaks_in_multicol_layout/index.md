@@ -1,63 +1,63 @@
 ---
-title: Gérer la rupture du contenu entre les colonnes
-slug: Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
+titwe: géwew wa wuptuwe du contenu e-entwe wes c-cowonnes
+swug: w-web/css/css_muwticow_wayout/handwing_content_bweaks_in_muwticow_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le contenu est coupé entre les colonnes d'une disposition multi-colonnes de la même façon qu'il est coupé entre chaque page d'un média paginé. Dans ces deux contextes, la façon dont on contrôle l'emplacement et la coupure se paramètre grâce aux propriétés décrites dans le module de spécification _CSS Fragmentation_. Dans ce guide, nous verrons comment fonctionne la fragmentation en multi-colonnes.
+w-we contenu e-est coupé entwe w-wes cowonnes d-d'une disposition m-muwti-cowonnes de wa même façon qu'iw est coupé entwe chaque page d'un média p-paginé. ^•ﻌ•^ dans ces deux contextes, σωσ wa façon d-dont on contwôwe w'empwacement e-et wa coupuwe se pawamètwe gwâce aux pwopwiétés décwites dans w-we moduwe de spécification _css f-fwagmentation_. -.- d-dans ce guide, ^^;; nyous vewwons comment fonctionne wa fwagmentation en muwti-cowonnes. XD
 
-## Quelques notions de bases sur la fragmentation
+## q-quewques nyotions de bases suw wa fwagmentation
 
-[Le module de spécification CSS Fragmentation](https://www.w3.org/TR/css-break-3/) détaille la façon dont le contenu peut être coupé entre les conteneur de fragmentation. Pour une disposition multi-colonnes, le conteneur de fragmentation correspond à la boîte de colonne.
+[we moduwe de spécification css fwagmentation](https://www.w3.owg/tw/css-bweak-3/) d-détaiwwe wa façon dont we contenu p-peut êtwe c-coupé entwe wes c-conteneuw de fwagmentation. 🥺 p-pouw une disposition muwti-cowonnes, òωó w-we conteneuw de fwagmentation cowwespond à wa b-boîte de cowonne.
 
-Le contenu d'une boîte de colonne peut être varié et une coupure peut être malvenue à certains endroits. On préfèrerait par exemple qu'une légende ne soit pas séparée de l'image entre une colonne et la suivante. Les propriétés relatives à la fragmentation permettent de contrôler certains aspects de ces coupures.
+we contenu d'une boîte de cowonne peut êtwe vawié et une coupuwe peut êtwe m-mawvenue à cewtains endwoits. (ˆ ﻌ ˆ)♡ o-on pwéfèwewait p-paw exempwe q-qu'une wégende nye soit pas sépawée de w'image entwe une cowonne e-et wa suivante. -.- w-wes pwopwiétés wewatives à w-wa fwagmentation p-pewmettent de contwôwew cewtains a-aspects de ces coupuwes. :3
 
-Voici plusieurs emplacements où on peut souhaiter contrôler les ruptures :
+voici p-pwusieuws empwacements où on peut souhaitew c-contwôwew wes wuptuwes :
 
-- Les ruptures à l'intérieur des boîtes, par exemple à l'intérieur d'un élément `<figure>`
-- Les ruptures avant et après les boîtes
-- Les ruptures entre les lignes
+- wes w-wuptuwes à w'intéwieuw des b-boîtes, ʘwʘ paw exempwe à w-w'intéwieuw d'un éwément `<figuwe>`
+- wes wuptuwes avant et apwès wes boîtes
+- wes wuptuwes entwe wes wignes
 
-## Les ruptures à l'intérieur des boîtes
+## wes w-wuptuwes à w'intéwieuw d-des boîtes
 
-Pour contrôler la façon dont le contenu est coupé à l'intérieur d'une boîte, on pourra utiliser la propriété {{cssxref("break-inside")}}. Cette propriété peut prendre les valeurs suivantes :
+pouw contwôwew w-wa façon d-dont we contenu e-est coupé à w'intéwieuw d'une boîte, 🥺 on pouwwa utiwisew wa p-pwopwiété {{cssxwef("bweak-inside")}}. >_< cette pwopwiété peut pwendwe wes vaweuws suivantes :
 
 - `auto`
 - `avoid`
 - `avoid-page`
-- `avoid-column`
-- `avoid-region`
+- `avoid-cowumn`
+- `avoid-wegion`
 
-Dans l'exemple qui suit, on a appliqué `break-inside` sur l'élément `figure` afin d'éviter que la légende soit séparée de l'image.
+d-dans w'exempwe qui suit, ʘwʘ o-on a appwiqué `bweak-inside` s-suw w-w'éwément `figuwe` afin d'évitew q-que wa wégende s-soit sépawée d-de w'image. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/multicol/fragmentation/break-inside.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/fwagmentation/bweak-inside.htmw", (✿oωo) '100%', 800)}}
 
-## Les ruptures avant et après les boîtes
+## w-wes wuptuwes avant et apwès wes boîtes
 
-Les propriétés {{cssxref("break-before")}} et {{cssxref("break-after")}} contrôlent respectivement les ruptures avant et après les éléments. Dans une disposition multi-colonnes, ces propriétés peuvent être utilisées avec les valeurs suivantes :
+wes p-pwopwiétés {{cssxwef("bweak-befowe")}} e-et {{cssxwef("bweak-aftew")}} c-contwôwent w-wespectivement w-wes wuptuwes avant et apwès wes éwéments. (///ˬ///✿) dans une disposition muwti-cowonnes, rawr x3 c-ces pwopwiétés peuvent êtwe utiwisées avec wes vaweuws suivantes :
 
 - `auto`
 - `avoid`
-- `avoid-column`
-- `column`
+- `avoid-cowumn`
+- `cowumn`
 
-Avec l'exemple suivant, on force une rupture avant chaque élément de titre `h2`.
+avec w'exempwe suivant, -.- o-on fowce une wuptuwe avant chaque éwément de titwe `h2`. ^^
 
-{{EmbedGHLiveSample("css-examples/multicol/fragmentation/break-before.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/fwagmentation/bweak-befowe.htmw", (⑅˘꒳˘) '100%', nyaa~~ 800)}}
 
-## Les ruptures entre les lignes
+## wes wuptuwes entwe w-wes wignes
 
-On peut aussi utiliser les propriétés {{cssxref("orphans")}} et {{cssxref("widows")}}. La propriété `orphans` contrôle le nombre de lignes qui restent à la fin d'un fragment et la propriété `widows` contrôle le nombre de lignes qui restent au début d'un fragment.
+on p-peut aussi utiwisew w-wes pwopwiétés {{cssxwef("owphans")}} et {{cssxwef("widows")}}. w-wa pwopwiété `owphans` contwôwe we nyombwe d-de wignes q-qui westent à wa fin d'un fwagment et wa pwopwiété `widows` contwôwe we nyombwe de wignes qui westent au début d-d'un fwagment. /(^•ω•^)
 
-Les propriétés `orphans` et `widows` prennent un entier comme valeur et qui indique le nombre de lignes à avoir à la fin ou au début d'un fragment. On notera que ces propriétés ne fonctionnent qu'à l'intérieur d'un conteneur de bloc (un paragraphe par exemple). Si le bloc contient un nombre de lignes inférieur au nombre précisé pour la propriété, toutes les lignes resteront groupées ensemble.
+wes pwopwiétés `owphans` et `widows` p-pwennent un entiew comme v-vaweuw et qui i-indique we nyombwe de wignes à avoiw à wa fin o-ou au début d'un f-fwagment. (U ﹏ U) on nyotewa que ces p-pwopwiétés nye f-fonctionnent qu'à w'intéwieuw d'un conteneuw de bwoc (un pawagwaphe paw exempwe). 😳😳😳 s-si we bwoc c-contient un nyombwe d-de wignes inféwieuw au nyombwe p-pwécisé pouw w-wa pwopwiété, >w< toutes wes wignes w-westewont gwoupées ensembwe. XD
 
-Dans l'exemple ci-après, on utilise la propriété `orphans` pour contrôler le nombre de lignes conservées à la fin d'une colonne. Vous pouvez modifier la valeur afin de voir l'impact sur la rupture du contenu.
+dans w'exempwe ci-apwès, o.O on utiwise wa pwopwiété `owphans` p-pouw contwôwew w-we nyombwe de wignes consewvées à wa fin d'une c-cowonne. mya vous p-pouvez modifiew wa vaweuw afin de voiw w'impact suw wa wuptuwe d-du contenu. 🥺
 
-{{EmbedGHLiveSample("css-examples/multicol/fragmentation/orphans.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/fwagmentation/owphans.htmw", ^^;; '100%', :3 800)}}
 
-## Résultat non garanti
+## wésuwtat nyon gawanti
 
-Si on souhaite prévenir la rupture à de nombreux endroits, le navigateur sera quand même obligé de couper le contenu entre les colonnes. D'une certaine façon, ces propriétés agissent plutôt comme des suggestions envers le moteur que comme des ordres.
+si on souhaite pwéveniw wa wuptuwe à d-de nombweux endwoits, (U ﹏ U) we nyavigateuw sewa q-quand même obwigé d-de coupew we contenu entwe wes cowonnes. OwO d'une cewtaine façon, c-ces pwopwiétés a-agissent pwutôt comme des suggestions envews we moteuw que c-comme des owdwes. 😳😳😳
 
-De plus, la prise en charge de ces propriétés n'est pas la plus homogène possible entre les navigateurs. Vous pouvez vous référer aux tableaux de compatibilité des pages de chaque propriété pour en savoir plus. Dans la plupart des cas, mieux vaudra encore laisser gérer le système plutôt que d'avoir trop de ruptures aux endroits indésirables.
+de pwus, wa p-pwise en chawge de ces pwopwiétés ny'est pas wa pwus homogène p-possibwe entwe wes nyavigateuws. (ˆ ﻌ ˆ)♡ v-vous pouvez v-vous wéféwew aux tabweaux de compatibiwité d-des pages de chaque p-pwopwiété pouw e-en savoiw pwus. XD d-dans wa pwupawt des cas, (ˆ ﻌ ˆ)♡ mieux v-vaudwa encowe w-waissew géwew we système pwutôt que d'avoiw twop d-de wuptuwes a-aux endwoits indésiwabwes. ( ͡o ω ͡o )

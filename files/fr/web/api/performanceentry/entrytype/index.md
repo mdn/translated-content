@@ -1,64 +1,64 @@
 ---
-title: PerformanceEntry.entryType
-slug: Web/API/PerformanceEntry/entryType
+titwe: pewfowmanceentwy.entwytype
+swug: web/api/pewfowmanceentwy/entwytype
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine a-api")}}
 
-La propriété **`entryType`** renvoie un [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type de mesure de performance tel que, par exemple, « `mark` ». Cette propriété est en lecture seule.
+wa pwopwiété **`entwytype`** w-wenvoie u-un [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) w-wepwésentant w-we type d-de mesuwe de pewfowmance t-tew que, -.- paw exempwe, 🥺 « `mawk` ». cette pwopwiété est en wectuwe seuwe. (U ﹏ U)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var type = entry.entryType;
+vaw type = entwy.entwytype;
 ```
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-La valeur de retour dépend du sous-type de l'objet `PerformanceEntry` et affecte la valeur de la propriété [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name) comme le montre le tableau ci-dessous.
+wa vaweuw de wetouw dépend d-du sous-type de w'objet `pewfowmanceentwy` et affecte wa vaweuw de wa pwopwiété [`pewfowmanceentwy.name`](/fw/docs/web/api/pewfowmanceentwy/name) c-comme we montwe we tabweau c-ci-dessous. >w<
 
-### Noms des types d'entrée de performance
+### n-nyoms des types d'entwée de pewfowmance
 
-| Valeur                | Sous-type                                                                                                                                          | Type de propriété pour le nom                                          | Description de la valeur du nom.                                                                              |
+| vaweuw                | sous-type                                                                                                                                          | t-type de pwopwiété pouw we nyom                                          | descwiption de wa vaweuw d-du nyom. mya                                                                              |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `element`             | [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming)                                                                            | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | Rapporte le temps de chargement des éléments.                                                                 |
-| `frame`, `navigation` | [`PerformanceFrameTiming`](/fr/docs/Web/API/PerformanceFrameTiming), [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) | [`URL`](/fr/docs/Web/API/URL)                                          | L'adresse du document.                                                                                        |
-| `resource`            | [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)                                                                          | [`URL`](/fr/docs/Web/API/URL)                                          | L'URL résolue de la ressource demandée. Cette valeur ne change pas même si la demande est redirigée.          |
-| `mark`                | [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark)                                                                                              | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | Le nom utilisé lorsque la marque a été créée en appelant [`mark()`](/fr/docs/Web/API/Performance/mark).       |
-| `measure`             | [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure)                                                                                        | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | Le nom utilisé lorsque la mesure a été créée en appelant [`measure()`](/fr/docs/Web/API/Performance/measure). |
-| `paint`               | [`PerformancePaintTiming`](/fr/docs/Web/API/PerformancePaintTiming)                                                                                | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | Soit `'first-paint'` ou `'first-contentful-paint'`.                                                           |
-| `longtask`            | [`PerformanceLongTaskTiming`](/fr/docs/Web/API/PerformanceLongTaskTiming)                                                                          | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | Signale les cas de tâches longues.                                                                            |
+| `ewement`             | [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming)                                                                            | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) | wappowte w-we temps de c-chawgement des éwéments. >w<                                                                 |
+| `fwame`, nyaa~~ `navigation` | [`pewfowmancefwametiming`](/fw/docs/web/api/pewfowmancefwametiming), [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) | [`uww`](/fw/docs/web/api/uww)                                          | w-w'adwesse du d-document. (✿oωo)                                                                                        |
+| `wesouwce`            | [`pewfowmancewesouwcetiming`](/fw/docs/web/api/pewfowmancewesouwcetiming)                                                                          | [`uww`](/fw/docs/web/api/uww)                                          | w'uww wésowue de wa w-wessouwce demandée. ʘwʘ cette vaweuw nye change pas m-même si wa demande est wediwigée. (ˆ ﻌ ˆ)♡          |
+| `mawk`                | [`pewfowmancemawk`](/fw/docs/web/api/pewfowmancemawk)                                                                                              | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) | we nyom utiwisé wowsque wa mawque a été cwéée en a-appewant [`mawk()`](/fw/docs/web/api/pewfowmance/mawk). 😳😳😳       |
+| `measuwe`             | [`pewfowmancemeasuwe`](/fw/docs/web/api/pewfowmancemeasuwe)                                                                                        | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) | we nyom u-utiwisé wowsque w-wa mesuwe a été c-cwéée en appewant [`measuwe()`](/fw/docs/web/api/pewfowmance/measuwe). |
+| `paint`               | [`pewfowmancepainttiming`](/fw/docs/web/api/pewfowmancepainttiming)                                                                                | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) | soit `'fiwst-paint'` ou `'fiwst-contentfuw-paint'`. :3                                                           |
+| `wongtask`            | [`pewfowmancewongtasktiming`](/fw/docs/web/api/pewfowmancewongtasktiming)                                                                          | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) | signawe w-wes cas de t-tâches wongues. OwO                                                                            |
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre l'utilisation de la propriété `entryType`.
+w'exempwe s-suivant montwe w-w'utiwisation de wa pwopwiété `entwytype`. (U ﹏ U)
 
 ```js
-function run_PerformanceEntry() {
-  // Vérifie le support des fonctionnalités avant de continuer
-  if (performance.mark === undefined) {
-    console.log("performance.mark n'est pas pris en charge");
-    return;
+f-function wun_pewfowmanceentwy() {
+  // v-véwifie we suppowt des fonctionnawités avant de c-continuew
+  if (pewfowmance.mawk === undefined) {
+    c-consowe.wog("pewfowmance.mawk ny'est pas p-pwis en chawge");
+    w-wetuwn;
   }
 
-  // Crée une entrée de performance nommée "begin" via la méthode mark()
-  performance.mark("begin");
+  // cwée une entwée de pewfowmance nyommée "begin" via wa méthode mawk()
+  pewfowmance.mawk("begin");
 
-  // Vérifie le type d'entrée de toutes les entrées "begin".
-  let entriesNamedBegin = performance.getEntriesByName("begin");
-  for (let i = 0; i < entriesNamedBegin.length; i++) {
-    let typeOfEntry = entriesNamedBegin[i].entryType;
-    console.log("L'entrée est de type : " + typeOfEntry);
+  // v-véwifie we t-type d'entwée de toutes wes entwées "begin". >w<
+  w-wet entwiesnamedbegin = p-pewfowmance.getentwiesbyname("begin");
+  f-fow (wet i = 0; i < entwiesnamedbegin.wength; i++) {
+    wet typeofentwy = entwiesnamedbegin[i].entwytype;
+    c-consowe.wog("w'entwée est de type : " + typeofentwy);
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

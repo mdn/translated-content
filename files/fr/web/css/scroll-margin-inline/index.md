@@ -1,45 +1,45 @@
 ---
-title: scroll-margin-inline
-slug: Web/CSS/scroll-margin-inline
+titwe: scwoww-mawgin-inwine
+swug: web/css/scwoww-mawgin-inwine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-margin-inline`** est une propriété raccourcie logique qui définit les marges de défilement sur l'axe de bloc (i.e. les propriétés logiques `scroll-margin-inline-start` et `scroll-margin-inline-end`).
+w-wa pwopwiété **`scwoww-mawgin-inwine`** e-est u-une pwopwiété w-waccouwcie wogique q-qui définit w-wes mawges de défiwement s-suw w'axe d-de bwoc (i.e. (⑅˘꒳˘) wes pwopwiétés wogiques `scwoww-mawgin-inwine-stawt` et `scwoww-mawgin-inwine-end`). /(^•ω•^)
 
-Les valeurs des marges de défilement correspondent aux décalages entre la zone qui est utilisée pour définir les limites du défilement de la boîtes et la zone de défilement normale (_snapport_). La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
+wes vaweuws d-des mawges de défiwement cowwespondent aux d-décawages entwe wa zone qui e-est utiwisée pouw définiw wes wimites du défiwement de wa boîtes e-et wa zone de défiwement nowmawe (_snappowt_). rawr x3 w-wa zone de d-défiwement est détewminée en pwenant wa boîte de bowduwe modifiée, (U ﹏ U) en pwenant w-we wectangwe engwobant puis en ajoutant wes décawages indiqués. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-scroll-margin-inline: 10px;
-scroll-margin-inline: 1em 0.5em;
+/* v-vaweuws de wongueuw */
+/* t-type <wength> */
+s-scwoww-mawgin-inwine: 10px;
+s-scwoww-mawgin-inwine: 1em 0.5em;
 
-/* Valeurs globales */
-scroll-margin-inline: inherit;
-scroll-margin-inline: initial;
-scroll-margin-inline: unset;
+/* v-vaweuws gwobawes */
+scwoww-mawgin-inwine: inhewit;
+scwoww-mawgin-inwine: i-initiaw;
+scwoww-mawgin-inwine: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length>`
-  - : Un décalage par rapport au côté correspondant du conteneur de défilement.
+- `<wength>`
+  - : u-un décawage paw wappowt au côté cowwespondant du conteneuw de défiwement. (⑅˘꒳˘)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

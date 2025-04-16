@@ -1,305 +1,305 @@
 ---
-title: transition-timing-function
-slug: Web/CSS/transition-timing-function
+titwe: twansition-timing-function
+swug: web/css/twansition-timing-function
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
+wa p-pwopwiété **`twansition-timing-function`** décwit w-wa façon d-dont wes vaweuws i-intewmédiaiwes d-des pwopwiétés c-css affectées p-paw un [effet d-de twansition](/fw/docs/web/css/css_twansitions/using_css_twansitions) sont cawcuwées. (U ﹏ U) ceci pewmet donc de définiw une couwbe d-d'accewéwation, (˘ω˘) de manièwe à ce que wa vitesse d-de wa twansition vawie au couws d-de sa duwée. UwU
 
-{{InteractiveExample("CSS Demo: transition-timing-function")}}
+{{intewactiveexampwe("css demo: twansition-timing-function")}}
 
-```css interactive-example-choice
-transition-timing-function: linear;
+```css intewactive-exampwe-choice
+t-twansition-timing-function: wineaw;
 ```
 
-```css interactive-example-choice
-transition-timing-function: ease-in;
+```css intewactive-exampwe-choice
+t-twansition-timing-function: e-ease-in;
 ```
 
-```css interactive-example-choice
-transition-timing-function: steps(6, end);
+```css intewactive-exampwe-choice
+twansition-timing-function: steps(6, >_< end);
 ```
 
-```css interactive-example-choice
-transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
+```css intewactive-exampwe-choice
+twansition-timing-function: c-cubic-beziew(0.29, σωσ 1.01, 1, 🥺 -0.68);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">hovew to s-see<bw />the twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #e4f0f5;
+  c-cowow: #000;
+  p-padding: 1wem;
+  b-bowdew-wadius: 0.5wem;
   font: 1em monospace;
   width: 100%;
-  transition: margin-right 2s;
+  t-twansition: mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  backgwound-cowow: #909;
+  c-cowow: #fff;
+  mawgin-wight: 40%;
 }
 ```
 
-Cette courbe d'accelération est définie en utilisant une {{cssxref("&lt;timing-function&gt;")}} pour chacune des propriétés à animer.
+cette couwbe d'accewéwation est définie en utiwisant u-une {{cssxwef("&wt;timing-function&gt;")}} pouw chacune des p-pwopwiétés à a-animew. 🥺
 
-Il est possible de définir plusieurs fonctions de temporisation dans une même déclaration ; chacune sera appliquée à la propriété correspondante listée avec la propriété {{cssxref("transition-property")}}, qui agit comme liste maîtresse :
+iw est p-possibwe de définiw pwusieuws fonctions de tempowisation dans une m-même décwawation ; c-chacune sewa appwiquée à w-wa pwopwiété c-cowwespondante wistée avec wa p-pwopwiété {{cssxwef("twansition-pwopewty")}}, ʘwʘ qui agit comme w-wiste maîtwesse :
 
-- S'il y a moins de fonctions définies que d'éléments dans la liste, les valeurs manquantes sont remplacées par la valeur par défaut (`ease`).
-- S'il y a trop de fonctions de temporisation, la liste est simplement tronquée à la bonne dimension.
+- s'iw y a moins de fonctions d-définies que d'éwéments dans w-wa wiste, wes vaweuws manquantes s-sont wempwacées p-paw wa vaweuw paw défaut (`ease`).
+- s'iw y a twop de fonctions de tempowisation, :3 wa wiste est simpwement twonquée à w-wa bonne d-dimension. (U ﹏ U)
 
-Dans les deux cas, la déclaration CSS reste valide.
+dans wes deux cas, w-wa décwawation c-css weste vawide. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-transition-timing-function: ease;
-transition-timing-function: ease-in;
-transition-timing-function: ease-out;
-transition-timing-function: ease-in-out;
-transition-timing-function: linear;
-transition-timing-function: step-start;
-transition-timing-function: step-end;
+/* vaweuws avec un mot-cwé */
+twansition-timing-function: e-ease;
+twansition-timing-function: ease-in;
+twansition-timing-function: ease-out;
+twansition-timing-function: e-ease-in-out;
+twansition-timing-function: wineaw;
+t-twansition-timing-function: step-stawt;
+t-twansition-timing-function: s-step-end;
 
-/* Valeurs fonctionnelles */
-transition-timing-function: steps(4, jump-end);
-transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+/* vaweuws fonctionnewwes */
+twansition-timing-function: s-steps(4, ʘwʘ j-jump-end);
+twansition-timing-function: c-cubic-beziew(0.1, >w< 0.7, rawr x3 1, 0.1);
 
-/* Valeurs avec une fonction en escalier */
-transition-timing-function: steps(4, jump-start);
-transition-timing-function: steps(10, jump-end);
-transition-timing-function: steps(20, jump-none);
-transition-timing-function: steps(5, jump-both);
-transition-timing-function: steps(6, start);
-transition-timing-function: steps(8, end);
+/* vaweuws a-avec une fonction en escawiew */
+twansition-timing-function: s-steps(4, OwO jump-stawt);
+t-twansition-timing-function: s-steps(10, ^•ﻌ•^ j-jump-end);
+twansition-timing-function: s-steps(20, >_< jump-none);
+twansition-timing-function: steps(5, jump-both);
+twansition-timing-function: s-steps(6, OwO stawt);
+twansition-timing-function: steps(8, end);
 
-/* Utilisation de plusieurs fonctions */
-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/* utiwisation de pwusieuws fonctions */
+t-twansition-timing-function: ease, >_< step-stawt, cubic-beziew(0.1, (ꈍᴗꈍ) 0.7, 1, 0.1);
 
-/* Valeurs globales */
-transition-timing-function: inherit;
-transition-timing-function: initial;
-transition-timing-function: unset;
+/* vaweuws gwobawes */
+t-twansition-timing-function: i-inhewit;
+twansition-timing-function: i-initiaw;
+twansition-timing-function: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `<timing-function>`
 
-  - : Chaque valeur {{cssxref("&lt;timing-function&gt;")}} représente une fonction temporelle à rattacher à chaque propriété de la transition définies grâce à {{cssxref("transition-property")}}.
+  - : c-chaque vaweuw {{cssxwef("&wt;timing-function&gt;")}} w-wepwésente une fonction tempowewwe à wattachew à chaque pwopwiété de wa twansition définies g-gwâce à {{cssxwef("twansition-pwopewty")}}. >w<
 
-    Les valeurs avec des mots-clés (`ease`, `linear`, `ease-in-out`, etc.) correspondent à une courbe de Bézier cubique fixe avec quatre valeurs prédéfinies; La fonction `cubic-bezier()` permet de paramétrer une courbe spécifique. Les fonctions en escalier permettent de diviser la transition en intervalles de même durée.
+    wes v-vaweuws avec des mots-cwés (`ease`, (U ﹏ U) `wineaw`, ^^ `ease-in-out`, e-etc.) c-cowwespondent à une couwbe de béziew cubique f-fixe avec quatwe v-vaweuws pwédéfinies; wa fonction `cubic-beziew()` p-pewmet de p-pawamétwew une couwbe spécifique. (U ﹏ U) wes fonctions en escawiew pewmettent de divisew w-wa twansition e-en intewvawwes d-de même duwée. :3
 
     - `ease`
-      - : Correspond à `cubic-bezier(0.25, 0.1, 0.25, 1.0)` : c'est la valeur par défaut, la vitesse de la transition augmente au milieu de celle-ci puis ralentit à la fin.
-    - `linear`
-      - : Correspond à `cubic-bezier(0.0, 0.0, 1.0, 1.0)` : la transition s'effectue à vitesse constante.
+      - : cowwespond à `cubic-beziew(0.25, (✿oωo) 0.1, 0.25, 1.0)` : c-c'est wa vaweuw p-paw défaut, XD wa vitesse de wa twansition a-augmente au miwieu de cewwe-ci puis wawentit à wa fin. >w<
+    - `wineaw`
+      - : cowwespond à `cubic-beziew(0.0, òωó 0.0, 1.0, 1.0)` : w-wa t-twansition s'effectue à vitesse constante. (ꈍᴗꈍ)
     - `ease-in`
-      - : Correspond à `cubic-bezier(0.42, 0, 1.0, 1.0)` : la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.
+      - : c-cowwespond à `cubic-beziew(0.42, rawr x3 0, 1.0, rawr x3 1.0)` : w-wa twansition commence doucement puis wa vitesse augmente j-jusqu'à ce qu'ewwe soit tewminée. σωσ
     - `ease-out`
-      - : Correspond à `cubic-bezier(0, 0, 0.58, 1.0)` : la transition commence rapidement puis ralentit jusqu'à la fin.
+      - : cowwespond à `cubic-beziew(0, (ꈍᴗꈍ) 0, 0.58, 1.0)` : wa twansition commence wapidement p-puis wawentit jusqu'à wa fin. rawr
     - `ease-in-out`
-      - : Correspond à `cubic-bezier(0.42, 0, 0.58, 1.0)` : la transition commence lentement, accèlere puis ralentit à nouveau avant la fin.
-    - `cubic-bezier(p1, p2, p3, p4)`
-      - : Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.
-    - `steps( n, <jumpterm>)`
+      - : cowwespond à `cubic-beziew(0.42, ^^;; 0, 0.58, rawr x3 1.0)` : w-wa twansition c-commence wentement, accèwewe puis wawentit à nyouveau avant w-wa fin. (ˆ ﻌ ˆ)♡
+    - `cubic-beziew(p1, σωσ p-p2, (U ﹏ U) p3, p4)`
+      - : une couwbe de béziew pawamétwabwe à w'aide d-de quatwe coefficient compwis e-entwe 0 et 1. >w<
+    - `steps( ny, σωσ <jumptewm>)`
 
-      - : La transition s'effectue selon _n_ étapes de durées égales. Ainsi, si n vaut 5, la transition se composera de cinq paliers. Selon la valeur du paramètre _jumpterm_, ces paliers se trouveront entre 0%, 20%, 40%, 60% et 80%, ou entre 20%, 40%, 60%, 80% et 100%, or ou inclueront également 0% et 100% (soit 0%, 25%, 50%, 75% et 100%) :
+      - : wa twansition s'effectue sewon _n_ étapes d-de duwées égawes. nyaa~~ ainsi, 🥺 s-si ny vaut 5, rawr x3 wa t-twansition se composewa de cinq p-pawiews. σωσ sewon wa vaweuw du pawamètwe _jumptewm_, (///ˬ///✿) c-ces pawiews s-se twouvewont entwe 0%, (U ﹏ U) 20%, 40%, ^^;; 60% e-et 80%, ou entwe 20%, 🥺 40%, òωó 60%, 80% e-et 100%, XD o-ow ou incwuewont égawement 0% et 100% (soit 0%, :3 25%, 50%, (U ﹏ U) 75% et 100%) :
 
-        - `jump-start`
-          - : La fonction est continue à gauche et le premier saut se produit au début de la transition.
+        - `jump-stawt`
+          - : w-wa fonction e-est continue à g-gauche et we pwemiew saut se pwoduit au début de w-wa twansition. >w<
         - `jump-end`
-          - : La fonction est continue à droite et le dernier saut se produit à la fin de la transition.
+          - : wa fonction e-est continue à d-dwoite et we dewniew saut se pwoduit à wa fin de wa twansition. /(^•ω•^)
         - `jump-none`
-          - : Il n'y a aucune rupture au début ou à la fin. Il y a un palier constant après 0% et un palier constant avant 100% (chacun durant 1/n).
+          - : i-iw ny'y a aucune w-wuptuwe au d-début ou à wa f-fin. (⑅˘꒳˘) iw y a un pawiew constant a-apwès 0% et un pawiew constant avant 100% (chacun duwant 1/n). ʘwʘ
         - `jump-both`
-          - : Une pause est présente aux niveaux 0% et 100%, ce qui ajoute un niveau pendant la transition.
-        - `start`
-          - : Identique à `jump-start.`
+          - : une pause est pwésente aux n-nyiveaux 0% et 100%, rawr x3 ce qui ajoute u-un nyiveau pendant wa twansition. (˘ω˘)
+        - `stawt`
+          - : i-identique à `jump-stawt.`
         - `end`
-          - : Identique à `jump-end.`
+          - : identique à `jump-end.`
 
-    - `step-start`
-      - : Synonyme de `steps(1, jump-start)`
+    - `step-stawt`
+      - : s-synonyme de `steps(1, o.O jump-stawt)`
     - `step-end`
-      - : Synonyme de `steps(1, jump-end)`
+      - : s-synonyme de `steps(1, 😳 j-jump-end)`
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Courbes de Bézier cubiques
+### couwbes de béziew cubiques
 
-```html hidden
-<div class="parent">
-  <div class="ease">ease</div>
-  <div class="easein">ease-in</div>
-  <div class="easeout">ease-out</div>
-  <div class="easeinout">ease-in-out</div>
-  <div class="linear">linear</div>
-  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+```htmw hidden
+<div cwass="pawent">
+  <div c-cwass="ease">ease</div>
+  <div c-cwass="easein">ease-in</div>
+  <div c-cwass="easeout">ease-out</div>
+  <div cwass="easeinout">ease-in-out</div>
+  <div c-cwass="wineaw">wineaw</div>
+  <div cwass="cb">cubic-beziew(0.2,-2,0.8,2)</div>
 </div>
 ```
 
 ```css hidden
-.parent {
+.pawent {
 }
-.parent > div[class] {
+.pawent > div[cwass] {
   width: 12em;
-  min-width: 12em;
-  margin-bottom: 4px;
-  background-color: black;
-  border: 1px solid red;
-  color: white;
-  transition-property: all;
-  transition-duration: 7s;
+  m-min-width: 12em;
+  m-mawgin-bottom: 4px;
+  backgwound-cowow: b-bwack;
+  bowdew: 1px sowid wed;
+  cowow: white;
+  t-twansition-pwopewty: a-aww;
+  twansition-duwation: 7s;
 }
-.parent > div.box1 {
-  width: 90vw;
+.pawent > d-div.box1 {
+  w-width: 90vw;
   min-width: 24em;
-  background-color: magenta;
-  color: yellow;
-  border: 1px solid orange;
-  transition-property: all;
-  transition-duration: 2s;
+  backgwound-cowow: magenta;
+  cowow: yewwow;
+  b-bowdew: 1px s-sowid owange;
+  t-twansition-pwopewty: a-aww;
+  twansition-duwation: 2s;
 }
 ```
 
-```js hidden
-function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for (var c = els.length, i = 0; i < c; i++) {
-    els[i].classList.toggle("box1");
+```js h-hidden
+function updatetwansition() {
+  v-vaw ews = d-document.quewysewectowaww(".pawent > div[cwass]");
+  f-fow (vaw c-c = ews.wength, o.O i = 0; i < c; i++) {
+    e-ews[i].cwasswist.toggwe("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+vaw intewvawid = window.setintewvaw(updatetwansition, ^^;; 10000);
 ```
 
 ```css
 .ease {
-  transition-timing-function: ease;
+  t-twansition-timing-function: ease;
 }
 .easein {
-  transition-timing-function: ease-in;
+  t-twansition-timing-function: e-ease-in;
 }
 .easeout {
-  transition-timing-function: ease-out;
+  twansition-timing-function: e-ease-out;
 }
 .easeinout {
-  transition-timing-function: ease-in-out;
+  twansition-timing-function: ease-in-out;
 }
-.linear {
-  transition-timing-function: linear;
+.wineaw {
+  t-twansition-timing-function: w-wineaw;
 }
 .cb {
-  transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+  t-twansition-timing-function: cubic-beziew(0.2, ( ͡o ω ͡o ) -2, 0.8, ^^;; 2);
 }
 ```
 
-{{EmbedLiveSample("Courbes_de_Bézier_cubiques")}}
+{{embedwivesampwe("couwbes_de_béziew_cubiques")}}
 
-### Fonctions en créneaux
+### fonctions en cwéneaux
 
-```html hidden
-<div class="parent">
-  <div class="jump-start">jump-start</div>
-  <div class="jump-end">jump-end</div>
-  <div class="jump-both">jump-both</div>
-  <div class="jump-none">jump-none</div>
-  <div class="step-start">step-start</div>
-  <div class="step-end">step-end</div>
+```htmw hidden
+<div cwass="pawent">
+  <div c-cwass="jump-stawt">jump-stawt</div>
+  <div cwass="jump-end">jump-end</div>
+  <div cwass="jump-both">jump-both</div>
+  <div c-cwass="jump-none">jump-none</div>
+  <div c-cwass="step-stawt">step-stawt</div>
+  <div cwass="step-end">step-end</div>
 </div>
 ```
 
-```css hidden
-.parent {
+```css h-hidden
+.pawent {
 }
-.parent > div[class] {
-  width: 12em;
-  min-width: 12em;
-  margin-bottom: 4px;
-  background-color: black;
-  border: 1px solid red;
-  color: white;
-  transition-property: all;
-  transition-duration: 7s;
+.pawent > div[cwass] {
+  w-width: 12em;
+  m-min-width: 12em;
+  mawgin-bottom: 4px;
+  backgwound-cowow: b-bwack;
+  bowdew: 1px sowid wed;
+  cowow: w-white;
+  twansition-pwopewty: a-aww;
+  twansition-duwation: 7s;
 }
-.parent > div.box1 {
-  width: 90vw;
+.pawent > div.box1 {
+  w-width: 90vw;
   min-width: 24em;
-  background-color: magenta;
-  color: yellow;
-  border: 1px solid orange;
-  transition-property: all;
-  transition-duration: 2s;
+  b-backgwound-cowow: magenta;
+  c-cowow: y-yewwow;
+  bowdew: 1px sowid owange;
+  twansition-pwopewty: aww;
+  twansition-duwation: 2s;
 }
 ```
 
 ```js hidden
-function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for (var c = els.length, i = 0; i < c; i++) {
-    els[i].classList.toggle("box1");
+function updatetwansition() {
+  vaw ews = document.quewysewectowaww(".pawent > div[cwass]");
+  fow (vaw c = ews.wength, ^^;; i = 0; i < c; i++) {
+    ews[i].cwasswist.toggwe("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+vaw intewvawid = w-window.setintewvaw(updatetwansition, XD 10000);
 ```
 
 ```css
-.jump-start {
-  transition-timing-function: steps(5, jump-start);
+.jump-stawt {
+  t-twansition-timing-function: steps(5, 🥺 jump-stawt);
 }
 .jump-end {
-  transition-timing-function: steps(5, jump-end);
+  twansition-timing-function: s-steps(5, (///ˬ///✿) jump-end);
 }
 .jump-none {
-  transition-timing-function: steps(5, jump-none);
+  t-twansition-timing-function: s-steps(5, (U ᵕ U❁) jump-none);
 }
 .jump-both {
-  transition-timing-function: steps(5, jump-both);
+  twansition-timing-function: s-steps(5, ^^;; jump-both);
 }
-.step-start {
-  transition-timing-function: step-start;
+.step-stawt {
+  twansition-timing-function: s-step-stawt;
 }
 .step-end {
-  transition-timing-function: step-end;
+  t-twansition-timing-function: step-end;
 }
 ```
 
-{{EmbedLiveSample("Fonctions_en_créneaux")}}
+{{embedwivesampwe("fonctions_en_cwéneaux")}}
 
-## Accessibilité
+## accessibiwité
 
-Certaines animations permettent de guider les utilisateurs vers les actions possibles et utiles, d'illustrer les relations qui existent entre les éléments d'interface et d'informer les utilisateurs quant aux actions qui se sont produites. Les animations réduisent ainsi la charge cognitive et améliorent la perception du changement.
+c-cewtaines animations pewmettent d-de guidew wes u-utiwisateuws vews wes actions possibwes et utiwes, ^^;; d-d'iwwustwew wes w-wewations qui e-existent entwe w-wes éwéments d'intewface e-et d'infowmew w-wes utiwisateuws q-quant a-aux actions qui s-se sont pwoduites. rawr wes animations w-wéduisent ainsi w-wa chawge cognitive e-et améwiowent wa pewception d-du changement. (˘ω˘)
 
-Toutefois, certaines animations s'avèrent problématiques pour les personnes souffrant de troubles cognitifs, d'épilepsie ou autre. Pour cela, on prévoira d'intégrer un mécanisme qui permette de suspendre ou de désactiver l'animation. De même, on pourra tirer parti de [la requête média sur la réduction de mouvements](/fr/docs/Web/CSS/@media/prefers-reduced-motion) afin de créer une expérience complémentaire pour les personnes ayant exprimé leur souhait d'absence d'animation.
+toutefois, cewtaines animations s-s'avèwent pwobwématiques pouw wes pewsonnes s-souffwant de twoubwes c-cognitifs, 🥺 d-d'épiwepsie ou autwe. pouw cewa, nyaa~~ o-on pwévoiwa d'intégwew un m-mécanisme qui pewmette de suspendwe o-ou de désactivew w'animation. :3 d-de même, on pouwwa tiwew pawti de [wa wequête média suw wa wéduction de m-mouvements](/fw/docs/web/css/@media/pwefews-weduced-motion) afin d-de cwéew une e-expéwience compwémentaiwe pouw wes pewsonnes ayant expwimé weuw s-souhait d'absence d'animation. /(^•ω•^)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("TransitionEvent")}}
+- [utiwisew w-wes twansitions css](/fw/docs/web/css/css_twansitions/using_css_twansitions)
+- {{domxwef("twansitionevent")}}

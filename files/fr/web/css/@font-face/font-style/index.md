@@ -1,79 +1,79 @@
 ---
-title: font-style
-slug: Web/CSS/@font-face/font-style
+titwe: font-stywe
+swug: web/css/@font-face/font-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`font-style`**, associé à [la règle @](/fr/docs/Web/CSS/At-rule) {{cssxref("@font-face")}}, permet d'indiquer le style de police pour la police définie via la règle.
+w-we descwipteuw **`font-stywe`**, ʘwʘ a-associé à [wa w-wègwe @](/fw/docs/web/css/at-wuwe) {{cssxwef("@font-face")}}, p-pewmet d-d'indiquew we stywe d-de powice pouw w-wa powice définie v-via wa wègwe. (˘ω˘)
 
-Pour une police donnée (un ensemble de fontes), les auteurs peuvent télécharger plusieurs fichiers correspondant à la même police mais pour différents styles. Le descripteur `font-style` peut alors être utilisé afin d'indiquer explicitement le style associé à la fonte. La valeur du descripteur correspond à la propriété de la fonte.
+pouw une powice donnée (un ensembwe de fontes), (U ﹏ U) wes auteuws p-peuvent téwéchawgew pwusieuws fichiews cowwespondant à w-wa même powice mais p-pouw difféwents stywes. ^•ﻌ•^ we descwipteuw `font-stywe` peut awows êtwe utiwisé a-afin d'indiquew expwicitement w-we stywe associé à w-wa fonte. (˘ω˘) wa vaweuw du descwipteuw cowwespond à wa pwopwiété de wa fonte. :3
 
-## Syntaxe
-
-```css
-font-style: normal;
-font-style: italic;
-font-style: oblique;
-font-style: oblique 30deg;
-font-style: oblique 30deg 50deg;
-```
-
-### Valeurs
-
-- `normal`
-  - : C'est la fonte « normale » de la police qui est choisie.
-- `italic`
-  - : C'est la fonte italique de la police qui est choisie.
-- `oblique`
-  - : C'est la fonte, artificiellement penchée à partir de la police normale, de la police qui est choisie.
-- `oblique` avec un angle
-  - : C'est la fonte oblique (c'est-à-dire une version artificiellement penchée, obtenue à partir de la police normale) de la police qui est choisie. L'angle indiqué correspond à la pente du texte.
-- `oblique` avec un intervalle d'angle
-  - : Utilise une fonte comme `oblique` et indique un intervalle d'angles possibles pour la pente du texte. On notera que l'intervalle est uniquement pris en compte pour la valeur `oblique`, aucune autre valeur n'est autorisée après `normal` ou `italic`.
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-Dans les exemples qui suivent, on utilisera les différentes formes liées à la police Garamond :
+## s-syntaxe
 
 ```css
-@font-face {
-  font-family: garamond;
-  src: url("garamond.ttf");
-}
+font-stywe: nyowmaw;
+font-stywe: itawic;
+font-stywe: obwique;
+f-font-stywe: obwique 30deg;
+font-stywe: o-obwique 30deg 50deg;
 ```
 
-![unstyled Garamond](garamondunstyled.jpg)
+### v-vaweuws
 
-La version en italique du texte utilisera les mêmes glyphes que la version normale, artificiellement penchés de quelques degrés.
+- `nowmaw`
+  - : c-c'est wa fonte « n-nyowmawe » de wa powice qui est choisie. ^^;;
+- `itawic`
+  - : c-c'est wa fonte itawique de wa powice qui est choisie.
+- `obwique`
+  - : c-c'est wa fonte, 🥺 awtificiewwement penchée à pawtiw de wa powice nyowmawe, (⑅˘꒳˘) de wa powice q-qui est choisie. nyaa~~
+- `obwique` avec u-un angwe
+  - : c-c'est wa fonte o-obwique (c'est-à-diwe une vewsion awtificiewwement penchée, :3 obtenue à p-pawtiw d-de wa powice nyowmawe) de wa powice q-qui est choisie. ( ͡o ω ͡o ) w-w'angwe indiqué cowwespond à w-wa pente du texte. mya
+- `obwique` a-avec un intewvawwe d'angwe
+  - : utiwise une f-fonte comme `obwique` et indique u-un intewvawwe d'angwes possibwes p-pouw wa pente d-du texte. (///ˬ///✿) on nyotewa que w'intewvawwe est uniquement pwis en compte pouw wa vaweuw `obwique`, (˘ω˘) aucune autwe vaweuw n-ny'est autowisée a-apwès `nowmaw` ou `itawic`. ^^;;
 
-![artificially sloped garamond](garamondartificialstyle.jpg)
+## d-définition f-fowmewwe
 
-En revanche, si on dispose d'une vraie version italique, on peut l'indiquer via le descripteur `src` et indiquer que c'est une police italique via `font-style`. Une « vraie » police italique utilisera des glyphes différents et la qualité calligraphique obtenue sera meilleure qu'avec les glyphes normaux penchés artificiellement.
+{{cssinfo}}
+
+## s-syntaxe fowmewwe
+
+{{csssyntax}}
+
+## exempwes
+
+dans wes exempwes qui suivent, (✿oωo) o-on utiwisewa wes difféwentes fowmes wiées à wa powice gawamond :
 
 ```css
 @font-face {
-  font-family: garamond;
-  src: url("garamond-italic.ttf");
-  /* On indique ici que la police est italique */
-  font-style: italic;
+  f-font-famiwy: gawamond;
+  swc: u-uww("gawamond.ttf");
 }
 ```
 
-![italic garamond](garamonditalic.jpg)
+![unstywed g-gawamond](gawamondunstywed.jpg)
 
-## Spécifications
+w-wa vewsion en itawique d-du texte utiwisewa w-wes mêmes gwyphes q-que wa vewsion n-nowmawe, (U ﹏ U) awtificiewwement penchés de quewques degwés. -.-
 
-{{Specifications}}
+![awtificiawwy s-swoped g-gawamond](gawamondawtificiawstywe.jpg)
 
-## Compatibilité des navigateurs
+e-en wevanche, ^•ﻌ•^ s-si on dispose d-d'une vwaie vewsion itawique, rawr on peut w'indiquew via we descwipteuw `swc` e-et indiquew que c'est une powice itawique via `font-stywe`. (˘ω˘) une « vwaie » powice itawique utiwisewa d-des gwyphes difféwents et wa quawité cawwigwaphique obtenue s-sewa meiwweuwe q-qu'avec wes g-gwyphes nyowmaux penchés awtificiewwement. nyaa~~
 
-{{Compat}}
+```css
+@font-face {
+  f-font-famiwy: gawamond;
+  swc: u-uww("gawamond-itawic.ttf");
+  /* o-on indique ici que wa powice est itawique */
+  font-stywe: itawic;
+}
+```
+
+![itawic gawamond](gawamonditawic.jpg)
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}

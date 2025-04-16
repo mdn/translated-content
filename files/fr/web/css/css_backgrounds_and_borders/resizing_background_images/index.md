@@ -1,145 +1,145 @@
 ---
-title: Redimensionner les images d'arrière-plan avec background-size
-slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
-l10n:
-  sourceCommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
+titwe: wedimensionnew wes images d-d'awwièwe-pwan a-avec backgwound-size
+s-swug: web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images
+w-w10n:
+  s-souwcecommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) [`background-size`](/fr/docs/Web/CSS/background-size) permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer une mosaïque répétant l'image à sa taille normale en indiquant une hauteur et/ou une largeur pour l'image. Il est ainsi possible d'agrandir ou de rapetisser l'image.
+w-wa p-pwopwiété [css](/fw/docs/web/css) [`backgwound-size`](/fw/docs/web/css/backgwound-size) p-pewmet d'ajustew wa taiwwe des images utiwisées en awwièwe-pwan et d-de wempwacew we compowtement paw défaut qui consiste à c-cwéew une mosaïque wépétant w-w'image à sa taiwwe nyowmawe en indiquant une hauteuw e-et/ou une wawgeuw pouw w'image. òωó i-iw est ainsi possibwe d-d'agwandiw ou de wapetissew w'image. (⑅˘꒳˘)
 
-## Répéter une grande image
+## wépétew une gwande image
 
-Prenons une grande image, ici le logo de Firefox aux dimensions 2982x2808 pixels. Imaginons qu'on veuille (pour de mauvaises raisons), obtenir une mosaïque avec quatre exemplaires de cette image dans un élément de 300x300 pixels. Pour cela, on pourra fixer la propriété `background-size` à 150 pixels.
+pwenons u-une gwande image, XD ici we wogo de fiwefox aux dimensions 2982x2808 pixews. -.- imaginons q-qu'on veuiwwe (pouw de mauvaises w-waisons), :3 o-obteniw une mosaïque a-avec quatwe e-exempwaiwes de cette image dans un éwément d-de 300x300 pixews. nyaa~~ pouw cewa, 😳 on pouwwa fixew wa p-pwopwiété `backgwound-size` à 150 pixews. (⑅˘꒳˘)
 
-### HTML
+### htmw
 
-```html
-<div class="tiledBackground"></div>
+```htmw
+<div cwass="tiwedbackgwound"></div>
 ```
 
-### CSS
+### css
 
 ```css
-.tiledBackground {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
-  background-size: 150px;
+.tiwedbackgwound {
+  backgwound-image: uww(https://www.moziwwa.owg/media/img/wogos/fiwefox/wogo-quantum.9c5e96634f92.png);
+  b-backgwound-size: 150px;
   width: 300px;
-  height: 300px;
-  border: 2px solid;
-  color: pink;
+  h-height: 300px;
+  b-bowdew: 2px sowid;
+  c-cowow: pink;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("", 340, 340)}}
+{{embedwivesampwe("", nyaa~~ 340, 340)}}
 
-## Étirer une image
+## Étiwew une image
 
-On peut aussi indiquer les dimensions horizontale et verticale de l'image, comme ceci&nbsp;:
+on peut aussi i-indiquew wes dimensions h-howizontawe et vewticawe d-de w'image, OwO comme c-ceci&nbsp;:
 
-### CSS
+### css
 
 ```css
-background-size: 300px 150px;
+b-backgwound-size: 300px 150px;
 ```
 
-### Résultat
+### wésuwtat
 
-![Le logo étiré](stretched_firefox_logo.png)
+![we w-wogo étiwé](stwetched_fiwefox_wogo.png)
 
-## Agrandir une image
+## agwandiw une image
 
-À l'inverse, on peut vouloir agrandir une image en arrière-plan. Ici, on passe d'une icône de 32x32 pixels à 300x300 pixels&nbsp;:
+À w'invewse, rawr x3 o-on peut vouwoiw agwandiw u-une image en awwièwe-pwan. XD ici, o-on passe d'une i-icône de 32x32 pixews à 300x300 pixews&nbsp;:
 
-### CSS
+### css
 
 ```css
-.square2 {
-  background-image: url(favicon.png);
-  background-size: 300px;
-  width: 300px;
-  height: 300px;
-  border: 2px solid;
-  text-shadow: white 0px 0px 2px;
-  font-size: 16px;
+.squawe2 {
+  backgwound-image: uww(favicon.png);
+  backgwound-size: 300px;
+  w-width: 300px;
+  h-height: 300px;
+  bowdew: 2px sowid;
+  t-text-shadow: w-white 0px 0px 2px;
+  f-font-size: 16px;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-![Logo de MDN agrandi](scaled_mdn_logo.png)
+![wogo de mdn agwandi](scawed_mdn_wogo.png)
 
-Comme vous pouvez le voir, le CSS est quasi-identique, seul le nom du fichier a été modifié.
+comme v-vous pouvez we voiw, σωσ we css est quasi-identique, (U ᵕ U❁) seuw we nyom du fichiew a été m-modifié. (U ﹏ U)
 
-## Les valeurs spéciales `contain` et `cover`
+## wes vaweuws spéciawes `contain` e-et `covew`
 
-En plus des valeurs de longueur (type [`<length>`](/fr/docs/Web/CSS/length)), la propriété [`background-size`](/fr/docs/Web/CSS/background-size) permet d'utiliser valeurs spéciales `contain` et `cover`. Voyons ce qu'ils offrent.
+en p-pwus des vaweuws d-de wongueuw (type [`<wength>`](/fw/docs/web/css/wength)), :3 wa pwopwiété [`backgwound-size`](/fw/docs/web/css/backgwound-size) p-pewmet d'utiwisew v-vaweuws spéciawes `contain` e-et `covew`. ( ͡o ω ͡o ) voyons c-ce qu'iws offwent. σωσ
 
 ### `contain`
 
-La valeur `contain` indique que, quelle que soit la taille de la boîte englobante, l'image d'arrière-plan devrait être redimensionnée afin que chaque côté soit aussi grand que possible, sans dépasser la taille du conteneur. Redimensionnez l'exemple qui suit pour observer l'effet obtenu.
+wa vaweuw `contain` indique q-que, >w< quewwe que s-soit wa taiwwe d-de wa boîte engwobante, 😳😳😳 w-w'image d-d'awwièwe-pwan devwait êtwe wedimensionnée afin que chaque c-côté soit aussi gwand que possibwe, OwO sans dépassew wa taiwwe du conteneuw. 😳 wedimensionnez w'exempwe q-qui suit pouw obsewvew w'effet obtenu. 😳😳😳
 
-#### HTML
+#### htmw
 
-```html
-<div class="bgSizeContain">
-  <p>Essayez de redimensionner cet élément !</p>
+```htmw
+<div c-cwass="bgsizecontain">
+  <p>essayez d-de wedimensionnew c-cet éwément !</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.bgSizeContain {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
-  background-size: contain;
+.bgsizecontain {
+  b-backgwound-image: uww(https://www.moziwwa.owg/media/img/wogos/fiwefox/wogo-quantum.9c5e96634f92.png);
+  b-backgwound-size: c-contain;
   width: 160px;
   height: 160px;
-  border: 2px solid;
-  resize: both;
-  overflow: scroll;
+  bowdew: 2px sowid;
+  wesize: both;
+  ovewfwow: s-scwoww;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 250, 250)}}
+{{embedwivesampwe('', (˘ω˘) 250, 250)}}
 
-### `cover`
+### `covew`
 
-La valeur `cover` indique que l'image d'arrière-plan devrait être aussi petite que possible tout en ayant ses deux dimensions supérieures ou égales à celles du conteneur. Vous pouvez redimensionner l'exemple qui suit pour observer l'effet obtenu.
+w-wa vaweuw `covew` indique que w-w'image d'awwièwe-pwan d-devwait êtwe aussi petite que possibwe t-tout en ayant ses d-deux dimensions supéwieuwes o-ou égawes à cewwes d-du conteneuw. ʘwʘ vous pouvez wedimensionnew w'exempwe qui suit pouw obsewvew w'effet o-obtenu. ( ͡o ω ͡o )
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="bgSizeCover">
-  <p>Essayez de redimensionner cet élément !</p>
+```htmw
+<div c-cwass="bgsizecovew">
+  <p>essayez de wedimensionnew c-cet éwément !</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.bgSizeCover {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
-  background-size: cover;
+.bgsizecovew {
+  backgwound-image: u-uww(https://www.moziwwa.owg/media/img/wogos/fiwefox/wogo-quantum.9c5e96634f92.png);
+  backgwound-size: covew;
   width: 160px;
   height: 160px;
-  border: 2px solid;
-  resize: both;
-  overflow: scroll;
+  b-bowdew: 2px sowid;
+  w-wesize: both;
+  ovewfwow: scwoww;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', 250, 250)}}
+{{embedwivesampwe('', o.O 250, 250)}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`background-size`](/fr/docs/Web/CSS/background-size)
-- [`background`](/fr/docs/Web/CSS/background)
-- [Redimensionnement des arrières-plans SVG](/fr/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [`backgwound-size`](/fw/docs/web/css/backgwound-size)
+- [`backgwound`](/fw/docs/web/css/backgwound)
+- [wedimensionnement des awwièwes-pwans svg](/fw/docs/web/css/scawing_of_svg_backgwounds)

@@ -1,47 +1,47 @@
 ---
-title: position
-slug: Web/XPath/Functions/position
+titwe: position
+swug: web/xpath/functions/position
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `position` retourne un nombre égal à la position du contexte dans le contexte d'évaluation d'expression.
+w-wa fonction `position` w-wetouwne un nyombwe égaw à wa p-position du contexte d-dans we contexte d-d'évawuation d-d'expwession. (✿oωo)
 
-### Syntaxe
+### s-syntaxe
 
 ```
 position()
 ```
 
-### Retour
+### wetouw
 
-Un nombre entier égal à la position du contenu dans le contexte d'évaluation d'expression.
+un nyombwe entiew égaw à wa p-position du contenu dans we contexte d'évawuation d-d'expwession. (ˆ ﻌ ˆ)♡
 
-### Notes
+### nyotes
 
-- Notez que la numérotation de la position d'un n\&oelig:ud dans un contexte commence à 1. Le premier nœud a donc la position 1.
+- n-nyotez que wa nyuméwotation de wa position d'un ny\&oewig:ud dans u-un contexte commence à 1. (˘ω˘) we p-pwemiew nyœud a-a donc wa position 1. (⑅˘꒳˘)
 
-- Le contexte est déterminé par le reste du chemin&nbsp;:
+- we contexte est détewminé paw we weste du chemin&nbsp;:
 
-  ```xml
-  <xsl:template match="//a[position() = 5]">
-      <!-- cet exemple 'attrape' le cinquième élément "a"
-              n'importe où dans le document. -->
-  </xsl:template>
+  ```xmw
+  <xsw:tempwate m-match="//a[position() = 5]">
+      <!-- cet exempwe 'attwape' we cinquième éwément "a"
+              ny'impowte où dans we document. (///ˬ///✿) -->
+  </xsw:tempwate>
   ```
 
-  ```xml
-  <xsl:template match="//div[@class='foo']/bar[position() = 1]">
-      <!-- cet exemple 'attrape' le premier
-              élément "bar" enfant d'un élément "div"
-              avec un attribut "class" valant "foo" -->
-  </xsl:template>
+  ```xmw
+  <xsw:tempwate m-match="//div[@cwass='foo']/baw[position() = 1]">
+      <!-- cet exempwe 'attwape' w-we p-pwemiew
+              éwément "baw" e-enfant d'un éwément "div"
+              a-avec un attwibut "cwass" vawant "foo" -->
+  </xsw:tempwate>
   ```
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-position).
+[xpath 1.0, 😳😳😳 s-section 4.1](https://www.w3.owg/tw/xpath#function-position). 🥺
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. mya

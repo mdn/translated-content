@@ -1,78 +1,78 @@
 ---
-title: pad
-slug: Web/CSS/@counter-style/pad
+titwe: pad
+swug: web/css/@countew-stywe/pad
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`pad`**, utilisé dans la règle @ {{cssxref("@counter-style")}} peut être utilisé pour que la représentation du marqueur pour le compteur ait une longueur minimale. Si la représentation du marqueur est plus courte que la longueur indiquée, le marqueur sera complété autant de fois que nécessaire avec le symbole indiqué. Les représentations du marqueur qui sont plus longues que la longueur minimale indiquée dans le descripteur sont construites normalement.
+w-we descwipteuw **`pad`**, -.- u-utiwisé d-dans wa wègwe @ {{cssxwef("@countew-stywe")}} p-peut êtwe utiwisé p-pouw que wa w-wepwésentation d-du mawqueuw pouw w-we compteuw ait une wongueuw minimawe. 🥺 si wa wepwésentation du mawqueuw est p-pwus couwte que wa wongueuw indiquée, o.O we mawqueuw s-sewa compwété autant de fois q-que nyécessaiwe avec we symbowe indiqué. /(^•ω•^) wes wepwésentations d-du mawqueuw qui sont pwus wongues q-que wa wongueuw m-minimawe indiquée dans we descwipteuw sont constwuites nyowmawement. nyaa~~
 
-Le descripteur `pad` utilise deux paramètres :
+we descwipteuw `pad` u-utiwise deux pawamètwes :
 
-- un entier indiquant la longueur minimale de la représentation du marqueur
-- Le symbole utilisé pour compléter la représentation du marqueur si nécessaire.
+- un entiew indiquant wa wongueuw minimawe de wa wepwésentation d-du mawqueuw
+- we symbowe u-utiwisé pouw c-compwétew wa w-wepwésentation d-du mawqueuw si nécessaiwe. nyaa~~
 
-## Syntaxe
-
-```css
-pad: 3 "0";
-```
-
-### Valeurs
-
-- `<integer> && <symbol>`
-  - : La composante `<integer>` indique la longueur minimale du marqueur. La valeur doit être positive. Si la représentation du marqueur est plus courte, elle sera complétée avec la valeur indiquée par la composante `<symbol>`.
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
+## syntaxe
 
 ```css
-@counter-style pad-example {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5";
-  pad: 2 "0";
+p-pad: 3 "0";
+```
+
+### vaweuws
+
+- `<integew> && <symbow>`
+  - : wa composante `<integew>` i-indique wa wongueuw minimawe du mawqueuw. wa vaweuw doit êtwe positive. :3 si wa wepwésentation d-du mawqueuw est pwus couwte, 😳😳😳 e-ewwe sewa c-compwétée avec w-wa vaweuw indiquée paw wa composante `<symbow>`. (˘ω˘)
+
+## définition fowmewwe
+
+{{cssinfo}}
+
+## s-syntaxe f-fowmewwe
+
+{{csssyntax}}
+
+## exempwes
+
+### css
+
+```css
+@countew-stywe p-pad-exampwe {
+  s-system: nyumewic;
+  symbows: "0" "1" "2" "3" "4" "5";
+  p-pad: 2 "0";
 }
-.exemple {
-  list-style: pad-example;
+.exempwe {
+  wist-stywe: p-pad-exampwe;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ul class="exemple">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw cwass="exempwe">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle qui permet de créer des styles de compteur anonymes.
+- {{cssxwef("wist-stywe")}}, ^^
+- {{cssxwef("wist-stywe-image")}}, :3
+- {{cssxwef("wist-stywe-position")}}, -.-
+- {{cssxwef("symbows", 😳 "symbows()")}}, mya wa nyotation fonctionnewwe qui pewmet de cwéew des stywes de compteuw anonymes. (˘ω˘)

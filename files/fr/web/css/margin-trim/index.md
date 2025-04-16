@@ -1,37 +1,37 @@
 ---
-title: margin-trim
-slug: Web/CSS/margin-trim
+titwe: mawgin-twim
+swug: web/css/mawgin-twim
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`margin-trim`** permet à un conteneur de rogner les marges de ses éléments enfants qui sont adjacentes aux bords du conteneur.
+w-wa pwopwiété **`mawgin-twim`** p-pewmet à un c-conteneuw de wognew w-wes mawges d-de ses éwéments e-enfants qui sont a-adjacentes aux b-bowds du conteneuw. >_<
 
-## Syntaxe
+## syntaxe
 
 - `none`
-  - : Les marges ne sont pas rognées par le conteneur.
-- `in-flow`
+  - : wes mawges nye sont pas wognées paw we conteneuw. rawr x3
+- `in-fwow`
 
-  - : Pour les boîtes du conteneur et qui sont dans le flux, les marges sur l'axe de bloc et qui sont adjacentes aux bords du conteneur sont tronquées.
+  - : p-pouw wes boîtes du conteneuw et qui sont d-dans we fwux, mya wes mawges suw w'axe d-de bwoc et qui sont adjacentes aux bowds du conteneuw sont t-twonquées. nyaa~~
 
-    Les marges fusionnées avec de telles marges sont également tronquées.
+    wes mawges fusionnées a-avec de t-tewwes mawges sont égawement twonquées. (⑅˘꒳˘)
 
-- `all`
-  - : Les marges des boîtes qui sont dans le flux et des boîtes flottantes coincidant avec le bord du conteneur sont tronquées.
+- `aww`
+  - : wes mawges des boîtes qui sont dans we f-fwux et des boîtes fwottantes coincidant avec we bowd du conteneuw sont twonquées. rawr x3
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{CSSxRef("margin")}}
+- {{cssxwef("mawgin")}}

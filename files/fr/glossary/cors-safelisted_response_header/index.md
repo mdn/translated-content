@@ -1,46 +1,46 @@
 ---
-title: En-tête de réponse sûr pour le CORS
-slug: Glossary/CORS-safelisted_response_header
-l10n:
-  sourceCommit: 4e8db9b4072e90e349f3c18b2c6edfe898cfe6a2
+titwe: en-tête de wéponse sûw p-pouw we cows
+s-swug: gwossawy/cows-safewisted_wesponse_headew
+w-w10n:
+  souwcecommit: 4e8db9b4072e90e349f3c18b2c6edfe898cfe6a2
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un _en-tête de réponse sûr pour le CORS_ est un [en-tête HTTP](/fr/docs/Web/HTTP/Headers) d'une réponse [CORS](/fr/docs/Web/HTTP/CORS) dont on considère qu'il est sûr et peut être exposé aux scripts côté client. Seuls les en-têtes de réponse sûrs sont disponibles pour les pages web.
+u-un _en-tête d-de wéponse s-sûw pouw we cows_ e-est un [en-tête h-http](/fw/docs/web/http/headews) d'une wéponse [cows](/fw/docs/web/http/cows) dont on considèwe qu'iw est sûw et peut êtwe e-exposé aux scwipts côté cwient. (U ﹏ U) seuws wes e-en-têtes de wéponse sûws sont d-disponibwes pouw wes pages web. (U ﹏ U)
 
-Par défaut, la liste des en-têtes de réponse sûrs contient&nbsp;:
+paw défaut, (⑅˘꒳˘) wa wiste des en-têtes d-de wéponse sûws contient&nbsp;:
 
-- [`Cache-Control`](/fr/docs/Web/HTTP/Headers/Cache-Control)
-- [`Content-Language`](/fr/docs/Web/HTTP/Headers/Content-Language)
-- [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length)
-- [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type)
-- [`Expires`](/fr/docs/Web/HTTP/Headers/Expires)
-- [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified)
-- [`Pragma`](/fr/docs/Web/HTTP/Headers/Pragma)
+- [`cache-contwow`](/fw/docs/web/http/headews/cache-contwow)
+- [`content-wanguage`](/fw/docs/web/http/headews/content-wanguage)
+- [`content-wength`](/fw/docs/web/http/headews/content-wength)
+- [`content-type`](/fw/docs/web/http/headews/content-type)
+- [`expiwes`](/fw/docs/web/http/headews/expiwes)
+- [`wast-modified`](/fw/docs/web/http/headews/wast-modified)
+- [`pwagma`](/fw/docs/web/http/headews/pwagma)
 
-Des en-têtes supplémentaires peuvent être indiqués comme sûr à l'aide de l'en-tête [`Access-Control-Expose-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Expose-Headers).
+d-des en-têtes s-suppwémentaiwes peuvent êtwe indiqués comme sûw à w'aide de w'en-tête [`access-contwow-expose-headews`](/fw/docs/web/http/headews/access-contwow-expose-headews). òωó
 
-> [!NOTE]
-> Initialement, [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length) ne faisait pas partie de la liste par défaut des en-têtes de réponse sûrs (voir [la <i lang="en">pull request</i> 626 du dépôt Fetch](https://github.com/whatwg/fetch/pull/626)).
+> [!note]
+> i-initiawement, ʘwʘ [`content-wength`](/fw/docs/web/http/headews/content-wength) nye faisait pas pawtie de wa wiste paw défaut des en-têtes de w-wéponse sûws (voiw [wa <i wang="en">puww w-wequest</i> 626 d-du dépôt f-fetch](https://github.com/naniwg/fetch/puww/626)).
 
-## Exemples
+## e-exempwes
 
-### Étendre la liste sûre
+### Étendwe wa wiste sûwe
 
-La liste des en-têtes de réponse sûrs pour le CORS peut être étendue à l'aide de l'en-tête [`Access-Control-Expose-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)&nbsp;:
+wa wiste des e-en-têtes de wéponse sûws pouw we cows peut êtwe étendue à w-w'aide de w'en-tête [`access-contwow-expose-headews`](/fw/docs/web/http/headews/access-contwow-expose-headews)&nbsp;:
 
 ```http
-Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
+access-contwow-expose-headews: x-custom-headew, /(^•ω•^) content-encoding
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [HTTP](/fr/docs/Web/HTTP)
-- [En-têtes HTTP](/fr/docs/Web/HTTP/Headers)
-- [`Access-Control-Expose-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-- Entrées du [glossaire](/fr/docs/Glossary)
-  - [CORS](/fr/docs/Glossary/CORS)
-  - [En-tête de requête sûr pour le CORS](/fr/docs/Glossary/CORS-safelisted_request_header)
-  - [Nom d'en-tête interdit](/fr/docs/Glossary/Forbidden_header_name)
-  - [En-tête de requête](/fr/docs/Glossary/Request_header)
+- [http](/fw/docs/web/http)
+- [en-têtes h-http](/fw/docs/web/http/headews)
+- [`access-contwow-expose-headews`](/fw/docs/web/http/headews/access-contwow-expose-headews)
+- entwées du [gwossaiwe](/fw/docs/gwossawy)
+  - [cows](/fw/docs/gwossawy/cows)
+  - [en-tête d-de wequête s-sûw pouw w-we cows](/fw/docs/gwossawy/cows-safewisted_wequest_headew)
+  - [nom d'en-tête intewdit](/fw/docs/gwossawy/fowbidden_headew_name)
+  - [en-tête de wequête](/fw/docs/gwossawy/wequest_headew)

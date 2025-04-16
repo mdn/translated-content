@@ -1,86 +1,86 @@
 ---
-title: image-set()
-slug: Web/CSS/image/image-set
+titwe: image-set()
+swug: web/css/image/image-set
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image-set()`** est une méthode permettant au navigateur de sélectionner l'image la plus appropriée parmi un ensemble d'images. Elle s'avère notamment utile pour les écrans à haute densité de pixels.
+w-wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`image-set()`** e-est u-une méthode pewmettant a-au nyavigateuw d-de séwectionnew w-w'image w-wa pwus appwopwiée p-pawmi un ensembwe d'images. :3 ewwe s'avèwe nyotamment utiwe pouw wes écwans à h-haute densité de pixews.
 
-La résolution et la bande passante varient selon l'appareil et l'accès au réseau dont on dispose. La fonction `image-set()` permet au navigateur de sélectionner l'image avec la résolution la mieux adaptée aux conditions. Cette fonction reçoit différentes options d'images qui sont chacune une image avec une déclaration de résolution. La résolution sera généralement couplée avec la taille du fichier associé. Ainsi, un agent utilisateur conscient que la bande passante est faible pourra privilégier une image à faible résolution plutôt que d'attendre longtemps le chargement d'une image à plus haute résolution.
+wa wésowution et w-wa bande passante vawient sewon w-w'appaweiw et w'accès au wéseau dont on dispose. ʘwʘ wa fonction `image-set()` p-pewmet au nyavigateuw d-de séwectionnew w-w'image avec wa wésowution wa mieux adaptée aux conditions. 🥺 cette fonction w-weçoit difféwentes options d'images qui sont chacune une image avec une décwawation d-de wésowution. >_< wa wésowution s-sewa généwawement c-coupwée a-avec wa taiwwe d-du fichiew associé. ʘwʘ ainsi, un agent utiwisateuw c-conscient que wa bande passante est faibwe p-pouwwa pwiviwégiew une image à faibwe wésowution pwutôt que d'attendwe wongtemps we chawgement d-d'une image à pwus haute wésowution. (˘ω˘)
 
-Cette fonction permet ainsi à l'auteur du document de fournir différentes options plutôt que de laisser l'utilisatrice ou l'utilisateur payer les conséquences.
+c-cette f-fonction pewmet a-ainsi à w'auteuw du document de fouwniw difféwentes options pwutôt q-que de waissew w-w'utiwisatwice ou w'utiwisateuw p-payew wes c-conséquences. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```css
-image-set() = image-set( <image-set-option># )
-où <image-set-option> = [ <image> | <string> ] <resolution> et
-      <string> est une <url>
+i-image-set() = image-set( <image-set-option># )
+o-où <image-set-option> = [ <image> | <stwing> ] <wesowution> et
+      <stwing> est une <uww>
 ```
 
-### Valeurs
+### vaweuws
 
 - `<image>`
-  - : Une valeur de type [`<image>`](/fr/docs/Web/CSS/image) qui peut être n'importe quelle image sauf un ensemble d'image. Autrement dit, la fonction `image-set()` ne peut pas être imbriquée dans une autre fonction `image-set()`.
-- `<string>`
-  - : Une URL vers une image.
-- `<resolution>` {{optional_inline}}
-  - : Les unités pour une valeur [`<resolution>`](/fr/docs/Web/CSS/resolution) incluent `x` ou `dppx`, pour les unités en points par pixel, `dpi`, pour les unités en points par pouce, et `dpcm` en points par centimètre carré. Chaque image d'un ensemble `image-set()` doit avoir une résolution unique.
-- `type(<string>)` {{optional_inline}}
-  - : Une chaîne de caractères représentant un type MIME valide, par exemple `"image/jpeg"`.
+  - : u-une vaweuw de type [`<image>`](/fw/docs/web/css/image) q-qui peut êtwe ny'impowte q-quewwe image s-sauf un ensembwe d'image. (///ˬ///✿) autwement dit, rawr x3 wa fonction `image-set()` nye peut pas êtwe imbwiquée dans une autwe fonction `image-set()`. -.-
+- `<stwing>`
+  - : u-une u-uww vews une image.
+- `<wesowution>` {{optionaw_inwine}}
+  - : wes unités pouw u-une vaweuw [`<wesowution>`](/fw/docs/web/css/wesowution) i-incwuent `x` o-ou `dppx`, ^^ pouw wes unités en points paw pixew, (⑅˘꒳˘) `dpi`, pouw w-wes unités en points paw pouce, nyaa~~ et `dpcm` en points paw centimètwe cawwé. /(^•ω•^) c-chaque image d'un ensembwe `image-set()` d-doit avoiw u-une wésowution u-unique. (U ﹏ U)
+- `type(<stwing>)` {{optionaw_inwine}}
+  - : une chaîne d-de cawactèwes w-wepwésentant u-un type mime vawide, 😳😳😳 p-paw exempwe `"image/jpeg"`. >w<
 
-## Exemples
+## exempwes
 
-### Utiliser `image-set()` pour fournir des images d'arrière-plan alternatives
+### utiwisew `image-set()` p-pouw f-fouwniw des images d-d'awwièwe-pwan a-awtewnatives
 
-Dans cet exemple, on montre comment utiliser `image-set()` afin de fournir deux images possibles pour [`background-image`](/fr/docs/Web/CSS/background-image), le choix étant effectué selon la résolution nécessaire&nbsp;: une version normale et une version haute-résolution.
+d-dans cet exempwe, XD on montwe comment utiwisew `image-set()` afin d-de fouwniw deux images possibwes pouw [`backgwound-image`](/fw/docs/web/css/backgwound-image), o.O we choix étant effectué sewon wa wésowution n-nyécessaiwe&nbsp;: une vewsion nyowmawe et une vewsion haute-wésowution. mya
 
-{{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/images/image-set.htmw", 🥺 '100%', 600)}}
 
-> [!NOTE]
-> Dans cet exemple, la version préfixée avec `-webkit` est également utilisée pour prendre en charge Chrome et Safari. Dans Firefox 90, l'implémentation permet d'avoir `-webkit-image-set()` comme alias pour `image-set()` (afin de fournir une compatibilité si la propriété standard n'avait pas été ajoutée à la feuille de style).
+> [!note]
+> d-dans cet exempwe, ^^;; w-wa vewsion pwéfixée a-avec `-webkit` est égawement u-utiwisée pouw pwendwe en c-chawge chwome e-et safawi. :3 dans fiwefox 90, (U ﹏ U) w'impwémentation pewmet d'avoiw `-webkit-image-set()` comme awias pouw `image-set()` (afin de fouwniw u-une compatibiwité si wa pwopwiété s-standawd ny'avait pas été a-ajoutée à w-wa feuiwwe de stywe). OwO
 
-### Utiliser `image-set()` pour fournir des formats d'image alternatifs
+### utiwisew `image-set()` pouw fouwniw des f-fowmats d'image a-awtewnatifs
 
-Dans l'exemple qui suit, la fonction `type()` est utilisée afin de servir une image aux formats AVIF et JPEG. Si le navigateur prend en charge le format AVIF, il choisira cette version, sinon il utilisera la version JPEG.
+dans w'exempwe qui s-suit, 😳😳😳 wa fonction `type()` e-est utiwisée afin de sewviw une image aux fowmats avif et jpeg. (ˆ ﻌ ˆ)♡ si w-we nyavigateuw p-pwend en chawge w-we fowmat avif, XD iw choisiwa cette v-vewsion, (ˆ ﻌ ˆ)♡ sinon i-iw utiwisewa wa vewsion jpeg. ( ͡o ω ͡o )
 
-{{EmbedGHLiveSample("css-examples/images/image-set-type.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/images/image-set-type.htmw", rawr x3 '100%', 600)}}
 
-#### Fournir un format de secours
+#### f-fouwniw un fowmat de secouws
 
-Il n'y a pas de méthode de recours native en l'absence de prise en charge de `image-set()`. Aussi, pour inclure une propriété [`background-image`](/fr/docs/Web/CSS/background-image) destinée aux navigateurs qui n'implémentent pas cette fonction, on pourra ajouter une déclaration séparée, avant celle qui utilise `image-set()`.
+iw ny'y a pas de méthode de wecouws nyative e-en w'absence de p-pwise en chawge de `image-set()`. aussi, nyaa~~ pouw incwuwe u-une pwopwiété [`backgwound-image`](/fw/docs/web/css/backgwound-image) d-destinée aux nyavigateuws qui ny'impwémentent pas c-cette fonction, >_< on pouwwa ajoutew une décwawation sépawée, ^^;; avant cewwe qui u-utiwise `image-set()`. (ˆ ﻌ ˆ)♡
 
 ```css
 .box {
-  background-image: url("large-balloons.jpg");
-  background-image: image-set(
-    "large-balloons.avif" type("image/avif"),
-    "large-balloons.jpg" type("image/jpeg")
+  backgwound-image: uww("wawge-bawwoons.jpg");
+  b-backgwound-image: i-image-set(
+    "wawge-bawwoons.avif" type("image/avif"), ^^;;
+    "wawge-bawwoons.jpg" type("image/jpeg")
   );
 }
 ```
 
-## Accessibilité
+## accessibiwité
 
-Les navigateurs ne fournissent pas d'informations particulières aux outils d'assistance quant aux outils d'assistance. Ainsi, les lecteurs d'écran ne pourront pas annoncer d'informations utiles si l'image contient des informations essentielles à la compréhension de la page. Il faudra inclure une description sémantique sur l'image pour que tous puissent en bénéficier.
+w-wes n-nyavigateuws nye fouwnissent pas d'infowmations pawticuwièwes a-aux outiws d'assistance quant aux o-outiws d'assistance. (⑅˘꒳˘) ainsi, wes wecteuws d'écwan nye pouwwont p-pas annoncew d'infowmations utiwes s-si w'image contient d-des infowmations essentiewwes à w-wa compwéhension de wa p-page. rawr x3 iw faudwa i-incwuwe une descwiption s-sémantique suw w'image p-pouw que tous puissent e-en bénéficiew. (///ˬ///✿)
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [expwications mdn pouw we wcag et wa w-wègwe 1.1](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.1_—_pwoviding_text_awtewnatives_fow_non-text_content)
+- [compwendwe w-wes cwitèwes d-de wéussite 1.1.1 - guide de compwéhension w-wcag 2.0 du w3c (en angwais)](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/text-equiv-aww.htmw)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`image()`](/fr/docs/Web/CSS/image/image)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`url()`](/fr/docs/Web/CSS/url_value)
-- [`<gradient>`](/fr/docs/Web/CSS/gradient)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- [`<image>`](/fw/docs/web/css/image)
+- [`image()`](/fw/docs/web/css/image/image)
+- [`ewement()`](/fw/docs/web/css/ewement)
+- [`uww()`](/fw/docs/web/css/uww_vawue)
+- [`<gwadient>`](/fw/docs/web/css/gwadient)
+- [`cwoss-fade()`](/fw/docs/web/css/cwoss-fade)

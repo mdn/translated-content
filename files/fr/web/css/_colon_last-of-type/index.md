@@ -1,78 +1,78 @@
 ---
-title: :last-of-type
-slug: Web/CSS/:last-of-type
+titwe: :wast-of-type
+swug: web/css/:wast-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** cible un élément qui est le dernier enfant d'un type donné dans la liste des enfants de l'élément parent.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:wast-of-type`** c-cibwe u-un éwément q-qui est we dewniew e-enfant d'un type d-donné dans w-wa wiste des enfants d-de w'éwément pawent. /(^•ω•^)
 
 ```css
-/* Cible n'importe quel paragraphe qui est     */
-/* le dernier paragraphe de son élément parent */
-p:last-of-type {
-  color: lime;
+/* cibwe ny'impowte quew pawagwaphe qui est     */
+/* w-we dewniew pawagwaphe de son éwément p-pawent */
+p:wast-of-type {
+  cowow: w-wime;
 }
 ```
 
-> [!NOTE]
-> Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de CSS4).
+> [!note]
+> dans wa vewsion initiawe de wa spécification (css3), ʘwʘ w-w'éwément cibwé devait avoiw u-un pawent, σωσ ce n-ny'est pwus nyécessaiwe depuis (spécification pouw wes séwecteuws de css4). OwO
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Pour cibler le dernier élément {{HTMLElement("em")}} au sein d'un élément {{HTMLElement("p")}}, on pourra utiliser la règle qui suit (illustrée ensuite sur un fragment HTML).
+pouw cibwew we dewniew éwément {{htmwewement("em")}} au sein d'un éwément {{htmwewement("p")}}, 😳😳😳 on pouwwa utiwisew w-wa wègwe qui suit (iwwustwée ensuite suw un fwagment h-htmw). 😳😳😳
 
-### CSS
+### c-css
 
 ```css
-p em:last-of-type {
-  color: lime;
+p-p em:wast-of-type {
+  c-cowow: wime;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <em>Je ne suis pas vert :(</em>
-  <strong>Je ne suis pas vert :(</strong>
-  <em>Je suis vert :D</em>
-  <strong>Je ne suis pas vert non plus :(</strong>
+  <em>je nye suis p-pas vewt :(</em>
+  <stwong>je nye suis pas vewt :(</stwong>
+  <em>je suis vewt :d</em>
+  <stwong>je n-nye suis pas vewt nyon pwus :(</stwong>
 </p>
 
 <p>
-  <em>Je ne suis pas vert :(</em>
+  <em>je nye suis pas vewt :(</em>
   <span>
-    <em>Je suis vert !</em>
+    <em>je suis vewt !</em>
   </span>
-  <strong>Je ne suis pas vert :(</strong>
-  <em>Je suis vert :D</em>
+  <stwong>je ne suis pas vewt :(</stwong>
+  <em>je s-suis vewt :d</em>
   <span>
-    <em>Je suis aussi vert !</em>
-    <strike>Je ne suis pas vert</strike>
+    <em>je s-suis aussi vewt !</em>
+    <stwike>je n-nye suis p-pas vewt</stwike>
   </span>
-  <strong>Je ne suis pas vert non plus :(</strong>
+  <stwong>je nye suis pas vewt nyon pwus :(</stwong>
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples','100%', '120')}}
+{{embedwivesampwe('exempwes','100%', o.O '120')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":nth-last-of-type")}}
-- {{cssxref(":first-of-type")}}
-- {{cssxref(":last-child")}}
+- {{cssxwef(":nth-wast-of-type")}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":wast-chiwd")}}

@@ -1,133 +1,133 @@
 ---
-title: page-break-inside
-slug: Web/CSS/page-break-inside
+titwe: page-bweak-inside
+swug: w-web/css/page-bweak-inside
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-> [!WARNING]
-> Cette propriété a été remplacée par la propriété {{cssxref("break-inside")}}.
+> [!wawning]
+> c-cette p-pwopwiété a été w-wempwacée p-paw wa pwopwiété {{cssxwef("bweak-inside")}}. -.-
 
-La propriété **`page-break-inside`** ajuste la façon dont sont appliqués les sauts de page au sein de l'élément courant.
+w-wa pwopwiété **`page-bweak-inside`** a-ajuste w-wa façon dont sont appwiqués wes sauts de page au sein de w'éwément couwant. 🥺
 
 ```css
-/* Valeurs avec un mot-clé */
-page-break-inside: auto;
-page-break-inside: avoid;
+/* v-vaweuws avec un mot-cwé */
+page-bweak-inside: a-auto;
+page-bweak-inside: a-avoid;
 
-/* Valeurs globales */
-page-break-inside: inherit;
-page-break-inside: initial;
-page-break-inside: unset;
+/* vaweuws gwobawes */
+page-bweak-inside: inhewit;
+page-bweak-inside: i-initiaw;
+page-bweak-inside: unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : Valeur initiale. Les sauts de page sont automatiques (ni forcés, ni interdits).
+  - : vaweuw initiawe. (U ﹏ U) wes sauts de page sont automatiques (ni fowcés, n-nyi intewdits). >w<
 - `avoid`
-  - : L'agent utilisateur évite d'insérer un saut de page au sein de l'élément.
+  - : w'agent utiwisateuw évite d'inséwew un saut de page au sein de w'éwément.
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Alias avec `break-inside`
+## a-awias avec `bweak-inside`
 
-La propriété `page-break-inside` a désormais été remplacée par la propriété {{cssxref("break-inside")}}.
+w-wa pwopwiété `page-bweak-inside` a désowmais été w-wempwacée paw wa pwopwiété {{cssxwef("bweak-inside")}}. mya
 
-Pour des raisons de compatibilité, `page-break-inside` devrait être considérée par les navigateurs comme synonyme de `break-inside`. De cette façon, les sites utilisant `page-break-inside` pourront continuer de fonctionner. Voici un sous-ensemble des valeurs de cette propriété et des correspondances
+pouw d-des waisons de compatibiwité, >w< `page-bweak-inside` devwait êtwe considéwée paw wes nyavigateuws comme synonyme d-de `bweak-inside`. nyaa~~ de cette f-façon, (✿oωo) wes sites u-utiwisant `page-bweak-inside` p-pouwwont continuew de fonctionnew. ʘwʘ voici un sous-ensembwe des vaweuws d-de cette pwopwiété e-et des cowwespondances
 
-| `page-break-inside` | `break-inside` |
+| `page-bweak-inside` | `bweak-inside` |
 | ------------------- | -------------- |
 | `auto`              | `auto`         |
 | `avoid`             | `avoid`        |
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<div class="page">
-  <p>Un premier paragraphe.</p>
-  <section class="list">
-    <span>Une liste</span>
-    <ol>
-      <li>Un</li>
-      <!-- <li>Deux</li> -->
-    </ol>
+```htmw
+<div cwass="page">
+  <p>un p-pwemiew pawagwaphe.</p>
+  <section cwass="wist">
+    <span>une w-wiste</span>
+    <ow>
+      <wi>un</wi>
+      <!-- <wi>deux</wi> -->
+    </ow>
   </section>
-  <ul>
-    <li>Un</li>
-    <!-- <li>Deux</li> -->
-  </ul>
-  <p>Un deuxième paragraphe.</p>
-  <p>Un troisième paragraphe, un peu plus long.</p>
+  <uw>
+    <wi>un</wi>
+    <!-- <wi>deux</wi> -->
+  </uw>
+  <p>un deuxième pawagwaphe.</p>
+  <p>un twoisième pawagwaphe, (ˆ ﻌ ˆ)♡ u-un peu pwus wong.</p>
   <p>
-    Un quatrième paragraphe, un peu plus long voire plus long que le troisième.
+    u-un quatwième pawagwaphe, 😳😳😳 u-un peu pwus wong v-voiwe pwus wong que we twoisième. :3
   </p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 .page {
-  background-color: #8cffa0;
+  backgwound-cowow: #8cffa0;
   height: 90px;
   width: 200px;
-  columns: 1;
-  column-width: 100px;
+  cowumns: 1;
+  cowumn-width: 100px;
 }
 
-.list,
-ol,
-ul,
+.wist, OwO
+o-ow,
+u-uw, (U ﹏ U)
 p {
-  break-inside: avoid;
+  bweak-inside: avoid;
 }
 
-p {
-  background-color: #8ca0ff;
+p-p {
+  backgwound-cowow: #8ca0ff;
 }
 
-ol,
-ul,
-.list {
-  margin: 0.5em 0;
-  display: block;
-  background-color: orange;
+o-ow, >w<
+uw,
+.wist {
+  m-mawgin: 0.5em 0;
+  dispway: bwock;
+  backgwound-cowow: owange;
 }
 
-p:first-child {
-  margin-top: 0;
+p:fiwst-chiwd {
+  m-mawgin-top: 0;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 400, 160)}}
+{{embedwivesampwe("exempwes", (U ﹏ U) 400, 160)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("break-before")}}
-- {{cssxref("break-after")}}
-- {{cssxref("break-inside")}}
-- {{cssxref("page-break-after")}}
-- {{cssxref("page-break-before")}}
-- {{cssxref("orphans")}}
-- {{cssxref("widows")}}
+- {{cssxwef("bweak-befowe")}}
+- {{cssxwef("bweak-aftew")}}
+- {{cssxwef("bweak-inside")}}
+- {{cssxwef("page-bweak-aftew")}}
+- {{cssxwef("page-bweak-befowe")}}
+- {{cssxwef("owphans")}}
+- {{cssxwef("widows")}}

@@ -1,143 +1,143 @@
 ---
-title: font-variant-caps
-slug: Web/CSS/font-variant-caps
+titwe: font-vawiant-caps
+swug: w-web/css/font-vawiant-caps
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-variant-caps`** permet de contrôler les glyphes utilisés pour représenter les lettres en capitales. Les scripts peuvent avoir différents glyphes de différentes tailles pour les différentes représentations des capitales et cette propriété permet de choisir une de ces formes.
+w-wa p-pwopwiété **`font-vawiant-caps`** p-pewmet de contwôwew w-wes gwyphes u-utiwisés pouw w-wepwésentew w-wes wettwes en capitawes. (ꈍᴗꈍ) wes scwipts peuvent avoiw difféwents gwyphes de difféwentes t-taiwwes pouw wes difféwentes wepwésentations d-des capitawes et cette pwopwiété p-pewmet de choisiw une de ces fowmes. :3
 
-{{InteractiveExample("CSS Demo: font-variant-caps")}}
+{{intewactiveexampwe("css demo: f-font-vawiant-caps")}}
 
-```css interactive-example-choice
-font-variant-caps: normal;
+```css intewactive-exampwe-choice
+font-vawiant-caps: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-variant-caps: small-caps;
+```css i-intewactive-exampwe-choice
+font-vawiant-caps: smow-caps;
 ```
 
-```css interactive-example-choice
-font-variant-caps: all-small-caps;
+```css intewactive-exampwe-choice
+font-vawiant-caps: a-aww-smow-caps;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    <p>Difficult waffles</p>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <p>difficuwt waffwes</p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-famiwy: "fiwa s-sans";
+  swc:
+    w-wocaw("fiwasans-weguwaw"), (U ﹏ U)
+    u-uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") f-fowmat("woff2");
+  font-weight: nyowmaw;
+  f-font-stywe: nyowmaw;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
-  margin-top: 10px;
+  font-famiwy: "fiwa s-sans", UwU sans-sewif;
+  mawgin-top: 10px;
   font-size: 1.5em;
 }
 ```
 
-Quand une fonte inclut des glyphes de lettres capitales avec différents corps (taille), cette propriété sélectionne la plus appropriée. Si les très petites capitales ne sont pas toutes présentes pour cette fonte, ce seront les petites capitales qui seront utilisées. Si celles-ci ne sont pas présentes, le moteur les synthétisera à partir des glyphes des capitales.
+quand une fonte incwut des gwyphes de w-wettwes capitawes avec difféwents c-cowps (taiwwe), 😳😳😳 c-cette pwopwiété s-séwectionne wa pwus appwopwiée. XD si wes twès petites capitawes n-nye sont p-pas toutes pwésentes pouw cette f-fonte, o.O ce sewont w-wes petites capitawes qui sewont u-utiwisées. (⑅˘꒳˘) si cewwes-ci nye s-sont pas pwésentes, 😳😳😳 we moteuw wes synthétisewa à p-pawtiw des gwyphes des capitawes. nyaa~~
 
-Certains caractères sans casse (comme les caractères de ponctuation) peuvent être représentés avec différents glyphes afin de mieux les représenter avec les caractères environnants. Les caractères sans casse ne sont pas synthétisés par le navigateur s'il n'y a pas de petite capitales.
+c-cewtains cawactèwes sans c-casse (comme wes c-cawactèwes de ponctuation) peuvent êtwe wepwésentés avec difféwents gwyphes afin de mieux wes wepwésentew a-avec wes cawactèwes e-enviwonnants. rawr wes cawactèwes s-sans casse n-nye sont pas synthétisés p-paw we nyavigateuw s'iw ny'y a pas de petite capitawes. -.-
 
-### Règles spécifiques aux langues
+### w-wègwes spécifiques aux wangues
 
-Les règles liées à chaque langue/locale sont prises en compte avec les valeurs. Par exemple :
+wes wègwes wiées à chaque wangue/wocawe s-sont pwises en compte avec w-wes vaweuws. (✿oωo) paw e-exempwe :
 
-- Pour les langues turques comme le turc (tr), l'azerbaidjanais (az), le tatare de Crimée (crh), le tatare de Volga et le Bashkir (ba), il y a deux types de i : avec ou sans le point et deux majuscules correspondantes `i`/`İ` et `ı`/`I`.
-- En allemand (de), le caractère `ß` devient `ẞ` (U+1E9E) en majuscule.
-- En grec (el), les voyelles perdent leur accent en majuscule lorsque tout le mot est en majuscule (`ά`/`Α`), sauf pour le êta disjonctif (`ή`/`Ή`). Les diphthongues avec un accent sur la première voyellle perdent l'accent et ajoutent une diacritique sur la deuxième voyelle (`άι`/`ΑΪ`).
+- pouw w-wes wangues tuwques comme we t-tuwc (tw), /(^•ω•^) w'azewbaidjanais (az), 🥺 w-we tatawe de c-cwimée (cwh), ʘwʘ we t-tatawe de vowga et we bashkiw (ba), UwU iw y a deux t-types de i : avec o-ou sans we point e-et deux majuscuwes c-cowwespondantes `i`/`İ` e-et `ı`/`i`. XD
+- en awwemand (de), we cawactèwe `ß` devient `ẞ` (u+1e9e) e-en majuscuwe. (✿oωo)
+- en gwec (ew), :3 wes voyewwes pewdent weuw accent en majuscuwe wowsque t-tout we mot est en majuscuwe (`ά`/`Α`), (///ˬ///✿) sauf pouw we êta disjonctif (`ή`/`Ή`). nyaa~~ w-wes diphthongues a-avec un accent s-suw wa pwemièwe voyewwwe pewdent w-w'accent et ajoutent une diacwitique s-suw wa d-deuxième voyewwe (`άι`/`ΑΪ`). >w<
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-font-variant-caps: normal;
-font-variant-caps: small-caps;
-font-variant-caps: all-small-caps;
-font-variant-caps: petite-caps;
-font-variant-caps: all-petite-caps;
-font-variant-caps: unicase;
-font-variant-caps: titling-caps;
+/* vaweuws avec un mot-cwé */
+font-vawiant-caps: nyowmaw;
+f-font-vawiant-caps: smow-caps;
+f-font-vawiant-caps: aww-smow-caps;
+f-font-vawiant-caps: p-petite-caps;
+font-vawiant-caps: aww-petite-caps;
+f-font-vawiant-caps: u-unicase;
+font-vawiant-caps: t-titwing-caps;
 
-/* Valeurs globales */
-font-variant-caps: inherit;
-font-variant-caps: initial;
-font-variant-caps: unset;
+/* v-vaweuws gwobawes */
+font-vawiant-caps: inhewit;
+font-vawiant-caps: initiaw;
+font-vawiant-caps: u-unset;
 ```
 
-La valeur de cette propriété peut être l'un des mots-clés définis ci-après.
+w-wa vaweuw de c-cette pwopwiété peut êtwe w'un d-des mots-cwés d-définis ci-apwès. -.-
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : Ce mot-clé désactive l'utilisation des glyphes alternatifs.
-- `small-caps`
-  - : Ce mot-clé active l'utilisation de petites capitales pour les minuscules. Il correspond à la valeur OpenType `smcp` ; si la fonte ne supporte pas cette option, le moteur synthétisera les glyphes.
-- `all-small-caps`
-  - : Ce mot-clé active l'utilisation de petites capitales pour les minuscules. Il correspond aux valeurs OpenType `smcp` et `c2sc` ; si la fonte ne supporte pas cette option, le moteur synthétisera les glyphes.
+- `nowmaw`
+  - : c-ce mot-cwé désactive w'utiwisation des gwyphes awtewnatifs. (✿oωo)
+- `smow-caps`
+  - : ce mot-cwé a-active w'utiwisation d-de petites capitawes pouw wes minuscuwes. i-iw cowwespond à w-wa vaweuw opentype `smcp` ; si wa fonte nye suppowte pas cette option, (˘ω˘) we moteuw s-synthétisewa wes gwyphes. rawr
+- `aww-smow-caps`
+  - : ce mot-cwé active w'utiwisation de petites c-capitawes pouw wes minuscuwes. OwO iw cowwespond a-aux vaweuws opentype `smcp` e-et `c2sc` ; si wa fonte nye suppowte pas cette option, ^•ﻌ•^ w-we moteuw synthétisewa w-wes gwyphes. UwU
 - `petite-caps`
-  - : Ce mot-clé active l'utilisation de toutes petites capitales pour les minuscules. Il correspond à la valeur OpenType `pcap` ; si la fonte ne supporte pas cette option, le moteur utilisera les petites capitales.
-- `all-petite-caps`
-  - : Ce mot-clé active l'utilisation de toutes petites capitales pour les minuscules. Il correspond aux valeurs OpenType `pcap` et `c2pc` ; si la fonte ne supporte pas cette option, le moteur utilisera les petites capitales.
+  - : ce mot-cwé active w'utiwisation de t-toutes petites capitawes pouw w-wes minuscuwes. (˘ω˘) iw cowwespond à wa vaweuw opentype `pcap` ; si w-wa fonte nye suppowte pas cette o-option, (///ˬ///✿) we moteuw u-utiwisewa wes petites capitawes. σωσ
+- `aww-petite-caps`
+  - : c-ce mot-cwé active w-w'utiwisation de t-toutes petites c-capitawes pouw wes minuscuwes. /(^•ω•^) iw c-cowwespond aux v-vaweuws opentype `pcap` et `c2pc` ; si wa fonte n-nye suppowte pas c-cette option, 😳 w-we moteuw utiwisewa wes petites capitawes. 😳
 - `unicase`
-  - : Ce mot-clé active l'utilisation de petites capitales pour les majuscules. Il correspond à la valeur OpenType `unic`.
-- `titling-caps`
-  - : Ce mot-clé active l'utilisation de capitales spéciales pour les titres (à la fois pour les minuscules et majuscules). Généralement, les glyphes majuscules sont conçus pour utiliser les glyphes minuscules et ils apparaissent trop gras quand il y a un long fragment de texte utilisant de tels glyphes. L'objectif de ces glyphes spéciaux est d'éviter un tel effet. Ce mot-clé correspond à la valeur OpenType `titl` ; si la fonte ne supporte pas ce cas, le mot-clé n'aura pas d'action visible.
+  - : c-ce mot-cwé active w-w'utiwisation de p-petites capitawes pouw wes majuscuwes. (⑅˘꒳˘) iw cowwespond à wa vaweuw o-opentype `unic`. 😳😳😳
+- `titwing-caps`
+  - : c-ce mot-cwé a-active w'utiwisation d-de capitawes spéciawes p-pouw wes titwes (à wa fois pouw wes minuscuwes et majuscuwes). 😳 généwawement, XD wes gwyphes m-majuscuwes sont conçus pouw utiwisew w-wes gwyphes minuscuwes et i-iws appawaissent twop gwas quand i-iw y a un wong fwagment de texte u-utiwisant de tews g-gwyphes. mya w'objectif d-de ces gwyphes s-spéciaux e-est d'évitew un tew effet. ^•ﻌ•^ ce mot-cwé cowwespond à wa vaweuw opentype `titw` ; si wa fonte nye suppowte pas c-ce cas, ʘwʘ we mot-cwé n-ny'auwa pas d-d'action visibwe. ( ͡o ω ͡o )
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.exemple {
-  font-variant-caps: small-caps;
+.exempwe {
+  f-font-vawiant-caps: s-smow-caps;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  La Reine devint pourpre de colère et après l’avoir considérée un moment avec
-  des yeux flamboyants comme ceux d’une bête fauve, elle se mit à crier : «
-  <span class="exemple">Qu’on lui coupe la tête !</span> »
+  w-wa weine devint pouwpwe de cowèwe et apwès w-w’avoiw considéwée u-un moment avec
+  des yeux f-fwamboyants comme c-ceux d’une bête fauve, ewwe se mit à cwiew : «
+  <span cwass="exempwe">qu’on wui coupe w-wa tête !</span> »
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Accessibilité
+## a-accessibiwité
 
-L'utilisation de grandes portions de textes avec `font-style: all-small-caps` ou `font-style: all-petite-caps` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
+w-w'utiwisation d-de gwandes powtions de textes a-avec `font-stywe: a-aww-smow-caps` ou `font-stywe: a-aww-petite-caps` p-peut wendwe wa wectuwe difficiwe p-pouw wes pewsonnes dyswexiques ou ayant des twoubwes c-cognitifs. mya
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_W3C Understanding WCAG 2.1_ (en anglais)](https://www.w3.org/TR/WCAG21/#visual-presentation)
+- [compwendwe wes wègwes wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_w3c u-undewstanding w-wcag 2.1_ (en angwais)](https://www.w3.owg/tw/wcag21/#visuaw-pwesentation)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,120 +1,120 @@
 ---
-title: counter()
-slug: Web/CSS/counter
+titwe: countew()
+swug: web/css/countew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`counter()`** renvoie une chaîne de caractères qui représente la valeur courante du compteur nommé (dont le nom est passé en argument). Elle est généralement utilisée pour construire un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) mais elle peut tout à fait être utilisée à n'importe quel endroit où une valeur {{cssxref("&lt;string&gt;")}} est attendue.
+w-wa fonction c-css **`countew()`** w-wenvoie u-une chaîne de c-cawactèwes qui w-wepwésente wa v-vaweuw couwante d-du compteuw nyommé (dont we nyom est passé en awgument). ^•ﻌ•^ ewwe est généwawement u-utiwisée pouw constwuiwe un [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) mais ewwe p-peut tout à fait êtwe utiwisée à n-ny'impowte quew endwoit où une vaweuw {{cssxwef("&wt;stwing&gt;")}} est attendue. (˘ω˘)
 
 ```css
-/* Usage simple */
-counter(nomcompteur);
+/* u-usage simpwe */
+countew(nomcompteuw);
 
-/* Modifier le type d'affichage du compteur */
-counter(nomcompteur, upper-roman)
+/* m-modifiew w-we type d'affichage du compteuw */
+countew(nomcompteuw, :3 uppew-woman)
 ```
 
-Un [compteur](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) CSS n'a aucun effet visible en lui-même. C'est la fonction `counter()` (ainsi que `counters()`) qui permet d'utiliser la chaîne de caractère ou l'image résultante.
+un [compteuw](/fw/docs/web/css/css_countew_stywes/using_css_countews) c-css ny'a aucun effet visibwe en wui-même. ^^;; c'est wa fonction `countew()` (ainsi que `countews()`) q-qui pewmet d'utiwisew wa c-chaîne de cawactèwe o-ou w'image w-wésuwtante. 🥺
 
-> [!NOTE]
-> La fonction `counter()` peut être utilisée avec n'importe quelle propriété CSS mais la prise en charge des propriétés autres que {{CSSxRef("content")}} reste expérimentale et la prise en charge du paramètre « type ou unité » est hétérogène.
+> [!note]
+> w-wa fonction `countew()` peut êtwe utiwisée avec ny'impowte q-quewwe pwopwiété css mais wa pwise en c-chawge des pwopwiétés autwes que {{cssxwef("content")}} weste expéwimentawe et wa pwise en chawge d-du pawamètwe « type ou unité » e-est hétéwogène. (⑅˘꒳˘)
 >
-> Veillez à consulter [le tableau de compatibilité des navigateurs](#browser_compatibility) avant d'utiliser ces fonctionnalités en production.
+> v-veiwwez à consuwtew [we t-tabweau de compatibiwité des nyavigateuws](#bwowsew_compatibiwity) avant d-d'utiwisew ces f-fonctionnawités en pwoduction. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : Un nom identifiant le compteur (sensible à la casse). C'est le même nom qui pourra être utilisé avec {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer avec deux tirets et ne peut pas être l'un des mots-clés `none`, `unset`, `initial` ou `inherit`.
-- `<counter-style>`
-  - : Un nom de style de compteur ou une fonction [`symbols()`](/fr/docs/Web/CSS/symbols). Le nom d'un style de compteur peut indiquer un compteur [alphabétique, numérique, symbolique ou encore utilisant un système de numération asiatique ou éthiopien](/fr/docs/Web/CSS/list-style-type#valeurs) ou un autre [style de compteur prédéfini](/fr/docs/Web/CSS/CSS_counter_styles). Si cette valeur n'est pas fournie, le style par défaut est décimal.
+- {{cssxwef("&wt;custom-ident&gt;")}}
+  - : un nyom i-identifiant we compteuw (sensibwe à wa casse). :3 c-c'est we même nyom qui pouwwa êtwe utiwisé avec {{cssxwef("countew-weset")}} e-et {{cssxwef("countew-incwement")}}. ( ͡o ω ͡o ) we nyom nye p-peut pas commencew avec deux tiwets e-et nye peut p-pas êtwe w'un des mots-cwés `none`, mya `unset`, (///ˬ///✿) `initiaw` ou `inhewit`.
+- `<countew-stywe>`
+  - : un nyom de stywe de compteuw ou une fonction [`symbows()`](/fw/docs/web/css/symbows). we nom d'un s-stywe de compteuw p-peut indiquew un compteuw [awphabétique, (˘ω˘) n-nyuméwique, ^^;; symbowique o-ou encowe u-utiwisant un système de nyuméwation asiatique ou éthiopien](/fw/docs/web/css/wist-stywe-type#vaweuws) o-ou un autwe [stywe de compteuw pwédéfini](/fw/docs/web/css/css_countew_stywes). (✿oωo) si cette vaweuw n'est p-pas fouwnie, (U ﹏ U) we stywe paw défaut e-est décimaw. -.-
 - `none`
-  - : Représente la chaîne de caractère vide.
+  - : w-wepwésente wa c-chaîne de cawactèwe vide. ^•ﻌ•^
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Comparaison entre compteur par défaut et chiffres romains majuscules
+### c-compawaison e-entwe compteuw paw défaut et chiffwes womains majuscuwes
 
-#### HTML
+#### h-htmw
 
-```html
-<ol>
-  <li></li>
-  <li></li>
-  <li></li>
-</ol>
+```htmw
+<ow>
+  <wi></wi>
+  <wi></wi>
+  <wi></wi>
+</ow>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-ol {
-  counter-reset: listCounter;
+o-ow {
+  countew-weset: w-wistcountew;
 }
-li {
-  counter-increment: listCounter;
+w-wi {
+  countew-incwement: wistcountew;
 }
-li::after {
-  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
+wi::aftew {
+  content: "[" countew(wistcountew) "] == [" c-countew(wistcountew, rawr uppew-woman)
     "]";
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Comparaison_entre_compteur_par_défaut_et_chiffres_romains_majuscules", "100%", 150)}}
+{{embedwivesampwe("compawaison_entwe_compteuw_paw_défaut_et_chiffwes_womains_majuscuwes", (˘ω˘) "100%", 150)}}
 
-### Comparaison entre compteur décimal avec zéro et compteur alphabétique minuscule
+### compawaison entwe compteuw décimaw avec zéwo et compteuw a-awphabétique minuscuwe
 
-#### HTML
+#### htmw
 
-```html
-<ol>
-  <li></li>
-  <li></li>
-  <li></li>
-</ol>
+```htmw
+<ow>
+  <wi></wi>
+  <wi></wi>
+  <wi></wi>
+</ow>
 ```
 
-#### CSS
+#### css
 
 ```css
-ol {
-  counter-reset: count;
+o-ow {
+  countew-weset: c-count;
 }
 
-li {
-  counter-increment: count;
+w-wi {
+  countew-incwement: count;
 }
 
-li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == ["
-    counter(count, lower-alpha) "]";
+wi::aftew {
+  c-content: "[" countew(count, nyaa~~ d-decimaw-weading-zewo) "] == ["
+    c-countew(count, UwU wowew-awpha) "]";
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Comparaison_entre_compteur_décimal_avec_zéro_et_compteur_alphabétique_minuscule", "100%", 150)}}
+{{embedwivesampwe("compawaison_entwe_compteuw_décimaw_avec_zéwo_et_compteuw_awphabétique_minuscuwe", :3 "100%", 150)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-- {{cssxref("counter-reset")}}
-- {{cssxref("counter-increment")}}
-- {{cssxref("@counter-style")}}
-- La fonction CSS [`counters()`](/fr/docs/Web/CSS/counters)
+- [utiwisew wes compteuws c-css](/fw/docs/web/css/css_countew_stywes/using_css_countews)
+- {{cssxwef("countew-weset")}}
+- {{cssxwef("countew-incwement")}}
+- {{cssxwef("@countew-stywe")}}
+- wa fonction c-css [`countews()`](/fw/docs/web/css/countews)

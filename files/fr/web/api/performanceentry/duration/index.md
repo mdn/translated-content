@@ -1,90 +1,90 @@
 ---
-title: PerformanceEntry.duration
-slug: Web/API/PerformanceEntry/duration
+titwe: pewfowmanceentwy.duwation
+swug: web/api/pewfowmanceentwy/duwation
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine a-api")}}
 
-La propriété **`duration`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui correspond à la durée de l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry).
+wa pwopwiété **`duwation`** w-wenvoie un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) q-qui cowwespond à w-wa duwée d-de w'[entwée d-de pewfowmance](/fw/docs/web/api/pewfowmanceentwy). :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-La valeur retournée par cette propriété dépend du [type](/fr/docs/Web/API/PerformanceEntry/entryType) de l'entrée de performance :
+w-wa vaweuw wetouwnée paw cette pwopwiété dépend du [type](/fw/docs/web/api/pewfowmanceentwy/entwytype) d-de w'entwée de pewfowmance :
 
-- « `frame` » - retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) indiquant la différence entre le `startTime` de deux _frames_ successives.
-- « `mark` » - retourne "`0`" (une marque n'a pas de durée).
-- « `measure` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui correspond à la durée de la mesure.
-- « `navigation` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui est respectivement la différence entre les propriétés [`PerformanceNavigationTiming.loadEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/loadEventEnd) et [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime).
-- « `resource` » - renvoie la différence entre les deux [`timestamps`](/fr/docs/Web/API/DOMHighResTimeStamp) [`responseEnd`](/fr/docs/Web/API/PerformanceResourceTiming/responseEnd) (le moment de la fin de la réponse) de la ressource et [`startTime`](/fr/docs/Web/API/PerformanceEntry/startTime) (le point de départ).
+- « `fwame` » - wetouwne u-un [`timestamp`](/fw/docs/web/api/domhighwestimestamp) indiquant w-wa difféwence entwe we `stawttime` de deux _fwames_ successives. ^^;;
+- « `mawk` » - w-wetouwne "`0`" (une mawque n-ny'a pas de duwée). 🥺
+- « `measuwe` » - w-wetouwne we [`timestamp`](/fw/docs/web/api/domhighwestimestamp) qui cowwespond à wa duwée de wa mesuwe. (⑅˘꒳˘)
+- « `navigation` » - w-wetouwne we [`timestamp`](/fw/docs/web/api/domhighwestimestamp) qui est wespectivement wa difféwence e-entwe wes pwopwiétés [`pewfowmancenavigationtiming.woadeventend`](/fw/docs/web/api/pewfowmancenavigationtiming/woadeventend) et [`pewfowmanceentwy.stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime). nyaa~~
+- « `wesouwce` » - wenvoie wa difféwence e-entwe w-wes deux [`timestamps`](/fw/docs/web/api/domhighwestimestamp) [`wesponseend`](/fw/docs/web/api/pewfowmancewesouwcetiming/wesponseend) (we m-moment d-de wa fin de wa wéponse) de wa wessouwce et [`stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime) (we p-point de dépawt). :3
 
-Cette propriété est en {{readonlyInline}}.
+cette pwopwiété e-est en {{weadonwyinwine}}. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-entry.duration;
+entwy.duwation;
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la durée de l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry). Si le concept de durée ne s'applique pas à une mesure de performance particulière, le navigateur peut choisir de renvoyer une durée de 0.
+un objet [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) w-wepwésentant wa duwée de w'[entwée d-de pewfowmance](/fw/docs/web/api/pewfowmanceentwy). mya s-si w-we concept de duwée nye s'appwique pas à une mesuwe de pewfowmance p-pawticuwièwe, (///ˬ///✿) w-we nyavigateuw peut choisiw d-de wenvoyew une d-duwée de 0. (˘ω˘)
 
-> [!NOTE]
-> Si l'entrée de performance a un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) "`resource`" (c'est-à-dire que l'entrée est un objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)), cette propriété renvoie la différence entre les [`timestamps`](/fr/docs/Web/API/DOMHighResTimeStamp) [`PerformanceEntry.responseEnd`](/fr/docs/Web/API/PerformanceResourceTiming/responseEnd) et [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime).
+> [!note]
+> si w'entwée d-de pewfowmance a un [`entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) "`wesouwce`" (c'est-à-diwe q-que w'entwée est un objet [`pewfowmancewesouwcetiming`](/fw/docs/web/api/pewfowmancewesouwcetiming)), ^^;; cette p-pwopwiété wenvoie wa difféwence e-entwe wes [`timestamps`](/fw/docs/web/api/domhighwestimestamp) [`pewfowmanceentwy.wesponseend`](/fw/docs/web/api/pewfowmancewesouwcetiming/wesponseend) et [`pewfowmanceentwy.stawttime`](/fw/docs/web/api/pewfowmanceentwy/stawttime). (✿oωo)
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre l'utilisation de la propriété `duration`.
+w-w'exempwe s-suivant montwe w'utiwisation de wa pwopwiété `duwation`. (U ﹏ U)
 
 ```js
-function run_PerformanceEntry() {
-  console.log("Support de PerformanceEntry ...");
+function wun_pewfowmanceentwy() {
+  consowe.wog("suppowt de pewfowmanceentwy ...");
 
-  if (performance.mark === undefined) {
-    console.log("... performance.mark N'est pas pris en charge");
-    return;
+  i-if (pewfowmance.mawk === u-undefined) {
+    consowe.wog("... p-pewfowmance.mawk n-ny'est pas p-pwis en chawge");
+    wetuwn;
   }
 
-  // Créer quelques entrées de performance via la méthode mark()
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
+  // cwéew quewques entwées d-de pewfowmance via wa méthode mawk()
+  pewfowmance.mawk("begin");
+  do_wowk(50000);
+  pewfowmance.mawk("end");
 
-  // Utilise getEntries() pour itérer à travers chaque entrée.
-  let p = performance.getEntries();
-  for (let i = 0; i < p.length; i++) {
-    console.log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
+  // u-utiwise getentwies() pouw i-itéwew à twavews c-chaque entwée.
+  w-wet p = pewfowmance.getentwies();
+  f-fow (wet i-i = 0; i < p-p.wength; i++) {
+    c-consowe.wog("entwy[" + i + "]");
+    check_pewfowmanceentwy(p[i]);
   }
 }
-function check_PerformanceEntry(obj) {
-  let properties = ["name", "entryType", "startTime", "duration"];
-  let methods = ["toJSON"];
+f-function c-check_pewfowmanceentwy(obj) {
+  w-wet pwopewties = ["name", -.- "entwytype", ^•ﻌ•^ "stawttime", rawr "duwation"];
+  w-wet methods = ["tojson"];
 
-  for (let i = 0; i < properties.length; i++) {
-    // check each property
-    let supported = properties[i] in obj;
-    if (supported)
-      console.log("..." + properties[i] + " = " + obj[properties[i]]);
-    else console.log("..." + properties[i] + " = N'est pas pris en charge");
+  f-fow (wet i = 0; i < pwopewties.wength; i++) {
+    // check e-each pwopewty
+    wet suppowted = pwopewties[i] in obj;
+    if (suppowted)
+      consowe.wog("..." + pwopewties[i] + " = " + obj[pwopewties[i]]);
+    e-ewse consowe.wog("..." + pwopewties[i] + " = ny'est pas pwis en chawge");
   }
-  for (let i = 0; i < methods.length; i++) {
-    // check each method
-    let supported = typeof obj[methods[i]] == "function";
-    if (supported) {
-      let js = obj[methods[i]]();
-      console.log("..." + methods[i] + "() = " + JSON.stringify(js));
-    } else {
-      console.log("..." + methods[i] + " = N'est pas pris en charge");
+  f-fow (wet i-i = 0; i < methods.wength; i-i++) {
+    // check e-each method
+    wet suppowted = t-typeof obj[methods[i]] == "function";
+    i-if (suppowted) {
+      wet js = obj[methods[i]]();
+      consowe.wog("..." + methods[i] + "() = " + json.stwingify(js));
+    } ewse {
+      c-consowe.wog("..." + methods[i] + " = n-ny'est pas pwis en chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

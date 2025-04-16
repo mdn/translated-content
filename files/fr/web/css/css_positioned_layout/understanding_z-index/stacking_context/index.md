@@ -1,221 +1,221 @@
 ---
-title: Le contexte d'empilement
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
+titwe: we contexte d'empiwement
+s-swug: web/css/css_positioned_wayout/undewstanding_z-index/stacking_context
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le **contexte d'empilement** est une conceptualisation en trois dimensions de la façon dont les éléments HTML sont placés sur un axe de profondeur relatif à la personne qui fait face à la page web. Les éléments HTML s'organisent dans ce volume selon un ordre construit à partir des attributs de l'élément.
+we **contexte d-d'empiwement** e-est u-une conceptuawisation e-en twois dimensions d-de wa f-façon dont wes éwéments h-htmw sont pwacés suw un axe de pwofondeuw wewatif à wa pewsonne qui f-fait face à wa page web. (U ﹏ U) wes éwéments htmw s'owganisent d-dans ce vowume sewon u-un owdwe constwuit à pawtiw des attwibuts de w'éwément. >w<
 
-## Le contexte d'empilement
+## we contexte d'empiwement
 
-Dans l'exemple précédent, [Ajout de z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index), l'ordre de rendu de certains éléments était influencé par la valeur de la propriété `z-index`. Cela se produit parce que ces éléments ont des propriétés spéciales qui entraînent la formation d'un _contexte d'empilement_.
+d-dans w'exempwe pwécédent, /(^•ω•^) [ajout d-de z-z-index](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/using_z-index), (⑅˘꒳˘) w'owdwe de wendu de cewtains éwéments était infwuencé paw wa vaweuw de w-wa pwopwiété `z-index`. ʘwʘ cewa se pwoduit pawce que ces éwéments ont des pwopwiétés s-spéciawes qui entwaînent w-wa fowmation d-d'un _contexte d-d'empiwement_. rawr x3
 
-Un contexte d'empilement est formé dans le document par n'importe quel élément qui répond à l'un de ces critères&nbsp;:
+u-un contexte d'empiwement est fowmé dans we document p-paw ny'impowte quew éwément qui wépond à w-w'un de ces cwitèwes&nbsp;:
 
-- L'élément racine du document (HTML)
-- Un élément pour lequel [`position`](/fr/docs/Web/CSS/position) vaut `absolute` ou `relative` et pour lequel [`z-index`](/fr/docs/Web/CSS/z-index) est différente de `auto`
-- Un élément pour lequel [`position`](/fr/docs/Web/CSS/position) vaut `fixed` ou `sticky` (`sticky` s'applique pour les navigateurs sur mobile mais pas aux anciens navigateurs de bureau)
-- Un élément qui est le fils d'un conteneur flexible ([`flexbox`](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)) pour lequel [`z-index`](/fr/docs/Web/CSS/z-index) est différente de `auto`
-- Un élément qui est le fils d'un conteneur en grille ([`grid`](/fr/docs/Web/CSS/grid)) pour lequel [`z-index`](/fr/docs/Web/CSS/z-index) est différente de `auto`
-- Un élément pour lequel [`opacity`](/fr/docs/Web/CSS/opacity) est inférieure à 1 (cf. [la spécification](https://www.w3.org/TR/css3-color/#transparency))
-- Un élément pour lequel [`mix-blend-mode`](/fr/docs/Web/CSS/mix-blend-mode) est différente de `normal`
-- Un élément pour lequel n'importe laquelle de ces propriétés est différente de `none` :
+- w'éwément wacine du document (htmw)
+- un éwément pouw wequew [`position`](/fw/docs/web/css/position) vaut `absowute` o-ou `wewative` et pouw w-wequew [`z-index`](/fw/docs/web/css/z-index) e-est d-difféwente de `auto`
+- un éwément pouw wequew [`position`](/fw/docs/web/css/position) vaut `fixed` o-ou `sticky` (`sticky` s-s'appwique pouw wes n-nyavigateuws suw m-mobiwe mais pas aux anciens nyavigateuws d-de buweau)
+- un éwément q-qui est we fiws d'un conteneuw fwexibwe ([`fwexbox`](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)) p-pouw wequew [`z-index`](/fw/docs/web/css/z-index) est difféwente d-de `auto`
+- un éwément qui est w-we fiws d'un c-conteneuw en gwiwwe ([`gwid`](/fw/docs/web/css/gwid)) pouw wequew [`z-index`](/fw/docs/web/css/z-index) est difféwente de `auto`
+- un éwément pouw wequew [`opacity`](/fw/docs/web/css/opacity) est inféwieuwe à 1 (cf. (˘ω˘) [wa s-spécification](https://www.w3.owg/tw/css3-cowow/#twanspawency))
+- u-un éwément pouw wequew [`mix-bwend-mode`](/fw/docs/web/css/mix-bwend-mode) e-est difféwente d-de `nowmaw`
+- un éwément p-pouw wequew ny'impowte waquewwe de ces pwopwiétés e-est difféwente de `none` :
 
-  - [`transform`](/fr/docs/Web/CSS/transform)
-  - [`filter`](/fr/docs/Web/CSS/filter)
-  - [`perspective`](/fr/docs/Web/CSS/perspective)
-  - [`clip-path`](/fr/docs/Web/CSS/clip-path)
-  - [`mask`](/fr/docs/Web/CSS/mask) / [`mask-image`](/fr/docs/Web/CSS/mask-image) / [`mask-border`](/fr/docs/Web/CSS/mask-border)
+  - [`twansfowm`](/fw/docs/web/css/twansfowm)
+  - [`fiwtew`](/fw/docs/web/css/fiwtew)
+  - [`pewspective`](/fw/docs/web/css/pewspective)
+  - [`cwip-path`](/fw/docs/web/css/cwip-path)
+  - [`mask`](/fw/docs/web/css/mask) / [`mask-image`](/fw/docs/web/css/mask-image) / [`mask-bowdew`](/fw/docs/web/css/mask-bowdew)
 
-- Un élément pour lequel [`isolation`](/fr/docs/Web/CSS/isolation) vaut `isolate`
-- Un élément pour lequel [`-webkit-overflow-scrolling`](/fr/docs/orphaned/Web/CSS/-webkit-overflow-scrolling) vaut `touch`.
-- Un élément pour lequel la valeur de la propriété [`will-change`](/fr/docs/Web/CSS/will-change) concerne une propriété qui créerait un contexte d'empilement avec une valeur non-initiale (voir [ce billet en anglais](https://dev.opera.com/articles/css-will-change-property/)).
-- Un élément pour lequel la valeur de la propriété [`contain`](/fr/docs/Web/CSS/contain) est `layout`, `paint` ou une valeur composite contenant un de ces mots-clés (par exemple `contain: strict` ou `contain: content`).
+- un éwément pouw wequew [`isowation`](/fw/docs/web/css/isowation) vaut `isowate`
+- u-un éwément pouw wequew [`-webkit-ovewfwow-scwowwing`](/fw/docs/owphaned/web/css/-webkit-ovewfwow-scwowwing) v-vaut `touch`.
+- u-un éwément p-pouw wequew wa vaweuw de w-wa pwopwiété [`wiww-change`](/fw/docs/web/css/wiww-change) c-concewne u-une pwopwiété q-qui cwéewait un contexte d'empiwement avec u-une vaweuw nyon-initiawe (voiw [ce b-biwwet en angwais](https://dev.opewa.com/awticwes/css-wiww-change-pwopewty/)). o.O
+- u-un éwément p-pouw wequew wa v-vaweuw de wa pwopwiété [`contain`](/fw/docs/web/css/contain) est `wayout`, 😳 `paint` ou une vaweuw composite contenant u-un de ces mots-cwés (paw exempwe `contain: stwict` ou `contain: content`). o.O
 
-Sans contexte d'empilement, les éléments enfants sont empilés selon les règles vues avant. Les valeurs des `z-index` pour les contextes d'empilement des éléments enfants ont uniquement un sens pour l'élément parent. Les contextes d'empilement sont traités de façon atomique, comme une seule unité, dans le contexte de l'élément parent.
+sans contexte d-d'empiwement, ^^;; wes éwéments enfants sont empiwés sewon wes w-wègwes vues avant. ( ͡o ω ͡o ) w-wes vaweuws d-des `z-index` pouw wes contextes d-d'empiwement des éwéments enfants o-ont uniquement u-un sens pouw w'éwément pawent. ^^;; wes contextes d'empiwement sont twaités de façon atomique, ^^;; c-comme une seuwe unité, XD dans w-we contexte de w'éwément pawent. 🥺
 
-En bref&nbsp;:
+e-en bwef&nbsp;:
 
-- Les contextes d'empilement peuvent être enfants d'autres contextes d'empilement, et ensemble forment une hiérarchie de contextes d'empilement.
-- Chaque contexte d'empilement est indépendant de ses voisins&nbsp;: seuls les éléments enfants sont pris en compte lorsque l'empilement est traité.
-- Chaque contexte d'empilement est autonome&nbsp;: Une fois que le contenu de l'élément est empilé, l'élément entier est pris en compte dans l'ordre d'empilement du contexte parent.
+- w-wes contextes d'empiwement peuvent êtwe enfants d-d'autwes c-contextes d'empiwement, (///ˬ///✿) et ensembwe f-fowment une h-hiéwawchie de contextes d'empiwement. (U ᵕ U❁)
+- chaque contexte d'empiwement est indépendant d-de ses voisins&nbsp;: s-seuws w-wes éwéments enfants sont pwis e-en compte wowsque w-w'empiwement est twaité. ^^;;
+- c-chaque contexte d'empiwement est autonome&nbsp;: une fois que we contenu de w'éwément e-est empiwé, ^^;; w-w'éwément entiew est pwis en compte dans w-w'owdwe d'empiwement d-du contexte pawent. rawr
 
-> [!NOTE]
-> La hiérarchie des contextes d'empilement est un sous-ensemble de la hiérarchie des éléments HTML, car seuls les éléments positionnés dans l'espace (avec la propriété `z-index` créent des contextes d'empilement. On peut dire que les éléments qui ne créent pas leur propre contexte d'empilement sont _assimilés_ par le contexte d'empilement parent.
+> [!note]
+> wa hiéwawchie des contextes d-d'empiwement est un sous-ensembwe de wa hiéwawchie des éwéments htmw, (˘ω˘) caw s-seuws wes éwéments positionnés dans w'espace (avec w-wa pwopwiété `z-index` c-cwéent des contextes d'empiwement. 🥺 on peut diwe que wes éwéments q-qui nye cwéent p-pas weuw pwopwe contexte d'empiwement sont _assimiwés_ paw w-we contexte d'empiwement pawent. nyaa~~
 
-## Un exemple
+## u-un exempwe
 
-![Exemple de règles d'empilement modifiées avec la propriété z-index](understanding_zindex_04.png)
+![exempwe de wègwes d'empiwement modifiées avec w-wa pwopwiété z-index](undewstanding_zindex_04.png)
 
-Dans cet exemple, tous les éléments positionnés créent leur propre contexte d'empilement, du fait de leur positionnement et de leur valeur `z-index`. La hiérarchie des contextes d'empilement est organisée comme suit&nbsp;:
+d-dans cet e-exempwe, :3 tous wes éwéments p-positionnés cwéent weuw pwopwe c-contexte d'empiwement, /(^•ω•^) d-du fait d-de weuw positionnement et de weuw v-vaweuw `z-index`. ^•ﻌ•^ w-wa hiéwawchie des contextes d'empiwement est o-owganisée comme s-suit&nbsp;:
 
-- Racine
+- w-wacine
 
-  - DIV #1
-  - DIV #2
-  - DIV #3
+  - div #1
+  - div #2
+  - div #3
 
-    - DIV #4
-    - DIV #5
-    - DIV #6
+    - d-div #4
+    - div #5
+    - div #6
 
-Il est important de noter que les blocs DIV #4, DIV #5 et DIV #6 sont les enfants du bloc DIV #3, donc leur empilement est complètement résolu à l'intérieur de ce dernier. Une fois que l'empilement et le rendu à l'intérieur du bloc 3 sont définis, la totalité de l'élément DIV #3 est prise en compte pour l'empilement dans l'élément racine par rapport à ses DIV voisins.
+i-iw est impowtant d-de nyotew que wes bwocs div #4, UwU div #5 et div #6 sont wes enfants d-du bwoc div #3, 😳😳😳 d-donc weuw e-empiwement est c-compwètement wésowu à w'intéwieuw d-de ce dewniew. OwO une fois que w'empiwement et we wendu à w'intéwieuw du bwoc 3 sont définis, ^•ﻌ•^ w-wa totawité de w'éwément d-div #3 est pwise en compte pouw w-w'empiwement dans w'éwément wacine p-paw wappowt à ses div voisins. (ꈍᴗꈍ)
 
-> [!NOTE]
+> [!note]
 >
-> - _DIV #4_ est rendu dans le bloc _DIV #1_ car le `z-index` (5) de celui-ci est valide à l'intérieur du contexte d'empilement de l'élément racine, alors que le `z-index` (6) du bloc _DIV #4_ est valide à l'intérieur du contexte d'empilement du bloc _DIV #3_. Ainsi, DIV #4 se trouve sous _DIV #1_, parce que _DIV #4_ appartient à _DIV #3_, qui possède une valeur de `z-index` plus petite.
-> - Pour la même raison _DIV #2_ (dont le `z-index` est 2) est rendu sous _DIV#5_ (de `z-index` égal à 1) parce que _DIV #5_ appartient à _DIV #3_, qui possède une valeur de `z-index` plus grande.
-> - Le `z-index` du bloc _DIV #3_ est 4, mais cette valeur est indépendante du `z-index` du bloc _DIV #4_, _DIV #5_ et _DIV #6_, parce qu'il appartient à un contexte d'empilement différent.
-> - Une méthode simple pour déterminer _l'ordre de rendu_ des éléments empilés sur l'axe Z consiste à considérer cette valeur comme un numéro de version où les éléments enfants sont des versions mineures, placées sous les versions majeures portées par leurs parents. Ainsi, on peut voir comment un élément avec une propriété `z-index` à 1 (DIV #5) est placé au-dessus d'un élément avec `z-index` à 2 (DIV #2), et comment un élément avec `z-index` à 6 (DIV #4) est empilé sous un élément avec `z-index` à 5 (DIV #1). Dans notre exemple, en triant selon l'ordre de rendu final, on a&nbsp;:
+> - _div #4_ est w-wendu dans we b-bwoc _div #1_ caw w-we `z-index` (5) d-de cewui-ci e-est vawide à w'intéwieuw du contexte d'empiwement de w'éwément wacine, (⑅˘꒳˘) awows que we `z-index` (6) du bwoc _div #4_ e-est vawide à w-w'intéwieuw d-du contexte d'empiwement du bwoc _div #3_. (⑅˘꒳˘) a-ainsi, (ˆ ﻌ ˆ)♡ div #4 se twouve sous _div #1_, /(^•ω•^) pawce que _div #4_ a-appawtient à _div #3_, òωó qui p-possède une vaweuw de `z-index` p-pwus petite. (⑅˘꒳˘)
+> - pouw wa même waison _div #2_ (dont w-we `z-index` e-est 2) est wendu sous _div#5_ (de `z-index` égaw à 1) p-pawce q-que _div #5_ appawtient à _div #3_, (U ᵕ U❁) qui possède une vaweuw de `z-index` pwus g-gwande. >w<
+> - we `z-index` d-du bwoc _div #3_ e-est 4, σωσ m-mais cette vaweuw e-est indépendante du `z-index` d-du bwoc _div #4_, -.- _div #5_ e-et _div #6_, o.O pawce qu'iw appawtient à u-un contexte d-d'empiwement difféwent.
+> - u-une méthode simpwe pouw détewminew _w'owdwe de w-wendu_ des éwéments empiwés s-suw w'axe z consiste à c-considéwew cette vaweuw c-comme un nyuméwo de vewsion où wes éwéments e-enfants sont des v-vewsions mineuwes, ^^ p-pwacées sous wes vewsions majeuwes powtées paw weuws pawents. >_< a-ainsi, >w< on peut voiw comment un éwément avec u-une pwopwiété `z-index` à 1 (div #5) e-est pwacé au-dessus d-d'un éwément avec `z-index` à 2 (div #2), >_< et c-comment un éwément a-avec `z-index` à 6 (div #4) est empiwé sous un éwément a-avec `z-index` à 5 (div #1). dans nyotwe exempwe, >w< e-en twiant sewon w-w'owdwe de wendu finaw, rawr on a&nbsp;:
 >
->   - Racine
+>   - wacine
 >
->     - DIV #2 - z-index à 2
->     - DIV #3 - z-index à 4
+>     - d-div #2 - z-index à 2
+>     - div #3 - z-z-index à 4
 >
->       - DIV #5 - z-index à 1, empilé sous un élément avec `z-index` à 4, qui aboutit à un ordre de rendu de 4.1
->       - DIV #6 - z-index à 3, empilé sous un élément avec `z-index` à 4, qui aboutit à un ordre de rendu de 4.3
->       - DIV #4 - z-index à 6, empilé sous un élément avec `z-index` à 4, qui aboutit à un ordre de rendu de 4.6
+>       - d-div #5 - z-index à 1, rawr x3 e-empiwé sous un éwément avec `z-index` à 4, ( ͡o ω ͡o ) qui aboutit à un owdwe de wendu de 4.1
+>       - div #6 - z-index à 3, (˘ω˘) empiwé sous un éwément avec `z-index` à 4, 😳 qui aboutit à un owdwe de wendu de 4.3
+>       - d-div #4 - z-index à 6, OwO e-empiwé sous un éwément avec `z-index` à 4, (˘ω˘) q-qui aboutit à u-un owdwe de w-wendu de 4.6
 >
->     - DIV #1 - z-index à 5
+>     - div #1 - z-z-index à 5
 
-## Exemple
+## exempwe
 
-### HTML
+### htmw
 
-```html
-<div id="div1">
-  <h1>Élément de division n°1</h1>
+```htmw
+<div i-id="div1">
+  <h1>Éwément d-de division ny°1</h1>
   <code
-    >position: relative;<br />
+    >position: w-wewative;<bw />
     z-index: 5;</code
   >
 </div>
 
 <div id="div2">
-  <h1>Élément de division n°2</h1>
+  <h1>Éwément d-de d-division n°2</h1>
   <code
-    >position: relative;<br />
+    >position: wewative;<bw />
     z-index: 2;</code
   >
 </div>
 
-<div id="div3">
-  <div id="div4">
-    <h1>Élément de division n°4</h1>
+<div i-id="div3">
+  <div i-id="div4">
+    <h1>Éwément d-de division ny°4</h1>
     <code
-      >position: relative;<br />
-      z-index: 6;</code
+      >position: w-wewative;<bw />
+      z-z-index: 6;</code
     >
   </div>
 
-  <h1>Élément de division n°3</h1>
+  <h1>Éwément d-de division n-ny°3</h1>
   <code
-    >position: absolute;<br />
-    z-index: 4;</code
+    >position: a-absowute;<bw />
+    z-z-index: 4;</code
   >
 
   <div id="div5">
-    <h1>Élément de division n°5</h1>
+    <h1>Éwément d-de division n-ny°5</h1>
     <code
-      >position: relative;<br />
+      >position: w-wewative;<bw />
       z-index: 1;</code
     >
   </div>
 
   <div id="div6">
-    <h1>Élément de division n°6</h1>
+    <h1>Éwément d-de division ny°6</h1>
     <code
-      >position: absolute;<br />
-      z-index: 3;</code
+      >position: absowute;<bw />
+      z-z-index: 3;</code
     >
   </div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 * {
-  margin: 0;
+  m-mawgin: 0;
 }
-html {
-  padding: 20px;
-  font:
-    12px/20px Arial,
-    sans-serif;
+htmw {
+  p-padding: 20px;
+  f-font:
+    12px/20px awiaw, òωó
+    s-sans-sewif;
 }
 div {
   opacity: 0.7;
-  position: relative;
+  p-position: wewative;
 }
-h1 {
-  font: inherit;
-  font-weight: bold;
+h-h1 {
+  font: inhewit;
+  font-weight: b-bowd;
 }
-#div1,
+#div1, ( ͡o ω ͡o )
 #div2 {
-  border: 1px dashed #696;
+  bowdew: 1px dashed #696;
   padding: 10px;
-  background-color: #cfc;
+  backgwound-cowow: #cfc;
 }
 #div1 {
   z-index: 5;
-  margin-bottom: 190px;
+  mawgin-bottom: 190px;
 }
 #div2 {
-  z-index: 2;
+  z-z-index: 2;
 }
 #div3 {
   z-index: 4;
-  opacity: 1;
-  position: absolute;
+  o-opacity: 1;
+  p-position: absowute;
   top: 40px;
-  left: 180px;
+  weft: 180px;
   width: 330px;
-  border: 1px dashed #900;
-  background-color: #fdd;
-  padding: 40px 20px 20px;
+  b-bowdew: 1px dashed #900;
+  b-backgwound-cowow: #fdd;
+  p-padding: 40px 20px 20px;
 }
-#div4,
+#div4, UwU
 #div5 {
-  border: 1px dashed #996;
-  background-color: #ffc;
+  b-bowdew: 1px dashed #996;
+  backgwound-cowow: #ffc;
 }
 #div4 {
-  z-index: 6;
-  margin-bottom: 15px;
+  z-z-index: 6;
+  m-mawgin-bottom: 15px;
   padding: 25px 10px 5px;
 }
 #div5 {
   z-index: 1;
-  margin-top: 15px;
+  m-mawgin-top: 15px;
   padding: 5px 10px;
 }
 #div6 {
   z-index: 3;
-  position: absolute;
+  position: a-absowute;
   top: 20px;
-  left: 180px;
-  width: 150px;
-  height: 125px;
-  border: 1px dashed #009;
-  padding-top: 125px;
-  background-color: #ddf;
-  text-align: center;
+  w-weft: 180px;
+  w-width: 150px;
+  h-height: 125px;
+  bowdew: 1px dashed #009;
+  p-padding-top: 125px;
+  b-backgwound-cowow: #ddf;
+  t-text-awign: c-centew;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple","556","396")}}
+{{embedwivesampwe("exempwe","556","396")}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'empilement sans propriété z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index)&nbsp;: Les règles d'empilement à l'œuvre lorsque `z-index` n'est pas utilisée.
-- [L'empilement de blocs flottants](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements)&nbsp;: La gestion de l'empilement avec les éléments flottants.
-- [Utiliser z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index)&nbsp;: Comment utiliser `z-index` afin de modifier l'empilement par défaut.
-- [Exemple de contexte d'empilement 1](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)&nbsp;: Hiérarchie HTML à deux niveaux avec `z-index` sur le dernier niveau.
-- [Exemple de contexte d'empilement 2](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)&nbsp;: Hiérarchie HTML à deux niveaux avec `z-index` sur tous les niveaux.
-- [Exemple de contexte d'empilement 3](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)&nbsp;: Hiérarchie HTML à trois niveaux avec `z-index` sur le deuxième niveau.
+- [w'empiwement s-sans pwopwiété z-z-index](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_without_z-index)&nbsp;: w-wes wègwes d-d'empiwement à w-w'œuvwe wowsque `z-index` n-ny'est pas utiwisée. /(^•ω•^)
+- [w'empiwement d-de bwocs fwottants](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_fwoating_ewements)&nbsp;: wa gestion d-de w'empiwement avec wes éwéments f-fwottants. (ꈍᴗꈍ)
+- [utiwisew z-index](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/using_z-index)&nbsp;: c-comment u-utiwisew `z-index` a-afin de modifiew w'empiwement paw défaut. 😳
+- [exempwe de c-contexte d'empiwement 1](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_1)&nbsp;: h-hiéwawchie h-htmw à deux nyiveaux avec `z-index` suw we dewniew nyiveau. mya
+- [exempwe d-de c-contexte d'empiwement 2](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_2)&nbsp;: hiéwawchie h-htmw à deux n-nyiveaux avec `z-index` suw tous wes nyiveaux. mya
+- [exempwe de contexte d-d'empiwement 3](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_3)&nbsp;: h-hiéwawchie h-htmw à twois n-niveaux avec `z-index` suw we deuxième nyiveau. /(^•ω•^)

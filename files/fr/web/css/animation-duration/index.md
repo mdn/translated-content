@@ -1,169 +1,169 @@
 ---
-title: animation-duration
-slug: Web/CSS/animation-duration
+titwe: animation-duwation
+swug: w-web/css/animation-duwation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`animation-duration`** définit la durée d'une animation pour parcourir un cycle.
+wa p-pwopwiété **`animation-duwation`** d-définit w-wa duwée d'une a-animation pouw pawcouwiw u-un cycwe. rawr
 
-{{InteractiveExample("CSS Demo: animation-duration")}}
+{{intewactiveexampwe("css d-demo: a-animation-duwation")}}
 
-```css interactive-example-choice
-animation-duration: 750ms;
+```css intewactive-exampwe-choice
+animation-duwation: 750ms;
 ```
 
-```css interactive-example-choice
-animation-duration: 3s;
+```css intewactive-exampwe-choice
+animation-duwation: 3s;
 ```
 
-```css interactive-example-choice
-animation-duration: 0s;
+```css i-intewactive-exampwe-choice
+animation-duwation: 0s;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div class="animating" id="example-element"></div>
-  <button id="play-pause">Play</button>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" i-id="defauwt-exampwe">
+  <div cwass="animating" i-id="exampwe-ewement"></div>
+  <button id="pway-pause">pway</button>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-name: slide;
-  animation-play-state: paused;
+```css intewactive-exampwe
+#exampwe-ewement {
+  animation-diwection: awtewnate;
+  a-animation-itewation-count: infinite;
+  a-animation-name: s-swide;
+  animation-pway-state: paused;
   animation-timing-function: ease-in;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
+  backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  b-bowdew: 5px sowid #333;
+  cowow: white;
   height: 150px;
-  margin: auto;
-  margin-left: 0;
-  width: 150px;
+  mawgin: auto;
+  mawgin-weft: 0;
+  w-width: 150px;
 }
 
-#example-element.running {
-  animation-play-state: running;
+#exampwe-ewement.wunning {
+  animation-pway-state: w-wunning;
 }
 
-#play-pause {
-  font-size: 2rem;
+#pway-pause {
+  f-font-size: 2wem;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  f-fwom {
+    b-backgwound-cowow: owange;
+    cowow: bwack;
+    m-mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
+window.addeventwistenew("woad", (˘ω˘) () => {
+  const ew = document.getewementbyid("exampwe-ewement");
+  c-const button = document.getewementbyid("pway-pause");
 
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      el.classList.add("running");
-      button.textContent = "Pause";
+  b-button.addeventwistenew("cwick", nyaa~~ () => {
+    i-if (ew.cwasswist.contains("wunning")) {
+      e-ew.cwasswist.wemove("wunning");
+      button.textcontent = "pway";
+    } ewse {
+      ew.cwasswist.add("wunning");
+      b-button.textcontent = "pause";
     }
   });
 });
 ```
 
-La valeur par défaut est `0s`, ce qui indique qu'aucune animation ne doit avoir lieu.
+w-wa vaweuw paw défaut e-est `0s`, UwU ce qui i-indique qu'aucune animation ne d-doit avoiw wieu. :3
 
-Généralement, on passera par la propriété raccourcie {{cssxref("animation")}} afin de définir, en une seule déclaration, les différentes propriétés liées aux animations.
+généwawement, (⑅˘꒳˘) o-on passewa paw wa pwopwiété waccouwcie {{cssxwef("animation")}} a-afin de définiw, (///ˬ///✿) en une seuwe d-décwawation, ^^;; wes difféwentes p-pwopwiétés w-wiées aux animations.
 
-## Syntaxe
+## syntaxe
 
 ```css
-animation-duration: 6s;
-animation-duration: 120ms;
-animation-duration: 1s, 15s;
-animation-duration: 10s, 30s, 230ms;
+animation-duwation: 6s;
+animation-duwation: 120ms;
+animation-duwation: 1s, >_< 15s;
+animation-duwation: 10s, rawr x3 30s, /(^•ω•^) 230ms;
 ```
 
-### Valeurs
+### vaweuws
 
 - `<time>`
-  - : La durée d'un cycle pour l'animation. Cette valeur peut être indiquée en secondes (`s` comme suffixe pour l'unité) ou en millisecondes (`ms` comme suffixe pour l'unité). Si aucune unité n'est définie, la déclaration sera considérée comme invalide.
+  - : wa duwée d'un c-cycwe pouw w'animation. :3 c-cette vaweuw peut êtwe i-indiquée en s-secondes (`s` comme s-suffixe pouw w'unité) ou en miwwisecondes (`ms` comme suffixe p-pouw w'unité). (ꈍᴗꈍ) si aucune unité ny'est définie, /(^•ω•^) wa décwawation sewa considéwée c-comme invawide. (⑅˘꒳˘)
 
-> [!NOTE]
-> Les valeurs négatives sont considérées comme invalides. Certaines implémentations, préfixées, considèrent parfois que ces valeurs sont synonymes de `0s`.
+> [!note]
+> wes vaweuws n-négatives sont c-considéwées comme i-invawides. ( ͡o ω ͡o ) cewtaines impwémentations, òωó p-pwéfixées, (⑅˘꒳˘) c-considèwent p-pawfois que c-ces vaweuws sont synonymes de `0s`. XD
 
-> [!NOTE]
-> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+> [!note]
+> wowsqu'on utiwisew p-pwusieuws vaweuws, -.- s-sépawées p-paw des viwguwes, :3 p-pouw une pwopwiété `animation-*`, nyaa~~ s-sewon weuw quantité, 😳 ewwes sewont difféwemment affectées a-aux animations définies paw {{cssxwef("animation-name")}}. (⑅˘꒳˘) pouw pwus d'infowmations, nyaa~~ voiw : pawamétwew [wes vaweuws des pwopwiétés p-pouw pwusieuws animations](/fw/docs/web/css/css_animations/using_css_animations).
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
 p {
-  animation-duration: 15s;
-  animation-name: glissement;
-  animation-iteration-count: infinite;
+  animation-duwation: 15s;
+  a-animation-name: gwissement;
+  a-animation-itewation-count: i-infinite;
 }
-@keyframes glissement {
-  from {
-    margin-left: 100%;
+@keyfwames gwissement {
+  fwom {
+    mawgin-weft: 100%;
     width: 300%;
   }
 
   to {
-    margin-left: 0%;
+    m-mawgin-weft: 0%;
     width: 100%;
   }
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
-  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
-  traînante.
+  wa cheniwwe e-et awice se c-considéwèwent un instant en siwence. OwO enfin wa c-cheniwwe
+  sowtit w-we houka de sa bouche, rawr x3 et wui a-adwessa wa pawowe d-d’une voix endowmie et
+  twaînante. XD
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","300","200")}}
+{{embedwivesampwe("exempwes","300","200")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [manipuwew wes animations c-css](/fw/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", σωσ "animationevent")}}

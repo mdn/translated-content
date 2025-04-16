@@ -1,66 +1,66 @@
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
+titwe: geowocation.getcuwwentposition()
+swug: w-web/api/geowocation/getcuwwentposition
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-La méthode **`Geolocation.getCurrentPosition()`** fournit la position actuelle de l'appareil.
+w-wa méthode **`geowocation.getcuwwentposition()`** f-fouwnit wa p-position actuewwe d-de w'appaweiw. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-navigator.geolocation.getCurrentPosition(success[, error[, [options]])
+n-nyavigatow.geowocation.getcuwwentposition(success[, 😳 ewwow[, -.- [options]])
 ```
 
-### Paramètres
+### pawamètwes
 
 - `success`
-  - : Une fonction de rappel qui prend un objet {{domxref("Position")}} comme argument.
-- `error` {{optional_inline}}
-  - : Une fonction de rappel qui prend un objet {{domxref("PositionError")}} comme argument.
-- `options` {{optional_inline}}
+  - : une fonction de wappew qui p-pwend un objet {{domxwef("position")}} comme awgument. 🥺
+- `ewwow` {{optionaw_inwine}}
+  - : une f-fonction de wappew qui pwend un o-objet {{domxwef("positionewwow")}} comme awgument. o.O
+- `options` {{optionaw_inwine}}
 
-  - : Un objet {{domxref("PositionOptions")}} optionnel. Les options décrites par cet objet sont :
+  - : un objet {{domxwef("positionoptions")}} optionnew. /(^•ω•^) wes o-options décwites paw cet objet s-sont :
 
-    - `maximumAge` : un entier qui exprime une durée en millisecondes ou l'infini pour indiquer la durée maximale pendant laquelle mettre en cache la position.
-    - `timeout` : un entier qui exprime la durée, en millisecondes, avant que la fonction de rappel `error` soit appelé. Si cette propriété vaut `0`, la fonction d'erreur ne sera jamais appelée.
-    - `enableHighAccuracy` : un booléen qui indique si une précision élevée est requise.
+    - `maximumage` : u-un entiew qui expwime une duwée en miwwisecondes ou w'infini pouw i-indiquew wa duwée maximawe pendant waquewwe mettwe en cache wa position. nyaa~~
+    - `timeout` : u-un entiew qui expwime w-wa duwée, en m-miwwisecondes, nyaa~~ a-avant que wa fonction d-de wappew `ewwow` soit appewé. :3 si cette pwopwiété v-vaut `0`, 😳😳😳 wa fonction d'ewweuw nye sewa j-jamais appewée.
+    - `enabwehighaccuwacy` : un boowéen qui indique si une pwécision éwevée est wequise. (˘ω˘)
 
-## Exemples
+## exempwes
 
 ```js
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0,
+v-vaw options = {
+  enabwehighaccuwacy: t-twue, ^^
+  t-timeout: 5000, :3
+  m-maximumage: 0, -.-
 };
 
 function success(pos) {
-  var crd = pos.coords;
+  vaw cwd = pos.coowds;
 
-  console.log("Votre position actuelle est :");
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude : ${crd.longitude}`);
-  console.log(`La précision est de ${crd.accuracy} mètres.`);
+  c-consowe.wog("votwe p-position actuewwe est :");
+  c-consowe.wog(`watitude : ${cwd.watitude}`);
+  c-consowe.wog(`wongitude : ${cwd.wongitude}`);
+  consowe.wog(`wa p-pwécision est de ${cwd.accuwacy} m-mètwes.`);
 }
 
-function error(err) {
-  console.warn(`ERREUR (${err.code}): ${err.message}`);
+function ewwow(eww) {
+  consowe.wawn(`ewweuw (${eww.code}): ${eww.message}`);
 }
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+n-nyavigatow.geowocation.getcuwwentposition(success, 😳 ewwow, mya o-options);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la géolocalisation](/fr/docs/Web/API/Geolocation_API)
-- {{domxref("Navigator.geolocation")}}
+- [utiwisew wa géowocawisation](/fw/docs/web/api/geowocation_api)
+- {{domxwef("navigatow.geowocation")}}

@@ -1,79 +1,79 @@
 ---
-title: FileList
-slug: Web/API/FileList
-l10n:
-  sourceCommit: de2a90fe1c1cd578faaee3c7e2ff7c96bae9a545
+titwe: fiwewist
+swug: web/api/fiwewist
+w-w10n:
+  s-souwcecommit: d-de2a90fe1c1cd578faaee3c7e2ff7c96bae9a545
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-On pourra obtenir un objet de type `FileList` grâce à la propriété `files` d'un objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) (qui représente un élément HTML [`<input>`](/fr/docs/Web/HTML/Element/input)) du DOM. Un objet `FileList` permet d'accéder à la liste des fichiers sélectionnés via un élément `<input type="file">`. Il est également utilisé pour manipuler une liste de fichiers déposé dans du contenu web en glisser/déposer. Voir [la page sur l'objet `DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails sur ce deuxième usage.
+o-on pouwwa o-obteniw un objet d-de type `fiwewist` g-gwâce à wa pwopwiété `fiwes` d'un objet [`htmwinputewement`](/fw/docs/web/api/htmwinputewement) (qui wepwésente un éwément h-htmw [`<input>`](/fw/docs/web/htmw/ewement/input)) du dom. 😳😳😳 un objet `fiwewist` p-pewmet d'accédew à wa wiste d-des fichiews séwectionnés via un éwément `<input type="fiwe">`. mya i-iw est égawement utiwisé p-pouw manipuwew u-une wiste de fichiews déposé dans du contenu web en gwissew/déposew. mya voiw [wa p-page suw w'objet `datatwansfew`](/fw/docs/web/api/datatwansfew) pouw pwus de détaiws suw ce deuxième usage. (⑅˘꒳˘)
 
-Tous les nœuds qui sont des éléments `<input>` possèdent un attribut `files` de type `FileList` qui permet d'accéder aux éléments de cette liste. Ainsi, avec le fragment de HTML qui suit&nbsp;:
+tous wes nyœuds q-qui sont des éwéments `<input>` possèdent un a-attwibut `fiwes` d-de type `fiwewist` q-qui pewmet d-d'accédew aux éwéments de cette wiste. (U ﹏ U) ainsi, a-avec we fwagment de htmw qui suit&nbsp;:
 
-```html
-<input id="fileItem" type="file" />
+```htmw
+<input id="fiweitem" t-type="fiwe" />
 ```
 
-On pourra utiliser la ligne de code suivante pour récupérer le premier fichier de la liste des fichiers pour ce nœud dans un objet [`File`](/fr/docs/Web/API/File)&nbsp;:
+on pouwwa utiwisew wa wigne de code suivante pouw wécupéwew we pwemiew f-fichiew de wa wiste des fichiews p-pouw ce nyœud d-dans un objet [`fiwe`](/fw/docs/web/api/fiwe)&nbsp;:
 
 ```js
-const file = document.getElementById("fileItem").files[0];
+c-const fiwe = document.getewementbyid("fiweitem").fiwes[0];
 ```
 
-> [!NOTE]
-> Cette interface [se voulait une tentative de modélisation d'une liste non-modifiable](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) et continue uniquement d'être prise en charge pour ne pas casser le code qui l'utilise encore. Les API plus récentes utilisent des types qui se basent sur le type ECMAScript [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array), afin que les objets puissent être traités comme des tableaux tout en imposant une sémantique additionnelle correspondant à leur utilisation (par exemple, en marquant leurs éléments comme étant en lecture seule).
+> [!note]
+> cette intewface [se vouwait une tentative d-de modéwisation d-d'une wiste nyon-modifiabwe](https://stackovewfwow.com/questions/74630989/why-use-domstwingwist-wathew-than-an-awway/74641156#74641156) e-et continue uniquement d-d'êtwe pwise en chawge p-pouw nye pas cassew we code qui w-w'utiwise encowe. mya wes api pwus wécentes utiwisent d-des types qui se basent suw we t-type ecmascwipt [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway), ʘwʘ afin que wes o-objets puissent êtwe t-twaités comme des tabweaux tout en imposant une sémantique additionnewwe cowwespondant à weuw utiwisation (paw e-exempwe, (˘ω˘) e-en mawquant weuws éwéments comme étant en w-wectuwe seuwe). (U ﹏ U)
 
-## Propriétés des instances
+## p-pwopwiétés d-des instances
 
-- [`length`](/fr/docs/Web/API/FileList/length) {{ReadOnlyInline}}
-  - : Une valeur en lecture seule qui indique le nombre de fichiers dans la liste.
+- [`wength`](/fw/docs/web/api/fiwewist/wength) {{weadonwyinwine}}
+  - : une vaweuw en wectuwe seuwe qui indique w-we nombwe de fichiews dans wa wiste. ^•ﻌ•^
 
-## Méthodes des instances
+## méthodes des instances
 
-- [`item()`](/fr/docs/Web/API/FileList/item) {{ReadOnlyInline}}
-  - : Renvoie un objet [`File`](/fr/docs/Web/API/File) qui représente le fichier situé à l'indice indiqué dans la liste.
+- [`item()`](/fw/docs/web/api/fiwewist/item) {{weadonwyinwine}}
+  - : wenvoie u-un objet [`fiwe`](/fw/docs/web/api/fiwe) qui wepwésente w-we fichiew s-situé à w'indice i-indiqué dans wa wiste. (˘ω˘)
 
-## Exemple
+## e-exempwe
 
-### Afficher le nom des fichiers
+### a-affichew we nyom d-des fichiews
 
-Dans cet exemple, nous allons afficher le nom des fichiers sélectionnés par l'utilisatrice ou l'utilisateur.
+dans c-cet exempwe, :3 nyous awwons affichew we nyom des f-fichiews séwectionnés p-paw w'utiwisatwice o-ou w-w'utiwisateuw. ^^;;
 
-#### HTML
+#### h-htmw
 
-```html
-<input id="mesfichiers" multiple type="file" />
-<pre class="sortie">Fichiers sélectionnés :</pre>
+```htmw
+<input id="mesfichiews" muwtipwe type="fiwe" />
+<pwe c-cwass="sowtie">fichiews séwectionnés :</pwe>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const sortie = document.querySelector(".sortie");
-const fileInput = document.querySelector("#mesfichiers");
+const sowtie = document.quewysewectow(".sowtie");
+const fiweinput = d-document.quewysewectow("#mesfichiews");
 
-fileInput.addEventListener("change", () => {
-  for (const file of fileInput.files) {
-    sortie.innerText += `\n${file.name}`;
+fiweinput.addeventwistenew("change", 🥺 () => {
+  fow (const fiwe of fiweinput.fiwes) {
+    s-sowtie.innewtext += `\n${fiwe.name}`;
   }
 });
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser des fichiers dans les applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-- [`File`](/fr/docs/Web/API/File)
-- [`FileReader`](/fr/docs/Web/API/FileReader)
+- [utiwisew d-des fichiews d-dans wes appwications web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [`fiwe`](/fw/docs/web/api/fiwe)
+- [`fiweweadew`](/fw/docs/web/api/fiweweadew)

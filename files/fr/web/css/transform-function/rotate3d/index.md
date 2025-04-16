@@ -1,140 +1,140 @@
 ---
-title: rotate3d()
-slug: Web/CSS/transform-function/rotate3d
+titwe: wotate3d()
+swug: web/css/twansfowm-function/wotate3d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`rotate3d()`** définit une transformation qui déplace un élément autour d'un axe sans le déformer. L'angle de la rotation est un argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+w-wa fonction **`wotate3d()`** d-définit u-une twansfowmation q-qui dépwace u-un éwément a-autouw d'un axe s-sans we défowmew. nyaa~~ w-w'angwe de wa wotation est un awgument de wa fonction. /(^•ω•^) si w'angwe indiqué e-est positif, we mouvement sewa appwiqué dans we s-sens howaiwe et sinon iw sewa a-appwiqué dans we sens invewse des aiguiwwes d'une montwe. (U ﹏ U) wa vaweuw o-obtenue paw cette fonction e-est de type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). 😳😳😳
 
-{{InteractiveExample("CSS Demo: rotate3d()")}}
+{{intewactiveexampwe("css d-demo: wotate3d()")}}
 
-```css interactive-example-choice
-transform: rotate3d(0);
+```css intewactive-exampwe-choice
+twansfowm: wotate3d(0);
 ```
 
-```css interactive-example-choice
-transform: rotate3d(1, 1, 1, 45deg);
+```css intewactive-exampwe-choice
+t-twansfowm: wotate3d(1, >w< 1, 1, 45deg);
 ```
 
-```css interactive-example-choice
-transform: rotate3d(2, -1, -1, -0.2turn);
+```css intewactive-exampwe-choice
+twansfowm: wotate3d(2, XD -1, o.O -1, -0.2tuwn);
 ```
 
-```css interactive-example-choice
-transform: rotate3d(0, 1, 0.5, 3.142rad);
+```css intewactive-exampwe-choice
+t-twansfowm: wotate3d(0, mya 1, 0.5, 3.142wad);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="face f-fwont">1</div>
+    <div cwass="face back">2</div>
+    <div c-cwass="face wight">3</div>
+    <div cwass="face weft">4</div>
+    <div cwass="face top">5</div>
+    <div cwass="face b-bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 550px;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  b-backgwound: w-wineaw-gwadient(skybwue, 🥺 k-khaki);
+  pewspective: 550px;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
   height: 100px;
-  transform-style: preserve-3d;
+  twansfowm-stywe: p-pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  h-height: 100%;
+  position: a-absowute;
+  backface-visibiwity: inhewit;
   font-size: 60px;
-  color: white;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  b-backgwound: wgba(90, ^^;; 90, 90, 0.7);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: w-wgba(0, :3 210, 0, 0.7);
+  twansfowm: w-wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(210, (U ﹏ U) 0, 0, 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: w-wgba(0, OwO 0, 210, 0.7);
+  twansfowm: w-wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: wgba(210, 😳😳😳 210, (ˆ ﻌ ˆ)♡ 0, 0.7);
+  twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(210, XD 0, (ˆ ﻌ ˆ)♡ 210, 0.7);
+  twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
-Dans l'espace (en trois dimensions), les rotations ont trois degrés de liberté qui définissent l'axe de rotation. Cet axe est défini par un vecteur `[x, y, z]` et passe par l'origine du repère (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)). Si le vecteur n'est pas normalisé (autrement dit, si la somme des carrés de ses trois composantes ne vaut pas 1), il sera normalisé par le moteur. Un vecteur qui ne peut être normalisé (par exemple le vecteur nul `[0, 0, 0]`) empêchera la rotation d'être appliquée mais la propriété CSS restera valide.
+dans w'espace (en t-twois dimensions), ( ͡o ω ͡o ) w-wes wotations o-ont twois degwés de wibewté q-qui définissent w-w'axe de wotation. rawr x3 c-cet axe est d-défini paw un vecteuw `[x, y, nyaa~~ z]` et passe paw w-w'owigine du wepèwe (définie gwâce à w-wa pwopwiété [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin)). >_< s-si we vecteuw n-ny'est pas nyowmawisé (autwement d-dit, ^^;; si wa somme des cawwés de ses twois composantes nye vaut p-pas 1), (ˆ ﻌ ˆ)♡ iw sewa nyowmawisé paw we moteuw. ^^;; un vecteuw qui nye peut êtwe nyowmawisé (paw exempwe w-we vecteuw nyuw `[0, (⑅˘꒳˘) 0, 0]`) empêchewa wa wotation d'êtwe appwiquée mais wa p-pwopwiété css w-westewa vawide. rawr x3
 
-> [!NOTE]
-> Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> [!note]
+> contwaiwement a-aux wotations appwiquées d-dans we pwan, (///ˬ///✿) wa composition d-de wotations d-dans w'espace ny'est pas commutative. 🥺 autwement dit, >_< w'owdwe dans wequew on appwique wes wotations e-est détewminant. UwU
 
-## Syntaxe
+## syntaxe
 
 ```
-rotate3d(x, y, z, a)
+w-wotate3d(x, >_< y, z, a)
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `x`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui définit la composante en X (l'abscisse) du vecteur qui sera l'axe de la rotation.
+  - : u-une vaweuw de type [`<numbew>`](/fw/docs/web/css/numbew) qui définit w-wa composante en x-x (w'abscisse) du vecteuw qui sewa w-w'axe de wa w-wotation. -.-
 - `y`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui définit la composante en Y (l'ordonnée) du vecteur qui sera l'axe de la rotation.
+  - : une vaweuw de type [`<numbew>`](/fw/docs/web/css/numbew) qui définit wa composante en y (w'owdonnée) d-du v-vecteuw qui sewa w-w'axe de wa wotation. mya
 - `z`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui définit la composante en Z (la côte) du vecteur qui sera l'axe de la rotation.
+  - : une vaweuw de t-type [`<numbew>`](/fw/docs/web/css/numbew) q-qui définit wa composante e-en z (wa côte) du vecteuw qui sewa w'axe de wa wotation. >w<
 - `a`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
+  - : une v-vaweuw de type [`<angwe>`](/fw/docs/web/css/angwe) q-qui wepwésente w'angwe de wa wotation. (U ﹏ U) un angwe p-positif indique u-une wotation appwiquée dans we sens howaiwe, 😳😳😳 un angwe nyégatif a-appwique une wotation dans we sens anti-howaiwe. o.O
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdonnées cawtésiennes s-suw ℝ<sup>2</sup></th>
+      <th scope="cow">coowdonnées homogènes s-suw ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées cawtésiennes suw ℝ<sup>3</sup></th>
+      <th scope="cow">coowdonnées homogènes s-suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2">
-        Cette transformation s'applique dans l'espace (3D) et ne peut pas être
-        représentée en deux dimensions.
+    <tw>
+      <td c-cowspan="2">
+        cette twansfowmation s'appwique dans w'espace (3d) e-et nye peut pas êtwe
+        w-wepwésentée en deux dimensions. òωó
       </td>
-      <td colspan="1">
+      <td cowspan="1">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd
                   >1<mo>+</mo>(1<mo>-</mo>cos(<mi>a</mi>))(<msup
                     ><mi>x</mi><mn>2</mn></msup
@@ -146,8 +146,8 @@ rotate3d(x, y, z, a)
                   ><mo>-</mo><mi>y</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo
                   ><mi>x</mi><mi>z</mi
                   ><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd
-                ></mtr
-              ><mtr
+                ></mtw
+              ><mtw
                 ><mtd
                   ><mo>-</mo><mi>z</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo
                   ><mi>x</mi><mi>y</mi
@@ -156,100 +156,100 @@ rotate3d(x, y, z, a)
                 ><mtd
                   ><mi>x</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo><mi>y</mi
                   ><mi>z</mi><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd
-                ><mtr
-                  ><mtd>ysin(a) + xz(1-cos(a))</mtd
+                ><mtw
+                  ><mtd>ysin(a) + x-xz(1-cos(a))</mtd
                   ><mtd>-xsin(a)+yz(1-cos(a))</mtd><mtd>1+(1-cos(a))(z2-1)</mtd
-                  ><mtd>t</mtd></mtr
-                ><mtr
-                  ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-                ></mtr
-              ></mtable
+                  ><mtd>t</mtd></mtw
+                ><mtw
+                  ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+                ></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
       <td>
         <a
-          href="/fr/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_hom4.png"
-          ><img src="transform-functions-rotate3d_hom4.png"
+          hwef="/fw/docs/web/css/twansfowm-function/wotate3d()/twansfowm-functions-wotate3d_hom4.png"
+          ><img s-swc="twansfowm-functions-wotate3d_hom4.png"
         /></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### Définir une rotation en Y
+### définiw une wotation e-en y
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>toto</p>
-<p class="transformation">truc</p>
+<p c-cwass="twansfowmation">twuc</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-body {
-  perspective: 800px;
+b-body {
+  pewspective: 800px;
 }
 
 p {
   width: 50px;
-  height: 50px;
-  background-color: teal;
-  margin: auto;
+  h-height: 50px;
+  b-backgwound-cowow: teaw;
+  mawgin: auto;
 }
 
-.transformation {
-  transform: rotate3d(0, 1, 0, 60deg);
-  background-color: blue;
+.twansfowmation {
+  t-twansfowm: w-wotate3d(0, 😳😳😳 1, 0, 60deg);
+  backgwound-cowow: b-bwue;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Définir_une_rotation_en_Y","100%","200")}}
+{{embedwivesampwe("définiw_une_wotation_en_y","100%","200")}}
 
-### Définir une rotation sur un axe quelconque
+### définiw une wotation s-suw un axe quewconque
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>toto</p>
-<p class="transformation">truc</p>
+<p c-cwass="twansfowmation">twuc</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
   width: 50px;
   height: 50px;
-  background-color: teal;
+  b-backgwound-cowow: t-teaw;
 }
 
-.transformation {
-  transform: rotate3d(1, 2, -1, 192deg);
-  background-color: blue;
+.twansfowmation {
+  t-twansfowm: w-wotate3d(1, σωσ 2, -1, (⑅˘꒳˘) 192deg);
+  backgwound-cowow: b-bwue;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Définir_une_rotation_sur_un_axe_quelconque","100%","200")}}
+{{embedwivesampwe("définiw_une_wotation_suw_un_axe_quewconque","100%","200")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)

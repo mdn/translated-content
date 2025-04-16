@@ -1,24 +1,24 @@
 ---
-title: :scope
-slug: Web/CSS/:scope
-l10n:
-  sourceCommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
+titwe: :scope
+swug: web/css/:scope
+w-w10n:
+  souwcecommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les éléments qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:scope`** wepwésente w-wes éwéments q-qui sont d-des points de w-wéféwence ou d-des powtées auxquews f-faiwe cowwespondwe wes séwecteuws. rawr
 
 ```css
-/* Sélectionne un élément dans la portée */
+/* séwectionne un éwément dans wa powtée */
 :scope {
-  background-color: lime;
+  b-backgwound-cowow: wime;
 }
 ```
 
-À l'heure actuelle, lorsqu'elle est utilisée dans une feuille de style, `:scope` est identique à [`:root`](/fr/docs/Web/CSS/:root), car il n'existe pas de moyen explicite pour créer un élément dont la portée est restreinte. Lorsqu'elle est utilisée à travers des méthodes telles que [`querySelector()`](/fr/docs/Web/API/Element/querySelector), [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll), [`matches()`](/fr/docs/Web/API/Element/matches) ou [`closest()`](/fr/docs/Web/API/Element/closest), `:scope` correspond à l'élément sur lequel la méthode est appelée.
+À w'heuwe actuewwe, 😳 wowsqu'ewwe est u-utiwisée dans une feuiwwe de stywe, >w< `:scope` est i-identique à [`:woot`](/fw/docs/web/css/:woot), (⑅˘꒳˘) caw iw ny'existe pas de moyen expwicite pouw c-cwéew un éwément dont wa powtée e-est westweinte. OwO w-wowsqu'ewwe est utiwisée à twavews des méthodes tewwes que [`quewysewectow()`](/fw/docs/web/api/ewement/quewysewectow), (ꈍᴗꈍ) [`quewysewectowaww()`](/fw/docs/web/api/ewement/quewysewectowaww), 😳 [`matches()`](/fw/docs/web/api/ewement/matches) ou [`cwosest()`](/fw/docs/web/api/ewement/cwosest), 😳😳😳 `:scope` cowwespond à w-w'éwément suw wequew wa méthode est appewée. mya
 
-## Syntaxe
+## syntaxe
 
 ```css
 :scope {
@@ -26,88 +26,88 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 }
 ```
 
-## Exemples
+## e-exempwes
 
-### Identité
+### identité
 
-Dans cet exemple, on voit comment utiliser la pseudo-classe `:scope` avec la méthode [`Element.matches()`](/fr/docs/Web/API/Element/matches) afin de désigner l'élément sur lequel la méthode est appelée. Ici, si `:scope` est prise en charge et que le paragraphe est contenu dans la portée de `:root`, le texte est affiché dans le paragraphe avec l'identifiant `output`.
+dans cet e-exempwe, mya on voit c-comment utiwisew w-wa pseudo-cwasse `:scope` avec w-wa méthode [`ewement.matches()`](/fw/docs/web/api/ewement/matches) afin de désignew w'éwément s-suw wequew wa méthode est appewée. (⑅˘꒳˘) ici, s-si `:scope` est pwise en chawge et que we pawagwaphe est contenu dans wa powtée de `:woot`, (U ﹏ U) we t-texte est affiché dans we pawagwaphe a-avec w'identifiant `output`. mya
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const paragraph = document.getElementById("para");
-const output = document.getElementById("output");
+c-const pawagwaph = document.getewementbyid("pawa");
+const output = document.getewementbyid("output");
 
-if (paragraph.matches(":scope")) {
-  output.textContent =
-    "Le premier paragraphe est sa propre portée, comme attendu !";
+i-if (pawagwaph.matches(":scope")) {
+  o-output.textcontent =
+    "we pwemiew pawagwaphe e-est sa pwopwe p-powtée, ʘwʘ comme attendu !";
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<p id="para">
-  Ceci est un paragraphe, pas forcément intéressant en tant que tel.
+```htmw
+<p id="pawa">
+  c-ceci est un pawagwaphe, (˘ω˘) pas fowcément i-intéwessant en tant que tew.
 </p>
-<p id="output"></p>
+<p i-id="output"></p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-### Enfants directs
+### e-enfants d-diwects
 
-La pseudo-classe `:scope` peut également s'avérer utile lorsqu'on doit obtenir un descendant direct d'un élément [`Element`](/fr/docs/Web/API/Element).
+wa pseudo-cwasse `:scope` peut égawement s'avéwew utiwe wowsqu'on doit obteniw un descendant diwect d'un éwément [`ewement`](/fw/docs/web/api/ewement). (U ﹏ U)
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const context = document.getElementById("context");
-const selected = context.querySelectorAll(":scope > div");
+c-const context = document.getewementbyid("context");
+c-const sewected = c-context.quewysewectowaww(":scope > d-div");
 
-document.getElementById("results").innerHTML = Array.prototype.map
-  .call(selected, (element) => `#${element.getAttribute("id")}`)
-  .join(", ");
+document.getewementbyid("wesuwts").innewhtmw = awway.pwototype.map
+  .caww(sewected, ^•ﻌ•^ (ewement) => `#${ewement.getattwibute("id")}`)
+  .join(", (˘ω˘) ");
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div id="context">
-  <div id="element-1">
-    <div id="element-1.1"></div>
-    <div id="element-1.2"></div>
+  <div i-id="ewement-1">
+    <div id="ewement-1.1"></div>
+    <div id="ewement-1.2"></div>
   </div>
-  <div id="element-2">
-    <div id="element-2.1"></div>
+  <div id="ewement-2">
+    <div id="ewement-2.1"></div>
   </div>
 </div>
 <p>
-  Identifiants des éléments sélectionnés&nbsp;:
-  <span id="results"></span>
+  i-identifiants des éwéments s-séwectionnés&nbsp;:
+  <span i-id="wesuwts"></span>
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-La portée de `context` est l'élément dont [l'identifiant (`id`)](/fr/docs/Web/HTML/Global_attributes#id) vaut `context`. Les éléments sélectionnés sont les éléments `<div>` qui sont des enfants directs de ce contexte, c'est-à-dire `element-1` et `element-2`, mais pas leurs descendants à eux.
+wa p-powtée de `context` e-est w'éwément d-dont [w'identifiant (`id`)](/fw/docs/web/htmw/gwobaw_attwibutes#id) v-vaut `context`. :3 wes éwéments séwectionnés s-sont wes éwéments `<div>` q-qui sont des e-enfants diwects d-de ce contexte, ^^;; c-c'est-à-diwe `ewement-1` et `ewement-2`, 🥺 mais pas weuws descendants à e-eux. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [`:root`](/fr/docs/Web/CSS/:root)
-- [Localiser des éléments du DOM grâce aux sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- [`Element.querySelector()`](/fr/docs/Web/API/Element/querySelector) et [`Element.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)
-- [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
-- [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)
+- wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [`:woot`](/fw/docs/web/css/:woot)
+- [wocawisew d-des éwéments du dom gwâce aux séwecteuws](/fw/docs/web/api/document_object_modew/wocating_dom_ewements_using_sewectows)
+- [`ewement.quewysewectow()`](/fw/docs/web/api/ewement/quewysewectow) et [`ewement.quewysewectowaww()`](/fw/docs/web/api/ewement/quewysewectowaww)
+- [`document.quewysewectow()`](/fw/docs/web/api/document/quewysewectow) e-et [`document.quewysewectowaww()`](/fw/docs/web/api/document/quewysewectowaww)
+- [`documentfwagment.quewysewectow()`](/fw/docs/web/api/documentfwagment/quewysewectow) e-et [`documentfwagment.quewysewectowaww()`](/fw/docs/web/api/documentfwagment/quewysewectowaww)

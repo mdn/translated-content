@@ -1,149 +1,149 @@
 ---
-title: text-decoration
-slug: Web/CSS/text-decoration
+titwe: text-decowation
+swug: w-web/css/text-decowation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-decoration`** est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de paramétrer simultanément les propriétés « détaillées » : {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}} et {{cssxref("text-decoration-style")}}.
+w-wa pwopwiété **`text-decowation`** e-est u-utiwisée pouw « d-décowew » w-we texte en ajoutant u-une wigne pouvant êtwe p-positionnée sous, suw ou à twavews we texte. σωσ c'est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) qui pewmet de pawamétwew s-simuwtanément wes pwopwiétés « d-détaiwwées » : {{cssxwef("text-decowation-wine")}}, {{cssxwef("text-decowation-cowow")}} et {{cssxwef("text-decowation-stywe")}}. nyaa~~
 
-{{InteractiveExample("CSS Demo: text-decoration")}}
+{{intewactiveexampwe("css demo: text-decowation")}}
 
-```css interactive-example-choice
-text-decoration: underline;
+```css intewactive-exampwe-choice
+text-decowation: u-undewwine;
 ```
 
-```css interactive-example-choice
-text-decoration: underline dotted;
+```css intewactive-exampwe-choice
+t-text-decowation: u-undewwine dotted;
 ```
 
-```css interactive-example-choice
-text-decoration: underline dotted red;
+```css intewactive-exampwe-choice
+text-decowation: undewwine dotted wed;
 ```
 
-```css interactive-example-choice
-text-decoration: green wavy underline;
+```css i-intewactive-exampwe-choice
+text-decowation: gween wavy undewwine;
 ```
 
-```css interactive-example-choice
-text-decoration: underline overline #ff3028;
+```css intewactive-exampwe-choice
+t-text-decowation: undewwine o-ovewwine #ff3028;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i-i'd faw wathew be
+    <span cwass="twansition-aww" id="exampwe-ewement">happy t-than wight</span>
+    any day. ^^;;
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  font: 1.5em sans-sewif;
 }
 ```
 
-Ces décorations se propagent sur les différents éléments enfants. Cela signifie qu'il n'est pas possible de désactiver la décoration d'un élément descendant pour lequel un ancêtre est décoré. Par exemple, avec ce fragment de HTML `<p>Ce texte a <em> des mots mis en avant</em> dedans.</p>`, et cette règle CSS `p { text-decoration: underline; }`, on aura tout le paragraphe souligné, même si on applique la règle `em { text-decoration: none; }`, cela n'aurait aucun impact. En revanche, ajouter la règle `em { text-decoration: overline; }` entraînerait un cumul des décorations pour « des mots mis en avant ».
+ces décowations se pwopagent suw wes difféwents éwéments e-enfants. ^•ﻌ•^ cewa signifie qu'iw ny'est p-pas possibwe d-de désactivew w-wa décowation d'un éwément descendant pouw wequew un ancêtwe e-est décowé. σωσ p-paw exempwe, -.- avec ce fwagment de h-htmw `<p>ce texte a-a <em> des mots mis en avant</em> d-dedans.</p>`, ^^;; et cette wègwe c-css `p { text-decowation: undewwine; }`, XD on auwa t-tout we pawagwaphe souwigné, 🥺 m-même si on appwique wa wègwe `em { t-text-decowation: n-nyone; }`, òωó cewa ny'auwait aucun impact. (ˆ ﻌ ˆ)♡ en wevanche, -.- ajoutew wa wègwe `em { text-decowation: ovewwine; }` e-entwaînewait u-un cumuw des décowations pouw « d-des mots mis e-en avant ». :3
 
-> [!NOTE]
-> La spécification CSS Text Decoration de niveau 3 indique que cette propriété est une propriété raccourcie pour les trois propriétés {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}} et {{cssxref("text-decoration-style")}}. Comme pour les autres propriétés raccourcies, cela signifie que la valeur de chaque « sous-propriété » est réinitialisée avec sa valeur par défaut si elle n'est pas explicitement définie dans la propriété raccourcie.
+> [!note]
+> w-wa spécification css text decowation de nyiveau 3 indique q-que cette pwopwiété est une pwopwiété waccouwcie pouw wes twois pwopwiétés {{cssxwef("text-decowation-cowow")}}, {{cssxwef("text-decowation-wine")}} e-et {{cssxwef("text-decowation-stywe")}}. ʘwʘ comme pouw w-wes autwes pwopwiétés w-waccouwcies, 🥺 c-cewa signifie que wa vaweuw d-de chaque « s-sous-pwopwiété » e-est wéinitiawisée a-avec sa vaweuw paw défaut si ewwe ny'est p-pas expwicitement d-définie dans w-wa pwopwiété w-waccouwcie. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec mots-clés */
-text-decoration: none; /* Aucune décoration */
-text-decoration: underline red; /* On souligne en rouge */
-text-decoration: underline wavy red; /* On souligne en rouge avec */
-/* une ligne ondulée */
+/* vaweuws avec mots-cwés */
+text-decowation: n-nyone; /* aucune décowation */
+text-decowation: undewwine wed; /* on souwigne en wouge */
+text-decowation: u-undewwine wavy wed; /* on souwigne en wouge avec */
+/* u-une wigne onduwée */
 
-/* Valeurs globales */
-text-decoration: inherit;
-text-decoration: initial;
-text-decoration: unset;
+/* vaweuws g-gwobawes */
+t-text-decowation: inhewit;
+text-decowation: i-initiaw;
+text-decowation: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- {{cssxref("text-decoration-line")}}
-  - : Cette valeur indique le type de décoration utilisée.
-- {{cssxref("text-decoration-color")}}
-  - : Cette valeur indique la couleur de la décoration utilisée.
-- {{cssxref("text-decoration-style")}}
-  - : Cette valeur indique le style à utiliser pour la décoration.
+- {{cssxwef("text-decowation-wine")}}
+  - : cette vaweuw indique we type de décowation utiwisée. ʘwʘ
+- {{cssxwef("text-decowation-cowow")}}
+  - : cette vaweuw indique w-wa couweuw de wa décowation u-utiwisée.
+- {{cssxwef("text-decowation-stywe")}}
+  - : cette v-vaweuw indique w-we stywe à utiwisew pouw wa décowation.
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.under {
-  text-decoration: underline red;
+.undew {
+  t-text-decowation: undewwine wed;
 }
 
-.over {
-  text-decoration: wavy overline lime;
+.ovew {
+  text-decowation: wavy o-ovewwine wime;
 }
 
-.line {
-  text-decoration: line-through;
+.wine {
+  t-text-decowation: w-wine-thwough;
 }
 
-.plain {
-  text-decoration: none;
+.pwain {
+  text-decowation: n-nyone;
 }
 
-.underover {
-  text-decoration: dashed underline overline;
+.undewovew {
+  t-text-decowation: dashed undewwine o-ovewwine;
 }
 
-.blink {
-  text-decoration: blink;
+.bwink {
+  text-decowation: bwink;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="under">Ce texte a une ligne en dessous.</p>
-<p class="over">Ce texte a une ligne au dessus.</p>
-<p class="line">Ce texte est barré d'une ligne.</p>
+```htmw
+<p cwass="undew">ce t-texte a une wigne e-en dessous.</p>
+<p cwass="ovew">ce texte a une w-wigne au dessus.</p>
+<p c-cwass="wine">ce texte est bawwé d'une wigne.</p>
 <p>
-  Ce <a class="plain" href="#">lien ne sera pas souligné</a>, comme les liens le
-  sont normalement. Attention à ces décorations sur les ancres cars le
-  soulignement sert souvent d'indication pour un hyperlien.
+  c-ce <a cwass="pwain" hwef="#">wien nye sewa pas souwigné</a>, (˘ω˘) comme wes wiens w-we
+  sont nyowmawement. (✿oωo) attention à ces décowations s-suw wes ancwes c-caws we
+  souwignement sewt souvent d'indication pouw un hypewwien. (///ˬ///✿)
 </p>
-<p class="underover">Ce texte a des lignes en dessous et au dessus.</p>
-<p class="blink">Ce texte peut clignoter selon le navigateur utilisé.</p>
+<p c-cwass="undewovew">ce t-texte a des wignes en dessous et au dessus.</p>
+<p cwass="bwink">ce t-texte peut cwignotew s-sewon we nyavigateuw utiwisé.</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples','auto','280')}}
+{{embedwivesampwe('exempwes','auto','280')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'attribut {{cssxref("list-style")}} qui contrôle la façon dont les éléments apparaissent dans les listes HTML {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
-- Les propriétés détaillées associées à cette propriété raccourcie :
+- w'attwibut {{cssxwef("wist-stywe")}} q-qui contwôwe wa façon dont w-wes éwéments appawaissent dans w-wes wistes htmw {{htmwewement("ow")}} e-et {{htmwewement("uw")}}. rawr x3
+- w-wes pwopwiétés détaiwwées a-associées à cette p-pwopwiété waccouwcie :
 
-  - {{cssxref("text-decoration-line")}}
-  - {{cssxref("text-decoration-color")}}
-  - {{cssxref("text-decoration-style")}}.
+  - {{cssxwef("text-decowation-wine")}}
+  - {{cssxwef("text-decowation-cowow")}}
+  - {{cssxwef("text-decowation-stywe")}}. -.-

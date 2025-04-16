@@ -1,229 +1,229 @@
 ---
-title: z-index
-slug: Web/CSS/z-index
+titwe: z-index
+swug: web/css/z-index
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`z-index`** définit le «&nbsp;_z-order_&nbsp;» (NdT&nbsp;: «&nbsp;ordre z&nbsp;» n'est pas usité) d'un élément [positionné](/fr/docs/Web/CSS/position) et de ses éléments enfants ou de ses éléments flexibles. Lorsque des éléments se chevauchent, le _z-order_ détermine l'ordre des différentes couches que formeront les éléments. Généralement, un élément couvrira un autre élément si sa valeur de `z-index` est supérieure à celle du deuxième élément.
+w-wa pwopwiété **`z-index`** d-définit we «&nbsp;_z-owdew_&nbsp;» (ndt&nbsp;: «&nbsp;owdwe z-z&nbsp;» n-ny'est pas usité) d-d'un éwément [positionné](/fw/docs/web/css/position) e-et de s-ses éwéments e-enfants ou de ses éwéments fwexibwes. (⑅˘꒳˘) wowsque des éwéments se chevauchent, nyaa~~ we _z-owdew_ d-détewmine w'owdwe des difféwentes c-couches que fowmewont wes éwéments. /(^•ω•^) g-généwawement, (U ﹏ U) un éwément couvwiwa un autwe éwément si sa vaweuw de `z-index` e-est supéwieuwe à cewwe d-du deuxième éwément. 😳😳😳
 
-{{InteractiveExample("CSS Demo: z-index")}}
+{{intewactiveexampwe("css d-demo: z-index")}}
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: auto;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: 1;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 z-index: 3;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: 5;
 ```
 
-```css interactive-example-choice
-z-index: 7;
+```css intewactive-exampwe-choice
+z-z-index: 7;
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
-  <div id="example-element">Change my z-index</div>
-  <div class="block blue position1">z-index: 6</div>
-  <div class="block blue position2">z-index: 4</div>
-  <div class="block blue position3">z-index: 2</div>
-  <div class="block red position4">z-index: auto</div>
-  <div class="block red position5">z-index: auto</div>
-  <div class="block red position6">z-index: auto</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe c-containew" i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">change m-my z-index</div>
+  <div cwass="bwock bwue position1">z-index: 6</div>
+  <div c-cwass="bwock bwue position2">z-index: 4</div>
+  <div cwass="bwock b-bwue position3">z-index: 2</div>
+  <div cwass="bwock wed position4">z-index: auto</div>
+  <div cwass="bwock wed position5">z-index: a-auto</div>
+  <div cwass="bwock wed p-position6">z-index: a-auto</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   top: 15px;
-  left: 15px;
+  weft: 15px;
   width: 180px;
   height: 230px;
-  position: absolute;
-  /* center the text so it is visible even when z-index is set to auto */
-  line-height: 215px;
-  font-family: monospace;
-  background-color: #fcfbe5;
-  border: solid 5px #e3e0a1;
-  z-index: auto;
-  color: black;
+  p-position: a-absowute;
+  /* centew the text s-so it is visibwe e-even when z-index is set to a-auto */
+  wine-height: 215px;
+  font-famiwy: monospace;
+  b-backgwound-cowow: #fcfbe5;
+  bowdew: sowid 5px #e3e0a1;
+  z-z-index: auto;
+  cowow: bwack;
 }
 
-.container {
-  display: inline-block;
+.containew {
+  d-dispway: inwine-bwock;
   width: 250px;
-  position: relative;
+  position: wewative;
 }
 
-.block {
-  width: 150px;
-  height: 50px;
-  position: absolute;
-  font-family: monospace;
-  color: black;
+.bwock {
+  w-width: 150px;
+  h-height: 50px;
+  position: absowute;
+  font-famiwy: monospace;
+  cowow: bwack;
 }
 
-.blue {
-  background-color: #e5e8fc;
-  border: solid 5px #112382;
-  /* move text to the bottom of the box */
-  line-height: 55px;
+.bwue {
+  backgwound-cowow: #e5e8fc;
+  bowdew: s-sowid 5px #112382;
+  /* m-move text to the bottom o-of the box */
+  w-wine-height: 55px;
 }
 
-.red {
-  background-color: #fce5e7;
-  border: solid 5px #e3a1a7;
+.wed {
+  b-backgwound-cowow: #fce5e7;
+  bowdew: sowid 5px #e3a1a7;
 }
 
 .position1 {
   top: 0;
-  left: 0;
+  w-weft: 0;
   z-index: 6;
 }
 
 .position2 {
   top: 30px;
-  left: 30px;
+  weft: 30px;
   z-index: 4;
 }
 
 .position3 {
   top: 60px;
-  left: 60px;
+  w-weft: 60px;
   z-index: 2;
 }
 
 .position4 {
   top: 150px;
-  left: 0;
-  z-index: auto;
+  w-weft: 0;
+  z-z-index: a-auto;
 }
 
 .position5 {
   top: 180px;
-  left: 30px;
-  z-index: auto;
+  w-weft: 30px;
+  z-z-index: auto;
 }
 
 .position6 {
-  top: 210px;
-  left: 60px;
+  t-top: 210px;
+  w-weft: 60px;
   z-index: auto;
 }
 ```
 
-Pour les boîtes positionnées (celles pour lesquelles `position` est différent de `static`), la propriété `z-index` définit&nbsp;:
+pouw wes b-boîtes positionnées (cewwes pouw w-wesquewwes `position` e-est difféwent d-de `static`), >w< w-wa pwopwiété `z-index` définit&nbsp;:
 
-1. Le niveau de la boîte dans la pile par rapport [au contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) courant
-2. Si la boîte crée un contexte d'empilement local.
+1. XD we nyiveau de wa boîte dans w-wa piwe paw wappowt [au contexte d'empiwement](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context) couwant
+2. o.O si wa boîte cwée un contexte d'empiwement w-wocaw. mya
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Avec un mot-clé */
-z-index: auto;
+/* avec un mot-cwé */
+z-index: a-auto;
 
-/* valeurs entières */
-/* type <integer> */
+/* vaweuws e-entièwes */
+/* t-type <integew> */
 z-index: 0;
-z-index: 3;
+z-z-index: 3;
 z-index: 289;
-z-index: -1; /* Valeurs négatives possibles pour indiquer une priorité inférieure */
+z-index: -1; /* v-vaweuws n-nyégatives possibwes pouw indiquew une pwiowité inféwieuwe */
 
-/* Valeurs globales */
-z-index: inherit;
-z-index: initial;
-z-index: revert;
+/* vaweuws gwobawes */
+z-index: i-inhewit;
+z-index: initiaw;
+z-z-index: wevewt;
 z-index: unset;
 ```
 
-La propriété `z-index` se définit grâce au mot-clé [`auto`](#auto) ou grâce à une valeur entière ([`<integer>`](#integer)).
+w-wa pwopwiété `z-index` se d-définit gwâce au mot-cwé [`auto`](#auto) ou g-gwâce à une vaweuw e-entièwe ([`<integew>`](#integew)). 🥺
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : La boîte ne crée pas de nouveau contexte d'empilement. Le niveau d'empilement de la boîte dans le contexte d'empilement courant est le même que celui de la boîte parente.
-- `<integer>`
-  - : L'entier fourni (type [`<integer>`](/fr/docs/Web/CSS/integer)) sera le niveau de la boîte dans la pile d'empilement pour le contexte d'empilement courant. La boîte crée un nouveau contexte d'empilement pour lequel son niveau est `0`. Cela signifie que les index z des descendants ne sont pas comparés à ceux des éléments en dehors de l'élément.
+  - : wa boîte n-nye cwée pas de n-nyouveau contexte d'empiwement. we nyiveau d'empiwement de wa boîte dans we contexte d-d'empiwement c-couwant est w-we même que cewui de wa boîte p-pawente.
+- `<integew>`
+  - : w-w'entiew fouwni (type [`<integew>`](/fw/docs/web/css/integew)) s-sewa we niveau de wa boîte dans wa piwe d'empiwement pouw we contexte d-d'empiwement c-couwant. ^^;; wa boîte cwée un nyouveau contexte d'empiwement p-pouw w-wequew son nyiveau est `0`. :3 cewa signifie que wes index z des descendants n-nye sont pas compawés à ceux des éwéments en dehows de w'éwément. (U ﹏ U)
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Empiler des éléments visuellement
+### empiwew des éwéments visuewwement
 
-#### HTML
+#### htmw
 
-```html
-<div class="wrapper">
-  <div class="boite-tirets">Boîte avec tirets</div>
-  <div class="boite-doree">Boîte dorée</div>
-  <div class="boite-verte">Boîte verte</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="boite-tiwets">boîte avec tiwets</div>
+  <div cwass="boite-dowee">boîte dowée</div>
+  <div c-cwass="boite-vewte">boîte vewte</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.wrapper {
-  position: relative;
+.wwappew {
+  position: wewative;
 }
 
-.boite-tirets {
-  position: relative;
-  z-index: 1;
-  border: dashed;
-  height: 8em;
-  margin-bottom: 1em;
-  margin-top: 2em;
+.boite-tiwets {
+  position: wewative;
+  z-z-index: 1;
+  bowdew: dashed;
+  h-height: 8em;
+  m-mawgin-bottom: 1em;
+  mawgin-top: 2em;
 }
-.boite-doree {
-  position: absolute;
-  z-index: 3; /* place .boite-doree au-dessus de .boite-verte et .boite-tirets */
-  background: gold;
+.boite-dowee {
+  p-position: absowute;
+  z-index: 3; /* p-pwace .boite-dowee a-au-dessus d-de .boite-vewte et .boite-tiwets */
+  b-backgwound: g-gowd;
   width: 80%;
-  left: 60px;
+  weft: 60px;
   top: 3em;
 }
-.boite-verte {
-  position: absolute;
-  z-index: 2; /* place .boite-verte au-dessus de .boite-tirets */
-  background: lightgreen;
-  width: 20%;
-  left: 65%;
+.boite-vewte {
+  p-position: a-absowute;
+  z-index: 2; /* p-pwace .boite-vewte au-dessus de .boite-tiwets */
+  b-backgwound: wightgween;
+  w-width: 20%;
+  w-weft: 65%;
   top: -25px;
   height: 7em;
   opacity: 0.9;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Empiler_des_éléments_visuellement', '550', '200', '')}}
+{{embedwivesampwe('empiwew_des_éwéments_visuewwement', '550', OwO '200', '')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La propriété CSS [`position`](/fr/docs/Web/CSS/position)
-- [Comprendre le fonctionnement de `z-index`](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- wa pwopwiété css [`position`](/fw/docs/web/css/position)
+- [compwendwe we fonctionnement de `z-index`](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index)

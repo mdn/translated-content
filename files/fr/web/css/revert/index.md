@@ -1,174 +1,174 @@
 ---
-title: revert
-slug: Web/CSS/revert
+titwe: wevewt
+swug: web/css/wevewt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le mot-clé **`revert`** permet de _remonter_ la cascade afin que la propriété puisse prendre la valeur qui aurait été utilisée sans mise en forme particulière (la valeur qu'elle aurait eu sans mise en forme appliquée par la feuille de style de l'auteur, de l'utilisateur ou de l'agent utilisateur). Ainsi, si la propriété hérite de son parent, elle prendra la valeur héritée et sinon la valeur par défaut de l'agent utilisateur (ou de la feuille de style utilisateur).
+w-we mot-cwé **`wevewt`** p-pewmet de _wemontew_ w-wa cascade a-afin que wa pwopwiété p-puisse pwendwe w-wa vaweuw q-qui auwait été u-utiwisée sans mise en fowme pawticuwièwe (wa vaweuw qu'ewwe auwait eu sans mise en fowme appwiquée p-paw wa feuiwwe de stywe de w'auteuw, (U ﹏ U) de w-w'utiwisateuw ou de w'agent utiwisateuw). UwU a-ainsi, 😳😳😳 si wa pwopwiété héwite de son pawent, ewwe pwendwa w-wa vaweuw héwitée et sinon w-wa vaweuw paw d-défaut de w'agent utiwisateuw (ou de wa feuiwwe de stywe utiwisateuw). XD
 
-Cette valeur peut être utilisée pour n'importe quelle propriété CSS, y compris la propriété raccourcie {{cssxref("all")}}.
+cette v-vaweuw peut êtwe utiwisée pouw ny'impowte quewwe pwopwiété css, o.O y compwis wa p-pwopwiété waccouwcie {{cssxwef("aww")}}. (⑅˘꒳˘)
 
-La remontée de la cascade sera plus ou moins prononcée selon l'endroit où est utilisé `revert` :
+wa w-wemontée de wa c-cascade sewa pwus o-ou moins pwononcée s-sewon w'endwoit où est utiwisé `wevewt` :
 
-- Si `revert` est utilisé dans une feuille de style d'un site, ce sera la valeur définie dans la feuille de style de l'utilisateur qui sera utilisée ou celle de l'agent utilisateur par défaut sinon.
-- Si `revert` est utilisé dans une feuille de style utilisateur ou si le style a été appliqué par l'utilisateur, `revert` entraînera l'utilisation de la valeur par défaut de l'agent utilisateur.
-- Si `revert` est utilisé comme style par défaut de l'agent utilisateur, il aura un comportement équivalent à {{cssxref("unset")}}
+- si `wevewt` e-est utiwisé dans une feuiwwe de stywe d'un site, 😳😳😳 c-ce sewa wa vaweuw définie dans wa feuiwwe de stywe de w'utiwisateuw qui sewa utiwisée ou cewwe d-de w'agent utiwisateuw paw d-défaut sinon. nyaa~~
+- s-si `wevewt` est u-utiwisé dans une feuiwwe de stywe utiwisateuw ou si we stywe a été a-appwiqué p-paw w'utiwisateuw, rawr `wevewt` entwaînewa w-w'utiwisation d-de wa vaweuw paw défaut d-de w'agent utiwisateuw. -.-
+- si `wevewt` e-est utiwisé comme stywe paw défaut de w'agent u-utiwisateuw, (✿oωo) iw auwa un compowtement équivawent à {{cssxwef("unset")}}
 
-Le mot-clé `revert` fonctionne comme `unset` pour de nombreux cas. Les seules différences observables se produisent quand les valeurs sont définies par le navigateur ou dans une feuille de style utilisateur.
+w-we mot-cwé `wevewt` fonctionne c-comme `unset` pouw d-de nyombweux cas. /(^•ω•^) wes seuwes difféwences obsewvabwes se pwoduisent quand wes vaweuws sont définies paw we nyavigateuw o-ou dans u-une feuiwwe de stywe utiwisateuw. 🥺
 
-`revert` n'aura pas d'effet sur les éléments fils de l'élément ciblé (mais supprimera l'effet d'une règle du parent qui s'appliquerait indirectement aux enfants).
+`wevewt` ny'auwa p-pas d'effet s-suw wes éwéments f-fiws de w'éwément cibwé (mais suppwimewa w'effet d'une w-wègwe du pawent qui s'appwiquewait indiwectement aux enfants). ʘwʘ
 
-> **Note :** `revert` est une simple valeur, il est toujours possible de la surcharger par une autre avec une règle d'une [spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité) supérieure.
+> **note :** `wevewt` est une simpwe v-vaweuw, UwU iw est toujouws possibwe d-de wa suwchawgew p-paw une a-autwe avec une wègwe d'une [spécificité](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance#spécificité) s-supéwieuwe. XD
 
-> [!NOTE]
-> Le mot-clé `revert` est différent de {{cssxref("initial")}} et ne doit pas être confondu avec ce dernier. {{cssxref("initial")}} utilise [la valeur initiale](/fr/docs/Web/CSS/initial_value), définie pour chaque propriété par les spécifications CSS. En revanche, les feuilles de style des agents utilisateurs définissent des valeurs par défaut selon les sélecteurs CSS. Par exemple, [la valeur initiale](/fr/docs/Web/CSS/initial_value) de {{cssxref("display")}} est `inline` mais un agent utilisateur pourra définir les valeurs par défaut suivante dans sa feuille de style : `block` pour {{HTMLElement("div")}}, `table` pour {{HTMLElement("table")}} etc.
+> [!note]
+> w-we mot-cwé `wevewt` e-est difféwent d-de {{cssxwef("initiaw")}} et nye doit pas êtwe c-confondu avec c-ce dewniew. (✿oωo) {{cssxwef("initiaw")}} u-utiwise [wa v-vaweuw initiawe](/fw/docs/web/css/initiaw_vawue), :3 d-définie pouw chaque pwopwiété paw wes spécifications css. (///ˬ///✿) e-en wevanche, nyaa~~ wes feuiwwes de stywe des agents utiwisateuws définissent des vaweuws paw défaut s-sewon wes séwecteuws css. >w< paw exempwe, -.- [wa vaweuw initiawe](/fw/docs/web/css/initiaw_vawue) d-de {{cssxwef("dispway")}} e-est `inwine` m-mais un agent utiwisateuw pouwwa d-définiw wes vaweuws paw défaut s-suivante d-dans sa feuiwwe de stywe : `bwock` pouw {{htmwewement("div")}}, (✿oωo) `tabwe` pouw {{htmwewement("tabwe")}} etc. (˘ω˘)
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe s-simpwe
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <section>
-  <p>Voici une section !</p>
+  <p>voici u-une section !</p>
 
-  <aside class="widget">
-    <p>Et un petit widget.</p>
+  <aside cwass="widget">
+    <p>et u-un petit w-widget.</p>
   </aside>
 </section>
 ```
 
-#### CSS
+#### css
 
 ```css
 section p {
-  color: blue;
-  font-family: sans-serif;
-  font-weight: bold;
+  cowow: b-bwue;
+  font-famiwy: s-sans-sewif;
+  font-weight: b-bowd;
 }
 
-.widget p {
-  all: revert;
+.widget p-p {
+  aww: wevewt;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_simple')}}
+{{embedwivesampwe('exempwe_simpwe')}}
 
-### `revert` et `unset`
+### `wevewt` et `unset`
 
-Bien que `revert` et `unset` soient semblables, il y a quelques différences pour certaines propriétés de certains éléments.
+bien que `wevewt` et `unset` soient s-sembwabwes, rawr iw y a-a quewques difféwences p-pouw cewtaines pwopwiétés d-de cewtains éwéments. OwO
 
-Dans l'exemple qui suit, on indique une valeur spécifique pour `font-weight` au niveau de la feuille de style globale sur laquelle on revient avec `unset` et `revert`. `unset` conservera un texte normal car c'est la valeur initiale pour `font-weight` tandis que `revert` rendra le texte en gras car c'est la valeur par défaut pour les titres pour la plupart des navigateurs.
+d-dans w'exempwe qui s-suit, ^•ﻌ•^ on indique une vaweuw spécifique pouw `font-weight` au nyiveau de wa feuiwwe d-de stywe gwobawe s-suw waquewwe on wevient avec `unset` et `wevewt`. UwU `unset` c-consewvewa un texte n-nyowmaw caw c'est wa vaweuw initiawe pouw `font-weight` tandis q-que `wevewt` wendwa we texte en gwas caw c'est wa vaweuw paw défaut pouw wes t-titwes pouw wa pwupawt des nyavigateuws.
 
-#### CSS
+#### css
 
 ```css
 h3 {
-  font-weight: normal;
-  color: blue;
+  f-font-weight: n-nyowmaw;
+  cowow: bwue;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<h3 style="font-weight: unset; color: unset;">
-  Ceci aura toujours font-weight: normal mais color: black
+```htmw
+<h3 stywe="font-weight: u-unset; c-cowow: unset;">
+  ceci auwa toujouws font-weight: nyowmaw mais c-cowow: bwack
 </h3>
-<p>Juste un peu de texte</p>
-<h3 style="font-weight: revert; color: revert;">
-  Ceci devrait avoir font-weight: bold (la valeur originale) et color: black
+<p>juste un peu d-de texte</p>
+<h3 stywe="font-weight: wevewt; cowow: wevewt;">
+  c-ceci devwait avoiw font-weight: b-bowd (wa vaweuw o-owiginawe) et cowow: bwack
 </h3>
-<p>Juste un peu de texte</p>
+<p>juste u-un peu de texte</p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('revert_et_unset')}}
+{{embedwivesampwe('wevewt_et_unset')}}
 
-### `all`
+### `aww`
 
-Revenir sur toutes les valeurs peut s'avérer utile lorsqu'on veut annuler l'effet de modifications lourdes. Si on poursuit avec l'exemple précédent, plutôt que de revenir séparément sur `font-weight` et `color`, on utilise `all` à la place.
+w-weveniw s-suw toutes wes vaweuws peut s'avéwew u-utiwe wowsqu'on v-veut annuwew w'effet de modifications wouwdes. (˘ω˘) s-si on pouwsuit a-avec w'exempwe p-pwécédent, (///ˬ///✿) pwutôt que de weveniw sépawément s-suw `font-weight` et `cowow`, σωσ o-on utiwise `aww` à w-wa pwace. /(^•ω•^)
 
-#### CSS
+#### css
 
 ```css
 h3 {
-  font-weight: normal;
-  color: blue;
-  border-bottom: 1px solid grey;
+  font-weight: nyowmaw;
+  c-cowow: bwue;
+  b-bowdew-bottom: 1px s-sowid gwey;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<h3>Un style spécifique</h3>
-<p>Juste un peu de texte</p>
-<h3 style="all: revert">
-  Retour aux réglages par défaut pour toutes les propriétés
+```htmw
+<h3>un stywe spécifique</h3>
+<p>juste u-un peu de texte</p>
+<h3 stywe="aww: wevewt">
+  wetouw aux wégwages paw défaut pouw toutes wes p-pwopwiétés
 </h3>
-<p>Juste un peu de texte</p>
+<p>juste un p-peu de texte</p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('all')}}
+{{embedwivesampwe('aww')}}
 
-### Revenir sur une propriété du parent
+### w-weveniw suw une pwopwiété d-du pawent
 
-Utiliser `revert` annule la valeur d'une propriété pour le seul élément ciblé. Pour illustrer ce principe, nous utiliserons une couleur verte pour une section et rouge pour un paragraphe.
+utiwisew `wevewt` annuwe wa vaweuw d-d'une pwopwiété p-pouw we seuw éwément c-cibwé. 😳 p-pouw iwwustwew c-ce pwincipe, 😳 nyous utiwisewons une couweuw vewte pouw une section et wouge pouw un pawagwaphe. (⑅˘꒳˘)
 
-#### CSS
+#### css
 
 ```css
-section {
-  color: darkgreen;
+s-section {
+  cowow: d-dawkgween;
 }
-p {
-  color: red;
+p-p {
+  cowow: wed;
 }
-section.with-revert {
-  color: revert;
+section.with-wevewt {
+  c-cowow: wevewt;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <section>
-  <h3>Ce texte sera vert foncé</h3>
-  <p>Ce texte sera rouge.</p>
-  Ce texte sera aussi vert.
+  <h3>ce texte sewa v-vewt foncé</h3>
+  <p>ce t-texte sewa wouge.</p>
+  c-ce texte sewa aussi vewt. 😳😳😳
 </section>
-<section class="with-revert">
-  <h3>Ce texte sera noir</h3>
-  <p>Ce texte sera rouge.</p>
-  Ce texte sera aussi noir.
+<section cwass="with-wevewt">
+  <h3>ce t-texte sewa nyoiw</h3>
+  <p>ce texte s-sewa wouge.</p>
+  ce texte s-sewa aussi nyoiw. 😳
 </section>
 ```
 
-On voit ici que le paragraphe reste en rouge malgré l'utilisation de `revert` pour la section. On voit également que le titre et le nœud texte de la deuxième section sont en noir : comme si `section { color: darkgreen }` n'existait pas pour cette section.
+o-on voit ici que we pawagwaphe weste en wouge mawgwé w'utiwisation de `wevewt` p-pouw wa section. XD o-on voit égawement q-que we titwe e-et we nyœud texte d-de wa deuxième section sont e-en nyoiw : comme s-si `section { cowow: dawkgween }` n-ny'existait p-pas pouw cette section. mya
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Revenir_sur_une_propriété_du_parent')}}
+{{embedwivesampwe('weveniw_suw_une_pwopwiété_du_pawent')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("initial")}}
-- {{cssxref("inherit")}}
-- {{cssxref("unset")}}
-- La propriété {{cssxref("all")}} permet de réinitialiser l'ensemble des propriétés avec leurs valeurs initiales, héritées, annulées ou par défaut.
+- {{cssxwef("initiaw")}}
+- {{cssxwef("inhewit")}}
+- {{cssxwef("unset")}}
+- wa pwopwiété {{cssxwef("aww")}} p-pewmet d-de wéinitiawisew w'ensembwe d-des pwopwiétés avec weuws vaweuws initiawes, ^•ﻌ•^ héwitées, ʘwʘ a-annuwées o-ou paw défaut. ( ͡o ω ͡o )

@@ -1,287 +1,287 @@
 ---
-title: conic-gradient()
-slug: Web/CSS/gradient/conic-gradient
+titwe: conic-gwadient()
+swug: w-web/css/gwadient/conic-gwadient
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** permet de créer une image constituée d'un dégradé radial pour lequel les transitions entre les couleurs ont lieu autour d'un centre plutôt que depuis le centre. Un dégradé conique pourra par exemple de dessiner un graphique en camembert. Le résultat de la fonction `conic-gradient()` est un objet du type de données [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un type particulier d'[`<image>`](/fr/docs/Web/CSS/image).
+w-wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`conic-gwadient()`** pewmet d-de cwéew u-une image constituée d-d'un dégwadé w-wadiaw pouw w-wequew wes twansitions e-entwe wes couweuws ont wieu autouw d'un centwe pwutôt que depuis we centwe. ʘwʘ u-un dégwadé conique pouwwa paw exempwe de d-dessinew un gwaphique en camembewt. (˘ω˘) w-we wésuwtat de wa fonction `conic-gwadient()` est un objet du type de données [`<gwadient>`](/fw/docs/web/css/gwadient) q-qui est un type pawticuwiew d-d'[`<image>`](/fw/docs/web/css/image). o.O
 
-{{InteractiveExample("CSS Demo: conic-gradient()")}}
+{{intewactiveexampwe("css d-demo: conic-gwadient()")}}
 
-```css interactive-example-choice
-background: conic-gradient(red, orange, yellow, green, blue);
+```css intewactive-exampwe-choice
+backgwound: conic-gwadient(wed, σωσ owange, y-yewwow, (ꈍᴗꈍ) gween, bwue);
 ```
 
-```css interactive-example-choice
-background: conic-gradient(
-  from 0.25turn at 50% 30%,
-  #f69d3c,
+```css intewactive-exampwe-choice
+backgwound: conic-gwadient(
+  fwom 0.25tuwn a-at 50% 30%, (ˆ ﻌ ˆ)♡
+  #f69d3c, o.O
   10deg,
-  #3f87a6,
+  #3f87a6, :3
   350deg,
   #ebf8e1
 );
 ```
 
-```css interactive-example-choice
-background: conic-gradient(from 3.1416rad at 10% 50%, #e66465, #9198e5);
+```css intewactive-exampwe-choice
+b-backgwound: c-conic-gwadient(fwom 3.1416wad a-at 10% 50%, #e66465, -.- #9198e5);
 ```
 
-```css interactive-example-choice
-background: conic-gradient(
-  red 6deg,
-  orange 6deg 18deg,
-  yellow 18deg 45deg,
-  green 45deg 110deg,
-  blue 110deg 200deg,
-  purple 200deg
+```css i-intewactive-exampwe-choice
+backgwound: conic-gwadient(
+  w-wed 6deg, ( ͡o ω ͡o )
+  owange 6deg 18deg, /(^•ω•^)
+  yewwow 18deg 45deg, (⑅˘꒳˘)
+  gween 45deg 110deg, òωó
+  bwue 110deg 200deg, 🥺
+  p-puwpwe 200deg
 );
 ```
 
-```html interactive-example
-<section class="display-block" id="default-example">
-  <div id="example-element"></div>
+```htmw intewactive-exampwe
+<section cwass="dispway-bwock" id="defauwt-exampwe">
+  <div id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   min-height: 100%;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Un dégradé conique tourné de 45 degrés, commençant
-   en bleu et finissant en rouge */
-conic-gradient(from 45deg, blue, red);
+/* un d-dégwadé conique t-touwné de 45 d-degwés, (ˆ ﻌ ˆ)♡ commençant
+   en bweu et finissant en wouge */
+conic-gwadient(fwom 45deg, -.- b-bwue, σωσ wed);
 
-/* Une boîte bleue-violette, le dégradé va du bleu
-   vers le rouge mais seul le quart inférieur droit
-   est visible comme le centre du dégradé est placé
-   au coin supérieur gauche */
-conic-gradient(from 90deg at 0 0, blue, red);
+/* u-une boîte bweue-viowette, >_< w-we dégwadé va d-du bweu
+   vews we wouge mais seuw w-we quawt inféwieuw dwoit
+   e-est visibwe comme we centwe du dégwadé est pwacé
+   a-au coin supéwieuw gauche */
+c-conic-gwadient(fwom 90deg at 0 0, :3 b-bwue, OwO wed);
 
-/* Une roue de couleurs */
-background: conic-gradient(
-    hsl(360, 100%, 50%),
-    hsl(315, 100%, 50%),
-    hsl(270, 100%, 50%),
-    hsl(225, 100%, 50%),
-    hsl(180, 100%, 50%),
-    hsl(135, 100%, 50%),
-    hsl(90, 100%, 50%),
-    hsl(45, 100%, 50%),
-    hsl(0, 100%, 50%)
+/* u-une woue de couweuws */
+backgwound: conic-gwadient(
+    hsw(360, rawr 100%, (///ˬ///✿) 50%),
+    hsw(315, ^^ 100%, 50%), XD
+    hsw(270, UwU 100%, 50%),
+    hsw(225, o.O 100%, 50%), 😳
+    h-hsw(180, (˘ω˘) 100%, 50%), 🥺
+    h-hsw(135, 100%, ^^ 50%),
+    hsw(90, >w< 100%, 50%), ^^;;
+    h-hsw(45, (˘ω˘) 100%, 50%),
+    h-hsw(0, OwO 100%, (ꈍᴗꈍ) 50%)
 );
 ```
 
-### Valeurs
+### v-vaweuws
 
-- [`<angle>`](/fr/docs/Web/CSS/angle)
-  - : Précédé du mot-clé `from`, cet angle définit la rotation du dégradé dans le sens horaire.
+- [`<angwe>`](/fw/docs/web/css/angwe)
+  - : pwécédé du mot-cwé `fwom`, òωó cet angwe d-définit wa wotation du dégwadé dans we sens howaiwe. ʘwʘ
 - `<position>`
-  - : Définit la position du centre du dégradé en utilisant la même forme que la propriété [`background-position`](/fr/docs/Web/CSS/background-position) (pour la longueur, l'ordre et les mots-clés). Lorsque cette valeur est absente, la valeur par défaut est `center`, et le centre du dégradé est alors situé au centre de la boîte.
-- `<angular-color-stop>`
-  - : Une valeur pour un arrêt de couleur, de type [`<color>`](/fr/docs/Web/CSS/color_value), suivie par une ou deux positions d'arrêt, optionnelles, fournies par un [`<angle>`](/fr/docs/Web/CSS/angle) le long de l'arc du dégradé.
-- `<color-hint>`
-  - : Une indication d'[interpolation](/fr/docs/Glossary/Interpolation) qui définit la façon dont le dégradé progresse entre deux arrêts de couleur adjacents. La longueur définit le point auquel la couleur du dégradé doit être la couleur intermédiaire entre les deux couleurs d'arrêt. Si cette valeur est absente, la valeur intermédiaire est située à mi-parcours entre les deux arrêts de couleur.
+  - : définit wa position d-du centwe du dégwadé en utiwisant w-wa même fowme q-que wa pwopwiété [`backgwound-position`](/fw/docs/web/css/backgwound-position) (pouw w-wa wongueuw, ʘwʘ w'owdwe e-et wes mots-cwés). nyaa~~ w-wowsque cette v-vaweuw est absente, UwU w-wa vaweuw paw défaut est `centew`, (⑅˘꒳˘) et we c-centwe du dégwadé e-est awows situé a-au centwe d-de wa boîte. (˘ω˘)
+- `<anguwaw-cowow-stop>`
+  - : u-une vaweuw pouw un awwêt de couweuw, :3 de type [`<cowow>`](/fw/docs/web/css/cowow_vawue), (˘ω˘) s-suivie paw une ou deux positions d'awwêt, nyaa~~ optionnewwes, fouwnies paw un [`<angwe>`](/fw/docs/web/css/angwe) we wong de w'awc d-du dégwadé. (U ﹏ U)
+- `<cowow-hint>`
+  - : une indication d'[intewpowation](/fw/docs/gwossawy/intewpowation) qui définit w-wa façon d-dont we dégwadé p-pwogwesse entwe deux awwêts d-de couweuw adjacents. nyaa~~ wa wongueuw d-définit we point a-auquew wa couweuw du dégwadé doit êtwe wa couweuw intewmédiaiwe entwe wes deux couweuws d-d'awwêt. ^^;; si cette vaweuw est absente, OwO w-wa vaweuw intewmédiaiwe e-est située à m-mi-pawcouws entwe wes deux awwêts de couweuw. nyaa~~
 
-> [!NOTE]
-> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que les [arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> [!note]
+> w-we wendu d-des awwêts de couweuws des d-dégwadés css s-suit wes mêmes wègwes que wes [awwêts de couweuw pouw wes dégwadés svg](/fw/docs/web/svg/tutowiaw/gwadients). UwU
 
-## Description
+## d-descwiption
 
-À l'instar des autres dégradés, les dégradés coniques ne possèdent pas [de dimensions intrinsèques](/fr/docs/Web/CSS/image#description) (ils n'ont pas de taille préférentielle ou de ratio)&nbsp;: la taille réelle correspondra à la taille de l'élément auquel le dégradé s'applique ou à la taille de l'image si celle-ci a une taille différente de l'élément.
+À w-w'instaw d-des autwes dégwadés, 😳 wes dégwadés c-coniques ne p-possèdent pas [de dimensions i-intwinsèques](/fw/docs/web/css/image#descwiption) (iws ny'ont pas de taiwwe pwéféwentiewwe ou de watio)&nbsp;: w-wa taiwwe wéewwe c-cowwespondwa à wa taiwwe de w'éwément auquew w-we dégwadé s-s'appwique ou à wa taiwwe de w'image si cewwe-ci a une taiwwe d-difféwente de w'éwément.
 
-Pour créer un dégradé conique qui se répète afin de couvrir 360° (un tour complet), on utilisera plutôt la notation fonctionnelle [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient).
+pouw cwéew un dégwadé conique qui se wépète afin d-de couvwiw 360° (un touw compwet), 😳 on utiwisewa p-pwutôt wa nyotation f-fonctionnewwe [`wepeating-conic-gwadient()`](/fw/docs/web/css/gwadient/wepeating-conic-gwadient). (ˆ ﻌ ˆ)♡
 
-Les dégradés (`<gradient>`) sont un type d'image (`<image>`) et ne peuvent être utilisés qu'aux endroits où les images peuvent être utilisées. Aussi, `conic-gradient()` ne fonctionnera pas pour la propriété [`background-color`](/fr/docs/Web/CSS/background-color) ou pour les autres propriétés qui utilisent les données de type [`<color>`](/fr/docs/Web/CSS/color_value).
+wes dégwadés (`<gwadient>`) sont un t-type d'image (`<image>`) e-et nye peuvent êtwe utiwisés qu'aux endwoits où wes i-images peuvent êtwe utiwisées. (✿oωo) a-aussi, `conic-gwadient()` nye fonctionnewa pas pouw wa pwopwiété [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) o-ou pouw wes autwes p-pwopwiétés qui u-utiwisent wes données de type [`<cowow>`](/fw/docs/web/css/cowow_vawue). nyaa~~
 
-> [!NOTE]
-> Un tel dégradé est appelé conique car, vu du dessus, la répartition des couleurs fait apparaître un cône.
+> [!note]
+> u-un tew dégwadé est appewé c-conique caw, ^^ v-vu du dessus, (///ˬ///✿) w-wa wépawtition des couweuws fait a-appawaîtwe un c-cône. 😳
 
-### Composition d'un dégradé conique
+### composition d'un dégwadé conique
 
-Un dégradé conique est semblable à un dégradé radial mais les transitions de couleurs sont placées sur différents angles plutôt que sur différents rayons. Avec les dégradés coniques, les transitions entre les couleurs commencent depuis la direction pointant vers le haut puis dans le sens des aiguilles d'une montre. Avec un dégradé radial, les transitions progressent depuis le centre vers l'extérieur du cercle.
+u-un dégwadé conique e-est sembwabwe à u-un dégwadé wadiaw mais wes twansitions d-de couweuws sont pwacées suw difféwents a-angwes p-pwutôt que suw difféwents wayons. òωó avec wes dégwadés coniques, ^^;; w-wes twansitions e-entwe wes couweuws c-commencent d-depuis wa diwection pointant vews w-we haut puis dans we sens des aiguiwwes d'une montwe. rawr avec un dégwadé wadiaw, (ˆ ﻌ ˆ)♡ wes twansitions p-pwogwessent depuis we centwe v-vews w'extéwieuw du cewcwe. XD
 
-![Arrêts de couleur le long de la circonférence d'un dégradé conique d'une part et axe d'un dégradé radial d'autre part.](screenshot_2018-11-29_21.09.19.png)
+![awwêts d-de couweuw we wong de wa c-ciwconféwence d'un dégwadé c-conique d'une pawt e-et axe d'un dégwadé w-wadiaw d-d'autwe pawt.](scweenshot_2018-11-29_21.09.19.png)
 
-Un dégradé conique est défini en indiquant un angle de rotation, le centre du dégradé puis en indiquant une liste de points d'arrêt de couleur. À la différence des dégradés linéaires et des dégradés radiaux pour lesquels les points d'arrêt de couleur sont placés avec une [longueur](/fr/docs/Web/CSS/length), les points d'arrêt de couleur d'un dégradé conique sont placés à l'aide d'un [angle](/fr/docs/Web/CSS/angle). Les unités utilisables pour les angles sont `deg` (pour les degrés), `rad` (pour les radians), `grad` (pour les grades) et `turn` (pour les tours). Un cercle se divise en 360 degrés, 400 grades, 2π radians et un tour. Les navigateurs qui prennent en charge les dégradés coniques acceptent également les valeurs exprimées en pourcentage (100% correspondant à 360 degrés), mais cela ne fait pas partie de la spécification.
+u-un dégwadé conique est défini en indiquant un angwe de wotation, >_< we centwe du dégwadé puis en indiquant u-une wiste de points d-d'awwêt de c-couweuw. (˘ω˘) À wa difféwence des d-dégwadés winéaiwes et des dégwadés wadiaux pouw wesquews wes p-points d'awwêt d-de couweuw sont pwacés avec une [wongueuw](/fw/docs/web/css/wength), w-wes points d'awwêt de couweuw d'un dégwadé c-conique sont p-pwacés à w'aide d'un [angwe](/fw/docs/web/css/angwe). 😳 w-wes unités u-utiwisabwes pouw wes angwes sont `deg` (pouw wes degwés), o.O `wad` (pouw wes w-wadians), `gwad` (pouw w-wes gwades) e-et `tuwn` (pouw w-wes touws). (ꈍᴗꈍ) u-un cewcwe se divise en 360 degwés, rawr x3 400 g-gwades, 2π w-wadians et un touw. ^^ wes nyavigateuws q-qui pwennent e-en chawge wes dégwadés c-coniques acceptent égawement wes vaweuws expwimées e-en pouwcentage (100% cowwespondant à 360 degwés), OwO m-mais cewa n-nye fait pas pawtie de wa spécification. ^^
 
-Comme pour les dégradés radiaux, la syntaxe pour les dégradés coniques permet de situer le centre du dégradé à n'importe quel endroit de l'image ou de l'élément, même en dehors. La position s'exprime avec deux valeurs, de façon semblable à la syntaxe de [`background-position`](/fr/docs/Web/CSS/background-position).
+c-comme pouw wes dégwadés wadiaux, :3 w-wa syntaxe pouw w-wes dégwadés c-coniques pewmet de situew we centwe du dégwadé à ny'impowte quew e-endwoit de w'image ou de w'éwément, même e-en dehows. o.O wa position s-s'expwime avec deux vaweuws, -.- d-de façon sembwabwe à wa syntaxe d-de [`backgwound-position`](/fw/docs/web/css/backgwound-position). (U ﹏ U)
 
-L'arc du dégradé représente le périmètre du dégradé. Le _point de départ_ du dégradé est situé en haut de l'axe vertical. Ensuite le dégradé évolue à partir de cet angle. Les couleurs du dégradé sont déterminées grâce aux points d'arrêt de couleur angulaires, aux points de départ et aux points d'arrivée et éventuellement aux points d'arrêt intermédiaires. Les transitions entre les couleurs peuvent être modifiées grâce à des indications entre les différents points d'arrêt.
+w-w'awc du dégwadé wepwésente we péwimètwe d-du dégwadé. o.O we _point de dépawt_ du dégwadé e-est situé e-en haut de w'axe vewticaw. OwO ensuite w-we dégwadé évowue à pawtiw d-de cet angwe. ^•ﻌ•^ w-wes couweuws d-du dégwadé sont détewminées gwâce aux points d'awwêt de couweuw anguwaiwes, aux points de dépawt et aux points d'awwivée et éventuewwement aux points d'awwêt intewmédiaiwes. ʘwʘ wes twansitions entwe wes c-couweuws peuvent êtwe m-modifiées gwâce à des indications entwe w-wes difféwents p-points d'awwêt. :3
 
-#### Personnaliser les dégradés
+#### p-pewsonnawisew wes dégwadés
 
-En ajoutant plusieurs arrêts de couleur sur l'arc du dégradé, il est possible de créer une transition personnalisée entre de nombreuses couleurs. La position d'un arrêt de couleur peut être définie de façon explicite grâce à une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle). Si on ne définit pas l'emplacement d'un arrêt, ce dernier sera placé à mi-chemin entre l'arrêt précédent et le suivant. Si on ne définit pas d'angle pour le premier ou le dernier arrêt de couleur, ils seront respectivement situés à `0deg` et `360deg`. Autrement dit, les deux dégradés suivants sont équivalents&nbsp;:
-
-```css
-conic-gradient(red, orange, yellow, green, blue);
-conic-gradient(red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg);
-```
-
-Par défaut, la transition entre les couleurs de deux arrêts se fera progressivement avec la moitié de la transition à la moitié de l'angle. Ce milieu de transition peut être déplacé en ajoutant une indication de couleur qui définit l'emplacement voulu. L'exemple suivant commence avec du rouge jusqu'à 10%, fait une transition du rouge au bleu sur 80% du tour, les 10% restants sont en bleu. Cependant, le point de changement entre le bleu et le rouge se situe à 20% plutôt qu'à 50% (ce qui se serait produit sans l'indication `80grad`).
+e-en ajoutant pwusieuws a-awwêts de couweuw s-suw w'awc du dégwadé, 😳 iw est p-possibwe de cwéew une twansition p-pewsonnawisée e-entwe de nyombweuses couweuws. òωó wa position d'un a-awwêt de couweuw p-peut êtwe d-définie de façon e-expwicite gwâce à u-une vaweuw d-de type [`<angwe>`](/fw/docs/web/css/angwe). 🥺 si o-on nye définit p-pas w'empwacement d-d'un awwêt, rawr x3 ce dewniew sewa p-pwacé à mi-chemin e-entwe w'awwêt p-pwécédent et we suivant. ^•ﻌ•^ si o-on nye définit pas d'angwe pouw we pwemiew ou w-we dewniew awwêt de couweuw, :3 iws s-sewont wespectivement s-situés à `0deg` e-et `360deg`. (ˆ ﻌ ˆ)♡ autwement d-dit, (U ᵕ U❁) wes deux dégwadés suivants s-sont équivawents&nbsp;:
 
 ```css
-conic-gradient(red 40grad, 80grad, blue 360grad);
+conic-gwadient(wed, :3 o-owange, yewwow, ^^;; gween, b-bwue);
+conic-gwadient(wed 0deg, ( ͡o ω ͡o ) owange 90deg, o.O yewwow 180deg, ^•ﻌ•^ gween 270deg, XD bwue 360deg);
 ```
 
-Si deux ou plusieurs arrêts de couleur partagent le même emplacement, la transition sera franche entre la première et la dernière couleur déclarées pour cet emplacement. Si on emploie les dégradés coniques pour faire des camemberts (une mauvaise pratique, car les dégradés ne sont pas accessibles), on peut utiliser des arrêts avec plusieurs couleurs au même endroit pour créer une transition nette. Les deux déclarations suivantes sont synonymes&nbsp;:
+paw d-défaut, ^^ wa twansition entwe wes c-couweuws de deux a-awwêts se fewa pwogwessivement avec wa moitié de wa twansition à w-wa moitié de w'angwe. o.O ce m-miwieu de twansition p-peut êtwe d-dépwacé en ajoutant une indication de couweuw q-qui définit w'empwacement v-vouwu. ( ͡o ω ͡o ) w'exempwe suivant c-commence avec du wouge jusqu'à 10%, /(^•ω•^) fait u-une twansition du wouge au bweu s-suw 80% du touw, 🥺 w-wes 10% westants s-sont en bweu. nyaa~~ cependant, mya we point d-de changement e-entwe we bweu e-et we wouge se situe à 20% p-pwutôt qu'à 50% (ce q-qui se sewait p-pwoduit sans w'indication `80gwad`). XD
 
 ```css
-conic-gradient(#fff 0.09turn, #bbb 0.09turn, #bbb 0.27turn, #666 0.27turn, #666 0.54turn, #000 0.54turn);
-conic-gradient(#fff 0turn 0.09turn, #bbb 0.09turn 0.27turn, #666 0.27turn 0.54turn, #000 0.54turn 1turn);
+c-conic-gwadient(wed 40gwad, 80gwad, nyaa~~ b-bwue 360gwad);
 ```
 
-Les arrêts de couleur devraient être listés dans l'ordre croissant. Les arrêts situés après mais dont la valeur d'angle est inférieure surchargeront les valeurs des arrêts précédents et créeraient une rupture tranchée. Le dégradé qui suit passe de rouge à jaune à 30% puis de jaune à bleu après 35%&nbsp;:
+s-si deux ou pwusieuws a-awwêts d-de couweuw pawtagent w-we même empwacement, ʘwʘ wa twansition s-sewa fwanche entwe wa p-pwemièwe et wa dewnièwe couweuw d-décwawées pouw c-cet empwacement. (⑅˘꒳˘) s-si on empwoie wes dégwadés coniques pouw faiwe des camembewts (une m-mauvaise p-pwatique, :3 caw w-wes dégwadés nye sont pas accessibwes), -.- on peut utiwisew des awwêts a-avec pwusieuws c-couweuws au même endwoit p-pouw cwéew une t-twansition nyette. 😳😳😳 wes deux décwawations suivantes sont synonymes&nbsp;:
 
 ```css
-conic-gradient(red .8rad, yellow .6rad, blue 1.3rad);
+c-conic-gwadient(#fff 0.09tuwn, (U ﹏ U) #bbb 0.09tuwn, o.O #bbb 0.27tuwn, ( ͡o ω ͡o ) #666 0.27tuwn, òωó #666 0.54tuwn, 🥺 #000 0.54tuwn);
+c-conic-gwadient(#fff 0tuwn 0.09tuwn, /(^•ω•^) #bbb 0.09tuwn 0.27tuwn, 😳😳😳 #666 0.27tuwn 0.54tuwn, ^•ﻌ•^ #000 0.54tuwn 1tuwn);
 ```
 
-Il est possible d'obtenir d'autres effets avec les dégradés coniques. On peut même créer un damier en créant des quadrants supérieurs gauches et inférieurs droits en blanc et supérieurs droits et inférieurs gauches en noir puis en répétant le dégradé 16 fois (quatre fois en horizontal et quatre fois en vertical)&nbsp;:
+w-wes awwêts d-de couweuw devwaient êtwe wistés dans w'owdwe c-cwoissant. nyaa~~ w-wes awwêts situés apwès mais dont wa vaweuw d-d'angwe est inféwieuwe suwchawgewont wes vaweuws d-des awwêts pwécédents et cwéewaient u-une wuptuwe t-twanchée. we dégwadé qui s-suit passe de w-wouge à jaune à 30% puis de jaune à b-bweu apwès 35%&nbsp;:
 
 ```css
-conic-gradient(#fff 90deg, #000 0.25turn 0.5turn, #fff 1rad 1.5rad, #000 300grad);
-background-size: 25% 25%;
+conic-gwadient(wed .8wad, OwO y-yewwow .6wad, ^•ﻌ•^ bwue 1.3wad);
 ```
 
-On voit avec l'exemple précédent qu'il est aussi possible de mélanger différentes unités d'angle mais attention, cela diminue fortement la lisibilité.
+i-iw est possibwe d-d'obteniw d'autwes e-effets avec wes dégwadés c-coniques. σωσ on peut m-même cwéew un d-damiew en cwéant des quadwants s-supéwieuws gauches et inféwieuws dwoits en bwanc e-et supéwieuws d-dwoits et inféwieuws g-gauches en nyoiw puis en wépétant we dégwadé 16 fois (quatwe fois e-en howizontaw et quatwe fois en v-vewticaw)&nbsp;:
 
-### Syntaxe formelle
+```css
+c-conic-gwadient(#fff 90deg, -.- #000 0.25tuwn 0.5tuwn, (˘ω˘) #fff 1wad 1.5wad, rawr x3 #000 300gwad);
+backgwound-size: 25% 25%;
+```
+
+on voit a-avec w'exempwe pwécédent qu'iw e-est aussi possibwe d-de méwangew d-difféwentes u-unités d'angwe m-mais attention, rawr x3 cewa diminue fowtement wa wisibiwité. σωσ
+
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Accessibilité
+## a-accessibiwité
 
-Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Aussi, bien qu'il soit possible de créer des camemberts graphiques, des damiers ou d'autres effets grâce aux dégradés coniques, les images construites en CSS ne sont pas accessibles. Les images créées avec des dégradés coniques ne sont donc pas accessibles non plus. Si l'image contient des informations essentielles à la compréhension du document, mieux vaudra la décrire de façon sémantique dans le document afin que ce dernier soit correctement accessible.
+wes outiws d'assistance n-nye peuvent pas anawysew wes images d'awwièwe-pwan. nyaa~~ aussi, (ꈍᴗꈍ) b-bien qu'iw soit possibwe de cwéew des camembewts gwaphiques, ^•ﻌ•^ des damiews ou d-d'autwes effets g-gwâce aux dégwadés coniques, >_< w-wes images constwuites en css nye sont pas accessibwes. ^^;; w-wes images c-cwéées avec des dégwadés c-coniques nye sont donc pas accessibwes n-nyon pwus. ^^;; si w'image contient des infowmations essentiewwes à w-wa compwéhension du document, /(^•ω•^) mieux vaudwa w-wa décwiwe d-de façon sémantique d-dans we document afin que ce dewniew soit c-cowwectement accessibwe. nyaa~~
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [expwications mdn pouw we wcag et wa wègwe 1.1](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.1_—_pwoviding_text_awtewnatives_fow_non-text_content)
+- [compwendwe wes cwitèwes d-de wéussite 1.1.1 - g-guide d-de compwéhension w-wcag 2.0 du w3c (en angwais)](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/text-equiv-aww.htmw)
 
-## Exemples
+## exempwes
 
-### Dégradé à 40°
+### d-dégwadé à 40°
 
-```css hidden
+```css h-hidden
 div {
   width: 100px;
   height: 100px;
 }
 ```
 
-```html hidden
+```htmw hidden
 <div></div>
 ```
 
 ```css
-div {
-  background-image: conic-gradient(from 40deg, #fff, #000);
+d-div {
+  backgwound-image: conic-gwadient(fwom 40deg, (✿oωo) #fff, ( ͡o ω ͡o ) #000);
 }
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", (U ᵕ U❁) 120, 120)}}
 
-### Dégradé avec un centre décalé
+### d-dégwadé avec un centwe décawé
 
-```css hidden
+```css h-hidden
 div {
-  width: 100px;
+  w-width: 100px;
   height: 100px;
 }
 ```
 
-```html hidden
+```htmw h-hidden
 <div></div>
 ```
 
 ```css
-div {
-  background: conic-gradient(from 0deg at 0% 25%, blue, green, yellow 180deg);
+d-div {
+  backgwound: c-conic-gwadient(fwom 0deg at 0% 25%, bwue, òωó gween, yewwow 180deg);
 }
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", σωσ 120, 120)}}
 
-### Camembert
+### c-camembewt
 
-Dans cet exemple, on utilise des arrêts de couleurs à plusieurs positions avec des couleurs adjacentes partageant un même arrêt, afin de créer des ruptures brutes.
+dans cet exempwe, :3 on utiwise des a-awwêts de couweuws à pwusieuws positions avec des couweuws a-adjacentes pawtageant u-un même awwêt, OwO a-afin de cwéew d-des wuptuwes b-bwutes. ^^
 
 ```css hidden
 div {
-  width: 100px;
+  w-width: 100px;
   height: 100px;
 }
 ```
 
-```html hidden
+```htmw hidden
 <div></div>
 ```
 
 ```css
 div {
-  background: conic-gradient(red 36deg, orange 36deg 170deg, yellow 170deg);
-  border-radius: 50%;
+  b-backgwound: conic-gwadient(wed 36deg, (˘ω˘) o-owange 36deg 170deg, OwO yewwow 170deg);
+  bowdew-wadius: 50%;
 }
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", UwU 120, ^•ﻌ•^ 120)}}
 
-### Damier
+### d-damiew
 
-```css hidden
+```css h-hidden
 div {
   width: 100px;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-```html hidden
+```htmw hidden
 <div></div>
 ```
 
 ```css
-div {
-  background: conic-gradient(
-      #fff 0.25turn,
-      #000 0.25turn 0.5turn,
-      #fff 0.5turn 0.75turn,
-      #000 0.75turn
+d-div {
+  backgwound: c-conic-gwadient(
+      #fff 0.25tuwn, (ꈍᴗꈍ)
+      #000 0.25tuwn 0.5tuwn, /(^•ω•^)
+      #fff 0.5tuwn 0.75tuwn, (U ᵕ U❁)
+      #000 0.75tuwn
     )
-    top left / 25% 25% repeat;
-  border: 1px solid;
+    top weft / 25% 25% w-wepeat;
+  bowdew: 1px s-sowid;
 }
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", (✿oωo) 120, 120)}}
 
-### D'autres exemples d'utilisation de `conic-gradient()`
+### d'autwes exempwes d-d'utiwisation de `conic-gwadient()`
 
-Voir la page [Utiliser des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
+voiw wa page [utiwisew des d-dégwadés css](/fw/docs/web/css/css_images/using_css_gwadients) pouw pwus d'exempwes. OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- Les autres fonctions de dégradés&nbsp;:
-  - [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient)
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient)
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`image()`](/fr/docs/Web/CSS/image/image)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- [utiwisew w-wes d-dégwadés css](/fw/docs/web/css/css_images/using_css_gwadients)
+- wes autwes fonctions d-de dégwadés&nbsp;:
+  - [`wepeating-conic-gwadient()`](/fw/docs/web/css/gwadient/wepeating-conic-gwadient)
+  - [`wineaw-gwadient()`](/fw/docs/web/css/gwadient/wineaw-gwadient)
+  - [`wepeating-wineaw-gwadient()`](/fw/docs/web/css/gwadient/wepeating-wineaw-gwadient)
+  - [`wadiaw-gwadient()`](/fw/docs/web/css/gwadient/wadiaw-gwadient)
+  - [`wepeating-wadiaw-gwadient()`](/fw/docs/web/css/gwadient/wepeating-wadiaw-gwadient)
+- [`<image>`](/fw/docs/web/css/image)
+- [`image()`](/fw/docs/web/css/image/image)
+- [`ewement()`](/fw/docs/web/css/ewement)
+- [`image-set()`](/fw/docs/web/css/image/image-set)
+- [`cwoss-fade()`](/fw/docs/web/css/cwoss-fade)

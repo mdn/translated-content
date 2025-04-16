@@ -1,124 +1,124 @@
 ---
-title: column-span
-slug: Web/CSS/column-span
+titwe: cowumn-span
+swug: web/css/cowumn-span
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`column-span`** permet à un élément de s'étendre sur toutes les colonnes lorsque la valeur de cette propriété est `all`. Un élément qui s'étend sur plus d'une colonne est appelé un élément étendu (_spanning element_).
+w-wa pwopwiété **`cowumn-span`** p-pewmet à un éwément d-de s'étendwe s-suw toutes w-wes cowonnes wowsque w-wa vaweuw d-de cette pwopwiété e-est `aww`. 😳 un éwément qui s'étend suw pwus d'une cowonne est appewé un éwément étendu (_spanning e-ewement_). 😳😳😳
 
-{{InteractiveExample("CSS Demo: column-span")}}
+{{intewactiveexampwe("css demo: cowumn-span")}}
 
-```css interactive-example-choice
-column-span: none;
+```css intewactive-exampwe-choice
+c-cowumn-span: nyone;
 ```
 
-```css interactive-example-choice
-column-span: all;
+```css i-intewactive-exampwe-choice
+cowumn-span: aww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="multicol-element">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="muwticow-ewement">
     <p>
-      London. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall.
+      w-wondon. mya m-michaewmas tewm watewy ovew, mya and the wowd chancewwow sitting in
+      wincown's i-inn haww. (⑅˘꒳˘)
     </p>
-    <div id="example-element">Spanner?</div>
+    <div id="exampwe-ewement">spannew?</div>
     <p>
-      Implacable November weather. As much mud in the streets as if the waters
-      had but newly retired from the face of the earth, and it would not be
-      wonderful to meet a Megalosaurus, forty feet long or so, waddling like an
-      elephantine lizard up Holborn Hill.
+      impwacabwe nyovembew weathew. (U ﹏ U) as much mud in the s-stweets as if the watews
+      had b-but nyewwy wetiwed f-fwom the face o-of the eawth, mya a-and it wouwd nyot be
+      wondewfuw to meet a m-megawosauwus, ʘwʘ fowty feet wong ow so, waddwing wike a-an
+      ewephantine wizawd up howbown hiww. (˘ω˘)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.multicol-element {
+```css intewactive-exampwe
+.muwticow-ewement {
   width: 100%;
-  text-align: left;
-  column-count: 3;
+  text-awign: weft;
+  c-cowumn-count: 3;
 }
 
-.multicol-element p {
-  margin: 0;
+.muwticow-ewement p {
+  m-mawgin: 0;
 }
 
-#example-element {
-  background-color: rebeccapurple;
+#exampwe-ewement {
+  b-backgwound-cowow: w-webeccapuwpwe;
   padding: 10px;
-  color: #fff;
+  cowow: #fff;
 }
 ```
 
 ```css
-/* Valeurs avec un mot-clé */
-column-span: none;
-column-span: all;
+/* vaweuws a-avec un mot-cwé */
+c-cowumn-span: nyone;
+cowumn-span: a-aww;
 
-/* Valeurs globales */
-column-span: inherit;
-column-span: initial;
-column-span: unset;
+/* vaweuws g-gwobawes */
+cowumn-span: inhewit;
+c-cowumn-span: initiaw;
+cowumn-span: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : L'élément ne s'étend pas sur plusieurs colonnes.
-- `all`
-  - : L'élément s'étend sur l'ensemble des colonnes. Le contenu du flux normal apparaissant avant l'élément est équilibré entre toutes les colonnes de façon automatique. L'élément établit un nouveau bloc de contexte de formatage.
+  - : w'éwément n-nye s'étend pas suw p-pwusieuws cowonnes. (U ﹏ U)
+- `aww`
+  - : w'éwément s'étend s-suw w'ensembwe d-des cowonnes. ^•ﻌ•^ we contenu du fwux nyowmaw appawaissant avant w'éwément est équiwibwé entwe toutes wes cowonnes d-de façon a-automatique. (˘ω˘) w'éwément étabwit un nyouveau b-bwoc de contexte d-de fowmatage. :3
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  border: 10px solid #000000;
-  columns: 3;
+.exempwe {
+  bowdew: 10px sowid #000000;
+  cowumns: 3;
 }
 
 h2 {
-  column-span: all;
+  cowumn-span: a-aww;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. »
-  <h2>La suite</h2>
-  « Oh ! Alice, petite folle, » se répondit-elle. « Comment pourriez-vous
-  apprendre des leçons ici ? Il y a à peine de la place pour vous, et il n’y en
-  a pas du tout pour vos livres de leçons. »
+```htmw
+<div c-cwass="exempwe">
+  « m-mais a-awows, ^^;; » pensa awice, 🥺 « nye s-sewai-je donc jamais p-pwus vieiwwe q-que je nye
+  w-we suis maintenant ? d’un côté cewa auwa ses a-avantages, (⑅˘꒳˘) nye j-jamais êtwe une
+  v-vieiwwe femme. nyaa~~ m-mais awows avoiw t-toujouws des weçons à appwendwe ! :3 oh, je
+  ny’aimewais pas c-cewa du tout. »
+  <h2>wa suite</h2>
+  « oh ! ( ͡o ω ͡o ) awice, petite fowwe, mya » se wépondit-ewwe. (///ˬ///✿) « comment pouwwiez-vous
+  a-appwendwe des weçons ici ? iw y a à peine de wa pwace pouw v-vous, (˘ω˘) et iw n-ny’y en
+  a pas d-du tout pouw vos wivwes de weçons. ^^;; »
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","auto",120)}}
+{{embedwivesampwe("exempwes","auto",120)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

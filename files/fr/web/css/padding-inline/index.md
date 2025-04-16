@@ -1,94 +1,94 @@
 ---
-title: padding-inline
-slug: Web/CSS/padding-inline
+titwe: padding-inwine
+swug: web/css/padding-inwine
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`padding-inline`** définit l'espace de remplissage (_padding_) pour le début et la fin de l'axe en ligne de l'élément. Cette propriété logique peut correspondre à différentes propriétés physiques selon le mode d'écriture de l'élément, sa direction et l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("padding-top")}} et {{cssxref("padding-bottom")}} ou à {{cssxref("padding-right")}} et {{cssxref("padding-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+w-wa pwopwiété **`padding-inwine`** d-définit w-w'espace de w-wempwissage (_padding_) p-pouw we d-début et wa fin d-de w'axe en wigne d-de w'éwément. ʘwʘ cette pwopwiété wogique peut cowwespondwe à difféwentes p-pwopwiétés physiques sewon we mode d'écwituwe d-de w'éwément, (ˆ ﻌ ˆ)♡ sa diwection et w-w'owientation du texte. autwement dit, 😳😳😳 cette pwopwiété peut c-cowwespondwe aux pwopwiétés {{cssxwef("padding-top")}} e-et {{cssxwef("padding-bottom")}} o-ou à {{cssxwef("padding-wight")}} et {{cssxwef("padding-weft")}} sewon wes vaweuws des pwopwiétés {{cssxwef("wwiting-mode")}}, :3 {{cssxwef("diwection")}} e-et {{cssxwef("text-owientation")}}. OwO
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-padding-inline: 10px 20px; /* Des longueurs absolues */
-padding-inline: 1em 2em; /* Des longueurs relatives à la taille du texte */
-padding-inline: 5% 2%; /* Des longueurs relatives à la taille du bloc englobant */
-padding-inline: 10px; /* Une seule valeur définit le remplissage des deux côtés */
+/* vaweuws de wongueuw */
+/* type <wength> */
+padding-inwine: 10px 20px; /* des wongueuws absowues */
+p-padding-inwine: 1em 2em; /* des wongueuws w-wewatives à wa t-taiwwe du texte */
+p-padding-inwine: 5% 2%; /* d-des wongueuws wewatives à wa taiwwe d-du bwoc engwobant */
+padding-inwine: 10px; /* une seuwe vaweuw d-définit we wempwissage des deux côtés */
 
-/* Valeurs avec un mot-clé */
-padding-inline: auto;
+/* vaweuws avec un mot-cwé */
+padding-inwine: auto;
 
-/* Valeurs globales */
-padding-inline: inherit;
-padding-inline: initial;
-padding-inline: unset;
+/* v-vaweuws gwobawes */
+padding-inwine: i-inhewit;
+p-padding-inwine: i-initiaw;
+padding-inwine: unset;
 ```
 
-Ces valeurs peuvent être définies individuellement grâce aux propriétés détaillées {{cssxref("padding-inline-start")}} et {{cssxref("padding-inline-end")}}. Pour définir le remplissage sur l'axe de bloc, on pourra utiliser la propriété logique raccourcie {{cssxref("padding-block")}} qui définit {{cssxref("padding-block-start")}} et {{cssxref("padding-block-end")}}.
+ces vaweuws peuvent êtwe d-définies individuewwement gwâce a-aux pwopwiétés détaiwwées {{cssxwef("padding-inwine-stawt")}} e-et {{cssxwef("padding-inwine-end")}}. (U ﹏ U) p-pouw définiw we wempwissage s-suw w'axe de bwoc, >w< on p-pouwwa utiwisew wa pwopwiété wogique waccouwcie {{cssxwef("padding-bwock")}} q-qui définit {{cssxwef("padding-bwock-stawt")}} et {{cssxwef("padding-bwock-end")}}. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
-### Valeur
+### vaweuw
 
-La propriété `padding-inline` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
+wa p-pwopwiété `padding-inwine` p-peut pwendwe wes mêmes vaweuws que wa pwopwiété {{cssxwef("padding-weft")}}. 😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.texteExemple {
-  writing-mode: vertical-rl;
-  padding-inline: 20px 40px;
-  background-color: #c8c800;
+.texteexempwe {
+  w-wwiting-mode: vewticaw-ww;
+  padding-inwine: 20px 40px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="texteExemple">Texte d'exemple</p>
+  <p cwass="texteexempwe">texte d'exempwe</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", (ˆ ﻌ ˆ)♡ 140, 😳😳😳 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes :
+- wes p-pwopwiétés p-physiques cowwespondantes :
 
-  - {{cssxref("padding-top")}},
-  - {{cssxref("padding-right")}},
-  - {{cssxref("padding-bottom")}},
-  - {{cssxref("padding-left")}}
+  - {{cssxwef("padding-top")}}, (U ﹏ U)
+  - {{cssxwef("padding-wight")}}, (///ˬ///✿)
+  - {{cssxwef("padding-bottom")}}, 😳
+  - {{cssxwef("padding-weft")}}
 
-- Les propriétés influençant les propriétés logiques :
+- wes pwopwiétés i-infwuençant w-wes pwopwiétés w-wogiques :
 
-  - {{cssxref("writing-mode")}},
-  - {{cssxref("direction")}},
-  - {{cssxref("text-orientation")}}
+  - {{cssxwef("wwiting-mode")}}, 😳
+  - {{cssxwef("diwection")}}, σωσ
+  - {{cssxwef("text-owientation")}}

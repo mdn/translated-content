@@ -1,173 +1,173 @@
 ---
-title: list-style-position
-slug: Web/CSS/list-style-position
+titwe: wist-stywe-position
+swug: w-web/css/wist-stywe-position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`list-style-position`** permet de définir la position du marqueur (cf. [`::marker`](/fr/docs/Web/CSS/::marker)) de liste par rapport à la boîte principale.
+w-wa pwopwiété **`wist-stywe-position`** p-pewmet d-de définiw wa p-position du mawqueuw (cf. (⑅˘꒳˘) [`::mawkew`](/fw/docs/web/css/::mawkew)) d-de wiste paw w-wappowt à wa boîte p-pwincipawe. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: list-style-position")}}
+{{intewactiveexampwe("css demo: wist-stywe-position")}}
 
-```css interactive-example-choice
-list-style-position: inside;
+```css intewactive-exampwe-choice
+wist-stywe-position: i-inside;
 ```
 
-```css interactive-example-choice
-list-style-position: outside;
+```css intewactive-exampwe-choice
+wist-stywe-position: o-outside;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
   <div>
-    <p>NASA Notable Missions</p>
-    <ul class="transition-all" id="example-element">
-      <li>Apollo 11: First Human Landing</li>
-      <li>City in Space: The International Space Station</li>
-      <li>Great Observatory: The Hubble Space Telescope</li>
-      <li>Everlasting Mars Rovers</li>
-    </ul>
+    <p>nasa nyotabwe missions</p>
+    <uw c-cwass="twansition-aww" id="exampwe-ewement">
+      <wi>apowwo 11: f-fiwst h-human wanding</wi>
+      <wi>city in space: the intewnationaw space station</wi>
+      <wi>gweat obsewvatowy: the h-hubbwe space tewescope</wi>
+      <wi>evewwasting maws wovews</wi>
+    </uw>
   </div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  font-size: 1.2rem;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  font-size: 1.2wem;
 }
 
-#example-element {
-  width: 100%;
-  background: #be094b;
-  color: white;
+#exampwe-ewement {
+  w-width: 100%;
+  backgwound: #be094b;
+  c-cowow: w-white;
 }
 
 section {
-  text-align: left;
-  flex-direction: column;
+  t-text-awign: w-weft;
+  fwex-diwection: cowumn;
 }
 
-hr {
+hw {
   width: 50%;
-  color: lightgray;
-  margin: 0.5em;
+  c-cowow: wightgway;
+  mawgin: 0.5em;
 }
 
 .note {
-  font-size: 0.8rem;
+  font-size: 0.8wem;
 }
 
-.note a {
-  color: #009e5f;
+.note a-a {
+  cowow: #009e5f;
 }
 
-@counter-style space-counter {
-  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+@countew-stywe space-countew {
+  symbows: "\1f680" "\1f6f8" "\1f6f0" "\1f52d";
   suffix: " ";
 }
 ```
 
-Pour définir cette propriété, on pourra aussi utiliser la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style).
+pouw définiw cette pwopwiété, ^^;; on pouwwa a-aussi utiwisew wa pwopwiété waccouwcie [`wist-stywe`](/fw/docs/web/css/wist-stywe). >_<
 
-> [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
+> [!note]
+> c-cette pwopwiété s-s'appwique a-aux éwéments d'une wiste (c'est-à-diwe aux éwéments pouw wesquews [`dispway`](/fw/docs/web/css/dispway) v-vaut `wist-item`). rawr x3 [paw d-défaut](https://www.w3.owg/tw/htmw5/wendewing.htmw#wists), /(^•ω•^) cewa incwut wes éwéments [`<wi>`](/fw/docs/web/htmw/ewement/wi). :3 c-cette pwopwiété p-peut êtwe héwitée paw wes éwéments e-et si on veut donc g-géwew une wiste de façon unifowme, (ꈍᴗꈍ) on pouwwa a-appwiquew wa pwopwiété à w'éwément p-pawent (qui cowwespond en g-généwaw à [`<ow>`](/fw/docs/web/htmw/ewement/ow) o-ou à [`<uw>`](/fw/docs/web/htmw/ewement/uw)). /(^•ω•^)
 
-Une différence de comportement existe entre les navigateurs lorsqu'un élément de bloc est placé en premier au sein d'un élément de liste avec `list-style-position: inside`. Chrome et Safari placent l'élément sur la même ligne que la boîte du marqueur. En revanche, Firefox, Internet Explorer et Opera placent l'élément sur la ligne suivante. Voir [le bug 36854 de Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=36854) pour plus d'informations.
+une difféwence de compowtement existe entwe wes nyavigateuws wowsqu'un éwément de bwoc e-est pwacé en pwemiew a-au sein d'un éwément de w-wiste avec `wist-stywe-position: i-inside`. (⑅˘꒳˘) chwome e-et safawi pwacent w'éwément suw wa même wigne que wa boîte d-du mawqueuw. ( ͡o ω ͡o ) en wevanche, fiwefox, òωó intewnet expwowew et opewa pwacent w'éwément s-suw wa wigne suivante. (⑅˘꒳˘) voiw [we b-bug 36854 de fiwefox](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=36854) p-pouw p-pwus d'infowmations. XD
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-list-style-position: inside;
-list-style-position: outside;
+/* v-vaweuws a-avec un mot-cwé */
+w-wist-stywe-position: i-inside;
+wist-stywe-position: outside;
 
-/* Valeurs globales */
-list-style-position: inherit;
-list-style-position: initial;
-list-style-position: revert;
-list-style-position: unset;
+/* v-vaweuws g-gwobawes */
+wist-stywe-position: i-inhewit;
+wist-stywe-position: initiaw;
+w-wist-stywe-position: w-wevewt;
+wist-stywe-position: unset;
 ```
 
-La propriété `list-style-position` est définie avec l'un des mots-clés suivants.
+wa pwopwiété `wist-stywe-position` e-est définie avec w'un des mots-cwés suivants. -.-
 
-### Valeurs
+### vaweuws
 
 - `inside`
-  - : La boîte du marqueur ([`::marker`](/fr/docs/Web/CSS/::marker)) est la première boîte en ligne (_inline_) de la boîte principale. Le contenu de l'élément sera appliqué à la suite de la boîte du marqueur.
+  - : wa boîte d-du mawqueuw ([`::mawkew`](/fw/docs/web/css/::mawkew)) est wa pwemièwe boîte en wigne (_inwine_) d-de wa boîte p-pwincipawe. :3 we c-contenu de w'éwément sewa appwiqué à w-wa suite de wa boîte d-du mawqueuw. nyaa~~
 - `outside`
-  - : La boîte du marqueur ([`::marker`](/fr/docs/Web/CSS/::marker)) est en dehors de la boîte principale.
+  - : w-wa boîte du mawqueuw ([`::mawkew`](/fw/docs/web/css/::mawkew)) est en dehows de wa boîte pwincipawe. 😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Définition de la position des éléments d'une liste
+### définition de w-wa position des éwéments d'une w-wiste
 
-#### HTML
+#### htmw
 
-```html
-<ul class="un">
-  Liste 1
-  <li>Élément 1-1</li>
-  <li>Élément 1-2</li>
-  <li>Élément 1-3</li>
-  <li>Élément 1-4</li>
-</ul>
-<ul class="deux">
-  Liste 2
-  <li>Élément 2-1</li>
-  <li>Élément 2-2</li>
-  <li>Élément 2-3</li>
-  <li>Élément 2-4</li>
-</ul>
-<ul class="trois">
-  Liste 3
-  <li>Élément 3-1</li>
-  <li>Élément 3-2</li>
-  <li>Élément 3-3</li>
-  <li>Élément 3-4</li>
-</ul>
+```htmw
+<uw c-cwass="un">
+  wiste 1
+  <wi>Éwément 1-1</wi>
+  <wi>Éwément 1-2</wi>
+  <wi>Éwément 1-3</wi>
+  <wi>Éwément 1-4</wi>
+</uw>
+<uw cwass="deux">
+  wiste 2
+  <wi>Éwément 2-1</wi>
+  <wi>Éwément 2-2</wi>
+  <wi>Éwément 2-3</wi>
+  <wi>Éwément 2-4</wi>
+</uw>
+<uw c-cwass="twois">
+  w-wiste 3
+  <wi>Éwément 3-1</wi>
+  <wi>Éwément 3-2</wi>
+  <wi>Éwément 3-3</wi>
+  <wi>Éwément 3-4</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
 .un {
-  list-style-position: inside;
-  list-style-type: square;
+  w-wist-stywe-position: i-inside;
+  wist-stywe-type: squawe;
 }
 
 .deux {
-  list-style-position: outside;
-  list-style-type: circle;
+  wist-stywe-position: outside;
+  wist-stywe-type: c-ciwcwe;
 }
 
-.trois {
-  list-style-position: inside;
-  list-style-image: url("star-solid.gif");
+.twois {
+  w-wist-stywe-position: i-inside;
+  wist-stywe-image: u-uww("staw-sowid.gif");
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Définition_de_la_position_des_éléments_d'une_liste", 200, 420)}}
+{{embedwivesampwe("définition_de_wa_position_des_éwéments_d'une_wiste", (⑅˘꒳˘) 200, 420)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`list-style`](/fr/docs/Web/CSS/list-style)
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
+- [`wist-stywe`](/fw/docs/web/css/wist-stywe)
+- [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type)
+- [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image)

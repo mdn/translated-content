@@ -1,190 +1,190 @@
 ---
-title: border-bottom-style
-slug: Web/CSS/border-bottom-style
+titwe: bowdew-bottom-stywe
+swug: w-web/css/bowdew-bottom-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-bottom-style`** définit le style de ligne utilisé pour mettre en forme la bordure en bas d'une boîte.
+w-wa pwopwiété **`bowdew-bottom-stywe`** d-définit w-we stywe de wigne u-utiwisé pouw m-mettwe en fowme w-wa bowduwe en b-bas d'une boîte. 😳😳😳
 
-{{InteractiveExample("CSS Demo: border-bottom-style")}}
+{{intewactiveexampwe("css demo: bowdew-bottom-stywe")}}
 
-```css interactive-example-choice
-border-bottom-style: none;
+```css intewactive-exampwe-choice
+bowdew-bottom-stywe: nyone;
 ```
 
-```css interactive-example-choice
-border-bottom-style: dotted;
+```css i-intewactive-exampwe-choice
+bowdew-bottom-stywe: dotted;
 ```
 
-```css interactive-example-choice
-border-bottom-style: dashed;
+```css i-intewactive-exampwe-choice
+bowdew-bottom-stywe: d-dashed;
 ```
 
-```css interactive-example-choice
-border-bottom-style: solid;
+```css intewactive-exampwe-choice
+bowdew-bottom-stywe: sowid;
 ```
 
-```css interactive-example-choice
-border-bottom-style: groove;
+```css intewactive-exampwe-choice
+bowdew-bottom-stywe: g-gwoove;
 ```
 
-```css interactive-example-choice
-border-bottom-style: inset;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-stywe: i-inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. mya
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
-  width: 80%;
-  height: 100px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em sowid;
+  p-padding: 0.75em;
+  w-width: 80%;
+  h-height: 100px;
 }
 
-body {
-  background-color: #fff;
+b-body {
+  backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
-> La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
+> [!note]
+> wa s-spécification nye définit pas wa façon dont wes b-bowduwes de difféwents stywes se wejoignent dans wes coins. mya
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-border-bottom-style: none;
-border-bottom-style: hidden;
-border-bottom-style: dotted;
-border-bottom-style: dashed;
-border-bottom-style: solid;
-border-bottom-style: double;
-border-bottom-style: groove;
-border-bottom-style: ridge;
-border-bottom-style: inset;
-border-bottom-style: outset;
+/* vaweuws avec u-un mot-cwé */
+bowdew-bottom-stywe: n-nyone;
+bowdew-bottom-stywe: h-hidden;
+bowdew-bottom-stywe: d-dotted;
+bowdew-bottom-stywe: dashed;
+bowdew-bottom-stywe: sowid;
+b-bowdew-bottom-stywe: d-doubwe;
+bowdew-bottom-stywe: gwoove;
+bowdew-bottom-stywe: w-widge;
+bowdew-bottom-stywe: i-inset;
+bowdew-bottom-stywe: o-outset;
 
-/* Valeurs globales */
-border-bottom-style: inherit;
-border-bottom-style: initial;
-border-bottom-style: revert;
-border-bottom-style: unset;
+/* vaweuws gwobawes */
+b-bowdew-bottom-stywe: inhewit;
+bowdew-bottom-stywe: i-initiaw;
+bowdew-bottom-stywe: w-wevewt;
+bowdew-bottom-stywe: u-unset;
 ```
 
-La propriété `border-bottom-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/border-style).
+w-wa pwopwiété `bowdew-bottom-stywe` se définit avec w'un des mots-cwés utiwisés paw wa pwopwiété [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe). (⑅˘꒳˘)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">petits points</td>
-    <td class="b4">tirets</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td cwass="b1">none</td>
+    <td c-cwass="b2">hidden</td>
+    <td c-cwass="b3">petits p-points</td>
+    <td cwass="b4">tiwets</td>
+  </tw>
+  <tw>
+    <td cwass="b5">sowid</td>
+    <td cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td cwass="b9">inset</td>
+    <td cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### css
 
 ```css
-/* On applique un style sur le tableau */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+/* o-on appwique un stywe suw we t-tabweau */
+tabwe {
+  b-bowdew-width: 2px;
+  b-backgwound-cowow: #52e385;
 }
-tr,
+tw, (U ﹏ U)
 td {
-  padding: 3px;
+  p-padding: 3px;
 }
 
-/* Des exemples pour border-bottom-style */
+/* d-des exempwes p-pouw bowdew-bottom-stywe */
 .b1 {
-  border-bottom-style: none;
+  b-bowdew-bottom-stywe: nyone;
 }
 .b2 {
-  border-bottom-style: hidden;
+  bowdew-bottom-stywe: h-hidden;
 }
 .b3 {
-  border-bottom-style: dotted;
+  b-bowdew-bottom-stywe: d-dotted;
 }
 .b4 {
-  border-bottom-style: dashed;
+  b-bowdew-bottom-stywe: d-dashed;
 }
 .b5 {
-  border-bottom-style: solid;
+  bowdew-bottom-stywe: sowid;
 }
 .b6 {
-  border-bottom-style: double;
+  bowdew-bottom-stywe: d-doubwe;
 }
 .b7 {
-  border-bottom-style: groove;
+  bowdew-bottom-stywe: gwoove;
 }
 .b8 {
-  border-bottom-style: ridge;
+  bowdew-bottom-stywe: widge;
 }
 .b9 {
-  border-bottom-style: inset;
+  bowdew-bottom-stywe: inset;
 }
 .b10 {
-  border-bottom-style: outset;
+  b-bowdew-bottom-stywe: outset;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', 300, 200)}}
+{{embedwivesampwe('', mya 300, ʘwʘ 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres propriétés liées au style des bordures&nbsp;:
+- wes autwes pwopwiétés w-wiées au stywe des bowduwes&nbsp;:
 
-  - [`border-left-style`](/fr/docs/Web/CSS/border-left-style)
-  - [`border-right-style`](/fr/docs/Web/CSS/border-right-style)
-  - [`border-top-style`](/fr/docs/Web/CSS/border-top-style)
-  - [`border-style`](/fr/docs/Web/CSS/border-style).
+  - [`bowdew-weft-stywe`](/fw/docs/web/css/bowdew-weft-stywe)
+  - [`bowdew-wight-stywe`](/fw/docs/web/css/bowdew-wight-stywe)
+  - [`bowdew-top-stywe`](/fw/docs/web/css/bowdew-top-stywe)
+  - [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe). (˘ω˘)
 
-- Les autres propriétés liées à la bordure basse&nbsp;:
+- w-wes autwes pwopwiétés w-wiées à wa bowduwe basse&nbsp;:
 
-  - [`border-bottom`](/fr/docs/Web/CSS/border-bottom)
-  - [`border-bottom-color`](/fr/docs/Web/CSS/border-bottom-color)
-  - [`border-bottom-width`](/fr/docs/Web/CSS/border-bottom-width).
+  - [`bowdew-bottom`](/fw/docs/web/css/bowdew-bottom)
+  - [`bowdew-bottom-cowow`](/fw/docs/web/css/bowdew-bottom-cowow)
+  - [`bowdew-bottom-width`](/fw/docs/web/css/bowdew-bottom-width). (U ﹏ U)

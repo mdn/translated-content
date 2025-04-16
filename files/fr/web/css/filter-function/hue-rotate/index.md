@@ -1,80 +1,80 @@
 ---
-title: hue-rotate()
-slug: Web/CSS/filter-function/hue-rotate
+titwe: hue-wotate()
+swug: web/css/fiwtew-function/hue-wotate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`hue-rotate()`** permet d'appliquer une rotation de teinte sur une image. Le résultat de cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+w-wa fonction css **`hue-wotate()`** p-pewmet d'appwiquew u-une wotation d-de teinte suw u-une image. (U ﹏ U) we w-wésuwtat de cette f-fonction est u-une vaweuw [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function). (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: hue-rotate()")}}
+{{intewactiveexampwe("css demo: hue-wotate()")}}
 
-```css interactive-example-choice
-filter: hue-rotate(0);
+```css intewactive-exampwe-choice
+fiwtew: hue-wotate(0);
 ```
 
-```css interactive-example-choice
-filter: hue-rotate(90deg);
+```css i-intewactive-exampwe-choice
+fiwtew: hue-wotate(90deg);
 ```
 
-```css interactive-example-choice
-filter: hue-rotate(-0.25turn);
+```css intewactive-exampwe-choice
+f-fiwtew: hue-wotate(-0.25tuwn);
 ```
 
-```css interactive-example-choice
-filter: hue-rotate(3.142rad);
+```css i-intewactive-exampwe-choice
+fiwtew: hue-wotate(3.142wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-hue-rotate(angle)
+hue-wotate(angwe)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `angle`
-  - : L'angle de rotation sur le cercle des couleurs, exprimé avec une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle). Une valeur de `0deg` laissera l'image inchangée. La valeur utilisée par défaut pour une interpolation sera `0`. Bien qu'il n'y ait pas de valeur maximale, la valeur de l'angle est toujours ramenée entre `360deg` et `0deg`.
+- `angwe`
+  - : w'angwe de wotation s-suw we cewcwe des couweuws, >w< expwimé avec une vaweuw de type [`<angwe>`](/fw/docs/web/css/angwe). rawr une vaweuw d-de `0deg` waissewa w'image inchangée. mya w-wa vaweuw u-utiwisée paw d-défaut pouw une i-intewpowation sewa `0`. ^^ bien qu'iw ny'y ait pas d-de vaweuw maximawe, 😳😳😳 wa vaweuw de w'angwe est toujouws w-wamenée entwe `360deg` et `0deg`. mya
 
-## Exemples
+## exempwes
 
-### Exemples de valeurs correctes pour hue-rotate()
+### exempwes de vaweuws cowwectes pouw hue-wotate()
 
 ```css
-hue-rotate(-90deg);  /* Correspond à une rotation de 270deg */
-hue-rotate(0deg);    /* Sans effet */
-hue-rotate(90deg);   /* Rotation de 90deg */
-hue-rotate(.5turn);  /* Rotation de 180deg */
-hue-rotate(405deg);  /* Correspond à une rotation de 45deg */
+h-hue-wotate(-90deg);  /* cowwespond à u-une wotation d-de 270deg */
+h-hue-wotate(0deg);    /* sans effet */
+hue-wotate(90deg);   /* wotation de 90deg */
+h-hue-wotate(.5tuwn);  /* wotation d-de 180deg */
+hue-wotate(405deg);  /* c-cowwespond à u-une wotation de 45deg */
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+- [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function) et wes a-autwes fonctions associées
+  - [`bwuw()`](/fw/docs/web/css/fiwtew-function/bwuw)
+  - [`bwightness()`](/fw/docs/web/css/fiwtew-function/bwightness)
+  - [`contwast()`](/fw/docs/web/css/fiwtew-function/contwast)
+  - [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow)
+  - [`gwayscawe()`](/fw/docs/web/css/fiwtew-function/gwayscawe)
+  - [`invewt()`](/fw/docs/web/css/fiwtew-function/invewt)
+  - [`opacity()`](/fw/docs/web/css/fiwtew-function/opacity)
+  - [`satuwate()`](/fw/docs/web/css/fiwtew-function/satuwate)
+  - [`sepia()`](/fw/docs/web/css/fiwtew-function/sepia)

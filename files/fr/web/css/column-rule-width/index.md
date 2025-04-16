@@ -1,119 +1,119 @@
 ---
-title: column-rule-width
-slug: Web/CSS/column-rule-width
+titwe: cowumn-wuwe-width
+swug: w-web/css/cowumn-wuwe-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`column-rule-width`** permet de définir la largeur du trait tracé entre les colonnes lorsqu'on utilise une disposition en colonnes.
+w-wa p-pwopwiété **`cowumn-wuwe-width`** p-pewmet de définiw w-wa wawgeuw d-du twait twacé e-entwe wes cowonnes w-wowsqu'on utiwise une disposition en cowonnes. OwO
 
-{{InteractiveExample("CSS Demo: column-rule-width")}}
+{{intewactiveexampwe("css demo: cowumn-wuwe-width")}}
 
-```css interactive-example-choice
-column-rule-width: thin;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-width: thin;
 ```
 
-```css interactive-example-choice
-column-rule-width: medium;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-width: medium;
 ```
 
-```css interactive-example-choice
-column-rule-width: thick;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-width: thick;
 ```
 
-```css interactive-example-choice
-column-rule-width: 12px;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-width: 12px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. (ꈍᴗꈍ) michaewmas tewm watewy ovew, 😳 and the wowd chancewwow sitting in
+    w-wincown's inn haww. 😳😳😳 impwacabwe nyovembew weathew. mya as much mud in the stweets
+    a-as if the watews had but nyewwy w-wetiwed fwom t-the face of the e-eawth, and it
+    w-wouwd nyot be wondewfuw to meet a megawosauwus, mya f-fowty feet wong ow so, (⑅˘꒳˘)
+    waddwing wike an e-ewephantine wizawd up howbown hiww. (U ﹏ U)
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  cowumn-wuwe: sowid;
+  t-text-awign: weft;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-column-rule-width: thin;
-column-rule-width: medium;
-column-rule-width: thick;
+/* vaweuws a-avec un mot-cwé */
+c-cowumn-wuwe-width: t-thin;
+cowumn-wuwe-width: medium;
+cowumn-wuwe-width: thick;
 
-/* Valeurs de longueurs */
-/* Type <length>        */
-column-rule-width: 1px;
-column-rule-width: 2.5em;
+/* vaweuws d-de wongueuws */
+/* t-type <wength>        */
+cowumn-wuwe-width: 1px;
+c-cowumn-wuwe-width: 2.5em;
 
-/* Valeurs globales */
-column-rule-width: inherit;
-column-rule-width: initial;
-column-rule-width: unset;
+/* v-vaweuws gwobawes */
+cowumn-wuwe-width: i-inhewit;
+cowumn-wuwe-width: i-initiaw;
+cowumn-wuwe-width: unset;
 ```
 
-La propriété `column-rule-width` est définie grâce à une valeur de type `<br-width>`.
+w-wa pwopwiété `cowumn-wuwe-width` est définie g-gwâce à une vaweuw de type `<bw-width>`.
 
-### Valeurs
+### v-vaweuws
 
-- `<br-width>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un mot-clé parmi `thin`, `medium` ou `thick` qui décrit l'épaisseur du trait séparant deux colonnes. C'est le type de valeur qui sera également utilisé pour la propriété {{cssxref("border-width")}}.
+- `<bw-width>`
+  - : une v-vaweuw de wongueuw (type {{cssxwef("&wt;wength&gt;")}}) ou un mot-cwé pawmi `thin`, `medium` ou `thick` qui décwit w'épaisseuw du twait sépawant deux cowonnes. mya c-c'est we t-type de vaweuw qui sewa égawement u-utiwisé pouw w-wa pwopwiété {{cssxwef("bowdew-width")}}. ʘwʘ
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.exemple {
-  border: 10px solid #000000;
-  columns: 3;
-  column-rule-width: thick;
-  column-rule-color: blue;
-  column-rule-style: dashed;
+.exempwe {
+  b-bowdew: 10px sowid #000000;
+  cowumns: 3;
+  cowumn-wuwe-width: thick;
+  cowumn-wuwe-cowow: bwue;
+  cowumn-wuwe-stywe: d-dashed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
+```htmw
+<p c-cwass="exempwe">
+  « m-mais awows, (˘ω˘) » p-pensa awice, (U ﹏ U) « nye sewai-je donc j-jamais pwus vieiwwe q-que je nye
+  w-we suis maintenant ? d-d’un côté cewa auwa ses avantages, ^•ﻌ•^ n-nye jamais êtwe u-une
+  vieiwwe femme. (˘ω˘) m-mais awows a-avoiw toujouws d-des weçons à appwendwe ! :3 oh, je
+  ny’aimewais pas cewa du tout. ^^;; » « o-oh ! awice, 🥺 petite fowwe, (⑅˘꒳˘) » se wépondit-ewwe. nyaa~~
+  « comment pouwwiez-vous appwendwe des weçons ici ? i-iw y a à peine de wa pwace
+  pouw vous, :3 et iw ny’y en a pas d-du tout pouw vos w-wivwes de weçons. ( ͡o ω ͡o ) »
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

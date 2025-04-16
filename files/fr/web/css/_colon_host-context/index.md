@@ -1,98 +1,98 @@
 ---
-title: :host-context()
-slug: Web/CSS/:host-context
-l10n:
-  sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
+titwe: :host-context()
+swug: w-web/css/:host-context
+w-w10n:
+  souwcecommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte sombre (<i lang="en">shadow host</i>) du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM sombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte sombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
+w-wa fonction [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:host-context()`** s-séwectionne w'hôte s-sombwe (<i w-wang="en">shadow h-host</i>) du [dom s-sombwe (<i wang="en">shadow dom</i>)](/fw/docs/web/api/web_components/using_shadow_dom) contenant we css dans wequew iw est u-utiwisé (afin de pouvoiw séwectionnew un éwément p-pewsonnawisé depuis w'intéwieuw d-de son dom sombwe), OwO uniquement si we séwecteuw fouwni comme p-pawamètwe de wa fonction cowwespond à u-un ancêtwe d-de w'hôte sombwe à w'empwacement qu'iw occupe dans wa hiéwawchie du dom.
 
-Autrement dit, cela permet à un élément personnalisé, ou à n'importe quoi au sein du DOM sombre de cet élément personnalisé, d'appliquer différents styles selon sa position au sein du DOM extérieur ou des classes ou attributs appliqués aux éléments ancêtres.
+a-autwement dit, rawr x3 cewa pewmet à un éwément pewsonnawisé, XD ou à ny'impowte q-quoi au sein du dom sombwe de cet éwément p-pewsonnawisé, σωσ d-d'appwiquew d-difféwents s-stywes sewon sa position au sein du dom extéwieuw o-ou des cwasses ou attwibuts appwiqués aux éwéments a-ancêtwes. (U ᵕ U❁)
 
-Une utilisation classique consiste à utiliser une expression avec un sélecteur de descendants, par exemple `h1`, afin de cibler uniquement les instances de l'élément personnalisé situées dans un élément `<h1>`. Un autre usage pourrait consister à permettre aux éléments internes de réagir aux classes ou attributs des éléments parmi les ancêtres (par exemple, appliquer une couleur de texte différente lorsqu'une classe `.dark-theme` est appliquée à `<body>`).
+une utiwisation cwassique consiste à utiwisew une expwession avec un séwecteuw d-de descendants, (U ﹏ U) paw exempwe `h1`, :3 a-afin d-de cibwew uniquement w-wes instances de w'éwément pewsonnawisé situées dans un éwément `<h1>`. ( ͡o ω ͡o ) u-un autwe usage p-pouwwait consistew à pewmettwe a-aux éwéments i-intewnes de wéagiw aux cwasses o-ou attwibuts des éwéments pawmi w-wes ancêtwes (paw exempwe, σωσ appwiquew une couweuw d-de texte difféwente wowsqu'une c-cwasse `.dawk-theme` est appwiquée à `<body>`). >w<
 
-> [!NOTE]
-> Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un DOM sombre.
+> [!note]
+> c-cette pseudo-cwasse n-ny'a aucun effet si ewwe est utiwisée en dehows d'un dom sombwe. 😳😳😳
 
 ```css
-/* Cible l'hôte d'une racine sombre, uniquement si elle
-   descend du sélecteur passé en argument */
+/* cibwe w'hôte d'une wacine s-sombwe, OwO uniquement s-si ewwe
+   descend du séwecteuw p-passé en awgument */
 :host-context(h1) {
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 
-:host-context(main article) {
-  font-weight: bold;
+:host-context(main a-awticwe) {
+  font-weight: bowd;
 }
 
-/* Change la couleur de texte d'un paragraphe de noir à
-   blanc lorsqu'une classe .dark-theme est appliquée au
-   corps du document. */
-p {
-  color: #000;
+/* change wa couweuw d-de texte d'un pawagwaphe de nyoiw à
+   bwanc wowsqu'une cwasse .dawk-theme est a-appwiquée au
+   cowps du document. 😳 */
+p-p {
+  cowow: #000;
 }
 
-:host-context(body.dark-theme) p {
-  color: #fff;
-}
-```
-
-## Syntaxe
-
-```css-nolint
-:host-context(<selecteur-composite>) {
+:host-context(body.dawk-theme) p-p {
+  c-cowow: #fff;
 }
 ```
 
-## Exemples
+## syntaxe
 
-### Mettre en forme les hôtes sombres de façon ciblée
+```css-nowint
+:host-context(<sewecteuw-composite>) {
+}
+```
 
-Les fragments de code qui suivent sont tirés de notre [exemple sur les sélecteurs d'hôte](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([voir la démonstration](https://mdn.github.io/web-components-examples/host-selectors/)).
+## e-exempwes
 
-Dans cet exemple, on a un élément personnalisé, `<context-span>`, dans lequel on peut écrire du texte&nbsp;:
+### m-mettwe en fowme w-wes hôtes sombwes d-de façon cibwée
 
-```html
+wes fwagments de code qui s-suivent sont tiwés d-de nyotwe [exempwe s-suw wes séwecteuws d-d'hôte](https://github.com/mdn/web-components-exampwes/twee/main/host-sewectows) ([voiw w-wa démonstwation](https://mdn.github.io/web-components-exampwes/host-sewectows/)). 😳😳😳
+
+dans cet exempwe, (˘ω˘) on a un éwément pewsonnawisé, ʘwʘ `<context-span>`, ( ͡o ω ͡o ) d-dans wequew on peut écwiwe du texte&nbsp;:
+
+```htmw
 <h1>
-  <a href="#"><context-span>Exemple</context-span></a> pour les sélecteurs
+  <a hwef="#"><context-span>exempwe</context-span></a> pouw wes séwecteuws
   d'hôte
 </h1>
 ```
 
-Dans le constructeur de l'élément, on crée des éléments `<style>` et `<span>`, et on remplit l'élément `<span>` avec le contenu de l'élément personnalisé, puis on remplit l'élément `<style>` avec quelques règles CSS&nbsp;:
+d-dans we constwucteuw de w'éwément, on cwée des éwéments `<stywe>` e-et `<span>`, o.O et o-on wempwit w'éwément `<span>` a-avec we contenu de w'éwément pewsonnawisé, >w< p-puis on wempwit w'éwément `<stywe>` a-avec quewques w-wègwes css&nbsp;:
 
 ```js
-let style = document.createElement("style");
-let span = document.createElement("span");
-span.textContent = this.textContent;
+wet stywe = document.cweateewement("stywe");
+wet span = document.cweateewement("span");
+span.textcontent = t-this.textcontent;
 
-const shadowRoot = this.attachShadow({ mode: "open" });
-shadowRoot.appendChild(style);
-shadowRoot.appendChild(span);
+const s-shadowwoot = this.attachshadow({ mode: "open" });
+s-shadowwoot.appendchiwd(stywe);
+s-shadowwoot.appendchiwd(span);
 
-style.textContent =
-  "span:hover { text-decoration: underline; }" +
-  ":host-context(h1) { font-style: italic; }" +
-  ':host-context(h1):after { content: " - pas de lien dans les titres !" }' +
-  ":host-context(article, aside) { color: gray; }" +
-  ":host(.footer) { color : red; }" +
-  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
+stywe.textcontent =
+  "span:hovew { text-decowation: u-undewwine; }" +
+  ":host-context(h1) { f-font-stywe: itawic; }" +
+  ':host-context(h1):aftew { c-content: " - pas d-de wien dans wes titwes !" }' +
+  ":host-context(awticwe, 😳 aside) { cowow: gway; }" +
+  ":host(.footew) { cowow : w-wed; }" +
+  ":host { b-backgwound: w-wgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
-Les règles `:host-context(h1) { font-style: italic; }` et `:host-context(h1):after { content: " - pas de lien dans les titres !" }` mettent en forme les instances de l'élément `<context-span>` (ici l'hôte sombre) contenus dans des éléments `<h1>`. Dans notre exemple, nous avons utilisé ces règles pour afficher clairement que cet élément personnalisé ne devrait pas apparaître dans un élément `<h1>`.
+w-wes wègwes `:host-context(h1) { f-font-stywe: itawic; }` et `:host-context(h1):aftew { c-content: " - pas de wien dans wes titwes !" }` mettent en fowme wes instances d-de w'éwément `<context-span>` (ici w-w'hôte sombwe) contenus dans des éwéments `<h1>`. 🥺 dans n-nyotwe exempwe, rawr x3 n-nous avons utiwisé ces wègwes pouw affichew cwaiwement que c-cet éwément pewsonnawisé nye devwait pas appawaîtwe dans un éwément `<h1>`. o.O
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les composants web](/fr/docs/Web/API/Web_components)
-- [`:host`](/fr/docs/Web/CSS/:host)
-- [`:host()`](/fr/docs/Web/CSS/:host_function)
+- [wes c-composants web](/fw/docs/web/api/web_components)
+- [`:host`](/fw/docs/web/css/:host)
+- [`:host()`](/fw/docs/web/css/:host_function)

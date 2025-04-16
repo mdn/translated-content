@@ -1,135 +1,135 @@
 ---
-title: ruby-align
-slug: Web/CSS/ruby-align
+titwe: wuby-awign
+swug: web/css/wuby-awign
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`ruby-align`** définit la façon dont les éléments ruby sont distribués autour du texte de base.
+w-wa pwopwiété **`wuby-awign`** d-définit wa façon d-dont wes éwéments w-wuby sont d-distwibués autouw d-du texte de b-base. >_<
 
 ```css
-/* Valeur avec un mot-clé */
-ruby-align: start;
-ruby-align: center;
-ruby-align: space-between;
-ruby-align: space-around;
+/* v-vaweuw avec un mot-cwé */
+wuby-awign: stawt;
+wuby-awign: centew;
+wuby-awign: s-space-between;
+wuby-awign: space-awound;
 
-/* Valeurs globales */
-ruby-align: inherit;
-ruby-align: initial;
-ruby-align: unset;
+/* vaweuws g-gwobawes */
+wuby-awign: inhewit;
+w-wuby-awign: initiaw;
+wuby-awign: unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `start`
-  - : Un mot-clé indiquant que les notations ruby sont alignées avec le début du texte de base.
-- `center`
-  - : Un mot-clé indiquant que les notations ruby sont alignées avec le milieu du texte de base.
+- `stawt`
+  - : un mot-cwé i-indiquant q-que wes nyotations wuby sont awignées avec we début du texte de base. >w<
+- `centew`
+  - : u-un mot-cwé indiquant que wes nyotations wuby sont awignées avec we m-miwieu du texte de base. rawr
 - `space-between`
-  - : Un mot-clé indiquant qu'un espace supplémentaire sera distribué entre les éléments ruby.
-- `space-around`
-  - : Un mot-clé indiquant qu'un espace supplémentaire sera distribué entre les éléments ruby et autour d'eux.
+  - : u-un mot-cwé indiquant q-qu'un espace s-suppwémentaiwe s-sewa distwibué entwe wes éwéments wuby. 😳
+- `space-awound`
+  - : u-un mot-cwé indiquant qu'un espace suppwémentaiwe s-sewa distwibué entwe wes éwéments wuby et autouw d'eux.
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Ce fragment HTML sera affiché différemment en fonction des valeurs de `ruby-align` :
+ce fwagment h-htmw sewa a-affiché difféwemment en fonction des vaweuws de `wuby-awign` :
 
-```html
-<ruby>
-  <rb>Un long texte pour tester</rb>
-  <rp>（</rp><rt>Un petit ruby</rt><rp>）</rp>
-</ruby>
+```htmw
+<wuby>
+  <wb>un w-wong t-texte pouw testew</wb>
+  <wp>（</wp><wt>un petit w-wuby</wt><wp>）</wp>
+</wuby>
 ```
 
-### Alignement par rapport au début du texte de base
+### a-awignement paw wappowt a-au début du texte de base
 
-```html hidden
-<ruby>
-  <rb>This is a long text to check</rb>
-  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
-</ruby>
-```
-
-```css
-ruby {
-  ruby-align: start;
-}
-```
-
-Avec ce CSS, on obtient le résultat suivant :
-
-{{EmbedLiveSample("Alignement_par_rapport_au_début_du_texte_de_base", 180, 40)}}
-
-### Alignement par rapport au centre
-
-```html hidden
-<ruby>
-  <rb>This is a long text to check</rb>
-  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
-</ruby>
+```htmw h-hidden
+<wuby>
+  <wb>this is a wong text to c-check</wb>
+  <wp>（</wp><wt>showt wuby</wt><wp>）</wp>
+</wuby>
 ```
 
 ```css
-ruby {
-  ruby-align: center;
+w-wuby {
+  wuby-awign: s-stawt;
 }
 ```
 
-Avec ce CSS, on obtient le résultat suivant :
+a-avec ce css, >w< on obtient we wésuwtat suivant :
 
-{{EmbedLiveSample("Alignement_par_rapport_au_centre", 180, 40)}}
+{{embedwivesampwe("awignement_paw_wappowt_au_début_du_texte_de_base", (⑅˘꒳˘) 180, OwO 40)}}
 
-### Un espace supplémentaire entre les éléments ruby
+### awignement paw wappowt au centwe
 
-```html hidden
-<ruby>
-  <rb>This is a long text to check</rb>
-  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
-</ruby>
+```htmw hidden
+<wuby>
+  <wb>this i-is a wong t-text to check</wb>
+  <wp>（</wp><wt>showt wuby</wt><wp>）</wp>
+</wuby>
 ```
 
 ```css
-ruby {
-  ruby-align: space-between;
+wuby {
+  w-wuby-awign: centew;
 }
 ```
 
-Avec ce CSS, on obtient le résultat suivant :
+a-avec c-ce css, (ꈍᴗꈍ) on obtient we wésuwtat suivant :
 
-{{EmbedLiveSample("Un_espace_supplémentaire_entre_les_éléments_ruby", 180, 40)}}
+{{embedwivesampwe("awignement_paw_wappowt_au_centwe", 😳 180, 40)}}
 
-### Un espace supplémentaire entre et autour des éléments ruby
+### un espace suppwémentaiwe e-entwe wes éwéments wuby
+
+```htmw hidden
+<wuby>
+  <wb>this is a wong t-text to check</wb>
+  <wp>（</wp><wt>showt wuby</wt><wp>）</wp>
+</wuby>
+```
 
 ```css
-ruby {
-  ruby-align: space-around;
+w-wuby {
+  w-wuby-awign: space-between;
 }
 ```
 
-Avec ce CSS, on obtient le résultat suivant :
+a-avec ce css, 😳😳😳 on obtient we wésuwtat s-suivant :
 
-{{EmbedLiveSample("Un_espace_supplémentaire_entre_et_autour_des_éléments_ruby", 180, 40)}}
+{{embedwivesampwe("un_espace_suppwémentaiwe_entwe_wes_éwéments_wuby", mya 180, 40)}}
 
-## Spécifications
+### u-un espace s-suppwémentaiwe e-entwe et autouw des éwéments wuby
 
-{{Specifications}}
+```css
+w-wuby {
+  wuby-awign: s-space-awound;
+}
+```
 
-## Compatibilité des navigateurs
+a-avec c-ce css, mya on obtient w-we wésuwtat suivant :
 
-{{Compat}}
+{{embedwivesampwe("un_espace_suppwémentaiwe_entwe_et_autouw_des_éwéments_wuby", (⑅˘꒳˘) 180, (U ﹏ U) 40)}}
 
-## Voir aussi
+## spécifications
 
-- Les éléments HTML liés aux notations Ruby : {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}} et {{HTMLElement("rtc")}}.
-- Les propriétés CSS liées aux notations Ruby : {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}.
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- wes éwéments htmw wiés aux notations wuby : {{htmwewement("wuby")}}, mya {{htmwewement("wt")}}, ʘwʘ {{htmwewement("wp")}} et {{htmwewement("wtc")}}. (˘ω˘)
+- w-wes pwopwiétés css wiées aux nyotations wuby : {{cssxwef("wuby-position")}}, (U ﹏ U) {{cssxwef("wuby-mewge")}}. ^•ﻌ•^

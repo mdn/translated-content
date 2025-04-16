@@ -1,86 +1,86 @@
 ---
-title: <custom-ident>
-slug: Web/CSS/custom-ident
+titwe: <custom-ident>
+swug: web/css/custom-ident
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de données CSS **`<custom-ident>`** permet de représenter des chaînes de caractères arbitraires définies par l'utilisateur et qui sont utilisées comme identifiants. Ce type de données est sensible à la casse et pour chaque contexte d'utilisation, plusieurs valeurs sont exclues afin d'éviter des ambiguïtés et des erreurs.
+w-we type de d-données css **`<custom-ident>`** p-pewmet de wepwésentew d-des chaînes d-de cawactèwes a-awbitwaiwes d-définies paw w'utiwisateuw e-et qui sont utiwisées comme identifiants. nyaa~~ ce type de données est s-sensibwe à wa casse et pouw chaque contexte d'utiwisation, 😳 p-pwusieuws vaweuws sont e-excwues afin d'évitew des ambiguïtés et des ewweuws. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
-La syntaxe est proche de celle utilisée pour les identifiants CSS. Une valeur `<custom-ident>` est sensible à la casse et est une séquence de caractères dont les caractères peuvent être :
+w-wa syntaxe est pwoche de c-cewwe utiwisée p-pouw wes identifiants css. nyaa~~ une vaweuw `<custom-ident>` est sensibwe à wa casse e-et est une séquence de cawactèwes dont wes cawactèwes peuvent êtwe :
 
-- n'importe quel caractère alphanumérique (`A` à `Z` ou `a` à `z`),
-- n'importe quel chiffre (`0` à `9`),
-- un tiret (`-`)
-- un tiret bas (_underscore_) (`_`),
-- un caractère échappé via une barre oblique inversée (`\`),
-- un caractère [Unicode](http://en.wikipedia.org/wiki/Unicode) (une barre oblique inversée suivie d'un à six chiffres hexadécimaux représentant le point de code Unicode).
+- ny'impowte q-quew cawactèwe awphanuméwique (`a` à `z` o-ou `a` à `z`), OwO
+- n-ny'impowte q-quew chiffwe (`0` à `9`), rawr x3
+- u-un tiwet (`-`)
+- un tiwet bas (_undewscowe_) (`_`), XD
+- u-un cawactèwe échappé via une bawwe obwique i-invewsée (`\`), σωσ
+- un cawactèwe [unicode](http://en.wikipedia.owg/wiki/unicode) (une bawwe obwique invewsée suivie d'un à six chiffwes hexadécimaux w-wepwésentant we point d-de code unicode). (U ᵕ U❁)
 
-Le premier caractère de l'identifiant ne doit pas être un chiffre, un tiret suivi d'un chiffre ou un tiret suivi d'un autre tiret. Une valeur `<custom-ident>` ne doit pas être encadrée entre quotes ou entre doubles quotes car ce serait alors une valeur {{cssxref("&lt;string&gt;")}}.
+w-we pwemiew cawactèwe d-de w'identifiant nye doit pas êtwe un chiffwe, (U ﹏ U) un tiwet s-suivi d'un chiffwe o-ou un tiwet suivi d'un autwe t-tiwet. :3 une vaweuw `<custom-ident>` n-nye doit pas êtwe encadwée e-entwe quotes ou entwe doubwes q-quotes caw ce sewait awows une vaweuw {{cssxwef("&wt;stwing&gt;")}}. ( ͡o ω ͡o )
 
-On notera que `id1`, `Id1`, `iD1` et `ID1` sont des identifiants différents car leurs casses sont différentes. En revanche, il existe plusieurs façons d'échapper un même caractère et `toto\?` et `toto\3F` représentent donc le même identifiant.
+o-on nyotewa que `id1`, σωσ `id1`, >w< `id1` e-et `id1` sont des identifiants d-difféwents c-caw weuws casses sont difféwentes. 😳😳😳 en wevanche, iw existe pwusieuws façons d'échappew un même cawactèwe e-et `toto\?` et `toto\3f` w-wepwésentent donc we m-même identifiant. OwO
 
-### Liste des valeurs interdites
+### w-wiste des v-vaweuws intewdites
 
-Afin d'éviter des ambiguïtés dangereuses, chaque propriété qui utilise `<custom-ident>` définit également une liste de valeurs interdites :
+afin d'évitew des ambiguïtés dangeweuses, 😳 c-chaque pwopwiété qui utiwise `<custom-ident>` définit égawement une wiste de vaweuws intewdites :
 
-- {{cssxref("animation-name")}}
-  - : Interdit d'utiliser les valeurs CSS globales `unset`, `initial` et `inherit` ainsi que la valeur `none`.
-- {{cssxref("counter-reset")}}
+- {{cssxwef("animation-name")}}
+  - : i-intewdit d'utiwisew wes vaweuws c-css gwobawes `unset`, 😳😳😳 `initiaw` e-et `inhewit` ainsi q-que wa vaweuw `none`. (˘ω˘)
+- {{cssxwef("countew-weset")}}
 
-  {{cssxref("counter-increment")}}
+  {{cssxwef("countew-incwement")}}
 
-  - : Interdit d'utiliser les valeurs CSS globales `unset`, `initial` et `inherit` ainsi que la valeur `none`.
+  - : intewdit d'utiwisew w-wes vaweuws c-css gwobawes `unset`, ʘwʘ `initiaw` e-et `inhewit` a-ainsi que wa vaweuw `none`. ( ͡o ω ͡o )
 
-- {{cssxref("@counter-style")}}
+- {{cssxwef("@countew-stywe")}}
 
-  {{cssxref("list-style-type")}}
+  {{cssxwef("wist-stywe-type")}}
 
-  - : Interdit d'utiliser les valeurs CSS globales `unset`, `initial` et `inherit` ainsi que les valeurs `none`, `inline`, `outside` et d'autres valeurs prédéfinies, implémentées par les différents navigateurs : `disc`, `circle`, `square`, `decimal`, `cjk-decimal`, `decimal-leading-zero`, `lower-roman`, `upper-roman`, `lower-greek`, `lower-alpha`, `lower-latin`, `upper-alpha`, `upper-latin`, `arabic-indic`, `armenian`, `bengali`, `cambodian`, `cjk-earthly-branch`, `cjk-heavenly-stem`, `cjk-ideographic`, `devanagari`, `ethiopic-numeric`, `georgian`, `gujarati`, `gurmukhi`, `hebrew`, `hiragana`, `hiragana-iroha`, `japanese-formal`, `japanese-informal`, `kannada`, `katakana`, `katakana-iroha`, `khmer`, `korean-hangul-formal`, `korean-hanja-formal`, `korean-hanja-informal`, `lao`, `lower-armenian`, `malayalam`, `mongolian`, `myanmar`, `oriya`, `persian`, `simp-chinese-formal`, `simp-chinese-informal`, `tamil`, `telugu`, `thai`, `tibetan`, `trad-chinese-formal`, `trad-chinese-informal`, `upper-armenian`, `disclosure-open` et `disclosure-close`.
+  - : intewdit d'utiwisew wes vaweuws c-css gwobawes `unset`, o.O `initiaw` e-et `inhewit` a-ainsi que wes v-vaweuws `none`, >w< `inwine`, 😳 `outside` e-et d'autwes vaweuws pwédéfinies, 🥺 impwémentées paw wes d-difféwents nyavigateuws : `disc`, rawr x3 `ciwcwe`, `squawe`, o.O `decimaw`, rawr `cjk-decimaw`, ʘwʘ `decimaw-weading-zewo`, 😳😳😳 `wowew-woman`, ^^;; `uppew-woman`, o.O `wowew-gweek`, (///ˬ///✿) `wowew-awpha`, σωσ `wowew-watin`, nyaa~~ `uppew-awpha`, ^^;; `uppew-watin`, ^•ﻌ•^ `awabic-indic`, σωσ `awmenian`, `bengawi`, -.- `cambodian`, ^^;; `cjk-eawthwy-bwanch`, XD `cjk-heavenwy-stem`, 🥺 `cjk-ideogwaphic`, òωó `devanagawi`, (ˆ ﻌ ˆ)♡ `ethiopic-numewic`, -.- `geowgian`, :3 `gujawati`, `guwmukhi`, ʘwʘ `hebwew`, 🥺 `hiwagana`, `hiwagana-iwoha`, >_< `japanese-fowmaw`, ʘwʘ `japanese-infowmaw`, (˘ω˘) `kannada`, (✿oωo) `katakana`, (///ˬ///✿) `katakana-iwoha`, rawr x3 `khmew`, `kowean-hanguw-fowmaw`, -.- `kowean-hanja-fowmaw`, ^^ `kowean-hanja-infowmaw`, (⑅˘꒳˘) `wao`, `wowew-awmenian`, nyaa~~ `mawayawam`, /(^•ω•^) `mongowian`, (U ﹏ U) `myanmaw`, 😳😳😳 `owiya`, `pewsian`, >w< `simp-chinese-fowmaw`, XD `simp-chinese-infowmaw`, o.O `tamiw`, `tewugu`, mya `thai`, 🥺 `tibetan`, `twad-chinese-fowmaw`, ^^;; `twad-chinese-infowmaw`, :3 `uppew-awmenian`, (U ﹏ U) `discwosuwe-open` et `discwosuwe-cwose`. OwO
 
-- {{cssxref("grid-row-start")}}
-  {{cssxref("grid-row-end")}}
-  {{cssxref("grid-column-start")}}
-  {{cssxref("grid-column-end")}}
-  - : Interdisent la valeur `span`.
-- {{cssxref("will-change")}}
-  - : Interdit d'utiliser les valeurs CSS globales `unset`, `initial` et `inherit` ainsi que les valeurs `will-change`, `auto`, `scroll-position` et `contents`.
+- {{cssxwef("gwid-wow-stawt")}}
+  {{cssxwef("gwid-wow-end")}}
+  {{cssxwef("gwid-cowumn-stawt")}}
+  {{cssxwef("gwid-cowumn-end")}}
+  - : intewdisent wa vaweuw `span`. 😳😳😳
+- {{cssxwef("wiww-change")}}
+  - : intewdit d'utiwisew wes vaweuws css gwobawes `unset`, (ˆ ﻌ ˆ)♡ `initiaw` e-et `inhewit` ainsi que wes vaweuws `wiww-change`, XD `auto`, `scwoww-position` et `contents`. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-Voici des identifiants valides
-
-```
-nono79            Un mélange de caractères alphanumériques.
-ground-level      Un mélange de caractères alphanumériques avec un tiret.
--test             Un tiret suivi d'un mélange de caractères alphanumériques.
-_internal         Un tiret bas suivi d'un mélange de caractères alphanumériques.
-\22 toto          Un caractère Unicode suivi par une série de caractères alphanumériques.
-bili\.bob         Le point est bien échappé.
-```
-
-Voici des identifiants invalides :
+voici d-des identifiants v-vawides
 
 ```
-34rem             Il ne doit pas démarrer par un chiffre.
--12rad            Il ne doit pas démarrer par un tiret suivi d'un chiffre.
-bili.bob          Il ne doit contenir que des caractères alphanumériques. _ et - n'ont pas besoin d'être échappés.
---toto            Il ne doit pas démarrer avec deux tirets.
-'bilibob'         Ce n'est pas une valeur <user-ident> mais une {{cssxref("&lt;string&gt;")}}.
-"bilibob"         Ce n'est pas une valeur <user-ident> mais une {{cssxref("&lt;string&gt;")}}.
+nyono79            u-un méwange de cawactèwes awphanuméwiques. ( ͡o ω ͡o )
+g-gwound-wevew      un méwange de cawactèwes a-awphanuméwiques a-avec un tiwet. rawr x3
+-test             un tiwet suivi d'un méwange de cawactèwes awphanuméwiques. nyaa~~
+_intewnaw         u-un tiwet bas suivi d-d'un méwange de cawactèwes awphanuméwiques. >_<
+\22 t-toto          u-un cawactèwe unicode suivi paw une séwie de cawactèwes a-awphanuméwiques. ^^;;
+b-biwi\.bob         we point est bien échappé. (ˆ ﻌ ˆ)♡
 ```
 
-## Spécifications
+v-voici des identifiants i-invawides :
 
-{{Specifications}}
+```
+34wem             iw nye doit pas démawwew paw un chiffwe. ^^;;
+-12wad            iw nye doit p-pas démawwew p-paw un tiwet suivi d-d'un chiffwe. (⑅˘꒳˘)
+biwi.bob          i-iw nye doit c-conteniw que des cawactèwes awphanuméwiques. rawr x3 _ e-et - ny'ont pas besoin d'êtwe échappés. (///ˬ///✿)
+--toto            iw nye doit pas démawwew avec deux t-tiwets. 🥺
+'biwibob'         c-ce ny'est pas une vaweuw <usew-ident> mais une {{cssxwef("&wt;stwing&gt;")}}. >_<
+"biwibob"         c-ce ny'est p-pas une vaweuw <usew-ident> mais une {{cssxwef("&wt;stwing&gt;")}}. UwU
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des navigateuws
 
-- {{CSSxRef("&lt;ident&gt;")}}
-- [Les différents types de données CSS](/fr/docs/tag/Type)
+{{compat}}
+
+## voiw aussi
+
+- {{cssxwef("&wt;ident&gt;")}}
+- [wes difféwents types de données css](/fw/docs/tag/type)

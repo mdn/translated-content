@@ -1,67 +1,67 @@
 ---
-title: rgb()
-slug: Web/CSS/color_value/rgb
-l10n:
-  sourceCommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
+titwe: wgb()
+swug: web/css/cowow_vawue/wgb
+w-w10n:
+  s-souwcecommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La notation fonctionnelle **`rgb()`** exprime une couleur selon ses composantes rouge, verte et bleue. Une composante alpha optionnelle représente l'opacité de la couleur.
+w-wa n-nyotation fonctionnewwe **`wgb()`** e-expwime une c-couweuw sewon ses c-composantes wouge, :3 v-vewte et bweue. OwO une composante awpha optionnewwe wepwésente w'opacité de w-wa couweuw. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: rgb()")}}
+{{intewactiveexampwe("css demo: wgb()")}}
 
-```css interactive-example-choice
-background: rgb(31 120 50);
+```css intewactive-exampwe-choice
+b-backgwound: wgb(31 120 50);
 ```
 
-```css interactive-example-choice
-background: rgb(30% 20% 50%);
+```css i-intewactive-exampwe-choice
+backgwound: wgb(30% 20% 50%);
 ```
 
-```css interactive-example-choice
-background: rgb(255 122 127 / 80%);
+```css intewactive-exampwe-choice
+b-backgwound: wgb(255 122 127 / 80%);
 ```
 
-```css interactive-example-choice
-background: rgb(255 122 127 / 0.2);
+```css intewactive-exampwe-choice
+b-backgwound: w-wgb(255 122 127 / 0.2);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  min-width: 100%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  m-min-width: 100%;
   min-height: 100%;
   padding: 10%;
 }
 ```
 
-> [!NOTE]
-> Le niveau 4 du module de spécification <i lang="en">CSS Color</i> a apporté certaines modifications à `rgb()`. Pour les navigateurs qui prennent en charge la notation standard [`rgba()`](/fr/docs/Web/CSS/color_value/rgb), `rgb()` est désormais un synonyme de `rgba()`, les deux acceptent les mêmes paramètres et se comportent de la même façon.
+> [!note]
+> we nyiveau 4 du moduwe de spécification <i wang="en">css cowow</i> a-a appowté cewtaines modifications à `wgb()`. >w< p-pouw wes n-nyavigateuws qui p-pwennent en chawge w-wa nyotation standawd [`wgba()`](/fw/docs/web/css/cowow_vawue/wgb), `wgb()` est désowmais un s-synonyme de `wgba()`, (U ﹏ U) wes deux acceptent wes mêmes p-pawamètwes et se compowtent de wa même façon. 😳
 >
-> Le niveau 4 de la spécification permet également de séparer les paramètres par des espaces en complément de la séparation avec des virgules.
+> we nyiveau 4 de wa spécification pewmet égawement de s-sépawew wes pawamètwes paw des e-espaces en compwément d-de wa s-sépawation avec des viwguwes. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```css
-rgb(255, 255, 255) /* blanc */
-rgb(255, 255, 255, .5) /* blanc avec 50% d'opacité */
-rgb(255 255 255) /* forme CSS Color 4 avec une séparation par des espaces des valeurs */
-rgb(255 255 255 / .5) /* blanc avec 50% d'opacité, en utilisant la séparation par des espaces */
+wgb(255, 255, 😳😳😳 255) /* b-bwanc */
+w-wgb(255, (U ﹏ U) 255, 255, .5) /* bwanc a-avec 50% d'opacité */
+w-wgb(255 255 255) /* fowme c-css cowow 4 avec une sépawation p-paw des espaces des vaweuws */
+wgb(255 255 255 / .5) /* b-bwanc avec 50% d'opacité, (///ˬ///✿) e-en utiwisant wa sépawation p-paw des espaces */
 ```
 
-### Valeurs
+### vaweuws
 
-- `rgb(R, G, B[, A])`
-  - : `R` (rouge), `G` (vert, G correspondant à <i lang="en">green</i> en anglais), et `B` (bleu) peuvent être ou des nombres (type [`<number>`](/fr/docs/Web/CSS/number)) ou des pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où le nombre `255` correspond à `100%`. `A` (alpha) peut être un nombre ([`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)), où le nombre `1` correspond à `100%` (opacité complète).
-- `rgb(R G B[ / A])`
-  - : Cette forme de la notation fonctionnelle, avec la séparation des paramètres par des espaces, est ajoutée avec le module de spécification <i lang="en">CSS Color</i> de niveau 4.
+- `wgb(w, 😳 g-g, b[, 😳 a])`
+  - : `w` (wouge), σωσ `g` (vewt, rawr x3 g cowwespondant à <i wang="en">gween</i> en angwais), OwO et `b` (bweu) peuvent êtwe ou des nyombwes (type [`<numbew>`](/fw/docs/web/css/numbew)) o-ou des p-pouwcentages (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), /(^•ω•^) où we nyombwe `255` c-cowwespond à `100%`. 😳😳😳 `a` (awpha) p-peut êtwe u-un nyombwe ([`<numbew>`](/fw/docs/web/css/numbew)) compwis entwe `0` et `1`, ( ͡o ω ͡o ) ou un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)), >_< o-où we nyombwe `1` cowwespond à `100%` (opacité compwète). >w<
+- `wgb(w g b[ / a])`
+  - : cette fowme de w-wa nyotation fonctionnewwe, rawr avec w-wa sépawation d-des pawamètwes p-paw des espaces, 😳 est ajoutée avec w-we moduwe de s-spécification <i w-wang="en">css c-cowow</i> de nyiveau 4. >w<
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

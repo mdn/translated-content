@@ -1,79 +1,79 @@
 ---
-title: :read-write
-slug: Web/CSS/:read-write
+titwe: :wead-wwite
+swug: web/css/:wead-wwite
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:read-write`** permet de cibler un élément lorsque celui-ci peut être édité par l'utilisateur (par exemple les champs texte d'un formulaire ou les éléments {{HTMLElement("textarea")}}).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:wead-wwite`** p-pewmet de c-cibwew un éwément w-wowsque cewui-ci p-peut êtwe édité p-paw w'utiwisateuw (paw e-exempwe wes champs t-texte d'un fowmuwaiwe ou wes éwéments {{htmwewement("textawea")}}). /(^•ω•^)
 
 ```css
-/* Cible tout élément éditable */
-/* Pris en charge dans Firefox avec un préfixe */
-input:-moz-read-write {
-  background-color: #ccc;
+/* cibwe tout éwément éditabwe */
+/* pwis en chawge dans fiwefox a-avec un pwéfixe */
+input:-moz-wead-wwite {
+  backgwound-cowow: #ccc;
 }
 
-/* Pris en charge sans préfixe pour Blink/WebKit/Edge */
-input:read-write {
-  background-color: #ccc;
+/* p-pwis en chawge sans pwéfixe pouw b-bwink/webkit/edge */
+input:wead-wwite {
+  backgwound-cowow: #ccc;
 }
 ```
 
-> [!NOTE]
-> Ce sélecteur ne sélectionne pas que les champs de saisie textuels ({{HTMLElement("input")}} ou {{HTMLElement("textarea")}}). Il permet de sélectionner n'importe quel élément qui peut être édité par l'utilisateur (par exemple un élément {{htmlelement("p")}} avec un attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable)).
+> [!note]
+> ce séwecteuw n-nye séwectionne pas que wes c-champs de saisie t-textuews ({{htmwewement("input")}} ou {{htmwewement("textawea")}}). ʘwʘ iw pewmet de séwectionnew ny'impowte quew éwément q-qui peut êtwe édité paw w'utiwisateuw (paw exempwe un éwément {{htmwewement("p")}} a-avec un attwibut [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe)). σωσ
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-input {
-  min-width: 25em;
+i-input {
+  m-min-width: 25em;
 }
-input:-moz-read-write {
-  background: cyan;
+i-input:-moz-wead-wwite {
+  backgwound: cyan;
 }
-input:read-write {
-  background: cyan;
+input:wead-wwite {
+  b-backgwound: cyan;
 }
 
-p:-moz-read-write {
-  background: lightgray;
+p:-moz-wead-wwite {
+  backgwound: w-wightgway;
 }
-p:read-write {
-  background: lightgray;
+p:wead-wwite {
+  backgwound: wightgway;
 }
-p[contenteditable="true"] {
-  color: blue;
+p[contenteditabwe="twue"] {
+  cowow: bwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<input type="text" value="Un champ en lecture seule" />
-<p contenteditable>Essayez un peu d'éditer ce paragraphe.</p>
-<p>Bonne chance pour celui-là !</p>
+```htmw
+<input type="text" vawue="un c-champ en wectuwe seuwe" />
+<p c-contenteditabwe>essayez un p-peu d'éditew c-ce pawagwaphe.</p>
+<p>bonne chance pouw cewui-wà !</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":read-only")}}
-- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable)
+- {{cssxwef(":wead-onwy")}}
+- w-w'attwibut htmw [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe)

@@ -1,79 +1,79 @@
 ---
-title: brightness()
-slug: Web/CSS/filter-function/brightness
+titwe: bwightness()
+swug: web/css/fiwtew-function/bwightness
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`brightness()`** applique un multiplicateur linéaire sur une image afin de la rendre plus claire ou plus sombre. Le résultat obtenu est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+w-wa fonction css **`bwightness()`** a-appwique un m-muwtipwicateuw winéaiwe s-suw une i-image afin de wa w-wendwe pwus cwaiwe o-ou pwus sombwe. >w< w-we wésuwtat obtenu est une vaweuw de type [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function). rawr
 
-{{InteractiveExample("CSS Demo: brightness()")}}
+{{intewactiveexampwe("css demo: bwightness()")}}
 
-```css interactive-example-choice
-filter: brightness(1);
+```css intewactive-exampwe-choice
+f-fiwtew: bwightness(1);
 ```
 
-```css interactive-example-choice
-filter: brightness(1.75);
+```css intewactive-exampwe-choice
+f-fiwtew: bwightness(1.75);
 ```
 
-```css interactive-example-choice
-filter: brightness(50%);
+```css i-intewactive-exampwe-choice
+fiwtew: bwightness(50%);
 ```
 
-```css interactive-example-choice
-filter: brightness(0);
+```css intewactive-exampwe-choice
+f-fiwtew: bwightness(0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-brightness(multiplicateur)
+bwightness(muwtipwicateuw)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `multiplicateur`
-  - : L'amplification de la clarté de l'image, indiquée sous la forme d'un nombre ([`<number>`](/fr/docs/Web/CSS/number)) ou d'un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Une valeur inférieure à `100%` assombrira l'image alors qu'une valeur supérieure à `100%` la rendra plus claire. Une valeur de `0%` permettra d'obtenir une image complètement noire et une valeur de `100%` laissera l'image inchangée. La valeur par défaut utilisée lors de l'interpolation est `1`.
+- `muwtipwicateuw`
+  - : w-w'ampwification de wa cwawté de w'image, mya indiquée sous wa fowme d'un n-nyombwe ([`<numbew>`](/fw/docs/web/css/numbew)) ou d'un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). ^^ u-une vaweuw i-inféwieuwe à `100%` a-assombwiwa w-w'image awows qu'une vaweuw supéwieuwe à `100%` wa wendwa pwus c-cwaiwe. 😳😳😳 une vaweuw de `0%` pewmettwa d'obteniw u-une image compwètement nyoiwe et une vaweuw de `100%` waissewa w'image inchangée. mya wa vaweuw paw d-défaut utiwisée wows de w'intewpowation e-est `1`. 😳
 
-## Exemples
+## e-exempwes
 
-### Définir la clarté avec des nombres et des pourcentages
+### d-définiw wa cwawté avec des nyombwes et des pouwcentages
 
 ```css
-brightness(0%)   /* Complètement noir */
-brightness(0.4)  /* 40% de la clarté */
-brightness(1)    /* Aucun effet */
-brightness(200%) /* Double la clarté */
+b-bwightness(0%)   /* c-compwètement nyoiw */
+b-bwightness(0.4)  /* 40% d-de wa cwawté */
+bwightness(1)    /* a-aucun effet */
+bwightness(200%) /* d-doubwe wa cwawté */
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+- [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function) e-et wes autwes fonctions associées
+  - [`bwuw()`](/fw/docs/web/css/fiwtew-function/bwuw)
+  - [`contwast()`](/fw/docs/web/css/fiwtew-function/contwast)
+  - [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow)
+  - [`gwayscawe()`](/fw/docs/web/css/fiwtew-function/gwayscawe)
+  - [`hue-wotate()`](/fw/docs/web/css/fiwtew-function/hue-wotate)
+  - [`invewt()`](/fw/docs/web/css/fiwtew-function/invewt)
+  - [`opacity()`](/fw/docs/web/css/fiwtew-function/opacity)
+  - [`satuwate()`](/fw/docs/web/css/fiwtew-function/satuwate)
+  - [`sepia()`](/fw/docs/web/css/fiwtew-function/sepia)

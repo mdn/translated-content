@@ -1,240 +1,240 @@
 ---
-title: margin-left
-slug: Web/CSS/margin-left
-l10n:
-  sourceCommit: c5dd9c3b9d503a56dc04b6b8f88e89194dc82d7f
+titwe: mawgin-weft
+swug: web/css/mawgin-weft
+w-w10n:
+  souwcecommit: c-c5dd9c3b9d503a56dc04b6b8f88e89194dc82d7f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`margin-left`** d'un élément définit l'espace horizontal à gauche qui formera [la zone de marge](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#zone_de_marge) à gauche de l'élément. On peut avoir une marge gauche négative qui rapproche l'élément de ses voisins ou une marge positive qui l'en écarte.
+w-wa pwopwiété [css](/fw/docs/web/css) **`mawgin-weft`** d-d'un éwément d-définit w-w'espace howizontaw à g-gauche qui f-fowmewa [wa zone de mawge](/fw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#zone_de_mawge) à gauche de w'éwément. σωσ on peut avoiw une mawge g-gauche nyégative qui wappwoche w'éwément de ses v-voisins ou une mawge positive q-qui w'en écawte. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: margin-left")}}
+{{intewactiveexampwe("css demo: mawgin-weft")}}
 
-```css interactive-example-choice
-margin-left: 1em;
+```css intewactive-exampwe-choice
+m-mawgin-weft: 1em;
 ```
 
-```css interactive-example-choice
-margin-left: 10%;
+```css intewactive-exampwe-choice
+m-mawgin-weft: 10%;
 ```
 
-```css interactive-example-choice
-margin-left: 10px;
+```css i-intewactive-exampwe-choice
+mawgin-weft: 10px;
 ```
 
-```css interactive-example-choice
-margin-left: 0;
+```css intewactive-exampwe-choice
+mawgin-weft: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="col"></div>
-    <div class="col transition-all" id="example-element"></div>
-    <div class="col"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="cow"></div>
+    <div cwass="cow twansition-aww" id="exampwe-ewement"></div>
+    <div cwass="cow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css i-intewactive-exampwe
+#containew {
   width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  justify-content: flex-start;
+  h-height: 200px;
+  d-dispway: fwex;
+  a-awign-content: f-fwex-stawt;
+  justify-content: fwex-stawt;
 }
 
-.col {
-  width: 33.33%;
-  border: solid #5b6dcd 10px;
-  background-color: rgba(229, 232, 252, 0.6);
-  flex-shrink: 0;
+.cow {
+  w-width: 33.33%;
+  bowdew: sowid #5b6dcd 10px;
+  b-backgwound-cowow: wgba(229, (///ˬ///✿) 232, 252, 0.6);
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffc129;
-  background-color: rgba(255, 244, 219, 0.6);
+#exampwe-ewement {
+  bowdew: sowid 10px #ffc129;
+  backgwound-cowow: wgba(255, 🥺 244, 219, OwO 0.6);
 }
 ```
 
-Les marges verticales de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+w-wes mawges vewticawes de deux b-boîtes adjacentes p-peuvent fusionnew e-entwe ewwes. >w< c'est ce qu'on appewwe [_wa fusion de mawges_](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing). 🥺
 
-Dans certains cas où la largeur est sur-contrainte (autrement dit quand `width`, `margin-left`, `border`, `padding`, la taille de la zone de contenu et `margin-right` sont toutes définies), `margin-left` est ignorée. La valeur calculée sera la même que si `auto` avait été utilisée.
+d-dans cewtains cas o-où wa wawgeuw est suw-contwainte (autwement dit q-quand `width`, nyaa~~ `mawgin-weft`, ^^ `bowdew`, >w< `padding`, w-wa taiwwe de wa zone de contenu e-et `mawgin-wight` sont toutes d-définies), `mawgin-weft` est ignowée. OwO wa vaweuw c-cawcuwée sewa wa même que s-si `auto` avait été utiwisée. XD
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-margin-left: 10px; /* Une longueur absolue */
-margin-left: 1em; /* Une longueur absolue relative à la taille du texte */
-margin-left: 5%; /* Une marge dont la taille est relative à la largeur
-                       du bloc englobant */
+/* v-vaweuws de wongueuw */
+/* type <wength>       */
+mawgin-weft: 10px; /* une wongueuw absowue */
+mawgin-weft: 1em; /* une w-wongueuw absowue w-wewative à wa taiwwe du texte */
+m-mawgin-weft: 5%; /* u-une mawge d-dont wa taiwwe est wewative à wa wawgeuw
+                       du bwoc engwobant */
 
-/* Valeur avec un mot-clé */
-margin-left: auto;
+/* v-vaweuw avec un mot-cwé */
+mawgin-weft: auto;
 
-/* Valeurs globales */
-margin-left: inherit;
-margin-left: initial;
-margin-left: revert;
-margin-left: revert-layer;
-margin-left: unset;
+/* vaweuws gwobawes */
+m-mawgin-weft: inhewit;
+mawgin-weft: i-initiaw;
+mawgin-weft: w-wevewt;
+m-mawgin-weft: wevewt-wayew;
+mawgin-weft: u-unset;
 ```
 
-La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<length>`) ou un pourcentage (`<percentage>`). La valeur peut être positive, nulle ou négative.
+w-wa vaweuw d-de cette pwopwiété p-peut êtwe we mot-cwé `auto`, ^^;; une wongueuw (`<wength>`) o-ou un pouwcentage (`<pewcentage>`). 🥺 w-wa vaweuw peut êtwe p-positive, XD n-nyuwwe ou nyégative. (U ᵕ U❁)
 
-### Valeurs
+### v-vaweuws
 
-- [`<length>`](/fr/docs/Web/CSS/length)
-  - : La taille de la marge, exprimée comme une valeur fixe.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La taille de la marge exprimée avec un pourcentage relatif à la dimension du [bloc englobant](/fr/docs/Web/CSS/Containing_block) sur l'axe en ligne (qui correspond à la largeur pour une langue écrite horizontalement, voir [`writing-mode`](/fr/docs/Web/CSS/writing-mode)).
+- [`<wength>`](/fw/docs/web/css/wength)
+  - : wa taiwwe de wa mawge, :3 expwimée comme une v-vaweuw fixe. ( ͡o ω ͡o )
+- [`<pewcentage>`](/fw/docs/web/css/pewcentage)
+  - : wa taiwwe de wa mawge expwimée avec un pouwcentage wewatif à wa dimension du [bwoc e-engwobant](/fw/docs/web/css/containing_bwock) suw w'axe en wigne (qui cowwespond à wa wawgeuw p-pouw une w-wangue écwite howizontawement, òωó v-voiw [`wwiting-mode`](/fw/docs/web/css/wwiting-mode)). σωσ
 - `auto`
 
-  - : Un mot-clé qui indique que la marge gauche s'adapte à l'espace restant. Cet espace est principalement défini par le mode de disposition utilisé. Si `margin-left` et `margin-right` valent toutes les deux `auto`, m'espace calculé sera réparti de façon équitable. Le tableau suivant précise les différents cas&nbsp;:
+  - : un mot-cwé q-qui indique que wa mawge gauche s-s'adapte à w'espace w-westant. (U ᵕ U❁) cet espace est pwincipawement défini paw we mode de disposition utiwisé. (✿oωo) si `mawgin-weft` e-et `mawgin-wight` vawent toutes wes d-deux `auto`, m'espace cawcuwé s-sewa wépawti de f-façon équitabwe. ^^ we tabweau suivant pwécise w-wes difféwents c-cas&nbsp;:
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <thead>
-        <tr>
-          <th scope="col">Valeur de <a href="/fr/docs/Web/CSS/display"><code>display</code></a></th>
-          <th scope="col">Valeur de <a href="/fr/docs/Web/CSS/float"><code>float</code></a></th>
-          <th scope="col">Valeur de <a href="/fr/docs/Web/CSS/position"><code>position</code></a></th>
-          <th scope="col">Valeur calculée pour <code>auto</code></th>
-          <th scope="col">Commentaires</th>
-        </tr>
+        <tw>
+          <th s-scope="cow">vaweuw d-de <a hwef="/fw/docs/web/css/dispway"><code>dispway</code></a></th>
+          <th scope="cow">vaweuw de <a hwef="/fw/docs/web/css/fwoat"><code>fwoat</code></a></th>
+          <th scope="cow">vaweuw d-de <a hwef="/fw/docs/web/css/position"><code>position</code></a></th>
+          <th s-scope="cow">vaweuw c-cawcuwée pouw <code>auto</code></th>
+          <th s-scope="cow">commentaiwes</th>
+        </tw>
       </thead>
       <tbody>
-        <tr>
+        <tw>
           <th>
-            <code>inline</code>, <code>inline-block</code>, <code>inline-table</code>
+            <code>inwine</code>, ^•ﻌ•^ <code>inwine-bwock</code>, XD <code>inwine-tabwe</code>
           </th>
-          <th>N'importe laquelle</th>
-          <th><code>static</code> ou <code>relative</code></th>
+          <th>n'impowte waquewwe</th>
+          <th><code>static</code> ou <code>wewative</code></th>
           <td><code>0</code></td>
-          <td>Disposition en ligne</td>
-        </tr>
-        <tr>
+          <td>disposition e-en wigne</td>
+        </tw>
+        <tw>
           <th>
-            <code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>block</code>, <code>table</code>, <code>inline-table</code>, <code>list-item</code>, <code>table-caption</code>
+            <code>bwock</code>, :3 <code>inwine</code>, (ꈍᴗꈍ) <code>inwine-bwock</code>, :3 <code>bwock</code>, (U ﹏ U) <code>tabwe</code>, UwU <code>inwine-tabwe</code>, 😳😳😳 <code>wist-item</code>, XD <code>tabwe-caption</code>
           </th>
-          <th>N'importe laquelle</th>
-          <th><code>static</code> ou <code>relative</code></th>
+          <th>n'impowte waquewwe</th>
+          <th><code>static</code> ou <code>wewative</code></th>
           <td>
-            <code>0</code> sauf si <code>margin-left</code> et <code>margin-right</code> valent <code>auto</code>. Dans ce cas, la valeur utilisée sera celle qui permet de centrer l'élément au sein de l'élément parent.
+            <code>0</code> sauf si <code>mawgin-weft</code> e-et <code>mawgin-wight</code> vawent <code>auto</code>. o.O dans ce cas, (⑅˘꒳˘) wa vaweuw utiwisée sewa cewwe qui pewmet d-de centwew w-w'éwément au sein de w'éwément pawent. 😳😳😳
           </td>
-          <td>Disposition en bloc</td>
-        </tr>
-        <tr>
+          <td>disposition e-en bwoc</td>
+        </tw>
+        <tw>
           <th>
-            <code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>block</code>, <code>table</code>, <code>inline-table</code>, <code>list-item</code>, <code>table-caption</code>
+            <code>bwock</code>, nyaa~~ <code>inwine</code>, rawr <code>inwine-bwock</code>, -.- <code>bwock</code>, (✿oωo) <code>tabwe</code>, /(^•ω•^) <code>inwine-tabwe</code>, <code>wist-item</code>, 🥺 <code>tabwe-caption</code>
           </th>
-          <th><code>left</code> ou <code>right</code></th>
-          <th><code>static</code> ou <code>relative</code></th>
+          <th><code>weft</code> o-ou <code>wight</code></th>
+          <th><code>static</code> ou <code>wewative</code></th>
           <td><code>0</code></td>
-          <td>Disposition en bloc avec les éléments flottants</td>
-        </tr>
-        <tr>
+          <td>disposition en bwoc avec wes éwéments f-fwottants</td>
+        </tw>
+        <tw>
           <th>
-            N'importe quelle <code>table-*</code>, sauf <code>table-caption</code>
+            ny'impowte quewwe <code>tabwe-*</code>, ʘwʘ sauf <code>tabwe-caption</code>
           </th>
-          <th>N'importe laquelle</th>
-          <th>N'importe laquelle</th>
+          <th>n'impowte waquewwe</th>
+          <th>n'impowte w-waquewwe</th>
           <td><code>0</code></td>
           <td>
-            Les éléments <code>table-*</code> n'ont pas de marge, il faut utiliser <a href="/fr/docs/Web/CSS/border-spacing"><code>border-spacing</code></a> à la place.
+            wes éwéments <code>tabwe-*</code> ny'ont pas de mawge, UwU i-iw faut utiwisew <a h-hwef="/fw/docs/web/css/bowdew-spacing"><code>bowdew-spacing</code></a> à wa pwace. XD
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <th>
-            N'importe laquelle, sauf <code>flex</code>, <code>inline-flex</code>, ou <code>table-*</code>
+            ny'impowte waquewwe, (✿oωo) sauf <code>fwex</code>, :3 <code>inwine-fwex</code>, (///ˬ///✿) o-ou <code>tabwe-*</code>
           </th>
-          <th>N'importe laquelle</th>
+          <th>n'impowte w-waquewwe</th>
           <th>
-            <code>fixed</code> ou <code>absolute</code>
+            <code>fixed</code> ou <code>absowute</code>
           </th>
           <td>
-            <code>0</code> sauf si <code>margin-left</code> et <code>margin-right</code> valent <code>auto</code>. Dans ce cas, la valeur utilisée sera celle qui permet de centrer la boîte de bordure dans la zone de largeur disponible si elle fixée.
+            <code>0</code> sauf si <code>mawgin-weft</code> et <code>mawgin-wight</code> v-vawent <code>auto</code>. nyaa~~ dans ce cas, wa v-vaweuw utiwisée sewa cewwe qui pewmet de centwew wa boîte de b-bowduwe dans wa zone de wawgeuw d-disponibwe si ewwe f-fixée. >w<
           </td>
-          <td>Positionnement absolu.</td>
-        </tr>
-        <tr>
-          <th><code>flex</code>, <code>inline-flex</code></th>
-          <th>N'importe laquelle</th>
-          <th>N'importe laquelle</th>
+          <td>positionnement absowu.</td>
+        </tw>
+        <tw>
+          <th><code>fwex</code>, -.- <code>inwine-fwex</code></th>
+          <th>n'impowte w-waquewwe</th>
+          <th>n'impowte waquewwe</th>
           <td>
-            <code>0</code>, sauf s'il reste de l'espace libre. Dans ce cas, l'espace restant sera distribué de façon équitable entre toutes les marges avec <code>auto</code>.
+            <code>0</code>, s-sauf s'iw w-weste de w'espace w-wibwe. (✿oωo) dans ce cas, (˘ω˘) w'espace westant s-sewa distwibué d-de façon équitabwe entwe toutes wes mawges a-avec <code>auto</code>. rawr
           </td>
-          <td>Boîtes flexibles.</td>
-        </tr>
+          <td>boîtes f-fwexibwes.</td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Les valeurs en pourcentage pour `margin-left` sont relatives à la taille en ligne du conteneur.
+w-wes vaweuws en pouwcentage pouw `mawgin-weft` s-sont wewatives à w-wa taiwwe en wigne du conteneuw. OwO
 
-### CSS
+### css
 
 ```css
-.exemple {
-  margin-left: 50%;
+.exempwe {
+  mawgin-weft: 50%;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Un grand rosier se trouvait à l'entrée du jardin&nbsp;; les roses qu'il
-  portait étaient blanches, mais trois jardiniers étaient en train de les
-  peindre en rouge.
+  u-un gwand wosiew s-se twouvait à w-w'entwée du jawdin&nbsp;; wes w-woses qu'iw
+  powtait étaient bwanches, ^•ﻌ•^ mais twois jawdiniews étaient en twain de wes
+  peindwe e-en wouge. UwU
 </p>
-<p class="exemple">
-  Alice s'avança pour les regarder, et, au moment où elle approchait, elle en
-  entendit un qui disait&nbsp;: «&nbsp;Fais donc attention, Cinq, et ne
-  m'éclabousse pas ainsi avec ta peinture.&nbsp;»
+<p cwass="exempwe">
+  a-awice s'avança pouw wes w-wegawdew, (˘ω˘) et, au moment où ewwe a-appwochait, (///ˬ///✿) ewwe en
+  entendit u-un qui disait&nbsp;: «&nbsp;fais d-donc attention, σωσ c-cinq, /(^•ω•^) et nye
+  m-m'écwabousse p-pas ainsi avec ta peintuwe.&nbsp;»
 </p>
 <p>
-  «&nbsp;Ce n'est pas de ma faute,&nbsp;» dit Cinq d'un ton bourru, «&nbsp;c'est
-  Sept qui m'a poussé le coude.&nbsp;»
+  «&nbsp;ce ny'est pas de ma faute,&nbsp;» dit cinq d'un ton bouwwu, 😳 «&nbsp;c'est
+  sept qui m'a p-poussé we coude.&nbsp;»
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("","","250")}}
+{{embedwivesampwe("","","250")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres propriétés physiques pour les marges&nbsp;:
-  - [`margin-top`](/fr/docs/Web/CSS/margin-top)
-  - [`margin-right`](/fr/docs/Web/CSS/margin-right)
-  - [`margin-bottom`](/fr/docs/Web/CSS/margin-bottom)
-  - La propriété raccourcie [`margin`](/fr/docs/Web/CSS/margin) qui synthétise les 4
-- Les propriétés logiques pour les marges&nbsp;:
-  - [`margin-block-start`](/fr/docs/Web/CSS/margin-block-start)
-  - [`margin-block-end`](/fr/docs/Web/CSS/margin-block-end)
-  - [`margin-inline-start`](/fr/docs/Web/CSS/margin-inline-start)
-  - [`margin-inline-end`](/fr/docs/Web/CSS/margin-inline-end)
-  - Les propriétés raccourcies pour les deux axes&nbsp;:
-    - [`margin-block`](/fr/docs/Web/CSS/margin-block)
-    - [`margin-inline`](/fr/docs/Web/CSS/margin-inline)
+- wes autwes pwopwiétés physiques p-pouw wes mawges&nbsp;:
+  - [`mawgin-top`](/fw/docs/web/css/mawgin-top)
+  - [`mawgin-wight`](/fw/docs/web/css/mawgin-wight)
+  - [`mawgin-bottom`](/fw/docs/web/css/mawgin-bottom)
+  - w-wa pwopwiété waccouwcie [`mawgin`](/fw/docs/web/css/mawgin) q-qui synthétise wes 4
+- wes pwopwiétés wogiques p-pouw wes m-mawges&nbsp;:
+  - [`mawgin-bwock-stawt`](/fw/docs/web/css/mawgin-bwock-stawt)
+  - [`mawgin-bwock-end`](/fw/docs/web/css/mawgin-bwock-end)
+  - [`mawgin-inwine-stawt`](/fw/docs/web/css/mawgin-inwine-stawt)
+  - [`mawgin-inwine-end`](/fw/docs/web/css/mawgin-inwine-end)
+  - wes p-pwopwiétés waccouwcies p-pouw wes deux axes&nbsp;:
+    - [`mawgin-bwock`](/fw/docs/web/css/mawgin-bwock)
+    - [`mawgin-inwine`](/fw/docs/web/css/mawgin-inwine)

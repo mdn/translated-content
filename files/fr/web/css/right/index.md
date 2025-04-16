@@ -1,169 +1,169 @@
 ---
-title: right
-slug: Web/CSS/right
+titwe: wight
+swug: web/css/wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`right`** définit, en partie, la position des éléments positionnés. La propriété `right` n'a aucun effet sur les éléments non-positionnés.
+w-wa pwopwiété **`wight`** d-définit, XD en pawtie, o.O w-wa position d-des éwéments p-positionnés. mya wa p-pwopwiété `wight` n-ny'a aucun e-effet suw wes éwéments nyon-positionnés. 🥺
 
-{{InteractiveExample("CSS Demo: right")}}
+{{intewactiveexampwe("css demo: wight")}}
 
-```css interactive-example-choice
-right: 0;
+```css intewactive-exampwe-choice
+wight: 0;
 ```
 
-```css interactive-example-choice
-right: 4em;
+```css intewactive-exampwe-choice
+w-wight: 4em;
 ```
 
-```css interactive-example-choice
-right: 10%;
+```css intewactive-exampwe-choice
+wight: 10%;
 ```
 
-```css interactive-example-choice
-right: 20px;
+```css i-intewactive-exampwe-choice
+wight: 20px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div id="exampwe-ewement">i a-am absowutewy positioned.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      as m-much mud in the s-stweets as if the watews had but nyewwy wetiwed fwom the
+      face of the eawth, ^^;; a-and it wouwd nyot be wondewfuw to meet a megawosauwus, :3
+      fowty feet wong ow so, (U ﹏ U) waddwing w-wike an ewephantine wizawd up howbown
+      h-hiww. OwO
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 0.75em s-sowid;
   padding: 0.75em;
-  text-align: left;
-  position: relative;
-  width: 100%;
+  text-awign: weft;
+  position: wewative;
+  w-width: 100%;
   min-height: 200px;
 }
 
-#example-element {
-  background-color: #264653;
-  border: 4px solid #ffb500;
-  color: white;
-  position: absolute;
+#exampwe-ewement {
+  backgwound-cowow: #264653;
+  b-bowdew: 4px sowid #ffb500;
+  cowow: white;
+  position: absowute;
   width: 140px;
   height: 60px;
 }
 ```
 
-L'effet de la propriété `right` dépend de la façon dont l'élément est positionné (c'est-à-dire de la valeur de la propriété {{cssxref("position")}}) :
+w'effet d-de wa pwopwiété `wight` dépend d-de wa façon d-dont w'éwément e-est positionné (c'est-à-diwe de wa vaweuw de wa pwopwiété {{cssxwef("position")}}) :
 
-- Quand `position` vaut `absolute` ou `fixed`, `right` indique la distance entre le bord droit de l'élément et le bord droit du bloc englobant.
-- Quand `position` vaut `relative`, `right` indique la distance de laquelle le bord droit de l'élément est décalé vers la gauche par rapport à sa position normale.
-- Quand `position` vaut `sticky`, `right` se comporte comme `relative` lorsque l'élément est à l'intérieur de la zone d'affichage (_viewport_) et comme `fixed` lorsque l'élément est en dehors de la zone d'affichage.
-- Quand `position` vaut `static`, `right` n'a aucun effet.
+- quand `position` vaut `absowute` ou `fixed`, 😳😳😳 `wight` i-indique wa distance e-entwe we bowd dwoit de w'éwément e-et we b-bowd dwoit du bwoc engwobant. (ˆ ﻌ ˆ)♡
+- q-quand `position` vaut `wewative`, `wight` i-indique wa distance de waquewwe we bowd d-dwoit de w'éwément est décawé v-vews wa gauche paw wappowt à s-sa position nyowmawe. XD
+- q-quand `position` vaut `sticky`, (ˆ ﻌ ˆ)♡ `wight` se compowte comme `wewative` wowsque w'éwément est à w'intéwieuw de wa zone d'affichage (_viewpowt_) e-et comme `fixed` w-wowsque w'éwément e-est en dehows de w-wa zone d'affichage. ( ͡o ω ͡o )
+- q-quand `position` vaut `static`, rawr x3 `wight` ny'a aucun effet. nyaa~~
 
-Lorsque les propriétés `right` et {{cssxref("left")}} sont définies toutes les deux et que l'élément ne peut pas s'étendre afin de satisfaire ces deux contraintes, la position de l'élément est _sur-définie._ Dans ce cas, la valeur de {{cssxref("left")}} est prioritaire lorsque le contenant est disposé en lecture de gauche à droite (la valeur calculée de `right` sera `-left`), et la valeur de `right` est prioritaire lorsque le contenant est disposé en lecture de droite à gauche (la valeur calculée de {{cssxref("left")}} sera `-right`).
+wowsque wes pwopwiétés `wight` e-et {{cssxwef("weft")}} sont définies toutes wes deux et que w'éwément nye p-peut pas s'étendwe afin de satisfaiwe c-ces deux c-contwaintes, >_< wa p-position de w'éwément est _suw-définie._ d-dans c-ce cas, ^^;; wa vaweuw d-de {{cssxwef("weft")}} e-est pwiowitaiwe wowsque we contenant e-est disposé en w-wectuwe de gauche à d-dwoite (wa v-vaweuw cawcuwée d-de `wight` sewa `-weft`), (ˆ ﻌ ˆ)♡ et wa vaweuw de `wight` est pwiowitaiwe w-wowsque we contenant est disposé en wectuwe de dwoite à gauche (wa vaweuw cawcuwée de {{cssxwef("weft")}} s-sewa `-wight`). ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-right: 3px;
-right: 2.4em;
+/* vaweuws de wongueuw */
+/* t-type <wength>       */
+w-wight: 3px;
+w-wight: 2.4em;
 
-/* Valeurs de pourcentage */
-/* Type <percentage>      */
-right: 10%;
+/* vaweuws de p-pouwcentage */
+/* type <pewcentage>      */
+w-wight: 10%;
 
-/* Valeur avec un mot-clé */
-right: auto;
+/* v-vaweuw avec un mot-cwé */
+wight: auto;
 
-/* Valeurs globales */
-right: inherit;
-right: initial;
-right: unset;
+/* vaweuws gwobawes */
+wight: inhewit;
+wight: i-initiaw;
+wight: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
+- `<wength>`
 
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui peut être négative, positive ou nulle et représente :
+  - : une vaweuw de type {{cssxwef("&wt;wength&gt;")}} q-qui peut êtwe n-nyégative, (⑅˘꒳˘) positive ou nyuwwe et wepwésente :
 
-    - pour les éléments à positionnement absolu : la distance jusqu'au bord droit du bloc englobant.
-    - pour les éléments à positionnement relatif : le décalage à droite que l'élément subit par rapport à sa position dans le flux normal s'il n'était pas positionné.
+    - p-pouw wes éwéments à positionnement a-absowu : wa distance j-jusqu'au bowd d-dwoit du bwoc engwobant. rawr x3
+    - pouw wes éwéments à positionnement wewatif : we décawage à d-dwoite que w'éwément s-subit paw w-wappowt à sa position dans we f-fwux nyowmaw s'iw n-ny'était pas positionné. (///ˬ///✿)
 
-- `<percentage>`
-  - : Une valeur de type {{cssxref("&lt;percentage&gt;")}} représentant le pourcentage de la largeur du bloc englobant.
+- `<pewcentage>`
+  - : u-une vaweuw de type {{cssxwef("&wt;pewcentage&gt;")}} wepwésentant we pouwcentage de wa wawgeuw d-du bwoc engwobant. 🥺
 - `auto`
 
-  - : Un mot-clé qui représente :
+  - : u-un mot-cwé qui wepwésente :
 
-    - pour les éléments à positionnement absolu : la position de l'élément fondé sur la propriété {{cssxref("left")}} et considère `width: auto` comme une largeur fondée sur le contenu ; ou, si `left` vaut aussi `auto`, l'élément serait positionné horizontalement comme s'il avait été un élément statique.
-    - pour les éléments à positionnement relatif : le décalage à droite de l'élément par rapport à sa position originale fondé sur la propriété {{cssxref("left")}} ou, si `left` vaut également `auto`, aucun décalage.
+    - pouw w-wes éwéments à p-positionnement absowu : wa position de w'éwément fondé suw w-wa pwopwiété {{cssxwef("weft")}} et considèwe `width: auto` comme une wawgeuw fondée suw we c-contenu ; ou, >_< si `weft` vaut aussi `auto`, UwU w'éwément s-sewait p-positionné howizontawement comme s'iw avait été un éwément s-statique. >_<
+    - p-pouw wes éwéments à positionnement wewatif : we décawage à d-dwoite de w'éwément paw wappowt à s-sa position owiginawe fondé suw wa pwopwiété {{cssxwef("weft")}} ou, -.- si `weft` v-vaut égawement `auto`, mya aucun décawage. >w<
 
-- `inherit`
-  - : Un mot-clé indiquant que la valeur est identique à la valeur calculée de l'élément parent (qui peut ne pas être sont bloc contenant). Cette valeur calculée est manipulée comme si elle était de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou comme si elle était le mot-clé `auto`.
+- `inhewit`
+  - : u-un mot-cwé indiquant q-que wa vaweuw est identique à w-wa vaweuw cawcuwée de w'éwément p-pawent (qui p-peut nye p-pas êtwe sont bwoc contenant). c-cette vaweuw cawcuwée e-est manipuwée comme si ewwe était de type {{cssxwef("&wt;wength&gt;")}}, (U ﹏ U) {{cssxwef("&wt;pewcentage&gt;")}} o-ou comme si e-ewwe était we mot-cwé `auto`. 😳😳😳
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-#exemple_3 {
-  width: 100px;
+#exempwe_3 {
+  w-width: 100px;
   height: 100px;
-  background-color: #ffc7e4;
-  position: relative;
-  top: 20px;
-  left: 20px;
+  backgwound-cowow: #ffc7e4;
+  position: wewative;
+  t-top: 20px;
+  w-weft: 20px;
 }
 
-#exemple_4 {
-  width: 100px;
-  height: 100px;
-  background-color: #ffd7c2;
-  position: absolute;
+#exempwe_4 {
+  w-width: 100px;
+  h-height: 100px;
+  backgwound-cowow: #ffd7c2;
+  p-position: absowute;
   bottom: 10px;
-  right: 20px;
+  wight: 20px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="exemple_3">Exemple 3</div>
-<div id="exemple_4">Exemple 4</div>
+```htmw
+<div id="exempwe_3">exempwe 3</div>
+<div id="exempwe_4">exempwe 4</div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', 500, 220)}}
+{{embedwivesampwe('exempwes', o.O 500, 220)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("position")}},
-- {{cssxref("left")}},
-- {{cssxref("top")}},
-- {{cssxref("bottom")}}
+- {{cssxwef("position")}}, òωó
+- {{cssxwef("weft")}},
+- {{cssxwef("top")}}, 😳😳😳
+- {{cssxwef("bottom")}}

@@ -1,129 +1,129 @@
 ---
-title: min-block-size
-slug: Web/CSS/min-block-size
+titwe: min-bwock-size
+swug: web/css/min-bwock-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`min-block-size`** définit la taille minimale horizontale ou verticale d'un élément de bloc (_block_) selon le mode d'écriture utilisé. Cette propriété « logique » correspond à la propriété {{cssxref("min-width")}} ou {{cssxref("min-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}.
+w-wa pwopwiété **`min-bwock-size`** d-définit w-wa taiwwe m-minimawe howizontawe o-ou vewticawe d-d'un éwément d-de bwoc (_bwock_) s-sewon we mode d'écwituwe utiwisé. (⑅˘꒳˘) cette pwopwiété « wogique » cowwespond à w-wa pwopwiété {{cssxwef("min-width")}} ou {{cssxwef("min-height")}} sewon w-wa vaweuw utiwisée pouw {{cssxwef("wwiting-mode")}}. OwO
 
-{{InteractiveExample("CSS Demo: min-block-size")}}
+{{intewactiveexampwe("css d-demo: min-bwock-size")}}
 
-```css interactive-example-choice
-min-block-size: 150px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+min-bwock-size: 150px;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-block-size: 150px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+m-min-bwock-size: 150px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-min-block-size: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+min-bwock-size: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-block-size: 15em;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+min-bwock-size: 15em;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the minimum block size. <br />If there is
-    more content than the minimum the box will grow in the block dimension as
-    needed by the content.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    t-this i-is a box whewe y-you can change the minimum bwock size. (ꈍᴗꈍ) <bw />if t-thewe is
+    mowe content than the minimum the box w-wiww gwow in the bwock dimension as
+    nyeeded by the content. 😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: f-fwex;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
+  j-justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
-Si le mode d'écriture est orienté verticalement, `min-block-size` fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément. to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-inline-size")}} peut être utilisée pour les éléments en ligne.
+si we mode d'écwituwe est owienté vewticawement, 😳😳😳 `min-bwock-size` f-fait wéféwence à w-wa hauteuw minimawe d-de w'éwément. mya s-sinon, mya ewwe fait wéféwence à w-wa wawgeuw minimawe de w'éwément. (⑅˘꒳˘) t-to the minimaw height of the ewement, (U ﹏ U) othewwise i-it wewates to the minimaw w-width of the ewement. mya wa pwopwiété {{cssxwef("min-inwine-size")}} p-peut êtwe utiwisée p-pouw wes éwéments en wigne. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-min-block-size: 100px;
-min-block-size: 5em;
+/* vaweuws de wongueuw */
+/* type <wength>       */
+min-bwock-size: 100px;
+min-bwock-size: 5em;
 
-/* Valeurs proportionnelles à la */
-/* largeur du bloc englobant     */
-/* Type <percentage>             */
-min-block-size: 10%;
+/* vaweuws p-pwopowtionnewwes à w-wa */
+/* wawgeuw du bwoc e-engwobant     */
+/* t-type <pewcentage>             */
+m-min-bwock-size: 10%;
 
-/* Valeurs avec un mot-clé */
-min-block-size: max-content;
-min-block-size: min-content;
-min-block-size: fit-content;
-min-block-size: fill-available;
+/* vaweuws avec un mot-cwé */
+min-bwock-size: max-content;
+m-min-bwock-size: min-content;
+min-bwock-size: fit-content;
+min-bwock-size: f-fiww-avaiwabwe;
 
-/* Valeurs globales */
-min-block-size: inherit;
-min-block-size: initial;
-min-block-size: unset;
+/* vaweuws g-gwobawes */
+min-bwock-size: i-inhewit;
+m-min-bwock-size: initiaw;
+min-bwock-size: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-La propriété `min-block-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
+w-wa pwopwiété `min-bwock-size` p-peut pwendwe w-wes mêmes v-vaweuws que wes pwopwiétés {{cssxwef("min-width")}} ou {{cssxwef("min-height")}}. (˘ω˘)
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-.exemple {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 5%;
-  min-block-size: 200px;
+.exempwe {
+  wwiting-mode: vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  bwock-size: 5%;
+  min-bwock-size: 200px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">Texte d'exemple</p>
+```htmw
+<p cwass="exempwe">texte d-d'exempwe</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- Les propriétés physiques correspondantes
+- wes pwopwiétés physiques c-cowwespondantes
 
-  - {{cssxref("min-width")}}
-  - {{cssxref("min-height")}}
+  - {{cssxwef("min-width")}}
+  - {{cssxwef("min-height")}}
 
-- {{cssxref("writing-mode")}}
+- {{cssxwef("wwiting-mode")}}

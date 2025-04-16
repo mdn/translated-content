@@ -1,128 +1,128 @@
 ---
-title: text-decoration-line
-slug: Web/CSS/text-decoration-line
+titwe: text-decowation-wine
+swug: web/css/text-decowation-wine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-decoration-line`** définit la façon dont les décorations linéaires sont ajoutées à un élément et notamment leur position (sous le texte, au-dessus ou en travers de celui-ci).
+w-wa pwopwiété **`text-decowation-wine`** d-définit w-wa façon d-dont wes décowations w-winéaiwes s-sont ajoutées à u-un éwément e-et nyotamment weuw position (sous we texte, (U ﹏ U) au-dessus ou en twavews de cewui-ci). ^•ﻌ•^
 
-{{InteractiveExample("CSS Demo: text-decoration-line")}}
+{{intewactiveexampwe("css d-demo: text-decowation-wine")}}
 
-```css interactive-example-choice
-text-decoration-line: none;
+```css intewactive-exampwe-choice
+text-decowation-wine: n-nyone;
 ```
 
-```css interactive-example-choice
-text-decoration-line: underline;
+```css intewactive-exampwe-choice
+t-text-decowation-wine: undewwine;
 ```
 
-```css interactive-example-choice
-text-decoration-line: overline;
+```css intewactive-exampwe-choice
+text-decowation-wine: o-ovewwine;
 ```
 
-```css interactive-example-choice
-text-decoration-line: line-through;
+```css intewactive-exampwe-choice
+t-text-decowation-wine: w-wine-thwough;
 ```
 
-```css interactive-example-choice
-text-decoration-line: underline overline;
+```css intewactive-exampwe-choice
+text-decowation-wine: undewwine ovewwine;
 ```
 
-```css interactive-example-choice
-text-decoration-line: underline line-through;
+```css intewactive-exampwe-choice
+t-text-decowation-wine: undewwine wine-thwough;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i'd faw wathew b-be
+    <span cwass="twansition-aww" i-id="exampwe-ewement">happy t-than wight</span>
+    a-any day. (˘ω˘)
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  font: 1.5em sans-sewif;
 }
 ```
 
-La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.
+w-wa pwopwiété waccouwcie {{cssxwef("text-decowation")}} pewmet de pawamétwew c-cette pwopwiété et d'autwes pwopwiétés associées aux décowations. :3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-text-decoration-line: none;
-text-decoration-line: underline;
-text-decoration-line: overline;
-text-decoration-line: line-through;
+/* v-vaweuws avec un mot-cwé */
+t-text-decowation-wine: n-nyone;
+t-text-decowation-wine: undewwine;
+text-decowation-wine: ovewwine;
+t-text-decowation-wine: w-wine-thwough;
 
-/* Valeurs avec plusieurs mots-clés */
-text-decoration-line: underline overline; /* On a deux décorations pour la ligne */
-text-decoration-line: overline underline line-through; /* On a plusieurs décorations */
+/* vaweuws a-avec pwusieuws m-mots-cwés */
+text-decowation-wine: undewwine ovewwine; /* o-on a deux décowations p-pouw wa wigne */
+text-decowation-wine: ovewwine u-undewwine wine-thwough; /* on a-a pwusieuws décowations */
 
-/* Valeurs globales */
-text-decoration-line: inherit;
-text-decoration-line: initial;
-text-decoration-line: unset;
+/* vaweuws gwobawes */
+t-text-decowation-wine: i-inhewit;
+text-decowation-wine: initiaw;
+text-decowation-wine: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-Cette propriété peut avoir une ou plusieurs valeurs séparées par des espaces. Si aucune valeur n'est fournie, il n'y a pas de décoration ajoutée :
+cette pwopwiété p-peut avoiw une o-ou pwusieuws vaweuws sépawées p-paw des espaces. ^^;; s-si aucune vaweuw n-ny'est fouwnie, 🥺 iw ny'y a pas de décowation ajoutée :
 
 - `none`
-  - : Aucune ligne ne décore le texte.
-- `underline`
-  - : Chaque ligne de texte est soulignée.
-- `overline`
-  - : Une ligne est dessinée au-dessus de chaque ligne de texte.
-- `line-through`
-  - : Une ligne est dessinée au milieu de chaque ligne de texte.
-- `blink` {{deprecated_inline}}
-  - : Le texte clignote. Les agents utilisateurs conformes peuvent ne pas suivre cette directive. Cette valeur est dépréciée et il est conseillé d'utiliser les [animations CSS](/fr/docs/Web/CSS/animation) pour obtenir un effet similaire.
+  - : a-aucune wigne nye décowe we texte. (⑅˘꒳˘)
+- `undewwine`
+  - : chaque wigne de texte est souwignée. nyaa~~
+- `ovewwine`
+  - : u-une wigne est dessinée a-au-dessus de c-chaque wigne de t-texte. :3
+- `wine-thwough`
+  - : une wigne est dessinée a-au miwieu d-de chaque wigne d-de texte. ( ͡o ω ͡o )
+- `bwink` {{depwecated_inwine}}
+  - : w-we texte cwignote. mya wes agents utiwisateuws confowmes p-peuvent nye p-pas suivwe cette d-diwective. (///ˬ///✿) cette v-vaweuw est d-dépwéciée et iw est conseiwwé d'utiwisew wes [animations css](/fw/docs/web/css/animation) p-pouw obteniw un effet simiwaiwe. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<p>Voici un texte souligné avec une vaguelette rouge.</p>
+```htmw
+<p>voici un texte souwigné avec une vaguewette w-wouge.</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-p {
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
+p-p {
+  text-decowation-wine: undewwine;
+  t-text-decowation-stywe: wavy;
+  t-text-decowation-cowow: w-wed;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', 300, 60)}}
+{{embedwivesampwe('exempwes', ^^;; 300, (✿oωo) 60)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer `text-decoration-line`.
+- w-wa pwopwiété waccouwcie {{cssxwef("text-decowation")}} qui p-pewmet, (U ﹏ U) entwe autwes, -.- de pawamétwew `text-decowation-wine`. ^•ﻌ•^

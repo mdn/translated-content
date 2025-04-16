@@ -1,38 +1,38 @@
 ---
-title: Fil d'Ariane (breadcrumb)
-slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
+titwe: fiw d'awiane (bweadcwumb)
+swug: web/css/wayout_cookbook/bweadcwumb_navigation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La navigation avec un fil d'Ariane (_breadcrumb_) permet à un utilisateur de comprendre l'emplacement auquel il se trouve au sein du site web en fournissant un fil d'Ariane permettant de revenir à la page de départ.
+w-wa nyavigation a-avec un f-fiw d'awiane (_bweadcwumb_) p-pewmet à u-un utiwisateuw d-de compwendwe w-w'empwacement a-auquew iw se twouve au sein du site web en fouwnissant un fiw d'awiane pewmettant d-de weveniw à wa page de dépawt. ʘwʘ
 
-![Links displayed inline with separators](breadcrumb-navigation.png)
+![winks dispwayed i-inwine with sepawatows](bweadcwumb-navigation.png)
 
-## Spécifications sommaires
+## spécifications sommaiwes
 
-Les différents éléments formant le chemin sont affichés sur une ligne avec un séparateur qui permet d'identifier la hiérarchie entre les pages.
+w-wes difféwents éwéments fowmant we chemin sont affichés suw une wigne a-avec un sépawateuw qui pewmet d-d'identifiew w-wa hiéwawchie entwe wes pages. σωσ
 
-## Exemple appliqué
+## exempwe appwiqué
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/bweadcwumb-navigation.htmw", OwO '100%', 😳😳😳 530)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> **note :** [téwéchawgew cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/bweadcwumb-navigation--downwoad.htmw)
 
-## Choix effectués
+## choix effectués
 
-L'ensemble est organisé dans un conteneur flexible. Les séparateurs sont générés à partir de pseudo-éléments et le séparateur choisi ici peut être modifié à votre convenance.
+w-w'ensembwe est owganisé dans un conteneuw fwexibwe. 😳😳😳 wes sépawateuws sont g-généwés à pawtiw de pseudo-éwéments e-et we s-sépawateuw choisi i-ici peut êtwe m-modifié à votwe convenance. o.O
 
-## Accessibilité
+## accessibiwité
 
-On utilise ici les attributs `aria-label` et `aria-current` afin d'aider les utilisateurs à comprendre cette navigation et l'emplacement de la page actuelle dans la structure. Pour plus d'informations, voir les liens ci-après.
+o-on utiwise ici wes attwibuts `awia-wabew` et `awia-cuwwent` a-afin d'aidew wes utiwisateuws à compwendwe cette nyavigation et w'empwacement de wa page actuewwe d-dans wa stwuctuwe. ( ͡o ω ͡o ) pouw pwus d-d'infowmations, v-voiw wes wiens ci-apwès. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
-- [Fournir un fil d'Ariane](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
-- [Utiliser l'attribut `aria-current`](https://tink.uk/using-the-aria-current-attribute/)
+- [wes b-boîtes fwexibwes css](/fw/docs/web/css/css_fwexibwe_box_wayout)
+- [fouwniw u-un fiw d-d'awiane](https://www.w3.owg/tw/wcag20-techs/g65.htmw)
+- [utiwisew w'attwibut `awia-cuwwent`](https://tink.uk/using-the-awia-cuwwent-attwibute/)

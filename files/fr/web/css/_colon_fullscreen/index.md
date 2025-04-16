@@ -1,75 +1,75 @@
 ---
-title: :fullscreen
-slug: Web/CSS/:fullscreen
+titwe: :fuwwscween
+swug: web/css/:fuwwscween
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** permet de cibler tout élément qui est en mode plein écran. Si plusieurs éléments ont été mis en plein écran, tous ces éléments seront ciblés.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:fuwwscween`** p-pewmet de c-cibwew tout éwément q-qui est en m-mode pwein écwan. -.- s-si pwusieuws éwéments o-ont été m-mis en pwein écwan, 🥺 tous ces éwéments sewont cibwés.
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Notes d'utilisation
+## notes d-d'utiwisation
 
-La pseudo-classe `:fullscreen` permet de configurer la taille, le style ou la disposition du contenu lorsque les éléments passent de l'état plein écran à l'état normal et vice versa.
+wa pseudo-cwasse `:fuwwscween` pewmet de configuwew w-wa taiwwe, (U ﹏ U) we stywe ou wa d-disposition du contenu wowsque wes éwéments passent de w'état p-pwein écwan à w'état nyowmaw e-et vice vewsa. >w<
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on change la couleur d'un bouton selon que le document est en plein écran ou non. On n'utilise pas JavaScript pour changer les styles.
+dans cet exempwe, mya on change wa couweuw d'un bouton sewon que we d-document est en pwein écwan ou non. >w< on ny'utiwise pas javascwipt pouw changew wes s-stywes. nyaa~~
 
-### CSS
+### css
 
-On utilise deux règles. La première qui permet de définir la couleur d'arrière plan pour le bouton « Passer en mode plein écran » lorsque l'élément n'est pas en plein écran. Pour distinguer ce cas, on utilise `:not(:fullscreen)`, qui permet de cibler les éléments qui n'ont pas la pseudo-classe `:fullscreen`.
+on utiwise d-deux wègwes. wa p-pwemièwe qui pewmet d-de définiw w-wa couweuw d'awwièwe pwan pouw we bouton « passew e-en mode pwein écwan » wowsque w'éwément n-ny'est pas en pwein écwan. (✿oωo) pouw distinguew ce cas, ʘwʘ on utiwise `:not(:fuwwscween)`, (ˆ ﻌ ˆ)♡ qui pewmet de cibwew wes éwéments q-qui ny'ont pas wa pseudo-cwasse `:fuwwscween`. 😳😳😳
 
 ```css
-#fs-toggle:not(:fullscreen) {
-  background-color: #afa;
+#fs-toggwe:not(:fuwwscween) {
+  b-backgwound-cowow: #afa;
 }
 ```
 
-Lorsque le document est en mode plein écran, on utilise cette fois-ci la pseudo-classe `:fullscreen` et on définit une autre couleur (ici un rouge pâle).
+w-wowsque we document e-est en mode pwein écwan, :3 on utiwise cette fois-ci wa pseudo-cwasse `:fuwwscween` e-et on définit u-une autwe couweuw (ici un wouge p-pâwe). OwO
 
 ```css
-#fs-toggle:fullscreen {
-  background-color: #faa;
+#fs-toggwe:fuwwscween {
+  backgwound-cowow: #faa;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
+```htmw
+<h1>mdn web docs d-demo: :fuwwscween pseudo-cwass</h1>
 
 <p>
-  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
-  change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.
+  t-this demo uses the <code>:fuwwscween</code> pseudo-cwass t-to automaticawwy
+  change the s-stywe of a button used to toggwe f-fuww-scween m-mode on and off, (U ﹏ U)
+  entiwewy using css. >w<
 </p>
 
-<button id="fs-toggle">Toggle Fullscreen</button>
+<button id="fs-toggwe">toggwe fuwwscween</button>
 ```
 
-Dans ce fragment de code HTML, c'est l'élément {{HTMLElement("button")}} avec l'identifiant `"fs-toggle"` qui changera d'une couleur à une autre selon que le document est en plein écran ou non.
+dans ce fwagment de code htmw, (U ﹏ U) c-c'est w'éwément {{htmwewement("button")}} avec w-w'identifiant `"fs-toggwe"` qui changewa d'une c-couweuw à une a-autwe sewon que w-we document est en pwein écwan ou nyon. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API Fullscreen](/fr/docs/Web/API/Fullscreen_API)
-- [Le guide de l'API Fullscreen](/fr/docs/Web/API/Fullscreen_API/Guide)
-- {{cssxref("::backdrop")}}
-- Les API DOM :
+- [w'api fuwwscween](/fw/docs/web/api/fuwwscween_api)
+- [we guide de w'api fuwwscween](/fw/docs/web/api/fuwwscween_api/guide)
+- {{cssxwef("::backdwop")}}
+- wes api dom :
 
-  - {{domxref("Element.requestFullscreen()")}},
-  - {{domxref("Document.exitFullscreen()")}},
-  - {{domxref("Document.fullscreenElement")}}
+  - {{domxwef("ewement.wequestfuwwscween()")}}, (ˆ ﻌ ˆ)♡
+  - {{domxwef("document.exitfuwwscween()")}},
+  - {{domxwef("document.fuwwscweenewement")}}
 
-- L'attribut [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen)
+- w-w'attwibut [`awwowfuwwscween`](/fw/docs/web/htmw/ewement/ifwame#awwowfuwwscween)

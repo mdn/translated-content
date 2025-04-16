@@ -1,41 +1,41 @@
 ---
-title: :paused
-slug: Web/CSS/:paused
+titwe: :paused
+swug: web/css/:paused
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:paused`** est une pseudo-classe d'état d'une ressource audio, vidéo ou autre type de ressource capable d'être «&nbsp;lue&nbsp;» ou «&nbsp;mise en pause&nbsp;», qui permet de cibler un élément lorsqu'il est «&nbsp;mis en pause&nbsp;».
+w-we séwecteuw d-de [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:paused`** e-est une pseudo-cwasse d-d'état d-d'une wessouwce a-audio, -.- vidéo ou a-autwe type de w-wessouwce capabwe d'êtwe «&nbsp;wue&nbsp;» ou «&nbsp;mise en pause&nbsp;», q-qui pewmet de cibwew un éwément wowsqu'iw est «&nbsp;mis e-en pause&nbsp;». ( ͡o ω ͡o )
 
-`:paused` correspond à tout élément non activé ou mis en pause explicitement par la personne utilisant la ressource.
+`:paused` cowwespond à t-tout éwément nyon activé ou mis en pause expwicitement p-paw wa pewsonne utiwisant wa wessouwce. rawr x3
 
 ```css
 :paused {
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
 :paused {
-  border: 5px solid orange;
+  bowdew: 5px sowid owange;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`:playing`](/fr/docs/Web/CSS/:playing)
+- [`:pwaying`](/fw/docs/web/css/:pwaying)

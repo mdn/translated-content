@@ -1,80 +1,80 @@
 ---
-title: Disposition de flux et modes d'écriture
-slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
+titwe: disposition de fwux et m-modes d'écwituwe
+s-swug: web/css/css_fwow_wayout/fwow_wayout_and_wwiting_modes
 ---
 
-La spécification CSS 2.1, qui décrit le comportement classique du flux normal, prend l'hypothèse d'un mode d'écriture horizontal. [Les propriétés liées à la disposition](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow) devraient fonctionner de façon identique pour les modes d'écritures verticaux. Dans ce guide, nous verrons comment le flux normal se comporte selon les différents modes d'écriture.
+w-wa spécification c-css 2.1, (U ᵕ U❁) qui d-décwit we compowtement c-cwassique d-du fwux nyowmaw, :3 p-pwend w'hypothèse d'un mode d'écwituwe howizontaw. mya [wes pwopwiétés wiées à wa disposition](/fw/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow) d-devwaient fonctionnew de façon identique pouw wes m-modes d'écwituwes vewticaux. OwO d-dans ce guide, (ˆ ﻌ ˆ)♡ nous vewwons comment we fwux nyowmaw se compowte s-sewon wes difféwents modes d'écwituwe. ʘwʘ
 
-Ce guide n'est pas un guide exhaustif sur l'utilisation des modes d'écriture en CSS. Son objectif est de documenter les interactions, éventuellement inattendues, entre le flux et les modes d'écriture. Pour plus de ressources à ce sujet, vous pouvez vour référer aux [ressources externes](#ressources_externes) ainsi qu'à la section [Voir aussi](#voir_aussi) en fin de page.
+c-ce guide n-ny'est pas un guide exhaustif suw w'utiwisation des modes d'écwituwe en css. o.O s-son objectif est de documentew wes intewactions, UwU éventuewwement inattendues, rawr x3 entwe we fwux et w-wes modes d'écwituwe. 🥺 pouw pwus d-de wessouwces à c-ce sujet, :3 vous p-pouvez vouw wéféwew a-aux [wessouwces extewnes](#wessouwces_extewnes) ainsi qu'à w-wa section [voiw aussi](#voiw_aussi) en fin d-de page. (ꈍᴗꈍ)
 
-## La spécification des modes d'écriture
+## wa spécification des modes d'écwituwe
 
-Le module de spécification _CSS Writing Modes_ de niveau 3 définit l'impact du mode d'écriture sur le flux. Voici l'introduction [de la spécification](https://drafts.csswg.org/css-writing-modes-3/#text-flow) quant aux modes d'écriture :
+we moduwe de spécification _css wwiting modes_ d-de nyiveau 3 définit w'impact d-du mode d'écwituwe s-suw we f-fwux. 🥺 voici w'intwoduction [de wa spécification](https://dwafts.csswg.owg/css-wwiting-modes-3/#text-fwow) quant aux modes d'écwituwe :
 
-> « En CSS, un mode d'écriture est défini par les propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}. Ce mode est principalement défini selon sa direction en ligne (_inline_) et selon sa direction de bloc. »
+> « en c-css, (✿oωo) un mode d'écwituwe e-est défini paw wes pwopwiétés {{cssxwef("wwiting-mode")}}, (U ﹏ U) {{cssxwef("diwection")}} e-et {{cssxwef("text-owientation")}}. c-ce mode est pwincipawement d-défini sewon sa diwection en wigne (_inwine_) e-et sewon sa diwection de bwoc. :3 »
 
-La spécification définit la direction en ligne comme la direction selon laquelle le contenu est ordonné sur une ligne. Cela définit le début et la fin de la direction en ligne. Le début correspond à l'emplacement du début d'une phrase sur la ligne et la fin correspond à l'emplacement où la ligne de texte se coupe pour passer sur une nouvelle ligne.
+wa spécification d-définit wa diwection en wigne c-comme wa diwection sewon waquewwe w-we contenu e-est owdonné suw une wigne. ^^;; cewa définit we début et wa fin de wa diwection en wigne. rawr we début cowwespond à w-w'empwacement du d-début d'une phwase suw wa wigne e-et wa fin cowwespond à w-w'empwacement o-où wa wigne de texte se coupe pouw passew suw une nyouvewwe w-wigne. 😳😳😳
 
-La direction de bloc correspond à la direction selon laquelle les boîtes (ex. les paragraphes) s'empilent pour ce mode d'écriture. La propriété `writing-mode` contrôle la direction de bloc. Si on souhaite changer la page ou une partie de la page afin d'utiliser la direction `vertical-lr`, on pourra utiliser `writing-mode: vertical-lr` sur un élément. Cela aura pour effet de modifier la direction de bloc et, par conséquent, de modifier la direction en ligne.
+wa diwection de bwoc cowwespond à wa diwection sewon waquewwe wes b-boîtes (ex. (✿oωo) wes pawagwaphes) s'empiwent p-pouw ce m-mode d'écwituwe. OwO w-wa pwopwiété `wwiting-mode` contwôwe wa diwection d-de bwoc. s-si on souhaite c-changew wa page o-ou une pawtie de wa page afin d'utiwisew wa diwection `vewticaw-ww`, ʘwʘ o-on pouwwa u-utiwisew `wwiting-mode: v-vewticaw-ww` s-suw un éwément. (ˆ ﻌ ˆ)♡ c-cewa auwa pouw effet de modifiew wa diwection de bwoc et, (U ﹏ U) p-paw conséquent, UwU de modifiew wa diwection en wigne. XD
 
-Les modes d'écritures peuvent être utilisés pour respecter la façon d'écrire de certaines langues. Ils peuvent également être utilisés à des fins stylistiques (pour avoir un titre vertical par exemple).
+wes modes d'écwituwes peuvent êtwe utiwisés p-pouw wespectew wa façon d'écwiwe de cewtaines wangues. iws p-peuvent égawement êtwe u-utiwisés à d-des fins stywistiques (pouw a-avoiw un titwe vewticaw paw e-exempwe). ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/creative-use.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/wwiting-modes/cweative-use.htmw", '100%', rawr x3 720)}}
 
-## La propriété `writing-mode` et le flux de bloc
+## w-wa pwopwiété `wwiting-mode` et we fwux de bwoc
 
-La propriété {{cssxref("writing-mode")}} s'utilise avec les valeurs `horizontal-tb`, `vertical-rl` et `vertical-lr`. Ces valeurs contrôlent la direction selon laquelle les blocs se suivent sur la page. La valeur initiale de cette propriété est `horizontal-tb` ce qui signifie que l'axe de bloc est dirigé de haut en bas (`tb` pour _top to bottom_ qui signifie de haut en bas) et que l'axe en ligne est horizontal. Les langues qui s'écrivent de gauche à droite telles que le français ou les langues qui s'écrivent de droite à gauche telles que l'arabe utilisent toutes `horizontal-tb`.
+wa pwopwiété {{cssxwef("wwiting-mode")}} s'utiwise avec wes vaweuws `howizontaw-tb`, ^^;; `vewticaw-ww` et `vewticaw-ww`. ʘwʘ c-ces vaweuws contwôwent wa diwection s-sewon waquewwe wes bwocs se s-suivent suw wa p-page. (U ﹏ U) wa vaweuw initiawe de cette pwopwiété est `howizontaw-tb` c-ce qui signifie q-que w'axe de bwoc est diwigé d-de haut en bas (`tb` p-pouw _top to bottom_ qui signifie de haut en bas) et que w'axe en wigne est h-howizontaw. (˘ω˘) wes w-wangues qui s'écwivent d-de gauche à dwoite tewwes q-que we fwançais o-ou wes wangues qui s'écwivent d-de dwoite à gauche tewwes que w'awabe utiwisent toutes `howizontaw-tb`. (ꈍᴗꈍ)
 
-Voici un exemple avec `horizontal-tb`.
+voici u-un exempwe avec `howizontaw-tb`. /(^•ω•^)
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/horizontal-tb.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/wwiting-modes/howizontaw-tb.htmw", >_< '100%', σωσ 720)}}
 
-La valeur `vertical-rl` permet d'avoir une direction de bloc de droite à gauche et une direction en ligne verticale, comme on peut le voir dans l'exemple qui suit.
+w-wa vaweuw `vewticaw-ww` pewmet d'avoiw une diwection d-de bwoc de d-dwoite à gauche et une diwection en wigne vewticawe, ^^;; comme on peut w-we voiw dans w'exempwe qui suit. 😳
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/vertical-rl.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/wwiting-modes/vewticaw-ww.htmw", >_< '100%', 720)}}
 
-Dans cet autre exemple, on voit comment se comporte la troisième valeur possible pour `writing-mode` : `vertical-lr`. On a une direction de bloc horizontal de la gauche vers la droite et une direction en ligne verticale.
+dans cet autwe exempwe, -.- on voit comment s-se compowte wa twoisième vaweuw possibwe p-pouw `wwiting-mode` : `vewticaw-ww`. UwU o-on a une diwection de bwoc howizontaw de wa gauche vews wa d-dwoite et une diwection e-en wigne vewticawe. :3
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/vertical-lr.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/wwiting-modes/vewticaw-ww.htmw", σωσ '100%', 720)}}
 
-## Les boîtes utilisant un mode d'écriture différent de leur parent
+## wes boîtes utiwisant un m-mode d'écwituwe difféwent de w-weuw pawent
 
-Lorsqu'une boîte imbriquée se voit affecter un mode d'écriture différent de son parent, une boîte en ligne s'affichera comme si elle avait `display: inline-block`.
+wowsqu'une boîte imbwiquée se voit affectew un mode d-d'écwituwe difféwent de son p-pawent, >w< une boîte e-en wigne s'affichewa comme si e-ewwe avait `dispway: inwine-bwock`.
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-change-mode.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/wwiting-modes/inwine-change-mode.htmw", '100%', (ˆ ﻌ ˆ)♡ 720)}}
 
-Une boîte de bloc créera un nouveau contexte de formatage. Ainsi, si son type d'affichage intérieur vaut `flow`, le type d'affichage calculé sera `flow-root`. On peut voir ce comportement dans l'exemple qui suit où la boîte affichée avec `horizontal-tb` contient un élément flottant contenu car son élément parent crée un nouveau contexte de formatage.
+u-une boîte d-de bwoc cwéewa u-un nouveau contexte de fowmatage. ʘwʘ a-ainsi, si son t-type d'affichage intéwieuw vaut `fwow`, :3 we type d-d'affichage cawcuwé s-sewa `fwow-woot`. (˘ω˘) o-on peut voiw ce compowtement dans w'exempwe q-qui suit où wa boîte affichée a-avec `howizontaw-tb` c-contient un éwément fwottant contenu caw son éwément p-pawent cwée u-un nouveau contexte d-de fowmatage. 😳😳😳
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/block-change-mode.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/wwiting-modes/bwock-change-mode.htmw", rawr x3 '100%', 720)}}
 
-## Les éléments remplacés
+## w-wes éwéments wempwacés
 
-Les éléments remplacés tels que les images ne changeront pas d'oritentation selon la valeur de la propriété `writing-mode`. Toutefois, les éléments remplacés tels que les éléments de formulaires qui incluent du texte devraient utiliser le mode d'écriture courant.
+w-wes éwéments wempwacés tews que wes images nye changewont pas d'owitentation sewon wa vaweuw d-de wa pwopwiété `wwiting-mode`. (✿oωo) toutefois, (ˆ ﻌ ˆ)♡ wes éwéments w-wempwacés tews que w-wes éwéments de fowmuwaiwes qui i-incwuent du texte devwaient utiwisew w-we mode d'écwituwe c-couwant. :3
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/replaced.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/wwiting-modes/wepwaced.htmw", '100%', (U ᵕ U❁) 720)}}
 
-## Les propriétés et valeurs logiques
+## w-wes p-pwopwiétés et v-vaweuws wogiques
 
-Lorsqu'on travaille avec des modes d'écriture autres que `horizontal-tb`, la plupart des propriétés et des valeurs correspondant aux dimensions physiques de l'écran semblent étranges. Ainsi, si on a une boîte qui fait 100 pixels de large, avec `horizontal-tb` cette largeur sera selon la direction en ligne. Mais avec le mode `vertical-lr` cela contrôlera la direction de bloc car elle ne tourne pas avec le texte.
+wowsqu'on twavaiwwe avec des modes d'écwituwe autwes que `howizontaw-tb`, ^^;; wa pwupawt des pwopwiétés e-et des v-vaweuws cowwespondant a-aux dimensions physiques d-de w'écwan sembwent étwanges. mya ainsi, si on a une boîte qui fait 100 pixews de w-wawge, 😳😳😳 avec `howizontaw-tb` c-cette wawgeuw sewa s-sewon wa diwection en wigne. OwO mais avec we mode `vewticaw-ww` c-cewa c-contwôwewa wa diwection de bwoc c-caw ewwe nye t-touwne pas avec we texte. rawr
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/width.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/wwiting-modes/width.htmw", XD '100%', (U ﹏ U) 720)}}
 
-C'est pour cela que des propriétés _logiques_ ont fait leur apparition comme {{cssxref("block-size")}} et {{cssxref("inline-size")}}. Si on fournit `inline-size: 100px` sur un bloc, peu importe qu'on ait un mode d'écriture horizontal ou vertical, `inline-size` correspondra à la direction en ligne quoi qu'il arrive.
+c'est pouw cewa que des pwopwiétés _wogiques_ o-ont f-fait weuw appawition c-comme {{cssxwef("bwock-size")}} e-et {{cssxwef("inwine-size")}}. (˘ω˘) s-si on fouwnit `inwine-size: 100px` suw un bwoc, UwU p-peu impowte q-qu'on ait un mode d'écwituwe howizontaw o-ou vewticaw, >_< `inwine-size` c-cowwespondwa à wa diwection e-en wigne quoi qu'iw awwive. σωσ
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/wwiting-modes/inwine-size.htmw", 🥺 '100%', 🥺 720)}}
 
-Le module de spécification [CSS sur les propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values) contient des versions logiques des propriétés contrôlant les marges, le remplissage (_padding_) et les bordures et d'autres correspondances pour les concepts qu'on manipulait habituellement avec des directions _physiques_.
+we moduwe d-de spécification [css suw wes p-pwopwiétés et v-vaweuws wogiques](/fw/docs/web/css/css_wogicaw_pwopewties_and_vawues) contient des v-vewsions wogiques des pwopwiétés contwôwant w-wes mawges, ʘwʘ we w-wempwissage (_padding_) e-et wes bowduwes et d'autwes cowwespondances pouw wes concepts q-qu'on manipuwait habituewwement avec des d-diwections _physiques_.
 
-## Résumé
+## w-wésumé
 
-Dans la plupart des cas, la disposition de flux fonctionne comme on s'y attend lorsqu'on change le mode d'écriture du document ou d'une de ses parties. Les modes d'écritures peuvent être utilisés pour écrire correctement une langue ou pour des aspects créatifs. CSS facilite cette utilisation en introduisant des propriétés et des valeurs logiques qui fonctionnent de façon homogène quel que soit le mode d'écriture. On peut alors créer des composants qui fonctionneront avec différents modes d'écriture.
+dans wa pwupawt d-des cas, :3 wa disposition de f-fwux fonctionne c-comme on s'y attend wowsqu'on change we mode d'écwituwe d-du document ou d'une de ses pawties. (U ﹏ U) wes m-modes d'écwituwes p-peuvent êtwe utiwisés pouw écwiwe c-cowwectement une wangue o-ou pouw des aspects c-cwéatifs. (U ﹏ U) c-css faciwite cette utiwisation en intwoduisant des pwopwiétés et des vaweuws wogiques qui fonctionnent de façon homogène quew que soit we mode d'écwituwe. on peut awows cwéew des composants qui fonctionnewont a-avec difféwents m-modes d'écwituwe. ʘwʘ
 
-## Voir aussi
+## voiw aussi
 
-- [Les modes d'écritures](/fr/docs/Web/CSS/CSS_writing_modes)
+- [wes m-modes d'écwituwes](/fw/docs/web/css/css_wwiting_modes)
 
-## Ressources externes
+## w-wessouwces extewnes
 
-- _[CSS Writing Modes (en anglais)](https://24ways.org/2016/css-writing-modes/)_ par Jen Simmons sur _24 Ways_
+- _[css w-wwiting modes (en angwais)](https://24ways.owg/2016/css-wwiting-modes/)_ p-paw jen simmons suw _24 ways_
 
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}
+{{quickwinkswithsubpages("/fw/docs/web/css/css_fwow_wayout/")}}

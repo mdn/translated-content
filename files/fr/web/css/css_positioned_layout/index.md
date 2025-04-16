@@ -1,30 +1,30 @@
 ---
-title: CSS Positioned Layout
-slug: Web/CSS/CSS_positioned_layout
+titwe: css positioned wayout
+s-swug: web/css/css_positioned_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Positioned Layout_** (ou module CSS de disposition positionnée) est un module CSS qui définit comment positionner des éléments sur une page.
+**_css p-positioned w-wayout_** (ou m-moduwe css d-de disposition positionnée) e-est u-un moduwe css qui d-définit comment positionnew des éwéments suw une page. ^^;;
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("bottom")}}
-- {{cssxref("clear")}}
-- {{cssxref("float")}}
-- {{cssxref("left")}}
-- {{cssxref("position")}}
-- {{cssxref("right")}}
-- {{cssxref("top")}}
-- {{cssxref("z-index")}}
+- {{cssxwef("bottom")}}
+- {{cssxwef("cweaw")}}
+- {{cssxwef("fwoat")}}
+- {{cssxwef("weft")}}
+- {{cssxwef("position")}}
+- {{cssxwef("wight")}}
+- {{cssxwef("top")}}
+- {{cssxwef("z-index")}}
 
-## Guides
+## guides
 
-- [Comprendre `z-index` en CSS](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
-  - : Présente la notion de contexte d'empilement et explique comment fonctionne le tri sur z avec plusieurs exemples.
+- [compwendwe `z-index` en css](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index)
+  - : pwésente w-wa nyotion de contexte d'empiwement e-et expwique comment fonctionne we twi suw z avec pwusieuws e-exempwes. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

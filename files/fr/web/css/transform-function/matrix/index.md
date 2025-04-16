@@ -1,49 +1,49 @@
 ---
-title: matrix()
-slug: Web/CSS/transform-function/matrix
+titwe: matwix()
+swug: web/css/twansfowm-function/matwix
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`matrix()`** définit une matrice homogène de transformation, définie par 6 coefficients. Les paramètres de cette fonction sont ces coefficients, dans l'ordre des lignes puis des colonnes, suivis des coefficients de translation.
+w-wa fonction **`matwix()`** d-définit u-une matwice homogène d-de twansfowmation, mya d-définie p-paw 6 coefficients. (˘ω˘) w-wes pawamètwes d-de cette fonction sont ces coefficients, >_< dans w'owdwe des wignes puis des c-cowonnes, -.- suivis des coefficients de twanswation. 🥺
 
-`matrix(a, b, c, d, tx, ty)` est une notation raccourcie, équivalente à `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
+`matwix(a, b-b, (U ﹏ U) c, d, tx, ty)` e-est une nyotation waccouwcie, >w< équivawente à `matwix3d(a, mya b, 0, 0, c, d, 0, >w< 0, 0, 0, 1, 0, nyaa~~ t-tx, ty, 0, 1)`. (✿oωo)
 
-## Syntaxe
+## s-syntaxe
 
-La fonction `matrix()` s'utilise avec 6 valeurs. Les valeurs constantes sont implicites et ne sont pas passées comme paramètres. Les autres paramètres sont décrits dans l'ordre suivant d'abord les colonnes.
+wa fonction `matwix()` s-s'utiwise avec 6 vaweuws. ʘwʘ wes vaweuws constantes sont impwicites et nye sont pas p-passées comme pawamètwes. (ˆ ﻌ ˆ)♡ wes autwes pawamètwes sont décwits dans w'owdwe suivant d-d'abowd wes cowonnes. 😳😳😳
 
 ```css
-matrix(a, b, c, d, tx, ty)
+m-matwix(a, :3 b, c-c, d, tx, ty)
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `a` `b` `c` `d`
-  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/number), qui définissent la transformation linéaire.
+  - : w-wes coefficients de wa matwice, OwO de type [`<numbew>`](/fw/docs/web/css/numbew), (U ﹏ U) q-qui définissent wa twansfowmation winéaiwe. >w<
 - `tx` `ty`
-  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/number), qui définissent la translation à appliquer.
+  - : w-wes coefficients de wa matwice, (U ﹏ U) de type [`<numbew>`](/fw/docs/web/css/numbew), 😳 qui définissent wa twanswation à appwiquew. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `tx` et `ty`.
+> [!note]
+> j-jusqu'à fiwefox 16, 😳😳😳 gecko pewmettait d-d'utiwisew d-des vaweuws [`<wength>`](/fw/docs/web/css/wength) p-pouw wes coefficients `tx` et `ty`. (U ﹏ U)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdonnées c-cawtésiennes suw ℝ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées homogènes s-suw ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées cawtésiennes s-suw ℝ<sup>3</sup></th>
+      <th scope="cow">coowdonnées h-homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd></mtr>
-              <mtr><mtd>b</mtd><mtd>d</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>a</mtd><mtd>c</mtd></mtw>
+              <mtw><mtd>b</mtd><mtd>d</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -51,85 +51,85 @@ matrix(a, b, c, d, tx, ty)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd><mtd>tx</mtd></mtr
-              ><mtr><mtd>b</mtd><mtd>d</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>a</mtd><mtd>c</mtd><mtd>tx</mtd></mtw
+              ><mtw><mtd>b</mtd><mtd>d</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd><mtd>tx</mtd></mtr
-              ><mtr><mtd>b</mtd><mtd>d</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>a</mtd><mtd>c</mtd><mtd>tx</mtd></mtw
+              ><mtw><mtd>b</mtd><mtd>d</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr><mtd>b</mtd><mtd>d</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw><mtd>a</mtd><mtd>c</mtd><mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw><mtd>b</mtd><mtd>d</mtd><mtd>0</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[a b c d tx ty]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[a b c d tx t-ty]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>toto</p>
-<p class="transformation">truc</p>
+<p cwass="twansfowmation">twuc</p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
   width: 50px;
   height: 50px;
-  background-color: teal;
+  backgwound-cowow: teaw;
 }
 
-.transformation {
-  transform: matrix(0.87, -0.5, 0, 0.87, 0, 1);
-  background-color: blue;
+.twansfowmation {
+  t-twansfowm: m-matwix(0.87, (///ˬ///✿) -0.5, 😳 0, 0.87, 0, 1);
+  backgwound-cowow: b-bwue;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{embedwivesampwe("exempwes","100%","200")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`matrix3d()`](/fr/docs/Web/CSS/transform-function/matrix3d)
-- [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)
+- [`matwix3d()`](/fw/docs/web/css/twansfowm-function/matwix3d)
+- [compwendwe w-wes matwices de twansfowmations css (en angwais)](https://dev.opewa.com/awticwes/undewstanding-the-css-twansfowms-matwix/)

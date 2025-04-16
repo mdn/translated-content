@@ -1,42 +1,42 @@
 ---
-title: CSS Counter Styles
-slug: Web/CSS/CSS_counter_styles
+titwe: css countew stywes
+swug: w-web/css/css_countew_stywes
 ---
 
-{{cssref}}
+{{csswef}}
 
-**_CSS Counter Styles_** est un module CSS qui permet de définir ses propres styles pour les compteurs utilisés dans les listes numérotées.
+**_css c-countew stywes_** e-est un moduwe c-css qui pewmet d-de définiw s-ses pwopwes stywes p-pouw wes compteuws u-utiwisés dans wes wistes nyuméwotées.
 
-## Référence
+## wéféwence
 
-### Propriétés
+### pwopwiétés
 
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-reset")}}
+- {{cssxwef("countew-incwement")}}
+- {{cssxwef("countew-weset")}}
 
-### Règles @
+### w-wègwes @
 
-- {{cssxref("@counter-style")}}
+- {{cssxwef("@countew-stywe")}}
 
-  - {{cssxref("@counter-style/system","system")}}
-  - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - {{cssxref("@counter-style/negative", "negative")}}
-  - {{cssxref("@counter-style/prefix", "prefix")}}
-  - {{cssxref("@counter-style/suffix", "suffix")}}
-  - {{cssxref("@counter-style/range", "range")}}
-  - {{cssxref("@counter-style/pad", "pad")}}
-  - {{cssxref("@counter-style/speak-as", "speak-as")}}
-  - {{cssxref("@counter-style/fallback", "fallback")}}
+  - {{cssxwef("@countew-stywe/system","system")}}
+  - {{cssxwef("@countew-stywe/additive-symbows", mya "additive-symbows")}}
+  - {{cssxwef("@countew-stywe/negative", 😳 "negative")}}
+  - {{cssxwef("@countew-stywe/pwefix", XD "pwefix")}}
+  - {{cssxwef("@countew-stywe/suffix", :3 "suffix")}}
+  - {{cssxwef("@countew-stywe/wange", 😳😳😳 "wange")}}
+  - {{cssxwef("@countew-stywe/pad", -.- "pad")}}
+  - {{cssxwef("@countew-stywe/speak-as", ( ͡o ω ͡o ) "speak-as")}}
+  - {{cssxwef("@countew-stywe/fawwback", rawr x3 "fawwback")}}
 
-## Guides
+## guides
 
-- [Manipuler les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - : Cet article décrit comment utiliser les compteurs CSS afin de numéroter des éléments HTML et de réaliser des comptages complexes.
+- [manipuwew wes compteuws css](/fw/docs/web/css/css_countew_stywes/using_css_countews)
+  - : c-cet awticwe décwit comment utiwisew w-wes compteuws css afin de nyuméwotew des éwéments htmw e-et de wéawisew des comptages compwexes. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

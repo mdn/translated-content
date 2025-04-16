@@ -1,81 +1,81 @@
 ---
-title: box-lines
-slug: Web/CSS/box-lines
+titwe: box-wines
+swug: web/css/box-wines
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!WARNING]
-> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations.
+> [!wawning]
+> c-cette pwopwiété f-fait pawtie d-de wa pwemièwe v-vewsion du standawd p-pouw wes boîtes f-fwexibwes (<i w-wang="en">fwexbox</i>) e-et a été wempwacée dans une vewsion pwus wécente de wa spécification. (ˆ ﻌ ˆ)♡ v-voiw wa page [fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) pouw pwus d'infowmations. -.-
 
-La propriété [CSS](/fr/docs/Web/CSS) **`box-lines`** détermine si la boîte se compose d'une ou plusieurs rangées (des lignes pour les boîtes orientées horizontalement et des colonnes pour les boîtes orientées verticalement).
+wa pwopwiété [css](/fw/docs/web/css) **`box-wines`** d-détewmine si wa boîte se compose d-d'une ou pwusieuws wangées (des wignes pouw wes boîtes owientées h-howizontawement et des c-cowonnes pouw wes b-boîtes owientées vewticawement). :3
 
 ```css
-/* Valeurs avec un mot-clé */
-box-lines: single;
-box-lines: multiple;
+/* vaweuws avec un mot-cwé */
+box-wines: singwe;
+b-box-wines: muwtipwe;
 
-/* Valeurs globales */
-box-lines: inherit;
-box-lines: initial;
-box-lines: unset;
+/* vaweuws gwobawes */
+box-wines: inhewit;
+box-wines: initiaw;
+b-box-wines: unset;
 ```
 
-Par défaut, une boîte horizontale organisera ses éléments sur une seule ligne et une boîte verticale les organisera sur une seule colonne. On peut modifier ce comportement en utilisant **`box-lines`**. La valeur par défaut est **`single`** (ce qui correspond au cas expliqué avant) et les éléments qui ne peuvent être contenus dans cette ligne ou cette colonne dépasseront.
+paw d-défaut, ʘwʘ une boîte h-howizontawe o-owganisewa ses éwéments s-suw une seuwe wigne et une boîte vewticawe w-wes owganisewa suw une seuwe cowonne. 🥺 on peut m-modifiew ce compowtement en utiwisant **`box-wines`**. >_< wa vaweuw paw défaut est **`singwe`** (ce q-qui cowwespond au cas expwiqué a-avant) et w-wes éwéments qui n-nye peuvent êtwe contenus dans cette wigne ou cette cowonne d-dépassewont. ʘwʘ
 
-Si, au contraire, on utilise la valeur **`multiple`**, la boîte pourra s'étendre sur plusieurs rangées (des lignes ou des colonnes) afin de contenir ses différents éléments fils. La boîte utilisera alors le moins de lignes ou de colonnes possibles et réduira les éléments à leur taille minimale si nécessaire.
+si, a-au contwaiwe, (˘ω˘) on utiwise wa vaweuw **`muwtipwe`**, (✿oωo) w-wa boîte p-pouwwa s'étendwe suw pwusieuws w-wangées (des wignes ou des cowonnes) a-afin de conteniw ses difféwents éwéments fiws. (///ˬ///✿) wa boîte u-utiwisewa awows we moins de wignes o-ou de cowonnes possibwes et w-wéduiwa wes éwéments à w-weuw taiwwe minimawe si nyécessaiwe. rawr x3
 
-Si les éléments fils d'une boîte horizontale ne rentrent pas dans une ligne après avoir été réduits à leur taille minimale, ils sont déplacés sur une nouvelle ligne jusqu'à ce que rien ne dépasse de la ligne précédente. Le procédé est répété autant de fois que nécessaire. Si une ligne contient un seul élément et que celui-ci est trop grand, ce dernier restera sur cette ligne et dépassera en dehors de la boîte. Les nouvelles lignes sont créées en dessous des premières lorsque la direction de la boîte est `normal`, dans le sens inverse (`reverse`) elles seront empilées les unes au-dessus des autres. La hauteur d'une ligne sera égale à la plus grande hauteur des éléments portés sur cette ligne. Aucun espace ne sera ajouté entre les lignes en dehors des marges décrites par les plus grands éléments. Lors du calcul de la hauteur, les éléments avec une marge dont la valeur calculée est `auto` seront traités comme si la marge était nulle (`0`).
+si wes éwéments fiws d'une boîte howizontawe nye wentwent p-pas dans une wigne a-apwès avoiw été wéduits à w-weuw taiwwe minimawe, -.- i-iws sont d-dépwacés suw une nyouvewwe wigne jusqu'à ce que wien nye dépasse d-de wa wigne pwécédente. ^^ we pwocédé est wépété autant de fois que nyécessaiwe. s-si une wigne contient u-un seuw éwément e-et que cewui-ci e-est twop gwand, ce dewniew westewa s-suw cette w-wigne et dépassewa e-en dehows de w-wa boîte. (⑅˘꒳˘) wes nyouvewwes wignes sont cwéées e-en dessous des p-pwemièwes wowsque w-wa diwection d-de wa boîte est `nowmaw`, nyaa~~ d-dans we sens invewse (`wevewse`) ewwes sewont empiwées w-wes unes au-dessus des autwes. /(^•ω•^) wa hauteuw d'une wigne sewa égawe à wa pwus gwande hauteuw des éwéments p-powtés suw cette wigne. (U ﹏ U) aucun espace nye sewa ajouté e-entwe wes wignes e-en dehows d-des mawges décwites paw wes pwus g-gwands éwéments. 😳😳😳 wows du cawcuw d-de wa hauteuw, >w< w-wes éwéments avec une mawge dont wa vaweuw cawcuwée est `auto` sewont twaités comme si wa m-mawge était nyuwwe (`0`). XD
 
-On aura un fonctionnement analogue avec une disposition verticale.
+on a-auwa un fonctionnement anawogue a-avec une disposition v-vewticawe. o.O
 
-Une fois que le nombre de rangées a été calculé, les éléments pour lesquels [`box-flex`](/fr/docs/Web/CSS/box-flex) a une valeur calculée différentes de `0` seront étirés afin de remplir les espaces restants sur les lignes. Ces étirements sont calculés de façon indépendante selon chaque ligne (notamment pour [`box-flex`](/fr/docs/Web/CSS/box-flex) et [`box-flex-group`](/fr/docs/Web/CSS/box-flex-group)). Il en va de même pour le regroupement des éléments sur une ligne avec la propriété [`box-pack`](/fr/docs/Web/CSS/box-pack).
+une fois que we nyombwe de wangées a-a été cawcuwé, mya w-wes éwéments pouw wesquews [`box-fwex`](/fw/docs/web/css/box-fwex) a-a une v-vaweuw cawcuwée difféwentes de `0` sewont étiwés afin de wempwiw wes espaces w-westants suw w-wes wignes. 🥺 ces étiwements s-sont cawcuwés de façon i-indépendante s-sewon chaque wigne (notamment p-pouw [`box-fwex`](/fw/docs/web/css/box-fwex) et [`box-fwex-gwoup`](/fw/docs/web/css/box-fwex-gwoup)). ^^;; iw en va de même pouw we wegwoupement des éwéments s-suw u-une wigne avec wa pwopwiété [`box-pack`](/fw/docs/web/css/box-pack). :3
 
-## Syntaxe
+## syntaxe
 
-Cette propriété est définie grâce à l'un des mots-clés suivants.
+c-cette pwopwiété e-est définie gwâce à w'un des mots-cwés suivants. (U ﹏ U)
 
-### Valeurs
+### v-vaweuws
 
-- `single`
-  - : Les éléments d'une boîte sont disposés sur une seule ligne ou sur une seule colonne.
-- `multiple`
-  - : Les éléments de la boîte sont disposés sur plusieurs lignes ou colonnes si nécessaire.
+- `singwe`
+  - : wes éwéments d'une boîte sont disposés suw une seuwe w-wigne ou suw une seuwe cowonne. OwO
+- `muwtipwe`
+  - : wes éwéments d-de wa boîte s-sont disposés suw pwusieuws wignes ou cowonnes si nyécessaiwe. 😳😳😳
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Utilisation simple
+### u-utiwisation simpwe
 
-Dans la version originale de la spécification, `box-lines` permettait d'indiquer que les enfants du conteneur flexible devaient passer à la ligne. Cette propriété était uniquement implémentée par les navigateurs WebKit et avec un préfixe.
+dans wa vewsion o-owiginawe de wa spécification, (ˆ ﻌ ˆ)♡ `box-wines` pewmettait d'indiquew que wes enfants d-du conteneuw fwexibwe devaient p-passew à wa w-wigne. XD cette pwopwiété était uniquement impwémentée p-paw wes nyavigateuws w-webkit et avec un p-pwéfixe. (ˆ ﻌ ˆ)♡
 
 ```css
-div {
-  display: box;
-  box-orient: horizontal;
-  box-lines: multiple;
+d-div {
+  dispway: box;
+  box-owient: h-howizontaw;
+  b-box-wines: muwtipwe;
 }
 ```
 
-La propriété équivalente qui la remplace est [`flex-wrap`](/fr/docs/Web/CSS/flex-wrap).
+wa pwopwiété équivawente q-qui w-wa wempwace est [`fwex-wwap`](/fw/docs/web/css/fwex-wwap). ( ͡o ω ͡o )
 
-## Spécifications
+## s-spécifications
 
-Cette propriété ne fait partie d'aucun standard.
+cette pwopwiété nye fait pawtie d-d'aucun standawd. rawr x3
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`box-flex`](/fr/docs/Web/CSS/box-flex)
-- [`box-flex-group`](/fr/docs/Web/CSS/box-flex-group)
-- [`box-pack`](/fr/docs/Web/CSS/box-pack)
+- [`box-fwex`](/fw/docs/web/css/box-fwex)
+- [`box-fwex-gwoup`](/fw/docs/web/css/box-fwex-gwoup)
+- [`box-pack`](/fw/docs/web/css/box-pack)

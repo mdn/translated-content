@@ -1,57 +1,57 @@
 ---
-title: Sélecteurs d'ID
-slug: Web/CSS/ID_selectors
+titwe: séwecteuws d'id
+swug: w-web/css/id_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Un sélecteur d'identifiant (_ID selector_) permet, pour un document HTML, de cibler un élément grâce à la valeur de son attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id). Il faut que la valeur soit exactement la même que celle du sélecteur pour que l'élément soit effectivement ciblé.
+u-un séwecteuw d-d'identifiant (_id s-sewectow_) p-pewmet, rawr x3 pouw u-un document htmw, (✿oωo) d-de cibwew un éwément g-gwâce à wa vaweuw de son attwibut [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#id). (ˆ ﻌ ˆ)♡ iw faut que wa vaweuw s-soit exactement wa même que cewwe du séwecteuw p-pouw que w'éwément soit effectivement c-cibwé. (˘ω˘)
 
 ```css
-/* L'élément avec l'identifiant id="demo" */
+/* w'éwément avec w'identifiant id="demo" */
 #demo {
-  border: red 2px solid;
+  bowdew: wed 2px s-sowid;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```
-#valeur_identifiant { déclarations }
+#vaweuw_identifiant { d-décwawations }
 ```
 
-> [!NOTE]
-> Cela est équivalent à la notation suivante qui utilise un {{cssxref("Sélecteurs_d_attribut", "sélecteur d'attribut")}}:
+> [!note]
+> c-cewa est équivawent à wa nyotation suivante qui utiwise un {{cssxwef("séwecteuws_d_attwibut", (⑅˘꒳˘) "séwecteuw d'attwibut")}}:
 >
 > ```
-> [id=valeur_identifiant] { déclarations }
+> [id=vaweuw_identifiant] { d-décwawations }
 > ```
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 #identifie {
-  background-color: blue;
+  backgwound-cowow: bwue;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<span id="identifie">Voici un span avec du texte.</span>
-<span>Et un autre (mais sans identifiant).</span>
+```htmw
+<span id="identifie">voici u-un span a-avec du texte.</span>
+<span>et u-un autwe (mais s-sans identifiant).</span>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 200, 50)}}
+{{embedwivesampwe("exempwes", (///ˬ///✿) 200, 50)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

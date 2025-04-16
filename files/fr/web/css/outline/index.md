@@ -1,168 +1,168 @@
 ---
-title: outline
-slug: Web/CSS/outline
+titwe: outwine
+swug: web/css/outwine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`outline`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi {{cssxref("outline-style")}}, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
+w-wa pwopwiété **`outwine`** e-est [une pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui p-pewmet de définiw, d-dans une seuwe d-décwawation, -.- u-une ou pwusieuws des pwopwiétés pawmi {{cssxwef("outwine-stywe")}}, :3 {{cssxwef("outwine-width")}} et {{cssxwef("outwine-cowow")}}. nyaa~~
 
-{{InteractiveExample("CSS Demo: outline")}}
+{{intewactiveexampwe("css demo: outwine")}}
 
-```css interactive-example-choice
-outline: solid;
+```css i-intewactive-exampwe-choice
+outwine: sowid;
 ```
 
-```css interactive-example-choice
-outline: dashed red;
+```css i-intewactive-exampwe-choice
+outwine: d-dashed wed;
 ```
 
-```css interactive-example-choice
-outline: 1rem solid;
+```css intewactive-exampwe-choice
+outwine: 1wem sowid;
 ```
 
-```css interactive-example-choice
-outline: thick double #32a1ce;
+```css intewactive-exampwe-choice
+o-outwine: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-outline: 8px ridge rgba(170, 50, 220, 0.6);
-border-radius: 2rem;
+```css i-intewactive-exampwe-choice
+o-outwine: 8px widge wgba(170, 😳 50, 220, 0.6);
+bowdew-wadius: 2wem;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with an outwine awound i-it. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  padding: 0.75rem;
-  width: 80%;
-  height: 100px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  padding: 0.75wem;
+  w-width: 80%;
+  h-height: 100px;
 }
 ```
 
-À l'instar des autres propriétés raccourcies, toutes les valeurs qui ne sont pas explicitement utilisées dans la déclaration sont réinitialisées avec [leur valeur initiale](/fr/docs/Web/CSS/initial_value).
+À w-w'instaw d-des autwes pwopwiétés waccouwcies, toutes wes v-vaweuws qui ne sont pas expwicitement utiwisées d-dans wa décwawation sont wéinitiawisées avec [weuw vaweuw initiawe](/fw/docs/web/css/initiaw_vawue). nyaa~~
 
-### Bordures et contours
+### bowduwes et contouws
 
-Les contours (_outline_) diffèrent des bordures, notamment sur les points suivants :
+wes contouws (_outwine_) d-diffèwent des bowduwes, OwO nyotamment s-suw wes points s-suivants :
 
-- Les contours ne prennent pas d'espace et sont dessinés au-dessus du contenu.
-- Les contours peuvent avoir une forme qui n'est pas rectangulaire. Ils seront rectangulaires avec Gecko et Firefox mais Opera dessinera une forme autour du contenu (cf. exemples).
+- w-wes contouws nye pwennent pas d'espace et sont dessinés au-dessus d-du contenu. rawr x3
+- w-wes contouws peuvent avoiw une f-fowme qui ny'est p-pas wectanguwaiwe. XD iws sewont w-wectanguwaiwes avec gecko et fiwefox m-mais opewa dessinewa une fowme autouw du contenu (cf. σωσ e-exempwes). (U ᵕ U❁)
 
-## Syntaxe
-
-```css
-/* style */
-outline: solid;
-
-/* couleur | style */
-outline: #f66 dashed;
-
-/* style | épaisseur */
-outline: inset thick;
-
-/* couleur | style | épaisseur */
-outline: green solid 3px;
-
-/* Valeurs globales */
-outline: inherit;
-outline: initial;
-outline: unset;
-```
-
-La propriété `outline` peut être définie avec une, deux ou trois valeurs parmi celles listées ci-après. L'ordre de ces valeurs n'a pas d'importance.
-
-> [!NOTE]
-> Si aucun style n'est défini, le contour sera invisible (car le style par défaut vaut `none`).
-
-### Valeurs
-
-- `<'outline-width'>`
-  - : Voir {{cssxref("outline-width")}}.
-- `<'outline-style'>`
-  - : Voir {{cssxref("outline-style")}}.
-- `<'outline-color'>`
-  - : Depuis Gecko 1.9 (Firefox 3), la valeur de la propriété {{cssxref("color")}} de l'élément est utilisée. Voir {{cssxref("outline-color")}}.
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### Exemple simple
-
-#### HTML
-
-```html
-<p class="exemple">Je suis entouré de tirets rouges</p>
-```
-
-#### CSS
+## syntaxe
 
 ```css
-.exemple {
-  outline: dashed red 2px;
-  /* on aurait pu utiliser          */
-  /* les trois propriétés unitaires */
-  /* et avoir le même résultat      */
+/* s-stywe */
+outwine: sowid;
+
+/* c-couweuw | s-stywe */
+outwine: #f66 dashed;
+
+/* stywe | épaisseuw */
+outwine: inset thick;
+
+/* couweuw | stywe | épaisseuw */
+o-outwine: g-gween sowid 3px;
+
+/* vaweuws gwobawes */
+o-outwine: i-inhewit;
+outwine: i-initiaw;
+outwine: unset;
+```
+
+wa pwopwiété `outwine` peut êtwe d-définie avec une, (U ﹏ U) deux ou twois vaweuws pawmi cewwes wistées ci-apwès. :3 w-w'owdwe de ces vaweuws ny'a pas d-d'impowtance. ( ͡o ω ͡o )
+
+> [!note]
+> s-si aucun s-stywe ny'est défini, σωσ we contouw s-sewa invisibwe (caw w-we stywe p-paw défaut vaut `none`). >w<
+
+### v-vaweuws
+
+- `<'outwine-width'>`
+  - : voiw {{cssxwef("outwine-width")}}. 😳😳😳
+- `<'outwine-stywe'>`
+  - : voiw {{cssxwef("outwine-stywe")}}. OwO
+- `<'outwine-cowow'>`
+  - : d-depuis gecko 1.9 (fiwefox 3), 😳 w-wa vaweuw de wa p-pwopwiété {{cssxwef("cowow")}} d-de w'éwément e-est utiwisée. 😳😳😳 voiw {{cssxwef("outwine-cowow")}}. (˘ω˘)
+
+## définition fowmewwe
+
+{{cssinfo}}
+
+## s-syntaxe fowmewwe
+
+{{csssyntax}}
+
+## exempwes
+
+### exempwe simpwe
+
+#### htmw
+
+```htmw
+<p cwass="exempwe">je s-suis entouwé de tiwets wouges</p>
+```
+
+#### css
+
+```css
+.exempwe {
+  outwine: d-dashed wed 2px;
+  /* o-on a-auwait pu utiwisew          */
+  /* wes twois pwopwiétés u-unitaiwes */
+  /* et a-avoiw we même wésuwtat      */
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemple_simple")}}
+{{embedwivesampwe("exempwe_simpwe")}}
 
-### Exemple de contour non rectangulaire
+### exempwe de contouw nyon wectanguwaiwe
 
-#### HTML
+#### htmw
 
-```html
-<p class="exemple">
+```htmw
+<p cwass="exempwe">
   petit texte
-  <span class="grand">Grand Texte</span>
-  petit texte
+  <span cwass="gwand">gwand t-texte</span>
+  petit t-texte
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exemple {
-  outline: dotted orange 1px;
+.exempwe {
+  o-outwine: d-dotted owange 1px;
 }
 
-.grand {
-  font-size: xx-large;
+.gwand {
+  font-size: xx-wawge;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemple_de_contour_non_rectangulaire")}}
+{{embedwivesampwe("exempwe_de_contouw_non_wectanguwaiwe")}}
 
-## Accessibilité
+## a-accessibiwité
 
-Utiliser la propriété `outline` avec une valeur `0` ou `none` supprimera le style par défaut du navigateur pour le focus. Lorsqu'on interagit avec un élément, celui-ci doit avoir un indicateur visible. Aussi, veillez à fournir un tel indicateur si vous retirez le style par défaut pour le focus
+utiwisew wa p-pwopwiété `outwine` a-avec une vaweuw `0` ou `none` suppwimewa we stywe paw défaut du nyavigateuw p-pouw we focus. ʘwʘ w-wowsqu'on intewagit a-avec un éwément, ( ͡o ω ͡o ) cewui-ci d-doit avoiw un i-indicateuw visibwe. o.O aussi, >w< veiwwez à f-fouwniw un tew indicateuw si vous wetiwez we stywe paw défaut pouw we focus
 
-- {{cssxref(":focus")}}
-- [Comment concevoir des indicateurs de focus utiles et utilisables (en anglais)](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-- [_Understanding Success Criterion 2.4.7 | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html)
+- {{cssxwef(":focus")}}
+- [comment c-concevoiw d-des indicateuws de focus utiwes et utiwisabwes (en a-angwais)](https://www.deque.com/bwog/give-site-focus-tips-designing-usabwe-focus-indicatows/)
+- [_undewstanding s-success cwitewion 2.4.7 | undewstanding wcag 2.0_ (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-focus-visibwe.htmw)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

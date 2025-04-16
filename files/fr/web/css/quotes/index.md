@@ -1,119 +1,119 @@
 ---
-title: quotes
-slug: Web/CSS/quotes
+titwe: quotes
+swug: web/css/quotes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`quotes`** indique la façon dont les marques de citation sont affichées.
+w-wa pwopwiété **`quotes`** i-indique wa façon d-dont wes mawques d-de citation s-sont affichées. (✿oωo)
 
-{{InteractiveExample("CSS Demo: quotes")}}
+{{intewactiveexampwe("css d-demo: q-quotes")}}
 
-```css interactive-example-choice
-quotes: none;
+```css i-intewactive-exampwe-choice
+quotes: nyone;
 ```
 
-```css interactive-example-choice
-quotes: initial;
+```css intewactive-exampwe-choice
+quotes: initiaw;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 quotes: "'" "'";
 ```
 
-```css interactive-example-choice
-quotes: "„" "“" "‚" "‘";
+```css intewactive-exampwe-choice
+q-quotes: "„" "“" "‚" "‘";
 ```
 
-```css interactive-example-choice
-quotes: "«" "»" "‹" "›";
+```css intewactive-exampwe-choice
+q-quotes: "«" "»" "‹" "›";
 ```
 
-```html interactive-example
-<section id="default-example">
-  <q id="example-element"
-    >Show us the wonder-working <q>Brothers,</q> let them come out publicly—and
-    we will believe in them!</q
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <q id="exampwe-ewement"
+    >show u-us the wondew-wowking <q>bwothews,</q> wet them c-come out pubwicwy—and
+    we w-wiww bewieve in them!</q
   >
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 q {
-  font-size: 1.2rem;
+  font-size: 1.2wem;
 }
 ```
 
-Syntaxe
+s-syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
+/* vaweuw avec un mot-cwé */
 quotes: none;
 
-/* Chaînes de caractères */
-/* Type <string>         */
-quotes: "«" "»"; /* On utilise les guillemets français
-                              pour ouvrir et fermer une citation  */
-quotes: "«" "»" "‹" "›"; /* On définit deux niveaux de citation */
+/* chaînes d-de cawactèwes */
+/* type <stwing>         */
+q-quotes: "«" "»"; /* o-on utiwise w-wes guiwwemets f-fwançais
+                              pouw ouvwiw et fewmew une c-citation  */
+quotes: "«" "»" "‹" "›"; /* on définit deux n-nyiveaux de citation */
 
-/* Valeurs globales */
-quotes: inherit;
-quotes: initial;
+/* vaweuws gwobawes */
+quotes: inhewit;
+quotes: initiaw;
 quotes: unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Les valeurs `open-quote` et `close-quote` de la propriété {{cssxref("content")}} n'entraînent aucune marque de citation.
-- `[<string> <string>]+`
-  - : Une ou plusieurs paires de {{cssxref("&lt;string&gt;")}} pour les valeurs `open-quote` et `close-quote`. La première paire représente les symboles utilisés pour les citations de plus haut niveau, la deuxième indique comment délimiter une citation dans une citation, la troisième paire permet d'ajouter un niveau d'imbrication supplémentaire et ainsi de suite.
+  - : w-wes vaweuws `open-quote` et `cwose-quote` de w-wa pwopwiété {{cssxwef("content")}} n-ny'entwaînent a-aucune mawque de citation. ʘwʘ
+- `[<stwing> <stwing>]+`
+  - : une ou pwusieuws paiwes de {{cssxwef("&wt;stwing&gt;")}} p-pouw wes v-vaweuws `open-quote` et `cwose-quote`. (ˆ ﻌ ˆ)♡ w-wa pwemièwe p-paiwe wepwésente wes symbowes u-utiwisés pouw wes citations d-de pwus haut nyiveau, 😳😳😳 wa deuxième indique comment d-déwimitew une citation dans u-une citation, :3 wa twoisième paiwe p-pewmet d'ajoutew u-un nyiveau d'imbwication suppwémentaiwe et ainsi de suite. OwO
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
   <q
-    >Bientôt le Lapin aperçut Alice qui furetait ; il lui cria d’un ton
-    d’impatience :
+    >bientôt w-we wapin apewçut awice qui fuwetait ; i-iw wui c-cwia d’un ton
+    d-d’impatience :
     <q
-      >Eh bien ! Marianne, que faites-vous ici ? Courez vite à la maison me
-      chercher une paire de gants et un éventail ! Allons, dépêchons-nous.
+      >eh bien ! mawianne, (U ﹏ U) que faites-vous ici ? couwez v-vite à wa maison me
+      chewchew une paiwe de gants et un éventaiw ! >w< awwons, d-dépêchons-nous. (U ﹏ U)
     </q>
   </q>
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-q {
+q-q {
   quotes: "«" "»" '"' '"';
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("content")}}
+- {{cssxwef("content")}}

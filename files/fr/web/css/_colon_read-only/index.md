@@ -1,81 +1,81 @@
 ---
-title: :read-only
-slug: Web/CSS/:read-only
+titwe: :wead-onwy
+swug: web/css/:wead-onwy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:read-only`** permet de cibler un élément que l'utilisateur ne peut pas modifier (l'élément est en lecture seule).
+wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:wead-onwy`** p-pewmet de cibwew u-un éwément q-que w'utiwisateuw n-nye peut pas m-modifiew (w'éwément e-est en wectuwe s-seuwe). (⑅˘꒳˘)
 
 ```css
-/* Cible n'importe quel élément <input> */
-/* en lecture seule */
+/* c-cibwe ny'impowte quew éwément <input> */
+/* en wectuwe seuwe */
 
-/* Firefox utilise un préfixe */
-input:-moz-read-only {
-  background-color: #ccc;
+/* fiwefox utiwise un p-pwéfixe */
+input:-moz-wead-onwy {
+  backgwound-cowow: #ccc;
 }
 
-/* Blink/WebKit/Edge n'ont pas de préfixe */
-input:read-only {
-  background-color: #ccc;
+/* bwink/webkit/edge n-ny'ont pas de pwéfixe */
+i-input:wead-onwy {
+  backgwound-cowow: #ccc;
 }
 ```
 
-> [!NOTE]
-> Ce sélecteur ne permet pas de cibler que les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} avec [`readonly`](/fr/docs/Web/HTML/Element/input#readonly). Il permet de sélectionner n'importe quel élément qui ne peut pas être édité par l'utilisateur.
+> [!note]
+> ce séwecteuw nye pewmet pas de c-cibwew que wes éwéments {{htmwewement("input")}} ou {{htmwewement("textawea")}} a-avec [`weadonwy`](/fw/docs/web/htmw/ewement/input#weadonwy). òωó iw p-pewmet de séwectionnew ny'impowte quew éwément qui nye peut pas êtwe édité p-paw w'utiwisateuw. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 input {
   min-width: 25em;
 }
-input:-moz-read-only {
-  background: cyan;
+i-input:-moz-wead-onwy {
+  backgwound: c-cyan;
 }
-input:read-only {
-  background: cyan;
+input:wead-onwy {
+  b-backgwound: c-cyan;
 }
 
-p:-moz-read-only {
-  background: lightgray;
+p-p:-moz-wead-onwy {
+  backgwound: wightgway;
 }
-p:read-only {
-  background: lightgray;
+p-p:wead-onwy {
+  backgwound: wightgway;
 }
-p[contenteditable="true"] {
-  color: blue;
+p[contenteditabwe="twue"] {
+  c-cowow: bwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<input type="text" value="Un champ en lecture seule" readonly />
-<p contenteditable="true">Essayez un peu d'éditer ce paragraphe.</p>
-<p>Bonne chance pour celui-là !</p>
+```htmw
+<input type="text" vawue="un champ en wectuwe seuwe" weadonwy />
+<p contenteditabwe="twue">essayez u-un peu d'éditew ce pawagwaphe.</p>
+<p>bonne c-chance p-pouw cewui-wà !</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":read-write")}}
-- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable)
+- {{cssxwef(":wead-wwite")}}
+- w-w'attwibut htmw [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe)

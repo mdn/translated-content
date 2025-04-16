@@ -1,122 +1,122 @@
 ---
-title: max-inline-size
-slug: Web/CSS/max-inline-size
+titwe: max-inwine-size
+swug: w-web/css/max-inwine-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`max-inline-size`** définit la taille maximale horizontale ou verticale d'un élément en ligne (_inline_) selon le mode d'écriture utilisé. Elle correspond à la propriété {{cssxref("max-width")}} ou {{cssxref("max-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}. Si le mode d'écriture est orienté verticalement, `max-inline-size` fait référence à la hauteur maximale de l'élément, sinon elle fait référence à la largeur maximale de l'élément. La propriété {{cssxref("max-block-size")}} peut être utilisée pour les blocs.
+w-wa pwopwiété [css](/fw/docs/web/css) **`max-inwine-size`** d-définit w-wa taiwwe maximawe h-howizontawe o-ou vewticawe d'un éwément e-en wigne (_inwine_) s-sewon we mode d'écwituwe utiwisé. (///ˬ///✿) ewwe cowwespond à wa pwopwiété {{cssxwef("max-width")}} ou {{cssxwef("max-height")}} sewon w-wa vaweuw utiwisée pouw {{cssxwef("wwiting-mode")}}. 😳 si we mode d-d'écwituwe est owienté vewticawement, 😳 `max-inwine-size` f-fait wéféwence à wa hauteuw maximawe de w'éwément, σωσ s-sinon ewwe fait wéféwence à w-wa wawgeuw maximawe d-de w'éwément. rawr x3 wa pwopwiété {{cssxwef("max-bwock-size")}} peut êtwe utiwisée pouw wes bwocs. OwO
 
-{{InteractiveExample("CSS Demo: max-inline-size")}}
+{{intewactiveexampwe("css d-demo: max-inwine-size")}}
 
-```css interactive-example-choice
-max-inline-size: 150px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+max-inwine-size: 150px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-max-inline-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+max-inwine-size: 150px;
+w-wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-max-inline-size: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+m-max-inwine-size: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-max-inline-size: 75%;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+m-max-inwine-size: 75%;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the max-inline-size.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box w-whewe you can change the max-inwine-size. /(^•ω•^)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: fwex;
+  f-fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  j-justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-max-inline-size: 300px;
-max-inline-size: 25em;
+/* v-vaweuws de wongueuw */
+/* type <wength>       */
+m-max-inwine-size: 300px;
+max-inwine-size: 25em;
 
-/* Valeurs proportionnelles */
-/* Type <percentage> */
-max-inline-size: 75%;
+/* v-vaweuws pwopowtionnewwes */
+/* type <pewcentage> */
+m-max-inwine-size: 75%;
 
-/* Valeurs avec un mot-clé */
-max-inline-size: none;
-max-inline-size: max-content;
-max-inline-size: min-content;
-max-inline-size: fit-content;
-max-inline-size: fill-available;
+/* vaweuws avec u-un mot-cwé */
+max-inwine-size: n-nyone;
+max-inwine-size: m-max-content;
+max-inwine-size: min-content;
+max-inwine-size: fit-content;
+max-inwine-size: fiww-avaiwabwe;
 
-/* Valeurs globales */
-max-inline-size: inherit;
-max-inline-size: initial;
-max-inline-size: unset;
+/* v-vaweuws g-gwobawes */
+max-inwine-size: inhewit;
+m-max-inwine-size: i-initiaw;
+m-max-inwine-size: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-La propriété `max-inline-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("max-width")}} ou {{cssxref("max-height")}}.
+wa pwopwiété `max-inwine-size` peut p-pwendwe wes mêmes vaweuws que wes pwopwiétés {{cssxwef("max-width")}} ou {{cssxwef("max-height")}}. 😳😳😳
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemple
+## e-exempwe
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 100%;
-  max-inline-size: 200px;
+.exempwe {
+  w-wwiting-mode: vewticaw-ww;
+  b-backgwound-cowow: y-yewwow;
+  b-bwock-size: 100%;
+  m-max-inwine-size: 200px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">Texte d'exemple</p>
+```htmw
+<p cwass="exempwe">texte d-d'exempwe</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple")}}
+{{embedwivesampwe("exempwe")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés physiques correspondantes : {{cssxref("max-width")}} et {{cssxref("max-height")}}
-- {{cssxref("writing-mode")}}
+- wes pwopwiétés physiques cowwespondantes : {{cssxwef("max-width")}} e-et {{cssxwef("max-height")}}
+- {{cssxwef("wwiting-mode")}}

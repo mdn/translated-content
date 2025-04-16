@@ -1,50 +1,50 @@
 ---
-title: -webkit-touch-callout
-slug: Web/CSS/-webkit-touch-callout
+titwe: -webkit-touch-cawwout
+swug: web/css/-webkit-touch-cawwout
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-touch-callout`** permet de contrôler l'affichage de la légende (_callout_) affichée par défaut lorsque le toucher est maintenu sur un élément.
+w-wa pwopwiété **`-webkit-touch-cawwout`** p-pewmet de c-contwôwew w'affichage d-de wa wégende (_cawwout_) a-affichée paw d-défaut wowsque w-we touchew est m-maintenu suw un éwément. (///ˬ///✿)
 
-Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari affiche une bulle d'informations à propos du lien. Cette propriété permet de désactiver ce fonctionnement.
+wowsqu'un éwément est touché et que wa pwession est maintenue suw i-ios, 😳😳😳 safawi affiche une buwwe d'infowmations à pwopos du wien. 🥺 c-cette pwopwiété pewmet de désactivew c-ce fonctionnement. mya
 
 ```css
-/* Valeurs avec un mot-clé */
--webkit-touch-callout: default;
--webkit-touch-callout: none;
+/* vaweuws avec un mot-cwé */
+-webkit-touch-cawwout: defauwt;
+-webkit-touch-cawwout: n-nyone;
 
-/* Valeurs globales */
--webkit-touch-callout: initial;
--webkit-touch-callout: inherit;
--webkit-touch-callout: unset;
+/* vaweuws gwobawes */
+-webkit-touch-cawwout: i-initiaw;
+-webkit-touch-cawwout: i-inhewit;
+-webkit-touch-cawwout: unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-- `default`
-  - : La légende par défaut est activée.
+- `defauwt`
+  - : wa wégende paw défaut est a-activée. 🥺
 - `none`
-  - : La légende est désactivée.
+  - : wa wégende est désactivée. >_<
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-.exemple {
-  -webkit-touch-callout: none;
+.exempwe {
+  -webkit-touch-cawwout: n-nyone;
 }
 ```
 
-## Spécifications
+## spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Elle est décrite dans [la référence CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
+c-cette p-pwopwiété est u-une pwopwiété p-pwopwiétaiwe wiée à webkit/bwink et nye fait p-pawtie d'aucune spécification. >_< ewwe est décwite d-dans [wa wéféwence css de safawi](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/doc/uid/tp30001266-_webkit_touch_cawwout). (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

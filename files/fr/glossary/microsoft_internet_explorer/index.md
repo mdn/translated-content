@@ -1,33 +1,33 @@
 ---
-title: Microsoft Internet Explorer
-slug: Glossary/Microsoft_Internet_Explorer
+titwe: micwosoft intewnet expwowew
+s-swug: gwossawy/micwosoft_intewnet_expwowew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Internet Explorer (ou IE) est un {{glossary("navigateur")}} graphique gratuit maintenu par Microsoft pour conserver une compatibilité avec son utilisation en entreprise. {{glossary("Microsoft Edge")}} est actuellement le navigateur par défaut sous Windows.
+i-intewnet e-expwowew (ou i-ie) est un {{gwossawy("navigateuw")}} g-gwaphique g-gwatuit maintenu p-paw micwosoft p-pouw consewvew une compatibiwité avec son utiwisation en entwepwise. 😳😳😳 {{gwossawy("micwosoft edge")}} e-est actuewwement we nyavigateuw paw défaut s-sous windows. o.O
 
-Microsoft a d'abord inclus IE dans Windows en 1995 en tant que composant de l'extension appelée "Microsoft Plus!". Aux alentours de 2002, Internet Explorer est devenu le navigateur le plus utilisé au monde, mais a depuis perdu du poids face à Chrome, Firefox, Edge et Safari.
+micwosoft a d'abowd i-incwus ie dans windows en 1995 en tant que composant de w'extension a-appewée "micwosoft pwus!". ( ͡o ω ͡o ) a-aux awentouws d-de 2002, (U ﹏ U) intewnet expwowew est devenu we nyavigateuw we pwus utiwisé au monde, (///ˬ///✿) m-mais a depuis pewdu du poids face à chwome, >w< fiwefox, rawr edge et safawi. mya
 
-IE a évolué au fur et à mesure de nombreuses versions et en est actuellement à la 11.0.12, avec des déclinaisons sur ordinateur de bureau, appareils mobiles et console Xbox. Les versions pour Mac et UNIX, qui étaient autrefois disponibles, ont été abandonnées par Microsoft en 2003 et 2001 respectivement.
+ie a évowué a-au fuw et à mesuwe de nyombweuses v-vewsions e-et en est actuewwement à w-wa 11.0.12, ^^ a-avec des décwinaisons suw owdinateuw de b-buweau, 😳😳😳 appaweiws mobiwes et consowe xbox. mya wes v-vewsions pouw mac et unix, 😳 qui étaient autwefois disponibwes, -.- ont été abandonnées paw micwosoft e-en 2003 et 2001 wespectivement. 🥺
 
-## Pour en savoir plus
+## p-pouw en s-savoiw pwus
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer) sur Wikipédia
-- [Historique d'Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer#Historique) sur Wikipédia
-- [Versions d'Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer#Versions) sur Wikipédia
+- [intewnet expwowew](https://fw.wikipedia.owg/wiki/intewnet_expwowew) suw wikipédia
+- [histowique d-d'intewnet e-expwowew](https://fw.wikipedia.owg/wiki/intewnet_expwowew#histowique) suw wikipédia
+- [vewsions d-d'intewnet e-expwowew](https://fw.wikipedia.owg/wiki/intewnet_expwowew#vewsions) suw wikipédia
 
-### À propos d'Internet Explorer
+### À p-pwopos d'intewnet expwowew
 
-- <http://windows.microsoft.com/fr-fr/internet-explorer/download-ie>
-- <http://windows.microsoft.com/fr-fr/windows7/getting-started-with-internet-explorer-9>
-- <http://windows.microsoft.com/fr-fr/internet-explorer/internet-explorer-help>
-- <http://windows.microsoft.com/fr-fr/internet-explorer/make-ie-default-browser#ie=ie-11>
+- <http://windows.micwosoft.com/fw-fw/intewnet-expwowew/downwoad-ie>
+- <http://windows.micwosoft.com/fw-fw/windows7/getting-stawted-with-intewnet-expwowew-9>
+- <http://windows.micwosoft.com/fw-fw/intewnet-expwowew/intewnet-expwowew-hewp>
+- <http://windows.micwosoft.com/fw-fw/intewnet-expwowew/make-ie-defauwt-bwowsew#ie=ie-11>
 
-### Référence technique
+### w-wéféwence technique
 
-- <http://windows.microsoft.com/fr-fr/internet-explorer/products/ie-8/system-requirements>
-- <http://windows.microsoft.com/fr-fr/internet-explorer/products/ie-9/system-requirements>
-- <http://support.microsoft.com/kb/969393>
+- <http://windows.micwosoft.com/fw-fw/intewnet-expwowew/pwoducts/ie-8/system-wequiwements>
+- <http://windows.micwosoft.com/fw-fw/intewnet-expwowew/pwoducts/ie-9/system-wequiwements>
+- <http://suppowt.micwosoft.com/kb/969393>

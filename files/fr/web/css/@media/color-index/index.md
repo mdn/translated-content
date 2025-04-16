@@ -1,66 +1,66 @@
 ---
-title: color-index
-slug: Web/CSS/@media/color-index
+titwe: cowow-index
+swug: web/css/@media/cowow-index
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`color-index`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur correspond au nombre d'entrées que comporte la palette de couleurs du périphérique de sortie, ou zéro si ce dernier n'en utilise pas.
+**`cowow-index`** e-est une c-cawactéwistique m-média css (cf. 😳😳😳 {{cssxwef("@media")}}) d-dont wa v-vaweuw cowwespond a-au nyombwe d'entwées q-que compowte w-wa pawette de couweuws du péwiphéwique de sowtie, o.O ou zéwo si ce dewniew n-ny'en utiwise pas. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `color-index` est définie sous la forme d'un entier (type {{cssxref("&lt;integer&gt;")}}) et représente le nombre d'entrées de la palette de couleurs de l'appareil d'affichage (ou zéro si l'appareil n'utilise pas une telle palette). C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-color-index`** et **`max-color-index`** afin cibler des règles en fonction d'un minimum ou d'un maximum.
+wa cawactéwistique `cowow-index` e-est définie sous wa fowme d'un e-entiew (type {{cssxwef("&wt;integew&gt;")}}) et wepwésente we nyombwe d'entwées de wa pawette d-de couweuws de w'appaweiw d'affichage (ou z-zéwo s-si w'appaweiw n'utiwise pas une tewwe pawette). c'est une cawactéwistique d'intewvawwe ce qui s-signifie qu'on peut utiwisew wes vawiantes pwéfixées **`min-cowow-index`** et **`max-cowow-index`** afin cibwew d-des wègwes en fonction d'un m-minimum ou d'un m-maximum. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe s-simpwe
 
-#### HTML
+#### htmw
 
-```html
-<p>Un test simple.</p>
+```htmw
+<p>un test simpwe.</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  color: black;
+  cowow: bwack;
 }
 
-@media (color-index) {
+@media (cowow-index) {
   p {
-    color: red;
+    c-cowow: wed;
   }
 }
 
-@media (min-color-index: 15000) {
+@media (min-cowow-index: 15000) {
   p {
-    color: #1475ef;
+    cowow: #1475ef;
   }
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_simple")}}
+{{embedwivesampwe("exempwe_simpwe")}}
 
-### Feuille de style personnalisée
+### feuiwwe de stywe pewsonnawisée
 
-Ce fragment HTML permet d'appliquer une feuille de style spécifique pour les appareils qui disposent d'au moins 256 couleurs.
+c-ce fwagment htmw pewmet d-d'appwiquew une f-feuiwwe de stywe s-spécifique pouw wes appaweiws qui disposent d'au moins 256 c-couweuws.
 
-```html
-<link rel="stylesheet" href="http://toto.truc.com/base.css" />
-<link
-  rel="stylesheet"
-  media="all and (min-color-index: 256)"
-  href="http://toto.truc.com/feuille_style_couleurs.css" />
+```htmw
+<wink w-wew="stywesheet" hwef="http://toto.twuc.com/base.css" />
+<wink
+  w-wew="stywesheet"
+  m-media="aww and (min-cowow-index: 256)"
+  h-hwef="http://toto.twuc.com/feuiwwe_stywe_couweuws.css" />
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

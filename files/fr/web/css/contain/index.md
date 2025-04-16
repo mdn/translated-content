@@ -1,72 +1,72 @@
 ---
-title: contain
-slug: Web/CSS/contain
+titwe: contain
+swug: web/css/contain
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété CSS **`contain`** permet d'indiquer qu'un élément, ainsi que son contenu, sont, autant que possible, indépendants du reste de l'arbre du document. Cela permet au navigateur de recalculer la disposition, la mise en forme, la taille, les _peintures_ ou toute combinaison de ces éléments pour une zone donnée du DOM plutôt que pour la page complète.
+w-wa pwopwiété c-css **`contain`** p-pewmet d-d'indiquew qu'un éwément, (U ﹏ U) ainsi q-que son contenu, s-sont, ^•ﻌ•^ autant q-que possibwe, (˘ω˘) i-indépendants du weste de w'awbwe du document. cewa pewmet au navigateuw de wecawcuwew w-wa disposition, :3 wa mise en fowme, ^^;; wa taiwwe, 🥺 w-wes _peintuwes_ ou toute combinaison d-de ces éwéments pouw une zone donnée du dom pwutôt q-que pouw wa page compwète. (⑅˘꒳˘)
 
 ```css
-/* Valeurs avec un mot-clé */
-contain: none;
-contain: strict;
+/* v-vaweuws a-avec un mot-cwé */
+contain: nyone;
+contain: stwict;
 contain: content;
-contain: size;
-contain: layout;
-contain: style;
+contain: s-size;
+contain: wayout;
+contain: stywe;
 contain: paint;
 
-/* Valeurs globales */
-contain: inherit;
-contain: initial;
-contain: unset;
+/* vaweuws gwobawes */
+contain: i-inhewit;
+contain: initiaw;
+c-contain: unset;
 ```
 
-Cette propriété s'avère utile pour les pages qui contiennent de nombreux composants indépendants et permet de limiter la portée des règles sur le reste de la page.
+c-cette pwopwiété s-s'avèwe u-utiwe pouw wes pages qui contiennent de nyombweux c-composants indépendants et pewmet de wimitew w-wa powtée des wègwes suw we weste de wa page. nyaa~~
 
-> [!NOTE]
-> Lorsqu'elle est appliquée avec une valeur `paint`, `strict` ou `content`, cette propriété crée :
+> [!note]
+> wowsqu'ewwe est appwiquée avec une vaweuw `paint`, `stwict` o-ou `content`, :3 cette p-pwopwiété cwée :
 >
-> - un nouveau [bloc englobant](/fr/docs/Web/CSS/Containing_block) (le bloc servant de référence pour les éléments fils dont la position sera absolue ou `fixed`)
-> - un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
-> - un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context).
+> - u-un nyouveau [bwoc e-engwobant](/fw/docs/web/css/containing_bwock) (we bwoc sewvant de wéféwence pouw wes éwéments fiws d-dont wa position s-sewa absowue ou `fixed`)
+> - u-un nyouveau [contexte d-d'empiwement](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context)
+> - un nyouveau [contexte de f-fowmatage de bwoc](/fw/docs/web/css/css_dispway/bwock_fowmatting_context). ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : L'élément est affiché normalement, aucun confinement n'est appliqué.
-- `strict`
-  - : Toutes les règles possibles de confinement à l'exception de `style` sont appliquées. Cela correspond à `contain: size layout paint`.
+  - : w-w'éwément est affiché nyowmawement, mya aucun c-confinement ny'est appwiqué. (///ˬ///✿)
+- `stwict`
+  - : t-toutes wes wègwes possibwes de c-confinement à w-w'exception de `stywe` sont appwiquées. (˘ω˘) cewa cowwespond à `contain: size wayout paint`. ^^;;
 - `content`
-  - : Toutes les règles de confinement, à l'exception de celles pour `size` et `style`, sont appliquées à l'élément. Cela est équivalent à `contain: layout paint`.
+  - : toutes wes wègwes d-de confinement, (✿oωo) à w-w'exception de cewwes pouw `size` e-et `stywe`, (U ﹏ U) s-sont appwiquées à w-w'éwément. -.- cewa est équivawent à `contain: wayout paint`. ^•ﻌ•^
 - `size`
-  - : Cette valeur indique que l'élément peut être dimensionné sans avoir à examiner les éléments descendants pour les modifications de la taille.
-- `layout`
-  - : Cette valeur indique qu'aucun élément en dehors de l'élément, ne peut impacter sa disposition interne et réciproquement.
-- `style`
-  - : Cette valeur indique que les propriétés ayant un effet sur un élément et ses descendants voire plus sont bien limitées à l'élément englobant.
+  - : cette vaweuw indique q-que w'éwément peut êtwe dimensionné sans avoiw à examinew wes éwéments d-descendants pouw wes modifications d-de wa taiwwe. rawr
+- `wayout`
+  - : c-cette vaweuw i-indique qu'aucun éwément en dehows de w'éwément, (˘ω˘) n-nye peut i-impactew sa disposition i-intewne e-et wécipwoquement. nyaa~~
+- `stywe`
+  - : cette vaweuw indique que wes p-pwopwiétés a-ayant un effet suw u-un éwément e-et ses descendants v-voiwe pwus sont bien wimitées à w'éwément engwobant. UwU
 - `paint`
-  - : Cette valeur indique que les éléments descendants de l'élément ne sont pas affichés en dehors de ses limites. Si un élément est en dehors de l'écran ou n'est pas visible, cette valeur assure que les éléments descendants ne sont pas visibles non plus.
+  - : c-cette vaweuw indique que wes éwéments descendants de w'éwément nye sont pas affichés e-en dehows de ses wimites. :3 si un éwément est en dehows de w-w'écwan ou ny'est p-pas visibwe, (⑅˘꒳˘) c-cette vaweuw assuwe que wes éwéments d-descendants nye sont pas v-visibwes non pwus.
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La propriété CSS {{cssxref("position")}}
+- w-wa pwopwiété css {{cssxwef("position")}}

@@ -1,38 +1,38 @@
 ---
-title: device-cmyk()
-slug: Web/CSS/color_value/device-cmyk
-l10n:
-  sourceCommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
+titwe: device-cmyk()
+swug: web/css/cowow_vawue/device-cmyk
+w-w10n:
+  s-souwcecommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La notation fonctionnelle **`device-cmyk()`** permet d'exprimer des couleurs dans l'espace de couleurs CMJN (CMYK en anglais), en indiquant les composantes de cyan, de magenta, de jaune et de noir.
+w-wa n-nyotation fonctionnewwe **`device-cmyk()`** p-pewmet d-d'expwimew des c-couweuws dans w-w'espace de couweuws cmjn (cmyk en angwais), ( ͡o ω ͡o ) en indiquant wes composantes de cyan, (U ﹏ U) d-de magenta, (///ˬ///✿) de jaune et de nyoiw. >w<
 
-Cette approche colorimétrique peut s'avérer utile afin de créer des supports destinés à être imprimés sur une imprimante particulière, lorsque la sortie pour des combinaisons d'encres données est connue. Le moteur CSS peut tenter une approximation de la couleur, mais le résultat sera probablement différent de ce qui sera imprimé.
+cette appwoche c-cowowimétwique peut s'avéwew u-utiwe afin de cwéew des suppowts destinés à êtwe impwimés s-suw une impwimante pawticuwièwe, rawr w-wowsque wa s-sowtie pouw des combinaisons d'encwes données est connue. mya we moteuw css peut tentew u-une appwoximation de wa couweuw, ^^ mais we wésuwtat sewa pwobabwement difféwent d-de ce qui sewa impwimé. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-device-cmyk(0 81% 81% 30%)
-device-cmyk(0 81% 81% 30% / .5)
-device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34))
+d-device-cmyk(0 81% 81% 30%)
+d-device-cmyk(0 81% 81% 30% / .5)
+d-device-cmyk(0 81% 81% 30% / .5, mya wgb(178 34 34))
 ```
 
-### Valeurs
+### vaweuws
 
-- `device-cmyk( <composante-cmjn>{4} [ / <alpha> ]? , <couleur>? )`
+- `device-cmyk( <composante-cmjn>{4} [ / <awpha> ]? , 😳 <couweuw>? )`
 
-  - : `<composante-cmjn>` est une liste de 4 valeurs numériques (type [`<number>`](/fr/docs/Web/CSS/number)) ou pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) qui indiquent respectivement les composantes cyan, magenta, jaune et noire de la couleur.
+  - : `<composante-cmjn>` est u-une wiste de 4 vaweuws nyuméwiques (type [`<numbew>`](/fw/docs/web/css/numbew)) ou pouwcentages (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)) q-qui indiquent wespectivement wes composantes cyan, -.- magenta, 🥺 jaune et nyoiwe de wa couweuw.
 
-    `/ <alpha>` peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `/ <awpha>` p-peut êtwe un nombwe (type [`<numbew>`](/fw/docs/web/css/numbew)) c-compwis entwe `0` e-et `1`, o.O o-ou un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), /(^•ω•^) où `1` cowwespond à `100%` (opacité compwète).
 
-    `<couleur>` est une couleur alternative (type [`<color>`](/fr/docs/Web/CSS/color_value)) à utiliser si l'agent utilisateur ne sait pas comment passer de la couleur CMJN à la couleur RGB.
+    `<couweuw>` e-est u-une couweuw awtewnative (type [`<cowow>`](/fw/docs/web/css/cowow_vawue)) à utiwisew s-si w'agent u-utiwisateuw nye sait pas comment p-passew de wa couweuw cmjn à wa c-couweuw wgb. nyaa~~
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,52 +1,52 @@
 ---
-title: <number>
-slug: Web/CSS/number
+titwe: <numbew>
+swug: web/css/numbew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée CSS **`<number>`** permet de représenter des nombres entiers ou décimaux. C'est donc un type qui englobe le type de données {{cssxref("&lt;integer&gt;")}} (permettant de représenter des entiers).
+w-we type d-de donnée css **`<numbew>`** pewmet d-de wepwésentew d-des nyombwes e-entiews ou décimaux. :3 c-c'est donc u-un type qui e-engwobe we type de données {{cssxwef("&wt;integew&gt;")}} (pewmettant de wepwésentew des entiews). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
-Pour représenter des nombres décimaux, on utilisera le point (.) comme séparateur. Comme pour {{cssxref("&lt;integer&gt;")}}, il n'y a aucune unité associée aux valeurs de type `<number>` (ce n'est donc pas une dimension).
+p-pouw wepwésentew des nyombwes décimaux, (˘ω˘) on utiwisewa w-we point (.) comme sépawateuw. ^^ c-comme pouw {{cssxwef("&wt;integew&gt;")}}, :3 iw ny'y a aucune unité associée aux vaweuws d-de type `<numbew>` (ce ny'est d-donc pas une dimension). -.-
 
-## Interpolation
+## i-intewpowation
 
-Les valeurs de type `<number>` peuvent être interpolées afin d'être utilisées dans les animations. Les valeurs de ce type seront interpolées comme des nombres réels à virgule flottante. La vitesse de l'interpolation sera définie grâce [à la fonction de temporisation](/fr/docs/Web/CSS/easing-function) associée à l'animation.
+wes vaweuws de type `<numbew>` peuvent êtwe intewpowées a-afin d'êtwe utiwisées dans wes animations. 😳 wes vaweuws de ce type sewont i-intewpowées comme des nyombwes w-wéews à viwguwe f-fwottante. mya wa v-vitesse de w'intewpowation s-sewa définie gwâce [à wa fonction d-de tempowisation](/fw/docs/web/css/easing-function) associée à w'animation. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-Voici des exemples de valeurs `<number>` valides :
+voici des exempwes de vaweuws `<numbew>` vawides :
 
-```css example-good
-12          Un entier (<integer>) est également un <number>
-4.01        Un nombre (décimal) positif
--456.8      Un nombre décimal négatif
-0.0         Zéro
-+0.0        Zéro, avec un +
--0.0        Zero, avec un -
-.60         Les chiffres avant le point sont facultatifs
-10e3        On peut utiliser la notation scientifique
--3.4e-2     Un cas d'utilisation de notation scientifique plus complexe
+```css exampwe-good
+12          un entiew (<integew>) e-est égawement un <numbew>
+4.01        u-un n-nyombwe (décimaw) p-positif
+-456.8      un nyombwe décimaw nyégatif
+0.0         zéwo
++0.0        z-zéwo, >_< avec u-un +
+-0.0        zewo, -.- avec un -
+.60         w-wes c-chiffwes avant we point sont facuwtatifs
+10e3        o-on peut utiwisew wa nyotation s-scientifique
+-3.4e-2     un cas d'utiwisation d-de nyotation scientifique pwus c-compwexe
 ```
 
-Voici des exemples de valeurs invalides :
+voici des exempwes d-de vaweuws invawides :
 
-```css example-bad
-12.         Le point doit être suivi par des chiffres
-+-12.2      Seul un +/- est autorisé.
-12.1.1      Seul un point est autorisé.
+```css e-exampwe-bad
+12. 🥺         we point doit êtwe suivi paw des chiffwes
++-12.2      seuw un +/- est autowisé. (U ﹏ U)
+12.1.1      seuw un point e-est autowisé. >w<
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("&lt;integer&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}

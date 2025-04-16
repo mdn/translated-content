@@ -1,59 +1,59 @@
 ---
-title: Répartir et équilibrer le contenu entre les colonnes
-slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
+titwe: wépawtiw et équiwibwew w-we contenu entwe w-wes cowonnes
+s-swug: web/css/css_muwticow_wayout/spanning_bawancing_cowumns
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans ce guide, nous verrons comment répartir les éléments sur plusieurs colonnes et comment contrôler le remplissage des colonnes.
+dans c-ce guide, (U ﹏ U) nyous v-vewwons comment w-wépawtiw wes éwéments s-suw p-pwusieuws cowonnes et comment contwôwew we wempwissage des cowonnes. 😳😳😳
 
-> [!NOTE]
-> Les fonctionnalités décrites dans cet article ne sont pas aussi bien prises en charge que celles décrites dans les deux articles précédents. Pour plus d'informations, nous vous invitons à vous référer aux tableaux de compatibilité à la fin des pages décrivant chacune des propriétés.
+> [!note]
+> wes fonctionnawités d-décwites dans cet awticwe nye sont pas a-aussi bien pwises en chawge que c-cewwes décwites dans wes deux awticwes pwécédents. o.O pouw pwus d-d'infowmations, òωó nous vous invitons à v-vous wéféwew a-aux tabweaux de compatibiwité à wa fin des pages décwivant chacune des p-pwopwiétés. 😳😳😳
 
-## Étendre sur plusieurs colonnes
+## Étendwe suw pwusieuws cowonnes
 
-Afin qu'un élément s'étende sur plusieurs colonnes, on peut utiliser la propriété {{cssxref("column-span")}} avec la valeur `all`. Ainsi, l'élément concerné s'étendra sur l'ensemble des colonnes.
+afin qu'un éwément s'étende s-suw pwusieuws cowonnes, σωσ on peut u-utiwisew wa pwopwiété {{cssxwef("cowumn-span")}} a-avec wa vaweuw `aww`. (⑅˘꒳˘) a-ainsi, (///ˬ///✿) w-w'éwément concewné s'étendwa suw w'ensembwe d-des cowonnes. 🥺
 
-N'importe quel élément descendant du conteneur multi-colonnes peut être étendu de cette façon, que ce soit un titre qui est un élément fils direct ou un titre contenu dans une section contenue dans le conteneur.
+n'impowte quew éwément descendant d-du conteneuw muwti-cowonnes peut êtwe étendu de cette façon, OwO que ce soit un titwe qui est u-un éwément fiws diwect ou un t-titwe contenu dans u-une section c-contenue dans we conteneuw.
 
-Dans l'exemple qui suit, on a `column-span: all` appliqué sur l'élément `h2` qui s'étend ainsi sur toutes les colonnes.
+dans w'exempwe qui suit, >w< on a `cowumn-span: a-aww` appwiqué s-suw w'éwément `h2` qui s-s'étend ainsi s-suw toutes wes cowonnes. 🥺
 
-{{EmbedGHLiveSample("css-examples/multicol/spanning/h2-span.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/spanning/h2-span.htmw", nyaa~~ '100%', ^^ 800)}}
 
-Dans ce deuxième exemple, le titre est à l'intérieur de l'élément {{HTMLElement("article")}} mais le contenu est bien réparti comme voulu.
+dans c-ce deuxième exempwe, >w< we titwe e-est à w'intéwieuw de w'éwément {{htmwewement("awticwe")}} mais we contenu est b-bien wépawti comme vouwu.
 
-{{EmbedGHLiveSample("css-examples/multicol/spanning/nested-h2-span.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/spanning/nested-h2-span.htmw", OwO '100%', XD 800)}}
 
-Lorsqu'un élément est étendu, il brise le flux des colonnes et un nouvel ensemble de boîtes de colonnes sont créées. Ce n'est pas le contenu qui « reprend » sous l'élément étendu.
+w-wowsqu'un éwément est étendu, ^^;; i-iw bwise w-we fwux des cowonnes et un nyouvew ensembwe de boîtes de cowonnes sont cwéées. 🥺 ce ny'est pas we contenu qui « w-wepwend » s-sous w'éwément étendu. XD
 
-### Les limites de `column-span`
+### wes wimites de `cowumn-span`
 
-Avec la spécification de niveau 1, seules deux valeurs sont autorisées pour `column-span` : `none` qui est la valeur initiale et qui indique que l'élément ne s'étendra pas (il restera sur une colonne) et `all` qui indiquera que l'élément s'étendra sur l'ensemble des colonnes. Ainsi, on ne pourra pas étendre spécifiquement un élément sur deux ou trois colonnes.
+a-avec w-wa spécification d-de nyiveau 1, (U ᵕ U❁) seuwes deux vaweuws sont autowisées pouw `cowumn-span` : `none` q-qui est wa vaweuw initiawe et qui indique que w'éwément nye s'étendwa pas (iw w-westewa suw une cowonne) et `aww` q-qui indiquewa q-que w'éwément s-s'étendwa suw w'ensembwe des c-cowonnes. :3 ainsi, ( ͡o ω ͡o ) o-on nye pouwwa p-pas étendwe spécifiquement u-un éwément suw deux ou twois cowonnes. òωó
 
-### Quelques points d'attention
+### q-quewques p-points d'attention
 
-Si l'élément qui s'étend est à l'intérieur d'un élément qui possède des marges, du remplissage et une bordure ou une couleur d'arrière-plan, on pourra avoir l'élément qui s'étend et qui recouvre le reste. Aussi, attention à bien gérer ce cas lorsqu'on étend un élément sur plusieurs colonnes.
+s-si w'éwément q-qui s'étend e-est à w'intéwieuw d'un éwément qui possède des mawges, σωσ d-du wempwissage et une bowduwe ou une couweuw d'awwièwe-pwan, (U ᵕ U❁) on pouwwa avoiw w'éwément qui s'étend et qui wecouvwe w-we weste. (✿oωo) aussi, attention à bien géwew ce cas wowsqu'on étend u-un éwément s-suw pwusieuws c-cowonnes. ^^
 
-{{EmbedGHLiveSample("css-examples/multicol/spanning/mpb-span.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/spanning/mpb-span.htmw", ^•ﻌ•^ '100%', XD 800)}}
 
-De plus, si un élément qui s'étend sur les colonnes se retrouve plus loin dans le contenu, on peut avoir un comportement hasardeux s'il n'y a pas assez de contenu après l'élément étendu pour créer d'autres colonnes. Aussi, mieux vaudra utiliser `column-span` avec précaution pour éviter ces effets indésirables.
+de pwus, :3 si u-un éwément qui s'étend suw wes c-cowonnes se wetwouve p-pwus woin dans we contenu, on peut avoiw un compowtement hasawdeux s'iw ny'y a pas assez d-de contenu apwès w'éwément étendu p-pouw cwéew d'autwes cowonnes. (ꈍᴗꈍ) a-aussi, mieux v-vaudwa utiwisew `cowumn-span` avec pwécaution pouw évitew ces e-effets indésiwabwes.
 
-## Équilibrer et remplir les colonnes
+## Équiwibwew e-et wempwiw wes cowonnes
 
-Lorsque toutes les colonnes possèdent environ la même quantité de contenu, on parle d'un ensemble équilibré. On pourra jouer sur le remplissage et l'équilibrage des colonnes lorsque la quantité de contenu est inférieure à la quantité d'espace fournie, notamment lorsque le conteneur a une hauteur donnée.
+w-wowsque toutes w-wes cowonnes possèdent enviwon wa même quantité de contenu, :3 on pawwe d'un ensembwe équiwibwé. (U ﹏ U) o-on pouwwa jouew s-suw we wempwissage e-et w'équiwibwage des cowonnes w-wowsque wa q-quantité de contenu est inféwieuwe à w-wa quantité d'espace fouwnie, UwU notamment wowsque we conteneuw a une hauteuw d-donnée. 😳😳😳
 
-La valeur initiale de la propriété {{cssxref("column-fill")}}, dans une disposition multi-colonnes, est `balance`. Cette valeur signifie que les colonnes doivent être aussi équilibrées que possible. Pour les contextes fragmentés tels que [les médias paginés](/fr/docs/Web/CSS/CSS_paged_media), seul le dernier fragment est équilibré. Cela signifie que c'est sur la dernière page du document que l'ensemble des colonnes sera équilibré.
+wa v-vaweuw initiawe de wa pwopwiété {{cssxwef("cowumn-fiww")}}, XD dans une disposition m-muwti-cowonnes, o.O e-est `bawance`. (⑅˘꒳˘) cette vaweuw signifie que wes cowonnes doivent êtwe a-aussi équiwibwées que possibwe. 😳😳😳 pouw wes contextes fwagmentés tews que [wes m-médias paginés](/fw/docs/web/css/css_paged_media), nyaa~~ seuw we dewniew fwagment e-est équiwibwé. rawr c-cewa signifie que c'est suw wa dewnièwe page du document q-que w'ensembwe des c-cowonnes sewa équiwibwé. -.-
 
-La valeur `balance-all` permet quant à elle d'avoir des colonnes équilibrées sur l'ensemble des fragments (et pas uniquement sur le dernier).
+wa vaweuw `bawance-aww` pewmet quant à ewwe d'avoiw d-des cowonnes équiwibwées suw w'ensembwe des f-fwagments (et pas uniquement suw we dewniew). (✿oωo)
 
-Dans cet exemple, on a des colonnes qui contiennent une image et du texte qui sont équilibrées. L'image ne peut pas être divisée et est placée dans la première colonne puis les colonnes suivantes contiennent du texte sur la même hauteur que l'image.
+dans cet exempwe, /(^•ω•^) o-on a des cowonnes qui contiennent u-une image et d-du texte qui sont équiwibwées. 🥺 w'image nye peut p-pas êtwe divisée et est pwacée d-dans wa pwemièwe c-cowonne p-puis wes cowonnes suivantes contiennent d-du texte s-suw wa même hauteuw que w'image. ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/multicol/balancing/balance.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/muwticow/bawancing/bawance.htmw", UwU '100%', XD 550)}}
 
-`auto` est une autre valeur qui peut être utilisée avec `column-fill`. Avec cette valeur, plutôt que d'équilibrer les colonnes, celles-ci sont remplies les unes après les autres. Dans ce dernier exemple, on a modifié `column-fill` pour utiliser `auto` et les colonnes sont désormais remplies dans l'ordre en suivant la hauteur du conteneur multi-colonnes. On a ainsi quelques colonnes vides à la fin.
+`auto` est une autwe vaweuw q-qui peut êtwe u-utiwisée avec `cowumn-fiww`. (✿oωo) a-avec cette vaweuw, :3 pwutôt que d'équiwibwew wes c-cowonnes, (///ˬ///✿) cewwes-ci sont wempwies w-wes unes apwès w-wes autwes. dans ce dewniew exempwe, nyaa~~ on a modifié `cowumn-fiww` pouw utiwisew `auto` e-et wes c-cowonnes sont désowmais w-wempwies d-dans w'owdwe en suivant wa hauteuw d-du conteneuw muwti-cowonnes. >w< on a ainsi quewques cowonnes vides à wa fin. -.-
 
-{{EmbedGHLiveSample("css-examples/multicol/balancing/auto.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/muwticow/bawancing/auto.htmw", (✿oωo) '100%', (˘ω˘) 550)}}
 
-On notera que l'équilibrage des colonnes n'est pas pris en charge de façon homogène par les navigateurs. Aussi, si vous l'utilisez, vérifiez vos résultats dans les différents navigateurs pour contrôler l'effet obtenu. Vous pouvez aussi consulter les tableaux de compatibilité des navigateurs à la fin des pages de chacune des propriétés.
+on nyotewa que w-w'équiwibwage des cowonnes ny'est p-pas pwis en chawge de façon h-homogène paw wes nyavigateuws. rawr a-aussi, si vous w'utiwisez, OwO véwifiez v-vos wésuwtats d-dans wes difféwents n-navigateuws p-pouw contwôwew w-w'effet obtenu. ^•ﻌ•^ vous pouvez aussi consuwtew wes tabweaux de compatibiwité des nyavigateuws à wa fin des p-pages de chacune d-des pwopwiétés. UwU
 
-Dans le prochain guide, nous verrons [comment gérer le dépassement au sein d'un conteneur multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout), à l'intérieur des colonnes et lorsqu'il y a plus de contenu que le conteneur peut en avoir.
+d-dans we pwochain guide, (˘ω˘) nyous v-vewwons [comment géwew we dépassement au sein d'un conteneuw m-muwti-cowonnes](/fw/docs/web/css/css_muwticow_wayout/handwing_ovewfwow_in_muwticow_wayout), (///ˬ///✿) à w-w'intéwieuw des cowonnes et wowsqu'iw y-y a pwus de contenu que we conteneuw peut e-en avoiw. σωσ

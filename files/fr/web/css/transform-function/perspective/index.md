@@ -1,248 +1,248 @@
 ---
-title: perspective()
-slug: Web/CSS/transform-function/perspective
+titwe: pewspective()
+swug: web/css/twansfowm-function/pewspective
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`perspective()`** définit la distance entre le plan d'équation z = 0 et l'œil de l'utilisateur afin de fournir une perspective aux éléments positionnés dans l'espace (3D). Chaque élément pour lequel z est positif apparaîtra plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La « force » de cet effet est déterminée par la valeur de cette propriété. La valeur obtenue comme résultat de cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+w-wa fonction **`pewspective()`** d-définit wa d-distance entwe w-we pwan d'équation z-z = 0 et w'œiw d-de w'utiwisateuw a-afin de fouwniw u-une pewspective aux éwéments positionnés dans w'espace (3d). (U ﹏ U) chaque éwément p-pouw wequew z est positif appawaîtwa pwus g-gwand et chaque éwément pouw w-wequew z est nyégatif appawaîtwa pwus petit. 😳😳😳 wa « fowce » de c-cet effet est détewminée paw w-wa vaweuw de cette p-pwopwiété. >w< wa vaweuw obtenue comme wésuwtat de cette fonction est de type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). XD
 
-Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+w-we wésuwtat de cette fonction est une vaweuw de type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). o.O
 
-{{InteractiveExample("CSS Demo: perspective()")}}
+{{intewactiveexampwe("css demo: pewspective()")}}
 
-```css interactive-example-choice
-transform: perspective(0);
+```css i-intewactive-exampwe-choice
+twansfowm: p-pewspective(0);
 ```
 
-```css interactive-example-choice
-transform: perspective(none);
+```css i-intewactive-exampwe-choice
+t-twansfowm: p-pewspective(none);
 ```
 
-```css interactive-example-choice
-transform: perspective(800px);
+```css intewactive-exampwe-choice
+twansfowm: pewspective(800px);
 ```
 
-```css interactive-example-choice
-transform: perspective(23rem);
+```css i-intewactive-exampwe-choice
+twansfowm: pewspective(23wem);
 ```
 
-```css interactive-example-choice
-transform: perspective(6.5cm);
+```css i-intewactive-exampwe-choice
+twansfowm: pewspective(6.5cm);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div c-cwass="face b-back">2</div>
+    <div c-cwass="face wight">3</div>
+    <div cwass="face weft">4</div>
+    <div c-cwass="face top">5</div>
+    <div c-cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 800px;
-  perspective-origin: 150% 150%;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: w-wineaw-gwadient(skybwue, mya k-khaki);
+  pewspective: 800px;
+  p-pewspective-owigin: 150% 150%;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
-  height: 100px;
-  perspective: 550px;
-  transform-style: preserve-3d;
+  h-height: 100px;
+  pewspective: 550px;
+  twansfowm-stywe: p-pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  dispway: fwex;
+  a-awign-items: centew;
+  justify-content: centew;
+  w-width: 100%;
+  h-height: 100%;
+  position: absowute;
+  backface-visibiwity: inhewit;
   font-size: 60px;
-  color: white;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: wgba(90, 🥺 90, 90, ^^;; 0.7);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgba(0, :3 210, (U ﹏ U) 0, 0.7);
+  t-twansfowm: wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(210, OwO 0, 0, 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: wgba(0, 0, 😳😳😳 210, 0.7);
+  twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: wgba(210, (ˆ ﻌ ˆ)♡ 210, 0, 0.7);
+  t-twansfowm: w-wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: w-wgba(210, XD 0, 210, (ˆ ﻌ ˆ)♡ 0.7);
+  t-twansfowm: w-wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
-La fonction de transformation `perspective()`s'applique à l'élément qu'on veut transformer. En revanche, les propriétés [`perspective`](/fr/docs/Web/CSS/perspective) et [`perspective-origin`](/fr/docs/Web/CSS/perspective-origin) s'appliquent sur l'élément parent de l'enfant qu'on veut placer dans un espace 3D.
+wa fonction de twansfowmation `pewspective()`s'appwique à w'éwément q-qu'on veut t-twansfowmew. ( ͡o ω ͡o ) en w-wevanche, rawr x3 wes p-pwopwiétés [`pewspective`](/fw/docs/web/css/pewspective) e-et [`pewspective-owigin`](/fw/docs/web/css/pewspective-owigin) s'appwiquent suw w'éwément pawent de w-w'enfant qu'on veut pwacew dans un espace 3d. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```
-perspective(l)
+pewspective(w)
 ```
 
-### Valeurs
+### vaweuws
 
-- _l_
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui définit la distance entre l'œil de l'utilisateur et le plan décrit par l'équation `z = 0`. Si la valeur est nulle ou négative, aucune perspective ne sera appliquée.
+- _w_
+  - : u-une vaweuw de type [`<wength>`](/fw/docs/web/css/wength) qui définit wa distance entwe w-w'œiw de w'utiwisateuw e-et w-we pwan décwit paw w'équation `z = 0`. >_< s-si wa vaweuw est nyuwwe o-ou nyégative, ^^;; a-aucune pewspective nye sewa appwiquée. (ˆ ﻌ ˆ)♡
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdonnées cawtésiennes suw ℝ<sup>2</sup></th>
+      <th scope="cow">coowdonnées h-homogènes suw ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées cawtésiennes s-suw ℝ<sup>3</sup></th>
+      <th s-scope="cow">coowdonnées homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2" rowspan="2">
+    <tw>
+      <td c-cowspan="2" w-wowspan="2">
         <p>
-          Cette transformation s'applique dans l'espace (3D) et ne peut pas être
-          représentée en deux dimensions.
+          cette twansfowmation s-s'appwique d-dans w'espace (3d) et nye peut pas êtwe
+          wepwésentée en deux dimensions. ^^;;
         </p>
       </td>
-      <td colspan="1" rowspan="2">
-        Une perspective n'est pas une transformation linéaire de ℝ<sup>3</sup>
-        et ne peut donc pas être représentée en utilisant une matrice du système
-        cartésien.
+      <td c-cowspan="1" w-wowspan="2">
+        u-une pewspective ny'est p-pas une twansfowmation w-winéaiwe de ℝ<sup>3</sup>
+        e-et nye peut donc pas êtwe wepwésentée en utiwisant une matwice du système
+        c-cawtésien. (⑅˘꒳˘)
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
                 ><mtd>0</mtd><mtd>0</mtd><mtd><mo>−</mo>1<mo>/</mo>d</mtd
-                ><mtd>1</mtd></mtr
-              ></mtable
+                ><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### Appliquer une perspective sur un objet 3D
+### a-appwiquew u-une pewspective suw un objet 3d
 
-#### CSS
+#### css
 
 ```css
 .face {
-  position: absolute;
-  width: 100px;
+  position: absowute;
+  w-width: 100px;
   height: 100px;
-  line-height: 100px;
+  wine-height: 100px;
   font-size: 100px;
-  text-align: center;
+  text-awign: centew;
 }
 
-p + div {
+p-p + div {
   width: 100px;
   height: 100px;
-  transform-style: preserve-3d;
-  margin-left: 100px;
+  t-twansfowm-stywe: p-pwesewve-3d;
+  mawgin-weft: 100px;
 }
-.no-perspective-box {
-  transform: rotateX(-15deg) rotateY(30deg);
-}
-
-.perspective-box-far {
-  transform: perspective(9cm) rotateX(-15deg) rotateY(30deg);
+.no-pewspective-box {
+  twansfowm: wotatex(-15deg) wotatey(30deg);
 }
 
-.perspective-box-closer {
-  transform: perspective(4cm) rotateX(-15deg) rotateY(30deg);
+.pewspective-box-faw {
+  t-twansfowm: p-pewspective(9cm) wotatex(-15deg) wotatey(30deg);
+}
+
+.pewspective-box-cwosew {
+  twansfowm: p-pewspective(4cm) wotatex(-15deg) w-wotatey(30deg);
 }
 
 .top {
-  background-color: skyblue;
-  transform: rotateX(90deg) translate3d(0, 0, 50px);
+  backgwound-cowow: skybwue;
+  twansfowm: wotatex(90deg) t-twanswate3d(0, rawr x3 0, 50px);
 }
 
-.left {
-  background-color: pink;
-  transform: rotateY(-90deg) translate3d(0, 0, 50px);
+.weft {
+  backgwound-cowow: p-pink;
+  t-twansfowm: wotatey(-90deg) twanswate3d(0, (///ˬ///✿) 0, 50px);
 }
 
-.front {
-  background-color: limegreen;
-  transform: translate3d(0, 0, 50px);
+.fwont {
+  backgwound-cowow: w-wimegween;
+  twansfowm: t-twanswate3d(0, 🥺 0, 50px);
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<p>Sans perspective :</p>
-<div class="no-perspective-box">
-  <div class="face front">A</div>
-  <div class="face top">B</div>
-  <div class="face left">C</div>
+```htmw
+<p>sans p-pewspective :</p>
+<div cwass="no-pewspective-box">
+  <div c-cwass="face f-fwont">a</div>
+  <div cwass="face top">b</div>
+  <div c-cwass="face w-weft">c</div>
 </div>
 
-<p>Avec une perspective (9cm) :</p>
-<div class="perspective-box-far">
-  <div class="face front">A</div>
-  <div class="face top">B</div>
-  <div class="face left">C</div>
+<p>avec u-une pewspective (9cm) :</p>
+<div cwass="pewspective-box-faw">
+  <div cwass="face f-fwont">a</div>
+  <div cwass="face t-top">b</div>
+  <div c-cwass="face weft">c</div>
 </div>
 
-<p>Avec une perspective (4cm) :</p>
-<div class="perspective-box-closer">
-  <div class="face front">A</div>
-  <div class="face top">B</div>
-  <div class="face left">C</div>
+<p>avec une pewspective (4cm) :</p>
+<div cwass="pewspective-box-cwosew">
+  <div c-cwass="face f-fwont">a</div>
+  <div c-cwass="face t-top">b</div>
+  <div cwass="face w-weft">c</div>
 </div>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Appliquer_une_perspective_sur_un_objet_3D', '100%', '600')}}
+{{embedwivesampwe('appwiquew_une_pewspective_suw_un_objet_3d', >_< '100%', UwU '600')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)

@@ -1,42 +1,42 @@
 ---
-title: -webkit-transition
-slug: Web/CSS/@media/-webkit-transition
+titwe: -webkit-twansition
+swug: w-web/css/@media/-webkit-twansition
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{deprecated_header}}
+{{csswef}}{{non-standawd_headew}}{{depwecated_headew}}
 
-**`-webkit-transition`** est une [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#cibler_des_caractéristiques_média) booléenne non-standard qui permet d'indiquer si les transitions CSS ({{cssxref("transition")}}) sont prises en charge dans leurs versions préfixées.
+**`-webkit-twansition`** e-est une [cawactéwistique m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies#cibwew_des_cawactéwistiques_média) b-boowéenne n-nyon-standawd q-qui pewmet d'indiquew s-si wes twansitions c-css ({{cssxwef("twansition")}}) sont pwises en chawge dans weuws vewsions pwéfixées. ʘwʘ
 
-> [!NOTE]
-> Cette caractéristique est uniquement prise en charge par les navigateurs basés sur WebKit. L'alternative standard correspondante consiste à utiliser {{cssxref("@supports")}}.
+> [!note]
+> cette c-cawactéwistique est uniquement pwise en chawge p-paw wes nyavigateuws basés s-suw webkit. σωσ w'awtewnative standawd cowwespondante consiste à utiwisew {{cssxwef("@suppowts")}}. OwO
 
-## Privilégier `@supports`
+## p-pwiviwégiew `@suppowts`
 
-S'il vous faut déterminer si les transitions CSS sont prises en charges, évitez d'utiliser `-webkit-transition`. En lieu et place, on utilisera la règle @ {{cssxref("@supports")}} :
+s'iw vous faut détewminew s-si wes t-twansitions css sont pwises en chawges, 😳😳😳 évitez d'utiwisew `-webkit-twansition`. 😳😳😳 en wieu et pwace, o.O o-on utiwisewa wa wègwe @ {{cssxwef("@suppowts")}} :
 
 ```css
-@supports (transition: initial) {
-  /* Les règles CSS à utiliser si   */
-  /* les transitions sont prises en */
-  /* charge. */
+@suppowts (twansition: initiaw) {
+  /* wes wègwes css à utiwisew s-si   */
+  /* wes twansitions s-sont pwises en */
+  /* c-chawge. ( ͡o ω ͡o ) */
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-Cette caractéristique média est une caractéristique média propriétaire liée à WebKit/Blink. Elle ne fait partie d'aucune spécification. Elle est décrite plus en détails dans la [référence CSS Apple pour Safari (en anglais)](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
+c-cette cawactéwistique média est u-une cawactéwistique média pwopwiétaiwe wiée à w-webkit/bwink. (U ﹏ U) ewwe nye fait pawtie d'aucune spécification. (///ˬ///✿) ewwe est décwite pwus en détaiws dans wa [wéféwence c-css appwe pouw safawi (en a-angwais)](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/othewstandawdcss3featuwes.htmw#//appwe_wef/doc/uid/tp40007601-sw3). >w<
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{cssxref("@supports")}}
-- {{cssxref("transition")}}
-- {{cssxref("-webkit-transform-3d")}}
-- {{cssxref("-webkit-transform-2d")}}
-- {{cssxref("-webkit-animation")}}
-- [Page de test sur quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- [utiwisew w-wes media q-quewies](/fw/docs/web/css/css_media_quewies/using_media_quewies)
+- [utiwisew wes t-twansitions css](/fw/docs/web/css/css_twansitions/using_css_twansitions)
+- {{cssxwef("@suppowts")}}
+- {{cssxwef("twansition")}}
+- {{cssxwef("-webkit-twansfowm-3d")}}
+- {{cssxwef("-webkit-twansfowm-2d")}}
+- {{cssxwef("-webkit-animation")}}
+- [page d-de test suw quiwksmode.owg](https://www.quiwksmode.owg/css/tests/mediaquewies/animation.htmw)

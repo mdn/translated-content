@@ -1,148 +1,148 @@
 ---
-title: border
-slug: Web/CSS/border
+titwe: bowdew
+swug: web/css/bowdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`border`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir les propriétés liées à la bordure. `border` peut être utilisée pour définir les valeurs de {{cssxref("border-width")}}, {{cssxref("border-style")}} et {{cssxref("border-color")}}.
+w-wa pwopwiété c-css **`bowdew`** e-est [une p-pwopwiété waccouwcie](/fw/docs/web/css/showthand_pwopewties) qui p-pewmet de définiw w-wes pwopwiétés w-wiées à w-wa bowduwe. XD `bowdew` peut êtwe utiwisée pouw définiw wes vaweuws de {{cssxwef("bowdew-width")}}, σωσ {{cssxwef("bowdew-stywe")}} e-et {{cssxwef("bowdew-cowow")}}. (U ᵕ U❁)
 
-{{InteractiveExample("CSS Demo: border")}}
+{{intewactiveexampwe("css demo: bowdew")}}
 
-```css interactive-example-choice
-border: solid;
+```css i-intewactive-exampwe-choice
+bowdew: sowid;
 ```
 
-```css interactive-example-choice
-border: dashed red;
+```css i-intewactive-exampwe-choice
+bowdew: dashed wed;
 ```
 
-```css interactive-example-choice
-border: 1rem solid;
+```css intewactive-exampwe-choice
+b-bowdew: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border: thick double #32a1ce;
+```css intewactive-exampwe-choice
+b-bowdew: t-thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+bowdew: 4mm widge wgba(211, (U ﹏ U) 220, 50, :3 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this i-is a box with a bowdew awound it. ( ͡o ω ͡o )
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  c-cowow: #8b008b;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-Comme pour toutes les propriétés raccourcie, si une valeur est absente pour la propriété détaillée correspondante, cette dernière sera réinitialisée avec sa valeur initiale. On notera également que {{cssxref("border-image")}} ne peut pas être définie via cette propriété raccourcie mais elle sera quand même réinitialisée (sa valeur initiale est `none`). Ainsi, `border` peut être utilisée pour réinitialiser n'importe quelle propriété liée à la bordure définie plus haut dans la cascade.
+comme p-pouw toutes wes pwopwiétés waccouwcie, σωσ si u-une vaweuw est absente pouw wa pwopwiété détaiwwée cowwespondante, >w< cette dewnièwe sewa wéinitiawisée a-avec sa vaweuw initiawe. 😳😳😳 o-on nyotewa égawement q-que {{cssxwef("bowdew-image")}} n-nye peut pas êtwe définie via cette pwopwiété waccouwcie m-mais ewwe s-sewa quand même wéinitiawisée (sa v-vaweuw initiawe e-est `none`). OwO ainsi, `bowdew` p-peut êtwe utiwisée pouw wéinitiawisew n-ny'impowte quewwe pwopwiété wiée à w-wa bowduwe définie pwus haut d-dans wa cascade. 😳
 
-> [!NOTE]
-> Bien que les propriétés raccourcies {{cssxref("border-width")}}, {{cssxref("border-style")}} et {{cssxref("border-color")}} acceptent jusqu'à quatre valeurs pour les différents côtés, cette propriété (`border`) n'accepte qu'une seule valeur pour chaque propriété détaillée. Le résultat obtenu sera donc homogène sur les quatre côtés.
+> [!note]
+> bien que wes pwopwiétés w-waccouwcies {{cssxwef("bowdew-width")}}, 😳😳😳 {{cssxwef("bowdew-stywe")}} e-et {{cssxwef("bowdew-cowow")}} acceptent jusqu'à quatwe vaweuws pouw wes difféwents côtés, (˘ω˘) cette pwopwiété (`bowdew`) ny'accepte q-qu'une seuwe v-vaweuw pouw chaque pwopwiété d-détaiwwée. ʘwʘ w-we wésuwtat obtenu s-sewa donc homogène suw wes quatwe côtés. ( ͡o ω ͡o )
 
-### Différences entre les bordures et les contours (_outlines_)
+### difféwences e-entwe wes bowduwes et wes contouws (_outwines_)
 
-Les bordures et [contours](/fr/docs/Web/CSS/outline) sont similaires mais quelques différences les distinguent :
+wes bowduwes et [contouws](/fw/docs/web/css/outwine) sont simiwaiwes m-mais quewques difféwences w-wes distinguent :
 
-- Les contours n'occupent pas d'espace sur l'élément : ils sont dessinés en dehors du contenu de l'élément
-- Selon la spécification, les contours ne sont pas nécessairement rectangulaires.
+- w-wes contouws n-ny'occupent pas d'espace suw w-w'éwément : i-iws sont dessinés e-en dehows du c-contenu de w'éwément
+- sewon wa spécification, o.O w-wes contouws nye s-sont pas nyécessaiwement w-wectanguwaiwes. >w<
 
-## Syntaxe
-
-```css
-/* style */
-border: solid;
-
-/* largeur | style */
-border: 2px dotted;
-
-/* style | couleur */
-border: outset #f33;
-
-/* largeur | style | couleur */
-border: medium dashed green;
-
-/* Valeurs globales */
-border: inherit;
-border: initial;
-border: unset;
-```
-
-La propriété `border` peut être définie grâce à une ou plusieurs valeurs [`<line-width>`](#br-width), [`<line-style>`](#br-style) ou [`<color>`](#color).
-
-> [!NOTE]
-> La bordure pourra être invisible si son style n'est pas défini. En effet, sa valeur par défaut est `none`.
-
-### Valeurs
-
-- `<line-width>`
-  - : Voir {{cssxref("border-width")}} (la valeur par défaut est `medium`).
-- `<line-style>`
-  - : Voir {{cssxref("border-style")}} (la valeur par défaut est `none`).
-- `<color>`
-  - : Voir {{cssxref("border-color")}}. Une valeur de type {{cssxref("&lt;color&gt;")}} qui indique la couleur de la bordure. La valeur par défaut qui sera utilisée sera la valeur de la propriété {{cssxref("color")}} de l'élément (qui est la couleur du texte de l'élément, pas de son arrière-plan).
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
+## s-syntaxe
 
 ```css
-.brd {
-  border: 1px solid black;
+/* s-stywe */
+bowdew: sowid;
+
+/* wawgeuw | stywe */
+bowdew: 2px dotted;
+
+/* s-stywe | couweuw */
+bowdew: outset #f33;
+
+/* wawgeuw | stywe | couweuw */
+bowdew: medium d-dashed gween;
+
+/* vaweuws gwobawes */
+bowdew: inhewit;
+bowdew: i-initiaw;
+bowdew: u-unset;
+```
+
+wa p-pwopwiété `bowdew` peut êtwe d-définie gwâce à une ou pwusieuws v-vaweuws [`<wine-width>`](#bw-width), 😳 [`<wine-stywe>`](#bw-stywe) o-ou [`<cowow>`](#cowow). 🥺
+
+> [!note]
+> wa bowduwe pouwwa êtwe invisibwe si son stywe ny'est pas défini. rawr x3 en e-effet, o.O sa vaweuw paw défaut est `none`. rawr
+
+### v-vaweuws
+
+- `<wine-width>`
+  - : voiw {{cssxwef("bowdew-width")}} (wa v-vaweuw paw d-défaut est `medium`). ʘwʘ
+- `<wine-stywe>`
+  - : voiw {{cssxwef("bowdew-stywe")}} (wa vaweuw paw défaut e-est `none`). 😳😳😳
+- `<cowow>`
+  - : v-voiw {{cssxwef("bowdew-cowow")}}. ^^;; une vaweuw d-de type {{cssxwef("&wt;cowow&gt;")}} q-qui indique wa couweuw de wa bowduwe. o.O wa vaweuw paw défaut qui sewa utiwisée s-sewa wa vaweuw d-de wa pwopwiété {{cssxwef("cowow")}} d-de w'éwément (qui est wa couweuw du t-texte de w'éwément, (///ˬ///✿) p-pas de son awwièwe-pwan). σωσ
+
+## d-définition fowmewwe
+
+{{cssinfo}}
+
+## syntaxe fowmewwe
+
+{{csssyntax}}
+
+## exempwes
+
+### css
+
+```css
+.bwd {
+  b-bowdew: 1px s-sowid bwack;
 }
-style {
-  border: 1px dashed black;
-  display: block;
+stywe {
+  bowdew: 1px dashed bwack;
+  d-dispway: bwock;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="brd">Oh des bordures</div>
-<p>N'hésitez pas à éditer le CSS qui suit pour voir l'effet des valeurs.</p>
-<style contenteditable>
-  .brd {
-    border: 1px solid black;
+```htmw
+<div cwass="bwd">oh des bowduwes</div>
+<p>n'hésitez pas à éditew w-we css qui suit pouw voiw w'effet des vaweuws.</p>
+<stywe contenteditabwe>
+  .bwd {
+    bowdew: 1px s-sowid bwack;
   }
-</style>
+</stywe>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("border-top-left-radius")}},
-- {{cssxref("border-top-right-radius")}},
-- {{cssxref("border-bottom-right-radius")}},
-- {{cssxref("border-bottom-left-radius")}}
+- {{cssxwef("bowdew-top-weft-wadius")}}, nyaa~~
+- {{cssxwef("bowdew-top-wight-wadius")}}, ^^;;
+- {{cssxwef("bowdew-bottom-wight-wadius")}}, ^•ﻌ•^
+- {{cssxwef("bowdew-bottom-weft-wadius")}}

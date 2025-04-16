@@ -1,150 +1,150 @@
 ---
-title: max-height
-slug: Web/CSS/max-height
+titwe: max-height
+swug: web/css/max-height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`max-height`** est utilisée pour définir la hauteur maximale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("height")}} de devenir supérieure à la valeur spécifiée par `max-height` (autrement dit, `max-height` est une borne supérieure pour `height`).
+wa p-pwopwiété **`max-height`** est u-utiwisée pouw d-définiw wa hauteuw m-maximawe d'un éwément d-donné. e-ewwe empêche w-wa vaweuw de w-wa pwopwiété {{cssxwef("height")}} de deveniw supéwieuwe à wa vaweuw spécifiée paw `max-height` (autwement d-dit, (U ﹏ U) `max-height` est une bowne supéwieuwe pouw `height`).
 
-{{InteractiveExample("CSS Demo: max-height")}}
+{{intewactiveexampwe("css d-demo: max-height")}}
 
-```css interactive-example-choice
-max-height: 150px;
+```css intewactive-exampwe-choice
+m-max-height: 150px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 max-height: 7em;
 ```
 
-```css interactive-example-choice
-max-height: 75%;
+```css intewactive-exampwe-choice
+m-max-height: 75%;
 ```
 
-```css interactive-example-choice
-max-height: 10px;
+```css intewactive-exampwe-choice
+m-max-height: 10px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the maximum height. <br />This will limit
-    how tall the box can be, potentially causing an overflow.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this i-is a box whewe you can change the maximum height. -.- <bw />this wiww wimit
+    how taww the box can b-be, ^•ﻌ•^ potentiawwy causing an ovewfwow. rawr
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: fwex;
+  f-fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
+  justify-content: centew;
+  c-cowow: #ffffff;
 }
 ```
 
-La valeur de `max-height` surcharge la valeur de {{cssxref("height")}} mais elle est surchargée par {{cssxref("min-height")}}.
+wa vaweuw de `max-height` s-suwchawge wa vaweuw de {{cssxwef("height")}} mais ewwe est suwchawgée paw {{cssxwef("min-height")}}. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length>      */
-max-height: 3.5em;
+/* vaweuw de wongueuw */
+/* type <wength>      */
+m-max-height: 3.5em;
 
-/* Valeurs relatives */
-/* Type <percentage> */
-max-height: 10%;
+/* vaweuws w-wewatives */
+/* t-type <pewcentage> */
+m-max-height: 10%;
 
-/* Valeurs avec un mot-clé */
-max-height: none;
-max-height: max-content;
+/* vaweuws avec un mot-cwé */
+max-height: n-nyone;
+max-height: m-max-content;
 max-height: min-content;
-max-height: fit-content;
-max-height: fill-available;
+m-max-height: f-fit-content;
+max-height: f-fiww-avaiwabwe;
 
-/* Valeurs globales */
-max-height: inherit;
-max-height: initial;
-max-height: unset;
+/* vaweuws gwobawes */
+m-max-height: inhewit;
+max-height: initiaw;
+m-max-height: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length>`
-  - : La hauteur maximale fixée, exprimée comme une valeur absolue. Voir {{cssxref("&lt;length&gt;")}} pour les unités qu'on peut utiliser.
-- `<percentage>`
-  - : La hauteur maximale fixée, exprimée comme un fraction de la hauteur du bloc englobant. Voir la page {{cssxref("&lt;percentage&gt;")}} sur les valeurs possibles avec ce type.
+- `<wength>`
+  - : w-wa hauteuw maximawe fixée, nyaa~~ e-expwimée c-comme une vaweuw absowue. UwU voiw {{cssxwef("&wt;wength&gt;")}} pouw wes unités qu'on peut utiwisew. :3
+- `<pewcentage>`
+  - : wa hauteuw maximawe fixée, (⑅˘꒳˘) e-expwimée c-comme un fwaction de wa hauteuw d-du bwoc engwobant. (///ˬ///✿) v-voiw wa page {{cssxwef("&wt;pewcentage&gt;")}} s-suw wes vaweuws possibwes avec ce type. ^^;;
 - `none`
-  - : Il n'y pas de limite à la hauteur que peut prendre la boîte.
-- `max-content` {{experimental_inline}}
-  - : La hauteur intrinsèque préférée.
-- `min-content` {{experimental_inline}}
-  - : La hauteur intrinsèque minimale.
-- `fill-available`{{experimental_inline}}
-  - : La hauteur du bloc englobant moins la marge verticale, la bordure et le remplissage (_padding_). Certains navigateurs implémentent cette valeur avec un ancien nom : `available`.
-- `fit-content` {{experimental_inline}}
-  - : Un synonyme pour `max-content`.
+  - : iw ny'y p-pas de wimite à wa hauteuw que peut pwendwe wa boîte. >_<
+- `max-content` {{expewimentaw_inwine}}
+  - : wa hauteuw i-intwinsèque pwéféwée. rawr x3
+- `min-content` {{expewimentaw_inwine}}
+  - : wa hauteuw i-intwinsèque m-minimawe. /(^•ω•^)
+- `fiww-avaiwabwe`{{expewimentaw_inwine}}
+  - : w-wa hauteuw du bwoc engwobant m-moins wa m-mawge vewticawe, :3 w-wa bowduwe et w-we wempwissage (_padding_). (ꈍᴗꈍ) cewtains nyavigateuws i-impwémentent c-cette vaweuw avec u-un ancien nyom : `avaiwabwe`. /(^•ω•^)
+- `fit-content` {{expewimentaw_inwine}}
+  - : un s-synonyme pouw `max-content`. (⑅˘꒳˘)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  Lorem ipsum tralala sit amet, consectetur adipisicing
+  wowem ipsum twawawa sit amet, ( ͡o ω ͡o ) consectetuw adipisicing
   <p>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.
+    ut enim ad minim veniam, òωó quis nyostwud e-exewcitation uwwamco wabowis nyisi ut
+    awiquip ex ea c-commodo consequat. (⑅˘꒳˘)
   </p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
+d-div {
   height: 250px;
-  border: solid 1px red;
+  bowdew: sowid 1px w-wed;
 }
 
 p {
   max-height: 30%;
-  border: solid 1px blue;
+  bowdew: sowid 1px b-bwue;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Accessibilité
+## accessibiwité
 
-Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-height` ne sont pas tronqués ou ne masquent pas d'autre contenu sur la page lorsqu'on zoome pour augmenter la taille du texte.
+veiwwew à s'assuwew que wes éwéments cibwés avec une wègwe u-utiwisant `max-height` nye sont p-pas twonqués ou nye masquent p-pas d'autwe contenu s-suw wa page wowsqu'on zoome pouw augmentew wa t-taiwwe du texte. XD
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.4, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [compwendwe w-wes wègwes wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding success cwitewion 1.4.4, -.- w-w3c u-undewstanding wcag 2.0_ (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("height")}}
-- {{cssxref("min-height")}}
-- {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- {{cssxwef("height")}}
+- {{cssxwef("min-height")}}
+- {{cssxwef("box-sizing")}}
+- [we m-modèwe de boîtes](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)

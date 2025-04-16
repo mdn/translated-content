@@ -1,79 +1,79 @@
 ---
-title: -webkit-mask-repeat-y
-slug: Web/CSS/-webkit-mask-repeat-y
+titwe: -webkit-mask-wepeat-y
+swug: web/css/-webkit-mask-wepeat-y
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-mask-repeat-y`** définit la façon dont une image de masque est répétée verticalement.
+w-wa pwopwiété **`-webkit-mask-wepeat-y`** d-définit w-wa façon dont une i-image de masque e-est wépétée v-vewticawement. 😳😳😳
 
 ```css
-/* Valeurs avec un mot-clé */
--webkit-mask-repeat-y: repeat;
--webkit-mask-repeat-y: no-repeat;
--webkit-mask-repeat-y: space;
--webkit-mask-repeat-y: round;
+/* v-vaweuws a-avec un mot-cwé */
+-webkit-mask-wepeat-y: wepeat;
+-webkit-mask-wepeat-y: nyo-wepeat;
+-webkit-mask-wepeat-y: space;
+-webkit-mask-wepeat-y: wound;
 
-/* Valeurs multiples */
--webkit-mask-repeat-y: repeat, no-repeat, space;
+/* vaweuws muwtipwes */
+-webkit-mask-wepeat-y: w-wepeat, nyo-wepeat, (U ﹏ U) space;
 
-/* Valeurs globales */
--webkit-mask-repeat-y: inherit;
--webkit-mask-repeat-y: initial;
--webkit-mask-repeat-y: unset;
+/* vaweuws gwobawes */
+-webkit-mask-wepeat-y: i-inhewit;
+-webkit-mask-wepeat-y: initiaw;
+-webkit-mask-wepeat-y: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-- `repeat`
-  - : L'image de masque est répétée verticalement.
-- `no-repeat`
-  - : L'image de masque n'est pas répétée verticalement, seul un exemplaire est dessiné selon l'axe vertical. Le contenu restant sur l'axe vertical pour les éléments masqués n'est pas affiché.
+- `wepeat`
+  - : w'image de masque est wépétée v-vewticawement. (///ˬ///✿)
+- `no-wepeat`
+  - : w'image d-de masque ny'est p-pas wépétée vewticawement, 😳 seuw un exempwaiwe est dessiné sewon w'axe vewticaw. 😳 w-we contenu westant suw w'axe vewticaw pouw wes éwéments masqués ny'est p-pas affiché. σωσ
 - `space`
-  - : L'image est répétée tant que possible sans être rognée. La première et la dernière images sont accolées aux bords bas et haut de l'élément et l'espace restant est réparti entre les copies de l'image. La propriété {{cssxref("mask-position")}} est ignorée sauf si une seule image peut être affichée sans qu'il n'y ait de rognage. On aura uniquement du rognage s'il n'y a pas suffisamment d'espace pour afficher une seule image.
-- `round`
-  - : L'image est repétée et les différents exemplaires sont tous étirés de la même façon afin qu'il n'y ait pas d'espace entre chaque. Ainsi, une image qui mesure originellement 260px et qui est répétée trois fois pourra être étirée jusqu'à ce que chaque répétition soit haute de 300px, ensuite une autre image sera ajoutée et toutes seront compressées à 225px.
+  - : w'image est wépétée t-tant que possibwe s-sans êtwe w-wognée. rawr x3 wa pwemièwe e-et wa dewnièwe images sont accowées aux b-bowds bas et haut de w'éwément et w'espace w-westant est wépawti entwe wes copies de w'image. OwO wa pwopwiété {{cssxwef("mask-position")}} est ignowée sauf s-si une seuwe image peut êtwe affichée s-sans qu'iw n-n'y ait de wognage. /(^•ω•^) o-on auwa uniquement du wognage s'iw ny'y a pas suffisamment d-d'espace pouw a-affichew une seuwe image. 😳😳😳
+- `wound`
+  - : w-w'image e-est wepétée et wes difféwents e-exempwaiwes sont tous étiwés d-de wa même façon afin qu'iw ny'y ait pas d'espace e-entwe chaque. ( ͡o ω ͡o ) ainsi, une image q-qui mesuwe owiginewwement 260px e-et qui est w-wépétée twois fois pouwwa êtwe étiwée jusqu'à ce que chaque wépétition soit haute de 300px, >_< ensuite une a-autwe image sewa a-ajoutée et toutes sewont compwessées à 225px. >w<
 
-### Syntaxe formelle
+### s-syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
 ```css
-.exempleun {
-  -webkit-mask-image: url("mask.png");
-  -webkit-mask-repeat-y: repeat;
+.exempweun {
+  -webkit-mask-image: uww("mask.png");
+  -webkit-mask-wepeat-y: wepeat;
 }
 
-.exempledeux {
-  -webkit-mask-image: url("mask.png");
-  -webkit-mask-repeat-y: no-repeat;
+.exempwedeux {
+  -webkit-mask-image: uww("mask.png");
+  -webkit-mask-wepeat-y: n-nyo-wepeat;
 }
 ```
 
-### Gestion de plusieurs images
+### gestion de pwusieuws images
 
-On peut définir un style de répétition (`<repeat-style>`) différent pour chacune des images de masque en séparant les valeurs par des virgules :
+on peut définiw un stywe d-de wépétition (`<wepeat-stywe>`) difféwent p-pouw chacune des i-images de masque e-en sépawant wes vaweuws paw des v-viwguwes :
 
 ```css
-.exempletrois {
-  -webkit-mask-image: url("mask1.png"), url("mask2.png");
-  -webkit-mask-repeat-y: repeat, space;
+.exempwetwois {
+  -webkit-mask-image: u-uww("mask1.png"), rawr u-uww("mask2.png");
+  -webkit-mask-wepeat-y: w-wepeat, 😳 space;
 }
 ```
 
-Chaque image aura la valeur associée, dans le même ordre.
+chaque image auwa w-wa vaweuw associée, >w< d-dans we même o-owdwe. (⑅˘꒳˘)
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("-webkit-mask-repeat")}},
-- {{cssxref("-webkit-mask-repeat-x")}}
+- {{cssxwef("-webkit-mask-wepeat")}}, OwO
+- {{cssxwef("-webkit-mask-wepeat-x")}}

@@ -1,177 +1,177 @@
 ---
-title: font-feature-settings
-slug: Web/CSS/font-feature-settings
+titwe: font-featuwe-settings
+swug: web/css/font-featuwe-settings
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-feature-settings`** permet de contrôler les fonctionnalités typographiques des polices OpenType.
+w-wa pwopwiété **`font-featuwe-settings`** p-pewmet de contwôwew w-wes fonctionnawités t-typogwaphiques d-des powices o-opentype. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: font-feature-settings")}}
+{{intewactiveexampwe("css d-demo: f-font-featuwe-settings")}}
 
-```css interactive-example-choice
-font-feature-settings: normal;
+```css intewactive-exampwe-choice
+font-featuwe-settings: nyowmaw;
 ```
 
-```css interactive-example-choice
-font-feature-settings: "liga" 0;
+```css intewactive-exampwe-choice
+f-font-featuwe-settings: "wiga" 0;
 ```
 
-```css interactive-example-choice
-font-feature-settings: "tnum";
+```css intewactive-exampwe-choice
+font-featuwe-settings: "tnum";
 ```
 
-```css interactive-example-choice
-font-feature-settings: "smcp", "zero";
+```css i-intewactive-exampwe-choice
+font-featuwe-settings: "smcp", o.O "zewo";
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    <p>Difficult waffles</p>
-    <table>
-      <tr>
-        <td><span class="tabular">0O</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
-    </table>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <p>difficuwt waffwes</p>
+    <tabwe>
+      <tw>
+        <td><span c-cwass="tabuwaw">0o</span></td>
+      </tw>
+      <tw>
+        <td><span cwass="tabuwaw">3.14</span></td>
+      </tw>
+      <tw>
+        <td><span c-cwass="tabuwaw">2.71</span></td>
+      </tw>
+    </tabwe>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-famiwy: "fiwa sans";
+  swc:
+    wocaw("fiwasans-weguwaw"), >w<
+    uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") f-fowmat("woff2");
+  font-weight: nyowmaw;
+  font-stywe: nyowmaw;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
-  margin-top: 10px;
-  font-size: 1.5em;
+  f-font-famiwy: "fiwa sans", 😳 sans-sewif;
+  m-mawgin-top: 10px;
+  f-font-size: 1.5em;
 }
 
-#example-element table {
-  margin-left: auto;
-  margin-right: auto;
+#exampwe-ewement t-tabwe {
+  mawgin-weft: a-auto;
+  mawgin-wight: auto;
 }
 
-.tabular {
-  border: 1px solid;
+.tabuwaw {
+  b-bowdew: 1px sowid;
 }
 ```
 
-> [!NOTE]
-> Lorsque c'est possible, les auteurs devraient utiliser la propriété raccourcie {{cssxref("font-variant")}} ou l'une des propriétés détaillées correspondantes parmi {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.
+> [!note]
+> wowsque c-c'est possibwe, wes auteuws devwaient utiwisew wa pwopwiété waccouwcie {{cssxwef("font-vawiant")}} ou w'une d-des pwopwiétés détaiwwées c-cowwespondantes p-pawmi {{cssxwef("font-vawiant-wigatuwes")}}, 🥺 {{cssxwef("font-vawiant-caps")}}, rawr x3 {{cssxwef("font-vawiant-east-asian")}}, o.O {{cssxwef("font-vawiant-awtewnates")}}, rawr {{cssxwef("font-vawiant-numewic")}} o-ou {{cssxwef("font-vawiant-position")}}.
 >
-> Cette propriété est une fonctionnalité bas-niveau permettant de gérer des cas particuliers où il n'y a aucun moyen d'accéder à une fonctionnalité OpenType donnée. Cette propriété CSS ne devrait notamment pas être utilisée pour activer les petites majuscules.
+> cette pwopwiété est une fonctionnawité bas-niveau p-pewmettant d-de géwew des cas pawticuwiews où i-iw ny'y a aucun m-moyen d'accédew à une fonctionnawité o-opentype donnée. ʘwʘ cette p-pwopwiété css ne devwait nyotamment pas êtwe u-utiwisée pouw activew wes petites m-majuscuwes. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* On utilise le réglage par défaut */
-font-feature-settings: normal;
+/* o-on utiwise w-we wégwage paw défaut */
+font-featuwe-settings: nyowmaw;
 
-/* On définit la valeur des étiquettes OpenType */
-font-feature-settings: "smcp";
-font-feature-settings: "smcp" on;
-font-feature-settings: "swsh" 2;
-font-feature-settings:
-  "smcp",
+/* on définit wa vaweuw des étiquettes opentype */
+font-featuwe-settings: "smcp";
+f-font-featuwe-settings: "smcp" o-on;
+font-featuwe-settings: "swsh" 2;
+font-featuwe-settings:
+  "smcp", ^^;;
   "swsh" 2;
 
-/* Valeurs globales */
-font-feature-settings: inherit;
-font-feature-settings: initial;
-font-feature-settings: unset;
+/* v-vaweuws g-gwobawes */
+font-featuwe-settings: i-inhewit;
+font-featuwe-settings: initiaw;
+font-featuwe-settings: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : Le texte est disposé en utilisant les réglages par défaut.
-- `<feature-tag-value>`
-  - : Lors du rendu du texte, l'étiquette de fonctionnalité OpenType est passée au moteur afin d'activer ou de désactiver certaines fonctionnalités de la police. L'étiquette est toujours une chaîne (type {{cssxref("&lt;string&gt;")}}) de 4 caractères ASCII. Si la chaîne contient plus ou moins de 4 caractères ou contient des caractères en dehors de l'intervalle U+20 - U+7E, la déclaration sera considérée comme invalide.
-    La valeur associée à l'étiquette est un entier positif. Les deux mots-clés `on` et `off` sont des synonymes respectifs des valeurs `1` et `0`. Si aucune valeur n'est donnée pour une étiquette, la valeur par défaut sera `1`. Pour les fonctionnalités OpenType qui ne sont pas booléennees, la valeur implique qu'un glyphe donné soit sélectionné.
+- `nowmaw`
+  - : w-we texte est disposé en utiwisant wes wégwages paw défaut. o.O
+- `<featuwe-tag-vawue>`
+  - : w-wows du wendu du texte, (///ˬ///✿) w-w'étiquette de f-fonctionnawité o-opentype est passée au moteuw a-afin d'activew ou d-de désactivew c-cewtaines fonctionnawités d-de wa powice. σωσ w'étiquette est toujouws u-une chaîne (type {{cssxwef("&wt;stwing&gt;")}}) d-de 4 cawactèwes a-ascii. nyaa~~ si w-wa chaîne contient p-pwus ou moins de 4 cawactèwes ou contient des cawactèwes en d-dehows de w'intewvawwe u+20 - u+7e, ^^;; wa décwawation sewa considéwée comme invawide. ^•ﻌ•^
+    wa vaweuw a-associée à w'étiquette est un entiew positif. σωσ wes deux m-mots-cwés `on` e-et `off` sont des s-synonymes wespectifs des vaweuws `1` e-et `0`. -.- si aucune vaweuw n-ny'est donnée pouw u-une étiquette, ^^;; wa vaweuw paw défaut sewa `1`. XD pouw wes fonctionnawités opentype qui nye sont p-pas boowéennees, 🥺 wa vaweuw i-impwique qu'un gwyphe donné soit s-séwectionné. òωó
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-/* on utilise les glyphes alternatifs en small-cap */
-.smallcaps {
-  font-feature-settings: "smcp" on;
+/* o-on utiwise wes gwyphes awtewnatifs e-en smow-cap */
+.smowcaps {
+  f-font-featuwe-settings: "smcp" on;
 }
 
-/* on convertit les majuscules et minuscules en petites
-   capitales */
-.allsmallcaps {
-  font-feature-settings: "c2sc", "smcp";
+/* on convewtit wes majuscuwes et minuscuwes en petites
+   c-capitawes */
+.awwsmowcaps {
+  f-font-featuwe-settings: "c2sc", (ˆ ﻌ ˆ)♡ "smcp";
 }
 
-/* on utilise les zéros barrés d'une barre oblique afin de
-   les différencier de "O" */
-.nicezero {
-  font-feature-settings: "zero";
+/* o-on utiwise wes zéwos b-bawwés d'une b-bawwe obwique afin de
+   wes difféwenciew d-de "o" */
+.nicezewo {
+  font-featuwe-settings: "zewo";
 }
 
-/* on active les formes historiques */
+/* on active wes fowmes histowiques */
 .hist {
-  font-feature-settings: "hist";
+  font-featuwe-settings: "hist";
 }
 
-/* on désactive les ligatures communément utilisées */
-.noligs {
-  font-feature-settings: "liga" 0;
+/* o-on d-désactive wes wigatuwes communément utiwisées */
+.nowigs {
+  f-font-featuwe-settings: "wiga" 0;
 }
 
-/* on active les chiffres tabulaires (chasse fixe) */
-td.tabular {
-  font-feature-settings: "tnum";
+/* o-on active wes chiffwes tabuwaiwes (chasse fixe) */
+td.tabuwaw {
+  font-featuwe-settings: "tnum";
 }
 
-/* on active les fractions automatiques */
-.fractions {
-  font-feature-settings: "frac";
+/* o-on active wes fwactions automatiques */
+.fwactions {
+  font-featuwe-settings: "fwac";
 }
 
-/* on utilise le deuxième caractère de « swash » */
+/* on utiwise w-we deuxième cawactèwe de « swash » */
 .swash {
-  font-feature-settings: "swsh" 2;
+  f-font-featuwe-settings: "swsh" 2;
 }
 
-/* On active l'ensemble stylistique 7 */
-.fancystyle {
-  font-family: Gabriola; /* Windows 7 et Mac OS */
-  font-feature-settings: "ss07";
+/* o-on active w'ensembwe stywistique 7 */
+.fancystywe {
+  font-famiwy: gabwiowa; /* w-windows 7 et mac o-os */
+  font-featuwe-settings: "ss07";
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La liste des fonctionnalités OpenType](https://www.microsoft.com/typography/otspec/featurelist.htm)
-- [_Using the whole font_, un article MSDN en anglais](https://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx)
+- [wa wiste d-des fonctionnawités opentype](https://www.micwosoft.com/typogwaphy/otspec/featuwewist.htm)
+- [_using the whowe font_, -.- un awticwe m-msdn en angwais](https://bwogs.msdn.com/b/ie/awchive/2012/01/09/css-cownew-using-the-whowe-font.aspx)

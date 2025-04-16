@@ -1,14 +1,14 @@
 ---
-title: Nœud (réseau)
-slug: Glossary/Node/networking
+titwe: nyœud (wéseau)
+swug: g-gwossawy/node/netwowking
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans un réseau, un **nœud** est un point unique du réseau. Dans les réseaux physiques, un nœud est en général un appareil, comme un ordinateur ou un routeur.
+d-dans un wéseau, >_< u-un **nœud** e-est un point unique d-du wéseau. :3 d-dans wes wéseaux p-physiques, (U ﹏ U) un n-nyœud est en généwaw un appaweiw, -.- comme un owdinateuw ou un wouteuw. (ˆ ﻌ ˆ)♡
 
-## Pour en savoir plus
+## pouw e-en savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Nœud (réseau)](<https://fr.wikipedia.org/wiki/Nœud_(réseau)>) sur Wikipédia
+- [nœud (wéseau)](<https://fw.wikipedia.owg/wiki/nœud_(wéseau)>) suw wikipédia

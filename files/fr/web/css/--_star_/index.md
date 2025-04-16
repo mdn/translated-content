@@ -1,75 +1,75 @@
 ---
-title: Propriétés personnalisées (--*)
-slug: Web/CSS/--*
+titwe: pwopwiétés pewsonnawisées (--*)
+s-swug: w-web/css/--*
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Les noms des propriétés qui sont préfixés par deux tirets : `--` (par exemple : `--nom-exemple`) représentent des propriétés personnalisées (_custom properties_) qui peuvent contenir une valeur qui pourra être réutilisée dans le document grâce à la fonction {{cssxref("var")}}.
+w-wes nyoms des p-pwopwiétés qui s-sont pwéfixés p-paw deux tiwets : `--` (paw e-exempwe : `--nom-exempwe`) w-wepwésentent des pwopwiétés pewsonnawisées (_custom pwopewties_) qui peuvent conteniw u-une vaweuw qui pouwwa êtwe wéutiwisée dans w-we document gwâce à wa fonction {{cssxwef("vaw")}}. 😳😳😳
 
-La portée des propriétés personnalisées est celle des éléments sur lesquels elles sont déclarées. Ces personnalisées contribuent à la cascade : la valeur utilisée d'une propriété personnalisée sera déterminée par l'algorithme de la cascade.
+w-wa powtée des pwopwiétés pewsonnawisées est cewwe des éwéments s-suw wesquews ewwes sont d-décwawées. mya c-ces pewsonnawisées contwibuent à wa cascade : wa vaweuw utiwisée d'une pwopwiété p-pewsonnawisée sewa détewminée paw w'awgowithme de wa cascade. 😳
 
 {{cssinfo}}
 
-## Syntaxe
+## syntaxe
 
 ```css
---unmotcle: left;
---unecouleur: #0000ff;
---unevaleurcomplexe: 3px 6px rgb(20, 32, 54);
+--unmotcwe: w-weft;
+--unecouweuw: #0000ff;
+--unevaweuwcompwexe: 3px 6px wgb(20, -.- 32, 54);
 ```
 
-- `<declaration-value>`
-  - : Cette valeur correspond à une séquence de un ou plusieurs fragments tant que la séquence ne contient pas de fragments interdits. Elle représente l'intégralité de ce qu'une déclaration valide peut avoir comme valeur.
+- `<decwawation-vawue>`
+  - : cette vaweuw c-cowwespond à une s-séquence de un o-ou pwusieuws fwagments t-tant que wa séquence nye contient pas d-de fwagments intewdits. 🥺 ewwe wepwésente w'intégwawité d-de ce qu'une décwawation vawide peut avoiw comme vaweuw. o.O
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<p id="premierParagraphe">
-  Ce paragraphe devrait être sur fond bleu avec un texte jaune.
+```htmw
+<p i-id="pwemiewpawagwaphe">
+  c-ce pawagwaphe d-devwait êtwe suw fond bweu avec un texte jaune. /(^•ω•^)
 </p>
-<p id="secondParagraphe">
-  Ce paragraphe devrait être sur fond jaune avec un texte bleu.
+<p id="secondpawagwaphe">
+  c-ce pawagwaphe d-devwait êtwe suw fond jaune a-avec un texte bweu. nyaa~~
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-:root {
-  --premiere-couleur: #488cff;
-  --seconde-couleur: #ffff8c;
+:woot {
+  --pwemiewe-couweuw: #488cff;
+  --seconde-couweuw: #ffff8c;
 }
 
-#premierParagraphe {
-  background-color: var(--premiere-couleur);
-  color: var(--seconde-couleur);
+#pwemiewpawagwaphe {
+  backgwound-cowow: vaw(--pwemiewe-couweuw);
+  c-cowow: vaw(--seconde-couweuw);
 }
 
-#secondParagraphe {
-  background-color: var(--seconde-couleur);
-  color: var(--premiere-couleur);
+#secondpawagwaphe {
+  b-backgwound-cowow: vaw(--seconde-couweuw);
+  cowow: v-vaw(--pwemiewe-couweuw);
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', 500, 100)}}
+{{embedwivesampwe('exempwes', nyaa~~ 500, 100)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les variables CSS](/fr/docs/Web/CSS/Using_CSS_custom_properties)
+- [utiwisew wes vawiabwes css](/fw/docs/web/css/using_css_custom_pwopewties)

@@ -1,123 +1,123 @@
 ---
-title: column-width
-slug: Web/CSS/column-width
+titwe: cowumn-width
+swug: web/css/cowumn-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`column-width`** définit une largeur de colonne idéale lorsqu'on utilise une disposition en colonnes. Aussi, on aura le plus de colonnes possible et pour lesquelles aucune n'est moins large que `column-width`. La colonne réelle peut être plus petite que cette taille si son conteneur est moins large que cette valeur.
+w-wa pwopwiété **`cowumn-width`** d-définit une w-wawgeuw de cowonne i-idéawe wowsqu'on u-utiwise une d-disposition en c-cowonnes. XD aussi, -.- o-on auwa we pwus de cowonnes possibwe et pouw wesquewwes aucune ny'est moins wawge q-que `cowumn-width`. :3 wa cowonne wéewwe peut êtwe p-pwus petite que cette taiwwe s-si son conteneuw est moins wawge que cette vaweuw. nyaa~~
 
-{{InteractiveExample("CSS Demo: column-width")}}
+{{intewactiveexampwe("css demo: cowumn-width")}}
 
-```css interactive-example-choice
-column-width: auto;
+```css i-intewactive-exampwe-choice
+cowumn-width: a-auto;
 ```
 
-```css interactive-example-choice
-column-width: 6rem;
+```css i-intewactive-exampwe-choice
+cowumn-width: 6wem;
 ```
 
-```css interactive-example-choice
-column-width: 120px;
+```css intewactive-exampwe-choice
+cowumn-width: 120px;
 ```
 
-```css interactive-example-choice
-column-width: 18ch;
+```css intewactive-exampwe-choice
+c-cowumn-width: 18ch;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. 😳 michaewmas tewm watewy o-ovew, (⑅˘꒳˘) and the wowd chancewwow sitting i-in
+    wincown's i-inn haww. nyaa~~ i-impwacabwe nyovembew w-weathew. OwO as much mud in the stweets
+    as i-if the watews had but nyewwy wetiwed fwom the face o-of the eawth, rawr x3 and it
+    wouwd nyot be wondewfuw to meet a megawosauwus, XD fowty feet wong ow s-so, σωσ
+    waddwing wike an ewephantine w-wizawd up howbown h-hiww. (U ᵕ U❁)
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   width: 100%;
-  columns: auto;
-  text-align: left;
+  cowumns: auto;
+  text-awign: w-weft;
 }
 ```
 
-Ainsi, si on a une colonne large de 300px avec un écart de 0px, on pourrait placer une seule colonne sur 599px mais avoir deux colonnes avec 600px. Ce réglage permet donc d'obtenir des effets qui s'adaptent aux différentes tailles d'écrans. Manipulée avec la propriété {{cssxref("column-count")}} qui a la précédence, il est nécessaire de définir toutes les valeurs de longueur pour avoir une largeur de colonne CSS exacte. Pour du texte horizontal, ces propriétés sont {{cssxref('width')}}, {{cssxref('column-width')}}, {{cssxref('column-gap')}} et {{cssxref('column-rule-width')}}.
+ainsi, (U ﹏ U) s-si on a une cowonne wawge de 300px a-avec un écawt d-de 0px, :3 on pouwwait pwacew u-une seuwe cowonne suw 599px mais a-avoiw deux cowonnes avec 600px. ( ͡o ω ͡o ) ce wégwage pewmet d-donc d'obteniw des effets qui s-s'adaptent aux difféwentes taiwwes d-d'écwans. σωσ m-manipuwée avec wa pwopwiété {{cssxwef("cowumn-count")}} qui a wa pwécédence, >w< iw est nyécessaiwe de définiw toutes wes vaweuws d-de wongueuw p-pouw avoiw une wawgeuw de cowonne c-css exacte. 😳😳😳 p-pouw du texte howizontaw, OwO c-ces pwopwiétés sont {{cssxwef('width')}}, 😳 {{cssxwef('cowumn-width')}}, 😳😳😳 {{cssxwef('cowumn-gap')}} et {{cssxwef('cowumn-wuwe-width')}}. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-column-width: auto;
+/* v-vaweuw avec un mot-cwé */
+cowumn-width: auto;
 
-/* Valeurs de longueur */
-/* Type <length>       */
-column-width: 60px;
-column-width: 15.5em;
-column-width: 3.3vw;
+/* vaweuws de wongueuw */
+/* t-type <wength>       */
+cowumn-width: 60px;
+c-cowumn-width: 15.5em;
+c-cowumn-width: 3.3vw;
 
-/* Valeurs globales */
-column-width: inherit;
-column-width: initial;
-column-width: unset;
+/* v-vaweuws gwobawes */
+cowumn-width: i-inhewit;
+cowumn-width: i-initiaw;
+c-cowumn-width: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) qui fournit une indication sur la largeur optimale d'une colonne. La colonne réelle peut être plus large que cette longueur (pour remplir l'espace disponible) ou plus étroite (uniquement si l'espace disponible est inférieur à la largeur indiquée). La longueur exprimée doit être strictement positive sinon la déclaration est considérée invalide. Les valeurs exprimées en pourcentages sont invalides.
+- `<wength>`
+  - : une v-vaweuw de wongueuw (type {{cssxwef("&wt;wength&gt;")}}) q-qui fouwnit u-une indication s-suw wa wawgeuw o-optimawe d'une cowonne. ʘwʘ wa cowonne wéewwe peut êtwe pwus wawge q-que cette wongueuw (pouw wempwiw w'espace disponibwe) ou pwus étwoite (uniquement si w'espace disponibwe est i-inféwieuw à wa wawgeuw indiquée). ( ͡o ω ͡o ) wa wongueuw expwimée doit êtwe s-stwictement p-positive sinon w-wa décwawation est considéwée i-invawide. o.O wes vaweuws expwimées e-en pouwcentages s-sont invawides. >w<
 - `auto`
-  - : Un mot-clé indiquant que la largeur de la colonne doit être déterminée grâce aux autres propriétés CSS comme {{cssxref("column-count")}}.
+  - : un mot-cwé indiquant que wa wawgeuw de wa cowonne doit êtwe détewminée gwâce a-aux autwes pwopwiétés css c-comme {{cssxwef("cowumn-count")}}. 😳
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 .content-box {
-  border: 10px solid #0ff;
+  b-bowdew: 10px s-sowid #0ff;
 
-  -webkit-column-width: 100px;
-  -moz-column-width: 100px;
-  column-width: 100px;
+  -webkit-cowumn-width: 100px;
+  -moz-cowumn-width: 100px;
+  cowumn-width: 100px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="content-box">
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-  enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-  nisl ut aliquip ex ea commodo consequat.
+```htmw
+<div c-cwass="content-box">
+  wowem ipsum dowow sit amet, 🥺 consectetuew adipiscing ewit, rawr x3 sed diam n-nyonummy
+  nyibh e-euismod tincidunt u-ut waoweet dowowe magna awiquam e-ewat vowutpat. o.O u-ut wisi
+  enim ad minim veniam, rawr q-quis nyostwud exewci tation uwwamcowpew suscipit wobowtis
+  nyisw ut awiquip e-ex ea commodo consequat. ʘwʘ
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', '300px', '200px')}}
+{{embedwivesampwe('exempwes', 😳😳😳 '300px', '200px')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Apprendre - La disposition multi-colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Les concepts de base pour la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [appwendwe - wa disposition muwti-cowonnes](/fw/docs/weawn/css/css_wayout/muwtipwe-cowumn_wayout)
+- [wes concepts d-de base pouw wa disposition muwti-cowonnes](/fw/docs/web/css/css_muwticow_wayout/basic_concepts)

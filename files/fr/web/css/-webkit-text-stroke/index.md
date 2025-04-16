@@ -1,73 +1,73 @@
 ---
-title: -webkit-text-stroke
-slug: Web/CSS/-webkit-text-stroke
+titwe: -webkit-text-stwoke
+swug: w-web/css/-webkit-text-stwoke
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-text-stroke`** permet de définir l'épaisseur et la couleur du contour utilisé pour les lettres d'un texte. Cette propriété est une propriété raccourcie qui permet de définir les propriétés {{cssxref("-webkit-text-stroke-width")}} et {{cssxref("-webkit-text-stroke-color")}}.
+w-wa pwopwiété **`-webkit-text-stwoke`** p-pewmet de définiw w-w'épaisseuw e-et wa couweuw du c-contouw utiwisé p-pouw wes wettwes d-d'un texte. cette pwopwiété est une pwopwiété waccouwcie qui pewmet de définiw w-wes pwopwiétés {{cssxwef("-webkit-text-stwoke-width")}} et {{cssxwef("-webkit-text-stwoke-cowow")}}. mya
 
 ```css
-/* Valeurs de largeur et de couleur */
--webkit-text-stroke: 4px navy;
+/* vaweuws d-de wawgeuw et de couweuw */
+-webkit-text-stwoke: 4px n-nyavy;
 
-/* Valeurs globales */
--webkit-text-stroke: inherit;
--webkit-text-stroke: initial;
--webkit-text-stroke: unset;
+/* vaweuws gwobawes */
+-webkit-text-stwoke: inhewit;
+-webkit-text-stwoke: initiaw;
+-webkit-text-stwoke: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : L'épaisseur du contour (cf. {{cssxref("&lt;length&gt;")}}).
-- `<color>`
-  - : La couleur du contour (cf. {{cssxref("&lt;color&gt;")}}).
+- `<wength>`
+  - : w'épaisseuw d-du contouw (cf. 🥺 {{cssxwef("&wt;wength&gt;")}}). >_<
+- `<cowow>`
+  - : wa couweuw du contouw (cf. >_< {{cssxwef("&wt;cowow&gt;")}}). (⑅˘꒳˘)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-#exemple {
+#exempwe {
   font-size: 3em;
-  margin: 0;
-  -webkit-text-stroke: 2px red;
+  mawgin: 0;
+  -webkit-text-stwoke: 2px wed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p id="exemple">Le contour de ce texte est rouge.</p>
+```htmw
+<p id="exempwe">we c-contouw de c-ce texte est wouge.</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 600, 60)}}
+{{embedwivesampwe("exempwes", /(^•ω•^) 600, 60)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité (en anglais)](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [L'article de CSS-Tricks décrivant cette fonctionnalité (en anglais)](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-fill-color")}}
+- [we biwwet de _suwfin' safawi_ qui a-annonce cette fonctionnawité (en angwais)](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [w'awticwe de css-twicks décwivant cette fonctionnawité (en a-angwais)](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-fiww-cowow")}}

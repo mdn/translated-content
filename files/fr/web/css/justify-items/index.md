@@ -1,247 +1,247 @@
 ---
-title: justify-items
-slug: Web/CSS/justify-items
+titwe: justify-items
+swug: web/css/justify-items
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`justify-items`** définit la valeur par défaut de {{cssxref("justify-self")}} pour tous les éléments d'une boîte et permet ainsi de définir le comportement par défaut pour la justification des éléments d'une boîte le long de l'axe en ligne (c'est-à-dire l'axe correspondant au sens d'écriture).
+w-wa pwopwiété c-css **`justify-items`** d-définit w-wa vaweuw paw d-défaut de {{cssxwef("justify-sewf")}} p-pouw tous w-wes éwéments d-d'une boîte et pewmet ainsi de définiw we compowtement paw défaut pouw wa j-justification des éwéments d'une boîte we wong d-de w'axe en wigne (c'est-à-diwe w'axe cowwespondant a-au sens d'écwituwe). σωσ
 
-{{InteractiveExample("CSS Demo: justify-items")}}
+{{intewactiveexampwe("css demo: justify-items")}}
 
-```css interactive-example-choice
-justify-items: stretch;
+```css intewactive-exampwe-choice
+justify-items: s-stwetch;
 ```
 
-```css interactive-example-choice
-justify-items: center;
+```css intewactive-exampwe-choice
+j-justify-items: c-centew;
 ```
 
-```css interactive-example-choice
-justify-items: start;
+```css intewactive-exampwe-choice
+justify-items: stawt;
 ```
 
-```css interactive-example-choice
-justify-items: end;
+```css intewactive-exampwe-choice
+justify-items: e-end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 40px;
-  grid-gap: 10px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px s-sowid #c5c5c5;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  gwid-auto-wows: 40px;
+  g-gwid-gap: 10px;
   width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: w-wgba(0, (///ˬ///✿) 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-L'effet de cette propriété sera différent selon le type de disposition utilisé :
+w'effet de cette pwopwiété sewa difféwent s-sewon we type de disposition utiwisé :
 
-- Pour les dispositions de bloc : cette propriété aligne l'élément selon l'axe en ligne au sein du bloc englobant.
-- Pour les éléments positionnés de façon absolue : cette propriété aligne l'élément selon l'axe en ligne au sein du bloc englobant en prenant en compte les valeurs de décalage par rapport au haut, à la gauche, au bas et à la droite.
-- Pour les cellules de tableau, cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)).
-- Pour les dispositions flexibles (_flexbox_), cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)).
-- Pour les grilles, cette propriété aligne l'élément sur la zone de la grille à laquelle il appartient selon l'axe en ligne ([en savoir plus](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)).
+- p-pouw w-wes dispositions d-de bwoc : cette pwopwiété awigne w'éwément sewon w'axe en w-wigne au sein du b-bwoc engwobant. (U ﹏ U)
+- pouw wes éwéments p-positionnés d-de façon absowue : cette pwopwiété a-awigne w'éwément sewon w-w'axe en wigne au sein du bwoc engwobant en p-pwenant en compte wes vaweuws de d-décawage paw wappowt au haut, ^^;; à w-wa gauche, 🥺 au b-bas et à wa dwoite. òωó
+- pouw wes cewwuwes de tabweau, XD cette pwopwiété est ignowée ([en savoiw pwus](/fw/docs/web/css/css_box_awignment/box_awignment_in_bwock_abspos_tabwes)). :3
+- p-pouw wes dispositions f-fwexibwes (_fwexbox_), (U ﹏ U) cette pwopwiété e-est ignowée ([en s-savoiw pwus](/fw/docs/web/css/css_box_awignment/box_awignment_in_fwexbox)). >w<
+- p-pouw wes gwiwwes, /(^•ω•^) cette pwopwiété awigne w'éwément suw wa z-zone de wa gwiwwe à waquewwe iw appawtient sewon w'axe en wigne ([en savoiw pwus](/fw/docs/web/css/css_box_awignment/box_awignment_in_gwid_wayout)). (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Mots-clés de base */
-justify-items: auto;
-justify-items: normal;
-justify-items: stretch;
+/* mots-cwés d-de base */
+j-justify-items: a-auto;
+justify-items: nyowmaw;
+j-justify-items: s-stwetch;
 
-/* Alignement par rapport à l'axe */
-justify-items: center; /* Les éléments sont regroupés au centre */
-justify-items: start; /* Les éléments sont regroupés au début  */
-justify-items: end; /* Les éléments sont regroupés à la fin  */
-justify-items: flex-start; /* Les éléments sont regroupés au début de l'axe */
-justify-items: flex-end; /* Les éléments sont regroupés à la fin de l'axe */
-justify-items: self-start;
-justify-items: self-end;
-justify-items: left; /* Les éléments sont regroupés à gauche */
-justify-items: right; /* Les éléments sont regroupés à droite */
+/* awignement p-paw wappowt à w-w'axe */
+justify-items: centew; /* wes éwéments s-sont wegwoupés a-au centwe */
+j-justify-items: s-stawt; /* wes éwéments s-sont wegwoupés au début  */
+justify-items: end; /* w-wes éwéments sont wegwoupés à wa fin  */
+justify-items: fwex-stawt; /* wes éwéments sont w-wegwoupés au début de w'axe */
+justify-items: fwex-end; /* wes éwéments s-sont w-wegwoupés à w-wa fin de w'axe */
+justify-items: s-sewf-stawt;
+justify-items: sewf-end;
+j-justify-items: w-weft; /* wes éwéments sont wegwoupés à gauche */
+justify-items: wight; /* wes éwéments s-sont wegwoupés à dwoite */
 
-/* Alignement par rapport à la ligne de base */
-justify-items: baseline;
-justify-items: first baseline;
-justify-items: last baseline;
+/* a-awignement paw wappowt à wa w-wigne de base */
+j-justify-items: basewine;
+justify-items: fiwst b-basewine;
+justify-items: w-wast basewine;
 
-/* Gestion du dépassement */
-justify-items: safe center;
-justify-items: unsafe center;
+/* gestion d-du dépassement */
+j-justify-items: safe centew;
+justify-items: unsafe centew;
 
-/* Valeurs historiques */
-justify-items: legacy right;
-justify-items: legacy left;
-justify-items: legacy center;
+/* vaweuws histowiques */
+j-justify-items: w-wegacy w-wight;
+justify-items: wegacy w-weft;
+justify-items: w-wegacy centew;
 
-/* Valeurs globales */
-justify-items: inherit;
-justify-items: initial;
+/* vaweuws g-gwobawes */
+justify-items: inhewit;
+justify-items: initiaw;
 justify-items: unset;
 ```
 
-Cette propriété peut être définie selon trois formes différentes :
+c-cette pwopwiété p-peut êtwe définie sewon twois fowmes d-difféwentes :
 
-- Grâce à un mot-clé : `normal`, `auto` ou `stretch`.
-- Relativement à la ligne de base : dans ce cas, on a le mot-clé `baseline` éventuellement suivi de `first` ou de `last`
-- Grâce à un positionnement :
+- g-gwâce à un mot-cwé : `nowmaw`, ʘwʘ `auto` ou `stwetch`. rawr x3
+- wewativement à wa wigne d-de base : dans ce cas, (˘ω˘) on a we mot-cwé `basewine` éventuewwement suivi de `fiwst` ou de `wast`
+- g-gwâce à un positionnement :
 
-  - Un mot-clé parmi : `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left` ou `right`
-  - Puis éventuellement `safe` ou `unsafe`
+  - un mot-cwé p-pawmi : `centew`, `stawt`, o.O `end`, `fwex-stawt`, 😳 `fwex-end`, o.O `sewf-stawt`, ^^;; `sewf-end`, ( ͡o ω ͡o ) `weft` o-ou `wight`
+  - puis éventuewwement `safe` ou `unsafe`
 
-- Grâce à un alignement tel que précédemment spécifié : le mot-clé `legacy` suivi de `left` ou de `right`.
+- gwâce à u-un awignement t-tew que pwécédemment spécifié : we mot-cwé `wegacy` suivi d-de `weft` ou de `wight`. ^^;;
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : La valeur utilisée est celle de la propriété `justify-items` pour la boîte parente. Si la boîte n'a pas de parent ou est positionnée de façon absolue, `auto` sera synonyme de `normal`.
-- `normal`
+  - : wa vaweuw utiwisée est cewwe de wa pwopwiété `justify-items` p-pouw wa boîte pawente. ^^;; s-si wa boîte ny'a p-pas de pawent ou est positionnée d-de façon absowue, XD `auto` s-sewa synonyme de `nowmaw`. 🥺
+- `nowmaw`
 
-  - : Ce mot-clé aura un sens différent selon le mode de disposition utilisé :
+  - : c-ce m-mot-cwé auwa un sens difféwent s-sewon we mode de d-disposition utiwisé :
 
-    - Pour une disposition en bloc, `normal` est synonyme de `start`.
-    - Pour les dispositions avec un positionnment absolu, ce mot-clé se comporte comme `start` pour les boîtes des éléments remplacés ou comme `stretch` pour les autres boîtes positionnées de façon absolue.
-    - Pour les dispositions des cellules de tableaux, ce mot-clé n'a pas de signification car cette propriété est ignorée.
-    - Pour les dispositions qui utilisent les boîtes flexibles, ce mot-clé n'a pas de signification car cette propriété est ignorée*.*
-    - Pour les dispositions qui utilisent une grille, ce mot-clé aura un comportement proche de `stretch`, sauf pour les boîtes qui ont des dimensions intrinsèques, dans ce cas, il est synonyme de `start`.
+    - pouw une disposition en bwoc, (///ˬ///✿) `nowmaw` e-est synonyme d-de `stawt`. (U ᵕ U❁)
+    - p-pouw wes dispositions avec un positionnment a-absowu, ^^;; ce mot-cwé se compowte c-comme `stawt` p-pouw wes boîtes des éwéments wempwacés ou comme `stwetch` pouw w-wes autwes boîtes p-positionnées d-de façon absowue. ^^;;
+    - p-pouw wes dispositions d-des cewwuwes de tabweaux, rawr ce mot-cwé ny'a pas de signification caw cette pwopwiété est ignowée. (˘ω˘)
+    - p-pouw wes dispositions q-qui utiwisent wes boîtes fwexibwes, 🥺 c-ce mot-cwé ny'a pas de s-signification caw cette pwopwiété e-est ignowée*.*
+    - p-pouw wes d-dispositions q-qui utiwisent une g-gwiwwe, nyaa~~ ce mot-cwé auwa un compowtement pwoche de `stwetch`, :3 sauf pouw wes boîtes qui ont des dimensions intwinsèques, /(^•ω•^) d-dans c-ce cas, ^•ﻌ•^ iw est s-synonyme de `stawt`. UwU
 
-- `start`
-  - : Les éléments sont regroupés vers le début du conteneur pour l'axe en ligne.
+- `stawt`
+  - : wes éwéments s-sont wegwoupés vews we début du conteneuw pouw w'axe en wigne. 😳😳😳
 - `end`
-  - : Les éléments sont regroupés vers la fin du conteneur pour l'axe en ligne.
-- `flex-start`
-  - : Les éléments sont regroupés vers le début du conteneur flexible pour l'axe en ligne.
-    Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à `start`.
-- `flex-end`
-  - : Les éléments sont regroupés vers la fin du conteneur flexible pour l'axe en ligne.
-    Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à `end`.
-- `self-start`
-  - : Les éléments sont alignés sur le bord du conteneur au début de l'axe en ligne.
-- `self-end`
-  - : Les éléments sont alignés sur le bord du conteneur à la fin de l'axe en ligne.
-- `center`
-  - : Les éléments sont regroupés au centre du conteneur dans le sens de l'axe en ligne.
-- `left`
-  - : Les éléments sont alignés vers la gauche du conteneur dans le sens de l'axe en ligne.
-- `right`
-  - : Les éléments sont alignés vers la droite du conteneur dans le sens de l'axe en ligne.
-- `baseline first baseline`
-  `last baseline`
-  - : Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse.
-    Si `first baseline` n'est pas prise en charge, la valeur correspondra à `start`, si `last baseline` n'est pas prise en charge, la valeur correspondra à `end`.
-- `stretch`
-  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en ligne, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
+  - : w-wes éwéments s-sont wegwoupés vews wa fin du c-conteneuw pouw w'axe en wigne. OwO
+- `fwex-stawt`
+  - : wes éwéments s-sont wegwoupés v-vews we début du conteneuw f-fwexibwe pouw w'axe e-en wigne. ^•ﻌ•^
+    cette vaweuw nye s'appwique qu'aux éwéments fwexibwes. (ꈍᴗꈍ) pouw wes éwéments q-qui ne font pas p-pawtie d'un conteneuw f-fwexibwe, (⑅˘꒳˘) c-cette vaweuw cowwespond à `stawt`. (⑅˘꒳˘)
+- `fwex-end`
+  - : w-wes éwéments sont wegwoupés v-vews wa fin d-du conteneuw fwexibwe pouw w'axe e-en wigne. (ˆ ﻌ ˆ)♡
+    c-cette vaweuw nye s'appwique qu'aux éwéments fwexibwes. /(^•ω•^) p-pouw wes éwéments qui nye font pas pawtie d-d'un conteneuw fwexibwe, òωó cette v-vaweuw cowwespond à `end`. (⑅˘꒳˘)
+- `sewf-stawt`
+  - : w-wes éwéments sont awignés s-suw we bowd du conteneuw au début de w'axe en w-wigne. (U ᵕ U❁)
+- `sewf-end`
+  - : w-wes éwéments s-sont awignés suw we bowd du conteneuw à wa fin de w'axe e-en wigne. >w<
+- `centew`
+  - : wes éwéments sont wegwoupés au c-centwe du conteneuw d-dans we sens de w'axe en wigne.
+- `weft`
+  - : w-wes éwéments sont awignés v-vews wa gauche d-du conteneuw dans we sens de w'axe en wigne. σωσ
+- `wight`
+  - : w-wes éwéments sont awignés vews w-wa dwoite du conteneuw d-dans we sens de w'axe en w-wigne. -.-
+- `basewine fiwst basewine`
+  `wast b-basewine`
+  - : c-ces vaweuws p-pewmettent de définiw w'awignement paw wappowt à wa wigne de base pouw w'éwément du conteneuw avec wa wigne de base wa pwus haute ou wa pwus basse. o.O
+    si `fiwst basewine` ny'est pas pwise en chawge, ^^ w-wa vaweuw cowwespondwa à `stawt`, >_< s-si `wast basewine` ny'est pas pwise en chawge, >w< w-wa vaweuw cowwespondwa à `end`. >_<
+- `stwetch`
+  - : s-si wa somme d-des taiwwes des éwéments est i-inféwieuwe à wa taiwwe du conteneuw p-pouw w'axe e-en wigne, >w< wes éwéments dimensionnés a-automatiquement sewont éwawgis d-de wa m-même wongueuw tout en wespectant wes contwaintes i-imposées paw {{cssxwef("max-height")}}/{{cssxwef("max-width")}} (ou p-paw wes f-fonctionnawités équivawentes), rawr a-afin que w'ensembwe d-des éwéments w-wempwisse exactement w-we conteneuw. rawr x3
 - `safe`
-  - : Si la taille de l'élément dépasse du conteneur pour la valeur d'alignement indiquée, l'élément est alors aligné comme si la valeur `start` avait été utilisée.
+  - : s-si wa taiwwe d-de w'éwément dépasse du conteneuw p-pouw wa v-vaweuw d'awignement i-indiquée, ( ͡o ω ͡o ) w'éwément est awows a-awigné comme si wa vaweuw `stawt` avait été u-utiwisée. (˘ω˘)
 - `unsafe`
-  - : Quelle que soit la taille de l'élément par rapport au conteneur (il peut dépasser), la valeur fournie pour indiquer l'alignement est respectée.
-- `legacy`
-  - : La valeur est héritée par les éléments descendants de la boîte. Si un élément descendant a `justify-self: auto`, le mot-clé `legacy` ne sera pas pris en compte mais uniquement la valeur `left`, `right`, ou `center`.
+  - : quewwe que soit w-wa taiwwe de w'éwément p-paw wappowt a-au conteneuw (iw peut dépassew), 😳 w-wa vaweuw fouwnie pouw indiquew w-w'awignement est wespectée. OwO
+- `wegacy`
+  - : w-wa vaweuw est héwitée paw w-wes éwéments descendants de wa boîte. (˘ω˘) si un éwément descendant a `justify-sewf: a-auto`, òωó we mot-cwé `wegacy` n-nye sewa pas pwis e-en compte mais uniquement wa vaweuw `weft`, ( ͡o ω ͡o ) `wight`, ou `centew`. UwU
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  height: 500px;
-  width: 500px;
-  grid-gap: 10px;
-  grid-template-areas:
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, /(^•ω•^) 100px);
+  gwid-tempwate-wows: w-wepeat(3, (ꈍᴗꈍ) 100px);
+  h-height: 500px;
+  w-width: 500px;
+  g-gwid-gap: 10px;
+  gwid-tempwate-aweas:
+    "a a-a b"
     "a a b"
-    "a a b"
-    "c d d";
-  align-content: space-between;
-  justify-items: start;
+    "c d-d d";
+  a-awign-content: space-between;
+  j-justify-items: stawt;
 }
 .item1 {
-  grid-area: a;
+  g-gwid-awea: a;
 }
 .item2 {
-  grid-area: b;
+  g-gwid-awea: b-b;
 }
 .item3 {
-  grid-area: c;
+  g-gwid-awea: c;
 }
 .item4 {
-  grid-area: d;
+  g-gwid-awea: d;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item1">objet 1</div>
+  <div c-cwass="item2">objet 2</div>
+  <div c-cwass="item3">objet 3</div>
+  <div c-cwass="item4">objet 4</div>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '500', '500')}}
+{{embedwivesampwe('exempwes', 😳 '500', '500')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- La propriété {{cssxref("justify-self")}}
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)
-- La propriété raccourcie {{CSSxRef("place-items")}}
-- La propriété {{CSSxRef("align-items")}}
+- [w'awignement d-des boîtes avec wes gwiwwes css](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- wa pwopwiété {{cssxwef("justify-sewf")}}
+- [we m-moduwe de spécification c-css box awignment](/fw/docs/web/css/css_box_awignment)
+- w-wa pwopwiété w-waccouwcie {{cssxwef("pwace-items")}}
+- wa pwopwiété {{cssxwef("awign-items")}}

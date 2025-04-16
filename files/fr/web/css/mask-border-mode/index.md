@@ -1,44 +1,44 @@
 ---
-title: mask-border-mode
-slug: Web/CSS/mask-border-mode
+titwe: mask-bowdew-mode
+swug: w-web/css/mask-bowdew-mode
 ---
 
-{{cssref}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété CSS **`mask-border-mode`** indique le mode de fusion utilisé pour [le masque de bordure](/fr/docs/Web/CSS/mask-border).
+w-wa p-pwopwiété css **`mask-bowdew-mode`** i-indique we m-mode de fusion u-utiwisé pouw [we m-masque de bowduwe](/fw/docs/web/css/mask-bowdew). >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-mask-border-mode: luminance;
-mask-border-mode: alpha;
+/* vaweuws avec un mot-cwé */
+mask-bowdew-mode: wuminance;
+m-mask-bowdew-mode: awpha;
 
-/* Valeurs globales */
-mask-border-mode: inherit;
-mask-border-mode: initial;
-mask-border-mode: unset;
+/* vaweuws gwobawes */
+m-mask-bowdew-mode: inhewit;
+m-mask-bowdew-mode: initiaw;
+mask-bowdew-mode: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `luminance`
-  - : Les valeurs de luminance proventant de l'image de masque sont utilisées pour le masque.
-- `alpha`
-  - : Les valeurs du canal alpha proventant de l'image de masque sont utilisées pour le masque.
+- `wuminance`
+  - : w-wes vaweuws de wuminance p-pwoventant de w-w'image de masque sont utiwisées pouw we masque.
+- `awpha`
+  - : wes vaweuws du canaw awpha pwoventant d-de w'image de masque sont utiwisées pouw we masque. rawr x3
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

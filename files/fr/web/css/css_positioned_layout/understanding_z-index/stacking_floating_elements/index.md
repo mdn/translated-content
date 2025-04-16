@@ -1,118 +1,118 @@
 ---
-title: Empilement et éléments flottants
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
+titwe: empiwement et éwéments f-fwottants
+swug: w-web/css/css_positioned_wayout/undewstanding_z-index/stacking_fwoating_ewements
 ---
 
-{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
+{{csswef}}{{pweviousmenunext("web/css/compwendwe_z-index/empiwement_sans_z-index","web/css/compwendwe_z-index/ajout_de_z-index", o.O "web/css/compwendwe_z-index")}}
 
-## L'empilement et les éléments flottants
+## w-w'empiwement e-et wes éwéments f-fwottants
 
-Pour les blocs flottants, l'ordre d'empilement est légèrement différent. Les blocs flottants sont disposés entre les blocs non positionnés et les blocs positionnés. Voici l'ordre d'empilement :
+p-pouw wes bwocs f-fwottants, >w< w-w'owdwe d'empiwement est wégèwement difféwent. 😳 wes bwocs fwottants sont disposés e-entwe wes bwocs nyon positionnés et wes bwocs p-positionnés. 🥺 voici w'owdwe d-d'empiwement :
 
-1. L'arrière-plan et les bordures de l'élément racine du document
-2. Les blocs qui descendent les uns des autres et qui sont situés dans le flux normal, dans l'ordre dans lequel ils apparaissent (pour HTML)&nbsp;;
-3. Les blocs flottants&nbsp;;
-4. Les éléments enfants positionnés, dans leur ordre d'apparence (pour HTML).
+1. rawr x3 w'awwièwe-pwan et wes bowduwes de w'éwément w-wacine du document
+2. wes bwocs q-qui descendent w-wes uns des autwes et qui sont situés dans we fwux nyowmaw, o.O dans w'owdwe dans w-wequew iws appawaissent (pouw htmw)&nbsp;;
+3. rawr wes bwocs fwottants&nbsp;;
+4. ʘwʘ wes éwéments e-enfants positionnés, 😳😳😳 d-dans weuw owdwe d-d'appawence (pouw h-htmw).
 
-En fait, comme on le voit avec l'exemple ci-après, l'arrière-plan et la bordure du bloc non positionné (DIV n°4) ne sont pas impactés par les blocs flottants alors que le contenu est affecté. Il s'agit du comportement standard de la propriété CSS {{cssxref("float")}}.
+en fait, ^^;; c-comme on we voit avec w'exempwe ci-apwès, o.O w'awwièwe-pwan et w-wa bowduwe du bwoc nyon positionné (div ny°4) n-nye sont pas impactés paw wes bwocs fwottants awows que we contenu est affecté. iw s'agit du c-compowtement standawd de wa pwopwiété c-css {{cssxwef("fwoat")}}. (///ˬ///✿)
 
-Ce comportement peut être expliqué en améliorant la liste précédente :
+c-ce compowtement p-peut êtwe expwiqué en améwiowant wa wiste pwécédente :
 
-1. L'arrière-plan et les bordures de l'élément racine&nbsp;;
-2. Les blocs enfants dans le flux normal, dans leur ordre d'apparence (en HTML)&nbsp;;
-3. Les blocs flottants&nbsp;;
-4. Les éléments «&nbsp;en-ligne&nbsp;» enfants dans le flux normal&nbsp;;
-5. Les éléments enfants positionnés, dans leur ordre d'apparence (en HTML).
+1. σωσ w-w'awwièwe-pwan e-et wes bowduwes de w'éwément w-wacine&nbsp;;
+2. nyaa~~ w-wes bwocs enfants dans we fwux n-nyowmaw, ^^;; dans weuw owdwe d'appawence (en h-htmw)&nbsp;;
+3. ^•ﻌ•^ wes bwocs fwottants&nbsp;;
+4. σωσ w-wes éwéments «&nbsp;en-wigne&nbsp;» enfants dans we f-fwux nyowmaw&nbsp;;
+5. -.- wes éwéments e-enfants p-positionnés, ^^;; dans weuw owdwe d'appawence (en htmw). XD
 
-> [!NOTE]
-> Dans l'exemple qui suit, tous les blocs sont transparents, excepté celui qui n'est pas positionné, montrant ainsi l'ordre d'empilement. Si l'on réduit l'opacité du bloc non positionné (DIV #4), il se produit quelque chose d'étrange&nbsp;: l'arrière-plan et la bordure de cet élément se placent par dessus les blocs flottants et les blocs positionnés. Il s'agit d'une interprétation particulière des spécifications CSS : l'application de l'opacité crée un nouveau contexte d'empilement (voir l'article : [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) de Philip Walton ou son excellente traduction de Vincent De Oliveira, [Ce que personne ne vous a dit sur z-index](https://iamvdo.me/blog/comprendre-z-index-et-les-contextes-dempilement) et, bien-sûr, la [spécification](https://www.w3.org/TR/CSS2/zindex.html)).
+> [!note]
+> dans w'exempwe qui suit, 🥺 tous wes bwocs sont twanspawents, òωó excepté c-cewui qui n-ny'est pas positionné, (ˆ ﻌ ˆ)♡ montwant a-ainsi w'owdwe d'empiwement. -.- s-si w-w'on wéduit w'opacité du bwoc nyon positionné (div #4), :3 iw se p-pwoduit quewque chose d'étwange&nbsp;: w'awwièwe-pwan et wa bowduwe de cet éwément s-se pwacent paw dessus wes b-bwocs fwottants e-et wes bwocs positionnés. ʘwʘ i-iw s'agit d'une intewpwétation p-pawticuwièwe d-des spécifications css : w-w'appwication d-de w'opacité cwée un nyouveau contexte d'empiwement (voiw w'awticwe : [nani n-nyo one towd you a-about z-index](https://phiwipwawton.com/awticwes/nani-no-one-towd-you-about-z-index/) d-de phiwip w-wawton ou son e-excewwente twaduction de vincent de owiveiwa, 🥺 [ce que pewsonne nye v-vous a dit suw z-index](https://iamvdo.me/bwog/compwendwe-z-index-et-wes-contextes-dempiwement) et, >_< bien-sûw, ʘwʘ wa [spécification](https://www.w3.owg/tw/css2/zindex.htmw)).
 
-{{EmbedLiveSample("Code_source_de_lexemple", 600, 250)}}
+{{embedwivesampwe("code_souwce_de_wexempwe", (˘ω˘) 600, (✿oωo) 250)}}
 
-## Code source de l'exemple
+## code souwce de w'exempwe
 
-### HTML
+### h-htmw
 
-```html
-<div id="abs1"><b>DIV #1</b><br />position: absolute;</div>
+```htmw
+<div id="abs1"><b>div #1</b><bw />position: absowute;</div>
 
-<div id="flo1"><b>DIV #2</b><br />float: left;</div>
+<div id="fwo1"><b>div #2</b><bw />fwoat: weft;</div>
 
-<div id="flo2"><b>DIV #3</b><br />float: right;</div>
+<div i-id="fwo2"><b>div #3</b><bw />fwoat: w-wight;</div>
 
-<br />
+<bw />
 
-<div id="sta1"><b>DIV #4</b><br />no positioning</div>
+<div i-id="sta1"><b>div #4</b><bw />no positioning</div>
 
-<div id="abs2"><b>DIV #5</b><br />position: absolute;</div>
+<div i-id="abs2"><b>div #5</b><bw />position: absowute;</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
+d-div {
   padding: 10px;
-  text-align: center;
+  text-awign: centew;
 }
 
 b {
-  font-family: sans-serif;
+  font-famiwy: sans-sewif;
 }
 
 #abs1 {
-  position: absolute;
-  width: 150px;
+  position: absowute;
+  w-width: 150px;
   height: 200px;
-  top: 10px;
-  right: 140px;
-  border: 1px dashed #900;
-  background-color: #fdd;
+  t-top: 10px;
+  wight: 140px;
+  b-bowdew: 1px d-dashed #900;
+  backgwound-cowow: #fdd;
 }
 
 #sta1 {
   height: 100px;
-  border: 1px dashed #996;
-  background-color: #ffc;
-  margin: 0px 10px 0px 10px;
-  text-align: left;
+  b-bowdew: 1px d-dashed #996;
+  backgwound-cowow: #ffc;
+  m-mawgin: 0px 10px 0px 10px;
+  t-text-awign: weft;
 }
 
-#flo1 {
-  margin: 0px 10px 0px 20px;
-  float: left;
+#fwo1 {
+  mawgin: 0px 10px 0px 20px;
+  fwoat: weft;
   width: 150px;
-  height: 200px;
-  border: 1px dashed #090;
-  background-color: #cfc;
+  h-height: 200px;
+  b-bowdew: 1px d-dashed #090;
+  backgwound-cowow: #cfc;
 }
 
-#flo2 {
-  margin: 0px 20px 0px 10px;
-  float: right;
-  width: 150px;
+#fwo2 {
+  mawgin: 0px 20px 0px 10px;
+  f-fwoat: wight;
+  w-width: 150px;
   height: 200px;
-  border: 1px dashed #090;
-  background-color: #cfc;
+  b-bowdew: 1px dashed #090;
+  backgwound-cowow: #cfc;
 }
 
 #abs2 {
-  position: absolute;
+  position: absowute;
   width: 150px;
   height: 100px;
-  top: 130px;
-  left: 100px;
-  border: 1px dashed #990;
-  background-color: #fdd;
+  t-top: 130px;
+  w-weft: 100px;
+  bowdew: 1px dashed #990;
+  b-backgwound-cowow: #fdd;
 }
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'empilement sans z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Règles d'empilement par défaut
-- [Ajouter z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index) : Utiliser z-index pour modifier l'empilement par défaut
-- [L'empilement de couches](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) : Remarques sur l'empilement de couches
-- [Exemple d'empilement n°1](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : Hiérarchie HTML à 2 niveaux, z-index sur le dernier niveau
-- [Exemple d'empilement n°2](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : Hiérarchie HTML à 2 niveaux, z-index sur tous les éléments
-- [Exemple d'empilement n°3](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3) : Hiérarchie HTML à 3 niveaux, z-index sur le deuxième niveau
+- [w'empiwement sans z-index](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_without_z-index) : wègwes d'empiwement paw défaut
+- [ajoutew z-z-index](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/using_z-index) : utiwisew z-index pouw modifiew w'empiwement paw défaut
+- [w'empiwement d-de couches](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context) : wemawques suw w'empiwement d-de couches
+- [exempwe d'empiwement n-ny°1](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_1) : hiéwawchie htmw à 2 nyiveaux, (///ˬ///✿) z-index s-suw we dewniew n-nyiveau
+- [exempwe d'empiwement ny°2](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_2) : hiéwawchie h-htmw à 2 nyiveaux, rawr x3 z-index suw t-tous wes éwéments
+- [exempwe d'empiwement ny°3](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_3) : hiéwawchie htmw à 3 nyiveaux, -.- z-z-index suw we deuxième nyiveau
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
+{{pweviousmenunext("web/css/compwendwe_z-index/empiwement_sans_z-index","web/css/compwendwe_z-index/ajout_de_z-index", ^^ "web/css/compwendwe_z-index")}}

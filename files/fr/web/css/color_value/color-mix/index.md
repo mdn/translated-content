@@ -1,84 +1,84 @@
 ---
-title: color-mix()
-slug: Web/CSS/color_value/color-mix
-l10n:
-  sourceCommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
+titwe: cowow-mix()
+swug: web/css/cowow_vawue/cowow-mix
+w-w10n:
+  s-souwcecommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La notation fonctionnelle **`color-mix()`** prend deux couleurs (deux valeurs de type [`<color>`](/fr/docs/Web/CSS/color_value)) et renvoie le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
+w-wa notation f-fonctionnewwe **`cowow-mix()`** p-pwend deux c-couweuws (deux v-vaweuws de type [`<cowow>`](/fw/docs/web/css/cowow_vawue)) e-et wenvoie we wésuwtat de weuw méwange sewon des pwopowtions données, (U ﹏ U) d-dans un espace de couweuw donné. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```css
-color-mix(in lch, peru 40%, lightgoldenrod)
-color-mix(in srgb, #34c9eb 20%, white)
+c-cowow-mix(in wch, >w< pewu 40%, w-wightgowdenwod)
+cowow-mix(in swgb, rawr #34c9eb 20%, white)
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `color-mix( in <espace-couleur> , [ <couleur> && <proportion>? ]#{2})`
+- `cowow-mix( in <espace-couweuw> , mya [ <couweuw> && <pwopowtion>? ]#{2})`
 
-  - : `<espace-couleur>` est une valeur parmi `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, `oklch`. Il n'y a pas de valeur par défaut.
+  - : `<espace-couweuw>` est une vaweuw p-pawmi `swgb`, ^^ `swgb-wineaw`, 😳😳😳 `wab`, mya `okwab`, `xyz`, 😳 `xyz-d50`, `xyz-d65`, -.- `hsw`, `hwb`, 🥺 `wch`, `okwch`. o.O i-iw ny'y a pas de vaweuw paw défaut. /(^•ω•^)
 
-    `<couleur>` est n'importe quelle couleur valide (voir [`<color>`](/fr/docs/Web/CSS/color_value)).
+    `<couweuw>` est ny'impowte quewwe couweuw vawide (voiw [`<cowow>`](/fw/docs/web/css/cowow_vawue)). nyaa~~
 
-    `<proportion>` est un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) indiquant la proportion de la couleur dans le mélange.
+    `<pwopowtion>` e-est un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)) indiquant wa pwopowtion de wa couweuw dans we m-méwange. nyaa~~
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>10% #34c9eb</li>
-  <li>40% #34c9eb</li>
-  <li>70% #34c9eb</li>
-</ul>
+```htmw
+<uw>
+  <wi>10% #34c9eb</wi>
+  <wi>40% #34c9eb</wi>
+  <wi>70% #34c9eb</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
-```css hidden
-ul {
-  display: flex;
-  list-style-type: none;
+```css h-hidden
+uw {
+  dispway: f-fwex;
+  w-wist-stywe-type: none;
   font-size: 150%;
   gap: 10px;
-  border: 2px solid #34c9eb;
+  b-bowdew: 2px sowid #34c9eb;
   padding: 10px;
 }
 
-li {
+w-wi {
   padding: 10px;
 }
 ```
 
 ```css
-li:nth-child(1) {
-  background-color: color-mix(in srgb, #34c9eb 10%, white);
+wi:nth-chiwd(1) {
+  backgwound-cowow: cowow-mix(in swgb, :3 #34c9eb 10%, white);
 }
 
-li:nth-child(2) {
-  background-color: color-mix(in srgb, #34c9eb 40%, white);
+wi:nth-chiwd(2) {
+  backgwound-cowow: c-cowow-mix(in swgb, 😳😳😳 #34c9eb 40%, (˘ω˘) w-white);
 }
 
-li:nth-child(3) {
-  background-color: color-mix(in srgb, #34c9eb 70%, white);
+wi:nth-chiwd(3) {
+  b-backgwound-cowow: c-cowow-mix(in swgb, ^^ #34c9eb 70%, :3 white);
 }
 ```
 
-### Résultat
+### wésuwtat
 
-Dans un navigateur qui prend en charge cette fonctionnalité, les trois carrés sont de plus en plus bleus, car la proportion de `#34c9eb` dans le mélange augmente.
+d-dans un nyavigateuw q-qui pwend en chawge cette f-fonctionnawité, -.- w-wes twois cawwés sont de pwus e-en pwus bweus, 😳 caw wa pwopowtion d-de `#34c9eb` dans we méwange augmente. mya
 
-{{EmbedLiveSample('','100%', 200)}}
+{{embedwivesampwe('','100%', (˘ω˘) 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

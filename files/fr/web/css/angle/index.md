@@ -1,117 +1,117 @@
 ---
-title: <angle>
-slug: Web/CSS/angle
+titwe: <angwe>
+swug: web/css/angwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de données CSS **`<angle>`** permet de représenter des angles exprimés en degrés, radians, grades ou tours. Les angles positifs sont des angles allant dans le sens horaire et les valeurs négatives sont des angles allant dans le sens anti-horaire. Les angles sont par exemples utilisés pour les transformations CSS ({{cssxref("transform")}}) ou les dégradés ({{cssxref("&lt;gradient&gt;")}}).
+w-we type de d-données css **`<angwe>`** p-pewmet d-de wepwésentew d-des angwes expwimés e-en degwés, σωσ w-wadians, gwades o-ou touws. >w< wes angwes positifs sont des angwes awwant dans we sens howaiwe et w-wes vaweuws nyégatives sont des angwes awwant d-dans we sens anti-howaiwe. wes a-angwes sont paw exempwes utiwisés pouw wes twansfowmations css ({{cssxwef("twansfowm")}}) o-ou wes dégwadés ({{cssxwef("&wt;gwadient&gt;")}}). 😳😳😳
 
-{{InteractiveExample("CSS Demo: &lt;angle&gt;")}}
+{{intewactiveexampwe("css d-demo: &wt;angwe&gt;")}}
 
-```css interactive-example-choice
-transform: rotate(45deg);
+```css i-intewactive-exampwe-choice
+twansfowm: wotate(45deg);
 ```
 
-```css interactive-example-choice
-transform: rotate(3.1416rad);
+```css intewactive-exampwe-choice
+twansfowm: w-wotate(3.1416wad);
 ```
 
-```css interactive-example-choice
-transform: rotate(-50grad);
+```css intewactive-exampwe-choice
+twansfowm: wotate(-50gwad);
 ```
 
-```css interactive-example-choice
-transform: rotate(1.75turn);
+```css intewactive-exampwe-choice
+twansfowm: w-wotate(1.75tuwn);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This box can rotate to different angles.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement">
+    this box can wotate t-to diffewent angwes. OwO
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #0118f3;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #0118f3;
+  p-padding: 0.75em;
   width: 180px;
   height: 120px;
-  color: white;
+  cowow: white;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
-Pour exprimer une valeur de ce type, on utilisera une valeur de type {{cssxref("&lt;number&gt;")}} (un nombre), immédiatement suivie d'une unité `deg`, `grad`, `rad` ou `turn`. Comme pour les autres dimensions présentes en CSS, il n'y a pas d'espace entre le littéral réservé à l'unité et le nombre qui indique la mesure de l'angle. L'unité est facultative pour la valeur `0` (bien qu'il soit recommandé d'écrire une unité pour des raisons de lisibilité et de cohérence). Il est possible d'utiliser un signe `+` ou `-` en préfixe.
+pouw expwimew une v-vaweuw de ce type, 😳 on utiwisewa u-une vaweuw de t-type {{cssxwef("&wt;numbew&gt;")}} (un n-nyombwe), 😳😳😳 immédiatement suivie d'une unité `deg`, (˘ω˘) `gwad`, ʘwʘ `wad` ou `tuwn`. ( ͡o ω ͡o ) c-comme pouw wes a-autwes dimensions pwésentes e-en css, o.O iw ny'y a-a pas d'espace entwe we wittéwaw w-wésewvé à w'unité et we nyombwe q-qui indique wa mesuwe de w'angwe. >w< w'unité e-est facuwtative pouw wa vaweuw `0` (bien q-qu'iw soit wecommandé d-d'écwiwe une unité p-pouw des waisons de wisibiwité et de cohéwence). 😳 iw est possibwe d'utiwisew un signe `+` ou `-` en pwéfixe. 🥺
 
-Pour les propriétés statiques et pour une unité donnée, un même angle pourra être représenté par plusieurs valeurs, ainsi `90deg`, `-270deg`, `1turn` et `4turn` représentent le même angle. En revanche, pour les propriétés dynamiques (par exemple {{cssxref("transition")}} sur {{cssxref("transform")}}), l'effet obtenu sera différent.
+p-pouw wes pwopwiétés s-statiques et pouw une u-unité donnée, u-un même angwe p-pouwwa êtwe wepwésenté paw pwusieuws vaweuws, rawr x3 ainsi `90deg`, o.O `-270deg`, `1tuwn` e-et `4tuwn` wepwésentent we même angwe. rawr en wevanche, pouw wes pwopwiétés d-dynamiques (paw exempwe {{cssxwef("twansition")}} s-suw {{cssxwef("twansfowm")}}), ʘwʘ w-w'effet obtenu s-sewa difféwent. 😳😳😳
 
-### Unités
+### unités
 
-Pour représenter une valeur dans le type `<angle>`, on pourra utiliser les unités suivantes :
+pouw w-wepwésentew u-une vaweuw dans w-we type `<angwe>`, ^^;; o-on pouwwa utiwisew wes unités suivantes :
 
 - `deg`
-  - : Cette unité permet de représenter un angle exprimé en [degrés](<https://fr.wikipedia.org/wiki/Degré_(angle)>). Un cercle complet correspondra à `360deg`. Voici des valeurs pour l'exemple : `0deg`, `90deg`, `360deg`.
-- `grad`
-  - : Cette unité permet de représenter un angle exprimé en [grades](<https://fr.wikipedia.org/wiki/Grade_(angle)>). Un cercle complet correspondra à `400grad`. Voici des valeurs pour l'exemple : `0grad`, `100grad`, `400grad`.
-- `rad`
-  - : Cette unité permet de représenter un angle exprimé en [radians](https://fr.wikipedia.org/wiki/Radian). Un cercle complet correspondra à 2π radians (soit environ `6.2832rad`). Un radian correspond à 180/π degrés. Voici des valeurs pour l'exemple : `0rad`, `1.0708rad`, `6.2832rad`.
-- `turn`
-  - : Cette unité représente le nombre de tours qu'effectue l'angle. Un cercle complet correspondra à `1turn`. Voici des valeurs pour l'exemple : `0turn`, `0.25turn`, `1turn`.
+  - : c-cette u-unité pewmet d-de wepwésentew u-un angwe expwimé e-en [degwés](<https://fw.wikipedia.owg/wiki/degwé_(angwe)>). un cewcwe compwet cowwespondwa à `360deg`. o.O voici d-des vaweuws pouw w'exempwe : `0deg`, (///ˬ///✿) `90deg`, σωσ `360deg`.
+- `gwad`
+  - : cette unité pewmet de wepwésentew un angwe expwimé e-en [gwades](<https://fw.wikipedia.owg/wiki/gwade_(angwe)>). nyaa~~ un cewcwe compwet cowwespondwa à `400gwad`. ^^;; voici d-des vaweuws pouw w-w'exempwe : `0gwad`, ^•ﻌ•^ `100gwad`, σωσ `400gwad`. -.-
+- `wad`
+  - : c-cette unité pewmet de w-wepwésentew un angwe expwimé e-en [wadians](https://fw.wikipedia.owg/wiki/wadian). u-un cewcwe compwet cowwespondwa à 2π wadians (soit enviwon `6.2832wad`). ^^;; un wadian cowwespond à 180/π d-degwés. XD voici des v-vaweuws pouw w'exempwe : `0wad`, 🥺 `1.0708wad`, `6.2832wad`. òωó
+- `tuwn`
+  - : cette u-unité wepwésente w-we nyombwe de touws qu'effectue w'angwe. (ˆ ﻌ ˆ)♡ un cewcwe c-compwet cowwespondwa à `1tuwn`. -.- v-voici des vaweuws pouw w'exempwe : `0tuwn`, :3 `0.25tuwn`, ʘwʘ `1tuwn`. 🥺
 
-Même si toutes les unités exprimeront une valeur nulle identique, l'unité **doit** **être indiquée** afin de lever l'ambiguïté entre un angle et une valeur de longueur (type {{cssxref("&lt;length&gt;")}}).
+m-même si t-toutes wes unités expwimewont une vaweuw nyuwwe identique, >_< w'unité **doit** **êtwe indiquée** a-afin de wevew w-w'ambiguïté e-entwe un angwe et une vaweuw de w-wongueuw (type {{cssxwef("&wt;wength&gt;")}}). ʘwʘ
 
-## Exemples
+## e-exempwes
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <td><img src="angle90.png" /></td>
+    <tw>
+      <td><img swc="angwe90.png" /></td>
       <td>
         <p>
-          Un angle droit orienté dans le sens horaire :
-          <code>90deg = 100grad = 0.25turn ≈ 1.5708rad</code>
+          u-un angwe dwoit owienté dans we sens howaiwe :
+          <code>90deg = 100gwad = 0.25tuwn ≈ 1.5708wad</code>
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><img src="angle180.png" /></td>
+    </tw>
+    <tw>
+      <td><img swc="angwe180.png" /></td>
       <td>
-        Un angle plat orienté dans le sens horaire :
-        <code>180deg = 200grad = 0.5turn ≈ 3.1416rad</code>
+        un angwe p-pwat owienté d-dans we sens howaiwe :
+        <code>180deg = 200gwad = 0.5tuwn ≈ 3.1416wad</code>
       </td>
-    </tr>
-    <tr>
-      <td><img src="angleminus90.png" /></td>
+    </tw>
+    <tw>
+      <td><img swc="angweminus90.png" /></td>
       <td>
-        Un angle droit orienté dans le sens anti-horaire :
-        <code>-90deg = -100grad = -0.25turn ≈ -1.5708rad</code>
+        un angwe dwoit o-owienté dans w-we sens anti-howaiwe :
+        <code>-90deg = -100gwad = -0.25tuwn ≈ -1.5708wad</code>
       </td>
-    </tr>
-    <tr>
-      <td><img src="angle0.png" /></td>
+    </tw>
+    <tw>
+      <td><img swc="angwe0.png" /></td>
       <td>
-        <p>Un angle nul : <code>0 = 0deg = 0grad = 0turn = 0rad</code></p>
-        <div class="note">
+        <p>un angwe nyuw : <code>0 = 0deg = 0gwad = 0tuwn = 0wad</code></p>
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong>Si, dans l'absolu, on peut exprimer la valeur
-            nulle sans unité, il est fortement recommandé d'indiquer l'unité
-            afin de lever toute ambiguïté possible entre les angles et les
-            longueurs.
+            <stwong>note :</stwong>si, (˘ω˘) dans w'absowu, (✿oωo) on peut expwimew wa vaweuw
+            nyuwwe sans unité, (///ˬ///✿) i-iw est fowtement wecommandé d'indiquew w'unité
+            a-afin de wevew toute a-ambiguïté possibwe entwe wes angwes et wes
+            wongueuws. rawr x3
           </p>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

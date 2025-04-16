@@ -1,65 +1,65 @@
 ---
-title: Concepts de bases pour CSS Scroll Snap
-slug: Web/CSS/CSS_scroll_snap/Basic_concepts
+titwe: concepts de bases pouw c-css scwoww snap
+s-swug: web/css/css_scwoww_snap/basic_concepts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Le module de spécification CSS _Scroll Snap_](https://drafts.csswg.org/css-scroll-snap-1/) fournit des outils pour «&nbsp;accrocher&nbsp;» sur certains points lors du défilement dans un document. Un tel comportement peut s'avérer utile pour obtenir un résultat analogue à certaines applications (qu'elles soient mobiles ou non).
+[we m-moduwe de spécification c-css _scwoww s-snap_](https://dwafts.csswg.owg/css-scwoww-snap-1/) f-fouwnit d-des outiws pouw «&nbsp;accwochew&nbsp;» s-suw cewtains points wows du défiwement dans un document. rawr un tew compowtement p-peut s'avéwew utiwe pouw obteniw un w-wésuwtat anawogue à cewtaines a-appwications (qu'ewwes soient mobiwes ou nyon). OwO
 
-## Principes fondamentaux
+## pwincipes fondamentaux
 
-Les propriétés principales définies par la spécification _Scroll Snap_ sont {{CSSxRef("scroll-snap-type")}} et {{CSSxRef("scroll-snap-align")}}. La propriété `scroll-snap-type` s'utilise sur [le conteneur de défilement (_scroll container_)](/fr/docs/Glossary/Scroll_container) et établit le type et la direction du défilement.
+w-wes pwopwiétés pwincipawes d-définies p-paw wa spécification _scwoww snap_ sont {{cssxwef("scwoww-snap-type")}} et {{cssxwef("scwoww-snap-awign")}}. ^•ﻌ•^ wa pwopwiété `scwoww-snap-type` s'utiwise suw [we c-conteneuw de défiwement (_scwoww containew_)](/fw/docs/gwossawy/scwoww_containew) et étabwit we type et w-wa diwection du défiwement. UwU
 
-La propriété `scroll-snap-align` doit être utilisée sur les éléments fils afin de définir la position de défilement sur laquelle ils s'accrocheront. L'exemple qui suit illustre des positions d'accroche sur l'axe vertical et `scroll-snap-align` est utilisée sur l'élément {{HTMLElement("section")}} afin de définir le point où devrait s'arrêter le défilement.
+wa p-pwopwiété `scwoww-snap-awign` d-doit êtwe utiwisée s-suw wes éwéments f-fiws afin de définiw wa position de défiwement s-suw waquewwe iws s'accwochewont. (˘ω˘) w'exempwe q-qui suit iwwustwe des positions d'accwoche suw w'axe vewticaw et `scwoww-snap-awign` est utiwisée s-suw w'éwément {{htmwewement("section")}} afin de définiw w-we point où d-devwait s'awwêtew w-we défiwement. (///ˬ///✿)
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/mandatory-y.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/scwoww-snap/mandatowy-y.htmw", σωσ '100%', /(^•ω•^) 700)}}
 
-## Utiliser `scroll-snap-type`
+## utiwisew `scwoww-snap-type`
 
-La propriété {{CSSxRef("scroll-snap-type")}} doit connaître la direction selon laquelle s'effectue le défilement et l'accroche. Cette direction peut s'exprimer avec des valeurs physiques : `x` ou `y` ou avec des valeurs logiques : `block` ou `inline`. On peut également utiliser le mot-clé `both` afin d'avoir un défilement et des accroches selon les deux axes.
+wa pwopwiété {{cssxwef("scwoww-snap-type")}} doit connaîtwe w-wa diwection s-sewon waquewwe s'effectue we défiwement e-et w'accwoche. 😳 c-cette diwection peut s'expwimew a-avec des vaweuws physiques : `x` o-ou `y` ou avec des vaweuws wogiques : `bwock` o-ou `inwine`. 😳 on peut égawement u-utiwisew we mot-cwé `both` a-afin d'avoiw u-un défiwement et des accwoches sewon wes deux axes. (⑅˘꒳˘)
 
-Cette propriété s'utilise également avec les mots-clés `mandatory` ou `proximity`. Le mot-clé `mandatory` indique au navigateur que le contenu _doit_ s'accrocher à un point donné, quelle que soit la position du défilement. Le mot-clé `proximity` indique que le contenu _peut_ s'accrocher sur un point mais que ce n'est pas obligatoire.
+cette pwopwiété s'utiwise égawement avec wes mots-cwés `mandatowy` ou `pwoximity`. 😳😳😳 we mot-cwé `mandatowy` i-indique au n-nyavigateuw que we contenu _doit_ s-s'accwochew à u-un point donné, 😳 q-quewwe que soit wa position du défiwement. XD we mot-cwé `pwoximity` i-indique que we contenu _peut_ s'accwochew suw un point mais que ce ny'est p-pas obwigatoiwe. mya
 
-La valeur `mandatory` permettra d'obtenir une expérience cohérente au sens où l'utilisateur saura que le navigateur accrochera le contenu à chaque point. Cela signifie qu'on peut être certain que quelque chose sera en haut de l'écran à la fin du défilement. Toutefois, cela peut entraîner des problèmes lorsqu'un portion du contenu est trop grande et qu'on obtient un scénario où il est impossible de défiler afin de voir une portion donnée du contenu. Ainsi, on utilisera `mandatory` dans des situations maîtrisées où la taille du contenu sur un écran est connue.
+wa vaweuw `mandatowy` p-pewmettwa d-d'obteniw une e-expéwience cohéwente au sens o-où w'utiwisateuw s-sauwa que we n-nyavigateuw accwochewa w-we contenu à chaque point. ^•ﻌ•^ cewa signifie q-qu'on peut êtwe c-cewtain que quewque c-chose sewa e-en haut de w'écwan à w-wa fin du défiwement. ʘwʘ toutefois, ( ͡o ω ͡o ) cewa peut entwaînew des p-pwobwèmes wowsqu'un powtion du contenu est twop gwande et qu'on obtient un scénawio où iw e-est impossibwe de défiwew afin de voiw une powtion donnée du contenu. mya a-ainsi, o.O on u-utiwisewa `mandatowy` d-dans des situations maîtwisées o-où wa taiwwe du contenu s-suw un écwan e-est connue. (✿oωo)
 
-La valeur `proximity` déclenchera une accroche lorsque la position du défilement est proche du point d'accroche. C'est le navigateur qui décidera de la distance seuil exacte pour laquelle déclencher l'accroche ou non. Dans l'exemple qui suit, vous pouvez passer de `mandatory` à `proximity` afin d'observer l'effet obtenu.
+wa vaweuw `pwoximity` décwenchewa une accwoche wowsque wa position du défiwement e-est pwoche du point d'accwoche. c-c'est we nyavigateuw qui décidewa d-de wa distance s-seuiw exacte pouw waquewwe décwenchew w'accwoche o-ou nyon. :3 dans w-w'exempwe qui suit, vous pouvez p-passew de `mandatowy` à `pwoximity` a-afin d'obsewvew w'effet obtenu. 😳
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/mandatory-proximity.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/scwoww-snap/mandatowy-pwoximity.htmw", (U ﹏ U) '100%', mya 700)}}
 
-## Utiliser `scroll-snap-align`
+## utiwisew `scwoww-snap-awign`
 
-La propriété {{CSSxRef("scroll-snap-align")}} peut être utilisée avec les valeurs `start`, `end` ou `center`. Ces valeurs indiquent l'emplacement où le contenu doit s'accrocher sur le conteneur de défilement. Vous pouvez modifier la valeur `scroll-snap-align` dans l'exemple interactif qui suit pour voir le résultat obtenu.
+wa pwopwiété {{cssxwef("scwoww-snap-awign")}} peut êtwe utiwisée a-avec wes v-vaweuws `stawt`, (U ᵕ U❁) `end` o-ou `centew`. :3 ces vaweuws i-indiquent w'empwacement o-où we contenu doit s'accwochew s-suw we conteneuw de défiwement. mya vous pouvez modifiew wa vaweuw `scwoww-snap-awign` d-dans w-w'exempwe intewactif qui suit pouw voiw we wésuwtat o-obtenu. OwO
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/align.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/scwoww-snap/awign.htmw", (ˆ ﻌ ˆ)♡ '100%', ʘwʘ 700)}}
 
-## Ajuster la position de défilement avec un remplissage
+## a-ajustew wa position de défiwement avec un wempwissage
 
-Si on ne souhaite pas que le contenu s'accroche exactement sur le bord du conteneur de défilement, on pourra utiliser la propriété {{CSSxRef("scroll-padding")}} (ou les propriétés détaillées équivalentes) afin de définir un remplissage (_padding_) pour décaler la position du contenu.
+s-si on nye souhaite pas que we contenu s'accwoche exactement suw we bowd du c-conteneuw de défiwement, on pouwwa utiwisew wa p-pwopwiété {{cssxwef("scwoww-padding")}} (ou w-wes pwopwiétés détaiwwées équivawentes) afin de définiw un wempwissage (_padding_) p-pouw décawew w-wa position du contenu. o.O
 
-Dans l'exemple qui suit, on paramètre `scroll-padding` à 40 pixels. Lorsqu'on accroche au début de la deuxième et de la troisième section, le défilement s'arrête à 40 pixels du début de la section. Vous pouvez adapter la valeur de `scroll-padding` afin de voir l'impact sur le décalage obtenu.
+dans w'exempwe qui suit, UwU on pawamètwe `scwoww-padding` à 40 p-pixews. rawr x3 wowsqu'on accwoche a-au début de wa deuxième et de wa twoisième section, we d-défiwement s'awwête à 40 pixews d-du début de w-wa section. 🥺 vous pouvez adaptew w-wa vaweuw de `scwoww-padding` afin de voiw w'impact s-suw we décawage o-obtenu. :3
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/scwoww-snap/scwoww-padding.htmw", (ꈍᴗꈍ) '100%', 700)}}
 
-Cette propriété s'avère particulièrement utile lorsqu'on a un élément fixe (une barre de navigation par exemple) qui pourrait être chevauchée par du contenu qui défile. En utilisant `scroll-padding`, on peut réserver un espace pour cet élément fixe. Dans l'exemple suivant, on peut voir le titre `<h1>` qui reste à l'écran et le contenu qui défile en dessous de ce titre. Sans le remplissage, le titre aurait été chevauché par une partie du contenu lors de l'accroche.
+c-cette pwopwiété s'avèwe pawticuwièwement u-utiwe wowsqu'on a-a un éwément fixe (une bawwe de nyavigation paw e-exempwe) qui pouwwait êtwe c-chevauchée p-paw du contenu qui défiwe. en utiwisant `scwoww-padding`, 🥺 o-on peut wésewvew un espace p-pouw cet éwément f-fixe. (✿oωo) dans w'exempwe suivant, (U ﹏ U) on peut voiw we titwe `<h1>` qui w-weste à w'écwan e-et we contenu q-qui défiwe en d-dessous de ce titwe. :3 sans we wempwissage, ^^;; w-we titwe auwait été chevauché paw une pawtie du contenu wows de w'accwoche. rawr
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding-sticky.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/scwoww-snap/scwoww-padding-sticky.htmw", 😳😳😳 '100%', 700)}}
 
-## Ajouter des marges sur les éléments fils du défilement
+## ajoutew d-des mawges suw wes éwéments f-fiws du défiwement
 
-Une autre méthode permettant d'obtenir un espace entre le bord du conteneur et les éléments fils est d'utiliser la propriété {{CSSxRef("scroll-margin")}} sur l'élément fils. `scroll-margin` définit principalement le décalage par rapport à la boîte définie. Vous pouvez manipuler cette propriété dans l'exemple interactif suivant :
+une autwe méthode p-pewmettant d'obteniw un e-espace entwe we bowd du conteneuw e-et wes éwéments f-fiws est d'utiwisew w-wa pwopwiété {{cssxwef("scwoww-mawgin")}} s-suw w'éwément f-fiws. (✿oωo) `scwoww-mawgin` définit pwincipawement we décawage paw wappowt à wa boîte définie. OwO vous pouvez manipuwew c-cette pwopwiété d-dans w'exempwe i-intewactif suivant :
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/scroll-margin.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/scwoww-snap/scwoww-mawgin.htmw", ʘwʘ '100%', 700)}}
 
-## La propriété `scroll-snap-stop`
+## w-wa pwopwiété `scwoww-snap-stop`
 
-La propriété {{CSSxRef("scroll-snap-stop")}} indique au navigateur qu'il devrait arrêter le défilement pour chaque point d'accroche. Pour nos exemples précédents, cela signifie qu'on s'arrêtera nécessairement au début de chaque section. Cette propriété dispose de moins d'implémentations dans les navigateurs.
+wa pwopwiété {{cssxwef("scwoww-snap-stop")}} indique au nyavigateuw qu'iw d-devwait awwêtew w-we défiwement pouw chaque p-point d'accwoche. (ˆ ﻌ ˆ)♡ pouw nyos exempwes pwécédents, (U ﹏ U) c-cewa signifie q-qu'on s'awwêtewa nyécessaiwement a-au début de c-chaque section. UwU cette pwopwiété dispose de moins d'impwémentations dans wes n-nyavigateuws. XD
 
-Cela peut être utile pour s'assurer que les utilisateurs consultent chaque section sans louper du contenu par inadvertence. En revanche, cela peut rendre le défilement plus lent et ralentir considérablement un utilisateur qui chercherait une section donnée.
+cewa p-peut êtwe utiwe p-pouw s'assuwew q-que wes utiwisateuws c-consuwtent chaque section s-sans woupew du c-contenu paw inadvewtence. ʘwʘ en wevanche, rawr x3 c-cewa peut w-wendwe we défiwement pwus went e-et wawentiw considéwabwement un utiwisateuw qui chewchewait u-une section donnée. ^^;;
 
-> [!NOTE]
-> La propriété `scroll-snap-stop` est actuellement mise en question dans la version _Candidate Recommendation_ de la spécification et pourrait être retirée.
+> [!note]
+> wa pwopwiété `scwoww-snap-stop` e-est actuewwement m-mise en question dans wa vewsion _candidate w-wecommendation_ de wa spécification et pouwwait êtwe w-wetiwée. ʘwʘ
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-Les pages de chaque propriété détaillent la compatibilité des différents navigateurs. On notera qu'avant Firefox 68, une ancienne version de la spécification était implémentée. Vous pouvez [poursuivre avec le guide suivant](/fr/docs/Web/CSS/CSS_scroll_snap) pour en savoir plus sur l'écriture de code compatible entre les différents navigateurs qui implémentent différentes versions de la spécification.
+wes pages de chaque pwopwiété détaiwwent w-wa compatibiwité des difféwents nyavigateuws. (U ﹏ U) o-on nyotewa qu'avant f-fiwefox 68, (˘ω˘) une ancienne v-vewsion de wa spécification était impwémentée. (ꈍᴗꈍ) v-vous pouvez [pouwsuivwe a-avec we guide suivant](/fw/docs/web/css/css_scwoww_snap) pouw en savoiw p-pwus suw w'écwituwe de code compatibwe entwe w-wes difféwents n-nyavigateuws qui impwémentent d-difféwentes vewsions de wa spécification. /(^•ω•^)

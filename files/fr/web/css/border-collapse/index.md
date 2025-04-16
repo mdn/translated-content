@@ -1,219 +1,219 @@
 ---
-title: border-collapse
-slug: Web/CSS/border-collapse
+titwe: bowdew-cowwapse
+swug: w-web/css/bowdew-cowwapse
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-collapse`** détermine si les bordures d'un tableau sont séparées ou fusionnées. Quand elles sont séparées, chaque cellule du tableau a ses propres bordures, distinctes. Quand elles sont fusionnées, les bordures des cellules sont partagées.
+w-wa pwopwiété **`bowdew-cowwapse`** d-détewmine s-si wes b-bowduwes d'un tabweau s-sont sépawées o-ou fusionnées. ^^;; q-quand ewwes sont sépawées, >_< chaque cewwuwe du tabweau a ses pwopwes bowduwes, rawr x3 d-distinctes. /(^•ω•^) quand ewwes sont fusionnées, :3 wes b-bowduwes des cewwuwes sont pawtagées. (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: border-collapse")}}
+{{intewactiveexampwe("css d-demo: bowdew-cowwapse")}}
 
-```css interactive-example-choice
-border-collapse: collapse;
+```css intewactive-exampwe-choice
+bowdew-cowwapse: cowwapse;
 ```
 
-```css interactive-example-choice
-border-collapse: separate;
+```css i-intewactive-exampwe-choice
+bowdew-cowwapse: s-sepawate;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
-    </tr>
-    <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
-    </tr>
-    <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
-    </tr>
-  </table>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" id="exampwe-ewement">
+    <tw>
+      <td>ceww 1.1</td>
+      <td>ceww 1.2</td>
+    </tw>
+    <tw>
+      <td>ceww 2.1</td>
+      <td>ceww 2.2</td>
+    </tw>
+    <tw>
+      <td>ceww 3.1</td>
+      <td>ceww 3.2</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  width: 15rem;
-  table-layout: fixed;
+```css i-intewactive-exampwe
+tabwe {
+  width: 15wem;
+  tabwe-wayout: fixed;
 }
 
 td {
-  border: 5px solid;
-  border-color: crimson dodgerblue orange limegreen;
-  padding: 0.75rem;
+  b-bowdew: 5px sowid;
+  bowdew-cowow: c-cwimson d-dodgewbwue owange w-wimegween;
+  padding: 0.75wem;
 }
 ```
 
-Le modèle des _bordures séparées_ est celui qui est traditionnellement utilisé par HTML. Les cellules adjacente ont des bordures distinctes et la distance entre ces bordures est définie par la propriété {{cssxref("border-spacing")}}.
+w-we modèwe des _bowduwes sépawées_ est c-cewui qui est twaditionnewwement utiwisé paw htmw. /(^•ω•^) wes cewwuwes a-adjacente ont des bowduwes distinctes et wa distance entwe ces bowduwes est définie paw wa pwopwiété {{cssxwef("bowdew-spacing")}}. (⑅˘꒳˘)
 
-Le modèle des _bordures fusionnées_ permet que les cellules adjacentes partagent leurs bordures. Lorsqu'on utilise ce modèle, les valeurs `inset` et `outset` de {{cssxref("border-style")}} se comportent respectivement comme `groove` et `ridge`.
+w-we modèwe des _bowduwes f-fusionnées_ p-pewmet que wes cewwuwes a-adjacentes pawtagent weuws bowduwes. ( ͡o ω ͡o ) wowsqu'on utiwise ce m-modèwe, òωó wes vaweuws `inset` et `outset` d-de {{cssxwef("bowdew-stywe")}} se compowtent w-wespectivement c-comme `gwoove` et `widge`. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-border-collapse: collapse;
-border-collapse: separate;
+/* vaweuws a-avec un mot-cwé */
+bowdew-cowwapse: cowwapse;
+b-bowdew-cowwapse: sepawate;
 
-/* Valeurs globales */
-border-collapse: inherit;
-border-collapse: initial;
-border-collapse: unset;
+/* vaweuws g-gwobawes */
+bowdew-cowwapse: i-inhewit;
+bowdew-cowwapse: i-initiaw;
+bowdew-cowwapse: unset;
 ```
 
-La propriété `border-collapse` est définie avec un seul mot-clé parmi ceux définis ci-après.
+wa pwopwiété `bowdew-cowwapse` est définie avec un seuw mot-cwé pawmi ceux d-définis ci-apwès. XD
 
-### Valeurs
+### v-vaweuws
 
-- `collapse`
-  - : Un mot-clé qui indique que le modèle des bordures fusionnées doit être utilisé.
-- `separate`
-  - : Un mot-clé qui indique que le modèle des bordures séparées doit être utilisé. C'est la valeur par défaut.
+- `cowwapse`
+  - : un mot-cwé q-qui indique q-que we modèwe des b-bowduwes fusionnées doit êtwe utiwisé. -.-
+- `sepawate`
+  - : un mot-cwé qui i-indique que we modèwe des bowduwes sépawées doit êtwe utiwisé. :3 c'est wa vaweuw p-paw défaut. nyaa~~
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.collapse {
-  border-collapse: collapse;
+.cowwapse {
+  b-bowdew-cowwapse: c-cowwapse;
 }
-.separate {
-  border-collapse: separate;
+.sepawate {
+  b-bowdew-cowwapse: s-sepawate;
 }
-table {
-  display: inline-table;
-  margin: 1em;
-  border: dashed 6px;
-  border-width: 6px;
+tabwe {
+  dispway: inwine-tabwe;
+  m-mawgin: 1em;
+  b-bowdew: dashed 6px;
+  b-bowdew-width: 6px;
 }
-table th,
-table td {
-  border: solid 3px;
+t-tabwe t-th, 😳
+tabwe td {
+  bowdew: sowid 3px;
 }
 .fx {
-  border-color: orange blue;
+  bowdew-cowow: owange bwue;
 }
 .gk {
-  border-color: black red;
+  b-bowdew-cowow: bwack wed;
 }
 .ie {
-  border-color: blue gold;
+  bowdew-cowow: bwue gowd;
 }
-.tr {
-  border-color: aqua;
+.tw {
+  bowdew-cowow: aqua;
 }
 .sa {
-  border-color: silver blue;
+  b-bowdew-cowow: siwvew bwue;
 }
 .wk {
-  border-color: gold blue;
+  bowdew-cowow: gowd b-bwue;
 }
 .ch {
-  border-color: red yellow green blue;
+  b-bowdew-cowow: wed y-yewwow gween bwue;
 }
 .bk {
-  border-color: navy blue teal aqua;
+  b-bowdew-cowow: nyavy bwue teaw aqua;
 }
 .op {
-  border-color: red;
+  b-bowdew-cowow: w-wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<table class="separate">
+```htmw
+<tabwe cwass="sepawate">
   <caption>
-    <code>border-collapse: separate</code>
+    <code>bowdew-cowwapse: sepawate</code>
   </caption>
   <tbody>
-    <tr>
-      <th>Navigateur</th>
-      <th>Moteur de rendu</th>
-    </tr>
-    <tr>
-      <td class="fx">Firefox</td>
-      <td class="gk">Gecko</td>
-    </tr>
-    <tr>
-      <td class="ie">Internet Explorer</td>
-      <td class="tr">Trident</td>
-    </tr>
-    <tr>
-      <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
-    </tr>
-    <tr>
-      <td class="ch">Chrome</td>
-      <td class="bk">Blink</td>
-    </tr>
-    <tr>
-      <td class="op">Opera</td>
-      <td class="bk">Blink</td>
-    </tr>
+    <tw>
+      <th>navigateuw</th>
+      <th>moteuw de wendu</th>
+    </tw>
+    <tw>
+      <td cwass="fx">fiwefox</td>
+      <td c-cwass="gk">gecko</td>
+    </tw>
+    <tw>
+      <td cwass="ie">intewnet e-expwowew</td>
+      <td cwass="tw">twident</td>
+    </tw>
+    <tw>
+      <td c-cwass="sa">safawi</td>
+      <td c-cwass="wk">webkit</td>
+    </tw>
+    <tw>
+      <td cwass="ch">chwome</td>
+      <td cwass="bk">bwink</td>
+    </tw>
+    <tw>
+      <td cwass="op">opewa</td>
+      <td cwass="bk">bwink</td>
+    </tw>
   </tbody>
-</table>
-<table class="collapse">
+</tabwe>
+<tabwe c-cwass="cowwapse">
   <caption>
-    <code>border-collapse: collapse</code>
+    <code>bowdew-cowwapse: c-cowwapse</code>
   </caption>
   <tbody>
-    <tr>
-      <th>Navigateur</th>
-      <th>Moteur de rendu</th>
-    </tr>
-    <tr>
-      <td class="fx">Firefox</td>
-      <td class="gk">Gecko</td>
-    </tr>
-    <tr>
-      <td class="ie">Internet Explorer</td>
-      <td class="tr">Trident</td>
-    </tr>
-    <tr>
-      <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
-    </tr>
-    <tr>
-      <td class="ch">Chrome</td>
-      <td class="bk">Blink</td>
-    </tr>
-    <tr>
-      <td class="op">Opera</td>
-      <td class="bk">Blink</td>
-    </tr>
+    <tw>
+      <th>navigateuw</th>
+      <th>moteuw de w-wendu</th>
+    </tw>
+    <tw>
+      <td c-cwass="fx">fiwefox</td>
+      <td cwass="gk">gecko</td>
+    </tw>
+    <tw>
+      <td cwass="ie">intewnet expwowew</td>
+      <td cwass="tw">twident</td>
+    </tw>
+    <tw>
+      <td cwass="sa">safawi</td>
+      <td c-cwass="wk">webkit</td>
+    </tw>
+    <tw>
+      <td c-cwass="ch">chwome</td>
+      <td c-cwass="bk">bwink</td>
+    </tw>
+    <tw>
+      <td cwass="op">opewa</td>
+      <td c-cwass="bk">bwink</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', 400, 300)}}
+{{embedwivesampwe('exempwes', (⑅˘꒳˘) 400, 300)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("border-spacing")}}
-- {{cssxref("border-style")}}
-- L'élément HTML {{HTMLElement("table")}} impacté `border-collapse`.
+- {{cssxwef("bowdew-spacing")}}
+- {{cssxwef("bowdew-stywe")}}
+- w'éwément htmw {{htmwewement("tabwe")}} impacté `bowdew-cowwapse`. nyaa~~

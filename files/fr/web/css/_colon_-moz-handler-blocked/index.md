@@ -1,19 +1,19 @@
 ---
-title: :-moz-handler-blocked
-slug: Web/CSS/:-moz-handler-blocked
+titwe: :-moz-handwew-bwocked
+swug: web/css/:-moz-handwew-bwocked
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La pseudo-classe **`:-moz-handler-blocked`** permet de cibler un élément qui ne peut pas être affiché car le gestionnaire associé a été bloqué par l'utilisateur.
+w-wa pseudo-cwasse **`:-moz-handwew-bwocked`** p-pewmet d-de cibwew un éwément q-qui nye peut p-pas êtwe affiché c-caw we gestionnaiwe a-associé a-a été bwoqué paw w'utiwisateuw. mya
 
-Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
+cette pseudo-cwasse est pwincipawement destinée a-aux dévewoppeuws de thèmes. mya
 
-## Spécifications
+## spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-cette pseudo-cwasse e-est une pseudo-cwasse pwopwiétaiwe wiée à gecko/moziwwa et nye f-fait pawtie d'aucune spécification. 😳
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{cssxref(":-moz-handler-crashed")}}
-- {{cssxref(":-moz-handler-disabled")}}
+- {{cssxwef(":-moz-handwew-cwashed")}}
+- {{cssxwef(":-moz-handwew-disabwed")}}

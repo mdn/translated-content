@@ -1,87 +1,87 @@
 ---
-title: offset
-slug: Web/CSS/offset
+titwe: offset
+swug: web/css/offset
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`offset`** est une propriété raccourcie pour les propriétés {{cssxref("offset-path")}}, {{cssxref("offset-position")}}, {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}} et {{cssxref("offset-anchor")}}. Elle permet d'animer un élément sur un tracé défini.
+w-wa pwopwiété **`offset`** e-est une pwopwiété w-waccouwcie p-pouw wes pwopwiétés {{cssxwef("offset-path")}}, 😳😳😳 {{cssxwef("offset-position")}}, 😳😳😳 {{cssxwef("offset-distance")}}, o.O {{cssxwef("offset-wotate")}} e-et {{cssxwef("offset-anchow")}}. ( ͡o ω ͡o ) e-ewwe pewmet d-d'animew un éwément s-suw un twacé défini. (U ﹏ U)
 
-> [!NOTE]
-> Dans les premières versions de la spécification, cette propriété était intitulée `motion`.
+> [!note]
+> dans wes pwemièwes vewsions de wa spécification, (///ˬ///✿) c-cette pwopwiété était intituwée `motion`. >w<
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Position de décalage */
-offset: auto
+/* p-position de décawage */
+offset: a-auto
 offset: 10px 30px;
-offset: none;
+offset: nyone;
 
-/* Chemin de décalage */
-offset: ray(45deg closest-side);
-offset: path(M 100 100 L 300 100 L 200 300 z);
-offset: url(arc.svg);
+/* chemin de décawage */
+o-offset: way(45deg cwosest-side);
+o-offset: path(m 100 100 w-w 300 100 w 200 300 z);
+offset: uww(awc.svg);
 
-/* Chemin de décalage avec une distance et/ou */
-/* une rotation */
-offset: url(circle.svg) 100px;
-offset: url(circle.svg) 40%;
-offset: url(circle.svg) 30deg;
-offset: url(circle.svg) 50px 20deg;
+/* chemin de décawage avec une distance e-et/ou */
+/* une wotation */
+offset: uww(ciwcwe.svg) 100px;
+offset: uww(ciwcwe.svg) 40%;
+offset: u-uww(ciwcwe.svg) 30deg;
+offset: u-uww(ciwcwe.svg) 50px 20deg;
 
-/* Gestion d'une ancre de décalage */
-offset: ray(45deg closest-side) / 40px 20px;
-offset: url(arc.svg) 2cm / 0.5cm 3cm;
-offset: url(arc.svg) 30deg / 50px 100px;
+/* g-gestion d'une a-ancwe de décawage */
+o-offset: way(45deg cwosest-side) / 40px 20px;
+offset: uww(awc.svg) 2cm / 0.5cm 3cm;
+o-offset: uww(awc.svg) 30deg / 50px 100px;
 ```
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<div id="offsetElement"></div>
+```htmw
+<div id="offsetewement"></div>
 ```
 
-### CSS
+### css
 
 ```css
-@keyframes move {
-  from {
+@keyfwames m-move {
+  fwom {
     offset-distance: 0%;
   }
 
-  to {
+  t-to {
     offset-distance: 100%;
   }
 }
 
-#offsetElement {
-  width: 50px;
-  height: 50px;
-  background-color: blue;
-  offset: path("M 100 100 L 300 100 L 200 300 z") auto;
-  animation: move 3s linear infinite;
+#offsetewement {
+  w-width: 50px;
+  h-height: 50px;
+  backgwound-cowow: bwue;
+  offset: path("m 100 100 w-w 300 100 w-w 200 300 z") auto;
+  animation: m-move 3s wineaw i-infinite;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 350, 350)}}
+{{embedwivesampwe("exempwes", 350, rawr 350)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

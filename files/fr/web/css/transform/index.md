@@ -1,164 +1,164 @@
 ---
-title: transform
-slug: Web/CSS/transform
+titwe: twansfowm
+swug: web/css/twansfowm
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`transform`** modifie l'espace de coordonnées utilisé pour la mise en forme visuelle. Grâce à cette propriété, il est possible de translater les éléments, de les tourner, d'appliquer des homothéties, de les distordre pour en changer la perspective.
+w-wa p-pwopwiété **`twansfowm`** m-modifie w-w'espace de c-coowdonnées utiwisé p-pouw wa mise e-en fowme visuewwe. -.- g-gwâce à cette pwopwiété, ^^ iw est possibwe de twanswatew wes éwéments, (⑅˘꒳˘) d-de wes touwnew, nyaa~~ d'appwiquew des homothéties, /(^•ω•^) de w-wes distowdwe pouw en changew w-wa pewspective. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: transform")}}
+{{intewactiveexampwe("css demo: twansfowm")}}
 
-```css interactive-example-choice
-transform: matrix(1, 2, 3, 4, 5, 6);
+```css intewactive-exampwe-choice
+t-twansfowm: matwix(1, 😳😳😳 2, >w< 3, 4, 5, 6);
 ```
 
-```css interactive-example-choice
-transform: translate(120px, 50%);
+```css intewactive-exampwe-choice
+t-twansfowm: t-twanswate(120px, XD 50%);
 ```
 
-```css interactive-example-choice
-transform: scale(2, 0.5);
+```css intewactive-exampwe-choice
+twansfowm: scawe(2, o.O 0.5);
 ```
 
-```css interactive-example-choice
-transform: rotate(0.5turn);
+```css intewactive-exampwe-choice
+t-twansfowm: wotate(0.5tuwn);
 ```
 
-```css interactive-example-choice
-transform: skew(30deg, 20deg);
+```css intewactive-exampwe-choice
+twansfowm: skew(30deg, 20deg);
 ```
 
-```css interactive-example-choice
-transform: scale(0.5) translate(-100%, -100%);
+```css i-intewactive-exampwe-choice
+twansfowm: scawe(0.5) t-twanswate(-100%, mya -100%);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont `position: fixed;` ou `position: absolute;`.
+s-si wa pwopwiété est difféwente de `none`, 🥺 u-un [contexte d'empiwement](/fw/docs/web/css/compwendwe_z-index/w'empiwement_de_couches) sewa cwéé. ^^;; dans ce cas, :3 w'éwément agiwa comme we b-bwoc engwobant pouw wes éwéments q-qu'iw contient e-et qui ont `position: f-fixed;` ou `position: absowute;`.
 
-> [!WARNING]
-> Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Visual_formatting_model#les_éléments_en_ligne_et_les_boîtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Element/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Element/colgroup) ne peuvent pas être transformés.
+> [!wawning]
+> seuws c-cewtains éwéments p-peuvent êtwe twansfowmés. (U ﹏ U) w-wes éwéments d-dont wa disposition est géwée a-avec des [boîtes en wigne nyon-wempwacées](/fw/docs/web/css/visuaw_fowmatting_modew#wes_éwéments_en_wigne_et_wes_boîtes_en_wigne), OwO d-des [cowonnes de tabweau](/fw/docs/web/htmw/ewement/cow) ou des [gwoupes d-de cowonnes de tabweau](/fw/docs/web/htmw/ewement/cowgwoup) n-nye peuvent pas êtwe t-twansfowmés. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Keyword values */
-transform: none;
+/* keywowd vawues */
+twansfowm: nyone;
 
-/* Valeurs fonctionnelles */
-transform: matrix(1, 2, 3, 4, 5, 6);
-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+/* vaweuws fonctionnewwes */
+twansfowm: matwix(1, (ˆ ﻌ ˆ)♡ 2, 3, 4, XD 5, 6);
+t-twansfowm: matwix3d(1, (ˆ ﻌ ˆ)♡ 0, 0, 0, 0, 1, 0, ( ͡o ω ͡o ) 0, 0, 0, 1, 0, rawr x3 0, 0, 0, 1);
 
-transform: translate(12px, 50%);
-transform: translateX(2em);
-transform: translateY(3in);
-transform: translateZ(2px);
-transform: translate3d(12px, 50%, 3em);
+t-twansfowm: twanswate(12px, nyaa~~ 50%);
+t-twansfowm: t-twanswatex(2em);
+t-twansfowm: twanswatey(3in);
+twansfowm: twanswatez(2px);
+twansfowm: twanswate3d(12px, >_< 50%, 3em);
 
-transform: scale(2, 0.5);
-transform: scaleX(2);
-transform: scaleY(0.5);
-transform: scaleZ(0.3);
-transform: scale3d(2.5, 1.2, 0.3);
+t-twansfowm: scawe(2, ^^;; 0.5);
+twansfowm: scawex(2);
+twansfowm: scawey(0.5);
+twansfowm: s-scawez(0.3);
+twansfowm: scawe3d(2.5, (ˆ ﻌ ˆ)♡ 1.2, 0.3);
 
-transform: skew(30deg, 20deg);
-transform: skewX(30deg);
-transform: skewY(1.07rad);
+t-twansfowm: s-skew(30deg, ^^;; 20deg);
+t-twansfowm: skewx(30deg);
+t-twansfowm: skewy(1.07wad);
 
-transform: rotate(0.5turn);
-transform: rotateX(10deg);
-transform: rotateY(10deg);
-transform: rotateZ(10deg);
-transform: rotate3d(1, 2, 3, 10deg);
+t-twansfowm: w-wotate(0.5tuwn);
+t-twansfowm: wotatex(10deg);
+twansfowm: wotatey(10deg);
+t-twansfowm: w-wotatez(10deg);
+t-twansfowm: w-wotate3d(1, (⑅˘꒳˘) 2, 3, rawr x3 10deg);
 
-transform: perspective(17px);
+twansfowm: p-pewspective(17px);
 
-/* Valeurs avec plusieurs fonctions */
-transform: translateX(10px) rotate(10deg) translateY(5px);
-transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+/* vaweuws avec pwusieuws fonctions */
+twansfowm: t-twanswatex(10px) wotate(10deg) twanswatey(5px);
+twansfowm: pewspective(500px) twanswate(10px, (///ˬ///✿) 0, 🥺 20px) wotatey(3deg);
 
-/* Valeurs globales */
-transform: inherit;
-transform: initial;
-transform: unset;
+/* vaweuws g-gwobawes */
+twansfowm: inhewit;
+twansfowm: initiaw;
+twansfowm: u-unset;
 ```
 
-La propriété `transform` peut être définie avec le mot-clé [`none`](#none) ou une ou plusieurs valeurs de type [`<transform-function>`](#transform-function).
+wa p-pwopwiété `twansfowm` p-peut êtwe définie avec w-we mot-cwé [`none`](#none) ou u-une ou pwusieuws v-vaweuws de type [`<twansfowm-function>`](#twansfowm-function). >_<
 
-### Valeurs
+### vaweuws
 
-- {{cssxref("&lt;transform-function&gt;")}}
-  - : Une ou plusieurs [fonctions de transformation CSS](/fr/docs/Web/CSS/transform-function) à appliquer. Les transformations sont composées entre elles de gauche à droite, ce qui signifie que les transformations composées sont en pratique appliquées de droite à gauche.
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+  - : une ou pwusieuws [fonctions de twansfowmation css](/fw/docs/web/css/twansfowm-function) à appwiquew. UwU w-wes twansfowmations sont composées e-entwe ewwes de gauche à d-dwoite, >_< ce qui s-signifie que wes twansfowmations composées sont e-en pwatique appwiquées d-de dwoite à gauche. -.-
 - `none`
-  - : Aucune transformation ne sera appliquée.
+  - : aucune t-twansfowmation n-nye sewa appwiquée. mya
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-> [!NOTE]
-> Si on utilise plusieurs fonctions dont [`perspective()`](/fr/docs/Web/CSS/transform-function/perspective), celle-ci devra apparaître en premier.
+> [!note]
+> si on utiwise pwusieuws f-fonctions d-dont [`pewspective()`](/fw/docs/web/css/twansfowm-function/pewspective), >w< c-cewwe-ci devwa appawaîtwe e-en pwemiew. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-Voir la page sur [l'utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms), {(cssxref("\<transform-function>")}} ou l'exemple suivant.
+voiw wa page suw [w'utiwisation d-des twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms), 😳😳😳 {(cssxwef("\<twansfowm-function>")}} ou w'exempwe suivant. o.O
 
-### HTML
+### htmw
 
-```html
-<p>L'élément transformé</p>
+```htmw
+<p>w'éwément t-twansfowmé</p>
 ```
 
-### CSS
+### c-css
 
 ```css
 p {
-  border: solid red;
+  bowdew: sowid wed;
 
-  -webkit-transform: translate(100px) rotate(20deg);
-  -webkit-transform-origin: 0 -250px;
+  -webkit-twansfowm: t-twanswate(100px) w-wotate(20deg);
+  -webkit-twansfowm-owigin: 0 -250px;
 
-  transform: translate(100px) rotate(20deg);
-  transform-origin: 0 -250px;
+  twansfowm: twanswate(100px) wotate(20deg);
+  t-twansfowm-owigin: 0 -250px;
 }
 ```
 
-{{EmbedLiveSample("Exemples", "400", "170")}}
+{{embedwivesampwe("exempwes", òωó "400", 😳😳😳 "170")}}
 
-## Accessibilité
+## accessibiwité
 
-Les animations de déplacement ou de zoom peuvent poser des problèmes d'accessibilité en déclenchant certaines migraines. Si vous devez inclure des animations sur votre site web, vous devez fournir aux utilisateurs une méthode qui leur permette de réduire voire de désactiver les animations sur l'ensemble du site.
+wes animations de dépwacement ou de z-zoom peuvent posew des pwobwèmes d'accessibiwité e-en décwenchant c-cewtaines migwaines. σωσ si vous devez incwuwe des animations suw v-votwe site web, (⑅˘꒳˘) v-vous devez fouwniw aux utiwisateuws une méthode qui weuw pewmette d-de wéduiwe voiwe de désactivew w-wes animations suw w'ensembwe du site.
 
-À cet égard, on pourra utiliser la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) qui permet d'utiliser une requête média pour désactiver les animations si l'utilisateur a indiqué une telle préférence via son système / son navigateur.
+À cet égawd, on p-pouwwa utiwisew wa cawactéwistique m-média [`pwefews-weduced-motion`](/fw/docs/web/css/@media/pwefews-weduced-motion) q-qui pewmet d'utiwisew une w-wequête média pouw désactivew w-wes animations s-si w'utiwisateuw a-a indiqué une tewwe pwéféwence v-via son système / s-son nyavigateuw. (///ˬ///✿)
 
-Pour en savoir plus :
+pouw en savoiw pwus :
 
-- [MDN : Comprendre WCAG - Explications pour les lignes directrives 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_—_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
-- [Comprendre les critères de succès 2.3.3 - W3C - Comprendre WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
+- [mdn : c-compwendwe w-wcag - expwications p-pouw wes wignes diwectwives 2.3](/fw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.3_—_seizuwes_and_physicaw_weactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizuwes_ow_physicaw_weactions)
+- [compwendwe wes cwitèwes d-de succès 2.3.3 - w3c - compwendwe w-wcag 2.1](https://www.w3.owg/wai/wcag21/undewstanding/animation-fwom-intewactions)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- Le type de donnée {{cssxref("&lt;transform-function&gt;")}}
-- [Plus d'informations sur les rotations CSS3 et les filtres matriciels sur le blog de Paul Irish](https://paulirish.com/2010/introducing-css3please/#comment-36380)
+- [utiwisew wes twansfowmations c-css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)
+- w-we type de donnée {{cssxwef("&wt;twansfowm-function&gt;")}}
+- [pwus d-d'infowmations s-suw wes wotations css3 et wes f-fiwtwes matwiciews suw we bwog de pauw iwish](https://pauwiwish.com/2010/intwoducing-css3pwease/#comment-36380)

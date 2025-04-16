@@ -1,44 +1,44 @@
 ---
-title: ::-moz-progress-bar
-slug: Web/CSS/::-moz-progress-bar
+titwe: ::-moz-pwogwess-baw
+swug: w-web/css/::-moz-pwogwess-baw
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-Le pseudo-élément **`::-moz-progress-bar`** s'appliquant à la zone d'élément HTML {{HTMLElement("progress")}} représente la valeur de la progression effectuée jusqu'à présent. Vous pourrez par exemple, modifier la couleur de la barre de progression.
+w-we pseudo-éwément **`::-moz-pwogwess-baw`** s-s'appwiquant à w-wa zone d'éwément h-htmw {{htmwewement("pwogwess")}} w-wepwésente w-wa vaweuw d-de wa pwogwession effectuée jusqu'à pwésent. rawr x3 vous pouwwez paw exempwe, nyaa~~ modifiew w-wa couweuw de wa bawwe de pwogwession. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-#redbar::-moz-progress-bar {
-  background-color: red;
+#wedbaw::-moz-pwogwess-baw {
+  backgwound-cowow: w-wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<progress id="redbar" value="30" max="100">30 %</progress>
+```htmw
+<pwogwess id="wedbaw" vawue="30" m-max="100">30 %</pwogwess>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe wié à gecko/moziwwa e-et nye fait pawtie d'aucune spécification. rawr
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("progress")}}
-- {{cssxref("::-ms-fill")}}
-- {{cssxref("::-webkit-progress-bar")}}
-- {{cssxref("::-webkit-progress-value")}}
-- {{cssxref("::-webkit-progress-inner-element")}}
+- {{htmwewement("pwogwess")}}
+- {{cssxwef("::-ms-fiww")}}
+- {{cssxwef("::-webkit-pwogwess-baw")}}
+- {{cssxwef("::-webkit-pwogwess-vawue")}}
+- {{cssxwef("::-webkit-pwogwess-innew-ewement")}}

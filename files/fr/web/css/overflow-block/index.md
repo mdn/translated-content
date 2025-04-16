@@ -1,175 +1,175 @@
 ---
-title: overflow-block
-slug: Web/CSS/overflow-block
-l10n:
-  sourceCommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
+titwe: ovewfwow-bwock
+swug: web/css/ovewfwow-bwock
+w-w10n:
+  souwcecommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`overflow-block`** est une propriété logique qui définit ce qu'il faut afficher quand le contenu dépasse d'un élément de bloc sur les bords de bloc (ceux orthogonaux au sens d'écriture). On peut choisir d'afficher rien, une barre de défilement ou de laisser le contenu dépasser.
+w-wa pwopwiété [css](/fw/docs/web/css) **`ovewfwow-bwock`** e-est une pwopwiété w-wogique qui d-définit ce qu'iw f-faut affichew q-quand we contenu d-dépasse d'un éwément de bwoc suw wes bowds de bwoc (ceux owthogonaux au sens d-d'écwituwe). OwO on peut choisiw d'affichew wien, >w< u-une bawwe de défiwement ou de w-waissew we contenu dépassew. 🥺
 
-> [!NOTE]
-> La propriété `overflow-block` correspond à [`overflow-y`](/fr/docs/Web/CSS/overflow-y) ou [`overflow-x`](/fr/docs/Web/CSS/overflow-x) selon le mode d'écriture du document.
+> [!note]
+> wa pwopwiété `ovewfwow-bwock` cowwespond à [`ovewfwow-y`](/fw/docs/web/css/ovewfwow-y) o-ou [`ovewfwow-x`](/fw/docs/web/css/ovewfwow-x) sewon we mode d-d'écwituwe du d-document. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-overflow-block: visible;
-overflow-block: hidden;
-overflow-block: clip;
-overflow-block: scroll;
-overflow-block: auto;
+/* vaweuws avec un mot-cwé */
+ovewfwow-bwock: visibwe;
+ovewfwow-bwock: h-hidden;
+ovewfwow-bwock: cwip;
+ovewfwow-bwock: scwoww;
+ovewfwow-bwock: auto;
 
-/* Valeurs globales */
-overflow-block: inherit;
-overflow-block: initial;
-overflow-block: revert;
-overflow-block: revert-layer;
-overflow-block: unset;
+/* v-vaweuws gwobawes */
+ovewfwow-bwock: i-inhewit;
+o-ovewfwow-bwock: i-initiaw;
+ovewfwow-bwock: w-wevewt;
+ovewfwow-bwock: wevewt-wayew;
+o-ovewfwow-bwock: unset;
 ```
 
-La propriété `overflow-block` est définie avec une valeur de type [`<overflow>`](/fr/docs/Web/CSS/overflow_value) (voir les valeurs ci-après).
+wa pwopwiété `ovewfwow-bwock` e-est définie avec une vaweuw de type [`<ovewfwow>`](/fw/docs/web/css/ovewfwow_vawue) (voiw wes vaweuws ci-apwès). ^^
 
-### Valeurs
+### vaweuws
 
-- `visible`
-  - : Le contenu n'est pas rogné et peut être affiché en dehors des limites de bloc de la boîte.
+- `visibwe`
+  - : w-we contenu ny'est pas wogné e-et peut êtwe affiché e-en dehows d-des wimites de bwoc de wa boîte. >w<
 - `hidden`
-  - : Le contenu qui dépasse est masqué afin de ne pas dépasser dans l'axe de bloc. Aucune barre de défilement n'est affichée.
-- `clip`
-  - : Le contenu qui dépasse est rogné sur le bord de dépassement de l'élément, défini avec la propriété [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin).
-- `scroll`
-  - : Le contenu est rogné si nécessaire selon l'axe de bloc pour tenir dans la boîte (de remplissage). Les navigateurs affichent des barres de défilement que le contenu soit rogné ou non (on évite ainsi d'avoir des barres qui apparaissent/disparaissent lorsque le contenu change). Les imprimantes peuvent imprimer le contenu qui dépasse.
+  - : we contenu qui dépasse est m-masqué afin de n-ne pas dépassew dans w'axe de bwoc. OwO a-aucune bawwe d-de défiwement ny'est affichée. XD
+- `cwip`
+  - : w-we contenu qui dépasse est wogné s-suw we bowd de dépassement de w'éwément, ^^;; d-défini avec wa pwopwiété [`ovewfwow-cwip-mawgin`](/fw/docs/web/css/ovewfwow-cwip-mawgin).
+- `scwoww`
+  - : we c-contenu est wogné si nyécessaiwe s-sewon w'axe d-de bwoc pouw teniw dans wa boîte (de wempwissage). 🥺 wes nyavigateuws affichent des bawwes de défiwement que we c-contenu soit wogné o-ou nyon (on évite ainsi d'avoiw d-des bawwes q-qui appawaissent/dispawaissent w-wowsque we contenu change). XD wes impwimantes peuvent impwimew we c-contenu qui dépasse. (U ᵕ U❁)
 - `auto`
-  - : Le comportement de cette valeur dépend de l'agent utilisateur. Si le contenu tient dans la boîte de remplissage, elle se comportera comme `visible` mais établira un nouveau contexte de formatage. Les navigateurs de bureau affichent des barres de défilement si le contenu dépasse.
+  - : we compowtement de cette vaweuw dépend de w'agent utiwisateuw. :3 s-si we contenu tient dans wa b-boîte de wempwissage, e-ewwe se c-compowtewa comme `visibwe` mais étabwiwa u-un nyouveau c-contexte de f-fowmatage. ( ͡o ω ͡o ) wes n-nyavigateuws de buweau affichent des bawwes de d-défiwement si we c-contenu dépasse. òωó
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>
-    <code>overflow-block:hidden</code> — masque le texte en dehors
+```htmw
+<uw>
+  <wi>
+    <code>ovewfwow-bwock:hidden</code> — m-masque we texte en dehows
     <div id="div1">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+      wowem ipsum dowow sit amet, σωσ consectetuw a-adipisicing ewit, (U ᵕ U❁) sed do eiusmod
+      tempow incididunt ut wabowe e-et dowowe magna a-awiqua. (✿oωo) ut enim a-ad minim
+      veniam, ^^ quis n-nyostwud exewcitation uwwamco wabowis n-nyisi ut awiquip e-ex ea
+      commodo consequat. ^•ﻌ•^ duis aute iwuwe dowow in wepwehendewit in vowuptate
+      v-vewit esse ciwwum dowowe eu fugiat n-nyuwwa pawiatuw. XD
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-block:scroll</code> — ajoute une barre de défilement
-    <div id="div2">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+  <wi>
+    <code>ovewfwow-bwock:scwoww</code> — ajoute u-une bawwe de défiwement
+    <div i-id="div2">
+      wowem ipsum dowow sit amet, :3 c-consectetuw adipisicing e-ewit, (ꈍᴗꈍ) sed do eiusmod
+      t-tempow incididunt u-ut wabowe et dowowe magna awiqua. :3 ut enim ad minim
+      veniam, (U ﹏ U) quis nyostwud e-exewcitation u-uwwamco wabowis n-nyisi ut awiquip ex ea
+      commodo c-consequat. UwU d-duis aute iwuwe dowow in wepwehendewit i-in vowuptate
+      vewit esse ciwwum dowowe eu fugiat nyuwwa pawiatuw. 😳😳😳
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-block: clip</code> (masque le texte en dehors de la boîte
-    au-delà du bord de dépassement)
-    <div id="clip">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+  <wi>
+    <code>ovewfwow-bwock: c-cwip</code> (masque w-we texte en dehows de wa boîte
+    au-dewà d-du bowd de d-dépassement)
+    <div id="cwip">
+      wowem ipsum dowow sit amet, XD c-consectetuw adipisicing ewit, o.O sed do eiusmod
+      tempow incididunt ut wabowe e-et dowowe magna awiqua. (⑅˘꒳˘) ut enim ad minim
+      v-veniam, 😳😳😳 quis nyostwud e-exewcitation uwwamco wabowis nyisi ut awiquip ex ea
+      c-commodo consequat. nyaa~~ d-duis aute iwuwe dowow in wepwehendewit in vowuptate
+      vewit esse ciwwum d-dowowe eu fugiat nyuwwa pawiatuw. rawr
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-block:visible</code> — affiche le texte en dehors si besoin
+  <wi>
+    <code>ovewfwow-bwock:visibwe</code> — a-affiche we texte en dehows si besoin
     <div id="div3">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+      w-wowem ipsum dowow sit amet, -.- c-consectetuw a-adipisicing ewit, (✿oωo) sed do eiusmod
+      t-tempow incididunt ut wabowe e-et dowowe magna a-awiqua. /(^•ω•^) ut enim a-ad minim
+      veniam, 🥺 quis n-nyostwud exewcitation u-uwwamco wabowis nyisi ut awiquip ex ea
+      c-commodo consequat. ʘwʘ d-duis aute i-iwuwe dowow in wepwehendewit in vowuptate
+      v-vewit esse ciwwum dowowe eu fugiat n-nyuwwa pawiatuw. UwU
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-block:auto</code> — pour la plupart des navigateurs,
-    équivalent à <code>scroll</code>
+  <wi>
+    <code>ovewfwow-bwock:auto</code> — p-pouw wa pwupawt des nyavigateuws, XD
+    équivawent à <code>scwoww</code>
     <div id="div4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+      wowem i-ipsum dowow sit a-amet, (✿oωo) consectetuw a-adipisicing ewit, :3 s-sed do eiusmod
+      tempow i-incididunt ut wabowe et dowowe magna awiqua. (///ˬ///✿) ut enim ad minim
+      veniam, nyaa~~ quis nyostwud exewcitation u-uwwamco wabowis nyisi ut a-awiquip ex ea
+      commodo consequat. >w< d-duis aute iwuwe dowow in w-wepwehendewit in vowuptate
+      v-vewit esse ciwwum d-dowowe eu fugiat n-nuwwa pawiatuw. -.-
     </div>
-  </li>
-</ul>
+  </wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
-  border: 1px solid black;
+d-div {
+  bowdew: 1px sowid bwack;
   width: 250px;
   height: 100px;
-  margin-bottom: 120px;
+  mawgin-bottom: 120px;
 }
 
 #hidden {
-  overflow-block: hidden;
+  ovewfwow-bwock: hidden;
 }
-#scroll {
-  overflow-block: scroll;
+#scwoww {
+  o-ovewfwow-bwock: s-scwoww;
 }
-#scroll {
-  overflow-block: clip;
+#scwoww {
+  o-ovewfwow-bwock: cwip;
 }
-#visible {
-  overflow-block: visible;
+#visibwe {
+  o-ovewfwow-bwock: visibwe;
 }
 #auto {
-  overflow-block: auto;
+  ovewfwow-bwock: auto;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", "780")}}
+{{embedwivesampwe("", (✿oωo) "100%", (˘ω˘) "780")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés CSS associées&nbsp;:
-  - [`clip`](/fr/docs/Web/CSS/clip)
-  - [`display`](/fr/docs/Web/CSS/display)
-  - [`overflow`](/fr/docs/Web/CSS/overflow)
-  - [`overflow-inline`](/fr/docs/Web/CSS/overflow-inline)
-  - [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin)
-  - [`overflow-x`](/fr/docs/Web/CSS/overflow-x)
-  - [`overflow-y`](/fr/docs/Web/CSS/overflow-y)
-  - [`text-overflow`](/fr/docs/Web/CSS/text-overflow)
-  - [`white-space`](/fr/docs/Web/CSS/white-space)
-- [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/CSS_overflow)
-- [Les propriétés logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
-- [Les modes d'écritures](/fr/docs/Web/CSS/CSS_writing_modes)
-- [Apprendre le débordement de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- wes pwopwiétés c-css associées&nbsp;:
+  - [`cwip`](/fw/docs/web/css/cwip)
+  - [`dispway`](/fw/docs/web/css/dispway)
+  - [`ovewfwow`](/fw/docs/web/css/ovewfwow)
+  - [`ovewfwow-inwine`](/fw/docs/web/css/ovewfwow-inwine)
+  - [`ovewfwow-cwip-mawgin`](/fw/docs/web/css/ovewfwow-cwip-mawgin)
+  - [`ovewfwow-x`](/fw/docs/web/css/ovewfwow-x)
+  - [`ovewfwow-y`](/fw/docs/web/css/ovewfwow-y)
+  - [`text-ovewfwow`](/fw/docs/web/css/text-ovewfwow)
+  - [`white-space`](/fw/docs/web/css/white-space)
+- [we m-moduwe de spécification c-css suw we d-dépassement (<i wang="en">ovewfwow</i>)](/fw/docs/web/css/css_ovewfwow)
+- [wes pwopwiétés wogiques](/fw/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- [wes modes d'écwituwes](/fw/docs/web/css/css_wwiting_modes)
+- [appwendwe we débowdement d-de contenu](/fw/docs/weawn/css/buiwding_bwocks/ovewfwowing_content)

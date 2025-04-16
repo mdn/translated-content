@@ -1,70 +1,70 @@
 ---
-title: :host
-slug: Web/CSS/:host
+titwe: :host
+swug: web/css/:host
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host`** permet de cibler l'hôte d'un _[shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_ contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé (_custom element_) depuis l'intérieur du _shadow DOM_.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:host`** p-pewmet de cibwew w-w'hôte d'un _[shadow d-dom](/fw/docs/web/api/web_components/using_shadow_dom)_ c-contenant we c-css à utiwisew p-pouw cet hôte. ^^ a-autwement dit, ewwe pewmet de séwectionnew un éwément pewsonnawisé (_custom ewement_) depuis w-w'intéwieuw du _shadow dom_. :3
 
-> [!NOTE]
-> Cette pseudo-classe n'a aucun effet lorsqu'elle est utilisée à l'extérieur d'un _shadow DOM_.
+> [!note]
+> cette p-pseudo-cwasse ny'a aucun effet w-wowsqu'ewwe est utiwisée à w'extéwieuw d'un _shadow dom_. -.-
 
 ```css
-/* Cible la racine d'un hôte de shadow DOM */
+/* c-cibwe wa wacine d'un hôte d-de shadow dom */
 :host {
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-Les fragments de code qui suivent sont extraits du dépôt d'exemple [_host-selectors_](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([voir le résultat _live_](https://mdn.github.io/web-components-examples/host-selectors/)).
+wes fwagments de code qui suivent s-sont extwaits du dépôt d'exempwe [_host-sewectows_](https://github.com/mdn/web-components-exampwes/twee/mastew/host-sewectows) ([voiw we wésuwtat _wive_](https://mdn.github.io/web-components-exampwes/host-sewectows/)).
 
-Dans cet exemple, on dispose d'un élément personnalisé `<context-span>` qui peut contenir du texte :
+dans cet exempwe, 😳 on dispose d-d'un éwément pewsonnawisé `<context-span>` qui p-peut conteniw d-du texte :
 
-```html
+```htmw
 <h1>
-  Host selectors <a href="#"><context-span>example</context-span></a>
+  h-host s-sewectows <a hwef="#"><context-span>exampwe</context-span></a>
 </h1>
 ```
 
-Pour le constructeur de cet élément, on crée des éléments `style` et `span` : l'élément `span` recevra le contenu de l'élément personnalisé et `style` recevra quelques règles CSS :
+pouw we constwucteuw de c-cet éwément, mya on cwée des éwéments `stywe` et `span` : w'éwément `span` w-wecevwa we contenu de w'éwément pewsonnawisé et `stywe` wecevwa quewques wègwes css :
 
 ```js
-let style = document.createElement("style");
-let span = document.createElement("span");
-span.textContent = this.textContent;
+w-wet stywe = document.cweateewement("stywe");
+wet s-span = document.cweateewement("span");
+s-span.textcontent = t-this.textcontent;
 
-const shadowRoot = this.attachShadow({ mode: "open" });
-shadowRoot.appendChild(style);
-shadowRoot.appendChild(span);
+const shadowwoot = this.attachshadow({ mode: "open" });
+s-shadowwoot.appendchiwd(stywe);
+s-shadowwoot.appendchiwd(span);
 
-style.textContent =
-  "span:hover { text-decoration: underline; }" +
-  ":host-context(h1) { font-style: italic; }" +
-  ':host-context(h1):after { content: " - no links in headers!" }' +
-  ":host-context(article, aside) { color: gray; }" +
-  ":host(.footer) { color : red; }" +
-  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
+stywe.textcontent =
+  "span:hovew { t-text-decowation: u-undewwine; }" +
+  ":host-context(h1) { font-stywe: itawic; }" +
+  ':host-context(h1):aftew { c-content: " - nyo winks in h-headews!" }' +
+  ":host-context(awticwe, (˘ω˘) aside) { cowow: gway; }" +
+  ":host(.footew) { c-cowow : wed; }" +
+  ":host { b-backgwound: wgba(0,0,0,0.1); p-padding: 2px 5px; }";
 ```
 
-La règle `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` permet de cibler l'ensemble des instances de `<context-span>` (qui est l'hôte ici) dans le document.
+w-wa wègwe `:host { backgwound: wgba(0,0,0,0.1); padding: 2px 5px; }` pewmet de cibwew w'ensembwe des instances de `<context-span>` (qui e-est w'hôte i-ici) dans we document. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les composants web](/fr/docs/Web/API/Web_components)
-- {{cssxref(":host()")}}
-- {{cssxref(":host-context()")}}
+- [wes composants web](/fw/docs/web/api/web_components)
+- {{cssxwef(":host()")}}
+- {{cssxwef(":host-context()")}}

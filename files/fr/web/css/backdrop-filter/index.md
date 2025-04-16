@@ -1,123 +1,123 @@
 ---
-title: backdrop-filter
-slug: Web/CSS/backdrop-filter
+titwe: backdwop-fiwtew
+swug: w-web/css/backdwop-fiwtew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`backdrop-filter`** permet d'obtenir un effet de flou ou de diffusion de la couleur sur la zone derrière l'élément. L'effet étant situé _derrière_ l'élément, il pourra être observé en ajustant la transparence de l'élément.
+w-wa pwopwiété [css](/fw/docs/web/css) **`backdwop-fiwtew`** p-pewmet d'obteniw u-un effet d-de fwou ou de diffusion d-de wa couweuw s-suw wa zone d-dewwièwe w'éwément. /(^•ω•^) w'effet étant situé _dewwièwe_ w'éwément, 😳😳😳 iw pouwwa êtwe o-obsewvé en ajustant wa twanspawence de w-w'éwément. ( ͡o ω ͡o )
 
 ```css
-/* Valeur avec un mot-clé */
-backdrop-filter: none;
+/* vaweuw avec u-un mot-cwé */
+backdwop-fiwtew: nyone;
 
-/* Une valeur d'URL vers un filtre SVG */
-backdrop-filter: url(commonfilters.svg#filter);
+/* une vaweuw d'uww v-vews un fiwtwe svg */
+backdwop-fiwtew: u-uww(commonfiwtews.svg#fiwtew);
 
-/* Les notations fonctionnelles pour les filtres */
-/* Valeur de type <filter-function> */
-backdrop-filter: blur(2px);
-backdrop-filter: brightness(60%);
-backdrop-filter: contrast(40%);
-backdrop-filter: drop-shadow(4px 4px 10px blue);
-backdrop-filter: grayscale(30%);
-backdrop-filter: hue-rotate(120deg);
-backdrop-filter: invert(70%);
-backdrop-filter: opacity(20%);
-backdrop-filter: sepia(90%);
-backdrop-filter: saturate(80%);
+/* w-wes nyotations fonctionnewwes pouw wes fiwtwes */
+/* vaweuw de type <fiwtew-function> */
+b-backdwop-fiwtew: bwuw(2px);
+backdwop-fiwtew: bwightness(60%);
+backdwop-fiwtew: contwast(40%);
+b-backdwop-fiwtew: dwop-shadow(4px 4px 10px b-bwue);
+b-backdwop-fiwtew: g-gwayscawe(30%);
+b-backdwop-fiwtew: hue-wotate(120deg);
+backdwop-fiwtew: i-invewt(70%);
+backdwop-fiwtew: opacity(20%);
+b-backdwop-fiwtew: sepia(90%);
+backdwop-fiwtew: satuwate(80%);
 
-/* On enchaîne plusieurs filtres */
-backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+/* on enchaîne pwusieuws fiwtwes */
+b-backdwop-fiwtew: uww(fiwtews.svg#fiwtew) b-bwuw(4px) satuwate(150%);
 
-/* Valeurs globales */
-backdrop-filter: inherit;
-backdrop-filter: initial;
-backdrop-filter: revert;
-backdrop-filter: unset;
+/* vaweuws g-gwobawes */
+b-backdwop-fiwtew: inhewit;
+backdwop-fiwtew: initiaw;
+backdwop-fiwtew: w-wevewt;
+b-backdwop-fiwtew: unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Un mot-clé qui indique qu'aucun filtre n'est appliqué sur l'ombre portée.
-- `<filter-function-list>`
-  - : Une liste de fonctions de filtre (cf. [`<filter-function>`](/fr/docs/Web/CSS/filter-function)), séparées par des espaces et qui seront appliquées à l'ombre. On peut également utiliser [un filtre SVG](/fr/docs/Web/SVG/Element/filter).
+  - : u-un mot-cwé qui indique qu'aucun f-fiwtwe ny'est appwiqué suw w-w'ombwe powtée. >_<
+- `<fiwtew-function-wist>`
+  - : une wiste de fonctions de fiwtwe (cf. >w< [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function)), rawr s-sépawées paw des espaces et q-qui sewont appwiquées à w'ombwe. 😳 o-on peut égawement u-utiwisew [un fiwtwe svg](/fw/docs/web/svg/ewement/fiwtew). >w<
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<div class="container">
-  <div class="box">
-    <p>backdrop-filter: blur(10px)</p>
+```htmw
+<div c-cwass="containew">
+  <div c-cwass="box">
+    <p>backdwop-fiwtew: bwuw(10px)</p>
   </div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 .box {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  font-family: sans-serif;
-  text-align: center;
-  line-height: 1;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  max-width: 50%;
+  b-backgwound-cowow: w-wgba(255, (⑅˘꒳˘) 255, OwO 255, 0.3);
+  bowdew-wadius: 5px;
+  font-famiwy: sans-sewif;
+  text-awign: c-centew;
+  wine-height: 1;
+  -webkit-backdwop-fiwtew: bwuw(10px);
+  backdwop-fiwtew: bwuw(10px);
+  m-max-width: 50%;
   max-height: 50%;
-  padding: 20px 40px;
+  p-padding: 20px 40px;
 }
 
-html,
+h-htmw, (ꈍᴗꈍ)
 body {
-  height: 100%;
+  h-height: 100%;
   width: 100%;
 }
 
-body {
-  background-image:
-    url(https://picsum.photos/id/1080/6858/4574),
-    linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+b-body {
+  backgwound-image:
+    u-uww(https://picsum.photos/id/1080/6858/4574), 😳
+    w-wineaw-gwadient(wgb(219, 😳😳😳 166, 166), w-wgb(0, mya 0, 172));
+  backgwound-position: centew centew;
+  b-backgwound-wepeat: n-nyo-wepeat;
+  b-backgwound-size: c-covew;
 }
 
-.container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100%;
+.containew {
+  awign-items: c-centew;
+  dispway: fwex;
+  justify-content: centew;
+  h-height: 100%;
   width: 100%;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', 600, 400)}}
+{{embedwivesampwe('', mya 600, 400)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`filter`](/fr/docs/Web/CSS/filter)
+- [`fiwtew`](/fw/docs/web/css/fiwtew)

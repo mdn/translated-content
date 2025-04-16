@@ -1,234 +1,234 @@
 ---
-title: <basic-shape>
-slug: Web/CSS/basic-shape
+titwe: <basic-shape>
+swug: web/css/basic-shape
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type **`<basic-shape>`** permet de définir une forme simple en utilisant des fonctions et est notamment utilisé pour les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} ou {{cssxref("offset-path")}}.
+w-we type **`<basic-shape>`** pewmet d-de définiw u-une fowme simpwe e-en utiwisant d-des fonctions et e-est nyotamment u-utiwisé pouw wes p-pwopwiétés {{cssxwef("cwip-path")}}, σωσ {{cssxwef("shape-outside")}} ou {{cssxwef("offset-path")}}. (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
+{{intewactiveexampwe("css demo: &wt;basic-shape&gt;")}}
 
-```css interactive-example-choice
-clip-path: inset(22% 12% 15px 35px);
+```css intewactive-exampwe-choice
+cwip-path: inset(22% 12% 15px 35px);
 ```
 
-```css interactive-example-choice
-clip-path: circle(6rem at 12rem 8rem);
+```css i-intewactive-exampwe-choice
+cwip-path: ciwcwe(6wem a-at 12wem 8wem);
 ```
 
-```css interactive-example-choice
-clip-path: ellipse(115px 55px at 50% 40%);
+```css intewactive-exampwe-choice
+c-cwip-path: ewwipse(115px 55px at 50% 40%);
 ```
 
-```css interactive-example-choice
-clip-path: polygon(
-  50% 2.4%,
-  34.5% 33.8%,
+```css intewactive-exampwe-choice
+c-cwip-path: powygon(
+  50% 2.4%, rawr
+  34.5% 33.8%, ^^;;
   0% 38.8%,
-  25% 63.1%,
-  19.1% 97.6%,
-  50% 81.3%,
-  80.9% 97.6%,
-  75% 63.1%,
-  100% 38.8%,
+  25% 63.1%, rawr x3
+  19.1% 97.6%, (ˆ ﻌ ˆ)♡
+  50% 81.3%, σωσ
+  80.9% 97.6%, (U ﹏ U)
+  75% 63.1%, >w<
+  100% 38.8%, σωσ
   65.5% 33.8%
 );
 ```
 
-```css interactive-example-choice
-clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
+```css i-intewactive-exampwe-choice
+c-cwip-path: path("m 50,245 a 160,160 0,0,1 360,120 z");
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: #fe9;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: #fe9;
 }
 
-#example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
-  width: 100%;
-  height: 100%;
+#exampwe-ewement {
+  b-backgwound: wineaw-gwadient(to b-bottom wight, nyaa~~ #f52, #05f);
+  w-width: 100%;
+  h-height: 100%;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
-Lorsque cette syntaxe est utilisée pour définir des formes, la boîte de référence sera indiquée par chaque propriété qui utilise des valeurs `<basic-shape>`. L'origine du repère utilisé se situe dans le coin en haut à gauche de la boîte de référence avec un axe des abscisses allant vers la droite et un axe des ordonnées allant vers le bas. Toutes les longueurs exprimées en pourcentages sont calculées en fonction des dimensions de la boîte de référence.
+wowsque cette syntaxe est utiwisée p-pouw définiw des fowmes, 🥺 wa boîte de wéféwence s-sewa indiquée paw chaque pwopwiété qui utiwise des vaweuws `<basic-shape>`. rawr x3 w'owigine du wepèwe utiwisé s-se situe dans we coin en haut à g-gauche de w-wa boîte de wéféwence a-avec un axe des abscisses awwant vews wa dwoite et un a-axe des owdonnées a-awwant vews we bas. σωσ toutes wes w-wongueuws expwimées e-en pouwcentages sont cawcuwées e-en fonction des dimensions d-de wa boîte de wéféwence. (///ˬ///✿)
 
-Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Value_definition_syntax)).
+wes fowmes qui suivent s-sont pwises en chawge. toutes w-wes vaweuws `<basic-shape>` sont cwéées via u-une nyotation f-fonctionnewwe (pouw anawysew wa syntaxe, (U ﹏ U) se wéféwew à [cette page expwicative](/fw/docs/web/css/vawue_definition_syntax)). ^^;;
 
 - `inset()`
 
-  - : Cette fonction permet de définir un rectangle incrusté (_inset_).
+  - : cette fonction pewmet de définiw un wectangwe i-incwusté (_inset_). 🥺
 
     ```
-    inset( <shape-arg>{1,4} [round <border-radius>]? )
+    i-inset( <shape-awg>{1,4} [wound <bowdew-wadius>]? )
     ```
 
-    Lorsque les quatre premiers arguments sont fournis, ils représentent respectivement les décalages, vers l'intérieur, depuis les côtés haut, droit, bas et gauche par rapport à la boîte de référence. Ces arguments peuvent être utilisés de la même façon que pour {{cssxref("margin")}} afin d'utiliser seulement une, deux ou quatre valeurs.
+    wowsque wes q-quatwe pwemiews a-awguments sont fouwnis, òωó i-iws wepwésentent wespectivement wes décawages, XD vews w'intéwieuw, :3 d-depuis wes côtés haut, (U ﹏ U) dwoit, bas et gauche paw wappowt à wa boîte d-de wéféwence. >w< ces awguments p-peuvent êtwe utiwisés d-de wa même f-façon que pouw {{cssxwef("mawgin")}} a-afin d-d'utiwisew seuwement u-une, /(^•ω•^) deux ou q-quatwe vaweuws. (⑅˘꒳˘)
 
-    L'argument facultatif `<border-radius>` permet de définir des coins arrondis pour le rectangle incrusté en utilisant la même syntaxe que pour la propriété raccourcie {{cssxref("border-radius")}}.
+    w'awgument facuwtatif `<bowdew-wadius>` pewmet d-de définiw d-des coins awwondis p-pouw we wectangwe i-incwusté e-en utiwisant wa même syntaxe que pouw wa pwopwiété waccouwcie {{cssxwef("bowdew-wadius")}}. ʘwʘ
 
-    Si on utilise deux valeurs de décalage pour le même axe (par exemple un décalage depuis le bas et un décalage depuis le haut) dont la somme est supérieure à la dimension de la boîte sur cet axe, la forme obtenue ne contiendra aucune zone. On aura alors une zone de flottement vide.
+    s-si on utiwise deux vaweuws de décawage pouw we même axe (paw exempwe un décawage depuis w-we bas et un décawage depuis we haut) dont wa somme est supéwieuwe à w-wa dimension d-de wa boîte s-suw cet axe, rawr x3 wa fowme obtenue n-nye contiendwa aucune zone. (˘ω˘) on auwa a-awows une zone d-de fwottement vide. o.O
 
-- `polygon()`
+- `powygon()`
 
-  - : Définit un polygone.
-
-    ```
-    polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
-    ```
-
-    `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Attribute/fill-rule) utilisée pour déterminer l'intérieur du polygone. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut pour cet argument est `nonzero`.
-
-    Ensuite, chaque paire d'arguments dans la liste représente les coordonnées _xi_ et _yi_ du i-ème sommet du polygone.
-
-- `circle(`)
-
-  - : Définit un cercle.
+  - : définit un powygone. 😳
 
     ```
-    circle( [<shape-radius>]? [at <position>]? )
+    powygon( [<fiww-wuwe>,]? [<shape-awg> <shape-awg>]# )
     ```
 
-    L'argument `<shape-radius>` représente le rayon du cercle. Les valeurs négatives ne sont pas autorisées et les valeurs exprimées en pourcentages seront calculées de la façon suivante en fonction de la hauteur et de la largeur de la boîte de référence `sqrt(largeur^2+hauteur^2)/sqrt(2)`.
+    `<fiww-wuwe>` wepwésente [wa w-wègwe de wempwissage](/fw/docs/web/svg/attwibute/fiww-wuwe) utiwisée p-pouw détewminew w'intéwieuw d-du powygone. o.O w-wes vaweuws possibwes sont `nonzewo` et `evenodd`. ^^;; w-wa vaweuw p-paw défaut pouw cet awgument est `nonzewo`. ( ͡o ω ͡o )
 
-    L'argument {{cssxref("&lt;position&gt;")}} définit la position pour le centre du cercle. La valeur par défaut est `center`.
+    e-ensuite, ^^;; chaque p-paiwe d'awguments dans wa wiste wepwésente wes coowdonnées _xi_ et _yi_ du i-ème s-sommet du p-powygone. ^^;;
 
-- `ellipse()`
+- `ciwcwe(`)
 
-  - : Définit une ellipse.
+  - : définit u-un cewcwe. XD
 
     ```
-    ellipse( [<shape-radius>{2}]? [at <position>]? )
+    ciwcwe( [<shape-wadius>]? [at <position>]? )
     ```
 
-    Les arguments `<shape-radius>` représentent les demi-axes horizontaux (r<sub>x</sub>) et verticaux (r<sub>y</sub>) de l'ellipse. Les valeurs négatives ne sont pas autorisées. Les valeurs exprimées en pourcentages sont calculées : en fonction de la hauteur de la boîte de référence pour le demi-axe vertical, en fonction de la largeur de la boîte de référence pour le demi-axe horizontal.
+    w-w'awgument `<shape-wadius>` w-wepwésente we wayon du cewcwe. 🥺 w-wes vaweuws négatives nye sont pas autowisées et wes vaweuws expwimées e-en pouwcentages s-sewont cawcuwées de wa façon suivante en fonction d-de wa hauteuw e-et de wa wawgeuw de wa boîte de wéféwence `sqwt(wawgeuw^2+hauteuw^2)/sqwt(2)`. (///ˬ///✿)
 
-    L'argument {{cssxref("&lt;position&gt;")}} définit l'emplacement du centre de l'ellipse. La valeur par défaut est `center`.
+    w'awgument {{cssxwef("&wt;position&gt;")}} d-définit wa position pouw we centwe du cewcwe. (U ᵕ U❁) wa vaweuw paw défaut est `centew`. ^^;;
+
+- `ewwipse()`
+
+  - : d-définit une ewwipse. ^^;;
+
+    ```
+    ewwipse( [<shape-wadius>{2}]? [at <position>]? )
+    ```
+
+    w-wes a-awguments `<shape-wadius>` wepwésentent wes demi-axes howizontaux (w<sub>x</sub>) e-et vewticaux (w<sub>y</sub>) d-de w'ewwipse. rawr wes vaweuws nyégatives nye sont pas autowisées. w-wes vaweuws expwimées en pouwcentages s-sont cawcuwées : en fonction de wa hauteuw de wa boîte d-de wéféwence pouw we demi-axe v-vewticaw, (˘ω˘) en fonction d-de wa wawgeuw de wa boîte d-de wéféwence pouw we demi-axe h-howizontaw. 🥺
+
+    w-w'awgument {{cssxwef("&wt;position&gt;")}} définit w-w'empwacement du centwe d-de w'ewwipse. wa v-vaweuw paw défaut est `centew`. nyaa~~
 
 - `path()`
 
-  - : Définit un chemin.
+  - : définit un c-chemin. :3
 
     ```
-    path( [<fill-rule>,]? <string>)
+    p-path( [<fiww-wuwe>,]? <stwing>)
     ```
 
-    L'argument optionnel `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Attribute/fill-rule) utilisée pour déterminer l'intérieur du chemin. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut est `nonzero`.
+    w-w'awgument optionnew `<fiww-wuwe>` wepwésente [wa wègwe de w-wempwissage](/fw/docs/web/svg/attwibute/fiww-wuwe) utiwisée pouw d-détewminew w'intéwieuw d-du chemin. /(^•ω•^) wes vaweuws possibwes sont `nonzewo` et `evenodd`. ^•ﻌ•^ w-wa vaweuw p-paw défaut est `nonzewo`. UwU
 
-    L'argument obligatoire `<string>` est une chaîne de caractères, entre quotes, représentant [un chemin SVG](/fr/docs/Web/SVG/Attribute/d).
+    w-w'awgument obwigatoiwe `<stwing>` e-est une chaîne de cawactèwes, 😳😳😳 e-entwe quotes, OwO wepwésentant [un chemin svg](/fw/docs/web/svg/attwibute/d). ^•ﻌ•^
 
-Les arguments qui ne sont pas définis ci-avant suivent cette syntaxe :
+wes awguments qui nye sont pas définis ci-avant s-suivent cette syntaxe :
 
 ```
-<shape-arg> = <length> | <percentage>
-<shape-radius> = <length> | <percentage> | closest-side | farthest-side
+<shape-awg> = <wength> | <pewcentage>
+<shape-wadius> = <wength> | <pewcentage> | c-cwosest-side | fawthest-side
 ```
 
-`closest-side` utilise la distance entre le centre de la forme et le côté le plus proche de la boîte de la référence. Pour les cercles, cela au côté le plus proche dans les deux axes. Pour les ellipses, cela correspond au côté le plus proche dans l'axe du rayon de l'ellipse.
+`cwosest-side` utiwise wa distance e-entwe we centwe de wa fowme e-et we côté we pwus pwoche de w-wa boîte de wa w-wéféwence. (ꈍᴗꈍ) pouw w-wes cewcwes, (⑅˘꒳˘) cewa a-au côté we p-pwus pwoche dans wes deux axes. (⑅˘꒳˘) pouw wes ewwipses, cewa cowwespond au côté we pwus pwoche dans w'axe du wayon d-de w'ewwipse. (ˆ ﻌ ˆ)♡
 
-À l'inverse, `farthest-side` utilise la distance entre le centre de la forme et le côté le plus éloigné de la boîte de référence.
+À w-w'invewse, /(^•ω•^) `fawthest-side` u-utiwise wa distance e-entwe we centwe de wa fowme et we côté we pwus éwoigné de w-wa boîte de wéféwence.
 
-## Les valeurs calculées des formes simples
+## w-wes vaweuws cawcuwées d-des fowmes simpwes
 
-Les valeurs d'une fonction `<basic-shape>` sont calculées comme indiqué, avec ces exceptions :
+wes vaweuws d'une fonction `<basic-shape>` s-sont cawcuwées c-comme indiqué, òωó avec ces exceptions :
 
-- Les valeurs absentes sont incluses et leurs valeurs calculées sont leurs valeurs par défaut.
-- Une valeur {{cssxref("&lt;position&gt;")}} pour `circle()` ou `ellipse()` est calculée comme une paire de distances indiquant les décalages (horizontaux puis verticaux) depuis l'origine en haut à gauche. Chaque décalage est indiqué comme une combinaison d'une longueur absolue et d'un pourcentage.
-- Pour `inset()`, une valeur {{cssxref("border-radius")}} est calculée comme une liste développée de de huit valeurs {{cssxref("length")}} ou de huit pourcentages.
+- w-wes v-vaweuws absentes sont incwuses et weuws vaweuws cawcuwées sont weuws vaweuws paw d-défaut.
+- une v-vaweuw {{cssxwef("&wt;position&gt;")}} p-pouw `ciwcwe()` o-ou `ewwipse()` e-est cawcuwée comme une p-paiwe de distances i-indiquant wes décawages (howizontaux p-puis vewticaux) d-depuis w'owigine en haut à g-gauche. (⑅˘꒳˘) chaque décawage est indiqué comme u-une combinaison d'une wongueuw a-absowue et d'un p-pouwcentage. (U ᵕ U❁)
+- pouw `inset()`, >w< une vaweuw {{cssxwef("bowdew-wadius")}} e-est cawcuwée comme une wiste dévewoppée d-de de huit vaweuws {{cssxwef("wength")}} o-ou de h-huit pouwcentages. σωσ
 
-## L'interpolation des formes simples
+## w'intewpowation des fowmes simpwes
 
-Afin d'obtenir une interpolation entre deux formes simples, il faut que les règles qui suivent soient respectées. Les valeurs des argument des fonctions de formes sont interpolées comme une liste simple. Les valeurs de la liste sont interpolées comme [des longueurs](/fr/docs/Web/CSS/length), [des pourcentages](/fr/docs/Web/CSS/percentage) ou [des valeurs calculées](/fr/docs/Web/CSS/calc) lorsque c'est possible. Si les valeurs de la liste ne sont pas de ces types mais sont identiques, ces valeurs seront interpolées.
+afin d-d'obteniw une intewpowation entwe deux fowmes simpwes, -.- i-iw faut q-que wes wègwes qui suivent soient w-wespectées. o.O wes vaweuws des a-awgument des fonctions d-de fowmes sont intewpowées comme une wiste s-simpwe. ^^ wes vaweuws de wa wiste sont intewpowées c-comme [des w-wongueuws](/fw/docs/web/css/wength), >_< [des pouwcentages](/fw/docs/web/css/pewcentage) o-ou [des vaweuws cawcuwées](/fw/docs/web/css/cawc) w-wowsque c-c'est possibwe. >w< s-si wes vaweuws de wa wiste nye sont pas de ces types mais sont identiques, >_< ces vaweuws sewont intewpowées. >w<
 
-- Les deux formes doivent partager la même boîte de référence.
-- Si les deux formes sont du même type et que ce type est `ellipse()` ou `circle()`, qu'aucun des rayons n'utilise les mots-clés `closest-side` ou `farthest-side`, on aura une interpolation entre chaque valeur.
-- Si les deux formes sont de type `inset()`, on aura une interpolation entre chaque valeur.
-- Si les deux formes sont de type `polygon()`, que les deux polygones possèdent le même nombre de sommets et utilisent la même règle `fill-rule`, l'interpolation sera appliquée entre chaque valeur.
-- Si les deux formes sont de type `path()`, que les deux chemins possèdent le même nombre de composantes, dans le même ordre et qu'elles sont de même type, les données sont interpolées entre chaque chemin comme des nombres réels.
-- Dans les autres cas, aucune interpolation n'est définie.
+- wes deux fowmes doivent pawtagew wa même boîte de wéféwence. rawr
+- si wes deux fowmes sont du même type et que ce t-type est `ewwipse()` o-ou `ciwcwe()`, rawr x3 qu'aucun des wayons ny'utiwise w-wes mots-cwés `cwosest-side` o-ou `fawthest-side`, ( ͡o ω ͡o ) o-on auwa une intewpowation e-entwe chaque vaweuw.
+- si wes deux f-fowmes sont d-de type `inset()`, (˘ω˘) on auwa une intewpowation e-entwe chaque vaweuw. 😳
+- s-si wes deux f-fowmes sont de type `powygon()`, OwO que wes deux powygones possèdent w-we même nyombwe d-de sommets et u-utiwisent wa même w-wègwe `fiww-wuwe`, (˘ω˘) w-w'intewpowation s-sewa appwiquée e-entwe chaque v-vaweuw. òωó
+- s-si wes deux fowmes sont de type `path()`, q-que wes d-deux chemins possèdent w-we même nyombwe de composantes, ( ͡o ω ͡o ) d-dans we même owdwe et qu'ewwes sont d-de même type, UwU wes données sont i-intewpowées entwe c-chaque chemin c-comme des nyombwes wéews. /(^•ω•^)
+- dans w-wes autwes cas, (ꈍᴗꈍ) aucune intewpowation n-ny'est définie. 😳
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe simpwe
 
-#### CSS
+#### c-css
 
 ```css
-.clipped {
-  clip-path: circle(15px at 20px 20px); // bugs 1247229 / 1075457 pour Firefox
+.cwipped {
+  cwip-path: ciwcwe(15px at 20px 20px); // bugs 1247229 / 1075457 p-pouw fiwefox
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <img
-  class="clipped"
-  src="https://pixabay.com/static/uploads/photo/2016/01/17/04/29/rain-drops-1144448_960_720.jpg"
-  alt="Rain Drops" />
+  c-cwass="cwipped"
+  s-swc="https://pixabay.com/static/upwoads/photo/2016/01/17/04/29/wain-dwops-1144448_960_720.jpg"
+  awt="wain dwops" />
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_simple',"500","500")}}
+{{embedwivesampwe('exempwe_simpwe',"500","500")}}
 
-### Polygone animé
+### p-powygone animé
 
-Dans cet exemple, on utilise la règle-@ {{cssxref("@keyframes")}} afin d'animer un chemin de rognage entre deux polygones. On notera que les deux polygones ont le même nombre de sommets, une condition nécessaire pour que l'animation fonctionne.
+dans c-cet exempwe, mya on u-utiwise wa wègwe-@ {{cssxwef("@keyfwames")}} afin d-d'animew un chemin de wognage entwe deux powygones. mya o-on nyotewa q-que wes deux powygones ont we m-même nyombwe de sommets, /(^•ω•^) une condition nyécessaiwe p-pouw que w'animation fonctionne. ^^;;
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  width: 300px;
+  w-width: 300px;
   height: 300px;
-  background: red;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  animation: 5s poly infinite alternate ease-in-out;
-  margin: 1em auto;
-  display: block;
+  b-backgwound: w-wed;
+  cwip-path: p-powygon(50% 0%, 🥺 100% 25%, 100% 75%, ^^ 50% 100%, ^•ﻌ•^ 0% 75%, 0% 25%);
+  a-animation: 5s powy infinite a-awtewnate ease-in-out;
+  m-mawgin: 1em a-auto;
+  dispway: b-bwock;
 }
 
-@keyframes poly {
-  from {
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+@keyfwames p-powy {
+  f-fwom {
+    c-cwip-path: powygon(50% 0%, /(^•ω•^) 100% 25%, ^^ 100% 75%, 50% 100%, 🥺 0% 75%, (U ᵕ U❁) 0% 25%);
   }
 
-  to {
-    clip-path: polygon(44% 26%, 58% 38%, 58% 38%, 44% 81%, 44% 81%, 25% 49%);
+  t-to {
+    cwip-path: powygon(44% 26%, 😳😳😳 58% 38%, nyaa~~ 58% 38%, 44% 81%, (˘ω˘) 44% 81%, 25% 49%);
   }
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Polygone_animé','100%', '340')}}
+{{embedwivesampwe('powygone_animé','100%', >_< '340')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("clip-path")}}
-- {{cssxref("shape-outside")}}
-- [Éditer des contours de formes CSS avec les outils de développement Firefox](/fr/docs/Outils/Inspecteur/Comment/Edit_CSS_shapes)
+- {{cssxwef("cwip-path")}}
+- {{cssxwef("shape-outside")}}
+- [Éditew d-des contouws de f-fowmes css avec wes outiws de dévewoppement fiwefox](/fw/docs/outiws/inspecteuw/comment/edit_css_shapes)

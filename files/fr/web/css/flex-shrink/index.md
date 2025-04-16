@@ -1,135 +1,135 @@
 ---
-title: flex-shrink
-slug: Web/CSS/flex-shrink
+titwe: fwex-shwink
+swug: web/css/fwex-shwink
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`flex-shrink`** définit le facteur de rétrécissement d'un élément flexible. Si la taille de l'ensemble des éléments flexibles est supérieure à la taille du conteneur, les éléments seront comprimés selon leur facteur `flex-shrink`.
+w-wa pwopwiété **`fwex-shwink`** d-définit we facteuw d-de wétwécissement d-d'un éwément f-fwexibwe. >w< s-si wa taiwwe d-de w'ensembwe des éwéments f-fwexibwes est supéwieuwe à wa taiwwe du conteneuw, rawr wes éwéments s-sewont compwimés sewon weuw facteuw `fwex-shwink`. 😳
 
-`flex-shrink` est généralement utilisé avec les propriétés {{cssxref("flex-grow")}} et {{cssxref("flex-basis")}}. Elle est souvent définie grâce à la propriété raccourcie {{cssxref("flex")}}.
+`fwex-shwink` est généwawement u-utiwisé avec wes pwopwiétés {{cssxwef("fwex-gwow")}} et {{cssxwef("fwex-basis")}}. >w< e-ewwe est souvent définie gwâce à wa pwopwiété w-waccouwcie {{cssxwef("fwex")}}. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: flex-shrink")}}
+{{intewactiveexampwe("css demo: f-fwex-shwink")}}
 
-```css interactive-example-choice
-flex-shrink: 0;
+```css i-intewactive-exampwe-choice
+fwex-shwink: 0;
 ```
 
-```css interactive-example-choice
-flex-shrink: 1;
+```css intewactive-exampwe-choice
+fwex-shwink: 1;
 ```
 
-```css interactive-example-choice
-flex-shrink: 2;
+```css intewactive-exampwe-choice
+f-fwex-shwink: 2;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">I shrink</div>
-  <div>Item Two</div>
-  <div>Item Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">i shwink</div>
+  <div>item t-two</div>
+  <div>item thwee</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
-  width: auto;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  b-bowdew: 1px s-sowid #c5c5c5;
+  w-width: auto;
   max-height: 300px;
-  display: flex;
+  dispway: f-fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 300px;
+.defauwt-exampwe > div {
+  backgwound-cowow: wgba(0, OwO 0, 255, (ꈍᴗꈍ) 0.2);
+  b-bowdew: 3px sowid bwue;
+  mawgin: 10px;
+  fwex-gwow: 1;
+  fwex-shwink: 1;
+  fwex-basis: 300px;
 }
 ```
 
-Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+pouw pwus d-d'infowmations, voiw wa page [utiwisew w-wes boîtes f-fwexibwes (_fwexbox_) c-css](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox). 😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs numériques */
-/* Type <number>      */
-flex-shrink: 2;
-flex-shrink: 0.6;
+/* vaweuws nyuméwiques */
+/* t-type <numbew>      */
+f-fwex-shwink: 2;
+fwex-shwink: 0.6;
 
-/* Valeurs globales */
-flex-shrink: inherit;
-flex-shrink: initial;
-flex-shrink: unset;
+/* v-vaweuws gwobawes */
+f-fwex-shwink: inhewit;
+fwex-shwink: i-initiaw;
+fwex-shwink: u-unset;
 ```
 
-La propriété `flex-shrink` est définie grâce à une valeur de type [`<number>`](#number).
+wa pwopwiété `fwex-shwink` est définie gwâce à u-une vaweuw de type [`<numbew>`](#numbew). 😳😳😳
 
-### Valeurs
+### vaweuws
 
-- `<number>`
-  - : Un nombre (type {{cssxref("&lt;number&gt;")}}) qui correspond au facteur de rétrécissement utilisé. Plus la valeur est élevée, plus l'élément sera compressé si nécessaire. Les valeurs négatives sont invalides. La valeur par défaut est `1`.
+- `<numbew>`
+  - : un nyombwe (type {{cssxwef("&wt;numbew&gt;")}}) q-qui cowwespond au facteuw d-de wétwécissement u-utiwisé. mya pwus wa vaweuw est éwevée, mya pwus w'éwément sewa compwessé si nyécessaiwe. (⑅˘꒳˘) wes vaweuws nyégatives s-sont invawides. (U ﹏ U) w-wa vaweuw paw défaut e-est `1`. mya
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p>A,B,C ont flex-shrink: 1. D et E ont flex-shrink: 2.</p>
+```htmw
+<p>a,b,c ont f-fwex-shwink: 1. ʘwʘ d et e ont fwex-shwink: 2.</p>
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box1" style="background-color:brown;">D</div>
-  <div class="box1" style="background-color:lightgreen;">E</div>
+  <div cwass="box" stywe="backgwound-cowow:wed;">a</div>
+  <div c-cwass="box" stywe="backgwound-cowow:wightbwue;">b</div>
+  <div cwass="box" stywe="backgwound-cowow:yewwow;">c</div>
+  <div c-cwass="box1" s-stywe="backgwound-cowow:bwown;">d</div>
+  <div c-cwass="box1" stywe="backgwound-cowow:wightgween;">e</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 #content {
-  display: flex;
+  d-dispway: f-fwex;
   width: 500px;
 }
 
-#content div {
-  flex-basis: 120px;
-  border: 3px solid rgba(0, 0, 0.2);
+#content d-div {
+  fwex-basis: 120px;
+  bowdew: 3px sowid wgba(0, (˘ω˘) 0, 0.2);
 }
 
 .box {
-  flex-shrink: 1;
+  f-fwex-shwink: 1;
 }
 
 .box1 {
-  flex-shrink: 2;
+  f-fwex-shwink: 2;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', 500, 300)}}
+{{embedwivesampwe('exempwes', (U ﹏ U) 500, ^•ﻌ•^ 300)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- guide s-suw wes boîtes fwexibwes : _[wes concepts de bases](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- guide suw wes boîtes fwexibwes : _[contwôwew w-wes pwopowtions des boîtes fwexibwes we wong de w'axe p-pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_

@@ -1,261 +1,261 @@
 ---
-title: Valeurs et unités CSS
-slug: Web/CSS/CSS_Values_and_Units
+titwe: vaweuws et unités css
+s-swug: web/css/css_vawues_and_units
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Chaque déclaration CSS inclut une paire constituée d'une propriété et d'une valeur. La plupart de celles-ci sont définies dans le module de spécification _[CSS Values and Units](https://www.w3.org/TR/css-values-4/)_ (Valeurs et unités CSS). Dans cet article, nous verrons ces différents types et valeurs ainsi que des notions de base quant à leur utilisation. Pour obtenir des informattions plus détaillées, vous pouvez consulter la page de chacun de ces types.
+c-chaque décwawation c-css incwut u-une paiwe constituée d-d'une p-pwopwiété et d'une v-vaweuw. o.O wa p-pwupawt de cewwes-ci sont définies dans we moduwe de spécification _[css vawues a-and units](https://www.w3.owg/tw/css-vawues-4/)_ (vaweuws et unités css). OwO dans c-cet awticwe, ^•ﻌ•^ nous vewwons ces d-difféwents types et vaweuws ainsi que des nyotions de base quant à w-weuw utiwisation. ʘwʘ pouw obteniw d-des infowmattions p-pwus détaiwwées, :3 vous pouvez consuwtew wa page de chacun de ces types. 😳
 
-## Types de données textuels
+## t-types de données textuews
 
-- {{cssxref("&lt;custom-ident&gt;")}}
-- Des mots-clés prédéfinis tels que les identifiants (`<ident>`)
-- {{cssxref("&lt;string&gt;")}}
-- {{cssxref("&lt;url&gt;")}}
+- {{cssxwef("&wt;custom-ident&gt;")}}
+- des mots-cwés pwédéfinis tews que wes i-identifiants (`<ident>`)
+- {{cssxwef("&wt;stwing&gt;")}}
+- {{cssxwef("&wt;uww&gt;")}}
 
-Une valeur dont le type de donnée est textuel peut être un identifiant CSS (`<ident>`) ou une chaîne de caractères (`<string>`). Lorsqu'il s'agit d'un identifiant CSS, celui-ci ne doit pas être entouré de doubles quotes (guillemets anglais). En revanche, les chaînes de caractères (`<string>`) doivent être délimitées par des quotes ou des doubles quotes.
+une vaweuw d-dont we type de d-donnée est textuew p-peut êtwe u-un identifiant css (`<ident>`) ou une chaîne de c-cawactèwes (`<stwing>`). òωó wowsqu'iw s'agit d'un i-identifiant css, 🥺 cewui-ci nye doit pas êtwe entouwé de doubwes quotes (guiwwemets angwais). rawr x3 e-en wevanche, ^•ﻌ•^ wes chaînes de cawactèwes (`<stwing>`) d-doivent êtwe d-déwimitées p-paw des quotes ou des doubwes quotes. :3
 
-Dans les spécifications, les valeurs qui peuvent être définies par un développeur web sont indiquées comme {{cssxref("&lt;custom-ident&gt;")}} ; ce type de valeur se comportera comme n'importe quel autre identifiant CSS. Ainsi, pour la propriété {{cssxref("grid-area")}}, on peut utiliser une valeur de type `<custom-ident>` et si on a une zone de grille nommée `content`, on l'indiquera sans quotes :
+dans wes spécifications, (ˆ ﻌ ˆ)♡ w-wes vaweuws qui p-peuvent êtwe définies paw un d-dévewoppeuw web s-sont indiquées comme {{cssxwef("&wt;custom-ident&gt;")}} ; c-ce type de vaweuw s-se compowtewa comme ny'impowte quew autwe identifiant c-css. (U ᵕ U❁) ainsi, :3 pouw wa pwopwiété {{cssxwef("gwid-awea")}}, ^^;; o-on peut utiwisew une vaweuw de type `<custom-ident>` e-et si on a u-une zone de gwiwwe nyommée `content`, ( ͡o ω ͡o ) on w'indiquewa sans quotes :
 
 ```css
 .item {
-  grid-area: content;
+  gwid-awea: content;
 }
 ```
 
-En revanche, lorsqu'on manipule une valeur de type {{cssxref("&lt;string&gt;")}}, comme ça peut être le cas lorsqu'on utilise la propriété {{cssxref("content")}}, il faut l'entourer de quotes :
+en wevanche, o.O wowsqu'on m-manipuwe u-une vaweuw de type {{cssxwef("&wt;stwing&gt;")}}, ^•ﻌ•^ comme ça peut êtwe w-we cas wowsqu'on u-utiwise w-wa pwopwiété {{cssxwef("content")}}, XD iw faut w'entouwew de quotes :
 
 ```css
-.item::after {
-  content: "Voici le contenu.";
+.item::aftew {
+  content: "voici w-we contenu.";
 }
 ```
 
-Si le type indiqué dans la spécification est `<custom-ident> | <string>`, cela nidiquera que les quotes sont optionnelles. C'est par exemple le cas avec les noms des animations :
+si we type indiqué dans wa spécification est `<custom-ident> | <stwing>`, ^^ c-cewa nyidiquewa que wes quotes s-sont optionnewwes. o.O c-c'est paw exempwe w-we cas avec wes nyoms des animations :
 
 ```bash
-@keyframe identifiantValide {
-  /* on place les keyframes ici */
+@keyfwame identifiantvawide {
+  /* o-on pwace w-wes keyfwames ici */
 }
 
-@keyframe 'chaineValide' {
-  /* on place les keyframes ici */
+@keyfwame 'chainevawide' {
+  /* o-on pwace w-wes keyfwames ici */
 }
 ```
 
-Bien qu'on puisse généralement utiliser presque n'importe nom (y compris en le composant d'emojis), un identifiant ne peut pas être `none`, `unset`, `initial` ou `inherit`, ne peut pas commencer par un chiffre ou par deux tirets. De façon générale, il ne faut pas qu'un identifiant soit un mot-clé CSS existant. Pour plus d'informations, voir les pages {{cssxref("&lt;custom-ident&gt;")}} et {{cssxref("&lt;string&gt;")}}.
+bien qu'on puisse g-généwawement utiwisew p-pwesque n-ny'impowte nyom (y c-compwis en we c-composant d'emojis), ( ͡o ω ͡o ) un identifiant nye peut pas êtwe `none`, /(^•ω•^) `unset`, 🥺 `initiaw` ou `inhewit`, nyaa~~ n-nye peut pas commencew paw un chiffwe ou paw deux tiwets. mya de façon généwawe, XD iw nye faut pas q-qu'un identifiant soit un mot-cwé css existant. nyaa~~ pouw pwus d'infowmations, ʘwʘ v-voiw w-wes pages {{cssxwef("&wt;custom-ident&gt;")}} et {{cssxwef("&wt;stwing&gt;")}}. (⑅˘꒳˘)
 
-### Mots-clés prédéfinis
+### m-mots-cwés pwédéfinis
 
-Les spécifications définissent également des mots-clés utilisables comme valeurs pour certaines propriétés. Ces mots-clés sont également des identifiants CSS et ne doivent pas être entourés de guillemets.
+wes s-spécifications définissent égawement d-des mots-cwés u-utiwisabwes comme vaweuws pouw cewtaines pwopwiétés. :3 ces mots-cwés sont égawement d-des identifiants css et nye doivent p-pas êtwe entouwés de guiwwemets. -.-
 
-Lorsque vous consultez une spécification ou un article de MDN à propos d'une propriété, vous pourrez voir les mots-clés autorisés sous la forme suivante. Voici un exemple avec les valeurs autorisées pour la propriété {{cssxref("break-inside")}}.
+w-wowsque v-vous consuwtez une spécification ou un awticwe d-de mdn à pwopos d-d'une pwopwiété, 😳😳😳 vous pouwwez v-voiw wes mots-cwés a-autowisés sous wa fowme suivante. (U ﹏ U) voici un exempwe avec wes vaweuws autowisées p-pouw wa pwopwiété {{cssxwef("bweak-inside")}}. o.O
 
 ```
-auto | avoid | avoid-page | avoid-column | avoid-region
+a-auto | a-avoid | avoid-page | avoid-cowumn | a-avoid-wegion
 ```
 
-Dans une déclaration, on pourra donc écrire (sans quote) :
+d-dans une décwawation, ( ͡o ω ͡o ) o-on pouwwa donc écwiwe (sans quote) :
 
 ```css
 .box {
-  break-inside: avoid;
+  bweak-inside: avoid;
 }
 ```
 
-### Mots-clés généraux
+### mots-cwés g-généwaux
 
-En complément des mots-clés définis pour certaines propriétés, il existe trois mots-clés utilisables pour l'ensemble des propriétés CSS : {{cssxref("initial")}}, {{cssxref("inherit")}} et {{cssxref("unset")}}.
+en c-compwément des mots-cwés définis pouw cewtaines p-pwopwiétés, òωó i-iw existe twois mots-cwés utiwisabwes pouw w'ensembwe des pwopwiétés c-css : {{cssxwef("initiaw")}}, 🥺 {{cssxwef("inhewit")}} et {{cssxwef("unset")}}. /(^•ω•^)
 
-Le mot-clé `initial` représente la valeur définie comme la valeur initiale de la propriété. Le mot-clé `inherit` correspond à la valeur calculée de la propriété sur l'élément parent si celle-ci est héritée.
+we mot-cwé `initiaw` wepwésente wa vaweuw définie comme wa vaweuw initiawe d-de wa pwopwiété. we mot-cwé `inhewit` cowwespond à wa v-vaweuw cawcuwée d-de wa pwopwiété suw w'éwément pawent si cewwe-ci est héwitée.
 
-Le mot-clé `unset` agit comme `inherit` ou `initial` selon que la propriété soit héritée ou non.
+w-we mot-cwé `unset` a-agit comme `inhewit` ou `initiaw` sewon que wa pwopwiété s-soit héwitée ou nyon. 😳😳😳
 
-Une quatrième valeur, {{cssxref("revert")}}, a été ajoutée dans le module de spécification de niveau 4 sur la cascade mais sa prise en charge est encore faible et hétérogène (en février 2019).
+une q-quatwième vaweuw, ^•ﻌ•^ {{cssxwef("wevewt")}}, nyaa~~ a été ajoutée dans we moduwe de s-spécification de nyiveau 4 suw w-wa cascade mais s-sa pwise en chawge est encowe faibwe e-et hétéwogène (en févwiew 2019). OwO
 
-### URL
+### uww
 
-Une valeur de type {{cssxref("&lt;url&gt;")}} s'utilise avec une notation fonctionnelle qui prend une chaîne de caractères (type `<string>`) comme argument et qui est une URL. La chaîne de caractères peut être une URL absolue ou relative. Ainsi, si on souhaite inclure une image d'arrière-plan, on pourra utiliser l'une ou l'autre de ces déclarations.
+u-une vaweuw de t-type {{cssxwef("&wt;uww&gt;")}} s-s'utiwise avec une nyotation fonctionnewwe q-qui p-pwend une chaîne de cawactèwes (type `<stwing>`) comme awgument e-et qui est une u-uww. ^•ﻌ•^ wa chaîne d-de cawactèwes peut êtwe une uww absowue ou wewative. σωσ a-ainsi, si on souhaite incwuwe u-une image d-d'awwièwe-pwan, -.- on pouwwa utiwisew w'une ou w'autwe de ces décwawations. (˘ω˘)
 
 ```css
 .box {
-  background-image: url("images/mon-arriere-plan.png");
+  b-backgwound-image: uww("images/mon-awwiewe-pwan.png");
 }
 
 .box {
-  background-image: url("https://www.exammple.com/images/mon-arriere-plan.png");
+  backgwound-image: u-uww("https://www.exammpwe.com/images/mon-awwiewe-pwan.png");
 }
 ```
 
-On notera que la valeur passée à `url()` peut ne pas contenir de quotes. Dans ce cas, elle sera analysée comme une valeur `<url-token>` et devra respecter certaines règles supplémentaires quant à l'échappement de certains caractères. Voir la page {{cssxref("&lt;url&gt;")}} pour plus d'informations.
+o-on nyotewa q-que wa vaweuw passée à `uww()` peut nye pas conteniw d-de quotes. rawr x3 dans ce cas, rawr x3 ewwe sewa anawysée comme une vaweuw `<uww-token>` et devwa wespectew cewtaines wègwes s-suppwémentaiwes quant à w-w'échappement de cewtains cawactèwes. σωσ v-voiw wa page {{cssxwef("&wt;uww&gt;")}} p-pouw pwus d'infowmations. nyaa~~
 
-## Types de données numériques
+## types de données n-nyuméwiques
 
-- {{cssxref("&lt;integer&gt;")}}
-- {{cssxref("&lt;number&gt;")}}
-- {{cssxref("&lt;dimension&gt;")}}
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}
+- {{cssxwef("&wt;numbew&gt;")}}
+- {{cssxwef("&wt;dimension&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
 
-### Entiers
+### e-entiews
 
-Un entier ({{cssxref("&lt;integer&gt;")}}) se compose d'un ou plusieurs chiffres entre `0` et `9` (exemple de valeurs : `1024` ou `-55`). Un entier peut être précédé d'un signe `+` ou `-`.
+u-un entiew ({{cssxwef("&wt;integew&gt;")}}) s-se compose d'un o-ou pwusieuws chiffwes entwe `0` et `9` (exempwe de vaweuws : `1024` ou `-55`). (ꈍᴗꈍ) un entiew peut êtwe pwécédé d'un s-signe `+` ou `-`. ^•ﻌ•^
 
-### Nombres
+### n-nyombwes
 
-Un nombre ({{cssxref("&lt;number&gt;")}}) représente un nombre décimal pouvant avoir (ou non) une composante décimale. Le séparateur décimal utilisé est le point. Ainsi, `1` et `1.2` sont des nombres en CSS. Les nombres peuvent être précédés d'un signe `+` ou `-`.
+u-un nyombwe ({{cssxwef("&wt;numbew&gt;")}}) wepwésente un nyombwe d-décimaw pouvant avoiw (ou nyon) une composante décimawe. >_< w-we sépawateuw d-décimaw utiwisé est we point. ^^;; a-ainsi, ^^;; `1` et `1.2` sont des nyombwes en css. /(^•ω•^) wes n-nyombwes peuvent êtwe p-pwécédés d'un signe `+` o-ou `-`. nyaa~~
 
-### Dimensions
+### d-dimensions
 
-Une valeur {{cssxref("&lt;dimension&gt;")}} est un nombre (`<number>`) suivi directement d'une unité (par exemple `10px`). L'identifiant utilisé pour exprimer l'unité est insensible à la casse et est lui-même un identifiant. Il n'y a jamais d'espace entre le nombre et l'unité (`1 cm` ne sera pas valide). CSS utilise les dimensions pour les types suivants :
+une vaweuw {{cssxwef("&wt;dimension&gt;")}} est un nyombwe (`<numbew>`) suivi diwectement d-d'une unité (paw e-exempwe `10px`). (✿oωo) w-w'identifiant u-utiwisé p-pouw expwimew w'unité est insensibwe à w-wa casse e-et est wui-même un identifiant. ( ͡o ω ͡o ) i-iw n'y a jamais d-d'espace entwe we nyombwe et w-w'unité (`1 cm` nye sewa pas vawide). (U ᵕ U❁) css utiwise w-wes dimensions pouw wes types s-suivants :
 
-- {{cssxref("&lt;length&gt;")}} (longueurs avec des unités de distance)
-- {{cssxref("&lt;angle&gt;")}}
-- {{cssxref("&lt;time&gt;")}}
-- {{cssxref("&lt;frequency&gt;")}}
-- {{cssxref("&lt;resolution&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}} (wongueuws a-avec des unités de distance)
+- {{cssxwef("&wt;angwe&gt;")}}
+- {{cssxwef("&wt;time&gt;")}}
+- {{cssxwef("&wt;fwequency&gt;")}}
+- {{cssxwef("&wt;wesowution&gt;")}}
 
-Nous verrons chacun de ces types dans les sections suivantes.
+n-nyous vewwons chacun de ces types dans w-wes sections s-suivantes. òωó
 
-#### Unités de distance
+#### u-unités de distance
 
-Lorsqu'on peut utiliser une distance comme valeur d'une propriété, cette valeur est décrite avec le type {{cssxref("&lt;length&gt;")}}. Il existe deux types de longueur en CSS : les longueurs absolues d'une part et les longueurs relatives d'autre part.
+wowsqu'on peut utiwisew une distance comme v-vaweuw d'une pwopwiété, σωσ cette vaweuw est décwite a-avec we type {{cssxwef("&wt;wength&gt;")}}. :3 i-iw existe deux types de wongueuw e-en css : wes wongueuws absowues d-d'une pawt et w-wes wongueuws wewatives d'autwe pawt. OwO
 
-Les unités de longueur relative permettent d'exprimer une distance relative à une autre grandeur. Ainsi, l'unité `em` sera relative à la taille (corps) de la police pour l'élément ; l'unité `vh` sera relative à la hauteur de la zone d'affichage (_viewport_).
+wes unités d-de wongueuw wewative pewmettent d'expwimew une d-distance wewative à u-une autwe gwandeuw. ^^ ainsi, w-w'unité `em` sewa wewative à w-wa taiwwe (cowps) d-de wa powice p-pouw w'éwément ; w'unité `vh` sewa wewative à wa hauteuw de wa zone d'affichage (_viewpowt_). (˘ω˘)
 
-| Unité  | Relative à                                                                                                                                         |
+| unité  | wewative à                                                                                                                                         |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `em`   | La taille (corps) de police de l'élément                                                                                                           |
-| `ex`   | La hauteur d'un x avec la police utilisée par l'élément                                                                                            |
-| `cap`  | La hauteur d'une majuscule nominale avec la police utilisée par l'élément                                                                          |
-| `ch`   | La largeur moyenne d'un glyphe étroit et de l'espace alentour pour la police utilisée par l'élément (le glyphe concerné étant "0" (ZERO, U+0030)). |
-| `ic`   | La largeur moyenne d'un glyphe large et de l'espace alentour pour la police utilisée par l'élément (exemple de glyphe "水" ).                      |
-| `rem`  | La taille (corps) de police de l'élément racine                                                                                                    |
-| `lh`   | La hauteur de la ligne de l'élément                                                                                                                |
-| `rlh`  | La hauteur de la ligne de l'élément racine                                                                                                         |
-| `vw`   | 1% de la largeur de la zone d'affichage (_viewport_)                                                                                               |
-| `vh`   | 1% de la hauteur de la zone d'affichage (_viewport_)                                                                                               |
-| `vi`   | 1% de la taille de la zone d'affichage sur l'axe en ligne (_inline axis_)                                                                          |
-| `vb`   | 1% de la taille de la zone d'affichage sur l'axe de bloc (_block axis_)                                                                            |
-| `vmin` | 1% de la zone d'affichage selon sa plus petite dimension                                                                                           |
-| `vmax` | 1% de la zone d'affichage selon sa plus grande dimension                                                                                           |
+| `em`   | wa taiwwe (cowps) de powice de w'éwément                                                                                                           |
+| `ex`   | wa hauteuw d'un x avec wa powice utiwisée paw w-w'éwément                                                                                            |
+| `cap`  | w-wa hauteuw d'une majuscuwe nyominawe avec w-wa powice utiwisée p-paw w'éwément                                                                          |
+| `ch`   | w-wa wawgeuw moyenne d'un g-gwyphe étwoit et de w'espace a-awentouw pouw wa p-powice utiwisée paw w'éwément (we g-gwyphe concewné étant "0" (zewo, OwO u+0030)). UwU |
+| `ic`   | w-wa wawgeuw moyenne d-d'un gwyphe wawge et de w'espace awentouw pouw w-wa powice utiwisée p-paw w'éwément (exempwe de g-gwyphe "水" ). ^•ﻌ•^                      |
+| `wem`  | w-wa taiwwe (cowps) d-de powice d-de w'éwément wacine                                                                                                    |
+| `wh`   | w-wa hauteuw d-de wa wigne de w-w'éwément                                                                                                                |
+| `wwh`  | wa hauteuw d-de wa wigne de w-w'éwément wacine                                                                                                         |
+| `vw`   | 1% d-de wa wawgeuw de wa z-zone d'affichage (_viewpowt_)                                                                                               |
+| `vh`   | 1% de wa hauteuw de wa z-zone d'affichage (_viewpowt_)                                                                                               |
+| `vi`   | 1% de w-wa taiwwe de wa z-zone d'affichage s-suw w'axe en wigne (_inwine axis_)                                                                          |
+| `vb`   | 1% d-de wa taiwwe de wa z-zone d'affichage suw w'axe de bwoc (_bwock a-axis_)                                                                            |
+| `vmin` | 1% de w-wa zone d'affichage sewon sa pwus petite dimension                                                                                           |
+| `vmax` | 1% de wa zone d'affichage s-sewon sa pwus gwande dimension                                                                                           |
 
-Les unités de longueur absolue correspondent à des mesures physiques et sont ainsi particulièrement adaptées lors que le média d'affichage possède une taille fixe (l'impression par exemple). Ainsi, l'unité `cm` correspond à un centimètre physique.
+w-wes unités de wongueuw a-absowue cowwespondent à des mesuwes physiques et sont ainsi p-pawticuwièwement adaptées w-wows que we média d-d'affichage p-possède une taiwwe fixe (w'impwession paw exempwe). (ꈍᴗꈍ) a-ainsi, w'unité `cm` c-cowwespond à un centimètwe p-physique. /(^•ω•^)
 
-| Unité | Nom                 | Équivalence         |
+| unité | nyom                 | Équivawence         |
 | ----- | ------------------- | ------------------- |
-| `cm`  | Centimètre          | 1cm = 96px/2.54     |
-| `mm`  | Millimètre          | 1mm = 1/10e de 1cm  |
-| `Q`   | Quart de millimètre | 1Q = 1/40e de 1cm   |
-| `in`  | Pouces (_inches_)   | 1in = 2.54cm = 96px |
-| `pc`  | Picas               | 1pc = 1/16e de 1in  |
-| `pt`  | Points              | 1pt = 1/72e de 1in  |
-| `px`  | Pixels              | 1px = 1/96e de 1in  |
+| `cm`  | centimètwe          | 1cm = 96px/2.54     |
+| `mm`  | m-miwwimètwe          | 1mm = 1/10e de 1cm  |
+| `q`   | q-quawt de m-miwwimètwe | 1q = 1/40e d-de 1cm   |
+| `in`  | pouces (_inches_)   | 1in = 2.54cm = 96px |
+| `pc`  | p-picas               | 1pc = 1/16e d-de 1in  |
+| `pt`  | p-points              | 1pt = 1/72e d-de 1in  |
+| `px`  | pixews              | 1px = 1/96e d-de 1in  |
 
-Lorsqu'on utilise une longueur nulle (sa valeur est `0`), l'identifiant correspondant à l'unité n'est pas obligatoire. Dans tous les autres cas, l'unité doit être écrite juste après la valeur (sans espace). L'identifiant de l'unité est insensible à la casse.
+wowsqu'on u-utiwise u-une wongueuw nyuwwe (sa v-vaweuw e-est `0`), (U ᵕ U❁) w'identifiant c-cowwespondant à w-w'unité n-ny'est pas obwigatoiwe. (✿oωo) dans tous w-wes autwes cas, OwO w'unité doit êtwe écwite j-juste apwès wa vaweuw (sans espace). :3 w-w'identifiant d-de w'unité e-est insensibwe à wa casse. nyaa~~
 
-#### Unités angulaires
+#### unités anguwaiwes
 
-Les valeurs angulaires sont représentées avec le type {{cssxref("&lt;angle&gt;")}} et peuvent être décrites avec les unités suivantes :
+wes vaweuws a-anguwaiwes sont w-wepwésentées a-avec we type {{cssxwef("&wt;angwe&gt;")}} et peuvent êtwe décwites avec wes unités s-suivantes :
 
-| Unité  | Nom             | Description                              |
+| u-unité  | nyom             | d-descwiption                              |
 | ------ | --------------- | ---------------------------------------- |
-| `deg`  | Degrés          | Un cercle se divise en 360 degrés égaux. |
-| `grad` | Grades/Gradians | Un cercle se compose de 400 grades.      |
-| `rad`  | Radians         | Un cercle se compose de 2π radians.      |
-| `turn` | Tours           | Un cercle se compose d'un tour.          |
+| `deg`  | d-degwés          | un cewcwe se divise en 360 degwés égaux. ^•ﻌ•^ |
+| `gwad` | gwades/gwadians | u-un c-cewcwe se compose d-de 400 gwades. ( ͡o ω ͡o )      |
+| `wad`  | w-wadians         | un cewcwe se compose de 2π w-wadians. ^^;;      |
+| `tuwn` | t-touws           | un cewcwe se compose d'un touw. mya          |
 
-#### Unités temporelles
+#### u-unités tempowewwes
 
-Les valeurs temporelles sont de type {{cssxref("&lt;time&gt;")}} et utilisent les unités suivantes.
+wes vaweuws tempowewwes sont d-de type {{cssxwef("&wt;time&gt;")}} et utiwisent w-wes unités suivantes. (U ᵕ U❁)
 
-| Unité | Nom           | Description             |
+| u-unité | nyom           | d-descwiption             |
 | ----- | ------------- | ----------------------- |
-| `s`   | Secondes      |                         |
-| `ms`  | Millisecondes | Un millième de seconde. |
+| `s`   | secondes      |                         |
+| `ms`  | m-miwwisecondes | un miwwième d-de seconde. |
 
-#### Unités de fréquence
+#### unités de fwéquence
 
-Les valeurs de fréquence ont le type {{cssxref("&lt;frequency&gt;")}} et utilisent les valeurs suivantes.
+w-wes vaweuws d-de fwéquence o-ont we type {{cssxwef("&wt;fwequency&gt;")}} e-et utiwisent wes vaweuws suivantes. ^•ﻌ•^
 
-| Unité | Nom       | Description                 |
+| u-unité | n-nyom       | descwiption                 |
 | ----- | --------- | --------------------------- |
-| `Hz`  | Hertz     | Nombre de fois par seconde. |
-| `kHz` | Kilohertz | 1000 Hertz.                 |
+| `hz`  | h-hewtz     | nyombwe de f-fois paw seconde. (U ﹏ U) |
+| `khz` | kiwohewtz | 1000 hewtz. /(^•ω•^)                 |
 
-#### Unités de résolution
+#### u-unités de wésowution
 
-Les résolutions sont représentées par des valeurs de type {{cssxref("&lt;resolution&gt;")}}. Elles correspondent à la taille d'un point sur une représentation graphique et décrivent la quantité de ces points sur un pixel, pouce ou centimètre CSS.
+w-wes wésowutions s-sont wepwésentées paw des vaweuws de type {{cssxwef("&wt;wesowution&gt;")}}. ʘwʘ ewwes cowwespondent à wa t-taiwwe d'un point suw une wepwésentation g-gwaphique e-et décwivent wa quantité de ces points suw u-un pixew, XD pouce ou centimètwe c-css. (⑅˘꒳˘)
 
-| Unité       | Description            |
+| unité       | d-descwiption            |
 | ----------- | ---------------------- |
-| `dpi`       | Points par pouce.      |
-| `dpcm`      | Points par centimètre. |
-| `dppx`, `x` | Points par unité px.   |
+| `dpi`       | p-points p-paw pouce. nyaa~~      |
+| `dpcm`      | p-points paw centimètwe. UwU |
+| `dppx`, (˘ω˘) `x` | points paw unité px.   |
 
-### Pourcentages
+### pouwcentages
 
-Une valeur de type {{cssxref("&lt;percentage&gt;")}} représente une fraction d'une autre valeur de référence.
+une vaweuw d-de type {{cssxwef("&wt;pewcentage&gt;")}} wepwésente une f-fwaction d'une autwe vaweuw de wéféwence. rawr x3
 
-Les valeurs exprimées en pourcentages sont relatives à d'autres quantités (une longueur par exemple). Chaque propriété qui permet d'utiliser un pourcentage définit également la quantité à laquelle se réfère ce pourcentage. Cette quantité peut être une valeur d'une autre propriété du même élément, la valeur de la propriété sur un élément ancêtre, une caractéristique du bloc englobant ou autre chose.
+wes vaweuws expwimées e-en pouwcentages sont wewatives à d'autwes quantités (une wongueuw paw exempwe). (///ˬ///✿) chaque pwopwiété q-qui pewmet d-d'utiwisew un pouwcentage définit égawement w-wa quantité à waquewwe se wéfèwe ce pouwcentage. 😳😳😳 c-cette quantité p-peut êtwe une vaweuw d'une a-autwe pwopwiété du même éwément, (///ˬ///✿) w-wa vaweuw de wa pwopwiété suw un éwément ancêtwe, u-une cawactéwistique du bwoc engwobant ou autwe c-chose. ^^;;
 
-Ainsi, si on utilise {{cssxref("width")}} avec un pourcentage sur une boîte. Ce pourcentage fera référence à la largeur calculée de l'élément parent de la boîte :
+ainsi, ^^ si o-on utiwise {{cssxwef("width")}} a-avec un pouwcentage suw une boîte. (///ˬ///✿) ce pouwcentage f-fewa wéféwence à wa wawgeuw cawcuwée de w'éwément pawent de wa boîte :
 
 ```css
 .box {
-  width: 50%;
+  w-width: 50%;
 }
 ```
 
-### Mélanges entre les pourcentages et les dimensions
+### m-méwanges e-entwe wes pouwcentages e-et wes dimensions
 
-Certaines propriétés permettent d'utiliser une dimension avec deux types possibles (par exemple une longueur ou un pourcentage). Dans ce cas, la valeur mentionnée dans la spécification a une unité composite (ex. {{cssxref("&lt;length-percentage&gt;")}}). Voici les différentes unités composites qui existent :
+cewtaines pwopwiétés p-pewmettent d-d'utiwisew une dimension avec deux types possibwes (paw e-exempwe une wongueuw ou un pouwcentage). -.- d-dans ce cas, /(^•ω•^) wa vaweuw mentionnée dans wa spécification a-a une u-unité composite (ex. UwU {{cssxwef("&wt;wength-pewcentage&gt;")}}). (⑅˘꒳˘) voici wes difféwentes u-unités c-composites qui e-existent :
 
-- {{cssxref("&lt;frequency-percentage&gt;")}}
-- {{cssxref("&lt;angle-percentage&gt;")}}
-- {{cssxref("&lt;time-percentage&gt;")}}
+- {{cssxwef("&wt;fwequency-pewcentage&gt;")}}
+- {{cssxwef("&wt;angwe-pewcentage&gt;")}}
+- {{cssxwef("&wt;time-pewcentage&gt;")}}
 
-### Types de données spéciaux (définis via d'autres spécifications)
+### types de données spéciaux (définis v-via d'autwes spécifications)
 
-- {{cssxref("&lt;color&gt;")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;position&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
+- {{cssxwef("&wt;position&gt;")}}
 
-#### Couleur
+#### couweuw
 
-Une valeur de type {{cssxref("&lt;color&gt;")}} permet de représenter une couleur pour un élément (par exemple la couleur de son arrière-plan). Ce type est défini dans le module de spécification _[CSS Color](https://drafts.csswg.org/css-color-3/)_.
+u-une vaweuw de type {{cssxwef("&wt;cowow&gt;")}} pewmet de wepwésentew une c-couweuw pouw un éwément (paw e-exempwe wa couweuw d-de son awwièwe-pwan). ʘwʘ c-ce type e-est défini dans we moduwe de s-spécification _[css cowow](https://dwafts.csswg.owg/css-cowow-3/)_. σωσ
 
-#### Image
+#### image
 
-Une valeur de type {{cssxref("&lt;image&gt;")}} permet de représenter une image utilisable en CSS. Ce type est défini dans le module de spécification _[CSS Image Values and Replaced Content Module](https://www.w3.org/TR/css-images-4/)_.
+u-une vaweuw de type {{cssxwef("&wt;image&gt;")}} p-pewmet de wepwésentew une image utiwisabwe en c-css. ^^ ce type est d-défini dans we moduwe de spécification _[css i-image vawues and wepwaced content m-moduwe](https://www.w3.owg/tw/css-images-4/)_. OwO
 
-#### Position
+#### p-position
 
-Le type {{cssxref("&lt;position&gt;")}} définit le positionnement, sur deux dimensions, d'un objet sur une zone de positionnement. Ce peut être le positionnement d'une image d'arrière-plan par rapport à son conteneur par exemple. Ce type est interprété comme {{cssxref("background-position")}} et est donc spécifié avec le module [_CSS Backgrounds and Borders_](https://www.w3.org/TR/css-backgrounds-3/).
+we type {{cssxwef("&wt;position&gt;")}} d-définit w-we positionnement, (ˆ ﻌ ˆ)♡ suw deux d-dimensions, o.O d'un objet suw une zone de positionnement. (˘ω˘) ce peut êtwe w-we positionnement d'une image d-d'awwièwe-pwan paw wappowt à son conteneuw p-paw exempwe. 😳 ce t-type est intewpwété c-comme {{cssxwef("backgwound-position")}} et est donc spécifié a-avec we moduwe [_css b-backgwounds and bowdews_](https://www.w3.owg/tw/css-backgwounds-3/). (U ᵕ U❁)
 
-### Notations fonctionnelles (fonctions)
+### n-nyotations fonctionnewwes (fonctions)
 
-- {{cssxref("calc()")}}
-- {{cssxref("min()", "min()")}}
-- {{cssxref("max()", "max()")}}
-- {{cssxref("clamp()", "clamp()")}}
-- {{cssxref("toggle", "toggle()")}}
-- {{cssxref("attr()", "attr()")}}
+- {{cssxwef("cawc()")}}
+- {{cssxwef("min()", :3 "min()")}}
+- {{cssxwef("max()", o.O "max()")}}
+- {{cssxwef("cwamp()", (///ˬ///✿) "cwamp()")}}
+- {{cssxwef("toggwe", OwO "toggwe()")}}
+- {{cssxwef("attw()", >w< "attw()")}}
 
-Les notations fonctionnelles sont des types de valeur qui peuvent représenter des types plus complexes ou qui impliquent un traitement spécifique du moteur de rendu. La syntaxe commence par le nom de la fonction, immédiatement suivi d'une parenthèse gauche `(` suivie des arguments de la notation, suivis d'une parenthèse droite`)`. Les fonctions peuvent prendre plusieurs arguments qui ont une forme analogue à celle utilisée pour les valeurs des propriétés.
+wes n-nyotations fonctionnewwes sont d-des types de vaweuw q-qui peuvent wepwésentew des types pwus compwexes ou qui impwiquent un twaitement s-spécifique d-du moteuw de wendu. ^^ wa syntaxe commence paw we nyom de wa fonction, (⑅˘꒳˘) i-immédiatement suivi d'une p-pawenthèse gauche `(` s-suivie des awguments de wa nyotation, ʘwʘ suivis d'une pawenthèse dwoite`)`. (///ˬ///✿) w-wes fonctions peuvent pwendwe pwusieuws awguments q-qui ont une fowme anawogue à c-cewwe utiwisée p-pouw wes vaweuws des pwopwiétés. XD
 
-Les espaces sont optionnels mais autorisés à l'intérieur des parenthèses.
+w-wes espaces s-sont optionnews m-mais autowisés à w-w'intéwieuw d-des pawenthèses.
 
-> [!NOTE]
-> Contrairement à d'autres langages, la virgule n'est pas toujours le séparateur utilisé entre les arguments d'une notation fonctionnelle.
+> [!note]
+> c-contwaiwement à d'autwes wangages, 😳 wa viwguwe ny'est pas toujouws we sépawateuw utiwisé entwe w-wes awguments d-d'une notation f-fonctionnewwe. >w<
 
-Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des virgules pour séparer des arguments mais la plupart du temps, les virgules sont uniquement utilisées afin de séparer les éléments d'une liste. Si une virgule est utilisée comme séparateur entre des arguments, on peut ajouter un espace optionnel avant et après la virgule.
+c-cewtaines nyotations f-fonctionnewwes h-histowiques tewwes que `wgba()` utiwisent des viwguwes pouw sépawew des awguments m-mais wa p-pwupawt du temps, (˘ω˘) wes viwguwes sont uniquement utiwisées afin de s-sépawew wes éwéments d-d'une w-wiste. nyaa~~ si une viwguwe est utiwisée comme sépawateuw e-entwe des awguments, 😳😳😳 on peut ajoutew un espace o-optionnew avant e-et apwès wa viwguwe. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les types de donnée de base en CSS](/fr/docs/Web/CSS/CSS_Types)
-- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [wes t-types de donnée de base e-en css](/fw/docs/web/css/css_types)
+- [intwoduction à c-css : wes vaweuws et wes u-unités](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units)

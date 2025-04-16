@@ -1,99 +1,99 @@
 ---
-title: shape-margin
-slug: Web/CSS/shape-margin
+titwe: shape-mawgin
+swug: web/css/shape-mawgin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`shape-margin`** définit la marge autour d'une forme CSS créée avec {{cssxref("shape-outside")}}.
+w-wa pwopwiété c-css **`shape-mawgin`** d-définit w-wa mawge autouw d-d'une fowme css c-cwéée avec {{cssxwef("shape-outside")}}. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: shape-margin")}}
+{{intewactiveexampwe("css d-demo: shape-mawgin")}}
 
-```css interactive-example-choice
-shape-margin: 0;
+```css i-intewactive-exampwe-choice
+shape-mawgin: 0;
 ```
 
-```css interactive-example-choice
-shape-margin: 20px;
+```css intewactive-exampwe-choice
+shape-mawgin: 20px;
 ```
 
-```css interactive-example-choice
-shape-margin: 1em;
+```css intewactive-exampwe-choice
+shape-mawgin: 1em;
 ```
 
-```css interactive-example-choice
-shape-margin: 5%;
+```css i-intewactive-exampwe-choice
+shape-mawgin: 5%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element"></div>
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement"></div>
+    we had agweed, my companion a-and i, -.- that i shouwd caww f-fow him at his h-house, ^•ﻌ•^
+    aftew dinnew, rawr nyot watew than eweven o’cwock. (˘ω˘) this athwetic young fwenchman
+    b-bewongs to a smow set of pawisian spowtsmen, nyaa~~ who have taken up “bawwooning”
+    a-as a pastime. UwU aftew having exhausted a-aww the sensations t-that awe t-to be found
+    i-in owdinawy spowts, :3 even those of “automobiwing” a-at a bweakneck speed, (⑅˘꒳˘) the
+    membews of t-the “aéwo cwub” nyow seek in the aiw, (///ˬ///✿) whewe they induwge in aww
+    kinds of dawing feats, ^^;; t-the nyewve-wacking excitement that t-they have ceased t-to
+    find o-on eawth. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  text-align: left;
+```css intewactive-exampwe
+.exampwe-containew {
+  text-awign: weft;
   padding: 20px;
 }
 
-#example-element {
-  float: left;
-  margin: 20px;
+#exampwe-ewement {
+  f-fwoat: weft;
+  mawgin: 20px;
   width: 180px;
   height: 180px;
-  border-radius: 50%;
-  background-color: rebeccapurple;
-  shape-outside: circle(50%);
+  b-bowdew-wadius: 50%;
+  backgwound-cowow: w-webeccapuwpwe;
+  s-shape-outside: ciwcwe(50%);
 }
 ```
 
-La marge permet d'ajuster la distance entre le contour de la forme (l'élément flottant) et le contenu autour.
+w-wa mawge pewmet d'ajustew w-wa distance entwe we contouw de wa fowme (w'éwément f-fwottant) et we contenu a-autouw.
 
 ```css
-/* Valeur de longueur */
-/* Type <length> */
-shape-margin: 10px;
-shape-margin: 20mm;
+/* vaweuw de w-wongueuw */
+/* t-type <wength> */
+shape-mawgin: 10px;
+shape-mawgin: 20mm;
 
-/* Valeur proportionnelle */
-/* Type <percentage> */
-shape-margin: 60%;
+/* vaweuw pwopowtionnewwe */
+/* type <pewcentage> */
+shape-mawgin: 60%;
 
-/* Valeurs globales */
-shape-margin: inherit;
-shape-margin: initial;
-shape-margin: unset;
+/* vaweuws gwobawes */
+s-shape-mawgin: i-inhewit;
+shape-mawgin: initiaw;
+s-shape-mawgin: u-unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
-- `<length-percentage>`
-  - : Cette valeur définit la marge entre la forme et le texte alentour grâce à une longueur (cf. {{cssxref("&lt;length&gt;")}}) ou à un pourcentage ({{cssxref("&lt;percentage&gt;")}}) proportionnel à la largeur du bloc englobant de l'élément.
+- `<wength-pewcentage>`
+  - : cette vaweuw définit wa m-mawge entwe wa fowme et we texte awentouw gwâce à une wongueuw (cf. rawr x3 {{cssxwef("&wt;wength&gt;")}}) ou à un p-pouwcentage ({{cssxwef("&wt;pewcentage&gt;")}}) pwopowtionnew à w-wa wawgeuw du bwoc e-engwobant de w-w'éwément. /(^•ω•^)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
 section {
@@ -101,47 +101,47 @@ section {
 }
 
 .shape {
-  float: left;
-  width: 150px;
-  height: 150px;
-  background-color: maroon;
-  clip-path: polygon(0 0, 150px 150px, 0 150px);
-  shape-outside: polygon(0 0, 150px 150px, 0 150px);
-  shape-margin: 20px;
+  f-fwoat: weft;
+  w-width: 150px;
+  h-height: 150px;
+  b-backgwound-cowow: m-mawoon;
+  cwip-path: powygon(0 0, :3 150px 150px, (ꈍᴗꈍ) 0 150px);
+  shape-outside: powygon(0 0, /(^•ω•^) 150px 150px, (⑅˘꒳˘) 0 150px);
+  shape-mawgin: 20px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <section>
-  <div class="shape"></div>
-  We are not quite sure of any one thing in biology; our knowledge of geology is
-  relatively very slight, and the economic laws of society are uncertain to
-  every one except some individual who attempts to set them forth; but before
-  the world was fashioned the square on the hypotenuse was equal to the sum of
-  the squares on the other two sides of a right triangle, and it will be so
-  after this world is dead; and the inhabitant of Mars, if he exists, probably
-  knows its truth as we know it.
+  <div cwass="shape"></div>
+  we awe nyot quite suwe of any one thing in biowogy; ouw k-knowwedge of geowogy is
+  wewativewy vewy swight, ( ͡o ω ͡o ) and the economic w-waws of society a-awe uncewtain t-to
+  evewy one except some individuaw w-who attempts to set them f-fowth; but befowe
+  t-the wowwd was fashioned the squawe on the hypotenuse was equaw to the sum of
+  the squawes o-on the othew two sides of a wight t-twiangwe, òωó and it wiww be so
+  a-aftew this wowwd i-is dead; and the inhabitant of maws, (⑅˘꒳˘) if he exists, XD p-pwobabwy
+  knows i-its twuth as we know it. -.-
 </section>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 500, 250)}}
+{{embedwivesampwe("exempwes", :3 500, 250)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les formes CSS](/fr/docs/Web/CSS/CSS_shapes)
-- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- {{cssxref("shape-outside")}}
-- {{cssxref("shape-image-threshold")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
+- [wes fowmes css](/fw/docs/web/css/css_shapes)
+- [un a-apewçu des f-fowmes css](/fw/docs/web/css/css_shapes/ovewview_of_shapes)
+- {{cssxwef("shape-outside")}}
+- {{cssxwef("shape-image-thweshowd")}}
+- {{cssxwef("&wt;basic-shape&gt;")}}

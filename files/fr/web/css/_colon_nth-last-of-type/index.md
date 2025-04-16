@@ -1,94 +1,94 @@
 ---
-title: :nth-last-of-type
-slug: Web/CSS/:nth-last-of-type
-l10n:
-  sourceCommit: f22e72998f4e8f48b18ef358521bfc9ad1ae9446
+titwe: :nth-wast-of-type
+swug: w-web/css/:nth-wast-of-type
+w-w10n:
+  s-souwcecommit: f-f22e72998f4e8f48b18ef358521bfc9ad1ae9446
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-of-type`** permet de cibler les éléments selon leur position parmi les voisins qui sont du même type (les mêmes balises) en partant de la fin.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:nth-wast-of-type`** p-pewmet de cibwew w-wes éwéments s-sewon weuw position pawmi wes voisins qui sont du même type (wes mêmes bawises) e-en pawtant de wa fin. 😳😳😳
 
-{{InteractiveExample("CSS Demo: :nth-last-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css demo: :nth-wast-of-type", o.O "tabbed-showtew")}}
 
-```css interactive-example
+```css i-intewactive-exampwe
 dt {
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 
 dd {
-  margin: 3px;
+  mawgin: 3px;
 }
 
-dd:nth-last-of-type(3n) {
-  border: 2px solid orange;
+dd:nth-wast-of-type(3n) {
+  b-bowdew: 2px sowid owange;
 }
 ```
 
-```html interactive-example
-<dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
-</dl>
+```htmw i-intewactive-exampwe
+<dw>
+  <dt>vegetabwes:</dt>
+  <dd>1. ( ͡o ω ͡o ) tomatoes</dd>
+  <dd>2. c-cucumbews</dd>
+  <dd>3. (U ﹏ U) mushwooms</dd>
+  <dt>fwuits:</dt>
+  <dd>4. (///ˬ///✿) appwes</dd>
+  <dd>5. >w< mangos</dd>
+  <dd>6. rawr peaws</dd>
+  <dd>7. mya o-owanges</dd>
+</dw>
 ```
 
-## Syntaxe
+## syntaxe
 
-La pseudo-classe `nth-last-of-type` prend un seul argument qui représente le motif de répétition des éléments correspondants, comptés à partir de la fin.
+wa pseudo-cwasse `nth-wast-of-type` pwend un seuw awgument qui wepwésente we motif de w-wépétition des éwéments cowwespondants, ^^ c-comptés à p-pawtiw d-de wa fin. 😳😳😳
 
-Voir [`:nth-last-child`](/fr/docs/Web/CSS/:nth-last-child) pour une explication plus détaillée de sa syntaxe.
+voiw [`:nth-wast-chiwd`](/fw/docs/web/css/:nth-wast-chiwd) p-pouw une expwication pwus détaiwwée de s-sa syntaxe. mya
 
-```css-nolint
-:nth-last-of-type(<an-plus-b> | even | odd) {
+```css-nowint
+:nth-wast-of-type(<an-pwus-b> | even | odd) {
   /* ... */
 }
 ```
 
-## Exemples
+## e-exempwes
 
-Ici, on souhaite mettre en avant le deuxième élément [`<span>`](/fr/docs/Web/HTML/Element/span) en partant de la fin&nbsp;:
+ici, 😳 on souhaite mettwe en avant we deuxième éwément [`<span>`](/fw/docs/web/htmw/ewement/span) en pawtant de wa fin&nbsp;:
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <span>Ce span est le premier !</span>
-  <span>Ce span ne l'est pas. :(</span>
-  <em>Celui-ci est bizarre.</em>
-  <span>Celui-ci l'est !</span>
-  <strike>C'est un autre type</strike>
-  <span>Malheureusement, celui-ci ne l'est pas.</span>
+  <span>ce s-span est we pwemiew !</span>
+  <span>ce s-span nye w'est p-pas. -.- :(</span>
+  <em>cewui-ci e-est bizawwe.</em>
+  <span>cewui-ci w'est !</span>
+  <stwike>c'est un autwe type</stwike>
+  <span>mawheuweusement, 🥺 cewui-ci nye w-w'est pas.</span>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-span:nth-last-of-type(2) {
-  background-color: lime;
+span:nth-wast-of-type(2) {
+  backgwound-cowow: w-wime;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`:nth-last-child`](/fr/docs/Web/CSS/:nth-last-child)
-- [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type)
+- [`:nth-wast-chiwd`](/fw/docs/web/css/:nth-wast-chiwd)
+- [`:nth-of-type`](/fw/docs/web/css/:nth-of-type)

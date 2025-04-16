@@ -1,90 +1,90 @@
 ---
-title: -webkit-device-pixel-ratio
-slug: Web/CSS/@media/-webkit-device-pixel-ratio
+titwe: -webkit-device-pixew-watio
+swug: web/css/@media/-webkit-device-pixew-watio
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`-webkit-device-pixel-ratio`** est une caractéristique média non-standard, alternative à la caractéristique média standard {{cssxref("@media/resolution","resolution")}}.
+**`-webkit-device-pixew-watio`** e-est u-une cawactéwistique m-média nyon-standawd, ( ͡o ω ͡o ) a-awtewnative à w-wa cawactéwistique m-média standawd {{cssxwef("@media/wesowution","wesowution")}}. (U ﹏ U)
 
-Sa valeur correspond au nombre de pixels physiques utilisés par l'appareil pour représenter [un pixel CSS (`px`)](/fr/docs/Web/CSS/length#unités_de_longueur_absolues). Bien que la valeur soit de type {{cssxref("&lt;number&gt;")}}, sans unité donc, l'unité implicite est [`dppx`](/fr/docs/Web/CSS/resolution#unités).
+s-sa vaweuw cowwespond a-au nyombwe de pixews physiques utiwisés paw w'appaweiw pouw wepwésentew [un p-pixew css (`px`)](/fw/docs/web/css/wength#unités_de_wongueuw_absowues). (///ˬ///✿) bien que wa vaweuw soit d-de type {{cssxwef("&wt;numbew&gt;")}}, >w< sans u-unité donc, rawr w'unité impwicite est [`dppx`](/fw/docs/web/css/wesowution#unités). mya
 
-> [!WARNING]
-> Cette caractéristique est spécifique à WebKit. Tant que possible, on utilisera {{cssxref("@media/resolution","resolution")}}.
+> [!wawning]
+> cette cawactéwistique e-est spécifique à webkit. ^^ t-tant que possibwe, 😳😳😳 o-on utiwisewa {{cssxwef("@media/wesowution","wesowution")}}.
 
-## Syntaxe
+## syntaxe
 
-**`-webkit-device-pixel-ratio`** est une valleur décrivant un intervalle. On peut également utiliser **`-webkit-min-device-pixel-ratio`** et **`-webkit-max-device-pixel-ratio`** pour fixer un seuil minimum/maximum.
+**`-webkit-device-pixew-watio`** est une vawweuw décwivant un intewvawwe. mya on peut égawement utiwisew **`-webkit-min-device-pixew-watio`** e-et **`-webkit-max-device-pixew-watio`** pouw fixew un seuiw minimum/maximum. 😳
 
-### Valeurs
+### vaweuws
 
-- {{cssxref("&lt;number&gt;")}}
-  - : Le nombre de pixels physiques pour chaque pixel ([`px`](/fr/docs/Web/CSS/length#unités_de_longueur_absolues)) CSS. Bien que la valeur soit un nombre et ne permette pas d'utiliser des unités, l'unité implicite est [`dppx`](/fr/docs/Web/CSS/resolution#dppx).
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : we nombwe de pixews p-physiques pouw chaque pixew ([`px`](/fw/docs/web/css/wength#unités_de_wongueuw_absowues)) c-css. -.- b-bien que wa vaweuw s-soit un nyombwe e-et nye pewmette pas d'utiwisew des unités, 🥺 w-w'unité impwicite est [`dppx`](/fw/docs/web/css/wesowution#dppx). o.O
 
-## Implémentation
+## impwémentation
 
 ```css
-/* Unité dppx implicite */
-@media (-webkit-min-device-pixel-ratio: 2) { ... }
-/* équivalent à */
-@media (min-resolution: 2dppx) { ... }
+/* u-unité dppx impwicite */
+@media (-webkit-min-device-pixew-watio: 2) { ... }
+/* équivawent à */
+@media (min-wesowution: 2dppx) { ... }
 
-/* De même */
-@media (-webkit-max-device-pixel-ratio: 2) { ... }
-/* équivalent à */
-@media (max-resolution: 2dppx) { ... }
+/* de même */
+@media (-webkit-max-device-pixew-watio: 2) { ... }
+/* équivawent à */
+@media (max-wesowution: 2dppx) { ... }
 ```
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-/* Résolution exacte */
-@media (-webkit-device-pixel-ratio: 1) {
+/* wésowution exacte */
+@media (-webkit-device-pixew-watio: 1) {
   p {
-    color: red;
+    cowow: wed;
   }
 }
 
-/* Résolution minimale */
-@media (-webkit-min-device-pixel-ratio: 1.1) {
-  p {
+/* w-wésowution minimawe */
+@media (-webkit-min-device-pixew-watio: 1.1) {
+  p-p {
     font-size: 1.5em;
   }
 }
 
-/* Résolution maximale */
-@media (-webkit-max-device-pixel-ratio: 3) {
+/* w-wésowution m-maximawe */
+@media (-webkit-max-device-pixew-watio: 3) {
   p {
-    background: yellow;
+    backgwound: yewwow;
   }
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p>Voici un test pour la densité de pixel de votre appareil.</p>
+```htmw
+<p>voici u-un test pouw w-wa densité de pixew de votwe appaweiw.</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("@media/resolution","resolution")}}
-- {{cssxref("-webkit-transition")}}
-- {{cssxref("-webkit-transform-3d")}}
-- {{cssxref("-webkit-transform-2d")}}
-- {{cssxref("-webkit-animation")}}
-- [Article du W3C pour éviter le préfixe](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)
+- {{cssxwef("@media/wesowution","wesowution")}}
+- {{cssxwef("-webkit-twansition")}}
+- {{cssxwef("-webkit-twansfowm-3d")}}
+- {{cssxwef("-webkit-twansfowm-2d")}}
+- {{cssxwef("-webkit-animation")}}
+- [awticwe du w3c pouw évitew w-we pwéfixe](https://www.w3.owg/bwog/css/2012/06/14/unpwefix-webkit-device-pixew-watio/)

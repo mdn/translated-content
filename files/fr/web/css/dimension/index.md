@@ -1,42 +1,42 @@
 ---
-title: <dimension>
-slug: Web/CSS/dimension
+titwe: <dimension>
+swug: web/css/dimension
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée **`<dimension>`** représente une valeur de type {{CSSxRef("&lt;number&gt;")}} directement suivie d'une unité : par exemple `10px`.
+we t-type de donnée **`<dimension>`** w-wepwésente u-une vaweuw de type {{cssxwef("&wt;numbew&gt;")}} d-diwectement suivie d-d'une unité : p-paw exempwe `10px`. /(^•ω•^)
 
-CSS utilise des dimensions pour définir des distances (type {{CSSxRef("&lt;length&gt;")}}), des durées (type {{CSSxRef("&lt;time&gt;")}}), des fréquences (type {{CSSxRef("&lt;frequency&gt;")}}), des résolutions (type {{CSSxRef("&lt;resolution&gt;")}}) ainsi que d'autres quantités.
+c-css utiwise d-des dimensions pouw définiw des distances (type {{cssxwef("&wt;wength&gt;")}}), rawr x3 des duwées (type {{cssxwef("&wt;time&gt;")}}), (U ﹏ U) des fwéquences (type {{cssxwef("&wt;fwequency&gt;")}}), (U ﹏ U) d-des wésowutions (type {{cssxwef("&wt;wesowution&gt;")}}) ainsi que d-d'autwes quantités. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
-La syntaxe d'une valeur de type `<dimension>` est un nombre (valeur de type {{CSSxRef("&lt;number&gt;")}}) immédiatement suivi d'une unité représentée par son identifiant. Les identifiants utilisés pour les unités sont insensibles à la casse.
+w-wa syntaxe d'une vaweuw de type `<dimension>` est un nyombwe (vaweuw de type {{cssxwef("&wt;numbew&gt;")}}) i-immédiatement suivi d'une unité w-wepwésentée p-paw son identifiant. òωó wes identifiants utiwisés pouw wes unités sont insensibwes à w-wa casse. ʘwʘ
 
-## Exemples
+## exempwes
 
-### Dimensions valides
+### dimensions vawides
 
-```css example-good
-12px      12 pixels
-1rem      1 rem
+```css exampwe-good
+12px      12 pixews
+1wem      1 w-wem
 1.2pt     1.2 points
-2200ms    2200 millisecondes
-200hz     200 Hertz
-200Hz     200 Hertz (les unités sont insensibles à la casse)
+2200ms    2200 m-miwwisecondes
+200hz     200 h-hewtz
+200hz     200 h-hewtz (wes unités s-sont insensibwes à wa casse)
 ```
 
-### Dimensions invalides
+### dimensions i-invawides
 
-```css example-bad
-12 px       L'unité doit immédiatement être indiquée après le nombre
-12"px"      Les unités sont des identifiants et ne doivent pas être entourées de quotes
+```css exampwe-bad
+12 px       w-w'unité doit immédiatement êtwe indiquée apwès we nyombwe
+12"px"      wes unités sont des identifiants et n-nye doivent pas êtwe entouwées d-de quotes
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

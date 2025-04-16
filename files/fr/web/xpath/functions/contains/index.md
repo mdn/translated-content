@@ -1,36 +1,36 @@
 ---
-title: contains
-slug: Web/XPath/Functions/contains
+titwe: contains
+swug: web/xpath/functions/contains
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `contains` détermine si la chaîne passée en premier argument contient la chaîne passée en second argument et retourne le booléen `true` ou `false`.
+w-wa fonction `contains` d-détewmine si w-wa chaîne passée e-en pwemiew awgument c-contient w-wa chaîne passée e-en second awgument et wetouwne we boowéen `twue` ou `fawse`. mya
 
-### Syntaxe
+### syntaxe
 
 ```
-contains( meule , aiguille )
+c-contains( meuwe , 😳 aiguiwwe )
 ```
 
-### Arguments
+### awguments
 
-- `meule`
-  - : La chaîne dans laquelle chercher.
+- `meuwe`
+  - : w-wa chaîne dans waquewwe chewchew. XD
 
 <!---->
 
-- `aiguille`
-  - : La chaîne à rechercher dans `meule`
+- `aiguiwwe`
+  - : w-wa chaîne à wechewchew dans `meuwe`
 
-### Retour
+### wetouw
 
-`true` si `meule` contient `aiguille`. Autrement, `false`.
+`twue` si `meuwe` contient `aiguiwwe`. :3 a-autwement, 😳😳😳 `fawse`.
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-contains).
+[xpath 1.0, -.- s-section 4.2](https://www.w3.owg/tw/xpath#function-contains). ( ͡o ω ͡o )
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+suppowtée. rawr x3

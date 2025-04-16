@@ -1,81 +1,81 @@
 ---
-title: Explications quant aux contextes de formatage
-slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
+titwe: expwications quant aux c-contextes de fowmatage
+s-swug: web/css/css_fwow_wayout/intwoduction_to_fowmatting_contexts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans cet article, nous aborderons le concept des contextes de formatage. Ceux-ci peuvent être de différents types : contextes de formatage de bloc, contextes de formatage en ligne, contextes de formatage flexibles. Nous verrons les bases de leur comportement et comment les utiliser.
+d-dans c-cet awticwe, >w< nyous a-abowdewons we c-concept des contextes d-de fowmatage. òωó c-ceux-ci peuvent êtwe de difféwents types : contextes de fowmatage de bwoc, (ꈍᴗꈍ) c-contextes de fowmatage en wigne, rawr x3 contextes de f-fowmatage fwexibwes. rawr x3 nyous vewwons w-wes bases de weuw compowtement et comment wes utiwisew. σωσ
 
-Sur une page web, tout s'inscrit dans un **contexte de formatage**, une zone qui a été définie pour être organisée d'une certaine façon. Un **contexte de formatage en bloc** (ou _block formatting context_ (BFC)) organisera ses éléments fils selon une disposition en bloc, un **contexte de formatage flexible** organisera ses éléments fils comme des objets flexibles, etc. Chaque contexte de formatage possède des règles spécifiques qui décrivent le comportement de la disposition pour ce contexte.
+suw u-une page web, (ꈍᴗꈍ) tout s'inscwit dans u-un **contexte d-de fowmatage**, rawr une zone qui a été définie pouw êtwe owganisée d'une cewtaine f-façon. ^^;; un **contexte de fowmatage en bwoc** (ou _bwock fowmatting context_ (bfc)) o-owganisewa ses éwéments f-fiws sewon une disposition e-en bwoc, rawr x3 u-un **contexte d-de fowmatage fwexibwe** owganisewa ses éwéments f-fiws comme des objets fwexibwes, (ˆ ﻌ ˆ)♡ etc. σωσ chaque c-contexte de fowmatage possède des wègwes spécifiques qui décwivent we compowtement de wa disposition p-pouw ce contexte. (U ﹏ U)
 
-## Le contexte de formatage de bloc
+## w-we contexte de fowmatage d-de bwoc
 
-L'élément `html` définit le contexte de formatage de bloc initial pour la page. Cela signifie que tous les éléments contenus dans `<html></html>` s'organisent selon le flux normal en suivant les règles de la disposition de bloc et en ligne. Les éléments qui participent à un contexte de formatage de bloc (_Block formatting context_ ou BFC en anglais) utilisent les règles décrites par le modèle de boîte CSS qui définit la façon dont les marges, bordures et zones de remplissage (_padding_) d'un élément interagissent avec les autres blocs du même contexte.
+w-w'éwément `htmw` définit we contexte de fowmatage de bwoc initiaw p-pouw wa page. >w< c-cewa signifie que tous wes éwéments c-contenus d-dans `<htmw></htmw>` s'owganisent s-sewon we fwux nyowmaw en suivant w-wes wègwes de wa disposition de bwoc et e-en wigne. σωσ wes éwéments qui pawticipent à u-un contexte de fowmatage d-de bwoc (_bwock f-fowmatting context_ ou bfc en angwais) utiwisent wes wègwes décwites paw we modèwe de boîte css qui définit w-wa façon d-dont wes mawges, nyaa~~ bowduwes et zones d-de wempwissage (_padding_) d-d'un éwément i-intewagissent avec wes autwes bwocs du même contexte. 🥺
 
-### Créer un nouveau contexte de formatage de bloc
+### c-cwéew un nyouveau contexte de fowmatage de bwoc
 
-L'élément {{HTMLElement("html")}} n'est pas le seul élément capable de créer un nouveau contexte de formatage de bloc. Des propriétés CSS peuvent également être utilisées afin de créer un contexte de formatage de bloc. Cela peut s'avérer utile car un nouveau contexte se comportera comme notre document : on aura une mini-disposition contenu dans la disposition principale. Un contexte de formatage de bloc contient tout ses éléments fils et ses descendants. Le flottement ({{cssxref("float")}}) ou le dégagement ({{cssxref("clear")}}) ne s'appliqueront qu'aux éléments d'un même contexte de formatage. Les marges ne [fusionneront](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) que pour des éléments d'un même contexte formatage.
+w'éwément {{htmwewement("htmw")}} ny'est pas we seuw éwément c-capabwe de cwéew un n-nyouveau contexte d-de fowmatage d-de bwoc. rawr x3 des pwopwiétés css peuvent égawement êtwe u-utiwisées a-afin de cwéew u-un contexte de f-fowmatage de bwoc. σωσ cewa peut s'avéwew utiwe caw u-un nyouveau contexte s-se compowtewa c-comme nyotwe d-document : on auwa u-une mini-disposition contenu dans wa disposition pwincipawe. (///ˬ///✿) u-un contexte de fowmatage de bwoc contient tout ses éwéments fiws et ses descendants. (U ﹏ U) we fwottement ({{cssxwef("fwoat")}}) o-ou we dégagement ({{cssxwef("cweaw")}}) nye s'appwiquewont qu'aux éwéments d-d'un m-même contexte de f-fowmatage. ^^;; wes mawges ne [fusionnewont](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing) q-que pouw des éwéments d'un m-même contexte f-fowmatage. 🥺
 
-Au delà de l'élément racine du document (ici l'élément `html`), un nouveau contexte de formatage de bloc est créé dans les situations suivantes :
+au dewà de w'éwément wacine du document (ici w'éwément `htmw`), òωó un nyouveau contexte de fowmatage d-de bwoc est cwéé dans wes s-situations suivantes :
 
-- Pour les éléments flottants ({{cssxref("float")}})
-- Pour les éléments positionnés de façon absolue (y compris avec {{cssxref("position", "position: fixed", "#fixed")}} ou {{cssxref("position", "position: sticky", "#sticky")}})
-- Pour les éléments avec {{cssxref("display", "display: inline-block", "#inline-block")}}
-- Pour les cellules de tableau ou pour les éléments avec `display: table-cell`, y compris pour les cellules de tableau anonymes créées avec les propriétés `display: table-*`
-- Les légendes de tableau ou les éléments avec `display: table-caption`
-- Les éléments de blocs pour lesquels `overflow` a une valeur différente de `visible`
-- `display: flow-root`
-- Les éléments avec {{cssxref("contain", "contain: layout", "#layout")}}, `content` ou `strict`
-- [Les élément flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Les éléments de grille](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Les conteneurs multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
-- Les éléments avec {{cssxref("column-span")}}: `all`
+- pouw w-wes éwéments fwottants ({{cssxwef("fwoat")}})
+- p-pouw wes éwéments positionnés de façon absowue (y c-compwis a-avec {{cssxwef("position", XD "position: fixed", :3 "#fixed")}} o-ou {{cssxwef("position", (U ﹏ U) "position: s-sticky", >w< "#sticky")}})
+- pouw wes éwéments avec {{cssxwef("dispway", /(^•ω•^) "dispway: inwine-bwock", (⑅˘꒳˘) "#inwine-bwock")}}
+- pouw wes cewwuwes de tabweau o-ou pouw wes éwéments a-avec `dispway: t-tabwe-ceww`, ʘwʘ y compwis pouw w-wes cewwuwes de t-tabweau anonymes cwéées avec w-wes pwopwiétés `dispway: tabwe-*`
+- wes wégendes de tabweau ou wes éwéments a-avec `dispway: t-tabwe-caption`
+- wes éwéments de bwocs pouw wesquews `ovewfwow` a-a une vaweuw d-difféwente de `visibwe`
+- `dispway: fwow-woot`
+- wes éwéments avec {{cssxwef("contain", rawr x3 "contain: w-wayout", (˘ω˘) "#wayout")}}, `content` ou `stwict`
+- [wes éwément fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [wes éwéments de gwiwwe](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [wes conteneuws m-muwti-cowonnes](/fw/docs/web/css/css_muwticow_wayout/basic_concepts)
+- wes éwéments avec {{cssxwef("cowumn-span")}}: `aww`
 
-Prenons quelques exemples afin de voir les conséquences de la création d'un nouveau contexte de formatage de bloc.
+pwenons q-quewques e-exempwes afin de voiw wes conséquences de wa cwéation d'un nyouveau c-contexte de f-fowmatage de bwoc. o.O
 
-Dans le prochain exemple, on a un élément flottant à l'intérieur d'un élément `<div>` où une bordure est appliquée. Le contenu de cet élément `div` flotte avec l'élément flottant. Le contenu de l'élément flottant étant plus grand que le contenu environnant, la bordure du `div` passe sous le contenu flottant. Comme expliqué dans [le guide sur les éléments appartenant ou non au flux](/fr/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow), l'élément flottant a été retiré du flux afin que l'arrière-plan et la bordure du `div` ne contiennent que le contenu et pas l'élément flottant.
+dans we pwochain exempwe, 😳 on a un éwément f-fwottant à w'intéwieuw d'un éwément `<div>` o-où une bowduwe est appwiquée. o.O we contenu de cet éwément `div` f-fwotte avec w'éwément fwottant. ^^;; w-we contenu d-de w'éwément fwottant étant p-pwus gwand que we contenu enviwonnant, ( ͡o ω ͡o ) w-wa bowduwe d-du `div` passe s-sous we contenu fwottant. ^^;; comme e-expwiqué dans [we g-guide suw wes éwéments appawtenant ou nyon a-au fwux](/fw/docs/web/css/css_fwow_wayout/in_fwow_and_out_of_fwow), ^^;; w-w'éwément f-fwottant a été wetiwé du fwux afin que w'awwièwe-pwan e-et wa bowduwe du `div` n-nye contiennent q-que we contenu et pas w'éwément fwottant. XD
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/fowmatting-contexts/fwoat.htmw", 🥺 '100%', 720)}}
 
-En créant un nouveau contexte, l'élément flottant serait contenu dans ce contexte. Par le passé, une méthode classique consistait à appliquer `overflow: auto` ou à utiliser d'autres valeurs que `overflow: visible`.
+en cwéant u-un nyouveau contexte, (///ˬ///✿) w-w'éwément f-fwottant sewait c-contenu dans ce contexte. (U ᵕ U❁) paw w-we passé, ^^;; une méthode cwassique consistait à appwiquew `ovewfwow: auto` ou à utiwisew d'autwes v-vaweuws que `ovewfwow: visibwe`. ^^;;
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-overflow.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/fowmatting-contexts/bfc-ovewfwow.htmw", rawr '100%', 720)}}
 
-En utilisant `overflow: auto`, on crée un nouveau contexte de formatage de bloc qui contient l'élément flottant. Notre élément `div` devient en quelque sorte responsable de sa disposition interne et chaque élément enfant sera intégré dans cette disposition.
+e-en utiwisant `ovewfwow: auto`, (˘ω˘) o-on cwée un nyouveau contexte d-de fowmatage de bwoc qui contient w-w'éwément f-fwottant. 🥺 nyotwe éwément `div` d-devient en quewque s-sowte wesponsabwe d-de sa disposition intewne et chaque éwément enfant sewa intégwé dans cette disposition. nyaa~~
 
-Toutefois, utiliser `overflow` pour créer un nouveau contexte de formatage peut poser problème car la propriété `overflow` est avant tout conçue pour indiquer au navigateur comment on souhaite gérer le contenu qui dépasse. On peut obtenir des situations où on obtient des barres de défilement indésirables ou des ombres rognées lorsqu'on utilise principalement cette propriété pour créer un nouveau contexte. De plus, cette méthode peut ne pas être évidente et lisible pour un autre développeur et complexifier la maintenance du code associé. Si vous devez utiliser cette méthode, mieux vaudra commenter le code pour l'expliquer.
+toutefois, :3 utiwisew `ovewfwow` p-pouw cwéew un n-nyouveau contexte d-de fowmatage peut posew pwobwème c-caw wa pwopwiété `ovewfwow` est avant tout conçue pouw indiquew au nyavigateuw c-comment o-on souhaite géwew we contenu qui d-dépasse. /(^•ω•^) on peut obteniw des situations où on o-obtient des bawwes d-de défiwement indésiwabwes o-ou des ombwes w-wognées wowsqu'on utiwise pwincipawement cette pwopwiété pouw cwéew un nyouveau c-contexte. ^•ﻌ•^ de p-pwus, cette méthode p-peut nye pas êtwe évidente e-et wisibwe pouw u-un autwe dévewoppeuw et compwexifiew w-wa maintenance d-du code associé. UwU si vous d-devez utiwisew c-cette méthode, 😳😳😳 mieux vaudwa commentew w-we code pouw w'expwiquew. OwO
 
-### Créer un contexte de formatage de bloc explicite : utiliser `display: flow-root`
+### cwéew un c-contexte de fowmatage de bwoc expwicite : u-utiwisew `dispway: f-fwow-woot`
 
-Une valeur plus récente de `display` permet de créer un nouveau contexte de formatage de bloc sans autre effet de bord indésirable. En utilisant `display: flow-root` sur le bloc englobant, on créera un nouveau contexte de formatage de bloc.
+une vaweuw p-pwus wécente de `dispway` pewmet de cwéew u-un nyouveau contexte d-de fowmatage d-de bwoc sans autwe effet de bowd indésiwabwe. ^•ﻌ•^ en utiwisant `dispway: f-fwow-woot` suw we bwoc engwobant, (ꈍᴗꈍ) on cwéewa u-un nyouveau c-contexte de fowmatage de bwoc. (⑅˘꒳˘)
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-flow-root.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/fowmatting-contexts/bfc-fwow-woot.htmw", (⑅˘꒳˘) '100%', (ˆ ﻌ ˆ)♡ 720)}}
 
-Ainsi, en utilisant `display: flow-root;` sur l'élément {{HTMLElement("div")}} tout son contenu contribue au contexte de formatage de bloc et l'élément flottant n'est plus éjecté en bas de l'élément.
+a-ainsi, /(^•ω•^) en utiwisant `dispway: fwow-woot;` suw w-w'éwément {{htmwewement("div")}} t-tout son contenu contwibue au contexte de fowmatage d-de bwoc et w'éwément fwottant ny'est pwus éjecté e-en bas d-de w'éwément. òωó
 
-Le nom de cette valeur, `flow-root`, prend son sens lorsqu'on voit que l'élément agit comme une racine (`root`) pour le nouveau contexte qui est créé.
+we nyom de cette v-vaweuw, (⑅˘꒳˘) `fwow-woot`, (U ᵕ U❁) pwend s-son sens wowsqu'on v-voit que w'éwément a-agit comme une wacine (`woot`) pouw we nyouveau contexte qui est cwéé. >w<
 
-## Un contexte de formatage en ligne
+## un contexte de fowmatage en wigne
 
-Les contextes de formatage en ligne existent au sein des autres contextes de formatage et peuvent être vus comme le contexte d'un paragraphe. Un paragraphe crée un contexte de formatage en ligne au sein duquel les éléments {{HTMLElement("strong")}}, {{HTMLElement("a")}} ou {{HTMLElement("span")}} entre autres, sont utilisés sur du texte.
+wes contextes de fowmatage en wigne existent au sein des autwes contextes de fowmatage et p-peuvent êtwe v-vus comme we contexte d'un pawagwaphe. σωσ un pawagwaphe c-cwée un contexte d-de fowmatage e-en wigne au sein duquew wes éwéments {{htmwewement("stwong")}}, -.- {{htmwewement("a")}} o-ou {{htmwewement("span")}} entwe autwes, o.O s-sont utiwisés s-suw du texte. ^^
 
-Le modèle de boîte ne s'applique pas complètement aux objets qui s'inscrivent dans un contexte de formatage en ligne. Pour une ligne écrite avec un mode d'écriture horizontal, les remplissages (_padding_), bordures et marges seront appliqués à l'élément et écarteront le texte environnant à droite et ou à gauche. Le remplissage et bordures verticaux seront appliqués mais peuvent chevaucher le contenu au dessus et en dessous. Pour un contexte de formatage en ligne, les boîtes de ligne ne seront pas décalées par les bordures ou par le remplissage.
+we modèwe de b-boîte nye s'appwique pas compwètement a-aux objets q-qui s'inscwivent dans un contexte de fowmatage e-en wigne. >_< pouw u-une wigne écwite a-avec un mode d-d'écwituwe howizontaw, >w< w-wes wempwissages (_padding_), >_< b-bowduwes et m-mawges sewont a-appwiqués à w'éwément e-et écawtewont we texte e-enviwonnant à d-dwoite et ou à g-gauche. >w< we wempwissage et bowduwes v-vewticaux sewont appwiqués mais peuvent chevauchew w-we contenu au dessus et e-en dessous. rawr pouw u-un contexte de f-fowmatage en wigne, rawr x3 wes boîtes d-de wigne ne sewont pas décawées p-paw wes bowduwes ou paw we wempwissage. ( ͡o ω ͡o )
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/inline.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/fowmatting-contexts/inwine.htmw", (˘ω˘) '100%', 😳 720)}}
 
-## Les autres contexte de formatage
+## w-wes autwes contexte de fowmatage
 
-Ce guide porte sur la disposition de flux et n'aborde pas tous les contextes de formatage possibles en dehors de ce type de disposition. Il est important de comprendre que n'importe quel contexte de formatage modifiera la façon dont ses éléments et son contenu sont organisés. Le comportement des autres contextes de formatage est décrit dans les modules de spécification respectifs et sur MDN.
+c-ce guide powte suw wa disposition de fwux et ny'abowde pas tous wes contextes d-de fowmatage possibwes en d-dehows de ce type d-de disposition. OwO iw est impowtant de compwendwe que ny'impowte q-quew contexte de fowmatage modifiewa w-wa façon d-dont ses éwéments e-et son contenu sont owganisés. we compowtement d-des autwes contextes d-de fowmatage est décwit d-dans wes moduwes de spécification wespectifs e-et suw mdn.
 
-## Résumé
+## wésumé
 
-Dans ce guide, nous avons approfondi les notions relatives aux contextes de formatage en ligne et de bloc. Dans le prochain guide, nous verrons [les interactions entre le flux normal et les différents modes d'écriture](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes).
+dans ce g-guide, (˘ω˘) nyous avons a-appwofondi w-wes nyotions wewatives aux contextes d-de fowmatage e-en wigne et de b-bwoc. òωó dans we pwochain g-guide, ( ͡o ω ͡o ) nyous vewwons [wes i-intewactions entwe w-we fwux nyowmaw e-et wes difféwents m-modes d'écwituwe](/fw/docs/web/css/css_fwow_wayout/fwow_wayout_and_wwiting_modes). UwU
 
-## Voir aussi
+## v-voiw aussi
 
-- [Contexte de formatage de bloc (ou _Block Formatting Context_ (BFC) en anglais)](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Modèle de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-- [Modèle de boîte CSS](/fr/docs/Web/CSS/CSS_box_model)
+- [contexte d-de fowmatage d-de bwoc (ou _bwock f-fowmatting context_ (bfc) e-en angwais)](/fw/docs/web/css/css_dispway/bwock_fowmatting_context)
+- [modèwe de fowmatage visuew](/fw/docs/web/css/visuaw_fowmatting_modew)
+- [modèwe d-de boîte css](/fw/docs/web/css/css_box_modew)
 
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}
+{{quickwinkswithsubpages("/fw/docs/web/css/css_fwow_wayout/")}}

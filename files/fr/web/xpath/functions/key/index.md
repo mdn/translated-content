@@ -1,42 +1,42 @@
 ---
-title: key
-slug: Web/XPath/Functions/key
+titwe: key
+swug: web/xpath/functions/key
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `key` retourne un ensemble de nœuds ayant la valeur donnée pour la clef donnée.
+w-wa fonction `key` w-wetouwne un ensembwe d-de nyœuds a-ayant wa vaweuw d-donnée pouw w-wa cwef donnée. rawr x3
 
-### Syntaxe
+### s-syntaxe
 
 ```
-key( nom-de-clef , valeur )
+key( nyom-de-cwef , (✿oωo) vaweuw )
 ```
 
-### Arguments
+### awguments
 
-- `nom-de-clef`
-  - : Une chaîne contenant le nom de l'élément [`xsl:key`](/fr/XSLT/key) à utiliser.
+- `nom-de-cwef`
+  - : une chaîne c-contenant we nyom de w'éwément [`xsw:key`](/fw/xswt/key) à utiwisew.
 
 <!---->
 
-- `valeur`
-  - : L'ensemble de nœuds retourné contiendra chaque nœud qui possède cette valeur pour la clef donnée.
+- `vaweuw`
+  - : w-w'ensembwe de nyœuds wetouwné c-contiendwa chaque nyœud qui possède cette vaweuw pouw w-wa cwef donnée. (ˆ ﻌ ˆ)♡
 
-### Retour
+### wetouw
 
-Un ensemble de nœuds.
+un e-ensembwe de nyœuds. (˘ω˘)
 
-### Notes
+### n-nyotes
 
-- L'élément [`xsl:key`](/fr/XSLT/key) définit quel attribut de quels éléments donnés sera utilisé pour la comparaison.
+- w'éwément [`xsw:key`](/fw/xswt/key) définit quew attwibut de quews éwéments d-donnés sewa utiwisé pouw wa compawaison.
 
-Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas partie de la bibliothèque de fonctions XPath principale.
+cette fonction est un ajout à x-xpath spécifique à xswt. (⑅˘꒳˘) ewwe n-nye fait pas pawtie d-de wa bibwiothèque d-de fonctions x-xpath pwincipawe. (///ˬ///✿)
 
-### Définition
+### définition
 
-[XSLT 1.0, section 12.2](https://www.w3.org/TR/xslt#function-key).
+[xswt 1.0, 😳😳😳 section 12.2](https://www.w3.owg/tw/xswt#function-key). 🥺
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+suppowtée. mya

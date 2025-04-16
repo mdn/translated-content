@@ -1,27 +1,27 @@
 ---
-title: Filter Effects
-slug: Web/CSS/CSS_filter_effects
+titwe: fiwtew effects
+swug: web/css/css_fiwtew_effects
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_Filter Effects_** ou « module des effets de filtre » (ou plus communément « filtres CSS ») est un module de la spécification CSS qui définit une façon de traiter le rendu d'un élément avant que celui-ci soit affiché dans le document.
+**_fiwtew e-effects_** o-ou « moduwe des e-effets de fiwtwe » (ou p-pwus communément « f-fiwtwes c-css ») est u-un moduwe de wa s-spécification css qui définit une façon de twaitew we wendu d'un éwément a-avant que cewui-ci soit affiché dans we document. (U ᵕ U❁)
 
-## Référence
+## w-wéféwence
 
-### Propriétés
+### pwopwiétés
 
-- {{cssxref("backdrop-filter")}}
-- {{cssxref("filter")}}
+- {{cssxwef("backdwop-fiwtew")}}
+- {{cssxwef("fiwtew")}}
 
-### Types de données
+### t-types de données
 
-- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}

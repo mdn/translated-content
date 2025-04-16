@@ -1,19 +1,19 @@
 ---
-title: W3C
-slug: Glossary/W3C
+titwe: w3c
+swug: gwossawy/w3c
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le _World Wide Web Consortium_ (W3C) est un organisme international qui maintient les règles en {{Glossary("World Wide Web", "relation avec le Web")}} et les frameworks.
+w-we _wowwd w-wide web consowtium_ (w3c) e-est un owganisme i-intewnationaw qui m-maintient wes w-wègwes en {{gwossawy("wowwd w-wide w-web", mya "wewation avec we web")}} et wes fwamewowks. 🥺
 
-Il est constitué de plus de 350 organisations qui développent conjointement les standards du Web, conduisent des programmes de sensibilisation et gèrent des forums ouverts pour dialoguer autour du Web. Le W3C coordonne les entreprises pour s'assurer qu'elles implémentent les mêmes standards.
+iw est constitué de pwus d-de 350 owganisations qui dévewoppent conjointement w-wes standawds du web, >_< conduisent d-des pwogwammes de sensibiwisation et gèwent des fowums ouvewts p-pouw diawoguew autouw du web. >_< w-we w3c coowdonne w-wes entwepwises pouw s'assuwew qu'ewwes impwémentent wes mêmes standawds. (⑅˘꒳˘)
 
-Chaque standard passe à travers quatre étapes de maturation : _Working Draft_ (WD, brouillon de travail), _Candidate Recommendation_ (CR, candidat à la recommandation), _Proposed Recommendation_ (PR, recommandation proposée), et _W3C Recommandation_ (REC, recommandation du W3C).
+c-chaque standawd passe à twavews quatwe étapes de matuwation : _wowking dwaft_ (wd, /(^•ω•^) b-bwouiwwon de twavaiw), rawr x3 _candidate w-wecommendation_ (cw, c-candidat à w-wa wecommandation), (U ﹏ U) _pwoposed w-wecommendation_ (pw, (U ﹏ U) wecommandation pwoposée), e-et _w3c wecommandation_ (wec, wecommandation d-du w3c). (⑅˘꒳˘)
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Connaissances générales
+### connaissances généwawes
 
-- [Site web du W3C](https://www.w3.org/)
-- [W3C](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium) sur Wikipédia
+- [site web du w3c](https://www.w3.owg/)
+- [w3c](https://fw.wikipedia.owg/wiki/wowwd_wide_web_consowtium) s-suw wikipédia

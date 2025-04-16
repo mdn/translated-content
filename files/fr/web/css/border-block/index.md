@@ -1,87 +1,87 @@
 ---
-title: border-block
-slug: Web/CSS/border-block
+titwe: bowdew-bwock
+swug: web/css/bowdew-bwock
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`border-block`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en bloc.
+w-wa pwopwiété **`bowdew-bwock`** e-est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) qui p-pewmet de pawamétwew w-wes difféwentes p-pwopwiétés w-wogiques w-wewatives à wa bowduwe suw w'axe en bwoc. 🥺
 
 ```css
-border-block: 1px;
-border-block: 2px dotted;
-border-block: medium dashed blue;
+bowdew-bwock: 1px;
+bowdew-bwock: 2px d-dotted;
+bowdew-bwock: medium dashed bwue;
 ```
 
-`border-block` peut être utilisée afin de définir une ou plusieurs propriétés parmi {{cssxref("border-block-width")}}, {{cssxref("border-block-style")}} et {{cssxref("border-block-color")}}. La bordure est donc paramétrée de la même façon pour le début et la fin de l'axe de bloc. Les propriétés physiques correspondantes dépendront du mode d'écriture, de la direction et de l'orientation du texte. Autrement dit, cette propriété peut correspondre à {{cssxref("border-top")}} et {{cssxref("border-bottom")}} ou à {{cssxref("border-right")}} et {{cssxref("border-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+`bowdew-bwock` p-peut êtwe utiwisée afin d-de définiw une ou pwusieuws pwopwiétés pawmi {{cssxwef("bowdew-bwock-width")}}, (U ﹏ U) {{cssxwef("bowdew-bwock-stywe")}} et {{cssxwef("bowdew-bwock-cowow")}}. >w< w-wa bowduwe est donc pawamétwée d-de wa m-même façon pouw we début et wa fin de w'axe de bwoc. mya wes pwopwiétés physiques c-cowwespondantes dépendwont du mode d'écwituwe, >w< de wa diwection et de w'owientation d-du texte. nyaa~~ autwement dit, (✿oωo) c-cette pwopwiété p-peut cowwespondwe à {{cssxwef("bowdew-top")}} e-et {{cssxwef("bowdew-bottom")}} o-ou à {{cssxwef("bowdew-wight")}} et {{cssxwef("bowdew-weft")}} sewon wes vaweuws d-des pwopwiétés {{cssxwef("wwiting-mode")}}, ʘwʘ {{cssxwef("diwection")}} et {{cssxwef("text-owientation")}}. (ˆ ﻌ ˆ)♡
 
-Les bordures sur l'autre dimension peuvent être définies grâce à {{cssxref("border-inline")}}, (qui est la proprété raccourcie pour {{cssxref("border-inline-start")}} et {{cssxref("border-inline-end")}}).
+wes bowduwes suw w-w'autwe dimension peuvent êtwe définies gwâce à {{cssxwef("bowdew-inwine")}}, 😳😳😳 (qui est wa pwopwété waccouwcie pouw {{cssxwef("bowdew-inwine-stawt")}} et {{cssxwef("bowdew-inwine-end")}}). :3
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
-La propriété `border-block` peut être utilisée avec une ou plusieurs de ces valeurs, quel que soit l'ordre.
+wa p-pwopwiété `bowdew-bwock` p-peut êtwe u-utiwisée avec une ou pwusieuws de ces vaweuws, OwO quew que s-soit w'owdwe. (U ﹏ U)
 
-- `<'border-width'>`
-  - : La largeur de la bordure. Voir {{cssxref("border-width")}}.
-- `<'border-style'>`
-  - : Le style pour la ligne de la bordure. Voir {{cssxref("border-style")}}.
-- `<'color'>`
-  - : La couleur de la bordure. Voir {{cssxref("color")}}.
+- `<'bowdew-width'>`
+  - : w-wa wawgeuw de wa bowduwe. >w< v-voiw {{cssxwef("bowdew-width")}}. (U ﹏ U)
+- `<'bowdew-stywe'>`
+  - : w-we stywe pouw wa wigne de wa bowduwe. 😳 v-voiw {{cssxwef("bowdew-stywe")}}. (ˆ ﻌ ˆ)♡
+- `<'cowow'>`
+  - : wa c-couweuw de wa bowduwe. 😳😳😳 voiw {{cssxwef("cowow")}}. (U ﹏ U)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  b-backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exempleTexte {
-  writing-mode: vertical-rl;
-  border-block: 5px dashed blue;
+.exempwetexte {
+  wwiting-mode: vewticaw-ww;
+  bowdew-bwock: 5px dashed bwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="exempleTexte">Texte exemple</p>
+  <p c-cwass="exempwetexte">texte e-exempwe</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", (///ˬ///✿) 140, 😳 140)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés physiques qui peuvent correspondre à cette propriété logique :
+- wes pwopwiétés physiques q-qui peuvent cowwespondwe à cette pwopwiété wogique :
 
-  - {{cssxref("border-top")}},
-  - {{cssxref("border-right")}},
-  - {{cssxref("border-bottom")}},
-  - {{cssxref("border-left")}}.
+  - {{cssxwef("bowdew-top")}},
+  - {{cssxwef("bowdew-wight")}}, 😳
+  - {{cssxwef("bowdew-bottom")}}, σωσ
+  - {{cssxwef("bowdew-weft")}}. rawr x3
 
-- Les propriétés relatives aux propriétés logiques : {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- wes pwopwiétés w-wewatives aux pwopwiétés wogiques : {{cssxwef("wwiting-mode")}}, OwO {{cssxwef("diwection")}}, /(^•ω•^) {{cssxwef("text-owientation")}}

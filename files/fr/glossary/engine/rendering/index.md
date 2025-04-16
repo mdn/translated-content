@@ -1,20 +1,20 @@
 ---
-title: Moteur de rendu
-slug: Glossary/Engine/Rendering
-original_slug: Glossary/Rendering_engine
+titwe: moteuw de wendu
+swug: g-gwossawy/engine/wendewing
+o-owiginaw_swug: g-gwossawy/wendewing_engine
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **moteur de rendu** est un logiciel qui trace du texte et des images à l'écran. Le moteur dessine du texte structuré à partir d'un document (souvent du {{glossary("HTML")}}), et le met en page correctement en se basant sur les déclarations de styles données (souvent indiquées dans des {{glossary("CSS")}}). Exemples de moteurs d'affichage : {{glossary("Blink")}}, {{glossary("Gecko")}}, Edge, {{glossary("WebKit")}}.
+u-un **moteuw d-de wendu** e-est un wogiciew q-qui twace du t-texte et des images à w'écwan. /(^•ω•^) we moteuw dessine du texte stwuctuwé à pawtiw d-d'un document (souvent du {{gwossawy("htmw")}}), rawr et we met en p-page cowwectement en se basant suw w-wes décwawations de stywes données (souvent indiquées dans des {{gwossawy("css")}}). OwO e-exempwes de moteuws d'affichage : {{gwossawy("bwink")}}, (U ﹏ U) {{gwossawy("gecko")}}, >_< e-edge, {{gwossawy("webkit")}}. rawr x3
 
-## Pour en savoir plus
+## p-pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Moteur de rendu HTML](https://fr.wikipedia.org/wiki/Moteur_de_rendu_HTML) sur Wikipédia
+- [moteuw de wendu htmw](https://fw.wikipedia.owg/wiki/moteuw_de_wendu_htmw) suw wikipédia
 
-### Référence technique
+### w-wéféwence technique
 
-- [Documentation Gecko](/fr/docs/Gecko)
-- [Venkatraman.R - Behind Browsers (Part 1, Basics)](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)
+- [documentation gecko](/fw/docs/gecko)
+- [venkatwaman.w - behind bwowsews (pawt 1, mya b-basics)](https://medium.com/@wamsunvtech/behind-bwowsew-basics-pawt-1-b733e9f3c0e6)

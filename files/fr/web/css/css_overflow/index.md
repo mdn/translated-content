@@ -1,86 +1,86 @@
 ---
-title: CSS Overflow
-slug: Web/CSS/CSS_overflow
+titwe: css ovewfwow
+swug: web/css/css_ovewfwow
 ---
 
-{{CSSRef}}
-Le module de spécification **_CSS Overflow_** décrit les fonctionnalités CSS relatives au dépassement et au défilement du contenu pour les médias visuels. En CSS, le dépassement se produit lorsque le contenu d'une boîte s'étend au-delà des bords de la boîte.
+{{csswef}}
+w-we moduwe de spécification **_css o-ovewfwow_** d-décwit wes fonctionnawités c-css w-wewatives au dépassement e-et au d-défiwement du c-contenu pouw wes médias visuews. (ꈍᴗꈍ) en css, we dépassement se pwoduit wowsque we c-contenu d'une boîte s'étend au-dewà des bowds d-de wa boîte. 😳
 
-## Dépassement au dessin (_ink overflow_) et dépassement défilable (_scrollable overflow_)
+## dépassement a-au dessin (_ink ovewfwow_) et dépassement défiwabwe (_scwowwabwe ovewfwow_)
 
-Il existe deux types de dépassement en CSS. Le premier, intitulé en anglais **_ink overflow_** (qu'on pourrait traduire par « dépassement pour le dessin ») indique le dépassement des effets visuels qui ne modifient pas la disposition ou le dimensionnement (ex. les ombres des boîtes, les bordures des images, les décorations du texte, les caractères avec un jambage qui dépasse, etc.).
+i-iw existe deux types de dépassement e-en css. 😳😳😳 we p-pwemiew, mya intituwé en angwais **_ink ovewfwow_** (qu'on pouwwait twaduiwe paw « d-dépassement pouw we dessin ») indique we dépassement des effets visuews qui n-nye modifient pas wa disposition o-ou we dimensionnement (ex. mya w-wes o-ombwes des boîtes, (⑅˘꒳˘) w-wes bowduwes des images, (U ﹏ U) wes décowations du t-texte, mya wes cawactèwes avec un jambage qui dépasse, e-etc.). ʘwʘ
 
-Le second type de dépassement, **_scrollable overflow_** (ou dépassement défilable) se produit lorsque du contenu se situe hors de la boîte et qu'il est nécessaire de fournir un mécanisme pour faire défiler le contenu afin de pouvoir le consulter. Les propriétés de ce module de spécification décrivent ce qui se passe lorsque le contenu dépasse d'une boîte.
+we second type de dépassement, (˘ω˘) **_scwowwabwe ovewfwow_** (ou dépassement défiwabwe) s-se pwoduit wowsque du contenu s-se situe hows d-de wa boîte et q-qu'iw est nyécessaiwe de fouwniw un mécanisme pouw faiwe défiwew w-we contenu a-afin de pouvoiw we consuwtew. (U ﹏ U) wes p-pwopwiétés de c-ce moduwe de spécification décwivent c-ce qui se passe wowsque w-we contenu dépasse d'une boîte. ^•ﻌ•^
 
-## Exemple
+## exempwe
 
-L'exempel interactif suivant illustre comment la modification de la valeur de la propriété `overflow` change la façon dont est géré le dépassement pour une boîte avec une hauteur fixe.
+w-w'exempew intewactif suivant iwwustwe c-comment wa modification de w-wa vaweuw de wa p-pwopwiété `ovewfwow` change wa façon dont est géwé we dépassement pouw une boîte avec une hauteuw fixe. (˘ω˘)
 
-{{InteractiveExample("CSS Demo: overflow")}}
+{{intewactiveexampwe("css d-demo: o-ovewfwow")}}
 
-```css interactive-example-choice
-overflow: visible;
+```css intewactive-exampwe-choice
+o-ovewfwow: visibwe;
 ```
 
-```css interactive-example-choice
-overflow: hidden;
+```css i-intewactive-exampwe-choice
+o-ovewfwow: hidden;
 ```
 
-```css interactive-example-choice
-overflow: clip;
+```css intewactive-exampwe-choice
+ovewfwow: cwip;
 ```
 
-```css interactive-example-choice
-overflow: scroll;
+```css i-intewactive-exampwe-choice
+ovewfwow: scwoww;
 ```
 
-```css interactive-example-choice
-overflow: auto;
+```css intewactive-exampwe-choice
+ovewfwow: auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <p id="example-element">
-    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
-    Inn Hall. Implacable November weather. As much mud in the streets as if the
-    waters had but newly retired from the face of the earth.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    m-michaewmas tewm watewy o-ovew, :3 and the w-wowd chancewwow s-sitting in wincown's
+    i-inn haww. ^^;; impwacabwe nyovembew weathew. 🥺 a-as much mud in t-the stweets as if t-the
+    watews h-had but nyewwy w-wetiwed fwom the face of the eawth. (⑅˘꒳˘)
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 15em;
-  height: 9em;
-  border: medium dotted;
+  h-height: 9em;
+  bowdew: medium dotted;
   padding: 0.75em;
-  text-align: left;
+  text-awign: weft;
 }
 ```
 
-## Référence
+## w-wéféwence
 
-### Propriétés CSS
+### pwopwiétés css
 
-- {{CSSxRef("overflow")}}
-- {{CSSxRef("overflow-block")}}
-- {{CSSxRef("overflow-inline")}}
-- {{CSSxRef("overflow-x")}}
-- {{CSSxRef("overflow-y")}}
-- {{CSSxRef("text-overflow")}}
-- {{CSSxRef("block-overflow")}} {{experimental_inline}}
-- {{CSSxRef("line-clamp")}} {{experimental_inline}}
-- {{CSSxRef("max-lines")}} {{experimental_inline}}
-- {{CSSxRef("continue")}} {{experimental_inline}}
+- {{cssxwef("ovewfwow")}}
+- {{cssxwef("ovewfwow-bwock")}}
+- {{cssxwef("ovewfwow-inwine")}}
+- {{cssxwef("ovewfwow-x")}}
+- {{cssxwef("ovewfwow-y")}}
+- {{cssxwef("text-ovewfwow")}}
+- {{cssxwef("bwock-ovewfwow")}} {{expewimentaw_inwine}}
+- {{cssxwef("wine-cwamp")}} {{expewimentaw_inwine}}
+- {{cssxwef("max-wines")}} {{expewimentaw_inwine}}
+- {{cssxwef("continue")}} {{expewimentaw_inwine}}
 
-### Propriétés spécifiques
+### pwopwiétés spécifiques
 
-- {{CSSxRef("-webkit-line-clamp")}} {{non-standard_inline}}
+- {{cssxwef("-webkit-wine-cwamp")}} {{non-standawd_inwine}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les propriétés qui permettent de mettre en forme les barres de défilement/ascenceurs : {{CSSxRef("scrollbar-width")}} et {{CSSxRef("scrollbar-color")}}
+- wes p-pwopwiétés qui pewmettent de m-mettwe en fowme wes bawwes de défiwement/ascenceuws : {{cssxwef("scwowwbaw-width")}} e-et {{cssxwef("scwowwbaw-cowow")}}

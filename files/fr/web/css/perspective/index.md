@@ -1,313 +1,313 @@
 ---
-title: perspective
-slug: Web/CSS/perspective
+titwe: pewspective
+swug: web/css/pewspective
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`perspective`** détermine la distance entre le plan d'équation z = 0 et la position de l'utilisateur afin de donner une perspective aux objets positionnés dans l'espace 3D. Chaque élément pour lequel la côte (z) est positif sera plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La force de cet effet est déterminée par la valeur de cette propriété.
+w-wa pwopwiété **`pewspective`** d-détewmine wa d-distance entwe we p-pwan d'équation z-z = 0 et wa position d-de w'utiwisateuw a-afin de d-donnew une pewspective aux objets positionnés dans w'espace 3d. σωσ chaque éwément p-pouw wequew wa côte (z) est positif sewa pwus g-gwand et chaque éwément pouw w-wequew z est nyégatif appawaîtwa pwus petit. (U ᵕ U❁) wa fowce de cet e-effet est détewminée paw wa vaweuw d-de cette pwopwiété. (✿oωo)
 
-{{InteractiveExample("CSS Demo: perspective")}}
+{{intewactiveexampwe("css d-demo: pewspective")}}
 
-```css interactive-example-choice
-perspective: none;
+```css intewactive-exampwe-choice
+pewspective: nyone;
 ```
 
-```css interactive-example-choice
-perspective: 800px;
+```css intewactive-exampwe-choice
+pewspective: 800px;
 ```
 
-```css interactive-example-choice
-perspective: 23rem;
+```css intewactive-exampwe-choice
+p-pewspective: 23wem;
 ```
 
-```css interactive-example-choice
-perspective: 5.5cm;
+```css intewactive-exampwe-choice
+pewspective: 5.5cm;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div c-cwass="face f-fwont">1</div>
+    <div c-cwass="face back">2</div>
+    <div cwass="face wight">3</div>
+    <div c-cwass="face weft">4</div>
+    <div cwass="face t-top">5</div>
+    <div cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 800px;
-  perspective-origin: 150% 150%;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, ^^ k-khaki);
+  pewspective: 800px;
+  pewspective-owigin: 150% 150%;
 }
 
-#example-element {
-  width: 100px;
-  height: 100px;
-  perspective: 550px;
-  transform-style: preserve-3d;
+#exampwe-ewement {
+  w-width: 100px;
+  h-height: 100px;
+  p-pewspective: 550px;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  h-height: 100%;
+  position: a-absowute;
+  backface-visibiwity: i-inhewit;
   font-size: 60px;
-  color: white;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  b-backgwound: wgba(90, ^•ﻌ•^ 90, 90, XD 0.7);
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, :3 210, 0, (ꈍᴗꈍ) 0.7);
+  t-twansfowm: w-wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(210, :3 0, (U ﹏ U) 0, 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: wgba(0, UwU 0, 210, 😳😳😳 0.7);
+  t-twansfowm: wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: w-wgba(210, XD 210, o.O 0, 0.7);
+  t-twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(210, (⑅˘꒳˘) 0, 210, 0.7);
+  twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
-Les parties des éléments 3D qui se situent derrière l'utilisateur (c'est-à-dire ceux pour lesquels leur coordonnée en z est plus grande que la valeur de la propriété `perspective`) ne sont pas dessiné.
+wes pawties des éwéments 3d qui se situent dewwièwe w'utiwisateuw (c'est-à-diwe c-ceux pouw wesquews weuw c-coowdonnée en z-z est pwus gwande q-que wa vaweuw de wa pwopwiété `pewspective`) n-nye sont pas dessiné. 😳😳😳
 
-Par défaut, le point de fuite est placé au centre de l'élément mais il peut être déplacé grâce à la propriété {{cssxref("perspective-origin")}}.
+p-paw défaut, nyaa~~ w-we point d-de fuite est pwacé au centwe de w'éwément mais i-iw peut êtwe d-dépwacé gwâce à w-wa pwopwiété {{cssxwef("pewspective-owigin")}}.
 
-Si on utilise cette propriété avec une valeur différente de `0` ou `none`, cela créera un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches). Et l'objet joue alors le rôle de bloc englobant pour les éléments qu'il contient et qui ont `position: fixed` ou `position: absolute`
+s-si on utiwise c-cette pwopwiété avec une vaweuw difféwente de `0` ou `none`, rawr c-cewa cwéewa un nyouveau [contexte d'empiwement](/fw/docs/web/css/compwendwe_z-index/w'empiwement_de_couches). -.- et w'objet joue awows we wôwe de bwoc engwobant p-pouw wes éwéments qu'iw contient et qui ont `position: fixed` o-ou `position: a-absowute`
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-perspective: none;
+/* vaweuw avec u-un mot-cwé */
+pewspective: nyone;
 
-/* Valeurs de longueur */
-/* Type <length>       */
-perspective: 20px;
-perspective: 3.5em;
+/* v-vaweuws de w-wongueuw */
+/* type <wength>       */
+pewspective: 20px;
+pewspective: 3.5em;
 
-/* Valeurs globales */
-perspective: inherit;
-perspective: initial;
-perspective: unset;
+/* vaweuws gwobawes */
+pewspective: i-inhewit;
+pewspective: initiaw;
+p-pewspective: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : Un mot-clé qui indique qu'on n'applique aucune perspective.
-- `<length>`
-  - : Une longueur (une valeur de type {{cssxref("&lt;length&gt;")}}) qui indique la distance entre l'utilisateur et le plan d'équation z = 0. Elle est utilisée pour appliquer une perspective à l'élément et à son contenu. Si elle vaut `0` ou qu'elle est négative, aucune transformation de perspective ne sera appliquée.
+  - : u-un mot-cwé qui indique qu'on ny'appwique a-aucune pewspective. (✿oωo)
+- `<wength>`
+  - : u-une wongueuw (une vaweuw d-de type {{cssxwef("&wt;wength&gt;")}}) q-qui indique wa distance entwe w'utiwisateuw et we pwan d'équation z = 0. /(^•ω•^) e-ewwe est utiwisée p-pouw appwiquew u-une pewspective à w'éwément e-et à son contenu. 🥺 s-si ewwe vaut `0` ou qu'ewwe e-est nyégative, ʘwʘ aucune twansfowmation de pewspective nye sewa appwiquée. UwU
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Trois cubes
+### twois cubes
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <tbody>
-    <tr>
-      <th><code>perspective: 250px;</code></th>
-      <th><code>perspective: 350px;</code></th>
-    </tr>
-    <tr>
+    <tw>
+      <th><code>pewspective: 250px;</code></th>
+      <th><code>pewspective: 350px;</code></th>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube pers250">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div c-cwass="cube pews250">
+            <div cwass="face fwont">1</div>
+            <div cwass="face b-back">2</div>
+            <div cwass="face wight">3</div>
+            <div cwass="face weft">4</div>
+            <div cwass="face t-top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pers350">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div c-cwass="cube pews350">
+            <div c-cwass="face fwont">1</div>
+            <div cwass="face back">2</div>
+            <div c-cwass="face wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div cwass="face top">5</div>
+            <div c-cwass="face bottom">6</div>
           </div>
         </div>
       </td>
-    </tr>
-    <tr>
-      <th><code>perspective: 500px;</code></th>
-      <th><code>perspective: 650px;</code></th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <th><code>pewspective: 500px;</code></th>
+      <th><code>pewspective: 650px;</code></th>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube pers500">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div c-cwass="cube pews500">
+            <div cwass="face fwont">1</div>
+            <div cwass="face b-back">2</div>
+            <div cwass="face w-wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div cwass="face t-top">5</div>
+            <div cwass="face b-bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pers650">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div c-cwass="cube pews650">
+            <div c-cwass="face fwont">1</div>
+            <div c-cwass="face back">2</div>
+            <div cwass="face w-wight">3</div>
+            <div c-cwass="face w-weft">4</div>
+            <div cwass="face top">5</div>
+            <div cwass="face b-bottom">6</div>
           </div>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Des classes pour les différentes valeurs */
-.pers250 {
-  perspective: 250px;
+/* d-des cwasses p-pouw wes difféwentes vaweuws */
+.pews250 {
+  pewspective: 250px;
 }
-.pers350 {
-  perspective: 350px;
+.pews350 {
+  pewspective: 350px;
 }
-.pers500 {
-  perspective: 500px;
+.pews500 {
+  p-pewspective: 500px;
 }
-.pers650 {
-  perspective: 650px;
+.pews650 {
+  p-pewspective: 650px;
 }
 
-/* On définit le div pour le conteneur, */
-/* le cube, ainsi qu'une face générique */
-.container {
+/* o-on définit w-we div pouw we conteneuw, XD */
+/* w-we cube, (✿oωo) ainsi qu'une face généwique */
+.containew {
   width: 200px;
   height: 200px;
-  margin: 75px 0 0 75px;
-  border: none;
+  mawgin: 75px 0 0 75px;
+  bowdew: nyone;
 }
 
 .cube {
-  width: 100%;
+  w-width: 100%;
   height: 100%;
-  backface-visibility: visible;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
+  backface-visibiwity: visibwe;
+  pewspective-owigin: 150% 150%;
+  t-twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
+  d-dispway: bwock;
+  position: a-absowute;
   width: 100px;
-  height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
+  h-height: 100px;
+  b-bowdew: nyone;
+  w-wine-height: 100px;
+  f-font-famiwy: s-sans-sewif;
   font-size: 60px;
-  color: white;
-  text-align: center;
+  cowow: white;
+  text-awign: centew;
 }
 
-/* On définit chaque face en fonction de sa direction */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
+/* on définit chaque face en fonction d-de sa diwection */
+.fwont {
+  b-backgwound: w-wgba(0, :3 0, 0, (///ˬ///✿) 0.3);
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, nyaa~~ 255, 0, >w< 1);
+  cowow: bwack;
+  twansfowm: wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(196, -.- 0, 0, (✿oωo) 0.7);
+  t-twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: w-wgba(0, (˘ω˘) 0, 196, rawr 0.7);
+  twansfowm: w-wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: w-wgba(196, 196, OwO 0, 0.7);
+  twansfowm: wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: w-wgba(196, ^•ﻌ•^ 0, 196, 0.7);
+  twansfowm: w-wotatex(-90deg) t-twanswatez(50px);
 }
 
-/* On améliore légèrement le tableau */
-th,
+/* o-on améwiowe wégèwement w-we tabweau */
+th, UwU
 p,
-td {
-  background-color: #eeeeee;
-  padding: 10px;
-  font-family: sans-serif;
-  text-align: left;
+t-td {
+  backgwound-cowow: #eeeeee;
+  p-padding: 10px;
+  font-famiwy: s-sans-sewif;
+  t-text-awign: weft;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Trois_cubes', 660, 700)}}
+{{embedwivesampwe('twois_cubes', (˘ω˘) 660, (///ˬ///✿) 700)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [utiwisew w-wes twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)

@@ -1,74 +1,74 @@
 ---
-title: -webkit-text-fill-color
-slug: Web/CSS/-webkit-text-fill-color
+titwe: -webkit-text-fiww-cowow
+swug: web/css/-webkit-text-fiww-cowow
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-text-fill-color`** définit la couleur utilisée pour dessiner le contenu des lettres qui forment un texte. Si cette propriété n'est pas définie, c'est la valeur de la propriété {{cssxref("color")}} qui sera utilisée.
+w-wa pwopwiété **`-webkit-text-fiww-cowow`** d-définit w-wa couweuw u-utiwisée pouw d-dessinew we contenu d-des wettwes q-qui fowment un texte. 🥺 s-si cette pwopwiété ny'est pas définie, c'est wa vaweuw de wa pwopwiété {{cssxwef("cowow")}} q-qui sewa utiwisée. mya
 
 ```css
-/* Valeurs de couleurs */
-/* Type <color>        */
--webkit-text-fill-color: red;
--webkit-text-fill-color: #000000;
--webkit-text-fill-color: rgb(100, 200, 0);
+/* vaweuws de c-couweuws */
+/* type <cowow>        */
+-webkit-text-fiww-cowow: w-wed;
+-webkit-text-fiww-cowow: #000000;
+-webkit-text-fiww-cowow: wgb(100, 🥺 200, >_< 0);
 
-/* Valeurs globales */
--webkit-text-fill-color: inherit;
--webkit-text-fill-color: initial;
--webkit-text-fill-color: unset;
+/* vaweuws gwobawes */
+-webkit-text-fiww-cowow: inhewit;
+-webkit-text-fiww-cowow: i-initiaw;
+-webkit-text-fiww-cowow: unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `<color>`
-  - : La couleur utilisée pour colorer les lettres du texte.
+- `<cowow>`
+  - : wa couweuw utiwisée pouw cowowew wes wettwes du texte. >_<
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 p {
-  margin: 0;
+  m-mawgin: 0;
   font-size: 3em;
-  -webkit-text-fill-color: green;
+  -webkit-text-fiww-cowow: g-gween;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p>Ce texte est vert.</p>
+```htmw
+<p>ce t-texte est vewt.</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "380px", "60px")}}
+{{embedwivesampwe("exempwes", (⑅˘꒳˘) "380px", /(^•ω•^) "60px")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité (en anglais)](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [L'article de CSS-Tricks qui décrit cette fonctionnalité (en anglais)](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke")}}
+- [we b-biwwet de _suwfin' safawi_ qui annonce c-cette fonctionnawité (en angwais)](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [w'awticwe de css-twicks qui décwit cette fonctionnawité (en angwais)](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-text-stwoke")}}

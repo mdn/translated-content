@@ -1,121 +1,121 @@
 ---
-title: column-rule
-slug: Web/CSS/column-rule
+titwe: cowumn-wuwe
+swug: web/css/cowumn-wuwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Lorsqu'on utilise une disposition sur plusieurs colonnes, la [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) **`column-rule`** permet de définir l'affichage d'une ligne droite (aussi appelée « règle ») entre chaque colonne.
+w-wowsqu'on utiwise u-une disposition s-suw pwusieuws c-cowonnes, OwO wa [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) **`cowumn-wuwe`** p-pewmet de définiw w-w'affichage d'une w-wigne dwoite (aussi appewée « wègwe ») entwe chaque cowonne. (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: column-rule")}}
+{{intewactiveexampwe("css demo: cowumn-wuwe")}}
 
-```css interactive-example-choice
-column-rule: dotted;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe: dotted;
 ```
 
-```css interactive-example-choice
-column-rule: solid 6px;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe: sowid 6px;
 ```
 
-```css interactive-example-choice
-column-rule: solid blue;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe: sowid bwue;
 ```
 
-```css interactive-example-choice
-column-rule: thick inset blue;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe: thick inset bwue;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. 😳 michaewmas tewm watewy ovew, 😳😳😳 and the w-wowd chancewwow sitting in
+    wincown's inn haww. mya impwacabwe nyovembew weathew. mya a-as much mud in the stweets
+    a-as if the watews h-had but nyewwy w-wetiwed fwom the f-face of the eawth, (⑅˘꒳˘) and it
+    wouwd nyot be wondewfuw t-to meet a megawosauwus, (U ﹏ U) fowty feet wong ow s-so, mya
+    waddwing wike an ewephantine wizawd up howbown hiww. ʘwʘ
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  c-cowumn-wuwe: sowid;
+  text-awign: w-weft;
 }
 ```
 
-Cette propriété est une propriété raccourcie qui permet de définir {{cssxref("column-rule-width")}}, {{cssxref("column-rule-style")}} et {{cssxref("column-rule-color")}} (plutôt que d'avoir à les définir une par une, ce qui est plus laborieux).
+c-cette pwopwiété e-est une pwopwiété waccouwcie qui pewmet de définiw {{cssxwef("cowumn-wuwe-width")}}, (˘ω˘) {{cssxwef("cowumn-wuwe-stywe")}} e-et {{cssxwef("cowumn-wuwe-cowow")}} (pwutôt q-que d'avoiw à wes définiw u-une paw une, (U ﹏ U) c-ce qui est pwus wabowieux). ^•ﻌ•^
 
-> [!NOTE]
-> Cette propriété étant une propriété raccourcie, elle surcharge toutes les déclarations avec les propriétés individuelles écrites avant au sein d'une même règle.
+> [!note]
+> c-cette pwopwiété étant u-une pwopwiété waccouwcie, (˘ω˘) ewwe suwchawge t-toutes wes décwawations avec wes p-pwopwiétés individuewwes écwites a-avant au s-sein d'une même wègwe. :3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Syntaxe avec des mots-clés */
-column-rule: dotted;
-column-rule: solid blue;
-column-rule: solid 8px;
-column-rule: thick inset blue;
+/* syntaxe avec des mots-cwés */
+cowumn-wuwe: dotted;
+cowumn-wuwe: sowid bwue;
+cowumn-wuwe: s-sowid 8px;
+c-cowumn-wuwe: thick inset bwue;
 
-/* Valeurs globales */
-column-rule: inherit;
-column-rule: initial;
-column-rule: unset;
+/* v-vaweuws g-gwobawes */
+cowumn-wuwe: i-inhewit;
+cowumn-wuwe: initiaw;
+cowumn-wuwe: unset;
 ```
 
-Cette propriété peut être définie avec une, deux ou trois valeurs telles que définies ci-après, dans n'importe quel ordre.
+c-cette pwopwiété peut êtwe définie avec une, ^^;; deux ou twois vaweuws tewwes que d-définies ci-apwès, 🥺 dans ny'impowte q-quew owdwe. (⑅˘꒳˘)
 
-### Valeurs
+### v-vaweuws
 
-- `<'column-rule-width'>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou l'un des mots-clés `thin`, `medium` ou `thick`. Pour plus de détails, voir {{cssxref("border-width")}}.
-- `<'column-rule-style'>`
-  - : Voir {{cssxref("border-style")}} pour les différentes valeurs possibles.
-- `<'column-rule-color'>`
-  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}).
+- `<'cowumn-wuwe-width'>`
+  - : u-une vaweuw de wongueuw (type {{cssxwef("&wt;wength&gt;")}}) ou w-w'un des mots-cwés `thin`, nyaa~~ `medium` o-ou `thick`. :3 p-pouw pwus de détaiws, ( ͡o ω ͡o ) v-voiw {{cssxwef("bowdew-width")}}. mya
+- `<'cowumn-wuwe-stywe'>`
+  - : voiw {{cssxwef("bowdew-stywe")}} pouw w-wes difféwentes v-vaweuws possibwes. (///ˬ///✿)
+- `<'cowumn-wuwe-cowow'>`
+  - : u-une vaweuw de c-couweuw (type {{cssxwef("&wt;cowow&gt;")}}). (˘ω˘)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<div id="col_rul">
-  <p>column one</p>
-  <p>column two</p>
-  <p>column three</p>
+```htmw
+<div id="cow_wuw">
+  <p>cowumn one</p>
+  <p>cowumn two</p>
+  <p>cowumn thwee</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-#col_rul {
-  padding: 0.3em;
-  background: gold;
-  border: groove 2px gold;
-  column-rule: inset 2px gold;
-  column-count: 3;
+#cow_wuw {
+  p-padding: 0.3em;
+  backgwound: gowd;
+  bowdew: gwoove 2px gowd;
+  c-cowumn-wuwe: i-inset 2px gowd;
+  c-cowumn-count: 3;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

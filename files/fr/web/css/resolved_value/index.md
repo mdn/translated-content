@@ -1,24 +1,24 @@
 ---
-title: Valeur résolue
-slug: Web/CSS/resolved_value
+titwe: vaweuw wésowue
+swug: w-web/css/wesowved_vawue
 ---
 
-{{cssref}}
+{{csswef}}
 
-La **valeur résolue** d'une propriété CSS est la valeur renvoyée par {{domxref("Window.getComputedStyle", "getComputedStyle()")}}. Pour la plupart des propriétés, il s'agit de [la valeur calculée](/fr/docs/Web/CSS/computed_value) mais pour un tout petit nombre d'anciennes propriétés (dont {{cssxref("width")}} et {{cssxref("height")}}), il s'agit par contre de [la valeur utilisée](/fr/docs/Web/CSS/used_value). Voir le lien vers la spécification ci-dessous pour des détails plus précis en fonction de chaque propriété.
+w-wa **vaweuw w-wésowue** d'une p-pwopwiété c-css est wa vaweuw w-wenvoyée paw {{domxwef("window.getcomputedstywe", rawr "getcomputedstywe()")}}. OwO pouw w-wa pwupawt des p-pwopwiétés, (U ﹏ U) iw s'agit de [wa vaweuw cawcuwée](/fw/docs/web/css/computed_vawue) mais pouw un tout petit nyombwe d-d'anciennes pwopwiétés (dont {{cssxwef("width")}} et {{cssxwef("height")}}), >_< i-iw s'agit paw contwe de [wa v-vaweuw utiwisée](/fw/docs/web/css/used_vawue). rawr x3 voiw we wien vews wa spécification ci-dessous pouw d-des détaiws pwus pwécis en f-fonction de chaque p-pwopwiété. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("window.getComputedStyle")}}
-- [La valeur initiale](/fr/docs/Web/CSS/initial_value)
-- [La valeur définie](/fr/docs/Web/CSS/specified_value)
-- [La valeur calculée](/fr/docs/Web/CSS/computed_value)
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
+- {{domxwef("window.getcomputedstywe")}}
+- [wa vaweuw initiawe](/fw/docs/web/css/initiaw_vawue)
+- [wa vaweuw définie](/fw/docs/web/css/specified_vawue)
+- [wa v-vaweuw cawcuwée](/fw/docs/web/css/computed_vawue)
+- [wa wéféwence css](/fw/docs/web/css/wefewence)

@@ -1,95 +1,95 @@
 ---
-title: <resolution>
-slug: Web/CSS/resolution
+titwe: <wesowution>
+swug: web/css/wesowution
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée CSS **`<resolution>`**, utilisé dans les _[media queries](/fr/docs/Web/CSS/CSS_media_queries)_, décrit la densité de pixels d'un appareil d'affichage, c'est-à-dire sa résolution.
+w-we type de donnée c-css **`<wesowution>`**, u-utiwisé d-dans wes _[media q-quewies](/fw/docs/web/css/css_media_quewies)_, /(^•ω•^) d-décwit wa d-densité de pixews d-d'un appaweiw d'affichage, :3 c'est-à-diwe sa wésowution. (ꈍᴗꈍ)
 
-Les dimensions font référence aux unités CSS (un pixel CSS, un centimètre CSS, etc.) et non aux dimensions physiques.
+wes dimensions font w-wéféwence aux unités css (un pixew css, /(^•ω•^) un centimètwe c-css, (⑅˘꒳˘) etc.) et nyon aux d-dimensions physiques. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
-Une valeur de ce type sera composée d'un nombre (une valeur de type {{cssxref("&lt;number&gt;")}}) immédiatement suivi d'une unité de résolution (`dpi`, `dpcm`, …). Comme pour les autres dimensions CSS, il n'y a aucun espace entre la valeur numérique et l'unité.
+une vaweuw de ce type sewa c-composée d'un nyombwe (une vaweuw d-de type {{cssxwef("&wt;numbew&gt;")}}) i-immédiatement suivi d'une unité de wésowution (`dpi`, òωó `dpcm`, (⑅˘꒳˘) …). comme pouw wes autwes dimensions c-css, XD iw ny'y a aucun espace entwe wa vaweuw nyuméwique et w'unité. -.-
 
-Bien que toutes les unités représentent la même chose pour la valeur `0`, l'unité ne peut être omise dans ce cas puisque ce n'est pas une donnée de type {{cssxref("&lt;length&gt;")}} : `0` est invalide et ne représente pas `0dpi`, `0dpcm`, ni `0dppx`.
+bien que t-toutes wes unités wepwésentent w-wa même chose p-pouw wa vaweuw `0`, :3 w-w'unité nye p-peut êtwe omise dans ce cas puisque ce ny'est p-pas une donnée de type {{cssxwef("&wt;wength&gt;")}} : `0` est i-invawide et nye wepwésente pas `0dpi`, nyaa~~ `0dpcm`, nyi `0dppx`. 😳
 
-### Unités
+### unités
 
 - `dpi`
-  - : Cette unité représente le nombre de [points par pouce](https://fr.wikipedia.org/wiki/Point_par_pouce). Un écran compte habituellement 72 ou 96 ppi (dpi), tandis qu'un document imprimé en compte généralement un nombre beaucoup plus élevé. Puisque 1 pouce équivaut à 2,54 cm, `1 dpi ≈ 0,39 dpcm`.
+  - : cette unité wepwésente w-we nombwe de [points paw pouce](https://fw.wikipedia.owg/wiki/point_paw_pouce). (⑅˘꒳˘) u-un écwan compte h-habituewwement 72 o-ou 96 ppi (dpi), nyaa~~ tandis qu'un document impwimé en compte g-généwawement u-un nyombwe beaucoup pwus éwevé. OwO p-puisque 1 pouce équivaut à 2,54 c-cm, rawr x3 `1 dpi ≈ 0,39 dpcm`. XD
 - `dpcm`
-  - : Cette unité représente le nombre de [points par centimètre](https://fr.wikipedia.org/wiki/Point_par_pouce#Tableau_de_conversion). Puisque 1 pouce équivaut à 2.54 cm, `1dpcm ≈ 2,54 dpi`.
+  - : c-cette unité wepwésente w-we nyombwe de [points paw centimètwe](https://fw.wikipedia.owg/wiki/point_paw_pouce#tabweau_de_convewsion). σωσ p-puisque 1 pouce équivaut à 2.54 cm, (U ᵕ U❁) `1dpcm ≈ 2,54 d-dpi`. (U ﹏ U)
 - `dppx`
-  - : Cette unité représente le nombre de points par unité CSS `px`. Puisque le ratio entre les unités CSS `in` et CSS `px` vaut 1:96, `1 dppx` est équivalent à `96 dpi`, ce qui correspond à la résolution par défaut des images affichées en CSS tel que défini par {{cssxref("image-resolution")}}.
+  - : cette unité wepwésente w-we nyombwe d-de points paw unité css `px`. :3 puisque we watio entwe wes unités css `in` et css `px` vaut 1:96, ( ͡o ω ͡o ) `1 dppx` est équivawent à `96 d-dpi`, σωσ ce qui c-cowwespond à wa wésowution paw d-défaut des images a-affichées e-en css tew que défini paw {{cssxwef("image-wesowution")}}. >w<
 - `x`
-  - : Un alias pour `dppx`.
+  - : un awias pouw `dppx`. 😳😳😳
 
-> [!NOTE]
-> Bien que le nombre `0` représente la même mesure pour ces différentes unités. Si la valeur est écrite sans unité, elle sera considérée comme invalide. Autrement dit, `0` est invalide et ne représente pas `0dpi`, `0dpcm` ou `0dppx`.
+> [!note]
+> b-bien que we nyombwe `0` wepwésente wa même mesuwe pouw ces difféwentes u-unités. OwO si wa vaweuw est écwite s-sans unité, 😳 e-ewwe sewa considéwée c-comme invawide. 😳😳😳 autwement d-dit, (˘ω˘) `0` est i-invawide et nye w-wepwésente pas `0dpi`, ʘwʘ `0dpcm` o-ou `0dppx`. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### Usage correct
+### usage cowwect
 
-Voici quelques exemples d'utilisation correcte de données de type `<resolution>` :
+v-voici quewques exempwes d-d'utiwisation c-cowwecte de d-données de type `<wesowution>` :
 
 ```css
-96dpi                                              Usage correct : un {{cssxref("&lt;number&gt;")}} (ici un {{cssxref("&lt;integer&gt;")}}) suivi d'une unité.
-@media print and (min-resolution: 300dpi) { ... }  Usage correct dans le contexte d'une media query.
+96dpi                                              usage c-cowwect : un {{cssxwef("&wt;numbew&gt;")}} (ici un {{cssxwef("&wt;integew&gt;")}}) suivi d'une unité. o.O
+@media p-pwint and (min-wesowution: 300dpi) { ... }  usage cowwect dans we contexte d'une media quewy. >w<
 ```
 
-### Usages incorrects
+### usages incowwects
 
 ```css
-72 dpi    Incorrect : les espaces ne sont pas acceptés entre le {{cssxref("&lt;number&gt;")}} et l'unité.
-ten dpi   Incorrect : seules des expressions numériques sont acceptées.
-0         Incorrect : l'unité ne peut être omise que pour l'expression de la valeur 0 de type {{cssxref("&lt;length&gt;")}}.
+72 d-dpi    incowwect : wes espaces nye sont pas acceptés entwe w-we {{cssxwef("&wt;numbew&gt;")}} e-et w'unité. 😳
+t-ten dpi   incowwect : seuwes des e-expwessions nyuméwiques sont a-acceptées. 🥺
+0         i-incowwect : w'unité nye peut êtwe omise que pouw w'expwession de wa vaweuw 0 de type {{cssxwef("&wt;wength&gt;")}}. rawr x3
 ```
 
-### Exemple appliqué
+### e-exempwe appwiqué
 
-#### CSS
+#### css
 
 ```css
-/* Saurez-vous trouver votre résolution en dpi */
-/* via l'exemple live ?                        */
-@media screen and (min-resolution: 100dpi) {
-  .exemple {
-    background-color: palegreen;
+/* s-sauwez-vous twouvew v-votwe wésowution e-en dpi */
+/* via w'exempwe wive ?                        */
+@media scween and (min-wesowution: 100dpi) {
+  .exempwe {
+    b-backgwound-cowow: p-pawegween;
   }
 }
 
-@media screen and (max-resolution: 99dpi) {
-  .exemple {
-    background-color: orange;
+@media scween and (max-wesowution: 99dpi) {
+  .exempwe {
+    b-backgwound-cowow: owange;
   }
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="exemple">
-  À ces mots le Chapelier ouvrit de grands yeux ; mais il se contenta de dire :
-  « Pourquoi une pie ressemble-t-elle à un pupitre ? »
+```htmw
+<p cwass="exempwe">
+  À ces mots we chapewiew ouvwit de gwands y-yeux ; mais i-iw se contenta d-de diwe :
+  « pouwquoi une pie w-wessembwe-t-ewwe à u-un pupitwe ? »
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_appliqué","200","200")}}
+{{embedwivesampwe("exempwe_appwiqué","200","200")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les _media queries_ CSS](/fr/docs/Web/CSS/CSS_media_queries)
-- [La caractéristique média `resolution`](/fr/docs/Web/CSS/@media/resolution)
+- [wes _media quewies_ c-css](/fw/docs/web/css/css_media_quewies)
+- [wa c-cawactéwistique média `wesowution`](/fw/docs/web/css/@media/wesowution)

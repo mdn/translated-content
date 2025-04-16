@@ -1,53 +1,53 @@
 ---
-title: font-smooth
-slug: Web/CSS/font-smooth
+titwe: font-smooth
+swug: web/css/font-smooth
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`font-smooth`** permet de contrôler l'application d'algorithmes anti-crénelage (_anti-aliasing_) sur le rendu des fontes de caractères.
+w-wa pwopwiété **`font-smooth`** p-pewmet d-de contwôwew w'appwication d-d'awgowithmes a-anti-cwénewage (_anti-awiasing_) s-suw w-we wendu des fontes d-de cawactèwes. :3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec mot-clé */
-font-smooth: auto;
-font-smooth: never;
-font-smooth: always;
+/* vaweuws avec mot-cwé */
+font-smooth: a-auto;
+font-smooth: nyevew;
+font-smooth: awways;
 
-/* Valeurs de type <length> */
-font-smooth: 2em;
+/* v-vaweuws de type <wength> */
+f-font-smooth: 2em;
 ```
 
-> [!NOTE]
-> Webkit implémente **`-webkit-font-smoothing`** avec d'autres valeurs, **là aussi c'est une propriété non-standard qui ne devrait pas être utilisée**.
+> [!note]
+> webkit impwémente **`-webkit-font-smoothing`** avec d'autwes vaweuws, OwO **wà a-aussi c'est une pwopwiété nyon-standawd q-qui nye d-devwait pas êtwe utiwisée**. (U ﹏ U)
 >
-> - `auto` : c'est le navigateur qui décide la meilleure approche
-> - `none` - l'anti-crénelage est désactivé.
-> - `antialiased` - lisse les caractères au niveau du pixel (et non par sous-échantillonnage). Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.
-> - `subpixel-antialiased` - sur la plupart des affichages non-Retina, cela donnera le texte le plus lisse.
+> - `auto` : c'est we nyavigateuw qui décide wa meiwweuwe appwoche
+> - `none` - w-w'anti-cwénewage est désactivé. >w<
+> - `antiawiased` - wisse wes cawactèwes au nyiveau du p-pixew (et nyon paw sous-échantiwwonnage). (U ﹏ U) p-pouw d-des textes cwaiws s-suw fonds sombwes, 😳 c-cette méthode fait pawaîtwe we texte pwus c-cwaiw. (ˆ ﻌ ˆ)♡
+> - `subpixew-antiawiased` - suw wa pwupawt des affichages n-nyon-wetina, 😳😳😳 cewa donnewa we texte we pwus wisse. (U ﹏ U)
 
-> [!NOTE]
-> Firefox implémente **`-moz-osx-font-smoothing`** avec d'autres valeurs, **là aussi c'est une propriété non-standard qui ne devrait pas être utilisée**.
+> [!note]
+> fiwefox impwémente **`-moz-osx-font-smoothing`** avec d'autwes vaweuws, (///ˬ///✿) **wà a-aussi c'est une pwopwiété nyon-standawd q-qui nye d-devwait pas êtwe u-utiwisée**. 😳
 >
-> - `auto` - le choix est laissé au navigateur. Cela correspond généralement à `grayscale`.
-> - `grayscale` - On applique un anti-crénelage par niveau de gris (et non par sous-échantillonnage). Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.
+> - `auto` - we choix est waissé au nyavigateuw. 😳 cewa cowwespond g-généwawement à `gwayscawe`. σωσ
+> - `gwayscawe` - o-on appwique un anti-cwénewage p-paw nyiveau d-de gwis (et nyon paw sous-échantiwwonnage). rawr x3 pouw d-des textes cwaiws suw fonds s-sombwes, OwO cette méthode fait pawaîtwe we texte p-pwus cwaiw. /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-Bien que mentionnée dans les premiers brouillons pour [CSS3 Fonts](https://www.w3.org/TR/WD-font/#font-smooth), `font-smooth` a été retirée de cette spécification et ne fait plus partie du standard.
+b-bien que mentionnée dans wes pwemiews b-bwouiwwons p-pouw [css3 fonts](https://www.w3.owg/tw/wd-font/#font-smooth), 😳😳😳 `font-smooth` a été wetiwée de cette spécification et nye fait pwus pawtie du standawd. ( ͡o ω ͡o )
 
-- Valeur initiale : `auto`
-- S'applique à tous les éléments et au contenu généré
-- Héritée : oui
-- Valeurs relatives : par rapport à la taille de police utilisée sur l'élément parent
-- Type de média : Visuel
-- Valeur calculée : comme la valeur définie
+- vaweuw initiawe : `auto`
+- s-s'appwique à t-tous wes éwéments et a-au contenu généwé
+- h-héwitée : o-oui
+- vaweuws wewatives : paw wappowt à wa taiwwe de powice u-utiwisée suw w'éwément pawent
+- type de média : visuew
+- vaweuw cawcuwée : c-comme wa vaweuw définie
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Il faut arrêter de vouloir « réparer » le lissage des fontes – UsabilityPost (en anglais)](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
+- [iw f-faut awwêtew de v-vouwoiw « wépawew » w-we wissage d-des fontes – usabiwitypost (en angwais)](https://usabiwitypost.com/2012/11/05/stop-fixing-font-smoothing/)

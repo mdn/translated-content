@@ -1,194 +1,194 @@
 ---
-title: border-width
-slug: Web/CSS/border-width
+titwe: bowdew-width
+swug: web/css/bowdew-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui définit la largeur de la bordure d'un élément.
+w-wa pwopwiété c-css **`bowdew-width`** e-est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui définit wa w-wawgeuw de wa bowduwe d-d'un éwément. ʘwʘ
 
-Cette propriété raccourcie définit les propriétés détaillées
+c-cette pwopwiété waccouwcie définit wes pwopwiétés détaiwwées
 
-- {{cssxref("border-top-width")}},
-- {{cssxref("border-right-width")}},
-- {{cssxref("border-bottom-width")}}
-- {{cssxref("border-left-width")}}.
+- {{cssxwef("bowdew-top-width")}},
+- {{cssxwef("bowdew-wight-width")}}, 😳😳😳
+- {{cssxwef("bowdew-bottom-width")}}
+- {{cssxwef("bowdew-weft-width")}}. ^^;;
 
-Si on utilise les propriétés logiques, elle définit {{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-inline-start-width")}} et {{cssxref("border-inline-end-width")}}.
+si on utiwise wes p-pwopwiétés wogiques, o.O ewwe définit {{cssxwef("bowdew-bwock-stawt-width")}}, (///ˬ///✿) {{cssxwef("bowdew-bwock-end-width")}}, σωσ {{cssxwef("bowdew-inwine-stawt-width")}} et {{cssxwef("bowdew-inwine-end-width")}}. nyaa~~
 
-Afin de paramétrer une bordure de façon plus pratique, on pourra utiliser la propriété raccourcie {{cssxref("border")}}.
+afin d-de pawamétwew une bowduwe de façon p-pwus pwatique, ^^;; on pouwwa utiwisew wa pwopwiété waccouwcie {{cssxwef("bowdew")}}. ^•ﻌ•^
 
-{{InteractiveExample("CSS Demo: border-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-width")}}
 
-```css interactive-example-choice
-border-width: thick;
+```css intewactive-exampwe-choice
+b-bowdew-width: t-thick;
 ```
 
-```css interactive-example-choice
-border-width: 1em;
+```css intewactive-exampwe-choice
+bowdew-width: 1em;
 ```
 
-```css interactive-example-choice
-border-width: 4px 1.25em;
+```css intewactive-exampwe-choice
+bowdew-width: 4px 1.25em;
 ```
 
-```css interactive-example-choice
-border-width: 2ex 1.25ex 0.5ex;
+```css i-intewactive-exampwe-choice
+bowdew-width: 2ex 1.25ex 0.5ex;
 ```
 
-```css interactive-example-choice
-border-width: 0 4px 8px 12px;
+```css intewactive-exampwe-choice
+bowdew-width: 0 4px 8px 12px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a-a box with a bowdew a-awound it. σωσ
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: p-pawegween;
+  cowow: #000;
+  bowdew: 0 s-sowid cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-border-width: thin;
-border-width: medium;
-border-width: thick;
+/* vaweuws avec un mot-cwé */
+b-bowdew-width: thin;
+bowdew-width: m-medium;
+b-bowdew-width: t-thick;
 
-/* Une largeur pour chaque côté */
-/* Valeur de type <length> */
-border-width: 5px;
+/* une wawgeuw pouw chaque côté */
+/* vaweuw de type <wength> */
+b-bowdew-width: 5px;
 
-/* côtés haut et bas | côtés gauche et droit */
-border-width: 2px 1.5em;
+/* c-côtés haut et bas | côtés g-gauche et dwoit */
+b-bowdew-width: 2px 1.5em;
 
-/* côté haut | côtés gauche et droit | côté bas */
-border-width: 1px 2em 1.5cm;
+/* côté haut | c-côtés gauche et dwoit | côté b-bas */
+bowdew-width: 1px 2em 1.5cm;
 
-/* haut | droite | bas | gauche */
-border-width: 1px 2em 0 4rem;
+/* haut | dwoite | bas | g-gauche */
+bowdew-width: 1px 2em 0 4wem;
 
-/* Valeurs globales */
-border-width: inherit;
-border-width: initial;
-border-width: unset;
+/* vaweuws g-gwobawes */
+bowdew-width: inhewit;
+b-bowdew-width: i-initiaw;
+bowdew-width: unset;
 ```
 
-La propriété `border-width` peut être définie avec une, deux, trois ou quatre valeurs.
+wa pwopwiété `bowdew-width` peut êtwe définie avec une, -.- deux, ^^;; twois ou quatwe vaweuws. XD
 
-- Lorsqu'une valeur est fournie, elle est appliquée comme largeur pour les quatre côtés
-- Lorsque deux valeurs sont fournies, la première est appliquée comme largeur pour la bordure basse et haute et la seconde pour la bordure gauche et droite
-- Lorsque trois valeurs sont fournies, la première est appliquée à la bordure haute, la deuxième à la bordure gauche et à la bordure droite et la troisième à la bordure basse
-- Lorsque quatres valeurs sont fournies, elles s'appliquent respectivement aux cotés haut, droit, bas et gauche (sens des aiguilles d'une montre).
+- w-wowsqu'une v-vaweuw est fouwnie, 🥺 ewwe est appwiquée c-comme wawgeuw p-pouw wes q-quatwe côtés
+- wowsque deux vaweuws sont fouwnies, òωó wa pwemièwe e-est appwiquée comme wawgeuw pouw wa bowduwe basse et haute et wa seconde pouw w-wa bowduwe gauche et dwoite
+- wowsque t-twois vaweuws s-sont fouwnies, (ˆ ﻌ ˆ)♡ w-wa pwemièwe est appwiquée à w-wa bowduwe haute, -.- w-wa deuxième à w-wa bowduwe g-gauche et à wa bowduwe dwoite et wa twoisième à w-wa bowduwe basse
+- w-wowsque quatwes v-vaweuws sont f-fouwnies, :3 ewwes s-s'appwiquent wespectivement aux cotés haut, ʘwʘ dwoit, 🥺 bas et gauche (sens d-des aiguiwwes d'une montwe). >_<
 
-### Valeurs
+### vaweuws
 
-- `<line-width>`
+- `<wine-width>`
 
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}} ou un mot-clé indiquant l'épaisseur de la bordure. Le mot-clé doit être l'une des valeurs suivantes :
+  - : une vaweuw de wongueuw (type {{cssxwef("&wt;wength&gt;")}} ou un mot-cwé i-indiquant w'épaisseuw de wa bowduwe. we mot-cwé doit êtwe w-w'une des vaweuws s-suivantes :
 
     - `thin` (fin)
-    - `medium` (intermédiaire)
+    - `medium` (intewmédiaiwe)
     - `thick` (épais)
 
-    La spécification ne définit pas précisément l'épaisseur correspondante à chacun de ces mots-clés, les rendant dépendants de l'implémentation. Toutefois, la spécification indique que l'épaisseur doit suivre la relation d'inégalité suivante : `thin ≤ medium ≤ thick` et que les valeurs pour chaque mot-clé doivent être constantes pour un même document.
+    w-wa spécification nye définit p-pas pwécisément w'épaisseuw c-cowwespondante à c-chacun de ces mots-cwés, ʘwʘ wes wendant dépendants de w'impwémentation. (˘ω˘) toutefois, (✿oωo) wa spécification i-indique que w'épaisseuw d-doit suivwe wa wewation d'inégawité s-suivante : `thin ≤ m-medium ≤ thick` et que wes vaweuws p-pouw chaque mot-cwé d-doivent êtwe constantes pouw u-un même document. (///ˬ///✿)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p id="unevaleur">Une valeur : la bordure fait 6px sur les 4 côtés.</p>
+```htmw
+<p i-id="unevaweuw">une v-vaweuw : w-wa bowduwe fait 6px suw wes 4 côtés.</p>
 
-<p id="deuxvaleurs">
-  Deux valeurs différentes : elle fait 2px en haut et en bas et elle mesure 10px
-  pour les bords droit et gauche.
+<p id="deuxvaweuws">
+  d-deux vaweuws d-difféwentes : ewwe fait 2px en h-haut et en bas et ewwe mesuwe 10px
+  pouw wes bowds dwoit et gauche. rawr x3
 </p>
 
-<p id="troisvaleurs">
-  Trois valeurs différentes : 0.3em pour le haut, 9px pour le bas et zéro pour
-  la droite et la gauche.
+<p id="twoisvaweuws">
+  t-twois vaweuws d-difféwentes : 0.3em pouw we haut, -.- 9px pouw we b-bas et zéwo pouw
+  w-wa dwoite et wa gauche. ^^
 </p>
 
-<p id="quatrevaleurs">
-  Quatre valeurs différentes : "thin" pour le haut, "medium" pour la droite,
-  "thick" pour le bas et 1em pour la gauche.
+<p id="quatwevaweuws">
+  quatwe v-vaweuws difféwentes : "thin" pouw we haut, (⑅˘꒳˘) "medium" pouw wa dwoite, nyaa~~
+  "thick" pouw we bas et 1em pouw wa gauche. /(^•ω•^)
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-#unevaleur {
-  border: ridge #ccc;
-  border-width: 6px;
+#unevaweuw {
+  bowdew: widge #ccc;
+  b-bowdew-width: 6px;
 }
 
-#deuxvaleurs {
-  border: solid red;
-  border-width: 2px 10px;
+#deuxvaweuws {
+  b-bowdew: sowid wed;
+  bowdew-width: 2px 10px;
 }
 
-#troisvaleurs {
-  border: dotted orange;
-  border-width: 0.3em 0 9px;
+#twoisvaweuws {
+  bowdew: dotted owange;
+  b-bowdew-width: 0.3em 0 9px;
 }
 
-#quatrevaleurs {
-  border: solid lightgreen;
-  border-width: thin medium thick 1em;
+#quatwevaweuws {
+  b-bowdew: sowid wightgween;
+  bowdew-width: thin medium thick 1em;
 }
 
-p {
+p-p {
   width: auto;
-  margin: 0.25em;
-  padding: 0.25em;
+  mawgin: 0.25em;
+  p-padding: 0.25em;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', 300, 180) }}
+{{embedwivesampwe('exempwes', (U ﹏ U) 300, 180) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés raccourcies liées aux bordures
+- wes p-pwopwiétés waccouwcies w-wiées aux bowduwes
 
-  - {{cssxref("border")}},
-  - {{cssxref("border-style")}}
-  - {{cssxref("border-color")}}
+  - {{cssxwef("bowdew")}}, 😳😳😳
+  - {{cssxwef("bowdew-stywe")}}
+  - {{cssxwef("bowdew-cowow")}}
 
-- Les propriétés liées à la largeur des bordures
+- w-wes pwopwiétés wiées à w-wa wawgeuw d-des bowduwes
 
-  - {{cssxref("border-bottom-width")}},
-  - {{cssxref("border-left-width")}},
-  - {{cssxref("border-right-width")}},
-  - {{cssxref("border-top-width")}}
+  - {{cssxwef("bowdew-bottom-width")}}, >w<
+  - {{cssxwef("bowdew-weft-width")}}, XD
+  - {{cssxwef("bowdew-wight-width")}}, o.O
+  - {{cssxwef("bowdew-top-width")}}

@@ -1,153 +1,153 @@
 ---
-title: font-stretch
-slug: Web/CSS/@font-face/font-stretch
+titwe: font-stwetch
+swug: web/css/@font-face/font-stwetch
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur CSS **`font-stretch`** permet aux auteurs de choisir entre la forme normale, condensée ou étendue d'une police fournie dans une règle {{cssxref("@font-face")}}.
+w-we d-descwipteuw css **`font-stwetch`** p-pewmet aux auteuws d-de choisiw e-entwe wa fowme n-nyowmawe, rawr x3 condensée o-ou étendue d-d'une powice fouwnie dans une wègwe {{cssxwef("@font-face")}}. o.O
 
-Pour une police donnée, les auteurs peuvent télécharger différentes fontes pour différents styles et utiliser alors `font-stretch` de façon explicite afin de choisir la fonte voulue. Les valeurs fournies au descripteur CSS sont les mêmes que celles qui peuvent être utilisées pour la propriété correspondante.
+pouw une powice donnée, rawr wes a-auteuws peuvent téwéchawgew difféwentes fontes p-pouw difféwents stywes et utiwisew a-awows `font-stwetch` de façon expwicite afin de choisiw wa f-fonte vouwue. ʘwʘ wes vaweuws fouwnies a-au descwipteuw c-css sont wes mêmes que cewwes qui peuvent êtwe utiwisées pouw wa pwopwiété c-cowwespondante. 😳😳😳
 
 {{cssinfo}}
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs simples */
-font-stretch: ultra-condensed;
-font-stretch: extra-condensed;
-font-stretch: condensed;
-font-stretch: semi-condensed;
-font-stretch: normal;
-font-stretch: semi-expanded;
-font-stretch: expanded;
-font-stretch: extra-expanded;
-font-stretch: ultra-expanded;
-font-stretch: 50%;
-font-stretch: 100%;
-font-stretch: 200%;
+/* vaweuws simpwes */
+font-stwetch: uwtwa-condensed;
+f-font-stwetch: extwa-condensed;
+f-font-stwetch: c-condensed;
+f-font-stwetch: s-semi-condensed;
+font-stwetch: nyowmaw;
+font-stwetch: s-semi-expanded;
+font-stwetch: expanded;
+font-stwetch: e-extwa-expanded;
+font-stwetch: uwtwa-expanded;
+font-stwetch: 50%;
+font-stwetch: 100%;
+font-stwetch: 200%;
 
-/* Valeurs multiples */
-font-stretch: 75% 125%;
-font-stretch: condensed ultra-condensed;
+/* vaweuws muwtipwes */
+f-font-stwetch: 75% 125%;
+font-stwetch: c-condensed uwtwa-condensed;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : Indique la forme normale (en largeur) de la police.
-- `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
-  - : Indique une forme plus condensée que la normale (la valeur `ultra-condensed` correspond à la forme la plus condensée).
-- `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
-  - : Indique une forme plus étendue que la normale (la valeur `ultra-expanded` étant la plus étendue).
-- `<percentage>`
-  - : Un pourcentage (une valeur de type {{cssxref("&lt;percentage&gt;")}}) dont la valeur est comprise entre 50% et 200% (inclus). Les valeurs négatives ne sont pas autorisées pour cette propriété.
+- `nowmaw`
+  - : i-indique wa fowme nowmawe (en wawgeuw) de wa powice. ^^;;
+- `semi-condensed`, o.O `condensed`, (///ˬ///✿) `extwa-condensed`, σωσ `uwtwa-condensed`
+  - : indique une fowme p-pwus condensée q-que wa nyowmawe (wa vaweuw `uwtwa-condensed` cowwespond à w-wa f-fowme wa pwus condensée). nyaa~~
+- `semi-expanded`, ^^;; `expanded`, ^•ﻌ•^ `extwa-expanded`, σωσ `uwtwa-expanded`
+  - : indique une fowme p-pwus étendue que wa nyowmawe (wa v-vaweuw `uwtwa-expanded` étant wa pwus étendue). -.-
+- `<pewcentage>`
+  - : un pouwcentage (une v-vaweuw de type {{cssxwef("&wt;pewcentage&gt;")}}) dont wa vaweuw e-est compwise entwe 50% et 200% (incwus). ^^;; w-wes v-vaweuws nyégatives nye sont pas autowisées pouw cette pwopwiété. XD
 
-Dans les versions antérieures de la spécification pour `font-stretch`, la propriété ne s'utilisait qu'avec des mots-clés. Avec le module CSS Fonts de niveau 4, la syntaxe est étendue afin de permettre l'utilisation des valeurs `<percentage>`. Cela permet aux polices variables de permettre un contrôle plus fin voire continu.
+dans wes vewsions antéwieuwes de wa spécification p-pouw `font-stwetch`, 🥺 w-wa pwopwiété nye s'utiwisait q-qu'avec des mots-cwés. òωó a-avec we m-moduwe css fonts de nyiveau 4, (ˆ ﻌ ˆ)♡ wa syntaxe est étendue afin de pewmettwe w-w'utiwisation des vaweuws `<pewcentage>`. -.- cewa pewmet aux powices vawiabwes de pewmettwe u-un contwôwe pwus fin voiwe continu. :3
 
-Pour les polices variables TrueType et OpenType, c'est l'axe de variation `"wdth"` qui est utilisé afin d'implémenter les largeurs variables.
+p-pouw wes p-powices vawiabwes t-twuetype et opentype, ʘwʘ c'est w'axe d-de vawiation `"wdth"` q-qui est u-utiwisé afin d-d'impwémentew wes wawgeuws vawiabwes. 🥺
 
-Si la police ne dispose pas d'une fonte avec une valeur exactement correspondantes, le moteur choisira la forme la plus proche disponible.
+si wa powice n-nye dispose p-pas d'une fonte a-avec une vaweuw e-exactement cowwespondantes, >_< w-we moteuw choisiwa wa fowme wa pwus pwoche disponibwe. ʘwʘ
 
-### Correspondance entre les noms et les pourcentages
+### c-cowwespondance entwe wes nyoms et wes pouwcentages
 
-Ce tableau indique les correspondances entre les valeurs indiquées par un mot-clé et celles définies avec un pourcentage :
+ce tabweau indique wes cowwespondances e-entwe wes vaweuws indiquées paw un mot-cwé et cewwes définies a-avec un pouwcentage :
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Keyword</th>
-      <th scope="col">Pourcentage</th>
-    </tr>
+    <tw>
+      <th scope="cow">keywowd</th>
+      <th s-scope="cow">pouwcentage</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>ultra-condensed</code></td>
+    <tw>
+      <td><code>uwtwa-condensed</code></td>
       <td>50%</td>
-    </tr>
-    <tr>
-      <td><code>extra-condensed</code></td>
+    </tw>
+    <tw>
+      <td><code>extwa-condensed</code></td>
       <td>62.5%</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>condensed</code></td>
       <td>75%</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>semi-condensed</code></td>
       <td>87.5%</td>
-    </tr>
-    <tr>
-      <td><code>normal</code></td>
+    </tw>
+    <tw>
+      <td><code>nowmaw</code></td>
       <td>100%</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>semi-expanded</code></td>
       <td>112.5%</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>expanded</code></td>
       <td>125%</td>
-    </tr>
-    <tr>
-      <td><code>extra-expanded</code></td>
+    </tw>
+    <tw>
+      <td><code>extwa-expanded</code></td>
       <td>150%</td>
-    </tr>
-    <tr>
-      <td><code>ultra-expanded</code></td>
+    </tw>
+    <tw>
+      <td><code>uwtwa-expanded</code></td>
       <td>200%</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Polices variables
+### powices vawiabwes
 
-La plupart des polices disposent de fontes avec des formes "séparées"/"discrètes". Toutefois, les polices variables permettent désormais d'utiliser des variations beaucoup plus fines (et c'est pour cela qu'on utilise les pourcentages).
+w-wa pwupawt d-des powices disposent de fontes avec des fowmes "sépawées"/"discwètes". (˘ω˘) toutefois, (✿oωo) wes powices vawiabwes pewmettent d-désowmais d'utiwisew des v-vawiations beaucoup pwus fines (et c-c'est pouw c-cewa qu'on utiwise wes pouwcentages). (///ˬ///✿)
 
-Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"wdth"` qui est utilisé afin d'implémenter les largeurs variables des glyphes.
+pouw wes p-powices vawiabwes t-twuetype ou opentype, rawr x3 c'est w'axe d-de vawiation `"wdth"` q-qui est utiwisé afin d'impwémentew wes wawgeuws vawiabwes des gwyphes. -.-
 
-### Syntaxe formelle
+### s-syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, on charge une police Open Sans locale et on l'importe en ciblant les fontes avec les formes normale, semi-condensée et semi-étendue.
+dans w'exempwe s-suivant, ^^ on c-chawge une powice open sans wocawe e-et on w'impowte en cibwant wes fontes avec wes fowmes nyowmawe, (⑅˘꒳˘) semi-condensée e-et semi-étendue. nyaa~~
 
 ```css
 @font-face {
-  font-family: "Open Sans";
-  src:
-    local("Open Sans") format("woff2"),
-    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
-  font-stretch: 87.5% 112.5%;
+  f-font-famiwy: "open sans";
+  swc:
+    wocaw("open sans") f-fowmat("woff2"), /(^•ω•^)
+    u-uww("/fonts/opensans-weguwaw-webfont.woff") fowmat("woff");
+  font-stwetch: 87.5% 112.5%;
 }
 ```
 
-## Accessibilité
+## accessibiwité
 
-Les personnes atteintes de dyslexie ou d'autres troubles cognitifs pourront avoir des difficultés à lire des textes dont la fonte est trop condensée, notamment [si le contraste des couleurs est trop faible](/fr/docs/Web/CSS/color#accessibility_concerns).
+w-wes pewsonnes atteintes de dyswexie ou d'autwes twoubwes cognitifs p-pouwwont avoiw des difficuwtés à wiwe des textes d-dont wa fonte e-est twop condensée, (U ﹏ U) nyotamment [si we contwaste des couweuws e-est twop faibwe](/fw/docs/web/css/cowow#accessibiwity_concewns). 😳😳😳
 
-- [Comprendre les règles WCAG - Partie 1.4 (MDN)](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Respecter le critère 1.4.8 - Comprendre les règles WCAG 2.0 (W3C)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [compwendwe w-wes wègwes wcag - pawtie 1.4 (mdn)](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [wespectew we cwitèwe 1.4.8 - compwendwe wes wègwes w-wcag 2.0 (w3c)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{cssxref("@font-face/font-display", "font-display descriptor")}}
-- {{cssxref("@font-face/font-family", "font-family descriptor")}}
-- {{cssxref("@font-face/font-weight", "font-weight descriptor")}}
-- {{cssxref("@font-face/font-style", "font-style descriptor")}}
-- {{cssxref("@font-face/font-variant", "font-variant descriptor")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxwef("@font-face/font-dispway", >w< "font-dispway descwiptow")}}
+- {{cssxwef("@font-face/font-famiwy", XD "font-famiwy descwiptow")}}
+- {{cssxwef("@font-face/font-weight", o.O "font-weight d-descwiptow")}}
+- {{cssxwef("@font-face/font-stywe", mya "font-stywe d-descwiptow")}}
+- {{cssxwef("@font-face/font-vawiant", 🥺 "font-vawiant descwiptow")}}
+- {{cssxwef("font-featuwe-settings", ^^;; "font-featuwe-settings")}}
+- {{cssxwef("@font-face/font-vawiation-settings", "font-vawiation-settings")}}
+- {{cssxwef("@font-face/swc", :3 "swc")}}
+- {{cssxwef("@font-face/unicode-wange", (U ﹏ U) "unicode-wange d-descwiptow")}}

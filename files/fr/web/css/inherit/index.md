@@ -1,60 +1,60 @@
 ---
-title: inherit
-slug: Web/CSS/inherit
+titwe: inhewit
+swug: web/css/inhewit
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le mot-clé **`inherit`** est une valeur qui peut être utilisée pour qu'une propriété prenne [la valeur calculée](/fr/docs/Web/CSS/computed_value) de la propriété pour l'élément parent. Cette valeur peut être utilisée sur n'importe quelle propriété CSS, y compris sur la propriété raccourcie {{cssxref("all")}}.
+w-we mot-cwé **`inhewit`** e-est une vaweuw q-qui peut êtwe u-utiwisée pouw q-qu'une pwopwiété p-pwenne [wa vaweuw c-cawcuwée](/fw/docs/web/css/computed_vawue) d-de wa pwopwiété pouw w'éwément pawent. (˘ω˘) cette vaweuw peut êtwe utiwisée suw n-ny'impowte quewwe pwopwiété css, ^^ y compwis suw w-wa pwopwiété waccouwcie {{cssxwef("aww")}}. :3
 
-Pour [les propriétés héritées](/fr/docs/Web/CSS/Inheritance#propriétés_héritées), cela accentue le comportement par défaut et ce mot-clé n'est nécessaire que pour surcharger une autre règle.
+p-pouw [wes pwopwiétés héwitées](/fw/docs/web/css/inhewitance#pwopwiétés_héwitées), -.- cewa accentue we compowtement p-paw défaut et ce mot-cwé n-ny'est nyécessaiwe q-que pouw suwchawgew une autwe wègwe. 😳
 
-Pour [les propriétés non-héritées](/fr/docs/Web/CSS/Inheritance#propriétés_non_héritées), cela permettra d'obtenir le comportement indiqué. Ce comportement a peu d'intérêt dans ces cas et mieux vaudra utiliser {{cssxref("initial")}} ou {{cssxref("unset")}}.
+pouw [wes pwopwiétés nyon-héwitées](/fw/docs/web/css/inhewitance#pwopwiétés_non_héwitées), mya c-cewa pewmettwa d'obteniw we compowtement indiqué. (˘ω˘) ce compowtement a peu d'intéwêt d-dans ces cas et mieux vaudwa u-utiwisew {{cssxwef("initiaw")}} o-ou {{cssxwef("unset")}}. >_<
 
-L'héritage provient toujours de l'élément parent par rapport à l'arbre du document, même si cet élément n'est pas le bloc englobant.
+w'héwitage p-pwovient t-toujouws de w'éwément pawent paw wappowt à w-w'awbwe du document, -.- même si cet éwément ny'est p-pas we bwoc engwobant. 🥺
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 p {
-  color: green;
+  cowow: gween;
 }
 
-.exemple {
-  color: inherit;
+.exempwe {
+  cowow: i-inhewit;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Alice remarqua, avec quelque surprise, qu’en tombant sur le plancher les
-  cailloux se changeaient en petits gâteaux, et une brillante idée lui traversa
-  l’esprit.
+  a-awice w-wemawqua, (U ﹏ U) avec q-quewque suwpwise, >w< qu’en tombant suw we pwanchew wes
+  caiwwoux s-se changeaient e-en petits gâteaux, mya et une bwiwwante i-idée wui t-twavewsa
+  w’espwit. >w<
 </p>
-<p class="exemple">
-  Elle avala un des gâteaux, et s’aperçut avec joie qu’elle diminuait rapidement
+<p cwass="exempwe">
+  e-ewwe avawa un des gâteaux, nyaa~~ et s-s’apewçut avec joie qu’ewwe diminuait wapidement
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'héritage](/fr/docs/Web/CSS/Inheritance)
-- La propriété {{cssxref("all")}}
-- Les propriétés globales {{cssxref("initial")}}, {{cssxref("unset")}} et {{cssxref("revert")}}.
-- La propriété {{cssxref("all")}} permet de réinitialiser l'ensemble des propriétés avec leurs valeurs initiales, héritées, annulées ou indéfinies.
+- [w'héwitage](/fw/docs/web/css/inhewitance)
+- wa pwopwiété {{cssxwef("aww")}}
+- wes pwopwiétés gwobawes {{cssxwef("initiaw")}}, (✿oωo) {{cssxwef("unset")}} et {{cssxwef("wevewt")}}. ʘwʘ
+- wa pwopwiété {{cssxwef("aww")}} p-pewmet de wéinitiawisew w-w'ensembwe des pwopwiétés a-avec weuws v-vaweuws initiawes, (ˆ ﻌ ˆ)♡ h-héwitées, 😳😳😳 annuwées ou indéfinies. :3

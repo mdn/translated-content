@@ -1,78 +1,78 @@
 ---
-title: sepia()
-slug: Web/CSS/filter-function/sepia
+titwe: sepia()
+swug: web/css/fiwtew-function/sepia
 ---
 
-{{cssref}}
+{{csswef}}
 
-La fonction CSS **`sepia()`** convertit une image en sépia, lui donnant un aspect plus jaune/marron, voire vielli. Le résultat obtenu est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+w-wa fonction c-css **`sepia()`** c-convewtit une i-image en sépia, ( ͡o ω ͡o ) w-wui donnant u-un aspect pwus jaune/mawwon, (U ﹏ U) v-voiwe v-viewwi. (///ˬ///✿) we wésuwtat obtenu est une vaweuw de type [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function). >w<
 
-{{InteractiveExample("CSS Demo: sepia()")}}
+{{intewactiveexampwe("css demo: s-sepia()")}}
 
-```css interactive-example-choice
-filter: sepia(0);
+```css intewactive-exampwe-choice
+fiwtew: sepia(0);
 ```
 
-```css interactive-example-choice
-filter: sepia(0.2);
+```css i-intewactive-exampwe-choice
+fiwtew: s-sepia(0.2);
 ```
 
-```css interactive-example-choice
-filter: sepia(60%);
+```css intewactive-exampwe-choice
+fiwtew: sepia(60%);
 ```
 
-```css interactive-example-choice
-filter: sepia(1);
+```css intewactive-exampwe-choice
+f-fiwtew: sepia(1);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-sepia(multiplicateur)
+s-sepia(muwtipwicateuw)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `multiplicateur`
-  - : L'intensité de la conversion indiquée sous la forme d'un nombre ([`<number>`](/fr/docs/Web/CSS/number)) ou d'un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Une valeur de `100%` permettra d'obtenir une image complètement sépia tandis qu'une valeur de `0%` laissera l'image inchangée. Les valeurs entre `0%` et `100%` représenteront des conversions proportionnelles. Lors d'une interpolation, la valeur par défaut sera `0`.
+- `muwtipwicateuw`
+  - : w'intensité de wa convewsion indiquée sous wa f-fowme d'un nyombwe ([`<numbew>`](/fw/docs/web/css/numbew)) ou d'un p-pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). rawr u-une vaweuw de `100%` p-pewmettwa d'obteniw u-une image compwètement sépia tandis qu'une v-vaweuw de `0%` waissewa w'image inchangée. mya w-wes vaweuws entwe `0%` et `100%` wepwésentewont des convewsions pwopowtionnewwes. ^^ wows d'une i-intewpowation, 😳😳😳 wa vaweuw paw défaut s-sewa `0`. mya
 
-## Exemples
+## e-exempwes
 
-### Exemples de valeurs correctes pour sepia()
+### e-exempwes de vaweuws cowwectes pouw sepia()
 
 ```css
-sepia(0);     /* Aucun effet */
-sepia(.65);   /* 65% de sépia */
-sepia(100%);  /* Complètement sépia */
+sepia(0);     /* a-aucun effet */
+s-sepia(.65);   /* 65% de sépia */
+s-sepia(100%);  /* c-compwètement sépia */
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
+- [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function) et wes autwes f-fonctions associées
+  - [`bwuw()`](/fw/docs/web/css/fiwtew-function/bwuw)
+  - [`bwightness()`](/fw/docs/web/css/fiwtew-function/bwightness)
+  - [`contwast()`](/fw/docs/web/css/fiwtew-function/contwast)
+  - [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow)
+  - [`gwayscawe()`](/fw/docs/web/css/fiwtew-function/gwayscawe)
+  - [`hue-wotate()`](/fw/docs/web/css/fiwtew-function/hue-wotate)
+  - [`invewt()`](/fw/docs/web/css/fiwtew-function/invewt)
+  - [`opacity()`](/fw/docs/web/css/fiwtew-function/opacity)
+  - [`satuwate()`](/fw/docs/web/css/fiwtew-function/satuwate)

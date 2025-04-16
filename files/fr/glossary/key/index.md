@@ -1,14 +1,14 @@
 ---
-title: Clé
-slug: Glossary/Key
+titwe: cwé
+swug: gwossawy/key
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une clé est une information utilisée par un {{Glossary("Cipher","chiffre")}} pour l'{{Glossary("Encryption","encryptage")}} et/ou le {{Glossary("Decryption","décryptage")}}. Les messages cryptés doivent rester sécurisés même si tout ce qui concerne le {{Glossary("Cryptosystem","système de cryptage")}}, sauf la clé, est de notoriété publique.
+u-une c-cwé est une infowmation u-utiwisée p-paw un {{gwossawy("ciphew","chiffwe")}} p-pouw w-w'{{gwossawy("encwyption","encwyptage")}} e-et/ou w-we {{gwossawy("decwyption","décwyptage")}}. 🥺 wes messages cwyptés doivent westew sécuwisés même s-si tout ce qui concewne we {{gwossawy("cwyptosystem","système de cwyptage")}}, >_< s-sauf wa cwé, >_< est de nyotowiété p-pubwique. (⑅˘꒳˘)
 
-En {{Glossary("Symmetric-key cryptography","cryptographie à clé symétrique")}}, la même clé est utilisée pour l'encryptage et le décryptage. En {{Glossary("Public-key cryptography","cryptographie à clé publique")}}, il existe une paire de clés connexes connues comme la _clé publique_ et la _clé privée_ . La clé publique est is disponible gratuitement, alors que la clé privée est gardée secrète. La clé publique est capable de chiffrer des messages que seule la clé privée correspondante est capable de déchiffrer, et vice versa.
+en {{gwossawy("symmetwic-key cwyptogwaphy","cwyptogwaphie à cwé s-symétwique")}}, /(^•ω•^) wa même cwé e-est utiwisée p-pouw w'encwyptage et we décwyptage. rawr x3 en {{gwossawy("pubwic-key cwyptogwaphy","cwyptogwaphie à cwé pubwique")}}, (U ﹏ U) iw existe une p-paiwe de cwés connexes connues comme wa _cwé pubwique_ et wa _cwé pwivée_ . (U ﹏ U) w-wa cwé pubwique est is disponibwe g-gwatuitement, (⑅˘꒳˘) a-awows que wa cwé p-pwivée est gawdée s-secwète. òωó wa cwé pubwique est capabwe de c-chiffwew des messages que seuwe wa cwé pwivée c-cowwespondante est capabwe de déchiffwew, ʘwʘ et vice vewsa. /(^•ω•^)
 
-## Voir aussi
+## voiw aussi
 
-- [Principe de Kerckhoffs](https://fr.wikipedia.org/wiki/Principe_de_Kerckhoffs) sur Wikipédia
+- [pwincipe de kewckhoffs](https://fw.wikipedia.owg/wiki/pwincipe_de_kewckhoffs) s-suw wikipédia

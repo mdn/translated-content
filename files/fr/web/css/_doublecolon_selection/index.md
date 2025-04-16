@@ -1,106 +1,106 @@
 ---
-title: ::selection
-slug: Web/CSS/::selection
+titwe: ::sewection
+swug: web/css/::sewection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::selection`** permet d'appliquer des règles CSS à une portion du document qui a été sélectionnée par l'utilisateur (via la souris ou un autre dispositif de pointage).
+w-we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) **`::sewection`** p-pewmet d-d'appwiquew des w-wègwes css à u-une powtion du d-document qui a été s-séwectionnée p-paw w'utiwisateuw (via wa souwis ou un autwe dispositif de pointage). ^^;;
 
 ```css
-::selection {
-  background-color: cyan;
+::sewection {
+  backgwound-cowow: c-cyan;
 }
 ```
 
-## Propriétés autorisées
+## pwopwiétés autowisées
 
-Seul un sous-ensemble des propriétés CSS peut être utilisé pour une règle dont le sélecteur contient `::selection` :
+seuw u-un sous-ensembwe des pwopwiétés c-css peut êtwe utiwisé pouw une wègwe dont we séwecteuw c-contient `::sewection` :
 
-- {{cssxref("color")}},
-- {{cssxref("background-color")}},
-- {{cssxref("cursor")}},
-- {{cssxref("caret-color")}},
-- {{cssxref("outline")}} ainsi que les propriétés détaillées associées,
-- {{cssxref("text-decoration")}} ainsi que les propriétés détaillées associées,
-- {{cssxref("text-emphasis-color")}},
-- {{cssxref("text-shadow")}}.
+- {{cssxwef("cowow")}}, (✿oωo)
+- {{cssxwef("backgwound-cowow")}}, (U ﹏ U)
+- {{cssxwef("cuwsow")}}, -.-
+- {{cssxwef("cawet-cowow")}}, ^•ﻌ•^
+- {{cssxwef("outwine")}} ainsi que wes p-pwopwiétés d-détaiwwées associées, rawr
+- {{cssxwef("text-decowation")}} ainsi que wes pwopwiétés détaiwwées associées, (˘ω˘)
+- {{cssxwef("text-emphasis-cowow")}},
+- {{cssxwef("text-shadow")}}. nyaa~~
 
-On notera que {{cssxref("background-image")}} est ignorée, comme les autres propriétés.
+o-on nyotewa que {{cssxwef("backgwound-image")}} est ignowée, UwU comme wes autwes pwopwiétés. :3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/*Syntaxe propre à Firefox (61 et antérieur) */
-::-moz-selection
+/*syntaxe p-pwopwe à fiwefox (61 e-et antéwieuw) */
+::-moz-sewection
 {{csssyntax}}
 ```
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-/* du texte sélectionné sera jaune sur fond rouge */
-::-moz-selection {
-  color: gold;
-  background-color: red;
+/* d-du texte séwectionné sewa jaune suw fond w-wouge */
+::-moz-sewection {
+  cowow: gowd;
+  backgwound-cowow: w-wed;
 }
 
-::selection {
-  color: gold;
-  background-color: red;
+::sewection {
+  cowow: gowd;
+  backgwound-cowow: wed;
 }
 
-/* le texte sélectionné dans un paragraphe */
-/* sera blanc sur noir                     */
-p::-moz-selection {
-  color: white;
-  background-color: black;
+/* we texte séwectionné dans u-un pawagwaphe */
+/* sewa bwanc s-suw nyoiw                     */
+p-p::-moz-sewection {
+  c-cowow: white;
+  backgwound-cowow: bwack;
 }
 
-p::selection {
-  color: white;
-  background-color: black;
+p::sewection {
+  c-cowow: white;
+  b-backgwound-cowow: bwack;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div>Un peu de texte pour tester ::selection.</div>
-<p>Essayez également de sélectionner du texte dans ce &lt;p&gt;</p>
+```htmw
+<div>un p-peu de texte pouw testew ::sewection.</div>
+<p>essayez égawement d-de séwectionnew du texte dans c-ce &wt;p&gt;</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Accessibilité
+## accessibiwité
 
-Il est recommandé de **ne pas surcharger la police par défaut fournie par le système d'exploitation à des fins esthétiques** et notamment si l'utilisateur a personnalisé ces polices pour ses besoins. Pour les personnes qui connaissent moins les technologies, cette modification peut modifier leur compréhension des fonctionnalités du site.
+i-iw est wecommandé de **ne p-pas suwchawgew wa powice paw d-défaut fouwnie p-paw we système d'expwoitation à des fins esthétiques** et nyotamment si w'utiwisateuw a pewsonnawisé ces powices p-pouw ses b-besoins. (⑅˘꒳˘) pouw wes pewsonnes qui c-connaissent moins w-wes technowogies, (///ˬ///✿) c-cette modification peut modifiew weuw compwéhension des fonctionnawités d-du site. ^^;;
 
-Si la police est surchargée, il faut s'assurer que le contraste entre la couleur du texte sélectionné et celle de l'arrière-plan est suffisamment élevé afin que les personnes disposant de faibles conditions de vision puissent lire le texte lorsqu'il est sélectionné.
+si wa powice est suwchawgée, >_< iw faut s'assuwew que we contwaste e-entwe wa couweuw du texte s-séwectionné e-et cewwe de w'awwièwe-pwan e-est suffisamment éwevé a-afin que wes p-pewsonnes disposant d-de faibwes c-conditions de vision puissent wiwe we texte wowsqu'iw e-est séwectionné. rawr x3
 
-La valeur du contraste est déterminée en comparant la luminosité de la couleur du texte de substitution et celle de l'arrière-plan. Afin de respecter les recommandations d'accessibilité : [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), un ratio de 4.5:1 est nécessaire pour le contenu textuel normal et un ratio de 3:1 est nécessaire pour les textes plus grands ou en gras. Le seuil entre ces deux tailles est défini de la façon suivante :
+w-wa vaweuw d-du contwaste e-est détewminée e-en compawant wa wuminosité de wa couweuw du texte de substitution e-et cewwe de w'awwièwe-pwan. /(^•ω•^) afin de wespectew wes wecommandations d'accessibiwité : [web content accessibiwity g-guidewines (wcag)](https://www.w3.owg/wai/intwo/wcag), :3 un watio de 4.5:1 est nyécessaiwe pouw we contenu t-textuew nyowmaw e-et un watio de 3:1 e-est nyécessaiwe pouw wes textes p-pwus gwands ou en gwas. (ꈍᴗꈍ) we s-seuiw entwe ces d-deux taiwwes est défini de wa façon suivante :
 
-- Si le texte est en gras : 18.66px ou plus grand
-- Sinon 24px ou plus grand
+- si we texte est en gwas : 18.66px ou pwus gwand
+- s-sinon 24px ou pwus gwand
 
-Quelques ressources :
+q-quewques wessouwces :
 
-- [WebAIM : vérificateur de contraste](https://webaim.org/resources/contrastchecker/)
-- [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim : véwificateuw d-de contwaste](https://webaim.owg/wesouwces/contwastcheckew/)
+- [expwications des w-wecommendation wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.3 | w-w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("pointer-events")}} qui contrôle les évènements actifs sur l'élément
+- {{cssxwef("pointew-events")}} qui contwôwe wes évènements actifs suw w'éwément

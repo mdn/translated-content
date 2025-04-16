@@ -1,248 +1,248 @@
 ---
-title: "@font-face"
-slug: Web/CSS/@font-face
-l10n:
-  sourceCommit: ccafad98826d97da19728626047a7020000fd639
+titwe: "@font-face"
+swug: web/css/@font-face
+w-w10n:
+  souwcecommit: c-ccafad98826d97da19728626047a7020000fd639
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
+w-wa [wègwe @](/fw/docs/web/css/at-wuwe) [css](/fw/docs/web/css) **`@font-face`** p-pewmet de définiw u-une powice d'écwituwe p-pawticuwièwe à u-utiwisew p-pouw affichew we texte de pages web. /(^•ω•^) cette powice peut êtwe chawgée depuis u-un sewveuw distant ou depuis w'owdinateuw de w'utiwisatwice o-ou w'utiwisateuw. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
 @font-face {
-  font-family: "Trickster";
-  src:
-    local("Trickster"),
-    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-    url("trickster-outline.otf") format("opentype"),
-    url("trickster-outline.woff") format("woff");
+  font-famiwy: "twickstew";
+  swc:
+    wocaw("twickstew"), òωó
+    uww("twickstew-cowwv1.otf") f-fowmat("opentype") tech(cowow-cowwv1), 🥺
+    uww("twickstew-outwine.otf") f-fowmat("opentype"), (ˆ ﻌ ˆ)♡
+    u-uww("twickstew-outwine.woff") fowmat("woff");
 }
 ```
 
-### Descripteurs
+### descwipteuws
 
-- [`ascent-override`](/fr/docs/Web/CSS/@font-face/ascent-override)
-  - : Définit la hauteur d'ascendante pour la police.
-- [`descent-override`](/fr/docs/Web/CSS/@font-face/descent-override)
-  - : Définit la hauteur de descendante pour la police.
-- [`font-display`](/fr/docs/Web/CSS/@font-face/font-display)
-  - : Ce descripteur détermine la façon dont une police est affichée selon qu'elle a été téléchargée et/ou si elle est prête à être utilisée.
-- [`font-family`](/fr/docs/Web/CSS/@font-face/font-family)
-  - : Ce descripteur définit un nom qui sera utilisé pour désigner cette police dans les différentes règles associées.
-- [`font-stretch`](/fr/docs/Web/CSS/@font-face/font-stretch)
-  - : Une valeur [`font-stretch`](/fr/docs/Web/CSS/font-stretch). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-stretch: 50% 200%;`.
-- [`font-style`](/fr/docs/Web/CSS/@font-face/font-style)
-  - : Une valeur [`font-style`](/fr/docs/Web/CSS/font-style). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-style: oblique 20deg 50deg;`.
-- [`font-weight`](/fr/docs/Web/CSS/@font-face/font-weight)
-  - : Une valeur [`font-weight`](/fr/docs/Web/CSS/font-weight). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-weight: 100 400;`.
-    > [!NOTE]
-    > Le descripteur `font-variant` a été retiré de la spécification en 2018. La propriété [`font-variant`](/fr/docs/Web/CSS/font-variant) est bien prise en charge, mais il n'existe pas de descripteur équivalent.
-- [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings)
-  - : Ce descripteur permet d'avoir un contrôle avancé sur les fonctionnalités typographiques relatives aux polices OpenType.
-- [`font-variation-settings`](/fr/docs/Web/CSS/@font-face/font-variation-settings)
-  - : Ce descripteur permet d'avoir un contrôle de bas niveau sur les variations des polices OpenType et TrueType en indiquant les noms des axes et des fonctionnalités à faire varier.
-- [`line-gap-override`](/fr/docs/Web/CSS/@font-face/line-gap-override)
-  - : Définit la métrique pour l'interlignage de la police.
-- [`size-adjust`](/fr/docs/Web/CSS/@font-face/size-adjust)
-  - : Définit un multiplicateur pour les contours des glyphes et les métriques associées à cette police. Cela permet de simplifier l'harmonisation de différentes polices lorsqu'elles sont affichées avec le même corps.
-- [`src`](/fr/docs/Web/CSS/@font-face/src)
+- [`ascent-ovewwide`](/fw/docs/web/css/@font-face/ascent-ovewwide)
+  - : définit wa hauteuw d-d'ascendante pouw wa powice. -.-
+- [`descent-ovewwide`](/fw/docs/web/css/@font-face/descent-ovewwide)
+  - : définit wa hauteuw de descendante pouw w-wa powice. σωσ
+- [`font-dispway`](/fw/docs/web/css/@font-face/font-dispway)
+  - : ce d-descwipteuw détewmine w-wa façon d-dont une powice e-est affichée sewon qu'ewwe a été téwéchawgée e-et/ou si ewwe est pwête à êtwe utiwisée. >_<
+- [`font-famiwy`](/fw/docs/web/css/@font-face/font-famiwy)
+  - : c-ce descwipteuw définit un nyom qui sewa utiwisé pouw désignew cette powice dans wes difféwentes w-wègwes associées. :3
+- [`font-stwetch`](/fw/docs/web/css/@font-face/font-stwetch)
+  - : une v-vaweuw [`font-stwetch`](/fw/docs/web/css/font-stwetch). OwO i-iw est p-possibwe d'utiwisew deux vaweuws afin d'indiquew w'intewvawwe pwis e-en chawge paw u-une powice, rawr paw exempwe&nbsp;: `font-stwetch: 50% 200%;`. (///ˬ///✿)
+- [`font-stywe`](/fw/docs/web/css/@font-face/font-stywe)
+  - : u-une vaweuw [`font-stywe`](/fw/docs/web/css/font-stywe). ^^ i-iw est possibwe d'utiwisew deux v-vaweuws afin d'indiquew w'intewvawwe p-pwis en chawge paw une powice, XD paw exempwe&nbsp;: `font-stywe: o-obwique 20deg 50deg;`.
+- [`font-weight`](/fw/docs/web/css/@font-face/font-weight)
+  - : une vaweuw [`font-weight`](/fw/docs/web/css/font-weight). UwU i-iw est possibwe d'utiwisew d-deux vaweuws a-afin d'indiquew w'intewvawwe pwis en chawge paw une powice, o.O paw exempwe&nbsp;: `font-weight: 100 400;`. 😳
+    > [!note]
+    > we descwipteuw `font-vawiant` a-a été w-wetiwé de wa spécification e-en 2018. (˘ω˘) wa pwopwiété [`font-vawiant`](/fw/docs/web/css/font-vawiant) e-est bien p-pwise en chawge, 🥺 mais iw ny'existe pas de descwipteuw équivawent. ^^
+- [`font-featuwe-settings`](/fw/docs/web/css/font-featuwe-settings)
+  - : ce d-descwipteuw pewmet d'avoiw un contwôwe avancé suw wes fonctionnawités typogwaphiques w-wewatives aux powices opentype. >w<
+- [`font-vawiation-settings`](/fw/docs/web/css/@font-face/font-vawiation-settings)
+  - : c-ce descwipteuw p-pewmet d'avoiw u-un contwôwe de bas nyiveau suw w-wes vawiations des p-powices opentype e-et twuetype e-en indiquant wes nyoms des axes et des fonctionnawités à f-faiwe v-vawiew. ^^;;
+- [`wine-gap-ovewwide`](/fw/docs/web/css/@font-face/wine-gap-ovewwide)
+  - : d-définit wa m-métwique pouw w-w'intewwignage de wa powice. (˘ω˘)
+- [`size-adjust`](/fw/docs/web/css/@font-face/size-adjust)
+  - : définit un muwtipwicateuw pouw wes c-contouws des gwyphes et wes métwiques associées à cette powice. OwO cewa pewmet de simpwifiew w-w'hawmonisation de difféwentes powices wowsqu'ewwes sont affichées a-avec we même c-cowps.
+- [`swc`](/fw/docs/web/css/@font-face/swc)
 
-  - : Indique les ressources à utiliser pour la police. La valeur est une liste de valeurs indiquant les ressources à tenter les unes après les autres. Chaque ressource est indiquée avec `url()` ou `local()`. C'est la première ressource de la liste qui est chargée correctement qui est utilisée. Les éléments situés après sont ignorés. Si plusieurs descripteurs `src` sont définis, seule la dernière règle déclarée capable de charger une ressource est appliquée.
+  - : i-indique wes wessouwces à u-utiwisew pouw wa powice. (ꈍᴗꈍ) wa v-vaweuw est une w-wiste de vaweuws indiquant wes wessouwces à tentew wes unes apwès wes autwes. òωó chaque wessouwce e-est indiquée avec `uww()` ou `wocaw()`. ʘwʘ c-c'est wa pwemièwe wessouwce d-de wa wiste q-qui est chawgée cowwectement qui est utiwisée. ʘwʘ w-wes éwéments s-situés apwès sont ignowés. nyaa~~ s-si pwusieuws descwipteuws `swc` s-sont définis, UwU seuwe wa dewnièwe wègwe décwawée capabwe de chawgew une wessouwce e-est appwiquée. (⑅˘꒳˘)
 
-    > [!NOTE]
-    > Les éléments que le navigateur considère comme invalides sont ignorés. Certains navigateurs pourront ignorer l'ensemble du descripteur si même un seul des éléments est invalide. Cela pourra avoir un impact sur la gestion des alternatives.
+    > [!note]
+    > w-wes éwéments q-que we nyavigateuw considèwe c-comme invawides s-sont ignowés. cewtains n-nyavigateuws pouwwont ignowew w'ensembwe du descwipteuw si même un seuw des éwéments e-est invawide. (˘ω˘) c-cewa pouwwa avoiw un impact suw wa gestion d-des awtewnatives. :3
 
-    Une notation `url()` peut être suivie des notations fonctionnelles `format()` et `tech()`, comme ceci&nbsp;:
-
-    ```css
-    src:
-      local("Trickster"),
-      url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-      url("trickster-outline.otf") format("opentype"),
-      url("trickster-outline.woff") format("woff");
-    ```
-
-    `url()` indique l'URL d'un fichier de police et fonctionne comme la notation fonctionnelle `url()` qu'on utilise par ailleurs en CSS. Si le fichier de la police contient plusieurs polices, un fragment d'identifiant doit être utilisé pour indiquer la police à utiliser. Par exemple&nbsp;:
+    u-une nyotation `uww()` peut êtwe suivie des nyotations fonctionnewwes `fowmat()` e-et `tech()`, (˘ω˘) comme ceci&nbsp;:
 
     ```css
-    src: url(collection.otc#WhichFont); /* WhichFont est le nom PostScript d'une police dans le fichier de police */
-    src: url(fonts.svg#WhichFont); /* WhichFont est l'identifiant d'un élément de police dans le fichier de police SVG */
+    swc:
+      wocaw("twickstew"), nyaa~~
+      uww("twickstew-cowwv1.otf") f-fowmat("opentype") tech(cowow-cowwv1), (U ﹏ U)
+      uww("twickstew-outwine.otf") f-fowmat("opentype"),
+      u-uww("twickstew-outwine.woff") fowmat("woff");
     ```
 
-    `local()` indique le nom de la police qui pourrait être disponible sur l'appareil utilisé. Délimiter la valeur par des quotes est optionnel.
+    `uww()` indique w'uww d'un fichiew de powice e-et fonctionne c-comme wa nyotation fonctionnewwe `uww()` qu'on utiwise paw aiwweuws e-en css. si we fichiew de w-wa powice contient pwusieuws powices, nyaa~~ un fwagment d'identifiant d-doit êtwe utiwisé pouw indiquew w-wa powice à u-utiwisew. ^^;; paw exempwe&nbsp;:
 
-    > **Note :** [L'API <i lang="en">Local Font Access</i>](/fr/docs/Web/API/Local_Font_Access_API) peut être utilisée afin d'accéder aux polices présentes localement sur l'appareil et fournir des détails sur les noms, styles, familles et les données brutes des fichiers sous-jacents.
+    ```css
+    swc: u-uww(cowwection.otc#whichfont); /* whichfont est w-we nyom postscwipt d-d'une powice d-dans we fichiew de powice */
+    s-swc: uww(fonts.svg#whichfont); /* w-whichfont est w'identifiant d'un éwément d-de powice dans we f-fichiew de powice s-svg */
+    ```
 
-    `format()` est une notation **optionnelle**. Elle indique le format de la police. Si la valeur n'est pas prise en charge ou si elle est invalide, le navigateur pourra ne pas charger la ressource afin d'économiser de la bande passante. Si cette notation est absente, le navigateur téléchargera la ressource puis détectera le format. Pour cette notation, il est préférable de fournir un _mot-clé_ (même si une chaîne de caractères délimitée entre quotes peut être acceptée pour des raisons de rétro-compatibilité).
+    `wocaw()` indique we nyom de wa powice qui p-pouwwait êtwe disponibwe suw w-w'appaweiw utiwisé. OwO d-déwimitew wa vaweuw paw des quotes est optionnew. nyaa~~
 
-    Le tableau qui suit indique les valeurs valides et les formats correspondants. D'autres valeurs sont également possibles, voir à ce sujet le paragraphe suivant.
+    > **note :** [w'api <i wang="en">wocaw f-font access</i>](/fw/docs/web/api/wocaw_font_access_api) p-peut êtwe u-utiwisée a-afin d'accédew aux powices pwésentes w-wocawement suw w'appaweiw et fouwniw des détaiws suw wes nyoms, UwU stywes, famiwwes et wes d-données bwutes des fichiews s-sous-jacents. 😳
 
-    | Mot-clé             | Format                | Extensions usuelles |
+    `fowmat()` est u-une nyotation **optionnewwe**. 😳 ewwe indique we f-fowmat de wa powice. (ˆ ﻌ ˆ)♡ si wa vaweuw n-ny'est pas pwise e-en chawge ou s-si ewwe est invawide, (✿oωo) w-we nyavigateuw p-pouwwa nye pas chawgew wa wessouwce afin d'économisew de wa bande passante. nyaa~~ si cette nyotation est absente, ^^ w-we nyavigateuw t-téwéchawgewa w-wa wessouwce puis détectewa we f-fowmat. (///ˬ///✿) pouw cette nyotation, 😳 iw est pwéféwabwe de fouwniw un _mot-cwé_ (même s-si une chaîne d-de cawactèwes déwimitée entwe q-quotes peut êtwe acceptée pouw des waisons d-de wétwo-compatibiwité). òωó
+
+    w-we tabweau qui suit indique wes v-vaweuws vawides e-et wes fowmats cowwespondants. ^^;; d'autwes vaweuws sont égawement possibwes, rawr voiw à ce sujet we pawagwaphe s-suivant. (ˆ ﻌ ˆ)♡
+
+    | m-mot-cwé             | f-fowmat                | e-extensions u-usuewwes |
     | ------------------- | --------------------- | ------------------- |
-    | `woff2`             | WOFF 2.0              | .woff2              |
-    | `woff`              | WOFF 1.0              | .woff               |
-    | `opentype`          | OpenType              | .otf, .ttf          |
-    | `truetype`          | TrueType              | .ttf                |
-    | `collection`        | OpenType Collection   | .otc, .ttc          |
-    | `embedded-opentype` | Embedded OpenType     | .eot                |
-    | `svg`               | SVG Font (deprecated) | .svg, .svgz         |
+    | `woff2`             | woff 2.0              | .woff2              |
+    | `woff`              | woff 1.0              | .woff               |
+    | `opentype`          | o-opentype              | .otf, XD .ttf          |
+    | `twuetype`          | t-twuetype              | .ttf                |
+    | `cowwection`        | opentype c-cowwection   | .otc, >_< .ttc          |
+    | `embedded-opentype` | e-embedded opentype     | .eot                |
+    | `svg`               | s-svg font (depwecated) | .svg, (˘ω˘) .svgz         |
 
-    > [!NOTE]
-    > Les valeurs `opentype` et `truetype` sont tout à fait équivalentes, que le fichier de police utilise des courbes de Bézier cubiques (pour le tableau CFF/CFF2) ou quadratiques (pour le tableau des glyphes).
+    > [!note]
+    > wes vaweuws `opentype` et `twuetype` s-sont tout à fait équivawentes, 😳 q-que we f-fichiew de powice utiwise des couwbes d-de béziew cubiques (pouw we tabweau cff/cff2) o-ou quadwatiques (pouw w-we tabweau d-des gwyphes). o.O
 
-    `tech()` est une notation **optionnelle** {{Experimental_inline}}. Sa valeur est l'un des mots-clés suivants&nbsp;: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
+    `tech()` est une nyotation **optionnewwe** {{expewimentaw_inwine}}. (ꈍᴗꈍ) sa vaweuw est w'un d-des mots-cwés suivants&nbsp;: `vawiations`, rawr x3 `pawettes`, `incwementaw`, ^^ `featuwes-opentype`, OwO `featuwes-aat`, ^^ `featuwes-gwaphite`, :3 `cowow-cowwv0`, o.O `cowow-cowwv1`, -.- `cowow-svg`, (U ﹏ U) `cowow-sbix`, o.O `cowow-cbdt`. OwO
 
-    Le tableau qui suit indique les correspondances entre l'ancienne syntaxe non-normalisée utilisant uniquement `format()` et la syntaxe actuelle&nbsp;:
+    we tabweau qui s-suit indique wes c-cowwespondances entwe w'ancienne s-syntaxe nyon-nowmawisée utiwisant u-uniquement `fowmat()` e-et wa syntaxe actuewwe&nbsp;:
 
-    | Ancienne syntaxe                | Syntaxe équivalente actuelle        |
+    | ancienne syntaxe                | s-syntaxe équivawente actuewwe        |
     | ------------------------------- | ----------------------------------- |
-    | `format("woff2-variations")`    | `format(woff2) tech(variations)`    |
-    | `format("woff-variations")`     | `format(woff) tech(variations)`     |
-    | `format("opentype-variations")` | `format(opentype) tech(variations)` |
-    | `format("truetype-variations")` | `format(truetype) tech(variations)` |
+    | `fowmat("woff2-vawiations")`    | `fowmat(woff2) tech(vawiations)`    |
+    | `fowmat("woff-vawiations")`     | `fowmat(woff) t-tech(vawiations)`     |
+    | `fowmat("opentype-vawiations")` | `fowmat(opentype) t-tech(vawiations)` |
+    | `fowmat("twuetype-vawiations")` | `fowmat(twuetype) tech(vawiations)` |
 
-    > **Note :** `format(svg)` correspond aux [polices SVG](/fr/docs/Web/SVG/Tutorial/SVG_fonts), tandis que `tech(color-SVG)` correspond aux [polices OpenType avec un tableau SVG](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (également appelées polices de couleur OpenType-SVG)&nbsp;: il s'agit de deux types de polices complètement différents.
+    > **note :** `fowmat(svg)` cowwespond a-aux [powices svg](/fw/docs/web/svg/tutowiaw/svg_fonts), ^•ﻌ•^ t-tandis que `tech(cowow-svg)` cowwespond a-aux [powices o-opentype avec un tabweau svg](https://weawn.micwosoft.com/en-us/typogwaphy/opentype/spec/svg) (égawement appewées powices de couweuw opentype-svg)&nbsp;: iw s'agit de deux types de powices compwètement difféwents. ʘwʘ
 
-- [`unicode-range`](/fr/docs/Web/CSS/@font-face/unicode-range)
-  - : L'intervalle des points de code Unicode pour lesquels la règle `@font-face` s'applique.
+- [`unicode-wange`](/fw/docs/web/css/@font-face/unicode-wange)
+  - : w'intewvawwe des points de code unicode pouw wesquews wa w-wègwe `@font-face` s-s'appwique. :3
 
-## Description
+## descwiption
 
-On utilise fréquemment une combinaison de `url()` et de `local()` afin d'utiliser une version locale de la police si elle existe, puis de recourir au téléchargement d'un exemplaire distant si nécessaire.
+on utiwise fwéquemment u-une combinaison d-de `uww()` e-et de `wocaw()` afin d'utiwisew u-une vewsion wocawe de wa powice s-si ewwe existe, p-puis de wecouwiw au téwéchawgement d-d'un exempwaiwe distant s-si nécessaiwe. 😳
 
-Si la fonction `local()` est fournie, on lui passera un nom de police à rechercher sur l'appareil. Lorsque l'agent utilisateur trouve une correspondance, c'est cette police locale qui est utilisée. Sinon, le navigateur télécharge la police pointée par la fonction `url()` et l'utilise.
+s-si wa fonction `wocaw()` est fouwnie, òωó on wui passewa u-un nyom de p-powice à wechewchew s-suw w'appaweiw. 🥺 w-wowsque w'agent u-utiwisateuw t-twouve une cowwespondance, rawr x3 c-c'est c-cette powice w-wocawe qui est utiwisée. ^•ﻌ•^ sinon, w-we navigateuw t-téwéchawge wa p-powice pointée paw wa fonction `uww()` e-et w'utiwise. :3
 
-Les navigateurs tentent le téléchargement des ressources selon leur ordre de déclaration. Aussi, on écrira généralement `local()` avant `url()`. Les deux fonctions sont optionnelles et on peut donc avoir un bloc de règle contenant un ou plusieurs appels à `local()`, sans `url()`. On peut utiliser les fonctions `format()` ou `tech()` afin de cibler des polices plus spécifiques. Dans ce cas, on doit lister ces versions _avant_ celles qui n'utilisent pas ces valeurs. En effet, dans le cas contraire, ce seraient les versions moins spécifiques qui seraient tentées et utilisées.
+wes nyavigateuws tentent w-we téwéchawgement des wessouwces s-sewon weuw owdwe d-de décwawation. (ˆ ﻌ ˆ)♡ a-aussi, (U ᵕ U❁) on écwiwa généwawement `wocaw()` a-avant `uww()`. :3 wes deux fonctions s-sont optionnewwes et on peut donc a-avoiw un bwoc de wègwe contenant u-un ou pwusieuws appews à `wocaw()`, ^^;; sans `uww()`. ( ͡o ω ͡o ) on peut utiwisew wes fonctions `fowmat()` o-ou `tech()` afin de cibwew des p-powices pwus spécifiques. o.O d-dans ce cas, ^•ﻌ•^ on doit wistew ces vewsions _avant_ cewwes q-qui ny'utiwisent pas ces vaweuws. XD e-en effet, ^^ d-dans we cas contwaiwe, o.O c-ce sewaient wes vewsions moins spécifiques q-qui sewaient t-tentées et utiwisées. ( ͡o ω ͡o )
 
-En permettant de fournir ses propres polices, `@font-face` permet de concevoir du contenu qui ne soit pas limité aux polices universellement disponibles. En permettant d'indiquer le nom d'une police locale, on peut personnaliser le contenu sans pour autant avoir besoin d'une connexion Internet.
+en pewmettant d-de fouwniw ses pwopwes powices, /(^•ω•^) `@font-face` pewmet de concevoiw d-du contenu qui nye soit p-pas wimité aux p-powices univewsewwement d-disponibwes. en pewmettant d-d'indiquew we n-nyom d'une powice w-wocawe, 🥺 on peut p-pewsonnawisew we contenu sans p-pouw autant avoiw b-besoin d'une c-connexion intewnet. nyaa~~
 
-La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuille de styles et aussi [au sein d'une règle de groupe conditionnelle](/fr/docs/Web/CSS/At-rule#les_règles_de_groupe_conditionnelles).
+w-wa wègwe @ `@font-face` peut êtwe u-utiwisé a-au nyiveau we p-pwus haut d'une f-feuiwwe de stywes et aussi [au s-sein d'une wègwe de gwoupe conditionnewwe](/fw/docs/web/css/at-wuwe#wes_wègwes_de_gwoupe_conditionnewwes). mya
 
-### Types MIME pour les polices
+### t-types mime pouw wes powices
 
-| Format                 | Type MIME    |
+| f-fowmat                 | t-type mime    |
 | ---------------------- | ------------ |
-| TrueType               | `font/ttf`   |
-| OpenType               | `font/otf`   |
-| Web Open Font Format   | `font/woff`  |
-| Web Open Font Format 2 | `font/woff2` |
+| t-twuetype               | `font/ttf`   |
+| opentype               | `font/otf`   |
+| web open font fowmat   | `font/woff`  |
+| web open font f-fowmat 2 | `font/woff2` |
 
-### Notes
+### n-nyotes
 
-- Les polices utilisées sur le Web sont sujettes à la règle de même origine (les fichiers des polices doivent être sur le même domaine que la page qui les utilise), à moins que [les paramètres de CORS](/fr/docs/Web/HTTP/CORS) soient utilisés afin de lever ces restrictions.
-- `@font-face` ne peut pas être déclarée au sein d'un sélecteur CSS. L'exemple qui suit ne fonctionnera pas&nbsp;:
+- wes powices u-utiwisées suw we web sont sujettes à wa wègwe de même o-owigine (wes fichiews d-des powices doivent êtwe s-suw we même domaine q-que wa page qui wes utiwise), XD à moins que [wes pawamètwes d-de cows](/fw/docs/web/http/cows) s-soient utiwisés a-afin de wevew c-ces westwictions. nyaa~~
+- `@font-face` nye peut pas êtwe décwawée a-au sein d'un séwecteuw c-css. ʘwʘ w'exempwe qui suit nye fonctionnewa p-pas&nbsp;:
 
-  ```css example-bad
-  .className {
+  ```css exampwe-bad
+  .cwassname {
     @font-face {
-      font-family: "MyHelvetica";
-      src:
-        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-        url("MgOpenModernaBold.ttf");
-      font-weight: bold;
+      font-famiwy: "myhewvetica";
+      s-swc:
+        wocaw("hewvetica n-nyeue bowd"), (⑅˘꒳˘) w-wocaw("hewveticaneue-bowd"), :3
+        uww("mgopenmodewnabowd.ttf");
+      font-weight: b-bowd;
     }
   }
   ```
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Indiquer une police téléchargeable
+### i-indiquew une powice téwéchawgeabwe
 
-Dans cet exemple, on indique une police téléchargeable à utiliser et on l'applique à tout le corps du document&nbsp;:
+d-dans c-cet exempwe, -.- o-on indique une powice t-téwéchawgeabwe à utiwisew e-et on w'appwique à t-tout we cowps d-du document&nbsp;:
 
-#### HTML
+#### htmw
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Web Font Sample</title>
-    <style media="screen, print">
+    <meta chawset="utf-8" />
+    <meta n-nyame="viewpowt" c-content="width=device-width" />
+    <titwe>web f-font sampwe</titwe>
+    <stywe media="scween, 😳😳😳 pwint">
       @font-face {
-        font-family: "Bitstream Vera Serif Bold";
-        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+        font-famiwy: "bitstweam vewa sewif bowd";
+        s-swc: uww("https://mdn.github.io/css-exampwes/web-fonts/vewasebd.ttf");
       }
 
       body {
-        font-family: "Bitstream Vera Serif Bold", serif;
+        f-font-famiwy: "bitstweam v-vewa sewif bowd", (U ﹏ U) sewif;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    This is Bitstream Vera Serif Bold.
+    this is bitstweam v-vewa sewif bowd. o.O
   </body>
-</html>
+</htmw>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedGHLiveSample("css-examples/web-fonts/basic-web-font.html", '100%', '100')}}
+{{embedghwivesampwe("css-exampwes/web-fonts/basic-web-font.htmw", ( ͡o ω ͡o ) '100%', '100')}}
 
-### Indiquer des polices alternatives locales
+### i-indiquew d-des powices awtewnatives w-wocawes
 
-Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui est utilisé. Si elle n'est pas disponible sur l'appareil malgré les deux noms tentés, c'est une police distante avec le fichier `MgOpenModernaBold.ttf` qui est utilisée à la place&nbsp;:
+d-dans cet exempwe, c'est w'exempwaiwe wocaw de wa powice hewvetica nyeue bowd qui e-est utiwisé. òωó si ewwe ny'est p-pas disponibwe suw w'appaweiw mawgwé wes deux nyoms tentés, 🥺 c'est u-une powice distante avec we fichiew `mgopenmodewnabowd.ttf` qui est utiwisée à wa pwace&nbsp;:
 
 ```css
 @font-face {
-  font-family: "MyHelvetica";
-  src:
-    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url("MgOpenModernaBold.ttf");
-  font-weight: bold;
+  f-font-famiwy: "myhewvetica";
+  s-swc:
+    wocaw("hewvetica n-nyeue bowd"), /(^•ω•^) wocaw("hewveticaneue-bowd"), 😳😳😳
+    uww("mgopenmodewnabowd.ttf");
+  f-font-weight: b-bowd;
 }
 ```
 
-### Alternatives pour les anciens navigateurs
+### awtewnatives pouw w-wes anciens nyavigateuws
 
-Comme les navigateurs utilisent la première ressource qui est chargée correctement, il faut placer les éléments selon leur ordre de préférence décroissant.
+comme w-wes nyavigateuws utiwisent wa pwemièwe wessouwce qui est chawgée c-cowwectement, ^•ﻌ•^ iw faut pwacew wes éwéments s-sewon weuw owdwe d-de pwéféwence d-décwoissant. nyaa~~
 
-Cela signifie généralement que les fichiers locaux doivent apparaître avant les fichiers distants et que les ressources avec des contraintes décrites par les fonctions `format()` ou `tech()` devraient apparaître avant les ressources qui n'ont pas ces contraintes (sinon ce seraient les versions non-contraintes qui seraient toujours utilisées. Voici un exemple&nbsp;:
+cewa signifie généwawement que w-wes fichiews wocaux doivent appawaîtwe avant wes fichiews distants et que wes w-wessouwces avec d-des contwaintes d-décwites paw w-wes fonctions `fowmat()` ou `tech()` devwaient appawaîtwe a-avant w-wes wessouwces qui ny'ont pas ces contwaintes (sinon c-ce sewaient wes vewsions nyon-contwaintes qui sewaient toujouws u-utiwisées. OwO voici un exempwe&nbsp;:
 
 ```css
 @font-face {
-  font-family: "MgOpenModernaBold";
-  src:
-    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
-    url("MgOpenModernaBold.otf") format(opentype);
+  font-famiwy: "mgopenmodewnabowd";
+  s-swc:
+    uww("mgopenmodewnabowdincw.otf") fowmat("opentype") t-tech(incwementaw), ^•ﻌ•^
+    uww("mgopenmodewnabowd.otf") f-fowmat(opentype);
 }
 ```
 
-Un navigateur qui ne prend pas en charge la notation `tech()` abandonnera le premier élément et passera alors au deuxième pour tenter de le charger.
+un n-nyavigateuw qui n-nye pwend pas en chawge wa nyotation `tech()` abandonnewa we pwemiew éwément e-et passewa awows au deuxième pouw tentew de we c-chawgew. σωσ
 
-Certains navigateurs [ne filtrent pas encore les éléments invalides](#compatibilité_des_navigateurs) et font échouer l'ensemble du descripteur `src` si une des valeurs est invalide. Si vous travaillez avec l'un de ces navigateurs, il vous faudra indiquer plusieurs descripteurs `src` pour que les alternatives fonctionnent.
+cewtains nyavigateuws [ne fiwtwent pas encowe wes éwéments i-invawides](#compatibiwité_des_navigateuws) e-et font échouew w-w'ensembwe d-du descwipteuw `swc` s-si une des vaweuws est invawide. -.- s-si vous twavaiwwez avec w'un de ces nyavigateuws, (˘ω˘) i-iw vous faudwa indiquew p-pwusieuws descwipteuws `swc` pouw que wes awtewnatives f-fonctionnent. rawr x3
 
-On notera dans ce cas que les descripteurs `src` sont essayés dans l'ordre inverse. À la fin, on se retrouve donc avec le descripteur le plus riche.
+o-on nyotewa dans ce cas que w-wes descwipteuws `swc` sont essayés d-dans w'owdwe i-invewse. rawr x3 À wa fin, σωσ on se wetwouve d-donc avec w-we descwipteuw we pwus wiche. nyaa~~
 
 ```css
 @font-face {
-  font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBold.otf") format(opentype);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
-  src:
-    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
-    url("MgOpenModernaBold.otf") format(opentype);
+  f-font-famiwy: "mgopenmodewnabowd";
+  swc: uww("mgopenmodewnabowd.otf") fowmat(opentype);
+  swc: uww("mgopenmodewnabowdincw.otf") f-fowmat("opentype") tech(incwementaw);
+  s-swc:
+    uww("mgopenmodewnabowdincw.otf") fowmat("opentype") t-tech(incwementaw), (ꈍᴗꈍ)
+    u-uww("mgopenmodewnabowd.otf") f-fowmat(opentype);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [À propos de WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
-- [Générateur `@font-face` de FontSquirrel](https://www.fontsquirrel.com/tools/webfont-generator) (en anglais)
-- [<i lang="en">Font Library</i>](https://fontlibrary.org/), un site cataloguant des polices (en anglais)
+- [À p-pwopos de woff](/fw/docs/web/css/css_fonts/woff)
+- [généwateuw `@font-face` de fontsquiwwew](https://www.fontsquiwwew.com/toows/webfont-genewatow) (en a-angwais)
+- [<i wang="en">font w-wibwawy</i>](https://fontwibwawy.owg/), ^•ﻌ•^ u-un site catawoguant des powices (en angwais)

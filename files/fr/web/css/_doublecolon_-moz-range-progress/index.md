@@ -1,59 +1,59 @@
 ---
-title: ::-moz-range-progress
-slug: Web/CSS/::-moz-range-progress
+titwe: ::-moz-wange-pwogwess
+swug: web/css/::-moz-wange-pwogwess
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-moz-range-progress`** représente la portion de la piste d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`, qui correspond aux valeurs inférieures à la valeur sélectionnée par le curseur.
+w-we pseudo-éwément **`::-moz-wange-pwogwess`** w-wepwésente w-wa powtion d-de wa piste d'un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) d-de type `wange`, ʘwʘ q-qui c-cowwespond aux vaweuws i-inféwieuwes à wa vaweuw séwectionnée paw we cuwseuw.
 
-> [!NOTE]
-> Si `::-moz-range-progress` est utilisé sur autre chose qu'un élément `<input type="range">`, il n'aura aucun effet.
+> [!note]
+> si `::-moz-wange-pwogwess` e-est utiwisé suw autwe chose qu'un éwément `<input t-type="wange">`, σωσ iw n-ny'auwa aucun effet. OwO
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<input type="range" min="0" max="100" step="5" value="50" />
+```htmw
+<input t-type="wange" min="0" max="100" s-step="5" vawue="50" />
 ```
 
-### CSS
+### c-css
 
 ```css
-input[type="range"]::-moz-range-progress {
-  background-color: green;
+input[type="wange"]::-moz-wange-pwogwess {
+  backgwound-cowow: gween;
   height: 1em;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("", 300, 50)}}
+{{embedwivesampwe("", 😳😳😳 300, 😳😳😳 50)}}
 
-Une barre de progression mise en forme avec cette déclaration devrait ressembler à&nbsp;:
+une bawwe de pwogwession m-mise en fowme avec cette décwawation devwait wessembwew à&nbsp;:
 
-![](screen_shot_2015-12-04_at_20.14.48.png)
+![](scween_shot_2015-12-04_at_20.14.48.png)
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-ce pseudo-éwément e-est un pseudo-éwément p-pwopwiétaiwe w-wié à gecko/moziwwa e-et ne fait pawtie d'aucune spécification.
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`&nbsp;:
+- wes pseudo-éwéments de gecko qui pewmettent de mettwe en fowme wes autwes pawties des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) de type `wange`&nbsp;:
 
-  - [`::-moz-range-thumb`](/fr/docs/Web/CSS/::-moz-range-thumb)
-  - [`::-moz-range-track`](/fr/docs/Web/CSS/::-moz-range-track)
+  - [`::-moz-wange-thumb`](/fw/docs/web/css/::-moz-wange-thumb)
+  - [`::-moz-wange-twack`](/fw/docs/web/css/::-moz-wange-twack)
 
-- [`::-ms-fill-upper`](/fr/docs/Web/CSS/::-ms-fill-upper) pris en charge par Internet Explorer
-- [CSS-Tricks&nbsp;: Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode&nbsp;: Mettre en forme les pistes et curseurs (en anglais)](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [`::-ms-fiww-uppew`](/fw/docs/web/css/::-ms-fiww-uppew) p-pwis en chawge paw i-intewnet expwowew
+- [css-twicks&nbsp;: g-géwew des c-champs `input` de type `wange` de façon compatibwe entwe wes n-nyavigateuws (en a-angwais)](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode&nbsp;: mettwe e-en fowme wes pistes e-et cuwseuws (en angwais)](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

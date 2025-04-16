@@ -1,39 +1,39 @@
 ---
-title: Valeur calculée
-slug: Web/CSS/computed_value
+titwe: vaweuw cawcuwée
+swug: w-web/css/computed_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La **valeur calculée** d'une propriété CSS est calculée à partir de [la valeur définie](/fr/docs/Web/CSS/specified_value) :
+w-wa **vaweuw c-cawcuwée** d-d'une pwopwiété c-css est cawcuwée à p-pawtiw de [wa v-vaweuw définie](/fw/docs/web/css/specified_vawue) :
 
-1. En gérant les valeurs spéciales {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}} et {{cssxref("revert")}}.
-2. En effectuant les calculs décrits dans la section « Valeur calculée » de chaque résumé de propriété.
+1. (U ﹏ U) en g-géwant wes vaweuws spéciawes {{cssxwef("inhewit")}}, >w< {{cssxwef("initiaw")}}, (U ﹏ U) {{cssxwef("unset")}} et {{cssxwef("wevewt")}}.
+2. 😳 en effectuant wes cawcuws décwits d-dans wa section « vaweuw cawcuwée » de c-chaque wésumé de pwopwiété. (ˆ ﻌ ˆ)♡
 
-Les calculs utilisés pour obtenir la **valeur calculée** correspondent généralement à la conversion des valeurs relatives (exprimées dans des unités relatives comme `em` ou en pourcentages) en valeur absolue. Ainsi, si un élément possède les valeurs spécifiées suivantes `font-size: 16px` et `padding-top: 2em`. La valeur calculée de la propriété `padding-top` sera `32px` (on double la taille de la police).
+w-wes cawcuws utiwisés pouw obteniw wa **vaweuw cawcuwée** cowwespondent g-généwawement à wa convewsion d-des vaweuws w-wewatives (expwimées dans des unités wewatives comme `em` ou en pouwcentages) e-en vaweuw absowue. 😳😳😳 ainsi, si un éwément possède wes vaweuws spécifiées s-suivantes `font-size: 16px` et `padding-top: 2em`. (U ﹏ U) w-wa vaweuw cawcuwée d-de wa pwopwiété `padding-top` s-sewa `32px` (on d-doubwe wa taiwwe de wa powice). (///ˬ///✿)
 
-Cependant, pour certaines propriétés (celles où les pourcentages sont relatifs à quelque chose lié à la disposition comme `width`, `margin-right`, `text-indent`, et `top`), les valeurs spécifiées exprimées en pourcentages deviennent des valeurs calculées exprimées en pourcentages. De plus, les nombres sans unité utilisés pour la propriété `line-height` sont également utilisés comme valeurs calculées. Ces valeurs relatives sont résolues en valeurs absolues lorsqu'on détermine [les valeurs utilisées](/fr/docs/Web/CSS/used_value).
+cependant, p-pouw cewtaines pwopwiétés (cewwes où wes p-pouwcentages sont wewatifs à quewque chose wié à wa disposition comme `width`, 😳 `mawgin-wight`, 😳 `text-indent`, σωσ et `top`), rawr x3 wes v-vaweuws spécifiées expwimées e-en pouwcentages d-deviennent des v-vaweuws cawcuwées expwimées en pouwcentages. OwO de pwus, wes nyombwes s-sans unité u-utiwisés pouw wa pwopwiété `wine-height` s-sont égawement u-utiwisés comme vaweuws c-cawcuwées. /(^•ω•^) ces vaweuws wewatives s-sont wésowues en vaweuws absowues wowsqu'on d-détewmine [wes vaweuws utiwisées](/fw/docs/web/css/used_vawue). 😳😳😳
 
-Le principal intérêt de la valeur calculée (en dehors de la gestion du passage de [la valeur spécifiée](/fr/docs/Web/CSS/specified_value) à [la valeur utilisée](/fr/docs/Web/CSS/used_value)) est [l'héritage](/fr/docs/Web/CSS/Inheritance), notamment grâce au mot-clé {{cssxref("inherit")}}.
+w-we pwincipaw intéwêt de w-wa vaweuw cawcuwée (en d-dehows de wa gestion du passage de [wa vaweuw spécifiée](/fw/docs/web/css/specified_vawue) à [wa vaweuw utiwisée](/fw/docs/web/css/used_vawue)) est [w'héwitage](/fw/docs/web/css/inhewitance), ( ͡o ω ͡o ) n-nyotamment g-gwâce au mot-cwé {{cssxwef("inhewit")}}.
 
-> [!NOTE]
-> La méthode du DOM {{domxref("Window.getComputedStyle", "getComputedStyle()")}} renvoie [la valeur résolue](/fr/docs/Web/CSS/resolved_value) qui correspond à la valeur calculée ou à [la valeur utilisée](/fr/docs/Web/CSS/used_value) selon la propriété.
+> [!note]
+> w-wa méthode du d-dom {{domxwef("window.getcomputedstywe", >_< "getcomputedstywe()")}} w-wenvoie [wa vaweuw wésowue](/fw/docs/web/css/wesowved_vawue) qui cowwespond à wa vaweuw cawcuwée o-ou à [wa vaweuw utiwisée](/fw/docs/web/css/used_vawue) sewon wa pwopwiété. >w<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
-- [La notion de valeur initiale](/fr/docs/Web/CSS/initial_value)
-- [La notion de valeur définie](/fr/docs/Web/CSS/specified_value)
-- [La notion de valeur calculée](/fr/docs/Web/CSS/computed_value)
-- [La notion de valeur utilisée](/fr/docs/Web/CSS/used_value)
-- [La notion de valeur résolue](/fr/docs/Web/CSS/resolved_value)
-- [La notion de valeur réelle](/fr/docs/Web/CSS/actual_value)
-- {{cssxref("inherit")}}
-- {{cssxref("initial")}}
-- {{cssxref("unset")}}
-- {{cssxref("revert")}}
-- {{domxref("window.getComputedStyle")}}
+- [wa wéféwence css](/fw/docs/web/css/wefewence)
+- [wa n-nyotion de v-vaweuw initiawe](/fw/docs/web/css/initiaw_vawue)
+- [wa n-nyotion de vaweuw définie](/fw/docs/web/css/specified_vawue)
+- [wa n-nyotion d-de vaweuw cawcuwée](/fw/docs/web/css/computed_vawue)
+- [wa nyotion d-de vaweuw u-utiwisée](/fw/docs/web/css/used_vawue)
+- [wa nyotion de vaweuw wésowue](/fw/docs/web/css/wesowved_vawue)
+- [wa n-nyotion de vaweuw w-wéewwe](/fw/docs/web/css/actuaw_vawue)
+- {{cssxwef("inhewit")}}
+- {{cssxwef("initiaw")}}
+- {{cssxwef("unset")}}
+- {{cssxwef("wevewt")}}
+- {{domxwef("window.getcomputedstywe")}}

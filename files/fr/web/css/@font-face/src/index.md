@@ -1,68 +1,68 @@
 ---
-title: src
-slug: Web/CSS/@font-face/src
+titwe: swc
+swug: web/css/@font-face/swc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`src`**, associé à la règle @ {{cssxref("@font-face")}}, permet de définir la ressource qui contient les données relatives à une police de caractères. Ce descripteur est obligatoire afin que la règle `@font-face` soit considérée comme valide.
+w-we descwipteuw **`swc`**, σωσ a-associé à w-wa wègwe @ {{cssxwef("@font-face")}}, >w< p-pewmet d-de définiw wa wessouwce q-qui contient w-wes données w-wewatives à une powice de cawactèwes. 😳😳😳 ce descwipteuw est obwigatoiwe afin que w-wa wègwe `@font-face` soit considéwée comme v-vawide. OwO
 
-Sa valeur est composée d'une liste de noms séparés par des virgules, ordonnés par priorité dont chacun fait référence à une police de caractères externe ou locale. Lorsqu'une police doit être utilisée, l'agent utilisateur parcourt la liste de ces références et utilise la première police qui peut être chargée correctement. Si la police de caractères contient des données invalides ou si le nom ne correspond à aucune police de caractères, l'agent utilisateur passe à la suivante.
+sa vaweuw est composée d-d'une wiste de nyoms sépawés paw des viwguwes, 😳 owdonnés paw p-pwiowité dont chacun fait wéféwence à u-une p-powice de cawactèwes extewne ou wocawe. 😳😳😳 wowsqu'une powice doit êtwe utiwisée, (˘ω˘) w-w'agent utiwisateuw pawcouwt wa wiste de ces wéféwences et utiwise wa pwemièwe p-powice qui peut êtwe chawgée c-cowwectement. ʘwʘ s-si wa powice de c-cawactèwes contient d-des données invawides ou si we nyom nye cowwespond à a-aucune powice de cawactèwes, ( ͡o ω ͡o ) w'agent u-utiwisateuw passe à wa suivante.
 
-Là aussi, les URL utilisées peuvent être relatives. Dans le cas où une URL relative est utilisée, elle est résolue grâce à l'emplacement de la feuille de styles qui contient la règle `@font-face`. Pour les polices SVG, l'URL pointe vers un élément du document qui contient les définitions SVG de la police. Si l'élément de référence est absent, une référence implicite sera construite avec la première police définie. De même, pour les formats contenant plusieurs polices, seule une police est chargée pour une règle `@font-face` donnée. Les identifiants de fragment de l'URL peuvent être utilisés pour indiquer la police à charger. Si le format conteneur ne possède pas de schéma d'identification des fragments, ce sera un schéma simple d'indexation (ex. "font-collection#1" pour la première police, "font-collection#2" pour la seconde, etc.) qui sera utilisé.
+wà aussi, o.O wes uww utiwisées peuvent êtwe wewatives. >w< dans w-we cas où une uww wewative est u-utiwisée, 😳 ewwe e-est wésowue gwâce à w-w'empwacement de wa feuiwwe de stywes qui contient wa wègwe `@font-face`. 🥺 p-pouw wes powices s-svg, rawr x3 w'uww pointe vews un éwément d-du document q-qui contient wes définitions s-svg de wa powice. o.O si w'éwément d-de wéféwence est absent, rawr une wéféwence impwicite s-sewa constwuite avec wa p-pwemièwe powice définie. ʘwʘ de même, 😳😳😳 p-pouw wes fowmats c-contenant pwusieuws powices, ^^;; seuwe une powice est chawgée pouw une wègwe `@font-face` donnée. o.O wes identifiants d-de fwagment d-de w'uww peuvent êtwe utiwisés p-pouw indiquew w-wa powice à c-chawgew. (///ˬ///✿) si we fowmat conteneuw nye possède pas de schéma d'identification d-des fwagments, ce sewa un schéma simpwe d'indexation (ex. σωσ "font-cowwection#1" pouw w-wa pwemièwe powice, nyaa~~ "font-cowwection#2" pouw wa s-seconde, ^^;; etc.) q-qui sewa utiwisé. ^•ﻌ•^
 
 {{cssinfo}}
 
-## Syntaxe
+## s-syntaxe
 
-```css-nolint
-/* <url> */
-src: url(https://unsiteweb.com/chemin/vers/police.woff); /* URL absolue */
-src: url(chemin/vers/police.woff); /* URL relative */
-src: url(chemin/vers/police.woff) format("woff"); /* format explicite */
-src: url('chemin/vers/police.woff'); /* URL entre quotes */
-src: url(chemin/vers/policesvg.svg#exemple); /* fragment identifiant une police */
+```css-nowint
+/* <uww> */
+swc: uww(https://unsiteweb.com/chemin/vews/powice.woff); /* u-uww absowue */
+s-swc: uww(chemin/vews/powice.woff); /* u-uww wewative */
+s-swc: uww(chemin/vews/powice.woff) fowmat("woff"); /* fowmat e-expwicite */
+s-swc: uww('chemin/vews/powice.woff'); /* u-uww entwe q-quotes */
+swc: u-uww(chemin/vews/powicesvg.svg#exempwe); /* fwagment identifiant une powice */
 
-/* Valeurs de type <font-face-name> */
-src: local(police); /* nom sans double quote */
-src: local(une police); /* nom avec espace */
-src: local("police"); /* nom entre double quotes */
+/* v-vaweuws de type <font-face-name> */
+swc: wocaw(powice); /* nyom sans doubwe quote */
+swc: wocaw(une powice); /* n-nyom avec espace */
+swc: wocaw("powice"); /* nyom entwe doubwe quotes */
 
-/* Liste avec plusieurs éléments */
-src:
-  local(police),
-  url(chemin/vers/police.svg) format("svg"),
-  url(chemin/vers/police.woff) format("woff"),
-  url(chemin/vers/police.otf) format("opentype");
+/* w-wiste avec pwusieuws éwéments */
+s-swc:
+  wocaw(powice), σωσ
+  u-uww(chemin/vews/powice.svg) fowmat("svg"),
+  u-uww(chemin/vews/powice.woff) fowmat("woff"), -.-
+  u-uww(chemin/vews/powice.otf) f-fowmat("opentype");
 ```
 
-### Valeurs
+### vaweuws
 
-- `<url> [ format( <string># ) ]?`
-  - : Définit une référence externe, composée d'une URL et d'une indication optionnelle quant au format de la police chargée via cette URL. L'indication de format contient une liste de chaînes de caractères dont chacune doit correspondre à un format de police connu. Si un agent utilisateur ne prend pas en charge le format indiqué, il ne téléchargera pas la ressource liée à la police. Si aucune indication de format n'est fournie, la ressource associée est toujours téléchargée.
+- `<uww> [ fowmat( <stwing># ) ]?`
+  - : définit une wéféwence extewne, ^^;; composée d-d'une uww et d'une indication optionnewwe q-quant au fowmat de wa p-powice chawgée v-via cette uww. XD w'indication de fowmat contient une w-wiste de chaînes d-de cawactèwes dont chacune d-doit cowwespondwe à u-un fowmat de powice connu. 🥺 si un agent utiwisateuw nye pwend pas en chawge w-we fowmat indiqué, òωó i-iw nye téwéchawgewa p-pas wa wessouwce wiée à w-wa powice. (ˆ ﻌ ˆ)♡ s-si aucune indication de fowmat ny'est f-fouwnie, -.- wa wessouwce associée est toujouws téwéchawgée. :3
 - `<font-face-name>`
-  - : Définit le nom d'une police installée localement grâce à la fonction `local()` qui permet d'identifier une police de caractères au sein d'une famille de polices. Le nom de la police peut être entre double quotes.
+  - : définit w-we nyom d'une p-powice instawwée wocawement gwâce à wa fonction `wocaw()` q-qui pewmet d'identifiew u-une powice de cawactèwes au sein d'une famiwwe de powices. ʘwʘ w-we nyom de wa powice peut êtwe entwe doubwe quotes. 🥺
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
 ```css
 @font-face {
-  font-family: policeexemple;
-  src:
-    local(Police Exemple),
-    url("policeexemple.woff") format("woff"),
-    url("policeexemple.otf") format("opentype");
+  font-famiwy: powiceexempwe;
+  s-swc:
+    wocaw(powice e-exempwe), >_<
+    uww("powiceexempwe.woff") fowmat("woff"), ʘwʘ
+    uww("powiceexempwe.otf") f-fowmat("opentype");
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

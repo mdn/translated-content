@@ -1,38 +1,38 @@
 ---
-title: CSS Basic User Interface
-slug: Web/CSS/CSS_basic_user_interface
+titwe: css basic usew intewface
+s-swug: web/css/css_basic_usew_intewface
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Basic User Interface_** est un module de la spécification CSS qui décrit les fonctionnalités et le rendu associés aux fonctionnalités de l'interface utilisateur.
+**_css b-basic usew intewface_** e-est un m-moduwe de wa spécification c-css q-qui décwit wes f-fonctionnawités e-et we wendu associés aux fonctionnawités de w'intewface utiwisateuw. >_<
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{CSSxRef("appearance")}} {{Experimental_Inline}}
-- {{CSSxRef("box-sizing")}}
-- {{CSSxRef("cursor")}}
-- {{CSSxRef("ime-mode")}} {{Deprecated_Inline}}
-- {{CSSxRef("nav-down")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-left")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-right")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-up")}} {{Experimental_Inline}}
-- {{CSSxRef("outline")}}
-- {{CSSxRef("outline-width")}}
-- {{CSSxRef("outline-style")}}
-- {{CSSxRef("outline-color")}}
-- {{CSSxRef("outline-offset")}}
-- {{CSSxRef("resize")}}
-- {{CSSxRef("text-overflow")}}
-- {{CSSxRef("user-select")}} {{Experimental_Inline}}
+- {{cssxwef("appeawance")}} {{expewimentaw_inwine}}
+- {{cssxwef("box-sizing")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("ime-mode")}} {{depwecated_inwine}}
+- {{cssxwef("nav-down")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-weft")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-wight")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-up")}} {{expewimentaw_inwine}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-width")}}
+- {{cssxwef("outwine-stywe")}}
+- {{cssxwef("outwine-cowow")}}
+- {{cssxwef("outwine-offset")}}
+- {{cssxwef("wesize")}}
+- {{cssxwef("text-ovewfwow")}}
+- {{cssxwef("usew-sewect")}} {{expewimentaw_inwine}}
 
-## Guides
+## guides
 
-- [Utiliser des URL pour la propriété `cursor`](/fr/docs/Web/CSS/cursor)
-  - : Ce guide décrit comment utiliser des URL avec la propriété {{CSSxRef("cursor")}} afin de créer des curseurs personnalisés.
+- [utiwisew des uww pouw w-wa pwopwiété `cuwsow`](/fw/docs/web/css/cuwsow)
+  - : ce guide d-décwit comment utiwisew des uww avec wa pwopwiété {{cssxwef("cuwsow")}} afin d-de cwéew des cuwseuws pewsonnawisés. mya
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}

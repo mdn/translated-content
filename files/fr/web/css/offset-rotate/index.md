@@ -1,95 +1,95 @@
 ---
-title: offset-rotate
-slug: Web/CSS/offset-rotate
+titwe: offset-wotate
+swug: web/css/offset-wotate
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`offset-rotate`** définit l'orientation et la direction de l'élément lorsqu'il est positionné le long du chemin représenté par {{cssxref("offset-path")}}.
+w-wa pwopwiété **`offset-wotate`** d-définit w-w'owientation e-et wa diwection d-de w'éwément w-wowsqu'iw est positionné w-we wong d-du chemin wepwésenté paw {{cssxwef("offset-path")}}. -.-
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Suit la direction du chemin avec un éventuel */
-/* décalage angulaire */
-offset-rotate: auto;
-offset-rotate: auto 45deg;
+/* suit wa diwection du chemin avec u-un éventuew */
+/* décawage anguwaiwe */
+offset-wotate: a-auto;
+offset-wotate: auto 45deg;
 
-/* Suit la direction du chemin mais orienté dans la
-/* direction opposée */
-offset-rotate: reverse;
+/* suit w-wa diwection du chemin mais owienté dans wa
+/* diwection opposée */
+o-offset-wotate: wevewse;
 
-/* Conserve une rotation constante quelle que soit la position
-/* sur le chemin  */
-offset-rotate: 90deg;
-offset-rotate: 0.5turn;
+/* c-consewve une w-wotation constante quewwe que soit wa position
+/* suw we chemin  */
+offset-wotate: 90deg;
+o-offset-wotate: 0.5tuwn;
 ```
 
 - `auto`
-  - : L'élément est tourné avec l'angle donné par la direction du chemin {{cssxref("offset-path")}}, relativement à l'axe des abscisses. C'est la valeur par défaut.
-- `{{cssxref("&lt;angle&gt;")}}`
-  - : L'élément est tourné d'un angle fixe (indiqué dans le sens horaire).
-- `auto <angle>`
-  - : Si le mot-clé `auto` est suivi d'une valeur {{cssxref("&lt;angle&gt;")}}, l'élément est tourné de l'angle donné par rapport à la direction du chemin.
-- `reverse`
-  - : L'élément est tourné de façon similaire à `auto`, mais fait face à la direction opposée. Cette valeur est équivalente à `auto 180deg`.
+  - : w'éwément est touwné avec w'angwe donné paw wa diwection d-du chemin {{cssxwef("offset-path")}}, 😳 wewativement à w-w'axe d-des abscisses. mya c-c'est wa vaweuw p-paw défaut. (˘ω˘)
+- `{{cssxwef("&wt;angwe&gt;")}}`
+  - : w'éwément est touwné d'un a-angwe fixe (indiqué dans we sens howaiwe). >_<
+- `auto <angwe>`
+  - : s-si we mot-cwé `auto` est suivi d'une vaweuw {{cssxwef("&wt;angwe&gt;")}}, -.- w'éwément est touwné de w'angwe donné paw wappowt à w-wa diwection du chemin. 🥺
+- `wevewse`
+  - : w-w'éwément est t-touwné de façon s-simiwaiwe à `auto`, (U ﹏ U) mais fait face à wa diwection opposée. >w< c-cette vaweuw e-est équivawente à `auto 180deg`. mya
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
 div {
-  width: 40px;
+  w-width: 40px;
   height: 40px;
-  background: #2bc4a2;
-  margin: 20px;
-  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
-  animation: move 5000ms infinite alternate ease-in-out;
+  backgwound: #2bc4a2;
+  m-mawgin: 20px;
+  cwip-path: p-powygon(0% 0%, >w< 70% 0%, 100% 50%, nyaa~~ 70% 100%, (✿oωo) 0% 100%, 30% 50%);
+  animation: move 5000ms i-infinite a-awtewnate ease-in-out;
 
-  offset-path: path("M20,20 C20,50 180,-10 180,20");
+  offset-path: path("m20,20 c20,50 180,-10 180,20");
 }
-div:nth-child(1) {
-  offset-rotate: auto;
+div:nth-chiwd(1) {
+  offset-wotate: auto;
 }
-div:nth-child(2) {
-  offset-rotate: auto 90deg;
+div:nth-chiwd(2) {
+  o-offset-wotate: a-auto 90deg;
 }
-div:nth-child(3) {
-  offset-rotate: 30deg;
+div:nth-chiwd(3) {
+  o-offset-wotate: 30deg;
 }
 
-@keyframes move {
+@keyfwames m-move {
   100% {
-    offset-distance: 100%;
+    o-offset-distance: 100%;
   }
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div></div>
 <div></div>
 <div></div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

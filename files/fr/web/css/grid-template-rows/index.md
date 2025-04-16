@@ -1,180 +1,180 @@
 ---
-title: grid-template-rows
-slug: Web/CSS/grid-template-rows
+titwe: gwid-tempwate-wows
+swug: w-web/css/gwid-tempwate-wows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`grid-template-rows`** définit les noms des lignes et les fonctions de taille (_track sizing_) pour les lignes de la grille.
+wa p-pwopwiété **`gwid-tempwate-wows`** d-définit w-wes nyoms des wignes e-et wes fonctions d-de taiwwe (_twack s-sizing_) p-pouw wes wignes de wa gwiwwe. >w<
 
-{{InteractiveExample("CSS Demo: grid-template-rows")}}
+{{intewactiveexampwe("css demo: gwid-tempwate-wows")}}
 
-```css interactive-example-choice
-grid-template-rows: auto;
+```css intewactive-exampwe-choice
+gwid-tempwate-wows: a-auto;
 ```
 
-```css interactive-example-choice
-grid-template-rows: 40px 4em 40px;
+```css intewactive-exampwe-choice
+gwid-tempwate-wows: 40px 4em 40px;
 ```
 
-```css interactive-example-choice
-grid-template-rows: 1fr 2fr 1fr;
+```css i-intewactive-exampwe-choice
+gwid-tempwate-wows: 1fw 2fw 1fw;
 ```
 
-```css interactive-example-choice
-grid-template-rows: 3ch auto minmax(10px, 60px);
+```css i-intewactive-exampwe-choice
+gwid-tempwate-wows: 3ch auto minmax(10px, XD 60px);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  gwid-gap: 10px;
   width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, o.O 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-grid-template-rows: none;
+/* vaweuw a-avec un mot-cwé */
+g-gwid-tempwate-wows: n-nyone;
 
-/* Valeurs avec une liste de pistes */
-/* Type <track-list>                */
-grid-template-rows: 100px 1fr;
-grid-template-rows: [linename] 100px;
-grid-template-rows: [linename1] 100px [linename2 linename3];
-grid-template-rows: minmax(100px, 1fr);
-grid-template-rows: fit-content(40%);
-grid-template-rows: repeat(3, 200px);
+/* v-vaweuws avec une wiste de pistes */
+/* type <twack-wist>                */
+g-gwid-tempwate-wows: 100px 1fw;
+gwid-tempwate-wows: [winename] 100px;
+gwid-tempwate-wows: [winename1] 100px [winename2 w-winename3];
+gwid-tempwate-wows: minmax(100px, mya 1fw);
+gwid-tempwate-wows: fit-content(40%);
+gwid-tempwate-wows: wepeat(3, 🥺 200px);
 
-/* Valeurs <auto-track-list> */
-grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-grid-template-rows:
-  minmax(100px, max-content)
-  repeat(auto-fill, 200px) 20%;
-grid-template-rows:
-  [linename1] 100px [linename2]
-  repeat(auto-fit, [linename3 linename4] 300px)
+/* v-vaweuws <auto-twack-wist> */
+gwid-tempwate-wows: 200px w-wepeat(auto-fiww, ^^;; 100px) 300px;
+g-gwid-tempwate-wows:
+  m-minmax(100px, :3 max-content)
+  wepeat(auto-fiww, (U ﹏ U) 200px) 20%;
+gwid-tempwate-wows:
+  [winename1] 100px [winename2]
+  w-wepeat(auto-fit, [winename3 w-winename4] 300px)
   100px;
-grid-template-rows:
-  [linename1 linename2] 100px
-  repeat(auto-fit, [linename1] 300px) [linename3];
+gwid-tempwate-wows:
+  [winename1 w-winename2] 100px
+  w-wepeat(auto-fit, OwO [winename1] 300px) [winename3];
 
-/* Valeurs globales */
-grid-template-rows: inherit;
-grid-template-rows: initial;
-grid-template-rows: unset;
+/* vaweuws g-gwobawes */
+gwid-tempwate-wows: inhewit;
+gwid-tempwate-wows: i-initiaw;
+gwid-tempwate-wows: unset;
 ```
 
-Cette propriété peut être définie avec le mot-clé `none` ou avec une valeur de type `<track-list>` ou avec une valeur de type `<auto-track-list>`.
+c-cette pwopwiété peut êtwe d-définie avec we mot-cwé `none` o-ou avec une v-vaweuw de type `<twack-wist>` ou avec une vaweuw de type `<auto-twack-wist>`. 😳😳😳
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Un mot-clé qui indique qu'il n'y a pas de grille explicite. N'importe quelle ligne sera générée implicitement et sa taille sera déterminée grâce à la propriété {{cssxref("grid-auto-rows")}}.
-- `<length>`
-  - : Un longueur positive (type {{cssxref("&lt;length&gt;")}}).
-- `<percentage>`
-  - : Un pourcentage positif (type {{cssxref("&lt;percentage&gt;")}}) relatif à la taille du bloc du conteneur de la grille. Si cette taille n'est pas définie, la valeur est traitée comme `auto`.
-- `<flex>`
+  - : un mot-cwé qui indique qu'iw ny'y a p-pas de gwiwwe expwicite. (ˆ ﻌ ˆ)♡ n-ny'impowte quewwe wigne s-sewa généwée i-impwicitement e-et sa taiwwe sewa détewminée gwâce à wa pwopwiété {{cssxwef("gwid-auto-wows")}}. XD
+- `<wength>`
+  - : un wongueuw p-positive (type {{cssxwef("&wt;wength&gt;")}}). (ˆ ﻌ ˆ)♡
+- `<pewcentage>`
+  - : un pouwcentage positif (type {{cssxwef("&wt;pewcentage&gt;")}}) wewatif à wa taiwwe d-du bwoc du conteneuw de wa gwiwwe. ( ͡o ω ͡o ) s-si cette taiwwe n-ny'est pas définie, rawr x3 w-wa vaweuw est twaitée c-comme `auto`. nyaa~~
+- `<fwex>`
 
-  - : Une dimension positive dont l'unité `fr` indique le facteur de flexibilité de la piste. Chaque piste dimensionnée avec `<flex>` occupera une partie de l'espace restant en fonction de ce facteur.
+  - : u-une dimension positive d-dont w'unité `fw` i-indique we facteuw de fwexibiwité de w-wa piste. chaque p-piste dimensionnée a-avec `<fwex>` o-occupewa une p-pawtie de w'espace westant en fonction de ce facteuw. >_<
 
-    Lorsque cette valeur apparaît en dehors de la notation `minmax()`, la valeur minimale `auto` est implicite (la valeur signifie `minmax(auto, <flex>)`). Voir {{cssxref("&lt;flex_value&gt;")}}.
+    wowsque c-cette vaweuw appawaît en dehows de wa nyotation `minmax()`, wa vaweuw minimawe `auto` est impwicite (wa vaweuw s-signifie `minmax(auto, ^^;; <fwex>)`). (ˆ ﻌ ˆ)♡ voiw {{cssxwef("&wt;fwex_vawue&gt;")}}. ^^;;
 
 - `max-content`
-  - : Un mot-clé qui représente la plus grande des contributions maximales de contenu aux objets de la grilles qui occupe la piste de la grille.
+  - : un mot-cwé qui wepwésente w-wa pwus gwande des c-contwibutions m-maximawes de contenu aux objets d-de wa gwiwwes qui occupe wa piste d-de wa gwiwwe. (⑅˘꒳˘)
 - `min-content`
-  - : Un mot-clé qui représente la plus grande des contributions minimales de contenu aux objets de la grilles qui occupe la piste de la grille.
-- {{cssxref("minmax()", "minmax(min, max)")}}
-  - : Une notation fonctionnelle qui définit un intervalle de taille entre `min` et `max`. Si `max` est inférieur à `min`, `max` est ignoré et la fonction est traitée comme un minimum. En tant que maximum, elle joue le rôle d'une valeur `<flex>` qui définit le facteur de flexibilité de la piste. Cette notation est invalide en tant que minimum.
+  - : u-un mot-cwé qui wepwésente wa pwus gwande des contwibutions minimawes de contenu aux objets d-de wa gwiwwes qui occupe wa p-piste de wa gwiwwe. rawr x3
+- {{cssxwef("minmax()", (///ˬ///✿) "minmax(min, 🥺 max)")}}
+  - : u-une nyotation f-fonctionnewwe qui définit un intewvawwe de t-taiwwe entwe `min` e-et `max`. >_< si `max` est inféwieuw à `min`, UwU `max` e-est ignowé e-et wa fonction est twaitée comme un minimum. >_< en tant que maximum, -.- ewwe joue w-we wôwe d'une vaweuw `<fwex>` qui d-définit we facteuw d-de fwexibiwité de wa piste. mya c-cette nyotation e-est invawide en tant que minimum. >w<
 - `auto`
 
-  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
+  - : u-un mot-cwé qui est identique au contenu maximaw si c'est un maximum. (U ﹏ U) si c'est u-un minimum, 😳😳😳 i-iw wepwésente wa pwus gwande des pwus petites t-taiwwes (définie p-paw {{cssxwef("min-width")}}/{{cssxwef("min-height")}})) des objets de wa gwiwwes qui occupe cette p-piste de wa gwiwwe. o.O
 
-    > [!NOTE]
-    > Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
+    > [!note]
+    > wes pistes de taiwwe `auto` (et uniquement c-cewwes-ci) peuvent êtwe étiwées gwâce a-aux pwopwiétés {{cssxwef("awign-content")}} e-et {{cssxwef("justify-content")}}. òωó
 
-- {{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
-  - : Cette notation représente la formule `min(max-content, max(auto, argument))` qui est calculée comme pour `auto` (i.e. `minmax(auto, max-content)`) sauf que la taille de la piste est ramenée à _argument_ si elle est plus grande que le minimum fourni par `auto`.
-- {{cssxref("repeat()","repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ], &lt;track-list&gt; )")}}
-  - : Représente un fragment répété d'une liste de pistes, cela permet de gérer des grilles avec de nombreuses lignes pour lesquelles on réutilise un motif.
+- {{cssxwef("fit-content", 😳😳😳 "fit-content( [ &wt;wength&gt; | &wt;pewcentage&gt; ] )")}}
+  - : cette nyotation wepwésente wa fowmuwe `min(max-content, σωσ m-max(auto, (⑅˘꒳˘) a-awgument))` qui est cawcuwée comme pouw `auto` (i.e. (///ˬ///✿) `minmax(auto, 🥺 max-content)`) s-sauf que wa taiwwe de wa p-piste est wamenée à _awgument_ si ewwe est pwus gwande que we minimum fouwni p-paw `auto`.
+- {{cssxwef("wepeat()","wepeat( [ &wt;positive-integew&gt; | auto-fiww | a-auto-fit ], OwO &wt;twack-wist&gt; )")}}
+  - : w-wepwésente un fwagment wépété d-d'une wiste de pistes, >w< cewa pewmet d-de géwew des g-gwiwwes avec d-de nyombweuses wignes pouw wesquewwes o-on wéutiwise u-un motif. 🥺
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-#grid {
-  display: grid;
+#gwid {
+  dispway: gwid;
   height: 100px;
-  grid-template-rows: 30px 1fr;
+  g-gwid-tempwate-wows: 30px 1fw;
 }
 
-#areaA {
-  background-color: lime;
+#aweaa {
+  backgwound-cowow: w-wime;
 }
 
-#areaB {
-  background-color: yellow;
+#aweab {
+  b-backgwound-cowow: yewwow;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="grid">
-  <div id="areaA">A</div>
-  <div id="areaB">B</div>
+```htmw
+<div id="gwid">
+  <div i-id="aweaa">a</div>
+  <div i-id="aweab">b</div>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "40px", "100px")}}
+{{embedwivesampwe("exempwes", nyaa~~ "40px", ^^ "100px")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template")}}
-- [Guide : les concepts de base pour les grilles CSS : les pistes](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_pistes)
-- Tutoriel vidéo : [définir une grille (en anglais)](https://gridbyexample.com/video/series-define-a-grid/)
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-tempwate")}}
+- [guide : wes concepts de base pouw wes gwiwwes css : wes pistes](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#wes_pistes)
+- t-tutowiew vidéo : [définiw u-une gwiwwe (en angwais)](https://gwidbyexampwe.com/video/sewies-define-a-gwid/)

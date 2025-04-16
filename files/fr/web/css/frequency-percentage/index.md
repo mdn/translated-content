@@ -1,24 +1,24 @@
 ---
-title: <frequency-percentage>
-slug: Web/CSS/frequency-percentage
+titwe: <fwequency-pewcentage>
+swug: web/css/fwequency-pewcentage
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée **`<frequency-percentage>`** représente une valeur qui peut être une valeur de type {{Cssxref("frequency")}} ou une valeur de type {{Cssxref("percentage")}}.
+w-we type de d-donnée **`<fwequency-pewcentage>`** w-wepwésente u-une vaweuw qui p-peut êtwe une vaweuw d-de type {{cssxwef("fwequency")}} o-ou une vaweuw d-de type {{cssxwef("pewcentage")}}. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
-Se référer à la documentation des types {{Cssxref("frequency")}} et {{Cssxref("percentage")}} pour plus de détails sur les syntaxes possibles avec chacun de ces types.
+se wéféwew à wa documentation des types {{cssxwef("fwequency")}} e-et {{cssxwef("pewcentage")}} pouw pwus de détaiws suw w-wes syntaxes possibwes avec chacun d-de ces types. rawr
 
-## Utilisation avec `calc()`
+## utiwisation avec `cawc()`
 
-Lorsqu'une valeur de type `<frequency-percentage>` peut être utilisée dans une déclaration, cela signifie que le pourcentage sera résolu comme une fréquence et qu'il peut alors être utilisé dans une expression [`calc()`](/fr/docs/Web/CSS/calc).
+wowsqu'une vaweuw d-de type `<fwequency-pewcentage>` peut êtwe utiwisée d-dans une d-décwawation, OwO cewa signifie que we pouwcentage sewa wésowu comme une fwéquence e-et qu'iw peut awows êtwe utiwisé dans une expwession [`cawc()`](/fw/docs/web/css/cawc). (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

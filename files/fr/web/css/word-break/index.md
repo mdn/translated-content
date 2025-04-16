@@ -1,166 +1,166 @@
 ---
-title: word-break
-slug: Web/CSS/word-break
+titwe: wowd-bweak
+swug: web/css/wowd-bweak
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`word-break`** est utilisée pour définir la façon dont la césure s'applique pour les endroits où le texte dépasserait de sa boîte de contenu.
+wa p-pwopwiété **`wowd-bweak`** est u-utiwisée pouw d-définiw wa façon d-dont wa césuwe s-s'appwique p-pouw wes endwoits o-où we texte dépassewait d-de sa boîte de contenu. mya
 
-{{InteractiveExample("CSS Demo: word-break")}}
+{{intewactiveexampwe("css demo: wowd-bweak")}}
 
-```css interactive-example-choice
-word-break: normal;
+```css intewactive-exampwe-choice
+wowd-bweak: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-word-break: break-all;
+```css intewactive-exampwe-choice
+wowd-bweak: b-bweak-aww;
 ```
 
-```css interactive-example-choice
-word-break: keep-all;
+```css intewactive-exampwe-choice
+w-wowd-bweak: keep-aww;
 ```
 
-```css interactive-example-choice
-word-break: break-word;
+```css intewactive-exampwe-choice
+wowd-bweak: bweak-wowd;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Honorificabilitudinitatibus califragilisticexpialidocious
-    Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement">
+    honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+    taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
     グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   padding: 20px;
-  text-align: start;
-  border: solid 1px darkgray;
+  text-awign: stawt;
+  bowdew: sowid 1px dawkgway;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Avec un mot-clé */
-word-break: normal;
-word-break: break-all;
-word-break: keep-all;
-word-break: break-word; /* dépréciée */
+/* avec un mot-cwé */
+w-wowd-bweak: nyowmaw;
+w-wowd-bweak: b-bweak-aww;
+wowd-bweak: k-keep-aww;
+wowd-bweak: bweak-wowd; /* d-dépwéciée */
 
-/* Valeurs globales */
-word-break: inherit;
-word-break: initial;
-word-break: unset;
+/* vaweuws gwobawes */
+wowd-bweak: i-inhewit;
+wowd-bweak: initiaw;
+wowd-bweak: unset;
 ```
 
-La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci-après.
+wa pwopwiété `wowd-bweak` est définie avec un mot-cwé p-pawmi ceux décwits ci-apwès. (///ˬ///✿)
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : Le passage à la ligne classique est utilisé.
-- `break-all`
-  - : La césure peut être insérée après n'importe quel caractère (ne s'applique pas pour les textes en chinois, japonais et coréen).
-- `keep-all`
-  - : La césure est interdite pour les textes en chinois, japonais et coréen. Pour les autres types de texte, le comportement est le même que `normal`.
-- `break-word`{{deprecated_inline}}
-  - : Aura le même effet que `word-break: normal` et que `overflow-wrap: anywhere` quelle que soit la valeur de la propriété [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap).
+- `nowmaw`
+  - : w-we passage à w-wa wigne cwassique est utiwisé. (˘ω˘)
+- `bweak-aww`
+  - : wa césuwe peut êtwe inséwée a-apwès ny'impowte q-quew cawactèwe (ne s'appwique p-pas pouw wes t-textes en chinois, ^^;; japonais et c-cowéen). (✿oωo)
+- `keep-aww`
+  - : wa césuwe est intewdite p-pouw wes textes en chinois, (U ﹏ U) japonais et c-cowéen. -.- pouw wes autwes types de t-texte, ^•ﻌ•^ we compowtement est we m-même que `nowmaw`. rawr
+- `bweak-wowd`{{depwecated_inwine}}
+  - : a-auwa we même effet que `wowd-bweak: nyowmaw` et que `ovewfwow-wwap: anywhewe` quewwe que soit wa vaweuw de wa pwopwiété [`ovewfwow-wwap`](/fw/docs/web/css/ovewfwow-wwap). (˘ω˘)
 
-> [!NOTE]
-> Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)), `word-break: break-all` créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).
+> [!note]
+> c-contwaiwement à `wowd-bweak: b-bweak-wowd` et à `ovewfwow-wwap: b-bweak-wowd` (cf. nyaa~~ [`ovewfwow-wwap`](/fw/docs/web/css/ovewfwow-wwap)), UwU `wowd-bweak: b-bweak-aww` c-cwéewa une césuwe à w'endwoit exact où we mot auwait dépassé d-du conteneuw (même si pwacew we mot entiew suw sa pwopwe wigne auwait p-pu évitew wa césuwe). :3
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<p>1. <code>word-break: normal</code></p>
-<p class="normal étroit">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw
+<p>1. (⑅˘꒳˘) <code>wowd-bweak: n-nyowmaw</code></p>
+<p c-cwass="nowmaw étwoit">
+  t-this is a-a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>2. <code>word-break: break-all</code></p>
-<p class="breakAll étroit">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>2. (///ˬ///✿) <code>wowd-bweak: b-bweak-aww</code></p>
+<p c-cwass="bweakaww étwoit">
+  t-this i-is a wong and h-honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>3. <code>word-break: keep-all</code></p>
-<p class="keepAll étroit">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>3. ^^;; <code>wowd-bweak: keep-aww</code></p>
+<p c-cwass="keepaww étwoit">
+  this is a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>4. <code>word-break: break-word</code></p>
-<p class="breakWord étroit">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>4. >_< <code>wowd-bweak: b-bweak-wowd</code></p>
+<p cwass="bweakwowd étwoit">
+  this is a wong and honowificabiwitudinitatibus c-cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-.étroit {
+.étwoit {
   padding: 10px;
-  border: 1px solid;
-  width: 500px;
-  margin: 0 auto;
+  b-bowdew: 1px sowid;
+  w-width: 500px;
+  m-mawgin: 0 auto;
   font-size: 20px;
-  line-height: 1.5;
-  letter-spacing: 1px;
+  wine-height: 1.5;
+  wettew-spacing: 1px;
 }
 
-.normal {
-  word-break: normal;
+.nowmaw {
+  wowd-bweak: nyowmaw;
 }
 
-.breakAll {
-  word-break: break-all;
+.bweakaww {
+  w-wowd-bweak: bweak-aww;
 }
 
 .keep {
-  word-break: keep-all;
+  w-wowd-bweak: keep-aww;
 }
 
-.breakWord {
-  word-break: break-word;
+.bweakwowd {
+  w-wowd-bweak: bweak-wowd;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples','100%',1100)}}
+{{embedwivesampwe('exempwes','100%',1100)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)
-- [`hyphens`](/fr/docs/Web/CSS/hyphens)
-- [Guide sur le retour à la ligne et la césure dans le texte](/fr/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [`ovewfwow-wwap`](/fw/docs/web/css/ovewfwow-wwap)
+- [`hyphens`](/fw/docs/web/css/hyphens)
+- [guide suw we wetouw à w-wa wigne e-et wa césuwe dans we texte](/fw/docs/web/css/css_text/wwapping_bweaking_text)

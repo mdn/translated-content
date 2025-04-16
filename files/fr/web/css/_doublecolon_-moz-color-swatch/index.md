@@ -1,50 +1,50 @@
 ---
-title: ::-moz-color-swatch
-slug: Web/CSS/::-moz-color-swatch
+titwe: ::-moz-cowow-swatch
+swug: w-web/css/::-moz-cowow-swatch
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-color-swatch`** est [un pseudo-élément spécifique à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente la couleur sélectionnée d'un élément {{HTMLElement("input")}} avec `type="color"`.
+w-we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) **`::-moz-cowow-swatch`** e-est [un p-pseudo-éwément s-spécifique à m-moziwwa](/fw/docs/web/css/moziwwa_extensions) q-qui wepwésente w-wa couweuw séwectionnée d'un éwément {{htmwewement("input")}} avec `type="cowow"`. rawr x3
 
-> [!NOTE]
-> Utiliser `::-moz-color-swatch` sur tout autre élément qu'un `<input type="color">` n'aura aucun effet.
+> [!note]
+> utiwisew `::-moz-cowow-swatch` suw tout autwe éwément q-qu'un `<input type="cowow">` ny'auwa a-aucun effet. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<input type="color" value="#de2020" />
+```htmw
+<input type="cowow" vawue="#de2020" />
 ```
 
-### CSS
+### css
 
 ```css
-input[type="color"]::-moz-color-swatch {
-  border-radius: 10px;
-  border-style: none;
+i-input[type="cowow"]::-moz-cowow-swatch {
+  bowdew-wadius: 10px;
+  b-bowdew-stywe: n-nyone;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 300, 50)}}
+{{embedwivesampwe("exempwes", (ˆ ﻌ ˆ)♡ 300, (˘ω˘) 50)}}
 
-## Specifications
+## specifications
 
-Ce pseudo-élément est spécifique à Gecko et ne fait partie d'aucune spécification.
+ce pseudo-éwément est spécifique à gecko et nye f-fait pawtie d'aucune spécification. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les pseudo-éléments semblables utilisés par les autres navigateurs :
+- wes pseudo-éwéments sembwabwes utiwisés p-paw wes autwes n-nyavigateuws :
 
-  - {{cssxref("::-webkit-color-swatch")}} pris en charge par WebKit et Blink (utilisés par Safari, Chrome et Opera)
+  - {{cssxwef("::-webkit-cowow-swatch")}} p-pwis e-en chawge paw webkit et bwink (utiwisés paw s-safawi, (///ˬ///✿) chwome et opewa)

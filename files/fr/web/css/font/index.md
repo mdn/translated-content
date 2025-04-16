@@ -1,275 +1,275 @@
 ---
-title: font
-slug: Web/CSS/font
+titwe: font
+swug: web/css/font
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font`** est :
+w-wa pwopwiété **`font`** e-est :
 
-- une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}
-- ou une propriété permettant d'utiliser une police système pour la police de caractères d'un élément grâce à certains mots-clés spécifiques.
+- u-une pwopwiété w-waccouwcie p-pewmettant de définiw w-wapidement {{cssxwef("font-stywe")}}, ʘwʘ {{cssxwef("font-vawiant")}}, ( ͡o ω ͡o ) {{cssxwef("font-weight")}}, mya {{cssxwef("font-stwetch")}}, {{cssxwef("font-size")}}, o.O {{cssxwef("wine-height")}} e-et {{cssxwef("font-famiwy")}}
+- o-ou une pwopwiété pewmettant d'utiwisew une powice système pouw wa powice d-de cawactèwes d'un éwément gwâce à cewtains m-mots-cwés spécifiques. (✿oωo)
 
-{{InteractiveExample("CSS Demo: font")}}
+{{intewactiveexampwe("css d-demo: font")}}
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 font:
-  1.2rem "Fira Sans",
-  sans-serif;
+  1.2wem "fiwa s-sans",
+  sans-sewif;
 ```
 
-```css interactive-example-choice
-font:
-  italic 1.2rem "Fira Sans",
-  serif;
+```css intewactive-exampwe-choice
+f-font:
+  i-itawic 1.2wem "fiwa sans", :3
+  sewif;
 ```
 
-```css interactive-example-choice
-font: italic small-caps bold 16px/2 cursive;
+```css intewactive-exampwe-choice
+font: itawic smow-caps b-bowd 16px/2 cuwsive;
 ```
 
-```css interactive-example-choice
-font: small-caps bold 24px/1 sans-serif;
+```css intewactive-exampwe-choice
+font: smow-caps bowd 24px/1 sans-sewif;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 font: caption;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    w-wondon. michaewmas tewm watewy ovew, 😳 and the wowd c-chancewwow sitting in
+    wincown's inn haww. (U ﹏ U) i-impwacabwe nyovembew weathew. mya as much mud in the stweets
+    as if the watews had but nyewwy wetiwed f-fwom the face of the eawth, (U ᵕ U❁) a-and it
+    wouwd n-nyot be wondewfuw t-to meet a megawosauwus, fowty feet wong ow so, :3
+    waddwing w-wike an ewephantine w-wizawd up howbown hiww. mya
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  f-font-famiwy: "fiwa sans";
+  swc:
+    w-wocaw("fiwasans-weguwaw"), OwO
+    uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") f-fowmat("woff2");
+  font-weight: nyowmaw;
+  font-stywe: n-nyowmaw;
 }
 
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Italic"),
-    url("/shared-assets/fonts/FiraSans-Italic.woff2") format("woff2");
-  font-weight: normal;
-  font-style: italic;
+  font-famiwy: "fiwa s-sans";
+  swc:
+    wocaw("fiwasans-itawic"), (ˆ ﻌ ˆ)♡
+    u-uww("/shawed-assets/fonts/fiwasans-itawic.woff2") f-fowmat("woff2");
+  font-weight: nyowmaw;
+  font-stywe: itawic;
 }
 
 section {
-  margin-top: 10px;
+  mawgin-top: 10px;
   font-size: 1.1em;
 }
 ```
 
-Comme pour les autres propriétés CSS, les valeurs qui ne sont pas définies avec la propriété raccourcie sont définies avec leur valeur initiale, ce qui peut surcharger les valeurs définies précédemment avec les propriétés « détaillées ». Bien qu'elles ne puissent pas directement être paramétrées avec `font`, les propriétés détaillées, {{cssxref("font-size-adjust")}}, et {{cssxref("font-kerning")}} sont également réinitialisées avec leurs valeurs initiales.
+c-comme pouw w-wes autwes pwopwiétés css, ʘwʘ wes v-vaweuws qui nye s-sont pas définies a-avec wa pwopwiété waccouwcie sont définies avec weuw vaweuw i-initiawe, o.O ce qui peut suwchawgew wes vaweuws définies pwécédemment avec wes p-pwopwiétés « détaiwwées ». UwU b-bien qu'ewwes n-nye puissent pas d-diwectement êtwe pawamétwées a-avec `font`, rawr x3 w-wes pwopwiétés d-détaiwwées, 🥺 {{cssxwef("font-size-adjust")}}, :3 e-et {{cssxwef("font-kewning")}} sont égawement wéinitiawisées avec weuws vaweuws initiawes. (ꈍᴗꈍ)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* size | family */
+/* s-size | famiwy */
+f-font:
+  2em "open s-sans", 🥺
+  s-sans-sewif;
+
+/* stywe | size | famiwy */
 font:
-  2em "Open Sans",
-  sans-serif;
+  itawic 2em "open s-sans", (✿oωo)
+  sans-sewif;
 
-/* style | size | family */
-font:
-  italic 2em "Open Sans",
-  sans-serif;
+/* stywe | vawiant | weight | size/wine-height | famiwy */
+font: itawic s-smow-caps bowdew 16px/3 cuwsive;
 
-/* style | variant | weight | size/line-height | family */
-font: italic small-caps bolder 16px/3 cursive;
+/* stywe | vawiant | weight | s-stwetch | size/wine-height | f-famiwy */
+f-font: itawic smow-caps bowdew c-condensed 16px/3 cuwsive;
 
-/* style | variant | weight | stretch | size/line-height | family */
-font: italic small-caps bolder condensed 16px/3 cursive;
-
-/* Mots-clés indiquant la police à utiliser */
-/* pour les boîtes de dialogue système      */
+/* m-mots-cwés indiquant w-wa powice à utiwisew */
+/* pouw wes boîtes de diawogue système      */
 font: message-box;
-font: icon;
+f-font: icon;
 
-/* Valeurs globales */
-font: inherit;
-font: initial;
-font: unset;
+/* vaweuws gwobawes */
+f-font: inhewit;
+font: initiaw;
+f-font: unset;
 ```
 
-La propriété `font` peut être définie avec un seul mot-clé (qui sélectionnera la police système à utiliser) ou comme propriété raccourcie pour paramétrer les différentes propriétés relatives aux polices.
+w-wa pwopwiété `font` peut êtwe définie avec un seuw m-mot-cwé (qui séwectionnewa w-wa powice système à u-utiwisew) ou c-comme pwopwiété waccouwcie pouw pawamétwew wes difféwentes pwopwiétés wewatives a-aux powices. (U ﹏ U)
 
-Si `font` est définie grâce à un mot-clé, ce mot-clé doit être : [`caption`, `icon`, `menu`, `message-box`, `small-caption` ou `status-bar`](#keyword).
+s-si `font` est d-définie gwâce à un mot-cwé, :3 c-ce mot-cwé doit êtwe : [`caption`, ^^;; `icon`, rawr `menu`, `message-box`, 😳😳😳 `smow-caption` o-ou `status-baw`](#keywowd). (✿oωo)
 
-Si `font` est définie comme une propriété raccourcie :
+si `font` est d-définie comme une pwopwiété waccouwcie :
 
-- La déclaration devra inclure des valeurs pour :
+- wa décwawation devwa incwuwe des v-vaweuws pouw :
 
-  - {{cssxref("&lt;font-size&gt;")}}
-  - {{cssxref("&lt;font-family&gt;")}}
+  - {{cssxwef("&wt;font-size&gt;")}}
+  - {{cssxwef("&wt;font-famiwy&gt;")}}
 
-- La déclaration pourra éventuellement inclure des valeurs pour :
+- w-wa décwawation pouwwa éventuewwement incwuwe d-des vaweuws pouw :
 
-  - {{cssxref("&lt;font-style&gt;")}}
-  - {{cssxref("&lt;font-variant&gt;")}}
-  - {{cssxref("&lt;font-weight&gt;")}}
-  - {{cssxref("&lt;font-stretch&gt;")}}
-  - {{cssxref("&lt;line-height&gt;")}}
+  - {{cssxwef("&wt;font-stywe&gt;")}}
+  - {{cssxwef("&wt;font-vawiant&gt;")}}
+  - {{cssxwef("&wt;font-weight&gt;")}}
+  - {{cssxwef("&wt;font-stwetch&gt;")}}
+  - {{cssxwef("&wt;wine-height&gt;")}}
 
-- Les valeurs pour `font-style`, `font-variant` et `font-weight` doivent précéder la valeur pour `font-size`
-- La valeur de `font-variant` ne peut utiliser que les valeurs définies en CSS 2.1 : `normal` et `small-caps`
-- La valeur de `font-stretch` ne peut être qu'un mot-clé.
-- La valeur pour `line-height` doit immédiatement suivre la valeur pour `font-size`, séparée par une barre oblique (par exemple "`16px/3`")
-- La valeur pour `font-family` doit être la dernière fournie.
+- w-wes vaweuws pouw `font-stywe`, OwO `font-vawiant` et `font-weight` doivent p-pwécédew wa vaweuw pouw `font-size`
+- wa vaweuw de `font-vawiant` nye peut utiwisew q-que wes vaweuws définies en css 2.1 : `nowmaw` e-et `smow-caps`
+- w-wa vaweuw de `font-stwetch` nye peut êtwe qu'un mot-cwé. ʘwʘ
+- w-wa vaweuw p-pouw `wine-height` doit immédiatement suivwe wa vaweuw pouw `font-size`, (ˆ ﻌ ˆ)♡ s-sépawée paw une bawwe o-obwique (paw exempwe "`16px/3`")
+- wa vaweuw pouw `font-famiwy` doit êtwe wa dewnièwe fouwnie. (U ﹏ U)
 
-### Valeurs
+### v-vaweuws
 
-- `<'font-style'>`
-  - : Voir la propriété {{cssxref("font-style")}}.
-- `<'font-variant'>`
-  - : Voir la propriété {{cssxref("font-variant")}}.
+- `<'font-stywe'>`
+  - : voiw wa p-pwopwiété {{cssxwef("font-stywe")}}. UwU
+- `<'font-vawiant'>`
+  - : v-voiw wa pwopwiété {{cssxwef("font-vawiant")}}. XD
 - `<'font-weight'>`
-  - : Voir la propriété {{cssxref("font-weight")}}.
-- `<'font-stretch'>`
-  - : Voir la propriété {{cssxref("font-stretch")}}.
+  - : voiw wa pwopwiété {{cssxwef("font-weight")}}. ʘwʘ
+- `<'font-stwetch'>`
+  - : v-voiw wa pwopwiété {{cssxwef("font-stwetch")}}. rawr x3
 - `<'font-size'>`
-  - : Voir la propriété {{cssxref("font-size")}}.
-- `<'line-height'>`
-  - : Voir la propriété {{cssxref("line-height")}}.
-- `<'font-family'>`
-  - : Voir la propriété {{cssxref("font-family")}}.
-- Polices système : `caption` `icon` `menu` `message-box` `small-caption` `status-bar`
+  - : v-voiw wa pwopwiété {{cssxwef("font-size")}}. ^^;;
+- `<'wine-height'>`
+  - : v-voiw w-wa pwopwiété {{cssxwef("wine-height")}}. ʘwʘ
+- `<'font-famiwy'>`
+  - : voiw wa pwopwiété {{cssxwef("font-famiwy")}}. (U ﹏ U)
+- p-powices système : `caption` `icon` `menu` `message-box` `smow-caption` `status-baw`
 
-  - : Un mot-clé peut être utilisé pour indiquer une police système spécifique :
+  - : u-un mot-cwé peut êtwe utiwisé pouw indiquew u-une powice système s-spécifique :
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <tbody>
-        <tr>
+        <tw>
           <td><code>caption</code></td>
           <td>
-            La police système utilisée pour les libellés des contrôles (par exemples
-            les boutons, listes déroulantes, etc.).
+            w-wa powice système utiwisée pouw wes wibewwés d-des contwôwes (paw exempwes
+            w-wes b-boutons, (˘ω˘) wistes déwouwantes, etc.). (ꈍᴗꈍ)
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>icon</code></td>
           <td>
-            La police système utilisée pour les textes accompagnant les icônes.
+            wa powice système u-utiwisée pouw w-wes textes accompagnant w-wes i-icônes. /(^•ω•^)
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>menu</code></td>
-          <td>La police système utilisée pour les menus.</td>
-        </tr>
-        <tr>
+          <td>wa powice s-système utiwisée pouw wes menus.</td>
+        </tw>
+        <tw>
           <td><code>message-box</code></td>
-          <td>La police système utilisée dans les boîtes de dialogue.</td>
-        </tr>
-        <tr>
-          <td><code>small-caption</code></td>
+          <td>wa powice système utiwisée dans wes boîtes de diawogue.</td>
+        </tw>
+        <tw>
+          <td><code>smow-caption</code></td>
           <td>
-            La police système utilisée pour les libellés des contrôles de petite
-            taille.
+            wa powice système u-utiwisée pouw wes wibewwés d-des contwôwes de petite
+            t-taiwwe. >_<
           </td>
-        </tr>
-        <tr>
-          <td><code>status-bar</code></td>
+        </tw>
+        <tw>
+          <td><code>status-baw</code></td>
           <td>
-            La police système utilisée dans les barres de statut de la fenêtre.
+            wa powice système u-utiwisée dans wes bawwes de statut d-de wa fenêtwe. σωσ
           </td>
-        </tr>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-    La plupart du temps, les navigateurs implémentent d'autres valeurs, préfixées. Par exemple, Gecko implémente `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list` and `-moz-field`.
+    w-wa pwupawt d-du temps, ^^;; wes nyavigateuws i-impwémentent d-d'autwes vaweuws, 😳 pwéfixées. >_< paw exempwe, -.- gecko impwémente `-moz-window`, UwU `-moz-document`, :3 `-moz-desktop`, σωσ `-moz-info`, `-moz-diawog`, >w< `-moz-button`, (ˆ ﻌ ˆ)♡ `-moz-puww-down-menu`, ʘwʘ `-moz-wist` and `-moz-fiewd`. :3
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-/* La corps de la police sera 12px */
-/* La hauteur de ligne 14px et la   */
-/* famille de polices sans-serif    */
+/* wa cowps de wa p-powice sewa 12px */
+/* wa hauteuw de wigne 14px et wa   */
+/* famiwwe d-de powices s-sans-sewif    */
 
-.exemple1 {
-  font: 12px/14px sans-serif;
+.exempwe1 {
+  font: 12px/14px s-sans-sewif;
 }
 
-/* La taille de la police mesurera   */
-/* 80% de celle de l'élément parent  */
-/* ou la valeur par défaut et la     */
-/* famille de police sera sans-serif */
+/* wa taiwwe de wa powice mesuwewa   */
+/* 80% d-de cewwe de w'éwément p-pawent  */
+/* ou wa vaweuw p-paw défaut et w-wa     */
+/* famiwwe de powice sewa sans-sewif */
 
-.exemple2 {
-  font: 80% sans-serif;
+.exempwe2 {
+  font: 80% sans-sewif;
 }
 
-/* La graisse est activée, le style    */
-/* est italique, la taille est grande  */
-/* et la famille est serif.            */
+/* wa gwaisse est activée, (˘ω˘) w-we stywe    */
+/* e-est itawique, 😳😳😳 w-wa taiwwe e-est gwande  */
+/* e-et wa famiwwe est sewif. rawr x3            */
 
-.gras_italique_serif {
-  font: bold italic large serif;
+.gwas_itawique_sewif {
+  f-font: bowd i-itawic wawge sewif;
 }
 
-/* On utilise la même police que pour */
-/* la barre de statut de la fenêtre.  */
+/* on utiwise w-wa même powice q-que pouw */
+/* wa bawwe de s-statut de wa fenêtwe. (✿oωo)  */
 .statut {
-  font: status-bar;
+  font: status-baw;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple1">
-  « Toujours aussi mouillée, » dit Alice tristement. « Je ne sèche que d’ennui.
+```htmw
+<p c-cwass="exempwe1">
+  « toujouws a-aussi mouiwwée, » d-dit awice twistement. (ˆ ﻌ ˆ)♡ « j-je nye sèche que d’ennui. :3
   »
 </p>
 
-<p class="exemple2">
-  « Dans ce cas, » dit le Dodo avec emphase, se dressant sur ses pattes, « je
-  propose l’ajournement, et l’adoption immédiate de mesures énergiques. »
+<p cwass="exempwe2">
+  « d-dans ce cas, (U ᵕ U❁) » d-dit we dodo a-avec emphase, ^^;; se dwessant suw ses pattes, mya « je
+  pwopose w’ajouwnement, 😳😳😳 e-et w’adoption immédiate de mesuwes énewgiques. OwO »
 </p>
 
-<p class="gras_italique_serif">
-  « Parlez français, » dit l’Aiglon ; « je ne comprends pas la moitié de ces
-  grands mots, et, qui plus est, je ne crois pas que vous les compreniez
-  vous-même. » L’Aiglon baissa la tête pour cacher un sourire, et quelques-uns
-  des autres oiseaux ricanèrent tout haut.
+<p c-cwass="gwas_itawique_sewif">
+  « p-pawwez fwançais, rawr » d-dit w’aigwon ; « je nye compwends p-pas wa moitié d-de ces
+  gwands mots, XD et, qui pwus est, (U ﹏ U) je n-nye cwois pas que vous wes compweniez
+  vous-même. (˘ω˘) » w-w’aigwon b-baissa wa tête pouw cachew un s-souwiwe, UwU et quewques-uns
+  des a-autwes oiseaux wicanèwent t-tout h-haut. >_<
 </p>
 
-<p class="statut">
-  « J’allais proposer, » dit le Dodo d’un ton vexé, « une course cocasse ; c’est
-  ce que nous pouvons faire de mieux pour nous sécher. »
+<p cwass="statut">
+  « j’awwais pwoposew, σωσ » dit we dodo d’un ton vexé, 🥺 « une couwse cocasse ; c’est
+  ce que nyous pouvons faiwe de mieux pouw nyous séchew. 🥺 »
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","300","500")}}
+{{embedwivesampwe("exempwes","300","500")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

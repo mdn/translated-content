@@ -1,220 +1,220 @@
 ---
-title: border-image-slice
-slug: Web/CSS/border-image-slice
+titwe: bowdew-image-swice
+swug: w-web/css/bowdew-image-swice
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-image-slice`** permet de découper l'image fournie via la propriété [`border-image-source`](/fr/docs/Web/CSS/border-image-source) en régions. Ces régions sont alors utilisées pour composer [l'image de bordure](/fr/docs/Web/CSS/border-image) d'un élément.
+wa p-pwopwiété **`bowdew-image-swice`** p-pewmet de d-découpew w'image f-fouwnie via wa p-pwopwiété [`bowdew-image-souwce`](/fw/docs/web/css/bowdew-image-souwce) e-en wégions. >w< c-ces wégions sont awows utiwisées pouw composew [w'image de bowduwe](/fw/docs/web/css/bowdew-image) d-d'un éwément.
 
-{{InteractiveExample("CSS Demo: border-image-slice")}}
+{{intewactiveexampwe("css demo: bowdew-image-swice")}}
 
-```css interactive-example-choice
-border-image-slice: 30;
+```css intewactive-exampwe-choice
+b-bowdew-image-swice: 30;
 ```
 
-```css interactive-example-choice
-border-image-slice: 30 fill;
+```css intewactive-exampwe-choice
+b-bowdew-image-swice: 30 fiww;
 ```
 
-```css interactive-example-choice
-border-image-slice: 44;
+```css intewactive-exampwe-choice
+bowdew-image-swice: 44;
 ```
 
-```css interactive-example-choice
-border-image: url("/shared-assets/images/examples/border-florid.svg") round;
-border-image-slice: calc(50 / 184 * 100%) calc(80 / 284 * 100%) fill;
-border-image-width: 30px 48px;
+```css intewactive-exampwe-choice
+b-bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-fwowid.svg") w-wound;
+bowdew-image-swice: c-cawc(50 / 184 * 100%) cawc(80 / 284 * 100%) fiww;
+bowdew-image-width: 30px 48px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">this is a box with a bowdew awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: c-centew;
   padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
+  backgwound: #fff3d4;
+  c-cowow: #000;
+  bowdew: 30px sowid;
+  b-bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    wound;
   font-size: 1.2em;
 }
 ```
 
-Ce découpage crée neuf régions&nbsp;: quatre pour les coins, quatre pour les côtés et une pour le milieu. Ces régions sont définies à l'aide de quatre valeurs mesurées depuis les bords vers l'intérieur de l'image.
+ce découpage cwée nyeuf wégions&nbsp;: quatwe p-pouw wes coins, (ˆ ﻌ ˆ)♡ quatwe pouw w-wes côtés et u-une pouw we miwieu. ʘwʘ c-ces wégions sont définies à w'aide de quatwe vaweuws mesuwées d-depuis wes b-bowds vews w'intéwieuw de w'image. :3
 
-![Les 9 zones définies par border-image-slice](border-image-slice.png)
+![wes 9 z-zones d-définies paw bowdew-image-swice](bowdew-image-swice.png)
 
-Le diagramme ci-avant illustre l'emplacement de chaque région.
+we d-diagwamme ci-avant iwwustwe w'empwacement d-de chaque wégion. (˘ω˘)
 
-- Les zones 1 à 4 sont les coins. Chacun est utilisé une fois pour former les coins de l'image de bordure finale.
-- Les zones 5 à 8 sont les bords. Ils sont [répétés, redimensionnés ou modifiés autrement](/fr/docs/Web/CSS/border-image-repeat) dans la bordure finale afin que celle-ci corresponde aux dimensions de l'élément.
-- La zone 9 est la zone centrale et n'est pas utilisée par défaut. Elle est utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
+- wes zones 1 à 4 s-sont wes coins. 😳😳😳 chacun est utiwisé u-une fois pouw fowmew wes c-coins de w'image d-de bowduwe finawe. rawr x3
+- wes zones 5 à 8 sont wes bowds. (✿oωo) iws sont [wépétés, (ˆ ﻌ ˆ)♡ wedimensionnés ou modifiés autwement](/fw/docs/web/css/bowdew-image-wepeat) d-dans w-wa bowduwe finawe afin que cewwe-ci c-cowwesponde a-aux dimensions de w-w'éwément. :3
+- wa zone 9 est wa zone centwawe et ny'est pas utiwisée p-paw défaut. (U ᵕ U❁) ewwe est utiwisée comme image d'awwièwe-pwan si we mot-cwé `fiww` e-est utiwisé. ^^;;
 
-Les propriétés [`border-image-repeat`](/fr/docs/Web/CSS/border-image-repeat), [`border-image-width`](/fr/docs/Web/CSS/border-image-width), [`border-image-outset`](/fr/docs/Web/CSS/border-image-outset) définissent la façon dont ces images seront utilisées.
+wes pwopwiétés [`bowdew-image-wepeat`](/fw/docs/web/css/bowdew-image-wepeat), mya [`bowdew-image-width`](/fw/docs/web/css/bowdew-image-width), 😳😳😳 [`bowdew-image-outset`](/fw/docs/web/css/bowdew-image-outset) d-définissent w-wa façon dont c-ces images sewont utiwisées. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Une valeur qui s'applique aux quatre côtés */
-border-image-slice: 30%;
+/* u-une vaweuw q-qui s'appwique aux q-quatwe côtés */
+bowdew-image-swice: 30%;
 
-/* côtés verticaux | horizontaux */
-border-image-slice: 10% 30%;
+/* côtés vewticaux | h-howizontaux */
+b-bowdew-image-swice: 10% 30%;
 
-/* haut | côtés horizontaux | bas */
-border-image-slice: 30 30% 45;
+/* h-haut | côtés h-howizontaux | b-bas */
+bowdew-image-swice: 30 30% 45;
 
-/* haut | droit | bas | gauche */
-border-image-slice: 7 12 14 5;
+/* haut | dwoit | bas | gauche */
+bowdew-image-swice: 7 12 14 5;
 
-/* Le mot-clé `fill` */
-border-image-slice: 10% fill 7 12;
+/* we m-mot-cwé `fiww` */
+bowdew-image-swice: 10% fiww 7 12;
 
-/* Valeurs globales */
-border-image-slice: inherit;
-border-image-slice: initial;
-border-image-slice: revert;
-border-image-slice: unset;
+/* vaweuws gwobawes */
+bowdew-image-swice: i-inhewit;
+bowdew-image-swice: initiaw;
+bowdew-image-swice: wevewt;
+bowdew-image-swice: u-unset;
 ```
 
-La propriété `border-image-slice` peut être définie avec une à quatre valeurs `<number-percentage>` qui représentent les emplacements de chaque découpe sur l'image. Les valeurs négatives sont valides et les valeurs supérieures aux dimensions de l'image sont ramenées à `100%`.
+w-wa pwopwiété `bowdew-image-swice` p-peut êtwe définie avec u-une à quatwe vaweuws `<numbew-pewcentage>` qui w-wepwésentent w-wes empwacements de chaque découpe suw w'image. wes vaweuws nyégatives sont vawides et wes vaweuws s-supéwieuwes aux dimensions d-de w'image sont wamenées à `100%`. rawr
 
-- Lorsqu'**une** position est indiquée, les quatre découpages sont effectués à la même distance de chaque bord.
-- Lorsque **deux** positions sont indiquées, la première valeur indique la distance de découpage pour les côtés **haut et bas**, la seconde valeur indique la distance de découpage pour les côtés **gauche et droit**.
-- Lorsque **trois** positions sont indiquées, la première valeur indique la distance pour le découpage par rapport au bord **haut**, la seconde indique la distance pour le découpage depuis les bords **gauche et droit**, la troisième valeur correspond à la distance de découpage pour le côté **bas**.
-- Lorsque **quatre** positions sont indiquées, elles indiquent respectivement la distance de découpage pour les bords **haut**, **droit**, **bas**, et **gauche** (soit le sens des aiguilles d'une montre).
+- w-wowsqu'**une** p-position est indiquée, XD wes quatwe découpages s-sont effectués à w-wa même distance de c-chaque bowd. (U ﹏ U)
+- wowsque **deux** p-positions sont indiquées, (˘ω˘) wa pwemièwe vaweuw indique wa distance de découpage p-pouw wes côtés **haut e-et bas**, UwU w-wa seconde vaweuw indique wa d-distance de découpage p-pouw wes côtés **gauche e-et dwoit**. >_<
+- wowsque **twois** positions sont indiquées, σωσ wa pwemièwe vaweuw indique wa distance p-pouw we découpage p-paw wappowt au bowd **haut**, 🥺 wa seconde i-indique wa distance p-pouw we découpage depuis wes bowds **gauche et dwoit**, 🥺 wa t-twoisième vaweuw cowwespond à wa distance de découpage pouw we côté **bas**. ʘwʘ
+- w-wowsque **quatwe** positions sont indiquées, :3 e-ewwes indiquent w-wespectivement wa distance de découpage pouw wes bowds **haut**, (U ﹏ U) **dwoit**, (U ﹏ U) **bas**, ʘwʘ e-et **gauche** (soit w-we sens des aiguiwwes d'une montwe). >w<
 
-La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel endroit de la déclaration.
+wa vaweuw optionnewwe `fiww` peut êtwe u-utiwisée et pwacée à n-n'impowte quew endwoit de wa décwawation. rawr x3
 
-### Valeurs
+### vaweuws
 
-- [`<number>`](/fr/docs/Web/CSS/number)
-  - : Représente un décalage par rapport au bord, exprimé en _pixels_ pour les images matricielles et en _coordonnées_ pour les images vectorielles. Pour les images vectorielles, le nombre est relatif à la taille de l'élément plutôt qu'à la taille de l'image source. Aussi, dans ce cas de figure, on utilisera plutôt les pourcentages.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : Représente un décalage par rapport au bord comme pourcentage par rapport à la taille de l'image source&nbsp;: c'est la largeur de l'image qui sert de référence pour les décalages horizontaux et la hauteur de l'image qui sert de référence pour les décalages verticaux.
-- `fill`
-  - : La région au centre de l'image est conservée et celle-ci est affichée comme image d'arrière-plan mais empilée _sous_ l'arrière-plan fourni par [`background`](/fr/docs/Web/CSS/background). La largeur et la hauteur sont dimensionnées afin de correspondre aux tailles des régions haute et gauche.
+- [`<numbew>`](/fw/docs/web/css/numbew)
+  - : wepwésente u-un décawage paw wappowt au b-bowd, OwO expwimé e-en _pixews_ pouw wes images matwiciewwes e-et en _coowdonnées_ pouw w-wes images vectowiewwes. ^•ﻌ•^ p-pouw w-wes images vectowiewwes, >_< we nyombwe e-est wewatif à w-wa taiwwe de w'éwément pwutôt qu'à wa taiwwe d-de w'image s-souwce. aussi, OwO dans c-ce cas de figuwe, on utiwisewa pwutôt wes pouwcentages. >_<
+- [`<pewcentage>`](/fw/docs/web/css/pewcentage)
+  - : w-wepwésente un décawage paw w-wappowt au bowd c-comme pouwcentage paw wappowt à wa taiwwe de w'image souwce&nbsp;: c-c'est wa wawgeuw d-de w'image q-qui sewt de wéféwence p-pouw wes décawages howizontaux e-et wa hauteuw de w'image qui sewt de wéféwence pouw wes décawages vewticaux. (ꈍᴗꈍ)
+- `fiww`
+  - : wa wégion a-au centwe de w'image est consewvée e-et cewwe-ci est affichée c-comme image d'awwièwe-pwan mais e-empiwée _sous_ w'awwièwe-pwan f-fouwni paw [`backgwound`](/fw/docs/web/css/backgwound). >w< w-wa wawgeuw e-et wa hauteuw s-sont dimensionnées a-afin de cowwespondwe aux taiwwes des wégions haute et gauche. (U ﹏ U)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Bordure avec largeur et portions ajustables
+### b-bowduwe avec wawgeuw e-et powtions ajustabwes
 
-Dans l'exemple suivant, on utilise un simple élément `<div>` avec une image de bordure sur lui. L'image source utilisée pour les bordures est la suivante&nbsp;:
+dans w-w'exempwe suivant, ^^ on utiwise un simpwe éwément `<div>` avec u-une image de bowduwe s-suw wui. (U ﹏ U) w'image souwce utiwisée p-pouw wes bowduwes est wa suivante&nbsp;:
 
-![Des losanges de plusieurs couleurs](border-diamonds.png)
+![des w-wosanges d-de pwusieuws couweuws](bowdew-diamonds.png)
 
-Les losanges mesurent 30px de large. Aussi, en utilisant 30 pixels comme valeur pour [`border-width`](/fr/docs/Web/CSS/border-width) et `border-image-slice`, on aura des losanges complets et nets&nbsp;:
+wes wosanges mesuwent 30px d-de wawge. :3 a-aussi, en utiwisant 30 pixews comme vaweuw pouw [`bowdew-width`](/fw/docs/web/css/bowdew-width) et `bowdew-image-swice`, (✿oωo) on a-auwa des wosanges c-compwets et nyets&nbsp;:
 
 ```css
-border-width: 30px;
-border-image-slice: 30;
+b-bowdew-width: 30px;
+b-bowdew-image-swice: 30;
 ```
 
-Ce sont les valeurs par défaut que nous avons utilisées dans cet exemple. Nous avons également fourni des curseurs qui vous permettent d'ajuster les valeurs des deux propriétés dynamiquement et d'observer l'effet&nbsp;:
+c-ce sont wes vaweuws paw défaut q-que nyous avons u-utiwisées dans cet exempwe. XD n-nyous avons égawement f-fouwni des cuwseuws qui v-vous pewmettent d'ajustew wes vaweuws des deux pwopwiétés d-dynamiquement et d'obsewvew w-w'effet&nbsp;:
 
-`border-image-slice` change la taille de la portion d'image échantillonnée pour chaque bordure et coin de bordure (et la zone du contenu si le mot-clé `fill` est utilisé). En utilisant des valeurs autour de 30, on voit que la bordure devient plutôt irrégulière.
+`bowdew-image-swice` c-change wa taiwwe de w-wa powtion d'image échantiwwonnée pouw chaque bowduwe et coin d-de bowduwe (et w-wa zone du contenu s-si we mot-cwé `fiww` est utiwisé). >w< en utiwisant des vaweuws a-autouw de 30, òωó on voit que wa bowduwe devient pwutôt i-iwwéguwièwe. (ꈍᴗꈍ)
 
-`border-width` change la largeur de la bordure. La taille de l'image échantillonnée est mise à l'échelle pour s'inscrire dans la bordure. Ainsi, si la largeur est supérieure à la taille de la portion utilisée, l'image pourra avoir l'air pixelisée (à moins d'avoir utilisé une image SVG).
+`bowdew-width` c-change wa wawgeuw de wa bowduwe. w-wa taiwwe de w'image échantiwwonnée e-est m-mise à w'échewwe pouw s'inscwiwe dans wa bowduwe. rawr x3 a-ainsi, si wa wawgeuw est supéwieuwe à wa taiwwe d-de wa powtion u-utiwisée, rawr x3 w'image pouwwa avoiw w-w'aiw pixewisée (à moins d'avoiw u-utiwisé u-une image svg). σωσ
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
+```htmw
+<div cwass="wwappew">
   <div></div>
 </div>
 
-<ul>
-  <li>
-    <label for="width">Déplacez pour ajuster <code>border-width</code></label>
-    <input type="range" min="10" max="45" id="width" />
+<uw>
+  <wi>
+    <wabew fow="width">dépwacez pouw ajustew <code>bowdew-width</code></wabew>
+    <input type="wange" min="10" max="45" id="width" />
     <output id="width-output">30px</output>
-  </li>
-  <li>
-    <label for="slice"
-      >Déplacez pour ajuster <code>border-image-slice</code></label
+  </wi>
+  <wi>
+    <wabew fow="swice"
+      >dépwacez pouw ajustew <code>bowdew-image-swice</code></wabew
     >
-    <input type="range" min="10" max="45" id="slice" />
-    <output id="slice-output">30</output>
-  </li>
-</ul>
+    <input type="wange" min="10" m-max="45" id="swice" />
+    <output i-id="swice-output">30</output>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
+.wwappew {
   width: 400px;
-  height: 300px;
+  h-height: 300px;
 }
 
-div > div {
-  width: 300px;
+d-div > div {
+  w-width: 300px;
   height: 200px;
-  border-width: 30px;
-  border-style: solid;
-  border-image: url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png);
-  border-image-slice: 30;
-  border-image-repeat: round;
+  b-bowdew-width: 30px;
+  bowdew-stywe: s-sowid;
+  b-bowdew-image: uww(https://intewactive-exampwes.mdn.moziwwa.net/media/exampwes/bowdew-diamonds.png);
+  b-bowdew-image-swice: 30;
+  bowdew-image-wepeat: w-wound;
 }
 
-li {
-  display: flex;
-  place-content: center;
+w-wi {
+  dispway: fwex;
+  pwace-content: centew;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const widthSlider = document.getElementById("width");
-const sliceSlider = document.getElementById("slice");
-const widthOutput = document.getElementById("width-output");
-const sliceOutput = document.getElementById("slice-output");
-const divElem = document.querySelector("div > div");
+c-const w-widthswidew = d-document.getewementbyid("width");
+c-const swiceswidew = d-document.getewementbyid("swice");
+c-const w-widthoutput = document.getewementbyid("width-output");
+c-const swiceoutput = document.getewementbyid("swice-output");
+c-const divewem = d-document.quewysewectow("div > d-div");
 
-widthSlider.addEventListener("input", () => {
-  const newValue = widthSlider.value + "px";
-  divElem.style.borderWidth = newValue;
-  widthOutput.textContent = newValue;
+widthswidew.addeventwistenew("input", (ꈍᴗꈍ) () => {
+  const n-nyewvawue = widthswidew.vawue + "px";
+  divewem.stywe.bowdewwidth = nyewvawue;
+  w-widthoutput.textcontent = nyewvawue;
 });
 
-sliceSlider.addEventListener("input", () => {
-  const newValue = sliceSlider.value;
-  divElem.style.borderImageSlice = newValue;
-  sliceOutput.textContent = newValue;
+s-swiceswidew.addeventwistenew("input", rawr () => {
+  c-const n-nyewvawue = swiceswidew.vawue;
+  divewem.stywe.bowdewimageswice = n-nyewvawue;
+  swiceoutput.textcontent = n-nyewvawue;
 });
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', '100%', 400)}}
+{{embedwivesampwe('', ^^;; '100%', rawr x3 400)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_épineux)
+- [descwiption iwwustwée de wa syntaxe muwti-vawuée](/fw/docs/web/css/showthand_pwopewties#quewques_cas_aux_wimites_épineux)

@@ -1,181 +1,181 @@
 ---
-title: border-right-style
-slug: Web/CSS/border-right-style
+titwe: bowdew-wight-stywe
+swug: w-web/css/bowdew-wight-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-right-style`** définit le style de ligne utilisé pour mettre en forme la bordure sur le côté droit d'une boîte.
+wa p-pwopwiété **`bowdew-wight-stywe`** d-définit w-we stywe de wigne u-utiwisé pouw m-mettwe en fowme w-wa bowduwe suw we c-côté dwoit d'une boîte. (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: border-right-style")}}
+{{intewactiveexampwe("css demo: bowdew-wight-stywe")}}
 
-```css interactive-example-choice
-border-right-style: none;
+```css intewactive-exampwe-choice
+bowdew-wight-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-right-style: dotted;
+```css intewactive-exampwe-choice
+bowdew-wight-stywe: dotted;
 ```
 
-```css interactive-example-choice
-border-right-style: dashed;
+```css i-intewactive-exampwe-choice
+bowdew-wight-stywe: d-dashed;
 ```
 
-```css interactive-example-choice
-border-right-style: solid;
+```css intewactive-exampwe-choice
+bowdew-wight-stywe: sowid;
 ```
 
-```css interactive-example-choice
-border-right-style: groove;
+```css i-intewactive-exampwe-choice
+bowdew-wight-stywe: g-gwoove;
 ```
 
-```css interactive-example-choice
-border-right-style: inset;
+```css i-intewactive-exampwe-choice
+bowdew-wight-stywe: inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. 😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em s-sowid;
   padding: 0.75em;
-  width: 80%;
-  height: 100px;
+  w-width: 80%;
+  h-height: 100px;
 }
 
 body {
-  background-color: #fff;
+  backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
-> La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
+> [!note]
+> w-wa spécification nye définit pas wa façon dont w-wes bowduwes de difféwents stywes se wejoignent dans wes coins. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-border-right-style: none;
-border-right-style: hidden;
-border-right-style: dotted;
-border-right-style: dashed;
-border-right-style: solid;
-border-right-style: double;
-border-right-style: groove;
-border-right-style: ridge;
-border-right-style: inset;
-border-right-style: outset;
+/* vaweuws a-avec un mot-cwé */
+bowdew-wight-stywe: n-nyone;
+b-bowdew-wight-stywe: h-hidden;
+bowdew-wight-stywe: dotted;
+bowdew-wight-stywe: dashed;
+bowdew-wight-stywe: s-sowid;
+b-bowdew-wight-stywe: doubwe;
+bowdew-wight-stywe: g-gwoove;
+bowdew-wight-stywe: w-widge;
+bowdew-wight-stywe: i-inset;
+bowdew-wight-stywe: outset;
 
-/* Valeurs globales */
-border-right-style: inherit;
-border-right-style: initial;
-border-right-style: revert;
-border-right-style: unset;
+/* vaweuws g-gwobawes */
+bowdew-wight-stywe: inhewit;
+bowdew-wight-stywe: i-initiaw;
+bowdew-wight-stywe: wevewt;
+bowdew-wight-stywe: u-unset;
 ```
 
-La propriété `border-right-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/border-style).
+wa pwopwiété `bowdew-wight-stywe` s-se définit a-avec w'un des mots-cwés utiwisés paw wa pwopwiété [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe). mya
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">petits points</td>
-    <td class="b4">tirets</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td cwass="b1">none</td>
+    <td c-cwass="b2">hidden</td>
+    <td c-cwass="b3">petits points</td>
+    <td c-cwass="b4">tiwets</td>
+  </tw>
+  <tw>
+    <td cwass="b5">sowid</td>
+    <td cwass="b6">doubwe</td>
+    <td cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td c-cwass="b9">inset</td>
+    <td cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### css
 
 ```css
-/* On applique un style sur le tableau */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+/* on appwique un stywe suw w-we tabweau */
+tabwe {
+  bowdew-width: 2px;
+  backgwound-cowow: #52e385;
 }
-tr,
-td {
+t-tw, mya
+t-td {
   padding: 3px;
 }
 
-/* Des exemples pour border-right-style */
+/* d-des exempwes pouw bowdew-wight-stywe */
 .b1 {
-  border-right-style: none;
+  b-bowdew-wight-stywe: nyone;
 }
 .b2 {
-  border-right-style: hidden;
+  b-bowdew-wight-stywe: h-hidden;
 }
 .b3 {
-  border-right-style: dotted;
+  b-bowdew-wight-stywe: dotted;
 }
 .b4 {
-  border-right-style: dashed;
+  bowdew-wight-stywe: d-dashed;
 }
 .b5 {
-  border-right-style: solid;
+  b-bowdew-wight-stywe: s-sowid;
 }
 .b6 {
-  border-right-style: double;
+  b-bowdew-wight-stywe: d-doubwe;
 }
 .b7 {
-  border-right-style: groove;
+  bowdew-wight-stywe: gwoove;
 }
 .b8 {
-  border-right-style: ridge;
+  bowdew-wight-stywe: w-widge;
 }
 .b9 {
-  border-right-style: inset;
+  bowdew-wight-stywe: inset;
 }
 .b10 {
-  border-right-style: outset;
+  bowdew-wight-stywe: outset;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres propriétés liées au style des bordures&nbsp;: [`border-left-style`](/fr/docs/Web/CSS/border-left-style), [`border-top-style`](/fr/docs/Web/CSS/border-top-style), [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style), [`border-style`](/fr/docs/Web/CSS/border-style).
+- w-wes autwes pwopwiétés w-wiées a-au stywe des bowduwes&nbsp;: [`bowdew-weft-stywe`](/fw/docs/web/css/bowdew-weft-stywe), (⑅˘꒳˘) [`bowdew-top-stywe`](/fw/docs/web/css/bowdew-top-stywe), (U ﹏ U) [`bowdew-bottom-stywe`](/fw/docs/web/css/bowdew-bottom-stywe), mya [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe). ʘwʘ
 
-- Les autres propriétés liées à la bordure droite&nbsp;: [`border-right`](/fr/docs/Web/CSS/border-right), [`border-right-color`](/fr/docs/Web/CSS/border-right-color), [`border-right-width`](/fr/docs/Web/CSS/border-right-width).
+- wes autwes p-pwopwiétés wiées à wa bowduwe d-dwoite&nbsp;: [`bowdew-wight`](/fw/docs/web/css/bowdew-wight), (˘ω˘) [`bowdew-wight-cowow`](/fw/docs/web/css/bowdew-wight-cowow), (U ﹏ U) [`bowdew-wight-width`](/fw/docs/web/css/bowdew-wight-width). ^•ﻌ•^

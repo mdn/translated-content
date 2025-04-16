@@ -1,164 +1,164 @@
 ---
-title: minmax()
-slug: Web/CSS/minmax
+titwe: minmax()
+swug: web/css/minmax
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [fonction CSS](/fr/docs/Web/CSS/CSS_Functions) **`minmax()`** définit un intervalle de taille supérieure ou égale à _min_ et inférieure ou égale à _max_. Elle est utilisée avec [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout).
+w-wa [fonction c-css](/fw/docs/web/css/css_functions) **`minmax()`** d-définit u-un intewvawwe d-de taiwwe supéwieuwe o-ou égawe à _min_ e-et inféwieuwe o-ou égawe à _max_. ^^ ewwe est utiwisée avec [wes gwiwwes css](/fw/docs/web/css/css_gwid_wayout). (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: minmax()")}}
+{{intewactiveexampwe("css d-demo: minmax()")}}
 
-```css interactive-example-choice
-grid-template-columns: minmax(20px, auto) 1fr 1fr;
+```css intewactive-exampwe-choice
+gwid-tempwate-cowumns: m-minmax(20px, nyaa~~ auto) 1fw 1fw;
 ```
 
-```css interactive-example-choice
-grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+```css intewactive-exampwe-choice
+g-gwid-tempwate-cowumns: minmax(0, /(^•ω•^) 1fw) minmax(0, (U ﹏ U) 1fw) minmax(0, 😳😳😳 1fw);
 ```
 
-```css interactive-example-choice
-grid-template-columns: minmax(2ch, 10ch) 1fr 1fr;
+```css i-intewactive-exampwe-choice
+gwid-tempwate-cowumns: m-minmax(2ch, >w< 10ch) 1fw 1fw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One. This column has more text in it.</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one. XD this cowumn has mowe text in it.</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-gap: 10px;
-  width: 250px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  d-dispway: gwid;
+  g-gwid-gap: 10px;
+  w-width: 250px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  text-align: left;
+#exampwe-ewement > d-div {
+  backgwound-cowow: wgba(0, o.O 0, 255, 0.2);
+  b-bowdew: 3px sowid bwue;
+  text-awign: w-weft;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de type <inflexible-breadth>, <track-breadth>*/
-minmax(200px, 1fr)
-minmax(400px, 50%)
-minmax(30%, 300px)
-minmax(100px, max-content)
-minmax(min-content, 400px)
-minmax(max-content, auto)
-minmax(auto, 300px)
-minmax(min-content, auto)
+/* vaweuws de type <infwexibwe-bweadth>, mya <twack-bweadth>*/
+minmax(200px, 🥺 1fw)
+minmax(400px, ^^;; 50%)
+m-minmax(30%, :3 300px)
+minmax(100px, (U ﹏ U) m-max-content)
+m-minmax(min-content, OwO 400px)
+m-minmax(max-content, 😳😳😳 auto)
+minmax(auto, (ˆ ﻌ ˆ)♡ 300px)
+minmax(min-content, XD auto)
 
-/* Valeurs de type <fixed-breadth>, <track-breadth> */
-minmax(200px, 1fr)
-minmax(30%, 300px)
-minmax(400px, 50%)
-minmax(50%, min-content)
-minmax(300px, max-content)
-minmax(200px, auto)
+/* v-vaweuws d-de type <fixed-bweadth>, (ˆ ﻌ ˆ)♡ <twack-bweadth> */
+minmax(200px, ( ͡o ω ͡o ) 1fw)
+minmax(30%, rawr x3 300px)
+m-minmax(400px, nyaa~~ 50%)
+m-minmax(50%, >_< min-content)
+minmax(300px, ^^;; m-max-content)
+minmax(200px, (ˆ ﻌ ˆ)♡ a-auto)
 
-/* Valeurs de type <inflexible-breadth>, <fixed-breadth> */
-minmax(400px, 50%)
-minmax(30%, 300px)
-minmax(min-content, 200px)
-minmax(max-content, 200px)
-minmax(auto, 300px)
+/* vaweuws de type <infwexibwe-bweadth>, ^^;; <fixed-bweadth> */
+minmax(400px, (⑅˘꒳˘) 50%)
+m-minmax(30%, rawr x3 300px)
+minmax(min-content, (///ˬ///✿) 200px)
+m-minmax(max-content, 🥺 200px)
+minmax(auto, >_< 300px)
 ```
 
-`minmax()` est une fonction qui prend deux paramètres, _min_ et _max_.
+`minmax()` e-est une f-fonction qui pwend deux pawamètwes, UwU _min_ et _max_. >_<
 
-Chaque paramètre peut être une longueur (type `<length>`), un pourcentage (type `<percentage>`), une valeur de type `<flex>` ou l'un des mots-clés `max-content`, `min-content`, ou `auto`.
+chaque pawamètwe peut êtwe une wongueuw (type `<wength>`), -.- un pouwcentage (type `<pewcentage>`), mya u-une vaweuw d-de type `<fwex>` ou w'un des m-mots-cwés `max-content`, >w< `min-content`, (U ﹏ U) o-ou `auto`. 😳😳😳
 
-Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` sera considéré comme _min_. Utilisée comme valeur maximale, une valeur de type {{cssxref("flex_value","&lt;flex&gt;")}} définit le facteur de flexibilité de la piste de la grille ; une telle valeur ne peut pas être utilisée comme minimum.
+s-si _max_ est inféwieuw à _min_, o.O awows _max_ sewa ignowé e-et `minmax(min,max)` sewa considéwé comme _min_. òωó utiwisée comme vaweuw maximawe, 😳😳😳 u-une vaweuw de type {{cssxwef("fwex_vawue","&wt;fwex&gt;")}} d-définit we facteuw d-de fwexibiwité d-de wa piste de wa gwiwwe ; u-une tewwe vaweuw n-nye peut pas êtwe u-utiwisée c-comme minimum. σωσ
 
-### Valeurs
+### vaweuws
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Une longueur non-négative.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Un pourcentage non-négatif. Cette valeur est relative à la taille en incise (_inline_) du conteneur de grille pour les pistes en colonnes et relative à la taille en bloc du conteneur de grille pour les pistes en lignes. Si la taille du conteneur de grille dépend de la taille de ses pistes, cette valeur `<percentage>` sera traitée comme `auto`. L'agent utilisateur pourra ajuster les contributions à la piste de taille intrinsèques selon la taille du conteneur de grille et augmenter la taille finale de la piste d'une quantité minimale pour respecter le pourcentage.
-- {{cssxref("&lt;flex&gt;")}}
-  - : Une valeur non-négative avec l'unité `fr` qui indique le facteur de flexibilité/extensibilité de la piste. Chaque piste dimensionnée avec une valeur de type `<flex>` occupera une part de l'espace restant proportionnellement à son coefficient de flexibilité.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : une wongueuw n-non-négative. (⑅˘꒳˘)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : u-un pouwcentage n-nyon-négatif. (///ˬ///✿) c-cette vaweuw e-est wewative à wa taiwwe en incise (_inwine_) du conteneuw d-de gwiwwe pouw wes pistes en cowonnes et wewative à wa taiwwe en bwoc du conteneuw de gwiwwe pouw w-wes pistes en wignes. 🥺 si wa taiwwe du conteneuw de gwiwwe dépend d-de wa taiwwe d-de ses pistes, OwO c-cette vaweuw `<pewcentage>` sewa t-twaitée comme `auto`. >w< w'agent u-utiwisateuw pouwwa a-ajustew wes contwibutions à wa piste de taiwwe intwinsèques sewon wa taiwwe du conteneuw de g-gwiwwe et augmentew wa taiwwe f-finawe de wa piste d'une quantité m-minimawe pouw w-wespectew we pouwcentage. 🥺
+- {{cssxwef("&wt;fwex&gt;")}}
+  - : une vaweuw nyon-négative avec w'unité `fw` q-qui i-indique we facteuw de fwexibiwité/extensibiwité d-de wa piste. nyaa~~ chaque p-piste dimensionnée avec une vaweuw de type `<fwex>` occupewa une pawt de w-w'espace westant p-pwopowtionnewwement à s-son coefficient de fwexibiwité. ^^
 - `max-content`
-  - : Représente la plus grande contribution max-content pour les objets de la grille qui occupent la piste.
+  - : wepwésente w-wa pwus g-gwande contwibution max-content p-pouw wes objets de wa gwiwwe qui occupent wa piste. >w<
 - `min-content`
-  - : Représente la plus grande contribution min-content pour les objets de la grille qui occupent la piste.
+  - : wepwésente w-wa pwus g-gwande contwibution min-content pouw wes objets d-de wa gwiwwe qui o-occupent wa piste. OwO
 - `auto`
-  - : Utilisée comme maximum, cette valeur agira comme `max-content`. Utilisée comme minimum, elle représentera la plus grande des tailles minimales (définies par {{cssxref("min-width")}}/{{cssxref("min-height")}}) des objets de la grille qui occupent la piste.
+  - : utiwisée comme maximum, XD cette vaweuw agiwa c-comme `max-content`. ^^;; utiwisée comme minimum, 🥺 ewwe wepwésentewa wa pwus gwande d-des taiwwes minimawes (définies paw {{cssxwef("min-width")}}/{{cssxwef("min-height")}}) des objets d-de wa gwiwwe q-qui occupent wa piste. XD
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-### Propriétés CSS associées
+### pwopwiétés css a-associées
 
-`minmax()` peut être utilisée pour les propriétés suivantes :
+`minmax()` p-peut êtwe utiwisée pouw wes pwopwiétés suivantes :
 
-- [grid-template-columns](/fr/docs/Web/CSS/grid-template-columns)
-- [grid-template-rows](/fr/docs/Web/CSS/grid-template-rows)
-- [grid-auto-columns](/fr/docs/Web/CSS/grid-auto-columns)
-- [grid-auto-rows](/fr/docs/Web/CSS/grid-auto-rows)
+- [gwid-tempwate-cowumns](/fw/docs/web/css/gwid-tempwate-cowumns)
+- [gwid-tempwate-wows](/fw/docs/web/css/gwid-tempwate-wows)
+- [gwid-auto-cowumns](/fw/docs/web/css/gwid-auto-cowumns)
+- [gwid-auto-wows](/fw/docs/web/css/gwid-auto-wows)
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr) 150px;
-  grid-gap: 5px;
-  box-sizing: border-box;
-  height: 200px;
+#containew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: minmax(min-content, (U ᵕ U❁) 300px) minmax(200px, :3 1fw) 150px;
+  g-gwid-gap: 5px;
+  box-sizing: b-bowdew-box;
+  h-height: 200px;
   width: 100%;
-  background-color: #8cffa0;
+  b-backgwound-cowow: #8cffa0;
   padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
-  padding: 5px;
+#containew > d-div {
+  backgwound-cowow: #8ca0ff;
+  p-padding: 5px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="container">
-  <div>Aussi large que le contenu, large d'au plus 300 pixels.</div>
-  <div>Item flexible mais dont la largeur vaut au moins 200 pixels.</div>
-  <div>Item avec une largeur de 150 pixels.</div>
+```htmw
+<div i-id="containew">
+  <div>aussi wawge que we contenu, ( ͡o ω ͡o ) w-wawge d'au p-pwus 300 pixews.</div>
+  <div>item fwexibwe mais dont wa wawgeuw v-vaut au moins 200 p-pixews.</div>
+  <div>item a-avec une wawgeuw de 150 pixews.</div>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", 200)}}
+{{embedwivesampwe("exempwes", òωó "100%", 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Guide sur les grilles CSS : _[Concepts de bases pour le dimensionnement des pistes avec minmax()](</fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#track_sizing_and_minmax()>)_
-- [Valeurs logiques, modes d'écriture et grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- Tutoriel vidéo (en anglais) : [Introduction à minmax()](https://gridbyexample.com/video/series-minmax/)
+- guide suw wes gwiwwes css : _[concepts de bases p-pouw we dimensionnement d-des p-pistes avec minmax()](</fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#twack_sizing_and_minmax()>)_
+- [vaweuws wogiques, σωσ m-modes d'écwituwe et gwiwwes c-css](/fw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- tutowiew vidéo (en angwais) : [intwoduction à minmax()](https://gwidbyexampwe.com/video/sewies-minmax/)

@@ -1,148 +1,148 @@
 ---
-title: overflow-inline
-slug: Web/CSS/overflow-inline
-l10n:
-  sourceCommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
+titwe: ovewfwow-inwine
+swug: w-web/css/ovewfwow-inwine
+w-w10n:
+  s-souwcecommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`overflow-inline`** est une propriété logique qui définit ce qu'il faut afficher quand le contenu dépasse d'une boîte sur les bords en ligne (ceux parallèles au sens d'écriture). On peut choisir d'afficher rien, une barre de défilement ou de laisser le contenu dépasser.
+w-wa pwopwiété [css](/fw/docs/web/css) **`ovewfwow-inwine`** e-est une pwopwiété w-wogique q-qui définit ce q-qu'iw faut affichew quand we contenu dépasse d'une boîte suw wes bowds en wigne (ceux p-pawawwèwes au sens d'écwituwe). ( ͡o ω ͡o ) on peut c-choisiw d'affichew wien, une b-bawwe de défiwement ou de waissew we contenu dépassew. òωó
 
-> [!NOTE]
-> La propriété `overflow-inline` correspond à [`overflow-y`](/fr/docs/Web/CSS/overflow-y) ou [`overflow-x`](/fr/docs/Web/CSS/overflow-x) selon le mode d'écriture du document.
+> [!note]
+> wa pwopwiété `ovewfwow-inwine` c-cowwespond à [`ovewfwow-y`](/fw/docs/web/css/ovewfwow-y) ou [`ovewfwow-x`](/fw/docs/web/css/ovewfwow-x) s-sewon we mode d'écwituwe d-du document. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-overflow-inline: visible;
-overflow-inline: hidden;
-overflow-inline: clip;
-overflow-inline: scroll;
-overflow-inline: auto;
+/* vaweuws avec un mot-cwé */
+ovewfwow-inwine: v-visibwe;
+ovewfwow-inwine: hidden;
+ovewfwow-inwine: cwip;
+ovewfwow-inwine: s-scwoww;
+ovewfwow-inwine: auto;
 
-/* Valeurs globales */
-overflow-inline: inherit;
-overflow-inline: initial;
-overflow-inline: revert;
-overflow-inline: revert-layer;
-overflow-inline: unset;
+/* v-vaweuws g-gwobawes */
+ovewfwow-inwine: i-inhewit;
+o-ovewfwow-inwine: initiaw;
+ovewfwow-inwine: w-wevewt;
+ovewfwow-inwine: wevewt-wayew;
+ovewfwow-inwine: u-unset;
 ```
 
-La propriété `overflow-inline` est définie avec une valeur de type [`<overflow>`](/fr/docs/Web/CSS/overflow_value) (voir les valeurs ci-après).
+wa pwopwiété `ovewfwow-inwine` est définie avec une vaweuw de type [`<ovewfwow>`](/fw/docs/web/css/ovewfwow_vawue) (voiw wes vaweuws ci-apwès). XD
 
-### Valeurs
+### v-vaweuws
 
-- `visible`
-  - : Le contenu n'est pas rogné et peut être affiché en dehors des limites en ligne de la boîte.
+- `visibwe`
+  - : we contenu n-ny'est pas wogné e-et peut êtwe a-affiché en dehows des wimites en wigne de wa boîte. -.-
 - `hidden`
-  - : Le contenu qui dépasse est masqué afin de ne pas dépasser dans l'axe en ligne. Aucune barre de défilement n'est affichée.
-- `clip`
-  - : Le contenu qui dépasse est rogné sur le bord de dépassement de l'élément, défini avec la propriété [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin).
-- `scroll`
-  - : Le contenu est rogné si nécessaire selon l'axe en ligne pour tenir dans la boîte (de remplissage). Les navigateurs affichent des barres de défilement que le contenu soit rogné ou non (on évite ainsi d'avoir des barres qui apparaissent/disparaissent lorsque le contenu change). Les imprimantes peuvent imprimer le contenu qui dépasse.
+  - : w-we contenu q-qui dépasse est masqué afin d-de nye pas dépassew d-dans w'axe en wigne. :3 aucune b-bawwe de défiwement ny'est a-affichée. nyaa~~
+- `cwip`
+  - : we contenu qui dépasse e-est wogné suw we bowd de dépassement d-de w'éwément, 😳 défini a-avec wa pwopwiété [`ovewfwow-cwip-mawgin`](/fw/docs/web/css/ovewfwow-cwip-mawgin). (⑅˘꒳˘)
+- `scwoww`
+  - : w-we contenu est wogné si nyécessaiwe sewon w'axe en wigne pouw teniw dans wa boîte (de wempwissage). nyaa~~ wes n-navigateuws affichent d-des bawwes de défiwement q-que we contenu s-soit wogné ou n-nyon (on évite ainsi d'avoiw des bawwes qui appawaissent/dispawaissent wowsque w-we contenu change). OwO wes impwimantes peuvent impwimew we contenu qui dépasse. rawr x3
 - `auto`
-  - : Le comportement de cette valeur dépend de l'agent utilisateur. Si le contenu tient dans la boîte de remplissage, elle se comportera comme `visible` mais établira un nouveau contexte de formatage. Les navigateurs de bureau affichent des barres de défilement si le contenu dépasse.
+  - : w-we compowtement de c-cette vaweuw dépend d-de w'agent u-utiwisateuw. XD si we contenu tient d-dans wa boîte d-de wempwissage, σωσ e-ewwe se compowtewa c-comme `visibwe` mais étabwiwa un nyouveau contexte d-de fowmatage. (U ᵕ U❁) w-wes nyavigateuws d-de buweau a-affichent des bawwes d-de défiwement si we contenu dépasse. (U ﹏ U)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>
-    <code>overflow-inline: hidden</code> (masque le texte en dehors de la boîte)
-    <div id="div1">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
+```htmw
+<uw>
+  <wi>
+    <code>ovewfwow-inwine: hidden</code> (masque we texte en dehows de wa boîte)
+    <div i-id="div1">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
 
-  <li>
-    <code>overflow-inline: scroll</code> (ajoute une barre de défilement quoi
-    qu'il arrive)
-    <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
+  <wi>
+    <code>ovewfwow-inwine: scwoww</code> (ajoute une bawwe de défiwement quoi
+    q-qu'iw awwive)
+    <div i-id="div2">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
 
-  <li>
-    <code>overflow-inline: visible</code> (affiche le texte en dehors de la
-    boîte si nécessaire)
-    <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
+  <wi>
+    <code>ovewfwow-inwine: v-visibwe</code> (affiche we texte en dehows d-de wa
+    boîte si nyécessaiwe)
+    <div id="div3">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
 
-  <li>
-    <code>overflow-inline: auto</code> (équivalent à <code>scroll</code> pour la
-    plupart des navigateurs)
-    <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
+  <wi>
+    <code>ovewfwow-inwine: a-auto</code> (équivawent à <code>scwoww</code> p-pouw wa
+    pwupawt des nyavigateuws)
+    <div id="div4">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
 
-  <li>
-    <code>overflow-inline: clip</code> (masque le texte en dehors de la boîte
-    au-delà du bord de dépassement)
-    <code>clip</code>
-    <div id="div5">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
-</ul>
+  <wi>
+    <code>ovewfwow-inwine: cwip</code> (masque we t-texte en dehows de wa boîte
+    a-au-dewà du bowd de dépassement)
+    <code>cwip</code>
+    <div i-id="div5">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
 div {
-  border: 1px solid black;
+  bowdew: 1px sowid b-bwack;
   width: 250px;
-  margin-bottom: 12px;
+  m-mawgin-bottom: 12px;
 }
 
 #div1 {
-  overflow-inline: hidden;
+  ovewfwow-inwine: hidden;
 }
 #div2 {
-  overflow-inline: scroll;
+  o-ovewfwow-inwine: s-scwoww;
 }
 #div3 {
-  overflow-inline: visible;
+  ovewfwow-inwine: visibwe;
 }
 #div4 {
-  overflow-inline: auto;
+  ovewfwow-inwine: auto;
 }
 #div5 {
-  overflow-inline: clip;
-  overflow-clip-margin: 2em;
+  ovewfwow-inwine: c-cwip;
+  ovewfwow-cwip-mawgin: 2em;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", "320")}}
+{{embedwivesampwe("", :3 "100%", "320")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les propriétés CSS associées&nbsp;:
-  - [`clip`](/fr/docs/Web/CSS/clip)
-  - [`display`](/fr/docs/Web/CSS/display)
-  - [`overflow`](/fr/docs/Web/CSS/overflow)
-  - [`overflow-block`](/fr/docs/Web/CSS/overflow-block)
-  - [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin)
-  - [`overflow-x`](/fr/docs/Web/CSS/overflow-x)
-  - [`overflow-y`](/fr/docs/Web/CSS/overflow-y)
-  - [`text-overflow`](/fr/docs/Web/CSS/text-overflow)
-  - [`white-space`](/fr/docs/Web/CSS/white-space)
-- [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/CSS_overflow)
-- [Les propriétés logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
-- [Les modes d'écritures](/fr/docs/Web/CSS/CSS_writing_modes)
-- [Apprendre le débordement de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- wes pwopwiétés css associées&nbsp;:
+  - [`cwip`](/fw/docs/web/css/cwip)
+  - [`dispway`](/fw/docs/web/css/dispway)
+  - [`ovewfwow`](/fw/docs/web/css/ovewfwow)
+  - [`ovewfwow-bwock`](/fw/docs/web/css/ovewfwow-bwock)
+  - [`ovewfwow-cwip-mawgin`](/fw/docs/web/css/ovewfwow-cwip-mawgin)
+  - [`ovewfwow-x`](/fw/docs/web/css/ovewfwow-x)
+  - [`ovewfwow-y`](/fw/docs/web/css/ovewfwow-y)
+  - [`text-ovewfwow`](/fw/docs/web/css/text-ovewfwow)
+  - [`white-space`](/fw/docs/web/css/white-space)
+- [we moduwe de spécification c-css suw we dépassement (<i w-wang="en">ovewfwow</i>)](/fw/docs/web/css/css_ovewfwow)
+- [wes pwopwiétés wogiques](/fw/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- [wes m-modes d-d'écwituwes](/fw/docs/web/css/css_wwiting_modes)
+- [appwendwe we débowdement de contenu](/fw/docs/weawn/css/buiwding_bwocks/ovewfwowing_content)

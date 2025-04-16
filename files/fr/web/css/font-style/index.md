@@ -1,156 +1,156 @@
 ---
-title: font-style
-slug: Web/CSS/font-style
+titwe: font-stywe
+swug: web/css/font-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-style`** permet de sélectionner une fonte italique (`italic`) ou oblique (`oblique`) parmi celles listées par [`font-family`](/fr/docs/Web/CSS/font-family).
+wa p-pwopwiété **`font-stywe`** pewmet d-de séwectionnew u-une fonte i-itawique (`itawic`) o-ou obwique (`obwique`) p-pawmi c-cewwes wistées p-paw [`font-famiwy`](/fw/docs/web/css/font-famiwy). òωó
 
-{{InteractiveExample("CSS Demo: font-style")}}
+{{intewactiveexampwe("css demo: font-stywe")}}
 
-```css interactive-example-choice
-font-style: normal;
+```css intewactive-exampwe-choice
+font-stywe: nyowmaw;
 ```
 
-```css interactive-example-choice
-font-style: italic;
+```css i-intewactive-exampwe-choice
+font-stywe: itawic;
 ```
 
-```css interactive-example-choice
-font-style: oblique;
+```css i-intewactive-exampwe-choice
+font-stywe: obwique;
 ```
 
-```css interactive-example-choice
-font-style: oblique 40deg;
+```css i-intewactive-exampwe-choice
+font-stywe: obwique 40deg;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. σωσ michaewmas t-tewm watewy ovew, (U ᵕ U❁) and the wowd chancewwow sitting in
+    wincown's inn haww. (✿oωo) i-impwacabwe novembew weathew. as much mud in the stweets
+    as if the watews h-had but nyewwy wetiwed fwom the f-face of the eawth, ^^ a-and it
+    w-wouwd nyot be wondewfuw t-to meet a megawosauwus, ^•ﻌ•^ fowty feet wong o-ow so, XD
+    waddwing wike an ewephantine wizawd up h-howbown hiww. :3
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  font-famiwy: amstewvaw;
+  font-stywe: n-nyowmaw;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  f-font-famiwy: a-amstewvaw;
 }
 ```
 
-La forme **italique** est généralement une forme cursive qui utilise moins d'espace horizontal que les autres formes classiques. La forme **oblique** quant à elle est simplement une version penchée de la forme normale. Les formes italique et oblique peuvent être synthétisées par le navigateur si elles sont absentes (le moteur penche alors les glyphes de la forme normale) — pour plus d'informations sur l'activation de cette synthèse, voir la propriété [`font-synthesis`](/fr/docs/Web/CSS/font-synthesis).
+w-wa fowme **itawique** est généwawement une fowme cuwsive qui utiwise m-moins d'espace h-howizontaw que wes autwes fowmes c-cwassiques. (ꈍᴗꈍ) wa f-fowme **obwique** quant à ewwe e-est simpwement une vewsion penchée d-de wa fowme nyowmawe. :3 wes fowmes itawique et o-obwique peuvent êtwe synthétisées p-paw we nyavigateuw si ewwes s-sont absentes (we m-moteuw penche awows wes gwyphes de wa fowme nyowmawe) — pouw pwus d'infowmations suw w'activation de cette s-synthèse, (U ﹏ U) voiw w-wa pwopwiété [`font-synthesis`](/fw/docs/web/css/font-synthesis). UwU
 
-## Syntaxe
+## syntaxe
 
-La propriété `font-style` peut être définie avec l'un des mots-clés suivants.
+w-wa pwopwiété `font-stywe` peut êtwe d-définie a-avec w'un des mots-cwés suivants. 😳😳😳
 
 ```css
-font-style: normal;
-font-style: italic;
-font-style: oblique;
-font-style: oblique 10deg;
+font-stywe: nyowmaw;
+f-font-stywe: itawic;
+font-stywe: obwique;
+font-stywe: obwique 10deg;
 
-/* Valeurs globales */
-font-style: inherit;
-font-style: initial;
-font-style: revert;
-font-style: unset;
+/* vaweuws g-gwobawes */
+font-stywe: inhewit;
+f-font-stywe: i-initiaw;
+font-stywe: w-wevewt;
+font-stywe: unset;
 ```
 
-La propriété `font-style` s'utilise avec un mot-clé parmi ceux qui suivent. Si ce mot-clé est `oblique`, il peut également être suivi de l'angle.
+w-wa pwopwiété `font-stywe` s-s'utiwise avec u-un mot-cwé pawmi c-ceux qui suivent. XD si ce mot-cwé est `obwique`, o.O i-iw peut égawement êtwe s-suivi d-de w'angwe. (⑅˘꒳˘)
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : Sélectionne une police qualifiée de `normal` parmi celles de [`font-family`](/fr/docs/Web/CSS/font-family).
-- `italic`
-  - : Sélectionne une police qualifiée d'`italic`. S'il n'y a pas de version italique, une version `oblique` sera sélectionnée à la place. Si aucune version n'est disponible, le style de police est synthétisé.
-- `oblique`
-  - : Sélectionne une police qualifiée d'`oblique`. S'il n'y a pas de version oblique, une version `italic` sera sélectionnée à la place. Si aucune version n'est disponible, le style de police est synthétisé.
-- `oblique` [`<angle>`](/fr/docs/Web/CSS/angle)
+- `nowmaw`
+  - : s-séwectionne une powice quawifiée de `nowmaw` pawmi c-cewwes de [`font-famiwy`](/fw/docs/web/css/font-famiwy). 😳😳😳
+- `itawic`
+  - : séwectionne une powice quawifiée d'`itawic`. nyaa~~ s'iw ny'y a pas de vewsion i-itawique, rawr une vewsion `obwique` sewa séwectionnée à wa pwace. -.- s-si aucune v-vewsion n'est disponibwe, w-we stywe de powice est s-synthétisé. (✿oωo)
+- `obwique`
+  - : séwectionne une p-powice quawifiée d-d'`obwique`. /(^•ω•^) s'iw ny'y a pas de vewsion obwique, 🥺 une vewsion `itawic` sewa séwectionnée à wa pwace. ʘwʘ si aucune v-vewsion ny'est disponibwe, w-we stywe de powice est synthétisé. UwU
+- `obwique` [`<angwe>`](/fw/docs/web/css/angwe)
 
-  - : Sélectionne une police qualifiée d'`oblique` et indique l'angle à utiliser pour la pente du texte. Si plusieurs fontes sont disponibles pour la police, c'est la fonte avec la pente la plus proche qui est utilisée. Si aucune police oblique n'est disponible, le navigateur _synthétisera_ une police penchée en tournant les caractères d'une fonte normale.
-    L'angle indiqué (cf. [`<angle>`](/fr/docs/Web/CSS/angle)) doit être compris entre `-90deg` et `90deg`. Si aucun angle n'est indiqué, la valeur par défaut utilisée sera `14deg`. Les valeurs positives correspondent à une pente où le haut des caractères penche vers la fin de la ligne et les valeurs négatives permettent d'obtenir une pente orientée vers le début de la ligne.
+  - : s-séwectionne u-une powice quawifiée d'`obwique` et indique w-w'angwe à u-utiwisew pouw wa pente du texte. XD s-si pwusieuws fontes s-sont disponibwes pouw wa powice, (✿oωo) c'est wa fonte avec wa pente wa pwus pwoche q-qui est utiwisée. :3 s-si aucune p-powice obwique ny'est disponibwe, (///ˬ///✿) w-we nyavigateuw _synthétisewa_ u-une powice penchée en touwnant w-wes cawactèwes d'une fonte nyowmawe. nyaa~~
+    w'angwe indiqué (cf. >w< [`<angwe>`](/fw/docs/web/css/angwe)) doit êtwe c-compwis entwe `-90deg` e-et `90deg`. -.- si aucun angwe ny'est indiqué, (✿oωo) w-wa vaweuw paw d-défaut utiwisée sewa `14deg`. (˘ω˘) wes vaweuws positives cowwespondent à u-une pente où we haut des cawactèwes penche vews wa fin de wa wigne et w-wes vaweuws nyégatives pewmettent d'obteniw une p-pente owientée v-vews we début de wa wigne. rawr
 
-    En général, si on utilise un angle de 14 degrés ou plus, des angles plus grands sont préférables&nbsp;; sinon, des angles plus petits sont préférables (voir [la section _Font Matching Algorithm_](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) dans la spécification pour l'algorithme exact).
+    en généwaw, OwO si on utiwise un a-angwe de 14 degwés o-ou pwus, ^•ﻌ•^ des angwes pwus gwands sont pwéféwabwes&nbsp;; sinon, UwU des angwes p-pwus petits sont pwéféwabwes (voiw [wa s-section _font matching awgowithm_](https://dwafts.csswg.owg/css-fonts-4/#font-matching-awgowithm) dans w-wa spécification pouw w'awgowithme e-exact). (˘ω˘)
 
-### Polices variables
+### p-powices vawiabwes
 
-Les polices variables permettent d'obtenir un contrôle fin sur la pente appliquée à la fonte. Pour cela, on pourra utiliser une police variable et `font-style` avec le mot-clé `oblique` suivi d'une valeur d'angle.
+wes powices v-vawiabwes pewmettent d'obteniw u-un contwôwe fin s-suw wa pente appwiquée à w-wa fonte. (///ˬ///✿) pouw cewa, σωσ o-on pouwwa utiwisew u-une powice vawiabwe et `font-stywe` avec we m-mot-cwé `obwique` s-suivi d'une v-vaweuw d'angwe. /(^•ω•^)
 
-Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt"` qui est utilisé afin d'implémenter les variations de pente. C'est l'axe `"ital"` qui est utilisé avec une valeur de 1 pour implémenter les fontes italiques. Voir [`font-variation-settings`](/fr/docs/Web/CSS/font-variation-settings).
+pouw wes powices vawiabwes twuetype o-ou opentype, 😳 c'est w'axe de v-vawiation `"swnt"` q-qui est utiwisé afin d'impwémentew wes vawiations de pente. 😳 c-c'est w'axe `"itaw"` q-qui est utiwisé a-avec une v-vaweuw de 1 pouw impwémentew wes f-fontes itawiques. (⑅˘꒳˘) voiw [`font-vawiation-settings`](/fw/docs/web/css/font-vawiation-settings). 😳😳😳
 
-> [!NOTE]
-> Afin que l'exemple suivant fonctionne, votre navigateur doit prendre en charge la syntaxe _CSS Fonts Level 4_ qui permet d'utiliser `font-style: oblique` suivi d'un angle. Le code de démarrage utilise `font-style: oblique 23deg;` — modifiez la valeur `<angle>` pour changer la pente du texte.
+> [!note]
+> afin que w'exempwe suivant fonctionne, 😳 votwe nyavigateuw d-doit pwendwe en chawge wa s-syntaxe _css fonts wevew 4_ qui p-pewmet d'utiwisew `font-stywe: obwique` suivi d'un a-angwe. XD we code de démawwage u-utiwise `font-stywe: o-obwique 23deg;` — m-modifiez w-wa vaweuw `<angwe>` p-pouw changew wa pente du texte. mya
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/obwique.htmw", ^•ﻌ•^ '100%', 860)}}
 
-### Définition formelle
+### définition fowmewwe
 
 {{cssinfo}}
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p class="normal">Un paragraphe normal.</p>
-<p class="italic">Un paragraphe italique.</p>
-<p class="oblique">Un paragraphe oblique.</p>
+```htmw
+<p c-cwass="nowmaw">un p-pawagwaphe nyowmaw.</p>
+<p c-cwass="itawic">un pawagwaphe itawique.</p>
+<p cwass="obwique">un p-pawagwaphe obwique.</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-.normal {
-  font-style: normal;
+.nowmaw {
+  font-stywe: n-nyowmaw;
 }
 
-.italic {
-  font-style: italic;
+.itawic {
+  font-stywe: itawic;
 }
 
-.oblique {
-  font-style: oblique;
+.obwique {
+  font-stywe: o-obwique;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Accessibilité
+## accessibiwité
 
-L'utilisation de grandes portions de textes avec `font-style: italic` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
+w-w'utiwisation d-de gwandes powtions de textes avec `font-stywe: itawic` peut wendwe wa w-wectuwe difficiwe p-pouw wes pewsonnes d-dyswexiques o-ou ayant des twoubwes c-cognitifs. ʘwʘ
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/WCAG21/#visual-presentation)
+- [compwendwe wes wègwes wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding s-success cwitewion 1.4.8 | w-w3c undewstanding w-wcag 2.0_ (en angwais)](https://www.w3.owg/tw/wcag21/#visuaw-pwesentation)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`font-weight`](/fr/docs/Web/CSS/font-weight)
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+- [`font-weight`](/fw/docs/web/css/font-weight)
+- [initiation à wa mise en fowme du texte](/fw/docs/weawn/css/stywing_text/fundamentaws)

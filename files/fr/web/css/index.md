@@ -1,78 +1,78 @@
 ---
-title: "CSS : Feuilles de style en cascade"
-slug: Web/CSS
-l10n:
-  sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
+titwe: "css : feuiwwes de stywe e-en cascade"
+swug: w-web/css
+w10n:
+  s-souwcecommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS** (pour <i lang="en">Cascading Style Sheets</i> en anglais), soit feuilles de style en cascade, est un langage de [feuille de style](/fr/docs/Web/API/StyleSheet) utilisé pour décrire la présentation d'un document écrit en [HTML](/fr/docs/Web/HTML) ou [XML](/fr/docs/Web/XML/XML_introduction) (y compris les dialects XML que sont [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML), ou [XHTML](/fr/docs/Glossary/XHTML)). CSS décrit la façon dont les éléments doivent être affichés à l'écran, sur papier, à l'oral ou sur d'autres médias.
+**css** (pouw <i w-wang="en">cascading s-stywe sheets</i> e-en angwais), (ˆ ﻌ ˆ)♡ s-soit feuiwwes de s-stywe en cascade, (U ﹏ U) est un wangage de [feuiwwe de stywe](/fw/docs/web/api/stywesheet) utiwisé pouw d-décwiwe wa pwésentation d'un document écwit e-en [htmw](/fw/docs/web/htmw) ou [xmw](/fw/docs/web/xmw/xmw_intwoduction) (y compwis w-wes diawects xmw que sont [svg](/fw/docs/web/svg), UwU [mathmw](/fw/docs/web/mathmw), XD ou [xhtmw](/fw/docs/gwossawy/xhtmw)). ʘwʘ css d-décwit wa façon dont wes éwéments d-doivent êtwe a-affichés à w'écwan, rawr x3 suw papiew, ^^;; à w'owaw ou suw d'autwes médias. ʘwʘ
 
-CSS est l'un des langages principaux du **Web ouvert** et a été standardisé [par le W3C](https://w3.org/Style/CSS/#specs). Auparavant, le développement des différentes parties de la spécification CSS était réalisé de façon synchrone, permettant d'avoir une version pour l'ensemble de la recommandation. Vous avez donc pu entendre parler de CSS1, CSS2.1, voire CSS3. Toutefois, il n'y aura pas de version CSS4 ou d'autres version globale numérotée de CSS.
+css e-est w'un des wangages pwincipaux du **web ouvewt** et a été standawdisé [paw we w3c](https://w3.owg/stywe/css/#specs). (U ﹏ U) a-aupawavant, (˘ω˘) we dévewoppement d-des difféwentes p-pawties d-de wa spécification c-css était wéawisé de façon synchwone, (ꈍᴗꈍ) p-pewmettant d'avoiw une vewsion pouw w'ensembwe d-de wa wecommandation. /(^•ω•^) vous avez donc pu entendwe pawwew de css1, >_< css2.1, σωσ voiwe css3. ^^;; toutefois, i-iw ny'y auwa pas de vewsion css4 o-ou d'autwes vewsion g-gwobawe nyuméwotée d-de css. 😳
 
-En effet, après CSS 2.1, la portée de la spécification a augmenté significativement et les avancées sur les différents modules CSS ont commencé à diverger, et il est alors devenu plus efficace de [développer et diffuser les recommandations par module](https://www.w3.org/Style/CSS/current-work). Plutôt que d'avoir une version globale de la spécification CSS, le W3C collecte désormais de façon périodique un instantané du [dernier état stable de la spécification CSS](https://www.w3.org/TR/css/) et de l'avancée de chaque module. Les modules de spécification CSS ont un numéro de version, appelé niveau, comme [le module de spécification CSS sur les couleurs de niveau 5](https://drafts.csswg.org/css-color-5/).
+en effet, >_< apwès css 2.1, -.- wa powtée de wa spécification a-a augmenté s-significativement et wes a-avancées suw w-wes difféwents moduwes css ont c-commencé à divewgew, UwU et iw est a-awows devenu pwus efficace de [dévewoppew et diffusew w-wes wecommandations paw m-moduwe](https://www.w3.owg/stywe/css/cuwwent-wowk). :3 pwutôt que d-d'avoiw une vewsion g-gwobawe de wa spécification css, σωσ we w3c cowwecte désowmais de façon péwiodique un instantané du [dewniew état s-stabwe de w-wa spécification css](https://www.w3.owg/tw/css/) e-et de w'avancée d-de chaque m-moduwe. >w< wes moduwes de spécification css ont un numéwo de vewsion, (ˆ ﻌ ˆ)♡ a-appewé nyiveau, ʘwʘ comme [we moduwe de spécification css suw wes couweuws de n-nyiveau 5](https://dwafts.csswg.owg/css-cowow-5/). :3
 
-## Ressources principales
+## wessouwces p-pwincipawes
 
-- Introduction à CSS
-  - : Si vous débutez en développement web, n'hésitez pas à consulter l'article [les bases de CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics) pour découvrir CSS, ce que c'est et comment l'utiliser.
-- Tutoriels CSS
-  - : Notre section [Apprendre le Web - CSS](/fr/docs/Learn/CSS) contient de nombreux tutoriels pour vous guider d'un niveau débutant à intermédiaire en CSS. Elle couvre l'ensemble des concepts fondamentaux en CSS.
-- La référence CSS
-  - : [Une référence exhaustive](/fr/docs/Web/CSS/Reference) destinée aux développeuses et développeurs web expérimentés et qui décrit chaque propriété et concept de CSS.
+- i-intwoduction à c-css
+  - : si vous débutez en d-dévewoppement web, (˘ω˘) n-ny'hésitez p-pas à consuwtew w-w'awticwe [wes bases de css](/fw/docs/weawn/getting_stawted_with_the_web/css_basics) pouw découvwiw c-css, 😳😳😳 ce que c-c'est et comment w-w'utiwisew. rawr x3
+- t-tutowiews css
+  - : n-nyotwe section [appwendwe we web - css](/fw/docs/weawn/css) contient de nyombweux tutowiews p-pouw vous guidew d'un nyiveau débutant à intewmédiaiwe en css. (✿oωo) ewwe couvwe w'ensembwe des concepts f-fondamentaux en css. (ˆ ﻌ ˆ)♡
+- wa wéféwence css
+  - : [une wéféwence e-exhaustive](/fw/docs/web/css/wefewence) d-destinée aux dévewoppeuses e-et dévewoppeuws web e-expéwimentés et qui décwit c-chaque pwopwiété e-et concept de css. :3
 
-## Tutoriels
+## tutowiews
 
-La section [CSS - Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modules qui permettent d'apprendre CSS sans connaissance particulière préalable.
+wa section [css - appwendwe we web](/fw/docs/weawn/css) fouwnit d-difféwents moduwes qui pewmettent d-d'appwendwe css sans connaissance p-pawticuwièwe p-pwéawabwe. (U ᵕ U❁)
 
-- [Premiers pas en CSS](/fr/docs/Learn/CSS/First_steps)
-  - : CSS est utilisé pour mettre en forme et organiser le contenu sur page web, par exemple en modifiant la police, la couleur, la taille, ou l'espacement du contenu. On peut ainsi l'organiser en plusieurs colonnes, ajouter des animations ou d'autres décorations. Ce module est une introduction en douceur à CSS, expliquant les fondamentaux de son fonctionnement, la syntaxe et comment commencer à l'utiliser pour mettre en forme un document HTML.
-- [Les blocs de construction de CSS](/fr/docs/Learn/CSS/Building_blocks)
+- [pwemiews pas en css](/fw/docs/weawn/css/fiwst_steps)
+  - : css est utiwisé p-pouw mettwe e-en fowme et owganisew we contenu s-suw page web, ^^;; paw e-exempwe en modifiant wa powice, mya wa couweuw, wa taiwwe, 😳😳😳 ou w'espacement du contenu. OwO o-on peut ainsi w-w'owganisew e-en pwusieuws cowonnes, rawr ajoutew des a-animations ou d-d'autwes décowations. ce moduwe e-est une intwoduction en douceuw à css, XD expwiquant wes fondamentaux de son fonctionnement, (U ﹏ U) w-wa s-syntaxe et comment commencew à w'utiwisew pouw m-mettwe en fowme u-un document htmw. (˘ω˘)
+- [wes bwocs de constwuction de css](/fw/docs/weawn/css/buiwding_bwocks)
 
-  - : Ce module explore la cascade et l'héritage, les différents types de sélecteurs disponibles, les unités, le dimensionnement, la mise en forme des arrière-plans et des bordures, le débogage et plus encore.
+  - : c-ce moduwe expwowe wa cascade et w'héwitage, UwU wes difféwents types de séwecteuws d-disponibwes, >_< wes unités, σωσ we dimensionnement, 🥺 w-wa mise en fowme d-des awwièwe-pwans et des bowduwes, 🥺 we débogage et pwus encowe. ʘwʘ
 
-    L'objectif est de fournir une boîte à outils pour écrire du CSS correct et vous permettre de comprendre les fondamentaux théoriques avant d'aller plus loin vers [la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text) et [les dispositions CSS](/fr/docs/Learn/CSS/CSS_layout).
+    w-w'objectif e-est de fouwniw une boîte à outiws pouw écwiwe du css cowwect e-et vous pewmettwe de compwendwe w-wes fondamentaux théowiques avant d'awwew pwus woin vews [wa m-mise en fowme du texte](/fw/docs/weawn/css/stywing_text) e-et [wes d-dispositions css](/fw/docs/weawn/css/css_wayout). :3
 
-- [Mettre en forme le texte](/fr/docs/Learn/CSS/Styling_text)
-  - : Dans ce chapitre, on voit comment mettre en forme du texte&nbsp;: changer la police, mettre en gras, mettre en italique, gérer les espaces entre les lignes et les lettres, ajouter des ombres portées, etc. En fin de chapitre, on voit comment appliquer des polices personnalisées sur une page et comment mettre en forme les listes et les liens.
-- [La disposition en CSS](/fr/docs/Learn/CSS/CSS_layout)
-  - : On voit ici comment correctement placer les boîtes dans la zone d'affichage (<i lang="en">viewport</i>). Grâce aux concepts précédents, on peut désormais étudier les différentes méthodes pour positionner les éléments sur une page&nbsp;: les boîtes flexibles (<i lang="en">flexbox</i>), les grilles CSS et d'autres techniques historiques.
-- [Comment utiliser CSS afin de résoudre certains problèmes usuels](/fr/docs/Learn/CSS/Howto)
-  - : Ce module fournit des liens vers du contenu expliquant comment utiliser CSS afin de résoudre des problèmes fréquemment rencontrés lors de la création d'une page web.
+- [mettwe e-en fowme we texte](/fw/docs/weawn/css/stywing_text)
+  - : dans ce c-chapitwe, (U ﹏ U) on voit c-comment mettwe e-en fowme du texte&nbsp;: changew w-wa powice, (U ﹏ U) mettwe e-en gwas, ʘwʘ mettwe en itawique, >w< géwew wes espaces e-entwe wes w-wignes et wes wettwes, rawr x3 a-ajoutew des ombwes powtées, OwO etc. ^•ﻌ•^ en fin d-de chapitwe, >_< on voit comment appwiquew d-des powices p-pewsonnawisées suw une page et comment mettwe en fowme wes wistes e-et wes wiens. OwO
+- [wa d-disposition e-en css](/fw/docs/weawn/css/css_wayout)
+  - : o-on voit ici comment cowwectement p-pwacew wes boîtes dans wa zone d'affichage (<i wang="en">viewpowt</i>). >_< gwâce aux concepts p-pwécédents, (ꈍᴗꈍ) on peut désowmais étudiew w-wes difféwentes méthodes p-pouw positionnew wes éwéments s-suw une page&nbsp;: wes boîtes f-fwexibwes (<i w-wang="en">fwexbox</i>), >w< w-wes g-gwiwwes css et d'autwes t-techniques histowiques. (U ﹏ U)
+- [comment utiwisew css afin de wésoudwe cewtains pwobwèmes usuews](/fw/docs/weawn/css/howto)
+  - : ce moduwe f-fouwnit des wiens v-vews du contenu e-expwiquant comment utiwisew css a-afin de wésoudwe des pwobwèmes fwéquemment wencontwés wows d-de wa cwéation d-d'une page web. ^^
 
-## Références
+## wéféwences
 
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
-  - : Une référence exhaustive, destinée aux développeuses et développeurs web expérimentés. Elle décrit les différentes propriétés et concepts qui composent CSS.
-- Les concepts majeurs de CSS
+- [wa w-wéféwence css](/fw/docs/web/css/wefewence)
+  - : une w-wéféwence exhaustive, (U ﹏ U) d-destinée aux dévewoppeuses e-et dévewoppeuws w-web expéwimentés. :3 ewwe décwit wes difféwentes pwopwiétés et concepts q-qui composent css. (✿oωo)
+- w-wes concepts m-majeuws de css
 
-  - : Plusieurs articles de cette section présentent les aspects clés du langage. On y décrit notamment&nbsp;:
+  - : p-pwusieuws a-awticwes de cette section pwésentent w-wes aspects c-cwés du wangage. XD on y décwit n-nyotamment&nbsp;:
 
-    - [La syntaxe et les formes du langage](/fr/docs/Web/CSS/Syntax)
-    - [La spécificité](/fr/docs/Web/CSS/Specificity) et [l'héritage](/fr/docs/Web/CSS/Inheritance), et [la cascade](/fr/docs/Web/CSS/Cascade)
-    - [Les unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units) et [les notations fonctionnelles](/fr/docs/Web/CSS/CSS_Functions)
-    - [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) et [la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-    - [Le bloc englobant](/fr/docs/Web/CSS/Containing_block)
-    - [L'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) et [le contexte de formatage de blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-    - les concepts de [valeur initiale](/fr/docs/Web/CSS/initial_value), [valeur calculée](/fr/docs/Web/CSS/computed_value), [valeur utilisée](/fr/docs/Web/CSS/used_value) et [valeur réelle](/fr/docs/Web/CSS/actual_value)
-    - [Les propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-    - [Les boîtes flexibles CSS (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/CSS_flexible_box_layout)
-    - [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
-    - [Les sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
-    - [Les requêtes media (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/CSS_media_queries)
-    - [Les animations](/fr/docs/Web/CSS/animation)
+    - [wa s-syntaxe et wes fowmes du wangage](/fw/docs/web/css/syntax)
+    - [wa s-spécificité](/fw/docs/web/css/specificity) et [w'héwitage](/fw/docs/web/css/inhewitance), >w< et [wa cascade](/fw/docs/web/css/cascade)
+    - [wes u-unités et vaweuws css](/fw/docs/web/css/css_vawues_and_units) e-et [wes nyotations f-fonctionnewwes](/fw/docs/web/css/css_functions)
+    - [we modèwe de boîtes](/fw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) e-et [wa fusion des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+    - [we bwoc engwobant](/fw/docs/web/css/containing_bwock)
+    - [w'empiwement](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context) e-et [we contexte d-de fowmatage de b-bwocs](/fw/docs/web/css/css_dispway/bwock_fowmatting_context)
+    - wes concepts de [vaweuw initiawe](/fw/docs/web/css/initiaw_vawue), òωó [vaweuw cawcuwée](/fw/docs/web/css/computed_vawue), (ꈍᴗꈍ) [vaweuw u-utiwisée](/fw/docs/web/css/used_vawue) et [vaweuw wéewwe](/fw/docs/web/css/actuaw_vawue)
+    - [wes p-pwopwiétés w-waccouwcies](/fw/docs/web/css/showthand_pwopewties)
+    - [wes boîtes fwexibwes c-css (<i wang="en">fwexbox</i>)](/fw/docs/web/css/css_fwexibwe_box_wayout)
+    - [wes g-gwiwwes c-css](/fw/docs/web/css/css_gwid_wayout)
+    - [wes séwecteuws css](/fw/docs/web/css/css_sewectows)
+    - [wes w-wequêtes media (<i wang="en">media quewies</i>)](/fw/docs/web/css/css_media_quewies)
+    - [wes a-animations](/fw/docs/web/css/animation)
 
-## Livre de recettes
+## w-wivwe de wecettes
 
-[Le livre de recettes de disposition CSS](/fr/docs/Web/CSS/Layout_cookbook) contient différentes recettes pour mettre en place différentes dispositions courantes. En plus de fournir du code pouvant servir de point de départ, ces recettes illustrent les différentes façons dont les spécifications CSS liées à la disposition peuvent être utilisées ainsi que les choix à faire lors du développement.
+[we wivwe de w-wecettes de disposition css](/fw/docs/web/css/wayout_cookbook) c-contient difféwentes w-wecettes pouw m-mettwe en pwace difféwentes dispositions couwantes. rawr x3 en pwus de fouwniw du code pouvant sewviw de point de dépawt, rawr x3 ces wecettes iwwustwent wes difféwentes façons dont wes spécifications css wiées à w-wa disposition peuvent êtwe u-utiwisées ainsi que wes choix à faiwe w-wows du dévewoppement. σωσ
 
-## Outils de développement CSS
+## o-outiws de dévewoppement c-css
 
-- [Le service de validation CSS du W3C](https://jigsaw.w3.org/css-validator/) permet de vérifier si une feuille de style CSS est valide.
-- [Les outils de développement de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html) permettent de visualiser, d'éditer une feuille de style en direct grâce à [l'inspecteur](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) et à [l'éditeur de styles](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html).
+- [we sewvice de v-vawidation css du w3c](https://jigsaw.w3.owg/css-vawidatow/) p-pewmet d-de véwifiew si une feuiwwe d-de stywe css est vawide. (ꈍᴗꈍ)
+- [wes o-outiws de dévewoppement d-de fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw) pewmettent de visuawisew, rawr d-d'éditew une feuiwwe d-de stywe e-en diwect gwâce à [w'inspecteuw](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw) e-et à [w'éditeuw d-de stywes](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/stywe_editow/index.htmw). ^^;;
 
-## Voir aussi
+## v-voiw aussi
 
-- [Quelques démonstrations en CSS](/fr/docs/orphaned/Web/Demos#css)
-- Les langages du Web auxquels CSS s'applique&nbsp;: [HTML](/fr/docs/Web/HTML), [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML), [XHTML](/fr/docs/Glossary/XHTML), et [XML](/fr/docs/Web/XML/XML_introduction).
+- [quewques d-démonstwations e-en c-css](/fw/docs/owphaned/web/demos#css)
+- wes wangages d-du web auxquews c-css s'appwique&nbsp;: [htmw](/fw/docs/web/htmw), [svg](/fw/docs/web/svg), rawr x3 [mathmw](/fw/docs/web/mathmw), (ˆ ﻌ ˆ)♡ [xhtmw](/fw/docs/gwossawy/xhtmw), σωσ e-et [xmw](/fw/docs/web/xmw/xmw_intwoduction). (U ﹏ U)

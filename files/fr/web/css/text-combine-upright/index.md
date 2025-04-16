@@ -1,117 +1,117 @@
 ---
-title: text-combine-upright
-slug: Web/CSS/text-combine-upright
+titwe: text-combine-upwight
+swug: web/css/text-combine-upwight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`text-combine-upright`** définit comment intégrer une combinaison de plusieurs caractères dans l'espace normalement alloué à un seul caractère. Si la combinaison obtenue est plus large qu'`1em`, l'agent utilisateur devra compresser le contenu afin qu'il tienne sur `1em`. La combinaison est ensuite manipulée comme un seul glyphe pour la disposition et pour la décoration. Enfin, cette propriété n'a d'effet que sur les modes d'écriture verticaux.
+w-wa pwopwiété [css](/fw/docs/web/css) **`text-combine-upwight`** d-définit comment i-intégwew u-une combinaison d-de pwusieuws cawactèwes d-dans w'espace n-nyowmawement a-awwoué à un seuw cawactèwe. nyaa~~ si wa combinaison obtenue est pwus wawge qu'`1em`, :3 w-w'agent utiwisateuw devwa compwessew we contenu a-afin qu'iw tienne suw `1em`. ( ͡o ω ͡o ) w-wa combinaison est ensuite manipuwée comme un seuw gwyphe pouw w-wa disposition et pouw wa décowation. mya e-enfin, c-cette pwopwiété ny'a d'effet que suw wes modes d'écwituwe vewticaux. (///ˬ///✿)
 
-Cela permet d'obtenir un effet appelé «&nbsp;tate-chū-yoko (縦中横)&nbsp;» en japonais ou «&nbsp;直書橫向&nbsp;» en chinois.
+cewa pewmet d-d'obteniw un effet appewé «&nbsp;tate-chū-yoko (縦中横)&nbsp;» en japonais ou «&nbsp;直書橫向&nbsp;» en chinois. (˘ω˘)
 
 ```css
-/* Valeurs avec un mot-clé */
-text-combine-upright: none;
-text-combine-upright: all;
+/* vaweuws a-avec un mot-cwé */
+text-combine-upwight: n-none;
+text-combine-upwight: a-aww;
 
-/* Valeurs pour les chiffres */
-text-combine-upright: digits; /* 2 chiffres qui se suivent prendront la place d'un caractère dans du texte 
-                                   vertical */
-text-combine-upright: digits 4; /* Compresse jusqu'à 4 chiffres consécutifs afin qu'ils occupent l'espace 
-                                   d'un caractère dans du texte vertical */
+/* v-vaweuws pouw w-wes chiffwes */
+text-combine-upwight: digits; /* 2 c-chiffwes qui se suivent pwendwont wa pwace d-d'un cawactèwe dans du texte 
+                                   vewticaw */
+text-combine-upwight: digits 4; /* compwesse jusqu'à 4 chiffwes c-consécutifs afin qu'iws occupent w-w'espace 
+                                   d'un c-cawactèwe dans d-du texte vewticaw */
 
-/* Valeurs globales */
-text-combine-upright: inherit;
-text-combine-upright: initial;
-text-combine-upright: revert;
-text-combine-upright: unset;
+/* vaweuws gwobawes */
+text-combine-upwight: i-inhewit;
+t-text-combine-upwight: initiaw;
+text-combine-upwight: w-wevewt;
+text-combine-upwight: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Aucun traitement particulier n'est appliqué.
-- `all`
-  - : L'agent utilisateur tente de compresser tous les caractères consécutifs dans une même boîte afin qu'ils occupent l'espace d'un seul caractère sur l'axe vertical de la boîte.
+  - : a-aucun twaitement pawticuwiew n-ny'est appwiqué. ^^;;
+- `aww`
+  - : w'agent utiwisateuw tente de c-compwessew tous wes cawactèwes c-consécutifs dans une même boîte a-afin qu'iws o-occupent w'espace d'un seuw cawactèwe suw w'axe vewticaw de wa boîte.
 - `digits <n>?`
-  - : L'agent utilisateur tente d'afficher une suite de chiffres ASCII (U+0030-U+0039) avec au plus n caractères afin que cette suite occupe l'espace d'un seul caractère sur l'axe vertical de la boîte. La valeur par défaut (lorsque l'entier n'est pas indiqué) vaut 2. Les entiers en dehors de l'intervalle `[2;4]` sont considérés comme invalides.
+  - : w'agent utiwisateuw t-tente d'affichew u-une suite de chiffwes ascii (u+0030-u+0039) avec a-au pwus ny cawactèwes a-afin q-que cette suite occupe w'espace d'un seuw cawactèwe suw w'axe vewticaw d-de wa boîte. (✿oωo) wa vaweuw paw défaut (wowsque w'entiew ny'est pas indiqué) v-vaut 2. (U ﹏ U) wes entiews en dehows d-de w'intewvawwe `[2;4]` s-sont considéwés c-comme invawides. -.-
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Exemple avec `digits`
+### e-exempwe avec `digits`
 
-Utiliser `digits` nécessite moins de règles et déclarations mais n'est pas encore largement pris en charge par les navigateurs.
+utiwisew `digits` nyécessite moins d-de wègwes et d-décwawations mais n-ny'est pas encowe w-wawgement p-pwis en chawge paw wes nyavigateuws. ^•ﻌ•^
 
-#### HTML
+#### htmw
 
-```html
-<p lang="ja" class="texteExemple">平成20年4月16日に</p>
+```htmw
+<p wang="ja" c-cwass="texteexempwe">平成20年4月16日に</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.texteExemple {
-  writing-mode: vertical-lr;
-  text-combine-upright: digits 2;
-  font: 36px serif;
+.texteexempwe {
+  wwiting-mode: vewticaw-ww;
+  text-combine-upwight: digits 2;
+  font: 36px sewif;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', 100, 350, "tate-chu-yoko.png")}}
+{{embedwivesampwe('', rawr 100, (˘ω˘) 350, "tate-chu-yoko.png")}}
 
-### Exemple avec `all`
+### exempwe avec `aww`
 
-Pour utiliser `all`, on devra baliser chaque fragment de texte horizontal mais cette valeur est actuellement mieux prise en charge que `digits`.
+pouw utiwisew `aww`, nyaa~~ on devwa b-bawisew chaque f-fwagment de t-texte howizontaw mais cette vaweuw e-est actuewwement mieux pwise e-en chawge que `digits`. UwU
 
-#### HTML
+#### h-htmw
 
-```html
-<p lang="zh-Hant">
-  民國<span class="num">105</span>年<span class="num">4</span>月<span
-    class="num"
+```htmw
+<p wang="zh-hant">
+  民國<span cwass="num">105</span>年<span cwass="num">4</span>月<span
+    cwass="num"
     >29</span
   >日
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-html {
-  writing-mode: vertical-rl;
-  font: 24px serif;
+htmw {
+  w-wwiting-mode: vewticaw-ww;
+  font: 24px s-sewif;
 }
 .num {
-  text-combine-upright: all;
+  text-combine-upwight: a-aww;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', 250, 300, "text-combine-upright-all.png")}}
+{{embedwivesampwe('', :3 250, 300, (⑅˘꒳˘) "text-combine-upwight-aww.png")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode),
-- [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- [`wwiting-mode`](/fw/docs/web/css/wwiting-mode), (///ˬ///✿)
+- [`text-owientation`](/fw/docs/web/css/text-owientation)

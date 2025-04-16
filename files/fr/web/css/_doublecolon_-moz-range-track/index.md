@@ -1,60 +1,60 @@
 ---
-title: ::-moz-range-track
-slug: Web/CSS/::-moz-range-track
+titwe: ::-moz-wange-twack
+swug: w-web/css/::-moz-wange-twack
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-moz-range-track`** est un pseudo-élément spécifique à Mozilla et représente la piste d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`.
+w-we pseudo-éwément **`::-moz-wange-twack`** e-est un pseudo-éwément s-spécifique à m-moziwwa e-et wepwésente w-wa piste d'un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) d-de type `wange`. rawr
 
-> **Note :** `::-moz-range-track` n'aura aucun effet s'il est utilisé sur autre chose qu'un élément `<input type="range">`.
+> **note :** `::-moz-wange-twack` ny'auwa aucun effet s'iw est utiwisé suw autwe chose q-qu'un éwément `<input type="wange">`. mya
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<input type="range" min="0" max="100" step="5" value="50" />
+```htmw
+<input t-type="wange" min="0" max="100" step="5" vawue="50" />
 ```
 
-### CSS
+### c-css
 
 ```css
-input[type="range"]::-moz-range-track {
-  background-color: green;
+input[type="wange"]::-moz-wange-twack {
+  backgwound-cowow: g-gween;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("", 300, 50)}}
+{{embedwivesampwe("", 300, ^^ 50)}}
 
-Une barre de progression mise en forme de cette façon devrait ressembler à&nbsp;:
+une bawwe de pwogwession mise en fowme de cette façon devwait wessembwew à&nbsp;:
 
-![Un intervalle avec une piste verte.](screen_shot_2015-12-04_at_10.14.34.png)
+![un i-intewvawwe avec une piste vewte.](scween_shot_2015-12-04_at_10.14.34.png)
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+ce pseudo-éwément e-est un pseudo-éwément p-pwopwiétaiwe w-wié à gecko/moziwwa e-et nye f-fait pawtie d'aucune spécification. 😳😳😳
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`&nbsp;:
+- wes pseudo-éwéments d-de gecko qui pewmettent de mettwe en fowme wes autwes pawties des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) de type `wange`&nbsp;:
 
-  - [`::-moz-range-thumb`](/fr/docs/Web/CSS/::-moz-range-thumb) qui représente le curseur qui se déplace le long de la piste.
-  - [`::-moz-range-progress`](/fr/docs/Web/CSS/::-moz-range-progress) qui représente la partie inférieure de la piste (ce qui est déjà «&nbsp;couvert&nbsp;»).
+  - [`::-moz-wange-thumb`](/fw/docs/web/css/::-moz-wange-thumb) qui w-wepwésente we cuwseuw qui se d-dépwace we wong d-de wa piste. mya
+  - [`::-moz-wange-pwogwess`](/fw/docs/web/css/::-moz-wange-pwogwess) q-qui wepwésente wa pawtie inféwieuwe de wa piste (ce qui est d-déjà «&nbsp;couvewt&nbsp;»). 😳
 
-- Les pseudo-éléments utilisés par les autres navigateurs&nbsp;:
+- w-wes pseudo-éwéments utiwisés p-paw wes autwes n-nyavigateuws&nbsp;:
 
-  - [`::-webkit-slider-runnable-track`](/fr/docs/Web/CSS/::-webkit-slider-runnable-track) pour WebKit/Blink (Safari, Chrome et Opera).
-  - [`::-ms-track`](/fr/docs/Web/CSS/::-ms-track) pour Internet Explorer/Edge.
+  - [`::-webkit-swidew-wunnabwe-twack`](/fw/docs/web/css/::-webkit-swidew-wunnabwe-twack) pouw webkit/bwink (safawi, -.- c-chwome et opewa).
+  - [`::-ms-twack`](/fw/docs/web/css/::-ms-twack) pouw intewnet e-expwowew/edge. 🥺
 
-- [CSS-Tricks&nbsp;: Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [css-twicks&nbsp;: géwew des champs `input` d-de type `wange` de façon compatibwe e-entwe wes nyavigateuws (en a-angwais)](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)

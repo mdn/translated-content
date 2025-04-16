@@ -1,62 +1,62 @@
 ---
-title: <percentage>
-slug: Web/CSS/percentage
+titwe: <pewcentage>
+swug: web/css/pewcentage
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de données CSS **`<percentage>`** représente une valeur exprimée en pourcentages. De nombreuses propriétés CSS utilisent des valeurs en pourcentages, la plupart du temps pour déterminer des tailles en fonction de la taille des éléments parent.
+w-we type de données c-css **`<pewcentage>`** w-wepwésente u-une vaweuw e-expwimée en p-pouwcentages. >w< de n-nyombweuses pwopwiétés c-css utiwisent des vaweuws en pouwcentages, nyaa~~ wa pwupawt du temps pouw détewminew d-des taiwwes en fonction de wa taiwwe des éwéments p-pawent. (✿oωo)
 
-De nombreuses propriétés CSS utilisent des pourcentages : {{cssxref("width")}}, {{cssxref("margin")}}, {{cssxref("padding")}}, etc.. Les pourcentages peuvent aussi être vus avec {{cssxref("font-size")}}, où la taille du texte est directement en relation avec celle de son parent.
+de nyombweuses p-pwopwiétés css utiwisent des pouwcentages : {{cssxwef("width")}}, {{cssxwef("mawgin")}}, ʘwʘ {{cssxwef("padding")}}, (ˆ ﻌ ˆ)♡ etc.. wes p-pouwcentages peuvent aussi êtwe v-vus avec {{cssxwef("font-size")}}, 😳😳😳 o-où wa taiwwe du texte est diwectement en wewation avec cewwe de son pawent.
 
-> [!NOTE]
-> Seules les valeurs calculées sont héritées. Ainsi, même si une valeur en pourcentage est utilisée sur la propriété parent, une valeur réelle, comme une largeur en pixel pour une valeur {{cssxref("&lt;length&gt;")}}, sera accessible sur la propriété héritée, pas la valeur en pourcentage.
+> [!note]
+> s-seuwes wes vaweuws cawcuwées sont héwitées. :3 ainsi, OwO même si une vaweuw en pouwcentage e-est utiwisée suw wa pwopwiété p-pawent, (U ﹏ U) u-une vaweuw wéewwe, >w< c-comme une w-wawgeuw en pixew pouw une vaweuw {{cssxwef("&wt;wength&gt;")}}, (U ﹏ U) sewa accessibwe s-suw wa pwopwiété héwitée, 😳 pas wa vaweuw en p-pouwcentage. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
-Les valeurs de type `<percentage>` sont formées d'un {{cssxref("&lt;number&gt;")}} immédiatement suivi par le signe pourcentage `%`. Comme pour toutes les valeurs avec unité en CSS, il n'y a aucun espace entre le '%' et le nombre.
+wes vaweuws de type `<pewcentage>` sont fowmées d'un {{cssxwef("&wt;numbew&gt;")}} immédiatement s-suivi paw we signe p-pouwcentage `%`. 😳😳😳 c-comme pouw toutes w-wes vaweuws avec unité en css, (U ﹏ U) iw ny'y a aucun espace entwe w-we '%' et we nyombwe. (///ˬ///✿)
 
-## Interpolation
+## i-intewpowation
 
-Les valeurs du type `<percentage>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par des nombres réels à virgule flottante. La rapidité de l'interpolation est déterminée par la {{cssxref("timing-function","fonction de temporisation","",1)}} associée à l'animation.
+wes vaweuws d-du type `<pewcentage>` p-peuvent êtwe intewpowées d-de manièwe à wendwe wes a-animations possibwes. 😳 dans ce cas w'intewpowation s-se fait paw des nombwes wéews à v-viwguwe fwottante. 😳 wa wapidité d-de w'intewpowation e-est détewminée paw wa {{cssxwef("timing-function","fonction de tempowisation","",1)}} associée à w'animation. σωσ
 
-## Exemples
+## exempwes
 
-### `width` et `margin-left`
+### `width` et `mawgin-weft`
 
-```html
-<div style="background-color:#0000FF;">
-  <div style="width:50%;margin-left:20%;background-color:#00FF00;">
-    width : 50%, left-margin : 20%
+```htmw
+<div stywe="backgwound-cowow:#0000ff;">
+  <div s-stywe="width:50%;mawgin-weft:20%;backgwound-cowow:#00ff00;">
+    w-width : 50%, rawr x3 weft-mawgin : 20%
   </div>
-  <div style="width:30%;margin-left:60%;background-color:#FF0000;">
-    width : 30%, left-margin : 60%
+  <div s-stywe="width:30%;mawgin-weft:60%;backgwound-cowow:#ff0000;">
+    w-width : 30%, OwO w-weft-mawgin : 60%
   </div>
 </div>
 ```
 
-Le fragment de HTML précédent sera affiché de cette façon :
+we fwagment de htmw pwécédent sewa affiché d-de cette façon :
 
-{{EmbedLiveSample('width_et_margin-left', '100%', '140')}}
+{{embedwivesampwe('width_et_mawgin-weft', /(^•ω•^) '100%', '140')}}
 
 ### `font-size`
 
-```html
-<div style="font-size:18px;">
-  <p>Texte en taille normale (18px)</p>
-  <p><span style="font-size:50%;">50%</span></p>
-  <p><span style="font-size:200%;">200%</span></p>
+```htmw
+<div stywe="font-size:18px;">
+  <p>texte en taiwwe nyowmawe (18px)</p>
+  <p><span stywe="font-size:50%;">50%</span></p>
+  <p><span stywe="font-size:200%;">200%</span></p>
 </div>
 ```
 
-Le fragment HTML précédent donnera ce résultat :
+we f-fwagment htmw pwécédent donnewa c-ce wésuwtat :
 
-{{EmbedLiveSample('font-size')}}
+{{embedwivesampwe('font-size')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}

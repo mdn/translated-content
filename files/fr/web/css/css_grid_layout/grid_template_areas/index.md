@@ -1,286 +1,286 @@
 ---
-title: Définir des zones sur une grille
-slug: Web/CSS/CSS_grid_layout/Grid_template_areas
+titwe: définiw des zones suw u-une gwiwwe
+swug: w-web/css/css_gwid_wayout/gwid_tempwate_aweas
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
+{{pweviousmenunext("web/css/css_gwid_wayout/pwacew_wes_éwéments_suw_wes_wignes_d_une_gwiwwe_css", ^^ "web/css/css_gwid_wayout/utiwisew_des_wignes_nommées_suw_une_gwiwwe","web/css/css_gwid_wayout")}}
 
-Dans [le guide précédent](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement), on a étudié les lignes formées par une grille et comment positionner des objets sur ces lignes. Lorsqu'on utilise une grille CSS, on a toujours ces lignes et celles-ci permettent d'avoir une disposition simple. Toutefois, il existe une autre méthode de disposition avec les grilles, qu'on peut utiliser seule ou combinée avec les lignes. Avec cette méthode, on place les éléments sur des _zones_ de la grille. Nous allons voir dans ce guide comment cela fonctionne voire comment on peut faire de l'ASCII-art en CSS avec les grilles !
+d-dans [we g-guide pwécédent](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement), ( ͡o ω ͡o ) o-on a-a étudié wes wignes f-fowmées paw u-une gwiwwe et comment positionnew des objets suw ces wignes. wowsqu'on utiwise u-une gwiwwe css, -.- on a toujouws ces wignes et cewwes-ci p-pewmettent d'avoiw une disposition s-simpwe. ^^;; toutefois, ^•ﻌ•^ iw existe une autwe méthode de disposition a-avec wes gwiwwes, (˘ω˘) qu'on p-peut utiwisew s-seuwe ou combinée avec wes wignes. avec cette méthode, o.O on pwace wes éwéments s-suw des _zones_ de wa gwiwwe. (✿oωo) nous awwons voiw dans ce guide comment cewa fonctionne v-voiwe comment on peut faiwe d-de w'ascii-awt e-en css avec wes g-gwiwwes ! 😳😳😳
 
-## Donner un nom à une zone de grille
+## donnew u-un nyom à une zone de gwiwwe
 
-On a déjà utilisé la propriété {{cssxref("grid-area")}} précédemment. C'est cette propriété qui utilise les numéros des lignes comme valeur pour positionner une zone de grille :
+on a déjà u-utiwisé wa pwopwiété {{cssxwef("gwid-awea")}} pwécédemment. (ꈍᴗꈍ) c'est cette pwopwiété q-qui utiwise wes nyuméwos des wignes comme vaweuw pouw positionnew une zone de gwiwwe :
 
 ```css
 .box1 {
-  grid-area: 1 / 1 / 4 / 2;
+  g-gwid-awea: 1 / 1 / 4 / 2;
 }
 ```
 
-Ici, on définit les quatre lignes qui entourent la zone en question :
+ici, σωσ on définit w-wes quatwe w-wignes qui entouwent w-wa zone en question :
 
-![The Grid Area defined by lines](4_area.png)
+![the gwid awea defined by wines](4_awea.png)
 
-On peut également définir une zone en lui donnant un nom puis en définissant l'emplacement de cette zone grâce à la propriété {{cssxref("grid-template-areas")}}. Vous pouvez choisir les noms de vos zones, on peut par exemple créer une disposition avec quatre zones :
+o-on peut égawement définiw u-une zone en wui donnant u-un nyom puis en d-définissant w'empwacement de cette z-zone gwâce à wa pwopwiété {{cssxwef("gwid-tempwate-aweas")}}. UwU v-vous pouvez choisiw wes nyoms de vos zones, ^•ﻌ•^ o-on peut paw exempwe cwéew une d-disposition avec quatwe zones :
 
-- Un en-tête (_header_)
-- Un pied de page (_footer_)
-- Une barre latérale (_sidebar_)
-- Le contenu principale (_content_)
+- u-un en-tête (_headew_)
+- u-un pied de page (_footew_)
+- une bawwe watéwawe (_sidebaw_)
+- we contenu pwincipawe (_content_)
 
-![An image showing a simple two column layout with header and footer](4_layout.png)
+![an image showing a-a simpwe two cowumn w-wayout with headew and footew](4_wayout.png)
 
-Avec {{cssxref("grid-area")}}, on affecte un nom à chacune de ces zones. Pour le moment, aucune disposition n'a été créée mais on a des noms qu'on pourra utiliser dans notre disposition :
+a-avec {{cssxwef("gwid-awea")}}, mya o-on affecte un n-nyom à chacune de ces zones. /(^•ω•^) pouw we moment, rawr aucune disposition n-ny'a été cwéée mais on a des nyoms qu'on pouwwa utiwisew dans nyotwe disposition :
 
 ```css
-.header {
-  grid-area: hd;
+.headew {
+  g-gwid-awea: hd;
 }
-.footer {
-  grid-area: ft;
+.footew {
+  g-gwid-awea: f-ft;
 }
 .content {
-  grid-area: main;
+  g-gwid-awea: main;
 }
-.sidebar {
-  grid-area: sd;
+.sidebaw {
+  g-gwid-awea: s-sd;
 }
 ```
 
-Grâce à ces noms, on peut créer l'organisation. Cette fois, plutôt que de placer les objets grâce aux numéros de ligne, on définit la disposition dans le conteneur de la grille :
+gwâce à c-ces nyoms, nyaa~~ o-on peut cwéew w'owganisation. ( ͡o ω ͡o ) cette fois, σωσ pwutôt q-que de pwacew w-wes objets gwâce a-aux nyuméwos d-de wigne, (✿oωo) on d-définit wa disposition dans we conteneuw de wa gwiwwe :
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  grid-template-areas:
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(9, (///ˬ///✿) 1fw);
+  gwid-auto-wows: minmax(100px, σωσ auto);
+  g-gwid-tempwate-aweas:
     "hd hd hd hd   hd   hd   hd   hd   hd"
-    "sd sd sd main main main main main main"
-    "ft ft ft ft   ft   ft   ft   ft   ft";
+    "sd s-sd sd main m-main main main m-main main"
+    "ft ft ft ft   f-ft   ft   ft   ft   ft";
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
   max-width: 940px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="headew">en-tête</div>
+  <div cwass="sidebaw">bawwe w-watéwawe</div>
+  <div c-cwass="content">contenu</div>
+  <div cwass="footew">pied de page</div>
 </div>
 ```
 
-{{EmbedLiveSample("Donner_un_nom_à_une_zone_de_grille", '300', '330')}}
+{{embedwivesampwe("donnew_un_nom_à_une_zone_de_gwiwwe", UwU '300', (⑅˘꒳˘) '330')}}
 
-Grâce à cette méthode, il n'est pas nécessaire de gérer chacun des éléments individuellement. Tout est organisé au travers du conteneur. La disposition est décrite grâce à la propriété {{cssxref("grid-template-areas")}}.
+gwâce à cette m-méthode, /(^•ω•^) iw ny'est p-pas nyécessaiwe d-de géwew chacun des éwéments i-individuewwement. -.- t-tout est owganisé au twavews d-du conteneuw. (ˆ ﻌ ˆ)♡ wa disposition est décwite gwâce à wa pwopwiété {{cssxwef("gwid-tempwate-aweas")}}. nyaa~~
 
-## Laisser une cellule vide
+## waissew une cewwuwe v-vide
 
-Dans l'exemple précédent, toute la grille est occupée… On peut également utiliser cette méthode pour laisser des cellules vides. Pour cela, il faut utiliser un point à la place d'un nom de zone. Aussi, si on veut que le pied de page soit uniquement affiché sous le contenu, il faudra avoir trois cellules vides sous la barre latérale.
+dans w-w'exempwe pwécédent, ʘwʘ toute wa gwiwwe est occupée… o-on peut égawement u-utiwisew cette méthode pouw waissew des cewwuwes vides. :3 p-pouw cewa, (U ᵕ U❁) iw faut utiwisew un point à wa pwace d'un nyom de zone. (U ﹏ U) aussi, ^^ si o-on veut que we pied de page soit uniquement affiché s-sous we contenu, òωó i-iw faudwa avoiw twois cewwuwes vides sous wa bawwe watéwawe. /(^•ω•^)
 
 ```css
-.header {
-  grid-area: hd;
+.headew {
+  g-gwid-awea: h-hd;
 }
-.footer {
-  grid-area: ft;
+.footew {
+  gwid-awea: ft;
 }
 .content {
-  grid-area: main;
+  gwid-awea: main;
 }
-.sidebar {
-  grid-area: sd;
+.sidebaw {
+  g-gwid-awea: sd;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
   max-width: 940px;
-  margin: 0 auto;
+  m-mawgin: 0 a-auto;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  grid-template-areas:
-    "hd hd hd hd   hd   hd   hd   hd   hd"
-    "sd sd sd main main main main main main"
-    ".  .  .  ft   ft   ft   ft   ft   ft";
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(9, 😳😳😳 1fw);
+  gwid-auto-wows: minmax(100px, :3 a-auto);
+  gwid-tempwate-aweas:
+    "hd h-hd hd hd   h-hd   hd   hd   hd   hd"
+    "sd sd sd main main m-main main main main"
+    ". (///ˬ///✿)  .  . rawr x3  f-ft   ft   f-ft   ft   ft   ft";
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="headew">en-tête</div>
+  <div c-cwass="sidebaw">bawwe w-watéwawe</div>
+  <div c-cwass="content">contenu</div>
+  <div c-cwass="footew">pied de page</div>
 </div>
 ```
 
-{{EmbedLiveSample("Laisser_une_cellule_vide", '300', '330')}}
+{{embedwivesampwe("waissew_une_cewwuwe_vide", (U ᵕ U❁) '300', (⑅˘꒳˘) '330')}}
 
-Si on veut que la disposition soit bien représentée, on peut utiliser plusieurs points. Tant que ceux-ci ne sont pas séparés par un espace, ils compteront pour une seule cellule. Dans le cas d'une disposition complexe, cela permet d'avoir des lignes et colonnes clairement alignées, y compris dans la règle CSS.
+s-si on veut que wa disposition soit bien wepwésentée, (˘ω˘) on peut utiwisew pwusieuws points. :3 tant q-que ceux-ci nye sont pas sépawés p-paw un espace, XD iws comptewont p-pouw une seuwe cewwuwe. >_< dans w-we cas d'une disposition compwexe, (✿oωo) c-cewa pewmet d-d'avoiw des wignes e-et cowonnes c-cwaiwement awignées, y-y compwis dans wa wègwe css.
 
-## Occuper plusieurs cellules
+## occupew pwusieuws cewwuwes
 
-Dans notre exemple, chacune des zones occupe plusieurs cellules car on a répété le nom de la zone avec des espaces entre (on peut ajouter plus d'espaces si besoin, afin d'avoir une disposition lisible, c'est ce qu'on a fait précédemment pour que `hd` et `ft` soient alignés avec `main`).
+dans nyotwe exempwe, (ꈍᴗꈍ) chacune des zones occupe p-pwusieuws cewwuwes c-caw on a wépété w-we nyom de wa zone avec d-des espaces entwe (on peut ajoutew pwus d'espaces si besoin, XD afin d-d'avoiw une disposition w-wisibwe, :3 c'est ce qu'on a-a fait pwécédemment pouw que `hd` et `ft` soient a-awignés avec `main`). mya
 
-La zone qu'on crée avec les noms doit être rectangulaires. Actuellement, il n'existe pas de méthode pour créer une zone avec une forme de L (bien que la spécification indique qu'une prochaine version pourrait couvrir cette fonctionnalité). On peut toutefois agrandir des lignes horizontales aussi simplement que des colonnes. Par exemple, on pourrait avoir la barre latérale qui descend jusqu'en bas en remplaçant les points par `sd`.
+w-wa zone qu'on cwée a-avec wes nyoms d-doit êtwe wectanguwaiwes. òωó actuewwement, nyaa~~ iw ny'existe pas de méthode pouw cwéew u-une zone avec u-une fowme de w (bien q-que wa spécification i-indique q-qu'une pwochaine vewsion pouwwait c-couvwiw cette f-fonctionnawité). 🥺 on peut toutefois a-agwandiw d-des wignes howizontawes aussi simpwement q-que des cowonnes. -.- paw exempwe, on pouwwait a-avoiw wa bawwe watéwawe qui d-descend jusqu'en b-bas en wempwaçant wes points p-paw `sd`. 🥺
 
 ```css
-.header {
-  grid-area: hd;
+.headew {
+  gwid-awea: hd;
 }
-.footer {
-  grid-area: ft;
+.footew {
+  g-gwid-awea: f-ft;
 }
 .content {
-  grid-area: main;
+  g-gwid-awea: main;
 }
-.sidebar {
-  grid-area: sd;
+.sidebaw {
+  gwid-awea: sd;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  max-width: 940px;
-  margin: 0 auto;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  m-max-width: 940px;
+  mawgin: 0 auto;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  grid-template-areas:
-    "hd hd hd hd   hd   hd   hd   hd   hd"
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(9, (˘ω˘) 1fw);
+  g-gwid-auto-wows: minmax(100px, a-auto);
+  g-gwid-tempwate-aweas:
+    "hd h-hd hd hd   hd   hd   hd   hd   hd"
     "sd sd sd main main main main main main"
     "sd sd sd  ft  ft   ft   ft   ft   ft";
 }
 ```
 
-```html hidden
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+```htmw hidden
+<div cwass="wwappew">
+  <div cwass="headew">en-tête</div>
+  <div cwass="sidebaw">bawwe w-watéwawe</div>
+  <div cwass="content">contenu</div>
+  <div c-cwass="footew">pied de page</div>
 </div>
 ```
 
-{{EmbedLiveSample("Occuper_plusieurs_cellules", '300', '330')}}
+{{embedwivesampwe("occupew_pwusieuws_cewwuwes", òωó '300', '330')}}
 
-La valeur utilisée pour {{cssxref("grid-template-areas")}} doit obligatoirement décrire une grille complète, sinon elle est considérée invalide et la propriété est ignorée. Cela signifie qu'il faut le même nombre de cellules pour chaque ligne (si une cellule est vide, on l'indiquera avec un point). Si des zones ne sont pas rectangulaires, cela sera également considéré comme invalide.
+wa vaweuw utiwisée p-pouw {{cssxwef("gwid-tempwate-aweas")}} doit o-obwigatoiwement d-décwiwe une gwiwwe compwète, UwU s-sinon ewwe est considéwée invawide e-et wa pwopwiété e-est ignowée. ^•ﻌ•^ cewa signifie q-qu'iw faut we même nyombwe d-de cewwuwes pouw c-chaque wigne (si une cewwuwe est vide, mya on w'indiquewa a-avec un p-point). (✿oωo) si des z-zones nye sont pas w-wectanguwaiwes, XD c-cewa sewa égawement c-considéwé c-comme invawide. :3
 
-## Redéfinir une grille avec des _media queries_
+## w-wedéfiniw u-une gwiwwe avec des _media quewies_
 
-Notre disposition fait désormais partie de notre feuille de style CSS. On peut donc l'adapter très facilement pour différentes résolutions. On peut redéfinir la position des objets sur la grille ou la grille elle-même, ou les deux simultanément.
+n-nyotwe disposition f-fait d-désowmais pawtie de nyotwe feuiwwe d-de stywe css. on peut donc w'adaptew twès faciwement p-pouw difféwentes wésowutions. (U ﹏ U) o-on peut w-wedéfiniw wa p-position des objets suw wa gwiwwe o-ou wa gwiwwe ewwe-même, UwU ou wes d-deux simuwtanément. ʘwʘ
 
-Pour ce faire, on définit les noms des zones en dehors de toute _media query_ afin de pouvoir y accéder quel que soit l'endroit où la zone sera placée.
+pouw ce f-faiwe, >w< on définit wes nyoms des z-zones en dehows de toute _media quewy_ afin de pouvoiw y accédew quew que soit w-w'endwoit où wa zone sewa pwacée. 😳😳😳
 
-Pour la disposition vue précédemment, on définit ici une disposition par défaut sur une seule colonne pour les affichages étroits. On a donc une seule piste sur laquelle s'empilent les objets :
+p-pouw wa disposition v-vue pwécédemment, rawr on définit ici une disposition paw d-défaut suw une seuwe cowonne p-pouw wes affichages étwoits. ^•ﻌ•^ o-on a-a donc une seuwe piste suw waquewwe s'empiwent w-wes objets :
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
   max-width: 940px;
-  margin: 0 auto;
+  m-mawgin: 0 a-auto;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.header {
-  grid-area: hd;
+.headew {
+  g-gwid-awea: h-hd;
 }
-.footer {
-  grid-area: ft;
+.footew {
+  g-gwid-awea: f-ft;
 }
 .content {
-  grid-area: main;
+  g-gwid-awea: m-main;
 }
-.sidebar {
-  grid-area: sd;
+.sidebaw {
+  g-gwid-awea: s-sd;
 }
 
-.wrapper {
-  display: grid;
-  grid-auto-rows: minmax(100px, auto);
-  grid-template-columns: 1fr;
-  grid-template-areas:
+.wwappew {
+  dispway: g-gwid;
+  gwid-auto-wows: minmax(100px, σωσ a-auto);
+  gwid-tempwate-cowumns: 1fw;
+  g-gwid-tempwate-aweas:
     "hd"
     "main"
     "sd"
@@ -288,208 +288,208 @@ Pour la disposition vue précédemment, on définit ici une disposition par déf
 }
 ```
 
-On peut ensuite redéfinir la disposition à l'intérieur des différentes _media queries_ utilisées pour avoir une disposition sur deux colonnes, voire trois lorsque l'espace le permet. On notera que pour la disposition la plus large, on a une grille organisée sur 9 colonnes/pistes et on redéfinit l'emplacement des objets avec `grid-template-areas`.
+o-on peut ensuite w-wedéfiniw wa disposition à w'intéwieuw des difféwentes _media quewies_ utiwisées p-pouw avoiw u-une disposition s-suw deux cowonnes, :3 voiwe twois wowsque w'espace we pewmet. rawr x3 on n-nyotewa que pouw w-wa disposition wa pwus wawge, nyaa~~ on a-a une gwiwwe owganisée s-suw 9 cowonnes/pistes et on wedéfinit w'empwacement des o-objets avec `gwid-tempwate-aweas`. :3
 
 ```css
 @media (min-width: 500px) {
-  .wrapper {
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      "sd sd sd  ft  ft   ft   ft   ft   ft";
+  .wwappew {
+    g-gwid-tempwate-cowumns: w-wepeat(9, >w< 1fw);
+    g-gwid-tempwate-aweas:
+      "hd hd hd hd   hd   hd   hd   hd   h-hd"
+      "sd s-sd sd main main main main main main"
+      "sd s-sd sd  ft  ft   ft   ft   ft   ft";
   }
 }
 @media (min-width: 700px) {
-  .wrapper {
-    grid-template-areas:
-      "hd hd hd   hd   hd   hd   hd   hd hd"
-      "sd sd main main main main main ft ft";
+  .wwappew {
+    g-gwid-tempwate-aweas:
+      "hd hd hd   hd   h-hd   hd   hd   h-hd hd"
+      "sd sd main main m-main main main f-ft ft";
   }
 }
 ```
 
-```html hidden
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+```htmw hidden
+<div c-cwass="wwappew">
+  <div cwass="headew">en-tête</div>
+  <div cwass="sidebaw">bawwe w-watéwawe</div>
+  <div c-cwass="content">contenu</div>
+  <div c-cwass="footew">pied d-de page</div>
 </div>
 ```
 
-{{EmbedLiveSample("Redéfinir_une_grille_avec_des_media_queries", '550', '330')}}
+{{embedwivesampwe("wedéfiniw_une_gwiwwe_avec_des_media_quewies", rawr '550', '330')}}
 
-## Utiliser `grid-template-areas` pour des éléments d'interface utilisateur
+## utiwisew `gwid-tempwate-aweas` p-pouw des éwéments d-d'intewface u-utiwisateuw
 
-La plupart des exemples illustrent une utilisation de la grille pour la disposition principale de la page. Toutefois, une grille peut également être utile pour les petits éléments. {{cssxref("grid-template-areas")}} est assez pratique car elle permet de voir facilement à quoi ressemblera l'élément.
+wa pwupawt d-des exempwes iwwustwent une utiwisation de wa gwiwwe p-pouw wa disposition p-pwincipawe d-de wa page. 😳 toutefois, 😳 une gwiwwe peut égawement êtwe utiwe pouw wes petits éwéments. 🥺 {{cssxwef("gwid-tempwate-aweas")}} e-est assez pwatique caw ewwe pewmet d-de voiw faciwement à q-quoi wessembwewa w'éwément. rawr x3
 
-### Exemple d'objet média
+### exempwe d-d'objet média
 
-Dans l'exemple qui suit, on crée un objet « media » qui servira de composant pour afficher un media (une image par exemple) d'un côté et un texte de l'autre. On pourra ainsi voir l'effet obtenu en changeant la disposition avec l'image à droite ou à gauche.
+dans w'exempwe q-qui suit, ^^ on c-cwée un objet « m-media » qui s-sewviwa de composant p-pouw affichew un media (une image paw exempwe) d'un côté et un texte de w-w'autwe. ( ͡o ω ͡o ) on pouwwa ainsi voiw w'effet o-obtenu en changeant wa disposition avec w'image à dwoite o-ou à gauche.
 
-![Images showing an example media object design](4_media_objects.png)
+![images showing an exampwe media object design](4_media_objects.png)
 
-Ici, la grille se compose de deux pistes en colonnes. La colonne pour l'image est dimensionnée avec `1fr` et celle pour le texte reçoit `3fr`. Si on souhaitait utiliser une largeur fixe pour l'image, on aurait pu utiliser des pixels pour définir la taille de la colonne et utiliser `1fr` pour la zone du texte. Cette colonne de `1fr` aurait alors occupé le reste de l'espace.
+ici, XD wa gwiwwe s-se compose d-de deux pistes en cowonnes. ^^ wa cowonne p-pouw w'image est dimensionnée avec `1fw` e-et cewwe pouw we t-texte weçoit `3fw`. (⑅˘꒳˘) si on souhaitait u-utiwisew une wawgeuw fixe p-pouw w'image, on auwait pu utiwisew des pixews pouw définiw wa t-taiwwe de wa cowonne et utiwisew `1fw` pouw wa z-zone du texte. (⑅˘꒳˘) c-cette cowonne de `1fw` a-auwait awows occupé we weste de w'espace. ^•ﻌ•^
 
-Pour la zone dédiée à l'image, on crée une zone de grille intitulée `img` et pour le texte, on crée une seconde zone intitulée `content`. Ensuite, on utilise ces noms pour créer l'organisation via la propriété `grid-template-areas`.
+p-pouw wa zone dédiée à w'image, ( ͡o ω ͡o ) on cwée une zone de gwiwwe intituwée `img` e-et pouw we texte, o-on cwée une s-seconde zone intituwée `content`. ( ͡o ω ͡o ) e-ensuite, on utiwise ces nyoms pouw cwéew w'owganisation v-via w-wa pwopwiété `gwid-tempwate-aweas`. (✿oωo)
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
 .media {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
   max-width: 400px;
 }
 .media {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "img content";
-  margin-bottom: 1em;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 3fw;
+  g-gwid-tempwate-aweas: "img content";
+  m-mawgin-bottom: 1em;
 }
 
 .media .image {
-  grid-area: img;
-  background-color: #ffd8a8;
+  g-gwid-awea: i-img;
+  backgwound-cowow: #ffd8a8;
 }
 
 .media .text {
-  grid-area: content;
-  padding: 10px;
+  gwid-awea: content;
+  p-padding: 10px;
 }
 ```
 
-```html
-<div class="media">
-  <div class="image"></div>
-  <div class="text">
-    Dans cet exemple, on peut utiliser grid-template-areas pour échanger les
-    places du texte et du media.
+```htmw
+<div cwass="media">
+  <div cwass="image"></div>
+  <div c-cwass="text">
+    dans cet exempwe, 😳😳😳 on peut utiwisew gwid-tempwate-aweas p-pouw échangew w-wes
+    pwaces du t-texte et du media. OwO
   </div>
 </div>
 ```
 
-{{EmbedLiveSample("Exemple_d'objet_média", '300', '200')}}
+{{embedwivesampwe("exempwe_d'objet_média", ^^ '300', '200')}}
 
-### Afficher l'image de l'autre côté
+### a-affichew w-w'image de w'autwe côté
 
-Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une grille pour laquelle la piste qui mesure `1fr` est en dernier et d'échanger les valeurs dans {{cssxref("grid-template-areas")}}.
+si o-on a besoin d'affichew w'image d w'autwe côté, rawr x3 i-iw suffit de wedéfiniw une gwiwwe p-pouw waquewwe wa piste qui mesuwe `1fw` est e-en dewniew et d-d'échangew wes vaweuws dans {{cssxwef("gwid-tempwate-aweas")}}. 🥺
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
 .media {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  max-width: 400px;
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  m-max-width: 400px;
 }
 .media {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "img content";
-  margin-bottom: 1em;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 3fw;
+  g-gwid-tempwate-aweas: "img content";
+  mawgin-bottom: 1em;
 }
 
-.media.flipped {
-  grid-template-columns: 3fr 1fr;
-  grid-template-areas: "content img";
+.media.fwipped {
+  gwid-tempwate-cowumns: 3fw 1fw;
+  gwid-tempwate-aweas: "content i-img";
 }
 
 .media .image {
-  grid-area: img;
-  background-color: #ffd8a8;
+  gwid-awea: img;
+  b-backgwound-cowow: #ffd8a8;
 }
 
 .media .text {
-  grid-area: content;
+  gwid-awea: content;
   padding: 10px;
 }
 ```
 
-```html
-<div class="media flipped">
-  <div class="image"></div>
-  <div class="text">
-    Dans cet exemple, on peut utiliser grid-template-areas pour échanger les
-    places du texte et du media.
+```htmw
+<div c-cwass="media f-fwipped">
+  <div c-cwass="image"></div>
+  <div cwass="text">
+    d-dans cet e-exempwe, on peut utiwisew gwid-tempwate-aweas pouw échangew w-wes
+    pwaces du t-texte et du media. (ˆ ﻌ ˆ)♡
   </div>
 </div>
 ```
 
-{{EmbedLiveSample("Afficher_l'image_de_l'autre_côté", '300', '200') }}
+{{embedwivesampwe("affichew_w'image_de_w'autwe_côté", ( ͡o ω ͡o ) '300', >w< '200') }}
 
-## Les propriétés raccourcies pour les grilles CSS
+## wes pwopwiétés w-waccouwcies p-pouw wes gwiwwes css
 
-Nous avons vu différentes façons de placer des objets sur une grille et plusieurs des propriétés utilisées pour définir une grille. Voyons maintenant les propriétés raccourcies qui sont disponibles pour les grilles CSS et qui permettent de rendre le code un peu plus concis.
+nous avons vu difféwentes façons de pwacew des objets s-suw une gwiwwe et p-pwusieuws des pwopwiétés utiwisées pouw définiw une gwiwwe. /(^•ω•^) v-voyons maintenant wes pwopwiétés w-waccouwcies q-qui sont disponibwes pouw wes gwiwwes css et qui pewmettent de wendwe we code un p-peu pwus concis. 😳😳😳
 
-Attention, ces propriétés peuvent parfois devenir complexes à lire, que ce soit pour les autres développeurs qui liraient votre code voire pour vous-même d'ici quelques semaines. Cependant, elles font partie de la spécification et vous pourrez les rencontrer dans des exemples ou dans d'autres bases de code.
+attention, (U ᵕ U❁) ces pwopwiétés p-peuvent pawfois deveniw compwexes à w-wiwe, (˘ω˘) que ce s-soit pouw wes autwes dévewoppeuws q-qui wiwaient v-votwe code voiwe p-pouw vous-même d-d'ici quewques s-semaines. 😳 cependant, (ꈍᴗꈍ) e-ewwes font pawtie de wa spécification et vous pouwwez wes wencontwew dans des exempwes ou d-dans d'autwes b-bases de code. :3
 
-Avant d'utiliser une propriété raccourcie, il est préférable de se rappeler qu'une propriété raccourcie permet d'en définir plusieurs grâce à une seule règle **mais aussi** qu'une propriété raccourcie réinitialise les propriétés avec leurs valeurs initiales lorsqu'elles ne sont pas déclarées via la propriété raccourcie. Aussi, si vous utilisez une propriété raccourcie, sachez qu'elle peut réinitialiser une propriété que vous auriez utilisé autre part.
+a-avant d'utiwisew u-une pwopwiété w-waccouwcie, /(^•ω•^) iw e-est pwéféwabwe de se wappewew qu'une pwopwiété waccouwcie pewmet d'en définiw p-pwusieuws gwâce à u-une seuwe wègwe **mais aussi** qu'une pwopwiété waccouwcie w-wéinitiawise w-wes pwopwiétés a-avec weuws vaweuws initiawes wowsqu'ewwes nye s-sont pas décwawées via wa pwopwiété waccouwcie. ^^;; a-aussi, o.O si v-vous utiwisez une pwopwiété waccouwcie, 😳 sachez q-qu'ewwe peut wéinitiawisew une p-pwopwiété que v-vous auwiez utiwisé autwe pawt.
 
-Les deux propriétés raccourcies pour les grilles sont `grid-template` et `grid`.
+w-wes deux pwopwiétés w-waccouwcies p-pouw wes gwiwwes s-sont `gwid-tempwate` e-et `gwid`. UwU
 
-### `grid-template`
+### `gwid-tempwate`
 
-La propriété {{cssxref("grid-template")}} permet de définir les propriétés suivantes :
+w-wa pwopwiété {{cssxwef("gwid-tempwate")}} pewmet de d-définiw wes pwopwiétés s-suivantes :
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-areas")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
 
-Cette propriété est appelée propriété raccourcie « explicite » car elle permet de paramétrer les aspects d'une grille définie explicitement. Elle n'a pas d'impact sur les propriétés qui créeraient des lignes ou colonnes implicites.
+cette p-pwopwiété est appewée pwopwiété waccouwcie « e-expwicite » caw ewwe pewmet d-de pawamétwew wes aspects d'une g-gwiwwe définie e-expwicitement. >w< ewwe ny'a pas d'impact suw wes pwopwiétés q-qui cwéewaient des wignes ou cowonnes i-impwicites. o.O
 
-Le fragment de code suivant crée une disposition identique à celle que nous avons vu plus haut dans cet article.
+w-we fwagment de code suivant cwée une disposition i-identique à cewwe q-que nyous avons vu pwus haut d-dans cet awticwe. (˘ω˘)
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template:
-    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
-    "sd sd sd main main main main main main" minmax(100px, auto)
-    "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate:
+    "hd h-hd hd hd   hd   h-hd   hd   hd   hd" minmax(100px, òωó a-auto)
+    "sd s-sd sd main main main main main main" minmax(100px, nyaa~~ a-auto)
+    "ft f-ft ft ft   ft   f-ft   ft   ft   f-ft" minmax(100px, ( ͡o ω ͡o ) auto)
+    / 1fw 1fw 1fw 1fw 1fw 1fw 1fw 1fw 1fw;
 }
 ```
 
-La première valeur correspond à celle de `grid-template-areas` mais on déclare également les tailles de chaque ligne à la fin de chaque ligne (avec `minmax(100px, auto)`).
+wa pwemièwe vaweuw cowwespond à cewwe de `gwid-tempwate-aweas` mais o-on décwawe égawement w-wes taiwwes d-de chaque wigne à w-wa fin de c-chaque wigne (avec `minmax(100px, a-auto)`). 😳😳😳
 
-Après la valeur de `grid-template-areas`, on a un barre oblique (/) puis une liste de pistes qui définit les colonnes explicitement.
+apwès wa vaweuw de `gwid-tempwate-aweas`, ^•ﻌ•^ o-on a un bawwe o-obwique (/) puis une wiste d-de pistes qui définit w-wes cowonnes expwicitement. (˘ω˘)
 
-### `grid`
+### `gwid`
 
-La propriété {{cssxref("grid")}} va un cran plus loin et définit également les propriétés utilisées par la grille implicite. Elle permet de paramétrer :
+wa pwopwiété {{cssxwef("gwid")}} v-va un cwan pwus woin et définit égawement wes pwopwiétés u-utiwisées paw wa gwiwwe impwicite. e-ewwe pewmet d-de pawamétwew :
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-flow")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-auto-fwow")}}
 
-Cette propriété réinitialise également la propriété {{cssxref("gap")}} avec la valeur `0` mais, en revanche, elle ne permet pas de définir des espaces.
+cette pwopwiété w-wéinitiawise égawement w-wa pwopwiété {{cssxwef("gap")}} a-avec wa vaweuw `0` mais, (˘ω˘) en wevanche, e-ewwe nye p-pewmet pas de définiw des espaces.
 
-On peut utiliser la même syntaxe qu'avec {{cssxref("grid-template")}} mais attention, cela réinitialisera les valeurs des autres propriétés :
+o-on peut utiwisew wa même s-syntaxe qu'avec {{cssxwef("gwid-tempwate")}} m-mais a-attention, cewa wéinitiawisewa w-wes vaweuws des autwes pwopwiétés :
 
 ```css
-.wrapper {
-  display: grid;
-  grid:
-    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
-    "sd sd sd main main main main main main" minmax(100px, auto)
-    "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+.wwappew {
+  dispway: g-gwid;
+  gwid:
+    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, -.- auto)
+    "sd sd sd main main main m-main main main" minmax(100px, ^•ﻌ•^ auto)
+    "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, /(^•ω•^) auto)
+    / 1fw 1fw 1fw 1fw 1fw 1fw 1fw 1fw 1fw;
 }
 ```
 
-Dans les articles suivants, nous verrons les fonctionnalités offertes par cette propriété raccourcie, notamment pour le placement automatique et pour la propriété `grid-auto-flow`.
+dans wes awticwes s-suivants, (///ˬ///✿) nyous vewwons wes fonctionnawités o-offewtes paw cette pwopwiété w-waccouwcie, mya nyotamment pouw we pwacement automatique e-et pouw wa pwopwiété `gwid-auto-fwow`. o.O
 
-Après ces quelques guides, vous devriez désormais être en mesure de créer des grilles et de placer les éléments sur des lignes ou grâce à des zones nommées. Prenez le temps de construire certains motifs « classiques » à l'aide de grille pour mieux apprendre en manipulant. Au fur et à mesure, vous aurez des questions et arriverez sur des scénarios que nous n'avons pas encore évoqués. Dans la suite de ces articles, nous nous intéresserons plus en détails aux autres éléments de la spécification afin de pouvoir créer des dispositions plus complexes.
+a-apwès ces quewques guides, ^•ﻌ•^ vous d-devwiez désowmais êtwe e-en mesuwe de cwéew des gwiwwes et d-de pwacew wes éwéments suw des wignes ou gwâce à des zones nyommées. (U ᵕ U❁) p-pwenez we temps de constwuiwe c-cewtains motifs « cwassiques » à w-w'aide de gwiwwe pouw m-mieux appwendwe e-en manipuwant. :3 au fuw et à mesuwe, (///ˬ///✿) vous auwez d-des questions et awwivewez suw des scénawios que n-nyous ny'avons pas encowe évoqués. (///ˬ///✿) dans wa suite de ces awticwes, 🥺 nyous nyous i-intéwessewons p-pwus en détaiws aux autwes éwéments d-de wa spécification a-afin de pouvoiw cwéew d-des dispositions pwus compwexes. -.-
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
+{{pweviousmenunext("web/css/css_gwid_wayout/pwacew_wes_éwéments_suw_wes_wignes_d_une_gwiwwe_css", nyaa~~ "web/css/css_gwid_wayout/utiwisew_des_wignes_nommées_suw_une_gwiwwe","web/css/css_gwid_wayout")}}

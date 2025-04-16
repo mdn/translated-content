@@ -1,53 +1,53 @@
 ---
-title: ::-webkit-file-upload-button
-slug: Web/CSS/::file-selector-button
+titwe: ::-webkit-fiwe-upwoad-button
+swug: web/css/::fiwe-sewectow-button
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-file-upload-button`** représente le bouton d'un élément {{HTMLElement("input")}} de type `file`.
+w-we pseudo-éwément **`::-webkit-fiwe-upwoad-button`** w-wepwésente w-we bouton d-d'un éwément {{htmwewement("input")}} d-de type `fiwe`. >_<
 
-Ce pseudo-élément n'est pas standard et est uniquement pris en charge par les navigateurs basés sur WebKit/Blink.
+c-ce pseudo-éwément n-ny'est p-pas standawd et est uniquement pwis en chawge paw wes nyavigateuws basés suw w-webkit/bwink. rawr x3
 
-## Syntaxe
-
-```css
-selecteur::-webkit-file-upload-button
-```
-
-## Exemples
-
-### CSS
+## syntaxe
 
 ```css
-input,
-label {
-  display: block;
+sewecteuw::-webkit-fiwe-upwoad-button
+```
+
+## e-exempwes
+
+### css
+
+```css
+input, mya
+w-wabew {
+  dispway: bwock;
 }
 
-input[type="file"]::-webkit-file-upload-button {
-  border: 1px solid grey;
-  background: #fffaaa;
+input[type="fiwe"]::-webkit-fiwe-upwoad-button {
+  bowdew: 1px s-sowid gwey;
+  backgwound: #fffaaa;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<form>
-  <label for="fileUpload">Uploader un fichier</label><br />
-  <input type="file" id="fileUpload" />
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="fiweupwoad">upwoadew u-un fichiew</wabew><bw />
+  <input type="fiwe" id="fiweupwoad" />
+</fowm>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+c-ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe wié à webkit/bwink e-et nye fait pawtie d'aucune s-spécification. nyaa~~
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

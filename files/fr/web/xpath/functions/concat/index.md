@@ -1,31 +1,31 @@
 ---
-title: concat
-slug: Web/XPath/Functions/concat
+titwe: concat
+swug: web/xpath/functions/concat
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `concat` concatène deux ou plusieurs chaînes et retourne la chaîne résultante.
+w-wa fonction `concat` c-concatène d-deux ou pwusieuws c-chaînes e-et wetouwne wa c-chaîne wésuwtante. XD
 
-### Syntaxe
+### s-syntaxe
 
 ```
-concat( chaîne1 , chaîne2 [, chaînen]* )
+concat( chaîne1 , :3 chaîne2 [, 😳😳😳 chaînen]* )
 ```
 
-### Arguments
+### awguments
 
 - `chaînen`
-  - : Cette fonction accepte deux arguments ou plus. Chacun est une chaîne.
+  - : c-cette fonction accepte deux awguments o-ou pwus. -.- chacun est une chaîne. ( ͡o ω ͡o )
 
-### Retour
+### w-wetouw
 
-Une chaîne unique, résultat de la concaténation des chaînes passées en arguments à la fonction.
+une chaîne unique, rawr x3 wésuwtat de wa concaténation d-des chaînes passées en awguments à w-wa fonction. nyaa~~
 
-### Définition
+### d-définition
 
-[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-concat).
+[xpath 1.0, /(^•ω•^) section 4.2](https://www.w3.owg/tw/xpath#function-concat). rawr
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. OwO

@@ -1,92 +1,92 @@
 ---
-title: -webkit-text-stroke-width
-slug: Web/CSS/-webkit-text-stroke-width
+titwe: -webkit-text-stwoke-width
+swug: web/css/-webkit-text-stwoke-width
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-text-stroke-width`** permet de définir l'épaisseur du trait qui entoure les lettres du texte.
+w-wa pwopwiété **`-webkit-text-stwoke-width`** p-pewmet de définiw w-w'épaisseuw d-du twait qui e-entouwe wes wettwes d-du texte. (///ˬ///✿)
 
 {{cssinfo}}
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
--webkit-text-stroke-width: thin;
--webkit-text-stroke-width: medium;
--webkit-text-stroke-width: thick;
+/* v-vaweuws avec un m-mot-cwé */
+-webkit-text-stwoke-width: thin;
+-webkit-text-stwoke-width: medium;
+-webkit-text-stwoke-width: thick;
 
-/* Valeurs de longueur */
-/* Type <length>       */
--webkit-text-stroke-width: 2px;
--webkit-text-stroke-width: 0.1em;
--webkit-text-stroke-width: 1mm;
--webkit-text-stroke-width: 5pt;
+/* vaweuws d-de wongueuw */
+/* type <wength>       */
+-webkit-text-stwoke-width: 2px;
+-webkit-text-stwoke-width: 0.1em;
+-webkit-text-stwoke-width: 1mm;
+-webkit-text-stwoke-width: 5pt;
 
-/* Valeurs globales */
--webkit-text-stroke-width: inherit;
--webkit-text-stroke-width: initial;
--webkit-text-stroke-width: unset;
+/* vaweuws gwobawes */
+-webkit-text-stwoke-width: i-inhewit;
+-webkit-text-stwoke-width: initiaw;
+-webkit-text-stwoke-width: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<line-width>`
-  - : La largeur du trait utilisé pour entourer les lettres du texte.
+- `<wine-width>`
+  - : wa wawgeuw du twait utiwisé p-pouw entouwew wes wettwes du t-texte. 😳😳😳
 
-### Syntaxe formelle
+### syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 p {
-  margin: 0;
+  mawgin: 0;
   font-size: 4em;
-  -webkit-text-stroke-color: red;
+  -webkit-text-stwoke-cowow: wed;
 }
 
 #thin {
-  -webkit-text-stroke-width: thin;
+  -webkit-text-stwoke-width: t-thin;
 }
 
 #medium {
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stwoke-width: 3px;
 }
 
 #thick {
-  -webkit-text-stroke-width: 1.5mm;
+  -webkit-text-stwoke-width: 1.5mm;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p id="thin">Trait fin</p>
-<p id="medium">Trait moyen</p>
-<p id="thick">Trait épais</p>
+```htmw
+<p id="thin">twait fin</p>
+<p id="medium">twait m-moyen</p>
+<p id="thick">twait épais</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "450px", "230px")}}
+{{embedwivesampwe("exempwes", 🥺 "450px", "230px")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité (en anglais)](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [L'article de CSS-Tricks à propos de cette fonctionnalité (en anglais)](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-stroke")}}
-- {{cssxref("-webkit-text-fill-color")}}
+- [we biwwet de _suwfin' s-safawi_ qui annonce cette fonctionnawité (en angwais)](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [w'awticwe d-de css-twicks à pwopos de cette fonctionnawité (en angwais)](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-stwoke")}}
+- {{cssxwef("-webkit-text-fiww-cowow")}}

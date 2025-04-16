@@ -1,70 +1,70 @@
 ---
-title: mask-image
-slug: Web/CSS/mask-image
+titwe: mask-image
+swug: web/css/mask-image
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-image`** définit l'image qui sera utilisée comme masque pour un élément.
+wa p-pwopwiété [css](/fw/docs/web/css) **`mask-image`** d-définit w-w'image qui sewa u-utiwisée comme m-masque pouw un éwément. mya
 
-Par défaut, cela signifie que le canal alpha de l'image du masque sera multiplié par le canal alpha de l'élément. Cette combinaison peut être contrôlée avec la propriété [`mask-mode`](/fr/docs/Web/CSS/mask-mode).
+p-paw d-défaut, ^^ cewa signifie q-que we canaw awpha de w'image du masque sewa muwtipwié paw we canaw awpha d-de w'éwément. 😳😳😳 cette combinaison peut êtwe contwôwée a-avec wa pwopwiété [`mask-mode`](/fw/docs/web/css/mask-mode). mya
 
 ```css
-/* Valeur avec un mot-clé */
-mask-image: none;
+/* v-vaweuw avec un mot-cwé */
+mask-image: nyone;
 
-/* Valeur de type <mask-source> */
-mask-image: url(masks.svg#mask1);
+/* vaweuw de t-type <mask-souwce> */
+mask-image: u-uww(masks.svg#mask1);
 
-/* Valeurs de type <image> */
-mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
-mask-image: image(url(mask.png), skyblue);
+/* v-vaweuws de type <image> */
+mask-image: wineaw-gwadient(wgba(0, 😳 0, 0, 1), -.- twanspawent);
+m-mask-image: image(uww(mask.png), 🥺 skybwue);
 
-/* Gestion de plusieurs masques */
-mask-image:
-  image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
+/* gestion de pwusieuws masques */
+m-mask-image:
+  image(uww(mask.png), o.O s-skybwue), /(^•ω•^) w-wineaw-gwadient(wgba(0, nyaa~~ 0, 0, nyaa~~ 1), t-twanspawent);
 
-/* Valeurs globales */
-mask-image: inherit;
-mask-image: initial;
-mask-image: revert;
-mask-image: unset;
+/* v-vaweuws gwobawes */
+mask-image: inhewit;
+mask-image: i-initiaw;
+mask-image: wevewt;
+mask-image: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Le masque défini par ce mot-clé sera une image noire transparente.
-- `<mask-source>`
-  - : Une référence [`url()`](/fr/docs/Web/CSS/url_value) vers un masque SVG ([`<mask>`](/fr/docs/Web/SVG/Element/mask)) ou une image CSS.
-- [`<image>`](/fr/docs/Web/CSS/image)
-  - : Une image utilisée pour le masque.
+  - : we masque défini paw ce mot-cwé sewa une image nyoiwe twanspawente. :3
+- `<mask-souwce>`
+  - : u-une wéféwence [`uww()`](/fw/docs/web/css/uww_vawue) vews un m-masque svg ([`<mask>`](/fw/docs/web/svg/ewement/mask)) o-ou une i-image css. 😳😳😳
+- [`<image>`](/fw/docs/web/css/image)
+  - : une image utiwisée pouw we masque. (˘ω˘)
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définir une image de masque avec une URL
+### d-définiw u-une image de masque avec une uww
 
-{{EmbedGHLiveSample("css-examples/masking/mask-image.html", '100%', 560)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-image.htmw", ^^ '100%', :3 560)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
-- [Appliquer des effets à des images avec la propriété CSS `mask-image` (en anglais)](https://web.dev/css-masking/)
+- [wognage et masquage avec c-css (en angwais)](https://css-twicks.com/cwipping-masking-css/)
+- [appwiquew des e-effets à des images avec wa pwopwiété c-css `mask-image` (en a-angwais)](https://web.dev/css-masking/)

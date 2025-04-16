@@ -1,151 +1,151 @@
 ---
-title: background-position
-slug: Web/CSS/background-position
-l10n:
-  sourceCommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
+titwe: backgwound-position
+swug: w-web/css/backgwound-position
+w-w10n:
+  souwcecommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`background-position`** permet de définir la position initiale, relative à l'origine définie par [`background-origin`](/fr/docs/Web/CSS/background-origin), pour chaque image d'arrière-plan.
+w-wa pwopwiété [css](/fw/docs/web/css) **`backgwound-position`** p-pewmet de définiw w-wa position i-initiawe, OwO wewative à w-w'owigine d-définie paw [`backgwound-owigin`](/fw/docs/web/css/backgwound-owigin), 🥺 pouw chaque image d'awwièwe-pwan. mya
 
-{{InteractiveExample("CSS Demo: background-position")}}
+{{intewactiveexampwe("css demo: backgwound-position")}}
 
-```css interactive-example-choice
-background-position: top;
+```css intewactive-exampwe-choice
+b-backgwound-position: top;
 ```
 
-```css interactive-example-choice
-background-position: left;
+```css intewactive-exampwe-choice
+b-backgwound-position: weft;
 ```
 
-```css interactive-example-choice
-background-position: center;
+```css intewactive-exampwe-choice
+b-backgwound-position: centew;
 ```
 
-```css interactive-example-choice
-background-position: 25% 75%;
+```css intewactive-exampwe-choice
+backgwound-position: 25% 75%;
 ```
 
-```css interactive-example-choice
-background-position: bottom 50px right 100px;
+```css intewactive-exampwe-choice
+b-backgwound-position: bottom 50px w-wight 100px;
 ```
 
-```css interactive-example-choice
-background-position: right 35% bottom 45%;
+```css i-intewactive-exampwe-choice
+backgwound-position: wight 35% bottom 45%;
 ```
 
-```html interactive-example
-<section class="display-block" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section c-cwass="dispway-bwock" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: navajowhite;
-  background-image: url("/shared-assets/images/examples/star.png");
-  background-repeat: no-repeat;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: nyavajowhite;
+  b-backgwound-image: u-uww("/shawed-assets/images/exampwes/staw.png");
+  b-backgwound-wepeat: n-nyo-wepeat;
   height: 100%;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs utilisant un mot-clé */
-background-position: top;
-background-position: bottom;
-background-position: left;
-background-position: right;
-background-position: center;
+/* v-vaweuws utiwisant un mot-cwé */
+backgwound-position: t-top;
+backgwound-position: bottom;
+backgwound-position: weft;
+backgwound-position: wight;
+backgwound-position: c-centew;
 
-/* Valeurs proportionnelles à la boîte */
-/* Type <percentage>                   */
-background-position: 25% 75%;
+/* vaweuws pwopowtionnewwes à w-wa boîte */
+/* t-type <pewcentage>                   */
+b-backgwound-position: 25% 75%;
 
-/* Valeurs de longueur */
-/* Type <length>       */
-background-position: 0 0;
-background-position: 1cm 2cm;
-background-position: 10ch 8em;
+/* vaweuws de wongueuw */
+/* type <wength>       */
+b-backgwound-position: 0 0;
+b-backgwound-position: 1cm 2cm;
+backgwound-position: 10ch 8em;
 
-/* Plusieurs valeurs pour plusieurs arrières-plans */
-background-position:
-  0 0,
-  center;
+/* p-pwusieuws v-vaweuws pouw pwusieuws awwièwes-pwans */
+b-backgwound-position:
+  0 0, 😳
+  centew;
 
-/* Valeurs exprimant un décalage relatif aux côtés */
-background-position: bottom 10px right 20px;
-background-position: right 3em bottom 10px;
-background-position: bottom 10px right;
-background-position: top right 10px;
+/* v-vaweuws expwimant un décawage wewatif aux côtés */
+b-backgwound-position: bottom 10px wight 20px;
+b-backgwound-position: wight 3em b-bottom 10px;
+b-backgwound-position: bottom 10px wight;
+backgwound-position: top wight 10px;
 
-/* Valeurs globales */
-background-position: inherit;
-background-position: initial;
-background-position: revert;
-background-position: revert-layer;
-background-position: unset;
+/* vaweuws gwobawes */
+backgwound-position: inhewit;
+b-backgwound-position: i-initiaw;
+backgwound-position: w-wevewt;
+b-backgwound-position: w-wevewt-wayew;
+backgwound-position: unset;
 ```
 
-La propriété `background-position` peut être définie grâce à une ou plusieurs valeurs `<position>`, séparées par des virgules.
+wa pwopwiété `backgwound-position` p-peut êtwe définie gwâce à une ou pwusieuws vaweuws `<position>`, òωó sépawées paw des v-viwguwes. /(^•ω•^)
 
-### Valeurs
+### vaweuws
 
 - `<position>`
 
-  - : Une valeur [`<position>`](/fr/docs/Web/CSS/position). Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une à quatre valeurs. Si deux valeurs qui ne sont pas des mots-clés sont utilisées, la première représente la position horizontale et la seconde la position verticale. Si une seule valeur est indiquée, la deuxième sera `center` par défaut. Si trois ou quatre valeurs sont utilisées, les valeurs de longueur-pourcentage sont des décalages relatifs au(x) mot(s)-clé(s) précédent(s).
+  - : u-une vaweuw [`<position>`](/fw/docs/web/css/position). -.- u-une position d-définit un coupwe de coowdonnées x-xy qui pewmet d-de pwacew un o-objet paw wappowt a-aux bowds de wa boîte d'un éwément. òωó une position p-peut êtwe d-définie avec u-une à quatwe vaweuws. /(^•ω•^) s-si deux vaweuws q-qui nye sont pas des mots-cwés sont utiwisées, /(^•ω•^) wa pwemièwe w-wepwésente wa position howizontawe et wa seconde wa position vewticawe. 😳 si une seuwe vaweuw e-est indiquée, :3 wa deuxième sewa `centew` paw défaut. (U ᵕ U❁) si twois o-ou quatwe vaweuws s-sont utiwisées, ʘwʘ w-wes vaweuws de wongueuw-pouwcentage s-sont des décawages wewatifs a-au(x) mot(s)-cwé(s) p-pwécédent(s). o.O
 
-    **Définition avec une valeur&nbsp;:** la valeur peut être&nbsp;:
+    **définition avec une vaweuw&nbsp;:** wa vaweuw peut êtwe&nbsp;:
 
-    - Le mot-clé `center` qui centre l'image.
-    - Un mot-clé parmi `top`, `left`, `bottom`, `right`. Ce mot-clé indique le bord par rapport auquel placer l'élément. Pour l'autre dimension, on utilisera la moitié de la boîte (50%) et l'élément sera placé au milieu de cet axe.
-    - Une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Cette valeur définit l'abscisse du point par rapport au bord gauche. L'ordonnée est fixée à 50%.
+    - we mot-cwé `centew` qui c-centwe w'image. ʘwʘ
+    - un mot-cwé p-pawmi `top`, ^^ `weft`, `bottom`, ^•ﻌ•^ `wight`. ce m-mot-cwé indique w-we bowd paw wappowt auquew pwacew w'éwément. mya p-pouw w'autwe dimension, o-on utiwisewa wa moitié d-de wa boîte (50%) e-et w'éwément sewa pwacé au miwieu de cet axe. UwU
+    - une wongueuw ([`<wength>`](/fw/docs/web/css/wength)) ou un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). c-cette vaweuw définit w-w'abscisse d-du point paw wappowt au bowd g-gauche. >_< w'owdonnée e-est fixée à 50%. /(^•ω•^)
 
-    **Définition avec deux valeurs&nbsp;:** la première valeur définit l'abscisse (la coordonnée horizontale X) et la seconde définit l'ordonnée (la coordonnée verticale Y). Chaque valeur peut être&nbsp;:
+    **définition avec deux v-vaweuws&nbsp;:** wa pwemièwe vaweuw définit w'abscisse (wa coowdonnée howizontawe x-x) et wa s-seconde définit w'owdonnée (wa coowdonnée vewticawe y-y). òωó chaque v-vaweuw peut êtwe&nbsp;:
 
-    - Un des mots-clés parmi `top`, `left`, `bottom`, `right`. Si `left` ou `right` est utilisé, la valeur définit l'abscisse et l'autre définira l'ordonnée. Si `top` ou `bottom` est indiqué, cette valeur définira l'ordonnée et l'autre valeur définira X.
-    - Une valeur de longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Si l'autre valeur vaut `left` ou `right`, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est `top` ou `bottom`, cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.
+    - un des mots-cwés pawmi `top`, σωσ `weft`, `bottom`, ( ͡o ω ͡o ) `wight`. si `weft` o-ou `wight` est utiwisé, nyaa~~ wa vaweuw définit w'abscisse et w'autwe définiwa w-w'owdonnée. :3 si `top` ou `bottom` est indiqué, UwU c-cette vaweuw d-définiwa w'owdonnée et w'autwe vaweuw définiwa x.
+    - une v-vaweuw de wongueuw ([`<wength>`](/fw/docs/web/css/wength)) o-ou un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). o.O si w'autwe vaweuw v-vaut `weft` ou `wight`, (ˆ ﻌ ˆ)♡ cette vaweuw d-définiwa w'owdonnée paw wappowt au bowd haut. ^^;; si w'autwe v-vaweuw est `top` ou `bottom`, ʘwʘ cette v-vaweuw définiwa w-w'abscisse wewativement au b-bowd gauche. σωσ si wes deux vaweuws s-sont des wongueuws o-ou des pouwcentages, ^^;; w-wa pwemièwe définiwa w-w'abscisse et wa s-seconde w'owdonnée. ʘwʘ
 
-    > [!NOTE]
-    > Si une valeur est `top` ou `bottom`, la seconde ne peut pas être `top` ou `bottom`. Si une valeur est `left` ou `right`, la seconde ne peut pas être `left` ou `right`. Autrement dit, les combinaisons `top top`, `bottom bottom`, `top bottom`, `bottom top`, `right right`, `left left`, `left right` et `right left` seront considérées comme invalides.
+    > [!note]
+    > si une vaweuw est `top` o-ou `bottom`, ^^ w-wa seconde nye peut p-pas êtwe `top` ou `bottom`. nyaa~~ si une vaweuw est `weft` o-ou `wight`, (///ˬ///✿) wa seconde n-nye peut pas êtwe `weft` o-ou `wight`. XD autwement dit, :3 wes combinaisons `top top`, òωó `bottom b-bottom`, ^^ `top b-bottom`, ^•ﻌ•^ `bottom t-top`, σωσ `wight w-wight`, (ˆ ﻌ ˆ)♡ `weft weft`, nyaa~~ `weft w-wight` et `wight weft` sewont considéwées comme invawides. ʘwʘ
 
-    - L'ordre des mots-clés n'est pas important, le navigateur pourra les réarranger si besoin. Ainsi, `top left` et `left top` auront le même effet. En revanche, si on associe une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) avec un mot-clé, l'ordre est important et la valeur définissant l'abscisse doit arriver avant l'ordonnée&nbsp;: `right 20px` ne sera pas équivalent à `20px right` et cette dernière forme sera invalide. Les valeurs `left 20%` ou `20% bottom` sont valides car les abscisses et ordonnées sont bien rangées.
+    - w'owdwe des mots-cwés ny'est p-pas impowtant, ^•ﻌ•^ we navigateuw p-pouwwa wes wéawwangew si besoin. a-ainsi, rawr x3 `top weft` et `weft top` a-auwont we même effet. 🥺 en wevanche, ʘwʘ s-si on associe u-une wongueuw ([`<wength>`](/fw/docs/web/css/wength)) o-ou un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)) a-avec u-un mot-cwé, (˘ω˘) w'owdwe est impowtant et wa vaweuw définissant w'abscisse doit awwivew avant w'owdonnée&nbsp;: `wight 20px` nye sewa p-pas équivawent à `20px w-wight` e-et cette dewnièwe fowme sewa i-invawide. wes vaweuws `weft 20%` ou `20% bottom` sont vawides c-caw wes abscisses e-et owdonnées sont bien wangées. o.O
 
-    - La valeur par défaut est `left top` ou `0% 0%`.
+    - w-wa vaweuw paw défaut est `weft top` o-ou `0% 0%`. σωσ
 
-    **Définition avec 3 valeurs&nbsp;:** Deux valeurs sont des mots-clés et la troisième est le décalage appliqué à la valeur qui précède.
+    **définition avec 3 v-vaweuws&nbsp;:** deux vaweuws s-sont des mots-cwés e-et wa twoisième est we décawage appwiqué à wa vaweuw qui pwécède. (ꈍᴗꈍ)
 
-    - La première valeur est l'un des mots-clés `top`, `left`, `bottom`, `right`, ou `center`. Si `left` ou `right` sont fournis, cela définit la position sur l'axe horizontale et si `top` or `bottom` sont fournis, cela définit la position sur l'axe vertical et l'autre mot-clé définit la position sur l'axe horizontal.
-    - La longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou le pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), s'il est utilisé en deuxième valeur, sera considéré comme le décalage à appliquer pour la première valeur. S'il s'agit de la troisième valeur, ce sera le décalage à appliquer à la deuxième valeur.
-    - Il n'y a qu'une seule longueur ou qu'un seul pourcentage attendu pour définir le décalage de la valeur précédente. Toute combinaison d'un mot-clé avec deux longueurs ou deux pourcentages sera considérée comme invalide.
+    - w-wa pwemièwe v-vaweuw est w'un d-des mots-cwés `top`, (ˆ ﻌ ˆ)♡ `weft`, `bottom`, o.O `wight`, o-ou `centew`. :3 s-si `weft` ou `wight` sont fouwnis, -.- c-cewa définit w-wa position suw w'axe howizontawe e-et si `top` o-ow `bottom` sont fouwnis, ( ͡o ω ͡o ) cewa d-définit wa position suw w'axe vewticaw et w'autwe m-mot-cwé définit wa position s-suw w'axe howizontaw. /(^•ω•^)
+    - w-wa wongueuw (type [`<wength>`](/fw/docs/web/css/wength)) o-ou we pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), (⑅˘꒳˘) s'iw est utiwisé e-en deuxième vaweuw, òωó s-sewa considéwé c-comme we décawage à appwiquew pouw wa pwemièwe vaweuw. 🥺 s-s'iw s'agit de wa twoisième vaweuw, (ˆ ﻌ ˆ)♡ ce sewa we d-décawage à appwiquew à w-wa deuxième vaweuw. -.-
+    - i-iw ny'y a qu'une seuwe wongueuw o-ou qu'un seuw p-pouwcentage attendu pouw définiw we décawage d-de wa vaweuw pwécédente. σωσ toute combinaison d'un m-mot-cwé avec d-deux wongueuws ou deux pouwcentages s-sewa considéwée comme invawide.
 
-    **Définition avec 4 valeurs&nbsp;:** La première et la troisième valeur sont des mots-clés pour la position horizontale d'une part et verticale d'autre part. La deuxième et la quatrième valeur sont des décalages pour les valeurs qui les précèdent&nbsp;:
+    **définition a-avec 4 v-vaweuws&nbsp;:** w-wa pwemièwe et wa twoisième vaweuw sont des mots-cwés pouw wa position howizontawe d'une pawt et vewticawe d'autwe pawt. >_< wa deuxième et wa quatwième vaweuw sont des décawages pouw wes vaweuws qui wes p-pwécèdent&nbsp;:
 
-    - La première et la troisième valeur utilisent l'un des mots-clés suivant&nbsp;: `top`, `left`, `bottom`, `right`. Si `left` ou `right` sont utilisés, cela définit la position horizontale. Si `top` ou `bottom` sont utilisés, cela définit la position verticale et l'autre mot-clé définit alors la valeur horizontale.
-    - La deuxième et la quatrième valeur sont des longueurs ([`<length>`](/fr/docs/Web/CSS/length)) ou des pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)). La deuxième valeur est le décalage pour le premier mot-clé tandis que la quatrième valeur est le décalage correspondant au deuxième mot-clé.
+    - w-wa pwemièwe et wa twoisième vaweuw u-utiwisent w'un des m-mots-cwés suivant&nbsp;: `top`, :3 `weft`, OwO `bottom`, `wight`. rawr si `weft` o-ou `wight` sont utiwisés, (///ˬ///✿) c-cewa définit wa position howizontawe. ^^ s-si `top` o-ou `bottom` sont utiwisés, XD c-cewa définit wa position vewticawe e-et w'autwe mot-cwé d-définit awows wa vaweuw howizontawe. UwU
+    - w-wa deuxième e-et wa quatwième v-vaweuw sont des w-wongueuws ([`<wength>`](/fw/docs/web/css/wength)) o-ou des pouwcentages ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). o.O w-wa deuxième v-vaweuw est w-we décawage pouw w-we pwemiew mot-cwé tandis que w-wa quatwième v-vaweuw est we décawage c-cowwespondant au deuxième m-mot-cwé. 😳
 
-### À propos des pourcentages
+### À pwopos des pouwcentages
 
-Lorsqu'on exprime un décalage en pourcentage, ce dernier est relatif au conteneur. Ainsi, une valeur de 0% indiquera que le côté gauche (ou haut) du bord de l'image est aligné avec le bord gauche (ou haut) du conteneur. Une valeur de 100% indiquera que le côté droit (ou bas) de l'image d'arrière-plan est alignée avec le bord droit (ou bas) du conteneur. Une valeur de 50% permettra de centrer l'image.
+wowsqu'on e-expwime un décawage en p-pouwcentage, (˘ω˘) ce d-dewniew est wewatif a-au conteneuw. 🥺 ainsi, une vaweuw d-de 0% indiquewa que we côté g-gauche (ou haut) du bowd de w'image e-est awigné avec we bowd gauche (ou h-haut) du conteneuw. ^^ une vaweuw de 100% indiquewa que we côté dwoit (ou b-bas) de w'image d'awwièwe-pwan e-est awignée a-avec we bowd dwoit (ou bas) du conteneuw. >w< une vaweuw de 50% pewmettwa d-de centwew w'image.
 
-Autrement dit, lorsqu'on utilise un pourcentage, celui-ci s'inscrit dans la formule suivante&nbsp;:
+autwement d-dit, ^^;; wowsqu'on u-utiwise un pouwcentage, (˘ω˘) c-cewui-ci s'inscwit dans wa fowmuwe suivante&nbsp;:
 
-```plain
-(largeur conteneur - largeur image) * (position en %) = (décalage horizontal)
-(hauteur conteneur - hauteur image) * (position en %) = (décalage vertical)
+```pwain
+(wawgeuw c-conteneuw - wawgeuw i-image) * (position en %) = (décawage h-howizontaw)
+(hauteuw conteneuw - hauteuw image) * (position e-en %) = (décawage vewticaw)
 ```
 
-En utilisant l'axe horizontal pour un exemple, prenons une image dont la largeur mesure 300px, qu'on utilise celle-ci dans un conteneur dont la largeur mesure 100px et que `background-size` vaut `auto`&nbsp;:
+e-en utiwisant w-w'axe howizontaw p-pouw un exempwe, OwO pwenons u-une image dont w-wa wawgeuw mesuwe 300px, (ꈍᴗꈍ) q-qu'on utiwise c-cewwe-ci dans un conteneuw d-dont wa wawgeuw m-mesuwe 100px et q-que `backgwound-size` v-vaut `auto`&nbsp;:
 
-```plain
-100px - 300px = -200px (différence entre le conteneur et l'image)
+```pwain
+100px - 300px = -200px (difféwence e-entwe we c-conteneuw et w'image)
 ```
 
-Voici donc les décalages, exprimés en pixels, qu'on obtient avec les pourcentages -25%, 0%, 50%, 100% et 125%&nbsp;:
+v-voici d-donc wes décawages, òωó expwimés e-en pixews, ʘwʘ qu'on obtient avec w-wes pouwcentages -25%, ʘwʘ 0%, nyaa~~ 50%, 100% et 125%&nbsp;:
 
-```plain
+```pwain
 -200px * -25% = 50px
 -200px * 0% = 0px
 -200px * 50% = -100px
@@ -153,87 +153,87 @@ Voici donc les décalages, exprimés en pixels, qu'on obtient avec les pourcenta
 -200px * 125% = -250px
 ```
 
-Traduisons l'effet obtenu avec ces valeurs. Le **bord gauche** de **l'image** est décalé du **bord gauche** du **conteneur** de&nbsp;:
+t-twaduisons w-w'effet o-obtenu avec ces vaweuws. UwU we **bowd gauche** de **w'image** est d-décawé du **bowd g-gauche** du **conteneuw** d-de&nbsp;:
 
-- \+ 50px (plaçant ainsi le bord gauche de l'image au centre du conteneur large de 100px)
-- 0px (le bord gauche de l'image coïncide avec le bord gauche du conteneur)
-- \-100px (le bord gauche de l'image est situé à 100px du bord gauche du conteneur, ce qui signifie pour notre exemple que c'est la partie centrale de l'image qui est inscrite dans le conteneur)
-- \-200px (le bord gauche de l'image est situé à 200px du bord gauche du conteneur, ce qui signifie pour notre exemple que le bord droit de l'image coïncide avec le bord droit du conteneur)
-- \-250px (le bord gauche de l'image est situé à 250px du bord gauche du conteneur, ce qui signifie pour notre exemple que le bord droit de l'image de 300px est au centre du conteneur).
+- \+ 50px (pwaçant ainsi we bowd gauche de w'image au centwe d-du conteneuw w-wawge de 100px)
+- 0px (we bowd g-gauche de w'image c-coïncide avec we bowd gauche du conteneuw)
+- \-100px (we bowd g-gauche de w'image e-est situé à 100px d-du bowd g-gauche du conteneuw, (⑅˘꒳˘) ce qui signifie pouw nyotwe e-exempwe que c'est w-wa pawtie centwawe de w'image qui est inscwite d-dans we conteneuw)
+- \-200px (we bowd gauche de w'image est situé à 200px du b-bowd gauche du conteneuw, (˘ω˘) ce qui s-signifie pouw n-nyotwe exempwe que we bowd dwoit d-de w'image coïncide a-avec we bowd dwoit du conteneuw)
+- \-250px (we b-bowd gauche de w'image est s-situé à 250px d-du bowd gauche d-du conteneuw, :3 ce q-qui signifie pouw nyotwe exempwe q-que we bowd dwoit d-de w'image de 300px e-est au centwe du conteneuw). (˘ω˘)
 
-On notera donc que si l'image d'arrière-plan a les mêmes dimensions que le conteneur, les valeurs en pourcentage pour `background-position` n'auront aucun effet (car la différence entre l'image et le conteneur est alors nulle). Il faudra utiliser des valeurs absolues pour décaler l'image.
+o-on nyotewa donc que si w'image d'awwièwe-pwan a-a wes mêmes d-dimensions que w-we conteneuw, nyaa~~ wes vaweuws en pouwcentage pouw `backgwound-position` ny'auwont aucun effet (caw w-wa difféwence entwe w'image et w-we conteneuw est a-awows nyuwwe). iw faudwa utiwisew des vaweuws absowues p-pouw décawew w'image. (U ﹏ U)
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Exemples utilisant plusieurs images
+### e-exempwes utiwisant pwusieuws images
 
-Dans cet exemple, on a trois éléments jaunes qui ont chacun une étoile située différemment. Le rectangle final possède deux images d'arrière-plan, chacune à une position différente.
+dans cet exempwe, nyaa~~ on a twois éwéments j-jaunes qui ont chacun une étoiwe s-située difféwemment. ^^;; we wectangwe finaw possède deux i-images d'awwièwe-pwan, OwO chacune à une position difféwente. nyaa~~
 
-#### HTML
+#### htmw
 
-```html
-<div class="exemple_un">Premier exemple</div>
-<div class="exemple_deux">Deuxième exemple</div>
-<div class="exemple_trois">Troisième exemple</div>
+```htmw
+<div c-cwass="exempwe_un">pwemiew e-exempwe</div>
+<div cwass="exempwe_deux">deuxième e-exempwe</div>
+<div cwass="exempwe_twois">twoisième exempwe</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  background-color: #ffee99;
-  background-repeat: no-repeat;
+  b-backgwound-cowow: #ffee99;
+  backgwound-wepeat: n-nyo-wepeat;
   width: 300px;
-  height: 80px;
-  margin-bottom: 12px;
+  h-height: 80px;
+  mawgin-bottom: 12px;
 }
 
-/* On utilise la propriété raccourcie background */
-.exemple_un {
-  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
+/* on utiwise wa pwopwiété w-waccouwcie backgwound */
+.exempwe_un {
+  backgwound: uww("staw-twanspawent.gif") #ffee99 2.5cm b-bottom no-wepeat;
 }
-.exemple_deux {
-  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+.exempwe_deux {
+  b-backgwound: u-uww("staw-twanspawent.gif") #ffee99 weft 4em bottom 1em n-nyo-wepeat;
 }
 
 /*
-Plusieurs images d'arrière-plan chacune positionnée
-différemment, on voit les virgules dans les déclarations.
-L'ordre est le même entre background-image et -position.
+pwusieuws images d'awwièwe-pwan chacune positionnée
+difféwemment, UwU o-on voit w-wes viwguwes dans w-wes décwawations. 😳
+w-w'owdwe est we même entwe backgwound-image e-et -position. 😳
 */
-.exemple_trois {
-  background-image: url("star-transparent.gif"), url("cat-front.png");
-  background-position:
-    0px 0px,
-    right 3em bottom 2em;
+.exempwe_twois {
+  b-backgwound-image: uww("staw-twanspawent.gif"), (ˆ ﻌ ˆ)♡ uww("cat-fwont.png");
+  b-backgwound-position:
+    0px 0px, (✿oωo)
+    wight 3em bottom 2em;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 420, 320)}}
+{{embedwivesampwe('', nyaa~~ 420, ^^ 320)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Gérer plusieurs arrières-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [`background-position-x`](/fr/docs/Web/CSS/background-position-x)
-- [`background-position-y`](/fr/docs/Web/CSS/background-position-y)
-- [`background-position-inline`](/fr/docs/Web/CSS/background-position-inline)
-- [`background-position-block`](/fr/docs/Web/CSS/background-position-block)
-- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)
+- [géwew p-pwusieuws awwièwes-pwans](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+- [`backgwound-position-x`](/fw/docs/web/css/backgwound-position-x)
+- [`backgwound-position-y`](/fw/docs/web/css/backgwound-position-y)
+- [`backgwound-position-inwine`](/fw/docs/web/css/backgwound-position-inwine)
+- [`backgwound-position-bwock`](/fw/docs/web/css/backgwound-position-bwock)
+- [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin)

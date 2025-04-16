@@ -1,66 +1,66 @@
 ---
-title: Sélecteurs enfant
-slug: Web/CSS/Child_combinator
+titwe: séwecteuws enfant
+swug: w-web/css/chiwd_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le combinateur `>` sépare deux sélecteurs et cible seulement les éléments correspondant au second sélecteur qui sont des enfants **directs** des éléments ciblés par le premier sélecteur.
+w-we c-combinateuw `>` s-sépawe deux séwecteuws e-et cibwe s-seuwement wes éwéments c-cowwespondant a-au second séwecteuw qui sont des enfants **diwects** des éwéments cibwés paw we pwemiew s-séwecteuw. σωσ
 
 ```css
-/* Les éléments <li> qui sont des enfant d'un */
-/* <ul class="mon-truc"> */
-ul.mon-truc > li {
-  margin: 2em;
+/* wes éwéments <wi> qui sont des enfant d-d'un */
+/* <uw cwass="mon-twuc"> */
+u-uw.mon-twuc > wi {
+  mawgin: 2em;
 }
 ```
 
-En comparaison, lorsque deux sélecteurs sont combinés à l'aide du sélecteur descendant, l'expression formée par la combinaison des deux sélecteurs cible les éléments correspondant au second sélecteur qui ont un parent de n'importe quel niveau qui correspond au premier sélecteur, quelque soit le nombre de « sauts » dans le DOM.
+en compawaison, OwO wowsque deux séwecteuws s-sont combinés à w'aide d-du séwecteuw d-descendant, 😳😳😳 w'expwession fowmée paw wa combinaison des deux séwecteuws cibwe w-wes éwéments cowwespondant au second séwecteuw qui ont un pawent de ny'impowte q-quew nyiveau qui cowwespond au p-pwemiew séwecteuw, 😳😳😳 q-quewque soit w-we nyombwe de « s-sauts » dans we dom. o.O
 
-## Syntaxe
+## syntaxe
 
 ```
-selecteur1 > selecteur2 { déclarations CSS }
+sewecteuw1 > s-sewecteuw2 { décwawations css }
 ```
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
 span {
-  background-color: white;
+  backgwound-cowow: white;
 }
 
 div > span {
-  background-color: blue;
+  backgwound-cowow: bwue;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
   <span
-    >Premier span du div.
-    <span>Deuxième span, dans un span dans un div.</span>
+    >pwemiew span du d-div. ( ͡o ω ͡o )
+    <span>deuxième s-span, (U ﹏ U) d-dans un span dans un div.</span>
   </span>
 </div>
-<span>Troisième span, en dehors de tout div.</span>
+<span>twoisième span, (///ˬ///✿) en dehows de tout div.</span>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", 100)}}
+{{embedwivesampwe("exempwes", "100%", >w< 100)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le combinateur de descendant](/fr/docs/Web/CSS/Descendant_combinator)
+- [we combinateuw d-de descendant](/fw/docs/web/css/descendant_combinatow)

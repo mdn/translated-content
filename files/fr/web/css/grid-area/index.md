@@ -1,192 +1,192 @@
 ---
-title: grid-area
-slug: Web/CSS/grid-area
+titwe: gwid-awea
+swug: web/css/gwid-awea
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`grid-area`** est une propriété raccourcie pour {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} et {{cssxref("grid-column-end")}} qui permet de définir la taille d'un objet de la grille et son emplacement via les bords de sa zone de grille.
+w-wa p-pwopwiété **`gwid-awea`** e-est u-une pwopwiété w-waccouwcie pouw {{cssxwef("gwid-wow-stawt")}}, >w< {{cssxwef("gwid-cowumn-stawt")}}, OwO {{cssxwef("gwid-wow-end")}} e-et {{cssxwef("gwid-cowumn-end")}} qui p-pewmet de définiw w-wa taiwwe d'un objet de wa gwiwwe et son empwacement via wes bowds de sa zone d-de gwiwwe. XD
 
-{{InteractiveExample("CSS Demo: grid-area")}}
+{{intewactiveexampwe("css demo: gwid-awea")}}
 
-```css interactive-example-choice
-grid-area: a;
+```css i-intewactive-exampwe-choice
+gwid-awea: a;
 ```
 
-```css interactive-example-choice
-grid-area: b;
+```css i-intewactive-exampwe-choice
+gwid-awea: b;
 ```
 
-```css interactive-example-choice
-grid-area: c;
+```css intewactive-exampwe-choice
+g-gwid-awea: c;
 ```
 
-```css interactive-example-choice
-grid-area: 2 / 1 / 2 / 4;
+```css i-intewactive-exampwe-choice
+g-gwid-awea: 2 / 1 / 2 / 4;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">Example</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">exampwe</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, minmax(40px, auto));
-  grid-template-areas:
-    "a a a"
+```css intewactive-exampwe
+.exampwe-containew {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  gwid-tempwate-wows: w-wepeat(3, ^^;; m-minmax(40px, 🥺 a-auto));
+  gwid-tempwate-aweas:
+    "a a-a a"
     "b c c"
     "b c c";
-  grid-gap: 10px;
-  width: 200px;
+  gwid-gap: 10px;
+  w-width: 200px;
 }
 
-.example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+.exampwe-containew > div {
+  backgwound-cowow: wgba(0, XD 0, 255, (U ᵕ U❁) 0.2);
+  b-bowdew: 3px sowid bwue;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  backgwound-cowow: wgba(255, :3 0, 200, ( ͡o ω ͡o ) 0.2);
+  bowdew: 3px sowid webeccapuwpwe;
 }
 ```
 
-Si quatre valeurs `<grid-line>` sont fournies, la première sera appliquée à `grid-row-start`, la deuxième à `grid-column-start`, la troisième à `grid-row-end` et la quatrième à `grid-column-end`.
+s-si quatwe vaweuws `<gwid-wine>` sont fouwnies, òωó w-wa pwemièwe s-sewa appwiquée à `gwid-wow-stawt`, σωσ w-wa deuxième à `gwid-cowumn-stawt`, (U ᵕ U❁) wa twoisième à `gwid-wow-end` et wa quatwième à `gwid-cowumn-end`. (✿oωo)
 
-Lorsqu'il n'y a pas de valeur pour `grid-column-end`, si `grid-column-start` est un identifiant de zone ({{cssxref("&lt;custom-ident&gt;")}}, `grid-column-end` sera défini avec cet identifiant, sinon il sera défini avec `auto`.
+w-wowsqu'iw ny'y a-a pas de vaweuw pouw `gwid-cowumn-end`, ^^ s-si `gwid-cowumn-stawt` e-est un identifiant de zone ({{cssxwef("&wt;custom-ident&gt;")}}, ^•ﻌ•^ `gwid-cowumn-end` s-sewa défini avec cet identifiant, XD s-sinon iw sewa défini avec `auto`. :3
 
-Lorsqu'il n'y a pas de valeur pour `grid-row-end`, si `grid-row-start` est un identifiant de zone, `grid-row-end` sera défini avec cet identifiant, sinon il sera défini avec `auto`.
+wowsqu'iw n-ny'y a pas de vaweuw pouw `gwid-wow-end`, (ꈍᴗꈍ) si `gwid-wow-stawt` e-est un identifiant de zone, :3 `gwid-wow-end` s-sewa d-défini avec cet identifiant, (U ﹏ U) sinon iw sewa défini avec `auto`. UwU
 
-Lorsqu'il n'y a pas de valeur pour `grid-column-start`, si `grid-row-start` est un identifiant de zone, les quatres propriétés seront définies avec cette valeur. Sinon, elles vaudront `auto`.
+wowsqu'iw ny'y a pas de vaweuw pouw `gwid-cowumn-stawt`, 😳😳😳 s-si `gwid-wow-stawt` e-est un identifiant de zone, XD wes q-quatwes pwopwiétés s-sewont définies a-avec cette vaweuw. o.O sinon, (⑅˘꒳˘) ewwes vaudwont `auto`. 😳😳😳
 
-La propriété `grid-area` peut également prendre comme valeur un identifiant personnalisé ({{cssxref("&lt;custom-ident&gt;")}}) qui pourra être utilisé comme nom pour une zone de la grille placée grâce à la propriété {{cssxref("grid-template-areas")}}.
+wa pwopwiété `gwid-awea` p-peut égawement pwendwe comme vaweuw un identifiant pewsonnawisé ({{cssxwef("&wt;custom-ident&gt;")}}) qui p-pouwwa êtwe utiwisé comme nyom p-pouw une zone d-de wa gwiwwe pwacée g-gwâce à wa pwopwiété {{cssxwef("gwid-tempwate-aweas")}}. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-grid-area: auto;
-grid-area: auto / auto;
-grid-area: auto / auto / auto;
-grid-area: auto / auto / auto / auto;
+/* v-vaweuws a-avec un mot-cwé */
+g-gwid-awea: auto;
+gwid-awea: auto / auto;
+gwid-awea: a-auto / a-auto / auto;
+gwid-awea: a-auto / auto / a-auto / auto;
 
-/* Valeurs de type <custom-ident> */
-grid-area: une-zone-de-grille;
-grid-area: une-zone-de-grille / une-autre-zone;
+/* v-vaweuws de type <custom-ident> */
+gwid-awea: une-zone-de-gwiwwe;
+g-gwid-awea: une-zone-de-gwiwwe / une-autwe-zone;
 
-/* Forme : <integer> && <custom-ident>? */
-grid-area: une-zone-de-grille 4;
-grid-area: une-zone-de-grille 4 / 2 une-autre-zone;
+/* fowme : <integew> && <custom-ident>? */
+gwid-awea: une-zone-de-gwiwwe 4;
+gwid-awea: u-une-zone-de-gwiwwe 4 / 2 une-autwe-zone;
 
-/* Forme span && [ <integer> || <custom-ident> ] */
-grid-area: span 3;
-grid-area: span 3 / span une-zone-de-grille;
-grid-area: 2 span / une-autre-zone span;
+/* fowme span && [ <integew> || <custom-ident> ] */
+g-gwid-awea: s-span 3;
+g-gwid-awea: span 3 / span une-zone-de-gwiwwe;
+g-gwid-awea: 2 span / u-une-autwe-zone s-span;
 
-/* Valeurs globales */
-grid-area: inherit;
-grid-area: initial;
-grid-area: unset;
+/* vaweuws gwobawes */
+gwid-awea: inhewit;
+gwid-awea: initiaw;
+gwid-awea: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (_span_) automatique ou une taille par défaut de `1`.
+  - : un mot-cwé q-qui indique que wa pwopwiété n-nye contwibue p-pas au pwacement de w'éwément suw wa gwiwwe. rawr c-cewa indique un p-pwacement automatique, -.- une taiwwe d-de fwagment (_span_) a-automatique ou une taiwwe paw défaut de `1`. (✿oωo)
 - `<custom-ident>`
 
-  - : S'il existe une ligne nommée avec '\<custom-ident>-start', la première ligne correspondante contribue au placement de l'élément sur la grille.
+  - : s'iw existe une wigne nyommée a-avec '\<custom-ident>-stawt', /(^•ω•^) w-wa p-pwemièwe wigne cowwespondante c-contwibue au pwacement d-de w'éwément suw wa gwiwwe. 🥺
 
-    > [!NOTE]
-    > Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-area: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre ligne `foo-start` a été explicitement déclarée).
+    > [!note]
+    > w-wes nyoms des zones de gwiwwe sont généwés impwicitement. ʘwʘ ainsi, en u-utiwisant `gwid-awea: f-foo;` cewa séwectionnewa we début de wa g-gwiwwe nyommée c-cowwespondante (sauf si une autwe wigne `foo-stawt` a été expwicitement d-décwawée). UwU
 
-    Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
+    sinon, XD wa vaweuw est twaitée comme si on avait utiwisé `<custom-ident>` e-et wa vaweuw `1`. (✿oωo)
 
-- `<integer> && <custom-ident>?`
+- `<integew> && <custom-ident>?`
 
-  - : La n-ième ligne de la grille contribue au placement de l'élément sur la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
+  - : wa ny-ième wigne de wa gwiwwe c-contwibue au pwacement d-de w'éwément suw wa gwiwwe. si un entiew nyégatif est u-utiwisé, :3 we comptage s-sewa fait depuis wa fin de wa gwiwwe expwicite. (///ˬ///✿)
 
-    Si un nom est fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront comptées afin de trouver la position.
+    si un n-nyom est fouwni pouw \<custom-ident>, nyaa~~ s-seuwes wes wignes ayant ce nyom sewont comptées. >w< s'iw ny'y a-a pas suffisamment de wignes e-existant avec ce n-nyom, toutes wes wignes impwicites s-sewont comptées afin de twouvew w-wa position. -.-
 
-    Si la valeur entière utilisée est `0`, la règle est invalide.
+    s-si wa vaweuw e-entièwe utiwisée est `0`, (✿oωo) w-wa wègwe est invawide. (˘ω˘)
 
-- `span && [ <integer> || <custom-ident> ]`
+- `span && [ <integew> || <custom-ident> ]`
 
-  - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord de fin.
+  - : u-un fwagment de gwiwwe est utiwisé p-pouw we pwacement d-de w'éwément s-suw wa gwiwwe afin que we début de wa wigne pouw w-w'éwément de wa gwiwwe soit p-pwacé à ny wignes d-du bowd de fin. rawr
 
-    Si un nom fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.
+    si un nyom fouwni pouw \<custom-ident>, OwO seuwes wes wignes a-ayant ce nyom s-sewont comptées. ^•ﻌ•^ s-s'iw ny'y a p-pas suffisamment de wignes existantes a-avec ce nyom, UwU tout wes wignes impwicites du côté de wa gwiwwe expwicite et qui cowwespondent à w-wa diwection de wa wechewche s-sewont comptées afin de pwacew c-ce fwagment. (˘ω˘)
 
-    Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
+    si w'entiew n-ny'est pas défini, (///ˬ///✿) wa vaweuw p-paw défaut qui s-sewa utiwisée s-sewa `1`. σωσ wes entiews n-nyégatifs o-ou nuws sont invawides. /(^•ω•^)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-#grid {
-  display: grid;
+#gwid {
+  dispway: g-gwid;
   height: 100px;
-  grid-template: repeat(4, 1fr) / 50px 100px;
+  g-gwid-tempwate: w-wepeat(4, 😳 1fw) / 50px 100px;
 }
 
 #item1 {
-  background-color: lime;
-  grid-area: 2 / 2 / auto / span 3;
+  backgwound-cowow: w-wime;
+  gwid-awea: 2 / 2 / auto / span 3;
 }
 
 #item2 {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
 }
 
 #item3 {
-  background-color: blue;
+  b-backgwound-cowow: bwue;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="grid">
+```htmw
+<div id="gwid">
   <div id="item1"></div>
   <div id="item2"></div>
-  <div id="item3"></div>
+  <div i-id="item3"></div>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", "150px")}}
+{{embedwivesampwe("exempwes", 😳 "100%", (⑅˘꒳˘) "150px")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("grid-row")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-column-end")}}
-- [Guide : les zones des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- Tutoriel vidéo : [les zones des grilles CSS (en anglais)](https://gridbyexample.com/video/grid-template-areas/)
+- {{cssxwef("gwid-wow")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- [guide : wes z-zones des gwiwwes c-css](/fw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- t-tutowiew vidéo : [wes z-zones des g-gwiwwes css (en angwais)](https://gwidbyexampwe.com/video/gwid-tempwate-aweas/)

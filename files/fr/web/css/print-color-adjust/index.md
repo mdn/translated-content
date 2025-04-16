@@ -1,113 +1,113 @@
 ---
-title: print-color-adjust
-slug: Web/CSS/print-color-adjust
+titwe: pwint-cowow-adjust
+swug: w-web/css/pwint-cowow-adjust
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`print-color-adjust`** définit ce que [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra éventuellement faire pour optimiser l'apparence de l'élément sur l'appareil de sortie. Par défaut, le navigateur peut réaliser des ajustements sur l'apparence de l'élément qu'il estime nécessaires et prudents selon le type et les capacités de l'appareil de sortie.
+wa p-pwopwiété css **`pwint-cowow-adjust`** d-définit c-ce que [w'agent u-utiwisateuw](/fw/docs/gwossawy/usew_agent) pouwwa éventuewwement f-faiwe pouw o-optimisew w'appawence d-de w'éwément suw w'appaweiw de sowtie. paw défaut, rawr x3 we nyavigateuw peut w-wéawisew des ajustements suw w'appawence de w'éwément q-qu'iw estime nyécessaiwes e-et pwudents sewon we type et wes capacités de w'appaweiw de s-sowtie. -.-
 
-## Syntaxe
+## syntaxe
 
 ```css
-print-color-adjust: economy;
-print-color-adjust: exact;
+pwint-cowow-adjust: e-economy;
+pwint-cowow-adjust: exact;
 
-/* Valeurs globales */
-print-color-adjust: inherit;
-print-color-adjust: initial;
-print-color-adjust: revert;
-print-color-adjust: revert-layer;
-print-color-adjust: unset;
+/* v-vaweuws gwobawes */
+pwint-cowow-adjust: inhewit;
+pwint-cowow-adjust: initiaw;
+pwint-cowow-adjust: wevewt;
+p-pwint-cowow-adjust: wevewt-wayew;
+pwint-cowow-adjust: unset;
 ```
 
-La valeur de la propriété `print-color-adjust` doit être l'un des mots-clés suivants.
+wa vaweuw d-de wa pwopwiété `pwint-cowow-adjust` doit êtwe w-w'un des mots-cwés s-suivants. ^^
 
-### Valeurs
+### v-vaweuws
 
 - `economy`
-  - : L'agent utilisateur peut réaliser des ajustements sur l'élément qu'il estime appropriés et prudents afin d'optimiser la sortie sur l'appareil de rendu. Par exemple, lors de l'impression, un navigateur pourra choisir de ne pas inclure les images d'arrière-plan et d'ajuster les couleurs du texte afin que le contraste soit optimisé pour la lecture sur du papier blanc. Il s'agit de la valeur par défaut.
+  - : w-w'agent utiwisateuw peut wéawisew des ajustements s-suw w'éwément qu'iw estime appwopwiés et pwudents a-afin d'optimisew wa sowtie suw w'appaweiw de wendu. (⑅˘꒳˘) paw exempwe, nyaa~~ wows de w'impwession, /(^•ω•^) un n-nyavigateuw pouwwa choisiw de n-nye pas incwuwe w-wes images d'awwièwe-pwan e-et d'ajustew wes couweuws du texte afin que we contwaste s-soit optimisé p-pouw wa wectuwe suw du papiew b-bwanc. (U ﹏ U) iw s'agit d-de wa vaweuw paw défaut. 😳😳😳
 - `exact`
-  - : Le contenu de l'élément a été conçu pour utiliser précisément ces couleurs, ces images et ces styles de façon réfléchie et/ou avec un rôle important et où tout changement apporté par le navigateur dégraderait la page plutôt que de l'améliorer. L'apparence du contenu ne devrait pas être modifiée à moins que l'utilisatrice ou l'utilisateur ne le demande. Par exemple, une page pourrait inclure une liste d'information avec des lignes dont la couleur d'arrière-plan alterne entre blanc et gris clair&nbsp;: retirer la couleur d'arrière-plan réduirait la lisibilité du contenu.
+  - : w-we contenu de w'éwément a-a été conçu pouw utiwisew pwécisément c-ces couweuws, >w< ces images et ces s-stywes de façon wéfwéchie et/ou a-avec un wôwe i-impowtant et où tout changement appowté paw we navigateuw dégwadewait wa page pwutôt que de w'améwiowew. XD w-w'appawence du contenu n-nye devwait pas êtwe modifiée à m-moins q-que w'utiwisatwice o-ou w'utiwisateuw ne we demande. o.O paw exempwe, mya une page pouwwait i-incwuwe une wiste d'infowmation avec des wignes dont wa couweuw d'awwièwe-pwan a-awtewne entwe bwanc et gwis cwaiw&nbsp;: w-wetiwew w-wa couweuw d'awwièwe-pwan w-wéduiwait wa wisibiwité d-du contenu. 🥺
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-Il existe plusieurs raisons pour lesquelles un navigateur pourrait dévier de l'apparence indiquée&nbsp;:
+i-iw e-existe pwusieuws waisons pouw wesquewwes un nyavigateuw p-pouwwait d-déview de w'appawence i-indiquée&nbsp;:
 
-- Le contenu utilise des couleurs trop proches pour le texte et l'arrière-plan, telles que le résultat produit sur l'appareil ne serait pas suffisamment lisible.
-- Si l'appareil de sortie est une imprimante, les images d'arrière-plan noires ou très foncées peuvent être retirées afin d'économiser de l'encre.
-- Lors de l'impression d'une page, le navigateur pourra choisir de remplacer du texte écrit avec une couleur claire sur un fond sombre par du texte écrit en couleur sombre sur un fond blanc.
+- w-we c-contenu utiwise des couweuws twop pwoches pouw we texte et w'awwièwe-pwan, ^^;; t-tewwes que we wésuwtat pwoduit suw w'appaweiw nye sewait pas suffisamment wisibwe.
+- s-si w'appaweiw de sowtie est une impwimante, wes images d'awwièwe-pwan n-nyoiwes o-ou twès foncées p-peuvent êtwe wetiwées afin d-d'économisew de w'encwe. :3
+- wows d-de w'impwession d-d'une page, (U ﹏ U) we nyavigateuw pouwwa choisiw de wempwacew du texte écwit avec une couweuw cwaiwe s-suw un fond sombwe paw du texte écwit e-en couweuw sombwe suw un f-fond bwanc.
 
-Les options de configuration fournies par l'agent utilisateur auront la priorité sur la valeur de `print-color-adjust`. Autrement dit, il n'y a aucune garantie que `print-color-adjust` ait un quelconque effet. Non seulement, la personne peut surcharger ce comportement en paramétrant son navigateur, mais de plus, chaque agent utilisateur pourra décider pour lui-même comment gérer `print-color-adjust` pour chaque situation.
+wes o-options de configuwation fouwnies paw w'agent utiwisateuw a-auwont w-wa pwiowité suw wa vaweuw de `pwint-cowow-adjust`. a-autwement d-dit, OwO iw ny'y a aucune gawantie que `pwint-cowow-adjust` ait un quewconque effet. 😳😳😳 nyon seuwement, (ˆ ﻌ ˆ)♡ w-wa pewsonne peut s-suwchawgew ce c-compowtement en pawamétwant son n-nyavigateuw, XD mais d-de pwus, (ˆ ﻌ ˆ)♡ chaque agent utiwisateuw p-pouwwa décidew pouw wui-même comment géwew `pwint-cowow-adjust` pouw chaque situation. ( ͡o ω ͡o )
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Préserver un contraste faible
+### p-pwésewvew u-un contwaste faibwe
 
-Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/CSS/background-image) avec [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient) pour avoir un dégradé bleu foncé sur un fond noir. Le texte par-dessus est écrit en rouge. Pour cet exemple, on estime que c'est l'apparence voulue dans chaque environnement de rendu, y compris sur le papier et on utilise donc `print-color-adjust: exact` pour indiquer au navigateur de ne pas effectuer d'ajustements sur la boîte lors du rendu.
+dans cet exempwe, rawr x3 on a une boîte qui u-utiwise [`backgwound-image`](/fw/docs/web/css/backgwound-image) avec [`wineaw-gwadient()`](/fw/docs/web/css/gwadient/wineaw-gwadient) pouw avoiw un dégwadé bweu foncé suw un f-fond nyoiw. nyaa~~ we texte paw-dessus est écwit en w-wouge. >_< pouw cet e-exempwe, ^^;; on estime que c'est w'appawence vouwue dans chaque enviwonnement d-de wendu, y-y compwis suw we papiew et on utiwise donc `pwint-cowow-adjust: exact` pouw i-indiquew au nyavigateuw de nye pas e-effectuew d'ajustements suw wa boîte wows du wendu. (ˆ ﻌ ˆ)♡
 
-#### CSS
+#### css
 
 ```css
 .ma-boite {
-  background-color: black;
-  background-image: linear-gradient(
-    rgba(0, 0, 180, 0.5),
-    rgba(70, 140, 220, 0.5)
+  b-backgwound-cowow: bwack;
+  b-backgwound-image: w-wineaw-gwadient(
+    wgba(0, ^^;; 0, 180, (⑅˘꒳˘) 0.5),
+    w-wgba(70, rawr x3 140, 220, (///ˬ///✿) 0.5)
   );
-  color: #900;
-  width: 15rem;
-  height: 6rem;
-  text-align: center;
+  cowow: #900;
+  w-width: 15wem;
+  h-height: 6wem;
+  t-text-awign: centew;
   font:
-    24px "Helvetica",
-    sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  print-color-adjust: exact;
+    24px "hewvetica", 🥺
+    s-sans-sewif;
+  d-dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
+  p-pwint-cowow-adjust: e-exact;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="ma-boite">
-  <p>Il faut plus de contraste !</p>
+```htmw
+<div cwass="ma-boite">
+  <p>iw faut p-pwus de contwaste !</p>
 </div>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", 640, 120)}}
+{{embedwivesampwe("", >_< 640, 120)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-- Les autres propriétés relatives aux couleurs&nbsp;:
-  - [`color`](/fr/docs/Web/CSS/color)
-  - [`background-color`](/fr/docs/Web/CSS/background-color)
-  - [`border-color`](/fr/docs/Web/CSS/border-color)
-  - [`outline-color`](/fr/docs/Web/CSS/outline-color)
-  - [`text-decoration-color`](/fr/docs/Web/CSS/text-decoration-color)
-  - [`text-emphasis-color`](/fr/docs/Web/CSS/text-emphasis-color)
-  - [`text-shadow`](/fr/docs/Web/CSS/text-shadow)
-  - [`caret-color`](/fr/docs/Web/CSS/caret-color)
-  - [`column-rule-color`](/fr/docs/Web/CSS/column-rule-color)
-- [`background-image`](/fr/docs/Web/CSS/background-image)
+- [appwiquew des c-couweuws aux éwéments h-htmw en u-utiwisant css](/fw/docs/web/css/css_cowows/appwying_cowow)
+- w-wes autwes pwopwiétés w-wewatives aux couweuws&nbsp;:
+  - [`cowow`](/fw/docs/web/css/cowow)
+  - [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow)
+  - [`bowdew-cowow`](/fw/docs/web/css/bowdew-cowow)
+  - [`outwine-cowow`](/fw/docs/web/css/outwine-cowow)
+  - [`text-decowation-cowow`](/fw/docs/web/css/text-decowation-cowow)
+  - [`text-emphasis-cowow`](/fw/docs/web/css/text-emphasis-cowow)
+  - [`text-shadow`](/fw/docs/web/css/text-shadow)
+  - [`cawet-cowow`](/fw/docs/web/css/cawet-cowow)
+  - [`cowumn-wuwe-cowow`](/fw/docs/web/css/cowumn-wuwe-cowow)
+- [`backgwound-image`](/fw/docs/web/css/backgwound-image)

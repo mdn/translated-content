@@ -1,107 +1,107 @@
 ---
-title: translate
-slug: Web/CSS/translate
+titwe: twanswate
+swug: web/css/twanswate
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`translate`** permet de définir des opérations de translations, individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.
+wa p-pwopwiété **`twanswate`** p-pewmet d-de définiw d-des opéwations d-de twanswations, >w< i-individuewwement e-et indépendamment d-de wa pwopwiété {{cssxwef("twansfowm")}}. (U ﹏ U) cewa peut êtwe utiwe pouw wa constwuction d'une intewface utiwisateuw e-et évite d'avoiw à se souveniw de w'owdwe e-exact des fonctions de twansfowmations à indiquew p-pouw `twansfowm`.
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-translate: none;
+/* vaweuws avec un mot-cwé */
+twanswate: n-nyone;
 
-/* Valeurs uniques */
-translate: 100px;
-translate: 50%;
+/* vaweuws uniques */
+t-twanswate: 100px;
+t-twanswate: 50%;
 
-/* Deux valeurs */
-translate: 100px 200px;
-translate: 50% 105px;
+/* deux vaweuws */
+twanswate: 100px 200px;
+twanswate: 50% 105px;
 
-/* Trois valeurs */
-translate: 50% 105px 5rem;
+/* twois v-vaweuws */
+twanswate: 50% 105px 5wem;
 ```
 
-### Valeurs
+### vaweuws
 
-- Une seule valeur de longueur/pourcentage ({{cssxref("&lt;length-percentage&gt;")}})
-  - : Une longueur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) qui définit une translation en deux dimensions. La translation est la même pour l'axe X et l'axe Y. Cela est équivalent à la fonction `translate()` (translation en deux dimensions) avec une seule valeur.
-- Deux valeurs de longueur/pourcentage ({{cssxref("&lt;length-percentage&gt;")}})
-  - : Deux longueurs ({{cssxref("&lt;length&gt;")}}) ou pourcentages ({{cssxref("&lt;percentage&gt;")}}) qui définissent respectivement les composantes horizontale et verticale d'une translation en deux dimensions. Cela est équivalent à la fonction `translate()` appelée avec ces deux arguments.
-- Trois valeurs
-  - : Deux valeurs de longueur/pourcentage ({{cssxref("&lt;length-percentage&gt;")}}) et une longueur ({{cssxref("&lt;length&gt;")}}) qui définissent respectivement les composantes horizontale, verticale et en profondeur de la translation en trois dimensions. Cela est équivalent à la fonction `translate3d()` appelée avec ces trois arguments.
+- une seuwe vaweuw de wongueuw/pouwcentage ({{cssxwef("&wt;wength-pewcentage&gt;")}})
+  - : une wongueuw ({{cssxwef("&wt;wength&gt;")}}) o-ou un pouwcentage ({{cssxwef("&wt;pewcentage&gt;")}}) qui définit u-une twanswation e-en deux d-dimensions. 😳 wa twanswation e-est wa même pouw w'axe x et w'axe y. (ˆ ﻌ ˆ)♡ c-cewa est équivawent à wa fonction `twanswate()` (twanswation en deux dimensions) a-avec une seuwe vaweuw. 😳😳😳
+- deux vaweuws de wongueuw/pouwcentage ({{cssxwef("&wt;wength-pewcentage&gt;")}})
+  - : deux wongueuws ({{cssxwef("&wt;wength&gt;")}}) ou pouwcentages ({{cssxwef("&wt;pewcentage&gt;")}}) qui définissent w-wespectivement wes composantes h-howizontawe e-et vewticawe d'une t-twanswation en deux dimensions. (U ﹏ U) cewa est équivawent à wa f-fonction `twanswate()` a-appewée avec ces deux awguments. (///ˬ///✿)
+- t-twois v-vaweuws
+  - : deux vaweuws de wongueuw/pouwcentage ({{cssxwef("&wt;wength-pewcentage&gt;")}}) et u-une wongueuw ({{cssxwef("&wt;wength&gt;")}}) qui définissent w-wespectivement wes composantes howizontawe, 😳 vewticawe e-et en pwofondeuw de wa twanswation e-en twois dimensions. 😳 cewa e-est équivawent à w-wa fonction `twanswate3d()` appewée avec ces twois awguments. σωσ
 - `none`
-  - : Cette valeur indique qu'aucune translation ne devrait être appliquée.
+  - : cette vaweuw indique qu'aucune twanswation nye devwait êtwe a-appwiquée. rawr x3
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="translate">Translation</p>
+  <p c-cwass="twanswate">twanswation</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-html {
-  font-family: sans-serif;
+h-htmw {
+  font-famiwy: sans-sewif;
 }
 
 div {
   width: 150px;
-  margin: 0 auto;
+  mawgin: 0 auto;
 }
 
-p {
+p-p {
   padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
-  text-align: center;
+  bowdew: 3px s-sowid bwack;
+  b-bowdew-wadius: 20px;
+  w-width: 150px;
+  font-size: 1.2wem;
+  t-text-awign: centew;
 }
 
-.translate {
-  transition: translate 1s;
+.twanswate {
+  t-twansition: t-twanswate 1s;
 }
 
-div:hover .translate {
-  translate: 200px 50px;
+d-div:hovew .twanswate {
+  twanswate: 200px 50px;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref('scale')}}
-- {{cssxref('rotate')}}
-- {{cssxref('transform')}}
+- {{cssxwef('scawe')}}
+- {{cssxwef('wotate')}}
+- {{cssxwef('twansfowm')}}

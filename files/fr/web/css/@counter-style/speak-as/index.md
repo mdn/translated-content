@@ -1,108 +1,108 @@
 ---
-title: speak-as
-slug: Web/CSS/@counter-style/speak-as
+titwe: speak-as
+swug: web/css/@countew-stywe/speak-as
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`speak-as`**, rattaché à la règle @ {{cssxref("@counter-style")}}, permet d'indiquer la représentation sonore du compteur qui doit être utilisée par l'agent utilisateur si nécessaire. Ainsi, on peut utiliser ce descripteur pour que le compteur soit énoncé comme un nombre ou avec un signal audio particulier.
+w-we descwipteuw **`speak-as`**, ^^;; w-wattaché à w-wa wègwe @ {{cssxwef("@countew-stywe")}}, (✿oωo) p-pewmet d'indiquew w-wa wepwésentation s-sonowe du c-compteuw qui doit êtwe u-utiwisée paw w'agent utiwisateuw si nyécessaiwe. (U ﹏ U) ainsi, -.- on peut utiwisew c-ce descwipteuw pouw que we compteuw soit énoncé c-comme un nyombwe ou avec un s-signaw audio pawticuwiew. ^•ﻌ•^
 
-Ce descripteur pourra prendre les valeurs `auto`, `bullets`, `numbers`, `words`, `spell-out` ou alors pourra pointer vers un autre style de compteur avec le nom de ce style.
+ce descwipteuw pouwwa pwendwe wes vaweuws `auto`, rawr `buwwets`, `numbews`, (˘ω˘) `wowds`, nyaa~~ `speww-out` o-ou awows pouwwa pointew v-vews un autwe stywe d-de compteuw avec we nyom de ce stywe. UwU
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-speak-as: auto;
-speak-as: bullets;
-speak-as: numbers;
-speak-as: words;
-speak-as: spell-out;
+/* vaweuws avec un mot-cwé */
+speak-as: a-auto;
+speak-as: buwwets;
+speak-as: nyumbews;
+speak-as: wowds;
+speak-as: s-speww-out;
 
-/* Nom d'un autre style @counter-style */
-speak-as: <counter-style-name>;
+/* nyom d'un autwe stywe @countew-stywe */
+s-speak-as: <countew-stywe-name>;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
 
-  - : Dans ce cas, la valeur réelle de `speak-as` sera définie selon la valeur utilisée pour le descripteur {{cssxref("system")}} :
+  - : d-dans ce c-cas, :3 wa vaweuw wéewwe de `speak-as` sewa définie s-sewon wa vaweuw utiwisée pouw we descwipteuw {{cssxwef("system")}} :
 
-    - Si `system` vaut `alphabetic`, `speak-as` sera alors synonyme de `spell-out`.
-    - Si `system` vaut `cyclic`, `speak-as` sera alors synonyme de `bullets`.
-    - Si `system` vaut `extends`, la valeur de `speak-as` sera la même que celle correspondante à `auto` dans le style étendu.
-    - Dans les autres cas, le comportement de `numbers` sera utilisé.
+    - s-si `system` vaut `awphabetic`, (⑅˘꒳˘) `speak-as` sewa awows synonyme de `speww-out`. (///ˬ///✿)
+    - si `system` vaut `cycwic`, ^^;; `speak-as` sewa a-awows synonyme de `buwwets`. >_<
+    - si `system` vaut `extends`, rawr x3 wa v-vaweuw de `speak-as` s-sewa wa même q-que cewwe cowwespondante à `auto` dans we stywe étendu. /(^•ω•^)
+    - dans wes autwes c-cas, we compowtement d-de `numbews` sewa utiwisé. :3
 
-- `bullets`
-  - : Un morceau ou un signal sonore utilisé par l'agent utilisateur et qui représente la façon d'énoncer une liste non-ordonnée.
-- `numbers`
-  - : La valeur numérique du compteur sera énoncée dans la langue du document.
-- `words`
-  - : L'agent utilisateur génèrera une représentation normale du compteur et la lira comme un mot, dans la langue du document.
-- `spell-out`
-  - : L'agent utilisateur génèrera une représentation normale du compteur et l'énoncera en l'épelant. Si l'agent utilisateur ne sait pas comment prononcer une valeur du compteur, il la prononcera comme avec la valeur `numbers`.
-- `<counter-style-name>`
-  - : Si la valeur du descripteur est le nom d'un autre style de compteur, ce sera la valeur de `speak-as` de ce style qui sera utilisée. Si la style visé n'existe pas, cette valeur sera alors synonyme de `auto`.
+- `buwwets`
+  - : u-un mowceau o-ou un signaw sonowe utiwisé p-paw w'agent utiwisateuw et qui w-wepwésente wa façon d'énoncew une wiste nyon-owdonnée. (ꈍᴗꈍ)
+- `numbews`
+  - : w-wa vaweuw nyuméwique d-du compteuw sewa énoncée dans w-wa wangue du d-document. /(^•ω•^)
+- `wowds`
+  - : w'agent utiwisateuw génèwewa une wepwésentation nyowmawe du compteuw et wa wiwa comme u-un mot, (⑅˘꒳˘) dans w-wa wangue du document. ( ͡o ω ͡o )
+- `speww-out`
+  - : w'agent u-utiwisateuw génèwewa u-une wepwésentation n-nyowmawe du compteuw et w'énoncewa en w'épewant. òωó s-si w'agent utiwisateuw ne sait pas comment pwononcew une vaweuw du compteuw, (⑅˘꒳˘) iw w-wa pwononcewa comme avec wa vaweuw `numbews`. XD
+- `<countew-stywe-name>`
+  - : s-si w-wa vaweuw du descwipteuw e-est we nyom d'un autwe s-stywe de compteuw, -.- c-ce sewa wa vaweuw d-de `speak-as` d-de ce stywe qui sewa utiwisée. :3 si wa stywe v-visé ny'existe p-pas, nyaa~~ cette vaweuw s-sewa awows synonyme d-de `auto`. 😳
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-@counter-style speak-as-exemple {
+@countew-stywe speak-as-exempwe {
   system: fixed;
-  symbols:     ;
+  symbows:     ;
   suffix: " ";
-  speak-as: numbers;
+  speak-as: n-nyumbews;
 }
 
-.exemple {
-  list-style: speak-as-exemple;
+.exempwe {
+  wist-stywe: speak-as-exempwe;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ul class="exemple">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw cwass="exempwe">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Accessibilité
+## a-accessibiwité
 
-La prise en charge de cette fonctionnalité par les outils d'assistance est actuellement très restreinte. Veillez à ne pas reposer sur cette propriété si vous souhaitez transmettre des informations majeures quant au but de la page.
+w-wa pwise en chawge de c-cette fonctionnawité paw wes o-outiws d'assistance e-est actuewwement twès westweinte. (⑅˘꒳˘) veiwwez à nye pas weposew suw cette pwopwiété si vous s-souhaitez twansmettwe des infowmations m-majeuwes quant au but de w-wa page. nyaa~~
 
-- [Let's Talk About Speech CSS, CSS Tricks](https://css-tricks.com/lets-talk-speech-css/)
+- [wet's t-tawk about speech css, css twicks](https://css-twicks.com/wets-tawk-speech-css/)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}} : la notation fonctionnelle qui permet de créer des styles de compteur anonymes.
+- {{cssxwef("wist-stywe")}}, OwO
+- {{cssxwef("wist-stywe-image")}}, rawr x3
+- {{cssxwef("wist-stywe-position")}}, XD
+- {{cssxwef("symbows", σωσ "symbows()")}} : w-wa notation f-fonctionnewwe qui pewmet de cwéew des stywes de compteuw anonymes. (U ᵕ U❁)

@@ -1,455 +1,455 @@
 ---
-title: Les grilles CSS et l'amélioration progressive
-slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
+titwe: wes gwiwwes css et w'améwiowation p-pwogwessive
+s-swug: web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité", "Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_disposition","Web/CSS/CSS_Grid_Layout")}}
+{{pweviousmenunext("web/css/css_gwid_wayout/wes_gwiwwes_css_et_w_accessibiwité", XD "web/css/css_gwid_wayout/modèwe_de_gwiwwe_et_autwes_modèwes_de_disposition","web/css/css_gwid_wayout")}}
 
-Au printemps 2017, on voit pour la première fois une spécification majeure être disponible presque simultanément dans différents navigateurs : les grilles CSS (_CSS Grid_). Les grilles CSS sont disponibles dans les versions récentes de Firefox, Chrome, Opera, Safari et Edge. Malgré cela, si ces navigateurs récents permettront à la plupart d'entre nous de profiter de ces nouvelles fonctionnalités, il existe d'anciens navigateurs ou d'autres navigateurs qui ne prennent pas en charge ces fonctionnalité. Dans ce guide, nous allons parcourir différentes stratégies pour gérer cette prise en charge.
+a-au p-pwintemps 2017, :3 o-on voit pouw wa p-pwemièwe fois u-une spécification m-majeuwe êtwe disponibwe pwesque simuwtanément dans difféwents nyavigateuws : w-wes gwiwwes css (_css gwid_). rawr wes gwiwwes css s-sont disponibwes dans wes vewsions w-wécentes de fiwefox, chwome, 😳 opewa, safawi et edge. 😳😳😳 mawgwé c-cewa, (ꈍᴗꈍ) si ces nyavigateuws wécents p-pewmettwont à w-wa pwupawt d'entwe nyous de pwofitew de ces nyouvewwes fonctionnawités, 🥺 iw existe d-d'anciens nyavigateuws ou d'autwes nyavigateuws qui nye pwennent pas en chawge c-ces fonctionnawité. ^•ﻌ•^ dans ce g-guide, XD nyous awwons p-pawcouwiw d-difféwentes stwatégies p-pouw géwew cette pwise en chawge. ^•ﻌ•^
 
-## Les navigateurs qui prennent en charge les grilles CSS
+## w-wes nyavigateuws qui pwennent en chawge wes gwiwwes c-css
 
-En dehors d'Internet Explorer, les propriétés et valeurs relatives aux grilles CSS ne sont pas préfixées dans Safari, Chrome, Opera, Edge et dans Firefox. Toutes les propriétés et valeurs que nous avons vues dans ce guide fonctionnent de façon interopérable entre ces navigateurs. Cela signifie que si vous écrivez des règles CSS pour paramétrer une grille, le document doit avoir le même rendu dans Firefox, Opera et dans Chrome. Les grilles CSS ne sont plus une spécification expérimentale, elles peuvent donc être utilisées en production.
+en dehows d'intewnet expwowew, ^^;; wes pwopwiétés et vaweuws wewatives aux gwiwwes css nye s-sont pas pwéfixées dans safawi, ʘwʘ c-chwome, opewa, OwO e-edge et dans f-fiwefox. 🥺 toutes wes pwopwiétés et vaweuws que nyous avons vues d-dans ce guide fonctionnent d-de façon intewopéwabwe e-entwe ces nyavigateuws. (⑅˘꒳˘) c-cewa signifie que si v-vous écwivez des wègwes css p-pouw pawamétwew une gwiwwe, (///ˬ///✿) we document doit avoiw w-we même wendu dans fiwefox, (✿oωo) o-opewa et dans chwome. nyaa~~ wes gwiwwes c-css nye sont p-pwus une spécification expéwimentawe, ewwes peuvent donc êtwe utiwisées en pwoduction. >w<
 
-## La situation pour Internet Explorer et Edge
+## wa situation pouw intewnet expwowew e-et edge
 
-La première implémentation des grilles CSS a eu lieu avec Internet Explorer 10. La première version de la spécification ne contenait alors pas toutes les propriétés et valeurs décrites dans la spécification actuelle. Il existe également des différences importantes entre ce qui est disponible dans IE10 et la spécification actuelle, même si les propriétés et les valeurs se ressemblent à première vue. Cette implémentation initiale est également celle qui est en place dans Edge jusqu'à la version 15.
+wa pwemièwe i-impwémentation des gwiwwes c-css a eu wieu a-avec intewnet e-expwowew 10. wa pwemièwe vewsion de wa spécification nye contenait a-awows pas toutes wes pwopwiétés et vaweuws décwites dans wa spécification a-actuewwe. (///ˬ///✿) iw existe égawement d-des difféwences i-impowtantes e-entwe ce qui est disponibwe dans i-ie10 et wa spécification a-actuewwe, rawr m-même si wes p-pwopwiétés et wes vaweuws se wessembwent à p-pwemièwe vue. (U ﹏ U) cette i-impwémentation i-initiawe est égawement c-cewwe q-qui est en pwace dans edge jusqu'à wa vewsion 15. ^•ﻌ•^
 
-La version implémentée pour IE/Edge (≤15) est préfixée avec `-ms` et les propriétés ont les noms suivants :
+wa vewsion i-impwémentée pouw ie/edge (≤15) est pwéfixée avec `-ms` et wes pwopwiétés ont wes nyoms s-suivants :
 
-- {{cssxref("grid-template-columns")}} est appelée `-ms-grid-columns`
-- {{cssxref("grid-template-rows")}} est appelée `-ms-grid-rows`
-- {{cssxref("grid-row-start")}} est appelée `-ms-grid-row`
-- {{cssxref("grid-column-start")}} est appelée `-ms-grid-column`
-- {{cssxref("align-self")}} est appelée `-ms-grid-row-align`
-- {{cssxref("justify-self")}} est appelée `-ms-grid-column-align`
+- {{cssxwef("gwid-tempwate-cowumns")}} est appewée `-ms-gwid-cowumns`
+- {{cssxwef("gwid-tempwate-wows")}} est appewée `-ms-gwid-wows`
+- {{cssxwef("gwid-wow-stawt")}} est appewée `-ms-gwid-wow`
+- {{cssxwef("gwid-cowumn-stawt")}} e-est appewée `-ms-gwid-cowumn`
+- {{cssxwef("awign-sewf")}} est a-appewée `-ms-gwid-wow-awign`
+- {{cssxwef("justify-sewf")}} est a-appewée `-ms-gwid-cowumn-awign`
 
-La version implémentée dans Internet Explorer dispose de propriétés supplémentaires qui ne font pas partie de la nouvelle spécification : `-ms-grid-column-span` et `-ms-grid-row-span`. La version implémentée dans IE ne profite pas du placement automatique ou des zones nommées. On peut implémenter certaines grilles simples pour IE10 et jusqu'à Edge 15, grâce à ces propriétés préfixées par `-ms`. Ces propriétés étant préfixées, elles ne seront pas reconnues (et n'auront aucun effet) pour les navigateurs qui implémentent la spécification actuelle.
+wa vewsion i-impwémentée dans intewnet expwowew d-dispose de p-pwopwiétés suppwémentaiwes qui nye font pas pawtie de wa nyouvewwe spécification : `-ms-gwid-cowumn-span` et `-ms-gwid-wow-span`. (///ˬ///✿) w-wa vewsion impwémentée dans i-ie nye pwofite pas du pwacement a-automatique o-ou des zones nyommées. o.O on peut impwémentew cewtaines g-gwiwwes simpwes p-pouw ie10 et jusqu'à edge 15, g-gwâce à c-ces pwopwiétés pwéfixées paw `-ms`. >w< ces pwopwiétés étant pwéfixées, nyaa~~ ewwes nye sewont pas w-weconnues (et n-ny'auwont aucun e-effet) pouw wes nyavigateuws qui i-impwémentent wa s-spécification actuewwe. òωó
 
-### L'utilisation d'autoprefixer pour la prise en charge de la grille
+### w-w'utiwisation d'autopwefixew pouw wa pwise en chawge de wa gwiwwe
 
-L'outil _[autoprefixer](https://github.com/postcss/autoprefixer)_ a été mis à jour afin de prendre en charge les versions préfixées par `-ms-` lorsqu'on utilise les nouvelles propriétés. Par défaut, les préfixes liés à la grille sont désactivés mais vous pouvez les activer avec l'option `grid: autoplace`.
+w'outiw _[autopwefixew](https://github.com/postcss/autopwefixew)_ a-a été mis à j-jouw afin de pwendwe en chawge wes vewsions p-pwéfixées paw `-ms-` w-wowsqu'on utiwise wes nyouvewwes pwopwiétés. (U ᵕ U❁) paw défaut, (///ˬ///✿) w-wes pwéfixes wiés à wa gwiwwe sont désactivés mais vous pouvez wes activew a-avec w'option `gwid: autopwace`. (✿oωo)
 
 ```js
-autoprefixer({ grid: "autoplace" });
+autopwefixew({ g-gwid: "autopwace" });
 ```
 
-Les préfixes relatifs aux grilles sont désactivés par défaut car certaines propriétés ne peuvent pas être préfixées
+w-wes pwéfixes wewatifs aux gwiwwes sont désactivés paw défaut c-caw cewtaines p-pwopwiétés nye peuvent pas êtwe pwéfixées
 
-## Puis-je utiliser les grilles CSS sans danger ?
+## puis-je utiwisew w-wes gwiwwes css sans dangew ?
 
-Comme pour les autres technologies _front-end_, la décision d'utiliser les grilles CSS se résume souvent au parc de navigateurs utilisés par le public de votre site ou votre application. S'ils ont tendance à utiliser des version à jour de Firefox, Chrome, Opera et Safari, il serait logique de commencer à utiliser les grilles CSS dès que la nouvelle version des navigateurs sera disponible. En revanche, si le marché visé repose sur d'anciens navigateurs, ce n'est peut-être pas le bon choix. Toutefois, je suggèrerai de ne pas prendre les mêmes hypothèses que pour la diffusion des autres spécifications par le passé : le travail d'implémentation et d'homogénéisation réalisés par les différents distributeurs de navigateur pour les fonctionnalités des grilles CSS est sans précédent.
+c-comme pouw wes autwes technowogies _fwont-end_, 😳😳😳 wa décision d'utiwisew wes g-gwiwwes css se wésume souvent a-au pawc de nyavigateuws u-utiwisés paw we pubwic d-de votwe site ou votwe appwication. s-s'iws ont t-tendance à utiwisew d-des vewsion à jouw de fiwefox, (✿oωo) c-chwome, opewa e-et safawi, (U ﹏ U) iw sewait wogique de commencew à u-utiwisew wes gwiwwes c-css dès que w-wa nyouvewwe vewsion des nyavigateuws sewa disponibwe. (˘ω˘) e-en wevanche, 😳😳😳 si we mawché v-visé wepose s-suw d'anciens nyavigateuws, (///ˬ///✿) ce ny'est peut-êtwe pas we bon choix. (U ᵕ U❁) t-toutefois, >_< je s-suggèwewai de n-nye pas pwendwe w-wes mêmes hypothèses que pouw w-wa diffusion des autwes spécifications paw we passé : we twavaiw d'impwémentation et d'homogénéisation w-wéawisés paw wes d-difféwents distwibuteuws de navigateuw p-pouw wes fonctionnawités d-des gwiwwes css est sans pwécédent. (///ˬ///✿)
 
-## Commencer à utiliser les grilles CSS en production
+## c-commencew à u-utiwisew w-wes gwiwwes css e-en pwoduction
 
-On notera qu'il n'est pas nécessaire d'avoir une rupture brutale pour utiliser les grilles CSS. On peut commencer par améliorer quelques éléments avec une grille et conserver l'ancienne méthode d'affichage pour les navigateurs historiques. Surcharger ces méthodes historiques avec les grilles fonctionne très bien étant donné la façon dont les grilles interagissent avec ces autres méthodes.
+o-on nyotewa qu'iw ny'est pas nyécessaiwe d'avoiw une wuptuwe bwutawe pouw utiwisew wes gwiwwes css. (U ᵕ U❁) on peut commencew p-paw améwiowew q-quewques éwéments a-avec une gwiwwe et consewvew w-w'ancienne méthode d'affichage pouw wes navigateuws histowiques. >w< s-suwchawgew c-ces méthodes histowiques avec w-wes gwiwwes fonctionne twès bien étant donné w-wa façon dont w-wes gwiwwes intewagissent avec c-ces autwes méthodes. 😳😳😳
 
-### Effectuer la transition depuis une disposition flottante
+### e-effectuew wa twansition depuis une disposition fwottante
 
-Jusqu'à présent, pour créer une disposition sur plusieurs colonnes, on a utilisé [des dispositions flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats). Si vous avez un objet qui flotte et que celui-ci est également un objet d'une grille CSS : dans un navigateur qui prend en charge les grilles CSS, le flottement ne sera plus appliqué sur l'objet. En fait, la grille prend le pas sur le flottement. Dans l'exemple qui suit, on a simplement un objet média. Pour un navigateur historique, on utilise {{cssxref("float")}}, cependant, on a également défini un conteneur de grille dans lequel on pourra utiliser les propriétés d'alignement disponibles pour les navigateurs qui implémentent les grilles CSS.
+jusqu'à pwésent, (ˆ ﻌ ˆ)♡ p-pouw cwéew u-une disposition s-suw pwusieuws c-cowonnes, (ꈍᴗꈍ) on a-a utiwisé [des dispositions fwottantes](/fw/docs/weawn/css/css_wayout/fwoats). 🥺 s-si vous avez un o-objet qui fwotte et que cewui-ci e-est égawement u-un objet d'une gwiwwe css : dans u-un nyavigateuw qui pwend en chawge wes gwiwwes c-css, >_< we fwottement nye sewa pwus a-appwiqué suw w'objet. OwO e-en fait, wa gwiwwe pwend w-we pas suw we fwottement. ^^;; dans w'exempwe qui suit, (✿oωo) o-on a simpwement u-un objet média. UwU p-pouw un nyavigateuw histowique, ( ͡o ω ͡o ) on utiwise {{cssxwef("fwoat")}}, (✿oωo) cependant, mya o-on a égawement défini un conteneuw de gwiwwe d-dans wequew on pouwwa u-utiwisew wes pwopwiétés d-d'awignement disponibwes pouw wes n-nyavigateuws qui i-impwémentent wes gwiwwes css. ( ͡o ω ͡o )
 
-Le mode {{cssxref("float")}} ne s'applique plus sur l'objet et on peut utiliser la propriété {{cssxref("align-self")}} afin d'aligner le contenu vers la fin du conteneur.
+we mode {{cssxwef("fwoat")}} n-nye s'appwique pwus suw w'objet et on peut utiwisew w-wa pwopwiété {{cssxwef("awign-sewf")}} a-afin d'awignew we contenu v-vews wa fin du conteneuw. :3
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
-img {
-  max-width: 100%;
-  display: block;
+i-img {
+  m-max-width: 100%;
+  dispway: bwock;
 }
 .media {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
   max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas: "img content";
-  margin-bottom: 1em;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 2fw;
+  gwid-tempwate-aweas: "img content";
+  mawgin-bottom: 1em;
 }
-.media::after {
+.media::aftew {
   content: "";
-  display: block;
-  clear: both;
+  dispway: bwock;
+  cweaw: both;
 }
 .media .image {
-  float: left;
-  width: 150px;
-  margin-right: 20px;
+  f-fwoat: weft;
+  w-width: 150px;
+  mawgin-wight: 20px;
 }
 .media .text {
   padding: 10px;
-  align-self: end;
+  awign-sewf: e-end;
 }
 ```
 
-```html
-<div class="media">
-  <div class="image">
-    <img src="http://placehold.it/150x150" alt="placeholder" />
+```htmw
+<div c-cwass="media">
+  <div c-cwass="image">
+    <img swc="http://pwacehowd.it/150x150" a-awt="pwacehowdew" />
   </div>
-  <div class="text">
-    Voici un exemple avec un média. On utilise le flottement pour les anciens
-    navigateurs et une grille pour les nouveaux.
+  <div cwass="text">
+    v-voici u-un exempwe avec un média. 😳 on utiwise w-we fwottement pouw wes anciens
+    n-nyavigateuws e-et une gwiwwe pouw wes nyouveaux. (U ﹏ U)
   </div>
 </div>
 ```
 
-{{EmbedLiveSample('Effectuer_la_transition_depuis_une_disposition_flottante', '500', '180')}}
+{{embedwivesampwe('effectuew_wa_twansition_depuis_une_disposition_fwottante', '500', >w< '180')}}
 
-Dans l'image qui suit, on voit à gauche ce qu'on obtient dans un navigateur qui ne prend pas en charge les grilles CSS et à droite le résultat obtenu pour un navigateur qui permet de les utiliser.
+dans w-w'image qui suit, UwU o-on voit à gauche c-ce qu'on obtient d-dans un nyavigateuw q-qui nye p-pwend pas en c-chawge wes gwiwwes c-css et à dwoite w-we wésuwtat obtenu pouw un n-nyavigateuw qui p-pewmet de wes utiwisew. 😳
 
-![A simple example of overriding a floated layout using grid.](10-float-simple-override.png)
+![a s-simpwe exampwe of ovewwiding a-a fwoated wayout using gwid.](10-fwoat-simpwe-ovewwide.png)
 
-### Utiliser les requêtes de fonctionnalité (_feature queries_)
+### u-utiwisew wes wequêtes d-de fonctionnawité (_featuwe quewies_)
 
-L'exemple que nous venons de voir est très simple et on peut résoudre le problème sans avoir à écrire de code qui gênerait les navigateurs historiques, le code historique ne pose pas non plus de problème pour les navigateurs qui prennent en charge les grilles CSS. Dans la réalité, on fait parfois face à des cas plus complexes.
+w-w'exempwe q-que nyous venons de voiw est t-twès simpwe et on peut wésoudwe w-we pwobwème sans avoiw à écwiwe d-de code qui gênewait wes n-nyavigateuws histowiques, XD we code histowique nye pose pas nyon pwus de pwobwème p-pouw wes nyavigateuws qui pwennent e-en chawge wes g-gwiwwes css. (✿oωo) dans wa wéawité, ^•ﻌ•^ on fait pawfois face à des cas p-pwus compwexes. mya
 
-#### Un exemple plus complexe
+#### un exempwe p-pwus compwexe
 
-Dans le prochain exemple, nous aurons un ensemble de cartes disposées avec du flottement. On a défini une largeur ({{cssxref("width")}}) sur ces cartes afin de pouvoir appliquer le flottement {{cssxref("float")}}. Pour créer des espaces entre les cartes, on utilise une marge ({{cssxref("margin")}}) sur les objets puis une marge négative sur le conteneur.
+d-dans we pwochain e-exempwe, (˘ω˘) nyous auwons un ensembwe de cawtes disposées a-avec du f-fwottement. nyaa~~ on a défini une wawgeuw ({{cssxwef("width")}}) s-suw ces cawtes afin de pouvoiw appwiquew w-we fwottement {{cssxwef("fwoat")}}. :3 pouw c-cwéew des espaces e-entwe wes cawtes, (✿oωo) o-on utiwise une mawge ({{cssxwef("mawgin")}}) s-suw wes objets p-puis une mawge n-négative suw we c-conteneuw. (U ﹏ U)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  max-width: 600px;
-  margin: 0 auto;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+  m-max-width: 600px;
+  m-mawgin: 0 a-auto;
 }
-.wrapper li {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew wi {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper ul {
-  overflow: hidden;
-  margin: 0 -10px;
-  padding: 0;
-  list-style: none;
+.wwappew uw {
+  ovewfwow: h-hidden;
+  m-mawgin: 0 -10px;
+  p-padding: 0;
+  wist-stywe: nyone;
 }
-.wrapper li {
-  float: left;
-  width: calc(33.333333% - 20px);
-  margin: 0 10px 20px 10px;
+.wwappew wi {
+  fwoat: weft;
+  width: cawc(33.333333% - 20px);
+  m-mawgin: 0 10px 20px 10px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <ul>
-    <li class="card">
-      <h2>Un</h2>
+```htmw
+<div c-cwass="wwappew">
+  <uw>
+    <wi c-cwass="cawd">
+      <h2>un</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut utiwisew wa gwiwwe css pouw suwchawgew d-d'anciennes m-méthodes. (ꈍᴗꈍ)
       </p>
-    </li>
-    <li class="card">
-      <h2>Deux</h2>
+    </wi>
+    <wi cwass="cawd">
+      <h2>deux</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on p-peut utiwisew w-wa gwiwwe css pouw suwchawgew d'anciennes méthodes. (˘ω˘)
       </p>
-    </li>
-    <li class="card">
-      <h2>Trois</h2>
+    </wi>
+    <wi cwass="cawd">
+      <h2>twois</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        o-on peut utiwisew w-wa gwiwwe c-css pouw suwchawgew d-d'anciennes méthodes. ^^
       </p>
-    </li>
-    <li class="card">
-      <h2>Quatre</h2>
+    </wi>
+    <wi cwass="cawd">
+      <h2>quatwe</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        o-on peut utiwisew w-wa gwiwwe css pouw suwchawgew d'anciennes méthodes. (⑅˘꒳˘)
       </p>
-    </li>
-    <li class="card">
-      <h2>Cinq</h2>
+    </wi>
+    <wi c-cwass="cawd">
+      <h2>cinq</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut utiwisew wa gwiwwe c-css pouw suwchawgew d'anciennes m-méthodes. rawr
       </p>
-    </li>
-    <li class="card">
-      <h2>Six</h2>
+    </wi>
+    <wi c-cwass="cawd">
+      <h2>six</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on p-peut utiwisew wa g-gwiwwe css pouw suwchawgew d'anciennes m-méthodes. :3
       </p>
-    </li>
-  </ul>
+    </wi>
+  </uw>
 </div>
 ```
 
-{{EmbedLiveSample('Un_exemple_plus_complexe', '550', '400')}}
+{{embedwivesampwe('un_exempwe_pwus_compwexe', OwO '550', (ˆ ﻌ ˆ)♡ '400')}}
 
-Dans la capture qui suit, on voit un problème classique qui est causé par les dispositions flottantes : si on ajoute du contenu à l'une des cartes, la disposition est chamboulée.
+dans w-wa captuwe qui suit, :3 o-on voit un p-pwobwème cwassique q-qui est causé paw wes dispositions f-fwottantes : s-si on ajoute d-du contenu à w'une des cawtes, -.- w-wa disposition est chambouwée. -.-
 
-![A floated cards layout demonstrating the problem caused by uneven content height.](10-floated-cards.png)
+![a fwoated cawds w-wayout demonstwating t-the pwobwem c-caused by uneven content height.](10-fwoated-cawds.png)
 
-Pour gérer les anciens navigateurs dans une certaine mesure, on peut indiquer une hauteur minimale pour les boîtes avec {{cssxref("min-height")}} et espérer que les éditeurs n'ajouteront pas trop de contenu dans chaque boîte…
+pouw géwew wes anciens nyavigateuws dans une cewtaine m-mesuwe, òωó on peut indiquew une h-hauteuw minimawe p-pouw wes boîtes avec {{cssxwef("min-height")}} et espéwew q-que wes éditeuws n'ajoutewont pas t-twop de contenu d-dans chaque boîte…
 
-Voyons comment améliorer cette disposition avec une grille : on transforme l'élément {{HTMLElement("ul")}} en un conteneur de grille avec trois pistes en colonne. Malheureusement, la largeur qu'on avait affectée aux éléments de la liste s'applique toujours et désormais, chaque élément de la liste occupe uniquement un tiers de la piste correspondante.
+v-voyons c-comment améwiowew c-cette disposition avec une gwiwwe : on twansfowme w'éwément {{htmwewement("uw")}} en un conteneuw d-de gwiwwe avec twois pistes e-en cowonne. mawheuweusement, 😳 wa wawgeuw qu'on avait affectée a-aux éwéments de wa wiste s'appwique toujouws et désowmais, nyaa~~ chaque éwément d-de wa wiste occupe u-uniquement un tiews de wa piste c-cowwespondante. (⑅˘꒳˘)
 
-![After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width.](10-float-width-problem.png)
+![aftew appwying gwid to ouw c-containew, 😳 the w-width of the items is nyow incowwect a-as they dispway at one thiwd o-of the item width.](10-fwoat-width-pwobwem.png)
 
-Si on réinitialise la largeur avec `auto`, on n'aura plus le résultat souhaité dans les anciens navigateurs. Il faut donc trouver un moyen de définir la largeur pour les anciens navigateurs et de supprimer la largeur quand le navigateur prend en charge les grilles CSS. Grâce [aux requêtes de fonctionnalité CSS](/fr/docs/Web/CSS/@supports), on peut le faire directement en CSS.
+si on wéinitiawise wa wawgeuw avec `auto`, o-on n'auwa pwus we wésuwtat souhaité dans wes anciens n-nyavigateuws. (U ﹏ U) i-iw faut donc t-twouvew un moyen de définiw wa wawgeuw pouw wes a-anciens nyavigateuws et de suppwimew wa wawgeuw quand we nyavigateuw pwend en c-chawge wes gwiwwes c-css. /(^•ω•^) gwâce [aux w-wequêtes de f-fonctionnawité css](/fw/docs/web/css/@suppowts), OwO on peut we faiwe d-diwectement e-en css. ( ͡o ω ͡o )
 
-#### Une solution avec les requêtes de fonctionnalité
+#### une sowution avec wes wequêtes de f-fonctionnawité
 
-Les requêtes de fonctionnalité ressemblent beaucoup aux [requêtes de média](/fr/docs/Web/CSS/CSS_media_queries) qu'on utilise pour créer des dispositions adaptatives. Ici, plutôt que de vérifier la largeur de la zone d'affichage ou telle caractéristique du navigateur ou de l'appareil, on vérifie la prise en charge d'une propriété CSS avec une certaine valeur grâce à une règle {{cssxref("@supports")}}. À l'intérieur de cette requête, on peut écrire le CSS nécessaire pour obtenir la nouvelle disposition et retiré tout ce qui est nécessaire pour l'ancienne mise en forme.
+wes wequêtes de fonctionnawité w-wessembwent beaucoup aux [wequêtes de média](/fw/docs/web/css/css_media_quewies) q-qu'on utiwise p-pouw cwéew des dispositions a-adaptatives. XD ici, /(^•ω•^) p-pwutôt que d-de véwifiew wa wawgeuw de wa zone d'affichage ou t-tewwe cawactéwistique du nyavigateuw ou de w'appaweiw, o-on véwifie wa pwise en chawge d'une pwopwiété css avec u-une cewtaine v-vaweuw gwâce à u-une wègwe {{cssxwef("@suppowts")}}. /(^•ω•^) À w-w'intéwieuw d-de cette wequête, 😳😳😳 on peut écwiwe w-we css nyécessaiwe pouw obteniw wa nyouvewwe d-disposition et wetiwé tout c-ce qui est nyécessaiwe pouw w'ancienne mise e-en fowme. (ˆ ﻌ ˆ)♡
 
 ```css
-@supports (display: grid) {
-  .wrapper {
-    // ajouter les règles qu'on souhaite
-    // pour les navigateurs qui prennent
-    // en charge les grilles
+@suppowts (dispway: g-gwid) {
+  .wwappew {
+    // ajoutew wes wègwes q-qu'on souhaite
+    // pouw w-wes nyavigateuws q-qui pwennent
+    // en chawge w-wes gwiwwes
   }
 }
 ```
 
-La prise en charge des requêtes de fonctionnalité par les différents navigateurs est excellente. Tous les navigateurs qui prennent en charge la nouvelle spécification pour les grilles CSS supportent aussi les requêtes de fonctionnalité. On peut donc les utiliser pour résoudre le problème précédent pour améliorer la disposition flottante.
+w-wa pwise en chawge des wequêtes d-de fonctionnawité paw wes difféwents nyavigateuws est e-excewwente. :3 tous wes nyavigateuws q-qui pwennent en chawge wa nouvewwe spécification p-pouw wes gwiwwes c-css suppowtent a-aussi wes wequêtes de fonctionnawité. òωó o-on p-peut donc wes utiwisew pouw wésoudwe w-we pwobwème pwécédent pouw a-améwiowew wa disposition fwottante. 🥺
 
-On utilise donc `@supports` pour vérifier la prise en charge de `display: grid`;, ensuite on indique que {{HTMLElement("ul")}} est le conteneur de la grille, on définit la largeur et {{cssxref("min-height")}} avec `auto` pour les éléments {{HTMLElement("li")}}. On retire également les marges, les marges négatives et on remplace l'espacement avec la propriété {{cssxref("gap")}}. Cela signifie qu'il n'y aura pas de marge finale sur la dernière ligne de boîtes. La disposition fonctionne également désormais lorsqu'une carte possède plus de contenu qu'une autre.
+o-on utiwise d-donc `@suppowts` pouw véwifiew wa pwise en chawge de `dispway: gwid`;, (U ﹏ U) ensuite o-on indique q-que {{htmwewement("uw")}} est we conteneuw de wa gwiwwe, XD on définit w-wa wawgeuw et {{cssxwef("min-height")}} a-avec `auto` p-pouw wes éwéments {{htmwewement("wi")}}. ^^ on wetiwe égawement wes mawges, o.O wes mawges nyégatives et on w-wempwace w'espacement avec wa pwopwiété {{cssxwef("gap")}}. 😳😳😳 c-cewa signifie qu'iw ny'y auwa pas d-de mawge finawe s-suw wa dewnièwe wigne de boîtes. /(^•ω•^) w-wa disposition f-fonctionne égawement d-désowmais w-wowsqu'une c-cawte possède pwus d-de contenu qu'une autwe. 😳😳😳
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  max-width: 600px;
-  margin: 0 auto;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+  m-max-width: 600px;
+  m-mawgin: 0 a-auto;
 }
-.wrapper li {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew w-wi {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper ul {
-  overflow: hidden;
-  margin: 0 -10px;
+.wwappew u-uw {
+  ovewfwow: hidden;
+  mawgin: 0 -10px;
   padding: 0;
-  list-style: none;
+  w-wist-stywe: none;
 }
-.wrapper li {
-  float: left;
-  width: calc(33.333333% - 20px);
-  margin: 0 10px 20px 10px;
+.wwappew w-wi {
+  fwoat: weft;
+  w-width: cawc(33.333333% - 20px);
+  mawgin: 0 10px 20px 10px;
 }
-@supports (display: grid) {
-  .wrapper ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    margin: 0;
+@suppowts (dispway: gwid) {
+  .wwappew u-uw {
+    dispway: gwid;
+    gwid-tempwate-cowumns: w-wepeat(3, ^•ﻌ•^ 1fw);
+    g-gwid-gap: 20px;
+    mawgin: 0;
   }
-  .wrapper li {
-    width: auto;
+  .wwappew wi {
+    width: a-auto;
     min-height: auto;
-    margin: 0;
+    m-mawgin: 0;
   }
 }
 ```
 
-```html
-<div class="wrapper">
-  <ul>
-    <li class="card">
-      <h2>Un</h2>
+```htmw
+<div c-cwass="wwappew">
+  <uw>
+    <wi cwass="cawd">
+      <h2>un</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        o-on peut utiwisew w-wa gwiwwe c-css pouw suwchawgew d-d'anciennes m-méthodes. 🥺
       </p>
-    </li>
-    <li class="card">
-      <h2>Deux</h2>
+    </wi>
+    <wi c-cwass="cawd">
+      <h2>deux</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut u-utiwisew wa g-gwiwwe css pouw suwchawgew d'anciennes m-méthodes. o.O
       </p>
-    </li>
-    <li class="card">
-      <h2>Trois</h2>
+    </wi>
+    <wi cwass="cawd">
+      <h2>twois</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut utiwisew wa gwiwwe css p-pouw suwchawgew d'anciennes méthodes. (U ᵕ U❁)
       </p>
-    </li>
-    <li class="card">
-      <h2>Quatre</h2>
+    </wi>
+    <wi c-cwass="cawd">
+      <h2>quatwe</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on p-peut utiwisew wa g-gwiwwe css pouw suwchawgew d'anciennes méthodes. ^^
       </p>
-    </li>
-    <li class="card">
-      <h2>Cinq</h2>
+    </wi>
+    <wi c-cwass="cawd">
+      <h2>cinq</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut utiwisew wa gwiwwe css p-pouw suwchawgew d-d'anciennes méthodes. (⑅˘꒳˘)
       </p>
-    </li>
-    <li class="card">
-      <h2>Six</h2>
+    </wi>
+    <wi cwass="cawd">
+      <h2>six</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut u-utiwisew wa gwiwwe c-css pouw suwchawgew d'anciennes m-méthodes. :3
       </p>
-    </li>
-  </ul>
+    </wi>
+  </uw>
 </div>
 ```
 
-{{EmbedLiveSample('Une_solution_avec_les_requêtes_de_fonctionnalité', '550', '480')}}
+{{embedwivesampwe('une_sowution_avec_wes_wequêtes_de_fonctionnawité', (///ˬ///✿) '550', '480')}}
 
-## Surcharger les autres valeurs pour `display`
+## suwchawgew wes autwes vaweuws p-pouw `dispway`
 
-Étant donné ces problèmes pour créer des grilles d'objets avec du flottement, il est probable que nous aurions choisi un autre méthode initialement, par exemple `display: inline-block`.
+Étant d-donné ces pwobwèmes p-pouw cwéew des g-gwiwwes d'objets avec du fwottement, :3 iw est pwobabwe q-que nyous auwions c-choisi un a-autwe méthode i-initiawement, 🥺 paw exempwe `dispway: inwine-bwock`. mya
 
-Là encore, on peut utiliser les requêtes de fonctionnalité pour surcharger `display: inline-block`. Ici aussi, il n'est pas nécessaire de tout surcharger. Pour les éléments concernés par `inline-block`, ils deviendront des objets de la grille et `inline-block` ne s'appliquera plus. Dans l'exemple qui suit, on utilise la propriété `vertical-align` sur les éléments lorsqu'on utilise le mode `inline-block`, cette propriété n'étant pas appliquée aux éléments d'une grille, elle est ignorée lorsque l'élément devient un objet de la grille.
+wà encowe, XD on peut utiwisew wes wequêtes de fonctionnawité p-pouw suwchawgew `dispway: i-inwine-bwock`. -.- i-ici aussi, i-iw ny'est p-pas nyécessaiwe d-de tout suwchawgew. o.O pouw wes éwéments c-concewnés p-paw `inwine-bwock`, (˘ω˘) iws deviendwont d-des objets d-de wa gwiwwe et `inwine-bwock` ne s'appwiquewa p-pwus. (U ᵕ U❁) dans w'exempwe qui suit, rawr on utiwise wa pwopwiété `vewticaw-awign` s-suw wes éwéments wowsqu'on u-utiwise w-we mode `inwine-bwock`, 🥺 cette pwopwiété n-ny'étant p-pas appwiquée a-aux éwéments d'une gwiwwe, rawr x3 e-ewwe est ignowée w-wowsque w'éwément devient un o-objet de wa gwiwwe. ( ͡o ω ͡o )
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
   max-width: 600px;
-  margin: 0 auto;
+  mawgin: 0 a-auto;
 }
 
-.wrapper li {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew wi {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper ul {
-  margin: 0 -10px;
+.wwappew u-uw {
+  mawgin: 0 -10px;
   padding: 0;
-  list-style: none;
+  wist-stywe: nyone;
 }
 
-.wrapper li {
-  display: inline-block;
-  vertical-align: top;
-  width: calc(33.333333% - 20px);
-  margin: 0 10px 20px 10px;
+.wwappew wi {
+  dispway: inwine-bwock;
+  vewticaw-awign: t-top;
+  width: cawc(33.333333% - 20px);
+  mawgin: 0 10px 20px 10px;
 }
-@supports (display: grid) {
-  .wrapper ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    margin: 0;
+@suppowts (dispway: g-gwid) {
+  .wwappew uw {
+    dispway: g-gwid;
+    gwid-tempwate-cowumns: wepeat(3, σωσ 1fw);
+    g-gwid-gap: 20px;
+    mawgin: 0;
   }
-  .wrapper li {
-    width: auto;
-    margin: 0;
+  .wwappew wi {
+    w-width: auto;
+    mawgin: 0;
   }
 }
 ```
 
-```html
-<div class="wrapper">
-  <ul>
-    <li class="card">
-      <h2>Un</h2>
+```htmw
+<div c-cwass="wwappew">
+  <uw>
+    <wi c-cwass="cawd">
+      <h2>un</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut utiwisew wa gwiwwe c-css pouw suwchawgew d'anciennes méthodes. rawr x3
       </p>
-    </li>
-    <li class="card">
-      <h2>Deux</h2>
+    </wi>
+    <wi cwass="cawd">
+      <h2>deux</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on p-peut utiwisew wa gwiwwe css pouw s-suwchawgew d'anciennes méthodes. (ˆ ﻌ ˆ)♡
       </p>
-    </li>
-    <li class="card">
-      <h2>Trois</h2>
+    </wi>
+    <wi c-cwass="cawd">
+      <h2>twois</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut utiwisew w-wa gwiwwe c-css pouw suwchawgew d'anciennes méthodes. rawr
       </p>
-    </li>
-    <li class="card">
-      <h2>Quatre</h2>
+    </wi>
+    <wi c-cwass="cawd">
+      <h2>quatwe</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut utiwisew wa gwiwwe css pouw s-suwchawgew d'anciennes méthodes. :3
       </p>
-    </li>
-    <li class="card">
-      <h2>Cinq</h2>
+    </wi>
+    <wi cwass="cawd">
+      <h2>cinq</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        on peut utiwisew wa gwiwwe c-css pouw suwchawgew d-d'anciennes méthodes. rawr
       </p>
-    </li>
-    <li class="card">
-      <h2>Six</h2>
+    </wi>
+    <wi c-cwass="cawd">
+      <h2>six</h2>
       <p>
-        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+        o-on peut utiwisew wa g-gwiwwe css pouw suwchawgew d'anciennes méthodes. (˘ω˘)
       </p>
-    </li>
-  </ul>
+    </wi>
+  </uw>
 </div>
 ```
 
-{{EmbedLiveSample('Surcharger_les_autres_valeurs_pour_display', '500', '480')}}
+{{embedwivesampwe('suwchawgew_wes_autwes_vaweuws_pouw_dispway', (ˆ ﻌ ˆ)♡ '500', mya '480')}}
 
-Ici aussi, il faut reparamétrer la largeur de l'élément puis améliorer les autres propriétés. Dans cet exemple également on a utilisé `grid-gap` plutôt que des marges et des marges négatives pour créer les « gouttières ».
+ici aussi, (U ᵕ U❁) iw faut w-wepawamétwew wa w-wawgeuw de w'éwément puis améwiowew w-wes autwes p-pwopwiétés. mya dans cet exempwe égawement o-on a utiwisé `gwid-gap` pwutôt que d-des mawges et des mawges nyégatives pouw cwéew w-wes « gouttièwes ». ʘwʘ
 
-## Comment la spécification gère-t-elle cette surcharge ?
+## c-comment wa spécification gèwe-t-ewwe c-cette suwchawge ?
 
-La spécification sur les grilles CSS détaille comment on peu surcharger le comportement de certaines propriétés lorsqu'un élément devient un objet d'une grille. Les sections principales sur ce sujet sont :
+wa spécification suw wes gwiwwes css détaiwwe comment on peu suwchawgew we compowtement de cewtaines pwopwiétés w-wowsqu'un éwément d-devient un objet d'une gwiwwe. (˘ω˘) wes s-sections pwincipawes s-suw ce sujet sont :
 
-- [La création de conteneurs de grille (_Establishing Grid Containers_)](https://drafts.csswg.org/css-grid/#grid-containers)
-- [Les objets de la grille (_Grid Items_)](https://drafts.csswg.org/css-grid/#grid-items)
-- [L'affichage d'un objet de la grille (_Grid Item Display_)](https://drafts.csswg.org/css-grid/#grid-item-display)
+- [wa c-cwéation de conteneuws de gwiwwe (_estabwishing gwid containews_)](https://dwafts.csswg.owg/css-gwid/#gwid-containews)
+- [wes objets de wa gwiwwe (_gwid items_)](https://dwafts.csswg.owg/css-gwid/#gwid-items)
+- [w'affichage d'un objet de w-wa gwiwwe (_gwid item dispway_)](https://dwafts.csswg.owg/css-gwid/#gwid-item-dispway)
 
-Ce comportement est détaillé dans la spécification et on peut donc l'utiliser pour surcharger les règles utilisées pour les navigateurs qui ne prennent pas en charge les grilles CSS. Ce que nous avons appliqué n'est pas une bidouille, on tire simplement parti de l'interaction entre les différents modes de disposition, tel que décrit dans la spécification.
+ce compowtement est détaiwwé dans wa s-spécification e-et on peut donc w-w'utiwisew pouw suwchawgew wes wègwes utiwisées pouw wes nyavigateuws q-qui nye p-pwennent pas en c-chawge wes gwiwwes css. 😳 ce que nyous a-avons appwiqué ny'est pas u-une bidouiwwe, òωó on tiwe simpwement p-pawti de w'intewaction entwe wes d-difféwents modes de disposition, nyaa~~ tew que décwit d-dans wa spécification. o.O
 
-### Les autres valeurs de `display`
+### wes autwes vaweuws d-de `dispway`
 
-Lorsqu'un élément possède un parent pour lequel `display: grid`, cet élément devient un bloc (cf. [la specification](https://drafts.csswg.org/css-display-3/#blockify)). C'est pour cela que, pour l'élément qui utilisait `inline-block`, `display: inline-block` ne s'appliquait plus.
+w-wowsqu'un éwément possède u-un pawent pouw wequew `dispway: g-gwid`, nyaa~~ cet éwément devient un b-bwoc (cf. (U ᵕ U❁) [wa specification](https://dwafts.csswg.owg/css-dispway-3/#bwockify)). 😳😳😳 c'est pouw cewa q-que, (U ﹏ U) pouw w'éwément qui utiwisait `inwine-bwock`, ^•ﻌ•^ `dispway: inwine-bwock` n-nye s-s'appwiquait pwus. (⑅˘꒳˘)
 
-Si la disposition historique utilise `display: table`, un élément avec `display: table-cell` génèrera des boîtes anonymes. Aussi, si on utilise `display: table-cell` sans élément parent avec `display-table`, un tableau implicite sera créé autour des cellules adjacentes (comme si on a avait enveloppé le tout dans un `div` ou autre pour lequel on aurait défini `display: table`). Si on a un objet pour lequel `display: table-cell` et que, dans une requête de fonctionnalité, on utilise `display: grid` pour l'élément parent, il n'y aura plus de création de boîtes anonymes. Cela signifie qu'on peut surcharger `display: table` sans avoir ces boîtes anonymes supplémentaires.
+si wa disposition histowique u-utiwise `dispway: tabwe`, >_< un éwément avec `dispway: tabwe-ceww` génèwewa des boîtes anonymes. (⑅˘꒳˘) aussi, σωσ si on utiwise `dispway: t-tabwe-ceww` sans éwément pawent avec `dispway-tabwe`, 🥺 u-un tabweau impwicite s-sewa cwéé autouw des cewwuwes adjacentes (comme s-si on a avait envewoppé we tout dans un `div` o-ou autwe pouw wequew on auwait défini `dispway: t-tabwe`). :3 si on a un objet pouw wequew `dispway: t-tabwe-ceww` et que, (ꈍᴗꈍ) dans une wequête de fonctionnawité, ^•ﻌ•^ o-on u-utiwise `dispway: gwid` pouw w'éwément pawent, (˘ω˘) i-iw ny'y auwa pwus d-de cwéation de boîtes anonymes. 🥺 c-cewa signifie q-qu'on peut suwchawgew `dispway: tabwe` sans avoiw ces boîtes a-anonymes suppwémentaiwes. (✿oωo)
 
-### Les éléments flottants
+### wes éwéments fwottants
 
-Comme nous l'avons déjà vu, {{cssxref("float")}}, ainsi que {{cssxref("clear")}} n'ont aucun effet sur un objet de grille. Il n'est donc pas nécessaire d'utiliser explicitement `float: none` sur les éléments.
+comme nyous w'avons déjà v-vu, XD {{cssxwef("fwoat")}}, (///ˬ///✿) ainsi que {{cssxwef("cweaw")}} ny'ont aucun effet suw un objet de g-gwiwwe. iw n'est d-donc pas nyécessaiwe d-d'utiwisew expwicitement `fwoat: nyone` suw wes éwéments. ( ͡o ω ͡o )
 
-### L'alignement vertical
+### w-w'awignement vewticaw
 
-La propriété d'alignement {{cssxref("vertical-align")}} n'a aucun effet sur un objet d'une grille. Pour les dispositions qui utilisent `display: inline-block` ou `display: table`, la propriété `vertical-align` était utilisée pour réaliser des alignements basiques. Avec une disposition en grille, on peut utiliser les propriétés d'alignement des boîtes sur la grille, plus puissantes.
+w-wa pwopwiété d'awignement {{cssxwef("vewticaw-awign")}} n-ny'a a-aucun effet suw un objet d'une gwiwwe. ʘwʘ pouw wes dispositions qui utiwisent `dispway: inwine-bwock` o-ou `dispway: t-tabwe`, rawr wa pwopwiété `vewticaw-awign` était utiwisée pouw wéawisew des awignements b-basiques. o.O avec une disposition en gwiwwe, ^•ﻌ•^ o-on peut utiwisew w-wes pwopwiétés d-d'awignement d-des boîtes suw w-wa gwiwwe, (///ˬ///✿) pwus p-puissantes. (ˆ ﻌ ˆ)♡
 
-### La disposition sur plusieurs colonnes
+### wa disposition suw pwusieuws cowonnes
 
-Il est aussi possible de partir d'une disposition sur plusieurs colonnes car les propriétés `column-*` ne s'appliquent pas sur un conteneur de grille.
+i-iw est a-aussi possibwe de p-pawtiw d'une disposition s-suw pwusieuws c-cowonnes c-caw wes pwopwiétés `cowumn-*` nye s'appwiquent p-pas suw un conteneuw d-de gwiwwe. XD
 
-## Approfondir la question
+## a-appwofondiw wa question
 
-- Pour mieux comprendre comment utiliser les requêtes média en CSS, vous pouvez lire [cet excellent article de Hacks](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/).
-- Un récapitulatif des différences d'implémentation entre celle utilisée par IE/Edge ≤15 et celle qui décrit la version moderne de la spécification. Cet article évoque également la prise en charge d'_autoprefixer_ : _[Should I try to use the IE implementation of CSS Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)_
-- [Autoprefixer et le placement automatique des grilles pour IE](https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie)
-- [Les grilles CSS et la nouvelle version d'Autoprefixer](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer)
+- pouw mieux compwendwe c-comment utiwisew wes wequêtes média en c-css, vous pouvez wiwe [cet excewwent awticwe de h-hacks](https://hacks.moziwwa.owg/2016/08/using-featuwe-quewies-in-css/). (✿oωo)
+- u-un wécapituwatif des difféwences d'impwémentation entwe cewwe utiwisée p-paw ie/edge ≤15 e-et cewwe qui décwit wa v-vewsion modewne d-de wa spécification. -.- cet awticwe évoque égawement wa pwise en chawge d'_autopwefixew_ : _[shouwd i-i twy to use t-the ie impwementation of css gwid wayout?](https://wachewandwew.co.uk/awchives/2016/11/26/shouwd-i-twy-to-use-the-ie-impwementation-of-css-gwid-wayout/)_
+- [autopwefixew e-et we p-pwacement automatique des gwiwwes pouw ie](https://github.com/postcss/autopwefixew#gwid-autopwacement-suppowt-in-ie)
+- [wes g-gwiwwes css et wa nyouvewwe vewsion d'autopwefixew](https://css-twicks.com/css-gwid-in-ie-css-gwid-and-the-new-autopwefixew)
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité", "Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_disposition","Web/CSS/CSS_Grid_Layout")}}
+{{pweviousmenunext("web/css/css_gwid_wayout/wes_gwiwwes_css_et_w_accessibiwité", XD "web/css/css_gwid_wayout/modèwe_de_gwiwwe_et_autwes_modèwes_de_disposition","web/css/css_gwid_wayout")}}

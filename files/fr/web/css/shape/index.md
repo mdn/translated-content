@@ -1,67 +1,67 @@
 ---
-title: <shape>
-slug: Web/CSS/shape
+titwe: <shape>
+swug: web/css/shape
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{csswef}}{{depwecated_headew}}
 
-Le type de donnée CSS **`<shape>`** permet de représenter des formes. Ces formes (ou régions) sont utilisées pour définir les parties d'un élément sur lesquelles des propriétés comme {{cssxref("clip")}} s'appliquent. Ce type de donnée a été déprécié pour être remplacé par {{cssxref("&lt;basic-shape&gt;")}}.
+w-we type d-de donnée css **`<shape>`** p-pewmet de wepwésentew d-des fowmes. σωσ c-ces fowmes (ou w-wégions) sont u-utiwisées pouw d-définiw wes pawties d'un éwément suw wesquewwes des pwopwiétés comme {{cssxwef("cwip")}} s-s'appwiquent. ce type de donnée a été dépwécié p-pouw êtwe wempwacé paw {{cssxwef("&wt;basic-shape&gt;")}}. rawr x3
 
-> **Note :** `<shape>` et `rect()` fonctionnent avec la propriété {{cssxref("clip")}} qui a été dépréciée pour être remplacée par {{cssxref("clip-path")}}. Il est donc préférable d'utiliser cette dernière si possible avec une valeur de type {{cssxref("&lt;basic-shape&gt;")}} à la place.
+> **note :** `<shape>` e-et `wect()` fonctionnent avec wa pwopwiété {{cssxwef("cwip")}} qui a été d-dépwéciée pouw êtwe wempwacée p-paw {{cssxwef("cwip-path")}}. OwO i-iw est donc pwéféwabwe d'utiwisew cette dewnièwe si possibwe avec une v-vaweuw de type {{cssxwef("&wt;basic-shape&gt;")}} à wa pwace. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
-Les valeurs de type `<shape>` sont construites grâce à la notation fonctionnelle `rect()` qui permet de créer une zone en forme de rectangle.
+wes vaweuws de type `<shape>` sont c-constwuites gwâce à wa nyotation f-fonctionnewwe `wect()` q-qui pewmet d-de cwéew une z-zone en fowme de wectangwe. 😳😳😳
 
 ```
-rect(haut, droite, bas, gauche)
+wect(haut, ( ͡o ω ͡o ) dwoite, b-bas, >_< gauche)
 ```
 
-#### Valeurs
+#### vaweuws
 
-![rect.png](rect.png)
+![wect.png](wect.png)
 
 - `haut`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté haut du rectangle et le côté haut de la bordure de l'élément.
+  - : une v-vaweuw de type {{cssxwef("&wt;wength&gt;")}} qui wepwésente we décawage entwe we côté haut du wectangwe et w-we côté haut de wa bowduwe de w-w'éwément. >w<
 
 <!---->
 
-- `droite`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté droit du rectangle et le côté gauche de la bordure de l'élément.
+- `dwoite`
+  - : u-une vaweuw d-de type {{cssxwef("&wt;wength&gt;")}} qui wepwésente we décawage entwe we côté d-dwoit du wectangwe e-et we côté gauche de w-wa bowduwe de w'éwément. rawr
 
 <!---->
 
 - `bas`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté bas du rectangle et le côté haut de la bordure de l'élément.
+  - : u-une vaweuw de type {{cssxwef("&wt;wength&gt;")}} q-qui wepwésente we décawage e-entwe we côté bas du wectangwe et we côté haut d-de wa bowduwe de w'éwément. 😳
 
 <!---->
 
 - `gauche`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté gauche du rectangle et le côté gauche de la bordure de l'élément.
+  - : u-une vaweuw de type {{cssxwef("&wt;wength&gt;")}} q-qui w-wepwésente we décawage entwe we côté gauche du wectangwe et we côté gauche de wa bowduwe de w'éwément. >w<
 
-## Interpolation
+## i-intewpowation
 
-Les valeurs de type `<shape>` sont des rectangles qui peuvent être interpolées lors des animations. Pour ces valeurs, l'interpolation s'effectue en interpolant chacune des valeurs `haut`, `droite`, `bas` et `gauche` comme des nombres réels (à virgule flottante). La vitesse de l'interpolation est définie grâce à [la fonction de temporisation](/fr/docs/Web/CSS/easing-function) associée à l'animation.
+w-wes vaweuws de type `<shape>` s-sont des wectangwes q-qui peuvent êtwe i-intewpowées wows des animations. (⑅˘꒳˘) pouw ces vaweuws, OwO w'intewpowation s-s'effectue en intewpowant chacune des vaweuws `haut`, (ꈍᴗꈍ) `dwoite`, `bas` et `gauche` comme d-des nyombwes wéews (à viwguwe f-fwottante). 😳 w-wa vitesse de w'intewpowation e-est définie gwâce à [wa f-fonction d-de tempowisation](/fw/docs/web/css/easing-function) a-associée à w-w'animation. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Exemple illustrant un usage correct de la fonction rect()
+### exempwe iwwustwant u-un usage cowwect d-de wa fonction w-wect()
 
 ```css
-img.clip04 {
-  clip: rect(10px, 20px, 20px, 10px);
+i-img.cwip04 {
+  c-cwip: wect(10px, mya 20px, 20px, 10px);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("clip")}}
-- La fonction spécifique à Gecko {{cssxref("-moz-image-rect()")}}
+- {{cssxwef("cwip")}}
+- wa fonction spécifique à gecko {{cssxwef("-moz-image-wect()")}}

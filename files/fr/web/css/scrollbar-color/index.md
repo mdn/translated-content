@@ -1,160 +1,160 @@
 ---
-title: scrollbar-color
-slug: Web/CSS/scrollbar-color
+titwe: scwowwbaw-cowow
+swug: w-web/css/scwowwbaw-cowow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`scrollbar-color`** permet à un auteur de définir la couleur utilisée pour le curseur et la piste (la ligne sur laquelle se déplace le curseur) de la barre de défilement.
+w-wa pwopwiété **`scwowwbaw-cowow`** p-pewmet à un auteuw d-de définiw w-wa couweuw utiwisée p-pouw we cuwseuw e-et wa piste (wa w-wigne suw waquewwe se dépwace we cuwseuw) de wa bawwe de défiwement. rawr
 
-{{InteractiveExample("CSS Demo: scrollbar-color")}}
+{{intewactiveexampwe("css demo: scwowwbaw-cowow")}}
 
-```css interactive-example-choice
-scrollbar-color: yellow blue;
+```css i-intewactive-exampwe-choice
+scwowwbaw-cowow: yewwow bwue;
 ```
 
-```css interactive-example-choice
-scrollbar-color: #87ceeb #ff5621;
+```css i-intewactive-exampwe-choice
+scwowwbaw-cowow: #87ceeb #ff5621;
 ```
 
-```css interactive-example-choice
-scrollbar-color: auto;
+```css i-intewactive-exampwe-choice
+scwowwbaw-cowow: auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
-    corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
-    fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-    earthnut pea peanut soko zucchini.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    v-veggies es bonus vobis, ʘwʘ pwoinde vos postuwo essum magis kohwwabi wewsh o-onion
+    daikon amawanth tatsoi tomatiwwo mewon azuki bean gawwic. 😳😳😳 gumbo beet gweens
+    c-cown soko endive gumbo g-gouwd. ^^;; pawswey s-shawwot couwgette t-tatsoi pea spwouts
+    f-fava bean cowwawd gweens dandewion okwa w-wakame tomato. o.O dandewion cucumbew
+    eawthnut p-pea peanut soko zucchini. (///ˬ///✿)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 300px;
   height: 100px;
-  overflow-y: scroll;
+  ovewfwow-y: s-scwoww;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-scrollbar-color: auto;
-scrollbar-color: dark;
-scrollbar-color: light;
+/* v-vaweuws avec u-un mot-cwé */
+s-scwowwbaw-cowow: auto;
+scwowwbaw-cowow: dawk;
+scwowwbaw-cowow: wight;
 
-/* Valeur de couleur */
-/* La première cible le curseur et la seconde la piste */
-/* type <color> */
-scrollbar-color: rebeccapurple green;
+/* vaweuw d-de couweuw */
+/* w-wa pwemièwe cibwe we cuwseuw e-et wa seconde wa p-piste */
+/* type <cowow> */
+scwowwbaw-cowow: webeccapuwpwe g-gween;
 
-/* Valeurs globales */
-scrollbar-color: inherit;
-scrollbar-color: initial;
-scrollbar-color: unset;
+/* vaweuws g-gwobawes */
+scwowwbaw-cowow: inhewit;
+scwowwbaw-cowow: i-initiaw;
+scwowwbaw-cowow: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<scrollbar-face-color>`
+- `<scwowwbaw-face-cowow>`
 
-  - : Une valeur définissant la couleur.
+  - : u-une v-vaweuw définissant wa couweuw. σωσ
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <tbody>
-        <tr>
+        <tw>
           <td><code>auto</code></td>
           <td>
             <p>
-              Utilise le rendu par défaut du système pour la piste de la barre de
-              défilement si aucune autre couleur n'est indiquée pour la mise en
-              forme CSS de la barre de défilement.
+              utiwise we wendu paw défaut du système pouw wa piste de wa bawwe d-de
+              d-défiwement si aucune autwe c-couweuw ny'est i-indiquée pouw wa m-mise en
+              fowme css de wa bawwe de défiwement.
             </p>
           </td>
-        </tr>
-        <tr>
-          <td><code>dark</code></td>
+        </tw>
+        <tw>
+          <td><code>dawk</code></td>
           <td>
-            Affiche une barre de défilement sombre. Ce peut être la variante sombre
-            fournie par le système sous-jacent ou une barre de défilement
-            personnalisée avec des couleurs sombres.
+            a-affiche une bawwe de défiwement sombwe. nyaa~~ ce peut êtwe wa vawiante sombwe
+            f-fouwnie paw we système sous-jacent o-ou une bawwe d-de défiwement
+            p-pewsonnawisée avec d-des couweuws sombwes. ^^;;
           </td>
-        </tr>
-        <tr>
-          <td><code>light</code></td>
+        </tw>
+        <tw>
+          <td><code>wight</code></td>
           <td>
-            Affiche une barre de défilement claire. Ce peut être la variante claire
-            fournie par le système sous-jacent ou une barre de défilement
-            personnalisée avec des couleurs claires.
+            a-affiche une bawwe d-de défiwement c-cwaiwe. ^•ﻌ•^ ce peut êtwe wa vawiante cwaiwe
+            f-fouwnie p-paw we système s-sous-jacent ou une b-bawwe de défiwement
+            p-pewsonnawisée avec des couweuws cwaiwes. σωσ
           </td>
-        </tr>
-        <tr>
-          <td><code>&#x3C;color> &#x3C;color></code></td>
+        </tw>
+        <tw>
+          <td><code>&#x3c;cowow> &#x3c;cowow></code></td>
           <td>
-            La première couleur est appliquée au curseur et la seconde à la piste
-            sur laquelle se déplace le curseur.
+            wa p-pwemièwe couweuw est appwiquée au cuwseuw et wa seconde à wa piste
+            suw waquewwe s-se dépwace we cuwseuw. -.-
           </td>
-        </tr>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-    > [!NOTE]
-    > Pour toute valeur de `scrollbar-color`, les agents utilisateur doivent appliquer la valeur sur l'élément racine de la zone d'affichage (_viewport_).
+    > [!note]
+    > pouw toute vaweuw de `scwowwbaw-cowow`, ^^;; wes agents utiwisateuw d-doivent appwiquew w-wa vaweuw s-suw w'éwément wacine de wa zone d-d'affichage (_viewpowt_). XD
 
-    > [!NOTE]
-    > Si la couleur d'une partie de la barre de défilement est indiquée, les implémentations peuvent afficher une barre de défilement simple (plutôt que celle provenant du système) afin de la colorer avec la/les couleur(s) indiquée(s).
+    > [!note]
+    > si wa couweuw d-d'une pawtie de w-wa bawwe de défiwement est indiquée, 🥺 wes impwémentations peuvent affichew une bawwe de défiwement s-simpwe (pwutôt que cewwe p-pwovenant du système) afin de w-wa cowowew avec w-wa/wes couweuw(s) indiquée(s). òωó
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-.scroller {
+.scwowwew {
   width: 300px;
   height: 100px;
-  overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  ovewfwow-y: scwoww;
+  scwowwbaw-cowow: w-webeccapuwpwe g-gween;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="scroller">
-  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
-  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
-  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-  earthnut pea peanut soko zucchini.
+```htmw
+<div cwass="scwowwew">
+  v-veggies es b-bonus vobis, (ˆ ﻌ ˆ)♡ pwoinde vos postuwo e-essum magis kohwwabi wewsh onion
+  daikon amawanth tatsoi tomatiwwo mewon azuki b-bean gawwic. -.- gumbo b-beet gweens
+  cown soko endive gumbo gouwd. :3 p-pawswey shawwot c-couwgette tatsoi pea spwouts
+  fava bean cowwawd gweens dandewion o-okwa wakame tomato. ʘwʘ dandewion cucumbew
+  eawthnut pea peanut soko zucchini. 🥺
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Accessibilité
+## accessibiwité
 
-Lorsqu'on utilise `scrollbar-color` avec certains couleurs spécifiques, il est nécessaire de s'assurer que le contraste entre le curseur et la piste est suffisant. Lorsque des mots-clés sont utilisés, c'est à l'agent utilisateur de s'assurer que le contraste est suffisant. Voir [les techniques WCAG 2.0 G183 : Utiliser un ratio de contraste de 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html).
+wowsqu'on u-utiwise `scwowwbaw-cowow` a-avec cewtains couweuws spécifiques, iw est nyécessaiwe de s'assuwew q-que we contwaste e-entwe we cuwseuw et wa piste est suffisant. >_< wowsque des m-mots-cwés sont utiwisés, ʘwʘ c'est à w-w'agent utiwisateuw de s'assuwew que we contwaste est suffisant. (˘ω˘) v-voiw [wes techniques wcag 2.0 g-g183 : utiwisew u-un watio de contwaste de 3:1](https://www.w3.owg/tw/wcag20-techs/g183.htmw). (✿oωo)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

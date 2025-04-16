@@ -1,48 +1,48 @@
 ---
-title: Bas de page adhérant
-slug: Web/CSS/Layout_cookbook/Sticky_footers
+titwe: bas de page adhéwant
+s-swug: web/css/wayout_cookbook/sticky_footews
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Un bas de page adhérant est un motif où le bas de page reste en bas de la zone d'affichage (_viewport_) lorsque le contenu est moins haut que la zone d'affichage. Dans cet article, nous verrons quelques techniques pour parvenir à ce résultat.
+u-un b-bas de page adhéwant e-est un motif o-où we bas de p-page weste en b-bas de wa zone d'affichage (_viewpowt_) w-wowsque we contenu est moins haut que wa zone d'affichage. nyaa~~ dans cet awticwe, :3 n-nyous vewwons quewques techniques pouw pawveniw à c-ce wésuwtat. ( ͡o ω ͡o )
 
-![A sticky footer pushed to the bottom of a box](cookbook-footer.png)
+![a sticky f-footew pushed to the bottom of a box](cookbook-footew.png)
 
-## Spécifications sommaires
+## spécifications s-sommaiwes
 
-Voici les spécifications rapides pour décrire le résultat qu'on souhaite obtenir :
+voici wes spécifications w-wapides pouw d-décwiwe we wésuwtat qu'on souhaite obteniw :
 
-- Le pied de page est en bas de la zone d'affichage lorsque le contenu est suffisamment petit
-- Si le contenu est plus grand que la zone d'affichage, le pied de page est situé sous le contenu.
+- we pied de page est en bas d-de wa zone d'affichage wowsque we contenu est suffisamment petit
+- si we contenu e-est pwus gwand que wa zone d'affichage, mya w-we pied d-de page est situé s-sous we contenu. (///ˬ///✿)
 
-## Recette
+## w-wecette
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/sticky-footew.htmw", (˘ω˘) '100%', ^^;; 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
+> **note :** [téwéchawgew cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/sticky-footew--downwoad.htmw)
 
-> [!NOTE]
-> Dans cet exemple, ainsi que dans le suivant, on utilise un élément enveloppant avec `min-height: 100%` afin que l'exemple intégré à la page fonctionne. Pour reproduire cela sur une page complète, on peut utiliser {{cssxref("min-height")}} avec la valeur `100vh` sur l'élément {{htmlelement("body")}} qu'on utilise comme conteneur de grille.
+> [!note]
+> dans cet e-exempwe, (✿oωo) ainsi que dans we suivant, (U ﹏ U) on utiwise un éwément e-envewoppant avec `min-height: 100%` afin que w'exempwe intégwé à wa page fonctionne. pouw wepwoduiwe c-cewa suw une page compwète, -.- o-on peut utiwisew {{cssxwef("min-height")}} a-avec w-wa vaweuw `100vh` suw w'éwément {{htmwewement("body")}} qu'on utiwise comme conteneuw d-de gwiwwe. ^•ﻌ•^
 
-## Choix effectués
+## c-choix effectués
 
-Dans l'exemple précédent, on utilise une grille CSS pour réaliser ce bas de page adhérant. L'élément `.wrapper` a une hauteur minimale de `100%`, ce qui signifie qu'il est aussi grand que le conteneur dans lequel il est placé. On crée ensuite une grille avec une seule colonne et trois lignes, une pour chaque partie de la disposition.
+dans w'exempwe p-pwécédent, o-on utiwise une gwiwwe css p-pouw wéawisew ce bas de page adhéwant. rawr w-w'éwément `.wwappew` a une hauteuw minimawe de `100%`, (˘ω˘) c-ce qui signifie qu'iw est aussi g-gwand que we conteneuw dans wequew i-iw est pwacé. nyaa~~ o-on cwée ensuite une gwiwwe avec une seuwe cowonne et twois wignes, une pouw chaque pawtie de wa disposition. UwU
 
-Le placement automatique de la grille placera les objets selon l'ordre du document source. Le titre vient donc se placer sur la première piste (dimensionnée automatiquement), le contenu vient se placer sur la piste `1fr` et le pied de page se retrouve dans la troisième région (dimensionnée automatiquement). La piste du milieu, dimensionnée avec `1fr`, occupera tout l'espace disponible et grandira pour remplir l'espace disponible.
+w-we pwacement a-automatique de wa gwiwwe pwacewa w-wes objets sewon w-w'owdwe du document s-souwce. we titwe vient donc se pwacew suw wa pwemièwe piste (dimensionnée a-automatiquement), :3 we contenu vient se pwacew suw wa piste `1fw` et we pied de p-page se wetwouve dans wa twoisième w-wégion (dimensionnée a-automatiquement). (⑅˘꒳˘) w-wa piste du miwieu, (///ˬ///✿) d-dimensionnée avec `1fw`, ^^;; o-occupewa t-tout w'espace d-disponibwe et gwandiwa pouw wempwiw w'espace disponibwe. >_<
 
-## Méthodes alternatives
+## méthodes a-awtewnatives
 
-Si vous devez prendre en charge des navigateurs qui ne permettent pas d'utiliser les grilles CSS, vous pouvez utiliser les boîtes flexibles (_flexbox_) pour avoir une note de bas de page adhérante.
+s-si vous devez p-pwendwe en c-chawge des nyavigateuws q-qui nye pewmettent pas d'utiwisew wes gwiwwes css, rawr x3 vous p-pouvez utiwisew wes boîtes fwexibwes (_fwexbox_) pouw avoiw une nyote de bas de page adhéwante. /(^•ω•^)
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer-flexbox.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/sticky-footew-fwexbox.htmw", :3 '100%', (ꈍᴗꈍ) 720)}}
 
-On commence de la même façon mais on utilise `display:flex` plutôt que `display:grid` sur `.wrapper`. On définit `flex-direction` avec la valeur `column` afin d'avoir une organisation verticale. Pour le contenu principal, on utilise `flex-grow: 1` et pour les deux autres éléments, on utilise `flex-shrink: 0`. Cela évite de les réduire encore lorsque le contenu remplit la zone principale.
+on commence de wa m-même façon mais on utiwise `dispway:fwex` pwutôt que `dispway:gwid` s-suw `.wwappew`. /(^•ω•^) o-on définit `fwex-diwection` a-avec wa vaweuw `cowumn` afin d-d'avoiw une owganisation vewticawe. p-pouw we contenu p-pwincipaw, (⑅˘꒳˘) on utiwise `fwex-gwow: 1` et pouw wes deux autwes éwéments, ( ͡o ω ͡o ) on utiwise `fwex-shwink: 0`. òωó cewa évite d-de wes wéduiwe encowe wowsque w-we contenu wempwit wa zone p-pwincipawe. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [wes c-concepts de b-base des gwiwwes css](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)

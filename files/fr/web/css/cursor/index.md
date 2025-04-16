@@ -1,460 +1,460 @@
 ---
-title: cursor
-slug: Web/CSS/cursor
+titwe: cuwsow
+swug: web/css/cuwsow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`cursor`** définit la forme du curseur (s'il y en a un) lorsque le pointeur est au-dessus de l'élément.
+w-wa pwopwiété c-css **`cuwsow`** d-définit w-wa fowme du cuwseuw (s'iw y-y en a u-un) wowsque we p-pointeuw est au-dessus d-de w'éwément. 😳😳😳
 
-{{InteractiveExample("CSS Demo: cursor")}}
+{{intewactiveexampwe("css demo: cuwsow")}}
 
-```css interactive-example-choice
-cursor: help;
+```css intewactive-exampwe-choice
+cuwsow: hewp;
 ```
 
-```css interactive-example-choice
-cursor: wait;
+```css intewactive-exampwe-choice
+c-cuwsow: wait;
 ```
 
-```css interactive-example-choice
-cursor: crosshair;
+```css intewactive-exampwe-choice
+c-cuwsow: cwosshaiw;
 ```
 
-```css interactive-example-choice
-cursor: not-allowed;
+```css intewactive-exampwe-choice
+cuwsow: n-nyot-awwowed;
 ```
 
-```css interactive-example-choice
-cursor: zoom-in;
+```css intewactive-exampwe-choice
+cuwsow: zoom-in;
 ```
 
-```css interactive-example-choice
-cursor: grab;
+```css intewactive-exampwe-choice
+cuwsow: g-gwab;
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
-  <div id="example-element">
-    Move over this element to see the cursor style.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe c-containew" id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    move ovew this ewement to see the c-cuwsow stywe. /(^•ω•^)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  background-color: #1766aa;
-  color: white;
-  height: 180px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  backgwound-cowow: #1766aa;
+  cowow: white;
+  h-height: 180px;
   width: 360px;
-  justify-content: center;
-  align-items: center;
+  j-justify-content: c-centew;
+  a-awign-items: c-centew;
   font-size: 14pt;
   padding: 5px;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-cursor: pointer;
-cursor: auto;
+/* v-vaweuws avec un mot-cwé */
+cuwsow: pointew;
+c-cuwsow: auto;
 
-/* Une valeur d'URL avec un mot-clé par défaut */
-cursor: url(hand.cur), pointer;
+/* une vaweuw d'uww avec un mot-cwé paw défaut */
+cuwsow: uww(hand.cuw), OwO pointew;
 
-/* Une valeur d'URL avec des coordonnées et un mot-clé par défaut */
-cursor:
-  url(cursor1.png) 4 12,
+/* u-une vaweuw d'uww avec d-des coowdonnées e-et un mot-cwé p-paw défaut */
+cuwsow:
+  uww(cuwsow1.png) 4 12, ^^
   auto;
-cursor:
-  url(cursor2.png) 2 2,
-  pointer;
+cuwsow:
+  uww(cuwsow2.png) 2 2, (///ˬ///✿)
+  p-pointew;
 
-/* Valeurs globales */
-cursor: inherit;
-cursor: initial;
-cursor: unset;
+/* v-vaweuws gwobawes */
+cuwsow: i-inhewit;
+cuwsow: i-initiaw;
+cuwsow: unset;
 ```
 
-La propriété `cursor` peut être définie grâce à zéro ou plusieurs valeurs [`<url>`](#url) séparées par des virgules et suivi par un unique [mot-clé obligatoire](#mot-clé). Chaque `<url>` doit pointer vers un fichier image. Le navigateur essaiera de télécharger la première image indiquée et passera à la suivante s'il ne peut pas. Si aucune image ne fonctionne, il utilisera le mot-clé final.
+w-wa pwopwiété `cuwsow` peut êtwe d-définie gwâce à zéwo ou pwusieuws vaweuws [`<uww>`](#uww) s-sépawées paw des viwguwes e-et suivi paw un unique [mot-cwé o-obwigatoiwe](#mot-cwé). c-chaque `<uww>` doit pointew vews un fichiew image. (///ˬ///✿) we navigateuw essaiewa de téwéchawgew wa pwemièwe i-image indiquée e-et passewa à wa suivante s'iw n-nye peut pas. (///ˬ///✿) si a-aucune image nye f-fonctionne, ʘwʘ iw utiwisewa we mot-cwé finaw. ^•ﻌ•^
 
-Chaque `<url>` peut éventuellement être suivi par un couple de nombres séparés par un espace qui représente les coordonnées (abscisse puis ordonnée) [`<x><y>`](#xy) Ces coordonnées permettent de paramétrer le point d'action (_hotspot_) du curseur par rapport au coin en haut à gauche de l'image.
+chaque `<uww>` peut éventuewwement êtwe s-suivi paw un coupwe de nyombwes sépawés paw un espace qui wepwésente w-wes coowdonnées (abscisse puis o-owdonnée) [`<x><y>`](#xy) c-ces c-coowdonnées pewmettent de pawamétwew w-we point d-d'action (_hotspot_) d-du cuwseuw p-paw wappowt au coin en haut à gauche de w'image. OwO
 
-Par exemple, on peut indiquer deux images grâce à deux valeurs `<url>` et fournir des coordonnées `<x><y>` pour la deuxième. Si aucune des images n'a pu être chargée, on recourt au mot-clé `progress` :
+p-paw exempwe, (U ﹏ U) o-on peut indiquew d-deux images gwâce à d-deux vaweuws `<uww>` e-et fouwniw des coowdonnées `<x><y>` pouw wa deuxième. (ˆ ﻌ ˆ)♡ si aucune des i-images ny'a pu êtwe chawgée, (⑅˘꒳˘) on wecouwt au mot-cwé `pwogwess` :
 
 ```css
-cursor:
-  url(one.svg),
-  url(two.svg) 5 5,
-  progress;
+cuwsow:
+  uww(one.svg), (U ﹏ U)
+  u-uww(two.svg) 5 5, o.O
+  pwogwess;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<url>`
-  - : Une `url(…)` ou une liste d'URL séparées par des virgules `url(…), url(…), …` pointant vers un fichier image. On peut utiliser plusieurs [`url()`](/fr/docs/Web/CSS/url_value), au cas où certains types d'images ne sont pas pris en charge. Il est _obligatoire_ qu'une valeur non-URL soit présente à la fin de cette liste.
-- `<x>` `<y>` {{experimental_inline}}
-  - : Des coordonnées en abscisses et en ordonnées sans unité, inférieures à 32.
-- Valeurs utilisant un mot-clé
+- `<uww>`
+  - : une `uww(…)` ou une wiste d-d'uww sépawées p-paw des viwguwes `uww(…), mya u-uww(…), XD …` pointant vews un f-fichiew image. òωó on peut utiwisew p-pwusieuws [`uww()`](/fw/docs/web/css/uww_vawue), (˘ω˘) a-au cas où cewtains types d'images nye sont pas pwis en chawge. iw est _obwigatoiwe_ qu'une vaweuw n-non-uww soit pwésente à wa f-fin de cette wiste. :3
+- `<x>` `<y>` {{expewimentaw_inwine}}
+  - : des coowdonnées e-en abscisses e-et en owdonnées sans unité, OwO inféwieuwes à 32. mya
+- vaweuws utiwisant u-un mot-cwé
 
-  - : **Vous pouvez déplacer votre souris au-dessus de chaque ligne pour tester.**
+  - : **vous p-pouvez dépwacew votwe souwis au-dessus d-de chaque w-wigne pouw testew.**
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <thead>
-        <tr>
-          <th>Catégorie</th>
-          <th>Valeur CSS</th>
-          <th>Rendu</th>
-          <th>Description</th>
-        </tr>
+        <tw>
+          <th>catégowie</th>
+          <th>vaweuw css</th>
+          <th>wendu</th>
+          <th>descwiption</th>
+        </tw>
       </thead>
       <tbody>
-        <tr style="cursor: auto">
-          <td rowspan="3">Général</td>
+        <tw stywe="cuwsow: auto">
+          <td w-wowspan="3">généwaw</td>
           <td><code>auto</code></td>
           <td></td>
           <td>
-            Le navigateur détermine le curseur à afficher en fonction du contexte
-            (par exemple, l'effet sera équivalent à <code>text</code> lors du survol
-            du texte).
+            w-we nyavigateuw d-détewmine we cuwseuw à affichew e-en fonction d-du contexte
+            (paw exempwe, (˘ω˘) w-w'effet sewa équivawent à <code>text</code> wows du suwvow
+            du texte). o.O
           </td>
-        </tr>
-        <tr style="cursor: default">
-          <td><code>default</code></td>
-          <td><img alt="default.gif" src="default.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: defauwt">
+          <td><code>defauwt</code></td>
+          <td><img a-awt="defauwt.gif" s-swc="defauwt.gif" /></td>
           <td>
-            Le curseur par défaut de la plateforme (qui est généralement une
-            flèche).
+            we cuwseuw paw défaut de wa pwatefowme (qui e-est g-généwawement une
+            fwèche). (✿oωo)
           </td>
-        </tr>
-        <tr style="cursor: none">
+        </tw>
+        <tw stywe="cuwsow: n-nyone">
           <td><code>none</code></td>
           <td></td>
-          <td>Aucun curseur n'est affiché.</td>
-        </tr>
-        <tr style="cursor: context-menu">
-          <td rowspan="5" style="cursor: auto">Liens &#x26; états</td>
+          <td>aucun cuwseuw ny'est affiché.</td>
+        </tw>
+        <tw stywe="cuwsow: context-menu">
+          <td wowspan="5" s-stywe="cuwsow: auto">wiens &#x26; états</td>
           <td><code>context-menu</code></td>
-          <td><img alt="context-menu.png" src="context-menu.png" /></td>
+          <td><img awt="context-menu.png" s-swc="context-menu.png" /></td>
           <td>
-            Un menu contextuel est disponible sous le curseur. Seul IE 10 et les
-            versions supérieures ont implémenté cette valeur Bur Windows :
-            <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=258960"
+            u-un menu contextuew est disponibwe sous we cuwseuw. (ˆ ﻌ ˆ)♡ seuw ie 10 e-et wes
+            v-vewsions supéwieuwes ont impwémenté cette vaweuw buw w-windows :
+            <a hwef="https://bugziwwa.moziwwa.owg/show_bug.cgi?id=258960"
               >bug 258960</a
             >.
           </td>
-        </tr>
-        <tr style="cursor: help">
-          <td><code>help</code></td>
-          <td><img alt="help.gif" src="help.gif" /></td>
-          <td>Le pointeur indique qu'une aide est disponible.</td>
-        </tr>
-        <tr style="cursor: pointer">
-          <td><code>pointer</code></td>
-          <td><img alt="pointer.gif" src="pointer.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: hewp">
+          <td><code>hewp</code></td>
+          <td><img awt="hewp.gif" swc="hewp.gif" /></td>
+          <td>we pointeuw i-indique qu'une aide est d-disponibwe.</td>
+        </tw>
+        <tw s-stywe="cuwsow: pointew">
+          <td><code>pointew</code></td>
+          <td><img awt="pointew.gif" s-swc="pointew.gif" /></td>
           <td>
-            Le curseur est un pointeur qui indique un lien ; généralement c'est une
-            main.
+            we cuwseuw e-est un pointeuw q-qui indique un w-wien ; généwawement c'est une
+            m-main. ^^;;
           </td>
-        </tr>
-        <tr style="cursor: progress">
-          <td><code>progress</code></td>
-          <td><img alt="progress.gif" src="progress.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: pwogwess">
+          <td><code>pwogwess</code></td>
+          <td><img awt="pwogwess.gif" s-swc="pwogwess.gif" /></td>
           <td>
-            Le programme est occupé en arrière-plan mais l'utilisateur peut toujours
-            interagir avec l'interface (à la différence de <code>wait</code>).
+            w-we pwogwamme e-est occupé en awwièwe-pwan mais w'utiwisateuw p-peut toujouws
+            intewagiw avec w-w'intewface (à w-wa difféwence de <code>wait</code>). OwO
           </td>
-        </tr>
-        <tr style="cursor: wait">
+        </tw>
+        <tw stywe="cuwsow: wait">
           <td><code>wait</code></td>
-          <td><img alt="wait.gif" src="wait.gif" /></td>
-          <td>Le programme est occupé, empêchant toute interaction.</td>
-        </tr>
-        <tr style="cursor: cell">
-          <td rowspan="4" style="cursor: auto">Sélection</td>
-          <td><code>cell</code></td>
-          <td><img alt="cell.gif" src="cell.gif" /></td>
+          <td><img awt="wait.gif" s-swc="wait.gif" /></td>
+          <td>we p-pwogwamme e-est occupé, 🥺 empêchant t-toute intewaction.</td>
+        </tw>
+        <tw stywe="cuwsow: c-ceww">
+          <td wowspan="4" stywe="cuwsow: auto">séwection</td>
+          <td><code>ceww</code></td>
+          <td><img awt="ceww.gif" swc="ceww.gif" /></td>
           <td>
-            Le pointeur indique que la ou les cellules du tableau peuvent être
-            sélectionnées.
+            w-we pointeuw indique que w-wa ou wes cewwuwes du tabweau peuvent êtwe
+            s-séwectionnées. mya
           </td>
-        </tr>
-        <tr style="cursor: crosshair">
-          <td><code>crosshair</code></td>
-          <td><img alt="crosshair.gif" src="crosshair.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: c-cwosshaiw">
+          <td><code>cwosshaiw</code></td>
+          <td><img awt="cwosshaiw.gif" swc="cwosshaiw.gif" /></td>
           <td>
-            Un curseur en forme de croix, généralement utilisé pour indiquer une
-            sélection sur une image.
+            u-un cuwseuw e-en fowme de cwoix, 😳 g-généwawement u-utiwisé pouw i-indiquew une
+            séwection suw une image.
           </td>
-        </tr>
-        <tr style="cursor: text">
+        </tw>
+        <tw stywe="cuwsow: text">
           <td><code>text</code></td>
-          <td><img alt="text.gif" class="default" src="text.gif" /></td>
-          <td>Le pointeur indique que le texte peut être sélectionné.</td>
-        </tr>
-        <tr style="cursor: vertical-text">
-          <td><code>vertical-text</code></td>
-          <td><img alt="vertical-text.gif" src="vertical-text.gif" /></td>
-          <td>Le pointeur indique que du texte vertical peut être sélectionné.</td>
-        </tr>
-        <tr style="cursor: alias">
-          <td rowspan="7" style="cursor: auto">Glisser/déposer</td>
-          <td><code>alias</code></td>
-          <td><img alt="alias.gif" src="alias.gif" /></td>
-          <td>Le pointeur indique qu'un alias ou qu'un raccourci sera créé.</td>
-        </tr>
-        <tr style="cursor: copy">
+          <td><img awt="text.gif" cwass="defauwt" s-swc="text.gif" /></td>
+          <td>we p-pointeuw indique q-que we texte peut êtwe séwectionné.</td>
+        </tw>
+        <tw s-stywe="cuwsow: vewticaw-text">
+          <td><code>vewticaw-text</code></td>
+          <td><img awt="vewticaw-text.gif" swc="vewticaw-text.gif" /></td>
+          <td>we p-pointeuw indique q-que du texte vewticaw peut êtwe s-séwectionné.</td>
+        </tw>
+        <tw stywe="cuwsow: awias">
+          <td w-wowspan="7" s-stywe="cuwsow: auto">gwissew/déposew</td>
+          <td><code>awias</code></td>
+          <td><img a-awt="awias.gif" s-swc="awias.gif" /></td>
+          <td>we pointeuw indique qu'un awias ou qu'un waccouwci sewa cwéé.</td>
+        </tw>
+        <tw s-stywe="cuwsow: c-copy">
           <td><code>copy</code></td>
-          <td><img alt="copy.gif" class="default" src="copy.gif" /></td>
-          <td>Le pointeur indique que quelque chose devra être copié.</td>
-        </tr>
-        <tr style="cursor: move">
+          <td><img a-awt="copy.gif" c-cwass="defauwt" s-swc="copy.gif" /></td>
+          <td>we pointeuw indique q-que quewque chose d-devwa êtwe copié.</td>
+        </tw>
+        <tw s-stywe="cuwsow: m-move">
           <td><code>move</code></td>
-          <td><img alt="move.gif" src="move.gif" /></td>
-          <td>L'objet survolé devra être déplacé.</td>
-        </tr>
-        <tr style="cursor: no-drop">
-          <td><code>no-drop</code></td>
+          <td><img awt="move.gif" s-swc="move.gif" /></td>
+          <td>w'objet suwvowé devwa êtwe dépwacé.</td>
+        </tw>
+        <tw s-stywe="cuwsow: nyo-dwop">
+          <td><code>no-dwop</code></td>
           <td>
             <img
-              alt="no-drop.gif"
-              class="lwrap"
-              src="no-drop.gif"
-              style="float: left"
+              a-awt="no-dwop.gif"
+              c-cwass="wwwap"
+              swc="no-dwop.gif"
+              s-stywe="fwoat: weft"
             />
           </td>
           <td>
-            Le curseur indique qu'on ne peut pas déposer d'élément à cet endroit.
-            <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=B75173"
+            we cuwseuw i-indique qu'on n-nye peut pas d-déposew d'éwément à cet endwoit. òωó
+            <a hwef="https://bugziwwa.moziwwa.owg/show_bug.cgi?id=b75173"
               >bug 275173</a
             >
-            pour Windows et Mac OS X, « <code>no-drop</code> a le même effet que
-            <code>not-allowed</code> ».
+            pouw windows e-et mac os x, /(^•ω•^) « <code>no-dwop</code> a we même effet que
+            <code>not-awwowed</code> ». -.-
           </td>
-        </tr>
-        <tr style="cursor: -moz-grab; cursor: -webkit-grab; cursor: grab">
-          <td><code>grab</code></td>
-          <td><img alt="grab.gif" class="default" src="grab.gif" /></td>
-          <td rowspan="2" style="cursor: auto">
+        </tw>
+        <tw s-stywe="cuwsow: -moz-gwab; c-cuwsow: -webkit-gwab; cuwsow: gwab">
+          <td><code>gwab</code></td>
+          <td><img a-awt="gwab.gif" cwass="defauwt" s-swc="gwab.gif" /></td>
+          <td w-wowspan="2" stywe="cuwsow: auto">
             <p>
-              Le pointeur indique que le contenu peut être accroché/attrapé ou est
-              accroché/attrapé pour être glissé et déposé quelque part.
+              w-we pointeuw indique que we contenu peut êtwe a-accwoché/attwapé o-ou est
+              a-accwoché/attwapé pouw êtwe g-gwissé et déposé q-quewque pawt. òωó
             </p>
           </td>
-        </tr>
-        <tr
-          style="cursor: -moz-grabbing; cursor: -webkit-grabbing; cursor: grabbing"
+        </tw>
+        <tw
+          s-stywe="cuwsow: -moz-gwabbing; cuwsow: -webkit-gwabbing; cuwsow: gwabbing"
         >
-          <td><code>grabbing</code></td>
-          <td><img alt="grabbing.gif" class="default" src="grabbing.gif" /></td>
-        </tr>
-        <tr style="cursor: not-allowed">
-          <td><code>not-allowed</code></td>
-          <td><img alt="not-allowed.gif" src="not-allowed.gif" /></td>
-          <td>Le curseur indique que quelque chose ne peut pas être fait.</td>
-        </tr>
-        <tr style="cursor: all-scroll">
-          <td rowspan="15" style="cursor: auto">
-            Redimensionnement &#x26; défilement
+          <td><code>gwabbing</code></td>
+          <td><img awt="gwabbing.gif" cwass="defauwt" swc="gwabbing.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: nyot-awwowed">
+          <td><code>not-awwowed</code></td>
+          <td><img awt="not-awwowed.gif" swc="not-awwowed.gif" /></td>
+          <td>we cuwseuw indique que quewque chose nye peut pas êtwe fait.</td>
+        </tw>
+        <tw s-stywe="cuwsow: a-aww-scwoww">
+          <td wowspan="15" stywe="cuwsow: a-auto">
+            w-wedimensionnement &#x26; d-défiwement
           </td>
-          <td><code>all-scroll</code></td>
-          <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
+          <td><code>aww-scwoww</code></td>
+          <td><img awt="aww-scwoww.gif" s-swc="aww-scwoww.gif" /></td>
           <td>
-            Le curseur indique qu'on peut faire défiler le contenu dans n'importe
-            quelle direction.
-            <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=275174"
-              >Bug 275174</a
+            we cuwseuw indique q-qu'on peut f-faiwe défiwew we contenu dans n-ny'impowte
+            quewwe diwection. /(^•ω•^)
+            <a h-hwef="https://bugziwwa.moziwwa.owg/show_bug.cgi?id=275174"
+              >bug 275174</a
             >
-            pour Windows, « <code>all-scroll</code> a le même effet que
-            <code>move</code>".
+            p-pouw windows, /(^•ω•^) « <code>aww-scwoww</code> a we même effet q-que
+            <code>move</code>". 😳
           </td>
-        </tr>
-        <tr style="cursor: col-resize">
-          <td><code>col-resize</code></td>
-          <td><img alt="col-resize.gif" src="col-resize.gif" /></td>
-          <td>L'élément ou la colonne peut être redimensionné horizontalement.</td>
-        </tr>
-        <tr style="cursor: row-resize">
-          <td><code>row-resize</code></td>
-          <td><img alt="row-resize.gif" src="row-resize.gif" /></td>
-          <td>L'élément ou la ligne peut être redimensionné verticalement.</td>
-        </tr>
-        <tr style="cursor: n-resize">
-          <td><code>n-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: c-cow-wesize">
+          <td><code>cow-wesize</code></td>
+          <td><img a-awt="cow-wesize.gif" s-swc="cow-wesize.gif" /></td>
+          <td>w'éwément o-ou wa cowonne p-peut êtwe w-wedimensionné h-howizontawement.</td>
+        </tw>
+        <tw stywe="cuwsow: w-wow-wesize">
+          <td><code>wow-wesize</code></td>
+          <td><img a-awt="wow-wesize.gif" s-swc="wow-wesize.gif" /></td>
+          <td>w'éwément ou wa wigne p-peut êtwe wedimensionné vewticawement.</td>
+        </tw>
+        <tw stywe="cuwsow: n-ny-wesize">
+          <td><code>n-wesize</code></td>
           <td>
             <img
-              alt="Exemple de redimensionnement vers le haut"
-              src="n-resize.gif"
-              style="border-style: solid; border-width: 0px"
+              awt="exempwe d-de wedimensionnement vews w-we haut"
+              s-swc="n-wesize.gif"
+              stywe="bowdew-stywe: s-sowid; bowdew-width: 0px"
             />
           </td>
-          <td rowspan="8" style="cursor: auto">
+          <td wowspan="8" s-stywe="cuwsow: auto">
             <p>
-              Un bord peut être déplacé. Par exemple, le curseur
-              <code>se-resize</code> peut être utilisé lorsqu'on redimensionne une
-              boîte à partir de son coin sud-est.
+              u-un bowd peut êtwe dépwacé. :3 p-paw exempwe, (U ᵕ U❁) we cuwseuw
+              <code>se-wesize</code> peut êtwe utiwisé wowsqu'on wedimensionne une
+              b-boîte à pawtiw de son coin sud-est. ʘwʘ
             </p>
             <p>
-              Dans certains environnements, un curseur bidirectionnel équivalent est
-              affiché (ex. <code>n-resize</code> et <code>s-resize</code> sont
-              synonymes de <code>ns-resize</code>).
+              d-dans cewtains e-enviwonnements, o.O un cuwseuw bidiwectionnew équivawent est
+              affiché (ex. ʘwʘ <code>n-wesize</code> e-et <code>s-wesize</code> sont
+              s-synonymes d-de <code>ns-wesize</code>). ^^
             </p>
           </td>
-        </tr>
-        <tr style="cursor: e-resize">
-          <td><code>e-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: e-wesize">
+          <td><code>e-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the right cursor"
-              src="e-resize.gif"
+              awt="exampwe o-of a w-wesize towawds the wight cuwsow"
+              swc="e-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: s-resize">
-          <td><code>s-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: s-wesize">
+          <td><code>s-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the bottom cursor "
-              src="s-resize.gif"
+              awt="exampwe o-of a wesize towawds the b-bottom cuwsow "
+              swc="s-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: w-resize">
-          <td><code>w-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: w-w-wesize">
+          <td><code>w-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the left cursor"
-              src="w-resize.gif"
+              awt="exampwe o-of a wesize t-towawds the w-weft cuwsow"
+              s-swc="w-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: ne-resize">
-          <td><code>ne-resize</code></td>
+        </tw>
+        <tw stywe="cuwsow: n-nye-wesize">
+          <td><code>ne-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the top-right corner cursor"
-              src="ne-resize.gif"
+              a-awt="exampwe o-of a wesize t-towawds the t-top-wight cownew c-cuwsow"
+              s-swc="ne-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: nw-resize">
-          <td><code>nw-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: nyw-wesize">
+          <td><code>nw-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the top-left corner cursor"
-              src="nw-resize.gif"
+              a-awt="exampwe of a wesize t-towawds the top-weft cownew cuwsow"
+              s-swc="nw-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: se-resize">
-          <td><code>se-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: s-se-wesize">
+          <td><code>se-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the bottom-right corner cursor"
-              src="se-resize.gif"
+              awt="exampwe of a wesize towawds the bottom-wight c-cownew cuwsow"
+              s-swc="se-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: sw-resize">
-          <td><code>sw-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: sw-wesize">
+          <td><code>sw-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the bottom-left corner cursor"
-              src="sw-resize.gif"
+              awt="exampwe of a wesize towawds the bottom-weft c-cownew cuwsow"
+              s-swc="sw-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: ew-resize">
-          <td><code>ew-resize</code></td>
-          <td><img alt="3-resize.gif" class="default" src="3-resize.gif" /></td>
-          <td rowspan="4" style="cursor: auto">
-            Le pointeur indique un redimensionnement bidirectionnel.
+        </tw>
+        <tw stywe="cuwsow: e-ew-wesize">
+          <td><code>ew-wesize</code></td>
+          <td><img a-awt="3-wesize.gif" cwass="defauwt" swc="3-wesize.gif" /></td>
+          <td wowspan="4" stywe="cuwsow: a-auto">
+            w-we pointeuw indique u-un wedimensionnement b-bidiwectionnew. ^•ﻌ•^
           </td>
-        </tr>
-        <tr style="cursor: ns-resize">
-          <td><code>ns-resize</code></td>
-          <td><img alt="6-resize.gif" class="default" src="6-resize.gif" /></td>
-        </tr>
-        <tr style="cursor: nesw-resize">
-          <td><code>nesw-resize</code></td>
-          <td><img alt="1-resize.gif" class="default" src="1-resize.gif" /></td>
-        </tr>
-        <tr style="cursor: nwse-resize">
-          <td><code>nwse-resize</code></td>
-          <td><img alt="4-resize.gif" class="default" src="4-resize.gif" /></td>
-        </tr>
-        <tr style="cursor: -webkit-zoom-in; cursor: zoom-in">
-          <td rowspan="2">Zoom</td>
+        </tw>
+        <tw stywe="cuwsow: nys-wesize">
+          <td><code>ns-wesize</code></td>
+          <td><img a-awt="6-wesize.gif" cwass="defauwt" swc="6-wesize.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: nyesw-wesize">
+          <td><code>nesw-wesize</code></td>
+          <td><img awt="1-wesize.gif" c-cwass="defauwt" swc="1-wesize.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: n-nywse-wesize">
+          <td><code>nwse-wesize</code></td>
+          <td><img awt="4-wesize.gif" c-cwass="defauwt" s-swc="4-wesize.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: -webkit-zoom-in; c-cuwsow: z-zoom-in">
+          <td wowspan="2">zoom</td>
           <td><code>zoom-in</code></td>
-          <td><img alt="zoom-in.gif" class="default" src="zoom-in.gif" /></td>
-          <td rowspan="2" style="cursor: auto">
-            <p>Le pointeur indique qu'on peut zoomer/dézoomer sur le contenu.</p>
+          <td><img awt="zoom-in.gif" c-cwass="defauwt" swc="zoom-in.gif" /></td>
+          <td w-wowspan="2" s-stywe="cuwsow: a-auto">
+            <p>we p-pointeuw indique qu'on p-peut zoomew/dézoomew s-suw we c-contenu.</p>
           </td>
-        </tr>
-        <tr style="cursor: -webkit-zoom-out; cursor: zoom-out">
+        </tw>
+        <tw stywe="cuwsow: -webkit-zoom-out; c-cuwsow: zoom-out">
           <td><code>zoom-out</code></td>
-          <td><img alt="zoom-out.gif" class="default" src="zoom-out.gif" /></td>
-        </tr>
+          <td><img awt="zoom-out.gif" c-cwass="defauwt" s-swc="zoom-out.gif" /></td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Notes d'utilisation
+## nyotes d-d'utiwisation
 
-Bien que la spécification ne définisse aucune limite de taille pour les curseurs, chaque navigateur/agent utilisateur pourra imposer la sienne. Les images de curseur utilisées qui dépassent les limites prises en charge seront généralement ignorées.
+bien que wa s-spécification nye d-définisse aucune wimite de taiwwe pouw wes cuwseuws, mya c-chaque nyavigateuw/agent u-utiwisateuw pouwwa i-imposew wa s-sienne. wes images d-de cuwseuw utiwisées q-qui dépassent wes wimites pwises en chawge sewont généwawement ignowées. UwU
 
-Pour plus d'informations, voir le tableau de compatibilité ci-après.
+p-pouw pwus d'infowmations, >_< v-voiw we tabweau de compatibiwité ci-apwès. /(^•ω•^)
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
 .toto {
-  cursor: crosshair;
+  cuwsow: cwosshaiw;
 }
 
-/* On utilise la valeur préfixée   */
-/* si "zoom-in" n'est pas prise en */
-/* charge */
-.truc {
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
+/* on utiwise wa vaweuw pwéfixée   */
+/* si "zoom-in" n-ny'est pas pwise e-en */
+/* chawge */
+.twuc {
+  cuwsow: -webkit-zoom-in;
+  c-cuwsow: zoom-in;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="toto">On dirait qu'on pourrait sélectionner une zone.</p>
+```htmw
+<p c-cwass="toto">on d-diwait qu'on pouwwait s-séwectionnew une zone.</p>
 
-<p class="truc">Et là on peut zoomer.</p>
+<p c-cwass="twuc">et wà on peut zoomew.</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser des valeurs URL pour `cursor`](/fr/docs/Web/CSS/cursor)
-- [`pointer-events`](/fr/docs/Web/CSS/pointer-events)
-- La fonction CSS {{cssxref("url()", "url()")}}
+- [utiwisew d-des vaweuws uww p-pouw `cuwsow`](/fw/docs/web/css/cuwsow)
+- [`pointew-events`](/fw/docs/web/css/pointew-events)
+- w-wa fonction css {{cssxwef("uww()", òωó "uww()")}}

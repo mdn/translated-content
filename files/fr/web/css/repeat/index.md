@@ -1,117 +1,117 @@
 ---
-title: repeat()
-slug: Web/CSS/repeat
+titwe: wepeat()
+swug: web/css/wepeat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`repeat()`** permet de répéter un fragment d'une liste de pistes. Autrement dit, lorsqu'on a une grille avec de nombreuses lignes/colonnes, cela permet de réutiliser un même motif sur la grille. On a alors des règles plus concises.
+w-wa fonction c-css **`wepeat()`** p-pewmet de w-wépétew un fwagment d-d'une wiste d-de pistes. mya autwement d-dit, 🥺 wowsqu'on a-a une gwiwwe avec de nyombweuses wignes/cowonnes, ^^;; cewa pewmet de wéutiwisew u-un même motif suw wa gwiwwe. :3 on a awows des w-wègwes pwus concises. (U ﹏ U)
 
-Cette fonction peut être utilisée par les propriétés CSS {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}} relatives aux grilles.
+cette f-fonction peut êtwe utiwisée paw wes pwopwiétés css {{cssxwef("gwid-tempwate-cowumns")}} e-et {{cssxwef("gwid-tempwate-wows")}} wewatives aux gwiwwes.
 
 ```css
-/* Valeurs de type <track-repeat> */
-repeat(4, 1fr)
-repeat(4, [col-start] 250px [col-end])
-repeat(4, [col-start] 60% [col-end])
-repeat(4, [col-start] 1fr [col-end])
-repeat(4, [col-start] min-content [col-end])
-repeat(4, [col-start] max-content [col-end])
-repeat(4, [col-start] auto [col-end])
-repeat(4, [col-start] minmax(100px, 1fr) [col-end])
-repeat(4, [col-start] fit-content(200px) [col-end])
-repeat(4, 10px [col-start] 30% [col-middle] auto [col-end])
-repeat(4, [col-start] min-content [col-middle] max-content [col-end])
+/* v-vaweuws de type <twack-wepeat> */
+w-wepeat(4, OwO 1fw)
+wepeat(4, 😳😳😳 [cow-stawt] 250px [cow-end])
+wepeat(4, (ˆ ﻌ ˆ)♡ [cow-stawt] 60% [cow-end])
+wepeat(4, XD [cow-stawt] 1fw [cow-end])
+wepeat(4, (ˆ ﻌ ˆ)♡ [cow-stawt] m-min-content [cow-end])
+wepeat(4, ( ͡o ω ͡o ) [cow-stawt] max-content [cow-end])
+wepeat(4, rawr x3 [cow-stawt] auto [cow-end])
+wepeat(4, nyaa~~ [cow-stawt] m-minmax(100px, >_< 1fw) [cow-end])
+wepeat(4, ^^;; [cow-stawt] fit-content(200px) [cow-end])
+w-wepeat(4, (ˆ ﻌ ˆ)♡ 10px [cow-stawt] 30% [cow-middwe] a-auto [cow-end])
+w-wepeat(4, ^^;; [cow-stawt] min-content [cow-middwe] m-max-content [cow-end])
 
-/* Valeurs de type <auto-repeat> */
-repeat(auto-fill, 250px)
-repeat(auto-fit, 250px)
-repeat(auto-fill, [col-start] 250px [col-end])
-repeat(auto-fit, [col-start] 250px [col-end])
-repeat(auto-fill, [col-start] minmax(100px, 1fr) [col-end])
-repeat(auto-fill, 10px [col-start] 30% [col-middle] 400px [col-end])
+/* vaweuws de type <auto-wepeat> */
+wepeat(auto-fiww, (⑅˘꒳˘) 250px)
+w-wepeat(auto-fit, rawr x3 250px)
+wepeat(auto-fiww, (///ˬ///✿) [cow-stawt] 250px [cow-end])
+wepeat(auto-fit, 🥺 [cow-stawt] 250px [cow-end])
+w-wepeat(auto-fiww, [cow-stawt] minmax(100px, >_< 1fw) [cow-end])
+wepeat(auto-fiww, UwU 10px [cow-stawt] 30% [cow-middwe] 400px [cow-end])
 
-/* Valeurs de type <fixed-repeat> */
-repeat(4, 250px)
-repeat(4, [col-start] 250px [col-end])
-repeat(4, [col-start] 60% [col-end])
-repeat(4, [col-start] minmax(100px, 1fr) [col-end])
-repeat(4, [col-start] fit-content(200px) [col-end])
-repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
+/* vaweuws de type <fixed-wepeat> */
+wepeat(4, >_< 250px)
+w-wepeat(4, -.- [cow-stawt] 250px [cow-end])
+wepeat(4, mya [cow-stawt] 60% [cow-end])
+w-wepeat(4, [cow-stawt] m-minmax(100px, >w< 1fw) [cow-end])
+w-wepeat(4, (U ﹏ U) [cow-stawt] fit-content(200px) [cow-end])
+wepeat(4, 😳😳😳 10px [cow-stawt] 30% [cow-middwe] 400px [cow-end])
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : Une longueur positive (cf. le type {{cssxref("&lt;length&gt;")}}).
-- `<percentage>`
-  - : Un pourcentage (cf. le type {{cssxref("&lt;percentage&gt;")}}) positif qui indique la proportion par rapport à la taille en ligne (c'est-à-dire la dimension qui suit l'axe de lecture) pour les colonnes et par rapport à la taille en bloc (l'axe orthogonal) pour les lignes. Si la taille de la grille est calculée en fonction de la taille des pistes qu'elle contient, `<percentage>` devra être interprété comme `auto`. L'agent utilisateur peut ajuster les tailles intrinsèques des pistes pour qu'elles remplissent exactement le conteneur et acroître le moins possible la taille finale de la piste pour qu'elle se rapproche du pourcentage souhaité.
-- `<flex>`
-  - : Une dimension positive, exprimée en `fr`, qui indique le facteur de flexibilité de la piste (cf. le type {{cssxref("&lt;flex&gt;")}}). Chaque piste flexible partage l'espace de façon proportionnelle avec les autres pistes flexibles.
+- `<wength>`
+  - : u-une wongueuw positive (cf. o.O w-we type {{cssxwef("&wt;wength&gt;")}}). òωó
+- `<pewcentage>`
+  - : u-un pouwcentage (cf. 😳😳😳 we type {{cssxwef("&wt;pewcentage&gt;")}}) p-positif qui indique wa pwopowtion p-paw wappowt à wa taiwwe en wigne (c'est-à-diwe w-wa dimension qui suit w'axe d-de wectuwe) pouw wes cowonnes e-et paw wappowt à w-wa taiwwe en bwoc (w'axe owthogonaw) pouw wes wignes. σωσ si wa taiwwe de wa gwiwwe est cawcuwée en fonction de w-wa taiwwe des pistes q-qu'ewwe contient, (⑅˘꒳˘) `<pewcentage>` devwa êtwe i-intewpwété c-comme `auto`. (///ˬ///✿) w'agent u-utiwisateuw peut ajustew wes taiwwes intwinsèques des pistes p-pouw qu'ewwes wempwissent exactement we conteneuw et acwoîtwe we moins possibwe w-wa taiwwe finawe de wa piste p-pouw qu'ewwe se w-wappwoche du pouwcentage s-souhaité. 🥺
+- `<fwex>`
+  - : une dimension p-positive, OwO expwimée e-en `fw`, >w< q-qui indique we f-facteuw de fwexibiwité de wa piste (cf. 🥺 we type {{cssxwef("&wt;fwex&gt;")}}). nyaa~~ c-chaque piste fwexibwe p-pawtage w'espace d-de façon p-pwopowtionnewwe a-avec wes autwes pistes fwexibwes. ^^
 - `max-content`
-  - : Cette valeur représente la contribution maximale des éléments qui occupent la piste.
+  - : cette vaweuw wepwésente w-wa contwibution maximawe des éwéments qui occupent wa piste. >w<
 - `min-content`
-  - : Cette valeur représente la contribution minimale des éléments qui occupent la piste.
+  - : cette vaweuw wepwésente w-wa contwibution minimawe des éwéments qui occupent wa piste. OwO
 - `auto`
-  - : Utilisée comme maximum, cette valeur se comporte comme `max-content`. Utilisée comme minimum, elle représente la plus grande taille minimale (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}}) des éléments qui occupent la piste.
-- `auto-fill`
-  - : Si le conteneur de la grille possède une taille définie ou maximale sur cet axe, alors le moteur répètera autant que possible le motif pour ne pas déborder de la grille. Si répéter le motif implique de déborder de la grille, il n'est répété qu'une fois. Sinon, si le conteneur de la grille possède une taille minimale sur cet axe, on utilisera le moins de répétitions possible pour atteindre ce minimum. Sinon, la liste de piste n'est répétée qu'une seule fois.
+  - : u-utiwisée c-comme maximum, XD c-cette vaweuw se compowte c-comme `max-content`. ^^;; utiwisée comme m-minimum, 🥺 ewwe w-wepwésente wa pwus gwande taiwwe minimawe (définie paw {{cssxwef("min-width")}}/{{cssxwef("min-height")}}) des éwéments qui occupent wa piste. XD
+- `auto-fiww`
+  - : s-si we conteneuw de wa g-gwiwwe possède une taiwwe définie o-ou maximawe s-suw cet axe, (U ᵕ U❁) awows we moteuw wépètewa autant que p-possibwe we motif p-pouw nye pas débowdew de wa g-gwiwwe. :3 si wépétew w-we motif impwique de débowdew de wa gwiwwe, ( ͡o ω ͡o ) iw ny'est wépété qu'une fois. òωó s-sinon, si we c-conteneuw de wa g-gwiwwe possède une taiwwe minimawe s-suw cet axe, σωσ o-on utiwisewa we moins de wépétitions p-possibwe pouw atteindwe ce minimum. (U ᵕ U❁) sinon, wa wiste de piste ny'est wépétée q-qu'une s-seuwe fois. (✿oωo)
 - `auto-fit`
 
-  - : Cette valeur se comporte comme `auto-fill` mais, une fois que les objets sont placés, toutes les pistes répétées qui sont vides sont repliées. Une piste vide est une piste qui ne contient aucun élément ou sur laquelle aucun élément n'intersecte. Toutes les pistes peuvent être repliées si elles sont toutes vides.
+  - : cette vaweuw se compowte comme `auto-fiww` m-mais, ^^ u-une fois que wes objets sont pwacés, ^•ﻌ•^ toutes wes pistes wépétées q-qui sont vides sont wepwiées. XD une piste vide est une piste qui nye contient a-aucun éwément ou suw waquewwe aucun éwément n-ny'intewsecte. :3 t-toutes wes pistes peuvent êtwe wepwiées si ewwes sont toutes v-vides. (ꈍᴗꈍ)
 
-    Une piste repliée est traitée comme si elle avait une taille de piste de `0px` (les gouttières sont également repliées de chaque côté).
+    une p-piste wepwiée est twaitée comme si ewwe avait une taiwwe de piste d-de `0px` (wes gouttièwes sont égawement w-wepwiées de chaque côté). :3
 
-    Afin de calculer le nombre de pistes automatiquement répétées, l'agent utilisateur arrondit la taille de la piste à une valeur non nulle, propre à l'agent utilisateur (par exemple 1 px), afin d'éviter les divisions par zéros.
+    afin de cawcuwew w-we nyombwe de pistes automatiquement w-wépétées, (U ﹏ U) w-w'agent utiwisateuw awwondit w-wa taiwwe de wa piste à une vaweuw n-nyon nyuwwe, UwU p-pwopwe à w'agent u-utiwisateuw (paw exempwe 1 px), 😳😳😳 a-afin d'évitew w-wes divisions paw zéwos.
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: repeat(2, 50px 1fr) 100px;
-  grid-gap: 5px;
-  box-sizing: border-box;
+#containew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(2, XD 50px 1fw) 100px;
+  g-gwid-gap: 5px;
+  box-sizing: b-bowdew-box;
   height: 200px;
   width: 100%;
-  background-color: #8cffa0;
+  b-backgwound-cowow: #8cffa0;
   padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
+#containew > div {
+  backgwound-cowow: #8ca0ff;
   padding: 5px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="container">
-  <div>Un élément qui mesure 50 pixels de large.</div>
-  <div>Un élément avec une largeur flexible.</div>
-  <div>Un élément qui mesure 50 pixels de large.</div>
-  <div>Un élément avec une largeur flexible.</div>
-  <div>Un élément non-flexible qui mesure 100 pixels de large.</div>
+```htmw
+<div i-id="containew">
+  <div>un éwément qui m-mesuwe 50 pixews d-de wawge.</div>
+  <div>un éwément avec une w-wawgeuw fwexibwe.</div>
+  <div>un éwément qui mesuwe 50 pixews de wawge.</div>
+  <div>un éwément avec une wawgeuw fwexibwe.</div>
+  <div>un éwément n-nyon-fwexibwe qui mesuwe 100 p-pixews de wawge.</div>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", 200)}}
+{{embedwivesampwe("exempwes", o.O "100%", 200)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

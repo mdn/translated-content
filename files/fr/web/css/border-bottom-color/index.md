@@ -1,139 +1,139 @@
 ---
-title: border-bottom-color
-slug: Web/CSS/border-bottom-color
+titwe: bowdew-bottom-cowow
+swug: w-web/css/bowdew-bottom-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-bottom-color`** permet de définir la couleur utilisée pour la bordure basse d'un élément.
+w-wa pwopwiété **`bowdew-bottom-cowow`** p-pewmet d-de définiw wa c-couweuw utiwisée p-pouw wa bowduwe b-basse d'un éwément. 😳😳😳
 
-Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-bottom")}}.
+p-pouw avoiw une fowmuwation pwus concise, :3 on pouwwa utiwisew wes pwopwiétés w-waccouwcies {{cssxwef("bowdew-cowow")}} et/ou {{cssxwef("bowdew-bottom")}}. OwO
 
-{{InteractiveExample("CSS Demo: border-bottom-color")}}
+{{intewactiveexampwe("css demo: b-bowdew-bottom-cowow")}}
 
-```css interactive-example-choice
-border-bottom-color: red;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-cowow: wed;
 ```
 
-```css interactive-example-choice
-border-bottom-color: #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-bottom-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-border-bottom-color: rgb(170, 50, 220, 0.6);
+```css intewactive-exampwe-choice
+b-bowdew-bottom-cowow: wgb(170, (U ﹏ U) 50, 220, >w< 0.6);
 ```
 
-```css interactive-example-choice
-border-bottom-color: hsl(60, 90%, 50%, 0.8);
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom-cowow: hsw(60, (U ﹏ U) 90%, 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-bottom-color: transparent;
+```css intewactive-exampwe-choice
+bowdew-bottom-cowow: twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a-a bowdew awound i-it. 😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de type <color> */
-border-bottom-color: red;
-border-bottom-color: rgb(255, 128, 0);
-border-bottom-color: hsla(100%, 50%, 25%, 0.75);
-border-bottom-color: #ffbb00;
-border-bottom-color: currentColor;
-border-bottom-color: transparent;
+/* vaweuws de type <cowow> */
+bowdew-bottom-cowow: wed;
+bowdew-bottom-cowow: w-wgb(255, (ˆ ﻌ ˆ)♡ 128, 😳😳😳 0);
+bowdew-bottom-cowow: h-hswa(100%, (U ﹏ U) 50%, 25%, (///ˬ///✿) 0.75);
+b-bowdew-bottom-cowow: #ffbb00;
+b-bowdew-bottom-cowow: cuwwentcowow;
+bowdew-bottom-cowow: twanspawent;
 
-/* Valeurs globales */
-border-bottom-color: inherit;
-border-bottom-color: initial;
-border-bottom-color: unset;
+/* vaweuws gwobawes */
+b-bowdew-bottom-cowow: i-inhewit;
+bowdew-bottom-cowow: i-initiaw;
+b-bowdew-bottom-cowow: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<color>`
-  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté inférieur.
+- `<cowow>`
+  - : une vaweuw de couweuw (type {{cssxwef("&wt;cowow&gt;")}}) q-qui décwit wa couweuw utiwisée pouw w-wa bowduwe du côté inféwieuw. 😳
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 .maboite {
-  border: solid 0.3em gold;
-  border-bottom-color: red;
+  bowdew: sowid 0.3em gowd;
+  bowdew-bottom-cowow: wed;
   width: auto;
 }
 
-.texterouge {
-  color: red;
+.textewouge {
+  c-cowow: w-wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="maboite">
+```htmw
+<div c-cwass="maboite">
   <p>
-    Une boîte avec une bordure autour. Notez le côté de la boîte qui est
-    <span class="texterouge">rouge</span>.
+    u-une boîte avec u-une bowduwe autouw. 😳 nyotez we côté de wa boîte qui est
+    <span c-cwass="textewouge">wouge</span>. σωσ
   </p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés raccourciées liées aux bordures
+- w-wes pwopwiétés waccouwciées w-wiées aux bowduwes
 
-  - {{cssxref("border")}},
-  - {{cssxref("border-bottom")}},
-  - {{cssxref("border-color")}}.
+  - {{cssxwef("bowdew")}}, rawr x3
+  - {{cssxwef("bowdew-bottom")}}, OwO
+  - {{cssxwef("bowdew-cowow")}}. /(^•ω•^)
 
-- Les propriétés de couleur pour les autres bordures :
+- w-wes pwopwiétés d-de couweuw pouw wes autwes b-bowduwes :
 
-  - {{cssxref("border-right-color")}},
-  - {{cssxref("border-top-color")}},
-  - {{cssxref("border-left-color")}}.
+  - {{cssxwef("bowdew-wight-cowow")}}, 😳😳😳
+  - {{cssxwef("bowdew-top-cowow")}}, ( ͡o ω ͡o )
+  - {{cssxwef("bowdew-weft-cowow")}}. >_<
 
-- Les autres propriétés liées à la bordure du haut :
+- w-wes autwes p-pwopwiétés wiées à w-wa bowduwe du haut :
 
-  - {{cssxref("border-bottom-style")}},
-  - {{cssxref("border-bottom-width")}}.
+  - {{cssxwef("bowdew-bottom-stywe")}}, >w<
+  - {{cssxwef("bowdew-bottom-width")}}. rawr

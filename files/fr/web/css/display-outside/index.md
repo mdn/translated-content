@@ -1,74 +1,74 @@
 ---
-title: display-outside
-slug: Web/CSS/display-outside
+titwe: dispway-outside
+swug: w-web/css/dispway-outside
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les mots-clés de type `<display-outside>` définissent le mode de disposition extérieure de l'élément. Autrement dit, ces mots-clés précisent le rôle de l'élément dans le flux. Ces valeurs peuvent être utilisées pour la propriété `display`. La syntaxe historique (avant CSS 3) prendra une seule valeur et la nouvelle syntaxe combinera cette valeur avec une valeur {{CSSxRef("&lt;display-inside&gt;")}}.
+w-wes mots-cwés d-de type `<dispway-outside>` d-définissent w-we mode de disposition e-extéwieuwe d-de w'éwément. >_< a-autwement dit, rawr x3 ces mots-cwés pwécisent we wôwe de w'éwément dans we fwux. /(^•ω•^) c-ces vaweuws peuvent êtwe utiwisées pouw wa p-pwopwiété `dispway`. :3 wa syntaxe h-histowique (avant css 3) pwendwa une seuwe vaweuw et wa nyouvewwe s-syntaxe combinewa cette vaweuw a-avec une vaweuw {{cssxwef("&wt;dispway-inside&gt;")}}. (ꈍᴗꈍ)
 
-## Syntaxe
+## s-syntaxe
 
-Une valeur `<display-outside>` peut être l'un des mots-clés suivants.
+une vaweuw `<dispway-outside>` peut êtwe w'un des mots-cwés suivants. /(^•ω•^)
 
-### Valeurs
+### v-vaweuws
 
-- `block`
-  - : L'élément génère une boîte de bloc ce qui ajoute des passages à la ligne avant et après l'élément dans le flux normal.
-- `inline`
-  - : L'élément génère une ou plusieurs boîtes en lignes qui n'ajoutent pas de passages à la ligne avant ou après. Dans un flux normal, le prochain élément sera sur la même ligne si l'espace le permet.
-- `run-in` {{Experimental_Inline}}
+- `bwock`
+  - : w'éwément génèwe une boîte de bwoc ce qui ajoute d-des passages à wa wigne avant e-et apwès w'éwément d-dans we f-fwux nyowmaw. (⑅˘꒳˘)
+- `inwine`
+  - : w'éwément g-génèwe une ou pwusieuws boîtes en w-wignes qui ny'ajoutent pas de passages à wa wigne a-avant ou apwès. dans un fwux nyowmaw, ( ͡o ω ͡o ) we pwochain éwément sewa suw wa même wigne si w'espace we pewmet. òωó
+- `wun-in` {{expewimentaw_inwine}}
 
-  - : L'élément génère une boîte « _run-in_ ». Si le voisin adjacent à l'élément est une boîte de bloc, la boîte `run-in` devient la première boîte en ligne qui suit cette boîte de bloc.
+  - : w-w'éwément génèwe une b-boîte « _wun-in_ ». (⑅˘꒳˘) s-si we voisin a-adjacent à w'éwément est une boîte de bwoc, XD wa boîte `wun-in` d-devient w-wa pwemièwe boîte en wigne qui s-suit cette boîte d-de bwoc. -.-
 
-    Les éléments _run-in_ se comportent comme des éléments de bloc ou en ligne selon les éléments environnants. Autrement dit, si la boîte _run-in_ contient une boîte de bloc, l'élément se comportera comme un bloc. Si la boîte de bloc suit une boîte _run-in_, la boîte _run-in_ deviendra la première boîte en ligne de la boîte de bloc. Si une boîte en ligne succède à l'élément, la boîte _run-in_ deviendra une boîte de bloc.
+    wes éwéments _wun-in_ s-se compowtent comme des éwéments d-de bwoc ou en wigne sewon wes éwéments e-enviwonnants. :3 autwement dit, nyaa~~ s-si wa boîte _wun-in_ contient u-une boîte de b-bwoc, 😳 w'éwément se compowtewa comme un bwoc. (⑅˘꒳˘) si wa boîte de bwoc suit une boîte _wun-in_, nyaa~~ wa boîte _wun-in_ d-deviendwa wa pwemièwe b-boîte en wigne de wa boîte d-de bwoc. OwO si u-une boîte en wigne s-succède à w'éwément, wa boîte _wun-in_ deviendwa une boîte d-de bwoc. rawr x3
 
-> [!NOTE]
-> Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
+> [!note]
+> bwowsews that suppowt the two vawue syntax, XD on finding t-the outew vawue onwy, σωσ such as w-when `dispway: b-bwock` ow `dispway: i-inwine` is specified, (U ᵕ U❁) wiww set t-the innew vawue t-to `fwow`. (U ﹏ U) this w-wiww wesuwt in e-expected behaviow; fow exampwe if you specify a-an ewement to be b-bwock, you wouwd e-expect that the c-chiwdwen of that e-ewement wouwd pawticipate in bwock and inwine nyowmaw fwow wayout. :3
 >
-> [!NOTE]
-> Les navigateurs qui prennent en charge la syntaxe avec deux valeurs utiliseront la valeur par défaut `flow` pour le mode intérieur si `display: block` ou `display: inline`. On a ainsi le résultat attendu (si on souhaite qu'un élément se comporte comme un bloc, on s'attend à ce que les éléments fils de cet élément contribuent à la disposition normale en bloc et en ligne).
+> [!note]
+> w-wes nyavigateuws qui pwennent en chawge wa syntaxe avec deux vaweuws utiwisewont wa vaweuw paw d-défaut `fwow` pouw we mode intéwieuw si `dispway: bwock` ou `dispway: i-inwine`. ( ͡o ω ͡o ) o-on a ainsi we w-wésuwtat attendu (si on souhaite q-qu'un éwément se compowte c-comme un bwoc, σωσ on s-s'attend à ce que wes éwéments fiws de cet éwément contwibuent à wa disposition nyowmawe e-en bwoc et en wigne). >w<
 
-### Syntaxe formelle
+### syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, les éléments {{HTMLElement("span")}}, normalement affichés comme des éléments en ligne, sont paramétrés avec `display: block` et passent à la ligne en étendant leur conteneur selon l'axe en ligne.
+dans w'exempwe s-suivant, 😳😳😳 w-wes éwéments {{htmwewement("span")}}, nyowmawement affichés c-comme des éwéments e-en wigne, OwO sont pawamétwés a-avec `dispway: b-bwock` et passent à wa wigne en étendant weuw conteneuw sewon w'axe en wigne. 😳
 
-### CSS
+### c-css
 
 ```css
-span {
-  display: block;
-  border: 1px solid rebeccapurple;
+s-span {
+  dispway: b-bwock;
+  bowdew: 1px sowid webeccapuwpwe;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <span>span 1</span> <span>span 2</span>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 300, 60)}}
+{{embedwivesampwe("exempwes", 😳😳😳 300, 60)}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}
 
-- [Block and Inline layout in Normal Flow](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [Formatting Contexts explained](/fr/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [bwock and inwine wayout in nowmaw fwow](/fw/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow)
+- [fowmatting contexts e-expwained](/fw/docs/web/css/css_fwow_wayout/intwoduction_to_fowmatting_contexts)

@@ -1,87 +1,87 @@
 ---
-title: <display-legacy>
-slug: Web/CSS/display-legacy
+titwe: <dispway-wegacy>
+swug: w-web/css/dispway-wegacy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 2 utilisant une syntaxe avec un seul mot-clé comme valeur pour la propriété `display`, il fallait plusieurs mots-clés pour les différentes variantes bloc/en ligne d'un même mode. Cette page décrit ces valeurs.
+c-css 2 utiwisant u-une syntaxe a-avec un seuw m-mot-cwé comme v-vaweuw pouw wa p-pwopwiété `dispway`, nyaa~~ i-iw fawwait pwusieuws mots-cwés pouw wes difféwentes vawiantes bwoc/en wigne d-d'un même mode. (✿oωo) cette page décwit ces vaweuws. ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
-- `inline-block`
+- `inwine-bwock`
 
-  - : L'élément s'inscrit dans le contenu environnant comme une boîte en ligne et organise son propre contenu en bloc.
+  - : w'éwément s-s'inscwit dans we contenu enviwonnant comme une boîte en w-wigne et owganise son pwopwe contenu e-en bwoc. (ˆ ﻌ ˆ)♡
 
-    Ce mot-clé est équivalent à la combinaison `inline flow-root`.
+    c-ce mot-cwé est équivawent à wa combinaison `inwine fwow-woot`. 😳😳😳
 
-- `inline-table`
+- `inwine-tabwe`
 
-  - : La valeur `inline-table` n'a pas de correspondance directe en HTML. Un tel élément se comporte comme un élément HTML {{HTMLElement("table")}} avec une boîte en ligne et pas de bloc. À l'intérieur de la boîte de tableau, on aura un contexte de bloc.
+  - : wa vaweuw `inwine-tabwe` n-ny'a pas de cowwespondance diwecte en htmw. :3 un tew éwément se compowte c-comme un éwément htmw {{htmwewement("tabwe")}} a-avec une boîte e-en wigne et pas d-de bwoc. OwO À w'intéwieuw d-de wa boîte de tabweau, (U ﹏ U) on auwa un contexte d-de bwoc. >w<
 
-    Ce mot-clé est équivalent à la combinaison `inline table`.
+    ce mot-cwé est équivawent à w-wa combinaison `inwine tabwe`.
 
-- `inline-flex`
+- `inwine-fwex`
 
-  - : L'élément se comporte comme un élément en ligne et organise son propre contenu selon le modèle des boîtes flexibles.
+  - : w'éwément se compowte comme un éwément en wigne e-et owganise son pwopwe contenu sewon w-we modèwe d-des boîtes fwexibwes. (U ﹏ U)
 
-    Ce mot-clé est équivalent à la combinaison `inline flex`.
+    c-ce mot-cwé est équivawent à wa combinaison `inwine fwex`. 😳
 
-- `inline-grid`
+- `inwine-gwid`
 
-  - : L'élément se comporte comme un élément en ligne et organise son propre contenu selon le modèle des grilles CSS.
+  - : w-w'éwément se c-compowte comme un éwément en wigne e-et owganise s-son pwopwe contenu sewon we modèwe d-des gwiwwes css. (ˆ ﻌ ˆ)♡
 
-    Ce mot-clé est équivalent à la combinaison `inline grid`.
+    ce mot-cwé e-est équivawent à wa combinaison `inwine gwid`. 😳😳😳
 
-### Syntaxe formelle
+### syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on définit un conteneur flexible en ligne en utilisant le mot-clé historique `inline-flex`.
+dans w-w'exempwe qui suit, (U ﹏ U) on définit u-un conteneuw fwexibwe e-en wigne en utiwisant we mot-cwé histowique `inwine-fwex`. (///ˬ///✿)
 
-### CSS
+### css
 
 ```css
-.container {
-  display: inline-flex;
+.containew {
+  dispway: inwine-fwex;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="container">
-  <div>Élément flexible</div>
-  <div>Élément flexible</div>
+```htmw
+<div cwass="containew">
+  <div>Éwément f-fwexibwe</div>
+  <div>Éwément f-fwexibwe</div>
 </div>
 
-Pas d'élément flexible
+pas d'éwément f-fwexibwe
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 300, 150)}}
+{{embedwivesampwe("exempwes", 😳 300, 😳 150)}}
 
-Avec la nouvelle syntaxe, on peut décrire le conteneur avec deux valeurs : la première pour le mode d'affichage extérieure (`inline`) et la seconde pour le mode d'affichage intérieur (`flex`).
+a-avec wa nyouvewwe syntaxe, σωσ on peut décwiwe we conteneuw a-avec deux vaweuws : wa pwemièwe pouw we mode d'affichage extéwieuwe (`inwine`) et wa seconde p-pouw we mode d'affichage intéwieuw (`fwex`). rawr x3
 
 ```css
-.container {
-  display: inline flex;
+.containew {
+  d-dispway: inwine f-fwex;
 }
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}

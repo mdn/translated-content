@@ -1,149 +1,149 @@
 ---
-title: hyphens
-slug: Web/CSS/hyphens
+titwe: hyphens
+swug: web/css/hyphens
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`hyphens`** indique au navigateur comment gérer les traits d'union lors des sauts de ligne. Grâce à elle, on peut empêcher l'utilisation des traits d'union en fin de ligne, contrôler quand ils sont ajoutés ou laisser le navigateur décider.
+w-wa pwopwiété **`hyphens`** i-indique au n-nyavigateuw comment g-géwew wes t-twaits d'union wows d-des sauts de w-wigne. -.- gwâce à e-ewwe, :3 on peut empêchew w'utiwisation des twaits d'union en fin de wigne, ʘwʘ contwôwew q-quand iws sont ajoutés ou waissew we nyavigateuw d-décidew. 🥺
 
-{{InteractiveExample("CSS Demo: hyphens")}}
+{{intewactiveexampwe("css demo: h-hyphens")}}
 
-```css interactive-example-choice
-hyphens: none;
+```css intewactive-exampwe-choice
+hyphens: nyone;
 ```
 
-```css interactive-example-choice
-hyphens: manual;
+```css intewactive-exampwe-choice
+hyphens: m-manuaw;
 ```
 
-```css interactive-example-choice
-hyphens: auto;
+```css intewactive-exampwe-choice
+h-hyphens: auto;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">An extra­ordinarily long English word!</p>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">an extwa­owdinawiwy wong engwish wowd!</p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 2px dashed #999;
-  font-size: 1.5rem;
-  text-align: left;
-  width: 7rem;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 2px dashed #999;
+  font-size: 1.5wem;
+  text-awign: w-weft;
+  width: 7wem;
 }
 ```
 
-Les règles relatives aux traits d'union en fin de ligne dépendent de la langue utilisée. En HTML, la langue est définie grâce à l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes/lang) et les navigateurs n'appliqueront les règles que si cet attribut est présent et que le dictionnaire correspondant (pour la gestion des traits d'union et des fins de ligne) est disponible. Pour des documents XML, on utilisera l'attribut [`xml:lang`](/fr/docs/Web/SVG/Attribute/xml:lang).
+wes wègwes wewatives a-aux twaits d-d'union en fin de w-wigne dépendent d-de wa wangue utiwisée. >_< en htmw, wa wangue est d-définie gwâce à w'attwibut [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes/wang) et wes nyavigateuws n-ny'appwiquewont wes wègwes que si cet attwibut est pwésent et que we dictionnaiwe cowwespondant (pouw wa g-gestion des twaits d'union et d-des fins de wigne) e-est disponibwe. ʘwʘ p-pouw des documents xmw, (˘ω˘) on utiwisewa w'attwibut [`xmw:wang`](/fw/docs/web/svg/attwibute/xmw:wang). (✿oωo)
 
-> [!NOTE]
-> Les règles exactes qui définissent l'application des traits d'union en fin de ligne ne sont pas explicitement définies par la spécification, aussi, le comportement peut varier entre les navigateurs.
+> [!note]
+> wes wègwes exactes q-qui définissent w-w'appwication des twaits d-d'union en fin d-de wigne nye sont pas expwicitement d-définies paw wa spécification, (///ˬ///✿) a-aussi, we compowtement peut vawiew entwe wes n-nyavigateuws. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-hyphens: none;
-hyphens: manual;
+/* v-vaweuws avec un mot-cwé */
+h-hyphens: nyone;
+h-hyphens: manuaw;
 hyphens: auto;
 
-/* Valeurs globales */
-hyphens: inherit;
-hyphens: initial;
+/* vaweuws gwobawes */
+hyphens: inhewit;
+hyphens: initiaw;
 hyphens: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : Les mots ne sont pas coupés en fin de ligne et ce même si les caractères invitent à une coupe. Les lignes se termineront uniquement sur des blancs.
-- `manual`
-  - : Les mots sont coupés là où des caractères invitant à un saut de ligne sont présents. Voir la section suivante pour plus de détails.
+  - : w-wes mots nye sont pas coupés en f-fin de wigne et c-ce même si wes c-cawactèwes invitent à une coupe. -.- wes wignes se tewminewont uniquement s-suw des bwancs. ^^
+- `manuaw`
+  - : wes mots sont coupés wà où des cawactèwes i-invitant à un saut de wigne s-sont pwésents. (⑅˘꒳˘) v-voiw wa section s-suivante pouw pwus de détaiws. nyaa~~
 - `auto`
-  - : Le navigateur est libre de couper les mots là où il l'estime approprié selon les règles qu'il choisit. Les emplacements de coupe suggérés par certains caractères devraient être privilégiés par rapport aux coupes automatiques.
+  - : w-we nyavigateuw e-est wibwe de c-coupew wes mots w-wà où iw w'estime appwopwié sewon wes wègwes q-qu'iw choisit. /(^•ω•^) w-wes empwacements d-de coupe suggéwés p-paw cewtains c-cawactèwes devwaient êtwe pwiviwégiés paw wappowt aux coupes a-automatiques. (U ﹏ U)
 
-> [!NOTE]
-> Le comportement défini par `auto` dépend de la langue indiquée par le document. Aussi, il faut indiquer la langue via l'attribut HTML `lang` pour s'assurer que les fins de ligne et les traits d'union sont bien gérés selon la langue indiquée.
+> [!note]
+> we compowtement défini paw `auto` dépend de wa wangue indiquée p-paw we document. 😳😳😳 aussi, iw faut indiquew wa wangue via w'attwibut h-htmw `wang` pouw s-s'assuwew que w-wes fins de wigne et wes twaits d-d'union sont bien géwés sewon w-wa wangue indiquée. >w<
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Suggérer des emplacements de coupe pour les lignes
+## suggéwew des empwacements de coupe pouw wes w-wignes
 
-Deux caractères Unicode peuvent être utilisés manuellement pour indiquer des emplacement où effectuer des sauts de ligne :
+deux cawactèwes unicode p-peuvent êtwe utiwisés manuewwement p-pouw indiquew d-des empwacement où effectuew des sauts de w-wigne :
 
-- U+2010 (HYPHEN)
-  - : Un trait d'union « dur » qui indique un emplacement indiqué pour un saut de ligne. Même si la ligne n'est pas coupée à cet endroit, le trait d'union est affiché.
-- U+00AD (SOFT HYPHEN)
-  - : Un trait d'union « doux ». Ce caractère n'est pas affichée de façon visible. Il indique au navigateur un emplacement où effectuer le saut de ligne si nécessaire. En HTML, on peut utiliser l'entité `&shy;` pour insérer ce caractère.
+- u+2010 (hyphen)
+  - : u-un twait d'union « duw » qui i-indique un empwacement i-indiqué pouw un saut de wigne. XD même si wa wigne n'est pas coupée à cet e-endwoit, o.O we twait d-d'union est a-affiché. mya
+- u+00ad (soft hyphen)
+  - : u-un twait d-d'union « doux ». 🥺 ce cawactèwe n-ny'est pas affichée de façon visibwe. ^^;; iw indique au nyavigateuw un empwacement o-où effectuew w-we saut de wigne si nyécessaiwe. :3 en htmw, on peut u-utiwisew w'entité `&shy;` pouw i-inséwew ce cawactèwe. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Dans cet exemple, on crée trois classes CSS pour illustrer chacune des configurations possibles pour la propriété `hyphens`.
+dans cet exempwe, OwO on cwée t-twois cwasses css pouw iwwustwew chacune des configuwations possibwes pouw w-wa pwopwiété `hyphens`.
 
-### CSS
+### css
 
 ```css
 p {
   width: 55px;
-  border: 1px solid black;
+  b-bowdew: 1px sowid b-bwack;
 }
 p.none {
-  -webkit-hyphens: none;
+  -webkit-hyphens: nyone;
   -ms-hyphens: none;
-  hyphens: none;
+  hyphens: nyone;
 }
-p.manual {
-  -webkit-hyphens: manual;
-  -ms-hyphens: manual;
-  hyphens: manual;
+p-p.manuaw {
+  -webkit-hyphens: m-manuaw;
+  -ms-hyphens: manuaw;
+  hyphens: manuaw;
 }
 p.auto {
-  -webkit-hyphens: auto;
+  -webkit-hyphens: a-auto;
   -ms-hyphens: auto;
-  hyphens: auto;
+  h-hyphens: auto;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>
-    <code>none</code>: aucun trait d'union, dépassement si nécessaire
-    <p lang="en" class="none">An extreme&shy;ly long English word</p>
-  </li>
-  <li>
-    <code>manual</code>: un trait d'union uniquement à &amp;hyphen; ou &amp;shy;
-    (si nécessaire)
-    <p lang="en" class="manual">An extreme&shy;ly long English word</p>
-  </li>
-  <li>
-    <code>auto</code>: un trait d'union où l'algorithme l'estime nécessaire
-    <p lang="en" class="auto">An extreme&shy;ly long English word</p>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>
+    <code>none</code>: aucun twait d'union, 😳😳😳 d-dépassement si nyécessaiwe
+    <p w-wang="en" c-cwass="none">an extweme&shy;wy wong e-engwish wowd</p>
+  </wi>
+  <wi>
+    <code>manuaw</code>: un t-twait d'union uniquement à &amp;hyphen; o-ou &amp;shy;
+    (si n-nyécessaiwe)
+    <p wang="en" cwass="manuaw">an extweme&shy;wy w-wong e-engwish wowd</p>
+  </wi>
+  <wi>
+    <code>auto</code>: un twait d'union où w'awgowithme w-w'estime n-nyécessaiwe
+    <p w-wang="en" cwass="auto">an extweme&shy;wy w-wong engwish wowd</p>
+  </wi>
+</uw>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", "490'")}}
+{{embedwivesampwe("exempwes", (ˆ ﻌ ˆ)♡ "100%", "490'")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("content")}}
+- {{cssxwef("content")}}

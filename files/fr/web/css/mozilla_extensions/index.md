@@ -1,555 +1,555 @@
 ---
-title: Extensions CSS de Mozilla
-slug: Web/CSS/Mozilla_Extensions
+titwe: extensions css de moziwwa
+s-swug: web/css/moziwwa_extensions
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les applications Mozilla, telles que Firefox, prennent en charge un certain nombre d'extensions spécifiques à [CSS](/fr/docs/Web/CSS) : des propriétés, des valeurs, des pseudo-éléments, des pseudo-classes, des règles @ et des requêtes média. Ces extensions utilisent le préfixe `-moz`.
+w-wes appwications m-moziwwa, σωσ t-tewwes que fiwefox, -.- p-pwennent en c-chawge un cewtain n-nyombwe d'extensions s-spécifiques à [css](/fw/docs/web/css) : des pwopwiétés, ^^;; des vaweuws, des pseudo-éwéments, XD des pseudo-cwasses, 🥺 d-des wègwes @ et des wequêtes média. òωó c-ces extensions utiwisent we pwéfixe `-moz`. (ˆ ﻌ ˆ)♡
 
-## Propriétés et pseudo-classes spécifiques à Mozilla (ne pas utiliser sur le Web)
+## p-pwopwiétés et pseudo-cwasses spécifiques à moziwwa (ne pas u-utiwisew suw we web)
 
-> [!NOTE]
-> Ces propriétés et pseudo-classes ne fonctionneront que pour les applications Mozilla (Firefox par exemple) et ne sont pas en voie de standardisation. Certaines ne s'applique qu'aux éléments [XUL](/fr/docs/Mozilla/Tech/XUL).
+> [!note]
+> c-ces pwopwiétés e-et pseudo-cwasses nye fonctionnewont que pouw wes appwications moziwwa (fiwefox p-paw exempwe) et nye sont pas en voie de standawdisation. -.- cewtaines nye s'appwique q-qu'aux éwéments [xuw](/fw/docs/moziwwa/tech/xuw). :3
 
-### B
+### b
 
-- {{CSSxRef("-moz-binding")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-border-bottom-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-left-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-right-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-top-colors")}} {{deprecated_inline}}
-- {{CSSxRef("box-align")}}
-- {{CSSxRef("box-direction")}}
-- {{CSSxRef("box-flex")}}
-- {{CSSxRef("-moz-box-ordinal-group")}}
-- {{CSSxRef("box-orient")}}
-- {{CSSxRef("box-pack")}}
+- {{cssxwef("-moz-binding")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-bowdew-bottom-cowows")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-bowdew-weft-cowows")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-bowdew-wight-cowows")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-bowdew-top-cowows")}} {{depwecated_inwine}}
+- {{cssxwef("box-awign")}}
+- {{cssxwef("box-diwection")}}
+- {{cssxwef("box-fwex")}}
+- {{cssxwef("-moz-box-owdinaw-gwoup")}}
+- {{cssxwef("box-owient")}}
+- {{cssxwef("box-pack")}}
 
-### C – I
+### c-c – i-i
 
-- {{CSSxRef("-moz-context-properties")}}
-- {{CSSxRef("-moz-float-edge")}}
-- {{CSSxRef("-moz-force-broken-image-icon")}}
-- {{CSSxRef("-moz-image-region")}}
+- {{cssxwef("-moz-context-pwopewties")}}
+- {{cssxwef("-moz-fwoat-edge")}}
+- {{cssxwef("-moz-fowce-bwoken-image-icon")}}
+- {{cssxwef("-moz-image-wegion")}}
 
-### O
+### o-o
 
-- {{CSSxRef("-moz-orient")}}
-- {{CSSxRef("-moz-osx-font-smoothing")}}
-- {{CSSxRef("-moz-outline-radius")}}
-- {{CSSxRef("-moz-outline-radius-bottomleft")}}
-- {{CSSxRef("-moz-outline-radius-bottomright")}}
-- {{CSSxRef("-moz-outline-radius-topleft")}}
-- {{CSSxRef("-moz-outline-radius-topright")}}
-- {{CSSxRef("overflow-clip-box")}}
-- {{CSSxRef("overflow-clip-box-block")}}
-- {{CSSxRef("overflow-clip-box-inline")}}
+- {{cssxwef("-moz-owient")}}
+- {{cssxwef("-moz-osx-font-smoothing")}}
+- {{cssxwef("-moz-outwine-wadius")}}
+- {{cssxwef("-moz-outwine-wadius-bottomweft")}}
+- {{cssxwef("-moz-outwine-wadius-bottomwight")}}
+- {{cssxwef("-moz-outwine-wadius-topweft")}}
+- {{cssxwef("-moz-outwine-wadius-topwight")}}
+- {{cssxwef("ovewfwow-cwip-box")}}
+- {{cssxwef("ovewfwow-cwip-box-bwock")}}
+- {{cssxwef("ovewfwow-cwip-box-inwine")}}
 
-### S – Z
+### s-s – z
 
-- {{CSSxRef("-moz-stack-sizing")}}
-- {{CSSxRef(":-moz-system-metric(images-in-menus)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(mac-graphite-theme)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-backward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-forward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-start-backward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-start-forward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(touch-enabled)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-user-focus")}}
-- {{CSSxRef("-moz-user-input")}}
-- {{CSSxRef("user-modify")}}
-- {{CSSxRef("-moz-window-dragging")}}
-- {{CSSxRef("-moz-window-shadow")}}
+- {{cssxwef("-moz-stack-sizing")}}
+- {{cssxwef(":-moz-system-metwic(images-in-menus)")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-system-metwic(mac-gwaphite-theme)")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-end-backwawd)")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-end-fowwawd)")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-stawt-backwawd)")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-stawt-fowwawd)")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-system-metwic(scwowwbaw-thumb-pwopowtionaw)")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-system-metwic(touch-enabwed)")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-system-metwic(windows-defauwt-theme)")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-usew-focus")}}
+- {{cssxwef("-moz-usew-input")}}
+- {{cssxwef("usew-modify")}}
+- {{cssxwef("-moz-window-dwagging")}}
+- {{cssxwef("-moz-window-shadow")}}
 
-## Anciennes propriétés spécifiques, désormais standardisées
+## anciennes pwopwiétés s-spécifiques, désowmais standawdisées
 
-> [!NOTE]
-> Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
+> [!note]
+> a-afin d'obteniw wa meiwweuwe compatibiwité possibwe, ʘwʘ vous devwiez utiwisew wes vewsions s-standawds, 🥺 nyon-pwéfixées, d-de ces pwopwiétés p-pwutôt que w-wes vewsions spécifiques. >_< généwawement, ʘwʘ wowsqu'une pwopwiété e-est standawdisée e-et impwémentée, wa vewsion p-pwéfixée est g-généwawement abandonnée ensuite. (˘ω˘)
 
-### A
+### a-a
 
-- {{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("animation-direction", "-moz-animation-direction")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("animation-duration", "-moz-animation-duration")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("animation-fill-mode", "-moz-animation-fill-mode")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("animation-iteration-count", "-moz-animation-iteration-count")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("animation-name", "-moz-animation-name")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}
+- {{cssxwef("animation", (✿oωo) "-moz-animation")}} {{depwecated_inwine}} \[vewsion pwéfixée t-toujouws acceptée]
+- {{cssxwef("animation-deway", (///ˬ///✿) "-moz-animation-deway")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws acceptée]
+- {{cssxwef("animation-diwection", rawr x3 "-moz-animation-diwection")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("animation-duwation", -.- "-moz-animation-duwation")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("animation-fiww-mode", ^^ "-moz-animation-fiww-mode")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws a-acceptée]
+- {{cssxwef("animation-itewation-count", (⑅˘꒳˘) "-moz-animation-itewation-count")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws acceptée]
+- {{cssxwef("animation-name", nyaa~~ "-moz-animation-name")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws acceptée]
+- {{cssxwef("animation-pway-state", /(^•ω•^) "-moz-animation-pway-state")}} {{depwecated_inwine}} \[vewsion pwéfixée t-toujouws acceptée]
+- {{cssxwef("animation-timing-function","-moz-animation-timing-function")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("appeawance","-moz-appeawance")}} {{expewimentaw_inwine}}
 
-### B
+### b-b
 
-- {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("background-clip", "-moz-background-clip")}} {{deprecated_inline}}
-- {{CSSxRef("background-origin", "-moz-background-origin")}} {{deprecated_inline}}
-- {{CSSxRef("box-decoration-break")}} {{deprecated_inline}} \[Remplacée par la version standard {{CSSxRef("box-decoration-break")}}]
-- {{CSSxRef("background-size", "-moz-background-size")}} {{deprecated_inline}}
-- {{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-end")}}]
-- {{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-end-color")}}]
-- {{CSSxRef("border-inline-style","-moz-border-end-style")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-end-style")}}]
-- {{CSSxRef("border-inline-width","-moz-border-end-width")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-end-width")}}]
-- {{CSSxRef("border-image","-moz-border-image")}} {{Deprecated_Inline}}
-- {{CSSxRef("border-inline-start","-moz-border-start")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start")}}]
-- {{CSSxRef("border-inline-start-color","-moz-border-start-color")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start-color")}}]
-- {{CSSxRef("border-inline-start-style","-moz-border-start-style")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start-style")}}]
-- {{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start-width")}}]
-- {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{cssxwef("backface-visibiwity", (U ﹏ U) "-moz-backface-visibiwity")}} {{depwecated_inwine}} \[vewsion p-pwéfixée t-toujouws acceptée]
+- {{cssxwef("backgwound-cwip", 😳😳😳 "-moz-backgwound-cwip")}} {{depwecated_inwine}}
+- {{cssxwef("backgwound-owigin", >w< "-moz-backgwound-owigin")}} {{depwecated_inwine}}
+- {{cssxwef("box-decowation-bweak")}} {{depwecated_inwine}} \[wempwacée paw wa vewsion standawd {{cssxwef("box-decowation-bweak")}}]
+- {{cssxwef("backgwound-size", XD "-moz-backgwound-size")}} {{depwecated_inwine}}
+- {{cssxwef("bowdew-inwine-end","-moz-bowdew-end")}} {{depwecated_inwine}} \[wempwacée p-paw wa vewsion standawd {{cssxwef("bowdew-inwine-end")}}]
+- {{cssxwef("bowdew-inwine-cowow","-moz-bowdew-end-cowow")}} {{depwecated_inwine}} \[wempwacée paw wa vewsion standawd {{cssxwef("bowdew-inwine-end-cowow")}}]
+- {{cssxwef("bowdew-inwine-stywe","-moz-bowdew-end-stywe")}} {{depwecated_inwine}} \[wempwacée paw wa vewsion s-standawd {{cssxwef("bowdew-inwine-end-stywe")}}]
+- {{cssxwef("bowdew-inwine-width","-moz-bowdew-end-width")}} {{depwecated_inwine}} \[wempwacée paw wa vewsion s-standawd {{cssxwef("bowdew-inwine-end-width")}}]
+- {{cssxwef("bowdew-image","-moz-bowdew-image")}} {{depwecated_inwine}}
+- {{cssxwef("bowdew-inwine-stawt","-moz-bowdew-stawt")}} {{depwecated_inwine}} \[wempwacée p-paw wa v-vewsion standawd {{cssxwef("bowdew-inwine-stawt")}}]
+- {{cssxwef("bowdew-inwine-stawt-cowow","-moz-bowdew-stawt-cowow")}} {{depwecated_inwine}} \[wempwacée paw w-wa vewsion standawd {{cssxwef("bowdew-inwine-stawt-cowow")}}]
+- {{cssxwef("bowdew-inwine-stawt-stywe","-moz-bowdew-stawt-stywe")}} {{depwecated_inwine}} \[wempwacée p-paw wa vewsion s-standawd {{cssxwef("bowdew-inwine-stawt-stywe")}}]
+- {{cssxwef("bowdew-inwine-stawt-width","-moz-bowdew-stawt-width")}} {{depwecated_inwine}} \[wempwacée p-paw wa vewsion standawd {{cssxwef("bowdew-inwine-stawt-width")}}]
+- {{cssxwef("box-sizing", o.O "-moz-box-sizing")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws a-acceptée]
 
-### C
+### c-c
 
-- {{CSSxRef("clip-path")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- {{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("column-fill","-moz-column-fill")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("column-gap","-moz-column-gap")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("column-width","-moz-column-width")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("column-rule","-moz-column-rule")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("column-rule-width","-moz-column-rule-width")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}
+- {{cssxwef("cwip-path")}} {{expewimentaw_inwine}} \[appwying t-to mowe t-than svg]
+- {{cssxwef("cowumn-count","-moz-cowumn-count")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("cowumn-fiww","-moz-cowumn-fiww")}} {{depwecated_inwine}} \[vewsion pwéfixée t-toujouws acceptée]
+- {{cssxwef("cowumn-gap","-moz-cowumn-gap")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws acceptée]
+- {{cssxwef("cowumn-width","-moz-cowumn-width")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws acceptée]
+- {{cssxwef("cowumn-wuwe","-moz-cowumn-wuwe")}} {{depwecated_inwine}} \[vewsion pwéfixée t-toujouws acceptée]
+- {{cssxwef("cowumn-wuwe-width","-moz-cowumn-wuwe-width")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws acceptée]
+- {{cssxwef("cowumn-wuwe-stywe","-moz-cowumn-wuwe-stywe")}} {{depwecated_inwine}} \[vewsion pwéfixée t-toujouws a-acceptée]
+- {{cssxwef("cowumn-wuwe-cowow","-moz-cowumn-wuwe-cowow")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("-moz-context-pwopewties")}} {{expewimentaw_inwine}}
 
-### F – M
+### f-f – m
 
-- {{CSSxRef("filter")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("font-language-override","-moz-font-language-override")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("hyphens","-moz-hyphens")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("margin-inline-end","-moz-margin-end")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("margin-inline-end")}}]
-- {{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("margin-inline-start")}}]
-- {{CSSxRef("mask")}} {{Experimental_Inline}} \[Applying to more than SVG]
+- {{cssxwef("fiwtew")}} {{expewimentaw_inwine}} \[appwying t-to mowe than svg]
+- {{cssxwef("font-featuwe-settings","-moz-font-featuwe-settings")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("font-wanguage-ovewwide","-moz-font-wanguage-ovewwide")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws acceptée]
+- {{cssxwef("hyphens","-moz-hyphens")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws a-acceptée]
+- {{cssxwef("mawgin-inwine-end","-moz-mawgin-end")}} {{depwecated_inwine}} \[wempwacée paw wa v-vewsion standawd {{cssxwef("mawgin-inwine-end")}}]
+- {{cssxwef("mawgin-inwine-stawt","-moz-mawgin-stawt")}} {{depwecated_inwine}} \[wempwacée paw wa vewsion s-standawd {{cssxwef("mawgin-inwine-stawt")}}]
+- {{cssxwef("mask")}} {{expewimentaw_inwine}} \[appwying t-to mowe than svg]
 
-### O
+### o
 
-- {{CSSxRef("opacity","-moz-opacity")}} {{deprecated_inline}}
-- {{CSSxRef("outline","-moz-outline")}} {{deprecated_inline}}
-- {{CSSxRef("outline-color","-moz-outline-color")}} {{deprecated_inline}}
-- {{CSSxRef("outline-offset","-moz-outline-offset")}} {{deprecated_inline}}
-- {{CSSxRef("outline-style","-moz-outline-style")}} {{deprecated_inline}}
-- {{CSSxRef("outline-width","-moz-outline-width")}} {{deprecated_inline}}
+- {{cssxwef("opacity","-moz-opacity")}} {{depwecated_inwine}}
+- {{cssxwef("outwine","-moz-outwine")}} {{depwecated_inwine}}
+- {{cssxwef("outwine-cowow","-moz-outwine-cowow")}} {{depwecated_inwine}}
+- {{cssxwef("outwine-offset","-moz-outwine-offset")}} {{depwecated_inwine}}
+- {{cssxwef("outwine-stywe","-moz-outwine-stywe")}} {{depwecated_inwine}}
+- {{cssxwef("outwine-width","-moz-outwine-width")}} {{depwecated_inwine}}
 
-### P
+### p
 
-- {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("padding-inline-start")}}]
-- {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("padding-inline-end")}}]
-- {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("pointer-events")}} {{Experimental_Inline}} \[Applying to more than SVG]
+- {{cssxwef("padding-inwine-end","-moz-padding-end")}} {{depwecated_inwine}} \[wempwacée p-paw wa vewsion s-standawd {{cssxwef("padding-inwine-stawt")}}]
+- {{cssxwef("padding-inwine-stawt","-moz-padding-stawt")}} {{depwecated_inwine}} \[wempwacée paw wa vewsion s-standawd {{cssxwef("padding-inwine-end")}}]
+- {{cssxwef("pewspective", mya "-moz-pewspective")}} {{depwecated_inwine}} \[vewsion pwéfixée t-toujouws acceptée]
+- {{cssxwef("pewspective-owigin","-moz-pewspective-owigin")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws acceptée]
+- {{cssxwef("pointew-events")}} {{expewimentaw_inwine}} \[appwying t-to m-mowe than svg]
 
-### T – U
+### t-t – u
 
-- {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
-- {{CSSxRef("text-align-last","-moz-text-align-last")}} {{deprecated_inline}}
-- {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}} {{deprecated_inline}}
-- {{CSSxRef("text-decoration-line","-moz-text-decoration-line")}} {{deprecated_inline}}
-- {{CSSxRef("text-decoration-style","-moz-text-decoration-style")}} {{deprecated_inline}}
-- {{CSSxRef("text-size-adjust","-moz-text-size-adjust")}} {{Experimental_Inline}}
-- {{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("transform-style", "-moz-transform-style")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("transition", "-moz-transition")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("transition-delay", "-moz-transition-delay")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("transition-duration", "-moz-transition-duration")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("transition-property", "-moz-transition-property")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("transition-timing-function", "-moz-transition-timing-function")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
-- {{CSSxRef("user-select","-moz-user-select")}} {{Experimental_Inline}}
+- {{cssxwef("tab-size","-moz-tab-size")}} {{expewimentaw_inwine}}
+- {{cssxwef("text-awign-wast","-moz-text-awign-wast")}} {{depwecated_inwine}}
+- {{cssxwef("text-decowation-cowow","-moz-text-decowation-cowow")}} {{depwecated_inwine}}
+- {{cssxwef("text-decowation-wine","-moz-text-decowation-wine")}} {{depwecated_inwine}}
+- {{cssxwef("text-decowation-stywe","-moz-text-decowation-stywe")}} {{depwecated_inwine}}
+- {{cssxwef("text-size-adjust","-moz-text-size-adjust")}} {{expewimentaw_inwine}}
+- {{cssxwef("twansfowm", 🥺 "-moz-twansfowm")}} {{depwecated_inwine}} \[vewsion pwéfixée t-toujouws acceptée]
+- {{cssxwef("twansfowm-owigin", ^^;; "-moz-twansfowm-owigin")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("twansfowm-stywe", :3 "-moz-twansfowm-stywe")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("twansition", (U ﹏ U) "-moz-twansition")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws acceptée]
+- {{cssxwef("twansition-deway", OwO "-moz-twansition-deway")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws a-acceptée]
+- {{cssxwef("twansition-duwation", 😳😳😳 "-moz-twansition-duwation")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("twansition-pwopewty", (ˆ ﻌ ˆ)♡ "-moz-twansition-pwopewty")}} {{depwecated_inwine}} \[vewsion pwéfixée toujouws a-acceptée]
+- {{cssxwef("twansition-timing-function", XD "-moz-twansition-timing-function")}} {{depwecated_inwine}} \[vewsion p-pwéfixée toujouws acceptée]
+- {{cssxwef("usew-sewect","-moz-usew-sewect")}} {{expewimentaw_inwine}}
 
-## Valeurs
+## vaweuws
 
-### Valeurs globales
+### vaweuws g-gwobawes
 
-- {{cssxref("initial","-moz-initial")}}
+- {{cssxwef("initiaw","-moz-initiaw")}}
 
-### {{Cssxref("appearance")}}
+### {{cssxwef("appeawance")}}
 
 - `button`
-- `button-arrow-down`
-- `button-arrow-next`
-- `button-arrow-previous`
-- `button-arrow-up`
-- `button-bevel`
+- `button-awwow-down`
+- `button-awwow-next`
+- `button-awwow-pwevious`
+- `button-awwow-up`
+- `button-bevew`
 - `checkbox`
-- `checkbox-container`
-- `checkbox-label`
+- `checkbox-containew`
+- `checkbox-wabew`
 - `checkmenuitem`
-- `dialog`
-- `groupbox`
-- `listbox`
-- `menuarrow`
+- `diawog`
+- `gwoupbox`
+- `wistbox`
+- `menuawwow`
 - `menucheckbox`
 - `menuimage`
 - `menuitem`
 - `menuitemtext`
-- `menulist`
-- `menulist-button`
-- `menulist-text`
-- `menulist-textfield`
+- `menuwist`
+- `menuwist-button`
+- `menuwist-text`
+- `menuwist-textfiewd`
 - `menupopup`
-- `menuradio`
-- `menuseparator`
-- `-moz-mac-unified-toolbar`
-- `-moz-win-borderless-glass`
-- `-moz-win-browsertabbar-toolbox`
-- `-moz-win-communications-toolbox`
-- `-moz-win-glass`
-- `-moz-win-media-toolbox`
+- `menuwadio`
+- `menusepawatow`
+- `-moz-mac-unified-toowbaw`
+- `-moz-win-bowdewwess-gwass`
+- `-moz-win-bwowsewtabbaw-toowbox`
+- `-moz-win-communications-toowbox`
+- `-moz-win-gwass`
+- `-moz-win-media-toowbox`
 - `-moz-window-button-box`
 - `-moz-window-button-box-maximized`
-- `-moz-window-button-close`
+- `-moz-window-button-cwose`
 - `-moz-window-button-maximize`
 - `-moz-window-button-minimize`
-- `-moz-window-button-restore`
-- `-moz-window-titlebar`
-- `-moz-window-titlebar-maximized`
-- `progressbar`
-- `progresschunk`
-- `radio`
-- `radio-container`
-- `radio-label`
-- `radiomenuitem`
-- `resizer`
-- `resizerpanel`
-- `scale-horizontal`
-- `scalethumb-horizontal`
-- `scalethumb-vertical`
-- `scale-vertical`
-- `scrollbarbutton-down`
-- `scrollbarbutton-left`
-- `scrollbarbutton-right`
-- `scrollbarbutton-up`
-- `scrollbar-small`
-- `scrollbarthumb-horizontal`
-- `scrollbarthumb-vertical`
-- `scrollbartrack-horizontal`
-- `scrollbartrack-vertical`
-- `separator`
-- `spinner`
-- `spinner-downbutton`
-- `spinner-textfield`
-- `spinner-upbutton`
-- `statusbar`
-- `statusbarpanel`
+- `-moz-window-button-westowe`
+- `-moz-window-titwebaw`
+- `-moz-window-titwebaw-maximized`
+- `pwogwessbaw`
+- `pwogwesschunk`
+- `wadio`
+- `wadio-containew`
+- `wadio-wabew`
+- `wadiomenuitem`
+- `wesizew`
+- `wesizewpanew`
+- `scawe-howizontaw`
+- `scawethumb-howizontaw`
+- `scawethumb-vewticaw`
+- `scawe-vewticaw`
+- `scwowwbawbutton-down`
+- `scwowwbawbutton-weft`
+- `scwowwbawbutton-wight`
+- `scwowwbawbutton-up`
+- `scwowwbaw-smow`
+- `scwowwbawthumb-howizontaw`
+- `scwowwbawthumb-vewticaw`
+- `scwowwbawtwack-howizontaw`
+- `scwowwbawtwack-vewticaw`
+- `sepawatow`
+- `spinnew`
+- `spinnew-downbutton`
+- `spinnew-textfiewd`
+- `spinnew-upbutton`
+- `statusbaw`
+- `statusbawpanew`
 - `tab`
-- `tabpanels`
-- `tab-scroll-arrow-back`
-- `tab-scroll-arrow-forward`
-- `textfield`
-- `textfield-multiline`
-- `toolbar`
-- `toolbarbutton-dropdown`
-- `toolbox`
-- `tooltip`
-- `treeheadercell`
-- `treeheadersortarrow`
-- `treeitem`
-- `treetwisty`
-- `treetwistyopen`
-- `treeview`
+- `tabpanews`
+- `tab-scwoww-awwow-back`
+- `tab-scwoww-awwow-fowwawd`
+- `textfiewd`
+- `textfiewd-muwtiwine`
+- `toowbaw`
+- `toowbawbutton-dwopdown`
+- `toowbox`
+- `toowtip`
+- `tweeheadewceww`
+- `tweeheadewsowtawwow`
+- `tweeitem`
+- `tweetwisty`
+- `tweetwistyopen`
+- `tweeview`
 - `window`
 
-### {{cssxref("background-image")}}
+### {{cssxwef("backgwound-image")}}
 
-#### Dégradés
+#### dégwadés
 
-- {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
-- {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
+- {{cssxwef("wineaw-gwadient","-moz-wineaw-gwadient")}} {{depwecated_inwine}}
+- {{cssxwef("wadiaw-gwadient","-moz-wadiaw-gwadient")}} {{depwecated_inwine}}
 
-#### Éléments
+#### Éwéments
 
-- {{cssxref("-moz-element")}}
+- {{cssxwef("-moz-ewement")}}
 
-#### Sub-images
+#### sub-images
 
-- {{cssxref("-moz-image-rect")}}
+- {{cssxwef("-moz-image-wect")}}
 
-### {{Cssxref("border-color")}}
+### {{cssxwef("bowdew-cowow")}}
 
-- `-moz-use-text-color` {{deprecated_inline}} retiré de Gecko (cf. [bug Firefox 1306214](https://bugzil.la/1306214)) ; [currentcolor](/fr/docs/Web/CSS/color_value#currentcolor_keyword) doit être utilisée à la place.
+- `-moz-use-text-cowow` {{depwecated_inwine}} wetiwé de gecko (cf. (ˆ ﻌ ˆ)♡ [bug f-fiwefox 1306214](https://bugziw.wa/1306214)) ; [cuwwentcowow](/fw/docs/web/css/cowow_vawue#cuwwentcowow_keywowd) doit êtwe utiwisée à wa p-pwace. ( ͡o ω ͡o )
 
-### {{Cssxref("border-style")}} et {{Cssxref("outline-style")}}
+### {{cssxwef("bowdew-stywe")}} e-et {{cssxwef("outwine-stywe")}}
 
-- `-moz-bg-inset` {{deprecated_inline}}
-- `-moz-bg-outset` {{deprecated_inline}}
-- `-moz-bg-solid` {{deprecated_inline}}
+- `-moz-bg-inset` {{depwecated_inwine}}
+- `-moz-bg-outset` {{depwecated_inwine}}
+- `-moz-bg-sowid` {{depwecated_inwine}}
 
-### Mots-clés pour {{cssxref("&lt;color&gt;")}}
+### mots-cwés pouw {{cssxwef("&wt;cowow&gt;")}}
 
-- `-moz-activehyperlinktext`
-- `-moz-hyperlinktext`
-- `-moz-visitedhyperlinktext`
-- `-moz-buttondefault`
-- `-moz-buttonhoverface`
-- `-moz-buttonhovertext`
-- `-moz-default-background-color`
-- `-moz-default-color`
-- `-moz-cellhighlight`
-- `-moz-cellhighlighttext`
-- `-moz-field`
-- `-moz-fieldtext`
-- `-moz-dialog`
-- `-moz-dialogtext`
-- `-moz-dragtargetzone`
-- `-moz-mac-accentdarkestshadow`
-- `-moz-mac-accentdarkshadow`
+- `-moz-activehypewwinktext`
+- `-moz-hypewwinktext`
+- `-moz-visitedhypewwinktext`
+- `-moz-buttondefauwt`
+- `-moz-buttonhovewface`
+- `-moz-buttonhovewtext`
+- `-moz-defauwt-backgwound-cowow`
+- `-moz-defauwt-cowow`
+- `-moz-cewwhighwight`
+- `-moz-cewwhighwighttext`
+- `-moz-fiewd`
+- `-moz-fiewdtext`
+- `-moz-diawog`
+- `-moz-diawogtext`
+- `-moz-dwagtawgetzone`
+- `-moz-mac-accentdawkestshadow`
+- `-moz-mac-accentdawkshadow`
 - `-moz-mac-accentface`
-- `-moz-mac-accentlightesthighlight`
-- `-moz-mac-accentlightshadow`
-- `-moz-mac-accentregularhighlight`
-- `-moz-mac-accentregularshadow`
-- `-moz-mac-chrome-active`
-- `-moz-mac-chrome-inactive`
-- `-moz-mac-focusring`
-- `-moz-mac-menuselect`
+- `-moz-mac-accentwightesthighwight`
+- `-moz-mac-accentwightshadow`
+- `-moz-mac-accentweguwawhighwight`
+- `-moz-mac-accentweguwawshadow`
+- `-moz-mac-chwome-active`
+- `-moz-mac-chwome-inactive`
+- `-moz-mac-focuswing`
+- `-moz-mac-menusewect`
 - `-moz-mac-menushadow`
-- `-moz-mac-menutextselect`
-- `-moz-menuhover`
-- `-moz-menuhovertext`
+- `-moz-mac-menutextsewect`
+- `-moz-menuhovew`
+- `-moz-menuhovewtext`
 - `-moz-win-communicationstext`
 - `-moz-win-mediatext`
-- `-moz-nativehyperlinktext`
+- `-moz-nativehypewwinktext`
 
-### {{Cssxref("display")}}
+### {{cssxwef("dispway")}}
 
-- `-moz-box` {{Deprecated_Inline}}
-- `-moz-inline-block` {{deprecated_inline}}
-- `-moz-inline-box` {{Deprecated_Inline}}
-- `-moz-inline-grid` {{deprecated_inline}}
-- `-moz-inline-stack` {{deprecated_inline}}
-- `-moz-inline-table` {{deprecated_inline}}
-- `-moz-grid` {{deprecated_inline}}
-- `-moz-grid-group` {{deprecated_inline}}
-- `-moz-grid-line` {{deprecated_inline}}
-- `-moz-groupbox`{{deprecated_inline}}
-- `-moz-deck` {{deprecated_inline}}
-- `-moz-popup` {{deprecated_inline}}
-- `-moz-stack` {{deprecated_inline}}
-- `-moz-marker` {{deprecated_inline}}
+- `-moz-box` {{depwecated_inwine}}
+- `-moz-inwine-bwock` {{depwecated_inwine}}
+- `-moz-inwine-box` {{depwecated_inwine}}
+- `-moz-inwine-gwid` {{depwecated_inwine}}
+- `-moz-inwine-stack` {{depwecated_inwine}}
+- `-moz-inwine-tabwe` {{depwecated_inwine}}
+- `-moz-gwid` {{depwecated_inwine}}
+- `-moz-gwid-gwoup` {{depwecated_inwine}}
+- `-moz-gwid-wine` {{depwecated_inwine}}
+- `-moz-gwoupbox`{{depwecated_inwine}}
+- `-moz-deck` {{depwecated_inwine}}
+- `-moz-popup` {{depwecated_inwine}}
+- `-moz-stack` {{depwecated_inwine}}
+- `-moz-mawkew` {{depwecated_inwine}}
 
-### {{cssxref("empty-cells")}}
+### {{cssxwef("empty-cewws")}}
 
-- `-moz-show-background` (valeur par défaut en _quirks mode_)
+- `-moz-show-backgwound` (vaweuw paw défaut en _quiwks m-mode_)
 
-### {{Cssxref("font")}}
+### {{cssxwef("font")}}
 
 - `-moz-button`
 - `-moz-info`
 - `-moz-desktop`
-- `-moz-dialog` (également une couleur)
+- `-moz-diawog` (égawement u-une couweuw)
 - `-moz-document`
-- `-moz-workspace`
+- `-moz-wowkspace`
 - `-moz-window`
-- `-moz-list`
-- `-moz-pull-down-menu`
-- `-moz-field` (également une couleur)
+- `-moz-wist`
+- `-moz-puww-down-menu`
+- `-moz-fiewd` (égawement une couweuw)
 
-### {{Cssxref("font-family")}}
+### {{cssxwef("font-famiwy")}}
 
 - `-moz-fixed`
 
-### {{Cssxref("image-rendering")}}
+### {{cssxwef("image-wendewing")}}
 
-- {{Cssxref("image-rendering","-moz-crisp-edges")}}
+- {{cssxwef("image-wendewing","-moz-cwisp-edges")}}
 
-### {{cssxref("&lt;length&gt;")}}
+### {{cssxwef("&wt;wength&gt;")}}
 
-- {{cssxref("-moz-calc")}}
+- {{cssxwef("-moz-cawc")}}
 
-### {{Cssxref("list-style-type")}}
+### {{cssxwef("wist-stywe-type")}}
 
-- `-moz-arabic-indic`
-- `-moz-bengali`
-- `-moz-cjk-earthly-branch`
-- `-moz-cjk-heavenly-stem`
-- `-moz-devanagari`
-- `-moz-ethiopic-halehame`
-- `-moz-ethiopic-halehame-am`
-- `-moz-ethiopic-halehame-ti-er`
-- `-moz-ethiopic-halehame-ti-et`
-- `-moz-ethiopic-numeric`
-- `-moz-gujarati`
-- `-moz-gurmukhi`
-- `-moz-hangul`
-- `-moz-hangul-consonant`
-- `-moz-japanese-formal`
-- `-moz-japanese-informal`
+- `-moz-awabic-indic`
+- `-moz-bengawi`
+- `-moz-cjk-eawthwy-bwanch`
+- `-moz-cjk-heavenwy-stem`
+- `-moz-devanagawi`
+- `-moz-ethiopic-hawehame`
+- `-moz-ethiopic-hawehame-am`
+- `-moz-ethiopic-hawehame-ti-ew`
+- `-moz-ethiopic-hawehame-ti-et`
+- `-moz-ethiopic-numewic`
+- `-moz-gujawati`
+- `-moz-guwmukhi`
+- `-moz-hanguw`
+- `-moz-hanguw-consonant`
+- `-moz-japanese-fowmaw`
+- `-moz-japanese-infowmaw`
 - `-moz-kannada`
-- `-moz-khmer`
-- `-moz-lao`
-- `-moz-malayalam`
-- `-moz-myanmar`
-- `-moz-oriya`
-- `-moz-persian`
-- `-moz-simp-chinese-formal`
-- `-moz-simp-chinese-informal`
-- `-moz-tamil`
-- `-moz-telugu`
+- `-moz-khmew`
+- `-moz-wao`
+- `-moz-mawayawam`
+- `-moz-myanmaw`
+- `-moz-owiya`
+- `-moz-pewsian`
+- `-moz-simp-chinese-fowmaw`
+- `-moz-simp-chinese-infowmaw`
+- `-moz-tamiw`
+- `-moz-tewugu`
 - `-moz-thai`
-- `-moz-trad-chinese-formal`
-- `-moz-trad-chinese-informal`
-- `-moz-urdu`
+- `-moz-twad-chinese-fowmaw`
+- `-moz-twad-chinese-infowmaw`
+- `-moz-uwdu`
 
-### {{Cssxref("overflow")}}
+### {{cssxwef("ovewfwow")}}
 
-- {{Cssxref("-moz-scrollbars-none")}} {{deprecated_inline}}
-- {{Cssxref("-moz-scrollbars-horizontal")}} {{Deprecated_inline}}
-- {{Cssxref("-moz-scrollbars-vertical")}} {{Deprecated_inline}}
-- {{Cssxref("-moz-hidden-unscrollable")}}
+- {{cssxwef("-moz-scwowwbaws-none")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-scwowwbaws-howizontaw")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-scwowwbaws-vewticaw")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-hidden-unscwowwabwe")}}
 
-### {{Cssxref("text-align")}}
+### {{cssxwef("text-awign")}}
 
-- `-moz-center`
-- `-moz-left`
-- `-moz-right`
+- `-moz-centew`
+- `-moz-weft`
+- `-moz-wight`
 
-### {{Cssxref("text-decoration")}}
+### {{cssxwef("text-decowation")}}
 
-- `-moz-anchor-decoration`
+- `-moz-anchow-decowation`
 
-### {{Cssxref("-moz-user-select")}}
+### {{cssxwef("-moz-usew-sewect")}}
 
-- `-moz-all`
+- `-moz-aww`
 - `-moz-none`
 
-### {{Cssxref("width")}}, {{Cssxref("min-width")}}, and {{Cssxref("max-width")}}
+### {{cssxwef("width")}}, rawr x3 {{cssxwef("min-width")}}, nyaa~~ and {{cssxwef("max-width")}}
 
 - `-moz-min-content`
 - `-moz-fit-content`
 - `-moz-max-content`
-- `-moz-available`
+- `-moz-avaiwabwe`
 
-## Pseudo-éléments et pseudo-classes
+## pseudo-éwéments e-et pseudo-cwasses
 
-### A – D
+### a-a – d
 
-- {{CSSxRef("::-moz-anonymous-block")}} eg@:- bug 331432
-- {{CSSxRef("::-moz-anonymous-positioned-block")}}
-- {{CSSxRef(":-moz-any")}}
-- {{CSSxRef(":-moz-any-link")}} \[Matches `:link` and `:visited`]
-- {{CSSxRef(":-moz-broken")}}
-- {{CSSxRef("::-moz-canvas")}}
-- {{CSSxRef("::-moz-color-swatch")}}
-- {{CSSxRef("::-moz-cell-content")}}
-- {{CSSxRef(":-moz-drag-over")}}
+- {{cssxwef("::-moz-anonymous-bwock")}} eg@:- bug 331432
+- {{cssxwef("::-moz-anonymous-positioned-bwock")}}
+- {{cssxwef(":-moz-any")}}
+- {{cssxwef(":-moz-any-wink")}} \[matches `:wink` and `:visited`]
+- {{cssxwef(":-moz-bwoken")}}
+- {{cssxwef("::-moz-canvas")}}
+- {{cssxwef("::-moz-cowow-swatch")}}
+- {{cssxwef("::-moz-ceww-content")}}
+- {{cssxwef(":-moz-dwag-ovew")}}
 
-### F – I
+### f – i
 
-- {{CSSxRef(":-moz-first-node")}}
-- {{CSSxRef("::-moz-focus-inner")}}
-- {{CSSxRef("::-moz-focus-outer")}}
-- {{CSSxRef(":-moz-focusring")}}
-- {{CSSxRef(":-moz-full-screen")}}
-- {{CSSxRef(":-moz-full-screen-ancestor")}}
-- {{CSSxRef(":-moz-handler-blocked")}}
-- {{CSSxRef(":-moz-handler-crashed")}}
-- {{CSSxRef(":-moz-handler-disabled")}}
-- {{CSSxRef("::-moz-inline-table")}}
+- {{cssxwef(":-moz-fiwst-node")}}
+- {{cssxwef("::-moz-focus-innew")}}
+- {{cssxwef("::-moz-focus-outew")}}
+- {{cssxwef(":-moz-focuswing")}}
+- {{cssxwef(":-moz-fuww-scween")}}
+- {{cssxwef(":-moz-fuww-scween-ancestow")}}
+- {{cssxwef(":-moz-handwew-bwocked")}}
+- {{cssxwef(":-moz-handwew-cwashed")}}
+- {{cssxwef(":-moz-handwew-disabwed")}}
+- {{cssxwef("::-moz-inwine-tabwe")}}
 
-### L
+### w-w
 
-- {{CSSxRef(":-moz-last-node")}}
-- {{CSSxRef(":-moz-list-bullet")}}
-- {{CSSxRef(":-moz-list-number")}}
-- {{CSSxRef(":-moz-loading")}}
-- {{CSSxRef(":-moz-locale-dir(ltr)")}}
-- {{CSSxRef(":-moz-locale-dir(rtl)")}}
-- {{CSSxRef(":-moz-lwtheme")}}
-- {{CSSxRef(":-moz-lwtheme-brighttext")}}
-- {{CSSxRef(":-moz-lwtheme-darktext")}}
+- {{cssxwef(":-moz-wast-node")}}
+- {{cssxwef(":-moz-wist-buwwet")}}
+- {{cssxwef(":-moz-wist-numbew")}}
+- {{cssxwef(":-moz-woading")}}
+- {{cssxwef(":-moz-wocawe-diw(wtw)")}}
+- {{cssxwef(":-moz-wocawe-diw(wtw)")}}
+- {{cssxwef(":-moz-wwtheme")}}
+- {{cssxwef(":-moz-wwtheme-bwighttext")}}
+- {{cssxwef(":-moz-wwtheme-dawktext")}}
 
-### N – R
+### ny – w
 
-- {{CSSxRef(":-moz-native-anonymous")}}
-- {{CSSxRef(":-moz-only-whitespace")}}
-- {{CSSxRef("::-moz-page")}}
-- {{CSSxRef("::-moz-page-sequence")}}
-- {{CSSxRef("::-moz-pagebreak")}}
-- {{CSSxRef("::-moz-pagecontent")}}
-- {{CSSxRef(":placeholder-shown")}} {{deprecated_inline}}
-- {{CSSxRef("::placeholder")}}{{Deprecated_Inline}}
-- {{CSSxRef("::-moz-progress-bar")}}
-- {{CSSxRef("::-moz-range-progress")}}
-- {{CSSxRef("::-moz-range-thumb")}}
-- {{CSSxRef("::-moz-range-track")}}
-- {{CSSxRef(":-moz-read-only")}}
-- {{CSSxRef(":-moz-read-write")}}
+- {{cssxwef(":-moz-native-anonymous")}}
+- {{cssxwef(":-moz-onwy-whitespace")}}
+- {{cssxwef("::-moz-page")}}
+- {{cssxwef("::-moz-page-sequence")}}
+- {{cssxwef("::-moz-pagebweak")}}
+- {{cssxwef("::-moz-pagecontent")}}
+- {{cssxwef(":pwacehowdew-shown")}} {{depwecated_inwine}}
+- {{cssxwef("::pwacehowdew")}}{{depwecated_inwine}}
+- {{cssxwef("::-moz-pwogwess-baw")}}
+- {{cssxwef("::-moz-wange-pwogwess")}}
+- {{cssxwef("::-moz-wange-thumb")}}
+- {{cssxwef("::-moz-wange-twack")}}
+- {{cssxwef(":-moz-wead-onwy")}}
+- {{cssxwef(":-moz-wead-wwite")}}
 
-### S
+### s
 
-- {{CSSxRef("::-moz-scrolled-canvas")}}
-- {{CSSxRef("::-moz-scrolled-content")}}
-- {{CSSxRef("::-moz-scrolled-page-sequence")}}
-- {{CSSxRef("::selection","::-moz-selection")}}{{Deprecated_Inline(62)}}
-- {{CSSxRef(":-moz-submit-invalid")}}
-- {{CSSxRef(":-moz-suppressed")}}
-- {{CSSxRef("::-moz-svg-foreign-content")}}
+- {{cssxwef("::-moz-scwowwed-canvas")}}
+- {{cssxwef("::-moz-scwowwed-content")}}
+- {{cssxwef("::-moz-scwowwed-page-sequence")}}
+- {{cssxwef("::sewection","::-moz-sewection")}}{{depwecated_inwine(62)}}
+- {{cssxwef(":-moz-submit-invawid")}}
+- {{cssxwef(":-moz-suppwessed")}}
+- {{cssxwef("::-moz-svg-foweign-content")}}
 
-### T
+### t-t
 
-- {{CSSxRef("::-moz-table")}}
-- {{CSSxRef("::-moz-table-cell")}}
-- {{CSSxRef("::-moz-table-column")}}
-- {{CSSxRef("::-moz-table-column-group")}}
-- {{CSSxRef("::-moz-table-outer")}}
-- {{CSSxRef("::-moz-table-row")}}
-- {{CSSxRef("::-moz-table-row-group")}}
-- {{CSSxRef(":-moz-tree-cell")}}
-- {{CSSxRef(":-moz-tree-cell-text")}}
-- {{CSSxRef(":-moz-tree-cell-text(hover)")}}
-- {{CSSxRef(":-moz-tree-checkbox")}}
-- {{CSSxRef(":-moz-tree-column")}}
-- {{CSSxRef(":-moz-tree-drop-feedback")}}
-- {{CSSxRef(":-moz-tree-image")}}
-- {{CSSxRef(":-moz-tree-indentation")}}
-- {{CSSxRef(":-moz-tree-line")}}
-- {{CSSxRef(":-moz-tree-progressmeter")}}
-- {{CSSxRef(":-moz-tree-row")}}
-- {{CSSxRef(":-moz-tree-row(hover)")}}
-- {{CSSxRef(":-moz-tree-separator")}}
-- {{CSSxRef(":-moz-tree-twisty")}}
+- {{cssxwef("::-moz-tabwe")}}
+- {{cssxwef("::-moz-tabwe-ceww")}}
+- {{cssxwef("::-moz-tabwe-cowumn")}}
+- {{cssxwef("::-moz-tabwe-cowumn-gwoup")}}
+- {{cssxwef("::-moz-tabwe-outew")}}
+- {{cssxwef("::-moz-tabwe-wow")}}
+- {{cssxwef("::-moz-tabwe-wow-gwoup")}}
+- {{cssxwef(":-moz-twee-ceww")}}
+- {{cssxwef(":-moz-twee-ceww-text")}}
+- {{cssxwef(":-moz-twee-ceww-text(hovew)")}}
+- {{cssxwef(":-moz-twee-checkbox")}}
+- {{cssxwef(":-moz-twee-cowumn")}}
+- {{cssxwef(":-moz-twee-dwop-feedback")}}
+- {{cssxwef(":-moz-twee-image")}}
+- {{cssxwef(":-moz-twee-indentation")}}
+- {{cssxwef(":-moz-twee-wine")}}
+- {{cssxwef(":-moz-twee-pwogwessmetew")}}
+- {{cssxwef(":-moz-twee-wow")}}
+- {{cssxwef(":-moz-twee-wow(hovew)")}}
+- {{cssxwef(":-moz-twee-sepawatow")}}
+- {{cssxwef(":-moz-twee-twisty")}}
 
-### U – X
+### u-u – x
 
-- {{CSSxRef(":user-invalid")}}
-- {{CSSxRef(":-moz-ui-valid")}}
-- {{CSSxRef(":-moz-user-disabled")}}
-- {{CSSxRef("::-moz-viewport")}}
-- {{CSSxRef("::-moz-viewport-scroll")}}
-- {{CSSxRef(":-moz-window-inactive")}}
-- {{CSSxRef("::-moz-xul-anonymous-block")}}
+- {{cssxwef(":usew-invawid")}}
+- {{cssxwef(":-moz-ui-vawid")}}
+- {{cssxwef(":-moz-usew-disabwed")}}
+- {{cssxwef("::-moz-viewpowt")}}
+- {{cssxwef("::-moz-viewpowt-scwoww")}}
+- {{cssxwef(":-moz-window-inactive")}}
+- {{cssxwef("::-moz-xuw-anonymous-bwock")}}
 
-## Règles @
+## wègwes @
 
-- {{Cssxref("@-moz-document")}}
+- {{cssxwef("@-moz-document")}}
 
-## Caractéristiques
+## c-cawactéwistiques
 
-- {{CSSxRef("@media/-moz-mac-graphite-theme", "-moz-mac-graphite-theme")}}
-- {{CSSxRef("@media/-moz-maemo-classic", "-moz-maemo-classic")}}
-- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
-- {{CSSxRef("@media/-moz-os-version", "-moz-os-version")}}
-- {{CSSxRef("@media/-moz-scrollbar-end-backward", "-moz-scrollbar-end-backward")}}
-- {{CSSxRef("@media/-moz-scrollbar-end-forward", "-moz-scrollbar-end-forward")}}
-- {{CSSxRef("@media/-moz-scrollbar-start-backward", "-moz-scrollbar-start-backward")}}
-- {{CSSxRef("@media/-moz-scrollbar-start-forward", "-moz-scrollbar-start-forward")}}
-- {{CSSxRef("@media/-moz-scrollbar-thumb-proportional", "-moz-scrollbar-thumb-proportional")}}
-- {{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}
-- {{CSSxRef("@media/-moz-windows-accent-color-in-titlebar", "-moz-windows-accent-color-in-titlebar")}}
-- {{CSSxRef("@media/-moz-windows-classic", "-moz-windows-classic")}}
-- {{CSSxRef("@media/-moz-windows-compositor", "-moz-windows-compositor")}}
-- {{CSSxRef("@media/-moz-windows-default-theme", "-moz-windows-default-theme")}}
-- {{CSSxRef("@media/-moz-windows-glass", "-moz-windows-glass")}}
-- {{CSSxRef("@media/-moz-windows-theme", "-moz-windows-theme")}}
+- {{cssxwef("@media/-moz-mac-gwaphite-theme", >_< "-moz-mac-gwaphite-theme")}}
+- {{cssxwef("@media/-moz-maemo-cwassic", ^^;; "-moz-maemo-cwassic")}}
+- {{cssxwef("@media/-moz-device-pixew-watio", (ˆ ﻌ ˆ)♡ "-moz-device-pixew-watio")}}
+- {{cssxwef("@media/-moz-os-vewsion", ^^;; "-moz-os-vewsion")}}
+- {{cssxwef("@media/-moz-scwowwbaw-end-backwawd", (⑅˘꒳˘) "-moz-scwowwbaw-end-backwawd")}}
+- {{cssxwef("@media/-moz-scwowwbaw-end-fowwawd", rawr x3 "-moz-scwowwbaw-end-fowwawd")}}
+- {{cssxwef("@media/-moz-scwowwbaw-stawt-backwawd", (///ˬ///✿) "-moz-scwowwbaw-stawt-backwawd")}}
+- {{cssxwef("@media/-moz-scwowwbaw-stawt-fowwawd", 🥺 "-moz-scwowwbaw-stawt-fowwawd")}}
+- {{cssxwef("@media/-moz-scwowwbaw-thumb-pwopowtionaw", >_< "-moz-scwowwbaw-thumb-pwopowtionaw")}}
+- {{cssxwef("@media/-moz-touch-enabwed", UwU "-moz-touch-enabwed")}}
+- {{cssxwef("@media/-moz-windows-accent-cowow-in-titwebaw", >_< "-moz-windows-accent-cowow-in-titwebaw")}}
+- {{cssxwef("@media/-moz-windows-cwassic", -.- "-moz-windows-cwassic")}}
+- {{cssxwef("@media/-moz-windows-compositow", mya "-moz-windows-compositow")}}
+- {{cssxwef("@media/-moz-windows-defauwt-theme", >w< "-moz-windows-defauwt-theme")}}
+- {{cssxwef("@media/-moz-windows-gwass", (U ﹏ U) "-moz-windows-gwass")}}
+- {{cssxwef("@media/-moz-windows-theme", 😳😳😳 "-moz-windows-theme")}}
 
-## Autres
+## autwes
 
-- {{Cssxref("-moz-alt-content")}} [bug Firefox 11011](https://bugzil.la/11011)
+- {{cssxwef("-moz-awt-content")}} [bug f-fiwefox 11011](https://bugziw.wa/11011)
 
-## Voir aussi
+## v-voiw aussi
 
-- [CSS Mozilla uniquement destiné au chrome (l'interface du navigateur)](/fr/docs/Mozilla/Gecko/Chrome/CSS)
-- [Extensions CSS spécifiques à Microsoft](/fr/docs/Web/CSS/Microsoft_Extensions)
-- [Extensions CSS spécifiques à WebKit](/fr/docs/Web/CSS/WebKit_Extensions)
+- [css m-moziwwa uniquement destiné au c-chwome (w'intewface d-du nyavigateuw)](/fw/docs/moziwwa/gecko/chwome/css)
+- [extensions css spécifiques à micwosoft](/fw/docs/web/css/micwosoft_extensions)
+- [extensions c-css s-spécifiques à w-webkit](/fw/docs/web/css/webkit_extensions)

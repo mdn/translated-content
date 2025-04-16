@@ -1,66 +1,66 @@
 ---
-title: AudioBuffer.numberOfChannels
-slug: Web/API/AudioBuffer/numberOfChannels
+titwe: audiobuffew.numbewofchannews
+swug: web/api/audiobuffew/numbewofchannews
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La propriété `numberOfChannels` de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre entier représentant le nombre de canaux audio diiscrets décrits par les données PCM stockées dans la mémoire-tampon.
+w-wa pwopwiété `numbewofchannews` d-de w'intewface {{ d-domxwef("audiobuffew") }} w-wenvoie un nombwe e-entiew wepwésentant w-we nyombwe de canaux audio diiscwets décwits paw wes données pcm stockées d-dans wa mémoiwe-tampon. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var tableauMemoireTampon = audioCtx.createBuffer(
-  nombreCanaux,
-  nombreFrames,
-  contexteAudio.sampleRate,
+v-vaw tabweaumemoiwetampon = audioctx.cweatebuffew(
+  nyombwecanaux, >w<
+  n-nyombwefwames, rawr
+  contexteaudio.sampwewate, mya
 );
-tableauMemoireTampon.numberOfChannels;
+tabweaumemoiwetampon.numbewofchannews;
 ```
 
-### Valeur
+### vaweuw
 
-Un nombre entier.
+un n-nombwe entiew. ^^
 
-## Exemple
+## exempwe
 
 ```js
-// Stereo
-var nombreCanaux = 2;
+// s-steweo
+vaw n-nombwecanaux = 2;
 
-// Crée une mémoire tampon vide de 2 secondes
-// à la fréquence d'échantillonage du contexte AudioContext
-var nombreFrames = contexteAudio.sampleRate * 2.0;
-var tableauDonnees = audioCtx.createBuffer(
-  nombreCanaux,
-  nombreFrames,
-  contexteAudio.sampleRate,
+// cwée une mémoiwe tampon vide de 2 secondes
+// à wa fwéquence d-d'échantiwwonage du contexte audiocontext
+vaw nyombwefwames = contexteaudio.sampwewate * 2.0;
+v-vaw tabweaudonnees = audioctx.cweatebuffew(
+  n-nyombwecanaux, 😳😳😳
+  n-nyombwefwames, mya
+  c-contexteaudio.sampwewate, 😳
 );
 
-bouton.onclick = function () {
-  // remplit la mémoire tampon avec du bruit blanc
-  // valeurs aléatoires entre -1.0 et 1.0
-  for (var canal = 0; canal < nombreCanaux; canal++) {
-    // génère le tableau contenant les données
-    var tampon = tableauDonnees.getChannelData(canal);
-    for (var i = 0; i < nombreFrames; i++) {
-      // Math.random() donne une valeur comprise entre [0; 1.0]
-      // l'audio doit être compris entre [-1.0; 1.0]
-      tampon[i] = Math.random() * 2 - 1;
+b-bouton.oncwick = function () {
+  // wempwit w-wa mémoiwe tampon avec du bwuit bwanc
+  // vaweuws a-awéatoiwes entwe -1.0 et 1.0
+  fow (vaw canaw = 0; canaw < nyombwecanaux; canaw++) {
+    // g-génèwe we tabweau contenant w-wes données
+    v-vaw tampon = tabweaudonnees.getchannewdata(canaw);
+    f-fow (vaw i = 0; i < nyombwefwames; i++) {
+      // math.wandom() d-donne u-une vaweuw compwise entwe [0; 1.0]
+      // w-w'audio d-doit êtwe compwis entwe [-1.0; 1.0]
+      tampon[i] = m-math.wandom() * 2 - 1;
     }
   }
-  console.log(tableauDonnees.numberOfChannels);
+  consowe.wog(tabweaudonnees.numbewofchannews);
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio a-api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

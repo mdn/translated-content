@@ -1,58 +1,58 @@
 ---
-title: scale()
-slug: Web/CSS/transform-function/scale
+titwe: scawe()
+swug: web/css/twansfowm-function/scawe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`scale()`** permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+w-wa fonction c-css **`scawe()`** p-pewmet de m-modifiew wa taiwwe d-d'un éwément a-avec un facteuw d-d'échewwe suw d-deux dimensions. nyaa~~ we wésuwtat de cette fonction est une vaweuw de type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). OwO
 
-![](scale.png)
+![](scawe.png)
 
-Cette transformation est définie par un vecteur dont les coordonnées définissent la déformation appliquée dans chaque direction (horizontale et verticale). Si les deux coordonnées du vecteur sont égales, la mise à l'échelle est uniforme (ou isotropique) et la forme de l'élément est conservée.
+c-cette twansfowmation est définie paw u-un vecteuw dont wes coowdonnées d-définissent wa défowmation appwiquée dans chaque diwection (howizontawe e-et vewticawe). rawr x3 si wes d-deux coowdonnées d-du vecteuw sont égawes, XD wa mise à w'échewwe est unifowme (ou isotwopique) e-et wa fowme de w'éwément est consewvée. σωσ
 
-Lorsque les coordonnées du vecteur sont en dehors de l'intervalle \[`-1, 1]`, la transformation agrandit la taille de l'élément. Dans cet intervalle, l'élément est réduit.
+wowsque wes coowdonnées du vecteuw s-sont en dehows de w'intewvawwe \[`-1, (U ᵕ U❁) 1]`, w-wa twansfowmation a-agwandit w-wa taiwwe d-de w'éwément. (U ﹏ U) dans cet intewvawwe, :3 w'éwément e-est wéduit. ( ͡o ω ͡o )
 
-> [!NOTE]
-> La fonction `scale()` applique une transformation dans le plan (2D). S'il faut que la transformation soit appliquée dans l'espace (3D), on pourra utiliser la fonction `scale3D()`.
+> [!note]
+> wa fonction `scawe()` appwique une twansfowmation d-dans we pwan (2d). σωσ s'iw faut que wa twansfowmation soit appwiquée dans w'espace (3d), >w< o-on pouwwa utiwisew wa fonction `scawe3d()`. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
-La fonction `scale()` s'utilise avec une ou deux valeurs qui indiquent l'échelle à utiliser selon chaque direction.
+wa f-fonction `scawe()` s-s'utiwise avec une ou deux vaweuws qui indiquent w'échewwe à u-utiwisew sewon c-chaque diwection. OwO
 
 ```css
-scale(sx)
+scawe(sx)
 
-scale(sx, sy)
+s-scawe(sx, 😳 s-sy)
 ```
 
-### Valeurs
+### vaweuws
 
 - `sx`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe horizontal).
+  - : une vaweuw de t-type [`<numbew>`](/fw/docs/web/css/numbew) qui w-wepwésente w'abscisse du vecteuw de twansfowmation (we f-facteuw d'échewwe sewon w-w'axe howizontaw). 😳😳😳
 - `sy`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe vertical). Si ce paramètre est absent, la valeur par défaut qui sera prise sera **_sx_** (on aura ainsi une transformation homogène).
+  - : une vaweuw de t-type [`<numbew>`](/fw/docs/web/css/numbew) q-qui wepwésente w'abscisse du vecteuw de twansfowmation (we facteuw d'échewwe sewon w'axe vewticaw). (˘ω˘) s-si ce pawamètwe e-est absent, ʘwʘ wa vaweuw paw défaut q-qui sewa pwise s-sewa **_sx_** (on a-auwa ainsi une twansfowmation homogène). ( ͡o ω ͡o )
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">coowdonnées cawtésiennes suw ℝ<sup>2</sup></th>
+      <th scope="cow">coowdonnées homogènes suw ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées cawtésiennes s-suw ℝ<sup>3</sup></th>
+      <th s-scope="cow">coowdonnées h-homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="2">
+    <tw>
+      <td wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
@@ -60,147 +60,147 @@ scale(sx, sy)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[sx 0 0 sy 0 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[sx 0 0 s-sy 0 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Accessibilité
+## a-accessibiwité
 
-Les animations utilisées pour les zooms/changement d'échelle peuvent poser problème comme facteurs de déclenchement pour certains types de migraine. Si vous devez inclure de telles animations sur votre site, vous devriez fournir un moyen de désactiver les animations pour le site.
+wes animations utiwisées pouw w-wes zooms/changement d-d'échewwe p-peuvent posew pwobwème c-comme facteuws d-de décwenchement pouw cewtains types de migwaine. o.O si vous d-devez incwuwe de tewwes animations suw votwe site, >w< vous devwiez fouwniw un moyen de désactivew w-wes animations pouw we site. 😳
 
-Vous pouvez également tirer parti de la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) et écrire une requête média qui désactivera les animations si l'utilisateur décide de réduire les animations via les préférences du système.
+vous pouvez égawement tiwew pawti d-de wa cawactéwistique m-média [`pwefews-weduced-motion`](/fw/docs/web/css/@media/pwefews-weduced-motion) e-et écwiwe une wequête m-média qui désactivewa wes a-animations si w'utiwisateuw d-décide de wéduiwe wes animations via wes pwéféwences du système.
 
-Pour en savoir plus :
+pouw en savoiw p-pwus :
 
-- [Comprendre les règles WCAG 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
-- [Comprendre les critères de succès WCAG 2.1 / 2.3.3 (W3C)](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
+- [compwendwe wes wègwes w-wcag 2.3](/fw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.3_—_seizuwes_and_physicaw_weactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizuwes_ow_physicaw_weactions)
+- [compwendwe wes cwitèwes d-de succès w-wcag 2.1 / 2.3.3 (w3c)](https://www.w3.owg/wai/wcag21/undewstanding/animation-fwom-intewactions)
 
-## Exemples
+## exempwes
 
-### Déformation horizontale et verticale
+### défowmation h-howizontawe e-et vewticawe
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="scaled">Déformé</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="scawed">défowmé</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
-.scaled {
-  transform: scale(0.7); /* Équivalent à scaleX(0.7) scaleY(0.7) */
-  background-color: pink;
+.scawed {
+  t-twansfowm: s-scawe(0.7); /* Équivawent à s-scawex(0.7) scawey(0.7) */
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Déformation_horizontale_et_verticale", "200", "200")}}
+{{embedwivesampwe("défowmation_howizontawe_et_vewticawe", 🥺 "200", "200")}}
 
-### Déformer horizontalement et verticalement avec origine déplacée
+### d-défowmew howizontawement et vewticawement avec owigine dépwacée
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="scaled">Déformé</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="scawed">défowmé</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  b-backgwound-cowow: skybwue;
 }
 
-.scaled {
-  transform: scale(2, 0.5); /* Équivalent à scaleX(2) scaleY(0.5) */
-  transform-origin: left;
-  background-color: pink;
+.scawed {
+  t-twansfowm: scawe(2, rawr x3 0.5); /* Équivawent à scawex(2) scawey(0.5) */
+  twansfowm-owigin: w-weft;
+  backgwound-cowow: pink;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Déformer_horizontalement_et_verticalement_avec_origine_déplacée", "200", "200")}}
+{{embedwivesampwe("défowmew_howizontawement_et_vewticawement_avec_owigine_dépwacée", o.O "200", "200")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`scale3d()`](/fr/docs/Web/CSS/transform-function/scale3d)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)
+- [`scawe3d()`](/fw/docs/web/css/twansfowm-function/scawe3d)

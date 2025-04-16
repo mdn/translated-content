@@ -1,109 +1,109 @@
 ---
-title: rotate
-slug: Web/CSS/rotate
+titwe: wotate
+swug: web/css/wotate
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`rotate`** permet d'indiquer des rotations individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.
+w-wa pwopwiété **`wotate`** p-pewmet d'indiquew d-des wotations i-individuewwement e-et indépendamment d-de wa pwopwiété {{cssxwef("twansfowm")}}. 😳 c-cewa peut êtwe u-utiwe pouw wa constwuction d'une intewface utiwisateuw et évite d'avoiw à s-se souveniw de w'owdwe exact des fonctions de twansfowmations à i-indiquew pouw `twansfowm`. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-rotate: none;
+/* v-vaweuws avec un mot-cwé */
+wotate: nyone;
 
-/* Valeur angulaire */
-rotate: 90deg;
-rotate: 0.25turn;
-rotate: 1.57rad;
+/* vaweuw anguwaiwe */
+w-wotate: 90deg;
+wotate: 0.25tuwn;
+w-wotate: 1.57wad;
 
-/* Un axe x, y, z et l'angle associé */
-rotate: x 90deg;
-rotate: y 0.25turn;
-rotate: z 1.57rad;
+/* u-un axe x, 😳😳😳 y, z et w'angwe associé */
+wotate: x 90deg;
+wotate: y 0.25tuwn;
+w-wotate: z 1.57wad;
 
-/* Un vector et l'angle associé */
-rotate: 1 1 1 90deg;
+/* un vectow et w'angwe associé */
+wotate: 1 1 1 90deg;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- Valeur angulaire
-  - : Une valeur {{cssxref("&lt;angle&gt;")}} qui indique l'angle à utiliser, autour de l'axe Z, pour tourner les éléments. Cela est équivalent à la fonction `rotate()`.
-- Le nom de l'axe et l'angle associé
-  - : Le nom de l'axe par rapport auquel on souhaite effectuer la rotation (`"x"`, "`y`" ou "`z"`), puis une valeur {{cssxref("&lt;angle&gt;")}} qui indique l'angle à appliquer pour la rotation. Cela est équivalent à l'une des fonctions `rotateX()`/`rotateY()`/`rotateZ()`.
-- Un vecteur et l'angle associé
-  - : Trois nombres (valeurs {{cssxref("&lt;number&gt;")}}) qui représentent une vecteur centré sur l'origine qui définit la ligne autour de laquelle on souhaite faire tourner l'élément puis une valeur {{cssxref("&lt;angle&gt;")}} qui indique l'angle de rotation. Cela est équivalent à la fonction `rotate3d()`.
+- vaweuw a-anguwaiwe
+  - : u-une vaweuw {{cssxwef("&wt;angwe&gt;")}} q-qui indique w-w'angwe à utiwisew, (U ﹏ U) autouw de w'axe z, (///ˬ///✿) pouw t-touwnew wes éwéments. 😳 cewa est équivawent à wa fonction `wotate()`. 😳
+- w-we nyom de w'axe et w'angwe associé
+  - : we nyom de w'axe paw wappowt auquew on souhaite e-effectuew wa wotation (`"x"`, σωσ "`y`" o-ou "`z"`), rawr x3 p-puis une vaweuw {{cssxwef("&wt;angwe&gt;")}} q-qui indique w'angwe à appwiquew pouw wa wotation. OwO cewa est équivawent à w-w'une d-des fonctions `wotatex()`/`wotatey()`/`wotatez()`. /(^•ω•^)
+- un vecteuw e-et w'angwe associé
+  - : t-twois nyombwes (vaweuws {{cssxwef("&wt;numbew&gt;")}}) q-qui wepwésentent une vecteuw c-centwé suw w'owigine qui définit wa wigne autouw d-de waquewwe on souhaite faiwe t-touwnew w'éwément puis une v-vaweuw {{cssxwef("&wt;angwe&gt;")}} q-qui indique w'angwe de wotation. 😳😳😳 cewa est équivawent à wa fonction `wotate3d()`. ( ͡o ω ͡o )
 - `none`
-  - : Cette valeur indique qu'aucune rotation ne devrait être appliquée.
+  - : cette vaweuw indique qu'aucune w-wotation nye d-devwait êtwe appwiquée. >_<
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="rotate">Rotation</p>
+  <p cwass="wotate">wotation</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: sans-sewif;
 }
 
 div {
   width: 150px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
 p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
-  text-align: center;
+  p-padding: 10px 5px;
+  b-bowdew: 3px s-sowid bwack;
+  bowdew-wadius: 20px;
+  w-width: 150px;
+  f-font-size: 1.2wem;
+  t-text-awign: c-centew;
 }
 
-.rotate {
-  transition: rotate 1s;
+.wotate {
+  twansition: wotate 1s;
 }
 
-div:hover .rotate {
-  rotate: 1 -0.5 1 180deg;
+div:hovew .wotate {
+  wotate: 1 -0.5 1 180deg;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref('translate')}}
-- {{cssxref('scale')}}
-- {{cssxref('transform')}}
+- {{cssxwef('twanswate')}}
+- {{cssxwef('scawe')}}
+- {{cssxwef('twansfowm')}}

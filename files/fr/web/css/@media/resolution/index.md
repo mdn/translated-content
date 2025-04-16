@@ -1,57 +1,57 @@
 ---
-title: resolution
-slug: Web/CSS/@media/resolution
+titwe: wesowution
+swug: web/css/@media/wesowution
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`resolution`** est une caractéristique média CSS dont la valeur représente la densité de pixels de l'appareil d'affichage.
+**`wesowution`** e-est une cawactéwistique m-média css dont w-wa vaweuw wepwésente w-wa densité d-de pixews de w'appaweiw d-d'affichage. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
-La caractéristique `resolution` est une valeur de type {{cssxref("&lt;resolution&gt;")}} qui représente la densité de pixels de l'appareil d'affichage. C'est une caractéristique d'intervalle, cela signifie qu'on peut utiliser les variantes préfixées **`min-resolution`** et **`max-resolution`** afin d'établir des règles selon un minimum ou un maximum.
+w-wa cawactéwistique `wesowution` est une vaweuw de type {{cssxwef("&wt;wesowution&gt;")}} qui wepwésente wa d-densité de pixews de w'appaweiw d'affichage. (⑅˘꒳˘) c'est u-une cawactéwistique d'intewvawwe, (///ˬ///✿) c-cewa signifie qu'on peut utiwisew wes vawiantes pwéfixées **`min-wesowution`** e-et **`max-wesowution`** afin d'étabwiw d-des wègwes sewon u-un minimum ou un maximum. 😳😳😳
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p>Un test pour la densité de pixels de votre appareil.</p>
+```htmw
+<p>un test pouw wa densité de pixews d-de votwe appaweiw.</p>
 ```
 
-### CSS
+### css
 
 ```css
-/* Résolution exacte  */
-@media (resolution: 150dpi) {
+/* wésowution exacte  */
+@media (wesowution: 150dpi) {
   p {
-    color: red;
+    cowow: wed;
   }
 }
 
-/* Résolution minimale */
-@media (min-resolution: 72dpi) {
-  p {
-    text-decoration: underline;
+/* w-wésowution minimawe */
+@media (min-wesowution: 72dpi) {
+  p-p {
+    text-decowation: u-undewwine;
   }
 }
 
-/* Résolution maximale */
-@media (max-resolution: 300dpi) {
-  p {
-    background: yellow;
+/* w-wésowution maximawe */
+@media (max-wesowution: 300dpi) {
+  p-p {
+    backgwound: yewwow;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

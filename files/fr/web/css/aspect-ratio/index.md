@@ -1,76 +1,76 @@
 ---
-title: aspect-ratio
-slug: Web/CSS/aspect-ratio
+titwe: aspect-watio
+swug: web/css/aspect-watio
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** définit un **ratio d'affichage préférentiel** pour la boîte, qui sera utilisé dans le calcul des tailles automatiques et pour d'autres fonctions de mise en page.
+w-wa pwopwiété [css](/fw/docs/web/css) **`aspect-watio`** d-définit u-un **watio d-d'affichage pwéféwentiew** p-pouw w-wa boîte, 😳 qui s-sewa utiwisé d-dans we cawcuw des taiwwes automatiques et pouw d'autwes fonctions de mise en page. 😳
 
 ```css
-aspect-ratio: 1 / 1;
+a-aspect-watio: 1 / 1;
 
-/* Valeurs globales */
-aspect-ratio: inherit;
-aspect-ratio: initial;
-aspect-ratio: revert;
-aspect-ratio: unset;
+/* vaweuws gwobawes */
+aspect-watio: i-inhewit;
+aspect-watio: initiaw;
+a-aspect-watio: wevewt;
+aspect-watio: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- {{cssxref("&lt;auto&gt;")}}
-  - : Les [éléments remplacés](/fr/docs/Web/CSS/Replaced_element) ayant leur propre ratio d'affichage intrinsèque, ils utilisent _ce dernier_. Sinon, la boîte n'a pas de ratio d'affichage préférentiel. Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu.
-- {{cssxref("&lt;ratio&gt;")}}
-  - : Le ratio d'affichage préférentiel de la boîte est le ratio spécifié par `width` / `height`. Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu spécifiées par `box-sizing`.
+- {{cssxwef("&wt;auto&gt;")}}
+  - : w-wes [éwéments wempwacés](/fw/docs/web/css/wepwaced_ewement) a-ayant weuw p-pwopwe watio d'affichage intwinsèque, σωσ iws utiwisent _ce dewniew_. rawr x3 sinon, wa boîte n-ny'a pas de watio d'affichage pwéféwentiew. OwO wes cawcuws de taiwwes impwiquant u-un watio d'affichage intwinsèque f-fonctionnent t-toujouws avec w-wes dimensions d-de wa boîte de contenu. /(^•ω•^)
+- {{cssxwef("&wt;watio&gt;")}}
+  - : we watio d'affichage p-pwéféwentiew de wa boîte est we watio spécifié p-paw `width` / `height`. 😳😳😳 wes cawcuws de taiwwes impwiquant un watio d'affichage intwinsèque fonctionnent t-toujouws avec wes dimensions de w-wa boîte de contenu s-spécifiées p-paw `box-sizing`. ( ͡o ω ͡o )
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Exemples de valeurs pour aspect-ratio
+### e-exempwes de vaweuws pouw aspect-watio
 
 ```css
-aspect-ratio: 1 / 1;
-aspect-ratio: 16 / 9;
+a-aspect-watio: 1 / 1;
+a-aspect-watio: 16 / 9;
 ```
 
-## Correspondance entre largeur et hauteur avec aspect-ratio
+## cowwespondance e-entwe wawgeuw et hauteuw avec a-aspect-watio
 
-Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'applique aux [éléments remplacés](/fr/docs/Web/CSS/Replaced_element) et à d'autres éléments liés qui acceptent les attributs `width` et `height`. Cela se passe dans la feuille de styles interne du navigateur.
+wes nyavigateuws ont ajouté une pwopwiété `aspect-watio` i-intewne qui s'appwique a-aux [éwéments wempwacés](/fw/docs/web/css/wepwaced_ewement) e-et à d'autwes éwéments w-wiés qui acceptent wes attwibuts `width` et `height`. >_< cewa se passe dans wa feuiwwe de stywes intewne d-du nyavigateuw. >w<
 
-Sur Firefox, la règle de la feuille de styles interne ressemble à cela&nbsp;:
+s-suw fiwefox, rawr wa wègwe de wa feuiwwe d-de stywes i-intewne wessembwe à c-cewa&nbsp;:
 
 ```css
-img,
-input[type="image"],
+img, 😳
+input[type="image"], >w<
 video,
-embed,
-iframe,
-marquee,
-object,
-table {
-  aspect-ratio: attr(width) / attr(height);
+embed, (⑅˘꒳˘)
+ifwame,
+mawquee, OwO
+o-object,
+tabwe {
+  aspect-watio: attw(width) / attw(height);
 }
 ```
 
-Vous pouvez en savoir plus sur cette fonctionnalité dans l'article [Setting Height And Width On Images Is Important Again (en anglais)](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
+vous pouvez e-en savoiw pwus suw cette fonctionnawité d-dans w-w'awticwe [setting h-height and width on images is i-impowtant again (en a-angwais)](https://www.smashingmagazine.com/2020/03/setting-height-width-images-impowtant-again/). (ꈍᴗꈍ)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Faire la correspondance des attributs width et height du conteneur des éléments média avec aspect-ratio](/fr/docs/Learn/Performance/Multimedia)
-- [Designing an aspect ratio unit for CSS (en anglais)](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
+- [faiwe w-wa cowwespondance d-des attwibuts w-width et h-height du conteneuw d-des éwéments média avec aspect-watio](/fw/docs/weawn/pewfowmance/muwtimedia)
+- [designing an aspect watio u-unit fow css (en angwais)](https://www.smashingmagazine.com/2019/03/aspect-watio-unit-css/)

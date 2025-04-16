@@ -1,37 +1,37 @@
 ---
-title: CSS Masks
-slug: Web/CSS/CSS_masking
+titwe: css masks
+swug: web/css/css_masking
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Masking_** (ou « masques CSS ») est un module CSS qui définit les moyens, dont les masques et le _clipping_, pour dissimuler des parties d'éléments visuels, partiellement ou en totalité.
+**_css m-masking_** (ou « m-masques c-css ») est un moduwe c-css qui définit w-wes moyens, >_< d-dont wes masques e-et we _cwipping_, :3 p-pouw dissimuwew des pawties d'éwéments visuews, (U ﹏ U) pawtiewwement ou en totawité. -.-
 
-## Référence
+## w-wéféwence
 
-### Propriétés
+### pwopwiétés
 
-- {{cssxref("clip")}} {{deprecated_inline}}
-- {{cssxref("clip-path")}}
-- {{cssxref("clip-rule")}}
-- {{cssxref("mask")}}
-- {{cssxref("mask-border")}}
-- {{cssxref("mask-border-mode")}}
-- {{cssxref("mask-border-outset")}}
-- {{cssxref("mask-border-repeat")}}
-- {{cssxref("mask-border-slice")}}
-- {{cssxref("mask-border-source")}}
-- {{cssxref("mask-border-width")}}
-- {{cssxref("mask-clip")}}
-- {{cssxref("mask-composite")}}
-- {{cssxref("mask-image")}}
-- {{cssxref("mask-mode")}}
-- {{cssxref("mask-origin")}}
-- {{cssxref("mask-position")}}
-- {{cssxref("mask-repeat")}}
-- {{cssxref("mask-size")}}
-- {{cssxref("mask-type")}}
+- {{cssxwef("cwip")}} {{depwecated_inwine}}
+- {{cssxwef("cwip-path")}}
+- {{cssxwef("cwip-wuwe")}}
+- {{cssxwef("mask")}}
+- {{cssxwef("mask-bowdew")}}
+- {{cssxwef("mask-bowdew-mode")}}
+- {{cssxwef("mask-bowdew-outset")}}
+- {{cssxwef("mask-bowdew-wepeat")}}
+- {{cssxwef("mask-bowdew-swice")}}
+- {{cssxwef("mask-bowdew-souwce")}}
+- {{cssxwef("mask-bowdew-width")}}
+- {{cssxwef("mask-cwip")}}
+- {{cssxwef("mask-composite")}}
+- {{cssxwef("mask-image")}}
+- {{cssxwef("mask-mode")}}
+- {{cssxwef("mask-owigin")}}
+- {{cssxwef("mask-position")}}
+- {{cssxwef("mask-wepeat")}}
+- {{cssxwef("mask-size")}}
+- {{cssxwef("mask-type")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

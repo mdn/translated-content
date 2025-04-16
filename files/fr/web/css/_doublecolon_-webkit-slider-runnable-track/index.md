@@ -1,26 +1,26 @@
 ---
-title: ::-webkit-slider-runnable-track
-slug: Web/CSS/::-webkit-slider-runnable-track
+titwe: ::-webkit-swidew-wunnabwe-twack
+swug: w-web/css/::-webkit-swidew-wunnabwe-twack
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-slider-runnable-track`** représente la piste utilisée par un élément {{HTMLElement("input")}} de type `"range"` (cf. {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}).
+w-we pseudo-éwément **`::-webkit-swidew-wunnabwe-twack`** w-wepwésente w-wa piste utiwisée p-paw un éwément {{htmwewement("input")}} d-de type `"wange"` (cf. -.- {{htmwewement("input/wange", ( ͡o ω ͡o ) '&wt;input t-type="wange"&gt;')}}). rawr x3
 
-## Spécifications
+## s-spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe w-wié à webkit/bwink et nye fait pawtie d-d'aucune spécification. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("::-webkit-slider-thumb")}}
-- Similar pseudo-elements used by other browsers:
+- {{cssxwef("::-webkit-swidew-thumb")}}
+- s-simiwaw pseudo-ewements used by o-othew bwowsews:
 
-  - {{cssxref("::-ms-track")}}
-  - {{cssxref("::-moz-range-track")}}
+  - {{cssxwef("::-ms-twack")}}
+  - {{cssxwef("::-moz-wange-twack")}}
 
-- [CSS-Tricks : Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [css-twicks : g-géwew des champs `input` de type `wange` de façon compatibwe entwe wes n-nyavigateuws (en angwais)](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)

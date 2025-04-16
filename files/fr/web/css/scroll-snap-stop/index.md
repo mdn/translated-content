@@ -1,192 +1,192 @@
 ---
-title: scroll-snap-stop
-slug: Web/CSS/scroll-snap-stop
+titwe: scwoww-snap-stop
+swug: w-web/css/scwoww-snap-stop
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`scroll-snap-stop`** définit la façon dont un conteneur de défilement peut « passer outre » certaines positions d'accroche.
+w-wa p-pwopwiété **`scwoww-snap-stop`** d-définit wa façon d-dont un conteneuw d-de défiwement p-peut « passew o-outwe » cewtaines positions d'accwoche. ^•ﻌ•^
 
 ```css
-/* Valeurs avec un mot-clé */
-scroll-snap-stop: normal;
-scroll-snap-stop: always;
+/* vaweuws avec un mot-cwé */
+s-scwoww-snap-stop: nyowmaw;
+scwoww-snap-stop: a-awways;
 
-/* Valeurs globales */
-scroll-snap-type: inherit;
-scroll-snap-type: initial;
-scroll-snap-type: unset;
+/* vaweuws gwobawes */
+s-scwoww-snap-type: inhewit;
+scwoww-snap-type: initiaw;
+scwoww-snap-type: unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : Lorsque la zone d'affichage ({{Glossary("viewport")}}) du conteneur défile, elle peut passer sur certaines positions d'accroche.
-- `always`
-  - : Le conteneur de défilement ne peut pas passer sur une position d'accroche. Le conteneur doit « s'accrocher » dès la première position d'accroche de l'élément.
+- `nowmaw`
+  - : w-wowsque wa zone d-d'affichage ({{gwossawy("viewpowt")}}) du conteneuw défiwe, (˘ω˘) ewwe peut passew suw cewtaines positions d-d'accwoche. :3
+- `awways`
+  - : we conteneuw de défiwement ne peut pas passew suw une position d-d'accwoche. we conteneuw doit « s-s'accwochew » d-dès wa pwemièwe p-position d'accwoche d-de w'éwément. ^^;;
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-/* setup */
-:root,
+/* s-setup */
+:woot, 🥺
 body {
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-flow: column nowrap;
-  font-family: monospace;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: s-space-between;
+  fwex-fwow: c-cowumn nyowwap;
+  f-font-famiwy: m-monospace;
 }
-.container {
-  display: flex;
-  overflow: auto;
-  outline: 1px dashed lightgray;
-  flex: none;
-}
-
-.container.x {
-  width: 100%;
-  height: 128px;
-  flex-flow: row nowrap;
+.containew {
+  dispway: fwex;
+  ovewfwow: auto;
+  o-outwine: 1px dashed w-wightgway;
+  fwex: nyone;
 }
 
-.container.y {
+.containew.x {
+  w-width: 100%;
+  h-height: 128px;
+  fwex-fwow: wow n-nowwap;
+}
+
+.containew.y {
   width: 256px;
-  height: 256px;
-  flex-flow: column nowrap;
+  h-height: 256px;
+  fwex-fwow: cowumn nyowwap;
 }
-/* definite scroll snap */
-.mandatory-scroll-snapping > div {
-  scroll-snap-stop: always;
+/* definite s-scwoww snap */
+.mandatowy-scwoww-snapping > div {
+  scwoww-snap-stop: a-awways;
 }
-.proximity-scroll-snapping > div {
-  scroll-snap-stop: normal;
+.pwoximity-scwoww-snapping > div {
+  scwoww-snap-stop: nyowmaw;
 }
-/* scroll-snap */
-.x.mandatory-scroll-snapping {
-  scroll-snap-type: x mandatory;
-}
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
+/* s-scwoww-snap */
+.x.mandatowy-scwoww-snapping {
+  s-scwoww-snap-type: x mandatowy;
 }
 
-.x.proximity-scroll-snapping {
-  scroll-snap-type: x proximity;
+.y.mandatowy-scwoww-snapping {
+  scwoww-snap-type: y mandatowy;
 }
 
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
+.x.pwoximity-scwoww-snapping {
+  scwoww-snap-type: x pwoximity;
 }
 
-.container > div {
-  text-align: center;
-  scroll-snap-align: center;
-  flex: none;
+.y.pwoximity-scwoww-snapping {
+  scwoww-snap-type: y-y pwoximity;
 }
 
-.x.container > div {
-  line-height: 128px;
+.containew > d-div {
+  text-awign: centew;
+  s-scwoww-snap-awign: c-centew;
+  f-fwex: nyone;
+}
+
+.x.containew > div {
+  wine-height: 128px;
   font-size: 64px;
   width: 100%;
   height: 128px;
 }
 
-.y.container > div {
-  line-height: 256px;
+.y.containew > d-div {
+  wine-height: 256px;
   font-size: 128px;
   width: 256px;
   height: 256px;
 }
-/* appearance fixes */
-.y.container > div:first-child {
-  line-height: 1.3;
-  font-size: 64px;
+/* appeawance f-fixes */
+.y.containew > div:fiwst-chiwd {
+  w-wine-height: 1.3;
+  f-font-size: 64px;
 }
-/* coloration */
-.container > div:nth-child(even) {
-  background-color: #87ea87;
+/* c-cowowation */
+.containew > div:nth-chiwd(even) {
+  b-backgwound-cowow: #87ea87;
 }
 
-.container > div:nth-child(odd) {
-  background-color: #87ccea;
+.containew > d-div:nth-chiwd(odd) {
+  b-backgwound-cowow: #87ccea;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="container x mandatory-scroll-snapping" dir="ltr">
-  <div>X Mand. LTR</div>
+```htmw
+<div cwass="containew x mandatowy-scwoww-snapping" d-diw="wtw">
+  <div>x m-mand. (⑅˘꒳˘) wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container x proximity-scroll-snapping" dir="ltr">
-  <div>X Proximity LTR</div>
+<div c-cwass="containew x-x pwoximity-scwoww-snapping" d-diw="wtw">
+  <div>x pwoximity wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y mandatory-scroll-snapping" dir="ltr">
-  <div>Y Mand. LTR</div>
+<div cwass="containew y mandatowy-scwoww-snapping" diw="wtw">
+  <div>y m-mand. nyaa~~ wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y proximity-scroll-snapping" dir="ltr">
-  <div>Y Prox. LTR</div>
+<div cwass="containew y pwoximity-scwoww-snapping" diw="wtw">
+  <div>y pwox. :3 wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container x mandatory-scroll-snapping" dir="rtl">
-  <div>X Mandatory RTL</div>
+<div c-cwass="containew x mandatowy-scwoww-snapping" diw="wtw">
+  <div>x mandatowy w-wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container x proximity-scroll-snapping" dir="rtl">
-  <div>X Proximity RTL</div>
+<div c-cwass="containew x-x pwoximity-scwoww-snapping" diw="wtw">
+  <div>x p-pwoximity wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y mandatory-scroll-snapping" dir="rtl">
-  <div>Y Mand. RTL</div>
+<div c-cwass="containew y-y mandatowy-scwoww-snapping" diw="wtw">
+  <div>y mand. ( ͡o ω ͡o ) wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y proximity-scroll-snapping" dir="rtl">
-  <div>Y Prox. RTL</div>
+<div cwass="containew y pwoximity-scwoww-snapping" diw="wtw">
+  <div>y p-pwox. mya wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
@@ -194,14 +194,14 @@ body {
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", "1630")}}
+{{embedwivesampwe("exempwes", (///ˬ///✿) "100%", "1630")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

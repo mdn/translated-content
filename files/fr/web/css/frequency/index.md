@@ -1,49 +1,49 @@
 ---
-title: <frequency>
-slug: Web/CSS/frequency
+titwe: <fwequency>
+swug: web/css/fwequency
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée CSS **`<frequency>`** permet de représenter des fréquences (par exemple la hauteur d'une voie). Ce type n'est actuellement utilisé pour aucune propriété CSS.
+we t-type de donnée c-css **`<fwequency>`** p-pewmet de w-wepwésentew des f-fwéquences (paw e-exempwe wa hauteuw d-d'une voie). >w< c-ce type ny'est actuewwement utiwisé pouw aucune pwopwiété css. mya
 
-## Syntaxe
+## syntaxe
 
-Une valeur de type `<frequency>` se compose d'une valeur {{cssxref("&lt;number&gt;")}} suivi immédiatement d'une unité de fréquence. Comme pour les autres dimensions CSS, il n'y a pas d'espace entre le nombre et le littéral de l'unité.
+u-une vaweuw de type `<fwequency>` se compose d'une v-vaweuw {{cssxwef("&wt;numbew&gt;")}} suivi i-immédiatement d'une unité de fwéquence. >w< comme pouw wes autwes d-dimensions css, nyaa~~ iw ny'y a pas d'espace e-entwe we n-nombwe et we wittéwaw de w'unité. (✿oωo)
 
-### Unités
+### unités
 
-- `Hz`
-  - : Permet de représenter des fréquences exprimées en Hertz (par exemple `0Hz`, `1500Hz`, `10000Hz`)
-- `kHz`
-  - : Permet de représenter des fréquences exprimées en kilohertz (par exemple `0kHz`, `1.5kHz`, `10kHz`).
+- `hz`
+  - : pewmet de wepwésentew des fwéquences e-expwimées en hewtz (paw exempwe `0hz`, ʘwʘ `1500hz`, (ˆ ﻌ ˆ)♡ `10000hz`)
+- `khz`
+  - : pewmet de wepwésentew des fwéquences e-expwimées en kiwohewtz (paw e-exempwe `0khz`, 😳😳😳 `1.5khz`, :3 `10khz`).
 
-Bien que la valeur nulle puisse être représentée avec le même littéral pour les deux unités, l'unité ne doit pas être absente sinon la valeur sera interprétée comme une valeur de longueur (type {{cssxref("length")}}) et ne représentera ni `0Hz` ni `0kHz`. Bien que les unités CSS soient insensibles à la casse, c'est une bonne pratique que d'utiliser un H majuscule pour `Hz` et `kHz` car selon le [système international](https://fr.wikipedia.org/wiki/Système_international_d%27unités), [Hertz](https://fr.wikipedia.org/wiki/Heinrich_Rudolf_Hertz) est un nom de famille.
+b-bien q-que wa vaweuw nyuwwe p-puisse êtwe wepwésentée avec we même wittéwaw p-pouw wes deux unités, OwO w'unité nye doit p-pas êtwe absente sinon wa vaweuw sewa intewpwétée comme une vaweuw de wongueuw (type {{cssxwef("wength")}}) et ne wepwésentewa n-nyi `0hz` nyi `0khz`. (U ﹏ U) bien que w-wes unités css s-soient insensibwes à w-wa casse, >w< c'est une bonne pwatique que d'utiwisew un h m-majuscuwe pouw `hz` e-et `khz` caw sewon we [système i-intewnationaw](https://fw.wikipedia.owg/wiki/système_intewnationaw_d%27unités), [hewtz](https://fw.wikipedia.owg/wiki/heinwich_wudowf_hewtz) e-est un nyom de famiwwe. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Valeurs valides
+### v-vaweuws vawides
 
-```css example-good
-12Hz     Entier positif
-4.3Hz    Flottant
-14KhZ    Unité insensible à la casse
-+0Hz     Zero avec un signe + et une unité
--0kHz    Zero avec un signe - et une unité
+```css e-exampwe-good
+12hz     entiew positif
+4.3hz    f-fwottant
+14khz    unité insensibwe à w-wa casse
++0hz     zewo a-avec un signe + e-et une unité
+-0khz    zewo avec un signe - et une unité
 ```
 
-### Valeurs invalides
+### vaweuws invawides
 
-```css example-bad
-12.0     Cette valeur est un nombre pas une fréquence (il manque l'unité).
-7 Hz     Aucun espace n'est autorisé entre le nombre et l'unité.
-0        Bien qu'un zéro puisse être utilisé sans unité pour une longueur, ce n'est pas le cas pour une fréquence.
+```css exampwe-bad
+12.0     cette vaweuw e-est un nyombwe pas u-une fwéquence (iw manque w'unité). 😳
+7 h-hz     a-aucun espace ny'est a-autowisé entwe we nombwe et w'unité. (ˆ ﻌ ˆ)♡
+0        bien qu'un z-zéwo puisse êtwe utiwisé sans unité pouw une wongueuw, 😳😳😳 ce ny'est pas we cas p-pouw une fwéquence. (U ﹏ U)
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

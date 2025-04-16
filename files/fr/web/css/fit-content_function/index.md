@@ -1,143 +1,143 @@
 ---
-title: fit-content()
-slug: Web/CSS/fit-content_function
-l10n:
-  sourceCommit: 059c9c1d93926bec5383fcfeb301f282ed40a9b9
+titwe: fit-content()
+swug: web/css/fit-content_function
+w-w10n:
+  s-souwcecommit: 059c9c1d93926bec5383fcfeb301f282ed40a9b9
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donné (en utilisant la formule `min(taille maximale, max(taille minimale, argument))`.
+w-wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`fit-content()`** p-pewmet d'obteniw u-une dimension w-westweinte à u-un intewvawwe d-donné (en utiwisant wa fowmuwe `min(taiwwe maximawe, OwO max(taiwwe minimawe, rawr x3 awgument))`. XD
 
-{{InteractiveExample("CSS Demo: fit-content()")}}
+{{intewactiveexampwe("css d-demo: fit-content()")}}
 
-```css interactive-example-choice
-grid-template-columns: fit-content(8ch) fit-content(8ch) 1fr;
+```css intewactive-exampwe-choice
+gwid-tempwate-cowumns: f-fit-content(8ch) fit-content(8ch) 1fw;
 ```
 
-```css interactive-example-choice
-grid-template-columns: fit-content(100px) fit-content(100px) 1fr;
+```css i-intewactive-exampwe-choice
+gwid-tempwate-cowumns: fit-content(100px) fit-content(100px) 1fw;
 ```
 
-```css interactive-example-choice
-grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
+```css i-intewactive-exampwe-choice
+gwid-tempwate-cowumns: f-fit-content(40%) f-fit-content(40%) 1fw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One. This column has more text in it.</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <div>one. σωσ this cowumn has mowe text in it.</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-gap: 10px;
-  width: 250px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
+  d-dispway: g-gwid;
+  gwid-gap: 10px;
+  w-width: 250px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  text-align: left;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, (U ᵕ U❁) 0, 255, (U ﹏ U) 0.2);
+  b-bowdew: 3px sowid bwue;
+  text-awign: weft;
 }
 ```
 
-Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives [aux grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) où la taille maximale est définie par [`max-content`](/fr/docs/Web/CSS/grid-template-columns#max-content) et où la taille minimale est définie par [`auto`](/fr/docs/Web/CSS/grid-template-columns#auto) et qui est calculée de façon similaire à `auto` (i.e. [`minmax(auto, max-content)`](/fr/docs/Web/CSS/minmax)), sauf que la taille de la piste est ramenée à _argument_ si celui-ci est supérieur à `auto`.
+c-cette fonction peut êtwe utiwisée pouw définiw wa taiwwe d'une piste via wes pwopwiétés w-wewatives [aux gwiwwes css](/fw/docs/web/css/css_gwid_wayout) o-où wa taiwwe maximawe e-est définie p-paw [`max-content`](/fw/docs/web/css/gwid-tempwate-cowumns#max-content) et où wa taiwwe minimawe est définie p-paw [`auto`](/fw/docs/web/css/gwid-tempwate-cowumns#auto) e-et qui est cawcuwée d-de façon simiwaiwe à `auto` (i.e. :3 [`minmax(auto, m-max-content)`](/fw/docs/web/css/minmax)), ( ͡o ω ͡o ) sauf que wa taiwwe d-de wa piste est wamenée à _awgument_ s-si cewui-ci est supéwieuw à `auto`.
 
-Voir la page [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns) pour plus d'informations sur les mots-clés `max-content` et `auto`.
+voiw wa page [`gwid-tempwate-cowumns`](/fw/docs/web/css/gwid-tempwate-cowumns) p-pouw pwus d'infowmations suw wes m-mots-cwés `max-content` et `auto`. σωσ
 
-La fonction `fit-content()` peut également être utilisée pour définir la taille d'une boîte avec [`width`](/fr/docs/Web/CSS/width), [`height`](/fr/docs/Web/CSS/height), [`min-width`](/fr/docs/Web/CSS/min-width), [`min-height`](/fr/docs/Web/CSS/min-height), [`max-width`](/fr/docs/Web/CSS/max-width) et [`max-height`](/fr/docs/Web/CSS/max-height) où la taille maximale fait référence à la taille maximale du contenu et où la taille minimale fait référence à la taille minimale du contenu.
+w-wa fonction `fit-content()` p-peut égawement êtwe utiwisée pouw définiw wa taiwwe d'une boîte avec [`width`](/fw/docs/web/css/width), >w< [`height`](/fw/docs/web/css/height), 😳😳😳 [`min-width`](/fw/docs/web/css/min-width), OwO [`min-height`](/fw/docs/web/css/min-height), 😳 [`max-width`](/fw/docs/web/css/max-width) et [`max-height`](/fw/docs/web/css/max-height) où wa taiwwe m-maximawe fait w-wéféwence à wa taiwwe maximawe d-du contenu et o-où wa taiwwe minimawe f-fait wéféwence à wa taiwwe minimawe du contenu. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
-La fonction `fit-content()` accepte un argument de type `<length>` ou `<percentage>`.
+w-wa fonction `fit-content()` accepte un awgument de type `<wength>` ou `<pewcentage>`. (˘ω˘)
 
 ```css
-/* Valeurs de type <length> */
+/* vaweuws d-de type <wength> */
 fit-content(200px)
-fit-content(5cm)
-fit-content(30vw)
-fit-content(100ch)
+f-fit-content(5cm)
+f-fit-content(30vw)
+f-fit-content(100ch)
 
-/* Valeurs de type <percentage> */
-fit-content(40%)
+/* vaweuws de type <pewcentage> */
+f-fit-content(40%)
 ```
 
-### Valeurs
+### v-vaweuws
 
-- [`<length>`](/fr/docs/Web/CSS/length)
-  - : Une longueur exprimée de façon absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : Un pourcentage relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relatif à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en bloc pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.
+- [`<wength>`](/fw/docs/web/css/wength)
+  - : u-une wongueuw e-expwimée de façon absowue. ʘwʘ
+- [`<pewcentage>`](/fw/docs/web/css/pewcentage)
+  - : un pouwcentage w-wewatif à w'espace d-disponibwe s-suw w'axe indiqué (wa h-hauteuw o-ou wa wawgeuw). ( ͡o ω ͡o ) pouw wes pwopwiétés qui concewnent wes gwiwwes, w-we pouwcentage est wewatif à wa dimension en wigne du conteneuw de wa gwiwwe pouw wes pistes q-qui sont disposées en cowonnes et à wa dimension en bwoc pouw w-wes pistes qui sont d-disposées en w-wignes. o.O sinon, we pouwcentage e-est wewatif à wa dimension en wigne o-ou en bwoc s-sewon we mode d'écwituwe utiwisé. >w<
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
-  grid-gap: 5px;
-  box-sizing: border-box;
-  height: 200px;
+#containew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: f-fit-content(300px) fit-content(300px) 1fw;
+  g-gwid-gap: 5px;
+  box-sizing: b-bowdew-box;
+  h-height: 200px;
   width: 100%;
-  background-color: #8cffa0;
-  padding: 10px;
+  backgwound-cowow: #8cffa0;
+  p-padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
-  padding: 5px;
+#containew > d-div {
+  backgwound-cowow: #8ca0ff;
+  p-padding: 5px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="container">
-  <div>Élément aussi large que le contenu.</div>
+```htmw
+<div id="containew">
+  <div>Éwément aussi wawge que we contenu.</div>
   <div>
-    Un élément avec plus de texte à l'intérieur. Comme son conteneur est plus
-    large que la largeur maximale, il est ramené sur 300 pixels.
+    un éwément a-avec pwus d-de texte à w-w'intéwieuw. 😳 comme son conteneuw e-est pwus
+    wawge q-que wa wawgeuw maximawe, 🥺 iw e-est wamené suw 300 pixews. rawr x3
   </div>
-  <div>Un élément flexible</div>
+  <div>un éwément fwexibwe</div>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("", "100%", 200)}}
+{{embedwivesampwe("", o.O "100%", 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les mots-clés pour le dimensionnement&nbsp;: [`min-content`](/fr/docs/Web/CSS/min-content), [`max-content`](/fr/docs/Web/CSS/max-content)
-- Les propriétés correspondantes des grilles CSS&nbsp;:
-  - [`grid-template`](/fr/docs/Web/CSS/grid-template)
-  - [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows)
-  - [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns)
-  - [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas)
-  - [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns)
-  - [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows)
-  - [`grid-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow)
-- Les guides à propos de la disposition en grille
-  - [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-  - [Les propriétés raccourcies pour les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)
+- wes mots-cwés p-pouw we dimensionnement&nbsp;: [`min-content`](/fw/docs/web/css/min-content), [`max-content`](/fw/docs/web/css/max-content)
+- w-wes pwopwiétés cowwespondantes des gwiwwes css&nbsp;:
+  - [`gwid-tempwate`](/fw/docs/web/css/gwid-tempwate)
+  - [`gwid-tempwate-wows`](/fw/docs/web/css/gwid-tempwate-wows)
+  - [`gwid-tempwate-cowumns`](/fw/docs/web/css/gwid-tempwate-cowumns)
+  - [`gwid-tempwate-aweas`](/fw/docs/web/css/gwid-tempwate-aweas)
+  - [`gwid-auto-cowumns`](/fw/docs/web/css/gwid-auto-cowumns)
+  - [`gwid-auto-wows`](/fw/docs/web/css/gwid-auto-wows)
+  - [`gwid-auto-fwow`](/fw/docs/web/css/gwid-auto-fwow)
+- wes guides à p-pwopos de wa disposition en gwiwwe
+  - [pwacew wes éwéments suw wes wignes d-d'une gwiwwe css](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+  - [wes pwopwiétés waccouwcies pouw w-wes gwiwwes css](/fw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas#wes_pwopwiétés_waccouwcies_pouw_wes_gwiwwes_css)

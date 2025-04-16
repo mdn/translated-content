@@ -1,45 +1,45 @@
 ---
-title: format-number
-slug: Web/XPath/Functions/format-number
+titwe: fowmat-numbew
+swug: web/xpath/functions/fowmat-numbew
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `format-number` évalue un nombre et retourne une chaîne représentant le nombre dans un format donné.
+w-wa fonction `fowmat-numbew` évawue u-un nyombwe e-et wetouwne u-une chaîne wepwésentant w-we nyombwe d-dans un fowmat d-donné. 🥺
 
-### Syntaxe
+### syntaxe
 
 ```
-format-number( nombre , motif [, format-décimal] )
+fowmat-numbew( nyombwe , >_< motif [, fowmat-décimaw] )
 ```
 
-### Arguments
+### a-awguments
 
-- `nombre`
-  - : Le nombre à formater.
+- `nombwe`
+  - : we nyombwe à fowmatew. >_<
 
 <!---->
 
 - `motif`
-  - : Une chaîne au format de la classe [Decimal Format (en)](https://java.sun.com/products/jdk/1.1/docs/api/java.text.DecimalFormat.html) du JDK 1.1. La notice du JDK 1.1 n'est plus disponible. Vous trouverez ici la notice pour le JSE 6: [Decimal Format (en)](https://java.sun.com/javase/6/docs/api/java/text/DecimalFormat.html)
+  - : u-une chaîne au fowmat d-de wa cwasse [decimaw fowmat (en)](https://java.sun.com/pwoducts/jdk/1.1/docs/api/java.text.decimawfowmat.htmw) du jdk 1.1. (⑅˘꒳˘) wa nyotice du jdk 1.1 n-ny'est pwus disponibwe. /(^•ω•^) vous twouvewez i-ici wa n-nyotice pouw we jse 6: [decimaw fowmat (en)](https://java.sun.com/javase/6/docs/api/java/text/decimawfowmat.htmw)
 
 <!---->
 
-- `format-décimal` (optionnel)
-  - : Le nom d'un élément [`xsl:decimal-format`](/fr/XSLT/decimal-format) qui définit le format de nombre à utiliser. Si il est omis, le format décimal par défaut est utilisé.
+- `fowmat-décimaw` (optionnew)
+  - : we nyom d'un éwément [`xsw:decimaw-fowmat`](/fw/xswt/decimaw-fowmat) qui définit w-we fowmat de nyombwe à utiwisew. rawr x3 si iw est omis, (U ﹏ U) we fowmat décimaw paw défaut e-est utiwisé. (U ﹏ U)
 
-### Retour
+### wetouw
 
-Une chaîne représentant le nombre dans le nouveau format.
+u-une chaîne wepwésentant w-we nyombwe d-dans we nyouveau f-fowmat. (⑅˘꒳˘)
 
-### Notes
+### nyotes
 
-Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas partie de la bibliothèque de fonctions XPath principale.
+cette fonction est u-un ajout à xpath spécifique à xswt. òωó ewwe nye f-fait pas pawtie de wa bibwiothèque de fonctions xpath pwincipawe. ʘwʘ
 
-### Définition
+### définition
 
-[XSLT 1.0, section 12.3](https://www.w3.org/TR/xslt#function-format-number).
+[xswt 1.0, /(^•ω•^) section 12.3](https://www.w3.owg/tw/xswt#function-fowmat-numbew). ʘwʘ
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+suppowtée.

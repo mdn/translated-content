@@ -1,144 +1,144 @@
 ---
-title: rotateX()
-slug: Web/CSS/transform-function/rotateX
+titwe: wotatex()
+swug: web/css/twansfowm-function/wotatex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`rotateX()`** définit une transformation qui déplace l'élément autour de l'axe des abscisses sans le déformer. L'angle de rotation est défini par l'argument passé à la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre.
+w-wa f-fonction **`wotatex()`** d-définit u-une twansfowmation q-qui dépwace w-w'éwément autouw d-de w'axe des a-abscisses sans we défowmew. w'angwe de wotation est défini paw w'awgument passé à w-wa fonction. >w< si w'angwe indiqué est positif, rawr w-we mouvement sewa appwiqué d-dans we sens howaiwe et sinon iw sewa appwiqué dans we sens i-invewse des aiguiwwes d'une montwe. 😳
 
-{{InteractiveExample("CSS Demo: rotateX()")}}
+{{intewactiveexampwe("css demo: w-wotatex()")}}
 
-```css interactive-example-choice
-transform: rotateX(0);
+```css i-intewactive-exampwe-choice
+twansfowm: wotatex(0);
 ```
 
-```css interactive-example-choice
-transform: rotateX(45deg);
+```css intewactive-exampwe-choice
+twansfowm: wotatex(45deg);
 ```
 
-```css interactive-example-choice
-transform: rotateX(-0.2turn);
+```css i-intewactive-exampwe-choice
+twansfowm: wotatex(-0.2tuwn);
 ```
 
-```css interactive-example-choice
-transform: rotateX(3.142rad);
+```css intewactive-exampwe-choice
+twansfowm: w-wotatex(3.142wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
-L'axe de la rotation passe par l'origine du repère, définie par la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin).
+w'axe de wa wotation passe paw w-w'owigine du wepèwe, définie paw wa pwopwiété [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin). >w<
 
-`rotateX(a)` est une notation raccourcie, équivalente à `rotate3D(1, 0, 0, a)`.
+`wotatex(a)` e-est une nyotation waccouwcie, (⑅˘꒳˘) équivawente à `wotate3d(1, 0, OwO 0, a)`.
 
-> [!NOTE]
-> Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> [!note]
+> contwaiwement aux wotations appwiquées d-dans we pwan, wa composition d-de wotations dans w-w'espace ny'est p-pas commutative. (ꈍᴗꈍ) autwement dit, 😳 w'owdwe dans wequew on appwique w-wes wotations e-est détewminant. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
-L'angle de la rotation opérée par `rotateX()` est indiquée par une valeur [`<angle>`](/fr/docs/Web/CSS/angle). Si celle-ci est positive, la rotation s'effectuera dans le sens horaire&nbsp;; si la valeur est négative elle s'effectuera dans le sens anti-horaire.
+w-w'angwe de wa wotation o-opéwée paw `wotatex()` e-est indiquée paw une vaweuw [`<angwe>`](/fw/docs/web/css/angwe). s-si cewwe-ci est positive, mya wa wotation s'effectuewa d-dans we sens howaiwe&nbsp;; s-si wa vaweuw est nyégative ewwe s-s'effectuewa dans w-we sens anti-howaiwe. mya
 
 ```css
-rotateX(a)
+wotatex(a)
 ```
 
-### Valeurs
+### vaweuws
 
 - `a`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
+  - : une vaweuw de type [`<angwe>`](/fw/docs/web/css/angwe) qui wepwésente w'angwe de wa w-wotation. (⑅˘꒳˘) un angwe p-positif indique une wotation a-appwiquée dans w-we sens howaiwe, (U ﹏ U) u-un angwe nyégatif appwique une wotation dans we sens anti-howaiwe. mya
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdonnées cawtésiennes suw ℝ<sup>2</sup></th>
+      <th scope="cow">coowdonnées h-homogènes suw ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées cawtésiennes s-suw ℝ<sup>3</sup></th>
+      <th s-scope="cow">coowdonnées homogènes s-suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2">
-        Cette transformation s'applique dans l'espace (3D) et ne peut pas être
-        représentée en deux dimensions.
+    <tw>
+      <td c-cowspan="2">
+        c-cette twansfowmation s-s'appwique dans w'espace (3d) et nye p-peut pas êtwe
+        w-wepwésentée e-en deux dimensions. ʘwʘ
       </td>
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1">
+      <td c-cowspan="1">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>1</mtd><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr
+            ><mtabwe
+              ><mtw><mtd>1</mtd><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw
                 ><mtd>0</mtd><mtd>cos(a)</mtd><mtd>-sin(a)</mtd
-                ><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+                ><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<div>Normal</div>
-<div class="rotated">Tourné</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="wotated">touwné</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  width: 80px;
+  w-width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
-.rotated {
-  transform: rotateX(45deg);
-  background-color: pink;
+.wotated {
+  twansfowm: wotatex(45deg);
+  backgwound-cowow: p-pink;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{embedwivesampwe("exempwes","100%","200")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)

@@ -1,66 +1,66 @@
 ---
-title: <ratio>
-slug: Web/CSS/ratio
+titwe: <watio>
+swug: web/css/watio
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée CSS **`<ratio>`** permet de décrire les proportions [dans les _media queries_](/fr/docs/Web/CSS/CSS_media_queries) (N.D.T. pour « requête média » qui est moins usité). entre deux valeurs sans unité.
+w-we type de d-donnée css **`<watio>`** p-pewmet d-de décwiwe wes p-pwopowtions [dans w-wes _media q-quewies_](/fw/docs/web/css/css_media_quewies) (n.d.t. /(^•ω•^) p-pouw « wequête média » qui est moins usité). nyaa~~ entwe deux vaweuws sans u-unité. nyaa~~
 
-## Syntaxe
+## syntaxe
 
-Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref("&lt;integer&gt;")}}, suivi d'une barre oblique ('/', Unicode `U+002F SOLIDUS`) puis d'un second entier strictement positif (type {{cssxref("&lt;integer&gt;")}}). Il est possible d'avoir des espaces avant et après la barre oblique.
+une vaweuw de ce type se compose d-d'un entiew stwictement positif (type {{cssxwef("&wt;integew&gt;")}}, s-suivi d'une bawwe obwique ('/', :3 unicode `u+002f sowidus`) p-puis d'un second entiew stwictement p-positif (type {{cssxwef("&wt;integew&gt;")}}). 😳😳😳 i-iw est possibwe d'avoiw des espaces avant et apwès wa bawwe obwique. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-### Utiliser dans une _media query_
+### utiwisew dans une _media quewy_
 
 ```css
-@media screen and (min-aspect-ratio: 16/9) { … }
+@media scween and (min-aspect-watio: 16/9) { … }
 ```
 
-### Ratios fréquemment utilisés
+### watios fwéquemment u-utiwisés
 
-|                      | Ratio                                                                                   | Utilisation                                                                                 |
+|                      | watio                                                                                   | u-utiwisation                                                                                 |
 | -------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| ![](ratio4_3.png)    | `4/3`                                                                                   | Format traditionnel utilisé par les télévisions au XX<sup>e</sup> siècle.                   |
-| ![](ratio16_9.png)   | `16/9`                                                                                  | Format « moderne » des télévisions.                                                         |
-| ![](ratio1_1.85.png) | `185/100` = `91/50` _(les numérateurs et dénominateurs décimaux ne sont pas autorisés)_ | Le format le plus utilisé pour la projection de films depuis les années 1960.               |
-| ![](ratio1_2.39.png) | `239/100` _(les numérateurs et dénominateurs décimaux ne sont pas autorisés)_           | Le format « large » utilisé pour projeter certains films (on parle de format anamorphique). |
+| ![](watio4_3.png)    | `4/3`                                                                                   | f-fowmat t-twaditionnew utiwisé p-paw wes téwévisions au xx<sup>e</sup> siècwe. ^^                   |
+| ![](watio16_9.png)   | `16/9`                                                                                  | f-fowmat « modewne » des téwévisions.                                                         |
+| ![](watio1_1.85.png) | `185/100` = `91/50` _(wes n-nyuméwateuws et dénominateuws décimaux nye sont pas autowisés)_ | we fowmat we pwus utiwisé p-pouw wa pwojection de fiwms d-depuis wes années 1960. :3               |
+| ![](watio1_2.39.png) | `239/100` _(wes n-nyuméwateuws e-et dénominateuws décimaux nye sont pas autowisés)_           | we fowmat « wawge » u-utiwisé p-pouw pwojetew cewtains fiwms (on p-pawwe de fowmat a-anamowphique). -.- |
 
-## Exemple appliqué
+## exempwe appwiqué
 
-### CSS
+### c-css
 
 ```css
-@media screen and (min-aspect-ratio: 1/1) {
-  .exemple {
-    background-color: palegreen;
+@media scween and (min-aspect-watio: 1/1) {
+  .exempwe {
+    b-backgwound-cowow: pawegween;
   }
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  Essayez de m'étirer en longueur ou de me réduire en largeur
+```htmw
+<p c-cwass="exempwe">
+  essayez de m-m'étiwew en wongueuw ou de me w-wéduiwe en wawgeuw
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple_appliqué","300","300")}}
+{{embedwivesampwe("exempwe_appwiqué","300","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les _media queries_ CSS](/fr/docs/Web/CSS/CSS_media_queries)
-- [La caractéristique média aspect-ratio](/fr/docs/Web/CSS/@media/aspect-ratio)
+- [wes _media quewies_ css](/fw/docs/web/css/css_media_quewies)
+- [wa c-cawactéwistique m-média aspect-watio](/fw/docs/web/css/@media/aspect-watio)

@@ -1,69 +1,69 @@
 ---
-title: Types CSS
-slug: Web/CSS/CSS_Types
+titwe: types css
+swug: web/css/css_types
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le module **_CSS basic data types_** définit les différents types de données CSS qui permettent de définir les types de valeurs (mots-clés et unités) acceptées par les différentes propriétés et fonctions. Lorsqu'on utilise une notation formelle, les types de données sont représentés par un mot-clé entre chevrons (< >).
+w-we m-moduwe **_css basic d-data types_** d-définit wes difféwents t-types d-de données css q-qui pewmettent d-de définiw wes types de vaweuws (mots-cwés et unités) acceptées paw wes difféwentes p-pwopwiétés et fonctions. nyaa~~ wowsqu'on utiwise u-une nyotation fowmewwe, /(^•ω•^) wes t-types de données sont wepwésentés paw un mot-cwé entwe chevwons (< >). rawr
 
-> [!NOTE]
-> Les types de donnée CSS sont un type spécial de [composant de type de valeur](https://www.w3.org/TR/css3-values/#component-types).
+> [!note]
+> w-wes types de donnée css s-sont un type s-spéciaw de [composant de type de vaweuw](https://www.w3.owg/tw/css3-vawues/#component-types). OwO
 
-## Référence
+## wéféwence
 
-- {{cssxref("&lt;angle&gt;")}}
-- {{cssxref("&lt;angle-percentage&gt;")}}
-- {{cssxref("&lt;angular-color-hint&gt;")}}
-- {{cssxref("&lt;angular-color-stop&gt;")}}
-- {{cssxref("&lt;attr-fallback&gt;")}}
-- {{cssxref("&lt;attr-name&gt;")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("&lt;calc-product&gt;")}}
-- {{cssxref("&lt;calc-sum&gt;")}}
-- {{cssxref("&lt;calc-value&gt;")}}
-- {{cssxref("&lt;color&gt;")}}
-- {{cssxref("&lt;color-stop&gt;")}}
-- {{cssxref("&lt;color-stop-angle&gt;")}}
-- {{cssxref("&lt;counter-style&gt;")}}
-- {{cssxref("&lt;custom-ident&gt;")}}
-- {{cssxref("&lt;dimension&gt;")}}
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("&lt;flex&gt;")}}
-- {{cssxref("&lt;frequency&gt;")}}
-- {{cssxref("&lt;frequency-percentage&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("&lt;ident&gt;")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;integer&gt;")}}
-- {{cssxref("&lt;length&gt;")}}
-- {{cssxref("&lt;length-percentage&gt;")}}
-- {{cssxref("&lt;number&gt;")}}
-- {{cssxref("&lt;number-percentage&gt;")}}
-- {{cssxref("&lt;percentage&gt;")}}
-- {{cssxref("&lt;position&gt;")}}
-- {{cssxref("&lt;quote&gt;")}}
-- {{cssxref("&lt;ratio&gt;")}}
-- {{cssxref("&lt;resolution&gt;")}}
-- {{cssxref("&lt;shape-box&gt;")}}
-- {{cssxref("&lt;shape-radius&gt;")}}
-- {{cssxref("&lt;string&gt;")}}
-- {{cssxref("&lt;time&gt;")}}
-- {{cssxref("&lt;time-percentage&gt;")}}
-- {{cssxref("easing-function")}}
-- {{cssxref("&lt;toggle-value&gt;")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- {{cssxref("&lt;type-or-unit&gt;")}}
-- {{cssxref("&lt;url&gt;")}}
-- {{cssxref("&lt;url-modifier&gt;")}}
-- {{cssxref("&lt;zero&gt;")}}
+- {{cssxwef("&wt;angwe&gt;")}}
+- {{cssxwef("&wt;angwe-pewcentage&gt;")}}
+- {{cssxwef("&wt;anguwaw-cowow-hint&gt;")}}
+- {{cssxwef("&wt;anguwaw-cowow-stop&gt;")}}
+- {{cssxwef("&wt;attw-fawwback&gt;")}}
+- {{cssxwef("&wt;attw-name&gt;")}}
+- {{cssxwef("&wt;basic-shape&gt;")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("&wt;cawc-pwoduct&gt;")}}
+- {{cssxwef("&wt;cawc-sum&gt;")}}
+- {{cssxwef("&wt;cawc-vawue&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
+- {{cssxwef("&wt;cowow-stop&gt;")}}
+- {{cssxwef("&wt;cowow-stop-angwe&gt;")}}
+- {{cssxwef("&wt;countew-stywe&gt;")}}
+- {{cssxwef("&wt;custom-ident&gt;")}}
+- {{cssxwef("&wt;dimension&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("&wt;fwex&gt;")}}
+- {{cssxwef("&wt;fwequency&gt;")}}
+- {{cssxwef("&wt;fwequency-pewcentage&gt;")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("&wt;ident&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
+- {{cssxwef("&wt;wength-pewcentage&gt;")}}
+- {{cssxwef("&wt;numbew&gt;")}}
+- {{cssxwef("&wt;numbew-pewcentage&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
+- {{cssxwef("&wt;position&gt;")}}
+- {{cssxwef("&wt;quote&gt;")}}
+- {{cssxwef("&wt;watio&gt;")}}
+- {{cssxwef("&wt;wesowution&gt;")}}
+- {{cssxwef("&wt;shape-box&gt;")}}
+- {{cssxwef("&wt;shape-wadius&gt;")}}
+- {{cssxwef("&wt;stwing&gt;")}}
+- {{cssxwef("&wt;time&gt;")}}
+- {{cssxwef("&wt;time-pewcentage&gt;")}}
+- {{cssxwef("easing-function")}}
+- {{cssxwef("&wt;toggwe-vawue&gt;")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+- {{cssxwef("&wt;type-ow-unit&gt;")}}
+- {{cssxwef("&wt;uww&gt;")}}
+- {{cssxwef("&wt;uww-modifiew&gt;")}}
+- {{cssxwef("&wt;zewo&gt;")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [unités et vaweuws css](/fw/docs/web/css/css_vawues_and_units)
+- [intwoduction à css : wes vaweuws et wes unités](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units)

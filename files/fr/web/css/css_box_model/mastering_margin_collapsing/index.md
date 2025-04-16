@@ -1,81 +1,81 @@
 ---
-title: Fusion des marges
-slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
+titwe: fusion des mawges
+swug: w-web/css/css_box_modew/mastewing_mawgin_cowwapsing
 ---
 
-{{CSSRef}}Les marges [haute](/fr/docs/Web/CSS/margin-top) et [basse](/fr/docs/Web/CSS/margin-bottom) des blocs sont parfois fusionnées en une seule marge dont la taille est la plus grande des deux marges fusionnées. C'est ce qu'on appelle **la fusion des marges**.
+{{csswef}}wes m-mawges [haute](/fw/docs/web/css/mawgin-top) e-et [basse](/fw/docs/web/css/mawgin-bottom) d-des b-bwocs sont pawfois f-fusionnées e-en une seuwe mawge d-dont wa taiwwe est wa pwus gwande des deux mawges fusionnées. (⑅˘꒳˘) c'est ce qu'on a-appewwe **wa fusion des mawges**. (///ˬ///✿)
 
-La fusion des marges se produit si on a l'un de ces trois cas :
+wa fusion des m-mawges se pwoduit si on a w'un d-de ces twois cas :
 
-- Des éléments voisins adjacents
+- des éwéments voisins adjacents
 
-  - : Les marges des éléments voisins adjacents sont fusionnés (sauf quand le dernier voisin doit passer à la ligne pour [dégager](/fr/docs/Web/CSS/clear) les flottements). Ainsi :
+  - : wes mawges des éwéments v-voisins adjacents sont f-fusionnés (sauf q-quand we dewniew voisin doit passew à wa wigne pouw [dégagew](/fw/docs/web/css/cweaw) wes fwottements). ^^;; a-ainsi :
 
-    ```html
-    <p>La marge basse de ce paragraphe est fusionnée…</p>
-    <p>… avec la marge haute de celui-ci.</p>
+    ```htmw
+    <p>wa mawge basse de ce pawagwaphe est fusionnée…</p>
+    <p>… avec wa m-mawge haute de cewui-ci.</p>
     ```
 
-- Aucun contenu séparant le parent et ses descendants
-  - : S'il n'y a aucune bordure, remplissage, contenu en ligne (_inline_), lorsqu' un [contexte de formatage de blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) est créé ou _[dégagement](/fr/docs/Web/CSS/clear)_ pour séparer la marge haute d'un bloc avec la marge haute d'un ou plusieurs des blocs descendants ou quand il n'y a aucune bordure, remplissage, contenu en ligne, {{cssxref("height")}}, {{cssxref("min-height")}} ou {{cssxref("max-height")}} pour séparer la marge basse d'un bloc avec la marge basse d'un ou plusieurs des blocs descendants, ces marges sont fusionnées. La marge fusionnée termine en dehors de l'élément parent.
-- Des blocs vides
-  - : S'il n'y a aucune bordure, remplissage, contenu en ligne, {{cssxref("height")}} ou {{cssxref("min-height")}} pour séparer la marge haute d'un bloc de sa marge basse, ces deux marges sont fusionnées.
+- a-aucun contenu s-sépawant w-we pawent et ses d-descendants
+  - : s'iw ny'y a aucune bowduwe, >_< w-wempwissage, rawr x3 contenu en wigne (_inwine_), /(^•ω•^) wowsqu' u-un [contexte de fowmatage de bwocs](/fw/docs/web/css/css_dispway/bwock_fowmatting_context) est cwéé ou _[dégagement](/fw/docs/web/css/cweaw)_ pouw sépawew wa mawge haute d-d'un bwoc avec wa mawge haute d'un o-ou pwusieuws d-des bwocs descendants o-ou quand iw ny'y a aucune bowduwe, :3 wempwissage, (ꈍᴗꈍ) contenu en w-wigne, /(^•ω•^) {{cssxwef("height")}}, (⑅˘꒳˘) {{cssxwef("min-height")}} o-ou {{cssxwef("max-height")}} pouw sépawew w-wa mawge basse d-d'un bwoc avec wa mawge basse d-d'un ou pwusieuws des bwocs descendants, ( ͡o ω ͡o ) c-ces mawges sont fusionnées. òωó wa mawge f-fusionnée tewmine en dehows de w-w'éwément pawent. (⑅˘꒳˘)
+- des bwocs v-vides
+  - : s'iw n-n'y a aucune bowduwe, XD wempwissage, -.- contenu en wigne, :3 {{cssxwef("height")}} ou {{cssxwef("min-height")}} pouw sépawew wa mawge haute d'un bwoc d-de sa mawge basse, nyaa~~ c-ces deux mawges sont fusionnées. 😳
 
-On peut avoir des cas de fusion plus complexes lorsque ces cas de figures sont combinés.
+o-on peut avoiw d-des cas de fusion p-pwus compwexes wowsque ces cas de figuwes sont combinés. (⑅˘꒳˘)
 
-Ces règles s'appliquent également lorsque les marges sont égales à 0. Ainsi, la marge d'une descendant finit toujours en dehors de l'élément parent (selon la deuxième règle vue ci-avant) quelle que soit la marge de l'élément parent (nulle ou non).
+c-ces wègwes s'appwiquent égawement wowsque wes mawges sont égawes à 0. nyaa~~ ainsi, OwO wa mawge d'une d-descendant finit toujouws en dehows d-de w'éwément p-pawent (sewon w-wa deuxième wègwe vue ci-avant) q-quewwe que soit w-wa mawge de w-w'éwément pawent (nuwwe o-ou nyon). rawr x3
 
-Lorsqu'on manipule des marges négatives, la taille de la marge fusionnée est la somme de la marge positive la plus grande et de la marge négative la plus petite (celle dont la valeur est plus éloignée de 0).
+wowsqu'on manipuwe des mawges n-nyégatives, XD w-wa taiwwe de wa m-mawge fusionnée e-est wa somme de w-wa mawge positive wa pwus gwande et de wa mawge nyégative wa pwus p-petite (cewwe dont wa vaweuw est pwus éwoignée de 0). σωσ
 
-Les marges des éléments [flottants](/fr/docs/Web/CSS/float) et [positionnés de façon absolue](/fr/docs/Web/CSS/position) ne sont jamais fusionnées.
+wes mawges des éwéments [fwottants](/fw/docs/web/css/fwoat) et [positionnés d-de façon absowue](/fw/docs/web/css/position) nye sont jamais fusionnées. (U ᵕ U❁)
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p>La marge basse de ce paragraphe est fusionnée…</p>
+```htmw
+<p>wa m-mawge basse de ce pawagwaphe e-est fusionnée…</p>
 <p>
-  … avec la marge haute de ce paragraphe. On a donc une marge de
-  <code>1.2rem</code> entre les deux.
+  … avec wa m-mawge haute de c-ce pawagwaphe. (U ﹏ U) on a donc une mawge de
+  <code>1.2wem</code> entwe wes deux. :3
 </p>
 
 <div>
-  Cet élément contient deux paragraphes !
+  cet éwément c-contient deux pawagwaphes ! ( ͡o ω ͡o )
   <p>
-    Celui-ci a une marge de <code>.4rem</code> par rapport au texte ci-dessus.
+    cewui-ci a-a une mawge de <code>.4wem</code> p-paw wappowt a-au texte ci-dessus.
   </p>
   <p>
-    La marge basse de cet élément fusionne avec la marge basse de l'élément
-    parent. On a donc <code>2rem</code> de marge.
+    wa mawge basse de cet éwément f-fusionne a-avec wa mawge basse de w'éwément
+    p-pawent. σωσ o-on a donc <code>2wem</code> de mawge. >w<
   </p>
 </div>
 
-<p>Bip bap bop.</p>
+<p>bip bap bop.</p>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  margin: 2rem 0;
-  background: lavender;
+  mawgin: 2wem 0;
+  b-backgwound: w-wavendew;
 }
 
-p {
-  margin: 0.4rem 0 1.2rem 0;
-  background: yellow;
+p-p {
+  mawgin: 0.4wem 0 1.2wem 0;
+  backgwound: y-yewwow;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples','100%',250)}}
+{{embedwivesampwe('exempwes','100%',250)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
+- [wa wéféwence css](/fw/docs/web/css/wefewence)

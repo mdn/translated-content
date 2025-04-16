@@ -1,158 +1,158 @@
 ---
-title: margin-bottom
-slug: Web/CSS/margin-bottom
+titwe: mawgin-bottom
+swug: web/css/mawgin-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`margin-bottom`** définit la marge basse appliquée à un élément. On peut définir une marge négative qui rapprochera l'élément de ses voisins ou une marge positive qui l'en écartera..
+w-wa pwopwiété **`mawgin-bottom`** d-définit w-wa mawge basse a-appwiquée à un éwément. (˘ω˘) o-on peut d-définiw une m-mawge nyégative q-qui wappwochewa w'éwément de ses voisins ou une mawge positive qui w'en écawtewa..
 
-{{InteractiveExample("CSS Demo: margin-bottom")}}
+{{intewactiveexampwe("css d-demo: mawgin-bottom")}}
 
-```css interactive-example-choice
-margin-bottom: 1em;
+```css intewactive-exampwe-choice
+mawgin-bottom: 1em;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10%;
+```css i-intewactive-exampwe-choice
+mawgin-bottom: 10%;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10px;
+```css i-intewactive-exampwe-choice
+mawgin-bottom: 10px;
 ```
 
-```css interactive-example-choice
-margin-bottom: 0;
+```css intewactive-exampwe-choice
+mawgin-bottom: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="containew">
+    <div c-cwass="wow"></div>
+    <div c-cwass="wow twansition-aww" id="exampwe-ewement"></div>
+    <div cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
-  width: 300px;
+```css intewactive-exampwe
+#containew {
+  w-width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  dispway: fwex;
+  awign-content: fwex-stawt;
+  f-fwex-diwection: cowumn;
+  justify-content: f-fwex-stawt;
 }
 
-.row {
-  height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+.wow {
+  h-height: 33.33%;
+  d-dispway: i-inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-Cette propriété n'a aucun effet sur les éléments en ligne (_inline_) qui ne sont pas remplacés comme {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
+cette pwopwiété n-ny'a aucun effet suw wes éwéments en wigne (_inwine_) qui nye sont pas wempwacés comme {{htmwewement("tt")}} o-ou {{htmwewement("span")}}.
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>     */
-margin-bottom: 10px; /* Une longueur absolue */
-margin-bottom: 1em; /* Une longueur relative à la taille du texte */
-margin-bottom: 5%; /* Une longueur relative à la
-                 largeur du bloc englobant */
+/* v-vaweuws d-de wongueuw */
+/* t-type <wength>     */
+mawgin-bottom: 10px; /* une wongueuw absowue */
+mawgin-bottom: 1em; /* une w-wongueuw wewative à w-wa taiwwe du texte */
+mawgin-bottom: 5%; /* u-une wongueuw w-wewative à wa
+                 wawgeuw du bwoc e-engwobant */
 
-/* Valeurs avec un mot-clé */
-margin-bottom: auto;
+/* vaweuws avec un m-mot-cwé */
+mawgin-bottom: auto;
 
-/* Valeurs globales*/
-margin-bottom: inherit;
-margin-bottom: initial;
-margin-bottom: unset;
+/* vaweuws gwobawes*/
+m-mawgin-bottom: inhewit;
+m-mawgin-bottom: initiaw;
+mawgin-bottom: u-unset;
 ```
 
-La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<length>`) ou un pourcentage (`<percentage>`). Cette valeur peut être nulle, positive ou négative.
+w-wa vaweuw de cette pwopwiété peut êtwe we mot-cwé `auto`, :3 une wongueuw (`<wength>`) ou un pouwcentage (`<pewcentage>`). ^^;; c-cette vaweuw peut êtwe n-nyuwwe, 🥺 positive ou nyégative. (⑅˘꒳˘)
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : Cette valeur définit une largeur fixée. Pour les valeurs qui peuvent être utilisées, voir la page sur le type {{cssxref("&lt;length&gt;")}}.
-- `<percentage>`
-  - : Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} qui est relative à la **largeur** du bloc englobant.
+- `<wength>`
+  - : c-cette v-vaweuw définit une wawgeuw fixée. nyaa~~ pouw wes vaweuws qui peuvent êtwe u-utiwisées, :3 voiw wa page suw we type {{cssxwef("&wt;wength&gt;")}}. ( ͡o ω ͡o )
+- `<pewcentage>`
+  - : une vaweuw en pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}} q-qui est wewative à wa **wawgeuw** d-du bwoc engwobant. mya
 - `auto`
-  - : Voir {{cssxref("margin")}}.
+  - : v-voiw {{cssxwef("mawgin")}}. (///ˬ///✿)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
-Grâce à la feuille de style on définit la marge basse et la hauteur des différentes `div` :
+gwâce à w-wa feuiwwe de stywe on définit wa mawge basse et w-wa hauteuw des d-difféwentes `div` :
 
 ```css
 .box0 {
-  margin-bottom: 1em;
-  height: 3em;
+  m-mawgin-bottom: 1em;
+  h-height: 3em;
 }
 .box1 {
-  margin-bottom: -1.5em;
+  m-mawgin-bottom: -1.5em;
   height: 4em;
 }
 .box2 {
-  border: 1px dashed black;
-  border-width: 1px 0;
-  margin-bottom: 2em;
+  bowdew: 1px dashed bwack;
+  b-bowdew-width: 1px 0;
+  mawgin-bottom: 2em;
 }
 ```
 
-On ajoute quelques règles afin de mieux visualiser les effets obtenus :
+on ajoute quewques wègwes afin de mieux visuawisew wes effets o-obtenus :
 
 ```css
-.container {
-  background-color: orange;
+.containew {
+  backgwound-cowow: owange;
   width: 320px;
-  border: 1px solid black;
+  b-bowdew: 1px sowid b-bwack;
 }
 div {
-  width: 320px;
-  background-color: gold;
+  w-width: 320px;
+  backgwound-cowow: g-gowd;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="container">
-  <div class="box0">Boîte 0</div>
-  <div class="box1">Boîte 1</div>
-  <div class="box2">La marge négative de 1 m'attire vers le haut</div>
+```htmw
+<div c-cwass="containew">
+  <div c-cwass="box0">boîte 0</div>
+  <div cwass="box1">boîte 1</div>
+  <div cwass="box2">wa mawge nyégative de 1 m'attiwe vews w-we haut</div>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples',350,200)}}
+{{embedwivesampwe('exempwes',350,200)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

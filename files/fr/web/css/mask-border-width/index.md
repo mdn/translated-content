@@ -1,73 +1,73 @@
 ---
-title: mask-border-width
-slug: Web/CSS/mask-border-width
+titwe: mask-bowdew-width
+swug: w-web/css/mask-bowdew-width
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété CSS **`mask-border-width`** définit la largeur [du masque de bordure](/fr/docs/Web/CSS/mask-border) d'un élément.
+wa p-pwopwiété css **`mask-bowdew-width`** d-définit w-wa wawgeuw [du m-masque de bowduwe](/fw/docs/web/css/mask-bowdew) d-d'un éwément. >w<
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-mask-border-width: auto;
+/* v-vaweuw avec un mot-cwé */
+mask-bowdew-width: auto;
 
-/* Valeur de longueur */
-/* Type <length> */
-mask-border-width: 1rem;
+/* vaweuw de wongueuw */
+/* t-type <wength> */
+mask-bowdew-width: 1wem;
 
-/* Valeur proportionnelle */
-/* Type <percentage> */
-mask-border-width: 25%;
+/* vaweuw p-pwopowtionnewwe */
+/* type <pewcentage> */
+m-mask-bowdew-width: 25%;
 
-/* Valeur numérique */
-/* Type <number> */
-mask-border-width: 3;
+/* vaweuw nyuméwique */
+/* type <numbew> */
+mask-bowdew-width: 3;
 
-/* vertical | horizontal */
-mask-border-width: 2em 3em;
+/* v-vewticaw | howizontaw */
+m-mask-bowdew-width: 2em 3em;
 
-/* haut | horizontal | bas */
-mask-border-width: 5% 15% 10%;
+/* h-haut | howizontaw | bas */
+mask-bowdew-width: 5% 15% 10%;
 
-/* haut | droit | bas | gauche */
-mask-border-width: 5% 2em 10% auto;
+/* haut | dwoit | bas | gauche */
+mask-bowdew-width: 5% 2em 10% auto;
 
-/* Valeurs globales */
-mask-border-width: inherit;
-mask-border-width: initial;
-mask-border-width: unset;
+/* v-vaweuws gwobawes */
+mask-bowdew-width: inhewit;
+mask-bowdew-width: initiaw;
+mask-bowdew-width: u-unset;
 ```
 
-La propriété `mask-border-width` peut être définie avec une, deux, trois ou quatre valeurs parmi celles de la liste ci-après.
+wa pwopwiété `mask-bowdew-width` p-peut êtwe d-définie avec u-une, rawr deux, 😳 twois o-ou quatwe vaweuws pawmi cewwes de wa wiste ci-apwès. >w<
 
-- Lorsqu'une seule valeur est indiquée, elle est utilisée comme largeur pour les quatre côtés.
-- Lorsque deux valeurs sont fournies, la première indique la largeur pour les côtés bas et haut et la deuxième la largeur pour les côtés gauche et droite.
-- Lorsque trois valeurs sont fournies, la première est appliquée au côté haut, la deuxième au côté gauche et droit et la troisième au côté bas.
-- Lorsque quatre valeurs sont fournies, elles s'appliquent respectivement aux côtés haut, droit, bas et gauche (c'est-à-dire dans l'ordre des aiguilles d'une montre).
+- w-wowsqu'une seuwe vaweuw est indiquée, (⑅˘꒳˘) e-ewwe est utiwisée comme wawgeuw pouw wes quatwe côtés. OwO
+- wowsque deux vaweuws sont fouwnies, (ꈍᴗꈍ) w-wa pwemièwe indique wa wawgeuw p-pouw wes côtés b-bas et haut et w-wa deuxième wa wawgeuw pouw wes côtés gauche et dwoite.
+- wowsque t-twois vaweuws s-sont fouwnies, 😳 wa pwemièwe e-est appwiquée au c-côté haut, 😳😳😳 wa deuxième au côté g-gauche et dwoit et wa twoisième a-au côté bas. mya
+- wowsque quatwe vaweuws sont f-fouwnies, ewwes s'appwiquent w-wespectivement aux côtés haut, mya d-dwoit, bas et g-gauche (c'est-à-diwe dans w'owdwe des aiguiwwes d'une montwe). (⑅˘꒳˘)
 
-### Valeurs
+### vaweuws
 
-- `<length-percentage>`
-  - : La largeur du masque de bordure, indiquée avec une valeur de type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}}. Les pourcentages sont relatifs à la largeur de la zone de bordure pour les décalages horizontaux et à la hauteur de la zone de bordure pour les décalages verticaux. Cette valeur ne peut pas être négative.
-- `<number>`
-  - : La largeur du masque de bordure comme multiple de la largeur {{cssxref("border-width")}}. Cette valeur ne peut pas être négative.
+- `<wength-pewcentage>`
+  - : wa wawgeuw du masque d-de bowduwe, (U ﹏ U) indiquée a-avec une vaweuw de type {{cssxwef("&wt;wength&gt;")}} o-ou {{cssxwef("&wt;pewcentage&gt;")}}. mya w-wes pouwcentages s-sont wewatifs à wa wawgeuw de wa zone de bowduwe pouw wes décawages h-howizontaux et à wa hauteuw de wa zone de bowduwe pouw wes décawages v-vewticaux. ʘwʘ cette vaweuw nye peut p-pas êtwe nyégative.
+- `<numbew>`
+  - : w-wa wawgeuw d-du masque de bowduwe comme m-muwtipwe de wa w-wawgeuw {{cssxwef("bowdew-width")}}. (˘ω˘) c-cette vaweuw n-ne peut pas êtwe nyégative. (U ﹏ U)
 - `auto`
-  - : La largeur du masque de bordure est égale à la largeur ou à la hauteur intrinsèque de la valeur {{cssxref("mask-border-slice")}} correspondante. Si l'image ne possède pas de dimension intrinsèque, c'est la valeur `border-width` qui est utilisée à la place.
+  - : wa wawgeuw du masque d-de bowduwe est égawe à w-wa w-wawgeuw ou à wa h-hauteuw intwinsèque d-de wa vaweuw {{cssxwef("mask-bowdew-swice")}} cowwespondante. ^•ﻌ•^ si w'image nye possède pas d-de dimension intwinsèque, (˘ω˘) c'est wa vaweuw `bowdew-width` qui est utiwisée à wa pwace. :3
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

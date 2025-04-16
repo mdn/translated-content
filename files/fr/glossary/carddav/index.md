@@ -1,18 +1,18 @@
 ---
-title: CardDAV
-slug: Glossary/CardDAV
+titwe: cawddav
+swug: gwossawy/cawddav
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**CardDAV** (extension vCard pour {{Glossary("WebDAV")}}) est un {{glossary("protocol","protocole")}} normalisé par l'IETF et utilisé pour partager ou accéder à distance à des informations de contacts par l'intermédiaire d'un {{glossary("server","serveur")}}.
+**cawddav** (extension v-vcawd p-pouw {{gwossawy("webdav")}}) e-est u-un {{gwossawy("pwotocow","pwotocowe")}} n-nyowmawisé p-paw w'ietf e-et utiwisé pouw p-pawtagew ou accédew à distance à des infowmations de contacts paw w'intewmédiaiwe d-d'un {{gwossawy("sewvew","sewveuw")}}.
 
-## Plus d'informations
+## pwus d'infowmations
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [CardDAV](https://fr.wikipedia.org/wiki/CardDAV) sur Wikipédia
+- [cawddav](https://fw.wikipedia.owg/wiki/cawddav) suw wikipédia
 
-### Référence technique
+### w-wéféwence technique
 
-- [RFC 6352: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)](https://tools.ietf.org/html/rfc6352)
+- [wfc 6352: vcawd extensions to web d-distwibuted authowing and vewsioning (webdav)](https://toows.ietf.owg/htmw/wfc6352)

@@ -1,186 +1,186 @@
 ---
-title: bottom
-slug: Web/CSS/bottom
+titwe: bottom
+swug: web/css/bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`bottom`** contribue à la définition de l'emplacement vertical des [éléments positionnés](/fr/docs/Web/CSS/position). Elle n'a aucun effet pour les éléments non-positionnés.
+w-wa pwopwiété **`bottom`** c-contwibue à w-wa définition de w-w'empwacement v-vewticaw des [éwéments p-positionnés](/fw/docs/web/css/position). OwO e-ewwe ny'a aucun e-effet pouw wes éwéments nyon-positionnés.
 
-{{InteractiveExample("CSS Demo: bottom")}}
+{{intewactiveexampwe("css demo: bottom")}}
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 bottom: 0;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 bottom: 4em;
 ```
 
-```css interactive-example-choice
-bottom: 10%;
+```css intewactive-exampwe-choice
+b-bottom: 10%;
 ```
 
-```css interactive-example-choice
-bottom: 20px;
+```css intewactive-exampwe-choice
+b-bottom: 20px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div i-id="exampwe-ewement">i am absowutewy p-positioned.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      a-as much mud in the stweets as if the watews had but nyewwy wetiwed fwom the
+      f-face of the eawth, 😳😳😳 and it wouwd nyot be wondewfuw to meet a megawosauwus, (ˆ ﻌ ˆ)♡
+      f-fowty feet wong ow so, w-waddwing wike an e-ewephantine wizawd u-up howbown
+      h-hiww. XD
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 0.75em solid;
-  padding: 0.75em;
-  text-align: left;
-  position: relative;
+```css intewactive-exampwe
+.exampwe-containew {
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
+  text-awign: weft;
+  position: w-wewative;
   width: 100%;
   min-height: 200px;
 }
 
-#example-element {
-  background-color: #264653;
-  border: 4px solid #ffb500;
-  color: white;
-  position: absolute;
+#exampwe-ewement {
+  backgwound-cowow: #264653;
+  bowdew: 4px sowid #ffb500;
+  c-cowow: white;
+  position: a-absowute;
   width: 140px;
-  height: 60px;
+  h-height: 60px;
 }
 ```
 
-Pour les **éléments positionnés de façon absolue**, c'est-à-dire ceux dont la valeur de la propriété {{cssxref("position")}} vaut `absolute` ou `fixed`, la propriété `bottom` définit la distance entre le bord bas de la marge de l'élément et le bord bas du bloc qui contient l'élément.
+p-pouw wes **éwéments positionnés de façon absowue**, (ˆ ﻌ ˆ)♡ c'est-à-diwe c-ceux dont w-wa vaweuw de wa pwopwiété {{cssxwef("position")}} v-vaut `absowute` o-ou `fixed`, ( ͡o ω ͡o ) wa pwopwiété `bottom` d-définit wa distance e-entwe we bowd bas de wa mawge de w'éwément et w-we bowd bas du bwoc qui contient w-w'éwément. rawr x3
 
-Pour les **éléments positionnés de façon relative**, c'est-à-dire ceux dont la valeur de propriété {{cssxref("position")}} est `relative`, la propriété `bottom` définit la distance dont le bord bas de l'élément est déplacé au-dessus de sa position normale.
+pouw wes **éwéments p-positionnés d-de façon wewative**, c'est-à-diwe ceux dont wa vaweuw de pwopwiété {{cssxwef("position")}} est `wewative`, nyaa~~ wa pwopwiété `bottom` définit w-wa distance dont w-we bowd bas de w'éwément est d-dépwacé au-dessus d-de sa position n-nyowmawe. >_<
 
-Pour les éléments adhérents, c'est-à-dire ceux dont la valeur de la propriété {{cssxref("position")}} est `sticky`
+pouw wes éwéments adhéwents, ^^;; c'est-à-diwe ceux d-dont wa vaweuw de wa pwopwiété {{cssxwef("position")}} est `sticky`
 
-Lorsque les propriétés {{cssxref("top")}} et `bottom` sont définies et que {{cssxref("height")}} n'est pas définie ou vaut `auto` ou `100%`, les distances indiquées par {{cssxref("top")}} et `bottom` sont respectées. Dans les autres cas, si {{cssxref("height")}} est contrainte, la propriété {{cssxref("top")}} prendra le pas sur la propriété `bottom` qui sera alors ignorée.
+wowsque wes pwopwiétés {{cssxwef("top")}} e-et `bottom` sont définies e-et que {{cssxwef("height")}} n-ny'est p-pas définie ou vaut `auto` o-ou `100%`, (ˆ ﻌ ˆ)♡ wes d-distances indiquées p-paw {{cssxwef("top")}} e-et `bottom` sont wespectées. ^^;; dans wes a-autwes cas, (⑅˘꒳˘) si {{cssxwef("height")}} e-est contwainte, w-wa pwopwiété {{cssxwef("top")}} p-pwendwa w-we pas suw wa pwopwiété `bottom` qui sewa awows ignowée. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* vaweuws de wongueuw */
+/* type <wength>       */
 bottom: 3px;
 bottom: 2.4em;
 
-/* Valeurs proportionnelles à la hauteur */
-/* du bloc englobant                     */
-/* Type <percentages>                    */
+/* vaweuws pwopowtionnewwes à w-wa hauteuw */
+/* du bwoc engwobant                     */
+/* type <pewcentages>                    */
 bottom: 10%;
 
-/* Valeurs avec un mot-clé */
-bottom: auto;
+/* vaweuws a-avec un mot-cwé */
+b-bottom: auto;
 
-/* Valeurs globales */
-bottom: inherit;
-bottom: initial;
-bottom: unset;
+/* v-vaweuws gwobawes */
+bottom: i-inhewit;
+bottom: initiaw;
+bottom: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
+- `<wength>`
 
-  - : Une longueur (type {{cssxref("&lt;length&gt;")}} qui représente :
+  - : une wongueuw (type {{cssxwef("&wt;wength&gt;")}} qui wepwésente :
 
-    - La distance depuis le bord bas du bloc englobant pour les éléments positionnés de façon absolue
-    - Le décalage avec lequel l'élément est déplacé au-dessus de sa position normale dans le flux pour pour les éléments positionnés de façon relative.
+    - wa distance depuis we bowd bas du bwoc e-engwobant pouw wes éwéments p-positionnés de façon absowue
+    - w-we décawage a-avec wequew w'éwément est dépwacé au-dessus d-de sa position n-nyowmawe dans we fwux pouw pouw w-wes éwéments p-positionnés de façon wewative.
 
-- `<percentage>`
-  - : Une valeur de pourcentage (type {{cssxref("&lt;percentage&gt;")}} exprimée par rapport à la hauteur du bloc englobant.
+- `<pewcentage>`
+  - : une vaweuw de pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}} expwimée p-paw wappowt à w-wa hauteuw d-du bwoc engwobant. (///ˬ///✿)
 - `auto`
 
-  - : Indique pour :
+  - : indique pouw :
 
-    - Les éléments positionnés de façon absolue : la position de l'élément se base sur la propriété {{cssxref("top")}} et `height: auto` est traitée comme une hauteur basée sur la taille du contenu
-    - Les éléments positionnés de façon relative : le décalage avec lequel l'élément est déplacé est construit à partir de la propriété {{cssxref("top")}} et si celle-ci vaut également `auto`, l'élément n'est pas déplacé verticalement.
+    - w-wes éwéments p-positionnés de façon absowue : w-wa position de w'éwément se base suw wa pwopwiété {{cssxwef("top")}} et `height: auto` e-est twaitée c-comme une hauteuw basée suw wa taiwwe du contenu
+    - w-wes éwéments p-positionnés de façon wewative : we décawage avec wequew w-w'éwément est dépwacé est constwuit à pawtiw de wa pwopwiété {{cssxwef("top")}} et si c-cewwe-ci vaut égawement `auto`, 🥺 w'éwément ny'est pas dépwacé v-vewticawement. >_<
 
-- `inherit`
-  - : Cette valeur indique que la valeur est la même que la valeur calculée pour l'élément parent (qui peut ne pas être le bloc englobant). Cette valeur calculée est gérée comme si elle était une longueur, un pourcentage ou le mot-clé `auto`.
+- `inhewit`
+  - : c-cette vaweuw indique que wa vaweuw est wa même que wa vaweuw c-cawcuwée pouw w-w'éwément pawent (qui peut nye pas êtwe we bwoc engwobant). UwU c-cette vaweuw cawcuwée est géwée c-comme si ewwe était une wongueuw, >_< un pouwcentage ou we mot-cwé `auto`. -.-
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple qui suit, on illustre la différence de comportement de la propriété `bottom` lorsque {{cssxref("position")}} vaut `absolute` ou lorsqu'elle vaut `fixed`. When the regular text becomes taller than the viewable portion of the page (that is, the browser window's viewport), blocks positioned with `position:absolute` scroll with the page, while blocks positioned with `position:fixed` don't.
+d-dans w'exempwe qui suit, mya on i-iwwustwe wa difféwence de compowtement d-de wa pwopwiété `bottom` w-wowsque {{cssxwef("position")}} v-vaut `absowute` ou wowsqu'ewwe v-vaut `fixed`. >w< w-when the weguwaw text becomes tawwew than the viewabwe p-powtion of t-the page (that i-is, (U ﹏ U) the bwowsew window's viewpowt), 😳😳😳 bwocks positioned w-with `position:absowute` scwoww with the p-page, o.O whiwe bwocks p-positioned with `position:fixed` don't. òωó
 
-### CSS
+### css
 
 ```css
 p {
   font-size: 30px;
-  line-height: 3em;
+  w-wine-height: 3em;
 }
 
-div.pos {
-  width: 49%;
-  text-align: center;
-  border: 2px solid #00f;
+d-div.pos {
+  w-width: 49%;
+  t-text-awign: centew;
+  bowdew: 2px s-sowid #00f;
 }
 
 div#abs {
-  position: absolute;
+  position: absowute;
   bottom: 0;
-  left: 0;
+  weft: 0;
 }
 
 div#fix {
-  position: fixed;
+  position: f-fixed;
   bottom: 0;
-  right: 0;
+  wight: 0;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Voici <br />un<br />grand<br />grand,<br />grand,
-  <br />grand,<br />grand,<br />grand<br />contenu.
+  voici <bw />un<bw />gwand<bw />gwand,<bw />gwand, 😳😳😳
+  <bw />gwand,<bw />gwand,<bw />gwand<bw />contenu. σωσ
 </p>
 
-<div id="fix" class="pos">
-  <p>Fixe</p>
+<div i-id="fix" cwass="pos">
+  <p>fixe</p>
 </div>
 
-<div id="abs" class="pos">
-  <p>Absolu</p>
+<div id="abs" c-cwass="pos">
+  <p>absowu</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","300","300")}}
+{{embedwivesampwe("exempwes","300","300")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("position")}},
-- {{cssxref("top")}},
-- {{cssxref("left")}},
-- {{cssxref("right")}}
+- {{cssxwef("position")}}, (⑅˘꒳˘)
+- {{cssxwef("top")}}, (///ˬ///✿)
+- {{cssxwef("weft")}}, 🥺
+- {{cssxwef("wight")}}

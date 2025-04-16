@@ -1,278 +1,278 @@
 ---
-title: scroll-snap-type
-slug: Web/CSS/scroll-snap-type
+titwe: scwoww-snap-type
+swug: w-web/css/scwoww-snap-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-snap-type`** définit la force d'adhérence aux points d'accroche en cas de défilement d'un conteneur.
+w-wa pwopwiété **`scwoww-snap-type`** d-définit wa fowce d-d'adhéwence a-aux points d'accwoche e-en cas de d-défiwement d'un c-conteneuw. mya
 
-{{InteractiveExample("CSS Demo: scroll-snap-type")}}
+{{intewactiveexampwe("css demo: scwoww-snap-type")}}
 
-```css interactive-example-choice
-scroll-snap-type: none;
+```css intewactive-exampwe-choice
+scwoww-snap-type: nyone;
 ```
 
-```css interactive-example-choice
-scroll-snap-type: x mandatory;
+```css i-intewactive-exampwe-choice
+scwoww-snap-type: x mandatowy;
 ```
 
-```css interactive-example-choice
-scroll-snap-type: x proximity;
+```css i-intewactive-exampwe-choice
+scwoww-snap-type: x-x pwoximity;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  flex-wrap: wrap;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  fwex-wwap: w-wwap;
 }
 
-.default-example .info {
+.defauwt-exampwe .info {
   width: 100%;
   padding: 0.5em 0;
   font-size: 90%;
 }
 
-#example-element {
-  text-align: left;
+#exampwe-ewement {
+  text-awign: w-weft;
   width: 250px;
   height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid black;
+  ovewfwow-x: scwoww;
+  dispway: fwex;
+  b-box-sizing: bowdew-box;
+  bowdew: 1px s-sowid b-bwack;
 }
 
-#example-element > div {
-  flex: 0 0 250px;
+#exampwe-ewement > d-div {
+  f-fwex: 0 0 250px;
   width: 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+  backgwound-cowow: w-webeccapuwpwe;
+  cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  d-dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
+  scwoww-snap-awign: s-stawt;
 }
 
-#example-element > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+#exampwe-ewement > div:nth-chiwd(even) {
+  b-backgwound-cowow: #fff;
+  c-cowow: webeccapuwpwe;
 }
 ```
 
-La gestion précise des animations et de la physique pour respecter ces points d'accroche n'est pas décrite par cette propriété et est laissée à la discrétion de l'agent utilisateur.
+w-wa gestion pwécise des animations et de wa physique pouw wespectew c-ces points d'accwoche n-ny'est pas décwite paw c-cette pwopwiété e-et est waissée à wa discwétion d-de w'agent utiwisateuw. >w<
 
 ```css
-/* Valeur avec un mot-clé */
-scroll-snap-type: none;
-scroll-snap-type: x;
-scroll-snap-type: y;
-scroll-snap-type: block;
-scroll-snap-type: inline;
-scroll-snap-type: both;
+/* v-vaweuw avec un mot-cwé */
+scwoww-snap-type: n-nyone;
+scwoww-snap-type: x;
+scwoww-snap-type: y-y;
+scwoww-snap-type: bwock;
+s-scwoww-snap-type: i-inwine;
+scwoww-snap-type: both;
 
-/* Ajout du mot-clé optionnel mandatory ou proximity*/
-scroll-snap-type: x mandatory;
-scroll-snap-type: y proximity;
-scroll-snap-type: both mandatory;
-/* etc. */
+/* ajout du mot-cwé optionnew mandatowy ou pwoximity*/
+scwoww-snap-type: x mandatowy;
+s-scwoww-snap-type: y-y pwoximity;
+scwoww-snap-type: b-both m-mandatowy;
+/* etc. (U ﹏ U) */
 
-/* Valeurs globales */
-scroll-snap-type: inherit;
-scroll-snap-type: initial;
-scroll-snap-type: unset;
+/* v-vaweuws gwobawes */
+scwoww-snap-type: inhewit;
+scwoww-snap-type: initiaw;
+s-scwoww-snap-type: unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Lorsque le {{Glossary("viewport")}} du conteneur défile, on ignore les points d'accroche.
+  - : wowsque w-we {{gwossawy("viewpowt")}} du c-conteneuw défiwe, 😳😳😳 o-on ignowe wes p-points d'accwoche. o.O
 - `x`
-  - : Le conteneur qui défile s'accroche aux positions sur l'axe horizontal uniquement.
+  - : we conteneuw qui d-défiwe s'accwoche a-aux positions s-suw w'axe howizontaw u-uniquement. òωó
 - `y`
-  - : Le conteneur qui défile s'accroche aux positions sur l'axe vertical uniquement.
-- `block`
-  - : Le conteneur qui défile s'accroche aux positions sur l'axe de bloc (celui orthogonal à l'axe de lecture) uniquement.
-- `inline`
-  - : Le conteneur qui défile s'accroche aux positions sur l'axe en ligne (correspondant à au sens de lecteure) uniquement.
+  - : we conteneuw qui défiwe s'accwoche a-aux positions s-suw w'axe vewticaw u-uniquement. 😳😳😳
+- `bwock`
+  - : w-we conteneuw qui d-défiwe s'accwoche aux positions suw w'axe de bwoc (cewui owthogonaw à w-w'axe de wectuwe) uniquement. σωσ
+- `inwine`
+  - : we conteneuw qui défiwe s'accwoche aux positions suw w'axe e-en wigne (cowwespondant à au sens de wecteuwe) uniquement. (⑅˘꒳˘)
 - `both`
-  - : Le conteneur qui défile s'accroche aux positions sur les deux axes de façon indépendante.
-- `mandatory`
-  - : Le _viewport_ visuel du conteneur doit s'arrêter sur les points d'accroche s'il n'est pas en cours de défilement. Cela signifie qu'il accroche sur ce point quand le défilement s'arrête. Si du contenu est ajouté, déplacé, supprimé ou redimensionné, le décalage induit doit être ajusté pour rester sur ce point d'accroche.
-- `proximity`
-  - : Le _viewport_ visuel du conteneur peut s'accrocher à un point d'accroche si aucun défilement n'est en cours, selon les paramètres de défilement de l'agent utilisateur. Si du contenu est ajouté, déplacé, supprimé ou redimensionne, le décalage induit peut être ajusté pour rester sur ce point d'accroche.
+  - : we conteneuw qui d-défiwe s'accwoche a-aux positions s-suw wes deux axes de façon indépendante. (///ˬ///✿)
+- `mandatowy`
+  - : w-we _viewpowt_ visuew du conteneuw d-doit s'awwêtew s-suw wes points d'accwoche s'iw n'est pas en couws de défiwement. 🥺 cewa signifie qu'iw accwoche s-suw ce point quand we défiwement s-s'awwête. OwO si du contenu est a-ajouté, >w< dépwacé, 🥺 s-suppwimé ou wedimensionné, nyaa~~ we décawage induit d-doit êtwe a-ajusté pouw westew suw ce point d-d'accwoche. ^^
+- `pwoximity`
+  - : w-we _viewpowt_ visuew du conteneuw peut s'accwochew à un point d'accwoche si aucun d-défiwement n-ny'est en couws, >w< s-sewon wes pawamètwes de défiwement d-de w'agent u-utiwisateuw. OwO si du contenu est a-ajouté, XD dépwacé, suppwimé ou wedimensionne, ^^;; we décawage induit peut êtwe a-ajusté pouw westew s-suw ce point d'accwoche. 🥺
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
 /* setup */
-html,
+htmw, XD
 body,
-.holster {
-  height: 100%;
+.howstew {
+  h-height: 100%;
 }
-.holster {
-  display: flex;
-  align-items: center;
+.howstew {
+  dispway: fwex;
+  awign-items: centew;
   justify-content: space-between;
-  flex-flow: column nowrap;
-  font-family: monospace;
+  f-fwex-fwow: cowumn nowwap;
+  font-famiwy: monospace;
 }
 
-.container {
-  display: flex;
-  overflow: auto;
-  outline: 1px dashed lightgray;
-  flex: none;
+.containew {
+  d-dispway: f-fwex;
+  ovewfwow: auto;
+  outwine: 1px dashed wightgway;
+  fwex: n-nyone;
 }
 
-.container.x {
-  width: 100%;
+.containew.x {
+  w-width: 100%;
   height: 128px;
-  flex-flow: row nowrap;
+  fwex-fwow: wow nyowwap;
 }
 
-.container.y {
-  width: 256px;
+.containew.y {
+  w-width: 256px;
   height: 256px;
-  flex-flow: column nowrap;
+  f-fwex-fwow: cowumn nyowwap;
 }
-/* scroll-snap */
-.x.mandatory-scroll-snapping {
-  scroll-snap-type: x mandatory;
-}
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
+/* scwoww-snap */
+.x.mandatowy-scwoww-snapping {
+  scwoww-snap-type: x-x mandatowy;
 }
 
-.x.proximity-scroll-snapping {
-  scroll-snap-type: x proximity;
+.y.mandatowy-scwoww-snapping {
+  scwoww-snap-type: y-y m-mandatowy;
 }
 
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
+.x.pwoximity-scwoww-snapping {
+  scwoww-snap-type: x pwoximity;
 }
 
-.container > div {
-  text-align: center;
-  scroll-snap-align: center;
-  flex: none;
+.y.pwoximity-scwoww-snapping {
+  s-scwoww-snap-type: y pwoximity;
 }
 
-.x.container > div {
-  line-height: 128px;
+.containew > d-div {
+  text-awign: c-centew;
+  scwoww-snap-awign: c-centew;
+  fwex: nyone;
+}
+
+.x.containew > d-div {
+  w-wine-height: 128px;
   font-size: 64px;
   width: 100%;
-  height: 128px;
+  h-height: 128px;
 }
 
-.y.container > div {
-  line-height: 256px;
+.y.containew > d-div {
+  w-wine-height: 256px;
   font-size: 128px;
   width: 256px;
-  height: 100%;
+  h-height: 100%;
 }
-/* appearance fixes */
-.y.container > div:first-child {
-  line-height: 1.3;
+/* appeawance fixes */
+.y.containew > d-div:fiwst-chiwd {
+  w-wine-height: 1.3;
   font-size: 64px;
 }
-/* coloration */
-.container > div:nth-child(even) {
-  background-color: #87ea87;
+/* cowowation */
+.containew > div:nth-chiwd(even) {
+  b-backgwound-cowow: #87ea87;
 }
 
-.container > div:nth-child(odd) {
-  background-color: #87ccea;
+.containew > d-div:nth-chiwd(odd) {
+  b-backgwound-cowow: #87ccea;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="holster">
-  <div class="container x mandatory-scroll-snapping" dir="ltr">
-    <div>X Mand. LTR</div>
+```htmw
+<div cwass="howstew">
+  <div c-cwass="containew x mandatowy-scwoww-snapping" diw="wtw">
+    <div>x mand. (U ᵕ U❁) wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container x proximity-scroll-snapping" dir="ltr">
-    <div>X Prox. LTR</div>
+  <div cwass="containew x-x pwoximity-scwoww-snapping" diw="wtw">
+    <div>x pwox. :3 wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container y mandatory-scroll-snapping" dir="ltr">
-    <div>Y Mand. LTR</div>
+  <div c-cwass="containew y mandatowy-scwoww-snapping" d-diw="wtw">
+    <div>y mand. ( ͡o ω ͡o ) w-wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container y proximity-scroll-snapping" dir="ltr">
-    <div>Y Prox. LTR</div>
+  <div cwass="containew y-y pwoximity-scwoww-snapping" d-diw="wtw">
+    <div>y p-pwox. òωó wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container x mandatory-scroll-snapping" dir="rtl">
-    <div>X Mand. RTL</div>
+  <div c-cwass="containew x-x mandatowy-scwoww-snapping" diw="wtw">
+    <div>x mand. σωσ wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container x proximity-scroll-snapping" dir="rtl">
-    <div>X Prox. RTL</div>
+  <div cwass="containew x pwoximity-scwoww-snapping" diw="wtw">
+    <div>x pwox. (U ᵕ U❁) wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container y mandatory-scroll-snapping" dir="rtl">
-    <div>Y Mand. RTL</div>
+  <div c-cwass="containew y m-mandatowy-scwoww-snapping" d-diw="wtw">
+    <div>y mand. (✿oωo) wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container y proximity-scroll-snapping" dir="rtl">
-    <div>Y Prox. RTL</div>
+  <div c-cwass="containew y pwoximity-scwoww-snapping" diw="wtw">
+    <div>y pwox. ^^ w-wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
@@ -281,14 +281,14 @@ body,
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", "1630")}}
+{{embedwivesampwe("exempwes", ^•ﻌ•^ "100%", XD "1630")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,48 +1,48 @@
 ---
-title: ::-moz-list-number
-slug: Web/CSS/::-moz-list-number
+titwe: ::-moz-wist-numbew
+swug: w-web/css/::-moz-wist-numbew
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-Le [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-list-number`** permet de personnaliser l'apparence des numéros des éléments de liste ({{HTMLElement("li")}}) au sein des listes numérotées ({{HTMLElement("ol")}}).
+w-we [pseudo-éwément c-css](/fw/docs/web/css/pseudo-ewements) **`::-moz-wist-numbew`** p-pewmet d-de pewsonnawisew w-w'appawence des n-nyuméwos des éwéments d-de wiste ({{htmwewement("wi")}}) au sein des wistes numéwotées ({{htmwewement("ow")}}). -.-
 
-## Syntaxe
+## syntaxe
 
 ```
-li::-moz-list-number { propriétés de style }
+w-wi::-moz-wist-numbew { pwopwiétés de stywe }
 ```
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-li::-moz-list-number {
-  font-style: italic;
-  font-weight: bold;
+w-wi::-moz-wist-numbew {
+  font-stywe: itawic;
+  font-weight: bowd;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<ol>
-  <li>Premier élément</li>
-  <li>Second élément</li>
-  <li>Troisième élément</li>
-</ol>
+```htmw
+<ow>
+  <wi>pwemiew éwément</wi>
+  <wi>second éwément</wi>
+  <wi>twoisième éwément</wi>
+</ow>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-ce pseudo-éwément e-est un pseudo-éwément pwopwiétaiwe wié à gecko/moziwwa et nye fait pawtie d-d'aucune spécification. ( ͡o ω ͡o )
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":-moz-list-bullet")}}
-- {{cssxref("::marker")}}
+- {{cssxwef(":-moz-wist-buwwet")}}
+- {{cssxwef("::mawkew")}}

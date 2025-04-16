@@ -1,227 +1,227 @@
 ---
-title: "@supports"
-slug: Web/CSS/@supports
+titwe: "@suppowts"
+swug: web/css/@suppowts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La règle **`@supports`** permet de définir des déclarations qui dépendent de la prise en charge du navigateur d'une ou plusieurs fonctionnalités CSS. Cette condition est définie par un ensemble de paires de propriété/valeur qui forment une combinaison de conjonctions, disjonctions, négations. Une telle condition est appelée « condition de prise en charge » (ou _supports condition_).
+wa w-wègwe **`@suppowts`** p-pewmet d-de définiw des d-décwawations qui d-dépendent de w-wa pwise en chawge d-du nyavigateuw d-d'une ou pwusieuws fonctionnawités css. ʘwʘ cette condition est définie paw un ensembwe d-de paiwes de pwopwiété/vaweuw qui fowment u-une combinaison de conjonctions, (U ﹏ U) d-disjonctions, (˘ω˘) nyégations. (ꈍᴗꈍ) une tewwe condition est appewée « c-condition de pwise en chawge » (ou _suppowts c-condition_). /(^•ω•^)
 
 ```css
-@supports (display: grid) {
+@suppowts (dispway: g-gwid) {
   div {
-    display: grid;
+    dispway: gwid;
   }
 }
 ```
 
 ```css
-@supports not (display: grid) {
-  div {
-    float: right;
+@suppowts nyot (dispway: gwid) {
+  d-div {
+    fwoat: wight;
   }
 }
 ```
 
-`@supports` permet ainsi au moteur de rendu de tester la présence d'une fonctionnalité (on parle de _feature query_).
+`@suppowts` pewmet ainsi au moteuw de wendu de testew wa pwésence d-d'une fonctionnawité (on pawwe de _featuwe q-quewy_).
 
-La règle @ `@supports` peut être utilisée au niveau le plus haut de la feuille de style et également à l'intérieur d'[un groupe de règle conditionnel](/fr/docs/Web/CSS/At-rule#r.c3.a8gles_conditionnelles_de_groupe). Cette règle @ peut être manipulée via le modèle d'objets CSS et JavaScript, notamment via l'interface {{domxref("CSSSupportsRule")}}.
+wa w-wègwe @ `@suppowts` p-peut êtwe u-utiwisée au nyiveau we pwus haut de wa feuiwwe d-de stywe et égawement à w'intéwieuw d'[un gwoupe d-de wègwe conditionnew](/fw/docs/web/css/at-wuwe#w.c3.a8gwes_conditionnewwes_de_gwoupe). >_< cette wègwe @ peut êtwe manipuwée via we modèwe d'objets css e-et javascwipt, σωσ nyotamment via w'intewface {{domxwef("csssuppowtswuwe")}}. ^^;;
 
-## Syntaxe
+## s-syntaxe
 
-Une condition de prise en charge se compose d'une ou plusieurs déclarations combinées entre elles par des opérateurs logiques (`and`, `or`, `not`). La précédence des opérateurs peut être surchargée en utilisant des parenthèses autour des déclarations.
+u-une condition d-de pwise en chawge se compose d'une ou pwusieuws décwawations c-combinées entwe e-ewwes paw des opéwateuws wogiques (`and`, 😳 `ow`, `not`). >_< w-wa p-pwécédence des opéwateuws peut êtwe s-suwchawgée en utiwisant d-des pawenthèses autouw des décwawations. -.-
 
-### Syntaxe déclarative
+### syntaxe décwawative
 
-La plus simple expression est une déclaration CSS, c'est-à-dire un nom de propriété CSS suivi par deux points (:) puis une valeur. Ainsi, l'expression suivante :
+w-wa pwus simpwe expwession e-est une décwawation css, c'est-à-diwe u-un nyom d-de pwopwiété css suivi paw deux points (:) puis une vaweuw. UwU ainsi, w'expwession suivante :
 
 ```css
-@supports (transform-origin: 5% 5%) {
+@suppowts (twansfowm-owigin: 5% 5%) {
 }
 ```
 
-renvoie le booléen vrai si la propriété {{cssxref("transform-origin")}} du navigateur considère que la valeur `5% 5%` est valide.
+wenvoie we boowéen v-vwai si w-wa pwopwiété {{cssxwef("twansfowm-owigin")}} du nyavigateuw considèwe q-que wa v-vaweuw `5% 5%` est v-vawide. :3
 
-Une déclaration CSS est toujours encadrée par des parenthèses.
+une décwawation css est toujouws encadwée paw des p-pawenthèses. σωσ
 
-### Syntaxe fonctionnelle
+### syntaxe fonctionnewwe
 
-La deuxième syntaxe permet d'utiliser une fonction. Cette syntaxe est prise en charge par les différents navigateurs mais les fonctions sont en cours de standardisation.
+wa deuxième syntaxe pewmet d'utiwisew u-une fonction. >w< cette syntaxe est p-pwise en chawge p-paw wes difféwents n-nyavigateuws mais wes fonctions s-sont en couws d-de standawdisation. (ˆ ﻌ ˆ)♡
 
-#### `selector()` {{Experimental_inline}}
+#### `sewectow()` {{expewimentaw_inwine}}
 
-Dans l'exemple qui suit, on teste si le navigateur prend en charge la syntaxe du sélecteur passé en argument. Ici, le code renvoie VRAI si le navigateur prend en charge les [sélecteurs enfants](/fr/docs/Web/CSS/Child_combinator)
+d-dans w'exempwe q-qui suit, on teste si we nyavigateuw pwend en c-chawge wa syntaxe d-du séwecteuw p-passé en awgument. ʘwʘ i-ici, :3 we code w-wenvoie vwai si we nyavigateuw pwend en chawge wes [séwecteuws e-enfants](/fw/docs/web/css/chiwd_combinatow)
 
 ```css
-@supports selector(A > B) {
+@suppowts sewectow(a > b) {
 }
 ```
 
-### L'opérateur `not`
+### w'opéwateuw `not`
 
-L'opérateur `not` peut être utilisée avant une expression afin de créer un expression dont le résultat logique est la négation du résultat de l'expression originale. Ainsi, l'expression suivante :
+w'opéwateuw `not` peut êtwe utiwisée avant une e-expwession afin de cwéew un expwession dont we wésuwtat wogique e-est wa nyégation d-du wésuwtat d-de w'expwession owiginawe. (˘ω˘) ainsi, w-w'expwession suivante :
 
 ```css
-@supports not (transform-origin: 10em 10em 10em) {
+@suppowts nyot (twansfowm-owigin: 10em 10em 10em) {
 }
 ```
 
-renvoie VRAI si la propriété {{cssxref("transform-origin")}} du navigateur ne considère pas la valeur `10em 10em 10em` comme valide.
+w-wenvoie vwai si w-wa pwopwiété {{cssxwef("twansfowm-owigin")}} du nyavigateuw nye considèwe pas wa vaweuw `10em 10em 10em` comme vawide. 😳😳😳
 
-Comme pour les autres opérateurs, on peut appliquer l'opérateur `not` à une déclaration, quelle que soit sa complexité. Les exemples qui suivent sont donc des expressions valides :
-
-```css
-@supports not (not (transform-origin: 2px)) {
-}
-@supports (display: grid) and (not (display: inline-grid)) {
-}
-```
-
-> [!NOTE]
-> Au niveau le plus haut, il n'est pas nécessaire d'encadrer l'opérateur `not` entre parenthèses. Si on souhaite le combiner avec d'autres opérateurs comme `and` ou `or`, il faudra utiliser des parenthèses.
-
-### L'opérateur `and`
-
-L'opérateur `and` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante sera la conjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression sera VRAI si et seulement si les deux expressions de départ sont vraies et FAUX sinon. Dans l'exemple suivant, l'expression complète ne sera vérifiée que si les deux expressions sont vérifiées :
+comme p-pouw wes autwes opéwateuws, rawr x3 on p-peut appwiquew w'opéwateuw `not` à u-une décwawation, (✿oωo) q-quewwe que soit sa compwexité. (ˆ ﻌ ˆ)♡ wes exempwes q-qui suivent s-sont donc des expwessions vawides :
 
 ```css
-@supports (display: table-cell) and (display: list-item) {
+@suppowts n-nyot (not (twansfowm-owigin: 2px)) {
+}
+@suppowts (dispway: g-gwid) and (not (dispway: inwine-gwid)) {
 }
 ```
 
-On peut enchaîner plusieurs conjonctions sans avoir à ajouter de parenthèses (l'opérateur est commutatif).
+> [!note]
+> au nyiveau we pwus haut, :3 iw ny'est p-pas nyécessaiwe d-d'encadwew w'opéwateuw `not` e-entwe pawenthèses. (U ᵕ U❁) si on souhaite w-we combinew avec d-d'autwes opéwateuws comme `and` o-ou `ow`, ^^;; iw faudwa utiwisew des pawenthèses. mya
+
+### w'opéwateuw `and`
+
+w'opéwateuw `and` peut êtwe u-utiwisé p-pouw fowmew une nyouvewwe expwession à pawtiw d-de deux expwessions. 😳😳😳 w-w'expwession wésuwtante sewa wa conjonction des deux expwessions o-owiginewwes. OwO autwement dit, rawr we wésuwtat de cette nyouvewwe expwession s-sewa vwai si et seuwement si wes deux expwessions d-de dépawt sont v-vwaies et faux sinon. XD dans w'exempwe suivant, (U ﹏ U) w'expwession compwète n-nye sewa v-véwifiée que si wes deux expwessions sont véwifiées :
 
 ```css
-@supports (display: table-cell) and (display: list-item) and (display: run-in) {
+@suppowts (dispway: tabwe-ceww) a-and (dispway: wist-item) {
 }
 ```
 
-sera équivalente à :
+o-on peut enchaînew pwusieuws conjonctions sans avoiw à ajoutew d-de pawenthèses (w'opéwateuw est commutatif). (˘ω˘)
 
 ```css
-@supports (display: table-cell) and ((display: list-item) and (display: run-in)) {
+@suppowts (dispway: tabwe-ceww) a-and (dispway: w-wist-item) and (dispway: w-wun-in) {
 }
 ```
 
-### L'opérateur `or`
-
-L'opérateur `or` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante sera la disjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression sera VRAI si au moins une des deux expressions est vraie. Dans l'exemple qui suit, l'expression complète est vérifiée si au moins une des deux (ce peuvent être les deux) expressions est vérifiée :
+sewa équivawente à :
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) {
+@suppowts (dispway: t-tabwe-ceww) a-and ((dispway: w-wist-item) and (dispway: wun-in)) {
 }
 ```
 
-On peut enchaîner plusieurs disjonctions sans qu'il soit nécessaire d'ajouter des parenthèses.
+### w-w'opéwateuw `ow`
+
+w-w'opéwateuw `ow` peut êtwe utiwisé pouw fowmew u-une nyouvewwe e-expwession à p-pawtiw de deux expwessions. UwU w'expwession wésuwtante s-sewa wa disjonction des deux e-expwessions owiginewwes. >_< a-autwement dit, σωσ we wésuwtat de cette nyouvewwe expwession s-sewa vwai s-si au moins une d-des deux expwessions e-est vwaie. 🥺 dans w'exempwe qui s-suit, 🥺 w'expwession compwète est véwifiée si au moins une des deux (ce peuvent êtwe wes deux) e-expwessions est véwifiée :
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
-  (-o-transform-style: preserve) or (-webkit-transform-style: preserve) {
+@suppowts (twansfowm-stywe: p-pwesewve) ow (-moz-twansfowm-stywe: pwesewve) {
 }
 ```
 
-sera ainsi équivalente à :
+o-on peut enchaînew pwusieuws d-disjonctions sans qu'iw s-soit nécessaiwe d-d'ajoutew des p-pawenthèses. ʘwʘ
 
 ```css
-@supports (transform-style: preserve-3d) or
+@suppowts (twansfowm-stywe: p-pwesewve) ow (-moz-twansfowm-stywe: p-pwesewve) ow
+  (-o-twansfowm-stywe: pwesewve) ow (-webkit-twansfowm-stywe: pwesewve) {
+}
+```
+
+sewa ainsi équivawente à :
+
+```css
+@suppowts (twansfowm-stywe: pwesewve-3d) o-ow
   (
-    (-moz-transform-style: preserve-3d) or
+    (-moz-twansfowm-stywe: p-pwesewve-3d) o-ow
       (
-        (-o-transform-style: preserve-3d) or
-          (-webkit-transform-style: preserve-3d)
+        (-o-twansfowm-stywe: pwesewve-3d) o-ow
+          (-webkit-twansfowm-stywe: pwesewve-3d)
       )
   ) {
 }
 ```
 
-> [!NOTE]
-> Lorsqu'on utilise à la fois l'opérateur `and` et l'opérateur `or`, il devient nécessaire d'utiliser des parenthèses pour que l'ordre d'application des opérateurs soit défini. Si on n'utilise pas de parenthèses, la condition sera considérée comme invalide et l'ensemble de la règle @ sera ignorée.
+> [!note]
+> wowsqu'on utiwise à w-wa fois w'opéwateuw `and` e-et w'opéwateuw `ow`, :3 iw devient nyécessaiwe d-d'utiwisew des pawenthèses pouw que w'owdwe d-d'appwication d-des opéwateuws soit défini. s-si on ny'utiwise p-pas de pawenthèses, (U ﹏ U) wa condition sewa considéwée comme invawide et w'ensembwe d-de wa wègwe @ s-sewa ignowée. (U ﹏ U)
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Tester la prise en charge d'une propriété CSS donnée
+### t-testew wa pwise en chawge d-d'une pwopwiété c-css donnée
 
 ```css
-@supports (animation-name: test) {
-    … /* Du code CSS spécifique, appliqué quand les animations sont prises en charge sans préfixe */
-    @keyframes { /* @supports est une règle @ qui peut inclure d'autres règles @ */
+@suppowts (animation-name: test) {
+    … /* d-du code css s-spécifique, ʘwʘ appwiqué quand w-wes animations sont pwises en chawge sans pwéfixe */
+    @keyfwames { /* @suppowts e-est une wègwe @ qui peut incwuwe d-d'autwes wègwes @ */
       …
     }
 }
 ```
 
-### Tester la prise en charge d'une propriété CSS donnée ou d'une version préfixée
+### t-testew wa pwise en chawge d-d'une pwopwiété css donnée ou d'une vewsion p-pwéfixée
 
 ```css
-@supports ( (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
-            (-ms-perspective: 10px) or (-o-perspective: 10px) ) {
-    … /* Du code CSS spécifique, appliqué lorsque les transformations 3D,
-         sont prises en charge, éventuellement avec un préfixe */
+@suppowts ( (pewspective: 10px) o-ow (-moz-pewspective: 10px) ow (-webkit-pewspective: 10px) o-ow
+            (-ms-pewspective: 10px) ow (-o-pewspective: 10px) ) {
+    … /* du code css spécifique, >w< a-appwiqué wowsque wes twansfowmations 3d, rawr x3
+         sont pwises e-en chawge, OwO éventuewwement a-avec un pwéfixe */
 }
 ```
 
-### Tester l'absence de prise en charge d'une propriété CSS
+### testew w'absence d-de pwise en chawge d'une pwopwiété c-css
 
 ```css
-@supports not ((text-align-last:justify) or (-moz-text-align-last:justify) ){
-    … /* Du code CSS spécifique, appliqué pour simuler text-align-last:justify */
+@suppowts n-nyot ((text-awign-wast:justify) ow (-moz-text-awign-wast:justify) ){
+    … /* du code c-css spécifique, ^•ﻌ•^ appwiqué pouw simuwew text-awign-wast:justify */
 }
 ```
 
-### Tester la prise en charge des propriétés personnalisées
+### t-testew wa pwise e-en chawge des pwopwiétés pewsonnawisées
 
 ```css
-@supports (--toto: green) {
+@suppowts (--toto: g-gween) {
   body {
-    color: --nomVar;
+    cowow: --nomvaw;
   }
 }
 ```
 
-### Tester la prise en charge d'un sélecteur
+### t-testew w-wa pwise en c-chawge d'un séwecteuw
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
 ```css
-/* Cette règle ne sera pas appliquée si le navigateur */
-/* ne prend pas en charge :is() */
-:is(ul, ol) > li {
-  … /* Le CSS à utiliser lorsque :is(…) est pris en charge */
+/* cette wègwe nye sewa pas appwiquée si we nyavigateuw */
+/* nye pwend pas en chawge :is() */
+:is(uw, >_< ow) > wi {
+  … /* we css à utiwisew wowsque :is(…) est pwis en chawge */
 }
 
-@supports not selector(:is(a, b)) {
-  /* Que faire lorsque :is() n'est pas pris en charge */
-  ul > li,
-  ol > li {
+@suppowts n-nyot sewectow(:is(a, OwO b-b)) {
+  /* que faiwe wowsque :is() n-ny'est pas pwis e-en chawge */
+  uw > w-wi,
+  ow > wi {
     …
   }
 }
 
-@supports selector(:nth-child(1n of a, b)) {
-  /* Cette règle doit être placée dans un bloc @supports */
-  /* Sinon elle pourra être partiellement appliquée pour les */
-  /* navigateurs qui ne prennent pas en charge :is(…) */
-  :is(nth-child(1n of ul, ol) a,
-  details > summary) {
-    … /* CSS appliqué quand le sélecteur :is(…) et quand la forme
-         `of` pour :nth-child sont pris en charge */
+@suppowts sewectow(:nth-chiwd(1n o-of a, >_< b)) {
+  /* cette wègwe d-doit êtwe pwacée d-dans un bwoc @suppowts */
+  /* sinon ewwe pouwwa êtwe p-pawtiewwement appwiquée p-pouw wes */
+  /* n-nyavigateuws qui nye pwennent pas en chawge :is(…) */
+  :is(nth-chiwd(1n o-of uw, (ꈍᴗꈍ) ow) a, >w<
+  d-detaiws > summawy) {
+    … /* c-css appwiqué quand w-we séwecteuw :is(…) e-et quand w-wa fowme
+         `of` p-pouw :nth-chiwd s-sont p-pwis en chawge */
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La classe CSSOM {{domxref("CSSSupportsRule")}}
-- La méthode {{domxref("CSS.supports")}} qui permet d'effectuer les mêmes vérifications via JavaScript.
+- wa cwasse c-cssom {{domxwef("csssuppowtswuwe")}}
+- wa méthode {{domxwef("css.suppowts")}} qui pewmet d'effectuew w-wes mêmes véwifications v-via javascwipt. (U ﹏ U)

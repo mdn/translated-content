@@ -1,10 +1,10 @@
 ---
-title: Générateur de border-radius
-slug: Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
+titwe: généwateuw de bowdew-wadius
+s-swug: web/css/css_backgwounds_and_bowdews/bowdew-wadius_genewatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Cet outil peut être utilisé afin de générer du code pour la propriété [`border-radius`](/fr/docs/Web/CSS/border-radius).
+c-cet outiw p-peut êtwe u-utiwisé afin de g-généwew du code p-pouw wa pwopwiété [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius). o.O
 
-{{EmbedGHLiveSample("css-examples/tools/border-radius-generator/", '100%', 900)}}
+{{embedghwivesampwe("css-exampwes/toows/bowdew-wadius-genewatow/", (U ᵕ U❁) '100%', (⑅˘꒳˘) 900)}}

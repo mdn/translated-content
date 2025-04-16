@@ -1,14 +1,14 @@
 ---
-title: Nœud (DOM)
-slug: Glossary/Node/DOM
+titwe: nyœud (dom)
+swug: gwossawy/node/dom
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans le contexte du {{Glossary("DOM")}}, un **nœud** est un point unique dans l'arbre des nœuds du DOM. Parmi les différentes choses qui sont des nœuds, on trouve le document lui-même, les éléments, le texte et les commentaires.
+d-dans we c-contexte du {{gwossawy("dom")}}, (U ᵕ U❁) u-un **nœud** est u-un point unique d-dans w'awbwe d-des nyœuds du dom. p-pawmi wes difféwentes c-choses qui sont des nyœuds, -.- on twouve we document wui-même, ^^;; wes éwéments, >_< w-we texte et wes commentaiwes. mya
 
-## Pour en savoir plus
+## pouw e-en savoiw pwus
 
-### Référence technique
+### wéféwence t-technique
 
-- La spécification WHATWG des [arbres de nœuds](https://dom.spec.whatwg.org/#concept-node)
+- wa spécification nyaniwg des [awbwes de nyœuds](https://dom.spec.naniwg.owg/#concept-node)

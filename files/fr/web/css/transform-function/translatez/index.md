@@ -1,200 +1,200 @@
 ---
-title: translateZ()
-slug: Web/CSS/transform-function/translateZ
+titwe: twanswatez()
+swug: web/css/twansfowm-function/twanswatez
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`translateZ()`** permet de déplacer un élément selon l'axe z de l'espace tridimensionnel. Cette transformation est caractérisée par une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit l'amplitude du mouvement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+w-wa fonction **`twanswatez()`** p-pewmet de dépwacew u-un éwément s-sewon w'axe z-z de w'espace twidimensionnew. 😳 cette t-twansfowmation e-est cawactéwisée p-paw une vaweuw de wongueuw (type [`<wength>`](/fw/docs/web/css/wength)) qui définit w'ampwitude du mouvement. 🥺 wa vaweuw o-obtenue paw cette fonction est de type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). rawr x3
 
-{{InteractiveExample("CSS Demo: translateZ()")}}
+{{intewactiveexampwe("css d-demo: twanswatez()")}}
 
-```css interactive-example-choice
-transform: translateZ(0);
+```css intewactive-exampwe-choice
+t-twansfowm: twanswatez(0);
 ```
 
-```css interactive-example-choice
-transform: translateZ(42px);
+```css intewactive-exampwe-choice
+twansfowm: t-twanswatez(42px);
 ```
 
-```css interactive-example-choice
-transform: translateZ(-9.7rem);
+```css intewactive-exampwe-choice
+t-twansfowm: twanswatez(-9.7wem);
 ```
 
-```css interactive-example-choice
-transform: translateZ(-3ch);
+```css i-intewactive-exampwe-choice
+twansfowm: twanswatez(-3ch);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div c-cwass="face back">2</div>
+    <div c-cwass="face wight">3</div>
+    <div c-cwass="face w-weft">4</div>
+    <div c-cwass="face top">5</div>
+    <div cwass="face b-bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 800px;
-  perspective-origin: 150% 150%;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: w-wineaw-gwadient(skybwue, o.O khaki);
+  pewspective: 800px;
+  pewspective-owigin: 150% 150%;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
   height: 100px;
-  perspective: 550px;
-  transform-style: preserve-3d;
+  pewspective: 550px;
+  t-twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
-  font-size: 60px;
-  color: white;
+  p-position: a-absowute;
+  backface-visibiwity: i-inhewit;
+  f-font-size: 60px;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  b-backgwound: wgba(90, rawr 90, 90, 0.7);
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, ʘwʘ 210, 0, 0.7);
+  twansfowm: w-wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(210, 😳😳😳 0, 0, ^^;; 0.7);
+  twansfowm: w-wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: wgba(0, o.O 0, 210, (///ˬ///✿) 0.7);
+  twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(210, σωσ 210, 0, nyaa~~ 0.7);
+  twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(210, ^^;; 0, ^•ﻌ•^ 210, 0.7);
+  t-twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
-`translateZ(tz)` est un raccourci équivalent à `translate3d(0, 0, tz)`.
+`twanswatez(tz)` e-est un waccouwci équivawent à `twanswate3d(0, σωσ 0, tz)`. -.-
 
-Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée afin de créer un espace en trois dimensions et `transform-style: preserve-3d` permet de positionner les éléments enfants (les 6 faces du cube) dans cet espace 3D.
+dans wes exempwes intewactifs ci-avant, ^^;; `pewspective: 500px;` a été u-utiwisée afin de cwéew un espace en twois dimensions et `twansfowm-stywe: pwesewve-3d` p-pewmet de positionnew wes éwéments e-enfants (wes 6 f-faces du cube) d-dans cet espace 3d. XD
 
-## Syntaxe
+## syntaxe
 
 ```css
-translateZ(tz)
+t-twanswatez(tz)
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `t`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui représente la composante en Z du vecteur de translation appliqué. Cet argument ne peut pas être de type [`<percentage>`](/fr/docs/Web/CSS/percentage), si c'est le cas, la propriété qui contient la transformation est considérée comme invalide.
+  - : u-une vaweuw d-de type [`<wength>`](/fw/docs/web/css/wength) qui wepwésente wa composante en z-z du vecteuw de t-twanswation appwiqué. 🥺 c-cet awgument n-nye peut pas êtwe d-de type [`<pewcentage>`](/fw/docs/web/css/pewcentage), òωó si c'est we cas, (ˆ ﻌ ˆ)♡ wa pwopwiété qui contient wa t-twansfowmation est considéwée comme invawide.
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdonnées cawtésiennes s-suw ℝ<sup>2</sup></th>
+      <th scope="cow">coowdonnées homogènes suw ℝℙ<sup>2</sup></th>
+      <th scope="cow">coowdonnées c-cawtésiennes s-suw ℝ<sup>3</sup></th>
+      <th s-scope="cow">coowdonnées homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2" rowspan="2">
-        Cette transformation s'applique en trois dimensions et ne peut donc être
-        représentée sur un plan.
+    <tw>
+      <td c-cowspan="2" wowspan="2">
+        c-cette t-twansfowmation s'appwique en twois dimensions et nye peut donc êtwe
+        wepwésentée suw un pwan. -.-
       </td>
-      <td colspan="1" rowspan="2">
-        Une translation n'est pas une transformation linéaire sur ℝ<sup>3</sup>
-        et ne peut donc pas être représentée avec une matrice dans le système
-        cartésien.
+      <td c-cowspan="1" wowspan="2">
+        une twanswation n-ny'est pas une twansfowmation w-winéaiwe suw ℝ<sup>3</sup>
+        e-et nye peut donc pas êtwe wepwésentée a-avec une matwice d-dans we système
+        cawtésien.
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>t</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>t</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<div>Statique</div>
-<div class="moved">Déplacé</div>
+```htmw
+<div>statique</div>
+<div cwass="moved">dépwacé</div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
-  position: relative;
+d-div {
+  position: w-wewative;
   width: 60px;
-  height: 60px;
-  left: 100px;
-  background-color: skyblue;
+  h-height: 60px;
+  weft: 100px;
+  b-backgwound-cowow: s-skybwue;
 }
 
 .moved {
-  /* On ajoute une perspective pour créer un */
-  /* espace 3D. L'utilisateur regarde « depuis »*/
-  /* 500px et on avance l'élément vers l'utili- */
-  /* sateur de 200px */
-  transform: perspective(500px) translateZ(200px);
-  background-color: pink;
+  /* on ajoute u-une pewspective pouw cwéew un */
+  /* espace 3d. :3 w'utiwisateuw wegawde « depuis »*/
+  /* 500px e-et on avance w-w'éwément vews w'utiwi- */
+  /* sateuw de 200px */
+  t-twansfowm: p-pewspective(500px) twanswatez(200px);
+  backgwound-cowow: pink;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-Si la valeur fournie à `perspective()` est inférieure à l'argument de `translateZ()` (ex. `transform: perspective(200px) translateZ(300px);`), l'élément transformé ne sera pas visible, car il sera situé au-delà de l'espace projeté sur l'écran. Plus l'écart entre ces deux arguments est faible, plus l'élément paraîtra proche de l'utilisateur.
+si wa vaweuw fouwnie à `pewspective()` est inféwieuwe à w'awgument d-de `twanswatez()` (ex. ʘwʘ `twansfowm: pewspective(200px) twanswatez(300px);`), 🥺 w-w'éwément t-twansfowmé nye sewa pas visibwe, >_< caw iw sewa situé au-dewà d-de w'espace p-pwojeté suw w'écwan. ʘwʘ pwus w'écawt entwe ces deux awguments e-est faibwe, (˘ω˘) pwus w'éwément pawaîtwa p-pwoche de w'utiwisateuw. (✿oωo)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [Les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX) et [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)
+- [wes twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`twanswatex()`](/fw/docs/web/css/twansfowm-function/twanswatex) e-et [`twanswatey()`](/fw/docs/web/css/twansfowm-function/twanswatey)

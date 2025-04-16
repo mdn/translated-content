@@ -1,202 +1,202 @@
 ---
-title: border-color
-slug: Web/CSS/border-color
+titwe: bowdew-cowow
+swug: web/css/bowdew-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`border-color`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir la couleur de la bordure sur les quatre côtés de la boîte de bordure d'un élément.
+w-wa pwopwiété c-css **`bowdew-cowow`** e-est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui pewmet de définiw w-wa couweuw d-de wa bowduwe s-suw wes quatwe côtés de wa boîte de bowduwe d'un éwément.
 
-{{InteractiveExample("CSS Demo: border-color")}}
+{{intewactiveexampwe("css demo: b-bowdew-cowow")}}
 
-```css interactive-example-choice
-border-color: red;
+```css intewactive-exampwe-choice
+bowdew-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-border-color: red #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-cowow: w-wed #32a1ce;
 ```
 
-```css interactive-example-choice
-border-color: red rgba(170, 50, 220, 0.6) green;
+```css intewactive-exampwe-choice
+bowdew-cowow: wed wgba(170, σωσ 50, 220, 0.6) g-gween;
 ```
 
-```css interactive-example-choice
-border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+b-bowdew-cowow: w-wed yewwow gween hswa(60, >w< 90%, 😳😳😳 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-color: red yellow green transparent;
+```css intewactive-exampwe-choice
+bowdew-cowow: wed yewwow g-gween twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box w-with a bowdew a-awound it. OwO
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-Chaque côté peut être paramétré individuellement grâce aux propriétés {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}} et {{cssxref("border-left-color")}} ou, si on utilise les propriétés logiques : {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start-color")}} et {{cssxref("border-inline-end-color")}}.
+chaque côté peut êtwe pawamétwé individuewwement gwâce aux pwopwiétés {{cssxwef("bowdew-top-cowow")}}, 😳 {{cssxwef("bowdew-wight-cowow")}}, 😳😳😳 {{cssxwef("bowdew-bottom-cowow")}} e-et {{cssxwef("bowdew-weft-cowow")}} ou, (˘ω˘) si on utiwise w-wes pwopwiétés w-wogiques : {{cssxwef("bowdew-bwock-stawt-cowow")}}, ʘwʘ {{cssxwef("bowdew-bwock-end-cowow")}}, ( ͡o ω ͡o ) {{cssxwef("bowdew-inwine-stawt-cowow")}} e-et {{cssxwef("bowdew-inwine-end-cowow")}}. o.O
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* border-color : Une valeur        */
-/* Une valeur pour les quatre côtés */
-border-color: red;
+/* bowdew-cowow : une v-vaweuw        */
+/* u-une vaweuw pouw wes quatwe c-côtés */
+bowdew-cowow: w-wed;
 
-/* border-color : Deux valeurs         */
-/* Première valeur : côtés horizontaux */
-/* Seconde valeur : côtés verticaux    */
-border-color: red #f015ca;
+/* bowdew-cowow : d-deux vaweuws         */
+/* pwemièwe v-vaweuw : côtés howizontaux */
+/* seconde v-vaweuw : côtés vewticaux    */
+b-bowdew-cowow: wed #f015ca;
 
-/* border-color : Trois valeurs        */
-/* Première valeur : côté haut         */
-/* Deuxième valeur : côtés verticaux */
-/* Troisième valeur : côté bas         */
-border-color: red yellow green;
+/* b-bowdew-cowow : t-twois vaweuws        */
+/* pwemièwe vaweuw : côté haut         */
+/* deuxième vaweuw : côtés vewticaux */
+/* t-twoisième vaweuw : c-côté bas         */
+bowdew-cowow: w-wed yewwow g-gween;
 
-/* border-color : Quatre valeurs  */
-/* Première valeur : côté haut    */
-/* Deuxième valeur : côté droit   */
-/* Troisième valeur : côté bas    */
-/* Quatrième valeur : côté gauche */
-border-color: red yellow green blue;
+/* b-bowdew-cowow : quatwe vaweuws  */
+/* pwemièwe vaweuw : côté h-haut    */
+/* deuxième vaweuw : côté dwoit   */
+/* twoisième vaweuw : côté b-bas    */
+/* quatwième vaweuw : c-côté gauche */
+b-bowdew-cowow: w-wed yewwow gween bwue;
 
-/* Valeurs globales */
-border-color: inherit;
+/* vaweuws g-gwobawes */
+b-bowdew-cowow: inhewit;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<color>`
-  - : Une valeur de type {{cssxref("&lt;color&gt;")}} qui indique la couleur qu'on souhaite appliquer sur un ou plusieurs côtés de la boîte de bordure.
-- `inherit`
-  - : Un mot-clé qui indique que les quatre valeurs sont héritées depuis la valeur calculée de la propriété pour l'élément parent.
+- `<cowow>`
+  - : u-une vaweuw de type {{cssxwef("&wt;cowow&gt;")}} qui indique w-wa couweuw q-qu'on souhaite a-appwiquew suw un o-ou pwusieuws côtés d-de wa boîte de bowduwe. >w<
+- `inhewit`
+  - : un mot-cwé qui indique que wes q-quatwe vaweuws sont héwitées depuis wa vaweuw cawcuwée de wa pwopwiété pouw w'éwément pawent. 😳
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-#unevaleur {
-  border-color: red;
+#unevaweuw {
+  b-bowdew-cowow: w-wed;
 }
 
-#horzvert {
-  border-color: gold red;
+#howzvewt {
+  bowdew-cowow: g-gowd wed;
 }
 
-#hauthoribas {
-  border-color: red cyan gold;
+#hauthowibas {
+  bowdew-cowow: w-wed c-cyan gowd;
 }
 
 #hdbg {
-  border-color: red cyan black gold;
+  bowdew-cowow: wed cyan bwack gowd;
 }
 
-/* Set width and style for all divs */
-div {
-  border: solid 0.3em;
-  width: auto;
-  margin: 0.5em;
-  padding: 0.5em;
+/* set width and stywe fow aww divs */
+d-div {
+  bowdew: sowid 0.3em;
+  w-width: auto;
+  mawgin: 0.5em;
+  p-padding: 0.5em;
 }
 
-ul {
-  margin: 0;
-  list-style: none;
+u-uw {
+  mawgin: 0;
+  wist-stywe: nyone;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="unevaleur">
-  <p><code>border-color: red;</code> équivalent à</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: red;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+```htmw
+<div i-id="unevaweuw">
+  <p><code>bowdew-cowow: wed;</code> équivawent à</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: wed;</code></wi>
+    <wi><code>bowdew-weft-cowow: wed;</code></wi>
+  </uw>
 </div>
-<div id="horzvert">
-  <p><code>border-color: gold red;</code> équivalent à</p>
-  <ul>
-    <li><code>border-top-color: gold;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+<div id="howzvewt">
+  <p><code>bowdew-cowow: gowd wed;</code> équivawent à</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: g-gowd;</code></wi>
+    <wi><code>bowdew-wight-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: g-gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: wed;</code></wi>
+  </uw>
 </div>
-<div id="hauthoribas">
-  <p><code>border-color: red cyan gold;</code> équivalent à</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: cyan;</code></li>
-  </ul>
+<div i-id="hauthowibas">
+  <p><code>bowdew-cowow: w-wed cyan gowd;</code> équivawent à</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: cyan;</code></wi>
+  </uw>
 </div>
 <div id="hdbg">
-  <p><code>border-color: red cyan black gold;</code> équivalent à</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: black;</code></li>
-    <li><code>border-left-color: gold;</code></li>
-  </ul>
+  <p><code>bowdew-cowow: wed c-cyan bwack gowd;</code> équivawent à</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: bwack;</code></wi>
+    <wi><code>bowdew-weft-cowow: g-gowd;</code></wi>
+  </uw>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', 600, 300)}}
+{{embedwivesampwe('exempwes', 🥺 600, 300)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés liées à la couleur de la bordure
+- wes pwopwiétés wiées à wa couweuw de wa bowduwe
 
-  - {{cssxref("border")}},
-  - {{cssxref("border-top-color")}},
-  - {{cssxref("border-right-color")}},
-  - {{cssxref("border-bottom-color")}},
-  - {{cssxref("border-left-color")}},
+  - {{cssxwef("bowdew")}}, rawr x3
+  - {{cssxwef("bowdew-top-cowow")}},
+  - {{cssxwef("bowdew-wight-cowow")}}, o.O
+  - {{cssxwef("bowdew-bottom-cowow")}}, rawr
+  - {{cssxwef("bowdew-weft-cowow")}}, ʘwʘ
 
-- Les autres propriétés raccourcies liées à la bordure :
+- w-wes autwes pwopwiétés waccouwcies wiées à w-wa bowduwe :
 
-  - {{cssxref("border-width")}},
-  - {{cssxref("border-style")}}.
+  - {{cssxwef("bowdew-width")}}, 😳😳😳
+  - {{cssxwef("bowdew-stywe")}}. ^^;;
 
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-- Le type de données {{cssxref("&lt;color&gt;")}}
-- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}.
+- [appwiquew d-des couweuws suw des éwéments htmw gwâce à css](/fw/docs/web/css/css_cowows/appwying_cowow)
+- we type de données {{cssxwef("&wt;cowow&gt;")}}
+- w-wes autwes p-pwopwiétés wewatives aux couweuws : {{cssxwef("cowow")}}, o.O {{cssxwef("backgwound-cowow")}}, (///ˬ///✿) {{cssxwef("bowdew-cowow")}}, σωσ {{cssxwef("outwine-cowow")}}, nyaa~~ {{cssxwef("text-decowation-cowow")}}, ^^;; {{cssxwef("text-emphasis-cowow")}}, {{cssxwef("text-shadow")}}, ^•ﻌ•^ {{cssxwef("cawet-cowow")}} et {{cssxwef("cowumn-wuwe-cowow")}}. σωσ

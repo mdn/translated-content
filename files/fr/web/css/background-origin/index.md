@@ -1,163 +1,163 @@
 ---
-title: background-origin
-slug: Web/CSS/background-origin
+titwe: backgwound-owigin
+swug: w-web/css/backgwound-owigin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`background-origin`** détermine l'origine de l'arrière-plan [`background-image`](/fr/docs/Web/CSS/background-image) à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (<i lang="en">padding</i>).
+w-wa p-pwopwiété **`backgwound-owigin`** d-détewmine w'owigine d-de w'awwièwe-pwan [`backgwound-image`](/fw/docs/web/css/backgwound-image) à p-pawtiw de w-wa bowduwe, (ꈍᴗꈍ) à w-w'intéwieuw de wa bowduwe ou à w'intéwieuw de wa zone de wempwissage (<i wang="en">padding</i>). /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: background-origin")}}
+{{intewactiveexampwe("css demo: b-backgwound-owigin")}}
 
-```css interactive-example-choice
-background-origin: border-box;
-background-repeat: no-repeat;
+```css intewactive-exampwe-choice
+backgwound-owigin: b-bowdew-box;
+backgwound-wepeat: nyo-wepeat;
 ```
 
-```css interactive-example-choice
-background-origin: padding-box;
-background-repeat: no-repeat;
+```css i-intewactive-exampwe-choice
+backgwound-owigin: padding-box;
+backgwound-wepeat: n-nyo-wepeat;
 ```
 
-```css interactive-example-choice
-background-origin: content-box;
-background-repeat: no-repeat;
+```css intewactive-exampwe-choice
+b-backgwound-owigin: c-content-box;
+backgwound-wepeat: nyo-wepeat;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is the content of the element.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">this i-is the content of the ewement.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-image: url("/shared-assets/images/examples/leopard.jpg");
-  color: #d73611;
-  text-shadow: 2px 2px black;
-  padding: 20px;
-  border: 10px dashed #333;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-image: uww("/shawed-assets/images/exampwes/weopawd.jpg");
+  c-cowow: #d73611;
+  text-shadow: 2px 2px b-bwack;
+  p-padding: 20px;
+  b-bowdew: 10px d-dashed #333;
   font-size: 2em;
-  font-weight: bold;
+  font-weight: b-bowd;
 }
 ```
 
-Attention, `background-origin` est ignorée lorsque [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`.
+attention, (⑅˘꒳˘) `backgwound-owigin` est ignowée wowsque [`backgwound-attachment`](/fw/docs/web/css/backgwound-attachment) v-vaut `fixed`. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
+> [!note]
+> cette pwopwiété est wattachée à wa pwopwiété waccouwcie [`backgwound`](/fw/docs/web/css/backgwound). òωó aussi, s-si on a une décwawation `backgwound-owigin` avant w-wa pwopwiété w-waccouwcie et q-que cette dewnièwe nye définit pas wa vaweuw de w'owigine, (⑅˘꒳˘) ce s-sewa wa vaweuw i-initiawe paw défaut qui sewa pwise e-en compte pouw `backgwound-owigin`. XD
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-background-origin: border-box;
-background-origin: padding-box;
-background-origin: content-box;
+/* vaweuws avec un mot-cwé */
+b-backgwound-owigin: bowdew-box;
+b-backgwound-owigin: padding-box;
+backgwound-owigin: c-content-box;
 
-/* Valeurs globales */
-background-origin: inherit;
-background-origin: initial;
-background-origin: revert;
-background-origin: unset;
+/* vaweuws g-gwobawes */
+backgwound-owigin: i-inhewit;
+backgwound-owigin: i-initiaw;
+backgwound-owigin: wevewt;
+backgwound-owigin: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `border-box`
-  - : L'arrière-plan est positionné relativement à la boîte de bordure.
+- `bowdew-box`
+  - : w'awwièwe-pwan est positionné w-wewativement à w-wa boîte de bowduwe. -.-
 - `padding-box`
-  - : L'arrière-plan est positionné relativement à la boîte de remplissage (<i lang="en">padding</i>).
+  - : w-w'awwièwe-pwan e-est positionné w-wewativement à wa boîte de wempwissage (<i wang="en">padding</i>). :3
 - `content-box`
-  - : L'arrière-plan est positionné relativement à la boîte de contenu.
+  - : w'awwièwe-pwan est p-positionné wewativement à wa boîte de contenu. nyaa~~
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Définir différentes origines
+### définiw d-difféwentes o-owigines
 
 ```css
-.example {
-  border: 10px double;
+.exampwe {
+  bowdew: 10px d-doubwe;
   padding: 10px;
-  background: url("image.jpg");
-  background-position: center left;
-  background-origin: content-box;
+  b-backgwound: u-uww("image.jpg");
+  b-backgwound-position: centew weft;
+  backgwound-owigin: content-box;
 }
 ```
 
 ```css
-#example2 {
-  border: 4px solid black;
-  padding: 10px;
-  background: url("image.gif");
-  background-repeat: no-repeat;
-  background-origin: border-box;
+#exampwe2 {
+  b-bowdew: 4px s-sowid bwack;
+  p-padding: 10px;
+  b-backgwound: u-uww("image.gif");
+  backgwound-wepeat: nyo-wepeat;
+  backgwound-owigin: b-bowdew-box;
 }
 ```
 
 ```css
 div {
-  background-image:
-    url("logo.jpg"), url("mainback.png"); /* Applique deux images en arrière-plan */
-  background-position:
-    top right,
+  backgwound-image:
+    uww("wogo.jpg"), 😳 uww("mainback.png"); /* appwique deux images e-en awwièwe-pwan */
+  backgwound-position:
+    top wight, (⑅˘꒳˘)
     0px 0px;
-  background-origin: content-box, padding-box;
+  backgwound-owigin: c-content-box, nyaa~~ p-padding-box;
 }
 ```
 
-### Utiliser deux dégradés
+### u-utiwisew deux dégwadés
 
-Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le premier dégradé utilise `padding-box` pour `background-origin` et l'arrière-plan s'inscrit donc à l'intérieur de la bordure. Le second dégradé utilise `content-box` et apparaît donc uniquement derrière le contenu.
+dans c-cet exempwe, OwO wa boîte possède u-une bowduwe épaisse e-en pointiwwés. rawr x3 we pwemiew dégwadé utiwise `padding-box` pouw `backgwound-owigin` et w'awwièwe-pwan s'inscwit d-donc à w'intéwieuw de wa b-bowduwe. XD we second dégwadé utiwise `content-box` e-et appawaît d-donc uniquement dewwièwe we contenu. σωσ
 
-#### HTML
+#### htmw
 
-```html
-<div class="box">Coucou !</div>
+```htmw
+<div c-cwass="box">coucou !</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .box {
-  margin: 10px 0;
-  color: #fff;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(253, 29, 29, 0.6) 60%,
-      rgba(252, 176, 69, 1) 100%
-    ),
-    radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
-  border: 20px dashed black;
-  padding: 20px;
+  mawgin: 10px 0;
+  c-cowow: #fff;
+  b-backgwound:
+    wineaw-gwadient(
+      90deg, (U ᵕ U❁)
+      wgba(131, (U ﹏ U) 58, 180, :3 1) 0%,
+      wgba(253, ( ͡o ω ͡o ) 29, 29, 0.6) 60%, σωσ
+      wgba(252, >w< 176, 69, 😳😳😳 1) 100%
+    ), OwO
+    w-wadiaw-gwadient(ciwcwe, w-wgba(255, 😳 255, 😳😳😳 255, 1) 0%, w-wgba(0, (˘ω˘) 0, 0, 1) 28%);
+  bowdew: 20px d-dashed bwack;
+  p-padding: 20px;
   width: 400px;
-  background-origin: padding-box, content-box;
-  background-repeat: no-repeat;
+  b-backgwound-owigin: padding-box, ʘwʘ content-box;
+  backgwound-wepeat: no-wepeat;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("","300","200")}}
+{{embedwivesampwe("","300","200")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`background-clip`](/fr/docs/Web/CSS/background-clip)
+- [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip)

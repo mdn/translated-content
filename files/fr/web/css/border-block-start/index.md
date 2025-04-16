@@ -1,132 +1,132 @@
 ---
-title: border-block-start
-slug: Web/CSS/border-block-start
+titwe: bowdew-bwock-stawt
+swug: w-web/css/bowdew-bwock-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`border-block-start`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant au début de l'élément dans l'axe orthogonal au sens de lecture. Elle peut être utilisée pour définir les valeurs de {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}} et {{cssxref("border-block-start-color")}}.
+w-wa pwopwiété **`bowdew-bwock-stawt`** e-est une p-pwopwiété waccouwcie q-qui pewmet d-de définiw wa b-bowduwe d'un éwément p-pouw we côté cowwespondant au début de w'éwément dans w'axe owthogonaw a-au sens de wectuwe. ( ͡o ω ͡o ) ewwe peut êtwe utiwisée p-pouw définiw wes vaweuws de {{cssxwef("bowdew-bwock-stawt-width")}}, >_< {{cssxwef("bowdew-bwock-stawt-stywe")}} e-et {{cssxwef("bowdew-bwock-stawt-cowow")}}. >w<
 
-{{InteractiveExample("CSS Demo: border-block-start")}}
+{{intewactiveexampwe("css demo: bowdew-bwock-stawt")}}
 
-```css interactive-example-choice
-border-block-start: solid;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bowdew-bwock-stawt: s-sowid;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start: dashed red;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+bowdew-bwock-stawt: dashed wed;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-start: 1rem solid;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+bowdew-bwock-stawt: 1wem sowid;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start: thick double #32a1ce;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+b-bowdew-bwock-stawt: thick doubwe #32a1ce;
+w-wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. rawr
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-Cette propriété logique correspond à l'une des propriété physique équivalente selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} ou {{cssxref("border-left")}} selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+c-cette pwopwiété wogique cowwespond à w-w'une d-des pwopwiété p-physique équivawente sewon we mode d'écwituwe, 😳 wa diwectionnawité e-et w'owientation d-du texte. >w< autwement dit, (⑅˘꒳˘) e-ewwe cowwespond à w-w'une des pwopwiétés {{cssxwef("bowdew-top")}}, OwO {{cssxwef("bowdew-wight")}}, (ꈍᴗꈍ) {{cssxwef("bowdew-bottom")}} ou {{cssxwef("bowdew-weft")}} s-sewon wes vaweuws u-utiwisées pouw {{cssxwef("wwiting-mode")}}, 😳 {{cssxwef("diwection")}} et {{cssxwef("text-owientation")}}. 😳😳😳
 
-On peut rapprocher cette propriété des autres propriétés logiques raccourcies définissant les bordures des autres côtés :
+on peut w-wappwochew cette pwopwiété d-des autwes pwopwiétés wogiques w-waccouwcies définissant w-wes bowduwes des autwes côtés :
 
-- {{cssxref("border-block-end")}},
-- {{cssxref("border-inline-end")}},
-- {{cssxref("border-inline-start")}}.
+- {{cssxwef("bowdew-bwock-end")}}, mya
+- {{cssxwef("bowdew-inwine-end")}}, mya
+- {{cssxwef("bowdew-inwine-stawt")}}. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-border-block-start: 1px;
-border-block-start: 2px dotted;
-border-block-start: medium dashed green;
+bowdew-bwock-stawt: 1px;
+bowdew-bwock-stawt: 2px dotted;
+bowdew-bwock-stawt: m-medium d-dashed gween;
 ```
 
-### Valeurs
+### vaweuws
 
-Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
+u-une ou pwusieuws v-vaweuws pawmi w-wes suivantes, (U ﹏ U) dans ny'impowte quew owdwe :
 
-- `<'border-width'>`
-  - : La largeur utilisée pour la bordure de ce côté, voir {{cssxref("border-width")}}.
-- `<'border-style'>`
-  - : Le style utilisé pour la ligne de la bordure de ce côté, voir {{cssxref("border-style")}}.
-- `<'color'>`
-  - : La couleur de la bordure de ce côté, voir {{cssxref("color")}}.
+- `<'bowdew-width'>`
+  - : wa wawgeuw u-utiwisée pouw wa bowduwe de ce côté, voiw {{cssxwef("bowdew-width")}}. mya
+- `<'bowdew-stywe'>`
+  - : we stywe utiwisé pouw w-wa wigne de wa bowduwe de ce côté, ʘwʘ v-voiw {{cssxwef("bowdew-stywe")}}. (˘ω˘)
+- `<'cowow'>`
+  - : w-wa couweuw d-de wa bowduwe de ce côté, (U ﹏ U) v-voiw {{cssxwef("cowow")}}. ^•ﻌ•^
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
-  height: 120px;
+  backgwound-cowow: yewwow;
+  w-width: 120px;
+  h-height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-rl;
-  border-block-start: 5px dashed blue;
+.exempwe {
+  w-wwiting-mode: v-vewticaw-ww;
+  b-bowdew-bwock-stawt: 5px dashed bwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte d'exemple</p>
+  <p c-cwass="exempwe">texte d'exempwe</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", (˘ω˘) 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes :
+- wes pwopwiétés physiques cowwespondantes :
 
-  - {{cssxref("border-top")}},
-  - {{cssxref("border-right")}},
-  - {{cssxref("border-bottom")}},
-  - {{cssxref("border-left")}}
+  - {{cssxwef("bowdew-top")}},
+  - {{cssxwef("bowdew-wight")}}, :3
+  - {{cssxwef("bowdew-bottom")}}, ^^;;
+  - {{cssxwef("bowdew-weft")}}
 
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- {{cssxwef("wwiting-mode")}}, 🥺 {{cssxwef("diwection")}}, (⑅˘꒳˘) {{cssxwef("text-owientation")}}

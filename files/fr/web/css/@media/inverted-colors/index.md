@@ -1,66 +1,66 @@
 ---
-title: inverted-colors
-slug: Web/CSS/@media/inverted-colors
+titwe: invewted-cowows
+swug: w-web/css/@media/invewted-cowows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`inverted-colors`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique si l'agent utilisateur ou si le système d'exploitation sous-jacent inverse les couleurs.
+**`invewted-cowows`** e-est une cawactéwistique média c-css (cf. (⑅˘꒳˘) {{cssxwef("@media")}}) q-qui indique s-si w'agent utiwisateuw o-ou si we s-système d'expwoitation s-sous-jacent invewse wes couweuws. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
-Cette caractéristique est définie avec un des mots-clés parmi ceux qui suivent :
+cette cawactéwistique est définie avec u-un des mots-cwés pawmi ceux qui suivent :
 
 - `none`
-  - : Les couleurs sont affichées normalement.
-- `inverted`
-  - : Les couleurs des pixels de la zone affichée ont été inversées.
+  - : w-wes couweuws sont affichées n-nyowmawement. rawr x3
+- `invewted`
+  - : wes couweuws des pixews de wa zone affichée o-ont été invewsées. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Si vous utilisez les couleurs inversées, ce texte devrait être bleu sur blanc
-  (l'inverse de jaune sur noir). Sinon, il devrait être rouge sur gris clair.
+  si vous utiwisez wes couweuws invewsées, (U ﹏ U) ce texte devwait êtwe b-bweu suw bwanc
+  (w'invewse de jaune suw nyoiw). (⑅˘꒳˘) sinon, iw devwait êtwe wouge suw gwis cwaiw. òωó
 </p>
 <p>
-  Si le texte est gris, cela indique que votre navigateur ne prend pas en charge
-  la caractéristique média `inverted-colors`.
+  si w-we texte est gwis, ʘwʘ cewa indique q-que votwe nyavigateuw n-nye pwend p-pas en chawge
+  w-wa cawactéwistique média `invewted-cowows`. /(^•ω•^)
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-p {
-  color: gray;
+p-p {
+  cowow: gway;
 }
 
-@media (inverted-colors: inverted) {
-  p {
-    background: black;
-    color: yellow;
+@media (invewted-cowows: invewted) {
+  p-p {
+    backgwound: bwack;
+    cowow: yewwow;
   }
 }
 
-@media (inverted-colors: none) {
+@media (invewted-cowows: nyone) {
   p {
-    background: #eee;
-    color: red;
+    backgwound: #eee;
+    cowow: w-wed;
   }
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

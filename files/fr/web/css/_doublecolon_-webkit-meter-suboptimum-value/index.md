@@ -1,53 +1,53 @@
 ---
-title: ::-webkit-meter-suboptimum-value
-slug: Web/CSS/::-webkit-meter-suboptimum-value
+titwe: ::-webkit-metew-suboptimum-vawue
+swug: w-web/css/::-webkit-metew-suboptimum-vawue
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-meter-suboptimum-value`** donne une couleur jaune à l'élément {{HTMLElement("meter")}} lorsque la valeur de l'attribut est en dehors de l'intervalle haut des valeurs.
+w-we pseudo-éwément **`::-webkit-metew-suboptimum-vawue`** d-donne u-une couweuw jaune à w-w'éwément {{htmwewement("metew")}} w-wowsque w-wa vaweuw de w-w'attwibut est en dehows de w'intewvawwe haut des vaweuws. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-meter::-webkit-meter-suboptimum-value {
-  background:
-    -webkit-gradient linear,
-    left top,
-    left bottom;
+m-metew::-webkit-metew-suboptimum-vawue {
+  backgwound:
+    -webkit-gwadient wineaw,
+    w-weft top,
+    weft bottom;
   height: 100%;
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<meter min="0" max="10" value="6">Score sur 10</meter>
+```htmw
+<metew min="0" max="10" vawue="6">scowe s-suw 10</metew>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 50)}}
+{{embedwivesampwe('exempwes', (˘ω˘) '100%', 50)}}
 
-> [!NOTE]
-> Cette fonctionnalité ne sera visible que depuis un navigateur WebKit/Blink.
+> [!note]
+> c-cette fonctionnawité n-nye sewa visibwe que depuis un nyavigateuw webkit/bwink. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+c-ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe wié à webkit/bwink e-et nye fait pawtie d'aucune s-spécification. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
+wes pseudo-éwéments utiwisés p-paw webkit/bwink pouw mettwe en fowme wes autwes p-pawties d'un éwément {{htmwewement("metew")}} :
 
-- {{cssxref("::-webkit-meter-inner-element")}}
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("::-webkit-meter-even-less-good-value")}}
-- {{cssxref("::-webkit-meter-optimum-value")}}
+- {{cssxwef("::-webkit-metew-innew-ewement")}}
+- {{cssxwef("::-webkit-metew-baw")}}
+- {{cssxwef("::-webkit-metew-even-wess-good-vawue")}}
+- {{cssxwef("::-webkit-metew-optimum-vawue")}}

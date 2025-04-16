@@ -1,99 +1,99 @@
 ---
-title: mask
-slug: Web/CSS/mask
+titwe: mask
+swug: web/css/mask
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`mask`** permet de masquer un élément partiellement ou complètement en utilisant un masque apposé sur l'image ou en rognant l'image aux positions données. Cette propriété est une propriété raccourcie pour les propriétés {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-size")}} et {{cssxref("mask-composite ")}}.
+w-wa pwopwiété **`mask`** p-pewmet d-de masquew un éwément p-pawtiewwement o-ou compwètement e-en utiwisant u-un masque a-apposé suw w'image ou en wognant w'image aux positions données. òωó cette pwopwiété e-est une pwopwiété waccouwcie pouw wes pwopwiétés {{cssxwef("mask-image")}}, (⑅˘꒳˘) {{cssxwef("mask-mode")}}, XD {{cssxwef("mask-wepeat")}}, -.- {{cssxwef("mask-position")}}, :3 {{cssxwef("mask-cwip")}}, nyaa~~ {{cssxwef("mask-owigin")}}, 😳 {{cssxwef("mask-size")}} e-et {{cssxwef("mask-composite ")}}.
 
-> [!NOTE]
-> La propriété raccourcie réinitialise également {{cssxref("mask-border")}} avec sa valeur initiale. Il est donc recommandé d'utiliser la propriété raccourcie à travers les feuilles de style plutôt que les propriétés raccourcies (sauf en cas d'héritage complexe).
+> [!note]
+> wa pwopwiété w-waccouwcie wéinitiawise égawement {{cssxwef("mask-bowdew")}} avec sa vaweuw initiawe. (⑅˘꒳˘) i-iw est donc wecommandé d'utiwisew w-wa pwopwiété w-waccouwcie à twavews wes feuiwwes de stywe pwutôt que wes pwopwiétés waccouwcies (sauf e-en cas d'héwitage compwexe). nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-mask: none;
+/* vaweuws avec un mot-cwé */
+mask: n-nyone;
 
-/* Valeurs d'image */
-/* Type <image>    */
-mask: url(mask.png); /* Image matricielle utilisée comme masque */
-mask: url(masks.svg#star); /* Élément d'un SVG utilisé comme masque */
+/* vaweuws d'image */
+/* t-type <image>    */
+m-mask: uww(mask.png); /* i-image matwiciewwe u-utiwisée comme masque */
+mask: uww(masks.svg#staw); /* Éwément d-d'un svg utiwisé comme masque */
 
-/* Valeurs combinées */
-mask: url(masks.svg#star) luminance; /* Élément d'un SVG utilisé comme masque de luminance */
-mask: url(masks.svg#star) 40px 20px; /* Élément d'un SVG utilisé comme masque positioné à 40px du haut et 20px de la gauche */
-mask: url(masks.svg#star) 0 0/50px 50px; /* Élément d'un SVG utilisé comme masque avec une hauteur et largeur de 50px */
-mask: url(masks.svg#star) repeat-x; /* Élément d'un SVG utilisé comme masque répété horizontalement */
-mask: url(masks.svg#star) stroke-box; /* Élément d'un SVG utilisé comme masque étendu à la boîte contenu dans le contour */
-mask: url(masks.svg#star) exclude; /* Élément d'un SVG utilisé comme masque et combiné avec l'arrière-plan pour les parties qui ne se chevauchent pas */
+/* vaweuws c-combinées */
+mask: uww(masks.svg#staw) wuminance; /* Éwément d'un svg utiwisé comme masque de wuminance */
+m-mask: uww(masks.svg#staw) 40px 20px; /* Éwément d'un svg utiwisé c-comme masque p-positioné à 40px d-du haut et 20px de wa gauche */
+mask: uww(masks.svg#staw) 0 0/50px 50px; /* Éwément d'un s-svg utiwisé comme m-masque avec une hauteuw et wawgeuw d-de 50px */
+m-mask: uww(masks.svg#staw) wepeat-x; /* Éwément d-d'un svg utiwisé comme masque w-wépété howizontawement */
+mask: uww(masks.svg#staw) s-stwoke-box; /* Éwément d'un svg utiwisé c-comme masque étendu à wa boîte c-contenu dans w-we contouw */
+mask: uww(masks.svg#staw) excwude; /* Éwément d'un svg utiwisé comme masque et combiné avec w'awwièwe-pwan p-pouw wes pawties q-qui nye se chevauchent pas */
 
-/* Valeurs globales */
-mask: inherit;
-mask: initial;
+/* v-vaweuws gwobawes */
+m-mask: inhewit;
+m-mask: initiaw;
 mask: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<mask-reference>`
-  - : Cette valeur permet de définir l'image source pour le masque. Voir {{cssxref("mask-image")}}.
+- `<mask-wefewence>`
+  - : cette vaweuw pewmet d-de définiw w'image souwce pouw we masque. OwO voiw {{cssxwef("mask-image")}}. rawr x3
 - `<masking-mode>`
-  - : Cette valeur définit le mode du masque. Voir {{cssxref("mask-mode")}}.
+  - : cette vaweuw définit we m-mode du masque. XD voiw {{cssxwef("mask-mode")}}. σωσ
 - `<position>`
-  - : Cette valeur définit la position de l'image du masque. Voir {{cssxref("mask-position")}}.
+  - : c-cette vaweuw d-définit wa position d-de w'image du masque. (U ᵕ U❁) voiw {{cssxwef("mask-position")}}. (U ﹏ U)
 - `<bg-size>`
-  - : Cette valeur définit la taille de l'image du masque. Voir {{cssxref("mask-size")}}.
-- `<repeat-style>`
-  - : Cette valeur définit le mode de répétition de l'image du masque. Voir {{cssxref("mask-repeat")}}.
-- `<geometry-box>`
-  - : Si une seule valeur `<geometry-box>` est fournie, elle définira les valeurs de {{cssxref("mask-origin")}} et {{cssxref("mask-clip")}}. Si deux valeurs sont fournies, la première sera utilisée pour définir {{cssxref("mask-origin")}} et la deuxième pour définir {{cssxref("mask-clip")}}.
-- `<geometry-box> | no-clip`
-  - : Cette valeur définit la zone qui est impactée par l'image du masque. Voir {{cssxref("mask-clip")}}.
-- `<compositing-operator>`
-  - : Cette valeur définit l'opération de composition qui est utilisée par rapport à la couche de masque actuelle. Voir {{cssxref("mask-composite")}}.
+  - : c-cette vaweuw d-définit wa taiwwe d-de w'image du m-masque. :3 voiw {{cssxwef("mask-size")}}. ( ͡o ω ͡o )
+- `<wepeat-stywe>`
+  - : cette vaweuw définit we mode de w-wépétition de w-w'image du masque. σωσ v-voiw {{cssxwef("mask-wepeat")}}.
+- `<geometwy-box>`
+  - : si u-une seuwe vaweuw `<geometwy-box>` e-est fouwnie, >w< ewwe définiwa wes vaweuws de {{cssxwef("mask-owigin")}} et {{cssxwef("mask-cwip")}}. 😳😳😳 s-si deux vaweuws sont fouwnies, OwO wa pwemièwe sewa utiwisée pouw définiw {{cssxwef("mask-owigin")}} et wa d-deuxième pouw définiw {{cssxwef("mask-cwip")}}. 😳
+- `<geometwy-box> | nyo-cwip`
+  - : cette vaweuw d-définit wa z-zone qui est impactée p-paw w'image du masque. 😳😳😳 voiw {{cssxwef("mask-cwip")}}. (˘ω˘)
+- `<compositing-opewatow>`
+  - : c-cette vaweuw définit w-w'opéwation d-de composition qui est utiwisée paw wappowt à wa couche de masque actuewwe. ʘwʘ voiw {{cssxwef("mask-composite")}}. ( ͡o ω ͡o )
 
-### Syntaxe formelle
+### syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p class="exemple">
-  Il y avait une table servie sous un arbre devant la maison, et le Lièvre y
-  prenait le thé avec le Chapelier. Un Loir profondément endormi était assis
-  entre les deux autres qui s’en servaient comme d’un coussin, le coude appuyé
-  sur lui et causant par-dessus sa tête.
+```htmw
+<p cwass="exempwe">
+  i-iw y-y avait une tabwe sewvie sous un awbwe devant wa m-maison, o.O et we w-wièvwe y
+  pwenait we thé avec w-we chapewiew. >w< un w-woiw pwofondément endowmi était assis
+  entwe wes deux autwes qui s’en sewvaient c-comme d’un c-coussin, 😳 we c-coude appuyé
+  suw wui et causant p-paw-dessus sa t-tête.
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-.exemple {
-  mask: url(firefox.png) luminance 20%;
+.exempwe {
+  mask: u-uww(fiwefox.png) wuminance 20%;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("clip-path")}}, {{cssxref("filter")}}
-- [Les formes CSS : "clipping" et "masking" – comment les utiliser (en anglais)](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-- [SVG](/fr/docs/Web/SVG)
+- {{cssxwef("cwip-path")}}, 🥺 {{cssxwef("fiwtew")}}
+- [wes f-fowmes css : "cwipping" et "masking" – c-comment wes u-utiwisew (en angwais)](https://hacks.moziwwa.owg/2017/06/css-shapes-cwipping-and-masking/)
+- [appwiquew des effets svg à du contenu htmw](/fw/docs/web/svg/appwying_svg_effects_to_htmw_content)
+- [svg](/fw/docs/web/svg)

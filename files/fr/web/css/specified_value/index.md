@@ -1,63 +1,63 @@
 ---
-title: Valeur spécifiée
-slug: Web/CSS/specified_value
+titwe: vaweuw spécifiée
+swug: w-web/css/specified_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La **valeur définie** d'une propriété CSS est celle explicitement définie dans la feuille de style ou grâce au style de son élément parent. Elle est déterminée selon une des trois méthodes suivantes :
+w-wa **vaweuw d-définie** d-d'une pwopwiété c-css est cewwe e-expwicitement d-définie dans wa f-feuiwwe de stywe ou gwâce au stywe de son éwément pawent. (U ﹏ U) ewwe est détewminée s-sewon une des twois méthodes suivantes :
 
-1. Si la feuille de style du document a une valeur définie pour la propriété, alors c'est cette valeur qui est utilisée. Par exemple, si la propriété {{cssxref("color")}} est définie à `green` alors la couleur du texte des éléments correspondants sera verte.
-2. Si la feuille de style du document n'a pas de valeur définie, alors, si c'est possible, elle sera héritée de l'élément parent. Par exemple, si on a un paragraphe ({{HTMLElement("p")}}) dans un {{HTMLElement("div")}} et que le {{HTMLElement("div")}} est ciblée par une déclaration CSS où `font` vaut `Arial` et qu'il n'y a pas de règle `font` pour {{HTMLElement("p")}}, ce dernier héritera de la police Arial.
-3. Si aucun des cas précédents ne s'applique, c'est la valeur initiale de la propriété CSS qui est appliquée.
+1. 😳 s-si wa feuiwwe de stywe du document a-a une vaweuw définie pouw wa pwopwiété, (ˆ ﻌ ˆ)♡ awows c'est cette v-vaweuw qui est utiwisée. 😳😳😳 paw e-exempwe, (U ﹏ U) si wa p-pwopwiété {{cssxwef("cowow")}} est définie à `gween` awows wa couweuw du texte des éwéments c-cowwespondants sewa vewte. (///ˬ///✿)
+2. si wa feuiwwe de stywe du document ny'a pas de vaweuw d-définie, awows, 😳 si c'est p-possibwe, 😳 ewwe sewa h-héwitée de w-w'éwément pawent. σωσ p-paw exempwe, rawr x3 si on a un pawagwaphe ({{htmwewement("p")}}) dans un {{htmwewement("div")}} e-et que we {{htmwewement("div")}} est cibwée paw une d-décwawation css où `font` vaut `awiaw` et qu'iw ny'y a pas de wègwe `font` pouw {{htmwewement("p")}}, OwO c-ce dewniew héwitewa d-de wa powice awiaw. /(^•ω•^)
+3. s-si aucun d-des cas pwécédents nye s'appwique, 😳😳😳 c'est wa vaweuw initiawe de w-wa pwopwiété c-css qui est appwiquée. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p>Ma couleur provient explicitement de la feuille de style CSS.</p>
+```htmw
+<p>ma couweuw p-pwovient expwicitement de w-wa feuiwwe de stywe css.</p>
 
 <div>
-  Les valeurs définies de mes propriétés utilisent les valeurs initiales (par
-  défaut) car aucune n'est fournie dans la feuille de style CSS.
+  w-wes vaweuws définies de mes pwopwiétés u-utiwisent wes vaweuws initiawes (paw
+  d-défaut) caw aucune ny'est f-fouwnie dans w-wa feuiwwe de stywe css. >_<
 </div>
 
-<div class="fun">
+<div cwass="fun">
   <p>
-    La valeur définie pour ma police n'est pas fournie explicitement dans la
-    feuille de style et est donc héritée de mon parent. Toutefois, la bordure
-    n'est pas une propriété héritée.
+    wa vaweuw définie pouw ma powice ny'est pas fouwnie e-expwicitement d-dans wa
+    feuiwwe de stywe et e-est donc héwitée d-de mon pawent. >w< t-toutefois, wa bowduwe
+    ny'est pas une pwopwiété héwitée. rawr
   </p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 .fun {
-  border: 1px dotted pink;
-  font-family: fantasy;
+  bowdew: 1px dotted pink;
+  font-famiwy: fantasy;
 }
 
-p {
-  color: green;
+p-p {
+  cowow: gween;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 500, 220)}}
+{{embedwivesampwe("exempwes", 500, 😳 220)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
-- [La notion de valeur initiale](/fr/docs/Web/CSS/initial_value)
-- [La notion de valeur calculée](/fr/docs/Web/CSS/computed_value)
-- [La notion de valeur utilisée](/fr/docs/Web/CSS/used_value)
-- [La notion de valeur résolue](/fr/docs/Web/CSS/resolved_value)
-- [La notion de valeur réelle](/fr/docs/Web/CSS/actual_value)
+- [wa w-wéféwence css](/fw/docs/web/css/wefewence)
+- [wa n-nyotion de v-vaweuw initiawe](/fw/docs/web/css/initiaw_vawue)
+- [wa n-nyotion d-de vaweuw cawcuwée](/fw/docs/web/css/computed_vawue)
+- [wa nyotion de vaweuw utiwisée](/fw/docs/web/css/used_vawue)
+- [wa n-nyotion d-de vaweuw wésowue](/fw/docs/web/css/wesowved_vawue)
+- [wa n-nyotion de vaweuw w-wéewwe](/fw/docs/web/css/actuaw_vawue)

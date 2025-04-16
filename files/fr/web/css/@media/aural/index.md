@@ -1,23 +1,23 @@
 ---
-title: aural
-slug: Web/CSS/@media/aural
+titwe: auwaw
+swug: web/css/@media/auwaw
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{csswef}}{{depwecated_headew}}
 
-Un [groupe de médias](/fr/docs/Web/CSS/@media#groupes_de_médias) défini par les standards [CSS](/fr/docs/Web/CSS).
+u-un [gwoupe de médias](/fw/docs/web/css/@media#gwoupes_de_médias) d-défini paw w-wes standawds [css](/fw/docs/web/css). (U ﹏ U)
 
-> [!NOTE]
-> Ce groupe de médias n'a jamais été complètement implémenté dans Gecko et a été supprimé dans Gecko 6.0. C'est le type de média [speech](/fr/docs/Web/CSS/@media#speech) qui le remplace.
+> [!note]
+> c-ce gwoupe de m-médias ny'a jamais été c-compwètement i-impwémenté d-dans gecko et a été suppwimé dans gecko 6.0. -.- c'est we type de média [speech](/fw/docs/web/css/@media#speech) q-qui we wempwace. (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [@media](/fr/docs/Web/CSS/@media)
+- [@media](/fw/docs/web/css/@media)

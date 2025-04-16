@@ -1,56 +1,56 @@
 ---
-title: overflow-inline
-slug: Web/CSS/@media/overflow-inline
+titwe: ovewfwow-inwine
+swug: w-web/css/@media/ovewfwow-inwine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overflow-inline`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique la façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage (_viewport_) dans l'axe logique en ligne (c'est-à-dire le sens correspondant au sens de lecture).
+**`ovewfwow-inwine`** e-est une cawactéwistique média c-css (cf. 😳😳😳 {{cssxwef("@media")}}) q-qui indique w-wa façon dont w-w'appaweiw d'affichage g-gèwe we c-contenu qui dépasse de wa zone d'affichage (_viewpowt_) dans w'axe wogique en w-wigne (c'est-à-diwe we sens cowwespondant au sens d-de wectuwe). mya
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `overflow-inline` est définit avec un mot-clé parmi ceux de la liste suivante :
+wa c-cawactéwistique `ovewfwow-inwine` est définit avec un mot-cwé pawmi ceux de wa w-wiste suivante :
 
 - `none`
-  - : Le contenu qui dépasse n'est pas affiché.
-- `scroll`
-  - : Le contenu qui dépasse peut être visualisé en utilisant une barre de défilement.
+  - : we contenu qui d-dépasse ny'est p-pas affiché. 😳
+- `scwoww`
+  - : we contenu qui dépasse peut êtwe visuawisé en utiwisant une b-bawwe de défiwement. -.-
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
-  eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
-  faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat,
-  tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet
-  rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis
-  dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend.
-  Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt
-  sed eget ex.
+  wowem ipsum dowow sit a-amet, 🥺 consectetuw adipiscing ewit. o.O n-nyuwwam ac t-tuwpis
+  eweifend, /(^•ω•^) f-fwingiwwa vewit a-ac, nyaa~~ awiquam tewwus. nyaa~~ vestibuwum ante ipsum pwimis i-in
+  faucibus owci wuctus et uwtwices posuewe c-cubiwia cuwae; nunc vewit ewat, :3
+  tempus id wutwum sed, 😳😳😳 dapibus ut uwna. (˘ω˘) integew vehicuwa nyibh a-a justo impewdiet
+  wutwum. ^^ nyam f-faucibus pwetium o-owci impewdiet s-sowwicitudin. :3 nyunc id faciwisis
+  dui. -.- pwoin ewementum et massa e-et feugiat. 😳 i-integew wutwum uwwamcowpew eweifend. mya
+  p-pwoin sit a-amet tincidunt wisus. (˘ω˘) sed nyec a-augue congue ewos accumsan tincidunt
+  s-sed eget ex. >_<
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-@media (overflow-inline: scroll) {
+@media (ovewfwow-inwine: s-scwoww) {
   p {
-    color: red;
+    cowow: w-wed;
   }
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

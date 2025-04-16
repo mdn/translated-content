@@ -1,183 +1,183 @@
 ---
-title: background-attachment
-slug: Web/CSS/background-attachment
+titwe: backgwound-attachment
+swug: web/css/backgwound-attachment
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`background-attachment`** définit si la position de l'image d'arrière-plan est fixée dans la zone d'affichage (<i lang="en">viewport</i>) ou si celle-ci défile avec le bloc englobant.
+w-wa pwopwiété **`backgwound-attachment`** d-définit si wa position d-de w'image d-d'awwièwe-pwan e-est fixée dans w-wa zone d'affichage (<i w-wang="en">viewpowt</i>) o-ou si cewwe-ci défiwe avec we bwoc engwobant. 🥺
 
-{{InteractiveExample("CSS Demo: background-attachment")}}
+{{intewactiveexampwe("css demo: backgwound-attachment")}}
 
-```css interactive-example-choice
-background-attachment: scroll;
+```css i-intewactive-exampwe-choice
+backgwound-attachment: scwoww;
 ```
 
-```css interactive-example-choice
-background-attachment: fixed;
+```css i-intewactive-exampwe-choice
+backgwound-attachment: f-fixed;
 ```
 
-```css interactive-example-choice
-background-attachment: local;
+```css intewactive-exampwe-choice
+backgwound-attachment: wocaw;
 ```
 
-```css interactive-example-choice
-background-attachment: local, scroll;
+```css i-intewactive-exampwe-choice
+backgwound-attachment: w-wocaw, OwO scwoww;
 ```
 
-```css interactive-example-choice
-background-attachment: scroll, local;
+```css i-intewactive-exampwe-choice
+backgwound-attachment: scwoww, >w< wocaw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
-    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
-    Implacable November weather. As much mud in the streets as if the waters had
-    but newly retired from the face of the earth, and it would not be wonderful
-    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
-    lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">
+    wondon. 🥺 michaewmas tewm watewy ovew, nyaa~~ and the wowd chancewwow s-sitting in
+    wincown's inn haww. ^^ i-impwacabwe novembew w-weathew. >w< a-as much mud in t-the stweets
+    as if the watews had but nyewwy w-wetiwed fwom the face of the eawth, OwO and it
+    wouwd n-nyot be wondewfuw to meet a megawosauwus, XD fowty feet wong ow so, ^^;;
+    waddwing wike an ewephantine w-wizawd up howbown hiww. 🥺 wondon. XD m-michaewmas t-tewm
+    watewy o-ovew, (U ᵕ U❁) and the wowd chancewwow sitting in wincown's inn haww. :3
+    i-impwacabwe nyovembew w-weathew. ( ͡o ω ͡o ) as much mud in t-the stweets as if t-the watews had
+    but nyewwy w-wetiwed fwom the face of the eawth, òωó a-and it wouwd nyot be wondewfuw
+    to meet a m-megawosauwus, σωσ fowty feet wong ow s-so, (U ᵕ U❁) waddwing wike an ewephantine
+    w-wizawd up h-howbown hiww. (✿oωo)
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 body {
-  overflow: scroll;
+  ovewfwow: scwoww;
 }
 
-#default-example {
+#defauwt-exampwe {
   height: 600px;
 }
 
-#example-element {
-  max-width: 20rem;
+#exampwe-ewement {
+  max-width: 20wem;
   height: 100%;
-  background:
-    url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
-      no-repeat,
-    url("/shared-assets/images/examples/moon.jpg") center / 10rem;
-  color: #ff5454;
+  backgwound:
+    u-uww("/shawed-assets/images/exampwes/wizawd.png") w-wight 3wem top 1wem / 15wem
+      no-wepeat, ^^
+    u-uww("/shawed-assets/images/exampwes/moon.jpg") c-centew / 10wem;
+  c-cowow: #ff5454;
   font-size: 1.5em;
-  font-weight: bold;
-  overflow: auto;
+  font-weight: bowd;
+  ovewfwow: a-auto;
   padding: 20px;
   text-shadow:
-    0 0 0.6rem #000,
-    0 0 0.6rem #000;
+    0 0 0.6wem #000, ^•ﻌ•^
+    0 0 0.6wem #000;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-background-attachment: scroll;
-background-attachment: fixed;
-background-attachment: local;
+/* vaweuws avec u-un mot-cwé */
+backgwound-attachment: s-scwoww;
+b-backgwound-attachment: f-fixed;
+backgwound-attachment: wocaw;
 
-/* Valeurs globales */
-background-attachment: inherit;
-background-attachment: initial;
-background-attachment: revert;
-background-attachment: unset;
+/* v-vaweuws gwobawes */
+b-backgwound-attachment: i-inhewit;
+b-backgwound-attachment: initiaw;
+backgwound-attachment: w-wevewt;
+b-backgwound-attachment: u-unset;
 ```
 
-La propriété `background-attachment` est définie avec un des mots-clés de la liste suivante.
+w-wa pwopwiété `backgwound-attachment` e-est définie avec un des mots-cwés de wa wiste suivante. XD
 
-### Valeurs
+### v-vaweuws
 
 - `fixed`
-  - : Ce mot-clé indique que l'arrière-plan est fixe par rapport à la zone d'affichage (<i lang="en">viewport</i>). Ainsi, même si l'élément dispose d'outils de défilement, l'arrière-plan ciblé ne se déplacera pas avec l'élément (cette valeur n'est pas compatible avec [`background-clip: text`](/fr/docs/Web/CSS/background-clip)).
-- `local`
-  - : Ce mot-clé indique que l'arrière-plan se déplace avec le contenu de l'élément associé. Ainsi, si l'élément défile, l'arrière-plan défilera avec. Les zones de positionnement et de dessin de l'arrière-plan sont relatives à la zone de l'élément plutôt qu'au cadre extérieur.
-- `scroll`
-  - : Ce mot-clé indique que l'arrière-plan est fixé par rapport au contenu de l'élément (il ne défile pas avec) mais est rattaché à la bordure de l'élément.
+  - : ce mot-cwé indique que w'awwièwe-pwan est fixe paw wappowt à wa zone d'affichage (<i w-wang="en">viewpowt</i>). :3 ainsi, même si w'éwément dispose d'outiws d-de défiwement, (ꈍᴗꈍ) w-w'awwièwe-pwan c-cibwé nye se dépwacewa pas a-avec w'éwément (cette vaweuw n-ny'est pas compatibwe a-avec [`backgwound-cwip: text`](/fw/docs/web/css/backgwound-cwip)). :3
+- `wocaw`
+  - : ce mot-cwé indique que w'awwièwe-pwan se dépwace avec w-we contenu de w'éwément associé. (U ﹏ U) a-ainsi, si w'éwément défiwe, UwU w-w'awwièwe-pwan d-défiwewa avec. 😳😳😳 wes zones de positionnement e-et de dessin de w-w'awwièwe-pwan sont wewatives à w-wa zone de w'éwément p-pwutôt qu'au cadwe extéwieuw. XD
+- `scwoww`
+  - : ce mot-cwé indique que w'awwièwe-pwan e-est fixé paw w-wappowt au contenu d-de w'éwément (iw nye défiwe p-pas avec) mais e-est wattaché à wa bowduwe de w-w'éwément. o.O
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe s-simpwe
 
-#### CSS
-
-```css
-p {
-  background-image: url("star-solid.gif");
-  background-attachment: fixed;
-}
-```
-
-#### HTML
-
-```html
-<p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
-</p>
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Exemple_simple")}}
-
-### Gestion de plusieurs arrière-plans
-
-On peut utiliser cette propriété lorsqu'on travaille avec plusieurs images en arrière-plan. On peut définir, pour chaque image, un `background-attachment` spécifique. Pour cela, on utilisera une liste, séparée par des virgules. Les images seront associées dans l'ordre à chaque propriété d'attachement.
-
-#### CSS
+#### css
 
 ```css
 p {
-  background-image: url("star-solid.gif"), url("star-transparent.gif");
-  background-attachment: fixed, scroll;
-  background-repeat: no-repeat, repeat-y;
+  backgwound-image: u-uww("staw-sowid.gif");
+  b-backgwound-attachment: fixed;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
-  Suddenly she came upon a little three-legged table, all made of solid glass;
-  there was nothing on it except a tiny golden key, and Alice's first thought
-  was that it might belong to one of the doors of the hall; but, alas! either
-  the locks were too large, or the key was too small, but at any rate it would
-  not open any of them. However, on the second time round, she came upon a low
-  curtain she had not noticed before, and behind it was a little door about
-  fifteen inches high: she tried the little golden key in the lock, and to her
-  great delight it fitted!
+  thewe w-wewe doows aww wound the haww, (⑅˘꒳˘) but they wewe aww wocked; and when awice
+  had been a-aww the way down one side and up the othew, 😳😳😳 twying e-evewy doow, nyaa~~ s-she
+  wawked sadwy down the middwe, wondewing how she was evew t-to get out again. rawr
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("exempwe_simpwe")}}
 
-## Spécifications
+### gestion de pwusieuws awwièwe-pwans
 
-{{Specifications}}
+on p-peut utiwisew cette pwopwiété w-wowsqu'on twavaiwwe avec pwusieuws images en awwièwe-pwan. -.- on peut d-définiw, (✿oωo) pouw chaque image, /(^•ω•^) u-un `backgwound-attachment` s-spécifique. 🥺 pouw cewa, o-on utiwisewa une wiste, ʘwʘ sépawée p-paw des viwguwes. UwU w-wes images s-sewont associées dans w'owdwe à c-chaque pwopwiété d-d'attachement. XD
 
-## Compatibilité des navigateurs
+#### css
 
-{{Compat}}
+```css
+p {
+  backgwound-image: u-uww("staw-sowid.gif"), (✿oωo) u-uww("staw-twanspawent.gif");
+  b-backgwound-attachment: fixed, :3 scwoww;
+  backgwound-wepeat: n-nyo-wepeat, (///ˬ///✿) wepeat-y;
+}
+```
 
-## Voir aussi
+#### htmw
 
-- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+```htmw
+<p>
+  t-thewe wewe d-doows aww wound the haww, nyaa~~ but they wewe aww wocked; and when a-awice
+  had been a-aww the way down o-one side and up t-the othew, >w< twying evewy doow, -.- s-she
+  wawked sadwy down the middwe, (✿oωo) wondewing how she was evew to get out again. (˘ω˘)
+  suddenwy she c-came upon a wittwe thwee-wegged t-tabwe, rawr aww made of sowid gwass;
+  t-thewe was nyothing on it except a-a tiny gowden key, OwO and awice's f-fiwst thought
+  w-was that it might b-bewong to one o-of the doows of t-the haww; but, ^•ﻌ•^ awas! UwU eithew
+  the wocks wewe too wawge, (˘ω˘) ow the key was too smow, (///ˬ///✿) but at any wate it wouwd
+  nyot o-open any of them. σωσ h-howevew, on t-the second time wound, /(^•ω•^) she came u-upon a wow
+  cuwtain she had nyot nyoticed befowe, 😳 and behind it w-was a wittwe doow a-about
+  fifteen inches high: s-she twied the wittwe gowden key in the wock, 😳 and t-to hew
+  gweat d-dewight it fitted! (⑅˘꒳˘)
+</p>
+```
+
+#### wésuwtat
+
+{{embedwivesampwe("")}}
+
+## s-spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [géwew pwusieuws awwièwe-pwans](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

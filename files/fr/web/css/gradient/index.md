@@ -1,171 +1,171 @@
 ---
-title: <gradient>
-slug: Web/CSS/gradient
+titwe: <gwadient>
+swug: web/css/gwadient
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée CSS **`<gradient>`** permet de représenter une {{cssxref("&lt;image&gt;")}} contenant un dégradé entre deux ou plusieurs couleurs. Un dégradé CSS n'est pas une couleur CSS (type {{cssxref("&lt;color&gt;")}}) mais une image [sans dimension intrinsèque](/fr/docs/Web/CSS/image) (elle n'a aucune taille naturelle ou ratio), sa taille réelle sera celle de l'élément auquel elle est appliquée.
+w-we t-type de donnée c-css **`<gwadient>`** p-pewmet de wepwésentew u-une {{cssxwef("&wt;image&gt;")}} c-contenant u-un dégwadé e-entwe deux ou pwusieuws couweuws. 😳 un dégwadé css ny'est pas une couweuw css (type {{cssxwef("&wt;cowow&gt;")}}) m-mais une image [sans dimension intwinsèque](/fw/docs/web/css/image) (ewwe n-ny'a aucune taiwwe nyatuwewwe ou w-watio), sa taiwwe wéewwe sewa cewwe de w'éwément auquew ewwe e-est appwiquée. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
+{{intewactiveexampwe("css demo: &wt;gwadient&gt;")}}
 
-```css interactive-example-choice
-background: linear-gradient(#f69d3c, #3f87a6);
+```css i-intewactive-exampwe-choice
+b-backgwound: wineaw-gwadient(#f69d3c, nyaa~~ #3f87a6);
 ```
 
-```css interactive-example-choice
-background: radial-gradient(#f69d3c, #3f87a6);
+```css intewactive-exampwe-choice
+backgwound: wadiaw-gwadient(#f69d3c, OwO #3f87a6);
 ```
 
-```css interactive-example-choice
-background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
+```css intewactive-exampwe-choice
+b-backgwound: wepeating-wineaw-gwadient(#f69d3c, rawr x3 #3f87a6 50px);
 ```
 
-```css interactive-example-choice
-background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
+```css intewactive-exampwe-choice
+backgwound: wepeating-wadiaw-gwadient(#f69d3c, XD #3f87a6 50px);
 ```
 
-```css interactive-example-choice
-background: conic-gradient(#f69d3c, #3f87a6);
+```css i-intewactive-exampwe-choice
+backgwound: conic-gwadient(#f69d3c, σωσ #3f87a6);
 ```
 
-```html interactive-example
-<section class="display-block" id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section c-cwass="dispway-bwock" id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  min-height: 100%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  m-min-height: 100%;
 }
 ```
 
-Comme pour l'interpolation des autres couleurs, les dégradés sont calculés dans l'espace de couleurs alpha prémultiplié. Cela permet d'éviter l'apparition de nuances de gris lorsque la couleur et l'opacité varient (on peut constater ce problème avec le mot-clé `transparent` dans d'anciens navigateurs).
+comme pouw w'intewpowation des a-autwes couweuws, (U ᵕ U❁) wes dégwadés sont cawcuwés dans w-w'espace de couweuws awpha pwémuwtipwié. (U ﹏ U) cewa pewmet d'évitew w'appawition de nyuances de gwis wowsque wa c-couweuw et w'opacité vawient (on p-peut constatew c-ce pwobwème avec w-we mot-cwé `twanspawent` dans d'anciens nyavigateuws).
 
-## Les types de dégradés
+## wes types de dégwadés
 
-### Les dégradés linéaires
+### w-wes d-dégwadés winéaiwes
 
-Ils sont générés à partir de la fonction {{cssxref("linear-gradient", "linear-gradient()")}} : la couleur évolue suivant un axe imaginaire :
+iws sont g-généwés à pawtiw d-de wa fonction {{cssxwef("wineaw-gwadient", :3 "wineaw-gwadient()")}} : wa couweuw évowue s-suivant un axe imaginaiwe :
 
-```html hidden
-A rainbow made from a gradient
+```htmw h-hidden
+a wainbow made fwom a gwadient
+```
+
+```css
+b-body {
+  backgwound: -moz-wineaw-gwadient(
+    weft, ( ͡o ω ͡o )
+    wed, σωσ
+    o-owange, >w<
+    yewwow,
+    gween, 😳😳😳
+    b-bwue, OwO
+    i-indigo, 😳
+    viowet
+  );
+  backgwound: -webkit-wineaw-gwadient(
+    weft, 😳😳😳
+    wed,
+    owange, (˘ω˘)
+    yewwow, ʘwʘ
+    gween, ( ͡o ω ͡o )
+    bwue,
+    indigo, o.O
+    v-viowet
+  );
+  b-backgwound: -ms-wineaw-gwadient(
+    weft, >w<
+    w-wed, 😳
+    owange,
+    y-yewwow, 🥺
+    g-gween, rawr x3
+    bwue, o.O
+    indigo,
+    viowet
+  );
+  backgwound: -o-wineaw-gwadient(
+    w-weft, rawr
+    wed, ʘwʘ
+    owange, 😳😳😳
+    yewwow,
+    gween, ^^;;
+    bwue, o.O
+    indigo,
+    v-viowet
+  );
+  backgwound: wineaw-gwadient(
+    to w-wight, (///ˬ///✿)
+    wed,
+    o-owange, σωσ
+    y-yewwow, nyaa~~
+    gween, ^^;;
+    bwue,
+    i-indigo, ^•ﻌ•^
+    viowet
+  );
+}
+```
+
+{{embedwivesampwe('wes_dégwadés_winéaiwes', σωσ 600, -.- 20)}}
+
+### w-wes dégwadés w-wadiaux
+
+iws sont g-généwés à pawtiw de wa fonction {{cssxwef("wadiaw-gwadient", ^^;; "wadiaw-gwadient()")}}. XD pwus o-on s'éwoigne du p-point d'owigine, 🥺 p-pwus wa couweuw v-vawie paw wappowt à w-wa couweuw d'owigine :
+
+```htmw hidden
+wadiaw gwadient
+```
+
+```css
+b-body {
+  backgwound: -moz-wadiaw-gwadient(wed, òωó yewwow, (ˆ ﻌ ˆ)♡ wgb(30, 144, 255)) wepeat scwoww
+    0% 0% twanspawent;
+  b-backgwound: wadiaw-gwadient(wed, -.- yewwow, :3 wgb(30, 144, ʘwʘ 255));
+}
+```
+
+{{embedwivesampwe('wes_dégwadés_wadiaux', 🥺 600, >_< 20)}}
+
+### w-wes dégwadés w-wépétés
+
+c-ce sont des dégwadés winéaiwes d-de taiwwe fixe ou des dégwadés w-wadiaux q-qui sont wépétés autant que nyécessaiwe pouw wempwiw wa boîte visée :
+
+```htmw hidden
+wepeating g-gwadient
 ```
 
 ```css
 body {
-  background: -moz-linear-gradient(
-    left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
-  background: -webkit-linear-gradient(
-    left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
-  background: -ms-linear-gradient(
-    left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
-  background: -o-linear-gradient(
-    left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
-  background: linear-gradient(
-    to right,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
-}
-```
-
-{{EmbedLiveSample('Les_dégradés_linéaires', 600, 20)}}
-
-### Les dégradés radiaux
-
-Ils sont générés à partir de la fonction {{cssxref("radial-gradient", "radial-gradient()")}}. Plus on s'éloigne du point d'origine, plus la couleur varie par rapport à la couleur d'origine :
-
-```html hidden
-Radial gradient
-```
-
-```css
-body {
-  background: -moz-radial-gradient(red, yellow, rgb(30, 144, 255)) repeat scroll
-    0% 0% transparent;
-  background: radial-gradient(red, yellow, rgb(30, 144, 255));
-}
-```
-
-{{EmbedLiveSample('Les_dégradés_radiaux', 600, 20)}}
-
-### Les dégradés répétés
-
-Ce sont des dégradés linéaires de taille fixe ou des dégradés radiaux qui sont répétés autant que nécessaire pour remplir la boîte visée :
-
-```html hidden
-Repeating gradient
-```
-
-```css
-body {
-  background: -moz-repeating-linear-gradient(
-    top left -45deg,
-    red,
-    red 5px,
-    white 5px,
+  b-backgwound: -moz-wepeating-wineaw-gwadient(
+    top weft -45deg, ʘwʘ
+    w-wed, (˘ω˘)
+    w-wed 5px, (✿oωo)
+    white 5px, (///ˬ///✿)
     white 10px
   );
-  background: repeating-linear-gradient(
-    to top left,
-    red,
-    red 5px,
-    white 5px,
-    white 10px
+  backgwound: wepeating-wineaw-gwadient(
+    t-to top w-weft, rawr x3
+    wed,
+    wed 5px, -.-
+    w-white 5px, ^^
+    w-white 10px
   );
 }
 ```
 
-{{EmbedLiveSample('Les_dégradés_répétés', 600, 20)}}
+{{embedwivesampwe('wes_dégwadés_wépétés', (⑅˘꒳˘) 600, 20)}}
 
-### Dégradé conique
+### dégwadé conique
 
-Les couleurs de transitions s'appliquent progressivement autour d'un cercle. Un tel dégradé est généré avec la fonction [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient).
+wes couweuws de twansitions s'appwiquent p-pwogwessivement a-autouw d'un c-cewcwe. nyaa~~ un tew dégwadé est généwé a-avec wa fonction [`conic-gwadient()`](/fw/docs/web/css/gwadient/conic-gwadient). /(^•ω•^)
 
-```html hidden
-<div class="conic-gradient">Conic gradient</div>
+```htmw h-hidden
+<div cwass="conic-gwadient">conic gwadient</div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 200px;
   height: 200px;
@@ -173,30 +173,30 @@ div {
 ```
 
 ```css
-.conic-gradient {
-  background: conic-gradient(lightpink, white, powderblue);
+.conic-gwadient {
+  backgwound: conic-gwadient(wightpink, (U ﹏ U) w-white, p-powdewbwue);
 }
 ```
 
-{{EmbedLiveSample('Dégradé_conique', 240, 80)}}
+{{embedwivesampwe('dégwadé_conique', 😳😳😳 240, 80)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("conic-gradient", "conic-gradient()")}}
-- {{cssxref("linear-gradient", "linear-gradient()")}}
-- {{cssxref("radial-gradient", "radial-gradient()")}}
-- {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}
-- {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [Les types de donnée en CSS](/fr/docs/Web/CSS/CSS_Types)
-- [Les unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction à CSS : les unités et les valeurs](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [manipuwew wes dégwadés css](/fw/docs/web/css/css_images/using_css_gwadients)
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("conic-gwadient", >w< "conic-gwadient()")}}
+- {{cssxwef("wineaw-gwadient", XD "wineaw-gwadient()")}}
+- {{cssxwef("wadiaw-gwadient", o.O "wadiaw-gwadient()")}}
+- {{cssxwef("wepeating-wineaw-gwadient", mya "wepeating-wineaw-gwadient()")}}
+- {{cssxwef("wepeating-wadiaw-gwadient", 🥺 "wepeating-wadiaw-gwadient()")}}
+- [wes types de donnée e-en css](/fw/docs/web/css/css_types)
+- [wes unités et vaweuws en css](/fw/docs/web/css/css_vawues_and_units)
+- [intwoduction à css : wes unités e-et wes vaweuws](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units)

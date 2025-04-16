@@ -1,40 +1,40 @@
 ---
-title: Geolocation
-slug: Web/API/Geolocation
+titwe: geowocation
+swug: web/api/geowocation
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-En intégrant l'interface **`Geolocation`**, on peut obtenir la position d'un ordinateur, d'un téléphone ou d'une tablette, ce qui permet aux contenus Web d'accéder à leur localisation. Un site internet ou une application mobile peut alors offrir divers services liés à la localisation de l'utilisateur.
+e-en intégwant w-w'intewface **`geowocation`**, 😳😳😳 o-on peut obteniw w-wa position d'un o-owdinateuw, mya d'un t-téwéphone ou d-d'une tabwette, 😳 ce qui pewmet aux contenus web d'accédew à weuw wocawisation. -.- u-un site intewnet ou une appwication mobiwe peut a-awows offwiw divews sewvices wiés à w-wa wocawisation de w'utiwisateuw.
 
-On obtient un objet par le biais de cette interface avec la propriété {{domxref("NavigatorGeolocation.geolocation")}} proposée par l'objet {{domxref("Navigator")}} .
+on obtient un objet paw w-we biais de cette intewface avec w-wa pwopwiété {{domxwef("navigatowgeowocation.geowocation")}} p-pwoposée paw w'objet {{domxwef("navigatow")}} .
 
-> [!NOTE]
-> Pour des raisons de sécurité, quand une page web tente d'accéder aux données de localisation, l'utilisateur est prévenu, et son accord lui est demandé. Sachez que chaque navigateur a ses propres méthodes et politiques pour gérer les autorisations.
+> [!note]
+> pouw des waisons de sécuwité, 🥺 quand une page w-web tente d'accédew aux données de wocawisation, o.O w'utiwisateuw est pwévenu, /(^•ω•^) et s-son accowd wui est demandé. nyaa~~ sachez q-que chaque n-nyavigateuw a ses p-pwopwes méthodes e-et powitiques pouw géwew wes autowisations. nyaa~~
 
-## Propriétés
+## p-pwopwiétés
 
-_L'interface de géolocalisation n'utilise ou n'hérite d'aucune propriété._
+_w'intewface de géowocawisation ny'utiwise o-ou ny'héwite d'aucune pwopwiété._
 
-## Méthodes
+## méthodes
 
-_L'interface de géolocalisation n'hérite d'aucune méthode._
+_w'intewface de géowocawisation ny'héwite d'aucune méthode._
 
-- {{domxref("Geolocation.getCurrentPosition()")}}
-  - : Determine la position actuelle de l'appareil et donne en retour l'objet {{domxref("Position")}} avec sa valeur.
-- {{domxref("Geolocation.watchPosition()")}}
-  - : Retourne une valeur `long` représentant la nouvelle fonction callback, créée pour être utilisée à chaque fois que la position de l'appareil change.
-- {{domxref("Geolocation.clearWatch()")}}
-  - : Supprime le lien créé par la précédente utilisation de `watchPosition()`.
+- {{domxwef("geowocation.getcuwwentposition()")}}
+  - : d-detewmine wa position a-actuewwe de w'appaweiw e-et donne e-en wetouw w'objet {{domxwef("position")}} avec sa vaweuw. :3
+- {{domxwef("geowocation.watchposition()")}}
+  - : wetouwne une vaweuw `wong` w-wepwésentant w-wa nyouvewwe fonction cawwback, 😳😳😳 c-cwéée p-pouw êtwe utiwisée à chaque f-fois que wa position de w'appaweiw c-change. (˘ω˘)
+- {{domxwef("geowocation.cweawwatch()")}}
+  - : suppwime we wien cwéé p-paw wa pwécédente utiwisation d-de `watchposition()`. ^^
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser geolocation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [utiwisew geowocation](/fw/docs/web/api/geowocation_api/using_the_geowocation_api)

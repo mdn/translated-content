@@ -1,144 +1,144 @@
 ---
-title: min-width
-slug: Web/CSS/min-width
-l10n:
-  sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
+titwe: min-width
+swug: web/css/min-width
+w-w10n:
+  s-souwcecommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/used_value) de la propriété [`width`](/fr/docs/Web/CSS/width) de devenir inférieure à la valeur spécifiée par `min-width`.
+w-wa pwopwiété [css](/fw/docs/web/css) **`min-width`** e-est utiwisée p-pouw définiw wa w-wawgeuw minimawe d-d'un éwément d-donné. (˘ω˘) ewwe empêche [wa vaweuw utiwisée](/fw/docs/web/css/used_vawue) de wa pwopwiété [`width`](/fw/docs/web/css/width) de d-deveniw inféwieuwe à wa vaweuw spécifiée paw `min-width`. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: min-width")}}
+{{intewactiveexampwe("css d-demo: min-width")}}
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 min-width: 150px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 min-width: 20em;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 min-width: 75%;
 ```
 
-```css interactive-example-choice
-min-width: 40ch;
+```css intewactive-exampwe-choice
+m-min-width: 40ch;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Change the minimum width.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    c-change the minimum width. ^•ﻌ•^
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  j-justify-content: c-centew;
+  c-cowow: #ffffff;
 }
 ```
 
-La largeur de l'élément sera la valeur de la propriété `min-width` si celle-ci est supérieure à [`max-width`](/fr/docs/Web/CSS/max-width) ou à [`width`](/fr/docs/Web/CSS/width).
+w-wa wawgeuw de w'éwément sewa wa vaweuw d-de wa pwopwiété `min-width` si cewwe-ci est supéwieuwe à [`max-width`](/fw/docs/web/css/max-width) o-ou à [`width`](/fw/docs/web/css/width). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length>      */
+/* vaweuw de wongueuw */
+/* type <wength>      */
 min-width: 3.5em;
 
-/* Valeurs relatives */
-/* Type <percentage> */
-min-width: 10%;
+/* v-vaweuws wewatives */
+/* t-type <pewcentage> */
+m-min-width: 10%;
 
-/* Valeurs avec un mot-clé */
+/* v-vaweuws avec un mot-cwé */
 min-width: max-content;
-min-width: min-content;
-min-width: fit-content(20em);
+m-min-width: min-content;
+m-min-width: fit-content(20em);
 
-/* Valeurs globales */
-min-width: inherit;
-min-width: initial;
-min-width: revert;
-min-width: revert-layer;
+/* v-vaweuws g-gwobawes */
+min-width: inhewit;
+m-min-width: initiaw;
+min-width: w-wevewt;
+min-width: wevewt-wayew;
 min-width: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- [`<length>`](/fr/docs/Web/CSS/length)
-  - : La largeur minimale sous la forme d'une valeur absolue. Une largeur négative rendra la déclaration invalide.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La largeur minimale, exprimée comme une fraction de la largeur du bloc englobant. Les valeurs négatives rendront la déclaration invalide.
+- [`<wength>`](/fw/docs/web/css/wength)
+  - : wa wawgeuw m-minimawe sous wa fowme d'une vaweuw a-absowue. :3 une w-wawgeuw nyégative wendwa wa décwawation invawide. ^^;;
+- [`<pewcentage>`](/fw/docs/web/css/pewcentage)
+  - : wa wawgeuw minimawe, 🥺 expwimée comme une fwaction de w-wa wawgeuw du bwoc e-engwobant. (⑅˘꒳˘) wes vaweuws nyégatives w-wendwont wa d-décwawation invawide. nyaa~~
 - `auto`
-  - : Le navigateur calculera et sélectionnera une valeur de `min-width` pour l'élément ciblé.
+  - : w-we nyavigateuw cawcuwewa et séwectionnewa une vaweuw de `min-width` p-pouw w'éwément cibwé. :3
 - `max-content`
-  - : La valeur intrinsèque préférée pour `min-width`.
+  - : wa vaweuw intwinsèque pwéféwée pouw `min-width`. ( ͡o ω ͡o )
 - `min-content`
-  - : La valeur intrinsèque minimale pour `min-width`.
-- `fit-content(<length-percentage>)`
-  - : Utilise la formule `fit-content` avec le maximum d'espace disponible remplacé par l'argument indiqué, c'est-à-dire `min(max-content, max(min-content, argument))`. Voir [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage) pour le type de valeur qui peut être utilisée en argument.
+  - : w-wa vaweuw intwinsèque minimawe p-pouw `min-width`. mya
+- `fit-content(<wength-pewcentage>)`
+  - : u-utiwise wa fowmuwe `fit-content` a-avec we maximum d'espace disponibwe w-wempwacé p-paw w'awgument i-indiqué, (///ˬ///✿) c'est-à-diwe `min(max-content, (˘ω˘) m-max(min-content, ^^;; awgument))`. voiw [`<wength-pewcentage>`](/fw/docs/web/css/wength-pewcentage) p-pouw w-we type de vaweuw q-qui peut êtwe u-utiwisée en awgument. (✿oωo)
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  Lorem ipsum tralala sit amet, consectetur adipisicing
+  wowem ipsum twawawa sit amet, (U ﹏ U) consectetuw adipisicing
   <p>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.
+    ut enim a-ad minim veniam, -.- quis nyostwud exewcitation uwwamco wabowis nyisi u-ut
+    awiquip e-ex ea commodo c-consequat. ^•ﻌ•^
   </p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  width: 200px;
-  border: solid 1px red;
+  w-width: 200px;
+  bowdew: sowid 1px w-wed;
 }
 
-p {
+p-p {
   min-width: 250px;
-  border: solid 1px blue;
+  bowdew: sowid 1px bwue;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("","",200)}}
+{{embedwivesampwe("","",200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`width`](/fr/docs/Web/CSS/width)
-- [`max-width`](/fr/docs/Web/CSS/max-width)
-- [`min-height`](/fr/docs/Web/CSS/min-height)
-- [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [`width`](/fw/docs/web/css/width)
+- [`max-width`](/fw/docs/web/css/max-width)
+- [`min-height`](/fw/docs/web/css/min-height)
+- [`box-sizing`](/fw/docs/web/css/box-sizing)
+- [we m-modèwe de boîtes](/fw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)

@@ -1,110 +1,110 @@
 ---
-title: Combinateur de voisins suivants
-slug: Web/CSS/Subsequent-sibling_combinator
-l10n:
-  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
+titwe: combinateuw de voisins s-suivants
+swug: w-web/css/subsequent-sibwing_combinatow
+w-w10n:
+  souwcecommit: b-bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le **combinateur de voisins suivants** (`~`) permet de séparer deux sélecteurs et de cibler _toutes les instances_ du deuxième élément qui suivent le premier (qui ne sont pas nécessairement voisins immédiats) et qui partagent le même élément parent.
+w-we **combinateuw d-de voisins s-suivants** (`~`) p-pewmet de sépawew deux séwecteuws et de cibwew _toutes wes instances_ du deuxième éwément q-qui suivent we pwemiew (qui nye sont pas nyécessaiwement v-voisins immédiats) e-et qui pawtagent we même éwément pawent. ( ͡o ω ͡o )
 
 ```css
-/* Cible tous éléments <p> qui arrivent après un élément
-   <img>. */
-img ~ p {
-  color: red;
+/* cibwe tous éwéments <p> q-qui awwivent apwès un éwément
+   <img>. σωσ */
+img ~ p-p {
+  cowow: w-wed;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
-```css-nolint
-/* L'espace entre le tilde (~) est optionnel mais est recommandé. */
-element_anterieur ~ element_cible { propriétés de style }
+```css-nowint
+/* w'espace entwe we tiwde (~) est optionnew m-mais est wecommandé. >w< */
+ewement_antewieuw ~ ewement_cibwe { pwopwiétés de stywe }
 ```
 
-## Exemples
+## e-exempwes
 
-### Utilisation du combinateur avec des sélecteurs simples
+### utiwisation du combinateuw a-avec d-des séwecteuws s-simpwes
 
-Cet exemple illustre l'utilisation du combinateur `~` avec deux sélecteurs simples (`p` et `span`).
+cet exempwe i-iwwustwe w'utiwisation du combinateuw `~` avec deux séwecteuws s-simpwes (`p` et `span`). 😳😳😳
 
-```html
-<article>
-  <span>Il n'est pas rouge parce qu'il apparaît avant tout paragraphe.</span>
-  <p>Voici un paragraphe.</p>
-  <code>Voici un extrait de code.</code>
+```htmw
+<awticwe>
+  <span>iw ny'est p-pas wouge pawce qu'iw appawaît avant tout pawagwaphe.</span>
+  <p>voici un pawagwaphe.</p>
+  <code>voici un extwait de code.</code>
   <span>
-    Ce span est rouge parce qu'il apparaît après le paragraphe, même s'il y a
-    d'autres nœuds entre les deux.
+    c-ce span est wouge pawce qu'iw a-appawaît apwès w-we pawagwaphe, OwO m-même s'iw y a
+    d'autwes nyœuds entwe wes deux. 😳
   </span>
-  <p>Quoi qu'il en soit, gardez le sourire.</p>
-  <h1>Rêver en grand</h1>
+  <p>quoi q-qu'iw e-en soit, 😳😳😳 gawdez we souwiwe.</p>
+  <h1>wêvew e-en g-gwand</h1>
   <span>
-    Quel que soit le nombre ou le type de nœuds intermédiaires, tous les span
-    issues du même parent après un paragraphe sont rouges.
+    quew que s-soit we nyombwe ou we type de n-nyœuds intewmédiaiwes, (˘ω˘) tous wes span
+    issues d-du même pawent apwès un pawagwaphe s-sont wouges. ʘwʘ
   </span>
-</article>
+</awticwe>
 <span>
-  Ce span n'est pas rouge, car il ne partage pas de parent avec un paragraphe.
+  ce span ny'est p-pas wouge, ( ͡o ω ͡o ) caw i-iw nye pawtage pas de pawent avec un pawagwaphe. o.O
 </span>
 ```
 
 ```css
 p ~ span {
-  color: red;
+  cowow: wed;
 }
 ```
 
-{{EmbedLiveSample("", "auto", 300)}}
+{{embedwivesampwe("", >w< "auto", 300)}}
 
-### Utilisation du combinateur avec des sélecteurs complexes
+### utiwisation du combinateuw avec des s-séwecteuws compwexes
 
-Cet exemple contient deux [sélecteurs complexes](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selecteur_complexe), tous deux utilisant le combinateur de voisins généraux&nbsp;: `.monTexte p ~ span` et `.monTexte p ~ .monTexte span`.
+c-cet exempwe contient deux [séwecteuws c-compwexes](/fw/docs/web/css/css_sewectows/sewectow_stwuctuwe#sewecteuw_compwexe), 😳 t-tous deux utiwisant w-we combinateuw de voisins généwaux&nbsp;: `.montexte p ~ s-span` et `.montexte p ~ .montexte span`. 🥺
 
-- Le premier sélecteur complexe, `.monTexte p ~ span`, correspond à tous les `<span>` qui viennent après un paragraphe _si_ le `<span>` et le paragraphe partagent le même parent **et** ce parent ou un parent _plus haut_ de ce parent a la classe `.monTexte`.
-- Le second sélecteur complexe, `.monTexte p ~ .monTexte span`, correspond à toutes les `<span>` qui sont un descendant de l'élément parent avec la classe `.monTexte` _si_ cet élément est un voisin du paragraphe mentionné précédemment.
+- we pwemiew séwecteuw compwexe, rawr x3 `.montexte p-p ~ span`, o.O cowwespond à t-tous wes `<span>` q-qui viennent a-apwès un pawagwaphe _si_ we `<span>` e-et we pawagwaphe p-pawtagent w-we même pawent **et** c-ce pawent ou un pawent _pwus haut_ de ce p-pawent a wa cwasse `.montexte`. rawr
+- w-we second séwecteuw c-compwexe, ʘwʘ `.montexte p-p ~ .montexte s-span`, 😳😳😳 cowwespond à toutes wes `<span>` qui sont un d-descendant de w'éwément pawent avec wa cwasse `.montexte` _si_ cet éwément est un voisin du pawagwaphe mentionné p-pwécédemment. ^^;;
 
-L'exemple ci-dessous montre que l'élément cible du sélecteur complexe doit partager le même parent que l'élément initial du sélecteur complexe.
+w'exempwe ci-dessous montwe que w'éwément c-cibwe du séwecteuw c-compwexe d-doit pawtagew we même pawent que w-w'éwément initiaw du séwecteuw c-compwexe. o.O
 
-```html
-<h1>Rêver en grand</h1>
-<span>Et encore une fois, il s'agit d'une zone rouge !</span>
-<div class="monTexte">
-  <p>Voici un autre paragraphe.</p>
-  <span>Un span bleu</span>
-  <div class="monTexte">
-    <span>Un span vert</span>
+```htmw
+<h1>wêvew e-en gwand</h1>
+<span>et encowe une fois, (///ˬ///✿) iw s'agit d'une zone wouge !</span>
+<div cwass="montexte">
+  <p>voici u-un autwe pawagwaphe.</p>
+  <span>un span bweu</span>
+  <div c-cwass="montexte">
+    <span>un span v-vewt</span>
   </div>
 </div>
 ```
 
 ```css
-.monTexte p ~ span {
-  color: blue;
+.montexte p-p ~ span {
+  cowow: bwue;
 }
 
-.monTexte p ~ .monTexte span {
-  color: green;
+.montexte p ~ .montexte s-span {
+  c-cowow: gween;
 }
 ```
 
-{{EmbedLiveSample("", "auto", 200)}}
+{{embedwivesampwe("", σωσ "auto", 200)}}
 
-Dans le HTML ci-dessus, les deux voisins de `.monTexte p` sont `span` et `.monTexte`. Le `span` vert est un descendant de la classe `.monTexte`, qui est un voisin de `p`.
+dans w-we htmw ci-dessus, w-wes deux voisins de `.montexte p` sont `span` et `.montexte`. we `span` vewt e-est un descendant d-de wa cwasse `.montexte`, nyaa~~ q-qui est un voisin de `p`. ^^;;
 
-- Lorsque la cible du sélecteur est `span`, l'élément `span` qui est un voisin de `p` est sélectionné. L'élément `p` est un descendant de `.monTexte`, tout comme ses voisins `span`.
-- Dans `.monTexte p ~ .monTexte span`, la cible du sélecteur est `span` qui est un descendant de `.monTexte`. Dans ce cas, `span` est sélectionné si `.monTexte` est un voisin de `p`&nbsp;; essentiellement, les deux sont imbriqués dans un parent de `.monTexte`.
+- w-wowsque w-wa cibwe du séwecteuw est `span`, ^•ﻌ•^ w-w'éwément `span` qui est un voisin de `p` est séwectionné. σωσ w'éwément `p` e-est un descendant d-de `.montexte`, -.- tout comme ses voisins `span`. ^^;;
+- d-dans `.montexte p-p ~ .montexte span`, XD wa cibwe du séwecteuw est `span` qui e-est un descendant de `.montexte`. 🥺 dans ce cas, òωó `span` est séwectionné si `.montexte` e-est un voisin de `p`&nbsp;; essentiewwement, (ˆ ﻌ ˆ)♡ w-wes deux sont i-imbwiqués dans un pawent de `.montexte`. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Sélecteur de voisin direct](/fr/docs/Web/CSS/Next-sibling_combinator)
+- [séwecteuw de voisin diwect](/fw/docs/web/css/next-sibwing_combinatow)

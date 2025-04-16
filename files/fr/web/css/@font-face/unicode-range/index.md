@@ -1,98 +1,98 @@
 ---
-title: unicode-range
-slug: Web/CSS/@font-face/unicode-range
+titwe: unicode-wange
+swug: web/css/@font-face/unicode-wange
 ---
 
-{{cssref}}
+{{csswef}}
 
-Le descripteur **`unicode-range`**, associé à la règle @ [`@font-face`](/fr/docs/Web/CSS/@font-face), définit l'intervalle de caractères qui peuvent être représentés par cette police pour la page. Si la page n'utilise aucun caractère de cet intervalle, la police n'est pas téléchargée. Si, au contraire, elle utilise au moins un caractère appartenant à cet intervalle, toute la police est téléchargée.
+w-we descwipteuw **`unicode-wange`**, (ꈍᴗꈍ) a-associé à w-wa wègwe @ [`@font-face`](/fw/docs/web/css/@font-face), /(^•ω•^) d-définit w-w'intewvawwe de c-cawactèwes qui p-peuvent êtwe w-wepwésentés paw cette powice pouw wa page. (⑅˘꒳˘) si wa page ny'utiwise aucun cawactèwe d-de cet intewvawwe, ( ͡o ω ͡o ) wa powice ny'est pas téwéchawgée. òωó s-si, (⑅˘꒳˘) au contwaiwe, XD ewwe u-utiwise au moins un cawactèwe appawtenant à cet intewvawwe, -.- t-toute wa powice est téwéchawgée. :3
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs <unicode-range> */
-unicode-range: U+26; /* un seul point de code         */
-unicode-range: U+0-7F;
-unicode-range: U+0025-00FF; /* un intervalle spécifique      */
-unicode-range: U+4??; /* un intervalle de substitution */
-unicode-range: U+0025-00FF, U+4??; /* plusieurs valeurs             */
+/* v-vaweuws <unicode-wange> */
+unicode-wange: u+26; /* un seuw point de code         */
+u-unicode-wange: u+0-7f;
+unicode-wange: u+0025-00ff; /* un intewvawwe spécifique      */
+u-unicode-wange: u+4??; /* u-un intewvawwe de s-substitution */
+u-unicode-wange: u-u+0025-00ff, nyaa~~ u+4??; /* pwusieuws vaweuws             */
 ```
 
-### Valeurs
+### v-vaweuws
 
-Une valeur de type `<unicode-range>` peut se présenter de trois façons différentes&nbsp;:
+une vaweuw de type `<unicode-wange>` peut se pwésentew d-de twois façons difféwentes&nbsp;:
 
-- Un seul point de code
+- un seuw point de code
 
-  - : Par exemple `U+26`
+  - : paw exempwe `u+26`
 
-- Un intervalle spécifique de points de code
+- un i-intewvawwe spécifique de points d-de code
 
-  - : Par exemple `U+0025-00FF` indique que l'intervalle contient tous les caractères contenus entre les points de code `U+0025` et `U+00FF`
+  - : p-paw exempwe `u+0025-00ff` i-indique que w'intewvawwe contient tous wes cawactèwes c-contenus entwe w-wes points de code `u+0025` et `u+00ff`
 
-- Un intervalle de substitution indiqué par `?`
+- u-un intewvawwe d-de substitution indiqué p-paw `?`
 
-  - : Un intervalle de points de code Unicode indiqué par une valeur contenant un point d'interrogation. Ainsi, `U+4??` signifie «&nbsp;tous les caractères contenus dans l'intervalle entre les points de code `U+400` et `U+4FF`&nbsp;».
+  - : un intewvawwe d-de points de code unicode indiqué paw une vaweuw c-contenant un point d'intewwogation. 😳 a-ainsi, (⑅˘꒳˘) `u+4??` signifie «&nbsp;tous w-wes cawactèwes c-contenus dans w'intewvawwe entwe wes points de code `u+400` et `u+4ff`&nbsp;». nyaa~~
 
-## Description
+## descwiption
 
-Le but de ce descripteur est de segmenter les ressources liées aux polices afin que le navigateur puisse ne télécharger que les polices dont il a besoin pour le texte d'un document. Ainsi, un site disposant de nombreuses traductions pourrait proposer des ressources distinctes pour l'anglais, le grec et le japonais et seules les ressources nécessaires (dont les fichiers de polices) seraient téléchargées.
+we but de ce descwipteuw e-est de segmentew w-wes wessouwces wiées aux p-powices afin que w-we nyavigateuw p-puisse nye téwéchawgew que wes powices dont iw a besoin pouw we t-texte d'un document. OwO ainsi, rawr x3 un site disposant de nombweuses twaductions pouwwait p-pwoposew des wessouwces distinctes p-pouw w'angwais, XD w-we gwec et w-we japonais et seuwes wes wessouwces n-nyécessaiwes (dont w-wes fichiews d-de powices) s-sewaient téwéchawgées. σωσ
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on crée un élément HTML [`<div>`](/fr/docs/Web/HTML/Element/div) pour lequel on veut que l'esperluette soit mise en forme avec une police différente. Pour que le résultat soit apparent, on utilisera une police sans empattement pour le texte (_Helvetica_) et une police avec des empattements (_Times New Roman_) pour l'esperluette.
+d-dans cet exempwe, (U ᵕ U❁) o-on cwée u-un éwément htmw [`<div>`](/fw/docs/web/htmw/ewement/div) p-pouw wequew on veut que w'espewwuette soit mise en fowme a-avec une powice difféwente. (U ﹏ U) pouw que we wésuwtat soit appawent, :3 on utiwisewa une powice sans e-empattement pouw we texte (_hewvetica_) et une powice avec des e-empattements (_times n-nyew woman_) p-pouw w'espewwuette.
 
-### HTML
+### htmw
 
-```html
-<div>Me & You = Us</div>
+```htmw
+<div>me & y-you = us</div>
 ```
 
-### CSS
+### css
 
-Dans la feuille de style CSS, on définit une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) qui n'inclue qu'un seul caractère. Cela signifie que seul ce caractère sera affiché avec cette police. On aurait également pu encadrer l'esperluette dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) et appliquer une autre règle sur cet élément, mais on aurait alors eu un balisage plus lourd et une règle spécifique en plus sur la feuille de style.
+d-dans wa feuiwwe d-de stywe css, ( ͡o ω ͡o ) on définit une wègwe [`@font-face`](/fw/docs/web/css/@font-face) qui ny'incwue qu'un seuw cawactèwe. σωσ cewa signifie q-que seuw ce cawactèwe sewa a-affiché avec cette powice. on a-auwait égawement p-pu encadwew w'espewwuette dans un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) e-et appwiquew u-une autwe wègwe suw cet éwément, >w< m-mais o-on auwait awows eu un bawisage pwus wouwd et une wègwe spécifique en pwus suw w-wa feuiwwe de stywe. 😳😳😳
 
 ```css
 @font-face {
-  font-family: "Ampersand";
-  src: local("Times New Roman");
-  unicode-range: U+26;
+  f-font-famiwy: "ampewsand";
+  s-swc: wocaw("times nyew woman");
+  u-unicode-wange: u-u+26;
 }
 
 div {
   font-size: 4em;
-  font-family: Ampersand, Helvetica, sans-serif;
+  f-font-famiwy: ampewsand, OwO hewvetica, 😳 sans-sewif;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("", 500,104)}}
+{{embedwivesampwe("", 😳😳😳 500,104)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`font-display`](/fr/docs/Web/CSS/@font-face/font-display)
-- [`font-family`](/fr/docs/Web/CSS/@font-face/font-family)
-- [`font-stretch`](/fr/docs/Web/CSS/@font-face/font-stretch)
-- [`font-style`](/fr/docs/Web/CSS/@font-face/font-style)
-- [`font-weight`](/fr/docs/Web/CSS/@font-face/font-weight)
-- [`font-variant`](/fr/docs/Web/CSS/@font-face)
-- [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings)
-- [`font-variation-settings`](/fr/docs/Web/CSS/@font-face/font-variation-settings)
-- [`src`](/fr/docs/Web/CSS/@font-face/src)
+- [`font-dispway`](/fw/docs/web/css/@font-face/font-dispway)
+- [`font-famiwy`](/fw/docs/web/css/@font-face/font-famiwy)
+- [`font-stwetch`](/fw/docs/web/css/@font-face/font-stwetch)
+- [`font-stywe`](/fw/docs/web/css/@font-face/font-stywe)
+- [`font-weight`](/fw/docs/web/css/@font-face/font-weight)
+- [`font-vawiant`](/fw/docs/web/css/@font-face)
+- [`font-featuwe-settings`](/fw/docs/web/css/font-featuwe-settings)
+- [`font-vawiation-settings`](/fw/docs/web/css/@font-face/font-vawiation-settings)
+- [`swc`](/fw/docs/web/css/@font-face/swc)

@@ -1,76 +1,76 @@
 ---
-title: skew()
-slug: Web/CSS/transform-function/skew
+titwe: skew()
+swug: web/css/twansfowm-function/skew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`skew()`** permet d'opérer une distorsion en étirant chaque point de l'élément d'un certain angle dans une direction du plan. Pour cela, on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine, plus le décalage obtenu sera important.
+w-wa fonction **`skew()`** p-pewmet d'opéwew u-une distowsion e-en étiwant chaque p-point de w'éwément d-d'un cewtain a-angwe dans u-une diwection du pwan. (U ﹏ U) pouw cewa, mya on augmente w'owdonnée d'un éwément d'une v-vaweuw pwopowtionnewwe à w'angwe donné et à wa d-distance de w'owigine. ʘwʘ pwus we p-point est éwoigné de w'owigine, (˘ω˘) pwus we décawage obtenu sewa i-impowtant. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: skew()")}}
+{{intewactiveexampwe("css demo: skew()")}}
 
-```css interactive-example-choice
-transform: skew(0);
+```css i-intewactive-exampwe-choice
+t-twansfowm: skew(0);
 ```
 
-```css interactive-example-choice
-transform: skew(15deg, 15deg);
+```css intewactive-exampwe-choice
+twansfowm: skew(15deg, ^•ﻌ•^ 15deg);
 ```
 
-```css interactive-example-choice
-transform: skew(-0.06turn, 18deg);
+```css i-intewactive-exampwe-choice
+twansfowm: skew(-0.06tuwn, (˘ω˘) 18deg);
 ```
 
-```css interactive-example-choice
-transform: skew(0.312rad);
+```css intewactive-exampwe-choice
+twansfowm: s-skew(0.312wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    c-cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+wa vaweuw o-obtenue paw cette fonction est de type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). :3
 
-## Syntaxe
+## s-syntaxe
 
-La fonction `skew()` s'utilise avec une ou deux valeurs qui représente l'intensité de la distorsion appliquée dans chaque direction. Si une seule valeur est fournie, elle sera utilisée pour la distorsion sur l'axe horizontal et il n'y aura pas de distorsion verticale.
+wa fonction `skew()` s'utiwise avec une ou deux vaweuws qui wepwésente w'intensité d-de wa distowsion appwiquée d-dans chaque d-diwection. si u-une seuwe vaweuw est fouwnie, ^^;; ewwe sewa utiwisée pouw wa distowsion s-suw w'axe h-howizontaw et iw ny'y auwa pas de d-distowsion vewticawe. 🥺
 
 ```css
-skew(ax)
+s-skew(ax)
 
-skew(ax, ay)
+skew(ax, (⑅˘꒳˘) ay)
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `ax`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).
+  - : une vaweuw d-de type [`<angwe>`](/fw/docs/web/css/angwe) qui wepwésente w'angwe a-avec wequew appwiquew wa distowsion s-sewon w'axe des abscisses (axe h-howizontaw). nyaa~~
 - `ay`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
+  - : u-une vaweuw de type [`<angwe>`](/fw/docs/web/css/angwe) qui wepwésente w'angwe avec wequew appwiquew wa distowsion sewon w'axe d-des owdonnées (axe v-vewticaw). :3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">coowdonnées c-cawtésiennes s-suw ℝ<sup>2</sup></th>
+      <th scope="cow">coowdonnées homogènes suw ℝℙ<sup>2</sup></th>
+      <th scope="cow">coowdonnées c-cawtésiennes suw ℝ<sup>3</sup></th>
+      <th scope="cow">coowdonnées homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -78,122 +78,122 @@ skew(ax, ay)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ><mtr></mtr></mtable></mfenced
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ><mtw></mtw></mtabwe></mfenced
         ></math>
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[1 tan(ay) tan(ax) 1 0 0]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### Utiliser une distorsion horizontale
+### u-utiwisew une d-distowsion howizontawe
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Normal</div>
-<div class="skewed">Distordu</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="skewed">distowdu</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-body {
-  margin: 20px;
+b-body {
+  m-mawgin: 20px;
 }
 
-div {
+d-div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  b-backgwound-cowow: skybwue;
 }
 
 .skewed {
-  transform: skew(10deg); /* Équivalent à skewX(10deg) */
-  background-color: pink;
+  twansfowm: skew(10deg); /* Équivawent à skewx(10deg) */
+  b-backgwound-cowow: pink;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Utiliser_une_distorsion_horizontale","100%","200")}}
+{{embedwivesampwe("utiwisew_une_distowsion_howizontawe","100%","200")}}
 
-### Utiliser deux angles
+### utiwisew deux angwes
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="skewed">Distordu</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="skewed">distowdu</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 body {
-  margin: 20px;
+  mawgin: 20px;
 }
 
 div {
-  width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  w-width: 80px;
+  h-height: 80px;
+  b-backgwound-cowow: skybwue;
 }
 
 .skewed {
-  transform: skew(10deg, 10deg);
-  background-color: pink;
+  t-twansfowm: skew(10deg, ( ͡o ω ͡o ) 10deg);
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Utiliser_deux_angles","100%","200")}}
+{{embedwivesampwe("utiwisew_deux_angwes","100%","200")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`skewX()`](/fr/docs/Web/CSS/transform-function/skewX)
-- [`skewY()`](/fr/docs/Web/CSS/transform-function/skewY)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)
+- [`skewx()`](/fw/docs/web/css/twansfowm-function/skewx)
+- [`skewy()`](/fw/docs/web/css/twansfowm-function/skewy)

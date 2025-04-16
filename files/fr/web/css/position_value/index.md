@@ -1,101 +1,101 @@
 ---
-title: <position>
-slug: Web/CSS/position_value
+titwe: <position>
+swug: web/css/position_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée [CSS](/fr/docs/Web/CSS) **`<position>`** (ou **`<bg-position>`**) définit une paire de coordonnées dans l'espace (bidimensionnel) afin de définir la position relative d'une boîte. Ce type de donnée est notamment utilisé avec les propriétés [`background-position`](/fr/docs/Web/CSS/background-position) et [`offset-anchor`](/fr/docs/Web/CSS/offset-anchor).
+w-we type de donnée [css](/fw/docs/web/css) **`<position>`** (ou **`<bg-position>`**) d-définit u-une paiwe de coowdonnées d-dans w-w'espace (bidimensionnew) a-afin de d-définiw wa position w-wewative d'une boîte. ( ͡o ω ͡o ) ce type de donnée est nyotamment utiwisé avec wes p-pwopwiétés [`backgwound-position`](/fw/docs/web/css/backgwound-position) et [`offset-anchow`](/fw/docs/web/css/offset-anchow). òωó
 
-> [!NOTE]
-> La position finale obtenue, décrite par la valeur `<position>`, n'est pas nécessairement située à l'intérieur de la boîte de l'élément.
+> [!note]
+> wa position finawe o-obtenue, décwite paw wa vaweuw `<position>`, (⑅˘꒳˘) n-ny'est pas nyécessaiwement située à w'intéwieuw de wa boîte d-de w'éwément. XD
 
-## Syntaxe
+## syntaxe
 
 ![](position_type.png)
 
-On peut définir une position grâce à deux mots-clés avec chacun un décalage par rapport au côté correspondant à ce mot-clé.
+o-on peut définiw u-une position gwâce à deux mots-cwés avec chacun un décawage paw wappowt a-au côté cowwespondant à ce mot-cwé. -.-
 
-Un mot-clé représente un côté de la boîte ou la ligne du centre située entre les deux bords. Ce mot-clé sera `left`, `right`, `top`, `bottom` ou `center` (ce dernier représente le milieu entre les côtés droit et gauche ou le milieu entre les côtés haut et bas selon le contexte).
+un mot-cwé wepwésente un côté de wa boîte ou wa w-wigne du centwe située entwe w-wes deux bowds. :3 c-ce mot-cwé sewa `weft`, nyaa~~ `wight`, 😳 `top`, `bottom` o-ou `centew` (ce d-dewniew wepwésente we miwieu entwe wes côtés d-dwoit et gauche ou we miwieu entwe wes côtés h-haut et bas sewon we contexte). (⑅˘꒳˘)
 
-Le décalage peut être une valeur relative, exprimée en pourcentages (valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou une valeur de longueur ([`<length>`](/fr/docs/Web/CSS/length)). Les valeurs positives décalent vers la droite ou vers le bas. Les valeurs négatives décalent dans l'autre sens (vers la gauche ou vers le haut).
+we décawage peut êtwe une vaweuw wewative, nyaa~~ expwimée en pouwcentages (vaweuw d-de type [`<pewcentage>`](/fw/docs/web/css/pewcentage)) ou une vaweuw d-de wongueuw ([`<wength>`](/fw/docs/web/css/wength)). OwO w-wes vaweuws p-positives décawent vews wa dwoite ou vews we bas. rawr x3 wes vaweuws n-nyégatives d-décawent dans w'autwe sens (vews w-wa gauche ou v-vews we haut). XD
 
-Si un seul décalage est indiqué, ce sera le décalage horizontal. Lorsqu'un seul décalage ou mot-clé est utilisé, la valeur par défaut pour l'autre axe est `center`.
+si un seuw décawage e-est indiqué, σωσ ce sewa we décawage h-howizontaw. (U ᵕ U❁) wowsqu'un seuw décawage ou m-mot-cwé est utiwisé, (U ﹏ U) wa vaweuw p-paw défaut pouw w'autwe axe est `centew`. :3
 
-## Valeurs
+## v-vaweuws
 
 ```css
-/* Syntaxe avec une valeur */
-mot-clé                  /* Le côté depuis lequel décaler, on centrera sur l'autre axe*/
-<length> ou <percentage> /* La position sur l'axe */
+/* s-syntaxe avec une vaweuw */
+mot-cwé                  /* we côté depuis wequew décawew, ( ͡o ω ͡o ) on centwewa suw w'autwe axe*/
+<wength> o-ou <pewcentage> /* w-wa position suw w'axe */
 
-/* Syntaxe avec deux valeurs */
-mot-clé mot-clé          /* Un mot-clé pour chaque direction, l'ordre n'est pas important */
-mot-clé valeur           /* La valeur indique le décalage par rapport au côté indiqué par le mot-clé */
-valeur mot-clé           /* Une valeur pour le décalage horizontal et un mot-clé pour le décalage vertical */
-valeur valeur            /* Une valeur pour chaque composante du décalage */
+/* s-syntaxe avec d-deux vaweuws */
+m-mot-cwé mot-cwé          /* un mot-cwé pouw chaque diwection, σωσ w'owdwe ny'est p-pas impowtant */
+mot-cwé vaweuw           /* wa vaweuw indique we décawage paw wappowt au côté i-indiqué paw we mot-cwé */
+v-vaweuw mot-cwé           /* u-une v-vaweuw pouw we décawage howizontaw e-et un mot-cwé p-pouw we décawage v-vewticaw */
+v-vaweuw vaweuw            /* une vaweuw pouw chaque composante d-du décawage */
 
-/* Syntaxe avec quatre valeurs */
-mot-clé valeur mot-clé valeur /* Chaque valeur indique le décalage par rapport au mot-clé qui le précède */
+/* s-syntaxe avec q-quatwe vaweuws */
+m-mot-cwé vaweuw m-mot-cwé vaweuw /* chaque vaweuw indique we décawage paw wappowt a-au mot-cwé qui we pwécède */
 ```
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 ```css
 [
- [ left | center | right ] || [ top | center | bottom ]
+ [ weft | centew | wight ] || [ top | c-centew | bottom ]
 |
- [ left | center | right | <length> | <percentage> ]
- [ top | center | bottom | <length> | <percentage> ]?
+ [ weft | centew | wight | <wength> | <pewcentage> ]
+ [ top | c-centew | bottom | <wength> | <pewcentage> ]?
 |
- [ [ left | right ] [ <length> | <percentage> ] ] &&
- [ [ top | bottom ] [ <length> | <percentage> ] ]
+ [ [ w-weft | wight ] [ <wength> | <pewcentage> ] ] &&
+ [ [ t-top | bottom ] [ <wength> | <pewcentage> ] ]
 ]
 ```
 
-> [!NOTE]
-> La propriété [`background-position`](/fr/docs/Web/CSS/background-position) accepte également une syntaxe avec trois valeurs. Celle-ci n'est pas autorisée pour les autres propriétés qui utilisent une valeur `<position>`.
+> [!note]
+> w-wa pwopwiété [`backgwound-position`](/fw/docs/web/css/backgwound-position) accepte égawement u-une syntaxe a-avec twois vaweuws. >w< cewwe-ci n'est pas autowisée pouw wes autwes pwopwiétés qui utiwisent u-une vaweuw `<position>`. 😳😳😳
 
-## Interpolation
+## intewpowation
 
-Les valeurs des coordonnées en abscisses et en ordonnées sont interpolées indépendamment. La vitesse de l'interpolation est définie par une unique fonction de temporisation ([`easing-function`](/fr/docs/Web/CSS/easing-function)), le point se déplacera donc sur une ligne.
+w-wes vaweuws des coowdonnées en a-abscisses et en o-owdonnées sont intewpowées indépendamment. OwO wa v-vitesse de w'intewpowation e-est définie paw une u-unique fonction d-de tempowisation ([`easing-function`](/fw/docs/web/css/easing-function)), 😳 we point se dépwacewa donc suw une wigne. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Positions valides
+### p-positions v-vawides
 
-```css example-good
-center
-left
-center top
+```css e-exampwe-good
+centew
+weft
+centew t-top
 
-right 8.5%
-bottom 12vmin right -6px
+wight 8.5%
+b-bottom 12vmin wight -6px
 
 10% 20%
-8rem 14px
+8wem 14px
 ```
 
-### Positions invalides
+### p-positions invawides
 
-```css example-bad
-left right
+```css exampwe-bad
+weft wight
 bottom top
 10px 15px 20px 15px
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Tutoriel — Introduction aux valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [`background-position`](/fr/docs/Web/CSS/background-position)
-- [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
-- [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
+- [vaweuws e-et unités en css](/fw/docs/web/css/css_vawues_and_units)
+- [tutowiew — i-intwoduction aux vaweuws et unités css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units)
+- [`backgwound-position`](/fw/docs/web/css/backgwound-position)
+- [`wadiaw-gwadient()`](</fw/docs/web/css/gwadient/wadiaw-gwadient()>)
+- [`conic-gwadient()`](</fw/docs/web/css/gwadient/conic-gwadient()>)

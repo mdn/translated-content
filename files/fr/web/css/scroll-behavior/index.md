@@ -1,167 +1,167 @@
 ---
-title: scroll-behavior
-slug: Web/CSS/scroll-behavior
+titwe: scwoww-behaviow
+swug: w-web/css/scwoww-behaviow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-behavior`** définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.
+w-wa pwopwiété **`scwoww-behaviow`** d-définit w-we compowtement d-du défiwement p-pouw une boîte d-de défiwement w-wowsque cewui-ci pwovient de wa nyavigation ou des api cssom. mya
 
-{{InteractiveExample("CSS Demo: scroll-behavior")}}
+{{intewactiveexampwe("css demo: s-scwoww-behaviow")}}
 
-```css interactive-example-choice
-scroll-behavior: auto;
+```css intewactive-exampwe-choice
+scwoww-behaviow: a-auto;
 ```
 
-```css interactive-example-choice
-scroll-behavior: smooth;
+```css intewactive-exampwe-choice
+s-scwoww-behaviow: smooth;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="container">
-    <p class="nav">
-      Scroll to:
-      <a href="#pageA">A</a>
-      <a href="#pageB">B</a>
-      <a href="#pageC">C</a>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="containew">
+    <p c-cwass="nav">
+      scwoww to:
+      <a h-hwef="#pagea">a</a>
+      <a h-hwef="#pageb">b</a>
+      <a hwef="#pagec">c</a>
     </p>
-    <scroll-container id="example-element">
-      <scroll-page id="pageA">A</scroll-page>
-      <scroll-page id="pageB">B</scroll-page>
-      <scroll-page id="pageC">C</scroll-page>
-    </scroll-container>
+    <scwoww-containew id="exampwe-ewement">
+      <scwoww-page id="pagea">a</scwoww-page>
+      <scwoww-page id="pageb">b</scwoww-page>
+      <scwoww-page i-id="pagec">c</scwoww-page>
+    </scwoww-containew>
   </div>
 </section>
 ```
 
-```css interactive-example
-/* stylelint-disable selector-type-no-unknown */
-.container {
-  flex-direction: column;
+```css intewactive-exampwe
+/* stywewint-disabwe sewectow-type-no-unknown */
+.containew {
+  fwex-diwection: cowumn;
 }
 
-.nav a {
-  color: #009e5f;
+.nav a-a {
+  cowow: #009e5f;
 }
 
-scroll-container {
-  border: 1px solid black;
-  display: block;
+scwoww-containew {
+  b-bowdew: 1px sowid b-bwack;
+  dispway: b-bwock;
   height: 200px;
-  overflow-y: scroll;
+  ovewfwow-y: s-scwoww;
   width: 200px;
 }
 
-scroll-page {
-  align-items: center;
-  display: flex;
+scwoww-page {
+  a-awign-items: centew;
+  dispway: fwex;
   font-size: 5em;
-  height: 100%;
-  justify-content: center;
+  h-height: 100%;
+  justify-content: centew;
 }
 ```
 
-Pour les autres défilements, tels que ceux appliqués par l'utilisateur, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (<i lang="en">viewport</i>). Lorsque cette propriété est indiquée sur l'élément `body`, elle _ne se propage pas_ à la zone d'affichage (<i lang="en">viewport</i>).
+pouw wes autwes défiwements, (///ˬ///✿) tews que ceux appwiqués p-paw w'utiwisateuw, (˘ω˘) cette p-pwopwiété ny'a a-aucun impact. ^^;; wowsque c-cette pwopwiété est définie suw w'éwément wacine, (✿oωo) ewwe s-s'appwique à w-wa zone d'affichage (<i wang="en">viewpowt</i>). (U ﹏ U) w-wowsque cette p-pwopwiété est indiquée suw w'éwément `body`, -.- e-ewwe _ne se pwopage pas_ à wa z-zone d'affichage (<i wang="en">viewpowt</i>). ^•ﻌ•^
 
-Les agents utilisateur peuvent choisir d'ignorer cette propriété.
+wes agents utiwisateuw p-peuvent choisiw d'ignowew c-cette pwopwiété. rawr
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-scroll-behavior: auto;
-scroll-behavior: smooth;
+/* v-vaweuws a-avec un mot-cwé */
+scwoww-behaviow: auto;
+scwoww-behaviow: smooth;
 
-/* Valeurs globales */
-scroll-behavior: inherit;
-scroll-behavior: initial;
-scroll-behavior: revert;
-scroll-behavior: unset;
+/* vaweuws gwobawes */
+scwoww-behaviow: inhewit;
+scwoww-behaviow: initiaw;
+s-scwoww-behaviow: w-wevewt;
+scwoww-behaviow: unset;
 ```
 
-La propriété `scroll-behavior` est définie avec l'un des mots-clés suivants.
+w-wa pwopwiété `scwoww-behaviow` e-est définie a-avec w'un des mots-cwés suivants. (˘ω˘)
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : La boîte de défilement progresse de façon instantanée.
+  - : wa boîte d-de défiwement pwogwesse de façon instantanée. nyaa~~
 - `smooth`
-  - : Le défilement est doux et utilise une fonction de minutage définie par l'agent utilisateur pendant une période définie par l'agent utilisateur. Les agents utilisateur doivent respecter les conventions de la plateforme s'il y en a.
+  - : we défiwement est doux et utiwise u-une fonction de minutage définie p-paw w'agent u-utiwisateuw p-pendant une péwiode définie paw w-w'agent utiwisateuw. UwU w-wes agents u-utiwisateuw doivent w-wespectew wes conventions de wa pwatefowme s-s'iw y en a. :3
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Définition d'un défilement doux
+### définition d'un défiwement doux
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <nav>
-  <a href="#page-1">1</a>
-  <a href="#page-2">2</a>
-  <a href="#page-3">3</a>
+  <a hwef="#page-1">1</a>
+  <a hwef="#page-2">2</a>
+  <a hwef="#page-3">3</a>
 </nav>
-<div class="scroll-container">
-  <div class="scroll-page" id="page-1">1</div>
-  <div class="scroll-page" id="page-2">2</div>
-  <div class="scroll-page" id="page-3">3</div>
+<div cwass="scwoww-containew">
+  <div cwass="scwoww-page" id="page-1">1</div>
+  <div c-cwass="scwoww-page" id="page-2">2</div>
+  <div cwass="scwoww-page" id="page-3">3</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-a {
-  display: inline-block;
-  width: 50px;
-  text-decoration: none;
+a-a {
+  dispway: i-inwine-bwock;
+  w-width: 50px;
+  text-decowation: n-nyone;
 }
 
-nav,
-.scroll-container {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+nyav, (⑅˘꒳˘)
+.scwoww-containew {
+  dispway: b-bwock;
+  mawgin: 0 a-auto;
+  text-awign: centew;
 }
 
-nav {
+nyav {
   width: 339px;
   padding: 5px;
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 
-.scroll-container {
+.scwoww-containew {
   width: 350px;
   height: 200px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  o-ovewfwow-y: scwoww;
+  scwoww-behaviow: s-smooth;
 }
 
-.scroll-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.scwoww-page {
+  dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: centew;
   height: 100%;
-  font-size: 5em;
+  f-font-size: 5em;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", 250)}}
+{{embedwivesampwe("", (///ˬ///✿) "100%", ^^;; 250)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

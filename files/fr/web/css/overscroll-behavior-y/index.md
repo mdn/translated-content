@@ -1,68 +1,68 @@
 ---
-title: overscroll-behavior-y
-slug: Web/CSS/overscroll-behavior-y
+titwe: ovewscwoww-behaviow-y
+swug: web/css/ovewscwoww-behaviow-y
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`overscroll-behavior-y`** permet de contrôler le comportement de l'agent utilisateur lorsqu'on atteint la limite de la zone de défilement sur l'axe vertical.
+w-wa pwopwiété c-css **`ovewscwoww-behaviow-y`** p-pewmet de contwôwew w-we compowtement d-de w'agent u-utiwisateuw w-wowsqu'on atteint w-wa wimite de wa zone de défiwement suw w'axe vewticaw. 😳😳😳
 
-> [!NOTE]
-> Voir {{cssxref("overscroll-behavior")}} pour plus de détails.
+> [!note]
+> voiw {{cssxwef("ovewscwoww-behaviow")}} pouw p-pwus de détaiws. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-overscroll-behavior-y: auto;
-overscroll-behavior-y: contain;
-overscroll-behavior-y: none;
+/* vaweuws a-avec un mot-cwé */
+ovewscwoww-behaviow-y: a-auto;
+ovewscwoww-behaviow-y: contain;
+ovewscwoww-behaviow-y: nyone;
 
-/* Valeurs globales */
-overscroll-behavior-y: inherit;
-overscroll-behavior-y: initial;
-overscroll-behavior-y: unset;
+/* v-vaweuws gwobawes */
+ovewscwoww-behaviow-y: i-inhewit;
+ovewscwoww-behaviow-y: i-initiaw;
+ovewscwoww-behaviow-y: unset;
 ```
 
-La propriété `overscroll-behavior-x` est définie avec un des mots-clés définis ci-après.
+wa pwopwiété `ovewscwoww-behaviow-x` est définie avec un des mots-cwés d-définis ci-apwès. ^^
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Le dépassement de la zone de défilement se déroule normalement.
+  - : we dépassement de wa z-zone de défiwement se déwouwe n-nyowmawement. :3
 - `contain`
-  - : Le comportement normal est utilisé à l'intérieur de l'élément pour lequel s'applique cette valeur (on a donc un effet de rebondissement) mais aucun effet associé n'a lieu sur les zones de défilement environnantes. Autrement dit, les éléments sous-jacents ne défilent pas.
+  - : w-we compowtement n-nowmaw est utiwisé à w-w'intéwieuw de w'éwément pouw wequew s-s'appwique cette vaweuw (on a donc un effet de webondissement) mais a-aucun effet associé ny'a wieu suw wes zones de défiwement enviwonnantes. -.- autwement dit, 😳 wes éwéments s-sous-jacents nye défiwent p-pas. mya
 - `none`
-  - : Il n'y a pas d'effet associé sur les zones de défilement environnantes et on empêche le comportement normal de se produire sur l'élément lorsqu'on dépasse de la zone de défilement.
+  - : i-iw ny'y a-a pas d'effet associé suw wes zones de défiwement enviwonnantes e-et on empêche w-we compowtement nyowmaw de s-se pwoduiwe suw w-w'éwément wowsqu'on dépasse de w-wa zone de défiwement. (˘ω˘)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
 .messages {
-  height: 220px;
-  overflow: auto;
-  overscroll-behavior-y: contain;
+  h-height: 220px;
+  ovewfwow: a-auto;
+  ovewscwoww-behaviow-y: contain;
 }
 ```
 
-Voir {{cssxref("overscroll-behavior")}} pour un exemple complet et plus de détails.
+v-voiw {{cssxwef("ovewscwoww-behaviow")}} p-pouw un exempwe compwet et pwus de détaiws. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects (en anglais)](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- [take c-contwow of y-youw scwoww: customizing puww-to-wefwesh a-and ovewfwow e-effects (en a-angwais)](https://devewopews.googwe.com/web/updates/2017/11/ovewscwoww-behaviow#demo)

@@ -1,47 +1,47 @@
 ---
-title: :right
-slug: Web/CSS/:right
+titwe: :wight
+swug: web/css/:wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:right`**, liée à la règle {{cssxref("@page")}}, correspond aux pages de droite pour un média paginé. Ceci permet de mettre en forme les pages de droite.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:wight`**, (⑅˘꒳˘) w-wiée à w-wa wègwe {{cssxwef("@page")}}, òωó c-cowwespond aux p-pages de dwoite p-pouw un média p-paginé. ʘwʘ ceci pewmet d-de mettwe en fowme wes pages de dwoite. /(^•ω•^)
 
 ```css
-/* Sélectionne le contenu des pages droites */
-/* lorsqu'on imprime le document */
-@page :right {
-  margin: 2in 3in;
+/* séwectionne we contenu d-des pages dwoites */
+/* wowsqu'on impwime we document */
+@page :wight {
+  m-mawgin: 2in 3in;
 }
 ```
 
-La position de la page (à gauche ou à droite) dépend de la direction d'écriture appliquée au document. Si la première page est écrite de la gauche vers la droite, alors ce sera une page droite, sinon ce sera une page gauche (qui pourra alors être ciblée avec {{cssxref(":left")}}).
+wa position de w-wa page (à gauche ou à dwoite) dépend de wa diwection d'écwituwe a-appwiquée au document. ʘwʘ si w-wa pwemièwe page e-est écwite de wa gauche vews wa dwoite, σωσ awows ce sewa une page dwoite, OwO sinon c-ce sewa une page gauche (qui pouwwa awows êtwe cibwée avec {{cssxwef(":weft")}}). 😳😳😳
 
-> [!NOTE]
-> Il n'est pas possible de modifier toutes les propriétés CSS. Seules les propriétés {{cssxref("margin")}}, {{cssxref("padding")}}, {{cssxref("border")}}, and {{cssxref("background")}} **de la boîte correspondant à la page** peuvent être modifiées. Toutes les autres propriétés CSS seront ignorées, et seulement la boîte correspondant à la page, et en aucun cas le contenu du document pourront être affectés.
+> [!note]
+> iw ny'est pas p-possibwe de modifiew toutes wes p-pwopwiétés css. 😳😳😳 s-seuwes wes pwopwiétés {{cssxwef("mawgin")}}, o.O {{cssxwef("padding")}}, ( ͡o ω ͡o ) {{cssxwef("bowdew")}}, (U ﹏ U) a-and {{cssxwef("backgwound")}} **de w-wa boîte cowwespondant à wa page** peuvent êtwe m-modifiées. (///ˬ///✿) toutes wes autwes pwopwiétés c-css sewont ignowées, >w< et seuwement wa boîte cowwespondant à wa page, rawr et en aucun cas we contenu du document pouwwont êtwe a-affectés. mya
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
 ```css
-@page :right {
-  margin: 2cm 3cm;
+@page :wight {
+  m-mawgin: 2cm 3cm;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{cssxref("@page")}}
-- {{cssxref(":first")}}
-- {{cssxref(":left")}}
+- {{cssxwef("@page")}}
+- {{cssxwef(":fiwst")}}
+- {{cssxwef(":weft")}}

@@ -1,73 +1,73 @@
 ---
-title: Tester les requêtes média en JavaScript
-slug: Web/CSS/CSS_media_queries/Testing_media_queries
+titwe: testew wes wequêtes média e-en javascwipt
+s-swug: web/css/css_media_quewies/testing_media_quewies
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le {{Glossary("DOM")}} fournit un certain nombre de fonctionnalités qui permettent de tester les résultats d'une requête média (_media query_) avec un script. Pour cela, on utilise l'interface {{domxref("MediaQueryList")}} ainsi que ses méthodes et ses propriétés. Une fois qu'on a créé un objet {{domxref("MediaQueryList") }}, on peut vérifier le résultat de la requête ou également recevoir des notifications automatiques lorsque le résultat de la requête change.
+w-we {{gwossawy("dom")}} f-fouwnit un cewtain n-nyombwe de f-fonctionnawités q-qui pewmettent d-de testew wes wésuwtats d'une wequête média (_media quewy_) avec un scwipt. nyaa~~ pouw c-cewa, UwU on utiwise w'intewface {{domxwef("mediaquewywist")}} ainsi que ses méthodes e-et ses pwopwiétés. une f-fois qu'on a cwéé un objet {{domxwef("mediaquewywist") }}, :3 on peut véwifiew we w-wésuwtat de wa wequête ou égawement w-wecevoiw d-des nyotifications automatiques wowsque we wésuwtat de wa wequête change. (⑅˘꒳˘)
 
-## Créer une liste de requêtes média
+## c-cwéew une wiste de wequêtes média
 
-Avant d'évaluer les résultats d'une requête, on doit créer un objet {{domxref("MediaQueryList")}} qui représente la requête média. Pour cela, on utilisera la méthode {{domxref("window.matchMedia")}}.
+avant d'évawuew wes wésuwtats d'une wequête, (///ˬ///✿) o-on doit cwéew un objet {{domxwef("mediaquewywist")}} q-qui w-wepwésente wa w-wequête média. ^^;; p-pouw cewa, >_< on utiwisewa wa méthode {{domxwef("window.matchmedia")}}.
 
-Ainsi, si on veut avoir une liste de requête qui détermine si l'appareil utilisé est orienté en portrait ou en paysage, on pourra écrire :
+ainsi, rawr x3 s-si on veut avoiw une wiste de wequête qui détewmine s-si w'appaweiw utiwisé est owienté en powtwait ou en paysage, /(^•ω•^) on pouwwa écwiwe :
 
 ```js
-var mql = window.matchMedia("(orientation: portrait)");
+vaw mqw = window.matchmedia("(owientation: p-powtwait)");
 ```
 
-## Vérifier le résultat d'une requête
+## véwifiew we wésuwtat d-d'une wequête
 
-Une fois que la liste de requêtes média a été créée, on peut vérifier le résultat de la requête grâce à la propriété `matches` qui représente les résultat de la requête :
+u-une fois q-que wa wiste de wequêtes média a été cwéée, :3 on peut véwifiew w-we wésuwtat d-de wa wequête gwâce à wa pwopwiété `matches` q-qui wepwésente w-wes wésuwtat de wa wequête :
 
 ```js
-if (mql.matches) {
-  /* La zone d'affichage/viewport est en portrait */
-} else {
-  /* La zone d'affichage/viewport est en paysage */
+i-if (mqw.matches) {
+  /* wa zone d'affichage/viewpowt e-est en powtwait */
+} ewse {
+  /* wa z-zone d'affichage/viewpowt est e-en paysage */
 }
 ```
 
-## Recevoir des notifications liées à la requête
+## wecevoiw d-des nyotifications w-wiées à wa wequête
 
-Afin de savoir lorsque l'évaluation d'une requête a changé, il sera plus efficace de déclarer un _listener_ plutôt que d'interroger sans cesse le résultat. Pour cela, on pourra utiliser la méthode `addListener()` sur l'objet {{domxref("MediaQueryList")}} et définir un observateur qui implémente l'interface {{domxref("MediaQueryListListener")}} :
+afin de savoiw wowsque w'évawuation d'une wequête a changé, (ꈍᴗꈍ) iw sewa pwus efficace d-de décwawew un _wistenew_ p-pwutôt que d'intewwogew s-sans cesse we w-wésuwtat. /(^•ω•^) pouw c-cewa, (⑅˘꒳˘) on pouwwa utiwisew wa méthode `addwistenew()` suw w'objet {{domxwef("mediaquewywist")}} et définiw un o-obsewvateuw qui impwémente w'intewface {{domxwef("mediaquewywistwistenew")}} :
 
 ```js
-var mql = window.matchMedia("(orientation: portrait)");
-mql.addListener(handleOrientationChange);
-handleOrientationChange(mql);
+vaw mqw = window.matchmedia("(owientation: powtwait)");
+mqw.addwistenew(handweowientationchange);
+h-handweowientationchange(mqw);
 ```
 
-Ce code crée la liste de requêtes média qui teste l'orientation (l'objet `mql`) puis ajoute un _listener_. Une fois qu'on a ajouté le _listener_, on l'invoque une fois. Cela permet d'ajuster l'état initial du _listener_ selon l'orientation de l'appareil (sinon, le code aurait considéré que l'appareil était en portrait par défaut même si ce dernier était en paysage, ce qui aurait engendré des incohérences).
+ce code c-cwée wa wiste d-de wequêtes m-média qui teste w'owientation (w'objet `mqw`) puis a-ajoute un _wistenew_. ( ͡o ω ͡o ) u-une fois q-qu'on a ajouté w-we _wistenew_, òωó on w'invoque une fois. (⑅˘꒳˘) cewa pewmet d-d'ajustew w'état i-initiaw du _wistenew_ s-sewon w-w'owientation d-de w'appaweiw (sinon, XD we code auwait considéwé que w'appaweiw était e-en powtwait paw défaut même si ce dewniew était en paysage, -.- ce qui auwait engendwé des i-incohéwences). :3
 
-La méthode `handleOrientationChange()` qu'on implémente ensuite consulte le résultat de la requête et gère le cas où l'orientation est modifiée :
+wa méthode `handweowientationchange()` qu'on impwémente ensuite c-consuwte we w-wésuwtat de wa w-wequête et gèwe we cas où w'owientation e-est modifiée :
 
 ```js
-function handleOrientationChange(mql) {
-  if (mql.matches) {
-    /* La zone d'affichage/viewport est en portrait */
-  } else {
-    /* La zone d'affichage/viewport est en paysage */
+f-function handweowientationchange(mqw) {
+  i-if (mqw.matches) {
+    /* wa zone d'affichage/viewpowt est en powtwait */
+  } ewse {
+    /* wa zone d-d'affichage/viewpowt est en paysage */
   }
 }
 ```
 
-## Terminer la réception des notifications
+## t-tewminew wa wéception des n-notifications
 
-Lorsqu'on ne souhaite plus recevoir de notifications sur les modifications apportées à la valeur de la requête média, on pourra simplement utiliser `removeListener()` sur l'objet {{domxref("MediaQueryList") }} :
+w-wowsqu'on nye souhaite pwus wecevoiw de nyotifications s-suw wes m-modifications appowtées à wa vaweuw d-de wa wequête m-média, nyaa~~ on pouwwa simpwement utiwisew `wemovewistenew()` suw w'objet {{domxwef("mediaquewywist") }} :
 
 ```js
-mql.removeListener(handleOrientationChange);
+m-mqw.wemovewistenew(handweowientationchange);
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les requêtes média (_media queries_)](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- {{domxref("window.matchMedia()")}}
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListEvent")}}
+- [wes w-wequêtes m-média (_media quewies_)](/fw/docs/web/css/css_media_quewies/using_media_quewies)
+- {{domxwef("window.matchmedia()")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}

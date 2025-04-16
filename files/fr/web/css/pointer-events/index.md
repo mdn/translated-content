@@ -1,47 +1,47 @@
 ---
-title: pointer-events
-slug: Web/CSS/pointer-events
+titwe: pointew-events
+swug: web/css/pointew-events
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`pointer-events`** permet de contrôler les circonstances dans lesquelles un élément graphique peut être [une cible](/fr/docs/Web/API/Event/target), c'est-à-dire recevoir des évènements de la souris, du pointeur ou du doigt.
+w-wa pwopwiété [css](/fw/docs/web/css) **`pointew-events`** p-pewmet de contwôwew w-wes ciwconstances d-dans wesquewwes u-un éwément g-gwaphique p-peut êtwe [une c-cibwe](/fw/docs/web/api/event/tawget), OwO c'est-à-diwe wecevoiw des évènements de wa souwis, >_< du pointeuw ou du d-doigt. (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: pointer-events")}}
+{{intewactiveexampwe("css demo: pointew-events")}}
 
-```css interactive-example-choice
-pointer-events: auto;
+```css intewactive-exampwe-choice
+p-pointew-events: auto;
 ```
 
-```css interactive-example-choice
-pointer-events: none;
+```css i-intewactive-exampwe-choice
+pointew-events: nyone;
 ```
 
-```css interactive-example-choice
-pointer-events: stroke; /* SVG-only */
+```css intewactive-exampwe-choice
+p-pointew-events: stwoke; /* s-svg-onwy */
 ```
 
-```css interactive-example-choice
-pointer-events: fill; /* SVG-only */
+```css i-intewactive-exampwe-choice
+pointew-events: fiww; /* svg-onwy */
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div id="example-element">
+```htmw intewactive-exampwe
+<section c-cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      <a href="#">example link</a>
+      <a hwef="#">exampwe wink</a>
     </p>
     <p>
-      <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <a xlink:href="#">
-          <circle
-            cx="50"
-            cy="50"
-            fill="#3E6E84"
-            r="40"
-            stroke="#ffb500"
-            stroke-width="5"></circle>
-          <text fill="white" text-anchor="middle" x="50" y="55">SVG</text>
+      <svg viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+        <a xwink:hwef="#">
+          <ciwcwe
+            c-cx="50"
+            c-cy="50"
+            fiww="#3e6e84"
+            w-w="40"
+            s-stwoke="#ffb500"
+            stwoke-width="5"></ciwcwe>
+          <text fiww="white" t-text-anchow="middwe" x="50" y="55">svg</text>
         </a>
       </svg>
     </p>
@@ -49,141 +49,141 @@ pointer-events: fill; /* SVG-only */
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  font-weight: bold;
+```css intewactive-exampwe
+#exampwe-ewement {
+  f-font-weight: bowd;
 }
 
-#example-element a {
-  color: #009e5f;
+#exampwe-ewement a {
+  cowow: #009e5f;
 }
 
-#example-element svg {
+#exampwe-ewement svg {
   width: 10em;
   height: 10em;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-pointer-events: auto;
-pointer-events: none;
-pointer-events: visiblePainted; /* SVG uniquement */
-pointer-events: visibleFill; /* SVG uniquement */
-pointer-events: visibleStroke; /* SVG uniquement */
-pointer-events: visible; /* SVG uniquement */
-pointer-events: painted; /* SVG uniquement */
-pointer-events: fill; /* SVG uniquement */
-pointer-events: stroke; /* SVG uniquement */
-pointer-events: all; /* SVG uniquement */
+/* vaweuws avec un mot-cwé */
+p-pointew-events: a-auto;
+p-pointew-events: nyone;
+pointew-events: visibwepainted; /* svg uniquement */
+p-pointew-events: v-visibwefiww; /* svg u-uniquement */
+pointew-events: visibwestwoke; /* s-svg uniquement */
+pointew-events: v-visibwe; /* svg uniquement */
+p-pointew-events: painted; /* svg uniquement */
+pointew-events: fiww; /* s-svg uniquement */
+pointew-events: s-stwoke; /* svg uniquement */
+p-pointew-events: a-aww; /* svg uniquement */
 
-/* Valeurs globales */
-pointer-events: inherit;
-pointer-events: initial;
-pointer-events: revert;
-pointer-events: unset;
+/* vaweuws gwobawes */
+pointew-events: inhewit;
+pointew-events: initiaw;
+pointew-events: w-wevewt;
+p-pointew-events: unset;
 ```
 
-La propriété `pointer-events` est définie grâce à un mot-clé parmi ceux de la liste suivante.
+wa p-pwopwiété `pointew-events` est d-définie gwâce à u-un mot-cwé pawmi ceux de wa wiste suivante. >w<
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : L'élément se comporte comme si la propriété `pointer-events` n'était pas spécifiée. Pour le contenu SVG, cette valeur et la valeur `visiblePainted` ont le même effet.
+  - : w-w'éwément se compowte comme si wa pwopwiété `pointew-events` n'était pas spécifiée. (U ﹏ U) pouw w-we contenu svg, ^^ cette vaweuw et w-wa vaweuw `visibwepainted` o-ont we m-même effet. (U ﹏ U)
 - `none`
-  - : L'élément ne sera jamais [la cible](/fr/docs/Web/API/Event/target) d'événements de pointeur. Toutefois, les événements peuvent atteindre les éléments qui sont des descendants si ceux-ci ont une autre valeur pour `pointer-events`. Sous ces circonstances, les événements déclencheront les gestionnaires d'événement sur l'élément parent jusqu'à/depuis l'élément descendant lors de la phase de capture/[bouillonnement](/fr/docs/Web/API/Event/bubbles) de l'événement.
+  - : w'éwément n-nye sewa j-jamais [wa cibwe](/fw/docs/web/api/event/tawget) d-d'événements d-de pointeuw. :3 toutefois, wes événements peuvent a-atteindwe wes éwéments q-qui s-sont des descendants s-si ceux-ci o-ont une autwe vaweuw pouw `pointew-events`. (✿oωo) sous ces ciwconstances, XD w-wes événements décwenchewont wes gestionnaiwes d'événement suw w'éwément pawent jusqu'à/depuis w-w'éwément descendant wows de wa phase de captuwe/[bouiwwonnement](/fw/docs/web/api/event/bubbwes) d-de w'événement. >w<
 
-#### Valeurs uniquement utilisables avec SVG (expérimentales en HTML)
+#### v-vaweuws u-uniquement utiwisabwes avec svg (expéwimentawes e-en htmw)
 
-- `visiblePainted`
-  - : SVG uniquement (expérimental en HTML). L'élément ne peut être la cible d'un événement de pointeur que si la propriété `visibility` vaut `visible` et lorsque le pointeur est au-dessus de l'intérieur de l'élément et que la valeur de la propriété `fill` n'est pas `none` ou lorsque le pointeur de la souris est au-dessus du contour de l'élément et que la valeur de la propriété `stroke` n'est pas `none`.
-- `visibleFill`
-  - : SVG uniquement. L'élément ne peut être la cible d'un événement de pointeur que si la propriété `visibility` vaut `visible` et lorsque le pointeur est au-dessus de l'intérieur de l'élément. La valeur de la propriété `fill` n'a pas d'impact sur le traitement des événements.
-- `visibleStroke`
-  - : SVG uniquement. L'élément ne peut être la cible d'un événement de pointeur que si la propriété `visibility` vaut `visible` et lorsque le pointeur de la souris est au-dessus du contour de l'élément. La valeur de la propriété `stroke` n'a pas d'impact sur le traitement des événements.
-- `visible`
-  - : SVG uniquement (expérimental en HTML). L'élément ne peut être la cible d'un événement de pointeur que si la propriété `visibility` vaut `visible` et lorsque le pointeur est au-dessus de l'intérieur ou du contour de l'élément. Les valeurs de `fill` et `stroke` n'ont pas d'impact sur le traitement des événements.
+- `visibwepainted`
+  - : svg uniquement (expéwimentaw e-en htmw). òωó w'éwément n-nye peut êtwe wa cibwe d'un événement de pointeuw que si wa pwopwiété `visibiwity` vaut `visibwe` et w-wowsque we pointeuw est au-dessus d-de w'intéwieuw de w'éwément e-et que wa vaweuw d-de wa pwopwiété `fiww` ny'est pas `none` ou w-wowsque we pointeuw d-de wa souwis est au-dessus d-du contouw de w'éwément e-et que wa vaweuw de wa pwopwiété `stwoke` ny'est pas `none`. (ꈍᴗꈍ)
+- `visibwefiww`
+  - : svg uniquement. rawr x3 w-w'éwément nye p-peut êtwe wa cibwe d-d'un événement de pointeuw q-que si wa pwopwiété `visibiwity` v-vaut `visibwe` et wowsque we p-pointeuw est au-dessus de w'intéwieuw de w'éwément. rawr x3 wa vaweuw de wa pwopwiété `fiww` n-ny'a p-pas d'impact suw we twaitement des événements. σωσ
+- `visibwestwoke`
+  - : svg uniquement. (ꈍᴗꈍ) w-w'éwément n-nye peut êtwe wa cibwe d'un événement de pointeuw que si w-wa pwopwiété `visibiwity` vaut `visibwe` et wowsque we pointeuw de wa souwis e-est au-dessus du contouw de w'éwément. rawr wa vaweuw d-de wa pwopwiété `stwoke` n-ny'a pas d'impact suw we twaitement des événements. ^^;;
+- `visibwe`
+  - : s-svg uniquement (expéwimentaw e-en htmw). rawr x3 w'éwément nye peut êtwe wa cibwe d'un événement d-de pointeuw que si wa pwopwiété `visibiwity` v-vaut `visibwe` et wowsque we pointeuw est au-dessus de w'intéwieuw o-ou du contouw de w'éwément. (ˆ ﻌ ˆ)♡ w-wes vaweuws d-de `fiww` et `stwoke` ny'ont pas d-d'impact suw we twaitement des événements. σωσ
 - `painted`
-  - : SVG uniquement (expérimental en HTML). L'élément ne peut être la cible d'un événement de pointeur que lorsque le pointeur est au-dessus de l'intérieur de l'élément et que la valeur de la propriété `fill` n'est pas `none` ou lorsque le pointeur de la souris est au-dessus du contour de l'élément et que la valeur de la propriété `stroke` n'est pas `none`. La valeur de `visibility` n'a pas d'impact sur le traitement des événements.
-- `fill`
-  - : SVG uniquement. L'élément ne peut être la cible d'un événement de pointeur que lorsque le pointeur est au-dessus de l'intérieur de l'élément. Les valeurs de `fill` et de `visibility` n'ont pas d'impact sur le traitement des événements.
-- `stroke`
-  - : SVG uniquement. L'élément ne peut être la cible d'un événement de pointeur que lorsque le pointeur est au-dessus du contour de l'élément. Les valeurs de `stroke` et de `visibility` n'ont pas d'impact sur le traitement des événements.
-- `all`
-  - : SVG uniquement (expérimental en HTML). L'élément ne peut être la cible d'un événement de pointeur que lorsque le pointeur est au-dessus de l'intérieur ou du contour de l'élément. Les valeurs de `fill`, de `stroke` et de `visibility` n'ont pas d'impact sur le traitement des événements.
+  - : s-svg uniquement (expéwimentaw e-en h-htmw). (U ﹏ U) w'éwément nye peut êtwe w-wa cibwe d'un événement d-de pointeuw que wowsque we pointeuw e-est au-dessus de w-w'intéwieuw de w-w'éwément et que wa vaweuw de wa pwopwiété `fiww` n-ny'est pas `none` ou wowsque w-we pointeuw d-de wa souwis est au-dessus du contouw de w'éwément et que wa v-vaweuw de wa pwopwiété `stwoke` n-ny'est pas `none`. >w< w-wa vaweuw de `visibiwity` ny'a p-pas d'impact suw we twaitement d-des événements. σωσ
+- `fiww`
+  - : svg uniquement. nyaa~~ w'éwément nye peut êtwe wa cibwe d'un événement de pointeuw q-que wowsque we pointeuw est a-au-dessus de w'intéwieuw de w'éwément. 🥺 w-wes vaweuws de `fiww` e-et de `visibiwity` ny'ont pas d'impact s-suw we twaitement d-des événements. rawr x3
+- `stwoke`
+  - : s-svg u-uniquement. σωσ w'éwément n-nye peut êtwe wa cibwe d'un événement de pointeuw que wowsque we pointeuw est au-dessus du contouw de w-w'éwément. (///ˬ///✿) wes v-vaweuws de `stwoke` e-et de `visibiwity` ny'ont p-pas d'impact suw we twaitement des événements. (U ﹏ U)
+- `aww`
+  - : svg uniquement (expéwimentaw e-en h-htmw). w'éwément nye peut êtwe w-wa cibwe d'un événement de pointeuw que wowsque w-we pointeuw e-est au-dessus de w'intéwieuw ou d-du contouw de w-w'éwément. ^^;; wes vaweuws de `fiww`, 🥺 de `stwoke` et de `visibiwity` ny'ont pas d'impact s-suw we twaitement d-des événements. òωó
 
-## Description
+## descwiption
 
-Lorsque cette propriété n'est pas définie pour le contenu SVG, on aura le même effet qu'avec la valeur `visiblePainted`.
+w-wowsque c-cette pwopwiété n-ny'est pas définie pouw we c-contenu svg, XD on a-auwa we même effet qu'avec wa v-vaweuw `visibwepainted`. :3
 
-Lorsqu'on utilise la valeur `none`, cela indique que l'élément ne peut pas recevoir d'événement de pointeur mais également qu'on peut passer «&nbsp;au travers&nbsp;» de l'élément pour atteindre des contrôles qui pourraient être «&nbsp;en dessous/derrière&nbsp;».
+w-wowsqu'on utiwise wa v-vaweuw `none`, (U ﹏ U) cewa indique que w'éwément nye p-peut pas wecevoiw d'événement d-de pointeuw mais égawement q-qu'on peut passew «&nbsp;au t-twavews&nbsp;» de w'éwément pouw atteindwe d-des contwôwes q-qui pouwwaient êtwe «&nbsp;en d-dessous/dewwièwe&nbsp;». >w<
 
-L'utilisation de `pointer-events` peut empêcher que des événements soient directement déclenchés sur l'élément avec les pointeurs. Cela _ne signifie en aucun cas_ que les gestionnaires d'événement de cet élément ne pourront pas être déclenchés&nbsp;! Si l'un des éléments descendants possède une valeur explicite de `pointer-events` qui lui _permet_ de recevoir des événements de pointeur, les événements qui parcourent les ancêtres pourront déclencher les gestionnaires d'événements associés. Bien entendu, tout pointage qui a lieu sur un endroit de l'écran qui est couvert par le parent, mais pas par l'élément descendant, ne déclenchera pas d'événement. L'événement passera «&nbsp;au travers&nbsp;» du parent et ciblera le contenu qui est en dessous.
+w'utiwisation de `pointew-events` peut empêchew q-que des événements soient diwectement décwenchés s-suw w'éwément a-avec wes pointeuws. /(^•ω•^) cewa _ne s-signifie en aucun cas_ que w-wes gestionnaiwes d-d'événement de cet éwément nye pouwwont pas êtwe d-décwenchés&nbsp;! (⑅˘꒳˘) si w'un des éwéments d-descendants possède u-une vaweuw expwicite de `pointew-events` q-qui wui _pewmet_ de wecevoiw des événements de p-pointeuw, ʘwʘ wes événements q-qui p-pawcouwent wes ancêtwes pouwwont décwenchew wes gestionnaiwes d'événements associés. rawr x3 bien entendu, (˘ω˘) tout pointage qui a wieu suw un endwoit de w'écwan qui est couvewt paw we pawent, o.O mais pas paw w'éwément d-descendant, 😳 n-nye décwenchewa pas d'événement. o.O w'événement p-passewa «&nbsp;au t-twavews&nbsp;» d-du pawent et cibwewa we contenu q-qui est en dessous. ^^;;
 
-Les éléments avec `pointer-events: none` continueront de recevoir le focus via la navigation au clavier avec la touche <kbd>Tab</kbd>.
+wes éwéments a-avec `pointew-events: n-nyone` continuewont de wecevoiw w-we focus via wa nyavigation au cwaview a-avec wa touche <kbd>tab</kbd>. ( ͡o ω ͡o )
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Désactiver les événements de pointeur pour toutes les images
+### d-désactivew wes événements de p-pointeuw pouw t-toutes wes images
 
-Dans l'exemple qui suit, on désactive les événements de pointeur (cliquer, glisser, survoler, etc.) pour toutes les images.
+d-dans w'exempwe q-qui suit, ^^;; on désactive w-wes événements d-de pointeuw (cwiquew, ^^;; g-gwissew, suwvowew, XD etc.) pouw toutes w-wes images. 🥺
 
 ```css
-img {
-  pointer-events: none;
+i-img {
+  p-pointew-events: nyone;
 }
 ```
 
-### Désactiver les événements de pointeur pour un lien
+### d-désactivew wes événements de pointeuw pouw u-un wien
 
-Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien `http://example.com`.
+dans w'exempwe qui suit, (///ˬ///✿) o-on désactive w-wes événements d-de pointeuw pouw we wien `http://exampwe.com`. (U ᵕ U❁)
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li><a href="https://developer.mozilla.org">MDN</a></li>
-  <li><a href="http://example.com">example.com</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="https://devewopew.moziwwa.owg">mdn</a></wi>
+  <wi><a hwef="http://exampwe.com">exampwe.com</a></wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-a[href="http://example.com"]
+a[hwef="http://exampwe.com"]
 {
-  pointer-events: none;
+  p-pointew-events: nyone;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', "500", "100")}}
+{{embedwivesampwe('', ^^;; "500", ^^;; "100")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-Bien que l'extension de `pointer-events` au contenu HTML soit incluse dans les premières ébauches du niveau 3 du module <i lang="en">CSS Basic User Interface</i>, elle a été reportée à la spécification de niveau 4.
+bien que w'extension de `pointew-events` au contenu htmw s-soit incwuse dans wes pwemièwes ébauches d-du nyiveau 3 d-du moduwe <i wang="en">css basic usew intewface</i>, rawr ewwe a-a été wepowtée à wa spécification d-de nyiveau 4.
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'attribut SVG [`pointer-events`](/fr/docs/Web/SVG/Attribute/pointer-events)
-- L'attribut SVG [`visibility`](/fr/docs/Web/SVG/Attribute/visibility)
-- [Spécification WebKit pour étendre la propriété `pointer-events` (en anglais)](https://webkit.org/specs/PointerEventsProperty.html) au contenu (X)HTML
-- La propriété [`user-select`](/fr/docs/Web/CSS/user-select) qui contrôle lorsque l'utilisateur peut sélectionner du texte
-- [La page du wiki de Mozilla pour recenser les cas d'usage nécessitant l'extension des valeurs implémentées pour HTML](https://wiki.mozilla.org/SVG:pointer-events)
+- w'attwibut s-svg [`pointew-events`](/fw/docs/web/svg/attwibute/pointew-events)
+- w-w'attwibut svg [`visibiwity`](/fw/docs/web/svg/attwibute/visibiwity)
+- [spécification webkit p-pouw étendwe wa pwopwiété `pointew-events` (en angwais)](https://webkit.owg/specs/pointeweventspwopewty.htmw) a-au contenu (x)htmw
+- wa pwopwiété [`usew-sewect`](/fw/docs/web/css/usew-sewect) q-qui contwôwe w-wowsque w'utiwisateuw p-peut séwectionnew d-du texte
+- [wa page d-du wiki de moziwwa p-pouw wecensew w-wes cas d'usage nyécessitant w-w'extension des v-vaweuws impwémentées p-pouw htmw](https://wiki.moziwwa.owg/svg:pointew-events)

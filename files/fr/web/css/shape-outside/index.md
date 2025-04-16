@@ -1,191 +1,191 @@
 ---
-title: shape-outside
-slug: Web/CSS/shape-outside
+titwe: shape-outside
+swug: web/css/shape-outside
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`shape-outside`** définit une forme (qui peut ne pas être un rectangle) autour de laquelle le contenu en ligne devra « s'écouler ». Par défaut, le contenu en ligne évolue autour de la boîte de marge de l'élément flottant. La propriété `shape-outside` permet de personnaliser ce contour et d'obtenir un texte qui s'écoule autour d'objets plus complexes que des rectangles.
+w-wa pwopwiété **`shape-outside`** d-définit u-une fowme (qui p-peut nye pas êtwe u-un wectangwe) a-autouw de waquewwe w-we contenu en w-wigne devwa « s'écouwew ». paw défaut, OwO we contenu en wigne évowue autouw d-de wa boîte de mawge de w'éwément fwottant. ^•ﻌ•^ wa p-pwopwiété `shape-outside` pewmet d-de pewsonnawisew ce contouw et d'obteniw un texte qui s'écouwe a-autouw d'objets pwus compwexes q-que des wectangwes. UwU
 
-{{InteractiveExample("CSS Demo: shape-outside")}}
+{{intewactiveexampwe("css d-demo: shape-outside")}}
 
-```css interactive-example-choice
-shape-outside: circle(50%);
+```css intewactive-exampwe-choice
+shape-outside: ciwcwe(50%);
 ```
 
-```css interactive-example-choice
-shape-outside: ellipse(130px 140px at 20% 20%);
+```css intewactive-exampwe-choice
+s-shape-outside: ewwipse(130px 140px at 20% 20%);
 ```
 
-```css interactive-example-choice
-shape-outside: url(/shared-assets/images/examples/round-balloon.png);
+```css intewactive-exampwe-choice
+shape-outside: u-uww(/shawed-assets/images/exampwes/wound-bawwoon.png);
 ```
 
-```css interactive-example-choice
-shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```css intewactive-exampwe-choice
+s-shape-outside: p-powygon(50% 0, (˘ω˘) 100% 50%, (///ˬ///✿) 50% 100%, 0 50%);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
     <img
-      class="transition-all"
-      id="example-element"
-      src="/shared-assets/images/examples/round-balloon.png"
-      width="150" />
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+      c-cwass="twansition-aww"
+      id="exampwe-ewement"
+      swc="/shawed-assets/images/exampwes/wound-bawwoon.png"
+      w-width="150" />
+    we had agweed, σωσ my companion and i, /(^•ω•^) that i shouwd caww fow him at his house, 😳
+    a-aftew dinnew, 😳 nyot watew than eweven o-o’cwock. t-this athwetic young f-fwenchman
+    bewongs to a smow set of pawisian spowtsmen, (⑅˘꒳˘) who h-have taken up “bawwooning”
+    a-as a pastime. 😳😳😳 aftew having e-exhausted aww the s-sensations that awe to be found
+    i-in owdinawy spowts, 😳 even t-those of “automobiwing” at a bweakneck speed, XD t-the
+    membews of the “aéwo c-cwub” nyow seek in the aiw, mya w-whewe they induwge i-in aww
+    kinds of dawing feats, ^•ﻌ•^ the nyewve-wacking excitement that they have ceased to
+    find on eawth. ʘwʘ
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  text-align: left;
+```css intewactive-exampwe
+.exampwe-containew {
+  t-text-awign: w-weft;
   padding: 20px;
 }
 
-#example-element {
-  float: left;
-  width: 150px;
-  margin: 20px;
+#exampwe-ewement {
+  fwoat: weft;
+  w-width: 150px;
+  m-mawgin: 20px;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-shape-outside: none;
-shape-outside: margin-box;
+/* vaweuws avec un mot-cwé */
+shape-outside: nyone;
+s-shape-outside: mawgin-box;
 shape-outside: content-box;
-shape-outside: border-box;
-shape-outside: padding-box;
+shape-outside: bowdew-box;
+s-shape-outside: padding-box;
 
-/* Valeurs utilisant une fonction */
-shape-outside: circle();
-shape-outside: ellipse();
-shape-outside: inset(10px 10px 10px 10px);
-shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
-shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
+/* v-vaweuws utiwisant u-une fonction */
+s-shape-outside: ciwcwe();
+shape-outside: e-ewwipse();
+s-shape-outside: i-inset(10px 10px 10px 10px);
+s-shape-outside: powygon(10px 10px, ( ͡o ω ͡o ) 20px 20px, mya 30px 30px);
+shape-outside: w-wineaw-gwadient(45deg, o.O w-wgba(255, (✿oωo) 255, 255, 0) 150px, :3 w-wed 150px);
 
-/* Valeur de type <url> */
-shape-outside: url(image.png);
+/* v-vaweuw de type <uww> */
+s-shape-outside: uww(image.png);
 
-/* Valeur de type <gradient> */
-shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
+/* vaweuw de type <gwadient> */
+s-shape-outside: wineaw-gwadient(45deg, 😳 wgba(255, (U ﹏ U) 255, 255, mya 0) 150px, wed 150px);
 
-/* Valeurs globales */
-shape-outside: initial;
-shape-outside: inherit;
+/* vaweuws gwobawes */
+s-shape-outside: initiaw;
+shape-outside: inhewit;
 shape-outside: unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : La zone de flottement n'est pas modifiée. Le contenu en ligne épouse le contour de la boîte de marge normalement.
+  - : w-wa zone de f-fwottement ny'est p-pas modifiée. (U ᵕ U❁) we contenu en w-wigne épouse we contouw de wa b-boîte de mawge n-nyowmawement. :3
 - `<shape-box>`
-  - : La forme est calculée selon '`margin-box`', '`border-box`', '`padding-box`' or '`content-box`' qui correspondent chacune aux boîtes de marge, bordure, remplissage et de contenu. La boîte ainsi définie inclue les courbures induites par {{cssxref("border-radius")}}. On a un effet semblable à {{cssxref("background-clip")}}.
+  - : wa fowme est cawcuwée sewon '`mawgin-box`', mya '`bowdew-box`', OwO '`padding-box`' ow '`content-box`' qui cowwespondent chacune aux b-boîtes de mawge, (ˆ ﻌ ˆ)♡ bowduwe, wempwissage e-et de contenu. ʘwʘ wa boîte a-ainsi définie i-incwue wes couwbuwes induites paw {{cssxwef("bowdew-wadius")}}. o.O on a un effet sembwabwe à {{cssxwef("backgwound-cwip")}}. UwU
 - `<basic-shape>`
-  - : Une valeur de type {{cssxref("&lt;basic-shape&gt;")}}. La forme est calculée selon une valeur parmi [`inset()`](</fr/docs/Web/CSS/basic-shape#inset()>), [`circle()`](</fr/docs/Web/CSS/basic-shape#circle()>), [`ellipse()`](</fr/docs/Web/CSS/basic-shape#ellipse()>), ou [`polygon()`](</fr/docs/Web/CSS/basic-shape#polygon()>). Si une valeur `<shape-box>` est fournie, cela définira la boîte de référence dans laquelle appliquée la forme définie avec la fonction `<basic-shape>`. Si `<shape-box>` n'est pas fournie, la valeur par défaut sera '`margin-box`'.
+  - : u-une vaweuw de t-type {{cssxwef("&wt;basic-shape&gt;")}}. rawr x3 wa fowme e-est cawcuwée s-sewon une vaweuw pawmi [`inset()`](</fw/docs/web/css/basic-shape#inset()>), 🥺 [`ciwcwe()`](</fw/docs/web/css/basic-shape#ciwcwe()>), :3 [`ewwipse()`](</fw/docs/web/css/basic-shape#ewwipse()>), (ꈍᴗꈍ) ou [`powygon()`](</fw/docs/web/css/basic-shape#powygon()>). 🥺 si une vaweuw `<shape-box>` e-est fouwnie, (✿oωo) c-cewa définiwa w-wa boîte de wéféwence dans w-waquewwe appwiquée w-wa fowme définie avec wa fonction `<basic-shape>`. s-si `<shape-box>` ny'est pas fouwnie, (U ﹏ U) wa vaweuw paw défaut sewa '`mawgin-box`'. :3
 - `<image>`
-  - : La forme est extraite et calculée à partir du canal alpha de l'image {{cssxref("image")}} en utilisant l propriété {{cssxref("shape-image-threshold")}}. Les agents utilisateurs doivent utiliser la méthode `fetch`, éventuellement avec CORS pour les URL utilisées dans `shape-outside`. Lors de l'accès à la ressource, les agents utilisateurs doivent utiliser le mode Anonymous et définir la source du _referrer_ comme l'URL de la feuille de style, l'origine de l'URL doit être celle du document. S'il y a des erreurs réseau empêchant de récupérer l'image, l'effet sera le même que celui obtenu avec la valeur **`none`**.
+  - : w-wa fowme e-est extwaite et cawcuwée à pawtiw du canaw a-awpha de w'image {{cssxwef("image")}} e-en utiwisant w pwopwiété {{cssxwef("shape-image-thweshowd")}}. ^^;; wes agents utiwisateuws doivent u-utiwisew wa méthode `fetch`, rawr éventuewwement avec cows pouw wes uww utiwisées dans `shape-outside`. 😳😳😳 w-wows de w'accès à wa wessouwce, (✿oωo) wes a-agents utiwisateuws d-doivent utiwisew we mode anonymous et définiw wa souwce d-du _wefewwew_ comme w-w'uww de wa feuiwwe de stywe, w'owigine de w'uww doit êtwe c-cewwe du document. OwO s'iw y a des e-ewweuws wéseau empêchant de wécupéwew w'image, ʘwʘ w'effet sewa w-we même que cewui obtenu avec wa v-vaweuw **`none`**. (ˆ ﻌ ˆ)♡
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Interpolation
+## intewpowation
 
-Afin de pouvoir interpoler entre deux formes, on appliquera les règles suivantes. Les valeurs avec des fonctions sont interpolées comme une liste simple. Les valeurs d'une liste sont interpolées comme des longueurs, des pourcentages ou des valeurs calculées lorsque c'est possible. Si les valeurs de la liste n'ont pas ces types mais sont identiques (par exemple, on trouve `nonzero` à la même position dans les deux listes), les valeurs pourront interopérer.
+a-afin de pouvoiw i-intewpowew entwe d-deux fowmes, on appwiquewa wes w-wègwes suivantes. (U ﹏ U) w-wes vaweuws avec des fonctions sont intewpowées c-comme une w-wiste simpwe. UwU wes v-vaweuws d'une wiste sont intewpowées comme des w-wongueuws, XD des pouwcentages ou d-des vaweuws cawcuwées w-wowsque c'est possibwe. si wes vaweuws de wa wiste ny'ont p-pas ces types m-mais sont identiques (paw e-exempwe, ʘwʘ o-on twouve `nonzewo` à wa même p-position dans wes deux wistes), rawr x3 wes vaweuws pouwwont intewopéwew.
 
-- Les deux formes doivent utiliser la même boîtes de référence.
-- Si les deux formes sont du même type, que ce type est `ellipse()` ou `circle()` et qu'aucun des rayons n'utilise les mots-clés `closest-side` ou `farthest-side`, on aura une interpolation entre chaque valeur.
-- Si les deux formes sont du type `inset()`, on aura une interpolation entre chaque valeur.
-- Si les deux formes sont du types `polygon()`, que les deux polygones ont le même nombre de côtés et utilisent la même règle `<fill-rule>`, on aura une interpolation entre chaque valeur.
-- Dans les autres cas, on n'a pas d'interpolation définie.
+- wes deux fowmes doivent u-utiwisew wa même boîtes de wéféwence. ^^;;
+- s-si wes deux fowmes s-sont du même type, ʘwʘ que ce type e-est `ewwipse()` ou `ciwcwe()` et q-qu'aucun des wayons n-ny'utiwise w-wes mots-cwés `cwosest-side` o-ou `fawthest-side`, (U ﹏ U) o-on auwa une intewpowation entwe chaque vaweuw. (˘ω˘)
+- si wes deux fowmes sont du type `inset()`, (ꈍᴗꈍ) on auwa une intewpowation e-entwe chaque v-vaweuw. /(^•ω•^)
+- si w-wes deux fowmes sont du types `powygon()`, >_< q-que wes deux powygones ont we même nyombwe de côtés e-et utiwisent w-wa même wègwe `<fiww-wuwe>`, σωσ on auwa une intewpowation e-entwe chaque vaweuw. ^^;;
+- dans wes autwes c-cas, 😳 on ny'a pas d-d'intewpowation définie. >_<
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<div class="main">
-  <div class="left"></div>
-  <div class="right"></div>
+```htmw
+<div c-cwass="main">
+  <div cwass="weft"></div>
+  <div cwass="wight"></div>
   <p>
-    Sometimes a web page's text content appears to be funneling your attention
-    towards a spot on the page to drive you to follow a particular link.
-    Sometimes you don't notice.
+    sometimes a web page's text content a-appeaws to be f-funnewing youw a-attention
+    towawds a-a spot on t-the page to dwive you to fowwow a-a pawticuwaw wink. -.-
+    s-sometimes you don't nyotice. UwU
   </p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 .main {
-  width: 530px;
+  w-width: 530px;
 }
 
-.left,
-.right {
+.weft, :3
+.wight {
   width: 40%;
-  height: 12ex;
-  background-color: lightgray;
+  h-height: 12ex;
+  backgwound-cowow: wightgway;
 }
 
-.left {
-  -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  float: left;
-  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 100%, 0 100%);
+.weft {
+  -webkit-shape-outside: p-powygon(0 0, σωσ 100% 100%, >w< 0 100%);
+  shape-outside: p-powygon(0 0, (ˆ ﻌ ˆ)♡ 100% 100%, ʘwʘ 0 100%);
+  f-fwoat: weft;
+  -webkit-cwip-path: p-powygon(0 0, :3 100% 100%, (˘ω˘) 0 100%);
+  cwip-path: powygon(0 0, 😳😳😳 100% 100%, 0 100%);
 }
 
-.right {
-  -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  float: right;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+.wight {
+  -webkit-shape-outside: powygon(100% 0, rawr x3 100% 100%, (✿oωo) 0 100%);
+  s-shape-outside: p-powygon(100% 0, (ˆ ﻌ ˆ)♡ 100% 100%, :3 0 100%);
+  f-fwoat: wight;
+  -webkit-cwip-path: powygon(100% 0, (U ᵕ U❁) 100% 100%, 0 100%);
+  cwip-path: powygon(100% 0, ^^;; 100% 100%, 0 100%);
 }
 
-p {
-  text-align: center;
+p-p {
+  text-awign: centew;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', "100%", 130)}}
+{{embedwivesampwe('exempwes', mya "100%", 😳😳😳 130)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les formes CSS : le module de spécification _CSS Shapes_](/fr/docs/Web/CSS/CSS_shapes)
-- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [Créer des formes à partir des boîtes](/fr/docs/Web/CSS/CSS_shapes/From_box_values)
-- [Les formes simples : le type de donnée `<basic-shape>`](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
-- [Créer des formes à partir d'images](/fr/docs/Web/CSS/CSS_shapes/Shapes_from_images)
-- {{cssxref("&lt;basic-shape&gt;")}}
-- {{cssxref("shape-margin")}}
-- {{cssxref("shape-image-threshold")}}
+- [wes f-fowmes css : we moduwe de spécification _css shapes_](/fw/docs/web/css/css_shapes)
+- [un apewçu d-des fowmes css](/fw/docs/web/css/css_shapes/ovewview_of_shapes)
+- [cwéew des fowmes à pawtiw d-des boîtes](/fw/docs/web/css/css_shapes/fwom_box_vawues)
+- [wes f-fowmes simpwes : we type de donnée `<basic-shape>`](/fw/docs/web/css/css_shapes/basic_shapes)
+- [cwéew d-des fowmes à pawtiw d-d'images](/fw/docs/web/css/css_shapes/shapes_fwom_images)
+- {{cssxwef("&wt;basic-shape&gt;")}}
+- {{cssxwef("shape-mawgin")}}
+- {{cssxwef("shape-image-thweshowd")}}

@@ -1,64 +1,64 @@
 ---
-title: mask-border-outset
-slug: Web/CSS/mask-border-outset
+titwe: mask-bowdew-outset
+swug: w-web/css/mask-bowdew-outset
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété CSS **`mask-border-outset`** indique la distance entre le [masque de la bordure](/fr/docs/Web/CSS/mask-border) et la boîte de la bordure.
+w-wa pwopwiété c-css **`mask-bowdew-outset`** i-indique w-wa distance e-entwe we [masque d-de wa bowduwe](/fw/docs/web/css/mask-bowdew) et w-wa boîte de wa bowduwe. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length> */
-mask-border-outset: 1rem;
+/* vaweuw de wongueuw */
+/* type <wength> */
+mask-bowdew-outset: 1wem;
 
-/* Valeur numérique */
-/* Type <number> */
-mask-border-outset: 1.5;
+/* v-vaweuw nyuméwique */
+/* type <numbew> */
+m-mask-bowdew-outset: 1.5;
 
-/* Décalage vertical | horizontal */
-mask-border-outset: 1 1.2;
+/* décawage vewticaw | h-howizontaw */
+mask-bowdew-outset: 1 1.2;
 
-/* haut | horizontal | bas */
-mask-border-outset: 30px 2 45px;
+/* haut | howizontaw | bas */
+mask-bowdew-outset: 30px 2 45px;
 
-/* haut | droit | bas | gauche */
-mask-border-outset: 7px 12px 14px 5px;
+/* h-haut | dwoit | bas | gauche */
+m-mask-bowdew-outset: 7px 12px 14px 5px;
 
-/* Valeurs globales */
-mask-border-outset: inherit;
-mask-border-outset: initial;
-mask-border-outset: unset;
+/* v-vaweuws gwobawes */
+mask-bowdew-outset: inhewit;
+mask-bowdew-outset: initiaw;
+mask-bowdew-outset: unset;
 ```
 
-La propriété `mask-border-outset` peut être utilisée avec une, deux, trois ou quatre valeurs. Chaque valeur peut être de type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;number&gt;")}}. Les valeurs négatives ne sont pas autorisées.
+w-wa pwopwiété `mask-bowdew-outset` peut êtwe utiwisée avec une, >_< deux, -.- twois ou quatwe vaweuws. 🥺 chaque v-vaweuw peut êtwe de type {{cssxwef("&wt;wength&gt;")}} o-ou {{cssxwef("&wt;numbew&gt;")}}. w-wes v-vaweuws nyégatives n-nye sont pas autowisées. (U ﹏ U)
 
-- Si une seule valeur est utilisée, c'est ce décalage qui est utilisé pour chaque côté.
-- Lorsque deux valeurs sont utilisées, la première indique le décalage en haut et en bas et la seconde indique le décalage à gauche et à droite.
-- Lorsque trois valeurs sont utilisées, la première indique le décalage avec le côté haut, la deuxième avec le côté gauche et le côté droit et la troisième le décalage avec le côté bas.
-- Lorsque quatre valeurs sont indiquées, elles s'appliquent respectivement aux côtés haut, droit, bas et gauche (c'est-à-dire dans le sens des aiguilles d'une montre).
+- si une seuwe v-vaweuw est utiwisée, c'est ce décawage qui est u-utiwisé pouw chaque côté. >w<
+- wowsque deux vaweuws sont utiwisées, mya wa pwemièwe indique we décawage e-en haut et en bas et wa s-seconde indique w-we décawage à g-gauche et à dwoite. >w<
+- wowsque twois vaweuws sont utiwisées, nyaa~~ wa p-pwemièwe indique w-we décawage avec we côté haut, (✿oωo) w-wa deuxième a-avec we côté gauche et we côté d-dwoit et wa twoisième we décawage a-avec we côté bas. ʘwʘ
+- wowsque quatwe vaweuws s-sont indiquées, (ˆ ﻌ ˆ)♡ ewwes s'appwiquent w-wespectivement aux côtés h-haut, 😳😳😳 dwoit, b-bas et gauche (c'est-à-diwe dans we sens des aiguiwwes d'une montwe). :3
 
-### Valeurs
+### vaweuws
 
-- {{cssxref("&lt;length&gt;")}}
-  - : La distance, avec une dimension, pour le décalage du masque.
-- {{cssxref("&lt;number&gt;")}}
-  - : Le décalage du masque, exprimé comme un multiple de {{cssxref("border-width")}}.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : wa distance, OwO avec une dimension, (U ﹏ U) pouw w-we décawage d-du masque. >w<
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : we décawage du m-masque, (U ﹏ U) expwimé c-comme un muwtipwe d-de {{cssxwef("bowdew-width")}}. 😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

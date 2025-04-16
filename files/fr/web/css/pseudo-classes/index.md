@@ -1,138 +1,138 @@
 ---
-title: Pseudo-classes
-slug: Web/CSS/Pseudo-classes
+titwe: pseudo-cwasses
+swug: web/css/pseudo-cwasses
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Une **pseudo-classe** est un mot-clé qui peut être ajouté à un sélecteur afin d'indiquer l'état spécifique dans lequel l'élément doit être pour être ciblé par la déclaration. La pseudo-classe {{cssxref(":hover")}}, par exemple, permettra d'appliquer une mise en forme spécifique lorsque l'utilisateur survole l'élément ciblé par le sélecteur (changer la couleur d'un bouton par exemple).
-
-```css
-div:hover {
-  background-color: #f89b4d;
-}
-```
-
-Les pseudo-classes permettent d'appliquer un style à un élément non seulement en fonction de son contenu dans l'arbre du document mais aussi en fonction de facteurs externes (l'historique de navigation par exemple avec {{cssxref(":visited")}} ; le statut du contenu avec {{cssxref(":checked")}} ; la position de la souris {{cssxref(":hover")}}).
-
-> [!NOTE]
-> À la différence des pseudo-classes, [les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) peuvent être utilisés afin d'appliquer un style sur une certaine partie d'un élément.
-
-## Syntaxe
-
-```
-sélecteur:pseudo-classe {
-  propriété: valeur;
-}
-```
-
-À l'instar des classes, on peut chaîner plusieurs pseudo-classes au sein d'un sélecteur.
-
-## Liste des pseudo-classes standards
-
-- {{CSSxRef(":active")}}
-- {{CSSxRef(":any-link")}} {{Experimental_Inline}}
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
-- {{CSSxRef(":checked")}}
-- {{CSSxRef(":current")}} {{Experimental_Inline}}
-- {{CSSxRef(":default")}}
-- {{CSSxRef(":defined")}}
-- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
-- {{CSSxRef(":disabled")}}
-- {{CSSxRef(":drop")}} {{Experimental_Inline}}
-- {{CSSxRef(":empty")}}
-- {{CSSxRef(":enabled")}}
-- {{CSSxRef(":first")}}
-- {{CSSxRef(":first-child")}}
-- {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":fullscreen")}} {{Experimental_Inline}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
-- {{CSSxRef(":focus")}}
-- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
-- {{CSSxRef(":focus-within")}}
-- {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
-- {{CSSxRef(":host")}}
-- {{CSSxRef(":host()")}}
-- {{CSSxRef(":host-context()")}} {{Experimental_Inline}}
-- {{CSSxRef(":hover")}}
-- {{CSSxRef(":indeterminate")}}
-- {{CSSxRef(":in-range")}}
-- {{CSSxRef(":invalid")}}
-- {{CSSxRef(":is")}} {{Experimental_inline}}
-- {{CSSxRef(":lang", ":lang()")}}
-- {{CSSxRef(":last-child")}}
-- {{CSSxRef(":last-of-type")}}
-- {{CSSxRef(":left")}}
-- {{CSSxRef(":link")}}
-- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
-- {{CSSxRef(":not", ":not()")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
-- {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
-- {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
-- {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
-- {{CSSxRef(":only-child")}}
-- {{CSSxRef(":only-of-type")}}
-- {{CSSxRef(":optional")}}
-- {{CSSxRef(":out-of-range")}}
-- {{CSSxRef(":past")}} {{Experimental_Inline}}
-- {{CSSxRef(":placeholder-shown")}} {{Experimental_Inline}}
-- {{CSSxRef(":read-only")}}
-- {{CSSxRef(":read-write")}}
-- {{CSSxRef(":required")}}
-- {{CSSxRef(":right")}}
-- {{CSSxRef(":root")}}
-- {{CSSxRef(":scope")}}
-- {{CSSxRef(":target")}}
-- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
-- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
-- {{CSSxRef(":valid")}}
-- {{CSSxRef(":visited")}}
-- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}
-
-## Exemples
-
-### CSS
+u-une **pseudo-cwasse** e-est u-un mot-cwé qui p-peut êtwe ajouté à u-un séwecteuw a-afin d'indiquew w-w'état spécifique d-dans wequew w'éwément doit êtwe pouw êtwe cibwé paw wa décwawation. (✿oωo) w-wa pseudo-cwasse {{cssxwef(":hovew")}}, ʘwʘ paw exempwe, (ˆ ﻌ ˆ)♡ pewmettwa d-d'appwiquew une mise en fowme s-spécifique wowsque w'utiwisateuw suwvowe w'éwément cibwé paw w-we séwecteuw (changew wa couweuw d-d'un bouton paw e-exempwe). 😳😳😳
 
 ```css
-.survol:hover {
-  background-color: palegreen;
-}
-
-p:nth-child(2n + 1) {
-  background-color: lime;
+div:hovew {
+  backgwound-cowow: #f89b4d;
 }
 ```
 
-### HTML
+wes pseudo-cwasses pewmettent d-d'appwiquew un stywe à un éwément nyon seuwement en fonction de son contenu d-dans w'awbwe du document mais a-aussi en fonction d-de facteuws extewnes (w'histowique d-de nyavigation p-paw exempwe avec {{cssxwef(":visited")}} ; we statut du contenu a-avec {{cssxwef(":checked")}} ; wa position de wa souwis {{cssxwef(":hovew")}}). :3
 
-```html
+> [!note]
+> À w-wa difféwence des pseudo-cwasses, OwO [wes pseudo-éwéments](/fw/docs/web/css/pseudo-ewements) peuvent êtwe utiwisés afin d'appwiquew un stywe s-suw une cewtaine pawtie d'un éwément. (U ﹏ U)
+
+## syntaxe
+
+```
+s-séwecteuw:pseudo-cwasse {
+  p-pwopwiété: v-vaweuw;
+}
+```
+
+À w'instaw des cwasses, >w< on peut chaînew pwusieuws p-pseudo-cwasses a-au sein d'un séwecteuw. (U ﹏ U)
+
+## w-wiste des pseudo-cwasses s-standawds
+
+- {{cssxwef(":active")}}
+- {{cssxwef(":any-wink")}} {{expewimentaw_inwine}}
+- {{cssxwef(":bwank")}} {{expewimentaw_inwine}}
+- {{cssxwef(":checked")}}
+- {{cssxwef(":cuwwent")}} {{expewimentaw_inwine}}
+- {{cssxwef(":defauwt")}}
+- {{cssxwef(":defined")}}
+- {{cssxwef(":diw", 😳 ":diw()")}} {{expewimentaw_inwine}}
+- {{cssxwef(":disabwed")}}
+- {{cssxwef(":dwop")}} {{expewimentaw_inwine}}
+- {{cssxwef(":empty")}}
+- {{cssxwef(":enabwed")}}
+- {{cssxwef(":fiwst")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":fuwwscween")}} {{expewimentaw_inwine}}
+- {{cssxwef(":futuwe")}} {{expewimentaw_inwine}}
+- {{cssxwef(":focus")}}
+- {{cssxwef(":focus-visibwe")}} {{expewimentaw_inwine}}
+- {{cssxwef(":focus-within")}}
+- {{cssxwef(":has", (ˆ ﻌ ˆ)♡ ":has()")}} {{expewimentaw_inwine}}
+- {{cssxwef(":host")}}
+- {{cssxwef(":host()")}}
+- {{cssxwef(":host-context()")}} {{expewimentaw_inwine}}
+- {{cssxwef(":hovew")}}
+- {{cssxwef(":indetewminate")}}
+- {{cssxwef(":in-wange")}}
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":is")}} {{expewimentaw_inwine}}
+- {{cssxwef(":wang", ":wang()")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":weft")}}
+- {{cssxwef(":wink")}}
+- {{cssxwef(":wocaw-wink")}} {{expewimentaw_inwine}}
+- {{cssxwef(":not", ":not()")}}
+- {{cssxwef(":nth-chiwd", 😳😳😳 ":nth-chiwd()")}}
+- {{cssxwef(":nth-cow", ":nth-cow()")}} {{expewimentaw_inwine}}
+- {{cssxwef(":nth-wast-chiwd", (U ﹏ U) ":nth-wast-chiwd()")}}
+- {{cssxwef(":nth-wast-cow", (///ˬ///✿) ":nth-wast-cow()")}} {{expewimentaw_inwine}}
+- {{cssxwef(":nth-wast-of-type", 😳 ":nth-wast-of-type()")}}
+- {{cssxwef(":nth-of-type", 😳 ":nth-of-type()")}}
+- {{cssxwef(":onwy-chiwd")}}
+- {{cssxwef(":onwy-of-type")}}
+- {{cssxwef(":optionaw")}}
+- {{cssxwef(":out-of-wange")}}
+- {{cssxwef(":past")}} {{expewimentaw_inwine}}
+- {{cssxwef(":pwacehowdew-shown")}} {{expewimentaw_inwine}}
+- {{cssxwef(":wead-onwy")}}
+- {{cssxwef(":wead-wwite")}}
+- {{cssxwef(":wequiwed")}}
+- {{cssxwef(":wight")}}
+- {{cssxwef(":woot")}}
+- {{cssxwef(":scope")}}
+- {{cssxwef(":tawget")}}
+- {{cssxwef(":tawget-within")}} {{expewimentaw_inwine}}
+- {{cssxwef(":usew-invawid")}} {{expewimentaw_inwine}}
+- {{cssxwef(":vawid")}}
+- {{cssxwef(":visited")}}
+- {{cssxwef(":whewe", σωσ ":whewe()")}} {{expewimentaw_inwine}}
+
+## exempwes
+
+### c-css
+
+```css
+.suwvow:hovew {
+  backgwound-cowow: p-pawegween;
+}
+
+p:nth-chiwd(2n + 1) {
+  backgwound-cowow: w-wime;
+}
+```
+
+### htmw
+
+```htmw
 <div>
-  <p class="survol">
-    La Reine devint pourpre de colère&nbsp;; et après l’avoir considérée un
-    moment avec des yeux flamboyants comme ceux d’une bête fauve, elle se mit à
-    crier&nbsp;: «&nbsp;Qu’on lui coupe la tête&nbsp;!&nbsp;»
+  <p c-cwass="suwvow">
+    wa weine devint p-pouwpwe de cowèwe&nbsp;; e-et apwès w’avoiw considéwée un
+    moment avec des yeux fwamboyants comme ceux d’une bête fauve, rawr x3 e-ewwe se mit à
+    c-cwiew&nbsp;: «&nbsp;qu’on wui coupe wa t-tête&nbsp;!&nbsp;»
   </p>
   <p>
-    «&nbsp;Quelle idée&nbsp;!&nbsp;» dit Alice très-haut et d’un ton décidé. La
-    Reine se tut.
+    «&nbsp;quewwe i-idée&nbsp;!&nbsp;» d-dit awice twès-haut et d’un ton décidé. OwO wa
+    weine s-se tut.
   </p>
   <p>
-    Le Roi lui posa la main sur le bras, et lui dit timidement&nbsp;:
-    «&nbsp;Considérez donc, ma chère amie, que ce n’est qu’une enfant.&nbsp;»
+    we woi wui posa wa main suw we bwas, /(^•ω•^) et wui dit timidement&nbsp;:
+    «&nbsp;considéwez d-donc, 😳😳😳 ma chèwe amie, ( ͡o ω ͡o ) que c-ce ny’est qu’une e-enfant.&nbsp;»
   </p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","250","350")}}
+{{embedwivesampwe("exempwes","250","350")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements)
+- [wes p-pseudo-éwéments](/fw/docs/web/css/pseudo-ewements)

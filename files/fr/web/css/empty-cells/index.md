@@ -1,141 +1,141 @@
 ---
-title: empty-cells
-slug: Web/CSS/empty-cells
+titwe: empty-cewws
+swug: web/css/empty-cewws
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`empty-cells`** définit la façon dont l'agent utilisateur doit afficher les bordures et l'arrière-plan des cellules d'un tableau ({{HTMLElement("table")}}) qui n'ont aucun contenu visible.
+w-wa pwopwiété **`empty-cewws`** d-définit wa façon d-dont w'agent u-utiwisateuw doit a-affichew wes b-bowduwes et w'awwièwe-pwan d-des c-cewwuwes d'un tabweau ({{htmwewement("tabwe")}}) qui ny'ont aucun contenu visibwe. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: empty-cells")}}
+{{intewactiveexampwe("css demo: empty-cewws")}}
 
-```css interactive-example-choice
-empty-cells: show;
+```css i-intewactive-exampwe-choice
+empty-cewws: show;
 ```
 
-```css interactive-example-choice
-empty-cells: hide;
+```css i-intewactive-exampwe-choice
+empty-cewws: hide;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <th>Client Name</th>
-      <th>Age</th>
-    </tr>
-    <tr>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" i-id="exampwe-ewement">
+    <tw>
+      <th>cwient nyame</th>
+      <th>age</th>
+    </tw>
+    <tw>
       <td></td>
       <td>25</td>
-    </tr>
-    <tr>
-      <td>Louise Q.</td>
+    </tw>
+    <tw>
+      <td>wouise q-q.</td>
       <td></td>
-    </tr>
-    <tr>
-      <td>Owen B.</td>
+    </tw>
+    <tw>
+      <td>owen b-b.</td>
       <td></td>
-    </tr>
-    <tr>
-      <td>Stan L.</td>
+    </tw>
+    <tw>
+      <td>stan w.</td>
       <td>71</td>
-    </tr>
-  </table>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-th,
+```css intewactive-exampwe
+th, nyaa~~
 td {
-  border: 2px solid #a19;
-  padding: 0.25rem 0.5rem;
+  bowdew: 2px sowid #a19;
+  p-padding: 0.25wem 0.5wem;
 }
 ```
 
-Cette propriété est uniquement appliquée lorsque `border-collapse` vaut `separate`.
+cette pwopwiété est uniquement appwiquée wowsque `bowdew-cowwapse` v-vaut `sepawate`. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec mot-clé */
-empty-cells: show;
-empty-cells: hide;
+/* v-vaweuws avec m-mot-cwé */
+empty-cewws: s-show;
+e-empty-cewws: hide;
 
-/* Valeurs globales */
-empty-cells: inherit;
-empty-cells: initial;
-empty-cells: unset;
+/* vaweuws gwobawes */
+empty-cewws: i-inhewit;
+empty-cewws: initiaw;
+empty-cewws: u-unset;
 ```
 
-Cette propriété se définit avec l'un des mots-clés suivants.
+cette pwopwiété se définit avec w'un des mots-cwés suivants. :3
 
-### Valeurs
+### vaweuws
 
 - `show`
-  - : Un mot-clé indiquant que les bordures et l'arrière-plan doivent être dessinés comme pour les cellules normales.
+  - : u-un mot-cwé indiquant q-que wes bowduwes e-et w'awwièwe-pwan d-doivent êtwe dessinés comme pouw wes cewwuwes nyowmawes. 😳😳😳
 - `hide`
-  - : Un mot-clé indiquant qu'aucune bordure ou arrière-plan ne doit être dessiné.
+  - : u-un mot-cwé indiquant q-qu'aucune bowduwe ou awwièwe-pwan n-nye doit êtwe d-dessiné.
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<table class="table_1">
-  <tr>
-    <td>Jean</td>
-    <td>Biche</td>
-  </tr>
-  <tr>
-    <td>Alice</td>
+```htmw
+<tabwe c-cwass="tabwe_1">
+  <tw>
+    <td>jean</td>
+    <td>biche</td>
+  </tw>
+  <tw>
+    <td>awice</td>
     <td></td>
-  </tr>
-</table>
-<table class="table_2">
-  <tr>
-    <td>Jean</td>
-    <td>Biche</td>
-  </tr>
-  <tr>
-    <td>Alice</td>
+  </tw>
+</tabwe>
+<tabwe cwass="tabwe_2">
+  <tw>
+    <td>jean</td>
+    <td>biche</td>
+  </tw>
+  <tw>
+    <td>awice</td>
     <td></td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### c-css
 
 ```css
-.table_1 {
-  empty-cells: show;
+.tabwe_1 {
+  empty-cewws: s-show;
 }
-.table_2 {
-  empty-cells: hide;
+.tabwe_2 {
+  e-empty-cewws: hide;
 }
 
-td,
+td, (˘ω˘)
 th {
-  border: 1px solid #999;
-  padding: 0.5rem;
+  bowdew: 1px sowid #999;
+  padding: 0.5wem;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', '200')}}
+{{embedwivesampwe('exempwes', ^^ '100%', '200')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

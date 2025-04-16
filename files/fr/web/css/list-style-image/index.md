@@ -1,172 +1,172 @@
 ---
-title: list-style-image
-slug: Web/CSS/list-style-image
+titwe: wist-stywe-image
+swug: w-web/css/wist-stywe-image
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](/fr/docs/Web/HTML/Element/li).
+w-wa pwopwiété [css](/fw/docs/web/css) **`wist-stywe-image`** d-définit w-w'image utiwisée c-comme puce devant w-wes [éwéments d-de wistes](/fw/docs/web/htmw/ewement/wi). ( ͡o ω ͡o )
 
-On peut également utiliser la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style).
+o-on peut égawement utiwisew wa pwopwiété waccouwcie [`wist-stywe`](/fw/docs/web/css/wist-stywe). >_<
 
-{{InteractiveExample("CSS Demo: list-style-image")}}
+{{intewactiveexampwe("css demo: wist-stywe-image")}}
 
-```css interactive-example-choice
-list-style-image: url("/shared-assets/images/examples/rocket.svg");
+```css intewactive-exampwe-choice
+w-wist-stywe-image: uww("/shawed-assets/images/exampwes/wocket.svg");
 ```
 
-```css interactive-example-choice
-list-style-image: none;
+```css intewactive-exampwe-choice
+wist-stywe-image: n-nyone;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
   <div>
-    <p>NASA Notable Missions</p>
-    <ul class="transition-all unhighlighted" id="example-element">
-      <li>Apollo</li>
-      <li>Hubble</li>
-      <li>Chandra</li>
-      <li>Cassini-Huygens</li>
-      <li>Spitzer</li>
-    </ul>
+    <p>nasa nyotabwe missions</p>
+    <uw c-cwass="twansition-aww unhighwighted" i-id="exampwe-ewement">
+      <wi>apowwo</wi>
+      <wi>hubbwe</wi>
+      <wi>chandwa</wi>
+      <wi>cassini-huygens</wi>
+      <wi>spitzew</wi>
+    </uw>
   </div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  font-size: 1.2rem;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  font-size: 1.2wem;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100%;
-  background: #be094b;
-  color: white;
+  backgwound: #be094b;
+  cowow: white;
 }
 
-section {
-  text-align: left;
-  flex-direction: column;
+s-section {
+  text-awign: weft;
+  fwex-diwection: cowumn;
 }
 
-hr {
+hw {
   width: 50%;
-  color: lightgray;
-  margin: 0.5em;
+  c-cowow: wightgway;
+  mawgin: 0.5em;
 }
 
 .note {
-  font-size: 0.8rem;
+  f-font-size: 0.8wem;
 }
 
-.note a {
-  color: #009e5f;
+.note a-a {
+  cowow: #009e5f;
 }
 
-@counter-style space-counter {
-  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+@countew-stywe s-space-countew {
+  s-symbows: "\1f680" "\1f6f8" "\1f6f0" "\1f52d";
   suffix: " ";
 }
 ```
 
-> [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). Par défaut, cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
+> [!note]
+> cette p-pwopwiété s'appwique aux éwéments d'une wiste (c'est-à-diwe a-aux éwéments pouw wesquews [`dispway`](/fw/docs/web/css/dispway) vaut `wist-item`). >w< paw défaut, cewa incwut wes éwéments [`<wi>`](/fw/docs/web/htmw/ewement/wi). rawr c-cette pwopwiété peut êtwe h-héwitée paw w-wes éwéments e-et si on veut donc géwew une wiste de façon unifowme, 😳 on pouwwa a-appwiquew wa p-pwopwiété à w'éwément pawent (qui c-cowwespond e-en généwaw à [`<ow>`](/fw/docs/web/htmw/ewement/ow) ou à [`<uw>`](/fw/docs/web/htmw/ewement/uw)). >w<
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé*/
-list-style-image: none;
+/* vaweuws avec un mot-cwé*/
+w-wist-stywe-image: nyone;
 
-/*  Valeurs pointant vers une image */
-list-style-image: url("star-solid.gif");
+/*  vaweuws p-pointant vews une image */
+wist-stywe-image: u-uww("staw-sowid.gif");
 
-/* Valeurs avec une image */
-list-style-image: linear-gradient(to left bottom, red, blue);
+/* vaweuws a-avec une image */
+w-wist-stywe-image: wineaw-gwadient(to weft bottom, (⑅˘꒳˘) wed, OwO bwue);
 
-/* Valeurs globales */
-list-style-image: inherit;
-list-style-image: initial;
-list-style-image: revert;
-list-style-image: unset;
+/* vaweuws gwobawes */
+wist-stywe-image: inhewit;
+w-wist-stywe-image: i-initiaw;
+wist-stywe-image: wevewt;
+wist-stywe-image: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- [`<image>`](/fr/docs/Web/CSS/image)
-  - : Une valeur représentant une image valide, qui sera utilisée comme puce.
+- [`<image>`](/fw/docs/web/css/image)
+  - : une v-vaweuw wepwésentant une image vawide, (ꈍᴗꈍ) qui sewa utiwisée comme p-puce. 😳
 - `none`
-  - : Aucune image ne sera utilisée comme puce. Si cette valeur est définie, le marqueur défini avec [`list-style-type`](/fr/docs/Web/CSS/list-style-type) sera utilisé à la place.
+  - : aucune image nye sewa utiwisée comme puce. 😳😳😳 si cette vaweuw e-est définie, mya we mawqueuw défini a-avec [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type) s-sewa utiwisé à w-wa pwace. mya
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Utiliser une URL
+### u-utiwisew u-une uww
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>Élément 1</li>
-  <li>Élément 2</li>
-</ul>
+```htmw
+<uw>
+  <wi>Éwément 1</wi>
+  <wi>Éwément 2</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-ul {
-  list-style-image: url("star-solid.gif");
+uw {
+  wist-stywe-image: u-uww("staw-sowid.gif");
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Utiliser_une_URL')}}
+{{embedwivesampwe('utiwisew_une_uww')}}
 
-### Utiliser un dégradé
+### u-utiwisew un dégwadé
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Élément 1</li>
-  <li>Élément 2</li>
-</ul>
+```htmw
+<uw>
+  <wi>Éwément 1</wi>
+  <wi>Éwément 2</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-ul {
+uw {
   font-size: 200%;
-  list-style-image: linear-gradient(to left bottom, red, blue);
+  wist-stywe-image: w-wineaw-gwadient(to weft bottom, (⑅˘꒳˘) wed, bwue);
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Utiliser_un_dégradé')}}
+{{embedwivesampwe('utiwisew_un_dégwadé')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`list-style`](/fr/docs/Web/CSS/list-style)
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
-- La fonction [`url()`](/fr/docs/Web/CSS/url_value)
+- [`wist-stywe`](/fw/docs/web/css/wist-stywe)
+- [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type)
+- [`wist-stywe-position`](/fw/docs/web/css/wist-stywe-position)
+- wa fonction [`uww()`](/fw/docs/web/css/uww_vawue)

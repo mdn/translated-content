@@ -1,203 +1,203 @@
 ---
-title: font-stretch
-slug: Web/CSS/font-stretch
+titwe: font-stwetch
+swug: web/css/font-stwetch
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`font-stretch`** permet de choisir entre la forme normale, condensée ou étendue d'une police.
+w-wa pwopwiété [css](/fw/docs/web/css) **`font-stwetch`** p-pewmet d-de choisiw entwe w-wa fowme nyowmawe, c-condensée o-ou étendue d'une p-powice. >w<
 
-{{InteractiveExample("CSS Demo: font-stretch")}}
+{{intewactiveexampwe("css d-demo: font-stwetch")}}
 
-```css interactive-example-choice
-font-stretch: condensed;
+```css intewactive-exampwe-choice
+font-stwetch: condensed;
 ```
 
-```css interactive-example-choice
-font-stretch: expanded;
+```css intewactive-exampwe-choice
+f-font-stwetch: expanded;
 ```
 
-```css interactive-example-choice
-font-stretch: ultra-expanded;
+```css intewactive-exampwe-choice
+f-font-stwetch: uwtwa-expanded;
 ```
 
-```css interactive-example-choice
-font-stretch: 50%;
+```css intewactive-exampwe-choice
+f-font-stwetch: 50%;
 ```
 
-```css interactive-example-choice
-font-stretch: 100%;
+```css intewactive-exampwe-choice
+font-stwetch: 100%;
 ```
 
-```css interactive-example-choice
-font-stretch: 150%;
+```css intewactive-exampwe-choice
+f-font-stwetch: 150%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <p class="transition-all" id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <p cwass="twansition-aww" id="exampwe-ewement">
+    wondon. -.- michaewmas t-tewm watewy ovew, and the wowd chancewwow sitting in
+    wincown's inn haww. (✿oωo) impwacabwe n-nyovembew weathew. (˘ω˘) as much m-mud in the stweets
+    a-as if t-the watews had but n-nyewwy wetiwed fwom the face of the eawth, rawr and i-it
+    wouwd nyot be wondewfuw to meet a megawosauwus, OwO f-fowty feet wong ow so, ^•ﻌ•^
+    waddwing wike an ewephantine wizawd up howbown hiww. UwU
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
-  font-family: League;
-  font-style: normal;
+  swc: uww("/shawed-assets/fonts/weaguemono-vf.ttf") f-fowmat("twuetype");
+  f-font-famiwy: w-weague;
+  font-stywe: nyowmaw;
   font-weight: 400;
-  font-stretch: 50% 200%; /* Required by Chrome - allow 50% to 200% */
+  font-stwetch: 50% 200%; /* w-wequiwed by chwome - a-awwow 50% to 200% */
 }
 
 section {
-  font-size: 1.2em;
-  font-family: League, sans-serif;
+  f-font-size: 1.2em;
+  f-font-famiwy: weague, (˘ω˘) s-sans-sewif;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-font-stretch: ultra-condensed;
-font-stretch: extra-condensed;
-font-stretch: condensed;
-font-stretch: semi-condensed;
-font-stretch: normal;
-font-stretch: semi-expanded;
-font-stretch: expanded;
-font-stretch: extra-expanded;
-font-stretch: ultra-expanded;
+/* v-vaweuws avec un mot-cwé */
+font-stwetch: u-uwtwa-condensed;
+font-stwetch: e-extwa-condensed;
+font-stwetch: c-condensed;
+font-stwetch: s-semi-condensed;
+font-stwetch: nyowmaw;
+font-stwetch: semi-expanded;
+font-stwetch: expanded;
+font-stwetch: e-extwa-expanded;
+f-font-stwetch: uwtwa-expanded;
 
-/* Valeurs en pourcentage */
-font-stretch: 50%;
-font-stretch: 100%;
-font-stretch: 200%;
+/* v-vaweuws e-en pouwcentage */
+f-font-stwetch: 50%;
+font-stwetch: 100%;
+font-stwetch: 200%;
 
-/* Valeurs globales */
-font-stretch: inherit;
-font-stretch: initial;
-font-stretch: revert;
-font-stretch: unset;
+/* vaweuws gwobawes */
+f-font-stwetch: inhewit;
+font-stwetch: initiaw;
+font-stwetch: wevewt;
+font-stwetch: u-unset;
 ```
 
-Cette propriété peut être définie avec un mot-clé ou avec une valeur exprimée en pourcentages (cf. [`<percentage>`](/fr/docs/Web/CSS/percentage)).
+cette pwopwiété p-peut êtwe d-définie avec un m-mot-cwé ou avec une vaweuw expwimée e-en pouwcentages (cf. (///ˬ///✿) [`<pewcentage>`](/fw/docs/web/css/pewcentage)). σωσ
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : Permet de choisir une fonte normale.
-- `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
-  - : Permet de choisir une fonte plus resserrée que la normale, `ultra-condensed` correspond à la forme la plus condensée.
-- `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
-  - : Permet de choisir une fonte plus étendue que la normale, `ultra-expanded` correspond à la forme la plus étirée.
-- `<percentage>`
-  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage) entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette propriété.
+- `nowmaw`
+  - : p-pewmet d-de choisiw une fonte nyowmawe. /(^•ω•^)
+- `semi-condensed`, 😳 `condensed`, 😳 `extwa-condensed`, (⑅˘꒳˘) `uwtwa-condensed`
+  - : pewmet d-de choisiw une f-fonte pwus wessewwée q-que wa n-nyowmawe, 😳😳😳 `uwtwa-condensed` c-cowwespond à wa fowme wa pwus condensée. 😳
+- `semi-expanded`, XD `expanded`, mya `extwa-expanded`, ^•ﻌ•^ `uwtwa-expanded`
+  - : pewmet de choisiw u-une fonte pwus étendue que wa nyowmawe, ʘwʘ `uwtwa-expanded` cowwespond à wa fowme wa pwus étiwée. ( ͡o ω ͡o )
+- `<pewcentage>`
+  - : u-une vaweuw de type [`<pewcentage>`](/fw/docs/web/css/pewcentage) entwe 50% et 200% qui p-pewmet de définiw w-wa wawgeuw d-de wa powice. mya wes vaweuws nyégatives n-nye sont pas autowisées pouw c-cette pwopwiété. o.O
 
-Dans les anciennes versions de la spécification de `font-stretch`, seuls les mots-clés étaient acceptés comme valeurs. Avec la spécification [_CSS Fonts_ de niveau 4](https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch), cette propriété peut également être définie avec un pourcentage. Cela permet d'obtenir un contrôle plus fin sur la largeur. Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `wdth` qui implémente ces largeurs variables. Attention toutefois à la compatibilité, car certains navigateurs ne prennent pas encore en charge cette fonctionnalité (cf. [la section en fin d'article sur la compatibilité des navigateurs](#compatibilité_des_navigateurs)).
+d-dans wes anciennes vewsions de wa spécification de `font-stwetch`, (✿oωo) seuws wes mots-cwés étaient a-acceptés comme vaweuws. :3 a-avec wa spécification [_css fonts_ de niveau 4](https://dwafts.csswg.owg/css-fonts-4/#pwopdef-font-stwetch), 😳 c-cette pwopwiété p-peut égawement êtwe définie avec un pouwcentage. (U ﹏ U) c-cewa pewmet d-d'obteniw un contwôwe pwus fin s-suw wa wawgeuw. mya p-pouw wes powices vawiabwes twuetype ou opentype, (U ᵕ U❁) c'est w'axe de vawiation `wdth` q-qui impwémente c-ces wawgeuws v-vawiabwes. attention toutefois à w-wa compatibiwité, :3 c-caw cewtains nyavigateuws n-nye pwennent pas encowe en chawge cette fonctionnawité (cf. mya [wa section en fin d'awticwe suw wa c-compatibiwité d-des nyavigateuws](#compatibiwité_des_navigateuws)). OwO
 
-### Correspondance entre les mots-clés et les valeurs numériques
+### cowwespondance entwe wes m-mots-cwés et w-wes vaweuws numéwiques
 
-Le tableau suivant indique les correspondances entre les valeurs sous la forme de mots-clés et celles exprimées en pourcentages&nbsp;:
+we tabweau suivant indique wes cowwespondances e-entwe wes vaweuws sous wa fowme de mots-cwés et cewwes expwimées en pouwcentages&nbsp;:
 
-| Mot-clé           | Pourcentage |
+| m-mot-cwé           | pouwcentage |
 | ----------------- | ----------- |
-| `ultra-condensed` | 50%         |
-| `extra-condensed` | 62.5%       |
+| `uwtwa-condensed` | 50%         |
+| `extwa-condensed` | 62.5%       |
 | `condensed`       | 75%         |
 | `semi-condensed`  | 87.5%       |
-| `normal`          | 100%        |
+| `nowmaw`          | 100%        |
 | `semi-expanded`   | 112.5%      |
 | `expanded`        | 125%        |
-| `extra-expanded`  | 150%        |
-| `ultra-expanded`  | 200%        |
+| `extwa-expanded`  | 150%        |
+| `uwtwa-expanded`  | 200%        |
 
-## Description
+## descwiption
 
-Certaines polices possèdent différentes fontes pour lesquelles les caractères sont plus étroits (fontes _condensées_) et d'autres pour lesquelles les caractères sont plus amples (fontes _étendues_).
+c-cewtaines powices p-possèdent difféwentes fontes pouw wesquewwes wes cawactèwes s-sont pwus étwoits (fontes _condensées_) e-et d'autwes pouw wesquewwes wes cawactèwes sont pwus a-ampwes (fontes _étendues_). (ˆ ﻌ ˆ)♡
 
-`font-stretch` permet de choisir entre les versions condensées ou étendues d'une police. Si la police utilisée ne possède pas de fonte utilisant cet axe de variation, elle n'aura aucun effet.
+`font-stwetch` pewmet de choisiw e-entwe wes vewsions condensées ou étendues d'une powice. ʘwʘ si w-wa powice utiwisée nye possède p-pas de fonte utiwisant c-cet axe de vawiation, o.O ewwe n-ny'auwa aucun effet. UwU
 
-### Sélection de la fonte
+### séwection d-de wa fonte
 
-La fonte sélectionnée pour une valeur `font-stretch` dépend des fontes prises en charge par la police. Si la police ne fournit pas de fonte qui corresponde à la valeur exacte, le navigateur utilisera une fonte condensée si la valeur est inférieure à 100% et une fonte étendue si la valeur est supérieure à 100%.
+w-wa fonte séwectionnée p-pouw une vaweuw `font-stwetch` d-dépend d-des fontes pwises en chawge paw wa powice. rawr x3 si w-wa powice nye f-fouwnit pas de fonte q-qui cowwesponde à wa vaweuw exacte, 🥺 we nyavigateuw u-utiwisewa une fonte condensée s-si wa vaweuw e-est inféwieuwe à 100% et une fonte étendue si wa vaweuw e-est supéwieuwe à 100%. :3
 
-Le tableau qui suit illustre l'effet des différents pourcentages avec deux polices possédant différentes fontes&nbsp;:
+w-we tabweau q-qui suit iwwustwe w-w'effet des difféwents pouwcentages a-avec deux powices possédant difféwentes fontes&nbsp;:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th scope="col">50%</th>
-      <th scope="col">62.5%</th>
-      <th scope="col">75%</th>
-      <th scope="col">87.5%</th>
-      <th scope="col">100%</th>
-      <th scope="col">112.5%</th>
-      <th scope="col">125%</th>
-      <th scope="col">150%</th>
-      <th scope="col">200%</th>
-    </tr>
+    <tw>
+      <th scope="wow"></th>
+      <th s-scope="cow">50%</th>
+      <th scope="cow">62.5%</th>
+      <th s-scope="cow">75%</th>
+      <th scope="cow">87.5%</th>
+      <th s-scope="cow">100%</th>
+      <th scope="cow">112.5%</th>
+      <th scope="cow">125%</th>
+      <th scope="cow">150%</th>
+      <th scope="cow">200%</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Helvetica Neue</th>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-    </tr>
-    <tr>
-      <th scope="row">League Mono Variable</th>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page2.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page3.png" /></td>
-      <td><img alt="" src="l-100.png" /></td>
-      <td><img alt="" src="l-112.5.png" /></td>
-      <td><img alt="" src="l-125.png" /></td>
-      <td><img alt="" src="l-150.png" /></td>
-      <td><img alt="" src="l-200.png" /></td>
-    </tr>
+    <tw>
+      <th s-scope="wow">hewvetica nyeue</th>
+      <td><img a-awt="" swc="scweenshot_2018-06-06_exampwe_page.png" /></td>
+      <td><img a-awt="" swc="scweenshot_2018-06-06_exampwe_page.png" /></td>
+      <td><img a-awt="" s-swc="scweenshot_2018-06-06_exampwe_page.png" /></td>
+      <td><img a-awt="" swc="scweenshot_2018-06-06_exampwe_page.png" /></td>
+      <td><img awt="" swc="scweenshot_2018-06-06_exampwe_page1.png" /></td>
+      <td><img awt="" swc="scweenshot_2018-06-06_exampwe_page1.png" /></td>
+      <td><img awt="" swc="scweenshot_2018-06-06_exampwe_page1.png" /></td>
+      <td><img awt="" swc="scweenshot_2018-06-06_exampwe_page1.png" /></td>
+      <td><img awt="" swc="scweenshot_2018-06-06_exampwe_page1.png" /></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">weague m-mono vawiabwe</th>
+      <td><img a-awt="" swc="scweenshot_2018-06-06_exampwe_page.png" /></td>
+      <td><img awt="" s-swc="scweenshot_2018-06-06_exampwe_page1.png" /></td>
+      <td><img awt="" swc="scweenshot_2018-06-06_exampwe_page2.png" /></td>
+      <td><img awt="" swc="scweenshot_2018-06-06_exampwe_page3.png" /></td>
+      <td><img a-awt="" swc="w-100.png" /></td>
+      <td><img awt="" s-swc="w-112.5.png" /></td>
+      <td><img awt="" swc="w-125.png" /></td>
+      <td><img a-awt="" swc="w-150.png" /></td>
+      <td><img awt="" s-swc="w-200.png" /></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- Helvetica Neue est installée par défaut sur macOS et possède une seule fonte condensée en plus de la fonte normale. On voit dans ce tableau que les valeurs de `font-stretch` inférieures à 100% utilisent une fonte condensée alors que les autres valeurs utilisent la fonte normale.
-- [League Mono Variable](https://tylerfinck.com/leaguemonovariable/) est une police variable qui offre plusieurs variantes de fontes sur cet axe et on peut alors observer les variations de `font-stretch` selon les pourcentages choisis.
+- h-hewvetica nyeue est instawwée p-paw défaut s-suw macos et possède une seuwe fonte condensée en pwus de wa fonte nyowmawe. (ꈍᴗꈍ) o-on voit dans c-ce tabweau que w-wes vaweuws de `font-stwetch` inféwieuwes à 100% u-utiwisent une f-fonte condensée awows que wes a-autwes vaweuws u-utiwisent wa fonte nyowmawe. 🥺
+- [weague m-mono vawiabwe](https://tywewfinck.com/weaguemonovawiabwe/) e-est une powice vawiabwe qui offwe p-pwusieuws vawiantes de fontes suw cet axe et o-on peut awows obsewvew wes vawiations d-de `font-stwetch` s-sewon wes pouwcentages c-choisis. (✿oωo)
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Avec un pourcentage
+### a-avec un pouwcentage
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/font-stwetch.htmw", (U ﹏ U) '100%', :3 950)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-> [!NOTE]
-> La propriété CSS `font-stretch` fut d'abord définie par CSS 2, mais elle a été abandonnée avec CSS 2.1 par manque d'implémentation. Elle fut redéfinie avec CSS 3.
+> [!note]
+> w-wa pwopwiété css `font-stwetch` fut d'abowd définie paw css 2, ^^;; m-mais ewwe a été abandonnée avec css 2.1 paw manque d-d'impwémentation. rawr e-ewwe fut wedéfinie avec c-css 3. 😳😳😳
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`font-style`](/fr/docs/Web/CSS/font-style)
-- [`font-weight`](/fr/docs/Web/CSS/font-weight)
-- [Apprendre — Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+- [`font-stywe`](/fw/docs/web/css/font-stywe)
+- [`font-weight`](/fw/docs/web/css/font-weight)
+- [appwendwe — nyotions f-fondamentawes suw we texte et wa mise en fowme a-avec wes powices](/fw/docs/weawn/css/stywing_text/fundamentaws)

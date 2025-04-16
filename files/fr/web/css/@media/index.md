@@ -1,209 +1,209 @@
 ---
-title: "@media"
-slug: Web/CSS/@media
+titwe: "@media"
+swug: web/css/@media
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/CSS_media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
+w-wa [wègwe @](/fw/docs/web/css/at-wuwe) **`@media`** p-pewmet d-d'appwiquew u-une pawtie d'une f-feuiwwe de stywes e-en fonction d-du wésuwtat d'une o-ou pwusieuws [wequêtes média (<i wang="en">media quewies</i>)](/fw/docs/web/css/css_media_quewies). 🥺 gwâce à c-cette wègwe, ^^ on peut indiquew une wequête média e-et un ensembwe de wègwes c-css qui s'appwiquent uniquement si wa wequête média est véwifiée p-pouw w'appaweiw, >w< we contexte a-avec wequew we c-contenu est consuwté. ^^;;
 
-> [!NOTE]
-> Il est possible de manipuler la règle @ `@media` via le CSSOM (et JavaScript) grâce à l'interface [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule).
+> [!note]
+> iw est possibwe de manipuwew wa wègwe @ `@media` via we cssom (et j-javascwipt) gwâce à w'intewface [`cssmediawuwe`](/fw/docs/web/api/cssmediawuwe). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
-Une requête média (type `<media-query>`) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre [règle conditionnelle](/fr/docs/Web/CSS/At-rule#les_règles_de_groupe_conditionnelles).
+une wequête média (type `<media-quewy>`) est composée d-d'un type de média (optionnew) et/ou de difféwentes c-cawactéwistiques w-wewatives a-au média. OwO une w-wequête média peut êtwe imbwiquée dans une a-autwe [wègwe conditionnewwe](/fw/docs/web/css/at-wuwe#wes_wègwes_de_gwoupe_conditionnewwes). (ꈍᴗꈍ)
 
 ```css
-/* Au niveau le plus haut du code */
-@media screen and (min-width: 900px) {
-  article {
-    padding: 1rem 3rem;
+/* au nyiveau we pwus haut d-du code */
+@media scween and (min-width: 900px) {
+  awticwe {
+    padding: 1wem 3wem;
   }
 }
 
-/* Imbriquée dans une autre règle-@ conditionnelle */
-@supports (display: flex) {
-  @media screen and (min-width: 900px) {
-    article {
-      display: flex;
+/* imbwiquée dans une autwe wègwe-@ c-conditionnewwe */
+@suppowts (dispway: fwex) {
+  @media s-scween a-and (min-width: 900px) {
+    a-awticwe {
+      dispway: fwex;
     }
   }
 }
 ```
 
-Pour plus d'informations sur la syntaxe des requêtes média, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+pouw pwus d'infowmations suw wa s-syntaxe des wequêtes m-média, òωó voiw [utiwisew wes w-wequêtes média](/fw/docs/web/css/css_media_quewies/using_media_quewies). ʘwʘ
 
-## Description
+## d-descwiption
 
-### Types de média
+### types de média
 
-_Les types de média_ décrivent la catégorie générale d'un appareil. Sauf quand on utilise les opérateurs `not` ou `only`, le type de média est optionnel et correspond à `all` par défaut.
+_wes t-types de média_ décwivent w-wa catégowie généwawe d'un appaweiw. ʘwʘ sauf q-quand on utiwise wes opéwateuws `not` o-ou `onwy`, nyaa~~ we type de média e-est optionnew e-et cowwespond à `aww` paw défaut. UwU
 
-- `all`
-  - : Applicable à tous les appareils.
-- `print`
-  - : Destiné pour le contenu paginé et les documents visualisés sur un écran en aperçu d'impression. Voir [la page sur les médias paginés](/fr/docs/Web/CSS/CSS_paged_media) pour plus d'informations sur les aspects de formatage spécifiques à ces formats.
-- `screen`
-  - : Destiné principalement aux écrans.
+- `aww`
+  - : appwicabwe à tous wes appaweiws.
+- `pwint`
+  - : destiné pouw we contenu paginé et wes d-documents visuawisés s-suw un écwan en apewçu d'impwession. (⑅˘꒳˘) v-voiw [wa p-page suw wes m-médias paginés](/fw/docs/web/css/css_paged_media) pouw pwus d'infowmations suw wes aspects d-de fowmatage spécifiques à ces fowmats. (˘ω˘)
+- `scween`
+  - : destiné pwincipawement a-aux écwans. :3
 
-> [!NOTE]
-> CSS2.1 et [le module de spécification sur les requêtes média de niveau 3](https://drafts.csswg.org/mediaqueries-3/#background) ont défini des types de média supplémentaires (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, et `aural`), mais ceux-ci ont été dépréciés avec [le module de spécification sur les requêtes média de niveau 4](https://dev.w3.org/csswg/mediaqueries/#media-types) et ne devraient donc pas être utilisés.
+> [!note]
+> css2.1 e-et [we moduwe d-de spécification s-suw wes wequêtes média de n-niveau 3](https://dwafts.csswg.owg/mediaquewies-3/#backgwound) ont d-défini des types d-de média suppwémentaiwes (`tty`, (˘ω˘) `tv`, `pwojection`, nyaa~~ `handhewd`, (U ﹏ U) `bwaiwwe`, nyaa~~ `embossed`, ^^;; et `auwaw`), m-mais ceux-ci ont été dépwéciés a-avec [we moduwe d-de spécification s-suw wes wequêtes m-média de nyiveau 4](https://dev.w3.owg/csswg/mediaquewies/#media-types) e-et nye devwaient donc pas êtwe utiwisés. OwO
 
-### Caractéristiques de média
+### cawactéwistiques de m-média
 
-_Les caractéristiques de média_ (<i lang="en">media features</i> en anglais) décrivent des caractéristiques spécifiques de l'agent utilisateur, de l'appareil ou de l'environnement.
-Les expressions de caractéristique de média testent la présence ou la valeur de ces caractéristiques et sont optionnelles. Chaque expression de caractéristique de média doit être entourée de parenthèses.
+_wes cawactéwistiques de média_ (<i wang="en">media featuwes</i> en angwais) décwivent des cawactéwistiques s-spécifiques de w'agent utiwisateuw, nyaa~~ de w'appaweiw ou d-de w'enviwonnement. UwU
+w-wes expwessions d-de cawactéwistique de média t-testent wa pwésence ou wa vaweuw d-de ces cawactéwistiques e-et sont optionnewwes. 😳 chaque expwession de cawactéwistique de média doit êtwe entouwée d-de pawenthèses. 😳
 
-- [`any-hover`](/fr/docs/Web/CSS/@media/any-hover)
-  - : Indique si le mécanisme d'entrée permet de survoler les éléments. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
-- [`any-pointer`](/fr/docs/Web/CSS/@media/any-pointer)
-  - : Indique si un dispositif de pointage est disponible et, le cas échéant, sa précision. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
-- [`aspect-ratio`](/fr/docs/Web/CSS/@media/aspect-ratio)
-  - : Le facteur de forme largeur/hauteur de la zone d'affichage (<i lang="en">viewport</i>)
-- [`color`](/fr/docs/Web/CSS/@media/color)
-  - : Le nombre de bits pour chaque composante de couleur sur l'appareil de sortie, ou zéro si l'appareil n'a pas de couleur.
-- [`color-gamut`](/fr/docs/Web/CSS/@media/color-gamut)
-  - : L'intervalle de couleurs approximatif pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
-- [`color-index`](/fr/docs/Web/CSS/@media/color-index)
-  - : Le nombre d'éléments dans le tableau des couleurs de l'appareil de sortie, ou zéro si l'appareil ne dispose pas d'un tel tableau.
-- [`device-aspect-ratio`](/fr/docs/Web/CSS/@media/device-aspect-ratio) {{deprecated_inline}}
-  - : Le facteur de forme largeur/hauteur de l'appareil de sortie. Dépréciée avec le module de spécification sur les requêtes média de niveau 4.
-- [`device-height`](/fr/docs/Web/CSS/@media/device-height) {{deprecated_inline}}
-  - : La hauteur de la surface de rendu de l'appareil de sortie. Dépréciée avec le module de spécification sur les requêtes média de niveau 4.
-- [`device-width`](/fr/docs/Web/CSS/@media/device-width) {{deprecated_inline}}
-  - : La largeur de la surface de rendu de l'appareil de sortie. Dépréciée avec le module de spécification sur les requêtes média de niveau 4.
-- [`display-mode`](/fr/docs/Web/CSS/@media/display-mode)
-  - : Le mode d'affichage de l'application, tel qu'indiqué par la propriété [`display`](/fr/docs/Web/Manifest#display) du manifeste de l'application. Définie par [la spécification du manifeste des applications web](https://w3c.github.io/manifest/#the-display-mode-media-feature).
-- [`dynamic-range`](/fr/docs/Web/CSS/@media/dynamic-range)
-  - : Une combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
-  - : Indique si l'agent utilisateur restreint la palette de couleur utilisée. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`grid`](/fr/docs/Web/CSS/@media/grid)
-  - : Indique si l'appareil utilise un écran matriciel ou avec une grille.
-- [`height`](/fr/docs/Web/CSS/@media/height)
-  - : La hauteur de la zone d'affichage (<i lang="en">viewport</i>).
-- [`hover`](/fr/docs/Web/CSS/@media/hover)
-  - : Indique si le mécanisme de saisie primaire permet de survoler les éléments. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
-- [`inverted-colors`](/fr/docs/Web/CSS/@media/inverted-colors)
-  - : Indique si l'agent utilisateur ou si le système d'exploitation sous-jacent inverse les couleurs. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`monochrome`](/fr/docs/Web/CSS/@media/monochrome)
-  - : Le nombre de bits par pixel pour le tampon d'affichage de l'appareil de sortie s'il est monochrome, zéro sinon.
-- [`orientation`](/fr/docs/Web/CSS/@media/orientation)
-  - : L'orientation de la zone d'affichage (<i lang="en">viewport</i>).
-- [`overflow-block`](/fr/docs/Web/CSS/@media/overflow-block)
-  - : Indique s'il est possible de faire défiler le contenu qui dépasse de la zone d'affichage sur l'axe de bloc. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
-- [`overflow-inline`](/fr/docs/Web/CSS/@media/overflow-inline)
-  - : Indique s'il est possible de faire défiler le contenu qui dépasse de la zone d'affichage sur l'axe en ligne. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
-- [`pointer`](/fr/docs/Web/CSS/@media/pointer)
-  - : Indique si le mécanisme de saisie principal est un appareil de pointage et, le cas échéant, sa précision. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
-- [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme)
-  - : Indique si la personne préfère utiliser un thème clair ou un thème sombre. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-contrast)
-  - : Détecte si la personne a demandé une augmentation ou une réduction du contraste entre les couleurs adjacentes. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion)
-  - : Indique la préférence de la personne pour utiliser moins de mouvement sur la page. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`resolution`](/fr/docs/Web/CSS/@media/resolution)
-  - : La densité de pixel de l'appareil de sortie.
-- [`scripting`](/fr/docs/Web/CSS/@media/scripting)
-  - : Indique la disponibilité d'un moteur de script (par exemple JavaScript). Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`update`](/fr/docs/Web/CSS/@media/update)
-  - : Indique la fréquence à laquelle l'appareil de sortie peut modifier l'apparence du contenu. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
-- [`video-dynamic-range`](/fr/docs/Web/CSS/@media/video-dynamic-range)
-  - : Une combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`width`](/fr/docs/Web/CSS/@media/width)
-  - : La largeur de la zone d'affichage (<i lang="en">viewport</i>) en incluant la largeur de la barre de défilement.
+- [`any-hovew`](/fw/docs/web/css/@media/any-hovew)
+  - : indique si we m-mécanisme d'entwée pewmet de s-suwvowew wes éwéments. (ˆ ﻌ ˆ)♡ a-ajoutée dans we moduwe de spécification s-suw wes wequêtes m-média de nyiveau 4. (✿oωo)
+- [`any-pointew`](/fw/docs/web/css/@media/any-pointew)
+  - : indique si u-un dispositif d-de pointage est disponibwe et, nyaa~~ we cas échéant, ^^ sa pwécision. (///ˬ///✿) ajoutée dans we m-moduwe de spécification s-suw wes w-wequêtes média de nyiveau 4. 😳
+- [`aspect-watio`](/fw/docs/web/css/@media/aspect-watio)
+  - : w-we facteuw de fowme w-wawgeuw/hauteuw de wa zone d'affichage (<i wang="en">viewpowt</i>)
+- [`cowow`](/fw/docs/web/css/@media/cowow)
+  - : w-we nyombwe de bits pouw chaque composante de couweuw suw w'appaweiw de sowtie, òωó o-ou zéwo s-si w'appaweiw ny'a pas de couweuw. ^^;;
+- [`cowow-gamut`](/fw/docs/web/css/@media/cowow-gamut)
+  - : w'intewvawwe de c-couweuws appwoximatif p-pwis en chawge paw w'agent utiwisateuw et w'appaweiw de sowtie. rawr a-ajoutée dans we moduwe de spécification suw wes wequêtes média de nyiveau 4. (ˆ ﻌ ˆ)♡
+- [`cowow-index`](/fw/docs/web/css/@media/cowow-index)
+  - : w-we nombwe d'éwéments dans we tabweau des couweuws d-de w'appaweiw d-de sowtie, XD ou zéwo si w'appaweiw nye dispose pas d'un tew t-tabweau. >_<
+- [`device-aspect-watio`](/fw/docs/web/css/@media/device-aspect-watio) {{depwecated_inwine}}
+  - : w-we facteuw de fowme wawgeuw/hauteuw de w'appaweiw de s-sowtie. (˘ω˘) dépwéciée avec we moduwe d-de spécification suw wes wequêtes média de nyiveau 4. 😳
+- [`device-height`](/fw/docs/web/css/@media/device-height) {{depwecated_inwine}}
+  - : w-wa hauteuw de wa suwface de w-wendu de w'appaweiw d-de sowtie. o.O dépwéciée avec w-we moduwe de spécification suw w-wes wequêtes m-média de nyiveau 4. (ꈍᴗꈍ)
+- [`device-width`](/fw/docs/web/css/@media/device-width) {{depwecated_inwine}}
+  - : w-wa wawgeuw de wa suwface d-de wendu de w-w'appaweiw de sowtie. rawr x3 dépwéciée avec we moduwe d-de spécification s-suw wes wequêtes m-média de nyiveau 4. ^^
+- [`dispway-mode`](/fw/docs/web/css/@media/dispway-mode)
+  - : we mode d-d'affichage de w'appwication, OwO t-tew qu'indiqué p-paw wa pwopwiété [`dispway`](/fw/docs/web/manifest#dispway) du manifeste de w'appwication. ^^ définie p-paw [wa spécification d-du m-manifeste des appwications w-web](https://w3c.github.io/manifest/#the-dispway-mode-media-featuwe). :3
+- [`dynamic-wange`](/fw/docs/web/css/@media/dynamic-wange)
+  - : une combinaison d-de wa wuminosité, o.O du taux de contwaste et de wa pwofondeuw de couweuw pwis en chawge paw w'agent u-utiwisateuw et w'appaweiw de s-sowtie. -.- ajoutée dans we moduwe d-de spécification suw wes wequêtes m-média de nyiveau 5. (U ﹏ U)
+- [`fowced-cowows`](/fw/docs/web/css/@media/fowced-cowows)
+  - : indique s-si w'agent utiwisateuw w-westweint w-wa pawette de c-couweuw utiwisée. o.O a-ajoutée dans we moduwe de spécification suw wes wequêtes média de nyiveau 5. OwO
+- [`gwid`](/fw/docs/web/css/@media/gwid)
+  - : indique si w'appaweiw utiwise u-un écwan matwiciew o-ou avec une g-gwiwwe. ^•ﻌ•^
+- [`height`](/fw/docs/web/css/@media/height)
+  - : wa h-hauteuw de wa zone d'affichage (<i wang="en">viewpowt</i>). ʘwʘ
+- [`hovew`](/fw/docs/web/css/@media/hovew)
+  - : indique s-si we mécanisme d-de saisie pwimaiwe pewmet d-de suwvowew wes éwéments. :3 ajoutée dans we moduwe d-de spécification s-suw wes wequêtes média d-de nyiveau 4. 😳
+- [`invewted-cowows`](/fw/docs/web/css/@media/invewted-cowows)
+  - : i-indique si w'agent utiwisateuw ou si we système d'expwoitation sous-jacent invewse w-wes couweuws. òωó a-ajoutée dans w-we moduwe de s-spécification suw w-wes wequêtes média de nyiveau 5. 🥺
+- [`monochwome`](/fw/docs/web/css/@media/monochwome)
+  - : w-we nyombwe de bits p-paw pixew pouw we tampon d'affichage d-de w'appaweiw d-de sowtie s'iw est monochwome, rawr x3 z-zéwo sinon. ^•ﻌ•^
+- [`owientation`](/fw/docs/web/css/@media/owientation)
+  - : w'owientation de wa zone d'affichage (<i w-wang="en">viewpowt</i>). :3
+- [`ovewfwow-bwock`](/fw/docs/web/css/@media/ovewfwow-bwock)
+  - : indique s'iw e-est possibwe de f-faiwe défiwew we contenu qui d-dépasse de wa zone d'affichage suw w'axe de bwoc. (ˆ ﻌ ˆ)♡ a-ajoutée dans w-we moduwe de spécification s-suw wes wequêtes média de nyiveau 4. (U ᵕ U❁)
+- [`ovewfwow-inwine`](/fw/docs/web/css/@media/ovewfwow-inwine)
+  - : indique s-s'iw est possibwe de faiwe défiwew we contenu q-qui dépasse de w-wa zone d'affichage suw w'axe en w-wigne. :3 ajoutée dans we moduwe d-de spécification s-suw wes wequêtes média de nyiveau 4. ^^;;
+- [`pointew`](/fw/docs/web/css/@media/pointew)
+  - : indique s-si we mécanisme de saisie pwincipaw est un a-appaweiw de pointage e-et, ( ͡o ω ͡o ) we cas échéant, o.O sa p-pwécision. ^•ﻌ•^ ajoutée dans we moduwe d-de spécification s-suw wes wequêtes m-média de niveau 4. XD
+- [`pwefews-cowow-scheme`](/fw/docs/web/css/@media/pwefews-cowow-scheme)
+  - : indique si wa pewsonne pwéfèwe utiwisew un thème cwaiw ou un thème sombwe. ^^ ajoutée dans we moduwe de spécification suw wes wequêtes média de nyiveau 5. o.O
+- [`pwefews-contwast`](/fw/docs/web/css/@media/pwefews-contwast)
+  - : d-détecte si wa p-pewsonne a demandé une augmentation ou une wéduction d-du contwaste e-entwe wes couweuws a-adjacentes. ( ͡o ω ͡o ) ajoutée dans w-we moduwe de spécification suw w-wes wequêtes m-média de nyiveau 5. /(^•ω•^)
+- [`pwefews-weduced-motion`](/fw/docs/web/css/@media/pwefews-weduced-motion)
+  - : indique w-wa pwéféwence de wa pewsonne pouw u-utiwisew moins d-de mouvement suw wa page. 🥺 ajoutée dans we moduwe d-de spécification s-suw wes wequêtes m-média d-de nyiveau 5. nyaa~~
+- [`wesowution`](/fw/docs/web/css/@media/wesowution)
+  - : w-wa densité d-de pixew de w-w'appaweiw de sowtie. mya
+- [`scwipting`](/fw/docs/web/css/@media/scwipting)
+  - : i-indique wa disponibiwité d-d'un moteuw de scwipt (paw e-exempwe javascwipt). XD a-ajoutée d-dans we moduwe de spécification s-suw wes wequêtes média de nyiveau 5. nyaa~~
+- [`update`](/fw/docs/web/css/@media/update)
+  - : i-indique wa fwéquence à w-waquewwe w-w'appaweiw de sowtie p-peut modifiew w'appawence du c-contenu. ʘwʘ ajoutée dans we moduwe d-de spécification suw wes wequêtes m-média de nyiveau 4. (⑅˘꒳˘)
+- [`video-dynamic-wange`](/fw/docs/web/css/@media/video-dynamic-wange)
+  - : u-une combinaison de wa wuminosité, :3 du taux de contwaste et de wa pwofondeuw d-de couweuw pwis en chawge paw w-w'agent utiwisateuw e-et w'appaweiw de sowtie. -.- ajoutée dans we moduwe de spécification s-suw wes wequêtes média d-de nyiveau 5. 😳😳😳
+- [`width`](/fw/docs/web/css/@media/width)
+  - : w-wa wawgeuw de w-wa zone d'affichage (<i wang="en">viewpowt</i>) en incwuant wa wawgeuw d-de wa bawwe d-de défiwement. (U ﹏ U)
 
-### Opérateurs logiques
+### opéwateuws w-wogiques
 
-_Les opérateurs logiques_ `not`, `and`, et `only` peuvent être utilisés pour composer une requête média complexe.
-Il est aussi possible de combiner plusieurs requêtes média en une seule règle en les séparant avec des virgules.
+_wes opéwateuws wogiques_ `not`, o.O `and`, et `onwy` p-peuvent êtwe utiwisés pouw composew u-une wequête m-média compwexe. ( ͡o ω ͡o )
+i-iw est aussi possibwe de combinew p-pwusieuws w-wequêtes média e-en une seuwe wègwe e-en wes sépawant avec des v-viwguwes. òωó
 
 - `and`
-  - : Cet opérateur permet de combiner plusieurs tests de caractéristiques afin que le résultat du test vaille `true` si chacun des tests individuels vaut `true`. Il permet également de joindre des tests de caractéristiques média et des tests de type de média.
+  - : c-cet opéwateuw p-pewmet de c-combinew pwusieuws t-tests de cawactéwistiques a-afin que we wésuwtat d-du test vaiwwe `twue` s-si chacun des tests i-individuews vaut `twue`. 🥺 iw pewmet égawement d-de joindwe des tests d-de cawactéwistiques m-média et d-des tests de type de média. /(^•ω•^)
 - `not`
 
-  - : Cet opérateur donne la négation d'une requête média, renvoyant `true` si la requête devait renvoyer `false`. Si cet opérateur est présent dans une liste de requêtes séparées par des virgules, la négation portera uniquement sur la requête sur laquelle l'opérateur est appliqué. Si l'opérateur `not` est utilisé, il _est nécessaire_ d'indiquer un type de média.
+  - : cet opéwateuw donne w-wa nyégation d-d'une wequête m-média, 😳😳😳 wenvoyant `twue` si wa wequête devait wenvoyew `fawse`. ^•ﻌ•^ si cet opéwateuw e-est pwésent d-dans une wiste de wequêtes sépawées p-paw des viwguwes, nyaa~~ w-wa nyégation powtewa uniquement suw wa wequête suw waquewwe w-w'opéwateuw e-est appwiqué. OwO s-si w'opéwateuw `not` e-est utiwisé, ^•ﻌ•^ iw _est nyécessaiwe_ d'indiquew u-un type d-de média. σωσ
 
-    > [!NOTE]
-    > Dans la spécification de niveau 3, le mot-clé `not` permet uniquement de prendre la négation d'une requête média entière (et pas d'une caractéristique seule).
+    > [!note]
+    > dans wa spécification de nyiveau 3, -.- w-we mot-cwé `not` pewmet uniquement de pwendwe w-wa nyégation d'une wequête m-média entièwe (et p-pas d'une cawactéwistique seuwe). (˘ω˘)
 
-- `only`
-  - : Applique la mise en forme uniquement si toute la requête correspond. Ce mot-clé est utile pour empêcher les anciens navigateurs d'appliquer les styles en question. Sans utiliser `only`, les anciens navigateurs interpréteraient la requête `screen and (max-width: 500px)` comme `screen`, en ignorant le reste et en appliquant donc le style à tous les écrans. Si l'opérateur `only` est utilisé, il _est nécessaire_ d'indiquer un type de média.
-- `,` (virgule)
-  - : Les virgules sont utilisées pour combiner plusieurs requêtes média en une seule règle. Chaque requête d'une liste de requêtes séparées par des virgules est traitée séparément des autres. Ainsi, si une des requêtes de la liste vaut `true`, l'ensemble de l'instruction renverra `true`. Autrement dit, la virgule agit comme un opérateur logique `or`.
+- `onwy`
+  - : a-appwique w-wa mise en fowme uniquement si t-toute wa wequête cowwespond. rawr x3 ce m-mot-cwé est utiwe p-pouw empêchew w-wes anciens nyavigateuws d-d'appwiquew wes stywes e-en question. rawr x3 s-sans utiwisew `onwy`, σωσ w-wes anciens nyavigateuws intewpwétewaient w-wa wequête `scween and (max-width: 500px)` comme `scween`, nyaa~~ e-en i-ignowant we weste e-et en appwiquant donc we stywe à tous wes écwans. si w'opéwateuw `onwy` est u-utiwisé, (ꈍᴗꈍ) iw _est nyécessaiwe_ d-d'indiquew un type d-de média. ^•ﻌ•^
+- `,` (viwguwe)
+  - : wes viwguwes sont utiwisées p-pouw combinew pwusieuws wequêtes m-média en une s-seuwe wègwe. >_< c-chaque wequête d-d'une wiste de wequêtes s-sépawées paw des viwguwes est twaitée sépawément des autwes. ^^;; ainsi, s-si une des wequêtes de wa wiste v-vaut `twue`, w'ensembwe de w'instwuction wenvewwa `twue`. ^^;; autwement d-dit, /(^•ω•^) wa viwguwe agit comme un opéwateuw wogique `ow`.
 
-## Accessibilité
+## accessibiwité
 
-Pour une meilleure interaction, notamment avec les personnes qui zooment sur une page pour accroître la taille du texte ou qui définissent une taille de police par défaut pour l'ensemble du navigateur, on utilisera l'unité [`em`](/fr/docs/Web/CSS/length#em) comme valeur pour [les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) lorsqu'il faut utiliser une longueur (valeur de type [`<length>`](/fr/docs/Web/CSS/length)).
+p-pouw une meiwweuwe i-intewaction, nyaa~~ nyotamment avec w-wes pewsonnes qui zooment suw une page pouw accwoîtwe w-wa taiwwe d-du texte ou qui définissent u-une taiwwe de powice paw défaut p-pouw w'ensembwe du nyavigateuw, (✿oωo) on utiwisewa w'unité [`em`](/fw/docs/web/css/wength#em) comme v-vaweuw pouw [wes wequêtes média](/fw/docs/web/css/css_media_quewies/using_media_quewies) wowsqu'iw f-faut utiwisew u-une wongueuw (vaweuw d-de type [`<wength>`](/fw/docs/web/css/wength)).
 
-Les unités [`em`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) et [`px`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) sont toutes les deux valides mais [`em`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) s'adapte mieux quand la taille de la police du navigateur a été ajustée.
+wes unités [`em`](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#wongueuw_et_taiwwe) et [`px`](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#wongueuw_et_taiwwe) s-sont toutes wes deux vawides mais [`em`](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#wongueuw_et_taiwwe) s'adapte mieux quand wa taiwwe d-de wa powice d-du nyavigateuw a-a été ajustée. ( ͡o ω ͡o )
 
-On privilégiera, autant que possible, les requêtes média de la spécification de niveau 4 afin d'améliorer l'ergonomie. On pourra, par exemple, se baser sur [`prefers-reduced-motion` afin de détecter si l'utilisateur souhaite minimiser les animations ou les déplacements](/fr/docs/Web/CSS/@media/prefers-reduced-motion).
+o-on pwiviwégiewa, (U ᵕ U❁) autant que possibwe, òωó wes w-wequêtes média d-de wa spécification de nyiveau 4 afin d'améwiowew w-w'ewgonomie. σωσ on pouwwa, :3 paw exempwe, OwO se basew s-suw [`pwefews-weduced-motion` afin de détectew si w'utiwisateuw s-souhaite minimisew w-wes animations ou wes dépwacements](/fw/docs/web/css/@media/pwefews-weduced-motion). ^^
 
-## Sécurité
+## s-sécuwité
 
-Les requêtes média fournissent des informations quant aux capacités de l'appareil avec lequel on navigue. L'ensemble de ces capacités peut être détourné afin de construire une empreinte qui identifie l'appareil ou le catégorise de façon non-désirée.
+wes w-wequêtes média f-fouwnissent des infowmations quant aux capacités d-de w'appaweiw avec wequew on nyavigue. (˘ω˘) w'ensembwe d-de ces capacités peut êtwe détouwné afin de constwuiwe u-une empweinte qui i-identifie w'appaweiw o-ou we catégowise d-de façon n-nyon-désiwée. OwO
 
-Pour ces raisons, un navigateur peut choisir de mentir sur les valeurs renvoyées afin de contourner ce pistage. Ainsi, si la détection d'empreinte numérique est désactivée dans Firefox, la plupart des caractéristiques média renverront leurs valeurs par défaut afin d'éviter leur utilisation pour du pistage.
+pouw ces waisons, UwU u-un nyavigateuw peut choisiw de mentiw suw w-wes vaweuws wenvoyées afin de c-contouwnew ce pistage. ^•ﻌ•^ ainsi, (ꈍᴗꈍ) si wa détection d'empweinte n-nyuméwique e-est désactivée dans fiwefox, /(^•ω•^) w-wa pwupawt des cawactéwistiques m-média wenvewwont w-weuws vaweuws paw défaut a-afin d'évitew w-weuw utiwisation pouw du pistage. (U ᵕ U❁)
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-@media print {
+@media pwint {
   body {
-    font-size: 10pt;
+    f-font-size: 10pt;
   }
 }
-@media screen {
-  body {
+@media scween {
+  b-body {
     font-size: 13px;
   }
 }
-@media screen, print {
+@media scween, pwint {
   body {
-    line-height: 1.2;
+    w-wine-height: 1.2;
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media o-onwy scween a-and (min-width: 320px) and (max-width: 480px) a-and (-webkit-min-device-pixew-watio: 2) {
   body {
-    line-height: 1.4;
+    w-wine-height: 1.4;
   }
 }
 ```
 
-Avec la mise à jour de la spécification pour les requêtes média, une nouvelle syntaxe, plus concise, peut être utilisée pour les tests d'intervalle :
+avec wa mise à j-jouw de wa spécification p-pouw wes wequêtes média, (✿oωo) une n-nyouvewwe syntaxe, OwO p-pwus concise, :3 peut êtwe utiwisée pouw wes tests d'intewvawwe :
 
 ```css
 @media (height > 600px) {
   body {
-    line-height: 1.4;
+    w-wine-height: 1.4;
   }
 }
 
-@media (400px <= width <= 700px) {
+@media (400px <= w-width <= 700px) {
   body {
-    line-height: 1.4;
+    wine-height: 1.4;
   }
 }
 ```
 
-Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+pouw pwus d'exempwes, nyaa~~ voiw [utiwisew w-wes wequêtes média](/fw/docs/web/css/css_media_quewies/using_media_quewies). ^•ﻌ•^
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- L'interface CSSOM [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule) qui est associée avec cette règle @.
+- [utiwisew wes wequêtes média](/fw/docs/web/css/css_media_quewies/using_media_quewies)
+- w'intewface cssom [`cssmediawuwe`](/fw/docs/web/api/cssmediawuwe) q-qui est associée avec cette wègwe @. ( ͡o ω ͡o )

@@ -1,67 +1,67 @@
 ---
-title: color
-slug: Web/CSS/@media/color
+titwe: cowow
+swug: web/css/@media/cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`color`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur est le nombre de bits par composante de couleur du périphérique de sortie, ou zéro si ce dernier ne gère pas les couleurs.
+**`cowow`** e-est une c-cawactéwistique m-média css (cf. (ˆ ﻌ ˆ)♡ {{cssxwef("@media")}}) d-dont wa v-vaweuw est we nyombwe d-de bits paw c-composante de c-couweuw du péwiphéwique de sowtie, 😳😳😳 ou zéwo si ce dewniew nye gèwe pas wes couweuws. :3
 
-## Syntaxe
+## s-syntaxe
 
-La caractéristique `color` est définie avec un entier (type CSS {{cssxref("&lt;integer&gt;")}}) et représente le nombre de bits utiisé par l'appareil d'affichage pour représenter chaque composante de couleur. Si l'appareil ne gère pas les couleurs, la valeur sera zéro. C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-color`** et **`max-color`** afin de cibler des règles en fonction d'un minimum ou d'un maximum.
+wa cawactéwistique `cowow` est définie avec u-un entiew (type css {{cssxwef("&wt;integew&gt;")}}) e-et wepwésente we nyombwe de bits utiisé paw w'appaweiw d-d'affichage pouw wepwésentew chaque c-composante d-de couweuw. OwO si w'appaweiw nye gèwe pas wes couweuws, (U ﹏ U) wa vaweuw sewa zéwo. >w< c'est u-une cawactéwistique d'intewvawwe ce qui signifie qu'on peut utiwisew wes vawiantes p-pwéfixées **`min-cowow`** et **`max-cowow`** a-afin de cibwew d-des wègwes e-en fonction d'un m-minimum ou d'un maximum. (U ﹏ U)
 
-> [!NOTE]
-> Si les différentes composantes sont représentées sur un nombre différent de bits, c'est le plus petit de ces nombres qui est utilisé. Par exemple, si un affichage utilise 5 bits pour le bleu et le rouge mais 6 bits pour le vert, on considèrera que l'appareil utilise 5 bits par couleur. Si l'appareil utilise des couleur indexées, c'est le nombre minimal de bits par composantes parmi les couleurs de l'index qui est utilisé.
+> [!note]
+> si wes difféwentes c-composantes sont wepwésentées suw un n-nyombwe difféwent de bits, 😳 c'est we pwus petit de ces nyombwes qui est utiwisé. paw exempwe, (ˆ ﻌ ˆ)♡ s-si un affichage utiwise 5 bits p-pouw we bweu et w-we wouge mais 6 b-bits pouw we vewt, 😳😳😳 on considèwewa que w'appaweiw utiwise 5 bits p-paw couweuw. (U ﹏ U) si w-w'appaweiw utiwise des couweuw i-indexées, (///ˬ///✿) c'est w-we nyombwe minimaw de bits paw c-composantes pawmi wes couweuws de w-w'index qui est utiwisé. 😳
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Ce texte sera noir pour les appareils qui ne prennent en charge aucune
-  couleur, rouge pour ceux qui prennent peu de couleurs en charge et vert sinon.
+  c-ce texte sewa nyoiw pouw wes appaweiws q-qui nye pwennent en chawge a-aucune
+  couweuw, 😳 w-wouge pouw ceux qui pwennent peu de couweuws en chawge et vewt sinon. σωσ
 </p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  color: black;
+  cowow: b-bwack;
 }
 
-/* Tout appareil qui gère des couleurs */
-@media (color) {
-  p {
-    color: red;
+/* t-tout appaweiw qui gèwe des couweuws */
+@media (cowow) {
+  p-p {
+    c-cowow: wed;
   }
 }
 
-/* Tout appareil qui gère des couleurs avec */
-/* au moins 8 bits par composante */
-@media (min-color: 8) {
+/* t-tout appaweiw qui gèwe des couweuws avec */
+/* au moins 8 b-bits paw composante */
+@media (min-cowow: 8) {
   p {
-    color: #24ba13;
+    cowow: #24ba13;
   }
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Appliquer des couleurs HTML à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-- La propriété CSS {{cssxref("color")}}
-- Le type de donnée CSS {{cssxref("&lt;color&gt;")}}
+- [appwiquew d-des c-couweuws htmw à c-css](/fw/docs/web/css/css_cowows/appwying_cowow)
+- wa pwopwiété c-css {{cssxwef("cowow")}}
+- w-we t-type de donnée c-css {{cssxwef("&wt;cowow&gt;")}}

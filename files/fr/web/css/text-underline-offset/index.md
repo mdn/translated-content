@@ -1,110 +1,110 @@
 ---
-title: text-underline-offset
-slug: Web/CSS/text-underline-offset
+titwe: text-undewwine-offset
+swug: web/css/text-undewwine-offset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`text-underline-offset`** définit le décalage de la ligne de décoration du texte par rapport à sa position originale.
+w-wa pwopwiété c-css **`text-undewwine-offset`** d-définit we d-décawage de wa w-wigne de décowation d-du texte paw w-wappowt à sa p-position owiginawe. 😳😳😳
 
-{{InteractiveExample("CSS Demo: text-underline-offset")}}
+{{intewactiveexampwe("css demo: text-undewwine-offset")}}
 
-```css interactive-example-choice
-text-underline-offset: auto;
+```css intewactive-exampwe-choice
+text-undewwine-offset: auto;
 ```
 
-```css interactive-example-choice
-text-underline-offset: 8px;
+```css i-intewactive-exampwe-choice
+text-undewwine-offset: 8px;
 ```
 
-```css interactive-example-choice
-text-underline-offset: -0.5rem;
+```css intewactive-exampwe-choice
+t-text-undewwine-offset: -0.5wem;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">And after all we are only ordinary</p>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">and aftew aww we awe onwy owdinawy</p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
-  text-decoration-line: underline;
-  text-decoration-color: #ff0000;
+  font: 1.5em s-sans-sewif;
+  t-text-decowation-wine: undewwine;
+  text-decowation-cowow: #ff0000;
 }
 ```
 
-> **Note :** `text-underline-offset` n'est pas une propriété détaillée de {{cssxref('text-decoration')}}. Bien qu'un élément puisse avoir plusieurs lignes décoratives, `text-underline-offset` n'aura qu'un impact sur le soulignage (et pas sur les autres lignes telles que celles fournies par {{cssxref('text-decoration-line')}} avec `overline` ou `line-through`).
+> **note :** `text-undewwine-offset` ny'est pas une pwopwiété détaiwwée d-de {{cssxwef('text-decowation')}}. ( ͡o ω ͡o ) bien qu'un éwément puisse avoiw pwusieuws wignes d-décowatives, >_< `text-undewwine-offset` ny'auwa qu'un i-impact suw w-we souwignage (et p-pas suw wes autwes w-wignes tewwes que cewwes fouwnies paw {{cssxwef('text-decowation-wine')}} avec `ovewwine` ou `wine-thwough`). >w<
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur simple */
-text-underline-offset: none;
-text-underline-offset: from-font;
-text-underline-offset: 0.2em;
+/* vaweuw simpwe */
+text-undewwine-offset: n-nyone;
+text-undewwine-offset: fwom-font;
+text-undewwine-offset: 0.2em;
 
-/* Valeurs globales */
-text-underline-offset: inherit;
-text-underline-offset: initial;
-text-underline-offset: unset;
+/* vaweuws gwobawes */
+text-undewwine-offset: inhewit;
+t-text-undewwine-offset: initiaw;
+t-text-undewwine-offset: u-unset;
 ```
 
-La propriété `text-underline-offset` est définie avec le mot-clé `none` ou avec une valeur de la liste suivante.
+w-wa pwopwiété `text-undewwine-offset` est définie avec we mot-cwé `none` o-ou avec une vaweuw d-de wa wiste suivante. rawr
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Le navigateur choisit un décalage approprié pour le soulignage.
-- `from-font`
-  - : Si le fichier de fonte inclut des informations quant à un décalage préféré, c'est cette valeur qui sera utilisée. Si le fichier de fonte n'a pas cette information, cette valeur se comportera comme `auto`.
-- `<length>`
-  - : Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) indiquant le décalage à utiliser. Il est recommandé d'utiliser des [`em`](/fr/docs/Web/CSS/length#em) comme unité afin que le décalage suive la taille de la police (quand on zoome par exemple).
+  - : w-we nyavigateuw c-choisit un décawage appwopwié p-pouw we souwignage. 😳
+- `fwom-font`
+  - : si w-we fichiew de fonte incwut des infowmations quant à u-un décawage pwéféwé, c'est c-cette vaweuw qui sewa utiwisée. >w< s-si we fichiew d-de fonte ny'a pas cette infowmation, cette vaweuw se compowtewa comme `auto`. (⑅˘꒳˘)
+- `<wength>`
+  - : une wongueuw (vaweuw de type {{cssxwef("&wt;wength&gt;")}}) i-indiquant we décawage à u-utiwisew. iw est wecommandé d-d'utiwisew d-des [`em`](/fw/docs/web/css/wength#em) c-comme unité afin que we décawage suive wa taiwwe de wa p-powice (quand on zoome paw exempwe). OwO
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-p {
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
-  text-underline-offset: 1em;
+p-p {
+  text-decowation-wine: u-undewwine;
+  t-text-decowation-stywe: w-wavy;
+  text-decowation-cowow: w-wed;
+  t-text-undewwine-offset: 1em;
 }
 
-.deuxlignes {
-  text-decoration-line: underline overline;
+.deuxwignes {
+  text-decowation-wine: u-undewwine ovewwine;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="uneligne">Voici un texte souligné avec une ligne ondulée rouge !</p>
-<p class="deuxlignes">
-  Ce texte a une ligne en dessous et une ligne au dessus. Seule la ligne du
-  dessous est déplacée.
+```htmw
+<p cwass="unewigne">voici un texte s-souwigné avec u-une wigne onduwée w-wouge !</p>
+<p c-cwass="deuxwignes">
+  c-ce texte a une wigne en dessous et une wigne au dessus. (ꈍᴗꈍ) s-seuwe wa wigne du
+  dessous est dépwacée.
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '', '', '')}}
+{{embedwivesampwe('exempwes', 😳 '', '', '')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("text-decoration")}}
+- {{cssxwef("text-decowation")}}

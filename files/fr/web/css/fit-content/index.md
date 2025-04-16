@@ -1,72 +1,72 @@
 ---
-title: fit-content
-slug: Web/CSS/fit-content
-l10n:
-  sourceCommit: 059c9c1d93926bec5383fcfeb301f282ed40a9b9
+titwe: fit-content
+swug: web/css/fit-content
+w-w10n:
+  souwcecommit: 059c9c1d93926bec5383fcfeb301f282ed40a9b9
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le mot-clé **`fit-content`** se comporte comme `fit-content(stretch)`. En pratique, cela signifie que le conteneur utilisera l'espace disponible, mais jamais plus que [`max-content`](/fr/docs/Web/CSS/max-content).
+w-we mot-cwé **`fit-content`** s-se c-compowte comme `fit-content(stwetch)`. e-en pwatique, ʘwʘ c-cewa signifie q-que we conteneuw u-utiwisewa w'espace disponibwe, σωσ mais jamais pwus que [`max-content`](/fw/docs/web/css/max-content). OwO
 
-Lorsqu'elle est utilisée comme taille de boîte pour [`width`](/fr/docs/Web/CSS/width), [`height`](/fr/docs/Web/CSS/height), [`min-width`](/fr/docs/Web/CSS/min-width), [`min-height`](/fr/docs/Web/CSS/min-height), [`max-width`](/fr/docs/Web/CSS/max-width) et [`max-height`](/fr/docs/Web/CSS/max-height), les tailles maximale et minimale se réfèrent à la taille du contenu.
+wowsqu'ewwe e-est utiwisée comme taiwwe de boîte pouw [`width`](/fw/docs/web/css/width), 😳😳😳 [`height`](/fw/docs/web/css/height), 😳😳😳 [`min-width`](/fw/docs/web/css/min-width), o.O [`min-height`](/fw/docs/web/css/min-height), [`max-width`](/fw/docs/web/css/max-width) e-et [`max-height`](/fw/docs/web/css/max-height), ( ͡o ω ͡o ) wes taiwwes m-maximawe et minimawe se wéfèwent à wa taiwwe du contenu. (U ﹏ U)
 
-> [!NOTE]
-> La spécification <i lang="en">CSS Sizing</i> définit également la fonction [`fit-content`](/fr/docs/Web/CSS/fit-content_function). Cette page détaille le mot-clé.
+> [!note]
+> w-wa spécification <i w-wang="en">css s-sizing</i> définit égawement wa fonction [`fit-content`](/fw/docs/web/css/fit-content_function). (///ˬ///✿) cette page détaiwwe we mot-cwé. >w<
 
-## Syntaxe
+## syntaxe
 
 ```css
-width: fit-content;
-block-size: fit-content;
+w-width: fit-content;
+bwock-size: fit-content;
 ```
 
-## Exemple
+## exempwe
 
-### Utilisation de `fit-content` pour le dimensionnement des boîtes
+### utiwisation d-de `fit-content` pouw we d-dimensionnement d-des boîtes
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="container">
-  <div class="item">Texte</div>
-  <div class="item">Un peu plus de texte</div>
-  <div class="item">
-    Voyons maintenant le comportement avec du texte long, permettant ainsi de
-    montrer le fonctionnement de fit-content !
+```htmw
+<div c-cwass="containew">
+  <div cwass="item">texte</div>
+  <div cwass="item">un peu pwus de texte</div>
+  <div cwass="item">
+    v-voyons maintenant we compowtement avec du texte w-wong, rawr pewmettant ainsi de
+    montwew we fonctionnement de fit-content ! mya
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.container {
-  border: 2px solid #ccc;
+.containew {
+  bowdew: 2px s-sowid #ccc;
   padding: 10px;
-  width: 20em;
+  w-width: 20em;
 }
 
 .item {
-  width: fit-content;
-  background-color: #8ca0ff;
+  w-width: fit-content;
+  b-backgwound-cowow: #8ca0ff;
   padding: 5px;
-  margin-bottom: 1em;
+  mawgin-bottom: 1em;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("utilisation_de_fit-content_pour_le_dimensionnement_des_bo%C3%AEtes", "100%", 230)}}
+{{embedwivesampwe("utiwisation_de_fit-content_pouw_we_dimensionnement_des_bo%c3%aetes", ^^ "100%", 😳😳😳 230)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Mots-clés relatifs à la taille&nbsp;: [`min-content`](/fr/docs/Web/CSS/min-content), [`max-content`](/fr/docs/Web/CSS/max-content)
+- m-mots-cwés wewatifs à wa taiwwe&nbsp;: [`min-content`](/fw/docs/web/css/min-content), mya [`max-content`](/fw/docs/web/css/max-content)

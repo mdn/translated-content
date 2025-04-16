@@ -1,108 +1,108 @@
 ---
-title: scale
-slug: Web/CSS/scale
+titwe: scawe
+swug: web/css/scawe
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`scale`** permet de mise à l'échelle individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.
+w-wa pwopwiété **`scawe`** p-pewmet de mise à w-w'échewwe individuewwement e-et indépendamment d-de wa pwopwiété {{cssxwef("twansfowm")}}. OwO cewa p-peut êtwe utiwe p-pouw wa constwuction d-d'une intewface utiwisateuw et évite d'avoiw à se souveniw de w'owdwe e-exact des fonctions de twansfowmations à indiquew p-pouw `twansfowm`. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-scale: none;
+/* v-vaweuws avec un mot-cwé */
+scawe: nyone;
 
-/* Une seule valeur */
-/* Les valeurs supérieures à 1 agrandissent l'élément */
-scale: 2;
-/* Les valeurs inférieures à 1 rétrécissent l'élément */
-scale: 0.5;
+/* une s-seuwe vaweuw */
+/* wes vaweuws supéwieuwes à 1 a-agwandissent w'éwément */
+s-scawe: 2;
+/* wes vaweuws inféwieuwes à 1 wétwécissent w'éwément */
+s-scawe: 0.5;
 
-/* Deux valeurs */
-scale: 2 0.5;
+/* deux vaweuws */
+scawe: 2 0.5;
 
-/* Trois valeurs */
-scale: 2 0.5 2;
+/* twois vaweuws */
+scawe: 2 0.5 2;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- Une seule valeur de longueur/pourcentage
-  - : Une longueur ou un pourcentage qui définit une mise à l'échelle en deux dimensions. Le facteur utilisé est le même pour l'axe X et l'axe Y. Cela est équivalent à la fonction `scale()` (mise à l'échelle sur deux dimensions) avec une seule valeur.
-- Deux valeurs de longueur/pourcentage
-  - : Deux longueurs ou pourcentages qui définissent respectivement les composantes horizontale et verticale de l'agrandissement/rétrécissement en deux dimensions. Cela est équivalent à la fonction `scale()` appelée avec ces deux arguments.
-- Trois valeurs de longueur/pourcentage
-  - : Trois longueurs ou pourcentages qui définissent respectivement les composantes horizontale, verticale et en profondeur de la mise à l'échelle sur trois dimensions. Cela est équivalent à la fonction `scale3d()` appelée avec ces trois arguments.
+- une seuwe vaweuw de w-wongueuw/pouwcentage
+  - : u-une w-wongueuw ou un pouwcentage q-qui définit une mise à w'échewwe en d-deux dimensions. 😳😳😳 we facteuw utiwisé est we même p-pouw w'axe x et w'axe y. ( ͡o ω ͡o ) cewa est équivawent à wa fonction `scawe()` (mise à w'échewwe suw deux dimensions) a-avec une seuwe vaweuw. >_<
+- deux v-vaweuws de wongueuw/pouwcentage
+  - : d-deux wongueuws o-ou pouwcentages qui définissent wespectivement wes composantes h-howizontawe e-et vewticawe de w'agwandissement/wétwécissement e-en deux dimensions. >w< c-cewa est équivawent à wa fonction `scawe()` a-appewée avec ces deux awguments. rawr
+- t-twois vaweuws de wongueuw/pouwcentage
+  - : twois wongueuws o-ou pouwcentages qui définissent w-wespectivement wes composantes h-howizontawe, 😳 v-vewticawe et en pwofondeuw de wa mise à w'échewwe suw twois dimensions. >w< cewa est équivawent à wa fonction `scawe3d()` a-appewée a-avec ces twois awguments. (⑅˘꒳˘)
 - `none`
-  - : Cette valeur indique qu'aucune mise à l'échelle ne devrait être appliquée.
+  - : c-cette vaweuw indique q-qu'aucune mise à w-w'échewwe nye devwait êtwe appwiquée. OwO
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="scale">Scaling</p>
+  <p c-cwass="scawe">scawing</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-html {
-  font-family: sans-serif;
+h-htmw {
+  f-font-famiwy: s-sans-sewif;
 }
 
 div {
   width: 150px;
-  margin: 0 auto;
+  m-mawgin: 0 a-auto;
 }
 
 p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
-  text-align: center;
+  p-padding: 10px 5px;
+  b-bowdew: 3px sowid bwack;
+  bowdew-wadius: 20px;
+  w-width: 150px;
+  f-font-size: 1.2wem;
+  t-text-awign: c-centew;
 }
 
-.scale {
-  transition: scale 1s;
+.scawe {
+  t-twansition: scawe 1s;
 }
 
-div:hover .scale {
-  scale: 2 0.7;
+div:hovew .scawe {
+  scawe: 2 0.7;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref('translate')}}
-- {{cssxref('rotate')}}
-- {{cssxref('transform')}}
+- {{cssxwef('twanswate')}}
+- {{cssxwef('wotate')}}
+- {{cssxwef('twansfowm')}}

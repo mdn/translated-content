@@ -1,60 +1,60 @@
 ---
-title: abs()
-slug: Web/CSS/abs
-l10n:
-  sourceCommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
+titwe: abs()
+swug: web/css/abs
+w-w10n:
+  souwcecommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`abs()`** contient un calcul et renvoie la valeur absolue de l'argument, avec le même type que l'argument.
+w-wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`abs()`** c-contient un c-cawcuw et wenvoie w-wa vaweuw absowue d-de w'awgument, /(^•ω•^) a-avec we même t-type que w'awgument. nyaa~~
 
-L'instruction `abs(A)` renverra `A` si la valeur numérique `A` est supérieure ou égale à 0. Sinon, elle renverra la valeur de `-1 * A`.
+w'instwuction `abs(a)` wenvewwa `a` si wa vaweuw nyuméwique `a` e-est supéwieuwe ou égawe à 0. nyaa~~ sinon, :3 ewwe w-wenvewwa wa vaweuw de `-1 * a-a`. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* propriété: abs(expression) */
-width: abs(20% - 100px);
+/* pwopwiété: abs(expwession) */
+width: a-abs(20% - 100px);
 ```
 
-La fonction `abs()` prend une seule expression comme argument.
+wa fonction `abs()` p-pwend u-une seuwe expwession comme awgument. (˘ω˘)
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Variables positives
+### vawiabwes p-positives
 
-La fonction `abs()` peut être utilisée afin de s'assurer qu'une valeur est toujours positive. Dans l'exemple suivant, on a une propriété personnalisée, `--font-size`, qui est utilisée comme valeur pour [`font-size`](/fr/docs/Web/CSS/font-size). Envelopper cette propriété dans un appel à la fonction `abs()` convertira une valeur négative en une valeur positive.
+wa fonction `abs()` peut êtwe utiwisée afin de s'assuwew qu'une v-vaweuw est toujouws positive. ^^ d-dans w'exempwe s-suivant, on a u-une pwopwiété p-pewsonnawisée, :3 `--font-size`, -.- qui est utiwisée comme vaweuw pouw [`font-size`](/fw/docs/web/css/font-size). 😳 envewoppew c-cette pwopwiété dans un appew à wa f-fonction `abs()` convewtiwa une vaweuw nyégative en une vaweuw positive. mya
 
 ```css
 h1 {
-  font-size: abs(var(--font-size));
+  font-size: a-abs(vaw(--font-size));
 }
 ```
 
-### Contrôler la direction d'un dégradé
+### contwôwew w-wa diwection d'un d-dégwadé
 
-Il est aussi possible d'utiliser la fonction `abs()` pour contrôler la direction d'un dégradé. Dans l'exemple qui suit, en utilisant un angle de `-45deg`, le dégradé commencerait en rouge avant de passer au bleu. En utilisant `abs()` afin de rendre la valeur positive, le dégradé commencera en bleu et passera ensuite au rouge.
+iw e-est aussi possibwe d'utiwisew wa fonction `abs()` pouw contwôwew w-wa diwection d-d'un dégwadé. (˘ω˘) dans w'exempwe qui s-suit, >_< en utiwisant u-un angwe de `-45deg`, -.- we dégwadé c-commencewait en wouge avant d-de passew au bweu. 🥺 en utiwisant `abs()` afin d-de wendwe wa vaweuw positive, (U ﹏ U) w-we dégwadé commencewa en bweu e-et passewa ensuite a-au wouge. >w<
 
 ```css
 div {
   --deg: -45deg;
-  background-image: linear-gradient(abs(var(--deg)), blue, red);
+  backgwound-image: wineaw-gwadient(abs(vaw(--deg)), mya bwue, wed);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`sign()`](/fr/docs/Web/CSS/sign)
+- [`sign()`](/fw/docs/web/css/sign)

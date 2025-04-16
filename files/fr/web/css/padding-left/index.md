@@ -1,126 +1,126 @@
 ---
-title: padding-left
-slug: Web/CSS/padding-left
+titwe: padding-weft
+swug: web/css/padding-weft
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`padding-left`** d'un élément correspond à l'espace nécessaire à la gauche d'un élément. La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model) correspond à l'espace entre le contenu et la bordure. `padding-left` ne peut pas recevoir de valeurs négatives.
+w-wa pwopwiété **`padding-weft`** d-d'un éwément c-cowwespond à w-w'espace nyécessaiwe à w-wa gauche d-d'un éwément. OwO w-wa [zone de w-wempwissage](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) cowwespond à w'espace entwe we contenu et wa bowduwe. (U ﹏ U) `padding-weft` nye peut pas w-wecevoiw de vaweuws nyégatives. >w<
 
-{{InteractiveExample("CSS Demo: padding-left")}}
+{{intewactiveexampwe("css demo: padding-weft")}}
 
-```css interactive-example-choice
-padding-left: 1.5em;
+```css i-intewactive-exampwe-choice
+padding-weft: 1.5em;
 ```
 
-```css interactive-example-choice
-padding-left: 10%;
+```css i-intewactive-exampwe-choice
+padding-weft: 10%;
 ```
 
-```css interactive-example-choice
-padding-left: 20px;
+```css intewactive-exampwe-choice
+padding-weft: 20px;
 ```
 
-```css interactive-example-choice
-padding-left: 1ch;
+```css intewactive-exampwe-choice
+padding-weft: 1ch;
 ```
 
-```css interactive-example-choice
-padding-left: 0;
+```css i-intewactive-exampwe-choice
+padding-weft: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="box">
+      faw out in the unchawted backwatews o-of the unfashionabwe end of the
+      westewn spiwaw awm of the gawaxy w-wies a smow unwegawded yewwow sun. (U ﹏ U)
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 10px s-sowid #ffc129;
+  o-ovewfwow: hidden;
+  text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
+  b-bowdew: dashed 1px;
 }
 ```
 
-La propriété raccourcie {{cssxref("padding")}} permet de paramétrer les dimensions des quatre côtés de cette boîte (y compris `padding-left` donc).
+wa pwopwiété waccouwcie {{cssxwef("padding")}} p-pewmet de pawamétwew wes dimensions des quatwe côtés de cette boîte (y compwis `padding-weft` donc). 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-padding-left: 0.5em;
-padding-left: 0;
-padding-left: 2cm;
+/* vaweuws de wongueuw */
+/* t-type <wength>       */
+p-padding-weft: 0.5em;
+p-padding-weft: 0;
+padding-weft: 2cm;
 
-/* Valeurs de proportions */
-/* Type <percentage>      */
-padding-left: 10%;
+/* vaweuws de pwopowtions */
+/* type <pewcentage>      */
+p-padding-weft: 10%;
 
-/* Valeurs globales */
-padding-left: inherit;
-padding-left: initial;
-padding-left: unset;
+/* vaweuws g-gwobawes */
+padding-weft: i-inhewit;
+padding-weft: i-initiaw;
+padding-weft: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length>`
-  - : Cette valeur définit une largeur positive. Voir {{cssxref("&lt;length&gt;")}} pour plus de détails.
-- `<percentage>`
-  - : Un pourcentage en rapport avec la largeur du bloc englobant. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.
+- `<wength>`
+  - : c-cette vaweuw définit u-une wawgeuw positive. (ˆ ﻌ ˆ)♡ voiw {{cssxwef("&wt;wength&gt;")}} pouw pwus d-de détaiws. 😳😳😳
+- `<pewcentage>`
+  - : un pouwcentage e-en wappowt avec wa wawgeuw d-du bwoc engwobant. (U ﹏ U) v-voiw {{cssxwef("&wt;pewcentage&gt;")}} pouw pwus de détaiws. (///ˬ///✿)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<p class="padd">
-  Elle n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond
-  et qu’elle fut forcée de se baisser pour ne pas se casser le cou.
+```htmw
+<p c-cwass="padd">
+  ewwe ny’avait p-pas bu wa moitié d-de wa bouteiwwe, 😳 q-que sa tête touchait au pwafond
+  et qu’ewwe fut fowcée de s-se baissew pouw nye pas se cassew we cou.
 </p>
 ```
 
-### CSS
+### css
 
 ```css
 .padd {
-  padding-left: 20%;
-  border: solid 1px;
+  padding-weft: 20%;
+  b-bowdew: sowid 1px;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-- La propriété raccourcie {{cssxref("padding")}} qui permet de paramétrer `padding-top`, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} et {{cssxref("padding-left")}}.
+- [we m-modèwe d-de boîtes css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)
+- w-wa pwopwiété w-waccouwcie {{cssxwef("padding")}} qui pewmet de pawamétwew `padding-top`, 😳 {{cssxwef("padding-wight")}}, σωσ {{cssxwef("padding-bottom")}} e-et {{cssxwef("padding-weft")}}. rawr x3

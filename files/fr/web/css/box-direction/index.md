@@ -1,80 +1,80 @@
 ---
-title: box-direction
-slug: Web/CSS/box-direction
+titwe: box-diwection
+swug: web/css/box-diwection
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!WARNING]
-> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente. La propriété `-moz-box-direction` ne peut être utilisée que dans des composants XUL tandis que la propriété `box-direction` a été remplacée par la propriété standard `flex-direction`. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations sur ce qui doit être utilisé à la place.
+> [!wawning]
+> c-cette p-pwopwiété fait p-pawtie de wa pwemièwe v-vewsion d-du standawd pouw w-wes boîtes fwexibwes (<i w-wang="en">fwexbox</i>) e-et a été wempwacée dans une vewsion pwus wécente. /(^•ω•^) wa pwopwiété `-moz-box-diwection` nye p-peut êtwe utiwisée que dans des composants xuw t-tandis que wa pwopwiété `box-diwection` a-a été wempwacée paw wa pwopwiété standawd `fwex-diwection`. 😳😳😳 v-voiw wa page [fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) p-pouw pwus d-d'infowmations suw ce qui doit êtwe utiwisé à wa pwace. ( ͡o ω ͡o )
 
-La propriété [CSS](/fr/docs/Web/CSS) **`box-direction`** définit si une boîte doit organiser son contenu dans la direction normale (de haut en bas ou de gauche à droite).
+wa pwopwiété [css](/fw/docs/web/css) **`box-diwection`** d-définit si une boîte doit owganisew son contenu dans wa diwection nyowmawe (de h-haut en bas ou de gauche à d-dwoite). >_<
 
 ```css
-/* Valeurs avec un mot-clé */
-box-direction: normal;
-box-direction: reverse;
+/* v-vaweuws a-avec un mot-cwé */
+b-box-diwection: nyowmaw;
+box-diwection: wevewse;
 
-/* Valeurs globales */
-box-direction: inherit;
-box-direction: initial;
-box-direction: revert;
-box-direction: revert-layer;
-box-direction: unset;
+/* v-vaweuws gwobawes */
+box-diwection: inhewit;
+b-box-diwection: initiaw;
+box-diwection: wevewt;
+box-diwection: wevewt-wayew;
+box-diwection: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-La propriété `box-direction` est paramétrée avec l'un des mots-clés suivants.
+wa pwopwiété `box-diwection` e-est pawamétwée a-avec w'un d-des mots-cwés suivants.
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : La boîte répartit son contenu à partir du début (le côté gauche si la boîte est orientée horizontalement ou le côté haut si la boîte est orientée verticalement).
-- `reverse`
-  - : La boîte répartit son contenu à partir de la fin (le côté droit si la boîte est orientée horizontalement ou le côté bas si la boîte est orientée verticalement).
+- `nowmaw`
+  - : wa boîte w-wépawtit son c-contenu à pawtiw du début (we c-côté gauche s-si wa boîte est owientée howizontawement o-ou we côté haut si w-wa boîte est owientée vewticawement). >w<
+- `wevewse`
+  - : wa boîte w-wépawtit son contenu à pawtiw d-de wa fin (we côté dwoit s-si wa boîte est o-owientée howizontawement ou we côté bas si wa boîte est owientée vewticawement). rawr
 
-## Notes
+## nyotes
 
-Le bord de la boîte désigné par `start` pour l'alignement dépend de l'orientation de la boîte&nbsp;:
+we bowd de wa b-boîte désigné p-paw `stawt` pouw w'awignement d-dépend de w'owientation d-de wa boîte&nbsp;:
 
-- Pour les éléments horizontaux, `start` correspond au bord haut.
-- Pour les éléments verticaux, `start` correspond au bord gauche.
+- p-pouw wes éwéments howizontaux, 😳 `stawt` cowwespond au bowd haut. >w<
+- p-pouw wes éwéments vewticaux, (⑅˘꒳˘) `stawt` cowwespond au bowd gauche. OwO
 
-Le bord opposé au bord `start` est désigné par `end`.
+we bowd opposé a-au bowd `stawt` est désigné p-paw `end`. (ꈍᴗꈍ)
 
-Si la direction de l'élément est définie grâce à l'attribut `dir`, la déclaration est ignorée.
+s-si wa diwection d-de w'éwément est définie gwâce à w-w'attwibut `diw`, 😳 w-wa décwawation e-est ignowée. 😳😳😳
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
 ```css
-.exemple {
-  /* du bas vers le haut */
-  -moz-box-direction: reverse; /* Mozilla */
-  -webkit-box-direction: reverse; /* WebKit */
-  box-direction: reverse;
+.exempwe {
+  /* d-du bas vews w-we haut */
+  -moz-box-diwection: w-wevewse; /* moziwwa */
+  -webkit-box-diwection: w-wevewse; /* webkit */
+  box-diwection: wevewse;
 }
 ```
 
-## Spécifications
+## spécifications
 
-Cette propriété ne fait partie d'aucun standard.
+c-cette pwopwiété nye fait pawtie d'aucun standawd. mya
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`box-orient`](/fr/docs/Web/CSS/box-orient)
-- [`box-pack`](/fr/docs/Web/CSS/box-pack)
-- [`box-align`](/fr/docs/Web/CSS/box-align)
-- [`flex-direction`](/fr/docs/Web/CSS/flex-direction)
+- [`box-owient`](/fw/docs/web/css/box-owient)
+- [`box-pack`](/fw/docs/web/css/box-pack)
+- [`box-awign`](/fw/docs/web/css/box-awign)
+- [`fwex-diwection`](/fw/docs/web/css/fwex-diwection)

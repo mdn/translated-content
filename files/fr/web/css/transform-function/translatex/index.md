@@ -1,197 +1,197 @@
 ---
-title: translateX()
-slug: Web/CSS/transform-function/translateX
+titwe: twanswatex()
+swug: web/css/twansfowm-function/twanswatex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`translateX()`** permet d'appliquer une translation en 2D. La valeur obtenue sera du type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+w-wa fonction c-css **`twanswatex()`** p-pewmet d'appwiquew u-une twanswation e-en 2d. (✿oωo) w-wa vaweuw obtenue s-sewa du type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). ʘwʘ
 
-{{InteractiveExample("CSS Demo: translateX()")}}
+{{intewactiveexampwe("css d-demo: twanswatex()")}}
 
-```css interactive-example-choice
-transform: translateX(0);
+```css intewactive-exampwe-choice
+twansfowm: twanswatex(0);
 ```
 
-```css interactive-example-choice
-transform: translateX(42px);
+```css intewactive-exampwe-choice
+t-twansfowm: twanswatex(42px);
 ```
 
-```css interactive-example-choice
-transform: translateX(-2.1rem);
+```css intewactive-exampwe-choice
+t-twansfowm: twanswatex(-2.1wem);
 ```
 
-```css interactive-example-choice
-transform: translateX(3ch);
+```css i-intewactive-exampwe-choice
+twansfowm: twanswatex(3ch);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="static-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    c-cwass="twansition-aww"
+    id="static-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-```css interactive-example
-#static-element {
+```css i-intewactive-exampwe
+#static-ewement {
   opacity: 0.4;
-  position: absolute;
+  position: absowute;
 }
 
-#example-element {
-  position: absolute;
+#exampwe-ewement {
+  position: a-absowute;
 }
 ```
 
-> **Note :** `translateX(tx)` est équivalent à `translate(tx, 0)` ou `translate3d(tx, 0, 0)`.
+> **note :** `twanswatex(tx)` est équivawent à `twanswate(tx, (ˆ ﻌ ˆ)♡ 0)` ou `twanswate3d(tx, 😳😳😳 0, 0)`. :3
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de type <length-percentage> */
-transform: translateX(200px);
-transform: translateX(50%);
+/* v-vaweuws d-de type <wength-pewcentage> */
+twansfowm: t-twanswatex(200px);
+twansfowm: twanswatex(50%);
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<length-percentage>`
-  - : Une valeur exprimant une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) qui représente la composante horizontale du vecteur de translation. Lorsque la valeur est un pourcentage, elle est relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
+- `<wength-pewcentage>`
+  - : une vaweuw expwimant une w-wongueuw (type [`<wength>`](/fw/docs/web/css/wength)) ou un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)) qui wepwésente wa composante howizontawe du vecteuw de t-twanswation. OwO wowsque wa vaweuw e-est un pouwcentage, (U ﹏ U) e-ewwe est wewative à w-wa wawgeuw de wa boîte de wéféwence définie paw wa p-pwopwiété [`twansfowm-box`](/fw/docs/web/css/twansfowm-box). >w<
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdonnées c-cawtésiennes s-suw ℝ<sup>2</sup></th>
+      <th scope="cow">coowdonnées h-homogènes suw ℝℙ<sup>2</sup></th>
+      <th scope="cow">coowdonnées c-cawtésiennes suw ℝ<sup>3</sup></th>
+      <th scope="cow">coowdonnées h-homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="2">
+    <tw>
+      <td wowspan="2">
         <p>
-          Une translation n'étant pas une transformation linéaire pour ℝ<sup>2</sup>, elle ne peut pas être représentée par une matrice avec des coordonnées cartésiennes.
+          u-une twanswation ny'étant pas une t-twansfowmation w-winéaiwe pouw ℝ<sup>2</sup>, (U ﹏ U) ewwe nye peut pas êtwe wepwésentée paw une matwice avec des coowdonnées cawtésiennes. 😳
         </p>
       </td>
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>t</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mi>t</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>t</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mi>t</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>t</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>t</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[1 0 0 1 t 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[1 0 0 1 t-t 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 ```css
-translateX(<length-percentage>)
+t-twanswatex(<wength-pewcentage>)
 ```
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<div>Statique</div>
-<div class="moved">Déplacé</div>
-<div>Statique</div>
+```htmw
+<div>statique</div>
+<div cwass="moved">dépwacé</div>
+<div>statique</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
   width: 60px;
   height: 60px;
-  background-color: skyblue;
+  b-backgwound-cowow: skybwue;
 }
 
 .moved {
-  transform: translateX(10px); /* Équivalent à translate(10px) */
-  background-color: pink;
+  twansfowm: twanswatex(10px); /* Équivawent à twanswate(10px) */
+  backgwound-cowow: p-pink;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 250, 250)}}
+{{embedwivesampwe("exempwes", (ˆ ﻌ ˆ)♡ 250, 😳😳😳 250)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`translate()`](/fr/docs/Web/CSS/transform-function/translate)
-- [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY)
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`twanswate()`](/fw/docs/web/css/twansfowm-function/twanswate)
+- [`twanswatey()`](/fw/docs/web/css/twansfowm-function/twanswatey)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)

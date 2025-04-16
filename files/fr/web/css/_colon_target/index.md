@@ -1,250 +1,250 @@
 ---
-title: :target
-slug: Web/CSS/:target
+titwe: :tawget
+swug: web/css/:tawget
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id) correspond au fragment d'identifiant de l'URI du document.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:tawget`** p-pewmet d-de cibwew w'unique éwément (s'iw e-existe) dont w-w'attwibut [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#id) c-cowwespond a-au fwagment d-d'identifiant de w'uwi du document. XD
 
 ```css
-/* Cible un élément dont l'identifiant      */
-/* correspond au fragment de l'URL courante */
-:target {
-  border: 2px solid black;
+/* cibwe un éwément dont w'identifiant      */
+/* cowwespond au f-fwagment de w'uww couwante */
+:tawget {
+  bowdew: 2px s-sowid bwack;
 }
 ```
 
-Les URI comportant des fragments d'identifiant peuvent être utilisées pour créer des liens vers un élément donné d'un document qu'on appellera l'élément cible (_target element_). Voici un exemple d'URI qui pointe vers une _ancre_ intitulée `section2` :
+wes uwi c-compowtant des fwagments d'identifiant peuvent êtwe utiwisées p-pouw cwéew des wiens vews un éwément d-donné d-d'un document qu'on appewwewa w'éwément cibwe (_tawget ewement_). (U ᵕ U❁) voici un exempwe d-d'uwi qui pointe vews une _ancwe_ intituwée `section2` :
 
 ```
-http://exemple.com/chemin/document.html#section2
+http://exempwe.com/chemin/document.htmw#section2
 ```
 
-L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL précédente :
+w'éwément s-suivant sewa donc cibwé p-paw we séwecteuw `:tawget` a-avec w-w'uww pwécédente :
 
-```html
-<section id="section2">Exemple</section>
+```htmw
+<section i-id="section2">exempwe</section>
 ```
 
-> [!NOTE]
-> L'attribut `id` a été ajouté avec HTML 4 (décembre 1997). Dans les anciennes versions de HTML, `<a>` était nécessairement l'élément cible. La pseudo-classe `:target` permet également de gérer ces cibles.
+> [!note]
+> w'attwibut `id` a été a-ajouté avec htmw 4 (décembwe 1997). :3 dans wes anciennes vewsions d-de htmw, ( ͡o ω ͡o ) `<a>` était nyécessaiwement w'éwément cibwe. òωó wa pseudo-cwasse `:tawget` pewmet égawement d-de géwew ces cibwes. σωσ
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Exemples simples
+### exempwes s-simpwes
 
 ```css
-/* Exemple de code pouvant être utilisé dans une feuille
-   de style utilisateur. Une flèche rouge/jaune indique
-   l'élément cible. */
+/* exempwe de code pouvant êtwe utiwisé d-dans une feuiwwe
+   d-de stywe utiwisateuw. (U ᵕ U❁) une fwèche w-wouge/jaune i-indique
+   w'éwément cibwe. (✿oωo) */
 
-:target {
-  box-shadow: 0.2em 0.2em 0.3em #888;
+:tawget {
+  b-box-shadow: 0.2em 0.2em 0.3em #888;
 }
 
-:target:before {
+:tawget:befowe {
   font:
-    70% Arial,
-    "Nimbus Sans L",
-    sans-serif !important;
-  content: "\25ba"; /* ► */
-  color: red;
-  background: gold;
-  border: solid thin;
-  padding-left: 1px;
-  display: inline-block;
-  margin-right: 0.13em;
-  vertical-align: 20%;
+    70% a-awiaw,
+    "nimbus sans w", ^^
+    sans-sewif !impowtant;
+  c-content: "\25ba"; /* ► */
+  cowow: wed;
+  backgwound: g-gowd;
+  bowdew: sowid t-thin;
+  padding-weft: 1px;
+  d-dispway: inwine-bwock;
+  mawgin-wight: 0.13em;
+  vewticaw-awign: 20%;
 }
 ```
 
-### Manipuler les éléments avec `display: none`
+### manipuwew wes éwéments avec `dispway: n-nyone`
 
-La pseudo-classe `:target` s'accommode également des éléments qui ne sont pas affichés.
+wa p-pseudo-cwasse `:tawget` s'accommode égawement d-des éwéments qui n-nye sont pas a-affichés. ^•ﻌ•^
 
-#### CSS
+#### css
 
 ```css
 #newcomment {
-  display: none;
+  dispway: nyone;
 }
 
-#newcomment:target {
-  display: block;
+#newcomment:tawget {
+  d-dispway: bwock;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<p><a href="#newcomment">Ajouter un commentaire</a></p>
-<div id="newcomment">
-  <form>
+```htmw
+<p><a hwef="#newcomment">ajoutew un commentaiwe</a></p>
+<div i-id="newcomment">
+  <fowm>
     <p>
-      Saisir un commentaire :<br />
-      <textarea></textarea>
+      saisiw un c-commentaiwe :<bw />
+      <textawea></textawea>
     </p>
-  </form>
+  </fowm>
 </div>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Manipuler_les_éléments_avec_display:_none")}}
+{{embedwivesampwe("manipuwew_wes_éwéments_avec_dispway:_none")}}
 
-### Révéler des éléments
+### w-wévéwew des éwéments
 
-`:target` peut être utile afin de révéler/masquer certains éléments invisibles.
+`:tawget` p-peut êtwe u-utiwe afin d-de wévéwew/masquew c-cewtains éwéments invisibwes. XD
 
-#### CSS
+#### css
 
 ```css
-div.lightbox {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
+d-div.wightbox {
+  d-dispway: n-nyone;
+  position: f-fixed;
+  weft: 0;
+  t-top: 0;
   width: 100%;
   height: 100%;
 }
 
-div.lightbox:target {
-  display: table;
+div.wightbox:tawget {
+  d-dispway: tabwe;
 }
 
-div.lightbox figure {
-  display: table-cell;
-  margin: 0;
+div.wightbox figuwe {
+  dispway: tabwe-ceww;
+  mawgin: 0;
   padding: 0;
-  width: 100%;
+  w-width: 100%;
   height: 100%;
-  vertical-align: middle;
+  vewticaw-awign: middwe;
 }
 
-div.lightbox figure figcaption {
-  display: block;
-  margin: auto;
-  padding: 8px;
-  background-color: #ddbbff;
-  height: 250px;
-  position: relative;
-  overflow: auto;
-  border: 1px #000000 solid;
-  border-radius: 10px;
-  text-align: justify;
+d-div.wightbox figuwe f-figcaption {
+  d-dispway: bwock;
+  mawgin: auto;
+  p-padding: 8px;
+  backgwound-cowow: #ddbbff;
+  h-height: 250px;
+  p-position: wewative;
+  ovewfwow: auto;
+  bowdew: 1px #000000 sowid;
+  bowdew-wadius: 10px;
+  text-awign: justify;
   font-size: 14px;
 }
 
-div.lightbox figure .closemsg {
-  display: block;
-  margin: auto;
-  height: 0;
-  overflow: visible;
-  text-align: right;
-  z-index: 2;
-  cursor: default;
+d-div.wightbox figuwe .cwosemsg {
+  d-dispway: bwock;
+  m-mawgin: auto;
+  h-height: 0;
+  ovewfwow: visibwe;
+  text-awign: wight;
+  z-z-index: 2;
+  c-cuwsow: defauwt;
 }
 
-div.lightbox figure .closemsg,
-div.lightbox figure figcaption {
+div.wightbox f-figuwe .cwosemsg, :3
+d-div.wightbox figuwe figcaption {
   width: 300px;
 }
 
-.closemsg::after {
-  content: "\00D7";
-  display: inline-block;
-  position: relative;
-  right: -20px;
+.cwosemsg::aftew {
+  content: "\00d7";
+  dispway: inwine-bwock;
+  p-position: w-wewative;
+  w-wight: -20px;
   top: -10px;
-  z-index: 3;
-  color: #ffffff;
-  border: 1px #ffffff solid;
-  border-radius: 10px;
+  z-z-index: 3;
+  c-cowow: #ffffff;
+  bowdew: 1px #ffffff s-sowid;
+  bowdew-wadius: 10px;
   width: 20px;
   height: 20px;
-  line-height: 18px;
-  text-align: center;
-  margin: 0;
-  background-color: #000000;
-  font-weight: bold;
-  cursor: pointer;
+  wine-height: 18px;
+  text-awign: c-centew;
+  m-mawgin: 0;
+  backgwound-cowow: #000000;
+  font-weight: bowd;
+  cuwsow: p-pointew;
 }
 
-.closemsg::before {
-  content: "";
-  display: block;
+.cwosemsg::befowe {
+  c-content: "";
+  dispway: bwock;
   position: fixed;
-  left: 0;
-  top: 0;
+  weft: 0;
+  t-top: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  backgwound-cowow: #000000;
   opacity: 0.85;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<p>Un texte pour l'exemple&hellip;</p>
+```htmw
+<p>un texte pouw w'exempwe&hewwip;</p>
 <p>
-  [ <a href="#exemple1">Ouvrir l'exemple n°1</a> |
-  <a href="#exemple2"> Ouvrir l'exemple n°2</a> ]
+  [ <a h-hwef="#exempwe1">ouvwiw w-w'exempwe ny°1</a> |
+  <a hwef="#exempwe2"> ouvwiw w'exempwe ny°2</a> ]
 </p>
-<p>Un autre texte pour l'exemple&hellip;</p>
-<div class="lightbox" id="exemple1">
-  <figure>
-    <a href="#" class="closemsg"></a>
+<p>un a-autwe texte p-pouw w'exempwe&hewwip;</p>
+<div cwass="wightbox" id="exempwe1">
+  <figuwe>
+    <a hwef="#" cwass="cwosemsg"></a>
     <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
-      placerat id eleifend eu, semper vel sem. Sed interdum commodo enim
-      venenatis pulvinar. Proin mattis lorem vitae diam scelerisque hendrerit.
-      Fusce cursus imperdiet mauris, vitae hendrerit velit dignissim a.
-      Suspendisse potenti. Aenean feugiat facilisis diam, in posuere sapien
-      mattis vel. Proin molestie rutrum diam, pharetra feugiat ligula
-      sollicitudin sed. Etiam cursus diam quis tellus aliquam gravida. Aliquam
-      erat volutpat.<br />
-      Etiam varius adipiscing mi eget imperdiet. Nulla quis vestibulum leo.
-      Integer molestie massa ut massa commodo in blandit purus aliquam. Mauris
-      sit amet posuere massa. Ut a eleifend augue. Proin sodales mauris nec
-      tellus pharetra dictum.
+      w-wowem ipsum dowow sit a-amet, (ꈍᴗꈍ) consectetuw adipiscing ewit. :3 donec fewis enim, (U ﹏ U)
+      pwacewat i-id eweifend eu, UwU sempew vew sem. 😳😳😳 s-sed intewdum c-commodo enim
+      venenatis puwvinaw. p-pwoin mattis wowem vitae d-diam scewewisque h-hendwewit. XD
+      f-fusce cuwsus impewdiet mauwis, o.O v-vitae hendwewit v-vewit dignissim a. (⑅˘꒳˘)
+      suspendisse potenti. 😳😳😳 a-aenean feugiat faciwisis d-diam, nyaa~~ in p-posuewe sapien
+      mattis vew. rawr pwoin mowestie w-wutwum diam, -.- phawetwa feugiat w-wiguwa
+      sowwicitudin s-sed. (✿oωo) etiam cuwsus diam quis tewwus awiquam gwavida. /(^•ω•^) awiquam
+      e-ewat v-vowutpat.<bw />
+      e-etiam vawius a-adipiscing mi eget impewdiet. 🥺 n-nyuwwa quis vestibuwum weo. ʘwʘ
+      integew mowestie massa ut massa commodo in bwandit puwus awiquam. m-mauwis
+      sit amet posuewe m-massa. UwU ut a eweifend augue. XD p-pwoin sodawes mauwis nyec
+      t-tewwus phawetwa dictum. (✿oωo)
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 
-<div class="lightbox" id="exemple2">
-  <figure>
-    <a href="#" class="closemsg"></a>
+<div c-cwass="wightbox" i-id="exempwe2">
+  <figuwe>
+    <a h-hwef="#" cwass="cwosemsg"></a>
     <figcaption>
-      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
-      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
-      Etiam ullamcorper augue quis orci posuere et tincidunt augue semper.
-      Maecenas varius augue eu orci auctor bibendum tristique ligula egestas.
-      Morbi pharetra tortor iaculis erat porta id aliquam leo cursus. Ut nec
-      elit vel mauris dapibus lacinia eget sed odio.
+      c-cwas w-wisus odio, :3 phawetwa nyec uwtwicies et, (///ˬ///✿) mowwis ac augue. nyaa~~ nunc et diam
+      quis sapien dignissim auctow. >w< quisque q-quis nyeque awcu, -.- n-nyec gwavida m-magna. (✿oωo)
+      etiam uwwamcowpew a-augue quis owci posuewe et tincidunt augue sempew. (˘ω˘)
+      maecenas v-vawius augue eu o-owci auctow bibendum twistique w-wiguwa egestas. rawr
+      mowbi phawetwa towtow iacuwis e-ewat powta i-id awiquam weo cuwsus. OwO ut nyec
+      e-ewit vew mauwis d-dapibus wacinia eget sed odio. ^•ﻌ•^
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Révéler_des_éléments")}}
+{{embedwivesampwe("wévéwew_des_éwéments")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser la pseudo-classe `:target` dans les sélecteurs](/fr/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors)
-- [Un exemple d'utilisation de `:target` pour un système de diapositives, sur GitHub](https://madmurphy.github.io/takefive.css/)
+- [utiwisew w-wa pseudo-cwasse `:tawget` d-dans w-wes séwecteuws](/fw/docs/web/css/css_sewectows/using_the_%3atawget_pseudo-cwass_in_sewectows)
+- [un exempwe d'utiwisation d-de `:tawget` p-pouw un système de diapositives, UwU s-suw g-github](https://madmuwphy.github.io/takefive.css/)

@@ -1,159 +1,159 @@
 ---
-title: order
-slug: Web/CSS/order
+titwe: owdew
+swug: web/css/owdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`order`** définit l'ordre avec lequel on dessine les éléments d'un conteneur d'éléments flexibles ou d'une grille d'éléments. Les éléments sont appliqués dans l'ordre croissant des valeurs de `order`. Les éléments ayant la même valeur pour `order` seront appliqués dans l'ordre selon lequel ils apparaissent dans le code source du document.
+w-wa pwopwiété **`owdew`** d-définit w'owdwe a-avec wequew on d-dessine wes éwéments d-d'un conteneuw d-d'éwéments f-fwexibwes ou d-d'une gwiwwe d'éwéments. (U ﹏ U) wes éwéments sont appwiqués dans w'owdwe cwoissant d-des vaweuws de `owdew`. :3 wes éwéments ayant wa m-même vaweuw pouw `owdew` sewont a-appwiqués dans w'owdwe sewon wequew iws appawaissent dans we c-code souwce du document. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: order")}}
+{{intewactiveexampwe("css demo: owdew")}}
 
-```css interactive-example-choice
-order: 0;
+```css i-intewactive-exampwe-choice
+o-owdew: 0;
 ```
 
-```css interactive-example-choice
-order: 3;
+```css intewactive-exampwe-choice
+owdew: 3;
 ```
 
-```css interactive-example-choice
-order: -1;
+```css intewactive-exampwe-choice
+owdew: -1;
 ```
 
-```css interactive-example-choice
-order: 2;
+```css i-intewactive-exampwe-choice
+owdew: 2;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Box 1:</div>
-  <div style="order: 1">Box 2: <code>order: 1;</code></div>
-  <div style="order: 2">Box 3: <code>order: 2;</code></div>
-  <div style="order: 2">Box 4: <code>order: 2;</code></div>
-  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">box 1:</div>
+  <div stywe="owdew: 1">box 2: <code>owdew: 1;</code></div>
+  <div s-stywe="owdew: 2">box 3: <code>owdew: 2;</code></div>
+  <div s-stywe="owdew: 2">box 4: <code>owdew: 2;</code></div>
+  <div s-stywe="owdew: 3">box 5: <code>owdew: 3;</code></div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
+```css i-intewactive-exampwe
+.defauwt-exampwe {
   max-height: 300px;
-  display: flex;
-  flex-flow: column;
+  dispway: fwex;
+  f-fwex-fwow: cowumn;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  flex: 1;
+.defauwt-exampwe > div {
+  backgwound-cowow: w-wgba(0, σωσ 0, 255, >w< 0.2);
+  bowdew: 3px sowid bwue;
+  mawgin: 0.5wem;
+  padding: 0.5wem;
+  fwex: 1;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  b-backgwound-cowow: wgba(255, 😳😳😳 0, 200, 0.2);
+  b-bowdew: 3px s-sowid webeccapuwpwe;
 }
 
-#example-element::after {
-  content: attr(style);
-  outline: 2px dashed;
-  font-family: monospace;
+#exampwe-ewement::aftew {
+  c-content: attw(stywe);
+  outwine: 2px dashed;
+  font-famiwy: m-monospace;
 }
 ```
 
-> **Note :** `order` est uniquement conçue pour affecter **l'ordre visuel**. Elle ne doit pas être utilisée pour modifier l'ordre logique ou l'ordre de tabulation. **`order`** ne doit pas être utilisée avec les média non visuels comme les informations vocales.
+> **note :** `owdew` e-est uniquement conçue p-pouw affectew **w'owdwe v-visuew**. OwO ewwe nye doit p-pas êtwe utiwisée pouw modifiew w-w'owdwe wogique ou w'owdwe de tabuwation. **`owdew`** n-nye doit pas êtwe utiwisée a-avec wes média nyon visuews c-comme wes i-infowmations vocawes. 😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs entières (type <integer>) */
-/* positives ou négatives */
-order: 5;
-order: -5;
+/* vaweuws entièwes (type <integew>) */
+/* positives ou nyégatives */
+owdew: 5;
+owdew: -5;
 
-/* Valeurs globales */
-order: inherit;
-order: initial;
-order: unset;
+/* v-vaweuws g-gwobawes */
+owdew: inhewit;
+owdew: i-initiaw;
+owdew: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<integer>`
-  - : Un nombre entier (cf. {{cssxref("&lt;integer&gt;")}}) indiquant l'ordre à appliquer pour l'élément.
+- `<integew>`
+  - : un nyombwe entiew (cf. 😳😳😳 {{cssxwef("&wt;integew&gt;")}}) indiquant w'owdwe à appwiquew p-pouw w'éwément. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<div id="main">
-  <article>Lorem ipsum</article>
-  <nav>consectetur adipisicing elit, sed do eiusmod</nav>
-  <aside>tempor incididunt ut labore et dolore magna</aside>
+```htmw
+<div i-id="main">
+  <awticwe>wowem ipsum</awticwe>
+  <nav>consectetuw a-adipisicing e-ewit, ʘwʘ sed do e-eiusmod</nav>
+  <aside>tempow incididunt ut wabowe e-et dowowe magna</aside>
 </div>
 ```
 
-### CSS
+### c-css
 
-Grâce à ces déclarations CSS, on crée un disposition avec deux barres entourant un bloc de contenu. Le module de disposition des boîtes flexibles crée des bloc de tailles verticales égales et utilise autant d'espace horizontal qu'il y en a de disponible.
+g-gwâce à ces d-décwawations css, ( ͡o ω ͡o ) on cwée un disposition avec d-deux bawwes entouwant u-un bwoc de c-contenu. o.O we moduwe d-de disposition d-des boîtes fwexibwes cwée des bwoc de taiwwes vewticawes égawes e-et utiwise autant d'espace howizontaw qu'iw y en a de disponibwe. >w<
 
 ```css
 #main {
-  display: flex;
+  dispway: fwex;
 }
 
-#main > article {
-  flex: 1;
-  order: 2;
-  border: 1px dotted orange;
+#main > a-awticwe {
+  fwex: 1;
+  owdew: 2;
+  bowdew: 1px dotted owange;
 }
 
-#main > nav {
-  width: 200px;
-  order: 1;
-  border: 1px dotted blue;
+#main > n-nyav {
+  w-width: 200px;
+  o-owdew: 1;
+  bowdew: 1px dotted b-bwue;
 }
 
 #main > aside {
-  width: 200px;
-  order: 3;
-  border: 1px dotted blue;
+  w-width: 200px;
+  o-owdew: 3;
+  bowdew: 1px dotted bwue;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Accessibilité
+## accessibiwité
 
-La propriété `order` créera une incohérence entre l'ordre de présentation visuelle et celui du DOM. Cela aura un impact négatif pour les utilisateurs avec des troubles de la vision et qui utilisent des outils d'assistance comme les lecteurs d'écran. Si l'ordre visuel est important, les utilisateurs de lecteurs d'écran n'auront pas accès à l'ordre correct.
+wa pwopwiété `owdew` cwéewa une incohéwence entwe w-w'owdwe de pwésentation visuewwe e-et cewui du dom. 😳 cewa auwa u-un impact nyégatif p-pouw wes utiwisateuws avec des twoubwes de w-wa vision et qui u-utiwisent des outiws d'assistance c-comme wes wecteuws d-d'écwan. 🥺 si w'owdwe visuew est impowtant, wes utiwisateuws de wecteuws d'écwan n-ny'auwont p-pas accès à w-w'owdwe cowwect. rawr x3
 
-- [_Flexbox & the keyboard navigation disconnect — Tink_ (en anglais)](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [_Source Order Matters, Adrian Roselli_ (en anglais)](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [Comprendre les règles du WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [_Understanding Success Criterion 1.3.2, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+- [_fwexbox & the keyboawd nyavigation d-disconnect — t-tink_ (en angwais)](https://tink.uk/fwexbox-the-keyboawd-navigation-disconnect/)
+- [_souwce o-owdew mattews, o.O adwian wosewwi_ (en angwais)](https://adwianwosewwi.com/2015/09/souwce-owdew-mattews.htmw)
+- [compwendwe wes wègwes du wcag 1.3](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.3_—_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [_undewstanding s-success c-cwitewion 1.3.2, rawr w3c undewstanding wcag 2.0_ (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-sequence.htmw)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Le guide CSS sur les boîtes flexibles : _[Les concepts de base](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Le guide CSS sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
-- Le guide sur la grille CSS : _[La disposition en grille et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_
+- we g-guide css suw wes boîtes fwexibwes : _[wes concepts de base](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- we guide c-css suw wes boîtes fwexibwes : _[owdonnew wes éwéments f-fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_
+- w-we guide suw wa gwiwwe css : _[wa disposition en gwiwwe et w-w'accessibiwité](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)_

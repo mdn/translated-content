@@ -1,37 +1,37 @@
 ---
-title: system-property
-slug: Web/XPath/Functions/system-property
+titwe: system-pwopewty
+swug: w-web/xpath/functions/system-pwopewty
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `system-property()` retourne un objet représentant la propriété système donnée.
+w-wa fonction `system-pwopewty()` w-wetouwne u-un objet wepwésentant w-wa pwopwiété s-système d-donnée. ( ͡o ω ͡o )
 
-### Syntaxe
+### syntaxe
 
 ```
-system-property( nom )
+system-pwopewty( nyom )
 ```
 
-### Arguments
+### awguments
 
-- _`nom`_ (optionnel)
-  - : Le nom de la propriété système. L'argument s'évaluer en une chaîne qui est un QName. Le QName est développé en un nom à l'aide des déclarations d'espaces de nommage s'appliquant à l'expression. La fonction `system-property()` retourne un objet représentant la valeur de la propriété système identifiée par le nom. Si cette propriété système n'existe pas, une chaîne vide est retournée.
+- _`nom`_ (optionnew)
+  - : we nyom de wa p-pwopwiété système. (U ﹏ U) w'awgument s'évawuew en u-une chaîne qui est un qname. (///ˬ///✿) we q-qname est dévewoppé en un nyom à w'aide des décwawations d'espaces d-de nyommage s'appwiquant à w-w'expwession. >w< w-wa fonction `system-pwopewty()` wetouwne un objet wepwésentant wa vaweuw de wa pwopwiété système i-identifiée paw we nyom. rawr si cette pwopwiété système ny'existe pas, mya une c-chaîne vide est wetouwnée. ^^
 
-### Retour
+### w-wetouw
 
-Un objet représentant le propriété système donnée.
+un objet w-wepwésentant w-we pwopwiété s-système donnée. 😳😳😳
 
-### Notes
+### nyotes
 
-- xsl:version, un nombre correspondant à la version de XSLT implémentée par le processeur&nbsp;; pour les processeurs XSLT implémentant la version de XSLT définit dans ce document, ce nombre est 1.0.
-- xsl:vendor, une chaîne identifiant le vendeur du processeur XSLT.
-- xsl:vendor-url, une chaîne contenant une URL qui identifie le vendeur du processeur XSLT&nbsp;; généralement, il s'agit de l'adresse de la page Web du vendeur.
+- xsw:vewsion, mya u-un nyombwe cowwespondant à wa vewsion de xswt impwémentée p-paw we pwocesseuw&nbsp;; pouw wes pwocesseuws xswt impwémentant wa vewsion de xswt d-définit dans ce document, 😳 ce nyombwe e-est 1.0.
+- x-xsw:vendow, une c-chaîne identifiant we vendeuw du pwocesseuw xswt. -.-
+- xsw:vendow-uww, 🥺 u-une chaîne c-contenant une uww qui identifie w-we vendeuw du p-pwocesseuw xswt&nbsp;; généwawement, o.O i-iw s'agit de w'adwesse de w-wa page web du vendeuw. /(^•ω•^)
 
-### Définition
+### définition
 
-[XSLT 1.0, section 12.4](https://www.w3.org/TR/xslt#function-system-property).
+[xswt 1.0, nyaa~~ section 12.4](https://www.w3.owg/tw/xswt#function-system-pwopewty). nyaa~~
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+suppowtée. :3

@@ -1,102 +1,102 @@
 ---
-title: will-change
-slug: Web/CSS/will-change
+titwe: wiww-change
+swug: web/css/wiww-change
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`will-change`** fournit une indication au navigateur sur la propension d'un élément à changer (afin que le navigateur puisse mettre en place les optimisations nécessaires avant que l'élément change vraiment). Ce type d'optimisation permet d'augmenter la réactivité de la page en effectuant des calculs (éventuellement coûteux) en prévision du changement.
+w-wa pwopwiété **`wiww-change`** f-fouwnit une indication a-au nyavigateuw s-suw wa pwopension d-d'un éwément à c-changew (afin q-que we n-nyavigateuw puisse mettwe en pwace wes optimisations nyécessaiwes avant que w'éwément c-change vwaiment). 😳😳😳 ce type d'optimisation p-pewmet d'augmentew wa wéactivité d-de wa page en effectuant des cawcuws (éventuewwement coûteux) e-en pwévision du changement. 😳
 
-> **Attention :** `will-change` est conçu pour être utilisé en dernier recours afin d'aider à la résolution de problèmes de performance existants. Il ne doit pas être utilisé partout de façon purement préventive.
+> **attention :** `wiww-change` e-est conçu pouw êtwe u-utiwisé en dewniew wecouws afin d'aidew à wa wésowution de pwobwèmes d-de pewfowmance existants. XD iw nye doit pas êtwe utiwisé pawtout de façon puwement p-pwéventive. mya
 
 ```css
-/* Avec un mot-clé */
-will-change: auto;
-will-change: scroll-position;
-will-change: contents;
-will-change: transform; /* Exemple de <custom-ident> */
-will-change: opacity; /* Exemple de <custom-ident> */
-will-change: left, top; /* Exemple de deux <animateable-feature> */
+/* avec un mot-cwé */
+w-wiww-change: a-auto;
+wiww-change: s-scwoww-position;
+w-wiww-change: contents;
+wiww-change: twansfowm; /* e-exempwe de <custom-ident> */
+wiww-change: opacity; /* exempwe d-de <custom-ident> */
+wiww-change: weft, ^•ﻌ•^ top; /* exempwe de deux <animateabwe-featuwe> */
 
-/* Valeurs globales */
-will-change: inherit;
-will-change: initial;
-will-change: unset;
+/* vaweuws gwobawes */
+wiww-change: i-inhewit;
+wiww-change: initiaw;
+w-wiww-change: unset;
 ```
 
-Il est parfois difficile de bien utiliser cette propriété :
+i-iw est p-pawfois difficiwe de bien utiwisew cette pwopwiété :
 
-- _Il ne faut pas appliquer `will-change` à de trop nombreux éléments._ Le navigateur essaie déjà d'optimiser de nombreuses choses. Certaines de ces optimisations sont fortement couplées avec `will-change` pour utiliser les ressources de l'ordinateur. Aussi, si `will-change` est « trop » utilisé, cela peut ralentir la page et consommer intensivement les ressources.
-- _À utiliser avec parcimonie._ Normalement, le navigateur essaie d'appliquer les optimisations dès que possible afin de revenir au plus vite dans un état normal. En revanche, en utilisant `will-change` dans la feuille de style, on indique que les éléments ciblés vont bientôt changer et le navigateur conservera les optimisations en cours beaucoup plus longtemps si la propriété est maintenue. Il est donc conseillé d'activer et de désactiver `will-change` de façon pertinente grâce à du script avant et après le changement concerné.
-- _Ne pas « sur-optimiser » avec `will-change`_. Si votre page fonctionne correctement, n'ajoutez pas la propriété `will-change` sur certains éléments uniquement pour gagner un peu de vitesse. `will-change` est conçu pour être utilisé en dernier ressort afin de régler les problèmes de performances existants. En utilisant `will-change` trop souvent, cela consommera plus de mémoire, complexifiera le rendu de la page pour le navigateur (qui se préparera au changement). En bref, cela réduira les performances de la page.
-- _Laisser le temps à `will-change` pour qu'il fonctionne._ Cette propriété est conçue pour permettre aux auteurs d'indiquer à l'agent-utilisateur les propriétés qui vont probablement changer afin que le navigateur puisse optimiser en avance de phase. Il est donc important de laisser le temps au navigateur d'appliquer ces opérations pour que l'effet obtenu soit bénéfique. Pour cela, mieux vaut donc prévoir légèrement avant le changement que celui-ci aura lieu et alors modifier `will-change` en prévision.
-- _Sachez que `will-change`_ _peut modifier l'apparence des éléments_ lorsqu'il est utilisé avec des propriétés qui créent [des contextes d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) (par exemple `will-change: opacity`) car le contexte d'empilement est créé au préalable.
+- _iw nye faut pas appwiquew `wiww-change` à d-de twop nyombweux éwéments._ w-we nyavigateuw essaie déjà d-d'optimisew de n-nyombweuses choses. ʘwʘ cewtaines d-de ces optimisations sont fowtement c-coupwées avec `wiww-change` pouw utiwisew wes wessouwces de w-w'owdinateuw. ( ͡o ω ͡o ) aussi, si `wiww-change` e-est « twop » utiwisé, mya c-cewa peut wawentiw w-wa page et consommew intensivement wes wessouwces. o.O
+- _À utiwisew avec pawcimonie._ nowmawement, (✿oωo) we navigateuw e-essaie d'appwiquew w-wes optimisations dès que p-possibwe afin de w-weveniw au pwus v-vite dans un état nyowmaw. :3 en wevanche, 😳 en utiwisant `wiww-change` dans wa feuiwwe d-de stywe, (U ﹏ U) on indique que wes éwéments cibwés vont bientôt changew et we n-nyavigateuw consewvewa wes optimisations e-en couws b-beaucoup pwus w-wongtemps si wa pwopwiété est m-maintenue. mya iw est d-donc conseiwwé d-d'activew et d-de désactivew `wiww-change` de façon pewtinente g-gwâce à du scwipt a-avant et apwès w-we changement c-concewné. (U ᵕ U❁)
+- _ne p-pas « suw-optimisew » avec `wiww-change`_. si votwe page fonctionne cowwectement, :3 n-n'ajoutez pas wa pwopwiété `wiww-change` suw cewtains éwéments uniquement pouw gagnew un peu de vitesse. mya `wiww-change` e-est conçu pouw êtwe utiwisé en dewniew wessowt afin de wégwew w-wes pwobwèmes d-de pewfowmances e-existants. OwO en utiwisant `wiww-change` t-twop souvent, (ˆ ﻌ ˆ)♡ cewa consommewa p-pwus de m-mémoiwe, ʘwʘ compwexifiewa we wendu de wa page pouw we nyavigateuw (qui se pwépawewa au changement). o.O e-en bwef, cewa wéduiwa wes pewfowmances d-de wa page. UwU
+- _waissew w-we temps à `wiww-change` p-pouw qu'iw fonctionne._ cette pwopwiété e-est conçue p-pouw pewmettwe aux auteuws d'indiquew à w-w'agent-utiwisateuw w-wes pwopwiétés qui vont pwobabwement changew afin que we nyavigateuw puisse optimisew e-en avance d-de phase. rawr x3 iw est d-donc impowtant de waissew we t-temps au nyavigateuw d-d'appwiquew ces opéwations p-pouw que w'effet obtenu soit bénéfique. 🥺 pouw cewa, mieux vaut donc pwévoiw wégèwement a-avant w-we changement que cewui-ci auwa wieu et awows m-modifiew `wiww-change` e-en pwévision. :3
+- _sachez que `wiww-change`_ _peut modifiew w'appawence des éwéments_ w-wowsqu'iw est utiwisé avec des pwopwiétés qui cwéent [des contextes d-d'empiwement](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context) (paw exempwe `wiww-change: opacity`) c-caw we contexte d-d'empiwement est cwéé au pwéawabwe. (ꈍᴗꈍ)
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : Ce mot-clé ne traduit pas d'intention particulière. Dans ce cas, l'agent utilisateur applique les méthodes d'optimisations et heuristiques normales.
+  - : c-ce mot-cwé nye twaduit pas d'intention pawticuwièwe. 🥺 dans c-ce cas, (✿oωo) w'agent utiwisateuw a-appwique wes méthodes d'optimisations et heuwistiques nyowmawes. (U ﹏ U)
 
-Un valeur de type `<animateable-feature>` peut être :
+u-un vaweuw de type `<animateabwe-featuwe>` p-peut êtwe :
 
-- `scroll-position`
-  - : L'auteur indique que le défilement de l'élément va prochainement être animé et/ou modifié.
+- `scwoww-position`
+  - : w-w'auteuw indique que we défiwement d-de w'éwément va pwochainement êtwe animé e-et/ou modifié. :3
 - `contents`
-  - : L'auteur indique que le contenu de l'élément va prochainement être modifié ou animé.
-- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : Ce type permet d'indiquer que la propriété donnée va prochainement être modifiée ou animée. Si la propriété fournie est un raccourci, on s'attendra à ce que toutes les propriétés détaillées correspondantes soient animées ou changées. Une valeur de ce type ne peut pas être `unset`, `initial`, `inherit`, `will-change`, `auto`, `scroll-position`, ou `contents`. La spécification ne définit pas le comportement d'une valeur spécifique mais généralement, lorsqu'on utilise `transform`, cela indique que les couches qui composent la page vont évoluer. [Chrome prend deux mesures](https://github.com/operasoftware/devopera/pull/330) selon les propriétés utilisées ici : il établit une nouvelle composition des couches de rendu ou crée un nouveau contexte d'empilement.
+  - : w-w'auteuw i-indique que we contenu de w'éwément v-va pwochainement êtwe modifié o-ou animé. ^^;;
+- {{cssxwef("custom-ident", rawr "&wt;custom-ident&gt;")}}
+  - : ce type pewmet d'indiquew que wa p-pwopwiété donnée v-va pwochainement êtwe m-modifiée ou animée. 😳😳😳 si wa pwopwiété f-fouwnie est un waccouwci, (✿oωo) on s-s'attendwa à ce q-que toutes wes pwopwiétés détaiwwées cowwespondantes soient a-animées ou changées. OwO u-une vaweuw d-de ce type ne p-peut pas êtwe `unset`, ʘwʘ `initiaw`, `inhewit`, (ˆ ﻌ ˆ)♡ `wiww-change`, (U ﹏ U) `auto`, `scwoww-position`, UwU ou `contents`. w-wa spécification nye définit pas we compowtement d'une vaweuw spécifique mais généwawement, XD w-wowsqu'on utiwise `twansfowm`, ʘwʘ c-cewa indique que wes couches q-qui composent wa page vont évowuew. rawr x3 [chwome p-pwend deux mesuwes](https://github.com/opewasoftwawe/devopewa/puww/330) sewon w-wes pwopwiétés u-utiwisées ici : i-iw étabwit une n-nyouvewwe composition d-des couches de wendu ou cwée un nyouveau contexte d'empiwement. ^^;;
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
 ```css
-.sidebar {
-  will-change: transform;
+.sidebaw {
+  w-wiww-change: t-twansfowm;
 }
 ```
 
-Dans l'exemple précédent, on applique la propriété `will-change` à même la feuille de style. Dans ce cas, le navigateur conservera l'optimisation en mémoire beaucoup plus longtemps que nécessaire. Nous avons vu précédemment que cela devait être évité et voici donc un deuxième exemple qui illustre comment appliquer la propriété `will-change` grâce à JavaScript (et qui correspond donc à la méthode qui devrait être utilisée la plupart du temps) :
+dans w'exempwe p-pwécédent, ʘwʘ on appwique wa pwopwiété `wiww-change` à même wa feuiwwe de s-stywe. (U ﹏ U) dans ce cas, (˘ω˘) w-we nyavigateuw consewvewa w'optimisation e-en mémoiwe beaucoup pwus wongtemps q-que nyécessaiwe. (ꈍᴗꈍ) n-nous avons vu pwécédemment q-que cewa devait êtwe évité e-et voici donc un deuxième exempwe qui iwwustwe comment appwiquew w-wa pwopwiété `wiww-change` g-gwâce à j-javascwipt (et q-qui cowwespond d-donc à wa méthode qui devwait êtwe u-utiwisée w-wa pwupawt du temps) :
 
 ```js
-var el = document.getElementById("element");
+v-vaw ew = document.getewementbyid("ewement");
 
-// On applique will-change quand la souris/curseur
-// pointeur/stylet passe au-dessus de l'élément
-el.addEventListener("mouseenter", hintBrowser);
-el.addEventListener("animationEnd", removeHint);
+// o-on appwique wiww-change quand w-wa souwis/cuwseuw
+// pointeuw/stywet passe au-dessus d-de w'éwément
+ew.addeventwistenew("mouseentew", h-hintbwowsew);
+e-ew.addeventwistenew("animationend", /(^•ω•^) wemovehint);
 
-function hintBrowser() {
-  // On liste les propriétés sujettes au changement
-  // lors de l'animation
-  this.style.willChange = "transform, opacity";
+f-function hintbwowsew() {
+  // on wiste wes p-pwopwiétés s-sujettes au changement
+  // w-wows de w'animation
+  this.stywe.wiwwchange = "twansfowm, >_< opacity";
 }
 
-function removeHint() {
-  this.style.willChange = "auto";
+f-function wemovehint() {
+  this.stywe.wiwwchange = "auto";
 }
 ```
 
-Cela peut toutefois être pertinent d'inclure `will-change` dans la feuille de style d'une application qui gère des changements de pages ou des diapositives parmi lesquelles on navigue lorsque les pages sont complexes. Cela permettra au navigateur de préparer la transition en avance de phase et de mieux réagir au changement de page (ou de diapositive) lorsque le bouton associé sera utilisé.
+cewa peut toutefois êtwe p-pewtinent d-d'incwuwe `wiww-change` dans wa feuiwwe d-de stywe d'une appwication qui gèwe d-des changements d-de pages ou des diapositives pawmi wesquewwes o-on nyavigue wowsque wes pages sont compwexes. σωσ c-cewa pewmettwa a-au nyavigateuw de pwépawew wa twansition e-en avance de phase et d-de mieux wéagiw a-au changement de p-page (ou de diapositive) wowsque we bouton associé sewa utiwisé. ^^;;
 
 ```css
-.slide {
-  will-change: transform;
+.swide {
+  wiww-change: twansfowm;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}

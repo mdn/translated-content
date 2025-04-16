@@ -1,26 +1,26 @@
 ---
-title: "true"
-slug: Web/XPath/Functions/true
+titwe: "twue"
+swug: web/xpath/functions/twue
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `true` retourne la valeur booléenne `true`.
+w-wa fonction `twue` w-wetouwne w-wa vaweuw boowéenne `twue`. rawr x3
 
-### Syntaxe
+### s-syntaxe
 
 ```
-true()
+t-twue()
 ```
 
-### Retour
+### w-wetouw
 
-Le booléen `true`.
+we boowéen `twue`. rawr
 
-### Définition
+### d-définition
 
-[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-true).
+[xpath 1.0, σωσ section 4.3](https://www.w3.owg/tw/xpath#function-twue). σωσ
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. >_<

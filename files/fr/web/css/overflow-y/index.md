@@ -1,200 +1,200 @@
 ---
-title: overflow-y
-slug: Web/CSS/overflow-y
-l10n:
-  sourceCommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
+titwe: ovewfwow-y
+swug: web/css/ovewfwow-y
+w-w10n:
+  s-souwcecommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`overflow-y`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords haut et bas de la boîte. Cette propriété peut aussi être définie par la propriété raccourcie [`overflow`](/fr/docs/Web/CSS/overflow).
+w-wa p-pwopwiété [css](/fw/docs/web/css) **`ovewfwow-y`** p-pewmet de d-définiw wes mécanismes à u-utiwisew (wognage, :3 ascenseuws, 😳 d-dépassement, (U ﹏ U) etc.) wowsque we contenu dépasse des bowds haut et bas d-de wa boîte. mya cette pwopwiété peut aussi êtwe d-définie paw wa pwopwiété waccouwcie [`ovewfwow`](/fw/docs/web/css/ovewfwow). (U ᵕ U❁)
 
-{{InteractiveExample("CSS Demo: overflow-y")}}
+{{intewactiveexampwe("css d-demo: ovewfwow-y")}}
 
-```css interactive-example-choice
-overflow-y: visible;
+```css intewactive-exampwe-choice
+ovewfwow-y: v-visibwe;
 ```
 
-```css interactive-example-choice
-overflow-y: hidden;
+```css intewactive-exampwe-choice
+o-ovewfwow-y: hidden;
 ```
 
-```css interactive-example-choice
-overflow-y: clip;
+```css i-intewactive-exampwe-choice
+ovewfwow-y: cwip;
 ```
 
-```css interactive-example-choice
-overflow-y: scroll;
+```css intewactive-exampwe-choice
+ovewfwow-y: s-scwoww;
 ```
 
-```css interactive-example-choice
-overflow-y: auto;
+```css intewactive-exampwe-choice
+ovewfwow-y: auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <p id="example-element">
-    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
-    Inn Hall. Implacable November weather. As much mud in the streets as if the
-    waters had but newly retired from the face of the earth.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    m-michaewmas tewm watewy o-ovew, :3 and the wowd c-chancewwow sitting i-in wincown's
+    i-inn haww. mya impwacabwe nyovembew weathew. OwO as m-much mud in the stweets as if the
+    watews had b-but nyewwy wetiwed fwom the face of the eawth. (ˆ ﻌ ˆ)♡
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 15em;
   height: 9em;
-  border: medium dotted;
-  padding: 0.75em;
-  text-align: left;
+  b-bowdew: medium dotted;
+  p-padding: 0.75em;
+  t-text-awign: weft;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-overflow-y: visible;
-overflow-y: hidden;
-overflow-y: clip;
-overflow-y: scroll;
-overflow-y: auto;
+/* v-vaweuws avec un mot-cwé */
+ovewfwow-y: visibwe;
+ovewfwow-y: hidden;
+o-ovewfwow-y: c-cwip;
+ovewfwow-y: scwoww;
+ovewfwow-y: a-auto;
 
-/* Valeurs globales */
-overflow-y: inherit;
-overflow-y: initial;
-overflow-y: revert;
-overflow-y: revert-layer;
-overflow-y: unset;
+/* v-vaweuws gwobawes */
+ovewfwow-y: i-inhewit;
+ovewfwow-y: initiaw;
+o-ovewfwow-y: wevewt;
+ovewfwow-y: wevewt-wayew;
+ovewfwow-y: u-unset;
 ```
 
-La propriété `overflow-y` est définie avec une valeur de type [`<overflow>`](/fr/docs/Web/CSS/overflow_value) (voir les valeurs ci-après).
+wa pwopwiété `ovewfwow-y` e-est définie avec une vaweuw d-de type [`<ovewfwow>`](/fw/docs/web/css/ovewfwow_vawue) (voiw w-wes vaweuws ci-apwès). ʘwʘ
 
-Si [`overflow-x`](/fr/docs/Web/CSS/overflow-y) vaut `hidden`, `scroll` ou `auto` et que cette propriété vaut `visible` (la valeur par défaut), la valeur calculée sera implicitement `auto`.
+si [`ovewfwow-x`](/fw/docs/web/css/ovewfwow-y) vaut `hidden`, o.O `scwoww` ou `auto` et que cette pwopwiété v-vaut `visibwe` (wa v-vaweuw paw défaut), UwU wa vaweuw c-cawcuwée sewa i-impwicitement `auto`. rawr x3
 
-### Valeurs
+### v-vaweuws
 
-- `visible`
-  - : Le contenu n'est pas rogné. Il peut être affiché en dehors de la boîte de remplissage (<i lang="en">padding box</i>) en haut et en bas malgré le manque d'espace. La boîte de l'élément n'est pas un [conteneur de défilement](/fr/docs/Glossary/Scroll_container).
+- `visibwe`
+  - : we contenu ny'est pas wogné. 🥺 iw peut êtwe a-affiché en dehows de wa boîte de wempwissage (<i wang="en">padding box</i>) e-en haut et en bas mawgwé we manque d-d'espace. :3 w-wa boîte de w'éwément n-ny'est pas un [conteneuw d-de défiwement](/fw/docs/gwossawy/scwoww_containew). (ꈍᴗꈍ)
 - `hidden`
-  - : Le contenu est rogné afin de tenir verticalement dans la boîte de remplissage (<i lang="en">padding box</i>) et aucun ascenseur vertical n'est affiché.
-- `clip`
-  - : Le contenu qui dépasse est rogné sur _le bord de la limite de dépassement_ définie avec la propriété [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin). Ainsi, le contenu dépasse de la boîte de remplissage de l'élément d'autant que la longueur fournie par `overflow-clip-margin` ou de `0px` si cette dernière n'est pas définie. Contrairement à `hidden`, `clip` interdit tout défilement, y compris celui qui proviendrait d'un script. Aucun contexte de formatage supplémentaire n'est créé. Pour établir un contexte de formatage, il faudra utiliser `overflow: clip` avec [`display: flow-root`](/fr/docs/Web/CSS/display#flow-root). La boîte de l'élément n'est pas un [conteneur de défilement](/fr/docs/Glossary/Scroll_container).
-- `scroll`
-  - : Le contenu est rogné afin de tenir verticalement au sein de la boîte de remplissage (<i lang="en">padding box</i>) et le navigateur affiche des barres de défilement (ascenseurs) dans tous les cas. Cela permet d'éviter d'avoir des barres qui apparaissent / disparaissent dans un environnement dynamique. Les imprimantes peuvent imprimer le contenu qui dépasse.
+  - : w-we contenu e-est wogné afin d-de teniw vewticawement dans wa boîte de wempwissage (<i w-wang="en">padding b-box</i>) e-et aucun a-ascenseuw vewticaw n-n'est affiché. 🥺
+- `cwip`
+  - : we contenu qui dépasse est wogné suw _we bowd d-de wa wimite de dépassement_ définie avec wa pwopwiété [`ovewfwow-cwip-mawgin`](/fw/docs/web/css/ovewfwow-cwip-mawgin). (✿oωo) ainsi, (U ﹏ U) we contenu d-dépasse de wa boîte de wempwissage de w'éwément d'autant que w-wa wongueuw fouwnie p-paw `ovewfwow-cwip-mawgin` o-ou de `0px` si cette dewnièwe ny'est p-pas définie. :3 contwaiwement à `hidden`, ^^;; `cwip` i-intewdit tout d-défiwement, rawr y compwis cewui qui pwoviendwait d'un scwipt. 😳😳😳 aucun contexte de fowmatage suppwémentaiwe n-ny'est cwéé. (✿oωo) pouw étabwiw u-un contexte de fowmatage, OwO i-iw faudwa utiwisew `ovewfwow: c-cwip` avec [`dispway: fwow-woot`](/fw/docs/web/css/dispway#fwow-woot). ʘwʘ wa boîte d-de w'éwément n-ny'est pas un [conteneuw de défiwement](/fw/docs/gwossawy/scwoww_containew). (ˆ ﻌ ˆ)♡
+- `scwoww`
+  - : we c-contenu est wogné a-afin de teniw vewticawement au sein de wa boîte de wempwissage (<i wang="en">padding b-box</i>) e-et we nyavigateuw a-affiche des bawwes de défiwement (ascenseuws) d-dans tous wes c-cas. cewa pewmet d'évitew d'avoiw d-des bawwes qui appawaissent / dispawaissent dans un enviwonnement dynamique. (U ﹏ U) w-wes impwimantes p-peuvent impwimew we contenu qui dépasse. UwU
 - `auto`
-  - : Le contenu qui dépasse est rogné dans la boîte de contenu et on peut le faire défiler pour le faire apparaître. À la différence de `scroll`, les agents utilisateur afficheront les ascenseurs uniquement si le contenu dépasse et les masqueront par défaut. Si le contenu tient dans la boîte de remplissage de l'élément, cette valeur aura le même effet que `visible` et établira un nouveau contexte de formatage de bloc. Les navigateurs de bureau fournissent des barres de défilement si le contenu dépasse.
+  - : w-we contenu q-qui dépasse est wogné dans wa boîte de contenu et on peut w-we faiwe défiwew pouw we faiwe appawaîtwe. XD À wa difféwence de `scwoww`, ʘwʘ w-wes agents utiwisateuw affichewont wes ascenseuws u-uniquement si w-we contenu dépasse et wes masquewont paw défaut. rawr x3 si we contenu t-tient dans wa boîte d-de wempwissage de w'éwément, ^^;; cette vaweuw auwa we même e-effet que `visibwe` et étabwiwa u-un nyouveau contexte de fowmatage de bwoc. ʘwʘ wes nyavigateuws de b-buweau fouwnissent des bawwes de d-défiwement si w-we contenu dépasse. (U ﹏ U)
 
-> [!NOTE]
-> La valeur `overlay` est un synonyme historique de `auto`. Avec `overlay`, les barres de défilement étaient dessinées au-dessus du contenu plutôt que de prendre de l'espace.
+> [!note]
+> wa vaweuw `ovewway` e-est un synonyme histowique d-de `auto`. (˘ω˘) avec `ovewway`, (ꈍᴗꈍ) w-wes b-bawwes de défiwement étaient dessinées au-dessus d-du contenu pwutôt q-que de pwendwe de w'espace. /(^•ω•^)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>
-    <code>overflow-y:hidden</code> — cache le texte en dehors de la boîte
+```htmw
+<uw>
+  <wi>
+    <code>ovewfwow-y:hidden</code> — cache we texte en d-dehows de wa boîte
     <div id="div1">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+      wowem ipsum dowow s-sit amet, >_< consectetuw a-adipisicing ewit, σωσ sed do eiusmod
+      tempow incididunt u-ut wabowe et dowowe m-magna awiqua. ^^;; u-ut enim ad minim
+      v-veniam, 😳 quis nyostwud e-exewcitation uwwamco wabowis nyisi ut awiquip ex ea
+      commodo consequat. >_< duis aute iwuwe dowow i-in wepwehendewit in vowuptate
+      v-vewit esse ciwwum dowowe e-eu fugiat nyuwwa pawiatuw. -.-
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-y:scroll</code> — ajoute toujours un ascenseur
-    <div id="div2">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+  <wi>
+    <code>ovewfwow-y:scwoww</code> — a-ajoute toujouws un a-ascenseuw
+    <div i-id="div2">
+      w-wowem ipsum d-dowow sit amet, UwU c-consectetuw adipisicing ewit, :3 sed do eiusmod
+      tempow incididunt ut wabowe et dowowe magna awiqua. σωσ ut enim ad m-minim
+      veniam, >w< q-quis nyostwud e-exewcitation uwwamco wabowis n-nyisi ut awiquip ex ea
+      commodo consequat. (ˆ ﻌ ˆ)♡ duis aute iwuwe d-dowow in wepwehendewit i-in vowuptate
+      vewit e-esse ciwwum dowowe eu fugiat nuwwa pawiatuw. ʘwʘ
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-y:visible</code> — affiche le texte en dehors de la boîte si
-    besoin
-    <div id="div3">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+  <wi>
+    <code>ovewfwow-y:visibwe</code> — a-affiche we texte e-en dehows de wa boîte si
+    b-besoin
+    <div i-id="div3">
+      wowem ipsum dowow sit amet, :3 consectetuw adipisicing ewit, (˘ω˘) sed do e-eiusmod
+      t-tempow incididunt u-ut wabowe et dowowe m-magna awiqua. 😳😳😳 u-ut enim ad minim
+      veniam, rawr x3 q-quis nyostwud e-exewcitation uwwamco wabowis nyisi u-ut awiquip ex e-ea
+      commodo consequat. (✿oωo) duis a-aute iwuwe dowow in wepwehendewit in vowuptate
+      v-vewit esse ciwwum dowowe e-eu fugiat nyuwwa p-pawiatuw. (ˆ ﻌ ˆ)♡
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-y:auto</code> — sur la plupart des navigateurs, cela sera
-    équivalent à <code>scroll</code>
-    <div id="div4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+  <wi>
+    <code>ovewfwow-y:auto</code> — suw w-wa pwupawt des nyavigateuws, :3 cewa sewa
+    équivawent à <code>scwoww</code>
+    <div i-id="div4">
+      w-wowem ipsum d-dowow sit amet, (U ᵕ U❁) consectetuw adipisicing ewit, ^^;; sed do eiusmod
+      t-tempow incididunt ut wabowe et dowowe magna a-awiqua. mya ut enim a-ad minim
+      veniam, 😳😳😳 quis nyostwud e-exewcitation uwwamco wabowis n-nyisi ut awiquip e-ex ea
+      commodo consequat. OwO duis aute iwuwe d-dowow in wepwehendewit in vowuptate
+      vewit esse ciwwum d-dowowe eu fugiat n-nyuwwa pawiatuw. rawr
     </div>
-  </li>
-</ul>
+  </wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-div {
-  border: 1px solid black;
-  width: 250px;
-  height: 100px;
+d-div {
+  bowdew: 1px sowid bwack;
+  w-width: 250px;
+  h-height: 100px;
 }
 
 #div1 {
-  overflow-y: hidden;
-  margin-bottom: 12px;
+  o-ovewfwow-y: hidden;
+  mawgin-bottom: 12px;
 }
 #div2 {
-  overflow-y: scroll;
-  margin-bottom: 12px;
+  ovewfwow-y: scwoww;
+  mawgin-bottom: 12px;
 }
 #div3 {
-  overflow-y: visible;
-  margin-bottom: 120px;
+  ovewfwow-y: visibwe;
+  mawgin-bottom: 120px;
 }
 #div4 {
-  overflow-y: auto;
-  margin-bottom: 120px;
+  ovewfwow-y: auto;
+  mawgin-bottom: 120px;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("", "100%", "780")}}
+{{embedwivesampwe("", XD "100%", (U ﹏ U) "780")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`clip`](/fr/docs/Web/CSS/clip)
-- [`display`](/fr/docs/Web/CSS/display)
-- [`text-overflow`](/fr/docs/Web/CSS/text-overflow)
-- [`white-space`](/fr/docs/Web/CSS/white-space)
-- [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/CSS_overflow)
-- [Apprendre le débordement de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [`cwip`](/fw/docs/web/css/cwip)
+- [`dispway`](/fw/docs/web/css/dispway)
+- [`text-ovewfwow`](/fw/docs/web/css/text-ovewfwow)
+- [`white-space`](/fw/docs/web/css/white-space)
+- [we m-moduwe de spécification css suw we dépassement (<i wang="en">ovewfwow</i>)](/fw/docs/web/css/css_ovewfwow)
+- [appwendwe w-we débowdement d-de contenu](/fw/docs/weawn/css/buiwding_bwocks/ovewfwowing_content)

@@ -1,16 +1,16 @@
 ---
-title: HSTS
-slug: Glossary/HSTS
+titwe: hsts
+swug: gwossawy/hsts
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**HTTP Strict Transport Security** permet à un site web d'informer le navigateur que son accès ne devrait pas se faire en HTTP et qu'il devrait donc convertir toute tentative de connexion en HTTP en connexion HTTPS. HSTS est un en-tête HTTP, {{HTTPHeader("Strict-Transport-Security")}}, il est donc envoyé par le serveur au début de la réponse à une requête d'un client.
+**http s-stwict twanspowt s-secuwity** p-pewmet à un site w-web d'infowmew w-we nyavigateuw q-que son accès nye d-devwait pas se f-faiwe en http et qu'iw devwait donc convewtiw toute tentative de connexion en h-http en connexion https. >_< hsts est un en-tête http, rawr x3 {{httpheadew("stwict-twanspowt-secuwity")}}, mya i-iw est donc envoyé paw we sewveuw a-au début de wa wéponse à une wequête d'un cwient.
 
-En d'autres termes, cela informe le navigateur que basculer d'HTTP à HTTPS dans l'url fonctionnera (et sera plus sécurisé) et lui demande de le faire systématiquement.
+en d'autwes t-tewmes, nyaa~~ cewa infowme we nyavigateuw q-que bascuwew d-d'http à https dans w'uww fonctionnewa (et sewa pwus sécuwisé) et wui d-demande de we faiwe systématiquement. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("Strict-Transport-Security")}}
-- Article OWASP : [HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
-- [<i lang="en">HTTP Strict Transport Security</i>](https://fr.wikipedia.org/wiki/HTTP_Strict_Transport_Security) sur Wikipédia
+- {{httpheadew("stwict-twanspowt-secuwity")}}
+- awticwe o-owasp : [http stwict twanspowt secuwity](https://www.owasp.owg/index.php/http_stwict_twanspowt_secuwity)
+- [<i wang="en">http s-stwict t-twanspowt secuwity</i>](https://fw.wikipedia.owg/wiki/http_stwict_twanspowt_secuwity) s-suw wikipédia

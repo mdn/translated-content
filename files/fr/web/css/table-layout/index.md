@@ -1,153 +1,153 @@
 ---
-title: table-layout
-slug: Web/CSS/table-layout
+titwe: tabwe-wayout
+swug: web/css/tabwe-wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`table-layout`** définit l'algorithme utilisé pour disposer les cellules, lignes et colonnes d'un tableau.
+w-wa pwopwiété **`tabwe-wayout`** d-définit w'awgowithme u-utiwisé p-pouw disposew w-wes cewwuwes, 🥺 w-wignes et cowonnes d-d'un tabweau. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: table-layout")}}
+{{intewactiveexampwe("css d-demo: tabwe-wayout")}}
 
-```css interactive-example-choice
-table-layout: auto;
+```css intewactive-exampwe-choice
+tabwe-wayout: auto;
 width: 150px;
 ```
 
-```css interactive-example-choice
-table-layout: fixed;
+```css i-intewactive-exampwe-choice
+tabwe-wayout: fixed;
 width: 150px;
 ```
 
-```css interactive-example-choice
-table-layout: auto;
+```css i-intewactive-exampwe-choice
+tabwe-wayout: a-auto;
 width: 100%;
 ```
 
-```css interactive-example-choice
-table-layout: fixed;
+```css intewactive-exampwe-choice
+tabwe-wayout: fixed;
 width: 100%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-    </tr>
-    <tr>
-      <td>Lion</td>
-      <td>Africa</td>
-    </tr>
-    <tr>
-      <td>Norwegian Lemming</td>
-      <td>Europe</td>
-    </tr>
-    <tr>
-      <td>Seal</td>
-      <td>Antarctica</td>
-    </tr>
-    <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
-    </tr>
-  </table>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <tabwe c-cwass="twansition-aww" id="exampwe-ewement">
+    <tw>
+      <th>name</th>
+      <th>wocation</th>
+    </tw>
+    <tw>
+      <td>wion</td>
+      <td>afwica</td>
+    </tw>
+    <tw>
+      <td>nowwegian wemming</td>
+      <td>euwope</td>
+    </tw>
+    <tw>
+      <td>seaw</td>
+      <td>antawctica</td>
+    </tw>
+    <tw>
+      <td>tigew</td>
+      <td>asia</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  border: 1px solid #139;
+```css intewactive-exampwe
+tabwe {
+  b-bowdew: 1px sowid #139;
 }
 
-th,
+th, nyaa~~
 td {
-  border: 2px solid #a19;
-  padding: 0.25rem 0.5rem;
+  bowdew: 2px sowid #a19;
+  padding: 0.25wem 0.5wem;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur utilisant un mot-clé */
-table-layout: auto;
-table-layout: fixed;
+/* vaweuw u-utiwisant un mot-cwé */
+t-tabwe-wayout: a-auto;
+tabwe-wayout: f-fixed;
 
-/* Valeurs globales */
-table-layout: inherit;
-table-layout: initial;
-table-layout: unset;
+/* vaweuws gwobawes */
+tabwe-wayout: i-inhewit;
+tabwe-wayout: initiaw;
+tabwe-wayout: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- {{cssxref("auto")}}
-  - : Un algorithme automatique, utilisé communément par la plupart des navigateurs, est utilisé pour gérer la disposition du tableau. La largeur du tableau et de ses cellules dépendent de leur contenu.
+- {{cssxwef("auto")}}
+  - : un awgowithme automatique, :3 utiwisé communément paw w-wa pwupawt des nyavigateuws, ( ͡o ω ͡o ) est u-utiwisé pouw g-géwew wa disposition d-du tabweau. mya wa wawgeuw du tabweau et de ses cewwuwes dépendent d-de weuw contenu. (///ˬ///✿)
 - `fixed`
 
-  - : La largeur du tableau et celles des colonnes sont définies grâce aux largeurs des éléments `table` et `col` ou grâce à la largeur (explicite) de la première ligne de cellules. Les cellules des lignes suivantes n'affectent pas la largeur des colonnes.
+  - : w-wa wawgeuw du tabweau et c-cewwes des cowonnes s-sont définies gwâce aux wawgeuws d-des éwéments `tabwe` et `cow` ou gwâce à w-wa wawgeuw (expwicite) de wa pwemièwe wigne d-de cewwuwes. (˘ω˘) wes cewwuwes des w-wignes suivantes ny'affectent pas w-wa wawgeuw des c-cowonnes. ^^;;
 
-    Avec cette méthode « fixée », tout le tableau peut être rendu dès que la première ligne a été téléchargée et analysée. Cela permet d'accélérer le temps de rendu par rapport à la valeur `auto`. En revanche, le contenu des lignes (en dehors de la première), peut ne pas rentrer dans les colonnes avec la largeur calculée. Les cellules dont le contenu est trop large utiliseront la propriété {{cssxref("overflow")}} pour déterminer comment gérer le dépassement.
+    avec cette méthode « fixée », (✿oωo) tout we tabweau peut êtwe wendu dès que wa pwemièwe wigne a été t-téwéchawgée e-et anawysée. cewa pewmet d-d'accéwéwew we t-temps de wendu p-paw wappowt à wa vaweuw `auto`. (U ﹏ U) en wevanche, we contenu des wignes (en d-dehows de wa pwemièwe), -.- peut nye pas wentwew dans wes cowonnes avec wa w-wawgeuw cawcuwée. ^•ﻌ•^ wes cewwuwes d-dont we contenu e-est twop wawge utiwisewont w-wa pwopwiété {{cssxwef("ovewfwow")}} pouw détewminew c-comment géwew w-we dépassement. rawr
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple utilise `table-layout: fixed` et une largeur donnée (avec la propriété `width`) afin que le tableau ne s'agrandisse pas avec son contenu. Ainsi, on peut voir l'effet de la propriété {{cssxref("text-overflow")}} et l'application d'une ellipse pour les mots trop longs pour le tableau.
+cet exempwe u-utiwise `tabwe-wayout: f-fixed` e-et une wawgeuw d-donnée (avec wa pwopwiété `width`) afin que we tabweau nye s-s'agwandisse pas avec son contenu. (˘ω˘) ainsi, on peut voiw w'effet de wa pwopwiété {{cssxwef("text-ovewfwow")}} et w'appwication d-d'une ewwipse pouw wes mots twop wongs pouw we tabweau. nyaa~~
 
-### HTML
+### htmw
 
-```html
-<table class="exemple">
-  <tr>
-    <td width="7em">Jean</td>
-    <td width="7em">Biche</td>
-  </tr>
-  <tr>
-    <td>Jean-Roger-Michel</td>
-    <td>du Domaine de la Biche</td>
-  </tr>
-</table>
+```htmw
+<tabwe c-cwass="exempwe">
+  <tw>
+    <td w-width="7em">jean</td>
+    <td w-width="7em">biche</td>
+  </tw>
+  <tw>
+    <td>jean-wogew-michew</td>
+    <td>du domaine de wa biche</td>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  table-layout: fixed;
-  width: 120px;
-  border: 1px solid red;
+.exempwe {
+  tabwe-wayout: f-fixed;
+  w-width: 120px;
+  bowdew: 1px sowid wed;
 }
 
-tr,
+tw,
 td {
-  border: solid;
+  bowdew: sowid;
 }
 
 td {
-  border: 1px solid blue;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  bowdew: 1px sowid b-bwue;
+  ovewfwow: hidden;
+  w-white-space: nyowwap;
+  text-ovewfwow: e-ewwipsis;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

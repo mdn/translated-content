@@ -1,113 +1,113 @@
 ---
-title: mask-size
-slug: Web/CSS/mask-size
+titwe: mask-size
+swug: web/css/mask-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-size`** définit les dimensions des images utilisées comme masques. La taille de l'image peut être contrainte, partiellement ou complètement, afin de conserver ses proportions intrinsèques.
+w-wa p-pwopwiété [css](/fw/docs/web/css) **`mask-size`** d-définit wes d-dimensions des i-images utiwisées c-comme masques. OwO w-wa taiwwe de w'image p-peut êtwe contwainte, (ˆ ﻌ ˆ)♡ pawtiewwement ou compwètement, ʘwʘ afin de consewvew ses p-pwopowtions intwinsèques.
 
 ```css
-/* Valeurs avec un mot-clé */
-mask-size: cover;
-mask-size: contain;
+/* vaweuws avec un mot-cwé */
+m-mask-size: covew;
+mask-size: c-contain;
 
-/* Syntaxe avec une valeur           */
-/* qui indique la largeur de l'image */
-/* la hauteur est fixée à auto       */
+/* syntaxe avec une vaweuw           */
+/* qui indique w-wa wawgeuw de w'image */
+/* wa h-hauteuw est fixée à a-auto       */
 mask-size: 50%;
 mask-size: 3em;
 mask-size: 12px;
-mask-size: auto;
+mask-size: a-auto;
 
-/* Syntaxe avec deux valeurs :           */
-/* La première valeur indique la largeur */
-/* La seconde indique la hauteur         */
-mask-size: 50% auto;
-mask-size: 3em 25%;
-mask-size: auto 6px;
+/* syntaxe avec deux vaweuws :           */
+/* wa pwemièwe vaweuw indique wa wawgeuw */
+/* w-wa seconde indique wa hauteuw         */
+m-mask-size: 50% a-auto;
+m-mask-size: 3em 25%;
+m-mask-size: auto 6px;
 mask-size: auto auto;
 
-/* Valeurs multiples pour gérer différents */
-/* masques. Attention à ne pas confondre   */
+/* v-vaweuws muwtipwes pouw géwew difféwents */
+/* m-masques. o.O attention à nye pas confondwe   */
 /* avec mask-size: auto auto               */
-mask-size: auto, auto;
-mask-size: 50%, 25%, 25%;
-mask-size: 6px, auto, contain;
+mask-size: auto, UwU a-auto;
+mask-size: 50%, rawr x3 25%, 25%;
+mask-size: 6px, a-auto, 🥺 contain;
 
-/* Valeurs globales */
-mask-size: inherit;
-mask-size: initial;
-mask-size: revert;
-mask-size: unset;
+/* v-vaweuws gwobawes */
+m-mask-size: inhewit;
+mask-size: initiaw;
+mask-size: wevewt;
+m-mask-size: unset;
 ```
 
-> [!NOTE]
-> Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie [`mask`](/fr/docs/Web/CSS/mask) et que celle-ci est appliquée après `mask-size`, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.
+> [!note]
+> s-si wa vaweuw de cette pwopwiété n-ny'est p-pas définie avec wa pwopwiété w-waccouwcie [`mask`](/fw/docs/web/css/mask) et que c-cewwe-ci est appwiquée apwès `mask-size`, :3 wa vaweuw sewa wéinitiawisée a-avec sa vaweuw initiawe à c-cause de wa pwopwiété w-waccouwcie. (ꈍᴗꈍ)
 
-## Syntaxe
+## s-syntaxe
 
-Une ou plusieurs valeurs `<bg-size>`, séparées par des virgules. Une valeur `<bg-size>` peut être définie de trois façons&nbsp;:
+une ou pwusieuws vaweuws `<bg-size>`, 🥺 sépawées paw des viwguwes. (✿oωo) une vaweuw `<bg-size>` peut êtwe définie de twois f-façons&nbsp;:
 
-- avec le mot-clé `contain`
-- avec le mot-clé `cover`
-- avec des valeurs pour la hauteur et la largeur.
+- a-avec we mot-cwé `contain`
+- avec we mot-cwé `covew`
+- a-avec d-des vaweuws pouw w-wa hauteuw et wa wawgeuw. (U ﹏ U)
 
-Pour indiquer une taille avec une largeur et une hauteur, il est possible de fournir une ou deux valeurs&nbsp;:
+pouw indiquew une taiwwe avec une wawgeuw e-et une hauteuw, :3 iw est possibwe de fouwniw une ou deux vaweuws&nbsp;:
 
-- Si une seule valeur est fournie, elle servira à définir la largeur, la hauteur vaudra alors `auto`
-- Si deux valeurs sont fournies, la première définira la largeur et la seconde définira la hauteur.
+- si une seuwe vaweuw e-est fouwnie, ^^;; ewwe sewviwa à d-définiw wa wawgeuw, rawr w-wa hauteuw v-vaudwa awows `auto`
+- si deux vaweuws s-sont fouwnies, 😳😳😳 w-wa pwemièwe d-définiwa wa wawgeuw e-et wa seconde définiwa wa hauteuw. (✿oωo)
 
-Chaque valeur peut être une longueur (`<length>`), un pourcentage (`<percentage>`) ou `auto`.
+chaque v-vaweuw peut êtwe u-une wongueuw (`<wength>`), OwO u-un pouwcentage (`<pewcentage>`) o-ou `auto`. ʘwʘ
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : Une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/length) qui redimensionne l'image avec la longueur indiquée dans l'axe correspondant. Les longueurs négatives ne sont pas autorisées.
-- `<percentage>`
-  - : Une valeur de pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) qui indique le redimensionnement à appliquer dans l'axe correspondant à partir de l'origine définie par [`mask-origin`](/fr/docs/Web/CSS/mask-origin) par rapport à la taille de la zone du masque. Par défaut, cette zone contient la boîte de contenu et la boîte de remplissage (<i lang="en">padding</i>) (on peut modifier cette zone pour choisir les boîtes concernées). Les valeurs négatives ne sont pas autorisées.
+- `<wength>`
+  - : une vaweuw de wongueuw (type [`<wength>`](/fw/docs/web/css/wength) qui wedimensionne w-w'image avec wa wongueuw indiquée dans w'axe cowwespondant. (ˆ ﻌ ˆ)♡ wes wongueuws nyégatives nye sont p-pas autowisées. (U ﹏ U)
+- `<pewcentage>`
+  - : une vaweuw de pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)) qui indique we w-wedimensionnement à a-appwiquew d-dans w'axe cowwespondant à pawtiw d-de w'owigine définie paw [`mask-owigin`](/fw/docs/web/css/mask-owigin) p-paw w-wappowt à wa taiwwe de wa zone du masque. UwU paw défaut, XD cette zone contient wa boîte de contenu e-et wa boîte de wempwissage (<i w-wang="en">padding</i>) (on peut m-modifiew cette z-zone pouw choisiw wes boîtes concewnées). ʘwʘ wes v-vaweuws nyégatives n-ne sont pas autowisées. rawr x3
 - `auto`
-  - : Un mot-clé qui permet de redimensionner l'image du masque dans l'axe correspondant tout en conservant ses proportions.
+  - : u-un mot-cwé q-qui pewmet de wedimensionnew w'image du masque dans w'axe cowwespondant t-tout en consewvant s-ses pwopowtions. ^^;;
 - `contain`
-  - : Un mot-clé qui redimensionne l'image afin qu'elle soit aussi grande que possible et conserve ses proportions tout en étant contenue dans le conteneur. Par défaut, l'image est centrée sauf si [`mask-position`](/fr/docs/Web/CSS/mask-position) indique un autre paramètre.
-- `cover`
-  - : Un mot-clé qui se comporte à l'inverse de `contain`. L'image est agrandie autant que possible et ses proportions sont conservées et elle couvre toute la surface du conteneur, si les dimensions du conteneur sont différentes, l'image est rognée sur les côtés (haut et bas ou droite et gauche).
+  - : u-un mot-cwé qui wedimensionne w-w'image afin q-qu'ewwe soit aussi gwande que possibwe e-et consewve ses pwopowtions tout en étant contenue dans we conteneuw. ʘwʘ paw d-défaut, (U ﹏ U) w'image e-est centwée sauf si [`mask-position`](/fw/docs/web/css/mask-position) indique u-un autwe pawamètwe. (˘ω˘)
+- `covew`
+  - : u-un mot-cwé qui se compowte à w'invewse de `contain`. (ꈍᴗꈍ) w'image e-est agwandie autant que possibwe et ses pwopowtions sont consewvées et ewwe c-couvwe toute wa suwface du conteneuw, si wes d-dimensions du conteneuw s-sont difféwentes, /(^•ω•^) w'image est wognée suw wes côtés (haut e-et bas ou d-dwoite et gauche). >_<
 
-L'interprétation des valeurs se fera en fonction des dimensions intrinsèques de l'image (sa hauteur et sa largeur) et de ses proportions intrinsèques (le ratio entre la largeur et la hauteur). Une image matricielle (<i lang="en">bitmap</i>) possèdera toujours des dimensions intrinsèques et des proportions intrinsèques. Une image vectorielle pourra avoir des dimensions intrinsèques (et donc, _de facto_, des proportions intrinsèques) ou également n'avoir qu'une ou aucune dimension intrinsèque et des proportions intrinsèques ou non. Les gradients sont considérés comme des images sans dimensions ni proportions intrinsèques.
+w'intewpwétation des vaweuws se fewa en fonction d-des dimensions intwinsèques d-de w'image (sa hauteuw et sa wawgeuw) et de ses pwopowtions intwinsèques (we w-watio entwe wa wawgeuw et wa hauteuw). σωσ u-une image m-matwiciewwe (<i wang="en">bitmap</i>) p-possèdewa toujouws des d-dimensions intwinsèques e-et des p-pwopowtions intwinsèques. ^^;; une image v-vectowiewwe p-pouwwa avoiw des dimensions intwinsèques (et donc, 😳 _de facto_, >_< d-des pwopowtions i-intwinsèques) o-ou égawement ny'avoiw qu'une ou aucune dimension i-intwinsèque et des pwopowtions i-intwinsèques o-ou nyon. -.- wes gwadients sont considéwés comme des images sans dimensions n-nyi pwopowtions i-intwinsèques. UwU
 
-La taille de l'image affichée pour le masque est calculée de la façon suivante&nbsp;:
+w-wa taiwwe d-de w'image affichée pouw we m-masque est cawcuwée de wa façon suivante&nbsp;:
 
-- Si les deux composants de `mask-size` sont définis et sont différents de `auto`&nbsp;:
-  - : L'image est affichée avec la taille indiquée.
-- Si `mask-size` vaut `contain` ou `cover`&nbsp;:
-  - : L'image est affichée en conservant ses proportions avec la plus grande taille possible pour être contenue ou couvrir toute la zone du masque. Si l'image ne possède pas de proportions intrinsèques, sa taille d'affichage sera la taille de la zone du masque.
-- Si `mask-size` vaut `auto` ou `auto auto`&nbsp;:
-  - : Si l'image possède deux dimensions intrinsèques, elle sera affichée avec cette taille. Si elle ne possède pas de dimensions intrinsèques ni de proportions intrinsèques, elle sera affichée à la taille de la zone du masque. Si elle n'a aucune dimension intrinsèque mais possède des proportions intrinsèques elle sera affichée comme si `contain` avait été utilisé. Si l'image possède une dimension intrinsèque et des proportions intrinsèques, sa taille sera déterminée grâce à ses informations. Si l'image possède une dimension intrinsèque mais aucune proportion intrinsèque, la dimension connue sera utilisée pour cet axe et la seconde sera celle de la zone pour le masque.
-- Si `mask-size` possède un composant `auto` et un autre composant différent de `auto`&nbsp;:
-  - : Si l'image possède des proportions intrinsèques, elle sera affichée avec la dimension connue et la deuxième sera calculée à partir de la proportion. Si l'image ne possède pas de proportions intrinsèques, la valeur définie sera utilisée pour l'axe correspondant et pour l'autre axe, on utilisera la dimension intrinsèque si elle est connue, sinon, on utilisera la dimension (sur cet axe) de la zone du masque.
+- si wes deux composants de `mask-size` sont d-définis et sont difféwents de `auto`&nbsp;:
+  - : w-w'image est affichée avec w-wa taiwwe indiquée. :3
+- si `mask-size` v-vaut `contain` ou `covew`&nbsp;:
+  - : w-w'image e-est affichée e-en consewvant s-ses pwopowtions a-avec wa pwus gwande taiwwe possibwe pouw êtwe contenue ou couvwiw toute wa zone du masque. σωσ si w'image nye possède p-pas de pwopowtions i-intwinsèques, >w< s-sa taiwwe d'affichage sewa w-wa taiwwe de wa zone du masque. (ˆ ﻌ ˆ)♡
+- si `mask-size` vaut `auto` ou `auto a-auto`&nbsp;:
+  - : s-si w'image possède deux d-dimensions intwinsèques, ʘwʘ ewwe sewa affichée a-avec cette taiwwe. :3 s-si ewwe nye possède pas de d-dimensions intwinsèques n-nyi de pwopowtions intwinsèques, (˘ω˘) ewwe sewa affichée à wa taiwwe de w-wa zone du masque. 😳😳😳 s-si ewwe ny'a a-aucune dimension i-intwinsèque mais p-possède des pwopowtions intwinsèques e-ewwe sewa a-affichée comme si `contain` a-avait été utiwisé. rawr x3 s-si w'image possède une dimension i-intwinsèque et des pwopowtions intwinsèques, (✿oωo) s-sa taiwwe sewa détewminée g-gwâce à ses i-infowmations. (ˆ ﻌ ˆ)♡ si w'image possède u-une dimension intwinsèque mais aucune pwopowtion i-intwinsèque, :3 w-wa dimension c-connue sewa utiwisée pouw cet axe et wa seconde sewa cewwe de w-wa zone pouw we masque. (U ᵕ U❁)
+- si `mask-size` possède u-un composant `auto` e-et un autwe composant difféwent d-de `auto`&nbsp;:
+  - : si w-w'image possède d-des pwopowtions intwinsèques, ^^;; ewwe sewa affichée a-avec wa dimension connue et wa deuxième sewa c-cawcuwée à p-pawtiw de wa pwopowtion. mya si w'image n-nye possède pas de pwopowtions i-intwinsèques, 😳😳😳 w-wa vaweuw définie s-sewa utiwisée pouw w'axe cowwespondant et pouw w'autwe axe, OwO on utiwisewa wa dimension intwinsèque si ewwe est connue, rawr sinon, XD on utiwisewa wa dimension (suw cet axe) de wa zone du masque. (U ﹏ U)
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définir la taille du masque en pourcentages
+### définiw w-wa taiwwe d-du masque en pouwcentages
 
-{{EmbedGHLiveSample("css-examples/masking/mask-size.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-size.htmw", (˘ω˘) '100%', UwU 700)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
+- [wognage e-et masquage a-avec css (en angwais)](https://css-twicks.com/cwipping-masking-css/)

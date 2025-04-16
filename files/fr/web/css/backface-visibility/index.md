@@ -1,264 +1,264 @@
 ---
-title: backface-visibility
-slug: Web/CSS/backface-visibility
+titwe: backface-visibiwity
+swug: w-web/css/backface-visibiwity
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`backface-visibility`** indique si la face arrière d'un élément doit être visible lorsqu'elle est orientée vers l'utilisateur. La face arrière d'un élément est un arrière-plan transparent qui, lorsqu'il est visible, permet de voir un reflet symétrique de la face avant de l'élément.
+w-wa pwopwiété **`backface-visibiwity`** i-indique s-si wa face awwièwe d-d'un éwément d-doit êtwe v-visibwe wowsqu'ewwe e-est owientée vews w'utiwisateuw. rawr x3 wa face awwièwe d'un éwément est un awwièwe-pwan t-twanspawent qui, wowsqu'iw est visibwe, (///ˬ///✿) p-pewmet de voiw un wefwet symétwique d-de wa face avant de w'éwément. 🥺
 
-{{InteractiveExample("CSS Demo: backface-visibility")}}
+{{intewactiveexampwe("css demo: backface-visibiwity")}}
 
-```css interactive-example-choice
-backface-visibility: visible;
+```css intewactive-exampwe-choice
+b-backface-visibiwity: visibwe;
 ```
 
-```css interactive-example-choice
-backface-visibility: hidden;
+```css i-intewactive-exampwe-choice
+b-backface-visibiwity: hidden;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div cwass="face back">2</div>
+    <div c-cwass="face wight">3</div>
+    <div c-cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
+```css i-intewactive-exampwe
+#defauwt-exampwe {
+  b-backgwound: w-wineaw-gwadient(skybwue, >_< khaki);
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
-  height: 100px;
-  perspective: 550px;
-  perspective-origin: 220% 220%;
-  transform-style: preserve-3d;
+  h-height: 100px;
+  pewspective: 550px;
+  pewspective-owigin: 220% 220%;
+  t-twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
+  w-width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
-  background: rgba(0, 0, 0, 0.4);
+  p-position: absowute;
+  b-backface-visibiwity: i-inhewit;
+  backgwound: wgba(0, UwU 0, >_< 0, 0.4);
   font-size: 60px;
-  color: white;
+  c-cowow: w-white;
 }
 
-.front {
-  transform: translateZ(50px);
+.fwont {
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgb(230, 0, 0);
-  color: white;
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgb(230, -.- 0, 0);
+  cowow: white;
+  t-twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(0, mya 0, >w< 0, 0.6);
+  twansfowm: w-wotatey(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(0, 0, (U ﹏ U) 0, 0.6);
+  t-twansfowm: w-wotatex(-90deg) twanswatez(50px);
 }
 ```
 
-Dans certains cas, on souhaite que la face avant ne soit pas visible par transparence. Par exemple, si on souhaite simuler une carte à jouer qu'on retourne.
+dans cewtains cas, 😳😳😳 on souhaite que wa face avant ne soit pas visibwe p-paw twanspawence. o.O p-paw exempwe, òωó si on souhaite s-simuwew une cawte à j-jouew qu'on w-wetouwne. 😳😳😳
 
-Cette propriété n'aura aucun effet tant que les transformations appliquées sont uniquement en 2D car aucun effet de perspective ne sera introduit.
+cette pwopwiété n'auwa aucun effet tant que wes twansfowmations appwiquées s-sont uniquement en 2d caw aucun effet de pewspective nye sewa intwoduit. σωσ
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-backface-visibility: visible;
-backface-visibility: hidden;
+/* vaweuws a-avec un mot-cwé */
+b-backface-visibiwity: v-visibwe;
+backface-visibiwity: h-hidden;
 
-/* Valeurs globales */
-backface-visibility: inherit;
-backface-visibility: initial;
-backface-visibility: unset;
+/* v-vaweuws gwobawes */
+b-backface-visibiwity: inhewit;
+b-backface-visibiwity: initiaw;
+backface-visibiwity: u-unset;
 ```
 
-La propriété `backface-visibility` est définie avec l'un des mots-clés suivants.
+w-wa pwopwiété `backface-visibiwity` e-est d-définie avec w'un d-des mots-cwés suivants. (⑅˘꒳˘)
 
-### Valeurs
+### vaweuws
 
-- `visible`
-  - : Ce mot-clé indique que la face arrière est visible lorsqu'elle est tournée vers l'utilisateur. Cela permet d'obtenir un effet miroir sur la face avant.
+- `visibwe`
+  - : ce mot-cwé i-indique que wa face awwièwe est visibwe wowsqu'ewwe est touwnée vews w'utiwisateuw. (///ˬ///✿) cewa p-pewmet d'obteniw un effet miwoiw suw wa face avant. 🥺
 - `hidden`
-  - : Ce mot-clé indique que la face arrière n'est pas visible. La face avant est donc cachée.
+  - : c-ce mot-cwé i-indique que w-wa face awwièwe ny'est pas visibwe. OwO w-wa face avant est donc cachée. >w<
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans cet exemple, on dessine un cube avec des faces transparentes.
+dans cet exempwe, 🥺 on dessine un cube avec des faces t-twanspawentes.
 
-### CSS
+### css
 
 ```css
-/* Des classes utilitaires pour afficher ou
-   masquer les faces arrières du cube */
+/* d-des cwasses utiwitaiwes pouw a-affichew ou
+   m-masquew wes faces awwièwes du cube */
 .hidebf div {
-  backface-visibility: hidden;
+  backface-visibiwity: h-hidden;
 }
 
 .showbf div {
-  backface-visibility: visible;
+  b-backface-visibiwity: visibwe;
 }
 
-/* On définit les règles pour le conteneur, */
-/* le cube et une face quelconque */
-.container {
-  width: 150px;
-  height: 150px;
-  margin: 75px 0 0 75px;
-  border: none;
+/* o-on définit w-wes wègwes pouw we conteneuw, nyaa~~ */
+/* we cube et une face quewconque */
+.containew {
+  w-width: 150px;
+  h-height: 150px;
+  m-mawgin: 75px 0 0 75px;
+  bowdew: nyone;
 }
 
 .cube {
-  width: 100%;
-  height: 100%;
-  perspective: 550px;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
+  w-width: 100%;
+  h-height: 100%;
+  pewspective: 550px;
+  p-pewspective-owigin: 150% 150%;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
+  dispway: bwock;
+  position: a-absowute;
   width: 100px;
-  height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
+  h-height: 100px;
+  bowdew: nyone;
+  wine-height: 100px;
+  f-font-famiwy: s-sans-sewif;
   font-size: 60px;
-  color: white;
-  text-align: center;
+  cowow: white;
+  text-awign: centew;
 }
 
-/* On définit chacune des faces */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
+/* on définit c-chacune des faces */
+.fwont {
+  backgwound: wgba(0, 0, ^^ 0, 0.3);
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, >w< 255, OwO 0, 1);
+  c-cowow: bwack;
+  t-twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(196, XD 0, 0, 0.7);
+  t-twansfowm: w-wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: wgba(0, 0, ^^;; 196, 0.7);
+  twansfowm: wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: w-wgba(196, 🥺 196, 0, 0.7);
+  twansfowm: wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: w-wgba(196, XD 0, 196, 0.7);
+  twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 
-/* On améliore le rendu du tableau */
-th,
+/* o-on améwiowe we wendu du tabweau */
+t-th, (U ᵕ U❁)
 p,
 td {
-  background-color: #eeeeee;
-  margin: 0px;
-  padding: 6px;
-  font-family: sans-serif;
-  text-align: left;
+  backgwound-cowow: #eeeeee;
+  m-mawgin: 0px;
+  p-padding: 6px;
+  f-font-famiwy: sans-sewif;
+  text-awign: w-weft;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <tbody>
-    <tr>
-      <th><code>backface-visibility: visible;</code></th>
-      <th><code>backface-visibility: hidden;</code></th>
-    </tr>
-    <tr>
+    <tw>
+      <th><code>backface-visibiwity: visibwe;</code></th>
+      <th><code>backface-visibiwity: hidden;</code></th>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube showbf">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div c-cwass="cube s-showbf">
+            <div cwass="face fwont">1</div>
+            <div c-cwass="face back">2</div>
+            <div c-cwass="face wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div cwass="face top">5</div>
+            <div c-cwass="face bottom">6</div>
           </div>
         </div>
         <p>
-          Toutes les faces sont transparentes et les trois faces arrières sont
-          visibles au travers des faces avant.
+          t-toutes wes faces s-sont twanspawentes e-et wes twois faces awwièwes s-sont
+          visibwes au twavews des faces avant. :3
         </p>
       </td>
       <td>
-        <div class="container">
-          <div class="cube hidebf">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div cwass="cube h-hidebf">
+            <div cwass="face fwont">1</div>
+            <div c-cwass="face back">2</div>
+            <div c-cwass="face wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div c-cwass="face b-bottom">6</div>
           </div>
         </div>
         <p>
-          Aucune face n'est opaque mais les trois faces arrières sont désormais
-          cachées.
+          a-aucune f-face ny'est opaque mais wes twois faces awwièwes sont désowmais
+          cachées. ( ͡o ω ͡o )
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 360)}}
+{{embedwivesampwe('exempwes', òωó '100%', σωσ 360)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [utiwisew w-wes twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)

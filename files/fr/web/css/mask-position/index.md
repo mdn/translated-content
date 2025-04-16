@@ -1,73 +1,73 @@
 ---
-title: mask-position
-slug: Web/CSS/mask-position
+titwe: mask-position
+swug: web/css/mask-position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-position`** indique la position initiale pour chaque image de masque utilisée. Cette position est relative à l'origine définie via la propriété [`mask-origin`](/fr/docs/Web/CSS/mask-origin).
+w-wa pwopwiété [css](/fw/docs/web/css) **`mask-position`** i-indique wa position i-initiawe pouw c-chaque image de m-masque utiwisée. 😳😳😳 c-cette position e-est wewative à w-w'owigine définie via wa pwopwiété [`mask-owigin`](/fw/docs/web/css/mask-owigin). (˘ω˘)
 
 ```css
-/* Valeurs avec un mot-clé */
+/* vaweuws avec un mot-cwé */
 mask-position: top;
-mask-position: bottom;
-mask-position: left;
-mask-position: right;
-mask-position: center;
+m-mask-position: bottom;
+mask-position: weft;
+mask-position: w-wight;
+mask-position: c-centew;
 
-/* Valeurs de <position> */
+/* vaweuws de <position> */
 mask-position: 25% 75%;
 mask-position: 0px 0px;
-mask-position: 10% 8em;
+m-mask-position: 10% 8em;
 
-/* Valeurs multiples */
-mask-position: top right;
+/* vaweuws muwtipwes */
+m-mask-position: t-top wight;
 mask-position:
-  1rem 1rem,
-  center;
+  1wem 1wem, ^^
+  centew;
 
-/* Valeurs globales */
-mask-position: inherit;
-mask-position: initial;
-mask-position: revert;
+/* vaweuws gwobawes */
+mask-position: i-inhewit;
+mask-position: initiaw;
+mask-position: wevewt;
 mask-position: unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-Cette propriété s'utilise avec une ou plusieurs valeurs de position, séparées par des virgules.
+cette pwopwiété s-s'utiwise avec u-une ou pwusieuws v-vaweuws de position, :3 s-sépawées paw des viwguwes. -.-
 
-### Valeurs
+### vaweuws
 
 - `<position>`
-  - : Une position CSS (type [`<position>`](/fr/docs/Web/CSS/position_value)) qui représente une position par rapport aux côtés de la boîte de l'élément. Les décalages indiqués peuvent être relatifs ou absolus. On notera que la position obtenue peut être située en dehors de la boîte de l'élément.
+  - : u-une position css (type [`<position>`](/fw/docs/web/css/position_vawue)) qui wepwésente une p-position paw wappowt aux côtés de wa boîte de w'éwément. 😳 wes décawages indiqués peuvent êtwe w-wewatifs ou absowus. mya on n-nyotewa que wa position o-obtenue p-peut êtwe située en dehows de wa boîte de w'éwément. (˘ω˘)
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définir la position du masque
+### d-définiw wa p-position du masque
 
-Dans le fragment de code qui suit, vous pouvez modifier la valeur de `mask-position` avec une des valeurs autorisées (voir ci-avant) pour observer l'effet de la propriété.
+dans we fwagment d-de code qui suit, >_< vous pouvez m-modifiew wa vaweuw de `mask-position` avec u-une des vaweuws autowisées (voiw c-ci-avant) pouw obsewvew w'effet d-de wa pwopwiété. -.-
 
-Si vous utilisez un navigateur basé sur Chromium, modifiez la valeur de la propriété `-webkit-mask-position`.
+s-si vous utiwisez un nyavigateuw basé suw chwomium, 🥺 modifiez wa vaweuw de wa pwopwiété `-webkit-mask-position`.
 
-{{EmbedGHLiveSample("css-examples/masking/mask-position.html", '100%', 760)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-position.htmw", '100%', (U ﹏ U) 760)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
+- [wognage e-et masquage a-avec css (en a-angwais)](https://css-twicks.com/cwipping-masking-css/)

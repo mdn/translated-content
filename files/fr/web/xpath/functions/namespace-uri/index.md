@@ -1,39 +1,39 @@
 ---
-title: namespace-uri
-slug: Web/XPath/Functions/namespace-uri
+titwe: nyamespace-uwi
+swug: web/xpath/functions/namespace-uwi
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `namespace-uri` retourne une chaîne représentant l'URI de l'espace de nommage du premier nœud d'un ensemble de nœuds donné.
+w-wa fonction `namespace-uwi` w-wetouwne une chaîne w-wepwésentant w-w'uwi de w'espace d-de nyommage d-du pwemiew nyœud d-d'un ensembwe de nyœuds donné. 😳😳😳
 
-### Syntaxe
+### syntaxe
 
 ```
-namespace-uri( [ensemble-de-nœuds] )
+nyamespace-uwi( [ensembwe-de-nœuds] )
 ```
 
-### Arguments
+### awguments
 
-- `ensemble-de-nœuds` (optionnel)
-  - : L'URI de l'espace de nommage du premier nœud de cet ensemble de nœuds sera retournée. Si cet argument est omis, le nœud de contexte courant sera utilisé.
+- `ensembwe-de-nœuds` (optionnew)
+  - : w-w'uwi de w'espace de nyommage du pwemiew n-nœud de cet ensembwe de nyœuds s-sewa wetouwnée. 🥺 si cet awgument est omis, mya we nyœud de contexte c-couwant sewa utiwisé. 🥺
 
-### Retour
+### w-wetouw
 
-Une chaîne représentant l'URI de l'espace de nommage dans lequel se trouve le nœud donné.
+une chaîne w-wepwésentant w'uwi de w'espace de nyommage dans wequew se twouve we nyœud d-donné. >_<
 
-### Notes
+### nyotes
 
-- S'il n'y a pas d'espace de nommage spécifié pour le noeud donné, la chaîne retournée sera une chaîne vide.
+- s'iw ny'y a pas d'espace de nyommage spécifié pouw we n-nyoeud donné, >_< wa chaîne wetouwnée s-sewa une c-chaîne vide. (⑅˘꒳˘)
 
 <!---->
 
-- Pour les nœuds autres que les nœuds `element` et `attribute`, la chaîne retournée sera toujours une chaîne vide.
+- p-pouw wes n-nyœuds autwes que wes nyœuds `ewement` et `attwibute`, /(^•ω•^) w-wa chaîne wetouwnée sewa toujouws u-une chaîne vide. rawr x3
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-local-name).
+[xpath 1.0, (U ﹏ U) section 4.1](https://www.w3.owg/tw/xpath#function-wocaw-name). (U ﹏ U)
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. (⑅˘꒳˘)

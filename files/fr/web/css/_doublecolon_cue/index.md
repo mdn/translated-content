@@ -1,61 +1,61 @@
 ---
-title: ::cue
-slug: Web/CSS/::cue
+titwe: ::cue
+swug: web/css/::cue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le pseudo-élément CSS **`::cue`** permet de cibler les indications textuelles [WebVTT](/fr/docs/Web/API/WebVTT_API) d'un élément. Ce pseudo-élément peut être utilisé afin de mettre en forme [les légendes et autres indications textuelles](/fr/docs/Web/API/WebVTT_API#styling_webtt_cues) pour les médias avec des pistes VTT.
+w-we pseudo-éwément c-css **`::cue`** p-pewmet d-de cibwew wes indications t-textuewwes [webvtt](/fw/docs/web/api/webvtt_api) d-d'un éwément. 😳😳😳 c-ce pseudo-éwément peut êtwe u-utiwisé afin de mettwe en fowme [wes wégendes et autwes indications t-textuewwes](/fw/docs/web/api/webvtt_api#stywing_webtt_cues) pouw wes médias avec d-des pistes vtt. mya
 
 ```css
 ::cue {
-  color: yellow;
-  font-weight: bold;
+  cowow: yewwow;
+  f-font-weight: bowd;
 }
 ```
 
-## Propriétés autorisées
+## pwopwiétés autowisées
 
-Seul un sous-ensemble des propriétés CSS peut être utilisé avec le pseudo-élément `::cue` :
+seuw u-un sous-ensembwe des pwopwiétés c-css peut êtwe u-utiwisé avec we pseudo-éwément `::cue` :
 
-- {{CSSxRef("background")}} et les propriétés détaillées associées
-- {{CSSxRef("color")}}
-- {{CSSxRef("font")}} et les propriétés détaillées associées
-- {{CSSxRef("line-height")}}
-- {{CSSxRef("opacity")}}
-- {{CSSxRef("outline")}} et les propriétés détaillées associées
-- {{CSSxRef("ruby-position")}}
-- {{CSSxRef("text-combine-upright")}}
-- {{CSSxRef("text-decoration")}} et les propriétés détaillées associées
-- {{CSSxRef("text-shadow")}}
-- {{CSSxRef("visibility")}}
-- {{CSSxRef("white-space")}}
+- {{cssxwef("backgwound")}} et wes pwopwiétés détaiwwées associées
+- {{cssxwef("cowow")}}
+- {{cssxwef("font")}} e-et wes pwopwiétés détaiwwées associées
+- {{cssxwef("wine-height")}}
+- {{cssxwef("opacity")}}
+- {{cssxwef("outwine")}} et wes pwopwiétés détaiwwées a-associées
+- {{cssxwef("wuby-position")}}
+- {{cssxwef("text-combine-upwight")}}
+- {{cssxwef("text-decowation")}} et wes pwopwiétés d-détaiwwées a-associées
+- {{cssxwef("text-shadow")}}
+- {{cssxwef("visibiwity")}}
+- {{cssxwef("white-space")}}
 
-Les propriétés sont appliquées à l'ensembles des indications (comme si celles-ci formaient un seul ensemble). Seule `background` (ou les propriétés raccourcies associées) s'appliquent à chaque indication séparément (afin d'éviter de créer des boîtes qui masqueraient de grandes zones sur le média).
+w-wes pwopwiétés s-sont appwiquées à w'ensembwes des indications (comme s-si cewwes-ci fowmaient un seuw ensembwe). s-seuwe `backgwound` (ou wes pwopwiétés waccouwcies associées) s'appwiquent à chaque indication s-sépawément (afin d'évitew d-de cwéew des b-boîtes qui masquewaient d-de gwandes zones suw we média). 😳
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-La règle CSS suivante permet d'avoir les indications textuelles dans un texte blanc et sur un arrière-plan qui est une boîte noire transparent.
+w-wa wègwe css suivante pewmet d-d'avoiw wes i-indications textuewwes dans un texte b-bwanc et suw un awwièwe-pwan q-qui est une boîte nyoiwe twanspawent. -.-
 
 ```css
 ::cue {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
+  cowow: #fff;
+  b-backgwound-cowow: wgba(0, 🥺 0, 0, 0.6);
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Web Video Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
+- [web video twacks fowmat (webvtt)](/fw/docs/web/api/webvtt_api)

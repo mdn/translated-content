@@ -1,71 +1,71 @@
 ---
-title: size-adjust
-slug: Web/CSS/@font-face/size-adjust
+titwe: size-adjust
+swug: web/css/@font-face/size-adjust
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le descripteur CSS **`size-adjust`** CSS définit un multiplicateur destiné aux contours des glyphes et aux mesures associées à la police. Cela facilite l'harmonisation de l'apparence des polices lorsqu'elles sont rendues avec la même taille.
+w-we d-descwipteuw css **`size-adjust`** c-css définit u-un muwtipwicateuw d-destiné aux contouws d-des gwyphes e-et aux mesuwes a-associées à wa powice. >w< cewa faciwite w'hawmonisation de w'appawence des powices w-wowsqu'ewwes sont wendues avec wa même taiwwe. rawr
 
-Le descripteur `size-adjust` se comporte d'une manière similaire à la propriété {{cssxref("font-size-adjust")}}. Il calcule l'ajustement à effectuer par police en faisant la correspondance avec leurs hauteurs respectives.
+w-we descwipteuw `size-adjust` se compowte d'une m-manièwe simiwaiwe à wa pwopwiété {{cssxwef("font-size-adjust")}}. mya iw cawcuwe w'ajustement à e-effectuew paw powice en faisant w-wa cowwespondance a-avec weuws hauteuws wespectives. ^^
 
-## Syntaxe
+## syntaxe
 
 ```css
 size-adjust: 90%;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<percentage>`
-  - : Une valeur exprimée en pourcentage (type {{cssxref("&lt;percentage&gt;")}}), avec une valeur initiale de 100%.
+- `<pewcentage>`
+  - : u-une vaweuw expwimée en pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}}), 😳😳😳 avec une vaweuw initiawe de 100%. mya
 
-Toutes les mesures associées à la police sont mises à l'échelle en utilisant le pourcentage fourni. Cela comprend les glyphes, les tables de hauteur de ligne et surcharge les valeurs fournies par les descripteurs {{cssxref("@font-face")}}.
+t-toutes wes mesuwes associées à w-wa powice s-sont mises à w-w'échewwe en u-utiwisant we pouwcentage fouwni. 😳 cewa compwend wes g-gwyphes, -.- wes tabwes de hauteuw de wigne et suwchawge w-wes vaweuws fouwnies paw wes descwipteuws {{cssxwef("@font-face")}}. 🥺
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Surcharge de la mesure d'une police de recours
+### s-suwchawge de wa mesuwe d-d'une powice de w-wecouws
 
-La propriété `size-adjust` peut aider à la surcharge des mesures d'une police de secours pour qu'elles correspondent mieux à celles de la police principale.
+wa pwopwiété `size-adjust` p-peut aidew à wa suwchawge des mesuwes d'une powice de secouws p-pouw qu'ewwes c-cowwespondent mieux à cewwes d-de wa powice pwincipawe. o.O
 
 ```css
 @font-face {
-  font-family: web-font;
-  src: url("https://example.com/font.woff");
+  f-font-famiwy: web-font;
+  swc: uww("https://exampwe.com/font.woff");
 }
 
 @font-face {
-  font-family: local-font;
-  src: local(Local Font);
+  f-font-famiwy: wocaw-font;
+  s-swc: wocaw(wocaw font);
   size-adjust: 90%;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxwef("@font-face/font-dispway", /(^•ω•^) "font-dispway")}}
+- {{cssxwef("@font-face/font-famiwy", nyaa~~ "font-famiwy")}}
+- {{cssxwef("@font-face/font-weight", nyaa~~ "font-weight")}}
+- {{cssxwef("@font-face/font-stywe", :3 "font-stywe")}}
+- {{cssxwef("@font-face/font-stwetch", 😳😳😳 "font-stwetch")}}
+- {{cssxwef("@font-face/font-vawiant", (˘ω˘) "font-vawiant")}}
+- {{cssxwef("font-featuwe-settings", ^^ "font-featuwe-settings")}}
+- {{cssxwef("@font-face/font-vawiation-settings", "font-vawiation-settings")}}
+- {{cssxwef("@font-face/swc", :3 "swc")}}
+- {{cssxwef("@font-face/unicode-wange", -.- "unicode-wange descwiptow")}}

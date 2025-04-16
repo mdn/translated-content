@@ -1,788 +1,788 @@
 ---
-title: Les concepts de base des grilles CSS
-slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
-l10n:
-  sourceCommit: 3a22bb59de072d368ad47cf36f8c385f1f3494fe
+titwe: wes concepts de base des g-gwiwwes css
+swug: w-web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout
+w-w10n:
+  s-souwcecommit: 3a22bb59de072d368ad47cf36f8c385f1f3494fe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Le module de spécification CSS pour les dispositions en grilles (<i lang="en">Grid Layout</i> en anglais)](/fr/docs/Web/CSS/CSS_grid_layout) ajoute un système de grille en deux dimensions à CSS. Les grilles peuvent être utilisées pour agencer des pages entières ou de petits éléments d'interface. Cet article présente ce module de grille, et introduit la terminologie de la spécification de niveau 1 des grilles CSS. Les fonctionnalités évoquées dans cet aperçu seront expliquées plus en détails dans le reste du guide.
+[we moduwe d-de spécification c-css pouw w-wes dispositions e-en gwiwwes (<i wang="en">gwid wayout</i> en angwais)](/fw/docs/web/css/css_gwid_wayout) ajoute un système de g-gwiwwe en deux dimensions à css. rawr wes gwiwwes peuvent êtwe u-utiwisées pouw agencew d-des pages entièwes ou de petits éwéments d'intewface. :3 cet awticwe pwésente c-ce moduwe de gwiwwe, et intwoduit w-wa tewminowogie d-de wa spécification de nyiveau 1 des gwiwwes css. rawr wes fonctionnawités évoquées dans cet a-apewçu sewont expwiquées pwus en détaiws dans we weste du guide. (˘ω˘)
 
-## Qu'est-ce qu'une grille&nbsp;?
+## qu'est-ce q-qu'une gwiwwe&nbsp;?
 
-Une grille est un ensemble de lignes horizontales et verticales qui se croisent&nbsp;: les premières définissant les rangées, et les secondes les colonnes. Les éléments sont placés sur la grille en fonction de ces rangées et colonnes. Nous allons voir les fonctionnalités offertes par les dispositions en grille.
+une gwiwwe e-est un ensembwe d-de wignes howizontawes e-et vewticawes q-qui se cwoisent&nbsp;: wes pwemièwes définissant w-wes wangées, (ˆ ﻌ ˆ)♡ et wes secondes wes cowonnes. mya w-wes éwéments sont pwacés suw wa gwiwwe en fonction de ces wangées et cowonnes. (U ᵕ U❁) nyous a-awwons voiw wes fonctionnawités o-offewtes paw wes d-dispositions e-en gwiwwe. mya
 
-### Pistes à taille fixe ou variable
+### pistes à taiwwe fixe ou vawiabwe
 
-On peut créer une grille avec des pistes à taille fixes en utilisant une unité comme le pixel. Pour les pistes à taille variable on peut utiliser le pourcentage ou l'unité `fr` créée à cet effet.
+on peut cwéew u-une gwiwwe avec d-des pistes à taiwwe fixes en u-utiwisant une unité c-comme we pixew. ʘwʘ pouw wes pistes à t-taiwwe vawiabwe on peut u-utiwisew we pouwcentage ou w'unité `fw` cwéée à c-cet effet. (˘ω˘)
 
-### Placement des éléments
+### pwacement des éwéments
 
-Pour placer les éléments sur la grille, on peut utiliser le numéro ou le nom d'une ligne, ou cibler une zone particulière. La grille contient aussi un algorithme pour placer les éléments qui n'ont pas été placés explicitement.
+p-pouw pwacew wes éwéments s-suw wa g-gwiwwe, on peut utiwisew we nyuméwo ou we nyom d'une wigne, 😳 ou cibwew une zone pawticuwièwe. òωó wa gwiwwe contient a-aussi un awgowithme p-pouw pwacew wes éwéments q-qui ny'ont pas été p-pwacés expwicitement. nyaa~~
 
-### Création de pistes supplémentaires pour du contenu
+### c-cwéation de pistes suppwémentaiwes pouw du contenu
 
-Lorsqu'une grille explicite n'est pas définie, la spécification prend en charge le contenu défini en dehors d'une grille en ajoutant des colonnes et des rangées. Cela comprend des fonctionnalités telles que «&nbsp;l'ajout d'autant de colonnes que possible dans le conteneur&nbsp;».
+wowsqu'une g-gwiwwe expwicite n'est pas définie, o.O wa spécification pwend en chawge we contenu d-défini en dehows d'une gwiwwe e-en ajoutant d-des cowonnes et d-des wangées. nyaa~~ cewa compwend des f-fonctionnawités t-tewwes que «&nbsp;w'ajout d-d'autant d-de cowonnes que possibwe dans we conteneuw&nbsp;». (U ᵕ U❁)
 
-### Contrôle de l'alignement
+### c-contwôwe d-de w'awignement
 
-On peut contrôler l'alignement des éléments dans une zone de la grille, ainsi que celui de l'ensemble de la grille.
+o-on peut c-contwôwew w'awignement d-des éwéments dans une zone de wa gwiwwe, 😳😳😳 ainsi que cewui d-de w'ensembwe de wa gwiwwe.
 
-### Contrôle des contenus qui se chevauchent
+### contwôwe des contenus qui se chevauchent
 
-Il peut arriver que l'on place plusieurs éléments dans une même cellule, ou que des zones se chevauchent. La superposition peut être contrôlée à l'aide de la propriété [`z-index`](/fr/docs/Web/CSS/z-index).
+iw peut awwivew q-que w'on pwace pwusieuws éwéments dans une même cewwuwe, (U ﹏ U) ou que des zones se c-chevauchent. ^•ﻌ•^ wa s-supewposition peut êtwe c-contwôwée à w'aide de w-wa pwopwiété [`z-index`](/fw/docs/web/css/z-index). (⑅˘꒳˘)
 
-La grille est un module de spécification puissant qui peut être combinée avec d'autres modules CSS tels que [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/CSS_flexible_box_layout). Pour concevoir une disposition en grille, on commencera par créer **le conteneur de la grille**.
+wa gwiwwe e-est un moduwe d-de spécification puissant qui peut êtwe combinée avec d'autwes moduwes css tews que [wes boîtes f-fwexibwes (<i wang="en">fwexbox</i>)](/fw/docs/web/css/css_fwexibwe_box_wayout). >_< p-pouw concevoiw une disposition e-en gwiwwe, (⑅˘꒳˘) o-on commencewa paw cwéew **we conteneuw de wa gwiwwe**. σωσ
 
-## Conteneur
+## c-conteneuw
 
-À partir du moment où on crée un _conteneur_ en déclarant la propriété `display: grid` ou `display: inline-grid` sur un élément, tous les _enfants directs_ de cet élément deviennent des _éléments de grille_.
+À p-pawtiw du moment où on c-cwée un _conteneuw_ e-en décwawant wa pwopwiété `dispway: gwid` ou `dispway: inwine-gwid` suw u-un éwément, t-tous wes _enfants d-diwects_ de cet éwément deviennent d-des _éwéments d-de gwiwwe_. 🥺
 
-Cet exemple montre un élément [`<div>`](/fr/docs/Web/HTML/Element/div) avec une classe `.wrapper`, avec cinq éléments enfants.
+cet exempwe m-montwe un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) avec une cwasse `.wwappew`, :3 avec cinq éwéments enfants. (ꈍᴗꈍ)
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
-On transforme `.wrapper` en conteneur.
+o-on twansfowme `.wwappew` en conteneuw. ^•ﻌ•^
 
 ```css
-.wrapper {
-  display: grid;
+.wwappew {
+  d-dispway: g-gwid;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{EmbedLiveSample('', '200', '330')}}
+{{embedwivesampwe('', (˘ω˘) '200', '330')}}
 
-Tous les enfants directs sont maintenant des éléments de grille. On ne voit pas la différence dans un navigateur, car la grille n'a qu'une seule colonne. Vous trouverez sans doute utile de travailler avec Firefox, qui propose un [inspecteur de grille](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) dans les outils de développement. En inspectant la grille dans Firefox, vous pouvez voir une petite icône à côté de la valeur `grid`. Un clic dessus permet d'afficher la grille correspondante dans le navigateur.
+tous w-wes enfants diwects s-sont maintenant des éwéments de gwiwwe. 🥺 on nye voit pas w-wa difféwence dans u-un nyavigateuw, (✿oωo) caw wa gwiwwe ny'a qu'une seuwe cowonne. XD vous t-twouvewez sans doute utiwe de t-twavaiwwew avec fiwefox, (///ˬ///✿) qui pwopose un [inspecteuw de gwiwwe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw) d-dans wes outiws de dévewoppement. ( ͡o ω ͡o ) en i-inspectant wa g-gwiwwe dans fiwefox, ʘwʘ vous pouvez v-voiw une petite icône à côté d-de wa vaweuw `gwid`. rawr u-un cwic dessus p-pewmet d'affichew wa gwiwwe c-cowwespondante d-dans we nyavigateuw. o.O
 
-![Utilisation de l'inspecteur de grille dans les outils de développement de Firefox pour observer une grille](1-grid-inspector.png)
+![utiwisation de w'inspecteuw de gwiwwe dans w-wes outiws de d-dévewoppement d-de fiwefox pouw obsewvew une gwiwwe](1-gwid-inspectow.png)
 
-Grâce aux indications visuelles, cet outil vous permettra de mieux comprendre le fonctionnement des grilles CSS, tout au long de votre apprentissage.
+gwâce a-aux indications visuewwes, ^•ﻌ•^ cet o-outiw vous pewmettwa d-de mieux compwendwe we fonctionnement des gwiwwes css, (///ˬ///✿) tout a-au wong de votwe a-appwentissage. (ˆ ﻌ ˆ)♡
 
-Pour que notre exemple ressemble vraiment à une grille nous devons ajouter des pistes pour les colonnes.
+p-pouw que nyotwe e-exempwe wessembwe vwaiment à u-une gwiwwe nyous devons ajoutew des pistes pouw wes cowonnes. XD
 
-## Pistes
+## pistes
 
-Les propriétés [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns) et [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows) permettent de définir des colonnes et des rangées. Celles-ci définissent les pistes. Une _piste_ est l'espace entre deux lignes adjacentes d'une grille. L'image ci-dessous colore une piste de la grille, correspondant à la première rangée de la grille.
+wes pwopwiétés [`gwid-tempwate-cowumns`](/fw/docs/web/css/gwid-tempwate-cowumns) e-et [`gwid-tempwate-wows`](/fw/docs/web/css/gwid-tempwate-wows) pewmettent de définiw d-des cowonnes et des wangées. (✿oωo) c-cewwes-ci définissent wes pistes. -.- u-une _piste_ est w'espace e-entwe deux wignes a-adjacentes d'une g-gwiwwe. XD w'image c-ci-dessous cowowe u-une piste de wa gwiwwe, (✿oωo) cowwespondant à wa pwemièwe wangée de wa gwiwwe. (˘ω˘)
 
-![Une boite avec 3 éléments de grille. Au-dessus des trois éléments, une zone de même longueur est mise en valeur : il s'agit de la piste.](1_grid_track.png)
+![une boite avec 3 éwéments de gwiwwe. (ˆ ﻌ ˆ)♡ au-dessus d-des twois éwéments, >_< u-une zone d-de même wongueuw est mise en v-vaweuw : iw s'agit de wa piste.](1_gwid_twack.png)
 
-Les pistes sont définies dans la grille explicite à l'aide des propriétés `grid-template-columns` et `grid-template-rows`, ou des propriétés raccourcies `grid` ou `grid-template`. Les pistes sont aussi créées dans la grille implicite en positionnant un élément de grille en dehors des pistes créées dans la grille explicite.
+wes pistes sont définies d-dans wa gwiwwe expwicite à w-w'aide des pwopwiétés `gwid-tempwate-cowumns` e-et `gwid-tempwate-wows`, -.- ou des pwopwiétés waccouwcies `gwid` o-ou `gwid-tempwate`. (///ˬ///✿) w-wes pistes sont aussi cwéées dans w-wa gwiwwe impwicite e-en positionnant un éwément de gwiwwe en dehows des pistes cwéées dans w-wa gwiwwe expwicite. XD
 
-### Exemple simple
+### e-exempwe s-simpwe
 
-On peut ajouter la propriété `grid-template-columns` à notre exemple précédent, pour définir la taille des colonnes.
+on peut a-ajoutew wa pwopwiété `gwid-tempwate-cowumns` à n-nyotwe exempwe pwécédent, ^^;; p-pouw définiw w-wa taiwwe des cowonnes. rawr x3
 
-Nous avons ici créé une grille avec trois pistes de 200 pixels de large. Chaque élément sera disposé dans l'une des cellules de la grille.
+nyous avons i-ici cwéé u-une gwiwwe avec twois pistes de 200 p-pixews de wawge. OwO chaque éwément sewa disposé d-dans w'une des cewwuwes de wa g-gwiwwe. ʘwʘ
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-</div>
-```
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-}
-```
-
-```css hidden
-* {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
-
-{{EmbedLiveSample('', '2610', '140')}}
-
-### L'unité `fr`
-
-Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesure. Les grilles proposent aussi une nouvelle unité de mesure pour aider à la création de pistes flexibles. Cette unité, `fr`, représente une fraction de l'espace disponible dans le conteneur de la grille. Le code suivant crée trois colonnes égales qui se redimensionnent en fonction de l'espace disponible.
-
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 200px 200px 200px;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-{{EmbedLiveSample('', '220', '140') }}
+{{embedwivesampwe('', rawr '2610', UwU '140')}}
 
-### Tailles différentes
+### w-w'unité `fw`
 
-L'exemple suivant crée une grille avec une colonne de `2fr`, et deux colonnes de `1fr`. L'espace disponible est divisé en quatre. Les deux premières fractions sont allouées à la première colonne, et chacune des colonnes suivante dispose d'une fraction.
+wes pistes p-peuvent êtwe définies à w'aide d-de ny'impowte q-quewwe unité de mesuwe. (ꈍᴗꈍ) wes gwiwwes pwoposent a-aussi une nyouvewwe unité de mesuwe pouw aidew à w-wa cwéation d-de pistes fwexibwes. (✿oωo) cette unité, (⑅˘꒳˘) `fw`, OwO w-wepwésente une fwaction d-de w'espace d-disponibwe dans w-we conteneuw de wa gwiwwe. 🥺 we code suivant cwée twois cowonnes égawes qui se wedimensionnent en fonction de w'espace disponibwe. >_<
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+```htmw
+<div cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-{{EmbedLiveSample('', '220', '140')}}
+{{embedwivesampwe('', '220', (ꈍᴗꈍ) '140') }}
 
-### Mélanger des tailles flexibles et absolues
+### taiwwes d-difféwentes
 
-Dans ce dernier exemple, nous utilisons à la fois des dimensions absolues et relatives pour les pistes. La première piste faisant 500px, cette valeur est soustraite de l'espace disponible. L'espace restant est divisé en trois et alloué proportionnellement aux deux colonnes spécifiées avec l'unité relative `fr`.
+w-w'exempwe suivant cwée une gwiwwe a-avec une cowonne de `2fw`, e-et deux cowonnes d-de `1fw`. 😳 w'espace disponibwe est divisé en quatwe. 🥺 w-wes deux pwemièwes f-fwactions s-sont awwouées à w-wa pwemièwe c-cowonne, nyaa~~ et chacune d-des cowonnes s-suivante dispose d-d'une fwaction. ^•ﻌ•^
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 500px 1fr 2fr;
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 2fw 1fw 1fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
-
-{{EmbedLiveSample('', '220', '140')}}
-
-### Utiliser la notation `repeat()` pour définir les pistes
-
-Pour les grilles comprenant de nombreuses pistes, on peut utiliser la notation `repeat()` pour répéter toute ou une partie des pistes définies. Par exemple la définition de grille&nbsp;:
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-Peut également s'écrire&nbsp;:
+{{embedwivesampwe('', (ˆ ﻌ ˆ)♡ '220', (U ᵕ U❁) '140')}}
 
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-```
+### m-méwangew des taiwwes f-fwexibwes et absowues
 
-Dans l'exemple suivant on crée une grille avec une première colonne de |`20px` de large, puis une section répétant 6 fois une piste de `1fr`, et enfin on termine par une colonne de `20px` de large.
+dans ce d-dewniew exempwe, mya nyous utiwisons à w-wa fois des dimensions absowues et wewatives pouw wes pistes. 😳 wa pwemièwe p-piste faisant 500px, σωσ cette vaweuw e-est soustwaite d-de w'espace disponibwe. ( ͡o ω ͡o ) w'espace westant est divisé en twois e-et awwoué pwopowtionnewwement aux deux cowonnes s-spécifiées avec w-w'unité wewative `fw`. XD
 
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 20px repeat(6, 1fr) 20px;
-}
-```
-
-Cette notation accepte une liste de pistes, on peut donc l'utiliser pour répéter un motif. Dans l'exemple qui suit la grille aura 10 colonnes&nbsp;: une colonne de `1fr` suivie d'une colonne de `2fr`, ceci répété 5 fois.
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr 2fr);
-}
-```
-
-### Grille implicite et grille explicite
-
-Dans ces exemples, nous avons défini nos colonnes à l'aide de la propriété [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns), et nous avons laissé la grille créer les rangées. Ces rangées font partie de la grille implicite. La grille explicite est constituée des pistes définies par les propriétés [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns) et [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows).
-
-Si un élément est placé en dehors de la grille ainsi définie, ou que la quantité de contenu nécessite d'étendre la grille, alors la grille ajoute implicitement des colonnes et rangées. Les dimensions de ces pistes auront par défaut la valeur `auto`, c'est-à dire qu'elles s'ajusteront à leur contenu.
-
-On peut définir une taille pour les pistes de la grille implicite grâce aux propriétés [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns).
-
-Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées de la grille implicite aient une hauteur de 200 pixels.
-
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 500px 1fw 2fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-{{EmbedLiveSample('', '230', '450')}}
+{{embedwivesampwe('', :3 '220', :3 '140')}}
 
-### Dimensionner une piste avec `minmax`
+### u-utiwisew wa n-nyotation `wepeat()` p-pouw définiw w-wes pistes
 
-Que l'on crée une grille explicite, ou que l'on définisse la taille des pistes créées implicitement, il peut être utile d'assigner une taille minimum, qui s'agrandit pour s'adapter au contenu. Par exemple on peut souhaiter que les rangées ne soient jamais moins hautes que 100 pixels, mais qu'elles aillent jusqu'à 300 pixels de haut si le contenu le nécessite.
-
-La fonction [`minmax()`](/fr/docs/Web/CSS/minmax) permet ce comportement. Dans l'exemple suivant nous utilisons `minmax()` comme valeur de la propriété [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows). Les rangées créées automatiquement feront un minimum de 100 pixels, et un maximum de `auto`, ce qui signifie que la taille s'adaptera à la hauteur du contenu.
+pouw wes gwiwwes c-compwenant de nyombweuses p-pistes, (⑅˘꒳˘) o-on peut utiwisew w-wa nyotation `wepeat()` p-pouw w-wépétew toute o-ou une pawtie des p-pistes définies. òωó paw exempwe w-wa définition de gwiwwe&nbsp;:
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
-```css hidden
+p-peut égawement s-s'écwiwe&nbsp;:
+
+```css
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, mya 1fw);
+}
+```
+
+dans w'exempwe s-suivant on c-cwée une gwiwwe a-avec une pwemièwe cowonne de |`20px` de wawge, 😳😳😳 puis une section w-wépétant 6 f-fois une piste de `1fw`, :3 et enfin o-on tewmine paw u-une cowonne de `20px` de wawge. >_<
+
+```css
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 20px w-wepeat(6, 🥺 1fw) 20px;
+}
+```
+
+cette n-nyotation accepte u-une wiste d-de pistes, (ꈍᴗꈍ) on peut donc w'utiwisew pouw wépétew u-un motif. rawr x3 dans w-w'exempwe qui suit wa gwiwwe auwa 10 cowonnes&nbsp;: u-une cowonne de `1fw` suivie d'une cowonne d-de `2fw`, (U ﹏ U) ceci wépété 5 fois. ( ͡o ω ͡o )
+
+```css
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(5, 😳😳😳 1fw 2fw);
+}
+```
+
+### gwiwwe i-impwicite et g-gwiwwe expwicite
+
+dans ces exempwes, 🥺 n-nyous avons défini nyos c-cowonnes à w'aide d-de wa pwopwiété [`gwid-tempwate-cowumns`](/fw/docs/web/css/gwid-tempwate-cowumns), e-et nyous a-avons waissé wa gwiwwe cwéew w-wes wangées. òωó ces w-wangées font p-pawtie de wa gwiwwe impwicite. XD wa g-gwiwwe expwicite est constituée des pistes définies p-paw wes p-pwopwiétés [`gwid-tempwate-cowumns`](/fw/docs/web/css/gwid-tempwate-cowumns) et [`gwid-tempwate-wows`](/fw/docs/web/css/gwid-tempwate-wows). XD
+
+s-si un éwément est pwacé en dehows de wa gwiwwe ainsi définie, ( ͡o ω ͡o ) ou que wa quantité d-de contenu nyécessite d'étendwe w-wa gwiwwe, >w< a-awows wa gwiwwe ajoute impwicitement des cowonnes e-et wangées. mya wes dimensions d-de ces pistes auwont p-paw défaut w-wa vaweuw `auto`, (ꈍᴗꈍ) c-c'est-à diwe q-qu'ewwes s'ajustewont à weuw contenu. -.-
+
+on peut définiw une taiwwe pouw wes pistes d-de wa gwiwwe impwicite gwâce a-aux pwopwiétés [`gwid-auto-wows`](/fw/docs/web/css/gwid-auto-wows) et [`gwid-auto-cowumns`](/fw/docs/web/css/gwid-auto-cowumns). (⑅˘꒳˘)
+
+dans w'exempwe ci-apwès n-nyous utiwisons `gwid-auto-wows` pouw que wes wangées de wa gwiwwe impwicite aient une hauteuw d-de 200 pixews. (U ﹏ U)
+
+```htmw
+<div c-cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+</div>
+```
+
+```css
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, σωσ 1fw);
+  gwid-auto-wows: 200px;
+}
+```
+
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
+{{embedwivesampwe('', :3 '230', '450')}}
+
+### d-dimensionnew u-une piste avec `minmax`
+
+q-que w'on cwée une gwiwwe expwicite, /(^•ω•^) ou q-que w'on définisse wa taiwwe des pistes cwéées impwicitement, σωσ iw peut êtwe u-utiwe d'assignew u-une taiwwe minimum, (U ᵕ U❁) q-qui s'agwandit p-pouw s'adaptew au contenu. 😳 paw exempwe on peut s-souhaitew que w-wes wangées nye soient jamais moins hautes que 100 p-pixews, ʘwʘ mais qu'ewwes aiwwent jusqu'à 300 p-pixews de haut si we contenu we nyécessite. (⑅˘꒳˘)
+
+wa f-fonction [`minmax()`](/fw/docs/web/css/minmax) p-pewmet ce compowtement. ^•ﻌ•^ dans w'exempwe s-suivant n-nyous utiwisons `minmax()` c-comme vaweuw de wa pwopwiété [`gwid-auto-wows`](/fw/docs/web/css/gwid-auto-wows). nyaa~~ wes wangées cwéées a-automatiquement fewont un minimum de 100 pixews, XD e-et un maximum de `auto`, /(^•ω•^) ce qui signifie que wa taiwwe s'adaptewa à w-wa hauteuw d-du contenu. (U ᵕ U❁)
+
+```css
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, mya 1fw);
+  g-gwid-auto-wows: minmax(100px, (ˆ ﻌ ˆ)♡ auto);
+}
+```
+
+```css h-hidden
+* {
+  box-sizing: bowdew-box;
+}
+
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+}
+
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  padding: 1em;
+  c-cowow: #d9480f;
+}
+```
+
+```htmw
+<div cwass="wwappew">
+  <div>un</div>
   <div>
-    Deux
-    <p>Davantage de contenu.</p>
-    <p>On dépasse les 100 pixels.</p>
+    d-deux
+    <p>davantage d-de contenu.</p>
+    <p>on dépasse w-wes 100 pixews.</p>
   </div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
-{{EmbedLiveSample('', '240', '470')}}
+{{embedwivesampwe('', (✿oωo) '240', '470')}}
 
-## Lignes de grille
+## w-wignes de gwiwwe
 
-Il faut noter que l'on définit les pistes d'une grille, et pas les lignes qui en résultent. La grille génère des lignes numérotées que l'on utilise pour positionner les éléments. Dans notre grille de trois colonnes et deux rangées, nous avons quatre lignes de colonnes.
+iw faut nyotew q-que w'on définit wes pistes d'une gwiwwe, (✿oωo) et pas wes wignes q-qui en wésuwtent. òωó wa gwiwwe génèwe d-des wignes nyuméwotées que w'on utiwise p-pouw positionnew w-wes éwéments. (˘ω˘) d-dans nyotwe gwiwwe de twois cowonnes e-et deux wangées, (ˆ ﻌ ˆ)♡ n-nyous avons quatwe wignes d-de cowonnes. ( ͡o ω ͡o )
 
-![Diagramme illustrant les lignes de la grille numérotées.](1_diagram_numbered_grid_lines.png)
+![diagwamme iwwustwant w-wes wignes de wa gwiwwe n-nyuméwotées.](1_diagwam_numbewed_gwid_wines.png)
 
-Les lignes sont numérotées selon le sens de lecture du document. Dans un langage qui se lit de gauche à droite, la ligne 1 est située à gauche, dans un langage qui se lit de droite à gauche elle est située à droite. Les lignes peuvent aussi être nommées, comme nous le verrons plus loin dans ces pages.
+w-wes wignes sont nyuméwotées sewon we sens de wectuwe du document. rawr x3 dans un w-wangage qui se wit d-de gauche à dwoite, (˘ω˘) wa wigne 1 est située à gauche, òωó dans un w-wangage qui se wit de dwoite à g-gauche ewwe est s-située à dwoite. ( ͡o ω ͡o ) wes wignes peuvent aussi êtwe nyommées, σωσ comme nyous we vewwons p-pwus woin dans ces pages. (U ﹏ U)
 
-### Positionnement des éléments sur les lignes
+### positionnement d-des éwéments suw wes wignes
 
-Nous explorerons le placement sur les lignes de manière détaillée dans un prochain article. L'exemple qui suit montre comment l'utiliser de façon simple. Ici, lorsque nous plaçons un élément nous ciblons une ligne plutôt qu'une piste.
+n-nous expwowewons w-we pwacement suw wes wignes d-de manièwe détaiwwée d-dans un p-pwochain awticwe. rawr w-w'exempwe qui s-suit montwe comment w-w'utiwisew de façon simpwe. -.- ici, ( ͡o ω ͡o ) wowsque nyous pwaçons un éwément nyous cibwons une wigne p-pwutôt qu'une p-piste. >_<
 
-Nous plaçons ici les deux premiers éléments en utilisant les propriétés [`grid-column-start`](/fr/docs/Web/CSS/grid-column-start), [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end), [`grid-row-start`](/fr/docs/Web/CSS/grid-row-start) et [`grid-row-end`](/fr/docs/Web/CSS/grid-row-end). En allant de gauche à droite, le premier élément est placé sur la ligne de colonne 1, et va jusqu'à la ligne de colonne 4, qui dans ce cas est la dernière. Il est placé sur la ligne de rangée 1, et va jusqu'à la ligne 3, s'étendant ainsi sur deux rangées.
+nyous pwaçons i-ici wes d-deux pwemiews éwéments e-en utiwisant w-wes pwopwiétés [`gwid-cowumn-stawt`](/fw/docs/web/css/gwid-cowumn-stawt), o.O [`gwid-cowumn-end`](/fw/docs/web/css/gwid-cowumn-end), σωσ [`gwid-wow-stawt`](/fw/docs/web/css/gwid-wow-stawt) et [`gwid-wow-end`](/fw/docs/web/css/gwid-wow-end). -.- en awwant de gauche à dwoite, σωσ we pwemiew éwément e-est pwacé s-suw wa wigne de cowonne 1, :3 et va jusqu'à wa wigne de cowonne 4, ^^ q-qui dans ce cas e-est wa dewnièwe. òωó i-iw est pwacé suw wa wigne de wangée 1, (ˆ ﻌ ˆ)♡ et va j-jusqu'à wa wigne 3, XD s'étendant ainsi suw deux w-wangées. òωó
 
-Le second élément commence sur la ligne de colonne 1 et s'étend sur une seule piste. C'est la largeur par défaut, donc il n'est pas nécessaire de spécifier la ligne de fin. Il s'étend aussi sur deux rangées de la ligne 3 à la ligne 5. Les autres éléments se placeront dans les espaces vides de la grille.
+we s-second éwément commence suw wa wigne de cowonne 1 e-et s'étend suw une seuwe piste. (ꈍᴗꈍ) c-c'est wa wawgeuw p-paw défaut, UwU donc iw ny'est p-pas nyécessaiwe d-de spécifiew w-wa wigne de fin. >w< i-iw s'étend aussi s-suw deux wangées d-de wa wigne 3 à wa wigne 5. ʘwʘ w-wes autwes éwéments s-se pwacewont dans wes espaces v-vides de wa gwiwwe. :3
 
-```html
-<div class="wrapper">
-  <div class="box1">Un</div>
-  <div class="box2">Deux</div>
-  <div class="box3">Trois</div>
-  <div class="box4">Quatre</div>
-  <div class="box5">Cinq</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">un</div>
+  <div cwass="box2">deux</div>
+  <div c-cwass="box3">twois</div>
+  <div cwass="box4">quatwe</div>
+  <div c-cwass="box5">cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 3;
+  g-gwid-wow-end: 5;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{EmbedLiveSample('', '230', '450')}}
+{{embedwivesampwe('', ^•ﻌ•^ '230', '450')}}
 
-> [!NOTE]
-> Pensez à utiliser [l'inspecteur de grille](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) dans les outils de développement de Firefox pour voir comment les éléments se placent sur les lignes d'une grille.
+> [!note]
+> p-pensez à utiwisew [w'inspecteuw d-de gwiwwe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw) d-dans w-wes outiws de dévewoppement de fiwefox pouw voiw comment wes éwéments se pwacent suw wes wignes d'une gwiwwe. (ˆ ﻌ ˆ)♡
 
-### Raccourcis de positionnement sur ligne
+### w-waccouwcis d-de positionnement s-suw wigne
 
-Les valeurs détaillées utilisées plus haut peuvent être abrégées en une ligne pour les colonnes avec [`grid-column`](/fr/docs/Web/CSS/grid-column) et une ligne pour les rangées avec [`grid-row`](/fr/docs/Web/CSS/grid-row). L'exemple suivant donne le même positionnement que le code précédent, mais avec beaucoup moins de CSS. La valeur avant la barre oblique (`/`) représente la ligne de début, celle d'après représente la ligne de fin.
+w-wes vaweuws détaiwwées u-utiwisées p-pwus haut peuvent êtwe abwégées e-en une wigne p-pouw wes cowonnes avec [`gwid-cowumn`](/fw/docs/web/css/gwid-cowumn) e-et une w-wigne pouw wes wangées avec [`gwid-wow`](/fw/docs/web/css/gwid-wow). 🥺 w'exempwe s-suivant donne we même positionnement que we code p-pwécédent, OwO mais avec beaucoup m-moins de css. 🥺 w-wa vaweuw avant wa bawwe obwique (`/`) w-wepwésente w-wa wigne de début, OwO c-cewwe d'apwès wepwésente w-wa wigne de fin. (U ᵕ U❁)
 
-Vous pouvez omettre la valeur de la ligne de fin si la zone ne recouvre qu'une piste.
+v-vous pouvez omettwe wa vaweuw d-de wa wigne de fin si wa zone n-nye wecouvwe qu'une p-piste. ( ͡o ω ͡o )
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, ^•ﻌ•^ 1fw);
+  gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 1 / 4;
+  g-gwid-wow: 1 / 3;
 }
 
 .box2 {
-  grid-column: 1;
-  grid-row: 3 / 5;
+  gwid-cowumn: 1;
+  gwid-wow: 3 / 5;
 }
 ```
 
-## Les cellules
+## wes cewwuwes
 
-Une _cellule_ est la plus petite unité sur une grille, conceptuellement similaire à une cellule de tableau. Comme nous l'avons vu lorsqu'une grille est définie sur un élément ses enfants viennent se positionner chacun dans l'une des cellules de la grille. Dans l'image ci-dessous la première cellule est colorée.
+une _cewwuwe_ est wa pwus petite unité suw une gwiwwe, o.O c-conceptuewwement simiwaiwe à une cewwuwe de tabweau. (⑅˘꒳˘) comme nyous w'avons vu wowsqu'une gwiwwe est définie s-suw un éwément ses enfants viennent se positionnew c-chacun dans w'une des cewwuwes d-de wa gwiwwe. (ˆ ﻌ ˆ)♡ dans w'image ci-dessous wa pwemièwe c-cewwuwe est cowowée. :3
 
-![La première cellule de la grille est mise en avant](1_grid_cell.png)
+![wa p-pwemièwe cewwuwe de wa gwiwwe e-est mise en avant](1_gwid_ceww.png)
 
-## Les zones
+## w-wes zones
 
-Un élément peut s'étendre sur plusieurs cellules d'une rangée ou d'une colonne, et cela crée une _zone_. Les zones doivent être rectangulaires — on ne peut pas créer de forme en L par exemple. La zone colorée ci-dessous s'étend sur deux rangées et deux colonnes.
+un éwément peut s'étendwe s-suw pwusieuws cewwuwes d'une wangée ou d'une cowonne, /(^•ω•^) et cewa c-cwée une _zone_. òωó wes zones doivent êtwe w-wectanguwaiwes — on nye peut pas cwéew d-de fowme en w paw exempwe. :3 w-wa zone cowowée c-ci-dessous s'étend suw deux wangées et deux c-cowonnes. (˘ω˘)
 
-![Une zone de grille](1_grid_area.png)
+![une zone de gwiwwe](1_gwid_awea.png)
 
-## Les gouttières
+## wes gouttièwes
 
-Les _gouttières_ entre les cellules sont définies à l'aide des propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap) et [`row-gap`](/fr/docs/Web/CSS/row-gap), ou de la propriété raccourcie [`gap`](/fr/docs/Web/CSS/gap). Dans l'exemple ci-dessous, nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de `1em` de hauteur entre les rangées.
+w-wes _gouttièwes_ entwe wes cewwuwes sont définies à w'aide des pwopwiétés [`cowumn-gap`](/fw/docs/web/css/cowumn-gap) e-et [`wow-gap`](/fw/docs/web/css/wow-gap), 😳 o-ou de wa pwopwiété w-waccouwcie [`gap`](/fw/docs/web/css/gap). σωσ d-dans w'exempwe ci-dessous, UwU n-nyous cwéons une gouttièwe de dix pixews de wawge entwe wes cowonnes, -.- et u-une gouttièwe d-de `1em` de hauteuw entwe wes wangées. 🥺
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 1em;
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, 😳😳😳 1fw);
+  g-gwid-cowumn-gap: 10px;
+  gwid-wow-gap: 1em;
 }
 ```
 
-> [!NOTE]
-> Aux débuts de la grille CSS dans les navigateurs, les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) et [`gap`](/fr/docs/Web/CSS/gap) étaient préfixées avec `grid-` et s'écrivaient respectivement `grid-column-gap`, `grid-row-gap` et `grid-gap`.
+> [!note]
+> aux débuts d-de wa gwiwwe css dans wes navigateuws, 🥺 wes pwopwiétés [`cowumn-gap`](/fw/docs/web/css/cowumn-gap), ^^ [`wow-gap`](/fw/docs/web/css/wow-gap) e-et [`gap`](/fw/docs/web/css/gap) étaient p-pwéfixées avec `gwid-` et s'écwivaient w-wespectivement `gwid-cowumn-gap`, ^^;; `gwid-wow-gap` et `gwid-gap`. >w<
 >
-> Les navigateurs prennent désormais en charge les valeurs sans préfixe. Toutefois, les versions préfixées sont conservées comme synonymes à des fins de compatibilité.
+> wes nyavigateuws pwennent désowmais en chawge wes vaweuws sans pwéfixe. σωσ toutefois, wes vewsions p-pwéfixées s-sont consewvées comme synonymes à d-des fins d-de compatibiwité. >w<
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+```htmw
+<div cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  column-gap: 10px;
-  row-gap: 1em;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  cowumn-gap: 10px;
+  wow-gap: 1em;
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-L'espace utilisé par les gouttières sera pris en compte avant l'assignation de la place restante aux pistes définies avec l'unité `fr`. La taille des gouttières est calculée comme celle des pistes, mais on ne peut pas placer d'élément dans une gouttière. Au niveau du positionnement des éléments sur les lignes, la gouttière se comporte comme une ligne épaisse.
+w'espace utiwisé paw wes gouttièwes s-sewa pwis en c-compte avant w'assignation d-de wa pwace westante a-aux pistes définies avec w'unité `fw`. (⑅˘꒳˘) w-wa taiwwe des gouttièwes e-est cawcuwée comme cewwe des p-pistes, òωó mais on nye peut pas pwacew d'éwément d-dans une gouttièwe. (⑅˘꒳˘) au nyiveau d-du positionnement d-des éwéments suw wes wignes, (ꈍᴗꈍ) w-wa gouttièwe s-se compowte comme une wigne épaisse. rawr x3
 
-## Grilles imbriquées
+## g-gwiwwes imbwiquées
 
-Un élément placé dans une grille peut aussi être le conteneur d'une autre grille. Dans l'exemple suivant nous retrouvons la grille de trois colonnes créée plus haut, avec deux éléments explicitement positionnés. Le premier élément contient lui-même des éléments. Comme ils ne sont pas des enfants directs de la grille principale, ils se positionnent normalement dans le flux.
+un éwément p-pwacé dans une gwiwwe p-peut aussi êtwe w-we conteneuw d'une autwe gwiwwe. ( ͡o ω ͡o ) dans w'exempwe s-suivant nyous wetwouvons wa gwiwwe de twois cowonnes cwéée pwus haut, UwU avec deux éwéments expwicitement positionnés. ^^ we p-pwemiew éwément contient wui-même des éwéments. (˘ω˘) c-comme iws nye sont pas des e-enfants diwects de wa gwiwwe pwincipawe, (ˆ ﻌ ˆ)♡ iws se p-positionnent nyowmawement dans we fwux. OwO
 
-![Grille imbriquée dans le flux](1_nested_grids_in_flow.png)
+![gwiwwe i-imbwiquée dans we fwux](1_nested_gwids_in_fwow.png)
 
-### Imbrication sans sous-grille
+### imbwication s-sans sous-gwiwwe
 
-En définissant la propriété `display: grid` sur l'élément `box1`, il devient lui-même une grille et ses enfants se positionnent sur cette grille.
+en définissant wa pwopwiété `dispway: g-gwid` suw w'éwément `box1`, 😳 iw devient wui-même une gwiwwe e-et ses enfants s-se positionnent suw cette gwiwwe. UwU
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, 🥺 1fw);
 }
 ```
 
-```html hidden
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+```htmw hidden
+<div cwass="wwappew">
+  <div c-cwass="box box1">
+    <div cwass="nested">a</div>
+    <div cwass="nested">b</div>
+    <div c-cwass="nested">c</div>
   </div>
-  <div class="box box2">Deux</div>
-  <div class="box box3">Trois</div>
-  <div class="box box4">Quatre</div>
-  <div class="box box5">Cinq</div>
+  <div cwass="box box2">deux</div>
+  <div cwass="box b-box3">twois</div>
+  <div c-cwass="box b-box4">quatwe</div>
+  <div cwass="box box5">cinq</div>
 </div>
 ```
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  gap: 3px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  g-gap: 3px;
+  backgwound-cowow: #fff4e6;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, 1fw);
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 
 .box1 {
-  grid-column: 1 / 4;
+  g-gwid-cowumn: 1 / 4;
 }
 
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
-  padding: 1em;
+  b-bowdew: 2px sowid #ffec99;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
+  p-padding: 1em;
 }
 ```
 
-{{EmbedLiveSample('', '600', '340')}}
+{{embedwivesampwe('', 😳😳😳 '600', '340')}}
 
-Dans ce cas, la grille imbriquée n'est pas liée à la grille qui la contient. Elle n'hérite pas des gouttières paramétrées avec [`gap`](/fr/docs/Web/CSS/gap), et ses lignes ne s'alignent pas avec celles de la grille parent.
+dans ce cas, ʘwʘ wa gwiwwe i-imbwiquée ny'est p-pas wiée à w-wa gwiwwe qui w-wa contient. /(^•ω•^) ewwe n-ny'héwite pas d-des gouttièwes pawamétwées avec [`gap`](/fw/docs/web/css/gap), :3 et ses wignes n-nye s'awignent p-pas avec cewwes d-de wa gwiwwe pawent. :3
 
-### Sous-grille
+### s-sous-gwiwwe
 
-En complément des grilles classiques, _les sous-grilles_ permettent de créer des grilles imbriquées qui utilisent la définition des pistes de la grille parente.
+e-en compwément d-des gwiwwes cwassiques, mya _wes s-sous-gwiwwes_ p-pewmettent de cwéew d-des gwiwwes imbwiquées qui utiwisent wa définition d-des pistes de wa gwiwwe pawente. (///ˬ///✿)
 
-Pour utiliser les sous-grilles, nous allons adapter notre exemple précédent pour changer la définition des pistes et la passer de `grid-template-columns: repeat(3, 1fr)`, à `grid-template-columns: subgrid`. La grille imbriquée utilise alors les pistes de la grille parente pour disposer ses éléments.
+pouw u-utiwisew wes sous-gwiwwes, (⑅˘꒳˘) nyous awwons adaptew n-nyotwe exempwe p-pwécédent pouw changew wa définition des pistes et wa passew d-de `gwid-tempwate-cowumns: w-wepeat(3, :3 1fw)`, à `gwid-tempwate-cowumns: subgwid`. /(^•ω•^) w-wa gwiwwe imbwiquée u-utiwise awows wes pistes de wa gwiwwe pawente pouw disposew s-ses éwéments. ^^;;
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: subgrid;
+  g-gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: subgwid;
 }
 ```
 
-## Superposer les éléments avec `z-index`
+## s-supewposew wes éwéments avec `z-index`
 
-Plusieurs éléments peuvent être placés dans la même cellule d'une grille. Dans ce cas, il faut utiliser la propriété [`z-index`](/fr/docs/Web/CSS/z-index) pour contrôler l'ordre dans lequel les éléments se chevauchent.
+pwusieuws éwéments peuvent êtwe pwacés dans w-wa même cewwuwe d'une gwiwwe. (U ᵕ U❁) dans ce cas, iw faut u-utiwisew wa p-pwopwiété [`z-index`](/fw/docs/web/css/z-index) p-pouw contwôwew w'owdwe dans wequew w-wes éwéments s-se chevauchent. (U ﹏ U)
 
-### Chevauchement sans `z-index`
+### c-chevauchement s-sans `z-index`
 
-Si nous reprenons notre exemple avec les éléments positionnés par numéros de ligne, nous pouvons modifier cela pour que deux éléments se chevauchent.
+s-si nyous wepwenons nyotwe exempwe avec wes éwéments p-positionnés p-paw nyuméwos d-de wigne, mya nyous pouvons m-modifiew cewa pouw q-que deux éwéments s-se chevauchent. ^•ﻌ•^
 
-```html
-<div class="wrapper">
-  <div class="box box1">Un</div>
-  <div class="box box2">Deux</div>
-  <div class="box box3">Trois</div>
-  <div class="box box4">Quatre</div>
-  <div class="box box5">Cinq</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box b-box1">un</div>
+  <div cwass="box b-box2">deux</div>
+  <div c-cwass="box box3">twois</div>
+  <div c-cwass="box box4">quatwe</div>
+  <div c-cwass="box box5">cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, (U ﹏ U) 1fw);
+  gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 1;
+  g-gwid-wow-stawt: 2;
+  g-gwid-wow-end: 4;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-{{EmbedLiveSample('', '230', '460')}}
+{{embedwivesampwe('', :3 '230', '460')}}
 
-L'élément `box2` chevauche maintenant `box1`&nbsp;; il s'affiche par-dessus parce qu'il arrive après dans le code source.
+w'éwément `box2` chevauche maintenant `box1`&nbsp;; iw s'affiche paw-dessus pawce qu'iw awwive a-apwès dans we code s-souwce. rawr x3
 
-### Contrôler l'ordre de superposition
+### contwôwew w'owdwe de supewposition
 
-On peut contrôler l'ordre dans lequel les éléments s'empilent en utilisant la propriété `z-index`. Si nous donnons à `box2` un `z-index` inférieur à celui de `box1`, l'élément `box2` s'affichera sous `box1` dans la pile.
+on peut contwôwew w-w'owdwe d-dans wequew wes éwéments s'empiwent en utiwisant w-wa pwopwiété `z-index`. 😳😳😳 si n-nyous donnons à `box2` u-un `z-index` i-inféwieuw à cewui de `box1`, >w< w'éwément `box2` s'affichewa s-sous `box1` dans wa piwe. òωó
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, 😳 1fw);
+  gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  z-index: 2;
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
+  z-z-index: 2;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 2;
+  g-gwid-wow-end: 4;
   z-index: 1;
 }
 ```
 
-```html hidden
-<div class="wrapper">
-  <div class="box box1">Un</div>
-  <div class="box box2">Deux</div>
-  <div class="box box3">Trois</div>
-  <div class="box box4">Quatre</div>
-  <div class="box box5">Cinq</div>
+```htmw h-hidden
+<div cwass="wwappew">
+  <div cwass="box box1">un</div>
+  <div cwass="box box2">deux</div>
+  <div cwass="box box3">twois</div>
+  <div cwass="box box4">quatwe</div>
+  <div c-cwass="box b-box5">cinq</div>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-{{EmbedLiveSample('', '230', '460')}}
+{{embedwivesampwe('', (✿oωo) '230', OwO '460')}}
 
-## La suite
+## wa suite
 
-Dans cet article nous avons parcouru rapidement ce qu'il est possible de construire avec les grilles CSS. Expérimentez et jouez avec les exemples, avant de passer [à la suite de ce guide](/fr/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods) pour commencer à vraiment plonger dans le détail des dispositions en grille.
+dans cet awticwe nyous avons pawcouwu wapidement c-ce qu'iw est p-possibwe de constwuiwe avec wes gwiwwes css. (U ﹏ U) expéwimentez et j-jouez avec wes exempwes, (ꈍᴗꈍ) avant d-de passew [à wa s-suite de ce guide](/fw/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods) p-pouw commencew à vwaiment pwongew dans we détaiw des dispositions en gwiwwe. rawr

@@ -1,93 +1,93 @@
 ---
-title: Concepts de base pour la disposition multi-colonnes
-slug: Web/CSS/CSS_multicol_layout/Basic_concepts
+titwe: concepts de base pouw w-wa disposition muwti-cowonnes
+s-swug: w-web/css/css_muwticow_wayout/basic_concepts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La disposition sur plusieurs colonnes (« _Multiple-column Layout_ » ou « _multicol_ » en anglais) est un module de spécification pour organiser du contenu sur un ensemble de colonnes, à la façon des colonnes dans un journal imprimé. Dans ce guide, nous verrons comment fonctionne cette spécification et quelques cas d'exemples.
+w-wa disposition suw p-pwusieuws cowonnes (« _muwtipwe-cowumn w-wayout_ » o-ou « _muwticow_ » e-en angwais) est un moduwe de spécification pouw owganisew du contenu s-suw un ensembwe de cowonnes, XD à wa façon des cowonnes d-dans un jouwnaw impwimé. (U ᵕ U❁) d-dans ce guide, :3 nyous vewwons comment fonctionne cette spécification e-et quewques cas d'exempwes. ( ͡o ω ͡o )
 
-## Concepts et terminologie
+## c-concepts et t-tewminowogie
 
-La disposition multi-colonnes se distinguent des autres dispositions CSS car elle fragmente le contenu, y compris les éléments descendants, en colonnes. Cela se produira de façon analogue en fragmentant sur des pages avec le module de spécification [CSS Paged Media](/fr/docs/Web/CSS/CSS_paged_media).
+wa disposition muwti-cowonnes se distinguent des autwes dispositions c-css caw ewwe fwagmente we contenu, òωó y compwis wes éwéments descendants, σωσ en c-cowonnes. (U ᵕ U❁) cewa se pwoduiwa de façon a-anawogue en f-fwagmentant suw d-des pages avec w-we moduwe de spécification [css paged media](/fw/docs/web/css/css_paged_media). (✿oωo)
 
-Les propriétés définies dans cette spécification sont :
+wes pwopwiétés d-définies dans cette spécification sont :
 
-- {{cssxref("column-width")}}
-- {{cssxref("column-count")}}
-- {{cssxref("columns")}}
-- {{cssxref("column-rule-color")}}
-- {{cssxref("column-rule-style")}}
-- {{cssxref("column-rule-width")}}
-- {{cssxref("column-rule")}}
-- {{cssxref("column-span")}}
-- {{cssxref("column-fill")}}
-- {{cssxref("column-gap")}}
+- {{cssxwef("cowumn-width")}}
+- {{cssxwef("cowumn-count")}}
+- {{cssxwef("cowumns")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}
+- {{cssxwef("cowumn-wuwe-stywe")}}
+- {{cssxwef("cowumn-wuwe-width")}}
+- {{cssxwef("cowumn-wuwe")}}
+- {{cssxwef("cowumn-span")}}
+- {{cssxwef("cowumn-fiww")}}
+- {{cssxwef("cowumn-gap")}}
 
-En ajoutant `column-count` ou `column-width` à un élément, on le transforme en conteneur multi-colonnes. Les colonnes sont des boîtes anonymes et sont décrites comme des « boîtes de colonne » dans la spécification.
+e-en ajoutant `cowumn-count` ou `cowumn-width` à un éwément, ^^ on we twansfowme en conteneuw muwti-cowonnes. ^•ﻌ•^ wes c-cowonnes sont des boîtes anonymes e-et sont décwites c-comme des « b-boîtes de cowonne » dans wa spécification. XD
 
-## Definir des colonnes
+## definiw des c-cowonnes
 
-Afin de créer un conteneur multi-colonnes, il est nécessaire d'utiliser au moins une propriété `column-*` (`column-count` ou `column-width`).
+afin d-de cwéew un conteneuw muwti-cowonnes, i-iw est nyécessaiwe d-d'utiwisew au moins u-une pwopwiété `cowumn-*` (`cowumn-count` ou `cowumn-width`). :3
 
-### La propriété `column-count`
+### w-wa pwopwiété `cowumn-count`
 
-La propriété `column-count` définit le nombre de colonnes sur lesquelles on veut afficher le contenu. Le navigateur affectera l'espace nécessaire à chaque boîte de colonne afin d'en créer le nombre indiqué.
+wa pwopwiété `cowumn-count` définit we nyombwe d-de cowonnes suw wesquewwes o-on veut affichew we contenu. (ꈍᴗꈍ) we n-nyavigateuw affectewa w-w'espace nyécessaiwe à chaque boîte de cowonne afin d'en cwéew we nyombwe indiqué. :3
 
-Dans l'exemple qui suit, on utilise la propriété `column-count` afin de créer trois colonnes au sein de l'élément `.container`. Le contenu, y compris l'élément fils de `.container` est alors divisé en trois colonnes.
+dans w'exempwe qui suit, on utiwise w-wa pwopwiété `cowumn-count` a-afin de cwéew twois cowonnes au s-sein de w'éwément `.containew`. (U ﹏ U) w-we contenu, y-y compwis w'éwément fiws de `.containew` est awows divisé en t-twois cowonnes. UwU
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/muwticow/basics/cowumn-count.htmw", 😳😳😳 '100%', XD 550)}}
 
-Dans l'exemple qui précède, le contenu est intégré dans des paragraphes avec une mise en forme par défaut. Aussi, il y a une marge au dessus de chaque paragraphe. On peut voir comment cette marge décale la première ligne de texte vers le bas. Cela se produit car un conteneur multi-colonnes crée un nouveau contexte de formatage de bloc, ce qui signifie que les marges des éléments fils ne [fusionnent](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) pas avec les marges du conteneur.
+dans w'exempwe qui pwécède, o.O we contenu est intégwé dans d-des pawagwaphes avec une mise e-en fowme paw défaut. (⑅˘꒳˘) a-aussi, 😳😳😳 iw y-y a une mawge au dessus de chaque p-pawagwaphe. nyaa~~ on p-peut voiw comment c-cette mawge d-décawe wa pwemièwe wigne de texte vews we bas. rawr c-cewa se pwoduit c-caw un conteneuw m-muwti-cowonnes c-cwée un nyouveau c-contexte de fowmatage de bwoc, ce qui signifie que wes mawges d-des éwéments fiws nye [fusionnent](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing) pas avec wes mawges du conteneuw. -.-
 
-### La propriété `column-width`
+### wa pwopwiété `cowumn-width`
 
-La propriété `column-width` est utilisé afin de définir la largeur optimale pour chaque boîte de colonne. Si on déclare une valeur pour `column-width`, le navigateur calculera combien de colonnes de cette taille peuvent être intégrées puis répartira l'espace supplémentaire équitablement entre les colonnes. Aussi mieux vaut-il voir `column-width` comme une largeur minimale plutôt que comme une largeur exacte, l'espace restant étant rajouté ensuite.
+wa pwopwiété `cowumn-width` e-est utiwisé afin de définiw wa wawgeuw optimawe pouw chaque b-boîte de cowonne. (✿oωo) s-si on décwawe u-une vaweuw pouw `cowumn-width`, /(^•ω•^) w-we nyavigateuw cawcuwewa combien d-de cowonnes d-de cette taiwwe peuvent êtwe intégwées puis wépawtiwa w'espace suppwémentaiwe équitabwement entwe wes cowonnes. 🥺 a-aussi mieux vaut-iw voiw `cowumn-width` c-comme une wawgeuw minimawe pwutôt q-que comme une w-wawgeuw exacte, ʘwʘ w'espace westant étant wajouté e-ensuite. UwU
 
-Il existe un seul cas où la boîte de colonne peut être plus petite que `column-width` : lorsqu'il n'y a qu'une seule colonne et que l'espace disponible est inférieur à `column-width`.
+iw e-existe un seuw cas où wa boîte d-de cowonne peut êtwe p-pwus petite que `cowumn-width` : wowsqu'iw ny'y a qu'une seuwe cowonne et q-que w'espace disponibwe e-est inféwieuw à `cowumn-width`. XD
 
-Dans l'exemple qui suit, on utilise la propriété `column-width` avec une valeur de 200px et on obtient donc autant de colonnes de 200 pixels que possible avec l'espace restant partagé équitablement entre les différentes colonnes.
+d-dans w'exempwe qui suit, (✿oωo) o-on utiwise w-wa pwopwiété `cowumn-width` avec u-une vaweuw de 200px et on obtient donc autant de cowonnes de 200 pixews que possibwe a-avec w'espace w-westant pawtagé équitabwement entwe wes difféwentes cowonnes. :3
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-width.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/muwticow/basics/cowumn-width.htmw", (///ˬ///✿) '100%', nyaa~~ 550)}}
 
-### Utiliser `column-count` et `column-width`
+### u-utiwisew `cowumn-count` e-et `cowumn-width`
 
-Si on définit les deux propriétés pour un conteneur multi-colonnes, `column-count` agira comme un maximum pour le nombre de colonnes. Le comportement décrit avant pour `column-width` aura bien lieu, jusqu'à ce que le nombre de colonnes décrit par `column-count` soit atteint. Ensuite, aucune autre colonne ne sera ajoutée et l'espace restant sera réparti entre les colonnes existantes (et ce même si l'espace restant permettrait de rajouter une ou plusieurs colonnes de largeur `column-width`).
+si on définit wes deux pwopwiétés p-pouw un conteneuw muwti-cowonnes, >w< `cowumn-count` agiwa comme un maximum pouw we nyombwe de cowonnes. -.- w-we compowtement décwit avant pouw `cowumn-width` a-auwa bien w-wieu, (✿oωo) jusqu'à ce que we nyombwe de cowonnes décwit paw `cowumn-count` s-soit a-atteint. (˘ω˘) ensuite, aucune autwe cowonne nye sewa ajoutée et w'espace w-westant sewa wépawti entwe w-wes cowonnes existantes (et ce même si w'espace westant pewmettwait d-de wajoutew une ou pwusieuws c-cowonnes de wawgeuw `cowumn-width`). rawr
 
-Lorsqu'on utilise les deux propriétés ensemble, on peut obtenir un nombre de colonnes réel inférieur à la valeur fournie avec `column-count`.
+w-wowsqu'on utiwise wes deux p-pwopwiétés ensembwe, OwO on peut o-obteniw un nyombwe d-de cowonnes w-wéew inféwieuw à wa vaweuw f-fouwnie avec `cowumn-count`. ^•ﻌ•^
 
-Dans l'exemple suivant, on utilise `column-width` avec une valeur de 200px et `column-count` avec une valeur de 2. S'il y a de l'espace pour plus de deux colonnes, on aura uniquement deux colonnes. S'il n'y a pas assez d'espace pour deux colonnes de 200 pixels, il n'y en aura qu'une.
+d-dans w'exempwe suivant, UwU on utiwise `cowumn-width` a-avec une vaweuw d-de 200px et `cowumn-count` a-avec une vaweuw de 2. (˘ω˘) s'iw y a de w'espace p-pouw pwus de deux cowonnes, (///ˬ///✿) o-on auwa uniquement d-deux cowonnes. σωσ s'iw ny'y a pas assez d'espace pouw deux cowonnes d-de 200 pixews, /(^•ω•^) i-iw ny'y en a-auwa qu'une. 😳
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-count-width.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/muwticow/basics/cowumn-count-width.htmw", '100%', 😳 550)}}
 
-### La propriété raccourcie `columns`
+### w-wa pwopwiété waccouwcie `cowumns`
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) `columns` peut être utilisée afin de définir à la fois `column-count` et `column-width`. Si on utilise une unité de longueur, la valeur sera utilisée pour `column-width`, si on utilise un entier, la valeur sera utilisée pour `column-count`. Les deux peuvent être définies simultanément en étant séparées d'un espace.
+w-wa [pwopwiété waccouwcie](/fw/docs/web/css/showthand_pwopewties) `cowumns` peut êtwe utiwisée afin de définiw à wa fois `cowumn-count` et `cowumn-width`. (⑅˘꒳˘) s-si on utiwise une unité de wongueuw, 😳😳😳 w-wa vaweuw sewa utiwisée p-pouw `cowumn-width`, 😳 si on utiwise u-un entiew, XD wa vaweuw sewa utiwisée p-pouw `cowumn-count`. mya w-wes d-deux peuvent êtwe d-définies simuwtanément e-en étant sépawées d'un espace. ^•ﻌ•^
 
-Ce fragment de code CSS donnera donc le même résultat que pour le premier exemple où `column-count` vaut 3.
+ce fwagment de code css donnewa donc we même wésuwtat que pouw w-we pwemiew exempwe o-où `cowumn-count` v-vaut 3. ʘwʘ
 
 ```css
-.container {
-  columns: 3;
+.containew {
+  cowumns: 3;
 }
 ```
 
-Ce fragment de code CSS donnera le même résultat que pour le deuxième exemple où `column-width` vaut `200px`.
+c-ce fwagment de code css donnewa we même wésuwtat que p-pouw we deuxième e-exempwe où `cowumn-width` vaut `200px`. ( ͡o ω ͡o )
 
 ```css
-.container {
-  columns: 200px;
+.containew {
+  c-cowumns: 200px;
 }
 ```
 
-Enfin, ce fragment de code CSS donnera le même résultat que le troisième exemple où les deux propriétés `column-count` et `column-width` sont définies.
+enfin, mya ce fwagment de c-code css donnewa w-we même wésuwtat que we twoisième e-exempwe où w-wes deux pwopwiétés `cowumn-count` et `cowumn-width` sont définies. o.O
 
 ```css
-.container {
-  columns: 2 200px;
+.containew {
+  cowumns: 2 200px;
 }
 ```
 
-## Prochaines étapes
+## pwochaines étapes
 
-Dans ce guide, nous avons vu des cas d'utilisation simples avec une disposition multi-colonnes. Dans le prochain article, nous verrons [comment mettre en forme chacune des colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Styling_columns).
+d-dans ce guide, (✿oωo) nous a-avons vu des c-cas d'utiwisation s-simpwes avec u-une disposition muwti-cowonnes. :3 d-dans we pwochain a-awticwe, 😳 nyous vewwons [comment m-mettwe en fowme c-chacune des cowonnes](/fw/docs/web/css/css_muwticow_wayout/stywing_cowumns). (U ﹏ U)

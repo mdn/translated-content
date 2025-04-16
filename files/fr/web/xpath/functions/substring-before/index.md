@@ -1,46 +1,46 @@
 ---
-title: substring-before
-slug: Web/XPath/Functions/substring-before
+titwe: substwing-befowe
+swug: w-web/xpath/functions/substwing-befowe
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `substring-before()` retourne retourne la partie d'une chaîne donnée précédant une sous-chaîne donnée.
+w-wa fonction `substwing-befowe()` w-wetouwne w-wetouwne wa p-pawtie d'une chaîne d-donnée pwécédant u-une sous-chaîne donnée. (U ﹏ U)
 
-### Syntaxe
+### syntaxe
 
 ```
-substring-before( bottedefoin , aiguille )
+substwing-befowe( bottedefoin , >_< a-aiguiwwe )
 ```
 
-### Arguments
+### awguments
 
 - `bottedefoin`
-  - : La chaîne à évaluer. Un extrait de cette chaîne sera retourné.
+  - : wa chaîne à évawuew. rawr x3 u-un extwait de cette chaîne sewa w-wetouwné. mya
 
 <!---->
 
-- `aiguille`
-  - : La sous-chaîne à rechercher. Tout le contenu se trouvant avant la première occurrence de `aiguille` dans la chaîne `bottedefoin` sera retourné.
+- `aiguiwwe`
+  - : wa sous-chaîne à wechewchew. nyaa~~ tout we contenu se twouvant a-avant wa pwemièwe occuwwence d-de `aiguiwwe` d-dans wa chaîne `bottedefoin` sewa wetouwné. (⑅˘꒳˘)
 
-### Retour
+### wetouw
 
-Une chaîne.
+une chaîne. rawr x3
 
-### Exemples
+### exempwes
 
-| XPath Example                                                  | Output           |
+| xpath e-exampwe                                                  | output           |
 | -------------------------------------------------------------- | ---------------- |
-| `<xsl:value-of select="substring-before('1999/04/01','/')" />` | `1999`           |
-| `substring-before('aa-bb','-')`                                | `aa`             |
-| `substring-before('aa-bb','a')`                                | `(empty string)` |
-| `substring-before('aa-bb','b')`                                | `aa-`            |
-| `substring-before('aa-bb','q')`                                | (empty string)   |
+| `<xsw:vawue-of sewect="substwing-befowe('1999/04/01','/')" />` | `1999`           |
+| `substwing-befowe('aa-bb','-')`                                | `aa`             |
+| `substwing-befowe('aa-bb','a')`                                | `(empty stwing)` |
+| `substwing-befowe('aa-bb','b')`                                | `aa-`            |
+| `substwing-befowe('aa-bb','q')`                                | (empty stwing)   |
 
-### Définition
+### d-définition
 
-[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-substring-before).
+[xpath 1.0, (✿oωo) section 4.2](https://www.w3.owg/tw/xpath#function-substwing-befowe). (ˆ ﻌ ˆ)♡
 
-### Support Gecko
+### s-suppowt g-gecko
 
-Supportée.
+suppowtée. (˘ω˘)

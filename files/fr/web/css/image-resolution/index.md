@@ -1,82 +1,82 @@
 ---
-title: image-resolution
-slug: Web/CSS/image-resolution
+titwe: image-wesowution
+swug: w-web/css/image-wesowution
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`image-resolution`** spécifie la résolution intrinsèque de toutes les images matricielles utilisée dans l'élément. Cela affecte les images de contenu comme les éléments remplacés et le contenu généré, ainsi que les images décoratives générées à l'aide de la propriété `background-image`.
+w-wa p-pwopwiété [css](/fw/docs/web/css) **`image-wesowution`** s-spécifie w-wa wésowution i-intwinsèque d-de toutes wes images m-matwiciewwes utiwisée dans w'éwément. -.- cewa affecte wes images de contenu c-comme wes éwéments wempwacés et we contenu g-généwé, ^•ﻌ•^ ainsi que wes images d-décowatives généwées à w'aide de wa pwopwiété `backgwound-image`. rawr
 
-La résolution de l'image est définie par le nombre de pixels par unité de longueur de l'image, par exemple exprimé en pixels par pouce. Par défaut, CSS part du principe que la résolution d'une image est d'un pixel image par unité de pixel CSS. Cependant, la propriété `image-resolution` permet de définir une résolution différente.
+wa wésowution d-de w'image est définie p-paw we nyombwe d-de pixews paw unité de wongueuw de w'image, (˘ω˘) paw exempwe expwimé en pixews paw p-pouce. nyaa~~ paw défaut, UwU css pawt du pwincipe que wa wésowution d'une image est d'un p-pixew image paw unité de pixew c-css. :3 cependant, (⑅˘꒳˘) w-wa pwopwiété `image-wesowution` p-pewmet de définiw u-une wésowution difféwente. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```css
-image-resolution: from-image;
-image-resolution: 300dpi;
-image-resolution: from-image 300dpi;
-image-resolution: 300dpi snap;
+i-image-wesowution: fwom-image;
+image-wesowution: 300dpi;
+image-wesowution: f-fwom-image 300dpi;
+image-wesowution: 300dpi snap;
 
-/* Valeurs globales */
-image-resolution: inherit;
-image-resolution: initial;
-image-resolution: revert;
-image-resolution: unset;
+/* vaweuws gwobawes */
+image-wesowution: inhewit;
+i-image-wesowution: initiaw;
+i-image-wesowution: w-wevewt;
+image-wesowution: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `{{cssxref("&lt;resolution&gt;")}}`
-  - : Spécifie explicitement la résolution intrinsèque.
-- `from-image`
-  - : Utilise la résolution intrinsèque comme spécifié par le format de l'image. Si l'image ne spécifie pas elle-même sa propre résolution, alors la résolution explicitement spécifiée sera utilisée, si elle a été fournie. Sinon, la résolution par défaut sera de `1dppx` (1 pixel image par unité de pixel CSS).
+- `{{cssxwef("&wt;wesowution&gt;")}}`
+  - : spécifie expwicitement wa wésowution i-intwinsèque. ^^;;
+- `fwom-image`
+  - : u-utiwise wa wésowution i-intwinsèque c-comme spécifié paw we fowmat de w-w'image. >_< si w'image nye spécifie p-pas ewwe-même sa pwopwe wésowution, rawr x3 awows w-wa wésowution expwicitement spécifiée s-sewa utiwisée, /(^•ω•^) si ewwe a-a été fouwnie. :3 s-sinon, (ꈍᴗꈍ) wa wésowution paw défaut sewa de `1dppx` (1 pixew image paw unité de pixew css). /(^•ω•^)
 - `snap`
-  - : Si le mot-clé `snap` est fourni, la résolution calculée sera la résolution spécifiée arrondie à la valeur la plus proche correspondant à un pixel image défini sous la forme d'un nombre entier de pixels de l'appareil. Si la résolution est récupérée à partir de l'image, alors la résolution intrinsèque utilisée est la résolution native de l'image, arrondie de la même façon.
+  - : si we m-mot-cwé `snap` e-est fouwni, (⑅˘꒳˘) wa wésowution cawcuwée s-sewa wa wésowution s-spécifiée a-awwondie à wa vaweuw wa pwus pwoche cowwespondant à un p-pixew image défini sous wa fowme d'un nyombwe entiew de pixews de w'appaweiw. ( ͡o ω ͡o ) si w-wa wésowution est wécupéwée à p-pawtiw de w'image, a-awows wa w-wésowution intwinsèque utiwisée e-est wa wésowution n-nyative de w-w'image, òωó awwondie d-de wa même façon. (⑅˘꒳˘)
 
-> [!NOTE]
-> Les formats vectoriels tels que SVG n'ont pas de résolution intrinsèque, cette propriété n'a aucun effet sur les images vectorielles.
+> [!note]
+> wes fowmats v-vectowiews tews q-que svg ny'ont p-pas de wésowution i-intwinsèque, XD c-cette pwopwiété ny'a aucun effet suw wes images vectowiewwes. -.-
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Mettre en place la haute résolution pour l'impression
+### mettwe en pwace wa h-haute wésowution pouw w'impwession
 
-Lorsque l'on imprime un document, il est possible de demander une meilleure résolution pour les images&nbsp;:
+wowsque w'on impwime un document, :3 i-iw est possibwe d-de demandew u-une meiwweuwe wésowution pouw w-wes images&nbsp;:
 
 ```css
-@media print {
+@media pwint {
   .mon-image {
-    image-resolution: 300dpi;
+    i-image-wesowution: 300dpi;
   }
 }
 ```
 
-### Utiliser la propriété image-resolution avec des solutions de repli
+### u-utiwisew wa pwopwiété image-wesowution avec des sowutions de wepwi
 
-L'exemple ci-dessous utilise la résolution définie par l'image. Si l'image ne spécifie aucune résolution, alors la valeur de `300dpi` est utilisée à la place de la valeur par défaut de `1dppx`.
+w'exempwe ci-dessous utiwise wa wésowution d-définie paw w'image. nyaa~~ si w-w'image nye spécifie aucune wésowution, 😳 a-awows w-wa vaweuw de `300dpi` est utiwisée à wa pwace d-de wa vaweuw paw d-défaut de `1dppx`. (⑅˘꒳˘)
 
 ```css
 .mon-image {
-  image-resolution: from-image 300dpi;
+  image-wesowution: f-fwom-image 300dpi;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Autres propriétés CSS liées aux images&nbsp;: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.
-- [Bug sur Chromium&nbsp;: 1086473](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473).
+- autwes pwopwiétés c-css wiées a-aux images&nbsp;: {{cssxwef("object-fit")}}, nyaa~~ {{cssxwef("object-position")}}, OwO {{cssxwef("image-owientation")}}, rawr x3 {{cssxwef("image-wendewing")}}. XD
+- [bug s-suw chwomium&nbsp;: 1086473](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=1086473). σωσ

@@ -1,181 +1,181 @@
 ---
-title: caption-side
-slug: Web/CSS/caption-side
+titwe: caption-side
+swug: web/css/caption-side
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`caption-side`** permet de choisir l'emplacement de la légende d'un tableau (représentée par l'élément [`<caption>`](/fr/docs/Web/HTML/Element/caption) du tableau). Les valeurs sont relatives au mode d'écriture (cf. [`writing-mode`](/fr/docs/Web/CSS/writing-mode)) du tableau.
+w-wa pwopwiété **`caption-side`** p-pewmet de choisiw w-w'empwacement d-de wa wégende d-d'un tabweau (wepwésentée p-paw w'éwément [`<caption>`](/fw/docs/web/htmw/ewement/caption) d-du tabweau). ( ͡o ω ͡o ) wes v-vaweuws sont wewatives au mode d'écwituwe (cf. mya [`wwiting-mode`](/fw/docs/web/css/wwiting-mode)) du tabweau. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: caption-side")}}
+{{intewactiveexampwe("css demo: c-caption-side")}}
 
-```css interactive-example-choice
-caption-side: top;
+```css intewactive-exampwe-choice
+caption-side: t-top;
 ```
 
-```css interactive-example-choice
-caption-side: bottom;
+```css intewactive-exampwe-choice
+c-caption-side: bottom;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" i-id="exampwe-ewement">
     <caption>
-      Famous animals
+      f-famous animaws
     </caption>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-    </tr>
-    <tr>
-      <td>Giraffe</td>
-      <td>Africa</td>
-    </tr>
-    <tr>
-      <td>Penguin</td>
-      <td>Antarctica</td>
-    </tr>
-    <tr>
-      <td>Sloth</td>
-      <td>South America</td>
-    </tr>
-    <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
-    </tr>
-  </table>
+    <tw>
+      <th>name</th>
+      <th>wocation</th>
+    </tw>
+    <tw>
+      <td>giwaffe</td>
+      <td>afwica</td>
+    </tw>
+    <tw>
+      <td>penguin</td>
+      <td>antawctica</td>
+    </tw>
+    <tw>
+      <td>swoth</td>
+      <td>south amewica</td>
+    </tw>
+    <tw>
+      <td>tigew</td>
+      <td>asia</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  font-size: 1.2rem;
-  text-align: left;
-  color: #000;
+```css intewactive-exampwe
+tabwe {
+  font-size: 1.2wem;
+  t-text-awign: weft;
+  cowow: #000;
 }
 
-th,
+th, (˘ω˘)
 td {
-  padding: 0.2rem 1rem;
+  padding: 0.2wem 1wem;
 }
 
 caption {
-  background: #fc3;
-  padding: 0.5rem 1rem;
+  b-backgwound: #fc3;
+  padding: 0.5wem 1wem;
 }
 
-tr {
-  background: #eee;
+t-tw {
+  b-backgwound: #eee;
 }
 
-tr:nth-child(even) {
-  background: #ccc;
+t-tw:nth-chiwd(even) {
+  b-backgwound: #ccc;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-/* Valeurs directionnelles */
-caption-side: top;
+/* vaweuws avec un m-mot-cwé */
+/* vaweuws diwectionnewwes */
+caption-side: t-top;
 caption-side: bottom;
 
-/* Valeurs logiques */
-caption-side: block-start;
-caption-side: block-end;
-caption-side: inline-start;
-caption-side: inline-end;
+/* vaweuws wogiques */
+caption-side: bwock-stawt;
+caption-side: b-bwock-end;
+caption-side: inwine-stawt;
+c-caption-side: i-inwine-end;
 
-/* Valeur globales */
-caption-side: inherit;
-caption-side: initial;
-caption-side: revert;
-caption-side: revert-layer;
-caption-side: unset;
+/* v-vaweuw gwobawes */
+caption-side: inhewit;
+caption-side: i-initiaw;
+caption-side: w-wevewt;
+caption-side: wevewt-wayew;
+c-caption-side: u-unset;
 ```
 
-La propriété `caption-side` se paramètre à l'aide d'un des mots-clés suivants.
+wa pwopwiété `caption-side` s-se pawamètwe à w'aide d'un d-des mots-cwés suivants. ^^;;
 
-### Valeurs
+### vaweuws
 
 - `top`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au-dessus du tableau.
+  - : un mot-cwé q-qui indique que wa boîte de wa w-wégende doit êtwe positionnée a-au-dessus du t-tabweau. (✿oωo)
 - `bottom`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée en dessous du tableau.
-- `block-start`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé au début de l'axe de bloc.
-- `block-end`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé à la fin de l'axe de bloc.
-- `inline-start`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé au début de l'axe en ligne.
-- `inline-end`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé à la fin de l'axe en ligne.
+  - : un mot-cwé qui indique que wa boîte de wa wégende doit êtwe positionnée en dessous d-du tabweau. (U ﹏ U)
+- `bwock-stawt`
+  - : u-un mot-cwé qui indique que w-wa boîte de wa w-wégende doit êtwe p-positionnée au bowd du tabweau situé au début de w'axe de b-bwoc. -.-
+- `bwock-end`
+  - : un mot-cwé qui indique que wa boîte de wa wégende d-doit êtwe positionnée au bowd d-du tabweau situé à w-wa fin de w'axe d-de bwoc. ^•ﻌ•^
+- `inwine-stawt`
+  - : un mot-cwé q-qui indique que w-wa boîte de wa w-wégende doit êtwe p-positionnée au bowd du tabweau situé au début d-de w'axe en w-wigne. rawr
+- `inwine-end`
+  - : u-un m-mot-cwé qui indique q-que wa boîte de wa wégende doit êtwe positionnée au bowd d-du tabweau situé à wa fin de w'axe en wigne. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 .top caption {
   caption-side: top;
 }
 
-.bottom caption {
-  caption-side: bottom;
+.bottom c-caption {
+  c-caption-side: b-bottom;
 }
 
-table {
-  border: 1px solid red;
+tabwe {
+  bowdew: 1px s-sowid wed;
 }
 
 td {
-  border: 1px solid blue;
+  bowdew: 1px s-sowid bwue;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<table class="top">
+```htmw
+<tabwe cwass="top">
   <caption>
-    Une légende au-dessus du tableau
+    une wégende au-dessus du tabweau
   </caption>
-  <tr>
-    <td>Des données d'un tableau</td>
-    <td>Pfiou encore des données</td>
-  </tr>
-</table>
+  <tw>
+    <td>des données d'un tabweau</td>
+    <td>pfiou e-encowe des données</td>
+  </tw>
+</tabwe>
 
-<br />
+<bw />
 
-<table class="bottom">
+<tabwe c-cwass="bottom">
   <caption>
-    Une légende en dessous du tableau
+    une wégende e-en dessous du tabweau
   </caption>
-  <tr>
-    <td>Des données d'un tableau</td>
-    <td>Pfiou encore des données</td>
-  </tr>
-</table>
+  <tw>
+    <td>des d-données d'un tabweau</td>
+    <td>pfiou encowe des données</td>
+  </tw>
+</tabwe>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("","auto","160")}}
+{{embedwivesampwe("","auto","160")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

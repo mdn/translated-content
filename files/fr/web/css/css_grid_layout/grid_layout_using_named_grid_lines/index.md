@@ -1,447 +1,447 @@
 ---
-title: Utiliser des lignes nommées sur une grille
-slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
+titwe: utiwisew des wignes nyommées s-suw une g-gwiwwe
+swug: web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille", "Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS","Web/CSS/CSS_Grid_Layout")}}
+{{pweviousmenunext("web/css/css_gwid_wayout/définiw_des_zones_suw_une_gwiwwe", >_< "web/css/css_gwid_wayout/pwacement_automatique_suw_une_gwiwwe_css","web/css/css_gwid_wayout")}}
 
-Dans les articles précédents, on a vu comment placer des objets sur les lignes définies par les pistes de la grilles. On a également vu comment placer des objets sur des zones nommées. Dans ce guide, nous allons combiner ces deux concepts et apprendre à placer les objets sur des lignes avec des noms. Le nommage des lignes peut s'avérer très utile mais un aspect encore plus intéressant consiste à combiner les noms et les tailles de pistes. Cela sera plus clair lorsque nous aurons vu les différents exemples.
+d-dans wes a-awticwes pwécédents, >w< o-on a vu c-comment pwacew d-des objets suw w-wes wignes définies paw wes pistes de wa gwiwwes. /(^•ω•^) on a égawement vu comment pwacew d-des objets suw des zones nyommées. :3 dans ce g-guide, ʘwʘ nyous awwons combinew ces d-deux concepts et appwendwe à pwacew wes objets suw des wignes a-avec des nyoms. (˘ω˘) we nyommage des w-wignes peut s'avéwew t-twès utiwe mais un aspect encowe pwus intéwessant consiste à combinew w-wes noms et wes taiwwes de pistes. (ꈍᴗꈍ) cewa sewa pwus cwaiw wowsque nyous auwons vu w-wes difféwents exempwes. ^^
 
-## Nommer des lignes lorsqu'on définit une grille
+## nyommew d-des wignes w-wowsqu'on définit u-une gwiwwe
 
-Lorsqu'on définit une grille avec `grid-template-rows` et `grid-template-columns`, on peut donner des noms aux lignes (toutes ou seulement quelques unes). Pour illustrer ce point, nous allons reprendre la disposition utilisée dans l'article sur le placement sur les lignes. Cette fois, nous allons utiliser des lignes avec des noms.
+w-wowsqu'on définit une gwiwwe avec `gwid-tempwate-wows` et `gwid-tempwate-cowumns`, ^^ o-on peut donnew des nyoms aux wignes (toutes o-ou seuwement quewques unes). ( ͡o ω ͡o ) pouw iwwustwew ce point, -.- nyous awwons wepwendwe wa disposition utiwisée d-dans w'awticwe suw we pwacement s-suw wes wignes. ^^;; c-cette fois, ^•ﻌ•^ n-nyous awwons utiwisew des wignes avec des nyoms. (˘ω˘)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-Lorsqu'on définit la grille, on nomme les lignes entre crochets. Ces noms peuvent être n'importe quelle valeur. Ici, on définit un nom pour le début et la fin du conteneur, pour les lignes et pour les colonnes. On définit les blocs du centres (ici `content-start` et `content-end`), à la fois pour les lignes et pour les colonnes. Il n'est pas nécessaire de nommer toutes les lignes de la grille, on peut très bien uniquement nommer celles qui sont importantes.
+wowsqu'on d-définit wa gwiwwe, o.O on nyomme w-wes wignes entwe c-cwochets. (✿oωo) ces nyoms peuvent êtwe ny'impowte quewwe vaweuw. 😳😳😳 ici, on définit un nyom pouw we début et wa fin d-du conteneuw, (ꈍᴗꈍ) p-pouw wes wignes et pouw wes cowonnes. σωσ o-on définit w-wes bwocs du centwes (ici `content-stawt` e-et `content-end`), UwU à wa fois pouw wes wignes et pouw wes cowonnes. ^•ﻌ•^ i-iw ny'est pas nyécessaiwe de nyommew toutes wes wignes de wa gwiwwe, mya on peut twès b-bien uniquement nyommew cewwes q-qui sont impowtantes. /(^•ω•^)
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
-  grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: [main-stawt] 1fw [content-stawt] 1fw [content-end] 1fw [main-end];
+  gwid-tempwate-wows: [main-stawt] 100px [content-stawt] 100px [content-end] 100px [main-end];
 }
 ```
 
-Une fois que les lignes sont nommées, on peut utiliser ce nom plutôt que le numéro de ligne afin de placer les éléments.
+une f-fois que wes w-wignes sont nyommées, rawr o-on peut utiwisew c-ce nyom pwutôt que we nyuméwo de wigne a-afin de pwacew w-wes éwéments. nyaa~~
 
 ```css
 .box1 {
-  grid-column-start: main-start;
-  grid-row-start: main-start;
-  grid-row-end: main-end;
+  g-gwid-cowumn-stawt: m-main-stawt;
+  g-gwid-wow-stawt: main-stawt;
+  gwid-wow-end: main-end;
 }
 .box2 {
-  grid-column-start: content-end;
-  grid-row-start: main-start;
-  grid-row-end: content-end;
+  gwid-cowumn-stawt: c-content-end;
+  gwid-wow-stawt: main-stawt;
+  gwid-wow-end: content-end;
 }
 .box3 {
-  grid-column-start: content-start;
-  grid-row-start: main-start;
+  gwid-cowumn-stawt: content-stawt;
+  g-gwid-wow-stawt: main-stawt;
 }
 .box4 {
-  grid-column-start: content-start;
-  grid-column-end: main-end;
-  grid-row-start: content-end;
+  gwid-cowumn-stawt: content-stawt;
+  g-gwid-cowumn-end: m-main-end;
+  g-gwid-wow-stawt: content-end;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">Un</div>
-  <div class="box2">Deux</div>
-  <div class="box3">Trois</div>
-  <div class="box4">Quatre</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="box1">un</div>
+  <div cwass="box2">deux</div>
+  <div c-cwass="box3">twois</div>
+  <div c-cwass="box4">quatwe</div>
 </div>
 ```
 
-{{EmbedLiveSample("Nommer_des_lignes_lorsqu'on_définit_une_grille", '500', '330')}}
+{{embedwivesampwe("nommew_des_wignes_wowsqu'on_définit_une_gwiwwe", ( ͡o ω ͡o ) '500', '330')}}
 
-Tout le reste continue de fonctionner de la même façon. Vous pouvez aussi utiliser des noms et des numéros. Le nommage des lignes est utile lorsqu'on souhaite créer une disposition _responsive_ où on redéfinit la grille plutôt que d'avoir à redéfinir la position du contenu en changeant les numéros de lignes dans les _media queries_.
+tout we weste continue de fonctionnew de wa même façon. σωσ vous pouvez a-aussi utiwisew des nyoms et des n-nyuméwos. (✿oωo) we nyommage des wignes e-est utiwe wowsqu'on s-souhaite cwéew une disposition _wesponsive_ où on wedéfinit w-wa gwiwwe pwutôt q-que d'avoiw à wedéfiniw w-wa position du c-contenu en changeant wes nyuméwos de wignes dans wes _media quewies_. (///ˬ///✿)
 
-### Donner plusieurs noms à une ligne
+### donnew p-pwusieuws nyoms à u-une wigne
 
-On peut donner plusieurs noms à une ligne (par exemple une ligne qui décrirait la fin de la barre latérale et le début du contenu principal). Pour cela, à l'intérieur des crochets, on déclare les différents noms, séparés par un espace : `[sidebar-end main-start]`. On peut ensuite désigner la ligne par l'un de ces noms.
+o-on peut donnew pwusieuws noms à u-une wigne (paw e-exempwe une wigne qui décwiwait w-wa fin de wa bawwe watéwawe et we début du contenu pwincipaw). σωσ pouw cewa, UwU à w-w'intéwieuw des c-cwochets, (⑅˘꒳˘) on décwawe wes difféwents nyoms, /(^•ω•^) sépawés p-paw un e-espace : `[sidebaw-end main-stawt]`. -.- on peut ensuite désignew wa w-wigne paw w'un de ces nyoms. (ˆ ﻌ ˆ)♡
 
-## Définir des zones de grilles implicites à l'aide de lignes nommées
+## définiw des zones de gwiwwes impwicites à w'aide d-de wignes nyommées
 
-Plus haut, nous avons vu qu'il était possible de donner n'importe quel nom à une ligne. D'un point de vue technique, ce nom est un [identifiant personnalisé (ou _custom ident_)](https://drafts.csswg.org/css-values-4/#custom-idents), c'est-à-dire un nom défini par l'auteur de la feuille de style. Pour être plus précis, ce nom ne doit pas reprendre les mots-clés qui apparaissent dans la spécification et ne doit pas être source de confusion (on évitera ainsi d'utiliser `span`). Les identifiants ne sont pas mis entre quotes.
+pwus haut, nyaa~~ nyous avons v-vu qu'iw était p-possibwe de donnew ny'impowte quew nyom à une wigne. ʘwʘ d'un point d-de vue technique, :3 c-ce nyom est un [identifiant pewsonnawisé (ou _custom ident_)](https://dwafts.csswg.owg/css-vawues-4/#custom-idents), (U ᵕ U❁) c-c'est-à-diwe un nyom d-défini paw w'auteuw de wa feuiwwe de stywe. pouw êtwe pwus pwécis, (U ﹏ U) c-ce nyom nye doit pas wepwendwe w-wes mots-cwés q-qui appawaissent dans wa spécification e-et nye doit pas êtwe s-souwce de confusion (on évitewa a-ainsi d'utiwisew `span`). ^^ w-wes identifiants nye s-sont pas mis e-entwe quotes. òωó
 
-Bien qu'on puisse choisir n'importe quel nom (avec les contraintes qu'on vient d'énoncer), si on utilise les suffixes `-start` et `-end` pour désigner les lignes qui entourent une zone (comme dans l'exemple ci-avant), la grille créera automatiquement une zone nommée avec le nom utilisé devant ces suffixes. Si on reprend l'exemple précédent où on utilise `content-start` et `content-end` pour les lignes et pour les colonnes, cela signifie qu'on a, implicitement, une zone de grille intitulée `content` qu'on peut également manipuler
+bien qu'on puisse choisiw ny'impowte q-quew nyom (avec w-wes contwaintes q-qu'on vient d'énoncew), /(^•ω•^) si on utiwise wes suffixes `-stawt` e-et `-end` pouw désignew wes wignes q-qui entouwent u-une zone (comme dans w'exempwe ci-avant), 😳😳😳 wa gwiwwe cwéewa automatiquement une z-zone nommée a-avec we nom utiwisé d-devant ces s-suffixes. :3 si on wepwend w'exempwe p-pwécédent où on utiwise `content-stawt` et `content-end` pouw wes wignes et pouw wes cowonnes, (///ˬ///✿) c-cewa signifie qu'on a, rawr x3 impwicitement, (U ᵕ U❁) u-une zone de gwiwwe intituwée `content` q-qu'on peut égawement manipuwew
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-On utilise les mêmes définitions qu'avant mais cette fois, nous allons placer un objet dans la zone intitulée `content`.
+on utiwise w-wes mêmes d-définitions qu'avant m-mais cette fois, (⑅˘꒳˘) nyous awwons p-pwacew un objet dans wa zone intituwée `content`. (˘ω˘)
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
-  grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: [main-stawt] 1fw [content-stawt] 1fw [content-end] 1fw [main-end];
+  g-gwid-tempwate-wows: [main-stawt] 100px [content-stawt] 100px [content-end] 100px [main-end];
 }
 .thing {
-  grid-area: content;
+  gwid-awea: content;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="thing">Je suis dans une zone nommée content.</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="thing">je suis dans une z-zone nyommée c-content.</div>
 </div>
 ```
 
-{{EmbedLiveSample("Définir_des_zones_de_grilles_implicites_à_l'aide_de_lignes_nommées", '500', '330')}}
+{{embedwivesampwe("définiw_des_zones_de_gwiwwes_impwicites_à_w'aide_de_wignes_nommées", :3 '500', '330')}}
 
-Il n'est pas nécessaire de définir l'emplacement de cette zone avec `grid-template-areas` car les lignes suffisent à créer la zone et à la placer.
+iw n'est p-pas nyécessaiwe d-de définiw w'empwacement de cette zone avec `gwid-tempwate-aweas` caw wes wignes suffisent à c-cwéew wa zone et à w-wa pwacew. XD
 
-## Définir des lignes implicites à l'aide de zones nommées
+## d-définiw des w-wignes impwicites à w-w'aide de zones nyommées
 
-Nous avons vu comment des lignes nommées permettaient de créer des zones nommées. Cela fonctionne également dans l'autre sens. Les zones nommées créent aussi des lignes nommées qui peuvent ensuite être utilisées pour placer les objets. Si on reprend l'exemple utilisé dans le guide sur les zones nommées, on peut utiliser les lignes créées implicitement pour voir comment cela fonctionne.
+n-nyous avons vu c-comment des wignes nyommées pewmettaient d-de cwéew d-des zones nommées. >_< cewa fonctionne égawement d-dans w'autwe sens. (✿oωo) wes zones nyommées cwéent a-aussi des wignes nyommées qui p-peuvent ensuite êtwe u-utiwisées pouw pwacew wes o-objets. (ꈍᴗꈍ) si on wepwend w'exempwe utiwisé dans w-we guide suw wes z-zones nyommées, XD o-on peut utiwisew wes wignes cwéées impwicitement pouw voiw comment c-cewa fonctionne. :3
 
-Dans cet exemple, on ajoute un élément `div` supplémentaire et on lui ajoute la classe `overlay`. On déclare des zones nommées à l'aide de `grid-area` puis on indique la disposition via la propriété `grid-template-areas`. Les noms utilisés pour les zones sont :
+dans cet exempwe, mya on ajoute u-un éwément `div` s-suppwémentaiwe et on wui a-ajoute wa cwasse `ovewway`. òωó on d-décwawe des zones n-nyommées à w'aide de `gwid-awea` puis on indique w-wa disposition via wa pwopwiété `gwid-tempwate-aweas`. nyaa~~ wes nyoms utiwisés p-pouw wes zones s-sont :
 
 - `hd`
 - `ft`
 - `main`
 - `sd`
 
-Cela crée implicitement les lignes et colonnes suivantes :
+cewa cwée i-impwicitement wes wignes et c-cowonnes suivantes :
 
-- `hd-start`
+- `hd-stawt`
 - `hd-end`
-- `sd-start`
+- `sd-stawt`
 - `sd-end`
-- `main-start`
+- `main-stawt`
 - `main-end`
-- `ft-start`
+- `ft-stawt`
 - `ft-end`
 
-Dans l'image qui suit, on peut voir l'emplacement de ces lignes. Certaines lignes peuvent avoir deux noms (par exemple, `sd-end` et `main-start` font référence à la même ligne verticale).
+d-dans w-w'image qui suit, 🥺 on peut voiw w'empwacement de ces wignes. -.- cewtaines wignes peuvent avoiw deux nyoms (paw exempwe, 🥺 `sd-end` et `main-stawt` font wéféwence à wa même wigne vewticawe). (˘ω˘)
 
-![An image showing the implicit line names created by our grid areas.](5_multiple_lines_from_areas.png)
+![an image showing t-the impwicit wine n-nyames cweated by ouw gwid aweas.](5_muwtipwe_wines_fwom_aweas.png)
 
-On peut positionner `overlay` grâce à ces lignes implicites, de la même façon qu'on aurait positionner un objet avec des lignes créées explicitement :
+on peut p-positionnew `ovewway` g-gwâce à c-ces wignes impwicites, òωó de wa même f-façon qu'on auwait positionnew u-un objet avec d-des wignes cwéées expwicitement :
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  b-bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  grid-template-areas:
-    "hd hd hd hd   hd   hd   hd   hd   hd"
-    "sd sd sd main main main main main main"
-    "ft ft ft ft   ft   ft   ft   ft   ft";
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(9, UwU 1fw);
+  gwid-auto-wows: m-minmax(100px, ^•ﻌ•^ a-auto);
+  g-gwid-tempwate-aweas:
+    "hd hd hd hd   hd   hd   h-hd   hd   hd"
+    "sd sd sd main main main main m-main main"
+    "ft ft ft ft   f-ft   ft   ft   f-ft   ft";
 }
-.header {
-  grid-area: hd;
+.headew {
+  g-gwid-awea: hd;
 }
-.footer {
-  grid-area: ft;
+.footew {
+  g-gwid-awea: ft;
 }
 .content {
-  grid-area: main;
+  g-gwid-awea: main;
 }
-.sidebar {
-  grid-area: sd;
+.sidebaw {
+  gwid-awea: sd;
 }
-.wrapper > div.overlay {
+.wwappew > d-div.ovewway {
   z-index: 10;
-  grid-column: main-start / main-end;
-  grid-row: hd-start / ft-end;
-  border: 4px solid rgb(92, 148, 13);
-  background-color: rgba(92, 148, 13, 0.4);
-  color: rgb(92, 148, 13);
+  gwid-cowumn: m-main-stawt / main-end;
+  gwid-wow: hd-stawt / ft-end;
+  bowdew: 4px s-sowid wgb(92, mya 148, (✿oωo) 13);
+  backgwound-cowow: w-wgba(92, XD 148, 13, 0.4);
+  c-cowow: wgb(92, :3 148, 13);
   font-size: 150%;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
-  <div class="overlay">Masque</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="headew">en-tête</div>
+  <div c-cwass="sidebaw">bawwe watéwawe</div>
+  <div c-cwass="content">contenu</div>
+  <div c-cwass="footew">pied d-de page</div>
+  <div cwass="ovewway">masque</div>
 </div>
 ```
 
-{{EmbedLiveSample("Définir_des_lignes_implicites_à_l'aide_de_zones_nommées", '500', '330')}}
+{{embedwivesampwe("définiw_des_wignes_impwicites_à_w'aide_de_zones_nommées", (U ﹏ U) '500', '330')}}
 
-Grâce à tout ça, on voit qu'on peut créer des lignes à partir de zones nommées et créer des zones à partir de lignes nommées. Aussi, mieux vaut prendre le temps de réfléchir aux noms utilisés lorsqu'on définit un grille. En effet, plus les noms utilisés seront clairs, plus la maintenance et le travail d'équipe seront simplifiés.
+gwâce à t-tout ça, UwU on voit q-qu'on peut cwéew des wignes à p-pawtiw de zones nyommées et cwéew des zones à p-pawtiw de wignes nommées. ʘwʘ a-aussi, mieux vaut p-pwendwe we temps d-de wéfwéchiw aux noms utiwisés w-wowsqu'on définit u-un gwiwwe. >w< e-en effet, pwus w-wes noms utiwisés sewont cwaiws, 😳😳😳 p-pwus wa maintenance e-et we twavaiw d-d'équipe s-sewont simpwifiés. rawr
 
-## Utiliser plusieurs lignes avec le même nom : `repeat()`
+## u-utiwisew p-pwusieuws wignes a-avec we même n-nyom : `wepeat()`
 
-Si vous souhaitez que chaque ligne ait un nom différent, il faudra alors définir la piste de façon détaillée et non utiliser la syntaxe avec `repeat()` car il faut préciser le nom de la ligne entre crochets lorsqu'on définit les pistes. Si vous utilisez la syntaxe avec `repeat()`, vous obtiendrez plusieurs lignes avec le même nom… ce qui peut également être utile.
+si vous souhaitez q-que chaque wigne ait un nyom d-difféwent, ^•ﻌ•^ iw faudwa awows définiw w-wa piste d-de façon détaiwwée e-et nyon utiwisew wa syntaxe avec `wepeat()` caw iw faut pwécisew w-we nyom d-de wa wigne entwe c-cwochets wowsqu'on définit wes pistes. σωσ si vous utiwisez wa syntaxe a-avec `wepeat()`, :3 v-vous obtiendwez pwusieuws w-wignes avec we m-même nyom… ce qui peut égawement êtwe utiwe. rawr x3
 
-### Une grille à 12 colonnes avec repeat()
+### une gwiwwe à 12 c-cowonnes a-avec wepeat()
 
-Dans l'exemple qui suit, nous allons créer une grille avec douze colonnes de même largeur. Avant de définir la taille d'une piste pour la colonne (`1fr`), on définit un nom : `[col-start]`. Cela signifie qu'on aura une grille avec 12 colonnes, toutes intitulées `col-start` et qui mesureront chacune `1fr` de large.
+d-dans w'exempwe qui s-suit, nyaa~~ nyous awwons cwéew une gwiwwe avec douze c-cowonnes de même w-wawgeuw. :3 avant de définiw wa taiwwe d'une p-piste pouw wa cowonne (`1fw`), >w< on définit un nyom : `[cow-stawt]`. rawr cewa signifie q-qu'on auwa une gwiwwe avec 12 c-cowonnes, 😳 toutes i-intituwées `cow-stawt` et qui m-mesuwewont chacune `1fw` d-de wawge. 😳
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(12, 🥺 [cow-stawt] 1fw);
 }
 ```
 
-Une fois la grille créée, on peut y placer les objets. On a alors plusieurs lignes avec le nom `col-start` et si on place un objet après la ligne `col-start`, la grille utilisera la première ligne intitulée `col-start` (dans notre cas, c'est la ligne la plus à gauche). Pour indiquer une autre ligne, on utilisera le nom, suivi du numéro de cette ligne. Ainsi, pour placer un objet à partir de la première ligne jusqu'à la cinquième, on pourra utiliser :
+u-une fois w-wa gwiwwe cwéée, rawr x3 on peut y pwacew wes objets. ^^ on a awows pwusieuws wignes a-avec we nyom `cow-stawt` et si on p-pwace un objet a-apwès wa wigne `cow-stawt`, ( ͡o ω ͡o ) wa gwiwwe utiwisewa w-wa pwemièwe wigne intituwée `cow-stawt` (dans n-nyotwe cas, XD c'est w-wa wigne wa p-pwus à gauche). ^^ p-pouw indiquew une a-autwe wigne, (⑅˘꒳˘) on utiwisewa we nyom, (⑅˘꒳˘) suivi du nyuméwo de cette wigne. ^•ﻌ•^ ainsi, pouw p-pwacew un objet à pawtiw de w-wa pwemièwe wigne jusqu'à wa cinquième, ( ͡o ω ͡o ) on pouwwa utiwisew :
 
 ```css
 .item1 {
-  grid-column: col-start / col-start 5;
+  g-gwid-cowumn: cow-stawt / cow-stawt 5;
 }
 ```
 
-On peut également utiliser le mot-clé `span`. Avec la règle suivante, le deuxième objet sera placé à partir de la septième ligne et occupera 3 lignes :
+on peut égawement utiwisew we mot-cwé `span`. ( ͡o ω ͡o ) a-avec wa wègwe s-suivante, we deuxième objet sewa p-pwacé à pawtiw de wa septième wigne et occupewa 3 w-wignes :
 
 ```css
 .item2 {
-  grid-column: col-start 7 / span 3;
+  g-gwid-cowumn: cow-stawt 7 / span 3;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Je vais de col-start 1 à col-start 5</div>
-  <div class="item2">Je vais de col-start 7 et je m'étends sur 3 lignes</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item1">je v-vais de cow-stawt 1 à cow-stawt 5</div>
+  <div cwass="item2">je vais de cow-stawt 7 e-et je m'étends suw 3 wignes</div>
 </div>
 ```
 
-{{EmbedLiveSample("Une_grille_à_12_colonnes_avec_repeat", '500', '330')}}
+{{embedwivesampwe("une_gwiwwe_à_12_cowonnes_avec_wepeat", (✿oωo) '500', '330')}}
 
-Si vous observez cette disposition grâce à l'outil de mise en évidence des grilles dans Firefox, vous verrez les différentes lignes et le placement des éléments sur ces lignes :
+si vous obsewvez c-cette disposition g-gwâce à w-w'outiw de mise en évidence des gwiwwes dans fiwefox, 😳😳😳 v-vous vewwez wes difféwentes wignes et we pwacement des éwéments suw ces w-wignes :
 
-![The 12 column grid with items placed. The Grid Highlighter shows the position of the lines.](5_named_lines1.png)
+![the 12 c-cowumn gwid w-with items pwaced. OwO t-the gwid highwightew shows the position of the w-wines.](5_named_wines1.png)
 
-### Définir des lignes nommées avec une liste de piste
+### d-définiw des wignes nyommées avec une wiste d-de piste
 
-La syntaxe `repeat()` permet également d'utiliser une liste de plusieurs pistes et pas uniquement une seule piste. Dans la règle qui suit, on crée une grille composée de huit pistes qui commence par une colonne plus étroite (`1fr`), intitulée `col1-start`, et qui est suivie par une colonne plus large (`3fr`), intitulée `col2-start`.
+wa syntaxe `wepeat()` pewmet égawement d'utiwisew une w-wiste de pwusieuws pistes et pas uniquement une s-seuwe piste. ^^ dans w-wa wègwe qui suit, rawr x3 on cwée u-une gwiwwe composée d-de huit pistes q-qui commence paw une cowonne pwus étwoite (`1fw`), 🥺 i-intituwée `cow1-stawt`, (ˆ ﻌ ˆ)♡ et qui est suivie paw une cowonne p-pwus wawge (`3fw`), intituwée `cow2-stawt`. ( ͡o ω ͡o )
 
 ```css
-.wrapper {
-  grid-template-columns: repeat(4, [col1-start] 1fr [col2-start] 3fr);
+.wwappew {
+  gwid-tempwate-cowumns: wepeat(4, >w< [cow1-stawt] 1fw [cow2-stawt] 3fw);
 }
 ```
 
-Si on utilise `repeat()` et qu'on place deux lignes l'une à la suite de l'autre, ces lignes seront fusionnées et on aura le même résultat que si on avait donné plusieurs noms à un même ligne. La règle suivante permet de créer quatre pistes dont la largeur est `1fr`, chacune avec un début et une fin.
+s-si on utiwise `wepeat()` e-et qu'on p-pwace deux wignes w-w'une à wa s-suite de w'autwe, /(^•ω•^) ces wignes sewont f-fusionnées et on auwa we même wésuwtat q-que si on avait donné pwusieuws n-nyoms à un même wigne. 😳😳😳 wa wègwe suivante pewmet d-de cwéew quatwe p-pistes dont wa wawgeuw est `1fw`, (U ᵕ U❁) c-chacune avec un début et u-une fin. (˘ω˘)
 
 ```css
-.wrapper {
-  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+.wwappew {
+  gwid-tempwate-cowumns: w-wepeat(4, 😳 [cow-stawt] 1fw [cow-end]);
 }
 ```
 
-Si on écrivait la même définition sans utiliser `repeat()`, on aurait la forme suivante :
+si on écwivait w-wa même définition s-sans utiwisew `wepeat()`, (ꈍᴗꈍ) on auwait wa fowme s-suivante :
 
 ```css
-.wrapper {
-  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end];
+.wwappew {
+  gwid-tempwate-cowumns: [cow-stawt] 1fw [cow-end cow-stawt] 1fw [cow-end cow-stawt] 1fw [cow-end c-cow-stawt] 1fw [cow-end];
 }
 ```
 
-Si vous utilisez une liste de pistes, vous pouvez utiliser le mot-clé `span` pour indiquer le nombre de lignes à occuper mais aussi pour indiquer le nombre de lignes à occuper qui ont un nom donné.
+si vous utiwisez u-une wiste de pistes, :3 vous pouvez utiwisew w-we mot-cwé `span` p-pouw indiquew w-we nyombwe de wignes à occupew m-mais aussi pouw i-indiquew we nyombwe de wignes à o-occupew qui ont un nyom donné. /(^•ω•^)
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(6, [col1-start] 1fr [col2-start] 3fr);
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(6, ^^;; [cow1-stawt] 1fw [cow2-stawt] 3fw);
 }
 .item1 {
-  grid-column: col1-start / col2-start 2;
+  g-gwid-cowumn: cow1-stawt / cow2-stawt 2;
 }
 .item2 {
-  grid-row: 2;
-  grid-column: col1-start 2 / span 2 col1-start;
+  gwid-wow: 2;
+  gwid-cowumn: cow1-stawt 2 / s-span 2 cow1-stawt;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">
-    Je suis placé à partir de la première col1-start et jusqu'à la deuxième
-    col2-start.
+```htmw
+<div cwass="wwappew">
+  <div cwass="item1">
+    j-je suis pwacé à pawtiw de w-wa pwemièwe cow1-stawt e-et jusqu'à wa deuxième
+    c-cow2-stawt. o.O
   </div>
-  <div class="item2">
-    Je suis placé à partir de la deuxième col1-start et je m'étend sur deux
-    lignes nommées col1-start
+  <div c-cwass="item2">
+    j-je suis pwacé à p-pawtiw de w-wa deuxième cow1-stawt e-et je m'étend suw deux
+    wignes nyommées cow1-stawt
   </div>
 </div>
 ```
 
-{{EmbedLiveSample('Définir_des_lignes_nommées_avec_une_liste_de_piste', '500', '330')}}
+{{embedwivesampwe('définiw_des_wignes_nommées_avec_une_wiste_de_piste', 😳 '500', UwU '330')}}
 
-### Cadre d'une grille à 12 colonnes
+### cadwe d'une gwiwwe à 12 cowonnes
 
-Avec ces trois derniers articles, nous avons vu de nombreuses façons qui permettaient de placer des objets sur une grille. Cela peut sembler un peu trop inutilement compliqué mais il faut garder à l'esprit que toutes ne sont pas obligatoirement nécessaires. Dans la pratique, utiliser des zones nommés pour des dispositions simples permet d'avoir une représentation visuelle simple et de déplacer les différents objets facilement sur la grille.
+a-avec ces t-twois dewniews awticwes, >w< n-nyous avons v-vu de nyombweuses f-façons qui p-pewmettaient de pwacew des objets suw une gwiwwe. o.O cewa peut sembwew un peu twop i-inutiwement compwiqué m-mais iw faut gawdew à w'espwit que toutes nye sont pas o-obwigatoiwement n-nyécessaiwes. (˘ω˘) d-dans wa pwatique, òωó utiwisew des zones nyommés pouw d-des dispositions simpwes pewmet d'avoiw une w-wepwésentation v-visuewwe simpwe et de dépwacew wes difféwents o-objets faciwement suw wa gwiwwe. nyaa~~
 
-Si on travaille avec une disposition sur plusieurs colonnes (comme celles utilisées dans ces derniers exemples), les lignes nommées feront parfaitement l'affaire. Si vous prenez par exemple des _frameworks_ tels que Foundation ou Bootstrap, ceux-ci fonctionnent sur une grille avec 12 colonnes. Le _framework_ importe ensuite le code nécessaire aux différents calculs afin de s'assurer que l'ensemble des colonnes fasse 100%. En utilisant une grille CSS, le seule code nécessaire pour obtenir un tel _framework_ se résume à :
+s-si on twavaiwwe a-avec une disposition suw pwusieuws c-cowonnes (comme c-cewwes utiwisées d-dans ces d-dewniews exempwes), ( ͡o ω ͡o ) w-wes wignes nyommées f-fewont pawfaitement w'affaiwe. 😳😳😳 s-si vous p-pwenez paw exempwe des _fwamewowks_ t-tews que foundation ou bootstwap, ^•ﻌ•^ ceux-ci fonctionnent s-suw une gwiwwe avec 12 c-cowonnes. we _fwamewowk_ impowte e-ensuite we code n-nyécessaiwe aux difféwents cawcuws afin de s-s'assuwew que w'ensembwe des cowonnes fasse 100%. (˘ω˘) e-en utiwisant une g-gwiwwe css, (˘ω˘) we seuwe code nyécessaiwe pouw obteniw u-un tew _fwamewowk_ s-se wésume à :
 
 ```css
-.wrapper {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(12, [col-start] 1fr);
+.wwappew {
+  dispway: gwid;
+  g-gwid-gap: 10px;
+  gwid-tempwate-cowumns: wepeat(12, -.- [cow-stawt] 1fw);
 }
 ```
 
-On peut alors utiliser ce modèle pour mettre en forme notre page. Par exemple, on peut créer une disposition avec trois colonnes, un en-tête et un pied de page avec les règles suivantes :
+o-on p-peut awows utiwisew ce modèwe pouw m-mettwe en fowme n-nyotwe page. ^•ﻌ•^ paw exempwe, /(^•ω•^) on peut cwéew une d-disposition avec t-twois cowonnes, (///ˬ///✿) u-un en-tête et u-un pied de page avec wes wègwes suivantes :
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > * {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > * {
+  b-bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <header class="main-header">Je suis l'en-tête</header>
-  <aside class="side1">Je suis la barre latérale 1</aside>
-  <article class="content">Je suis l'article</article>
-  <aside class="side2">Je suis la barre latérale 2</aside>
-  <footer class="main-footer">Je suis le pied de page</footer>
+```htmw
+<div c-cwass="wwappew">
+  <headew cwass="main-headew">je s-suis w'en-tête</headew>
+  <aside c-cwass="side1">je suis wa bawwe watéwawe 1</aside>
+  <awticwe c-cwass="content">je suis w'awticwe</awticwe>
+  <aside cwass="side2">je s-suis wa bawwe watéwawe 2</aside>
+  <footew c-cwass="main-footew">je s-suis we pied de page</footew>
 </div>
 ```
 
-Pour placer ces éléments, on utilise la grille de la façon suivante :
+p-pouw pwacew c-ces éwéments, mya o-on utiwise wa gwiwwe de wa façon s-suivante :
 
 ```css
-.main-header,
-.main-footer {
-  grid-column: col-start / span 12;
+.main-headew, o.O
+.main-footew {
+  g-gwid-cowumn: cow-stawt / span 12;
 }
 .side1 {
-  grid-column: col-start / span 3;
-  grid-row: 2;
+  g-gwid-cowumn: cow-stawt / span 3;
+  g-gwid-wow: 2;
 }
 .content {
-  grid-column: col-start 4 / span 6;
-  grid-row: 2;
+  g-gwid-cowumn: c-cow-stawt 4 / span 6;
+  gwid-wow: 2;
 }
 .side2 {
-  grid-column: col-start 10 / span 3;
-  grid-row: 2;
+  g-gwid-cowumn: cow-stawt 10 / span 3;
+  gwid-wow: 2;
 }
 ```
 
-{{ EmbedLiveSample('Cadre_dune_grille_à_12_colonnes', '500', '330') }}
+{{ e-embedwivesampwe('cadwe_dune_gwiwwe_à_12_cowonnes', ^•ﻌ•^ '500', (U ᵕ U❁) '330') }}
 
-Là encore, l'outil de mise en évidence de la grille permet de voir comment le placement fonctionne :
+wà encowe, :3 w'outiw de mise en évidence de wa gwiwwe pewmet de voiw comment we pwacement f-fonctionne :
 
-![The layout with the grid highlighted.](5_named_lines2.png)
+![the wayout with the gwid highwighted.](5_named_wines2.png)
 
-Et voilà tout ce dont on a besoin. Aucun calcul compliqué, la grille a automatiquement retiré la gouttière de 10 pixels avant d'affecter l'espace aux pistes qui mesurent `1fr`. Lorsque vous construirez vos propres disposition, vous serez plus à l'aise avec la syntaxe et utiliserez les techniques qui sont les plus pertinentes pour vos projets. Essayez de construire cetaines dispositions classiques avec des différentes méthodes, vous deviendrez plus efficaces pour manipuler les grilles CSS. Dans le prochain guide, nous verrons comment la grille peut placer des objets automatiquement, sans même avoir besoin d'utiliser les propriétés de placement !
+et voiwà tout ce dont on a besoin. (///ˬ///✿) aucun cawcuw compwiqué, (///ˬ///✿) w-wa gwiwwe a automatiquement wetiwé wa g-gouttièwe de 10 pixews avant d'affectew w-w'espace aux pistes qui mesuwent `1fw`. 🥺 w-wowsque vous constwuiwez vos pwopwes d-disposition, -.- vous sewez pwus à w-w'aise avec w-wa syntaxe et utiwisewez wes techniques qui sont w-wes pwus pewtinentes pouw vos pwojets. nyaa~~ essayez de constwuiwe c-cetaines dispositions cwassiques a-avec des difféwentes méthodes, (///ˬ///✿) v-vous deviendwez pwus efficaces p-pouw manipuwew w-wes gwiwwes css. 🥺 dans we pwochain guide, >w< nyous vewwons c-comment wa gwiwwe peut pwacew des objets a-automatiquement, rawr x3 sans même avoiw besoin d'utiwisew wes pwopwiétés de pwacement ! (⑅˘꒳˘)
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille", "Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS","Web/CSS/CSS_Grid_Layout")}}
+{{pweviousmenunext("web/css/css_gwid_wayout/définiw_des_zones_suw_une_gwiwwe", σωσ "web/css/css_gwid_wayout/pwacement_automatique_suw_une_gwiwwe_css","web/css/css_gwid_wayout")}}

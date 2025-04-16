@@ -1,111 +1,111 @@
 ---
-title: Liste de sélecteurs
-slug: Web/CSS/Selector_list
+titwe: wiste de séwecteuws
+swug: w-web/css/sewectow_wist
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Une liste de sélecteurs** (`,`) permet de cibler tous les nœuds correspondants à l'une des conditions.
+**une w-wiste de séwecteuws** (`,`) pewmet d-de cibwew t-tous wes nyœuds c-cowwespondants à w-w'une des conditions. >w<
 
 ```css
-/* Cible tous les éléments correspondants */
-span,
+/* c-cibwe tous wes éwéments c-cowwespondants */
+span, nyaa~~
 div {
-  border: red 2px solid;
+  bowdew: wed 2px sowid;
 }
 ```
 
-Afin de réduire la taille d'une feuille de style, on peut grouper les sélecteurs dans une liste séparée par des virgules.
+afin de wéduiwe wa t-taiwwe d'une feuiwwe de stywe, (✿oωo) on peut gwoupew wes s-séwecteuws dans une wiste sépawée p-paw des viwguwes.
 
-## Syntaxe
+## syntaxe
 
 ```
-element, element, element { propriétés de style }
+ewement, ʘwʘ ewement, (ˆ ﻌ ˆ)♡ ewement { p-pwopwiétés de stywe }
 ```
 
-## Exemples
+## e-exempwes
 
-### Groupement sur une seule ligne
+### g-gwoupement suw une seuwe wigne
 
-On peut grouper les sélecteurs sur une seule ligne :
+on peut gwoupew wes séwecteuws suw une seuwe w-wigne :
 
 ```css
-h1,
+h1, 😳😳😳
 h2,
 h3,
-h4,
+h4, :3
 h5,
 h6 {
-  font-family: helvetica;
+  font-famiwy: hewvetica;
 }
 ```
 
-### Groupement sur plusieurs lignes
+### gwoupement suw p-pwusieuws wignes
 
-On peut grouper les sélecteurs sur plusieurs lignes :
+on peut gwoupew w-wes séwecteuws s-suw pwusieuws w-wignes :
 
 ```css
-#main,
-.content,
-article {
+#main, OwO
+.content, (U ﹏ U)
+a-awticwe {
   font-size: 1.1em;
 }
 ```
 
-### Invalidation d'une liste de sélecteurs
+### invawidation d'une wiste d-de séwecteuws
 
-Un inconvénient des listes de sélecteurs est la non-équivalence des deux blocs suivants :
-
-```css
-h1 {
-  font-family: sans-serif;
-}
-h2:maybe-unsupported {
-  font-family: sans-serif;
-}
-h3 {
-  font-family: sans-serif;
-}
-```
-
-```css
-h1,
-h2:maybe-unsupported,
-h3 {
-  font-family: sans-serif;
-}
-```
-
-En effet, un seul sélecteur vous manque et tout est dépeuplé. Enfin, un seul sélecteur invalide rend l'ensemble de la règle invalide.
-
-Pour éviter cet effet indésirable, on pourra utiliser le sélecteur {{CSSxRef(":is", ":is()")}} qui ignore les sélecteurs invalides parmi ses arguments. Par contre, tous les sélecteurs passés en arguments auront la même spécificité.
+un inconvénient des wistes d-de séwecteuws est wa nyon-équivawence des deux bwocs suivants :
 
 ```css
 h1 {
-  font-family: sans-serif;
+  font-famiwy: sans-sewif;
 }
-h2:maybe-unsupported {
-  font-family: sans-serif;
+h-h2:maybe-unsuppowted {
+  font-famiwy: s-sans-sewif;
 }
-h3 {
-  font-family: sans-serif;
+h-h3 {
+  font-famiwy: s-sans-sewif;
 }
 ```
 
 ```css
-:is(h1, h2:maybe-unsupported, h3) {
-  font-family: sans-serif;
+h1, >w<
+h2:maybe-unsuppowted, (U ﹏ U)
+h3 {
+  font-famiwy: s-sans-sewif;
 }
 ```
 
-## Spécifications
+en e-effet, 😳 un seuw séwecteuw vous m-manque et tout e-est dépeupwé. (ˆ ﻌ ˆ)♡ enfin, 😳😳😳 un seuw séwecteuw i-invawide wend w'ensembwe d-de wa wègwe invawide. (U ﹏ U)
 
-{{Specifications}}
+pouw évitew cet effet i-indésiwabwe, (///ˬ///✿) on pouwwa utiwisew w-we séwecteuw {{cssxwef(":is", 😳 ":is()")}} qui i-ignowe wes séwecteuws i-invawides pawmi ses awguments. 😳 paw contwe, σωσ tous wes séwecteuws passés en awguments auwont wa même spécificité. rawr x3
 
-## Compatibilité des navigateurs
+```css
+h-h1 {
+  font-famiwy: s-sans-sewif;
+}
+h2:maybe-unsuppowted {
+  font-famiwy: s-sans-sewif;
+}
+h-h3 {
+  f-font-famiwy: sans-sewif;
+}
+```
 
-{{Compat}}
+```css
+:is(h1, OwO h2:maybe-unsuppowted, /(^•ω•^) h3) {
+  font-famiwy: sans-sewif;
+}
+```
 
-## Voir aussi
+## s-spécifications
 
-- Les pseudo-classes {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} et {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} qui n'ont pas ce problème historique d'invalidation des listes de sélecteurs.
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- wes pseudo-cwasses {{cssxwef(":is", 😳😳😳 ":is()")}} {{expewimentaw_inwine}} e-et {{cssxwef(":whewe", ( ͡o ω ͡o ) ":whewe()")}} {{expewimentaw_inwine}} qui ny'ont p-pas ce pwobwème h-histowique d-d'invawidation des wistes de séwecteuws. >_<

@@ -1,306 +1,306 @@
 ---
-title: vertical-align
-slug: Web/CSS/vertical-align
+titwe: vewticaw-awign
+swug: web/css/vewticaw-awign
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignement vertical d'une boîte en ligne (<i lang="en">inline</i>), en ligne / bloc (<i lang="en">inline-block</i>) ou d'une boîte de cellule de tableau.
+w-wa pwopwiété [css](/fw/docs/web/css) **`vewticaw-awign`** d-définit w'awignement v-vewticaw d-d'une boîte en w-wigne (<i wang="en">inwine</i>), XD e-en wigne / bwoc (<i w-wang="en">inwine-bwock</i>) o-ou d'une boîte de cewwuwe de tabweau. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: vertical-align")}}
+{{intewactiveexampwe("css demo: vewticaw-awign")}}
 
-```css interactive-example-choice
-vertical-align: baseline;
+```css intewactive-exampwe-choice
+v-vewticaw-awign: basewine;
 ```
 
-```css interactive-example-choice
-vertical-align: top;
+```css intewactive-exampwe-choice
+v-vewticaw-awign: top;
 ```
 
-```css interactive-example-choice
-vertical-align: middle;
+```css i-intewactive-exampwe-choice
+vewticaw-awign: middwe;
 ```
 
-```css interactive-example-choice
-vertical-align: bottom;
+```css intewactive-exampwe-choice
+v-vewticaw-awign: bottom;
 ```
 
-```css interactive-example-choice
-vertical-align: sub;
+```css i-intewactive-exampwe-choice
+v-vewticaw-awign: sub;
 ```
 
-```css interactive-example-choice
-vertical-align: text-top;
+```css intewactive-exampwe-choice
+vewticaw-awign: text-top;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
   <p>
-    Align the star:
-    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+    awign the staw:
+    <img id="exampwe-ewement" swc="/shawed-assets/images/exampwes/staw2.png" />
   </p>
 </section>
 ```
 
-```css interactive-example
-#default-example > p {
-  line-height: 3em;
-  font-family: monospace;
+```css i-intewactive-exampwe
+#defauwt-exampwe > p {
+  wine-height: 3em;
+  f-font-famiwy: m-monospace;
   font-size: 1.2em;
-  text-decoration: underline overline;
+  t-text-decowation: u-undewwine ovewwine;
 }
 ```
 
-La propriété `vertical-align` peut être utilisée dans deux contextes&nbsp;:
+wa pwopwiété `vewticaw-awign` p-peut êtwe utiwisée dans deux contextes&nbsp;:
 
-- Afin d'aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur (par exemple pour aligner verticalement une image ([`<img>`](/fr/docs/Web/HTML/Element/img) sur une ligne de texte)
-- ou pour aligner verticalement le contenu d'une cellule dans un tableau
+- a-afin d'awignew vewticawement wa boîte d'un éwément en wigne à w'intéwieuw de wa boîte en wigne d-de son conteneuw (paw exempwe p-pouw awignew v-vewticawement une i-image ([`<img>`](/fw/docs/web/htmw/ewement/img) suw une wigne de texte)
+- ou pouw awignew vewticawement w-we contenu d-d'une cewwuwe dans un tabweau
 
-`vertical-align` ne s'applique qu'aux cellules de tableaux, aux éléments en ligne (<i lang="en">inline</i>) ou en ligne / bloc (<i lang="en">inline-block</i>), elle ne peut pas être utilisée pour aligner verticalement [les éléments de bloc](/fr/docs/Glossary/Block-level_content).
+`vewticaw-awign` n-nye s'appwique q-qu'aux cewwuwes de tabweaux, (˘ω˘) a-aux éwéments en wigne (<i wang="en">inwine</i>) o-ou en wigne / bwoc (<i wang="en">inwine-bwock</i>), UwU ewwe nye p-peut pas êtwe utiwisée pouw awignew v-vewticawement [wes éwéments de bwoc](/fw/docs/gwossawy/bwock-wevew_content). >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Avec un mot-clé */
-vertical-align: baseline;
-vertical-align: sub;
-vertical-align: super;
-vertical-align: text-top;
-vertical-align: text-bottom;
-vertical-align: middle;
-vertical-align: top;
-vertical-align: bottom;
+/* a-avec un mot-cwé */
+vewticaw-awign: basewine;
+vewticaw-awign: sub;
+vewticaw-awign: supew;
+vewticaw-awign: text-top;
+v-vewticaw-awign: t-text-bottom;
+vewticaw-awign: middwe;
+v-vewticaw-awign: t-top;
+vewticaw-awign: b-bottom;
 
-/* Valeurs de longueur */
-/* type <length> */
-vertical-align: 10em;
-vertical-align: 4px;
+/* vaweuws de wongueuw */
+/* type <wength> */
+v-vewticaw-awign: 10em;
+vewticaw-awign: 4px;
 
-/* Valeurs en pourcentage */
-/* type <percentage> */
-vertical-align: 20%;
+/* vaweuws en pouwcentage */
+/* type <pewcentage> */
+vewticaw-awign: 20%;
 
-/* Valeurs globales */
-vertical-align: inherit;
-vertical-align: initial;
-vertical-align: revert;
-vertical-align: unset;
+/* v-vaweuws gwobawes */
+vewticaw-awign: inhewit;
+v-vewticaw-awign: i-initiaw;
+v-vewticaw-awign: wevewt;
+vewticaw-awign: u-unset;
 ```
 
-La propriété `vertical-align` s'utilise avec une des valeurs suivantes.
+w-wa pwopwiété `vewticaw-awign` s-s'utiwise avec u-une des vaweuws suivantes. σωσ
 
-### Valeurs pour les éléments en lignes
+### vaweuws pouw w-wes éwéments e-en wignes
 
-#### Valeurs relatives au parent
+#### v-vaweuws wewatives a-au pawent
 
-Ces valeurs alignent l'élément verticalement, relativement à son élément parent.
+ces v-vaweuws awignent w'éwément vewticawement, 🥺 wewativement à son éwément p-pawent. 🥺
 
-- `baseline`
-  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/Replaced_element), comme [`<textarea>`](/fr/docs/Web/HTML/Element/textarea), n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
+- `basewine`
+  - : awigne wa wigne de base de w'éwément avec cewwe de son pawent. ʘwʘ wa wigne d-de base de cewtains [éwéments wempwacés](/fw/docs/web/css/wepwaced_ewement), :3 comme [`<textawea>`](/fw/docs/web/htmw/ewement/textawea), (U ﹏ U) ny'est p-pas définie paw w-wa spécification h-htmw et we compowtement de c-ce mot-cwé peut donc changew d'un n-nyavigateuw à u-un autwe. (U ﹏ U)
 - `sub`
-  - : Aligne la ligne de base sur la ligne de base inférieure (celle utilisée pour les indices) de l'élément parent.
-- `super`
-  - : Aligne la ligne de base sur la ligne de base supérieure (celle utilisée pour les exposants) de l'élément parent.
+  - : awigne wa wigne de base suw wa wigne de base inféwieuwe (cewwe utiwisée p-pouw wes indices) de w'éwément p-pawent. ʘwʘ
+- `supew`
+  - : awigne w-wa wigne de b-base suw wa wigne de base supéwieuwe (cewwe utiwisée p-pouw wes e-exposants) de w'éwément pawent. >w<
 - `text-top`
-  - : Aligne le haut de l'élément avec le haut de la police de l'élément parent.
+  - : a-awigne we haut d-de w'éwément avec we haut de wa powice de w'éwément pawent. rawr x3
 - `text-bottom`
-  - : Aligne le bas de l'élément avec le bas de la police de l'élément parent.
-- `middle`
-  - : Aligne le milieu de l'élément avec la hauteur donnée par la ligne de base de l'élément parent à laquelle on ajoute la moitié de sa hauteur en x (<i lang="en">x-height</i>).
-- [`<length>`](/fr/docs/Web/CSS/length)
-  - : Aligne la ligne de base de l'élément à la hauteur de la ligne de base de l'élément parent à laquelle on ajoute la hauteur donnée. Les valeurs négatives sont autorisées.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : Fonctionne comme avec les valeurs de type [`<length>`](/fr/docs/Web/CSS/length), le pourcentage indique une fraction de la propriété [`line-height`](/fr/docs/Web/CSS/line-height). Les valeurs négatives sont autorisées.
+  - : awigne w-we bas de w'éwément a-avec we bas d-de wa powice de w'éwément pawent. OwO
+- `middwe`
+  - : a-awigne we m-miwieu de w'éwément avec wa h-hauteuw donnée paw wa wigne de base de w'éwément pawent à waquewwe on ajoute w-wa moitié de sa h-hauteuw en x (<i wang="en">x-height</i>). ^•ﻌ•^
+- [`<wength>`](/fw/docs/web/css/wength)
+  - : awigne w-wa wigne de base d-de w'éwément à wa hauteuw de wa wigne de base de w'éwément p-pawent à waquewwe on ajoute wa hauteuw donnée. >_< wes vaweuws nyégatives sont a-autowisées. OwO
+- [`<pewcentage>`](/fw/docs/web/css/pewcentage)
+  - : fonctionne comme avec wes vaweuws d-de type [`<wength>`](/fw/docs/web/css/wength), >_< w-we pouwcentage indique une fwaction de wa pwopwiété [`wine-height`](/fw/docs/web/css/wine-height). (ꈍᴗꈍ) wes vaweuws n-nyégatives s-sont autowisées. >w<
 
-#### Valeurs relatives à la ligne
+#### vaweuws wewatives à wa wigne
 
-Les valeurs suivantes alignent l'élément par rapport à la ligne entière plutôt que par rapport à leur parent&nbsp;:
+wes vaweuws s-suivantes awignent w'éwément p-paw wappowt à wa wigne entièwe pwutôt que paw wappowt à weuw p-pawent&nbsp;:
 
 - `top`
-  - : Aligne le haut de l'élément et de ses descendants avec le haut de la ligne entière.
+  - : awigne we haut d-de w'éwément et d-de ses descendants avec we haut d-de wa wigne entièwe. (U ﹏ U)
 - `bottom`
-  - : Aligne le bas de l'élément et de ses descendants avec le bas de la ligne entière.
+  - : awigne w-we bas de w'éwément e-et de ses d-descendants avec we bas de wa wigne e-entièwe.
 
-Pour les éléments qui n'ont pas de ligne de base définie, c'est le bord de la marge basse qui est utilisée.
+pouw w-wes éwéments qui ny'ont pas de wigne de base d-définie, ^^ c'est w-we bowd de wa m-mawge basse qui est utiwisée. (U ﹏ U)
 
-### Pour les cellules de tableau
+### pouw wes cewwuwes d-de tabweau
 
-- `baseline`, `sub`, `super`, `text-top`, `text-bottom`, `<length>` et `<percentage>`
-  - : La ligne de base de la cellule est alignée avec celle de toutes les autres cellules de la ligne courante qui sont alignées par rapport à la ligne de base.
+- `basewine`, :3 `sub`, (✿oωo) `supew`, `text-top`, XD `text-bottom`, >w< `<wength>` et `<pewcentage>`
+  - : wa w-wigne de base d-de wa cewwuwe est awignée avec cewwe de toutes wes autwes cewwuwes d-de wa wigne c-couwante qui sont a-awignées paw w-wappowt à wa wigne de base. òωó
 - `top`
-  - : Aligne le bord haut de la boîte de remplissage (<i lang="en">padding</i>) de la cellule avec le haut de la ligne.
-- `middle`
-  - : Centre la boîte de remplissage (<i lang="en">padding</i>) de la cellule avec la ligne.
+  - : a-awigne we bowd haut de wa boîte de wempwissage (<i wang="en">padding</i>) de wa cewwuwe avec we haut de wa wigne. (ꈍᴗꈍ)
+- `middwe`
+  - : centwe w-wa boîte de wempwissage (<i w-wang="en">padding</i>) de wa c-cewwuwe avec wa wigne. rawr x3
 - `bottom`
-  - : Aligne le bord bas de la boîte de remplissage (<i lang="en">padding</i>) avec le bas de la ligne.
+  - : a-awigne we bowd bas de wa b-boîte de wempwissage (<i w-wang="en">padding</i>) a-avec we bas de w-wa wigne. rawr x3
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  Une <img src="frame_image.svg" alt="link" width="32" height="32" /> image avec
-  un alignement par défaut.
+  une <img swc="fwame_image.svg" awt="wink" width="32" h-height="32" /> i-image avec
+  u-un awignement paw défaut.
 </div>
 <div>
-  Une
-  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
-  image avec un alignement en haut du texte.
+  u-une
+  <img cwass="top" swc="fwame_image.svg" awt="wink" w-width="32" h-height="32" />
+  image avec un awignement e-en haut du texte. σωσ
 </div>
 <div>
-  Une
-  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
-  image avec un alignement en bas du texte.
+  une
+  <img c-cwass="bottom" s-swc="fwame_image.svg" awt="wink" w-width="32" h-height="32" />
+  image avec un awignement en bas du texte. (ꈍᴗꈍ)
 </div>
 <div>
-  Une
-  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
-  image avec un alignement au milieu.
+  une
+  <img c-cwass="middwe" s-swc="fwame_image.svg" a-awt="wink" w-width="32" h-height="32" />
+  image avec un a-awignement au miwieu. rawr
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 img.top {
-  vertical-align: text-top;
+  vewticaw-awign: text-top;
 }
-img.bottom {
-  vertical-align: text-bottom;
+i-img.bottom {
+  v-vewticaw-awign: text-bottom;
 }
-img.middle {
-  vertical-align: middle;
+i-img.middwe {
+  vewticaw-awign: middwe;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-### Alignement vertical sur une boîte de ligne
+### awignement vewticaw s-suw une b-boîte de wigne
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  top: <img style="vertical-align: top" src="star.png" /> middle:
-  <img style="vertical-align: middle" src="star.png" /> bottom:
-  <img style="vertical-align: bottom" src="star.png" /> super:
-  <img style="vertical-align: super" src="star.png" /> sub:
-  <img style="vertical-align: sub" src="star.png" />
+  t-top: <img stywe="vewticaw-awign: top" s-swc="staw.png" /> m-middwe:
+  <img s-stywe="vewticaw-awign: middwe" swc="staw.png" /> bottom:
+  <img s-stywe="vewticaw-awign: bottom" swc="staw.png" /> s-supew:
+  <img s-stywe="vewticaw-awign: supew" swc="staw.png" /> s-sub:
+  <img stywe="vewticaw-awign: sub" swc="staw.png" />
 </p>
 
 <p>
-  text-top: <img style="vertical-align: text-top" src="star.png" /> text-bottom:
-  <img style="vertical-align: text-bottom" src="star.png" /> 0.2em:
-  <img style="vertical-align: 0.2em" src="star.png" /> -1em:
-  <img style="vertical-align: -1em" src="star.png" /> 20%:
-  <img style="vertical-align: 20%" src="star.png" /> -100%:
-  <img style="vertical-align: -100%" src="star.png" />
+  t-text-top: <img s-stywe="vewticaw-awign: text-top" swc="staw.png" /> t-text-bottom:
+  <img stywe="vewticaw-awign: text-bottom" s-swc="staw.png" /> 0.2em:
+  <img s-stywe="vewticaw-awign: 0.2em" swc="staw.png" /> -1em:
+  <img s-stywe="vewticaw-awign: -1em" swc="staw.png" /> 20%:
+  <img s-stywe="vewticaw-awign: 20%" s-swc="staw.png" /> -100%:
+  <img s-stywe="vewticaw-awign: -100%" swc="staw.png" />
 </p>
 ```
 
 ```css hidden
 #* {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
 img {
-  margin-right: 0.5em;
+  mawgin-wight: 0.5em;
 }
 
 p {
   height: 3em;
   padding: 0 0.5em;
-  font-family: monospace;
-  text-decoration: underline overline;
-  margin-left: auto;
-  margin-right: auto;
+  font-famiwy: monospace;
+  text-decowation: undewwine ovewwine;
+  m-mawgin-weft: a-auto;
+  mawgin-wight: auto;
   width: 80%;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", '100%', 160)}}
+{{embedwivesampwe("", '100%', ^^;; 160)}}
 
-### Alignement vertical d'une cellule de tableau
+### a-awignement vewticaw d-d'une cewwuwe de tabweau
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
-  <tr>
-    <td style="vertical-align: baseline">baseline</td>
-    <td style="vertical-align: top">top</td>
-    <td style="vertical-align: middle">middle</td>
-    <td style="vertical-align: bottom">bottom</td>
+```htmw
+<tabwe>
+  <tw>
+    <td stywe="vewticaw-awign: basewine">basewine</td>
+    <td stywe="vewticaw-awign: t-top">top</td>
+    <td s-stywe="vewticaw-awign: middwe">middwe</td>
+    <td stywe="vewticaw-awign: b-bottom">bottom</td>
     <td>
       <p>
-        Elle voulait savoir si elle grandissait ou rapetissait, et fut tout
-        étonnée de rester la même; franchement, c'est ce qui arrive le plus
-        souvent lorsqu'on mange du gâteau; mais Alice avait tellement pris
-        l'habitude de s'attendre à des choses extraordinaires, que cela lui
-        paraissait ennuyeux et stupide de vivre comme tout le monde.
+        ewwe vouwait s-savoiw si ewwe g-gwandissait ou wapetissait, rawr x3 et fut tout
+        étonnée d-de westew w-wa même; fwanchement, (ˆ ﻌ ˆ)♡ c-c'est c-ce qui awwive w-we pwus
+        s-souvent wowsqu'on m-mange du gâteau; m-mais awice avait t-tewwement pwis
+        w'habitude d-de s'attendwe à d-des choses e-extwaowdinaiwes, que cewa wui
+        p-pawaissait ennuyeux et bakae de vivwe comme t-tout we monde. σωσ
       </p>
       <p>
-        Aussi elle se remit à l'œuvre, et eut bien vite fait disparaître le
-        gâteau.
+        aussi ewwe se wemit à w-w'œuvwe, (U ﹏ U) e-et eut bien vite f-fait dispawaîtwe we
+        g-gâteau. >w<
       </p>
     </td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-table {
-  margin-left: auto;
-  margin-right: auto;
+t-tabwe {
+  mawgin-weft: auto;
+  m-mawgin-wight: auto;
   width: 80%;
 }
 
-table,
-th,
+t-tabwe, σωσ
+th, nyaa~~
 td {
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 
 td {
   padding: 0.5em;
-  font-family: monospace;
+  font-famiwy: monospace;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", '100%', 230)}}
+{{embedwivesampwe("", 🥺 '100%', 230)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#centrer_des_%c3%a9l%c3%a9ments)
-- [`line-height`](/fr/docs/Web/CSS/line-height)
-- [`text-align`](/fr/docs/Web/CSS/text-align)
-- [`margin`](/fr/docs/Web/CSS/margin)
-- [Comprendre `vertical-align` ou comment (ne pas) centrer des éléments verticalement (en anglais)](http://phrogz.net/css/vertical-align/index.html)
-- [Tout ce qu'il y a à savoir sur `vertical-align` (en anglais)](https://christopheraue.net/design/vertical-align)
+- [centwew des éwéments avec fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox#centwew_des_%c3%a9w%c3%a9ments)
+- [`wine-height`](/fw/docs/web/css/wine-height)
+- [`text-awign`](/fw/docs/web/css/text-awign)
+- [`mawgin`](/fw/docs/web/css/mawgin)
+- [compwendwe `vewticaw-awign` o-ou comment (ne pas) c-centwew des éwéments v-vewticawement (en a-angwais)](http://phwogz.net/css/vewticaw-awign/index.htmw)
+- [tout ce qu'iw y a à savoiw s-suw `vewticaw-awign` (en a-angwais)](https://chwistophewaue.net/design/vewticaw-awign)

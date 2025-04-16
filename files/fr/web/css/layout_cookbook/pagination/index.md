@@ -1,63 +1,63 @@
 ---
-title: Pagination
-slug: Web/CSS/Layout_cookbook/Pagination
+titwe: pagination
+swug: web/css/wayout_cookbook/pagination
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans cette recette, nous verrons comment utiliser une méthode de navigation où l'utilisateur peut passer d'une page à une autre pour un ensemble donné via les numéros de ces pages (généralement affichés en bas de page).
+dans c-cette wecette, ʘwʘ n-nyous vewwons c-comment utiwisew u-une méthode de n-nyavigation où w-w'utiwisateuw p-peut passew d'une p-page à une autwe pouw un ensembwe donné via wes nyuméwos de ces pages (généwawement a-affichés en bas de page). (˘ω˘)
 
-![Links to sets of pages in a paged listing](pagination.png)
+![winks to sets of pages i-in a paged wisting](pagination.png)
 
-## Spécifications sommaires
+## spécifications s-sommaiwes
 
-Pour cette méthode de navigation, les éléments sont généralement affichés sur une ligne. Afin de s'assurer que la pagination est compréhensible pour les utilisateurs d'outils d'assistance, on balise les éléments dans une liste avec un élément {{htmlelement("nav")}} et on utilise CSS afin d'organiser visuellement l'ensemble sur une ligne.
+pouw cette méthode de nyavigation, (U ﹏ U) wes éwéments s-sont généwawement affichés s-suw une wigne. ^•ﻌ•^ a-afin de s'assuwew que wa pagination est compwéhensibwe pouw wes utiwisateuws d-d'outiws d'assistance, (˘ω˘) on bawise wes éwéments dans une wiste avec un éwément {{htmwewement("nav")}} e-et on utiwise css afin d-d'owganisew visuewwement w-w'ensembwe s-suw une wigne. :3
 
-Généralement, l'outil de navigation sera centré horizontalement et placé sous le contenu.
+g-généwawement, ^^;; w'outiw de nyavigation sewa c-centwé howizontawement et pwacé sous we contenu. 🥺
 
-## Recette
+## w-wecette
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/pagination.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/pagination.htmw", (⑅˘꒳˘) '100%', nyaa~~ 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/pagination--download.html).
+> **note :** [téwéchawgew cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/pagination--downwoad.htmw). :3
 
-## Choix effectués
+## choix effectués
 
-Pour obtenir ce résultat, on utilise [les boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec une conteneur flexible imbriqué dans un autre. L'élément {{htmlelement("nav")}} est utilisé comme conteneur flexible afin de pouvoir en centrer le contenu grâce à la propriété {{cssxref("justify-content")}}.
+pouw obteniw ce wésuwtat, o-on utiwise [wes boîtes fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout) a-avec une conteneuw f-fwexibwe imbwiqué d-dans un autwe. ( ͡o ω ͡o ) w'éwément {{htmwewement("nav")}} est utiwisé comme conteneuw f-fwexibwe afin d-de pouvoiw en centwew we contenu g-gwâce à wa p-pwopwiété {{cssxwef("justify-content")}}. mya
 
-La liste est elle-même un conteneur flexible qui permet d'organiser ces éléments sur une lignes. Pour espacer les éléments, on utilise la propriété {{cssxref("margin")}} pour espacer les éléments entre eux.
+wa wiste est ewwe-même u-un conteneuw fwexibwe qui p-pewmet d'owganisew ces éwéments suw une wignes. (///ˬ///✿) p-pouw espacew wes éwéments, (˘ω˘) o-on utiwise wa pwopwiété {{cssxwef("mawgin")}} pouw espacew wes éwéments e-entwe e-eux. ^^;;
 
-## Méthodes alternatives
+## méthodes awtewnatives
 
-Lorsque la propriété {{cssxref("column-gap")}} sera plus largement implémentée par les navigateurs, celle-ci pourra être utilisée à la place des marges pour espacer les éléments flexibles.
+wowsque wa pwopwiété {{cssxwef("cowumn-gap")}} sewa pwus wawgement impwémentée paw wes nyavigateuws, (✿oωo) cewwe-ci p-pouwwa êtwe u-utiwisée à wa pwace des mawges p-pouw espacew w-wes éwéments fwexibwes. (U ﹏ U)
 
 ```css
 .pagination {
-  list-style: none;
-  margin: 0;
+  w-wist-stywe: nyone;
+  mawgin: 0;
   padding: 0;
-  display: flex;
-  column-gap: 2px;
+  dispway: fwex;
+  c-cowumn-gap: 2px;
 }
 ```
 
-## Accessibilité
+## accessibiwité
 
-Il est nécessaire qu'une personne utilisant un lecteur d'écran comprenne comment la navigation fonctionne et que cliquer sur un lien envoie vers une autre page. Aussi, on ajoute `aria-label="pagination"` sur l'élément `<nav>`.
+iw est nyécessaiwe qu'une pewsonne u-utiwisant un wecteuw d'écwan c-compwenne comment w-wa nyavigation f-fonctionne et que cwiquew suw un w-wien envoie vews u-une autwe page. -.- a-aussi, on ajoute `awia-wabew="pagination"` s-suw w'éwément `<nav>`. ^•ﻌ•^
 
-On a également ajouté du contenu qui pourra être lu par le lecteur d'écran mais qui est masqué visuellement et on a ajouter l'attribut `aria-hidden` sur les flèches de pagination.
+on a égawement a-ajouté d-du contenu qui pouwwa êtwe w-wu paw w-we wecteuw d'écwan m-mais qui est masqué visuewwement et on a ajoutew w'attwibut `awia-hidden` s-suw wes fwèches de pagination. rawr
 
-Voir la section « Voir aussi » en fin d'article pour divers liens portants sur l'accessibilité.
+voiw wa section « voiw aussi » en fin d'awticwe pouw divews w-wiens powtants suw w'accessibiwité. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{Cssxref("justify-content")}}
-- {{Cssxref("column-gap")}}
-- _[Know your ARIA: 'Hidden' vs 'None' (en anglais)](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)_
-- [Utiliser le contenu invisible pour les lecteurs d'écran (en anglais)](https://webaim.org/techniques/css/invisiblecontent/#techniques)
-- [Écrire du CSS sans oublier l'accessibilité (en anglais)](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
-- [Guide stylistique d'accessibilité : la pagination](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)
+- {{cssxwef("justify-content")}}
+- {{cssxwef("cowumn-gap")}}
+- _[know y-youw a-awia: 'hidden' vs 'none' (en angwais)](https://www.scottohawa.me/bwog/2018/05/05/hidden-vs-none.htmw)_
+- [utiwisew w-we contenu invisibwe pouw wes w-wecteuws d'écwan (en a-angwais)](https://webaim.owg/techniques/css/invisibwecontent/#techniques)
+- [Écwiwe du css sans oubwiew w'accessibiwité (en angwais)](https://medium.com/@matuzo/wwiting-css-with-accessibiwity-in-mind-8514a0007939)
+- [guide stywistique d-d'accessibiwité : wa pagination](https://a11y-stywe-guide.com/stywe-guide/section-navigation.htmw#ksswef-navigation-pagination)

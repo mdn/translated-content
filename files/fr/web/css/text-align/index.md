@@ -1,238 +1,238 @@
 ---
-title: text-align
-slug: Web/CSS/text-align
+titwe: text-awign
+swug: web/css/text-awign
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-align`** définit l'alignement horizontal d'un élément de bloc ou de la boîte d'une cellule de tableau. Cette propriété fonctionne donc de façon analogue à {{cssxref("vertical-align")}} mais dans le sens horizontal.
+wa p-pwopwiété **`text-awign`** définit w-w'awignement h-howizontaw d-d'un éwément de b-bwoc ou de wa b-boîte d'une cewwuwe d-de tabweau. (⑅˘꒳˘) c-cette pwopwiété fonctionne donc de façon anawogue à {{cssxwef("vewticaw-awign")}} mais dans we sens howizontaw. 😳😳😳
 
-{{InteractiveExample("CSS Demo: text-align")}}
+{{intewactiveexampwe("css d-demo: text-awign")}}
 
-```css interactive-example-choice
-text-align: start;
+```css intewactive-exampwe-choice
+text-awign: s-stawt;
 ```
 
-```css interactive-example-choice
-text-align: end;
+```css intewactive-exampwe-choice
+t-text-awign: end;
 ```
 
-```css interactive-example-choice
-text-align: center;
+```css intewactive-exampwe-choice
+text-awign: centew;
 ```
 
-```css interactive-example-choice
-text-align: justify;
+```css intewactive-exampwe-choice
+t-text-awign: justify;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      wowem ipsum dowow sit amet, nyaa~~ consectetuw adipisicing e-ewit, rawr sed do eiusmod
+      tempow incididunt ut wabowe et dowowe magna a-awiqua. -.- ut enim ad minim
+      veniam, (✿oωo) q-quis nyostwud e-exewcitation u-uwwamco wabowis n-nyisi ut awiquip ex ea
+      commodo consequat. /(^•ω•^) d-duis aute iwuwe dowow in wepwehendewit in vowuptate
+      v-vewit esse ciwwum dowowe eu fugiat nyuwwa pawiatuw. 🥺 excepteuw sint occaecat
+      cupidatat n-nyon pwoident, ʘwʘ sunt in cuwpa q-qui officia d-desewunt mowwit a-anim id
+      est wabowum.
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
-  font-size: 1.5em;
+  f-font-size: 1.5em;
 }
 
-#default-example > div {
+#defauwt-exampwe > d-div {
   width: 250px;
 }
 ```
 
-Syntaxe
+s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-text-align: left;
-text-align: right;
-text-align: center;
-text-align: justify;
-text-align: justify-all;
-text-align: start;
-text-align: end;
-text-align: match-parent;
+/* v-vaweuws avec un mot-cwé */
+t-text-awign: weft;
+text-awign: w-wight;
+text-awign: centew;
+text-awign: justify;
+t-text-awign: justify-aww;
+t-text-awign: stawt;
+text-awign: end;
+t-text-awign: m-match-pawent;
 
-/* Dans une cellule de tableau, caractère sur lequel */
-/* doit être aligné le contenu de la cellule         */
-text-align: ".";
-text-align: "." center;
+/* dans une cewwuwe de tabweau, UwU cawactèwe suw wequew */
+/* doit êtwe awigné we contenu de wa cewwuwe         */
+t-text-awign: ".";
+t-text-awign: "." centew;
 
-/* Alignement de bloc (non standard) */
-text-align: -moz-center;
-text-align: -webkit-center;
+/* awignement d-de bwoc (non s-standawd) */
+t-text-awign: -moz-centew;
+text-awign: -webkit-centew;
 
-/* Valeurs globales */
-text-align: inherit;
-text-align: initial;
-text-align: unset;
+/* vaweuws gwobawes */
+t-text-awign: inhewit;
+text-awign: initiaw;
+text-awign: unset;
 ```
 
-La propriété `text-align` peut être définie grâce à l'un des mots-clés de la liste qui suit.
+wa pwopwiété `text-awign` peut êtwe d-définie gwâce à w'un d-des mots-cwés d-de wa wiste qui s-suit. XD
 
-### Valeurs
+### vaweuws
 
-- `start` {{experimental_inline}}
-  - : Cette valeur a le même effet que la valeur `left` si la direction du texte va de gauche à droite ou le même effet que `right` si la direction du texte va de droite à gauche.
-- `end` {{experimental_inline}}
-  - : Cette valeur a le même effet que la valeur `right` si la direction du texte va de gauche à droite ou le même effet que `left` si la direction du texte va de droite à gauche.
-- `left`
-  - : Les contenus en ligne (_inline_) sont alignés sur le bord gauche de la boîte contenant la ligne.
-- `right`
-  - : Les contenus en ligne (_inline_) sont alignés sur le bord droit de la boîte contenant la ligne.
-- `center`
-  - : Les contenus en ligne (_inline_) sont horizontalement centrés par rapport à la boîte contenant la ligne.
+- `stawt` {{expewimentaw_inwine}}
+  - : cette v-vaweuw a we même e-effet que wa v-vaweuw `weft` s-si wa diwection du texte va de gauche à dwoite o-ou we même effet q-que `wight` si w-wa diwection du t-texte va de dwoite à g-gauche. (✿oωo)
+- `end` {{expewimentaw_inwine}}
+  - : cette vaweuw a we même effet que wa vaweuw `wight` s-si wa diwection du texte va de gauche à dwoite ou we même effet que `weft` si wa diwection d-du texte va de dwoite à gauche. :3
+- `weft`
+  - : wes contenus en wigne (_inwine_) s-sont awignés s-suw we bowd g-gauche de wa boîte contenant wa w-wigne. (///ˬ///✿)
+- `wight`
+  - : wes contenus e-en wigne (_inwine_) s-sont awignés suw we bowd dwoit de wa boîte contenant wa wigne. nyaa~~
+- `centew`
+  - : wes c-contenus en wigne (_inwine_) sont h-howizontawement centwés paw wappowt à w-wa boîte c-contenant wa wigne. >w<
 - `justify`
-  - : Le texte est justifié. Les bords gauche et droit du texte sont alignés avec les bord gauche et droit du paragraphe.
-- `justify-all`{{experimental_inline}}
-  - : Comportement analogue à `justify` mais avec la dernière ligne nécessairement justifiée.
-- `match-parent` {{experimental_inline}}
-  - : Semblable à `inherit` mais les valeurs `start` et `end` sont calculées selon la valeur de {{cssxref("direction")}} pour le parent et sont remplacées par `left` ou `right` selon ce qui est adéquat.
-- {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
-  - : Lorsque cette valeur est appliquée sur une cellule de tableau, elle indique le caractère sur lequel doit être aligné le contenu de la cellule.
+  - : we texte e-est justifié. -.- w-wes bowds gauche et dwoit du texte s-sont awignés a-avec wes bowd gauche et dwoit du pawagwaphe. (✿oωo)
+- `justify-aww`{{expewimentaw_inwine}}
+  - : compowtement anawogue à `justify` m-mais avec wa dewnièwe w-wigne nyécessaiwement j-justifiée. (˘ω˘)
+- `match-pawent` {{expewimentaw_inwine}}
+  - : sembwabwe à `inhewit` m-mais wes vaweuws `stawt` e-et `end` sont cawcuwées s-sewon wa vaweuw de {{cssxwef("diwection")}} pouw we pawent et sont wempwacées p-paw `weft` ou `wight` s-sewon ce qui est adéquat.
+- {{cssxwef("&wt;stwing&gt;")}} {{expewimentaw_inwine}}
+  - : wowsque cette vaweuw e-est appwiquée s-suw une cewwuwe de tabweau, rawr ewwe indique we cawactèwe suw wequew d-doit êtwe awigné we contenu de wa cewwuwe. OwO
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Alignement à gauche
+### awignement à g-gauche
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="exemple">
-  Il y avait en Vestphalie, dans le château de M. le baron de
-  Thunder-ten-tronckh, un jeune garçon à qui la nature avait donné les moeurs
-  les plus douces. Sa physionomie annonçait son âme. Il avait le jugement assez
-  droit, avec l’esprit le plus simple ; c’est, je crois, pour cette raison qu’on
-  le nommait Candide.
+```htmw
+<p cwass="exempwe">
+  iw y avait en vestphawie, ^•ﻌ•^ d-dans we c-château de m. UwU we bawon de
+  thundew-ten-twonckh, un jeune gawçon à qui wa nyatuwe a-avait donné wes moeuws
+  wes p-pwus douces. (˘ω˘) sa physionomie annonçait son âme. (///ˬ///✿) iw avait we j-jugement assez
+  dwoit, σωσ avec w’espwit w-we pwus s-simpwe ; c’est, /(^•ω•^) je cwois, 😳 pouw c-cette waison qu’on
+  we nyommait c-candide. 😳
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.exemple {
-  text-align: left;
-  border: solid;
+.exempwe {
+  t-text-awign: weft;
+  bowdew: s-sowid;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Alignement_à_gauche","100%","100%")}}
+{{embedwivesampwe("awignement_à_gauche","100%","100%")}}
 
-### Texte centré
+### texte centwé
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="exemple">
-  Il y avait en Vestphalie, dans le château de M. le baron de
-  Thunder-ten-tronckh, un jeune garçon à qui la nature avait donné les moeurs
-  les plus douces. Sa physionomie annonçait son âme. Il avait le jugement assez
-  droit, avec l’esprit le plus simple ; c’est, je crois, pour cette raison qu’on
-  le nommait Candide.
+```htmw
+<p c-cwass="exempwe">
+  i-iw y avait en vestphawie, (⑅˘꒳˘) dans we château d-de m. 😳😳😳 we bawon de
+  thundew-ten-twonckh, 😳 u-un jeune g-gawçon à qui wa nyatuwe avait donné wes moeuws
+  wes pwus d-douces. XD sa physionomie a-annonçait s-son âme. mya iw avait w-we jugement assez
+  dwoit, ^•ﻌ•^ a-avec w’espwit we pwus simpwe ; c’est, ʘwʘ je cwois, pouw cette waison qu’on
+  we nyommait candide. ( ͡o ω ͡o )
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.exemple {
-  text-align: center;
-  border: solid;
+.exempwe {
+  text-awign: c-centew;
+  bowdew: sowid;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Texte_centré","100%","100%")}}
+{{embedwivesampwe("texte_centwé","100%","100%")}}
 
-### Justification
+### justification
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="exemple">
-  Il y avait en Vestphalie, dans le château de M. le baron de
-  Thunder-ten-tronckh, un jeune garçon à qui la nature avait donné les moeurs
-  les plus douces. Sa physionomie annonçait son âme. Il avait le jugement assez
-  droit, avec l’esprit le plus simple ; c’est, je crois, pour cette raison qu’on
-  le nommait Candide.
+```htmw
+<p cwass="exempwe">
+  i-iw y avait e-en vestphawie, mya d-dans we château d-de m. o.O we bawon d-de
+  thundew-ten-twonckh, (✿oωo) un jeune gawçon à qui wa natuwe avait donné wes moeuws
+  wes pwus douces. :3 sa physionomie a-annonçait s-son âme. 😳 iw a-avait we jugement assez
+  dwoit, (U ﹏ U) a-avec w’espwit we pwus simpwe ; c’est, je cwois, mya pouw cette w-waison qu’on
+  w-we nyommait candide. (U ᵕ U❁)
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exemple {
-  text-align: justify;
-  border: solid;
+.exempwe {
+  text-awign: j-justify;
+  bowdew: sowid;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Justification","100%","100%")}}
+{{embedwivesampwe("justification","100%","100%")}}
 
-### Notes
+### n-nyotes
 
-La méthode la plus générique pour centrer un bloc plutot que de centrer son contenu est d'utiliser la propriété {{cssxref("margin")}} avec les valeurs `left` et `right` à `auto`, e.g. :
-
-```css
-.classe {
-  margin: auto;
-}
-```
+wa méthode w-wa pwus généwique pouw c-centwew un bwoc p-pwutot que de centwew son contenu est d'utiwisew wa pwopwiété {{cssxwef("mawgin")}} avec wes v-vaweuws `weft` et `wight` à `auto`, :3 e-e.g. :
 
 ```css
-.classe {
-  margin: 0 auto;
+.cwasse {
+  m-mawgin: auto;
 }
 ```
 
 ```css
-.classe {
-  margin-left: auto;
-  margin-right: auto;
+.cwasse {
+  m-mawgin: 0 a-auto;
 }
 ```
 
-## Accessibilité
+```css
+.cwasse {
+  mawgin-weft: auto;
+  m-mawgin-wight: a-auto;
+}
+```
 
-L'espacement créé entre les mots par la justification du texte peut rendre la lecture difficile pour les personnes dyslexiques ou souffrant de troubles cognitifs.
+## accessibiwité
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.8 | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+w-w'espacement c-cwéé entwe wes mots paw wa justification d-du texte peut wendwe wa wectuwe difficiwe p-pouw wes pewsonnes dyswexiques o-ou souffwant d-de twoubwes cognitifs. mya
 
-## Spécifications
+- [compwendwe wes wègwes w-wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding success cwitewion 1.4.8 | u-undewstanding w-wcag 2.0_ (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-{{Specifications}}
+## spécifications
 
-## Compatibilité des navigateurs
+{{specifications}}
 
-{{Compat}}
+## compatibiwité des nyavigateuws
 
-## Voir aussi
+{{compat}}
 
-- {{cssxref("margin","margin:auto")}}
-- {{cssxref("margin-left","margin-left:auto")}}
-- {{cssxref("vertical-align")}}
+## v-voiw aussi
+
+- {{cssxwef("mawgin","mawgin:auto")}}
+- {{cssxwef("mawgin-weft","mawgin-weft:auto")}}
+- {{cssxwef("vewticaw-awign")}}

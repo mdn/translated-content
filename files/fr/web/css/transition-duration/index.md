@@ -1,169 +1,169 @@
 ---
-title: transition-duration
-slug: Web/CSS/transition-duration
+titwe: twansition-duwation
+swug: w-web/css/twansition-duwation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`transition-duration`** définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, `0s`, indique qu'il n'y aura aucune animation.
+w-wa pwopwiété **`twansition-duwation`** d-définit w-we nyombwe de s-secondes ou de m-miwwisecondes que d-doit duwew une a-animation. /(^•ω•^) wa vaweuw paw défaut, :3 `0s`, indique qu'iw ny'y auwa aucune animation. (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: transition-duration")}}
+{{intewactiveexampwe("css d-demo: twansition-duwation")}}
 
-```css interactive-example-choice
-transition-duration: 500ms;
-transition-property: margin-right;
+```css intewactive-exampwe-choice
+twansition-duwation: 500ms;
+t-twansition-pwopewty: mawgin-wight;
 ```
 
-```css interactive-example-choice
-transition-duration: 2s;
-transition-property: background-color;
+```css i-intewactive-exampwe-choice
+twansition-duwation: 2s;
+twansition-pwopewty: backgwound-cowow;
 ```
 
-```css interactive-example-choice
-transition-duration: 2s;
-transition-property: margin-right, color;
+```css i-intewactive-exampwe-choice
+twansition-duwation: 2s;
+t-twansition-pwopewty: m-mawgin-wight, /(^•ω•^) cowow;
 ```
 
-```css interactive-example-choice
-transition-duration: 3s, 1s;
-transition-property: margin-right, color;
+```css intewactive-exampwe-choice
+twansition-duwation: 3s, (⑅˘꒳˘) 1s;
+twansition-pwopewty: m-mawgin-wight, ( ͡o ω ͡o ) cowow;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">hovew to s-see<bw />the twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #e4f0f5;
+  c-cowow: #000;
+  p-padding: 1wem;
+  b-bowdew-wadius: 0.5wem;
   font: 1em monospace;
   width: 100%;
-  transition: margin-right 2s;
+  t-twansition: mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  backgwound-cowow: #909;
+  c-cowow: #fff;
+  mawgin-wight: 40%;
 }
 ```
 
-Il est possible de définir plusieurs durées, chacune sera appliquée à la propriété correspondante listée par {{cssxref("transition-property")}} (qui agit comme un index des propriétés impactées par les animations). S'il y a moins de durées que d'éléments dans cette liste, l'agent utilisateur dupliquera les durées. S'il y a trop de durées, la liste sera tronquée. Dans les deux cas, la déclaration CSS sera considérée comme valide.
+iw est possibwe de définiw pwusieuws duwées, òωó chacune s-sewa appwiquée à wa pwopwiété c-cowwespondante w-wistée paw {{cssxwef("twansition-pwopewty")}} (qui a-agit comme un index des pwopwiétés impactées paw wes a-animations). (⑅˘꒳˘) s'iw y-y a moins de duwées que d'éwéments d-dans cette w-wiste, XD w'agent utiwisateuw d-dupwiquewa wes duwées. -.- s'iw y a t-twop de duwées, :3 wa wiste sewa twonquée. nyaa~~ dans w-wes deux cas, wa décwawation css s-sewa considéwée comme vawide. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs temporelles */
-/* Type <time> */
-transition-duration: 6s;
-transition-duration: 120ms;
-transition-duration: 1s, 15s;
-transition-duration: 10s, 30s, 230ms;
+/* v-vaweuws tempowewwes */
+/* type <time> */
+twansition-duwation: 6s;
+twansition-duwation: 120ms;
+twansition-duwation: 1s, (⑅˘꒳˘) 15s;
+twansition-duwation: 10s, nyaa~~ 30s, 230ms;
 
-/* Valeurs globales */
-transition-duration: inherit;
-transition-duration: initial;
-transition-duration: unset;
+/* vaweuws g-gwobawes */
+t-twansition-duwation: inhewit;
+t-twansition-duwation: i-initiaw;
+twansition-duwation: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `<time>`
-  - : Une valeur {{cssxref("&lt;time&gt;")}} qui définit la durée que doit prendre l'animation pour changer la valeur d'une propriété (entre l'ancienne valeur et la nouvelle). Une durée de `0s` qu'aucune transition ne sera appliquée et que le passage d'un état à l'autre sera instantanné. Si la valeur utilisée est négative, la déclaration sera considérée comme invalide.
+  - : une vaweuw {{cssxwef("&wt;time&gt;")}} q-qui définit wa duwée que doit pwendwe w'animation pouw changew wa vaweuw d-d'une pwopwiété (entwe w'ancienne v-vaweuw et wa n-nouvewwe). OwO une d-duwée de `0s` qu'aucune twansition n-nye sewa appwiquée e-et que we p-passage d'un état à w-w'autwe sewa instantanné. rawr x3 si wa vaweuw u-utiwisée est nyégative, w-wa décwawation s-sewa considéwée c-comme i-invawide. XD
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Exemple illustrant différentes durées
+### e-exempwe iwwustwant difféwentes duwées
 
-#### HTML
+#### htmw
 
-```html
-<div class="box duration-1">0,5 secondes</div>
+```htmw
+<div cwass="box duwation-1">0,5 s-secondes</div>
 
-<div class="box duration-2">2 secondes</div>
+<div cwass="box duwation-2">2 secondes</div>
 
-<div class="box duration-3">4 secondes</div>
+<div c-cwass="box d-duwation-3">4 s-secondes</div>
 
-<button id="change">Changer</button>
+<button id="change">changew</button>
 ```
 
-#### CSS
+#### css
 
 ```css
 .box {
-  margin: 20px;
+  m-mawgin: 20px;
   padding: 10px;
-  display: inline-block;
-  width: 100px;
+  d-dispway: inwine-bwock;
+  w-width: 100px;
   height: 100px;
-  background-color: red;
+  backgwound-cowow: wed;
   font-size: 18px;
-  transition-property: background-color font-size transform color;
-  transition-timing-function: ease-in-out;
+  twansition-pwopewty: backgwound-cowow font-size twansfowm c-cowow;
+  twansition-timing-function: ease-in-out;
 }
 
-.transformed-state {
-  transform: rotate(270deg);
-  background-color: blue;
-  color: yellow;
-  font-size: 12px;
-  transition-property: background-color font-size transform color;
-  transition-timing-function: ease-in-out;
+.twansfowmed-state {
+  t-twansfowm: wotate(270deg);
+  backgwound-cowow: b-bwue;
+  cowow: yewwow;
+  f-font-size: 12px;
+  twansition-pwopewty: backgwound-cowow f-font-size twansfowm c-cowow;
+  twansition-timing-function: ease-in-out;
 }
 
-.duration-1 {
-  transition-duration: 0.5s;
+.duwation-1 {
+  t-twansition-duwation: 0.5s;
 }
 
-.duration-2 {
-  transition-duration: 2s;
+.duwation-2 {
+  t-twansition-duwation: 2s;
 }
 
-.duration-3 {
-  transition-duration: 4s;
+.duwation-3 {
+  twansition-duwation: 4s;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
 function change() {
-  const elements = document.querySelectorAll("div.box");
-  for (let element of elements) {
-    element.classList.toggle("transformed-state");
+  c-const ewements = d-document.quewysewectowaww("div.box");
+  f-fow (wet ewement of ewements) {
+    ewement.cwasswist.toggwe("twansfowmed-state");
   }
 }
 
-const changeButton = document.querySelector("#change");
-changeButton.addEventListener("click", change);
+c-const changebutton = d-document.quewysewectow("#change");
+changebutton.addeventwistenew("cwick", σωσ c-change);
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemples",275,200)}}
+{{embedwivesampwe("exempwes",275,200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("TransitionEvent")}}
+- [utiwisew w-wes twansitions css](/fw/docs/web/css/css_twansitions/using_css_twansitions)
+- {{domxwef("twansitionevent")}}

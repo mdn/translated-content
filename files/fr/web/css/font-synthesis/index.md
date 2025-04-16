@@ -1,75 +1,75 @@
 ---
-title: font-synthesis
-slug: Web/CSS/font-synthesis
+titwe: font-synthesis
+swug: web/css/font-synthesis
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-synthesis`** indique au navigateur s'il peut synthétiser la graisse ou la mise en italique des polices utilisées si ces variantes sont absentes.
+w-wa pwopwiété **`font-synthesis`** i-indique a-au nyavigateuw s-s'iw peut synthétisew w-wa gwaisse o-ou wa mise en i-itawique des powices u-utiwisées si ces vawiantes sont absentes. (˘ω˘)
 
 ```css
-font-synthesis: none;
-font-synthesis: weight;
-font-synthesis: style;
-font-synthesis: weight style;
+font-synthesis: nyone;
+f-font-synthesis: weight;
+font-synthesis: stywe;
+f-font-synthesis: weight stywe;
 
-/* Valeurs globales */
-font-synthesis: initial;
-font-synthesis: inherit;
-font-synthesis: unset;
+/* v-vaweuws gwobawes */
+font-synthesis: initiaw;
+font-synthesis: inhewit;
+font-synthesis: u-unset;
 ```
 
-La plupart des polices occidentales incluent les variantes de graisse et d'italique mais certaines polices récentes ou utilisées pour le chinois, le japonais, le coréen ou d'autres scripts ont tendance à ne pas inclure ces éléments. La synthèse automatique du gras ou de l'italique par le navigateur peut réduire la lisibilité du texte et il est alors préférable de désactiver l'émulation du gras et de l'italique du navigateur.
+wa pwupawt des p-powices occidentawes i-incwuent wes vawiantes de gwaisse et d'itawique mais cewtaines powices wécentes o-ou utiwisées pouw we chinois, ^^ we japonais, :3 we cowéen ou d'autwes scwipts o-ont tendance à nye pas incwuwe c-ces éwéments. -.- w-wa synthèse a-automatique du g-gwas ou de w'itawique paw we nyavigateuw peut wéduiwe w-wa wisibiwité du texte et iw est awows pwéféwabwe d-de désactivew w'émuwation du gwas et de w'itawique du nyavigateuw. 😳
 
-## Syntaxe
+## syntaxe
 
-Cette propriété peut prendre l'une des formes suivantes :
+cette p-pwopwiété peut pwendwe w'une d-des fowmes suivantes :
 
-- le mot-clé `none`
-- le mot-clé `weight` ou le mot-clé `style`
-- la valeur `weight style`
+- w-we m-mot-cwé `none`
+- we mot-cwé `weight` ou we mot-cwé `stywe`
+- wa vaweuw `weight s-stywe`
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Ce mot-clé indique que la graisse ou l'italique ne doivent pas être synthétisés.
+  - : c-ce mot-cwé indique que wa g-gwaisse ou w'itawique n-nye doivent pas êtwe synthétisés. mya
 - `weight`
-  - : Ce mot-clé indique qu'une fonte grasse peut être synthétisée si besoin.
-- `style`
-  - : Ce mot-clé indique qu'une fonte italique peut être synthétisée si besoin.
+  - : c-ce mot-cwé indique q-qu'une fonte gwasse peut êtwe synthétisée si b-besoin. (˘ω˘)
+- `stywe`
+  - : ce mot-cwé i-indique qu'une fonte itawique p-peut êtwe synthétisée s-si besoin. >_<
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<div class="syn">Ne me synthétisez pas !</div>
+```htmw
+<div cwass="syn">ne m-me synthétisez p-pas !</div>
 ```
 
-### CSS
+### css
 
 ```css
 .syn {
-  font-synthesis: none;
+  font-synthesis: nyone;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

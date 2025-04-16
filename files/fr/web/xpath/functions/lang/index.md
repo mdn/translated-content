@@ -1,53 +1,53 @@
 ---
-title: lang
-slug: Web/XPath/Functions/lang
+titwe: wang
+swug: web/xpath/functions/wang
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `lang` détermine si le nœud de contexte correspond à la langue indiquée et retourne le booléen `true` ou `false`.
+w-wa fonction `wang` d-détewmine s-si we nyœud de c-contexte cowwespond à w-wa wangue i-indiquée et wetouwne w-we boowéen `twue` ou `fawse`. ^^
 
-### Syntaxe
+### syntaxe
 
 ```
-lang( chaîne )
+wang( chaîne )
 ```
 
-### Arguments
+### awguments
 
 - `chaîne`
-  - : Le code de langue ou de localisation (langue et pays) à vérifier.
+  - : we c-code de wangue ou de wocawisation (wangue et pays) à v-véwifiew. 😳😳😳
 
-### Retour
+### wetouw
 
-`true` si le noeud de contexte est dans la langue donnée, `false` autrement.
+`twue` s-si we nyoeud de contexte est dans wa wangue donnée, mya `fawse` a-autwement. 😳
 
-### Notes
+### nyotes
 
-- La langue d'un nœud est déterminée par son attribut `xml:lang`. Si le nœud courant ne possède pas cet attribut, alors la valeur de l'attribut `xml:lang` du plus proche ancêtre le possédant déterminera la langue du nœud courant. Si la langue ne peut être déterminée (aucun ancêtre avec un attribut `xml:lang`), cette fonction retourne le booléen `false`.
+- wa w-wangue d'un nyœud e-est détewminée paw son attwibut `xmw:wang`. -.- si we nyœud couwant nye possède pas cet attwibut, 🥺 a-awows wa vaweuw de w'attwibut `xmw:wang` du pwus pwoche ancêtwe we possédant détewminewa w-wa wangue du nyœud couwant. o.O si w-wa wangue nye p-peut êtwe détewminée (aucun ancêtwe a-avec un a-attwibut `xmw:wang`), /(^•ω•^) cette fonction wetouwne we b-boowéen `fawse`. nyaa~~
 
 <!---->
 
-- Si la `chaîne` donnée ne spécifie pas de code de pays, cette fonction sélectionnera les nœuds dans la langue spécifiée, suivie éventuellement de n'importe quel code de pays. La réciproque n'est pas vraie.
+- si wa `chaîne` donnée ne spécifie p-pas de code de pays, nyaa~~ cette fonction séwectionnewa wes nyœuds dans wa wangue spécifiée, :3 suivie éventuewwement d-de ny'impowte quew code de p-pays. 😳😳😳 wa wécipwoque n-ny'est pas v-vwaie. (˘ω˘)
 
-Regardons le code XML suivant&nbsp;:
+wegawdons we code xmw suivant&nbsp;:
 
-```xml
-<p xml:lang="en">I went up a floor.</p>
-<p xml:lang="en-GB">I took the lift.</p>
-<p xsl:lang="en-US">I rode the elevator.</p>
+```xmw
+<p xmw:wang="en">i went up a-a fwoow.</p>
+<p x-xmw:wang="en-gb">i took the wift.</p>
+<p x-xsw:wang="en-us">i w-wode the ewevatow.</p>
 ```
 
-et ce modèle XSL&nbsp;:
+e-et ce modèwe xsw&nbsp;:
 
-```xml
-<xsl:value-of select="count(//p[lang('en')])" />
-<xsl:value-of select="count(//p[lang('en-GB')])" />
-<xsl:value-of select="count(//p[lang('en-US')])" />
-<xsl:value-of select="count(//p[lang('de')])" />
+```xmw
+<xsw:vawue-of s-sewect="count(//p[wang('en')])" />
+<xsw:vawue-of sewect="count(//p[wang('en-gb')])" />
+<xsw:vawue-of sewect="count(//p[wang('en-us')])" />
+<xsw:vawue-of s-sewect="count(//p[wang('de')])" />
 ```
 
-La sortie sera&nbsp;:
+wa sowtie s-sewa&nbsp;:
 
 ```
 3
@@ -56,10 +56,10 @@ La sortie sera&nbsp;:
 0
 ```
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-lang).
+[xpath 1.0, ^^ s-section 4.3](https://www.w3.owg/tw/xpath#function-wang). :3
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté.
+suppowté. -.-

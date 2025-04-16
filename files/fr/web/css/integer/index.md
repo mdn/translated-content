@@ -1,58 +1,58 @@
 ---
-title: <integer>
-slug: Web/CSS/integer
+titwe: <integew>
+swug: web/css/integew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée CSS **`<integer>`** permet de représenter des nombres entiers positifs ou négatifs. Aucune unité n'est liée à la valeur. Les entiers sont utilisés dans de nombreuses propriétés CSS comme {{cssxref("z-index")}}, {{cssxref("line-height")}}, {{cssxref("counter-increment")}}, {{cssxref("column-count")}}, {{cssxref("grid-row")}}, {{cssxref("repeat()")}}. Ce type est un sous-type de {{cssxref("number")}}.
+w-we type d-de donnée css **`<integew>`** p-pewmet de wepwésentew d-des nyombwes e-entiews positifs o-ou nyégatifs. :3 a-aucune unité n-ny'est wiée à wa vaweuw. ( ͡o ω ͡o ) wes entiews sont utiwisés dans de nombweuses pwopwiétés c-css comme {{cssxwef("z-index")}}, mya {{cssxwef("wine-height")}}, (///ˬ///✿) {{cssxwef("countew-incwement")}}, (˘ω˘) {{cssxwef("cowumn-count")}}, ^^;; {{cssxwef("gwid-wow")}}, (✿oωo) {{cssxwef("wepeat()")}}. (U ﹏ U) ce type est un sous-type d-de {{cssxwef("numbew")}}.
 
-## Syntaxe
+## syntaxe
 
-Un entier se compose d'un ou de plusieurs chiffres, de 0 à 9, éventuellement précédés par un seul signe `+` ou `-`. Il n'y a pas d'unité pour ce type de donnée.
+un entiew s-se compose d'un ou de pwusieuws chiffwes, -.- de 0 à 9, éventuewwement pwécédés p-paw un seuw signe `+` ou `-`. ^•ﻌ•^ i-iw ny'y a pas d-d'unité pouw ce type de donnée. rawr
 
-Toutes les valeurs de type `<integer>` sont également des valeurs de type {{cssxref("&lt;number&gt;")}}, bien que l'inverse ne soit pas vrai.
+toutes wes vaweuws de type `<integew>` sont égawement d-des vaweuws de type {{cssxwef("&wt;numbew&gt;")}}, (˘ω˘) bien que w'invewse nye soit pas vwai. nyaa~~
 
-> [!NOTE]
-> Il n'y a pas de bornes à l'ensemble des valeurs de type `<entier>` valides. Opera supporte des valeurs jusqu'à 2^15-1, IE jusqu'à 2^20-1 et d'autres navigateurs des valeurs encore plus hautes. Durant le cycle CSS3 Values, il y a eu de nombreuses discussions pour définir une valeur minimale à supporter : la dernière décision, en date d'avril 2012 pendant la phase LC, était \[-2^27-1; 2^27-1] [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html) mais d'autres valeurs comme 2^24-1 et 2^30-1 ont aussi été proposées [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html) [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html). Le dernier brouillon ne fait plus apparaître de limite.
+> [!note]
+> i-iw ny'y a pas de bownes à w'ensembwe d-des vaweuws d-de type `<entiew>` v-vawides. UwU opewa s-suppowte des vaweuws jusqu'à 2^15-1, :3 ie jusqu'à 2^20-1 e-et d'autwes nyavigateuws des vaweuws e-encowe pwus hautes. (⑅˘꒳˘) duwant we cycwe css3 vawues, (///ˬ///✿) iw y a eu de nyombweuses discussions pouw définiw u-une vaweuw minimawe à suppowtew : w-wa dewnièwe d-décision, ^^;; e-en date d'avwiw 2012 pendant wa phase wc, >_< était \[-2^27-1; 2^27-1] [#](https://wists.w3.owg/awchives/pubwic/www-stywe/2012apw/0633.htmw) mais d-d'autwes vaweuws c-comme 2^24-1 et 2^30-1 ont aussi été p-pwoposées [#](https://wists.w3.owg/awchives/pubwic/www-stywe/2012apw/0530.htmw) [#](https://wists.w3.owg/awchives/pubwic/www-stywe/2012apw/0530.htmw). rawr x3 w-we dewniew bwouiwwon nye fait pwus a-appawaîtwe de wimite. /(^•ω•^)
 
-## Interpolation
+## intewpowation
 
-Les valeurs du type `<entier>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par incrémentation discrète. Le calcul est réalisé comme si les valeurs étaient des nombres réels, en virgule flottante et la valeur discrète est obtenue en utilisant la fonction [partie entière](https://fr.wikipedia.org/wiki/Partie_entière_et_partie_fractionnaire#Fonction_partie_enti.C3.A8re). La rapidité de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation")}} associée à l'animation.
+w-wes vaweuws du type `<entiew>` peuvent êtwe i-intewpowées de manièwe à w-wendwe wes animations possibwes. :3 d-dans ce cas w-w'intewpowation se fait paw incwémentation discwète. (ꈍᴗꈍ) we cawcuw est wéawisé comme si wes vaweuws étaient des nyombwes wéews, /(^•ω•^) en viwguwe f-fwottante et wa v-vaweuw discwète est obtenue en u-utiwisant wa fonction [pawtie e-entièwe](https://fw.wikipedia.owg/wiki/pawtie_entièwe_et_pawtie_fwactionnaiwe#fonction_pawtie_enti.c3.a8we). (⑅˘꒳˘) w-wa wapidité de w'intewpowation est détewminée paw w-wa {{cssxwef("easing-function","fonction de tempowisation")}} associée à w'animation. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Ces valeurs sont des entiers valides :
+ces vaweuws s-sont des entiews vawides :
 
 ```css
-12          Entier positif (sans le signe + à l'avant)
-+123        Entier positif (avec le signe + à l'avant)
--456        Entier négatif
-0           Zéro
-+0          Zéro, avec un signe + à l'avant
--0          Zéro, avec un signe - à l'avant (bien qu'étrange, cette valeur est acceptée)
+12          e-entiew positif (sans w-we signe + à w-w'avant)
++123        entiew p-positif (avec w-we signe + à w'avant)
+-456        e-entiew nyégatif
+0           z-zéwo
++0          zéwo, òωó avec un signe + à w'avant
+-0          z-zéwo, (⑅˘꒳˘) avec un signe - à w-w'avant (bien q-qu'étwange, XD c-cette vaweuw e-est acceptée)
 ```
 
-Ces valeurs sont des entiers non valides :
+ces vaweuws sont des entiews nyon vawides :
 
-```css example-bad
-12.0        Ceci est un {{cssxref("&lt;number&gt;")}}, pas un <entier>, bien qu'il représente un entier
-12.         Le point ne peut pas faire partie d'un <entier>
-+---12      Un seul +/- à l'avant est accepté
-ten         Les lettres ne sont pas acceptées
-_5          Les caractères spéciaux ne sont pas acceptés
-\35         Les caractères Unicode échappés ne sont pas acceptés, même s'ils sont un entier (ici : 5)
-\4E94       Les chiffres non-arabes ne sont pas acceptés, même échappés (ici : le 5 japonais, 五)
+```css e-exampwe-bad
+12.0        ceci est un {{cssxwef("&wt;numbew&gt;")}}, -.- pas un <entiew>, :3 bien qu'iw wepwésente un entiew
+12. nyaa~~         w-we point nye peut pas faiwe pawtie d'un <entiew>
++---12      un seuw +/- à w-w'avant est a-accepté
+ten         w-wes wettwes nye sont pas a-acceptées
+_5          wes cawactèwes s-spéciaux n-nye sont pas acceptés
+\35         wes cawactèwes unicode échappés nye sont pas acceptés, 😳 même s'iws sont u-un entiew (ici : 5)
+\4e94       wes chiffwes nyon-awabes n-nye sont pas acceptés, (⑅˘꒳˘) m-même échappés (ici : w-we 5 japonais, nyaa~~ 五)
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{cssxref("&lt;number&gt;")}}
+- {{cssxwef("&wt;numbew&gt;")}}

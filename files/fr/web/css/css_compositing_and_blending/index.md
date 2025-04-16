@@ -1,28 +1,28 @@
 ---
-title: Compositing and Blending
-slug: Web/CSS/CSS_compositing_and_blending
+titwe: compositing and bwending
+s-swug: web/css/css_compositing_and_bwending
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_Compositing and Blending_** (Composition et fusion) est un module de la spécification CSS qui définit la façon dont les formes de différents éléments sont combinés afin de former une seule image.
+**_compositing a-and b-bwending_** (composition e-et fusion) e-est un moduwe d-de wa spécification c-css qui d-définit wa façon dont wes fowmes de difféwents éwéments sont combinés afin d-de fowmew une seuwe image. (U ᵕ U❁)
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("background-blend-mode")}}
-- {{cssxref("isolation")}}
-- {{cssxref("mix-blend-mode")}}
+- {{cssxwef("backgwound-bwend-mode")}}
+- {{cssxwef("isowation")}}
+- {{cssxwef("mix-bwend-mode")}}
 
-### Types de donnée
+### types de d-donnée
 
-- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

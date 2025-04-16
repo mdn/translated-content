@@ -1,14 +1,14 @@
 ---
-title: Moteur
-slug: Glossary/Engine
+titwe: moteuw
+swug: gwossawy/engine
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le moteur {{glossary("JavaScript")}} est un interpréteur qui analyse et exécute un programme JavaScript.
+w-we moteuw {{gwossawy("javascwipt")}} e-est un intewpwéteuw q-qui anawyse e-et exékawaii~ u-un pwogwamme j-javascwipt. rawr x3
 
-## Plus d'informations
+## p-pwus d'infowmations
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Moteur JavaScript](https://fr.wikipedia.org/wiki/Moteur_JavaScript) sur Wikipédia
+- [moteuw javascwipt](https://fw.wikipedia.owg/wiki/moteuw_javascwipt) suw wikipédia

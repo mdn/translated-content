@@ -1,47 +1,47 @@
 ---
-title: Les animations CSS
-slug: Web/CSS/CSS_animations
+titwe: wes animations css
+swug: w-web/css/css_animations
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les **animations CSS** sont un module CSS qui définit la façon dont les valeurs des propriétés CSS peuvent être animées au fur et à mesure d'une période via des étapes intermédiaires (_keyframes_ en anglais). Le comportement de ces animations séquencées peut être défini en termes de durée, de nombre de répétitions et de la façon dont elles sont répétées.
+w-wes **animations c-css** s-sont un moduwe c-css qui définit w-wa façon dont w-wes vaweuws des p-pwopwiétés css peuvent êtwe animées au fuw et à mesuwe d'une péwiode via d-des étapes intewmédiaiwes (_keyfwames_ en angwais). o.O we compowtement d-de ces animations séquencées p-peut êtwe défini en tewmes de duwée, /(^•ω•^) de nyombwe de wépétitions e-et de wa façon dont ewwes s-sont wépétées.
 
-## Référence
+## w-wéféwence
 
-### Propriétés CSS
+### pwopwiétés css
 
-- {{cssxref("animation")}}
-- {{cssxref("animation-delay")}}
-- {{cssxref("animation-direction")}}
-- {{cssxref("animation-duration")}}
-- {{cssxref("animation-fill-mode")}}
-- {{cssxref("animation-iteration-count")}}
-- {{cssxref("animation-name")}}
-- {{cssxref("animation-play-state")}}
-- {{cssxref("animation-timing-function")}}
+- {{cssxwef("animation")}}
+- {{cssxwef("animation-deway")}}
+- {{cssxwef("animation-diwection")}}
+- {{cssxwef("animation-duwation")}}
+- {{cssxwef("animation-fiww-mode")}}
+- {{cssxwef("animation-itewation-count")}}
+- {{cssxwef("animation-name")}}
+- {{cssxwef("animation-pway-state")}}
+- {{cssxwef("animation-timing-function")}}
 
-### Règles @ CSS
+### wègwes @ css
 
-- {{cssxref("@keyframes")}}
+- {{cssxwef("@keyfwames")}}
 
-## Guides
+## g-guides
 
-- [Détecter la prise en charge des animations CSS](/fr/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-  - : Cet article décrit une technique permettant de détecter si le navigateur prend en charge les animations CSS.
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-  - : Un tutoriel pas-à-pas qui explique comment créer des animations CSS. Cet article décrit les différentes propriétés et règles @ relatives aux animations et comment elles interagissent.
-- [Conseils pour les animations CSS](/fr/docs/Web/API/Web_Animations_API/Tips)
-  - : Des conseils et astuces pour tirer le meilleur parti des animations CSS. Dans cet article, on décrit une technique qui permet de relancer une animation qui a déjà été exécutée, ce que l'API ne permet pas de faire nativement.
+- [détectew wa pwise en chawge des animations css](/fw/docs/web/css/css_animations/detecting_css_animation_suppowt)
+  - : cet awticwe d-décwit une technique pewmettant d-de détectew s-si we nyavigateuw p-pwend en chawge w-wes animations css. nyaa~~
+- [manipuwew wes animations c-css](/fw/docs/web/css/css_animations/using_css_animations)
+  - : un tutowiew pas-à-pas qui e-expwique comment cwéew des animations css. nyaa~~ cet awticwe décwit wes difféwentes pwopwiétés e-et wègwes @ wewatives aux animations e-et comment e-ewwes intewagissent. :3
+- [conseiws p-pouw wes animations css](/fw/docs/web/api/web_animations_api/tips)
+  - : des conseiws et astuces p-pouw tiwew we m-meiwweuw pawti des animations css. 😳😳😳 d-dans cet awticwe, o-on décwit une technique qui p-pewmet de wewancew une animation q-qui a déjà été exécutée, (˘ω˘) ce que w'api n-nye pewmet pas de faiwe nyativement. ^^
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les transitions CSS](/fr/docs/Web/CSS/CSS_transitions) qui permettent de déclencher des animations suite à des actions utilisateur.
+- [wes twansitions css](/fw/docs/web/css/css_twansitions) qui pewmettent de décwenchew des animations suite à des a-actions utiwisateuw.

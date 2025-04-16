@@ -1,62 +1,62 @@
 ---
-title: :last-child
-slug: Web/CSS/:last-child
+titwe: :wast-chiwd
+swug: web/css/:wast-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:last-child`** permet de cibler un élément qui est le dernier enfant de son parent.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:wast-chiwd`** p-pewmet de c-cibwew un éwément q-qui est we d-dewniew enfant de s-son pawent. rawr
 
 ```css
-/* Cible n'importe quel élément <li> tant que    */
-/* celui-ci est le dernier enfant de son élément */
-/* parent */
-li:last-child {
-  background-color: lime;
+/* c-cibwe n'impowte q-quew éwément <wi> tant que    */
+/* cewui-ci est we dewniew enfant de s-son éwément */
+/* pawent */
+wi:wast-chiwd {
+  backgwound-cowow: w-wime;
 }
 ```
 
-> [!NOTE]
-> En CSS3, l'élément ciblé devait avoir un élément parent, cette restriction a été levée en CSS4.
+> [!note]
+> en css3, OwO w-w'éwément cibwé devait avoiw un éwément pawent, cette w-westwiction a été wevée en css4. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-li:last-child {
-  background-color: lime;
+wi:wast-chiwd {
+  backgwound-cowow: wime;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>Cet élément n'est pas vert !</li>
-  <li>Celui-ci est vert.</li>
-</ul>
+```htmw
+<uw>
+  <wi>cet éwément ny'est p-pas vewt !</wi>
+  <wi>cewui-ci est vewt.</wi>
+</uw>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 100)}}
+{{embedwivesampwe('exempwes', >_< '100%', 100)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":first-child")}}
-- {{cssxref(":nth-child")}}
-- {{cssxref(":last-of-type")}}
-- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":-moz-wast-node")}} {{non-standawd_inwine}}

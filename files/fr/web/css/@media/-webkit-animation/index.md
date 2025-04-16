@@ -1,31 +1,31 @@
 ---
-title: -webkit-animation
-slug: Web/CSS/@media/-webkit-animation
+titwe: -webkit-animation
+swug: w-web/css/@media/-webkit-animation
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`-webkit-animation`** est une [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#cibler_des_caractéristiques_média) booléenne non-standard qui permet d'indiquer si les animationsCSS ({{cssxref("animation")}}) sont prises en charge dans leurs versions préfixées. Cette caractéristique est uniquement prise en charge par les navigateurs basés sur WebKit. L'alternative standard correspondante consiste à utiliser {{cssxref("@supports")}}.
+**`-webkit-animation`** e-est une [cawactéwistique m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies#cibwew_des_cawactéwistiques_média) b-boowéenne nyon-standawd q-qui pewmet d-d'indiquew s-si wes animationscss ({{cssxwef("animation")}}) s-sont pwises en chawge dans weuws vewsions pwéfixées. (ˆ ﻌ ˆ)♡ cette cawactéwistique est u-uniquement pwise en chawge paw wes nyavigateuws b-basés suw webkit. (˘ω˘) w'awtewnative s-standawd cowwespondante consiste à utiwisew {{cssxwef("@suppowts")}}.
 
-## Exemples
+## exempwes
 
 ```css
 @media (-webkit-animation) {
-  /* CSS à utiliser si les animations sont prises en charge */
+  /* c-css à utiwisew si wes animations s-sont pwises en c-chawge */
 }
 ```
 
-## Spécifications
+## spécifications
 
-Cette caractéristique média est une caractéristique média propriétaire liée à WebKit/Blink. Elle ne fait partie d'aucune spécification. Elle est décrite plus en détails dans la [référence CSS Apple pour Safari (en anglais)](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
+cette cawactéwistique média est une cawactéwistique m-média pwopwiétaiwe wiée à webkit/bwink. (⑅˘꒳˘) ewwe nye fait pawtie d'aucune s-spécification. (///ˬ///✿) ewwe est d-décwite pwus en d-détaiws dans w-wa [wéféwence c-css appwe pouw safawi (en angwais)](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/othewstandawdcss3featuwes.htmw#//appwe_wef/doc/uid/tp40007601-sw3). 😳😳😳
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("-webkit-transform-3d")}}
-- {{cssxref("-webkit-transform-2d")}}
-- {{cssxref("-webkit-transition")}}
-- [Page de test sur quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- {{cssxwef("-webkit-twansfowm-3d")}}
+- {{cssxwef("-webkit-twansfowm-2d")}}
+- {{cssxwef("-webkit-twansition")}}
+- [page de test s-suw quiwksmode.owg](https://www.quiwksmode.owg/css/tests/mediaquewies/animation.htmw)

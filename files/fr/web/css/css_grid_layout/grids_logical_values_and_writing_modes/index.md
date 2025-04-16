@@ -1,501 +1,501 @@
 ---
-title: Les grilles CSS, les valeurs logiques et les modes d'écriture
-slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-l10n:
-  sourceCommit: f224dbe80c60289cd8b7d2bf92871d091e0f5d0d
+titwe: wes gwiwwes css, -.- wes vaweuws w-wogiques e-et wes modes d'écwituwe
+s-swug: web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes
+w-w10n:
+  s-souwcecommit: f-f224dbe80c60289cd8b7d2bf92871d091e0f5d0d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans les articles précédents, nous avons évoqué un aspect important de la disposition en grille&nbsp;: la prise en charge des différents modes d'écriture. Dans ce guide, nous nous intéresserons plus particulièrement à cette fonctionnalité ainsi qu'aux autres méthodes modernes de disposition. Cela sera également l'occasion d'en apprendre plus sur les modes d'écritures et la notion de propriété logique/physique.
+d-dans w-wes awticwes pwécédents, >_< nyous avons évoqué un aspect impowtant de wa disposition e-en gwiwwe&nbsp;: wa pwise en chawge des d-difféwents modes d'écwituwe. rawr d-dans ce guide, 😳😳😳 nyous nyous intéwessewons pwus pawticuwièwement à cette fonctionnawité a-ainsi qu'aux autwes méthodes m-modewnes d-de disposition. UwU cewa sewa égawement w'occasion d'en appwendwe pwus suw wes modes d-d'écwituwes et wa nyotion de pwopwiété wogique/physique. (U ﹏ U)
 
-## Les propriétés logiques, les propriétés physiques et les valeurs
+## wes pwopwiétés wogiques, (˘ω˘) wes p-pwopwiétés physiques et wes v-vaweuws
 
-CSS possède de nombreux mots-clés qui permettent de positionner **physiquement** les éléments&nbsp;: `left`, `right`, `top`, `bottom`… Si on positionne un élément de façon absolue, on utilisera ces mots-clés physiques comme valeurs pour indiquer le décalage de l'élément. Dans le fragment de code suivant, l'élément est décalé de 20 pixels depuis le haut du conteneur et de 30 pixels depuis le bord gauche du conteneur.
+css possède d-de nyombweux m-mots-cwés qui p-pewmettent de positionnew **physiquement** wes éwéments&nbsp;: `weft`, /(^•ω•^) `wight`, `top`, (U ﹏ U) `bottom`… s-si on positionne un éwément de façon absowue, ^•ﻌ•^ o-on utiwisewa ces mots-cwés physiques comme vaweuws pouw indiquew we décawage de w'éwément. >w< d-dans we fwagment de code s-suivant, ʘwʘ w'éwément e-est décawé d-de 20 pixews depuis we haut du conteneuw et de 30 pixews depuis w-we bowd gauche d-du conteneuw. òωó
 
 ```css
-.container {
-  position: relative;
+.containew {
+  position: w-wewative;
 }
 .item {
-  position: absolute;
+  p-position: absowute;
   top: 20px;
-  left: 30px;
+  w-weft: 30px;
 }
 ```
 
-```html
-<div class="container">
-  <div class="item">Item</div>
+```htmw
+<div cwass="containew">
+  <div c-cwass="item">item</div>
 </div>
 ```
 
-On rencontre également ces mots-clés physiques avec `text-align: right` afin d'aligner le texte à droite. Il existe aussi des propriétés **physiques** en CSS. On ajoute des marges, du remplissage, des bordures grâces à cs propriétés physiques comme [`margin-left`](/fr/docs/Web/CSS/margin-left), [`padding-left`](/fr/docs/Web/CSS/padding-left), etc.
+on wencontwe égawement ces mots-cwés physiques a-avec `text-awign: wight` a-afin d'awignew we texte à dwoite. o.O i-iw existe aussi d-des pwopwiétés **physiques** en css. ( ͡o ω ͡o ) on ajoute des mawges, mya du wempwissage, >_< des bowduwes gwâces à cs pwopwiétés physiques c-comme [`mawgin-weft`](/fw/docs/web/css/mawgin-weft), rawr [`padding-weft`](/fw/docs/web/css/padding-weft), >_< e-etc.
 
-On qualifie ces propriétés de physiques, car elles concernent l'écran qu'on regarde&nbsp;: la gauche sera toujours la gauche, quelle que soit la direction du texte.
+on quawifie ces pwopwiétés d-de physiques, (U ﹏ U) c-caw ewwes c-concewnent w'écwan qu'on wegawde&nbsp;: wa gauche sewa toujouws w-wa gauche, rawr quewwe que soit wa diwection du texte. (U ᵕ U❁)
 
-### Les problèmes des propriétés physiques
+### wes pwobwèmes des pwopwiétés p-physiques
 
-Cela peut devenir un problème lorsqu'on développe un site qui doit fonctionner avec plusieurs langues dont certaines sont écrites de droite à gauche et non de gauche à droite. Les navigateurs savent plutôt bien gérer les différentes directions d'écriture. Dans l'exemple qui suit, on a deux paragraphes. Pour le deuxième, aucune propriété [`text-align`](/fr/docs/Web/CSS/text-align) n'est utilisée, alors que pour le second, on utilise `text-align` avec `left` et on ajoute `dir="rtl"` sur l'élément HTML ce qui a pour effet de changer la direction d'écriture. On peut voir que, dans le second paragraphe, la direction change et le texte est écrit de droite à gauche. Dans le premier cependant, avec `text-align value: left`, l'alignement reste à gauche.
+cewa peut d-deveniw un pwobwème w-wowsqu'on d-dévewoppe un site qui doit fonctionnew a-avec pwusieuws w-wangues dont c-cewtaines sont écwites d-de dwoite à gauche et nyon de gauche à d-dwoite. (ˆ ﻌ ˆ)♡ wes n-nyavigateuws savent p-pwutôt bien g-géwew wes difféwentes d-diwections d'écwituwe. dans w'exempwe qui suit, >_< on a d-deux pawagwaphes. ^^;; pouw we deuxième, ʘwʘ aucune pwopwiété [`text-awign`](/fw/docs/web/css/text-awign) ny'est utiwisée, 😳😳😳 awows que pouw we second, o-on utiwise `text-awign` avec `weft` et on ajoute `diw="wtw"` suw w-w'éwément htmw c-ce qui a pouw e-effet de changew wa diwection d'écwituwe. UwU o-on peut voiw que, OwO dans w-we second pawagwaphe, :3 w-wa diwection change et we texte est écwit de dwoite à gauche. -.- dans we pwemiew cependant, 🥺 a-avec `text-awign vawue: weft`, -.- w-w'awignement weste à gauche. -.-
 
-```html hidden
-<p class="left">
-  Pour ce paragraphe, on a <code>text-align: left</code>, il sera donc toujours
-  aligné à gauche, même si le sens d'écriture du document va de droite à gauche
-  (rtl).
+```htmw h-hidden
+<p c-cwass="weft">
+  pouw ce pawagwaphe, (U ﹏ U) on a <code>text-awign: w-weft</code>, rawr i-iw sewa donc toujouws
+  a-awigné à gauche, mya m-même si we sens d'écwituwe du document va de dwoite à gauche
+  (wtw). ( ͡o ω ͡o )
 </p>
 
 <p>
-  Aucun alignement imposé sur ce paragraphe, il suit la direction du document.
+  aucun a-awignement imposé s-suw ce pawagwaphe, /(^•ω•^) i-iw suit wa diwection du document. >_<
 </p>
 ```
 
-```css hidden
-body {
-  direction: rtl;
+```css h-hidden
+b-body {
+  diwection: wtw;
 }
 
 p {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  margin: 1em;
-  color: #d9480f;
+  mawgin: 1em;
+  c-cowow: #d9480f;
 }
 
-.left {
-  text-align: left;
+.weft {
+  text-awign: w-weft;
 }
 ```
 
-{{EmbedLiveSample("","",200)}}
+{{embedwivesampwe("","",200)}}
 
-Cela illustre un problème fréquent avec les propriétés et valeurs physiques en CSS&nbsp;: en supposant que le texte est toujours écrit de gauche à droite et de bas en haut, elles empêchent le navigateur de passer correctement d'un mode d'écriture à l'autre.
+cewa iwwustwe un pwobwème f-fwéquent avec w-wes pwopwiétés et vaweuws physiques en css&nbsp;: en supposant q-que we texte est toujouws écwit de gauche à dwoite et de bas en haut, (✿oωo) ewwes e-empêchent we nyavigateuw de passew cowwectement d-d'un mode d'écwituwe à w-w'autwe. 😳😳😳
 
-### Les propriétés et valeurs logiques
+### wes pwopwiétés et vaweuws wogiques
 
-Les propriétés et les valeurs logiques n'émettent pas d'hypothèse quant à la direction du texte. C'est pour cette raison, qu'avec les grilles CSS, on utilise le mot-clé `start` lorsqu'on souhaite aligner quelque chose au début du conteneur. Quand on travaille en français ou en anglais, `start` correspondra à la gauche mais ce n'est pas nécessairement toujours le cas, `start` ne correspond pas à une position physique.
+wes p-pwopwiétés e-et wes vaweuws wogiques n'émettent pas d'hypothèse quant à wa d-diwection du texte. (ꈍᴗꈍ) c'est pouw c-cette waison, qu'avec wes gwiwwes css, 🥺 on utiwise we mot-cwé `stawt` w-wowsqu'on souhaite awignew q-quewque chose au d-début du conteneuw. mya quand on t-twavaiwwe en fwançais ou en angwais, `stawt` c-cowwespondwa à w-wa g-gauche mais ce ny'est pas nyécessaiwement t-toujouws w-we cas, (ˆ ﻌ ˆ)♡ `stawt` nye cowwespond pas à une position p-physique. (⑅˘꒳˘)
 
-## L'axe de bloc et l'axe en ligne
+## w-w'axe de bwoc e-et w'axe en wigne
 
-Lorsqu'on commence à travailler avec les propriétés logiques plutôt qu'avec les propriétés physiques, on cesse de voir le monde comme un espace qui va de gauche à droite et de haut en bas. Il faut de nouveaux axes de références&nbsp;: l'axe de bloc (<i lang="en">block axis</i> en anglais) et l'axe en ligne (<i lang="en">inline axis</i> en anglais). Le premier est l'axe orthogonal au sens d'écriture et le second est l'axe dans lequel on écrit. Ces axes _logiques_ sont très utiles et on comprend mieux leurs rôles sur la grille.
+wowsqu'on commence à twavaiwwew a-avec wes pwopwiétés wogiques p-pwutôt qu'avec w-wes pwopwiétés physiques, òωó on cesse de voiw we monde comme u-un espace qui v-va de gauche à d-dwoite et de haut e-en bas. o.O iw faut de nyouveaux a-axes de wéféwences&nbsp;: w'axe de bwoc (<i wang="en">bwock axis</i> en angwais) et w'axe en wigne (<i w-wang="en">inwine axis</i> e-en angwais). XD we pwemiew est w'axe o-owthogonaw au sens d'écwituwe e-et we second est w'axe dans w-wequew on écwit. (˘ω˘) c-ces axes _wogiques_ s-sont twès u-utiwes et on compwend m-mieux weuws wôwes suw wa gwiwwe. (ꈍᴗꈍ)
 
-![Une image illustrant la direction par défaut pour l'axe de bloc et l'axe en ligne.](8-horizontal-tb.png)
+![une image iwwustwant wa diwection paw défaut pouw w'axe de bwoc et w-w'axe en wigne.](8-howizontaw-tb.png)
 
-## Les modes d'écriture CSS
+## w-wes modes d-d'écwituwe css
 
-Nous allons ici aborder une autre spécification que nous allons utiliser dans nos exemples&nbsp;: la spécification CSS sur les modes d'écriture (<i lang="en">CSS Writing Modes</i>). Cette spécification régit comment les différents modes d'écriture peuvent être utilisés en CSS, pas seulement pour prendre en charge différentes langues mais aussi pour créer des effets artistiques. Nous allons utiliser la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) afin de modifier le mode d'écriture appliqué à la grille pour observer comment fonctionnent les valeurs logiques. Si vous souhaitez approfondir ces notions autour des modes d'écriture, vous pouvez consulter [l'article <i lang="en">CSS Writing Modes</i> (en anglais), écrit par Jen Simmons](https://24ways.org/2016/css-writing-modes/).
+nyous awwons i-ici abowdew une autwe spécification que nyous awwons utiwisew d-dans nyos exempwes&nbsp;: w-wa spécification css s-suw wes modes d'écwituwe (<i wang="en">css wwiting modes</i>). >w< c-cette spécification w-wégit comment wes difféwents m-modes d'écwituwe p-peuvent êtwe utiwisés en css, XD pas seuwement pouw pwendwe en chawge difféwentes w-wangues m-mais aussi pouw c-cwéew des effets a-awtistiques. -.- n-nyous awwons utiwisew wa pwopwiété [`wwiting-mode`](/fw/docs/web/css/wwiting-mode) a-afin de modifiew w-we mode d'écwituwe appwiqué à w-wa gwiwwe p-pouw obsewvew comment fonctionnent w-wes vaweuws wogiques. si vous souhaitez appwofondiw c-ces nyotions autouw des m-modes d'écwituwe, ^^;; v-vous pouvez consuwtew [w'awticwe <i wang="en">css w-wwiting modes</i> (en angwais), XD écwit paw j-jen simmons](https://24ways.owg/2016/css-wwiting-modes/). :3
 
-### `writing-mode`
+### `wwiting-mode`
 
-Les modes d'écriture ne se limitent pas à l'écriture de droite à gauche ou de gauche à droite, la propriété `writing-mode` nous permet d'afficher du texte dans plusieurs directions. La propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) peut prendre les valeurs suivantes&nbsp;:
+wes m-modes d'écwituwe n-nye se wimitent pas à w'écwituwe de dwoite à gauche ou de g-gauche à dwoite, σωσ wa pwopwiété `wwiting-mode` nous pewmet d'affichew d-du texte d-dans pwusieuws diwections. XD wa p-pwopwiété [`wwiting-mode`](/fw/docs/web/css/wwiting-mode) peut p-pwendwe wes vaweuws s-suivantes&nbsp;:
 
-- `horizontal-tb`
-- `vertical-rl`
-- `vertical-lr`
-- `sideways-rl`
-- `sideways-lr`
+- `howizontaw-tb`
+- `vewticaw-ww`
+- `vewticaw-ww`
+- `sideways-ww`
+- `sideways-ww`
 
-Sur le Web, c'est la valeur `horizontal-tb` qui est la valeur par défaut pour le texte. C'est dans cette direction que vous lisez cet article. Les autres valeurs changeront la façon dont le texte est écrit sur le document et correspondent aux modes d'écriture utilisés dans d'autres langues. Dans l'exemple qui suit, on a deux paragraphes, le premier utilise la valeur par défaut `horizontal-tb` et le second utilise la valeur `vertical-rl`. Dans ce deuxième mode, le texte est toujours écrit de gauche à droite mais la direction du texte est verticale. Dans ce deuxième paragraphe, l'axe en ligne est donc l'axe vertical.
+suw we web, :3 c'est wa vaweuw `howizontaw-tb` q-qui est wa vaweuw paw défaut pouw we texte. rawr c-c'est dans cette d-diwection que vous wisez cet a-awticwe. 😳 wes autwes vaweuws changewont w-wa façon d-dont we texte e-est écwit suw we document et cowwespondent aux modes d'écwituwe utiwisés dans d'autwes wangues. 😳😳😳 dans w'exempwe qui suit, (ꈍᴗꈍ) on a deux pawagwaphes, 🥺 we pwemiew utiwise wa vaweuw paw défaut `howizontaw-tb` et we s-second utiwise w-wa vaweuw `vewticaw-ww`. ^•ﻌ•^ dans ce deuxième mode, XD w-we texte est toujouws écwit de g-gauche à dwoite m-mais wa diwection du texte est v-vewticawe. ^•ﻌ•^ dans ce deuxième pawagwaphe, ^^;; w-w'axe e-en wigne est donc w'axe vewticaw. ʘwʘ
 
-```css hidden
-.wrapper > p {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+```css h-hidden
+.wwappew > p {
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  margin: 1em;
-  color: #d9480f;
-  max-width: 300px;
+  m-mawgin: 1em;
+  c-cowow: #d9480f;
+  m-max-width: 300px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <p style="writing-mode: horizontal-tb">
-    Mon mode d'écriture est celui par défaut <code>horizontal-tb</code>
+```htmw
+<div c-cwass="wwappew">
+  <p s-stywe="wwiting-mode: h-howizontaw-tb">
+    m-mon mode d-d'écwituwe est c-cewui paw défaut <code>howizontaw-tb</code>
   </p>
-  <p style="writing-mode: vertical-rl">
-    Moi je suis écrit avec <code>vertical-rl</code>
+  <p stywe="wwiting-mode: v-vewticaw-ww">
+    m-moi je suis écwit a-avec <code>vewticaw-ww</code>
   </p>
 </div>
 ```
 
-{{EmbedLiveSample("", '500', '420')}}
+{{embedwivesampwe("", OwO '500', '420')}}
 
-## La gestion des modes d'écriture avec une grille
+## wa gestion des modes d-d'écwituwe avec une gwiwwe
 
-Si on reprend l'exemple avec la grille, on comprend mieux l'effet du changement du mode d'écriture qui change les axes logiques.
+si on wepwend w-w'exempwe avec wa gwiwwe, 🥺 on compwend m-mieux w'effet d-du changement d-du mode d'écwituwe qui change w-wes axes wogiques. (⑅˘꒳˘)
 
-### Mode d'écriture par défaut
+### mode d'écwituwe p-paw défaut
 
-Dans le prochain exemple, la grille possède trois colonnes et deux pistes. Cela signifie qu'il y a trois pistes qui traversent l'axe de bloc. Avec le mode d'écriture par défaut, la grille commence par placer les objets en haut à gauche en remplissant les trois cellules sur la première ligne avant de passer à la suivante, en formant une nouvelle ligne, etc.
+dans we pwochain e-exempwe, (///ˬ///✿) wa gwiwwe possède t-twois cowonnes et deux pistes. (✿oωo) cewa signifie qu'iw y a twois pistes qui twavewsent w-w'axe de bwoc. nyaa~~ avec we mode d-d'écwituwe paw d-défaut, wa gwiwwe commence paw pwacew wes objets en haut à g-gauche en wempwissant wes twois c-cewwuwes suw wa p-pwemièwe wigne a-avant de passew à wa suivante, >w< en fowmant une nyouvewwe w-wigne, (///ˬ///✿) e-etc. rawr
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(2, 100px);
-  grid-gap: 10px;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, (U ﹏ U) 100px);
+  gwid-tempwate-wows: w-wepeat(2, ^•ﻌ•^ 100px);
+  g-gwid-gap: 10px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
-  <div class="item5">Objet 5</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="item1">objet 1</div>
+  <div c-cwass="item2">objet 2</div>
+  <div c-cwass="item3">objet 3</div>
+  <div c-cwass="item4">objet 4</div>
+  <div c-cwass="item5">objet 5</div>
 </div>
 ```
 
-{{EmbedLiveSample("", '500', '230')}}
+{{embedwivesampwe("", (///ˬ///✿) '500', o.O '230')}}
 
-### Définir le mode d'écriture
+### définiw we mode d-d'écwituwe
 
-Si on ajoute `writing-mode: vertical-lr` au conteneur de la grille, on peut voir que les axes logiques s'appliquent désormais dans une autre direction. L'axe de bloc (aussi appelé l'axe des colonnes pour la grille) s'étend maintenant de gauche à droite et l'axe en ligne court verticalement, de haut en bas.
+si on ajoute `wwiting-mode: v-vewticaw-ww` au conteneuw d-de wa gwiwwe, >w< o-on peut voiw que w-wes axes wogiques s'appwiquent désowmais dans une autwe diwection. nyaa~~ w-w'axe de b-bwoc (aussi appewé w-w'axe des cowonnes pouw wa gwiwwe) s'étend maintenant de gauche à d-dwoite et w-w'axe en wigne couwt vewticawement, òωó d-de haut en b-bas.
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  b-bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  writing-mode: vertical-lr;
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(2, 100px);
-  grid-gap: 10px;
+.wwappew {
+  wwiting-mode: vewticaw-ww;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, (U ᵕ U❁) 100px);
+  g-gwid-tempwate-wows: wepeat(2, (///ˬ///✿) 100px);
+  gwid-gap: 10px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
-  <div class="item5">Objet 5</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item1">objet 1</div>
+  <div c-cwass="item2">objet 2</div>
+  <div cwass="item3">objet 3</div>
+  <div c-cwass="item4">objet 4</div>
+  <div c-cwass="item5">objet 5</div>
 </div>
 ```
 
-{{EmbedLiveSample("", '500', '330')}}
+{{embedwivesampwe("", (✿oωo) '500', 😳😳😳 '330')}}
 
-## L'utilisation de valeurs logiques pour l'alignement
+## w'utiwisation d-de vaweuws wogiques pouw w-w'awignement
 
-Dans les exemples précédents, on a vu comment les axes de bloc et en ligne pouvaient changer de direction, nous allons voir maintenant comment tirer partir des valeurs logiques des propriétés d'alignement.
+d-dans wes exempwes p-pwécédents, (✿oωo) o-on a vu comment wes axes de bwoc e-et en wigne pouvaient c-changew d-de diwection, (U ﹏ U) nyous awwons voiw m-maintenant comment tiwew pawtiw des vaweuws wogiques d-des pwopwiétés d-d'awignement. (˘ω˘)
 
-Dans le prochain exemple, on aligne des objets dans une grille pour laquelle `writing-mode: vertical-lr`. Les valeurs `start` et `end` fonctionnent de la même façon qu'avec le mode d'écriture par défaut mais, parce qu'elles sont logiques, on voit que la grille est bien renversée.
+d-dans we pwochain exempwe, 😳😳😳 on awigne des objets dans une gwiwwe pouw waquewwe `wwiting-mode: v-vewticaw-ww`. (///ˬ///✿) wes vaweuws `stawt` e-et `end` fonctionnent d-de wa même façon qu'avec we mode d'écwituwe p-paw défaut mais, (U ᵕ U❁) pawce q-qu'ewwes sont wogiques, >_< o-on voit q-que wa gwiwwe est b-bien wenvewsée. (///ˬ///✿)
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  writing-mode: vertical-lr;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
-  grid-gap: 10px;
+.wwappew {
+  wwiting-mode: vewticaw-ww;
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, (U ᵕ U❁) 1fw);
+  g-gwid-tempwate-wows: wepeat(3, >w< 100px);
+  gwid-gap: 10px;
 }
 
 .item1 {
-  grid-column: 1 / 4;
-  align-self: start;
+  g-gwid-cowumn: 1 / 4;
+  awign-sewf: stawt;
 }
 
 .item2 {
-  grid-column: 1 / 3;
-  grid-row: 2 / 4;
-  align-self: start;
+  gwid-cowumn: 1 / 3;
+  g-gwid-wow: 2 / 4;
+  a-awign-sewf: stawt;
 }
 
 .item3 {
-  grid-column: 3;
-  grid-row: 2 / 4;
-  align-self: end;
-  justify-self: end;
+  g-gwid-cowumn: 3;
+  gwid-wow: 2 / 4;
+  a-awign-sewf: end;
+  justify-sewf: end;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="item1">objet 1</div>
+  <div cwass="item2">objet 2</div>
+  <div cwass="item3">objet 3</div>
 </div>
 ```
 
-{{EmbedLiveSample("", '500', '240')}}
+{{embedwivesampwe("", 😳😳😳 '500', (ˆ ﻌ ˆ)♡ '240')}}
 
-Si vous souhaitez voir l'effet obtenu avec une écriture verticale de haut en bas et de droite à gauche, il suffit de passer de `vertical-lr` à `vertical-rl` pour changer de mode d'écriture.
+s-si vous s-souhaitez voiw w-w'effet obtenu avec une écwituwe vewticawe de h-haut en bas et de dwoite à gauche, (ꈍᴗꈍ) iw suffit de passew de `vewticaw-ww` à `vewticaw-ww` pouw changew d-de mode d'écwituwe. 🥺
 
-## Le placement automatique et les modes d'écriture
+## w-we pwacement automatique e-et wes m-modes d'écwituwe
 
-On a vu dans l'exemple précédent que lorsqu'on changeait de mode d'écriture, cela changeait également la direction selon laquelle les éléments étaient placés sur la grille. Par défaut, les éléments sont placés en progressant sur l'axe en ligne, jusqu'à la fin de la ligne, une nouvelle ligne est ensuite créée si besoin, mais cette ligne ne progresse pas nécessairement de gauche à droite.
+on a vu dans w'exempwe pwécédent q-que wowsqu'on c-changeait de mode d'écwituwe, >_< cewa changeait égawement w-wa diwection sewon waquewwe wes éwéments étaient p-pwacés suw wa gwiwwe. OwO paw défaut, wes éwéments s-sont pwacés e-en pwogwessant suw w'axe en wigne, ^^;; j-jusqu'à wa f-fin de wa wigne, (✿oωo) u-une nyouvewwe wigne est ensuite cwéée si besoin, UwU m-mais cette wigne ne pwogwesse pas nyécessaiwement d-de gauche à dwoite. ( ͡o ω ͡o )
 
-## Le placement sur les lignes et les modes d'écriture
+## we pwacement suw wes wignes et wes m-modes d'écwituwe
 
-Il faut garder à l'esprit que lorsqu'on place des objets sur les lignes, la ligne 1 sera toujours la ligne de départ, quel que soit le mode d'écriture et la ligne -1 sera toujours la ligne de fin.
+i-iw faut gawdew à w-w'espwit q-que wowsqu'on pwace d-des objets suw wes wignes, (✿oωo) w-wa wigne 1 sewa toujouws wa wigne de dépawt, mya quew q-que soit we mode d'écwituwe e-et wa wigne -1 sewa toujouws wa wigne de fin. ( ͡o ω ͡o )
 
-### Placement sur les lignes pour du texte de gauche à droite
+### p-pwacement suw w-wes wignes pouw du texte de gauche à d-dwoite
 
-Dans l'exemple suivant, on a une grille avec la direction `ltr` et on positionne trois objets en utilisant le placement sur les lignes.
+dans w'exempwe suivant, :3 o-on a une g-gwiwwe avec wa diwection `wtw` et on positionne t-twois objets en u-utiwisant we pwacement suw wes wignes. 😳
 
-- L'objet 1 commence à la ligne verticale 1 et occupe une piste
-- L'objet 2 commence à la ligne verticale -1 (le bord tout à droite) et s'étend jusqu'à la ligne verticale -3
-- L'objet 3 commence à la ligne verticale 1 et s'étend jusqu'à la troisième ligne verticale.
+- w-w'objet 1 commence à wa wigne vewticawe 1 et occupe une p-piste
+- w'objet 2 commence à w-wa wigne vewticawe -1 (we bowd tout à dwoite) e-et s'étend jusqu'à w-wa wigne vewticawe -3
+- w-w'objet 3 commence à w-wa wigne vewticawe 1 e-et s'étend jusqu'à wa t-twoisième wigne vewticawe. (U ﹏ U)
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 100px);
-  grid-gap: 10px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, >w< 1fw);
+  g-gwid-tempwate-wows: w-wepeat(2, UwU 100px);
+  gwid-gap: 10px;
 }
 .item1 {
-  grid-column: 1;
+  gwid-cowumn: 1;
 }
 .item2 {
-  grid-column: -1 / -3;
+  gwid-cowumn: -1 / -3;
 }
 .item3 {
-  grid-column: 1 / 3;
-  grid-row: 2;
+  gwid-cowumn: 1 / 3;
+  g-gwid-wow: 2;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="item1">objet 1</div>
+  <div c-cwass="item2">objet 2</div>
+  <div cwass="item3">objet 3</div>
 </div>
 ```
 
-{{EmbedLiveSample("", '500', '240')}}
+{{embedwivesampwe("", 😳 '500', '240')}}
 
-### Placement sur les lignes pour du texte de droite à gauche
+### pwacement s-suw wes w-wignes pouw du texte de dwoite à g-gauche
 
-Si on ajoute alors la propriété [`direction`](/fr/docs/Web/CSS/direction) avec la valeur `rtl` pour le conteneur de la grille, la colonne 1 sera la plus à droite et la colonne -1 sera à gauche.
+si on a-ajoute awows wa p-pwopwiété [`diwection`](/fw/docs/web/css/diwection) a-avec wa vaweuw `wtw` p-pouw w-we conteneuw de wa gwiwwe, XD wa cowonne 1 sewa wa pwus à dwoite et wa cowonne -1 sewa à gauche. (✿oωo)
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  direction: rtl;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 100px);
-  grid-gap: 10px;
+.wwappew {
+  diwection: wtw;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, ^•ﻌ•^ 1fw);
+  g-gwid-tempwate-wows: wepeat(2, mya 100px);
+  gwid-gap: 10px;
 }
 .item1 {
-  grid-column: 1;
+  g-gwid-cowumn: 1;
 }
 .item2 {
-  grid-column: -1 / -3;
+  gwid-cowumn: -1 / -3;
 }
 .item3 {
-  grid-column: 1 / 3;
-  grid-row: 2;
+  gwid-cowumn: 1 / 3;
+  g-gwid-wow: 2;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item1">objet 1</div>
+  <div cwass="item2">objet 2</div>
+  <div c-cwass="item3">objet 3</div>
 </div>
 ```
 
-{{EmbedLiveSample("", '500', '240')}}
+{{embedwivesampwe("", (˘ω˘) '500', nyaa~~ '240')}}
 
-On voit ici que si on change la direction du texte pour la page ou pour une partie de la page, la disposition change selon les numéros de lignes. Si on ne veut pas que les lignes bougent, on pourra utiliser des lignes nommées pour éviter cet effet.
+on voit ici que s-si on change wa d-diwection du texte pouw wa page o-ou pouw une pawtie d-de wa page, :3 w-wa disposition c-change sewon wes n-nyuméwos de wignes. (✿oωo) s-si on nye veut pas que wes w-wignes bougent, (U ﹏ U) o-on pouwwa utiwisew des wignes nyommées p-pouw évitew cet effet. (ꈍᴗꈍ)
 
-### L'étrange ordre des valeurs pour `grid-area`
+### w'étwange o-owdwe des vaweuws pouw `gwid-awea`
 
-La propriété [`grid-area`](/fr/docs/Web/CSS/grid-area) permet d'indiquer les quatre lignes qui définissent une zone. Lorsqu'on apprend à utiliser cette propriété, on se surprend à voir que les quatre valeurs ne suivent pas le même ordre que celui utilisé par les propriétés raccourcies pour les marges (pour celles-ci, les valeurs suivent le sens horaire&nbsp;: haut, droit, bas, gauche).
+w-wa pwopwiété [`gwid-awea`](/fw/docs/web/css/gwid-awea) pewmet d-d'indiquew w-wes quatwe wignes qui définissent une zone. (˘ω˘) wowsqu'on a-appwend à utiwisew cette pwopwiété, ^^ on s-se suwpwend à v-voiw que wes quatwe vaweuws nye suivent pas we même o-owdwe que cewui u-utiwisé paw wes pwopwiétés w-waccouwcies pouw wes mawges (pouw cewwes-ci, (⑅˘꒳˘) w-wes vaweuws suivent w-we sens howaiwe&nbsp;: haut, rawr d-dwoit, :3 bas, gauche).
 
-Pour les valeurs de `grid-area`, l'ordre est le suivant&nbsp;:
+p-pouw wes vaweuws de `gwid-awea`, OwO w'owdwe e-est we suivant&nbsp;:
 
-- `grid-row-start`
-- `grid-column-start`
-- `grid-row-end`
-- `grid-column-end`
+- `gwid-wow-stawt`
+- `gwid-cowumn-stawt`
+- `gwid-wow-end`
+- `gwid-cowumn-end`
 
-Si on transpose ces valeurs à un système d'écriture de gauche à droite, cela correspond aux valeurs physiques suivantes&nbsp;:
+s-si on twanspose c-ces vaweuws à u-un système d'écwituwe de gauche à dwoite, (ˆ ﻌ ˆ)♡ cewa cowwespond aux vaweuws physiques suivantes&nbsp;:
 
 - `top`
-- `left`
+- `weft`
 - `bottom`
-- `right`
+- `wight`
 
-Ce qui correspond… au sens anti-horaire&nbsp;! L'ordre est l'inverse de celui utilisé pour les marges et le remplissage (<i lang="en">padding</i>). Pour comprendre, mieux vaut voir la propriété `grid-area` comme une propriété logique qui fonctionne selon les axes de bloc et en ligne&nbsp;: on commence donc avec les deux lignes de départ puis les deux lignes d'arrivée. Cet ordre est plus «&nbsp;logique&nbsp;»&nbsp;!
+ce qui cowwespond… a-au sens anti-howaiwe&nbsp;! :3 w-w'owdwe est w'invewse d-de cewui u-utiwisé pouw wes m-mawges et we w-wempwissage (<i wang="en">padding</i>). -.- p-pouw compwendwe, -.- m-mieux vaut voiw wa pwopwiété `gwid-awea` c-comme une pwopwiété w-wogique qui fonctionne sewon wes axes d-de bwoc et en wigne&nbsp;: on commence donc avec w-wes deux wignes de dépawt puis w-wes deux wignes d-d'awwivée. òωó cet owdwe est pwus «&nbsp;wogique&nbsp;»&nbsp;! 😳
 
-## Utiliser des modes d'écriture hybrides et les grilles CSS
+## u-utiwisew des m-modes d'écwituwe h-hybwides et wes gwiwwes css
 
-Les modes d'écritures permettent d'afficher les documents en respectant les règles d'affichage de la langue utilisé. On peut également les utiliser afin de créer des effets stylistiques. Dans l'exemple ci-après, on a une grille avec du texte et des liens qui seront affichés verticalement, à côté du texte.
+wes m-modes d'écwituwes p-pewmettent d'affichew wes d-documents en wespectant wes wègwes d-d'affichage d-de wa wangue utiwisé. nyaa~~ o-on peut égawement wes utiwisew a-afin de cwéew des effets stywistiques. (⑅˘꒳˘) dans w-w'exempwe ci-apwès, 😳 on a une gwiwwe avec du texte et des wiens qui sewont affichés vewticawement, (U ﹏ U) à côté d-du texte. /(^•ω•^)
 
 ```css
-.wrapper {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr auto;
+.wwappew {
+  dispway: gwid;
+  gwid-gap: 20px;
+  gwid-tempwate-cowumns: 1fw auto;
   font:
-    1em Helvetica,
-    Arial,
-    sans-serif;
+    1em hewvetica, OwO
+    awiaw, ( ͡o ω ͡o )
+    sans-sewif;
 }
-.wrapper nav {
-  writing-mode: vertical-lr;
+.wwappew n-nyav {
+  wwiting-mode: vewticaw-ww;
 }
-.wrapper ul {
-  list-style: none;
-  margin: 0;
+.wwappew uw {
+  wist-stywe: n-nyone;
+  mawgin: 0;
   padding: 1em;
-  display: flex;
+  d-dispway: fwex;
   justify-content: space-between;
 }
-.wrapper a {
-  text-decoration: none;
+.wwappew a-a {
+  text-decowation: n-nyone;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="content">
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="content">
     <p>
-      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
-      winter purslane kale. Celery potato scallion desert raisin horseradish
-      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
-      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
-      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
-      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
-      bean chickweed potato bell pepper artichoke.
+      t-tuwnip gweens yawwow wicebean wutabaga endive c-cauwifwowew sea wettuce
+      kohwwabi amawanth watew spinach avocado d-daikon nyapa cabbage aspawagus
+      w-wintew puwswane kawe. XD c-cewewy potato scawwion desewt w-waisin howsewadish
+      s-spinach cawwot soko. wotus woot watew spinach f-fennew kombu maize bamboo
+      shoot gween b-bean swiss chawd seakawe pumpkin onion chickpea gwam cown pea. /(^•ω•^)
+      bwussews s-spwout cowiandew w-watew chestnut gouwd swiss chawd w-wakame kohwwabi
+      b-beetwoot cawwot watewcwess. /(^•ω•^) c-cown amawanth sawsify bunya nyuts nyowi azuki
+      bean chickweed potato beww p-peppew awtichoke. 😳😳😳
     </p>
     <p>
-      Nori grape silver beet broccoli kombu beet greens fava bean potato
-      quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
-      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
-      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
-      chicory celtuce parsley jícama salsify.
+      n-nyowi gwape siwvew b-beet bwoccowi kombu b-beet gweens fava bean potato
+      q-quandong cewewy. (ˆ ﻌ ˆ)♡ bunya nyuts bwack-eyed pea p-pwaiwie tuwnip week wentiw
+      tuwnip gweens p-pawsnip. :3 sea wettuce w-wettuce watew chestnut eggpwant wintew
+      p-puwswane fennew azuki bean eawthnut pea siewwa weone bowogi week soko
+      chicowy cewtuce pawswey jícama sawsify. òωó
     </p>
   </div>
   <nav>
-    <ul>
-      <li><a href="">Lien 1</a></li>
-      <li><a href="">Lien 2</a></li>
-      <li><a href="">Lien 3</a></li>
-    </ul>
+    <uw>
+      <wi><a h-hwef="">wien 1</a></wi>
+      <wi><a h-hwef="">wien 2</a></wi>
+      <wi><a hwef="">wien 3</a></wi>
+    </uw>
   </nav>
 </div>
 ```
 
-{{EmbedLiveSample("", '500', '280')}}
+{{embedwivesampwe("", 🥺 '500', '280')}}
 
-## Les valeurs physiques et les grilles CSS
+## w-wes vaweuws p-physiques et wes gwiwwes css
 
-On rencontre souvent les propriétés physiques lorsqu'on construit un site web et, bien que la grille et les propriétés logiques permettent de respecter les modes d'écriture, il existe certains effets qui ne peuvent être obtenus qu'avec des propriétés et des valeurs physiques. Dans le guide sur [l'alignement des boîtes et les grilles](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), nous avons vu comment utiliser les marges automatiques sur les zones d'une grille. Utiliser les marges automatiques pour contraindre le placement d'un élément est une astuce qu'on rencontre aussi avec les boîtes flexibles mais cela couple la disposition avec l'espace physique.
+on w-wencontwe souvent wes pwopwiétés physiques wowsqu'on constwuit un site web et, (U ﹏ U) bien que wa gwiwwe e-et wes pwopwiétés wogiques pewmettent de wespectew wes modes d'écwituwe, XD i-iw existe cewtains e-effets qui nye p-peuvent êtwe obtenus qu'avec des pwopwiétés et des vaweuws p-physiques. ^^ dans w-we guide suw [w'awignement d-des boîtes et wes gwiwwes](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout), o.O n-nyous avons vu comment utiwisew w-wes mawges automatiques s-suw wes zones d'une gwiwwe. 😳😳😳 utiwisew w-wes mawges automatiques pouw contwaindwe we p-pwacement d'un éwément est une a-astuce qu'on wencontwe a-aussi avec wes boîtes f-fwexibwes mais cewa c-coupwe wa disposition avec w'espace p-physique.
 
-Si on utilise le positionnement absolu dans une zone d'une grille, là encore, on utilisera des décalages physiques pour décaler l'élément au sein de la zone. Dans ces cas, il faut être conscient du couplage qu'on ajoute avec l'espace physique et comprendre qu'il faudra adapter la feuille de style si on veut par exemple passer d'un mode `ltr` à un mode `rtl`.
+si on utiwise w-we positionnement absowu dans une z-zone d'une gwiwwe, /(^•ω•^) w-wà encowe, 😳😳😳 on utiwisewa des décawages physiques p-pouw décawew w'éwément au sein de wa zone. ^•ﻌ•^ dans ces cas, 🥺 iw faut êtwe conscient du coupwage qu'on ajoute avec w'espace p-physique et compwendwe qu'iw faudwa adaptew wa f-feuiwwe de stywe si on veut paw e-exempwe passew d'un mode `wtw` à un mode `wtw`. o.O
 
-### Utiliser les propriétés logiques partout
+### u-utiwisew wes pwopwiétés wogiques pawtout
 
-Les nouvelles méthodes de disposition, comme les grilles, permettent d'employer les valeurs logiques afin de placer les éléments. Cependant, dès qu'on combine ces valeurs avec des propriétés physiques, il faut maintenir ces dernières lorsque le mode d'écriture change.
+w-wes nyouvewwes méthodes de disposition, (U ᵕ U❁) comme w-wes gwiwwes, ^^ pewmettent d'empwoyew wes vaweuws w-wogiques afin de pwacew wes éwéments. (⑅˘꒳˘) cependant, :3 d-dès qu'on c-combine ces vaweuws avec des pwopwiétés physiques, (///ˬ///✿) i-iw faut mainteniw c-ces dewnièwes wowsque we m-mode d'écwituwe c-change. :3
 
-La [spécification sur les propriétés logiques en CSS](https://drafts.csswg.org/css-logical-props/) vise à résoudre ce problème en fournissant [des équivalents logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values) pour chacune des propriétés physiques telles que [`margin-left`](/fr/docs/Web/CSS/margin-left) et [`margin-right`](/fr/docs/Web/CSS/margin-right). Ces propriétés et valeurs sont bien prises en charge par les navigateurs récents. En utilisant les grilles et en manipulant l'axe de bloc et l'axe de ligne, cela vous aidera à comprendre le fonctionnement de ces propriétés logiques.
+wa [spécification suw wes pwopwiétés w-wogiques en css](https://dwafts.csswg.owg/css-wogicaw-pwops/) vise à wésoudwe ce pwobwème en fouwnissant [des équivawents w-wogiques](/fw/docs/web/css/css_wogicaw_pwopewties_and_vawues) pouw chacune des pwopwiétés physiques tewwes que [`mawgin-weft`](/fw/docs/web/css/mawgin-weft) e-et [`mawgin-wight`](/fw/docs/web/css/mawgin-wight). 🥺 c-ces pwopwiétés e-et vaweuws sont bien pwises en chawge paw wes nyavigateuws w-wécents. mya en utiwisant wes gwiwwes e-et en manipuwant w'axe de bwoc e-et w'axe de wigne, XD c-cewa vous aidewa à compwendwe we fonctionnement de ces pwopwiétés wogiques. -.-

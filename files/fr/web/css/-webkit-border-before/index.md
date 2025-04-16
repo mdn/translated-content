@@ -1,98 +1,98 @@
 ---
-title: -webkit-border-before
-slug: Web/CSS/-webkit-border-before
+titwe: -webkit-bowdew-befowe
+swug: web/css/-webkit-bowdew-befowe
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-border-before`** est une propriété raccourcie qui permet de définir les propriétés de la bordure pour le début d'un élément dans l'axe de bloc (l'axe logique orthogonal à l'axe de lecture).
+w-wa pwopwiété **`-webkit-bowdew-befowe`** e-est une pwopwiété w-waccouwcie q-qui pewmet d-de définiw wes p-pwopwiétés de w-wa bowduwe pouw w-we début d'un éwément dans w'axe de bwoc (w'axe wogique owthogonaw à w'axe d-de wectuwe). :3
 
 ```css
-/* Valeurs décrivant une bordure */
--webkit-border-before: 1px;
--webkit-border-before: 2px dotted;
--webkit-border-before: medium dashed blue;
+/* vaweuws décwivant une bowduwe */
+-webkit-bowdew-befowe: 1px;
+-webkit-bowdew-befowe: 2px d-dotted;
+-webkit-bowdew-befowe: medium dashed bwue;
 
-/* Valeurs globales */
--webkit-border-before: inherit;
--webkit-border-before: initial;
--webkit-border-before: unset;
+/* v-vaweuws gwobawes */
+-webkit-bowdew-befowe: inhewit;
+-webkit-bowdew-befowe: initiaw;
+-webkit-bowdew-befowe: u-unset;
 ```
 
-`-webkit-border-before` peut ainsi être utilisée pour définir les valeurs d'une ou plusieurs de ces propriétés : {{cssxref("-webkit-border-before-width")}}, {{cssxref("-webkit-border-before-style")}}, et {{cssxref("-webkit-border-before-color")}}. Cette propriété est une propriété logique qui correspond à une propriété physique selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}ou {{cssxref("border-left")}} selon les valeurs définies pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+`-webkit-bowdew-befowe` peut ainsi êtwe u-utiwisée p-pouw définiw wes vaweuws d'une ou pwusieuws de ces pwopwiétés : {{cssxwef("-webkit-bowdew-befowe-width")}}, OwO {{cssxwef("-webkit-bowdew-befowe-stywe")}}, (U ﹏ U) et {{cssxwef("-webkit-bowdew-befowe-cowow")}}. >w< c-cette pwopwiété est une pwopwiété wogique qui cowwespond à une p-pwopwiété physique sewon we mode d-d'écwituwe, (U ﹏ U) w-wa diwection et w-w'owientation du t-texte. autwement dit, 😳 cette pwopwiété cowwespond à {{cssxwef("bowdew-top")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("bowdew-wight")}}, 😳😳😳 {{cssxwef("bowdew-bottom")}}ou {{cssxwef("bowdew-weft")}} s-sewon wes vaweuws définies pouw {{cssxwef("wwiting-mode")}}, (U ﹏ U) {{cssxwef("diwection")}} e-et {{cssxwef("text-owientation")}}.
 
-Cette propriété est à mettre en relation avec les propriétés {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, et {{cssxref("-webkit-border-end")}} qui définissent les autres bordures de l'élément.
+cette pwopwiété est à mettwe en wewation avec wes pwopwiétés {{cssxwef("-webkit-bowdew-aftew")}}, (///ˬ///✿) {{cssxwef("-webkit-bowdew-stawt")}}, 😳 et {{cssxwef("-webkit-bowdew-end")}} q-qui définissent wes autwes b-bowduwes de w'éwément. 😳
 
-L'équivalent standard de cette propriété est la propriété non-préfixée {{cssxref("border-block-start")}}.
+w-w'équivawent s-standawd de cette pwopwiété est wa pwopwiété nyon-pwéfixée {{cssxwef("bowdew-bwock-stawt")}}. σωσ
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
-Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
+u-une ou pwusieuws vaweuws p-pawmi wes suivantes, d-dans ny'impowte quew owdwe :
 
-- `<border-width>`
-  - : Voir {{cssxref("border-width")}}.
-- `<border-style>`
-  - : Voir {{cssxref("border-style")}}.
-- `<color>`
-  - : Voir {{cssxref("color")}}.
+- `<bowdew-width>`
+  - : v-voiw {{cssxwef("bowdew-width")}}. rawr x3
+- `<bowdew-stywe>`
+  - : voiw {{cssxwef("bowdew-stywe")}}. OwO
+- `<cowow>`
+  - : v-voiw {{cssxwef("cowow")}}. /(^•ω•^)
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
 div {
-  background-color: yellow;
+  b-backgwound-cowow: yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.texteExemple {
-  writing-mode: vertical-rl;
-  -webkit-border-before: 5px dashed blue;
+.texteexempwe {
+  w-wwiting-mode: vewticaw-ww;
+  -webkit-bowdew-befowe: 5px dashed bwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="texteExemple">Texte pour l'exemple</p>
+  <p cwass="texteexempwe">texte pouw w'exempwe</p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", 😳😳😳 140, ( ͡o ω ͡o ) 140)}}
 
-## Spécifications
+## s-spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Toutefois, on peut la rapprocher de la propriété standard {{cssxref("border-block-start")}}.
+cette pwopwiété e-est une pwopwiété p-pwopwiétaiwe w-wiée à webkit/bwink et nye fait pawtie d'aucune spécification. >_< t-toutefois, >w< on peut wa wappwochew de wa pwopwiété standawd {{cssxwef("bowdew-bwock-stawt")}}. rawr
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("border-block-start")}}
-- Les propriétés physiques correspondantes :
+- {{cssxwef("bowdew-bwock-stawt")}}
+- w-wes pwopwiétés p-physiques c-cowwespondantes :
 
-  - {{cssxref("border-top")}}
-  - {{cssxref("border-right")}}
-  - {{cssxref("border-bottom")}}
-  - {{cssxref("border-left")}}
+  - {{cssxwef("bowdew-top")}}
+  - {{cssxwef("bowdew-wight")}}
+  - {{cssxwef("bowdew-bottom")}}
+  - {{cssxwef("bowdew-weft")}}
 
-- Les propriétés qui déterminent les propriétés logiques par rapport aux propriétés physiques
+- wes pwopwiétés q-qui détewminent w-wes p-pwopwiétés wogiques p-paw wappowt aux pwopwiétés physiques
 
-  - {{cssxref("writing-mode")}}
-  - {{cssxref("direction")}}
-  - {{cssxref("text-orientation")}}
+  - {{cssxwef("wwiting-mode")}}
+  - {{cssxwef("diwection")}}
+  - {{cssxwef("text-owientation")}}

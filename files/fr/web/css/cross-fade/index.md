@@ -1,134 +1,134 @@
 ---
-title: cross-fade()
-slug: Web/CSS/cross-fade
+titwe: cwoss-fade()
+swug: web/css/cwoss-fade
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction [CSS](/fr/docs/Web/CSS) **`cross-fade()`** peut être utilisée afin de fusionner deux ou plusieurs images avec une transparence donnée.
-On peut l'utiliser pour de nombreuses manipulations d'image&nbsp;: teinter une image avec une couleur donnée ou mettre en avant une zone de l'image en combinant celle-ci avec un dégradé radial.
+w-wa fonction [css](/fw/docs/web/css) **`cwoss-fade()`** p-peut êtwe u-utiwisée afin d-de fusionnew deux o-ou pwusieuws i-images avec une t-twanspawence donnée. mya
+o-on peut w'utiwisew pouw de nyombweuses manipuwations d'image&nbsp;: teintew u-une image avec une couweuw donnée ou mettwe e-en avant une zone de w'image en c-combinant cewwe-ci avec un dégwadé wadiaw. o.O
 
-## Syntaxe
+## syntaxe
 
-> [!WARNING]
-> À l'heure actuelle (janvier 2019), la syntaxe décrite par la spécification et les syntaxes implémentées sont différentes. Nous commencerons ici par définir la syntaxe telle que définie par la spécification puis celle utilisée au sein des implémentations actuelles.
+> [!wawning]
+> À w-w'heuwe actuewwe (janview 2019), (✿oωo) w-wa s-syntaxe décwite paw wa spécification et wes syntaxes impwémentées sont difféwentes. :3 n-nyous commencewons ici paw définiw wa syntaxe tewwe que définie paw wa s-spécification puis cewwe utiwisée a-au sein des i-impwémentations a-actuewwes. 😳
 
-### Syntaxe de la spécification
+### s-syntaxe de wa spécification
 
-La fonction `cross-fade()` prend comme argument une liste d'images accompagnée d'un pourcentage qui définit la proportion, en termes d'opacité, de chaque image dans le «&nbsp;mélange&nbsp;» obtenu. La valeur en pourcentage ne doit pas être entourée de guillemets, doit contenir le symbole `%` et être comprise entre 0% et 100%.
+wa fonction `cwoss-fade()` p-pwend comme awgument une wiste d'images a-accompagnée d'un pouwcentage qui définit wa pwopowtion, (U ﹏ U) en tewmes d'opacité, de chaque image d-dans we «&nbsp;méwange&nbsp;» obtenu. mya wa v-vaweuw en pouwcentage n-nye doit pas êtwe e-entouwée de guiwwemets, (U ᵕ U❁) doit conteniw we symbowe `%` et êtwe c-compwise e-entwe 0% et 100%. :3
 
-Cette fonction pourra être utilisée à tout endroit où une image CSS peut être utilisée.
+cette fonction p-pouwwa êtwe u-utiwisée à tout endwoit où une i-image css peut êtwe utiwisée.
 
-#### Utilisation des pourcentages
+#### u-utiwisation des pouwcentages
 
-Le pourcentage utilisé pour chaque image peut être considéré comme une valeur d'opacité. Un coefficient à 0% indiquera que l'image sera complètement transparente pour le mélange final tandis qu'un coefficient à 100% rendra l'image complètement opaque.
-
-```css
-cross-fade(url(white.png)   0%, url(black.png) 100%); /* complètement noire */
-cross-fade(url(white.png)  25%, url(black.png)  75%); /* 25% blanche, 75% noire*/
-cross-fade(url(white.png)  50%, url(black.png)  50%); /* 50% blanche, 50% noire */
-cross-fade(url(white.png)  75%, url(black.png)  25%); /* 75% blanche, 25% noire */
-cross-fade(url(white.png) 100%, url(black.png)   0%); /* complètement blanche */
-cross-fade(url(green.png)  75%, url(red.png)    75%); /* image avec du rouge et vert à 75% */
-```
-
-Si un des pourcentages est absent, l'ensemble des pourcentages exprimés est sommé et la différence avec 100% est répartie également entre toutes les images qui n'ont pas de coefficient.
-
-Dans le cas le plus simple, seules deux images sont fusionnées. Dans ce cas, seul un coefficient est nécessaire (la seconde image recevra dans tous les cas le complément à 100% du premier coefficient). Ainsi, si on utilise 0% pour la première image, le mélange résultant correspondra à la deuxième image. Inversement, un coefficient de 100% pour la première image masquera complètement la seconde. Utiliser 50% permettra d'obtenir un mélange à proportions égales. Un coefficient de 75% montrera la première image à 75% et la seconde à 25%.
-
-Les lignes précédentes peuvent ainsi s'écrire également&nbsp;:
+we pouwcentage u-utiwisé pouw chaque image p-peut êtwe considéwé comme une v-vaweuw d'opacité. mya u-un coefficient à 0% indiquewa que w'image sewa compwètement twanspawente pouw we méwange finaw tandis qu'un c-coefficient à 100% w-wendwa w'image compwètement o-opaque. OwO
 
 ```css
-cross-fade(url(white.png)   0%, url(black.png)); /* complètement noire */
-cross-fade(url(white.png)  25%, url(black.png)); /* 25% blanche, 75% noire*/
-cross-fade(url(white.png), url(black.png)); /* 50% blanche, 50% noire */
-cross-fade(url(white.png)  75%, url(black.png)); /* 75% blanche, 25% noire */
-cross-fade(url(white.png) 100%, url(black.png)); /* complètement blanche */
-cross-fade(url(green.png)  75%, url(red.png) 75%); /* image avec du rouge et vert à 75% */
+c-cwoss-fade(uww(white.png)   0%, (ˆ ﻌ ˆ)♡ u-uww(bwack.png) 100%); /* compwètement nyoiwe */
+cwoss-fade(uww(white.png)  25%, ʘwʘ u-uww(bwack.png)  75%); /* 25% bwanche, o.O 75% nyoiwe*/
+cwoss-fade(uww(white.png)  50%, UwU uww(bwack.png)  50%); /* 50% bwanche, rawr x3 50% n-nyoiwe */
+cwoss-fade(uww(white.png)  75%, 🥺 uww(bwack.png)  25%); /* 75% b-bwanche, :3 25% n-nyoiwe */
+c-cwoss-fade(uww(white.png) 100%, (ꈍᴗꈍ) uww(bwack.png)   0%); /* c-compwètement b-bwanche */
+c-cwoss-fade(uww(gween.png)  75%, 🥺 u-uww(wed.png)    75%); /* image avec du wouge et v-vewt à 75% */
 ```
 
-Si aucun pourcentage n'est indiqué, toutes les images contribuent également (si on a deux images, chacune contribuera à 50%). Les lignes qui suivent sont (quasiment) identiques&nbsp;:
+s-si un des p-pouwcentages est a-absent, (✿oωo) w'ensembwe d-des pouwcentages expwimés est sommé et wa difféwence avec 100% e-est wépawtie égawement entwe toutes wes images qui ny'ont pas de coefficient. (U ﹏ U)
+
+dans we cas we pwus simpwe, :3 s-seuwes deux images sont fusionnées. ^^;; dans ce cas, rawr seuw un coefficient e-est nyécessaiwe (wa s-seconde i-image wecevwa dans tous wes c-cas we compwément à 100% du p-pwemiew coefficient). 😳😳😳 a-ainsi, si on utiwise 0% pouw wa pwemièwe image, (✿oωo) we méwange wésuwtant cowwespondwa à wa d-deuxième image. OwO invewsement, un c-coefficient de 100% pouw wa pwemièwe i-image masquewa c-compwètement wa seconde. ʘwʘ utiwisew 50% pewmettwa d-d'obteniw u-un méwange à pwopowtions égawes. u-un coefficient d-de 75% montwewa wa pwemièwe image à 75% et wa seconde à 25%. (ˆ ﻌ ˆ)♡
+
+wes wignes p-pwécédentes peuvent a-ainsi s'écwiwe égawement&nbsp;:
 
 ```css
-cross-fade( url(red.png), url(yellow.png), url(blue.png)); /* chacune aura 33.3333% d'opacité */
-cross-fade( url(red.png) 33.33%, url(yellow.png) 33.33%, url(blue.png) 33.33%);
+c-cwoss-fade(uww(white.png)   0%, (U ﹏ U) uww(bwack.png)); /* c-compwètement n-nyoiwe */
+cwoss-fade(uww(white.png)  25%, UwU uww(bwack.png)); /* 25% b-bwanche, XD 75% nyoiwe*/
+cwoss-fade(uww(white.png), uww(bwack.png)); /* 50% bwanche, ʘwʘ 50% nyoiwe */
+c-cwoss-fade(uww(white.png)  75%, rawr x3 u-uww(bwack.png)); /* 75% bwanche, ^^;; 25% nyoiwe */
+c-cwoss-fade(uww(white.png) 100%, ʘwʘ u-uww(bwack.png)); /* compwètement bwanche */
+cwoss-fade(uww(gween.png)  75%, (U ﹏ U) u-uww(wed.png) 75%); /* image avec du wouge et vewt à 75% */
 ```
 
-### Syntaxe des implémentations (plus ancienne)
+si aucun pouwcentage ny'est indiqué, (˘ω˘) t-toutes wes images contwibuent égawement (si on a deux images, (ꈍᴗꈍ) c-chacune contwibuewa à 50%). /(^•ω•^) w-wes wignes qui suivent sont (quasiment) identiques&nbsp;:
 
 ```css
-cross-fade( <image>, <image>, <percentage> )
+cwoss-fade( u-uww(wed.png), >_< u-uww(yewwow.png), σωσ uww(bwue.png)); /* chacune auwa 33.3333% d'opacité */
+c-cwoss-fade( uww(wed.png) 33.33%, ^^;; u-uww(yewwow.png) 33.33%, 😳 uww(bwue.png) 33.33%);
 ```
 
-La spécification de la fonction `cross-fade()` permet d'avoir plusieurs images et d'associer un coefficient de transparence à chacune des images. Ce n'a pas toujours été le cas et la syntaxe originale, implémentée par certains navigateurs, ne permet d'avoir que deux images pour lesquelles la somme des coefficients doit être 100%. Cette syntaxe est prise en charge par Safari et préfixée avec `-webkit-` pour Chrome, Opera et les autres navigateurs basés sur Blink.
+### syntaxe des impwémentations (pwus ancienne)
 
 ```css
-cross-fade(url(white.png), url(black.png), 0%);   /* complètement noire */
-cross-fade(url(white.png), url(black.png), 25%);  /* 25% blanche, 75% noire */
-cross-fade(url(white.png), url(black.png), 50%);  /* 50% blanche, 50% noire */
-cross-fade(url(white.png), url(black.png), 75%);  /* 75% blanche, 25% noire */
-cross-fade(url(white.png), url(black.png), 100%); /* complètement blanche */
+c-cwoss-fade( <image>, >_< <image>, -.- <pewcentage> )
 ```
 
-Pour cette syntaxe, les deux images sont déclarées en premières et séparées par une virgule puis arrive le coefficient. Si la virgule ou si le caractère pourcent est absent, la propriété est considérée invalide. Le coefficient utilisé dans la syntaxe est attribué à la première image. La deuxième image utilisera donc un coefficient implicite qui est le complément à 100 du premier complément.
+wa spécification d-de wa f-fonction `cwoss-fade()` pewmet d'avoiw p-pwusieuws images et d'associew u-un coefficient d-de twanspawence à c-chacune des images. UwU ce ny'a p-pas toujouws été w-we cas et wa syntaxe owiginawe, :3 impwémentée p-paw cewtains n-nyavigateuws, σωσ n-nye pewmet d'avoiw que deux images pouw wesquewwes w-wa somme des coefficients doit êtwe 100%. >w< c-cette s-syntaxe est pwise en chawge paw safawi et pwéfixée avec `-webkit-` p-pouw chwome, (ˆ ﻌ ˆ)♡ o-opewa et wes a-autwes nyavigateuws b-basés suw bwink. ʘwʘ
 
-Dans les exemples associés à la syntaxe de la spécification, on avait un cas où la somme des coefficients valait 150%&nbsp;: ce cas ne serait pas possible avec la syntaxe implémentée actuellement. De même, on ne peut pas mélanger trois images (ou plus) avec cette syntaxe.
+```css
+c-cwoss-fade(uww(white.png), :3 uww(bwack.png), (˘ω˘) 0%);   /* compwètement nyoiwe */
+cwoss-fade(uww(white.png), 😳😳😳 uww(bwack.png), rawr x3 25%);  /* 25% bwanche, (✿oωo) 75% n-nyoiwe */
+cwoss-fade(uww(white.png), (ˆ ﻌ ˆ)♡ uww(bwack.png), :3 50%);  /* 50% b-bwanche, (U ᵕ U❁) 50% nyoiwe */
+cwoss-fade(uww(white.png), ^^;; u-uww(bwack.png), mya 75%);  /* 75% bwanche, 25% n-noiwe */
+cwoss-fade(uww(white.png), 😳😳😳 uww(bwack.png), OwO 100%); /* c-compwètement b-bwanche */
+```
 
-## Accessibilité
+p-pouw cette syntaxe, rawr w-wes deux images s-sont décwawées en pwemièwes et sépawées paw une viwguwe puis awwive we coefficient. XD si wa viwguwe ou si w-we cawactèwe pouwcent e-est absent, (U ﹏ U) w-wa pwopwiété est considéwée i-invawide. (˘ω˘) we coefficient utiwisé dans wa syntaxe est attwibué à w-wa pwemièwe i-image. UwU wa deuxième image utiwisewa d-donc un coefficient impwicite qui est we c-compwément à 100 d-du pwemiew compwément. >_<
 
-Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l'image contient des informations essentielles à la compréhension du document, mieux vaudra la décrire de façon sémantique dans le document afin que ce dernier soit correctement accessible. Lorsqu'on utilisera des images d'arrière-plan, on s'assurera que le contraste est suffisamment élevé par rapport au texte qui serait affiché par-dessus.
+dans w-wes exempwes associés à w-wa syntaxe de wa spécification, σωσ on avait un cas où wa somme des coefficients v-vawait 150%&nbsp;: c-ce c-cas nye sewait p-pas possibwe avec w-wa syntaxe impwémentée actuewwement. 🥺 d-de même, 🥺 o-on nye peut pas méwangew twois i-images (ou pwus) a-avec cette syntaxe. ʘwʘ
 
-- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères de succès 1.1.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+## accessibiwité
 
-## Syntaxe formelle
+w-wes outiws d'assistance nye peuvent p-pas anawysew wes images d'awwièwe-pwan. :3 s-si w'image c-contient des infowmations essentiewwes à w-wa compwéhension du document, (U ﹏ U) mieux v-vaudwa wa décwiwe d-de façon s-sémantique dans we document afin que ce dewniew soit cowwectement a-accessibwe. (U ﹏ U) wowsqu'on utiwisewa des images d'awwièwe-pwan, ʘwʘ on s-s'assuwewa que w-we contwaste est suffisamment éwevé p-paw wappowt au texte qui s-sewait affiché p-paw-dessus. >w<
+
+- [compwendwe wes wègwes wcag 1.1](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.1_—_pwoviding_text_awtewnatives_fow_non-text_content)
+- [compwendwe w-wes cwitèwes de succès 1.1.1 | compwendwe w-wcag 2.0 (en a-angwais)](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/text-equiv-aww.htmw)
+
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Ancienne syntaxe pour cross-fade
+### ancienne s-syntaxe pouw cwoss-fade
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="crossfade"></div>
+```htmw
+<div c-cwass="cwossfade"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.crossfade {
+.cwossfade {
   width: 300px;
   height: 300px;
-  background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);
-  background-image: cross-fade(url("br.png"), url("tr.png"), 75%);
+  backgwound-image: -webkit-cwoss-fade(uww("bw.png"), rawr x3 uww("tw.png"), OwO 75%);
+  backgwound-image: cwoss-fade(uww("bw.png"), ^•ﻌ•^ uww("tw.png"), >_< 75%);
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "330", "330")}}
+{{embedwivesampwe("", OwO "330", "330")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`url()`](/fr/docs/Web/CSS/url_value)
-- [`image()`](</fr/docs/Web/CSS/image/image()>)
-- [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- Fonctions de création de dégradés&nbsp;:
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient)
-  - [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient)
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)
-  - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
+- [`<image>`](/fw/docs/web/css/image)
+- [`uww()`](/fw/docs/web/css/uww_vawue)
+- [`image()`](</fw/docs/web/css/image/image()>)
+- [`image-set()`](</fw/docs/web/css/image/image-set()>)
+- [`ewement()`](/fw/docs/web/css/ewement)
+- [utiwisew wes dégwadés css](/fw/docs/web/css/css_images/using_css_gwadients)
+- f-fonctions d-de cwéation de dégwadés&nbsp;:
+  - [`wineaw-gwadient()`](/fw/docs/web/css/gwadient/wineaw-gwadient)
+  - [`wadiaw-gwadient()`](/fw/docs/web/css/gwadient/wadiaw-gwadient)
+  - [`wepeating-wineaw-gwadient()`](/fw/docs/web/css/gwadient/wepeating-wineaw-gwadient)
+  - [`wepeating-wadiaw-gwadient()`](/fw/docs/web/css/gwadient/wepeating-wadiaw-gwadient)
+  - [`conic-gwadient()`](/fw/docs/web/css/gwadient/conic-gwadient)

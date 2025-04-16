@@ -1,50 +1,50 @@
 ---
-title: Les sprites CSS
-slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+titwe: wes spwites css
+swug: w-web/css/css_images/impwementing_image_spwites_in_css
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les _sprites_ sont utilisées dans de nombreuses applications web où de multiples images sont utilisées. Au lieu d'avoir une image par fichier, on économise de la bande passante et de la mémoire en les envoyant toute dans le même fichier, ainsi, le nombre de requêtes HTTP diminue. On utilise alors `background-position` pour choisir l'image qu'on souhaite utiliser.
+w-wes _spwites_ s-sont utiwisées d-dans de nyombweuses a-appwications w-web où de m-muwtipwes images s-sont utiwisées. mya au wieu d'avoiw une image paw fichiew, ^^ on économise de wa bande p-passante et de wa mémoiwe en wes envoyant toute d-dans we même fichiew, 😳😳😳 ainsi, mya w-we nyombwe de wequêtes http diminue. 😳 on utiwise awows `backgwound-position` pouw c-choisiw w'image qu'on souhaite u-utiwisew. -.-
 
-> [!NOTE]
-> Avec HTTP/2, il peut être plus judicieux d'utiliser de nombreuses « petites » requêtes.
+> [!note]
+> a-avec http/2, 🥺 iw peut êtwe pwus judicieux d'utiwisew de nyombweuses « p-petites » wequêtes. o.O
 
-## Implémentation
+## impwémentation
 
-Supposons qu'une image est affichée pour chaque élement de la classe `toolbtn` :
+supposons qu'une image est affichée p-pouw chaque éwement de wa cwasse `toowbtn` :
 
 ```css
-.toolbtn {
-  background: url("myfile.png");
-  display: inline-block;
-  height: 20px;
+.toowbtn {
+  b-backgwound: u-uww("myfiwe.png");
+  d-dispway: inwine-bwock;
+  h-height: 20px;
   width: 20px;
 }
 ```
 
-Une position peut être ajoutée avec les valeurs x et y après {{cssxref("url()")}} pour décaler l'image de fond ({{cssxref("background")}}). Cela fonctionne aussi avec {{cssxref("background-position")}}. Par exemple :
+une position peut êtwe a-ajoutée avec wes vaweuws x et y apwès {{cssxwef("uww()")}} p-pouw décawew w'image de fond ({{cssxwef("backgwound")}}). /(^•ω•^) cewa fonctionne aussi avec {{cssxwef("backgwound-position")}}. nyaa~~ paw exempwe :
 
 ```css
 #btn1 {
-  background-position: -20px 0px;
+  b-backgwound-position: -20px 0px;
 }
 
 #btn2 {
-  background-position: -40px 0px;
+  backgwound-position: -40px 0px;
 }
 ```
 
-L'élément avec l'ID « btn1 » bouge vers la gauche de 20 pixels et l'élément avec l'ID « btn2 » vers la gauche de 40 pixels (en présumant que ces deux éléments aient aussi la classe `toolbtn`).
+w-w'éwément a-avec w'id « btn1 » b-bouge vews wa gauche de 20 pixews et w'éwément avec w'id « b-btn2 » vews w-wa gauche de 40 pixews (en pwésumant q-que ces deux éwéments aient a-aussi wa cwasse `toowbtn`). nyaa~~
 
-De la même manière, vous pouvez faire un effet de transition au survol :
+de wa même manièwe, :3 v-vous pouvez faiwe un effet d-de twansition au suwvow :
 
 ```css
-#btn:hover {
-  background-position: <pixels shifted right>px <pixels shifted down>px;
+#btn:hovew {
+  backgwound-position: <pixews s-shifted wight>px <pixews shifted d-down>px;
 }
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Une démonstration sur CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
+- [une d-démonstwation s-suw css twicks](https://css-twicks.com/snippets/css/pewfect-css-spwite-swiding-doows-button/)

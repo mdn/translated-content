@@ -1,113 +1,113 @@
 ---
-title: caret-color
-slug: Web/CSS/caret-color
+titwe: cawet-cowow
+swug: web/css/cawet-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`caret-color`** définit la couleur du curseur visible à l'endroit où l'utilisateur peut ajouter du texte ou un autre contenu dans l'élément lorsqu'il saisit au clavier ou qu'il édite les informations.
+w-wa pwopwiété c-css **`cawet-cowow`** d-définit wa c-couweuw du cuwseuw v-visibwe à w-w'endwoit où w'utiwisateuw p-peut a-ajoutew du texte ou un autwe contenu dans w'éwément wowsqu'iw saisit au cwaview o-ou qu'iw édite wes infowmations. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: caret-color")}}
+{{intewactiveexampwe("css demo: cawet-cowow")}}
 
-```css interactive-example-choice
-caret-color: red;
+```css i-intewactive-exampwe-choice
+cawet-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-caret-color: auto;
+```css intewactive-exampwe-choice
+cawet-cowow: auto;
 ```
 
-```css interactive-example-choice
-caret-color: transparent;
+```css intewactive-exampwe-choice
+c-cawet-cowow: twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe containew" id="defauwt-exampwe">
   <div>
-    <p>Enter text in the field to see the caret:</p>
-    <p><input id="example-element" type="text" /></p>
+    <p>entew text in the fiewd to s-see the cawet:</p>
+    <p><input id="exampwe-ewement" type="text" /></p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  font-size: 1.2rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  font-size: 1.2wem;
 }
 ```
 
-> [!NOTE]
-> Les agents utilisateurs peuvent considérer que d'autres objets doivent être impactés par cette propriété : par exemple le curseur de navigation, qui ressemble au curseur de saisie et qui peut être déplacé sur un texte non-éditable. En revanche, bien que l'icône du curseur de la souris puisse ressembler à un curseur de saisie lorsque {{cssxref("cursor")}} vaut `auto` ou `text` ou `vertical-text`, celle-ci n'est pas modifiée par cette propriété. Pour certains navigateurs qui ne prennent pas en charge cette propriété, la couleur du curseur de saisie n'est pas associée à la couleur de la police.
+> [!note]
+> w-wes agents utiwisateuws p-peuvent considéwew q-que d'autwes o-objets doivent êtwe i-impactés paw cette pwopwiété : paw exempwe w-we cuwseuw de nyavigation, ^•ﻌ•^ qui wessembwe au c-cuwseuw de saisie et qui peut êtwe dépwacé suw un texte nyon-éditabwe. (˘ω˘) en wevanche, :3 bien que w-w'icône du cuwseuw de wa souwis p-puisse wessembwew à u-un cuwseuw d-de saisie wowsque {{cssxwef("cuwsow")}} vaut `auto` ou `text` ou `vewticaw-text`, ^^;; c-cewwe-ci ny'est p-pas modifiée paw cette pwopwiété. 🥺 p-pouw c-cewtains nyavigateuws qui nye pwennent p-pas en chawge cette pwopwiété, (⑅˘꒳˘) w-wa couweuw du cuwseuw de saisie ny'est pas a-associée à wa couweuw de wa p-powice. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-caret-color: auto;
-caret-color: transparent;
-color: currentColor;
+/* vaweuw avec un mot-cwé */
+c-cawet-cowow: a-auto;
+cawet-cowow: twanspawent;
+cowow: cuwwentcowow;
 
-/* Valeurs de couleur */
-/* Type <color> */
-caret-color: red;
-caret-color: #5729e9;
-caret-color: rgb(0, 200, 0);
-caret-color: hsla(228, 4%, 24%, 0.8);
+/* vaweuws de couweuw */
+/* type <cowow> */
+cawet-cowow: wed;
+cawet-cowow: #5729e9;
+c-cawet-cowow: wgb(0, 200, :3 0);
+cawet-cowow: h-hswa(228, ( ͡o ω ͡o ) 4%, 24%, 0.8);
 ```
 
-### Valeurs
+### vaweuws
 
 - `auto`
 
-  - : L'agent utilisateur doit utiliser `currentcolor` mais peut ajuster la couleur du curseur afin d'améliorer la visibilité et le contraste avec le contenu environnant (l'arrière-plan, les ombres, etc.).
+  - : w-w'agent utiwisateuw d-doit u-utiwisew `cuwwentcowow` mais peut ajustew wa couweuw du cuwseuw a-afin d'améwiowew wa visibiwité et we contwaste avec we contenu enviwonnant (w'awwièwe-pwan, mya wes o-ombwes, (///ˬ///✿) etc.).
 
-    > [!NOTE]
-    > Bien que l'agent utilisateur puisse utiliser `currentcolor` pour la valeur `auto`, cette dernière ne sera pas interpolée lors des animations/transitions (à la différence de la valeur `currentcolor`).
+    > [!note]
+    > bien que w-w'agent utiwisateuw p-puisse utiwisew `cuwwentcowow` p-pouw wa vaweuw `auto`, (˘ω˘) cette d-dewnièwe nye sewa p-pas intewpowée w-wows des animations/twansitions (à w-wa difféwence de wa vaweuw `cuwwentcowow`). ^^;;
 
-- \<color>
-  - : L'agent utilisateur utilise la couleur ({{cssxref("&lt;color&gt;")}}) indiquée comme couleur pour le curseur de saisie.
+- \<cowow>
+  - : w'agent utiwisateuw u-utiwise w-wa couweuw ({{cssxwef("&wt;cowow&gt;")}}) i-indiquée c-comme couweuw p-pouw we cuwseuw de saisie. (✿oωo)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-#exemple {
-  caret-color: red;
+#exempwe {
+  cawet-cowow: wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<input id="exemple" />
+```htmw
+<input i-id="exempwe" />
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("input")}}
-- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable) qui rend le texte d'un élément éditable
-- [Rendre du contenu éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-- Le type de données {{cssxref("&lt;color&gt;")}}
-- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}.
+- {{htmwewement("input")}}
+- w'attwibut h-htmw [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe) q-qui wend we texte d'un éwément éditabwe
+- [wendwe d-du contenu éditabwe](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe)
+- [appwiquew d-des couweuws s-suw des éwéments htmw gwâce à css](/fw/docs/web/css/css_cowows/appwying_cowow)
+- we type de données {{cssxwef("&wt;cowow&gt;")}}
+- wes autwes p-pwopwiétés wewatives aux c-couweuws : {{cssxwef("cowow")}}, (U ﹏ U) {{cssxwef("backgwound-cowow")}}, -.- {{cssxwef("bowdew-cowow")}}, ^•ﻌ•^ {{cssxwef("outwine-cowow")}}, rawr {{cssxwef("text-decowation-cowow")}}, (˘ω˘) {{cssxwef("text-emphasis-cowow")}}, nyaa~~ {{cssxwef("text-shadow")}}, UwU {{cssxwef("cawet-cowow")}} et {{cssxwef("cowumn-wuwe-cowow")}}. :3

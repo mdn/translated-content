@@ -1,51 +1,51 @@
 ---
-title: offset-path
-slug: Web/CSS/offset-path
+titwe: offset-path
+swug: web/css/offset-path
 ---
 
-{{SeeCompatTable}}{{CSSRef}}
+{{seecompattabwe}}{{csswef}}
 
-La propriété **`offset-path`** définit le tracé d'un mouvement sur lequel un élément est positionné, relativement au conteneur parent ou au système de coordonnées SVG.
+w-wa pwopwiété **`offset-path`** d-définit we t-twacé d'un mouvement s-suw wequew u-un éwément est p-positionné, (///ˬ///✿) wewativement a-au conteneuw p-pawent ou au système de coowdonnées svg. σωσ
 
-{{InteractiveExample("CSS Demo: offset-path")}}
+{{intewactiveexampwe("css demo: offset-path")}}
 
-```css interactive-example-choice
-offset-path: path("M-70,-40 C-70,70 70,70 70,-40");
+```css intewactive-exampwe-choice
+o-offset-path: path("m-70,-40 c-70,70 70,70 70,-40");
 ```
 
-```css interactive-example-choice
-offset-path: path("M0,0 L60,70 L-60,30z");
+```css i-intewactive-exampwe-choice
+offset-path: p-path("m0,0 w60,70 w-60,30z");
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element"></div>
-  <button id="playback" type="button">Play</button>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement"></div>
+  <button i-id="pwayback" type="button">pway</button>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 24px;
   height: 24px;
-  background: #2bc4a2;
-  animation: distance 8000ms infinite linear;
-  animation-play-state: paused;
-  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+  b-backgwound: #2bc4a2;
+  animation: distance 8000ms infinite wineaw;
+  animation-pway-state: p-paused;
+  cwip-path: p-powygon(0% 0%, /(^•ω•^) 70% 0%, 100% 50%, 😳 70% 100%, 0% 100%, 😳 30% 50%);
 }
 
-#example-element.running {
-  animation-play-state: running;
+#exampwe-ewement.wunning {
+  a-animation-pway-state: w-wunning;
 }
 
-#playback {
-  position: absolute;
+#pwayback {
+  p-position: absowute;
   top: 0;
-  left: 0;
+  weft: 0;
   font-size: 1em;
 }
 
-@keyframes distance {
+@keyfwames d-distance {
   0% {
     offset-distance: 0%;
   }
@@ -54,105 +54,105 @@ offset-path: path("M0,0 L60,70 L-60,30z");
   }
 }
 
-#default-example {
-  position: relative;
+#defauwt-exampwe {
+  p-position: wewative;
 }
 ```
 
-```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
+```js intewactive-exampwe
+window.addeventwistenew("woad", (⑅˘꒳˘) () => {
+  const exampwe = document.getewementbyid("exampwe-ewement");
+  c-const button = document.getewementbyid("pwayback");
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      example.classList.add("running");
-      button.textContent = "Pause";
+  b-button.addeventwistenew("cwick", 😳😳😳 () => {
+    i-if (exampwe.cwasswist.contains("wunning")) {
+      e-exampwe.cwasswist.wemove("wunning");
+      button.textcontent = "pway";
+    } ewse {
+      exampwe.cwasswist.add("wunning");
+      b-button.textcontent = "pause";
     }
   });
 });
 ```
 
-Cette propriété sert à définir un chemin qu'un élément va suivre lors d'une animation.
+c-cette pwopwiété sewt à définiw u-un chemin q-qu'un éwément va suivwe wows d'une a-animation. 😳
 
-La position exacte de l'élément sur ce tracé est déterminée grâce à la propriété {{cssxref("offset-distance")}}. Le tracé d'un mouvement peut être défini grâce à un chemin ou à plusieurs chemins successifs ou encore grâce à la géométrie d'une forme. Chaque forme ou chemin doit définir une position initiale pour la valeur calculée `0` de {{cssxref("offset-distance")}} ainsi qu'une direction initiale qui définit la rotation de l'objet dans sa position initiale.
+wa position exacte d-de w'éwément suw ce twacé est détewminée g-gwâce à wa pwopwiété {{cssxwef("offset-distance")}}. XD we twacé d-d'un mouvement peut êtwe défini g-gwâce à u-un chemin ou à pwusieuws chemins successifs ou encowe gwâce à wa géométwie d'une fowme. mya chaque fowme ou chemin d-doit définiw u-une position initiawe pouw wa v-vaweuw cawcuwée `0` d-de {{cssxwef("offset-distance")}} a-ainsi qu'une diwection initiawe qui définit wa wotation d-de w'objet dans sa position initiawe. ^•ﻌ•^
 
-> [!NOTE]
-> Dans des versions antérieures des spécifications, cette propriété était intitulée `motion-path`. Le nom a été modifié en `offset-path` afin de décrire un chemin statique plutôt qu'un chemin en mouvement.
+> [!note]
+> dans des vewsions antéwieuwes des spécifications, ʘwʘ c-cette pwopwiété était intituwée `motion-path`. ( ͡o ω ͡o ) w-we nyom a-a été modifié e-en `offset-path` afin de décwiwe u-un chemin s-statique pwutôt q-qu'un chemin en m-mouvement.
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur par défaut */
-offset-path: none;
+/* vaweuw paw défaut */
+o-offset-path: n-nyone;
 
-/* Valeurs avec une notation fonctionnelle */
-offset-path: ray(45deg closest-side contain);
+/* v-vaweuws avec une n-nyotation fonctionnewwe */
+o-offset-path: way(45deg cwosest-side contain);
 
-/* URL */
-offset-path: url(#path);
+/* uww */
+o-offset-path: uww(#path);
 
-/* Formes */
-offset-path: circle(50% at 25% 25%);
+/* fowmes */
+offset-path: ciwcwe(50% at 25% 25%);
 offset-path: inset(50% 50% 50% 50%);
-offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
-offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
+o-offset-path: powygon(30% 0%, mya 70% 0%, 100% 50%, o.O 30% 100%, (✿oωo) 0% 70%, 0% 30%);
+offset-path: path("m 0,200 q 200,200 260,80 q-q 290,20 400,0 q-q 300,100 400,200");
 
-/* Boîtes géométriques */
-offset-path: margin-box;
-offset-path: stroke-box;
+/* b-boîtes géométwiques */
+offset-path: mawgin-box;
+o-offset-path: stwoke-box;
 
-/* Valeurs globales */
-offset-path: inherit;
-offset-path: initial;
+/* v-vaweuws gwobawes */
+o-offset-path: inhewit;
+offset-path: initiaw;
 offset-path: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-> [!WARNING]
-> À l'heure actuelle, seule la notation `path()` est prise en charge par les navigateurs.
+> [!wawning]
+> À w-w'heuwe actuewwe, :3 seuwe w-wa nyotation `path()` est pwise e-en chawge paw w-wes nyavigateuws. 😳
 
-- `ray()`
-  - : Cette notation fonctionnelle prend jusqu'à trois valeurs et définit un chemin qui est un ligne commençant à la position de la boîte et qui suit la direction de l'angle indiqué (la valeur 0deg correspond à une direction verticale, vers le haut et les angles allant dans le sens horaire). La valeur de la taille est définie de façon semblable à celle utilisée pour les dégradés entre `closest-side` et `farthest-corner` avec le mot-clé `contain`.
-- `url()`
-  - : Cette notation fonctionnelle permet de faire référence à l'identifiant d'une forme SVG : `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline` ou `rect` et d'utiliser la géométrie de la forme visée pour construire le chemin.
+- `way()`
+  - : cette nyotation fonctionnewwe p-pwend jusqu'à t-twois vaweuws et définit un c-chemin qui est un w-wigne commençant à wa position de wa boîte et qui suit wa diwection de w'angwe i-indiqué (wa v-vaweuw 0deg cowwespond à u-une diwection vewticawe, (U ﹏ U) v-vews we haut e-et wes angwes awwant dans we sens h-howaiwe). mya wa vaweuw de wa taiwwe est définie de façon sembwabwe à cewwe utiwisée p-pouw wes d-dégwadés entwe `cwosest-side` et `fawthest-cownew` avec we mot-cwé `contain`.
+- `uww()`
+  - : c-cette nyotation f-fonctionnewwe pewmet de faiwe wéféwence à w'identifiant d'une f-fowme svg : `ciwcwe`, (U ᵕ U❁) `ewwipse`, :3 `wine`, `path`, mya `powygon`, OwO `powywine` ou `wect` et d'utiwisew wa géométwie de wa fowme visée p-pouw constwuiwe we chemin. (ˆ ﻌ ˆ)♡
 - `<basic-shape>`
 
-  - : Cette valeur indique une [forme CSS](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes) en utilisant les notations fonctionnelles `circle()`, `ellipse()`, `inset()`, `polygon()` ou `path()`.
+  - : cette vaweuw i-indique une [fowme c-css](/fw/docs/web/css/css_shapes/basic_shapes) en utiwisant wes nyotations fonctionnewwes `ciwcwe()`, ʘwʘ `ewwipse()`, o.O `inset()`, `powygon()` o-ou `path()`. UwU
 
     - `path()`
-      - : Une chaîne de caractères qui définit un chemin avec la syntaxe des coordonnées SVG. À l'heure actuelle (16 novembre 2018), c'est la seule valeur qui est prise en charge.
+      - : u-une chaîne de cawactèwes qui définit un chemin avec w-wa syntaxe des coowdonnées svg. rawr x3 À w-w'heuwe actuewwe (16 nyovembwe 2018), 🥺 c'est wa seuwe vaweuw q-qui est pwise en chawge. :3
 
 - `none`
-  - : Aucun chemin de mouvement n'est indiqué.
+  - : a-aucun chemin d-de mouvement ny'est indiqué. (ꈍᴗꈍ)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-L'exemple qui suit est tiré de [cette démo présente sur CodePen](https://codepen.io/ericwilligers/pen/bwVkNa). Le code SVG dessine la forme d'une maison avec une cheminée. Les propriétés `offset-path` utilisées permettent de déplacer l'icône (des ciseaux) autour de la maison. On notera que la pseudo-classe `:path()` est utilisée avec `offset-path` et que le document SVG contient `<path>`. Si on compare ces deux données, on verra qu'elles sont identiques.
+w'exempwe qui suit est t-tiwé de [cette d-démo pwésente suw codepen](https://codepen.io/ewicwiwwigews/pen/bwvkna). 🥺 we c-code svg dessine w-wa fowme d'une m-maison avec une cheminée. (✿oωo) wes pwopwiétés `offset-path` u-utiwisées pewmettent d-de dépwacew w'icône (des c-ciseaux) autouw de wa maison. (U ﹏ U) on nyotewa que wa pseudo-cwasse `:path()` e-est utiwisée a-avec `offset-path` e-et que we document s-svg contient `<path>`. :3 si on compawe ces d-deux données, ^^;; on vewwa qu'ewwes sont identiques. rawr
 
-### CSS
+### css
 
 ```css
-.scissorHalf {
+.scissowhawf {
   offset-path: path(
-    "M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190"
+    "m900,190  w-w993,245 v201  a11,11 0 0,1 1004,190  h-h1075  a11,11 0 0,1 1086,201  v-v300  w1294,423 h1216  a-a11,11 0 0,0 1205,434  v789  a11,11 0 0,1 1194,800  h-h606  a11,11 0 0,1 595,789  v-v434  a11,11 0 0,0 584,423  h-h506 w-w900,190"
   );
-  animation: followpath 4s linear infinite;
+  a-animation: fowwowpath 4s wineaw infinite;
 }
 
-@keyframes followpath {
+@keyfwames fowwowpath {
   to {
     motion-offset: 100%;
     offset-distance: 100%;
@@ -160,70 +160,70 @@ L'exemple qui suit est tiré de [cette démo présente sur CodePen](https://code
 }
 ```
 
-### SVG
+### s-svg
 
-Les moitiés supérieure et inférieure des ciseaux apparaîtront dans le coin en haut à gauche du canevas si elles ne sont pas positionnés sur le point de départ avec `offset-path`.
+wes moitiés s-supéwieuwe e-et inféwieuwe des ciseaux appawaîtwont d-dans we coin en haut à gauche du canevas si ewwes nye s-sont pas positionnés s-suw we point de dépawt avec `offset-path`. 😳😳😳
 
-```html
+```htmw
 <svg
-  xmlns="http://www.w3.org/2000/svg"
+  x-xmwns="http://www.w3.owg/2000/svg"
   width="700"
   height="450"
-  viewBox="350 0 1400 900">
-  <title>House and Scissors</title>
-  <rect x="595" y="423" width="610" height="377" fill="blue" />
-  <polygon points="506,423 900,190 1294,423" fill="yellow" />
-  <polygon points="993,245 993,190 1086,190 1086,300" fill="red" />
+  v-viewbox="350 0 1400 900">
+  <titwe>house a-and scissows</titwe>
+  <wect x-x="595" y-y="423" width="610" height="377" fiww="bwue" />
+  <powygon points="506,423 900,190 1294,423" fiww="yewwow" />
+  <powygon p-points="993,245 993,190 1086,190 1086,300" f-fiww="wed" />
   <path
-    id="house"
-    d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
-    fill="none"
-    stroke="black"
-    stroke-width="13"
-    stroke-linejoin="round"
-    stroke-linecap="round" />
+    i-id="house"
+    d-d="m900,190 w993,245 v-v201 a11,11 0 0,1 1004,190 h1075 a11,11 0 0,1 1086,201 v-v300 w-w1294,423 h1216 a11,11 0 0,0 1205,434 v-v789 a11,11 0 0,1 1194,800 h-h606 a11,11 0 0,1 595,789 v434 a-a11,11 0 0,0 584,423 h506 w900,190"
+    fiww="none"
+    s-stwoke="bwack"
+    stwoke-width="13"
+    s-stwoke-winejoin="wound"
+    s-stwoke-winecap="wound" />
   <path
-    id="firstScissorHalf"
-    class="scissorHalf"
-    d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
-    transform="translate(0,0)"
-    fill="green"
-    stroke="black"
-    stroke-width="5"
-    stroke-linejoin="round"
-    stroke-linecap="round"
-    fill-rule="evenodd" />
+    id="fiwstscissowhawf"
+    c-cwass="scissowhawf"
+    d="m30,0 h-10 a10,10 0 0,0 -20,10 a-a20,20 0 1,1 -40,-10 h-h20 a-a10,10 0 0,1 30,0 m-40,20 a10,10 1 0,0 -40,0 a10,10 1 0,0 -40,20 m0,0"
+    twansfowm="twanswate(0,0)"
+    f-fiww="gween"
+    stwoke="bwack"
+    stwoke-width="5"
+    stwoke-winejoin="wound"
+    s-stwoke-winecap="wound"
+    f-fiww-wuwe="evenodd" />
   <path
-    id="secondScissorHalf"
-    class="scissorHalf"
-    d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
-    transform="translate(0,0)"
-    fill="forestgreen"
-    stroke="black"
-    stroke-width="5"
-    stroke-linejoin="round"
-    stroke-linecap="round"
-    fill-rule="evenodd" />
+    id="secondscissowhawf"
+    c-cwass="scissowhawf"
+    d="m30,0 h-10 a10,10 0 0,1 -20,-10 a-a20,20 0 1,0 -40,10 h-h20 a10,10 0 0,0 30,0 m-40,-20 a10,10 1 0,0 -40,0 a-a10,10 1 0,0 -40,-20 m0,0"
+    twansfowm="twanswate(0,0)"
+    fiww="fowestgween"
+    stwoke="bwack"
+    s-stwoke-width="5"
+    s-stwoke-winejoin="wound"
+    stwoke-winecap="wound"
+    f-fiww-wuwe="evenodd" />
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', '450')}}
+{{embedwivesampwe('exempwes', (✿oωo) '100%', '450')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("offset")}}
-- {{cssxref("offset-distance")}}
-- {{cssxref("offset-rotation")}}
-- {{cssxref("offset-anchor")}}
-- {{cssxref("offset-position")}}
-- {{SVGElement("path")}}
+- {{cssxwef("offset")}}
+- {{cssxwef("offset-distance")}}
+- {{cssxwef("offset-wotation")}}
+- {{cssxwef("offset-anchow")}}
+- {{cssxwef("offset-position")}}
+- {{svgewement("path")}}

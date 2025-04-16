@@ -1,73 +1,73 @@
 ---
-title: line-gap-override
-slug: Web/CSS/@font-face/line-gap-override
+titwe: wine-gap-ovewwide
+swug: w-web/css/@font-face/wine-gap-ovewwide
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur CSS **`line-gap-override`** définit la mesure de l'écart de lignes de la police. La mesure de l'écart de lignes peut être l'écart recommandé par la police ou encore un écart externe.
+w-we descwipteuw c-css **`wine-gap-ovewwide`** d-définit wa mesuwe d-de w'écawt d-de wignes de wa p-powice. (U ﹏ U) wa mesuwe d-de w'écawt de wignes peut êtwe w'écawt wecommandé paw wa powice ou encowe u-un écawt extewne. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-line-gap-override: normal;
-line-gap-override: 90%;
+wine-gap-ovewwide: n-nyowmaw;
+wine-gap-ovewwide: 90%;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : La valeur par défaut. Lorsqu'elle est utilisée, la valeur de la mesure est obtenue à partir du fichier de police.
-- `<percentage>`
-  - : Une valeur exprimée en pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui traduit l'augmentation ou la réduction par rapport à la taille de la police ({{cssxref("font-size")}}).
+- `nowmaw`
+  - : wa vaweuw paw défaut. òωó wowsqu'ewwe est utiwisée, ʘwʘ w-wa vaweuw de wa mesuwe est obtenue à p-pawtiw du f-fichiew de powice. /(^•ω•^)
+- `<pewcentage>`
+  - : une vaweuw expwimée en pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}}) qui twaduit w-w'augmentation ou wa wéduction paw wappowt à wa taiwwe de wa powice ({{cssxwef("font-size")}}). ʘwʘ
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Surcharge de la mesure d'une police de recours
+### s-suwchawge de w-wa mesuwe d'une powice de wecouws
 
-La propriété `line-gap-override` peut aider à la surcharge des mesures d'une police de secours pour qu'elles correspondent mieux à celles de la police principale.
+wa pwopwiété `wine-gap-ovewwide` p-peut aidew à wa suwchawge des mesuwes d'une p-powice de secouws pouw qu'ewwes cowwespondent mieux à cewwes de wa powice pwincipawe. σωσ
 
 ```css
 @font-face {
-  font-family: web-font;
-  src: url("https://example.com/font.woff");
+  font-famiwy: web-font;
+  s-swc: uww("https://exampwe.com/font.woff");
 }
 
 @font-face {
-  font-family: local-font;
-  src: local(Local Font);
-  line-gap-override: 125%;
+  font-famiwy: w-wocaw-font;
+  s-swc: wocaw(wocaw f-font);
+  wine-gap-ovewwide: 125%;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("@font-face/descent-override", "descent-override")}}
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
-- {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/size-adjust", "size-adjust")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxwef("@font-face/descent-ovewwide", OwO "descent-ovewwide")}}
+- {{cssxwef("@font-face/font-dispway", 😳😳😳 "font-dispway")}}
+- {{cssxwef("@font-face/font-famiwy", 😳😳😳 "font-famiwy")}}
+- {{cssxwef("@font-face/font-weight", o.O "font-weight")}}
+- {{cssxwef("@font-face/font-stywe", ( ͡o ω ͡o ) "font-stywe")}}
+- {{cssxwef("@font-face/font-stwetch", (U ﹏ U) "font-stwetch")}}
+- {{cssxwef("@font-face/font-vawiant", (///ˬ///✿) "font-vawiant")}}
+- {{cssxwef("font-featuwe-settings", >w< "font-featuwe-settings")}}
+- {{cssxwef("@font-face/font-vawiation-settings", rawr "font-vawiation-settings")}}
+- {{cssxwef("@font-face/wine-gap-ovewwide", mya "wine-gap-ovewwide")}}
+- {{cssxwef("@font-face/swc", ^^ "swc")}}
+- {{cssxwef("@font-face/size-adjust", 😳😳😳 "size-adjust")}}
+- {{cssxwef("@font-face/unicode-wange", mya "unicode-wange d-descwiptow")}}

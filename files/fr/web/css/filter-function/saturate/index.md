@@ -1,79 +1,79 @@
 ---
-title: saturate()
-slug: Web/CSS/filter-function/saturate
+titwe: satuwate()
+swug: web/css/fiwtew-function/satuwate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`saturate()`** permet d'accentuer ou de réduire la saturation d'une image. La valeur obtenue par cette fonction est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+w-wa f-fonction css **`satuwate()`** p-pewmet d-d'accentuew o-ou de wéduiwe w-wa satuwation d'une i-image. mya wa vaweuw o-obtenue paw cette fonction est une vaweuw de type [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function).
 
-{{InteractiveExample("CSS Demo: saturate()")}}
+{{intewactiveexampwe("css demo: s-satuwate()")}}
 
-```css interactive-example-choice
-filter: saturate(1);
+```css intewactive-exampwe-choice
+fiwtew: satuwate(1);
 ```
 
-```css interactive-example-choice
-filter: saturate(4);
+```css i-intewactive-exampwe-choice
+fiwtew: satuwate(4);
 ```
 
-```css interactive-example-choice
-filter: saturate(50%);
+```css i-intewactive-exampwe-choice
+fiwtew: satuwate(50%);
 ```
 
-```css interactive-example-choice
-filter: saturate(0);
+```css intewactive-exampwe-choice
+f-fiwtew: satuwate(0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-saturate(multiplicateur)
+satuwate(muwtipwicateuw)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `multiplicateur`
-  - : L'intensité de la modification sous la forme d'un nombre ([`<number>`](/fr/docs/Web/CSS/number)) ou d'un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Une valeur inférieure à `100%` réduira la saturation et une valeur supérieure accentuera la saturation. Une valeur de `0%` désaturera complètement l'image alors qu'une valeur de `100%` laissera l'image inchangée. Lors d'une interpolation, la valeur par défaut est `1`.
+- `muwtipwicateuw`
+  - : w'intensité de wa modification s-sous wa fowme d'un nyombwe ([`<numbew>`](/fw/docs/web/css/numbew)) o-ou d'un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). ^^ u-une vaweuw i-inféwieuwe à `100%` w-wéduiwa wa satuwation et une vaweuw supéwieuwe a-accentuewa wa satuwation. 😳😳😳 une vaweuw d-de `0%` désatuwewa compwètement w'image awows qu'une vaweuw de `100%` waissewa w'image inchangée. mya w-wows d'une intewpowation, 😳 wa v-vaweuw paw défaut e-est `1`.
 
-## Exemples
+## e-exempwes
 
-### Exemples de valeurs correctes pour saturate()
+### exempwes de vaweuws cowwectes pouw satuwate()
 
 ```css
-saturate(0);     /* Complètement sous-saturée */
-saturate(.4);    /* Sous-saturée à 40% */
-saturate(100%);  /* Aucun effet */
-saturate(200%);  /* Saturation doublée */
+s-satuwate(0);     /* c-compwètement sous-satuwée */
+s-satuwate(.4);    /* s-sous-satuwée à 40% */
+satuwate(100%);  /* a-aucun effet */
+satuwate(200%);  /* s-satuwation doubwée */
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+- [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function) et wes a-autwes fonctions a-associées
+  - [`bwuw()`](/fw/docs/web/css/fiwtew-function/bwuw)
+  - [`bwightness()`](/fw/docs/web/css/fiwtew-function/bwightness)
+  - [`contwast()`](/fw/docs/web/css/fiwtew-function/contwast)
+  - [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow)
+  - [`gwayscawe()`](/fw/docs/web/css/fiwtew-function/gwayscawe)
+  - [`hue-wotate()`](/fw/docs/web/css/fiwtew-function/hue-wotate)
+  - [`invewt()`](/fw/docs/web/css/fiwtew-function/invewt)
+  - [`opacity()`](/fw/docs/web/css/fiwtew-function/opacity)
+  - [`sepia()`](/fw/docs/web/css/fiwtew-function/sepia)

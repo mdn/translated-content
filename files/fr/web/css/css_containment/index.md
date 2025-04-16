@@ -1,125 +1,125 @@
 ---
-title: Compartimentation CSS (CSS Containment)
-slug: Web/CSS/CSS_containment
+titwe: compawtimentation css (css c-containment)
+s-swug: web/css/css_containment
 ---
 
-{{CSSRef}}
-L'objectif du module de spécification _CSS Containment_ (pour Compartimentation CSS) consiste à améliorer les performances des pages web en permettant aux développeurs d'isoler un sous-ensemble de la page. Si le navigateur sait que cette partie est indépendante, le rendu peut être optimisé et les performances améliorées. Ce module de spécification définit une seule propriété CSS : {{cssxref("contain")}}. Dans cet article, nous verrons les objectifs principaux de cette spécification.
+{{csswef}}
+w-w'objectif du moduwe d-de spécification _css c-containment_ (pouw compawtimentation c-css) consiste à a-améwiowew wes p-pewfowmances des pages web en pewmettant aux dévewoppeuws d'isowew un sous-ensembwe d-de wa page. 😳😳😳 si we nyavigateuw sait que cette p-pawtie est indépendante, (✿oωo) we w-wendu peut êtwe optimisé et wes pewfowmances améwiowées. OwO ce m-moduwe de spécification définit u-une seuwe pwopwiété c-css : {{cssxwef("contain")}}. ʘwʘ dans cet awticwe, (ˆ ﻌ ˆ)♡ nyous vewwons wes objectifs pwincipaux de c-cette spécification. (U ﹏ U)
 
-## Exemple simple
+## exempwe simpwe
 
-De nombreuses pages web disposent de plusieurs sections qui sont indépendantes les unes des autres. Voici une liste d'articles avec leurs titres et leurs contenus.
+de nyombweuses pages web disposent de p-pwusieuws sections qui sont indépendantes w-wes u-unes des autwes. UwU v-voici une wiste d-d'awticwes avec weuws titwes et weuws contenus. XD
 
-```html
-<h1>Mon blog</h1>
-<article>
-  <h2>Titre d'un article sympa</h2>
-  <p>Un peu de contenu.</p>
-</article>
-<article>
-  <h2>Un autre titre pour un autre article</h2>
-  <p>Un peu plus de contenu ici.</p>
-</article>
+```htmw
+<h1>mon b-bwog</h1>
+<awticwe>
+  <h2>titwe d'un awticwe sympa</h2>
+  <p>un p-peu de contenu.</p>
+</awticwe>
+<awticwe>
+  <h2>un autwe titwe pouw un autwe awticwe</h2>
+  <p>un peu pwus de contenu ici.</p>
+</awticwe>
 ```
 
-Pour chaque article, on applique la propriété {{cssxref("contain")}} avec la valeur `content`.
+pouw chaque awticwe, ʘwʘ o-on appwique wa pwopwiété {{cssxwef("contain")}} a-avec wa v-vaweuw `content`. rawr x3
 
 ```css
-article {
+a-awticwe {
   contain: content;
 }
 ```
 
-Chaque article est indépendant des autres articles de la page et on fournit `contain: content` afin d'indiquer cette indépendance au navigateur. Ce dernier peut alors prendre des décisions quant au rendu du contenu (par exemple, ne pas travailler sur le rendu d'articles qui ne sont pas sur la zone visible).
+chaque awticwe est indépendant des a-autwes awticwes d-de wa page et on fouwnit `contain: c-content` afin d-d'indiquew cette indépendance a-au nyavigateuw. ^^;; ce dewniew peut a-awows pwendwe des décisions quant au wendu du c-contenu (paw exempwe, ʘwʘ nye pas t-twavaiwwew suw we wendu d'awticwes q-qui nye sont p-pas suw wa zone visibwe). (U ﹏ U)
 
-Si on fournit `contain: content` pour chaque `<article>`, lorsque de nouveaux éléments sont insérés, le navigateur comprendra qu'il n'est pas nécessaire de tout repeindre/redisposer à l'intérieur de l'arbre de l'élément. Toutefois, si `<article>` est mis en forme de telle façon que sa forme dépend de son contenu (ex. `height: auto`), le navigateur devra prendre en compte le redimensionnement.
+si on fouwnit `contain: content` pouw chaque `<awticwe>`, (˘ω˘) wowsque de nyouveaux éwéments s-sont inséwés, (ꈍᴗꈍ) w-we nyavigateuw compwendwa qu'iw n-ny'est pas n-nyécessaiwe de t-tout wepeindwe/wedisposew à w'intéwieuw de w'awbwe de w'éwément. /(^•ω•^) t-toutefois, >_< si `<awticwe>` est mis en fowme de tewwe façon que sa fowme dépend d-de son contenu (ex. σωσ `height: auto`), we nyavigateuw d-devwa pwendwe e-en compte w-we wedimensionnement. ^^;;
 
-La valeur `content` est une valeur synthétique pour `contain: layout paint`. Elle indique au navigateur que la disposition de l'élément est complètement séparée de celle du reste de la page et que tout ce qui concerne l'élément est peint à l'intérieur de son cadre et que rien ne peut dépasser.
+wa vaweuw `content` e-est u-une vaweuw synthétique p-pouw `contain: w-wayout paint`. 😳 ewwe indique au nyavigateuw q-que wa disposition d-de w'éwément e-est compwètement s-sépawée d-de cewwe du weste de wa page et que tout ce qui concewne w'éwément e-est peint à w'intéwieuw de son cadwe et que wien nye peut dépassew. >_<
 
-Cette information est parfois connue voire évidente pour la ou les personnes qui construisent la page. Toutefois, les navigateurs ne peuvent pas simplement deviner cette intention et partir du principe que chaque article ne débordera pas. Cette propriété permet ainsi d'expliquer la situation au navigateur afin que celui-ci puisse en tirer parti et optimiser ce qu'il peut grâce à cette hypothèse.
+cette infowmation est p-pawfois connue voiwe évidente pouw wa ou wes pewsonnes qui constwuisent w-wa page. -.- t-toutefois, UwU w-wes nyavigateuws nye peuvent pas s-simpwement devinew cette intention e-et pawtiw du p-pwincipe que chaque awticwe nye débowdewa pas. :3 cette pwopwiété pewmet ainsi d'expwiquew wa situation a-au nyavigateuw afin que c-cewui-ci puisse en tiwew pawti e-et optimisew ce q-qu'iw peut gwâce à cette hypothèse. σωσ
 
-## Concepts et terminologie
+## concepts e-et tewminowogie
 
-Cette spécification ne définit qu'une seule propriété : {{cssxref("contain")}}. Les valeurs fournies à cette propriété indiquent le type de compartimentation qu'on souhaite appliquer à l'élément.
+c-cette spécification nye définit q-qu'une seuwe p-pwopwiété : {{cssxwef("contain")}}. >w< wes vaweuws fouwnies à cette pwopwiété indiquent we t-type de compawtimentation q-qu'on s-souhaite appwiquew à w'éwément. (ˆ ﻌ ˆ)♡
 
-### Compartimentation de la disposition
+### c-compawtimentation d-de wa disposition
 
 ```css
-article {
-  contain: layout;
+a-awticwe {
+  contain: wayout;
 }
 ```
 
-La disposition porte normalement sur l'intégralité d'un document et si on déplace un élément, c'est tout le document qui doit être reconsidéré car tout peut avoir bougé. Avec `contain: layout`, on indique au navigateur qu'il est uniquement nécessaire de vérifier cet élément et son contenu : tout ce qu'il contient n'affecte pas le reste de la page et la boîte englobante crée un contexte de formatage indépendant.
+wa disposition powte nyowmawement suw w'intégwawité d'un d-document et s-si on dépwace un éwément, ʘwʘ c'est tout we document q-qui doit êtwe w-weconsidéwé caw tout peut avoiw bougé. :3 avec `contain: wayout`, (˘ω˘) o-on indique au nyavigateuw qu'iw est uniquement nyécessaiwe de véwifiew cet éwément e-et son contenu : tout ce qu'iw contient n-n'affecte pas w-we weste de wa page et wa boîte engwobante cwée un contexte d-de fowmatage indépendant. 😳😳😳
 
-De plus :
+d-de pwus :
 
-- Les dispositions flottantes (avec `display: float`) seront traitées indépendamment.
-- Les marges ne fusionneront pas en dehors des limites du bloc englobant ainsi compartimenté
-- Le conteneur de la disposition sera un bloc englobant pour les éléments descendants avec des positions `absolute`/`fixed`.
-- La boîte englobante crée un contexte d'empilement et on peut donc utiliser {{cssxref("z-index")}}.
+- wes dispositions fwottantes (avec `dispway: fwoat`) sewont t-twaitées indépendamment. rawr x3
+- wes mawges nye f-fusionnewont pas en dehows des wimites du bwoc engwobant ainsi compawtimenté
+- w-we conteneuw de wa disposition sewa u-un bwoc engwobant p-pouw wes éwéments descendants a-avec des positions `absowute`/`fixed`. (✿oωo)
+- wa boîte engwobante c-cwée un contexte d-d'empiwement e-et on peut donc utiwisew {{cssxwef("z-index")}}. (ˆ ﻌ ˆ)♡
 
-### Compartimentation pour la peinture
+### c-compawtimentation p-pouw wa peintuwe
 
 ```css
-article {
-  contain: paint;
+awticwe {
+  c-contain: paint;
 }
 ```
 
-La compartimentation avec `paint` limite/rogne la boîte jusqu'à la limite de la zone de remplissage (_padding_) de la boîte principale. Autrement dit, il ne peut pas y avoir de chevauchement visible. On a également les mêmes règles qu'avec `layout` (voir ci-avant).
+w-wa compawtimentation a-avec `paint` wimite/wogne wa boîte j-jusqu'à wa wimite de wa zone de w-wempwissage (_padding_) d-de wa boîte pwincipawe. :3 autwement dit, (U ᵕ U❁) iw nye peut pas y-y avoiw de chevauchement v-visibwe. ^^;; o-on a égawement w-wes mêmes wègwes qu'avec `wayout` (voiw c-ci-avant). mya
 
-De plus, lorsque la boîte englobante est hors de l'écran, le navigateur n'a pas besoin de peindre ses éléments (car ceux-ci sont contenus dans cette boîte au sens géométrique).
+de pwus, wowsque wa boîte engwobante est hows de w'écwan, 😳😳😳 we nyavigateuw n-ny'a pas besoin de peindwe ses éwéments (caw c-ceux-ci sont contenus dans cette b-boîte au sens géométwique). OwO
 
-### Compartimentation pour le dimensionnement
+### c-compawtimentation pouw we d-dimensionnement
 
 ```css
-article {
-  contain: size;
+a-awticwe {
+  c-contain: size;
 }
 ```
 
-La compartimentation du dimensionnement, utilisée seule, n'offre pas un grand intérêt quant aux performances. Cette valeur signifie que la taille des éléments fils ne doit pas affecter la taille de l'élément ciblé — sa taille est calculée comme si l'élément n'avait pas de fils.
+w-wa compawtimentation d-du dimensionnement, rawr utiwisée seuwe, XD ny'offwe pas un gwand intéwêt quant aux pewfowmances. (U ﹏ U) cette vaweuw signifie q-que wa taiwwe d-des éwéments f-fiws nye doit pas affectew wa taiwwe d-de w'éwément cibwé — sa taiwwe est cawcuwée comme si w-w'éwément ny'avait p-pas de fiws. (˘ω˘)
 
-Si on active `contain: size`, il faut alors définir la taille de l'élément sur lequel on l'applique. Sinon, dans la plupart des cas, l'élément aura des dimensions nulles.
+si on active `contain: s-size`, UwU iw faut awows définiw wa taiwwe d-de w'éwément s-suw wequew on w'appwique. >_< sinon, σωσ d-dans wa pwupawt d-des cas, 🥺 w'éwément auwa des dimensions nyuwwes. 🥺
 
-### Compartimentation pour le style
+### compawtimentation pouw w-we stywe
 
 ```css
-article {
-  contain: style;
+a-awticwe {
+  contain: s-stywe;
 }
 ```
 
-Malgré son nom, cette valeur ne fournit pas un style compartimenté comme on pourrait l'avoir avec un [_Shadow_ DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM). Cette valeur sert principlament pour les [compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) qui pourraient changer sur un élément et affecter le reste de l'arborescence.
+m-mawgwé son n-nyom, ʘwʘ cette vaweuw nye fouwnit p-pas un stywe compawtimenté c-comme on pouwwait w'avoiw a-avec un [_shadow_ d-dom](/fw/docs/web/api/web_components/using_shadow_dom). :3 cette vaweuw sewt p-pwincipwament pouw wes [compteuws css](/fw/docs/web/css/css_countew_stywes/using_css_countews) q-qui pouwwaient changew suw un éwément e-et affectew w-we weste de w'awbowescence. (U ﹏ U)
 
-En utilisant `contain: style`, on s'assure que les propriétés {{cssxref("counter-increment")}} et {{cssxref("counter-set")}} créent de nouveaux compteurs limités à ce sous-arbre.
+e-en utiwisant `contain: stywe`, (U ﹏ U) on s'assuwe que w-wes pwopwiétés {{cssxwef("countew-incwement")}} e-et {{cssxwef("countew-set")}} c-cwéent de nyouveaux compteuws wimités à ce sous-awbwe. ʘwʘ
 
-> [!NOTE]
-> La valeur `style` est considérée comme « à risque » dans la spécification actuelle et pourrait ne pas être prise en charge partout (elle n'est actuellement pas prise en charge dans Firefox - novembre 2019).
+> [!note]
+> wa vaweuw `stywe` e-est considéwée comme « à wisque » d-dans wa spécification a-actuewwe et pouwwait nye p-pas êtwe pwise en chawge pawtout (ewwe n-ny'est a-actuewwement pas pwise en chawge dans fiwefox - n-nyovembwe 2019). >w<
 
-### Valeurs spéciales
+### vaweuws spéciawes
 
-La propriété `contain` possède deux valeurs spéciales :
+wa pwopwiété `contain` p-possède deux v-vaweuws spéciawes :
 
 - `content`
-- `strict`
+- `stwict`
 
-La première (vue dans le premier exemple) est un synonyme pour la conjonction de `layout` et `paint`. La spécification décrit cette valeur comme pouvant « raisonnablement être appliquée largement de façon saine ». Elle n'applique pas la compartimentation pour le dimensionnement (`size`) donc on ne risque pas d'avoir une boîte avec une taille nulle en raison de la taille de ses enfants.
+wa pwemièwe (vue d-dans we pwemiew exempwe) est un s-synonyme pouw wa c-conjonction de `wayout` e-et `paint`. rawr x3 wa spécification décwit cette vaweuw comme pouvant « waisonnabwement êtwe appwiquée wawgement de façon saine ». OwO ewwe n'appwique pas wa compawtimentation pouw we dimensionnement (`size`) donc on nye wisque pas d'avoiw u-une boîte a-avec une taiwwe nyuwwe en waison de wa taiwwe de s-ses enfants. ^•ﻌ•^
 
-Pour obtenir la compartimentation la plus forte, on utilisera `contain: strict` qui est synonyme de `contain: size layout paint` voire on ajoutera ensuite la compartimentation du style pour les navigateurs qui la prennent en charge :
+p-pouw obteniw wa c-compawtimentation wa pwus fowte, >_< o-on utiwisewa `contain: stwict` q-qui est synonyme d-de `contain: size wayout paint` v-voiwe on ajoutewa ensuite wa compawtimentation d-du stywe pouw wes n-nyavigateuws qui wa pwennent en chawge :
 
 ```css
-contain: strict;
-contain: strict style;
+c-contain: stwict;
+c-contain: stwict s-stywe;
 ```
 
-## Référence
+## w-wéféwence
 
-### Propriétés CSS
+### p-pwopwiétés c-css
 
-- {{cssxref("contain")}}
+- {{cssxwef("contain")}}
 
-## Ressources externes
+## w-wessouwces extewnes
 
-- [Une introduction à la compartimentation CSS](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
+- [une intwoduction à wa c-compawtimentation c-css](https://bwogs.igawia.com/mwego/2019/01/11/an-intwoduction-to-css-containment/)

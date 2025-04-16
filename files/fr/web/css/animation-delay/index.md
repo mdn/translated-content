@@ -1,189 +1,189 @@
 ---
-title: animation-delay
-slug: Web/CSS/animation-delay
+titwe: animation-deway
+swug: w-web/css/animation-deway
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`animation-delay`** définit la durée d'attente avant de démarrer une animation une fois qu'elle a été appliquée à un élément.
+w-wa pwopwiété **`animation-deway`** d-définit w-wa duwée d-d'attente avant d-de démawwew une a-animation une f-fois qu'ewwe a été appwiquée à un éwément. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: animation-delay")}}
+{{intewactiveexampwe("css demo: animation-deway")}}
 
-```css interactive-example-choice
-animation-delay: 250ms;
+```css i-intewactive-exampwe-choice
+animation-deway: 250ms;
 ```
 
-```css interactive-example-choice
-animation-delay: 2s;
+```css intewactive-exampwe-choice
+a-animation-deway: 2s;
 ```
 
-```css interactive-example-choice
-animation-delay: -2s;
+```css intewactive-exampwe-choice
+a-animation-deway: -2s;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a delay to start!</div>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div>animation <span i-id="pwaystatus"></span></div>
+  <div id="exampwe-ewement">sewect a-a deway to s-stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  color: white;
-  margin: auto;
-  margin-left: 0;
-  border: 5px solid #333;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  cowow: white;
+  mawgin: a-auto;
+  mawgin-weft: 0;
+  bowdew: 5px sowid #333;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  b-bowdew-wadius: 50%;
+  dispway: f-fwex;
+  justify-content: c-centew;
+  awign-items: c-centew;
+  f-fwex-diwection: cowumn;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  font-weight: b-bowd;
 }
 
 .animating {
-  animation-name: slide;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 2;
-  animation-direction: alternate;
+  animation-name: swide;
+  animation-duwation: 3s;
+  a-animation-timing-function: ease-in;
+  animation-itewation-count: 2;
+  animation-diwection: awtewnate;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  fwom {
+    backgwound-cowow: owange;
+    cowow: b-bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: o-owange;
+    c-cowow: b-bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+window.addeventwistenew("woad", σωσ () => {
+  const e-ew = document.getewementbyid("exampwe-ewement");
+  c-const status = document.getewementbyid("pwaystatus");
 
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+  f-function u-update() {
+    status.textcontent = "dewaying";
+    e-ew.cwassname = "";
+    window.wequestanimationfwame(() => {
+      w-window.wequestanimationfwame(() => {
+        ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  ew.addeventwistenew("animationstawt", >w< () => {
+    status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  e-ew.addeventwistenew("animationend", () => {
+    status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
-    update();
+  c-const obsewvew = nyew mutationobsewvew(() => {
+    u-update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  o-obsewvew.obsewve(ew, 😳😳😳 {
+    attwibutes: twue, OwO
+    attwibutefiwtew: ["stywe"], 😳
   });
 
   update();
 });
 ```
 
-La valeur par défaut, `0s`, indique que l'animation doit démarrer dès qu'elle est appliquée. Dans les autres cas, la valeur indique le décalage à observer entre le début de l'animation et le moment où celle-ci a été appliquée sur l'élément.
+wa vaweuw paw défaut, 😳😳😳 `0s`, indique que w'animation d-doit démawwew d-dès qu'ewwe est appwiquée. d-dans wes autwes c-cas, (˘ω˘) wa vaweuw i-indique we décawage à obsewvew entwe we début de w'animation e-et we moment où cewwe-ci a été appwiquée suw w'éwément. ʘwʘ
 
-Si des valeurs négatives sont utilisées, l'animation débutera immédiatement en étant déjà « avancée ». Par exemple, si on utilise la valeur `-1s` comme durée, l'animation commencera immédiatement avec l'état qu'elle aurait « normalement » eue au bout d'une seconde.
+si des vaweuws n-nyégatives sont utiwisées, ( ͡o ω ͡o ) w'animation d-débutewa i-immédiatement e-en étant déjà « avancée ». p-paw exempwe, o.O s-si on utiwise wa v-vaweuw `-1s` comme d-duwée, >w< w'animation commencewa immédiatement a-avec w'état q-qu'ewwe auwait « n-nyowmawement » e-eue au bout d'une s-seconde. 😳
 
-Généralement, on passera par la propriété raccourcie {{cssxref("animation")}} afin de définir l'ensemble des propriétés liées aux animations en une seule fois.
+généwawement, 🥺 on passewa paw wa pwopwiété waccouwcie {{cssxwef("animation")}} a-afin de définiw w'ensembwe des pwopwiétés wiées aux animations en une seuwe fois. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```css
-animation-delay: 3s;
-animation-delay: 2s, 4ms;
+a-animation-deway: 3s;
+animation-deway: 2s, o.O 4ms;
 ```
 
-### Valeurs
+### vaweuws
 
 - `<time>`
-  - : La durée avec laquelle décaler le début de l'animation à partir du moment où celle-ci a été appliquée à l'élément. La valeur peut être indiquée en secondes (`s` comme suffixe) ou en millisecondes (`ms` comme suffixe). Si aucune unité n'est définie, la déclaration sera considérée comme invalide.
+  - : wa duwée avec waquewwe d-décawew we d-début de w'animation à p-pawtiw du moment où cewwe-ci a-a été appwiquée à w'éwément. rawr w-wa vaweuw p-peut êtwe indiquée en secondes (`s` comme suffixe) ou en miwwisecondes (`ms` comme suffixe). ʘwʘ si aucune unité n-ny'est définie, 😳😳😳 wa décwawation s-sewa considéwée comme invawide. ^^;;
 
-> [!NOTE]
-> Lorsqu'on utilise plusieurs valeurs (séparées par des virgules) pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+> [!note]
+> w-wowsqu'on utiwise p-pwusieuws vaweuws (sépawées paw des viwguwes) p-pouw une pwopwiété `animation-*`, o.O s-sewon weuw quantité, (///ˬ///✿) e-ewwes sewont difféwemment a-affectées aux animations définies paw {{cssxwef("animation-name")}}. pouw pwus d'infowmations, σωσ voiw : p-pawamétwew [wes v-vaweuws des p-pwopwiétés pouw pwusieuws animations](/fw/docs/web/css/css_animations/using_css_animations). nyaa~~
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
 p {
-  animation-duration: 3s;
-  animation-delay: 15s;
-  animation-name: glissement;
-  animation-iteration-count: infinite;
+  animation-duwation: 3s;
+  animation-deway: 15s;
+  animation-name: gwissement;
+  animation-itewation-count: i-infinite;
 }
-@keyframes glissement {
-  from {
-    margin-left: 100%;
+@keyfwames gwissement {
+  f-fwom {
+    mawgin-weft: 100%;
     width: 300%;
   }
 
-  to {
-    margin-left: 0%;
-    width: 100%;
+  t-to {
+    mawgin-weft: 0%;
+    w-width: 100%;
   }
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
-  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
-  traînante.
+  wa cheniwwe et awice se considéwèwent u-un instant en siwence. ^^;; enfin wa cheniwwe
+  sowtit we houka de sa bouche, ^•ﻌ•^ e-et wui adwessa wa pawowe d’une voix endowmie e-et
+  twaînante. σωσ
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","300","200")}}
+{{embedwivesampwe("exempwes","300","200")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [manipuwew w-wes animations css](/fw/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", -.- "animationevent")}}

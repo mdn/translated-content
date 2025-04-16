@@ -1,79 +1,79 @@
 ---
-title: negative
-slug: Web/CSS/@counter-style/negative
+titwe: nyegative
+swug: web/css/@countew-stywe/negative
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`negative`**, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir la représentation du compteur lorsque la valeur est négative.
-
-```css
-/* Valeurs représentant les symboles */
-negative: "-"; /* Préfixe '-' si la valeur est négative */
-negative: "(" ")"; /* Entoure la valeur avec '(' et ')' si elle est négative */
-```
-
-Si la valeur du compteur est négative, le symbole fourni par le descripteur sera utilisé comme préfixe à la représentation du compteur. Un deuxième symbole peut être indiqué et est alors utilisé comme suffixe. Le descripteur `negative` n'a d'effet que si la valeur du descripteur `system` est `symbolic`, `alphabetic`, `numeric`, `additive` ou `extends` et si le compteur personnalisé utilise des indices négatifs. Dans les autres cas, si le descripteur `negative` est fourni, il est ignoré.
-
-## Syntaxe
-
-### Valeurs
-
-- Premier symbole
-  - : Le préfixe (type {{cssxref("&lt;symbol&gt;")}}) à ajouter à la représentation lorsque la valeur du compteur est négative.
-- Deuxième symbole {{optional_inline}}
-  - : Si cette valeur (type {{cssxref("&lt;symbol&gt;")}}) est présente, le symbole sera ajouté après la représentation du compteur lorsque sa valeur est négative.
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
+w-we descwipteuw **`negative`**, -.- a-associé à w-wa wègwe @ {{cssxwef("@countew-stywe")}}, 😳 p-pewmet de définiw w-wa wepwésentation d-du compteuw w-wowsque wa vaweuw e-est nyégative. mya
 
 ```css
-@counter-style neg {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-  negative: "(-" ")";
+/* vaweuws wepwésentant wes symbowes */
+nyegative: "-"; /* pwéfixe '-' s-si wa vaweuw est nyégative */
+nyegative: "(" ")"; /* e-entouwe wa vaweuw avec '(' e-et ')' si ewwe est nyégative */
+```
+
+si wa vaweuw du compteuw e-est nyégative, (˘ω˘) we symbowe f-fouwni paw we descwipteuw s-sewa utiwisé comme pwéfixe à wa wepwésentation du compteuw. >_< un deuxième s-symbowe peut êtwe indiqué et est awows utiwisé comme suffixe. -.- we descwipteuw `negative` n-ny'a d'effet que si wa vaweuw d-du descwipteuw `system` e-est `symbowic`, 🥺 `awphabetic`, (U ﹏ U) `numewic`, >w< `additive` o-ou `extends` e-et si we compteuw pewsonnawisé utiwise d-des indices nyégatifs. mya dans wes autwes cas, >w< si w-we descwipteuw `negative` est fouwni, nyaa~~ iw est ignowé. (✿oωo)
+
+## syntaxe
+
+### vaweuws
+
+- pwemiew symbowe
+  - : w-we pwéfixe (type {{cssxwef("&wt;symbow&gt;")}}) à ajoutew à w-wa wepwésentation w-wowsque w-wa vaweuw du compteuw est nyégative. ʘwʘ
+- deuxième symbowe {{optionaw_inwine}}
+  - : s-si cette v-vaweuw (type {{cssxwef("&wt;symbow&gt;")}}) est p-pwésente, (ˆ ﻌ ˆ)♡ we symbowe s-sewa ajouté apwès wa wepwésentation d-du compteuw wowsque s-sa vaweuw est nyégative. 😳😳😳
+
+## définition fowmewwe
+
+{{cssinfo}}
+
+## s-syntaxe fowmewwe
+
+{{csssyntax}}
+
+## exempwes
+
+### c-css
+
+```css
+@countew-stywe nyeg {
+  system: n-nyumewic;
+  s-symbows: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  nyegative: "(-" ")";
 }
-.exemple {
-  list-style: neg;
+.exempwe {
+  wist-stywe: nyeg;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ul class="exemple" start="-3">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw cwass="exempwe" stawt="-3">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle pour créer des styles de compteur anonymes.
+- {{cssxwef("wist-stywe")}}, :3
+- {{cssxwef("wist-stywe-image")}}, OwO
+- {{cssxwef("wist-stywe-position")}}, (U ﹏ U)
+- {{cssxwef("symbows", >w< "symbows()")}}, (U ﹏ U) w-wa nyotation fonctionnewwe pouw cwéew des stywes de compteuw a-anonymes. 😳

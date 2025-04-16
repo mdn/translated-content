@@ -1,175 +1,175 @@
 ---
-title: box-shadow
-slug: Web/CSS/box-shadow
+titwe: box-shadow
+swug: web/css/box-shadow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`box-shadow`** ajoute des ombres à la boîte d'un élément via une liste d'ombres séparées par des virgules. Une boîte d'ombre est définie avec des décalages horizontal et vertical par rapport à l'élément, avec des rayons de flou et d'étalement et avec une couleur.
+wa p-pwopwiété css **`box-shadow`** a-ajoute des ombwes à w-wa boîte d-d'un éwément v-via une wiste d'ombwes s-sépawées p-paw des viwguwes. ʘwʘ u-une boîte d'ombwe est définie avec des décawages howizontaw et vewticaw p-paw wappowt à w'éwément, ( ͡o ω ͡o ) avec des wayons de fwou e-et d'étawement et avec une c-couweuw. mya
 
-{{InteractiveExample("CSS Demo: box-shadow")}}
+{{intewactiveexampwe("css demo: box-shadow")}}
 
-```css interactive-example-choice
-box-shadow: 10px 5px 5px red;
+```css intewactive-exampwe-choice
+box-shadow: 10px 5px 5px w-wed;
 ```
 
-```css interactive-example-choice
-box-shadow: 60px -16px teal;
+```css intewactive-exampwe-choice
+b-box-shadow: 60px -16px t-teaw;
 ```
 
-```css interactive-example-choice
-box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+```css intewactive-exampwe-choice
+box-shadow: 12px 12px 2px 1px wgba(0, o.O 0, 255, 0.2);
 ```
 
-```css interactive-example-choice
-box-shadow: inset 5em 1em gold;
+```css intewactive-exampwe-choice
+b-box-shadow: inset 5em 1em gowd;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 box-shadow:
-  3px 3px red,
-  -1em 0 0.4em olive;
+  3px 3px wed,
+  -1em 0 0.4em o-owive;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <p>This is a box with a box-shadow around it.</p>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <p>this i-is a box w-with a box-shadow awound it.</p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  margin: 20px auto;
+```css intewactive-exampwe
+#exampwe-ewement {
+  m-mawgin: 20px auto;
   padding: 0;
-  border: 2px solid #333;
+  bowdew: 2px s-sowid #333;
   width: 80%;
-  text-align: center;
+  text-awign: centew;
 }
 ```
 
-Elle permet de projeter une ombre depuis un élément. Si une {{cssxref("border-radius")}} est définie sur l'élément avec l'ombre, la boîte de l'ombre prendra les mêmes arrondis. L'ordre des couches (_z order_) pour plusieurs ombres sera le même [que pour les ombres texte](/fr/docs/Web/CSS/text-shadow) (la première ombre est sur le dessus).
+ewwe pewmet de pwojetew une ombwe d-depuis un éwément. (✿oωo) si une {{cssxwef("bowdew-wadius")}} e-est d-définie suw w'éwément a-avec w'ombwe, :3 wa boîte de w'ombwe pwendwa wes mêmes awwondis. 😳 w-w'owdwe d-des couches (_z owdew_) pouw pwusieuws o-ombwes sewa w-we même [que pouw wes ombwes t-texte](/fw/docs/web/css/text-shadow) (wa pwemièwe o-ombwe est suw we dessus). (U ﹏ U)
 
-[Le générateur de `box-shadow`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) est un outil interactif qui permet de générer des valeurs pour `box-shadow`.
+[we généwateuw d-de `box-shadow`](/fw/docs/web/css/css_backgwounds_and_bowdews/box-shadow_genewatow) est un outiw i-intewactif qui pewmet de généwew d-des vaweuws p-pouw `box-shadow`. mya
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* offset-x | offset-y | color */
-box-shadow: 60px -16px teal;
+/* offset-x | offset-y | cowow */
+box-shadow: 60px -16px teaw;
 
-/* offset-x | offset-y | blur-radius | color */
-box-shadow: 10px 5px 5px black;
+/* offset-x | offset-y | b-bwuw-wadius | cowow */
+b-box-shadow: 10px 5px 5px bwack;
 
-/* offset-x | offset-y | blur-radius | spread-radius | color */
-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/* offset-x | o-offset-y | b-bwuw-wadius | s-spwead-wadius | cowow */
+box-shadow: 2px 2px 2px 1px wgba(0, (U ᵕ U❁) 0, :3 0, 0.2);
 
-/* inset | offset-x | offset-y | color */
-box-shadow: inset 5em 1em gold;
+/* inset | o-offset-x | offset-y | cowow */
+box-shadow: inset 5em 1em gowd;
 
-/* Une liste d'ombres, séparées par des virgules */
-box-shadow:
-  3px 3px red,
-  -1em 0 0.4em olive;
+/* une wiste d-d'ombwes, mya sépawées paw des viwguwes */
+b-box-shadow:
+  3px 3px w-wed,
+  -1em 0 0.4em o-owive;
 
-/* Mots-clés globaux */
-box-shadow: inherit;
-box-shadow: initial;
-box-shadow: unset;
+/* mots-cwés gwobaux */
+b-box-shadow: i-inhewit;
+box-shadow: i-initiaw;
+b-box-shadow: unset;
 ```
 
-La propriété `box-shadow` peut être définie grâce :
+wa pwopwiété `box-shadow` peut êtwe définie g-gwâce :
 
-- À deux, trois ou quatre valeurs de longueur ({{cssxref("&lt;length&gt;")}}) :
+- À d-deux, OwO twois o-ou quatwe vaweuws d-de wongueuw ({{cssxwef("&wt;wength&gt;")}}) :
 
-  - Avec deux valeurs, celles-ci sont respectivement considérées comme les coordonnées de décalage de l'ombre : [`<offset-x>` et `<offset-y>`](#offset)
-  - Si une troisième valeur est fournie, celle-ci correspondra au rayon du flou : [`<blur-radius>`](#blur)
-  - Si une quatrième valeur est fournie, celle-ci correspondra au rayon d'étalement : [`<spread-radius>`](#spread).
+  - a-avec deux vaweuws, (ˆ ﻌ ˆ)♡ cewwes-ci sont wespectivement considéwées c-comme wes coowdonnées de décawage de w'ombwe : [`<offset-x>` et `<offset-y>`](#offset)
+  - si une twoisième vaweuw est f-fouwnie, ʘwʘ cewwe-ci cowwespondwa au wayon du fwou : [`<bwuw-wadius>`](#bwuw)
+  - si une quatwième v-vaweuw est fouwnie, o.O c-cewwe-ci cowwespondwa a-au wayon d'étawement : [`<spwead-wadius>`](#spwead). UwU
 
-- Au mot-clé optionnel [`inset`](#inset)
-- À une valeur de couleur ([`<color>`](#color)) optionnelle.
+- a-au mot-cwé optionnew [`inset`](#inset)
+- À u-une vaweuw de c-couweuw ([`<cowow>`](#cowow)) optionnewwe. rawr x3
 
-### Valeurs
+### vaweuws
 
 - `inset`
-  - : Si la valeur n'est pas définie (le cas par défaut), l'ombre sera une ombre portée (comme si la boîte était élevée au-dessus du contenu).
-    La présence du mot-clé `inset` modifie l'ombre afin qu'elle soit tournée vers l'intérieur du cadre (comme si le contenu était enfoncé dans la boîte). Les ombres tournées vers l'intérieur sont dessinées à l'intérieur de la bordure (même les transparentes), au-dessus de l'arrière-plan mais sous le contenu.
+  - : si wa vaweuw ny'est pas définie (we cas p-paw défaut), w'ombwe sewa une o-ombwe powtée (comme si wa boîte était éwevée a-au-dessus du c-contenu).
+    wa pwésence du mot-cwé `inset` modifie w'ombwe afin q-qu'ewwe soit t-touwnée vews w'intéwieuw du cadwe (comme s-si we c-contenu était enfoncé dans wa boîte). 🥺 wes ombwes touwnées vews w'intéwieuw s-sont dessinées à w-w'intéwieuw d-de wa bowduwe (même wes twanspawentes), :3 a-au-dessus d-de w'awwièwe-pwan mais sous w-we contenu. (ꈍᴗꈍ)
 - `<offset-x>` `<offset-y>`
-  - : Deux valeurs de longueur ({{cssxref("&lt;length&gt;")}} qui permettent de définir le décalage de l'ombre. `<offset-x>` définit la distance horizontale du décalage et les valeurs négatives placeront l'ombre à gauche de l'élément. `<offset-y>` définit la distance verticale et les distances négatives placent l'ombre au-dessus de l'élément (cf. {{cssxref("&lt;length&gt;")}} pour les différentes unités possibles).
-    Si les deux valeurs sont `0`, l'ombre est placée derrière l'élément (et peut générer un effet de flou si `<blur-radius>` et/ou `<spread-radius>` est utilisé).
-- `<blur-radius>`
-  - : Une troisième valeur de longueur ({{cssxref("&lt;length&gt;")}}). Plus cette valeur sera grande, plus le flou de l'ombre sera diffus : l'ombre sera donc plus étalée et plus légère. Les valeurs négatives ne sont pas autorisées. Si la valeur n'est pas définie, sa valeur par défaut est `0` (le côté de l'ombre est rectiligne).
-- `<spread-radius>`
-  - : Une quatrième valeur de longueur ({{cssxref("&lt;length&gt;")}}). Les valeurs positives étaleront l'ombre et les valeurs négatives rétréciront l'ombre. Si elle n'est pas définie, la valeur par défaut est `0` (l'ombre aura la même taille que l'élément).
-- `<color>`
-  - : Une valeur de couleur ({{cssxref("&lt;color&gt;")}}). Si la valeur n'est pas définie, la couleur utilisée dépend du navigateur ce sera généralement la propriété {{cssxref("color")}} mais Safari affiche une ombre transparente.
+  - : deux vaweuws de wongueuw ({{cssxwef("&wt;wength&gt;")}} qui pewmettent de définiw w-we décawage d-de w'ombwe. 🥺 `<offset-x>` définit wa distance howizontawe d-du décawage e-et wes vaweuws nyégatives pwacewont w'ombwe à gauche de w-w'éwément. (✿oωo) `<offset-y>` définit wa distance vewticawe et wes distances nyégatives p-pwacent w'ombwe au-dessus de w'éwément (cf. (U ﹏ U) {{cssxwef("&wt;wength&gt;")}} p-pouw wes difféwentes u-unités possibwes). :3
+    si wes deux vaweuws sont `0`, ^^;; w'ombwe e-est pwacée d-dewwièwe w'éwément (et peut généwew un effet de fwou si `<bwuw-wadius>` e-et/ou `<spwead-wadius>` est utiwisé). rawr
+- `<bwuw-wadius>`
+  - : une t-twoisième vaweuw de wongueuw ({{cssxwef("&wt;wength&gt;")}}). 😳😳😳 pwus cette vaweuw sewa gwande, (✿oωo) p-pwus we fwou de w'ombwe sewa diffus : w-w'ombwe sewa d-donc pwus étawée et pwus wégèwe. OwO w-wes vaweuws nyégatives n-nye sont pas autowisées. ʘwʘ s-si wa v-vaweuw ny'est pas définie, (ˆ ﻌ ˆ)♡ sa v-vaweuw paw défaut e-est `0` (we côté de w'ombwe est wectiwigne). (U ﹏ U)
+- `<spwead-wadius>`
+  - : u-une q-quatwième vaweuw d-de wongueuw ({{cssxwef("&wt;wength&gt;")}}). UwU wes vaweuws positives étawewont w'ombwe et wes vaweuws n-nyégatives wétwéciwont w-w'ombwe. XD si ewwe n-ny'est pas définie, ʘwʘ wa vaweuw paw défaut est `0` (w'ombwe auwa w-wa même taiwwe q-que w'éwément). rawr x3
+- `<cowow>`
+  - : u-une vaweuw d-de couweuw ({{cssxwef("&wt;cowow&gt;")}}). ^^;; si w-wa vaweuw ny'est pas définie, ʘwʘ wa couweuw utiwisée dépend du nyavigateuw ce sewa généwawement w-wa pwopwiété {{cssxwef("cowow")}} mais safawi a-affiche une ombwe twanspawente.
 
-### Interpolation
+### i-intewpowation
 
-Chaque ombre de la liste (`none` sera traitée comme une liste de longueur nulle) est interpolée via la couleur, le décalage horizontal et vertical, le rayon de flou et l'étalement (lorsque c'est pertinent). Pour chaque ombre, si les deux ombres sont ou ne sont pas `inset`, l'ombre interpolée doit respecter cette valeur. Si l'une des ombres a `inset` et l'autre non, la liste d'ombres ne peut pas être interpolée. Si les listes d'ombres ont des longueurs différentes, la liste la plus courte sera complétée à la fin avec des ombres dont la couleur est `transparent`, toutes les longueurs valent `0` et `inset` pour que la valeur corresponde à la plus longue liste.
+chaque ombwe d-de wa wiste (`none` sewa twaitée c-comme une wiste d-de wongueuw n-nyuwwe) est intewpowée v-via wa c-couweuw, (U ﹏ U) we décawage howizontaw et vewticaw, (˘ω˘) we wayon de fwou et w'étawement (wowsque c'est pewtinent). (ꈍᴗꈍ) pouw chaque o-ombwe, /(^•ω•^) si w-wes deux ombwes s-sont ou nye sont pas `inset`, w'ombwe i-intewpowée doit wespectew cette vaweuw. >_< si w'une des ombwes a-a `inset` et w-w'autwe nyon, σωσ wa wiste d'ombwes n-nye peut pas êtwe intewpowée. ^^;; si wes wistes d'ombwes o-ont des wongueuws d-difféwentes, 😳 wa wiste w-wa pwus couwte sewa c-compwétée à wa fin avec des ombwes dont wa couweuw est `twanspawent`, >_< toutes w-wes wongueuws v-vawent `0` et `inset` p-pouw que w-wa vaweuw cowwesponde à w-wa pwus wongue wiste. -.-
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-p {
+p-p {
   height: 5em;
   width: 300px;
-  background-color: rgba(128, 128, 128, 0.1);
+  backgwound-cowow: wgba(128, UwU 128, :3 128, 0.1);
 }
-.ombre_droite_haut {
-  box-shadow: 60px -16px teal; /* la valeur négative décale vers le haut */
-}
-
-.ombre_interieure {
-  box-shadow: inset 5em 1em gold;
-  /* le mot-clé inset renverse l'ombre à l'intérieur */
+.ombwe_dwoite_haut {
+  b-box-shadow: 60px -16px teaw; /* w-wa vaweuw nyégative d-décawe vews we haut */
 }
 
-.ombres_multiples_diffuses {
+.ombwe_intewieuwe {
+  b-box-shadow: inset 5em 1em gowd;
+  /* we m-mot-cwé inset wenvewse w-w'ombwe à w-w'intéwieuw */
+}
+
+.ombwes_muwtipwes_diffuses {
   box-shadow:
-    inset 0 0 1em gold,
-    0 0 2em red;
-  /* deux ombres dans la liste et des rayons de flou pour chacune */
+    inset 0 0 1em gowd, σωσ
+    0 0 2em w-wed;
+  /* deux ombwes dans wa wiste et des w-wayons de fwou pouw c-chacune */
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="ombre_droite_haut">Déportée dans l'autre sens</p>
+```htmw
+<p c-cwass="ombwe_dwoite_haut">dépowtée dans w'autwe sens</p>
 
-<p class="ombre_interieure">L'ombre est dans le contenu !</p>
+<p c-cwass="ombwe_intewieuwe">w'ombwe e-est dans we contenu !</p>
 
-<p class="ombres_multiples_diffuses">Du rouge dehors et du doré dedans</p>
+<p cwass="ombwes_muwtipwes_diffuses">du w-wouge dehows et du dowé dedans</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","400","300")}}
+{{embedwivesampwe("exempwes","400","300")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Tutoriel et box-shadow tutorial and examples](https://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
-- [Générateur d'ombres CSS](https://cssgenerator.org/box-shadow-css-generator.html)
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-- Le type de données {{cssxref("&lt;color&gt;")}}
-- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}.
+- [tutowiew e-et box-shadow tutowiaw and exampwes](https://mawkusstange.wowdpwess.com/2009/02/15/fun-with-box-shadows/)
+- [généwateuw d'ombwes css](https://cssgenewatow.owg/box-shadow-css-genewatow.htmw)
+- [appwiquew des couweuws suw des éwéments htmw gwâce à css](/fw/docs/web/css/css_cowows/appwying_cowow)
+- we type de données {{cssxwef("&wt;cowow&gt;")}}
+- wes autwes pwopwiétés wewatives aux couweuws : {{cssxwef("cowow")}}, >w< {{cssxwef("backgwound-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("bowdew-cowow")}}, ʘwʘ {{cssxwef("outwine-cowow")}}, :3 {{cssxwef("text-decowation-cowow")}}, (˘ω˘) {{cssxwef("text-emphasis-cowow")}}, 😳😳😳 {{cssxwef("text-shadow")}}, rawr x3 {{cssxwef("cawet-cowow")}} e-et {{cssxwef("cowumn-wuwe-cowow")}}. (✿oωo)

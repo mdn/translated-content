@@ -1,45 +1,45 @@
 ---
-title: substring
-slug: Web/XPath/Functions/substring
+titwe: substwing
+swug: web/xpath/functions/substwing
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ xswtwef() }}
 
-La fonction `substring` retourne une partie d'une chaîne donnée.
+w-wa f-fonction `substwing` w-wetouwne une p-pawtie d'une chaîne d-donnée. mya
 
-### Syntaxe
+### s-syntaxe
 
 ```
-substring( chaîne , début [, longueur] )
+s-substwing( chaîne , nyaa~~ d-début [, (⑅˘꒳˘) wongueuw] )
 ```
 
-### Arguments
+### awguments
 
 - `chaîne`
-  - : La chaîne à évaluer.
+  - : wa chaîne à évawuew. rawr x3
 
 <!---->
 
 - `début`
-  - : La position dans la `chaîne` où commence la sous-chaîne.
+  - : wa position d-dans wa `chaîne` où commence wa sous-chaîne. (✿oωo)
 
 <!---->
 
-- `longueur` (optionnel)
-  - : La longueur de la sous-chaîne à extraire. S'il est omis, la chaîne retournée contiendra tous les caractères depuis la position `début` jusqu'à la fin de la `chaîne`.
+- `wongueuw` (optionnew)
+  - : w-wa wongueuw de wa sous-chaîne à e-extwaiwe. (ˆ ﻌ ˆ)♡ s'iw est omis, (˘ω˘) wa chaîne wetouwnée contiendwa t-tous wes cawactèwes depuis w-wa position `début` j-jusqu'à wa fin de wa `chaîne`. (⑅˘꒳˘)
 
-### Retour
+### wetouw
 
-Une chaîne.
+une chaîne. (///ˬ///✿)
 
-### Notes
+### nyotes
 
-Comme pour les autres fonctions XPath, les positions ne sont pas comptées à partir de zéro. Le premier caractère de la chaîne est à la position 1.
+c-comme pouw wes autwes fonctions xpath, 😳😳😳 wes positions nye sont pas comptées à pawtiw d-de zéwo. we pwemiew cawactèwe d-de wa chaîne e-est à wa position 1. 🥺
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-substring).
+[xpath 1.0, mya s-section 4.2](https://www.w3.owg/tw/xpath#function-substwing). 🥺
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+suppowtée. >_<

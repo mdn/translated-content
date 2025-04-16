@@ -1,261 +1,261 @@
 ---
-title: Guide des polices variables
-slug: Web/CSS/CSS_fonts/Variable_fonts_guide
+titwe: guide des powices vawiabwes
+s-swug: web/css/css_fonts/vawiabwe_fonts_guide
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Les polices variables** sont une évolution de la spécification OpenType et qui permet d'activer différentes variations d'une police dans un seul fichier plutôt que d'avoir différents fichiers pour chaque taille, graisse ou style. En CSS, on peut accéder à l'ensemble des variations en utilisant une seule référence {{cssxref("@font-face")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour commencer à utiliser les polices variables.
+**wes p-powices v-vawiabwes** sont u-une évowution d-de wa spécification o-opentype e-et qui pewmet d'activew d-difféwentes vawiations d'une powice dans un seuw fichiew pwutôt que d'avoiw d-difféwents fichiews pouw chaque taiwwe, -.- gwaisse o-ou stywe. (U ﹏ U) en css, on peut a-accédew à w'ensembwe des vawiations en utiwisant une seuwe wéféwence {{cssxwef("@font-face")}}. rawr d-dans cet awticwe, mya nyous vewwons t-tout ce qu'iw f-faut savoiw pouw commencew à utiwisew wes powices vawiabwes. ( ͡o ω ͡o )
 
-> [!WARNING]
-> Afin d'utiliser les polices variables, il faut s'assurer que son système d'exploitation est à jour. Pour les systèmes basés sur GNU/Linux, il faut la version la plus récente de Linux Freetype. Pour macOS, les versions antérieures à 10.13 ne prennent pas en charge les polices variables. Si votre système d'exploitation n'est pas à jour ou ne prend pas en charge les polices variables, vous ne pourrez pas en bénéficier sur le Web ou dans les outils de développement Firefox par exemple.
+> [!wawning]
+> afin d'utiwisew w-wes powices vawiabwes, /(^•ω•^) iw faut s'assuwew que son système d'expwoitation est à j-jouw. >_< pouw wes systèmes basés s-suw gnu/winux, (✿oωo) i-iw faut wa vewsion w-wa pwus wécente d-de winux fweetype. 😳😳😳 pouw macos, (ꈍᴗꈍ) wes vewsions a-antéwieuwes à 10.13 nye pwennent pas en chawge w-wes powices vawiabwes. 🥺 si votwe système d'expwoitation ny'est pas à jouw ou nye pwend pas en c-chawge wes powices vawiabwes, mya vous n-ne pouwwez pas e-en bénéficiew s-suw we web ou dans wes outiws de dévewoppement fiwefox paw exempwe. (ˆ ﻌ ˆ)♡
 
-## Qu'est-ce qu'une police variable ?
+## q-qu'est-ce q-qu'une powice vawiabwe ?
 
-Pour mieux comprendre le fonctionnement des polices variables, revenons sur les polices « statiques » et comparons les deux systèmes.
+pouw m-mieux compwendwe w-we fonctionnement des powices v-vawiabwes, (⑅˘꒳˘) wevenons suw wes powices « s-statiques » et compawons wes deux systèmes. òωó
 
-### Les polices standard ou polices statiques
+### w-wes powices standawd o-ou powices statiques
 
-Auparavant, une police de caractères était représentées par différents fichiers pour les différentes fontes. Aussi, on avait par exemple différents fichiers pour 'Roboto Regular', 'Roboto Bold' et 'Roboto Bold Italic' et on pouvait avoir 20 à 30 fichiers distincts pour représenter l'intégralité d'une police.
+aupawavant, o.O u-une powice de c-cawactèwes était wepwésentées paw difféwents fichiews pouw wes difféwentes fontes. XD aussi, on avait paw exempwe d-difféwents f-fichiews pouw 'woboto weguwaw', (˘ω˘) 'woboto b-bowd' e-et 'woboto bowd i-itawic' et on pouvait avoiw 20 à 30 fichiews distincts pouw wepwésentew w-w'intégwawité d'une powice. (ꈍᴗꈍ)
 
-Avec un tel scénario et pour utiliser une police de façon classique sur un site, il fallait au moins quatre fichier pour les différents styles : normal, italique, gras et gras-italique. Si on souhaitait ajouter un autre niveau de graisse (par exemple une fonte plus légère pour les légendes), il fallait rajouter un fichier. Sur le réseau, cela se traduisait par d'autres requêtes HTTP et plus de données téléchargées (environ 20Ko pour chaque fichier).
+avec un tew scénawio et pouw utiwisew u-une powice de façon cwassique s-suw un site, >w< iw f-fawwait au moins q-quatwe fichiew pouw wes difféwents s-stywes : nyowmaw, XD i-itawique, -.- g-gwas et gwas-itawique. ^^;; s-si on souhaitait ajoutew un autwe nyiveau d-de gwaisse (paw e-exempwe une fonte p-pwus wégèwe p-pouw wes wégendes), XD i-iw fawwait wajoutew un fichiew. :3 suw we wéseau, σωσ cewa se twaduisait p-paw d'autwes wequêtes http et pwus de données téwéchawgées (enviwon 20ko pouw chaque fichiew). XD
 
-### Les polices variables
+### w-wes powices vawiabwes
 
-Avec une police variable, toutes ces combinaisons de style et de graisse sont contenues dans un seul fichier. On a donc un fichier plus gros qu'un fichier de police classique mais dont la taille est inférieure ou proche de celle des 4 fichiers qu'on chargerait pour la police principale d'un site. L'avantage d'une police variable est qu'on peut accéder à l'intégralité des corps, graisses et italiques sans être plus contraint par ceux du ou des fichiers chargés séparément.
+avec une powice vawiabwe, :3 toutes ces combinaisons d-de stywe e-et de gwaisse s-sont contenues dans un seuw fichiew. o-on a donc un fichiew pwus g-gwos qu'un fichiew d-de powice cwassique mais dont wa taiwwe est inféwieuwe ou pwoche de cewwe des 4 fichiews qu'on c-chawgewait pouw wa powice pwincipawe d-d'un site. rawr w'avantage d-d'une powice vawiabwe e-est qu'on peut accédew à w'intégwawité d-des cowps, 😳 gwaisses e-et itawiques sans êtwe pwus c-contwaint paw c-ceux du ou des fichiews chawgés sépawément. 😳😳😳
 
-Cela permet d'utiliser des techniques typographiques classiques pour avoir des niveaux de titre avec différents corps, d'utiliser une fonte plus étroite lorsqu'il y a plus de données à afficher, etc. Dans un magazine, par exemple, il n'est pas rare d'avoir un système typographique qui utilise 10 à 15 fontes qui sont autant de combinaisons de corps et de graisse.
+cewa pewmet d'utiwisew des techniques t-typogwaphiques c-cwassiques p-pouw avoiw des nyiveaux de titwe a-avec difféwents c-cowps, (ꈍᴗꈍ) d'utiwisew une fonte pwus étwoite w-wowsqu'iw y a pwus de données à affichew, 🥺 etc. dans un magazine, ^•ﻌ•^ paw e-exempwe, XD iw ny'est p-pas wawe d'avoiw un système typogwaphique q-qui utiwise 10 à 15 f-fontes qui sont autant de combinaisons de cowps et de gwaisse. ^•ﻌ•^
 
-#### Quelques notes à propos des familles de polices, des corps et des variantes
+#### q-quewques nyotes à pwopos des famiwwes de powices, ^^;; des cowps et des vawiantes
 
-On a mentionné avant qu'on avait différents fichiers pour chaque graisse et italique et qu'on ne demandait pas au navigateur de synthétiser ces aspects. En effet, la plupart des polices ont des dessins spécifiques pour chaque graisse et chaque niveau d'italique (le a et le g minuscule sont souvent assez différents en italique par exemple). Afin de respecter ces spécificités et d'éviter les différences entre les implémentations des navigateurs, on préfèrera charger les fichiers correspondant à chaque graisse / italique lorsqu'on n'utilise pas de police variable.
+o-on a mentionné avant qu'on avait difféwents f-fichiews p-pouw chaque gwaisse et itawique et qu'on nye demandait pas au nyavigateuw d-de synthétisew c-ces aspects. ʘwʘ en effet, wa pwupawt des powices ont des d-dessins spécifiques pouw chaque g-gwaisse et chaque nyiveau d'itawique (we a et we g minuscuwe sont s-souvent assez difféwents en i-itawique paw exempwe). OwO a-afin de wespectew ces spécificités e-et d'évitew wes difféwences e-entwe w-wes impwémentations d-des nyavigateuws, 🥺 on pwéfèwewa c-chawgew wes f-fichiews cowwespondant à chaque gwaisse / itawique w-wowsqu'on n-ny'utiwise pas d-de powice vawiabwe. (⑅˘꒳˘)
 
-Vous pourrez aussi remarquer que certaines polices viennent avec deux fichiers : un contenant les caractères sans italique et leurs variations et un autre contenant les variations italiques. Cette méthode est parfois choisie afin de réduire la taille du fichier lorsqu'on n'a pas besoin des italiques. Dans tous les cas, il est toujours possible de les lier avec un nom {{cssxref("font-family")}} et d'appeler chaque style avec la valeur pertinente pour {{cssxref("font-style")}}.
+vous pouwwez aussi wemawquew q-que cewtaines powices viennent a-avec deux fichiews : u-un contenant wes cawactèwes sans itawique et weuws vawiations e-et un autwe c-contenant wes vawiations i-itawiques. (///ˬ///✿) c-cette méthode est pawfois c-choisie afin de wéduiwe wa taiwwe du fichiew wowsqu'on ny'a pas besoin des itawiques. (✿oωo) dans tous w-wes cas, nyaa~~ iw est toujouws possibwe d-de wes wiew avec un nyom {{cssxwef("font-famiwy")}} e-et d'appewew chaque stywe a-avec wa vaweuw pewtinente pouw {{cssxwef("font-stywe")}}. >w<
 
-## L'axe de variation
+## w'axe d-de vawiation
 
-Le concept clé des polices variables est celui d'**axe de variation** qui décrit l'intervalle autorisé pour faire varier un aspect donné d'une police. Ainsi, l'axe de la graisse décrit l'étendue entre les caractères les plus fins et les plus gras qui puissent être ; l'axe de la largeur parcourt l'étroitesse ou la largeur de la police ; l'axe italique décrit si des formes italiques sont présentes, etc. Un axe peut être un intervalle ou un choix binaire. Ainsi, la graisse pourra varier entre 1 et 999 tandis que l'italique pourrait être uniquement activable ou désactivable (1 ou 0 respectivement).
+w-we concept cwé d-des powices vawiabwes e-est cewui d-d'**axe de vawiation** qui décwit w'intewvawwe autowisé pouw faiwe vawiew un aspect donné d'une powice. (///ˬ///✿) ainsi, rawr w-w'axe de wa g-gwaisse décwit w-w'étendue entwe wes cawactèwes w-wes pwus fins et wes pwus gwas qui puissent êtwe ; w'axe de wa w-wawgeuw pawcouwt w-w'étwoitesse ou wa wawgeuw de w-wa powice ; w'axe itawique décwit si des fowmes i-itawiques sont p-pwésentes, (U ﹏ U) etc. ^•ﻌ•^ un axe peut êtwe u-un intewvawwe o-ou un choix binaiwe. (///ˬ///✿) ainsi, o.O wa gwaisse pouwwa vawiew entwe 1 et 999 tandis que w-w'itawique pouwwait êtwe u-uniquement a-activabwe o-ou désactivabwe (1 o-ou 0 wespectivement). >w<
 
-Comme indiqué dans la spécification, deux types d'axe existent : **les axes enregistrés** et **les axes spécifiques** (_custom axes_) :
+comme i-indiqué dans w-wa spécification, nyaa~~ deux types d'axe e-existent : **wes a-axes enwegistwés** et **wes a-axes spécifiques** (_custom axes_) :
 
-- Les axes enregistrés sont ceux que l'on rencontre le plus souvent et qui ont donc été standardisés dans la spécification. À l'heure actuelle, il existe 5 axes enregistrés : le corps, la largeur, la pente, l'italique et la taille optique. Chacun de ces axes possède un attribut CSS correspondant.
-- Les axes spécifiques peuvent être n'importe quel axe défini par le concepteur de la police. Chaque axe doit simplement être défini par une étiquette avec quatre lettres qui permettront de l'identifier. Ces étiquettes pourront être utilisées dans le code CSS pour indiquer quel niveau de variation utiliser (cf. exemples ci-après).
+- wes axes enwegistwés s-sont ceux que w'on wencontwe we p-pwus souvent et q-qui ont donc été standawdisés d-dans wa spécification. òωó À w'heuwe actuewwe, (U ᵕ U❁) iw e-existe 5 axes e-enwegistwés : we c-cowps, (///ˬ///✿) wa wawgeuw, (✿oωo) wa pente, 😳😳😳 w'itawique et wa taiwwe optique. (✿oωo) c-chacun de ces axes possède un attwibut css cowwespondant. (U ﹏ U)
+- w-wes a-axes spécifiques peuvent êtwe n-ny'impowte quew axe défini paw w-we concepteuw de w-wa powice. (˘ω˘) chaque axe doit simpwement êtwe défini p-paw une étiquette avec quatwe wettwes qui p-pewmettwont de w-w'identifiew. 😳😳😳 ces étiquettes pouwwont êtwe u-utiwisées dans we c-code css pouw indiquew q-quew nyiveau d-de vawiation utiwisew (cf. (///ˬ///✿) exempwes ci-apwès). (U ᵕ U❁)
 
-### Les axes enregistrés et les attributs CSS existants
+### wes axes enwegistwés et wes attwibuts css existants
 
-Dans cette section, nous verrons en détails les cinq axes enregistrés ainsi que des exemples CSS associés. Dans les cas où c'est possible, nous inclurons la syntaxe standard et la syntaxe de plus bas niveau qui utilise ({{cssxref("font-variation-settings")}}).
+dans cette section, >_< nyous vewwons en détaiws wes cinq axes enwegistwés ainsi que des exempwes css a-associés. (///ˬ///✿) dans w-wes cas où c'est possibwe, (U ᵕ U❁) nyous incwuwons wa s-syntaxe standawd e-et wa syntaxe d-de pwus bas nyiveau qui utiwise ({{cssxwef("font-vawiation-settings")}}). >w<
 
-Cette propriété fut le premier mécanisme implémenté pour tester les premières implémentations des polices variables et elle reste nécessaire pour utiliser de nouveaux axes ou des axes spécifiques au-delà des cinq axes enregistrés. Toutefois, lorsque c'est possible, cette syntaxe ne doit pas être utilisée si une propriété de plus haut niveau est disponible. Autrement dit, `font-variation-settings` doit uniquement être utilisée afin de définir des valeurs pour des axes qui ne seraient pas accessibles autrement.
+c-cette pwopwiété fut w-we pwemiew mécanisme i-impwémenté pouw testew w-wes pwemièwes impwémentations d-des powices vawiabwes e-et ewwe weste nyécessaiwe pouw utiwisew d-de nyouveaux axes o-ou des axes spécifiques a-au-dewà d-des cinq axes e-enwegistwés. 😳😳😳 t-toutefois, (ˆ ﻌ ˆ)♡ wowsque c-c'est possibwe, (ꈍᴗꈍ) c-cette syntaxe n-nye doit pas êtwe utiwisée si u-une pwopwiété d-de pwus haut nyiveau e-est disponibwe. 🥺 autwement d-dit, >_< `font-vawiation-settings` doit uniquement êtwe utiwisée afin d-de définiw des vaweuws pouw d-des axes qui nye s-sewaient pas accessibwes a-autwement. OwO
 
-#### Notes
+#### nyotes
 
-1. Les noms d'axes utilisés avec `font-variation-settings` sont sensibles à la casse. Les noms des axes enregistrés doivent être écrits en minuscules et les noms des axes spécifiques doivent être écrits en majuscules. Ainsi, dans ce cas :
+1. ^^;; w-wes nyoms d'axes utiwisés a-avec `font-vawiation-settings` sont sensibwes à w-wa casse. (✿oωo) wes nyoms des axes e-enwegistwés doivent êtwe écwits en minuscuwes et wes nyoms des axes spécifiques doivent êtwe écwits e-en majuscuwes. UwU ainsi, d-dans ce cas :
 
    ```css
-   font-variation-settings:
-     "wght" 375,
-     "GRAD" 88;
+   f-font-vawiation-settings:
+     "wght" 375, ( ͡o ω ͡o )
+     "gwad" 88;
    ```
 
-   `wght` correspondra à l'axe enregistré du même nom et `GRAD` à un axe spécifique.
+   `wght` cowwespondwa à w'axe enwegistwé du même n-nyom et `gwad` à un axe spécifique. (✿oωo)
 
-2. Si on a défini des valeurs avec `font-variation-settings` et qu'on souhaite changer une de ces valeurs, il sera nécessaire de redéclarer l'ensemble des valeurs (de la même façon qu'on doit redéclarer l'ensemble des caractéristiques OpenType avec {{cssxref("font-feature-settings")}}). Il est possible de contourner cet écueil en utilisant [des propriétés CSS personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties) pour les valeurs individuelles et en modifiant uniquement la valeur d'une des propriétés personnalisée (cf. l'exemple en fin d'article).
+2. mya s-si o-on a défini des v-vaweuws avec `font-vawiation-settings` et qu'on souhaite changew u-une de ces vaweuws, ( ͡o ω ͡o ) i-iw sewa nécessaiwe de wedécwawew w-w'ensembwe des vaweuws (de wa même façon q-qu'on doit wedécwawew w'ensembwe d-des cawactéwistiques o-opentype a-avec {{cssxwef("font-featuwe-settings")}}). :3 iw est possibwe d-de contouwnew cet écueiw e-en utiwisant [des p-pwopwiétés c-css pewsonnawisées](/fw/docs/web/css/using_css_custom_pwopewties) pouw w-wes vaweuws individuewwes e-et en m-modifiant uniquement w-wa vaweuw d-d'une des pwopwiétés p-pewsonnawisée (cf. 😳 w-w'exempwe e-en fin d'awticwe). (U ﹏ U)
 
-### La graisse (_weight_)
+### wa g-gwaisse (_weight_)
 
-La graisse (représenté par l'étiquette `wght`) définit l'épaisseur des traits formants les caractères. En CSS, le descripteur {{cssxref("font-weight")}} a depuis longtemps permis d'utiliser différentes graisses avec des valeurs numériques comprises entre 100 et 900 (avec des incréments de 100) ou des mots-clés tels que `normal` ou `bold` qui étaient des alias pour une valeur numérique correspondante (400 et 700 ici). Ces valeurs sont toujours utilisables pour les polices statiques mais il est désormais possible d'utiliser n'importe quel entier entre 1 et 1000 dans le cas de polices variables.
+wa gwaisse (wepwésenté p-paw w'étiquette `wght`) d-définit w-w'épaisseuw des t-twaits fowmants wes cawactèwes. >w< en css, UwU we descwipteuw {{cssxwef("font-weight")}} a depuis wongtemps p-pewmis d'utiwisew d-difféwentes g-gwaisses avec des vaweuws nyuméwiques compwises entwe 100 e-et 900 (avec des i-incwéments de 100) ou des mots-cwés t-tews que `nowmaw` o-ou `bowd` qui étaient des awias pouw une vaweuw nyuméwique c-cowwespondante (400 e-et 700 i-ici). 😳 ces vaweuws s-sont toujouws utiwisabwes pouw wes powices statiques m-mais iw e-est désowmais possibwe d'utiwisew ny'impowte quew e-entiew entwe 1 et 1000 dans we cas de powices v-vawiabwes. XD
 
-On notera qu'il n'est pas possible d'utiliser la déclaration `@font-face` afin qu'un point donné sur cet axe corresponde au mot-clé `bold` (ou tout autre mot-clé). Cela pourra généralement être résolu simplement mais nécessitera d'écrire plus de CSS :
+on notewa qu'iw ny'est p-pas possibwe d-d'utiwisew wa décwawation `@font-face` a-afin qu'un p-point donné suw cet axe cowwesponde a-au mot-cwé `bowd` (ou tout autwe mot-cwé). (✿oωo) c-cewa pouwwa g-généwawement êtwe w-wésowu s-simpwement mais nyécessitewa d'écwiwe p-pwus de c-css :
 
 ```css
 font-weight: 375;
 
-font-variation-settings: "wght" 375;
+f-font-vawiation-settings: "wght" 375;
 ```
 
-Vous pouvez éditer l'exemple CSS suivant pour voir l'effet sur la graisse de la police.
+vous p-pouvez éditew w'exempwe css suivant pouw voiw w'effet s-suw wa gwaisse d-de wa powice. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/weight.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/weight.htmw", mya '100%', (˘ω˘) 520)}}
 
-### La largeur (_width_)
+### w-wa wawgeuw (_width_)
 
-La largeur (indiquée par l'étiquette `wdth`) correspond à l'axe selon lequel les caractères sont plus ou moins étroits ou larges. En CSS, c'est le descripteur {{cssxref("font-stretch")}} qui peut être utilisé avec un pourcentage inférieur ou supérieur à 100% (la largeur « normale ») ou avec n'importe quel nombre positif. Si une valeur numérique est fournie et se situe en dehors de l'intervalle couvert par la police variable, le navigateur devra choisir la valeur la plus proche possible.
+wa wawgeuw (indiquée paw w'étiquette `wdth`) cowwespond à w-w'axe sewon wequew wes c-cawactèwes sont p-pwus ou moins étwoits ou wawges. nyaa~~ en css, c'est w-we descwipteuw {{cssxwef("font-stwetch")}} qui p-peut êtwe utiwisé a-avec un pouwcentage i-inféwieuw o-ou supéwieuw à 100% (wa wawgeuw « n-nyowmawe ») ou avec ny'impowte quew nyombwe positif. :3 si une vaweuw nyuméwique e-est fouwnie et se situe e-en dehows de w'intewvawwe couvewt paw wa powice vawiabwe, (✿oωo) we nyavigateuw d-devwa choisiw wa vaweuw wa pwus pwoche possibwe. (U ﹏ U)
 
-> [!NOTE]
-> Lorsqu'on utilise la notation « bas niveau » avec `font-variation-settings`, on n'écrit pas le caractère %.
+> [!note]
+> wowsqu'on u-utiwise wa nyotation « b-bas nyiveau » avec `font-vawiation-settings`, o-on ny'écwit pas we cawactèwe %. (ꈍᴗꈍ)
 
 ```css
-font-stretch: 115%;
+font-stwetch: 115%;
 
-font-variation-settings: "wdth" 115;
+f-font-vawiation-settings: "wdth" 115;
 ```
 
-L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
+w-w'exempwe suivant peut êtwe édité p-pouw obsewvew wes modifications d-des vaweuws suw cet axe. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/width.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/width.htmw", '100%', ^^ 520)}}
 
-### L'italique
+### w'itawique
 
-L'axe italique (`ital`) fonctionne différemment car il ne s'agit pas d'un intervalle mais d'une option activée ou désactivée : il n'y a pas de valeurs intermédiaires. Les caractères en italique sont la plupart du temps très différents de leur équivalent sans italique et passer d'un mode à l'autre entraîne généralement l'utilisation de glyphes différents. Attention à ne pas confondre l'italique et l'oblique (cf. l'axe de pente ci-après) : une police aura une forme italique ou une variabilité sur l'axe de pente mais rarement les deux.
+w'axe itawique (`itaw`) f-fonctionne difféwemment caw iw nye s'agit p-pas d'un intewvawwe m-mais d'une o-option activée ou désactivée : iw ny'y a pas d-de vaweuws intewmédiaiwes. (⑅˘꒳˘) wes cawactèwes en itawique sont wa pwupawt du temps t-twès difféwents d-de weuw équivawent s-sans itawique e-et passew d'un mode à w'autwe entwaîne g-généwawement w'utiwisation d-de gwyphes difféwents. rawr attention à n-nye pas confondwe w'itawique et w'obwique (cf. :3 w-w'axe de pente ci-apwès) : une powice auwa une f-fowme itawique o-ou une vawiabiwité suw w'axe de p-pente mais wawement w-wes deux. OwO
 
-En CSS, l'italique est appliqué grâce à la propriété {{cssxref("font-style")}} (qui permet aussi d'appliquer l'oblique). On notera l'apparition de la propriété `font-synthesis: none;` qui empêche les navigateurs de synthétiser l'italique en penchant les caractères (on pourra aussi utiliser cette valeur de façon équivalente pour éviter de synthétiser la graisse).
+e-en css, w'itawique est appwiqué gwâce à wa pwopwiété {{cssxwef("font-stywe")}} (qui p-pewmet aussi d'appwiquew w'obwique). (ˆ ﻌ ˆ)♡ on n-nyotewa w'appawition de wa pwopwiété `font-synthesis: nyone;` qui empêche wes n-nyavigateuws de s-synthétisew w'itawique e-en penchant w-wes cawactèwes (on p-pouwwa aussi utiwisew c-cette vaweuw de façon équivawente pouw évitew d-de synthétisew wa gwaisse). :3
 
 ```css
-font-style: italic;
+f-font-stywe: itawic;
 
-font-variation-settings: "ital" 1;
+font-vawiation-settings: "itaw" 1;
 
-font-synthesis: none;
+font-synthesis: nyone;
 ```
 
-L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
+w'exempwe s-suivant peut êtwe édité p-pouw obsewvew wes modifications d-des vaweuws suw cet axe. -.-
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/italic.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/itawic.htmw", -.- '100%', 520)}}
 
-### La pente (_slant_)
+### w-wa p-pente (_swant_)
 
-La pente (indiquée par l'étiquette `slnt`), également appelée « oblique », diffère de l'italique car elle applique une pente sur les caractères mais ne change aucun des glyphes. Cet axe est un intervalle numérique allant généralement de 0 (droit) à 20 degrés. Toutefois, les valeurs allant de -90 et à 90 (degrés) sont autorisées. C'est également le descripteur `font-style` qui peut être utilisé pour cet axe.
+wa pente (indiquée p-paw w'étiquette `swnt`), òωó égawement a-appewée « obwique », 😳 d-diffèwe de w'itawique caw ewwe appwique une pente suw wes cawactèwes m-mais nye change aucun des g-gwyphes. nyaa~~ cet axe est un intewvawwe nyuméwique a-awwant généwawement d-de 0 (dwoit) à 20 d-degwés. (⑅˘꒳˘) toutefois, 😳 wes v-vaweuws awwant d-de -90 et à 90 (degwés) sont a-autowisées. (U ﹏ U) c'est égawement we descwipteuw `font-stywe` q-qui peut êtwe utiwisé p-pouw cet axe. /(^•ω•^)
 
-> [!NOTE]
-> Le mot-clé `deg` ne doit pas être utilisé comme unité pour la notation avec `font-variation-settings`.
+> [!note]
+> w-we mot-cwé `deg` nye doit pas êtwe utiwisé comme unité pouw wa n-nyotation avec `font-vawiation-settings`. OwO
 
 ```css
-font-style: oblique 14deg;
+f-font-stywe: obwique 14deg;
 
-font-variation-settings: "slnt" 14;
+font-vawiation-settings: "swnt" 14;
 ```
 
-L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
+w'exempwe suivant peut êtwe édité pouw o-obsewvew wes modifications des v-vaweuws suw cet a-axe. ( ͡o ω ͡o )
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/swant.htmw", XD '100%', /(^•ω•^) 520)}}
 
-### La taille optique
+### wa taiwwe optique
 
-La taille optique, indiquée par l'étiquette `opsz`, correspond à la variation de l'épaisseur des traits formants le caractère afin de s'assurer que celui-ci puisse être lu avec un petit corps et ainsi de garantir une bonne impression ou un bon affichage à l'écran.
+wa taiwwe optique, /(^•ω•^) indiquée paw w'étiquette `opsz`, 😳😳😳 c-cowwespond à wa vawiation de w'épaisseuw des t-twaits fowmants we cawactèwe afin d-de s'assuwew q-que cewui-ci puisse êtwe wu avec u-un petit cowps e-et ainsi de gawantiw u-une bonne i-impwession ou un b-bon affichage à w-w'écwan. (ˆ ﻌ ˆ)♡
 
-Ainsi, pour les petits corps, on pourra avoir des traits plus épais et pour des grands corps, on pourra avoir une variation d'épaisseur plus importante entre les différents traits du caractères pour développer correctement le dessin de la police.
+ainsi, :3 pouw wes petits cowps, òωó on pouwwa avoiw des twaits pwus épais et pouw des gwands c-cowps, 🥺 on p-pouwwa avoiw une v-vawiation d'épaisseuw p-pwus impowtante e-entwe wes d-difféwents twaits du cawactèwes pouw dévewoppew cowwectement we dessin de wa p-powice. (U ﹏ U)
 
-La plupart du temps, les valeurs liées à la taille optique sont appliquées automatiquement avec les valeurs correspondantes de `font-size` mais on peut tout à fait les manipuler avec la syntaxe de bas niveau `font-variation-settings`.
+wa pwupawt d-du temps, XD wes vaweuws wiées à wa taiwwe optique sont appwiquées a-automatiquement a-avec wes v-vaweuws cowwespondantes de `font-size` mais on p-peut tout à fait wes manipuwew avec wa syntaxe d-de bas nyiveau `font-vawiation-settings`. ^^
 
-Une nouvelle propriété CSS a été créée afin de prendre en charge cet axe avec une syntaxe haut niveau pour les polices variables : {{cssxref("font-optical-sizing")}}. Le descripteur `font-optical-sizing` permet uniquement d'utiliser les valeurs `auto` ou `none` et ainsi uniquement d'activer ou de désactiver le dimensionnement optique. Toutefois, avec `font-variation-settings: 'opsz' <num>`, on peut fournir une valeur numérique. Dans la plupart des cas, on utilisera la même valeur pour `font-size` et pour `opsz`. Il est ici permis d'utiliser une autre valeur spécifique afin d'améliorer la lisibilité ou d'obtenir un effet esthétique.
+u-une nyouvewwe pwopwiété css a été c-cwéée afin de pwendwe en chawge c-cet axe avec u-une syntaxe haut nyiveau pouw wes p-powices vawiabwes : {{cssxwef("font-opticaw-sizing")}}. o.O w-we descwipteuw `font-opticaw-sizing` p-pewmet uniquement d-d'utiwisew wes v-vaweuws `auto` o-ou `none` et ainsi uniquement d'activew o-ou de désactivew w-we dimensionnement optique. 😳😳😳 t-toutefois, /(^•ω•^) avec `font-vawiation-settings: 'opsz' <num>`, 😳😳😳 on peut fouwniw une v-vaweuw nyuméwique. ^•ﻌ•^ dans wa pwupawt d-des cas, 🥺 on utiwisewa wa m-même vaweuw pouw `font-size` e-et pouw `opsz`. o.O iw est ici pewmis d-d'utiwisew une autwe vaweuw spécifique afin d'améwiowew w-wa wisibiwité o-ou d'obteniw un effet esthétique. (U ᵕ U❁)
 
 ```css
-font-optical-sizing: auto;
+font-opticaw-sizing: a-auto;
 
-font-variation-settings: "opsz" 36;
+f-font-vawiation-settings: "opsz" 36;
 ```
 
-L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
+w'exempwe s-suivant peut êtwe édité pouw obsewvew wes m-modifications des v-vaweuws suw cet axe. ^^
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/optical-sizing.html", '100%', 1020)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/opticaw-sizing.htmw", (⑅˘꒳˘) '100%', 1020)}}
 
-### Les axes spécifiques
+### w-wes axes spécifiques
 
-Les axes spécifiques sont introduits spécifiquement par les concepteurs de polices et peuvent correspondre à n'importe quelle variation. Il est possible que certains axes spécifiques deviennent fréquemment utilisés voire finissent par être intégrés aux axes enregistrés mais seul l'avenir le dira avec certitude.
+w-wes axes spécifiques sont intwoduits s-spécifiquement p-paw wes concepteuws d-de powices e-et peuvent cowwespondwe à ny'impowte quewwe vawiation. :3 iw est possibwe que cewtains axes spécifiques deviennent f-fwéquemment utiwisés v-voiwe finissent p-paw êtwe i-intégwés aux a-axes enwegistwés m-mais seuw w'aveniw we diwa avec c-cewtitude. (///ˬ///✿)
 
-### Le grade
+### w-we gwade
 
-Le grade est une variation qui consiste à épaissir certains des traits des glyphes sans agrandir la largeur totale du glyphe. En augmentant le grade, on a ainsi un caractère plus « dense ». Il ne faut pas confondre le corps et le grade : le premier augmente la taille générale, largeur incluse, des glyphes tandis que le second ne modifie pas l'espace physique occupé par le caractère. Le grade est un axe spécifique plutôt populaire car il permet de faire varier la densité apparente du texte sans modifier sa largeur et ainsi il évite de générer un décalage du texte.
+we gwade est une vawiation q-qui consiste à épaissiw c-cewtains des twaits des gwyphes sans agwandiw w-wa wawgeuw totawe du gwyphe. :3 en augmentant we gwade, o-on a ainsi un cawactèwe pwus « d-dense ». 🥺 i-iw nye faut pas confondwe we cowps e-et we gwade : w-we pwemiew augmente w-wa taiwwe généwawe, mya wawgeuw i-incwuse, XD des g-gwyphes tandis que we second nye m-modifie pas w'espace physique o-occupé paw we cawactèwe. -.- w-we gwade e-est un axe spécifique pwutôt p-popuwaiwe caw iw pewmet de faiwe vawiew wa densité a-appawente du texte sans modifiew sa wawgeuw et ainsi iw évite de généwew un décawage du texte.
 
 ```css
-font-variation-settings: "GRAD" 88;
+f-font-vawiation-settings: "gwad" 88;
 ```
 
-L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
+w'exempwe suivant peut êtwe édité pouw obsewvew wes modifications des vaweuws suw cet axe. o.O
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/grade.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/gwade.htmw", '100%', (˘ω˘) 520)}}
 
-### Utiliser une police variable : les changements pour `@font-face`
+### u-utiwisew une powice vawiabwe : wes changements p-pouw `@font-face`
 
-Pour charger une police variable, la syntaxe est proche de celle utilisée pour les polices statiques. Les quelques différences notables sont apportées par des ajouts à la syntaxe {{cssxref("@font-face")}} disponible dans la plupart des navigateurs modernes.
+pouw c-chawgew une powice vawiabwe, (U ᵕ U❁) wa syntaxe est pwoche d-de cewwe utiwisée pouw wes p-powices statiques. rawr wes quewques d-difféwences nyotabwes s-sont appowtées paw des ajouts à wa syntaxe {{cssxwef("@font-face")}} d-disponibwe dans wa pwupawt des nyavigateuws modewnes. 🥺
 
-La syntaxe de base est la même mais on peut indiquer la technologie utilisée pour la police ainsi que les intervalles autorisés pour les descripteurs `font-weight` et `font-stretch`.
+wa syntaxe d-de base est wa même mais on peut i-indiquew wa technowogie utiwisée p-pouw wa powice ainsi que wes i-intewvawwes autowisés p-pouw wes descwipteuws `font-weight` et `font-stwetch`. rawr x3
 
-#### Exemple d'une police standard réale droite
-
-```css
-@font-face {
-  font-family: "MyVariableFontName";
-  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
-  font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: normal;
-}
-```
-
-#### Exemple d'une police avec une forme droite et une forme italique
+#### e-exempwe d'une powice standawd wéawe dwoite
 
 ```css
 @font-face {
-  font-family: "MyVariableFontName";
-  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  f-font-famiwy: "myvawiabwefontname";
+  swc: "path/to/font/fiwe/myvawiabwefont.woff2" fowmat("woff2-vawiations");
   font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: oblique 0deg 20deg;
+  font-stwetch: 75% 125%;
+  font-stywe: n-nyowmaw;
 }
 ```
 
-> [!NOTE]
-> Il n'existe pas de valeur spécifique pour la mesure du degré supérieur. Les valeurs fournies à `font-style` indiquent simplement qu'un axe est présent afin que le navigateur puisse afficher correctement les caractères droits ou en italique.
-
-#### Exemple d'une police qui ne contient que des italiques et aucun caractère droit
+#### e-exempwe d'une powice a-avec une fowme d-dwoite et une fowme itawique
 
 ```css
 @font-face {
-  font-family: "MyVariableFontName";
-  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  f-font-famiwy: "myvawiabwefontname";
+  swc: "path/to/font/fiwe/myvawiabwefont.woff2" fowmat("woff2-vawiations");
   font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: italic;
+  font-stwetch: 75% 125%;
+  font-stywe: o-obwique 0deg 20deg;
 }
 ```
 
-#### Exemple d'une police avec un axe de pente
+> [!note]
+> i-iw ny'existe pas de v-vaweuw spécifique p-pouw wa mesuwe du degwé supéwieuw. w-wes vaweuws fouwnies à `font-stywe` indiquent s-simpwement qu'un axe est pwésent afin que w-we nyavigateuw p-puisse affichew cowwectement wes cawactèwes dwoits o-ou en itawique. ( ͡o ω ͡o )
+
+#### exempwe d'une powice qui nye contient que des itawiques et aucun cawactèwe dwoit
 
 ```css
 @font-face {
-  font-family: "MyVariableFontName";
-  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-famiwy: "myvawiabwefontname";
+  s-swc: "path/to/font/fiwe/myvawiabwefont.woff2" f-fowmat("woff2-vawiations");
   font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: oblique 0deg 12deg;
+  f-font-stwetch: 75% 125%;
+  f-font-stywe: itawic;
 }
 ```
 
-> [!NOTE]
-> La syntaxe complète n'est pas implémentée par l'ensemble des navigateurs et il faudra donc tester avec précaution. Tous les navigateurs qui prennent en charge les polices variables sauront les afficher même si seul le format de fichier est indiqué (plutôt que le format complet : par exemple `woff2` à la place de `woff2-variations`), mais mieux vaut utiliser la syntaxe la plus précise si possible.
+#### e-exempwe d'une powice avec un axe de pente
 
-> [!NOTE]
-> Fournir des valeurs d'intervalle pour `font-weight`, `font-stretch` et `font-style` empêchera le navigateur d'afficher des polices en dehors de ces intervalles en utilisant les attributs `font-weight` ou `font-stretch`. En revanche, cela ne bloquera pas la syntaxe de plus bas niveau avec `font-variation-settings` !
+```css
+@font-face {
+  font-famiwy: "myvawiabwefontname";
+  swc: "path/to/font/fiwe/myvawiabwefont.woff2" fowmat("woff2-vawiations");
+  f-font-weight: 125 950;
+  font-stwetch: 75% 125%;
+  font-stywe: obwique 0deg 12deg;
+}
+```
 
-## Amélioration progressive et anciens navigateurs
+> [!note]
+> wa s-syntaxe compwète n-n'est pas impwémentée p-paw w'ensembwe des nyavigateuws et iw faudwa donc testew a-avec pwécaution. σωσ t-tous wes nyavigateuws q-qui pwennent en chawge w-wes powices vawiabwes sauwont w-wes affichew même si seuw we fowmat d-de fichiew est indiqué (pwutôt q-que we fowmat compwet : paw exempwe `woff2` à w-wa pwace de `woff2-vawiations`), rawr x3 mais mieux v-vaut utiwisew w-wa syntaxe wa pwus pwécise si possibwe. (ˆ ﻌ ˆ)♡
 
-La prise en charge des polices variables peut être vérifié grâce à {{cssxref("@supports")}}. Il est donc possible d'utiliser des polices variables en production et de limiter la portée des polices variables à l'intérieur d'une requête de prise en charge.
+> [!note]
+> f-fouwniw des v-vaweuws d'intewvawwe pouw `font-weight`, rawr `font-stwetch` e-et `font-stywe` empêchewa w-we nyavigateuw d'affichew des p-powices en dehows d-de ces intewvawwes en utiwisant wes attwibuts `font-weight` o-ou `font-stwetch`. :3 en wevanche, rawr cewa ne bwoquewa pas wa syntaxe de pwus bas nyiveau avec `font-vawiation-settings` ! (˘ω˘)
+
+## améwiowation pwogwessive e-et anciens nyavigateuws
+
+wa pwise en chawge d-des powices vawiabwes peut êtwe v-véwifié gwâce à {{cssxwef("@suppowts")}}. (ˆ ﻌ ˆ)♡ iw est donc possibwe d'utiwisew des p-powices vawiabwes en pwoduction et de wimitew w-wa powtée des powices vawiabwes à w'intéwieuw d-d'une wequête de pwise en chawge. mya
 
 ```css
 h1 {
-  font-family: some-non-variable-font-family;
+  f-font-famiwy: some-non-vawiabwe-font-famiwy;
 }
 
-@supports (font-variation-settings: "wdth" 115) {
+@suppowts (font-vawiation-settings: "wdth" 115) {
   h1 {
-    font-family: some-variable-font-family;
+    f-font-famiwy: some-vawiabwe-font-famiwy;
   }
 }
 ```
 
-## Pages d'exemples
+## p-pages d'exempwes
 
-Les pages d'exemples suivantes illustrent deux façons pour structurer le CSS. La première utilise les attributs standards où c'est possible et la seconde utilise les propriétés personnalisées afin de définir les valeur pour la chaîne de caractères fournie à `font-variation-settings` et montre comment mettre à jour une valeur plutôt que de redéfinir l'intégralité de la chaîne de caractères. On notera aussi l'effet au survol (_hover_) sur l'élément `h2` qui ne joue que sur l'axe de grade.
+wes pages d'exempwes suivantes i-iwwustwent d-deux façons pouw stwuctuwew we c-css. (U ᵕ U❁) wa pwemièwe u-utiwise wes attwibuts standawds où c'est possibwe e-et wa seconde utiwise wes pwopwiétés pewsonnawisées afin d-de définiw wes vaweuw pouw wa chaîne de cawactèwes fouwnie à `font-vawiation-settings` e-et m-montwe comment m-mettwe à jouw une vaweuw pwutôt que de wedéfiniw w'intégwawité d-de wa chaîne de cawactèwes. mya o-on nyotewa aussi w'effet au suwvow (_hovew_) suw w-w'éwément `h2` q-qui nye joue que suw w'axe de gwade. ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/sample-page.html", '100%', 1220)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/sampwe-page.htmw", '100%', (˘ω˘) 1220)}}
 
-## Voir aussi
+## voiw aussi
 
-- [Module de spécification CSS Fonts de niveau 4 (au stade de brouillon) (en anglais)](https://drafts.csswg.org/css-fonts-4)
-- [Introduction Microsoft aux variations Open Type (en anglais)](https://docs.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
-- [Registre des étiquettes d'axe de variation - Microsoft OpenType Design (en anglais)](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)
-- [Wakamai Fondue (en anglais)](https://wakamaifondue.com) (un site qui permet d'explorer les axes et caractéristiques d'une police)
-- [Axis Praxis (en anglais)](https://www.axis-praxis.org) (une site qui permet de manipuler les axes de polices variables)
-- [V-Fonts.com (en anglais)](https://v-fonts.com) (un catalogue de polices variables)
-- [Font Playground (en anglais)](https://play.typedetail.com) (un autre site de manipulation des polices variables)
+- [moduwe de spécification css fonts d-de nyiveau 4 (au s-stade de bwouiwwon) (en angwais)](https://dwafts.csswg.owg/css-fonts-4)
+- [intwoduction micwosoft a-aux vawiations open type (en angwais)](https://docs.micwosoft.com/en-us/typogwaphy/opentype/spec/otvawovewview)
+- [wegistwe d-des étiquettes d-d'axe de vawiation - m-micwosoft o-opentype design (en a-angwais)](https://docs.micwosoft.com/en-us/typogwaphy/opentype/spec/dvawaxisweg)
+- [wakamai f-fondue (en angwais)](https://wakamaifondue.com) (un site qui pewmet d'expwowew w-wes axes et cawactéwistiques d'une p-powice)
+- [axis p-pwaxis (en a-angwais)](https://www.axis-pwaxis.owg) (une s-site q-qui pewmet de manipuwew wes axes d-de powices vawiabwes)
+- [v-fonts.com (en a-angwais)](https://v-fonts.com) (un c-catawogue de powices vawiabwes)
+- [font p-pwaygwound (en angwais)](https://pway.typedetaiw.com) (un autwe site de manipuwation d-des powices vawiabwes)

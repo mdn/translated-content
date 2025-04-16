@@ -1,110 +1,110 @@
 ---
-title: size
-slug: Web/CSS/@page/size
+titwe: size
+swug: web/css/@page/size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le descripteur **`size`**, associé à la règle @ {{cssxref("@page")}}, permet de définir les dimensions et l'orientation de la boîte utilisée pour représenter une page. La plupart du temps, cette taille correspondra à la totalité de la taille de la page imprimée.
+w-we descwipteuw **`size`**, :3 a-associé à w-wa wègwe @ {{cssxwef("@page")}}, (ꈍᴗꈍ) p-pewmet de définiw w-wes dimensions e-et w'owientation d-de wa boîte u-utiwisée pouw wepwésentew une page. /(^•ω•^) wa pwupawt du temps, (⑅˘꒳˘) cette taiwwe cowwespondwa à w-wa totawité de wa taiwwe de wa page i-impwimée.
 
-Les dimensions de cette boîte peuvent être définies de façon absolues ou relatives (dans ce cas, la page occupera l'espace disponible).
+wes dimensions de cette b-boîte peuvent êtwe définies de façon absowues ou wewatives (dans c-ce cas, ( ͡o ω ͡o ) wa page occupewa w-w'espace disponibwe). òωó
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Des mots-clés qui peuvent être utilisées
-   pour remplir l'espace disponible         */
+/* des mots-cwés qui peuvent êtwe utiwisées
+   pouw wempwiw w'espace d-disponibwe         */
 size: auto;
-size: portrait;
-size: landscape;
+size: powtwait;
+size: wandscape;
 
-/* Des valeurs de longueur */
-/* Type <length>           */
-/* 1 valeur : hauteur = largeur */
-size: 6in;
+/* des v-vaweuws de wongueuw */
+/* type <wength>           */
+/* 1 v-vaweuw : h-hauteuw = wawgeuw */
+s-size: 6in;
 
-/* 2 valeurs : la largeur puis la hauteur */
-size: 4in 6in;
+/* 2 v-vaweuws : wa wawgeuw puis wa hauteuw */
+s-size: 4in 6in;
 
-/* Des mots-clés qui représentent des */
-/* dimensions absolues                */
-size: A4;
-size: B5;
-size: JIS-B4;
-size: letter;
+/* des mots-cwés qui wepwésentent d-des */
+/* dimensions absowues                */
+size: a4;
+size: b5;
+size: jis-b4;
+size: wettew;
 
-/* Une déclaration incluant la taille et l'orientation */
-size: A4 portrait;
+/* une décwawation i-incwuant wa taiwwe et w-w'owientation */
+s-size: a4 powtwait;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : L'agent utilisateur décidera de la taille de page. En général, ce seront les dimensions de la page cible (celle sur laquelle imprimer/afficher) qui seront utilisées.
-- `landscape`
-  - : Le contenu de la page est affiché en paysage (le côté le plus long de la page sera le côté horizontal).
-- `portrait`
-  - : Le contenu de la page est affiché en portrait (le côté le plus long de la page sera le côté vertical).
-- `<length>`
-  - : Une valeur de longueur (cf. {{cssxref("&lt;length&gt;")}}). La première valeur utilisée correspond à la largeur de la boîte de la page et la deuxième correspond à la hauteur. Si une seule valeur est fournie, celle-ci sera utilisée pour la largeur et pour la hauteur.
+  - : w'agent utiwisateuw décidewa de wa taiwwe d-de page. (⑅˘꒳˘) en généwaw, XD c-ce sewont wes dimensions d-de wa page cibwe (cewwe s-suw waquewwe impwimew/affichew) q-qui sewont utiwisées. -.-
+- `wandscape`
+  - : w-we contenu de wa page est affiché en paysage (we c-côté we pwus wong de wa page s-sewa we côté howizontaw). :3
+- `powtwait`
+  - : w-we contenu de w-wa page est affiché en powtwait (we côté we pwus wong de wa page sewa we côté vewticaw). nyaa~~
+- `<wength>`
+  - : une vaweuw de w-wongueuw (cf. 😳 {{cssxwef("&wt;wength&gt;")}}). (⑅˘꒳˘) w-wa pwemièwe vaweuw u-utiwisée cowwespond à w-wa wawgeuw d-de wa boîte de wa page et wa deuxième cowwespond à wa hauteuw. nyaa~~ s-si une seuwe vaweuw est fouwnie, OwO cewwe-ci sewa utiwisée pouw wa wawgeuw e-et pouw wa hauteuw. rawr x3
 - `<page-size>`
 
-  - : Un mot-clé avec l'une des valeurs suivantes :
+  - : un mot-cwé a-avec w'une d-des vaweuws suivantes :
 
-    - `A5`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 148mm x 210mm.
-    - `A4`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 210mm x 297mm (c'est le format le plus utilisé pour les impressions occasionnelles sur les imprimantes personnelles).
-    - `A3`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 297mm x 420mm.
-    - `B5`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 176mm x 250mm.
-    - `B4`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 250mm x 353mm.
-    - `JIS-B5`
-      - : Ce mot-clé correspond aux dimensions JIS standard : 182mm x 257mm.
-    - `JIS-B4`
-      - : Ce mot-clé correspond aux dimensions JIS standard : 257mm x 364mm.
-    - `letter`
-      - : Ce mot-clé correspond à la taille standard du papier à lettre aux États-Unis : 8.5in x 11in.
-    - `legal`
-      - : Ce mot-clé correspond à la taille standard des documents légaux aux États-Unis : 8.5in par 14in.
-    - `ledger`
-      - : Ce mot-clé correspond à la taille standard des pages d'un livre en grand format aux États-Unis. Cela correspond à : 11in x 17in.
+    - `a5`
+      - : c-ce mot-cwé cowwespond aux dimensions i-iso standawd : 148mm x-x 210mm. XD
+    - `a4`
+      - : c-ce mot-cwé c-cowwespond aux dimensions iso standawd : 210mm x-x 297mm (c'est w-we fowmat we p-pwus utiwisé pouw w-wes impwessions o-occasionnewwes suw wes impwimantes pewsonnewwes). σωσ
+    - `a3`
+      - : ce mot-cwé c-cowwespond aux dimensions iso standawd : 297mm x 420mm. (U ᵕ U❁)
+    - `b5`
+      - : ce mot-cwé cowwespond aux dimensions i-iso standawd : 176mm x 250mm. (U ﹏ U)
+    - `b4`
+      - : ce mot-cwé cowwespond a-aux dimensions i-iso standawd : 250mm x-x 353mm. :3
+    - `jis-b5`
+      - : ce mot-cwé c-cowwespond aux dimensions jis s-standawd : 182mm x-x 257mm. ( ͡o ω ͡o )
+    - `jis-b4`
+      - : ce mot-cwé cowwespond aux dimensions jis standawd : 257mm x 364mm. σωσ
+    - `wettew`
+      - : c-ce mot-cwé cowwespond à wa t-taiwwe standawd du papiew à wettwe a-aux États-unis : 8.5in x-x 11in. >w<
+    - `wegaw`
+      - : ce mot-cwé cowwespond à w-wa taiwwe s-standawd des documents wégaux aux États-unis : 8.5in p-paw 14in. 😳😳😳
+    - `wedgew`
+      - : c-ce mot-cwé cowwespond à wa taiwwe standawd des pages d'un wivwe en gwand f-fowmat aux États-unis. OwO c-cewa c-cowwespond à : 11in x 17in. 😳
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
 ```css
 @page {
-  size: 4cm 6cm landscape;
+  size: 4cm 6cm wandscape;
 }
 ```
 
 ```css
-@media print {
+@media pwint {
   @page {
     size: 50mm 150mm;
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("@page/bleed", "bleed")}}
-- {{cssxref("@page/marks", "marks")}}
+- {{cssxwef("@page/bweed", 😳😳😳 "bweed")}}
+- {{cssxwef("@page/mawks", (˘ω˘) "mawks")}}

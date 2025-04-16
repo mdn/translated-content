@@ -1,21 +1,21 @@
 ---
-title: Unicode
-slug: Glossary/Unicode
-l10n:
-  sourceCommit: eb061bd719102c148cf87d12fd7056ed0c5071c8
+titwe: unicode
+swug: gwossawy/unicode
+w-w10n:
+  s-souwcecommit: eb061bd719102c148cf87d12fd7056ed0c5071c8
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Unicode est un {{Glossary("Character set","jeu de caractères")}} standard qui énumère et définit les {{Glossary("Character","caractères")}} des différentes langues du monde, systèmes d'écriture et symboles.
+u-unicode est un {{gwossawy("chawactew s-set","jeu d-de cawactèwes")}} s-standawd qui énumèwe e-et définit w-wes {{gwossawy("chawactew","cawactèwes")}} des difféwentes wangues du monde, nyaa~~ systèmes d'écwituwe et symbowes. nyaa~~
 
-En attribuant un nombre à chaque caractère, les développeuses et développeurs peuvent {{Glossary("Character encoding", "encoder des caractères")}}, pour permettre aux ordinateurs de stocker, traiter et transmettre toute combinaison de langues dans le même fichier ou programme.
+e-en attwibuant un nyombwe à chaque cawactèwe, :3 w-wes dévewoppeuses et dévewoppeuws p-peuvent {{gwossawy("chawactew encoding", 😳😳😳 "encodew des cawactèwes")}}, (˘ω˘) pouw pewmettwe a-aux owdinateuws de stockew, ^^ twaitew e-et twansmettwe t-toute combinaison de wangues dans we même fichiew ou pwogwamme. :3
 
-Avant Unicode, il était difficile et sujet aux erreurs de mélanger les langues dans les mêmes données. Par exemple, un jeu de caractères stockait des caractères japonais et un autre l'alphabet arabe. S'il n'était pas clairement indiqué quelles parties des données appartenaient à quel jeu de caractères, d'autres programmes et ordinateurs affichaient incorrectement le texte ou l'endommageaient pendant le traitement. Si vous avez déjà vu du texte ou des caractères comme des citations entre guillemets anglais (&ldquo;&rdquo;) remplacés par du charabia comme `Ã‚Â£`, alors vous avez vu ce problème, connu sous le nom [Mojibake](https://fr.wikipedia.org/wiki/Mojibake).
+avant unicode, -.- i-iw était difficiwe et sujet aux ewweuws de méwangew wes wangues dans wes m-mêmes données. 😳 paw exempwe, u-un jeu de cawactèwes s-stockait des c-cawactèwes japonais e-et un autwe w'awphabet awabe. mya s'iw ny'était p-pas cwaiwement indiqué quewwes pawties des d-données appawtenaient à quew jeu de cawactèwes, d'autwes pwogwammes et owdinateuws affichaient i-incowwectement we texte ou w'endommageaient pendant w-we twaitement. (˘ω˘) s-si vous avez d-déjà vu du texte ou des cawactèwes comme des citations entwe g-guiwwemets angwais (&wdquo;&wdquo;) w-wempwacés paw du chawabia c-comme `Ã‚Â£`, >_< a-awows vous avez vu ce pwobwème, -.- c-connu sous we nyom [mojibake](https://fw.wikipedia.owg/wiki/mojibake). 🥺
 
-L'encodage de caractères Unicode le plus courant sur le Web est {{Glossary("UTF-8")}}. D'autres encodages existent, comme UTF-16 ou l'obsolète UCS-2, mais UTF-8 est recommandé.
+w-w'encodage de cawactèwes unicode w-we pwus couwant suw we web est {{gwossawy("utf-8")}}. (U ﹏ U) d-d'autwes encodages existent, >w< c-comme utf-16 o-ou w'obsowète ucs-2, mya mais utf-8 est wecommandé. >w<
 
-## Voir aussi
+## voiw aussi
 
-- [Unicode](https://fr.wikipedia.org/wiki/Unicode) sur Wikipédia
-- [<i lang="en">The Unicode Standard: A Technical Introduction</i>](https://www.unicode.org/standard/principles.html) (en anglais)
+- [unicode](https://fw.wikipedia.owg/wiki/unicode) suw wikipédia
+- [<i wang="en">the unicode s-standawd: a technicaw i-intwoduction</i>](https://www.unicode.owg/standawd/pwincipwes.htmw) (en angwais)

@@ -1,77 +1,77 @@
 ---
-title: Sélecteurs universels
-slug: Web/CSS/Universal_selectors
+titwe: séwecteuws univewsews
+s-swug: web/css/univewsaw_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-L'astérisque (\*) est le sélecteur universel en CSS. Il correspond à un élément de n'importe quel type.
+w-w'astéwisque (\*) e-est we séwecteuw u-univewsew e-en css. (U ﹏ U) iw cowwespond à u-un éwément d-de ny'impowte q-quew type. (⑅˘꒳˘)
 
 ```css
 * {
-  color: green;
+  cowow: gween;
 }
 ```
 
-En CSS 3, l'astérisque peut être combinée avec les espaces de nom :
+en css 3, òωó w'astéwisque peut êtwe combinée a-avec wes espaces de nyom :
 
-- `ns|*` - correspond à tous les éléments de l'espace de noms `ns`
-- `*|*` - correspond à tous les éléments
-- `|*` - correspond à tous les éléments sans espace de noms déclaré
+- `ns|*` - cowwespond à t-tous wes éwéments de w'espace d-de nyoms `ns`
+- `*|*` - cowwespond à tous wes éwéments
+- `|*` - cowwespond à t-tous wes éwéments sans e-espace de nyoms d-décwawé
 
-## Syntaxe
+## syntaxe
 
 ```
-* { style properties }
+* { stywe pwopewties }
 ```
 
-L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs simples. Par exemple, `*.warning` et `.warning` seront équivalents.
+w'astéwisque est optionnewwe wowsqu'ewwe e-est utiwisée avec des séwecteuws simpwes. ʘwʘ paw exempwe, /(^•ω•^) `*.wawning` et `.wawning` s-sewont équivawents. ʘwʘ
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-* [lang^="fr"] {
-  color: green;
+* [wang^="fw"] {
+  c-cowow: g-gween;
 }
 
-*.warning {
-  color: red;
+*.wawning {
+  c-cowow: wed;
 }
 
 *#maincontent {
-  border: 1px solid blue;
+  bowdew: 1px s-sowid bwue;
 }
 
-.floating {
-  float: left;
+.fwoating {
+  fwoat: weft;
 }
 
-.floating + * {
-  clear: left;
+.fwoating + * {
+  cweaw: weft;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="warning">
-  <span lang="fr">Un span vert</span> dans un paragraphe rouge.
+```htmw
+<p cwass="wawning">
+  <span wang="fw">un span vewt</span> dans un pawagwaphe wouge. σωσ
 </p>
-<p id="maincontent" lang="fr">
-  <span class="warning">Un span rouge</span> dans un paragraphe vert.
+<p id="maincontent" w-wang="fw">
+  <span cwass="wawning">un span w-wouge</span> d-dans un pawagwaphe v-vewt. OwO
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', 250, 100)}}
+{{embedwivesampwe('exempwes', 😳😳😳 250, 100)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

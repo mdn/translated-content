@@ -1,269 +1,269 @@
 ---
-title: place-content
-slug: Web/CSS/place-content
+titwe: pwace-content
+swug: web/css/pwace-content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété raccourcie **`place-content`** permet de définir les valeurs des propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}. Elle peut être utilisée pour n'importe quelle méthode de disposition (boîtes flexibles, grilles, etc;) qui prend en charge ces deux propriétés d'alignement.
+w-wa pwopwiété w-waccouwcie **`pwace-content`** p-pewmet de définiw w-wes vaweuws d-des pwopwiétés {{cssxwef("awign-content")}} e-et {{cssxwef("justify-content")}}. rawr x3 e-ewwe peut êtwe u-utiwisée pouw ny'impowte quewwe méthode de disposition (boîtes fwexibwes, g-gwiwwes, σωσ etc;) qui pwend en chawge ces deux pwopwiétés d-d'awignement. (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: place-content")}}
+{{intewactiveexampwe("css demo: pwace-content")}}
 
-```css interactive-example-choice
-place-content: end space-between;
+```css i-intewactive-exampwe-choice
+pwace-content: end space-between;
 ```
 
-```css interactive-example-choice
-place-content: space-around start;
+```css i-intewactive-exampwe-choice
+pwace-content: s-space-awound s-stawt;
 ```
 
-```css interactive-example-choice
-place-content: start space-evenly;
+```css intewactive-exampwe-choice
+pwace-content: stawt space-evenwy;
 ```
 
-```css interactive-example-choice
-place-content: end center;
+```css intewactive-exampwe-choice
+pwace-content: e-end centew;
 ```
 
-```css interactive-example-choice
-place-content: end;
+```css intewactive-exampwe-choice
+pwace-content: end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 60px 60px;
-  grid-auto-rows: 40px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 60px 60px;
+  gwid-auto-wows: 40px;
   height: 180px;
   width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  backgwound-cowow: wgba(0, rawr 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-Syntaxe
+syntaxe
 
 ```css
-/* Valeurs décrivant l'alignement */
-/* Note : align-content ne gère pas les valeurs left et right */
-place-content: center start;
-place-content: start center;
-place-content: end left;
-place-content: flex-start center;
-place-content: flex-end center;
+/* vaweuws d-décwivant w'awignement */
+/* nyote : a-awign-content n-nye gèwe pas w-wes vaweuws weft et wight */
+pwace-content: centew stawt;
+pwace-content: s-stawt c-centew;
+pwace-content: end weft;
+p-pwace-content: f-fwex-stawt centew;
+pwace-content: f-fwex-end centew;
 
-/* Valeurs décrivant l'alignement par rapport à la ligne de base */
-/* Note : justify-content ne gère pas les valeurs liées à la ligne de base */
-place-content: baseline center;
-place-content: first baseline space-evenly;
-place-content: last baseline right;
+/* vaweuws d-décwivant w'awignement paw wappowt à wa wigne d-de base */
+/* nyote : justify-content n-nye gèwe pas wes vaweuws w-wiées à wa wigne d-de base */
+pwace-content: basewine centew;
+pwace-content: fiwst basewine space-evenwy;
+pwace-content: wast basewine w-wight;
 
-/* Valeurs décrivant la distribution de l'alignment */
-place-content: space-between space-evenly;
-place-content: space-around space-evenly;
-place-content: space-evenly stretch;
-place-content: stretch space-evenly;
+/* v-vaweuws décwivant wa distwibution d-de w'awignment */
+p-pwace-content: s-space-between space-evenwy;
+pwace-content: space-awound space-evenwy;
+p-pwace-content: space-evenwy stwetch;
+pwace-content: stwetch space-evenwy;
 
-/* Valeurs globales */
-place-content: inherit;
-place-content: initial;
-place-content: unset;
+/* v-vaweuws gwobawes */
+pwace-content: i-inhewit;
+p-pwace-content: i-initiaw;
+pwace-content: unset;
 ```
 
-La première valeur utilisée sera celle qui correspond à {{cssxref("align-content")}} et la seconde valeur correspondra à {{cssxref("justify-content")}}. Si la deuxième valeur n'est pas présente, la première valeur indiquée sera également utilisée pour `justify-content`.
+w-wa pwemièwe v-vaweuw utiwisée s-sewa cewwe q-qui cowwespond à {{cssxwef("awign-content")}} et wa seconde vaweuw cowwespondwa à {{cssxwef("justify-content")}}. ^^;; s-si wa deuxième v-vaweuw ny'est p-pas pwésente, rawr x3 w-wa pwemièwe v-vaweuw indiquée sewa égawement utiwisée pouw `justify-content`. (ˆ ﻌ ˆ)♡
 
-> [!WARNING]
-> Si une seule valeur est fournie et que celle-ci est invalide pour l'une ou l'autre des propriétés détaillées, c'est la déclaration entière qui sera invalide.
+> [!wawning]
+> si une seuwe v-vaweuw est fouwnie et que cewwe-ci est invawide pouw w'une ou w'autwe des pwopwiétés détaiwwées, σωσ c-c'est wa décwawation entièwe qui sewa invawide. (U ﹏ U)
 
-### Valeurs
+### vaweuws
 
-- `start`
-  - : Les éléments sont alignés vers le début du conteneur pour l'axe correspondant.
+- `stawt`
+  - : w-wes éwéments s-sont awignés v-vews we début du conteneuw pouw w-w'axe cowwespondant. >w<
 - `end`
-  - : Les éléments sont alignés vers la fin du conteneur pour l'axe correspondant.
-- `flex-start`
-  - : Les éléments sont alignés vers le début du conteneur flexible pour l'axe correspondant. Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne sont pas des éléments d'un conteneur flexible, cette valeur sera synonyme de `start`.
-- `flex-end`
-  - : Les éléments sont alignés vers la fin du conteneur flexible pour l'axe correspondant. Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne sont pas des éléments d'un conteneur flexible, cette valeur sera synonyme de `end`.
-- `center`
-  - : Les éléments sont alignés au centre du conteneur dans l'axe correspondant.
-- `left`
-  - : Les éléments sont alignés vers le bord gauche du conteneur dans l'axe correspondant. Si l'axe de cette propriété n'est pas parallèle à l'axe en ligne (_inline axis_), cette valeur sera synonyme de `start`.
-- `right`
-  - : Les éléments sont alignés vers le bord droit du conteneur dans l'axe correspondant. Si l'axe de cette propriété n'est pas parallèle à l'axe en ligne (_inline axis_), cette valeur sera synonyme de `start`.
+  - : wes éwéments s-sont awignés v-vews wa fin du conteneuw pouw w'axe cowwespondant. σωσ
+- `fwex-stawt`
+  - : wes éwéments sont awignés vews we d-début du conteneuw fwexibwe pouw w-w'axe cowwespondant. nyaa~~ cette vaweuw n-nye s'appwique q-qu'aux éwéments fwexibwes. 🥺 pouw wes éwéments q-qui nye sont p-pas des éwéments d'un conteneuw f-fwexibwe, rawr x3 cette v-vaweuw sewa synonyme de `stawt`. σωσ
+- `fwex-end`
+  - : wes éwéments sont awignés vews wa fin d-du conteneuw fwexibwe p-pouw w'axe c-cowwespondant. (///ˬ///✿) cette vaweuw nye s-s'appwique qu'aux éwéments f-fwexibwes. (U ﹏ U) pouw wes éwéments q-qui nye sont pas des éwéments d'un conteneuw fwexibwe, cette vaweuw s-sewa synonyme d-de `end`. ^^;;
+- `centew`
+  - : wes éwéments sont a-awignés au centwe d-du conteneuw dans w'axe cowwespondant. 🥺
+- `weft`
+  - : wes éwéments sont awignés v-vews we bowd gauche du conteneuw dans w'axe cowwespondant. òωó si w'axe de cette p-pwopwiété ny'est pas pawawwèwe à w'axe en w-wigne (_inwine a-axis_), XD cette vaweuw sewa synonyme de `stawt`. :3
+- `wight`
+  - : wes éwéments sont a-awignés vews w-we bowd dwoit du conteneuw dans w'axe cowwespondant. (U ﹏ U) si w'axe de c-cette pwopwiété ny'est pas pawawwèwe à w-w'axe en wigne (_inwine axis_), >w< cette vaweuw sewa synonyme d-de `stawt`. /(^•ω•^)
 - `space-between`
-  - : Les éléments sont équirépartis dans le conteneur sur l'axe correspondant. Ainsi, l'espace entre chaque élément adjacent sera le même. Le premier élément est aligné sur le bord du conteneur et le dernier élément est également aligné sur le bord du conteneur à la fin de l'axe.
-- `baseline first baseline`
-  `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
-- `space-around`
-  - : Les éléments sont équirépartis dans le conteneur sur l'axe correspondant. L'espace entre chaque élément adjacent sera le même. L'espace entre le bord du conteneur et le premier élément sera la moitié de l'espace utilisé entre chaque élément. L'espace entre le dernier élément et le bord du conteneur sera la moitié de l'espace utilisé entre chaque élément.
-- `space-evenly`
-  - : Les éléments sont équirépartis dans le conteneur sur l'axe correspondant. L'espace entre chaque élément adjacent sera le même, ce sera également cet espace qui sera utilisé entre le bord du conteneur et le premier élément et entre le dernier élément et le bord du conteneur.
-- `stretch`
-  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe correspondant, tous les éléments dimensionnés automatiquement seront étirés de la même façon (et pas de façon proportionnelle) tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes) afin que la taille de l'ensemble des éléments soit exactement celle du conteneur.
+  - : wes éwéments s-sont équiwépawtis dans w-we conteneuw suw w'axe cowwespondant. (⑅˘꒳˘) a-ainsi, w'espace entwe c-chaque éwément a-adjacent sewa we m-même. ʘwʘ we pwemiew éwément est a-awigné suw we b-bowd du conteneuw et we dewniew éwément est égawement a-awigné s-suw we bowd du c-conteneuw à wa fin de w'axe. rawr x3
+- `basewine fiwst b-basewine`
+  `wast basewine`
+  - : s-specifies pawticipation i-in fiwst- ow wast-basewine awignment: awigns the awignment b-basewine of t-the box's fiwst o-ow wast basewine s-set with the cowwesponding basewine i-in the shawed fiwst ow wast basewine set of aww the boxes in its basewine-shawing gwoup. (˘ω˘)
+    t-the fawwback awignment fow `fiwst b-basewine` is `stawt`, o.O the o-one fow `wast basewine` is `end`. 😳
+- `space-awound`
+  - : w-wes éwéments sont équiwépawtis d-dans w-we conteneuw suw w-w'axe cowwespondant. o.O w-w'espace e-entwe chaque éwément adjacent sewa we même. ^^;; w'espace entwe we bowd du conteneuw et we pwemiew éwément sewa w-wa moitié de w'espace u-utiwisé e-entwe chaque éwément. ( ͡o ω ͡o ) w'espace e-entwe we dewniew éwément et we bowd du conteneuw sewa wa moitié d-de w'espace u-utiwisé entwe chaque éwément. ^^;;
+- `space-evenwy`
+  - : wes éwéments s-sont équiwépawtis dans we conteneuw suw w-w'axe cowwespondant. ^^;; w-w'espace entwe chaque éwément a-adjacent sewa w-we même, ce sewa égawement cet espace qui sewa utiwisé entwe we bowd du conteneuw e-et we pwemiew éwément e-et entwe we dewniew éwément et w-we bowd du conteneuw.
+- `stwetch`
+  - : s-si wa s-somme des taiwwes des éwéments e-est inféwieuwe à w-wa taiwwe du conteneuw pouw w-w'axe cowwespondant, XD t-tous wes éwéments dimensionnés a-automatiquement sewont étiwés de wa même f-façon (et pas de façon pwopowtionnewwe) t-tout e-en wespectant wes contwaintes i-imposées paw {{cssxwef("max-height")}}/{{cssxwef("max-width")}} (ou paw wes fonctionnawités équivawentes) afin q-que wa taiwwe d-de w'ensembwe des éwéments s-soit exactement cewwe du conteneuw. 🥺
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-#container {
-  display: flex;
+#containew {
+  d-dispway: fwex;
   height: 240px;
-  width: 240px;
-  flex-wrap: wrap;
-  background-color: #8c8c8c;
-  writing-mode: horizontal-tb; /* Cette valeur peut être modifiée dans l'exemple */
-  direction: ltr; /* Cette valeur peut être modifiée dans l'exemple */
-  place-content: flex-end center; /* Cette valeur peut être modifiée dans l'exemple */
+  w-width: 240px;
+  fwex-wwap: w-wwap;
+  backgwound-cowow: #8c8c8c;
+  w-wwiting-mode: howizontaw-tb; /* cette v-vaweuw peut êtwe modifiée dans w'exempwe */
+  d-diwection: wtw; /* c-cette vaweuw peut êtwe modifiée d-dans w'exempwe */
+  pwace-content: f-fwex-end c-centew; /* cette v-vaweuw peut êtwe modifiée dans w'exempwe */
 }
 
 div > div {
-  border: 2px solid #8c8c8c;
+  bowdew: 2px sowid #8c8c8c;
   width: 50px;
-  background-color: #a0c8ff;
+  backgwound-cowow: #a0c8ff;
 }
 
-.small {
+.smow {
   font-size: 12px;
   height: 40px;
 }
 
-.large {
+.wawge {
   font-size: 14px;
   height: 50px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="container">
-  <div class="small">Lorem</div>
-  <div class="small">Lorem<br />ipsum</div>
-  <div class="large">Lorem</div>
-  <div class="large">Lorem<br />impsum</div>
-  <div class="large"></div>
-  <div class="large"></div>
+```htmw
+<div id="containew">
+  <div c-cwass="smow">wowem</div>
+  <div c-cwass="smow">wowem<bw />ipsum</div>
+  <div cwass="wawge">wowem</div>
+  <div cwass="wawge">wowem<bw />impsum</div>
+  <div c-cwass="wawge"></div>
+  <div cwass="wawge"></div>
 </div>
 ```
 
-```html hidden
-<code>writing-mode:</code
-><select id="writingMode">
-  <option value="horizontal-tb" selected>horizontal-tb</option>
-  <option value="vertical-rl">vertical-rl</option>
-  <option value="vertical-lr">vertical-lr</option>
-  <option value="sideways-rl">sideways-rl</option>
-  <option value="sideways-lr">sideways-lr</option></select
-><code>;</code><br />
-<code>direction:</code
-><select id="direction">
-  <option value="ltr" selected>ltr</option>
-  <option value="rtl">rtl</option></select
-><code>;</code><br />
-<code>place-content:</code
-><select id="alignContentAlignment">
-  <option value="normal">normal</option>
-  <option value="first baseline">first baseline</option>
-  <option value="last baseline">last baseline</option>
-  <option value="baseline">baseline</option>
-  <option value="space-between">space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly" selected>space-evenly</option>
-  <option value="stretch">stretch</option>
-  <option value="center">center</option>
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-</select>
-<select id="justifyContentAlignment">
-  <option value="normal">normal</option>
-  <option value="space-between">space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly">space-evenly</option>
-  <option value="stretch">stretch</option>
-  <option value="center" selected>center</option>
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-  <option value="left">left</option>
-  <option value="right">right</option></select
+```htmw h-hidden
+<code>wwiting-mode:</code
+><sewect i-id="wwitingmode">
+  <option vawue="howizontaw-tb" s-sewected>howizontaw-tb</option>
+  <option vawue="vewticaw-ww">vewticaw-ww</option>
+  <option v-vawue="vewticaw-ww">vewticaw-ww</option>
+  <option v-vawue="sideways-ww">sideways-ww</option>
+  <option vawue="sideways-ww">sideways-ww</option></sewect
+><code>;</code><bw />
+<code>diwection:</code
+><sewect i-id="diwection">
+  <option vawue="wtw" s-sewected>wtw</option>
+  <option v-vawue="wtw">wtw</option></sewect
+><code>;</code><bw />
+<code>pwace-content:</code
+><sewect id="awigncontentawignment">
+  <option vawue="nowmaw">nowmaw</option>
+  <option vawue="fiwst b-basewine">fiwst b-basewine</option>
+  <option v-vawue="wast b-basewine">wast b-basewine</option>
+  <option v-vawue="basewine">basewine</option>
+  <option v-vawue="space-between">space-between</option>
+  <option v-vawue="space-awound">space-awound</option>
+  <option v-vawue="space-evenwy" sewected>space-evenwy</option>
+  <option v-vawue="stwetch">stwetch</option>
+  <option v-vawue="centew">centew</option>
+  <option v-vawue="stawt">stawt</option>
+  <option vawue="end">end</option>
+  <option v-vawue="fwex-stawt">fwex-stawt</option>
+  <option vawue="fwex-end">fwex-end</option>
+</sewect>
+<sewect id="justifycontentawignment">
+  <option v-vawue="nowmaw">nowmaw</option>
+  <option vawue="space-between">space-between</option>
+  <option v-vawue="space-awound">space-awound</option>
+  <option v-vawue="space-evenwy">space-evenwy</option>
+  <option v-vawue="stwetch">stwetch</option>
+  <option vawue="centew" s-sewected>centew</option>
+  <option vawue="stawt">stawt</option>
+  <option vawue="end">end</option>
+  <option v-vawue="fwex-stawt">fwex-stawt</option>
+  <option vawue="fwex-end">fwex-end</option>
+  <option v-vawue="weft">weft</option>
+  <option vawue="wight">wight</option></sewect
 ><code>;</code>
 ```
 
-```js hidden
-var update = function () {
-  document.getElementById("container").style.placeContent =
-    document.getElementById("alignContentAlignment").value +
+```js h-hidden
+vaw update = function () {
+  document.getewementbyid("containew").stywe.pwacecontent =
+    document.getewementbyid("awigncontentawignment").vawue +
     " " +
-    document.getElementById("justifyContentAlignment").value;
+    document.getewementbyid("justifycontentawignment").vawue;
 };
 
-var alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change", update);
+v-vaw awigncontentawignment = d-document.getewementbyid("awigncontentawignment");
+a-awigncontentawignment.addeventwistenew("change", (///ˬ///✿) update);
 
-var justifyContentAlignment = document.getElementById(
-  "justifyContentAlignment",
+vaw justifycontentawignment = document.getewementbyid(
+  "justifycontentawignment", (U ᵕ U❁)
 );
-justifyContentAlignment.addEventListener("change", update);
+j-justifycontentawignment.addeventwistenew("change", ^^;; update);
 
-var writingM = document.getElementById("writingMode");
-writingM.addEventListener("change", function (evt) {
-  document.getElementById("container").style.writingMode = evt.target.value;
+vaw wwitingm = d-document.getewementbyid("wwitingmode");
+w-wwitingm.addeventwistenew("change", ^^;; f-function (evt) {
+  document.getewementbyid("containew").stywe.wwitingmode = evt.tawget.vawue;
 });
-var direction = document.getElementById("direction");
-direction.addEventListener("change", function (evt) {
-  document.getElementById("container").style.direction = evt.target.value;
+v-vaw diwection = d-document.getewementbyid("diwection");
+diwection.addeventwistenew("change", rawr f-function (evt) {
+  document.getewementbyid("containew").stywe.diwection = evt.tawget.vawue;
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "370", "300")}}
+{{embedwivesampwe("exempwes", (˘ω˘) "370", "300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser les boîtes flexibles en CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)
-- La propriété {{cssxref("align-content")}}
-- La propriété {{cssxref("justify-content")}}
+- [utiwisew wes boîtes f-fwexibwes en c-css](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- g-guide s-suw wes gwiwwes : _[awignew des o-objets dans une g-gwiwwe](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- g-guide s-suw wes boîtes f-fwexibwes : _[wes c-concepts de bases](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- g-guide s-suw wes boîtes fwexibwes : _[awignew d-des objets dans un conteneuw f-fwexibwe](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- [we moduwe de spécification c-css b-box awignment](/fw/docs/web/css/css_box_awignment)
+- w-wa pwopwiété {{cssxwef("awign-content")}}
+- wa pwopwiété {{cssxwef("justify-content")}}

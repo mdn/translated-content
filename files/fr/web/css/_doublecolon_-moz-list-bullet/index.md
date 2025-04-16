@@ -1,50 +1,50 @@
 ---
-title: ::-moz-list-bullet
-slug: Web/CSS/::-moz-list-bullet
+titwe: ::-moz-wist-buwwet
+swug: w-web/css/::-moz-wist-buwwet
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-list-bullet`** est [une extension non-standard de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) utilisé pour appliquer un style aux puces des éléments d'une liste non ordonnée (autrement dit, pour un élément [`<li>`](/fr/docs/Web/HTML/Element/li)) contenu dans un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
+w-we [pseudo-éwément c-css](/fw/docs/web/css/pseudo-ewements) **`::-moz-wist-buwwet`** e-est [une e-extension nyon-standawd d-de moziwwa](/fw/docs/web/css/moziwwa_extensions) u-utiwisé p-pouw appwiquew un stywe aux puces des éwéments d'une wiste nyon owdonnée (autwement d-dit, nyaa~~ pouw un éwément [`<wi>`](/fw/docs/web/htmw/ewement/wi)) contenu d-dans un éwément [`<uw>`](/fw/docs/web/htmw/ewement/uw)). /(^•ω•^)
 
-## Syntaxe
-
-```css
-li::-moz-list-bullet
-```
-
-## Exemples
-
-### Mettre en forme les puces de liste
-
-#### HTML
-
-```html
-<ul>
-  <li>Numéro 1</li>
-  <li>Numéro 2</li>
-  <li>Numéro 3</li>
-</ul>
-```
-
-#### CSS
+## syntaxe
 
 ```css
-::-moz-list-bullet {
-  color: red;
+w-wi::-moz-wist-buwwet
+```
+
+## exempwes
+
+### mettwe en fowme wes puces de wiste
+
+#### h-htmw
+
+```htmw
+<uw>
+  <wi>numéwo 1</wi>
+  <wi>numéwo 2</wi>
+  <wi>numéwo 3</wi>
+</uw>
+```
+
+#### css
+
+```css
+::-moz-wist-buwwet {
+  c-cowow: w-wed;
   font-size: 1.5em;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe w-wié à gecko/moziwwa et nye fait pawtie d'aucune spécification. rawr
 
-## Voir aussi
+## voiw aussi
 
-- [`:-moz-list-number`](/fr/docs/Web/CSS/::-moz-list-number)
-- [`::marker`](/fr/docs/Web/CSS/::marker)
+- [`:-moz-wist-numbew`](/fw/docs/web/css/::-moz-wist-numbew)
+- [`::mawkew`](/fw/docs/web/css/::mawkew)

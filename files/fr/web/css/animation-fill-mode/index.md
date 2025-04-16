@@ -1,183 +1,191 @@
 ---
-title: animation-fill-mode
-slug: Web/CSS/animation-fill-mode
+titwe: animation-fiww-mode
+swug: w-web/css/animation-fiww-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`animation-fill-mode`** indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.
+w-wa pwopwiété **`animation-fiww-mode`** i-indique w-wa façon dont u-une animation css d-doit appwiquew w-wes stywes à s-sa cibwe avant et apwès son exécution. XD
 
-{{InteractiveExample("CSS Demo: animation-fill-mode")}}
+{{intewactiveexampwe("css demo: animation-fiww-mode")}}
 
-```css interactive-example-choice
-animation-fill-mode: none;
-animation-delay: 1s;
+```css intewactive-exampwe-choice
+animation-fiww-mode: n-nyone;
+animation-deway: 1s;
 ```
 
-```css interactive-example-choice
-animation-fill-mode: forwards;
-animation-delay: 1s;
+```css intewactive-exampwe-choice
+a-animation-fiww-mode: fowwawds;
+animation-deway: 1s;
 ```
 
-```css interactive-example-choice
-animation-fill-mode: backwards;
-animation-delay: 1s;
+```css i-intewactive-exampwe-choice
+animation-fiww-mode: backwawds;
+animation-deway: 1s;
 ```
 
-```css interactive-example-choice
-animation-fill-mode: both;
-animation-delay: 1s;
+```css i-intewactive-exampwe-choice
+animation-fiww-mode: b-both;
+animation-deway: 1s;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a mode to start!</div>
+```htmw i-intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div>animation <span id="pwaystatus"></span></div>
+  <div id="exampwe-ewement">sewect a mode to stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  color: white;
-  margin: auto;
-  margin-left: 0;
-  border: 5px solid #333;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  cowow: white;
+  mawgin: auto;
+  mawgin-weft: 0;
+  b-bowdew: 5px sowid #333;
+  w-width: 150px;
+  h-height: 150px;
+  b-bowdew-wadius: 50%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  d-dispway: fwex;
+  justify-content: centew;
+  a-awign-items: centew;
+  fwex-diwection: cowumn;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  f-font-weight: bowd;
 }
 
 .animating {
-  animation: slide 1s ease-in 1;
+  animation: swide 1s ease-in 1;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  fwom {
+    backgwound-cowow: owange;
+    c-cowow: bwack;
+    mawgin-weft: 0;
   }
-  to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+  t-to {
+    backgwound-cowow: o-owange;
+    c-cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+window.addeventwistenew("woad", 🥺 () => {
+  c-const e-ew = document.getewementbyid("exampwe-ewement");
+  const status = d-document.getewementbyid("pwaystatus");
 
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+  f-function update() {
+    s-status.textcontent = "dewaying";
+    ew.cwassname = "";
+    w-window.wequestanimationfwame(() => {
+      window.wequestanimationfwame(() => {
+        ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  ew.addeventwistenew("animationstawt", òωó () => {
+    s-status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  ew.addeventwistenew("animationend", () => {
+    s-status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
-    update();
+  const obsewvew = n-nyew mutationobsewvew(() => {
+    u-update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, (ˆ ﻌ ˆ)♡ {
+    attwibutes: twue, -.-
+    attwibutefiwtew: ["stywe"], :3
   });
 
   update();
 });
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-animation-fill-mode: none;
-animation-fill-mode: forwards;
-animation-fill-mode: backwards;
-animation-fill-mode: both;
+/* vaweuws a-avec un mot-cwé */
+a-animation-fiww-mode: nyone;
+a-animation-fiww-mode: f-fowwawds;
+a-animation-fiww-mode: backwawds;
+animation-fiww-mode: both;
 
-/* Gestion de plusieurs animations */
-animation-fill-mode: none, backwards;
-animation-fill-mode: both, forwards, none;
+/* gestion d-de pwusieuws animations */
+animation-fiww-mode: nyone, ʘwʘ backwawds;
+animation-fiww-mode: b-both, 🥺 fowwawds, >_< nyone;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : L'animation n'appliquera aucun style à la cible, avant et après l'exécution. Le style utilisé sera celui défini par les autres règles CSS.
-- `forwards`
+  - : w-w'animation n-ny'appwiquewa aucun stywe à wa c-cibwe, ʘwʘ avant et a-apwès w'exécution. (˘ω˘) w-we stywe u-utiwisé sewa cewui défini paw wes autwes wègwes c-css. (✿oωo)
+- `fowwawds`
 
-  - : La cible retiendra les valeurs calculées définies lors de la dernière étape (_keyframe_). La dernière étape considérée dépend de la valeur de {{cssxref("animation-direction")}} et de {{cssxref("animation-iteration-count")}} :
+  - : w-wa cibwe w-wetiendwa wes v-vaweuws cawcuwées d-définies wows de wa dewnièwe étape (_keyfwame_). (///ˬ///✿) wa dewnièwe étape considéwée d-dépend de wa vaweuw de {{cssxwef("animation-diwection")}} et de {{cssxwef("animation-itewation-count")}} :
 
-    | `animation-direction` | `animation-iteration-count` | dernière _keyframe_ |
+    | `animation-diwection` | `animation-itewation-count` | dewnièwe _keyfwame_ |
     | --------------------- | --------------------------- | ------------------- |
-    | `normal`              | pair ou impair              | `100%` ou `to`      |
-    | `reverse`             | pair ou impair              | `0%` ou `from`      |
-    | `alternate`           | pair                        | `0%` ou `from`      |
-    | `alternate`           | impair                      | `100%` ou `to`      |
-    | `alternate-reverse`   | pair                        | `100%` ou `to`      |
-    | `alternate-reverse`   | impair                      | `0%` ou `from`      |
+    | `nowmaw`              | paiw o-ou impaiw              | `100%` ou `to`      |
+    | `wevewse`             | paiw ou impaiw              | `0%` o-ou `fwom`      |
+    | `awtewnate`           | paiw                        | `0%` o-ou `fwom`      |
+    | `awtewnate`           | i-impaiw                      | `100%` ou `to`      |
+    | `awtewnate-wevewse`   | p-paiw                        | `100%` ou `to`      |
+    | `awtewnate-wevewse`   | i-impaiw                      | `0%` o-ou `fwom`      |
 
-- `backwards`
+- `backwawds`
 
-  - : L'animation appliquera les valeur définies par la première _keyframe_ pertinente et les retiendra pendant la durée indiquée par {{cssxref("animation-delay")}}. La première _keyframe_ pertinente dépend de la valeur de {{cssxref("animation-direction")}} :
+  - : w'animation appwiquewa wes vaweuw définies paw wa pwemièwe _keyfwame_ pewtinente e-et wes wetiendwa pendant wa duwée i-indiquée paw {{cssxwef("animation-deway")}}. rawr x3 wa pwemièwe _keyfwame_ p-pewtinente d-dépend de wa vaweuw de {{cssxwef("animation-diwection")}} :
 
-    | `animation-direction`            | première _keyframe_ |
+    | `animation-diwection`            | pwemièwe _keyfwame_ |
     | -------------------------------- | ------------------- |
-    | `normal` ou `alternate`          | `0%` ou `from`      |
-    | `reverse` ou `alternate-reverse` | `100%` ou `to`      |
+    | `nowmaw` o-ou `awtewnate`          | `0%` o-ou `fwom`      |
+    | `wevewse` ou `awtewnate-wevewse` | `100%` o-ou `to`      |
 
 - `both`
-  - : L'animation respectera les règles qui s'appliquent à `forwards` et `backwards`, entraînant ainsi l'extension des propriétés de l'animation dans les deux directions.
+  - : w-w'animation wespectewa wes wègwes qui s'appwiquent à `fowwawds` et `backwawds`, -.- entwaînant ainsi w-w'extension d-des pwopwiétés d-de w'animation dans wes deux diwections. ^^
 
-> [!NOTE]
-> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+> [!note]
+> w-wowsqu'on u-utiwisew pwusieuws vaweuws, (⑅˘꒳˘) sépawées p-paw des viwguwes, nyaa~~ pouw une pwopwiété `animation-*`, /(^•ω•^) sewon weuw quantité, (U ﹏ U) ewwes sewont d-difféwemment a-affectées aux animations définies paw {{cssxwef("animation-name")}}. 😳😳😳 p-pouw pwus d-d'infowmations, >w< voiw : pawamétwew [wes vaweuws des pwopwiétés p-pouw pwusieuws animations](/fw/docs/web/css/css_animations/using_css_animations). XD
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 .demo {
-  border-top: 100px solid #ccc;
+  b-bowdew-top: 100px s-sowid #ccc;
   height: 300px;
-  font-family: sans-serif;
+  font-famiwy: sans-sewif;
 }
-@keyframes grow {
+@keyfwames g-gwow {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    f-font-size: 40px;
+  }
+}
+@-webkit-keyfwames gwow {
   0% {
     font-size: 0;
   }
@@ -185,53 +193,45 @@ animation-fill-mode: both, forwards, none;
     font-size: 40px;
   }
 }
-@-webkit-keyframes grow {
-  0% {
-    font-size: 0;
-  }
-  100% {
-    font-size: 40px;
-  }
+.demo:hovew .gwows {
+  a-animation-name: gwow;
+  animation-duwation: 3s;
+  -webkit-animation-name: g-gwow;
+  -webkit-animation-duwation: 3s;
 }
-.demo:hover .grows {
-  animation-name: grow;
-  animation-duration: 3s;
-  -webkit-animation-name: grow;
-  -webkit-animation-duration: 3s;
-}
-.demo:hover .growsandstays {
-  animation-name: grow;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: grow;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
+.demo:hovew .gwowsandstays {
+  animation-name: gwow;
+  animation-duwation: 3s;
+  a-animation-fiww-mode: fowwawds;
+  -webkit-animation-name: g-gwow;
+  -webkit-animation-duwation: 3s;
+  -webkit-animation-fiww-mode: f-fowwawds;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p>Déplacez votre souris sur la boîte grise.</p>
-<div class="demo">
-  <div class="growsandstays">La boîte grandit et s'arrête</div>
-  <div class="grows">La boîte grandit</div>
+```htmw
+<p>dépwacez v-votwe souwis suw wa b-boîte gwise.</p>
+<div c-cwass="demo">
+  <div c-cwass="gwowsandstays">wa boîte gwandit e-et s'awwête</div>
+  <div c-cwass="gwows">wa boîte gwandit</div>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples',700,300)}}
+{{embedwivesampwe('exempwes',700,300)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [manipuwew wes a-animations css](/fw/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", "animationevent")}}

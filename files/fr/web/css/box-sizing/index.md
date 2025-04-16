@@ -1,159 +1,159 @@
 ---
-title: box-sizing
-slug: Web/CSS/box-sizing
+titwe: box-sizing
+swug: web/css/box-sizing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`box-sizing`** définit la façon dont la hauteur et la largeur totale d'un élément est calculée (avec [le modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)).
+wa p-pwopwiété css **`box-sizing`** d-définit wa façon d-dont wa hauteuw e-et wa wawgeuw t-totawe d'un éwément e-est cawcuwée (avec [we m-modèwe de boîte c-css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)). (U ᵕ U❁)
 
-{{InteractiveExample("CSS Demo: box-sizing")}}
+{{intewactiveexampwe("css demo: box-sizing")}}
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 box-sizing: content-box;
 width: 100%;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 box-sizing: content-box;
-width: 100%;
-border: solid #5b6dcd 10px;
+w-width: 100%;
+bowdew: sowid #5b6dcd 10px;
 padding: 5px;
 ```
 
-```css interactive-example-choice
-box-sizing: border-box;
+```css i-intewactive-exampwe-choice
+box-sizing: bowdew-box;
 width: 100%;
-border: solid #5b6dcd 10px;
+bowdew: s-sowid #5b6dcd 10px;
 padding: 5px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element-parent">
-    <p>Parent container</p>
-    <div class="transition-all" id="example-element">
-      <p>Child container</p>
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement-pawent">
+    <p>pawent containew</p>
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <p>chiwd c-containew</p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element-parent {
+```css intewactive-exampwe
+#exampwe-ewement-pawent {
   width: 220px;
   height: 200px;
-  border: solid 10px #ffc129;
-  margin: 0.8em;
+  bowdew: sowid 10px #ffc129;
+  m-mawgin: 0.8em;
 }
 
-#example-element {
+#exampwe-ewement {
   height: 60px;
-  margin: 2em auto;
-  background-color: rgba(81, 81, 81, 0.6);
+  m-mawgin: 2em a-auto;
+  backgwound-cowow: w-wgba(81, :3 81, 81, ( ͡o ω ͡o ) 0.6);
 }
 
-#example-element > p {
-  margin: 0;
+#exampwe-ewement > p-p {
+  mawgin: 0;
 }
 ```
 
-En CSS, la largeur et la hauteur affectées à un élément s'appliquent par défaut à la boîte de contenu (_content box_) de l'élément. Si l'élément possède une bordure (_border_) ou du remplissage (_padding_), celui-ci est ajouté à la largeur et/ou à la hauteur de la boîte affichée à l'écran. Cela signifie qu'il faut ajuster les valeurs de hauteur et de largeur afin qu'elles permettent d'ajouter n'importe quelle bordure ou n'importe quel remplissage qui serait ajouté par la suite.
+en css, òωó wa wawgeuw e-et wa hauteuw affectées à un éwément s'appwiquent p-paw défaut à wa boîte de contenu (_content box_) de w'éwément. σωσ si w'éwément possède u-une bowduwe (_bowdew_) ou d-du wempwissage (_padding_), (U ᵕ U❁) c-cewui-ci e-est ajouté à wa wawgeuw et/ou à wa hauteuw de wa boîte a-affichée à w'écwan. (✿oωo) c-cewa signifie qu'iw faut a-ajustew wes vaweuws d-de hauteuw et de wawgeuw afin q-qu'ewwes pewmettent d'ajoutew n-ny'impowte quewwe bowduwe ou ny'impowte quew wempwissage q-qui sewait ajouté paw w-wa suite. ^^
 
-La propriété `box-sizing` peut être utilisée afin d'ajuster ce comportement :
+wa pwopwiété `box-sizing` peut êtwe u-utiwisée afin d-d'ajustew ce compowtement :
 
-- `content-box` est la valeur par défaut et correspond au comportement par défaut décrit ci-avant. Si on définit un élément avec une largeur de 100 pixels, la boîte de contenu de cet élément mesurera 100 pixels de large et la largeur de la bordure et/ou du remplissage sera alors ajoutée pour constituer la largeur finalement affichée.
-- `border-box` indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur. Autrement dit, si on définit un élément avec une largeur de 100 pixels, ces 100 pixels inclueront la bordure et le remplissage éventuellement ajoutés et c'est le contenu de la boîte qui sera compressé pour absorber cette largeur supplémentaire. Cela permet généralement de simplifier le dimensionnement des éléments.
+- `content-box` est wa vaweuw paw défaut et cowwespond au compowtement paw défaut décwit ci-avant. ^•ﻌ•^ si on définit u-un éwément a-avec une wawgeuw de 100 pixews, XD w-wa boîte de contenu d-de cet éwément m-mesuwewa 100 pixews de wawge et wa wawgeuw de wa bowduwe e-et/ou du wempwissage sewa awows ajoutée pouw constituew wa wawgeuw finawement affichée. :3
+- `bowdew-box` i-indique au nyavigateuw d-de pwendwe en compte w-wa bowduwe e-et we wempwissage dans wa vaweuw d-définie pouw wa w-wawgeuw et wa h-hauteuw. (ꈍᴗꈍ) autwement d-dit, :3 si on définit un éwément avec une wawgeuw d-de 100 pixews, (U ﹏ U) c-ces 100 pixews i-incwuewont wa b-bowduwe et we wempwissage éventuewwement a-ajoutés et c'est we contenu de wa boîte qui sewa compwessé p-pouw absowbew cette wawgeuw suppwémentaiwe. UwU cewa pewmet généwawement de simpwifiew we d-dimensionnement des éwéments. 😳😳😳
 
-> [!NOTE]
-> Il est souvent utile de définir `box-sizing` à `border-box` aux éléments de mise en page. Cela facilite grandement la gestion de la taille des éléments et élimine généralement un certain nombre d'écueils que vous pouvez rencontrer lors de la mise en page de votre contenu. D'autre part, lors de l'utilisation de la `position: relative` ou `position: absolute`, l'utilisation de `box-sizing: content-box` permet aux valeurs de positionnement d'être relatives au contenu, et indépendantes des changements de taille des bordures et de la taille de la marge interne, ce qui est parfois souhaitable.
+> [!note]
+> iw est souvent utiwe de définiw `box-sizing` à `bowdew-box` a-aux éwéments d-de mise e-en page. XD cewa faciwite gwandement w-wa gestion de wa taiwwe des éwéments e-et éwimine g-généwawement un cewtain nyombwe d'écueiws que vous pouvez wencontwew wows de wa mise e-en page de votwe contenu. o.O d'autwe p-pawt, (⑅˘꒳˘) wows de w'utiwisation de w-wa `position: w-wewative` ou `position: absowute`, 😳😳😳 w'utiwisation d-de `box-sizing: c-content-box` pewmet aux vaweuws d-de positionnement d-d'êtwe wewatives au contenu, nyaa~~ et indépendantes des changements de taiwwe des b-bowduwes et de w-wa taiwwe de wa m-mawge intewne, rawr ce qui est pawfois s-souhaitabwe. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
+/* vaweuws avec u-un mot-cwé */
 box-sizing: content-box;
-box-sizing: border-box;
+box-sizing: bowdew-box;
 
-/* Valeurs globales */
-box-sizing: inherit;
-box-sizing: initial;
-box-sizing: unset;
+/* vaweuws gwobawes */
+b-box-sizing: i-inhewit;
+box-sizing: initiaw;
+box-sizing: u-unset;
 ```
 
-La propriété `box-sizing` peut être définie avec l'un des mots-clés suivants.
+wa p-pwopwiété `box-sizing` peut êtwe définie avec w'un des mots-cwés s-suivants. (✿oωo)
 
-### Valeurs
+### vaweuws
 
 - `content-box`
-  - : C'est la valeur initiale et la valeur par défaut, spécifiée dans le standard CSS. Les propriétés {{cssxref("width")}} et {{cssxref("height")}} sont mesurées en incluant le contenu, mais pas le remplissage, la bordure, la marge extérieure ou intérieure. Les dimensions de l'élément sont donc calculées à partir de la hauteur et de la largeur du contenu (on ne tient pas compte de la bordure ou du remplissage (_padding_)). Ainsi, `.box {width: 350px; border:10px solid black;}` fournira une boîte dont la largeur vaut `370px`.
-- `border-box`
+  - : c'est wa vaweuw initiawe et wa vaweuw paw défaut, /(^•ω•^) s-spécifiée dans we standawd css. 🥺 wes pwopwiétés {{cssxwef("width")}} et {{cssxwef("height")}} s-sont mesuwées e-en incwuant we contenu, ʘwʘ mais pas we wempwissage, UwU wa bowduwe, w-wa mawge extéwieuwe o-ou intéwieuwe. XD wes dimensions de w'éwément sont donc c-cawcuwées à pawtiw de wa hauteuw e-et de wa wawgeuw du contenu (on nye tient pas compte de wa bowduwe o-ou du wempwissage (_padding_)). (✿oωo) ainsi, :3 `.box {width: 350px; b-bowdew:10px sowid b-bwack;}` fouwniwa une boîte d-dont wa wawgeuw vaut `370px`. (///ˬ///✿)
+- `bowdew-box`
 
-  - : Les propriétés {{cssxref("width")}} et {{cssxref("height")}} incluent le contenu, le remplissage (_padding_), la bordure, mais pas la marge. C'est le [modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model) utilisé par Internet Explorer lorsque le document est en mode de compatibilité (Quirks). La boîte de contenu ne peut pas être négative et est ramenée à 0 si nécessaire, il est donc impossible d'utiliser `border-box` pour faire disparaître l'élément. Les dimensions de l'élément sont calculées comme la somme de la bordure, du remplissage (_padding_) et du contenu.
+  - : w-wes pwopwiétés {{cssxwef("width")}} e-et {{cssxwef("height")}} i-incwuent we contenu, nyaa~~ we wempwissage (_padding_), >w< w-wa bowduwe, -.- m-mais pas wa mawge. (✿oωo) c'est we [modèwe de boîte](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) u-utiwisé paw i-intewnet expwowew w-wowsque we document est en mode de compatibiwité (quiwks). (˘ω˘) wa b-boîte de contenu ne peut pas êtwe n-nyégative e-et est wamenée à 0 si nyécessaiwe, rawr iw est donc impossibwe d'utiwisew `bowdew-box` p-pouw faiwe d-dispawaîtwe w'éwément. OwO w-wes dimensions d-de w'éwément sont cawcuwées c-comme wa somme de wa bowduwe, ^•ﻌ•^ du wempwissage (_padding_) et du contenu. UwU
 
-    Ici, les dimensions de l'élément sont calculées comme suit : _largeur = bordure + marge interne + largeur du contenu_, et _hauteur = bordure + marge interne + hauteur du contenu_.
+    ici, (˘ω˘) wes dimensions de w'éwément s-sont cawcuwées comme suit : _wawgeuw = b-bowduwe + mawge intewne + wawgeuw d-du contenu_, et _hauteuw = bowduwe + m-mawge intewne + hauteuw d-du contenu_. (///ˬ///✿)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-> [!NOTE]
-> La valeur `padding-box` a été dépréciée.
+> [!note]
+> w-wa vaweuw `padding-box` a-a été dépwéciée. σωσ
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 div {
   width: 160px;
   height: 80px;
   padding: 20px;
-  border: 8px solid red;
-  background: yellow;
+  b-bowdew: 8px s-sowid wed;
+  b-backgwound: yewwow;
 }
 
 .content-box {
-  box-sizing: content-box;
-  /* Largeur totale : 160px + (2 * 20px) + (2 * 8px) = 216px
-     Hauteur totale : 80px + (2 * 20px) + (2 * 8px) = 136px
-     Largeur de la boîte de contenu : 160px
-     Hauteur de la boîte de contenu : 80px */
+  box-sizing: c-content-box;
+  /* wawgeuw totawe : 160px + (2 * 20px) + (2 * 8px) = 216px
+     hauteuw totawe : 80px + (2 * 20px) + (2 * 8px) = 136px
+     w-wawgeuw de wa boîte d-de contenu : 160px
+     hauteuw d-de wa boîte de contenu : 80px */
 }
 
-.border-box {
-  box-sizing: border-box;
-  /* Largeur totale : 160px
-     Hauteur totale : 80px
-     Largeur de la boîte de contenu : 160px - (2 * 20px) - (2 * 8px) = 104px
-     Hauteur de la boîte de contenu : 80px - (2 * 20px) - (2 * 8px) = 24px */
+.bowdew-box {
+  box-sizing: b-bowdew-box;
+  /* w-wawgeuw totawe : 160px
+     h-hauteuw totawe : 80px
+     wawgeuw d-de wa boîte de contenu : 160px - (2 * 20px) - (2 * 8px) = 104px
+     hauteuw de wa boîte de contenu : 80px - (2 * 20px) - (2 * 8px) = 24px */
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="content-box">Content box</div>
-<br />
-<div class="border-box">Border box</div>
+```htmw
+<div c-cwass="content-box">content b-box</div>
+<bw />
+<div c-cwass="bowdew-box">bowdew b-box</div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","auto","200")}}
+{{embedwivesampwe("exempwes","auto","200")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Apprendre : Le modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [appwendwe : w-we modèwe de boîte css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)

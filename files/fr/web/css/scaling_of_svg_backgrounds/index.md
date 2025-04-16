@@ -1,345 +1,345 @@
 ---
-title: Redimensionnement d'arrière-plans SVG
-slug: Web/CSS/Scaling_of_SVG_backgrounds
+titwe: wedimensionnement d'awwièwe-pwans s-svg
+s-swug: web/css/scawing_of_svg_backgwounds
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les images SVG sont très flexibles et lorsqu'on les utilise en CSS avec les propriétés {{cssxref("background-image")}} et {{cssxref("background-size")}}, il faut s'assurer de considérer les différents aspects qui leurs sont propres. Dans cet article, on décrit comment les images SVG sont redimensionnées grâce à ces propriétés.
+w-wes images s-svg sont twès f-fwexibwes et w-wowsqu'on wes u-utiwise en css avec w-wes pwopwiétés {{cssxwef("backgwound-image")}} et {{cssxwef("backgwound-size")}}, XD iw faut s'assuwew de considéwew wes difféwents a-aspects qui weuws sont pwopwes. nyaa~~ dans cet a-awticwe, ʘwʘ on décwit comment wes i-images svg sont wedimensionnées gwâce à ces pwopwiétés. (⑅˘꒳˘)
 
-## Un algorithme simple
+## u-un awgowithme simpwe
 
-Dans la plupart des cas, l'algorithme utilisé pourra être réduit à ces quatre règles. Ces règles ne sont pas exhaustives et ne couvrent pas certains cas aux limites mais cela sera suffisant ici :
+dans wa p-pwupawt des cas, :3 w-w'awgowithme utiwisé pouwwa êtwe wéduit à ces quatwe wègwes. ces wègwes n-nye sont pas exhaustives et nye couvwent pas cewtains cas aux wimites mais cewa s-sewa suffisant ici :
 
-1. Si {{cssxref("background-size")}} définit une dimension fixe (des pourcentages ou des unités relatives fixées par le contexte), cette dimension l'emporte.
-2. Si l'image possède des proportions intrinsèques (autrement dit, si le ratio largeur/hauteur est constant : 16:9, 4:3, 2.39:1, 1:1), l'arrière-plan sera affiché en conservant ces proportions.
-3. Si l'image définit une taille et que celle-ci n'est pas modifiée par une contrainte quelconque, cette taille l'emporte.
-4. Dans tous les autres cas, l'image est affichée avec la taille de la zone dédiée à l'arrière-plan.
+1. -.- si {{cssxwef("backgwound-size")}} d-définit u-une dimension f-fixe (des pouwcentages o-ou des unités wewatives fixées paw we c-contexte), 😳😳😳 cette dimension w'empowte. (U ﹏ U)
+2. si w'image p-possède des pwopowtions intwinsèques (autwement dit, o.O si we watio wawgeuw/hauteuw est constant : 16:9, ( ͡o ω ͡o ) 4:3, 2.39:1, òωó 1:1), w'awwièwe-pwan s-sewa affiché en consewvant ces p-pwopowtions. 🥺
+3. s-si w'image définit u-une taiwwe et que cewwe-ci ny'est pas modifiée paw une contwainte q-quewconque, /(^•ω•^) c-cette taiwwe w'empowte. 😳😳😳
+4. dans t-tous wes autwes c-cas, ^•ﻌ•^ w'image est affichée avec w-wa taiwwe de wa zone dédiée à w-w'awwièwe-pwan. nyaa~~
 
-On notera ici que l'algorithme ne prend en cas que les dimensions et/ou les proportions de l'image (leur absence éventullement). Ainsi, une image SVG dont les dimensions sont fixées sera traitée comme une image matricielle de la même taille.
+on nyotewa ici que w'awgowithme n-nye pwend en cas que wes dimensions e-et/ou wes pwopowtions d-de w'image (weuw a-absence éventuwwement). OwO ainsi, une image svg dont wes dimensions sont fixées sewa twaitée comme une image matwiciewwe d-de wa m-même taiwwe. ^•ﻌ•^
 
-## Fichiers d'exemples
+## fichiews d'exempwes
 
-Avant d'aller plus loin dans l'exploration des résultats avec {{cssxref("background-size")}}, il serait judicieux de disposer de différentes images sources avec différents paramètres de dimensions, proportions, etc.
+a-avant d'awwew p-pwus woin dans w-w'expwowation des wésuwtats avec {{cssxwef("backgwound-size")}}, σωσ iw sewait j-judicieux de disposew de difféwentes images souwces avec difféwents pawamètwes d-de dimensions, -.- pwopowtions, (˘ω˘) etc.
 
-Pour chaque cas d'exemple fourni ci-après, l'image est affichée dans une boîte carrée de 150 pixels et un lien est fourni vers le fichier SVG correspondant.
+p-pouw chaque c-cas d'exempwe fouwni c-ci-apwès, rawr x3 w'image est affichée d-dans une boîte c-cawwée de 150 p-pixews et un w-wien est fouwni vews we fichiew svg cowwespondant. rawr x3
 
-### Image sans dimension ni proportion
+### i-image s-sans dimension nyi p-pwopowtion
 
-Cette image ne possède ni dimension ni proportion. Quelle que soit sa taille, il n'y aura pas de ratio largeur/hauteur particulier. On a ici une image qui forme un dégradé, quelles que soient les dimensions et la proportion de l'écran.
+cette i-image nye possède n-nyi dimension nyi pwopowtion. σωσ quewwe que soit sa taiwwe, nyaa~~ i-iw ny'y auwa pas de watio wawgeuw/hauteuw pawticuwiew. (ꈍᴗꈍ) on a ici une image qui fowme un dégwadé, ^•ﻌ•^ q-quewwes que soient wes dimensions et wa pwopowtion de w'écwan. >_<
 
-![](no-dimensions-or-ratio.png)
+![](no-dimensions-ow-watio.png)
 
-[Fichier SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg)
+[fichiew s-svg s-souwce](https://mdn.dev/awchives/media/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-ow-watio.svg)
 
-### Image sans proportion avec une dimension fixée
+### i-image sans pwopowtion avec u-une dimension fixée
 
-Cette image mesure 100 pixels de large mais n'a pas de hauteur ni de proportion intrinsèque. On a ainsi une bande d'arrière-plan qui peut être étirée sur toute la hauteur d'un bloc.
+cette image m-mesuwe 100 pixews d-de wawge mais ny'a pas de hauteuw nyi de pwopowtion intwinsèque. ^^;; on a ainsi une bande d'awwièwe-pwan q-qui peut êtwe étiwée s-suw toute wa hauteuw d'un bwoc. ^^;;
 
-![](100px-wide-no-height-or-ratio.png)
+![](100px-wide-no-height-ow-watio.png)
 
-[Fichier SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg)
+[fichiew s-svg souwce](https://mdn.dev/awchives/media/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-ow-watio.svg)
 
-### Image avec une dimension fixée et des proportions intrinsèques
+### i-image avec une dimension fixée et des pwopowtions i-intwinsèques
 
-Cette image mesure 100 pixels de haut mais n'a pas de largeur fixée. Elle définit également une proportion de 3:4. Ainsi, le rapport largeur/hauteur sera toujours 3/4.
+c-cette image mesuwe 100 p-pixews de haut mais n-ny'a pas de wawgeuw fixée. /(^•ω•^) ewwe définit égawement une pwopowtion de 3:4. nyaa~~ a-ainsi, (✿oωo) we wappowt w-wawgeuw/hauteuw s-sewa toujouws 3/4. ( ͡o ω ͡o )
 
-On a ici un cas très proche de l'image pour laquelle on définit une largeur et une hauteur car, une fois qu'on a une dimension et une proportion, la deuxième dimension est implicite. Cela n'en reste pas moins un exemple utile.
+on a ici un c-cas twès pwoche d-de w'image pouw waquewwe on définit u-une wawgeuw et une hauteuw caw, (U ᵕ U❁) une fois qu'on a une dimension et une pwopowtion, òωó w-wa deuxième d-dimension est impwicite. σωσ cewa ny'en weste p-pas moins un exempwe u-utiwe. :3
 
-![](100px-height-3x4-ratio.png)
+![](100px-height-3x4-watio.png)
 
-[Fichier SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg)
+[fichiew svg souwce](https://mdn.dev/awchives/media/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-watio.svg)
 
-### Image sans largeur ni hauteur mais avec des proportions intrinsèques
+### image sans wawgeuw nyi hauteuw m-mais avec des pwopowtions intwinsèques
 
-Cette image n'indique pas de hauteur ou de largeur mais un ratio intrinsèque de 1:1. On obtiendra toujours un carré (qui pourra être utilisé comme une icône) pour n'importe quelle taille : 32x32, 128x128, or 512x512.
+cette image ny'indique pas de hauteuw ou d-de wawgeuw mais un watio intwinsèque de 1:1. OwO o-on obtiendwa toujouws u-un cawwé (qui pouwwa êtwe utiwisé comme une icône) pouw n-ny'impowte quewwe t-taiwwe : 32x32, ^^ 128x128, ow 512x512. (˘ω˘)
 
-![](no-dimensions-1x1-ratio.png)
+![](no-dimensions-1x1-watio.png)
 
-[Fichier SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg)
+[fichiew svg souwce](https://mdn.dev/awchives/media/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-watio.svg)
 
-## Exemples de redimensionnement
+## exempwes d-de wedimensionnement
 
-Appliquons maintenant différents redimensionnements sur ces images. Pour chacun des exemples qui suivent, les rectangles dessinés font 300 pixels de large et 200 pixels de haut. De plus, on utilise {{cssxref("background-repeat")}} avec `no-repeat` pour plus de clarté..
+appwiquons m-maintenant difféwents wedimensionnements suw ces images. OwO pouw chacun des e-exempwes qui suivent, UwU wes wectangwes d-dessinés f-font 300 pixews de wawge et 200 p-pixews de haut. ^•ﻌ•^ de pwus, (ꈍᴗꈍ) on utiwise {{cssxwef("backgwound-wepeat")}} a-avec `no-wepeat` p-pouw pwus d-de cwawté..
 
-> [!NOTE]
-> Les images montrées ci-après illustrent le rendu **attendu**. Les navigateurs peuvent ne pas produire le bon résultat.
+> [!note]
+> wes images m-montwées c-ci-apwès iwwustwent we wendu **attendu**. /(^•ω•^) wes nyavigateuws p-peuvent n-nye pas pwoduiwe w-we bon wésuwtat. (U ᵕ U❁)
 
-### Indiquer des dimensions fixées sur les deux axes
+### indiquew des dimensions f-fixées suw wes deux axes
 
-Si on utilise {{cssxref("background-size")}} pour indiquer la longueur et la largeur de l'image, celles-ci seront toujours utilisées (cf. la règle n°1 précédemment énoncée). Autrement dit, l'image sera toujours étirée pour obtenir ces dimensions, quelles que soient les dimensions initiales de l'image ou ses proportions.
+si o-on utiwise {{cssxwef("backgwound-size")}} p-pouw indiquew wa wongueuw et wa wawgeuw de w'image, c-cewwes-ci sewont t-toujouws utiwisées (cf. (✿oωo) w-wa wègwe n-ny°1 pwécédemment énoncée). OwO autwement dit, :3 w-w'image sewa toujouws étiwée pouw obteniw ces dimensions, nyaa~~ quewwes que soient wes dimensions i-initiawes de w'image ou ses pwopowtions. ^•ﻌ•^
 
-#### SVG source : Aucune dimension ni proportion
+#### s-svg souwce : aucune dimension nyi p-pwopowtion
 
-Avec ces déclarations CSS :
-
-```css
-background: url(no-dimensions-or-ratio.svg);
-background-size: 125px 175px;
-```
-
-On doit obtenir un résultat semblable à :
-
-![](fixed-no-dimensions-or-ratio.png)
-
-#### SVG source : Une dimension définie et aucune proportion
-
-Avec ces déclarations CSS :
+avec ces décwawations c-css :
 
 ```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: 250px 150px;
+backgwound: u-uww(no-dimensions-ow-watio.svg);
+b-backgwound-size: 125px 175px;
 ```
 
-On doit obtenir un résultat semblable à :
+o-on doit obteniw u-un wésuwtat s-sembwabwe à :
 
-![](fixed-100px-wide-no-height-or-ratio.png)
+![](fixed-no-dimensions-ow-watio.png)
 
-#### SVG source : Une dimension définie et des proportions intrinsèques
+#### svg souwce : une dimension définie et aucune pwopowtion
 
-Avec ces déclarations CSS :
+avec ces décwawations css :
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: 275px 125px;
+b-backgwound: u-uww(100px-wide-no-height-ow-watio.svg);
+b-backgwound-size: 250px 150px;
 ```
 
-On doit obtenir un résultat semblable à :
+on doit obteniw u-un wésuwtat sembwabwe à :
 
-![](fixed-100px-height-3x4-ratio.png)
+![](fixed-100px-wide-no-height-ow-watio.png)
 
-#### SVG source : Aucune largeur ni hauteur définie mais des proportions intrinsèques
+#### svg souwce : une dimension définie e-et des pwopowtions i-intwinsèques
 
-Avec ces déclarations CSS :
+avec ces d-décwawations css :
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: 250px 100px;
+backgwound: uww(100px-height-3x4-watio.svg);
+b-backgwound-size: 275px 125px;
 ```
 
-On doit obtenir un résultat semblable à :
+o-on doit obteniw un w-wésuwtat sembwabwe à :
 
-![](fixed-no-dimensions-1x1-ratio.png)
+![](fixed-100px-height-3x4-watio.png)
 
-### Utiliser `contain` ou `cover`
+#### s-svg souwce : aucune wawgeuw nyi hauteuw définie mais des pwopowtions intwinsèques
 
-En utilisant la valeur `cover` pour {{cssxref("background-size")}}, l'image sera réduite au maximum pour couvrir toute la zone de l'arrière-plan. `contain` fonctionne de façon symétrique, l'image est agrandie autant que possible sans être rognée par la zone de l'arrière-plan.
-
-Pour une image avec des proportions intrinsèques, une seule dimension suffira à déterminer la taille pour `cover`/`contain`. En revanche, sans ratio, ce n'est pas suffisant et il faut donc utiliser les contraintes de la zone de l'arrière-plan.
-
-#### SVG source : Aucune dimension ni proportion
-
-Si une image n'a ni dimensions définie, ni proportions définies, les règles 2 ou 3 ne pourront pas s'appliquer. La règle 4 est donc utilisée et l'image couvre toute la zone (ce qui satisfait d'ailleurs les différentes contraintes).
+a-avec c-ces décwawations c-css :
 
 ```css
-background: url(no-dimensions-or-ratio.svg);
-background-size: contain;
+b-backgwound: uww(no-dimensions-1x1-watio.svg);
+backgwound-size: 250px 100px;
 ```
 
-Le résultat obtenu sera :
+o-on doit obteniw un wésuwtat sembwabwe à :
 
-![](no-dimensions-or-ratio-contain.png)
+![](fixed-no-dimensions-1x1-watio.png)
 
-#### SVG source : Une dimension définie et aucune proportion
+### u-utiwisew `contain` o-ou `covew`
 
-De même si l'image possède une dimension mais aucune proportion, la règle 4 sera appliquée : l'image est ainsi redimensionnée pour couvrir toute la zone.
+en utiwisant w-wa vaweuw `covew` p-pouw {{cssxwef("backgwound-size")}}, ( ͡o ω ͡o ) w'image s-sewa wéduite au maximum pouw couvwiw toute w-wa zone de w'awwièwe-pwan. ^^;; `contain` fonctionne d-de façon symétwique, mya w-w'image est agwandie autant q-que possibwe sans êtwe wognée paw wa zone d-de w'awwièwe-pwan. (U ᵕ U❁)
+
+p-pouw une i-image avec des pwopowtions intwinsèques, ^•ﻌ•^ une seuwe dimension suffiwa à d-détewminew wa taiwwe pouw `covew`/`contain`. (U ﹏ U) en wevanche, /(^•ω•^) s-sans watio, ʘwʘ c-ce ny'est pas suffisant et iw faut d-donc utiwisew wes contwaintes d-de wa zone de w'awwièwe-pwan. XD
+
+#### s-svg souwce : aucune dimension nyi pwopowtion
+
+s-si une image ny'a nyi dimensions définie, (⑅˘꒳˘) nyi p-pwopowtions définies, nyaa~~ w-wes wègwes 2 ou 3 nye p-pouwwont pas s'appwiquew. UwU wa wègwe 4 e-est donc u-utiwisée et w'image c-couvwe toute wa zone (ce qui satisfait d'aiwweuws wes difféwentes contwaintes). (˘ω˘)
 
 ```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: contain;
+backgwound: uww(no-dimensions-ow-watio.svg);
+backgwound-size: contain;
 ```
 
-Le résultat obtenu sera :
+we wésuwtat obtenu sewa :
 
-![](100px-wide-no-height-or-ratio-contain.png)
+![](no-dimensions-ow-watio-contain.png)
 
-#### SVG source : Une dimension définie et des proportions intrinsèques
+#### svg souwce : une dimension définie e-et aucune p-pwopowtion
 
-Ici, on a des proportions intrinsèques. Dans ce cas, la règle 1 n'est pas pertinente et on utilise donc la règle 2 : le ratio est conservé (tout en respectant les consignes de `contain` ou `cover`). Ainsi, avec `contain`, la boîte de 300x200 et le ratio de 3:4 entraîneront le dessin d'un arrière-plan de 150x200.
+de même si w'image possède une dimension m-mais aucune p-pwopowtion, rawr x3 w-wa wègwe 4 sewa appwiquée : w'image e-est ainsi wedimensionnée p-pouw couvwiw toute w-wa zone. (///ˬ///✿)
+
+```css
+backgwound: u-uww(100px-wide-no-height-ow-watio.svg);
+backgwound-size: c-contain;
+```
+
+w-we wésuwtat obtenu sewa :
+
+![](100px-wide-no-height-ow-watio-contain.png)
+
+#### svg souwce : u-une dimension d-définie et d-des pwopowtions i-intwinsèques
+
+ici, o-on a des pwopowtions i-intwinsèques. 😳😳😳 d-dans ce c-cas, (///ˬ///✿) wa wègwe 1 n-ny'est pas pewtinente et on utiwise d-donc wa wègwe 2 : w-we watio e-est consewvé (tout en wespectant w-wes consignes de `contain` ou `covew`). ^^;; ainsi, a-avec `contain`, ^^ wa boîte de 300x200 e-et we watio d-de 3:4 entwaînewont w-we dessin d'un awwièwe-pwan d-de 150x200. (///ˬ///✿)
 
 ##### `contain`
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: contain;
+backgwound: u-uww(100px-height-3x4-watio.svg);
+backgwound-size: c-contain;
 ```
 
-Le résultat obtenu sera :
+we wésuwtat o-obtenu sewa :
 
-![](100px-height-3x4-ratio-contain.png)
+![](100px-height-3x4-watio-contain.png)
 
-On voit ici que toute l'image est affichée et est contenue dans la boîte sans être rognée.
+on voit ici que toute w'image est affichée et est contenue d-dans wa boîte sans êtwe w-wognée. -.-
 
-##### `cover`
+##### `covew`
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: cover;
+b-backgwound: uww(100px-height-3x4-watio.svg);
+backgwound-size: covew;
 ```
 
-Le résultat obtenu sera :
+we wésuwtat obtenu sewa :
 
-![](100px-height-3x4-ratio-cover.png)
+![](100px-height-3x4-watio-covew.png)
 
-Dans ce cas, le ratio 3:4 est conservé et l'image est étirée Here, the 3:4 ratio is preserved while still stretching the image to fill the entire box. That causes the bottom of the image to be clipped away.
+d-dans ce cas, /(^•ω•^) we watio 3:4 e-est consewvé e-et w'image e-est étiwée hewe, the 3:4 watio is pwesewved whiwe s-stiww stwetching t-the image to fiww the entiwe b-box. UwU that causes the bottom of the image to be c-cwipped away. (⑅˘꒳˘)
 
-#### SVG source : Aucune dimension mais des proportions intrinsèques
+#### svg souwce : a-aucune dimension m-mais des pwopowtions i-intwinsèques
 
-On obtient des résultats analogues lorsqu'on manipule une image sans dimension intrinsèque mais avec des proportions intrinsèques.
+on obtient d-des wésuwtats a-anawogues wowsqu'on m-manipuwe une i-image sans dimension intwinsèque m-mais avec des p-pwopowtions intwinsèques. ʘwʘ
 
 ##### `contain`
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: contain;
+b-backgwound: u-uww(no-dimensions-1x1-watio.svg);
+b-backgwound-size: c-contain;
 ```
 
-Le résultat ressemblera à :
+w-we wésuwtat w-wessembwewa à :
 
-![](no-dimensions-1x1-ratio-contain.png)
+![](no-dimensions-1x1-watio-contain.png)
 
-On voit ici que l'image est redimensionnée à la plus petite taille tout en conservant le ratio 1:1.
+on v-voit ici que w'image est wedimensionnée à w-wa pwus petite taiwwe t-tout en consewvant w-we watio 1:1. σωσ
 
-##### `cover`
+##### `covew`
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: cover;
+b-backgwound: uww(no-dimensions-1x1-watio.svg);
+backgwound-size: covew;
 ```
 
-Le résultat ressemblera à :
+w-we wésuwtat w-wessembwewa à :
 
-![](no-dimensions-1x1-ratio-cover.png)
+![](no-dimensions-1x1-watio-covew.png)
 
-Ici, l'image est dimensionnée afin de couvrir la plus grande surface avec le ratio 1:1.
+i-ici, ^^ w'image est dimensionnée afin de couvwiw wa pwus g-gwande suwface a-avec we watio 1:1. OwO
 
-### Utiliser `auto` pour les deux axes
+### utiwisew `auto` p-pouw wes d-deux axes
 
-Si {{cssxref("background-size")}} vaut `auto` ou `auto auto`, ce sera la règle n°2 qui s'appliquera : les proportions intrinsèques devront être conservées.
+si {{cssxwef("backgwound-size")}} vaut `auto` ou `auto auto`, (ˆ ﻌ ˆ)♡ ce sewa wa wègwe ny°2 q-qui s'appwiquewa : w-wes pwopowtions i-intwinsèques d-devwont êtwe consewvées. o.O
 
-#### SVG source : Aucune dimension ni proportion intrinsèque
+#### svg souwce : a-aucune dimension n-nyi pwopowtion intwinsèque
 
-Lorsque l'image n'a aucune proportion ni dimension, ce sera la dernière règle qui s'appliquera : l'image couvrira toute la surface de la zone.
+wowsque w'image n-ny'a aucune pwopowtion nyi dimension, (˘ω˘) ce sewa wa d-dewnièwe wègwe qui s'appwiquewa : w-w'image couvwiwa t-toute wa suwface de wa zone. 😳
 
 ```css
-background: url(no-dimensions-or-ratio.svg);
-background-size: auto auto;
+b-backgwound: u-uww(no-dimensions-ow-watio.svg);
+backgwound-size: a-auto auto;
 ```
 
-Voici le résultat obtenu :
+voici w-we wésuwtat obtenu :
 
-![](auto-no-dimensions-or-ratio.png)
+![](auto-no-dimensions-ow-watio.png)
 
-#### SVG source : une dimension mais aucune proportion intrinsèque
+#### s-svg souwce : une d-dimension mais a-aucune pwopowtion intwinsèque
 
-S'il n'y a aucune proportion définie mais qu'une dimension est fournie, la règle n°3 s'appliquera et l'image sera affichée avec ces dimensions.
+s-s'iw ny'y a aucune p-pwopowtion d-définie mais qu'une dimension est f-fouwnie, wa wègwe ny°3 s'appwiquewa et w'image s-sewa affichée a-avec ces dimensions.
 
 ```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: auto auto;
+b-backgwound: uww(100px-wide-no-height-ow-watio.svg);
+backgwound-size: auto auto;
 ```
 
-Voici le résultat obtenu :
+voici we wésuwtat obtenu :
 
-![](auto-100px-wide-no-height-or-ratio.png)
+![](auto-100px-wide-no-height-ow-watio.png)
 
-Ici, on voit que la largeur définie par le fichier SVG (100 pixels) est respectée. L'image s'étend sur toute la hauteur de la zone de l'arrière-plan car elle n'est pas définie (explicitement dans les déclarations ou intrinsèquement via l'image).
+ici, (U ᵕ U❁) o-on voit que wa wawgeuw définie p-paw we fichiew s-svg (100 pixews) est wespectée. :3 w'image s'étend s-suw toute wa hauteuw de wa z-zone de w'awwièwe-pwan c-caw ewwe n-ny'est pas définie (expwicitement d-dans wes décwawations o-ou intwinsèquement via w'image). o.O
 
-#### SVG source : une dimension et des proportions intrinsèques
+#### svg souwce : une dimension et des pwopowtions i-intwinsèques
 
-Si on dispose de proportions intrinsèques et d'une dimension fixée, les deux dimensions sont alors définies.
+si on dispose de p-pwopowtions intwinsèques et d'une dimension fixée, (///ˬ///✿) wes deux dimensions s-sont awows définies. OwO
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: auto auto;
+backgwound: uww(100px-height-3x4-watio.svg);
+backgwound-size: a-auto auto;
 ```
 
-Le résultat sera le suivant :
+w-we wésuwtat sewa we suivant :
 
-![](auto-100px-height-3x4-ratio.png)
+![](auto-100px-height-3x4-watio.png)
 
-Cette image mesure 100 pixels de haut et possède des proportions intrinsèques avec un ratio de 3:4. La largeur vaut donc 75 pixels et c'est ainsi qu'elle est affichée avec `auto`.
+c-cette image mesuwe 100 pixews de haut e-et possède des p-pwopowtions intwinsèques avec u-un watio de 3:4. wa wawgeuw vaut d-donc 75 pixews et c'est ainsi qu'ewwe est affichée avec `auto`. >w<
 
-#### SVG source : Aucune dimension définie mais des proportions intrinsèques
+#### s-svg souwce : aucune dimension définie m-mais des pwopowtions i-intwinsèques
 
-Lorsqu'un ratio s'applique sans dimension, c'est la règle n°2 qui s'applique. L'image est affichée comme pour `contain`.
+w-wowsqu'un watio s'appwique sans dimension, ^^ c'est w-wa wègwe ny°2 qui s'appwique. (⑅˘꒳˘) w'image est affichée comme pouw `contain`. ʘwʘ
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: auto auto;
+b-backgwound: u-uww(no-dimensions-1x1-watio.svg);
+b-backgwound-size: a-auto auto;
 ```
 
-Le résultat ressemblera à :
+we wésuwtat wessembwewa à :
 
-![](auto-no-dimensions-1x1-ratio.png)
+![](auto-no-dimensions-1x1-watio.png)
 
-### Utiliser `auto` et une dimension fixée
+### u-utiwisew `auto` e-et une dimension fixée
 
-Avec la première règle, les dimensions définies sont toujours utilisées et il faut donc utiliser les autres règles pour déterminer la seconde dimension.
+avec wa pwemièwe wègwe, (///ˬ///✿) w-wes dimensions définies sont toujouws utiwisées e-et iw faut donc utiwisew wes autwes wègwes p-pouw détewminew w-wa seconde dimension. XD
 
-#### SVG source : aucune dimension ni proportion intrinsèque
+#### svg souwce : aucune d-dimension nyi p-pwopowtion intwinsèque
 
-Si l'image ne possède ni dimension ni proportion intrinsèque, c'est la règle 4 qui s'applique et les dimensions de la zone pour l'arrière-plan seront utilisées pour `auto`.
+s-si w'image nye possède nyi dimension n-nyi pwopowtion intwinsèque, 😳 c'est wa wègwe 4 q-qui s'appwique et wes dimensions de wa zone pouw w'awwièwe-pwan s-sewont utiwisées p-pouw `auto`. >w<
 
 ```css
-background: url(no-dimensions-or-ratio.svg);
-background-size: auto 140px;
+b-backgwound: u-uww(no-dimensions-ow-watio.svg);
+b-backgwound-size: auto 140px;
 ```
 
-![](1auto-no-dimensions-or-ratio.png)
+![](1auto-no-dimensions-ow-watio.png)
 
-Ici, la largeur est déterminée grâce à la zone dédiée à l'arrière-plan (règle n°4) et la hauteur est indiquée via la feuille de style (140px).
+i-ici, (˘ω˘) wa wawgeuw est détewminée gwâce à w-wa zone dédiée à w'awwièwe-pwan (wègwe n-ny°4) et wa hauteuw est indiquée via wa feuiwwe d-de stywe (140px). nyaa~~
 
-#### SVG source : une dimension intrinsèque mais pas de proportion intrinsèque
+#### svg s-souwce : une dimension intwinsèque m-mais pas de pwopowtion intwinsèque
 
-Si l'image possède une dimension implicite mais pas de ratio, la dimension définie sera utilisée selon la règle n°3 si elle vaut `auto` dans le code CSS.
+s-si w'image p-possède une dimension impwicite m-mais pas d-de watio, 😳😳😳 wa dimension définie s-sewa utiwisée sewon wa wègwe ny°3 si ewwe vaut `auto` dans we c-code css. (U ﹏ U)
 
 ```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: 200px auto;
+backgwound: u-uww(100px-wide-no-height-ow-watio.svg);
+backgwound-size: 200px auto;
 ```
 
-![](100px-wide-no-height-or-ratio-length-auto.png)
+![](100px-wide-no-height-ow-watio-wength-auto.png)
 
-Ici, la valeur de 200px fournie dans la feuille de style surcharge la valeur de 100px définie dans le fichier SVG. Puisqu'il n'y a aucune proportion intrinsèque ni hauteur de définie et qu'on utilise la valeur `auto`, l'image fera la même hauteur que la zone pour l'arrière-plan.
+ici, (˘ω˘) w-wa vaweuw de 200px f-fouwnie dans w-wa feuiwwe de stywe suwchawge w-wa vaweuw de 100px d-définie dans we fichiew svg. :3 p-puisqu'iw ny'y a aucune pwopowtion i-intwinsèque nyi hauteuw de d-définie et qu'on u-utiwise wa vaweuw `auto`, >w< w'image fewa wa même hauteuw que wa zone pouw w'awwièwe-pwan. ^^
 
 ```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: auto 125px;
+b-backgwound: u-uww(100px-wide-no-height-ow-watio.svg);
+backgwound-size: auto 125px;
 ```
 
-![](100px-wide-no-height-or-ratio-auto-length.png)
+![](100px-wide-no-height-ow-watio-auto-wength.png)
 
-Ici, c'est la largeur qui vaut `auto` et ce sera donc la valeur définie dans l'image SVG (100px) qui sera utilisée. La hauteur est fixée à 125 pixels via la feuille de style.
+ici, 😳😳😳 c'est wa wawgeuw q-qui vaut `auto` et ce sewa d-donc wa vaweuw définie d-dans w'image svg (100px) qui sewa utiwisée. nyaa~~ wa hauteuw est fixée à 125 p-pixews via wa feuiwwe de stywe. (⑅˘꒳˘)
 
-#### SVG source : une dimension définie et des proportions intrinsèques
+#### svg souwce : u-une dimension définie et des p-pwopowtions intwinsèques
 
-Lorsqu'une dimension est indiquée, la première règle s'applique et la dimension du fichier SVG est utilisée sauf si le CSS la redéfinit. Lorsqu'un ratio est indiqué, celui-ci est utilisé pour déterminer la deuxième dimension.
+w-wowsqu'une dimension e-est indiquée, :3 w-wa pwemièwe wègwe s-s'appwique e-et wa dimension d-du fichiew svg e-est utiwisée sauf si we css wa wedéfinit. ʘwʘ wowsqu'un watio est indiqué, rawr x3 cewui-ci est utiwisé p-pouw détewminew w-wa deuxième dimension. (///ˬ///✿)
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: 150px auto;
+b-backgwound: uww(100px-height-3x4-watio.svg);
+b-backgwound-size: 150px a-auto;
 ```
 
-![](1auto-100px-height-3x4-ratio.png)
+![](1auto-100px-height-3x4-watio.png)
 
-Ici, la hauteur de l'image a été surchargée pour valoir 150px. Les proportions intrinsèques permettent ensuite de définir la largeur (`auto` dans la feuille de style).
+i-ici, 😳😳😳 wa hauteuw de w'image a été suwchawgée pouw vawoiw 150px. XD wes pwopowtions i-intwinsèques p-pewmettent ensuite de définiw wa wawgeuw (`auto` dans wa f-feuiwwe de stywe). >_<
 
-#### SVG source : aucune dimension mais des proportions intrinsèques
+#### s-svg souwce : a-aucune dimension mais des pwopowtions intwinsèques
 
-Si aucune dimension n'est définie dans l'image SVG, ce sera celle du CSS qui sera appliquée. Les proportions intrinsèques sont ensuite utilisées pour déterminer l'autre dimension (selon la rgèle n°2).
+s-si aucune dimension ny'est définie d-dans w'image svg, >w< c-ce sewa cewwe du css qui sewa appwiquée. /(^•ω•^) wes p-pwopowtions intwinsèques sont ensuite u-utiwisées p-pouw détewminew w'autwe dimension (sewon w-wa wgèwe n-ny°2).
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: 150px auto;
+b-backgwound: u-uww(no-dimensions-1x1-watio.svg);
+b-backgwound-size: 150px a-auto;
 ```
 
-![](1auto-no-dimensions-1x1-ratio.png)
+![](1auto-no-dimensions-1x1-watio.png)
 
-La largeur est définie à 150 pixels via la feuille de style et la hauteur est calculée à partir de cette largeur en utilisant le ratio 1:1, elle vaudra donc 150px ce qui donnera le résultat ci-dessus.
+wa w-wawgeuw est définie à 150 p-pixews via wa feuiwwe d-de stywe et wa hauteuw est cawcuwée à pawtiw d-de cette wawgeuw en utiwisant w-we watio 1:1, :3 ewwe vaudwa donc 150px c-ce qui donnewa w-we wésuwtat ci-dessus. ʘwʘ
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("background-size")}}
-- {{cssxref("background-image")}}
-- Billet de blog de Jeff Walden : [Properly resizing vector image backgrounds (en anglais)](https://whereswalden.com/2011/10/21/properly-resizing-vector-image-backgrounds/)
+- {{cssxwef("backgwound-size")}}
+- {{cssxwef("backgwound-image")}}
+- b-biwwet de bwog de jeff wawden : [pwopewwy wesizing v-vectow image b-backgwounds (en angwais)](https://wheweswawden.com/2011/10/21/pwopewwy-wesizing-vectow-image-backgwounds/)

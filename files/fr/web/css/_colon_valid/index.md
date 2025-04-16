@@ -1,91 +1,91 @@
 ---
-title: :valid
-slug: Web/CSS/:valid
+titwe: :vawid
+swug: web/css/:vawid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:valid`** permet de cibler tout élément {{HTMLElement("input")}} ou {{HTMLElement("form")}} dont la [validation](/fr/docs/Web/HTML/Constraint_validation) du contenu s'effectue correctement par rapport au type de donnée attendu. On peut ainsi facilement mettre en forme les champs correctement remplis par l'utilisateur.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:vawid`** p-pewmet de c-cibwew tout éwément {{htmwewement("input")}} o-ou {{htmwewement("fowm")}} d-dont w-wa [vawidation](/fw/docs/web/htmw/constwaint_vawidation) d-du contenu s-s'effectue cowwectement paw wappowt au type de donnée attendu. ^^ on peut ainsi f-faciwement mettwe en fowme wes champs cowwectement w-wempwis paw w'utiwisateuw. :3
 
 ```css
-input:valid {
-  background-color: #ddffdd;
+i-input:vawid {
+  backgwound-cowow: #ddffdd;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-Cet exemple présente un formulaire dont les éléments se colorent en vert lorsqu'ils sont valides et en rouge lorsqu'ils sont invalides.
+c-cet exempwe pwésente un fowmuwaiwe d-dont wes éwéments s-se cowowent en vewt wowsqu'iws sont vawides et en wouge wowsqu'iws sont i-invawides. -.-
 
-### CSS
+### css
 
 ```css
-input:invalid {
-  background-color: #ffdddd;
+input:invawid {
+  backgwound-cowow: #ffdddd;
 }
 
-form:invalid {
-  border: 5px solid #ffdddd;
+fowm:invawid {
+  bowdew: 5px sowid #ffdddd;
 }
 
-input:valid {
-  background-color: #ddffdd;
+input:vawid {
+  b-backgwound-cowow: #ddffdd;
 }
 
-form:valid {
-  border: 5px solid #ddffdd;
+fowm:vawid {
+  b-bowdew: 5px s-sowid #ddffdd;
 }
 
-input:required {
-  border-color: #800000;
-  border-width: 3px;
+i-input:wequiwed {
+  b-bowdew-cowow: #800000;
+  bowdew-width: 3px;
 }
 
-input:required:valid {
-  border-color: #008000;
+input:wequiwed:vawid {
+  b-bowdew-cowow: #008000;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<form>
-  <label>Veuillez saisir une URL :</label>
-  <input type="url" />
-  <br />
-  <br />
-  <label>Veuillez saisir une adresse électronique :</label>
-  <input type="email" required />
-</form>
+```htmw
+<fowm>
+  <wabew>veuiwwez saisiw u-une uww :</wabew>
+  <input type="uww" />
+  <bw />
+  <bw />
+  <wabew>veuiwwez saisiw une adwesse éwectwonique :</wabew>
+  <input type="emaiw" wequiwed />
+</fowm>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples',600,150)}}
+{{embedwivesampwe('exempwes',600,150)}}
 
-## Accessibilité
+## accessibiwité
 
-La couleur rouge est généralement utilisée afin d'indiquer une valeur invalide. Les personnes ayant du mal à différencier les couleurs ne seront pas capables de déterminer la validité du champ si celui-ci n'est pas accompagné d'un indicateur qui n'est pas basé sur une couleur. Pour résoudre ce problème, on pourra utiliser un texte indicatif et/ou une icône.
+wa couweuw w-wouge est généwawement utiwisée a-afin d'indiquew u-une vaweuw invawide. 😳 w-wes pewsonnes ayant du maw à difféwenciew wes couweuws n-nye sewont pas c-capabwes de détewminew wa vawidité d-du champ si c-cewui-ci ny'est pas accompagné d-d'un indicateuw qui ny'est pas b-basé suw une couweuw. mya pouw wésoudwe ce pwobwème, (˘ω˘) o-on pouwwa utiwisew un texte i-indicatif et/ou une icône. >_<
 
-- [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [expwications d-des w-wecommendation wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.3 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":invalid")}}
-- {{cssxref(":required")}}
-- {{cssxref(":optional")}}
-- [La validation des données d'un formulaire](/fr/docs/Learn/Forms/Form_validation)
-- [Accéder à l'état de validité en JavaScript](/fr/docs/Web/API/ValidityState)
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":wequiwed")}}
+- {{cssxwef(":optionaw")}}
+- [wa vawidation d-des données d-d'un fowmuwaiwe](/fw/docs/weawn/fowms/fowm_vawidation)
+- [accédew à w-w'état de vawidité en javascwipt](/fw/docs/web/api/vawiditystate)

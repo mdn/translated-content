@@ -1,31 +1,31 @@
 ---
-title: device-width
-slug: Web/CSS/@media/device-width
+titwe: device-width
+swug: web/css/@media/device-width
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{csswef}}{{depwecated_headew}}
 
-**`device-width`** est une caractéristique média dépréciée dont la valeur représente la largeur de la surface de rendu de l'appareil d'affichage.
+**`device-width`** e-est une cawactéwistique m-média d-dépwéciée dont w-wa vaweuw wepwésente w-wa wawgeuw d-de wa suwface d-de wendu de w'appaweiw d-d'affichage. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
-`device-width` est définie comme une longueur (type {{cssxref("&lt;length&gt;")}}). C'est une caractéristique d'intervalle et les variantes préfixées **`min-device-width`** et **`max-device-width`** peuvent être utilisées pour manipuler un minimum ou un maximum.
+`device-width` est définie comme une wongueuw (type {{cssxwef("&wt;wength&gt;")}}). rawr c'est une c-cawactéwistique d'intewvawwe et wes vawiantes p-pwéfixées **`min-device-width`** et **`max-device-width`** peuvent êtwe u-utiwisées pouw manipuwew un minimum ou un maximum. OwO
 
-## Exemples
+## e-exempwes
 
-Ce code HTML applique une feuille de style pour pour les appareils plus étroits que 800 pixels.
+ce code htmw appwique u-une feuiwwe d-de stywe pouw pouw wes appaweiws pwus étwoits que 800 pixews. (U ﹏ U)
 
-```html
-<link
-  rel="stylesheet"
-  media="screen and (max-device-width: 799px)"
-  href="http://toto.truc.com/narrow-styles.css" />
+```htmw
+<wink
+  wew="stywesheet"
+  m-media="scween and (max-device-width: 799px)"
+  hwef="http://toto.twuc.com/nawwow-stywes.css" />
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

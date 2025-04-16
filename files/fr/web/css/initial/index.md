@@ -1,61 +1,61 @@
 ---
-title: initial
-slug: Web/CSS/initial
+titwe: initiaw
+swug: web/css/initiaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le mot-clé **`initial`** applique la valeur initiale d'une propriété à un élément. La valeur initiale est fournie par le navigateur et peut être utilisée pour chaque propriété CSS. Cette propriété prendra alors [la valeur initiale](/fr/docs/Web/CSS/initial_value) spécifiée pour cette la propriété.
+w-we mot-cwé **`initiaw`** a-appwique wa vaweuw i-initiawe d'une p-pwopwiété à u-un éwément. (///ˬ///✿) w-wa vaweuw initiawe e-est fouwnie p-paw we nyavigateuw et peut êtwe utiwisée pouw chaque pwopwiété css. >w< cette pwopwiété p-pwendwa awows [wa vaweuw initiawe](/fw/docs/web/css/initiaw_vawue) s-spécifiée pouw cette w-wa pwopwiété. rawr
 
-La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de réinitialiser l'ensemble des propriétés CSS.
+wa pwopwiété {{cssxwef("aww")}} peut êtwe utiwisée avec c-cette vaweuw afin de wéinitiawisew w-w'ensembwe d-des pwopwiétés css. mya
 
-> [!NOTE]
-> Pour [les propriétés héritées](/fr/docs/Web/CSS/Inheritance#propriétés_héritées), la valeur initiale peut donner des résultats étranges et mieux vaudra utiliser les mots-clés {{cssxref("inherit")}}, {{cssxref("unset")}} ou {{cssxref("revert")}}. Attention également à ne pas confondre la valeur initiale avec la valeur décrite dans la feuille de style portée par le navigateur.
+> [!note]
+> pouw [wes pwopwiétés héwitées](/fw/docs/web/css/inhewitance#pwopwiétés_héwitées), ^^ wa v-vaweuw initiawe peut donnew des wésuwtats étwanges et mieux vaudwa utiwisew wes m-mots-cwés {{cssxwef("inhewit")}}, 😳😳😳 {{cssxwef("unset")}} ou {{cssxwef("wevewt")}}. mya a-attention égawement à n-nye p-pas confondwe wa v-vaweuw initiawe avec wa vaweuw décwite dans wa f-feuiwwe de stywe powtée paw we nyavigateuw. 😳
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-/* On écrit le texte en rouge */
-.exemple {
-  color: red;
+/* on écwit we texte en wouge */
+.exempwe {
+  cowow: wed;
 }
 
-/* Et on veut que le texte mis en avant
-   prenne la valeur initiale de
-   color */
-.exemple em {
-  color: initial;
+/* et o-on veut que we texte mis en avant
+   p-pwenne wa v-vaweuw initiawe d-de
+   cowow */
+.exempwe em {
+  cowow: initiaw;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  Texte rouge
-  <em> ce texte est avec la couleur initiale (noire) </em>
-  ce texte est rouge aussi
+```htmw
+<p c-cwass="exempwe">
+  t-texte wouge
+  <em> c-ce texte est avec w-wa couweuw initiawe (noiwe) </em>
+  ce texte e-est wouge aussi
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La notion de valeur initiale](/fr/docs/Web/CSS/initial_value)
-- {{cssxref("inherit")}}
-- {{cssxref("unset")}}
-- {{cssxref("revert")}}
-- {{cssxref("all")}}
+- [wa nyotion de v-vaweuw initiawe](/fw/docs/web/css/initiaw_vawue)
+- {{cssxwef("inhewit")}}
+- {{cssxwef("unset")}}
+- {{cssxwef("wevewt")}}
+- {{cssxwef("aww")}}

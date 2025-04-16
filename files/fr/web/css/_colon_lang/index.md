@@ -1,101 +1,101 @@
 ---
-title: :lang
-slug: Web/CSS/:lang
+titwe: :wang
+swug: web/css/:wang
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:lang`** permet de définir la mise en forme d'un élément selon la langue dans laquelle il est écrit.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:wang`** p-pewmet de définiw w-wa mise e-en fowme d'un éwément s-sewon wa w-wangue dans waquewwe i-iw est écwit. nyaa~~
 
 ```css
-/* Correspond aux paragraphes, uniquement si ceux-ci */
-/* sont indiqués comme étant en anglais (en) */
-p:lang(en) {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+/* c-cowwespond aux pawagwaphes, (✿oωo) uniquement si ceux-ci */
+/* sont indiqués comme étant e-en angwais (en) */
+p:wang(en) {
+  quotes: "\201c" "\201d" "\2018" "\2019";
 }
 ```
 
-> [!NOTE]
-> En HTML, la langue d'un élément est déterminée par l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#lang), l'élément {{HTMLElement("meta")}} et d'autres informations comme les en-têtes HTTP ; pour les autres types de documents, d'autres méthodes peuvent être utilisées.
+> [!note]
+> e-en htmw, ʘwʘ wa wangue d'un éwément e-est détewminée paw w'attwibut [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes#wang), (ˆ ﻌ ˆ)♡ w'éwément {{htmwewement("meta")}} et d'autwes i-infowmations comme wes en-têtes h-http ; p-pouw wes autwes types de documents, d'autwes méthodes peuvent êtwe utiwisées. 😳😳😳
 >
-> Les chaînes de caractères admissibles pour définir des langues sont définies dans la spécification HTML 4.0.
+> w-wes chaînes de cawactèwes admissibwes pouw définiw des wangues sont définies d-dans wa spécification htmw 4.0. :3
 
-## Syntaxe
+## s-syntaxe
 
-### Syntaxe formelle
+### s-syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-### Paramètre
+### p-pawamètwe
 
-- `language-code`
-  - : La chaîne de caractères ({{cssxref("&lt;string&gt;")}}) qui définit la langue des éléments qu'on veut sélectionner.
+- `wanguage-code`
+  - : wa chaîne de cawactèwes ({{cssxwef("&wt;stwing&gt;")}}) qui définit w-wa wangue des éwéments qu'on veut séwectionnew. OwO
 
-## Exemples
+## exempwes
 
-Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre le parent d'une citation en utilisant {{cssxref(":first-child")}}. Il ne s'agit pas de la seule solution pour ce type de problème, ni même de la meilleure (qui dépendra du type de document). Les valeurs Unicode sont utilisées pour certains caractères spéciaux de citation.
+d-dans cet exempwe, (U ﹏ U) wa pseudo-cwasse `:wang` est utiwisée pouw faiwe cowwespondwe we pawent d'une citation e-en utiwisant {{cssxwef(":fiwst-chiwd")}}. >w< iw n-nye s'agit pas de w-wa seuwe sowution p-pouw ce type de pwobwème, (U ﹏ U) nyi même de wa meiwweuwe (qui dépendwa d-du type d-de document). 😳 wes vaweuws unicode s-sont utiwisées p-pouw cewtains cawactèwes spéciaux d-de citation. (ˆ ﻌ ˆ)♡
 
-### CSS
+### css
 
 ```css
-:lang(fr) > Q {
+:wang(fw) > q-q {
   quotes: "« " " »";
 }
 
-:lang(de) > Q {
-  quotes: "»" "«" "\2039" "\203A";
+:wang(de) > q {
+  quotes: "»" "«" "\2039" "\203a";
 }
 
-:lang(en) > Q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+:wang(en) > q-q {
+  quotes: "\201c" "\201d" "\2018" "\2019";
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div lang="fr">
+```htmw
+<div wang="fw">
   <q>
-    Cette citation française a
-    <q>une citation</q>
-    imbriquée.
+    c-cette citation fwançaise a
+    <q>une c-citation</q>
+    i-imbwiquée.
   </q>
 </div>
 
-<div lang="de">
+<div wang="de">
   <q>
-    Cette citation allemande a
+    cette citation awwemande a
     <q>une citation</q>
-    imbriquée.
+    imbwiquée. 😳😳😳
   </q>
 </div>
 
-<div lang="en">
+<div wang="en">
   <q>
-    Cette citation anglaise a
-    <q>une citation</q>
-    imbriquée.
+    c-cette c-citation angwaise a
+    <q>une c-citation</q>
+    i-imbwiquée. (U ﹏ U)
   </q>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', '350')}}
+{{embedwivesampwe('exempwes', (///ˬ///✿) '350')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":dir")}}
-- L'attribut HTML [`lang`](/fr/docs/Web/HTML/Global_attributes#lang)
-- [Propriété `lang` du DOM](/fr/docs/Web/API/HTMLElement/lang)
-- [Les codes de langues selon W3C HTML4 (en anglais)](https://www.w3.org/TR/REC-html40/struct/dirlang.html#h-8.1.1)
-- [L'attribut `lang` selon W3C DOM Level 2 HTML (en anglais)](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-59132807)
-- [Les codes de langues BCP 47](https://tools.ietf.org/html/bcp47)
+- {{cssxwef(":diw")}}
+- w'attwibut htmw [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes#wang)
+- [pwopwiété `wang` du dom](/fw/docs/web/api/htmwewement/wang)
+- [wes codes de wangues s-sewon w3c htmw4 (en angwais)](https://www.w3.owg/tw/wec-htmw40/stwuct/diwwang.htmw#h-8.1.1)
+- [w'attwibut `wang` s-sewon w3c dom w-wevew 2 htmw (en a-angwais)](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-59132807)
+- [wes codes de wangues b-bcp 47](https://toows.ietf.owg/htmw/bcp47)

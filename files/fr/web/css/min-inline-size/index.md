@@ -1,126 +1,126 @@
 ---
-title: min-inline-size
-slug: Web/CSS/min-inline-size
+titwe: min-inwine-size
+swug: w-web/css/min-inwine-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`min-inline-size`** définit la taille minimale horizontale ou verticale d'un élément en ligne (_inline_) selon le mode d'écriture utilisé. Cette propriété « logique » correspond à la propriété {{cssxref("min-width")}} ou {{cssxref("min-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}.
+w-wa pwopwiété **`min-inwine-size`** d-définit wa taiwwe m-minimawe howizontawe o-ou vewticawe d-d'un éwément e-en wigne (_inwine_) s-sewon we mode d'écwituwe utiwisé. 😳😳😳 cette pwopwiété « wogique » cowwespond à w-wa pwopwiété {{cssxwef("min-width")}} ou {{cssxwef("min-height")}} sewon wa vaweuw utiwisée p-pouw {{cssxwef("wwiting-mode")}}. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: min-inline-size")}}
+{{intewactiveexampwe("css demo: min-inwine-size")}}
 
-```css interactive-example-choice
-min-inline-size: 200px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+min-inwine-size: 200px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-inline-size: 200px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+min-inwine-size: 200px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-min-inline-size: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+min-inwine-size: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-inline-size: 75%;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+min-inwine-size: 75%;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Change min-inline-size</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">change min-inwine-size</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: f-fwex;
+  fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  j-justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
-Si le mode d'écriture est orienté verticalement, `min-inline-size` fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément. to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-block-size")}} peut être utilisée pour les blocs.
+si we mode d-d'écwituwe est owienté vewticawement, (///ˬ///✿) `min-inwine-size` fait wéféwence à wa hauteuw minimawe de w'éwément. 😳 s-sinon, 😳 ewwe fait wéféwence à w-wa wawgeuw minimawe d-de w'éwément. σωσ t-to the minimaw height of the ewement, rawr x3 othewwise it wewates t-to the minimaw w-width of the ewement. OwO wa pwopwiété {{cssxwef("min-bwock-size")}} p-peut êtwe utiwisée p-pouw wes bwocs. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-min-inline-size: 100px;
-min-inline-size: 5em;
+/* v-vaweuws de wongueuw */
+/* type <wength>       */
+m-min-inwine-size: 100px;
+min-inwine-size: 5em;
 
-/* Valeurs proportionnelles à la */
-/* largeur du bloc englobant     */
-/* Type <percentage>             */
-min-inline-size: 10%;
+/* vaweuws pwopowtionnewwes à wa */
+/* w-wawgeuw du bwoc engwobant     */
+/* t-type <pewcentage>             */
+min-inwine-size: 10%;
 
-/* Valeurs avec un mot-clé */
-min-inline-size: max-content;
-min-inline-size: min-content;
-min-inline-size: fit-content;
-min-inline-size: fill-available;
+/* v-vaweuws avec u-un mot-cwé */
+min-inwine-size: max-content;
+min-inwine-size: min-content;
+min-inwine-size: fit-content;
+min-inwine-size: fiww-avaiwabwe;
 
-/* Valeurs globales */
-min-inline-size: inherit;
-min-inline-size: initial;
-min-inline-size: unset;
+/* v-vaweuws gwobawes */
+m-min-inwine-size: inhewit;
+m-min-inwine-size: i-initiaw;
+min-inwine-size: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-La propriété `min-inline-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
+wa pwopwiété `min-inwine-size` peut pwendwe w-wes mêmes vaweuws que wes pwopwiétés {{cssxwef("min-width")}} ou {{cssxwef("min-height")}}. 😳😳😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 5%;
-  min-inline-size: 200px;
+.exempwe {
+  w-wwiting-mode: v-vewticaw-ww;
+  backgwound-cowow: y-yewwow;
+  bwock-size: 5%;
+  m-min-inwine-size: 200px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="exemple">Texte d'exemple</p>
+```htmw
+<p c-cwass="exempwe">texte d'exempwe</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes
+- w-wes pwopwiétés physiques cowwespondantes
 
-  - {{cssxref("min-width")}}
-  - {{cssxref("min-height")}}
+  - {{cssxwef("min-width")}}
+  - {{cssxwef("min-height")}}
 
-- {{cssxref("writing-mode")}}
+- {{cssxwef("wwiting-mode")}}

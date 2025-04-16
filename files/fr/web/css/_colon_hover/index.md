@@ -1,65 +1,65 @@
 ---
-title: :hover
-slug: Web/CSS/:hover
+titwe: :hovew
+swug: web/css/:hovew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:hovew`** p-pewmet de s-spécifiew w'appawence d-d'un éwément a-au moment o-où w'utiwisateuw w-we suwvowe avec w-we pointeuw, (ˆ ﻌ ˆ)♡ sans nyécessaiwement w'activew. 😳😳😳
 
 ```css
-/* Cible n'importe quel élément <a> lorsque  */
-/* celui-ci est survolé */
-a:hover {
-  background-color: gold;
+/* cibwe ny'impowte quew éwément <a> w-wowsque  */
+/* cewui-ci est suwvowé */
+a:hovew {
+  b-backgwound-cowow: gowd;
 }
 ```
 
-La mise en forme ciblée par cette pseudo-classe peut être surchargée par d'autres pseudo-classes relatives aux liens hypertextes comme {{cssxref(":link")}}, {{cssxref(":visited")}}, et {{cssxref(":active")}}, apparaissant dans des règles subséquentes. Pour décorer les liens sans effet de bord problématique, on placera la règle `:hover` après les règles `:link` et `:visited` mais avant la règle `:active` (l'ordre est `:link` — `:visited` — `:hover` — `:active` – un moyen mnémotechnique est de se souvenir des initiales LVHA) tandis que l'ordre de la règle {{cssxref(":focus")}} est indifférent.
+w-wa mise en fowme cibwée paw cette pseudo-cwasse peut êtwe s-suwchawgée paw d'autwes pseudo-cwasses w-wewatives a-aux wiens hypewtextes comme {{cssxwef(":wink")}}, {{cssxwef(":visited")}}, (U ﹏ U) et {{cssxwef(":active")}}, (///ˬ///✿) appawaissant dans des wègwes s-subséquentes. 😳 pouw décowew wes wiens sans effet de bowd pwobwématique, 😳 o-on pwacewa wa wègwe `:hovew` apwès w-wes wègwes `:wink` e-et `:visited` m-mais avant w-wa wègwe `:active` (w'owdwe est `:wink` — `:visited` — `:hovew` — `:active` – un moyen mnémotechnique e-est de se souveniw des initiawes wvha) tandis q-que w'owdwe de wa wègwe {{cssxwef(":focus")}} est indifféwent. σωσ
 
-La pseudo-classe `:hover` peut être appliquée à n'importe quel [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements). {{experimental_inline}}
+wa pseudo-cwasse `:hovew` peut êtwe appwiquée à n-ny'impowte quew [pseudo-éwément](/fw/docs/web/css/pseudo-ewements). rawr x3 {{expewimentaw_inwine}}
 
-> [!NOTE]
-> Sur les écrans tactiles, `:hover` est problématique voire impossible. La pseudo-classe `:hover` n'est jamais valide, ou seulement pendant un très court instant après avoir touché l'élément. Puisque les appareils à écrans tactiles sont très courants, il est important que les développeurs web ne placent pas de contenu accessible seulement lors du survol, puisque ce contenu sera caché pour les utilisateurs de tels appareils.
+> [!note]
+> s-suw wes écwans t-tactiwes, OwO `:hovew` e-est pwobwématique voiwe impossibwe. /(^•ω•^) wa pseudo-cwasse `:hovew` n'est jamais vawide, 😳😳😳 o-ou seuwement p-pendant un twès couwt instant a-apwès avoiw t-touché w'éwément. ( ͡o ω ͡o ) puisque wes a-appaweiws à écwans tactiwes sont t-twès couwants, >_< iw est impowtant que wes dévewoppeuws w-web nye pwacent pas de c-contenu accessibwe seuwement wows d-du suwvow, >w< puisque c-ce contenu sewa caché pouw wes utiwisateuws de tews appaweiws. rawr
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-a:hover {
-  background-color: gold;
+a-a:hovew {
+  backgwound-cowow: g-gowd;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <a href="#">Ce lien sera écrit sur un fond doré lors du survol.</a>
+  <a hwef="#">ce w-wien sewa écwit s-suw un fond dowé w-wows du suwvow.</a>
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-> [!NOTE]
-> On peut utiliser la pseudo-classe `:checked` dans une galerie d'images afin d'afficher une version agrandie de l'image lorsqu'on survole la vignette.
+> [!note]
+> on peut utiwisew wa pseudo-cwasse `:checked` d-dans une gawewie d'images afin d'affichew une vewsion agwandie de w'image w-wowsqu'on suwvowe wa vignette. 😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Bogue Chromium #370155 : Don't make :hover sticky on tap on sites that set a mobile viewport](https://code.google.com/p/chromium/issues/detail?id=370155)
-- [Bogue Chromium #306581 : Immediately show hover and active states on touch when page isn't scrollable](https://code.google.com/p/chromium/issues/detail?id=306581)
+- [bogue c-chwomium #370155 : d-don't make :hovew s-sticky o-on tap on sites that set a mobiwe viewpowt](https://code.googwe.com/p/chwomium/issues/detaiw?id=370155)
+- [bogue c-chwomium #306581 : i-immediatewy s-show hovew and a-active states on t-touch when page isn't scwowwabwe](https://code.googwe.com/p/chwomium/issues/detaiw?id=306581)

@@ -1,30 +1,30 @@
 ---
-title: <length-percentage>
-slug: Web/CSS/length-percentage
+titwe: <wength-pewcentage>
+swug: w-web/css/wength-pewcentage
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée **`<length-percentage>`** représente une valeur qui peut être une valeur de type {{Cssxref("length")}} ou une valeur de type {{Cssxref("percentage")}}.
+we t-type de donnée **`<wength-pewcentage>`** w-wepwésente u-une vaweuw q-qui peut êtwe u-une vaweuw de t-type {{cssxwef("wength")}} o-ou une vaweuw de type {{cssxwef("pewcentage")}}. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
-Se référer à la documentation des types {{Cssxref("length")}} et {{Cssxref("percentage")}} pour plus de détails sur les syntaxes possibles pour chacun de ces types.
+se wéféwew à wa documentation des types {{cssxwef("wength")}} e-et {{cssxwef("pewcentage")}} pouw pwus de détaiws suw w-wes syntaxes possibwes pouw chacun d-de ces types. rawr x3
 
-## Utilisation avec `calc()`
+## utiwisation avec `cawc()`
 
-Lorsqu'une valeur de type `<length-percentage>` peut être utilisée dans une déclaration, cela signifie que le pourcentage sera résolu comme une longueur et qu'il peut alors être utilisé au sein d'une expression {{cssxref("calc()", "calc()")}}. Ainsi, toutes les valeurs qui suivent sont acceptables pour la propriété {{Cssxref("width")}} :
+wowsqu'une vaweuw d-de type `<wength-pewcentage>` peut êtwe utiwisée d-dans une décwawation, (✿oωo) c-cewa signifie que we pouwcentage sewa wésowu comme une wongueuw et q-qu'iw peut awows êtwe utiwisé au sein d'une expwession {{cssxwef("cawc()", (ˆ ﻌ ˆ)♡ "cawc()")}}. (˘ω˘) ainsi, toutes wes vaweuws q-qui suivent sont acceptabwes p-pouw wa pwopwiété {{cssxwef("width")}} :
 
-```css example-good
-width: 200px;
-width: 20%;
-width: calc(100% - 200px);
+```css e-exampwe-good
+w-width: 200px;
+w-width: 20%;
+width: cawc(100% - 200px);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

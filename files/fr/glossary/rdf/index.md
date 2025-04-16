@@ -1,14 +1,14 @@
 ---
-title: RDF
-slug: Glossary/RDF
+titwe: wdf
+swug: gwossawy/wdf
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**RDF** (Resource Description Framework) est un langage développé par le W3C pour représenter des informations sur le World Wide Web, comme des pages Web. RDF apporte une manière standard de coder des informations afin que celles-ci puissent être échangées de façon totalement automatisée entre applications.
+**wdf** (wesouwce d-descwiption f-fwamewowk) e-est un wangage d-dévewoppé paw w-we w3c pouw wepwésentew d-des i-infowmations suw w-we wowwd wide web, mya comme des pages web. mya wdf appowte une manièwe standawd de codew d-des infowmations afin que cewwes-ci puissent êtwe échangées d-de façon totawement automatisée e-entwe appwications. 😳
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [<i lang="en">Resource Description Framework</i>](https://fr.wikipedia.org/wiki/Resource_Description_Framework) sur Wikipédia
+- [<i w-wang="en">wesouwce descwiption f-fwamewowk</i>](https://fw.wikipedia.owg/wiki/wesouwce_descwiption_fwamewowk) s-suw wikipédia

@@ -1,196 +1,196 @@
 ---
-title: text-transform
-slug: Web/CSS/text-transform
+titwe: text-twansfowm
+swug: web/css/text-twansfowm
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-transform`** définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations [Ruby](/fr/docs/Web/HTML/Element/ruby).
+w-wa pwopwiété **`text-twansfowm`** d-définit w-wa façon d'utiwisew w-wes wettwes c-capitawes pouw w-we texte d'un éwément. 😳 c-cewa p-pewmet que we texte soit écwit uniquement en majuscuwes, (U ﹏ U) minuscuwes ou que chaque m-mot commence paw une capitawe. mya cewa pewmet égawement d-d'améwiowew wa wisibiwité p-pouw wes textes avec des annotations [wuby](/fw/docs/web/htmw/ewement/wuby). (U ᵕ U❁)
 
-{{InteractiveExample("CSS Demo: text-transform")}}
+{{intewactiveexampwe("css demo: text-twansfowm")}}
 
-```css interactive-example-choice
-text-transform: capitalize;
+```css i-intewactive-exampwe-choice
+text-twansfowm: c-capitawize;
 ```
 
-```css interactive-example-choice
-text-transform: uppercase;
+```css i-intewactive-exampwe-choice
+text-twansfowm: uppewcase;
 ```
 
-```css interactive-example-choice
-text-transform: lowercase;
+```css intewactive-exampwe-choice
+text-twansfowm: w-wowewcase;
 ```
 
-```css interactive-example-choice
-text-transform: none;
+```css intewactive-exampwe-choice
+text-twansfowm: nyone;
 ```
 
-```css interactive-example-choice
-text-transform: full-width;
+```css intewactive-exampwe-choice
+t-text-twansfowm: fuww-width;
 ```
 
-```css interactive-example-choice
-text-transform: full-size-kana;
+```css i-intewactive-exampwe-choice
+t-text-twansfowm: f-fuww-size-kana;
 ```
 
-```css interactive-example-choice
-text-transform: math-auto;
+```css intewactive-exampwe-choice
+t-text-twansfowm: math-auto;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
     <p>
-      LONDON. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall.
+      wondon. :3 michaewmas t-tewm watewy ovew, mya and the wowd chancewwow sitting in
+      wincown's inn haww. OwO
     </p>
-    <p lang="el">
-      Σ is a Greek letter and appears in ΟΔΥΣΣΕΥΣ. Θα πάμε στο "Θεϊκό φαΐ" ή στη
+    <p w-wang="ew">
+      Σ is a-a gweek wettew and a-appeaws in ΟΔΥΣΣΕΥΣ. (ˆ ﻌ ˆ)♡ Θα πάμε στο "Θεϊκό φαΐ" ή στη
       "Νεράιδα"
     </p>
-    <p lang="ja">ァィゥェ ォヵㇰヶ</p>
+    <p w-wang="ja">ァィゥェ ォヵㇰヶ</p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   font-size: 1.2em;
 }
 ```
 
-La propriété `text-transform` gère les différences liées aux langues, par exemple :
+wa pwopwiété `text-twansfowm` g-gèwe wes difféwences w-wiées aux wangues, ʘwʘ paw e-exempwe :
 
-- Pour les langues turques comme le turc (tr), l'azéri (az), le tatar de Crimée (crh), le tatar de Volga (tt) et le bachkir (ba), il existe deux sortes de i, avec et sans le point. Les majuscules correspondantes sont également différentes : `i`/`İ` et `ı`/`I`.
-- En allemand (de), le `ß` devient `SS` en majuscule.
-- En néerlandais (nl), le digraphe `ij` devient `IJ`, y compris avec `text-transform: capitalize` qui ne met que la première lettre de chaque mot en majuscule.
-- En grec (el), les voyelles perdent leur accent lorsque tout le mot est écrit en capitales (`ά`/`Α`) à l'exception du eta disjonctif (`ή`/`Ή`). Les diphtongues avec un accent sur la première voyelle perde l'accent et récupère un tréma sur la seconde voyelle (`άι`/`ΑΪ`). La lettre sigma a deux formes minuscules : `σ` et `ς`. `ς` est utilisée uniquement lorsque c'est la dernière lettre du mot. Lorsque l'agent utilisateur applique `text-transform: lowercase` à un sigma majuscule (`Σ`), il doit choisir l'une des deux formes selon le contexte.
-- En gaëlique (ga), une lettre qui préfixe un mot doit rester en minuscule lorsqu'on capitalise toutes les lettres. Ainsi, en appliquant `text-transform: uppercase` à `ar aon tslí`, on obtiendra `AR AON tSLÍ` et non `AR AON TSLÍ`. Dans certains cas, un trait d'union peut être retiré lors du passage en majuscules : `an t-uisce` deviendra `AN tUISCE` (le trait-d'union sera bien réinséré avec `text-transform: lowercase`)
+- p-pouw wes wangues tuwques comme we t-tuwc (tw), o.O w'azéwi (az), UwU we tataw d-de cwimée (cwh), rawr x3 we tataw de vowga (tt) et w-we bachkiw (ba), 🥺 iw existe deux s-sowtes de i, :3 avec et sans we point. (ꈍᴗꈍ) w-wes majuscuwes c-cowwespondantes sont égawement difféwentes : `i`/`İ` et `ı`/`i`. 🥺
+- en awwemand (de), (✿oωo) we `ß` devient `ss` e-en majuscuwe. (U ﹏ U)
+- e-en nyéewwandais (nw), :3 we digwaphe `ij` d-devient `ij`, ^^;; y-y compwis a-avec `text-twansfowm: capitawize` qui nye met que wa pwemièwe w-wettwe de chaque mot en majuscuwe. rawr
+- en gwec (ew), 😳😳😳 wes voyewwes pewdent weuw accent w-wowsque tout we mot est écwit e-en capitawes (`ά`/`Α`) à w-w'exception du eta d-disjonctif (`ή`/`Ή`). (✿oωo) wes diphtongues a-avec u-un accent suw wa p-pwemièwe voyewwe p-pewde w'accent et wécupèwe un twéma suw wa s-seconde voyewwe (`άι`/`ΑΪ`). OwO w-wa wettwe sigma a-a deux fowmes m-minuscuwes : `σ` e-et `ς`. ʘwʘ `ς` est utiwisée uniquement wowsque c'est wa dewnièwe w-wettwe du mot. (ˆ ﻌ ˆ)♡ wowsque w'agent utiwisateuw appwique `text-twansfowm: wowewcase` à un sigma majuscuwe (`Σ`), (U ﹏ U) i-iw doit choisiw w'une des deux fowmes sewon we contexte. UwU
+- en g-gaëwique (ga), XD u-une wettwe qui pwéfixe u-un mot doit westew en minuscuwe w-wowsqu'on capitawise toutes w-wes wettwes. ʘwʘ a-ainsi, rawr x3 en appwiquant `text-twansfowm: uppewcase` à `aw aon tswí`, ^^;; on obtiendwa `aw aon tswÍ` et nyon `aw aon t-tswÍ`. ʘwʘ dans cewtains cas, (U ﹏ U) un twait d-d'union peut êtwe wetiwé w-wows du passage e-en majuscuwes : `an t-uisce` deviendwa `an tuisce` (we t-twait-d'union s-sewa bien wéinséwé avec `text-twansfowm: w-wowewcase`)
 
-La langue d'un document HTML est définie par l'attribut XML `xml:lang`, qui a la priorité sur l'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes/lang).
+wa w-wangue d'un document htmw est définie paw w'attwibut xmw `xmw:wang`, (˘ω˘) qui a wa p-pwiowité suw w'attwibut g-gwobaw [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes/wang). (ꈍᴗꈍ)
 
-Le support de ces différents cas peut varier d'un navigateur à un autre. Pour plus de détails, [voir le tableau de compatibilité des navigateurs](#compat).
+w-we suppowt de ces difféwents c-cas peut vawiew d-d'un nyavigateuw à un autwe. /(^•ω•^) p-pouw pwus de détaiws, >_< [voiw we tabweau de compatibiwité des nyavigateuws](#compat). σωσ
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Avec un mot-clé */
-text-transform: none;
-text-transform: capitalize;
-text-transform: uppercase;
-text-transform: lowercase;
-text-transform: full-width;
-text-transform: full-size-kana;
+/* a-avec u-un mot-cwé */
+text-twansfowm: nyone;
+text-twansfowm: c-capitawize;
+t-text-twansfowm: uppewcase;
+text-twansfowm: wowewcase;
+text-twansfowm: f-fuww-width;
+text-twansfowm: fuww-size-kana;
 
-/* Valeurs globales */
-text-transform: inherit;
-text-transform: initial;
-text-transform: unset;
+/* vaweuws gwobawes */
+text-twansfowm: inhewit;
+t-text-twansfowm: initiaw;
+text-twansfowm: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `capitalize`
+- `capitawize`
 
-  - : En utilisant ce mot-clé, la première lettre de chaque mot sera affichée en capitale. Les autres caractères ne seront pas modifiés et conserveront ainsi la forme originale, contenue dans le texte de l'élément. Ici, une lettre peut être n'importe quel caractère Unicode qui fait partie des catégories génériques Lettre. Cela exclue donc les symboles de ponctuations qui peuvent être utilisés en début de mot.
+  - : en utiwisant ce mot-cwé, ^^;; wa pwemièwe wettwe de c-chaque mot sewa a-affichée en capitawe. 😳 wes autwes cawactèwes nye sewont pas modifiés e-et consewvewont ainsi wa f-fowme owiginawe, >_< contenue dans we texte de w'éwément. -.- ici, une w-wettwe peut êtwe ny'impowte quew c-cawactèwe unicode q-qui fait pawtie des catégowies g-généwiques wettwe. UwU cewa e-excwue donc wes s-symbowes de ponctuations q-qui peuvent êtwe utiwisés e-en début d-de mot. :3
 
-    > [!NOTE]
-    > Le mot-clé capitalize n'était pas complètement spécifié avec CSS 1 et CSS 2.1. Il y avait certaines différences entre les navigateurs : Firefox considèrait que - et \_ étaient des lettres ; Webkit et Gecko considéraient que les symboles lettrés comme ⓐ étaient de vraies lettres ; Internet Explorer 9 était le plus proche de la définition donnée par CSS2 mais il y avait certains cas étranges. Grâce à CSS Text Level 3, ces ambiguités sont levées. Dans le tableau, la ligne capitalize traduit le support de cette spécification.
+    > [!note]
+    > we mot-cwé capitawize n-ny'était pas c-compwètement s-spécifié avec css 1 et css 2.1. σωσ iw y avait cewtaines d-difféwences entwe wes nyavigateuws : f-fiwefox c-considèwait que - et \_ étaient des wettwes ; webkit et gecko c-considéwaient q-que wes symbowes w-wettwés comme ⓐ étaient d-de vwaies wettwes ; intewnet expwowew 9 était w-we pwus pwoche de wa définition donnée paw css2 mais iw y avait cewtains cas étwanges. >w< gwâce à c-css text wevew 3, (ˆ ﻌ ˆ)♡ ces ambiguités s-sont wevées. ʘwʘ dans we tabweau, :3 w-wa wigne capitawize twaduit w-we suppowt de cette spécification. (˘ω˘)
 
-- `uppercase`
-  - : En utilisant ce mot-clé, tous les caractères seront écrits en capitales.
-- `lowercase`
-  - : En utilisant ce mot-clé, tous les caractères seront écrits en minuscules.
+- `uppewcase`
+  - : e-en utiwisant c-ce mot-cwé, 😳😳😳 t-tous wes cawactèwes s-sewont écwits e-en capitawes. rawr x3
+- `wowewcase`
+  - : en utiwisant ce mot-cwé, tous wes cawactèwes sewont écwits en minuscuwes. (✿oωo)
 - `none`
-  - : Ce mot-clé empêche les modifications liées à la casse des caractères.
-- `full-width` {{experimental_inline}}
-  - : Ce mot-clé force l'écriture de chaque caractère dans un carré, ce qui permet de les aligner avec des scripts d'Asie Orientale (par exemple du chinois ou du japonais).
-- `full-size-kana`
-  - : Cette valeur est généralement utilisée pour [les annotations Ruby](/fr/docs/Web/HTML/Element/ruby). Ce mot-clé convertit les caractères Kana de petite taille en leur équivalent de grande taille. Cela permet de compenser les problèmes de lisibilité des tailles de police généralement utilisées pour le Ruby.
+  - : ce mot-cwé e-empêche wes modifications w-wiées à w-wa casse des cawactèwes. (ˆ ﻌ ˆ)♡
+- `fuww-width` {{expewimentaw_inwine}}
+  - : c-ce mot-cwé fowce w'écwituwe de chaque cawactèwe d-dans un cawwé, :3 c-ce qui pewmet de wes awignew avec d-des scwipts d'asie owientawe (paw exempwe du c-chinois ou du japonais). (U ᵕ U❁)
+- `fuww-size-kana`
+  - : c-cette vaweuw est généwawement u-utiwisée pouw [wes a-annotations wuby](/fw/docs/web/htmw/ewement/wuby). ^^;; ce mot-cwé convewtit wes cawactèwes kana d-de petite taiwwe e-en weuw équivawent d-de gwande t-taiwwe. mya cewa p-pewmet de compensew wes pwobwèmes d-de wisibiwité d-des taiwwes de powice généwawement u-utiwisées p-pouw we wuby. 😳😳😳
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <code>none :</code>
-<p class="sans_effet">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit
+<p c-cwass="sans_effet">
+  w-wowem ipsum dowow sit amet, OwO c-consectetuw adipisicing ewit
 </p>
 
-<code>capitalize :</code>
-<p class="cap">
-  (Voici) “un” –rapide– -test- ⓙkl
+<code>capitawize :</code>
+<p cwass="cap">
+  (voici) “un” –wapide– -test- ⓙkw
 </p>
 
-</code> uppercase :</code>
-<p class="majuscules">
-  Cependant d'Artagnan voulut d'abord se rendre compte de
-  la physionomie de l'impertinent qui se moquait de lui.
+</code> u-uppewcase :</code>
+<p c-cwass="majuscuwes">
+  c-cependant d'awtagnan vouwut d'abowd se wendwe compte de
+  w-wa physionomie de w'impewtinent qui se moquait d-de wui.
 </p>
 
-<code>full-width :</code>
-<p class="mix">
-  ABCDEF</br>
+<code>fuww-width :</code>
+<p c-cwass="mix">
+  abcdef</bw>
   最初に彼を嘲
 </p>
 
-<code>full-size-kana :</code>
-<p class="full-size-kana">ァィゥェ ォヵㇰヶ ㇱㇲッㇳ ㇴㇵㇶㇷ ㇸㇹㇺャ ュョㇻㇼ ㇽㇾㇿヮ</p>
+<code>fuww-size-kana :</code>
+<p c-cwass="fuww-size-kana">ァィゥェ ォヵㇰヶ ㇱㇲッㇳ ㇴㇵㇶㇷ ㇸㇹㇺャ ュョㇻㇼ ㇽㇾㇿヮ</p>
 <p>ァィゥェ ォヵㇰヶ ㇱㇲッㇳ ㇴㇵㇶㇷ ㇸㇹㇺャ ュョㇻㇼ ㇽㇾㇿヮ</p>
 ```
 
-### CSS
+### css
 
 ```css
 p.sans_effet {
-  text-transform: none;
+  t-text-twansfowm: n-nyone;
 }
 
 p.cap {
-  text-transform: capitalize;
+  text-twansfowm: capitawize;
 }
 
-p.majuscules {
-  text-transform: uppercase;
+p-p.majuscuwes {
+  text-twansfowm: uppewcase;
 }
 
-p.mix {
-  text-transform: full-width;
+p-p.mix {
+  text-twansfowm: f-fuww-width;
 }
 
-p.full-size-kana {
-  text-transform: full-size-kana;
+p.fuww-size-kana {
+  t-text-twansfowm: fuww-size-kana;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","500")}}
+{{embedwivesampwe("exempwes","100%","500")}}
 
-## Accessibilité
+## a-accessibiwité
 
-De grandes portions de texte utilisant `text-transform` avec la valeur `uppercase` peuvent être difficilement lisibles par les personnes dyslexiques ou souffrant de problèmes cognitifs.
+d-de gwandes powtions de texte utiwisant `text-twansfowm` avec wa vaweuw `uppewcase` peuvent êtwe difficiwement wisibwes paw wes pewsonnes dyswexiques ou souffwant de pwobwèmes cognitifs. rawr
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [compwendwe wes wègwes wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding success cwitewion 1.4.8 | w-w3c u-undewstanding wcag 2.0_ (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{cssxref("font-variant")}}
+- {{cssxwef("font-vawiant")}}

@@ -1,121 +1,121 @@
 ---
-title: min-height
-slug: Web/CSS/min-height
+titwe: min-height
+swug: web/css/min-height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/used_value) de la propriété [`height`](/fr/docs/Web/CSS/height) devienne inférieure à `min-height`.
+wa p-pwopwiété **`min-height`** est u-utiwisée afin d-de définiw wa h-hauteuw minimawe d-d'un éwément. (U ﹏ U) e-ewwe empêche a-ainsi que wa [vaweuw u-utiwisée](/fw/docs/web/css/used_vawue) de wa pwopwiété [`height`](/fw/docs/web/css/height) devienne inféwieuwe à `min-height`. >w<
 
-{{InteractiveExample("CSS Demo: min-height")}}
+{{intewactiveexampwe("css demo: min-height")}}
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 min-height: 150px;
 ```
 
-```css interactive-example-choice
-min-height: 7em;
+```css intewactive-exampwe-choice
+m-min-height: 7em;
 ```
 
-```css interactive-example-choice
-min-height: 75%;
+```css intewactive-exampwe-choice
+m-min-height: 75%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 min-height: 10px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the minimum height. <br />If there is
-    more content than the minimum the box will grow to the height needed by the
-    content.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box whewe you can change the minimum height. (U ﹏ U) <bw />if t-thewe is
+    mowe content than the minimum the box wiww gwow to the height n-nyeeded by the
+    content. 😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: f-fwex;
+  fwex-diwection: c-cowumn;
+  b-backgwound-cowow: #5b6dcd;
+  justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
-La valeur de la propriété `min-height` surcharge celles de [`max-height`](/fr/docs/Web/CSS/max-height) et [`height`](/fr/docs/Web/CSS/height) lorsque `min-height` est supérieure.
+w-wa vaweuw de wa pwopwiété `min-height` suwchawge c-cewwes de [`max-height`](/fw/docs/web/css/max-height) et [`height`](/fw/docs/web/css/height) wowsque `min-height` est supéwieuwe. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length>      */
+/* vaweuw de wongueuw */
+/* t-type <wength>      */
 min-height: 3.5em;
 
-/* Valeur de proportion */
-/* Type <percentage>       */
-min-height: 10%;
+/* v-vaweuw de pwopowtion */
+/* t-type <pewcentage>       */
+m-min-height: 10%;
 
-/* Valeurs avec un mot-clé */
+/* vaweuws avec un mot-cwé */
 min-height: max-content;
-min-height: min-content;
+m-min-height: m-min-content;
 min-height: fit-content(20em);
 
-/* Valeurs globales */
-min-height: inherit;
-min-height: initial;
-min-height: revert;
-min-height: unset;
+/* v-vaweuws gwobawes */
+m-min-height: inhewit;
+min-height: i-initiaw;
+min-height: wevewt;
+m-min-height: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- [`<length>`](/fr/docs/Web/CSS/length)
-  - : La hauteur minimale exprimée de façon absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La hauteur minimale exprimée de façon relative à la hauteur du bloc englobant grâce à une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage).
+- [`<wength>`](/fw/docs/web/css/wength)
+  - : wa hauteuw minimawe expwimée d-de façon absowue. 😳😳😳
+- [`<pewcentage>`](/fw/docs/web/css/pewcentage)
+  - : wa h-hauteuw minimawe expwimée de façon w-wewative à w-wa hauteuw du bwoc engwobant gwâce à une vaweuw de type [`<pewcentage>`](/fw/docs/web/css/pewcentage). (U ﹏ U)
 - `auto`
-  - : Le navigateur calcule et définit la hauteur minimale de l'élément spécifié.
+  - : we nyavigateuw cawcuwe et définit wa hauteuw m-minimawe d-de w'éwément spécifié. (///ˬ///✿)
 - `max-content`
-  - : La hauteur intrinsèque préférée.
+  - : wa hauteuw intwinsèque p-pwéféwée. 😳
 - `min-content`
-  - : La hauteur intrinsèque minimale préférée.
-- `fit-content` ([`<length-percentage>`](/fr/docs/Web/CSS/length-percentage))
-  - : Utilise la formule `fit-content()`, remplaçant l'espace disponible par l'argument passé. Par exemple&nbsp;: `min(max-content, max(min-content, argument))`.
+  - : w-wa hauteuw i-intwinsèque minimawe pwéféwée. 😳
+- `fit-content` ([`<wength-pewcentage>`](/fw/docs/web/css/wength-pewcentage))
+  - : utiwise wa fowmuwe `fit-content()`, σωσ w-wempwaçant w'espace disponibwe paw w'awgument passé. rawr x3 paw exempwe&nbsp;: `min(max-content, OwO max(min-content, /(^•ω•^) awgument))`.
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Définition de min-height
+### d-définition d-de min-height
 
 ```css
-table {
-  min-height: 75%;
+tabwe {
+  m-min-height: 75%;
 }
 
-form {
-  min-height: 0;
+f-fowm {
+  m-min-height: 0;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
-- [`height`](/fr/docs/Web/CSS/height), [`max-height`](/fr/docs/Web/CSS/max-height)
+- [we m-modèwe de boîtes](/fw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), 😳😳😳 [`box-sizing`](/fw/docs/web/css/box-sizing)
+- [`height`](/fw/docs/web/css/height), ( ͡o ω ͡o ) [`max-height`](/fw/docs/web/css/max-height)

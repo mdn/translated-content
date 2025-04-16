@@ -1,92 +1,92 @@
 ---
-title: mask-border
-slug: Web/CSS/mask-border
+titwe: mask-bowdew
+swug: web/css/mask-bowdew
 ---
 
-{{cssref}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-border`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de créer un masque le long de la bordure d'un élément.
+w-wa pwopwiété [css](/fw/docs/web/css) **`mask-bowdew`** e-est une [pwopwiété waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui pewmet de c-cwéew un masque w-we wong de wa bowduwe d-d'un éwément. (U ﹏ U)
 
-## Propriétés détaillées correspondantes
+## p-pwopwiétés d-détaiwwées cowwespondantes
 
-Cette propriété est une propriété raccourcie pour les propriétés suivantes&nbsp;:
+cette pwopwiété est une pwopwiété waccouwcie p-pouw wes pwopwiétés suivantes&nbsp;:
 
-- [`mask-border-mode`](/fr/docs/Web/CSS/mask-border-mode).
-- [`mask-border-outset`](/fr/docs/Web/CSS/mask-border-outset)
-- [`mask-border-repeat`](/fr/docs/Web/CSS/mask-border-repeat)
-- [`mask-border-slice`](/fr/docs/Web/CSS/mask-border-slice)
-- [`mask-border-source`](/fr/docs/Web/CSS/mask-border-source)
-- [`mask-border-width`](/fr/docs/Web/CSS/mask-border-width)
+- [`mask-bowdew-mode`](/fw/docs/web/css/mask-bowdew-mode). (///ˬ///✿)
+- [`mask-bowdew-outset`](/fw/docs/web/css/mask-bowdew-outset)
+- [`mask-bowdew-wepeat`](/fw/docs/web/css/mask-bowdew-wepeat)
+- [`mask-bowdew-swice`](/fw/docs/web/css/mask-bowdew-swice)
+- [`mask-bowdew-souwce`](/fw/docs/web/css/mask-bowdew-souwce)
+- [`mask-bowdew-width`](/fw/docs/web/css/mask-bowdew-width)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* source | slice */
-mask-border: url("border-mask.png") 25;
+/* s-souwce | swice */
+mask-bowdew: u-uww("bowdew-mask.png") 25;
 
-/* source | slice | repeat */
-mask-border: url("border-mask.png") 25 space;
+/* souwce | swice | wepeat */
+mask-bowdew: uww("bowdew-mask.png") 25 s-space;
 
-/* source | slice | width */
-mask-border: url("border-mask.png") 25 / 35px;
+/* souwce | swice | width */
+m-mask-bowdew: u-uww("bowdew-mask.png") 25 / 35px;
 
-/* source | slice | width | outset | repeat | mode */
-mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
+/* souwce | swice | width | outset | wepeat | mode */
+mask-bowdew: u-uww("bowdew-mask.png") 25 / 35px / 12px space awpha;
 
-/* Valeurs globales */
-mask-border: inherit;
-mask-border: initial;
-mask-border: revert;
-mask-border: unset;
+/* vaweuws gwobawes */
+mask-bowdew: inhewit;
+mask-bowdew: i-initiaw;
+mask-bowdew: w-wevewt;
+mask-bowdew: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<'mask-border-source'>`
-  - : L'image source. Voir [`mask-border-source`](/fr/docs/Web/CSS/mask-border-source).
-- `<'mask-border-slice'>`
-  - : Les dimensions qui permettent de découper l'image source en différentes régions. Il est possible d'utiliser jusqu'à 4 valeurs. Voir [`mask-border-slice`](/fr/docs/Web/CSS/mask-border-slice).
-- `<'mask-border-width'>`
-  - : La largeur du masque pour la bordure. Il est possible d'utiliser jusqu'à 4 valeurs. Voir [`mask-border-width`](/fr/docs/Web/CSS/mask-border-width).
-- `<'mask-border-outset'>`
-  - : La distance entre le masque de la bordure et le bord extérieur de l'image. Il est possible d'utiliser jusqu'à 4 valeurs. Voir [`mask-border-outset`](/fr/docs/Web/CSS/mask-border-outset).
-- `<'mask-border-repeat'>`
-  - : Cette valeur indique la façon dont les régions du bord de l'image source sont ajustées afin de correspondre aux dimensions du masque. Il est possible d'utiliser jusqu'à deux valeurs. Voir [`mask-border-repeat`](/fr/docs/Web/CSS/mask-border-repeat).
-- `<'mask-border-mode'>`
-  - : Cette valeur définit si l'image source est traitée comme un masque de luminance ou comme un masque alpha. Voir [`mask-border-mode`](/fr/docs/Web/CSS/mask-border-mode).
+- `<'mask-bowdew-souwce'>`
+  - : w-w'image souwce. 😳 voiw [`mask-bowdew-souwce`](/fw/docs/web/css/mask-bowdew-souwce). 😳
+- `<'mask-bowdew-swice'>`
+  - : wes dimensions q-qui pewmettent de découpew w'image souwce en difféwentes w-wégions. σωσ iw est possibwe d'utiwisew jusqu'à 4 vaweuws. rawr x3 voiw [`mask-bowdew-swice`](/fw/docs/web/css/mask-bowdew-swice). OwO
+- `<'mask-bowdew-width'>`
+  - : wa wawgeuw d-du masque pouw wa bowduwe. /(^•ω•^) iw est p-possibwe d'utiwisew j-jusqu'à 4 v-vaweuws. 😳😳😳 voiw [`mask-bowdew-width`](/fw/docs/web/css/mask-bowdew-width). ( ͡o ω ͡o )
+- `<'mask-bowdew-outset'>`
+  - : wa distance entwe we masque de wa bowduwe e-et we bowd e-extéwieuw de w'image. >_< iw est possibwe d-d'utiwisew j-jusqu'à 4 vaweuws. >w< voiw [`mask-bowdew-outset`](/fw/docs/web/css/mask-bowdew-outset). rawr
+- `<'mask-bowdew-wepeat'>`
+  - : c-cette vaweuw indique wa f-façon dont wes wégions du bowd de w'image souwce s-sont ajustées afin de cowwespondwe a-aux dimensions du masque. 😳 i-iw est possibwe d-d'utiwisew jusqu'à deux vaweuws. >w< voiw [`mask-bowdew-wepeat`](/fw/docs/web/css/mask-bowdew-wepeat). (⑅˘꒳˘)
+- `<'mask-bowdew-mode'>`
+  - : cette vaweuw définit si w'image souwce est twaitée comme u-un masque de wuminance o-ou comme un masque awpha. OwO v-voiw [`mask-bowdew-mode`](/fw/docs/web/css/mask-bowdew-mode). (ꈍᴗꈍ)
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Image matricielle (_bitmap_)
+### image m-matwiciewwe (_bitmap_)
 
-Dans cet exemple, on utilise un masque en losange. L'image source utilisée est un fichier PNG de 90 pixels de long et de large&nbsp;:
+dans cet exempwe, 😳 on utiwise un masque en wosange. w'image s-souwce utiwisée est un fichiew p-png de 90 pixews d-de wong et d-de wawge&nbsp;:
 
-![](mask-border-diamonds.png)
+![](mask-bowdew-diamonds.png)
 
-Pour avoir un seul losange, on divise le carré en 3 (avec la valeur `30`). On utilise la valeur `round` pour que le masque soit réparti également de part et d'autre.
+pouw avoiw un seuw w-wosange, 😳😳😳 on divise w-we cawwé e-en 3 (avec wa vaweuw `30`). mya o-on utiwise wa vaweuw `wound` pouw que w-we masque soit w-wépawti égawement d-de pawt et d-d'autwe. mya
 
-{{EmbedGHLiveSample("css-examples/masking/mask-border.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-bowdew.htmw", (⑅˘꒳˘) '100%', 800)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`mask-border-mode`](/fr/docs/Web/CSS/mask-border-mode)
-- [`mask-border-outset`](/fr/docs/Web/CSS/mask-border-outset)
-- [`mask-border-repeat`](/fr/docs/Web/CSS/mask-border-repeat)
-- [`mask-border-source`](/fr/docs/Web/CSS/mask-border-source)
-- [`mask-border-width`](/fr/docs/Web/CSS/mask-border-width)
+- [`mask-bowdew-mode`](/fw/docs/web/css/mask-bowdew-mode)
+- [`mask-bowdew-outset`](/fw/docs/web/css/mask-bowdew-outset)
+- [`mask-bowdew-wepeat`](/fw/docs/web/css/mask-bowdew-wepeat)
+- [`mask-bowdew-souwce`](/fw/docs/web/css/mask-bowdew-souwce)
+- [`mask-bowdew-width`](/fw/docs/web/css/mask-bowdew-width)

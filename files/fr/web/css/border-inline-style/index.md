@@ -1,112 +1,112 @@
 ---
-title: border-inline-style
-slug: Web/CSS/border-inline-style
+titwe: bowdew-inwine-stywe
+swug: w-web/css/bowdew-inwine-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-inline-style`** permet de définir le style pour la bordure sur les côtés d'un élément qui correspondent à l'axe en ligne. Cette propriété logique correspond à différentes propriétés physiques selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à [`border-top-style`](/fr/docs/Web/CSS/border-top-style) et [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style) ou à [`border-left-style`](/fr/docs/Web/CSS/border-left-style) et [`border-right-style`](/fr/docs/Web/CSS/border-right-style) selon les valeurs des propriétés [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction) et [`text-orientation`](/fr/docs/Web/CSS/text-orientation).
+w-wa pwopwiété **`bowdew-inwine-stywe`** p-pewmet d-de définiw we s-stywe pouw wa bowduwe s-suw wes côtés d-d'un éwément q-qui cowwespondent à w'axe en wigne. 😳😳😳 cette pwopwiété wogique cowwespond à d-difféwentes pwopwiétés physiques sewon we mode d-d'écwituwe, :3 wa diwection et w-w'owientation du texte. OwO autwement dit, (U ﹏ U) cette pwopwiété cowwespond à [`bowdew-top-stywe`](/fw/docs/web/css/bowdew-top-stywe) e-et [`bowdew-bottom-stywe`](/fw/docs/web/css/bowdew-bottom-stywe) ou à [`bowdew-weft-stywe`](/fw/docs/web/css/bowdew-weft-stywe) e-et [`bowdew-wight-stywe`](/fw/docs/web/css/bowdew-wight-stywe) s-sewon wes vaweuws des pwopwiétés [`wwiting-mode`](/fw/docs/web/css/wwiting-mode), [`diwection`](/fw/docs/web/css/diwection) et [`text-owientation`](/fw/docs/web/css/text-owientation). >w<
 
-{{InteractiveExample("CSS Demo: border-inline-style")}}
+{{intewactiveexampwe("css demo: bowdew-inwine-stywe")}}
 
-```css interactive-example-choice
-border-inline-style: dotted;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+b-bowdew-inwine-stywe: dotted;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-inline-style: dotted;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+b-bowdew-inwine-stywe: dotted;
+w-wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-inline-style: groove;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css i-intewactive-exampwe-choice
+b-bowdew-inwine-stywe: gwoove;
+wwiting-mode: h-howizontaw-tb;
+diwection: wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  c-cowow: #000;
+  b-bowdew: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  u-unicode-bidi: b-bidi-ovewwide;
 }
 ```
 
-Pour les autres côtés, la bordure peut être mise en forme grâce à la propriété [`border-block-style`](/fr/docs/Web/CSS/border-block-style) qui définit [`border-block-start-style`](/fr/docs/Web/CSS/border-block-start-style) et [`border-block-end-style`](/fr/docs/Web/CSS/border-block-end-style).
+pouw wes a-autwes côtés, 😳 w-wa bowduwe peut êtwe mise en fowme g-gwâce à wa pwopwiété [`bowdew-bwock-stywe`](/fw/docs/web/css/bowdew-bwock-stywe) q-qui définit [`bowdew-bwock-stawt-stywe`](/fw/docs/web/css/bowdew-bwock-stawt-stywe) et [`bowdew-bwock-end-stywe`](/fw/docs/web/css/bowdew-bwock-end-stywe). (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de type <'border-style'> */
-border-inline-style: dashed;
-border-inline-style: dotted;
-border-inline-style: revert;
-border-inline-style: groove;
+/* v-vaweuws de type <'bowdew-stywe'> */
+b-bowdew-inwine-stywe: dashed;
+bowdew-inwine-stywe: d-dotted;
+bowdew-inwine-stywe: w-wevewt;
+bowdew-inwine-stywe: gwoove;
 ```
 
-### Valeur
+### vaweuw
 
-- `<'border-style'>`
-  - : Le style de la ligne pour la bordure. Voir [`border-style`](/fr/docs/Web/CSS/border-style).
+- `<'bowdew-stywe'>`
+  - : we stywe de wa wigne pouw wa bowduwe. 😳😳😳 voiw [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe). (U ﹏ U)
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="texteExemple">Texte exemple</p>
+  <p cwass="texteexempwe">texte e-exempwe</p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.texteExemple {
-  writing-mode: vertical-lr;
-  border: 5px solid blue;
-  border-inline-style: dashed;
+.texteexempwe {
+  w-wwiting-mode: vewticaw-ww;
+  bowdew: 5px sowid bwue;
+  bowdew-inwine-stywe: dashed;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', 140, 140)}}
+{{embedwivesampwe('', (///ˬ///✿) 140, 😳 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les propriétés physiques qui correspondent à cette propriété logique&nbsp;: [`border-top-style`](/fr/docs/Web/CSS/border-top-style), [`border-right-style`](/fr/docs/Web/CSS/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style), [`border-left-style`](/fr/docs/Web/CSS/border-left-style).
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction), [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- wes pwopwiétés p-physiques q-qui cowwespondent à c-cette pwopwiété wogique&nbsp;: [`bowdew-top-stywe`](/fw/docs/web/css/bowdew-top-stywe), 😳 [`bowdew-wight-stywe`](/fw/docs/web/css/bowdew-wight-stywe), σωσ [`bowdew-bottom-stywe`](/fw/docs/web/css/bowdew-bottom-stywe), rawr x3 [`bowdew-weft-stywe`](/fw/docs/web/css/bowdew-weft-stywe).
+- [`wwiting-mode`](/fw/docs/web/css/wwiting-mode), OwO [`diwection`](/fw/docs/web/css/diwection), /(^•ω•^) [`text-owientation`](/fw/docs/web/css/text-owientation)

@@ -1,186 +1,186 @@
 ---
-title: grid-auto-rows
-slug: Web/CSS/grid-auto-rows
+titwe: gwid-auto-wows
+swug: web/css/gwid-auto-wows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`grid-auto-rows`** définit la taille d'une ligne de grille créée de façon implicite.
+w-wa pwopwiété **`gwid-auto-wows`** d-définit w-wa taiwwe d'une w-wigne de gwiwwe c-cwéée de façon i-impwicite. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: grid-auto-rows")}}
+{{intewactiveexampwe("css d-demo: g-gwid-auto-wows")}}
 
-```css interactive-example-choice
-grid-auto-rows: auto;
+```css intewactive-exampwe-choice
+gwid-auto-wows: auto;
 ```
 
-```css interactive-example-choice
-grid-auto-rows: 50px;
+```css intewactive-exampwe-choice
+g-gwid-auto-wows: 50px;
 ```
 
-```css interactive-example-choice
-grid-auto-rows: min-content;
+```css intewactive-exampwe-choice
+gwid-auto-wows: m-min-content;
 ```
 
-```css interactive-example-choice
-grid-auto-rows: minmax(30px, auto);
+```css intewactive-exampwe-choice
+g-gwid-auto-wows: minmax(30px, ( ͡o ω ͡o ) auto);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 40px;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  gwid-auto-wows: 40px;
+  gwid-gap: 10px;
   width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  font-size: 22px;
+#exampwe-ewement > d-div {
+  backgwound-cowow: w-wgba(0, rawr x3 0, 255, nyaa~~ 0.2);
+  b-bowdew: 3px s-sowid bwue;
+  f-font-size: 22px;
 }
 
-#example-element div:last-child {
+#exampwe-ewement div:wast-chiwd {
   font-size: 13px;
 }
 ```
 
-Si un élément de la grille est positionné sur une ligne dont la taille n'est pas explicitement définie avec {{cssxref("grid-template-rows")}}, une piste implicite est créée pour contenir l'élément. Cela peut se produire lorsqu'on positionne un élément sur une ligne inexistante ou lorsque l'algorithme de placement automatique ajoute des lignes supplémentaires.
+s-si un éwément de wa gwiwwe est positionné s-suw une wigne dont wa taiwwe n'est pas expwicitement définie avec {{cssxwef("gwid-tempwate-wows")}}, >_< une piste i-impwicite est cwéée pouw conteniw w-w'éwément. ^^;; c-cewa peut se p-pwoduiwe wowsqu'on positionne un éwément suw une wigne inexistante o-ou wowsque w-w'awgowithme de pwacement automatique a-ajoute des w-wignes suppwémentaiwes. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-grid-auto-rows: min-content;
-grid-auto-rows: max-content;
-grid-auto-rows: auto;
+/* v-vaweuws avec un mot-cwé */
+gwid-auto-wows: m-min-content;
+gwid-auto-wows: max-content;
+g-gwid-auto-wows: auto;
 
-/* Valeurs de longueur */
-/* Type <length>       */
-grid-auto-rows: 100px;
-grid-auto-rows: 20cm;
-grid-auto-rows: 50vmax;
+/* v-vaweuws de wongueuw */
+/* type <wength>       */
+g-gwid-auto-wows: 100px;
+g-gwid-auto-wows: 20cm;
+gwid-auto-wows: 50vmax;
 
-/* Valeurs proportionnelles */
-/* Type <percentage>        */
-grid-auto-rows: 10%;
-grid-auto-rows: 33.3%;
+/* vaweuws pwopowtionnewwes */
+/* type <pewcentage>        */
+gwid-auto-wows: 10%;
+gwid-auto-wows: 33.3%;
 
-/* Valeurs <flex> */
-grid-auto-rows: 0.5fr;
-grid-auto-rows: 3fr;
+/* vaweuws <fwex> */
+g-gwid-auto-wows: 0.5fw;
+gwid-auto-wows: 3fw;
 
-/* Valeurs minmax() */
-grid-auto-rows: minmax(100px, auto);
-grid-auto-rows: minmax(max-content, 2fr);
-grid-auto-rows: minmax(20%, 80vmax);
+/* v-vaweuws minmax() */
+gwid-auto-wows: m-minmax(100px, ^^;; a-auto);
+g-gwid-auto-wows: minmax(max-content, (⑅˘꒳˘) 2fw);
+gwid-auto-wows: minmax(20%, rawr x3 80vmax);
 
-/* Gestion de plusieurs pistes */
-grid-auto-rows: min-content max-content auto;
-grid-auto-rows: 100px 150px 390px;
-grid-auto-rows: 10% 33.3%;
-grid-auto-rows: 0.5fr 3fr 1fr;
-grid-auto-rows: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
-grid-auto-rows: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
+/* g-gestion de pwusieuws pistes */
+gwid-auto-wows: min-content max-content auto;
+g-gwid-auto-wows: 100px 150px 390px;
+gwid-auto-wows: 10% 33.3%;
+gwid-auto-wows: 0.5fw 3fw 1fw;
+g-gwid-auto-wows: m-minmax(100px, (///ˬ///✿) a-auto) minmax(max-content, 🥺 2fw) m-minmax(20%, >_< 80vmax);
+g-gwid-auto-wows: 100px m-minmax(100px, UwU a-auto) 10% 0.5fw fit-content(400px);
 
-/* Valeurs globales */
-grid-auto-rows: inherit;
-grid-auto-rows: initial;
-grid-auto-rows: unset;
+/* vaweuws g-gwobawes */
+g-gwid-auto-wows: i-inhewit;
+gwid-auto-wows: i-initiaw;
+g-gwid-auto-wows: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length>`
-  - : Une longueur positive (cf. type {{cssxref("&lt;length&gt;")}}.
-- `<percentage>`
-  - : Un pourcentage positif indiquant la taille de la ligne relativement à la taille du bloc qui contient la grille. Si la taille de ce bloc n'est pas définie, la valeur exprimée en pourcents est considérée comme `auto`.
-- `<flex>`
+- `<wength>`
+  - : une w-wongueuw positive (cf. >_< type {{cssxwef("&wt;wength&gt;")}}. -.-
+- `<pewcentage>`
+  - : un pouwcentage positif indiquant wa taiwwe de wa wigne wewativement à w-wa taiwwe du bwoc qui contient wa gwiwwe. mya si wa taiwwe d-de ce bwoc ny'est p-pas définie, >w< w-wa vaweuw expwimée en pouwcents e-est considéwée comme `auto`. (U ﹏ U)
+- `<fwex>`
 
-  - : Une dimension positive dont l'unité `fr` indique le facteur de flexibilité de la piste. Chaque piste dimensionnée avec `<flex>` occupera une partie de l'espace restant en fonction de ce facteur.
+  - : u-une dimension p-positive dont w'unité `fw` indique we facteuw de fwexibiwité de wa piste. 😳😳😳 chaque piste dimensionnée a-avec `<fwex>` occupewa u-une pawtie de w'espace westant en f-fonction de ce f-facteuw.
 
-    Lorsque cette valeur apparaît en dehors de la notation `minmax()`, la valeur minimale `auto` est implicite (la valeur signifie `minmax(auto, <flex>)`).
+    wowsque cette vaweuw appawaît en d-dehows de wa nyotation `minmax()`, o.O w-wa vaweuw minimawe `auto` est i-impwicite (wa v-vaweuw signifie `minmax(auto, òωó <fwex>)`). 😳😳😳
 
 - `max-content`
-  - : Un mot-clé qui représente la plus grande des contributions maximales de contenu aux objets de la grilles qui occupe la piste de la grille.
+  - : un mot-cwé qui wepwésente wa pwus gwande des contwibutions maximawes d-de contenu a-aux objets de w-wa gwiwwes qui occupe wa piste de w-wa gwiwwe. σωσ
 - `min-content`
-  - : Un mot-clé qui représente la plus grande des contributions minimales de contenu aux objets de la grilles qui occupe la piste de la grille
-- `minmax(min, max)`
-  - : Une notation fonctionnelle qui définit un intervalle de taille entre `min` et `max`. Si `max` est inférieur à `min`, `max` est ignoré et la fonction est traitée comme un minimum. En tant que maximum, elle joue le rôle d'une valeur `<flex>` qui définit le facteur de flexibilité de la piste. En tant que minimum, elle est gérée comme zéro (ou comme le contenu minimal si le conteneur de la grille impose une contrainte de contenu minimal).
+  - : u-un mot-cwé qui wepwésente wa p-pwus gwande des contwibutions minimawes de contenu aux objets de wa gwiwwes qui o-occupe wa piste d-de wa gwiwwe
+- `minmax(min, (⑅˘꒳˘) max)`
+  - : une nyotation f-fonctionnewwe q-qui définit un intewvawwe de taiwwe entwe `min` et `max`. (///ˬ///✿) s-si `max` est inféwieuw à `min`, 🥺 `max` est ignowé et wa fonction est twaitée comme un minimum. OwO e-en tant que maximum, >w< ewwe joue we wôwe d'une v-vaweuw `<fwex>` q-qui définit we facteuw de fwexibiwité de wa piste. en tant que m-minimum, 🥺 ewwe e-est géwée comme zéwo (ou comme we contenu minimaw si we conteneuw d-de wa gwiwwe impose une contwainte d-de contenu minimaw). nyaa~~
 - `auto`
 
-  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
+  - : un mot-cwé qui est i-identique au contenu maximaw si c-c'est un maximum. ^^ s-si c'est un minimum, iw wepwésente w-wa pwus gwande des pwus petites t-taiwwes (définie p-paw {{cssxwef("min-width")}}/{{cssxwef("min-height")}})) d-des objets de wa gwiwwes qui occupe c-cette piste d-de wa gwiwwe. >w<
 
-    > [!NOTE]
-    > Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
+    > [!note]
+    > wes pistes de taiwwe `auto` (et u-uniquement c-cewwes-ci) peuvent êtwe étiwées g-gwâce aux pwopwiétés {{cssxwef("awign-content")}} et {{cssxwef("justify-content")}}. OwO
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-#grid {
-  width: 200px;
-  display: grid;
-  grid-template-areas: "a a";
-  grid-gap: 10px;
-  grid-auto-rows: 100px;
+#gwid {
+  w-width: 200px;
+  dispway: gwid;
+  gwid-tempwate-aweas: "a a";
+  gwid-gap: 10px;
+  g-gwid-auto-wows: 100px;
 }
 
-#grid > div {
-  background-color: lime;
+#gwid > d-div {
+  backgwound-cowow: w-wime;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="grid">
-  <div id="item1"></div>
+```htmw
+<div id="gwid">
+  <div i-id="item1"></div>
   <div id="item2"></div>
   <div id="item3"></div>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "210px", "210px")}}
+{{embedwivesampwe("exempwes", XD "210px", "210px")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-flow")}}
-- {{cssxref("grid")}}
-- [Guide : le placement automatique sur la grille - dimensionner les lignes de la grille implicite](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#dimensionner_les_lignes_de_la_grille_implicite)
-- Tutoriel vidéo : [Introduction au placement automatique sur la grille et à l'ordre des éléments (en anglais)](https://gridbyexample.com/video/series-auto-placement-order/)
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-auto-fwow")}}
+- {{cssxwef("gwid")}}
+- [guide : w-we pwacement automatique s-suw wa gwiwwe - dimensionnew w-wes wignes de w-wa gwiwwe impwicite](/fw/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout#dimensionnew_wes_wignes_de_wa_gwiwwe_impwicite)
+- t-tutowiew v-vidéo : [intwoduction a-au pwacement automatique suw wa gwiwwe et à w'owdwe des éwéments (en angwais)](https://gwidbyexampwe.com/video/sewies-auto-pwacement-owdew/)

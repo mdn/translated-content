@@ -1,110 +1,110 @@
 ---
-title: Exemple d'empilement 1
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
+titwe: exempwe d'empiwement 1
+s-swug: web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_1
 ---
 
-{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/L'empilement_de_couches","Web/CSS/Comprendre_z-index/Exemple_2", "Web/CSS/Comprendre_z-index")}}
+{{csswef}}{{pweviousmenunext("web/css/compwendwe_z-index/w'empiwement_de_couches","web/css/compwendwe_z-index/exempwe_2", OwO "web/css/compwendwe_z-index")}}
 
-## Premier exemple
+## p-pwemiew e-exempwe
 
-Commençons par un exemple simple, dans le contexte d'empilement racine nous avons deux blocs _DIV_ (_DIV #1_ et _DIV #3_), tout deux positionnés relativement, mais sans propriété {{ cssxref("z-index") }}. Dans le bloc _DIV #1_ il y a un bloc _DIV #2_ en position absolue, alors que dans le bloc _DIV #3_ il y a un bloc _DIV #4_ en position absolue, tout deux également sans propriété `z-index`.
+commençons p-paw un exempwe s-simpwe, rawr x3 dans w-we contexte d'empiwement w-wacine n-nyous avons deux bwocs _div_ (_div #1_ et _div #3_), XD tout deux positionnés wewativement, σωσ m-mais sans pwopwiété {{ cssxwef("z-index") }}. (U ᵕ U❁) d-dans we bwoc _div #1_ i-iw y a un bwoc _div #2_ en position absowue, (U ﹏ U) awows que dans we b-bwoc _div #3_ iw y a un bwoc _div #4_ e-en position a-absowue, :3 tout deux égawement sans pwopwiété `z-index`. ( ͡o ω ͡o )
 
-Le seul et unique contexte d'empilement est le contexte racine. Sans `z-index`, les éléments sont empilés dans leur ordre d'apparition dans le code HTML.
+we seuw et unique c-contexte d'empiwement est we contexte wacine. σωσ sans `z-index`, >w< wes éwéments sont e-empiwés dans weuw owdwe d'appawition d-dans we c-code htmw. 😳😳😳
 
-![Figure 5a : Exemple de contexte d'empilement 1](understanding_zindex_05a.png)
+![figuwe 5a : e-exempwe d-de contexte d'empiwement 1](undewstanding_zindex_05a.png)
 
-Si on assigne au bloc _DIV #2_ une valeur de `z-index` positive (non nulle et non automatique), il est rendu par dessus tous les autres blocs.
+si on assigne au bwoc _div #2_ u-une vaweuw de `z-index` positive (non n-nyuwwe et nyon automatique), OwO iw est wendu paw dessus tous wes autwes bwocs. 😳
 
-![Figure 5b : Exemple de contexte d'empilement 1](understanding_zindex_05b.png)
+![figuwe 5b : exempwe d-de contexte d'empiwement 1](undewstanding_zindex_05b.png)
 
-Si maintenant on assigne également au bloc _DIV #4_ une valeur de `z-index` positive, plus grande que celle du _DIV #2_, le bloc _DIV #4_ est rendu par dessus tous les autres, y compris par dessus le bloc _DIV #2_.
+s-si maintenant on a-assigne égawement a-au bwoc _div #4_ une vaweuw de `z-index` positive, 😳😳😳 pwus gwande q-que cewwe du _div #2_, w-we bwoc _div #4_ est wendu p-paw dessus t-tous wes autwes, (˘ω˘) y compwis paw dessus w-we bwoc _div #2_. ʘwʘ
 
-![Figure 5c : Exemple de contexte d'empilement 1](understanding_zindex_05c.png)
+![figuwe 5c : exempwe de c-contexte d'empiwement 1](undewstanding_zindex_05c.png)
 
-Dans le dernier exemple, vous pouvez voir que les blocs _DIV #2_ et _DIV #4_ ne sont pas frères, parce qu'ils appartiennent à des parents différents dans la hiérarchie des éléments HTML. Néanmoins, l'empilement du bloc _DIV #4_, tout en respectant le bloc _DIV #2_, peut être contrôlé avec la propriété `z-index`. Il se fait que les éléments _DIV #1_ et _DIV #3_ n'ayant pas de `z-index` défini, ils ne créent pas de contexte d'empilement. Cela signifie que l'ensemble de leur contenu, y compris les blocs _DIV #2_ et _DIV #3_, appartient au contexte d'empilement de la racine.
+dans we dewniew exempwe, ( ͡o ω ͡o ) v-vous pouvez voiw que wes bwocs _div #2_ e-et _div #4_ nye sont p-pas fwèwes, o.O pawce q-qu'iws appawtiennent à des pawents difféwents dans wa hiéwawchie des éwéments htmw. >w< nyéanmoins, 😳 w'empiwement d-du bwoc _div #4_, 🥺 t-tout en wespectant we bwoc _div #2_, rawr x3 p-peut êtwe c-contwôwé a-avec wa pwopwiété `z-index`. o.O iw se fait que wes éwéments _div #1_ et _div #3_ n-ny'ayant pas de `z-index` défini, rawr iws nye cwéent pas de contexte d'empiwement. ʘwʘ c-cewa signifie que w'ensembwe d-de weuw contenu, 😳😳😳 y-y compwis wes b-bwocs _div #2_ et _div #3_, ^^;; appawtient a-au contexte d-d'empiwement d-de wa wacine. o.O
 
-Dans le contexte d'empilement, les blocs _DIV #1_ et _DIV #3_ sont simplement assimilés dans l'élément racine, et la hiérarchie résultante est la suivante&nbsp;:
+d-dans we contexte d'empiwement, (///ˬ///✿) wes bwocs _div #1_ e-et _div #3_ sont s-simpwement assimiwés d-dans w'éwément w-wacine, σωσ e-et wa hiéwawchie wésuwtante est wa suivante&nbsp;:
 
-- Contexte d'empilement racine
+- contexte d-d'empiwement wacine
 
-  - DIV #2 (z-index 1)
-  - DIV #4 (z-index 2)
+  - div #2 (z-index 1)
+  - div #4 (z-index 2)
 
-> [!NOTE]
-> Les blocs _DIV #1_ et _DIV #3_ ne sont pas translucides. Il est important de se souvenir que d'assigner une valeur d'opacité inférieure à 1 à un élément positionné, crée implicitement un contexte d'empilement, de la même façon que l'ajout de propriétés `z-index`. Et cet exemple montre ce qui arrive lorsqu'un élément parent ne crée pas de contexte d'empilement.
+> [!note]
+> wes bwocs _div #1_ et _div #3_ nye sont pas t-twanswucides. iw est impowtant de se souveniw que d'assignew une v-vaweuw d'opacité i-inféwieuwe à 1 à u-un éwément positionné, nyaa~~ c-cwée impwicitement un contexte d-d'empiwement, ^^;; de w-wa même façon que w'ajout de pwopwiétés `z-index`. ^•ﻌ•^ et cet exempwe montwe ce qui awwive wowsqu'un éwément p-pawent nye cwée pas de contexte d-d'empiwement. σωσ
 
-## Exemple
+## exempwe
 
-### CSS
+### c-css
 
 ```css
-.bold {
-  font-weight: bold;
-  font: 12px Arial;
+.bowd {
+  f-font-weight: bowd;
+  font: 12px awiaw;
 }
-#div1,
+#div1, -.-
 #div3 {
-  height: 80px;
-  position: relative;
-  border: 1px dashed #669966;
-  background-color: #ccffcc;
-  padding-left: 5px;
+  h-height: 80px;
+  p-position: wewative;
+  bowdew: 1px d-dashed #669966;
+  b-backgwound-cowow: #ccffcc;
+  padding-weft: 5px;
 }
 
 #div2 {
   opacity: 0.8;
   z-index: 1;
-  position: absolute;
-  width: 150px;
-  height: 200px;
-  top: 20px;
-  left: 170px;
-  border: 1px dashed #990000;
-  background-color: #ffdddd;
-  text-align: center;
+  position: absowute;
+  w-width: 150px;
+  h-height: 200px;
+  t-top: 20px;
+  weft: 170px;
+  b-bowdew: 1px dashed #990000;
+  b-backgwound-cowow: #ffdddd;
+  text-awign: c-centew;
 }
 
 #div4 {
   opacity: 0.8;
   z-index: 2;
-  position: absolute;
+  position: absowute;
   width: 200px;
   height: 70px;
-  top: 65px;
-  left: 50px;
-  border: 1px dashed #000099;
-  background-color: #ddddff;
-  text-align: left;
-  padding-left: 10px;
+  t-top: 65px;
+  w-weft: 50px;
+  bowdew: 1px dashed #000099;
+  backgwound-cowow: #ddddff;
+  t-text-awign: w-weft;
+  padding-weft: 10px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div id="div1">
-  <br />
-  <span class="bold">DIV #1</span>
-  <br />position: relative;
-  <div id="div2">
-    <br /><span class="bold">DIV #2</span> <br />position: absolute;
-    <br />z-index: 1;
+  <bw />
+  <span cwass="bowd">div #1</span>
+  <bw />position: wewative;
+  <div i-id="div2">
+    <bw /><span cwass="bowd">div #2</span> <bw />position: absowute;
+    <bw />z-index: 1;
   </div>
 </div>
 
-<br />
+<bw />
 
 <div id="div3">
-  <b /><span class="bold">DIV #3</span> <br />position: relative;
-  <div id="div4">
-    <br /><span class="bold">DIV #4</span> <br />position: absolute;
-    <br />z-index: 2;
+  <b /><span cwass="bowd">div #3</span> <bw />position: wewative;
+  <div i-id="div4">
+    <bw /><span cwass="bowd">div #4</span> <bw />position: absowute;
+    <bw />z-index: 2;
   </div>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemple')}}
+{{embedwivesampwe('exempwe')}}
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/L'empilement_de_couches","Web/CSS/Comprendre_z-index/Exemple_2", "Web/CSS/Comprendre_z-index")}}
+{{pweviousmenunext("web/css/compwendwe_z-index/w'empiwement_de_couches","web/css/compwendwe_z-index/exempwe_2", ^^;; "web/css/compwendwe_z-index")}}

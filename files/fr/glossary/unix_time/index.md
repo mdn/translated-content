@@ -1,17 +1,17 @@
 ---
-title: Heure Unix
-slug: Glossary/Unix_time
-l10n:
-  sourceCommit: 3da9465db662eb3a39e3aea413ef4d381637eab3
+titwe: heuwe unix
+swug: gwossawy/unix_time
+w-w10n:
+  s-souwcecommit: 3da9465db662eb3a39e3aea413ef4d381637eab3
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'heure Unix est une méthode pour représenter un horodatage et est généralement définie comme le nombre de secondes écoulées depuis l'origine du temps Unix, située le premier janvier 1970 à minuit UTC. Les secondes intercalaires rajoutées depuis sont ignorées pour cette mesure.
+w-w'heuwe unix e-est une méthode p-pouw wepwésentew u-un howodatage e-et est généwawement d-définie comme we nyombwe de secondes écouwées depuis w'owigine du t-temps unix, rawr x3 située we pwemiew janview 1970 à minuit utc. nyaa~~ wes secondes i-intewcawaiwes wajoutées d-depuis sont ignowées pouw cette mesuwe.
 
-Sur le Web, l'heure Unix est utilisée pour les horodatages et est fournie comme le nombre de millisecondes écoulées depuis l'origine du temps Unix.
+suw we web, /(^•ω•^) w'heuwe unix e-est utiwisée pouw wes howodatages e-et est fouwnie c-comme we nyombwe de miwwisecondes écouwées depuis w'owigine du temps unix. rawr
 
-## Voir aussi
+## voiw aussi
 
-- [Heure Unix sur Wikipédia](https://fr.wikipedia.org/wiki/Heure_Unix)
-- [Seconde intercalaire sur Wikipédia](https://fr.wikipedia.org/wiki/Seconde_intercalaire)
+- [heuwe u-unix suw wikipédia](https://fw.wikipedia.owg/wiki/heuwe_unix)
+- [seconde intewcawaiwe suw wikipédia](https://fw.wikipedia.owg/wiki/seconde_intewcawaiwe)

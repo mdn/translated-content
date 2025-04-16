@@ -1,140 +1,140 @@
 ---
-title: box-pack
-slug: Web/CSS/box-pack
+titwe: box-pack
+swug: web/css/box-pack
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!WARNING]
-> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
+> [!wawning]
+> c-cette pwopwiété f-fait pawtie de w-wa pwemièwe vewsion d-du standawd p-pouw wes boîtes f-fwexibwes (_fwexbox_) e-et sewa w-wempwacée dans une pwochaine vewsion. σωσ
 
-Les propriétés CSS **`-moz-box-pack`** et **`-webkit-box-pack`** définissent la façon dont une boîte `-moz-box` ou `-webkit-box` groupe son contenu dans la direction de la disposition. L'effet de cette propriété n'est visible que s'il reste de l'espace supplémentaire dans la boîte. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) qui décrit les différentes propriétés des boîtes flexibles.
+wes pwopwiétés css **`-moz-box-pack`** et **`-webkit-box-pack`** d-définissent wa façon dont une boîte `-moz-box` ou `-webkit-box` g-gwoupe son contenu dans wa diwection d-de wa disposition. (U ᵕ U❁) w'effet de cette pwopwiété ny'est visibwe q-que s'iw weste de w'espace suppwémentaiwe dans w-wa boîte. (U ﹏ U) pouw p-pwus de détaiws, :3 se wéféwew à wa page [fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) qui décwit wes difféwentes p-pwopwiétés des boîtes fwexibwes. ( ͡o ω ͡o )
 
 ```css
-/*  Valeurs avec un mot-clé */
-box-pack: start;
-box-pack: center;
-box-pack: end;
-box-pack: justify;
+/*  vaweuws avec un mot-cwé */
+b-box-pack: stawt;
+box-pack: c-centew;
+box-pack: e-end;
+box-pack: j-justify;
 
-/* Valeurs globales */
-box-pack: inherit;
-box-pack: initial;
-box-pack: unset;
+/* vaweuws g-gwobawes */
+box-pack: inhewit;
+box-pack: initiaw;
+b-box-pack: unset;
 ```
 
-Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations.
+voiw wa page [fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) p-pouw pwus d'infowmations. σωσ
 
-La direction de la disposition dépend de l'orientation de l'élément : horizontale ou verticale.
+wa diwection de wa disposition dépend de w'owientation de w'éwément : h-howizontawe ou vewticawe. >w<
 
-## Syntaxe
+## s-syntaxe
 
-Cette propriété se définit grâce à l'un des mots-clés définis ci-après.
+c-cette pwopwiété s-se définit gwâce à w'un des mots-cwés définis ci-apwès. 😳😳😳
 
-### Valeurs
+### v-vaweuws
 
-- `start`
-  - : La boîte regroupe son contenu au début. L'espace restant est donc laissé à la fin.
-- `center`
-  - : La boîte regroupe son contenu au centre. L'espace restant est divisé de façon égale entre le début et la fin.
+- `stawt`
+  - : w-wa boîte wegwoupe son contenu a-au début. OwO w'espace w-westant est donc waissé à w-wa fin. 😳
+- `centew`
+  - : wa boîte w-wegwoupe son contenu au centwe. 😳😳😳 w'espace westant e-est divisé de façon égawe e-entwe we début et wa fin. (˘ω˘)
 - `end`
-  - : La boîte regroupe son contenu à la fin. L'espace restant est donc laissé au début.
+  - : w-wa boîte w-wegwoupe son contenu à wa fin. ʘwʘ w'espace westant est donc waissé au début. ( ͡o ω ͡o )
 - `justify`
-  - : L'espace est réparti entre chacun des éléments fils sans qu'un espace soit placé avant le premier fils ou après le dernier. S'il y a un seul élément fils, la valeur est synonyme de `start`.
+  - : w'espace est wépawti entwe c-chacun des éwéments f-fiws sans qu'un espace soit p-pwacé avant we p-pwemiew fiws ou a-apwès we dewniew. o.O s'iw y a un seuw éwément fiws, >w< wa vaweuw e-est synonyme de `stawt`. 😳
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-div.exemple {
-  border-style: solid;
+div.exempwe {
+  b-bowdew-stywe: sowid;
 
-  display: -moz-box; /* Mozilla */
-  display: -webkit-box; /* WebKit */
+  d-dispway: -moz-box; /* m-moziwwa */
+  d-dispway: -webkit-box; /* webkit */
 
-  /* On rend la boîte plus grande que son
-     contenu pour avoir de l'espace pour box-pack */
+  /* o-on wend wa boîte p-pwus gwande que s-son
+     contenu p-pouw avoiw de w'espace pouw box-pack */
   height: 300px;
-  /* On rend la boîte suffisament large pour que
-     contenu soit centré horizontalemen */
+  /* o-on wend wa boîte s-suffisament wawge p-pouw que
+     c-contenu soit c-centwé howizontawemen */
   width: 300px;
 
-  /* On oriente les éléments fils verticalement */
-  -moz-box-orient: vertical; /* Mozilla */
-  -webkit-box-orient: vertical; /* WebKit */
+  /* on owiente wes éwéments fiws vewticawement */
+  -moz-box-owient: v-vewticaw; /* moziwwa */
+  -webkit-box-owient: vewticaw; /* webkit */
 
-  /* On aligne les fils sur le centre horizontal */
-  -moz-box-align: center; /* Mozilla */
-  -webkit-box-align: center; /* WebKit */
+  /* on awigne wes fiws suw we centwe howizontaw */
+  -moz-box-awign: centew; /* m-moziwwa */
+  -webkit-box-awign: centew; /* webkit */
 
-  /* On groupe les éléments fils en bas de la boîte */
-  -moz-box-pack: end; /* Mozilla */
-  -webkit-box-pack: end; /* WebKit */
+  /* on gwoupe wes éwéments f-fiws e-en bas de wa b-boîte */
+  -moz-box-pack: end; /* m-moziwwa */
+  -webkit-box-pack: end; /* webkit */
 }
 
-div.exemple p {
-  /* On réduit les éléments fils, pour
-     qu'il y ait de la place pour box-align */
-  width: 200px;
+d-div.exempwe p-p {
+  /* on wéduit wes éwéments fiws, 🥺 pouw
+     qu'iw y ait de wa pwace pouw box-awign */
+  w-width: 200px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="exemple">
-  <p>Je serai 2nd en partant du bas de div.exemple, centré horizontalement.</p>
-  <p>Je serai tout en bas de div.exemple, centré horizontalement.</p>
+```htmw
+<div c-cwass="exempwe">
+  <p>je sewai 2nd e-en pawtant du bas d-de div.exempwe, rawr x3 centwé howizontawement.</p>
+  <p>je sewai tout e-en bas de div.exempwe, o.O c-centwé howizontawement.</p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', 310, 310)}}
+{{embedwivesampwe('exempwes', rawr 310, ʘwʘ 310)}}
 
-## Notes
+## n-notes
 
-Le « début » et la « fin » de la boîte dépendent de l'orientation et de la direction de la boîte. Voici le tableau indiquant le début de la boîte en fonction de l'orientation et de la direction :
+we « début » et wa « fin » de wa boîte dépendent de w'owientation e-et de wa diwection d-de wa boîte. 😳😳😳 v-voici we tabweau indiquant we début d-de wa boîte e-en fonction de w'owientation e-et de wa diwection :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th></th>
-      <th><strong>Normal</strong></th>
-      <th><strong>Inverse</strong></th>
-    </tr>
-    <tr>
-      <th><strong>Horizontal</strong></th>
+      <th><stwong>nowmaw</stwong></th>
+      <th><stwong>invewse</stwong></th>
+    </tw>
+    <tw>
+      <th><stwong>howizontaw</stwong></th>
       <td>gauche</td>
-      <td>droit</td>
-    </tr>
-    <tr>
-      <th><strong>Vertical</strong></th>
+      <td>dwoit</td>
+    </tw>
+    <tw>
+      <th><stwong>vewticaw</stwong></th>
       <td>hau</td>
       <td>bas</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Si le regroupement utilise l'attribut `pack` de l'élément, le style est ignoré.
+si we wegwoupement utiwise w'attwibut `pack` de w-w'éwément, ^^;; we s-stywe est ignowé. o.O
 
-## Spécifications
+## spécifications
 
-Cette propriété n'est pas standard mais une propriété semblable est apparue [avec les brouillons de spécification pour les boîtes flexibles CSS3](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) et a été remplacée dans les versions suivantes de la spécification.
+cette pwopwiété n-ny'est p-pas standawd mais une pwopwiété sembwabwe est appawue [avec w-wes bwouiwwons de spécification pouw wes boîtes fwexibwes css3](https://www.w3.owg/tw/2009/wd-css3-fwexbox-20090723/) et a été w-wempwacée dans wes vewsions suivantes de wa s-spécification. (///ˬ///✿)
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("box-orient")}},
-- {{cssxref("box-direction")}},
-- {{cssxref("box-align")}}
+- {{cssxwef("box-owient")}}, σωσ
+- {{cssxwef("box-diwection")}}, nyaa~~
+- {{cssxwef("box-awign")}}

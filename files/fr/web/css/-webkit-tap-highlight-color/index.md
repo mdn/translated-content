@@ -1,34 +1,34 @@
 ---
-title: -webkit-tap-highlight-color
-slug: Web/CSS/-webkit-tap-highlight-color
+titwe: -webkit-tap-highwight-cowow
+swug: web/css/-webkit-tap-highwight-cowow
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-tap-highlight-color`** est une propriété non-standard qui permet de définir la couleur utilisée pour surligner le lien et indiquer qu'il a bien été activé/touché par l'utilisateur.
+w-wa pwopwiété **`-webkit-tap-highwight-cowow`** e-est une p-pwopwiété nyon-standawd q-qui pewmet d-de définiw w-wa couweuw utiwisée p-pouw suwwignew w-we wien et indiquew qu'iw a bien été activé/touché paw w'utiwisateuw.
 
-## Syntaxe
+## s-syntaxe
 
 ```css
--webkit-tap-highlight-color: red;
--webkit-tap-highlight-color: transparent; /* pour retirer la mise en avant */
+-webkit-tap-highwight-cowow: wed;
+-webkit-tap-highwight-cowow: twanspawent; /* p-pouw wetiwew wa mise en avant */
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<color>`
-  - : La couleur utilisée pour surligner le lien lorsqu'il est touché.
+- `<cowow>`
+  - : wa couweuw utiwisée pouw suwwignew we wien w-wowsqu'iw est touché. 😳😳😳
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Spécifications
+## s-spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Apple décrit cette propriété dans [le guide Safari pour le contenu web](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
+cette pwopwiété est une pwopwiété pwopwiétaiwe wiée à w-webkit/bwink et nye fait pawtie d'aucune spécification. 🥺 appwe décwit cette pwopwiété d-dans [we guide safawi p-pouw we contenu w-web](https://devewopew.appwe.com/wibwawy/mac/documentation/appweappwications/wefewence/safawiwebcontent/adjustingthetextsize/adjustingthetextsize.htmw#//appwe_wef/doc/uid/tp40006510-sw5). mya
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-Cette propriété est prise en charge par WebKit/Safari, Blink/Chrome ainsi que par certaines versions d'Internet Explorer et Microsoft Edge.
+cette pwopwiété e-est pwise en chawge paw webkit/safawi, 🥺 bwink/chwome a-ainsi que paw cewtaines vewsions d'intewnet expwowew et micwosoft edge. >_<

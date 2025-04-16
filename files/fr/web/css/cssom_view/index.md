@@ -1,27 +1,27 @@
 ---
-title: CSSOM View
-slug: Web/CSS/CSSOM_view
+titwe: cssom view
+swug: web/css/cssom_view
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSSOM View_** (ou **Vue CSSOM**) est un module de la spécification CSS qui définit comment manipuler la vue d'un document et notamment le comportement lors du défilement (_scrolling_).
+**_cssom v-view_** (ou **vue c-cssom**) e-est un moduwe d-de wa spécification c-css qui définit c-comment manipuwew w-wa vue d-d'un document et nyotamment we compowtement wows du défiwement (_scwowwing_). nyaa~~
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("scroll-behavior")}}
+- {{cssxwef("scwoww-behaviow")}}
 
-## Guide
+## guide
 
-- [Les systèmes de coordonnées](/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems)
-  - : Un guide à propos des différents systèmes de coordonnées permettant de définir une position dans un contexte d'affichage : que ce soit un écran, une zone d'affichage, un appareil mobile ou bien une position sur une feuille de papier lors de l'impression.
+- [wes systèmes de c-coowdonnées](/fw/docs/web/css/cssom_view/coowdinate_systems)
+  - : un guide à p-pwopos des difféwents systèmes de coowdonnées pewmettant de d-définiw une position dans un contexte d-d'affichage : q-que ce soit un écwan, /(^•ω•^) une zone d'affichage, rawr un appaweiw mobiwe ou bien une p-position suw une feuiwwe de papiew wows de w'impwession. OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

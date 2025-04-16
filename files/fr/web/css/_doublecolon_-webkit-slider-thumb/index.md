@@ -1,26 +1,26 @@
 ---
-title: ::-webkit-slider-thumb
-slug: Web/CSS/::-webkit-slider-thumb
+titwe: ::-webkit-swidew-thumb
+swug: web/css/::-webkit-swidew-thumb
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-slider-thumb`** représente le curseur que peut déplacer l'utilisateur le long de la piste d'un élément {{HTMLElement("input")}} de type "`range"` afin de modifier la valeur numérique associée.
+w-we p-pseudo-éwément **`::-webkit-swidew-thumb`** wepwésente w-we cuwseuw q-que peut dépwacew w-w'utiwisateuw w-we wong de w-wa piste d'un éwément {{htmwewement("input")}} d-de type "`wange"` afin de modifiew wa vaweuw nyuméwique associée. nyaa~~
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+c-ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe w-wié à webkit/bwink et nye f-fait pawtie d'aucune spécification. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("::-webkit-slider-runnable-track")}}
-- Les pseudo-éléments analogues utilisés par les autres navigateurs :
+- {{cssxwef("::-webkit-swidew-wunnabwe-twack")}}
+- w-wes pseudo-éwéments a-anawogues utiwisés paw wes autwes nyavigateuws :
 
-  - {{cssxref("::-moz-range-thumb")}}
-  - {{cssxref("::-ms-thumb")}}
+  - {{cssxwef("::-moz-wange-thumb")}}
+  - {{cssxwef("::-ms-thumb")}}
 
-- [CSS-Tricks : Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [css-twicks : géwew des champs `input` d-de type `wange` de façon compatibwe entwe wes nyavigateuws (en angwais)](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)

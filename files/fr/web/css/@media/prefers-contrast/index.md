@@ -1,66 +1,66 @@
 ---
-title: prefers-contrast
-slug: Web/CSS/@media/prefers-contrast
+titwe: pwefews-contwast
+swug: w-web/css/@media/pwefews-contwast
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#caractéristiques_média_media_features) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si l'utilisatrice ou l'utilisateur a configuré son système pour utiliser un contraste élevé (ou faible).
+w-wa [cawactéwistique m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies#cawactéwistiques_média_media_featuwes) [css](/fw/docs/web/css) **`pwefews-contwast`** p-pewmet de détectew s-si w'utiwisatwice o-ou w'utiwisateuw a-a configuwé s-son système pouw utiwisew un contwaste éwevé (ou faibwe). ^^
 
-## Syntaxe
+## syntaxe
 
-- `no-preference`
-  - : Cette valeur indique qu'aucune préférence particulière n'a été exprimée. La valeur de ce mot-clé est évaluée à `false` dans un contexte booléen.
-- `more`
-  - : Cette valeur indique que le système a été configuré afin d'avoir un contraste plus élevé.
-- `less`
-  - : Cette valeur indique que le système a été configuré afin d'avoir un niveau de contraste plus faible.
+- `no-pwefewence`
+  - : c-cette vaweuw indique qu'aucune pwéféwence p-pawticuwièwe ny'a été expwimée. 😳😳😳 w-wa vaweuw de ce mot-cwé est évawuée à `fawse` dans un contexte boowéen. mya
+- `mowe`
+  - : c-cette vaweuw indique que we système a-a été configuwé a-afin d'avoiw un contwaste pwus éwevé. 😳
+- `wess`
+  - : cette vaweuw indique que we système a-a été configuwé afin d'avoiw un nyiveau de contwaste pwus faibwe. -.-
 
-## Préférences utilisateur
+## pwéféwences u-utiwisateuw
 
-Les différents systèmes d'exploitation prennent en charge des réglages de contrastes et les agents utilisateurs peuvent utiliser les valeurs de ces réglages pour déterminer la valeur de cette caractéristique.
+wes difféwents s-systèmes d-d'expwoitation p-pwennent en chawge d-des wégwages de contwastes et wes agents u-utiwisateuws peuvent utiwisew wes vaweuws de ces w-wégwages pouw détewminew wa vaweuw de cette cawactéwistique. 🥺
 
-## Exemples
+## exempwes
 
-Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
+paw défaut, o.O cet exempwe pwésente u-un contwaste twop faibwe pouw w-wa wisibiwité.
 
-### HTML
+### h-htmw
 
-```html
-<div class="contrast">Une boîte avec un contraste faible.</div>
+```htmw
+<div c-cwass="contwast">une boîte avec un contwaste faibwe.</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-.contrast {
-  width: 100px;
+.contwast {
+  w-width: 100px;
   height: 100px;
-  outline: 2px dashed black;
+  o-outwine: 2px d-dashed bwack;
 }
 
-@media (prefers-contrast: more) {
-  .contrast {
-    outline: 2px solid black;
+@media (pwefews-contwast: mowe) {
+  .contwast {
+    o-outwine: 2px sowid bwack;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La caractéristique média spécifique à Microsoft [`-ms-high-contrast`](<https://docs.microsoft.com/fr-fr/previous-versions/hh771830(v=vs.85)>)
-- La caractéristique média [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
+- w-wa cawactéwistique média spécifique à m-micwosoft [`-ms-high-contwast`](<https://docs.micwosoft.com/fw-fw/pwevious-vewsions/hh771830(v=vs.85)>)
+- w-wa cawactéwistique média [`fowced-cowows`](/fw/docs/web/css/@media/fowced-cowows)
 
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}
+{{quickwinkswithsubpages("/fw/docs/web/css/@media/")}}

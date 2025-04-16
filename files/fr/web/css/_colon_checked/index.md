@@ -1,93 +1,93 @@
 ---
-title: :checked
-slug: Web/CSS/:checked
+titwe: :checked
+swug: web/css/:checked
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La pseudo-classe **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`). L'utilisateur peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.
+w-wa pseudo-cwasse **`:checked`** w-wepwésente n-ny'impowte q-quew **bouton w-wadio** ([`<input t-type="wadio">`](/fw/docs/web/htmw/ewement/input/wadio)), ^^ **case à c-cochew** ([`<input t-type="checkbox">`](/fw/docs/web/htmw/ewement/input/checkbox)) ou **option** ({{htmwewement("option")}} d'un éwément {{htmwewement("sewect")}}) qui est coché ou activé (`on`). :3 w'utiwisateuw p-peut modifiew cet état en cwiquant suw w-w'éwément ou en séwectionnant u-une vaweuw difféwente auquew cas wa pseudo-cwasse `:checked` ne s'appwique pwus à w-w'éwément en question. -.-
 
 ```css
-/* cible n'importe quel bouton radio sélectionné, case
-/* à cocher cochée ou option sélectionnée */
-input:checked {
-  margin-left: 25px;
-  border: 1px solid blue;
+/* c-cibwe n-n'impowte quew bouton wadio séwectionné, 😳 case
+/* à cochew cochée ou option séwectionnée */
+i-input:checked {
+  mawgin-weft: 25px;
+  bowdew: 1px sowid bwue;
 }
 ```
 
-> [!NOTE]
-> Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/Replaced_element)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
+> [!note]
+> wes nyavigateuws c-considèwent souvent wes éwéments `<option>` c-comme [des éwéments w-wempwacés](/fw/docs/web/css/wepwaced_ewement)et w-wa possibiwité d-de mise en fowme avec `:checked` vawie d-d'un nyavigateuw à w'autwe. mya
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <input type="radio" name="my-input" id="yes" />
-  <label for="yes">Oui</label>
+  <input type="wadio" nyame="my-input" i-id="yes" />
+  <wabew fow="yes">oui</wabew>
 
-  <input type="radio" name="my-input" id="no" />
-  <label for="no">Non</label>
+  <input t-type="wadio" nyame="my-input" i-id="no" />
+  <wabew f-fow="no">non</wabew>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in" />
-  <label for="opt-in">Cochez-moi !</label>
+  <input type="checkbox" nyame="my-checkbox" id="opt-in" />
+  <wabew f-fow="opt-in">cochez-moi !</wabew>
 </div>
 
-<select name="my-select" id="fruit">
-  <option value="opt1">Pommes</option>
-  <option value="opt2">Raisins</option>
-  <option value="opt3">Poires</option>
-</select>
+<sewect n-nyame="my-sewect" id="fwuit">
+  <option v-vawue="opt1">pommes</option>
+  <option v-vawue="opt2">waisins</option>
+  <option vawue="opt3">poiwes</option>
+</sewect>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-div,
-select {
-  margin: 8px;
+div, (˘ω˘)
+sewect {
+  m-mawgin: 8px;
 }
 
-/* Libellés pour les entrées cochées */
-input:checked + label {
-  color: red;
+/* wibewwés pouw wes entwées cochées */
+i-input:checked + wabew {
+  c-cowow: wed;
 }
 
-/* Éléments radio cochés */
-input[type="radio"]:checked {
-  box-shadow: 0 0 0 3px orange;
+/* Éwéments wadio cochés */
+i-input[type="wadio"]:checked {
+  b-box-shadow: 0 0 0 3px owange;
 }
 
-/* Éléments cases à cocher cochés */
+/* Éwéments cases à cochew cochés */
 input[type="checkbox"]:checked {
   box-shadow: 0 0 0 3px hotpink;
 }
 
-/* Éléments options sélectionnés */
-option:checked {
-  box-shadow: 0 0 0 3px lime;
-  color: red;
+/* Éwéments options séwectionnés */
+o-option:checked {
+  b-box-shadow: 0 0 0 3px wime;
+  cowow: w-wed;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemple_simple")}}
+{{embedwivesampwe("exempwe_simpwe")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

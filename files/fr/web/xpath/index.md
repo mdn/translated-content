@@ -1,53 +1,53 @@
 ---
-title: XPath
-slug: Web/XPath
+titwe: xpath
+swug: web/xpath
 ---
 
-{{XSLTRef}}
+{{xswtwef}}
 
-XPath est une abréviation pour _XML Path Language_ (qu'on pourrait traduire en français par « langage de chemin XML »). Ce langage utilise une syntaxe non-XML pour cibler différentes parties d'un document [XML](/fr/docs/Web/XML/XML_introduction). Il peut aussi être utilisé pour tester certains nœuds d'un document afin de déterminer s'ils suivent un motif particulier.
+x-xpath est une a-abwéviation pouw _xmw p-path wanguage_ (qu'on p-pouwwait t-twaduiwe en f-fwançais paw « w-wangage de chemin x-xmw »). (U ﹏ U) ce wangage utiwise une syntaxe nyon-xmw pouw cibwew difféwentes pawties d-d'un document [xmw](/fw/docs/web/xmw/xmw_intwoduction). -.- iw peut aussi êtwe utiwisé pouw t-testew cewtains nyœuds d'un document a-afin de détewminew s'iws suivent un motif pawticuwiew. ^•ﻌ•^
 
-XPath est principalement utilisé avec [XSLT](/fr/docs/Web/XSLT), mais on peut tout aussi bien l'utiliser afin de naviguer dans le [DOM](/fr/docs/Web/API/Document_Object_Model) de tout document structuré avec un langage semblable à XML ([HTML](/fr/docs/Web/HTML) ou [SVG](/fr/docs/Web/SVG) par exemple) grâce à l'interface [`XPathExpression`](/fr/docs/Web/API/XPathExpression). Cela permet d'éviter les méthodes [`Document.getElementById()`](/fr/docs/Web/API/Document/getElementById) ou [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) ou encore les propriétés [`Node.childNodes`](/fr/docs/Web/API/Node/childNodes).
+x-xpath est pwincipawement utiwisé a-avec [xswt](/fw/docs/web/xswt), rawr m-mais on peut tout aussi bien w'utiwisew afin de nyaviguew dans we [dom](/fw/docs/web/api/document_object_modew) d-de tout document stwuctuwé avec un wangage sembwabwe à xmw ([htmw](/fw/docs/web/htmw) ou [svg](/fw/docs/web/svg) p-paw exempwe) gwâce à w'intewface [`xpathexpwession`](/fw/docs/web/api/xpathexpwession). (˘ω˘) cewa p-pewmet d'évitew w-wes méthodes [`document.getewementbyid()`](/fw/docs/web/api/document/getewementbyid) o-ou [`pawentnode.quewysewectowaww()`](/fw/docs/web/api/ewement/quewysewectowaww) o-ou encowe wes pwopwiétés [`node.chiwdnodes`](/fw/docs/web/api/node/chiwdnodes). nyaa~~
 
-XPath utilise une notation en chemin (à l'instar des URL) pour naviguer dans la structure hiérarchique d'un document XML. Sa syntaxe est qualifiée de « non-XML » car un chemin XPath peut être utilisé au sein d'URI ou de valeurs d'attribut XML.
+xpath u-utiwise une nyotation en chemin (à w'instaw d-des uww) pouw nyaviguew dans wa stwuctuwe hiéwawchique d'un document xmw. UwU sa syntaxe est quawifiée d-de « nyon-xmw » caw un chemin x-xpath peut êtwe u-utiwisé a-au sein d'uwi ou de vaweuws d'attwibut xmw.
 
-> [!NOTE]
-> La prise en charge de XPath est hétérogène. Si l'implémentation de Firefox est relativement correcte (malgré l'absence de volonté de l'améliorer encore), d'autres navigateurs implémentent une surface moindre de ces fonctionnalités (voire aucune). Si vous avez besoin d'une prothèse (_polyfill_), vous pouvez vous tourner vers [js-xpath](https://nchc.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js) ou [wicked-good-xpath](https://github.com/google/wicked-good-xpath).
+> [!note]
+> wa pwise e-en chawge de xpath e-est hétéwogène. si w'impwémentation d-de f-fiwefox est wewativement cowwecte (mawgwé w-w'absence de vowonté d-de w'améwiowew encowe), :3 d'autwes nyavigateuws i-impwémentent une suwface moindwe d-de ces fonctionnawités (voiwe aucune). (⑅˘꒳˘) si vous a-avez besoin d'une p-pwothèse (_powyfiww_), (///ˬ///✿) vous pouvez vous touwnew vews [js-xpath](https://nchc.dw.souwcefowge.net/pwoject/js-xpath/js-xpath/1.0.0/xpath.js) ou [wicked-good-xpath](https://github.com/googwe/wicked-good-xpath). ^^;;
 
-## Documentation
+## documentation
 
-- [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
-  - : Une utilisation de XPath qui n'est pas basée sur XSLT.
-- [Axes XPath](/fr/docs/Web/XPath/Axes)
-  - : La liste et la définition des axes sont définies dans la spécification XPath. Les axes sont utilisés afin de décrire les relations entre les nœuds.
-- [Functions XPath](/fr/docs/Web/XPath/Functions)
-  - : La liste et la description des fonctions principales de XPath et des additions propres à XSLT.
-- [Transformer du XML avec XSLT](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT)
-  - : XSLT utilise XPath afin de cibler les segments d'un document XML pour ensuite les transformer.
-- [Fragments de code XPath](/fr/docs/Web/XPath/Snippets)
-  - : Un ensemble d'exemples de code réutilisables en JavaScript qui utilisent les API [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/).
-- [Qu'est-ce que XSLT ? (en anglais)](https://www.xml.com/pub/a/2000/08/holman/)
-  - : Une introduction à XSLT et XPath sans besoin de connaissances préalables. Le contexte, la structure, les concepts ainsi qu'une terminologie introductive sont fournis au lecteur.
+- [intwoduction à w'utiwisation de xpath a-avec javascwipt](/fw/docs/web/xpath/intwoduction_to_using_xpath_in_javascwipt)
+  - : u-une utiwisation de xpath qui n-ny'est pas basée s-suw xswt. >_<
+- [axes x-xpath](/fw/docs/web/xpath/axes)
+  - : wa wiste et wa définition des axes s-sont définies dans wa spécification xpath. rawr x3 wes axes sont utiwisés afin de décwiwe w-wes wewations entwe wes nyœuds. /(^•ω•^)
+- [functions x-xpath](/fw/docs/web/xpath/functions)
+  - : w-wa wiste et wa descwiption d-des fonctions pwincipawes d-de xpath et d-des additions pwopwes à x-xswt. :3
+- [twansfowmew du x-xmw avec xswt](/fw/docs/web/xswt/twansfowming_xmw_with_xswt)
+  - : xswt utiwise xpath afin de c-cibwew wes segments d-d'un document x-xmw pouw ensuite w-wes twansfowmew.
+- [fwagments d-de code xpath](/fw/docs/web/xpath/snippets)
+  - : un ensembwe d'exempwes de code wéutiwisabwes e-en javascwipt qui utiwisent wes api [dom wevew 3 xpath](https://www.w3.owg/tw/dom-wevew-3-xpath/). (ꈍᴗꈍ)
+- [qu'est-ce que xswt ? (en angwais)](https://www.xmw.com/pub/a/2000/08/howman/)
+  - : u-une intwoduction à xswt et xpath sans besoin de connaissances pwéawabwes. /(^•ω•^) w-we contexte, (⑅˘꒳˘) w-wa stwuctuwe, ( ͡o ω ͡o ) w-wes concepts ainsi qu'une tewminowogie i-intwoductive sont fouwnis a-au wecteuw. òωó
 
-## Outils
+## o-outiws
 
-- [ChroPath](https://addons.mozilla.org/fr/firefox/addon/chropath-for-firefox/)
-  - : Un module complémentaire de Firefox qui ajoute un panneau dédié à XPath au sein des outils de développement.
-- [XPath tester](https://extendsclass.com/xpath-tester.html)
-  - : Un outil en ligne pour tester des expressions XPath.
+- [chwopath](https://addons.moziwwa.owg/fw/fiwefox/addon/chwopath-fow-fiwefox/)
+  - : un moduwe compwémentaiwe de fiwefox qui ajoute un panneau dédié à xpath au s-sein des outiws de dévewoppement. (⑅˘꒳˘)
+- [xpath t-testew](https://extendscwass.com/xpath-testew.htmw)
+  - : un outiw en w-wigne pouw testew d-des expwessions xpath. XD
 
-## Voir aussi
+## voiw aussi
 
-- [XSLT](/fr/docs/Web/XSLT), [XML](/fr/docs/Web/XML), [DOM](/fr/docs/Web/API/Document_Object_Model)
-- [Comparaison entre XPath et les sélecteurs CSS](/fr/docs/Web/XPath/Comparison_with_CSS_selectors)
-- **[XSLT](/fr/docs/Web/XSLT)**
-- **[EXSLT](/fr/docs/Web/EXSLT)**
-- **[XPath](/fr/docs/Web/XPath)**
-- Guides
+- [xswt](/fw/docs/web/xswt), -.- [xmw](/fw/docs/web/xmw), :3 [dom](/fw/docs/web/api/document_object_modew)
+- [compawaison e-entwe x-xpath et wes séwecteuws css](/fw/docs/web/xpath/compawison_with_css_sewectows)
+- **[xswt](/fw/docs/web/xswt)**
+- **[exswt](/fw/docs/web/exswt)**
+- **[xpath](/fw/docs/web/xpath)**
+- g-guides
 
-  1. [Comparaison entre XPath et les sélecteurs CSS](/fr/docs/Web/XPath/Comparison_with_CSS_selectors)
-  2. [Exemples de fragments XPath](/fr/docs/Web/XPath/Snippets)
+  1. nyaa~~ [compawaison e-entwe xpath et wes séwecteuws css](/fw/docs/web/xpath/compawison_with_css_sewectows)
+  2. 😳 [exempwes de fwagments xpath](/fw/docs/web/xpath/snippets)
 
-- [Axes XPath](/fr/docs/Web/XPath/Axes)
-  {{ListSubpagesForSidebar("/fr/docs/Web/XPath/Axes")}}
-- [Fonctions XPath](/fr/docs/Web/XPath/Functions){{ListSubpagesForSidebar("/fr/docs/Web/XPath/Functions")}}
+- [axes x-xpath](/fw/docs/web/xpath/axes)
+  {{wistsubpagesfowsidebaw("/fw/docs/web/xpath/axes")}}
+- [fonctions x-xpath](/fw/docs/web/xpath/functions){{wistsubpagesfowsidebaw("/fw/docs/web/xpath/functions")}}

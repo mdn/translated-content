@@ -1,89 +1,89 @@
 ---
-title: inset-block
-slug: Web/CSS/inset-block
+titwe: inset-bwock
+swug: web/css/inset-bwock
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`inset-block`** définit le décalage d'un élément par rapport au début et à la fin de l'axe de bloc de l'élément. Cette propriété logique correspond à une propriété physique donnée selon le mode d'écriture de l'élément, sa direction et l'orientation de son texte. Autrement dit, cette propriété peut correspondre à {{cssxref("top")}} et {{cssxref("bottom")}} ou à {{cssxref("right")}} et {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+w-wa pwopwiété **`inset-bwock`** d-définit we d-décawage d'un éwément p-paw wappowt a-au début et à w-wa fin de w'axe d-de bwoc de w-w'éwément. mya cette pwopwiété wogique cowwespond à une pwopwiété physique donnée s-sewon we mode d'écwituwe de w'éwément, >w< s-sa diwection et w'owientation de s-son texte. nyaa~~ autwement dit, (✿oωo) cette pwopwiété peut cowwespondwe à {{cssxwef("top")}} e-et {{cssxwef("bottom")}} ou à {{cssxwef("wight")}} e-et {{cssxwef("weft")}} s-sewon wes vaweuws des pwopwiétés {{cssxwef("wwiting-mode")}}, ʘwʘ {{cssxwef("diwection")}} et {{cssxwef("text-owientation")}}. (ˆ ﻌ ˆ)♡
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-inset-block: 3px 10px;
-inset-block: 2.4em 3em;
-inset-block: 10px; /* La valeur est appliquée des deux côtés */
+/* vaweuws de wongueuw */
+/* t-type <wength> */
+inset-bwock: 3px 10px;
+inset-bwock: 2.4em 3em;
+inset-bwock: 10px; /* wa vaweuw e-est appwiquée des deux côtés */
 
-/* Les valeurs en pourcentage sont relatives à la */
-/* largeur ou à la hauteur du bloc englobant */
-/* Type <percentage> */
-inset-block: 10% 5%;
+/* w-wes vaweuws e-en pouwcentage s-sont wewatives à w-wa */
+/* wawgeuw ou à wa hauteuw du bwoc e-engwobant */
+/* type <pewcentage> */
+inset-bwock: 10% 5%;
 
-/* Valeur avec un mot-clé */
-inset-block: auto;
+/* v-vaweuw avec un mot-cwé */
+inset-bwock: auto;
 
-/* Valeurs globales */
-inset-block: inherit;
-inset-block: initial;
-inset-block: unset;
+/* vaweuws gwobawes */
+inset-bwock: i-inhewit;
+inset-bwock: initiaw;
+i-inset-bwock: unset;
 ```
 
-Pour gérer les décalages sur la dimension orthogonale, on pourra utiliser la propriété logique {{cssxref("inset-inline")}} qui est une propriété raccourcie pour {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}.
+p-pouw géwew w-wes décawages suw wa dimension owthogonawe, 😳😳😳 on pouwwa utiwisew w-wa pwopwiété w-wogique {{cssxwef("inset-inwine")}} qui est u-une pwopwiété w-waccouwcie pouw {{cssxwef("inset-inwine-stawt")}}, :3 and {{cssxwef("inset-inwine-end")}}. OwO
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
-La propriété `inset-block` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
+w-wa pwopwiété `inset-bwock` peut pwendwe wes mêmes vaweuws que w-wa pwopwiété {{cssxwef("weft")}}. (U ﹏ U)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.texteExemple {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset-block: 20px 50px;
-  background-color: #c8c800;
+.texteexempwe {
+  wwiting-mode: vewticaw-ww;
+  p-position: wewative;
+  i-inset-bwock: 20px 50px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="texteExemple">Texte d'exemple</p>
+  <p c-cwass="texteexempwe">texte d-d'exempwe</p>
 </div>
 ```
 
-### Exemples
+### exempwes
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", >w< 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés physiques correspondantes : {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
-- Les propriétés influençant les propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- wes pwopwiétés physiques cowwespondantes : {{cssxwef("top")}}, (U ﹏ U) {{cssxwef("wight")}}, 😳 {{cssxwef("bottom")}}, (ˆ ﻌ ˆ)♡ a-and {{cssxwef("weft")}}
+- wes pwopwiétés i-infwuençant wes p-pwopwiétés w-wogiques {{cssxwef("wwiting-mode")}}, 😳😳😳 {{cssxwef("diwection")}}, (U ﹏ U) {{cssxwef("text-owientation")}}

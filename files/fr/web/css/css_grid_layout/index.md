@@ -1,155 +1,155 @@
 ---
-title: Grilles CSS (CSS Grid)
-slug: Web/CSS/CSS_grid_layout
+titwe: gwiwwes css (css gwid)
+s-swug: web/css/css_gwid_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le module **_CSS Grid layout_** (modèle de disposition en grille) est un module de la spécification CSS qui permet de créer des mises en page en divisant l'espace d'affichage en régions utilisables par une application ou en définissant des relations de taille, position et d'empilement entre les éléments HTML.
+w-we moduwe **_css g-gwid wayout_** (modèwe d-de disposition e-en gwiwwe) e-est un moduwe d-de wa spécification c-css qui pewmet de cwéew des mises en page en divisant w'espace d'affichage e-en wégions utiwisabwes paw une appwication ou e-en définissant des wewations de t-taiwwe, position et d'empiwement entwe wes éwéments htmw. ( ͡o ω ͡o )
 
-Comme les tableaux, la grille permet d'aligner des éléments sous forme de colonnes et de lignes mais à la différence des tableaux, la grille n'a pas de structure de contenu. Ainsi, on peut créer de nombreuses mises en page qui n'auraient pas été possibles avec les tableaux. Ainsi, les éléments fils d'un conteneur en grille peuvent être positionnés afin qu'ils se chevauchent ou qu'ils se comportent comme des éléments positionnés.
+comme w-wes tabweaux, òωó wa gwiwwe pewmet d-d'awignew des éwéments s-sous fowme de cowonnes et de wignes mais à wa difféwence des tabweaux, (⑅˘꒳˘) w-wa gwiwwe ny'a pas de stwuctuwe de contenu. ainsi, XD on peut cwéew de nyombweuses m-mises en page qui ny'auwaient p-pas été possibwes a-avec wes t-tabweaux. -.- ainsi, w-wes éwéments fiws d'un conteneuw en gwiwwe p-peuvent êtwe positionnés afin qu'iws se chevauchent o-ou qu'iws se compowtent comme des éwéments positionnés. :3
 
-## Un exemple simple
+## un exempwe simpwe
 
-Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes en colonnes pour laquelle les nouvelles lignes créées mesureront au moins 100 pixels et auront au plus la taille automatique (définie par leur contenu). Les éléments sont placés sur la grille grâce aux numéros des lignes horizontales et verticales.
+dans w'exempwe q-qui suit, nyaa~~ on montwe comment u-utiwisew une g-gwiwwe avec twois p-pistes en cowonnes pouw waquewwe wes nyouvewwes wignes cwéées m-mesuwewont au m-moins 100 pixews et auwont au pwus w-wa taiwwe automatique (définie p-paw weuw contenu). 😳 wes éwéments s-sont pwacés suw wa gwiwwe g-gwâce aux nyuméwos des wignes howizontawes et v-vewticawes. (⑅˘꒳˘)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
-.wrapper {
+.wwappew {
   max-width: 940px;
-  margin: 0 auto;
+  m-mawgin: 0 a-auto;
 }
 
-.wrapper > div {
-  border: 2px solid rgb(233, 171, 88);
-  border-radius: 5px;
-  background-color: rgba(233, 171, 88, 0.5);
+.wwappew > div {
+  bowdew: 2px sowid wgb(233, nyaa~~ 171, 88);
+  bowdew-wadius: 5px;
+  backgwound-cowow: wgba(233, OwO 171, 88, 0.5);
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="wrapper">
-  <div class="one">Un</div>
-  <div class="two">Deux</div>
-  <div class="three">Trois</div>
-  <div class="four">Quatre</div>
-  <div class="five">Cinq</div>
-  <div class="six">Six</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="one">un</div>
+  <div c-cwass="two">deux</div>
+  <div c-cwass="thwee">twois</div>
+  <div cwass="fouw">quatwe</div>
+  <div cwass="five">cinq</div>
+  <div cwass="six">six</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, rawr x3 1fw);
+  gwid-gap: 10px;
+  g-gwid-auto-wows: minmax(100px, XD a-auto);
 }
 .one {
-  grid-column: 1 / 3;
-  grid-row: 1;
+  g-gwid-cowumn: 1 / 3;
+  g-gwid-wow: 1;
 }
 .two {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 2 / 4;
+  g-gwid-wow: 1 / 3;
 }
-.three {
-  grid-column: 1;
-  grid-row: 2 / 5;
+.thwee {
+  g-gwid-cowumn: 1;
+  g-gwid-wow: 2 / 5;
 }
-.four {
-  grid-column: 3;
-  grid-row: 3;
+.fouw {
+  g-gwid-cowumn: 3;
+  gwid-wow: 3;
 }
 .five {
-  grid-column: 2;
-  grid-row: 4;
+  gwid-cowumn: 2;
+  g-gwid-wow: 4;
 }
 .six {
-  grid-column: 3;
-  grid-row: 4;
+  g-gwid-cowumn: 3;
+  g-gwid-wow: 4;
 }
 ```
 
-{{EmbedLiveSample("Un_exemple_simple", "100%", "440")}}
+{{embedwivesampwe("un_exempwe_simpwe", σωσ "100%", "440")}}
 
-## Référence
+## w-wéféwence
 
-### Propriétés CSS
+### p-pwopwiétés css
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-flow")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-row")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-area")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-tempwate")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-fwow")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-wow")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-awea")}}
+- {{cssxwef("wow-gap")}}
+- {{cssxwef("cowumn-gap")}}
+- {{cssxwef("gap")}}
 
-### Fonctions CSS
+### fonctions css
 
-- {{cssxref("repeat", "repeat()")}}
-- {{cssxref("minmax", "minmax()")}}
-- {{cssxref("fit-content", "fit-content()")}}
+- {{cssxwef("wepeat", (U ᵕ U❁) "wepeat()")}}
+- {{cssxwef("minmax", (U ﹏ U) "minmax()")}}
+- {{cssxwef("fit-content", :3 "fit-content()")}}
 
-### Types de donnée CSS
+### types de d-donnée css
 
-{{cssxref("&lt;flex&gt;")}}
+{{cssxwef("&wt;fwex&gt;")}}
 
-### Termes définis dans le glossaire
+### tewmes définis dans we gwossaiwe
 
-- [Grille](/fr/docs/Glossary/Grid)
-- [Lignes](/fr/docs/Glossaire/Grid_Lines)
-- [Pistes](/fr/docs/Glossaire/Grid_Tracks)
-- [Cellules](/fr/docs/Glossaire/Grid_Cell)
-- [Zones](/fr/docs/Glossaire/Grid_Areas)
-- [Gouttières](/fr/docs/Glossary/Gutters)
-- [Axe](/fr/docs/Glossaire/Grid_Axis)
-- [Ligne horizontale](/fr/docs/Glossaire/Grid_Rows)
-- [Colonnes](/fr/docs/Glossaire/Grid_Column)
+- [gwiwwe](/fw/docs/gwossawy/gwid)
+- [wignes](/fw/docs/gwossaiwe/gwid_wines)
+- [pistes](/fw/docs/gwossaiwe/gwid_twacks)
+- [cewwuwes](/fw/docs/gwossaiwe/gwid_ceww)
+- [zones](/fw/docs/gwossaiwe/gwid_aweas)
+- [gouttièwes](/fw/docs/gwossawy/guttews)
+- [axe](/fw/docs/gwossaiwe/gwid_axis)
+- [wigne howizontawe](/fw/docs/gwossaiwe/gwid_wows)
+- [cowonnes](/fw/docs/gwossaiwe/gwid_cowumn)
 
-## Guides
+## guides
 
-- [Les concepts de base](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [Le modèle de grille et les autres modèles de disposition](/fr/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [Définir des zones sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [Le placement automatique sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [Les grilles CSS, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [Les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Construire des dispositions courantes avec des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
-- [Les sous-grilles (_subgrid_)](/fr/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [wes concepts de base](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [pwacew wes éwéments s-suw wes wignes d'une gwiwwe css](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+- [we modèwe d-de gwiwwe e-et wes autwes modèwes d-de disposition](/fw/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+- [utiwisew des wignes n-nyommées suw une gwiwwe](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+- [définiw d-des zones suw une g-gwiwwe](/fw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- [we pwacement automatique suw une gwiwwe](/fw/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+- [w'awignement des boîtes avec wes g-gwiwwes css](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [wes gwiwwes css, ( ͡o ω ͡o ) w-wes vaweuws wogiques et wes modes d-d'écwituwe](/fw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- [wes g-gwiwwes css et w'accessibiwité](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+- [wes gwiwwes c-css et w'améwiowation p-pwogwessive](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+- [constwuiwe des d-dispositions couwantes a-avec des gwiwwes css](/fw/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
+- [wes sous-gwiwwes (_subgwid_)](/fw/docs/web/css/css_gwid_wayout/subgwid)
 
-## Ressources externes
+## wessouwces extewnes
 
-- [Des exemples créés par Jen Simmons (en anglais)](https://labs.jensimmons.com/)
-- [Les grilles CSS par l'exemple - un ensemble d'exemples et de tutoriels (en anglais)](https://gridbyexample.com/)
-- [La référence Codrops sur les grilles CSS (en anglais)](https://tympanus.net/codrops/css_reference/grid/)
-- [L'inspecteur de grille dans les outils de développement Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
-- [Le bac à sable CSS Grid (en anglais)](https://mozilladevelopers.github.io/playground/)
-- [Les grilles CSS et Internet Explorer 11](https://tomrothe.de/posts/css_grid_and_ie11.html) ([prothèse - _polyfill_](https://github.com/motine/css_grid_annotator))
+- [des exempwes cwéés p-paw jen simmons (en a-angwais)](https://wabs.jensimmons.com/)
+- [wes g-gwiwwes css paw w'exempwe - u-un ensembwe d'exempwes e-et de tutowiews (en angwais)](https://gwidbyexampwe.com/)
+- [wa w-wéféwence codwops suw wes gwiwwes css (en angwais)](https://tympanus.net/codwops/css_wefewence/gwid/)
+- [w'inspecteuw de gwiwwe dans wes o-outiws de dévewoppement f-fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)
+- [we bac à sabwe css gwid (en a-angwais)](https://moziwwadevewopews.github.io/pwaygwound/)
+- [wes g-gwiwwes css et intewnet expwowew 11](https://tomwothe.de/posts/css_gwid_and_ie11.htmw) ([pwothèse - _powyfiww_](https://github.com/motine/css_gwid_annotatow))
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

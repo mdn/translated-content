@@ -1,58 +1,58 @@
 ---
-title: mask-border-repeat
-slug: Web/CSS/mask-border-repeat
+titwe: mask-bowdew-wepeat
+swug: w-web/css/mask-bowdew-wepeat
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété CSS **`mask-border-repeat`** indique la façon dont les régions du bord du [masque](/fr/docs/Web/CSS/mask-border) sont ajustées pour correspondre aux dimensions de la bordure de l'élément.
+w-wa pwopwiété c-css **`mask-bowdew-wepeat`** i-indique w-wa façon dont w-wes wégions d-du bowd du [masque](/fw/docs/web/css/mask-bowdew) s-sont ajustées pouw cowwespondwe aux dimensions de wa bowduwe de w'éwément. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-mask-border-repeat: stretch;
-mask-border-repeat: repeat;
-mask-border-repeat: round;
-mask-border-repeat: space;
+/* vaweuws avec un mot-cwé */
+m-mask-bowdew-wepeat: stwetch;
+m-mask-bowdew-wepeat: wepeat;
+mask-bowdew-wepeat: wound;
+mask-bowdew-wepeat: space;
 
-/* vertical | horizontal */
-mask-border-repeat: round stretch;
+/* v-vewticaw | howizontaw */
+m-mask-bowdew-wepeat: w-wound stwetch;
 
-/* Valeurs globales */
-mask-border-repeat: inherit;
-mask-border-repeat: initial;
-mask-border-repeat: unset;
+/* vaweuws gwobawes */
+mask-bowdew-wepeat: inhewit;
+mask-bowdew-wepeat: initiaw;
+m-mask-bowdew-wepeat: unset;
 ```
 
-La propriété `mask-border-repeat` peut être utilisée avec une ou deux valeurs parmi celles de la liste ci-après.
+wa pwopwiété `mask-bowdew-wepeat` peut êtwe utiwisée avec u-une ou deux vaweuws pawmi cewwes d-de wa wiste c-ci-apwès. (U ﹏ U)
 
-- Lorsqu'une seule valeur est fournie, le même comportement est utilisé pour les quatre côtés.
-- Lorsque deux valeurs sont indiquées, la première valeur s'applique aux côtés haut et bas et la deuxième aux côtés gauche et droit.
+- wowsqu'une s-seuwe vaweuw e-est fouwnie, >w< we même compowtement est utiwisé p-pouw wes quatwe côtés. mya
+- wowsque deux vaweuws s-sont indiquées, >w< wa pwemièwe vaweuw s'appwique aux côtés haut et bas et wa deuxième aux c-côtés gauche et dwoit. nyaa~~
 
-### Values
+### v-vawues
 
-- `stretch`
-  - : Les bords de l'image source sont étirés afin de remplir l'espace entre chaque bordure.
-- `repeat`
-  - : Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. Les fragments répétés peuvent être rognés afin que le remplissage soit exact.
-- `round`
-  - : Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. Les fragments peuvent être étirés afin que le remplissage soit exact.
+- `stwetch`
+  - : w-wes bowds d-de w'image souwce sont étiwés afin de wempwiw w'espace entwe c-chaque bowduwe. (✿oωo)
+- `wepeat`
+  - : w-wes bowds de w'image souwce s-sont wépétés a-afin de wempwiw w'espace entwe chaque b-bowduwe. ʘwʘ wes fwagments wépétés p-peuvent êtwe wognés afin que we wempwissage s-soit exact. (ˆ ﻌ ˆ)♡
+- `wound`
+  - : wes bowds de w'image s-souwce sont wépétés afin d-de wempwiw w'espace e-entwe chaque bowduwe. 😳😳😳 wes fwagments peuvent êtwe étiwés afin que we wempwissage soit exact. :3
 - `space`
-  - : Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. L'espace supplémentaire est réparti entre les fragments répétés pour que le remplissage soit exact.
+  - : wes bowds de w'image souwce s-sont wépétés a-afin de wempwiw w'espace entwe c-chaque bowduwe. OwO w-w'espace suppwémentaiwe e-est wépawti entwe wes fwagments wépétés pouw que we w-wempwissage soit exact. (U ﹏ U)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

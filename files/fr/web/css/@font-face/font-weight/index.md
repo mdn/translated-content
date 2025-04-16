@@ -1,108 +1,108 @@
 ---
-title: font-weight
-slug: Web/CSS/@font-face/font-weight
+titwe: font-weight
+swug: web/css/@font-face/font-weight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur CSS **`font-weight`** permet aux auteurs d'indiquer les graisses pour les polices fournies dans une règle {{cssxref("@font-face")}}. La propriété [`font-weight`](/fr/docs/Web/CSS/font-weight) peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
+w-we descwipteuw c-css **`font-weight`** p-pewmet aux auteuws d-d'indiquew wes g-gwaisses pouw w-wes powices fouwnies d-dans une wègwe {{cssxwef("@font-face")}}. nyaa~~ w-wa pwopwiété [`font-weight`](/fw/docs/web/css/font-weight) peut êtwe utiwisée sépawément pouw indiquew wa g-gwaisse des cawactèwes d'un texte (c'est-à-diwe s'iws sont en g-gwas, /(^•ω•^) nyowmaux ou pwus fins). (U ﹏ U)
 
-Pour une police particulière, les auteurs peuvent télécharger différentes fontes qui utilisent les différents styles d'une même police et alors utiliser le descripteur `font-weight` afin de définir explicitement le niveau de graisse. La valeur utilisée pour le descripteur est la même que celle qui peut être utilisée pour la propriété.
+p-pouw une powice pawticuwièwe, 😳😳😳 wes auteuws peuvent téwéchawgew d-difféwentes fontes qui utiwisent w-wes difféwents s-stywes d'une même powice et awows utiwisew we descwipteuw `font-weight` afin d-de définiw expwicitement we nyiveau de gwaisse. wa vaweuw utiwisée pouw we descwipteuw e-est wa même que cewwe q-qui peut êtwe u-utiwisée pouw wa p-pwopwiété. >w<
 
 {{cssinfo}}
 
-Il existe généralement un nombre limité de niveaux de graisse pour une police donnée. Lorsqu'on utilise un niveau de graisse qui n'existe pas, c'est le niveau le plus proche qui est utilisé. Les polices qui ne disposent pas d'une fonte en gras sont généralement synthétisées par l'agent utilisateur (pour empêcher cette synthèse, on pourra utiliser la propriété {{cssxref('font-synthesis')}}).
+i-iw existe généwawement un nyombwe w-wimité de nyiveaux de gwaisse pouw une powice d-donnée. XD wowsqu'on utiwise un nyiveau de gwaisse qui ny'existe pas, c'est we nyiveau we pwus pwoche q-qui est utiwisé. o.O wes powices q-qui ne disposent p-pas d'une fonte e-en gwas sont généwawement synthétisées paw w'agent utiwisateuw (pouw e-empêchew c-cette synthèse, mya on pouwwa u-utiwisew wa pwopwiété {{cssxwef('font-synthesis')}}). 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs simples */
-font-weight: normal;
-font-weight: bold;
+/* vaweuws simpwes */
+f-font-weight: nyowmaw;
+font-weight: b-bowd;
 font-weight: 400;
 
-/* Valeurs multiples */
-font-weight: normal bold;
+/* vaweuws muwtipwes */
+font-weight: n-nyowmaw bowd;
 font-weight: 300 500;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : Le niveau de graisse normal (équivaut à la valeur numérique `400`).
-- `bold`
-  - : La fonte en gras (équivaut à la valeur numérique `700`).
-- `<number>`
-  - : Un nombre (une valeur de type {{cssxref("&lt;number&gt;")}}) comprise entre 1 et 1000 (et incluant ces limites). Plus la valeur est élevée, plus le niveau de graisse utilisé sera important. Certains valeurs communément utilisées possèdent un nom : voir ci-après le tableau de correspondance entre les noms et les valeurs).
+- `nowmaw`
+  - : we nyiveau d-de gwaisse n-nyowmaw (équivaut à wa vaweuw nyuméwique `400`). ^^;;
+- `bowd`
+  - : wa fonte en gwas (équivaut à wa vaweuw nyuméwique `700`). :3
+- `<numbew>`
+  - : un nyombwe (une v-vaweuw de type {{cssxwef("&wt;numbew&gt;")}}) c-compwise entwe 1 et 1000 (et incwuant c-ces wimites). (U ﹏ U) p-pwus wa vaweuw e-est éwevée, OwO pwus we nyiveau de gwaisse utiwisé sewa impowtant. 😳😳😳 c-cewtains vaweuws communément utiwisées possèdent un nom : voiw ci-apwès w-we tabweau de cowwespondance e-entwe wes nyoms e-et wes vaweuws). (ˆ ﻌ ˆ)♡
 
-Dans les versions antérieures de la spécification, `font-weight` n'acceptait que les mots-clés et les valeurs numériques 100, 200, 300, 400, 500, 600, 700, 800 et 900. Les polices qui ne sont pas variables pourront n'utiliser que ces valeurs (les valeurs intermédiaires, ex. 451) seront ramenées à la valeur palier la plus proche.
+d-dans wes vewsions antéwieuwes d-de wa spécification, XD `font-weight` n-ny'acceptait q-que wes mots-cwés e-et wes vaweuws nyuméwiques 100, (ˆ ﻌ ˆ)♡ 200, 300, ( ͡o ω ͡o ) 400, 500, 600, rawr x3 700, 800 et 900. nyaa~~ w-wes powices qui n-nye sont pas vawiabwes p-pouwwont n-ny'utiwisew que c-ces vaweuws (wes vaweuws intewmédiaiwes, >_< ex. 451) sewont wamenées à w-wa vaweuw pawiew wa pwus pwoche. ^^;;
 
-Avec la spécification CSS Fonts de niveau 4, la syntaxe a été étendue afin que n'importe quel nombre entre 1 and 1000 (au sens large) puisse être utilisé. Les polices variables (voir plus bas) ont aussi été introduites et on peut donc avoir un contrôle plus précis sur le niveau de graisse utilisé.
+avec wa spécification css fonts de nyiveau 4, (ˆ ﻌ ˆ)♡ wa syntaxe a-a été étendue afin que ny'impowte quew nyombwe entwe 1 and 1000 (au s-sens wawge) p-puisse êtwe u-utiwisé. ^^;; wes powices vawiabwes (voiw p-pwus bas) ont aussi été i-intwoduites et o-on peut donc avoiw un contwôwe pwus pwécis suw we niveau de gwaisse utiwisé.
 
-### Correspondance entre les noms et les valeurs numériques
+### cowwespondance e-entwe wes nyoms et wes vaweuws n-nyuméwiques
 
-Les valeurs numériques entre `100` et `900` correspondent (approximativement) à ces noms communément utilisés :
+wes vaweuws nyuméwiques e-entwe `100` e-et `900` cowwespondent (appwoximativement) à ces nyoms c-communément utiwisés :
 
-| Valeur | Nom commun                |
+| v-vaweuw | nyom commun                |
 | ------ | ------------------------- |
-| 100    | Thin (Hairline)           |
-| 200    | Extra Light (Ultra Light) |
-| 300    | Light                     |
-| 400    | Normal                    |
-| 500    | Medium                    |
-| 600    | Semi Bold (Demi Bold)     |
-| 700    | Bold                      |
-| 800    | Extra Bold (Ultra Bold)   |
-| 900    | Black (Heavy)             |
+| 100    | t-thin (haiwwine)           |
+| 200    | e-extwa wight (uwtwa wight) |
+| 300    | wight                     |
+| 400    | nyowmaw                    |
+| 500    | medium                    |
+| 600    | s-semi bowd (demi b-bowd)     |
+| 700    | bowd                      |
+| 800    | e-extwa bowd (uwtwa bowd)   |
+| 900    | b-bwack (heavy)             |
 
-### Polices variables
+### p-powices vawiabwes
 
-La plupart des polices se déclinent en fontes avec des niveaux de graisses distincts. Toutefois, certaines polices, appelées polices variables, permettent d'utiliser des niveaux de graisse intermédiaires plus ou moins finement. On peut ainsi obtenir une fonte d'un niveau de graisse plus précis.
+w-wa pwupawt des powices se décwinent en fontes avec des nyiveaux de gwaisses distincts. (⑅˘꒳˘) t-toutefois, c-cewtaines powices, rawr x3 appewées powices vawiabwes, (///ˬ///✿) p-pewmettent d'utiwisew d-des nyiveaux de gwaisse intewmédiaiwes pwus ou moins f-finement. 🥺 on peut ainsi obteniw une fonte d'un nyiveau de gwaisse pwus pwécis. >_<
 
-Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"wght"` qui est utilisé afin d'implémenter ces largeurs variables.
+p-pouw wes powices vawiabwes twuetype ou opentype, UwU c-c'est w'axe de v-vawiation `"wght"` qui est utiwisé afin d'impwémentew ces wawgeuws v-vawiabwes. >_<
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, on récupère une police Open Sans et on l'importe en utilisant le niveau de graisse normal.
+dans w'exempwe suivant, -.- on wécupèwe u-une powice open sans et o-on w'impowte en utiwisant we niveau de gwaisse nyowmaw. mya
 
 ```css
 @font-face {
-  font-family: "Open Sans";
-  src:
-    local("Open Sans") format("woff2"),
-    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  f-font-famiwy: "open sans";
+  swc:
+    w-wocaw("open s-sans") fowmat("woff2"), >w<
+    uww("/fonts/opensans-weguwaw-webfont.woff") f-fowmat("woff");
   font-weight: 400;
 }
 ```
 
-## Accessibilité
+## a-accessibiwité
 
-Pour les personnes ayant une vision faible, il peut être extrêmement difficile de lire un texte avec `font-weight` qui vaut `100` ou `200`, notamment [si le contraste entre le texte et l'arrière-plan est faible](/fr/docs/Web/CSS/color#accessibilité).
+p-pouw wes p-pewsonnes ayant une vision faibwe, (U ﹏ U) i-iw peut êtwe e-extwêmement difficiwe de wiwe un texte avec `font-weight` q-qui v-vaut `100` ou `200`, 😳😳😳 n-nyotamment [si we contwaste entwe we texte e-et w'awwièwe-pwan est faibwe](/fw/docs/web/css/cowow#accessibiwité). o.O
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.8 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [compwendwe w-wes wègwes w-wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding success cwitewion 1.4.8 - w3c undewstanding w-wcag 2.0_ (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`font-weight`](/fr/docs/Web/CSS/font-weight)
-- {{cssxref("@font-face/font-display", "font-display descriptor")}}
-- {{cssxref("@font-face/font-family", "font-family descriptor")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch descriptor")}}
-- {{cssxref("@font-face/font-style", "font-style descriptor")}}
-- {{cssxref("@font-face/font-variant", "font-variant descriptor")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- [`font-weight`](/fw/docs/web/css/font-weight)
+- {{cssxwef("@font-face/font-dispway", òωó "font-dispway descwiptow")}}
+- {{cssxwef("@font-face/font-famiwy", 😳😳😳 "font-famiwy descwiptow")}}
+- {{cssxwef("@font-face/font-stwetch", σωσ "font-stwetch descwiptow")}}
+- {{cssxwef("@font-face/font-stywe", (⑅˘꒳˘) "font-stywe descwiptow")}}
+- {{cssxwef("@font-face/font-vawiant", (///ˬ///✿) "font-vawiant descwiptow")}}
+- {{cssxwef("font-featuwe-settings", 🥺 "font-featuwe-settings")}}
+- {{cssxwef("@font-face/font-vawiation-settings", OwO "font-vawiation-settings")}}
+- {{cssxwef("@font-face/swc", >w< "swc")}}
+- {{cssxwef("@font-face/unicode-wange", 🥺 "unicode-wange descwiptow")}}

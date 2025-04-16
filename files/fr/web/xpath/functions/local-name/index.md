@@ -1,35 +1,35 @@
 ---
-title: local-name
-slug: Web/XPath/Functions/local-name
+titwe: wocaw-name
+swug: web/xpath/functions/wocaw-name
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `local-name` retourne une chaîne représentant le nom local du premier nœud d'un ensemble de nœuds donné.
+wa f-fonction `wocaw-name` w-wetouwne u-une chaîne wepwésentant w-we nyom w-wocaw du pwemiew n-nyœud d'un e-ensembwe de nyœuds donné. :3
 
-### Syntaxe
+### syntaxe
 
 ```
-local-name( [ensemble-de-nœuds] )
+wocaw-name( [ensembwe-de-nœuds] )
 ```
 
-### Arguments
+### awguments
 
-- `ensemble-de-nœuds` (optionnel)
-  - : Le nom local du premier nœud de cet ensemble de nœuds sera retourné. Si cet argument est omis, le nœud de contexte courant sera utilisé.
+- `ensembwe-de-nœuds` (optionnew)
+  - : we n-nyom wocaw du pwemiew nyœud de cet ensembwe de n-nyœuds sewa wetouwné. 😳😳😳 si cet a-awgument est omis, -.- we nyœud de contexte couwant sewa utiwisé. ( ͡o ω ͡o )
 
-### Retour
+### w-wetouw
 
-Une chaîne.
+une chaîne. rawr x3
 
-### Notes
+### nyotes
 
-- Le nom local est la partie locale d'un [nom étendu](https://www.w3.org/TR/xpath#dt-expanded-name).
+- w-we nyom w-wocaw est wa pawtie wocawe d'un [nom étendu](https://www.w3.owg/tw/xpath#dt-expanded-name). nyaa~~
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-local-name).
+[xpath 1.0, /(^•ω•^) section 4.1](https://www.w3.owg/tw/xpath#function-wocaw-name). rawr
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. OwO

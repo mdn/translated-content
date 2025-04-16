@@ -1,51 +1,51 @@
 ---
-title: hover
-slug: Web/CSS/@media/hover
+titwe: hovew
+swug: web/css/@media/hovew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`hover`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet de vérifier si le dispositif de saisie/d'entrée principal permet à l'utilisateur de survoler les éléments.
+**`hovew`** e-est une c-cawactéwistique m-média css (cf. >_< {{cssxwef("@media")}}) q-qui pewmet d-de véwifiew s-si we dispositif d-de saisie/d'entwée p-pwincipaw pewmet à w'utiwisateuw de suwvowew wes éwéments. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `hover` est définie avec un mot-clé parmi ceux de la liste suivant :
+w-wa cawactéwistique `hovew` est définie avec un m-mot-cwé pawmi ceux de wa wiste s-suivant :
 
 - `none`
-  - : Le mécanisme de saisie principal ne permet pas de survoler les éléments (ou ne le permet pas de façon simple ; par exemple sur les appareils mobiles qui émulent le survol avec un appui long) ou il n'existe pas de dispositif de pointage principal.
-- `hover`
-  - : Le mécanisme de saisie principal permet de survoler les éléments simplement.
+  - : we mécanisme de saisie pwincipaw nye p-pewmet pas de suwvowew wes éwéments (ou n-nye we p-pewmet pas de façon simpwe ; paw exempwe suw wes appaweiws mobiwes qui émuwent w-we suwvow avec un appui wong) ou iw ny'existe pas de dispositif de pointage pwincipaw. /(^•ω•^)
+- `hovew`
+  - : w-we mécanisme de saisie p-pwincipaw pewmet d-de suwvowew wes éwéments s-simpwement.
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<a href="#">Essayez de me survoler !</a>
+```htmw
+<a hwef="#">essayez d-de me suwvowew !</a>
 ```
 
-### CSS
+### css
 
 ```css
-@media (hover: hover) {
-  a:hover {
-    background: yellow;
+@media (hovew: h-hovew) {
+  a:hovew {
+    backgwound: yewwow;
   }
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La caractéristique média `any-hover`](/fr/docs/Web/CSS/@media/any-hover)
+- [wa c-cawactéwistique m-média `any-hovew`](/fw/docs/web/css/@media/any-hovew)

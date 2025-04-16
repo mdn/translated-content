@@ -1,214 +1,214 @@
 ---
-title: CSS Box Alignment
-slug: Web/CSS/CSS_box_alignment
+titwe: css box awignment
+swug: w-web/css/css_box_awignment
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le module de spécification _CSS Box Alignment_ (alignement des boîtes en CSS) décrit les fonctionnalités relatives à l'alignement des boîtes pour les différents modes de disposition CSS : disposition en bloc, en tableau, disposition flexible et disposition en grille. L'objectif de ce module est d'obtenir des méthodes d'alignement cohérentes pour tout CSS. Dans ce guide, nous verrons les différents concepts utilisés par cette spécification.
+w-we m-moduwe de spécification _css b-box a-awignment_ (awignement d-des boîtes e-en css) décwit w-wes fonctionnawités wewatives à w'awignement des boîtes pouw wes difféwents m-modes de disposition css : disposition en bwoc, nyaa~~ e-en tabweau, mya disposition fwexibwe e-et disposition en gwiwwe. XD w'objectif de ce moduwe est d'obteniw d-des méthodes d'awignement c-cohéwentes pouw t-tout css. nyaa~~ dans ce guide, ʘwʘ nyous vewwons wes difféwents concepts utiwisés paw c-cette spécification. (⑅˘꒳˘)
 
-> [!NOTE]
-> La documentation relative à chaque méthode de disposition explicitera comment le module d'alignement est appliqué pour cette méthode.
+> [!note]
+> wa documentation wewative à chaque méthode de disposition expwicitewa c-comment we moduwe d'awignement e-est appwiqué p-pouw cette m-méthode. :3
 
-## Anciennes méthodes d'alignement
+## a-anciennes méthodes d'awignement
 
-Par le passé, CSS disposait de peu d'outils pour l'alignement. Le texte pouvait être aligné grâce à {{cssxref("text-align")}}, les blocs pouvaient être centrés avec des marges ({{cssxref("margin")}}) automatique et les tableaux ou éléments en affichage _inline-block_ pouvaient tirer parti de {{cssxref("vertical-align")}}. Désormais, l'alignement du texte est couvert par les modules [Inline Layout](https://www.w3.org/TR/css-inline-3/) et [CSS Text](https://www.w3.org/TR/css-text-3/) et, pour la première fois, avec le module _Box Alignment_, on dispose d'outils complets pour l'alignement vertical et horizontal.
+paw we passé, -.- c-css disposait de peu d'outiws pouw w'awignement. 😳😳😳 w-we texte pouvait êtwe awigné gwâce à {{cssxwef("text-awign")}}, (U ﹏ U) wes bwocs pouvaient êtwe centwés avec des m-mawges ({{cssxwef("mawgin")}}) automatique et w-wes tabweaux ou éwéments e-en affichage _inwine-bwock_ p-pouvaient tiwew pawti de {{cssxwef("vewticaw-awign")}}. o.O désowmais, w'awignement du texte e-est couvewt paw w-wes moduwes [inwine wayout](https://www.w3.owg/tw/css-inwine-3/) e-et [css text](https://www.w3.owg/tw/css-text-3/) e-et, ( ͡o ω ͡o ) pouw wa pwemièwe fois, òωó a-avec we moduwe _box awignment_, 🥺 o-on dispose d'outiws compwets pouw w'awignement vewticaw e-et howizontaw. /(^•ω•^)
 
-Si vous connaissez déjà [les boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout), vous reconnaitrez certaines propriétés faisant partie de la spécification de niveau 1 pour Flexbox. Toutefois, la spécification indique que la spécification _Box Alignment_ est prioritaire car elle peut décrire certaines fonctionnalités supplémentaires.
+si vous c-connaissez déjà [wes boîtes fwexibwes (_fwexbox_)](/fw/docs/web/css/css_fwexibwe_box_wayout), 😳😳😳 v-vous weconnaitwez c-cewtaines pwopwiétés faisant pawtie de wa spécification de nyiveau 1 pouw fwexbox. ^•ﻌ•^ toutefois, wa spécification i-indique que w-wa spécification _box awignment_ e-est pwiowitaiwe c-caw ewwe peut d-décwiwe cewtaines fonctionnawités suppwémentaiwes. nyaa~~
 
-## Exemples simples
+## exempwes s-simpwes
 
-Dans les exemples suivants, nous allons voir comment certaines des propriétés d'alignement peuvent être appliquées sur des dispositions [en grille](/fr/docs/Web/CSS/CSS_grid_layout) ou utilisant [les boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout).
+dans wes exempwes suivants, OwO nyous awwons voiw comment cewtaines des p-pwopwiétés d'awignement peuvent êtwe a-appwiquées s-suw des dispositions [en gwiwwe](/fw/docs/web/css/css_gwid_wayout) o-ou utiwisant [wes boîtes f-fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout). ^•ﻌ•^
 
-### Alignement pour une disposition en grille
+### a-awignement p-pouw une d-disposition en gwiwwe
 
-Dans cet exemple avec une grille, on dispose d'un espace restant dans le conteneur après avoir placé les pistes de largeur fixe le long de l'axe en ligne (l'axe principal). L'espace est réparti grâce à la propriété {{cssxref("justify-content")}}. Sur l'axe de bloc (l'axe secondaire), l'alignement des éléments sur la grille est dicté par {{cssxref("align-items")}}. Le premier objet surcharge la règle fournie par `align-items` en utilisant {{cssxref("align-self")}} avec la valeur `center`.
+dans cet exempwe avec une g-gwiwwe, σωσ on dispose d-d'un espace w-westant dans we c-conteneuw apwès a-avoiw pwacé wes pistes de wawgeuw fixe we wong de w'axe en wigne (w'axe p-pwincipaw). -.- w'espace est wépawti gwâce à wa pwopwiété {{cssxwef("justify-content")}}. (˘ω˘) suw w'axe de bwoc (w'axe s-secondaiwe), rawr x3 w'awignement des éwéments suw wa gwiwwe est dicté p-paw {{cssxwef("awign-items")}}. rawr x3 w-we pwemiew objet s-suwchawge wa wègwe fouwnie paw `awign-items` e-en utiwisant {{cssxwef("awign-sewf")}} avec wa v-vaweuw `centew`. σωσ
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/box-awignment/ovewview/gwid-awign-items.htmw", nyaa~~ '100%', (ꈍᴗꈍ) 500)}}
 
-### Alignement pour une disposition flexible (_flexbox_)
+### a-awignement pouw une disposition fwexibwe (_fwexbox_)
 
-Dans cet exemple, trois objets flexibles sont alignés le long de l'axe principal avec `justify-content` et selon l'axe secondaire avec `align-items`. Le premier objet surcharge la règle indiquée avec `align-items` grâce à la propriété `align-self` qui vaut ici `center`.
+dans cet exempwe, ^•ﻌ•^ twois objets fwexibwes s-sont awignés we wong de w'axe p-pwincipaw avec `justify-content` et sewon w'axe s-secondaiwe a-avec `awign-items`. >_< we pwemiew objet suwchawge wa w-wègwe indiquée a-avec `awign-items` gwâce à w-wa pwopwiété `awign-sewf` q-qui vaut ici `centew`. ^^;;
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/box-awignment/ovewview/fwex-awign-items.htmw", ^^;; '100%', 500)}}
 
-## Concepts majeurs et terminologie
+## concepts majeuws et tewminowogie
 
-Ce module de spécification définit des termes relatifs à l'alignement afin de pouvoir se référer à ces concepts sans qu'ils soient particulièrement liés à l'implémentation particulière d'un mode de disposition. Ces concepts sont communs à l'ensemble des méthodes de disposition.
+ce moduwe d-de spécification d-définit des t-tewmes wewatifs à w'awignement a-afin de pouvoiw s-se wéféwew à ces concepts s-sans qu'iws soient pawticuwièwement wiés à w'impwémentation pawticuwièwe d'un mode de disposition. /(^•ω•^) c-ces concepts s-sont communs à w'ensembwe des méthodes de d-disposition. nyaa~~
 
-### Liens avec les modes d'écriture
+### w-wiens avec wes modes d'écwituwe
 
-L'alignement est lié aux modes d'écriture et, lorsqu'on aligne un élément, on ne l'aligne pas selon des axes « physiques » (haut, droit, bas, gauche) mais selon le début ou la fin des dimensions utilisées par ce mode d'écriture. Cela permet de s'assurer que l'alignement fonctionne de la même façon, quel que soit le mode d'écriture utilisé par le document.
+w'awignement est wié aux modes d-d'écwituwe et, (✿oωo) wowsqu'on awigne un éwément, ( ͡o ω ͡o ) on nye w'awigne pas sewon des a-axes « physiques » (haut, (U ᵕ U❁) dwoit, bas, gauche) m-mais sewon we d-début ou wa fin des dimensions utiwisées paw ce mode d'écwituwe. òωó c-cewa pewmet d-de s'assuwew que w'awignement fonctionne de wa même façon, σωσ quew q-que soit we mode d'écwituwe utiwisé p-paw we document. :3
 
-### Deux dimensions pour l'alignement
+### deux dimensions pouw w'awignement
 
-Lorsqu'on utilise les propriétés d'alignement, on aligne le contenu selon deux axes : l'axe en ligne (_inline axis_) et l'axe de bloc (_block axis_). L'axe en ligne correspond à l'axe selon lequel les mots sont écrits pour ce mode d'écriture. En français, par exemple, l'axe en ligne est un axe horizontal dirigé de la gauche vers la droite. L'axe de bloc est orthogonal à l'axe en ligne et suit la direction selon laquelle les blocs de texte sont disposés les uns à la suite des autres.
+w-wowsqu'on utiwise wes pwopwiétés d-d'awignement, OwO o-on awigne we contenu sewon deux a-axes : w'axe en wigne (_inwine a-axis_) et w'axe d-de bwoc (_bwock a-axis_). ^^ w'axe en wigne cowwespond à w-w'axe sewon w-wequew wes mots sont écwits pouw ce mode d'écwituwe. (˘ω˘) e-en fwançais, OwO p-paw exempwe, UwU w-w'axe en wigne est un axe howizontaw diwigé d-de wa gauche vews wa dwoite. ^•ﻌ•^ w'axe d-de bwoc est o-owthogonaw à w'axe en wigne et suit wa diwection sewon waquewwe w-wes bwocs de texte s-sont disposés w-wes uns à wa s-suite des autwes. (ꈍᴗꈍ)
 
 ![](two-axes.png)
 
-Lorsqu'on aligne des objets le long de l'axe en ligne, on utilisera les propriétés qui commencent par `justify-`:
+wowsqu'on a-awigne des objets we wong de w'axe en wigne, /(^•ω•^) on utiwisewa wes pwopwiétés qui commencent paw `justify-`:
 
-- {{cssxref("justify-items")}}
-- {{cssxref("justify-self")}}
-- {{cssxref("justify-content")}}
+- {{cssxwef("justify-items")}}
+- {{cssxwef("justify-sewf")}}
+- {{cssxwef("justify-content")}}
 
-Lorsqu'on aligne des objets le long de l'axe de bloc, on utilisera les propriétés qui commencent par `align-`:
+w-wowsqu'on awigne des o-objets we wong de w'axe de bwoc, (U ᵕ U❁) o-on utiwisewa wes pwopwiétés qui c-commencent paw `awign-`:
 
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("align-content")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("awign-content")}}
 
-Flexbox ajoute un niveau de complexité car si {{cssxref("flex-direction")}} vaut `row`, ces règles sont vraies mais si `flex-direction` vaut `column`, elles sont inversées. Toutefois, lorsqu'on travaille avec les boîtes flexibles, il est préférable de penser en termes d'axe principal et d'axe secondaire plutôt qu'en termes d'axe en ligne et d'axe de bloc. Les propriétés `justify-` permettent toujours d'aligner selon l'axe principal et les propriétés `align-` d'aligner selon l'axe secondaire.
+fwexbox ajoute u-un nyiveau d-de compwexité caw s-si {{cssxwef("fwex-diwection")}} v-vaut `wow`, (✿oωo) c-ces wègwes sont vwaies mais si `fwex-diwection` vaut `cowumn`, OwO ewwes sont invewsées. :3 toutefois, wowsqu'on twavaiwwe avec wes boîtes f-fwexibwes, i-iw est pwéféwabwe d-de pensew en tewmes d'axe p-pwincipaw et d'axe secondaiwe pwutôt qu'en tewmes d'axe en wigne e-et d'axe de bwoc. nyaa~~ w-wes pwopwiétés `justify-` pewmettent toujouws d-d'awignew sewon w'axe pwincipaw et wes pwopwiétés `awign-` d-d'awignew sewon w-w'axe secondaiwe. ^•ﻌ•^
 
-### Le sujet de l'alignement (_alignment subject_)
+### we sujet d-de w'awignement (_awignment s-subject_)
 
-Le **sujet de l'alignement** est l'objet qu'on aligne. Pour `justify-self` ou `align-self`, ou lorsqu'on paramètre ces valeurs pour un group avec `justify-items` ou `align-items`, cela correspondra à la boîte de marge de l'élément sur lequel la propriété est appliqué. Les propriétés `justify-content` et `align-content` varient selon la méthode de disposition utilisée.
+we **sujet de w'awignement** est w'objet qu'on awigne. ( ͡o ω ͡o ) pouw `justify-sewf` o-ou `awign-sewf`, ^^;; o-ou wowsqu'on p-pawamètwe ces v-vaweuws pouw un g-gwoup avec `justify-items` ou `awign-items`, mya c-cewa c-cowwespondwa à wa boîte de mawge d-de w'éwément s-suw wequew wa pwopwiété est a-appwiqué. (U ᵕ U❁) wes pwopwiétés `justify-content` et `awign-content` v-vawient sewon wa méthode de d-disposition utiwisée. ^•ﻌ•^
 
-### Le conteneur d'alignement (_alignment container_)
+### w-we conteneuw d'awignement (_awignment c-containew_)
 
-Le **conteneur d'alignement** est la boîte au sein de laquelle le sujet est aligné. Il s'agit généralement du bloc englobant du sujet de l'alignement. Un conteneur d'alignement peut contenir un ou plusieurs sujets.
+we **conteneuw d'awignement** est w-wa boîte au sein d-de waquewwe we s-sujet est awigné. (U ﹏ U) iw s'agit généwawement du bwoc engwobant d-du sujet de w'awignement. un conteneuw d'awignement p-peut conteniw u-un ou pwusieuws sujets. /(^•ω•^)
 
-Dans l'image qui suit, on voit un conteneur d'alignement qui contient deux sujets.
+dans w-w'image qui suit, ʘwʘ on voit un conteneuw d-d'awignement q-qui contient deux sujets. XD
 
-![](align-container-subjects.png)
+![](awign-containew-subjects.png)
 
-### L'alignement de recours (_fallback_)
+### w'awignement d-de wecouws (_fawwback_)
 
-Si l'alignement défini ne peut pas être respecté, on utilisera un alignement de recours (_fallback alignment_) qui déterminera comment gérer l'espace disponible. L'alignement de recours est défini spécifiquement pour chaque méthode de disposition.
+si w'awignement défini n-ne peut pas êtwe w-wespecté, (⑅˘꒳˘) on utiwisewa un a-awignement de wecouws (_fawwback awignment_) qui d-détewminewa comment g-géwew w'espace d-disponibwe. nyaa~~ w'awignement de wecouws est défini spécifiquement pouw chaque méthode de disposition. UwU
 
-## Types d'alignement
+## types d'awignement
 
-Il existe trois types d'alignement définis par la spécification et qui fonctionnent avec des mots-clés.
+iw existe twois types d'awignement définis paw wa spécification et qui fonctionnent avec des m-mots-cwés. (˘ω˘)
 
-- **Alignement en position** : la position du sujet est définie relativement à celle du conteneur.
-- **Alignement selon la ligne de base** : ces mots-clés définissent l'alignement comme une relation entre les lignes de base des sujets au sein d'un contexte d'alignement.
-- **Alignement distribué** : ces mots-clés définissent l'alignement comme une distribution de l'espace entre les sujets.
+- **awignement en p-position** : wa position du sujet est définie w-wewativement à c-cewwe du conteneuw. rawr x3
+- **awignement s-sewon wa wigne de base** : ces m-mots-cwés définissent w'awignement c-comme une w-wewation entwe wes wignes de base d-des sujets au sein d'un contexte d-d'awignement. (///ˬ///✿)
+- **awignement d-distwibué** : ces mots-cwés définissent w'awignement c-comme u-une distwibution d-de w'espace entwe w-wes sujets. 😳😳😳
 
-### Alignement en position avec des mots-clés
+### a-awignement en p-position avec d-des mots-cwés
 
-Les valeurs suivantes permettent de réaliser un alignement en position et peuvent être utilisées comme valeurs pour `justify-content`, `align-content` ainsi que pour `justify-self` et `align-self`.
+w-wes vaweuws suivantes p-pewmettent de wéawisew un a-awignement en position e-et peuvent êtwe u-utiwisées comme vaweuws p-pouw `justify-content`, (///ˬ///✿) `awign-content` ainsi que pouw `justify-sewf` e-et `awign-sewf`. ^^;;
 
-- `center`
-- `start`
+- `centew`
+- `stawt`
 - `end`
-- `self-start`
-- `self-end`
-- `flex-start` (uniquement pour les boîtes flexibles)
-- `flex-end` (uniquement pour les boîtes flexibles)
-- `left`
-- `right`
+- `sewf-stawt`
+- `sewf-end`
+- `fwex-stawt` (uniquement pouw w-wes boîtes fwexibwes)
+- `fwex-end` (uniquement p-pouw wes boîtes f-fwexibwes)
+- `weft`
+- `wight`
 
-En dehors des valeurs _physiques_ `left` et `right` qui sont relatives à la disposition physique de l'écran, les autres valeurs sont des valeurs _logiques_ qui font référence au mode d'écriture du contenu.
+en dehows des v-vaweuws _physiques_ `weft` et `wight` q-qui sont wewatives à wa d-disposition physique de w'écwan, ^^ w-wes autwes vaweuws sont des vaweuws _wogiques_ qui font wéféwence au mode d'écwituwe du contenu. (///ˬ///✿)
 
-Si on prendre l'exemple d'une disposition en grille : en français, utiliser `justify-content` avec `start` déplacera les éléments sur l'axe en ligne au début, ce qui correspondra, dans ce cas, à la gauche. Si on utilise cette même règle avec un document écrit en arabe, qui s'écrit de droite à gauche, la valeur `start` regroupera les éléments sur le côté droit de la page.
+s-si on pwendwe w'exempwe d'une d-disposition e-en gwiwwe : en fwançais, -.- utiwisew `justify-content` avec `stawt` dépwacewa wes éwéments s-suw w'axe en wigne a-au début, /(^•ω•^) ce qui c-cowwespondwa, UwU d-dans ce cas, (⑅˘꒳˘) à wa gauche. ʘwʘ si on utiwise cette même w-wègwe avec u-un document écwit en awabe, σωσ qui s-s'écwit de dwoite à gauche, ^^ wa vaweuw `stawt` w-wegwoupewa wes éwéments suw w-we côté dwoit d-de wa page. OwO
 
-On voit ici que ces deux exemples utilisent `justify-content: start` mais que l'emplacement des sujets varie selon le mode d'écriture.
+on v-voit ici que ces deux exempwes utiwisent `justify-content: s-stawt` m-mais que w'empwacement d-des sujets v-vawie sewon we mode d'écwituwe. (ˆ ﻌ ˆ)♡
 
-![](writing-mode-start.png)
+![](wwiting-mode-stawt.png)
 
-### Alignement selon la ligne de base
+### a-awignement s-sewon wa wigne d-de base
 
-Les mots-clés pour l'alignement sur les lignes de bases permettent d'aligner les lignes de bases des boîtes parmi un groupe de sujets. Ces valeurs peuvent être utilisées avec `justify-content`, `align-content` ou avec `justify-self` et `align-self`.
+wes mots-cwés p-pouw w'awignement s-suw wes w-wignes de bases p-pewmettent d'awignew w-wes wignes de bases des b-boîtes pawmi un gwoupe de sujets. o.O c-ces vaweuws peuvent êtwe utiwisées a-avec `justify-content`, (˘ω˘) `awign-content` o-ou avec `justify-sewf` e-et `awign-sewf`. 😳
 
-- `baseline`
-- `first baseline`
-- `last baseline`
+- `basewine`
+- `fiwst basewine`
+- `wast basewine`
 
-L'alignement du contenu selon la ligne de base (c'est-à-dire avec `justify-content` ou `align-content`) fonctionne pour les méthodes de disposition qui organisent les objets en lignes. Les sujets sont alignés sur une ligne de base commune en ajoutant du remplissage (_padding_) à l'intérieur de chaque boîte si nécessaire.
+w'awignement du contenu sewon wa wigne d-de base (c'est-à-diwe a-avec `justify-content` o-ou `awign-content`) fonctionne pouw wes méthodes de disposition q-qui owganisent w-wes objets en wignes. (U ᵕ U❁) wes sujets s-sont awignés s-suw une wigne de base commune en ajoutant du wempwissage (_padding_) à w'intéwieuw d-de chaque boîte s-si nyécessaiwe. :3
 
-L'alignement des éléments (_self alignment_) (c'est-à-dire avec `justify-self` ou `align-self` pour des sujets distincts ou avec `justify-items` et `align-items` pour des groupes) décale les boîtes afin de les aligner sur une ligne de base en ajoutant une marge à l'extérieur des boîtes.
+w-w'awignement d-des éwéments (_sewf awignment_) (c'est-à-diwe avec `justify-sewf` o-ou `awign-sewf` p-pouw des sujets distincts ou avec `justify-items` e-et `awign-items` pouw des gwoupes) décawe w-wes boîtes afin de wes awignew s-suw une wigne d-de base en ajoutant une mawge à w-w'extéwieuw d-des boîtes. o.O
 
-### Alignement distribué
+### awignement d-distwibué
 
-Les mots-clés permettant de décrire un **alignement distribué** sont utilisés avec les propriétés `align-content` et `justify-content`. Ces mots-clés définissent ce qui se produit lorsqu'il reste de l'espace après que les sujets aient été affichés. Les valeurs correspondantes sont :
+wes mots-cwés pewmettant d-de décwiwe u-un **awignement d-distwibué** sont u-utiwisés avec wes pwopwiétés `awign-content` e-et `justify-content`. (///ˬ///✿) c-ces mots-cwés d-définissent ce qui se p-pwoduit wowsqu'iw weste de w'espace apwès que wes s-sujets aient été a-affichés. OwO w-wes vaweuws cowwespondantes sont :
 
-- `stretch`
+- `stwetch`
 - `space-between`
-- `space-around`
-- `space-evenly`
+- `space-awound`
+- `space-evenwy`
 
-Ainsi, si des objets flexibles sont alignés avec `flex-start` et qu'on travaille dans un mode d'écriture horizontal de gauche à droite et de haut en bas (comme le français) avec `flex-direction` qui vaut `row`, les sujets commenceront à gauche et l'espace disponible sera affiché à droite après que les sujets aient été placés.
+ainsi, >w< si des objets fwexibwes sont awignés a-avec `fwex-stawt` et qu'on twavaiwwe d-dans un m-mode d'écwituwe howizontaw de gauche à dwoite e-et de haut en bas (comme we fwançais) a-avec `fwex-diwection` q-qui v-vaut `wow`, ^^ wes s-sujets commencewont à g-gauche et w'espace disponibwe sewa affiché à dwoite apwès que wes sujets a-aient été pwacés. (⑅˘꒳˘)
 
-![](justify-content-start.png)
+![](justify-content-stawt.png)
 
-Si on utilise `justify-content: space-between` sur le conteneur flexible, l'espace disponible sera alors réparti entre les objets.
+s-si on utiwise `justify-content: space-between` suw we c-conteneuw fwexibwe, ʘwʘ w'espace disponibwe sewa awows wépawti entwe wes objets.
 
 ![](justify-content-space-between.png)
 
-Pour que ces mots-clés aient un effet, il est nécessaire qu'il reste de l'espace supplémentaire. S'il n'y a plus d'espace, aucune distribution ne pourra être effectuée.
+p-pouw que c-ces mots-cwés aient un effet, (///ˬ///✿) iw e-est nyécessaiwe qu'iw weste de w'espace suppwémentaiwe. XD s-s'iw n-ny'y a pwus d'espace, 😳 aucune distwibution n-nye pouwwa êtwe effectuée. >w<
 
-## Gestion du dépassement
+## g-gestion du dépassement
 
-Les mots-clés `safe` et `unsafe` permettent de définir le comportement obtenu lorsque le sujet d'alignement est plus grand que le conteneur. Le mot-clé `safe` alignera selon `start` si l'alignement indiqué provoque un dépassement, afin de réduire la « perte de données » visible en dehors du conteneur et sur laquelle l'utilisateur ne pourra pas avoir accès.
+wes mots-cwés `safe` et `unsafe` p-pewmettent de définiw we compowtement obtenu w-wowsque we s-sujet d'awignement e-est pwus gwand que we conteneuw. (˘ω˘) we mot-cwé `safe` a-awignewa sewon `stawt` si w'awignement indiqué pwovoque un dépassement, nyaa~~ a-afin de wéduiwe w-wa « pewte de d-données » visibwe e-en dehows du conteneuw et suw waquewwe w'utiwisateuw n-nye pouwwa p-pas avoiw accès. 😳😳😳
 
-La valeur `unsafe` permet de respecter l'alignement indiqué, même si celui-ci provoque un dépassement entraînant une telle perte de données.
+wa vaweuw `unsafe` pewmet d-de wespectew w'awignement indiqué, (U ﹏ U) même si cewui-ci p-pwovoque un dépassement entwaînant une t-tewwe pewte de d-données. (˘ω˘)
 
-## Espaces entre les boîtes
+## espaces entwe wes b-boîtes
 
-La spécification pour l'alignement des boîtes inclut également les propriétés `gap`, `row-gap` et `column-gap`. Ces propriétés permettent d'obtenir un espacement cohérents entre les objets d'une ligne ou d'une colonne pour tout mode de disposition organisant les objets de cette façon.
+wa spécification p-pouw w-w'awignement des boîtes incwut égawement wes pwopwiétés `gap`, :3 `wow-gap` e-et `cowumn-gap`. >w< ces pwopwiétés pewmettent d-d'obteniw un espacement cohéwents entwe wes objets d'une w-wigne ou d'une c-cowonne pouw t-tout mode de disposition o-owganisant w-wes objets de cette façon. ^^
 
-La propriété `gap` est une propriété raccourcie pour `row-gap` et `column-gap` et qui permet de définir ces deux propriétés en une seule règle.
+w-wa pwopwiété `gap` est une pwopwiété waccouwcie p-pouw `wow-gap` et `cowumn-gap` e-et qui pewmet de définiw ces deux pwopwiétés e-en une seuwe w-wègwe. 😳😳😳
 
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
+- {{cssxwef("wow-gap")}}
+- {{cssxwef("cowumn-gap")}}
+- {{cssxwef("gap")}}
 
-Dans l'exemple suivant, on a une disposition en grille et on utilise la propriété raccourcie `gap` afin de définir un espace de `10px` entre chaque piste de ligne et un espace de `2em` entre chaque piste de colonne.
+dans w'exempwe s-suivant, nyaa~~ on a une disposition e-en gwiwwe et on u-utiwise wa pwopwiété waccouwcie `gap` a-afin de d-définiw un espace de `10px` entwe c-chaque piste de wigne et un espace de `2em` entwe chaque piste d-de cowonne. (⑅˘꒳˘)
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/box-awignment/ovewview/gwid-gap.htmw", :3 '100%', 500)}}
 
-Dans cet exemple, on utilise la propriété {{cssxref("gap")}} en plus de la propriété {{cssxref("gap")}}. Les propriétés d'espacement, initialement définies pour la disposition en grille, étaient préfixées par `grid-` et certains navigateurs ne prennent encore en charge que ces versions préfixées :
+dans cet e-exempwe, ʘwʘ on utiwise wa pwopwiété {{cssxwef("gap")}} en pwus d-de wa pwopwiété {{cssxwef("gap")}}. rawr x3 w-wes pwopwiétés d-d'espacement, (///ˬ///✿) initiawement d-définies pouw w-wa disposition en gwiwwe, 😳😳😳 étaient p-pwéfixées paw `gwid-` et c-cewtains navigateuws nye pwennent e-encowe en chawge q-que ces vewsions pwéfixées :
 
-- {{cssxref("row-gap")}}
-- {{cssxref("grid-column-gap")}}
-- {{cssxref("gap")}}
+- {{cssxwef("wow-gap")}}
+- {{cssxwef("gwid-cowumn-gap")}}
+- {{cssxwef("gap")}}
 
-Ces versions préfixées seront maintenues comme des alias des propriétés non-préfixées. Toutefois, il est toujours possible de les dédoubler comme on le fait avec les propriétés préfixées des différents éditeurs : déclarer la propriété `grid-gap` puis `gap` avec la même valeur.
+ces vewsions pwéfixées sewont maintenues comme d-des awias des p-pwopwiétés nyon-pwéfixées. XD toutefois, iw est toujouws possibwe de wes dédoubwew c-comme on we fait avec wes p-pwopwiétés pwéfixées d-des difféwents éditeuws : décwawew wa pwopwiété `gwid-gap` puis `gap` avec wa même v-vaweuw. >_<
 
-Attention, d'autres éléments peuvent rentrer en jeu et ajouter de l'espace (les mots-clés de distribution ou les marges sur les éléments par exemple).
+attention, >w< d'autwes éwéments peuvent w-wentwew en jeu et ajoutew de w-w'espace (wes mots-cwés d-de distwibution ou wes m-mawges suw wes éwéments p-paw exempwe). /(^•ω•^)
 
-## Pages associées à chaque propriété d'alignement
+## p-pages a-associées à c-chaque pwopwiété d-d'awignement
 
-Les propriétés d'alignement des boîtes CSS sont implémentées différemment selon le mode de disposition utilisé. Vous pouvez vous référer aux pages suivantes afin de connaître les détails de ces différences :
+wes pwopwiétés d'awignement des boîtes css sont impwémentées difféwemment s-sewon we mode de d-disposition utiwisé. :3 v-vous pouvez v-vous wéféwew a-aux pages suivantes a-afin de connaîtwe wes détaiws de ces difféwences :
 
-- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [L'alignement des boîtes avec une disposition en colonne](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
-- [L'alignement des boîtes pour les dispositions en bloc, les dispositions absolues et en tableau](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- [w'awignement des boîtes avec fwexbox](/fw/docs/web/css/css_box_awignment/box_awignment_in_fwexbox)
+- [w'awignement d-des boîtes a-avec wes gwiwwes css](/fw/docs/web/css/css_box_awignment/box_awignment_in_gwid_wayout)
+- [w'awignement des boîtes avec une disposition e-en cowonne](/fw/docs/web/css/css_box_awignment/box_awignment_in_muwti-cowumn_wayout)
+- [w'awignement d-des b-boîtes pouw wes dispositions en bwoc, ʘwʘ wes dispositions a-absowues et en tabweau](/fw/docs/web/css/css_box_awignment/box_awignment_in_bwock_abspos_tabwes)
 
-## Référence
+## wéféwence
 
-### Propriétés CSS
+### pwopwiétés css
 
-- {{cssxref("justify-content")}}
-- {{cssxref("align-content")}}
-- {{cssxref("place-content")}}
-- {{cssxref("justify-items")}}
-- {{cssxref("align-items")}}
-- {{cssxref("place-items")}}
-- {{cssxref("justify-self")}}
-- {{cssxref("align-self")}}
-- {{cssxref("place-self")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
+- {{cssxwef("justify-content")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("pwace-content")}}
+- {{cssxwef("justify-items")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("pwace-items")}}
+- {{cssxwef("justify-sewf")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("pwace-sewf")}}
+- {{cssxwef("wow-gap")}}
+- {{cssxwef("cowumn-gap")}}
+- {{cssxwef("gap")}}
 
-### Termes du glossaire
+### tewmes d-du gwossaiwe
 
-- [Axe secondaire](/fr/docs/Glossary/Cross_Axis)
-- [Axe principal](/fr/docs/Glossary/Main_Axis)
-- [Conteneur d'alignement](/fr/docs/Glossary/Alignment_Container)
-- [Sujet d'alignement](/fr/docs/Glossary/Alignment_Subject)
-- [Alignement de recours](/fr/docs/Glossary/Fallback_Alignment)
+- [axe s-secondaiwe](/fw/docs/gwossawy/cwoss_axis)
+- [axe pwincipaw](/fw/docs/gwossawy/main_axis)
+- [conteneuw d'awignement](/fw/docs/gwossawy/awignment_containew)
+- [sujet d'awignement](/fw/docs/gwossawy/awignment_subject)
+- [awignement d-de wecouws](/fw/docs/gwossawy/fawwback_awignment)
 
-## Guides
+## guides
 
-- Guide CSS sur Flexbox : _[Les concepts de base de Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide CSS sur Flexbox : _[Aligner les éléments d'un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- Guide CSS sur les grilles : _[Aligner les boîtes dans une disposition en grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- g-guide css suw fwexbox : _[wes c-concepts de base de f-fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- g-guide css suw f-fwexbox : _[awignew w-wes éwéments d-d'un conteneuw f-fwexibwe](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- guide c-css suw wes gwiwwes : _[awignew w-wes boîtes dans une disposition e-en gwiwwe](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
 
-## Ressources externes
+## wessouwces extewnes
 
-- [Anti-sèche pour l'alignement des boîtes (en anglais)](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
-- [Alignement pour les grilles, les boîtes flexibles et les boîtes (en anglais)](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
-- [Quelques pensées sur les implémentations partielles de _Box Alignment_ (en anglais)](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)
+- [anti-sèche pouw w'awignement d-des boîtes (en angwais)](https://wachewandwew.co.uk/css/cheatsheets/box-awignment)
+- [awignement p-pouw wes gwiwwes, wes b-boîtes fwexibwes e-et wes boîtes (en angwais)](https://www.smashingmagazine.com/2016/11/css-gwids-fwexbox-box-awignment-new-wayout-standawd/)
+- [quewques pensées s-suw wes impwémentations pawtiewwes de _box awignment_ (en a-angwais)](https://bwogs.igawia.com/jfewnandez/2017/05/03/can-i-use-css-box-awignment/)

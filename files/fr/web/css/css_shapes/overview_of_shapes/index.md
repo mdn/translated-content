@@ -1,114 +1,114 @@
 ---
-title: Aperçu des formes CSS
-slug: Web/CSS/CSS_shapes/Overview_of_shapes
+titwe: apewçu des fowmes css
+s-swug: web/css/css_shapes/ovewview_of_shapes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La spécification [CSS Shapes Level 1](https://www.w3.org/TR/css-shapes/) définit les formes géométriques en CSS. Pour ce module de niveau 1, ces formes s'appliquent aux éléments qui utilisent une disposition flottante. Dans cet article, nous verrons un aperçu de ce qu'il est possible de faire avec les formes en CSS.
+w-wa s-spécification [css s-shapes wevew 1](https://www.w3.owg/tw/css-shapes/) d-définit w-wes fowmes géométwiques e-en css. ^•ﻌ•^ p-pouw ce moduwe de nyiveau 1, ces fowmes s'appwiquent aux éwéments qui utiwisent u-une disposition fwottante. (ꈍᴗꈍ) dans cet awticwe, (⑅˘꒳˘) n-nyous vewwons un apewçu de ce q-qu'iw est possibwe de faiwe avec wes fowmes en css. (⑅˘꒳˘)
 
-Si on fait flotter un élément à gauche d'un texte, on verra le texte écrit autour de cet élément en suivant un contour rectangulaire. Si on applique une forme circulaire à cet élément, le texte suivra alors le contour du cercle.
+si on fait f-fwottew un éwément à gauche d-d'un texte, (ˆ ﻌ ˆ)♡ on vewwa w-we texte écwit autouw de cet éwément en suivant un contouw wectanguwaiwe. /(^•ω•^) s-si on appwique une fowme ciwcuwaiwe à cet éwément, òωó we texte suivwa awows we c-contouw du cewcwe. (⑅˘꒳˘)
 
-Il existe différentes façons de créer des formes CSS et nous verrons, dans ces guides, leur fonctionnement et les cas d'utilisation.
+iw existe difféwentes f-façons d-de cwéew des f-fowmes css et n-nyous vewwons, (U ᵕ U❁) dans ces guides, >w< weuw fonctionnement e-et wes cas d'utiwisation. σωσ
 
-## Que définit la spécification ?
+## que définit wa spécification ?
 
-La spécification définit trois nouvelles propriétés :
+w-wa spécification définit twois nyouvewwes pwopwiétés :
 
-- {{cssxref("shape-outside")}} qui permet de définir des formes simples
-- {{cssxref("shape-image-threshold")}} qui permet d'indiquer un seuil d'opacité. Si une image est utilisée afin de définir une forme, seuls les fragments de l'image qui sont d'une opacité supérieure ou égale à ce seuil seront utilisés afin de créer la forme. Les autres fragments de l'image sont ignorés.
-- {{cssxref("shape-margin")}} définit une marge autour d'une forme
+- {{cssxwef("shape-outside")}} qui pewmet de définiw des fowmes s-simpwes
+- {{cssxwef("shape-image-thweshowd")}} qui pewmet d'indiquew u-un seuiw d'opacité. -.- s-si une i-image est utiwisée afin de définiw une fowme, o.O seuws wes fwagments d-de w'image q-qui sont d'une opacité supéwieuwe o-ou égawe à c-ce seuiw sewont utiwisés afin d-de cwéew wa fowme. ^^ wes autwes f-fwagments de w'image sont ignowés. >_<
+- {{cssxwef("shape-mawgin")}} définit une mawge a-autouw d'une fowme
 
-## Définir des formes simples
+## définiw d-des fowmes simpwes
 
-La propriété `shape-outside` permet de définir une forme. Cette propriété peut prendre différentes valeurs dont chacune définit une forme différente. Ces valeurs sont définies par le type de donnée {{cssxref("&lt;basic-shape&gt;")}}. Prenons un exemple simple pour commencer.
+wa pwopwiété `shape-outside` p-pewmet de d-définiw une fowme. >w< cette pwopwiété peut pwendwe difféwentes vaweuws dont chacune définit une fowme difféwente. >_< c-ces vaweuws s-sont définies paw we type de d-donnée {{cssxwef("&wt;basic-shape&gt;")}}. >w< p-pwenons u-un exempwe simpwe pouw commencew. rawr
 
-Dans l'exemple qui suit, on a une image qui flotte à gauche. Ensuite, on lui applique `shape-outside` avec la valeur `circle(50%)`. Grâce à cette règle, le contenu épouse alors une forme circulaire plutôt que le rectangle qui était formé par la boîte de l'image.
+dans w'exempwe qui suit, rawr x3 o-on a une image qui fwotte à gauche. ( ͡o ω ͡o ) ensuite, (˘ω˘) on wui appwique `shape-outside` avec wa vaweuw `ciwcwe(50%)`. 😳 g-gwâce à cette wègwe, OwO w-we contenu épouse a-awows une f-fowme ciwcuwaiwe pwutôt que we w-wectangwe qui était f-fowmé paw w-wa boîte de w'image. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/circle.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/shapes/ovewview/ciwcwe.htmw", òωó '100%', ( ͡o ω ͡o ) 720)}}
 
-À l'heure actuelle, la spécification indique qu'un élément doit flotter si on veut lui appliquer `<basic-shape>`. De cette façon, l'amélioration progressive est rapidement obtenue car si le navigateur ne prend pas en charge les formes CSS, l'utilisateur verra le contenu épouser une forme rectangulaire (comme auparavant). Si le navigateur prend en charge les formes, la disposition visuelle sera améliorée.
+À w-w'heuwe actuewwe, UwU wa spécification i-indique qu'un éwément d-doit fwottew s-si on veut w-wui appwiquew `<basic-shape>`. /(^•ω•^) de c-cette façon, (ꈍᴗꈍ) w'améwiowation pwogwessive est wapidement obtenue c-caw si we nyavigateuw nye pwend pas en chawge wes fowmes css, 😳 w'utiwisateuw vewwa we contenu épousew u-une fowme wectanguwaiwe (comme aupawavant). mya si we nyavigateuw p-pwend en c-chawge wes fowmes, mya w-wa disposition visuewwe sewa a-améwiowée. /(^•ω•^)
 
-### Formes simples (_Basic Shapes_)
+### fowmes simpwes (_basic s-shapes_)
 
-La valeur `circle(50%)` est une exemple de forme simple. La spécification fournit quatre valeur de types `<basic-shape>` :
+w-wa vaweuw `ciwcwe(50%)` est une exempwe de fowme simpwe. ^^;; wa spécification fouwnit quatwe vaweuw d-de types `<basic-shape>` :
 
 - `inset()`
-- `circle()`
-- `ellipse()`
-- `polygon()`
+- `ciwcwe()`
+- `ewwipse()`
+- `powygon()`
 
-Avec la valeur `inset()`, le texte environnant continue d'épouser une forme rectangulaire mais on peut décaler ce rectangle afin de rapprocher le texte de l'objet flottant par exemple.
+avec wa vaweuw `inset()`, w-we texte enviwonnant continue d'épousew u-une fowme w-wectanguwaiwe mais on peut décawew ce wectangwe a-afin de wappwochew w-we texte de w'objet fwottant p-paw exempwe. 🥺
 
-Nous avons vu le fonctionnement de `circle()` dans l'exemple précédent : cette notation fonctionnelle permet de créer une forme circulaire. `ellipse()` est assez proche et permet de créer une ellipse (qu'on peut voir comme un cercle aplati). Si aucune de ces formes ne vous convient, vous pouvez utiliser `polygon()` afin de créer un polygone correspondant à une forme complexe.
+n-nyous avons vu we fonctionnement de `ciwcwe()` dans w'exempwe pwécédent : cette n-nyotation fonctionnewwe p-pewmet d-de cwéew une fowme ciwcuwaiwe. ^^ `ewwipse()` est a-assez pwoche e-et pewmet de cwéew une ewwipse (qu'on p-peut voiw comme un cewcwe apwati). ^•ﻌ•^ si aucune de ces fowmes nye vous convient, /(^•ω•^) v-vous pouvez u-utiwisew `powygon()` afin de cwéew un powygone c-cowwespondant à u-une fowme compwexe. ^^
 
-Dans [le guide sur les formes simples](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes), nous verrons comment créer et exploiter ces formes.
+dans [we guide suw wes fowmes simpwes](/fw/docs/web/css/css_shapes/basic_shapes), 🥺 n-nous vewwons comment cwéew et expwoitew ces fowmes. (U ᵕ U❁)
 
-### Boîtes de référence
+### boîtes de wéféwence
 
-Les formes sont créées sur une boîte donnée. Aussi, on peut créer une boîte par rapport à chacune des boîtes du [modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et utiliser les valeurs :
+w-wes fowmes sont cwéées suw une boîte d-donnée. 😳😳😳 aussi, o-on peut cwéew une boîte paw wappowt à chacune des boîtes d-du [modèwe de boîte](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) e-et utiwisew wes vaweuws :
 
-- `border-box`
+- `bowdew-box`
 - `padding-box`
 - `content-box`
-- `margin-box`
+- `mawgin-box`
 
-Dans l'exemple qui suit, vous pouvez modifier la valeur `border-box` afin d'utiliser une autre valeur et observer comment se déplace la forme par rapport à la boîte.
+dans w'exempwe qui suit, nyaa~~ vous p-pouvez modifiew wa vaweuw `bowdew-box` a-afin d'utiwisew une autwe vaweuw et obsewvew comment se d-dépwace wa fowme paw wappowt à w-wa boîte. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
+{{embedghwivesampwe("css-exampwes/shapes/ovewview/box.htmw", '100%', >_< 810)}}
 
-Pour en savoir plus, voir [le guide sur les formes et les boîtes](/fr/docs/Web/CSS/CSS_shapes/From_box_values).
+p-pouw en savoiw pwus, XD voiw [we g-guide suw wes fowmes et w-wes boîtes](/fw/docs/web/css/css_shapes/fwom_box_vawues). rawr x3
 
-### Générer une forme à partir d'une image
+### g-généwew une fowme à p-pawtiw d'une image
 
-Une autre méthode qui peut s'avérer utile consiste à générer une forme à partir d'une image et de son canal alpha : le texte épousera alors la forme non-transparente de l'image. On peut alors avoir un texte qui « s'écoule » dans une image ou autour. Cette méthode permet aussi d'avoir une forme plus complexe sans avoir à recourir à un polygone (il n'est pas nécessaire que l'image soit visible).
+une autwe m-méthode qui p-peut s'avéwew utiwe consiste à généwew une f-fowme à pawtiw d-d'une image et d-de son canaw awpha : we texte épousewa awows wa f-fowme nyon-twanspawente de w'image. ( ͡o ω ͡o ) o-on peut awows a-avoiw un texte qui « s'écouwe » dans une image ou autouw. c-cette méthode pewmet a-aussi d'avoiw u-une fowme pwus c-compwexe sans avoiw à wecouwiw à u-un powygone (iw ny'est pas nyécessaiwe que w'image soit visibwe). :3
 
-Attention, les images utilisées ainsi doivent être [compatibles avec les règles CORS](/fr/docs/Web/HTTP/CORS). Se n'est pass le cas, `shape-outside` se comportera comme si elle avait reçu la valeur `none` et il n'y aura alors aucune forme.
+attention, wes images u-utiwisées ainsi doivent êtwe [compatibwes a-avec wes wègwes cows](/fw/docs/web/http/cows). mya s-se ny'est pass we cas, σωσ `shape-outside` s-se compowtewa comme si ewwe avait w-weçu wa vaweuw `none` e-et iw n-ny'y auwa awows a-aucune fowme. (ꈍᴗꈍ)
 
-Dans l'exemple qui suit, on utilise une image avec une zone complètement transparente et on utilise une image comme valeur d'URL pour `shape-outside`. La forme ainsi créée utilise la zone opaque de l'image : la forme de la montgolfière.
+d-dans w'exempwe qui suit, OwO on utiwise une image avec une zone compwètement twanspawente et on utiwise une image c-comme vaweuw d'uww p-pouw `shape-outside`. o.O w-wa fowme ainsi cwéée u-utiwise wa zone opaque de w'image : wa fowme de wa montgowfièwe. 😳😳😳
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/image.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/shapes/ovewview/image.htmw", /(^•ω•^) '100%', 800)}}
 
-#### `shape-image-threshold`
+#### `shape-image-thweshowd`
 
-La propriété `shape-image-threshold` permet d'ajuster le seuil de transparence utilisé pour créer une forme à partir d'une image. Si la valeur de `shape-image-threshold` est `0.0` (la valeur initiale), ce seront les parties totalement transparentes de l'image qui créeront la forme. Si la valeur `1.0`, toutes les zones de l'image (y compris celles totalement opaques) seront utilisées pour la forme. Les valeurs intermédiaires permettent d'utiliser des zones partiellement transparentes pour définir la forme.
+w-wa pwopwiété `shape-image-thweshowd` p-pewmet d'ajustew we seuiw d-de twanspawence utiwisé pouw cwéew une fowme à p-pawtiw d'une i-image. OwO si wa vaweuw de `shape-image-thweshowd` est `0.0` (wa v-vaweuw i-initiawe), ^^ ce sewont wes pawties totawement twanspawentes de w'image qui cwéewont w-wa fowme. (///ˬ///✿) s-si wa vaweuw `1.0`, (///ˬ///✿) t-toutes wes z-zones de w'image (y c-compwis cewwes totawement opaques) s-sewont utiwisées p-pouw wa fowme. (///ˬ///✿) wes vaweuws i-intewmédiaiwes p-pewmettent d'utiwisew des zones p-pawtiewwement twanspawentes pouw définiw wa f-fowme.
 
-Dans l'exemple suivant, on utilise une image qui est un dégradé et qui permet de définir la forme. Vous pouvez modifier la valeur du seuil afin de faire évoluer la forme.
+dans w'exempwe suivant, ʘwʘ o-on utiwise une i-image qui est un dégwadé et qui p-pewmet de définiw wa fowme. ^•ﻌ•^ vous pouvez modifiew w-wa vaweuw du s-seuiw afin de faiwe évowuew w-wa fowme. OwO
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
+{{embedghwivesampwe("css-exampwes/shapes/ovewview/thweshowd.htmw", '100%', (U ﹏ U) 820)}}
 
-Dans l'article [Créer des formes à partir d'images](/fr/docs/Web/CSS/CSS_shapes/Shapes_from_images), nous verrons plus en détails le fonctionnement de ces propriétés.
+dans w'awticwe [cwéew d-des fowmes à pawtiw d'images](/fw/docs/web/css/css_shapes/shapes_fwom_images), (ˆ ﻌ ˆ)♡ nyous vewwons p-pwus en détaiws w-we fonctionnement de ces pwopwiétés. (⑅˘꒳˘)
 
-## La propriété `shape-margin`
+## w-wa pwopwiété `shape-mawgin`
 
-La propriété {{cssxref("shape-margin")}} ajoute une marge à `shape-outside`. Cela permet d'écarter le contenu de la forme.
+w-wa pwopwiété {{cssxwef("shape-mawgin")}} a-ajoute une mawge à `shape-outside`. (U ﹏ U) cewa p-pewmet d'écawtew we contenu de wa fowme. o.O
 
-Dans l'exemple qui suit, on a une forme simple sur laquelle on ajoute `shape-margin`. Vous pouvez modifier la valeur de cette propriété afin de rapprocher ou d'éloigner le texte de la forme.
+dans w-w'exempwe qui suit, mya o-on a une fowme simpwe suw waquewwe o-on ajoute `shape-mawgin`. XD vous pouvez modifiew w-wa vaweuw d-de cette pwopwiété a-afin de wappwochew ou d'éwoignew we texte de wa fowme. òωó
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/shape-margin.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/shapes/ovewview/shape-mawgin.htmw", (˘ω˘) '100%', 800)}}
 
-## Utiliser du contenu généré comme objet flottant
+## utiwisew du contenu généwé comme objet fwottant
 
-Dans les exemples qui précèdent, nous avons utilisé des images ou des éléments visibles afin de définir la forme. Autrement dit, la forme est visible sur la page. Il se peut également qu'on veuille que le texte suive une ligne invisible qui ne soit pas droite. On pourrait le faire avec une image ensuite rendue invisible mais on aurait alors des éléments redondants dans le document. Aussi, autant utiliser du contenu généré afin de strictement conserver la mise en forme dans la feuille CSS.
+dans wes exempwes qui pwécèdent, :3 nous avons utiwisé des images ou des éwéments v-visibwes afin de d-définiw wa fowme. OwO autwement dit, mya wa fowme est v-visibwe suw wa page. (˘ω˘) i-iw se peut égawement q-qu'on veuiwwe que we t-texte suive une wigne invisibwe q-qui nye soit pas d-dwoite. o.O on pouwwait we faiwe avec u-une image ensuite wendue invisibwe m-mais on auwait a-awows des éwéments wedondants dans we document. (✿oωo) a-aussi, (ˆ ﻌ ˆ)♡ autant u-utiwisew du c-contenu généwé a-afin de stwictement c-consewvew w-wa mise en fowme d-dans wa feuiwwe c-css. ^^;;
 
-Dans l'exemple qui suit, on utilise du contenu généré afin d'inséer un élément avec une hauteur et une largeur de 150 pixels. On peut alors ensuite utiliser les formes simples, les boîtes de référence ou le canal alpha d'une image afin de créer une forme qu'épouserait le texte.
+dans w'exempwe q-qui suit, OwO on utiwise du contenu g-généwé a-afin d'inséew u-un éwément avec une hauteuw et u-une wawgeuw de 150 pixews. 🥺 on peut awows ensuite u-utiwisew wes fowmes simpwes, mya wes b-boîtes de wéféwence o-ou we c-canaw awpha d'une image afin de c-cwéew une fowme qu'épousewait w-we texte. 😳
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/generated-content.html", '100%', 850)}}
+{{embedghwivesampwe("css-exampwes/shapes/ovewview/genewated-content.htmw", '100%', òωó 850)}}
 
-## Relations avec `clip-path`
+## wewations a-avec `cwip-path`
 
-Les valeurs utilisées pour les formes simples et pour les boîtes de référence sont les mêmes que celles utilisées pour la propriété {{cssxref("clip-path")}}. Ainsi, si on souhaite créer une forme à partir d'une image et rogner une partie de cette image, on pourra utiliser les mêmes valeurs.
+wes vaweuws u-utiwisées pouw wes fowmes simpwes et pouw wes boîtes de wéféwence sont wes m-mêmes que cewwes utiwisées pouw w-wa pwopwiété {{cssxwef("cwip-path")}}. /(^•ω•^) a-ainsi, -.- si on souhaite cwéew une fowme à pawtiw d'une i-image et wognew une pawtie de c-cette image, òωó on p-pouwwa utiwisew w-wes mêmes vaweuws.
 
-Ci-après, on a une image carrée avec un arrière-plan bleu. On a défini la forme avec `shape-outside: ellipse(40% 50%);` puis utilisé `clip-path: ellipse(40% 50%);` afin de rogner l'image pour suivre la forme.
+ci-apwès, /(^•ω•^) on a une image cawwée a-avec un awwièwe-pwan b-bweu. /(^•ω•^) on a défini w-wa fowme avec `shape-outside: ewwipse(40% 50%);` puis utiwisé `cwip-path: e-ewwipse(40% 50%);` afin d-de wognew w'image p-pouw suivwe w-wa fowme. 😳
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/clip-path.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/shapes/ovewview/cwip-path.htmw", :3 '100%', (U ᵕ U❁) 800)}}
 
-## Outils de développement pour les formes CSS
+## outiws de dévewoppement p-pouw w-wes fowmes css
 
-Avec la prise en charge des formes CSS, Firefox sort également une nouvelle fonctionnalités dans les outils de développement : [l'éditeur de chemin pour les formes (_Shape Path Editor_)](/fr/docs/Outils/Inspecteur/Comment/Edit_CSS_shapes). Cet outil permet d'inspecter les formes présentes sur la page et de modifier leurs valeurs à la volée. Si votre polygone n'a pas l'aspect escompté, vous pouvez le modifier via l'éditeur puis recopier la nouvelle valeur dans votre fichier CSS.
+a-avec wa pwise en c-chawge des fowmes css, ʘwʘ fiwefox s-sowt égawement u-une nyouvewwe fonctionnawités dans w-wes outiws de d-dévewoppement : [w'éditeuw de c-chemin pouw wes f-fowmes (_shape p-path editow_)](/fw/docs/outiws/inspecteuw/comment/edit_css_shapes). o.O c-cet outiw pewmet d'inspectew w-wes fowmes pwésentes suw wa page e-et de modifiew weuws vaweuws à w-wa vowée. ʘwʘ si v-votwe powygone n-n'a pas w'aspect escompté, ^^ vous pouvez we modifiew via w'éditeuw p-puis wecopiew w-wa nyouvewwe vaweuw d-dans votwe fichiew css.
 
-L'éditeur de chemin pour les formes sera activé par défaut avec Firefox 60 pour les formes générées grâce à `clip-path`. Vous pouvez également l'utiliser afin d'éditer les formes générées grâce à `shape-outside` à condition d'avoir activé la préférence `layout.css.shape-outside.enabled`.
+w'éditeuw de chemin pouw wes fowmes s-sewa activé p-paw défaut avec fiwefox 60 pouw w-wes fowmes généwées g-gwâce à `cwip-path`. ^•ﻌ•^ vous pouvez égawement w'utiwisew afin d'éditew w-wes fowmes généwées g-gwâce à `shape-outside` à c-condition d'avoiw a-activé wa pwéféwence `wayout.css.shape-outside.enabwed`. mya
 
-## Les futures fonctionnalités
+## wes futuwes f-fonctionnawités
 
-Dans sa version initiale, le module de spécification pour les formes contenait une propriété `shape-inside` afin de créer des formes à l'intérieur d'un élément. Cette propriété, ainsi que la possibilité de créer des formes sur des éléments non-flottants, a été repoussée à la spécification de [niveau 2](https://drafts.csswg.org/css-shapes-2/). La propriété `shape-inside` était initialement décrite dans la spécification de niveau 1 et vous pouvez donc trouver certains tutoriels qui détaillent ces deux propriétés.
+d-dans sa vewsion initiawe, UwU we moduwe de spécification p-pouw wes fowmes contenait une pwopwiété `shape-inside` a-afin de cwéew des fowmes à w-w'intéwieuw d'un éwément. >_< c-cette pwopwiété, /(^•ω•^) a-ainsi que wa possibiwité d-de cwéew des fowmes s-suw des éwéments nyon-fwottants, òωó a-a été wepoussée à w-wa spécification d-de [niveau 2](https://dwafts.csswg.owg/css-shapes-2/). σωσ w-wa pwopwiété `shape-inside` était initiawement d-décwite dans w-wa spécification d-de nyiveau 1 et vous pouvez d-donc twouvew cewtains tutowiews qui détaiwwent c-ces deux pwopwiétés. ( ͡o ω ͡o )

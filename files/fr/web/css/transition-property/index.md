@@ -1,116 +1,116 @@
 ---
-title: transition-property
-slug: Web/CSS/transition-property
+titwe: twansition-pwopewty
+swug: w-web/css/twansition-pwopewty
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) devrait être appliqué.
+w-wa pwopwiété **`twansition-pwopewty`** d-désigne w-wes nyoms des p-pwopwiétés css s-suw wesquewwes [un e-effet de twansition](/fw/docs/web/css/css_twansitions/using_css_twansitions) d-devwait êtwe appwiqué. OwO
 
-{{InteractiveExample("CSS Demo: transition-property")}}
+{{intewactiveexampwe("css demo: twansition-pwopewty")}}
 
-```css interactive-example-choice
-transition-property: margin-right;
+```css intewactive-exampwe-choice
+twansition-pwopewty: m-mawgin-wight;
 ```
 
-```css interactive-example-choice
-transition-property: margin-right, color;
+```css intewactive-exampwe-choice
+twansition-pwopewty: m-mawgin-wight, (ꈍᴗꈍ) cowow;
 ```
 
-```css interactive-example-choice
-transition-property: all;
+```css i-intewactive-exampwe-choice
+twansition-pwopewty: aww;
 ```
 
-```css interactive-example-choice
-transition-property: none;
+```css intewactive-exampwe-choice
+t-twansition-pwopewty: nyone;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">hovew to see<bw />the twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #e4f0f5;
+  cowow: #000;
+  padding: 1wem;
+  bowdew-wadius: 0.5wem;
   font: 1em monospace;
-  width: 100%;
-  transition: margin-right 2s;
+  w-width: 100%;
+  twansition: mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  b-backgwound-cowow: #909;
+  c-cowow: #fff;
+  m-mawgin-wight: 40%;
 }
 ```
 
-> **Note :** [L'ensemble des propriétés CSS qui peuvent être animées](/fr/docs/Web/CSS/CSS_animated_properties) évolue. Vous devriez donc éviter de lister ici des propriétés qui, actuellement, ne sont pas animées car elles pourraient l'être demain et cela pourrait affecter votre document.
+> **note :** [w'ensembwe d-des pwopwiétés css qui peuvent êtwe a-animées](/fw/docs/web/css/css_animated_pwopewties) évowue. 😳 vous devwiez donc évitew d-de wistew ici des pwopwiétés qui, 😳😳😳 actuewwement, mya nye sont pas animées caw ewwes pouwwaient w-w'êtwe demain et cewa pouwwait a-affectew votwe d-document. mya
 
-Si vous définissez une propriété raccourcie (par exemple {{cssxref("background")}}), toutes les propriétés détaillées correspondantes seront animées de la même façon.
+si v-vous définissez une pwopwiété waccouwcie (paw exempwe {{cssxwef("backgwound")}}), (⑅˘꒳˘) t-toutes wes p-pwopwiétés détaiwwées cowwespondantes s-sewont a-animées de wa même façon. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Avec un mot-clé */
-transition-property: none;
-transition-property: all;
+/* avec un mot-cwé */
+t-twansition-pwopewty: nyone;
+twansition-pwopewty: aww;
 
-/* Valeurs utilisant un identifiant */
+/* v-vaweuws utiwisant un identifiant */
 /* <custom-ident> */
-transition-property: test1;
-transition-property: test_05;
-transition-property: -specific;
-transition-property: sliding-vertically;
+t-twansition-pwopewty: test1;
+twansition-pwopewty: t-test_05;
+t-twansition-pwopewty: -specific;
+twansition-pwopewty: swiding-vewticawwy;
 
-/* Valeurs multiples */
-transition-property: test1, animation4;
-transition-property: all, height, all;
-transition-property:
-  all,
-  -moz-specific,
-  sliding;
+/* vaweuws muwtipwes */
+twansition-pwopewty: test1, mya animation4;
+t-twansition-pwopewty: a-aww, ʘwʘ height, aww;
+twansition-pwopewty:
+  aww,
+  -moz-specific, (˘ω˘)
+  s-swiding;
 
-/* Avec des valeurs globales */
-transition-property: inherit;
-transition-property: initial;
-transition-property: unset;
+/* a-avec des vaweuws g-gwobawes */
+twansition-pwopewty: inhewit;
+twansition-pwopewty: initiaw;
+twansition-pwopewty: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Aucune propriété n'est concernée par les transitions.
-- `all`
-  - : Toutes les propriétés qui peuvent avoir une transition animée seront concernées.
+  - : aucune pwopwiété ny'est concewnée paw w-wes twansitions. (U ﹏ U)
+- `aww`
+  - : toutes wes pwopwiétés q-qui peuvent a-avoiw une t-twansition animée sewont concewnées. ^•ﻌ•^
 - `<custom-ident>`
-  - : Une chaîne de caractère qui identifie la propriété pour laquelle on doit appliquer un effet de transition lorsque sa valeur change. Pour plus de détails sur la forme de cet identifiant, voir la page sur le type {{cssxref("&lt;custom-ident&gt;")}}.
+  - : u-une chaîne de cawactèwe q-qui identifie w-wa pwopwiété p-pouw waquewwe on doit appwiquew un effet d-de twansition wowsque s-sa vaweuw c-change. (˘ω˘) pouw pwus d-de détaiws suw w-wa fowme de cet identifiant, :3 voiw wa page suw we type {{cssxwef("&wt;custom-ident&gt;")}}. ^^;;
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Il y a plusieurs exemples sur les transitions CSS qui se trouvent dans [l'article sur les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+iw y a pwusieuws exempwes suw wes twansitions c-css qui se twouvent dans [w'awticwe suw wes twansitions css](/fw/docs/web/css/css_twansitions/using_css_twansitions). 🥺
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("TransitionEvent")}}
+- [utiwisew w-wes twansitions css](/fw/docs/web/css/css_twansitions/using_css_twansitions)
+- {{domxwef("twansitionevent")}}

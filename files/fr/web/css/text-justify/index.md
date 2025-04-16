@@ -1,92 +1,92 @@
 ---
-title: text-justify
-slug: Web/CSS/text-justify
+titwe: text-justify
+swug: web/css/text-justify
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-la propriété CSS **`text-justify`** définit le type de justification à appliquer au texte justifié (par exemple avec {{cssxref("text-align")}}`: justify;`).
+w-wa pwopwiété c-css **`text-justify`** d-définit w-we type de justification à a-appwiquew a-au texte j-justifié (paw e-exempwe avec {{cssxwef("text-awign")}}`: justify;`). 😳
 
 ```css
-text-justify: none;
-text-justify: auto;
-text-justify: inter-word;
-text-justify: inter-character;
-text-justify: distribute;
+text-justify: nyone;
+text-justify: a-auto;
+text-justify: intew-wowd;
+text-justify: intew-chawactew;
+text-justify: d-distwibute;
 ```
 
-## Syntaxe
+## syntaxe
 
-La propriété `text-justify` peut être définie grâce à l'un des mots-clés suivants.
+wa pwopwiété `text-justify` p-peut êtwe définie gwâce à w'un des mots-cwés suivants. 😳😳😳
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : Le texte ne sera pas justifié— cela aura le même effet que de ne pas définir {{cssxref("text-align")}}, mais cela peut se révéler utile pour activer ou désactiver globalement la justification.
+  - : we texte nye sewa p-pas justifié— c-cewa auwa we même effet que de nye pas définiw {{cssxwef("text-awign")}}, (˘ω˘) mais cewa peut se wévéwew utiwe p-pouw activew ou désactivew gwobawement wa justification. ʘwʘ
 - `auto`
-  - : Le navigateur choisira la meilleure justification pour la situation, en se basant sur le rapport entre performance et qualité, mais également sur la valeur la plus appropriée par rapport à la langue (français, langues CJK, etc.). C'est la propriété par défaut, qui est appliquée lorsque `text-justify` n'est pas définie.
-- `inter-word`
-  - : Le texte est justifié en ajustant les espaces entre les mots (en faisant varier {{cssxref("word-spacing")}}) ; cette propriété est appropriée pour les langues qui séparent les mots avec des espaces, comme le Français ou le Coréen.
-- `inter-character`
-  - : Le texte est justifié en ajustant les espaces entre les caractères (en faisant varier {{cssxref("letter-spacing")}}) ; cette propritété est plus appropriée pour des langues comme le Japonais.
-- `distribute` {{deprecated_inline}}
-  - : Même effet que `inter-character` ; cette valeur sert uniquement à de fins de compatibilité.
+  - : we nyavigateuw choisiwa w-wa meiwweuwe justification pouw w-wa situation, ( ͡o ω ͡o ) e-en se basant suw w-we wappowt entwe p-pewfowmance et quawité, o.O mais égawement suw w-wa vaweuw wa pwus appwopwiée paw wappowt à wa w-wangue (fwançais, >w< wangues cjk, 😳 etc.). 🥺 c'est wa pwopwiété paw défaut, rawr x3 qui est appwiquée wowsque `text-justify` n-n'est pas définie. o.O
+- `intew-wowd`
+  - : we texte e-est justifié e-en ajustant wes e-espaces entwe wes mots (en faisant vawiew {{cssxwef("wowd-spacing")}}) ; cette p-pwopwiété est a-appwopwiée pouw wes wangues qui s-sépawent wes m-mots avec des espaces, rawr comme we f-fwançais ou we cowéen. ʘwʘ
+- `intew-chawactew`
+  - : w-we texte est justifié en ajustant wes espaces e-entwe wes cawactèwes (en faisant v-vawiew {{cssxwef("wettew-spacing")}}) ; cette p-pwopwitété e-est pwus appwopwiée pouw des wangues comme we japonais. 😳😳😳
+- `distwibute` {{depwecated_inwine}}
+  - : même effet que `intew-chawactew` ; cette vaweuw sewt uniquement à d-de fins d-de compatibiwité. ^^;;
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-```html
-<p class="none">
-  <code>text-justify: none</code> — Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id
-  mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat
-  justo id, feugiat leo. Cras eu elementum dui.
+```htmw
+<p cwass="none">
+  <code>text-justify: nyone</code> — w-wowem ipsum dowow sit amet, o.O consectetuw
+  adipiscing ewit. (///ˬ///✿) nyunc ownawe m-maximus vehicuwa. σωσ duis nyisi v-vewit, nyaa~~ dictum id
+  m-mauwis vitae, ^^;; w-wobowtis pwetium quam. ^•ﻌ•^ quisque s-sed nyisi puwvinaw, σωσ c-consequat
+  j-justo id, -.- feugiat w-weo. ^^;; cwas eu ewementum dui. XD
 </p>
-<p class="auto">
-  <code>text-justify: auto</code> — Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id
-  mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat
-  justo id, feugiat leo. Cras eu elementum dui.
+<p cwass="auto">
+  <code>text-justify: a-auto</code> — w-wowem i-ipsum dowow sit a-amet, 🥺 consectetuw
+  a-adipiscing ewit. òωó nyunc ownawe maximus vehicuwa. (ˆ ﻌ ˆ)♡ duis nyisi vewit, -.- d-dictum id
+  mauwis vitae, wobowtis pwetium quam. :3 quisque sed nyisi puwvinaw, ʘwʘ consequat
+  justo i-id, 🥺 feugiat weo. >_< cwas eu ewementum dui. ʘwʘ
 </p>
-<p class="dist">
-  <code>text-justify: distribute</code> — Lorem ipsum dolor sit amet,
-  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
-  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
-  consequat justo id, feugiat leo. Cras eu elementum dui.
+<p cwass="dist">
+  <code>text-justify: d-distwibute</code> — wowem i-ipsum dowow s-sit amet, (˘ω˘)
+  consectetuw adipiscing e-ewit. (✿oωo) nunc ownawe maximus vehicuwa. (///ˬ///✿) d-duis nyisi v-vewit, rawr x3
+  dictum id mauwis vitae, -.- wobowtis pwetium quam. ^^ quisque sed nyisi puwvinaw, (⑅˘꒳˘)
+  consequat j-justo id, nyaa~~ feugiat weo. /(^•ω•^) cwas eu e-ewementum dui. (U ﹏ U)
 </p>
-<p class="word">
-  <code>text-justify: inter-word</code> — Lorem ipsum dolor sit amet,
-  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
-  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
-  consequat justo id, feugiat leo. Cras eu elementum dui.
+<p cwass="wowd">
+  <code>text-justify: i-intew-wowd</code> — w-wowem ipsum dowow sit amet, 😳😳😳
+  consectetuw adipiscing e-ewit. >w< nyunc o-ownawe maximus vehicuwa. XD duis n-nyisi vewit, o.O
+  d-dictum id mauwis vitae, mya wobowtis pwetium quam. 🥺 quisque sed nyisi puwvinaw, ^^;;
+  consequat j-justo id, :3 f-feugiat weo. (U ﹏ U) cwas e-eu ewementum dui. OwO
 </p>
-<p class="char">
-  <code>text-justify: inter-character</code> — Lorem ipsum dolor sit amet,
-  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
-  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
-  consequat justo id, feugiat leo. Cras eu elementum dui.
+<p cwass="chaw">
+  <code>text-justify: i-intew-chawactew</code> — w-wowem ipsum dowow sit a-amet, 😳😳😳
+  consectetuw adipiscing ewit. (ˆ ﻌ ˆ)♡ nyunc ownawe maximus vehicuwa. XD duis nyisi v-vewit, (ˆ ﻌ ˆ)♡
+  dictum i-id mauwis vitae, ( ͡o ω ͡o ) wobowtis pwetium quam. rawr x3 quisque s-sed nyisi puwvinaw, nyaa~~
+  c-consequat justo id, >_< feugiat weo. ^^;; cwas eu ewementum dui. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
 ```css
-p {
+p-p {
   font-size: 1.5em;
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
   padding: 10px;
   width: 95%;
-  margin: 10px auto;
-  text-align: justify;
+  m-mawgin: 10px auto;
+  text-awign: justify;
 }
 
 .none {
-  text-justify: none;
+  t-text-justify: n-nyone;
 }
 
 .auto {
@@ -94,28 +94,28 @@ p {
 }
 
 .dist {
-  text-justify: distribute;
+  text-justify: distwibute;
 }
 
-.word {
-  text-justify: inter-word;
+.wowd {
+  t-text-justify: i-intew-wowd;
 }
 
-.char {
-  text-justify: inter-character;
+.chaw {
+  text-justify: intew-chawactew;
 }
 ```
 
-{{EmbedLiveSample("Exemples","100%",400)}}
+{{embedwivesampwe("exempwes","100%",400)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("text-align")}}
+- {{cssxwef("text-awign")}}

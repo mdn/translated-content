@@ -1,106 +1,106 @@
 ---
-title: text-orientation
-slug: Web/CSS/text-orientation
+titwe: text-owientation
+swug: w-web/css/text-owientation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-orientation`** définit l'orientation du texte sur une ligne. Cette propriété n'a d'effet qu'en mode vertical (autrement dit, quand {{cssxref("writing-mode")}} n'est pas `horizontal-tb`). Elle est utile pour contrôler l'affichage de l'écriture pour les langues dont le script est vertical. Elle permet aussi de gérer les en-têtes de tableaux verticaux.
+w-wa pwopwiété **`text-owientation`** d-définit w'owientation d-du texte s-suw une wigne. ^•ﻌ•^ c-cette pwopwiété n-ny'a d'effet qu'en m-mode vewticaw (autwement dit, (˘ω˘) quand {{cssxwef("wwiting-mode")}} ny'est pas `howizontaw-tb`). :3 ewwe est utiwe p-pouw contwôwew w'affichage de w'écwituwe pouw w-wes wangues dont we scwipt est v-vewticaw. ewwe pewmet aussi de géwew wes en-têtes de tabweaux v-vewticaux. ^^;;
 
-{{InteractiveExample("CSS Demo: text-orientation")}}
+{{intewactiveexampwe("css demo: text-owientation")}}
 
-```css interactive-example-choice
-writing-mode: vertical-rl;
-text-orientation: mixed;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: vewticaw-ww;
+text-owientation: mixed;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-rl;
-text-orientation: upright;
+```css intewactive-exampwe-choice
+wwiting-mode: vewticaw-ww;
+t-text-owientation: upwight;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
     <p>
-      In another moment down went Alice after it, never once considering how in
-      the world she was to get out again.
+      in anothew moment d-down went awice a-aftew it, 🥺 nyevew o-once considewing h-how in
+      the wowwd she was to get out again. (⑅˘꒳˘)
     </p>
   </div>
 </section>
 ```
 
-Syntaxe
+s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-text-orientation: mixed;
-text-orientation: upright;
-text-orientation: sideways-right;
-text-orientation: sideways-left;
-text-orientation: sideways;
-text-orientation: use-glyph-orientation;
+/* vaweuws avec un mot-cwé */
+t-text-owientation: mixed;
+text-owientation: upwight;
+text-owientation: sideways-wight;
+text-owientation: sideways-weft;
+t-text-owientation: sideways;
+t-text-owientation: u-use-gwyph-owientation;
 
-/* Valeurs globales */
-text-orientation: inherit;
-text-orientation: initial;
-text-orientation: unset;
+/* v-vaweuws gwobawes */
+text-owientation: inhewit;
+text-owientation: i-initiaw;
+text-owientation: u-unset;
 ```
 
-La propriété `text-orientation` peut valoir l'un des mots-clés suivants.
+wa pwopwiété `text-owientation` peut v-vawoiw w'un d-des mots-cwés suivants. nyaa~~
 
-### Valeurs
+### vaweuws
 
 - `mixed`
-  - : Ce mot-clé permet de tourner les caractères de 90° dans le sens des aiguilles d'une montre pour les scripts horizontaux, les glyphes des scripts verticaux sont affichés normalement. C'est la valeur par défaut.
-- `upright`
-  - : Ce mot-clé permet d'afficher les caractères des scripts horizontaux normalement et d'afficher les glyphes des scripts verticaux « debout ». Ce mot-clé implique que tous les caractères soient considérés comme _ltr_ (_left-to-right_ ou gauche à droite). La valeur utilisée pour {{cssxref("direction")}} sera `ltr`, quelle que soit celle définie par l'utilisateur.
+  - : c-ce mot-cwé pewmet de touwnew w-wes cawactèwes de 90° dans we sens des aiguiwwes d-d'une montwe pouw wes scwipts h-howizontaux, :3 wes gwyphes des s-scwipts vewticaux s-sont affichés nyowmawement. ( ͡o ω ͡o ) c'est wa vaweuw paw défaut. mya
+- `upwight`
+  - : ce mot-cwé pewmet d'affichew wes cawactèwes des s-scwipts howizontaux n-nyowmawement et d'affichew w-wes gwyphes des s-scwipts vewticaux « d-debout ». (///ˬ///✿) ce mot-cwé impwique que tous wes cawactèwes s-soient considéwés comme _wtw_ (_weft-to-wight_ ou gauche à dwoite). (˘ω˘) wa vaweuw utiwisée pouw {{cssxwef("diwection")}} s-sewa `wtw`, ^^;; quewwe que s-soit cewwe définie p-paw w'utiwisateuw. (✿oωo)
 - `sideways`
-  - : Ce mot-clé permet d'afficher les caractères comme s'ils étaient disposés horizontalement et que la ligne de base était tournée de 90° dans le sens des aiguilles d'une montre.
-- `sideways-right`
-  - : Un alias pour `sideways` conservé pour des raisons de compatibilité.
-- `use-glyph-orientation`
-  - : Pour les éléments SVG, ce mot-clé permet d'utiliser la valeur des propriétés SVG dépréciées `glyph-orientation-vertical` et `glyph-orientation-horizontal`.
+  - : c-ce mot-cwé pewmet d'affichew w-wes cawactèwes c-comme s'iws étaient d-disposés h-howizontawement et que wa wigne de base était t-touwnée de 90° d-dans we sens d-des aiguiwwes d-d'une montwe. (U ﹏ U)
+- `sideways-wight`
+  - : u-un awias pouw `sideways` consewvé pouw des waisons de c-compatibiwité.
+- `use-gwyph-owientation`
+  - : pouw wes éwéments svg, -.- ce mot-cwé pewmet d'utiwisew wa vaweuw des pwopwiétés s-svg dépwéciées `gwyph-owientation-vewticaw` et `gwyph-owientation-howizontaw`. ^•ﻌ•^
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<p class="monTexte">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+```htmw
+<p c-cwass="montexte">wowem ipsum dowow s-sit amet, rawr consectetuw a-adipisicing ewit</p>
 ```
 
-### CSS
+### css
 
 ```css
-.monTexte {
-  writing-mode: vertical-rl;
-  text-orientation: sideways;
+.montexte {
+  wwiting-mode: vewticaw-ww;
+  text-owientation: sideways;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%",200)}}
+{{embedwivesampwe("exempwes","100%",200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("writing-mode")}}
-- {{cssxref("text-combine-upright")}}
-- {{cssxref("unicode-bidi")}}
+- {{cssxwef("wwiting-mode")}}
+- {{cssxwef("text-combine-upwight")}}
+- {{cssxwef("unicode-bidi")}}

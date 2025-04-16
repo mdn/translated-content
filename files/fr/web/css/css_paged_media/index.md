@@ -1,31 +1,31 @@
 ---
-title: CSS Pages
-slug: Web/CSS/CSS_paged_media
+titwe: css pages
+swug: web/css/css_paged_media
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Les média paginés CSS** (ou _CSS Paged Media_ en anglais) est un module CSS qui définit la façon dont sont gérés les sauts de page ainsi que les veuves et orphelines.
+**wes m-média p-paginés css** (ou _css p-paged media_ e-en angwais) e-est un moduwe css q-qui définit w-wa façon dont sont g-géwés wes sauts de page ainsi que wes veuves et owphewines. :3
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("page-break-after")}}
-- {{cssxref("page-break-before")}}
-- {{cssxref("page-break-inside")}}
+- {{cssxwef("page-bweak-aftew")}}
+- {{cssxwef("page-bweak-befowe")}}
+- {{cssxwef("page-bweak-inside")}}
 
-### Règles @
+### wègwes @
 
-- {{cssxref('@page')}}
+- {{cssxwef('@page')}}
 
-### Pseudo-classes
+### pseudo-cwasses
 
-- {{cssxref(':blank')}}
-- {{cssxref(':first')}}
-- {{cssxref(':left')}}
-- {{cssxref(':right')}}
+- {{cssxwef(':bwank')}}
+- {{cssxwef(':fiwst')}}
+- {{cssxwef(':weft')}}
+- {{cssxwef(':wight')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}

@@ -1,78 +1,78 @@
 ---
-title: :focus-within
-slug: Web/CSS/:focus-within
+titwe: :focus-within
+swug: web/css/:focus-within
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:focus-within`** s'applique à tous les éléments pour lesquels la pseudo-classe {{cssxref(":focus")}} s'applique ainsi qu'à tous leurs éléments descendants, y compris ceux du _Shadow DOM_. Autrement dit, cette pseudo-classe s'applique lorsqu'un élément a reçu le focus via le clavier ou la souris (par exemple lorsqu'on clique sur un champ d'un formulaire).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:focus-within`** s-s'appwique à t-tous w-wes éwéments pouw w-wesquews wa p-pseudo-cwasse {{cssxwef(":focus")}} s-s'appwique ainsi q-qu'à tous weuws éwéments descendants, mya y compwis ceux du _shadow dom_. 😳 autwement d-dit, -.- cette pseudo-cwasse s'appwique wowsqu'un éwément a-a weçu we focus via we cwaview o-ou wa souwis (paw exempwe wowsqu'on cwique suw un champ d'un fowmuwaiwe).
 
 ```css
-/* Cible n'importe quel <div> lorsqu'un */
-/* de ses descendants a reçu le focus */
+/* c-cibwe ny'impowte quew <div> w-wowsqu'un */
+/* d-de ses descendants a weçu we focus */
 div:focus-within {
-  background: yellow;
+  backgwound: yewwow;
 }
 ```
 
-Cette pseudo-classe s'applique également aux descendants de l'élément ciblé ainsi qu'aux descendants dont la racine est la racine d'un arbre du {{Glossary("Shadow DOM")}}.
+c-cette pseudo-cwasse s'appwique égawement aux descendants de w'éwément cibwé ainsi qu'aux d-descendants dont wa wacine e-est wa wacine d'un a-awbwe du {{gwossawy("shadow dom")}}. 🥺
 
-Ce sélecteur est notamment utile lorsqu'on veut, par exemple, mettre en avant l'ensemble d'un formulaire lorsque l'utilisateur passe le focus sur l'un de ses éléments {{HTMLElement("input")}}.
+c-ce séwecteuw e-est nyotamment utiwe wowsqu'on veut, o.O paw e-exempwe, /(^•ω•^) mettwe en avant w'ensembwe d'un fowmuwaiwe w-wowsque w'utiwisateuw passe we focus suw w'un de ses éwéments {{htmwewement("input")}}. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.name-container {
+.name-containew {
   padding: 4px;
 }
 
-.name-container:focus-within {
-  background: yellow;
+.name-containew:focus-within {
+  b-backgwound: y-yewwow;
 }
 
-input {
-  margin: 4px;
+i-input {
+  mawgin: 4px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  L'élément div ci-après aura un fond jaune si l'un des deux champs de saisie a
-  le focus.
+  w'éwément div ci-apwès a-auwa un fond j-jaune si w'un des deux champs de s-saisie a
+  we f-focus. nyaa~~
 </p>
-<div class="name-container">
-  <label for="prenom">
-    Prénom :
-    <input id="prenom" placeholder="Prénom" type="text" />
-  </label>
-  <label for="nom">
-    Nom :
-    <input id="nom" placeholder="Nom" type="text" />
-  </label>
+<div cwass="name-containew">
+  <wabew f-fow="pwenom">
+    pwénom :
+    <input i-id="pwenom" pwacehowdew="pwénom" type="text" />
+  </wabew>
+  <wabew f-fow="nom">
+    nyom :
+    <input id="nom" p-pwacehowdew="nom" type="text" />
+  </wabew>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 500, 150)}}
+{{embedwivesampwe("exempwes", :3 500, 150)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":focus")}}
-- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
+- {{cssxwef(":focus")}}
+- {{cssxwef(":focus-visibwe")}} {{expewimentaw_inwine}}

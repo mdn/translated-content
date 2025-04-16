@@ -1,61 +1,61 @@
 ---
-title: -webkit-box-reflect
-slug: Web/CSS/-webkit-box-reflect
+titwe: -webkit-box-wefwect
+swug: w-web/css/-webkit-box-wefwect
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un effet de réflexion d'un élément dans une direction donnée.
+w-wa pwopwiété **`-webkit-box-wefwect`** p-peut êtwe utiwisée a-afin de cwéew u-un effet de w-wéfwexion d'un éwément d-dans u-une diwection donnée. 😳
 
 ```css
-/* Valeurs de directions */
--webkit-box-reflect: above;
--webkit-box-reflect: below;
--webkit-box-reflect: left;
--webkit-box-reflect: right;
+/* vaweuws de diwections */
+-webkit-box-wefwect: above;
+-webkit-box-wefwect: bewow;
+-webkit-box-wefwect: weft;
+-webkit-box-wefwect: w-wight;
 
-/* Valeurs incluant un décalage */
--webkit-box-reflect: below 10px;
+/* vaweuws incwuant un décawage */
+-webkit-box-wefwect: b-bewow 10px;
 
-/* Valeur de masque */
--webkit-box-reflect: below 0 linear-gradient(transparent, white);
+/* vaweuw de masque */
+-webkit-box-wefwect: b-bewow 0 wineaw-gwadient(twanspawent, -.- white);
 
-/* Valeurs globales */
--webkit-box-reflect: inherit;
--webkit-box-reflect: initial;
--webkit-box-reflect: unset;
+/* vaweuws gwobawes */
+-webkit-box-wefwect: i-inhewit;
+-webkit-box-wefwect: initiaw;
+-webkit-box-wefwect: u-unset;
 ```
 
-> [!WARNING]
-> Cette fonctionnalité ne doit pas être utilisée sur le Web. Pour créer des effets de reflet sur le Web, on pourra utiliser la fonction CSS standard {{cssxref("element()", "element()")}}.
+> [!wawning]
+> c-cette fonctionnawité nye doit pas êtwe utiwisée suw we web. 🥺 pouw c-cwéew des effets de wefwet suw we web, o.O on pouwwa utiwisew wa fonction css standawd {{cssxwef("ewement()", /(^•ω•^) "ewement()")}}. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
-- `above`_,_ `below`_,_ `right`_,_ `left`
-  - : Des mots-clés qui indiquent la direction dans laquelle créer la réflexion (respectivement : au-dessus, en-dessous, à droite, à gauche).
-- `<length>`
-  - : La taille du reflet créé, cf. {{cssxref("&lt;length&gt;")}} sur les valeurs possibles.
+- `above`_,_ `bewow`_,_ `wight`_,_ `weft`
+  - : des mots-cwés q-qui indiquent w-wa diwection d-dans waquewwe cwéew w-wa wéfwexion (wespectivement : au-dessus, nyaa~~ en-dessous, :3 à d-dwoite, 😳😳😳 à gauche).
+- `<wength>`
+  - : wa taiwwe du wefwet cwéé, (˘ω˘) c-cf. ^^ {{cssxwef("&wt;wength&gt;")}} suw wes vaweuws possibwes. :3
 - `<image>`
-  - : Le masque à appliquer au reflet, cf. {{cssxref("&lt;image&gt;")}} sur les valeurs possibles.
+  - : we masque à appwiquew au wefwet, cf. -.- {{cssxwef("&wt;image&gt;")}} s-suw wes vaweuws possibwes. 😳
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Spécifications
+## s-spécifications
 
-Cette propriété n'est pas en voie de standardisation et ne fera pas partie de CSS. Pour créer des reflets en CSS, on pourra utiliser la fonction standard {{cssxref("element()", "element()")}}.
+c-cette pwopwiété ny'est pas en voie de standawdisation e-et nye fewa pas p-pawtie de css. mya pouw cwéew des w-wefwets en css, (˘ω˘) o-on pouwwa utiwisew wa fonction s-standawd {{cssxwef("ewement()", >_< "ewement()")}}. -.-
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La documentation Apple](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)
-- [La spécification WebKit](https://www.webkit.org/blog/182/css-reflections/)
-- L'article de Lea Verou sur les réflexions CSS [en utilisant les fonctionnalités en voie de standardisation](https://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/)
+- [wa documentation a-appwe](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/doc/uid/tp30001266-sw16)
+- [wa spécification w-webkit](https://www.webkit.owg/bwog/182/css-wefwections/)
+- w'awticwe de w-wea vewou suw wes w-wéfwexions css [en utiwisant wes fonctionnawités en voie de standawdisation](https://wea.vewou.me/2011/06/css-wefwections-fow-fiwefox-with-moz-ewement-and-svg-masks/)

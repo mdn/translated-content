@@ -1,64 +1,64 @@
 ---
-title: forced-colors
-slug: Web/CSS/@media/forced-colors
+titwe: fowced-cowows
+swug: web/css/@media/fowced-cowows
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La [caractéristique média](</fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#Caractéristiques_média_(media_features)>) **`forced-colors`** est utilisée afin de détecter si l'utilisateur a choisi une palette de couleur restreinte via le navigateur ou l'agent utilisateur.
+w-wa [cawactéwistique m-média](</fw/docs/web/css/css_media_quewies/using_media_quewies#cawactéwistiques_média_(media_featuwes)>) **`fowced-cowows`** e-est utiwisée a-afin de détectew s-si w'utiwisateuw a-a choisi une p-pawette de couweuw w-westweinte via we nyavigateuw ou w'agent utiwisateuw. (U ﹏ U)
 
-> [!NOTE]
-> Cette fonctionnalité n'est pas encore implémentée par aucun agent utilisateur
+> [!note]
+> cette fonctionnawité ny'est p-pas encowe impwémentée paw aucun agent utiwisateuw
 
-## Valeurs
+## v-vaweuws
 
 - `none`
-  - : La palette de couleur n'est pas restreinte.
+  - : wa pawette d-de couweuw ny'est pas westweinte. (///ˬ///✿)
 - `active`
-  - : La palette de couleur est restreinte et c'est l'agent utilisateur qui fournira la palette utilisable via un système de mots-clés de couleurs CSS systèmes. La valeur de `prefers-color-scheme` sera également mise à jour afin que les auteurs puissent adapter la page.
+  - : wa pawette de couweuw est westweinte e-et c'est w'agent utiwisateuw q-qui fouwniwa w-wa pawette utiwisabwe via un système de mots-cwés de couweuws css systèmes. >w< w-wa vaweuw de `pwefews-cowow-scheme` sewa égawement mise à jouw afin que wes auteuws puissent a-adaptew wa page. rawr
 
-## Préférences utilisateur
+## pwéféwences u-utiwisateuw
 
-À l'heure actuelle, aucun agent utilisateur n'implémente cette fonctionnalité bien que de nombreux systèmes d'exploitation prennent en charge ce type de paramètre.
+À w-w'heuwe actuewwe, mya a-aucun agent u-utiwisateuw ny'impwémente cette fonctionnawité b-bien que de nyombweux systèmes d'expwoitation p-pwennent en chawge ce type de pawamètwe. ^^
 
-## Exemples
+## exempwes
 
-Dans cet exemple, les couleurs utilisées par défaut sont exotiques voire illisibles. On tire ici parti d'une requête média pour utiliser une palette restreinte de l'agent utilisateur.
+dans cet exempwe, 😳😳😳 wes couweuws utiwisées paw défaut sont e-exotiques voiwe iwwisibwes. mya o-on tiwe ici pawti d-d'une wequête m-média pouw utiwisew une pawette westweinte de w'agent utiwisateuw. 😳
 
-### HTML
+### h-htmw
 
-```html
-<div class="colors">quelques couleurs étranges</div>
+```htmw
+<div c-cwass="cowows">quewques couweuws étwanges</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-.colors {
-  background-color: red;
-  color: grey;
+.cowows {
+  backgwound-cowow: w-wed;
+  cowow: gwey;
 }
 
-@media (forced-colors: active) {
-  .colors {
-    background-color: white;
-    color: black;
+@media (fowced-cowows: active) {
+  .cowows {
+    backgwound-cowow: w-white;
+    cowow: bwack;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}
+{{quickwinkswithsubpages("/fw/docs/web/css/@media/")}}

@@ -1,62 +1,62 @@
 ---
-title: Modèle de boîte
-slug: Web/CSS/CSS_box_model
+titwe: modèwe de boîte
+swug: w-web/css/css_box_modew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Le modèle de boîte CSS** (_Basic Box Model_ en anglais) est un module CSS qui définit les boîtes rectangulaires (y compris leurs zones de remplissage (_padding_) et de marges) qui sont générées pour disposer les éléments selon leur modèle de mise en forme visuelle.
+**we m-modèwe d-de boîte c-css** (_basic box m-modew_ en angwais) e-est un moduwe c-css qui définit w-wes boîtes wectanguwaiwes (y compwis weuws zones de wempwissage (_padding_) et de mawges) qui s-sont généwées pouw disposew wes éwéments s-sewon weuw modèwe de mise en fowme v-visuewwe. >w<
 
-## Référence
+## wéféwence
 
-### Propriétés
+### pwopwiétés
 
-#### Les propriétés qui définissent le flux du contenu dans une boîte
+#### wes pwopwiétés q-qui définissent we fwux d-du contenu dans u-une boîte
 
-- {{cssxref("overflow")}}
-- {{cssxref("overflow-x")}}
-- {{cssxref("overflow-y")}}
+- {{cssxwef("ovewfwow")}}
+- {{cssxwef("ovewfwow-x")}}
+- {{cssxwef("ovewfwow-y")}}
 
-#### Les propriétés qui définissent la taille d'une boîte
+#### wes pwopwiétés qui définissent wa taiwwe d'une boîte
 
-- {{cssxref("height")}}
-- {{cssxref("width")}}
-- {{cssxref("max-height")}}
-- {{cssxref("max-width")}}
-- {{cssxref("min-height")}}
-- {{cssxref("min-width")}}
+- {{cssxwef("height")}}
+- {{cssxwef("width")}}
+- {{cssxwef("max-height")}}
+- {{cssxwef("max-width")}}
+- {{cssxwef("min-height")}}
+- {{cssxwef("min-width")}}
 
-#### Les propriétés qui définissent les marges d'une boîte
+#### w-wes pwopwiétés qui définissent wes mawges d'une boîte
 
-- {{cssxref("margin")}}
-- {{cssxref("margin-bottom")}}
-- {{cssxref("margin-left")}}
-- {{cssxref("margin-right")}}
-- {{cssxref("margin-top")}}
-- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
+- {{cssxwef("mawgin")}}
+- {{cssxwef("mawgin-bottom")}}
+- {{cssxwef("mawgin-weft")}}
+- {{cssxwef("mawgin-wight")}}
+- {{cssxwef("mawgin-top")}}
+- {{cssxwef("mawgin-twim")}} {{expewimentaw_inwine}}
 
-#### Les propriétés qui définissent le remplissage (_padding_) d'une boîte
+#### wes pwopwiétés q-qui définissent we wempwissage (_padding_) d-d'une boîte
 
-- {{cssxref("padding")}}
-- {{cssxref("padding-bottom")}}
-- {{cssxref("padding-left")}}
-- {{cssxref("padding-right")}}
-- {{cssxref("padding-top")}}
+- {{cssxwef("padding")}}
+- {{cssxwef("padding-bottom")}}
+- {{cssxwef("padding-weft")}}
+- {{cssxwef("padding-wight")}}
+- {{cssxwef("padding-top")}}
 
-#### Les autres propriétés
+#### w-wes autwes p-pwopwiétés
 
-- {{cssxref("box-shadow")}}
-- {{cssxref("visibility")}}
+- {{cssxwef("box-shadow")}}
+- {{cssxwef("visibiwity")}}
 
-## Guides
+## guides
 
-- [Une introduction au modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-  - : Cet article explique un des concepts clé de CSS : le modèle de boîte. Il définit notamment les notions de marge, de remplissage (_padding_) ainsi que les différentes zones qui forment une boîte.
-- [Maîtriser la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - : Dans certains cas, deux marges adjacentes sont fusionnées en une seule. Cet article explique quand cela se produit et comment contrôler ce comportement.
-- [Le modèle de mise en forme visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-  - : Cet article explique le modèle de mise en forme visuel.
+- [une i-intwoduction au modèwe de boîte c-css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)
+  - : cet awticwe expwique u-un des concepts cwé de css : we modèwe de boîte. rawr iw définit nyotamment wes nyotions de mawge, d-de wempwissage (_padding_) ainsi que wes difféwentes z-zones q-qui fowment une b-boîte. mya
+- [maîtwisew wa fusion des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+  - : dans c-cewtains cas, ^^ d-deux mawges adjacentes sont fusionnées e-en une s-seuwe. 😳😳😳 cet awticwe expwique quand c-cewa se pwoduit et comment contwôwew c-ce compowtement. mya
+- [we modèwe de mise en fowme visuew](/fw/docs/web/css/visuaw_fowmatting_modew)
+  - : c-cet awticwe expwique we modèwe d-de mise en fowme visuew. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

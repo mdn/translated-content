@@ -1,51 +1,51 @@
 ---
-title: any-hover
-slug: Web/CSS/@media/any-hover
+titwe: any-hovew
+swug: web/css/@media/any-hovew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`any-hover`** est une caractéristique média CSS qui permet de vérifier si un mécanisme de saisie/d'entrée permet à l'utilisateur de survoler les éléments.
+**`any-hovew`** e-est une cawactéwistique m-média c-css qui pewmet d-de véwifiew s-si un mécanisme d-de saisie/d'entwée p-pewmet à w'utiwisateuw d-de suwvowew wes éwéments. rawr x3
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `any-hover` est définie avec un mot-clé parmi ceux de la liste ci-après.
+wa cawactéwistique `any-hovew` est définie a-avec un mot-cwé pawmi ceux de wa wiste ci-apwès. (✿oωo)
 
 - `none`
-  - : Parmi les mécanismes de saisi, aucun ne permet de survoler les éléments (ou il n'existe aucun dispositif de pointage).
-- `hover`
-  - : Un ou plusieurs mécanismes de saisie permettent de survoler le contenu simplement.
+  - : p-pawmi wes mécanismes de saisi, (ˆ ﻌ ˆ)♡ a-aucun nye pewmet de suwvowew wes éwéments (ou iw ny'existe a-aucun dispositif de pointage). (˘ω˘)
+- `hovew`
+  - : u-un ou pwusieuws m-mécanismes de saisie pewmettent de suwvowew we contenu simpwement. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<a href="#">Essayez de me survoler !</a>
+```htmw
+<a hwef="#">essayez de me suwvowew !</a>
 ```
 
-### CSS
+### css
 
 ```css
-@media (any-hover: hover) {
-  a:hover {
-    background: yellow;
+@media (any-hovew: h-hovew) {
+  a:hovew {
+    b-backgwound: yewwow;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La caractéristique média `hover`](/fr/docs/Web/CSS/@media/hover)
+- [wa c-cawactéwistique média `hovew`](/fw/docs/web/css/@media/hovew)

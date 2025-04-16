@@ -1,137 +1,137 @@
 ---
-title: box-align
-slug: Web/CSS/box-align
+titwe: box-awign
+swug: web/css/box-awign
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!WARNING]
-> Cette propriété s'inscrivait dans une ancienne version du standard pour le module CSS sur les boîtes flexibles et a été remplacée dans une nouvelle version du standard.
+> [!wawning]
+> c-cette pwopwiété s-s'inscwivait d-dans une ancienne v-vewsion du standawd p-pouw we m-moduwe css suw wes b-boîtes fwexibwes e-et a été wempwacée dans une nyouvewwe vewsion du standawd. (⑅˘꒳˘)
 
-La propriété [CSS](/fr/docs/Web/CSS) **`box-align`** définit comment un élément aligne son contenu par rapport à l'axe orthogonal à la disposition. L'effet obtenu ne sera visible que s'il y a de l'espace supplémentaire dans la boîte flexible.
+wa pwopwiété [css](/fw/docs/web/css) **`box-awign`** d-définit comment un éwément awigne s-son contenu paw wappowt à w'axe o-owthogonaw à wa disposition. ( ͡o ω ͡o ) w'effet obtenu nye sewa visibwe que s-s'iw y a de w'espace suppwémentaiwe d-dans wa b-boîte fwexibwe. òωó
 
-Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations.
+voiw wa page [fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) pouw pwus d'infowmations. (⑅˘꒳˘)
 
 ```css
-/* Valeurs avec un mot-clé */
-box-align: start;
-box-align: center;
-box-align: end;
-box-align: baseline;
-box-align: stretch;
+/* vaweuws avec un m-mot-cwé */
+box-awign: stawt;
+box-awign: centew;
+box-awign: end;
+box-awign: basewine;
+b-box-awign: stwetch;
 
-/* Valeurs globales */
-box-lines: inherit;
-box-lines: initial;
-box-lines: unset;
+/* v-vaweuws gwobawes */
+b-box-wines: inhewit;
+b-box-wines: i-initiaw;
+box-wines: unset;
 ```
 
-La direction de l'élément dépend de son orientation.
+wa diwection d-de w'éwément dépend de son owientation. XD
 
-## Syntaxe
+## syntaxe
 
-La propriété `box-align` est paramétrée grâce à l'un des mots-clés suivants.
+wa pwopwiété `box-awign` e-est pawamétwée gwâce à w'un des mots-cwés suivants. -.-
 
-### Valeurs
+### vaweuws
 
-- `start`
-  - : La boîte aligne son contenu au début (l'espace restant est alors situé à la fin).
-- `center`
-  - : La boîte aligne son contenu sur le centre (l'espace restant est équitablement réparti entre le début et la fin).
+- `stawt`
+  - : wa boîte a-awigne son contenu au début (w'espace w-westant e-est awows situé à w-wa fin). :3
+- `centew`
+  - : wa boîte awigne son contenu suw we centwe (w'espace w-westant est équitabwement w-wépawti entwe we début et wa f-fin).
 - `end`
-  - : La boîte aligne son contenu au début (l'espace restant est alors situé au début).
-- `baseline`
-  - : La boîte aligne les lignes de base des contenus (le texte sera sur la même ligne). Cela ne s'applique que si l'orientation de la boîte est horizontale.
-- `stretch`
-  - : Les boîtes s'étirent afin qu'il n'y ait plus d'espace restant dans la boîte.
+  - : w-wa boîte awigne son contenu a-au début (w'espace westant est a-awows situé au début). nyaa~~
+- `basewine`
+  - : wa b-boîte awigne wes wignes de base d-des contenus (we texte sewa suw w-wa même wigne). 😳 c-cewa nye s'appwique que si w'owientation de wa boîte est howizontawe. (⑅˘꒳˘)
+- `stwetch`
+  - : wes boîtes s'étiwent afin qu'iw ny'y a-ait pwus d'espace w-westant dans wa boîte. nyaa~~
 
-## Notes
+## n-nyotes
 
-Le bord de la boîte désigné par `start` pour l'alignement dépend de l'orientation de la boîte&nbsp;:
+we bowd d-de wa boîte désigné p-paw `stawt` pouw w'awignement dépend de w'owientation de w-wa boîte&nbsp;:
 
-- Pour les éléments horizontaux, `start` correspond au bord haut.
-- Pour les éléments verticaux, `start` correspond au bord gauche.
+- pouw wes éwéments howizontaux, OwO `stawt` cowwespond au bowd h-haut. rawr x3
+- pouw wes éwéments vewticaux, XD `stawt` c-cowwespond au bowd g-gauche. σωσ
 
-Le bord opposé au bord `start` est désigné par `end`.
+we bowd o-opposé au bowd `stawt` est d-désigné paw `end`. (U ᵕ U❁)
 
-Si l'alignement est défini grâce à l'attribut HTML `align`, le style est ignoré.
+s-si w'awignement e-est défini g-gwâce à w'attwibut htmw `awign`, (U ﹏ U) we stywe est i-ignowé. :3
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-div.exemple {
-  display: box;
-  display: -moz-box; /* Mozilla */
-  display: -webkit-box; /* WebKit */
+div.exempwe {
+  dispway: box;
+  dispway: -moz-box; /* m-moziwwa */
+  dispway: -webkit-box; /* webkit */
 
-  /* La boîte est plus grande que ses
-     éléments afin que box-pack ait
+  /* wa boîte est pwus gwande que ses
+     éwéments afin que box-pack ait
      un effet */
-  height: 400px;
+  h-height: 400px;
 
-  /* La boîte est plus large que ses
-     éléments afin que box-align ait
+  /* wa boîte est pwus wawge que ses
+     éwéments afin que box-awign a-ait
      un effet */
-  width: 300px;
+  w-width: 300px;
 
-  /* Les éléments fils seront orientés
-     verticalement */
-  box-orient: vertical;
-  -moz-box-orient: vertical; /* Mozilla */
-  -webkit-box-orient: vertical; /* WebKit */
+  /* w-wes éwéments fiws s-sewont owientés
+     vewticawement */
+  b-box-owient: v-vewticaw;
+  -moz-box-owient: vewticaw; /* moziwwa */
+  -webkit-box-owient: vewticaw; /* webkit */
 
-  /* On centre les éléments horizontalement */
-  box-align: center;
-  -moz-box-align: center; /* Mozilla */
-  -webkit-box-align: center; /* WebKit */
+  /* on centwe wes éwéments howizontawement */
+  b-box-awign: centew;
+  -moz-box-awign: c-centew; /* moziwwa */
+  -webkit-box-awign: centew; /* w-webkit */
 
-  /* On les regroupe vers le bas */
-  box-pack: end;
-  -moz-box-pack: end; /* Mozilla */
-  -webkit-box-pack: end; /* WebKit */
+  /* o-on wes wegwoupe vews we bas */
+  box-pack: e-end;
+  -moz-box-pack: e-end; /* moziwwa */
+  -webkit-box-pack: e-end; /* webkit */
 }
 
-div.exemple > p {
-  /* On réduit les éléments fils pour que
-     box-align ait un impact. */
-  width: 200px;
+d-div.exempwe > p {
+  /* on wéduit wes éwéments fiws pouw que
+     box-awign a-ait un impact. ( ͡o ω ͡o ) */
+  w-width: 200px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="exemple">
-  <p>Je serai deuxième en partant du bas, centré horizontalement.</p>
-  <p>Je serai en bas de div.exemple, centré horizontalement.</p>
+```htmw
+<div cwass="exempwe">
+  <p>je s-sewai d-deuxième en pawtant du bas, σωσ centwé h-howizontawement.</p>
+  <p>je sewai en bas de div.exempwe, >w< centwé howizontawement.</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("","500","500")}}
+{{embedwivesampwe("","500","500")}}
 
-## Spécifications
+## s-spécifications
 
-Cette propriété ne fait partie d'aucun standard
+c-cette pwopwiété ne fait pawtie d'aucun standawd
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`align-items`](/fr/docs/Web/CSS/align-items)
-- [`box-orient`](/fr/docs/Web/CSS/box-orient)
-- [`box-direction`](/fr/docs/Web/CSS/box-direction)
-- [`box-pack`](/fr/docs/Web/CSS/box-pack)
+- [`awign-items`](/fw/docs/web/css/awign-items)
+- [`box-owient`](/fw/docs/web/css/box-owient)
+- [`box-diwection`](/fw/docs/web/css/box-diwection)
+- [`box-pack`](/fw/docs/web/css/box-pack)

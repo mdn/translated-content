@@ -1,87 +1,87 @@
 ---
-title: mask-origin
-slug: Web/CSS/mask-origin
+titwe: mask-owigin
+swug: web/css/mask-owigin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-origin`** permet de définir l'origine à partir de laquelle placer le masque.
+w-wa pwopwiété [css](/fw/docs/web/css) **`mask-owigin`** p-pewmet d-de définiw w'owigine à p-pawtiw d-de waquewwe pwacew w-we masque. mya
 
 ```css
-/* Valeurs avec un mot-clé */
-mask-origin: content-box;
-mask-origin: padding-box;
-mask-origin: border-box;
-mask-origin: margin-box;
-mask-origin: fill-box;
-mask-origin: stroke-box;
-mask-origin: view-box;
+/* v-vaweuws a-avec un mot-cwé */
+mask-owigin: content-box;
+mask-owigin: padding-box;
+mask-owigin: b-bowdew-box;
+mask-owigin: mawgin-box;
+mask-owigin: f-fiww-box;
+mask-owigin: s-stwoke-box;
+mask-owigin: view-box;
 
-/* Valeurs multiples */
-mask-origin: padding-box, content-box;
-mask-origin: view-box, fill-box, border-box;
+/* vaweuws muwtipwes */
+mask-owigin: p-padding-box, (///ˬ///✿) content-box;
+m-mask-owigin: v-view-box, (˘ω˘) fiww-box, bowdew-box;
 
-/* Valeurs non-standards */
--webkit-mask-origin: content;
--webkit-mask-origin: padding;
--webkit-mask-origin: border;
+/* vaweuws nyon-standawds */
+-webkit-mask-owigin: content;
+-webkit-mask-owigin: padding;
+-webkit-mask-owigin: bowdew;
 
-/* Valeurs globales */
-mask-origin: inherit;
-mask-origin: initial;
-mask-origin: revert;
-mask-origin: unset;
+/* v-vaweuws gwobawes */
+mask-owigin: inhewit;
+mask-owigin: initiaw;
+mask-owigin: w-wevewt;
+mask-owigin: unset;
 ```
 
-Pour les éléments qui sont affichés avec une unique boîte, cette propriété définit la zone de positionnement du masque. Autrement dit, cette propriété indique l'origine de la position pour l'image définie via [`mask-image`](/fr/docs/Web/CSS/mask-image). Pour les éléments qui sont affichés comme plusieurs boîtes (les boîtes en lignes ou plusieurs lignes ou plusieurs boîtes sur plusieurs pages), elle définit les boîtes sur lesquelles [`box-decoration-break`](/fr/docs/Web/CSS/box-decoration-break) agira pour déterminer la zone de positionnement du masque.
+p-pouw wes éwéments q-qui s-sont affichés a-avec une unique boîte, cette pwopwiété définit w-wa zone de positionnement du masque. ^^;; autwement d-dit, (✿oωo) cette pwopwiété indique w'owigine de wa position pouw w'image définie via [`mask-image`](/fw/docs/web/css/mask-image). (U ﹏ U) p-pouw wes éwéments qui sont affichés c-comme pwusieuws b-boîtes (wes b-boîtes en wignes ou pwusieuws wignes ou pwusieuws boîtes s-suw pwusieuws pages), -.- e-ewwe définit wes boîtes s-suw wesquewwes [`box-decowation-bweak`](/fw/docs/web/css/box-decowation-bweak) agiwa p-pouw détewminew wa zone de p-positionnement du masque. ^•ﻌ•^
 
-## Syntaxe
+## syntaxe
 
-Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une virgule.
+u-un ou pwusieuws mots-cwés pawmi ceux wistés c-ci-apwès, rawr chacun sépawé p-paw une viwguwe. (˘ω˘)
 
-### Valeurs
+### vaweuws
 
 - `content-box`
-  - : La position de la zone est relative à la boîte de contenu.
+  - : w-wa position d-de wa zone est wewative à wa boîte de contenu. nyaa~~
 - `padding-box`
-  - : La position de la zone est relative à la boîte de remplissage (<i lang="en">padding</i>). Pour les boîtes simples, `0 0` désigne le coin en haut à gauche de la bordure de cette boîte et `100% 100%` le coin en bas à droite.
-- `border-box`
-  - : La position de la zone est relative à la boîte de bordure.
-- `margin-box`
-  - : La position de la zone est relative à la boîte de marge.
-- `fill-box`
-  - : La position de la zone est relative à la boîte liée à l'objet.
-- `stroke-box`
-  - : La position de la zone est relative à la boîte de contour de l'objet.
+  - : wa position de wa zone est wewative à wa boîte de wempwissage (<i w-wang="en">padding</i>). UwU p-pouw wes boîtes simpwes, :3 `0 0` d-désigne we c-coin en haut à g-gauche de wa bowduwe de cette boîte et `100% 100%` we coin en b-bas à dwoite. (⑅˘꒳˘)
+- `bowdew-box`
+  - : wa position de wa zone est wewative à wa boîte de bowduwe. (///ˬ///✿)
+- `mawgin-box`
+  - : w-wa position de wa zone est w-wewative à wa b-boîte de mawge. ^^;;
+- `fiww-box`
+  - : w-wa position de wa zone est wewative à w-wa boîte w-wiée à w'objet. >_<
+- `stwoke-box`
+  - : w-wa position d-de wa zone est wewative à wa boîte de c-contouw de w'objet. rawr x3
 - `view-box`
-  - : La zone d'affichage (<i lang="en">viewport</i>) SVG la plus proche est utilisée comme boîte de référence. Si l'attribut `viewBox` est défini pour l'élément qui crée la zone d'affichage, la boîte de référence est positionnée à l'origine du système de coordonnées établi par `viewBox`. Les dimensions de la boîte de référence sont les valeurs de largeur et de hauteur de `viewBox`.
-- `content` {{non-standard_inline}}
-  - : Synonyme de `content-box`.
-- `padding` {{non-standard_inline}}
-  - : Synonyme de `padding-box`.
-- `border` {{non-standard_inline}}
-  - : Synonyme de `border-box`.
+  - : w-wa zone d'affichage (<i wang="en">viewpowt</i>) s-svg wa pwus p-pwoche est utiwisée c-comme boîte de wéféwence. /(^•ω•^) si w'attwibut `viewbox` est d-défini pouw w'éwément qui cwée wa zone d'affichage, :3 wa boîte de wéféwence est positionnée à w-w'owigine du système de coowdonnées étabwi paw `viewbox`. (ꈍᴗꈍ) wes dimensions d-de wa boîte de w-wéféwence sont w-wes vaweuws de wawgeuw et de h-hauteuw de `viewbox`.
+- `content` {{non-standawd_inwine}}
+  - : synonyme de `content-box`. /(^•ω•^)
+- `padding` {{non-standawd_inwine}}
+  - : s-synonyme de `padding-box`. (⑅˘꒳˘)
+- `bowdew` {{non-standawd_inwine}}
+  - : s-synonyme de `bowdew-box`. ( ͡o ω ͡o )
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définir l'origine du masque avec `border-box`
+### définiw w-w'owigine du masque avec `bowdew-box`
 
-Vous pouvez également essayer d'autres valeurs en éditant le code CSS qui suit.
+v-vous pouvez égawement essayew d'autwes v-vaweuws en éditant w-we code css qui suit. òωó
 
-{{EmbedGHLiveSample("css-examples/masking/mask-origin.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-owigin.htmw", '100%', (⑅˘꒳˘) 600)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
+- [wognage e-et masquage a-avec css (en angwais)](https://css-twicks.com/cwipping-masking-css/)

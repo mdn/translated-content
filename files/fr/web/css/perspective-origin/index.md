@@ -1,455 +1,455 @@
 ---
-title: perspective-origin
-slug: Web/CSS/perspective-origin
+titwe: pewspective-owigin
+swug: w-web/css/pewspective-owigin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`perspective-origin`** détermine la poisition depuis laquelle le spectateur regarde le document. Elle est utilisée comme point de fuite par la propriété {{cssxref("perspective")}}.
+wa p-pwopwiété **`pewspective-owigin`** d-détewmine w-wa poisition depuis w-waquewwe we s-spectateuw wegawde w-we document. e-ewwe est utiwisée comme point de fuite paw wa pwopwiété {{cssxwef("pewspective")}}. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: perspective-origin")}}
+{{intewactiveexampwe("css demo: pewspective-owigin")}}
 
-```css interactive-example-choice
-perspective-origin: center;
+```css i-intewactive-exampwe-choice
+pewspective-owigin: centew;
 ```
 
-```css interactive-example-choice
-perspective-origin: top;
+```css i-intewactive-exampwe-choice
+pewspective-owigin: t-top;
 ```
 
-```css interactive-example-choice
-perspective-origin: bottom right;
+```css intewactive-exampwe-choice
+pewspective-owigin: bottom w-wight;
 ```
 
-```css interactive-example-choice
-perspective-origin: -170%;
+```css intewactive-exampwe-choice
+p-pewspective-owigin: -170%;
 ```
 
-```css interactive-example-choice
-perspective-origin: 500% 200%;
+```css i-intewactive-exampwe-choice
+pewspective-owigin: 500% 200%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div cwass="face b-back">2</div>
+    <div cwass="face w-wight">3</div>
+    <div c-cwass="face weft">4</div>
+    <div c-cwass="face t-top">5</div>
+    <div cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 550px;
+```css i-intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, σωσ k-khaki);
+  pewspective: 550px;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
   height: 100px;
-  transform-style: preserve-3d;
-  perspective: 250px;
+  twansfowm-stywe: pwesewve-3d;
+  pewspective: 250px;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  position: absowute;
+  b-backface-visibiwity: i-inhewit;
   font-size: 60px;
-  color: white;
+  c-cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: w-wgba(90, 90, (U ﹏ U) 90, 0.7);
+  twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgba(0, 210, >w< 0, 0.7);
+  t-twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: w-wgba(210, σωσ 0, 0, 0.7);
+  twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: w-wgba(0, nyaa~~ 0, 210, 0.7);
+  t-twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(210, 🥺 210, 0, 0.7);
+  twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(210, rawr x3 0, 210, σωσ 0.7);
+  t-twansfowm: w-wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
-Les propriétés `perspective-origin` et {{cssxref("perspective")}} sont à rattacher à l'élément parent de l'élément qu'on veut placer dans un espace 3D. En revanche, la fonction [`perspective()`](/fr/docs/Web/CSS/transform-function/perspective) s'applique à même l'élément qu'on veut placer en 3D.
+wes pwopwiétés `pewspective-owigin` et {{cssxwef("pewspective")}} sont à wattachew à w-w'éwément pawent de w'éwément qu'on veut pwacew dans un espace 3d. (///ˬ///✿) e-en wevanche, (U ﹏ U) wa fonction [`pewspective()`](/fw/docs/web/css/twansfowm-function/pewspective) s-s'appwique à m-même w-w'éwément qu'on veut pwacew e-en 3d. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Syntaxe avec une valeur */
-perspective-origin: x-position;
+/* s-syntaxe a-avec une vaweuw */
+p-pewspective-owigin: x-position;
 
-/* Syntaxe avec deux valeurs */
-perspective-origin: x-position y-position;
+/* syntaxe a-avec deux vaweuws */
+p-pewspective-owigin: x-x-position y-y-position;
 
-/* Lorsque x-position et y-position sont des mots-clés */
-/* on peut aussi avoir la forme suivante valide        */
-perspective-origin: y-position x-position;
+/* w-wowsque x-position et y-position sont des mots-cwés */
+/* o-on peut aussi avoiw wa fowme suivante vawide        */
+pewspective-owigin: y-position x-position;
 
-/* Valeurs globales */
-perspective-origin: inherit;
-perspective-origin: initial;
-perspective-origin: unset;
+/* vaweuws g-gwobawes */
+pewspective-owigin: inhewit;
+pewspective-owigin: initiaw;
+pewspective-owigin: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - _x-position_
 
-  - : Indique l'abscisse de la position du point de fuite. La valeur peut être :
+  - : i-indique w-w'abscisse de wa position du p-point de fuite. 🥺 wa vaweuw peut êtwe :
 
-    - De type {{cssxref("&lt;length-percentage&gt;")}} : la position est indiquée comme une longueur absolue ou relativement à la largeur de l'élément. La valeur peut être négative.
-    - `left` : un mot-clé qui est un alias pour indiquer une longueur nulle.
-    - `center` : un mot-clé qui est un alias pour indiquer une valeur de pourcentage de `50%`.
-    - `right` : un mot-clé qui est un alias pour indiquer un pourcentage de `100%`.
+    - d-de t-type {{cssxwef("&wt;wength-pewcentage&gt;")}} : wa position est indiquée comme une wongueuw absowue ou wewativement à wa wawgeuw d-de w'éwément. òωó wa vaweuw peut êtwe n-nyégative. XD
+    - `weft` : un mot-cwé q-qui est un awias p-pouw indiquew une wongueuw nyuwwe. :3
+    - `centew` : un mot-cwé q-qui est un awias p-pouw indiquew une vaweuw de pouwcentage d-de `50%`.
+    - `wight` : u-un mot-cwé qui est un awias pouw indiquew un pouwcentage de `100%`. (U ﹏ U)
 
 - _y-position_
 
-  - : Indique l'ordonnée de la position du point de fuite. La valeur peut être :
+  - : indique w'owdonnée d-de wa position d-du point de fuite. >w< w-wa vaweuw peut êtwe :
 
-    - De type {{cssxref("&lt;length-percentage&gt;")}} : la position est indiquée comme une longueur absolue ou relativement à la hauteur de l'élément. La valeur peut être négative.
-    - De type {{cssxref("&lt;length&gt;")}} : la position est indiquée avec une valeur de longueur. La valeur peut être négative.
-    - `top` : un mot-clé qui est un alias pour indiquer une longueur nulle.
-    - `center` : un mot-clé qui est un alias pour indiquer une valeur de pourcentage de `50%`.
-    - `bottom` : un mot-clé qui est un alias pour indiquer un pourcentage de `100%`.
+    - d-de type {{cssxwef("&wt;wength-pewcentage&gt;")}} : w-wa position est indiquée c-comme une wongueuw absowue ou wewativement à wa hauteuw de w'éwément. /(^•ω•^) wa vaweuw peut êtwe nyégative. (⑅˘꒳˘)
+    - d-de type {{cssxwef("&wt;wength&gt;")}} : w-wa position est indiquée avec une vaweuw d-de wongueuw. w-wa vaweuw peut êtwe nyégative. ʘwʘ
+    - `top` : un mot-cwé qui est un awias pouw i-indiquew une wongueuw nyuwwe. rawr x3
+    - `centew` : un mot-cwé qui est un awias pouw indiquew une vaweuw d-de pouwcentage de `50%`. (˘ω˘)
+    - `bottom` : un mot-cwé qui e-est un awias pouw i-indiquew un pouwcentage de `100%`. o.O
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Cubes avec des valeurs communes pour `perspective-origin`
+### cubes avec des vaweuws communes pouw `pewspective-owigin`
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <section>
-<figure>
-  <caption><code>perspective-origin: top left;</code></caption>
-    <div class="container">
-    <div class="cube potl">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: top weft;</code></caption>
+    <div c-cwass="containew">
+    <div cwass="cube potw">
+      <div cwass="face f-fwont">1</div>
+      <div cwass="face b-back">2</div>
+      <div c-cwass="face wight">3</div>
+      <div cwass="face w-weft">4</div>
+      <div cwass="face t-top">5</div>
+      <div cwass="face b-bottom">6</div>
     </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: top;</code></caption>
-   <div class="container">
-    <div class="cube potm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: top;</code></caption>
+   <div c-cwass="containew">
+    <div cwass="cube p-potm">
+      <div c-cwass="face fwont">1</div>
+      <div cwass="face b-back">2</div>
+      <div c-cwass="face wight">3</div>
+      <div c-cwass="face weft">4</div>
+      <div cwass="face t-top">5</div>
+      <div cwass="face bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: top right;</code></caption>
-  <div class="container">
-    <div class="cube potr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: t-top wight;</code></caption>
+  <div c-cwass="containew">
+    <div cwass="cube potw">
+      <div cwass="face f-fwont">1</div>
+      <div c-cwass="face b-back">2</div>
+      <div c-cwass="face wight">3</div>
+      <div cwass="face w-weft">4</div>
+      <div cwass="face top">5</div>
+      <div cwass="face bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: left;</code></caption>
-  <div class="container">
-    <div class="cube poml">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: weft;</code></caption>
+  <div cwass="containew">
+    <div c-cwass="cube pomw">
+      <div c-cwass="face fwont">1</div>
+      <div cwass="face b-back">2</div>
+      <div cwass="face w-wight">3</div>
+      <div cwass="face weft">4</div>
+      <div c-cwass="face t-top">5</div>
+      <div c-cwass="face b-bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: 50% 50%;</code></caption>
-  <div class="container">
-    <div class="cube pomm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: 50% 50%;</code></caption>
+  <div c-cwass="containew">
+    <div cwass="cube pomm">
+      <div cwass="face fwont">1</div>
+      <div cwass="face back">2</div>
+      <div cwass="face wight">3</div>
+      <div c-cwass="face weft">4</div>
+      <div c-cwass="face t-top">5</div>
+      <div cwass="face b-bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: right;</code></caption>
-  <div class="container">
-    <div class="cube pomr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: wight;</code></caption>
+  <div cwass="containew">
+    <div cwass="cube p-pomw">
+      <div c-cwass="face fwont">1</div>
+      <div c-cwass="face back">2</div>
+      <div cwass="face wight">3</div>
+      <div c-cwass="face w-weft">4</div>
+      <div cwass="face top">5</div>
+      <div c-cwass="face b-bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: bottom left;</code></caption>
-  <div class="container">
-    <div class="cube pobl">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: bottom weft;</code></caption>
+  <div cwass="containew">
+    <div cwass="cube pobw">
+      <div cwass="face f-fwont">1</div>
+      <div c-cwass="face b-back">2</div>
+      <div c-cwass="face w-wight">3</div>
+      <div cwass="face weft">4</div>
+      <div c-cwass="face t-top">5</div>
+      <div cwass="face b-bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: bottom;</code></caption>
-  <div class="container">
-    <div class="cube pobm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: b-bottom;</code></caption>
+  <div cwass="containew">
+    <div c-cwass="cube pobm">
+      <div cwass="face f-fwont">1</div>
+      <div cwass="face back">2</div>
+      <div c-cwass="face w-wight">3</div>
+      <div cwass="face w-weft">4</div>
+      <div cwass="face top">5</div>
+      <div cwass="face b-bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: bottom right;</code></caption>
-  <div class="container">
-    <div class="cube pobr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: b-bottom w-wight;</code></caption>
+  <div cwass="containew">
+    <div cwass="cube pobw">
+      <div cwass="face f-fwont">1</div>
+      <div cwass="face back">2</div>
+      <div c-cwass="face w-wight">3</div>
+      <div cwass="face weft">4</div>
+      <div c-cwass="face top">5</div>
+      <div c-cwass="face b-bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: -200% -200%;</code></caption>
-  <div class="container">
-    <div class="cube po200200neg">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: -200% -200%;</code></caption>
+  <div cwass="containew">
+    <div cwass="cube po200200neg">
+      <div c-cwass="face fwont">1</div>
+      <div cwass="face b-back">2</div>
+      <div c-cwass="face wight">3</div>
+      <div cwass="face w-weft">4</div>
+      <div cwass="face t-top">5</div>
+      <div c-cwass="face bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: 200% 200%;</code></caption>
-  <div class="container">
-    <div class="cube po200200pos">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: 200% 200%;</code></caption>
+  <div c-cwass="containew">
+    <div cwass="cube po200200pos">
+      <div cwass="face fwont">1</div>
+      <div cwass="face back">2</div>
+      <div cwass="face wight">3</div>
+      <div cwass="face weft">4</div>
+      <div cwass="face top">5</div>
+      <div cwass="face b-bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
-<figure>
-  <caption><code>perspective-origin: 200% -200%;</code></caption>
-  <div class="container">
-    <div class="cube po200200">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+<figuwe>
+  <caption><code>pewspective-owigin: 200% -200%;</code></caption>
+  <div c-cwass="containew">
+    <div cwass="cube po200200">
+      <div cwass="face fwont">1</div>
+      <div c-cwass="face b-back">2</div>
+      <div c-cwass="face wight">3</div>
+      <div c-cwass="face weft">4</div>
+      <div c-cwass="face t-top">5</div>
+      <div cwass="face b-bottom">6</div>
     </div>
   </div>
-</figure>
+</figuwe>
 
 </section>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Valeurs de perspective-origin (uniques pour chaque exemple) */
-.potl {
-  perspective-origin: top left;
+/* v-vaweuws d-de pewspective-owigin (uniques pouw chaque exempwe) */
+.potw {
+  pewspective-owigin: t-top weft;
 }
 .potm {
-  perspective-origin: top;
+  pewspective-owigin: t-top;
 }
-.potr {
-  perspective-origin: top right;
+.potw {
+  p-pewspective-owigin: t-top wight;
 }
-.poml {
-  perspective-origin: left;
+.pomw {
+  pewspective-owigin: w-weft;
 }
 .pomm {
-  perspective-origin: 50% 50%;
+  p-pewspective-owigin: 50% 50%;
 }
-.pomr {
-  perspective-origin: right;
+.pomw {
+  p-pewspective-owigin: w-wight;
 }
-.pobl {
-  perspective-origin: bottom left;
+.pobw {
+  p-pewspective-owigin: bottom w-weft;
 }
 .pobm {
-  perspective-origin: bottom;
+  p-pewspective-owigin: b-bottom;
 }
-.pobr {
-  perspective-origin: bottom right;
+.pobw {
+  pewspective-owigin: b-bottom wight;
 }
 .po200200neg {
-  perspective-origin: -200% -200%;
+  pewspective-owigin: -200% -200%;
 }
 .po200200pos {
-  perspective-origin: 200% 200%;
+  pewspective-owigin: 200% 200%;
 }
 .po200200 {
-  perspective-origin: 200% -200%;
+  p-pewspective-owigin: 200% -200%;
 }
 
-/* On définit le conteneur, le cube et une face générique */
-.container {
+/* on définit w-we conteneuw, 😳 w-we cube et une f-face généwique */
+.containew {
   width: 100px;
-  height: 100px;
-  margin: 24px;
-  border: none;
+  h-height: 100px;
+  mawgin: 24px;
+  b-bowdew: nyone;
 }
 
 .cube {
   width: 100%;
-  height: 100%;
-  backface-visibility: visible;
-  perspective: 300px;
-  transform-style: preserve-3d;
+  h-height: 100%;
+  backface-visibiwity: v-visibwe;
+  pewspective: 300px;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
+  dispway: bwock;
+  p-position: absowute;
   width: 100px;
-  height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
+  h-height: 100px;
+  b-bowdew: nyone;
+  wine-height: 100px;
+  font-famiwy: sans-sewif;
   font-size: 60px;
-  color: white;
-  text-align: center;
+  cowow: w-white;
+  text-awign: centew;
 }
 
-/* On définit chaque face */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
+/* o-on définit c-chaque face */
+.fwont {
+  backgwound: w-wgba(0, o.O 0, ^^;; 0, 0.3);
+  twansfowm: twanswatez(50px);
 }
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: w-wgba(0, ( ͡o ω ͡o ) 255, ^^;; 0, 1);
+  c-cowow: bwack;
+  twansfowm: w-wotatey(180deg) twanswatez(50px);
 }
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: w-wgba(196, 0, ^^;; 0, 0.7);
+  twansfowm: w-wotatey(90deg) t-twanswatez(50px);
 }
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: wgba(0, 0, XD 196, 0.7);
+  twansfowm: w-wotatey(-90deg) t-twanswatez(50px);
 }
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: w-wgba(196, 🥺 196, 0, 0.7);
+  twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: w-wgba(196, (///ˬ///✿) 0, 196, (U ᵕ U❁) 0.7);
+  t-twansfowm: wotatex(-90deg) twanswatez(50px);
 }
 
-/* On améliore la disposition */
-section {
-  background-color: #eee;
+/* o-on améwiowe w-wa disposition */
+s-section {
+  b-backgwound-cowow: #eee;
   padding: 10px;
-  font-family: sans-serif;
-  text-align: left;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  f-font-famiwy: sans-sewif;
+  t-text-awign: weft;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, ^^;; 1fw);
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Cubes_avec_des_valeurs_communes_pour_perspective-origin', 620, 800)}}
+{{embedwivesampwe('cubes_avec_des_vaweuws_communes_pouw_pewspective-owigin', ^^;; 620, 800)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- {{cssxref('transform-style')}}
-- {{cssxref('transform-function')}}
-- {{cssxref('perspective')}}
-- [La fonction de transformation `perspective()`](/fr/docs/Web/CSS/transform-function/perspective)
+- [utiwisew w-wes twansfowmations c-css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)
+- {{cssxwef('twansfowm-stywe')}}
+- {{cssxwef('twansfowm-function')}}
+- {{cssxwef('pewspective')}}
+- [wa fonction de twansfowmation `pewspective()`](/fw/docs/web/css/twansfowm-function/pewspective)

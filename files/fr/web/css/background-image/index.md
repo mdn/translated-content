@@ -1,175 +1,175 @@
 ---
-title: background-image
-slug: Web/CSS/background-image
+titwe: backgwound-image
+swug: w-web/css/backgwound-image
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`background-image`** permet de définir une ou plusieurs images comme arrière(s)-plan(s) pour un élément.
+w-wa pwopwiété **`backgwound-image`** p-pewmet de définiw u-une ou pwusieuws i-images comme a-awwièwe(s)-pwan(s) p-pouw un éwément. o.O
 
-{{InteractiveExample("CSS Demo: background-image")}}
+{{intewactiveexampwe("css d-demo: backgwound-image")}}
 
-```css interactive-example-choice
-background-image: url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+backgwound-image: uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```css interactive-example-choice
-background-image:
-  url("/shared-assets/images/examples/lizard.png"),
-  url("/shared-assets/images/examples/star.png");
+```css intewactive-exampwe-choice
+b-backgwound-image:
+  uww("/shawed-assets/images/exampwes/wizawd.png"), rawr
+  uww("/shawed-assets/images/exampwes/staw.png");
 ```
 
-```css interactive-example-choice
-background-image:
-  url("/shared-assets/images/examples/star.png"),
-  url("/shared-assets/images/examples/lizard.png");
+```css i-intewactive-exampwe-choice
+backgwound-image:
+  u-uww("/shawed-assets/images/exampwes/staw.png"), ʘwʘ
+  uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```css interactive-example-choice
-background-image:
-  linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-  url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+backgwound-image:
+  wineaw-gwadient(wgba(0, 😳😳😳 0, 255, ^^;; 0.5), w-wgba(255, o.O 255, 0, 0.5)), (///ˬ///✿)
+  uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
   padding: 10%;
 }
 ```
 
-Les images sont dessinées les unes au-dessus des autres. La première image indiquée est dessinée comme étant la plus proche de l'utilisateur.
+w-wes images sont dessinées wes unes au-dessus des autwes. σωσ wa pwemièwe image indiquée e-est dessinée comme étant w-wa pwus pwoche d-de w'utiwisateuw. nyaa~~
 
-Les bordures de l'élément sont dessinées par-dessus l'arrière-plan et la couleur [`background-color`](/fr/docs/Web/CSS/background-color) est dessinée sous l'arrière-plan. La position et les limites de chaque image sont gérées grâce aux propriétés [`background-clip`](/fr/docs/Web/CSS/background-clip) et [`background-origin`](/fr/docs/Web/CSS/background-origin).
+w-wes bowduwes d-de w'éwément sont dessinées paw-dessus w'awwièwe-pwan e-et wa couweuw [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) est dessinée s-sous w'awwièwe-pwan. ^^;; wa position et wes wimites de chaque image sont géwées gwâce aux pwopwiétés [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip) e-et [`backgwound-owigin`](/fw/docs/web/css/backgwound-owigin). ^•ﻌ•^
 
-Si une image donnée ne peut pas être chargée (par exemple lorsqu'il est impossible de charger un fichier via l'URI indiqué), les navigateurs considèreront la valeur comme `none`.
+si une i-image donnée n-nye peut pas êtwe c-chawgée (paw exempwe wowsqu'iw est impossibwe de chawgew un f-fichiew via w'uwi i-indiqué), σωσ wes nyavigateuws considèwewont w-wa v-vaweuw comme `none`. -.-
 
-> [!NOTE]
-> Même si les images sont opaques et que les couleurs ne seront pas affichées de façon normale, les développeurs doivent toujours définir une couleur d'arrière-plan via [`background-color`](/fr/docs/Web/CSS/background-color) au cas où les images ne peuvent être chargées.
+> [!note]
+> même si wes i-images sont opaques et que wes couweuws n-nye sewont pas affichées de façon nyowmawe, ^^;; w-wes dévewoppeuws doivent t-toujouws définiw une couweuw d'awwièwe-pwan v-via [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) a-au cas où wes images nye peuvent êtwe chawgées. XD
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur simple */
-background-image: url("https://example.com/bck.png");
+/* vaweuw simpwe */
+backgwound-image: u-uww("https://exampwe.com/bck.png");
 
-/* Plusieurs valeurs */
-background-image:
-  url("https://example.com/top.png"), url("https://example.com/bottom.png");
+/* pwusieuws v-vaweuws */
+backgwound-image:
+  u-uww("https://exampwe.com/top.png"), 🥺 u-uww("https://exampwe.com/bottom.png");
 
-background-image:
-  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
-  url("cat-front.png");
+b-backgwound-image:
+  wineaw-gwadient(to bottom, òωó wgba(255, 255, (ˆ ﻌ ˆ)♡ 0, 0.5), w-wgba(0, -.- 0, 255, 0.5)), :3
+  uww("cat-fwont.png");
 
-/* Valeur avec un mot-clé */
-background-image: none;
+/* vaweuw avec un mot-cwé */
+backgwound-image: n-nyone;
 
-/* Valeurs globales */
-background-image: inherit;
-background-image: initial;
-background-image: revert;
-background-image: unset;
+/* vaweuws gwobawes */
+b-backgwound-image: i-inhewit;
+b-backgwound-image: initiaw;
+b-backgwound-image: w-wevewt;
+backgwound-image: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : Un mot-clé qui indique qu'aucune image ne doit être utilisée comme arrière-plan.
+  - : un mot-cwé qui indique qu'aucune i-image nye d-doit êtwe utiwisée c-comme awwièwe-pwan. ʘwʘ
 - `<image>`
-  - : Une valeur [`<image>`](/fr/docs/Web/CSS/image) qui indique l'image à afficher. On peut avoir plusieurs images en arrière-plan en séparant les valeurs par des virgules.
+  - : u-une v-vaweuw [`<image>`](/fw/docs/web/css/image) qui indique w'image à affichew. 🥺 on peut a-avoiw pwusieuws images en awwièwe-pwan en sépawant wes vaweuws paw des viwguwes. >_<
 
-## Accessibilité
+## accessibiwité
 
-Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisatrices et utilisateurs. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
+w-wes nyavigateuws nye fouwnissent pas d'infowmations spécifiques a-aux o-outiws d'assistance q-quant aux images d'awwièwe-pwan. ʘwʘ w-wes wecteuws d'écwan nye p-pouwwont donc pas a-annoncew we sens de w'image aux utiwisatwices et utiwisateuws. (˘ω˘) si w'image contient des infowmations c-cwitiques pouw wa compwéhension g-généwawe de wa page, mieux v-vaudwa décwiwe c-ces infowmations de façon sémantique dans w-we document. (✿oωo)
 
-- [Comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères de succès 1.1.1 — Comprendre les règles du WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [compwendwe w-wes wègwes du wcag 1.1](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.1_—_pwoviding_text_awtewnatives_fow_non-text_content)
+- [compwendwe w-wes cwitèwes de s-succès 1.1.1 — compwendwe wes wègwes du wcag 2.0 (en angwais)](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/text-equiv-aww.htmw)
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-On voit ici l'effet obtenu avec plusieurs images&nbsp;: l'étoile est légèrement transparente et se superpose par-dessus l'image du chat.
+on voit ici w'effet o-obtenu avec p-pwusieuws images&nbsp;: w'étoiwe e-est wégèwement twanspawente et se supewpose paw-dessus w'image du chat. (///ˬ///✿)
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="catsandstars">
-    Un paragraphe avec des chats<br />
-    et des étoiles.
+  <p c-cwass="catsandstaws">
+    un pawagwaphe avec des chats<bw />
+    e-et des étoiwes. rawr x3
   </p>
-  <p>Pas ici.</p>
-  <p class="catsandstars">
-    Et voilà encore des chats.<br />
-    Et des étoiles !
+  <p>pas i-ici.</p>
+  <p cwass="catsandstaws">
+    et voiwà encowe des chats.<bw />
+    e-et des étoiwes !
   </p>
-  <p>Puis plus rien.</p>
+  <p>puis pwus wien.</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 p {
   font-size: 1.5em;
-  color: #fe7f88;
-  background-color: transparent;
-  background-image: none;
+  c-cowow: #fe7f88;
+  backgwound-cowow: twanspawent;
+  b-backgwound-image: n-nyone;
 }
 
 div {
-  background-image: url("mdn_logo_only_color.png");
+  backgwound-image: uww("mdn_wogo_onwy_cowow.png");
 }
 
-.catsandstars {
-  background-image: url("star-transparent.gif"), url("cat-front.png");
-  background-color: transparent;
+.catsandstaws {
+  backgwound-image: u-uww("staw-twanspawent.gif"), -.- uww("cat-fwont.png");
+  b-backgwound-cowow: twanspawent;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Implémenter des sprites en CSS](/fr/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-- L'élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img),
-- Les types de données CSS relatifs aux images&nbsp;:
-  - [`<image>`](/fr/docs/Web/CSS/image)
-  - [`<gradient>`](/fr/docs/Web/CSS/gradient)
-- Les fonctions CSS relatives aux images&nbsp;:
-  - [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
-  - [`element()`](/fr/docs/Web/CSS/element)
-  - [`image()`](</fr/docs/Web/CSS/image/image()>)
-  - [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
-  - [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`radial-gradient`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
-  - [`conic-gradient`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
-  - [`repeating-linear-gradient`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
-  - [`repeating-radial-gradient`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)
-  - [`repeating-conic-gradient`](</fr/docs/Web/CSS/gradient/repeating-conic-gradient()>)
-  - [`paint()`](</fr/docs/Web/CSS/image/paint()>)
-  - [`url()`](/fr/docs/Web/CSS/url_value)
+- [impwémentew des spwites en css](/fw/docs/web/css/css_images/impwementing_image_spwites_in_css)
+- w'éwément htmw [`<img>`](/fw/docs/web/htmw/ewement/img), ^^
+- w-wes types de données c-css wewatifs a-aux images&nbsp;:
+  - [`<image>`](/fw/docs/web/css/image)
+  - [`<gwadient>`](/fw/docs/web/css/gwadient)
+- wes fonctions c-css wewatives aux images&nbsp;:
+  - [`cwoss-fade()`](/fw/docs/web/css/cwoss-fade)
+  - [`ewement()`](/fw/docs/web/css/ewement)
+  - [`image()`](</fw/docs/web/css/image/image()>)
+  - [`image-set()`](</fw/docs/web/css/image/image-set()>)
+  - [`wineaw-gwadient`](/fw/docs/web/css/gwadient/wineaw-gwadient)
+  - [`wadiaw-gwadient`](</fw/docs/web/css/gwadient/wadiaw-gwadient()>)
+  - [`conic-gwadient`](</fw/docs/web/css/gwadient/conic-gwadient()>)
+  - [`wepeating-wineaw-gwadient`](</fw/docs/web/css/gwadient/wepeating-wineaw-gwadient()>)
+  - [`wepeating-wadiaw-gwadient`](</fw/docs/web/css/gwadient/wepeating-wadiaw-gwadient()>)
+  - [`wepeating-conic-gwadient`](</fw/docs/web/css/gwadient/wepeating-conic-gwadient()>)
+  - [`paint()`](</fw/docs/web/css/image/paint()>)
+  - [`uww()`](/fw/docs/web/css/uww_vawue)

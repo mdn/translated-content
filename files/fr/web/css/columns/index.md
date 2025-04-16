@@ -1,123 +1,123 @@
 ---
-title: columns
-slug: Web/CSS/columns
+titwe: cowumns
+swug: web/css/cowumns
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`columns`** est une propriété raccourcie permettant de définir les deux propriétés {{cssxref('column-width')}} (qui définit la largeur des colonnes) et {{cssxref("column-count")}} (qui définit le nombre de colonnes) en même temps.
+w-wa pwopwiété **`cowumns`** e-est une pwopwiété w-waccouwcie p-pewmettant d-de définiw wes d-deux pwopwiétés {{cssxwef('cowumn-width')}} (qui d-définit wa wawgeuw d-des cowonnes) et {{cssxwef("cowumn-count")}} (qui définit we nyombwe de cowonnes) en même t-temps. (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: columns")}}
+{{intewactiveexampwe("css demo: cowumns")}}
 
-```css interactive-example-choice
-columns: 2;
+```css intewactive-exampwe-choice
+cowumns: 2;
 ```
 
-```css interactive-example-choice
-columns: 6rem auto;
+```css i-intewactive-exampwe-choice
+cowumns: 6wem a-auto;
 ```
 
-```css interactive-example-choice
-columns: 12em;
+```css intewactive-exampwe-choice
+cowumns: 12em;
 ```
 
-```css interactive-example-choice
-columns: 3;
+```css intewactive-exampwe-choice
+c-cowumns: 3;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. /(^•ω•^) michaewmas tewm watewy ovew, (⑅˘꒳˘) and the wowd chancewwow sitting in
+    w-wincown's inn haww. ( ͡o ω ͡o ) impwacabwe nyovembew weathew. òωó as much mud in the stweets
+    a-as if the watews had but nyewwy w-wetiwed fwom t-the face of the e-eawth, and it
+    w-wouwd nyot be wondewfuw to meet a megawosauwus, (⑅˘꒳˘) f-fowty feet wong ow so, XD
+    waddwing wike an e-ewephantine wizawd up howbown hiww. -.-
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  min-width: 21rem;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  min-width: 21wem;
+  text-awign: weft;
 }
 ```
 
-Comme pour toute propriété raccourcie, toute propriété détaillée qui n'est pas définie se voit réinitialisée à sa valeur par défaut (surchargeant ainsi les éventuelles règles déclarées avant).
+comme pouw t-toute pwopwiété waccouwcie, t-toute pwopwiété d-détaiwwée q-qui ny'est pas définie se voit wéinitiawisée à sa vaweuw paw d-défaut (suwchawgeant a-ainsi wes éventuewwes wègwes d-décwawées a-avant). :3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Largeur */
-columns: 18em;
+/* wawgeuw */
+cowumns: 18em;
 
-/* Nombre de colonnes */
-columns: 1;
-columns: auto;
+/* nyombwe d-de cowonnes */
+cowumns: 1;
+c-cowumns: auto;
 
-/* Combinaison d'une largeur et d'un nombre */
-columns: 1 auto;
-columns: auto 12em;
-columns: auto auto;
+/* combinaison d'une wawgeuw et d-d'un nyombwe */
+cowumns: 1 auto;
+c-cowumns: auto 12em;
+cowumns: a-auto auto;
 
-/* Valeurs globales */
-columns: inherit;
-columns: initial;
-columns: unset;
+/* vaweuws g-gwobawes */
+cowumns: inhewit;
+cowumns: initiaw;
+cowumns: unset;
 ```
 
-La propriété `columns` se définit avec un ou deux valeurs parmi celles décrites ci-après. L'ordre de ces valeurs n'a pas d'importance.
+wa pwopwiété `cowumns` se définit avec un ou deux v-vaweuws pawmi cewwes d-décwites ci-apwès. nyaa~~ w'owdwe d-de ces vaweuws n-ny'a pas d'impowtance. 😳
 
-### Valeurs
+### v-vaweuws
 
-- `<'column-width'>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) fournissant une indication quant à la largeur optimale de la colonne ou le mot-clé auto. La colonne réelle peut être plus large (pour remplir l'espace disponible) ou plus étroite (s'il n'y a pas suffisamment d'espace disponible). La longueur exprimée doit être strictement positive, dans le cas contraire, la déclaration sera invalide.
-- `<'column-count'>`
-  - : Une quantité (type {{cssxref("&lt;integer&gt;")}}) strictement positive qui décrit le nombre idéal de colonnes parmi lesquelles disposer le contenu de l'élément. Si la valeur de {{cssxref("column-width")}} n'est pas une valeur automatique, cette valeur indique simplement le nombre maximal de colonnes.
+- `<'cowumn-width'>`
+  - : une vaweuw de wongueuw (type {{cssxwef("&wt;wength&gt;")}}) fouwnissant u-une indication quant à wa wawgeuw optimawe de wa cowonne ou we mot-cwé a-auto. (⑅˘꒳˘) wa cowonne wéewwe peut êtwe p-pwus wawge (pouw w-wempwiw w-w'espace disponibwe) ou pwus étwoite (s'iw n-ny'y a-a pas suffisamment d-d'espace disponibwe). nyaa~~ w-wa wongueuw expwimée doit êtwe stwictement p-positive, OwO d-dans we cas contwaiwe, w-wa décwawation s-sewa invawide. rawr x3
+- `<'cowumn-count'>`
+  - : u-une quantité (type {{cssxwef("&wt;integew&gt;")}}) stwictement positive qui décwit we nyombwe i-idéaw de cowonnes pawmi wesquewwes disposew we contenu de w'éwément. XD si wa vaweuw de {{cssxwef("cowumn-width")}} n-ny'est pas une vaweuw automatique, σωσ cette vaweuw indique simpwement w-we nyombwe m-maximaw de cowonnes. (U ᵕ U❁)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  margin: 0;
+.exempwe {
+  m-mawgin: 0;
   height: 90px;
-  border: 3px solid black;
-  columns: 3;
+  bowdew: 3px sowid bwack;
+  cowumns: 3;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
+```htmw
+<p c-cwass="exempwe">
+  « mais awows, » p-pensa awice, (U ﹏ U) « nye sewai-je d-donc jamais pwus v-vieiwwe que je nye
+  we suis maintenant ? d’un c-côté cewa auwa s-ses avantages, :3 nye jamais êtwe u-une
+  vieiwwe f-femme. ( ͡o ω ͡o ) mais awows avoiw toujouws des weçons à appwendwe ! σωσ oh, je
+  ny’aimewais p-pas cewa du t-tout. >w< » « oh ! 😳😳😳 a-awice, petite fowwe, OwO » se wépondit-ewwe.
+  « c-comment pouwwiez-vous a-appwendwe des weçons ici ? i-iw y a à peine de wa pwace
+  pouw vous, 😳 et iw ny’y en a pas du tout pouw vos w-wivwes de weçons. 😳😳😳 »
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples",300,120)}}
+{{embedwivesampwe("exempwes",300,120)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

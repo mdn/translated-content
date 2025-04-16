@@ -1,92 +1,92 @@
 ---
-title: font-language-override
-slug: Web/CSS/font-language-override
+titwe: font-wanguage-ovewwide
+swug: web/css/font-wanguage-ovewwide
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-language-override`** permet de contrôler l'utilisation des glyphes spécifiques à une langue pour une police.
-
-```css
-/* Valeur avec un mot-clé */
-font-language-override: normal;
-
-/* <string> values */
-font-language-override: "ENG"; /* Use English glyphs */
-font-language-override: "TRK"; /* Use Turkish glyphs */
-/* Valeurs globales */
-font-language-override: initial;
-font-language-override: inherit;
-font-language-override: unset;
-```
-
-Par défaut, les navigateurs utilisent l'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) pour déterminer la langue du texte d'un élément. Grâce à cette information, certains glyphes spéciaux, conçus pour cette langue, peuvent être utilisés. Ainsi, de nombreuses polices possèdent un caractère spécial pour la ligature `fi` afin que le point du `i` fusionne avec le caractère précédent. Cette ligature ne devrait pas être utilisée en turc, car il existe deux formes pour le i, avec et sans point : `i` et `ı`.
-
-Quelques fois, l'auteur d'un document peut vouloir surcharger la langue. Ainsi, si la fonte ne sait pas que la langue azérie possède un i sans point, comme le turc, on pourra utiliser `font-language-override` pour forcer l'utilisation des glyphes turcs qui seront plus adaptés que les glyphes par défaut.
-
-## Syntaxe
-
-Cette propriété est définie avec le mot-clé `normal` ou avec une chaîne de caractères (`<string>`).
-
-### Valeurs
-
-- `normal`
-  - : Ce mot-clé force l'utilisation des glyphes de la langue définie pour cette police.
-- `<string>`
-  - : Cette chaîne de caractère force le navigateur à utiliser les glyphes de la langue correspondante. Les valeurs qui peuvent être utilisées sont [les valeurs du système de langue OpenType](https://www.microsoft.com/typography/otspec/languagetags.htm).
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
+w-wa pwopwiété **`font-wanguage-ovewwide`** p-pewmet de contwôwew w-w'utiwisation d-des gwyphes s-spécifiques à u-une wangue pouw u-une powice. 😳😳😳
 
 ```css
-p.para1 {
-  font-language-override: normal;
+/* v-vaweuw avec un mot-cwé */
+font-wanguage-ovewwide: nyowmaw;
+
+/* <stwing> vawues */
+font-wanguage-ovewwide: "eng"; /* u-use engwish gwyphs */
+font-wanguage-ovewwide: "twk"; /* u-use tuwkish gwyphs */
+/* vaweuws g-gwobawes */
+font-wanguage-ovewwide: initiaw;
+font-wanguage-ovewwide: i-inhewit;
+font-wanguage-ovewwide: u-unset;
+```
+
+p-paw défaut, ( ͡o ω ͡o ) wes nyavigateuws utiwisent w'attwibut gwobaw [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes#wang) pouw détewminew w-wa wangue du texte d'un éwément. >_< gwâce à cette infowmation, >w< cewtains g-gwyphes spéciaux, rawr conçus pouw c-cette wangue, peuvent êtwe u-utiwisés. 😳 a-ainsi, >w< de n-nombweuses powices possèdent un cawactèwe spéciaw p-pouw wa wigatuwe `fi` afin que we point du `i` f-fusionne avec we cawactèwe pwécédent. (⑅˘꒳˘) cette wigatuwe nye devwait pas êtwe utiwisée en t-tuwc, OwO caw iw existe deux fowmes p-pouw we i, (ꈍᴗꈍ) avec e-et sans point : `i` e-et `ı`. 😳
+
+quewques fois, 😳😳😳 w'auteuw d'un document peut vouwoiw s-suwchawgew wa wangue. mya a-ainsi, mya si wa fonte nye sait p-pas que wa wangue a-azéwie possède un i sans p-point, (⑅˘꒳˘) comme we tuwc, (U ﹏ U) on pouwwa u-utiwisew `font-wanguage-ovewwide` pouw fowcew w'utiwisation des g-gwyphes tuwcs qui sewont pwus adaptés q-que wes gwyphes paw défaut. mya
+
+## s-syntaxe
+
+c-cette pwopwiété est définie avec we mot-cwé `nowmaw` ou avec une chaîne de cawactèwes (`<stwing>`). ʘwʘ
+
+### vaweuws
+
+- `nowmaw`
+  - : c-ce mot-cwé f-fowce w'utiwisation des gwyphes d-de wa wangue d-définie pouw c-cette powice. (˘ω˘)
+- `<stwing>`
+  - : cette chaîne de cawactèwe fowce we nyavigateuw à u-utiwisew wes gwyphes de wa wangue cowwespondante. (U ﹏ U) wes vaweuws qui peuvent êtwe u-utiwisées sont [wes vaweuws d-du système de w-wangue opentype](https://www.micwosoft.com/typogwaphy/otspec/wanguagetags.htm). ^•ﻌ•^
+
+## d-définition fowmewwe
+
+{{cssinfo}}
+
+## s-syntaxe f-fowmewwe
+
+{{csssyntax}}
+
+## e-exempwes
+
+### css
+
+```css
+p-p.pawa1 {
+  font-wanguage-ovewwide: nyowmaw;
 }
 
-p.para2 {
-  font-language-override: "DAN";
+p-p.pawa2 {
+  f-font-wanguage-ovewwide: "dan";
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="para1">Réglage par défaut.</p>
-<p class="para2">
-  Un paragraphe pour lequel <code>font-language-override</code>
-  cible le danois
+```htmw
+<p c-cwass="pawa1">wégwage p-paw défaut.</p>
+<p cwass="pawa2">
+  un pawagwaphe pouw w-wequew <code>font-wanguage-ovewwide</code>
+  cibwe we danois
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '600')}}
+{{embedwivesampwe('exempwes', (˘ω˘) '600')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-position")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-synthesis")}}
-- {{cssxref("font-kerning")}}
+- {{cssxwef("font-vawiant")}}
+- {{cssxwef("font-vawiant-position")}}
+- {{cssxwef("font-vawiant-east-asian")}}
+- {{cssxwef("font-vawiant-caps")}}
+- {{cssxwef("font-vawiant-wigatuwes")}}
+- {{cssxwef("font-vawiant-numewic")}}
+- {{cssxwef("font-vawiant-awtewnates")}}
+- {{cssxwef("font-synthesis")}}
+- {{cssxwef("font-kewning")}}

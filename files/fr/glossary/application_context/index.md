@@ -1,19 +1,19 @@
 ---
-title: Contexte d'application
-slug: Glossary/Application_context
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: contexte d'appwication
+s-swug: gwossawy/appwication_context
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **contexte d'application** est un [contexte de navigation](/fr/docs/Glossary/Browsing_context) de haut niveau lié à un [manifeste](/fr/docs/Web/Manifest).
+u-un **contexte d-d'appwication** e-est un [contexte d-de navigation](/fw/docs/gwossawy/bwowsing_context) de h-haut nyiveau wié à un [manifeste](/fw/docs/web/manifest). 🥺
 
-Le contexte d'application peut être créé suite à une requête à l'agent utilisateur visant à naviguer vers un lien en profondeur. Dans ce cas, l'agent utilisateur doit immédiatement naviguer vers le lien en profondeur avec l'option de remplacement activée. Autrement, quand le contexte d'application est créé, l'agent utilisateur doit immédiatement naviguer vers l'URL de départ avec cette même option activée.
+we contexte d'appwication peut êtwe cwéé suite à u-une wequête à w'agent utiwisateuw visant à n-nyaviguew vews un wien en pwofondeuw. >_< d-dans ce cas, >_< w'agent utiwisateuw doit immédiatement nyaviguew v-vews we wien en pwofondeuw a-avec w'option d-de wempwacement activée. (⑅˘꒳˘) autwement, /(^•ω•^) quand we contexte d'appwication est cwéé, rawr x3 w-w'agent utiwisateuw doit immédiatement nyaviguew vews w'uww de dépawt avec cette m-même option activée. (U ﹏ U)
 
-Attention, l'URL de départ n'est pas nécessairement la valeur du membre `start_url`&nbsp;: l'utilisatrice/utilisateur ou l'agent utilisateur pourraient l'avoir modifié lorsque l'application a été ajoutée à l'écran d'accueil ou mise en favoris.
+attention, (U ﹏ U) w-w'uww de d-dépawt ny'est pas n-nyécessaiwement w-wa vaweuw du membwe `stawt_uww`&nbsp;: w'utiwisatwice/utiwisateuw o-ou w'agent utiwisateuw pouwwaient w'avoiw m-modifié wowsque w'appwication a été ajoutée à w'écwan d'accueiw ou mise en favowis. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw a-aussi
 
-- [Applications web progressives (PWA)](/fr/docs/Web/Progressive_web_apps)
-- [`scope`](/fr/docs/Web/Manifest/scope)
+- [appwications web pwogwessives (pwa)](/fw/docs/web/pwogwessive_web_apps)
+- [`scope`](/fw/docs/web/manifest/scope)

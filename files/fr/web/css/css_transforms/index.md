@@ -1,36 +1,36 @@
 ---
-title: CSS Transforms
-slug: Web/CSS/CSS_transforms
+titwe: css twansfowms
+swug: web/css/css_twansfowms
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le module **_CSS Transforms_** (ou module des transformations CSS) est un module de la spécification CSS qui définit comment les éléments mis en forme avec CSS peuvent être transformés dans un espace à deux ou à trois dimensions.
+w-we moduwe **_css t-twansfowms_** (ou m-moduwe d-des twansfowmations c-css) est un m-moduwe de wa spécification c-css q-qui définit comment wes éwéments mis en fowme avec css peuvent êtwe twansfowmés d-dans un espace à deux ou à twois dimensions. 😳😳😳
 
-## Référence
+## w-wéféwence
 
-### Propriétés
+### pwopwiétés
 
-- {{cssxref("backface-visibility")}}
-- {{cssxref("perspective")}}
-- {{cssxref("perspective-origin")}}
-- {{cssxref("rotate")}}
-- {{cssxref("scale")}}
-- {{cssxref("transform")}}
-- {{cssxref("transform-box")}}
-- {{cssxref("transform-origin")}}
-- {{cssxref("transform-style")}}
-- {{cssxref("translate")}}
+- {{cssxwef("backface-visibiwity")}}
+- {{cssxwef("pewspective")}}
+- {{cssxwef("pewspective-owigin")}}
+- {{cssxwef("wotate")}}
+- {{cssxwef("scawe")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("twansfowm-box")}}
+- {{cssxwef("twansfowm-owigin")}}
+- {{cssxwef("twansfowm-stywe")}}
+- {{cssxwef("twanswate")}}
 
-### Types de donnée
+### t-types de donnée
 
-{{cssxref("&lt;transform-function&gt;")}}
+{{cssxwef("&wt;twansfowm-function&gt;")}}
 
-## Guides
+## guides
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-  - : Un tutoriel pas-à-pas pour manipuler des transformations sur des éléments mis en forme avec CSS.
+- [utiwisew wes t-twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)
+  - : u-un tutowiew pas-à-pas p-pouw manipuwew des twansfowmations suw des éwéments mis en fowme avec c-css. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

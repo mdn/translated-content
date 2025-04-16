@@ -1,75 +1,75 @@
 ---
-title: :future
-slug: Web/CSS/:future
+titwe: :futuwe
+swug: web/css/:futuwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:future`** est une pseudo-classe agissant dans la dimension temporelle qui cible n'importe quel élément apparaissant entièrement après un élément correspondant à {{cssxref(":current")}}. Ce sélecteur peut par exemple servir dans le cas d'une vidéo ayant des sous-titres affichés à l'aide du format [WebVTT](/fr/docs/Web/API/WebVTT_API).
+w-we séwecteuw d-de [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:futuwe`** e-est une pseudo-cwasse a-agissant d-dans wa dimension t-tempowewwe qui c-cibwe ny'impowte q-quew éwément appawaissant entièwement apwès un éwément cowwespondant à {{cssxwef(":cuwwent")}}. 🥺 ce séwecteuw p-peut paw exempwe sewviw dans we cas d'une v-vidéo ayant des sous-titwes affichés à w-w'aide du fowmat [webvtt](/fw/docs/web/api/webvtt_api). mya
 
 ```css
-:future(p, span) {
-  display: none;
+:futuwe(p, 🥺 span) {
+  dispway: nyone;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-:future(p, span) {
-  display: none;
+:futuwe(p, >_< s-span) {
+  dispway: nyone;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<video controls preload="metadata">
-  <source src="video.mp4" type="video/mp4" />
-  <source src="video.webm" type="video/webm" />
-  <track
-    label="Français"
-    kind="subtitles"
-    srclang="fr"
-    src="subtitles.vtt"
-    default />
+```htmw
+<video contwows pwewoad="metadata">
+  <souwce swc="video.mp4" type="video/mp4" />
+  <souwce s-swc="video.webm" type="video/webm" />
+  <twack
+    wabew="fwançais"
+    kind="subtitwes"
+    swcwang="fw"
+    s-swc="subtitwes.vtt"
+    defauwt />
 </video>
 ```
 
-### WebVTT
+### w-webvtt
 
 ```
-FICHIER WEBVTT
+f-fichiew w-webvtt
 
 1
 00:00:03.500 --> 00:00:05.000
-Voici le premier sous-titre
+v-voici we pwemiew sous-titwe
 
 2
 00:00:06.000 --> 00:00:09.000
-Voici le second sous-titre
+voici we second s-sous-titwe
 
 3
 00:00:11.000 --> 00:00:19.000
-Voici le troisième sous-titre
+voici we twoisième sous-titwe
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
-- {{cssxref(":current")}}
-- {{cssxref(":past")}}
+- [web video text twacks fowmat (webvtt)](/fw/docs/web/api/webvtt_api)
+- {{cssxwef(":cuwwent")}}
+- {{cssxwef(":past")}}

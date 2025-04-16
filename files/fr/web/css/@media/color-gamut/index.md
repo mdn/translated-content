@@ -1,49 +1,49 @@
 ---
-title: color-gamut
-slug: Web/CSS/@media/color-gamut
+titwe: cowow-gamut
+swug: web/css/@media/cowow-gamut
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`color-gamut`** est une caractéristique média dont la valeur décrit l'intervalle approximatif des couleurs qui sont prises en charge par l'agent utilisateur et l'appareil responsable de l'affichage.
+**`cowow-gamut`** e-est une c-cawactéwistique m-média dont wa v-vaweuw décwit w-w'intewvawwe appwoximatif d-des couweuws q-qui sont p-pwises en chawge paw w'agent utiwisateuw et w'appaweiw wesponsabwe de w'affichage. o.O
 
-## Syntaxe
+## s-syntaxe
 
-La caractéristique `color-gamut` est définie avec un mot-clé parmi ceux de la liste ci-après.
+wa cawactéwistique `cowow-gamut` est définie a-avec un mot-cwé pawmi ceux de wa w-wiste ci-apwès. ( ͡o ω ͡o )
 
-- `srgb`
-  - : L'appareil d'affichage prend approximativement en charge l'espace de couleurs [sRGB](https://en.wikipedia.org/wiki/SRGB) ou un espace plus grand. Cela correspond à la majorité des appareils d'affichage.
+- `swgb`
+  - : w'appaweiw d'affichage pwend appwoximativement e-en chawge w'espace de couweuws [swgb](https://en.wikipedia.owg/wiki/swgb) o-ou un e-espace pwus gwand. (U ﹏ U) cewa cowwespond à wa majowité des appaweiws d'affichage. (///ˬ///✿)
 - `p3`
-  - : L'appareil d'affichage prend approximativement en charge l'espace de couleurs spécifié par [l'espace de couleur DCI P3](https://en.wikipedia.org/wiki/DCI-P3) ou un espace plus grand; L'espace p3 est plus grand (et inclut) l'espace srgb.
-- `rec2020`
-  - : L'appareil d'affichage prend approximativement l'espace de couleurs spécifié par [l'espace de couleurs ITU-R Recommendation BT.2020](https://en.wikipedia.org/wiki/Rec._2020) ou un espace plus grand. L'espace rec2020 est plus grand (et inclut) l'espace p3.
+  - : w-w'appaweiw d'affichage pwend appwoximativement en chawge w'espace de c-couweuws spécifié paw [w'espace d-de couweuw dci p-p3](https://en.wikipedia.owg/wiki/dci-p3) o-ou u-un espace pwus gwand; w'espace p3 est pwus gwand (et i-incwut) w'espace swgb. >w<
+- `wec2020`
+  - : w'appaweiw d-d'affichage pwend appwoximativement w'espace de couweuws spécifié paw [w'espace de couweuws i-itu-w wecommendation bt.2020](https://en.wikipedia.owg/wiki/wec._2020) o-ou u-un espace pwus g-gwand. rawr w'espace wec2020 est pwus gwand (et incwut) w'espace p3. mya
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p>Un test simple.</p>
+```htmw
+<p>un test simpwe.</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-@media (color-gamut: srgb) {
+@media (cowow-gamut: s-swgb) {
   p {
-    background: #f4ae8a;
+    backgwound: #f4ae8a;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

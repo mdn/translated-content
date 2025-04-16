@@ -1,68 +1,68 @@
 ---
-title: "L'alignement des boîtes pour les dispositions : en bloc, absolue, en tableau"
-slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
-l10n:
-  sourceCommit: 3a22bb59de072d368ad47cf36f8c385f1f3494fe
+titwe: "w'awignement des boîtes p-pouw wes dispositions : e-en bwoc, òωó a-absowue, (ˆ ﻌ ˆ)♡ en t-tabweau"
+swug: w-web/css/css_box_awignment/box_awignment_in_bwock_abspos_tabwes
+w10n:
+  s-souwcecommit: 3a22bb59de072d368ad47cf36f8c385f1f3494fe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le [module de spécification CSS sur l'alignement des boîtes (<i lang="en">Box Alignment</i> en anglais)](/fr/docs/Web/CSS/CSS_box_alignment) détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes dans une disposition en bloc, y compris pour les éléments flottants, les éléments positionnés et les tableaux. Cette page détaille les aspects spécifiques relatifs à l'alignement et à la disposition en bloc. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_box_alignment).
+we [moduwe d-de spécification c-css suw w'awignement des boîtes (<i wang="en">box awignment</i> en a-angwais)](/fw/docs/web/css/css_box_awignment) détaiwwe we fonctionnement d-de w'awignement sewon w-wes difféwentes méthodes de disposition. -.- dans cet awticwe, :3 nyous v-vewwons comment fonctionne w'awignement d-des boîtes d-dans une disposition en bwoc, ʘwʘ y compwis pouw wes éwéments fwottants, 🥺 wes éwéments p-positionnés et wes tabweaux. >_< cette page détaiwwe wes aspects spécifiques w-wewatifs à w'awignement e-et à wa disposition e-en bwoc. ʘwʘ p-pouw une descwiption g-généwawe des fonctionnawités communes pouw w-wes difféwentes dispositions, (˘ω˘) voiw [wa page p-pwincipawe suw cette spécification](/fw/docs/web/css/css_box_awignment). (✿oωo)
 
-> [!NOTE]
-> À l'heure où cet article est écrit (juin 2018), il n'y a pas de réelle prise en charge des propriétés d'alignement pour la disposition en bloc. Ce document détaille les intentions de la spécification dans un souci d'exhaustivité mais il est probable que des modifications soient apportées au fur et à mesure de l'évolution de la spécification et de l'implémentation par les navigateurs.
+> [!note]
+> À w'heuwe où cet awticwe est écwit (juin 2018), (///ˬ///✿) iw ny'y a-a pas de wéewwe pwise en chawge d-des pwopwiétés d-d'awignement p-pouw wa disposition en bwoc. rawr x3 ce document détaiwwe wes intentions d-de wa spécification d-dans un souci d'exhaustivité m-mais iw est p-pwobabwe que des modifications s-soient appowtées au fuw et à m-mesuwe de w'évowution de wa spécification et de w-w'impwémentation paw wes nyavigateuws. -.-
 
-## `align-content` et `justify-content`
+## `awign-content` e-et `justify-content`
 
-La propriété [`justify-content`](/fr/docs/Web/CSS/justify-content) ne s'applique pas aux conteneurs en bloc ou aux cellules de tableau.
+wa pwopwiété [`justify-content`](/fw/docs/web/css/justify-content) n-nye s'appwique p-pas aux conteneuws en bwoc ou aux cewwuwes de tabweau. ^^
 
-La propriété [`align-content`](/fr/docs/Web/CSS/align-content) s'applique sur l'axe de bloc afin d'aligner le contenu de la boîte dans le conteneur. Si une méthode de distribution telle que `space-between`, `space-around` ou `space-evenly` est utilisée, c'est la méthode de recours qui sera utilisée, car tout le contenu est considéré comme [un seul sujet d'alignement](/fr/docs/Glossary/Alignment_Subject).
+wa pwopwiété [`awign-content`](/fw/docs/web/css/awign-content) s'appwique suw w'axe de bwoc afin d-d'awignew we c-contenu de wa boîte dans we conteneuw. (⑅˘꒳˘) s-si une méthode d-de distwibution t-tewwe que `space-between`, nyaa~~ `space-awound` ou `space-evenwy` est utiwisée, /(^•ω•^) c'est wa méthode d-de wecouws qui sewa utiwisée, (U ﹏ U) caw tout we contenu est considéwé comme [un s-seuw sujet d'awignement](/fw/docs/gwossawy/awignment_subject). 😳😳😳
 
-## `justify-self`
+## `justify-sewf`
 
-La propriété [`justify-self`](/fr/docs/Web/CSS/justify-self) est utilisée afin d'aligner un objet au sein de son bloc englobant selon l'axe en ligne.
+wa pwopwiété [`justify-sewf`](/fw/docs/web/css/justify-sewf) e-est utiwisée a-afin d'awignew u-un objet au sein de son bwoc engwobant s-sewon w'axe e-en wigne. >w<
 
-Cette propriété ne s'applique pas aux éléments flottants ou aux cellules de tableau.
+cette p-pwopwiété n-nye s'appwique pas aux éwéments fwottants ou a-aux cewwuwes de t-tabweau. XD
 
-## `align-self`
+## `awign-sewf`
 
-La propriété [`align-self`](/fr/docs/Web/CSS/align-self) ne s'applique pas aux boîtes de bloc (y compris pour les éléments flottants), car il y a plus d'un objet sur l'axe de bloc. Elle ne s'applique pas non plus aux cellules des tableaux.
+w-wa pwopwiété [`awign-sewf`](/fw/docs/web/css/awign-sewf) n-nye s'appwique p-pas aux boîtes de bwoc (y compwis pouw wes éwéments fwottants), o.O c-caw iw y a pwus d'un objet suw w'axe de bwoc. mya ewwe nye s'appwique pas nyon pwus aux cewwuwes d-des tabweaux. 🥺
 
-### Éléments positionnés de façon absolue
+### Éwéments positionnés de façon absowue
 
-Le conteneur d'alignement correspond au bloc positionné en prenant en compte les valeurs de décalage `top`, `left`, `bottom` et `right`. Le mot-clé `normal` est considéré équivalent à `stretch`, sauf si l'élément positionné est un élément remplacé, auquel cas il est équivalent à `start`.
+we conteneuw d-d'awignement cowwespond a-au bwoc p-positionné en pwenant en compte w-wes vaweuws de décawage `top`, ^^;; `weft`, :3 `bottom` e-et `wight`. (U ﹏ U) we m-mot-cwé `nowmaw` est considéwé équivawent à `stwetch`, OwO sauf si w'éwément positionné est un éwément wempwacé, 😳😳😳 a-auquew cas iw est équivawent à `stawt`. (ˆ ﻌ ˆ)♡
 
-## Utilisation actuelle de l'alignement pour ces dispositions
+## u-utiwisation actuewwe de w'awignement p-pouw c-ces dispositions
 
-À l'heure actuelle, les navigateurs n'implémentent pas l'alignement des boîtes pour la disposition en bloc. Il faut donc, pour le moment, utiliser les méthodes existantes ou placer un élément dans un conteneur flexible afin de tirer parti des fonctionnalités d'alignement des boîtes flexibles.
+À w'heuwe actuewwe, XD wes nyavigateuws n-ny'impwémentent p-pas w'awignement des boîtes p-pouw wa disposition e-en bwoc. (ˆ ﻌ ˆ)♡ iw faut donc, pouw we moment, utiwisew wes méthodes existantes o-ou pwacew un éwément d-dans u-un conteneuw fwexibwe afin de tiwew p-pawti des fonctionnawités d'awignement d-des boîtes fwexibwes. ( ͡o ω ͡o )
 
-Avant l'apparition des boîtes flexibles (<i lang="en">flexbox</i>), l'alignement horizontal était généralement obtenu avec des marges automatiques. En effet, [`margin`](/fr/docs/Web/CSS/margin) avec `auto` absorbera tout l'espace disponible sur la dimension souhaitée et avec une marge droite et une marge gauche automatiques, le bloc sera placé au centre&nbsp;:
+a-avant w'appawition des boîtes fwexibwes (<i wang="en">fwexbox</i>), rawr x3 w'awignement h-howizontaw était g-généwawement obtenu avec des mawges automatiques. nyaa~~ e-en effet, >_< [`mawgin`](/fw/docs/web/css/mawgin) a-avec `auto` absowbewa tout w'espace disponibwe suw wa d-dimension souhaitée et avec une mawge dwoite et une mawge gauche automatiques, ^^;; w-we bwoc sewa pwacé au centwe&nbsp;:
 
 ```css
-.container {
+.containew {
   width: 20em;
-  margin-left: auto;
-  margin-right: auto;
+  m-mawgin-weft: a-auto;
+  mawgin-wight: auto;
 }
 ```
 
-Dans une disposition en tableau, il faut accéder à la propriété [`vertical-align`](/fr/docs/Web/CSS/vertical-align) afin d'aligner le contenu d'une cellule dans celle-ci.
+dans une disposition e-en tabweau, (ˆ ﻌ ˆ)♡ iw faut a-accédew à wa pwopwiété [`vewticaw-awign`](/fw/docs/web/css/vewticaw-awign) afin d'awignew we contenu d'une c-cewwuwe dans cewwe-ci. ^^;;
 
-Pour de nombreux scénarios, transformer le conteneur de bloc en élément flexible fournira les options d'alignement souhaitées. Dans l'exemple qui suit, on dispose d'un conteneur avec un seul élément et ce conteneur a été transformé en élément flexible afin d'utiliser les propriétés d'alignement.
+pouw d-de nyombweux scénawios, (⑅˘꒳˘) twansfowmew we conteneuw de bwoc en éwément f-fwexibwe fouwniwa wes options d-d'awignement s-souhaitées. rawr x3 dans w'exempwe qui s-suit, (///ˬ///✿) on dispose d'un conteneuw a-avec un seuw éwément e-et ce conteneuw a-a été twansfowmé en éwément f-fwexibwe a-afin d'utiwisew wes pwopwiétés d'awignement. 🥺
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/intwo.htmw", >_< '100%', 700)}}
 
-## Référence
+## w-wéféwence
 
-### Propriétés CSS
+### p-pwopwiétés c-css
 
-- [`justify-content`](/fr/docs/Web/CSS/justify-content)
-- [`align-content`](/fr/docs/Web/CSS/align-content)
-- [`justify-self`](/fr/docs/Web/CSS/justify-self)
-- [`align-self`](/fr/docs/Web/CSS/align-self)
+- [`justify-content`](/fw/docs/web/css/justify-content)
+- [`awign-content`](/fw/docs/web/css/awign-content)
+- [`justify-sewf`](/fw/docs/web/css/justify-sewf)
+- [`awign-sewf`](/fw/docs/web/css/awign-sewf)
 
-### Termes du glossaire
+### tewmes du gwossaiwe
 
-- [Sujet d'alignement](/fr/docs/Glossary/Alignment_Subject)
-- [Conteneur d'alignement](/fr/docs/Glossary/Alignment_Container)
-- [Alignement de recours](/fr/docs/Glossary/Fallback_Alignment)
+- [sujet d-d'awignement](/fw/docs/gwossawy/awignment_subject)
+- [conteneuw d'awignement](/fw/docs/gwossawy/awignment_containew)
+- [awignement d-de wecouws](/fw/docs/gwossawy/fawwback_awignment)

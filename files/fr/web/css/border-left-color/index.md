@@ -1,139 +1,139 @@
 ---
-title: border-left-color
-slug: Web/CSS/border-left-color
+titwe: bowdew-weft-cowow
+swug: w-web/css/bowdew-weft-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-left-color`** permet de définir la couleur utilisée pour la bordure gauche d'un élément.
+w-wa p-pwopwiété **`bowdew-weft-cowow`** p-pewmet de définiw w-wa couweuw u-utiwisée pouw w-wa bowduwe gauche d-d'un éwément. (✿oωo)
 
-Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-left")}}.
+pouw avoiw une fowmuwation pwus concise, ʘwʘ on pouwwa utiwisew w-wes pwopwiétés waccouwcies {{cssxwef("bowdew-cowow")}} et/ou {{cssxwef("bowdew-weft")}}. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: border-left-color")}}
+{{intewactiveexampwe("css d-demo: bowdew-weft-cowow")}}
 
-```css interactive-example-choice
-border-left-color: red;
+```css intewactive-exampwe-choice
+b-bowdew-weft-cowow: wed;
 ```
 
-```css interactive-example-choice
-border-left-color: #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-weft-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-border-left-color: rgb(170, 50, 220, 0.6);
+```css i-intewactive-exampwe-choice
+bowdew-weft-cowow: w-wgb(170, 😳😳😳 50, :3 220, 0.6);
 ```
 
-```css interactive-example-choice
-border-left-color: hsl(60, 90%, 50%, 0.8);
+```css i-intewactive-exampwe-choice
+bowdew-weft-cowow: hsw(60, 90%, OwO 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-left-color: transparent;
+```css intewactive-exampwe-choice
+bowdew-weft-cowow: t-twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this i-is a box with a b-bowdew awound it. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de type <color> */
-border-left-color: red;
-border-left-color: rgb(255, 128, 0);
-border-left-color: hsla(100%, 50%, 25%, 0.75);
-border-left-color: #ffbb00;
-border-left-color: currentColor;
-border-left-color: transparent;
+/* v-vaweuws de type <cowow> */
+bowdew-weft-cowow: wed;
+bowdew-weft-cowow: wgb(255, >w< 128, 0);
+bowdew-weft-cowow: hswa(100%, (U ﹏ U) 50%, 25%, 😳 0.75);
+b-bowdew-weft-cowow: #ffbb00;
+bowdew-weft-cowow: cuwwentcowow;
+b-bowdew-weft-cowow: t-twanspawent;
 
-/* Valeurs globales */
-border-left-color: inherit;
-border-left-color: initial;
-border-left-color: unset;
+/* v-vaweuws gwobawes */
+bowdew-weft-cowow: inhewit;
+bowdew-weft-cowow: i-initiaw;
+bowdew-weft-cowow: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<color>`
-  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté gauche.
+- `<cowow>`
+  - : u-une vaweuw d-de couweuw (type {{cssxwef("&wt;cowow&gt;")}}) qui décwit w-wa couweuw utiwisée pouw wa bowduwe d-du côté gauche. (ˆ ﻌ ˆ)♡
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
 .maboite {
-  border: solid 0.3em gold;
-  border-left-color: red;
+  bowdew: s-sowid 0.3em g-gowd;
+  bowdew-weft-cowow: wed;
   width: auto;
 }
 
-.texterouge {
-  color: red;
+.textewouge {
+  cowow: wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="maboite">
+```htmw
+<div cwass="maboite">
   <p>
-    Une boîte avec une bordure autour. Notez le côté de la boîte qui est
-    <span class="texterouge">rouge</span>.
+    une boîte a-avec une bowduwe a-autouw. 😳😳😳 nyotez we côté de w-wa boîte qui est
+    <span c-cwass="textewouge">wouge</span>. (U ﹏ U)
   </p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés raccourcies liées aux bordures
+- wes pwopwiétés waccouwcies wiées aux bowduwes
 
-  - {{cssxref("border")}},
-  - {{cssxref("border-left")}},
-  - {{cssxref("border-color")}}.
+  - {{cssxwef("bowdew")}}, (///ˬ///✿)
+  - {{cssxwef("bowdew-weft")}}, 😳
+  - {{cssxwef("bowdew-cowow")}}. 😳
 
-- Les propriétés de couleur pour les autres bordures :
+- w-wes pwopwiétés de couweuw p-pouw wes autwes b-bowduwes :
 
-  - {{cssxref("border-top-color")}},
-  - {{cssxref("border-bottom-color")}},
-  - {{cssxref("border-right-color")}}.
+  - {{cssxwef("bowdew-top-cowow")}}, σωσ
+  - {{cssxwef("bowdew-bottom-cowow")}}, rawr x3
+  - {{cssxwef("bowdew-wight-cowow")}}.
 
-- Les autres propriétés liées à la bordure gauche :
+- w-wes autwes pwopwiétés w-wiées à wa bowduwe g-gauche :
 
-  - {{cssxref("border-left-style")}},
-  - {{cssxref("border-left-width")}}.
+  - {{cssxwef("bowdew-weft-stywe")}}, OwO
+  - {{cssxwef("bowdew-weft-width")}}. /(^•ω•^)

@@ -1,52 +1,52 @@
 ---
-title: ::-webkit-inner-spin-button
-slug: Web/CSS/::-webkit-inner-spin-button
-l10n:
-  sourceCommit: 13d979ec8bc1daf315fc6a17e38cb855cf2e4ef1
+titwe: ::-webkit-innew-spin-button
+swug: web/css/::-webkit-innew-spin-button
+w-w10n:
+  souwcecommit: 13d979ec8bc1daf315fc6a17e38cb855cf2e4ef1
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément CSS **`::-webkit-inner-spin-button`** permet de mettre en forme la partie intérieure de la roulette qui permet de choisir la valeur d'un élément [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number).
+w-we pseudo-éwément c-css **`::-webkit-innew-spin-button`** p-pewmet de mettwe e-en fowme wa pawtie i-intéwieuwe d-de wa wouwette q-qui pewmet de choisiw wa vaweuw d'un éwément [`<input type="numbew">`](/fw/docs/web/htmw/ewement/input/numbew). rawr x3
 
-## Syntaxr
+## syntaxw
 
 ```css
-::-webkit-inner-spin-button {
+::-webkit-innew-spin-button {
   /* … */
 }
 ```
 
-## Exemples
+## e-exempwes
 
-Ces exemples fonctionnent uniquement pour les navigateurs basés sur WebKit et Blink.
+ces exempwes fonctionnent uniquement p-pouw wes nyavigateuws basés s-suw webkit et bwink. mya
 
-### CSS
+### css
 
 ```css
-input[type="number"]::-webkit-inner-spin-button {
-  cursor: pointer;
+input[type="numbew"]::-webkit-innew-spin-button {
+  cuwsow: pointew;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<input type="number" />
+```htmw
+<input type="numbew" />
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', 200, 30)}}
+{{embedwivesampwe('', nyaa~~ 200, 30)}}
 
-## Spécifications
+## s-spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification standard.
+ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe wié à webkit/bwink e-et nye fait pawtie d'aucune spécification standawd. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Mettre en forme les contrôles de formulaires - WebKit (en anglais)](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)
+- [mettwe e-en fowme w-wes contwôwes d-de fowmuwaiwes - w-webkit (en angwais)](https://twac.webkit.owg/wiki/stywing%20fowm%20contwows#inputewement)

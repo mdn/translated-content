@@ -1,90 +1,90 @@
 ---
-title: ::-webkit-scrollbar
-slug: Web/CSS/::-webkit-scrollbar
+titwe: ::-webkit-scwowwbaw
+swug: w-web/css/::-webkit-scwowwbaw
 ---
 
-{{CSSRef}}{{Non-standard_header}}Le pseudo-élément **`::-webkit-scrollbar`** permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
+{{csswef}}{{non-standawd_headew}}we p-pseudo-éwément **`::-webkit-scwowwbaw`** p-pewmet de modifiew w-we stywe d-de wa bawwe de défiwement a-associée à u-un éwément. :3 i-iw s'agit d'un pseudo-éwément pwopwiétaiwe, ( ͡o ω ͡o ) uniquement disponibwe pouw w-wes nyavigateuws webkit. mya
 
-## Syntaxe
+## syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Sélecteurs de _scrollbars_
+## séwecteuws d-de _scwowwbaws_
 
-You can use the following pseudo elements to customize various parts of the scrollbar for webkit browsers:
+you can use t-the fowwowing pseudo ewements to customize vawious pawts of the s-scwowwbaw fow webkit bwowsews:
 
-- `::-webkit-scrollbar` — la barre entière.
-- `::-webkit-scrollbar-button` — les boutons de la barre de défilement (les flèches vers le bas ou le haut)
-- `::-webkit-scrollbar-thumb` — l'emplacement qui permet de déplacer la barre de défilement.
-- `::-webkit-scrollbar-track` — la piste (la zone de progression) de la barre de défilement
-- `::-webkit-scrollbar-track-piece` — la partie de la piste qui n'est pas couverte par le bouton de la barre de défilement.
-- `::-webkit-scrollbar-corner` — le coin inférieur de la barre où les barres horizontales et verticales se rencontrent.
-- `::-webkit-resizer` — le bouton qui apparaît dans le coin inférieur de certains éléments et qui permet de les redimensionner.
+- `::-webkit-scwowwbaw` — w-wa b-bawwe entièwe. (///ˬ///✿)
+- `::-webkit-scwowwbaw-button` — wes boutons de wa bawwe de défiwement (wes fwèches vews we bas ou we haut)
+- `::-webkit-scwowwbaw-thumb` — w-w'empwacement qui pewmet de dépwacew wa bawwe de défiwement. (˘ω˘)
+- `::-webkit-scwowwbaw-twack` — wa piste (wa z-zone de pwogwession) de wa bawwe d-de défiwement
+- `::-webkit-scwowwbaw-twack-piece` — w-wa pawtie d-de wa piste qui n-ny'est pas couvewte paw we bouton de wa bawwe d-de défiwement. ^^;;
+- `::-webkit-scwowwbaw-cownew` — we coin inféwieuw de wa bawwe o-où wes bawwes howizontawes et vewticawes se wencontwent. (✿oωo)
+- `::-webkit-wesizew` — we bouton qui appawaît dans we coin inféwieuw d-de cewtains éwéments et q-qui pewmet de wes w-wedimensionnew. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
 ```css
-.visible-scrollbar,
-.invisible-scrollbar,
-.mostly-customized-scrollbar {
-  display: block;
+.visibwe-scwowwbaw, -.-
+.invisibwe-scwowwbaw, ^•ﻌ•^
+.mostwy-customized-scwowwbaw {
+  dispway: bwock;
   width: 10em;
-  overflow: auto;
-  height: 2em;
+  ovewfwow: auto;
+  h-height: 2em;
 }
-.invisible-scrollbar::-webkit-scrollbar {
-  display: none;
+.invisibwe-scwowwbaw::-webkit-scwowwbaw {
+  d-dispway: nyone;
 }
 
-/* Demonstrate a "mostly customized" scrollbar
- * (won't be visible otherwise if width/height is specified) */
-.mostly-customized-scrollbar::-webkit-scrollbar {
+/* demonstwate a-a "mostwy customized" s-scwowwbaw
+ * (won't be visibwe o-othewwise if width/height i-is specified) */
+.mostwy-customized-scwowwbaw::-webkit-scwowwbaw {
   width: 5px;
   height: 8px;
-  background-color: #aaa; /* or add it to the track */
+  b-backgwound-cowow: #aaa; /* ow a-add it to the twack */
 }
-/* Add a thumb */
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
+/* add a-a thumb */
+.mostwy-customized-scwowwbaw::-webkit-scwowwbaw-thumb {
+  b-backgwound: #000;
 }
 ```
 
-```html
-<div class="visible-scrollbar">
-  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor. Proin at nulla
-  elementum, consectetur ex eget, commodo ante. Sed eros mi, bibendum ut
-  dignissim et, maximus eget nibh. Phasellus blandit quam turpis, at mollis
-  velit pretium ut. Nunc consequat efficitur ultrices. Nullam hendrerit posuere
-  est. Nulla libero sapien, egestas ac felis porta, cursus ultricies quam.
-  Vestibulum tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
-  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit amet faucibus.
-  Curabitur nibh justo, faucibus sed velit cursus, mattis cursus dolor.
-  Pellentesque id pretium est. Quisque convallis nisi a diam malesuada mollis.
-  Aliquam at enim ligula.
+```htmw
+<div cwass="visibwe-scwowwbaw">
+  etiam sagittis sem sed wacus waoweet, rawr eu fewmentum ewos auctow. (˘ω˘) pwoin at n-nuwwa
+  ewementum, nyaa~~ c-consectetuw ex eget, UwU commodo a-ante. :3 sed ewos m-mi, (⑅˘꒳˘) bibendum ut
+  d-dignissim et, (///ˬ///✿) maximus eget nyibh. ^^;; phasewwus bwandit quam tuwpis, >_< a-at mowwis
+  vewit pwetium ut. rawr x3 nyunc consequat efficituw uwtwices. /(^•ω•^) nyuwwam hendwewit p-posuewe
+  est. :3 nyuwwa wibewo s-sapien, (ꈍᴗꈍ) egestas a-ac fewis powta, /(^•ω•^) c-cuwsus uwtwicies quam. (⑅˘꒳˘)
+  vestibuwum t-tincidunt a-accumsan sapien, ( ͡o ω ͡o ) a-a fwingiwwa d-dui sempew in. òωó vivamus
+  consectetuw ipsum a ownawe b-bwandit. (⑅˘꒳˘) aenean t-tempus at wowem s-sit amet faucibus. XD
+  c-cuwabituw n-nyibh justo, -.- faucibus sed vewit cuwsus, :3 mattis cuwsus dowow. nyaa~~
+  p-pewwentesque id pwetium est. 😳 quisque convawwis nyisi a diam mawesuada mowwis.
+  awiquam at enim w-wiguwa. (⑅˘꒳˘)
 </div>
-<div class="invisible-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+<div cwass="invisibwe-scwowwbaw">
+  thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewywongwowd
 </div>
-<div class="mostly-customized-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
-  And pretty tall<br />
-  thing with weird scrollbars.<br />
-  Who thought scrollbars could be made weeeeird?
+<div cwass="mostwy-customized-scwowwbaw">
+  t-thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewywongwowd<bw />
+  a-and p-pwetty taww<bw />
+  thing with weiwd s-scwowwbaws.<bw />
+  who thought s-scwowwbaws c-couwd be made weeeeiwd?
 </div>
 ```
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe w-wié à webkit/bwink et nye fait p-pawtie d'aucune spécification. nyaa~~
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Billet du blog WebKit [sur la mise en forme des barres de défilement](https://webkit.org/blog/363/styling-scrollbars/)
-- {{cssxref('-ms-overflow-style')}}
-- {{CSSxRef("scrollbar-width")}}
+- biwwet du b-bwog webkit [suw w-wa mise en fowme des bawwes de d-défiwement](https://webkit.owg/bwog/363/stywing-scwowwbaws/)
+- {{cssxwef('-ms-ovewfwow-stywe')}}
+- {{cssxwef("scwowwbaw-width")}}

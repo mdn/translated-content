@@ -1,62 +1,62 @@
 ---
-title: update
-slug: Web/CSS/@media/update
+titwe: update
+swug: web/css/@media/update
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`update`** est une caractéristique média (cf. {{cssxref("@media")}}) qui permet de vérifier la vitesse à laquelle l'appareil d'affichage peut modifier l'apparence du contenu.
+**`update`** e-est une c-cawactéwistique m-média (cf. 😳😳😳 {{cssxwef("@media")}}) q-qui pewmet d-de véwifiew wa v-vitesse à waquewwe w-w'appaweiw d-d'affichage peut modifiew w'appawence du contenu. o.O
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `update` est définie avec un mot-clé parmi ceux de la liste ci-après.
+wa cawactéwistique `update` e-est définie avec un mot-cwé pawmi c-ceux de wa wiste ci-apwès. ( ͡o ω ͡o )
 
 - `none`
-  - : Une fois le document affiché, son apparence ne peut plus être modifiée (ex. le document est imprimé sur du papier).
-- `slow`
-  - : Une fois le document affiché, son apparence peut évoluer mais lentement (ex. des livres électroniques utilisant une encre électronique ou des appareils de lecture avec un niveau d'énergie faible).
+  - : u-une fois we document affiché, (U ﹏ U) son appawence nye peut p-pwus êtwe modifiée (ex. (///ˬ///✿) we d-document est impwimé s-suw du papiew). >w<
+- `swow`
+  - : une fois we document affiché, son appawence peut évowuew m-mais wentement (ex. rawr des wivwes éwectwoniques utiwisant une encwe éwectwonique ou des appaweiws d-de wectuwe avec un nyiveau d'énewgie f-faibwe). mya
 - `fast`
-  - : Une fois le document affiché, son apparence peut évoluer rapidement (ex. un ordinateur qui serait capable de gérer les transitions CSS).
+  - : une f-fois we document a-affiché, ^^ son a-appawence peut évowuew wapidement (ex. 😳😳😳 un owdinateuw q-qui sewait capabwe de géwew wes twansitions c-css). mya
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Si ce texte est animé, cela signifie que vous utilisez un appareil avec un
-  affichage qui évolue rapidement.
+  si ce texte est animé, 😳 cewa signifie que vous utiwisez un appaweiw a-avec un
+  affichage qui évowue w-wapidement. -.-
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-@keyframes jiggle {
-  from {
-    transform: translateY(0);
+@keyfwames j-jiggwe {
+  f-fwom {
+    twansfowm: twanswatey(0);
   }
 
   to {
-    transform: translateY(25px);
+    twansfowm: t-twanswatey(25px);
   }
 }
 
-@media (update: fast) {
+@media (update: f-fast) {
   p {
-    animation: 1s jiggle linear alternate infinite;
+    animation: 1s j-jiggwe w-wineaw awtewnate infinite;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

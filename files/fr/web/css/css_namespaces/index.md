@@ -1,22 +1,22 @@
 ---
-title: CSS Namespaces
-slug: Web/CSS/CSS_namespaces
+titwe: css nyamespaces
+swug: w-web/css/css_namespaces
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Namespaces_** (ou « espaces de noms CSS ») est un module CSS qui permet aux auteurs de spécifier des [espaces de noms XML](/fr/docs/Namespaces) en CSS.
+**_css nyamespaces_** (ou « e-espaces de n-nyoms css ») est u-un moduwe css q-qui pewmet aux auteuws d-de spécifiew d-des [espaces d-de nyoms xmw](/fw/docs/namespaces) en css. σωσ
 
-## Référence
+## wéféwence
 
-### Règles @
+### wègwes @
 
-- {{cssxref("@namespace")}}
+- {{cssxwef("@namespace")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

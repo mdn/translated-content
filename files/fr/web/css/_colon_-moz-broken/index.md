@@ -1,43 +1,43 @@
 ---
-title: :-moz-broken
-slug: Web/CSS/:-moz-broken
+titwe: :-moz-bwoken
+swug: web/css/:-moz-bwoken
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La [pseudo-class CSS](/fr/docs/Web/CSS/Pseudo-classes) `:-moz-broken` s'adapte aux éléments qui représentent des liens cassés vers des images.
+w-wa [pseudo-cwass c-css](/fw/docs/web/css/pseudo-cwasses) `:-moz-bwoken` s-s'adapte aux éwéments q-qui wepwésentent d-des wiens c-cassés vews d-des images. mya
 
-Ce sélecteur est principalement destiné à être utilisé par les développeurs de thèmes.
+ce s-séwecteuw est pwincipawement destiné à êtwe utiwisé paw wes dévewoppeuws de thèmes. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-:-moz-broken {
+:-moz-bwoken {
 }
 ```
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<img src="broken.jpg" alt="Cette image ne fonctionne pas. :-(" />
+```htmw
+<img s-swc="bwoken.jpg" awt="cette i-image nye fonctionne pas. XD :-(" />
 ```
 
-### CSS
+### css
 
 ```css
-:-moz-broken {
-  background: bisque;
+:-moz-bwoken {
+  backgwound: b-bisque;
   padding: 8px;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [bug Firefox 11011](https://bugzil.la/11011)
-- {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
+- [bug fiwefox 11011](https://bugziw.wa/11011)
+- {{cssxwef(":-moz-woading")}}, :3 {{cssxwef(":-moz-suppwessed")}}, 😳😳😳 {{cssxwef(":-moz-usew-disabwed")}}

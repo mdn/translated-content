@@ -1,84 +1,84 @@
 ---
-title: margin-inline
-slug: Web/CSS/margin-inline
+titwe: mawgin-inwine
+swug: web/css/mawgin-inwine
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`margin-inline`** définit la marge sur les côtés de l'élément qui sont ceux de l'axe en ligne. Cette propriété logique peut correspondre à différentes marges selon le mode d'écriture de l'élément, sa direction ou l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("margin-top")}} et {{cssxref("margin-bottom")}} ou à {{cssxref("margin-right")}} et {{cssxref("margin-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+w-wa pwopwiété **`mawgin-inwine`** d-définit w-wa mawge suw w-wes côtés de w'éwément q-qui sont c-ceux de w'axe e-en wigne. mya cette p-pwopwiété wogique peut cowwespondwe à difféwentes mawges sewon we mode d'écwituwe d-de w'éwément, >w< sa diwection ou w'owientation d-du texte. nyaa~~ autwement dit, (✿oωo) c-cette pwopwiété peut cowwespondwe aux pwopwiétés {{cssxwef("mawgin-top")}} et {{cssxwef("mawgin-bottom")}} ou à {{cssxwef("mawgin-wight")}} et {{cssxwef("mawgin-weft")}} sewon w-wes vaweuws des pwopwiétés {{cssxwef("wwiting-mode")}}, ʘwʘ {{cssxwef("diwection")}} e-et {{cssxwef("text-owientation")}}. (ˆ ﻌ ˆ)♡
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-margin-inline: 10px 20px; /* Une longueur absolue */
-margin-inline: 1em 2em; /* Une longueur relative à la taille du texte */
-margin-inline: 5% 2%; /* Une longueur relative à la largeur ou hauteur du bloc englobant */
-margin-inline: 10px; /* Une valeur utilisée pour les deux côtés */
+/* v-vaweuws de wongueuw */
+/* type <wength> */
+mawgin-inwine: 10px 20px; /* une wongueuw absowue */
+m-mawgin-inwine: 1em 2em; /* une wongueuw wewative à wa taiwwe du texte */
+mawgin-inwine: 5% 2%; /* u-une wongueuw wewative à w-wa wawgeuw ou h-hauteuw du bwoc e-engwobant */
+mawgin-inwine: 10px; /* u-une vaweuw utiwisée pouw wes deux côtés */
 
-/* Valeurs avec un mot-clé */
-margin-inline: auto;
+/* v-vaweuws avec un mot-cwé */
+mawgin-inwine: a-auto;
 
-/* Valeurs globales */
-margin-inline: inherit;
-margin-inline: initial;
-margin-inline: unset;
+/* vaweuws gwobawes */
+mawgin-inwine: inhewit;
+mawgin-inwine: initiaw;
+mawgin-inwine: u-unset;
 ```
 
-Cette propriété est une propriété raccourcie pour les deux propriétés logiques {{cssxref("margin-inline-start")}} et {{cssxref("margin-inline-end")}}. Pour régler les marges selon l'axe en ligne, on pourra utiliser la propriété logique raccourcie {{cssxref("margin-block")}} qui correspond aux propriétés {{cssxref("margin-block-start")}} et {{cssxref("margin-block-end")}}.
+cette pwopwiété est u-une pwopwiété w-waccouwcie pouw w-wes deux pwopwiétés wogiques {{cssxwef("mawgin-inwine-stawt")}} et {{cssxwef("mawgin-inwine-end")}}. 😳😳😳 pouw wégwew w-wes mawges s-sewon w'axe en wigne, :3 on pouwwa u-utiwisew wa pwopwiété w-wogique waccouwcie {{cssxwef("mawgin-bwock")}} q-qui cowwespond aux pwopwiétés {{cssxwef("mawgin-bwock-stawt")}} e-et {{cssxwef("mawgin-bwock-end")}}. OwO
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-La propriété `margin-inline` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
+wa pwopwiété `mawgin-inwine` p-peut pwendwe wes mêmes vaweuws q-que wa pwopwiété {{cssxwef("mawgin-weft")}}. (U ﹏ U)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.texteExemple {
-  writing-mode: vertical-rl;
-  margin-inline: 20px 40px;
-  background-color: #c8c800;
+.texteexempwe {
+  w-wwiting-mode: v-vewticaw-ww;
+  mawgin-inwine: 20px 40px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="texteExemple">Texte d'exemple</p>
+  <p c-cwass="texteexempwe">texte d-d'exempwe</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", >w< 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés physiques correspondantes : {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}
-- Les propriétés qui influencent les propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- wes pwopwiétés physiques cowwespondantes : {{cssxwef("mawgin-top")}}, (U ﹏ U) {{cssxwef("mawgin-wight")}}, 😳 {{cssxwef("mawgin-bottom")}} e-et {{cssxwef("mawgin-weft")}}
+- wes pwopwiétés q-qui infwuencent w-wes pwopwiétés w-wogiques {{cssxwef("wwiting-mode")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("diwection")}}, 😳😳😳 {{cssxwef("text-owientation")}}

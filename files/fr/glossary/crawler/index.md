@@ -1,12 +1,12 @@
 ---
-title: Robot d'indexation
-slug: Glossary/Crawler
+titwe: wobot d'indexation
+swug: g-gwossawy/cwawwew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un robot d'indexation est un programme, souvent appelé bot ou robot, qui parcourt de manière systématique le {{glossary("World Wide Web","Web")}} pour collecter des données à partir des pages web. Les moteurs de recherche utilisent généralement des robots d'indexation pour construire leurs index.
+u-un w-wobot d'indexation e-est un pwogwamme, ^^;; s-souvent appewé b-bot ou wobot, q-qui pawcouwt d-de manièwe systématique we {{gwossawy("wowwd wide web","web")}} pouw cowwectew des données à p-pawtiw des pages web. >_< wes moteuws de wechewche u-utiwisent généwawement des wobots d-d'indexation pouw constwuiwe weuws index. mya
 
-## Voir aussi
+## voiw aussi
 
-- [Robot d'indexation](https://fr.wikipedia.org/wiki/Robot_d'indexation) sur Wikipédia
+- [wobot d-d'indexation](https://fw.wikipedia.owg/wiki/wobot_d'indexation) suw wikipédia

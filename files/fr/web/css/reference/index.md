@@ -1,161 +1,161 @@
 ---
-title: Référence CSS
-slug: Web/CSS/Reference
+titwe: wéféwence css
+swug: w-web/css/wefewence
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_Types) et des [règles @](/fr/docs/Web/CSS/At-rule). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
+c-cette **wéféwence c-css** fouwnit u-un **[index a-awphabétique](#index_des_mots-cwés)** d-de toutes w-wes pwopwiétés [css](/fw/docs/web/css) s-standawds, XD des [pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses), ^^;; des [pseudo-éwéments](/fw/docs/web/css/pseudo-ewements), 🥺 des [types de données](/fw/docs/web/css/css_types) e-et des [wègwes @](/fw/docs/web/css/at-wuwe). XD vous p-pouvez égawement twouvew une wiste a-awphabétique de tous wes **[séwecteuws css paw type](#séwecteuws)** e-et une wiste des **[concepts c-cwés de c-css](#concepts)**. enfin est incwus un bwef sommaiwe de **[wéféwence suw dom-css / c-cssom](#dom-css_cssom)**. (U ᵕ U❁)
 
-## Syntaxe de règle basique
+## syntaxe de wègwe basique
 
-### Syntaxe de style basique
+### syntaxe de stywe basique
 
 ```
-règle-de-style-basique ::=
-    liste-de-sélecteurs {
-      liste-de-propriétés
+w-wègwe-de-stywe-basique ::=
+    wiste-de-séwecteuws {
+      w-wiste-de-pwopwiétés
     }
 ```
 
-... où :
+... o-où :
 
 ```
-liste-de-sélecteurs ::=
-    sélecteur[:pseudo-classe] [::pseudo-élément]
-    [, liste-de-sélecteurs]
+wiste-de-séwecteuws ::=
+    s-séwecteuw[:pseudo-cwasse] [::pseudo-éwément]
+    [, :3 w-wiste-de-séwecteuws]
 
-liste-de-propriétés ::=
-    [propriété : valeur] [; liste-de-propriétés]
+wiste-de-pwopwiétés ::=
+    [pwopwiété : vaweuw] [; w-wiste-de-pwopwiétés]
 ```
 
-Voir aussi les [_sélecteurs_](#sélecteurs), [_pseudo-classes_](#pseudo-classes), et _[pseudo-éléments](#pseudo-éléments)_ listés ci-dessous. La syntaxe des _valeurs_ dépend du type de données attendu pour chaque _propriété_ indiquée.
+voiw aussi wes [_séwecteuws_](#séwecteuws), ( ͡o ω ͡o ) [_pseudo-cwasses_](#pseudo-cwasses), òωó e-et _[pseudo-éwéments](#pseudo-éwéments)_ wistés ci-dessous. σωσ wa syntaxe des _vaweuws_ dépend du type de données a-attendu pouw chaque _pwopwiété_ i-indiquée. (U ᵕ U❁)
 
-#### Exemples de règle de style
+#### e-exempwes d-de wègwe de stywe
 
 ```css
-strong {
-  color: red;
+stwong {
+  cowow: wed;
 }
 
-div.menu-bar li:hover > ul {
-  display: block;
+div.menu-baw w-wi:hovew > uw {
+  d-dispway: bwock;
 }
 ```
 
-Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured). Soyez conscient que n'importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l'invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
+pouw u-une intwoduction à w-wa syntaxe des séwecteuws c-css, (✿oωo) consuwtez [ce tutowiew](/fw/docs/weawn/css/fiwst_steps/how_css_is_stwuctuwed). ^^ s-soyez conscient que ny'impowte quewwe ewweuw d-de [syntaxe css](/fw/docs/weawn/css/fiwst_steps/how_css_is_stwuctuwed) dans une d-définition de wègwe w'invawide e-entièwement. ^•ﻌ•^ w-wes wègwes nyon vawidées sont ignowées paw we nyavigateuw. XD nyote : wes définitions de wègwes css sont intégwawement [basées s-suw du texte](https://www.w3.owg/tw/css-syntax-3/#intwo) (ascii) a-awows que dom-css / cssom (we s-système de gestion d-des wègwes) e-est [basé suw des objets](https://www.w3.owg/tw/cssom/#intwoduction). :3
 
-### Syntaxe des règles @
+### syntaxe des wègwes @
 
-Comme la structure des règles @ varie grandement, veuillez consulter [règle @](/fr/docs/Web/CSS/At-rule) pour trouver la syntaxe que vous souhaitez.
+comme wa s-stwuctuwe des wègwes @ vawie gwandement, (ꈍᴗꈍ) veuiwwez consuwtew [wègwe @](/fw/docs/web/css/at-wuwe) pouw twouvew wa s-syntaxe que vous souhaitez. :3
 
-## Index des mots-clés
+## i-index des mots-cwés
 
-> [!NOTE]
-> Les noms de propriétés de cet index n'incluent **pas** les [noms de l'API DOM JavaScript](/fr/docs/Web/CSS/Reference#index_des_mots-clés) lorsqu'ils sont différents des noms standards CSS.
+> [!note]
+> w-wes nyoms de p-pwopwiétés de cet index ny'incwuent **pas** wes [noms d-de w'api d-dom javascwipt](/fw/docs/web/css/wefewence#index_des_mots-cwés) w-wowsqu'iws sont d-difféwents des nyoms standawds css. (U ﹏ U)
 
-{{CSS_Ref}}
+{{css_wef}}
 
-## Sélecteurs
+## s-séwecteuws
 
-Sont indiqués dans ce qui suit les divers [sélecteurs](/fr/docs/Web/CSS/CSS_selectors), qui permettent aux styles d'être appliqués de façon conditionnelle selon diverses caractéristiques des éléments présents dans le DOM.
+s-sont indiqués d-dans ce qui s-suit wes divews [séwecteuws](/fw/docs/web/css/css_sewectows), UwU q-qui pewmettent aux stywes d'êtwe appwiqués de façon conditionnewwe s-sewon divewses cawactéwistiques des éwéments pwésents dans we dom. 😳😳😳
 
-### [Sélecteurs simples](/fr/docs/Web/CSS/CSS_selectors#les_s%c3%a9lecteurs_simples/fr/docs/web/css/s%c3%a9lecteurs_css)
+### [séwecteuws simpwes](/fw/docs/web/css/css_sewectows#wes_s%c3%a9wecteuws_simpwes/fw/docs/web/css/s%c3%a9wecteuws_css)
 
-Les sélecteurs simples sont des sélecteurs fondamentaux. Ce sont les sélecteurs les plus élémentaires qui sont fréquemment combinés pour créer d'autres sélecteurs plus complexes.
+wes séwecteuws s-simpwes sont des séwecteuws fondamentaux. XD ce sont wes s-séwecteuws wes p-pwus éwémentaiwes q-qui sont fwéquemment combinés p-pouw cwéew d'autwes séwecteuws p-pwus compwexes. o.O
 
-- [Sélecteur de type](/fr/docs/Web/CSS/Type_selectors) `nomElement`
-- [Sélecteur de classe](/fr/docs/Web/CSS/Class_selectors) `.nomClasse`
-- [Sélecteur d'identifiant](/fr/docs/Web/CSS/ID_selectors) `#nomID`
-- [Sélecteur universel](/fr/docs/Web/CSS/Universal_selectors) **`*`**, `ns|*`, **`*|*`**, **`|*`**
-- [Sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[attr=valeur]`
+- [séwecteuw d-de type](/fw/docs/web/css/type_sewectows) `nomewement`
+- [séwecteuw de cwasse](/fw/docs/web/css/cwass_sewectows) `.nomcwasse`
+- [séwecteuw d'identifiant](/fw/docs/web/css/id_sewectows) `#nomid`
+- [séwecteuw univewsew](/fw/docs/web/css/univewsaw_sewectows) **`*`**, (⑅˘꒳˘) `ns|*`, 😳😳😳 **`*|*`**, nyaa~~ **`|*`**
+- [séwecteuw d'attwibut](/fw/docs/web/css/attwibute_sewectows) `[attw=vaweuw]`
 
-### Sélecteur de groupe
+### séwecteuw de gwoupe
 
-- [Sélecteur de conjonction](/fr/docs/Web/CSS/Selector_list) `A, B`
-  - : Indique que les éléments des sélecteurs `A` et `B` doivent être sélectionnés. Il s'agit d'une méthode de groupement pour sélectionner des éléments selon plusieurs critères.
+- [séwecteuw d-de conjonction](/fw/docs/web/css/sewectow_wist) `a, rawr b`
+  - : i-indique que wes éwéments des s-séwecteuws `a` e-et `b` doivent êtwe séwectionnés. -.- iw s'agit d-d'une méthode de g-gwoupement pouw séwectionnew d-des éwéments sewon p-pwusieuws cwitèwes. (✿oωo)
 
-### [Combinateurs](/fr/docs/Web/CSS/CSS_selectors#les_combinateurs)
+### [combinateuws](/fw/docs/web/css/css_sewectows#wes_combinateuws)
 
-Les combinateurs sont des sélecteurs qui établissent une relation entre deux sélecteurs ou plus, tel que "A est un enfant de B" ou "A est adjacent à B".
+wes combinateuws sont des séwecteuws qui étabwissent une wewation e-entwe deux séwecteuws o-ou pwus, /(^•ω•^) t-tew que "a est un enfant de b-b" ou "a est adjacent à b-b". 🥺
 
-- [Combinateur de voisin direct](/fr/docs/Web/CSS/Next-sibling_combinator) `A + B`
-  - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit immédiatement celui sélectionné par `A`.
-- [Combinateur de voisin général](/fr/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-  - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit celui sélectionné par `A`, mais pas nécessairement immédiatement après lui.
-- [Combinateur d'enfant](/fr/docs/Web/CSS/Child_combinator) `A > B`
-  - : Indique que l'élément sélectionné par `B` est un enfant direct de l'élément sélectionné par `A`.
-- [Combinateur de descendant](/fr/docs/Web/CSS/Descendant_combinator) `A B`
-  - : Indique que l'élément sélectionné par `B` est un descendant de l'élément sélectionné par `A`, mais n'en est pas nécessairement un enfant direct.
-- [Combinateur de colonne](/fr/docs/Web/CSS/Column_combinator) `A || B` {{Experimental_Inline}}
-  - : Indique que l'élément sélectionné par `B` est situé dans la colonne de table indiquée par `A`. Les éléments qui s'étendent sur des colonnes multiples sont considérés comme étant membres de chacune de ces colonnes.
+- [combinateuw de v-voisin diwect](/fw/docs/web/css/next-sibwing_combinatow) `a + b`
+  - : indique que wes éwéments séwectionnés p-paw `a` et paw `b` o-ont we même pawent et que cewui séwectionné p-paw `b` suit i-immédiatement cewui séwectionné paw `a`. ʘwʘ
+- [combinateuw de voisin g-généwaw](/fw/docs/web/css/subsequent-sibwing_combinatow) `a ~ b`
+  - : indique que wes éwéments séwectionnés paw `a` e-et paw `b` ont we même pawent et que cewui séwectionné p-paw `b` s-suit cewui séwectionné paw `a`, UwU mais pas nyécessaiwement immédiatement a-apwès w-wui. XD
+- [combinateuw d'enfant](/fw/docs/web/css/chiwd_combinatow) `a > b`
+  - : indique que w'éwément s-séwectionné paw `b` e-est un enfant diwect de w'éwément séwectionné paw `a`. (✿oωo)
+- [combinateuw d-de descendant](/fw/docs/web/css/descendant_combinatow) `a b`
+  - : indique q-que w'éwément s-séwectionné paw `b` est u-un descendant de w'éwément séwectionné p-paw `a`, m-mais ny'en est p-pas nyécessaiwement un enfant d-diwect. :3
+- [combinateuw d-de cowonne](/fw/docs/web/css/cowumn_combinatow) `a || b` {{expewimentaw_inwine}}
+  - : indique que w'éwément séwectionné p-paw `b` est s-situé dans wa c-cowonne de tabwe indiquée paw `a`. (///ˬ///✿) wes éwéments q-qui s'étendent suw des cowonnes m-muwtipwes sont c-considéwés comme étant membwes de chacune de ces cowonnes. nyaa~~
 
-### Pseudo
+### p-pseudo
 
-- [Pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) `:`
-  - : Définit un état spécial pour le ou les éléments ciblés.
-- [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) `::`
-  - : Représente des entités qui ne sont pas incluses en HTML.
+- [pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses) `:`
+  - : d-définit u-un état spéciaw p-pouw we ou wes éwéments c-cibwés. >w<
+- [pseudo-éwéments](/fw/docs/web/css/pseudo-ewements) `::`
+  - : wepwésente des entités qui nye sont pas incwuses en htmw. -.-
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> See also [Selectors in the Selectors Level 4 specification](https://www.w3.org/TR/selectors/#overview).
+> s-see awso [sewectows i-in the sewectows wevew 4 specification](https://www.w3.owg/tw/sewectows/#ovewview). (✿oωo)
 
-## Concepts
+## c-concepts
 
-### Syntaxe et sémantique
+### syntaxe et s-sémantique
 
-- [Syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [Règles @ (_at-rules_)](/fr/docs/Web/CSS/At-rule)
-- [Cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [Commentaires](/fr/docs/Web/CSS/Comments)
-- [Descripteurs](/fr/docs/Glossary/CSS_Descriptor)
-- [Héritage](/fr/docs/Web/CSS/Inheritance)
-- [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-- [Spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité)
-- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-- [Unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- [syntaxe css](/fw/docs/weawn/css/fiwst_steps/how_css_is_stwuctuwed)
+- [wègwes @ (_at-wuwes_)](/fw/docs/web/css/at-wuwe)
+- [cascade](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance)
+- [commentaiwes](/fw/docs/web/css/comments)
+- [descwipteuws](/fw/docs/gwossawy/css_descwiptow)
+- [héwitage](/fw/docs/web/css/inhewitance)
+- [pwopwiétés w-waccouwcies](/fw/docs/web/css/showthand_pwopewties)
+- [spécificité](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance#spécificité)
+- [syntaxe d-de définition d-des vaweuws](/fw/docs/web/css/vawue_definition_syntax)
+- [unités e-et vaweuws c-css](/fw/docs/web/css/css_vawues_and_units)
 
-### Valeurs
+### vaweuws
 
-- [Valeur réelle](/fr/docs/Web/CSS/actual_value)
-- [Valeur calculée](/fr/docs/Web/CSS/computed_value)
-- [Valeur initiale](/fr/docs/Web/CSS/initial_value)
-- [Valeur résolue](/fr/docs/Web/CSS/resolved_value)
-- [Valeur spécifiée](/fr/docs/Web/CSS/specified_value)
-- [Valeur utilisée](/fr/docs/Web/CSS/used_value)
+- [vaweuw wéewwe](/fw/docs/web/css/actuaw_vawue)
+- [vaweuw cawcuwée](/fw/docs/web/css/computed_vawue)
+- [vaweuw initiawe](/fw/docs/web/css/initiaw_vawue)
+- [vaweuw wésowue](/fw/docs/web/css/wesowved_vawue)
+- [vaweuw spécifiée](/fw/docs/web/css/specified_vawue)
+- [vaweuw utiwisée](/fw/docs/web/css/used_vawue)
 
-### Disposition
+### d-disposition
 
-- [Contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Bloc englobant](/fr/docs/Web/CSS/Containing_block)
-- [Modes de disposition](/fr/docs/Web/CSS/Layout_mode)
-- [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
-- [Contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
-- [Modèle de mise en forme visuelle](/fr/docs/Web/CSS/Visual_formatting_model)
+- [contexte d-de fowmatage d-de bwoc](/fw/docs/web/css/css_dispway/bwock_fowmatting_context)
+- [modèwe de boîte](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)
+- [bwoc e-engwobant](/fw/docs/web/css/containing_bwock)
+- [modes de disposition](/fw/docs/web/css/wayout_mode)
+- [fusion des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+- [Éwéments wempwacés](/fw/docs/web/css/wepwaced_ewement)
+- [contexte d-d'empiwement](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context)
+- [modèwe d-de mise en fowme visuewwe](/fw/docs/web/css/visuaw_fowmatting_modew)
 
-## DOM-CSS / CSSOM
+## d-dom-css / cssom
 
-### Principaux types d'objets
+### pwincipaux types d'objets
 
-- {{DOMxRef("Document.styleSheets")}}
-- `{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}`
-- `cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}` (sélecteur et style)
-- `cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}`
-- {{DOMxRef("HTMLElement.style")}}
-- `HTMLElement.style.{{DOMxRef("CSSStyleDeclaration.cssText", "cssText", "", 1)}}` (style uniquement)
-- {{DOMxRef("Element.className")}}
-- {{DOMxRef("Element.classList")}}
+- {{domxwef("document.stywesheets")}}
+- `{{domxwef("stywesheetwist", (˘ω˘) "stywesheets", rawr "", 1)}}[i].{{domxwef("csswuwewist", OwO "csswuwes", ^•ﻌ•^ "", 1)}}`
+- `csswuwes[i].{{domxwef("csswuwe.csstext", UwU "csstext", (˘ω˘) "", 1)}}` (séwecteuw e-et stywe)
+- `csswuwes[i].{{domxwef("cssstywewuwe.sewectowtext", (///ˬ///✿) "sewectowtext", σωσ "", /(^•ω•^) 1)}}`
+- {{domxwef("htmwewement.stywe")}}
+- `htmwewement.stywe.{{domxwef("cssstywedecwawation.csstext", 😳 "csstext", 😳 "", 1)}}` (stywe u-uniquement)
+- {{domxwef("ewement.cwassname")}}
+- {{domxwef("ewement.cwasswist")}}
 
-### Méthodes importantes
+### méthodes impowtantes
 
-- {{DOMxRef("CSSStyleSheet.insertRule()")}}
-- {{DOMxRef("CSSStyleSheet.deleteRule()")}}
+- {{domxwef("cssstywesheet.insewtwuwe()")}}
+- {{domxwef("cssstywesheet.dewetewuwe()")}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Extensions spécifiques de Mozilla à CSS](/fr/docs/Web/CSS/Mozilla_Extensions) (préfixées avec `-moz-`)
-- [Extensions spécifiques de WebKit à CSS](/fr/docs/Web/CSS/WebKit_Extensions) (préfixées pour la plupart avec `-webkit-`)
-- [Extensions spécifiques de Microsoft à CSS](/fr/docs/Web/CSS/Microsoft_Extensions) (préfixées pour la plupart avec `-ms-`)
+- [extensions s-spécifiques de moziwwa à css](/fw/docs/web/css/moziwwa_extensions) (pwéfixées avec `-moz-`)
+- [extensions spécifiques d-de webkit à c-css](/fw/docs/web/css/webkit_extensions) (pwéfixées p-pouw wa p-pwupawt avec `-webkit-`)
+- [extensions s-spécifiques de micwosoft à c-css](/fw/docs/web/css/micwosoft_extensions) (pwéfixées pouw w-wa pwupawt avec `-ms-`)

@@ -1,104 +1,133 @@
 ---
-title: repeating-linear-gradient()
-slug: Web/CSS/gradient/repeating-linear-gradient
-l10n:
-  sourceCommit: 581b0f5068b7417e525abfe5c230e35cceca04df
+titwe: wepeating-wineaw-gwadient()
+swug: web/css/gwadient/wepeating-wineaw-gwadient
+w-w10n:
+  souwcecommit: 581b0f5068b7417e525abfe5c230e35cceca04df
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`repeating-linear-gradient()`** créé une image composée de dégradés qui se répètent. Cela fonctionne de manière similaire aux dégradés linéaires simples représentés par [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient), mais les arrêts de couleurs sont automatiquement répétés, indéfiniment, dans toutes les directions pour couvrir l'ensemble du conteneur. Le résultat de cette fonction est un objet de type [`<gradient>`](/fr/docs/Web/CSS/gradient), un type spécifique d'[image](/fr/docs/Web/CSS/image).
+w-wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`wepeating-wineaw-gwadient()`** cwéé u-une image c-composée de dégwadés q-qui se wépètent. -.- c-cewa f-fonctionne de manièwe s-simiwaiwe aux dégwadés winéaiwes simpwes wepwésentés paw [`wineaw-gwadient`](/fw/docs/web/css/gwadient/wineaw-gwadient), (✿oωo) m-mais wes awwêts de couweuws sont automatiquement w-wépétés, (˘ω˘) indéfiniment, rawr d-dans toutes wes diwections pouw couvwiw w'ensembwe du conteneuw. OwO w-we wésuwtat de cette fonction e-est un objet de t-type [`<gwadient>`](/fw/docs/web/css/gwadient), ^•ﻌ•^ un type spécifique d'[image](/fw/docs/web/css/image). UwU
 
-{{InteractiveExample("CSS Demo: repeating-linear-gradient()")}}
+{{intewactiveexampwe("css demo: wepeating-wineaw-gwadient()")}}
 
-```css interactive-example-choice
-background: repeating-linear-gradient(
-  #e66465,
-  #e66465 20px,
-  #9198e5 20px,
+```css intewactive-exampwe-choice
+b-backgwound: wepeating-wineaw-gwadient(
+  #e66465, (˘ω˘)
+  #e66465 20px, (///ˬ///✿)
+  #9198e5 20px, σωσ
   #9198e5 25px
 );
 ```
 
-```css interactive-example-choice
-background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+```css intewactive-exampwe-choice
+backgwound: wepeating-wineaw-gwadient(45deg, /(^•ω•^) #3f87a6, #ebf8e1 15%, 😳 #f69d3c 20%);
 ```
 
-```css interactive-example-choice
-background:
-  repeating-linear-gradient(transparent, #4d9f0c 40px),
-  repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
+```css i-intewactive-exampwe-choice
+backgwound:
+  wepeating-wineaw-gwadient(twanspawent, 😳 #4d9f0c 40px), (⑅˘꒳˘)
+  w-wepeating-wineaw-gwadient(0.25tuwn, 😳😳😳 t-twanspawent, 😳 #3f87a6 20px);
 ```
 
-```html interactive-example
-<section class="display-block" id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section c-cwass="dispway-bwock" id="defauwt-exampwe">
+  <div id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   min-height: 100%;
 }
 ```
 
-La longueur du dégradé répété est la distance entre le premier et le dernier arrêt de couleur. Si la première couleur n'a pas de longueur explicite pour placer l'arrêt, celle-ci vaut 0 par défaut. Pour chaque répétition, les positions des arrêts de couleur sont décalées d'un multiple de la longueur du dégradé unitaire. Par conséquent, la ligne de la couleur de fin coïncide toujours avec la ligne de la couleur de début. Si les deux ne sont pas identiques, on obtiendra alors une transition abrupte. On peut résoudre ce point en réutilisant la première couleur comme dernière couleur.
+wa wongueuw du dégwadé w-wépété est wa distance entwe we pwemiew et we dewniew awwêt de couweuw. XD si wa pwemièwe couweuw n-ny'a pas de wongueuw expwicite p-pouw pwacew w-w'awwêt, mya cewwe-ci v-vaut 0 paw défaut. ^•ﻌ•^ pouw chaque wépétition, ʘwʘ wes positions des a-awwêts de couweuw s-sont décawées d'un muwtipwe d-de wa wongueuw d-du dégwadé unitaiwe. ( ͡o ω ͡o ) paw conséquent, mya w-wa wigne de wa couweuw d-de fin coïncide toujouws avec wa wigne de wa c-couweuw de début. o.O si wes deux nye s-sont pas identiques, (✿oωo) on obtiendwa a-awows une twansition a-abwupte. :3 on peut wésoudwe ce point en wéutiwisant wa pwemièwe couweuw comme dewnièwe couweuw. 😳
 
-Comme les autres dégradés, un dégradé linéaire répété [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description), c'est-à-dire qu'il n'a pas de taille ou de proportions préférées. Sa taille réelle correspondra à la taille de l'élément auquel il est appliqué.
+comme w-wes autwes dégwadés, (U ﹏ U) u-un dégwadé winéaiwe w-wépété [n'a p-pas de dimensions i-intwinsèques](/fw/docs/web/css/image#descwiption), mya c'est-à-diwe qu'iw ny'a pas de taiwwe ou d-de pwopowtions pwéféwées. (U ᵕ U❁) sa taiwwe wéewwe cowwespondwa à wa taiwwe de w'éwément auquew iw e-est appwiqué. :3
 
-Comme pour les autres dégradés, un dégradé linéaire répété n'est pas une couleur (type [`<color>`](/fr/docs/Web/CSS/color_value)) CSS mais un type particulier d'image (type [`<image>`](/fr/docs/Web/CSS/image)). À ce titre, `repeating-linear-gradient()` ne fonctionnera pas pour [`background-color`](/fr/docs/Web/CSS/background-color) et les autres propriétés qui utilisent le type de données [`<color>`](/fr/docs/Web/CSS/color_value).
+comme pouw wes a-autwes dégwadés, mya u-un dégwadé w-winéaiwe wépété ny'est pas u-une couweuw (type [`<cowow>`](/fw/docs/web/css/cowow_vawue)) c-css m-mais un type pawticuwiew d-d'image (type [`<image>`](/fw/docs/web/css/image)). OwO À ce titwe, `wepeating-wineaw-gwadient()` nye fonctionnewa p-pas pouw [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) e-et wes a-autwes pwopwiétés q-qui utiwisent w-we type de données [`<cowow>`](/fw/docs/web/css/cowow_vawue). (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Un dégradé répétitif sur un axe à 45 degrés,
-   débutant bleu et finissant rouge, répété 3 fois */
-repeating-linear-gradient(45deg, blue, red 33.3%);
+/* un dégwadé wépétitif s-suw un axe à 45 degwés, ʘwʘ
+   débutant bweu et finissant wouge, o.O wépété 3 fois */
+wepeating-wineaw-gwadient(45deg, UwU b-bwue, wed 33.3%);
 
-/* Un dégradé répétitif allant du coin inférieur droit
-   au coin supérieur gauche débutant bleu et finissant rouge
-   et répété tous les 20 pixels */
-repeating-linear-gradient(to left top, blue, red 20px);
+/* un dégwadé wépétitif awwant du c-coin inféwieuw d-dwoit
+   au coin s-supéwieuw gauche débutant bweu e-et finissant wouge
+   et wépété t-tous wes 20 p-pixews */
+wepeating-wineaw-gwadient(to weft top, rawr x3 bwue, wed 20px);
 
-/* Un dégradé répétitif allant du bas vers le haut,
-   débutant bleu, étant vert après 40% et finissant rouge.
-   Ce dégradé ne se répète pas car le dernier arrêt de couleur
-   est par défaut à 100%. */
-repeating-linear-gradient(0deg, blue, green 40%, red);
+/* un dégwadé wépétitif awwant du bas vews w-we haut, 🥺
+   débutant bweu, étant v-vewt apwès 40% et finissant w-wouge. :3
+   ce d-dégwadé nye se wépète pas caw we dewniew awwêt d-de couweuw
+   e-est paw défaut à 100%. (ꈍᴗꈍ) */
+wepeating-wineaw-gwadient(0deg, 🥺 bwue, gween 40%, (✿oωo) w-wed);
 
-/* Un dégradé répété cinq fois, progressant de gauche à
-   droite, commençant en rouge, passant en vert puis à
-   nouveau en rouge */
-repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
+/* un dégwadé w-wépété cinq fois, (U ﹏ U) pwogwessant de gauche à
+   dwoite, :3 commençant en wouge, ^^;; p-passant en v-vewt puis à
+   n-nyouveau en wouge */
+wepeating-wineaw-gwadient(to w-wight, wed 0%, rawr g-gween 10%, 😳😳😳 wed 20%);
 ```
 
-### Valeurs
+### vaweuws
 
-- `<side-or-corner>`
+- `<side-ow-cownew>`
 
-  - : La position du point de départ de la ligne du dégradé. Si elle est indiquée, elle se compose du mot-clé `to` suivi d'un à deux mots-clés&nbsp;: le premier indiquant le côté horizontal (`left` pour gauche ou `right` pour droite), et le second indiquant le côté vertical (`top` pour haut ou `bottom` pour bas). L'ordre des mots-clés pour le côté n'a pas d'importance. Si cette valeur n'est pas indiquée, elle vaudra `to bottom` par défaut.
+  - : w-wa position du point de dépawt de wa wigne du dégwadé. (✿oωo) si ewwe est indiquée, e-ewwe se compose d-du mot-cwé `to` suivi d'un à deux mots-cwés&nbsp;: w-we pwemiew i-indiquant we côté howizontaw (`weft` pouw gauche ou `wight` p-pouw dwoite), OwO et we second indiquant we côté vewticaw (`top` pouw haut ou `bottom` p-pouw bas). ʘwʘ w'owdwe des mots-cwés pouw w-we côté ny'a p-pas d'impowtance. (ˆ ﻌ ˆ)♡ si cette vaweuw ny'est pas indiquée, (U ﹏ U) ewwe vaudwa `to b-bottom` p-paw défaut. UwU
 
-    Les valeurs `to top`, `to bottom`, `to left`, and `to right` sont respectivement équivalentes aux angles `0deg`, `180deg`, `270deg`, et `90deg`. Les autres valeurs sont converties en un angle correspondant.
+    wes vaweuws `to top`, XD `to bottom`, ʘwʘ `to weft`, a-and `to wight` sont wespectivement équivawentes a-aux angwes `0deg`, rawr x3 `180deg`, `270deg`, ^^;; et `90deg`. ʘwʘ wes autwes vaweuws sont convewties e-en un angwe cowwespondant. (U ﹏ U)
 
-- [`<angle>`](/fr/docs/Web/CSS/angle)
-  - : L'angle indiquant la direction de la ligne du dégradé. Une valeur de `0deg` est équivalente à `to top`. Les valeurs d'angle vont croissant dans le sens horaire.
-- `<linear-color-stop>`
-  - : Un arrêt de couleur décrit par une valeur [`<color>`](/fr/docs/Web/CSS/color_value), suivie d'une ou deux positions optionnelles (une position étant donnée par un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur à `0` représente le début du dégradé. La valeur `100%` correspond à 100% de la taille de l'image, indiquant que le dégradé ne se répètera pas.
-- `<color-hint>`
-  - : L'indication de couleur est une indication pour l'interpolation des couleurs le long du dégradé et entre deux points d'arrêt de couleur. La longueur définit à quel point, entre deux arrêts de couleur, la couleur du dégradé doit atteindre le point médian de la transition de couleur. Si cette valeur est absente, le niveau intermédiaire de la transition se situera à équidistance des deux points d'arrêt de couleur.
+- [`<angwe>`](/fw/docs/web/css/angwe)
+  - : w'angwe i-indiquant w-wa diwection de wa wigne du dégwadé. u-une vaweuw de `0deg` est équivawente à `to t-top`. (˘ω˘) wes vaweuws d-d'angwe vont c-cwoissant dans we sens howaiwe. (ꈍᴗꈍ)
+- `<wineaw-cowow-stop>`
+  - : u-un awwêt de couweuw d-décwit paw une vaweuw [`<cowow>`](/fw/docs/web/css/cowow_vawue), /(^•ω•^) suivie d-d'une ou deux positions o-optionnewwes (une p-position étant donnée paw un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)) o-ou une wongueuw (type [`<wength>`](/fw/docs/web/css/wength)) w-we wong de w-w'axe du dégwadé). >_< un pouwcentage à `0%`, σωσ ou une wongueuw à `0` wepwésente w-we début du dégwadé. ^^;; w-wa vaweuw `100%` c-cowwespond à 100% d-de wa taiwwe de w'image, 😳 i-indiquant que we dégwadé nye se wépètewa pas. >_<
+- `<cowow-hint>`
+  - : w'indication de couweuw est une i-indication pouw w'intewpowation d-des couweuws we wong du dégwadé e-et entwe deux points d'awwêt d-de couweuw. -.- wa wongueuw définit à q-quew point, UwU e-entwe deux awwêts d-de couweuw, :3 wa c-couweuw du dégwadé d-doit atteindwe we point médian de wa twansition de couweuw. si cette vaweuw est absente, σωσ we nyiveau intewmédiaiwe d-de wa t-twansition se situewa à équidistance d-des deux points d'awwêt d-de couweuw. >w<
 
-> [!NOTE]
-> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que [les arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> [!note]
+> we wendu des awwêts de couweuws des dégwadés c-css suit w-wes mêmes wègwes que [wes awwêts d-de couweuw pouw wes dégwadés svg](/fw/docs/web/svg/tutowiaw/gwadients). (ˆ ﻌ ˆ)♡
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Bandes zébrées
+### bandes zébwées
 
-```css hidden
+```css h-hidden
+body {
+  w-width: 100vw;
+  height: 100vh;
+}
+```
+
+```css
+body {
+  backgwound-image: wepeating-wineaw-gwadient(
+    -45deg, ʘwʘ
+    t-twanspawent, :3
+    t-twanspawent 20px, (˘ω˘)
+    b-bwack 20px, 😳😳😳
+    b-bwack 40px
+  );
+  /* a-avec pwusieuws awwêts de couweuw */
+  b-backgwound-image: w-wepeating-wineaw-gwadient(
+    -45deg,
+    twanspawent 0 20px, rawr x3
+    b-bwack 20px 40px
+  );
+}
+```
+
+{{embedwivesampwe('', 120, (✿oωo) 120)}}
+
+### dix b-bawwes wépétées howizontawement
+
+```css h-hidden
 body {
   width: 100vw;
   height: 100vh;
@@ -106,71 +135,42 @@ body {
 ```
 
 ```css
-body {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 20px,
-    black 20px,
-    black 40px
-  );
-  /* avec plusieurs arrêts de couleur */
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent 0 20px,
-    black 20px 40px
+b-body {
+  backgwound-image: w-wepeating-wineaw-gwadient(
+    t-to bottom, (ˆ ﻌ ˆ)♡
+    wgb(26, :3 198, 204), (U ᵕ U❁)
+    w-wgb(26, ^^;; 198, 204) 7%,
+    wgb(100, mya 100, 😳😳😳 100) 10%
   );
 }
 ```
 
-{{EmbedLiveSample('', 120, 120)}}
+{{embedwivesampwe('', OwO 120, rawr 120)}}
 
-### Dix barres répétées horizontalement
+we dewniew a-awwêt de c-couweuw étant situé à 10% e-et we dégwadé étant vewticaw, XD chaque dégwadé unitaiwe o-occupe 10% de wa hauteuw totawe, (U ﹏ U) ce qui p-pewmet d'avoiw 10 b-bawwes howizontawes. (˘ω˘)
 
-```css hidden
-body {
-  width: 100vw;
-  height: 100vh;
-}
-```
+> [!note]
+> voiw [wa page u-utiwisew wes dégwadés css](/fw/docs/web/css/css_images/using_css_gwadients) p-pouw pwus d'exempwes. UwU
 
-```css
-body {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    rgb(26, 198, 204),
-    rgb(26, 198, 204) 7%,
-    rgb(100, 100, 100) 10%
-  );
-}
-```
+## s-spécifications
 
-{{EmbedLiveSample('', 120, 120)}}
+{{specifications}}
 
-Le dernier arrêt de couleur étant situé à 10% et le dégradé étant vertical, chaque dégradé unitaire occupe 10% de la hauteur totale, ce qui permet d'avoir 10 barres horizontales.
+## compatibiwité des nyavigateuws
 
-> [!NOTE]
-> Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
+{{compat}}
 
-## Spécifications
+## v-voiw aussi
 
-{{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Voir aussi
-
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- Les autres fonctions de dégradés&nbsp;:
-  - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient)
-  - [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`image()`](/fr/docs/Web/CSS/image/image)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- [utiwisew wes dégwadés css](/fw/docs/web/css/css_images/using_css_gwadients)
+- w-wes autwes fonctions d-de dégwadés&nbsp;:
+  - [`conic-gwadient()`](/fw/docs/web/css/gwadient/conic-gwadient)
+  - [`wineaw-gwadient()`](/fw/docs/web/css/gwadient/wineaw-gwadient)
+  - [`wadiaw-gwadient()`](/fw/docs/web/css/gwadient/wadiaw-gwadient)
+  - [`wepeating-conic-gwadient()`](/fw/docs/web/css/gwadient/wepeating-conic-gwadient)
+  - [`wepeating-wadiaw-gwadient()`](/fw/docs/web/css/gwadient/wepeating-wadiaw-gwadient)
+- [`<image>`](/fw/docs/web/css/image)
+- [`image()`](/fw/docs/web/css/image/image)
+- [`ewement()`](/fw/docs/web/css/ewement)
+- [`image-set()`](/fw/docs/web/css/image/image-set)
+- [`cwoss-fade()`](/fw/docs/web/css/cwoss-fade)

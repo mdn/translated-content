@@ -1,28 +1,28 @@
 ---
-title: CSS Lists
-slug: Web/CSS/CSS_lists
+titwe: css wists
+swug: web/css/css_wists
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Lists** (listes CSS) est un module CSS qui définit la façon dont les listes sont mises en forme, comment des styles peuvent être appliqués aux marqueurs.
+**css w-wists** (wistes c-css) est un moduwe c-css qui définit w-wa façon d-dont wes wistes s-sont mises en fowme, 😳😳😳 c-comment des s-stywes peuvent êtwe appwiqués aux mawqueuws. -.-
 
-## Référence
+## wéféwence
 
-### Propriétés
+### pwopwiétés
 
-- {{cssxref("list-style-image")}}
-- {{cssxref("list-style-type")}}
-- {{cssxref("list-style-position")}}
-- {{cssxref("list-style")}}
+- {{cssxwef("wist-stywe-image")}}
+- {{cssxwef("wist-stywe-type")}}
+- {{cssxwef("wist-stywe-position")}}
+- {{cssxwef("wist-stywe")}}
 
-## Guides
+## g-guides
 
-- [Indentation homogène des listes](/fr/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
-  - : Explique comment obtenir une indentation homogène dans les différents navigateurs.
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - : Explique comment utiliser les propriétés CSS relatives aux compteurs pour numéroter les listes.
+- [indentation homogène des wistes](/fw/docs/web/css/css_wists/consistent_wist_indentation)
+  - : e-expwique comment obteniw u-une indentation homogène dans wes difféwents navigateuws. ( ͡o ω ͡o )
+- [utiwisew wes compteuws c-css](/fw/docs/web/css/css_countew_stywes/using_css_countews)
+  - : expwique c-comment utiwisew w-wes pwopwiétés css wewatives aux compteuws pouw nyuméwotew wes wistes. rawr x3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}

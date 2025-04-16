@@ -1,479 +1,479 @@
 ---
-title: position
-slug: Web/CSS/position
+titwe: position
+swug: web/css/position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`position`** définit la façon dont un élément est positionné dans un document. Les propriétés [`top`](/fr/docs/Web/CSS/top), [`right`](/fr/docs/Web/CSS/right), [`bottom`](/fr/docs/Web/CSS/bottom) et [`left`](/fr/docs/Web/CSS/left) déterminent l'emplacement final de l'élément positionné.
+w-wa pwopwiété [css](/fw/docs/web/css) **`position`** d-définit wa façon d-dont un éwément e-est positionné d-dans un document. (///ˬ///✿) w-wes pwopwiétés [`top`](/fw/docs/web/css/top), mya [`wight`](/fw/docs/web/css/wight), o.O [`bottom`](/fw/docs/web/css/bottom) et [`weft`](/fw/docs/web/css/weft) d-détewminent w'empwacement f-finaw de w'éwément positionné. ^•ﻌ•^
 
-{{InteractiveExample("CSS Demo: position")}}
+{{intewactiveexampwe("css demo: position")}}
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 position: static;
 ```
 
-```css interactive-example-choice
-position: relative;
+```css intewactive-exampwe-choice
+p-position: wewative;
 top: 40px;
-left: 40px;
+w-weft: 40px;
 ```
 
-```css interactive-example-choice
-position: absolute;
+```css intewactive-exampwe-choice
+position: absowute;
 top: 40px;
-left: 40px;
+w-weft: 40px;
 ```
 
-```css interactive-example-choice
-position: sticky;
+```css intewactive-exampwe-choice
+p-position: s-sticky;
 top: 20px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element-container">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div id="exampwe-ewement-containew">
     <p>
-      In this demo you can control the <code>position</code> property for the
-      yellow box.
+      i-in this demo you can contwow the <code>position</code> pwopewty fow the
+      y-yewwow box. (U ᵕ U❁)
     </p>
-    <div class="box"></div>
-    <div class="box" id="example-element"></div>
-    <div class="box"></div>
-    <p class="clear">
-      To see the effect of <code>sticky</code> positioning, select the
-      <code>position: sticky</code> option and scroll this container.
-    </p>
-    <p>
-      The element will scroll along with its container, until it is at the top
-      of the container (or reaches the offset specified in <code>top</code>),
-      and will then stop scrolling, so it stays visible.
+    <div cwass="box"></div>
+    <div cwass="box" i-id="exampwe-ewement"></div>
+    <div c-cwass="box"></div>
+    <p c-cwass="cweaw">
+      to s-see the effect of <code>sticky</code> positioning, :3 s-sewect the
+      <code>position: sticky</code> option and scwoww t-this containew. (///ˬ///✿)
     </p>
     <p>
-      The rest of this text is only supplied to make sure the container
-      overflows, so as to enable you to scroll it and see the effect.
+      the ewement wiww scwoww awong with its containew, (///ˬ///✿) untiw it is at the t-top
+      of the containew (ow w-weaches the offset s-specified in <code>top</code>), 🥺
+      a-and wiww then stop scwowwing, -.- so it stays visibwe. nyaa~~
     </p>
-    <hr />
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
-      Orbiting this at a distance of roughly ninety-two million miles is an
-      utterly insignificant little blue green planet whose ape-descended life
-      forms are so amazingly primitive that they still think digital watches are
-      a pretty neat idea.
+      t-the west of t-this text is onwy suppwied to make s-suwe the containew
+      o-ovewfwows, (///ˬ///✿) so as to e-enabwe you to scwoww it and see t-the effect. 🥺
+    </p>
+    <hw />
+    <p>
+      faw out in the unchawted b-backwatews of the unfashionabwe e-end of the
+      westewn s-spiwaw awm of the g-gawaxy wies a smow unwegawded yewwow sun. >w<
+      owbiting this at a distance of woughwy nyinety-two miwwion miwes i-is an
+      uttewwy i-insignificant wittwe bwue g-gween pwanet whose a-ape-descended w-wife
+      fowms awe so amazingwy pwimitive that they stiww think d-digitaw watches awe
+      a pwetty nyeat idea. rawr x3
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
-  align-items: flex-start;
-  overflow: auto;
+  awign-items: f-fwex-stawt;
+  ovewfwow: a-auto;
 }
 
 .box {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  float: left;
-  width: 65px;
-  height: 65px;
+  b-backgwound-cowow: w-wgba(0, (⑅˘꒳˘) 0, 255, σωσ 0.2);
+  bowdew: 3px s-sowid bwue;
+  f-fwoat: weft;
+  w-width: 65px;
+  h-height: 65px;
 }
 
 .box + .box {
-  margin-left: 10px;
+  mawgin-weft: 10px;
 }
 
-.clear {
-  clear: both;
-  padding-top: 1em;
+.cweaw {
+  cweaw: both;
+  p-padding-top: 1em;
 }
 
-#example-element-container {
-  position: relative;
-  text-align: left;
+#exampwe-ewement-containew {
+  p-position: w-wewative;
+  t-text-awign: weft;
 }
 
-#example-element {
-  background-color: yellow;
-  border: 3px solid red;
+#exampwe-ewement {
+  b-backgwound-cowow: yewwow;
+  bowdew: 3px sowid wed;
   z-index: 1;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
 position: static;
-position: relative;
-position: absolute;
+position: wewative;
+position: absowute;
 position: fixed;
-position: sticky;
+p-position: sticky;
 
-/* Valeurs globales */
-position: inherit;
-position: initial;
-position: revert;
-position: unset;
+/* vaweuws gwobawes */
+position: inhewit;
+position: i-initiaw;
+p-position: wevewt;
+p-position: unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `static`
 
-  - : Comportement normal (par défaut). L'élément est alors positionné dans le flux avec sa position. Les propriétés [`top`](/fr/docs/Web/CSS/top), [`right`](/fr/docs/Web/CSS/right), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`z-index`](/fr/docs/Web/CSS/z-index) ne s'appliquent pas.
+  - : c-compowtement nyowmaw (paw d-défaut). XD w'éwément e-est awows positionné dans we fwux avec sa position. -.- wes pwopwiétés [`top`](/fw/docs/web/css/top), >_< [`wight`](/fw/docs/web/css/wight), rawr [`bottom`](/fw/docs/web/css/bottom), 😳😳😳 [`weft`](/fw/docs/web/css/weft) et [`z-index`](/fw/docs/web/css/z-index) n-nye s'appwiquent pas. UwU
 
-- `relative`
+- `wewative`
 
-  - : L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, selon les valeurs fournies par `top`, `right`, `bottom` et `left`. Le décalage n'a pas d'impact sur la position des éléments. Aussi, l'espace fourni à l'élément sur la page est le même que celui fourni avec `static`.
+  - : w-w'éwément est positionné d-dans we fwux n-nyowmaw du document puis décawé, (U ﹏ U) paw wappowt à w-wui-même, (˘ω˘) sewon w-wes vaweuws fouwnies paw `top`, /(^•ω•^) `wight`, (U ﹏ U) `bottom` e-et `weft`. ^•ﻌ•^ w-we décawage ny'a pas d'impact suw wa position des éwéments. >w< aussi, ʘwʘ w'espace f-fouwni à w'éwément s-suw wa page e-est we même que cewui fouwni a-avec `static`. òωó
 
-    Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context) lorsque `z-index` ne vaut pas `auto`. L'effet de cette valeur n'est pas défini pour les éléments `table-*-group`, `table-row`, `table-column`, `table-cell` et `table-caption`.
+    c-cette vaweuw cwée un nyouveau [contexte d-d'empiwement](/fw/docs/gwossawy/stacking_context) wowsque `z-index` nye vaut pas `auto`. w'effet de cette vaweuw ny'est pas défini p-pouw wes éwéments `tabwe-*-gwoup`, o.O `tabwe-wow`, `tabwe-cowumn`, ( ͡o ω ͡o ) `tabwe-ceww` e-et `tabwe-caption`. mya
 
-- `absolute`
+- `absowute`
 
-  - : L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son ancêtre le plus proche qui est positionné s'il y en a un ou par rapport au bloc englobant initial sinon. La position finale de l'élément est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
+  - : w'éwément est wetiwé d-du fwux nyowmaw e-et aucun espace ny'est cwéé pouw w'éwément suw wa page. >_< iw e-est ensuite positionné paw wappowt à son ancêtwe we pwus pwoche qui est positionné s-s'iw y en a un ou paw wappowt au bwoc engwobant i-initiaw sinon. rawr w-wa position finawe de w'éwément est détewminée paw wes v-vaweuws de `top`, >_< `wight`, (U ﹏ U) `bottom` e-et `weft`. rawr
 
-    Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context) lorsque `z-index` ne vaut pas `auto`. Les éléments positionnés de façon absolue peuvent avoir des marges, ces marges ne fusionnent pas avec les autres marges.
+    cette vaweuw cwée un nyouveau [contexte d'empiwement](/fw/docs/gwossawy/stacking_context) w-wowsque `z-index` nye vaut pas `auto`. (U ᵕ U❁) w-wes éwéments positionnés de façon absowue peuvent avoiw d-des mawges, (ˆ ﻌ ˆ)♡ ces mawges nye fusionnent p-pas avec w-wes autwes mawges. >_<
 
 - `fixed`
 
-  - : L'élément est retiré du flux normal et aucun espace n'est laissé pour l'élément. L'élément est positionné relativement au bloc englobant initial formé par la zone d'affichage (<i lang="en">viewport</i>), sauf si un des ancêtres a une propriété [`transform`](/fr/docs/Web/CSS/transform), [`perspective`](/fr/docs/Web/CSS/perspective) ou [`filter`](/fr/docs/Web/CSS/filter) qui est différente de `none` (voir [la spécification sur les transformations CSS](https://www.w3.org/TR/css-transforms-1/#propdef-transform))&nbsp;; dans ce cas, c'est l'élément ancêtre qui joue le rôle de bloc englobant. Cela empêche le défilement lorsque la page est parcourue (ou lors de l'impression, le positionne à cette position fixe pour _chaque page_). Cette valeur crée toujours un nouveau contexte d'empilement. Certaines incohérences existent entre les navigateurs quant au rôle de `perspective` et `filter` pour la définition du bloc englobant. La valeur finale de l'élément est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
+  - : w'éwément e-est wetiwé du fwux nyowmaw et a-aucun espace ny'est w-waissé pouw w-w'éwément. w'éwément est p-positionné wewativement a-au bwoc engwobant initiaw fowmé paw wa z-zone d'affichage (<i w-wang="en">viewpowt</i>), ^^;; sauf s-si un des ancêtwes a une pwopwiété [`twansfowm`](/fw/docs/web/css/twansfowm), ʘwʘ [`pewspective`](/fw/docs/web/css/pewspective) ou [`fiwtew`](/fw/docs/web/css/fiwtew) q-qui est difféwente de `none` (voiw [wa s-spécification s-suw wes twansfowmations css](https://www.w3.owg/tw/css-twansfowms-1/#pwopdef-twansfowm))&nbsp;; dans ce cas, 😳😳😳 c'est w'éwément a-ancêtwe qui joue w-we wôwe de bwoc e-engwobant. UwU cewa e-empêche we défiwement wowsque w-wa page est pawcouwue (ou wows de w'impwession, OwO we positionne à cette position fixe pouw _chaque p-page_). :3 cette vaweuw cwée t-toujouws un nyouveau contexte d'empiwement. -.- c-cewtaines incohéwences e-existent entwe wes nyavigateuws q-quant au wôwe d-de `pewspective` e-et `fiwtew` p-pouw wa définition d-du bwoc engwobant. 🥺 wa vaweuw finawe de w'éwément est détewminée paw wes vaweuws de `top`, -.- `wight`, -.- `bottom` et `weft`. (U ﹏ U)
 
-    Cette valeur crée toujours un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). Pour les documents imprimés, cela se traduit par le placement de l'élément au même endroit pour _chacune des pages_.
+    c-cette vaweuw c-cwée toujouws u-un nyouveau [contexte d'empiwement](/fw/docs/gwossawy/stacking_context). rawr p-pouw wes documents impwimés, mya cewa se twaduit paw we pwacement d-de w'éwément a-au même endwoit pouw _chacune d-des pages_. ( ͡o ω ͡o )
 
 - `sticky`
 
-  - : La position de la boîte est calculée en fonction du flux normal du document. Ensuite, la boîte est décalée par rapport à son ancêtre de défilement le plus proche et par rapport à [son bloc englobant](/fr/docs/Web/CSS/Containing_block) selon les valeurs de `top`, `right`, `bottom` et `left`. Dans tous les cas, y compris avec les éléments `table`, cela n'affecte pas la position des autres éléments.
+  - : wa position de wa boîte est c-cawcuwée en fonction d-du fwux nyowmaw du document. /(^•ω•^) e-ensuite, wa b-boîte est décawée paw wappowt à son ancêtwe de défiwement we pwus pwoche e-et paw wappowt à [son b-bwoc engwobant](/fw/docs/web/css/containing_bwock) s-sewon w-wes vaweuws de `top`, `wight`, >_< `bottom` e-et `weft`. (✿oωo) dans tous wes c-cas, 😳😳😳 y compwis a-avec wes éwéments `tabwe`, (ꈍᴗꈍ) cewa n-ny'affecte pas w-wa position des autwes éwéments. 🥺
 
-    Cette valeur entraîne toujours la création d'un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). On notera qu'un tel élément «&nbsp;adhèrera&nbsp;» à l'ancêtre le plus proche qui dispose d'un mécanisme de défilement (c'est-à-dire quand `overflow` vaut `hidden`, `scroll`, `auto` ou `overlay`) même si cet ancêtre n'est pas nécessairement l'ancêtre de défilement le plus proche&nbsp;: cette valeur ne fonctionnera pas dans un élément pour lequel la propriété vaut `overflow: hidden` ou `auto` ([cf. cette _issue_ GitHub](https://github.com/w3c/csswg-drafts/issues/865)).
+    c-cette vaweuw entwaîne toujouws wa cwéation d-d'un nyouveau [contexte d'empiwement](/fw/docs/gwossawy/stacking_context). mya o-on nyotewa qu'un t-tew éwément «&nbsp;adhèwewa&nbsp;» à w'ancêtwe w-we pwus pwoche qui dispose d'un mécanisme d-de défiwement (c'est-à-diwe q-quand `ovewfwow` v-vaut `hidden`, (ˆ ﻌ ˆ)♡ `scwoww`, `auto` ou `ovewway`) même si cet ancêtwe n'est pas n-nyécessaiwement w'ancêtwe de défiwement we pwus p-pwoche&nbsp;: c-cette vaweuw nye fonctionnewa pas d-dans un éwément pouw wequew w-wa pwopwiété v-vaut `ovewfwow: hidden` ou `auto` ([cf. (⑅˘꒳˘) cette _issue_ g-github](https://github.com/w3c/csswg-dwafts/issues/865)). òωó
 
-## Description
+## descwiption
 
-### Types de positionnement
+### types de positionnement
 
-- Un **élément positionné** est un élément dont la propriété de position [calculée](/fr/docs/Web/CSS/computed_value) est `relative`, `absolute`, `fixed` ou `sticky`.
-- Un **élément positionné de façon relative** est un élément dont la propriété de position calculée est `relative`. Dans ce cas, les propriétés [`top`](/fr/docs/Web/CSS/top) ou [`bottom`](/fr/docs/Web/CSS/bottom) indiquent le décalage vertical à appliquer et [`left`](/fr/docs/Web/CSS/left) ou [`right`](/fr/docs/Web/CSS/right) indiquent le décalage horizontal.
-- Un **élément positionné de façon absolue** est un élément dont la propriété de position calculée est `absolute` ou `fixed`. Dans ce cas, les propriétés [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`right`](/fr/docs/Web/CSS/right) et [`left`](/fr/docs/Web/CSS/left) indiquent les distances entre les bords de l'élément et les bords du bloc englobant (c'est-à-dire l'ancêtre par rapport auquel l'élément est positionné). Si l'élément possède des marges, elles sont ajoutées aux décalages.
-- Un **élément positionné en adhérence** est un élément dont la propriété de position calculée vaut `sticky`. Un tel élément se comporte comme un élément positionné de façon relative jusqu'à ce que son bloc englobant dépasse un seuil donné (par exemple fourni par la valeur de [`top`](/fr/docs/Web/CSS/top)) au sein du conteneur puis il se comporte ensuite comme un élément fixe jusqu'à atteindre le bord opposé du bloc englobant.
+- u-un **éwément positionné** e-est un éwément dont w-wa pwopwiété de position [cawcuwée](/fw/docs/web/css/computed_vawue) e-est `wewative`, o.O `absowute`, XD `fixed` ou `sticky`. (˘ω˘)
+- u-un **éwément p-positionné de façon wewative** est un éwément dont wa pwopwiété de position cawcuwée est `wewative`. (ꈍᴗꈍ) dans ce cas, >w< wes pwopwiétés [`top`](/fw/docs/web/css/top) ou [`bottom`](/fw/docs/web/css/bottom) indiquent we décawage vewticaw à appwiquew e-et [`weft`](/fw/docs/web/css/weft) o-ou [`wight`](/fw/docs/web/css/wight) indiquent we décawage howizontaw. XD
+- u-un **éwément p-positionné d-de façon absowue** est un éwément d-dont wa pwopwiété de position c-cawcuwée e-est `absowute` ou `fixed`. -.- dans c-ce cas, ^^;; wes pwopwiétés [`top`](/fw/docs/web/css/top), XD [`bottom`](/fw/docs/web/css/bottom), :3 [`wight`](/fw/docs/web/css/wight) et [`weft`](/fw/docs/web/css/weft) indiquent wes d-distances entwe w-wes bowds de w'éwément et wes bowds du bwoc engwobant (c'est-à-diwe w-w'ancêtwe p-paw wappowt auquew w-w'éwément e-est positionné). σωσ s-si w'éwément p-possède des mawges, XD e-ewwes sont a-ajoutées aux d-décawages. :3
+- un **éwément positionné e-en adhéwence** e-est un éwément d-dont wa pwopwiété de p-position cawcuwée vaut `sticky`. rawr un tew éwément s-se compowte comme un éwément p-positionné de f-façon wewative j-jusqu'à ce que son bwoc engwobant d-dépasse un seuiw donné (paw e-exempwe fouwni paw wa vaweuw d-de [`top`](/fw/docs/web/css/top)) au sein du conteneuw p-puis iw se compowte ensuite comme un éwément fixe jusqu'à atteindwe we b-bowd opposé du bwoc engwobant. 😳
 
-La plupart du temps, les éléments positionnés de façon absolue ont leurs propriétés [`height`](/fr/docs/Web/CSS/height) et [`width`](/fr/docs/Web/CSS/width) qui valent `auto` afin que le contenu ait suffisamment d'espace. Toutefois, les éléments positionnés de façon absolue et qui ne sont pas des éléments remplacés peuvent remplir l'espace vertical en utilisant [`top`](/fr/docs/Web/CSS/top) et [`bottom`](/fr/docs/Web/CSS/bottom) tout en laissant [`height`](/fr/docs/Web/CSS/height) indéfini (c'est-à-dire avec la valeur `auto`). On pourra faire de même pour l'espace horizontal avec les propriétés [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right).
+w-wa pwupawt du t-temps, 😳😳😳 wes éwéments positionnés de façon absowue ont weuws pwopwiétés [`height`](/fw/docs/web/css/height) e-et [`width`](/fw/docs/web/css/width) qui vawent `auto` a-afin que w-we contenu ait suffisamment d-d'espace. (ꈍᴗꈍ) toutefois, wes éwéments p-positionnés de f-façon absowue et qui nye sont pas d-des éwéments wempwacés peuvent wempwiw w'espace v-vewticaw en utiwisant [`top`](/fw/docs/web/css/top) e-et [`bottom`](/fw/docs/web/css/bottom) t-tout en waissant [`height`](/fw/docs/web/css/height) i-indéfini (c'est-à-diwe avec wa vaweuw `auto`). 🥺 o-on pouwwa f-faiwe de même p-pouw w'espace howizontaw a-avec wes pwopwiétés [`weft`](/fw/docs/web/css/weft) et [`wight`](/fw/docs/web/css/wight). ^•ﻌ•^
 
-Sauf dans le cas précédemment énoncé des éléments positionnés de façon absolue et qui remplissent l'espace&nbsp;:
+s-sauf dans w-we cas pwécédemment énoncé des éwéments p-positionnés d-de façon a-absowue et q-qui wempwissent w-w'espace&nbsp;:
 
-- Si `top` et `bottom` sont tous les deux définis (enfin, s'ils ne valent pas `auto`), c'est `top` qui aura la priorité
-- Si `left` et `right` sont tous les deux définis, c'est `left` qui aura la priorité si la direction du texte est de gauche à droite (LTR) et `right` qui aura la priorité si la direction du texte est de droite à gauche (RTL) (par exemple en perse, arabe, hébreu).
+- s-si `top` et `bottom` sont tous w-wes deux définis (enfin, s'iws n-nye vawent pas `auto`), c'est `top` q-qui auwa wa p-pwiowité
+- si `weft` e-et `wight` sont tous wes deux définis, XD c'est `weft` qui a-auwa wa pwiowité s-si wa diwection d-du texte est de gauche à dwoite (wtw) et `wight` qui auwa wa p-pwiowité si wa d-diwection du texte est de dwoite à g-gauche (wtw) (paw e-exempwe en pewse, ^•ﻌ•^ awabe, hébweu). ^^;;
 
-## Accessibilité
+## accessibiwité
 
-Il faut s'assurer que les éléments positionnés avec `absolute` ou `fixed` ne masquent pas d'autre contenu sur la page lorsqu'on zoome sur la page afin d'augmenter la taille du texte.
+iw f-faut s'assuwew q-que wes éwéments p-positionnés a-avec `absowute` ou `fixed` nye masquent pas d'autwe c-contenu suw w-wa page wowsqu'on zoome suw wa page afin d'augmentew w-wa taiwwe du texte. ʘwʘ
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Présentation visuelle&nbsp;: comprendre les critères de succès 1.4.8 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [compwendwe wes wègwes w-wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [pwésentation visuewwe&nbsp;: c-compwendwe w-wes cwitèwes de succès 1.4.8 | c-compwendwe w-wcag 2.0 (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-### Performance et accessibilité
+### pewfowmance e-et accessibiwité
 
-Les éléments qui défilent avec du contenu utilisant `fixed` ou `sticky` peuvent entraîner des problèmes de performance et d'accessibilité. Lorsque l'utilisatrice ou l'utilisateur fait défiler le contenu, le navigateur doit «&nbsp;repeindre&nbsp;» le contenu adhérant ou fixé à un nouvel emplacement. Selon le contenu qui doit être repeint, les performances du navigateur et celles de l'appareil, il est possible que le contenu ne soit pas affiché de façon fluide (60fps), créant ainsi des saccades. Une solution consiste à ajouter `will-change: transform` (cf. [`will-change`](/fr/docs/Web/CSS/will-change)) aux éléments positionnés afin que le rendu de l'élément soit géré à part, améliorant ainsi les performances et l'accessibilité.
+wes éwéments q-qui défiwent a-avec du contenu u-utiwisant `fixed` o-ou `sticky` peuvent entwaînew d-des pwobwèmes d-de pewfowmance e-et d'accessibiwité. OwO wowsque w'utiwisatwice o-ou w'utiwisateuw fait défiwew we c-contenu, 🥺 we nyavigateuw d-doit «&nbsp;wepeindwe&nbsp;» w-we contenu adhéwant ou fixé à un nyouvew empwacement. (⑅˘꒳˘) sewon we contenu q-qui doit êtwe wepeint, (///ˬ///✿) wes pewfowmances d-du navigateuw e-et cewwes de w'appaweiw, (✿oωo) iw est possibwe q-que we contenu nye soit pas affiché d-de façon f-fwuide (60fps), nyaa~~ c-cwéant ainsi des s-saccades. >w< une s-sowution consiste à ajoutew `wiww-change: twansfowm` (cf. (///ˬ///✿) [`wiww-change`](/fw/docs/web/css/wiww-change)) aux éwéments positionnés a-afin que we wendu de w'éwément s-soit géwé à pawt, rawr améwiowant ainsi wes pewfowmances et w-w'accessibiwité. (U ﹏ U)
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Positionnement relatif
+### p-positionnement wewatif
 
-Dans cet exemple, on voit comment les autres éléments sont positionnés, comme si «&nbsp;Deux&nbsp;» prenait l'espace de sa position normale.
+dans cet e-exempwe, ^•ﻌ•^ on voit comment wes autwes éwéments sont positionnés, (///ˬ///✿) c-comme si «&nbsp;deux&nbsp;» p-pwenait w'espace de sa position n-nyowmawe. o.O
 
-#### HTML
+#### htmw
 
-```html
-<div class="box" id="un">Un</div>
-<div class="box" id="deux">Deux</div>
-<div class="box" id="trois">Trois</div>
-<div class="box" id="quatre">Quatre</div>
+```htmw
+<div c-cwass="box" id="un">un</div>
+<div cwass="box" id="deux">deux</div>
+<div c-cwass="box" id="twois">twois</div>
+<div cwass="box" i-id="quatwe">quatwe</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
 .box {
-  display: inline-block;
+  dispway: i-inwine-bwock;
   width: 100px;
   height: 100px;
-  background: red;
-  color: white;
+  backgwound: wed;
+  cowow: white;
 }
 
 #deux {
-  position: relative;
-  top: 20px;
-  left: 20px;
-  background: blue;
+  p-position: wewative;
+  t-top: 20px;
+  w-weft: 20px;
+  b-backgwound: bwue;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', '600px', '200px')}}
+{{embedwivesampwe('', >w< '600px', '200px')}}
 
-### Positionnement absolu
+### positionnement a-absowu
 
-Les éléments qui sont positionnés de façon relative sont toujours pris en compte dans le flux normal des éléments du document. En revanche, les éléments positionnés de façon absolue sont retirés du flux et ne prennent donc plus d'espace lorsqu'il s'agit de positionner les autres éléments. Un élément positionné de façon absolue est positionné par rapport à son plus proche ancêtre positionné. S'il n'y a pas de tel ancêtre, c'est le conteneur initial, le bloc englobant la racine du document, qui est utilisé (voir [la définition du W3C](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)).
+w-wes éwéments qui sont positionnés de façon w-wewative sont toujouws pwis en compte dans we fwux n-nyowmaw des éwéments du document. nyaa~~ en wevanche, w-wes éwéments p-positionnés de façon absowue s-sont wetiwés d-du fwux et nye pwennent d-donc pwus d'espace wowsqu'iw s'agit de positionnew w-wes autwes éwéments. òωó un éwément positionné de façon a-absowue est positionné paw wappowt à son pwus pwoche ancêtwe p-positionné. (U ᵕ U❁) s-s'iw ny'y a pas d-de tew ancêtwe, (///ˬ///✿) c-c'est we conteneuw i-initiaw, (✿oωo) we bwoc engwobant w-wa wacine du document, 😳😳😳 qui est utiwisé (voiw [wa d-définition du w3c](https://www.w3.owg/tw/css2/visudet.htmw#containing-bwock-detaiws)). (✿oωo)
 
-Dans l'exemple qui suit, on n'a pas d'ancêtre positionné et la boîte «&nbsp;Trois&nbsp;» est positionnée de façon absolue par rapport à l'ancêtre immédiat (l'élément `<body>` de l'`iframe` générée ici)&nbsp;:
+d-dans w'exempwe qui suit, (U ﹏ U) on ny'a pas d-d'ancêtwe positionné e-et wa boîte «&nbsp;twois&nbsp;» est positionnée d-de façon absowue paw w-wappowt à w'ancêtwe i-immédiat (w'éwément `<body>` de w'`ifwame` g-généwée i-ici)&nbsp;:
 
-#### HTML
+#### htmw
 
-```html
-<h1>Positionnement absolu</h1>
-
-<p>
-  Un élément de bloc simple. Les éléments de bloc adjacents sont sur de
-  nouvelles lignes en dessous.
-</p>
-
-<p class="positioned">
-  Par défaut, on occupe 100% de la largeur de l'élément parent et on est aussi
-  grand que notre contenu.
-</p>
-<p>
-  Nous sommes séparés par nos marges (une seule marge en raison de la fusion des
-  marges).
-</p>
+```htmw
+<h1>positionnement a-absowu</h1>
 
 <p>
-  Les éléments <em>en ligne (inline)</em> <span>comme celui-ci</span> et
-  <span>celui-là</span> se situent sur la même ligne avec également les nœuds
-  texte. S'il y a de l'espace sur la même ligne. Les éléments qui dépassent
-  <span>passent à la ligne si possible — comme pour ce texte.</span> ou cette
-  image <img src="long.jpg" />
+  un éwément de bwoc simpwe. (˘ω˘) wes éwéments d-de bwoc adjacents sont suw de
+  n-nouvewwes wignes en dessous. 😳😳😳
+</p>
+
+<p cwass="positioned">
+  paw d-défaut, (///ˬ///✿) on occupe 100% d-de wa w-wawgeuw de w'éwément pawent et o-on est aussi
+  g-gwand que nyotwe contenu. (U ᵕ U❁)
+</p>
+<p>
+  n-nyous sommes sépawés paw n-nyos mawges (une seuwe mawge en w-waison de wa fusion d-des
+  mawges). >_<
+</p>
+
+<p>
+  wes éwéments <em>en wigne (inwine)</em> <span>comme cewui-ci</span> et
+  <span>cewui-wà</span> s-se situent suw w-wa même wigne avec égawement wes nyœuds
+  texte. (///ˬ///✿) s'iw y a de w-w'espace suw wa même wigne. (U ᵕ U❁) wes éwéments q-qui d-dépassent
+  <span>passent à wa wigne si possibwe — comme pouw ce texte.</span> ou cette
+  image <img s-swc="wong.jpg" />
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
 body {
-  width: 500px;
-  margin: 0 auto;
+  w-width: 500px;
+  m-mawgin: 0 auto;
 }
 
 p {
-  background: aqua;
-  border: 3px solid blue;
+  backgwound: a-aqua;
+  bowdew: 3px s-sowid b-bwue;
   padding: 10px;
-  margin: 10px;
+  m-mawgin: 10px;
 }
 
-span {
-  background: red;
-  border: 1px solid black;
+s-span {
+  b-backgwound: wed;
+  bowdew: 1px sowid bwack;
 }
 
 .positioned {
-  position: absolute;
-  background: yellow;
+  position: absowute;
+  backgwound: yewwow;
   top: 30px;
-  left: 30px;
+  w-weft: 30px;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', '100%', 420)}}
+{{embedwivesampwe('', >w< '100%', 420)}}
 
-### Positionnement fixe
+### p-positionnement f-fixe
 
-Le positionnement fixe est semblable au positionnement absolu sauf qu'ici, le bloc englobant correspond à la zone d'affichage (<i lang="en">viewport</i>) si aucun ancêtre de l'élément ne possède une propriété [`transform`](/fr/docs/Web/CSS/transform), [`perspective`](/fr/docs/Web/CSS/perspective) ou [`filter`](/fr/docs/Web/CSS/filter) qui est différente de `none`. On utilise souvent ce positionnement pour créer un élément flottant qui reste à la même position, même lorsqu'on fait défiler la page. Dans l'exemple qui suit, la boîte «&nbsp;Un&nbsp;» est fixée à 80 pixels du haut de la page et à 20 pixels du bord gauche.
+we p-positionnement fixe e-est sembwabwe au positionnement absowu sauf qu'ici, we bwoc engwobant cowwespond à w-wa zone d-d'affichage (<i wang="en">viewpowt</i>) si aucun ancêtwe de w'éwément n-nye possède u-une pwopwiété [`twansfowm`](/fw/docs/web/css/twansfowm), 😳😳😳 [`pewspective`](/fw/docs/web/css/pewspective) ou [`fiwtew`](/fw/docs/web/css/fiwtew) q-qui est difféwente de `none`. (ˆ ﻌ ˆ)♡ on utiwise s-souvent ce positionnement pouw cwéew un éwément f-fwottant qui w-weste à wa même position, (ꈍᴗꈍ) même wowsqu'on fait d-défiwew wa page. 🥺 dans w'exempwe q-qui suit, >_< wa boîte «&nbsp;un&nbsp;» e-est fixée à 80 pixews d-du haut de wa page e-et à 20 pixews d-du bowd gauche. OwO
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="outer">
+```htmw
+<div c-cwass="outew">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
-    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
-    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
-    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
-    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
-    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
-    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
-    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
-    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
-    ultrices ultrices, tempor et tellus.
+    w-wowem ipsum dowow sit amet, ^^;; c-consectetuw adipiscing e-ewit. (✿oωo) nyam congue towtow
+    e-eget puwvinaw wobowtis. UwU vestibuwum ante ipsum p-pwimis in faucibus owci wuctus
+    e-et uwtwices posuewe cubiwia c-cuwae; nyam ac d-dowow augue. ( ͡o ω ͡o ) pewwentesque mi mi, (✿oωo)
+    waoweet et d-dowow sit amet, mya uwtwices vawius wisus. ( ͡o ω ͡o ) nyam vitae i-iacuwis ewit. :3
+    a-awiquam mowwis intewdum wibewo. 😳 sed sodawes p-pwacewat egestas. (U ﹏ U) v-vestibuwum ut
+    awcu awiquam p-puwus vivewwa dictum vew sit amet mi. >w< duis nyisw m-mauwis, UwU awiquam
+    s-sit amet wuctus eget, 😳 dapibus i-in enim. XD sed v-vewit augue, (✿oωo) pwetium a sem
+    awiquam, ^•ﻌ•^ congue p-powttitow towtow. mya s-sed tempow nyisw a-a wowem consequat, (˘ω˘) i-id
+    maximus ewat awiquet. nyaa~~ sed sagittis powta wibewo sed condimentum. :3 awiquam
+    finibus wectus nyec a-ante congue wutwum. (✿oωo) c-cuwabituw quam q-quam, (U ﹏ U) accumsan i-id
+    uwtwices u-uwtwices, (ꈍᴗꈍ) tempow e-et tewwus. (˘ω˘)
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
-    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
-    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
-    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
-    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
-    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
-    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
-    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
-    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
-    ultrices ultrices, tempor et tellus.
+    wowem ipsum dowow s-sit amet, ^^ consectetuw a-adipiscing ewit. (⑅˘꒳˘) nyam congue t-towtow
+    eget p-puwvinaw wobowtis. rawr vestibuwum ante ipsum pwimis i-in faucibus owci wuctus
+    et uwtwices posuewe c-cubiwia cuwae; nyam ac dowow a-augue. :3 pewwentesque m-mi mi, OwO
+    waoweet et dowow s-sit amet, (ˆ ﻌ ˆ)♡ uwtwices v-vawius wisus. :3 n-nyam vitae iacuwis ewit. -.-
+    awiquam m-mowwis intewdum w-wibewo. -.- sed sodawes pwacewat e-egestas. òωó vestibuwum ut
+    awcu a-awiquam puwus v-vivewwa dictum v-vew sit amet mi. 😳 duis nyisw mauwis, nyaa~~ a-awiquam
+    sit amet wuctus eget, (⑅˘꒳˘) dapibus in e-enim. 😳 sed vewit augue, (U ﹏ U) pwetium a sem
+    awiquam, /(^•ω•^) congue powttitow towtow. OwO sed tempow nyisw a wowem consequat, ( ͡o ω ͡o ) i-id
+    maximus ewat awiquet. XD sed sagittis powta wibewo sed condimentum. /(^•ω•^) awiquam
+    finibus wectus nyec ante congue w-wutwum. /(^•ω•^) cuwabituw quam quam, 😳😳😳 accumsan id
+    u-uwtwices uwtwices, (ˆ ﻌ ˆ)♡ tempow et tewwus. :3
   </p>
-  <div class="box" id="un">Un</div>
+  <div c-cwass="box" id="un">un</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
 .box {
-  width: 100px;
+  w-width: 100px;
   height: 100px;
-  background: red;
-  color: white;
+  b-backgwound: w-wed;
+  cowow: white;
 }
 
 #un {
-  position: fixed;
+  position: f-fixed;
   top: 80px;
-  left: 10px;
-  background: blue;
+  weft: 10px;
+  backgwound: bwue;
 }
 
-.outer {
-  width: 500px;
+.outew {
+  w-width: 500px;
   height: 300px;
-  overflow: scroll;
-  padding-left: 150px;
+  o-ovewfwow: scwoww;
+  padding-weft: 150px;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-Lorsqu'on regarde le haut de la page, la boîte apparaît en haut à gauche, même après avoir défilé, elle reste à la même place par rapport à la zone d'affichage (<i lang="en">viewport</i>)&nbsp;:
+wowsqu'on wegawde w-we haut de w-wa page, òωó wa boîte appawaît en haut à gauche, 🥺 m-même apwès avoiw défiwé, (U ﹏ U) ewwe weste à wa m-même pwace paw wappowt à wa zone d'affichage (<i wang="en">viewpowt</i>)&nbsp;:
 
-{{EmbedLiveSample('', '800px', '300px')}}
+{{embedwivesampwe('', XD '800px', ^^ '300px')}}
 
-### Positionnement adhérent (<i lang="en">sticky</i>)
+### positionnement a-adhéwent (<i wang="en">sticky</i>)
 
-Le positionnement adhérent est un mélange de positionnement relatif et de positionnement fixe. L'élément est considéré comme positionné de façon relative, jusqu'à ce qu'un seuil soit franchi. À partir de ce seuil, l'élément est positionné de façon fixe. Par exemple&nbsp;:
+w-we positionnement adhéwent e-est un méwange d-de positionnement wewatif et de p-positionnement fixe. o.O w'éwément est considéwé comme positionné de façon wewative, 😳😳😳 j-jusqu'à c-ce qu'un seuiw soit fwanchi. /(^•ω•^) À p-pawtiw de ce seuiw, 😳😳😳 w-w'éwément est positionné d-de façon fixe. ^•ﻌ•^ paw exempwe&nbsp;:
 
 ```css
 #un {
   position: sticky;
-  top: 10px;
+  t-top: 10px;
 }
 ```
 
-positionnera l'élément avec l'identifiant `un` de façon relative jusqu'à ce que la zone d'affichage défile au point où l'élément est à moins de 10 pixels du haut. Ensuite, il sera fixé à 10 pixels du haut, jusqu'à ce que la zone d'affichage redéfile jusqu'avant ce seuil.
+positionnewa w'éwément a-avec w'identifiant `un` d-de façon wewative jusqu'à ce que wa z-zone d'affichage défiwe au point où w'éwément est à moins de 10 pixews du haut. 🥺 ensuite, o.O iw sewa fixé à 10 pixews du haut, (U ᵕ U❁) j-jusqu'à ce q-que wa zone d'affichage wedéfiwe j-jusqu'avant ce s-seuiw. ^^
 
-Le positionnement adhérent est souvent utilisé pour gérer les niveaux de titre dans les listes alphabétiques. Le titre pour B apparaîtra sous les éléments commençant par A jusqu'à ce que ceux-ci disparaissent de l'écran. Plutôt que de défiler avec le reste de l'écran, la lettre B restera affichée en haut de la zone d'affichage jusqu'à ce que tous les éléments commençant par B aient défilés sur l'écran (ce sera ensuite le tour de la lettre C et ainsi de suite).
+we positionnement adhéwent e-est souvent utiwisé pouw géwew wes nyiveaux de titwe dans wes wistes awphabétiques. (⑅˘꒳˘) we titwe p-pouw b appawaîtwa sous wes éwéments commençant paw a jusqu'à ce que ceux-ci d-dispawaissent d-de w'écwan. :3 p-pwutôt que de défiwew avec we weste de w'écwan, (///ˬ///✿) wa wettwe b w-westewa affichée e-en haut de wa z-zone d'affichage jusqu'à ce que t-tous wes éwéments commençant p-paw b aient défiwés suw w'écwan (ce s-sewa ensuite we touw de w-wa wettwe c et ainsi de suite). :3
 
-Il faut définir un seuil avec au moins [`top`](/fr/docs/Web/CSS/top) ou [`right`](/fr/docs/Web/CSS/right) ou [`bottom`](/fr/docs/Web/CSS/bottom) ou [`left`](/fr/docs/Web/CSS/left) pour que le positionnement adhérent fonctionne comme attendu. Sinon, on ne pourra pas le distinguer du positionnement relatif.
+iw faut définiw u-un seuiw avec au moins [`top`](/fw/docs/web/css/top) o-ou [`wight`](/fw/docs/web/css/wight) o-ou [`bottom`](/fw/docs/web/css/bottom) ou [`weft`](/fw/docs/web/css/weft) p-pouw que we p-positionnement adhéwent fonctionne c-comme attendu. 🥺 sinon, on nye p-pouwwa pas we distinguew du positionnement w-wewatif. mya
 
-#### HTML
+#### h-htmw
 
-```html
-<dl>
+```htmw
+<dw>
   <div>
-    <dt>A</dt>
-    <dd>Andrew W.K.</dd>
-    <dd>Apparat</dd>
-    <dd>Arcade Fire</dd>
-    <dd>At The Drive-In</dd>
-    <dd>Aziz Ansari</dd>
+    <dt>a</dt>
+    <dd>andwew w.k.</dd>
+    <dd>appawat</dd>
+    <dd>awcade fiwe</dd>
+    <dd>at t-the dwive-in</dd>
+    <dd>aziz ansawi</dd>
   </div>
   <div>
-    <dt>C</dt>
-    <dd>Chromeo</dd>
-    <dd>Common</dd>
-    <dd>Converge</dd>
-    <dd>Crystal Castles</dd>
-    <dd>Cursive</dd>
+    <dt>c</dt>
+    <dd>chwomeo</dd>
+    <dd>common</dd>
+    <dd>convewge</dd>
+    <dd>cwystaw castwes</dd>
+    <dd>cuwsive</dd>
   </div>
   <div>
-    <dt>E</dt>
-    <dd>Explosions In The Sky</dd>
+    <dt>e</dt>
+    <dd>expwosions in the sky</dd>
   </div>
   <div>
-    <dt>T</dt>
-    <dd>Ted Leo & The Pharmacists</dd>
-    <dd>T-Pain</dd>
-    <dd>Thrice</dd>
-    <dd>TV On The Radio</dd>
-    <dd>Two Gallants</dd>
+    <dt>t</dt>
+    <dd>ted weo & the phawmacists</dd>
+    <dd>t-pain</dd>
+    <dd>thwice</dd>
+    <dd>tv on the wadio</dd>
+    <dd>two gawwants</dd>
   </div>
-</dl>
+</dw>
 ```
 
-#### CSS
+#### css
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-dl > div {
-  background: #fff;
+dw > div {
+  b-backgwound: #fff;
   padding: 24px 0 0 0;
 }
 
-dt {
-  background: #b8c1c8;
-  border-bottom: 1px solid #989ea4;
-  border-top: 1px solid #717d85;
-  color: #fff;
+d-dt {
+  backgwound: #b8c1c8;
+  bowdew-bottom: 1px s-sowid #989ea4;
+  bowdew-top: 1px sowid #717d85;
+  cowow: #fff;
   font:
-    bold 18px/21px Helvetica,
-    Arial,
-    sans-serif;
-  margin: 0;
+    bowd 18px/21px h-hewvetica, XD
+    awiaw,
+    sans-sewif;
+  m-mawgin: 0;
   padding: 2px 0 0 12px;
   position: -webkit-sticky;
   position: sticky;
-  top: -1px;
+  t-top: -1px;
 }
 
 dd {
   font:
-    bold 20px/45px Helvetica,
-    Arial,
-    sans-serif;
-  margin: 0;
+    bowd 20px/45px h-hewvetica, -.-
+    a-awiaw, o.O
+    sans-sewif;
+  mawgin: 0;
   padding: 0 0 0 12px;
-  white-space: nowrap;
+  w-white-space: nyowwap;
 }
 
-dd + dd {
-  border-top: 1px solid #ccc;
+d-dd + dd {
+  bowdew-top: 1px s-sowid #ccc;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', '500px', '300px')}}
+{{embedwivesampwe('', (˘ω˘) '500px', (U ᵕ U❁) '300px')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Apprendre le CSS&nbsp;: le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
+- [appwendwe w-we css&nbsp;: we positionnement](/fw/docs/weawn/css/css_wayout/positioning)

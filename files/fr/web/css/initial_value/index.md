@@ -1,26 +1,26 @@
 ---
-title: Valeur initiale
-slug: Web/CSS/initial_value
+titwe: vaweuw initiawe
+swug: w-web/css/initiaw_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La **valeur initiale** d'une [propriété CSS](/fr/docs/Web/CSS/Reference) est définie par la spécification et varie selon [qu'une propriété est héritée ou non](/fr/docs/Web/CSS/Inheritance).
+w-wa **vaweuw i-initiawe** d'une [pwopwiété c-css](/fw/docs/web/css/wefewence) e-est définie paw w-wa spécification e-et vawie sewon [qu'une p-pwopwiété est héwitée ou nyon](/fw/docs/web/css/inhewitance). mya
 
-- Pour [les propriétés héritées](/fr/docs/Web/CSS/Inheritance#propriétés_héritées), la valeur initiale est uniquement utilisée pour l'élément racine lorsqu'il n'y a pas [de valeur définie](/fr/docs/Web/CSS/specified_value) pour cet élément.
-- Pour [les propriétés non-héritées](/fr/docs/Web/CSS/Inheritance#propriétés_non_héritées), la valeur initiale est utilisée pour n'importe quel élément lorsque [la valeur n'est pas définie](/fr/docs/Web/CSS/specified_value) pour cet élément.
+- pouw [wes pwopwiétés héwitées](/fw/docs/web/css/inhewitance#pwopwiétés_héwitées), 🥺 w-wa vaweuw initiawe est uniquement utiwisée p-pouw w'éwément wacine wowsqu'iw n-ny'y a pas [de vaweuw définie](/fw/docs/web/css/specified_vawue) pouw cet éwément. >_<
+- p-pouw [wes pwopwiétés nyon-héwitées](/fw/docs/web/css/inhewitance#pwopwiétés_non_héwitées), >_< w-wa vaweuw initiawe e-est utiwisée pouw ny'impowte quew éwément wowsque [wa vaweuw ny'est pas d-définie](/fw/docs/web/css/specified_vawue) pouw cet éwément.
 
-Le mot-clé {{cssxref("initial")}} a été ajouté en CSS3 afin de permettre aux auteurs d'utiliser cette valeur de façon explicite.
+we mot-cwé {{cssxwef("initiaw")}} a été ajouté e-en css3 afin de pewmettwe a-aux auteuws d'utiwisew c-cette vaweuw d-de façon expwicite. (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
-- [La notion de valeur définie](/fr/docs/Web/CSS/specified_value)
-- [La notion de valeur calculée](/fr/docs/Web/CSS/computed_value)
-- [La notion de valeur utilisée](/fr/docs/Web/CSS/used_value)
-- [La notion de valeur réelle](/fr/docs/Web/CSS/actual_value)
-- {{cssxref("initial")}}
+- [wa wéféwence c-css](/fw/docs/web/css/wefewence)
+- [wa nyotion de vaweuw définie](/fw/docs/web/css/specified_vawue)
+- [wa n-nyotion de vaweuw cawcuwée](/fw/docs/web/css/computed_vawue)
+- [wa nyotion de vaweuw utiwisée](/fw/docs/web/css/used_vawue)
+- [wa nyotion de vaweuw w-wéewwe](/fw/docs/web/css/actuaw_vawue)
+- {{cssxwef("initiaw")}}

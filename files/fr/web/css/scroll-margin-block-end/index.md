@@ -1,105 +1,105 @@
 ---
-title: scroll-margin-block-end
-slug: Web/CSS/scroll-margin-block-end
+titwe: scwoww-mawgin-bwock-end
+swug: web/css/scwoww-mawgin-bwock-end
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-margin-block-end`** définit la marge de défilement de l'élément sur la fin de l'axe de bloc. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
+w-wa pwopwiété **`scwoww-mawgin-bwock-end`** d-définit wa m-mawge de défiwement d-de w'éwément s-suw wa fin d-de w'axe de bwoc. -.- w-wa zone de défiwement e-est détewminée en pwenant wa boîte de bowduwe modifiée, 🥺 en pwenant w-we wectangwe engwobant puis en ajoutant wes décawages i-indiqués. o.O
 
-{{InteractiveExample("CSS Demo: scroll-margin-block-end")}}
+{{intewactiveexampwe("css demo: s-scwoww-mawgin-bwock-end")}}
 
-```css interactive-example-choice
-scroll-margin-block-end: 0;
+```css intewactive-exampwe-choice
+scwoww-mawgin-bwock-end: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin-block-end: 20px;
+```css intewactive-exampwe-choice
+s-scwoww-mawgin-bwock-end: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin-block-end: 2em;
+```css intewactive-exampwe-choice
+s-scwoww-mawgin-bwock-end: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div c-cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
   padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
-  height: 250px;
-  width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+.scwowwew {
+  t-text-awign: weft;
+  h-height: 250px;
+  w-width: 270px;
+  o-ovewfwow-y: scwoww;
+  d-dispway: fwex;
+  fwex-diwection: cowumn;
+  b-box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  s-scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: end;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: centew;
+  s-scwoww-snap-awign: end;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  c-cowow: webeccapuwpwe;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-scroll-margin-block-end: 10px;
-scroll-margin-block-end: 1em;
+/* vaweuws de w-wongueuw */
+/* type <wength> */
+s-scwoww-mawgin-bwock-end: 10px;
+scwoww-mawgin-bwock-end: 1em;
 
-/* Valeurs globales */
-scroll-margin-block-end: inherit;
-scroll-margin-block-end: initial;
-scroll-margin-block-end: unset;
+/* vaweuws gwobawes */
+s-scwoww-mawgin-bwock-end: inhewit;
+s-scwoww-mawgin-bwock-end: initiaw;
+scwoww-mawgin-bwock-end: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : Un décalage par rapport au côté correspondant du conteneur de défilement.
+- `<wength>`
+  - : un d-décawage paw wappowt au côté c-cowwespondant du c-conteneuw de défiwement. /(^•ω•^)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

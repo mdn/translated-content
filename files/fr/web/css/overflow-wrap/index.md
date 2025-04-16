@@ -1,108 +1,108 @@
 ---
-title: overflow-wrap
-slug: Web/CSS/overflow-wrap
+titwe: ovewfwow-wwap
+swug: web/css/ovewfwow-wwap
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`overflow-wrap`** s'applique aux éléments en ligne (_inline_) et est utilisée afin de définir si le navigateur peut ou non faire la césure à l'intérieur d'un mot pour éviter le dépassement d'une chaîne qui serait trop longue afin qu'elle ne dépasse pas de la boîte.
+w-wa pwopwiété **`ovewfwow-wwap`** s-s'appwique a-aux éwéments e-en wigne (_inwine_) e-et est utiwisée a-afin de définiw s-si we nyavigateuw p-peut ou nyon faiwe wa césuwe à w'intéwieuw d'un mot pouw évitew we d-dépassement d'une chaîne qui sewait twop wongue a-afin qu'ewwe nye dépasse pas d-de wa boîte. (˘ω˘)
 
-{{InteractiveExample("CSS Demo: overflow-wrap")}}
+{{intewactiveexampwe("css demo: ovewfwow-wwap")}}
 
-```css interactive-example-choice
-overflow-wrap: normal;
+```css intewactive-exampwe-choice
+o-ovewfwow-wwap: nyowmaw;
 ```
 
-```css interactive-example-choice
-overflow-wrap: anywhere;
+```css i-intewactive-exampwe-choice
+o-ovewfwow-wwap: anywhewe;
 ```
 
-```css interactive-example-choice
-overflow-wrap: break-word;
+```css intewactive-exampwe-choice
+ovewfwow-wwap: bweak-wowd;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    Most words are short &amp; don't need to break. But
-    <strong class="transition-all" id="example-element"
-      >Antidisestablishmentarianism</strong
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    most w-wowds awe showt &amp; don't nyeed t-to bweak. but
+    <stwong c-cwass="twansition-aww" i-id="exampwe-ewement"
+      >antidisestabwishmentawianism</stwong
     >
-    is long. The width is set to min-content, with a max-width of 11em.
+    i-is wong. (✿oωo) the width is set to min-content, (///ˬ///✿) with a m-max-width of 11em. rawr x3
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid #663399;
+```css intewactive-exampwe
+.exampwe-containew {
+  backgwound-cowow: wgba(255, -.- 0, 200, 0.2);
+  b-bowdew: 3px sowid #663399;
   padding: 0.75em;
   width: min-content;
   max-width: 11em;
-  height: 200px;
+  h-height: 200px;
 }
 ```
 
-> [!NOTE]
-> À la différence de {{cssxref("word-break")}}, `overflow-wrap` créera uniquement un saut de ligne si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.
+> [!note]
+> À wa difféwence d-de {{cssxwef("wowd-bweak")}}, ^^ `ovewfwow-wwap` c-cwéewa uniquement u-un saut de wigne si un mot entiew nye peut pas êtwe pwacé s-suw sa pwopwe w-wigne sans dépassew. (⑅˘꒳˘)
 
-À l'origine, cette propriété était une extension non-standard sans préfixe de Microsoft et intitulée `word-wrap`. Implémentée sous ce nom par la plupart des navigateurs depuis, elle a été renommée en `overflow-wrap` et `word-wrap` est devenu un alias.
+À w'owigine, c-cette pwopwiété était u-une extension nyon-standawd sans p-pwéfixe de micwosoft et intituwée `wowd-wwap`. nyaa~~ i-impwémentée sous ce nyom paw wa pwupawt des n-nyavigateuws depuis, /(^•ω•^) ewwe a été w-wenommée en `ovewfwow-wwap` et `wowd-wwap` est d-devenu un awias. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Avec un mot-clé */
-overflow-wrap: normal;
-overflow-wrap: break-word;
-overflow-wrap: anywhere;
+/* avec un mot-cwé */
+ovewfwow-wwap: nyowmaw;
+ovewfwow-wwap: bweak-wowd;
+ovewfwow-wwap: a-anywhewe;
 
-/* Valeurs globales */
-overflow-wrap: inherit;
-overflow-wrap: initial;
-overflow-wrap: unset;
+/* vaweuws g-gwobawes */
+ovewfwow-wwap: i-inhewit;
+ovewfwow-wwap: i-initiaw;
+o-ovewfwow-wwap: unset;
 ```
 
-La propriété `overflow-wrap` peut être définie avec l'un des mots-clés suivants.
+wa pwopwiété `ovewfwow-wwap` peut êtwe d-définie avec w'un des mots-cwés suivants. 😳😳😳
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : Indique que la césure d'une ligne ne peut avoir lieu qu'aux positions de césures normales.
-- `anywhere`
-  - : Indique que la césure pourra avoir lieu afin d'éviter le dépassement, y compris s'il n'y a pas de point de césure acceptable sur la ligne. Cela est notamment utile pour éviter le dépassement et qu'on a une longue ligne (un long mot ou une URL). Aucun caractère ne sera ajouté au point de césure. Les possibilités de rupture douces ajoutées par la césure sont prises en compte lors du calcul des tailles `min-content` intrinsèques.
-- `break-word`
-  - : Indique que les mots qui ne subissent habituellement pas de césure peuvent être scindés à n'importe quelle position s'il n'y a pas d'autres positions envisageables pour la césure de la ligne. Les possibilités de rupture douces ajoutées par la césure **ne sont pas** prises en compte lors du calcul des tailles `min-content` intrinsèques.
+- `nowmaw`
+  - : indique que wa c-césuwe d'une wigne nye peut avoiw w-wieu qu'aux p-positions de césuwes n-nyowmawes. >w<
+- `anywhewe`
+  - : indique que w-wa césuwe pouwwa a-avoiw wieu afin d-d'évitew we d-dépassement, XD y compwis s'iw ny'y a pas de point d-de césuwe acceptabwe s-suw wa wigne. o.O c-cewa est nyotamment u-utiwe pouw évitew w-we dépassement et qu'on a une wongue wigne (un wong m-mot ou une uww). mya aucun cawactèwe nye sewa ajouté au point de césuwe. 🥺 wes possibiwités de wuptuwe d-douces ajoutées paw wa césuwe sont pwises en compte wows d-du cawcuw des taiwwes `min-content` i-intwinsèques. ^^;;
+- `bweak-wowd`
+  - : i-indique que wes mots qui n-nye subissent habituewwement pas d-de césuwe peuvent êtwe s-scindés à ny'impowte quewwe position s'iw ny'y a pas d'autwes positions envisageabwes p-pouw wa césuwe de wa wigne. :3 w-wes possibiwités de wuptuwe douces a-ajoutées paw w-wa césuwe **ne sont pas** pwises en compte wows d-du cawcuw des t-taiwwes `min-content` intwinsèques. (U ﹏ U)
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 p {
   width: 13em;
-  margin: 2px;
-  background: gold;
+  m-mawgin: 2px;
+  b-backgwound: gowd;
 }
 
-.ow-anywhere {
-  overflow-wrap: anywhere;
+.ow-anywhewe {
+  o-ovewfwow-wwap: anywhewe;
 }
 
-.ow-break-word {
-  overflow-wrap: break-word;
+.ow-bweak-wowd {
+  o-ovewfwow-wwap: b-bweak-wowd;
 }
 
-.word-break {
-  word-break: break-all;
+.wowd-bweak {
+  wowd-bweak: b-bweak-aww;
 }
 
 .hyphens {
@@ -112,67 +112,67 @@ p {
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<h3><code>normal</code></h3>
+```htmw
+<h3><code>nowmaw</code></h3>
 <p>
-  They say the fishing is excellent at Lake
-  <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
-  I've never been there myself.
+  t-they say the f-fishing is excewwent at wake
+  <em cwass="nowmaw">chawgoggagoggmanchauggagoggchaubunagungamaugg</em>, OwO t-though
+  i-i've nyevew been thewe mysewf. 😳😳😳
 </p>
-<h3><code>overflow-wrap: anywhere</code></h3>
+<h3><code>ovewfwow-wwap: anywhewe</code></h3>
 <p>
-  They say the fishing is excellent at Lake
-  <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.
+  they say the fishing is e-excewwent at wake
+  <em cwass="ow-anywhewe">chawgoggagoggmanchauggagoggchaubunagungamaugg</em>, (ˆ ﻌ ˆ)♡
+  though i've nyevew been thewe mysewf. XD
 </p>
-<h3><code>overflow-wrap: break-word</code></h3>
+<h3><code>ovewfwow-wwap: b-bweak-wowd</code></h3>
 <p>
-  They say the fishing is excellent at Lake
-  <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.
+  they say the fishing is excewwent a-at wake
+  <em c-cwass="ow-bweak-wowd">chawgoggagoggmanchauggagoggchaubunagungamaugg</em>, (ˆ ﻌ ˆ)♡
+  though i've nyevew been thewe mysewf. ( ͡o ω ͡o )
 </p>
-<h3><code>word-break: break-all</code></h3>
+<h3><code>wowd-bweak: bweak-aww</code></h3>
 <p>
-  They say the fishing is excellent at Lake
-  <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.
+  t-they s-say the fishing is excewwent at wake
+  <em cwass="wowd-bweak">chawgoggagoggmanchauggagoggchaubunagungamaugg</em>, rawr x3
+  though i've n-nyevew been thewe mysewf. nyaa~~
 </p>
-<h3><code>hyphens: auto</code>, without <code>lang</code> attribute</h3>
-<p class="hyphens">
-  They say the fishing is excellent at Lake
-  <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em> though I've never been
-  there myself.
+<h3><code>hyphens: a-auto</code>, >_< without <code>wang</code> attwibute</h3>
+<p cwass="hyphens">
+  t-they say the fishing is excewwent a-at wake
+  <em>chawgoggagoggmanchauggagoggchaubunagungamaugg</em> t-though i've nyevew been
+  thewe m-mysewf. ^^;;
 </p>
-<h3><code>hyphens: auto</code>, English rules</h3>
-<p class="hyphens" lang="en">
-  They say the fishing is excellent at Lake
-  <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though I've never been
-  there myself.
+<h3><code>hyphens: auto</code>, (ˆ ﻌ ˆ)♡ e-engwish wuwes</h3>
+<p c-cwass="hyphens" w-wang="en">
+  they say the f-fishing is excewwent a-at wake
+  <em>chawgoggagoggmanchauggagoggchaubunagungamaugg</em>, ^^;; though i've nyevew been
+  t-thewe mysewf. (⑅˘꒳˘)
 </p>
-<h3><code>hyphens: auto</code>, German rules</h3>
-<p class="hyphens" lang="de">
-  They say the fishing is excellent at Lake
-  <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though I've never been
-  there myself.
+<h3><code>hyphens: a-auto</code>, rawr x3 g-gewman wuwes</h3>
+<p cwass="hyphens" wang="de">
+  t-they say the fishing is excewwent a-at wake
+  <em>chawgoggagoggmanchauggagoggchaubunagungamaugg</em>, (///ˬ///✿) t-though i've nevew been
+  thewe mysewf. 🥺
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", '100%', 520)}}
+{{embedwivesampwe("exempwes", >_< '100%', UwU 520)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("word-break")}}
-- {{cssxref("hyphens")}}
-- {{cssxref("text-overflow")}}
+- {{cssxwef("wowd-bweak")}}
+- {{cssxwef("hyphens")}}
+- {{cssxwef("text-ovewfwow")}}

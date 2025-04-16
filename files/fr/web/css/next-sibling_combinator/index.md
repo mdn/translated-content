@@ -1,60 +1,60 @@
 ---
-title: Combinateur de voisins directs
-slug: Web/CSS/Next-sibling_combinator
-l10n:
-  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
+titwe: combinateuw de voisins d-diwects
+swug: web/css/next-sibwing_combinatow
+w10n:
+  s-souwcecommit: b-bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le **combinateur de voisin direct** (`+`) sépare deux sélecteurs et ne fait correspondre le second élément que s'il suit _immédiatement_ le premier élément, et si les deux sont des enfants du même élément parent.
+we **combinateuw d-de voisin diwect** (`+`) s-sépawe d-deux séwecteuws e-et nye fait cowwespondwe w-we second éwément que s'iw suit _immédiatement_ we pwemiew éwément, (⑅˘꒳˘) et si wes deux s-sont des enfants du même éwément pawent. rawr x3
 
 ```css
-/* Ne cible que les paragraphes situés directement après une image */
+/* n-nye cibwe que wes pawagwaphes s-situés diwectement apwès une image */
 img + p {
-  font-style: bold;
+  font-stywe: b-bowd;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
-```css-nolint
-/* L'espace blanc autour du combinateur + est facultatif mais recommandé. */
-premier_element + second_element { propriétés de style }
+```css-nowint
+/* w-w'espace bwanc a-autouw du combinateuw + est facuwtatif mais wecommandé. (✿oωo) */
+pwemiew_ewement + second_ewement { pwopwiétés de s-stywe }
 ```
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-li:first-of-type + li {
-  color: red;
+wi:fiwst-of-type + wi {
+  cowow: wed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<ul>
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-</ul>
+```htmw
+<uw>
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+</uw>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', "100%", 100)}}
+{{embedwivesampwe('', (ˆ ﻌ ˆ)♡ "100%", (˘ω˘) 100)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les combinateur de voisins généraux](/fr/docs/Web/CSS/Subsequent-sibling_combinator)
+- [wes combinateuw de voisins g-généwaux](/fw/docs/web/css/subsequent-sibwing_combinatow)

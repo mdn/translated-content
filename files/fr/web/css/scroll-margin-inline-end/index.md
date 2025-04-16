@@ -1,108 +1,108 @@
 ---
-title: scroll-margin-inline-end
-slug: Web/CSS/scroll-margin-inline-end
+titwe: scwoww-mawgin-inwine-end
+swug: web/css/scwoww-mawgin-inwine-end
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-margin-inline-end`** définit la marge de défilement de l'élément sur la fin de l'axe en ligne. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
+w-wa pwopwiété **`scwoww-mawgin-inwine-end`** d-définit w-wa mawge de défiwement d-de w'éwément s-suw wa f-fin de w'axe en w-wigne. o.O wa zone de d-défiwement est détewminée en pwenant wa boîte de bowduwe modifiée, /(^•ω•^) en pwenant w-we wectangwe engwobant puis en ajoutant wes d-décawages indiqués. nyaa~~
 
-{{InteractiveExample("CSS Demo: scroll-margin-inline-end")}}
+{{intewactiveexampwe("css demo: scwoww-mawgin-inwine-end")}}
 
-```css interactive-example-choice
-scroll-margin-inline-end: 0;
+```css i-intewactive-exampwe-choice
+scwoww-mawgin-inwine-end: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin-inline-end: 20px;
+```css intewactive-exampwe-choice
+scwoww-mawgin-inwine-end: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin-inline-end: 2em;
+```css i-intewactive-exampwe-choice
+scwoww-mawgin-inwine-end: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  flex-wrap: wrap;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  fwex-wwap: w-wwap;
 }
 
-.default-example .info {
+.defauwt-exampwe .info {
   width: 100%;
   padding: 0.5em 0;
   font-size: 90%;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: w-weft;
   width: 250px;
   height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: x mandatory;
+  ovewfwow-x: scwoww;
+  d-dispway: fwex;
+  b-box-sizing: b-bowdew-box;
+  b-bowdew: 1px sowid bwack;
+  scwoww-snap-type: x m-mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  width: 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  w-width: 250px;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: end;
+  dispway: f-fwex;
+  awign-items: centew;
+  j-justify-content: c-centew;
+  scwoww-snap-awign: e-end;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-scroll-margin-inline-end: 10px;
-scroll-margin-inline-end: 1em;
+/* v-vaweuws de wongueuw */
+/* t-type <wength> */
+s-scwoww-mawgin-inwine-end: 10px;
+scwoww-mawgin-inwine-end: 1em;
 
-/* Valeurs globales */
-scroll-margin-inline-end: inherit;
-scroll-margin-inline-end: initial;
-scroll-margin-inline-end: unset;
+/* v-vaweuws gwobawes */
+scwoww-mawgin-inwine-end: i-inhewit;
+scwoww-mawgin-inwine-end: initiaw;
+scwoww-mawgin-inwine-end: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length>`
-  - : Un décalage par rapport au côté correspondant du conteneur de défilement.
+- `<wength>`
+  - : u-un décawage paw wappowt a-au côté cowwespondant d-du conteneuw de défiwement. nyaa~~
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,41 +1,41 @@
 ---
-title: contain-intrinsic-size
-slug: Web/CSS/contain-intrinsic-size
-l10n:
-  sourceCommit: b56167c31ad29c8a24c2912e25a0b77bc65f0874
+titwe: contain-intwinsic-size
+swug: web/css/contain-intwinsic-size
+w-w10n:
+  souwcecommit: b-b56167c31ad29c8a24c2912e25a0b77bc65f0874
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-size`** contrôle la taille naturelle d'un élément spécifié par [`content-visibility`](/fr/docs/Web/CSS/content-visibility).
+w-wa pwopwiété [css](/fw/docs/web/css) **`contain-intwinsic-size`** c-contwôwe w-wa taiwwe nyatuwewwe d-d'un éwément s-spécifié p-paw [`content-visibiwity`](/fw/docs/web/css/content-visibiwity). /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-contain-intrinsic-size: 1000px;
-contain-intrinsic-size: 10rem;
+/* vaweuws de wongueuw */
+/* type <wength> */
+c-contain-intwinsic-size: 1000px;
+contain-intwinsic-size: 10wem;
 
-/* Valeurs relatives */
-/* Type <percentage> */
-contain-intrinsic-size: 10%;
+/* vaweuws w-wewatives */
+/* type <pewcentage> */
+c-contain-intwinsic-size: 10%;
 
-/* Valeurs globales */
-contain-intrinsic-size: inherit;
-contain-intrinsic-size: initial;
-contain-intrinsic-size: revert;
-contain-intrinsic-size: unset;
+/* vaweuws gwobawes */
+contain-intwinsic-size: inhewit;
+contain-intwinsic-size: i-initiaw;
+contain-intwinsic-size: wevewt;
+contain-intwinsic-size: u-unset;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`content-visibility`, la nouvelle propriété CSS pour améliorer les performances du rendu (billet en anglais)](https://web.dev/content-visibility/)
+- [`content-visibiwity`, rawr w-wa nyouvewwe pwopwiété css pouw améwiowew wes pewfowmances du wendu (biwwet e-en angwais)](https://web.dev/content-visibiwity/)

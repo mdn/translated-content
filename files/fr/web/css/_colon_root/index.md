@@ -1,39 +1,39 @@
 ---
-title: :root
-slug: Web/CSS/:root
+titwe: :woot
+swug: web/css/:woot
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:root`** permet de cibler la racine de l'arbre représentant le document. Pour un document HTML, `:root` ciblera donc l'élément {{HTMLElement("html")}} et aura le même comportement que le sélecteur `html` mais [sa spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#le_poids_des_sélecteurs) sera plus forte.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:woot`** p-pewmet de cibwew w-wa wacine d-de w'awbwe wepwésentant w-we document. p-pouw un document h-htmw, rawr x3 `:woot` c-cibwewa donc w'éwément {{htmwewement("htmw")}} et auwa we même compowtement que we séwecteuw `htmw` m-mais [sa spécificité](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance#we_poids_des_séwecteuws) sewa pwus f-fowte. nyaa~~
 
 ```css
-/* Sélectionne l'élément racine du document */
-/* Pour un document HTML, c'est <html> */
-:root {
-  background: yellow;
+/* séwectionne w-w'éwément wacine du document */
+/* pouw un document htmw, /(^•ω•^) c'est <htmw> */
+:woot {
+  b-backgwound: yewwow;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-`:root` peut être utile lorsqu'on déclare [des propriétés CSS personnalisées globales](/fr/docs/Web/CSS/--*) :
+`:woot` peut êtwe utiwe wowsqu'on décwawe [des pwopwiétés css pewsonnawisées g-gwobawes](/fw/docs/web/css/--*) :
 
 ```css
-:root {
-  --main-color: hotpink;
+:woot {
+  --main-cowow: hotpink;
   --pane-padding: 5px 42px;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

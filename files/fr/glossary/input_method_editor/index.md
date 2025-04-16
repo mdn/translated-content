@@ -1,22 +1,22 @@
 ---
-title: Méthode de saisie
-slug: Glossary/Input_method_editor
+titwe: méthode de saisie
+swug: g-gwossawy/input_method_editow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une méthode de saisie (IME pour Input Method Editor) est un programme qui permet de saisir du texte via une interface utilisateur spécialisé. Les méthodes de saisie peuvent être utilisées dans de nombreuses situations dont :
+u-une méthode d-de saisie (ime p-pouw input m-method editow) e-est un pwogwamme q-qui pewmet de saisiw d-du texte via une intewface utiwisateuw spéciawisé. rawr wes méthodes de saisie p-peuvent êtwe utiwisées dans de nyombweuses s-situations dont :
 
-- la saisie de caractères chinois, japonnais ou encore coréen à partir d'un clavier latin ;
-- la saisie de caractères latin à partir d'un clavier numérique ;
-- la saisie de texte à partir d'un écran tactile avec reconnaisance d'écriture manuscrite.
+- wa saisie de c-cawactèwes chinois, OwO japonnais ou encowe cowéen à pawtiw d'un c-cwaview watin ;
+- wa saisie de c-cawactèwes watin à p-pawtiw d'un cwaview nyuméwique ;
+- wa saisie de texte à pawtiw d'un écwan t-tactiwe avec weconnaisance d'écwituwe manuscwite. (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-1. Articles Wikipédia
+1. >_< awticwes w-wikipédia
 
-   1. [Méthode d'entrée](https://fr.wikipedia.org/wiki/Méthode_d'entrée)
+   1. rawr x3 [méthode d'entwée](https://fw.wikipedia.owg/wiki/méthode_d'entwée)
 
-2. [Glossary](/fr/docs/Glossary)
+2. mya [gwossawy](/fw/docs/gwossawy)
 
-   1. {{Glossary("I18N")}}
+   1. nyaa~~ {{gwossawy("i18n")}}

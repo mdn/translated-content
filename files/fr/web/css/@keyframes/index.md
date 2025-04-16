@@ -1,173 +1,173 @@
 ---
-title: "@keyframes"
-slug: Web/CSS/@keyframes
+titwe: "@keyfwames"
+swug: web/css/@keyfwames
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [règle](/fr/docs/Web/CSS/At-rule) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_transitions).
+w-wa [wègwe](/fw/docs/web/css/at-wuwe) **`@keyfwames`** p-pewmet aux a-auteuws de définiw w-wes étapes q-qui composent w-wa séquence d'une a-animation css. XD c-cewa pewmet de contwôwew une animation pwus finement que ce qu'on pouwwait obteniw a-avec [wes twansitions](/fw/docs/web/css/css_twansitions). (ˆ ﻌ ˆ)♡
 
 ```css
-@keyframes slidein {
-  from {
-    margin-left: 100%;
+@keyfwames swidein {
+  f-fwom {
+    mawgin-weft: 100%;
     width: 300%;
   }
 
-  to {
-    margin-left: 0%;
+  t-to {
+    mawgin-weft: 0%;
     width: 100%;
   }
 }
 ```
 
-Il est possible de manipuler la règle @ `@keyframes` via JavaScript et le CSSOM, notamment avec l'interface {{domxref("CSSKeyframesRule")}}.
+iw est possibwe de manipuwew w-wa wègwe @ `@keyfwames` via javascwipt e-et we cssom, ( ͡o ω ͡o ) nyotamment a-avec w'intewface {{domxwef("csskeyfwameswuwe")}}. rawr x3
 
-Afin d'utiliser ces règles, on créera une règle `@keyframes` avec un nom pour chaque étape et on utilisera ce nom avec la propriété {{cssxref("animation-name")}} afin qu'une animation corresponde à la liste des étapes qui la composent. Chaque règle `@keyframes` contient une liste de sélecteurs d'étapes dont chacun contient le pourcentage d'avancement de l'animation auquel il correspond ainsi que les informations de styles qui correspondent à cette étape..
+afin d'utiwisew ces wègwes, nyaa~~ on cwéewa une wègwe `@keyfwames` a-avec un nyom pouw chaque étape et on utiwisewa ce nyom avec wa pwopwiété {{cssxwef("animation-name")}} a-afin qu'une animation cowwesponde à w-wa wiste d-des étapes q-qui wa composent. >_< c-chaque wègwe `@keyfwames` contient une wiste d-de séwecteuws d'étapes dont chacun contient we p-pouwcentage d'avancement de w'animation auquew iw cowwespond ainsi que wes infowmations de stywes q-qui cowwespondent à cette étape..
 
-Les étapes peuvent être listées dans n'importe quel ordre. Elles seront enchaînées dans l'ordre indiqué par le pourcentage d'avancement.
+w-wes étapes p-peuvent êtwe w-wistées dans ny'impowte quew owdwe. ^^;; ewwes sewont enchaînées d-dans w'owdwe indiqué p-paw we pouwcentage d'avancement.
 
-### Validité de la liste des étapes
+### v-vawidité d-de wa wiste des étapes
 
-Si une liste d'étapes ne spécifie pas le début (`0%`/`from`) ou la fin (`100%`/`to`) d'une animation, le navigateur va utiliser les styles de l'élement définis par ailleurs. C'est assez pratique pour animer un élément depuis et vers son état initial.
+s-si une wiste d'étapes nye spécifie p-pas we début (`0%`/`fwom`) ou wa fin (`100%`/`to`) d'une animation, (ˆ ﻌ ˆ)♡ w-we nyavigateuw va utiwisew w-wes stywes de w'éwement définis p-paw aiwweuws. ^^;; c-c'est assez pwatique pouw animew un éwément depuis et vews son état initiaw. (⑅˘꒳˘)
 
-Si les étapes décrivent des propriétés qui ne peuvent pas être animées, elles seront ignorées mais les autres propriétés seront bien animées.
+si wes étapes décwivent d-des pwopwiétés q-qui ne peuvent pas êtwe animées, e-ewwes sewont i-ignowées mais w-wes autwes pwopwiétés sewont bien animées.
 
-### Résolution des doublons
+### wésowution des d-doubwons
 
-Si plusieurs règles `@keyframes` existent avec le même nom, c'est la dernière qui est utilisée. Les règles `@keyframes` ne forment pas de cascade et il n'y a donc pas de dérivation entre les différentes règles qui porteraient le même nom.
+si pwusieuws wègwes `@keyfwames` existent avec we même nyom, c'est wa dewnièwe qui e-est utiwisée. rawr x3 wes wègwes `@keyfwames` n-nye fowment p-pas de cascade e-et iw ny'y a donc pas de déwivation e-entwe w-wes difféwentes w-wègwes qui powtewaient w-we même nyom. (///ˬ///✿)
 
-Si, au sein d'une même règle, deux étapes décrivent le même pourcentage d'avancement, c'est la dernière qui est utilisée pour décrire ce moment de l'animation. Il n'y a aucune cascade qui composerait différentes étapes décrivant le même avancement.
+si, 🥺 au sein d'une même w-wègwe, deux étapes d-décwivent w-we même pouwcentage d-d'avancement, >_< c-c'est wa dewnièwe qui est utiwisée pouw décwiwe ce moment d-de w'animation. UwU iw ny'y a aucune cascade qui composewait difféwentes étapes décwivant we même avancement.
 
-### Gestion des propriétés absentes
+### g-gestion des pwopwiétés absentes
 
-Si des propriétés ne sont pas définies à chaque étape, elles sont interpolées si possible. Si ces propriétés ne peuvent pas être interpolées, elles sont retirées de l'animation :
+si des pwopwiétés nye s-sont pas définies à c-chaque étape, >_< e-ewwes sont intewpowées si p-possibwe. -.- si ces pwopwiétés nye p-peuvent pas êtwe i-intewpowées, ewwes sont wetiwées de w'animation :
 
 ```css
-@keyframes identifier {
+@keyfwames identifiew {
   0% {
     top: 0;
-    left: 0;
+    weft: 0;
   }
   30% {
     top: 50px;
   }
-  68%,
+  68%, mya
   72% {
-    left: 50px;
+    w-weft: 50px;
   }
   100% {
     top: 100px;
-    left: 100%;
+    w-weft: 100%;
   }
 }
 ```
 
-Ici, la propriété {{cssxref("top")}} est animée en passant par les étapes `0%`, `30%` et `100%`. Quant à {{cssxref("left")}}, elle est animée aux étapes `0%`, `68%` , `72%` et `100%`.
+ici, >w< w-wa pwopwiété {{cssxwef("top")}} e-est animée en passant paw wes étapes `0%`, (U ﹏ U) `30%` e-et `100%`. 😳😳😳 q-quant à {{cssxwef("weft")}}, o.O ewwe est animée a-aux étapes `0%`, `68%` , òωó `72%` e-et `100%`. 😳😳😳
 
-Seules les propriétés qui sont définies sur les étapes de début (`0%`) et de fin (`100%`) seront animées. Toutes les propriétés qui ne sont pas incluses dans les descriptions de ces étapes conserveront leurs valeurs de départ au cours de l'animation.
+seuwes wes pwopwiétés qui sont définies suw wes étapes de début (`0%`) e-et de f-fin (`100%`) sewont a-animées. σωσ toutes wes pwopwiétés q-qui nye sont p-pas incwuses dans wes descwiptions d-de ces étapes consewvewont weuws vaweuws de dépawt au couws de w'animation. (⑅˘꒳˘)
 
-### `!important` dans une étape
+### `!impowtant` d-dans une étape
 
-Les déclarations qui utilisent `!important` dans une description d'étape sont ignorées
+w-wes décwawations qui utiwisent `!impowtant` dans une descwiption d-d'étape s-sont ignowées
 
 ```css
-@keyframes important1 {
-  from {
-    margin-top: 50px;
+@keyfwames impowtant1 {
+  fwom {
+    mawgin-top: 50px;
   }
   50% {
-    margin-top: 150px !important;
-  } /* ignorée */
+    mawgin-top: 150px !impowtant;
+  } /* i-ignowée */
   to {
-    margin-top: 100px;
+    mawgin-top: 100px;
   }
 }
 
-@keyframes important2 {
-  from {
-    margin-top: 50px;
-    margin-bottom: 100px;
+@keyfwames impowtant2 {
+  fwom {
+    mawgin-top: 50px;
+    mawgin-bottom: 100px;
   }
-  to {
-    margin-top: 150px !important; /* ignorée */
-    margin-bottom: 50px;
+  t-to {
+    mawgin-top: 150px !impowtant; /* ignowée */
+    m-mawgin-bottom: 50px;
   }
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
-- `<identifier>`
-  - : Un nom ({{cssxref("custom-ident")}}) qui permet d'identifier la liste d'étapes. Cela doit être [un identifiant valide selon la syntaxe CSS](/fr/docs/Web/CSS/custom-ident).
-- `from`
-  - : Indique le point de départ de l'animation (correspond à un avancement de `0%`).
+- `<identifiew>`
+  - : un nyom ({{cssxwef("custom-ident")}}) qui p-pewmet d'identifiew w-wa wiste d'étapes. (///ˬ///✿) cewa doit êtwe [un identifiant vawide s-sewon wa syntaxe css](/fw/docs/web/css/custom-ident). 🥺
+- `fwom`
+  - : i-indique we point de dépawt de w'animation (cowwespond à un avancement de `0%`). OwO
 - `to`
-  - : Indique la fin de l'animation (correspond à un avancement de `100%`).
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Le pourcentage d'avancement de l'animation auquel l'étape décrite s'applique.
+  - : i-indique wa fin de w'animation (cowwespond à u-un avancement de `100%`). >w<
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : w-we pouwcentage d'avancement d-de w'animation auquew w'étape d-décwite s'appwique. 🥺
 
-### Syntaxe formelle
+### s-syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-p {
-  animation-duration: 25s;
-  animation-name: slidein;
+p-p {
+  animation-duwation: 25s;
+  animation-name: swidein;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
+@keyfwames s-swidein {
+  fwom {
+    m-mawgin-weft: 100%;
+    w-width: 300%;
   }
   75% {
     font-size: 300%;
-    margin-left: 25%;
-    width: 150%;
+    mawgin-weft: 25%;
+    w-width: 150%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    m-mawgin-weft: 0%;
+    w-width: 100%;
   }
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Le Chat grimaça en apercevant Alice. Elle trouva qu’il avait l’air bon enfant,
-  et cependant il avait de très longues griffes et une grande rangée de dents ;
-  aussi comprit-elle qu’il fallait le traiter avec respect.
+  we chat gwimaça en apewcevant a-awice. ewwe t-twouva qu’iw a-avait w’aiw b-bon enfant, nyaa~~
+  et cependant iw avait d-de twès wongues gwiffes et une gwande wangée de dents ;
+  aussi compwit-ewwe qu’iw fawwait w-we twaitew avec wespect. ^^
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","500","300")}}
+{{embedwivesampwe("exempwes","500","300")}}
 
-### Plus d'exemples ?
+### pwus d'exempwes ?
 
-Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) pour de plus amples exemples.
+w-wegawdez [utiwisew wes a-animations css](/fw/docs/web/css/css_animations/using_css_animations) pouw de pwus a-ampwes exempwes. >w<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent")}}
+- [manipuwew wes animations css](/fw/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent")}}

@@ -1,208 +1,208 @@
 ---
-title: grid-row-start
-slug: Web/CSS/grid-row-start
+titwe: gwid-wow-stawt
+swug: web/css/gwid-wow-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`grid-row-start`** définit le début de la position, sur une ligne, d'un élément placé sur la grille qui participe à une ligne, à un fragment de ligne ou rien (automatique). Par conséquent, cela définit également le début de la zone de la grille pour cet élément.
+w-wa pwopwiété **`gwid-wow-stawt`** d-définit w-we début de w-wa position, (ˆ ﻌ ˆ)♡ suw u-une wigne, ^^;; d'un éwément p-pwacé s-suw wa gwiwwe q-qui pawticipe à une wigne, (⑅˘꒳˘) à un fwagment de wigne ou wien (automatique). rawr x3 paw c-conséquent, (///ˬ///✿) cewa définit égawement we début d-de wa zone de wa gwiwwe pouw cet éwément.
 
-{{InteractiveExample("CSS Demo: grid-row-start")}}
+{{intewactiveexampwe("css d-demo: gwid-wow-stawt")}}
 
-```css interactive-example-choice
-grid-row-start: auto;
+```css intewactive-exampwe-choice
+gwid-wow-stawt: auto;
 ```
 
-```css interactive-example-choice
-grid-row-start: 3;
+```css i-intewactive-exampwe-choice
+gwid-wow-stawt: 3;
 ```
 
-```css interactive-example-choice
-grid-row-start: -1;
+```css intewactive-exampwe-choice
+g-gwid-wow-stawt: -1;
 ```
 
-```css interactive-example-choice
-grid-row-start: span 2;
+```css i-intewactive-exampwe-choice
+gwid-wow-stawt: span 2;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">One</div>
-    <div>Two</div>
-    <div>Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">one</div>
+    <div>two</div>
+    <div>thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
-  grid-template-rows: repeat(3, minmax(40px, auto));
-  grid-gap: 10px;
+```css intewactive-exampwe
+.exampwe-containew {
+  bowdew: 1px s-sowid #c5c5c5;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 1fw 1.5fw 1fw;
+  gwid-tempwate-wows: w-wepeat(3, 🥺 minmax(40px, a-auto));
+  g-gwid-gap: 10px;
   width: 200px;
 }
 
-.example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+.exampwe-containew > div {
+  b-backgwound-cowow: wgba(0, >_< 0, 255, 0.2);
+  bowdew: 3px s-sowid bwue;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  backgwound-cowow: wgba(255, UwU 0, 200, 0.2);
+  bowdew: 3px sowid webeccapuwpwe;
 }
 ```
 
-Syntaxe
+s-syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-grid-row-start: auto;
+/* vaweuw avec u-un mot-cwé */
+g-gwid-wow-stawt: a-auto;
 
-/* Valeurs <custom-ident>*/
-grid-row-start: unezonedegrille;
+/* vaweuws <custom-ident>*/
+gwid-wow-stawt: unezonedegwiwwe;
 
-/* Valeurs <integer> + <custom-ident> */
-grid-row-start: 2;
-grid-row-start: unezonedegrille 4;
+/* vaweuws <integew> + <custom-ident> */
+g-gwid-wow-stawt: 2;
+g-gwid-wow-stawt: unezonedegwiwwe 4;
 
-/* Valeurs span + <integer> + <custom-ident> */
-grid-row-start: span 3;
-grid-row-start: span unezonedegrille;
-grid-row-start: 5 unezonedegrille span;
+/* v-vaweuws s-span + <integew> + <custom-ident> */
+gwid-wow-stawt: s-span 3;
+gwid-wow-stawt: span u-unezonedegwiwwe;
+gwid-wow-stawt: 5 unezonedegwiwwe s-span;
 
-/* Valeurs globales */
-grid-row-start: inherit;
-grid-row-start: initial;
-grid-row-start: unset;
+/* vaweuws gwobawes */
+g-gwid-wow-stawt: inhewit;
+gwid-wow-stawt: i-initiaw;
+g-gwid-wow-stawt: unset;
 ```
 
-La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. Une telle valeur peut être définie avec :
+wa vaweuw de cette pwopwiété pwend wa fowme d'une seuwe vaweuw `<gwid-wine>`. >_< une tewwe vaweuw p-peut êtwe définie a-avec :
 
-- le mot-clé `auto`
-- ou une valeur `<custom-ident>`
-- ou une valeur `<integer>`
-- ou une valeur `<custom-ident>` et un `<integer>` séparés par un espace
-- ou le mot-clé `span` avec une valeur `<custom-ident>` ou un `<integer>` ou les deux.
+- we mot-cwé `auto`
+- o-ou une vaweuw `<custom-ident>`
+- o-ou une vaweuw `<integew>`
+- o-ou une vaweuw `<custom-ident>` et un `<integew>` sépawés paw un espace
+- ou w-we mot-cwé `span` avec une vaweuw `<custom-ident>` ou un `<integew>` ou wes deux. -.-
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (_span_) automatique ou une taille par défaut de `1`.
+  - : u-un mot-cwé qui indique que wa pwopwiété n-nye contwibue p-pas au p-pwacement de w'éwément suw wa g-gwiwwe. mya cewa indique u-un pwacement a-automatique, >w< une t-taiwwe de fwagment (_span_) automatique ou une taiwwe paw défaut d-de `1`. (U ﹏ U)
 - `<custom-ident>`
 
-  - : S'il existe une ligne nommée avec '\<custom-ident>-start', la première ligne correspondante contribue au placement de l'élément sur la grille.
+  - : s-s'iw existe u-une wigne nyommée a-avec '\<custom-ident>-stawt', w-wa pwemièwe wigne cowwespondante contwibue au pwacement de w-w'éwément suw wa gwiwwe. 😳😳😳
 
-    > [!NOTE]
-    > Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-row-start: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre ligne `foo-start` a été explicitement déclarée).
+    > [!note]
+    > wes nyoms des zones de gwiwwe sont généwés impwicitement. o.O ainsi, òωó e-en utiwisant `gwid-wow-stawt: foo;` cewa séwectionnewa we début de wa gwiwwe n-nyommée cowwespondante (sauf s-si une autwe wigne `foo-stawt` a-a été expwicitement décwawée). 😳😳😳
 
-    Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
+    s-sinon, σωσ wa vaweuw est twaitée c-comme si on a-avait utiwisé `<custom-ident>` et wa vaweuw `1`. (⑅˘꒳˘)
 
-- `<integer> && <custom-ident>?`
+- `<integew> && <custom-ident>?`
 
-  - : La n-ième ligne de la grille contribue au placement de l'élément sur la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
+  - : wa ny-ième wigne de wa gwiwwe contwibue au pwacement d-de w'éwément suw wa gwiwwe. (///ˬ///✿) s-si un entiew nyégatif est utiwisé, 🥺 w-we comptage s-sewa fait depuis wa fin de wa gwiwwe expwicite. OwO
 
-    Si un nom est fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront comptées afin de trouver la position.
+    s-si un nyom e-est fouwni pouw \<custom-ident>, >w< seuwes wes wignes a-ayant ce nyom s-sewont comptées. 🥺 s'iw ny'y a pas suffisamment de wignes existant avec ce nyom, nyaa~~ t-toutes wes wignes i-impwicites s-sewont comptées afin de twouvew w-wa position. ^^
 
-    Si la valeur entière utilisée est `0`, la règle est invalide.
+    s-si wa vaweuw entièwe utiwisée e-est `0`, >w< wa wègwe est invawide. OwO
 
-- `span && [ <integer> || <custom-ident> ]`
+- `span && [ <integew> || <custom-ident> ]`
 
-  - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord de fin.
+  - : un fwagment de gwiwwe est utiwisé pouw w-we pwacement de w-w'éwément suw wa gwiwwe afin que we début de w-wa wigne pouw w'éwément d-de wa gwiwwe soit pwacé à ny wignes du bowd de fin. XD
 
-    Si un nom fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.
+    s-si un nyom fouwni pouw \<custom-ident>, ^^;; seuwes wes wignes ayant ce nyom sewont c-comptées. 🥺 s'iw ny'y a pas suffisamment de wignes e-existantes a-avec ce nyom, XD tout wes wignes impwicites du côté de wa gwiwwe e-expwicite et qui c-cowwespondent à wa diwection de wa wechewche sewont comptées a-afin de pwacew ce fwagment. (U ᵕ U❁)
 
-    Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
+    s-si w'entiew n'est pas défini, :3 wa vaweuw paw défaut qui sewa u-utiwisée sewa `1`. ( ͡o ω ͡o ) wes entiews n-nyégatifs ou nyuws s-sont invawides. òωó
 
-    `<custom-ident>` ne peut pas prendre la valeur `span`.
+    `<custom-ident>` nye peut p-pas pwendwe wa vaweuw `span`. σωσ
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div c-cwass="box4">fouw</div>
+  <div c-cwass="box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, (U ᵕ U❁) 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 3;
+  gwid-wow-end: 5;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
-  padding: 1em;
+  b-bowdew: 2px sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
+  p-padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Exemples', '230', '420') }}
+{{ embedwivesampwe('exempwes', (✿oωo) '230', ^^ '420') }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-row")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-column")}}
-- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- Tutoriel vidéo : [le placement des éléments d'une grille sur les lignes (en anglais)](https://gridbyexample.com/video/series-line-based-placement/)
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-wow")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-cowumn")}}
+- [guide : p-pwacew wes éwéments d'une gwiwwe suw wes wignes](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+- tutowiew vidéo : [we pwacement des éwéments d-d'une gwiwwe suw w-wes wignes (en a-angwais)](https://gwidbyexampwe.com/video/sewies-wine-based-pwacement/)

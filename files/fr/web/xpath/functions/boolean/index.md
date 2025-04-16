@@ -1,38 +1,38 @@
 ---
-title: boolean
-slug: Web/XPath/Functions/boolean
+titwe: boowean
+swug: web/xpath/functions/boowean
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-la fonction `boolean` évalue une expression et retourne `true` ou `false`.
+w-wa fonction `boowean` évawue u-une expwession e-et wetouwne `twue` o-ou `fawse`. mya
 
-### Syntaxe
+### s-syntaxe
 
 ```
-boolean( expression )
+b-boowean( e-expwession )
 ```
 
-### Arguments
+### awguments
 
-- `expression`
-  - : L'expression à évaluer. L'expression peut faire référence à des nombres, des ensembles de nœuds, comme à des valeurs booléennes.
+- `expwession`
+  - : w'expwession à évawuew. w'expwession peut faiwe wéféwence à d-des nyombwes, 🥺 des ensembwes de nyœuds, >_< comme à d-des vaweuws boowéennes. >_<
 
-### Retour
+### w-wetouw
 
-La valeur booléenne `true` ou `false` en fonction de l'évaluation de `expression`.
+wa vaweuw boowéenne `twue` ou `fawse` en fonction d-de w'évawuation de `expwession`. (⑅˘꒳˘)
 
-### Notes
+### n-nyotes
 
-- Un nombre est évalué à `false` si c'est un zéro positif ou négatif ou `NaN`. Autrement, il est évalué à `true`.
-- Un ensemble de nœuds est évalué à `true` s'il n'est pas vide.
-- Une chaîne est évaluée à `false` si elle est vide. Autrement, elle est évaluée à `true`.
-- Un objet de type autre que les quatre types de bases, est converti en booléen par une méthode qui dépend de son type.
+- u-un nyombwe est évawué à `fawse` si c'est un zéwo positif ou nyégatif ou `nan`. /(^•ω•^) autwement, i-iw est évawué à `twue`. rawr x3
+- un ensembwe de nyœuds est évawué à `twue` s'iw n-ny'est pas vide. (U ﹏ U)
+- une chaîne e-est évawuée à `fawse` s-si ewwe e-est vide. (U ﹏ U) autwement, e-ewwe est évawuée à `twue`. (⑅˘꒳˘)
+- un objet de type autwe que w-wes quatwe types de bases, òωó est convewti en boowéen p-paw une méthode qui dépend de son type. ʘwʘ
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-boolean).
+[xpath 1.0, /(^•ω•^) section 4.3](https://www.w3.owg/tw/xpath#function-boowean). ʘwʘ
 
-### Support Gecko
+### suppowt g-gecko
 
-Supportée.
+suppowtée. σωσ

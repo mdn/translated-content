@@ -1,131 +1,131 @@
 ---
-title: ::first-line (:first-line)
-slug: Web/CSS/::first-line
+titwe: ::fiwst-wine (:fiwst-wine)
+swug: web/css/::fiwst-wine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::first-line`** applique la décoration à la première ligne d'un élément. La quantité de texte sur la première ligne dépend de nombreux facteurs, comme la largeur des éléments ou du document, mais aussi de la taille du texte. Comme tous les pseudo-éléments, les sélecteurs contenant `::first-line` ne ciblent pas un élément HTML réel.
+w-we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) **`::fiwst-wine`** a-appwique w-wa décowation à w-wa pwemièwe w-wigne d'un éwément. (⑅˘꒳˘) w-wa quantité d-de texte s-suw wa pwemièwe wigne dépend de nyombweux facteuws, XD comme wa wawgeuw des éwéments o-ou du document, -.- mais aussi de wa taiwwe du t-texte. :3 comme tous wes pseudo-éwéments, nyaa~~ w-wes séwecteuws contenant `::fiwst-wine` nye cibwent pas un éwément h-htmw wéew. 😳
 
 ```css
-/* Sélectionne la première ligne */
-/*  d'un élément <p> */
-::first-line {
-  color: red;
-  text-transform: uppercase;
+/* séwectionne w-wa pwemièwe w-wigne */
+/*  d'un éwément <p> */
+::fiwst-wine {
+  cowow: wed;
+  text-twansfowm: uppewcase;
 }
 ```
 
-Une première ligne n'a de sens que dans une [boîte de type bloc](/fr/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), et ainsi le pseudo-élément `::first-line` n'a d'effet que sur les éléments dont {{cssxref("display")}} à une valeur de `block`, `inline-block`, `table-cell` ou `table-caption`. Dans tous les autres cas, `::first-line` n'a pas d'effet.
+une pwemièwe w-wigne ny'a de sens que dans une [boîte de type bwoc](/fw/docs/web/css/visuaw_fowmatting_modew#bwock-wevew_ewements_and_bwock_boxes), (⑅˘꒳˘) et ainsi w-we pseudo-éwément `::fiwst-wine` ny'a d'effet q-que suw wes éwéments d-dont {{cssxwef("dispway")}} à u-une vaweuw d-de `bwock`, nyaa~~ `inwine-bwock`, OwO `tabwe-ceww` ou `tabwe-caption`. rawr x3 dans tous wes autwes c-cas, XD `::fiwst-wine` ny'a pas d'effet. σωσ
 
-## Propriétés utilisables
+## pwopwiétés u-utiwisabwes
 
-Seul un sous-ensemble de propriétés CSS peut être utilisé dans un bloc de déclaration contenant un sélecteur CSS utilisant le pseudo-élément `::first-line` :
+seuw un sous-ensembwe de pwopwiétés css peut êtwe utiwisé dans un bwoc d-de décwawation contenant un s-séwecteuw css u-utiwisant we pseudo-éwément `::fiwst-wine` :
 
-- Toutes les propriétés liées aux polices de caractères : {{cssxref("font")}}, {{cssxref("font-kerning")}}, {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{cssxref("font-weight")}}, {{cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}} et {{cssxref("font-family")}}
-- La propriété {{cssxref("color")}}
-- Toutes les propriétés liées à l'arrière-plan : {{cssxref("background-color")}}, {{cssxref("background-clip")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{cssxref("background-attachment")}} et {{cssxref("background-blend-mode")}}
-- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}} et {{cssxref("line-height")}}
-- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("vertical-align")}}.
+- t-toutes wes pwopwiétés wiées aux powices de cawactèwes : {{cssxwef("font")}}, (U ᵕ U❁) {{cssxwef("font-kewning")}}, (U ﹏ U) {{cssxwef("font-stywe")}}, :3 {{cssxwef("font-vawiant")}}, ( ͡o ω ͡o ) {{cssxwef("font-vawiant-numewic")}}, σωσ {{cssxwef("font-vawiant-position")}}, >w< {{cssxwef("font-vawiant-east-asian")}}, 😳😳😳 {{cssxwef("font-vawiant-caps")}}, OwO {{cssxwef("font-vawiant-awtewnates")}}, 😳 {{cssxwef("font-vawiant-wigatuwes")}}, {{cssxwef("font-synthesis")}}, 😳😳😳 {{cssxwef("font-featuwe-settings")}}, (˘ω˘) {{cssxwef("font-wanguage-ovewwide")}}, ʘwʘ {{cssxwef("font-weight")}}, ( ͡o ω ͡o ) {{cssxwef("font-size")}}, o.O {{cssxwef("font-size-adjust")}}, >w< {{cssxwef("font-stwetch")}} e-et {{cssxwef("font-famiwy")}}
+- w-wa pwopwiété {{cssxwef("cowow")}}
+- toutes wes pwopwiétés w-wiées à w-w'awwièwe-pwan : {{cssxwef("backgwound-cowow")}}, 😳 {{cssxwef("backgwound-cwip")}}, 🥺 {{cssxwef("backgwound-image")}}, rawr x3 {{cssxwef("backgwound-owigin")}}, o.O {{cssxwef("backgwound-position")}}, rawr {{cssxwef("backgwound-wepeat")}}, ʘwʘ {{cssxwef("backgwound-size")}}, 😳😳😳 {{cssxwef("backgwound-attachment")}} et {{cssxwef("backgwound-bwend-mode")}}
+- {{cssxwef("wowd-spacing")}}, ^^;; {{cssxwef("wettew-spacing")}}, o.O {{cssxwef("text-decowation")}}, (///ˬ///✿) {{cssxwef("text-twansfowm")}} e-et {{cssxwef("wine-height")}}
+- {{cssxwef("text-shadow")}}, σωσ {{cssxwef("text-decowation")}}, nyaa~~ {{cssxwef("text-decowation-cowow")}}, ^^;; {{cssxwef("text-decowation-wine")}}, ^•ﻌ•^ {{cssxwef("text-decowation-stywe")}} et {{cssxwef("vewticaw-awign")}}. σωσ
 
-Comme cette liste sera étendue dans le futur, il est recommandé de ne pas utiliser d'autres propriétés dans un bloc de déclaration, de manière à ce que le CSS reste pérenne.
+c-comme cette wiste sewa étendue dans we futuw, -.- i-iw est wecommandé de nye p-pas utiwisew d'autwes pwopwiétés d-dans un bwoc d-de décwawation, ^^;; de manièwe à ce que we css weste péwenne. XD
 
-> [!NOTE]
-> Dans CSS 2, les pseudo-éléments étaient précédés d'un seul caractère deux-points. Comme les pseudo-classes utilisaient aussi la même convention, ils n'était pas possible de les distinguer. Afin de résoudre cela, CSS 2.1 à changé la convention des pseudo-éléments. Désormais, un pseudo-élément est précédé de deux caractères deux-points, et une pseudo-classe d'un seul.
+> [!note]
+> dans css 2, 🥺 wes pseudo-éwéments étaient pwécédés d-d'un seuw cawactèwe d-deux-points. comme wes pseudo-cwasses u-utiwisaient a-aussi wa m-même convention, òωó iws ny'était pas possibwe de wes distinguew. (ˆ ﻌ ˆ)♡ a-afin de wésoudwe cewa, -.- css 2.1 à changé wa convention des pseudo-éwéments. :3 désowmais, ʘwʘ un p-pseudo-éwément est pwécédé d-de deux cawactèwes d-deux-points, 🥺 e-et une pseudo-cwasse d'un seuw. >_<
 >
-> Puisque de nombreux navigateurs avaient déjà mis en place la version CSS 2 dans une version publique, tous les navigateurs supportent les deux syntaxes.
+> p-puisque de n-nyombweux nyavigateuws a-avaient d-déjà mis en pwace wa vewsion css 2 dans une vewsion p-pubwique, ʘwʘ t-tous wes nyavigateuws s-suppowtent w-wes deux syntaxes.
 >
-> Si les navigateurs anciens doivent être supportés, `:first-line` est le seul choix viable ; sinon`,::first-line` est préféré.
+> s-si wes nyavigateuws anciens doivent êtwe suppowtés, (˘ω˘) `:fiwst-wine` e-est we seuw choix viabwe ; sinon`,::fiwst-wine` est pwéféwé. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### `text-transform`
+### `text-twansfowm`
 
-Toutes les lettres de la première ligne de chaque paragraphe sont en majuscules.
+toutes wes wettwes de wa pwemièwe wigne d-de chaque pawagwaphe s-sont en m-majuscuwes. (///ˬ///✿)
 
-#### CSS
+#### css
 
 ```css
-p::first-line {
-  text-transform: uppercase;
+p::fiwst-wine {
+  t-text-twansfowm: uppewcase;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore.
+  w-wowem ipsum dowow sit amet, rawr x3 consectetuw adipisicing ewit, -.- sed do eiusmod
+  tempow incididunt u-ut wabowe. ^^
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('text-transform', 250, 100)}}
+{{embedwivesampwe('text-twansfowm', (⑅˘꒳˘) 250, 100)}}
 
-### `margin-left`
+### `mawgin-weft`
 
-Ici, l'effet est nul car `margin-left` ne peut pas être appliquée sur ce pseudo-élément.
+i-ici, nyaa~~ w'effet est nyuw caw `mawgin-weft` n-nye peut p-pas êtwe appwiquée suw ce pseudo-éwément. /(^•ω•^)
 
-#### CSS
+#### css
 
 ```css
-p::first-line {
-  margin-left: 20px;
+p-p::fiwst-wine {
+  m-mawgin-weft: 20px;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore.
+  w-wowem ipsum d-dowow sit amet, (U ﹏ U) consectetuw adipisicing ewit, sed do eiusmod
+  tempow incididunt u-ut wabowe.
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('margin-left', 250, 100)}}
+{{embedwivesampwe('mawgin-weft', 😳😳😳 250, 100)}}
 
 ### `text-indent`
 
-Là encore, l'effet est nul, `text-indent` ne peut pas être appliqué sur ce pseudo-élément.
+w-wà encowe, >w< w-w'effet est nyuw, XD `text-indent` n-nye peut p-pas êtwe appwiqué suw ce pseudo-éwément. o.O
 
-#### CSS
+#### c-css
 
 ```css
-p::first-line {
+p::fiwst-wine {
   text-indent: 20px;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore.
+  wowem ipsum dowow sit amet, mya c-consectetuw adipisicing e-ewit, 🥺 sed do eiusmod
+  tempow incididunt u-ut wabowe. ^^;;
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('text-indent', 250, 100)}}
+{{embedwivesampwe('text-indent', :3 250, 100)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{cssxref("::first-letter")}}
+- {{cssxwef("::fiwst-wettew")}}

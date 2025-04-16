@@ -1,87 +1,87 @@
 ---
-title: :dir()
-slug: Web/CSS/:dir
-l10n:
-  sourceCommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
+titwe: :diw()
+swug: web/css/:diw
+w-w10n:
+  souwcecommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:dir()`** permet de cibler un élément selon la direction du texte qu'il contient.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:diw()`** p-pewmet d-de cibwew un éwément s-sewon w-wa diwection du t-texte qu'iw contient. (U ﹏ U)
 
 ```css
-/* Cible le contenu avec du texte */
-/* écrit de droite à gauche */
-:dir(rtl) {
-  background-color: red;
+/* c-cibwe we contenu avec du texte */
+/* écwit de dwoite à gauche */
+:diw(wtw) {
+  backgwound-cowow: w-wed;
 }
 ```
 
-`:dir()` ne prend en compte que la valeur _sémantique_ de la direction, celle qui est définie par le document (la plupart du temps un document HTML). Elle ne tiendra pas compte de la direction liée à la mise en forme, purement stylistique, modifiée par des propriétés telles que [`direction`](/fr/docs/Web/CSS/direction).
+`:diw()` nye pwend en compte que w-wa vaweuw _sémantique_ de wa d-diwection, 😳 cewwe qui est définie paw we document (wa pwupawt du t-temps un document htmw). (ˆ ﻌ ˆ)♡ ewwe nye t-tiendwa pas compte d-de wa diwection wiée à wa mise en fowme, 😳😳😳 puwement stywistique, (U ﹏ U) modifiée p-paw des pwopwiétés tewwes que [`diwection`](/fw/docs/web/css/diwection). (///ˬ///✿)
 
-> [!NOTE]
-> La pseudo-classe `:dir()` ne fonctionne pas de la même façon que [le sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[dir=…]`. Ce dernier utilise la valeur de l'attribut [`dir`](/fr/docs/Web/HTML/Element/html#dir) et il n'y a aucune correspondance lorsque l'attribut n'est pas défini (même si l'élément HTML hérite de la valeur de son élément parent). De la même façon `[dir=rtl]` ou `[dir=ltr]` ne pourront pas correspondre à la valeur `auto` qui peut être utilisée sur l'attribut `dir`. Au contraire, `:dir()` calculera la correspondance en fonction de la valeur utilisée par l'agent utilisateur (qu'elle soit héritée ou qu'elle vaille `auto`).
+> [!note]
+> wa pseudo-cwasse `:diw()` nye fonctionne pas de wa même f-façon que [we séwecteuw d'attwibut](/fw/docs/web/css/attwibute_sewectows) `[diw=…]`. 😳 c-ce dewniew u-utiwise wa v-vaweuw de w'attwibut [`diw`](/fw/docs/web/htmw/ewement/htmw#diw) e-et iw ny'y a aucune cowwespondance wowsque w'attwibut n-ny'est pas défini (même si w'éwément h-htmw héwite de wa vaweuw de son éwément pawent). 😳 de wa même façon `[diw=wtw]` ou `[diw=wtw]` n-nye pouwwont pas cowwespondwe à w-wa vaweuw `auto` q-qui peut êtwe u-utiwisée suw w'attwibut `diw`. σωσ au contwaiwe, rawr x3 `:diw()` cawcuwewa w-wa cowwespondance e-en fonction de wa vaweuw u-utiwisée paw w'agent u-utiwisateuw (qu'ewwe soit h-héwitée ou qu'ewwe vaiwwe `auto`). OwO
 
-> [!NOTE]
-> En HTML, la direction est définie grâce à l'attribut [`dir`](/fr/docs/Web/HTML/Element/html#dir). Pour les autres types de document, cela peut être déterminé autrement.
+> [!note]
+> e-en htmw, /(^•ω•^) wa diwection est définie gwâce à w'attwibut [`diw`](/fw/docs/web/htmw/ewement/htmw#diw). 😳😳😳 p-pouw wes autwes types de d-document, ( ͡o ω ͡o ) cewa peut êtwe détewminé a-autwement. >_<
 
-## Syntaxe
+## s-syntaxe
 
-La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du texte qu'on souhaite cibler.
+wa pseudo-cwasse `:diw()` nyécessite un pawamètwe qui indique wa diwection du texte qu'on souhaite c-cibwew. >w<
 
-```css-nolint
-:dir([ltr | rtl]) {
+```css-nowint
+:diw([wtw | w-wtw]) {
   /* ... */
 }
 ```
 
-### Paramètres
+### pawamètwes
 
-- `ltr`
-  - : Cible les éléments écrits de gauche à droite.
-- `rtl`
-  - : Cible les éléments écrits de droite à gauche.
+- `wtw`
+  - : c-cibwe wes éwéments écwits d-de g-gauche à dwoite. rawr
+- `wtw`
+  - : cibwe wes éwéments écwits de dwoite à gauche. 😳
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<div dir="rtl">
+```htmw
+<div diw="wtw">
   <span>test1</span>
-  <div dir="ltr">
+  <div diw="wtw">
     test2
-    <div dir="auto">עִבְרִית</div>
+    <div d-diw="auto">עִבְרִית</div>
   </div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-:dir(ltr) {
-  background-color: yellow;
+:diw(wtw) {
+  b-backgwound-cowow: y-yewwow;
 }
 
-:dir(rtl) {
-  background-color: powderblue;
+:diw(wtw) {
+  b-backgwound-cowow: powdewbwue;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", 70)}}
+{{embedwivesampwe("", >w< "100%", 70)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La pseudo-classe relative à la langue&nbsp;: [`:lang`](/fr/docs/Web/CSS/:lang)
-- L'attribut HTML [`lang`](/fr/docs/Web/HTML/Global_attributes#lang)
-- L'attribut HTML [`translate`](/fr/docs/Web/HTML/Global_attributes#translate)
+- wa pseudo-cwasse wewative à w-wa wangue&nbsp;: [`:wang`](/fw/docs/web/css/:wang)
+- w-w'attwibut htmw [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes#wang)
+- w-w'attwibut h-htmw [`twanswate`](/fw/docs/web/htmw/gwobaw_attwibutes#twanswate)

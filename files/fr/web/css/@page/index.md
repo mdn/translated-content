@@ -1,73 +1,73 @@
 ---
-title: "@page"
-slug: Web/CSS/@page
+titwe: "@page"
+swug: web/css/@page
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La règle @ **`@page`** est utilisée afin de modifier certaines propriétés CSS lorsqu'on imprime un document. La règle `@page` ne permet pas de modifier toutes les propriétés mais uniquement celles qui portent sur les marges, les lignes orphelines et veuves ainsi que les sauts de page du document. Si on utilise cette règle @ pour modifier une autre propriété, ce changement sera ignoré.
+w-wa wègwe @ **`@page`** est u-utiwisée afin d-de modifiew cewtaines p-pwopwiétés c-css wowsqu'on i-impwime un document. ^^ w-wa wègwe `@page` n-nye pewmet pas de modifiew toutes wes pwopwiétés mais uniquement cewwes q-qui powtent suw wes mawges, :3 wes wignes owphewines e-et veuves ainsi que wes sauts d-de page du document. -.- si on utiwise cette wègwe @ pouw modifiew u-une autwe pwopwiété, 😳 ce changement s-sewa ignowé. mya
 
 ```css
 @page {
-  margin: 1cm;
+  m-mawgin: 1cm;
 }
 
-@page :first {
-  margin: 2cm;
+@page :fiwst {
+  mawgin: 2cm;
 }
 ```
 
-La règle @ `@page` peut être manipulée via le CSSOM, notamment avec l'interface {{domxref("CSSPageRule")}}.
+wa wègwe @ `@page` peut êtwe manipuwée v-via we cssom, (˘ω˘) nyotamment avec w'intewface {{domxwef("csspagewuwe")}}. >_<
 
-> [!NOTE]
-> Le W3C est en train de discuter de la gestion des unités de longueur ({{cssxref("&lt;length&gt;")}}) relative à la zone d'affichage (_viewport_) : `vh`, `vw`, `vmin` et `vmax`. En attendant, il est conseillé de ne pas les utiliser au sein d'une règle `@page`.
+> [!note]
+> we w3c est en twain de d-diskawaii~w de wa gestion des u-unités de wongueuw ({{cssxwef("&wt;wength&gt;")}}) w-wewative à w-wa zone d'affichage (_viewpowt_) : `vh`, -.- `vw`, 🥺 `vmin` e-et `vmax`. (U ﹏ U) en attendant, >w< iw est conseiwwé d-de nye pas wes utiwisew au sein d'une wègwe `@page`. mya
 
-## Syntaxe
+## s-syntaxe
 
-### Descripteurs
+### descwipteuws
 
-- [`size`](/fr/docs/Web/CSS/@page/size)
-  - : Définit la taille et l'orientation du bloc englobant la boîte de la page. En général, lorsqu'une boîte correspondant à une page est rendu sur une feuille, cela indique la taille de la page utilisée.
-
-<!---->
-
-- [`marks`](/fr/docs/orphaned/Web/CSS/@page/marks)
-  - : Ajoute des marques pour la découpe ou l'alignement des pages du document.
+- [`size`](/fw/docs/web/css/@page/size)
+  - : définit wa taiwwe et w'owientation du bwoc engwobant wa boîte d-de wa page. >w< en généwaw, nyaa~~ wowsqu'une b-boîte c-cowwespondant à u-une page est wendu suw une feuiwwe, (✿oωo) cewa indique wa taiwwe de wa p-page utiwisée. ʘwʘ
 
 <!---->
 
-- [`bleed`](/fr/docs/orphaned/Web/CSS/@page/bleed)
-  - : Définit la limite au-delà de la boîte de la page au-delà de laquelle le contenu affiché est rogné.
+- [`mawks`](/fw/docs/owphaned/web/css/@page/mawks)
+  - : a-ajoute des mawques pouw wa d-découpe ou w'awignement d-des pages du document. (ˆ ﻌ ˆ)♡
 
-### Syntaxe formelle
+<!---->
+
+- [`bweed`](/fw/docs/owphaned/web/css/@page/bweed)
+  - : d-définit wa wimite au-dewà de w-wa boîte de wa page au-dewà de waquewwe we contenu a-affiché est wogné. 😳😳😳
+
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-@page :first {
-  margin: 2cm 3cm;
+@page :fiwst {
+  m-mawgin: 2cm 3cm;
 }
 ```
 
-Pour d'autres exemples, voir les pages qui concernent les pseudo-classes liées à `@page` :
+pouw d-d'autwes exempwes, :3 voiw wes pages qui concewnent wes pseudo-cwasses wiées à `@page` :
 
-- {{cssxref(":blank")}}
-- {{cssxref(":first")}}
-- {{cssxref(":left")}}
-- {{cssxref(":right")}}
-- {{cssxref(":recto")}} {{experimental_inline}}
-- {{cssxref(":verso")}} {{experimental_inline}}
+- {{cssxwef(":bwank")}}
+- {{cssxwef(":fiwst")}}
+- {{cssxwef(":weft")}}
+- {{cssxwef(":wight")}}
+- {{cssxwef(":wecto")}} {{expewimentaw_inwine}}
+- {{cssxwef(":vewso")}} {{expewimentaw_inwine}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le bug de suivi Mozilla pour l'ensemble des fonctionnalités associées aux médias paginés.](https://bugzilla.mozilla.org/show_bug.cgi?id=286443)
+- [we bug de s-suivi moziwwa pouw w-w'ensembwe des f-fonctionnawités associées aux médias paginés.](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=286443)

@@ -1,82 +1,82 @@
 ---
-title: invert()
-slug: Web/CSS/filter-function/invert
+titwe: invewt()
+swug: web/css/fiwtew-function/invewt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`invert()`** permet d'inverser les couleurs de l'image. La valeur obtenue par cette fonction est de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+w-wa fonction c-css **`invewt()`** p-pewmet d'invewsew w-wes couweuws d-de w'image. (U ﹏ U) w-wa vaweuw obtenue p-paw cette fonction e-est de type [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function). (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: invert()")}}
+{{intewactiveexampwe("css demo: invewt()")}}
 
-```css interactive-example-choice
-filter: invert(0);
+```css intewactive-exampwe-choice
+fiwtew: invewt(0);
 ```
 
-```css interactive-example-choice
-filter: invert(0.3);
+```css i-intewactive-exampwe-choice
+fiwtew: invewt(0.3);
 ```
 
-```css interactive-example-choice
-filter: invert(50%);
+```css i-intewactive-exampwe-choice
+fiwtew: invewt(50%);
 ```
 
-```css interactive-example-choice
-filter: invert(70%);
+```css i-intewactive-exampwe-choice
+fiwtew: invewt(70%);
 ```
 
-```css interactive-example-choice
-filter: invert(1);
+```css intewactive-exampwe-choice
+fiwtew: i-invewt(1);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-invert(multiplicateur)
+i-invewt(muwtipwicateuw)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `multiplicateur`
-  - : L'intensité de la conversion, indiquée sous la forme d'un nombre ([`<number>`](/fr/docs/Web/CSS/number)) ou d'un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Avec `100%`, les couleurs seront entièrement inversées (ce sera un négatif de l'image originale). Une valeur de `0%` ne modifiera pas l'image. Les valeurs intermédiaires auront un effet proportionnel. Lors d'une interpolation, la valeur utilisée par défaut est `0`.
+- `muwtipwicateuw`
+  - : w'intensité de wa convewsion, >w< indiquée sous wa f-fowme d'un nyombwe ([`<numbew>`](/fw/docs/web/css/numbew)) ou d'un p-pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). rawr a-avec `100%`, mya wes c-couweuws sewont e-entièwement invewsées (ce sewa un nyégatif d-de w'image owiginawe). ^^ une vaweuw de `0%` nye modifiewa p-pas w'image. 😳😳😳 wes vaweuws intewmédiaiwes auwont un effet pwopowtionnew. mya wows d'une intewpowation, 😳 w-wa vaweuw utiwisée paw d-défaut est `0`. -.-
 
-## Exemples
+## e-exempwes
 
-### Exemples de valeurs correctes pour invert()
+### e-exempwes de vaweuws cowwectes pouw invewt()
 
 ```css
-invert(0);     /* Aucun effet */
-invert(.6);    /* Inversion à 60% */
-invert(100%);  /* Négatif de l'image originale */
+invewt(0);     /* a-aucun e-effet */
+invewt(.6);    /* invewsion à 60% */
+i-invewt(100%);  /* n-négatif de w'image owiginawe */
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+- [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function) et wes a-autwes fonctions associées
+  - [`bwuw()`](/fw/docs/web/css/fiwtew-function/bwuw)
+  - [`bwightness()`](/fw/docs/web/css/fiwtew-function/bwightness)
+  - [`contwast()`](/fw/docs/web/css/fiwtew-function/contwast)
+  - [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow)
+  - [`gwayscawe()`](/fw/docs/web/css/fiwtew-function/gwayscawe)
+  - [`hue-wotate()`](/fw/docs/web/css/fiwtew-function/hue-wotate)
+  - [`opacity()`](/fw/docs/web/css/fiwtew-function/opacity)
+  - [`satuwate()`](/fw/docs/web/css/fiwtew-function/satuwate)
+  - [`sepia()`](/fw/docs/web/css/fiwtew-function/sepia)

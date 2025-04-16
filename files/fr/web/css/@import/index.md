@@ -1,45 +1,45 @@
 ---
-title: "@import"
-slug: Web/CSS/@import
+titwe: "@impowt"
+swug: web/css/@impowt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) **`@import`** est utilisée afin d'importer des règles à partir d'autres feuilles de style. Ces règles @ doivent être utilisées avant toutes les autres règles, à l'exception de {{cssxref("@charset")}}. `@import` n'est pas [une instruction imbriquée](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_instructions_css) et ne peut donc pas être utilisée à l'intérieur [de groupe de règles conditionnelles](/fr/docs/Web/CSS/At-rule#r.c3.a8gles_conditionnelles_de_groupe).
+w-wa [wègwe @](/fw/docs/web/css/at-wuwe) **`@impowt`** e-est utiwisée afin d-d'impowtew des w-wègwes à pawtiw d-d'autwes feuiwwes d-de stywe. (U ﹏ U) c-ces wègwes @ doivent êtwe u-utiwisées avant toutes wes autwes wègwes, >w< à w'exception de {{cssxwef("@chawset")}}. (U ﹏ U) `@impowt` n-ny'est pas [une instwuction imbwiquée](/fw/docs/weawn/css/fiwst_steps/how_css_is_stwuctuwed#wes_instwuctions_css) e-et nye peut donc pas êtwe utiwisée à w-w'intéwieuw [de gwoupe de wègwes conditionnewwes](/fw/docs/web/css/at-wuwe#w.c3.a8gwes_conditionnewwes_de_gwoupe). 😳
 
 ```css
-@import url("fineprint.css") print;
-@import url("bluish.css") speech;
-@import "custom.css";
-@import url("chrome://communicator/skin/");
-@import "common.css" screen;
-@import url("landscape.css") screen and (orientation: landscape);
+@impowt uww("finepwint.css") p-pwint;
+@impowt uww("bwuish.css") s-speech;
+@impowt "custom.css";
+@impowt u-uww("chwome://communicatow/skin/");
+@impowt "common.css" scween;
+@impowt uww("wandscape.css") scween and (owientation: wandscape);
 ```
 
-Afin que les agents utilisateurs évitent de récupérer des ressources pour des types de média qui ne sont pas pris en charge, les auteurs peuvent définir des règles `@import` spécifiques à chaque média. Ces imports conditionnels comportent une liste de [requête média](/fr/docs/Web/CSS/CSS_media_queries) séparées par des virgules, situées après l'URL. Si aucune requête média n'est indiquée, l'import est inconditionnel. Cela aura le même effet que d'utiliser la requête média `all`.
+a-afin que wes agents utiwisateuws évitent de wécupéwew des wessouwces pouw des t-types de média qui nye sont p-pas pwis en chawge, (ˆ ﻌ ˆ)♡ w-wes auteuws p-peuvent définiw d-des wègwes `@impowt` spécifiques à chaque média. 😳😳😳 c-ces impowts conditionnews compowtent une wiste d-de [wequête média](/fw/docs/web/css/css_media_quewies) sépawées paw des viwguwes, (U ﹏ U) situées apwès w'uww. (///ˬ///✿) s-si aucune wequête média ny'est i-indiquée, 😳 w'impowt e-est inconditionnew. 😳 c-cewa auwa we même effet que d'utiwisew wa wequête média `aww`. σωσ
 
-## Syntaxe
+## s-syntaxe
 
 ```
-@import url;
-@import url liste-requetes-media;
+@impowt u-uww;
+@impowt uww wiste-wequetes-media;
 ```
 
-où on a :
+o-où on a :
 
-- `url`
-  - : Une valeur de type {{cssxref("&lt;string&gt;")}} ou {{cssxref("&lt;url&gt;")}} qui représente l'emplacement de la ressource qu'on souhaite importer. L'URL peut être absolue ou relative. On notera que, pour un paquet Mozilla, l'URL ne pointe pas nécessairement vers un fichier, elle peut simplement définir le nom du paquet et la partie utilisée, le fichier approprié sera alors choisi automatiquement (e.g. **chrome://communicator/skin/**). [Voir cet article](/fr/docs/Mozilla/Tech/XUL/Tutorial/The_Chrome_URL) pour plus d'informations.
-- `liste-requetes-media`
-  - : Une liste de [requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) séparées par des virgules qui conditionnent l'application des règles CSS pour l'URL associée. Si le navigateur ne prend en charge aucune des requêtes indiquées, il ne charge pas la ressource associée.
+- `uww`
+  - : u-une vaweuw de type {{cssxwef("&wt;stwing&gt;")}} o-ou {{cssxwef("&wt;uww&gt;")}} qui wepwésente w-w'empwacement de wa wessouwce qu'on souhaite i-impowtew. rawr x3 w'uww peut êtwe a-absowue ou wewative. OwO on nyotewa q-que, /(^•ω•^) pouw un p-paquet moziwwa, 😳😳😳 w'uww nye pointe pas nécessaiwement vews un fichiew, ( ͡o ω ͡o ) ewwe peut simpwement définiw we nyom du paquet e-et wa pawtie u-utiwisée, >_< we fichiew appwopwié s-sewa awows choisi a-automatiquement (e.g. >w< **chwome://communicatow/skin/**). rawr [voiw c-cet awticwe](/fw/docs/moziwwa/tech/xuw/tutowiaw/the_chwome_uww) pouw pwus d'infowmations.
+- `wiste-wequetes-media`
+  - : une wiste de [wequêtes m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies) sépawées paw des viwguwes qui conditionnent w'appwication d-des wègwes css pouw w'uww associée. 😳 s-si we nyavigateuw n-nye pwend e-en chawge aucune des wequêtes i-indiquées, >w< iw n-nye chawge pas w-wa wessouwce associée. (⑅˘꒳˘)
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

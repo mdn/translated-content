@@ -1,46 +1,46 @@
 ---
-title: substring-after
-slug: Web/XPath/Functions/substring-after
+titwe: substwing-aftew
+swug: w-web/xpath/functions/substwing-aftew
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `substring-after()` retourne la partie d'une chaîne donnée suivant une sous-chaîne donnée.
+w-wa fonction `substwing-aftew()` w-wetouwne w-wa pawtie d'une c-chaîne donnée s-suivant une sous-chaîne d-donnée. OwO
 
-### Syntaxe
+### syntaxe
 
 ```
-substring-after( bottedefoin , aiguille )
+substwing-aftew( bottedefoin , (U ﹏ U) aiguiwwe )
 ```
 
-### Arguments
+### a-awguments
 
 - `bottedefoin`
-  - : La chaîne à évaluer. Un extrait de cette chaîne sera retourné.
+  - : wa chaîne à évawuew. >_< un extwait de c-cette chaîne sewa wetouwné. rawr x3
 
 <!---->
 
-- `aiguille`
-  - : La sous-chaîne à rechercher. Tout le contenu se trouvant après la première occurrence de `aiguille` dans la chaîne `bottedefoin` sera retourné.
+- `aiguiwwe`
+  - : w-wa sous-chaîne à wechewchew. tout we contenu se twouvant a-apwès wa pwemièwe occuwwence d-de `aiguiwwe` d-dans wa chaîne `bottedefoin` sewa wetouwné. mya
 
-### Retour
+### wetouw
 
-Une chaîne.
+une chaîne. nyaa~~
 
-### Exemples
+### exempwes
 
-| Exemple XPath                                                 | Sortie         |
+| exempwe x-xpath                                                 | sowtie         |
 | ------------------------------------------------------------- | -------------- |
-| `<xsl:value-of select="substring-after('1999/04/01','/')" />` | `04/01`        |
-| `substring-after('aa-bb','-')`                                | `bb`           |
-| `substring-after('aa-bb','a')`                                | `a-bb`         |
-| `substring-after('aa-bb','b')`                                | `b`            |
-| `substring-after('aa-bb','q')`                                | (empty string) |
+| `<xsw:vawue-of sewect="substwing-aftew('1999/04/01','/')" />` | `04/01`        |
+| `substwing-aftew('aa-bb','-')`                                | `bb`           |
+| `substwing-aftew('aa-bb','a')`                                | `a-bb`         |
+| `substwing-aftew('aa-bb','b')`                                | `b`            |
+| `substwing-aftew('aa-bb','q')`                                | (empty stwing) |
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-substring-after).
+[xpath 1.0, (⑅˘꒳˘) s-section 4.2](https://www.w3.owg/tw/xpath#function-substwing-aftew). rawr x3
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+s-suppowtée. (✿oωo)

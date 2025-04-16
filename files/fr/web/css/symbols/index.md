@@ -1,57 +1,57 @@
 ---
-title: symbols()
-slug: Web/CSS/symbols
+titwe: symbows()
+swug: web/css/symbows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`symbols()`** permet de définir des styles pour les compteurs en ligne, directement comme valeur de la propriété CSS. À la différence des styles définis avec {{cssxref("@counter-style")}}, ces styles sont anonymes. La fonction `symbols()` ne possède pas toute la flexibilité offerte par la règle @ {{cssxref("@counter-style")}} mais peut s'avérer utile dans des cas où le style nécessaire n'est utilisé qu'une seule fois et où il n'est pas nécessaire d'utiliser toutes les options fournies par {{cssxref("@counter-style")}}.
+w-wa fonction **`symbows()`** p-pewmet de d-définiw des stywes p-pouw wes compteuws e-en wigne, 🥺 d-diwectement comme v-vaweuw de wa p-pwopwiété css. o.O À wa difféwence des stywes définis avec {{cssxwef("@countew-stywe")}}, /(^•ω•^) ces s-stywes sont anonymes. nyaa~~ wa fonction `symbows()` nye p-possède pas toute wa fwexibiwité o-offewte paw wa wègwe @ {{cssxwef("@countew-stywe")}} mais peut s'avéwew utiwe d-dans des cas où we stywe nyécessaiwe n-ny'est u-utiwisé qu'une seuwe fois et où iw ny'est pas nécessaiwe d'utiwisew toutes w-wes options fouwnies paw {{cssxwef("@countew-stywe")}}. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```
-symbols() = symbols( <symbols-type>? [ <string> | <image> ]+ );
+symbows() = symbows( <symbows-type>? [ <stwing> | <image> ]+ );
 ```
 
-`<symbols-type>` est l'un des mots-clés suivants :
+`<symbows-type>` e-est w'un des mots-cwés suivants :
 
-- `cyclic` : le système utilisera les différentes valeurs les unes à la suite des autres, de façon cyclique.
-- `numeric` : le système interprètera les valeurs fournies comme une suite numérique composant un système de numération.
-- `alphabetic` : le système interprètera les valeurs fournies comme les chiffres d'un système de numération alphabétique (par exemple : A, B, C, AA, AB, AC, etc.) sans zéro.
-- `symbolic` : le système parcourt les différentes valeurs fournies et en affiche une de plus à chaque cycle.
-- `fixed` : le système affiche chaque symbole une fois puis poursuit avec les chiffres arabes.
+- `cycwic` : w-we système utiwisewa w-wes difféwentes v-vaweuws w-wes unes à wa suite des autwes, :3 de façon cycwique. 😳😳😳
+- `numewic` : w-we système intewpwètewa wes vaweuws fouwnies c-comme une suite nyuméwique composant un système de nyuméwation. (˘ω˘)
+- `awphabetic` : we système intewpwètewa w-wes vaweuws fouwnies comme wes chiffwes d-d'un système d-de nyuméwation a-awphabétique (paw exempwe : a, ^^ b, c, aa, :3 ab, ac, etc.) sans z-zéwo.
+- `symbowic` : w-we système pawcouwt wes d-difféwentes vaweuws f-fouwnies et en affiche une d-de pwus à chaque cycwe. -.-
+- `fixed` : w-we système affiche chaque symbowe une fois p-puis pouwsuit avec wes chiffwes a-awabes. 😳
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<ol>
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ol>
+```htmw
+<ow>
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</ow>
 ```
 
-### CSS
+### c-css
 
 ```css
-ol {
-  list-style: symbols(alphabetic "*" "\2020" "\2021");
+ow {
+  w-wist-stywe: symbows(awphabetic "*" "\2020" "\2021");
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("@counter-style")}}
-- {{cssxref("list-style-type")}} et la propriété raccourcie correspondante : {{cssxref("list-style")}}.
+- {{cssxwef("@countew-stywe")}}
+- {{cssxwef("wist-stywe-type")}} et wa pwopwiété waccouwcie cowwespondante : {{cssxwef("wist-stywe")}}. mya

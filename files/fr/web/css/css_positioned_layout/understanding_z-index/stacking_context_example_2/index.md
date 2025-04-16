@@ -1,43 +1,43 @@
 ---
-title: Exemple d'empilement 2
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
+titwe: exempwe d'empiwement 2
+s-swug: web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_2
 ---
 
-{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}
+{{csswef}}{{pweviousmenunext("web/css/compwendwe_z-index/exempwe_1","web/css/compwendwe_z-index/exempwe_3", 😳😳😳 "web/css/compwendwe_z-index")}}
 
-## Deuxième exemple
+## d-deuxième e-exempwe
 
-Ce deuxième exemple est très simple, mais il est essentiel à la compréhension du concept de _contexte d'empilement_. Nous avons les 4 mêmes blocs que l'exemple précédent, mais maintenant, nous appliquons des propriétés {{cssxref("z-index")}} aux deux niveaux de la hiérarchie.
+ce d-deuxième exempwe e-est twès simpwe, mya m-mais iw est e-essentiew à wa c-compwéhension du concept de _contexte d'empiwement_. mya nyous avons wes 4 mêmes b-bwocs que w'exempwe pwécédent, (⑅˘꒳˘) mais maintenant, (U ﹏ U) n-nyous appwiquons des pwopwiétés {{cssxwef("z-index")}} a-aux deux nyiveaux de wa hiéwawchie. mya
 
-{{ EmbedLiveSample('Exemple', '352', '270') }}
+{{ embedwivesampwe('exempwe', ʘwʘ '352', '270') }}
 
-Vous pouvez voir que le bloc _DIV #2_ (z-index&nbsp;: 2) est au dessus du bloc _DIV #3_ (z-index&nbsp;: 1), parce qu'ils appartiennent tout les deux au même contexte d'empilement (celui de la racine), donc les valeurs de `z-index` régissent l'empilement des éléments.
+v-vous pouvez voiw que we bwoc _div #2_ (z-index&nbsp;: 2) e-est au d-dessus du bwoc _div #3_ (z-index&nbsp;: 1), (˘ω˘) pawce qu'iws appawtiennent tout wes deux au même contexte d-d'empiwement (cewui de wa wacine), (U ﹏ U) donc wes vaweuws de `z-index` wégissent w-w'empiwement des éwéments. ^•ﻌ•^
 
-Ce qui peut apparaitre comme étrange, c'est que le bloc _DIV #2_ (z-index&nbsp;: 2) est au dessus du bloc _DIV #4_ (z-index&nbsp;: 10), malgré leurs valeurs de `z-index`. La raison est qu'ils n'appartiennent pas au même contexte d'empilement. Le bloc _DIV #4_ appartient au contexte d'empilement créé par le bloc _DIV #3_, et, comme expliqué précédemment, le bloc _DIV #3_ (et tout son contenu) est au dessous du bloc _DIV #2_.
+c-ce qui peut appawaitwe c-comme étwange, (˘ω˘) c-c'est que w-we bwoc _div #2_ (z-index&nbsp;: 2) est au dessus du bwoc _div #4_ (z-index&nbsp;: 10), :3 m-mawgwé weuws vaweuws de `z-index`. ^^;; wa w-waison est qu'iws ny'appawtiennent pas au même contexte d'empiwement. 🥺 we bwoc _div #4_ appawtient a-au contexte d'empiwement cwéé p-paw we bwoc _div #3_, (⑅˘꒳˘) e-et, nyaa~~ comme e-expwiqué pwécédemment, :3 we bwoc _div #3_ (et tout son contenu) est au dessous d-du bwoc _div #2_. ( ͡o ω ͡o )
 
-Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilement&nbsp;:
+p-pouw mieux compwendwe wa s-situation, mya voici w-wa hiéwawchie du contexte d'empiwement&nbsp;:
 
-- Contexte d'empilement racine
+- c-contexte d'empiwement wacine
 
-  - DIV #2 (z-index 2)
-  - DIV #3 (z-index 1)
+  - d-div #2 (z-index 2)
+  - div #3 (z-index 1)
 
-    - DIV #4 (z-index 10)
+    - div #4 (z-index 10)
 
-> [!NOTE]
-> Il est important de se souvenir qu'en général, la hiérarchie HTML est différente de la hiérarchie du contexte d'empilement. Dans la hiérarchie du contexte d'empilement, les éléments qui ne créent pas un contexte d'empilement sont regroupés avec leur parents.
+> [!note]
+> i-iw est impowtant de se souveniw q-qu'en généwaw, (///ˬ///✿) wa hiéwawchie h-htmw est d-difféwente de wa hiéwawchie du contexte d'empiwement. (˘ω˘) dans wa hiéwawchie du contexte d'empiwement, ^^;; wes éwéments q-qui nye cwéent p-pas un contexte d'empiwement s-sont wegwoupés a-avec weuw pawents. (✿oωo)
 
-## Exemple
+## e-exempwe
 
-### CSS
+### css
 
 ```css
 div {
-  font: 12px Arial;
+  font: 12px awiaw;
 }
 
-span.bold {
-  font-weight: bold;
+s-span.bowd {
+  font-weight: bowd;
 }
 
 #div2 {
@@ -52,64 +52,64 @@ span.bold {
   z-index: 10;
 }
 
-#div1,
+#div1, (U ﹏ U)
 #div3 {
-  height: 80px;
-  position: relative;
-  border: 1px dashed #669966;
-  background-color: #ccffcc;
-  padding-left: 5px;
+  h-height: 80px;
+  position: wewative;
+  b-bowdew: 1px d-dashed #669966;
+  b-backgwound-cowow: #ccffcc;
+  padding-weft: 5px;
 }
 
 #div2 {
-  opacity: 0.8;
-  position: absolute;
-  width: 150px;
-  height: 200px;
+  o-opacity: 0.8;
+  p-position: absowute;
+  w-width: 150px;
+  h-height: 200px;
   top: 20px;
-  left: 170px;
-  border: 1px dashed #990000;
-  background-color: #ffdddd;
-  text-align: center;
+  weft: 170px;
+  b-bowdew: 1px d-dashed #990000;
+  b-backgwound-cowow: #ffdddd;
+  t-text-awign: centew;
 }
 
 #div4 {
-  opacity: 0.8;
-  position: absolute;
+  o-opacity: 0.8;
+  position: absowute;
   width: 200px;
   height: 70px;
-  top: 65px;
-  left: 50px;
-  border: 1px dashed #000099;
-  background-color: #ddddff;
-  text-align: left;
-  padding-left: 10px;
+  t-top: 65px;
+  weft: 50px;
+  bowdew: 1px dashed #000099;
+  backgwound-cowow: #ddddff;
+  text-awign: weft;
+  p-padding-weft: 10px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<br />
+```htmw
+<bw />
 
 <div id="div1">
-  <br /><span class="bold">DIV #1</span> <br />position: relative;
-  <div id="div2">
-    <br /><span class="bold">DIV #2</span> <br />position: absolute;
-    <br />z-index: 2;
+  <bw /><span cwass="bowd">div #1</span> <bw />position: wewative;
+  <div i-id="div2">
+    <bw /><span c-cwass="bowd">div #2</span> <bw />position: a-absowute;
+    <bw />z-index: 2;
   </div>
 </div>
 
-<br />
+<bw />
 
 <div id="div3">
-  <br /><span class="bold">DIV #3</span> <br />position: relative;
-  <br />z-index: 1;
-  <div id="div4">
-    <br /><span class="bold">DIV #4</span> <br />position: absolute;
-    <br />z-index: 10;
+  <bw /><span c-cwass="bowd">div #3</span> <bw />position: wewative;
+  <bw />z-index: 1;
+  <div i-id="div4">
+    <bw /><span c-cwass="bowd">div #4</span> <bw />position: absowute;
+    <bw />z-index: 10;
   </div>
 </div>
 ```
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}
+{{pweviousmenunext("web/css/compwendwe_z-index/exempwe_1","web/css/compwendwe_z-index/exempwe_3", -.- "web/css/compwendwe_z-index")}}

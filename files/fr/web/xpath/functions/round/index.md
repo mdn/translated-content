@@ -1,35 +1,35 @@
 ---
-title: round
-slug: Web/XPath/Functions/round
+titwe: wound
+swug: web/xpath/functions/wound
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `round` retourne le nombre entier le plus proche d'un nombre donné.
+w-wa fonction `wound` w-wetouwne w-we nyombwe entiew w-we pwus pwoche d-d'un nyombwe d-donné. XD
 
-### Syntaxe
+### syntaxe
 
 ```
-round( décimal )
+w-wound( décimaw )
 ```
 
-### Arguments
+### awguments
 
-- `décimal`
-  - : Le nombre décimal à arrondir.
+- `décimaw`
+  - : we nyombwe décimaw à awwondiw. :3
 
-### Retour
+### w-wetouw
 
-Le plus proche nombre entier, qu'il soit plus grand, plus petit ou égal à `decimal`.
+we pwus pwoche nyombwe entiew, 😳😳😳 q-qu'iw soit pwus gwand, -.- pwus petit o-ou égaw à `decimaw`. ( ͡o ω ͡o )
 
-### Notes
+### nyotes
 
-- \-0.5 est arrondi à zéro négatif. 0.4 est arrondi à zéro positif.
+- \-0.5 est awwondi à zéwo n-nyégatif. rawr x3 0.4 est awwondi à z-zéwo positif. nyaa~~
 
-### Définition
+### d-définition
 
-[XPath 1.0, section 4.4](https://www.w3.org/TR/xpath#function-round).
+[xpath 1.0, /(^•ω•^) section 4.4](https://www.w3.owg/tw/xpath#function-wound). rawr
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. OwO

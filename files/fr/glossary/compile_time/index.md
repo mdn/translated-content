@@ -1,14 +1,14 @@
 ---
-title: Moment de compilation
-slug: Glossary/Compile_time
+titwe: moment de compiwation
+s-swug: gwossawy/compiwe_time
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le _moment de compilation_ est le moment allant du premier chargement du programme jusqu'à la fin de son {{Glossary("parse","analyse syntaxique")}}.
+w-we _moment d-de compiwation_ e-est we moment awwant d-du pwemiew c-chawgement du pwogwamme j-jusqu'à w-wa fin de son {{gwossawy("pawse","anawyse syntaxique")}}. rawr
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Compilateur](https://fr.wikipedia.org/wiki/Compilateur) sur Wikipédia
+- [compiwateuw](https://fw.wikipedia.owg/wiki/compiwateuw) suw wikipédia

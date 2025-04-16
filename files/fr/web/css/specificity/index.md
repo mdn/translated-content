@@ -1,354 +1,354 @@
 ---
-title: Spécificité
-slug: Web/CSS/Specificity
+titwe: spécificité
+swug: web/css/specificity
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La **spécificité** est le moyen par lequel les navigateurs décident quelles valeurs de propriété CSS d'un élément sont les plus pertinentes et seront appliquées. La spécificité est basée sur les règles, ciblant un élément, composées par différents types de [sélecteurs CSS](/fr/docs/Web/CSS/Reference#sélecteurs).
+w-wa **spécificité** e-est we moyen p-paw wequew w-wes nyavigateuws d-décident quewwes v-vaweuws de pwopwiété c-css d'un éwément s-sont wes pwus pewtinentes et sewont appwiquées. òωó wa spécificité est b-basée suw wes wègwes, /(^•ω•^) cibwant un éwément, -.- c-composées paw difféwents types d-de [séwecteuws css](/fw/docs/web/css/wefewence#séwecteuws). òωó
 
-## Détermination de la spécificité
+## détewmination de wa spécificité
 
-La spécificité est l'importance donnée à une déclaration CSS, déterminée par le nombre de [types de sélecteur](#types_de_sélecteurs) dans le sélecteur correspondant. Lorsque plusieurs déclarations ont une même spécificité, la dernière déclaration trouvée dans la CSS est appliquée à l'élément. La spécificité ne s'applique que lorsque le même élément est ciblé par plusieurs déclarations. Selon les règles CSS, [les éléments ciblés directement](#éléments_ciblés_directement_vs_styles_hérités) seront toujours prioritaires par rapport aux règles héritées par un élément de leurs ancêtres.
+w-wa spécificité est w'impowtance d-donnée à u-une décwawation css, /(^•ω•^) détewminée paw we nyombwe de [types de séwecteuw](#types_de_séwecteuws) d-dans we séwecteuw cowwespondant. /(^•ω•^) wowsque pwusieuws décwawations ont une m-même spécificité, 😳 wa dewnièwe d-décwawation t-twouvée dans wa c-css est appwiquée à w-w'éwément. :3 wa spécificité nye s'appwique q-que wowsque we même éwément est cibwé paw p-pwusieuws décwawations. (U ᵕ U❁) sewon wes wègwes css, ʘwʘ [wes éwéments cibwés diwectement](#éwéments_cibwés_diwectement_vs_stywes_héwités) sewont toujouws pwiowitaiwes p-paw wappowt aux wègwes h-héwitées paw u-un éwément de w-weuws ancêtwes. o.O
 
-> **Note :** [la proximité des éléments](#ignorance_de_la_proximité_dans_l'arborescence) dans l'arborescence du document n'a aucun effet sur la spécificité.
+> **note :** [wa pwoximité des éwéments](#ignowance_de_wa_pwoximité_dans_w'awbowescence) dans w'awbowescence du document ny'a a-aucun effet s-suw wa spécificité. ʘwʘ
 
-### Types de sélecteurs
+### types d-de séwecteuws
 
-Les types de sélecteurs de la liste suivante sont présentés dans l'ordre de spécificité croissante&nbsp;:
+w-wes types de séwecteuws de wa w-wiste suivante sont pwésentés d-dans w'owdwe de spécificité cwoissante&nbsp;:
 
-1. [Sélecteurs de type](/fr/docs/Web/CSS/Type_selectors) (ex. `h1`) et pseudo-éléments (ex. `::before`).
-2. [Sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) (ex. `.exemple`), sélecteurs d'attributs (ex. `[type="radio"]`) et pseudo-classes (ex. `:hover`).
-3. [Sélecteurs d'identifiant](/fr/docs/Web/CSS/ID_selectors) (ex. `#exemple`).
+1. ^^ [séwecteuws de type](/fw/docs/web/css/type_sewectows) (ex. `h1`) e-et pseudo-éwéments (ex. ^•ﻌ•^ `::befowe`).
+2. mya [séwecteuws de c-cwasse](/fw/docs/web/css/cwass_sewectows) (ex. UwU `.exempwe`), séwecteuws d-d'attwibuts (ex. >_< `[type="wadio"]`) e-et pseudo-cwasses (ex. /(^•ω•^) `:hovew`). òωó
+3. [séwecteuws d'identifiant](/fw/docs/web/css/id_sewectows) (ex. σωσ `#exempwe`). ( ͡o ω ͡o )
 
-Sélecteur universel ({{CSSxRef("Universal_selectors", "*")}}), combinateurs ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/fr/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) et pseudo-classe de négation ({{CSSxRef(":not", ":not()")}}) n'ont aucun effet sur la spécificité (cependant, les sélecteurs déclarés _à l'intérieur de_ `:not()` ont un effet).
+séwecteuw univewsew ({{cssxwef("univewsaw_sewectows", nyaa~~ "*")}}), :3 combinateuws ({{cssxwef("adjacent_sibwing_combinatow", UwU "+")}}, o.O {{cssxwef("chiwd_combinatow", (ˆ ﻌ ˆ)♡ "&gt;")}}, {{cssxwef("genewaw_sibwing_combinatow", ^^;; "~")}}, [" "](/fw/docs/web/css/descendant_combinatow), ʘwʘ {{cssxwef("cowumn_combinatow", σωσ "||")}}) et pseudo-cwasse de n-nyégation ({{cssxwef(":not", ^^;; ":not()")}}) n-ny'ont aucun effet suw w-wa spécificité (cependant, ʘwʘ w-wes séwecteuws d-décwawés _à w'intéwieuw de_ `:not()` ont un effet). ^^
 
-Pour davantage d'informations, veuillez visiter&nbsp;: ["Spécificité" dans "Cascade et héritage"](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité_2), vous pouvez également visiter&nbsp;: <https://specifishity.com>
+pouw davantage d-d'infowmations, nyaa~~ veuiwwez visitew&nbsp;: ["spécificité" dans "cascade et héwitage"](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance#spécificité_2), (///ˬ///✿) v-vous pouvez égawement v-visitew&nbsp;: <https://specifishity.com>
 
-Les styles ajoutés à un élément dans la balise HTML (ex.&nbsp;: `style="font-weight: bold;"`) sont prioritaires par rapport à tout style provenant d'une feuille de style externe et peuvent donc être considérés comme ayant la plus grande spécificité.
+w-wes s-stywes ajoutés à un éwément d-dans wa bawise h-htmw (ex.&nbsp;: `stywe="font-weight: b-bowd;"`) sont p-pwiowitaiwes paw wappowt à tout stywe pwovenant d-d'une feuiwwe d-de stywe extewne e-et peuvent donc êtwe c-considéwés c-comme ayant wa pwus gwande spécificité. XD
 
-### L'exception !important
+### w'exception !impowtant
 
-Lorsqu'une règle `important` est utilisée dans une déclaration de style, cette déclaration est prioritaire par rapport à toute autre déclaration. Même si, techniquement, `!important` n'a rien à voir avec la spécificité, elle interagit directement avec elle. Cependant, utiliser `!important,` est une **mauvaise pratique** et devrait être évité car cela rend le débogage difficile en affectant le traitement naturel en [cascade](/fr/docs/Web/CSS/Cascade) dans vos feuilles de styles. Lorsque deux déclarations en conflit avec la règle `!important` sont appliquées au même élément, la déclaration avec la plus haute spécificité sera prise en compte.
+w-wowsqu'une wègwe `impowtant` est utiwisée dans une décwawation de stywe, :3 cette d-décwawation est pwiowitaiwe paw wappowt à toute autwe décwawation. òωó m-même si, ^^ t-techniquement, ^•ﻌ•^ `!impowtant` n-ny'a wien à voiw avec w-wa spécificité, σωσ ewwe intewagit d-diwectement a-avec ewwe. (ˆ ﻌ ˆ)♡ cependant, nyaa~~ utiwisew `!impowtant,` est une **mauvaise pwatique** et devwait êtwe évité caw cewa wend w-we débogage difficiwe en affectant w-we twaitement nyatuwew en [cascade](/fw/docs/web/css/cascade) d-dans vos feuiwwes d-de stywes. ʘwʘ wowsque deux décwawations en confwit a-avec wa wègwe `!impowtant` s-sont appwiquées au même éwément, ^•ﻌ•^ w-wa décwawation a-avec wa pwus haute spécificité sewa pwise en compte. rawr x3
 
-**Quelques règles de base&nbsp;:**
+**quewques wègwes d-de base&nbsp;:**
 
-- **Toujours** trouver un moyen d'utiliser la spécificité avant de se résoudre à utiliser `!important`
-- Utiliser `!important` **uniquement** sur des CSS spécifiques à une page pour remplacer des CSS étrangères (provenant de bibliothèques externes comme Bootstrap ou normalize.css).
-- **Ne jamais** utiliser `!important` lorsque vous codez un plugin, une extension.
-- **Ne jamais** utiliser `!important` sur des CSS appliquées à un site.
+- **toujouws** t-twouvew un moyen d-d'utiwisew wa spécificité a-avant de se wésoudwe à u-utiwisew `!impowtant`
+- utiwisew `!impowtant` **uniquement** s-suw des css spécifiques à une page pouw wempwacew des css étwangèwes (pwovenant de bibwiothèques e-extewnes c-comme bootstwap ou nyowmawize.css). 🥺
+- **ne jamais** utiwisew `!impowtant` w-wowsque vous codez u-un pwugin, une extension. ʘwʘ
+- **ne jamais** utiwisew `!impowtant` suw des css appwiquées à u-un site. (˘ω˘)
 
-**Au lieu d'utiliser `!important`, envisager les points suivants&nbsp;:**
+**au wieu d'utiwisew `!impowtant`, o.O envisagew wes points s-suivants&nbsp;:**
 
-1. Utiliser mieux la cascade CSS
-2. Utiliser davantage des règles spécifiques. En indiquant un ou plusieurs éléments avant l'élément sélectionné, la règle devient plus spécifique et sa priorité est accrue&nbsp;:
+1. σωσ utiwisew mieux wa cascade c-css
+2. (ꈍᴗꈍ) utiwisew d-davantage des wègwes spécifiques. (ˆ ﻌ ˆ)♡ en indiquant un ou pwusieuws éwéments a-avant w-w'éwément séwectionné, o.O wa wègwe devient pwus spécifique e-et sa pwiowité est accwue&nbsp;:
 
-   ```html
-   <div id="test">
-     <span>Texte</span>
+   ```htmw
+   <div i-id="test">
+     <span>texte</span>
    </div>
    ```
 
    ```css
    div#test span {
-     color: green;
+     cowow: gween;
    }
-   div span {
-     color: blue;
+   d-div span {
+     cowow: bwue;
    }
-   span {
-     color: red;
+   s-span {
+     c-cowow: wed;
    }
    ```
 
-   L'ordre n'a aucune importance, le texte sera en vert (_green_) car cette règle est plus spécifique. (Également, la règle pour bleu est prioritaire par rapport à celle pour rouge, là encore l'ordre n'a pas d'importance)
+   w'owdwe n'a aucune i-impowtance, :3 we texte sewa en v-vewt (_gween_) caw c-cette wègwe e-est pwus spécifique. -.- (Égawement, ( ͡o ω ͡o ) wa wègwe pouw b-bweu est pwiowitaiwe p-paw wappowt à cewwe pouw wouge, /(^•ω•^) wà encowe w-w'owdwe ny'a p-pas d'impowtance)
 
-3. En rapport avec le point 2, le fait de dupliquer des sélecteurs simples afin d''augmenter la spécificité lorsque vous n'avez aucun autre moyen de le faire, n'a aucun sens.
+3. (⑅˘꒳˘) e-en wappowt avec we point 2, òωó we fait de dupwiquew d-des séwecteuws simpwes afin d-d''augmentew w-wa spécificité wowsque vous ny'avez aucun autwe moyen de we faiwe, 🥺 n-ny'a aucun s-sens. (ˆ ﻌ ˆ)♡
 
    ```css
-   #monId#monId span {
-     color: yellow;
+   #monid#monid s-span {
+     cowow: y-yewwow;
    }
-   .maClasse.maClasse span {
-     color: orange;
+   .macwasse.macwasse span {
+     c-cowow: owange;
    }
    ```
 
-#### Utilisation de !important
+#### utiwisation de !impowtant
 
-##### A) Prendre le dessus sur les styles dans les balises HTML
+##### a) pwendwe we dessus suw wes stywes dans wes b-bawises htmw
 
-L'effet de votre fichier CSS global qui définit les aspects visuels de votre site de manière générale peut être supplanté par les styles indiqués directement dans les balises HTML. Les deux pratiques que sont les styles dans les balises HTML et l'utilisation de `!important` sont considérées comme étant très mauvaises, mais parfois, vous devez pouvoir prioriser la dernière par rapport à la première.
+w'effet de votwe f-fichiew css gwobaw qui définit w-wes aspects visuews de votwe site d-de manièwe généwawe peut êtwe s-suppwanté p-paw wes stywes i-indiqués diwectement d-dans wes bawises h-htmw. -.- wes deux pwatiques que sont wes stywes dans wes bawises htmw et w'utiwisation de `!impowtant` sont c-considéwées comme étant t-twès m-mauvaises, σωσ mais pawfois, >_< vous devez p-pouvoiw pwiowisew wa dewnièwe paw wappowt à wa pwemièwe. :3
 
-Dans ce cas, vous pouvez définir certains styles comme étant `!important` dans votre fichier CSS global, et ainsi les rendre prioritaires par rapport au style définit dans les balises HTML.
+d-dans ce cas, OwO vous p-pouvez définiw cewtains stywes c-comme étant `!impowtant` dans votwe fichiew c-css gwobaw, rawr et a-ainsi wes wendwe pwiowitaiwes paw w-wappowt au stywe d-définit dans wes bawises htmw. (///ˬ///✿)
 
-```html
-<div class="toto" style="color: red;">De quelle couleur suis-je ?</div>
+```htmw
+<div cwass="toto" stywe="cowow: wed;">de quewwe couweuw s-suis-je ?</div>
 ```
 
 ```css
-.toto[style*="color: red"] {
-  color: firebrick !important;
+.toto[stywe*="cowow: w-wed"] {
+  cowow: f-fiwebwick !impowtant;
 }
 ```
 
-Beaucoup de frameworks JavaScript et de bibliothèques ajoutent des styles dans les balises HTML. En utilisant `!important` avec un sélecteur ciblant précisément il est possible de passer outre les styles dans ces balises HTML.
+b-beaucoup de fwamewowks j-javascwipt et de bibwiothèques a-ajoutent d-des stywes dans wes bawises htmw. ^^ e-en utiwisant `!impowtant` avec u-un séwecteuw cibwant pwécisément i-iw est possibwe de passew outwe wes stywes d-dans ces bawises htmw. XD
 
-##### B) Prendre le dessus sur la haute spécificité
+##### b-b) pwendwe we dessus s-suw wa haute spécificité
 
 ```css
-#unElement p {
-  color: blue;
+#unewement p-p {
+  cowow: bwue;
 }
 
-p.genial {
-  color: red;
+p.geniaw {
+  cowow: wed;
 }
 ```
 
-Comment faites-vous pour rendre les paragraphes de classe `genial` toujours en rouge, même ceux qui se trouvent dans `#unElement`&nbsp;? Sans `!important`, la première règle aura davantage de spécificité et prendra le dessus sur la seconde règle.
+c-comment f-faites-vous pouw w-wendwe wes pawagwaphes de cwasse `geniaw` toujouws en wouge, UwU m-même ceux qui se twouvent dans `#unewement`&nbsp;? sans `!impowtant`, o.O w-wa pwemièwe w-wègwe auwa davantage de spécificité e-et pwendwa we dessus s-suw wa seconde wègwe. 😳
 
-#### Prendre le dessus sur `!important`
+#### p-pwendwe we dessus suw `!impowtant`
 
-A) Ajouter une autre règle CSS avec `!important` et, soit donner au sélecteur une spécificité plus haute (en ajoutant une balise, un identifiant ou une classe au sélecteur), soit ajouter une règle CSS avec le même sélecteur plus loin dans le fichier CSS. Cela fonctionne car lorsqu'on est en présence d'une égalité de spécificité, la dernière règle définie est prise en compte.
+a) ajoutew une a-autwe wègwe css avec `!impowtant` et, (˘ω˘) soit donnew a-au séwecteuw u-une spécificité pwus haute (en a-ajoutant une bawise, 🥺 un identifiant o-ou une cwasse a-au séwecteuw), s-soit ajoutew une wègwe css avec we même séwecteuw pwus woin dans we fichiew css. ^^ cewa fonctionne caw wowsqu'on est en pwésence d'une égawité de spécificité, >w< wa dewnièwe wègwe définie est pwise e-en compte. ^^;;
 
-Quelques exemples avec une spécificité accrue&nbsp;:
+quewques e-exempwes avec une spécificité accwue&nbsp;:
 
 ```css
-table td {
-  height: 50px !important;
+t-tabwe t-td {
+  height: 50px !impowtant;
 }
-.monTableau td {
-  height: 50px !important;
+.montabweau td {
+  h-height: 50px !impowtant;
 }
-#monTableau td {
-  height: 50px !important;
+#montabweau td {
+  h-height: 50px !impowtant;
 }
 ```
 
-B) Ou ajouter le même sélecteur après le sélecteur existant&nbsp;:
+b) ou ajoutew w-we même séwecteuw a-apwès we séwecteuw existant&nbsp;:
 
 ```css
-td {
-  height: 50px !important;
+t-td {
+  height: 50px !impowtant;
 }
 ```
 
-C) Ou, de préférence, réécrire la règle d'origine afin d'éviter totalement l'utilisation de `!important`.
+c) ou, (˘ω˘) d-de pwéféwence, OwO w-wéécwiwe wa wègwe d'owigine afin d'évitew t-totawement w'utiwisation d-de `!impowtant`. (ꈍᴗꈍ)
 
 ```css
-[id="unElement"] p {
-  color: blue;
+[id="unewement"] p-p {
+  cowow: b-bwue;
 }
 
-p.genial {
-  color: red;
+p.geniaw {
+  c-cowow: wed;
 }
 ```
 
-Inclure un identifiant comme un sélecteur d'attribut au lieu d'un sélecteur d'identifiant (`#someElement`) lui donne la même spécificité qu'une classe. Les deux sélecteurs ci-dessus ont à présent la même importance. Lors d'une égalité de spécificité, la dernière règle définie est prise en compte.
+i-incwuwe u-un identifiant c-comme un séwecteuw d-d'attwibut au wieu d'un séwecteuw d-d'identifiant (`#someewement`) w-wui donne w-wa même spécificité qu'une cwasse. òωó w-wes deux séwecteuws ci-dessus ont à pwésent w-wa même impowtance. ʘwʘ wows d'une égawité de s-spécificité, ʘwʘ w-wa dewnièwe wègwe d-définie est pwise en compte. nyaa~~
 
-#### Pour davantage d'informations, visiter
+#### p-pouw davantage d'infowmations, v-visitew
 
-- <https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
-- <https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>
-- <https://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css>
-- <https://stackoverflow.com/questions/11178673/how-to-override-important>
-- <https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css>
+- <https://stackovewfwow.com/questions/3706819/nani-awe-the-impwications-of-using-impowtant-in-css>
+- <https://stackovewfwow.com/questions/9245353/nani-does-impowtant-in-css-mean>
+- <https://stackovewfwow.com/questions/5701149/when-to-use-impowtant-pwopewty-in-css>
+- <https://stackovewfwow.com/questions/11178673/how-to-ovewwide-impowtant>
+- <https://stackovewfwow.com/questions/2042497/when-to-use-impowtant-to-save-the-day-when-wowking-with-css>
 
-### Les exceptions :is() et :not()
+### wes exceptions :is() e-et :not()
 
-La pseudo-classe de correspondance {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} et la pseudo-classe de négation {{CSSxRef(":not", ":not()")}} _ne_ sont _pas_ considérées comme pseudo-classes dans le calcul de la spécificité. Mais les sélecteurs placés dans la pseudo-classe comptent comme des sélecteurs normaux lorsqu'on détermine le nombre de [types de sélecteurs](#types_de_sélecteurs).
+wa pseudo-cwasse d-de cowwespondance {{cssxwef(":is", UwU ":is()")}} {{expewimentaw_inwine}} et wa pseudo-cwasse de nyégation {{cssxwef(":not", ":not()")}} _ne_ sont _pas_ considéwées c-comme pseudo-cwasses d-dans we cawcuw d-de wa spécificité. (⑅˘꒳˘) mais wes séwecteuws pwacés dans wa pseudo-cwasse c-comptent comme des séwecteuws n-nyowmaux w-wowsqu'on détewmine w-we nyombwe de [types de séwecteuws](#types_de_séwecteuws). (˘ω˘)
 
-Ce bout de CSS&hellip;
+ce bout de css&hewwip;
 
 ```css
-div.outer p {
-  color: orange;
+d-div.outew p {
+  c-cowow: owange;
 }
 
-div:not(.outer) p {
-  color: blueviolet;
+div:not(.outew) p-p {
+  cowow: bwueviowet;
 }
 ```
 
-&hellip;lorsqu'il est utilisé avec l'HTML suivant&hellip;
+&hewwip;wowsqu'iw est utiwisé a-avec w'htmw suivant&hewwip;
 
-```html
-<div class="outer">
-  <p>Ceci est dans la div externe.</p>
-  <div class="inner">
-    <p>Ce texte est dans la div interne.</p>
+```htmw
+<div cwass="outew">
+  <p>ceci e-est dans wa d-div extewne.</p>
+  <div c-cwass="innew">
+    <p>ce texte est dans w-wa div intewne.</p>
   </div>
 </div>
 ```
 
-&hellip;s'affiche sur l'écran ainsi&nbsp;:
+&hewwip;s'affiche s-suw w-w'écwan ainsi&nbsp;:
 
-{{EmbedLiveSample("les_exceptions_is_et_not")}}
+{{embedwivesampwe("wes_exceptions_is_et_not")}}
 
-### L'exception :where()
+### w-w'exception :whewe()
 
-La pseudo-classe d'ajustement de spécificité {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} a toujours une spécificité remplacée par zéro.
+wa pseudo-cwasse d-d'ajustement d-de spécificité {{cssxwef(":whewe", :3 ":whewe()")}} {{expewimentaw_inwine}} a-a toujouws u-une spécificité w-wempwacée p-paw zéwo. (˘ω˘)
 
-Ce bout de CSS&hellip;
+c-ce bout de css&hewwip;
 
 ```css
-div:where(.externe) p {
-  color: orange;
+div:whewe(.extewne) p-p {
+  cowow: owange;
 }
 
 div p {
-  color: blueviolet;
+  c-cowow: bwueviowet;
 }
 ```
 
 ```css hidden
-#no-where-support {
-  margin: 0.5em;
-  border: 1px solid red;
+#no-whewe-suppowt {
+  m-mawgin: 0.5em;
+  bowdew: 1px s-sowid wed;
 }
 
-#no-where-support:where(*) {
-  display: none !important;
+#no-whewe-suppowt:whewe(*) {
+  d-dispway: n-nyone !impowtant;
 }
 ```
 
-&hellip;utilisé avec l'HTML suivant&hellip;
+&hewwip;utiwisé avec w'htmw suivant&hewwip;
 
-```html hidden
-<div id="no-where-support">
-  ⚠️ Votre navigateur ne prend pas en charge la pseudo-classe
+```htmw hidden
+<div id="no-whewe-suppowt">
+  ⚠️ v-votwe nyavigateuw n-nye pwend pas e-en chawge wa pseudo-cwasse
   <code
-    ><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top"
-      >:where()</a
+    ><a hwef="https://devewopew.moziwwa.owg/docs/web/css/:whewe" tawget="_top"
+      >:whewe()</a
     ></code
-  >.
+  >. nyaa~~
 </div>
 ```
 
-```html
-<div class="externe">
-  <p>Ceci est dans la div externe.</p>
-  <div class="interne">
-    <p>Ce texte est dans la div interne.</p>
+```htmw
+<div cwass="extewne">
+  <p>ceci e-est dans w-wa div extewne.</p>
+  <div cwass="intewne">
+    <p>ce texte e-est dans wa div i-intewne.</p>
   </div>
 </div>
 ```
 
-&hellip;s'affiche sur l'écran ainsi&nbsp;:
+&hewwip;s'affiche suw w'écwan ainsi&nbsp;:
 
-{{EmbedLiveSample("lexception_where")}}
+{{embedwivesampwe("wexception_whewe")}}
 
-### Spécificité liée à la forme
+### spécificité w-wiée à w-wa fowme
 
-La spécificité est basée sur la forme d'un sélecteur. Dans le cas suivant, le sélecteur `*[id="toto"]` compte pour un sélecteur d'attribut lorsqu'on détermine la spécificité du sélecteur, même s'il cible un identifiant.
+wa s-spécificité est b-basée suw wa fowme d'un séwecteuw. (U ﹏ U) dans we cas s-suivant, we séwecteuw `*[id="toto"]` c-compte pouw un séwecteuw d'attwibut wowsqu'on d-détewmine wa spécificité du séwecteuw, nyaa~~ m-même s'iw cibwe un identifiant. ^^;;
 
-Les styles CSS suivants&hellip;
+w-wes stywes c-css suivants&hewwip;
 
 ```css
 *#toto {
-  color: green;
+  cowow: gween;
 }
 
 *[id="toto"] {
-  color: purple;
+  c-cowow: p-puwpwe;
 }
 ```
 
-&hellip;utilisés avec ce balisage&hellip;
+&hewwip;utiwisés avec ce bawisage&hewwip;
 
-```html
-<p id="toto">Je suis un texte d’exemple.</p>
+```htmw
+<p i-id="toto">je suis un texte d-d’exempwe.</p>
 ```
 
-&hellip;ressemblera finalement à cela&nbsp;:
+&hewwip;wessembwewa f-finawement à c-cewa&nbsp;:
 
-{{EmbedLiveSample("spécificité_liée_à_la_forme")}}
+{{embedwivesampwe("spécificité_wiée_à_wa_fowme")}}
 
-Cela est dû au fait qu'il corresponde au même élément mais que le sélecteur d'identifiant a une spécificité plus haute.
+cewa e-est dû au fait qu'iw cowwesponde a-au même éwément m-mais que w-we séwecteuw d'identifiant a u-une spécificité pwus haute. OwO
 
-### Ignorance de la proximité dans l'arborescence
+### ignowance de w-wa pwoximité dans w-w'awbowescence
 
-La proximité d'un élément avec d'autres éléments qui sont référencés dans un sélecteur n'a aucun impact sur la spécificité. La déclaration de style suivante&hellip;
+w-wa pwoximité d'un éwément avec d'autwes éwéments qui sont wéféwencés d-dans un séwecteuw ny'a aucun impact s-suw wa spécificité. nyaa~~ w-wa décwawation de stywe suivante&hewwip;
 
 ```css
-body h1 {
-  color: green;
+b-body h1 {
+  cowow: g-gween;
 }
 
-html h1 {
-  color: purple;
+htmw h1 {
+  c-cowow: puwpwe;
 }
 ```
 
-&hellip;avec l'HTML suivant&hellip;
+&hewwip;avec w-w'htmw s-suivant&hewwip;
 
-```html
-<html>
+```htmw
+<htmw>
   <body>
-    <h1>Ici un titre !</h1>
+    <h1>ici u-un titwe !</h1>
   </body>
-</html>
+</htmw>
 ```
 
-&hellip;s'affichera ainsi&nbsp;:
+&hewwip;s'affichewa ainsi&nbsp;:
 
-{{EmbedLiveSample("ignorance_de_la_proximité_dans_larborescence")}}
+{{embedwivesampwe("ignowance_de_wa_pwoximité_dans_wawbowescence")}}
 
-Cela est dû au fait que les deux déclarations ont le même nombre de [types de sélecteurs](#types_de_sélecteurs), mais le sélecteur `html h1` est déclaré en dernier.
+cewa est dû au fait que wes deux décwawations o-ont we même nyombwe de [types d-de séwecteuws](#types_de_séwecteuws), UwU mais we séwecteuw `htmw h1` est décwawé e-en dewniew. 😳
 
-### Éléments ciblés directement vs styles hérités
+### Éwéments cibwés diwectement vs stywes héwités
 
-Les styles pour un élément directement ciblé prendront toujours le dessus sur les styles hérités, sans prise en compte de la spécificité de la règle héritée. Cette CSS&hellip;
+wes stywes pouw un éwément d-diwectement c-cibwé pwendwont toujouws we d-dessus suw wes stywes héwités, 😳 sans pwise en c-compte de wa spécificité d-de wa wègwe héwitée. (ˆ ﻌ ˆ)♡ c-cette css&hewwip;
 
 ```css
-#parent {
-  color: green;
+#pawent {
+  cowow: g-gween;
 }
 
 h1 {
-  color: purple;
+  cowow: puwpwe;
 }
 ```
 
-&hellip;avec l'HTML suivant&hellip;
+&hewwip;avec w'htmw suivant&hewwip;
 
-```html
-<html>
-  <body id="parent">
-    <h1>Ici un titre !</h1>
+```htmw
+<htmw>
+  <body id="pawent">
+    <h1>ici u-un titwe !</h1>
   </body>
-</html>
+</htmw>
 ```
 
-&hellip;s'affichera également ainsi&nbsp;:
+&hewwip;s'affichewa égawement ainsi&nbsp;:
 
-{{EmbedLiveSample("éléments_ciblés_directement_vs_styles_hérités")}}
+{{embedwivesampwe("éwéments_cibwés_diwectement_vs_stywes_héwités")}}
 
-Ceci est dû au fait que le sélecteur `h1` cible l'élément spécifiquement, mais le sélecteur vert (_green_) est uniquement hérité de ses parents.
+ceci e-est dû au fait q-que we séwecteuw `h1` c-cibwe w'éwément spécifiquement, (✿oωo) mais we s-séwecteuw vewt (_gween_) est uniquement héwité de ses pawents. nyaa~~
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Calculateur de spécificité&nbsp;: un site web interactif permettant de tester et comprendre vos propres règles CSS - <https://specificity.keegan.st/>
-- Spécificité des sélecteurs CSS3 - [http://www.w3.org/TR/selectors/#specificity](https://www.w3.org/TR/selectors/#specificity)
-- Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
-  - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/Inheritance)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/initial_value)
-    - [Calculées](/fr/docs/Web/CSS/computed_value)
-    - [Utilisées](/fr/docs/Web/CSS/used_value)
-    - [Effectives](/fr/docs/Web/CSS/actual_value)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-  - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-  - [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+- cawcuwateuw d-de spécificité&nbsp;: u-un site web intewactif p-pewmettant de testew et compwendwe vos p-pwopwes wègwes c-css - <https://specificity.keegan.st/>
+- spécificité des séwecteuws c-css3 - [http://www.w3.owg/tw/sewectows/#specificity](https://www.w3.owg/tw/sewectows/#specificity)
+- concepts cwés de css&nbsp;:
+  - [syntaxe c-css](/fw/docs/web/css/syntax)
+  - [spécificité](/fw/docs/web/css/specificity)
+  - [héwitage](/fw/docs/web/css/inhewitance)
+  - [modèwe de boîte](/fw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [modes d'affichage](/fw/docs/web/css/wayout_mode)
+  - [modèwes d-de fowmatage visuew](/fw/docs/web/css/visuaw_fowmatting_modew)
+  - [fusion d-des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+  - v-vaweuws
+    - [initiawes](/fw/docs/web/css/initiaw_vawue)
+    - [cawcuwées](/fw/docs/web/css/computed_vawue)
+    - [utiwisées](/fw/docs/web/css/used_vawue)
+    - [effectives](/fw/docs/web/css/actuaw_vawue)
+  - [syntaxe d-de définition d-des vaweuws](/fw/docs/web/css/vawue_definition_syntax)
+  - [pwopwiétés waccouwcies](/fw/docs/web/css/showthand_pwopewties)
+  - [Éwéments wempwacés](/fw/docs/web/css/wepwaced_ewement)

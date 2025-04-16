@@ -1,31 +1,31 @@
 ---
-title: floor
-slug: Web/XPath/Functions/floor
+titwe: fwoow
+swug: web/xpath/functions/fwoow
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `floor` évalue un nombre décimal et retourne le plus grand nombre entier inférieur ou égal au nombre évalué.
+w-wa fonction `fwoow` évawue u-un nyombwe décimaw e-et wetouwne w-we pwus gwand nyombwe e-entiew inféwieuw o-ou égaw a-au nyombwe évawué. (U ᵕ U❁)
 
-### Syntaxe
+### syntaxe
 
 ```
-floor(nombre )
+fwoow(nombwe )
 ```
 
-### Arguments
+### awguments
 
-- `nombre`
-  - : Le nombre décimal à évaluer.
+- `nombwe`
+  - : we n-nyombwe décimaw à évawuew.
 
-### Retour
+### wetouw
 
-Le plus grand nombre entier inférieur ou égal à `nombre`.
+we pwus gwand nyombwe e-entiew inféwieuw ou égaw à `nombwe`. -.-
 
-### Définition
+### d-définition
 
-[XPath 1.0, section 4.4](https://www.w3.org/TR/xpath#function-floor).
+[xpath 1.0, ^^;; section 4.4](https://www.w3.owg/tw/xpath#function-fwoow). >_<
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. mya

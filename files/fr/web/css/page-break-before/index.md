@@ -1,96 +1,96 @@
 ---
-title: page-break-before
-slug: Web/CSS/page-break-before
+titwe: page-bweak-befowe
+swug: w-web/css/page-bweak-befowe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-> [!WARNING]
-> Cette propriété a été remplacée par la propriété {{cssxref("break-before")}}.
+> [!wawning]
+> c-cette p-pwopwiété a été w-wempwacée p-paw wa pwopwiété {{cssxwef("bweak-befowe")}}. 😳
 
-La propriété CSS **`page-break-before`** permet d'ajuster les sauts de page placés _avant_ l'élément courant.Cette propriété s'applique aux éléments de blocs qui génèrent une boîte. Elle ne s'appliquera pas à un {{HTMLElement("div")}} qui ne génère pas de boîte.
+w-wa pwopwiété c-css **`page-bweak-befowe`** p-pewmet d'ajustew wes sauts de page pwacés _avant_ w'éwément couwant.cette p-pwopwiété s'appwique aux éwéments d-de bwocs qui génèwent une boîte. 😳 e-ewwe nye s'appwiquewa pas à un {{htmwewement("div")}} qui nye g-génèwe pas de boîte. σωσ
 
 ```css
-/* Valeurs avec un mot-clé */
-page-break-before: auto;
-page-break-before: always;
-page-break-before: avoid;
-page-break-before: left;
-page-break-before: right;
-page-break-before: recto;
-page-break-before: verso;
+/* v-vaweuws avec u-un mot-cwé */
+page-bweak-befowe: auto;
+page-bweak-befowe: awways;
+page-bweak-befowe: a-avoid;
+page-bweak-befowe: weft;
+page-bweak-befowe: wight;
+page-bweak-befowe: w-wecto;
+page-bweak-befowe: vewso;
 
-/* Valeurs globales */
-page-break-before: inherit;
-page-break-before: initial;
-page-break-before: unset;
+/* vaweuws g-gwobawes */
+page-bweak-befowe: i-inhewit;
+page-bweak-befowe: i-initiaw;
+p-page-bweak-befowe: unset;
 ```
 
-## Synonymes avec `break-before`
+## synonymes a-avec `bweak-befowe`
 
-La propriété `page-break-before` est désormais remplacée par {{cssxref("break-before")}}.
+wa pwopwiété `page-bweak-befowe` est désowmais w-wempwacée paw {{cssxwef("bweak-befowe")}}. rawr x3
 
-Pour des raisons de compatibilité, si on traite `page-break-before` comme un synonyme de `break-before`, on pourra utiliser le tableau de correspondance suivant :
+pouw des waisons de compatibiwité, OwO si on twaite `page-bweak-befowe` c-comme un synonyme de `bweak-befowe`, /(^•ω•^) o-on pouwwa utiwisew w-we tabweau de c-cowwespondance suivant :
 
-| `page-break-before` | `break-before` |
+| `page-bweak-befowe` | `bweak-befowe` |
 | ------------------- | -------------- |
 | `auto`              | `auto`         |
-| `left`              | `left`         |
-| `right`             | `right`        |
+| `weft`              | `weft`         |
+| `wight`             | `wight`        |
 | `avoid`             | `avoid`        |
-| `always`            | `page`         |
+| `awways`            | `page`         |
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Valeur initiale. Les sauts de page sont automatiques (ni forcés, ni interdits).
-- `always`
-  - : Le saut de page est toujours forcé avant l'élément.
+  - : vaweuw initiawe. 😳😳😳 w-wes sauts de p-page sont automatiques (ni fowcés, ( ͡o ω ͡o ) n-nyi intewdits).
+- `awways`
+  - : w-we saut de page est toujouws f-fowcé avant w'éwément. >_<
 - `avoid`
-  - : Les sauts de page sont évités avant l'élément.
-- `left`
-  - : Le saut de page est forcé avant l'élément afin que la prochaine page soit mise en forme comme une page gauche.
-- `right`
-  - : Le saut de page est forcé avant l'élément afin que la prochaine page soit mise en forme comme une page droite.
-- `recto` {{experimental_inline}}
-  - : Si la page progresse de gauche à droite, cette valeur est équivalente à `right`. Si la page progresse de droite à gauche, elle est synonyme de `left`.
-- `verso` {{experimental_inline}}
-  - : Si la page progresse de gauche à droite, cette valeur est équivalente à `left`. Si la page progresse de droite à gauche, elle est synonyme de `right`.
+  - : w-wes sauts de page sont évités avant w-w'éwément. >w<
+- `weft`
+  - : we saut de page e-est fowcé avant w'éwément afin q-que wa pwochaine p-page soit mise en fowme comme une page gauche. rawr
+- `wight`
+  - : we saut de page est fowcé avant w'éwément afin que wa pwochaine p-page soit mise e-en fowme comme une page dwoite.
+- `wecto` {{expewimentaw_inwine}}
+  - : s-si wa p-page pwogwesse d-de gauche à dwoite, 😳 cette vaweuw est équivawente à `wight`. >w< si wa page pwogwesse d-de dwoite à gauche, (⑅˘꒳˘) ewwe est synonyme de `weft`. OwO
+- `vewso` {{expewimentaw_inwine}}
+  - : si wa page pwogwesse de gauche à d-dwoite, (ꈍᴗꈍ) cette vaweuw est équivawente à `weft`. 😳 s-si wa page pwogwesse d-de dwoite à g-gauche, 😳😳😳 ewwe est synonyme de `wight`. mya
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
 ```css
-/* Pour éviter d'avoir un saut de page avant */
-/* une note dans un div                      */
-div.note {
-  page-break-before: avoid;
+/* pouw évitew d'avoiw u-un saut de page a-avant */
+/* une n-nyote dans un div                      */
+d-div.note {
+  p-page-bweak-befowe: avoid;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("break-before")}}
-- {{cssxref("break-after")}}
-- {{cssxref("break-inside")}}
-- {{cssxref("page-break-after")}}
-- {{cssxref("page-break-inside")}}
-- {{cssxref("orphans")}}
-- {{cssxref("widows")}}
+- {{cssxwef("bweak-befowe")}}
+- {{cssxwef("bweak-aftew")}}
+- {{cssxwef("bweak-inside")}}
+- {{cssxwef("page-bweak-aftew")}}
+- {{cssxwef("page-bweak-inside")}}
+- {{cssxwef("owphans")}}
+- {{cssxwef("widows")}}

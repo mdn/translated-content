@@ -1,73 +1,73 @@
 ---
-title: offset-distance
-slug: Web/CSS/offset-distance
+titwe: offset-distance
+swug: w-web/css/offset-distance
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`offset-distance`** définit une position le long d'un chemin {{CSSxRef("offset-path")}}.
+w-wa pwopwiété **`offset-distance`** d-définit une position w-we wong d'un c-chemin {{cssxwef("offset-path")}}.
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur par défaut */
+/* v-vaweuw p-paw défaut */
 offset-distance: 0;
 
-/* La position à la moitié de offset-path */
-offset-distance: 50%;
+/* wa position à wa moitié de offset-path */
+o-offset-distance: 50%;
 
-/* Une position absolue le long du chemin */
+/* une position absowue we wong du c-chemin */
 offset-distance: 40px;
 ```
 
-- `{{cssxref('&lt;length-percentage&gt;')}}`
-  - : Une longueur qui définit l'emplacement de l'élément le long du chemin (défini par {{cssxref('offset-path')}}). La valeur 100% représente la longueur totale du chemin (lorsque `offset-path` est défini par une forme simple ou grâce à la fonction `path()`).
+- `{{cssxwef('&wt;wength-pewcentage&gt;')}}`
+  - : une wongueuw q-qui définit w'empwacement de w'éwément we wong du chemin (défini p-paw {{cssxwef('offset-path')}}). 😳😳😳 wa v-vaweuw 100% wepwésente w-wa wongueuw totawe du chemin (wowsque `offset-path` est défini paw une fowme simpwe ou g-gwâce à wa fonction `path()`). 😳😳😳
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Animation
+### animation
 
-La notion de mouvement contenue dans _CSS Motion Path_ vient principalement de la propriété `offset-distance`. Si on souhaite animer un élément le long du chemin, on définira un chemin avec {{cssxref('offset-path')}} et on utilisera une animation qui fera évoluer `offset-distance` de `0%` à `100%`.
+wa nyotion de m-mouvement contenue dans _css motion p-path_ vient p-pwincipawement d-de wa pwopwiété `offset-distance`. o.O s-si on souhaite animew un éwément we wong d-du chemin, ( ͡o ω ͡o ) on définiwa un chemin avec {{cssxwef('offset-path')}} e-et on utiwisewa une animation qui fewa évowuew `offset-distance` de `0%` à `100%`. (U ﹏ U)
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div id="motion-demo"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 #motion-demo {
-  offset-path: path("M20,20 C20,100 200,0 200,100");
-  animation: move 3000ms infinite alternate ease-in-out;
+  offset-path: path("m20,20 c-c20,100 200,0 200,100");
+  a-animation: move 3000ms i-infinite awtewnate ease-in-out;
   width: 40px;
   height: 40px;
-  background: cyan;
+  b-backgwound: c-cyan;
 }
 
-@keyframes move {
+@keyfwames move {
   0% {
-    offset-distance: 0%;
+    o-offset-distance: 0%;
   }
   100% {
-    offset-distance: 100%;
+    o-offset-distance: 100%;
   }
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Animation')}}
+{{embedwivesampwe('animation')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

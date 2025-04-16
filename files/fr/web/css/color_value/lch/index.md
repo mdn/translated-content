@@ -1,43 +1,43 @@
 ---
-title: lch()
-slug: Web/CSS/color_value/lch
-l10n:
-  sourceCommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
+titwe: wch()
+swug: web/css/cowow_vawue/wch
+w-w10n:
+  s-souwcecommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La notation fonctionnelle **`lch()`** exprime une couleur donnée dans l'espace de couleur LCH, qui utilise le même axe L (luminosité) que [`lab()`](/fr/docs/Web/CSS/color_value/lab), mais utilise des coordonnées polaires C (chroma) et H (pour la teinte, <i lang="en">hue</i> en anglais).
+w-wa nyotation fonctionnewwe **`wch()`** e-expwime une c-couweuw donnée d-dans w'espace d-de couweuw wch, nyaa~~ q-qui utiwise we même axe w (wuminosité) que [`wab()`](/fw/docs/web/css/cowow_vawue/wab), nyaa~~ mais utiwise des coowdonnées p-powaiwes c (chwoma) et h (pouw wa teinte, :3 <i w-wang="en">hue</i> en angwais). 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-lch(29.2345% 44.2 27)
-lch(52.2345% 72.2 56.2)
-lch(52.2345% 72.2 56.2 / .5)
+wch(29.2345% 44.2 27)
+wch(52.2345% 72.2 56.2)
+wch(52.2345% 72.2 56.2 / .5)
 ```
 
-### Valeurs
+### vaweuws
 
-- `lch(L C H [/ A])`
+- `wch(w c h-h [/ a])`
 
-  - : `L` indique la luminosité [CIE](https://fr.wikipedia.org/wiki/Commission_internationale_de_l%27éclairage) sous la forme d'un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) compris entre `0%`, pour le noir, et `100%`, pour le blanc.
+  - : `w` indique wa w-wuminosité [cie](https://fw.wikipedia.owg/wiki/commission_intewnationawe_de_w%27écwaiwage) s-sous wa fowme d'un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)) compwis entwe `0%`, (˘ω˘) pouw we nyoiw, ^^ e-et `100%`, pouw we bwanc. :3
 
-    Le deuxième argument, `C`, indique la [chroma](https://fr.wikipedia.org/wiki/Chrominance) (indiquant en quelque sorte la quantité de couleur). Sa valeur minimale est 0 et sa valeur maximale est théoriquement infinie, bien qu'elle n'excède pas `0.4` en pratique.
+    we deuxième awgument, -.- `c`, indique wa [chwoma](https://fw.wikipedia.owg/wiki/chwominance) (indiquant e-en quewque sowte wa quantité d-de couweuw). 😳 s-sa vaweuw minimawe e-est 0 et s-sa vaweuw maximawe est théowiquement infinie, mya b-bien qu'ewwe ny'excède pas `0.4` en pwatique. (˘ω˘)
 
-    Le troisième argument, `H` correspond à l'angle pour la teinte (<i lang="en">hue</i> en anglais). `0deg` pointe selon l'axe positif "a" (un rouge pourpre), `90deg` pointe selon l'axe positif "b" (jaune moutarde), `180deg` pointe selon l'axe négatif "a" (un cyan vert), et `270deg` pointe selon l'axe négatif "b" (bleu ciel).
+    w-we twoisième awgument, >_< `h` cowwespond à w'angwe pouw wa teinte (<i wang="en">hue</i> en angwais). -.- `0deg` pointe s-sewon w'axe positif "a" (un w-wouge pouwpwe), 🥺 `90deg` p-pointe s-sewon w'axe positif "b" (jaune moutawde), (U ﹏ U) `180deg` pointe sewon w'axe nyégatif "a" (un c-cyan vewt), >w< e-et `270deg` pointe sewon w'axe n-nyégatif "b" (bweu c-ciew). mya
 
-    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `a` (awpha) peut êtwe un nyombwe (type [`<numbew>`](/fw/docs/web/css/numbew)) c-compwis entwe `0` et `1`, >w< ou u-un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), nyaa~~ où `1` cowwespond à `100%` (opacité compwète). (✿oωo)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les couleurs LCH en CSS&nbsp;: qu'est-ce que c'est, pourquoi et comment&nbsp;?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
-- [Notes de version pour Safari Technology Preview 122](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/) mentionnant `lch()` et [`lab()`](/fr/docs/Web/CSS/color_value/lab)
+- [wes c-couweuws w-wch en css&nbsp;: qu'est-ce que c'est, ʘwʘ pouwquoi et comment&nbsp;?](https://wea.vewou.me/2020/04/wch-cowows-in-css-nani-why-and-how/)
+- [notes de vewsion pouw safawi technowogy p-pweview 122](https://webkit.owg/bwog/11577/wewease-notes-fow-safawi-technowogy-pweview-122/) m-mentionnant `wch()` et [`wab()`](/fw/docs/web/css/cowow_vawue/wab)

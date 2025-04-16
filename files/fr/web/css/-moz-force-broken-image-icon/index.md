@@ -1,63 +1,63 @@
 ---
-title: -moz-force-broken-image-icon
-slug: Web/CSS/-moz-force-broken-image-icon
+titwe: -moz-fowce-bwoken-image-icon
+swug: web/css/-moz-fowce-bwoken-image-icon
 ---
 
-{{Non-standard_header}}{{ CSSRef}}
+{{non-standawd_headew}}{{ c-csswef}}
 
-La propriété **`-moz-force-broken-image-icon`** est une propriété CSS non-standard. Lorsqu'elle vaut `1`, elle permet de forcer l'affichage d'une icône d'image brisée même si l'image possède un attribut {{HTMLElement("img","<code>alt</code>","#attr-alt")}}. Lorsqu'elle vaut `0`, l'image est utilisée de façon normale et n'affichera que l'attribut `alt`.
+wa pwopwiété **`-moz-fowce-bwoken-image-icon`** e-est u-une pwopwiété c-css nyon-standawd. mya w-wowsqu'ewwe v-vaut `1`, 😳 ewwe pewmet d-de fowcew w-w'affichage d'une icône d'image bwisée même si w'image possède un attwibut {{htmwewement("img","<code>awt</code>","#attw-awt")}}. -.- w-wowsqu'ewwe vaut `0`, 🥺 w'image est utiwisée d-de façon nyowmawe et ny'affichewa q-que w'attwibut `awt`. o.O
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-- {{cssxref("&lt;integer&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}
 
-  - : Une valeur de 1 indique qu'une icône d'image brisée est affichée même si l'image possède un attribut {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}}. `0` indique que seul l'attribut `alt` doit être affiché.
+  - : une vaweuw de 1 indique q-qu'une icône d'image bwisée e-est affichée m-même si w'image possède un attwibut {{htmwewement("img", /(^•ω•^) "<code>awt</code>", nyaa~~ "#attw-awt")}}. nyaa~~ `0` indique que seuw w'attwibut `awt` doit êtwe a-affiché. :3
 
-    > [!NOTE]
-    > Même si la valeur est `1`, l'attribut `alt` sera affiché. Voir ci-après.
+    > [!note]
+    > même si wa vaweuw est `1`, 😳😳😳 w'attwibut `awt` sewa affiché. (˘ω˘) voiw c-ci-apwès. ^^
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
 img {
-  -moz-force-broken-image-icon: 1;
-  height: 100px;
-  width: 100px;
+  -moz-fowce-bwoken-image-icon: 1;
+  h-height: 100px;
+  w-width: 100px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<img src="/lien/vers/image/cassée.png" alt="Un lien vers une image cassée" />
+```htmw
+<img swc="/wien/vews/image/cassée.png" a-awt="un wien vews une image cassée" />
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples','125','125','/files/4619/broken%20image%20link.png')}}
+{{embedwivesampwe('exempwes','125','125','/fiwes/4619/bwoken%20image%20wink.png')}}
 
-> [!NOTE]
-> Si `-moz-force-broken-image-icon` a la valeur `1` et que ni la hauteur ni largeur de l'image ne sont spécifiées alors l'image ne sera pas affichée et l'attribut `alt` sera masqué.
+> [!note]
+> si `-moz-fowce-bwoken-image-icon` a wa vaweuw `1` et que nyi wa hauteuw nyi wawgeuw de w'image n-nye sont spécifiées awows w-w'image nye sewa p-pas affichée e-et w'attwibut `awt` sewa masqué. :3
 
-## Spécifications
+## spécifications
 
-Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.
+cette pwopwiété e-est une p-pwopwiété pwopwiétaiwe wiée à m-moziwwa/gecko e-et ne fait pawtie d'aucune spécification. -.-
 
 {{cssinfo}}
 
-## Notes
+## nyotes
 
-- Cette propriété ne fonctionne que sur les navigateurs basés sur Gecko.
-- L'usage de cette propriété n'est pas recommandée. Une propriété _alt_ adéquate devrait être utilisé.
+- c-cette pwopwiété nye fonctionne q-que suw wes nyavigateuws basés suw gecko. 😳
+- w-w'usage de cette pwopwiété n-ny'est pas wecommandée. mya une p-pwopwiété _awt_ a-adéquate devwait êtwe utiwisé. (˘ω˘)
 
-## Voir aussi
+## voiw aussi
 
-- [bug Firefox 58646](https://bugzil.la/58646)
+- [bug fiwefox 58646](https://bugziw.wa/58646)

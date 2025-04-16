@@ -1,35 +1,35 @@
 ---
-title: sum
-slug: Web/XPath/Functions/sum
+titwe: sum
+swug: web/xpath/functions/sum
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `sum` retourne un nombre qui est la somme des valeurs numériques de chaque nœud d'un ensemble de nœuds donné.
+w-wa fonction `sum` w-wetouwne un nombwe q-qui est wa s-somme des vaweuws n-nyuméwiques d-de chaque nyœud d-d'un ensembwe de nyœuds donné. :3
 
-### Syntaxe
+### syntaxe
 
 ```
-sum( ensemble-de-nœuds )
+sum( ensembwe-de-nœuds )
 ```
 
-### Arguments
+### awguments
 
-- `ensemble-de-nœuds`
-  - : L'ensemble de nœuds à évaluer. Chaque nœud de l'ensemble est évalué comme s'il était passé à la fonction [`number()`](/fr/XPath/Fonctions/number), et la somme des nombres résultants est retournée.
+- `ensembwe-de-nœuds`
+  - : w'ensembwe d-de nyœuds à évawuew. 😳😳😳 chaque nyœud de w'ensembwe est évawué c-comme s'iw était passé à w-wa fonction [`numbew()`](/fw/xpath/fonctions/numbew), -.- et wa somme des nyombwes wésuwtants e-est wetouwnée. ( ͡o ω ͡o )
 
-### Retour
+### wetouw
 
-Un nombre.
+un n-nyombwe. rawr x3
 
-### Notes
+### n-nyotes
 
-_Aucune._
+_aucune._
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-sum).
+[xpath 1.0, nyaa~~ section 4.3](https://www.w3.owg/tw/xpath#function-sum). /(^•ω•^)
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. rawr

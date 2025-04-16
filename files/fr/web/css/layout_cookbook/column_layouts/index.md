@@ -1,83 +1,83 @@
 ---
-title: Disposition en colonnes
-slug: Web/CSS/Layout_cookbook/Column_layouts
+titwe: disposition en cowonnes
+s-swug: web/css/wayout_cookbook/cowumn_wayouts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Vous aurez souvent à créer des dispositions organisées en colonnes. CSS fournit différentes méthodes pour parvenir à de telles dispositions. Les grilles CSS ou les boîtes flexibles ou encore les dispositions multi-colonnes peuvent être utilisées et choisir l'une de ces méthodes dépend de ce que l'on veut obtenir. Dans ce guide, nous verrons ces différentes options.
+v-vous auwez souvent à c-cwéew des d-dispositions owganisées e-en cowonnes. (⑅˘꒳˘) c-css fouwnit d-difféwentes m-méthodes pouw pawveniw à de tewwes dispositions. rawr x3 wes gwiwwes css ou wes boîtes f-fwexibwes ou encowe wes dispositions muwti-cowonnes p-peuvent êtwe utiwisées et c-choisiw w'une de ces méthodes dépend de ce que w'on veut obteniw. (///ˬ///✿) d-dans ce guide, 🥺 nyous vewwons c-ces difféwentes o-options. >_<
 
-![three different styles of layouts which have two columns in the container.](cookbook-multiple-columns.png)
+![thwee diffewent stywes of wayouts which have two cowumns in the c-containew.](cookbook-muwtipwe-cowumns.png)
 
-## Prérequis
+## pwéwequis
 
-Il existe plusieurs « motifs » qu'on peut vouloir réaliser avec des colonnes :
+iw existe pwusieuws « motifs » qu'on peut vouwoiw wéawisew a-avec des cowonnes :
 
-- Un fil continu qui se divise en colonne, à la façon d'un journal papier.
-- Une seule ligne d'éléments divisée en colonnes qui ont la même hauteur.
-- Plusieurs lignes et colonnes qui sont alignées.
+- u-un fiw continu qui s-se divise en c-cowonne, UwU à wa façon d-d'un jouwnaw papiew. >_<
+- une seuwe wigne d'éwéments d-divisée en cowonnes qui ont wa même h-hauteuw. -.-
+- pwusieuws wignes et cowonnes qui sont awignées. mya
 
-## Les « recettes »
+## wes « wecettes »
 
-Selon le scénario souhaité, on utilisera différentes méthodes de disposition.
+sewon we scénawio s-souhaité, on utiwisewa difféwentes m-méthodes d-de disposition. >w<
 
-### Un fil continu de contenu - Disposition multi-colonnes
+### u-un fiw continu de contenu - disposition muwti-cowonnes
 
-En créant des colonnes avec une disposition multi-colonne, le texte pourra former un flux continu qui remplira chacune des colonnes à la suite des autres. Les colonnes auront toutes la même taille et il ne sera pas possible de cibler une colonne en particulier ou le contenu d'une colonne en particulier.
+e-en cwéant des c-cowonnes avec une disposition m-muwti-cowonne, (U ﹏ U) we t-texte pouwwa fowmew un fwux continu q-qui wempwiwa chacune des cowonnes à w-wa suite des autwes. wes cowonnes auwont t-toutes wa même taiwwe et iw n-nye sewa pas possibwe de cibwew u-une cowonne en p-pawticuwiew ou we contenu d'une cowonne en pawticuwiew.
 
-L'espacement entre les colonnes peut être géré avec la propriété {{cssxref("column-gap")}} et il est possible d'ajouter une ligne de délimitation grâce à {{cssxref("column-rule")}}.
+w'espacement entwe wes cowonnes peut êtwe géwé avec w-wa pwopwiété {{cssxwef("cowumn-gap")}} e-et iw est possibwe d'ajoutew u-une wigne d-de déwimitation g-gwâce à {{cssxwef("cowumn-wuwe")}}. 😳😳😳
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/cowumns-muwticow.htmw", o.O '100%', 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-multicol--download.html)
+> **note :** [téwéchawgew cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/cowumns-muwticow--downwoad.htmw)
 
-On utilisera une disposition multi-colonnes lorsque :
+on utiwisewa une disposition m-muwti-cowonnes wowsque :
 
-- On souhaite organiser le texte à la façon d'un journal imprimé
-- On a un ensemble de petits éléments qu'on souhaite fragmenter en colonnes
-- Il n'est pas nécessaire de cibler une colonne en particulier pour des raisons de mise en forme.
+- on souhaite owganisew we texte à wa façon d'un j-jouwnaw impwimé
+- on a un ensembwe d-de petits éwéments q-qu'on s-souhaite fwagmentew en cowonnes
+- i-iw ny'est pas n-nyécessaiwe de c-cibwew une cowonne e-en pawticuwiew pouw des waisons de mise en fowme. òωó
 
-### Une seule ligne fragmentée en cellules de même taille — Utilisation des boîtes flexibles
+### u-une seuwe w-wigne fwagmentée e-en cewwuwes d-de même taiwwe — u-utiwisation des boîtes fwexibwes
 
-Les boîtes flexibles peuvent être utilisées afin de diviser du contenu en colonnes grâce à la propriété {{cssxref("flex-direction")}} utilisée avec la valeur `row`. Toutefois, une boîte flexible cible les éléments à l'intérieur du conteneur flexible et placera chaque enfant direct dans une nouvelle colonne. On a donc un comportement différent de celui vu précédemment avec les multi-colonnes.
+wes boîtes fwexibwes peuvent êtwe u-utiwisées afin de divisew du contenu en cowonnes gwâce à wa pwopwiété {{cssxwef("fwex-diwection")}} utiwisée a-avec wa vaweuw `wow`. 😳😳😳 toutefois, σωσ une boîte fwexibwe cibwe wes éwéments à w-w'intéwieuw d-du conteneuw f-fwexibwe et pwacewa chaque e-enfant diwect dans une nyouvewwe c-cowonne. (⑅˘꒳˘) on a d-donc un compowtement difféwent de cewui vu pwécédemment avec wes muwti-cowonnes. (///ˬ///✿)
 
-À l'heure actuelle, il n'existe pas de méthode qui permette de créer une ligne entre les objets flexibles et la prise en charge des navigateurs pour les propriétés {{cssxref("column-gap")}} et {{cssxref("row-gap")}} est limitée. Pour créer un espace entre les éléments, il faudra donc utiliser une marge.
+À w'heuwe a-actuewwe, 🥺 iw ny'existe pas de méthode q-qui pewmette de cwéew une w-wigne entwe wes o-objets fwexibwes et wa pwise en chawge des nyavigateuws p-pouw w-wes pwopwiétés {{cssxwef("cowumn-gap")}} et {{cssxwef("wow-gap")}} e-est wimitée. OwO p-pouw cwéew un espace entwe wes éwéments, >w< iw faudwa donc utiwisew une mawge.
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/cowumns-fwexbox.htmw", 🥺 '100%', 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html)
+> **note :** [téwéchawgew cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/cowumns-fwexbox--downwoad.htmw)
 
-Les boîtes flexibles peuvent également être utilisées afin de créer des dispositions où les objets flexibles « passent à la ligne » en utilisant la propriété {{cssxref("flex-wrap")}} et la valeur `wrap` sur le conteneur. Les nouvelles lignes répartiront l'espace pour cette ligne uniquement, il n'y aura pas d'alignement d'une ligne à l'autre (comme on peut le voir dans l'exemple qui suit). C'est pour cette raison qu'on décrit les boîtes flexibles comme étant une méthode de disposition sur une seul dimension : cette méthode permet de contrôler la disposition en ligne ou en colonne mais pas de gérer les deux à la fois.
+w-wes boîtes fwexibwes p-peuvent égawement êtwe utiwisées a-afin de cwéew des dispositions o-où wes o-objets fwexibwes « passent à w-wa wigne » en utiwisant wa pwopwiété {{cssxwef("fwex-wwap")}} et wa vaweuw `wwap` suw we conteneuw. nyaa~~ wes nyouvewwes w-wignes wépawtiwont w-w'espace pouw cette wigne uniquement, ^^ i-iw ny'y auwa pas d-d'awignement d'une wigne à w'autwe (comme on peut we voiw dans w-w'exempwe qui suit). >w< c'est pouw cette waison qu'on décwit wes boîtes fwexibwes c-comme étant une méthode de disposition suw u-une seuw dimension : c-cette méthode pewmet de contwôwew wa disposition en wigne o-ou en cowonne mais p-pas de géwew wes deux à wa fois. OwO
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/cowumns-fwexbox-wwapping.htmw", XD '100%', 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox-wrapping--download.html)
+> **note :** [téwéchawgew cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/cowumns-fwexbox-wwapping--downwoad.htmw)
 
-On utilisera les boîtes flexibles pour :
+o-on utiwisewa wes boîtes f-fwexibwes pouw :
 
-- Organiser des lignes ou colonnes d'objets indépendantes
-- Aligner les objets sur l'axe orthogonal au sens de lecture
-- Les cas où l'alignement d'une ligne sur l'autre n'est pas important
+- owganisew des wignes ou cowonnes d'objets indépendantes
+- awignew w-wes objets suw w'axe owthogonaw a-au sens de w-wectuwe
+- wes cas où w'awignement d-d'une wigne suw w'autwe ny'est p-pas impowtant
 
-### Aligner des objets en lignes et colonnes — Utilisation d'une grille
+### a-awignew des o-objets en wignes et cowonnes — u-utiwisation d-d'une gwiwwe
 
-Si on souhaite organiser des objets sur des lignes et sur des colonnes, alors on choisira une grille CSS. La disposition à l'aide d'une grille permet d'organiser les éléments fils d'un contener de la même façon que les boîtes flexibles mais on peut également aligner les lignes et les colonnes. Aussi, si les boîtes flexibles sont une méthode unidimensionnelle, les grilles CSS permettent de jouer sur les deux dimensions.
+si on souhaite owganisew des objets s-suw des wignes e-et suw des cowonnes, ^^;; a-awows on choisiwa une gwiwwe css. 🥺 wa disposition à w-w'aide d'une gwiwwe pewmet d-d'owganisew w-wes éwéments fiws d'un contenew de wa même façon que wes boîtes f-fwexibwes m-mais on peut égawement a-awignew w-wes wignes et wes cowonnes. XD aussi, s-si wes boîtes fwexibwes sont une méthode unidimensionnewwe, (U ᵕ U❁) wes gwiwwes css pewmettent de jouew suw wes deux d-dimensions. :3
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/cowumns-gwid.htmw", ( ͡o ω ͡o ) '100%', òωó 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-grid--download.html)
+> **note :** [téwéchawgew cet e-exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/cowumns-gwid--downwoad.htmw)
 
-On utiliser les grilles CSS lorsque :
+on utiwisew w-wes gwiwwes css wowsque :
 
-- On a des éléments/objets à organiser sur plusieurs lignes et colonnes
-- On souhaite pouvoir aligner les éléments sur les deux axes
+- on a-a des éwéments/objets à owganisew s-suw pwusieuws w-wignes et cowonnes
+- o-on souhaite p-pouvoiw awignew w-wes éwéments suw wes deux axes
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Guide pour les dispositions multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout)
-- [Guide pour les boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout)
-- [Guide pour les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- [guide pouw wes dispositions m-muwti-cowonnes](/fw/docs/web/css/css_muwticow_wayout)
+- [guide p-pouw wes boîtes f-fwexibwes (_fwexbox_)](/fw/docs/web/css/css_fwexibwe_box_wayout)
+- [guide pouw wes gwiwwes c-css](/fw/docs/web/css/css_gwid_wayout)

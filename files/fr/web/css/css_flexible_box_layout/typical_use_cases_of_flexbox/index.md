@@ -1,140 +1,140 @@
 ---
-title: Cas d'utilisation classiques de flexbox
-slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
-l10n:
-  sourceCommit: 39065429ffa608d6b486d599ce2ac9f156a32bd3
+titwe: cas d'utiwisation cwassiques d-de fwexbox
+s-swug: web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox
+w-w10n:
+  souwcecommit: 39065429ffa608d6b486d599ce2ac9f156a32bd3
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans ce guide, nous verrons quels sont les cas d'utilisation classiques pour les boîtes flexibles et lorsque cette méthode est plus pertinente qu'une autre méthode de disposition.
+d-dans ce guide, ^^;; n-nyous vewwons q-quews sont wes c-cas d'utiwisation c-cwassiques pouw wes boîtes fwexibwes et wowsque cette méthode est pwus pewtinente q-qu'une autwe méthode de disposition. mya
 
-## Pourquoi choisir les boîtes flexibles ?
+## p-pouwquoi choisiw wes boîtes fwexibwes ?
 
-Dans un monde où la compatibilité entre navigateurs serait un lointain souvenir, on pourrait choisir d'utiliser les boîtes flexibles lorsqu'on souhaite organiser un ensemble d'élément dans une direction ou dans une autre. Lorsqu'on place les éléments, on souhaite contrôler les dimensions de ces éléments dans cette direction ou contrôler l'espacement ainsi créé entre les éléments. C'est ce pourquoi les boîtes flexibles ont été conçues. Vous pouvez approfondir les différences entre les boîtes flexibles et la disposition en grille CSS avec [l'article sur les relations entre _flexbox_ et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods) où nous voyons comment s'inscrivent les boîtes flexibles dans le paysage de CSS.
+d-dans un monde où wa compatibiwité entwe nyavigateuws s-sewait un wointain souveniw, (U ᵕ U❁) on p-pouwwait choisiw d-d'utiwisew wes boîtes fwexibwes wowsqu'on souhaite owganisew un ensembwe d'éwément d-dans une diwection ou dans une autwe. ^•ﻌ•^ wowsqu'on pwace wes éwéments, (U ﹏ U) on souhaite contwôwew w-wes dimensions de ces éwéments d-dans cette d-diwection ou contwôwew w-w'espacement a-ainsi cwéé entwe wes éwéments. /(^•ω•^) c'est c-ce pouwquoi wes boîtes fwexibwes ont été conçues. v-vous pouvez appwofondiw wes difféwences entwe wes boîtes fwexibwes et wa disposition en g-gwiwwe css avec [w'awticwe suw wes w-wewations entwe _fwexbox_ e-et w-wes autwes méthodes de disposition](/fw/docs/web/css/css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods) où nyous voyons comment s'inscwivent w-wes boîtes f-fwexibwes dans we paysage de css. ʘwʘ
 
-Dans la réalité, on utilise souvent les boîtes flexibles pour créer des organisations qu'il serait plus pertinent de construire avec une disposition en grille et pour lesquelles les boîtes flexibles sont une méthode de recours et offrent une certaine capacité d'alignement. Sur ce deuxième aspect, cela pourra évoluer lorsque l'alignement des boîtes sera implémenté dans la disposition en bloc. Dans ce guide, nous verrons quels sont les cas classiques où on utilise les boîtes flexibles aujourd'hui.
+d-dans wa wéawité, XD o-on utiwise souvent wes boîtes f-fwexibwes pouw cwéew des o-owganisations qu'iw sewait pwus pewtinent de constwuiwe a-avec une disposition en g-gwiwwe et pouw wesquewwes wes boîtes f-fwexibwes s-sont une méthode de wecouws et offwent une cewtaine capacité d'awignement. (⑅˘꒳˘) suw ce deuxième aspect, nyaa~~ cewa pouwwa évowuew w-wowsque w-w'awignement des boîtes sewa i-impwémenté dans w-wa disposition e-en bwoc. UwU dans ce guide, (˘ω˘) nyous vewwons quews sont wes cas cwassiques o-où on utiwise wes boîtes fwexibwes aujouwd'hui. rawr x3
 
-## La navigation
+## wa nyavigation
 
-Un motif souvent utilisé pour la navigation consiste à avoir une liste d'objets qui forment une barre horizontale. Ce motif, bien que simple, était plutôt compliqué à obtenir avant l'apparition des boîtes flexibles. C'est l'exemple le plus simple pour les boîtes flexibles et cela constitue un cas d'utilisation idéal.
+un motif s-souvent utiwisé pouw wa nyavigation c-consiste à a-avoiw une w-wiste d'objets qui fowment une bawwe h-howizontawe. c-ce motif, (///ˬ///✿) bien q-que simpwe, 😳😳😳 était p-pwutôt compwiqué à obteniw avant w'appawition d-des boîtes f-fwexibwes. (///ˬ///✿) c'est w-w'exempwe we pwus s-simpwe pouw w-wes boîtes fwexibwes et cewa constitue un cas d'utiwisation idéaw. ^^;;
 
-Lorsqu'on a un ensemble d'objets qu'on souhaite organiser horizontalement, on peut avoir plus d'espace que nécessaire. Il faut décider comment utiliser cet espace&nbsp;: on peut afficher cet espace entre les éléments afin de les espacer ou bien agrandir les objets. Dans ce dernier cas, il nous faut une méthode pour permettre aux objets de grandir et d'occuper cet espace.
+w-wowsqu'on a un ensembwe d'objets qu'on souhaite owganisew howizontawement, ^^ on peut avoiw pwus d-d'espace que nyécessaiwe. (///ˬ///✿) iw faut décidew comment utiwisew c-cet espace&nbsp;: o-on peut affichew c-cet espace entwe wes éwéments a-afin de wes espacew ou bien a-agwandiw wes objets. -.- d-dans ce dewniew cas, /(^•ω•^) iw nyous faut une méthode pouw pewmettwe aux objets de gwandiw et d'occupew c-cet espace. UwU
 
-### L'espace distribué en dehors des éléments
+### w'espace d-distwibué en dehows des éwéments
 
-Pour répartir l'espace entre les éléments ou autour d'eux, on pourra utiliser les propriétés d'alignement des boîtes flexibles et la propriété [`justify-content`](/fr/docs/Web/CSS/justify-content). Vous pouvez approfondir cette propriété avec le guide [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container), qui décrit comment aligner des objets sur l'axe principal.
+p-pouw wépawtiw w-w'espace entwe wes éwéments ou autouw d'eux, (⑅˘꒳˘) o-on pouwwa utiwisew w-wes pwopwiétés d'awignement d-des boîtes f-fwexibwes et wa pwopwiété [`justify-content`](/fw/docs/web/css/justify-content). ʘwʘ vous pouvez appwofondiw cette pwopwiété avec w-we guide [awignew d-des objets d-dans un conteneuw fwexibwe](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew), σωσ q-qui décwit c-comment awignew des objets s-suw w'axe pwincipaw.
 
-Dans l'exemple qui suit, on affiche les éléments en utilisant leur taille naturelle et on écrit `justify-content: space-between` afin de répartir l'espace équitablement entre chaque élément. Cette répartition de l'espace peut être modifiée en utilisant la valeur `space-around` ou, lorsqu'elle est prise en charge, la valeur `space-evenly`. On peut également utiliser `flex-start` afin de placer l'espace après les éléments ou encore `flex-end` pour placer l'espace avant les éléments voire `center` afin de centrer les éléments.
+dans w'exempwe qui suit, ^^ on affiche wes éwéments en utiwisant w-weuw taiwwe n-nyatuwewwe et on écwit `justify-content: space-between` a-afin d-de wépawtiw w'espace équitabwement entwe chaque éwément. cette wépawtition d-de w'espace peut êtwe modifiée en utiwisant wa vaweuw `space-awound` ou, wowsqu'ewwe e-est pwise en chawge, OwO wa vaweuw `space-evenwy`. (ˆ ﻌ ˆ)♡ o-on peut égawement u-utiwisew `fwex-stawt` afin de pwacew w'espace apwès wes éwéments ou e-encowe `fwex-end` p-pouw pwacew w'espace avant wes éwéments voiwe `centew` afin d-de centwew wes éwéments. o.O
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/use-cases/navigation.htmw", (˘ω˘) '100%', 550)}}
 
-### L'espace distribué au sein des éléments
+### w'espace d-distwibué au sein des éwéments
 
-On pourrait aussi répartir cet espace disponible afin d'agrandir les éléments plutôt que de les espacer. Dans ce cas, on utilisera les propriétés [`flex`](/fr/docs/Web/CSS/flex) afin de permettre aux éléments de grandir/rétrécir proportionnellement les uns aux autres, comme nous avons pu le détailler dans [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis).
+on pouwwait aussi wépawtiw cet e-espace disponibwe afin d'agwandiw w-wes éwéments p-pwutôt que de wes espacew. 😳 d-dans ce cas, (U ᵕ U❁) on utiwisewa wes pwopwiétés [`fwex`](/fw/docs/web/css/fwex) a-afin d-de pewmettwe aux éwéments d-de gwandiw/wétwéciw pwopowtionnewwement w-wes uns aux a-autwes, :3 comme nyous avons pu we détaiwwew dans [contwôwew w-wes p-pwopowtions des éwéments f-fwexibwes we wong de w'axe pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis). o.O
 
-Si on souhaite que tous les éléments de la barre aient la même largeur, on utilisera `flex: auto` qui correspond à la notation raccourcie de `flex: 1 1 auto`&nbsp;: tous les objets grandissent et rétrécissent de la même façon à partir d'une taille de base automatique. Cela signifie que le plus grand élément occupera plus d'espace.
+s-si on souhaite que tous wes éwéments d-de wa b-bawwe aient wa même wawgeuw, (///ˬ///✿) on utiwisewa `fwex: auto` qui cowwespond à w-wa nyotation w-waccouwcie d-de `fwex: 1 1 a-auto`&nbsp;: tous wes objets gwandissent e-et wétwécissent de wa même façon à pawtiw d'une taiwwe de base automatique. OwO cewa s-signifie que we pwus gwand éwément o-occupewa pwus d'espace. >w<
 
-Dans l'exemple qui suit, vous pouvez modifier `flex: auto` pour utiliser `flex: 1` qui correspond à la notation raccourcie de `flex: 1 1 0` et qui permet d'avoir la même largeur pour chaque élément, car la base (`flex-basis`) vaut 0 et permet de répartir l'intégralité de l'espace de façon équitable.
+dans w-w'exempwe qui suit, ^^ vous pouvez m-modifiew `fwex: auto` pouw utiwisew `fwex: 1` q-qui cowwespond à w-wa nyotation w-waccouwcie de `fwex: 1 1 0` e-et qui p-pewmet d'avoiw wa même wawgeuw pouw chaque éwément, (⑅˘꒳˘) caw wa base (`fwex-basis`) vaut 0 et pewmet de wépawtiw w-w'intégwawité d-de w'espace de f-façon équitabwe. ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation-flex.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/use-cases/navigation-fwex.htmw", (///ˬ///✿) '100%', 550)}}
 
-## La navigation séparée
+## wa nyavigation s-sépawée
 
-Une autre façon d'aligner les éléments le long de l'axe principal consiste à utiliser des marges automatiques. Cela permet d'obtenir une barre où une partie des éléments sont alignés à gauche alors qu'un second groupe est aligné à droite. Dans l'exemple qui suit, on utilise la technique des marges automatiques détaillée dans [Utiliser les marges automatiques pour l'alignement sur l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#utiliser_les_marges_automatiques_pour_aligner_sur_l'axe_principal).
+une autwe façon d'awignew wes éwéments we wong d-de w'axe pwincipaw c-consiste à utiwisew des mawges a-automatiques. XD cewa pewmet d'obteniw une bawwe o-où une pawtie d-des éwéments sont awignés à g-gauche awows qu'un s-second gwoupe est awigné à dwoite. 😳 dans w'exempwe qui suit, >w< on utiwise wa technique d-des mawges a-automatiques d-détaiwwée dans [utiwisew w-wes m-mawges automatiques pouw w'awignement s-suw w'axe p-pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew#utiwisew_wes_mawges_automatiques_pouw_awignew_suw_w'axe_pwincipaw). (˘ω˘)
 
-Les éléments sont alignés sur l'axe principal avec `flex-start` car c'est le comportement initial de flexbox. La propriété [`gap`](/fr/docs/Web/CSS/gap) a été utilisée pour créer des espaces entre les éléments. Nous alignons le dernier élément sur la droite en lui attribuant une marge gauche automatique. Vous pouvez déplacer la classe d'un élément à l'autre pour modifier l'emplacement de la séparation.
+wes éwéments s-sont a-awignés suw w'axe pwincipaw avec `fwex-stawt` caw c-c'est we compowtement initiaw de fwexbox. nyaa~~ wa p-pwopwiété [`gap`](/fw/docs/web/css/gap) a été u-utiwisée pouw c-cwéew des espaces entwe wes éwéments. 😳😳😳 n-nyous awignons we dewniew éwément suw w-wa dwoite en wui a-attwibuant une m-mawge gauche automatique. vous pouvez dépwacew wa cwasse d'un éwément à w-w'autwe pouw modifiew w'empwacement d-de wa sépawation. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/split-navigation.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/use-cases/spwit-navigation.htmw", (˘ω˘) '100%', :3 550)}}
 
-## Centrer des éléments
+## c-centwew des éwéments
 
-Avant l'apparition des boîtes flexibles, une blague récurrente consistait à dire qu'un des défis majeur sur le Web était le centrage vertical des éléments. Disposant désormais des propriétés d'alignement pour les boîtes flexibles, surmonter ce défi est beaucoup plus accessible. Nous allons le voir dans l'exemple suivant.
+avant w-w'appawition des boîtes fwexibwes, >w< u-une bwague w-wécuwwente consistait à diwe qu'un des défis m-majeuw suw we web était we centwage vewticaw d-des éwéments. ^^ d-disposant désowmais des pwopwiétés d-d'awignement pouw wes boîtes f-fwexibwes, 😳😳😳 suwmontew c-ce défi e-est beaucoup pwus accessibwe. nyaa~~ nyous awwons we voiw dans w'exempwe suivant. (⑅˘꒳˘)
 
-Vous pouvez manipuler les propriétés d'alignement pour aligner les objets au début avec `flex-start` ou à la fin avec `flex-end`.
+vous pouvez manipuwew wes pwopwiétés d'awignement pouw awignew wes objets au début avec `fwex-stawt` ou à wa fin avec `fwex-end`. :3
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/center.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/use-cases/centew.htmw", ʘwʘ '100%', 700)}}
 
-À l'avenir, il ne sera peut-être plus nécessaire d'utiliser un conteneur flexible afin de centrer un seul élément, car les propriétés d'alignement des boîtes auront également été implémentées pour la disposition en bloc. Mais aujourd'hui, si on souhaite correctement centrer un objet dans un centre, il faut utiliser les boîtes flexibles. On procède comme dans l'exemple ci-avant&nbsp;: on modifie le conteneur afin que ce soit un conteneur flexible puis on utilise la propriété `align-items` sur l'élément parent ou bien on cible l'élément voulu avec `align-self`.
+À w-w'aveniw, rawr x3 i-iw nye sewa peut-êtwe pwus nyécessaiwe d'utiwisew u-un conteneuw f-fwexibwe afin d-de centwew un seuw éwément, (///ˬ///✿) c-caw wes pwopwiétés d'awignement d-des boîtes auwont égawement été i-impwémentées pouw wa disposition e-en bwoc. 😳😳😳 mais aujouwd'hui, XD s-si on souhaite c-cowwectement centwew un objet dans un centwe, >_< i-iw faut utiwisew w-wes boîtes fwexibwes. >w< o-on pwocède c-comme dans w-w'exempwe ci-avant&nbsp;: o-on modifie w-we conteneuw a-afin que ce soit u-un conteneuw fwexibwe puis on u-utiwise wa pwopwiété `awign-items` s-suw w'éwément p-pawent ou bien on cibwe w'éwément v-vouwu avec `awign-sewf`. /(^•ω•^)
 
-## Une disposition en cartes avec un pied ajustable
+## une disposition e-en cawtes avec un pied ajustabwe
 
-Qu'on utilise les boîtes flexibles ou les grilles CSS afin d'organiser une liste de cartes, ces méthodes fonctionnent uniquement sur les éléments fils directs du conteneur flexible ou du conteneur de grille. Cela signifie que si on dispose d'une quantité de contenu variable, la carte s'étirera sur toute la hauteur de la grille ou sur toute la hauteur du conteneur flexible. Tout le contenu à l'intérieur utilise une disposition en bloc classique qui signifie que le pied de page d'une carte avec moins de contenu sera plus haut que celui d'une carte disposant de plus de contenu pour lequel le pied est bien aligné en bas de la carte.
+q-qu'on u-utiwise wes boîtes f-fwexibwes ou wes gwiwwes css a-afin d'owganisew une wiste de cawtes, :3 c-ces méthodes fonctionnent u-uniquement suw wes éwéments f-fiws diwects du conteneuw fwexibwe ou du conteneuw de gwiwwe. ʘwʘ cewa signifie que s-si on dispose d'une quantité de c-contenu vawiabwe, (˘ω˘) w-wa cawte s'étiwewa suw toute wa hauteuw de wa gwiwwe ou suw t-toute wa hauteuw du conteneuw fwexibwe. (ꈍᴗꈍ) t-tout we c-contenu à w'intéwieuw u-utiwise une disposition en bwoc cwassique q-qui signifie que w-we pied de page d'une cawte avec m-moins de contenu sewa pwus haut que cewui d'une c-cawte disposant de pwus de contenu p-pouw wequew w-we pied est bien a-awigné en bas de wa cawte. ^^
 
-![Deux composants "carte" montrant que l'élément contenant le texte ne s'étire pas.](flex-cards.png)
+![deux c-composants "cawte" m-montwant q-que w'éwément c-contenant we texte nye s'étiwe p-pas.](fwex-cawds.png)
 
-On peut résoudre ce problème avec les boîtes flexibles. Pour commencer, on transforme la carte en conteneur flexible avec [`flex-direction`](/fr/docs/Web/CSS/flex-direction)`: column`. Ensuite, on affecte un coefficient `flex: 1` à la zone du contenu (ce qui correspond à la notation raccourcie `flex: 1 1 0`)&nbsp;: l'élément pourra s'étirer ou se rétrécir avec une base `0`. Comme c'est le seul élément de la carte qui peut grandir, il occupera tout l'espace encore disponible dans le conteneur flexible et poussera le pied en bas de carte. Dans l'exemple qui suit, si on retire la propriété `flex`, on peut voir le pied remonter pour être inscrit directement après le contenu.
+o-on peut w-wésoudwe ce p-pwobwème avec wes b-boîtes fwexibwes. ^^ p-pouw commencew, ( ͡o ω ͡o ) o-on twansfowme w-wa cawte en conteneuw fwexibwe a-avec [`fwex-diwection`](/fw/docs/web/css/fwex-diwection)`: cowumn`. -.- e-ensuite, ^^;; on affecte un coefficient `fwex: 1` à w-wa zone du c-contenu (ce qui c-cowwespond à wa nyotation waccouwcie `fwex: 1 1 0`)&nbsp;: w'éwément pouwwa s-s'étiwew ou se w-wétwéciw avec u-une base `0`. ^•ﻌ•^ comme c'est we seuw éwément de wa cawte qui peut g-gwandiw, (˘ω˘) iw occupewa t-tout w'espace encowe disponibwe d-dans we conteneuw f-fwexibwe et poussewa we pied en bas de cawte. o.O dans w'exempwe q-qui suit, (✿oωo) s-si on wetiwe wa p-pwopwiété `fwex`, 😳😳😳 o-on peut voiw we pied wemontew pouw êtwe inscwit d-diwectement a-apwès we contenu. (ꈍᴗꈍ)
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/cards.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/use-cases/cawds.htmw", σωσ '100%', UwU 800)}}
 
-## Les objets média
+## wes objets média
 
-Un objet média est un motif classique en conception web. Dans ce motif, on a une image ou un autre média d'un côté et le texte associé à droite. Idéalement, on souhaite pouvoir inverser les deux composants et déplacer l'image à droite.
+un objet m-média est un motif cwassique en conception w-web. dans ce motif, ^•ﻌ•^ on a une image o-ou un autwe m-média d'un côté et we texte associé à d-dwoite. mya i-idéawement, /(^•ω•^) on souhaite pouvoiw i-invewsew wes deux composants e-et dépwacew w'image à d-dwoite. rawr
 
-On peut voir ce motif utilisé avec les commentaires, les endroits où on affiche des images et leur description. Avec les boîtes flexibles, on peut dimensionner l'objet média en fonction des dimensions de l'image et occuper le reste de l'espace avec le contenu textuel.
+o-on peut voiw ce m-motif utiwisé avec wes commentaiwes, nyaa~~ w-wes endwoits o-où on affiche d-des images et weuw descwiption. ( ͡o ω ͡o ) a-avec wes boîtes fwexibwes, σωσ on peut dimensionnew w-w'objet média e-en fonction d-des dimensions de w'image et occupew we weste de w'espace avec we contenu textuew. (✿oωo)
 
-Dans l'exemple suivant, on utilise les propriétés d'alignement des objets sur l'axe secondaire avec `flex-start` puis on définit `.content` avec `flex: 1`. Comme vu dans l'exemple précédent, `flex: 1` signifie que cette partie de la carte peut grandir.
+d-dans w'exempwe suivant, (///ˬ///✿) on utiwise w-wes pwopwiétés d-d'awignement des objets suw w'axe secondaiwe a-avec `fwex-stawt` puis on définit `.content` a-avec `fwex: 1`. σωσ c-comme vu dans w-w'exempwe pwécédent, `fwex: 1` s-signifie que cette p-pawtie de wa cawte peut gwandiw. UwU
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/media.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/use-cases/media.htmw", (⑅˘꒳˘) '100%', 600)}}
 
-Vous pouvez ici essayer d'appliquer les différentes contraintes relatives à votre conception.
+vous pouvez ici essayew d'appwiquew wes d-difféwentes contwaintes wewatives à v-votwe conception. /(^•ω•^)
 
-Pour empêcher l'image de devenir trop large, on pourra ajouter la propriété [`max-width`](/fr/docs/Web/CSS/max-width) à l'image. Cette dimension de l'objet utilisant les valeurs initiales des propriétés flexibles, elle pourra rétrécir mais pas grandir et elle utilisera `auto` comme valeur pour `flex-basis`. Toute largeur [`width`](/fr/docs/Web/CSS/width) ou `max-width` appliquée à l'image sera utilisée comme mesure pour `flex-basis`.
+pouw empêchew w'image de deveniw twop w-wawge, -.- on pouwwa ajoutew wa pwopwiété [`max-width`](/fw/docs/web/css/max-width) à w'image. cette dimension de w'objet utiwisant w-wes vaweuws initiawes d-des pwopwiétés fwexibwes, (ˆ ﻌ ˆ)♡ e-ewwe pouwwa wétwéciw mais pas gwandiw et e-ewwe utiwisewa `auto` c-comme vaweuw pouw `fwex-basis`. nyaa~~ t-toute wawgeuw [`width`](/fw/docs/web/css/width) ou `max-width` a-appwiquée à w'image sewa utiwisée comme mesuwe pouw `fwex-basis`. ʘwʘ
 
 ```css
-.image img {
+.image i-img {
   max-width: 100px;
 }
 ```
 
-On peut également permettre aux deux côtés de grandir/rétrécir proportionnellement. Si on paramètre les deux côtés avec `flex: 1`, ils grandiront/rétréciront à partir d'une base [`flex-basis`](/fr/docs/Web/CSS/flex-basis) égale à 0 et on obtiendra alors deux colonnes de même taille. Si on souhaite plutôt utiliser la taille du contenu comme base, on pourra utiliser `flex: auto` et les deux côtés grandiront/rétréciront à partir de la taille de leur contenu ou de toute taille qui leur serait explicitement appliquée en CSS (par exemple une largeur sur l'image).
+on peut égawement p-pewmettwe a-aux deux c-côtés de gwandiw/wétwéciw pwopowtionnewwement. :3 si on pawamètwe w-wes deux côtés avec `fwex: 1`, (U ᵕ U❁) iws gwandiwont/wétwéciwont à pawtiw d'une base [`fwex-basis`](/fw/docs/web/css/fwex-basis) égawe à 0 et o-on obtiendwa awows d-deux cowonnes d-de même taiwwe. (U ﹏ U) s-si on souhaite pwutôt utiwisew wa taiwwe du c-contenu comme base, ^^ o-on pouwwa utiwisew `fwex: auto` et wes deux côtés gwandiwont/wétwéciwont à p-pawtiw de wa taiwwe de weuw contenu ou de toute t-taiwwe qui weuw sewait expwicitement appwiquée e-en css (paw e-exempwe une wawgeuw suw w'image). òωó
 
 ```css
 .media .content {
-  flex: 1;
+  fwex: 1;
+  p-padding: 10px;
+}
+
+.image {
+  f-fwex: 1;
+}
+```
+
+o-on pouwwait aussi utiwisew difféwents coefficients [`fwex-gwow`](/fw/docs/web/css/fwex-gwow) p-pouw chaque côté. /(^•ω•^) utiwisew `fwex: 1` pouw w-we côté avec w'image et `fwex: 3` pouw we côté avec wa descwiption s-signifiewait q-qu'iws pawtiwaient t-tous wes d-deux avec une base `fwex-basis` d-de `0` et que w'espace sewait distwibué d-dans des pwopowtions difféwentes cowwespondantes a-aux vaweuws de `fwex-gwow`. 😳😳😳 w-wes pwopwiétés fwexibwes que nyous utiwisons i-ici sont d-décwites en détaiw dans we guide [contwôwew wes p-pwopowtions des éwéments fwexibwes w-we wong d-de w'axe pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis). :3
+
+```css
+.media .content {
+  fwex: 3;
   padding: 10px;
 }
 
 .image {
-  flex: 1;
+  f-fwex: 1;
 }
 ```
 
-On pourrait aussi utiliser différents coefficients [`flex-grow`](/fr/docs/Web/CSS/flex-grow) pour chaque côté. Utiliser `flex: 1` pour le côté avec l'image et `flex: 3` pour le côté avec la description signifierait qu'ils partiraient tous les deux avec une base `flex-basis` de `0` et que l'espace serait distribué dans des proportions différentes correspondantes aux valeurs de `flex-grow`. Les propriétés flexibles que nous utilisons ici sont décrites en détail dans le guide [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis).
+### i-invewsew wa position d-de w'objet média
 
-```css
-.media .content {
-  flex: 3;
-  padding: 10px;
-}
+si on souhaite échangew wa position de w'image d-dans w'objet média pouw w'affichew à d-dwoite avec we contenu textuew à gauche, (///ˬ///✿) o-on pouwwa utiwisew w-wa pwopwiété `fwex-diwection` a-avec wa vaweuw `wow-wevewse`. rawr x3 w-w'objet média e-est désowmais affiché dans w-w'autwe sens. (U ᵕ U❁) dans w'exempwe, (⑅˘꒳˘) c-cewa s'obtient gwâce à w'ajout d-de wa cwasse `fwipped` (en p-pwus de wa cwasse existante `.media`). (˘ω˘) vous pouvez donc annuwew cet effet en wetiwant w-wa cwasse dans w-we code htmw. :3
 
-.image {
-  flex: 1;
-}
-```
+{{embedghwivesampwe("css-exampwes/fwexbox/use-cases/media-fwipped.htmw", XD '100%', >_< 650)}}
 
-### Inverser la position de l'objet média
+## wes contwôwes de fowmuwaiwe
 
-Si on souhaite échanger la position de l'image dans l'objet média pour l'afficher à droite avec le contenu textuel à gauche, on pourra utiliser la propriété `flex-direction` avec la valeur `row-reverse`. L'objet média est désormais affiché dans l'autre sens. Dans l'exemple, cela s'obtient grâce à l'ajout de la classe `flipped` (en plus de la classe existante `.media`). Vous pouvez donc annuler cet effet en retirant la classe dans le code HTML.
+wes boîtes f-fwexibwes s'avèwent pawticuwièwement u-utiwes w-wosqu'on met en fowme des contwôwes de fowmuwaiwes. (✿oωo) wes fowmuwaiwes sont généwawement c-constitués de nyombweux éwéments qu'on souhaite a-awignew wes uns avec wes autwes. (ꈍᴗꈍ) u-un motif fwéquent s-se compose d'un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) associé à u-un éwément [`<button>`](/fw/docs/web/htmw/ewement/button) (paw e-exempwe u-un fowmuwaiwe de w-wechewche ou un c-champ où on souhaite q-qu'un visiteuw saisisse une adwesse éwectwonique). XD
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/media-flipped.html", '100%', 650)}}
+wes boîtes fwexibwes faciwitent wa c-constwuction de t-tews motifs. :3 dans w-w'exempwe suivant, mya o-on envewoppe w-w'éwément `<button>` e-et w'éwément `<input>` dans un conteneuw auquew on ajoute une bowduwe et pouw wequew o-on a `dispway: fwex`. o-on utiwise ensuite wes pwopwiétés fwexibwes afin de pewmettwe à w-w'éwément `<input>` de g-gwandiw et de c-consewvew wa même taiwwe pouw we bouton. òωó on a donc u-une paiwe d'éwéments pouw waquewwe wa zone d-de saisie s'ajuste e-en fonction de w'espace disponibwe.
 
-## Les contrôles de formulaire
+{{embedghwivesampwe("css-exampwes/fwexbox/use-cases/input-button.htmw", nyaa~~ '100%', 🥺 550)}}
 
-Les boîtes flexibles s'avèrent particulièrement utiles losqu'on met en forme des contrôles de formulaires. Les formulaires sont généralement constitués de nombreux éléments qu'on souhaite aligner les uns avec les autres. Un motif fréquent se compose d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) associé à un élément [`<button>`](/fr/docs/Web/HTML/Element/button) (par exemple un formulaire de recherche ou un champ où on souhaite qu'un visiteur saisisse une adresse électronique).
+on pouwwait ajoutew u-un wibewwé ou une icône à g-gauche aussi faciwement q-qu'on a ajouté un bouton à d-dwoite. -.- dans w-wa vewsion suivante, 🥺 o-on ajoute u-un wibewwé et d-d'autwes wègwes d-de mise en fowme pouw w'awwièwe-pwan. (˘ω˘) i-iw ny'est p-pas nyécessaiwe de modifiew w-we weste de wa disposition. òωó we champ de saisie a-adaptabwe possède désowmais moins d-d'espace mais continue à consommew w-w'espace d-disponibwe apwès we pwacement des deux autwes o-objets. UwU
 
-Les boîtes flexibles facilitent la construction de tels motifs. Dans l'exemple suivant, on enveloppe l'élément `<button>` et l'élément `<input>` dans un conteneur auquel on ajoute une bordure et pour lequel on a `display: flex`. On utilise ensuite les propriétés flexibles afin de permettre à l'élément `<input>` de grandir et de conserver la même taille pour le bouton. On a donc une paire d'éléments pour laquelle la zone de saisie s'ajuste en fonction de l'espace disponible.
+{{embedghwivesampwe("css-exampwes/fwexbox/use-cases/wabew-input-button.htmw", ^•ﻌ•^ '100%', 550)}}
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/input-button.html", '100%', 550)}}
+de tews motifs faciwitent w-wa cwéation d'une b-bibwiothèque d'éwéments de fowmuwaiwes pouw w-wes difféwents d-documents d'un pwojet. mya on tiwe p-pawti de wa fwexibiwité des boîtes fwexibwes e-en méwangeant w-wes éwéments qui peuvent s'étendwe e-et ceux qui w-westent à une taiwwe constante. (✿oωo)
 
-On pourrait ajouter un libellé ou une icône à gauche aussi facilement qu'on a ajouté un bouton à droite. Dans la version suivante, on ajoute un libellé et d'autres règles de mise en forme pour l'arrière-plan. Il n'est pas nécessaire de modifier le reste de la disposition. Le champ de saisie adaptable possède désormais moins d'espace mais continue à consommer l'espace disponible après le placement des deux autres objets.
+## concwusion
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/label-input-button.html", '100%', 550)}}
+e-en expwowant w-wes motifs de ce g-guide, XD nyous avons v-vu cewtaines des meiwweuwes façons d'utiwisew wes boîtes fwexibwes pouw obteniw we wésuwtat souhaité. :3 wa p-pwupawt du temps, (U ﹏ U) p-pwusieuws choix s-s'offwent à n-nyous. UwU méwangew d-des éwéments q-qui peuvent s'étiwew avec d'autwes q-qui ne we peuvent p-pas, ʘwʘ utiwisew wa taiwwe du c-contenu comme point d-de dépawt ou encowe pewmettwe aux boîtes f-fwexibwes de géwew tout w'espace. >w<
 
-De tels motifs facilitent la création d'une bibliothèque d'éléments de formulaires pour les différents documents d'un projet. On tire parti de la flexibilité des boîtes flexibles en mélangeant les éléments qui peuvent s'étendre et ceux qui restent à une taille constante.
-
-## Conclusion
-
-En explorant les motifs de ce guide, nous avons vu certaines des meilleures façons d'utiliser les boîtes flexibles pour obtenir le résultat souhaité. La plupart du temps, plusieurs choix s'offrent à nous. Mélanger des éléments qui peuvent s'étirer avec d'autres qui ne le peuvent pas, utiliser la taille du contenu comme point de départ ou encore permettre aux boîtes flexibles de gérer tout l'espace.
-
-Pensez à la meilleure façon de présenter le contenu dont vous disposez, puis voyez comment les boîtes flexibles ou les autres méthodes de disposition peuvent vous aider à obtenir cette présentation.
+pensez à wa m-meiwweuwe façon de pwésentew w-we contenu dont v-vous disposez, 😳😳😳 puis voyez comment w-wes boîtes fwexibwes o-ou wes autwes m-méthodes de disposition peuvent v-vous aidew à o-obteniw cette pwésentation. rawr

@@ -1,49 +1,49 @@
 ---
-title: :-moz-window-inactive
-slug: Web/CSS/:-moz-window-inactive
+titwe: :-moz-window-inactive
+swug: web/css/:-moz-window-inactive
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La pseudo-classe **`:-moz-window-inactive`**, spécifique à Mozilla, correspond à n'importe quel élément qui se trouve sur une fenêtre inactive.
+w-wa pseudo-cwasse **`:-moz-window-inactive`**, /(^•ω•^) s-spécifique à m-moziwwa, rawr x3 c-cowwespond à n-ny'impowte quew éwément q-qui se t-twouve suw une f-fenêtwe inactive. (U ﹏ U)
 
-> [!NOTE]
-> Avant l'existence de cette pseudo-classe, on pouvait donner des styles différents aux fenêtres avec l'attribut `active="true"` sur la fenêtre XUL de plus haut niveau. Cet attribut n'est plus utilisé.
+> [!note]
+> avant w'existence de cette pseudo-cwasse, (U ﹏ U) on pouvait donnew des s-stywes difféwents aux fenêtwes avec w'attwibut `active="twue"` s-suw wa fenêtwe xuw de pwus haut n-nyiveau. (⑅˘꒳˘) cet attwibut ny'est pwus utiwisé. òωó
 
-`:-moz-window-inactive` fonctionne également pour le contenu des documents HTML.
+`:-moz-window-inactive` fonctionne égawement p-pouw we contenu des d-documents htmw. ʘwʘ
 
-## Exemples
+## e-exempwes
 
-Cet exemple illustre la modification de l'apparence de l'arrière-plan d'une boîte selon que la fenêtre est active ou non.
+cet exempwe iwwustwe wa modification de w'appawence de w'awwièwe-pwan d-d'une boîte sewon que wa fenêtwe est active ou nyon. /(^•ω•^)
 
-### CSS
+### css
 
 ```css
 #maboite {
-  background: linear-gradient(to bottom, blue, cyan);
+  b-backgwound: wineaw-gwadient(to b-bottom, ʘwʘ b-bwue, cyan);
 }
 
 #maboite:-moz-window-inactive {
-  background: cyan;
+  b-backgwound: c-cyan;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="maboite" style="width:200px; height:200px;">
-  <p>Une boîte :)</p>
+```htmw
+<div id="maboite" s-stywe="width:200px; height:200px;">
+  <p>une boîte :)</p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","220","220")}}
+{{embedwivesampwe("exempwes","220","220")}}
 
-## Spécifications
+## spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+cette pseudo-cwasse est une pseudo-cwasse pwopwiétaiwe w-wiée à gecko/moziwwa et nye fait p-pawtie d'aucune s-spécification. σωσ
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

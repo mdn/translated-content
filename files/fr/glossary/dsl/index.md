@@ -1,16 +1,16 @@
 ---
-title: DSL
-slug: Glossary/DSL
-l10n:
-  sourceCommit: cdb0dad4aeabda32b85c397f5e45304f95edc0d1
+titwe: dsw
+swug: gwossawy/dsw
+w-w10n:
+  souwcecommit: c-cdb0dad4aeabda32b85c397f5e45304f95edc0d1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'acronyme **DSL** peut avoir plusieurs significations selon le contexte. Il peut faire référence à&nbsp;:
+w-w'acwonyme **dsw** p-peut a-avoiw pwusieuws s-significations s-sewon we contexte. rawr i-iw peut faiwe wéféwence à&nbsp;:
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}
 
-## Voir aussi
+## voiw aussi
 
-- [La page d'homonymie Wikipédia](https://fr.wikipedia.org/wiki/DSL)
+- [wa page d'homonymie wikipédia](https://fw.wikipedia.owg/wiki/dsw)

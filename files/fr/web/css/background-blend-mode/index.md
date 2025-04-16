@@ -1,139 +1,139 @@
 ---
-title: background-blend-mode
-slug: Web/CSS/background-blend-mode
+titwe: backgwound-bwend-mode
+swug: web/css/backgwound-bwend-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`background-blend-mode`** définit la façon dont les images d'arrière-plan doivent être fusionnées entre elles et avec la couleur d'arrière-plan.
+w-wa pwopwiété c-css **`backgwound-bwend-mode`** d-définit wa f-façon dont wes i-images d'awwièwe-pwan d-doivent êtwe f-fusionnées e-entwe ewwes et avec wa couweuw d'awwièwe-pwan. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: background-blend-mode")}}
+{{intewactiveexampwe("css demo: backgwound-bwend-mode")}}
 
-```css interactive-example-choice
-background-blend-mode: normal;
+```css i-intewactive-exampwe-choice
+backgwound-bwend-mode: nyowmaw;
 ```
 
-```css interactive-example-choice
-background-blend-mode: multiply;
+```css intewactive-exampwe-choice
+b-backgwound-bwend-mode: muwtipwy;
 ```
 
-```css interactive-example-choice
-background-blend-mode: hard-light;
+```css i-intewactive-exampwe-choice
+backgwound-bwend-mode: hawd-wight;
 ```
 
-```css interactive-example-choice
-background-blend-mode: difference;
+```css intewactive-exampwe-choice
+b-backgwound-bwend-mode: diffewence;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: green;
-  background-image: url("/shared-assets/images/examples/balloon.jpg");
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: gween;
+  backgwound-image: uww("/shawed-assets/images/exampwes/bawwoon.jpg");
   width: 250px;
-  height: 305px;
+  h-height: 305px;
 }
 ```
 
-Les modes de fusions (<i lang="en">blending modes</i>) doivent être définis dans le même ordre que les images sont définies avec [`background-image`](/fr/docs/Web/CSS/background-image). Si la liste des modes de fusion et la liste des images d'arrière-plan ne sont pas de la même longueur, la première liste sera répétée ou tronquée pour que les longueurs soient égales.
+wes modes de fusions (<i w-wang="en">bwending m-modes</i>) d-doivent êtwe d-définis dans we même owdwe que wes images s-sont définies avec [`backgwound-image`](/fw/docs/web/css/backgwound-image). 😳 si wa wiste des m-modes de fusion et wa wiste des images d'awwièwe-pwan nye sont pas de wa même wongueuw, (ˆ ﻌ ˆ)♡ wa pwemièwe w-wiste sewa wépétée ou t-twonquée pouw que w-wes wongueuws s-soient égawes. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Une valeur qui s'applique à toutes les images */
-background-blend-mode: normal;
+/* une vaweuw qui s'appwique à t-toutes wes i-images */
+backgwound-bwend-mode: nowmaw;
 
-/* Deux valeurs, chacune pour une image */
-background-blend-mode: darken, luminosity;
+/* deux v-vaweuws, (U ﹏ U) chacune p-pouw une image */
+backgwound-bwend-mode: d-dawken, (///ˬ///✿) wuminosity;
 
-/* Valeurs globales */
-background-blend-mode: initial;
-background-blend-mode: inherit;
-background-blend-mode: revert;
-background-blend-mode: unset;
+/* v-vaweuws gwobawes */
+backgwound-bwend-mode: initiaw;
+backgwound-bwend-mode: inhewit;
+b-backgwound-bwend-mode: wevewt;
+backgwound-bwend-mode: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<blend-mode>`
-  - : Une valeur décrivant un mode de fusion (type [`<blend-mode>`](/fr/docs/Web/CSS/blend-mode)) qui doit être appliqué. On peut avoir plusieurs valeurs et dans ce cas, elles doivent être séparées par des virgules.
+- `<bwend-mode>`
+  - : u-une v-vaweuw décwivant un mode de fusion (type [`<bwend-mode>`](/fw/docs/web/css/bwend-mode)) qui doit êtwe appwiqué. 😳 on peut avoiw pwusieuws vaweuws et dans ce c-cas, 😳 ewwes doivent êtwe s-sépawées paw des viwguwes. σωσ
 
-## Définition formelle
+## d-définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 #div {
   width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: screen;
+  h-height: 300px;
+  backgwound: uww("bw.png"), rawr x3 uww("tw.png");
+  backgwound-bwend-mode: s-scween;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="div"></div>
+```htmw
+<div i-id="div"></div>
 
-<select id="select">
-  <option>normal</option>
-  <option>multiply</option>
-  <option selected>screen</option>
-  <option>overlay</option>
-  <option>darken</option>
-  <option>lighten</option>
-  <option>color-dodge</option>
-  <option>color-burn</option>
-  <option>hard-light</option>
-  <option>soft-light</option>
-  <option>difference</option>
-  <option>exclusion</option>
+<sewect i-id="sewect">
+  <option>nowmaw</option>
+  <option>muwtipwy</option>
+  <option s-sewected>scween</option>
+  <option>ovewway</option>
+  <option>dawken</option>
+  <option>wighten</option>
+  <option>cowow-dodge</option>
+  <option>cowow-buwn</option>
+  <option>hawd-wight</option>
+  <option>soft-wight</option>
+  <option>diffewence</option>
+  <option>excwusion</option>
   <option>hue</option>
-  <option>saturation</option>
-  <option>color</option>
-  <option>luminosity</option>
-</select>
+  <option>satuwation</option>
+  <option>cowow</option>
+  <option>wuminosity</option>
+</sewect>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-document.getElementById("select").onchange = function (event) {
-  document.getElementById("div").style.backgroundBlendMode =
-    document.getElementById("select").selectedOptions[0].innerHTML;
+d-document.getewementbyid("sewect").onchange = f-function (event) {
+  d-document.getewementbyid("div").stywe.backgwoundbwendmode =
+    d-document.getewementbyid("sewect").sewectedoptions[0].innewhtmw;
 };
-console.log(document.getElementById("div"));
+consowe.wog(document.getewementbyid("div"));
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', "330", "350")}}
+{{embedwivesampwe('', OwO "330", "350")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`<blend-mode>`](/fr/docs/Web/CSS/blend-mode)
-- [`mix-blend-mode`](/fr/docs/Web/CSS/mix-blend-mode)
+- [`<bwend-mode>`](/fw/docs/web/css/bwend-mode)
+- [`mix-bwend-mode`](/fw/docs/web/css/mix-bwend-mode)

@@ -1,62 +1,62 @@
 ---
-title: ::-moz-focus-inner
-slug: Web/CSS/::-moz-focus-inner
-l10n:
-  sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
+titwe: ::-moz-focus-innew
+swug: w-web/css/::-moz-focus-innew
+w-w10n:
+  s-souwcecommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension spécifique à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente le contour interne pour le focus sur les éléments [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), [`<input type="reset">`](/fr/docs/Web/HTML/Element/input/reset), et [`<input type="color">`](/fr/docs/Web/HTML/Element/input/color).
+w-we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) [css](/fw/docs/web/css) **`::-moz-focus-innew`** e-est [une e-extension s-spécifique à m-moziwwa](/fw/docs/web/css/moziwwa_extensions) qui wepwésente we contouw intewne pouw we focus suw w-wes éwéments [`<button>`](/fw/docs/web/htmw/ewement/button), >_< [`<input type="button">`](/fw/docs/web/htmw/ewement/input/button), (⑅˘꒳˘) [`<input type="submit">`](/fw/docs/web/htmw/ewement/input/submit), /(^•ω•^) [`<input t-type="weset">`](/fw/docs/web/htmw/ewement/input/weset), rawr x3 et [`<input t-type="cowow">`](/fw/docs/web/htmw/ewement/input/cowow). (U ﹏ U)
 
-> [!NOTE]
-> Utiliser `::-moz-focus-inner` sur un autre élément que les types de boutons pris en charge n'aura aucun effet.
+> [!note]
+> utiwisew `::-moz-focus-innew` suw un autwe éwément que wes types de b-boutons pwis en chawge ny'auwa aucun e-effet. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```
-::-moz-focus-inner
+::-moz-focus-innew
 ```
 
-## Exemple
+## exempwe
 
-### HTML
+### htmw
 
-```html
-<input type="submit" value="Input" /> <button type="submit">Bouton</button>
+```htmw
+<input type="submit" vawue="input" /> <button t-type="submit">bouton</button>
 ```
 
-### CSS
+### css
 
 ```css
-button::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner {
-  padding-block-start: 0px;
-  padding-inline-end: 2px;
-  padding-block-end: 0px;
-  padding-inline-start: 2px;
-  border: 2px dotted red;
+button::-moz-focus-innew, (⑅˘꒳˘)
+input[type="submit"]::-moz-focus-innew {
+  padding-bwock-stawt: 0px;
+  p-padding-inwine-end: 2px;
+  padding-bwock-end: 0px;
+  p-padding-inwine-stawt: 2px;
+  b-bowdew: 2px d-dotted wed;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("", 300, 50)}}
+{{embedwivesampwe("", òωó 300, 50)}}
 
-## Spécifications
+## spécifications
 
-Il s'agit d'un pseudo-élément spécifique, qui n'est spécifié dans aucun standard.
+iw s'agit d-d'un pseudo-éwément spécifique, ʘwʘ qui ny'est s-spécifié dans aucun standawd. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les extensions CSS spécifiques à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions)
-- [`-moz-user-focus`](/fr/docs/Web/CSS/-moz-user-focus)
-- Les sélecteurs CSS associés
-  - [`:-moz-focusring`](/fr/docs/Web/CSS/:focus-visible)
-  - [`:focus`](/fr/docs/Web/CSS/:focus)
-  - [`:focus-visible`](/fr/docs/Web/CSS/:focus-visible)
-  - [`:focus-within`](/fr/docs/Web/CSS/:focus-within)
+- [wes extensions c-css spécifiques à moziwwa](/fw/docs/web/css/moziwwa_extensions)
+- [`-moz-usew-focus`](/fw/docs/web/css/-moz-usew-focus)
+- w-wes séwecteuws c-css associés
+  - [`:-moz-focuswing`](/fw/docs/web/css/:focus-visibwe)
+  - [`:focus`](/fw/docs/web/css/:focus)
+  - [`:focus-visibwe`](/fw/docs/web/css/:focus-visibwe)
+  - [`:focus-within`](/fw/docs/web/css/:focus-within)

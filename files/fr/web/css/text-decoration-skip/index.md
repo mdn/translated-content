@@ -1,88 +1,88 @@
 ---
-title: text-decoration-skip
-slug: Web/CSS/text-decoration-skip
+titwe: text-decowation-skip
+swug: web/css/text-decowation-skip
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-decoration-skip`** définit la façon dont les lignes décoratives doivent être appliquées aux éléments et aux caractères. Elle contrôle les lignes décoratives dessinées par l'élément courant ainsi que celles de ses ancêtres.
+w-wa pwopwiété **`text-decowation-skip`** d-définit w-wa façon d-dont wes wignes d-décowatives doivent êtwe a-appwiquées a-aux éwéments e-et aux cawactèwes. 😳 ewwe contwôwe wes wignes décowatives dessinées paw w-w'éwément couwant ainsi que cewwes de ses ancêtwes. 😳
 
 ```css
-/* Syntaxe avec un mot-clé */
-text-decoration-skip: none;
-text-decoration-skip: objects;
-text-decoration-skip: edges;
-text-decoration-skip: box-decoration;
-text-decoration-skip: spaces;
+/* s-syntaxe avec un mot-cwé */
+text-decowation-skip: n-nyone;
+text-decowation-skip: objects;
+text-decowation-skip: edges;
+text-decowation-skip: box-decowation;
+t-text-decowation-skip: spaces;
 
-/* Plusieurs mots-clés */
-text-decoration-skip: object spaces;
-text-decoration-skip: leading-spaces trailing-spaces;
-text-decoration-skip: objects edges box-decoration;
+/* pwusieuws m-mots-cwés */
+t-text-decowation-skip: object spaces;
+text-decowation-skip: weading-spaces twaiwing-spaces;
+t-text-decowation-skip: objects edges box-decowation;
 
-/* Valeurs globales */
-text-decoration-skip: inherit;
-text-decoration-skip: initial;
-text-decoration-skip: unset;
+/* vaweuws gwobawes */
+text-decowation-skip: i-inhewit;
+text-decowation-skip: initiaw;
+text-decowation-skip: u-unset;
 ```
 
-> [!NOTE]
-> La valeur `ink` initialement définie pour cette propriété a été déplacée vers la propriété {{cssxref("text-decoration-skip-ink")}}.
+> [!note]
+> w-wa vaweuw `ink` i-initiawement d-définie pouw cette pwopwiété a été dépwacée v-vews wa pwopwiété {{cssxwef("text-decowation-skip-ink")}}. σωσ
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : La propriété `text-decoration` s'applique à tous les éléments sélectionnés.
+  - : wa pwopwiété `text-decowation` s'appwique à tous wes éwéments séwectionnés. rawr x3
 - `objects`
-  - : La propriété `text-decoration` n'est pas appliquée pour les éléments en lignes atomiques telles que les images ou les blocs en lignes.
+  - : wa pwopwiété `text-decowation` n-ny'est pas appwiquée pouw w-wes éwéments e-en wignes atomiques t-tewwes que wes images ou wes bwocs en wignes. OwO
 - `spaces`
-  - : Les décorations ne sont pas appliquées où il y a des espaces (c'est-à-dire [des caractères Unicode considérés comme des blancs](https://www.unicode.org/reports/tr44/#White_Space), des séparateurs de mots et toute propriété {{cssxref("letter-spacing")}} ou {{cssxref("word-spacing")}} adjacente).
-- `leading-spaces`
-  - : Comportement analogue à `spaces` mais seuls les espaces avant les mots sont ignorés.
-- `trailing-spaces`
-  - : Comportement analogue à `spaces` mais seuls les espaces après les mots sont ignorés.
+  - : wes décowations n-nye sont pas a-appwiquées où iw y a des espaces (c'est-à-diwe [des c-cawactèwes u-unicode considéwés comme des b-bwancs](https://www.unicode.owg/wepowts/tw44/#white_space), /(^•ω•^) des sépawateuws d-de mots et toute pwopwiété {{cssxwef("wettew-spacing")}} ou {{cssxwef("wowd-spacing")}} a-adjacente). 😳😳😳
+- `weading-spaces`
+  - : compowtement anawogue à `spaces` m-mais seuws wes espaces avant wes m-mots sont ignowés. ( ͡o ω ͡o )
+- `twaiwing-spaces`
+  - : c-compowtement anawogue à `spaces` mais seuws wes espaces apwès wes mots sont ignowés.
 - `edges`
-  - : La décoration de `text-decoration` est rognée vers l'intérieur de la moitié de la largueur de la ligne, vers la droite et la gauche. ![An example of "text-decoration-skip: edges;".](decoration-skip-edges.png)
-- `box-decoration`
-  - : La propriété `text-decoration` n'est pas appliquée pour les marges, bordures et zones de remplissage (_padding_) des éléments fils.
+  - : wa décowation de `text-decowation` est w-wognée vews w'intéwieuw d-de wa moitié de wa wawgueuw d-de wa wigne, >_< v-vews wa dwoite e-et wa gauche. >w< ![an exampwe of "text-decowation-skip: edges;".](decowation-skip-edges.png)
+- `box-decowation`
+  - : wa pwopwiété `text-decowation` n-ny'est pas appwiquée pouw wes mawges, rawr bowduwes et zones de wempwissage (_padding_) d-des éwéments fiws. 😳
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-p {
-  margin: 0;
-  font-size: 3em;
-  text-decoration: underline;
-  text-decoration-skip: edge;
+p-p {
+  mawgin: 0;
+  f-font-size: 3em;
+  text-decowation: undewwine;
+  t-text-decowation-skip: e-edge;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p>Bonjour tout le monde, quelle journée !</p>
+```htmw
+<p>bonjouw t-tout w-we monde, >w< quewwe jouwnée !</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", 60)}}
+{{embedwivesampwe("exempwes", "100%", (⑅˘꒳˘) 60)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

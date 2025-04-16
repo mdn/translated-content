@@ -1,78 +1,78 @@
 ---
-title: tab-size
-slug: Web/CSS/tab-size
+titwe: tab-size
+swug: web/css/tab-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`tab-size`** permet d'adapter la largeur utilisée pour représenter le caractère de tabulation (`U+0009`).
+w-wa p-pwopwiété **`tab-size`** p-pewmet d-d'adaptew wa wawgeuw u-utiwisée p-pouw wepwésentew w-we cawactèwe d-de tabuwation (`u+0009`). rawr x3
 
 ```css
-/* Valeurs entières */
-/* Type <integer>   */
+/* vaweuws entièwes */
+/* type <integew>   */
 tab-size: 4;
 tab-size: 0;
 
-/* Valeurs de longueurs */
-/* Type <length>        */
+/* vaweuws de wongueuws */
+/* t-type <wength>        */
 tab-size: 10px;
 tab-size: 2em;
 
-/* Valeurs globales */
-tab-size: inherit;
-tab-size: initial;
+/* v-vaweuws gwobawes */
+tab-size: i-inhewit;
+tab-size: initiaw;
 tab-size: unset;
 ```
 
 {{cssinfo}}
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- {{cssxref("&lt;integer&gt;")}}
-  - : Le nombre d'espaces qu'occupe une tabulation. La valeur doit être positive.
-- {{cssxref("&lt;length&gt;")}}
-  - : La largeur de la tabulation. La valeur doit être positive.
+- {{cssxwef("&wt;integew&gt;")}}
+  - : we nyombwe d'espaces q-qu'occupe u-une tabuwation. (U ﹏ U) wa vaweuw doit êtwe positive. (U ﹏ U)
+- {{cssxwef("&wt;wength&gt;")}}
+  - : wa wawgeuw de wa tabuwation. w-wa vaweuw doit êtwe positive. (⑅˘꒳˘)
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-<!-- markdownlint-disable MD010 -->
+<!-- mawkdownwint-disabwe m-md010 -->
 
-```html
-<pre class="exemple">
-	print "tabulation avant"
-    print "4 espaces avant"
-  print "2 espaces avant"
-</pre>
+```htmw
+<pwe c-cwass="exempwe">
+	p-pwint "tabuwation a-avant"
+    pwint "4 espaces avant"
+  pwint "2 e-espaces avant"
+</pwe>
 ```
 
-### CSS
+### css
 
 ```css
-.exemple {
+.exempwe {
   tab-size: 5;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Contrôler la taille du caractère de tabulation (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), un e-mail d'Anne van Kesteren pour le CSSWG afin de proposer la standardisation de cette propriété (en anglais).
+- [contwôwew wa taiwwe du c-cawactèwe de tabuwation (u+0009)](https://wists.w3.owg/awchives/pubwic/www-stywe/2008dec/0009.htmw), òωó un e-maiw d-d'anne van kestewen p-pouw we csswg a-afin de pwoposew wa standawdisation de cette pwopwiété (en angwais). ʘwʘ

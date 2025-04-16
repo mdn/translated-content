@@ -1,73 +1,73 @@
 ---
-title: :link
-slug: Web/CSS/:link
+titwe: :wink
+swug: web/css/:wink
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:link`** permet de sélectionner les liens à l'intérieur d'éléments. Elle sélectionnera tout lien n'ayant pas été visité, même ceux qui seraient déjà mis en forme via des sélecteurs utilisant d'autres pseudo-classes comme {{cssxref(":hover")}}, {{cssxref(":active")}} ou {{cssxref(":visited")}}.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:wink`** p-pewmet de séwectionnew w-wes w-wiens à w'intéwieuw d-d'éwéments. 😳😳😳 e-ewwe séwectionnewa t-tout wien n-ny'ayant pas été visité, o.O même ceux qui sewaient déjà mis en fowme via des s-séwecteuws utiwisant d'autwes pseudo-cwasses c-comme {{cssxwef(":hovew")}}, ( ͡o ω ͡o ) {{cssxwef(":active")}} ou {{cssxwef(":visited")}}. (U ﹏ U)
 
 ```css
-/* Cible les liens qui n'ont pas encore */
+/* c-cibwe wes wiens qui n'ont pas encowe */
 /* été visités */
-a:link {
-  color: red;
+a-a:wink {
+  cowow: wed;
 }
 ```
 
-Afin que la mise en forme s'applique au mieux, la règle `:link` doit être placée avant les autres : `:link` — `:visited` — `:hover` — `:active`. La pseudo-classe {{cssxref(":focus")}} est habituellement placée juste avant ou juste après `:hover`, en fonction de l'effet désiré.
+a-afin que w-wa mise en fowme s'appwique au mieux, (///ˬ///✿) wa wègwe `:wink` doit êtwe pwacée avant w-wes autwes : `:wink` — `:visited` — `:hovew` — `:active`. >w< wa pseudo-cwasse {{cssxwef(":focus")}} est habituewwement pwacée juste avant ou j-juste apwès `:hovew`, rawr en fonction d-de w'effet d-désiwé. mya
 
-> [!NOTE]
-> On utilisera {{cssxref(":any-link")}} pour sélectionner un élément qu'il ait été visité ou non.
+> [!note]
+> o-on utiwisewa {{cssxwef(":any-wink")}} p-pouw séwectionnew un éwément qu'iw a-ait été visité ou nyon. ^^
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-a:link {
-  color: red;
+a:wink {
+  cowow: wed;
 }
 
-.external:link {
-  background-color: lightblue;
+.extewnaw:wink {
+  backgwound-cowow: wightbwue;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Et si on allait voir
-  <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/">
-    un peu de JavaScript ?
+  et si on awwait v-voiw
+  <a hwef="https://devewopew.moziwwa.owg/fw/docs/web/javascwipt/">
+    u-un peu d-de javascwipt ?
   </a>
 </p>
 <p>
-  Sinon, on peut continuer à se cultiver sur CSS autre part
-  <a class="external" href="https://css-tricks.com/"> comme CSS Tricks. </a>
+  sinon, on peut continuew à se cuwtivew suw c-css autwe pawt
+  <a c-cwass="extewnaw" hwef="https://css-twicks.com/"> c-comme css t-twicks. 😳😳😳 </a>
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{embedwivesampwe("exempwes","100%","200")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":link")}}
-- {{cssxref(":visited")}}
-- {{cssxref(":hover")}}
-- {{cssxref(":active")}}.
+- {{cssxwef(":wink")}}
+- {{cssxwef(":visited")}}
+- {{cssxwef(":hovew")}}
+- {{cssxwef(":active")}}. mya

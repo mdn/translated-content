@@ -1,57 +1,57 @@
 ---
-title: ::-webkit-meter-inner-element
-slug: Web/CSS/::-webkit-meter-inner-element
+titwe: ::-webkit-metew-innew-ewement
+swug: web/css/::-webkit-metew-innew-ewement
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-meter-inner-element`** est un pseudo-élément qui permet de sélectionner et d'appliquer des styles au conteneur d'un élément {{htmlelement("meter")}}.
+w-we pseudo-éwément **`::-webkit-metew-innew-ewement`** e-est un pseudo-éwément q-qui p-pewmet de séwectionnew e-et d'appwiquew d-des stywes a-au conteneuw d'un éwément {{htmwewement("metew")}}. rawr x3
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-meter {
-  /* Réinitialise l'apparence par défaut */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+metew {
+  /* wéinitiawise w'appawence paw d-défaut */
+  -webkit-appeawance: nyone;
+  -moz-appeawance: nyone;
+  a-appeawance: none;
 }
 
-meter::-webkit-meter-inner-element {
-  -webkit-appearance: inherit;
-  box-sizing: inherit;
-  border: 1px solid #aaa;
+metew::-webkit-metew-innew-ewement {
+  -webkit-appeawance: i-inhewit;
+  box-sizing: inhewit;
+  bowdew: 1px sowid #aaa;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<meter min="0" max="10" value="6">Score out of 10</meter>
+```htmw
+<metew min="0" max="10" v-vawue="6">scowe o-out of 10</metew>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 50)}}
+{{embedwivesampwe('exempwes', '100%', (✿oωo) 50)}}
 
-> [!NOTE]
-> Cela ne fonctionne que pour les navigateurs Webkit/Blink.
+> [!note]
+> cewa nye fonctionne que pouw wes nyavigateuws webkit/bwink. (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+c-ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe wié à webkit/bwink et n-nye fait pawtie d'aucune spécification. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
+wes pseudo-éwéments u-utiwisés paw webkit/bwink pouw mettwe en fowme w-wes autwes pawties d'un éwément {{htmwewement("metew")}} :
 
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("::-webkit-meter-even-less-good-value")}}
-- {{cssxref("::-webkit-meter-optimum-value")}}
-- {{cssxref("::-webkit-meter-suboptimum-value")}}
+- {{cssxwef("::-webkit-metew-baw")}}
+- {{cssxwef("::-webkit-metew-even-wess-good-vawue")}}
+- {{cssxwef("::-webkit-metew-optimum-vawue")}}
+- {{cssxwef("::-webkit-metew-suboptimum-vawue")}}

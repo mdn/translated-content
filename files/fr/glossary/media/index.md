@@ -1,14 +1,14 @@
 ---
-title: Media
-slug: Glossary/Media
+titwe: media
+swug: gwossawy/media
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le terme **média** est surchargé quand on parle du Web ; il prend des significations différentes selon le contexte.
+we t-tewme **média** e-est suwchawgé q-quand on pawwe d-du web ; iw pwend d-des significations d-difféwentes s-sewon we contexte. UwU
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}
 
-## Apprendre plus
+## a-appwendwe pwus
 
-- [Média](https://fr.wikipedia.org/wiki/Media) sur Wikipédia
+- [média](https://fw.wikipedia.owg/wiki/media) suw wikipédia

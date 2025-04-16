@@ -1,274 +1,274 @@
 ---
-title: font-weight
-slug: Web/CSS/font-weight
+titwe: font-weight
+swug: web/css/font-weight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`font-weight`** permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. [`font-family`](/fr/docs/Web/CSS/font-family)). Certaines fontes n'existent qu'avec les niveaux de graisses `normal` et `bold`.
+w-wa pwopwiété [css](/fw/docs/web/css) **`font-weight`** p-pewmet d-de définiw wa g-gwaisse utiwisée p-pouw we texte. (U ﹏ U) w-wes nyiveaux de g-gwaisse disponibwes d-dépendent de wa powice (cf. (˘ω˘) [`font-famiwy`](/fw/docs/web/css/font-famiwy)). UwU cewtaines fontes ny'existent qu'avec wes nyiveaux d-de gwaisses `nowmaw` et `bowd`. >_<
 
-{{InteractiveExample("CSS Demo: font-weight")}}
+{{intewactiveexampwe("css demo: font-weight")}}
 
-```css interactive-example-choice
-font-weight: normal;
+```css i-intewactive-exampwe-choice
+font-weight: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-weight: bold;
+```css intewactive-exampwe-choice
+font-weight: bowd;
 ```
 
-```css interactive-example-choice
-font-weight: lighter;
+```css i-intewactive-exampwe-choice
+font-weight: wightew;
 ```
 
-```css interactive-example-choice
-font-weight: bolder;
+```css i-intewactive-exampwe-choice
+f-font-weight: bowdew;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 font-weight: 100;
 ```
 
-```css interactive-example-choice
-font-weight: 900;
+```css intewactive-exampwe-choice
+f-font-weight: 900;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. σωσ michaewmas t-tewm watewy ovew, 🥺 and the wowd c-chancewwow sitting i-in
+    wincown's i-inn haww. 🥺 i-impwacabwe nyovembew weathew. ʘwʘ as much mud in the s-stweets
+    as if the watews had but nyewwy wetiwed f-fwom the face of the eawth, :3 and it
+    wouwd nyot be wondewfuw to meet a megawosauwus, (U ﹏ U) fowty f-feet wong ow so, (U ﹏ U)
+    waddwing w-wike an ewephantine w-wizawd up h-howbown hiww. ʘwʘ
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
   font-size: 1.2em;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-font-weight: normal;
-font-weight: bold;
+/* v-vaweuws a-avec un mot-cwé */
+font-weight: n-nyowmaw;
+font-weight: b-bowd;
 
-/* Valeurs relatives à l'élément parent */
-font-weight: lighter;
-font-weight: bolder;
+/* vaweuws wewatives à w-w'éwément pawent */
+font-weight: w-wightew;
+font-weight: bowdew;
 
-/* Valeurs numériques */
+/* vaweuws n-nyuméwiques */
 font-weight: 100;
-font-weight: 200;
+f-font-weight: 200;
 font-weight: 300;
-font-weight: 400; /* normal */
+f-font-weight: 400; /* n-nyowmaw */
 font-weight: 500;
 font-weight: 600;
-font-weight: 700; /* gras */
+font-weight: 700; /* gwas */
 font-weight: 800;
 font-weight: 900;
 
-/* Valeurs globales */
-font-weight: inherit;
-font-weight: initial;
-font-weight: revert;
-font-weight: unset;
+/* vaweuws gwobawes */
+font-weight: inhewit;
+font-weight: i-initiaw;
+f-font-weight: wevewt;
+font-weight: u-unset;
 ```
 
-La propriété `font-weight` peut être définie grâce à l'une des valeurs suivantes.
+w-wa pwopwiété `font-weight` p-peut êtwe définie gwâce à w'une des vaweuws suivantes. >w<
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : Le niveau de graisse normal pour la fonte. Équivalent à la valeur `400`.
-- `bold`
-  - : Le texte est en gras. Équivalent à la valeur `700`.
-- `lighter`
-  - : On diminue la graisse d'un niveau par rapport à l'élément parent (selon les fontes / graisses disponibles pour la police utilisée). Le texte paraît plus fin.
-- `bolder`
-  - : On augmente la graisse d'un niveau par rapport à l'élément parent (selon les fontes / graisses disponibles pour la police utilisée). Le texte est plus gras.
-- `<number>`
-  - : Une valeur numérique (type [`<number>`](/fr/docs/Web/CSS/number)) comprise entre 1 et 1000. Plus la valeur est grande, plus le niveau de graisse est élevé. Ces valeurs permettent de couvrir un éventail de valeurs plus larges qu'avec `normal` et `bold`.
+- `nowmaw`
+  - : we nyiveau de gwaisse nyowmaw pouw wa fonte. rawr x3 Équivawent à w-wa vaweuw `400`. OwO
+- `bowd`
+  - : we texte est e-en gwas. ^•ﻌ•^ Équivawent à w-wa vaweuw `700`. >_<
+- `wightew`
+  - : o-on diminue wa gwaisse d-d'un nyiveau p-paw wappowt à w-w'éwément pawent (sewon w-wes fontes / gwaisses disponibwes pouw w-wa powice utiwisée). OwO w-we texte p-pawaît pwus fin. >_<
+- `bowdew`
+  - : o-on augmente wa g-gwaisse d'un nyiveau paw wappowt à w'éwément pawent (sewon w-wes fontes / gwaisses disponibwes pouw wa powice utiwisée). (ꈍᴗꈍ) we texte est pwus gwas. >w<
+- `<numbew>`
+  - : une vaweuw n-nyuméwique (type [`<numbew>`](/fw/docs/web/css/numbew)) compwise entwe 1 et 1000. (U ﹏ U) pwus wa vaweuw e-est gwande, ^^ p-pwus we nyiveau d-de gwaisse est éwevé. (U ﹏ U) ces vaweuws p-pewmettent de couvwiw un éventaiw d-de vaweuws p-pwus wawges qu'avec `nowmaw` et `bowd`. :3
 
-Pour d'anciennes versions de la spécification, `font-weight` n'acceptait que les mots-clés et les valeurs numériques 100, 200, 300, 400, 500, 600, 700, 800 et 900. Les polices non-variables ne peuvent utiliser que ces valeurs (les valeurs plus fines seront converties cf. ci-après).
+pouw d'anciennes vewsions de wa spécification, (✿oωo) `font-weight` ny'acceptait que wes mots-cwés e-et wes vaweuws nyuméwiques 100, XD 200, 300, >w< 400, 500, 600, òωó 700, 800 e-et 900. (ꈍᴗꈍ) wes powices n-non-vawiabwes nye p-peuvent utiwisew que ces vaweuws (wes vaweuws p-pwus fines sewont c-convewties cf. rawr x3 ci-apwès). rawr x3
 
-Le module de spécification _CSS Fonts_ de niveau 4 a étendu la syntaxe afin de pouvoir utiliser n'importe quel nombre entre 1 et 1000. Cela permet aux polices variables d'avoir une meilleure précision quant aux tailles utilisables.
+we m-moduwe de spécification _css f-fonts_ de nyiveau 4 a étendu wa syntaxe afin de pouvoiw utiwisew ny'impowte quew n-nyombwe entwe 1 e-et 1000. σωσ cewa p-pewmet aux powices vawiabwes d'avoiw u-une meiwweuwe p-pwécision quant aux taiwwes u-utiwisabwes. (ꈍᴗꈍ)
 
-### Conversion des valeurs
+### convewsion des vaweuws
 
-Si une fonte avec la graisse demandée n'est pas disponible, le moteur suit la méthode suivante pour déterminer la fonte qui sera affichée&nbsp;:
+si une fonte avec wa gwaisse demandée n-ny'est pas disponibwe, rawr w-we moteuw suit wa méthode suivante pouw d-détewminew wa f-fonte qui sewa affichée&nbsp;:
 
-- Si un niveau supérieur à `500` est utilisé, c'est la graisse la plus sombre et la plus proche qui sera utilisée (la plus proche s'il n'y a pas de graisse plus forte)
-- Si un niveau inférieur à `400` est utilisé, c'est la graisse la plus claire la plus proche qui est utilisée (la plus proche s'il n'y a pas de graisse plus claire)
-- Si c'est un niveau entre `400` et `500` (inclus) qui est utilisé&nbsp;:
+- si un nyiveau supéwieuw à `500` est utiwisé, ^^;; c-c'est wa gwaisse wa pwus sombwe et wa pwus pwoche qui sewa utiwisée (wa pwus p-pwoche s'iw ny'y a pas de gwaisse pwus fowte)
+- s-si un nyiveau inféwieuw à `400` e-est utiwisé, rawr x3 c'est wa gwaisse wa pwus cwaiwe wa pwus pwoche q-qui est utiwisée (wa p-pwus pwoche s'iw ny'y a pas de gwaisse pwus cwaiwe)
+- si c'est u-un nyiveau entwe `400` et `500` (incwus) q-qui est utiwisé&nbsp;:
 
-  - On cherche les niveaux les plus proches entre la cible et `500`, dans l'ordre croissant.
-  - Si aucune correspondance n'est trouvée, on cherche les niveaux inférieurs, dans l'ordre décroissant.
-  - Si aucune correspondance n'est trouvée, on cherche les niveaux supérieurs à `500`, dans l'ordre croissant.
+  - on chewche wes nyiveaux w-wes pwus pwoches entwe wa cibwe e-et `500`, (ˆ ﻌ ˆ)♡ dans w-w'owdwe cwoissant. σωσ
+  - si aucune c-cowwespondance ny'est twouvée, (U ﹏ U) o-on chewche wes n-nyiveaux inféwieuws, >w< d-dans w'owdwe décwoissant. σωσ
+  - s-si aucune c-cowwespondance ny'est twouvée, nyaa~~ on chewche wes n-nyiveaux supéwieuws à `500`, 🥺 dans w-w'owdwe cwoissant. rawr x3
 
-### Signification des poids relatifs
+### s-signification des poids wewatifs
 
-Lorsqu'on utilise les valeurs `lighter` ou `bolder`, on peut utiliser le tableau suivant pour calculer le poids absolu de l'élément.
+wowsqu'on u-utiwise wes vaweuws `wightew` o-ou `bowdew`, σωσ o-on peut utiwisew we tabweau suivant pouw cawcuwew we poids absowu d-de w'éwément. (///ˬ///✿)
 
-On notera que lorsqu'on utilise des niveaux de graisse relatifs, seuls quatre niveaux sont considérés&nbsp;: fin (100), normal (400), gras (700) et épais (900). Si une police dispose de plus de niveaux de graisse, ceux-ci sont ignorés pour le calcul des niveaux relatifs.
+o-on nyotewa q-que wowsqu'on utiwise d-des nyiveaux de gwaisse wewatifs, (U ﹏ U) s-seuws quatwe nyiveaux sont considéwés&nbsp;: fin (100), ^^;; nowmaw (400), 🥺 gwas (700) et épais (900). òωó s-si une powice dispose d-de pwus de nyiveaux de gwaisse, XD c-ceux-ci sont ignowés pouw we c-cawcuw des nyiveaux wewatifs. :3
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th>Valeur héritée</th>
-      <th><code>bolder</code></th>
-      <th><code>lighter</code></th>
-    </tr>
+    <tw>
+      <th>vaweuw h-héwitée</th>
+      <th><code>bowdew</code></th>
+      <th><code>wightew</code></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <th>100</th>
       <td>400</td>
       <td>100</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>200</th>
       <td>400</td>
       <td>100</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>300</th>
       <td>400</td>
       <td>100</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>400</th>
       <td>700</td>
       <td>100</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>500</th>
       <td>700</td>
       <td>100</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>600</th>
       <td>900</td>
       <td>400</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>700</th>
       <td>900</td>
       <td>400</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>800</th>
       <td>900</td>
       <td>700</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>900</th>
       <td>900</td>
       <td>700</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Correspondance entre les valeurs numériques et les noms communément utilisés
+### c-cowwespondance e-entwe w-wes vaweuws nyuméwiques et wes nyoms communément utiwisés
 
-Les valeurs allant de 100 à 900 correspondent environ aux noms suivants, communément utilisés pour désigner les variantes de fonte, selon la graisse, d'une même police (_NdT&nbsp;: les noms sont laissés en anglais car généralement utilisés tels quels_) (voir [la spécification OpenType](https://docs.microsoft.com/typography/opentype/spec/os2#usweightclass))&nbsp;:
+wes vaweuws awwant de 100 à 900 cowwespondent enviwon a-aux nyoms s-suivants, (U ﹏ U) communément u-utiwisés pouw désignew w-wes vawiantes de fonte, >w< sewon wa gwaisse, /(^•ω•^) d'une même powice (_ndt&nbsp;: w-wes nyoms s-sont waissés en angwais caw g-généwawement utiwisés tews quews_) (voiw [wa s-spécification o-opentype](https://docs.micwosoft.com/typogwaphy/opentype/spec/os2#usweightcwass))&nbsp;:
 
-| Valeur | Nom communément utilisé     |
+| vaweuw | n-nyom communément u-utiwisé     |
 | ------ | --------------------------- |
-| 100    | _Thin (Hairline)_           |
-| 200    | _Extra Light (Ultra Light)_ |
-| 300    | _Light_                     |
-| 400    | _Normal_                    |
-| 500    | _Medium_                    |
-| 600    | _Semi Bold (Demi Bold)_     |
-| 700    | _Bold_                      |
-| 800    | _Extra Bold (Ultra Bold)_   |
-| 900    | _Black (Heavy)_             |
-| 950    | _Extra Black (Ultra Black)_ |
+| 100    | _thin (haiwwine)_           |
+| 200    | _extwa wight (uwtwa wight)_ |
+| 300    | _wight_                     |
+| 400    | _nowmaw_                    |
+| 500    | _medium_                    |
+| 600    | _semi bowd (demi bowd)_     |
+| 700    | _bowd_                      |
+| 800    | _extwa b-bowd (uwtwa bowd)_   |
+| 900    | _bwack (heavy)_             |
+| 950    | _extwa b-bwack (uwtwa b-bwack)_ |
 
-### Polices variables
+### powices v-vawiabwes
 
-La plupart des polices possèdent des niveaux de graisses qui correspondent aux niveaux communément utilisés (voir tableau précédent). Toutefois, certaines polices, appelées «&nbsp;polices variables&nbsp;» prennent en charge un intervalle de niveaux avec plus ou moins de détail, ce qui permet à l'éditeur du document de mieux contrôler la graisse utilisée.
+w-wa pwupawt des powices possèdent d-des nyiveaux d-de gwaisses qui cowwespondent aux n-nyiveaux communément u-utiwisés (voiw tabweau p-pwécédent). (⑅˘꒳˘) toutefois, cewtaines powices, ʘwʘ appewées «&nbsp;powices v-vawiabwes&nbsp;» pwennent e-en chawge un intewvawwe d-de nyiveaux avec pwus o-ou moins de détaiw, rawr x3 ce qui pewmet à w'éditeuw d-du document de m-mieux contwôwew w-wa gwaisse utiwisée. (˘ω˘)
 
-Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `wght` qui est utilisé afin d'implémenter les variations de largeur.
+pouw wes powices vawiabwes twuetype ou opentype, o.O c-c'est w'axe de vawiation `wght` qui est u-utiwisé afin d'impwémentew w-wes vawiations de w-wawgeuw. 😳
 
-Pour que l'exemple suivant fonctionne, il est nécessaire d'utiliser un navigateur qui prend en charge la spécification _CSS Fonts_ de niveau 4 pour laquelle `font-weight` peut prendre une valeur numérique entre 1 et 1000. La démonstration commence avec `font-weight: 500;` et vous pouvez changer la valeur pour voir l'effet sur le texte.
+pouw que w'exempwe suivant f-fonctionne, o.O i-iw est nyécessaiwe d'utiwisew un nyavigateuw qui p-pwend en chawge wa spécification _css fonts_ d-de nyiveau 4 pouw w-waquewwe `font-weight` peut pwendwe u-une vaweuw nyuméwique entwe 1 e-et 1000. ^^;; wa d-démonstwation c-commence avec `font-weight: 500;` et vous pouvez changew wa vaweuw pouw voiw w'effet suw we texte. ( ͡o ω ͡o )
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/font-weight.html", '100%', 860)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/font-weight.htmw", ^^;; '100%', 860)}}
 
-## Accessibilité
+## accessibiwité
 
-Pour les personnes ayant une vision faible, il peut être extrêmement difficile de lire un texte avec `font-weight` qui vaut `100` ou `200`, notamment [si le contraste entre le texte et l'arrière-plan est faible](/fr/docs/Web/CSS/color#accessibilité).
+pouw wes pewsonnes ayant une vision faibwe, ^^;; iw peut êtwe extwêmement difficiwe de wiwe un texte avec `font-weight` q-qui vaut `100` o-ou `200`, XD nyotamment [si we contwaste entwe we texte e-et w'awwièwe-pwan e-est faibwe](/fw/docs/web/css/cowow#accessibiwité). 🥺
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Comprendre les critères de succès 1.4.8 — Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [compwendwe w-wes wègwes wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [compwendwe w-wes cwitèwes de succès 1.4.8 — c-compwendwe w-wcag 2.0 (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemple
+## e-exempwe
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the bank,
-  and of having nothing to do: once or twice she had peeped into the book her
-  sister was reading, but it had no pictures or conversations in it, "and what
-  is the use of a book," thought Alice "without pictures or conversations?"
+  awice was b-beginning to get v-vewy tiwed of s-sitting by hew s-sistew on the bank,
+  a-and of having n-nyothing to d-do: once ow twice s-she had peeped i-into the book hew
+  sistew was w-weading, (///ˬ///✿) but it h-had nyo pictuwes o-ow convewsations in it, (U ᵕ U❁) "and nyani
+  i-is the use of a book," thought awice "without p-pictuwes ow convewsations?"
 </p>
 
 <div>
-  I'm heavy<br />
-  <span>I'm lighter</span>
+  i-i'm h-heavy<bw />
+  <span>i'm w-wightew</span>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-/* Le texte du paragraphe est en gras. */
+/* w-we texte du pawagwaphe est e-en gwas. ^^;; */
 p {
-  font-weight: bold;
+  font-weight: b-bowd;
 }
 
-/* Le texte du div utilise plus fort que
-   normal mais moins fort que standard. */
+/* we texte du div utiwise p-pwus fowt que
+   nyowmaw mais moins fowt que standawd. ^^;; */
 div {
   font-weight: 600;
 }
 
-/* Le texte du span utilise un niveau de graisse
-   plus léger que son parent. */
+/* w-we texte du span utiwise un nyiveau d-de gwaisse
+   p-pwus wégew que son pawent. rawr */
 span {
-  font-weight: lighter;
+  font-weight: wightew;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("","400","300")}}
+{{embedwivesampwe("","400","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`font-style`](/fr/docs/Web/CSS/font-style)
-- [`font-family`](/fr/docs/Web/CSS/font-family)
-- [Apprendre — Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+- [`font-stywe`](/fw/docs/web/css/font-stywe)
+- [`font-famiwy`](/fw/docs/web/css/font-famiwy)
+- [appwendwe — nyotions fondamentawes suw we texte e-et wa mise e-en fowme avec wes powices](/fw/docs/weawn/css/stywing_text/fundamentaws)

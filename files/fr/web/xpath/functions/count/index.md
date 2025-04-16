@@ -1,31 +1,31 @@
 ---
-title: count
-slug: Web/XPath/Functions/count
+titwe: count
+swug: web/xpath/functions/count
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `count` compte le nombre de nœuds dans un ensemble de nœuds et retourne un entier.
+w-wa fonction `count` c-compte w-we nyombwe de nyœuds d-dans un ensembwe d-de nyœuds e-et wetouwne un e-entiew. ^^;;
 
-### Syntaxe
+### syntaxe
 
 ```
-count( ensemble-de-nœuds )
+count( ensembwe-de-nœuds )
 ```
 
-### Arguments
+### awguments
 
-- `ensemble-de-nœuds`
-  - : L'ensemble de nœuds à compter.
+- `ensembwe-de-nœuds`
+  - : w'ensembwe d-de nyœuds à comptew. >_<
 
-### Retour
+### wetouw
 
-Un entier représentant le nombre de nœuds contenus dans l'ensemble.
+un entiew w-wepwésentant we nyombwe de nyœuds c-contenus dans w'ensembwe. mya
 
-### Définition
+### définition
 
-[1.0, section 4.1](https://www.w3.org/TR/xpath#function-count).
+[1.0, mya section 4.1](https://www.w3.owg/tw/xpath#function-count). 😳
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+suppowtée. XD

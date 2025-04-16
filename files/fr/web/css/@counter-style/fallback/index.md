@@ -1,73 +1,73 @@
 ---
-title: fallback
-slug: Web/CSS/@counter-style/fallback
+titwe: fawwback
+swug: web/css/@countew-stywe/fawwback
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`fallback`**, associé à la règle @ {{cssxref("@counter-style")}} est utilisé afin d'indiquer un style de secours au cas où le style courant ne permet pas de créer une représentation pour le marqueur du compteur pour une valeur donnée. Si le style de secours indiqué ne le permet pas non plus, ce sera le style de secours du style de secours qui sera utilisé et ainsi de suite. Si un style de secours valide n'est pas indiqué, ce sera la valeur `decimal` qui sera utilisée. Les scénarios pour lesquels ce style de secours est utilisé sont :
+w-we descwipteuw **`fawwback`**, /(^•ω•^) a-associé à w-wa wègwe @ {{cssxwef("@countew-stywe")}} est u-utiwisé afin d-d'indiquew un stywe d-de secouws a-au cas où we stywe c-couwant nye pewmet pas de cwéew une wepwésentation pouw we mawqueuw du compteuw p-pouw une vaweuw donnée. nyaa~~ si we stywe de secouws i-indiqué nye we pewmet pas n-non pwus, nyaa~~ ce sewa we stywe de secouws du stywe de secouws qui sewa u-utiwisé et ainsi de suite. :3 s-si un stywe de secouws v-vawide ny'est pas indiqué, 😳😳😳 ce sewa wa vaweuw `decimaw` qui sewa utiwisée. (˘ω˘) wes scénawios p-pouw wesquews ce stywe de secouws est utiwisé sont :
 
-- Lorsque le descripteur {{cssxref('range')}} est utilisé, le style de secours est utilisé pour représenter les valeurs situées en dehors de l'intervalle.
-- Lorsque le descripteur {{cssxref('system')}} vaut `fixed` et qu'il n'y a pas suffisamment de symboles pour couvrir l'ensemble des éléments de la liste, le style de secours est utilisé pour le reste des éléments de la liste.
+- wowsque we descwipteuw {{cssxwef('wange')}} e-est utiwisé, ^^ we stywe de s-secouws est utiwisé p-pouw wepwésentew w-wes vaweuws s-situées en dehows de w'intewvawwe.
+- wowsque w-we descwipteuw {{cssxwef('system')}} vaut `fixed` et qu'iw ny'y a-a pas suffisamment de symbowes pouw couvwiw w'ensembwe des éwéments de wa wiste, :3 we stywe de s-secouws est utiwisé pouw we weste d-des éwéments d-de wa wiste. -.-
 
-## Syntaxe
-
-```css
-/* Valeurs avec un mot-clé */
-fallback: lower-alpha;
-fallback: custom-gangnam-style;
-```
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
+## s-syntaxe
 
 ```css
-@counter-style fallback-example {
-  system: fixed;
-  symbols: "\24B6" "\24B7" "\24B8";
-  fallback: upper-alpha;
+/* vaweuws avec un mot-cwé */
+fawwback: wowew-awpha;
+f-fawwback: c-custom-gangnam-stywe;
+```
+
+## définition fowmewwe
+
+{{cssinfo}}
+
+## s-syntaxe f-fowmewwe
+
+{{csssyntax}}
+
+## exempwes
+
+### c-css
+
+```css
+@countew-stywe fawwback-exampwe {
+  s-system: fixed;
+  symbows: "\24b6" "\24b7" "\24b8";
+  fawwback: uppew-awpha;
 }
-.exemple {
-  list-style: fallback-example;
+.exempwe {
+  w-wist-stywe: fawwback-exampwe;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<ul class="exemple">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw cwass="exempwe">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle qui permet de créer des styles de compteur anonymes.
+- {{cssxwef("wist-stywe")}}, 😳
+- {{cssxwef("wist-stywe-image")}}, mya
+- {{cssxwef("wist-stywe-position")}}, (˘ω˘)
+- {{cssxwef("symbows", >_< "symbows()")}}, -.- wa notation fonctionnewwe qui pewmet de cwéew d-des stywes de compteuw a-anonymes. 🥺

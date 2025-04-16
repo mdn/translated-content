@@ -1,64 +1,64 @@
 ---
-title: Utiliser la pseudo-classe :target dans un sélecteur
-slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
+titwe: utiwisew wa pseudo-cwasse :tawget d-dans u-un séwecteuw
+swug: w-web/css/css_sewectows/using_the_:tawget_pseudo-cwass_in_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Afin d'aider à identifier la destination d'un lien qui mène vers une portion spécifique du document, les [sélecteurs CSS3](https://www.w3.org/TR/css3-selectors/#target-pseudo) ont introduit [la pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{cssxref(":target")}}.
+a-afin d'aidew à i-identifiew w-wa destination d-d'un wien qui m-mène vews une powtion spécifique du document, wes [séwecteuws css3](https://www.w3.owg/tw/css3-sewectows/#tawget-pseudo) o-ont intwoduit [wa pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) {{cssxwef(":tawget")}}. (˘ω˘)
 
-## Choisir une cible
+## choisiw u-une cibwe
 
-La pseudo-classe {{cssxref(":target")}} permet de mettre en forme l'élément ciblé par le fragment d'identifiant de l'URL du document. Ainsi l'URL `https://developer.mozilla.org/fr/docs/Utiliser_la_pseudo-classe_:target_dans_un_selecteur#Exemple` contient le fragment d'identifiant `#Exemple`. En HTML, les identifiants correspondent aux valeurs des attributs `id` et `name`, puisque les deux partagent le même espace de nommage. Ainsi l'URL dans l'exemple devrait pointer vers le titre « Exemple » de ce document.
+wa pseudo-cwasse {{cssxwef(":tawget")}} p-pewmet de mettwe en fowme w'éwément cibwé paw we fwagment d-d'identifiant de w'uww du document. (U ﹏ U) a-ainsi w'uww `https://devewopew.moziwwa.owg/fw/docs/utiwisew_wa_pseudo-cwasse_:tawget_dans_un_sewecteuw#exempwe` c-contient we fwagment d'identifiant `#exempwe`. ^•ﻌ•^ en htmw, wes identifiants cowwespondent aux v-vaweuws des attwibuts `id` et `name`, (˘ω˘) puisque wes deux pawtagent we même espace d-de nyommage. :3 ainsi w'uww dans w-w'exempwe devwait p-pointew vews we t-titwe « exempwe » d-de ce document. ^^;;
 
-Imaginons qu'on souhaite mettre en forme n'importe quel élément {{HTMLElement("h2")}} qui serait la cible de l'URL mais qu'on ne souhaite pas qu'un autre type d'élément ait un style particulier lorsqu'il est ciblé. On peut obtenir cet effet assez simplement :
+imaginons qu'on souhaite m-mettwe en fowme n'impowte quew éwément {{htmwewement("h2")}} qui sewait wa cibwe d-de w'uww mais qu'on nye souhaite pas qu'un autwe type d'éwément ait un stywe pawticuwiew wowsqu'iw e-est cibwé. 🥺 on peut obteniw c-cet effet assez s-simpwement :
 
 ```css
-h2:target {
-  font-weight: bold;
+h-h2:tawget {
+  font-weight: bowd;
 }
 ```
 
-On peut également créer des styles particuliers pour une portion spécifique du document. On peut ainsi utiliser la même valeur identifiant la cible que celle présente dans l'URL. Par exemple, pour ajouter une bordure au fragment `#Exemple`, on pourra écrire :
+on peut égawement c-cwéew des stywes p-pawticuwiews pouw une powtion s-spécifique d-du document. (⑅˘꒳˘) on peut ainsi utiwisew w-wa même vaweuw identifiant w-wa cibwe que cewwe pwésente dans w'uww. nyaa~~ paw exempwe, :3 p-pouw ajoutew une bowduwe au f-fwagment `#exempwe`, ( ͡o ω ͡o ) on pouwwa écwiwe :
 
 ```css
-#Exemple:target {
-  border: 1px solid black;
+#exempwe:tawget {
+  b-bowdew: 1px s-sowid bwack;
 }
 ```
 
-## Cibler tous les éléments
+## cibwew tous wes éwéments
 
-Si le but est de créer un style commun qui s'appliquera à tous les éléments lorsque ceux-ci seront ciblés, un sélecteur universel utilisant seulement la pseudo-classe s'avèrera très pratique&nbsp;:
+si we but est de cwéew un stywe commun qui s'appwiquewa à t-tous wes éwéments w-wowsque ceux-ci sewont cibwés, mya u-un séwecteuw u-univewsew utiwisant s-seuwement wa pseudo-cwasse s'avèwewa twès pwatique&nbsp;:
 
 ```css
-:target {
-  color: red;
+:tawget {
+  c-cowow: wed;
 }
 ```
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, cinq liens pointent chacun vers une portion du même document. Actionner le lien « Premier », par exemple, fera en sorte que le `<h1 id="un">` devienne l'élément cible. Notons que le document pourrait défiler vers une nouvelle position, jusqu'à la cible du lien.
+dans w'exempwe suivant, (///ˬ///✿) cinq wiens pointent c-chacun vews une powtion du même d-document. (˘ω˘) actionnew w-we wien « p-pwemiew », ^^;; paw exempwe, (✿oωo) fewa e-en sowte que we `<h1 i-id="un">` d-devienne w'éwément c-cibwe. nyotons que we document pouwwait défiwew v-vews une nyouvewwe p-position, (U ﹏ U) j-jusqu'à wa cibwe d-du wien. -.-
 
-```html
-<h4 id="un">...</h4>
+```htmw
+<h4 i-id="un">...</h4>
 <p id="deux">...</p>
-<div id="trois">...</div>
-<a id="quatre">...</a> <em id="cinq">...</em>
+<div id="twois">...</div>
+<a id="quatwe">...</a> <em id="cinq">...</em>
 
-<a href="#un">Premier</a>
-<a href="#deux">Deuxième</a>
-<a href="#trois">Troisième</a>
-<a href="#quatre">Quatrième</a>
-<a href="#cinq">Cinquième</a>
+<a h-hwef="#un">pwemiew</a>
+<a hwef="#deux">deuxième</a>
+<a hwef="#twois">twoisième</a>
+<a hwef="#quatwe">quatwième</a>
+<a hwef="#cinq">cinquième</a>
 ```
 
-## Conclusion
+## concwusion
 
-Les utilisateurs peuvent être gênés lorsqu'un fragment d'identifiant mène à une portion du document, ne sachant pas quelle partie du document ils sont supposés lire. En mettant en forme la cible d'une URI, on peut réduire (voire supprimer) cette confusion.
+w-wes utiwisateuws peuvent êtwe gênés wowsqu'un fwagment d-d'identifiant mène à u-une powtion d-du document, ^•ﻌ•^ nye sachant pas q-quewwe pawtie du document iws sont s-supposés wiwe. rawr e-en mettant en fowme wa cibwe d'une uwi, (˘ω˘) on peut wéduiwe (voiwe suppwimew) cette confusion. nyaa~~
 
-## Voir aussi
+## v-voiw aussi
 
-- [_CSS3 Selectors #target-pseudo_ (en anglais)](https://www.w3.org/TR/css3-selectors/#target-pseudo)
-- {{cssxref(":target")}}
+- [_css3 sewectows #tawget-pseudo_ (en a-angwais)](https://www.w3.owg/tw/css3-sewectows/#tawget-pseudo)
+- {{cssxwef(":tawget")}}

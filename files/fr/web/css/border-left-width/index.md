@@ -1,149 +1,149 @@
 ---
-title: border-left-width
-slug: Web/CSS/border-left-width
+titwe: bowdew-weft-width
+swug: w-web/css/bowdew-weft-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-left-width`** définit l'épaisseur de la bordure pour le côté gauche d'un élément.
+w-wa p-pwopwiété **`bowdew-weft-width`** d-définit w'épaisseuw d-de wa b-bowduwe pouw we c-côté gauche d'un éwément. 😳
 
-{{InteractiveExample("CSS Demo: border-left-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-weft-width")}}
 
-```css interactive-example-choice
-border-left-width: thick;
+```css intewactive-exampwe-choice
+bowdew-weft-width: thick;
 ```
 
-```css interactive-example-choice
-border-left-width: 2em;
+```css intewactive-exampwe-choice
+b-bowdew-weft-width: 2em;
 ```
 
-```css interactive-example-choice
-border-left-width: 4px;
+```css intewactive-exampwe-choice
+bowdew-weft-width: 4px;
 ```
 
-```css interactive-example-choice
-border-left-width: 2ex;
+```css i-intewactive-exampwe-choice
+bowdew-weft-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-left-width: 0;
+```css i-intewactive-exampwe-choice
+bowdew-weft-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: p-pawegween;
+  cowow: #000;
+  bowdew: 0 sowid cwimson;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Une valeur de longueur */
-/* Type <length>          */
-border-left-width: 10em;
-border-left-width: 3vmax;
-border-left-width: 6px;
+/* u-une vaweuw de w-wongueuw */
+/* type <wength>          */
+b-bowdew-weft-width: 10em;
+b-bowdew-weft-width: 3vmax;
+bowdew-weft-width: 6px;
 
-/* Valeurs avec un mot-clé */
-border-left-width: thin;
-border-left-width: medium;
-border-left-width: thick;
+/* vaweuws a-avec un mot-cwé */
+bowdew-weft-width: thin;
+bowdew-weft-width: m-medium;
+bowdew-weft-width: thick;
 
-/* Valeurs globales */
-border-left-width: inherit;
-border-left-width: initial;
-border-left-width: unset;
+/* vaweuws gwobawes */
+bowdew-weft-width: inhewit;
+bowdew-weft-width: i-initiaw;
+bowdew-weft-width: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<br-width>`
+- `<bw-width>`
 
-  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté gauche de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
+  - : u-une vaweuw de wongueuw ({{cssxwef("&wt;wength&gt;")}}) positive ou un mot-cwé q-qui indique w'épaisseuw d-de wa bowduwe pouw we c-côté gauche d-de wa boîte. mya si wa vaweuw est un m-mot-cwé, mya ce doit êtwe w'une d-des vaweuws suivantes :
 
     - `thin` (fin)
-    - `medium` (intermédiaire)
+    - `medium` (intewmédiaiwe)
     - `thick` (épais)
 
-    La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document`.`
+    wa spécification nye pwécise p-pas de façon exacte w'épaisseuw c-cowwespondant à chacun d-de ces mots-cwés (c'est d-donc à chaque impwémentation de choisiw). (⑅˘꒳˘) wa spécification wequiewt toutefois que w'inégawité suivante s-soit wespectée `thin ≤ m-medium ≤ thick` et que ces vaweuws s-soient constantes p-pouw un même d-document`.`
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.element1 {
-  border-left-width: thick;
-  border-left-style: solid;
-  border-left-color: red;
+.ewement1 {
+  bowdew-weft-width: thick;
+  bowdew-weft-stywe: s-sowid;
+  bowdew-weft-cowow: wed;
 }
-.element2 {
-  border-left-width: medium;
-  border-left-style: solid;
-  border-left-color: orange;
+.ewement2 {
+  b-bowdew-weft-width: m-medium;
+  b-bowdew-weft-stywe: sowid;
+  b-bowdew-weft-cowow: o-owange;
 }
-.element3 {
-  border-left-width: thin;
-  border-left-style: solid;
-  border-left-color: green;
+.ewement3 {
+  b-bowdew-weft-width: t-thin;
+  bowdew-weft-stywe: sowid;
+  b-bowdew-weft-cowow: g-gween;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="element1">Une bordure épaisse rouge.</p>
+```htmw
+<p c-cwass="ewement1">une b-bowduwe épaisse wouge.</p>
 
-<p class="element2">Une bordure moyenne orange.</p>
+<p cwass="ewement2">une bowduwe moyenne o-owange.</p>
 
-<p class="element3">Et une bordure fine verte.</p>
+<p cwass="ewement3">et une bowduwe fine vewte.</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","300")}}
+{{embedwivesampwe("exempwes","200","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les autres propriétés liées à la largeur de la bordure :
+- wes a-autwes pwopwiétés w-wiées à wa wawgeuw de wa bowduwe :
 
-  - {{cssxref("border-right-width")}},
-  - {{cssxref("border-top-width")}},
-  - {{cssxref("border-bottom-width")}},
-  - {{cssxref("border-width")}}
+  - {{cssxwef("bowdew-wight-width")}}, (U ﹏ U)
+  - {{cssxwef("bowdew-top-width")}}, mya
+  - {{cssxwef("bowdew-bottom-width")}}, ʘwʘ
+  - {{cssxwef("bowdew-width")}}
 
-- Les autres propriétés CSS liées à la bordure du côté gauche :
+- w-wes autwes pwopwiétés css wiées à w-wa bowduwe d-du côté gauche :
 
-  - {{cssxref("border")}},
-  - {{cssxref("border-left")}},
-  - {{cssxref("border-left-style")}},
-  - {{cssxref("border-left-color")}}.
+  - {{cssxwef("bowdew")}}, (˘ω˘)
+  - {{cssxwef("bowdew-weft")}}, (U ﹏ U)
+  - {{cssxwef("bowdew-weft-stywe")}}, ^•ﻌ•^
+  - {{cssxwef("bowdew-weft-cowow")}}. (˘ω˘)

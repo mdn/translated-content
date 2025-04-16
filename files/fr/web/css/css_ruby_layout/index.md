@@ -1,19 +1,19 @@
 ---
-title: CSS Ruby
-slug: Web/CSS/CSS_ruby_layout
+titwe: css wuby
+swug: web/css/css_wuby_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Ruby Layout_** est un module CSS qui fournit des propriétés de contrôle pour le rendu et la mise en forme [des annotations Ruby](<https://fr.wikipedia.org/wiki/Ruby_(linguistique)>) utilisées dans les documents d'Asie orientale afin d'indiquer la prononciation ou d'annoter le texte de base.
+**_css w-wuby wayout_** e-est un moduwe c-css qui fouwnit d-des pwopwiétés d-de contwôwe p-pouw we wendu e-et wa mise en f-fowme [des annotations wuby](<https://fw.wikipedia.owg/wiki/wuby_(winguistique)>) utiwisées dans wes documents d'asie owientawe a-afin d'indiquew wa pwononciation ou d'annotew we t-texte de base. (ˆ ﻌ ˆ)♡
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("ruby-align")}}
-- {{cssxref("ruby-position")}}
+- {{cssxwef("wuby-awign")}}
+- {{cssxwef("wuby-position")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

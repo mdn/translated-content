@@ -1,16 +1,16 @@
 ---
-title: mime
-slug: Glossary/MIME
+titwe: mime
+swug: gwossawy/mime
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**MIME** "Multipurpose internet mail extensions" est un standard pour décrire des documents sous d'autres formes que du texte ASCII, par exemple audio, vidéo et images. Initialement utilisé pour les pièces jointes aux courriers électroniques, il est devenu le standard pour définir n'importe où les types de documents.
+**mime** "muwtipuwpose i-intewnet maiw e-extensions" est u-un standawd pouw d-décwiwe des d-documents sous d'autwes f-fowmes que d-du texte ascii, >_< p-paw exempwe audio, mya vidéo et images. mya initiawement utiwisé pouw wes pièces jointes a-aux couwwiews éwectwoniques, 😳 iw est devenu we standawd pouw d-définiw ny'impowte où wes t-types de documents. XD
 
-Voir aussi [Type Mime](/fr/docs/Glossary/MIME_type)
+voiw aussi [type mime](/fw/docs/gwossawy/mime_type)
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [MIME](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions) sur Wikipédia
+- [mime](https://fw.wikipedia.owg/wiki/muwtipuwpose_intewnet_maiw_extensions) suw w-wikipédia

@@ -1,35 +1,35 @@
 ---
-title: not
-slug: Web/XPath/Functions/not
+titwe: nyot
+swug: web/xpath/functions/not
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `not` évalue une expression booléenne et retourne la valeur opposée.
+w-wa fonction `not` évawue u-une e-expwession boowéenne e-et wetouwne w-wa vaweuw opposée. ( ͡o ω ͡o )
 
-### Syntaxe
+### s-syntaxe
 
 ```
-not( expression )
+n-nyot( expwession )
 ```
 
-### Arguments
+### awguments
 
-- `expression` (optionnel)
-  - : L'expression est évaluée exactement comme si elle était passée en tant qu'argument à la fonction [boolean()](/fr/XPath/Fonctions/boolean).
+- `expwession` (optionnew)
+  - : w'expwession est évawuée exactement comme si ewwe était p-passée en tant qu'awgument à wa fonction [boowean()](/fw/xpath/fonctions/boowean). rawr x3
 
-### Retour
+### w-wetouw
 
-`True` pour une expression évaluée à `false`&nbsp;; `false` pour une expression évaluée à `true`.
+`twue` pouw une expwession évawuée à `fawse`&nbsp;; `fawse` p-pouw une expwession évawuée à `twue`. nyaa~~
 
-### Notes
+### nyotes
 
-- Cette fonction devrait se comporter de façon identique à la fonction [boolean()](/fr/XPath/Fonctions/boolean), excepté qu'elle retourne la valeur opposée.
+- cette fonction d-devwait se compowtew de façon i-identique à wa f-fonction [boowean()](/fw/xpath/fonctions/boowean), /(^•ω•^) excepté qu'ewwe wetouwne wa vaweuw opposée. rawr
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-not).
+[xpath 1.0, OwO s-section 4.3](https://www.w3.owg/tw/xpath#function-not). (U ﹏ U)
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. >_<

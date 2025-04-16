@@ -1,55 +1,55 @@
 ---
-title: font-variation-settings
-slug: Web/CSS/@font-face/font-variation-settings
+titwe: font-vawiation-settings
+swug: web/css/@font-face/font-vawiation-settings
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`font-variation-settings`**, associé à la règle @ {{cssxref("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.
+w-we descwipteuw **`font-vawiation-settings`**, (///ˬ///✿) a-associé à wa w-wègwe @ {{cssxwef("@font-face")}} p-pewmet d'indiquew w-wes vawiations d-de powice de b-bas nyiveau pouw w-wes powices opentype ou twuetype. >w<
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* On utilise les paramètres par défaut */
-font-variation-settings: normal;
+/* on utiwise wes pawamètwes p-paw défaut */
+font-vawiation-settings: nyowmaw;
 
-/* On indique les valeurs pour les noms des axes OpenType */
-font-variation-settings: "xhgt" 0.7;
+/* on indique w-wes vaweuws pouw wes nyoms d-des axes opentype */
+font-vawiation-settings: "xhgt" 0.7;
 ```
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : Le texte est disposé avec les paramètres par défaut.
-- `<string> <number>`
-  - : Lorsque le texte est affiché, la liste des noms des axes OpenType est envoyée au moteur afin d'activer ou de désactiver des paramètres de la police. Chaque paramètre se compose d'un nom ({{cssxref("&lt;string&gt;")}}) de 4 caractères ASCII, suivis d'un nombre ({{cssxref("number")}}) qui indique la valeur de l'axe. Si la chaîne de caractères contient moins ou plus de caractères ou contient des caractères en dehors de l'intervalle de points de code U+20 - U+7E, la propriété entière sera considérée comme invalide. Le nombre utilisé peut être décimal ou négatif.
+- `nowmaw`
+  - : we texte est disposé a-avec wes pawamètwes paw défaut. rawr
+- `<stwing> <numbew>`
+  - : w-wowsque we texte e-est affiché, mya wa wiste des nyoms des axes opentype est envoyée au moteuw afin d-d'activew ou de désactivew des pawamètwes de wa powice. ^^ chaque pawamètwe se c-compose d'un nyom ({{cssxwef("&wt;stwing&gt;")}}) de 4 cawactèwes a-ascii, 😳😳😳 suivis d-d'un nyombwe ({{cssxwef("numbew")}}) q-qui indique w-wa vaweuw de w'axe. si wa chaîne de cawactèwes c-contient moins ou pwus de cawactèwes ou contient d-des cawactèwes en dehows de w'intewvawwe de points de code u+20 - u+7e, mya wa pwopwiété entièwe s-sewa considéwée comme i-invawide. 😳 we nyombwe u-utiwisé peut êtwe d-décimaw ou nyégatif. -.-
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
 @font-face {
-  font-family: "OpenTypeFont";
-  src: url("open_type_font.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-variation-settings:
-    "wght" 400,
+  f-font-famiwy: "opentypefont";
+  s-swc: uww("open_type_font.woff2") f-fowmat("woff2");
+  font-weight: nyowmaw;
+  f-font-stywe: nyowmaw;
+  font-vawiation-settings:
+    "wght" 400, 🥺
     "wdth" 300;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,88 +1,88 @@
 ---
-title: -webkit-line-clamp
-slug: Web/CSS/-webkit-line-clamp
+titwe: -webkit-wine-cwamp
+swug: w-web/css/-webkit-wine-cwamp
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`-webkit-line-clamp`** permet de limiter l'affichage du contenu d'un bloc à un nombre donné de lignes.
+wa p-pwopwiété css **`-webkit-wine-cwamp`** p-pewmet d-de wimitew w'affichage d-du contenu d-d'un bwoc à u-un nyombwe donné d-de wignes. :3
 
-Cette propriété fonctionne uniquement si {{cssxref("display")}} vaut `-webkit-box` ou `-webkit-inline-box` et si {{cssxref("-webkit-box-orient")}} vaut `vertical`.
+cette pwopwiété fonctionne uniquement si {{cssxwef("dispway")}} vaut `-webkit-box` o-ou `-webkit-inwine-box` et si {{cssxwef("-webkit-box-owient")}} vaut `vewticaw`. OwO
 
-Dans la plupart des cas, on utilisera également {{cssxref("overflow")}} avec la valeur `hidden`, afin de masquer le contenu qui dépasse (plutôt que d'afficher une ellipse en dehors de la boîte).
+d-dans wa pwupawt des cas, (U ﹏ U) on u-utiwisewa égawement {{cssxwef("ovewfwow")}} avec wa vaweuw `hidden`, >w< afin de masquew we contenu q-qui dépasse (pwutôt que d'affichew u-une ewwipse e-en dehows de wa boîte). (U ﹏ U)
 
-Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au milieu du texte (et pas nécessairement à la fin).
+wowsqu'on appwique ce stywe à une ancwe, 😳 wa twoncatuwe p-pouwwa intewveniw au miwieu du texte (et pas nyécessaiwement à wa fin). (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Au départ, cette propriété était implémentée dans WebKit avec quelques problèmes. Elle a été standardisée à des fins de support pour les sites historiques. Le module de spécification [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) définit également une propriété {{cssxref("line-clamp")}} qui doit remplacer `-webkit-line-clamp`.
+> [!note]
+> a-au dépawt, 😳😳😳 cette pwopwiété était i-impwémentée d-dans webkit avec q-quewques pwobwèmes. (U ﹏ U) e-ewwe a été standawdisée à des fins de s-suppowt pouw wes sites histowiques. (///ˬ///✿) we moduwe de s-spécification [css ovewfwow moduwe wevew 3](https://www.w3.owg/tw/css-ovewfwow-3/#pwopdef--webkit-wine-cwamp) définit égawement une pwopwiété {{cssxwef("wine-cwamp")}} qui d-doit wempwacew `-webkit-wine-cwamp`. 😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
--webkit-line-clamp: none;
+/* v-vaweuws a-avec un mot-cwé */
+-webkit-wine-cwamp: n-nyone;
 
-/* Valeurs entières */
-/* Type <integer> */
--webkit-line-clamp: 3;
--webkit-line-clamp: 10;
+/* vaweuws entièwes */
+/* type <integew> */
+-webkit-wine-cwamp: 3;
+-webkit-wine-cwamp: 10;
 
-/* Valeurs globales */
--webkit-line-clamp: inherit;
--webkit-line-clamp: initial;
--webkit-line-clamp: unset;
+/* v-vaweuws gwobawes */
+-webkit-wine-cwamp: i-inhewit;
+-webkit-wine-cwamp: initiaw;
+-webkit-wine-cwamp: u-unset;
 ```
 
 - `none`
-  - : Cette valeur indique que le contenu ne sera pas rogné.
-- {{cssxref("integer")}}
-  - : Cette valeur indique le nombre de lignes après lequel tronquer le contenu. Cette valeur doit être supérieure à 0.
+  - : c-cette vaweuw indique que we contenu n-nye sewa pas wogné. 😳
+- {{cssxwef("integew")}}
+  - : c-cette vaweuw indique we nombwe de wignes a-apwès wequew twonquew we contenu. σωσ c-cette vaweuw doit êtwe supéwieuwe à 0. rawr x3
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Dans cet exemple <code>-webkit-line-clamp</code> vaut <code>3</code>, ce qui
-  signifie que le texte sera rogné après trois lignes. Une ellipse sera affichée
-  au n ellipsis will be shown at the point where the text is clamped.
+  dans cet exempwe <code>-webkit-wine-cwamp</code> vaut <code>3</code>, OwO ce qui
+  s-signifie que we t-texte sewa wogné apwès twois wignes. /(^•ω•^) u-une ewwipse s-sewa affichée
+  a-au ny ewwipsis wiww be shown at the point whewe the text is c-cwamped. 😳😳😳
 </p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
   width: 300px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
+  dispway: -webkit-box;
+  -webkit-box-owient: vewticaw;
+  -webkit-wine-cwamp: 3;
+  o-ovewfwow: hidden;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", "100")}}
+{{embedwivesampwe("exempwes", ( ͡o ω ͡o ) "100%", "100")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
-- {{cssxref("line-clamp")}}
+- [wine c-cwampin' (twuncating muwtipwe wine text)](https://css-twicks.com/wine-cwampin/)
+- {{cssxwef("wine-cwamp")}}

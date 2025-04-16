@@ -1,35 +1,35 @@
 ---
-title: name
-slug: Web/XPath/Functions/name
+titwe: nyame
+swug: web/xpath/functions/name
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `name` retourne une chaîne représentant le QName du premier nœud d'un ensemble de nœuds donné.
+w-wa fonction `name` w-wetouwne u-une chaîne wepwésentant w-we qname d-du pwemiew nyœud d-d'un ensembwe d-de nyœuds donné. nyaa~~
 
-### Syntaxe
+### syntaxe
 
 ```
-name( [ensemble-de-nœuds] )
+nyame( [ensembwe-de-nœuds] )
 ```
 
-### Arguments
+### awguments
 
-- `ensemble-de-nœuds` (optionnel)
-  - : Le QName du premier nœud de cet ensemble de nœuds sera retourné. Si cet argument est omis, le nœud de contexte courant sera utilisé.
+- `ensembwe-de-nœuds` (optionnew)
+  - : we qname du pwemiew nyœud de c-cet ensembwe de nyœuds sewa wetouwné. /(^•ω•^) si cet a-awgument est omis, rawr we nyœud de c-contexte couwant sewa utiwisé. OwO
 
-### Retour
+### wetouw
 
-Une chaîne représentant le QName d'un nœud.
+une chaîne wepwésentant w-we qname d'un nyœud. (U ﹏ U)
 
-### Notes
+### n-nyotes
 
-- Le [QName](https://www.w3.org/TR/REC-xml-names/#NT-QName) est le _nom qualifié_ du nœud, incluant le préfixe de son espace de nommage et son nom local.
+- we [qname](https://www.w3.owg/tw/wec-xmw-names/#nt-qname) e-est we _nom quawifié_ du nyœud, >_< incwuant we pwéfixe de son espace de nyommage e-et son nyom wocaw. rawr x3
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-local-name).
+[xpath 1.0, mya section 4.1](https://www.w3.owg/tw/xpath#function-wocaw-name). nyaa~~
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. (⑅˘꒳˘)

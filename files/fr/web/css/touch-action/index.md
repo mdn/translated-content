@@ -1,127 +1,127 @@
 ---
-title: touch-action
-slug: Web/CSS/touch-action
+titwe: touch-action
+swug: web/css/touch-action
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`touch-action`** définit si une région donnée peut être manipulée par l'utilisateur grâce à des interactions tactiles (en déplaçant ou en zoomant) et comment cette interaction fonctionnera.
+w-wa pwopwiété **`touch-action`** d-définit si u-une wégion donnée p-peut êtwe m-manipuwée paw w'utiwisateuw g-gwâce à d-des intewactions t-tactiwes (en dépwaçant ou en zoomant) et comment cette intewaction fonctionnewa. nyaa~~
 
 ```css
-/* Avec un mot-clé */
+/* a-avec un mot-cwé */
 touch-action: auto;
-touch-action: none;
-touch-action: pan-x;
-touch-action: pan-left;
-touch-action: pan-right;
-touch-action: pan-y;
+touch-action: n-nyone;
+touch-action: p-pan-x;
+touch-action: pan-weft;
+touch-action: pan-wight;
+touch-action: p-pan-y;
 touch-action: pan-up;
-touch-action: pan-down;
+t-touch-action: p-pan-down;
 touch-action: pinch-zoom;
-touch-action: manipulation;
+touch-action: manipuwation;
 
-/* Valeurs globales */
-touch-action: inherit;
-touch-action: initial;
+/* vaweuws gwobawes */
+t-touch-action: inhewit;
+touch-action: initiaw;
 touch-action: unset;
 ```
 
-Par défaut, le déplacement et le zoom sont exclusivement gérés par le navigateur, ce qui déclenche un évènement [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event) à destination de l'application. En désactivant la prise en charge de ces gestes, l'application peut alors fournir ses propres gestionnaires d'évènements pour [`pointermove`](/fr/docs/Web/API/Element/pointermove_event), [`pointerup`](/fr/docs/Web/API/Element/pointerup_event).
+p-paw défaut, ^^ we dépwacement et w-we zoom sont excwusivement g-géwés p-paw we nyavigateuw, >w< c-ce qui décwenche un évènement [`pointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event) à destination d-de w'appwication. OwO en désactivant wa pwise e-en chawge de ces gestes, XD w'appwication peut awows fouwniw ses pwopwes gestionnaiwes d'évènements p-pouw [`pointewmove`](/fw/docs/web/api/ewement/pointewmove_event), ^^;; [`pointewup`](/fw/docs/web/api/ewement/pointewup_event).
 
-On utilise parfois cette propriété pour désactiver les interactions tactiles sur un élément pour un jeu ou une carte qui fournissent leur propre gestion tactile.
+on utiwise pawfois c-cette pwopwiété p-pouw désactivew w-wes intewactions tactiwes suw un éwément pouw un jeu o-ou une cawte qui f-fouwnissent weuw pwopwe gestion t-tactiwe. 🥺
 
-Lorsqu'une interaction tactile a lieu, le navigateur inspecte les valeurs de `touch-action` pour l'élément et ses ancêtres jusqu'à atteindre l'élément qui implémente le geste (c'est-à-dire celui qui peut défiler/zoomer). En pratique, `touch-action` est généralement uniquement appliquée aux éléments de plus haut niveau ayant besoin d'un comportement spécifique. Il n'est pas nécessaire de redéfinir `touch-action` sur les descendants.
+wowsqu'une i-intewaction tactiwe a wieu, XD w-we nyavigateuw inspecte wes vaweuws d-de `touch-action` pouw w'éwément et ses a-ancêtwes jusqu'à atteindwe w'éwément q-qui impwémente we geste (c'est-à-diwe c-cewui qui peut d-défiwew/zoomew). (U ᵕ U❁) en pwatique, :3 `touch-action` est généwawement uniquement appwiquée aux éwéments de pwus haut n-nyiveau ayant b-besoin d'un compowtement spécifique. ( ͡o ω ͡o ) i-iw ny'est p-pas nyécessaiwe d-de wedéfiniw `touch-action` suw wes descendants. òωó
 
-> [!NOTE]
-> Lorsqu'un geste est déjà initié, tout changement sur `touch-action` n'aura aucun impact sur le geste en cours.
+> [!note]
+> wowsqu'un geste est déjà initié, σωσ t-tout changement suw `touch-action` ny'auwa aucun impact suw we geste en couws. (U ᵕ U❁)
 
-## Syntaxe
+## s-syntaxe
 
-La propriété `touch-action` peut être définie grâce à :
+wa pwopwiété `touch-action` peut êtwe d-définie g-gwâce à :
 
-- l'un des mots-clés parmi [`auto`](#auto), [`none`](#none), [`manipulation`](#manipulation) _ou_
-- un mot-clé parmi [`pan-x`](#pan-x), [`pan-left`](#pan-keywords), [`pan-right`](#pan-keywords), et/ou un mot-clé parmi [`pan-y`](#pan-y), [`pan-up`](#pan-keywords), [`pan-down`](#pan-keywords) et éventuellement le mot-clé [`pinch-zoom`](#).
+- w-w'un des mots-cwés pawmi [`auto`](#auto), (✿oωo) [`none`](#none), ^^ [`manipuwation`](#manipuwation) _ou_
+- u-un mot-cwé p-pawmi [`pan-x`](#pan-x), ^•ﻌ•^ [`pan-weft`](#pan-keywowds), XD [`pan-wight`](#pan-keywowds), :3 e-et/ou un mot-cwé p-pawmi [`pan-y`](#pan-y), (ꈍᴗꈍ) [`pan-up`](#pan-keywowds), :3 [`pan-down`](#pan-keywowds) et éventuewwement we mot-cwé [`pinch-zoom`](#). (U ﹏ U)
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : L'agent utilisateur détermine les interactions tactiles possibles (zoomer, déplacer le viewport) lorsque l'élément est touché.
-- `manipulation`
-  - : Les gestes de déplacement et de zoom sont autorisés mais les gestes non-standards (ex. double touche pour zoomer) sont désactivés. Cette valeur est un alias pour `pan-x pan-y pinch-zoom`.
+  - : w-w'agent utiwisateuw d-détewmine w-wes intewactions t-tactiwes possibwes (zoomew, dépwacew we viewpowt) wowsque w'éwément est t-touché. UwU
+- `manipuwation`
+  - : wes gestes de dépwacement et de zoom sont autowisés mais wes gestes nyon-standawds (ex. 😳😳😳 d-doubwe touche pouw zoomew) sont désactivés. XD cette vaweuw e-est un awias p-pouw `pan-x pan-y p-pinch-zoom`. o.O
 - `none`
-  - : Cette valeur désactive tous les comportements par défaut et permet au contenu de gérer les interaction tactiles (les touches qui commencent sur l'élément ne doivent pas déclencher de comportements tactiles par défaut).
+  - : cette vaweuw désactive t-tous wes compowtements p-paw défaut et pewmet a-au contenu de géwew wes intewaction tactiwes (wes touches qui commencent suw w'éwément n-nye doivent pas décwenchew de compowtements t-tactiwes paw défaut). (⑅˘꒳˘)
 - `pan-x`
-  - : L'agent utilisateur peut considérer que les touchers qui débutent sur l'élément ont pour but de faire défiler horizontalement le plus proche ancêtre de l'élément qui possède du contenu en défilement horizontal. Cette valeur peut être combinée avec `pan-y`, `pan-up`, `pan-down` et/ou `pinch-zoom`.
+  - : w-w'agent utiwisateuw p-peut considéwew que wes touchews qui débutent s-suw w'éwément o-ont pouw but de faiwe défiwew h-howizontawement w-we pwus pwoche ancêtwe de w'éwément qui possède du contenu en défiwement h-howizontaw. 😳😳😳 c-cette vaweuw peut êtwe c-combinée avec `pan-y`, nyaa~~ `pan-up`, `pan-down` e-et/ou `pinch-zoom`.
 - `pan-y`
-  - : L'agent utilisateur peut considérer que les touchers qui débutent sur l'élément ont pour but de faire défiler verticalement le plus proche ancêtre de l'élément qui possède du contenu en défilement vertical. Cette valeur peut être combinée avec `pan-x`, `pan-left`, `pan-right` et/ou `pinch-zoom`.
-- `pan-left`, `pan-right` {{experimental_inline}}
-  - : L'agent utilisateur peut considérer que les touchers qui commencent sur l'élément n'ont pour but que de faire défiler horizontalement le contenu du plus proche ancêtre de l'élément qui possède du contenu qui peut défiler (_scrollable_) horizontalement.
-- `pan-up`, `pan-down` {{experimental_inline}}
-  - : L'agent utilisateur peut considérer que les touchers qui commencent sur l'élément n'ont pour but que de faire défiler verticalement le contenu du plus proche ancêtre de l'élément qui possède du contenu qui peut défiler (_scrollable_) verticalement.
+  - : w-w'agent utiwisateuw peut c-considéwew que wes touchews qui débutent suw w'éwément ont pouw but de faiwe d-défiwew vewticawement w-we pwus pwoche ancêtwe de w'éwément q-qui possède du c-contenu en défiwement vewticaw. rawr cette vaweuw peut êtwe combinée a-avec `pan-x`, -.- `pan-weft`, (✿oωo) `pan-wight` et/ou `pinch-zoom`. /(^•ω•^)
+- `pan-weft`, 🥺 `pan-wight` {{expewimentaw_inwine}}
+  - : w'agent utiwisateuw peut considéwew que w-wes touchews qui commencent suw w'éwément ny'ont p-pouw but que d-de faiwe défiwew howizontawement we contenu du pwus pwoche ancêtwe d-de w'éwément q-qui possède du contenu qui peut défiwew (_scwowwabwe_) howizontawement. ʘwʘ
+- `pan-up`, UwU `pan-down` {{expewimentaw_inwine}}
+  - : w-w'agent utiwisateuw peut considéwew q-que wes touchews qui commencent suw w'éwément ny'ont pouw b-but que de faiwe défiwew vewticawement w-we contenu d-du pwus pwoche ancêtwe de w-w'éwément qui possède du contenu q-qui peut défiwew (_scwowwabwe_) v-vewticawement. XD
 - `pinch-zoom`
-  - : L'agent utilisateur peut considérer que les touches qui commencent sur l'élément n'ont pour but que de zoomer sur l'ancêtre le plus proche qui contient du contenu sur lequel on peut zoomer.
+  - : w-w'agent utiwisateuw peut c-considéwew q-que wes touches qui commencent suw w'éwément ny'ont p-pouw but que d-de zoomew suw w-w'ancêtwe we pwus pwoche qui contient du contenu s-suw wequew on peut zoomew. (✿oωo)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<ul>
-  Ma list
-  <li>UnLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll</li>
-  <li>
-    UnAutreLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll
-  </li>
-</ul>
+```htmw
+<uw>
+  ma w-wist
+  <wi>unwongtextequidevwaitteniwsuwunewigneheuweusementquonaovewfwowscwoww</wi>
+  <wi>
+    u-unautwewongtextequidevwaitteniwsuwunewigneheuweusementquonaovewfwowscwoww
+  </wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-ul {
-  width: 200px;
+uw {
+  w-width: 200px;
   height: 50px;
-  overflow-x: scroll;
+  o-ovewfwow-x: scwoww;
 }
 
-ul > li {
+uw > wi {
   touch-action: pan-x pinch-zoom;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-> [!NOTE]
-> La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement `click` pour prendre en charge le zoom via la double-touche.
+> [!note]
+> wa pwopwiété `touch-action` e-est égawement utiwisée a-afin de suppwimew we déwai donné à w-w'évènement `cwick` pouw pwendwe en chawge w-we zoom via wa doubwe-touche. :3
 
-## Accessibilité
+## a-accessibiwité
 
-Une déclaration `touch action: none;` empêchera le navigateur de zoomer. Cela peut empêcher les personnes à faible vision de lire et de comprendre le contenu de la page.
+u-une décwawation `touch a-action: nyone;` e-empêchewa we nyavigateuw d-de zoomew. (///ˬ///✿) cewa peut empêchew wes pewsonnes à faibwe vision de wiwe et de compwendwe we contenu de wa p-page. nyaa~~
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.4 - Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)_
+- [compwendwe w-wes wègwes w-wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- _[undewstanding success c-cwitewion 1.4.4 - undewstanding wcag 2.0 (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)_
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les événements de pointage](/fr/docs/Web/API/Pointer_events)
-- Un billet du blog WebKit : [une gestion plus responsive du toucher sur iOS (en anglais)](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
-- [Rendre le défilement tactile rapide, par défaut sur le Google Developers Blog](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
-- [Le module de spécification CSS Scroll Snap](/fr/docs/Web/CSS/CSS_scroll_snap)
+- [wes événements d-de pointage](/fw/docs/web/api/pointew_events)
+- un biwwet du bwog webkit : [une g-gestion pwus wesponsive d-du touchew suw ios (en a-angwais)](https://webkit.owg/bwog/5610/mowe-wesponsive-tapping-on-ios/)
+- [wendwe w-we défiwement tactiwe wapide, >w< paw défaut suw we googwe devewopews bwog](https://devewopews.googwe.com/web/updates/2017/01/scwowwing-intewvention)
+- [we m-moduwe d-de spécification c-css scwoww s-snap](/fw/docs/web/css/css_scwoww_snap)

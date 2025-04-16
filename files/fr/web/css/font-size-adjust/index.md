@@ -1,112 +1,112 @@
 ---
-title: font-size-adjust
-slug: Web/CSS/font-size-adjust
+titwe: font-size-adjust
+swug: w-web/css/font-size-adjust
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-size-adjust`** permet de choisir une taille de police selon la taille des caractères en minuscules plutôt que selon la taille des majuscules.
+w-wa pwopwiété **`font-size-adjust`** p-pewmet de choisiw u-une taiwwe de p-powice sewon wa t-taiwwe des cawactèwes e-en minuscuwes p-pwutôt que sewon wa taiwwe des majuscuwes. rawr x3
 
 ```css
-/* On utilise la taille de fonte définie */
-font-size-adjust: none;
+/* on utiwise wa taiwwe d-de fonte définie */
+font-size-adjust: nyone;
 
-/* On utilise une fonte pour laquelle
-   les minuscules font la moitié de la
-   taille définie */
-/* Type <number> */
+/* o-on utiwise une fonte pouw waquewwe
+   w-wes minuscuwes font wa moitié de wa
+   taiwwe définie */
+/* t-type <numbew> */
 font-size-adjust: 0.5;
 
-/* Valeurs globales */
-font-size-adjust: inherit;
-font-size-adjust: initial;
+/* v-vaweuws gwobawes */
+f-font-size-adjust: inhewit;
+font-size-adjust: initiaw;
 font-size-adjust: unset;
 ```
 
-Cela est particulièrement utile lorsque la lisibilité des fontes, notamment celles de petite taille, est déterminée par la taille des minuscules plutôt que par celle des majuscules.
+cewa e-est pawticuwièwement utiwe wowsque wa wisibiwité des fontes, /(^•ω•^) notamment cewwes d-de petite taiwwe, :3 est détewminée p-paw wa taiwwe d-des minuscuwes p-pwutôt que paw c-cewwe des majuscuwes. (ꈍᴗꈍ)
 
-La lisibilité peut devenir un problème lorsque la première police indiquée par {{cssxref("font-family")}} n'est pas disponible et que la police de remplacement possède un facteur de forme très différent (ce facteur correspond au ratio de la taille des minuscules sur la taille de la fonte).
+wa wisibiwité peut deveniw u-un pwobwème wowsque wa pwemièwe powice indiquée p-paw {{cssxwef("font-famiwy")}} ny'est pas disponibwe et que wa powice de wempwacement possède un facteuw d-de fowme twès difféwent (ce facteuw c-cowwespond a-au watio de wa t-taiwwe des minuscuwes suw wa taiwwe de wa fonte). /(^•ω•^)
 
-Pour utiliser cette propriété d'une façon compatible avec les navigateurs qui ne prennent pas en charge `font-size-adjust`, on définira le facteur par lequel on multiplie la valeur de la propriété {{Cssxref("font-size")}}. Cela signifie généralement que la propriété doit correspondre au facteur de forme de la première fonte. Ainsi, lorsqu'une feuille de style définit :
+pouw utiwisew c-cette pwopwiété d-d'une façon compatibwe avec w-wes nyavigateuws q-qui nye pwennent pas en chawge `font-size-adjust`, (⑅˘꒳˘) o-on définiwa we facteuw paw w-wequew on muwtipwie wa vaweuw de wa pwopwiété {{cssxwef("font-size")}}. ( ͡o ω ͡o ) c-cewa signifie généwawement q-que wa pwopwiété doit c-cowwespondwe au f-facteuw de fowme de wa pwemièwe fonte. ainsi, òωó wowsqu'une feuiwwe de stywe définit :
 
 ```css
 font-size: 14px;
 font-size-adjust: 0.5;
 ```
 
-On indique en fait que les minuscules de la fonte utilisée doivent mesurer `7px` de haut (0.5 × 14px).
+on indique e-en fait que w-wes minuscuwes de wa fonte utiwisée d-doivent mesuwew `7px` d-de h-haut (0.5 × 14px). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : La taille de la fonte est uniquement choisie grâce à la propriété {{cssxref("font-size")}}.
-- `<number>`
+  - : wa t-taiwwe de wa fonte est uniquement choisie gwâce à wa pwopwiété {{cssxwef("font-size")}}. XD
+- `<numbew>`
 
-  - : La taille de la fonte est choisie afin que les minuscules (selon la taille horizontale de la fonte) mesurent X fois {{cssxref("font-size")}}.
+  - : wa taiwwe de wa f-fonte est choisie afin que wes m-minuscuwes (sewon w-wa taiwwe howizontawe d-de wa fonte) mesuwent x f-fois {{cssxwef("font-size")}}. -.-
 
-    Le nombre indiqué (cf. le type {{cssxref("&lt;number&gt;")}}) devrait la plupart du temps correspondre au facteur de forme de la première fonte listée avec {{cssxref("font-family")}}. Cela permet d'obtenir le même résultat dans les différents navigateurs, qu'ils supportent `font-size-adjust` ou non.
+    w-we nyombwe indiqué (cf. :3 w-we t-type {{cssxwef("&wt;numbew&gt;")}}) devwait wa pwupawt du temps c-cowwespondwe au f-facteuw de fowme d-de wa pwemièwe f-fonte wistée avec {{cssxwef("font-famiwy")}}. nyaa~~ c-cewa pewmet d'obteniw we même wésuwtat dans wes difféwents nyavigateuws, 😳 q-qu'iws suppowtent `font-size-adjust` ou nyon. (⑅˘꒳˘)
 
-    `0` entraînera une haute nulle pour le texte (qui sera donc caché). Pour d'anciens navigateurs, comme Firefox avant la version 40, `0` était géré comme `none`.
+    `0` entwaînewa une haute nyuwwe pouw we texte (qui s-sewa donc caché). nyaa~~ pouw d'anciens nyavigateuws, OwO comme fiwefox a-avant wa vewsion 40, rawr x3 `0` était g-géwé comme `none`. XD
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p>Exemples pour <code>font-size-adjust</code></p>
+```htmw
+<p>exempwes p-pouw <code>font-size-adjust</code></p>
 
-<p class="times">Voici la fonte Times sur 10 px, difficile à lire en petit.</p>
+<p cwass="times">voici wa fonte times suw 10 px, σωσ difficiwe à wiwe en petit.</p>
 
-<p class="verdana">
-  Voici la fonte Verdana sur 10px, plus lisible car sans empattement (serif).
+<p c-cwass="vewdana">
+  voici w-wa fonte vewdana suw 10px, (U ᵕ U❁) pwus w-wisibwe caw sans e-empattement (sewif). (U ﹏ U)
 </p>
 
-<p class="adjtimes">
-  et voilà le texte ajusté pour avoir le même facteur de forme qu'avec Verdana.
+<p cwass="adjtimes">
+  et voiwà we t-texte ajusté p-pouw avoiw we même facteuw de fowme q-qu'avec vewdana. :3
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
 .times {
-  font-family: Times, serif;
+  font-famiwy: times, ( ͡o ω ͡o ) sewif;
   font-size: 10 px;
 }
 
-.verdana {
-  font-family: Verdana, sans-serif;
+.vewdana {
+  f-font-famiwy: v-vewdana, σωσ s-sans-sewif;
   font-size: 10 px;
 }
 
 .adjtimes {
-  font-family: Times, serif;
+  f-font-famiwy: times, >w< s-sewif;
   font-size-adjust: 0.58;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '500', '300')}}
+{{embedwivesampwe('exempwes', 😳😳😳 '500', '300')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Un billet de David Baron sur `font-size-adjust` (en anglais)](https://bugzilla.mozilla.org/show_bug.cgi?id=1144885)
+- [un biwwet de d-david bawon suw `font-size-adjust` (en a-angwais)](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1144885)

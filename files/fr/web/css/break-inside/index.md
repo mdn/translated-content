@@ -1,115 +1,115 @@
 ---
-title: break-inside
-slug: Web/CSS/break-inside
+titwe: bweak-inside
+swug: web/css/bweak-inside
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`break-inside`** définit comment la page, la colonne ou la région se fragmente au sein de la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.
+w-wa pwopwiété c-css **`bweak-inside`** d-définit c-comment wa page, >w< w-wa cowonne ou w-wa wégion se fwagmente a-au sein d-de wa boîte généwée. 😳😳😳 s'iw n'y a aucune boîte généwée, OwO wa pwopwiété est i-ignowée. 😳
 
 ```css
-/* Valeurs avec un mot-clé */
-break-inside: auto;
-break-inside: avoid;
-break-inside: avoid-page;
-break-inside: avoid-column;
-break-inside: avoid-region;
+/* vaweuws avec un mot-cwé */
+b-bweak-inside: auto;
+bweak-inside: a-avoid;
+bweak-inside: avoid-page;
+bweak-inside: avoid-cowumn;
+b-bweak-inside: avoid-wegion;
 
-/* Valeurs globales */
-break-inside: inherit;
-break-inside: initial;
-break-inside: unset;
+/* v-vaweuws gwobawes */
+b-bweak-inside: inhewit;
+bweak-inside: initiaw;
+bweak-inside: unset;
 ```
 
-Chaque point de rupture éventuel (c'est-à-dire chaque frontière d'élément) est influencé par trois propriétés : la valeur de {{cssxref("break-after")}} de l'élément précédent, la valeur de {{cssxref("break-before")}} de l'élément suivant et la valeur de `break-inside` de l'élément englobant.
+chaque p-point de wuptuwe éventuew (c'est-à-diwe chaque fwontièwe d'éwément) est infwuencé paw twois pwopwiétés : w-wa vaweuw de {{cssxwef("bweak-aftew")}} d-de w-w'éwément pwécédent, 😳😳😳 w-wa vaweuw d-de {{cssxwef("bweak-befowe")}} de w'éwément suivant et wa v-vaweuw de `bweak-inside` de w'éwément engwobant. (˘ω˘)
 
-Pour déterminer si on a une rupture, on applique les règles suivantes :
+p-pouw détewminew si on a une wuptuwe, ʘwʘ on appwique wes wègwes suivantes :
 
-1. Si l'une des trois valeurs correspond à une rupture forcée (`always`, `left`, `right`, `page`, `column` ou `region`), cette valeur l'emporte. Si plusieurs valeurs décrivent une rupture forcée, c'est celle de l'élément qui apparaît le plus tard dans le flux qui est prise en compte (autrement dit, {{cssxref("break-before")}} l'emporte sur {{cssxref("break-after")}} qui l'emporte sur `break-inside`).
-2. Si l'une des trois valeurs correspond à une valeur visant à éviter une rupture (`avoid`, `avoid-page`, `avoid-region` ou `avoid-column`), aucune rupture ne sera appliquée à cet endroit.
+1. ( ͡o ω ͡o ) si w'une des twois v-vaweuws cowwespond à une wuptuwe f-fowcée (`awways`, o.O `weft`, >w< `wight`, `page`, 😳 `cowumn` o-ou `wegion`), 🥺 c-cette vaweuw w'empowte. rawr x3 si pwusieuws vaweuws décwivent u-une wuptuwe fowcée, o.O c-c'est cewwe de w'éwément q-qui appawaît w-we pwus tawd dans we fwux qui est p-pwise en compte (autwement dit, {{cssxwef("bweak-befowe")}} w-w'empowte suw {{cssxwef("bweak-aftew")}} qui w'empowte s-suw `bweak-inside`). rawr
+2. si w-w'une des twois vaweuws cowwespond à u-une vaweuw v-visant à évitew une wuptuwe (`avoid`, ʘwʘ `avoid-page`, `avoid-wegion` ou `avoid-cowumn`), 😳😳😳 aucune wuptuwe nye sewa appwiquée à cet endwoit. ^^;;
 
-Une fois que les ruptures forcées ont été appliquées, le moteur peut ajouter des ruptures « douces » sauf aux endroits où les propriétés empêchent les ruptures.
+une f-fois que wes wuptuwes f-fowcées ont été appwiquées, o.O w-we moteuw p-peut ajoutew des w-wuptuwes « douces » sauf aux endwoits où wes pwopwiétés e-empêchent wes wuptuwes. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
-La propriété `break-inside` se définit avec un mot-clé parmi ceux de la liste ci-après.
+wa pwopwiété `bweak-inside` se définit avec un mot-cwé p-pawmi ceux de wa wiste ci-apwès. σωσ
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : Cette valeur n'interdit ni ne force une rupture (pour une page, une colonne ou une région).
+  - : c-cette vaweuw ny'intewdit n-nyi nye fowce une wuptuwe (pouw u-une page, nyaa~~ u-une cowonne ou u-une wégion). ^^;;
 - `avoid`
-  - : Cette valeur interdit toute rupture (de page, de colonne ou de région) dans la boîte principale.
+  - : c-cette vaweuw intewdit toute wuptuwe (de page, ^•ﻌ•^ de c-cowonne ou de wégion) d-dans wa b-boîte pwincipawe. σωσ
 - `avoid-page`
-  - : Cette valeur interdit toute rupture de page au sein de la boîte.
-- `avoid-column`
-  - : Cette valeur interdit toute rupture de colonne au sein de la boîte.
-- `avoid-region` {{experimental_inline}}
-  - : Cette valeur interdit toute rupture de région au sein de la boîte.
+  - : c-cette vaweuw i-intewdit toute wuptuwe de page au sein de wa boîte. -.-
+- `avoid-cowumn`
+  - : c-cette vaweuw intewdit toute wuptuwe de cowonne au sein de wa boîte. ^^;;
+- `avoid-wegion` {{expewimentaw_inwine}}
+  - : cette vaweuw intewdit toute w-wuptuwe de wégion au sein de wa boîte. XD
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Synonymes pour `page-break-inside`
+## s-synonymes p-pouw `page-bweak-inside`
 
-Pour des raisons de compatibilité, la propriété historique {{cssxref("page-break-inside")}} devrait être traitée par les navigateurs comme `break-inside`. De cette façon, cela permet aux sites qui utilisaient `page-break-inside` de continuer à fonctionner. Voici un sous-ensemble de valeurs avec leurs alias :
+pouw d-des waisons de compatibiwité, 🥺 w-wa pwopwiété histowique {{cssxwef("page-bweak-inside")}} d-devwait êtwe twaitée paw wes nyavigateuws comme `bweak-inside`. òωó de cette façon, (ˆ ﻌ ˆ)♡ cewa p-pewmet aux sites qui utiwisaient `page-bweak-inside` d-de continuew à fonctionnew. -.- v-voici un sous-ensembwe d-de vaweuws avec weuws awias :
 
-| `page-break-inside` | `break-inside` |
+| `page-bweak-inside` | `bweak-inside` |
 | ------------------- | -------------- |
 | `auto`              | `auto`         |
 | `avoid`             | `avoid`        |
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  -webkit-column-count: 4;
-  -moz-column-count: 4;
-  column-count: 4;
+.exempwe {
+  -webkit-cowumn-count: 4;
+  -moz-cowumn-count: 4;
+  cowumn-count: 4;
 }
 
-p {
-  break-inside: avoid-column;
-  /* Pour Firefox : */
-  page-break-inside: avoid;
-  /* Pour WebKit : */
-  -webkit-column-break-inside: avoid;
+p-p {
+  bweak-inside: a-avoid-cowumn;
+  /* pouw fiwefox : */
+  page-bweak-inside: avoid;
+  /* pouw webkit : */
+  -webkit-cowumn-bweak-inside: a-avoid;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="exemple">
+```htmw
+<div c-cwass="exempwe">
   <p>
-    « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je
-    ne le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être
-    une vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-    n’aimerais pas cela du tout. »
+    « mais a-awows, » pensa a-awice, :3 « nye sewai-je donc jamais p-pwus vieiwwe que je
+    nye we suis maintenant ? d’un côté cewa auwa ses a-avantages, ʘwʘ nye j-jamais êtwe
+    une vieiwwe femme. 🥺 mais awows a-avoiw toujouws d-des weçons à appwendwe ! >_< oh, ʘwʘ je
+    ny’aimewais pas cewa du t-tout. (˘ω˘) »
   </p>
   <p>
-    « Oh ! Alice, petite folle, » se répondit-elle. « Comment pourriez-vous
-    apprendre des leçons ici ? Il y a à peine de la place pour vous, et il n’y
-    en a pas du tout pour vos livres de leçons. »
+    « oh ! (✿oωo) awice, petite fowwe, (///ˬ///✿) » se wépondit-ewwe. rawr x3 « comment pouwwiez-vous
+    a-appwendwe des weçons ici ? iw y a à p-peine de wa pwace p-pouw vous, -.- et iw ny’y
+    en a pas du tout pouw vos wivwes de w-weçons. ^^ »
   </p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","400","300")}}
+{{embedwivesampwe("exempwes","400","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

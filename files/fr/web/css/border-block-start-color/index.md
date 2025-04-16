@@ -1,130 +1,130 @@
 ---
-title: border-block-start-color
-slug: Web/CSS/border-block-start-color
+titwe: bowdew-bwock-stawt-cowow
+swug: web/css/bowdew-bwock-stawt-cowow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`border-block-start-color`** définit la couleur de la bordure pour le côté du début de l'élément orienté orthogonalement à l'axe de lecture. Elle correspond à une propriété physique selon le mode d'écriture de l'élément, sa directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}} ou {{cssxref("border-left-color")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+w-wa p-pwopwiété **`bowdew-bwock-stawt-cowow`** d-définit w-wa couweuw de w-wa bowduwe pouw w-we côté du début d-de w'éwément o-owienté owthogonawement à w'axe de wectuwe. nyaa~~ ewwe cowwespond à une pwopwiété physique sewon w-we mode d'écwituwe de w'éwément, (✿oωo) sa diwectionnawité e-et w'owientation du t-texte. ʘwʘ autwement dit, (ˆ ﻌ ˆ)♡ ewwe cowwespond à w'une des pwopwiétés {{cssxwef("bowdew-top-cowow")}}, 😳😳😳 {{cssxwef("bowdew-wight-cowow")}}, :3 {{cssxwef("bowdew-bottom-cowow")}} o-ou {{cssxwef("bowdew-weft-cowow")}} sewon w-wes vaweuws des p-pwopwiétés {{cssxwef("wwiting-mode")}}, OwO {{cssxwef("diwection")}} et {{cssxwef("text-owientation")}}. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: border-block-start-color")}}
+{{intewactiveexampwe("css demo: bowdew-bwock-stawt-cowow")}}
 
-```css interactive-example-choice
-border-block-start-color: red;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bowdew-bwock-stawt-cowow: wed;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start-color: #32a1ce;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+bowdew-bwock-stawt-cowow: #32a1ce;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-start-color: rgb(170, 50, 220, 0.6);
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+b-bowdew-bwock-stawt-cowow: wgb(170, >w< 50, 220, 0.6);
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start-color: hsl(60, 90%, 50%, 0.8);
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-stawt-cowow: hsw(60, (U ﹏ U) 90%, 50%, 0.8);
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. 😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em s-sowid;
+  p-padding: 0.75em;
+  w-width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-Cette propriété est à rapprocher des autres propriétés logiques permettant de définir les couleurs de la bordure d'un élément :
+c-cette p-pwopwiété est à wappwochew d-des autwes pwopwiétés w-wogiques pewmettant de définiw w-wes couweuws de wa bowduwe d-d'un éwément :
 
-- {{cssxref("border-block-end-color")}},
-- {{cssxref("border-inline-end-color")}},
-- {{cssxref("border-inline-start-color")}}.
+- {{cssxwef("bowdew-bwock-end-cowow")}}, (ˆ ﻌ ˆ)♡
+- {{cssxwef("bowdew-inwine-end-cowow")}}, 😳😳😳
+- {{cssxwef("bowdew-inwine-stawt-cowow")}}. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```css
-border-block-start-color: red;
-border-block-start-color: #fffff;
-border-block-start-color: rgb(200, 0, 0);
+bowdew-bwock-stawt-cowow: w-wed;
+bowdew-bwock-stawt-cowow: #fffff;
+bowdew-bwock-stawt-cowow: w-wgb(200, 0, (///ˬ///✿) 0);
 
-border-block-start-color: unset;
-border-block-start-color: initial;
-border-block-start-color: inherit;
+bowdew-bwock-stawt-cowow: u-unset;
+b-bowdew-bwock-stawt-cowow: initiaw;
+bowdew-bwock-stawt-cowow: inhewit;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<'border-color'>`
-  - : Voir {{cssxref("border-color")}}
+- `<'bowdew-cowow'>`
+  - : voiw {{cssxwef("bowdew-cowow")}}
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-div {
-  background-color: yellow;
-  width: 120px;
+d-div {
+  backgwound-cowow: y-yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-lr;
-  border: 10px solid blue;
-  border-block-start-color: red;
+.exempwe {
+  wwiting-mode: vewticaw-ww;
+  b-bowdew: 10px sowid bwue;
+  bowdew-bwock-stawt-cowow: wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte d'exemple</p>
+  <p cwass="exempwe">texte d'exempwe</p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", 😳 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes :
+- wes pwopwiétés p-physiques cowwespondantes :
 
-  - {{cssxref("border-top-color")}},
-  - {{cssxref("border-right-color")}},
-  - {{cssxref("border-bottom-color")}},
-  - {{cssxref("border-left-color")}}.
+  - {{cssxwef("bowdew-top-cowow")}}, 😳
+  - {{cssxwef("bowdew-wight-cowow")}}, σωσ
+  - {{cssxwef("bowdew-bottom-cowow")}}, rawr x3
+  - {{cssxwef("bowdew-weft-cowow")}}. OwO
 
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- {{cssxwef("wwiting-mode")}}, /(^•ω•^) {{cssxwef("diwection")}}, 😳😳😳 {{cssxwef("text-owientation")}}

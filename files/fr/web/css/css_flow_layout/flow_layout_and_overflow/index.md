@@ -1,65 +1,65 @@
 ---
-title: La disposition en flux et le dépassement
-slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
+titwe: wa disposition en fwux e-et we dépassement
+s-swug: web/css/css_fwow_wayout/fwow_wayout_and_ovewfwow
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}
+{{quickwinkswithsubpages("/fw/docs/web/css/css_fwow_wayout/")}}
 
-Lorsque le conteneur est trop petit pour son contenu, on obtient une situation de dépassement. Le comportement du dépassement est importante dès qu'on manipule des objets CSS dont la taille est contrainte. Dans ce guide, nous verrons le fonctionnement du dépassement avec le flux normal.
+w-wowsque we conteneuw e-est twop petit p-pouw son contenu, XD o-on obtient u-une situation d-de dépassement. (✿oωo) we compowtement du dépassement est impowtante dès qu'on manipuwe d-des objets css dont wa taiwwe est contwainte. :3 d-dans ce guide, (///ˬ///✿) nyous vewwons we f-fonctionnement du dépassement avec we fwux nyowmaw. nyaa~~
 
-## Qu'est-ce que le dépassement ?
+## qu'est-ce q-que we dépassement ?
 
-Pour créer un exemple de dépassement, prenons un élément avec une hauteur et une largeur fixés puis ajoutons un contenu trop important dans la boîte :
+pouw c-cwéew un exempwe d-de dépassement, pwenons un éwément avec une hauteuw et une wawgeuw fixés p-puis ajoutons un contenu twop impowtant dans wa boîte :
 
-{{EmbedGHLiveSample("css-examples/flow/overflow/overflow.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwow/ovewfwow/ovewfwow.htmw", >w< '100%', 700)}}
 
-Le contenu « arrive » dans la boîte puis remplit celle-ci et ensuite, il dépasse en affichant du contenu en dehors de la boîte éventuellement en dessous du contenu environnant. Pour contrôler le comportement du dépassement, on pourra utiliser la propriété [`overflow`](/fr/docs/Web/CSS/overflow). La valeur initiale de cette propriété est `visible` et c'est pour cela qu'on voit le contenu dépasser.
+we contenu « a-awwive » dans wa boîte p-puis wempwit cewwe-ci e-et ensuite, -.- i-iw dépasse en a-affichant du contenu en dehows de wa boîte éventuewwement e-en dessous du contenu enviwonnant. (✿oωo) p-pouw contwôwew we compowtement du dépassement, (˘ω˘) on pouwwa utiwisew wa pwopwiété [`ovewfwow`](/fw/docs/web/css/ovewfwow). rawr wa v-vaweuw initiawe de cette pwopwiété e-est `visibwe` e-et c'est pouw c-cewa qu'on voit we contenu dépassew. OwO
 
-## Contrôler le dépassement
+## contwôwew we dépassement
 
-La propriété `overflow` possède d'autres valeurs qui permettent de contrôler le dépassement. Afin de masquer le contenu qui dépasse, on peut utiliser la valeur `hidden`. Avec cette valeur, une partie du contenu peut ne pas être visible.
+w-wa pwopwiété `ovewfwow` p-possède d'autwes vaweuws qui pewmettent d-de contwôwew w-we dépassement. ^•ﻌ•^ afin de m-masquew we contenu qui dépasse, o-on peut utiwisew wa vaweuw `hidden`. UwU avec cette v-vaweuw, (˘ω˘) une pawtie du contenu p-peut nye pas êtwe visibwe.
 
-{{EmbedGHLiveSample("css-examples/flow/overflow/hidden.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwow/ovewfwow/hidden.htmw", (///ˬ///✿) '100%', σωσ 700)}}
 
-Avec la valeur `scroll`, le contenu est dans la boîte et des barres de défilement sont ajoutées à la boîte afin de pouvoir défiler et voir le contenu. Les barres de défilement seront ajoutées, même si le contenu « tient » dans la boîte.
+a-avec w-wa vaweuw `scwoww`, /(^•ω•^) we contenu est dans wa boîte et des bawwes de défiwement sont ajoutées à wa boîte afin d-de pouvoiw défiwew e-et voiw we contenu. 😳 wes bawwes d-de défiwement s-sewont ajoutées, 😳 m-même si we contenu « tient » dans wa boîte. (⑅˘꒳˘)
 
-{{EmbedGHLiveSample("css-examples/flow/overflow/scroll.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwow/ovewfwow/scwoww.htmw", 😳😳😳 '100%', 700)}}
 
-Avec la valeur `auto`, le contenu sera affiché sans barre de défilement s'il tient dans la boîte. S'il dépasse, des barres de défilement sont ajoutées. En comparant l'exemple précédent avec celui qui suit, on peut voir que `overflow: scroll` ajoute des barres de défilement verticales et horizontales (même s'il y a uniquement besoin du défilement vertical). Avec la valeur `auto`, seules les barres de défilement nécessaires sont ajoutées.
+avec wa vaweuw `auto`, 😳 w-we contenu sewa affiché sans bawwe de défiwement s'iw tient dans wa b-boîte. XD s'iw dépasse, mya des bawwes d-de défiwement s-sont ajoutées. ^•ﻌ•^ e-en compawant w'exempwe pwécédent a-avec cewui qui s-suit, ʘwʘ on peut v-voiw que `ovewfwow: s-scwoww` ajoute des bawwes de défiwement vewticawes e-et howizontawes (même s-s'iw y a uniquement b-besoin du défiwement v-vewticaw). ( ͡o ω ͡o ) a-avec wa vaweuw `auto`, mya seuwes wes bawwes de défiwement nyécessaiwes s-sont ajoutées. o.O
 
-{{EmbedGHLiveSample("css-examples/flow/overflow/auto.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwow/ovewfwow/auto.htmw", (✿oωo) '100%', 700)}}
 
-Comme nous l'avons vu plus tôt, toute valeur qui est différente de `visible` créera un nouveau contexte de formatage de bloc.
+comme nyous w'avons vu pwus tôt, :3 toute vaweuw qui est difféwente d-de `visibwe` cwéewa un nyouveau contexte de fowmatage d-de bwoc. 😳
 
-> [!NOTE]
-> Dans [le brouillon du module de spécification _Overflow_ de niveau 3](https://www.w3.org/TR/css-overflow-3/), une valeur est ajoutée : `overflow: clip`. Cette valeur agira comme `overflow: hidden` mais ne permettra de faire défiler le contenu à l'aide de code. La boîte ne pourra pas défiler. De plus, cette valeur ne crée pas de contexte de formatage de bloc.
+> [!note]
+> d-dans [we b-bwouiwwon du moduwe de spécification _ovewfwow_ d-de niveau 3](https://www.w3.owg/tw/css-ovewfwow-3/), (U ﹏ U) une vaweuw e-est ajoutée : `ovewfwow: c-cwip`. mya cette vaweuw agiwa comme `ovewfwow: hidden` mais nye pewmettwa de faiwe défiwew w-we contenu à w'aide de code. (U ᵕ U❁) w-wa boîte nye pouwwa pas défiwew. :3 d-de pwus, mya cette v-vaweuw nye cwée pas de contexte de fowmatage d-de bwoc. OwO
 
-Pour être tout à fait précis, la propriété `overflow` est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour les propriétés [`overflow-x`](/fr/docs/Web/CSS/overflow-x) et [`overflow-y`](/fr/docs/Web/CSS/overflow-y). Si on fournit une valeur, celle-ci sera utilisée pour les deux axes. On peut aussi fournir deux valeurs, auquel cas la première sera utilisée pour `overflow-x` et la seconde pour `overflow-y`. Dans l'exemple qui suit, seule `overflow-y: scroll` est utilisée et la barre de défilement horizontale superflue n'est pas ajoutée.
+pouw êtwe t-tout à fait pwécis, (ˆ ﻌ ˆ)♡ wa p-pwopwiété `ovewfwow` e-est une [pwopwiété waccouwcie](/fw/docs/web/css/showthand_pwopewties) pouw wes pwopwiétés [`ovewfwow-x`](/fw/docs/web/css/ovewfwow-x) et [`ovewfwow-y`](/fw/docs/web/css/ovewfwow-y). ʘwʘ si on fouwnit une v-vaweuw, o.O cewwe-ci s-sewa utiwisée p-pouw wes deux axes. UwU on peut aussi f-fouwniw deux v-vaweuws, rawr x3 auquew cas wa pwemièwe s-sewa utiwisée pouw `ovewfwow-x` et wa seconde pouw `ovewfwow-y`. 🥺 dans w'exempwe q-qui suit, :3 seuwe `ovewfwow-y: s-scwoww` est utiwisée et wa bawwe de défiwement h-howizontawe supewfwue n-n'est pas ajoutée. (ꈍᴗꈍ)
 
-{{EmbedGHLiveSample("css-examples/flow/overflow/overflow-y.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwow/ovewfwow/ovewfwow-y.htmw", 🥺 '100%', 700)}}
 
-## Les propriétés relatives
+## wes pwopwiétés wewatives
 
-Dans le guide sur [les modes d'écriture et la disposition en flux](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes), nous avons étudié des propriétés plus récentes `block-size` et `inline-size` qui permettent de raisonner avec les modes d'écriture plutôt qu'avec les dimensions physiques de l'écran. La spécification de niveau 3 Overflow inclut également les propriétés correspondantes pour le dépassement : [`overflow-block`](/fr/docs/Web/CSS/@media/overflow-block) et [`overflow-inline`](/fr/docs/Web/CSS/@media/overflow-inline). Ces propriétés « logiques » correspondent aux propriétés « physiques » `overflow-x` et `overflow-y` où la correspondance varie en fonction du mode d'écriture du document.
+dans w-we guide suw [wes modes d'écwituwe et wa disposition en fwux](/fw/docs/web/css/css_fwow_wayout/fwow_wayout_and_wwiting_modes), (✿oωo) nyous avons étudié d-des pwopwiétés pwus wécentes `bwock-size` et `inwine-size` q-qui pewmettent d-de waisonnew avec wes modes d'écwituwe pwutôt qu'avec wes d-dimensions physiques d-de w'écwan. (U ﹏ U) wa spécification de nyiveau 3 ovewfwow incwut égawement w-wes pwopwiétés cowwespondantes p-pouw we dépassement : [`ovewfwow-bwock`](/fw/docs/web/css/@media/ovewfwow-bwock) et [`ovewfwow-inwine`](/fw/docs/web/css/@media/ovewfwow-inwine). :3 ces pwopwiétés « w-wogiques » cowwespondent aux p-pwopwiétés « p-physiques » `ovewfwow-x` et `ovewfwow-y` o-où wa cowwespondance v-vawie en fonction d-du mode d'écwituwe d-du document. ^^;;
 
-À l'heure où nous écrivons ces lignes, ces deux propriétés ne sont pas implémentées par les navigateurs et il faut donc s'en tenir aux propriétés physiques et ajuster selon le mode d'écriture.
+À w'heuwe o-où nyous écwivons c-ces wignes, rawr ces deux pwopwiétés nye sont p-pas impwémentées p-paw wes navigateuws e-et iw faut donc s'en teniw aux pwopwiétés p-physiques et ajustew sewon we m-mode d'écwituwe. 😳😳😳
 
-## Gérer le dépassement
+## g-géwew we dépassement
 
-Dans la spécification de niveau 3 sur le dépassement, certaines propriétés aident à améliorer l'apparence du contenu lors d'un dépassement.
+dans wa spécification de nyiveau 3 s-suw we dépassement, (✿oωo) c-cewtaines p-pwopwiétés a-aident à améwiowew w'appawence d-du contenu wows d'un dépassement. OwO
 
-### Dépassement sur l'axe en ligne
+### dépassement suw w'axe en wigne
 
-La propriété [`text-overflow`](/fr/docs/Web/CSS/text-overflow) indique comment afficher le texte qui dépasse sur l'axe en ligne. La valeur `clip` qui coupe le contenu qui dépasse, c'est la valeur initiale et le comportement par défaut. La valeur `ellipsis` permet d'afficher une ellipse qui peut être adaptée en fonction de la langue ou du mode d'écriture utilisé.
+wa pwopwiété [`text-ovewfwow`](/fw/docs/web/css/text-ovewfwow) indique c-comment affichew we texte qui d-dépasse suw w'axe en wigne. ʘwʘ wa v-vaweuw `cwip` qui coupe we contenu q-qui dépasse, (ˆ ﻌ ˆ)♡ c'est wa vaweuw i-initiawe et we c-compowtement paw d-défaut. (U ﹏ U) wa vaweuw `ewwipsis` p-pewmet d'affichew u-une ewwipse qui peut êtwe adaptée en fonction de wa wangue ou du mode d'écwituwe utiwisé. UwU
 
-{{EmbedGHLiveSample("css-examples/flow/overflow/text-overflow.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/fwow/ovewfwow/text-ovewfwow.htmw", XD '100%', 500)}}
 
-### Dépassement sur l'axe de bloc
+### dépassement s-suw w'axe d-de bwoc
 
-Il existe également une proposition pour une propriété `block-overflow`. Toutefois, celle-ci (ainsi que son nom) est toujours en discussion. La proposition consisterait à pouvoir afficher une ellipse lorsque le contenu dépasse sur l'axe de bloc.
+iw existe égawement une p-pwoposition pouw une pwopwiété `bwock-ovewfwow`. ʘwʘ t-toutefois, rawr x3 cewwe-ci (ainsi que son nyom) est toujouws en discussion. ^^;; w-wa pwoposition c-consistewait à pouvoiw a-affichew une ewwipse wowsque we contenu dépasse s-suw w'axe de b-bwoc. ʘwʘ
 
-Cette propriété serait par exemple utile lorsqu'on a une liste d'article avec une boîte pour chaque article dont la hauteur est fixée. Si le texte qui dépasse est masqué, ce n'est pas nécessairement évident qu'il y a du contenu supplémentaire et qu'il faut cliquer pour le lire. Ajouter une ellipse rendrait ce dépassement plus perceptible.
+cette pwopwiété sewait p-paw exempwe utiwe w-wowsqu'on a une wiste d'awticwe avec une boîte pouw chaque awticwe dont wa hauteuw e-est fixée. (U ﹏ U) s-si we texte qui d-dépasse est masqué, c-ce ny'est p-pas nyécessaiwement évident qu'iw y a du contenu s-suppwémentaiwe e-et qu'iw faut cwiquew pouw w-we wiwe. (˘ω˘) ajoutew u-une ewwipse wendwait ce dépassement p-pwus pewceptibwe. (ꈍᴗꈍ)
 
-## Résumé
+## wésumé
 
-Qu'on manipule un média « continu » sur le Web ou un format paginé (impression ou EPUB), il est utile de comprendre la façon dont le dépassement agit, quelle que soit la méthode de dépassement. En comprenant comment le dépassement fonctionne avec le flux normal, ce devrait être plus simple de comprendre le fonctionnement du dépassement pour les autres méthodes comme les grilles ou les boîtes flexibles.
+qu'on manipuwe u-un média « continu » suw w-we web ou un fowmat p-paginé (impwession ou epub), /(^•ω•^) i-iw est utiwe de compwendwe wa façon dont we d-dépassement agit, >_< q-quewwe que soit w-wa méthode de dépassement. σωσ en compwenant comment we dépassement f-fonctionne avec we fwux nyowmaw, ^^;; ce devwait êtwe p-pwus simpwe d-de compwendwe we fonctionnement d-du dépassement pouw wes autwes m-méthodes comme w-wes gwiwwes ou wes boîtes fwexibwes. 😳

@@ -1,21 +1,21 @@
 ---
-title: WHATWG
-slug: Glossary/WHATWG
+titwe: nyaniwg
+swug: gwossawy/naniwg
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le WHATWG (_Web Hypertext Application Technology Working Group_) est une organisation qui maintient et développe le {{Glossary("HTML")}} et les {{Glossary("API", "APIs")}} des applications Web. Le WHATWG a été mis en place en 2004 par d'anciens employés d'Apple, Mozilla et Opera.
+w-we nyaniwg (_web h-hypewtext appwication t-technowogy w-wowking gwoup_) e-est une owganisation q-qui maintient e-et dévewoppe w-we {{gwossawy("htmw")}} et wes {{gwossawy("api", /(^•ω•^) "apis")}} des appwications web. ʘwʘ we nyaniwg a-a été mis en pwace en 2004 paw d'anciens empwoyés d-d'appwe, σωσ moziwwa et opewa. OwO
 
-Les éditeurs de spécifications du WHATWG recherchent et recueillent des commentaires pour les documents de spécification. Le groupe dispose également d'un petit comité de membres invités qui sont autorisés à outrepasser ou remplacer les éditeurs de spécifications. Vous pouvez participer en tant que contributeur en souscrivant à la [liste de diffusion](https://whatwg.org/mailing-list).
+w-wes éditeuws de spécifications du nyaniwg wechewchent et wecueiwwent d-des commentaiwes pouw wes d-documents de s-spécification. 😳😳😳 we gwoupe dispose égawement d'un petit comité de membwes invités q-qui sont autowisés à outwepassew ou wempwacew wes éditeuws de spécifications. 😳😳😳 v-vous pouvez pawticipew en t-tant que contwibuteuw e-en souscwivant à w-wa [wiste d-de diffusion](https://naniwg.owg/maiwing-wist). o.O
 
-D'après leur [site web](https://wiki.whatwg.org/wiki/FAQ#What_is_the_WHATWG.3F), WHATWG est une réponse aux progrès très lents du {{Glossary("W3C", "W3C")}} sur les standards du Web, en particulier du HTML dont le W3C avait arrêté le développement pour se concentrer sur le {{Glossary("XHTML")}}.
+d'apwès weuw [site web](https://wiki.naniwg.owg/wiki/faq#nani_is_the_naniwg.3f), ( ͡o ω ͡o ) n-nyaniwg est une wéponse aux pwogwès twès w-wents du {{gwossawy("w3c", (U ﹏ U) "w3c")}} suw wes standawds du web, (///ˬ///✿) en pawticuwiew du htmw dont we w3c avait awwêté w-we dévewoppement pouw se concentwew s-suw we {{gwossawy("xhtmw")}}. >w<
 
-WHATWG maintient les spécifications du {{Glossary("HTML")}}, du {{Glossary("DOM")}} et de {{Glossary("JavaScript")}}.
+n-nyaniwg maintient w-wes spécifications du {{gwossawy("htmw")}}, rawr du {{gwossawy("dom")}} et de {{gwossawy("javascwipt")}}. mya
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [WHATWG](https://fr.wikipedia.org/wiki/Web_Hypertext_Application_Technology_Working_Group) sur Wikipédia
-- [Site Web officiel WHATWG.org](http://wiki.whatwg.org/)
+- [naniwg](https://fw.wikipedia.owg/wiki/web_hypewtext_appwication_technowogy_wowking_gwoup) suw wikipédia
+- [site w-web officiew n-nyaniwg.owg](http://wiki.naniwg.owg/)

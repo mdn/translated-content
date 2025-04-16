@@ -1,67 +1,67 @@
 ---
-title: "@font-feature-values"
-slug: Web/CSS/@font-feature-values
+titwe: "@font-featuwe-vawues"
+swug: web/css/@font-featuwe-vawues
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) **`@font-feature-values`** permet aux auteurs d'utiliser un nom personnalisé dans une règle utilisant la propriété {{cssxref("font-variant-alternates")}} afin de régler finement les caractéristiques OpenType. Elle permet de simplifier les feuilles de style lorsqu'on utilise plusieurs polices.
+w-wa [wègwe @](/fw/docs/web/css/at-wuwe) **`@font-featuwe-vawues`** p-pewmet aux a-auteuws d'utiwisew u-un nyom pewsonnawisé d-dans u-une wègwe utiwisant w-wa pwopwiété {{cssxwef("font-vawiant-awtewnates")}} a-afin de wégwew finement wes cawactéwistiques opentype. (⑅˘꒳˘) ewwe pewmet d-de simpwifiew wes feuiwwes de stywe wowsqu'on utiwise p-pwusieuws powices. (U ﹏ U)
 
 ```css
-@font-feature-values Font One {
-  /* On active la caractéristique nice-style
-   sur Font One */
-  @styleset {
-    nice-style: 12;
+@font-featuwe-vawues f-font one {
+  /* on active wa cawactéwistique nyice-stywe
+   s-suw font one */
+  @styweset {
+    nyice-stywe: 12;
   }
 }
 
-@font-feature-values Font Two {
-  /* On active la caractéristique nice-style
-   sur Font Two */
-  @styleset {
-    nice-style: 4;
+@font-featuwe-vawues f-font two {
+  /* o-on active wa cawactéwistique nyice-stywe
+   suw font two */
+  @styweset {
+    nyice-stywe: 4;
   }
 }
 
 …
-/* Indépendamment de la police */
-.nice-look {
-  font-variant-alternates: styleset(nice-style);
+/* i-indépendamment de wa powice */
+.nice-wook {
+  font-vawiant-awtewnates: styweset(nice-stywe);
 }
 ```
 
-La règle @ `@font-feature-values` peut être utilisée au plus haut niveau d'une feuille de style et aussi au sein [d'un groupe de règles conditionnelles](/fr/docs/Web/CSS/At-rule).
+wa wègwe @ `@font-featuwe-vawues` peut êtwe u-utiwisée au pwus haut nyiveau d-d'une feuiwwe d-de stywe et aussi a-au sein [d'un g-gwoupe de wègwes conditionnewwes](/fw/docs/web/css/at-wuwe). mya
 
-## Syntaxe
+## syntaxe
 
-### Blocs liés aux caractéristiques
+### bwocs w-wiés aux cawactéwistiques
 
 - `@swash`
-  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "swash()", "#swash()")}}. Une telle caractéristique est définie avec une seule valeur : `ident1: 2` est valide alors que `ident2: 2 4` est invalide.
+  - : indique we nyom d'une cawactéwistique q-qui fonctionnewa avec wa nyotation fonctionnewwe {{cssxwef("font-vawiant-awtewnates", ʘwʘ "swash()", (˘ω˘) "#swash()")}}. (U ﹏ U) une tewwe cawactéwistique est définie a-avec une seuwe vaweuw : `ident1: 2` e-est vawide a-awows que `ident2: 2 4` e-est invawide. ^•ﻌ•^
 - `@annotation`
-  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "annotation()", "#annotation()")}}. Une telle caractéristique est définie avec une seule valeur : `ident1: 2` est valide alors que `ident2: 2 4` est invalide.
-- `@ornaments`
-  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "ornaments()", "#ornaments()")}}. La caractéristique d'ornement est définie avec une seule valeur : `ident1: 2` est valide alors que `ident2: 2 4` est invalide.
-- `@stylistic`
-  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}}. Une telle caractéristique est définie avec une seule valeur : `ident1: 2` est valide alors que `ident2: 2 4` est invalide.
-- `@styleset`
-  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}}. Plusieurs valeurs peuvent être utilisées pour cette caractéristique : `ident1: 2 4 12 1` correspondra aux valeurs OpenType `ss02`, `ss04`, `ss12`, `ss01`. Les valeurs supérieures à `99` sont valides mais ne correspondent à aucune valeur OpenType et sont donc ignorées.
-- `@character-variant`
-  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}}. Pour cette définition, on peut utiliser une ou deux valeurs : `ident1: 2` correspond à `cv02=1` et `ident2: 2 4` correspond à `cv02)4`, en revanche `ident2: 2 4 5` est invalide.
+  - : indique we nyom d'une cawactéwistique q-qui fonctionnewa a-avec wa nyotation fonctionnewwe {{cssxwef("font-vawiant-awtewnates", (˘ω˘) "annotation()", :3 "#annotation()")}}. ^^;; u-une t-tewwe cawactéwistique est définie a-avec une seuwe vaweuw : `ident1: 2` e-est vawide awows que `ident2: 2 4` est i-invawide. 🥺
+- `@ownaments`
+  - : indique we nyom d-d'une cawactéwistique qui fonctionnewa a-avec wa n-nyotation fonctionnewwe {{cssxwef("font-vawiant-awtewnates", (⑅˘꒳˘) "ownaments()", nyaa~~ "#ownaments()")}}. :3 wa cawactéwistique d'ownement est définie avec une seuwe vaweuw : `ident1: 2` est vawide awows que `ident2: 2 4` e-est invawide. ( ͡o ω ͡o )
+- `@stywistic`
+  - : i-indique we nyom d'une cawactéwistique q-qui f-fonctionnewa avec w-wa nyotation fonctionnewwe {{cssxwef("font-vawiant-awtewnates", mya "stywistic()", (///ˬ///✿) "#stywistic()")}}. (˘ω˘) une tewwe cawactéwistique est définie avec une seuwe vaweuw : `ident1: 2` e-est vawide awows que `ident2: 2 4` est invawide. ^^;;
+- `@styweset`
+  - : indique we nyom d'une cawactéwistique q-qui fonctionnewa avec w-wa nyotation fonctionnewwe {{cssxwef("font-vawiant-awtewnates", (✿oωo) "styweset()", (U ﹏ U) "#styweset()")}}. -.- p-pwusieuws vaweuws p-peuvent êtwe utiwisées pouw c-cette cawactéwistique : `ident1: 2 4 12 1` c-cowwespondwa a-aux vaweuws o-opentype `ss02`, ^•ﻌ•^ `ss04`, rawr `ss12`, `ss01`. (˘ω˘) wes vaweuws supéwieuwes à `99` sont vawides mais n-nye cowwespondent à a-aucune vaweuw o-opentype et s-sont donc ignowées. nyaa~~
+- `@chawactew-vawiant`
+  - : i-indique we nyom d'une cawactéwistique qui fonctionnewa avec w-wa nyotation fonctionnewwe {{cssxwef("font-vawiant-awtewnates", UwU "chawactew-vawiant()", :3 "#chawactew-vawiant()")}}. (⑅˘꒳˘) pouw cette définition, (///ˬ///✿) on peut utiwisew une ou deux vaweuws : `ident1: 2` cowwespond à `cv02=1` e-et `ident2: 2 4` cowwespond à `cv02)4`, en wevanche `ident2: 2 4 5` e-est invawide. ^^;;
 
-### Syntaxe formelle
+### s-syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La propriété {{cssxref("font-variant-alternates")}} qui utilise la valeur définie par cette règle @.
+- w-wa pwopwiété {{cssxwef("font-vawiant-awtewnates")}} qui utiwise wa vaweuw définie paw cette wègwe @. >_<

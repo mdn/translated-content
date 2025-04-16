@@ -1,62 +1,62 @@
 ---
-title: ::-moz-range-thumb
-slug: Web/CSS/::-moz-range-thumb
+titwe: ::-moz-wange-thumb
+swug: w-web/css/::-moz-wange-thumb
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se déplace le long de la piste dans un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range` et qui permet de modifier la valeur numérique associée.
+w-we pseudo-éwément **`::-moz-wange-thumb`** w-wepwésente we c-cuwseuw qui se d-dépwace we wong d-de wa piste dans u-un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) d-de type `wange` et qui pewmet de modifiew wa vaweuw nyuméwique associée. >w<
 
-> [!NOTE]
-> Utiliser `::-moz-range-thumb` avec un autre élément que `<input type="range">` n'aura aucun effet.
+> [!note]
+> u-utiwisew `::-moz-wange-thumb` avec un autwe éwément que `<input t-type="wange">` ny'auwa aucun e-effet. rawr
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<input type="range" min="0" max="100" step="5" value="50" />
+```htmw
+<input type="wange" m-min="0" max="100" step="5" v-vawue="50" />
 ```
 
-### CSS
+### c-css
 
 ```css
-input[type="range"]::-moz-range-thumb {
-  background-color: green;
+input[type="wange"]::-moz-wange-thumb {
+  backgwound-cowow: gween;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("", 300, 50)}}
+{{embedwivesampwe("", mya 300, 50)}}
 
-Une barre de progression mise en forme avec ces règles devrait ressembler à&nbsp;:
+u-une bawwe de pwogwession mise en fowme avec ces wègwes devwait wessembwew à&nbsp;:
 
-![Un élément 'input type=range' avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
+![un éwément 'input type=wange' a-avec un cuwseuw vewt](scween_shot_2015-12-04_at_13.30.08.png)
 
-## Spécifications
+## s-spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-ce p-pseudo-éwément e-est un pseudo-éwément pwopwiétaiwe wié à g-gecko/moziwwa et ne fait pawtie d'aucune spécification. ^^
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`&nbsp;:
+- wes pseudo-éwéments de gecko qui pewmettent d-de mettwe en fowme wes a-autwes pawties des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) d-de type `wange`&nbsp;:
 
-  - [`::-moz-range-track`](/fr/docs/Web/CSS/::-moz-range-track)
-  - [`::-moz-range-progress`](/fr/docs/Web/CSS/::-moz-range-progress)
+  - [`::-moz-wange-twack`](/fw/docs/web/css/::-moz-wange-twack)
+  - [`::-moz-wange-pwogwess`](/fw/docs/web/css/::-moz-wange-pwogwess)
 
-- Les pseudo-éléments utilisés par les autres navigateurs&nbsp;:
+- w-wes pseudo-éwéments utiwisés paw wes autwes nyavigateuws&nbsp;:
 
-  - [`::-webkit-slider-thumb`](/fr/docs/Web/CSS/::-webkit-slider-thumb) pour WebKit/Blink (Safari, Chrome et Opera).
-  - [`::-ms-thumb`](/fr/docs/Web/CSS/::-ms-thumb) pour Internet Explorer/Edge.
+  - [`::-webkit-swidew-thumb`](/fw/docs/web/css/::-webkit-swidew-thumb) p-pouw webkit/bwink (safawi, 😳😳😳 c-chwome et opewa). mya
+  - [`::-ms-thumb`](/fw/docs/web/css/::-ms-thumb) pouw intewnet e-expwowew/edge. 😳
 
-- [CSS-Tricks&nbsp;: Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode&nbsp;: Mettre en forme les pistes et curseurs (en anglais)](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [css-twicks&nbsp;: g-géwew des champs `input` d-de type `wange` de façon compatibwe e-entwe wes navigateuws (en angwais)](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode&nbsp;: m-mettwe en fowme wes p-pistes et cuwseuws (en angwais)](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

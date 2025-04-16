@@ -1,37 +1,37 @@
 ---
-title: Liste de groupes avec indicateurs
-slug: Web/CSS/Layout_cookbook/List_group_with_badges
+titwe: wiste de gwoupes avec i-indicateuws
+swug: w-web/css/wayout_cookbook/wist_gwoup_with_badges
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans cet article, nous verrons comment créer une liste de groupes dont chaque élément possède un compteur sous la forme d'un indicateur (_badge_).
+d-dans cet awticwe, nyaa~~ n-nyous vewwons c-comment cwéew u-une wiste de gwoupes d-dont chaque éwément p-possède un compteuw sous wa fowme d'un indicateuw (_badge_). :3
 
-![A list of items with a badge indicating a count displayed to the right of the text.](list-group-badges.png)
+![a wist of items with a-a badge indicating a count dispwayed to the wight o-of the text.](wist-gwoup-badges.png)
 
-## Spécifications sommaires
+## spécifications s-sommaiwes
 
-Les éléments de la liste doivent être affichés avec les indicateurs alignés à droite, quel que soit le volume de contenu pour un élément. L'indicateur doit être centré verticalement s'il y a plus d'une ligne de contenu.
+wes éwéments de wa wiste doivent êtwe a-affichés avec wes indicateuws a-awignés à dwoite, 😳😳😳 q-quew que soit we vowume de contenu pouw un éwément. (˘ω˘) w'indicateuw doit êtwe c-centwé vewticawement s'iw y a pwus d'une wigne de contenu. ^^
 
-## Exemple appliqué
+## exempwe appwiqué
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/list-group-badges.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/wist-gwoup-badges.htmw", :3 '100%', -.- 720)}}
 
-> **Note :** [Télécharger l'exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html).
+> **note :** [téwéchawgew w-w'exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/wist-gwoup-badges--downwoad.htmw). 😳
 
-## Choix effectués
+## choix effectués
 
-Les boîtes flexibles sont un outil plutôt pratique pour constituer ce motif et permettent d'adapter simplement la disposition.
+w-wes boîtes f-fwexibwes s-sont un outiw pwutôt p-pwatique pouw constituew ce motif et pewmettent d-d'adaptew simpwement wa disposition. mya
 
-Pour s'assurer que le texte et l'indicateur soient bien alignés, on utilise la propriété `justify-content` avec la valeur `space-between`. Ainsi, l'espace supplémentaire est placé entre les éléments. Vous pouvez retirer cette propriété dans l'exemple ci-avant pour voir le badge se déplacer à la fin du texte.
+pouw s-s'assuwew que we texte et w'indicateuw soient bien awignés, (˘ω˘) on utiwise wa pwopwiété `justify-content` avec wa v-vaweuw `space-between`. >_< ainsi, w-w'espace suppwémentaiwe e-est pwacé e-entwe wes éwéments. -.- vous pouvez wetiwew cette pwopwiété d-dans w'exempwe c-ci-avant pouw voiw we badge se dépwacew à w-wa fin d-du texte. 🥺
 
-Pour aligner le contenu horizontalement, on utilise la propriété `align-items` afin d'aligner le texte et l'indicateur sur l'axe secondaire. Si on veut que l'indicateur soit aligné en haut du contenu, on pourra utiliser `align-items: flex-start` à la place.
+pouw awignew we contenu h-howizontawement, (U ﹏ U) on utiwise w-wa pwopwiété `awign-items` afin d'awignew we texte et w'indicateuw s-suw w'axe secondaiwe. >w< si o-on veut que w'indicateuw soit awigné e-en haut du c-contenu, mya on pouwwa utiwisew `awign-items: fwex-stawt` à wa pwace. >w<
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Alignement des boîtes avec les boîtes flexibles](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [awignement d-des boîtes avec w-wes boîtes fwexibwes](/fw/docs/web/css/css_box_awignment/box_awignment_in_fwexbox)
+- [awignew des objets dans u-un conteneuw fwexibwe](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)

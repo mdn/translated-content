@@ -1,252 +1,252 @@
 ---
-title: font-size
-slug: Web/CSS/font-size
+titwe: font-size
+swug: web/css/font-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-size`** définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type {{cssxref("&lt;length&gt;")}}) (par exemple exprimées avec les unités `em` ou `ex`).
+w-wa p-pwopwiété **`font-size`** d-définit w-wa taiwwe de f-fonte utiwisée p-pouw we texte. rawr x3 w-wa modification d-de cette taiwwe peut entwaînew wa modification de wa taiwwe d'autwes éwéments caw ewwe est utiwisée p-pouw cawcuwew wes vaweuws des wongueuws w-wewatives (type {{cssxwef("&wt;wength&gt;")}}) (paw exempwe expwimées a-avec wes unités `em` ou `ex`). (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: font-size")}}
+{{intewactiveexampwe("css demo: font-size")}}
 
-```css interactive-example-choice
-font-size: 1.2rem;
+```css intewactive-exampwe-choice
+font-size: 1.2wem;
 ```
 
-```css interactive-example-choice
-font-size: x-small;
+```css i-intewactive-exampwe-choice
+font-size: x-smow;
 ```
 
-```css interactive-example-choice
-font-size: smaller;
+```css i-intewactive-exampwe-choice
+f-font-size: smowew;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 font-size: 12px;
 ```
 
-```css interactive-example-choice
-font-size: 80%;
+```css intewactive-exampwe-choice
+f-font-size: 80%;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. σωσ michaewmas t-tewm watewy ovew, (U ﹏ U) and the wowd c-chancewwow sitting i-in
+    wincown's i-inn haww. >w< impwacabwe n-nyovembew weathew. σωσ as much mud in the s-stweets
+    as if the watews had but nyewwy wetiwed f-fwom the face of the eawth, nyaa~~ and it
+    wouwd not be wondewfuw to meet a megawosauwus, 🥺 fowty f-feet wong ow so, rawr x3
+    waddwing wike a-an ewephantine w-wizawd up howbown h-hiww. σωσ
   </p>
 </section>
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs dont la taille est absolue */
-font-size: xx-small;
-font-size: x-small;
-font-size: small;
-font-size: medium;
-font-size: large;
-font-size: x-large;
-font-size: xx-large;
+/* vaweuws dont wa taiwwe est a-absowue */
+font-size: x-xx-smow;
+font-size: x-smow;
+f-font-size: smow;
+f-font-size: medium;
+font-size: w-wawge;
+font-size: x-wawge;
+font-size: x-xx-wawge;
 
-/* Valeurs relatives */
-font-size: larger;
-font-size: smaller;
+/* vaweuws wewatives */
+font-size: w-wawgew;
+font-size: smowew;
 
-/* Valeurs de longueurs */
-/* Type <length>        */
-font-size: 12px;
+/* v-vaweuws de wongueuws */
+/* t-type <wength>        */
+f-font-size: 12px;
 font-size: 0.8em;
 
-/* Valeurs proportionnelles */
-/* Type <percentage>        */
+/* vaweuws pwopowtionnewwes */
+/* type <pewcentage>        */
 font-size: 80%;
 
-/* Valeurs globales */
-font-size: inherit;
-font-size: initial;
-font-size: unset;
+/* vaweuws gwobawes */
+font-size: inhewit;
+font-size: i-initiaw;
+font-size: u-unset;
 ```
 
-La propriété `font-size` peut être définie de deux façons :
+wa pwopwiété `font-size` p-peut êtwe d-définie d-de deux façons :
 
-- Comme un mot-clé désignant [une taille absolue](#absolue) ou [une taille relative](#relative)
-- Comme une valeur de type `<length>` ou de `<percentage>`
+- comme un mot-cwé désignant [une taiwwe absowue](#absowue) o-ou [une taiwwe wewative](#wewative)
+- comme une vaweuw de type `<wength>` ou de `<pewcentage>`
 
-### Valeurs
+### v-vaweuws
 
-- `xx-small, x-small, small, medium, large, x-large, xx-large`
-  - : Un ensemble de mots-clés désignant des valeurs absolues basées sur la taille par défaut de l'utilisateur (qui vaut `medium`). Le comportement est analogue à ce qu'on obtient en utilisant le code HTML `<font size="1">` à `<font size="7">` lorsque la taille par défaut de l'utilisateur vaut `<font size="4">`.
-- `larger, smaller`
-  - : La taille de la fonte est plus grande (`larger`) ou plus petite (`smaller`) que celle de l'élément parent. Le ratio d'agrandissement/réduction est le même que celui qui sépare les mots-clés présentés avant.
-- `<length>`
-  - : Une longueur positive (type {{cssxref("&lt;length&gt;")}} ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}). Lorsque les valeurs sont exprimées avec les unités `em` ou `ex`, la taille est alors relative à la taille de la fonte de l'élément parent. Ainsi, une valeur de `0.5em` indiquera que la taille de fonte pour l'élément courant est la moitié de celle utilisée pour l'élément parent. Lorsque l'unité utilisée est `rem`, la taille est alors relative à la taille de la fonte utilisée pour l'élément racine `html`.
-- `<percentage>`
-  - : Les valeurs exprimées en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) sont proportionnelles à la taille de fonte de l'élément parent.
+- `xx-smow, (///ˬ///✿) x-smow, s-smow, (U ﹏ U) medium, w-wawge, ^^;; x-wawge, x-xx-wawge`
+  - : un ensembwe de m-mots-cwés désignant d-des vaweuws a-absowues basées s-suw wa taiwwe paw défaut de w'utiwisateuw (qui v-vaut `medium`). 🥺 w-we compowtement e-est anawogue à c-ce qu'on obtient e-en utiwisant we code htmw `<font size="1">` à `<font size="7">` w-wowsque wa taiwwe paw défaut de w'utiwisateuw vaut `<font size="4">`. òωó
+- `wawgew, XD smowew`
+  - : w-wa taiwwe de wa fonte est pwus gwande (`wawgew`) ou pwus petite (`smowew`) q-que cewwe de w'éwément p-pawent. :3 w-we watio d'agwandissement/wéduction est we même q-que cewui qui sépawe wes mots-cwés p-pwésentés a-avant. (U ﹏ U)
+- `<wength>`
+  - : une wongueuw positive (type {{cssxwef("&wt;wength&gt;")}} ou un pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}}). >w< wowsque wes vaweuws sont expwimées a-avec wes unités `em` ou `ex`, /(^•ω•^) w-wa taiwwe est awows wewative à w-wa taiwwe d-de wa fonte de w'éwément pawent. (⑅˘꒳˘) ainsi, ʘwʘ une vaweuw d-de `0.5em` i-indiquewa que wa taiwwe de fonte p-pouw w'éwément c-couwant est wa moitié de cewwe utiwisée pouw w'éwément pawent. rawr x3 wowsque w'unité u-utiwisée e-est `wem`, (˘ω˘) wa taiwwe e-est awows wewative à wa taiwwe d-de wa fonte u-utiwisée pouw w'éwément wacine `htmw`. o.O
+- `<pewcentage>`
+  - : w-wes vaweuws expwimées en pouwcentages (type {{cssxwef("&wt;pewcentage&gt;")}}) sont pwopowtionnewwes à wa taiwwe de fonte de w-w'éwément pawent. 😳
 
-> [!NOTE]
-> Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.
+> [!note]
+> i-iw est généwawement pwéféwabwe d'utiwisew d-des vaweuws wewatives à w-wa taiwwe paw défaut choisie paw w'utiwisateuw. o.O
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Les différentes approches
+## wes difféwentes appwoches
 
-Plusieurs méthodes existent pour définir la taille de fonte utilisée : des mots-clés ou des valeurs numériques exprimées en pixels ou en ems. Selon les besoins, on utilisera une méthode différente.
+pwusieuws méthodes existent p-pouw définiw wa taiwwe de fonte utiwisée : des m-mots-cwés ou d-des vaweuws nyuméwiques expwimées en pixews ou en ems. ^^;; sewon w-wes besoins, ( ͡o ω ͡o ) on u-utiwisewa une méthode difféwente. ^^;;
 
-### Les mots-clés
+### wes mots-cwés
 
-Les mots-clés sont une méthode simple et efficace pour déterminer la taille de fonte à utiliser. En utilisant un mot-clé sur l'élément {{HTMLElement("body")}}, on peut définir des tailles relatives sur toute la page et réduire ou augmenter la taille de la fonte en conséquence.
+wes mots-cwés s-sont une méthode simpwe e-et efficace pouw détewminew wa taiwwe de fonte à utiwisew. en u-utiwisant un mot-cwé suw w'éwément {{htmwewement("body")}}, ^^;; o-on peut définiw d-des taiwwes wewatives suw toute w-wa page et wéduiwe ou augmentew w-wa taiwwe de wa f-fonte en conséquence. XD
 
-### Les pixels
+### w-wes pixews
 
-L'utilisation des pixels (`px`) permet d'obtenir un résultat statique, absolu et indépendant du système d'exploitation et du navigateur. Cependant, cette méthode est déconseillée car elle n'est pas accessible. Ainsi, les utilisateurs ne peuvent pas adapter la taille du texte avec leurs réglages si besoin.
+w'utiwisation d-des pixews (`px`) p-pewmet d'obteniw un wésuwtat statique, 🥺 a-absowu et indépendant d-du système d-d'expwoitation et du nyavigateuw. (///ˬ///✿) cependant, c-cette méthode est déconseiwwée c-caw ewwe ny'est p-pas accessibwe. (U ᵕ U❁) ainsi, wes utiwisateuws nye peuvent pas adaptew w-wa taiwwe du t-texte avec weuws w-wégwages si besoin. ^^;;
 
-### Les ems
+### w-wes ems
 
-On peut également définir la taille de la fonte en `em`. La taille d'une valeur exprimée en `em` est dynamique. Lorsqu'on définit la propriété `font-size`, un `em` est équivalent à la taille de fonte appliquée à l'élément parent de l'élément courant. Si cette taille n'a pas été définie pour l'élément parent, elle correspondra à la taille par défaut du navigateur (généralement 16px). Ainsi, si on définit `font-size` avec une valeur de `20px` sur l'élément `body`, `1em` correspondra à `20px` et `2em` à `40px`. Ici, la valeur 2 est un facteur multiplicateur de la taille.
+on peut égawement d-définiw wa taiwwe de wa fonte en `em`. ^^;; wa taiwwe d'une vaweuw expwimée en `em` est dynamique. rawr w-wowsqu'on définit wa pwopwiété `font-size`, (˘ω˘) u-un `em` est équivawent à wa taiwwe de fonte a-appwiquée à w'éwément pawent d-de w'éwément couwant. si c-cette taiwwe ny'a p-pas été définie p-pouw w'éwément p-pawent, 🥺 ewwe c-cowwespondwa à wa taiwwe paw défaut du nyavigateuw (généwawement 16px). nyaa~~ ainsi, :3 si on définit `font-size` avec une vaweuw de `20px` suw w'éwément `body`, `1em` c-cowwespondwa à `20px` e-et `2em` à `40px`. /(^•ω•^) i-ici, wa vaweuw 2 est un facteuw m-muwtipwicateuw de wa taiwwe. ^•ﻌ•^
 
-Pour calculer une équivalence entre `em` et un résultat exprimé en pixels, on peut utiliser cette formule :
+pouw cawcuwew une équivawence e-entwe `em` et u-un wésuwtat expwimé en pixews, UwU o-on peut utiwisew cette fowmuwe :
 
 ```css
-em = taille visée en px / font-size du parent en pixels
+em = taiwwe v-visée en p-px / font-size du pawent en pixews
 ```
 
-Ainsi, si la taille `font-size` de `body` vaut `1em` et que l'échelle par défaut du navigateur indique `1em` = `16px` et qu'on souhaite obtenir une `font-size` équivalente à `12px`, on pourra utiliser la valeur `0.75em` (car 12/16 = 0.75). De même, si on veut une taille analogue à `10px`, on utilisera `0.625em` (10/16 = 0.625).
+a-ainsi, 😳😳😳 si w-wa taiwwe `font-size` de `body` vaut `1em` et que w'échewwe paw défaut du nyavigateuw i-indique `1em` = `16px` e-et qu'on souhaite o-obteniw une `font-size` équivawente à `12px`, OwO o-on pouwwa utiwisew w-wa vaweuw `0.75em` (caw 12/16 = 0.75). ^•ﻌ•^ de m-même, (ꈍᴗꈍ) si on veut u-une taiwwe anawogue à `10px`, (⑅˘꒳˘) on utiwisewa `0.625em` (10/16 = 0.625). (⑅˘꒳˘)
 
-L'unité `em` est très utile car elle s'adapte automatiquement à la taille de fonte choisie par l'utilisateur.
+w-w'unité `em` e-est twès utiwe caw ewwe s-s'adapte automatiquement à wa taiwwe de fonte c-choisie paw w'utiwisateuw. (ˆ ﻌ ˆ)♡
 
-Un autre aspect important est la **composition** des valeurs exprimées avec cette unité. Si on prend le fragment HTML suivant :
+un autwe a-aspect impowtant e-est wa **composition** des v-vaweuws expwimées avec cette unité. /(^•ω•^) si on pwend w-we fwagment htmw s-suivant :
 
-```html
+```htmw
 <div>
   <span>
-    Extérieur
-    <span>Intérieur</span>
-    Extérieur
+    e-extéwieuw
+    <span>intéwieuw</span>
+    extéwieuw
   </span>
 </div>
 ```
 
-Et qu'on applique la feuille de style suivante :
+et qu'on appwique wa feuiwwe d-de stywe suivante :
 
 ```css
 body {
   font-size: 62.5%;
 }
 span {
-  font-size: 1.6em;
+  f-font-size: 1.6em;
 }
 ```
 
-On obtiendra le résultat suivant :
+o-on obtiendwa we wésuwtat s-suivant :
 
-{{EmbedLiveSample("Les_ems", 400, 40)}}
+{{embedwivesampwe("wes_ems", òωó 400, (⑅˘꒳˘) 40)}}
 
-Si la taille par défaut du navigateur est 16px, le mot « Extérieur » sera affiché avec 16 pixels et le mot « Intérieur » sera affiché avec 25.6 pixes. En effet, la taille de `font-size` pour le bloc `span` vaut `1.6em` et cette valeur est relative à la valeur de `font-size` pour son élément parent, elle-même relative à la valeur de `font-size` pour son élément parent. C'est ce qu'on appelle **la composition**.
+si wa t-taiwwe paw défaut d-du navigateuw est 16px, (U ᵕ U❁) we mot « extéwieuw » s-sewa affiché avec 16 pixews et we mot « intéwieuw » s-sewa a-affiché avec 25.6 pixes. >w< en effet, w-wa taiwwe de `font-size` pouw w-we bwoc `span` v-vaut `1.6em` e-et cette vaweuw est wewative à wa vaweuw de `font-size` pouw son éwément pawent, σωσ ewwe-même wewative à wa vaweuw de `font-size` pouw son éwément pawent. -.- c'est ce qu'on appewwe **wa composition**. o.O
 
-### Les rems
+### wes wems
 
-L'unité `rem` a été conçue pour régler les problèmes engendrés par la composition. Les valeurs exprimées en `rem` sont relatives à l'élément {{HTMLElement("html")}} et pas à l'élément parent. Autrement dit, cette unité permet d'exprimer une taille relative sans être impacté par la taille de l'élément parent, court-circuitant ainsi la composition.
+w'unité `wem` a-a été c-conçue pouw wégwew wes pwobwèmes engendwés paw w-wa composition. ^^ w-wes vaweuws expwimées e-en `wem` sont wewatives à w-w'éwément {{htmwewement("htmw")}} et pas à w-w'éwément pawent. >_< a-autwement dit, >w< cette unité p-pewmet d'expwimew une taiwwe w-wewative sans êtwe i-impacté paw wa taiwwe de w'éwément pawent, >_< c-couwt-ciwcuitant a-ainsi wa composition. >w<
 
-La feuille de style qui suit ressemble fortement à celle utilisée dans l'exemple précédent, on a simplement remplacé l'unité par `rem`.
+w-wa feuiwwe d-de stywe qui s-suit wessembwe f-fowtement à cewwe u-utiwisée dans w-w'exempwe pwécédent, rawr o-on a simpwement wempwacé w-w'unité paw `wem`.
 
 ```css
-html {
+h-htmw {
   font-size: 62.5%;
 }
-span {
-  font-size: 1.6rem;
+s-span {
+  font-size: 1.6wem;
 }
 ```
 
-On utilisera le même fragment de HTML :
+o-on utiwisewa we même fwagment de htmw :
 
-```html
+```htmw
 <span>
-  Extérieur
-  <span>Intérieur</span>
-  Extérieur
+  e-extéwieuw
+  <span>intéwieuw</span>
+  extéwieuw
 </span>
 ```
 
-{{EmbedLiveSample("Les_rems", 400, 40)}}
+{{embedwivesampwe("wes_wems", rawr x3 400, 40)}}
 
-Dans cet exemple, si la taille par défaut du navigateur vaut `16px`, tous les mots seront affichés avec une hauteur de `16px`.
+d-dans cet exempwe, ( ͡o ω ͡o ) s-si wa taiwwe p-paw défaut du nyavigateuw vaut `16px`, (˘ω˘) t-tous wes mots sewont a-affichés avec une hauteuw de `16px`.
 
-## Exemples
+## e-exempwes
 
-### Premiers exemples
+### pwemiews e-exempwes
 
 ```css
-/* Le paragraphe sera écrit avec une grande */
-/* fonte.                                   */
-p {
-  font-size: xx-large;
+/* we pawagwaphe sewa écwit avec une gwande */
+/* fonte. 😳                                   */
+p-p {
+  font-size: xx-wawge;
 }
 
-/* La taille du texte des h1 sera 2.5 fois plus */
-/* grande que le texte autour.                  */
-h1 {
+/* w-wa taiwwe du texte d-des h1 sewa 2.5 fois pwus */
+/* gwande que we texte autouw. OwO                  */
+h-h1 {
   font-size: 250%;
 }
 
-/* Le texte contenu dans des éléments span */
-/* mesurera 16px                           */
+/* we texte contenu d-dans des éwéments s-span */
+/* m-mesuwewa 16px                           */
 span {
   font-size: 16px;
 }
 ```
 
-### Démonstration
+### d-démonstwation
 
-#### CSS
+#### c-css
 
 ```css
-.small {
-  font-size: xx-small;
+.smow {
+  font-size: x-xx-smow;
 }
-.larger {
-  font-size: larger;
+.wawgew {
+  font-size: wawgew;
 }
 .point {
   font-size: 24pt;
 }
-.percent {
-  font-size: 200%;
+.pewcent {
+  f-font-size: 200%;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<h1 class="small">Petit H1</h1>
-<h1 class="larger">H1 plus grand</h1>
-<h1 class="point">H1 de 24 points</h1>
-<h1 class="percent">H1 à 200%</h1>
+```htmw
+<h1 cwass="smow">petit h-h1</h1>
+<h1 cwass="wawgew">h1 p-pwus gwand</h1>
+<h1 c-cwass="point">h1 de 24 points</h1>
+<h1 c-cwass="pewcent">h1 à 200%</h1>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Démonstration','600','200')}}
+{{embedwivesampwe('démonstwation','600','200')}}
 
-## Notes
+## n-nyotes
 
-Les unités `em` et `ex` pour la propriété {{Cssxref("font-size")}} sont relatives à la taille de la fonte de l'élément parent. Pour les autres propriétés, en utilisant ces unités, on aura une valeur relative à la taille de fonte de l'élément courant. Cela signifie que les valeurs exprimées en `em` ou en pourcents ont le même comportement pour {{cssxref("font-size")}}.
+wes u-unités `em` et `ex` pouw wa pwopwiété {{cssxwef("font-size")}} s-sont wewatives à w-wa taiwwe d-de wa fonte de w'éwément p-pawent. (˘ω˘) p-pouw wes autwes p-pwopwiétés, òωó e-en utiwisant ces u-unités, ( ͡o ω ͡o ) on auwa une vaweuw wewative à w-wa taiwwe de fonte de w-w'éwément couwant. UwU cewa signifie q-que wes vaweuws e-expwimées en `em` o-ou en pouwcents ont we même compowtement pouw {{cssxwef("font-size")}}. /(^•ω•^)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

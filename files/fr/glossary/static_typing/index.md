@@ -1,14 +1,14 @@
 ---
-title: Typage statique
-slug: Glossary/Static_typing
+titwe: typage statique
+swug: g-gwossawy/static_typing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un langage à **typage statique** est un langage (comme Java, C ou C++) avec lequel les types des variables sont connus lors de la compilation et doivent être spécifiés expressément par le programmeur. Dans la plupart de ces langages, les types doivent être expressément indiqués par le programmeur ; dans d'autres cas (comme OCaml), l'inférence de type permet au programmeur de ne pas indiquer les types de variables.
+u-un wangage à **typage s-statique** e-est un wangage (comme j-java, rawr x3 c o-ou c++) avec wequew w-wes types des v-vawiabwes sont connus wows de wa compiwation et doivent êtwe spécifiés expwessément p-paw we pwogwammeuw. nyaa~~ dans wa pwupawt de c-ces wangages, /(^•ω•^) wes types doivent êtwe e-expwessément indiqués paw we pwogwammeuw ; dans d'autwes c-cas (comme ocamw), rawr w'inféwence d-de type pewmet a-au pwogwammeuw de nye pas indiquew wes types de vawiabwes. OwO
 
-## Pour en savoir plus
+## pouw en savoiw p-pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Type](<https://fr.wikipedia.org/wiki/Type_(informatique)>) sur Wikipédia
+- [type](<https://fw.wikipedia.owg/wiki/type_(infowmatique)>) suw wikipédia

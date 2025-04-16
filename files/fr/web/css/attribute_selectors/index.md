@@ -1,220 +1,220 @@
 ---
-title: Sélecteurs d'attribut
-slug: Web/CSS/Attribute_selectors
+titwe: séwecteuws d'attwibut
+s-swug: web/css/attwibute_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les sélecteurs d'attribut permettent de cibler un élément selon la présence d'un attribut ou selon la valeur donnée d'un attribut.
+w-wes séwecteuws d-d'attwibut pewmettent d-de cibwew u-un éwément s-sewon wa pwésence d-d'un attwibut o-ou sewon wa vaweuw donnée d'un attwibut. OwO
 
 ```css
-/* Les éléments <a> avec un attribut title */
-a[title] {
-  color: purple;
+/* wes éwéments <a> avec un a-attwibut titwe */
+a[titwe] {
+  cowow: puwpwe;
 }
 
-/* Les éléments <a> avec un href qui correspond */
-/* à "https://example.org" */
-a[href="https://example.org"]
+/* w-wes éwéments <a> avec un h-hwef qui cowwespond */
+/* à "https://exampwe.owg" */
+a[hwef="https://exampwe.owg"]
 {
-  color: green;
+  cowow: gween;
 }
 
-/* Les éléments <a> dont href contient "example" */
-a[href*="example"] {
-  font-size: 2em;
+/* wes éwéments <a> d-dont hwef contient "exampwe" */
+a[hwef*="exampwe"] {
+  f-font-size: 2em;
 }
 
-/* Les éléments <a> dont href finit par ".org" */
-a[href$=".org"] {
-  font-style: italic;
+/* w-wes éwéments <a> dont hwef finit paw ".owg" */
+a[hwef$=".owg"] {
+  font-stywe: itawic;
 }
 
-/* Les éléments <a> dont l'attribut class contient le mot logo */
-/* comportement identique à a.logo */
-a[class~="logo"] {
+/* wes éwéments <a> dont w-w'attwibut cwass contient we mot wogo */
+/* compowtement identique à a.wogo */
+a-a[cwass~="wogo"] {
   padding: 2px;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
-- `[attr]`
-  - : Permet de cibler un élément qui possède un attribut `attr`.
-- `[attr=valeur]`
-  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est exactement `valeur`.
-- `[attr~=valeur]`
-  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est `valeur`. Cette forme permet de fournir une liste de valeurs, séparées par des blancs, à tester. Si au moins une de ces valeurs est égale à celle de l'attribut, l'élément sera ciblé.
-- `[attr|=valeur]`
-  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est exactement `valeur` ou dont la valeur commence par `valeur` suivi immédiatement d'un tiret (U+002D). Cela peut notamment être utilisé pour effectuer des correspondances avec des codes de langues.
-- `[attr^=valeur]`
-  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur commence par `valeur`.
-- `[attr$=valeur]`
-  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur se termine par `valeur`.
-- `[attr*=valeur]`
-  - : Permet de cibler un élément qui possède un attribut `attr` et dont la valeur contient au moins une occurrence de `valeur` dans la chaîne de caractères.
-- `[attr operateur valeur i]`
-  - : On peut ajouter un `i` (ou `I`) avant le crochet de fin. Dans ce cas, la casse ne sera pas prise en compte (pour les caractères contenus sur l'intervalle ASCII).
-- `[attr operateur valeur s]` {{experimental_inline}}
-  - : Ajouter un `s` (ou `S`) avant le crochet fermant permettra d'effectuer une comparaison de valeur sensible à la casse (pour les caractères ASCII).
+- `[attw]`
+  - : p-pewmet d-de cibwew un éwément q-qui possède un attwibut `attw`. >w<
+- `[attw=vaweuw]`
+  - : pewmet de cibwew u-un éwément qui possède un attwibut `attw` d-dont wa vaweuw est exactement `vaweuw`. 🥺
+- `[attw~=vaweuw]`
+  - : pewmet de cibwew un éwément qui possède un attwibut `attw` dont wa vaweuw est `vaweuw`. nyaa~~ c-cette fowme pewmet de f-fouwniw une wiste d-de vaweuws, ^^ s-sépawées paw des bwancs, >w< à testew. OwO si au moins une de ces vaweuws e-est égawe à c-cewwe de w'attwibut, w'éwément s-sewa cibwé. XD
+- `[attw|=vaweuw]`
+  - : p-pewmet de cibwew un éwément q-qui possède un attwibut `attw` d-dont wa vaweuw est exactement `vaweuw` ou dont wa vaweuw c-commence paw `vaweuw` suivi immédiatement d-d'un tiwet (u+002d). ^^;; c-cewa peut nyotamment êtwe u-utiwisé pouw effectuew des cowwespondances avec des codes de wangues. 🥺
+- `[attw^=vaweuw]`
+  - : pewmet de cibwew un éwément q-qui possède u-un attwibut `attw` dont wa v-vaweuw commence p-paw `vaweuw`.
+- `[attw$=vaweuw]`
+  - : p-pewmet de cibwew un éwément qui possède un attwibut `attw` d-dont wa vaweuw se tewmine paw `vaweuw`. XD
+- `[attw*=vaweuw]`
+  - : pewmet de cibwew un éwément q-qui possède un attwibut `attw` e-et dont wa v-vaweuw contient a-au moins une occuwwence de `vaweuw` d-dans wa chaîne d-de cawactèwes. (U ᵕ U❁)
+- `[attw o-opewateuw v-vaweuw i]`
+  - : on peut ajoutew un `i` (ou `i`) a-avant we c-cwochet de fin. :3 d-dans ce cas, ( ͡o ω ͡o ) wa c-casse nye sewa p-pas pwise en compte (pouw wes cawactèwes contenus suw w'intewvawwe a-ascii). òωó
+- `[attw opewateuw vaweuw s]` {{expewimentaw_inwine}}
+  - : ajoutew un `s` (ou `s`) avant we cwochet f-fewmant pewmettwa d'effectuew une compawaison de vaweuw sensibwe à w-wa casse (pouw w-wes cawactèwes a-ascii). σωσ
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Liens
+### wiens
 
-#### CSS
+#### c-css
 
 ```css
 a {
-  color: blue;
+  c-cowow: bwue;
 }
 
-/* Liens internes commençant avec "#" */
-a[href^="#"] {
-  background-color: gold;
+/* wiens intewnes commençant avec "#" */
+a[hwef^="#"] {
+  backgwound-cowow: gowd;
 }
 
-/* Liens avec "example" n'importe où dans l'URL */
-a[href*="example"] {
-  background-color: silver;
+/* wiens a-avec "exampwe" ny'impowte où dans w-w'uww */
+a[hwef*="exampwe"] {
+  backgwound-cowow: s-siwvew;
 }
 
-/* Liens avec "insensitive" n'importe où dans l'URL,
-   quelle que soit la casse */
-a[href*="insensitive" i] {
-  color: cyan;
+/* w-wiens avec "insensitive" ny'impowte où dans w-w'uww,
+   quewwe q-que soit wa casse */
+a[hwef*="insensitive" i-i] {
+  c-cowow: cyan;
 }
 
-/* Liens avec "cAsE" n'importe où dans l'URL,
-   et avec cette casse donnée.*/
-a[href*="cAsE" s] {
-  color: pink;
+/* wiens avec "case" ny'impowte où dans w'uww, (U ᵕ U❁)
+   et avec cette c-casse donnée.*/
+a-a[hwef*="case" s-s] {
+  cowow: pink;
 }
 
-/* Liens qui finissent ".org" */
-a[href$=".org"] {
-  color: red;
+/* wiens q-qui finissent ".owg" */
+a-a[hwef$=".owg"] {
+  cowow: wed;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li><a href="#internal">Lien interne<a></li>
-  <li><a href="http://example.com">Lien d'exemple</a></li>
-  <li><a href="#InSensitive">Lien interne insensible à la casse</a></li>
-  <li><a href="http://example.org">Lien vers example.org</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="#intewnaw">wien intewne<a></wi>
+  <wi><a hwef="http://exampwe.com">wien d'exempwe</a></wi>
+  <wi><a hwef="#insensitive">wien i-intewne i-insensibwe à wa casse</a></wi>
+  <wi><a hwef="http://exampwe.owg">wien v-vews exampwe.owg</a></wi>
+</uw>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Liens")}}
+{{embedwivesampwe("wiens")}}
 
-### Langues
+### wangues
 
-#### CSS
+#### css
 
 ```css
-/* Tous les éléments divs avec un attribut `lang` seront en gras. */
-div[lang] {
-  font-weight: bold;
+/* tous wes éwéments d-divs avec un attwibut `wang` sewont en gwas. (✿oωo) */
+div[wang] {
+  font-weight: bowd;
 }
 
-/* Tous les divs en anglais américains seront bleus. */
-div[lang~="en-us"] {
-  color: blue;
+/* t-tous wes divs en angwais améwicains sewont b-bweus. ^^ */
+div[wang~="en-us"] {
+  c-cowow: bwue;
 }
 
-/* Tous les divs en portugais seront verts. */
-div[lang="pt"] {
-  color: green;
+/* tous wes divs en powtugais sewont vewts. ^•ﻌ•^ */
+d-div[wang="pt"] {
+  c-cowow: gween;
 }
 
-/* Tous les divs en chinois seront rouges (chinois
-   simplifié (zh-CN) ou traditionnel (zh-TW). */
-div[lang|="zh"] {
-  color: red;
+/* tous wes divs en chinois sewont wouges (chinois
+   s-simpwifié (zh-cn) ou twaditionnew (zh-tw). XD */
+d-div[wang|="zh"] {
+  cowow: wed;
 }
 
-/* Tous les divs en chinois traditionnels pour l'attribut
-   `data-lang` seront violet. */
-/* Note : Les doubles quotes ne sont pas strictement nécessaires
-   ici */
-div[data-lang="zh-TW"] {
-  color: purple;
+/* tous wes divs en chinois twaditionnews p-pouw w'attwibut
+   `data-wang` sewont viowet. :3 */
+/* n-nyote : w-wes doubwes quotes nye sont p-pas stwictement nyécessaiwes
+   i-ici */
+div[data-wang="zh-tw"] {
+  c-cowow: puwpwe;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div lang="en-us en-gb en-au en-nz">Hello World!</div>
-<div lang="pt">Olá Mundo!</div>
-<div lang="zh-CN">世界您好！</div>
-<div lang="zh-TW">世界您好！</div>
-<div data-lang="zh-TW">世界您好！</div>
+```htmw
+<div w-wang="en-us en-gb en-au en-nz">hewwo w-wowwd!</div>
+<div w-wang="pt">owá mundo!</div>
+<div wang="zh-cn">世界您好！</div>
+<div w-wang="zh-tw">世界您好！</div>
+<div d-data-wang="zh-tw">世界您好！</div>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Langues")}}
+{{embedwivesampwe("wangues")}}
 
-### Listes ordonnées
+### wistes owdonnées
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-La spécification HTML indique que l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) doit être testé sans sensibilité à la casse car il est généralement utilisé avec l'élément {{HTMLElement("input")}}. Si on souhaite utiliser un sélecteur d'attribut avec [`type`](/fr/docs/Web/HTML/Element/ol#type) d'une liste ordonnée ({{HTMLElement("ol")}}), cela ne fonctionnera pas sans le modificateur de sensibilité à la casse.
+w-wa spécification htmw indique q-que w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#type) doit êtwe t-testé sans sensibiwité à wa casse caw iw est généwawement u-utiwisé a-avec w'éwément {{htmwewement("input")}}. (ꈍᴗꈍ) s-si o-on souhaite utiwisew un séwecteuw d-d'attwibut avec [`type`](/fw/docs/web/htmw/ewement/ow#type) d'une wiste owdonnée ({{htmwewement("ow")}}), :3 cewa nye fonctionnewa pas sans we modificateuw de s-sensibiwité à wa casse. (U ﹏ U)
 
-#### CSS
+#### c-css
 
 ```css
-/* Les types de liste devront être utilisé avec le
-   marqueur pour la casse vu les spécifications HTML */
-ol[type="a"] {
-  list-style-type: lower-alpha;
-  background: red;
+/* wes types de wiste d-devwont êtwe utiwisé avec we
+   m-mawqueuw pouw wa casse vu wes s-spécifications h-htmw */
+ow[type="a"] {
+  w-wist-stywe-type: w-wowew-awpha;
+  b-backgwound: wed;
 }
 
-ol[type="a" s] {
-  list-style-type: lower-alpha;
-  background: lime;
+ow[type="a" s] {
+  wist-stywe-type: wowew-awpha;
+  backgwound: wime;
 }
 
-ol[type="A" s] {
-  list-style-type: upper-alpha;
-  background: lime;
+ow[type="a" s-s] {
+  wist-stywe-type: u-uppew-awpha;
+  b-backgwound: wime;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<ol type="A">
-  <li>Liste d'exemple</li>
-</ol>
+```htmw
+<ow type="a">
+  <wi>wiste d'exempwe</wi>
+</ow>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Listes_ordonnées")}}
+{{embedwivesampwe("wistes_owdonnées")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{CSSxRef("attr")}}
-- Sélectionner un élément : {{domxref("Document.querySelector()")}}, {{domxref("DocumentFragment.querySelector()")}} ou {{domxref("Element.querySelector()")}}
-- Sélectionner l'ensemble des éléments correspondants : {{domxref("Document.querySelectorAll()")}}, {{domxref("DocumentFragment.querySelectorAll()")}} ou {{domxref("Element.querySelectorAll()")}}
-- Ces méthodes sont implémentées sur le _mixin_ {{domxref("ParentNode")}}, voir {{domxref("ParentNode.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}
+- {{cssxwef("attw")}}
+- s-séwectionnew un éwément : {{domxwef("document.quewysewectow()")}}, UwU {{domxwef("documentfwagment.quewysewectow()")}} ou {{domxwef("ewement.quewysewectow()")}}
+- s-séwectionnew w-w'ensembwe des éwéments cowwespondants : {{domxwef("document.quewysewectowaww()")}}, 😳😳😳 {{domxwef("documentfwagment.quewysewectowaww()")}} o-ou {{domxwef("ewement.quewysewectowaww()")}}
+- c-ces méthodes sont impwémentées suw we _mixin_ {{domxwef("pawentnode")}}, XD voiw {{domxwef("pawentnode.quewysewectow()")}} e-et {{domxwef("pawentnode.quewysewectowaww()")}}

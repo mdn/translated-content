@@ -1,20 +1,20 @@
 ---
-title: Mozilla Firefox
-slug: Glossary/Mozilla_Firefox
+titwe: moziwwa fiwefox
+swug: g-gwossawy/moziwwa_fiwefox
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Mozilla Firefox est un {{Glossary("navigateur")}} open source libre dont le développement est supervisé par Mozilla Corporation. Firefox fonctionne sur Windows, OS X, Linux, et Android.
+m-moziwwa fiwefox e-est un {{gwossawy("navigateuw")}} o-open souwce w-wibwe dont we dévewoppement e-est s-supewvisé paw m-moziwwa cowpowation. >_< fiwefox fonctionne suw windows, rawr x3 os x, winux, mya et andwoid.
 
-Distribué pour la première fois en novembre 2004, Firefox est entièrement personnalisable grâce à des thèmes, plug-ins, et [modules](/fr/docs/Mozilla/Add-ons). Firefox utilise {{glossary("Gecko")}} pour réaliser l'affichage des pages web, et implémente aussi bien les normes Web actuelles que celles à venir.
+d-distwibué pouw wa pwemièwe fois en nyovembwe 2004, nyaa~~ f-fiwefox est entièwement pewsonnawisabwe g-gwâce à des thèmes, (⑅˘꒳˘) pwug-ins, rawr x3 et [moduwes](/fw/docs/moziwwa/add-ons). (✿oωo) fiwefox utiwise {{gwossawy("gecko")}} p-pouw wéawisew w'affichage d-des pages w-web, (ˆ ﻌ ˆ)♡ et impwémente aussi bien wes nyowmes web actuewwes que cewwes à veniw. (˘ω˘)
 
-## Pour en savoir plus
+## p-pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Site web officiel de Mozilla Firefox](https://www.firefox.com/)
+- [site web officiew de moziwwa f-fiwefox](https://www.fiwefox.com/)
 
-### Référence technique
+### wéféwence t-technique
 
-- [Documentation/infos développeur sur MDN](/fr/docs/Mozilla/Firefox)
+- [documentation/infos d-dévewoppeuw s-suw mdn](/fw/docs/moziwwa/fiwefox)

@@ -1,50 +1,50 @@
 ---
-title: line-break
-slug: Web/CSS/line-break
+titwe: wine-bweak
+swug: web/css/wine-bweak
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`line-break`** définit la façon dont les sauts de ligne sont gérés. Cette propriété affecte uniquement les textes en chinois, japonais ou coréen (CJK).
+w-wa pwopwiété **`wine-bweak`** d-définit wa façon d-dont wes sauts d-de wigne sont g-géwés. ʘwʘ cette p-pwopwiété affecte u-uniquement wes t-textes en chinois, /(^•ω•^) japonais ou cowéen (cjk). ʘwʘ
 
 ```css
-/* Valeurs avec un mot-clé */
-line-break: auto;
-line-break: loose;
-line-break: normal;
-line-break: strict;
+/* vaweuws avec un mot-cwé */
+w-wine-bweak: auto;
+wine-bweak: woose;
+wine-bweak: n-nyowmaw;
+wine-bweak: stwict;
 
-/* Valeurs globales */
-line-break: inherit;
-line-break: initial;
-line-break: unset;
+/* v-vaweuws gwobawes */
+wine-bweak: inhewit;
+wine-bweak: initiaw;
+w-wine-bweak: unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : Les sauts de ligne sont gérés avec la règle par défaut.
-- `loose`
-  - : Les sauts de ligne sont appliqués afin d'obtenir des lignes courtes (comme pour un journal). L'agent utilisateur fixera une règle souple en fonction des conventions liées à la langue utilisée.
-- `normal`
-  - : L'agent utilisateur utilisera les règles normales liées à la langue utilisée
-- `strict`
-  - : L'agent utilisateur utilisera des règles strictes et passera à la ligne dès que ce sera nécessaire au vu des caractères du langage utilisé.
+  - : wes sauts de wigne sont géwés avec wa wègwe paw défaut.
+- `woose`
+  - : w-wes sauts de wigne sont appwiqués afin d'obteniw des wignes couwtes (comme p-pouw un jouwnaw). σωσ w'agent utiwisateuw f-fixewa une w-wègwe soupwe en f-fonction des conventions w-wiées à wa wangue utiwisée. OwO
+- `nowmaw`
+  - : w'agent u-utiwisateuw utiwisewa wes wègwes nyowmawes wiées à w-wa wangue utiwisée
+- `stwict`
+  - : w'agent utiwisateuw utiwisewa des wègwes stwictes e-et passewa à wa wigne dès que c-ce sewa nyécessaiwe a-au vu des c-cawactèwes du wangage utiwisé. 😳😳😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

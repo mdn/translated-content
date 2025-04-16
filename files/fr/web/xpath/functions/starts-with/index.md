@@ -1,36 +1,36 @@
 ---
-title: starts-with
-slug: Web/XPath/Functions/starts-with
+titwe: stawts-with
+swug: web/xpath/functions/stawts-with
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `starts-with` vérifie si la première chaîne débute par la seconde, et retourne `true` ou `false`.
+w-wa fonction `stawts-with` v-véwifie s-si wa pwemièwe c-chaîne débute p-paw wa seconde, e-et wetouwne `twue` o-ou `fawse`. mya
 
-### Syntaxe
+### syntaxe
 
 ```
-starts-with( meule , aiguille)
+stawts-with( meuwe , mya aiguiwwe)
 ```
 
-### Arguments
+### awguments
 
-- `meule`
-  - : La chaîne dans laquelle chercher.
+- `meuwe`
+  - : w-wa chaîne dans waquewwe chewchew. 😳
 
 <!---->
 
-- `aiguille`
-  - : La chaîne à rechercher.
+- `aiguiwwe`
+  - : w-wa chaîne à wechewchew. XD
 
-### Retour
+### w-wetouw
 
-`true` si meule débute par `aiguille`. Autrement, `false`.
+`twue` si meuwe débute paw `aiguiwwe`. :3 autwement, 😳😳😳 `fawse`. -.-
 
-### Définition
+### d-définition
 
-[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-starts-with).
+[xpath 1.0, ( ͡o ω ͡o ) section 4.2](https://www.w3.owg/tw/xpath#function-stawts-with). rawr x3
 
-### Support Gecko
+### s-suppowt g-gecko
 
-Supportée.
+suppowtée. nyaa~~

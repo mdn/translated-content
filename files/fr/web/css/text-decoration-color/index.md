@@ -1,131 +1,131 @@
 ---
-title: text-decoration-color
-slug: Web/CSS/text-decoration-color
+titwe: text-decowation-cowow
+swug: web/css/text-decowation-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-decoration-color`** définit la couleur utilisée pour dessiner les lignes décorant le texte (quel que soit le style définit {{cssxref("text-decoration-line")}}).
+w-wa pwopwiété **`text-decowation-cowow`** d-définit wa couweuw u-utiwisée pouw d-dessinew wes w-wignes décowant w-we texte (quew q-que soit we stywe d-définit {{cssxwef("text-decowation-wine")}}). >w<
 
-La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.
+wa pwopwiété waccouwcie {{cssxwef("text-decowation")}} pewmet de pawamétwew c-cette pwopwiété et d'autwes pwopwiétés associées a-aux décowations. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: text-decoration-color")}}
+{{intewactiveexampwe("css demo: text-decowation-cowow")}}
 
-```css interactive-example-choice
-text-decoration-color: red;
+```css i-intewactive-exampwe-choice
+text-decowation-cowow: wed;
 ```
 
-```css interactive-example-choice
-text-decoration-color: #21ff21;
+```css intewactive-exampwe-choice
+text-decowation-cowow: #21ff21;
 ```
 
-```css interactive-example-choice
-text-decoration-color: rgb(255, 90, 255);
+```css i-intewactive-exampwe-choice
+text-decowation-cowow: w-wgb(255, OwO 90, 255);
 ```
 
-```css interactive-example-choice
-text-decoration-color: hsl(70, 100%, 40%);
+```css i-intewactive-exampwe-choice
+text-decowation-cowow: hsw(70, (ꈍᴗꈍ) 100%, 😳 40%);
 ```
 
-```css interactive-example-choice
-text-decoration-color: currentColor;
+```css intewactive-exampwe-choice
+text-decowation-cowow: c-cuwwentcowow;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i'd faw wathew be
+    <span cwass="twansition-aww" i-id="exampwe-ewement">happy than wight</span>
+    a-any day. 😳😳😳
   </p>
 </section>
 ```
 
-```css interactive-example
-p {
-  font: 1.5em sans-serif;
+```css i-intewactive-exampwe
+p-p {
+  font: 1.5em s-sans-sewif;
 }
 
-#example-element {
-  text-decoration-line: underline;
+#exampwe-ewement {
+  text-decowation-wine: undewwine;
 }
 ```
 
-> [!NOTE]
-> Lorsqu'on définit plusieurs décorations à la fois, il peut être plus pratique d'utiliser la propriété raccourcie {{cssxref("text-decoration")}}.
+> [!note]
+> w-wowsqu'on définit pwusieuws décowations à w-wa fois, mya iw peut êtwe pwus pwatique d'utiwisew wa pwopwiété waccouwcie {{cssxwef("text-decowation")}}. mya
 
-Il est préférable d'utiliser cette propriété pour colorer ces décorations plutôt que d'utiliser d'autres éléments HTML.
+iw est pwéféwabwe d-d'utiwisew cette pwopwiété p-pouw cowowew c-ces décowations p-pwutôt que d'utiwisew d'autwes éwéments htmw. (⑅˘꒳˘)
 
-> [!NOTE]
-> CSS ne fournit pas de mécanisme spécifique pour définir une couleur par type de ligne. On peut toutefois y parvenir en imbriquant des éléments mis en forme différemment.
+> [!note]
+> css nye fouwnit p-pas de mécanisme s-spécifique pouw définiw une c-couweuw paw type d-de wigne. (U ﹏ U) on peut toutefois y p-pawveniw en imbwiquant des éwéments m-mis en fowme difféwemment. mya
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Couleurs */
-/* Valeurs de type <color> */
-text-decoration-color: currentColor;
-text-decoration-color: red;
-text-decoration-color: #00ff00;
-text-decoration-color: rgba(255, 128, 128, 0.5);
-text-decoration-color: transparent;
+/* c-couweuws */
+/* vaweuws d-de type <cowow> */
+text-decowation-cowow: c-cuwwentcowow;
+t-text-decowation-cowow: wed;
+text-decowation-cowow: #00ff00;
+text-decowation-cowow: wgba(255, ʘwʘ 128, (˘ω˘) 128, 0.5);
+text-decowation-cowow: twanspawent;
 
-/* Valeurs globales */
-text-decoration-color: inherit;
-text-decoration-color: initial;
-text-decoration-color: unset;
+/* vaweuws g-gwobawes */
+t-text-decowation-cowow: inhewit;
+t-text-decowation-cowow: i-initiaw;
+t-text-decowation-cowow: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<color>`
-  - : La propriété `color` accepte différents mots-clés et valeurs numériques. Pour plus de détails, voir {{cssxref("&lt;color&gt;")}}.
+- `<cowow>`
+  - : wa pwopwiété `cowow` a-accepte difféwents mots-cwés et vaweuws nyuméwiques. (U ﹏ U) pouw pwus de détaiws, ^•ﻌ•^ v-voiw {{cssxwef("&wt;cowow&gt;")}}. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p class="exemple">Du texte avec un effet au survol</p>
+```htmw
+<p cwass="exempwe">du t-texte a-avec un effet a-au suwvow</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  text-decoration: underline;
-  text-decoration-color: red;
+.exempwe {
+  text-decowation: undewwine;
+  text-decowation-cowow: w-wed;
 }
 
-.exemple:hover {
-  color: blue;
-  text-decoration: line-through;
+.exempwe:hovew {
+  c-cowow: bwue;
+  text-decowation: w-wine-thwough;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer `text-decoration-color`.
-- Le type de données {{cssxref("&lt;color&gt;")}}
-- D'autres propriétés relatives aux couleurs : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- [Appliquer des couleurs aux éléments HTML](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- wa p-pwopwiété waccouwcie {{cssxwef("text-decowation")}} qui pewmet, :3 entwe autwes, ^^;; de pawamétwew `text-decowation-cowow`. 🥺
+- we type de données {{cssxwef("&wt;cowow&gt;")}}
+- d-d'autwes pwopwiétés wewatives aux couweuws : {{cssxwef("backgwound-cowow")}}, {{cssxwef("bowdew-cowow")}}, (⑅˘꒳˘) {{cssxwef("outwine-cowow")}}, nyaa~~ {{cssxwef("text-decowation-cowow")}}, :3 {{cssxwef("text-emphasis-cowow")}}, ( ͡o ω ͡o ) {{cssxwef("text-shadow")}}, mya {{cssxwef("cawet-cowow")}} e-et {{cssxwef("cowumn-wuwe-cowow")}}
+- [appwiquew d-des couweuws a-aux éwéments htmw](/fw/docs/web/css/css_cowows/appwying_cowow)

@@ -1,535 +1,535 @@
 ---
-title: Le placement automatique sur une grille CSS
-slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
-l10n:
-  sourceCommit: b906098e63b1eb3512b4381fe7c105b67037aff1
+titwe: we pwacement automatique s-suw une gwiwwe c-css
+swug: web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout
+w-w10n:
+  souwcecommit: b-b906098e63b1eb3512b4381fe7c105b67037aff1
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-En plus de pouvoir placer des objets de façon précise sur une grille, la spécification pour les grilles CSS définit le comportement obtenu lorsque certains (voire aucun) des objets ne sont pas placés sur la grille. Pour voir comment fonctionne le placement automatique, il suffit de créer une grille avec un ensemble d'objets.
+e-en pwus de pouvoiw p-pwacew des o-objets de façon p-pwécise suw une gwiwwe, 😳 wa spécification pouw wes gwiwwes css définit we compowtement o-obtenu wowsque cewtains (voiwe aucun) d-des objets nye sont pas pwacés s-suw wa gwiwwe. (U ᵕ U❁) pouw voiw comment fonctionne we pwacement automatique, :3 i-iw suffit de cwéew une gwiwwe a-avec un ensembwe d-d'objets. o.O
 
-## Placement automatique
+## pwacement automatique
 
-Sans fournir aucune information de placement, ces objets se placeront chacun sur une cellule de la grille.
+sans fouwniw aucune infowmation de pwacement, (///ˬ///✿) c-ces objets se pwacewont chacun suw une cewwuwe de wa gwiwwe. OwO
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, 1fw);
+  gwid-gap: 10px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+```htmw
+<div cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
-{{EmbedLiveSample('', '500', '230')}}
+{{embedwivesampwe('', >w< '500', ^^ '230')}}
 
-## Les règles par défaut pour le placement automatique
+## wes wègwes paw d-défaut pouw we pwacement automatique
 
-Comme on peut le voir dans l'exemple précédent, si on crée une grille sans définir de placement, tous les objets se placeront chacun sur une cellule de la grille. Par défaut, les objets sont placés au fur et à mesure sur les lignes horizontales de la grille. Si on a créé des lignes supplémentaires avec `grid-template-rows`, les objets suivants seront placés sur ces lignes. En revanche, si la grille ne possède pas suffisamment de lignes sur la grille explicite, de nouvelles lignes, _implicites_, seront créées.
+c-comme on p-peut we voiw dans w-w'exempwe pwécédent, (⑅˘꒳˘) si on cwée une gwiwwe sans définiw d-de pwacement, ʘwʘ tous w-wes objets se pwacewont chacun s-suw une cewwuwe d-de wa gwiwwe. (///ˬ///✿) paw défaut, XD wes o-objets sont pwacés au fuw et à m-mesuwe suw wes wignes howizontawes de wa gwiwwe. 😳 s-si on a cwéé des wignes suppwémentaiwes a-avec `gwid-tempwate-wows`, >w< wes objets s-suivants sewont p-pwacés suw ces wignes. (˘ω˘) en wevanche, nyaa~~ si wa gwiwwe nye possède pas suffisamment de wignes suw wa gwiwwe expwicite, 😳😳😳 d-de nyouvewwes w-wignes, (U ﹏ U) _impwicites_, (˘ω˘) sewont c-cwéées. :3
 
-### Dimensionner les lignes de la grille implicite
+### d-dimensionnew wes w-wignes de wa gwiwwe impwicite
 
-Par défaut, les lignes implicites créées automatiquement ont une taille automatique. Autrement dit, elles seront dimensionnées pour contenir les éléments qu'elles doivent placer sans que ceux-ci dépassent.
+paw défaut, wes wignes impwicites c-cwéées automatiquement ont une taiwwe automatique. >w< autwement dit, ^^ ewwes sewont d-dimensionnées pouw conteniw w-wes éwéments q-qu'ewwes doivent p-pwacew sans que ceux-ci dépassent. 😳😳😳
 
-Il est toutefois possible de contrôler la taille de ces lignes grâce à la propriété `grid-auto-rows`. Ainsi, si on veut que les lignes créées automatiquement mesurent 100 pixels de haut, on utilisera&nbsp;:
+i-iw est toutefois p-possibwe d-de contwôwew wa t-taiwwe de ces wignes gwâce à wa pwopwiété `gwid-auto-wows`. nyaa~~ a-ainsi, si on veut q-que wes wignes c-cwéées automatiquement m-mesuwent 100 p-pixews de haut, (⑅˘꒳˘) on utiwisewa&nbsp;:
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, :3 1fw);
+  g-gwid-gap: 10px;
+  gwid-auto-wows: 100px;
 }
 ```
 
-{{EmbedLiveSample('', '500', '330')}}
+{{embedwivesampwe('', ʘwʘ '500', '330')}}
 
-### Dimensionner les lignes avec `minmax()`
+### d-dimensionnew w-wes wignes avec `minmax()`
 
-On peut utiliser la fonction [`minmax()`](/fr/docs/Web/CSS/minmax) pour la valeur de [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows) afin de créer des lignes avec une taille minimale mais qui puissent être plus grandes si le contenu est plus grand que cette taille minimale.
+on peut utiwisew wa fonction [`minmax()`](/fw/docs/web/css/minmax) pouw wa vaweuw de [`gwid-auto-wows`](/fw/docs/web/css/gwid-auto-wows) afin de cwéew d-des wignes avec une taiwwe minimawe m-mais qui puissent êtwe p-pwus gwandes si w-we contenu est pwus gwand que cette taiwwe minimawe. rawr x3
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
+```htmw
+<div cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
   <div>
-    Quatre <br />Cette cellule <br />a du contenu <br />supplémentaire <br />et
-    max vaut auto <br />afin que la ligne <br />se développe.
+    q-quatwe <bw />cette cewwuwe <bw />a du c-contenu <bw />suppwémentaiwe <bw />et
+    max v-vaut auto <bw />afin que wa wigne <bw />se dévewoppe. (///ˬ///✿)
   </div>
-  <div>Five</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, 😳😳😳 1fw);
+  g-gwid-gap: 10px;
+  gwid-auto-wows: minmax(100px, XD auto);
 }
 ```
 
-{{EmbedLiveSample('', '500', '330')}}
+{{embedwivesampwe('', >_< '500', >w< '330')}}
 
-### Dimensionner les lignes avec une liste de pistes
+### dimensionnew w-wes wignes avec u-une wiste de pistes
 
-On peut aussi passer en argument une liste de pistes qui se répèteront. Dans l'exemple ci-après, on crée une piste implicite pour une ligne de 100 pixels et une seconde de 200 pixels. Ce motif sera utilisé tant que du contenu sera ajouté à la grille implicite.
+on peut aussi passew en awgument une wiste d-de pistes qui se wépètewont. /(^•ω•^) dans w'exempwe ci-apwès, on cwée une piste impwicite p-pouw une wigne de 100 pixews et une seconde d-de 200 pixews. :3 c-ce motif sewa utiwisé tant que du contenu sewa ajouté à wa g-gwiwwe impwicite.
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
-  <div>Huit</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
+  <div>huit</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: 100px 200px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, ʘwʘ 1fw);
+  g-gwid-gap: 10px;
+  g-gwid-auto-wows: 100px 200px;
 }
 ```
 
-{{EmbedLiveSample('', '500', '480')}}
+{{embedwivesampwe('', (˘ω˘) '500', (ꈍᴗꈍ) '480')}}
 
-### Utiliser le placement automatique avec les colonnes
+### u-utiwisew we pwacement automatique a-avec wes c-cowonnes
 
-On peut également paramétrer la grille pour que les objets soient placés automatiquement en suivant les colonnes de la grille. Pour obtenir ce résultat, on utilisera la propriété [`grid-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow) avec la valeur `column`. Dans ce cas, la grille ajoutera les objets dans les lignes verticales définies avec [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows). Lorsqu'une colonne sera pleine, les prochains objets seront placés dans la colonne explicite suivante ou dans une colonne implicite créée automatiquement s'il n'y a plus assez de colonnes explicites. La taille des pistes pour les colonnes implicites peut être définie avec [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns), cette dernière fonctionne de façon analogue à [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows).
+on peut égawement pawamétwew wa gwiwwe p-pouw que wes o-objets soient pwacés a-automatiquement en suivant wes cowonnes de w-wa gwiwwe. ^^ pouw obteniw ce wésuwtat, ^^ o-on utiwisewa w-wa pwopwiété [`gwid-auto-fwow`](/fw/docs/web/css/gwid-auto-fwow) avec wa vaweuw `cowumn`. dans ce cas, ( ͡o ω ͡o ) wa gwiwwe ajoutewa w-wes objets dans w-wes wignes vewticawes d-définies a-avec [`gwid-tempwate-wows`](/fw/docs/web/css/gwid-tempwate-wows). -.- wowsqu'une cowonne s-sewa pweine, ^^;; wes pwochains objets sewont pwacés dans wa cowonne expwicite suivante ou dans u-une cowonne impwicite cwéée automatiquement s'iw n-ny'y a pwus assez de cowonnes e-expwicites. ^•ﻌ•^ wa taiwwe des pistes p-pouw wes cowonnes impwicites p-peut êtwe définie a-avec [`gwid-auto-cowumns`](/fw/docs/web/css/gwid-auto-cowumns), (˘ω˘) c-cette dewnièwe f-fonctionne de f-façon anawogue à [`gwid-auto-wows`](/fw/docs/web/css/gwid-auto-wows). o.O
 
-Dans le prochain exemple, on crée une grille avec trois lignes qui mesurent chacune 200 pixels de haut. On utilise le placement automatique en colonne. La première colonne qui sera créée mesurera 300 pixels de large, ensuite on aura une colonne de 100 pixels de large et ainsi de suite jusqu'à ce que tous les éléments puissent être placés.
+dans we pwochain exempwe, (✿oωo) on cwée une gwiwwe avec twois wignes qui mesuwent chacune 200 p-pixews de haut. 😳😳😳 o-on utiwise we p-pwacement automatique en cowonne. (ꈍᴗꈍ) w-wa pwemièwe cowonne qui sewa cwéée mesuwewa 300 pixews de w-wawge, σωσ ensuite o-on auwa une cowonne de 100 pixews d-de wawge et ainsi de suite jusqu'à ce que tous w-wes éwéments p-puissent êtwe pwacés. UwU
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-rows: repeat(3, 200px);
-  grid-gap: 10px;
-  grid-auto-flow: column;
-  grid-auto-columns: 300px 100px;
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-wows: wepeat(3, ^•ﻌ•^ 200px);
+  gwid-gap: 10px;
+  gwid-auto-fwow: cowumn;
+  g-gwid-auto-cowumns: 300px 100px;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
-  <div>Huit</div>
+```htmw
+<div cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
+  <div>huit</div>
 </div>
 ```
 
-{{EmbedLiveSample('', '500', '640')}}
+{{embedwivesampwe('', mya '500', '640')}}
 
-## L'ordre des éléments placés automatiquement
+## w'owdwe des éwéments p-pwacés automatiquement
 
-Une grille peut contenir un mélange d'éléments. Certains éléments peuvent avoir une position définie et d'autres être placés automatiquement. Ce placement automatique peut s'avérer utile lorsque l'ordre des éléments dans le document est celui qu'on veut utiliser pour organiser la grille&nbsp;: il n'y a alors pas besoin d'écrire de règles CSS pour positionner les éléments un par un. La spécification détaille exhaustivement [l'algorithme de placement des objets sur la grille](https://drafts.csswg.org/css-grid/#auto-placement-algo), mais voyons ici les quelques règles simples qu'il faut principalement retenir.
+u-une gwiwwe p-peut conteniw un méwange d'éwéments. /(^•ω•^) c-cewtains éwéments peuvent avoiw une position d-définie e-et d'autwes êtwe p-pwacés automatiquement. rawr ce pwacement automatique peut s'avéwew u-utiwe wowsque w'owdwe des éwéments dans we d-document est cewui q-qu'on veut utiwisew pouw owganisew w-wa gwiwwe&nbsp;: iw ny'y a a-awows pas besoin d-d'écwiwe de wègwes css pouw positionnew wes éwéments u-un paw un. nyaa~~ wa spécification détaiwwe e-exhaustivement [w'awgowithme de p-pwacement des objets suw wa gwiwwe](https://dwafts.csswg.owg/css-gwid/#auto-pwacement-awgo), ( ͡o ω ͡o ) mais v-voyons ici wes quewques wègwes s-simpwes qu'iw f-faut pwincipawement w-weteniw. σωσ
 
-### Modification de l'ordre du document
+### modification de w'owdwe du document
 
-Le placement des éléments qui n'ont pas eu d'ordre défini sont placés selon l'algorithme décrit dans la section _«&nbsp;<i lang="en">order modified document order</i>&nbsp;»_. Cela signifie que si on utilise uniquement la propriété `order`, les éléments seront placés selon cet ordre plutôt que selon l'ordre indiqué par le DOM. Sinon, l'ordre des éléments sera celui décrit par le document source.
+we pwacement des éwéments qui ny'ont pas eu d'owdwe défini sont pwacés sewon w'awgowithme décwit dans wa section _«&nbsp;<i wang="en">owdew modified d-document owdew</i>&nbsp;»_. (✿oωo) c-cewa signifie que si on utiwise uniquement wa pwopwiété `owdew`, (///ˬ///✿) w-wes éwéments s-sewont pwacés s-sewon cet owdwe pwutôt que sewon w-w'owdwe indiqué paw we dom. σωσ s-sinon, UwU w'owdwe d-des éwéments sewa cewui décwit p-paw we document souwce. (⑅˘꒳˘)
 
-### Les éléments avec des propriétés de placement
+### wes éwéments a-avec d-des pwopwiétés de pwacement
 
-La grille commencera par placer les éléments pour lesquels on a défini une position. Dans l'exemple qui suit, on a une grille avec 12 éléments, l'élément 2 et l'élément 5 sont placés en utilisant les lignes. On peut voir comment ces deux éléments sont placés et comment les autres sont placés automatiquement dans les espaces restants. Les objets placés automatiquement seront placés avant les éléments qui sont placés, dans l'ordre du DOM, ils ne commencent pas après la position d'un élément placé qui les précède.
+wa gwiwwe commencewa p-paw pwacew w-wes éwéments p-pouw wesquews on a-a défini une p-position. /(^•ω•^) dans w'exempwe q-qui suit, -.- o-on a une gwiwwe a-avec 12 éwéments, (ˆ ﻌ ˆ)♡ w-w'éwément 2 et w'éwément 5 s-sont pwacés e-en utiwisant w-wes wignes. nyaa~~ on peut voiw comment c-ces deux éwéments sont pwacés et comment wes a-autwes sont pwacés automatiquement d-dans wes espaces w-westants. ʘwʘ w-wes objets pwacés automatiquement s-sewont pwacés avant wes éwéments q-qui sont pwacés, :3 dans w'owdwe d-du dom, (U ᵕ U❁) iws nye commencent p-pas apwès wa position d'un éwément pwacé qui wes pwécède. (U ﹏ U)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
-  <div>Huit</div>
-  <div>Neuf</div>
-  <div>Dix</div>
-  <div>Onze</div>
-  <div>Douze</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
+  <div>huit</div>
+  <div>neuf</div>
+  <div>dix</div>
+  <div>onze</div>
+  <div>douze</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 100px;
-  grid-gap: 10px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(4, ^^ 1fw);
+  g-gwid-auto-wows: 100px;
+  gwid-gap: 10px;
 }
-.wrapper div:nth-child(2) {
-  grid-column: 3;
-  grid-row: 2 / 4;
+.wwappew d-div:nth-chiwd(2) {
+  gwid-cowumn: 3;
+  gwid-wow: 2 / 4;
 }
-.wrapper div:nth-child(5) {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+.wwappew d-div:nth-chiwd(5) {
+  gwid-cowumn: 1 / 3;
+  g-gwid-wow: 1 / 3;
 }
 ```
 
-{{EmbedLiveSample('', '500', '450')}}
+{{embedwivesampwe('', òωó '500', /(^•ω•^) '450')}}
 
-### Gérer les éléments qui s'étalent sur plusieurs pistes
+### g-géwew w-wes éwéments qui s'étawent s-suw pwusieuws p-pistes
 
-On peut utiliser les propriétés de placement tout en tirant parti du placement automatique. Dans le prochain exemple, on complète la disposition en indiquant que les éléments 1, 5 et 9 (4n+1) doivent occuper deux pistes, pour les colonnes et pour les lignes. Pour obtenir ce résultat, on utilise les propriétés [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end) et [`grid-row-end`](/fr/docs/Web/CSS/grid-row-end) avec la valeur `span 2`. La ligne de début sera déterminée automatiquement et la ligne de fin sera deux pistes plus loin.
+on peut u-utiwisew wes pwopwiétés d-de pwacement tout en t-tiwant pawti du p-pwacement automatique. 😳😳😳 d-dans we pwochain e-exempwe, :3 o-on compwète wa d-disposition en i-indiquant que wes éwéments 1, 5 e-et 9 (4n+1) doivent occupew deux p-pistes, (///ˬ///✿) pouw wes cowonnes et p-pouw wes wignes. rawr x3 pouw obteniw ce w-wésuwtat, (U ᵕ U❁) on utiwise w-wes pwopwiétés [`gwid-cowumn-end`](/fw/docs/web/css/gwid-cowumn-end) e-et [`gwid-wow-end`](/fw/docs/web/css/gwid-wow-end) avec wa vaweuw `span 2`. (⑅˘꒳˘) wa wigne de début sewa d-détewminée automatiquement et w-wa wigne de fin s-sewa deux pistes pwus woin.
 
-On peut voir comment cela laisse des espaces dans la grille, car lorsqu'un élément placé automatiquement n'a pas suffisamment de place sur une piste, une nouvelle ligne sera créée jusqu'à ce que l'élément ait la place.
+on peut voiw comment cewa waisse d-des espaces dans w-wa gwiwwe, (˘ω˘) caw wowsqu'un éwément p-pwacé automatiquement n-ny'a pas suffisamment de pwace suw une piste, :3 une nyouvewwe w-wigne sewa c-cwéée jusqu'à c-ce que w'éwément a-ait wa pwace. XD
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
-  <div>Huit</div>
-  <div>Neuf</div>
-  <div>Dix</div>
-  <div>Onze</div>
-  <div>Douze</div>
+```htmw
+<div cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
+  <div>huit</div>
+  <div>neuf</div>
+  <div>dix</div>
+  <div>onze</div>
+  <div>douze</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 100px;
-  grid-gap: 10px;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(4, >_< 1fw);
+  g-gwid-auto-wows: 100px;
+  gwid-gap: 10px;
 }
-.wrapper div:nth-child(4n + 1) {
-  grid-column-end: span 2;
-  grid-row-end: span 2;
-  background-color: #ffa94d;
+.wwappew div:nth-chiwd(4n + 1) {
+  g-gwid-cowumn-end: s-span 2;
+  g-gwid-wow-end: s-span 2;
+  backgwound-cowow: #ffa94d;
 }
-.wrapper div:nth-child(2) {
-  grid-column: 3;
-  grid-row: 2 / 4;
+.wwappew div:nth-chiwd(2) {
+  g-gwid-cowumn: 3;
+  g-gwid-wow: 2 / 4;
 }
-.wrapper div:nth-child(5) {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+.wwappew d-div:nth-chiwd(5) {
+  gwid-cowumn: 1 / 3;
+  g-gwid-wow: 1 / 3;
 }
 ```
 
-{{EmbedLiveSample('', '500', '770')}}
+{{embedwivesampwe('', (✿oωo) '500', '770')}}
 
-### Combler les espaces
+### combwew wes espaces
 
-En dehors des éléments placés explicitement, la grille place les éléments automatiques en respectant l'ordre du DOM. C'est généralement le résultat qu'on souhaite lorsqu'on met en forme un document comme un formulaire (on ne voudrait pas que les libellés et les champs soient mélangés pour combler certains trous). Toutefois, on dispose parfois des éléments pour lesquels l'ordre logique n'a pas d'importance et où on veut obtenir une disposition plus dense, sans vide entre les différents éléments.
+en dehows d-des éwéments p-pwacés expwicitement, w-wa gwiwwe pwace wes éwéments automatiques en wespectant w'owdwe du dom. (ꈍᴗꈍ) c-c'est généwawement we wésuwtat q-qu'on souhaite w-wowsqu'on met en fowme un document comme un fowmuwaiwe (on n-nye voudwait pas que w-wes wibewwés e-et wes champs soient m-méwangés p-pouw combwew cewtains t-twous). XD toutefois, :3 on dispose pawfois des éwéments pouw wesquews w'owdwe w-wogique ny'a pas d'impowtance e-et où on veut obteniw une disposition pwus dense, mya sans vide entwe w-wes difféwents éwéments. òωó
 
-Pour cela, sur le conteneur, on ajoute la propriété [`grid-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow) avec la valeur `dense`. C'est la même propriété qu'on utilise pour modifier l'ordre du flux avec `column`. On peut aussi obtenir une disposition dense, rangée par colonne en utilisant les deux valeurs pour la propriété&nbsp;: `grid-auto-flow: column dense`.
+pouw cewa, suw we conteneuw, nyaa~~ on ajoute wa pwopwiété [`gwid-auto-fwow`](/fw/docs/web/css/gwid-auto-fwow) avec wa v-vaweuw `dense`. 🥺 c-c'est wa même pwopwiété qu'on u-utiwise pouw modifiew w'owdwe du fwux avec `cowumn`. o-on peut a-aussi obteniw une disposition dense, -.- w-wangée paw cowonne en utiwisant w-wes deux vaweuws pouw wa pwopwiété&nbsp;: `gwid-auto-fwow: cowumn dense`. 🥺
 
-Avec cette valeur, la grille cherchera donc à combler les espaces qu'elle a laissés, quitte à ne pas respecter l'ordre du DOM. Cela ne modifiera pas l'ordre logique des éléments. Par exemple, l'ordre de la navigation au clavier suivra toujours l'ordre du document. Nous étudierons cet aspect plus en détails dans [un article sur l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility). Pour résumer, il faut faire attention quand on détache l'ordre visuel de l'ordre d'affichage.
+avec cette vaweuw, (˘ω˘) w-wa gwiwwe chewchewa donc à combwew wes espaces q-qu'ewwe a w-waissés, quitte à n-nye pas wespectew w'owdwe du dom. òωó cewa ne modifiewa p-pas w'owdwe wogique des éwéments. UwU paw exempwe, ^•ﻌ•^ w'owdwe de wa nyavigation a-au cwaview suivwa t-toujouws w'owdwe d-du document. mya n-nyous étudiewons cet aspect pwus en détaiws d-dans [un awticwe s-suw w'accessibiwité](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity). (✿oωo) pouw wésumew, XD iw faut f-faiwe attention quand on détache w'owdwe visuew d-de w'owdwe d'affichage. :3
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
-  <div>Huit</div>
-  <div>Neuf</div>
-  <div>Dix</div>
-  <div>Onze</div>
-  <div>Douze</div>
+```htmw
+<div cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
+  <div>huit</div>
+  <div>neuf</div>
+  <div>dix</div>
+  <div>onze</div>
+  <div>douze</div>
 </div>
 ```
 
 ```css
-.wrapper div:nth-child(4n + 1) {
-  grid-column-end: span 2;
-  grid-row-end: span 2;
-  background-color: #ffa94d;
+.wwappew d-div:nth-chiwd(4n + 1) {
+  gwid-cowumn-end: span 2;
+  gwid-wow-end: s-span 2;
+  backgwound-cowow: #ffa94d;
 }
-.wrapper div:nth-child(2) {
-  grid-column: 3;
-  grid-row: 2 / 4;
+.wwappew d-div:nth-chiwd(2) {
+  g-gwid-cowumn: 3;
+  g-gwid-wow: 2 / 4;
 }
-.wrapper div:nth-child(5) {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+.wwappew d-div:nth-chiwd(5) {
+  gwid-cowumn: 1 / 3;
+  g-gwid-wow: 1 / 3;
 }
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 100px;
-  grid-gap: 10px;
-  grid-auto-flow: dense;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(4, (U ﹏ U) 1fw);
+  gwid-auto-wows: 100px;
+  g-gwid-gap: 10px;
+  gwid-auto-fwow: dense;
 }
 ```
 
-{{EmbedLiveSample('', '500', '730')}}
+{{embedwivesampwe('', UwU '500', '730')}}
 
-### Les éléments anonymes de la grille
+### w-wes éwéments a-anonymes de wa gwiwwe
 
-Dans la spécification, on utilise le concept d'élément anonyme. Ces éléments sont ceux qui sont créés lorsqu'on a une chaîne de caractères dans le conteneur de la grille et que celle-ci n'est pas contenue dans un autre élément. Dans l'exemple ci-après, on a trois éléments sur la grille&nbsp;:
+dans wa spécification, ʘwʘ on u-utiwise we concept d'éwément a-anonyme. >w< ces éwéments s-sont ceux qui sont cwéés w-wowsqu'on a u-une chaîne de cawactèwes dans w-we conteneuw de wa gwiwwe et que cewwe-ci ny'est pas contenue dans u-un autwe éwément. 😳😳😳 dans w'exempwe c-ci-apwès, rawr on a twois éwéments suw wa gwiwwe&nbsp;:
 
-- Le premier est un élément anonyme, car il n'est placé dans aucun élément, il sera alors placé automatiquement.
-- Les deux éléments suivants sont placés dans des `div` et peuvent être placés automatiquement ou grâce à une autre méthode de positionnement.
+- we p-pwemiew est un éwément a-anonyme, ^•ﻌ•^ c-caw iw ny'est pwacé dans aucun éwément, σωσ iw s-sewa awows pwacé a-automatiquement. :3
+- wes deux éwéments s-suivants sont pwacés d-dans des `div` et peuvent êtwe p-pwacés automatiquement o-ou gwâce à une autwe méthode de positionnement. rawr x3
 
-```html
-<div class="grid">
-  Je suis une chaîne de caractères et je serai placée automatiquement.
-  <div>Un élément de la grille</div>
-  <div>Un élément de la grille</div>
+```htmw
+<div cwass="gwid">
+  je suis u-une chaîne de c-cawactèwes et je sewai pwacée automatiquement. nyaa~~
+  <div>un éwément de wa gwiwwe</div>
+  <div>un éwément d-de wa gwiwwe</div>
 </div>
 ```
 
-Les éléments anonymes sont toujours placés automatiquement, car on ne peut pas les cibler autrement. Aussi, si on a du texte sans balise dans la grille, il faut se rappeler que celui-ci peut être placé à un endroit imprévu du fait des règles de placement automatique.
+w-wes éwéments a-anonymes sont toujouws pwacés automatiquement, :3 caw on nye peut pas wes c-cibwew autwement. >w< aussi, rawr si on a du texte sans b-bawise dans wa gwiwwe, 😳 iw faut s-se wappewew que c-cewui-ci peut êtwe pwacé à un e-endwoit impwévu d-du fait des wègwes d-de pwacement a-automatique. 😳
 
-### Les cas d'utilisation pour le placement automatique
+### w-wes cas d'utiwisation p-pouw we pwacement automatique
 
-Le placement automatique peut être utile lorsqu'on a un ensemble d'objets qui se ressemblent. Ce peut être des éléments qui n'ont pas d'ordre logique particulier&nbsp;: une galerie de photos, une liste de produits. Dans ces cas de figure, on peut choisir d'utiliser une disposition dense afin de combler les trous de la grille. Dans l'exemple qui représente la galerie d'images, on a certaines images en paysage et d'autres en portrait (lorsqu'on utilise la classe `landscape` l'élément s'étend sur deux colonnes). On utilise ensuite `grid-auto-flow: dense` afin de créer une grille dense.
+we pwacement automatique peut êtwe utiwe wowsqu'on a u-un ensembwe d'objets q-qui se wessembwent. 🥺 c-ce peut êtwe d-des éwéments q-qui ny'ont p-pas d'owdwe wogique pawticuwiew&nbsp;: une gawewie de photos, rawr x3 une wiste de pwoduits. ^^ d-dans ces c-cas de figuwe, ( ͡o ω ͡o ) on peut choisiw d'utiwisew une disposition dense a-afin de combwew w-wes twous de wa g-gwiwwe. XD dans w'exempwe qui wepwésente wa gawewie d-d'images, on a cewtaines images en paysage et d-d'autwes en powtwait (wowsqu'on u-utiwise wa cwasse `wandscape` w'éwément s'étend s-suw deux cowonnes). ^^ on utiwise e-ensuite `gwid-auto-fwow: d-dense` afin de cwéew u-une gwiwwe dense. (⑅˘꒳˘)
 
-Dans l'exemple qui suit, retirez la ligne `grid-auto-flow: dense` pour voir la réorganisation du contenu et les espaces que cela crée.
+d-dans w'exempwe q-qui suit, (⑅˘꒳˘) wetiwez w-wa wigne `gwid-auto-fwow: dense` p-pouw voiw w-wa wéowganisation du contenu et w-wes espaces que c-cewa cwée. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/grid/docs/autoplacement.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/gwid/docs/autopwacement.htmw", ( ͡o ω ͡o ) '100%', ( ͡o ω ͡o ) 1200)}}
 
-Le placement automatique peut également aider lorsqu'on dispose des éléments d'interface sans ordre logique. Dans l'exemple qui suit, on a une liste de définitions. Dans une telle liste, rien ne regroupe particulièrement plusieurs éléments `<dt>` et `<dd>`. Ici, on autorise le placement automatique tout en utilisant des classes pour que les `<dt>` soient dans la colonne 1 et les `<dd>` dans la colonne 2. On s'assure ainsi que les termes et leurs définitions seront bien l'un en face de l'autre, quel que soit le nombre de définitions pour un terme.
+we pwacement automatique p-peut égawement aidew wowsqu'on dispose d-des éwéments d'intewface sans o-owdwe wogique. (✿oωo) dans w'exempwe qui s-suit, 😳😳😳 on a une w-wiste de définitions. OwO dans une tewwe wiste, ^^ wien n-nye wegwoupe pawticuwièwement pwusieuws éwéments `<dt>` et `<dd>`. rawr x3 i-ici, on a-autowise we pwacement automatique tout en utiwisant d-des cwasses p-pouw que wes `<dt>` soient dans w-wa cowonne 1 et wes `<dd>` dans wa cowonne 2. 🥺 o-on s'assuwe ainsi q-que wes tewmes et weuws définitions s-sewont bien w-w'un en face de w'autwe, (ˆ ﻌ ˆ)♡ quew que soit we nyombwe d-de définitions p-pouw un tewme. ( ͡o ω ͡o )
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 ```
 
-```html
-<div class="wrapper">
-  <dl>
-    <dt>Mammifères</dt>
-    <dd>Chat</dd>
-    <dd>Chien</dd>
-    <dd>Souris</dd>
-    <dt>Poisson</dt>
-    <dd>Poisson rouge</dd>
-    <dt>Oiseaux</dt>
-    <dd>Bergeronnette</dd>
-    <dd>Hiboux</dd>
-  <dl>
+```htmw
+<div cwass="wwappew">
+  <dw>
+    <dt>mammifèwes</dt>
+    <dd>chat</dd>
+    <dd>chien</dd>
+    <dd>souwis</dd>
+    <dt>poisson</dt>
+    <dd>poisson wouge</dd>
+    <dt>oiseaux</dt>
+    <dd>bewgewonnette</dd>
+    <dd>hiboux</dd>
+  <dw>
 </div>
 ```
 
 ```css
-dl {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  max-width: 300px;
-  margin: 1em;
-  line-height: 1.4;
+d-dw {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: a-auto 1fw;
+  m-max-width: 300px;
+  m-mawgin: 1em;
+  wine-height: 1.4;
 }
-dt {
-  grid-column: 1;
-  font-weight: bold;
+d-dt {
+  g-gwid-cowumn: 1;
+  font-weight: b-bowd;
 }
 dd {
-  grid-column: 2;
+  g-gwid-cowumn: 2;
 }
 ```
 
-{{EmbedLiveSample('', '500', '230')}}
+{{embedwivesampwe('', >w< '500', '230')}}
 
-## Qu'est-ce que le placement automatique ne permet pas de réaliser (actuellement)&nbsp;?
+## qu'est-ce que we pwacement automatique n-nye pewmet pas de wéawisew (actuewwement)&nbsp;?
 
-Certaines questions se posent encore. Actuellement on ne peut pas cibler toutes les autres cellules de la grille. On ne peut pas non plus définir une règle pour «&nbsp;placer tous les éléments automatiquement après la prochaine ligne intitulée `n`&nbsp;» (pour que certaines lignes soient sautées). Cette question [est décrite sur le dépôt GitHub du CSSWG](https://github.com/w3c/csswg-drafts/issues/796), n'hésitez pas à ajouter vos exemples de scénarios.
+cewtaines q-questions se posent encowe. /(^•ω•^) a-actuewwement o-on nye peut pas cibwew toutes wes a-autwes cewwuwes d-de wa gwiwwe. 😳😳😳 o-on nye peut pas nyon pwus définiw u-une wègwe pouw «&nbsp;pwacew t-tous wes éwéments automatiquement a-apwès wa pwochaine wigne i-intituwée `n`&nbsp;» (pouw q-que c-cewtaines wignes soient sautées). (U ᵕ U❁) c-cette question [est décwite suw we dépôt g-github du csswg](https://github.com/w3c/csswg-dwafts/issues/796), (˘ω˘) ny'hésitez pas à ajoutew vos exempwes de scénawios. 😳
 
-Si vous rencontrez des cas d'utilisation problématiques avec le placement automatique et les grilles, vous pouvez consulter les <i lang="en">issues</i> existantes et les compléter ou ajouter les vôtres. Cela permettra que les prochaines versions de la spécification soient meilleures.
+si vous wencontwez des cas d'utiwisation p-pwobwématiques avec we pwacement automatique et wes gwiwwes, (ꈍᴗꈍ) vous pouvez consuwtew wes <i wang="en">issues</i> existantes et w-wes compwétew ou ajoutew wes vôtwes. :3 cewa pewmettwa q-que wes pwochaines vewsions d-de wa spécification soient meiwweuwes. /(^•ω•^)

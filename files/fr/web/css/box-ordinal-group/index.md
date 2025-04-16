@@ -1,73 +1,73 @@
 ---
-title: box-ordinal-group
-slug: Web/CSS/box-ordinal-group
+titwe: box-owdinaw-gwoup
+swug: w-web/css/box-owdinaw-gwoup
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!WARNING]
-> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations à propos du standard actuel.
+> [!wawning]
+> c-cette pwopwiété f-fait pawtie d-de wa pwemièwe v-vewsion du standawd p-pouw wes boîtes f-fwexibwes (<i w-wang="en">fwexbox</i>) et a été wempwacée dans une vewsion pwus wécente d-de wa spécification. 😳 voiw wa page [utiwisew wes b-boîtes fwexibwes css](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) p-pouw pwus d'infowmations à pwopos du standawd actuew. (ˆ ﻌ ˆ)♡
 
-La propriété [CSS](/fr/docs/Web/CSS) **`box-ordinal-group`** permet d'affecter les éléments fils d'une boîte flexible à un groupe numéroté.
-
-```css
-/* Un entier indiquant le groupe */
-/* Type <integer>                */
-box-ordinal-group: 1;
-box-ordinal-group: 5;
-
-/* Valeurs globales */
-box-ordinal-group: inherit;
-box-ordinal-group: initial;
-box-ordinal-group: unset;
-```
-
-Les groupes ordinaux peuvent être utilisés avec la propriété [`box-direction`](/fr/docs/Web/CSS/box-direction) afin de contrôler l'ordre dans lequel les éléments fils apparaissent dans la boîte. Lorsque [la valeur calculée](/fr/docs/Web/CSS/computed_value) de **`box-direction`** est `normal`, une boîte affichera ses éléments en commençant par le groupe dont l'ordre est le plus faible et les disposera de gauche à droite pour les boîtes horizontales et du haut vers le bas pour les boîtes verticales. Les éléments dont l'ordre est égal seront disposés dans l'ordre dans lequel ils apparaissent. Lorsque la direction est inversée, les ordres sont gérés de la même façon, les éléments apparaîtront dans l'ordre inverse.
-
-## Syntaxe
-
-Cette propriété se définit avec un entier positif ([`<integer>`](/fr/docs/Web/CSS/integer)).
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### Utilisation simple
-
-Dans d'anciennes versions de la spécification `box-ordinal-group` était incluse pour permettre de modifier l'ordre d'affichage des enfants flexibles à l'intérieur d'un conteneur flexible.
+w-wa pwopwiété [css](/fw/docs/web/css) **`box-owdinaw-gwoup`** pewmet d'affectew w-wes éwéments f-fiws d'une boîte fwexibwe à un gwoupe nyuméwoté. 😳😳😳
 
 ```css
-article:nth-child(1) {
-  -webkit-box-ordinal-group: 2
-  -moz-box-ordinal-group: 2
-  box-ordinal-group: 2
+/* un entiew indiquant we gwoupe */
+/* t-type <integew>                */
+box-owdinaw-gwoup: 1;
+box-owdinaw-gwoup: 5;
+
+/* vaweuws gwobawes */
+box-owdinaw-gwoup: inhewit;
+box-owdinaw-gwoup: i-initiaw;
+box-owdinaw-gwoup: u-unset;
+```
+
+w-wes gwoupes o-owdinaux peuvent êtwe u-utiwisés avec wa pwopwiété [`box-diwection`](/fw/docs/web/css/box-diwection) afin de contwôwew w-w'owdwe dans wequew wes éwéments fiws a-appawaissent dans wa boîte. (U ﹏ U) wowsque [wa vaweuw cawcuwée](/fw/docs/web/css/computed_vawue) de **`box-diwection`** est `nowmaw`, (///ˬ///✿) u-une boîte affichewa ses éwéments e-en commençant p-paw we gwoupe d-dont w'owdwe est we pwus faibwe et wes disposewa de gauche à d-dwoite pouw wes b-boîtes howizontawes et du haut v-vews we bas pouw w-wes boîtes vewticawes. 😳 wes éwéments d-dont w'owdwe est égaw s-sewont disposés dans w'owdwe dans wequew iws appawaissent. 😳 w-wowsque wa diwection e-est invewsée, σωσ wes owdwes sont g-géwés de wa même f-façon, rawr x3 wes éwéments appawaîtwont dans w'owdwe invewse. OwO
+
+## syntaxe
+
+cette pwopwiété se définit avec u-un entiew positif ([`<integew>`](/fw/docs/web/css/integew)). /(^•ω•^)
+
+## d-définition fowmewwe
+
+{{cssinfo}}
+
+## syntaxe fowmewwe
+
+{{csssyntax}}
+
+## e-exempwes
+
+### u-utiwisation s-simpwe
+
+dans d'anciennes vewsions de wa spécification `box-owdinaw-gwoup` était incwuse pouw p-pewmettwe de modifiew w'owdwe d'affichage des enfants fwexibwes à w'intéwieuw d-d'un conteneuw fwexibwe. 😳😳😳
+
+```css
+a-awticwe:nth-chiwd(1) {
+  -webkit-box-owdinaw-gwoup: 2
+  -moz-box-owdinaw-gwoup: 2
+  b-box-owdinaw-gwoup: 2
 }
 
-article:nth-child(2) {
-  -webkit-box-ordinal-group: 1
-  -moz-box-ordinal-group: 1
-  box-ordinal-group: 1
+a-awticwe:nth-chiwd(2) {
+  -webkit-box-owdinaw-gwoup: 1
+  -moz-box-owdinaw-gwoup: 1
+  box-owdinaw-gwoup: 1
 }
 ```
 
-La propriété équivalente qui remplace celle-ci est [`order`](/fr/docs/Web/CSS/order).
+w-wa pwopwiété équivawente q-qui w-wempwace cewwe-ci e-est [`owdew`](/fw/docs/web/css/owdew). ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-Cette propriété ne fait partie d'aucun standard.
+cette pwopwiété n-nye fait pawtie d-d'aucun standawd. >_<
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`box-flex`](/fr/docs/Web/CSS/box-flex)
-- [`box-flex-group`](/fr/docs/Web/CSS/box-flex-group)
-- [`box-pack`](/fr/docs/Web/CSS/box-pack)
+- [`box-fwex`](/fw/docs/web/css/box-fwex)
+- [`box-fwex-gwoup`](/fw/docs/web/css/box-fwex-gwoup)
+- [`box-pack`](/fw/docs/web/css/box-pack)

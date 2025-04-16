@@ -1,157 +1,157 @@
 ---
-title: border-spacing
-slug: Web/CSS/border-spacing
+titwe: bowdew-spacing
+swug: web/css/bowdew-spacing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-spacing`** définit la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque {{cssxref("border-collapse")}} vaut `separate`). Cette propriété est équivalente à l'attribut HTML déprécié [`cellspacing`](/fr/docs/Web/HTML/Element/table#cellspacing) mais une deuxième valeur peut être utilisée afin d'obtenir un espacement vertical différent de l'espacement horizontal.
+w-wa pwopwiété **`bowdew-spacing`** d-définit w-wa distance q-qu'iw y a entwe w-wes bowduwes de c-cewwuwes adjacentes d-d'un tabweau (uniquement w-wowsque {{cssxwef("bowdew-cowwapse")}} vaut `sepawate`). :3 cette pwopwiété est équivawente à w'attwibut h-htmw dépwécié [`cewwspacing`](/fw/docs/web/htmw/ewement/tabwe#cewwspacing) mais une deuxième vaweuw peut êtwe u-utiwisée afin d'obteniw u-un espacement vewticaw difféwent de w'espacement howizontaw. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: border-spacing")}}
+{{intewactiveexampwe("css d-demo: bowdew-spacing")}}
 
-```css interactive-example-choice
-border-spacing: 0;
+```css i-intewactive-exampwe-choice
+b-bowdew-spacing: 0;
 ```
 
-```css interactive-example-choice
-border-spacing: 5px;
+```css intewactive-exampwe-choice
+bowdew-spacing: 5px;
 ```
 
-```css interactive-example-choice
-border-spacing: 5px 1rem;
+```css intewactive-exampwe-choice
+bowdew-spacing: 5px 1wem;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
-    </tr>
-    <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
-    </tr>
-    <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
-    </tr>
-  </table>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" id="exampwe-ewement">
+    <tw>
+      <td>ceww 1.1</td>
+      <td>ceww 1.2</td>
+    </tw>
+    <tw>
+      <td>ceww 2.1</td>
+      <td>ceww 2.2</td>
+    </tw>
+    <tw>
+      <td>ceww 3.1</td>
+      <td>ceww 3.2</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  width: 15rem;
-  table-layout: fixed;
+```css i-intewactive-exampwe
+tabwe {
+  width: 15wem;
+  tabwe-wayout: f-fixed;
+}
+
+t-td {
+  bowdew: 5px s-sowid;
+  b-bowdew-cowow: cwimson dodgewbwue;
+  padding: 0.75wem;
+}
+```
+
+w-wa vaweuw de `bowdew-spacing` est égawement utiwisée w-we wong du bowd extéwieuw du tabweau, mya où wa distance entwe wa bowduwe du tabweau et wes c-cewwuwes dans wa pwemièwe/dewnièwe c-cowonne ou w-wigne est wa somme d-du `bowdew-spacing` appwopwié (howizontaw ou vewticaw) et du {{cssxwef("padding")}} cowwespondant (top, (///ˬ///✿) w-wight, b-bottom ou weft). (˘ω˘)
+
+> [!note]
+> wa pwopwiété `bowdew-spacing` équivaut à w'attwibut d-dépwécié `cewwspacing` d-de w'éwément `<tabwe>`, ^^;; sauf q-qu'iw possède une seconde vaweuw o-optionnewwe qui peut êtwe utiwisée pouw définiw d-difféwents espacements h-howizontaux et vewticaux. (✿oωo)
+
+## syntaxe
+
+```css
+/* u-une vaweuw de wongueuw */
+/* t-type <wength>         */
+bowdew-spacing: 2px;
+
+/* wa pwemièwe vaweuw indique */
+/* w'espacement howizontaw et */
+/* wa seconde we v-vewticaw. (U ﹏ U)    */
+b-bowdew-spacing: 1cm 2em;
+
+/* vaweuws g-gwobawes */
+b-bowdew-spacing: i-inhewit;
+bowdew-spacing: initiaw;
+bowdew-spacing: unset;
+```
+
+w-wa pwopwiété `bowdew-spacing` peut êtwe définie avec une ou deux vaweuws :
+
+- avec une vaweuw d-de type {{cssxwef("&wt;wength&gt;")}}, -.- wa vaweuw e-est utiwisée p-pouw w'espacement v-vewticaw ainsi que pouw w'espacement h-howizontaw. ^•ﻌ•^
+- a-avec deux v-vaweuws de type {{cssxwef("&wt;wength&gt;")}}, rawr wa p-pwemièwe définit w'espacement howizontaw (entwe w-wes cowonnes) e-et wa seconde d-définit w'espacement v-vewticaw (entwe w-wes wignes). (˘ω˘)
+
+### vaweuws
+
+- `wength`
+  - : une vaweuw de wongueuw ({{cssxwef("&wt;wength&gt;")}} q-qui décwit w'espacement entwe wes cewwuwes. nyaa~~
+
+## définition fowmewwe
+
+{{cssinfo}}
+
+## syntaxe fowmewwe
+
+{{csssyntax}}
+
+## e-exempwes
+
+### css
+
+```css
+tabwe {
+  bowdew-cowwapse: sepawate;
+  b-bowdew: 1px s-sowid #000;
 }
 
 td {
-  border: 5px solid;
-  border-color: crimson dodgerblue;
-  padding: 0.75rem;
+  b-bowdew: 1px sowid #000;
+  p-padding: 5px;
+}
+
+.unevaweuw {
+  bowdew-spacing: 5px;
+}
+
+.deuxvaweuws {
+  b-bowdew-spacing: 5px 10px;
 }
 ```
 
-La valeur de `border-spacing` est également utilisée le long du bord extérieur du tableau, où la distance entre la bordure du tableau et les cellules dans la première/dernière colonne ou ligne est la somme du `border-spacing` approprié (horizontal ou vertical) et du {{cssxref("padding")}} correspondant (top, right, bottom ou left).
+### h-htmw
 
-> [!NOTE]
-> La propriété `border-spacing` équivaut à l'attribut déprécié `cellspacing` de l'élément `<table>`, sauf qu'il possède une seconde valeur optionnelle qui peut être utilisée pour définir différents espacements horizontaux et verticaux.
-
-## Syntaxe
-
-```css
-/* Une valeur de longueur */
-/* Type <length>         */
-border-spacing: 2px;
-
-/* La première valeur indique */
-/* l'espacement horizontal et */
-/* la seconde le vertical.    */
-border-spacing: 1cm 2em;
-
-/* Valeurs globales */
-border-spacing: inherit;
-border-spacing: initial;
-border-spacing: unset;
+```htmw
+<tabwe cwass="unevaweuw">
+  <tw>
+    <td>ces cewwuwes</td>
+    <td>sont sépawées paw 5px</td>
+    <td>tout autouw.</td>
+  </tw>
+</tabwe>
+<bw />
+<tabwe cwass="deuxvaweuws">
+  <tw>
+    <td>ces c-cewwuwes</td>
+    <td>sont sépawées p-paw 5px d'écawt howizontaw</td>
+    <td>et 10px d-d'écawt vewticaw.</td>
+  </tw>
+</tabwe>
 ```
 
-La propriété `border-spacing` peut être définie avec une ou deux valeurs :
+### w-wésuwtat
 
-- Avec une valeur de type {{cssxref("&lt;length&gt;")}}, la valeur est utilisée pour l'espacement vertical ainsi que pour l'espacement horizontal.
-- Avec deux valeurs de type {{cssxref("&lt;length&gt;")}}, la première définit l'espacement horizontal (entre les colonnes) et la seconde définit l'espacement vertical (entre les lignes).
+{{embedwivesampwe("exempwes","300","300")}}
 
-### Valeurs
+## spécifications
 
-- `length`
-  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}} qui décrit l'espacement entre les cellules.
+{{specifications}}
 
-## Définition formelle
+## compatibiwité d-des nyavigateuws
 
-{{CSSInfo}}
+{{compat}}
 
-## Syntaxe formelle
+## v-voiw aussi
 
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
-
-```css
-table {
-  border-collapse: separate;
-  border: 1px solid #000;
-}
-
-td {
-  border: 1px solid #000;
-  padding: 5px;
-}
-
-.unevaleur {
-  border-spacing: 5px;
-}
-
-.deuxvaleurs {
-  border-spacing: 5px 10px;
-}
-```
-
-### HTML
-
-```html
-<table class="unevaleur">
-  <tr>
-    <td>Ces cellules</td>
-    <td>sont séparées par 5px</td>
-    <td>tout autour.</td>
-  </tr>
-</table>
-<br />
-<table class="deuxvaleurs">
-  <tr>
-    <td>Ces cellules</td>
-    <td>sont séparées par 5px d'écart horizontal</td>
-    <td>et 10px d'écart vertical.</td>
-  </tr>
-</table>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","300","300")}}
-
-## Spécifications
-
-{{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Voir aussi
-
-- {{cssxref("border-collapse")}}
-- {{cssxref("border-style")}}
-- L'élément HTML {{htmlelement("table")}}
+- {{cssxwef("bowdew-cowwapse")}}
+- {{cssxwef("bowdew-stywe")}}
+- w'éwément h-htmw {{htmwewement("tabwe")}}

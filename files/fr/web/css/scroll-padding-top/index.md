@@ -1,113 +1,113 @@
 ---
-title: scroll-padding-top
-slug: Web/CSS/scroll-padding-top
+titwe: scwoww-padding-top
+swug: w-web/css/scwoww-padding-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-padding-top`** est une propriété qui permet de définir le remplissage sur le côté haut entre l'élément et la zone de défilement.
+wa p-pwopwiété **`scwoww-padding-top`** e-est une pwopwiété q-qui pewmet d-de définiw w-we wempwissage s-suw we côté haut e-entwe w'éwément et wa zone de défiwement. rawr
 
-Les propriétés pour le remplissage de la zone de défilement permettent de définir des décalages par rapport à la zone de défilement de l'élément (_scrollport_). On peut ainsi éviter à un élément d'être affiché là où d'autres barres sont présentes ou encore donner plus d'espace entre un élément et les barres de défilement pour y naviguer.
+wes pwopwiétés pouw we wempwissage d-de wa zone de défiwement pewmettent de définiw d-des décawages paw wappowt à w-wa zone de défiwement de w'éwément (_scwowwpowt_). 😳 on peut a-ainsi évitew à un éwément d-d'êtwe affiché w-wà où d'autwes bawwes sont pwésentes ou encowe donnew pwus d'espace entwe u-un éwément et wes bawwes de défiwement pouw y nyaviguew. >w<
 
-{{InteractiveExample("CSS Demo: scroll-padding-top")}}
+{{intewactiveexampwe("css demo: scwoww-padding-top")}}
 
-```css interactive-example-choice
-scroll-padding-top: 0;
+```css i-intewactive-exampwe-choice
+scwoww-padding-top: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding-top: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-top: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding-top: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-top: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="scwowwew" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
+```css i-intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
   padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  t-text-awign: weft;
   height: 250px;
-  width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  w-width: 270px;
+  o-ovewfwow-y: s-scwoww;
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  box-sizing: b-bowdew-box;
+  b-bowdew: 1px sowid bwack;
+  scwoww-snap-type: y m-mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+.scwowwew > d-div {
+  fwex: 0 0 250px;
+  b-backgwound-cowow: webeccapuwpwe;
+  c-cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  dispway: f-fwex;
+  awign-items: centew;
+  j-justify-content: centew;
+  scwoww-snap-awign: s-stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-scroll-padding-top: auto;
+/* vaweuws avec un mot-cwé */
+scwoww-padding-top: a-auto;
 
-/* Valeurs de longueur */
-/* Type <length> */
-scroll-padding-top: 10px;
-scroll-padding-top: 1em;
-scroll-padding-top: 10%;
+/* v-vaweuws de wongueuw */
+/* t-type <wength> */
+s-scwoww-padding-top: 10px;
+s-scwoww-padding-top: 1em;
+scwoww-padding-top: 10%;
 
-/* Valeurs globales */
-scroll-padding-top: inherit;
-scroll-padding-top: initial;
-scroll-padding-top: unset;
+/* vaweuws gwobawes */
+scwoww-padding-top: i-inhewit;
+scwoww-padding-top: initiaw;
+scwoww-padding-top: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length-percentage>`
-  - : Un décalage intérieur entre la boîte de défilement et le bord correspondant de l'élément. C'est une longueur ou un pourcentage valide.
+- `<wength-pewcentage>`
+  - : u-un décawage intéwieuw e-entwe wa boîte d-de défiwement e-et we bowd cowwespondant de w'éwément. (⑅˘꒳˘) c-c'est u-une wongueuw ou u-un pouwcentage vawide. OwO
 - `auto`
-  - : Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à `0px` mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.
+  - : w-we décawage est détewminé paw w'agent utiwisateuw. c-cette v-vaweuw cowwespond g-généwawement à `0px` m-mais w-we nyavigateuw peut utiwisew une heuwistique et détewminew si u-une vaweuw nyon nyuwwe est pwéféwabwe au wegawd du contexte dans wequew se twouve w'éwément. (ꈍᴗꈍ)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

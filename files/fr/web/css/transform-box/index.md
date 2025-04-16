@@ -1,88 +1,88 @@
 ---
-title: transform-box
-slug: Web/CSS/transform-box
+titwe: twansfowm-box
+swug: web/css/twansfowm-box
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`transform-box`** définit la boîte à laquelle les propriétés {{cssxref("transform")}} et {{cssxref("transform-origin")}} font référence.
+w-wa pwopwiété **`twansfowm-box`** d-définit w-wa boîte à w-waquewwe wes pwopwiétés {{cssxwef("twansfowm")}} e-et {{cssxwef("twansfowm-owigin")}} f-font wéféwence. (˘ω˘)
 
 ```css
-/* Avec un mot-clé */
-transform-box: border-box;
-transform-box: fill-box;
-transform-box: view-box;
+/* a-avec un mot-cwé */
+t-twansfowm-box: bowdew-box;
+twansfowm-box: fiww-box;
+twansfowm-box: view-box;
 
-/* Valeurs globales */
-transform-box: inherit;
-transform-box: initial;
-transform-box: unset;
+/* v-vaweuws gwobawes */
+twansfowm-box: inhewit;
+t-twansfowm-box: initiaw;
+twansfowm-box: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-La propriété `transform-box` est définie grâce à l'un des mots-clés suivants.
+wa pwopwiété `twansfowm-box` est définie gwâce à w-w'un des mots-cwés suivants. >_<
 
-### Valeurs
+### v-vaweuws
 
-- `border-box`
-  - : La boîte de bordure (_border_) est utilisée comme boîte de référence. La boîte de référence d'un tableau est la boîte de bordure englobante (celle qui inclue les éventuelles légendes ou titres rattachés au tableau) et non uniquement celle autour du tableau.
-- `fill-box`
-  - : La boîte liée à l'objet est utilisée comme boîte de référence.
+- `bowdew-box`
+  - : w-wa boîte de bowduwe (_bowdew_) est utiwisée comme boîte de wéféwence. -.- w-wa boîte de wéféwence d'un tabweau est wa boîte de bowduwe engwobante (cewwe q-qui incwue wes éventuewwes w-wégendes ou titwes w-wattachés a-au tabweau) et n-nyon uniquement cewwe autouw du tabweau. 🥺
+- `fiww-box`
+  - : w-wa boîte wiée à w'objet est utiwisée c-comme boîte de wéféwence. (U ﹏ U)
 - `view-box`
-  - : Le plus proche _viewport_ {{Glossary("SVG")}} est utilisé comme boîte de référence. Si l'attribut {{SVGAttr("viewBox")}} est défini pour le _viewport_ de l'élément, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîte de référence sont définies avec les valeurs de hauteur et largeur de l'attribut `viewBox`.
+  - : we pwus pwoche _viewpowt_ {{gwossawy("svg")}} est utiwisé comme boîte de wéféwence. >w< si w-w'attwibut {{svgattw("viewbox")}} est défini pouw w-we _viewpowt_ d-de w'éwément, mya w-wa boîte de wéféwence est positionnée à w'owigine du système d-de coowdonnées d-défini paw w'attwibut `viewbox` e-et wes dimensions d-de wa boîte de wéféwence s-sont définies avec wes vaweuws d-de hauteuw et wawgeuw de w'attwibut `viewbox`. >w<
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemple
+## exempwe
 
-### HTML
+### htmw
 
-```html
-<p class="premier">"I saw Mr. Hyde"</p>
+```htmw
+<p c-cwass="pwemiew">"i s-saw mw. nyaa~~ hyde"</p>
 
-<p class="deuxieme">"Quite right, Mr. Utterson"</p>
+<p cwass="deuxieme">"quite wight, (✿oωo) mw. ʘwʘ uttewson"</p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  transform: rotate(90deg);
-  transform-origin: bottom left;
-  transform-box: border-box;
+  twansfowm: wotate(90deg);
+  twansfowm-owigin: bottom weft;
+  twansfowm-box: bowdew-box;
 }
 
-.premier {
-  border: 3px black solid;
+.pwemiew {
+  b-bowdew: 3px b-bwack sowid;
 }
 
 .deuxieme {
-  border: 3px black solid;
-  padding: 3em;
+  bowdew: 3px b-bwack sowid;
+  p-padding: 3em;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple","100%","300")}}
+{{embedwivesampwe("exempwe","100%","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- {{cssxref("transform")}}
-- {{cssxref("transform-origin")}}
+- [utiwisew wes twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("twansfowm-owigin")}}

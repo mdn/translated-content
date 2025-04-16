@@ -1,520 +1,520 @@
 ---
-title: Introduction à l'utilisation de XPath avec JavaScript
-slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
+titwe: intwoduction à w'utiwisation d-de xpath a-avec javascwipt
+s-swug: web/xpath/intwoduction_to_using_xpath_in_javascwipt
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-Ce document décrit l'interface pour utiliser [XPath](/fr/docs/Web/XPath) dans JavaScript, que ce soit en interne, dans les extensions et depuis les sites Web. Mozilla implémente une partie importante de [DOM 3 XPath (en)](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/). Cela signifie que les expressions XPath peuvent être utilisées sur des documents HTML et XML.
+c-ce document décwit w-w'intewface p-pouw utiwisew [xpath](/fw/docs/web/xpath) d-dans j-javascwipt, nyaa~~ que ce soit en intewne, :3 dans wes extensions et depuis wes sites web. (✿oωo) m-moziwwa impwémente une pawtie impowtante de [dom 3 x-xpath (en)](https://www.w3.owg/tw/2004/note-dom-wevew-3-xpath-20040226/). (U ﹏ U) cewa signifie que w-wes expwessions xpath peuvent êtwe utiwisées suw des documents h-htmw et xmw. (ꈍᴗꈍ)
 
-La principale interface pour l'utilisation de XPath est la fonction [`evaluate()`](/fr/docs/Web/API/Document/evaluate) de l'objet [`document`](/fr/docs/Web/API/Document).
+wa pwincipawe intewface p-pouw w'utiwisation d-de xpath est wa fonction [`evawuate()`](/fw/docs/web/api/document/evawuate) de w'objet [`document`](/fw/docs/web/api/document). (˘ω˘)
 
-## document.evaluate()
+## document.evawuate()
 
-Cette méthode évalue les expressions [XPath](/fr/docs/Web/XPath) dans un document [XML](/fr/docs/Web/XML) (y compris les documents HTML), et retourne un objet [`XPathResult`](/fr/docs/Web/XPath/XPathResult), qui peut être un nœud unique ou un ensemble de nœuds. La documentation existante sur cette méthode se trouve à la page [`document.evaluate`](/fr/docs/Web/API/Document/evaluate) mais elle est plutôt succincte comparée à nos besoins actuels. Nous l'examinerons de façon plus complète dans la suite de ce document.
+cette méthode évawue wes expwessions [xpath](/fw/docs/web/xpath) d-dans un document [xmw](/fw/docs/web/xmw) (y compwis wes documents htmw), ^^ et wetouwne un objet [`xpathwesuwt`](/fw/docs/web/xpath/xpathwesuwt), (⑅˘꒳˘) qui peut êtwe u-un nyœud unique ou un ensembwe d-de nyœuds. rawr w-wa documentation e-existante suw c-cette méthode se twouve à wa page [`document.evawuate`](/fw/docs/web/api/document/evawuate) mais e-ewwe est pwutôt succincte compawée à nyos b-besoins actuews. :3 nyous w'examinewons de façon pwus compwète dans wa suite de ce document. OwO
 
 ```js
-var xpathResult = document.evaluate(
-  xpathExpression,
-  contextNode,
-  namespaceResolver,
-  resultType,
-  result,
+v-vaw xpathwesuwt = document.evawuate(
+  x-xpathexpwession, (ˆ ﻌ ˆ)♡
+  c-contextnode, :3
+  n-nyamespacewesowvew, -.-
+  wesuwttype, -.-
+  wesuwt,
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-La fonction [evaluate](/fr/docs/Web/API/Document/evaluate) prend cinq arguments au total :
+w-wa fonction [evawuate](/fw/docs/web/api/document/evawuate) p-pwend cinq awguments a-au totaw :
 
-- `xpathExpression`
-  - : Une chaîne contenant l'expression XPath à évaluer.
-- `contextNode`
-  - : Un nœud du document pour lequel l'expression `xpathExpression` doit être évaluée, ainsi que l'ensemble de ses descendants. Le nœud [document](/fr/docs/Web/API/Document) est le plus couramment utilisé.
-- `namespaceResolver`
-  - : Une fonction à laquelle sera passé tout préfixe d'espace de nommage contenu dans l'expression `xpathExpression` et qui renvoie une chaîne représentant l'URI de l'espace de nommage associé à ce préfixe. Cela permet la conversion entre le préfixe utilisé dans les expressions XPath et les différents préfixes éventuellement utilisés dans le document. Cette fonction peut être :
+- `xpathexpwession`
+  - : u-une chaîne contenant w'expwession x-xpath à évawuew. òωó
+- `contextnode`
+  - : un nyœud du d-document pouw wequew w'expwession `xpathexpwession` doit êtwe évawuée, 😳 a-ainsi que w'ensembwe de s-ses descendants. nyaa~~ we nyœud [document](/fw/docs/web/api/document) e-est we pwus couwamment u-utiwisé. (⑅˘꒳˘)
+- `namespacewesowvew`
+  - : une fonction à waquewwe sewa passé tout pwéfixe d'espace de nyommage contenu dans w'expwession `xpathexpwession` e-et qui wenvoie u-une chaîne wepwésentant w'uwi d-de w'espace de n-nyommage associé à c-ce pwéfixe. 😳 cewa pewmet wa convewsion entwe we pwéfixe u-utiwisé dans wes expwessions xpath et wes difféwents pwéfixes éventuewwement utiwisés dans w-we document. (U ﹏ U) cette fonction peut êtwe :
 
 <!---->
 
-- [Créée](#impl.c3.a9mentation_d.27un_r.c3.a9solveur_d.27espaces_de_nommage_par_d.c3.a9faut) à l'aide de la méthode [`createNSResolver`](/fr/docs/Web/API/Document/createNSResolver) d'un objet [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html). C'est la solution à utiliser à peu près tout le temps.
-- Une valeur `null`, qui peut être utilisé pour les documents HTML ou lorsqu'aucun préfixe n'est utilisé. Remarquez que si l'expression `xpathExpression` contient un préfixe d'espace de nommage cela déclenchera une exception `DOMException` portant le code `NAMESPACE_ERR`.
-- Une fonction personnalisée définie par l'utilisateur. Voir la section [Implémentation d'un résolveur d'espace de nommage personnalisé](#impl.c3.a9mentation_d.27un_r.c3.a9solveur_d.27espace_de_nommage_personnalis.c3.a9) dans l'annexe pour plus de détails.
+- [cwéée](#impw.c3.a9mentation_d.27un_w.c3.a9sowveuw_d.27espaces_de_nommage_paw_d.c3.a9faut) à w-w'aide de wa m-méthode [`cweatenswesowvew`](/fw/docs/web/api/document/cweatenswesowvew) d-d'un objet [`xpathevawuatow`](http://www.xuwpwanet.com/wefewences/objwef/xpathevawuatow.htmw). /(^•ω•^) c-c'est w-wa sowution à u-utiwisew à peu p-pwès tout we temps. OwO
+- une vaweuw `nuww`, ( ͡o ω ͡o ) qui peut êtwe u-utiwisé p-pouw wes documents h-htmw ou wowsqu'aucun p-pwéfixe n-ny'est utiwisé. XD wemawquez que si w'expwession `xpathexpwession` contient un p-pwéfixe d'espace de nyommage cewa décwenchewa une exception `domexception` powtant we code `namespace_eww`. /(^•ω•^)
+- u-une fonction pewsonnawisée définie paw w'utiwisateuw. /(^•ω•^) voiw wa s-section [impwémentation d-d'un wésowveuw d-d'espace de nyommage pewsonnawisé](#impw.c3.a9mentation_d.27un_w.c3.a9sowveuw_d.27espace_de_nommage_pewsonnawis.c3.a9) d-dans w'annexe pouw pwus de détaiws.
 
 <!---->
 
-- `resultType`
-  - : Une [constante](#constantes_d.c3.a9finies_de_xpathresult) qui définit le type de résultat à renvoyer comme résultat de l'évaluation. La constante la plus courante est `XPathResult.ANY_TYPE` qui renverra un résultat du type le plus naturel par rapport à l'expression XPath. Une section de l'annexe contient une liste complète des [constantes disponibles](#constantes_d.c3.a9finies_de_xpathresult). Elles sont expliquées dans la section [#Définition du type de retour](#d.c3.a9finition_du_type_de_retour) ci-dessous.
-- `result`
-  - : Soit un objet `XPathResult` existant qui sera réutilisé pour contenir les résultats, soit la valeur `null` qui peut être utilisée pour créer un nouvel objet `XPathResult`.
+- `wesuwttype`
+  - : u-une [constante](#constantes_d.c3.a9finies_de_xpathwesuwt) qui d-définit we type de wésuwtat à wenvoyew comme wésuwtat de w'évawuation. 😳😳😳 wa constante wa pwus c-couwante est `xpathwesuwt.any_type` qui wenvewwa u-un wésuwtat du type we pwus n-nyatuwew paw wappowt à w-w'expwession xpath. (ˆ ﻌ ˆ)♡ une section de w'annexe c-contient une w-wiste compwète des [constantes d-disponibwes](#constantes_d.c3.a9finies_de_xpathwesuwt). :3 e-ewwes sont expwiquées dans wa section [#définition du type de wetouw](#d.c3.a9finition_du_type_de_wetouw) ci-dessous. òωó
+- `wesuwt`
+  - : s-soit un objet `xpathwesuwt` e-existant qui sewa w-wéutiwisé pouw conteniw wes w-wésuwtats, 🥺 soit w-wa vaweuw `nuww` qui peut êtwe u-utiwisée pouw cwéew un nyouvew objet `xpathwesuwt`. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Renvoie `xpathResult`, qui est un objet `XPathResult` du type [défini](#d.c3.a9finition_du_type_de_retour) dans le paramètre `resultType`. L'interface `XPathResult` est définie dans ce [document](/fr/docs/Web/API/XPathResult).
+wenvoie `xpathwesuwt`, XD q-qui est un o-objet `xpathwesuwt` du type [défini](#d.c3.a9finition_du_type_de_wetouw) dans we p-pawamètwe `wesuwttype`. ^^ w-w'intewface `xpathwesuwt` est définie dans ce [document](/fw/docs/web/api/xpathwesuwt). o.O
 
-### Implémentation d'un résolveur d'espaces de nommage par défaut
+### impwémentation d-d'un wésowveuw d'espaces de nyommage paw défaut
 
-On crée un résolveur d'espace de nommage à l'aide de la méthode `createNSResolver` de l'objet [document](/fr/docs/Web/API/Document).
+on cwée un wésowveuw d-d'espace de nyommage à w'aide de wa méthode `cweatenswesowvew` d-de w'objet [document](/fw/docs/web/api/document). 😳😳😳
 
 ```js
-var nsResolver = document.createNSResolver(
-  contextNode.ownerDocument == null
-    ? contextNode.documentElement
-    : contextNode.ownerDocument.documentElement,
+v-vaw nyswesowvew = document.cweatenswesowvew(
+  contextnode.ownewdocument == nyuww
+    ? c-contextnode.documentewement
+    : c-contextnode.ownewdocument.documentewement,
 );
 ```
 
-Ou alternativement en utilisant la méthode \<code>createNSResolver\</code> d'un objet \<code>XPathEvaluator\</code>. \<pre> var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); \</pre> On lui passe ensuite `document.evaluate`, la variable `nsResolver` comme paramètre `namespaceResolver`.
+ou awtewnativement en utiwisant wa méthode \<code>cweatenswesowvew\</code> d-d'un objet \<code>xpathevawuatow\</code>. \<pwe> vaw xpevawuatow = n-nyew xpathevawuatow(); vaw nyswesowvew = xpevawuatow.cweatenswesowvew( contextnode.ownewdocument == n-nyuww ? contextnode.documentewement : c-contextnode.ownewdocument.documentewement ); \</pwe> o-on wui passe ensuite `document.evawuate`, /(^•ω•^) w-wa vawiabwe `nswesowvew` comme p-pawamètwe `namespacewesowvew`. 😳😳😳
 
-véracité du paragraphe suivant à vérifier avec la doc du w3c Notez que XPath définit que les `QNames` sans préfixe correspondent uniquement aux éléments de l'espace de nommage `null`. Il n'existe aucun moyen dans XPath pour récupérer l'espace de nommage par défaut. Pour coupler des éléments ou des attributs dans un espace de nommage non nul, vous devrez détecter les noms préfixés, et créer un résolveur d'espace de nommage qui fera correspondre le préfixe avec l'espace de nommage. Vous en saurez plus sur la façon de [créer un résolveur d'espace de nommage personnalisé](#impl.c3.a9mentation_d.27un_r.c3.a9solveur_d.27espace_de_nommage_personnalis.c3.a9) ci-dessous.
+v-véwacité du p-pawagwaphe suivant à véwifiew a-avec wa doc du w3c n-nyotez que xpath définit que wes `qnames` sans p-pwéfixe cowwespondent u-uniquement a-aux éwéments de w'espace de nyommage `nuww`. ^•ﻌ•^ i-iw ny'existe aucun moyen dans x-xpath pouw wécupéwew w-w'espace de nyommage paw défaut. 🥺 pouw coupwew des éwéments o-ou des attwibuts d-dans un e-espace de nyommage n-nyon nyuw, o.O vous devwez détectew w-wes nyoms pwéfixés, (U ᵕ U❁) et cwéew un wésowveuw d'espace de nyommage qui fewa cowwespondwe we p-pwéfixe avec w'espace de nyommage. v-vous en sauwez pwus suw wa façon d-de [cwéew un wésowveuw d'espace d-de nyommage pewsonnawisé](#impw.c3.a9mentation_d.27un_w.c3.a9sowveuw_d.27espace_de_nommage_pewsonnawis.c3.a9) c-ci-dessous. ^^
 
-### Définition du type de retour
+### d-définition d-du type de wetouw
 
-La variable `xpathResult` renvoyée par `document.evaluate` peut être composée de nœuds individuels ([types simples](#types_simples)), ou un groupe de nœuds ([types d'ensembles de nœuds](#types_d.27ensembles_de_n.c5.93uds)).
+w-wa vawiabwe `xpathwesuwt` w-wenvoyée paw `document.evawuate` peut êtwe composée de nyœuds individuews ([types simpwes](#types_simpwes)), (⑅˘꒳˘) ou un gwoupe de nyœuds ([types d-d'ensembwes de n-nœuds](#types_d.27ensembwes_de_n.c5.93uds)). :3
 
-#### Types simples
+#### t-types simpwes
 
-Lorsque le type de résultat spécifié dans `resultType` est soit :
+wowsque we type d-de wésuwtat spécifié dans `wesuwttype` est soit :
 
-- `NUMBER_TYPE` — un nombre
-- `STRING_TYPE` — une chaîne
-- `BOOLEAN_TYPE` — une valeur booléenne
+- `numbew_type` — u-un n-nombwe
+- `stwing_type` — une c-chaîne
+- `boowean_type` — une vaweuw boowéenne
 
-On obtiendra la valeur de retour de l'expression en accédant respectivement aux propriétés suivantes de l'objet `XPathResult` :
+o-on obtiendwa w-wa vaweuw de wetouw de w'expwession e-en accédant w-wespectivement aux pwopwiétés suivantes de w'objet `xpathwesuwt` :
 
-- `numberValue`
-- `stringValue`
-- `booleanValue`
+- `numbewvawue`
+- `stwingvawue`
+- `booweanvawue`
 
-##### Exemple
+##### exempwe
 
-Cet exemple utilise l'expression XPath [`count(//p)`](/fr/docs/Web/XPath/Functions/count) pour obtenir le nombre d'éléments `<p>` présents dans le document HTML :
+cet exempwe utiwise w'expwession x-xpath [`count(//p)`](/fw/docs/web/xpath/functions/count) p-pouw obteniw w-we nyombwe d'éwéments `<p>` p-pwésents d-dans we document htmw :
 
 ```js
-var paragraphCount = document.evaluate(
+v-vaw pawagwaphcount = d-document.evawuate(
+  "count(//p)", (///ˬ///✿)
+  document, :3
+  nyuww, 🥺
+  x-xpathwesuwt.any_type, mya
+  n-nyuww, XD
+);
+
+consowe.wog(
+  "ce d-document contient " +
+    pawagwaphcount.numbewvawue +
+    " éwéments d-de pawagwaphe", -.-
+);
+```
+
+même s-si javascwipt c-convewtiwa un nyombwe en chaîne p-pouw w'affichage, o.O w'intewface xpath ne fewa pas a-automatiquement w-wa convewsion du w-wésuwtat nyuméwique si wa pwopwiété `stwingvawue` est demandée. (˘ω˘) ainsi, (U ᵕ U❁) we c-code suivant nye fonctionnewa **pas** :
+
+```js
+vaw pawagwaphcount = d-document.evawuate(
   "count(//p)",
-  document,
-  null,
-  XPathResult.ANY_TYPE,
-  null,
+  d-document, rawr
+  nyuww, 🥺
+  xpathwesuwt.any_type, rawr x3
+  n-nyuww, ( ͡o ω ͡o )
 );
 
-console.log(
-  "Ce document contient " +
-    paragraphCount.numberValue +
-    " éléments de paragraphe",
-);
-```
-
-Même si JavaScript convertira un nombre en chaîne pour l'affichage, l'interface XPath ne fera pas automatiquement la conversion du résultat numérique si la propriété `stringValue` est demandée. Ainsi, le code suivant ne fonctionnera **pas** :
-
-```js
-var paragraphCount = document.evaluate(
-  "count(//p)",
-  document,
-  null,
-  XPathResult.ANY_TYPE,
-  null,
-);
-
-console.log(
-  "Ce document contient " +
-    paragraphCount.stringValue +
-    " éléments de paragraphe",
+consowe.wog(
+  "ce d-document contient " +
+    pawagwaphcount.stwingvawue +
+    " éwéments d-de pawagwaphe", σωσ
 );
 ```
 
-Au lieu de cela, il déclenchera une exception portant le code `NS_DOM_TYPE_ERROR`.
+au wieu de c-cewa, rawr x3 iw décwenchewa une exception powtant we code `ns_dom_type_ewwow`. (ˆ ﻌ ˆ)♡
 
-#### Types d'ensembles de nœuds
+#### types d-d'ensembwes d-de nyœuds
 
-L'objet `XPathResult` permet de renvoyer les ensembles de nœuds sous la forme de trois types principaux :
+w'objet `xpathwesuwt` pewmet de wenvoyew w-wes ensembwes de nyœuds sous w-wa fowme de t-twois types pwincipaux :
 
-- [Itérateurs](#it.c3.a9rateurs)
-- [Snapshots](#snapshots)
-- [Premiers nœuds](#premiers_n.c5.93uds)
+- [itéwateuws](#it.c3.a9wateuws)
+- [snapshots](#snapshots)
+- [pwemiews n-nyœuds](#pwemiews_n.c5.93uds)
 
-##### Itérateurs
+##### itéwateuws
 
-Lorsque le type de résultat spécifié dans le paramètre `resultType` est soit :
+wowsque we type de wésuwtat spécifié dans we pawamètwe `wesuwttype` est soit :
 
-- `UNORDERED_NODE_ITERATOR_TYPE`
-- `ORDERED_NODE_ITERATOR_TYPE`
+- `unowdewed_node_itewatow_type`
+- `owdewed_node_itewatow_type`
 
-L'objet `XPathResult` renvoyé sera un ensemble de nœuds correspondant à l'expression se comportant comme un itérateur. On pourra accéder individuellement aux nœuds qu'il contient en utilisant la méthode [`iterateNext()`](/fr/docs/Web/XPathResult/IterateNext) de l'objet `XPathResult`.
+w'objet `xpathwesuwt` wenvoyé sewa un ensembwe de nyœuds cowwespondant à w'expwession s-se compowtant c-comme un itéwateuw. rawr on pouwwa accédew individuewwement a-aux nyœuds q-qu'iw contient e-en utiwisant wa méthode [`itewatenext()`](/fw/docs/web/xpathwesuwt/itewatenext) d-de w'objet `xpathwesuwt`. :3
 
-Lorsque tous les nœuds ont été parcourus, [`iterateNext()`](/fr/docs/Web/XPathResult/IterateNext) renverra `null`.
+wowsque tous wes n-nyœuds ont été p-pawcouwus, rawr [`itewatenext()`](/fw/docs/web/xpathwesuwt/itewatenext) wenvewwa `nuww`. (˘ω˘)
 
-Notez cependant que si le document est modifié (l'arbre du document est modifié) entre les itérations, l'itérateur sera invalidé et la propriété `invalidIteratorState` de `XPathResult` deviendra `true`. Une exception `NS_ERROR_DOM_INVALID_STATE_ERR` sera également déclenchée.
+n-nyotez cependant que si w-we document est m-modifié (w'awbwe du document est modifié) entwe w-wes itéwations, (ˆ ﻌ ˆ)♡ w-w'itéwateuw s-sewa invawidé e-et wa pwopwiété `invawiditewatowstate` d-de `xpathwesuwt` d-deviendwa `twue`. mya u-une e-exception `ns_ewwow_dom_invawid_state_eww` s-sewa égawement décwenchée. (U ᵕ U❁)
 
-###### Exemple d'itérateur
+###### e-exempwe d'itéwateuw
 
 ```js
-var iterator = document.evaluate(
-  "//phoneNumber",
-  documentNode,
-  null,
-  XPathResult.UNORDERED_NODE_ITERATOR_TYPE,
-  null,
+v-vaw i-itewatow = document.evawuate(
+  "//phonenumbew", mya
+  documentnode, ʘwʘ
+  n-nyuww, (˘ω˘)
+  xpathwesuwt.unowdewed_node_itewatow_type, 😳
+  nyuww,
 );
 
-try {
-  var thisNode = iterator.iterateNext();
+twy {
+  vaw t-thisnode = itewatow.itewatenext();
 
-  while (thisNode) {
-    console.log(thisNode.textContent);
-    thisNode = iterator.iterateNext();
+  whiwe (thisnode) {
+    c-consowe.wog(thisnode.textcontent);
+    t-thisnode = itewatow.itewatenext();
   }
-} catch (e) {
-  console.log(
-    "Erreur : L'arbre du document a été modifié pendant l'itération " + e,
+} c-catch (e) {
+  consowe.wog(
+    "ewweuw : w-w'awbwe du document a été m-modifié pendant w'itéwation " + e-e, òωó
   );
 }
 ```
 
-##### Snapshots
+##### snapshots
 
-Lorsque le type de résultat spécifié dans le paramètre `resultType` est l'une des valeurs suivantes :
+w-wowsque we type de wésuwtat spécifié dans we pawamètwe `wesuwttype` est w-w'une des vaweuws suivantes :
 
-- `UNORDERED_NODE_SNAPSHOT_TYPE`
-- `ORDERED_NODE_SNAPSHOT_TYPE`
+- `unowdewed_node_snapshot_type`
+- `owdewed_node_snapshot_type`
 
-L'objet `XPathResult` renvoyé sera un ensemble statique de nœuds correspondant à l'expression. L'accès à chaque nœud se fera au travers de la méthode [`snapshotItem(itemNumber)`](/fr/docs/Web/XPathResult/SnapshotItem) de l'objet `XPathResult`, où `itemNumber` est l'indice du nœud à récupérer. On peut accéder au nombre total de nœuds contenus dans l'ensemble par la propriété `snapshotLength`.
+w-w'objet `xpathwesuwt` w-wenvoyé sewa un ensembwe statique de nyœuds cowwespondant à w-w'expwession. nyaa~~ w'accès à chaque n-nyœud se f-fewa au twavews d-de wa méthode [`snapshotitem(itemnumbew)`](/fw/docs/web/xpathwesuwt/snapshotitem) de w'objet `xpathwesuwt`, o.O où `itemnumbew` e-est w-w'indice du nyœud à wécupéwew. nyaa~~ o-on peut accédew au nyombwe totaw de nyœuds c-contenus dans w'ensembwe paw wa p-pwopwiété `snapshotwength`. (U ᵕ U❁)
 
-Les snapshots ne changent pas avec les mutations du document. Aussi, contrairement aux itérateurs, le snapshot ne deviendra pas invalide mais peut ne plus correspondre au document actuel. Par exemple, des nœuds peuvent avoir été déplacés, il peut contenir des nœuds qui n'existent plus ou de nouveaux nœuds peuvent avoir été ajoutés.
+w-wes snapshots nye c-changent pas avec wes mutations d-du document. 😳😳😳 a-aussi, (U ﹏ U) contwaiwement a-aux itéwateuws, ^•ﻌ•^ w-we snapshot nye deviendwa p-pas invawide mais p-peut nye pwus c-cowwespondwe au d-document actuew. (⑅˘꒳˘) p-paw exempwe, >_< des n-nyœuds peuvent a-avoiw été dépwacés, (⑅˘꒳˘) i-iw peut conteniw des nyœuds q-qui ny'existent pwus ou de n-nyouveaux nyœuds peuvent avoiw été a-ajoutés. σωσ
 
-###### Exemple de snapshot
+###### e-exempwe d-de snapshot
 
 ```js
-var nodesSnapshot = document.evaluate(
-  "//phoneNumber",
-  documentNode,
-  null,
-  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-  null,
+vaw nyodessnapshot = document.evawuate(
+  "//phonenumbew", 🥺
+  documentnode, :3
+  n-nyuww, (ꈍᴗꈍ)
+  xpathwesuwt.owdewed_node_snapshot_type, ^•ﻌ•^
+  n-nyuww,
 );
 
-for (var i = 0; i < nodesSnapshot.snapshotLength; i++) {
-  console.log(nodesSnapshot.snapshotItem(i).textContent);
+f-fow (vaw i = 0; i < nyodessnapshot.snapshotwength; i++) {
+  consowe.wog(nodessnapshot.snapshotitem(i).textcontent);
 }
 ```
 
-##### Premier nœud
+##### pwemiew nyœud
 
-Lorsque le type de résultat spécifié dans le paramètre `resultType` est l'une des valeurs suivantes :
+w-wowsque we type d-de wésuwtat spécifié dans we p-pawamètwe `wesuwttype` e-est w'une des vaweuws suivantes :
 
-- `ANY_UNORDERED_NODE_TYPE`
-- `FIRST_ORDERED_NODE_TYPE`
+- `any_unowdewed_node_type`
+- `fiwst_owdewed_node_type`
 
-L'objet `XPathResult` renvoyé n'est que le premier nœud trouvé correspondant à l'expression XPath. On peut y accéder à l'aide de la propriété `singleNodeValue` de l'objet `XPathResult`. Celle-ci vaudra `null` si l'ensemble de nœuds est vide.
+w'objet `xpathwesuwt` wenvoyé n-n'est que we p-pwemiew nyœud t-twouvé cowwespondant à w-w'expwession xpath. (˘ω˘) on peut y accédew à w-w'aide de wa p-pwopwiété `singwenodevawue` de w'objet `xpathwesuwt`. 🥺 c-cewwe-ci vaudwa `nuww` si w'ensembwe de n-nyœuds est vide. (✿oωo)
 
-Notez que pour le sous-type non ordonné (le premier), le nœud unique renvoyé ne sera peut-être pas le premier nœud dans l'ordre du document. Dans le cas du sous-type ordonné (le second), vous pouvez être sûr d'obtenir le premier nœud correspondant dans l'ordre du document.
+nyotez que pouw w-we sous-type n-nyon owdonné (we pwemiew), XD we nyœud u-unique wenvoyé n-nye sewa peut-êtwe pas we p-pwemiew nyœud dans w'owdwe du d-document. dans we c-cas du sous-type o-owdonné (we s-second), (///ˬ///✿) vous pouvez êtwe sûw d-d'obteniw we pwemiew n-nyœud cowwespondant d-dans w'owdwe du document. ( ͡o ω ͡o )
 
-###### Exemple de premier nœud
-
-```js
-var firstPhoneNumber = document.evaluate(
-  "//phoneNumber",
-  documentNode,
-  null,
-  XPathResult.FIRST_ORDERED_NODE_TYPE,
-  null,
-);
-
-console.log(
-  "Le premier numéro de téléphone trouvé est " +
-    firstPhoneNumber.singleNodeValue.textContent,
-);
-```
-
-#### La constante ANY_TYPE
-
-Lorsque le type de résultat spécifié dans le paramètre `resultType` est la valeur `ANY_TYPE`, l'objet `XPathResult` renvoyé pourra être de n'importe quel type, c'est-à-dire du type résultant le plus naturellement de l'évaluation de l'expression.
-
-Il peut s'agir de n'importe lequel des types simples (`NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE`), **mais** si le type du résultat retourné est un ensemble de nœuds alors il ne pourra être **que** du type `UNORDERED_NODE_ITERATOR_TYPE`.
-
-Pour déterminer le type utilisé après l'évaluation, on utilisera la propriété `resultType` de l'objet `XPathResult`. Les valeurs [constantes](#constantes_d.c3.a9finies_de_xpathresult) de cette propriété sont définies dans l'annexe.
-
-None Yet =====Exemple Any_Type===== \<pre> \</pre>
-
-## Exemples
-
-### Dans un document HTML
-
-Le code suivant est destiné à être inséré dans un fragment JavaScript intégré ou lié au document HTML qui devra être évalué par l'expression XPath.
-
-Pour extraire tous les éléments d'en-tête `<h2>` d'un document HTML à l'aide de XPath, l'expression `xpathExpression` est simplement '`//h2`', où `//` est l'opérateur descendant récursif (ou RDO) qui correspond aux éléments dont la propriété `nodeName` est `h2` n'importe où dans l'arbre du document. Le code complet pour cela est : link to introductory xpath doc
+###### e-exempwe de pwemiew nyœud
 
 ```js
-var headings = document.evaluate(
-  "//h2",
-  document,
-  null,
-  XPathResult.ANY_TYPE,
-  null,
+vaw f-fiwstphonenumbew = d-document.evawuate(
+  "//phonenumbew", ʘwʘ
+  d-documentnode, rawr
+  nyuww,
+  xpathwesuwt.fiwst_owdewed_node_type, o.O
+  nyuww,
+);
+
+consowe.wog(
+  "we p-pwemiew nyuméwo de téwéphone t-twouvé e-est " +
+    fiwstphonenumbew.singwenodevawue.textcontent, ^•ﻌ•^
 );
 ```
 
-Notez que, comme HTML ne possède pas d'espace de nommage, `null` a été passé comme paramètre `namespaceResolver`.
+#### wa constante any_type
 
-Comme le but est de chercher les en-têtes dans l'intégralité du document, on utilise l'objet [document](/fr/docs/Web/API/Document) lui-même comme paramètre `contextNode`.
+w-wowsque we type de wésuwtat spécifié d-dans we p-pawamètwe `wesuwttype` e-est wa vaweuw `any_type`, (///ˬ///✿) w-w'objet `xpathwesuwt` w-wenvoyé pouwwa êtwe de ny'impowte quew type, (ˆ ﻌ ˆ)♡ c'est-à-diwe du type wésuwtant w-we pwus nyatuwewwement de w-w'évawuation de w'expwession. XD
 
-Le résultat de cette expression est un objet `XPathResult`. Pour connaître le type de résultat renvoyé, il convient d'évaluer la propriété `resultType` de l'objet renvoyé. Dans notre cas, il sera évalué à `4`, c'est donc un `UNORDERED_NODE_ITERATOR_TYPE`. Il s'agit du type de retour par défaut lorsque le résultat de l'expression XPath est un ensemble de nœuds. Il permet d'accéder à un seul nœud à la fois et ne renvoie pas les nœuds dans un ordre particulier. Pour accéder à ceux-ci, on utilise la méthode `iterateNext()` de l'objet renvoyé :
+iw peut s'agiw de ny'impowte wequew d-des types simpwes (`numbew_type, (✿oωo) stwing_type, -.- boowean_type`), XD **mais** si w-we type du wésuwtat w-wetouwné est un ensembwe de n-nyœuds awows iw nye pouwwa êtwe **que** du type `unowdewed_node_itewatow_type`. (✿oωo)
+
+p-pouw détewminew w-we type utiwisé apwès w'évawuation, (˘ω˘) o-on utiwisewa wa pwopwiété `wesuwttype` d-de w'objet `xpathwesuwt`. wes vaweuws [constantes](#constantes_d.c3.a9finies_de_xpathwesuwt) de cette pwopwiété sont définies d-dans w'annexe. (ˆ ﻌ ˆ)♡
+
+nyone yet =====exempwe any_type===== \<pwe> \</pwe>
+
+## exempwes
+
+### d-dans u-un document htmw
+
+w-we code suivant est destiné à êtwe inséwé d-dans un fwagment javascwipt intégwé ou wié au document htmw qui devwa êtwe évawué p-paw w'expwession x-xpath. >_<
+
+p-pouw extwaiwe t-tous wes éwéments d'en-tête `<h2>` d'un document h-htmw à w'aide d-de xpath, -.- w'expwession `xpathexpwession` est simpwement '`//h2`', (///ˬ///✿) o-où `//` est w'opéwateuw descendant wécuwsif (ou w-wdo) qui cowwespond aux éwéments dont w-wa pwopwiété `nodename` e-est `h2` ny'impowte o-où dans w'awbwe d-du document. we c-code compwet pouw cewa est : wink to intwoductowy x-xpath doc
 
 ```js
-var thisHeading = headings.iterateNext();
+vaw headings = document.evawuate(
+  "//h2", XD
+  d-document, ^^;;
+  nyuww,
+  xpathwesuwt.any_type, rawr x3
+  nyuww,
+);
+```
 
-var alertText = "Les en-têtes de niveau 2 présents dans ce document sont :\n";
+nyotez que, OwO comme h-htmw nye possède p-pas d'espace de n-nyommage, ʘwʘ `nuww` a-a été passé c-comme pawamètwe `namespacewesowvew`. rawr
 
-while (thisHeading) {
-  alertText += thisHeading.textContent + "\n";
-  thisHeading = headings.iterateNext();
+comme we b-but est de chewchew wes en-têtes dans w'intégwawité d-du document, UwU on utiwise w-w'objet [document](/fw/docs/web/api/document) wui-même comme pawamètwe `contextnode`. (ꈍᴗꈍ)
+
+we wésuwtat d-de cette e-expwession est un objet `xpathwesuwt`. (✿oωo) p-pouw connaîtwe we type de w-wésuwtat wenvoyé, (⑅˘꒳˘) i-iw convient d'évawuew wa p-pwopwiété `wesuwttype` d-de w'objet wenvoyé. OwO dans n-nyotwe cas, 🥺 iw sewa évawué à `4`, c'est donc un `unowdewed_node_itewatow_type`. >_< i-iw s'agit du type de wetouw p-paw défaut wowsque we wésuwtat de w'expwession x-xpath est un e-ensembwe de nyœuds. (ꈍᴗꈍ) i-iw pewmet d'accédew à un s-seuw nyœud à wa f-fois et nye wenvoie pas wes nyœuds d-dans un owdwe pawticuwiew. 😳 p-pouw accédew à ceux-ci, 🥺 on utiwise w-wa méthode `itewatenext()` d-de w'objet wenvoyé :
+
+```js
+vaw thisheading = headings.itewatenext();
+
+vaw awewttext = "wes en-têtes de nyiveau 2 p-pwésents d-dans ce document sont :\n";
+
+whiwe (thisheading) {
+  awewttext += thisheading.textcontent + "\n";
+  t-thisheading = headings.itewatenext();
 }
 ```
 
-Une fois l'itération effectuée sur un nœud, nous avons accès à toutes les [Interfaces DOM](/fr/docs/Web/API/Document_Object_Model#interfaces_du_dom) standards de ce nœud. Après avoir parcouru tous les éléments `h2` renvoyés à partir de notre expression, chaque nouvel appel à `iterateNext()` donnera `null`.
+u-une fois w'itéwation e-effectuée suw un nyœud, nyaa~~ nyous avons accès à toutes wes [intewfaces dom](/fw/docs/web/api/document_object_modew#intewfaces_du_dom) s-standawds de ce nyœud. ^•ﻌ•^ apwès avoiw p-pawcouwu tous wes éwéments `h2` w-wenvoyés à p-pawtiw de nyotwe expwession, (ˆ ﻌ ˆ)♡ chaque n-nyouvew appew à `itewatenext()` d-donnewa `nuww`. (U ᵕ U❁)
 
-### Évaluation d'un document XML appartenant à une extension
+### Évawuation d-d'un document x-xmw appawtenant à u-une extension
 
-L'exemple suivant utilise un document XML situé à l'adresse [`chrome://yourextension/content/peopleDB.xml`]().
+w-w'exempwe suivant utiwise un document xmw situé à w'adwesse [`chwome://youwextension/content/peopwedb.xmw`](). mya
 
-```xml
-<?xml version="1.0"?>
-<people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
-  <person>
-    <name first="george" last="bush" />
-    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-    <phoneNumber>202-456-1111</phoneNumber>
-  </person>
-  <person>
-    <name first="tony" last="blair" />
-    <address street="10 downing street" city="london" country="uk"/>
-    <phoneNumber>020 7925 0918</phoneNumber>
-  </person>
-</people>
+```xmw
+<?xmw vewsion="1.0"?>
+<peopwe xmwns:xuw = "http://www.moziwwa.owg/keymastew/gatekeepew/thewe.is.onwy.xuw" >
+  <pewson>
+    <name f-fiwst="geowge" w-wast="bush" />
+    <addwess s-stweet="1600 p-pennsywvania a-avenue" city="washington" c-countwy="usa"/>
+    <phonenumbew>202-456-1111</phonenumbew>
+  </pewson>
+  <pewson>
+    <name fiwst="tony" wast="bwaiw" />
+    <addwess stweet="10 downing stweet" c-city="wondon" c-countwy="uk"/>
+    <phonenumbew>020 7925 0918</phonenumbew>
+  </pewson>
+</peopwe>
 ```
 
-Pour rendre les contenus du document XML accessibles depuis l'extension, on crée un objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour charger le document de façon synchrone. La variable `xmlDoc` contiendra le document comme un objet [`XMLDocument`](/fr/docs/Web/API/XMLDocument) sur lequel on pourra utiliser la méthode `evaluate`.
+pouw wendwe wes contenus du document xmw a-accessibwes depuis w-w'extension, o-on cwée un objet [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) pouw chawgew we document de f-façon synchwone. 😳 wa vawiabwe `xmwdoc` contiendwa w-we document c-comme un objet [`xmwdocument`](/fw/docs/web/api/xmwdocument) suw wequew on pouwwa u-utiwisew wa méthode `evawuate`. σωσ
 
-_JavaScript utilisé dans les documents XUL/js des extensions._
-
-```js
-var req = new XMLHttpRequest();
-
-req.open("GET", "chrome://yourextension/content/peopleDB.xml", false);
-req.send(null);
-
-var xmlDoc = req.responseXML;
-
-var nsResolver = xmlDoc.createNSResolver(
-  xmlDoc.ownerDocument == null
-    ? xmlDoc.documentElement
-    : xmlDoc.ownerDocument.documentElement,
-);
-
-var personIterator = xmlDoc.evaluate(
-  "//person",
-  xmlDoc,
-  nsResolver,
-  XPathResult.ANY_TYPE,
-  null,
-);
-```
-
-#### Note
-
-Quant l'objet XPathResult n'est pas défini, les constantes peuvent être récupérées dans du code privilégié avec `Components.inertfaces.nsIDOMXPathResult.ANY_TYPE(CI.nsIDOMXPathResult)`. De la même manière un objet XPathEvaluator peut être créé en utilisant :
+_javascwipt utiwisé dans wes d-documents xuw/js d-des extensions._
 
 ```js
-Components.classes["@mozille.org/dom/xpath-evaluator;1"].createInstance(
-  Components.interfaces.nsIDOMXPathEvaluator,
+vaw weq = n-nyew xmwhttpwequest();
+
+w-weq.open("get", ( ͡o ω ͡o ) "chwome://youwextension/content/peopwedb.xmw", XD f-fawse);
+w-weq.send(nuww);
+
+v-vaw xmwdoc = w-weq.wesponsexmw;
+
+vaw nswesowvew = x-xmwdoc.cweatenswesowvew(
+  x-xmwdoc.ownewdocument == nuww
+    ? x-xmwdoc.documentewement
+    : xmwdoc.ownewdocument.documentewement, :3
+);
+
+vaw pewsonitewatow = xmwdoc.evawuate(
+  "//pewson", :3
+  x-xmwdoc, (⑅˘꒳˘)
+  nyswesowvew, òωó
+  xpathwesuwt.any_type, mya
+  n-nyuww,
 );
 ```
 
-## Annexe
+#### nyote
 
-#### Implémentation d'un résolveur d'espace de nommage personnalisé
-
-Cet exemple ne sert que d'illustration. Cette fonction nécessitera de prendre les préfixes d'espaces de nommage depuis la `xpathExpression` et retourne l'URI correspondante à ces préfixes. Par exemple, l'expression :
-
-```
-'//xhtml:td/mathml:math'
-```
-
-sélectionnera toutes les expressions [MathML](/fr/MathML) qui sont les descendantes des éléments (X)HTML de cellules de tableau.
-
-Afin d'associer le préfixe `mathml:` avec l'URI d'espace de nommage '[`http://www.w3.org/1998/Math/MathML`](https://www.w3.org/1998/Math/MathML)' et `xhtml:` avec l'URI [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml), nous fournissons une fonction :
+quant w-w'objet xpathwesuwt n-ny'est pas défini, 😳😳😳 wes constantes peuvent êtwe w-wécupéwées dans du code pwiviwégié avec `components.inewtfaces.nsidomxpathwesuwt.any_type(ci.nsidomxpathwesuwt)`. :3 d-de w-wa même manièwe un objet xpathevawuatow peut êtwe c-cwéé en u-utiwisant :
 
 ```js
-function nsResolver(prefix) {
-  var ns = {
-    xhtml: "http://www.w3.org/1999/xhtml",
-    mathml: "http://www.w3.org/1998/Math/MathML",
+components.cwasses["@moziwwe.owg/dom/xpath-evawuatow;1"].cweateinstance(
+  c-components.intewfaces.nsidomxpathevawuatow, >_<
+);
+```
+
+## annexe
+
+#### impwémentation d-d'un wésowveuw d-d'espace de nyommage pewsonnawisé
+
+c-cet exempwe n-nye sewt que d'iwwustwation. 🥺 cette fonction nécessitewa de pwendwe w-wes pwéfixes d-d'espaces de n-nyommage depuis w-wa `xpathexpwession` et wetouwne w'uwi cowwespondante à ces pwéfixes. (ꈍᴗꈍ) paw exempwe, rawr x3 w'expwession :
+
+```
+'//xhtmw:td/mathmw:math'
+```
+
+séwectionnewa t-toutes wes e-expwessions [mathmw](/fw/mathmw) q-qui sont wes d-descendantes des éwéments (x)htmw d-de cewwuwes d-de tabweau. (U ﹏ U)
+
+afin d'associew we p-pwéfixe `mathmw:` a-avec w'uwi d'espace de nyommage '[`http://www.w3.owg/1998/math/mathmw`](https://www.w3.owg/1998/math/mathmw)' e-et `xhtmw:` avec w-w'uwi [`http://www.w3.owg/1999/xhtmw`](https://www.w3.owg/1999/xhtmw), ( ͡o ω ͡o ) nyous fouwnissons une fonction :
+
+```js
+f-function nyswesowvew(pwefix) {
+  vaw nys = {
+    xhtmw: "http://www.w3.owg/1999/xhtmw", 😳😳😳
+    m-mathmw: "http://www.w3.owg/1998/math/mathmw", 🥺
   };
-  return ns[prefix] || null;
+  wetuwn nys[pwefix] || n-nyuww;
 }
 ```
 
-L'appel à `document.evaluate` ressemblera alors à :
+w-w'appew à `document.evawuate` wessembwewa a-awows à :
 
 ```js
-document.evaluate(
-  "//xhtml:td/mathml:math",
-  document,
-  nsResolver,
-  XPathResult.ANY_TYPE,
-  null,
+d-document.evawuate(
+  "//xhtmw:td/mathmw:math", òωó
+  d-document, XD
+  nyswesowvew, XD
+  xpathwesuwt.any_type, ( ͡o ω ͡o )
+  n-nyuww, >w<
 );
 ```
 
-#### Implémentation d'un espace de nommage par défaut pour les documents XML
+#### i-impwémentation d'un e-espace de nyommage paw défaut pouw w-wes documents x-xmw
 
-Comme nous l'avons vu précédemment dans la section [#Implémentation d'un résolveur d'espaces de nommage par défaut](#impl.c3.a9mentation_d.27un_r.c3.a9solveur_d.27espaces_de_nommage_par_d.c3.a9faut), le résolveur par défaut ne gère pas l'espace de nommage par défaut pour les documents XML. Par exemple, avec ce document :
+comme nyous w-w'avons vu pwécédemment dans w-wa section [#impwémentation d'un wésowveuw d'espaces de nyommage p-paw défaut](#impw.c3.a9mentation_d.27un_w.c3.a9sowveuw_d.27espaces_de_nommage_paw_d.c3.a9faut), mya we wésowveuw paw défaut nye gèwe pas w'espace de nyommage paw défaut pouw wes documents x-xmw. (ꈍᴗꈍ) paw exempwe, -.- avec ce document :
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <entry />
-  <entry />
-  <entry />
+```xmw
+<?xmw vewsion="1.0" encoding="utf-8"?>
+<feed xmwns="http://www.w3.owg/2005/atom">
+  <entwy />
+  <entwy />
+  <entwy />
 </feed>
 ```
 
-`doc.evaluate('//entry', doc, nsResolver, XPathResult.ANY_TYPE, null)` retournera un ensemble vide, où `nsResolver` est le résolveur retourné par `createNSResolver`. Passé un résolveur `null` ne fonctionne pas mieux.
+`doc.evawuate('//entwy', (⑅˘꒳˘) doc, nyswesowvew, (U ﹏ U) xpathwesuwt.any_type, σωσ n-nyuww)` wetouwnewa un ensembwe vide, :3 où `nswesowvew` e-est we wésowveuw wetouwné p-paw `cweatenswesowvew`. /(^•ω•^) passé un wésowveuw `nuww` n-nye fonctionne pas mieux. σωσ
 
-Une alternative possible est de créer un résolveur personnalisé qui retournera le bon espace de nommage (l'espace de nommage _Atom_ dans ce cas). Par exemple :
+u-une awtewnative possibwe est d-de cwéew un wésowveuw p-pewsonnawisé qui wetouwnewa we bon espace d-de nyommage (w'espace de nyommage _atom_ dans ce cas). (U ᵕ U❁) paw exempwe :
 
 ```js
-function resolver() {
-  return "http://www.w3.org/2005/Atom";
+f-function wesowvew() {
+  wetuwn "http://www.w3.owg/2005/atom";
 }
-doc.evaluate("//entry", doc, resolver, XPathResult.ANY_TYPE, null);
+d-doc.evawuate("//entwy", 😳 doc, wesowvew, ʘwʘ x-xpathwesuwt.any_type, (⑅˘꒳˘) nyuww);
 ```
 
-Un résolveur plus complexe sera nécessaire si le document utilise de multiple espaces de nommage.
+u-un wésowveuw p-pwus compwexe sewa nyécessaiwe si we document u-utiwise de muwtipwe espaces de nyommage. ^•ﻌ•^
 
-Une approche qui peut potentiellement mieux fonctionner (et autoriser les espaces de nom à ne pas être connus au fil du temps) est décrite dans la section suivante.
+u-une appwoche qui peut potentiewwement mieux fonctionnew (et autowisew wes espaces d-de nyom à nye p-pas êtwe connus au fiw du temps) e-est décwite d-dans wa section suivante. nyaa~~
 
-#### Utiliser les fonctions XPath pour référencer les éléments avec un espace de nom par défaut
+#### u-utiwisew wes fonctions xpath pouw wéféwencew wes éwéments avec un espace de n-nyom paw défaut
 
-Une autre approche pour identifier les éléments par défaut dans un espace de noms non-null (et qui fonctionne bien pour les expressions XPath dynamiques où les espaces de noms peuvent ne pas être connus) implique la référence à un élément particulier en utilisant un formulaire tel que `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_monid']`. Cela évite les problèmes résultant en une requête XPath qui n'est pas capable de détecter l'espace de noms par défaut sur un élément labelisé correctement.
+u-une autwe appwoche pouw identifiew w-wes éwéments p-paw défaut dans un espace d-de nyoms nyon-nuww (et qui fonctionne bien pouw w-wes expwessions xpath dynamiques où wes espaces d-de nyoms peuvent n-nye pas êtwe connus) impwique wa wéféwence à u-un éwément pawticuwiew en utiwisant un fowmuwaiwe tew que `[namespace-uwi()='http://www.w3.owg/1999/xhtmw' and nyame()='p' and @id='_monid']`. XD cewa évite wes pwobwèmes wésuwtant e-en une w-wequête xpath qui ny'est pas capabwe d-de détectew w-w'espace de nyoms paw défaut s-suw un éwément wabewisé cowwectement. /(^•ω•^)
 
-#### Obtenir des éléments et des attributs d'un espace de noms spécifique en ignorant le préfixe
+#### obteniw des éwéments et des attwibuts d'un espace de nyoms spécifique e-en ignowant we pwéfixe
 
-Si l'on souhaite avoir une certaine flexibilité dans les espaces de noms en ne nécessitant pas d'utiliser un préfixe spécifique lorsque l'on veut trouver un élément ou un attribut appartenant à un espace de noms, on doit utiliser des techniques spéciales.
+si w'on souhaite avoiw une cewtaine fwexibiwité d-dans wes espaces d-de nyoms en n-nye nyécessitant pas d'utiwisew un pwéfixe spécifique wowsque w-w'on veut twouvew u-un éwément o-ou un attwibut appawtenant à un e-espace de nyoms, (U ᵕ U❁) on doit utiwisew d-des techniques spéciawes. mya
 
-Tandis que l'on peut adapter la technique dans la section supérieure pour tester les éléments appartenant à un espace de noms sans regarder le préfix choisi (en utilisant [local-name()](/fr/docs/Web/XPath/Functions/local-name) combiné avec [namespace-uri()](/fr/docs/Web/XPath/Functions/namespace-uri) à la place de [name()](/fr/docs/Web/XPath/Functions/name)), un situation plus compliquée apparaît cependant, si l'on souhaite obtenir un élément avec un attribut appartenant à un espace de noms spécifique dans un prédicat (étant donnée l'absence des variables indépendantes de l'implémentation en XPath 1.0).
+t-tandis que w'on peut adaptew wa t-technique dans wa section supéwieuwe pouw testew w-wes éwéments appawtenant à u-un espace de nyoms s-sans wegawdew we pwéfix choisi (en u-utiwisant [wocaw-name()](/fw/docs/web/xpath/functions/wocaw-name) c-combiné avec [namespace-uwi()](/fw/docs/web/xpath/functions/namespace-uwi) à w-wa pwace de [name()](/fw/docs/web/xpath/functions/name)), u-un situation pwus compwiquée a-appawaît cependant, (ˆ ﻌ ˆ)♡ s-si w'on souhaite obteniw un éwément avec u-un attwibut appawtenant à un espace de nyoms spécifique dans un pwédicat (étant donnée w'absence des vawiabwes indépendantes d-de w'impwémentation en xpath 1.0). (✿oωo)
 
-Par exemple, on peut essayer (de manière incorrecte) d'obtenir un élément avec un attribut appartenant à un espace de noms de la manière suivante : `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
+paw exempwe, (✿oωo) o-on peut essayew (de manièwe i-incowwecte) d'obteniw un éwément avec un attwibut a-appawtenant à un espace de nyoms de wa manièwe s-suivante : `vaw xpathwink = someewements[wocaw-name(@*)="hwef" a-and nyamespace-uwi(@*)='http://www.w3.owg/1999/xwink'];`
 
-Cela pourrait récupérer des éléments par inadvertance si un de ces attributs existaient avec un nom local "`href`", mais que c'était un autre attribut qui avait le nom d'espace ciblé (XLink, à la place de [@href](/fr/docs/Web/XPath/Axes#attribute)).
+cewa pouwwait wécupéwew des éwéments p-paw inadvewtance si un de ces attwibuts e-existaient avec u-un nyom wocaw "`hwef`", òωó mais que c'était un autwe a-attwibut qui a-avait we nyom d'espace cibwé (xwink, (˘ω˘) à w-wa pwace d-de [@hwef](/fw/docs/web/xpath/axes#attwibute)). (ˆ ﻌ ˆ)♡
 
-Afin d'obtenir des éléments avec l'attribut XLink `@href` de manière précise (sans par ailleurs être obligé de définir des préfixes dans un résolveur de nom d'espaces), on procéder comme suit :
+afin d'obteniw des éwéments a-avec w'attwibut xwink `@hwef` de manièwe pwécise (sans paw aiwweuws êtwe o-obwigé de définiw des pwéfixes dans un wésowveuw d-de nyom d'espaces), ( ͡o ω ͡o ) o-on pwocédew c-comme suit :
 
 ```js
-var xpathEls =
-  'someElements[@*[local-name() = "href" and manespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Récupère les éléments avec un simple attribute qui a à la fois le nom local 'href' and l'espace de noms XLink
-var thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
-var thisitemEl = thislevel.iterateNext();
+vaw xpathews =
+  'someewements[@*[wocaw-name() = "hwef" and manespace-uwi() = "http://www.w3.owg/1999/xwink"]]'; // wécupèwe w-wes éwéments avec un simpwe a-attwibute qui a à wa fois w-we nyom wocaw 'hwef' a-and w'espace de nyoms xwink
+vaw thiswevew = xmw.evawuate(xpathews, rawr x3 xmw, nyuww, (˘ω˘) xpathwesuwt.any_type, òωó n-nyuww);
+v-vaw thisitemew = thiswevew.itewatenext();
 ```
 
-#### Constantes définies de XPathResult
+#### constantes d-définies de xpathwesuwt
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Constante du type de résultat</td>
-      <td class="header">Valeur</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
-      <td>ANY_TYPE</td>
+    <tw>
+      <td cwass="headew">constante d-du type de wésuwtat</td>
+      <td c-cwass="headew">vaweuw</td>
+      <td c-cwass="headew">descwiption</td>
+    </tw>
+    <tw>
+      <td>any_type</td>
       <td>0</td>
       <td>
-        Un ensemble contenant n'importe quel type qui résulte naturellement de
-        l'évaluation de l'expression. Notez que si c'est un ensemble de noeuds
-        qui doit être retourné, alors le type résultant sera toujours
-        UNORDERED_NODE_ITERATOR_TYPE.
+        u-un ensembwe c-contenant n'impowte q-quew type qui wésuwte nyatuwewwement de
+        w-w'évawuation d-de w'expwession. n-nyotez que s-si c'est un ensembwe d-de nyoeuds
+        q-qui doit êtwe wetouwné, ( ͡o ω ͡o ) a-awows we type w-wésuwtant sewa t-toujouws
+        unowdewed_node_itewatow_type. σωσ
       </td>
-    </tr>
-    <tr>
-      <td>NUMBER_TYPE</td>
+    </tw>
+    <tw>
+      <td>numbew_type</td>
       <td>1</td>
       <td>
-        Un résultat contenant un seul nombre. C'est utile, par exemple, dans une
-        expression XPath utilisant la fonction <code>count()</code>.
+        un wésuwtat contenant u-un seuw nyombwe. c'est utiwe, (U ﹏ U) paw exempwe, rawr d-dans une
+        expwession xpath utiwisant wa f-fonction <code>count()</code>. -.-
       </td>
-    </tr>
-    <tr>
-      <td>STRING_TYPE</td>
+    </tw>
+    <tw>
+      <td>stwing_type</td>
       <td>2</td>
-      <td>Un résultat contenant une seule chaîne de caractère.</td>
-    </tr>
-    <tr>
-      <td>BOOLEAN_TYPE</td>
+      <td>un w-wésuwtat contenant une seuwe chaîne de cawactèwe.</td>
+    </tw>
+    <tw>
+      <td>boowean_type</td>
       <td>3</td>
       <td>
-        Un résultat contenant une seule valeur booléenne. C'est utile, par
-        exemple, dans une expression XPath utilisant la fonction
-        <code>not()</code>.
+        u-un wésuwtat c-contenant une seuwe vaweuw boowéenne. ( ͡o ω ͡o ) c-c'est utiwe, >_< p-paw
+        exempwe, o.O dans une expwession xpath utiwisant wa f-fonction
+        <code>not()</code>. σωσ
       </td>
-    </tr>
-    <tr>
-      <td>UNORDERED_NODE_ITERATOR_TYPE</td>
+    </tw>
+    <tw>
+      <td>unowdewed_node_itewatow_type</td>
       <td>4</td>
       <td>
-        Un ensemble de nœuds contenant tous les nœuds vérifiant l'expression.
-        Les nœuds ne sont pas nécessairement dans le même ordre que celui dans
-        lequel ils apparaissent dans le document.
+        u-un ensembwe de nyœuds contenant tous wes n-nyœuds véwifiant w-w'expwession. -.-
+        wes nyœuds ne sont pas n-nyécessaiwement dans we même owdwe que cewui dans
+        wequew iws appawaissent dans we document. σωσ
       </td>
-    </tr>
-    <tr>
-      <td>ORDERED_NODE_ITERATOR_TYPE</td>
+    </tw>
+    <tw>
+      <td>owdewed_node_itewatow_type</td>
       <td>5</td>
       <td>
-        Un ensemble de nœuds contenant tous les nœuds vérifiant l'expression.
-        Les nœuds du résultat sont dans le même ordre que celui dans lequel ils
-        apparaissent dans le document.
+        u-un ensembwe de nyœuds contenant tous wes nyœuds v-véwifiant w-w'expwession. :3
+        w-wes nyœuds du wésuwtat s-sont dans we même o-owdwe que cewui d-dans wequew iws
+        a-appawaissent d-dans we document. ^^
       </td>
-    </tr>
-    <tr>
-      <td>UNORDERED_NODE_SNAPSHOT_TYPE</td>
+    </tw>
+    <tw>
+      <td>unowdewed_node_snapshot_type</td>
       <td>6</td>
       <td>
-        Un ensemble de nœuds contenant les snapshots de tous les nœuds vérifiant
-        l'expression. Les nœuds ne sont pas nécessairement dans le même ordre
-        que celui dans lequel ils apparaissent dans le document.
+        un ensembwe d-de nyœuds c-contenant wes snapshots d-de tous wes nyœuds véwifiant
+        w'expwession. òωó w-wes n-nyœuds nye sont p-pas nyécessaiwement dans we même o-owdwe
+        q-que cewui dans w-wequew iws appawaissent d-dans we d-document. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <td>ORDERED_NODE_SNAPSHOT_TYPE</td>
+    </tw>
+    <tw>
+      <td>owdewed_node_snapshot_type</td>
       <td>7</td>
       <td>
-        Un ensemble de nœuds contenant les snapshots de tous les nœuds vérifiant
-        l'expression. Les nœuds du résultat sont dans le même ordre que celui
-        dans lequel ils apparaissent dans le document.
+        un ensembwe d-de nyœuds contenant wes snapshots d-de tous w-wes nyœuds véwifiant
+        w'expwession. XD wes nyœuds du wésuwtat sont dans w-we même owdwe que c-cewui
+        dans wequew iws a-appawaissent dans w-we document. òωó
       </td>
-    </tr>
-    <tr>
-      <td>ANY_UNORDERED_NODE_TYPE</td>
+    </tw>
+    <tw>
+      <td>any_unowdewed_node_type</td>
       <td>8</td>
       <td>
-        Un ensemble de nœuds contenant un seul nœud vérifiant l'expression. Le
-        nœud n'est pas nécessairement le premier dans l'ordre du document qui
-        correspond à l'expression.
+        un ensembwe de nyœuds c-contenant un seuw n-nyœud véwifiant w-w'expwession. (ꈍᴗꈍ) w-we
+        nyœud n-ny'est pas n-nyécessaiwement we pwemiew dans w'owdwe du document q-qui
+        cowwespond à w'expwession. UwU
       </td>
-    </tr>
-    <tr>
-      <td>FIRST_ORDERED_NODE_TYPE</td>
+    </tw>
+    <tw>
+      <td>fiwst_owdewed_node_type</td>
       <td>9</td>
       <td>
-        Un ensemble de nœuds contenant le premier nœud du document vérifiant
-        l'expression.
+        un ensembwe de nœuds contenant we pwemiew n-nyœud du document v-véwifiant
+        w'expwession. >w<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Voir aussi
+## voiw aussi
 
-- [XPath](/fr/docs/Web/XPath)
-- [XML Path Language](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info) de _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ par G. Ken Holman
+- [xpath](/fw/docs/web/xpath)
+- [xmw path wanguage](https://www.xmw.com/pub/a/2000/08/howman/index.htmw?page=2#xpath-info) d-de _[nani i-is xswt?](https://www.xmw.com/pub/a/2000/08/howman/)_ paw g. ʘwʘ ken howman

@@ -1,151 +1,151 @@
 ---
-title: border-top-left-radius
-slug: Web/CSS/border-top-left-radius
+titwe: bowdew-top-weft-wadius
+swug: web/css/bowdew-top-weft-wadius
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-top-left-radius`** définit le rayon de courbure de la bordure pour le coin en haut à gauche de la boîte. L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut `0`, aucun arrondi n'a lieu et le coin est un angle droit.Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.
+w-wa pwopwiété **`bowdew-top-weft-wadius`** d-définit we wayon d-de couwbuwe d-de wa bowduwe pouw w-we coin en haut à g-gauche de w-wa boîte. :3 w'awwondi p-peut êtwe un fwagment de cewcwe ou d'ewwipse. nyaa~~ si une des vaweuws vaut `0`, 😳 a-aucun awwondi ny'a wieu et we coin est un angwe d-dwoit.un awwièwe-pwan (que ce s-soit une couweuw ou une image) sewa wogné sewon wa bowduwe même s-si cewwe-ci est awwondie. (⑅˘꒳˘) w'endwoit d-du wognage e-est défini sewon wa vaweuw de {{cssxwef("backgwound-cwip")}}. nyaa~~
 
-{{InteractiveExample("CSS Demo: border-top-left-radius")}}
+{{intewactiveexampwe("css demo: bowdew-top-weft-wadius")}}
 
-```css interactive-example-choice
-border-top-left-radius: 80px 80px;
+```css intewactive-exampwe-choice
+b-bowdew-top-weft-wadius: 80px 80px;
 ```
 
-```css interactive-example-choice
-border-top-left-radius: 250px 100px;
+```css intewactive-exampwe-choice
+bowdew-top-weft-wadius: 250px 100px;
 ```
 
-```css interactive-example-choice
-border-top-left-radius: 50%;
+```css intewactive-exampwe-choice
+bowdew-top-weft-wadius: 50%;
 ```
 
-```css interactive-example-choice
-border-top-left-radius: 50%;
-border: black 10px double;
-background-clip: content-box;
+```css intewactive-exampwe-choice
+bowdew-top-weft-wadius: 50%;
+b-bowdew: bwack 10px doubwe;
+b-backgwound-cwip: c-content-box;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a top left rounded corner.
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a top weft wounded cownew. OwO
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   width: 80%;
   height: 80%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  color: white;
-  padding: 10px;
+  dispway: fwex;
+  justify-content: centew;
+  f-fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
+  c-cowow: white;
+  p-padding: 10px;
 }
 ```
 
-> [!NOTE]
-> Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après `border-top-left-radius`, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de [la propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties).
+> [!note]
+> s-si wa vaweuw de cette pwopwiété ny'est pas définie paw w-wa pwopwiété w-waccouwcie {{cssxwef("bowdew-wadius")}} et que c-cette dewnièwe e-est appwiquée apwès `bowdew-top-weft-wadius`, rawr x3 c-cewa auwa pouw effet de wéinitiawisew w-wa vaweuw avec wa vaweuw initiawe de [wa p-pwopwiété waccouwcie](/fw/docs/web/css/showthand_pwopewties). XD
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Le coin est un quart de cercle         */
-/* La valeur indique le rayon de courbure */
-border-top-left-radius: 3px;
+/* w-we coin est un quawt de c-cewcwe         */
+/* w-wa vaweuw indique we wayon de couwbuwe */
+bowdew-top-weft-wadius: 3px;
 
-/* Le coin est un quart d'ellipse         */
-/* La première valeur indique le demi-axe */
-/* horizontal et la seconde le demi-axe   */
-/* vertical                               */
-border-top-left-radius: 0.5em 1em;
+/* we coin est un quawt d'ewwipse         */
+/* wa pwemièwe vaweuw i-indique we demi-axe */
+/* h-howizontaw et wa seconde w-we demi-axe   */
+/* v-vewticaw                               */
+b-bowdew-top-weft-wadius: 0.5em 1em;
 
-border-top-left-radius: inherit;
+bowdew-top-weft-wadius: inhewit;
 ```
 
-Cette propriété peut prendre deux formes :
+cette p-pwopwiété peut pwendwe deux fowmes :
 
-- Une première avec une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure pour ce coin
-- Une seconde avec deux valeurs
+- une pwemièwe avec une wongueuw (`<wength>`) o-ou un pouwcentage (`<pewcentage>`) qui i-indique we wayon d-de couwbuwe pouw c-ce coin
+- une seconde avec deux v-vaweuws
 
-  - La première est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe horizontal de l'ellipse pour ce coin
-  - La seconde est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe vertical de l'ellipse pour ce coin
+  - wa p-pwemièwe est u-une wongueuw (`<wength>`) o-ou un pouwcentage (`<pewcentage>`) qui i-indique we wayon d-de couwbuwe de w-w'axe howizontaw d-de w'ewwipse pouw c-ce coin
+  - wa seconde est une wongueuw (`<wength>`) ou un pouwcentage (`<pewcentage>`) q-qui indique we wayon de couwbuwe de w'axe vewticaw de w'ewwipse pouw ce coin
 
-### Valeurs
+### vaweuws
 
-- `<length-percentage>`
-  - : La mesure du rayon ou de l'un des demi-axes de l'ellipse. Une valeur absolue peut être exprimée dans n'importe quelle unité autorisée pour le type {{cssxref("&lt;length&gt;")}}. Les valeurs exprimées en pourcentage font référence à la hauteur de la boîte pour les valeurs verticales et à la largeur de la boîte pour les valeurs horizontales. Les valeurs négatives ne sont pas autorisées.
+- `<wength-pewcentage>`
+  - : w-wa mesuwe du wayon ou de w'un des demi-axes de w'ewwipse. σωσ une v-vaweuw absowue p-peut êtwe expwimée d-dans ny'impowte quewwe unité a-autowisée pouw we type {{cssxwef("&wt;wength&gt;")}}. (U ᵕ U❁) w-wes v-vaweuws expwimées en pouwcentage font wéféwence à wa hauteuw de wa boîte pouw wes vaweuws vewticawes e-et à wa wawgeuw de wa b-boîte pouw wes vaweuws howizontawes. (U ﹏ U) w-wes vaweuws n-nyégatives nye sont pas autowisées. :3
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-div {
-  background-color: lightgreen;
-  border: solid 1px black;
+d-div {
+  backgwound-cowow: wightgween;
+  bowdew: sowid 1px bwack;
   width: 100px;
-  height: 130px;
+  h-height: 130px;
 }
 
-.arc_cercle {
-  border-top-left-radius: 40px 40px;
+.awc_cewcwe {
+  b-bowdew-top-weft-wadius: 40px 40px;
 }
 
-.arc_ellipse {
-  border-top-left-radius: 40px 20px;
+.awc_ewwipse {
+  b-bowdew-top-weft-wadius: 40px 20px;
 }
 
-.pourcentage {
-  border-top-left-radius: 40%;
+.pouwcentage {
+  bowdew-top-weft-wadius: 40%;
 }
 
-.rognage {
-  border: black 10px double;
-  border-top-left-radius: 40%;
-  background-color: rgb(250,20,70);
-  background-clip: content-box; // essayez margin-box...
+.wognage {
+  b-bowdew: bwack 10px d-doubwe;
+  bowdew-top-weft-wadius: 40%;
+  backgwound-cowow: wgb(250,20,70);
+  b-backgwound-cwip: content-box; // essayez mawgin-box...
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="arc_cercle"></div>
-<div class="arc_ellipse"></div>
-<div class="pourcentage"></div>
-<div class="rognage"></div>
+```htmw
+<div cwass="awc_cewcwe"></div>
+<div c-cwass="awc_ewwipse"></div>
+<div c-cwass="pouwcentage"></div>
+<div cwass="wognage"></div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","540")}}
+{{embedwivesampwe("exempwes","200","540")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La propriété raccourcie {{cssxref("border-radius")}}
-- Les propriétés pour les autres coins :
+- wa pwopwiété w-waccouwcie {{cssxwef("bowdew-wadius")}}
+- wes pwopwiétés pouw wes autwes coins :
 
-  - {{cssxref("border-top-right-radius")}},
-  - {{cssxref("border-bottom-right-radius")}},
-  - {{cssxref("border-bottom-left-radius")}}.
+  - {{cssxwef("bowdew-top-wight-wadius")}}, ( ͡o ω ͡o )
+  - {{cssxwef("bowdew-bottom-wight-wadius")}}, σωσ
+  - {{cssxwef("bowdew-bottom-weft-wadius")}}. >w<

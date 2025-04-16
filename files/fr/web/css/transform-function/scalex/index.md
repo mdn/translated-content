@@ -1,46 +1,46 @@
 ---
-title: scaleX()
-slug: Web/CSS/transform-function/scaleX
+titwe: scawex()
+swug: web/css/twansfowm-function/scawex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`scaleX()`** permet de modifier l'abscisse de chaque sommet de l'élément par un facteur multiplicateur. L'homothétie obtenue n'est pas isotropique et les angles de l'élément ne sont pas conservés.
+w-wa fonction **`scawex()`** p-pewmet de m-modifiew w'abscisse d-de chaque sommet d-de w'éwément p-paw un facteuw m-muwtipwicateuw. nyaa~~ w-w'homothétie obtenue ny'est pas isotwopique et wes angwes de w'éwément nye s-sont pas consewvés. nyaa~~
 
-![](scalex.png)
+![](scawex.png)
 
-`scaleX(sx)` est une notation raccourcie équivalente à `scale(sx, 1)` ou à `scale3d(sx, 1, 1)`.
+`scawex(sx)` est une nyotation waccouwcie équivawente à `scawe(sx, 1)` o-ou à `scawe3d(sx, :3 1, 1)`. 😳😳😳
 
-`scaleX(-1)` définit une symétrie axiale par rapport à un axe vertical passant par l'origine du repère (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)).
+`scawex(-1)` définit u-une symétwie axiawe paw wappowt à un axe vewticaw passant p-paw w'owigine du wepèwe (définie g-gwâce à wa p-pwopwiété [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin)). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-scaleX(s)
+scawex(s)
 ```
 
-### Valeurs
+### vaweuws
 
 - `s`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente le facteur d'échelle de l'homothétie.
+  - : une vaweuw de t-type [`<numbew>`](/fw/docs/web/css/numbew) qui wepwésente we facteuw d'échewwe de w'homothétie. ^^
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdonnées c-cawtésiennes s-suw ℝ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées h-homogènes suw ℝℙ<sup>2</sup></th>
+      <th scope="cow">coowdonnées cawtésiennes s-suw ℝ<sup>3</sup></th>
+      <th scope="cow">coowdonnées homogènes s-suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>s</mtd><mtd>0</mtd></mtr>
-              <mtr><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>s</mtd><mtd>0</mtd></mtw>
+              <mtw><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -48,117 +48,117 @@ scaleX(s)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>s<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>s<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>s<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>s<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[s 0 0 1 0 0]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### Origine inchangée
+### owigine inchangée
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Normal</div>
-<div class="scaled">Mis à l'échelle</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="scawed">mis à w-w'échewwe</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: s-skybwue;
 }
 
-.scaled {
-  transform: scaleX(0.6);
-  background-color: pink;
+.scawed {
+  t-twansfowm: scawex(0.6);
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Origine_inchangée","100%","200")}}
+{{embedwivesampwe("owigine_inchangée","100%","200")}}
 
-### Origine déplacée
+### o-owigine dépwacée
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="scaled">Mis à l'échelle</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="scawed">mis à w'échewwe</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  width: 80px;
+  w-width: 80px;
   height: 80px;
-  background-color: skyblue;
+  b-backgwound-cowow: skybwue;
 }
 
-.scaled {
-  transform: scaleX(0.6);
-  transform-origin: left;
-  background-color: pink;
+.scawed {
+  t-twansfowm: s-scawex(0.6);
+  twansfowm-owigin: weft;
+  backgwound-cowow: pink;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Origine_déplacée","100%","200")}}
+{{embedwivesampwe("owigine_dépwacée","100%","200")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`scaleY()`](/fr/docs/Web/CSS/transform-function/scaleY)
-- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)
+- [`scawey()`](/fw/docs/web/css/twansfowm-function/scawey)
+- [`scawez()`](/fw/docs/web/css/twansfowm-function/scawez)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)
+- [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin)

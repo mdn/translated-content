@@ -1,136 +1,136 @@
 ---
-title: isolation
-slug: Web/CSS/isolation
+titwe: isowation
+swug: web/css/isowation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`isolation`** indique que l'élément crée un nouveau contexte d'empilement (_stacking context_).
+w-wa p-pwopwiété **`isowation`** i-indique q-que w'éwément c-cwée un nyouveau c-contexte d'empiwement (_stacking c-context_).
 
-{{InteractiveExample("CSS Demo: isolation")}}
+{{intewactiveexampwe("css d-demo: isowation")}}
 
-```css interactive-example-choice
-isolation: auto;
+```css intewactive-exampwe-choice
+isowation: auto;
 ```
 
-```css interactive-example-choice
-isolation: isolate;
+```css intewactive-exampwe-choice
+i-isowation: isowate;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="background-container">
-    <div id="example-element">
-      <img src="/shared-assets/images/examples/firefox-logo.svg" />
-      <p><code>mix-blend-mode: multiply;</code></p>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="backgwound-containew">
+    <div i-id="exampwe-ewement">
+      <img swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg" />
+      <p><code>mix-bwend-mode: muwtipwy;</code></p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.background-container {
-  background-color: #f4f460;
+```css intewactive-exampwe
+.backgwound-containew {
+  backgwound-cowow: #f4f460;
   width: 250px;
 }
 
-#example-element {
-  border: 1px solid black;
-  margin: 2em;
+#exampwe-ewement {
+  b-bowdew: 1px sowid bwack;
+  mawgin: 2em;
 }
 
-#example-element * {
-  mix-blend-mode: multiply;
-  color: #8245a3;
+#exampwe-ewement * {
+  m-mix-bwend-mode: m-muwtipwy;
+  cowow: #8245a3;
 }
 ```
 
-Cette propriété s'avère particulièrement utile avec {{cssxref("mix-blend-mode")}} afin de ne mélanger que l'arrière plan d'un contexte d'empilement particulier.
+cette pwopwiété s'avèwe pawticuwièwement utiwe avec {{cssxwef("mix-bwend-mode")}} a-afin de nye méwangew que w'awwièwe pwan d'un contexte d'empiwement p-pawticuwiew. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec mots-clés */
-isolation: auto;
-isolation: isolate;
+/* v-vaweuws avec m-mots-cwés */
+isowation: a-auto;
+i-isowation: isowate;
 
-/* Valeurs globales */
-isolation: inherit;
-isolation: initial;
-isolation: unset;
+/* vaweuws gwobawes */
+isowation: i-inhewit;
+isowation: initiaw;
+isowation: unset;
 ```
 
-La propriété `isolation` est définie avec l'un des mots-clés suivants.
+w-wa pwopwiété `isowation` est définie avec w'un des mots-cwés suivants. >_<
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Un mot-clé qui indique qu'un nouveau contexte d'empilement doit être créé uniquement si une propriété appliquée à l'élément le rend nécessaire.
-- `isolate`
-  - : Un mot-clé qui indique qu'un nouveau contexte d'empilement doit être créé.
+  - : un mot-cwé qui i-indique qu'un nouveau contexte d-d'empiwement doit êtwe c-cwéé u-uniquement si une pwopwiété appwiquée à w'éwément we wend n-nécessaiwe. -.-
+- `isowate`
+  - : u-un mot-cwé qui indique qu'un nyouveau c-contexte d-d'empiwement doit êtwe cwéé. 🥺
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
 .a {
-  background-color: rgb(0, 255, 0);
+  backgwound-cowow: wgb(0, (U ﹏ U) 255, 0);
 }
 #b {
-  width: 200px;
+  w-width: 200px;
   height: 210px;
 }
 .c {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
+  w-width: 100px;
+  h-height: 100px;
+  bowdew: 1px sowid bwack;
   padding: 2px;
-  mix-blend-mode: difference;
+  mix-bwend-mode: diffewence;
 }
 #d {
-  isolation: auto;
+  isowation: auto;
 }
 #e {
-  isolation: isolate;
+  isowation: i-isowate;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="b" class="a">
-  <div id="d">
-    <div class="a c">auto</div>
+```htmw
+<div id="b" cwass="a">
+  <div i-id="d">
+    <div c-cwass="a c-c">auto</div>
   </div>
   <div id="e">
-    <div class="a c">isolate</div>
+    <div cwass="a c">isowate</div>
   </div>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', 230, 230)}}
+{{embedwivesampwe('exempwes', >w< 230, mya 230)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}
-- {{cssxref("background-blend-mode")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("mix-bwend-mode")}}
+- {{cssxwef("backgwound-bwend-mode")}}

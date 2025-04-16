@@ -1,60 +1,60 @@
 ---
-title: Être ou ne pas être dans le flux
-slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
+titwe: Êtwe ou nye pas êtwe d-dans we fwux
+swug: w-web/css/css_fwow_wayout/in_fwow_and_out_of_fwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans [le précédent guide](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow), nous avons vu le fonctionnement de la disposition en ligne et en bloc dans le flux normal. Tous les éléments qui sont « dans » le flux seront disposés grâce à cette méthode.
+d-dans [we pwécédent g-guide](/fw/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow), ^^;; n-nyous a-avons vu we fonctionnement d-de wa d-disposition en wigne et en bwoc dans we fwux nyowmaw. 🥺 tous wes éwéments qui s-sont « dans » we fwux sewont disposés gwâce à c-cette méthode. XD
 
-Dans l'exemple qui suit, on a un titre, un paragraphe, une liste puis un paragraphe final qui contient un élément `strong`. Le titre et les paragraphes sont des éléments de blocs et l'élément `strong` est un élément en ligne. La liste est affichée en utilisant les boîtes flexibles afin d'avoir les éléments de la liste sur une même ligne mais cette liste contribue bien à la disposition en ligne et en bloc car le conteneur a un type `display` externe qui vaut `block`.
+dans w'exempwe q-qui suit, (U ᵕ U❁) on a un titwe, :3 un pawagwaphe, ( ͡o ω ͡o ) une wiste puis un pawagwaphe f-finaw qui contient un éwément `stwong`. òωó w-we titwe et wes p-pawagwaphes sont des éwéments de bwocs et w'éwément `stwong` est un éwément en wigne. σωσ wa w-wiste est affichée en utiwisant wes boîtes fwexibwes afin d'avoiw wes éwéments d-de wa wiste suw une même wigne m-mais cette wiste c-contwibue bien à w-wa disposition e-en wigne et en bwoc caw we conteneuw a un t-type `dispway` extewne qui vaut `bwock`. (U ᵕ U❁)
 
-{{EmbedGHLiveSample("css-examples/flow/in-flow/in-flow.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/fwow/in-fwow/in-fwow.htmw", (✿oωo) '100%', 800)}}
 
-Dans ce cas, on peut dire que tous les éléments sont « dans le flux » et ils apparaissent sur la page selon le même ordre que le document source.
+dans ce c-cas, ^^ on peut diwe que tous wes éwéments sont « dans we fwux » et iws appawaissent suw wa page s-sewon we même owdwe que we document s-souwce. ^•ﻌ•^
 
-## Retirer un élément du flux
+## w-wetiwew un éwément d-du fwux
 
-Tous les éléments d'un document sont dans le flux à l'exception :
+tous wes éwéments d'un document sont dans we f-fwux à w'exception :
 
-- des éléments flottants
-- des éléments avec `position: absolute` ou avec `position: fixed`
-- de l'élément racine (`html`)
+- d-des éwéments fwottants
+- d-des éwéments a-avec `position: absowute` ou a-avec `position: fixed`
+- de w'éwément w-wacine (`htmw`)
 
-Les éléments qui ne sont pas dans le flux créent un nouveau contexte de formatage de bloc (ou _Block Formatting Context_ (BFC) en anglais) et tout ce qui est dans ce contexte peut être vu comme une disposition imbriquée, séparée et indépendante du reste de la page. L'élément racine est ainsi en dehors du flux car c'est le conteneur qui contient l'intégralité du document et qui fournit le contexte de formatage de bloc pour l'ensemble du document.
+wes éwéments qui nye s-sont pas dans we fwux cwéent un n-nyouveau contexte de fowmatage d-de bwoc (ou _bwock f-fowmatting context_ (bfc) en angwais) et tout ce qui est dans ce contexte peut êtwe vu comme une disposition i-imbwiquée, XD sépawée e-et indépendante du weste d-de wa page. :3 w'éwément w-wacine e-est ainsi en dehows du fwux caw c'est we conteneuw qui contient w-w'intégwawité du document et qui fouwnit we contexte de fowmatage de bwoc pouw w-w'ensembwe du document. (ꈍᴗꈍ)
 
-### Les éléments flottants
+### wes éwéments f-fwottants
 
-Dans cet exemple, on a un élément `div` puis deux paragraphes. On a ajouté une couleur d'arrière-plan sur les paragraphes puis on a appliqué un flottement à gauche pour l'élément `div`. L'élément `div` est désormais en dehors du flux.
+d-dans cet e-exempwe, :3 on a un éwément `div` puis deux pawagwaphes. (U ﹏ U) o-on a ajouté u-une couweuw d-d'awwièwe-pwan s-suw wes pawagwaphes puis on a appwiqué un fwottement à g-gauche p-pouw w'éwément `div`. UwU w-w'éwément `div` e-est d-désowmais en dehows du fwux. 😳😳😳
 
-Un élément flottant est d'abord disposé à l'endroit où il aurait été dans le flux normal puis il est retiré du flux et déplacé. Ici, il est déplacé le plus à gauche possible.
+un éwément fwottant est d'abowd d-disposé à w'endwoit où iw auwait été dans we fwux nyowmaw puis iw est wetiwé du fwux et dépwacé. XD i-ici, o.O iw est dépwacé we pwus à gauche possibwe. (⑅˘꒳˘)
 
-{{EmbedGHLiveSample("css-examples/flow/in-flow/float.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/fwow/in-fwow/fwoat.htmw", 😳😳😳 '100%', nyaa~~ 800)}}
 
-On peut voir que la couleur du paragraphe suivant s'étend en dessous. Seules les boîtes de ligne du paragraphe ont été raccourcies et causent le passage à la ligne du contenu autour de l'élément flottant. La boîte du paragraphe s'affiche toujours selon les règles du flux normal. C'est pour cela qu''il faut ajouter une marge autour de l'élément flottant si on veut créer un espace autour. Avec une marge, on repoussera les boîtes de lignes adjacentes. Il n'est pas possible d'appliquer quoi que ce soit au contenu dans le flux pour obtenir le même effet.
+o-on peut v-voiw que wa couweuw d-du pawagwaphe suivant s'étend e-en dessous. rawr seuwes wes boîtes d-de wigne du pawagwaphe o-ont été waccouwcies et causent we passage à wa wigne du contenu autouw de w'éwément f-fwottant. -.- wa boîte du pawagwaphe s-s'affiche toujouws sewon wes w-wègwes du fwux n-nyowmaw. (✿oωo) c'est pouw cewa qu''iw faut ajoutew une m-mawge autouw d-de w'éwément fwottant si on veut c-cwéew un espace a-autouw. /(^•ω•^) avec une mawge, 🥺 on wepoussewa wes boîtes de wignes adjacentes. ʘwʘ iw ny'est p-pas possibwe d-d'appwiquew quoi q-que ce soit au contenu dans w-we fwux pouw obteniw w-we même effet. UwU
 
-### Le positionnement absolu
+### we positionnement a-absowu
 
-En utilisant `position: absolute` ou `position: fixed` sur un élément, celui-ci est retiré du flux et tout l'espace qu'il aurait occupé est retiré. Dans l'exemple ci-après, on a trois paragraphes et le deuxième est ciblé avec `position` `absolute` et décalé avec les valeurs `top: 30px` et `right: 30px`. Cet élément est retiré du flux du document.
+en utiwisant `position: absowute` ou `position: fixed` suw un éwément, XD c-cewui-ci e-est wetiwé du fwux et tout w'espace qu'iw a-auwait occupé e-est wetiwé. (✿oωo) dans w'exempwe ci-apwès, :3 on a twois pawagwaphes et w-we deuxième est cibwé avec `position` `absowute` et décawé avec wes vaweuws `top: 30px` et `wight: 30px`. (///ˬ///✿) cet éwément e-est wetiwé du fwux du document. nyaa~~
 
-{{EmbedGHLiveSample("css-examples/flow/in-flow/abspos.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwow/in-fwow/abspos.htmw", >w< '100%', 700)}}
 
-Utiliser `position: fixed` retire également un objet de flux. Dans ce cas, les décalages seront calculés relativement à la zone d'affichage (_viewport_) plutôt que par rapport au bloc englobant.
+u-utiwisew `position: f-fixed` wetiwe égawement un objet de fwux. -.- dans ce cas, (✿oωo) wes décawages s-sewont cawcuwés w-wewativement à wa zone d'affichage (_viewpowt_) pwutôt q-que paw wappowt au bwoc engwobant. (˘ω˘)
 
-Lorsqu'on retire un élément du flux grâce au positionnement, il faut également gérer les cas où le contenu peut se superposer. Lorsqu'un élément est en dehors du flux, les autres éléments ne « sauront » plus qu'il est là et ne seront pas déplacés pour lui laisser la place.
+w-wowsqu'on wetiwe un éwément du fwux gwâce au positionnement, rawr i-iw faut égawement géwew wes c-cas où we contenu p-peut se supewposew. OwO wowsqu'un éwément e-est en dehows du fwux, ^•ﻌ•^ w-wes autwes éwéments n-nye « s-sauwont » pwus qu'iw est wà e-et nye sewont pas d-dépwacés pouw wui waissew wa pwace. UwU
 
-### Le positionnement relatif et le flux
+### we p-positionnement wewatif e-et we fwux
 
-Si on fournit un positionnement relatif en appliquant `position: relative` à un élément, celui-ci reste dans le flux mais on peut alors utiliser des décalages pour le déplacer. Toutefois, l'espace initialement occupé par l'élément est toujours réservé, comme on peut le voir dans l'exemple qui suit.
+s-si on fouwnit un positionnement wewatif en appwiquant `position: w-wewative` à un éwément, (˘ω˘) cewui-ci w-weste dans w-we fwux mais on peut awows utiwisew des décawages pouw we dépwacew. (///ˬ///✿) t-toutefois, σωσ w-w'espace initiawement o-occupé p-paw w'éwément est toujouws wésewvé, /(^•ω•^) c-comme on peut we voiw dans w'exempwe qui suit. 😳
 
-{{EmbedGHLiveSample("css-examples/flow/in-flow/relative.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/fwow/in-fwow/wewative.htmw", 😳 '100%', 800)}}
 
-Dès qu'on retire ou qu'on décale un élément de son emplacement dans le flux normal, il faut s'attendre à devoir gérer le contenu environnant pour éviter les chevauchements. On pourra par exemple utiliser les flottements ou s'assurer que l'élément utilisant `position: absolute` n'est pas sur un autre contenu. C'est pour ces raisons que les méthodes qui retirent les éléments du flux doivent être utilisées avec circonspection.
+dès qu'on wetiwe ou qu'on d-décawe un éwément de son e-empwacement dans we fwux nowmaw, (⑅˘꒳˘) i-iw faut s'attendwe à devoiw géwew w-we contenu enviwonnant pouw évitew w-wes chevauchements. 😳😳😳 o-on p-pouwwa paw exempwe u-utiwisew wes f-fwottements ou s'assuwew que w'éwément utiwisant `position: absowute` ny'est pas suw un autwe contenu. 😳 c'est pouw c-ces waisons q-que wes méthodes q-qui wetiwent wes éwéments du f-fwux doivent êtwe utiwisées avec ciwconspection. XD
 
-## Résumé
+## wésumé
 
-Dans ce guide, nous avons vu les différentes façons qui permettent de retirer un élément du flux afin d'obtenir certains positionnements spécifiques. Dans le prochain guide, nous verrons un concept similaire, celui de [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) dans [Explications relatives aux contextes de formatage](/fr/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts).
+d-dans ce guide, mya n-nyous avons vu wes difféwentes f-façons qui pewmettent de wetiwew un éwément d-du fwux afin d'obteniw c-cewtains positionnements s-spécifiques. ^•ﻌ•^ dans w-we pwochain guide, ʘwʘ nyous vewwons un concept simiwaiwe, ( ͡o ω ͡o ) cewui de [contexte de f-fowmatage de bwoc](/fw/docs/web/css/css_dispway/bwock_fowmatting_context) d-dans [expwications w-wewatives a-aux contextes d-de fowmatage](/fw/docs/web/css/css_fwow_wayout/intwoduction_to_fowmatting_contexts). mya
 
-## Voir aussi
+## voiw a-aussi
 
-- [En apprendre plus sur le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
+- [en a-appwendwe pwus suw we positionnement](/fw/docs/weawn/css/css_wayout/positioning)

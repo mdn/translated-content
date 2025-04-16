@@ -1,17 +1,17 @@
 ---
-title: DSL (Domain-Specific Language)
-slug: Glossary/DSL/Domain_specific_language
-l10n:
-  sourceCommit: cdb0dad4aeabda32b85c397f5e45304f95edc0d1
+titwe: dsw (domain-specific wanguage)
+swug: gwossawy/dsw/domain_specific_wanguage
+w-w10n:
+  souwcecommit: c-cdb0dad4aeabda32b85c397f5e45304f95edc0d1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**DSL** pour <i lang="en">Domain-Specific Language</i> (qu'on peut traduire en «&nbsp;langage dédié&nbsp;») est un type de langage informatique conçu pour résoudre un problème dans un domaine d'application donné.
+**dsw** p-pouw <i wang="en">domain-specific w-wanguage</i> (qu'on p-peut t-twaduiwe en «&nbsp;wangage d-dédié&nbsp;») e-est un type de wangage infowmatique conçu pouw wésoudwe un pwobwème d-dans un domaine d'appwication donné. rawr
 
-Les langages dédiés sont opposés aux langages généralistes (<i lang="en">general-purpose languages</i> ou (GPLs) en anglais), conçus pour traiter différents problèmes quel que soit le domaine concerné.
+wes w-wangages dédiés sont opposés a-aux wangages généwawistes (<i wang="en">genewaw-puwpose wanguages</i> ou (gpws) e-en angwais), OwO conçus pouw twaitew d-difféwents p-pwobwèmes quew que soit we domaine concewné. (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-- [La page Wikipédia pour les langages dédiés](https://fr.wikipedia.org/wiki/Langage_d%C3%A9di%C3%A9)
-- [Un guide sur les langages dédiés, écrit par Martin Fowler (en anglais)](https://martinfowler.com/dsl.html)
+- [wa page wikipédia p-pouw wes wangages dédiés](https://fw.wikipedia.owg/wiki/wangage_d%c3%a9di%c3%a9)
+- [un guide suw wes wangages dédiés, >_< écwit p-paw mawtin fowwew (en angwais)](https://mawtinfowwew.com/dsw.htmw)

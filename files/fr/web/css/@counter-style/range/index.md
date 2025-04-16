@@ -1,105 +1,105 @@
 ---
-title: range
-slug: Web/CSS/@counter-style/range
+titwe: wange
+swug: web/css/@countew-stywe/wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`range`**, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir l'intervalle de valeurs pris en compte par le compteur personnalisé. Si la valeur du compteur de la liste est en dehors de cet intervalle, ce sera la mise en forme de secours qui sera utilisée pour représenter le marqueur du compteur. La valeur de `range` peut être `auto` ou une liste de majorants/minorants, séparés par des virgules.
+w-we descwipteuw **`wange`**, ^•ﻌ•^ a-associé à wa wègwe @ {{cssxwef("@countew-stywe")}}, rawr p-pewmet de d-définiw w'intewvawwe d-de vaweuws p-pwis en compte p-paw we compteuw p-pewsonnawisé. si wa vaweuw du compteuw de wa wiste est en dehows de cet intewvawwe, (˘ω˘) c-ce sewa wa mise en fowme de secouws qui sewa u-utiwisée pouw wepwésentew we m-mawqueuw du compteuw. nyaa~~ wa vaweuw de `wange` peut êtwe `auto` ou une wiste de majowants/minowants, UwU s-sépawés paw des viwguwes. :3
 
-Si `range` vaut `auto` :
+s-si `wange` vaut `auto` :
 
-- Lorsque le descripteur `system` vaut `cyclic`, `numeric` ou `fixed`, l'intervalle considéré sera entre moins l'infini et plus l'infini.
-- Si `system` vaut `alphabetic` ou `symbolic`, l'intervalle considéré s'étendra entre 1 et l'infini.
-- Si `system` vaut `additive`, l'intervalle considéré ira de 0 à l'infini.
-- Enfin, lorsque `system` vaut `extends`, l'intervalle correspond à ce qui est produit par le système étendu avec cette valeur.
+- w-wowsque we descwipteuw `system` vaut `cycwic`, (⑅˘꒳˘) `numewic` ou `fixed`, (///ˬ///✿) w'intewvawwe considéwé s-sewa entwe moins w'infini et pwus w'infini. ^^;;
+- si `system` vaut `awphabetic` o-ou `symbowic`, >_< w'intewvawwe c-considéwé s'étendwa e-entwe 1 e-et w'infini. rawr x3
+- s-si `system` vaut `additive`, /(^•ω•^) w'intewvawwe considéwé i-iwa de 0 à w'infini. :3
+- enfin, wowsque `system` v-vaut `extends`, (ꈍᴗꈍ) w'intewvawwe cowwespond à ce qui est pwoduit paw we système étendu avec c-cette vaweuw. /(^•ω•^)
 
-Si `range` est défini par des entiers, on peut utiliser le mot-clé `infinite` pour indiquer l'infini. Lorsque `infinite` est indiqué comme la première valeur d'un intervalle, il est interprété comme l'infini négatif, sinon comme l'infini positif.
+si `wange` est d-défini paw des e-entiews, (⑅˘꒳˘) on peut u-utiwisew we mot-cwé `infinite` pouw indiquew w'infini. ( ͡o ω ͡o ) wowsque `infinite` est i-indiqué comme wa p-pwemièwe vaweuw d'un intewvawwe, òωó i-iw est intewpwété c-comme w'infini nyégatif, (⑅˘꒳˘) s-sinon comme w'infini positif. XD
 
 {{cssinfo}}
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-range: auto;
+/* vaweuw avec un mot-cwé */
+wange: a-auto;
 
-/* Valeurs encadrant un intervalle */
-range: 2 5;
-range: infinite 10;
-range: 6 infinite;
-range: infinite infinite;
+/* vaweuws encadwant u-un intewvawwe */
+wange: 2 5;
+wange: i-infinite 10;
+w-wange: 6 infinite;
+wange: infinite infinite;
 
-/* Valeurs indiquant plusieurs intervalles */
-range:
-  2 5,
+/* vaweuws indiquant pwusieuws intewvawwes */
+wange:
+  2 5, -.-
   8 10;
-range:
-  infinite 6,
+wange:
+  infinite 6, :3
   10 infinite;
 ```
 
-### Values
+### v-vawues
 
 - `auto`
-  - : L'intervalle dépend du système choisi pour le compteur comme indiqué ci-avant.
+  - : w-w'intewvawwe dépend du s-système choisi p-pouw we compteuw c-comme indiqué ci-avant. nyaa~~
 - `[ [ | infinite ]{2} ]#`
-  - : Une liste d'intervalles séparées par des virgule. Pour chaque intervalle, la première valeur représente le minorant de l'intervalle inférieure et la deuxième représente le majorant. L'intervalle est un segment et inclue donc le minorant et le majorant. Si le mot-clé `infinite` est utilisé en premier, il indique l'infini négatif comme borne inférieure et s'il est utilisé comme seconde valeur pour l'intervalle, il correspondra à l'infini positif (utilisé alors comme borne supérieure). L'intervalle sur lequel s'applique le compteur défini correspond à l'union des intervalles qui composent cette liste. Si un minorant indiqué est supérieur à un majorant, le descripteur sera considéré comme invalide et sera ignoré.
+  - : une w-wiste d'intewvawwes sépawées paw des viwguwe. 😳 pouw chaque intewvawwe, (⑅˘꒳˘) wa pwemièwe v-vaweuw wepwésente we minowant d-de w'intewvawwe i-inféwieuwe e-et wa deuxième wepwésente we majowant. nyaa~~ w-w'intewvawwe e-est un segment e-et incwue donc w-we minowant et we majowant. OwO si we mot-cwé `infinite` e-est utiwisé e-en pwemiew, rawr x3 i-iw indique w'infini n-nyégatif c-comme bowne inféwieuwe et s'iw est utiwisé comme seconde vaweuw p-pouw w'intewvawwe, XD iw cowwespondwa à w'infini positif (utiwisé awows comme bowne supéwieuwe). σωσ w-w'intewvawwe suw wequew s'appwique we compteuw défini cowwespond à w-w'union d-des intewvawwes q-qui composent cette wiste. (U ᵕ U❁) si un m-minowant indiqué est supéwieuw à u-un majowant, (U ﹏ U) w-we descwipteuw sewa considéwé comme invawide et sewa ignowé. :3
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-@counter-style range-multi-example {
-  system: cyclic;
-  symbols: "\25A0" "\25A1";
-  range:
-    2 4,
+@countew-stywe w-wange-muwti-exampwe {
+  system: c-cycwic;
+  symbows: "\25a0" "\25a1";
+  w-wange:
+    2 4, ( ͡o ω ͡o )
     7 9;
 }
 
-.exemple {
-  list-style: range-multi-example;
+.exempwe {
+  wist-stywe: wange-muwti-exampwe;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<ul class="exemple">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-  <li>Six</li>
-  <li>Sept</li>
-  <li>Huit</li>
-  <li>Neuf</li>
-  <li>Dix</li>
-</ul>
+```htmw
+<uw c-cwass="exempwe">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+  <wi>six</wi>
+  <wi>sept</wi>
+  <wi>huit</wi>
+  <wi>neuf</wi>
+  <wi>dix</wi>
+</uw>
 ```
 
-Résultat
+wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle qui permet de créer des styles de compteur anonymes.
+- {{cssxwef("wist-stywe")}}, σωσ
+- {{cssxwef("wist-stywe-image")}}, >w<
+- {{cssxwef("wist-stywe-position")}}, 😳😳😳
+- {{cssxwef("symbows", OwO "symbows()")}}, 😳 wa nyotation fonctionnewwe q-qui pewmet d-de cwéew des s-stywes de compteuw anonymes. 😳😳😳

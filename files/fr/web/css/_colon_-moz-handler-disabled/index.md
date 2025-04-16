@@ -1,19 +1,19 @@
 ---
-title: :-moz-handler-disabled
-slug: Web/CSS/:-moz-handler-disabled
+titwe: :-moz-handwew-disabwed
+swug: web/css/:-moz-handwew-disabwed
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La pseudo-classe **`:-moz-handler-disabled`** permet de cibler un élément qui ne peut pas être affiché car le gestionnaire associé a été désactivé par l'utilisateur.
+w-wa p-pseudo-cwasse **`:-moz-handwew-disabwed`** p-pewmet d-de cibwew un éwément q-qui nye p-peut pas êtwe a-affiché caw we g-gestionnaiwe associé a été désactivé paw w'utiwisateuw. >_<
 
-Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
+cette pseudo-cwasse est pwincipawement d-destinée aux dévewoppeuws de thèmes.
 
-## Spécifications
+## s-spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+cette pseudo-cwasse e-est une pseudo-cwasse pwopwiétaiwe wiée à gecko/moziwwa e-et nye fait pawtie d'aucune spécification. mya
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":-moz-handler-blocked")}}
-- {{cssxref(":-moz-handler-crashed")}}
+- {{cssxwef(":-moz-handwew-bwocked")}}
+- {{cssxwef(":-moz-handwew-cwashed")}}

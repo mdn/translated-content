@@ -1,126 +1,126 @@
 ---
-title: text-align-last
-slug: Web/CSS/text-align-last
+titwe: text-awign-wast
+swug: w-web/css/text-awign-wast
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-align-last`** définit la façon dont la dernière ligne d'un bloc, ou une ligne avant un retour à la ligne forcé, doit être alignée.
+w-wa pwopwiété **`text-awign-wast`** d-définit w-wa façon d-dont wa dewnièwe w-wigne d'un bwoc, o-ou une wigne a-avant un wetouw à wa wigne fowcé, -.- doit êtwe awignée. ^•ﻌ•^
 
-{{InteractiveExample("CSS Demo: text-align-last")}}
+{{intewactiveexampwe("css demo: text-awign-wast")}}
 
-```css interactive-example-choice
-text-align-last: right;
+```css i-intewactive-exampwe-choice
+text-awign-wast: wight;
 ```
 
-```css interactive-example-choice
-text-align-last: center;
+```css i-intewactive-exampwe-choice
+text-awign-wast: c-centew;
 ```
 
-```css interactive-example-choice
-text-align-last: left;
+```css intewactive-exampwe-choice
+text-awign-wast: weft;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <div>
-    <p id="example-element" style="text-align: justify">
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip ex ea commodo consequat.
+    <p i-id="exampwe-ewement" s-stywe="text-awign: justify">
+      ut enim ad minim veniam, rawr quis nyostwud exewcitation uwwamco wabowis n-nyisi ut
+      awiquip ex ea commodo consequat. (˘ω˘)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
   font-size: 1.5em;
 }
 
-#default-example > div {
+#defauwt-exampwe > d-div {
   width: 250px;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs utilisant un mot-clé */
-text-align-last: auto;
-text-align-last: start;
-text-align-last: end;
-text-align-last: left;
-text-align-last: right;
-text-align-last: center;
-text-align-last: justify;
+/* v-vaweuws utiwisant u-un mot-cwé */
+t-text-awign-wast: a-auto;
+text-awign-wast: stawt;
+text-awign-wast: end;
+text-awign-wast: w-weft;
+text-awign-wast: wight;
+text-awign-wast: c-centew;
+text-awign-wast: justify;
 
-/* Valeurs globales */
-text-align-last: inherit;
-text-align-last: initial;
-text-align-last: unset;
+/* vaweuws gwobawes */
+text-awign-wast: inhewit;
+t-text-awign-wast: initiaw;
+text-awign-wast: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : La ligne concernée est alignée selon la valeur de {{cssxref("text-align")}} sauf si {{cssxref("text-align")}} vaut `justify`, auquel cas, cela aura le même effet que d'utiliser la valeur `start` pour `text-align-last`.
-- `start`
-  - : Cette valeur a le même effet que la valeur `left` si la direction du texte va de gauche à droite ou le même effet que `right` si la direction du texte va de droite à gauche.
+  - : w-wa wigne concewnée est awignée sewon wa vaweuw de {{cssxwef("text-awign")}} s-sauf si {{cssxwef("text-awign")}} v-vaut `justify`, nyaa~~ auquew cas, UwU c-cewa auwa we même e-effet que d'utiwisew wa vaweuw `stawt` p-pouw `text-awign-wast`.
+- `stawt`
+  - : cette vaweuw a w-we même effet que wa vaweuw `weft` si wa diwection d-du texte va de gauche à dwoite o-ou we même effet que `wight` s-si wa diwection d-du texte va de dwoite à gauche. :3
 - `end`
-  - : Cette valeur a le même effet que la valeur `right` si la direction du texte va de gauche à droite ou le même effet que `left` si la direction du texte va de droite à gauche.
-- `left`
-  - : Les contenus en ligne (_inline_) sont alignés sur le bord gauche de la boîte contenant la ligne.
-- `right`
-  - : Les contenus en ligne (_inline_) sont alignés sur le bord droit de la boîte contenant la ligne.
-- `center`
-  - : Les contenus en ligne (_inline_) sont horizontalement centrés par rapport à la boîte contenant la ligne.
+  - : cette vaweuw a we même effet que wa vaweuw `wight` si wa diwection du texte va d-de gauche à dwoite o-ou we même effet que `weft` s-si wa diwection d-du texte va de d-dwoite à gauche. (⑅˘꒳˘)
+- `weft`
+  - : wes contenus en wigne (_inwine_) sont awignés s-suw we bowd gauche de wa boîte contenant wa wigne. (///ˬ///✿)
+- `wight`
+  - : wes contenus en wigne (_inwine_) s-sont awignés suw we bowd d-dwoit de wa boîte c-contenant wa w-wigne. ^^;;
+- `centew`
+  - : wes contenus e-en wigne (_inwine_) s-sont howizontawement centwés p-paw wappowt à w-wa boîte contenant wa wigne. >_<
 - `justify`
-  - : Le texte est justifié. Les bords gauche et droit du texte sont alignés avec les bord gauche et droit du paragraphe.
+  - : we texte e-est justifié. rawr x3 wes b-bowds gauche e-et dwoit du texte s-sont awignés a-avec wes bowd gauche et dwoit du pawagwaphe. /(^•ω•^)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```htmw
+<p cwass="exempwe">
+  wowem ipsum dowow sit a-amet, :3 consectetuw adipisicing ewit, (ꈍᴗꈍ) sed do eiusmod
+  tempow incididunt u-ut wabowe e-et dowowe magna a-awiqua. /(^•ω•^) ut enim ad minim veniam, (⑅˘꒳˘)
+  q-quis nyostwud exewcitation u-uwwamco wabowis n-nisi ut awiquip ex ea commodo
+  consequat. ( ͡o ω ͡o ) duis aute iwuwe dowow in wepwehendewit in vowuptate v-vewit esse
+  ciwwum dowowe eu fugiat n-nyuwwa pawiatuw. òωó excepteuw s-sint occaecat cupidatat n-nyon
+  pwoident, sunt in cuwpa qui officia d-desewunt mowwit a-anim id est wabowum. (⑅˘꒳˘)
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  text-align: justify;
-  text-align-last: center;
+.exempwe {
+  t-text-awign: justify;
+  text-awign-wast: centew;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("text-align")}}
+- {{cssxwef("text-awign")}}

@@ -1,197 +1,197 @@
 ---
-title: :where()
-slug: Web/CSS/:where
-l10n:
-  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
+titwe: :whewe()
+swug: web/css/:whewe
+w-w10n:
+  s-souwcecommit: 62681c2ef134407009c5c11fa679db1f485e016d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:where()`** prend une liste de sélecteurs en argument et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
+w-wa fonction d-de [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:whewe()`** pwend u-une wiste de s-séwecteuws en a-awgument et cibwe t-tout éwément qui peut êtwe séwectionné paw w'un des séwecteuws de wa wiste. ^^;;
 
-{{InteractiveExample("CSS Demo: :where", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :whewe", o.O "tabbed-showtew")}}
 
-```css interactive-example
-ol {
-  list-style-type: upper-alpha;
-  color: darkblue;
+```css intewactive-exampwe
+ow {
+  wist-stywe-type: u-uppew-awpha;
+  cowow: dawkbwue;
 }
 
-/* Not applied to ol, because of lower specificity */
-/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
-:where(ol, ul, menu:unsupported) :where(ol, ul) {
-  color: green;
+/* n-nyot appwied to ow, (///ˬ///✿) because of wowew specificity */
+/* s-stywewint-disabwe-next-wine sewectow-pseudo-cwass-no-unknown */
+:whewe(ow, σωσ uw, m-menu:unsuppowted) :whewe(ow, nyaa~~ u-uw) {
+  cowow: gween;
 }
 
-:where(ol, ul) :where(ol, ul) ol {
-  list-style-type: lower-greek;
-  color: chocolate;
+:whewe(ow, uw) :whewe(ow, ^^;; uw) ow {
+  wist-stywe-type: wowew-gweek;
+  cowow: chocowate;
 }
 ```
 
-```html interactive-example
-<ol>
-  <li>Saturn</li>
-  <li>
-    <ul>
-      <li>Mimas</li>
-      <li>Enceladus</li>
-      <li>
-        <ol>
-          <li>Voyager</li>
-          <li>Cassini</li>
-        </ol>
-      </li>
-      <li>Tethys</li>
-    </ul>
-  </li>
-  <li>Uranus</li>
-  <li>
-    <ol>
-      <li>Titania</li>
-      <li>Oberon</li>
-    </ol>
-  </li>
-</ol>
+```htmw intewactive-exampwe
+<ow>
+  <wi>satuwn</wi>
+  <wi>
+    <uw>
+      <wi>mimas</wi>
+      <wi>encewadus</wi>
+      <wi>
+        <ow>
+          <wi>voyagew</wi>
+          <wi>cassini</wi>
+        </ow>
+      </wi>
+      <wi>tethys</wi>
+    </uw>
+  </wi>
+  <wi>uwanus</wi>
+  <wi>
+    <ow>
+      <wi>titania</wi>
+      <wi>obewon</wi>
+    </ow>
+  </wi>
+</ow>
 ```
 
-`:where()` a toujours une spécificité de 0, tandis que `:is()` participe à la spécificité du sélecteur en prenant la spécificité de son argument le plus spécifique.
+`:whewe()` a t-toujouws une spécificité de 0, tandis que `:is()` pawticipe à wa spécificité d-du séwecteuw en pwenant wa spécificité d-de s-son awgument we p-pwus spécifique. ^•ﻌ•^
 
-### Analyse permissive de la liste des sélecteurs
+### a-anawyse pewmissive de wa wiste des séwecteuws
 
-`:is()` et `:where()` acceptent une liste permissive de sélecteurs ([voir la spécification](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)).
+`:is()` et `:whewe()` a-acceptent une wiste pewmissive de séwecteuws ([voiw w-wa spécification](https://dwafts.csswg.owg/sewectows-4/#typedef-fowgiving-sewectow-wist)). σωσ
 
-En général, lorsqu'on utilise une liste de sélecteurs, celle-ci devient intégralement invalide dès que l'un des sélecteurs est invalide. En utilisant `:is()` ou `:where()`, si la liste contient un sélecteur incorrect ou qui n'est pas pris en charge, celui-ci sera ignoré et les autres seront utilisés.
+en généwaw, -.- wowsqu'on utiwise une wiste de séwecteuws, ^^;; cewwe-ci devient intégwawement i-invawide dès que w'un d-des séwecteuws e-est invawide. en u-utiwisant `:is()` ou `:whewe()`, XD si wa wiste contient un séwecteuw i-incowwect ou q-qui ny'est pas pwis en chawge, 🥺 c-cewui-ci sewa ignowé e-et wes autwes sewont utiwisés. òωó
 
 ```css
-:where(:valid, :non-pris-en-charge) {
+:whewe(:vawid, (ˆ ﻌ ˆ)♡ :non-pwis-en-chawge) {
   /* … */
 }
 ```
 
-Le fragment qui précède sera interprété correctement et ciblera `:valid`, même pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, alors que&nbsp;:
+w-we fwagment qui pwécède s-sewa intewpwété cowwectement et cibwewa `:vawid`, -.- m-même pouw wes nyavigateuws q-qui nye pwennent pas en chawge `:non-pwis-en-chawge`, :3 a-awows que&nbsp;:
 
 ```css
-:valid,
-:non-pris-en-charge {
+:vawid, ʘwʘ
+:non-pwis-en-chawge {
   /* … */
 }
 ```
 
-Sera ignoré pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, même s'ils prennent en charge `:valid`.
+s-sewa ignowé pouw wes nyavigateuws qui nye pwennent pas en chawge `:non-pwis-en-chawge`, 🥺 même s'iws pwennent en chawge `:vawid`. >_<
 
-## Exemples
+## e-exempwes
 
-### Comparer `:where()` et `:is()`
+### c-compawew `:whewe()` et `:is()`
 
-Nous verrons avec cet exemple comment fonctionne `:where()` et la différence entre `:where()` et `:is()`.
+n-nyous vewwons a-avec cet exempwe c-comment fonctionne `:whewe()` et wa difféwence entwe `:whewe()` et `:is()`. ʘwʘ
 
-Prenons le fragment de code HTML qui suit&nbsp;:
+p-pwenons we fwagment de code htmw qui suit&nbsp;:
 
-```html
-<article>
-  <h2>Liens mis en forme avec <code>:is()</code></h2>
-  <section class="is-styling">
+```htmw
+<awticwe>
+  <h2>wiens mis en fowme avec <code>:is()</code></h2>
+  <section c-cwass="is-stywing">
     <p>
-      Voici le contenu principal. Ceci
-      <a href="https://mozilla.org">contient un lien</a>.
+      voici w-we contenu pwincipaw. (˘ω˘) c-ceci
+      <a h-hwef="https://moziwwa.owg">contient un wien</a>. (✿oωo)
     </p>
   </section>
 
-  <aside class="is-styling">
+  <aside c-cwass="is-stywing">
     <p>
-      Voici un contenu en aparté, qui
-      <a href="https://developer.mozilla.org">contient également un lien</a>.
+      v-voici un c-contenu en apawté, (///ˬ///✿) q-qui
+      <a hwef="https://devewopew.moziwwa.owg">contient égawement un wien</a>. rawr x3
     </p>
   </aside>
 
-  <footer class="is-styling">
+  <footew c-cwass="is-stywing">
     <p>
-      Et voilà le pied de page, contenant aussi
-      <a href="https://github.com/mdn">un lien</a>.
+      e-et voiwà w-we pied de page, -.- c-contenant aussi
+      <a h-hwef="https://github.com/mdn">un wien</a>. ^^
     </p>
-  </footer>
-</article>
+  </footew>
+</awticwe>
 
-<article>
-  <h2>Liens mis en forme avec <code>:where()</code></h2>
-  <section class="where-styling">
+<awticwe>
+  <h2>wiens mis en fowme avec <code>:whewe()</code></h2>
+  <section c-cwass="whewe-stywing">
     <p>
-      Voici le contenu principal. Ceci
-      <a href="https://mozilla.org">contient un lien</a>.
+      voici we contenu pwincipaw. (⑅˘꒳˘) ceci
+      <a hwef="https://moziwwa.owg">contient un wien</a>. nyaa~~
     </p>
   </section>
 
-  <aside class="where-styling">
+  <aside c-cwass="whewe-stywing">
     <p>
-      Voici un contenu en aparté, qui
-      <a href="https://developer.mozilla.org">contient également un lien</a>.
+      voici un contenu en apawté, /(^•ω•^) qui
+      <a h-hwef="https://devewopew.moziwwa.owg">contient égawement u-un w-wien</a>. (U ﹏ U)
     </p>
   </aside>
 
-  <footer class="where-styling">
+  <footew cwass="whewe-stywing">
     <p>
-      Et voilà le pied de page, contenant aussi
-      <a href="https://github.com/mdn">un lien</a>.
+      et v-voiwà we pied de page, 😳😳😳 contenant a-aussi
+      <a h-hwef="https://github.com/mdn">un wien</a>. >w<
     </p>
-  </footer>
-</article>
+  </footew>
+</awticwe>
 ```
 
-Dans cet exemple, nous avons deux articles, contenant chacun une section, un aparté et un pied de page. Ils utilisent une classe différente pour les éléments enfants.
+dans cet exempwe, XD nyous avons deux awticwes, o.O contenant chacun u-une section, mya un apawté et un pied d-de page. 🥺 iws utiwisent une cwasse d-difféwente p-pouw wes éwéments enfants. ^^;;
 
-Pour cibler les liens à l'intérieur du contenu plus simplement, on _pourrait_ utiliser `:is()` ou `:where()` comme suit&nbsp;:
+pouw cibwew wes w-wiens à w'intéwieuw d-du contenu pwus simpwement, :3 o-on _pouwwait_ u-utiwisew `:is()` ou `:whewe()` comme suit&nbsp;:
 
 ```css
-html {
-  font-family: sans-serif;
-  font-size: 150%;
+htmw {
+  font-famiwy: sans-sewif;
+  f-font-size: 150%;
 }
 
-:is(section.is-styling, aside.is-styling, footer.is-styling) a {
-  color: red;
+:is(section.is-stywing, (U ﹏ U) a-aside.is-stywing, OwO f-footew.is-stywing) a {
+  c-cowow: wed;
 }
 
-:where(section.where-styling, aside.where-styling, footer.where-styling) a {
-  color: orange;
+:whewe(section.whewe-stywing, 😳😳😳 a-aside.whewe-stywing, (ˆ ﻌ ˆ)♡ footew.whewe-stywing) a-a {
+  cowow: owange;
 }
 ```
 
-Toutefois, si nous devions surcharger la couleur des liens pour les pieds de page avec un sélecteur simple&nbsp;:
+toutefois, XD si nyous devions suwchawgew wa c-couweuw des wiens p-pouw wes pieds de page avec un séwecteuw simpwe&nbsp;:
 
 ```css
-footer a {
-  color: blue;
+f-footew a {
+  c-cowow: bwue;
 }
 ```
 
-Cela ne fonctionnera pas pour les liens rouges, car les sélecteurs à l'intérieur de `:is()` participent à la spécificité générale du sélecteur et car les sélecteurs de classe ont une spécificité supérieure à celle des sélecteurs d'élément.
+cewa nye fonctionnewa pas pouw wes wiens wouges, (ˆ ﻌ ˆ)♡ c-caw wes séwecteuws à w'intéwieuw de `:is()` pawticipent à wa spécificité g-généwawe du séwecteuw et caw wes séwecteuws d-de cwasse ont u-une spécificité supéwieuwe à cewwe des séwecteuws d'éwément. ( ͡o ω ͡o )
 
-Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité à 0, et le lien orange du pied de page sera surchargé par le sélecteur simple.
+c-cependant, w-wes séwecteuws à w'intéwieuw de `:whewe()` ont une spécificité à 0, rawr x3 e-et we wien owange du p-pied de page sewa suwchawgé paw we séwecteuw simpwe. nyaa~~
 
-> [!NOTE]
-> Vous pouvez également consulter [cet exemple sur GitHub](https://mdn.github.io/css-examples/is-where/).
+> [!note]
+> v-vous pouvez égawement consuwtew [cet e-exempwe s-suw github](https://mdn.github.io/css-exampwes/is-whewe/). >_<
 
-{{EmbedLiveSample('', '100%', 600)}}
+{{embedwivesampwe('', ^^;; '100%', (ˆ ﻌ ˆ)♡ 600)}}
 
-## Syntaxe
+## syntaxe
 
-```css-nolint
-:where(<complex-selector-list>) {
+```css-nowint
+:whewe(<compwex-sewectow-wist>) {
   /* … */
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`:is()`](/fr/docs/Web/CSS/:is)
-- [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list)
-- [Composants web](/fr/docs/Web/API/Web_components)
+- [`:is()`](/fw/docs/web/css/:is)
+- [wiste d-de séwecteuws](/fw/docs/web/css/sewectow_wist)
+- [composants web](/fw/docs/web/api/web_components)

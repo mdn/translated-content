@@ -1,44 +1,44 @@
 ---
-title: rotate()
-slug: Web/CSS/transform-function/rotate
+titwe: wotate()
+swug: web/css/twansfowm-function/wotate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`rotate()`** définit une transformation qui déplace un élément autour d'un point fixe (défini par la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)) sans le déformer (autrement dit, qui applique une rotation plane). C'est une rotation autour de ce point. Par défaut, cette origine correspond au centre de l'élément.
+w-wa fonction **`wotate()`** d-définit u-une twansfowmation q-qui dépwace u-un éwément autouw d-d'un point fixe (défini p-paw w-wa pwopwiété [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin)) sans we défowmew (autwement dit, mya qui appwique une wotation p-pwane). (///ˬ///✿) c'est une wotation autouw de ce point. (˘ω˘) p-paw défaut, ^^;; cette owigine cowwespond a-au centwe de w'éwément. (✿oωo)
 
-La rotation plane est définie par un angle, l'argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+wa wotation pwane est définie p-paw un angwe, (U ﹏ U) w'awgument de w-wa fonction. -.- si w-w'angwe indiqué est positif, ^•ﻌ•^ we mouvement sewa appwiqué dans we sens howaiwe et s-sinon iw sewa appwiqué dans we sens invewse des aiguiwwes d'une montwe. rawr wa vaweuw o-obtenue paw cette fonction e-est de type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
-L'angle de la rotation créée grâce à `rotate()` est fourni comme argument à cette fonction via une aleur de type [`<angle>`](/fr/docs/Web/CSS/angle). Si l'angle est positif, la rotation sera dans le sens des aiguilles d'une montre et s'il est négatif, elle sera dans le sens inverse des aiguilles d'une montre.
+w-w'angwe d-de wa wotation cwéée g-gwâce à `wotate()` est fouwni comme awgument à c-cette fonction via une aweuw de type [`<angwe>`](/fw/docs/web/css/angwe). nyaa~~ s-si w'angwe est positif, UwU wa wotation sewa dans we sens des aiguiwwes d'une montwe et s'iw est n-nyégatif, :3 ewwe sewa dans we sens i-invewse des aiguiwwes d-d'une montwe. (⑅˘꒳˘)
 
 ```css
-rotate(a)
+w-wotate(a)
 ```
 
-### Valeurs
+### vaweuws
 
 - _a_
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/SS/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
+  - : une vaweuw de type [`<angwe>`](/fw/docs/web/ss/angwe) q-qui w-wepwésente w'angwe de wa wotation. (///ˬ///✿) u-un angwe positif i-indique une wotation appwiquée d-dans we sens howaiwe, ^^;; un angwe n-nyégatif appwique une wotation dans we sens a-anti-howaiwe. >_<
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes surℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">coowdonnées cawtésiennes s-suwℝ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées homogènes suw ℝℙ<sup>2</sup></th>
+      <th scope="cow">coowdonnées cawtésiennes suw ℝ<sup>3</sup></th>
+      <th scope="cow">coowdonnées homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtr>
-              <mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtw>
+              <mtw><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -46,135 +46,135 @@ rotate(a)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd
-                ><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+                ><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[cos(a) sin(a) -sin(a) cos(a) 0 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[cos(a) s-sin(a) -sin(a) c-cos(a) 0 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### CSS
+#### css
 
 ```css
-div {
+d-div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
-.tourne {
-  transform: rotate(45deg); /* Équivalent à rotateZ(45deg) */
-  background-color: pink;
+.touwne {
+  t-twansfowm: wotate(45deg); /* Équivawent à w-wotatez(45deg) */
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="tourne">Tourné</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="touwne">touwné</div>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemple_simple", "auto", 180)}}
+{{embedwivesampwe("exempwe_simpwe", rawr x3 "auto", /(^•ω•^) 180)}}
 
-### Associer une rotation à une autre transformation
+### associew u-une wotation à u-une autwe twansfowmation
 
-Lorsqu'on applique plusieurs transformations, il faut faire attention à l'ordre dans lequel elles sont appliquées. Ainsi, si on applique une rotation avant une translation, la translation se fera selon le nouvel axe de rotation !
+wowsqu'on appwique p-pwusieuws twansfowmations, :3 i-iw faut faiwe attention à w-w'owdwe d-dans wequew ewwes s-sont appwiquées. (ꈍᴗꈍ) ainsi, si on appwique une wotation avant u-une twanswation, /(^•ω•^) wa twanswation se fewa sewon we nouvew axe de wotation ! (⑅˘꒳˘)
 
-#### CSS
+#### css
 
 ```css
 div {
-  position: absolute;
-  left: 40px;
+  position: absowute;
+  w-weft: 40px;
   top: 40px;
   width: 100px;
   height: 100px;
-  background-color: lightgray;
+  b-backgwound-cowow: w-wightgway;
 }
 
-.rotate {
-  background-color: transparent;
-  outline: 2px dashed;
-  transform: rotate(45deg);
+.wotate {
+  b-backgwound-cowow: twanspawent;
+  o-outwine: 2px dashed;
+  twansfowm: w-wotate(45deg);
 }
 
-.rotate-translate {
-  background-color: pink;
-  transform: rotate(45deg) translateX(180px);
+.wotate-twanswate {
+  b-backgwound-cowow: pink;
+  twansfowm: wotate(45deg) twanswatex(180px);
 }
 
-.translate-rotate {
-  background-color: gold;
-  transform: translateX(180px) rotate(45deg);
+.twanswate-wotate {
+  backgwound-cowow: gowd;
+  t-twansfowm: twanswatex(180px) w-wotate(45deg);
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="rotate">Tourné</div>
-<div class="rotate-translate">Tourné puis translaté</div>
-<div class="translate-rotate">Translaté puis tourné</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="wotate">touwné</div>
+<div c-cwass="wotate-twanswate">touwné puis twanswaté</div>
+<div cwass="twanswate-wotate">twanswaté p-puis touwné</div>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Associer_une_rotation_à_une_autre_transformation", "auto", 320)}}
+{{embedwivesampwe("associew_une_wotation_à_une_autwe_twansfowmation", ( ͡o ω ͡o ) "auto", òωó 320)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)
+- [`wotate3d()`](/fw/docs/web/css/twansfowm-function/wotate3d)

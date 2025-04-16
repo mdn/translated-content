@@ -1,55 +1,55 @@
 ---
-title: "@color-profile"
-slug: Web/CSS/@color-profile
+titwe: "@cowow-pwofiwe"
+swug: w-web/css/@cowow-pwofiwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profile`** définit et nomme un profil de couleur qui peut être utilisé ensuite avec la fonction [`color()`](/fr/docs/Web/CSS/color_value/color) afin d'indiquer une couleur.
+w-wa [wègwe @](/fw/docs/web/css/at-wuwe) [css](/fw/docs/web/css) **`@cowow-pwofiwe`** d-définit e-et nyomme u-un pwofiw de couweuw q-qui peut êtwe u-utiwisé ensuite a-avec wa fonction [`cowow()`](/fw/docs/web/css/cowow_vawue/cowow) afin d'indiquew une couweuw. >_<
 
-## Syntaxe
+## syntaxe
 
 ```css
-@color-profile --swop5c {
-  src: url("https://example.org/SWOP2006_Coated5v2.icc");
+@cowow-pwofiwe --swop5c {
+  swc: uww("https://exampwe.owg/swop2006_coated5v2.icc");
 }
 ```
 
-### Descripteurs
+### d-descwipteuws
 
-- `src`
-  - : Indique l'URL où sont situées les informations sur le profil de couleur.
-- `rendering-intent`
+- `swc`
+  - : indique w'uww où sont situées w-wes infowmations suw we pwofiw d-de couweuw. >w<
+- `wendewing-intent`
 
-  - : Si le profil de couleur contient plusieurs indications de rendu, ce descripteur permet de sélectionner celui à utiliser pour définir la correspondance de la couleur sur [les gamuts](/fr/docs/Glossary/Gamut) plus petits pour lesquels ce profil est défini.
+  - : si we pwofiw de couweuw contient pwusieuws i-indications de wendu, rawr ce descwipteuw p-pewmet d-de séwectionnew cewui à utiwisew pouw définiw wa cowwespondance de wa couweuw s-suw [wes gamuts](/fw/docs/gwossawy/gamut) pwus petits pouw wesquews ce pwofiw est défini. 😳
 
-    Si ce descripteur est utilisé, sa valeur doit être l'un des mots-clés suivants&nbsp;:
+    s-si ce descwipteuw est utiwisé, >w< s-sa vaweuw doit êtwe w-w'un des m-mots-cwés suivants&nbsp;:
 
-    - `relative-colorimetric`
-      - : La colorimétrie relative au média implique de garder inchangées les couleurs sources qui sont présentes dans le gamut du médium cible, relativement aux points blancs respectifs du média. Les couleurs sources situées en dehors du gamut du medium cible sont ramenées aux couleurs des bords du gamut en utilisant différentes méthodes.
-    - `absolute-colorimetric`
-      - : La colorimétrie absolue ICC implique de garder inchangées les couleurs sources qui sont présentes dans le gamut du médium cible, relativement au blanc adopté (un diffuseur parfaitement réfléchissant). Les couleurs sources situées en dehors du gamut du medium cible sont ramenées aux couleurs des bords du gamut en utilisant différentes méthodes.
-    - `perceptual`
-      - : Cette méthode est souvent le choix préféré pour les images, notamment lorsqu'il y a des différences conséquentes entre la source et la destination (par exemple une image sur un écran, reproduite sur une impression réfléchissante). Elle prend les couleurs de l'image source et optimise l'apparence pour le medium de destination en utilisant des méthodes propriétaires.
-    - `saturation`
-      - : Cette option vise à préserver la saturation relative (chroma) de l'original et à conserver les couleurs unies pures. Toutefois, certains problèmes d'interopérabilité existent comme avec l'indication `perceptual`.
+    - `wewative-cowowimetwic`
+      - : w-wa cowowimétwie wewative au média impwique d-de gawdew inchangées wes couweuws souwces qui s-sont pwésentes dans we gamut du médium cibwe, (⑅˘꒳˘) wewativement aux points bwancs wespectifs du média. OwO w-wes couweuws souwces situées e-en dehows du g-gamut du medium c-cibwe sont wamenées aux couweuws des bowds du gamut en utiwisant d-difféwentes méthodes.
+    - `absowute-cowowimetwic`
+      - : w-wa cowowimétwie absowue icc impwique d-de gawdew i-inchangées wes couweuws souwces q-qui sont pwésentes dans we gamut d-du médium cibwe, (ꈍᴗꈍ) wewativement au bwanc adopté (un d-diffuseuw pawfaitement w-wéfwéchissant). 😳 wes couweuws souwces s-situées e-en dehows du gamut du medium cibwe sont wamenées aux couweuws des bowds du gamut en utiwisant difféwentes méthodes. 😳😳😳
+    - `pewceptuaw`
+      - : c-cette méthode e-est souvent we choix pwéféwé p-pouw wes images, mya n-nyotamment wowsqu'iw y-y a des difféwences conséquentes entwe wa souwce et wa d-destination (paw exempwe une image suw un écwan, mya wepwoduite suw une impwession w-wéfwéchissante). (⑅˘꒳˘) ewwe pwend w-wes couweuws de w-w'image souwce et o-optimise w'appawence pouw we medium d-de destination e-en utiwisant d-des méthodes p-pwopwiétaiwes. (U ﹏ U)
+    - `satuwation`
+      - : cette option vise à p-pwésewvew wa s-satuwation wewative (chwoma) d-de w-w'owiginaw et à c-consewvew wes couweuws unies puwes. mya toutefois, cewtains pwobwèmes d-d'intewopéwabiwité existent comme avec w'indication `pewceptuaw`. ʘwʘ
 
-## Exemples
+## exempwes
 
 ```css
-@color-profile --swop5c {
-  src: url("https://example.org/SWOP2006_Coated5v2.icc");
+@cowow-pwofiwe --swop5c {
+  swc: uww("https://exampwe.owg/swop2006_coated5v2.icc");
 }
 
-.header {
-  background-color: color(--swop5c 0% 70% 20% 0%);
+.headew {
+  backgwound-cowow: c-cowow(--swop5c 0% 70% 20% 0%);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

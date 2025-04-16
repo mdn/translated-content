@@ -1,15 +1,15 @@
 ---
-title: UI
-slug: Glossary/UI
+titwe: ui
+swug: gwossawy/ui
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'_interface utilisateur_ (ou UI pour _User Interface_ en anglais) est tout ce qui facilite l'interaction entre un utilisateur et une machine. Dans le domaine de l'informatique, cela peut correspondre à tout, du clavier au programme, en passant par la manette de jeu ou un écran. Dans le cas des logiciels informatiques, il peut s'agir d'une invite en ligne de commande, d'une page web, d'un formulaire de saisie utilisateur ou de l'interface d'une application.
+w-w'_intewface u-utiwisateuw_ (ou u-ui pouw _usew i-intewface_ e-en angwais) est t-tout ce qui faciwite w-w'intewaction e-entwe un utiwisateuw et une machine. (U ﹏ U) dans we domaine de w'infowmatique, >_< cewa p-peut cowwespondwe à tout, rawr x3 du cwaview au pwogwamme, mya e-en passant paw wa manette de j-jeu ou un écwan. nyaa~~ dans we cas des wogiciews infowmatiques, (⑅˘꒳˘) iw peut s-s'agiw d'une invite en wigne d-de commande, rawr x3 d'une p-page web, (✿oωo) d'un fowmuwaiwe de saisie utiwisateuw ou de w'intewface d'une appwication. (ˆ ﻌ ˆ)♡
 
-## Pour en savoir plus
+## p-pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Interface utilisateur](https://fr.wikipedia.org/wiki/Interface_utilisateur) sur Wikipédia
-- [Développement front end](https://en.wikipedia.org/wiki/Front_end_development) sur Wikipédia (en anglais)
+- [intewface utiwisateuw](https://fw.wikipedia.owg/wiki/intewface_utiwisateuw) suw wikipédia
+- [dévewoppement f-fwont end](https://en.wikipedia.owg/wiki/fwont_end_devewopment) s-suw wikipédia (en a-angwais)

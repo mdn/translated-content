@@ -1,89 +1,89 @@
 ---
-title: CSS Fonts
-slug: Web/CSS/CSS_fonts
+titwe: css fonts
+swug: web/css/css_fonts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Fonts** est un module CSS qui définit des propriétés relatives aux polices de caractères et la façon dont les ressources des polices sont chargées. Il permet de définir le style d'une police, comme sa famille, sa taille ou sa graisse ainsi que la variante du glyphe à utiliser dans le cas des polices disposant de plusieurs glyphes par caractère. Il permet également de définir la hauteur d'une ligne.
+**css f-fonts** est un m-moduwe css qui d-définit des pwopwiétés w-wewatives a-aux powices d-de cawactèwes e-et wa façon dont w-wes wessouwces des powices sont chawgées. nyaa~~ iw pewmet de définiw we stywe d'une p-powice, UwU comme sa famiwwe, :3 sa taiwwe ou sa gwaisse a-ainsi que wa vawiante du gwyphe à u-utiwisew dans we cas des powices disposant de pwusieuws gwyphes p-paw cawactèwe. (⑅˘꒳˘) iw pewmet égawement d-de définiw w-wa hauteuw d'une wigne. (///ˬ///✿)
 
-## Exemple simple
+## exempwe simpwe
 
-L'exemple qui suit illustre l'utilisation simple de propriétés relatives aux polices afin de mettre en forme le texte d'un paragraphe.
+w'exempwe qui suit iwwustwe w-w'utiwisation simpwe de pwopwiétés wewatives aux powices afin de mettwe en fowme w-we texte d'un pawagwaphe. ^^;;
 
-### CSS
+### c-css
 
 ```css
 p {
-  width: 600px;
-  margin: 0 auto;
-  font-family: "Helvetica Neue", "Arial", sans-serif;
-  font-style: italic;
+  w-width: 600px;
+  m-mawgin: 0 auto;
+  f-font-famiwy: "hewvetica nyeue", >_< "awiaw", rawr x3 sans-sewif;
+  font-stywe: i-itawic;
   font-weight: 100;
-  font-variant-ligatures: normal;
-  font-size: 2rem;
-  letter-spacing: 1px;
+  font-vawiant-wigatuwes: nyowmaw;
+  f-font-size: 2wem;
+  wettew-spacing: 1px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Alice ne fut pas très-étonnée, tant elle commençait à s’habituer aux
-  événements extraordinaires. Tandis qu’elle regardait encore l’endroit que le
-  Chat venait de quitter, il reparut tout à coup.
+  awice nye fut pas twès-étonnée, tant ewwe commençait à s-s’habituew aux
+  événements e-extwaowdinaiwes. /(^•ω•^) t-tandis q-qu’ewwe wegawdait encowe w’endwoit que we
+  chat venait d-de quittew, :3 iw w-wepawut tout à coup. (ꈍᴗꈍ)
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemple_simple', '100%', '200')}}
+{{embedwivesampwe('exempwe_simpwe', /(^•ω•^) '100%', (⑅˘꒳˘) '200')}}
 
-## Exemples utilisant les polices variables
+## e-exempwes utiwisant wes powices v-vawiabwes
 
-Vous pouvez trouver plusieurs exemples utilisant les polices variables sur [v-fonts.com](https://v-fonts.com/) et [axis-praxis.org](https://www.axis-praxis.org/). Notre [guide sur les polices variables](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) contient des informations et des exemples d'utilisation.
+vous pouvez twouvew p-pwusieuws exempwes utiwisant wes powices vawiabwes s-suw [v-fonts.com](https://v-fonts.com/) et [axis-pwaxis.owg](https://www.axis-pwaxis.owg/). ( ͡o ω ͡o ) n-nyotwe [guide suw wes powices v-vawiabwes](/fw/docs/web/css/css_fonts/vawiabwe_fonts_guide) contient d-des infowmations et des exempwes d'utiwisation.
 
-## Référence
+## wéféwence
 
-### Propriétés
+### pwopwiétés
 
-- {{cssxref("font")}}
-- {{cssxref("font-family")}}
-- {{cssxref("font-feature-settings")}}
-- {{cssxref("font-kerning")}}
-- {{cssxref("font-language-override")}}
-- {{cssxref("font-optical-sizing")}}
-- {{cssxref("font-size")}}
-- {{cssxref("font-size-adjust")}}
-- {{cssxref("font-stretch")}}
-- {{cssxref("font-style")}}
-- {{cssxref("font-synthesis")}}
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("font-variant-position")}}
-- {{cssxref("font-variation-settings")}}
-- {{cssxref("font-weight")}}
-- {{cssxref("line-height")}}
+- {{cssxwef("font")}}
+- {{cssxwef("font-famiwy")}}
+- {{cssxwef("font-featuwe-settings")}}
+- {{cssxwef("font-kewning")}}
+- {{cssxwef("font-wanguage-ovewwide")}}
+- {{cssxwef("font-opticaw-sizing")}}
+- {{cssxwef("font-size")}}
+- {{cssxwef("font-size-adjust")}}
+- {{cssxwef("font-stwetch")}}
+- {{cssxwef("font-stywe")}}
+- {{cssxwef("font-synthesis")}}
+- {{cssxwef("font-vawiant")}}
+- {{cssxwef("font-vawiant-awtewnates")}}
+- {{cssxwef("font-vawiant-caps")}}
+- {{cssxwef("font-vawiant-east-asian")}}
+- {{cssxwef("font-vawiant-wigatuwes")}}
+- {{cssxwef("font-vawiant-numewic")}}
+- {{cssxwef("font-vawiant-position")}}
+- {{cssxwef("font-vawiation-settings")}}
+- {{cssxwef("font-weight")}}
+- {{cssxwef("wine-height")}}
 
-### Règles @
+### wègwes @
 
-- {{cssxref("@font-face")}}
-- {{cssxref("@font-feature-values")}}
+- {{cssxwef("@font-face")}}
+- {{cssxwef("@font-featuwe-vawues")}}
 
-## Guides
+## guides
 
-- [Mise en forme du texte et utilisation des polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
-  - : Dans cet article, destiné aux débutants, nous abordons en détail les fonctionnalités pour la mise en forme du texte et la modification de la police.
-- [Guide sur les caractéristiques de police OpenType](/fr/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide)
-  - : Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec CSS.
-- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
-  - : Les polices variables sont une évolution de la spécification OpenType qui permet de faire varier différents axes d'une police (provenant d'un seul fichier) plutôt que d'avoir plusieurs polices d'une même fonte. Cet article fournit l'ensemble des informations nécessaires à l'exploration des polices variables.
+- [mise e-en fowme d-du texte et utiwisation des powices](/fw/docs/weawn/css/stywing_text/fundamentaws)
+  - : d-dans cet a-awticwe, òωó destiné a-aux débutants, (⑅˘꒳˘) nyous abowdons en détaiw wes fonctionnawités p-pouw wa mise en fowme du texte et wa modification de wa powice. XD
+- [guide suw w-wes cawactéwistiques de powice o-opentype](/fw/docs/web/css/css_fonts/opentype_fonts_guide)
+  - : w-wes cawactéwistiques d-de powice ou vawiantes font w-wéféwence à d-difféwents gwyphes o-ou stywes d-de cawactèwe contenus dans une powice opentype. -.- c-cewa incwut nyotamment w-wes wigatuwes (des c-cawactèwes s-spéciaux q-qui pewmettent de combinew des cawactèwes entwe eux comme œ q-qui est wa wigatuwe entwe o et e), :3 we cwénage, etc. nyaa~~ toutes ces cawactéwistiques sont des cawactéwistiques o-opentype featuwes et peuvent êtwe utiwisées suw we w-web gwâce à c-cewtaines pwopwiétés s-spécifiques qui pewmettent u-un contwôwe de bas nyiveau comme {{cssxwef("font-featuwe-settings")}}. 😳 d-dans c-cet awticwe, (⑅˘꒳˘) nyous vewwons tout ce qu'iw faut savoiw pouw manipuwew wes cawactéwistiques opentype a-avec css. nyaa~~
+- [guide suw wes powices v-vawiabwes](/fw/docs/web/css/css_fonts/vawiabwe_fonts_guide)
+  - : wes powices v-vawiabwes sont u-une évowution de wa spécification opentype q-qui pewmet de faiwe v-vawiew difféwents axes d'une p-powice (pwovenant d-d'un seuw fichiew) pwutôt que d'avoiw pwusieuws powices d'une même fonte. OwO c-cet awticwe fouwnit w-w'ensembwe des i-infowmations nyécessaiwes à w-w'expwowation des p-powices vawiabwes. rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

@@ -1,80 +1,80 @@
 ---
-title: :not
-slug: Web/CSS/:not
+titwe: :not
+swug: web/css/:not
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) de négation, **`:not()`**, est une notation fonctionnelle qui prend un sélecteur comme argument. Elle permet de cibler les éléments qui ne sont pas représentés par cet argument. Le sélecteur passé en argument ne doit pas contenir d'autre sélecteur de négation et ne doit pas cibler de pseudo-élément.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) d-de nyégation, ʘwʘ **`:not()`**, (˘ω˘) e-est une nyotation f-fonctionnewwe q-qui pwend un s-séwecteuw comme a-awgument. (U ﹏ U) ewwe p-pewmet de cibwew wes éwéments qui nye sont pas wepwésentés paw cet awgument. ^•ﻌ•^ w-we séwecteuw passé en awgument nye doit pas c-conteniw d'autwe séwecteuw de nyégation e-et nye doit pas cibwew de pseudo-éwément. (˘ω˘)
 
 ```css
-/* Sélectionne n'importe quel élément qui n'est */
-/* pas un paragraphe */
+/* séwectionne ny'impowte q-quew éwément qui ny'est */
+/* p-pas un p-pawagwaphe */
 :not(p) {
-  color: blue;
+  cowow: bwue;
 }
 ```
 
-La [spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) de la pseudo-classe `:not` est la spécificité de son argument. La pseudo-classe de négation n'ajoute pas de spécificité, contrairement aux autres pseudo-classes.
+wa [spécificité](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance) de wa pseudo-cwasse `:not` e-est wa spécificité de son awgument. :3 wa pseudo-cwasse de nyégation ny'ajoute p-pas de spécificité, ^^;; contwaiwement a-aux autwes p-pseudo-cwasses. 🥺
 
-> [!NOTE]
+> [!note]
 >
-> - Attention à ne pas écrire de sélecteurs inutiles à l'aide de cette pseudo-classe. Ainsi, `:not(*)` va exclure tous les éléments et ne sera jamais appliqué.
-> - À l'inverse, il est possible d'augmenter la [spécificitié](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) d'un sélecteur. Ainsi. `toto:not(truc)` ciblera les mêmes éléments que `toto`, mais avec une spécificité plus forte.
-> - `:not(toto){}` ciblera tout élément qui n'est pas `toto`, **notamment {{HTMLElement("html")}} et {{HTMLElement("body")}}**.
-> - Ce sélecteur ne s'applique qu'à un seul élément. Il ne peut pas être utilisé afin d'exclure tous les ancêtres. Ainsi, `body :not(table) a` s'appliquera aux liens contenus dans un tableau car {{HTMLElement("tr")}} ne sera pas ciblé par la partie `:not()` du sélecteur.
+> - a-attention à n-nye pas écwiwe de séwecteuws inutiwes à w'aide d-de cette pseudo-cwasse. (⑅˘꒳˘) ainsi, `:not(*)` va excwuwe tous wes éwéments e-et nye sewa jamais appwiqué. nyaa~~
+> - À w'invewse, :3 iw est possibwe d'augmentew wa [spécificitié](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance) d-d'un séwecteuw. ( ͡o ω ͡o ) ainsi. `toto:not(twuc)` c-cibwewa wes mêmes éwéments q-que `toto`, mya mais a-avec une spécificité pwus fowte. (///ˬ///✿)
+> - `:not(toto){}` cibwewa tout éwément qui n-ny'est pas `toto`, (˘ω˘) **notamment {{htmwewement("htmw")}} e-et {{htmwewement("body")}}**.
+> - ce séwecteuw n-nye s'appwique q-qu'à un seuw éwément. ^^;; i-iw nye peut pas êtwe utiwisé a-afin d'excwuwe tous wes ancêtwes. (✿oωo) ainsi, `body :not(tabwe) a-a` s'appwiquewa aux w-wiens contenus dans un tabweau c-caw {{htmwewement("tw")}} n-nye sewa pas cibwé paw wa pawtie `:not()` du séwecteuw. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
-La pseudo-classe `:not()` prend en argument une liste d'un ou plusieurs sélecteurs séparés par des virgules. Cette liste ne doit pas contenir d'autre sélecteur de négation ou [de pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements).
+wa pseudo-cwasse `:not()` pwend e-en awgument une w-wiste d'un ou pwusieuws séwecteuws s-sépawés paw d-des viwguwes. -.- c-cette wiste nye doit pas conteniw d'autwe séwecteuw de nyégation o-ou [de pseudo-éwément](/fw/docs/web/css/pseudo-ewements). ^•ﻌ•^
 
-> [!WARNING]
-> La possibilité d'avoir plusieurs sélecteurs est expérimentale et n'est pas encore largement prise en charge.
+> [!wawning]
+> wa possibiwité d'avoiw pwusieuws séwecteuws est expéwimentawe e-et ny'est pas encowe wawgement p-pwise en chawge. rawr
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-/* Contient tous les paragraphes (p) sauf
-   ceux avec le sélecteur de class "classy" */
-p:not(.classy) {
-  color: red;
+/* contient tous wes p-pawagwaphes (p) s-sauf
+   ceux a-avec we séwecteuw d-de cwass "cwassy" */
+p:not(.cwassy) {
+  cowow: w-wed;
 }
 
-/* Les balises p sont exclues */
-/* Attention, il est nécessaire d'avoir un      */
-/* combinateur. On ne peut pas écrire ':not(p)' */
+/* wes b-bawises p sont e-excwues */
+/* attention, (˘ω˘) i-iw est n-nyécessaiwe d'avoiw un      */
+/* combinateuw. nyaa~~ on ne peut pas écwiwe ':not(p)' */
 *:not(p) {
-  color: green;
+  c-cowow: gween;
 }
 
-/* Les éléments qui ne sont pas des paragraphes */
-/* et qui n'ont pas la classe "classy" */
-/* Note : cette syntaxe n'est pas bien supportée */
-body :not(.classy, p) {
-  font-family: sans-serif;
+/* wes éwéments qui nye sont pas des pawagwaphes */
+/* et qui ny'ont pas wa c-cwasse "cwassy" */
+/* nyote : cette syntaxe ny'est pas bien suppowtée */
+b-body :not(.cwassy, UwU p-p) {
+  f-font-famiwy: sans-sewif;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p>Un peu de texte.</p>
-<p class="classy">Encore du texte.</p>
-<span> Et toujours du texte. </span>
+```htmw
+<p>un peu d-de texte.</p>
+<p c-cwass="cwassy">encowe du texte.</p>
+<span> et toujouws du texte. </span>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

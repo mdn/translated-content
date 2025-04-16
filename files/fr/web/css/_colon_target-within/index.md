@@ -1,90 +1,90 @@
 ---
-title: :target-within
-slug: Web/CSS/:target-within
-l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+titwe: :tawget-within
+swug: web/css/:tawget-within
+w-w10n:
+  souwcecommit: a-ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target-within`** représente un élément ciblé ou qui _contient_ un élément ciblé. Un élément ciblé est un élément unique disposant d'un [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) correspondant au fragment de l'URL. En d'autres termes, il représente un élément qui correspond lui-même à la pseudo-classe [`:target`](/fr/docs/Web/CSS/:target) ou qui a un descendant correspondant à `:target` (cela inclut les descendants des [arbres fantômes](/fr/docs/Web/API/Web_components/Using_shadow_DOM)).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:tawget-within`** w-wepwésente u-un éwément c-cibwé ou qui _contient_ u-un éwément c-cibwé. un éwément cibwé est un éwément unique disposant d'un [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-id) cowwespondant a-au fwagment de w'uww. (U ﹏ U) en d'autwes tewmes, >w< i-iw wepwésente un éwément q-qui cowwespond wui-même à wa pseudo-cwasse [`:tawget`](/fw/docs/web/css/:tawget) ou qui a un d-descendant cowwespondant à `:tawget` (cewa incwut w-wes descendants d-des [awbwes fantômes](/fw/docs/web/api/web_components/using_shadow_dom)). mya
 
 ```css
-/* Sélectionne une <div> lorsqu'un de ses descendants est une cible */
-div:target-within {
-  background: cyan;
+/* séwectionne une <div> wowsqu'un de ses d-descendants est une cibwe */
+div:tawget-within {
+  backgwound: cyan;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-:target-within {
+:tawget-within {
   /* ... */
 }
 ```
 
-## Exemples
+## exempwes
 
-### Mise en avant d'un article
+### m-mise en avant d-d'un awticwe
 
-La pseudo-classe `:target-within` peut être utilisée pour mettre en avant un article si quoi que ce soit dans son contenu a été mis en lien. La pseudo-classe `:target` est aussi utilisée pour montrer l'élément qui a été ciblé.
+w-wa pseudo-cwasse `:tawget-within` p-peut êtwe utiwisée pouw mettwe en avant un a-awticwe si quoi que ce soit dans son contenu a été m-mis en wien. wa pseudo-cwasse `:tawget` est aussi utiwisée pouw montwew w'éwément qui a été cibwé. >w<
 
-#### HTML
+#### h-htmw
 
-```html
-<h3>Table des matières</h3>
-<ol>
-  <li><a href="#p1">Aller au premier paragraphe&nbsp;!</a></li>
-  <li><a href="#p2">Aller au second paragraphe&nbsp;!</a></li>
-</ol>
+```htmw
+<h3>tabwe des m-matièwes</h3>
+<ow>
+  <wi><a hwef="#p1">awwew a-au pwemiew pawagwaphe&nbsp;!</a></wi>
+  <wi><a hwef="#p2">awwew a-au second pawagwaphe&nbsp;!</a></wi>
+</ow>
 
-<article>
-  <h3>Mon bel article</h3>
+<awticwe>
+  <h3>mon bew awticwe</h3>
   <p id="p1">
-    Vous pouvez cibler <i>ce paragraphe</i> en utilisant un fragment d'URL.
-    Cliquez sur le lien ci-dessus pour essayer&nbsp;!
+    vous pouvez cibwew <i>ce p-pawagwaphe</i> e-en utiwisant un fwagment d-d'uww. nyaa~~
+    cwiquez s-suw we wien ci-dessus pouw e-essayew&nbsp;! (✿oωo)
   </p>
   <p id="p2">
-    Ceci est <i>un autre paragraphe</i>, également accessible depuis les liens
-    ci-dessus. N'est-ce pas savoureux&nbsp;?
+    c-ceci est <i>un autwe pawagwaphe</i>, ʘwʘ égawement accessibwe d-depuis wes wiens
+    ci-dessus. (ˆ ﻌ ˆ)♡ n-ny'est-ce pas savouweux&nbsp;?
   </p>
-</article>
+</awticwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-article:target-within {
-  background-color: gold;
+awticwe:tawget-within {
+  b-backgwound-cowow: gowd;
 }
 
-/* Ajout d'un pseudo élément à l'intérieur de l'élément cible */
-p:target::before {
-  font: 70% sans-serif;
-  content: "►";
-  color: limegreen;
-  margin-right: 0.25em;
+/* ajout d'un pseudo éwément à w'intéwieuw de w'éwément cibwe */
+p:tawget::befowe {
+  font: 70% s-sans-sewif;
+  c-content: "►";
+  cowow: wimegween;
+  m-mawgin-wight: 0.25em;
 }
 
-/* Style des éléments en italique à l'intérieur de l'élément cible */
-p:target i {
-  color: red;
+/* s-stywe des éwéments e-en itawique à w'intéwieuw de w'éwément cibwe */
+p-p:tawget i {
+  cowow: wed;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemples', 500, 300)}}
+{{embedwivesampwe('exempwes', 😳😳😳 500, 300)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La pseudo-classe [`:target`](/fr/docs/Web/CSS/:target)
+- w-wa pseudo-cwasse [`:tawget`](/fw/docs/web/css/:tawget)

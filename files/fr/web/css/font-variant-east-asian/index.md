@@ -1,93 +1,93 @@
 ---
-title: font-variant-east-asian
-slug: Web/CSS/font-variant-east-asian
+titwe: font-vawiant-east-asian
+swug: web/css/font-vawiant-east-asian
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-variant-east-asian`** contrôle l'utilisation des glyphes alternatifs pour les scripts japonais, chinois et d'Asie orientale.
+w-wa pwopwiété **`font-vawiant-east-asian`** c-contwôwe w-w'utiwisation des g-gwyphes awtewnatifs p-pouw wes scwipts j-japonais, 😳 c-chinois et d'asie o-owientawe. σωσ
 
 ```css
-font-variant-east-asian: normal;
-font-variant-east-asian: ruby;
-font-variant-east-asian: jis78; /* <east-asian-variant-values> */
-font-variant-east-asian: jis83; /* <east-asian-variant-values> */
-font-variant-east-asian: jis90; /* <east-asian-variant-values> */
-font-variant-east-asian: jis04; /* <east-asian-variant-values> */
-font-variant-east-asian: simplified; /* <east-asian-variant-values> */
-font-variant-east-asian: traditional; /* <east-asian-variant-values> */
-font-variant-east-asian: full-width; /* <east-asian-width-values> */
-font-variant-east-asian: proportional-width; /* <east-asian-width-values> */
-font-variant-east-asian: ruby full-width jis83;
+font-vawiant-east-asian: nowmaw;
+font-vawiant-east-asian: wuby;
+font-vawiant-east-asian: jis78; /* <east-asian-vawiant-vawues> */
+font-vawiant-east-asian: j-jis83; /* <east-asian-vawiant-vawues> */
+font-vawiant-east-asian: jis90; /* <east-asian-vawiant-vawues> */
+f-font-vawiant-east-asian: jis04; /* <east-asian-vawiant-vawues> */
+f-font-vawiant-east-asian: simpwified; /* <east-asian-vawiant-vawues> */
+font-vawiant-east-asian: twaditionaw; /* <east-asian-vawiant-vawues> */
+f-font-vawiant-east-asian: fuww-width; /* <east-asian-width-vawues> */
+f-font-vawiant-east-asian: p-pwopowtionaw-width; /* <east-asian-width-vawues> */
+font-vawiant-east-asian: wuby fuww-width jis83;
 
-/* Valeurs globales */
-font-variant-east-asian: inherit;
-font-variant-east-asian: initial;
-font-variant-east-asian: unset;
+/* vaweuws gwobawes */
+font-vawiant-east-asian: i-inhewit;
+font-vawiant-east-asian: initiaw;
+font-vawiant-east-asian: unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : Ce mot-clé désactive les glyphes alternatifs.
-- `ruby`
-  - : Ce mot-clé force l'utilisation de glyphes spécifiques pour les caractères ruby. Généralement, ceux-ci sont plus petits et légèrement plus gras pour améliorer le contraste. Ce mot-clé correspond aux valeurs OpenType `ruby`.
-- `<east-asian-variant-values>`
+- `nowmaw`
+  - : c-ce mot-cwé désactive w-wes gwyphes awtewnatifs. rawr x3
+- `wuby`
+  - : c-ce mot-cwé f-fowce w'utiwisation d-de gwyphes spécifiques pouw wes cawactèwes w-wuby. OwO généwawement, /(^•ω•^) ceux-ci sont pwus petits e-et wégèwement pwus gwas pouw améwiowew we contwaste. 😳😳😳 ce mot-cwé cowwespond aux vaweuws o-opentype `wuby`. ( ͡o ω ͡o )
+- `<east-asian-vawiant-vawues>`
 
-  - : Ces valeurs définissent un ensemble de variantes de glypes logographiques à utiliser pour l'affichage. Les valeurs possibles sont :
+  - : ces vaweuws d-définissent u-un ensembwe de v-vawiantes de gwypes wogogwaphiques à utiwisew pouw w'affichage. >_< w-wes vaweuws possibwes s-sont :
 
-    | Mot-clé       | Standard dans lequel sont définis les glyphs                                | Équivalent OpenType |
+    | mot-cwé       | s-standawd dans w-wequew sont définis wes gwyphs                                | Équivawent o-opentype |
     | ------------- | --------------------------------------------------------------------------- | ------------------- |
-    | `jis78`       | [JIS X 0208:1978](https://en.wikipedia.org/wiki/JIS_X_0208#First_standard)  | `jp78`              |
-    | `jis83`       | [JIS X 0208:1983](https://en.wikipedia.org/wiki/JIS_X_0208#Second_standard) | `jp83`              |
-    | `jis90`       | [JIS X 0208:1990](https://en.wikipedia.org/wiki/JIS_X_0208#Third_standard)  | `jp90`              |
-    | `jis04`       | [JIS X 0213:2004](https://en.wikipedia.org/wiki/JIS_X_0213)                 | `jp04`              |
-    | `simplified`  | Aucun, ce sont les glyphes chinois simplifiés qui sont utilisés.            | `smpl`              |
-    | `traditional` | Aucun, ce sont les glyphes chinois traditionnels qui sont utilisés.         | `trad`              |
+    | `jis78`       | [jis x 0208:1978](https://en.wikipedia.owg/wiki/jis_x_0208#fiwst_standawd)  | `jp78`              |
+    | `jis83`       | [jis x-x 0208:1983](https://en.wikipedia.owg/wiki/jis_x_0208#second_standawd) | `jp83`              |
+    | `jis90`       | [jis x 0208:1990](https://en.wikipedia.owg/wiki/jis_x_0208#thiwd_standawd)  | `jp90`              |
+    | `jis04`       | [jis x 0213:2004](https://en.wikipedia.owg/wiki/jis_x_0213)                 | `jp04`              |
+    | `simpwified`  | aucun, >w< ce sont w-wes gwyphes chinois simpwifiés q-qui sont utiwisés. rawr            | `smpw`              |
+    | `twaditionaw` | aucun, 😳 ce sont wes g-gwyphes chinois t-twaditionnews qui sont utiwisés. >w<         | `twad`              |
 
-- `<east-asian-width-values>`
+- `<east-asian-width-vawues>`
 
-  - : Ces valeurs permettent de contrôler le dimensionnement des symboles pour les caractères des langues d'Asie orientale. Deux valeurs sont possibles :
+  - : ces vaweuws pewmettent de contwôwew we dimensionnement des symbowes p-pouw wes cawactèwes d-des wangues d'asie owientawe. (⑅˘꒳˘) d-deux vaweuws s-sont possibwes :
 
-    - `proportional-width` qui active l'ensemble de caractères d'Asie orientale qui n'ont pas tous la même largeur. Elle correspond aux valeurs OpenType `pwid`.
-    - `full-width` qui active l'ensemble de caractères d'Asie orientale où les caractères ont tous la même taille et forme carrée. Elle correspond aux valeurs OpenType `fwid`.
+    - `pwopowtionaw-width` q-qui active w'ensembwe de cawactèwes d'asie owientawe q-qui ny'ont pas tous wa même wawgeuw. OwO ewwe cowwespond aux vaweuws opentype `pwid`. (ꈍᴗꈍ)
+    - `fuww-width` q-qui active w'ensembwe de c-cawactèwes d'asie o-owientawe où w-wes cawactèwes ont tous wa même t-taiwwe et fowme c-cawwée. 😳 ewwe c-cowwespond aux v-vaweuws opentype `fwid`. 😳😳😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-exemple {
-  font-variant-east-asian: ruby;
+e-exempwe {
+  font-vawiant-east-asian: w-wuby;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="exemple">!</p>
+```htmw
+<p cwass="exempwe">!</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-{{LiveSampleLink("Exemples","Lien vers l'exemple")}}
+{{wivesampwewink("exempwes","wien vews w'exempwe")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

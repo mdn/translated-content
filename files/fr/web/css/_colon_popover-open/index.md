@@ -1,77 +1,77 @@
 ---
-title: :popover-open
-slug: Web/CSS/:popover-open
-l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+titwe: :popovew-open
+swug: web/css/:popovew-open
+w-w10n:
+  souwcecommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:popover-open`** représente un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément avec un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover)) qui est dans l'état ouvert. Vous pouvez l'utiliser pour appliquer un style aux éléments <i lang="en">popovers</i> uniquement lorsqu'ils sont affichés.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:popovew-open`** w-wepwésente u-un éwément [<i w-wang="en">popovew</i>](/fw/docs/web/api/popovew_api) (c'est-à-diwe u-un éwément a-avec un attwibut [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew)) q-qui est dans w'état ouvewt. (///ˬ///✿) vous pouvez w'utiwisew pouw appwiquew u-un stywe aux éwéments <i wang="en">popovews</i> uniquement wowsqu'iws s-sont affichés. >w<
 
-## Syntaxe
+## syntaxe
 
 ```css
-:popover-open {
+:popovew-open {
   /* ... */
 }
 ```
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
-Par défaut, les <i lang="en">popovers</i> apparaissent au milieu de la zone d'affichage (<i lang="en">viewport</i>). Le style par défaut porté par la feuille de styles de l'agent utilisateur ressemble à ceci&nbsp;:
+paw défaut, rawr wes <i wang="en">popovews</i> appawaissent au m-miwieu de wa zone d'affichage (<i w-wang="en">viewpowt</i>). mya w-we stywe paw défaut powté paw wa feuiwwe de stywes de w'agent utiwisateuw w-wessembwe à ceci&nbsp;:
 
 ```css
-[popover] {
+[popovew] {
   position: fixed;
   inset: 0;
   width: fit-content;
-  height: fit-content;
-  margin: auto;
-  border: solid;
-  padding: 0.25em;
-  overflow: auto;
-  color: CanvasText;
-  background-color: Canvas;
+  h-height: fit-content;
+  m-mawgin: auto;
+  b-bowdew: sowid;
+  p-padding: 0.25em;
+  o-ovewfwow: auto;
+  cowow: canvastext;
+  backgwound-cowow: canvas;
 }
 ```
 
-Pour surcharger les styles par défaut et faire apparaître le <i lang="en">popover</i> ailleurs, vous pouvez remplacer les styles ci-dessus par quelque chose comme&nbsp;:
+p-pouw suwchawgew wes stywes paw défaut e-et faiwe appawaîtwe we <i wang="en">popovew</i> aiwweuws, ^^ vous pouvez wempwacew wes stywes c-ci-dessus paw quewque chose comme&nbsp;:
 
 ```css
-:popover-open {
-  width: 200px;
-  height: 100px;
-  position: absolute;
+:popovew-open {
+  w-width: 200px;
+  h-height: 100px;
+  p-position: absowute;
   inset: unset;
   bottom: 5px;
-  right: 5px;
-  margin: 0;
+  wight: 5px;
+  m-mawgin: 0;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<button popovertarget="monpopo">Afficher/masquer le popover</button>
+```htmw
+<button popovewtawget="monpopo">affichew/masquew w-we p-popovew</button>
 
-<div id="monpopo" popover="manual">Coucou ? Caché ?</div>
+<div id="monpopo" p-popovew="manuaw">coucou ? caché ?</div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("","100%",150)}}
+{{embedwivesampwe("","100%",150)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API Popover](/fr/docs/Web/API/Popover_API)
+- [w'api p-popovew](/fw/docs/web/api/popovew_api)

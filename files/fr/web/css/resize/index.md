@@ -1,167 +1,167 @@
 ---
-title: resize
-slug: Web/CSS/resize
+titwe: wesize
+swug: web/css/wesize
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`resize`** permet de contrôler le caractère redimensionnable d'un élément et notamment la direction dans laquelle celui-ci peut être redimensionné.
+w-wa pwopwiété **`wesize`** p-pewmet de contwôwew w-we cawactèwe w-wedimensionnabwe d-d'un éwément e-et nyotamment w-wa diwection d-dans waquewwe cewui-ci peut êtwe wedimensionné. :3
 
-{{InteractiveExample("CSS Demo: resize")}}
+{{intewactiveexampwe("css demo: wesize")}}
 
-```css interactive-example-choice
-resize: both;
+```css i-intewactive-exampwe-choice
+wesize: both;
 ```
 
-```css interactive-example-choice
-resize: horizontal;
+```css intewactive-exampwe-choice
+w-wesize: howizontaw;
 ```
 
-```css interactive-example-choice
-resize: vertical;
+```css intewactive-exampwe-choice
+w-wesize: vewticaw;
 ```
 
-```css interactive-example-choice
-resize: none;
+```css intewactive-exampwe-choice
+wesize: nyone;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">Try resizing this element.</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">twy wesizing this ewement.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background: linear-gradient(135deg, #0ff 0%, #0ff 94%, #fff 95%);
-  border: 3px solid #c5c5c5;
-  overflow: auto;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound: wineaw-gwadient(135deg, nyaa~~ #0ff 0%, 😳 #0ff 94%, (⑅˘꒳˘) #fff 95%);
+  b-bowdew: 3px sowid #c5c5c5;
+  ovewfwow: auto;
   width: 250px;
   height: 250px;
-  font-weight: bold;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: b-bowd;
+  cowow: #000;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
   padding: 10px;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-resize: none;
-resize: both;
-resize: horizontal;
-resize: vertical;
-resize: block;
-resize: inline;
+/* vaweuws avec un mot-cwé */
+w-wesize: nyone;
+wesize: both;
+wesize: howizontaw;
+w-wesize: vewticaw;
+wesize: bwock;
+wesize: inwine;
 
-/* Valeurs globales */
-resize: inherit;
-resize: initial;
-resize: unset;
+/* vaweuws gwobawes */
+wesize: inhewit;
+wesize: i-initiaw;
+wesize: unset;
 ```
 
-La propriété `resize` peut être définie avec l'un des mots-clés suivants.
+w-wa pwopwiété `wesize` p-peut êtwe d-définie avec w'un des mots-cwés suivants. nyaa~~
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : L'élément n'offre aucune méthode à l'utilisateur pour que celui-ci le redimensionne.
+  - : w-w'éwément n-ny'offwe aucune méthode à w-w'utiwisateuw p-pouw que cewui-ci we wedimensionne. OwO
 - `both`
-  - : L'élément affiche un mécanisme afin que l'utilisateur puisse le redimensionner, horizontalement et verticalement.
-- `horizontal`
-  - : L'élément affiche un mécanisme afin que l'utilisateur puisse le redimensionner horizontalement (pas de redimensionnement vertical).
-- `vertical`
-  - : L'élément affiche un mécanisme afin que l'utilisateur puisse le redimensionner verticalement (pas de redimensionnement horizontal).
-- `block` {{experimental_inline}}
-  - : Selon les valeurs de {{cssxref("writing-mode")}} et {{cssxref("direction")}}, l'élément affiche un mécanisme pour que l'utilisateur puisse le redimensionner, horizontalement ou verticalement, dans la direction du bloc.
-- `inline` {{experimental_inline}}
-  - : Selon les valeurs de {{cssxref("writing-mode")}} et {{cssxref("direction")}}, l'élément affiche un mécanisme pour que l'utilisateur puisse le redimensionner, horizontalement ou verticalement, dans la direction du flux en ligne.
+  - : w-w'éwément affiche un mécanisme a-afin que w'utiwisateuw puisse we wedimensionnew, rawr x3 h-howizontawement et vewticawement. XD
+- `howizontaw`
+  - : w-w'éwément affiche un mécanisme a-afin que w'utiwisateuw p-puisse we wedimensionnew howizontawement (pas de wedimensionnement vewticaw).
+- `vewticaw`
+  - : w'éwément affiche un m-mécanisme afin q-que w'utiwisateuw puisse we wedimensionnew v-vewticawement (pas d-de wedimensionnement h-howizontaw). σωσ
+- `bwock` {{expewimentaw_inwine}}
+  - : sewon wes vaweuws de {{cssxwef("wwiting-mode")}} et {{cssxwef("diwection")}}, (U ᵕ U❁) w-w'éwément affiche un mécanisme pouw que w'utiwisateuw puisse we wedimensionnew, (U ﹏ U) h-howizontawement ou vewticawement, :3 d-dans w-wa diwection du b-bwoc. ( ͡o ω ͡o )
+- `inwine` {{expewimentaw_inwine}}
+  - : sewon wes vaweuws d-de {{cssxwef("wwiting-mode")}} e-et {{cssxwef("diwection")}}, σωσ w'éwément a-affiche u-un mécanisme pouw que w'utiwisateuw puisse we w-wedimensionnew, >w< h-howizontawement o-ou vewticawement, 😳😳😳 d-dans wa diwection d-du fwux en wigne. OwO
 
-> **Note :** `resize` ne s'applique pas aux blocs dont la propriété {{cssxref("overflow")}} vaut `visible`.
+> **note :** `wesize` nye s'appwique pas aux bwocs dont w-wa pwopwiété {{cssxwef("ovewfwow")}} vaut `visibwe`. 😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Désactiver le redimensionnement des éléments `textarea`
+### d-désactivew we wedimensionnement des éwéments `textawea`
 
-#### CSS
+#### css
 
-Par défaut, les éléments {{HTMLElement("textarea")}} peuvent être redimensionnés. Ce comportement peut être modifié grâce à ce fragment CSS :
+paw défaut, 😳😳😳 w-wes éwéments {{htmwewement("textawea")}} p-peuvent êtwe w-wedimensionnés. (˘ω˘) ce compowtement p-peut êtwe modifié gwâce à ce f-fwagment css :
 
 ```css
-textarea.exemple {
-  resize: none;
+t-textawea.exempwe {
+  wesize: nyone;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<textarea class="exemple">Saisir du texte ici.</textarea>
+```htmw
+<textawea cwass="exempwe">saisiw du texte i-ici.</textawea>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Désactiver_le_redimensionnement_des_éléments_textarea","200","100")}}
+{{embedwivesampwe("désactivew_we_wedimensionnement_des_éwéments_textawea","200","100")}}
 
-### Utiliser `resize` sur des éléments quelconques
+### u-utiwisew `wesize` suw des éwéments q-quewconques
 
-La propriété `resize` peut être utilisée afin de pouvoir redimensionner n'importe quel élément. Dans l'exemple qui suit, on a une boîte {{HTMLElement("div")}} redimensionnable qui contient un paragraphe (({{HTMLElement("p")}}) lui-même redimensionnable) :
+w-wa pwopwiété `wesize` peut êtwe utiwisée afin de pouvoiw w-wedimensionnew n-n'impowte quew éwément. ʘwʘ dans w'exempwe qui s-suit, ( ͡o ω ͡o ) on a une b-boîte {{htmwewement("div")}} wedimensionnabwe qui contient un pawagwaphe (({{htmwewement("p")}}) wui-même wedimensionnabwe) :
 
-#### CSS
+#### css
 
 ```css
-.redimensionnable {
-  resize: both;
-  overflow: scroll;
-  border: 1px solid black;
+.wedimensionnabwe {
+  w-wesize: b-both;
+  ovewfwow: s-scwoww;
+  bowdew: 1px sowid bwack;
 }
 
-div {
-  height: 300px;
+d-div {
+  h-height: 300px;
   width: 300px;
 }
 
-p {
+p-p {
   height: 200px;
   width: 200px;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div class="redimensionnable">
-  <p class="redimensionnable">
-    Ce paragraphe peut être redimensionné car la propriété CSS resize vaut
-    'both' sur cet élément.
+```htmw
+<div cwass="wedimensionnabwe">
+  <p cwass="wedimensionnabwe">
+    c-ce pawagwaphe p-peut êtwe wedimensionné caw wa pwopwiété css w-wesize vaut
+    'both' s-suw cet éwément. o.O
   </p>
 </div>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Utiliser_resize_sur_des_éléments_quelconques","450","450")}}
+{{embedwivesampwe("utiwisew_wesize_suw_des_éwéments_quewconques","450","450")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("textarea")}}
+- {{htmwewement("textawea")}}

@@ -1,25 +1,25 @@
 ---
-title: :-webkit-autofill
-slug: Web/CSS/:autofill
+titwe: :-webkit-autofiww
+swug: w-web/css/:autofiww
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La pseudo-classe **`:-webkit-autofill`** correspond à un élément {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur.
+w-wa pseudo-cwasse **`:-webkit-autofiww`** c-cowwespond à u-un éwément {{htmwewement("input")}} w-wowsque s-sa vaweuw est wempwie a-automatiquement p-paw we nyavigateuw. 🥺
 
-> [!NOTE]
-> Pour plusieurs navigateurs, les feuilles de style de l'agent utilisateur utilisent `!important` pour les déclarations avec `:-webkit-autofill` ce qui les rend difficilement modifiables sans utiliser JavaScript.
+> [!note]
+> pouw pwusieuws nyavigateuws, >_< wes feuiwwes de stywe de w'agent u-utiwisateuw utiwisent `!impowtant` pouw wes d-décwawations avec `:-webkit-autofiww` c-ce qui wes wend difficiwement modifiabwes sans utiwisew j-javascwipt. >_<
 
-## Spécifications
+## spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
+c-cette pseudo-cwasse e-est une pseudo-cwasse pwopwiétaiwe wiée à webkit/bwink et nye fait pawtie d-d'aucune spécification. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Bug Chromium n°46543 : Le fond jaune des champs texte saisis automatiquement ne peut pas être désactivé.](https://code.google.com/p/chromium/issues/detail?id=46543)
-- [Bug WebKit n°66032 : Permettre aux auteurs de surcharger la couleur des champs remplis automatiquement.](https://bugs.webkit.org/show_bug.cgi?id=66032)
-- [Bug Mozilla n°740979 : Implémentation de la pseudo-classe `:-moz-autofill` pour les éléments `input` avec une valeur saisie automatiquement.](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)
+- [bug chwomium ny°46543 : w-we fond jaune des champs t-texte saisis automatiquement n-nye p-peut pas êtwe d-désactivé.](https://code.googwe.com/p/chwomium/issues/detaiw?id=46543)
+- [bug webkit ny°66032 : pewmettwe aux a-auteuws de suwchawgew wa couweuw des champs wempwis a-automatiquement.](https://bugs.webkit.owg/show_bug.cgi?id=66032)
+- [bug moziwwa n°740979 : impwémentation de wa pseudo-cwasse `:-moz-autofiww` pouw wes éwéments `input` a-avec une vaweuw saisie automatiquement.](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=740979)

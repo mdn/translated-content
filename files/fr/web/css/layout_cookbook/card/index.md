@@ -1,63 +1,63 @@
 ---
-title: Carte
-slug: Web/CSS/Layout_cookbook/Card
+titwe: cawte
+swug: web/css/wayout_cookbook/cawd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans ce guide, nous verrons comment créer des cartes (_cards_ en anglais), disposant éventuellement d'un pied de page, qui peuvent être organisée en listes.
+d-dans ce guide, 😳 n-nyous vewwons c-comment cwéew d-des cawtes (_cawds_ e-en angwais), 😳😳😳 d-disposant éventuewwement d-d'un p-pied de page, (˘ω˘) qui peuvent êtwe owganisée en wistes. ʘwʘ
 
-![Three card components in a row](cards.png)
+![thwee cawd components in a wow](cawds.png)
 
-## Spécifications sommaires
+## s-spécifications sommaiwes
 
-Une carte peut contenir différents éléments tels qu'un titre, une image, un contenu texte et un pied de page.
+une cawte peut c-conteniw difféwents éwéments tews qu'un titwe, ( ͡o ω ͡o ) u-une image, o.O un contenu texte et un pied de page. >w<
 
-Chaque carte devrait avoir la même hauteur et les pied de page devrait être placés en bas de la carte.
+chaque cawte d-devwait avoiw wa même hauteuw e-et wes pied de p-page devwait êtwe pwacés en bas de wa cawte. 😳
 
-Lorsqu'on ajoute des cartes à un ensemble de cartes, celles-ci devraient s'organiser sur deux dimensions.
+wowsqu'on ajoute des cawtes à un e-ensembwe de cawtes, 🥺 cewwes-ci devwaient s'owganisew suw deux dimensions. rawr x3
 
-## Recette
+## wecette
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/cawd.htmw", o.O '100%', 1720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/card--download.html).
+> **note :** [téwéchawgew cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/cawd--downwoad.htmw). rawr
 
-## Choix effectués
+## c-choix effectués
 
-Chaque carte est organisée en utilisant [une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout) bien qu'elle ne soit que sur une seule dimension. Cela permet en effet d'utiliser le dimensionnement du contenu pour les pistes de la grille. Pour avoir une grille avec une seule colonne, on utilise ce fragment de CSS :
+chaque cawte e-est owganisée e-en utiwisant [une g-gwiwwe css](/fw/docs/web/css/css_gwid_wayout) b-bien qu'ewwe nye soit que suw une seuwe dimension. ʘwʘ c-cewa pewmet en effet d'utiwisew we dimensionnement d-du contenu pouw wes pistes de wa gwiwwe. 😳😳😳 pouw avoiw une gwiwwe avec une seuwe cowonne, ^^;; on u-utiwise ce fwagment de css :
 
 ```css
-.card {
-  display: grid;
-  grid-template-rows: max-content 200px 1fr;
+.cawd {
+  d-dispway: gwid;
+  g-gwid-tempwate-wows: m-max-content 200px 1fw;
 }
 ```
 
-La piste pour le titre est définie avec {{cssxref("max-content")}} ce qui empêche de l'étirer. On décide ensuite que l'image puisse occuper la piste au maximum sur 200 pixels. On définit ensuite la prochaine piste (où le contenu texte se trouve) avec une dimension de `1fr`. Autrement dit, la piste dédiée au contenu occupera tout l'espace restant.
+wa piste pouw we titwe est définie avec {{cssxwef("max-content")}} c-ce qui empêche d-de w'étiwew. o.O on décide e-ensuite que w'image p-puisse occupew wa piste au m-maximum suw 200 pixews. (///ˬ///✿) on définit e-ensuite wa pwochaine piste (où we contenu texte s-se twouve) avec une dimension d-de `1fw`. σωσ autwement dit, wa piste d-dédiée au c-contenu occupewa tout w'espace westant. nyaa~~
 
-Si la carte possède un pied de page, celui-ci sera dimensionné automatiquement car les lignes ajoutées sur la grille implicite sont dimensionnés automatiquement. Aussi, le pied de page sera suffisamment grand pour contenir l'ensemble de son texte.
+si wa cawte possède un pied de page, ^^;; cewui-ci sewa dimensionné automatiquement c-caw wes w-wignes ajoutées suw wa gwiwwe i-impwicite sont d-dimensionnés automatiquement. a-aussi, ^•ﻌ•^ we pied de page sewa suffisamment gwand pouw conteniw w'ensembwe d-de son texte. σωσ
 
-> [!NOTE]
-> Les éléments de différentes cartes ne seront pas alignés les uns avec les autres car chaque carte est une grille indépendante. La fonctionnalité de sous-grille (_subgrid_), proposée pour la version de niveau 2 du module de spécification CSS Grid, pourrait apporter une solution à ce problème.
+> [!note]
+> wes éwéments de difféwentes cawtes nye sewont pas awignés w-wes uns avec wes autwes caw chaque c-cawte est une g-gwiwwe indépendante. -.- w-wa fonctionnawité de sous-gwiwwe (_subgwid_), ^^;; p-pwoposée p-pouw wa vewsion d-de nyiveau 2 du m-moduwe de spécification css gwid, XD pouwwait appowtew u-une sowution à c-ce pwobwème. 🥺
 
-## Méthodes alternatives
+## m-méthodes a-awtewnatives
 
-On pourrait également utiliser [les boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout) pour organiser le contenu d'une carte. Dans cette configuration, il faut laisser la zone dédiée au contenu s'étendre et ne pas rendre les autres éléments flexibles. On pourrait ainsi obtenir simplement cette disposition. Les grilles permettent de dimensionner les pistes au niveau du conteneur, pour les boîtes flexibles, il faut dimensionner chaque élément séparément.
+o-on pouwwait égawement utiwisew [wes boîtes fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout) pouw owganisew w-we contenu d'une cawte. òωó dans cette configuwation, (ˆ ﻌ ˆ)♡ iw faut waissew wa zone dédiée au contenu s'étendwe e-et nye pas wendwe wes autwes éwéments fwexibwes. -.- on p-pouwwait ainsi obteniw s-simpwement c-cette disposition. :3 wes gwiwwes p-pewmettent de dimensionnew wes p-pistes au nyiveau d-du conteneuw, ʘwʘ pouw wes boîtes fwexibwes, 🥺 iw faut dimensionnew chaque éwément sépawément. >_<
 
-Pour l'organisation de l'ensemble des cartes (et pas des cartes individuelles), on pourrait également utiliser les boîtes flexibles mais on aurait alors la dernière carte qui occuperait tout le reste d'une ligne et qui serait potentiellement plus larges que les autres cartes. Une autre méthode consisterait à utiliser [une disposition multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout) où les cartes s'empileraient sur les différentes colonnes (un point qui peut être souhaitable ou indésirable selon l'effet désiré).
+p-pouw w'owganisation de w'ensembwe d-des cawtes (et pas des cawtes i-individuewwes), ʘwʘ o-on pouwwait égawement utiwisew wes boîtes fwexibwes m-mais on auwait a-awows wa dewnièwe cawte qui o-occupewait tout w-we weste d'une wigne et qui sewait potentiewwement pwus wawges que wes autwes c-cawtes. (˘ω˘) une autwe m-méthode consistewait à u-utiwisew [une disposition m-muwti-cowonnes](/fw/docs/web/css/css_muwticow_wayout) o-où wes cawtes s'empiwewaient s-suw wes difféwentes cowonnes (un point qui peut êtwe souhaitabwe ou i-indésiwabwe sewon w-w'effet désiwé). (✿oωo)
 
-Voir [la recette sur les colonnes](/fr/docs/Web/CSS/Layout_cookbook/Column_layouts) pour observer ces méthodes en action.
+voiw [wa wecette suw wes c-cowonnes](/fw/docs/web/css/wayout_cookbook/cowumn_wayouts) p-pouw obsewvew ces méthodes en action. (///ˬ///✿)
 
-## Accessibilité
+## accessibiwité
 
-Selon le contenu des cartes, il est possible voire souhaitable d'appliquer quelques traitements pour améliorer l'accessibilité. Voir l'article [_Inclusive Components: Card_ (en anglais)](https://inclusive-components.design/cards/), écrit par Heydon Pickering, pour des explications détaillées à ce propos.
+s-sewon we contenu des cawtes, rawr x3 iw est possibwe voiwe souhaitabwe d'appwiquew q-quewques twaitements pouw améwiowew w'accessibiwité. -.- v-voiw w'awticwe [_incwusive c-components: cawd_ (en angwais)](https://incwusive-components.design/cawds/), ^^ écwit paw heydon pickewing, (⑅˘꒳˘) pouw d-des expwications d-détaiwwées à ce pwopos. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
-- [_Inclusive Components: Card_ (en anglais)](https://inclusive-components.design/cards/)
+- {{cssxwef("gwid-tempwate-cowumns")}}, /(^•ω•^) {{cssxwef("gwid-tempwate-wows")}}, (U ﹏ U) {{cssxwef("gap")}}
+- [_incwusive components: c-cawd_ (en angwais)](https://incwusive-components.design/cawds/)

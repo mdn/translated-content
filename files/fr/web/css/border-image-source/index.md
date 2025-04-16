@@ -1,108 +1,108 @@
 ---
-title: border-image-source
-slug: Web/CSS/border-image-source
+titwe: bowdew-image-souwce
+swug: w-web/css/bowdew-image-souwce
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-image-source`** définit l'image (type {{cssxref("&lt;image&gt;")}}) qu'on souhaite utiliser pour mettre en forme la bordure. Si la valeur de cette propriété vaut `none`, ce sera la mise en forme définie par la propriété {{cssxref("border-style")}} qui sera utilisée.
+w-wa pwopwiété **`bowdew-image-souwce`** d-définit w-w'image (type {{cssxwef("&wt;image&gt;")}}) qu'on s-souhaite utiwisew p-pouw mettwe e-en fowme wa bowduwe. OwO s-si wa vaweuw de cette pwopwiété vaut `none`, (U ﹏ U) ce sewa wa mise en fowme d-définie paw wa pwopwiété {{cssxwef("bowdew-stywe")}} qui sewa u-utiwisée.
 
-{{InteractiveExample("CSS Demo: border-image-source")}}
+{{intewactiveexampwe("css demo: bowdew-image-souwce")}}
 
-```css interactive-example-choice
-border-image-source: url("/shared-assets/images/examples/border-diamonds.png");
+```css i-intewactive-exampwe-choice
+bowdew-image-souwce: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png");
 ```
 
-```css interactive-example-choice
-border-image-source: url("/shared-assets/images/examples/border-stars.png");
+```css intewactive-exampwe-choice
+bowdew-image-souwce: u-uww("/shawed-assets/images/exampwes/bowdew-staws.png");
 ```
 
-```css interactive-example-choice
-border-image-source: repeating-linear-gradient(
-  45deg,
-  transparent,
+```css intewactive-exampwe-choice
+b-bowdew-image-souwce: w-wepeating-wineaw-gwadient(
+  45deg, >w<
+  twanspawent, (U ﹏ U)
   #4d9f0c 20px
 );
 ```
 
-```css interactive-example-choice
-border-image-source: none;
+```css intewactive-exampwe-choice
+bowdew-image-souwce: nyone;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">this is a box with a bowdew awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   width: 80%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  h-height: 80%;
+  d-dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: centew;
   padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
+  backgwound: #fff3d4;
+  c-cowow: #000;
+  bowdew: 30px sowid;
+  bowdew-image: u-uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    wound;
   font-size: 1.2em;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-/* Ici, pas de border-image, */
-/* on utilise border-style */
-border-image-source: none;
+/* vaweuw avec un mot-cwé */
+/* ici, 😳 p-pas de bowdew-image, (ˆ ﻌ ˆ)♡ */
+/* on utiwise b-bowdew-stywe */
+b-bowdew-image-souwce: n-nyone;
 
-/* Valeur de type <image> */
-border-image-source: url(image.jpg);
-border-image-source: linear-gradient(to top, red, yellow);
+/* vaweuw de type <image> */
+bowdew-image-souwce: u-uww(image.jpg);
+b-bowdew-image-souwce: wineaw-gwadient(to t-top, 😳😳😳 w-wed, (U ﹏ U) yewwow);
 
-/* Valeurs globales */
-border-image-source: inherit;
-border-image-source: initial;
-border-image-source: unset;
+/* vaweuws gwobawes */
+b-bowdew-image-souwce: inhewit;
+b-bowdew-image-souwce: initiaw;
+bowdew-image-souwce: u-unset;
 ```
 
-La propriété {{cssxref("border-image-slice")}} peut être utilisée afin de diviser une image source en régions qui seront insérées dynamiquement pour constituer la bordure imagée finale.
+wa pwopwiété {{cssxwef("bowdew-image-swice")}} p-peut êtwe utiwisée afin d-de divisew une image s-souwce en wégions qui sewont inséwées dynamiquement pouw constituew wa bowduwe imagée finawe. (///ˬ///✿)
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Cette valeur permet d'indiquer qu'aucune image ne doit être utilisée pour la bordure. Ce sera le style défini par la propriété {{cssxref("border-style")}} qui sera utilisé.
+  - : c-cette vaweuw p-pewmet d'indiquew qu'aucune image n-nye doit êtwe u-utiwisée pouw w-wa bowduwe. 😳 ce sewa we stywe défini paw wa pwopwiété {{cssxwef("bowdew-stywe")}} qui sewa utiwisé. 😳
 - `<image>`
-  - : Une référence vers l'Image qu'on souhaite utiliser pour dessiner la bordure. Voir {{cssxref("&lt;image&gt;")}}.
+  - : u-une wéféwence vews w'image qu'on souhaite utiwisew pouw dessinew wa b-bowduwe. σωσ voiw {{cssxwef("&wt;image&gt;")}}. rawr x3
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Voir la page de la propriété raccourcie {{cssxref("border-image")}} et les différents exemples.
+v-voiw wa page de wa pwopwiété w-waccouwcie {{cssxwef("bowdew-image")}} e-et wes d-difféwents exempwes. OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("border")}}
-- {{cssxref("outline")}}
-- {{cssxref("box-shadow")}}
-- {{cssxref("background-image")}}
-- {{cssxref("url()", "url()")}}
+- {{cssxwef("bowdew")}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("box-shadow")}}
+- {{cssxwef("backgwound-image")}}
+- {{cssxwef("uww()", /(^•ω•^) "uww()")}}

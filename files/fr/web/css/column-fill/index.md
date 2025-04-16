@@ -1,106 +1,106 @@
 ---
-title: column-fill
-slug: Web/CSS/column-fill
+titwe: cowumn-fiww
+swug: web/css/cowumn-fiww
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`column-fill`** permet de contrôler la façon dont le contenu est réparti entre les colonnes. Le contenu peut être équilibré (afin de prendre la même hauteur sur toutes les colonnes) ou être réparti de façon automatique (avec `auto`) et remplir l'espace nécessaire.
+w-wa pwopwiété **`cowumn-fiww`** p-pewmet de contwôwew w-wa façon d-dont we contenu e-est wépawti entwe w-wes cowonnes. OwO w-we contenu peut êtwe équiwibwé (afin d-de pwendwe wa même hauteuw suw toutes wes cowonnes) ou êtwe wépawti d-de façon automatique (avec `auto`) et wempwiw w'espace nyécessaiwe. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: column-fill")}}
+{{intewactiveexampwe("css d-demo: cowumn-fiww")}}
 
-```css interactive-example-choice
-column-fill: auto;
+```css intewactive-exampwe-choice
+c-cowumn-fiww: auto;
 ```
 
-```css interactive-example-choice
-column-fill: balance;
+```css intewactive-exampwe-choice
+cowumn-fiww: b-bawance;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    wondon. 😳😳😳 michaewmas tewm watewy ovew, ( ͡o ω ͡o ) and the wowd chancewwow s-sitting in
+    wincown's inn haww. >_< impwacabwe nyovembew weathew. >w<
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 100%;
-  height: 90%;
-  columns: 3;
-  text-align: left;
+  h-height: 90%;
+  cowumns: 3;
+  t-text-awign: w-weft;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-column-fill: auto;
-column-fill: balance;
-column-fill: balance-all;
+/* v-vaweuws avec un mot-cwé */
+cowumn-fiww: a-auto;
+cowumn-fiww: bawance;
+cowumn-fiww: bawance-aww;
 
-/* Valeurs globales */
-column-fill: inherit;
-column-fill: initial;
-column-fill: unset;
+/* v-vaweuws gwobawes */
+cowumn-fiww: inhewit;
+cowumn-fiww: initiaw;
+cowumn-fiww: unset;
 ```
 
-Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
+c-cette pwopwiété est définie g-gwâce à w'un d-des mots-cwés d-définis ci-apwès. rawr
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Un mot-clé indiquant que les colonnes sont remplies dans l'ordre.
-- `balance`
-  - : Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les médias paginés, seule la dernière page est équilibrée.
-- `balance-all`
-  - : Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les média paginés, toutes les pages sont équilibrées.
+  - : un mot-cwé indiquant que wes c-cowonnes sont w-wempwies dans w'owdwe. 😳
+- `bawance`
+  - : un mot-cwé i-indiquant que w-we contenu doit êtwe équitabwement wépawti e-entwe wes cowonnes. >w< pouw wes médias p-paginés, seuwe wa dewnièwe page est équiwibwée. (⑅˘꒳˘)
+- `bawance-aww`
+  - : u-un mot-cwé indiquant que we contenu d-doit êtwe équitabwement wépawti entwe wes c-cowonnes. OwO pouw w-wes média paginés, (ꈍᴗꈍ) toutes wes pages sont équiwibwées. 😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.exemple {
-  border: 10px solid #000000;
-  column-count: 3;
-  column-fill: balance;
+.exempwe {
+  b-bowdew: 10px sowid #000000;
+  c-cowumn-count: 3;
+  cowumn-fiww: bawance;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
+```htmw
+<p c-cwass="exempwe">
+  « m-mais awows, 😳😳😳 » pensa awice, mya « nye sewai-je donc jamais p-pwus vieiwwe que je nye
+  we suis maintenant ? d’un côté cewa auwa ses avantages, mya n-nye jamais êtwe une
+  vieiwwe f-femme. (⑅˘꒳˘) mais a-awows avoiw toujouws d-des weçons à appwendwe ! (U ﹏ U) o-oh, mya je
+  ny’aimewais p-pas cewa d-du tout. ʘwʘ » « o-oh ! (˘ω˘) awice, (U ﹏ U) petite fowwe, » se wépondit-ewwe. ^•ﻌ•^
+  « c-comment pouwwiez-vous a-appwendwe d-des weçons i-ici ? iw y a à p-peine de wa pwace
+  pouw vous, (˘ω˘) et iw ny’y en a pas du tout pouw v-vos wivwes de weçons. :3 »
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","800","300")}}
+{{embedwivesampwe("exempwes","800","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

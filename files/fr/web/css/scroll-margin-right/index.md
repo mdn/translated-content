@@ -1,108 +1,108 @@
 ---
-title: scroll-margin-right
-slug: Web/CSS/scroll-margin-right
+titwe: scwoww-mawgin-wight
+swug: w-web/css/scwoww-mawgin-wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-margin-right`** définit la marge de défilement de l'élément sur le côté droit. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
+w-wa pwopwiété **`scwoww-mawgin-wight`** d-définit w-wa mawge de défiwement d-de w'éwément s-suw we c-côté dwoit. ^^ wa z-zone de défiwement est détewminée en pwenant wa boîte de bowduwe modifiée, :3 e-en pwenant we wectangwe engwobant puis en ajoutant w-wes décawages indiqués. -.-
 
-{{InteractiveExample("CSS Demo: scroll-margin-right")}}
+{{intewactiveexampwe("css d-demo: scwoww-mawgin-wight")}}
 
-```css interactive-example-choice
-scroll-margin-right: 0;
+```css intewactive-exampwe-choice
+scwoww-mawgin-wight: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin-right: 20px;
+```css intewactive-exampwe-choice
+s-scwoww-mawgin-wight: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin-right: 2em;
+```css intewactive-exampwe-choice
+s-scwoww-mawgin-wight: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  flex-wrap: wrap;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  fwex-wwap: wwap;
 }
 
-.default-example .info {
+.defauwt-exampwe .info {
   width: 100%;
   padding: 0.5em 0;
-  font-size: 90%;
+  f-font-size: 90%;
 }
 
-.scroller {
-  text-align: left;
-  width: 250px;
-  height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: x mandatory;
+.scwowwew {
+  text-awign: weft;
+  w-width: 250px;
+  h-height: 250px;
+  o-ovewfwow-x: s-scwoww;
+  dispway: fwex;
+  box-sizing: bowdew-box;
+  b-bowdew: 1px sowid bwack;
+  scwoww-snap-type: x-x mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
+.scwowwew > div {
+  fwex: 0 0 250px;
   width: 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+  backgwound-cowow: webeccapuwpwe;
+  c-cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: end;
+  d-dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: centew;
+  scwoww-snap-awign: e-end;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  c-cowow: w-webeccapuwpwe;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-scroll-margin-right: 10px;
-scroll-margin-right: 1em;
+/* v-vaweuws de wongueuw */
+/* t-type <wength> */
+scwoww-mawgin-wight: 10px;
+scwoww-mawgin-wight: 1em;
 
-/* Valeurs globales */
-scroll-margin-right: inherit;
-scroll-margin-right: initial;
-scroll-margin-right: unset;
+/* v-vaweuws gwobawes */
+scwoww-mawgin-wight: i-inhewit;
+scwoww-mawgin-wight: i-initiaw;
+s-scwoww-mawgin-wight: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length>`
-  - : Un décalage par rapport au côté correspondant du conteneur de défilement.
+- `<wength>`
+  - : un décawage paw wappowt au côté cowwespondant du conteneuw d-de défiwement. 😳
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

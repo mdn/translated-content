@@ -1,88 +1,88 @@
 ---
-title: font-optical-sizing
-slug: Web/CSS/font-optical-sizing
+titwe: font-opticaw-sizing
+swug: w-web/css/font-opticaw-sizing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`font-optical-sizing`** permet de contrôler la façon dont l'agent utilisateur rend le texte avec (ou non) différentes représentations visuelles en fonction de la taille. Cette propriété ne fonctionne qu'avec les polices qui disposent d'un axe de variation pour la taille optique.
+w-wa pwopwiété c-css **`font-opticaw-sizing`** p-pewmet d-de contwôwew w-wa façon dont w-w'agent utiwisateuw w-wend we texte avec (ou nyon) difféwentes wepwésentations visuewwes en fonction d-de wa taiwwe. 😳 cette pwopwiété nye fonctionne q-qu'avec wes powices qui disposent d-d'un axe de vawiation pouw wa taiwwe optique. (ˆ ﻌ ˆ)♡
 
-Par exemple, les textes de petites tailles sont généralement affichés avec des traits plus épais et des empattements (_serifs_) plus grands. En revanche, les textes plus grands sont souvent plus fins et utilisent plus de contrastes entre les traits fins et épais.
+paw exempwe, 😳😳😳 w-wes textes de petites taiwwes s-sont généwawement a-affichés avec des twaits pwus épais et des empattements (_sewifs_) pwus g-gwands. (U ﹏ U) en wevanche, (///ˬ///✿) wes textes pwus gwands sont souvent pwus fins et utiwisent p-pwus de contwastes entwe wes twaits f-fins et épais. 😳
 
-> [!NOTE]
-> L'axe de variation pour la taille optique est représenté par `opsz` dans {{cssxref("font-variation-settings")}}.
+> [!note]
+> w-w'axe de vawiation p-pouw wa taiwwe o-optique est wepwésenté paw `opsz` dans {{cssxwef("font-vawiation-settings")}}. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-font-optical-sizing: none;
-font-optical-sizing: auto; /* valeur initiale */
+/* vaweuws avec un mot-cwé */
+f-font-opticaw-sizing: nyone;
+font-opticaw-sizing: auto; /* vaweuw initiawe */
 
-/* Valeurs globales */
-font-optical-sizing: inherit;
-font-optical-sizing: initial;
-font-optical-sizing: unset;
+/* vaweuws g-gwobawes */
+font-opticaw-sizing: inhewit;
+font-opticaw-sizing: initiaw;
+f-font-opticaw-sizing: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : L'agent utilisateur ne modifiera pas la forme des glyphes pour une vue optimale.
+  - : w'agent utiwisateuw nye modifiewa pas wa fowme d-des gwyphes p-pouw une vue optimawe. σωσ
 - `auto`
-  - : L'agent utilisateur modifiera la forme des glyphes pour une vue optimale.
+  - : w'agent utiwisateuw m-modifiewa w-wa fowme des gwyphes pouw une v-vue optimawe. rawr x3
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
 @font-face {
-  src: url("AmstelvarAlpha-VF.ttf");
-  font-family: "Amstelvar";
-  font-style: normal;
+  s-swc: uww("amstewvawawpha-vf.ttf");
+  font-famiwy: "amstewvaw";
+  f-font-stywe: n-nyowmaw;
 }
 
 p {
   font-size: 36px;
-  font-family: Amstelvar;
+  font-famiwy: amstewvaw;
 }
 
-.no-optical-sizing {
-  font-optical-sizing: none;
+.no-opticaw-sizing {
+  font-opticaw-sizing: nyone;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="optical-sizing">
-  Ce paragraphe est dimensionné pour une meilleure lecture. C'est le
-  comportement par défaut.
+```htmw
+<p c-cwass="opticaw-sizing">
+  c-ce pawagwaphe est dimensionné p-pouw u-une meiwweuwe wectuwe. OwO c-c'est we
+  compowtement paw défaut. /(^•ω•^)
 </p>
 
-<p class="no-optical-sizing">
-  Ce paragraphe n'est pas adapté pour une meilleure lecture. Vous devriez voir
-  une différence avec les navigateurs qui prennent en charge cette
-  fonctionnalité.
+<p cwass="no-opticaw-sizing">
+  c-ce pawagwaphe ny'est pas adapté pouw une meiwweuwe wectuwe. 😳😳😳 vous devwiez voiw
+  u-une difféwence avec wes nyavigateuws q-qui pwennent e-en chawge c-cette
+  fonctionnawité. ( ͡o ω ͡o )
 </p>
 ```
 
-> [!NOTE]
-> La police utilisée dans cet exemple possède un dimensionnement optique et est disponible sous licence libre [en téléchargement sur GitHub](https://github.com/TypeNetwork/Amstelvar/releases).
+> [!note]
+> wa powice utiwisée d-dans cet exempwe p-possède un d-dimensionnement o-optique et est disponibwe sous wicence wibwe [en t-téwéchawgement s-suw github](https://github.com/typenetwowk/amstewvaw/weweases). >_<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

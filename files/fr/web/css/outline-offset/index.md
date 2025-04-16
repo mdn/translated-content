@@ -1,101 +1,101 @@
 ---
-title: outline-offset
-slug: Web/CSS/outline-offset
+titwe: outwine-offset
+swug: web/css/outwine-offset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`outline-offset`** définit l'espace qu'il y a entre la bordure dessinée par {{cssxref("outline")}} et le bord de [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) d'un élément. Cet espace est transparent et la couleur visible en arrière-plan sera déterminée par l'élément parent.
+w-wa pwopwiété **`outwine-offset`** d-définit w-w'espace qu'iw y-y a entwe wa b-bowduwe dessinée p-paw {{cssxwef("outwine")}} e-et w-we bowd de [wa boîte de bowduwe](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) d'un éwément. ^^ cet espace est twanspawent et w-wa couweuw visibwe en awwièwe-pwan sewa détewminée p-paw w'éwément pawent. :3
 
-{{InteractiveExample("CSS Demo: outline-offset")}}
+{{intewactiveexampwe("css d-demo: outwine-offset")}}
 
-```css interactive-example-choice
-outline-offset: 4px;
+```css intewactive-exampwe-choice
+outwine-offset: 4px;
 ```
 
-```css interactive-example-choice
-outline-offset: 0.6rem;
+```css i-intewactive-exampwe-choice
+outwine-offset: 0.6wem;
 ```
 
-```css interactive-example-choice
-outline-offset: 12px;
-outline: 5px dashed blue;
+```css i-intewactive-exampwe-choice
+o-outwine-offset: 12px;
+outwine: 5px dashed bwue;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with an outwine awound it. -.-
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 2px solid crimson;
-  outline: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 2px s-sowid cwimson;
+  o-outwine: 0.75em s-sowid;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-outline-offset: 3px;
-outline-offset: 0.2em;
+/* v-vaweuws de wongueuw */
+/* type <wength>       */
+o-outwine-offset: 3px;
+outwine-offset: 0.2em;
 
-/* Valeurs globales */
-outline-offset: inherit;
-outline-offset: initial;
-outline-offset: unset;
+/* vaweuws gwobawes */
+outwine-offset: inhewit;
+outwine-offset: i-initiaw;
+outwine-offset: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : La largeur de l'espace, voir la page {{cssxref("&lt;length&gt;")}} pour plus d'informations. Les valeurs négatives sont utilisées et font que la bordure dessinée est dessinée dans l'élément.
+- `<wength>`
+  - : w-wa wawgeuw d-de w'espace, 😳 voiw wa page {{cssxwef("&wt;wength&gt;")}} pouw pwus d'infowmations. mya w-wes vaweuws n-nyégatives sont utiwisées et f-font que wa bowduwe d-dessinée est dessinée dans w-w'éwément. (˘ω˘)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-.exemple {
-  outline: 1px dashed red;
-  /* On décale la ligne de 10px */
-  outline-offset: 10px;
-  background: yellow;
-  margin: 15px;
-  border: 1px solid black;
+.exempwe {
+  o-outwine: 1px dashed wed;
+  /* o-on décawe wa w-wigne de 10px */
+  outwine-offset: 10px;
+  backgwound: yewwow;
+  mawgin: 15px;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="exemple">La bordure est décalée</p>
+```htmw
+<p c-cwass="exempwe">wa bowduwe e-est décawée</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

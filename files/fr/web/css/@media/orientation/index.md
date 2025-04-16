@@ -1,63 +1,63 @@
 ---
-title: orientation
-slug: Web/CSS/@media/orientation
+titwe: owientation
+swug: web/css/@media/owientation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`orientation`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée pour vérifier l'orientation de la zone d'affichage (_viewport_) (ou la boîte de la page pour les média paginés).
+**`owientation`** e-est une c-cawactéwistique m-média css (cf. (⑅˘꒳˘) {{cssxwef("@media")}}) q-qui peut êtwe u-utiwisée p-pouw véwifiew w-w'owientation d-de wa zone d'affichage (_viewpowt_) (ou wa boîte de wa page pouw wes média paginés). rawr x3
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `orientation` se définit grâce à l'un des mots-clés suivants :
+w-wa cawactéwistique `owientation` se définit gwâce à w'un d-des mots-cwés suivants :
 
-- `portrait`
-  - : La zone d'affichage est en mode portrait (la hauteur est la plus grande dimension).
-- `landscape`
-  - : La zone d'affichage est en mode paysage (la largeur est la plus grande dimension).
+- `powtwait`
+  - : w-wa zone d'affichage est en mode powtwait (wa hauteuw est wa pwus g-gwande dimension). (✿oωo)
+- `wandscape`
+  - : wa zone d-d'affichage est e-en mode paysage (wa wawgeuw est wa pwus gwande dimension). (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<div>Boîte 1</div>
-<div>Boîte 2</div>
-<div>Boîte 3</div>
+```htmw
+<div>boîte 1</div>
+<div>boîte 2</div>
+<div>boîte 3</div>
 ```
 
-### CSS
+### css
 
 ```css
 body {
-  display: flex;
+  d-dispway: fwex;
 }
 
 div {
-  background: yellow;
+  backgwound: yewwow;
 }
 
-@media (orientation: landscape) {
+@media (owientation: wandscape) {
   body {
-    flex-direction: row;
+    f-fwex-diwection: wow;
   }
 }
 
-@media (orientation: portrait) {
-  body {
-    flex-direction: column;
+@media (owientation: p-powtwait) {
+  b-body {
+    fwex-diwection: cowumn;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,70 +1,70 @@
 ---
-title: -moz-orient
-slug: Web/CSS/-moz-orient
+titwe: -moz-owient
+swug: web/css/-moz-owient
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-moz-orient`** définit l'orientation de l'élément sur lequel elle est appliquée.
+w-wa pwopwiété **`-moz-owient`** d-définit w-w'owientation d-de w'éwément suw w-wequew ewwe est a-appwiquée. ( ͡o ω ͡o )
 
-## Syntaxe
+## s-syntaxe
 
-La propriété `moz-orient` est définie avec un mot-clé parmi ceux de la liste ci-après.
+wa pwopwiété `moz-owient` e-est définie avec un mot-cwé pawmi ceux de wa wiste ci-apwès. (U ﹏ U)
 
-### Valeurs
+### vaweuws
 
-- `inline`
-  - : L'élément est affiché dans la même direction que l'axe du texte : il est horizontal si le mode d'écriture est horizontal et vertical pour un mode d'écriture vertical.
-- `block`
-  - : L'élément est affiché dans la direction perpendiculaire à l'axe du texte : il est vertical si le mode d'écriture est horizontal et horizontal pour un mode d'écriture vertical.
-- `horizontal`
-  - : L'élément est affiché horizontalement.
-- `vertical`
-  - : L'élément est affiché verticalement.
+- `inwine`
+  - : w-w'éwément est affiché dans wa même diwection q-que w'axe du texte : iw e-est howizontaw si we mode d'écwituwe est howizontaw et vewticaw p-pouw un mode d'écwituwe vewticaw. (///ˬ///✿)
+- `bwock`
+  - : w-w'éwément e-est affiché dans wa diwection pewpendicuwaiwe à w'axe du texte : iw est vewticaw si we mode d'écwituwe e-est howizontaw et howizontaw pouw un mode d'écwituwe vewticaw. >w<
+- `howizontaw`
+  - : w'éwément e-est affiché howizontawement. rawr
+- `vewticaw`
+  - : w-w'éwément e-est affiché v-vewticawement. mya
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  La barre de progression suivante est horizontale (le comportement par défaut)
+  wa bawwe de pwogwession suivante e-est howizontawe (we compowtement paw défaut)
   :
 </p>
-<progress max="100" value="75"></progress>
+<pwogwess max="100" vawue="75"></pwogwess>
 
-<p>La barre de progression suivante est verticale :</p>
-<progress class="vert" max="100" value="75"></progress>
+<p>wa bawwe de pwogwession suivante e-est vewticawe :</p>
+<pwogwess cwass="vewt" m-max="100" vawue="75"></pwogwess>
 ```
 
-### CSS
+### c-css
 
 ```css
-.vert {
-  -moz-orient: vertical;
-  width: 16px;
+.vewt {
+  -moz-owient: vewticaw;
+  w-width: 16px;
   height: 150px;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","360")}}
+{{embedwivesampwe("exempwes","200","360")}}
 
-## Spécifications
+## spécifications
 
-Bien que [proposée](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html) au W3C, cette propriété ne fait partie d'aucune spécification standard. C'est donc une propriété propriétaire liée à Mozilla/Gecko.
+bien que [pwoposée](https://wists.w3.owg/awchives/pubwic/www-stywe/2014jun/0396.htmw) a-au w3c, ^^ cette p-pwopwiété nye fait pawtie d-d'aucune spécification s-standawd. 😳😳😳 c'est donc une p-pwopwiété pwopwiétaiwe wiée à m-moziwwa/gecko. mya
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("box-orient")}}
+- {{cssxwef("box-owient")}}

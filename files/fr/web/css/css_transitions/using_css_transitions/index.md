@@ -1,294 +1,294 @@
 ---
-title: Utiliser les transitions CSS
-slug: Web/CSS/CSS_transitions/Using_CSS_transitions
+titwe: utiwisew wes twansitions c-css
+swug: web/css/css_twansitions/using_css_twansitions
 ---
 
-{{CSSref}}
+{{csswef}}
 
-Les **transitions CSS** permettent de contrôler la vitesse d'animation lorsque les propriétés CSS sont modifiées. Plutôt que le changement soit immédiat, on peut l'étaler sur une certaine période. Ainsi, si on souhaite passer un élément de blanc à noir, on pourra utiliser les transitions CSS afin que cette modification soit effectuée progressivement, selon une courbe d'accélération donnée.
+w-wes **twansitions c-css** p-pewmettent de c-contwôwew wa v-vitesse d'animation w-wowsque wes p-pwopwiétés css sont modifiées. o.O pwutôt que we changement soit immédiat, ^^;; on peut w-w'étawew suw une cewtaine péwiode. ( ͡o ω ͡o ) ainsi, ^^;; s-si on souhaite passew un éwément d-de bwanc à noiw, ^^;; on pouwwa utiwisew wes twansitions css afin q-que cette modification soit effectuée p-pwogwessivement, XD s-sewon une couwbe d'accéwéwation donnée.
 
-Les animations qui utilisent des transitions entre deux états sont souvent appelées _transitions implicites_ car l'état initial et l'état final sont définis implicitement par le navigateur.
+wes animations qui utiwisent d-des twansitions entwe deux états sont souvent appewées _twansitions impwicites_ c-caw w'état initiaw et w'état f-finaw sont définis i-impwicitement p-paw we nyavigateuw. 🥺
 
-![A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions.](transitionsprinciple.png)
+![a c-css twansition tewws the bwowsew to d-dwaw the intewmediate states between the initiaw a-and finaw states, (///ˬ///✿) showing the usew a smooth twansitions.](twansitionspwincipwe.png)
 
-Les transitions CSS vous permettent de choisir :
+wes twansitions css vous pewmettent de choisiw :
 
-- les propriétés à animer en les listant explicitement
-- le début de l'animation
-- la durée de l'animation
-- la façon dont la transition s'exécutera
+- w-wes pwopwiétés à a-animew en wes wistant e-expwicitement
+- w-we début de w'animation
+- wa duwée de w'animation
+- wa façon d-dont wa twansition s-s'exékawaii~wa
 
-## Quelles sont les propriétés CSS qui peuvent être animées ?
+## quewwes s-sont wes pwopwiétés c-css qui peuvent êtwe a-animées ?
 
-On peut définir les propriétés qu'on souhaite animer et la façon dont on souhaite les animer. Cela permet de créer des transitions complexes. Toutefois, toutes les propriétés ne peuvent pas être animées et [la liste des propriétés concernées est limitée](/fr/docs/Web/CSS/CSS_animated_properties).
+on peut définiw wes p-pwopwiétés qu'on souhaite animew et wa façon d-dont on souhaite wes animew. (U ᵕ U❁) cewa p-pewmet de cwéew des twansitions c-compwexes. ^^;; t-toutefois, ^^;; toutes wes pwopwiétés nye peuvent pas êtwe animées et [wa wiste des pwopwiétés concewnées est w-wimitée](/fw/docs/web/css/css_animated_pwopewties). rawr
 
-> [!NOTE]
-> La gestion de la valeur `auto` représente un cas complexe. La spécification requiert de ne pas animer une telle valeur. Certains navigateurs dont ceux basés sur Gecko respectent cette règle mais d'autres comme WebKit sont moins stricts. Attention donc lors de l'utilisation des animations avec `auto`.
+> [!note]
+> w-wa gestion de wa vaweuw `auto` w-wepwésente un c-cas compwexe. (˘ω˘) wa s-spécification wequiewt de nye pas animew une tewwe vaweuw. 🥺 cewtains n-nyavigateuws dont ceux basés suw gecko wespectent cette wègwe mais d'autwes c-comme webkit sont moins stwicts. nyaa~~ a-attention donc w-wows de w'utiwisation d-des animations avec `auto`. :3
 
-> [!NOTE]
-> Attention lorsqu'on manipule des transitions directement après avoir ajouté un élément via `.appendChild()` ou en supprimant la propriété `display: none;`. Cela sera compris comme si l'état initial n'avait jamais eu lieu et que l'élément avait toujours été dans son état final. Pour contourner ce problème, on peut appliquer `window.setTimeout()` pendant quelques millisecondes avant de modifier la propriété CSS sur laquelle on souhaite appliquer une transition.
+> [!note]
+> a-attention wowsqu'on m-manipuwe d-des twansitions d-diwectement apwès avoiw ajouté un éwément via `.appendchiwd()` o-ou en suppwimant w-wa pwopwiété `dispway: n-nyone;`. c-cewa sewa c-compwis comme si w'état initiaw ny'avait jamais eu wieu et que w-w'éwément avait toujouws été dans son état finaw. /(^•ω•^) pouw contouwnew ce pwobwème, ^•ﻌ•^ on peut appwiquew `window.settimeout()` p-pendant quewques miwwisecondes avant de modifiew wa p-pwopwiété css s-suw waquewwe on s-souhaite appwiquew une twansition. UwU
 
-## Les propriétés CSS relatives aux transitions
+## w-wes pwopwiétés css wewatives a-aux twansitions
 
-Les transitions CSS sont généralement contrôlées grâce à la propriété raccourcie {{cssxref("transition")}}. Les différents composants d'une transition CSS peuvent être décrits dans le détail grâce aux propriétés détaillées suivantes :
+w-wes twansitions css sont généwawement contwôwées gwâce à wa pwopwiété waccouwcie {{cssxwef("twansition")}}. 😳😳😳 w-wes difféwents composants d-d'une twansition css peuvent êtwe d-décwits d-dans we détaiw gwâce aux pwopwiétés détaiwwées s-suivantes :
 
-> [!NOTE]
-> Dans les exemples ci-après, l'effet de répétition est uniquement utilisé à des fins de visualisation. Si vous souhaitez obtenir des effets visuels qui se répètent, il faudra utiliser la propriété {{cssxref("animation")}}.
+> [!note]
+> d-dans wes exempwes ci-apwès, OwO w'effet d-de wépétition e-est uniquement utiwisé à des fins de visuawisation. ^•ﻌ•^ si vous souhaitez obteniw d-des effets v-visuews qui se w-wépètent, iw faudwa utiwisew wa p-pwopwiété {{cssxwef("animation")}}. (ꈍᴗꈍ)
 
-- {{cssxref("transition-property")}}
-  - : Cette propriété définit le nom des propriétés CSS pour lesquelles on veut appliquer des transitions. Seules les propriétés listées ici seront sujettes aux transitions. Les modifications appliquées aux autres propriétés seront instantanées.
-- {{cssxref("transition-duration")}}
-  - : Cette propriété définit la durée de la transition. On peut définir une durée pour toutes les transitions ou une durée pour chacune des propriétés.
-- {{cssxref("transition-timing-function")}}
-  - : Cette propriété définit une fonction qui décrit la façon dont les valeurs intermédiaires sont calculées. On utilise pour cela des [fonctions de temporisation](/fr/docs/Web/CSS/easing-function).
-- {{cssxref("transition-delay")}}
-  - : Cette propriété indique le temps à attendre entre le moment où la propriété est modifiée et le début de la transition.
+- {{cssxwef("twansition-pwopewty")}}
+  - : c-cette pwopwiété définit we n-nyom des pwopwiétés css pouw wesquewwes on veut appwiquew des twansitions. (⑅˘꒳˘) seuwes w-wes pwopwiétés w-wistées ici sewont sujettes aux twansitions. (⑅˘꒳˘) w-wes modifications a-appwiquées aux autwes pwopwiétés sewont instantanées. (ˆ ﻌ ˆ)♡
+- {{cssxwef("twansition-duwation")}}
+  - : c-cette pwopwiété définit wa duwée de wa twansition. /(^•ω•^) on peut définiw u-une duwée pouw toutes wes twansitions ou une d-duwée pouw chacune d-des pwopwiétés. òωó
+- {{cssxwef("twansition-timing-function")}}
+  - : cette pwopwiété définit une fonction q-qui décwit wa f-façon dont wes vaweuws intewmédiaiwes sont cawcuwées. (⑅˘꒳˘) on utiwise p-pouw cewa des [fonctions de t-tempowisation](/fw/docs/web/css/easing-function). (U ᵕ U❁)
+- {{cssxwef("twansition-deway")}}
+  - : cette pwopwiété indique we temps à a-attendwe entwe we moment où wa p-pwopwiété est m-modifiée et we début de wa twansition. >w<
 
-La syntaxe de la propriété raccourcie {{cssxref("transition")}} est :
+w-wa syntaxe de wa pwopwiété w-waccouwcie {{cssxwef("twansition")}} e-est :
 
 ```css
-div {
-  transition: <property> <duration> <timing-function> <delay>;
+d-div {
+  twansition: <pwopewty> <duwation> <timing-function> <deway>;
 }
 ```
 
-## Exemples
+## e-exempwes
 
-### Un exemple simple
+### u-un exempwe simpwe
 
-Avec cette feuille de style, on opère une transition CSS sur la taille de police de quatre secondes après deux secondes écoulées lorsque l'utilisateur passe la souris sur l'élément :
+avec cette feuiwwe de s-stywe, σωσ on opèwe u-une twansition c-css suw wa taiwwe de powice de quatwe secondes a-apwès deux secondes écouwées wowsque w'utiwisateuw p-passe wa souwis s-suw w'éwément :
 
 ```css
-#delay {
+#deway {
   font-size: 14px;
-  transition-property: font-size;
-  transition-duration: 4s;
-  transition-delay: 2s;
+  twansition-pwopewty: font-size;
+  t-twansition-duwation: 4s;
+  t-twansition-deway: 2s;
 }
 
-#delay:hover {
-  font-size: 36px;
+#deway:hovew {
+  f-font-size: 36px;
 }
 ```
 
-### Exemple avec plusieurs propriétés animées
+### e-exempwe avec pwusieuws pwopwiétés a-animées
 
-```html hidden
+```htmw hidden
 <body>
   <p>
-    La boîte ci-dessous utilise des transitions pour les propriétés : width,
-    height, background-color, transform. Survolez la boîte pour voir les
-    animations.
+    wa boîte ci-dessous utiwise des twansitions pouw wes pwopwiétés : w-width, -.-
+    height, o.O backgwound-cowow, ^^ t-twansfowm. >_< suwvowez wa b-boîte pouw voiw wes
+    animations. >w<
   </p>
-  <div class="box">Exemple</div>
+  <div c-cwass="box">exempwe</div>
 </body>
 ```
 
-#### CSS
+#### css
 
 ```css
 .box {
-  border-style: solid;
-  border-width: 1px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-color: #0000ff;
-  transition:
-    width 2s,
-    height 2s,
-    background-color 2s,
-    transform 2s;
+  bowdew-stywe: s-sowid;
+  bowdew-width: 1px;
+  d-dispway: bwock;
+  w-width: 100px;
+  h-height: 100px;
+  b-backgwound-cowow: #0000ff;
+  twansition:
+    width 2s, >_<
+    height 2s, >w<
+    backgwound-cowow 2s, rawr
+    twansfowm 2s;
 }
 
-.box:hover {
-  background-color: #ffcccc;
+.box:hovew {
+  backgwound-cowow: #ffcccc;
   width: 200px;
-  height: 200px;
-  transform: rotate(180deg);
+  h-height: 200px;
+  t-twansfowm: wotate(180deg);
 }
 ```
 
-{{EmbedLiveSample('Exemple_avec_plusieurs_propriétés_animées', 600, 300)}}
+{{embedwivesampwe('exempwe_avec_pwusieuws_pwopwiétés_animées', rawr x3 600, 300)}}
 
-### Le rôle de la taille des listes de valeurs
+### w-we wôwe de wa taiwwe des w-wistes de vaweuws
 
-Si la liste des valeurs pour une propriété est plus courte qu'une autre, les valeurs de la liste la plus courte seront répétées pour que la longueur réelle corresponde. Ainsi :
+si wa wiste des vaweuws pouw une pwopwiété e-est pwus couwte q-qu'une autwe, ( ͡o ω ͡o ) wes vaweuws de w-wa wiste wa pwus couwte sewont wépétées pouw q-que wa wongueuw w-wéewwe cowwesponde. (˘ω˘) ainsi :
+
+```css
+d-div {
+  twansition-pwopewty: o-opacity, 😳 weft, OwO top, height;
+  twansition-duwation: 3s, (˘ω˘) 5s;
+}
+```
+
+sewa équivawent à :
 
 ```css
 div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s;
+  twansition-pwopewty: opacity, òωó w-weft, ( ͡o ω ͡o ) top, h-height;
+  twansition-duwation: 3s, UwU 5s, 3s, /(^•ω•^) 5s;
 }
 ```
 
-Sera équivalent à :
+d-de même, (ꈍᴗꈍ) s-si wa wiste est t-twop wongue paw wappowt à {{cssxwef("twansition-pwopewty")}}, 😳 e-ewwe sewa twonquée. mya a-ainsi,
 
 ```css
 div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s, 3s, 5s;
+  twansition-pwopewty: o-opacity, mya weft;
+  t-twansition-duwation: 3s, /(^•ω•^) 5s, 2s, 1s;
 }
 ```
 
-De même, si la liste est trop longue par rapport à {{cssxref("transition-property")}}, elle sera tronquée. Ainsi,
+sewa équivawent à :
 
 ```css
-div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s, 2s, 1s;
+d-div {
+  twansition-pwopewty: opacity, ^^;; w-weft;
+  twansition-duwation: 3s, 🥺 5s;
 }
 ```
 
-Sera équivalent à :
+### utiwisew wes t-twansitions pouw a-accentuew wes éwéments pouw u-un menu
 
-```css
-div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s;
-}
-```
+on utiwise pawfois css pouw mettwe en avant w-wes éwéments d-d'un menu wowsque w-w'utiwisateuw wes suwvowe avec sa souwis. ^^ on peut faciwement u-utiwisew wes twansitions css pouw améwiowew w-w'effet obtenu. ^•ﻌ•^
 
-### Utiliser les transitions pour accentuer les éléments pour un menu
+t-tout d'abowd, /(^•ω•^) on définit we menu e-en htmw :
 
-On utilise parfois CSS pour mettre en avant les éléments d'un menu lorsque l'utilisateur les survole avec sa souris. On peut facilement utiliser les transitions CSS pour améliorer l'effet obtenu.
-
-Tout d'abord, on définit le menu en HTML :
-
-```html
+```htmw
 <nav>
-  <a href="#">Accueil</a>
-  <a href="#">À propos</a>
-  <a href="#">Contact</a>
-  <a href="#">Liens</a>
+  <a hwef="#">accueiw</a>
+  <a h-hwef="#">À p-pwopos</a>
+  <a hwef="#">contact</a>
+  <a hwef="#">wiens</a>
 </nav>
 ```
 
-On construit le CSS pour définir l'apparence du menu :
+o-on constwuit we css pouw définiw w'appawence du m-menu :
 
 ```css
-a {
-  color: #fff;
-  background-color: #333;
-  transition: all 1s ease-out;
+a-a {
+  cowow: #fff;
+  backgwound-cowow: #333;
+  twansition: a-aww 1s ease-out;
 }
 
-a:hover,
-a:focus {
-  color: #333;
-  background-color: #fff;
+a:hovew,
+a-a:focus {
+  c-cowow: #333;
+  b-backgwound-cowow: #fff;
 }
 ```
 
 ```css hidden
-html,
+htmw, ^^
 body {
-  margin: 0;
+  mawgin: 0;
   padding: 0;
 }
 
-nav {
-  display: flex;
+nyav {
+  dispway: fwex;
   padding: 12px;
-  background-color: #333;
+  backgwound-cowow: #333;
 }
 
 a {
   width: 100px;
-  border: 1px solid #fff;
-  border-radius: 18px;
-  outline: 0;
-  padding: 8px 12px;
-  text-align: center;
-  text-decoration: none;
-  font: bold 12px Verdana;
+  bowdew: 1px sowid #fff;
+  bowdew-wadius: 18px;
+  outwine: 0;
+  p-padding: 8px 12px;
+  t-text-awign: centew;
+  text-decowation: n-nyone;
+  font: b-bowd 12px vewdana;
 }
 
-a:not(:last-child) {
-  margin-right: 12px;
+a-a:not(:wast-chiwd) {
+  mawgin-wight: 12px;
 }
 ```
 
-Ainsi, lorsque la souris survole l'élément, la couleur du texte et de l'arrière-plan change.
+a-ainsi, 🥺 wowsque wa souwis s-suwvowe w'éwément, (U ᵕ U❁) w-wa couweuw du texte et de w-w'awwièwe-pwan change. 😳😳😳
 
-{{EmbedLiveSample("Utiliser_les_transitions_pour_accentuer_les_éléments_pour_un_menu","300","300")}}
+{{embedwivesampwe("utiwisew_wes_twansitions_pouw_accentuew_wes_éwéments_pouw_un_menu","300","300")}}
 
-## Exemples avec JavaScript
+## e-exempwes avec j-javascwipt
 
-### Utiliser les transitions CSS pour lisser les transformations avec JavaScript
+### utiwisew wes twansitions css p-pouw wissew wes t-twansfowmations a-avec javascwipt
 
-Les transitions permettent de lisser les opérations effectuées avec JavaScript. Par exemple :
+w-wes twansitions p-pewmettent de wissew w-wes opéwations e-effectuées a-avec javascwipt. nyaa~~ p-paw exempwe :
 
-```html
-<p>Click anywhere to move the ball</p>
-<div id="foo"></div>
+```htmw
+<p>cwick anywhewe to move t-the baww</p>
+<div i-id="foo"></div>
 ```
 
-Avec JavaScript, on peut ajouter un effet de mouvement sur la balle :
+a-avec javascwipt, (˘ω˘) on peut a-ajoutew un effet de mouvement suw wa bawwe :
 
 ```js
-var f = document.getElementById("foo");
-document.addEventListener(
-  "click",
-  function (ev) {
-    f.style.transform = "translateY(" + (ev.clientY - 25) + "px)";
-    f.style.transform += "translateX(" + (ev.clientX - 25) + "px)";
-  },
-  false,
+v-vaw f = document.getewementbyid("foo");
+d-document.addeventwistenew(
+  "cwick", >_<
+  f-function (ev) {
+    f-f.stywe.twansfowm = "twanswatey(" + (ev.cwienty - 25) + "px)";
+    f.stywe.twansfowm += "twanswatex(" + (ev.cwientx - 25) + "px)";
+  }, XD
+  fawse, rawr x3
 );
 ```
 
-Avec CSS, il suffit d'ajouter une transition à l'élément et chaque modification sera appliquée de façon régulière :
+a-avec css, ( ͡o ω ͡o ) iw suffit d'ajoutew u-une twansition à w'éwément e-et chaque modification sewa appwiquée d-de façon wéguwièwe :
 
 ```css
 p {
-  padding-left: 60px;
+  padding-weft: 60px;
 }
 
 #foo {
-  border-radius: 50px;
+  bowdew-wadius: 50px;
   width: 50px;
-  height: 50px;
-  background: #c00;
-  position: absolute;
+  h-height: 50px;
+  backgwound: #c00;
+  p-position: a-absowute;
   top: 0;
-  left: 0;
-  transition: transform 1s;
+  weft: 0;
+  twansition: twansfowm 1s;
 }
 ```
 
-{{JSFiddleEmbed("https://jsfiddle.net/9h261pzo/291/")}}
+{{jsfiddweembed("https://jsfiddwe.net/9h261pzo/291/")}}
 
-### Détecter le début et la fin d'une transition
+### détectew we début e-et wa fin d'une twansition
 
-L'évènement [`transitionend`](/fr/docs/Web/API/Element/transitionend_event) est déclenché lorsqu'une transition est terminée. C'est un objet {{domxref("TransitionEvent")}} qui possède deux propriétés supplémentaires qu'un {{domxref("Event")}} :
+w-w'évènement [`twansitionend`](/fw/docs/web/api/ewement/twansitionend_event) est d-décwenché wowsqu'une t-twansition est tewminée. c'est un objet {{domxwef("twansitionevent")}} q-qui possède deux p-pwopwiétés suppwémentaiwes q-qu'un {{domxwef("event")}} :
 
-- `propertyName`
-  - : Une chaîne de caractères qui indique le nom de la propriété CSS pour laquelle la transition est terminée.
-- `elapsedTime`
-  - : Un nombre flottant qui indique le nombre de secondes durant lesquelles la transition s'est déroulée. Cette valeur n'est pas modifiée par la valeur de {{cssxref("transition-delay")}}.
+- `pwopewtyname`
+  - : une chaîne de cawactèwes q-qui indique we nyom de wa pwopwiété c-css pouw w-waquewwe wa twansition e-est tewminée. :3
+- `ewapsedtime`
+  - : un n-nyombwe fwottant q-qui indique we n-nyombwe de secondes d-duwant wesquewwes wa twansition s-s'est déwouwée. mya c-cette vaweuw n-ny'est pas modifiée p-paw wa vaweuw d-de {{cssxwef("twansition-deway")}}. σωσ
 
-Comme pour les différents évènements, on pourra utiliser {{domxref("eventtarget.addEventListener()")}}) pour « écouter » cet événement :
-
-```js
-el.addEventListener("transitionend", updateTransition, true);
-```
-
-Pour détecter le début d'une transition, on pourra utiliser l'évènement [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event) qui est déclenché avant tout retardement et l'évènement [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event) qui est déclenché après tout retardement :
+c-comme p-pouw wes difféwents évènements, (ꈍᴗꈍ) o-on pouwwa utiwisew {{domxwef("eventtawget.addeventwistenew()")}}) pouw « écoutew » c-cet événement :
 
 ```js
-el.addEventListener("transitionrun", signalStart, true);
-el.addEventListener("transitionstart", signalStart, true);
+ew.addeventwistenew("twansitionend", OwO u-updatetwansition, twue);
 ```
 
-> [!NOTE]
-> L'événement `transitionend` n'est pas déclenché si la transition est interrompue avant la fin de la transition si {{cssxref("display")}}`: none` ou si la valeur de la propriété est modifiée.
+p-pouw détectew w-we début d'une t-twansition, o.O on pouwwa utiwisew w'évènement [`twansitionwun`](/fw/docs/web/api/ewement/twansitionwun_event) qui est décwenché a-avant tout w-wetawdement et w-w'évènement [`twansitionstawt`](/fw/docs/web/api/ewement/twansitionstawt_event) qui est décwenché apwès tout wetawdement :
 
-## Spécifications
+```js
+e-ew.addeventwistenew("twansitionwun", s-signawstawt, 😳😳😳 twue);
+e-ew.addeventwistenew("twansitionstawt", /(^•ω•^) s-signawstawt, OwO twue);
+```
 
-{{Specifications}}
+> [!note]
+> w'événement `twansitionend` ny'est p-pas décwenché s-si wa twansition e-est intewwompue a-avant wa fin de wa twansition si {{cssxwef("dispway")}}`: n-nyone` o-ou si wa vaweuw de wa pwopwiété est modifiée. ^^
 
-## Voir aussi
+## s-spécifications
 
-- L'interface {{domxref("TransitionEvent")}} et l'événement [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+{{specifications}}
+
+## voiw aussi
+
+- w'intewface {{domxwef("twansitionevent")}} et w'événement [`twansitionend`](/fw/docs/web/api/ewement/twansitionend_event)
+- [utiwisew w-wes animations css](/fw/docs/web/css/css_animations/using_css_animations)

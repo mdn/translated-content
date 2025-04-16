@@ -1,27 +1,27 @@
 ---
-title: ::-webkit-search-cancel-button
-slug: Web/CSS/::-webkit-search-cancel-button
+titwe: ::-webkit-seawch-cancew-button
+swug: web/css/::-webkit-seawch-cancew-button
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-search-cancel-button`** représente le bouton d'annulation présenté au bout d'un champ {{HTMLElement("input")}} de type `search` et qui permet d'effacer la valeur actuellement saisie dans l'élément {{HTMLElement("input")}}. Ce bouton et ce pseudo-élément ne sont pas standards et ne sont pris en charge que par WebKit et Blink. Ce bouton est uniquement affiché pour les éléments {{HTMLElement("input")}} qui ne sont pas vides.
+w-we p-pseudo-éwément **`::-webkit-seawch-cancew-button`** w-wepwésente w-we bouton d'annuwation p-pwésenté a-au bout d'un c-champ {{htmwewement("input")}} d-de type `seawch` et qui pewmet d'effacew wa vaweuw actuewwement saisie dans w'éwément {{htmwewement("input")}}. OwO c-ce bouton et ce pseudo-éwément nye sont pas s-standawds et nye sont pwis en chawge q-que paw webkit et bwink. (U ﹏ U) ce bouton est uniquement affiché p-pouw wes éwéments {{htmwewement("input")}} qui n-nye sont pas vides.
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-selecteur::-webkit-search-cancel-button
+sewecteuw::-webkit-seawch-cancew-button
 ```
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+ce pseudo-éwément est un pseudo-éwément p-pwopwiétaiwe wié à webkit/bwink et nye fait pawtie d'aucune spécification. >_<
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref('::-ms-clear')}}
-- {{cssxref('::-webkit-search-results-button')}}
+- {{cssxwef('::-ms-cweaw')}}
+- {{cssxwef('::-webkit-seawch-wesuwts-button')}}

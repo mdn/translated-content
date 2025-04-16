@@ -1,46 +1,46 @@
 ---
-title: scaleY()
-slug: Web/CSS/transform-function/scaleY
+titwe: scawey()
+swug: web/css/twansfowm-function/scawey
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`scaleY()`** modifie l'ordonnée de chaque sommet de l'élément avec un facteur multiplicateur. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+w-wa fonction **`scawey()`** m-modifie w'owdonnée d-de chaque s-sommet de w'éwément a-avec u-un facteuw muwtipwicateuw. (U ﹏ U) w-w'homothétie n-ny'est pas isotwopique et wes angwes de w'éwément nye sont pas consewvés. (///ˬ///✿) w-wa vaweuw obtenue paw cette fonction est de t-type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). >w<
 
-![](scaley.png)
+![](scawey.png)
 
-`scaleY(sy)` est une notation raccourcie équivalente à `scale(1, sy)` ou à `scale3d(1, sy, 1)`.
+`scawey(sy)` est une nyotation w-waccouwcie équivawente à `scawe(1, rawr sy)` ou à `scawe3d(1, mya sy, 1)`. ^^
 
-`scaleY(-1)` définit une symétrie axiale selon un axe horizontal, passant par l'origine du repère (cette origine est définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)).
+`scawey(-1)` d-définit une symétwie a-axiawe sewon un a-axe howizontaw, 😳😳😳 passant paw w'owigine du wepèwe (cette owigine est définie gwâce à w-wa pwopwiété [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin)). mya
 
-## Syntaxe
+## syntaxe
 
 ```css
-scaleY(s)
+scawey(s)
 ```
 
-### Valeurs
+### vaweuws
 
 - `s`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui indique le facteur d'échelle pour l'homothétie.
+  - : une v-vaweuw de type [`<numbew>`](/fw/docs/web/css/numbew) qui indique w-we facteuw d'échewwe p-pouw w'homothétie.
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">coowdonnées cawtésiennes suw ℝ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées homogènes suw ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées cawtésiennes suw ℝ<sup>3</sup></th>
+      <th scope="cow">coowdonnées homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd></mtr>
-              <mtr><mtd>0</mtd><mtd>s</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd></mtw>
+              <mtw><mtd>0</mtd><mtd>s</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -48,86 +48,86 @@ scaleY(s)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>s</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>s</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>s</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>s</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[1 0 0 s 0 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[1 0 0 s-s 0 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<div>Normal</div>
-<div class="scaled">Mis à l'échelle</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="scawed">mis à w'échewwe</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
+d-div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  b-backgwound-cowow: s-skybwue;
 }
 
-.scaled {
-  transform: scaleY(0.6);
-  background-color: pink;
+.scawed {
+  twansfowm: scawey(0.6);
+  b-backgwound-cowow: pink;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{embedwivesampwe("exempwes","100%","200")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX)
-- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)
+- [`scawex()`](/fw/docs/web/css/twansfowm-function/scawex)
+- [`scawez()`](/fw/docs/web/css/twansfowm-function/scawez)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)
+- [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin)

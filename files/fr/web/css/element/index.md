@@ -1,67 +1,67 @@
 ---
-title: element
-slug: Web/CSS/element
+titwe: ewement
+swug: web/css/ewement
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La fonction **`element()`** définit une valeur {{cssxref("&lt;image&gt;")}} générée à partir d'un élément HTML arbitraire. L'image est calculée dynamiquement : si l'élément HTML change, les propriétés CSS utilisant la valeur seront automatiquement mis à jour.
+w-wa fonction **`ewement()`** d-définit u-une vaweuw {{cssxwef("&wt;image&gt;")}} g-généwée à p-pawtiw d'un éwément h-htmw a-awbitwaiwe. mya w'image e-est cawcuwée dynamiquement : si w'éwément htmw change, >w< wes pwopwiétés c-css utiwisant wa vaweuw sewont automatiquement mis à jouw. nyaa~~
 
-Un scénario pour lequel cette fonction est particulièrement utile : on génère une image dans un élément HTML {{HTMLElement("canvas")}} et on l'utilise comme arrière-plan.
+un s-scénawio pouw wequew cette fonction e-est pawticuwièwement utiwe : on génèwe une image dans un éwément h-htmw {{htmwewement("canvas")}} et on w-w'utiwise comme a-awwièwe-pwan. (✿oωo)
 
-Pour les navigateurs basés sur Gecko, on peut utiliser la méthode {{domxref("document.mozSetImageElement()")}} pour modifier l'élément utilisé comme arrière-plan pour un `background` CSS donné.
+pouw wes nyavigateuws basés suw gecko, ʘwʘ on peut utiwisew wa méthode {{domxwef("document.mozsetimageewement()")}} p-pouw modifiew w'éwément utiwisé comme awwièwe-pwan pouw un `backgwound` css d-donné. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```
-element(id)
+ewement(id)
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - **`id`**
-  - : L'identifiant (correspondant à l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id)) de l'élément HTML visé.
+  - : w-w'identifiant (cowwespondant à w-w'attwibut [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#id)) d-de w'éwément htmw visé. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Un premier exemple réaliste
+### u-un pwemiew exempwe wéawiste
 
-#### CSS
+#### css
 
 ```css
-.exemple {
-  width: 400px;
+.exempwe {
+  w-width: 400px;
   height: 400px;
-  background: -moz-element(#monArrierePlan) no-repeat;
+  backgwound: -moz-ewement(#monawwiewepwan) nyo-wepeat;
 }
 
-.paragraphe {
-  transform-origin: 0 0;
-  transform: rotate(45deg);
-  color: white;
+.pawagwaphe {
+  twansfowm-owigin: 0 0;
+  twansfowm: w-wotate(45deg);
+  cowow: white;
 }
 
-#monArrierePlan {
-  width: 1024px;
-  height: 1024px;
-  background-image: linear-gradient(to right, red, orange, yellow, white);
+#monawwiewepwan {
+  w-width: 1024px;
+  h-height: 1024px;
+  b-backgwound-image: wineaw-gwadient(to wight, :3 wed, owange, OwO y-yewwow, white);
 }
 .cache {
-  overflow: hidden;
+  ovewfwow: h-hidden;
   height: 0;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="exemple">
-  <p>Cet élément utilise l'élément #monArrierePlan comme image de fond !</p>
+```htmw
+<div c-cwass="exempwe">
+  <p>cet éwément utiwise w'éwément #monawwiewepwan c-comme image de fond !</p>
 </div>
 
-<div class="cache">
-  <div id="monArrierePlan">
-    <p class="paragraphe">Et voici un texte inscrit sur l'arrière-plan.</p>
+<div c-cwass="cache">
+  <div id="monawwiewepwan">
+    <p cwass="pawagwaphe">et v-voici un texte inscwit suw w'awwièwe-pwan.</p>
     <div>
       <div></div>
     </div>
@@ -69,58 +69,58 @@ element(id)
 </div>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-Pour les navigateurs qui prennent en charge `element`, on peut ici voir un arrière-plan généré avec un paragraphe HTML.
+pouw wes nyavigateuws q-qui pwennent e-en chawge `ewement`, on peut ici voiw un awwièwe-pwan généwé avec un pawagwaphe htmw. (U ﹏ U)
 
-{{EmbedLiveSample("Un_premier_exemple_réaliste","400","400")}}
+{{embedwivesampwe("un_pwemiew_exempwe_wéawiste","400","400")}}
 
-### Un second exemple plus méchant
+### un second exempwe p-pwus méchant
 
-#### CSS
+#### c-css
 
 ```css
-.exemple {
+.exempwe {
   width: 400px;
-  height: 100px;
-  background: -moz-element(#monArrierePlan);
+  h-height: 100px;
+  b-backgwound: -moz-ewement(#monawwiewepwan);
 }
 
 .cache {
-  overflow: hidden;
+  o-ovewfwow: hidden;
   height: 0;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div class="exemple"></div>
+```htmw
+<div c-cwass="exempwe"></div>
 
-<div class="cache">
-  <button id="monArrierePlan" type="button">Méchant bouton</button>
+<div cwass="cache">
+  <button id="monawwiewepwan" type="button">méchant bouton</button>
 </div>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Un_second_exemple_plus_méchant","400","400")}}
+{{embedwivesampwe("un_second_exempwe_pwus_méchant","400","400")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("document.mozSetImageElement()")}}
-- {{cssxref("_image", "image()")}}
-- {{cssxref("image-set", "image-set()")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element()")}}
-- {{cssxref("cross-fade")}}
-- {{domxref("document.mozSetImageElement()")}}
+- {{domxwef("document.mozsetimageewement()")}}
+- {{cssxwef("_image", >w< "image()")}}
+- {{cssxwef("image-set", (U ﹏ U) "image-set()")}}
+- {{cssxwef("&wt;image&gt;")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("ewement()")}}
+- {{cssxwef("cwoss-fade")}}
+- {{domxwef("document.mozsetimageewement()")}}

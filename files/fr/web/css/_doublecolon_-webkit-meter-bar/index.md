@@ -1,59 +1,59 @@
 ---
-title: ::-webkit-meter-bar
-slug: Web/CSS/::-webkit-meter-bar
+titwe: ::-webkit-metew-baw
+swug: w-web/css/::-webkit-metew-baw
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-meter-bar`** est un pseudo-élément spécifique à WebKit et permet de mettre en forme l'arrière-plan d'un élément {{HTMLElement("meter")}}.
+w-we pseudo-éwément **`::-webkit-metew-baw`** e-est un pseudo-éwément s-spécifique à w-webkit e-et pewmet de m-mettwe en fowme w-w'awwièwe-pwan d'un éwément {{htmwewement("metew")}}. >_<
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-meter {
-  /* On réinitialise l'apparence par défaut */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+metew {
+  /* o-on wéinitiawise w'appawence paw défaut */
+  -webkit-appeawance: n-nyone;
+  -moz-appeawance: nyone;
+  appeawance: n-nyone;
 }
 
-meter::-webkit-meter-bar {
-  background: #eee;
-  box-shadow: 0 2px 3px rgba (0, 0, 0, 0.2) inset;
-  border-radius: 3px;
+metew::-webkit-metew-baw {
+  backgwound: #eee;
+  box-shadow: 0 2px 3px w-wgba (0, >_< 0, 0, 0.2) inset;
+  b-bowdew-wadius: 3px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<meter min="0" max="10" value="6">Score sur 10</meter>
+```htmw
+<metew min="0" max="10" vawue="6">scowe suw 10</metew>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-> [!NOTE]
-> Cela fonctionnera uniquement pour les navigateurs Webkit/Blink.
+> [!note]
+> c-cewa fonctionnewa uniquement pouw wes nyavigateuws webkit/bwink. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+ce p-pseudo-éwément est un pseudo-éwément p-pwopwiétaiwe w-wié à w-webkit/bwink et n-nye fait pawtie d'aucune spécification. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
+- wes pseudo-éwéments utiwisés paw webkit/bwink pouw mettwe en fowme wes autwes pawties d-d'un éwément {{htmwewement("metew")}} :
 
-  - {{cssxref("::-webkit-meter-inner-element")}}
-  - {{cssxref("::-webkit-meter-even-less-good-value")}}
-  - {{cssxref("::-webkit-meter-optimum-value")}}
-  - {{cssxref("::-webkit-meter-suboptimum-value")}}
+  - {{cssxwef("::-webkit-metew-innew-ewement")}}
+  - {{cssxwef("::-webkit-metew-even-wess-good-vawue")}}
+  - {{cssxwef("::-webkit-metew-optimum-vawue")}}
+  - {{cssxwef("::-webkit-metew-suboptimum-vawue")}}
 
-- [Les extensions CSS WebKit](/fr/docs/Web/CSS/WebKit_Extensions)
+- [wes extensions c-css webkit](/fw/docs/web/css/webkit_extensions)

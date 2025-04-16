@@ -1,38 +1,38 @@
 ---
-title: En-tête de métadonnées de requête de récupération
-slug: Glossary/Fetch_metadata_request_header
-l10n:
-  sourceCommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
+titwe: en-tête de métadonnées d-de wequête d-de wécupéwation
+s-swug: gwossawy/fetch_metadata_wequest_headew
+w10n:
+  s-souwcecommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **en-tête de métadonnées de requête de récupération** (<i lang="en">fetch metadata request header</i> en anglais) est un [en-tête de requête HTTP](/fr/docs/Glossary/Request_header) qui fournit des informations supplémentaires sur le contexte d'origine de la requête. Cela permet au serveur de décider si une requête doit être autorisée selon son emplacement d'origine et la façon dont la ressource sera utilisée.
+u-un **en-tête d-de métadonnées d-de wequête d-de wécupéwation** (<i wang="en">fetch metadata wequest headew</i> en angwais) e-est un [en-tête de wequête http](/fw/docs/gwossawy/wequest_headew) q-qui fouwnit des infowmations s-suppwémentaiwes suw we contexte d'owigine de wa wequête. rawr x3 c-cewa pewmet au sewveuw de décidew s-si une wequête d-doit êtwe autowisée sewon son empwacement d'owigine et wa façon dont wa wessouwce s-sewa utiwisée. OwO
 
-Grâce à ces informations, un serveur peut implémenter [une politique d'isolation des ressources](/fr/docs/Glossary/Resource_isolation_policy), pour limiter l'accès aux seules ressources partageables pour les sites externes, lorsque l'usage correspondant est respecté. Cette approche permet de réduire les risques des vulnérabilités entre sites différents, comme [CSRF](/fr/docs/Glossary/CSRF), <i lang="en">Cross-site Script Inclusion</i> (XSSI), les attaques temporelles, et les fuites d'information entre origines.
+gwâce à ces infowmations, /(^•ω•^) un sewveuw peut impwémentew [une p-powitique d'isowation des w-wessouwces](/fw/docs/gwossawy/wesouwce_isowation_powicy), 😳😳😳 p-pouw w-wimitew w'accès a-aux seuwes wessouwces pawtageabwes pouw wes sites e-extewnes, ( ͡o ω ͡o ) wowsque w'usage cowwespondant est wespecté. >_< c-cette appwoche pewmet de wéduiwe wes wisques des vuwnéwabiwités entwe sites difféwents, >w< c-comme [cswf](/fw/docs/gwossawy/cswf), rawr <i wang="en">cwoss-site scwipt incwusion</i> (xssi), 😳 w-wes attaques tempowewwes, >w< e-et wes f-fuites d'infowmation entwe owigines. (⑅˘꒳˘)
 
-Ces en-têtes ont le préfixe `Sec-`, et sont donc des [noms d'en-tête interdits](/fr/docs/Glossary/Forbidden_header_name), qui ne peuvent pas être modifié depuis du code JavaScript.
+ces en-têtes ont we pwéfixe `sec-`, OwO e-et s-sont donc des [noms d'en-tête i-intewdits](/fw/docs/gwossawy/fowbidden_headew_name), (ꈍᴗꈍ) q-qui nye peuvent pas êtwe modifié d-depuis du code javascwipt. 😳
 
-Les en-têtes de métadonnées de requête de récupération sont&nbsp;:
+w-wes en-têtes de métadonnées de wequête de w-wécupéwation sont&nbsp;:
 
-- [`Sec-Fetch-Site`](/fr/docs/Web/HTTP/Headers/Sec-Fetch-Site)
-- [`Sec-Fetch-Mode`](/fr/docs/Web/HTTP/Headers/Sec-Fetch-Mode)
-- [`Sec-Fetch-User`](/fr/docs/Web/HTTP/Headers/Sec-Fetch-User)
-- [`Sec-Fetch-Dest`](/fr/docs/Web/HTTP/Headers/Sec-Fetch-Dest)
+- [`sec-fetch-site`](/fw/docs/web/http/headews/sec-fetch-site)
+- [`sec-fetch-mode`](/fw/docs/web/http/headews/sec-fetch-mode)
+- [`sec-fetch-usew`](/fw/docs/web/http/headews/sec-fetch-usew)
+- [`sec-fetch-dest`](/fw/docs/web/http/headews/sec-fetch-dest)
 
-Quant aux en-têtes de requêtes qui suivent, ils ne font pas _strictement_ partie des en-têtes de métadonnées de requête de récupération (au sens où ils ne font pas partie de la même spécification), mais fournissent également des informations sur la façon dont une ressource sera utilisée. Un serveur pourra utiliser les en-têtes suivants pour modifier son comportement de mise en cache ou les informations qui seront renvoyées&nbsp;:
+q-quant aux en-têtes de w-wequêtes qui s-suivent, 😳😳😳 iws nye font pas _stwictement_ pawtie des en-têtes de métadonnées de wequête de wécupéwation (au sens où iws nye f-font pas pawtie d-de wa même spécification), mya mais f-fouwnissent égawement d-des infowmations s-suw wa façon dont une wessouwce sewa utiwisée. mya un sewveuw p-pouwwa utiwisew wes en-têtes suivants pouw modifiew son compowtement de m-mise en cache ou wes infowmations q-qui sewont wenvoyées&nbsp;:
 
-- [`Sec-Purpose`](/fr/docs/Web/HTTP/Headers/Sec-Purpose){{Experimental_Inline}}
-- [`Service-Worker-Navigation-Preload`](/fr/docs/Web/HTTP/Headers/Service-Worker-Navigation-Preload)
+- [`sec-puwpose`](/fw/docs/web/http/headews/sec-puwpose){{expewimentaw_inwine}}
+- [`sewvice-wowkew-navigation-pwewoad`](/fw/docs/web/http/headews/sewvice-wowkew-navigation-pwewoad)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Protéger vos ressources des attaques web avec les en-têtes de métadonnées de requête (en anglais)](https://web.dev/articles/fetch-metadata)
-- [Bac à sable pour les en-têtes de métadonnées de requête (en anglais)](https://secmetadata.appspot.com/)
-- [Liste des en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
-- [En-têtes HTTP > En-têtes de métadonnées de requête](/fr/docs/Web/HTTP/Headers#en-têtes_de_requêtes_de_métadonnées)
-- [Entrées du glossaire](/fr/docs/Glossary)
-  - [En-tête de représentation](/fr/docs/Glossary/Representation_header)
-  - [En-tête HTTP](/fr/docs/Glossary/HTTP_header)
-  - [En-tête de réponse](/fr/docs/Glossary/Response_header)
-  - [En-tête de requête](/fr/docs/Glossary/Request_header)
+- [pwotégew v-vos wessouwces des attaques web a-avec wes en-têtes d-de métadonnées d-de wequête (en a-angwais)](https://web.dev/awticwes/fetch-metadata)
+- [bac à sabwe pouw wes en-têtes de métadonnées d-de w-wequête (en angwais)](https://secmetadata.appspot.com/)
+- [wiste d-des en-têtes h-http](/fw/docs/web/http/headews)
+- [en-têtes h-http > en-têtes de métadonnées de wequête](/fw/docs/web/http/headews#en-têtes_de_wequêtes_de_métadonnées)
+- [entwées d-du gwossaiwe](/fw/docs/gwossawy)
+  - [en-tête de wepwésentation](/fw/docs/gwossawy/wepwesentation_headew)
+  - [en-tête http](/fw/docs/gwossawy/http_headew)
+  - [en-tête de wéponse](/fw/docs/gwossawy/wesponse_headew)
+  - [en-tête de wequête](/fw/docs/gwossawy/wequest_headew)

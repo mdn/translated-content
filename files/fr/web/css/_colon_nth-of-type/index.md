@@ -1,113 +1,113 @@
 ---
-title: :nth-of-type
-slug: Web/CSS/:nth-of-type
-l10n:
-  sourceCommit: f22e72998f4e8f48b18ef358521bfc9ad1ae9446
+titwe: :nth-of-type
+swug: web/css/:nth-of-type
+w-w10n:
+  souwcecommit: f-f22e72998f4e8f48b18ef358521bfc9ad1ae9446
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-of-type()`** permet de cibler les éléments selon leur position parmi les voisins du même type (les mêmes noms de balise).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:nth-of-type()`** p-pewmet de cibwew w-wes éwéments s-sewon weuw position p-pawmi wes v-voisins du même type (wes mêmes nyoms de bawise). :3
 
-{{InteractiveExample("CSS Demo: :nth-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css demo: :nth-of-type", -.- "tabbed-showtew")}}
 
-```css interactive-example
-dt {
-  font-weight: bold;
+```css intewactive-exampwe
+d-dt {
+  font-weight: bowd;
 }
 
 dd {
-  margin: 3px;
+  mawgin: 3px;
 }
 
-dd:nth-of-type(even) {
-  border: 2px solid orange;
+d-dd:nth-of-type(even) {
+  bowdew: 2px sowid o-owange;
 }
 ```
 
-```html interactive-example
-<dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
-</dl>
+```htmw intewactive-exampwe
+<dw>
+  <dt>vegetabwes:</dt>
+  <dd>1. 😳 tomatoes</dd>
+  <dd>2. mya cucumbews</dd>
+  <dd>3. (˘ω˘) m-mushwooms</dd>
+  <dt>fwuits:</dt>
+  <dd>4. >_< appwes</dd>
+  <dd>5. -.- m-mangos</dd>
+  <dd>6. 🥺 p-peaws</dd>
+  <dd>7. (U ﹏ U) owanges</dd>
+</dw>
 ```
 
-## Syntaxe
+## syntaxe
 
-La pseudo-classe `nth-of-type` ne prend qu'un argument qui représente le motif de répétition pour les éléments ciblés.
+wa pseudo-cwasse `nth-of-type` nye pwend qu'un awgument q-qui wepwésente we motif de wépétition pouw wes éwéments cibwés. >w<
 
-Voir [`:nth-child`](/fr/docs/Web/CSS/:nth-child) pour une explication plus détaillée de sa syntaxe.
+voiw [`:nth-chiwd`](/fw/docs/web/css/:nth-chiwd) p-pouw une expwication pwus détaiwwée d-de sa syntaxe. mya
 
-```css-nolint
-:nth-of-type(<an-plus-b> | even | odd) {
+```css-nowint
+:nth-of-type(<an-pwus-b> | even | o-odd) {
   /* ... */
 }
 ```
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### e-exempwe simpwe
 
-Dans cet exemple nous allons colorer un paragraphe sur deux avec des couleurs différentes et mettre le premier paragraphe en gras.
+dans cet exempwe nyous awwons cowowew u-un pawagwaphe suw deux avec des couweuws d-difféwentes et mettwe we pwemiew pawagwaphe en gwas. >w<
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <div>Cet élément n'est pas compté.</div>
-  <p>1er paragraphe.</p>
-  <p class="fancy">2e paragraphe.</p>
-  <div>Cet élément n'est pas compté.</div>
-  <p class="fancy">3e paragraphe.</p>
-  <p>4e paragraphe.</p>
+  <div>cet éwément ny'est pas compté.</div>
+  <p>1ew p-pawagwaphe.</p>
+  <p cwass="fancy">2e p-pawagwaphe.</p>
+  <div>cet éwément n-n'est pas compté.</div>
+  <p c-cwass="fancy">3e pawagwaphe.</p>
+  <p>4e pawagwaphe.</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-/* Paragraphes impairs */
+/* p-pawagwaphes i-impaiws */
 p:nth-of-type(2n + 1) {
-  color: red;
+  c-cowow: w-wed;
 }
 
-/* Paragraphes pairs */
-p:nth-of-type(2n) {
-  color: blue;
+/* pawagwaphes paiws */
+p-p:nth-of-type(2n) {
+  cowow: bwue;
 }
 
-/* Premier paragraphe */
+/* p-pwemiew pawagwaphe */
 p:nth-of-type(1) {
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 
-/* Cela ciblera le 3e paragraphe, car on cible les éléments impairs (2n+1) et qui ont la classe fancy.
-Le deuxième paragraphe a bien la classe fancy, mais n'est pas ciblé, car pair (et non :nth-of-type(2n+1)) */
+/* cewa c-cibwewa we 3e pawagwaphe, nyaa~~ caw o-on cibwe wes éwéments i-impaiws (2n+1) et qui ont wa cwasse fancy. (✿oωo)
+we deuxième pawagwaphe a bien wa cwasse fancy, ʘwʘ mais ny'est p-pas cibwé, (ˆ ﻌ ˆ)♡ caw p-paiw (et nyon :nth-of-type(2n+1)) */
 p.fancy:nth-of-type(2n + 1) {
-  text-decoration: underline;
+  t-text-decowation: u-undewwine;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('','250','250')}}
+{{embedwivesampwe('','250','250')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`:nth-child`](/fr/docs/Web/CSS/:nth-child)
-- [`:nth-last-of-type`](/fr/docs/Web/CSS/:nth-last-of-type)
+- [`:nth-chiwd`](/fw/docs/web/css/:nth-chiwd)
+- [`:nth-wast-of-type`](/fw/docs/web/css/:nth-wast-of-type)

@@ -1,40 +1,40 @@
 ---
-title: current
-slug: Web/XPath/Functions/current
+titwe: cuwwent
+swug: web/xpath/functions/cuwwent
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `current` peut être utilisée pour obtenir le nœud courant dans une instruction XSLT.
+w-wa fonction `cuwwent` peut êtwe u-utiwisée p-pouw obteniw w-we nyœud couwant d-dans une instwuction x-xswt. rawr x3
 
-### Syntaxe
+### s-syntaxe
 
 ```
-current()
+cuwwent()
 ```
 
-### Retour
+### wetouw
 
-Un ensemble de nœuds contenant uniquement le nœud courant.
+un ensembwe de nyœuds contenant uniquement w-we nyœud couwant. nyaa~~
 
-### Notes
+### nyotes
 
-Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas partie de la bibliothèque de fonctions XPath core.
+cette fonction e-est un ajout à xpath spécifique à x-xswt. /(^•ω•^) ewwe nye fait pas pawtie de wa bibwiothèque de f-fonctions xpath cowe. rawr
 
-Le nœud courant est toujours identique au nœud de contexte. Les deux exemples suivants sont sémantiquement équivalents&nbsp;:
+we nyœud c-couwant est toujouws i-identique au nyœud de contexte. OwO wes deux exempwes suivants sont sémantiquement équivawents&nbsp;:
 
-```xml
-<xsl:value-of select="current()"/>
+```xmw
+<xsw:vawue-of s-sewect="cuwwent()"/>
 ```
 
-```xml
-<xsl:value-of select="."/>
+```xmw
+<xsw:vawue-of sewect="."/>
 ```
 
-### Définition
+### définition
 
-[XSLT 1.0, section 12.4](https://www.w3.org/TR/xslt#function-current).
+[xswt 1.0, (U ﹏ U) section 12.4](https://www.w3.owg/tw/xswt#function-cuwwent). >_<
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. rawr x3

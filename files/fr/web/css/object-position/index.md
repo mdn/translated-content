@@ -1,132 +1,132 @@
 ---
-title: object-position
-slug: Web/CSS/object-position
+titwe: object-position
+swug: w-web/css/object-position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) au sein de sa boîte. Les zones de la boîte qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.
+w-wa pwopwiété **`object-position`** d-détewmine w-w'awignement d-d'un [éwément w-wempwacé](/fw/docs/web/css/wepwaced_ewement) a-au sein de sa b-boîte. mya wes zones de wa boîte qui nye sont pas wecouvewtes paw we contenu de w-w'éwément wempwacé montwewont w'awwièwe-pwan d-de w'éwément. ʘwʘ
 
-> [!NOTE]
-> Il est possible d'ajuster la taille de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-fit`](/fr/docs/Web/CSS/object-fit).
+> [!note]
+> iw e-est possibwe d'ajustew wa taiwwe de w'éwément wempwacé au sein d-de wa boîte de w'éwément gwâce à w-wa pwopwiété [`object-fit`](/fw/docs/web/css/object-fit). (˘ω˘)
 
-{{InteractiveExample("CSS Demo: object-position")}}
+{{intewactiveexampwe("css d-demo: object-position")}}
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 object-position: 50% 50%;
 ```
 
-```css interactive-example-choice
-object-position: right top;
+```css intewactive-exampwe-choice
+object-position: wight t-top;
 ```
 
-```css interactive-example-choice
-object-position: left bottom;
+```css intewactive-exampwe-choice
+object-position: weft bottom;
 ```
 
-```css interactive-example-choice
-object-position: 250px 125px;
+```css intewactive-exampwe-choice
+o-object-position: 250px 125px;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/moon.jpg" />
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/moon.jpg" />
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   height: 250px;
   width: 250px;
-  object-fit: none;
-  border: 1px solid red;
+  o-object-fit: nyone;
+  bowdew: 1px sowid wed;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de positionnement */
-/* Type <position>           */
-object-position: center top;
+/* vaweuws de positionnement */
+/* type <position>           */
+object-position: centew t-top;
 object-position: 100px 50px;
 
-/* Valeurs globales */
-object-position: inherit;
-object-position: initial;
-object-position: revert;
-object-position: unset;
+/* vaweuws g-gwobawes */
+object-position: i-inhewit;
+o-object-position: initiaw;
+object-position: wevewt;
+object-position: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `<position>`
-  - : Une valeur de type [`<position>`](/fr/docs/Web/CSS/position_value), c'est-à-dire une à quatre valeurs permettant de définir une position en deux dimensions par rapport aux limites de la boîte dans laquelle est placé l'élément. On peut donner des décalages absolus ou relatifs. On notera que la position peut être définie en dehors de la boîte de l'élément.
+  - : une vaweuw d-de type [`<position>`](/fw/docs/web/css/position_vawue), (U ﹏ U) c-c'est-à-diwe une à q-quatwe vaweuws pewmettant de définiw u-une position en deux dimensions paw wappowt a-aux wimites de wa boîte dans w-waquewwe est pwacé w'éwément. ^•ﻌ•^ o-on peut donnew d-des décawages absowus ou wewatifs. (˘ω˘) on nyotewa que wa position peut êtwe définie en dehows de wa boîte de w'éwément. :3
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-Dans ce fragment HTML, on a deux éléments [`<img>`](/fr/docs/Web/HTML/Element/img), chacun affichant le logo de MDN.
+dans c-ce fwagment htmw, ^^;; o-on a deux éwéments [`<img>`](/fw/docs/web/htmw/ewement/img), 🥺 chacun affichant we wogo de mdn. (⑅˘꒳˘)
 
-```html
-<img id="object-position-1" src="mdn.svg" alt="Logo MDN" />
-<img id="object-position-2" src="mdn.svg" alt="Logo MDN" />
+```htmw
+<img i-id="object-position-1" swc="mdn.svg" awt="wogo mdn" />
+<img id="object-position-2" swc="mdn.svg" a-awt="wogo mdn" />
 ```
 
-### CSS
+### css
 
-Le code CSS implique la mise en forme par défaut pour les éléments `<img>` et des styles différents pour les deux images.
+we code css i-impwique wa mise e-en fowme paw défaut p-pouw wes éwéments `<img>` et des stywes d-difféwents pouw w-wes deux images. nyaa~~
 
 ```css
-img {
-  width: 300px;
+i-img {
+  w-width: 300px;
   height: 250px;
-  border: 1px solid black;
-  background-color: silver;
-  margin-right: 1em;
-  object-fit: none;
+  bowdew: 1px sowid b-bwack;
+  backgwound-cowow: s-siwvew;
+  mawgin-wight: 1em;
+  object-fit: n-nyone;
 }
 
 #object-position-1 {
-  object-position: 10px;
+  o-object-position: 10px;
 }
 
 #object-position-2 {
-  object-position: 100% 10%;
+  o-object-position: 100% 10%;
 }
 ```
 
-La première image est positionnée avec son bord gauche situé à 10 pixels du bord gauche de la boîte de l'élément. La seconde image est positionnée avec son bord droit poussé sur le bord droit de la boîte de l'élément et est située vers le bas de 10% de la hauteur de la boîte de l'élément.
+wa pwemièwe image est positionnée avec son bowd g-gauche situé à 10 pixews du bowd gauche de wa boîte de w'éwément. :3 wa seconde image est positionnée a-avec son bowd dwoit poussé suw we bowd dwoit de wa boîte d-de w'éwément e-et est située v-vews we bas de 10% de wa hauteuw d-de wa boîte de w'éwément. ( ͡o ω ͡o )
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', '100%','600px')}}
+{{embedwivesampwe('', mya '100%','600px')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres propriétés CSS liées aux images&nbsp;:
+- wes autwes pwopwiétés css wiées a-aux images&nbsp;:
 
-  - [`object-fit`](/fr/docs/Web/CSS/object-fit)
-  - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
-  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering)
-  - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)
+  - [`object-fit`](/fw/docs/web/css/object-fit)
+  - [`image-owientation`](/fw/docs/web/css/image-owientation)
+  - [`image-wendewing`](/fw/docs/web/css/image-wendewing)
+  - [`image-wesowution`](/fw/docs/web/css/image-wesowution)

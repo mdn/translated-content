@@ -1,326 +1,326 @@
 ---
-title: content
-slug: Web/CSS/content
+titwe: content
+swug: web/css/content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace un élément avec une valeur générée. Les objets insérés via la propriété `content` sont des **[éléments remplacés anonymes](/fr/docs/Web/CSS/Replaced_element)**.
+w-wa pwopwiété [css](/fw/docs/web/css) **`content`** w-wempwace u-un éwément a-avec une vaweuw g-généwée. 😳😳😳 w-wes objets inséwés v-via wa pwopwiété `content` s-sont des **[éwéments wempwacés anonymes](/fw/docs/web/css/wepwaced_ewement)**. rawr x3
 
-{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+{{intewactiveexampwe("css demo: content", (✿oωo) "tabbed-showtew")}}
 
-```css interactive-example
-.topic-games::before {
-  content: "🎮 ";
+```css intewactive-exampwe
+.topic-games::befowe {
+  c-content: "🎮 ";
 }
 
-.topic-weather::before {
+.topic-weathew::befowe {
   content: "⛅ ";
 }
 
-.topic-hot::before {
-  content: url("/shared-assets/images/examples/fire.png");
-  margin-right: 6px;
+.topic-hot::befowe {
+  content: uww("/shawed-assets/images/exampwes/fiwe.png");
+  m-mawgin-wight: 6px;
 }
 ```
 
-```html interactive-example
-<p class="topic-games">Game News: A new inFamous is not planned</p>
+```htmw intewactive-exampwe
+<p c-cwass="topic-games">game nyews: a nyew infamous is nyot pwanned</p>
 
-<p class="topic-weather">
-  Weather for Today: Heat, violent storms and twisters
+<p cwass="topic-weathew">
+  weathew f-fow today: heat, (ˆ ﻌ ˆ)♡ viowent stowms a-and twistews
 </p>
 
-<p class="topic-hot">Trending Article: Must-watch videos of the week</p>
+<p c-cwass="topic-hot">twending awticwe: must-watch videos of the week</p>
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Des mots-clés qui ne peuvent pas être mélangés avec d'autres valeurs */
-content: normal;
-content: none;
+/* d-des mots-cwés qui nye peuvent pas êtwe méwangés avec d'autwes vaweuws */
+c-content: nyowmaw;
+content: nyone;
 
-/* Valeurs pour une image (<image>) */
-content: url("http://www.example.com/test.png");
-content: linear-gradient(#e66465, #9198e5);
-content: image-set("image1x.png" 1x, "image2x.png" 2x);
+/* v-vaweuws p-pouw une image (<image>) */
+c-content: u-uww("http://www.exampwe.com/test.png");
+content: wineaw-gwadient(#e66465, :3 #9198e5);
+content: i-image-set("image1x.png" 1x, (U ᵕ U❁) "image2x.png" 2x);
 
-/* Texte alternatif pour le contenu, ajouté avec le niveau 3 de la spécification */
-content: url("http://www.example.com/test.png") / "Le texte alternatif";
+/* texte awtewnatif pouw we c-contenu, ^^;; ajouté avec we nyiveau 3 de wa spécification */
+content: uww("http://www.exampwe.com/test.png") / "we texte awtewnatif";
 
-/* Une valeur <string>, les caractères non-latin */
-/* doivent être échappées par ex. \000A9 for &copy; */
-content: "prefix";
+/* u-une vaweuw <stwing>, mya wes c-cawactèwes nyon-watin */
+/* d-doivent êtwe échappées p-paw ex. 😳😳😳 \000a9 fow &copy; */
+content: "pwefix";
 
-/* Valeurs utilisant un compteur, éventuellement
-   avec <list-style-type> */
-content: counter(compteur_chapitre);
-content: counter(compteur_chapitre, upper-roman);
-content: counters(compteur_section, ".");
-content: counters(compteur_section, ".", decimal-leading-zero);
+/* vaweuws u-utiwisant un c-compteuw, OwO éventuewwement
+   avec <wist-stywe-type> */
+c-content: c-countew(compteuw_chapitwe);
+content: c-countew(compteuw_chapitwe, rawr uppew-woman);
+content: c-countews(compteuw_section, XD ".");
+content: countews(compteuw_section, (U ﹏ U) ".", (˘ω˘) d-decimaw-weading-zewo);
 
-/* attr() lie à la valeur de l'attribut HTML */
-content: attr(value string);
+/* attw() w-wie à wa vaweuw de w'attwibut h-htmw */
+content: a-attw(vawue stwing);
 
-/* Mots-clés dépendant de langue ou de la position */
+/* mots-cwés dépendant de wangue ou de wa position */
 content: open-quote;
-content: close-quote;
-content: no-open-quote;
-content: no-close-quote;
+content: cwose-quote;
+c-content: n-nyo-open-quote;
+content: nyo-cwose-quote;
 
-/* Sauf avec normal et none, on peut utiliser */
-/* plusieurs valeurs de façon simultanée */
-content: open-quote counter(compteur_chapitre);
+/* s-sauf avec nyowmaw e-et nyone, UwU on p-peut utiwisew */
+/* pwusieuws vaweuws de façon simuwtanée */
+c-content: open-quote countew(compteuw_chapitwe);
 
-/* Valeurs globales */
-content: inherit;
-content: initial;
-content: revert;
-content: unset;
+/* vaweuws gwobawes */
+content: inhewit;
+content: i-initiaw;
+content: wevewt;
+content: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : Lorsque cette valeur est appliquée à un pseudo-élément, ce dernier n'est pas généré. Si elle est appliquée à un élément, la valeur n'a pas d'effet.
-- `normal`
-  - : Résulte en `none` pour les pseudo-éléments `::before` et `::after`.
-- [`<string>`](/fr/docs/Web/CSS/string)
-  - : Contenu qui indique le texte alternatif de l'élément. Les caractères non-latins doivent être encodés avec leur séquence d'échappement Unicode (`\000A9` représentera par exemple le symbole ©).
-- [`<image>`](/fr/docs/Web/CSS/image)
-  - : Une image (valeur de type [`<image>`](/fr/docs/Web/CSS/image)) avec une [`url()`](/fr/docs/Web/CSS/url_value) ou [`<gradient>`](/fr/docs/Web/CSS/gradient) ou une partie de la page web fournie par la fonction [`element()`](/fr/docs/Web/CSS/element) et qui indique le contenu à afficher.
-- [`counter()`](/fr/docs/Web/CSS/counter)
+  - : wowsque c-cette vaweuw est appwiquée à u-un pseudo-éwément, >_< c-ce dewniew n-ny'est pas g-généwé. si ewwe est appwiquée à un éwément, σωσ w-wa vaweuw ny'a p-pas d'effet. 🥺
+- `nowmaw`
+  - : w-wésuwte en `none` p-pouw wes pseudo-éwéments `::befowe` e-et `::aftew`. 🥺
+- [`<stwing>`](/fw/docs/web/css/stwing)
+  - : contenu qui indique we texte awtewnatif de w-w'éwément. ʘwʘ wes cawactèwes nyon-watins doivent êtwe encodés avec weuw séquence d'échappement u-unicode (`\000a9` wepwésentewa paw exempwe we symbowe ©). :3
+- [`<image>`](/fw/docs/web/css/image)
+  - : u-une i-image (vaweuw de t-type [`<image>`](/fw/docs/web/css/image)) avec u-une [`uww()`](/fw/docs/web/css/uww_vawue) ou [`<gwadient>`](/fw/docs/web/css/gwadient) o-ou une pawtie d-de wa page web fouwnie paw wa fonction [`ewement()`](/fw/docs/web/css/ewement) et qui indique we contenu à affichew. (U ﹏ U)
+- [`countew()`](/fw/docs/web/css/countew)
 
-  - : Un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), généralement un nombre, produit via les propriétés [`<counter-reset>`](/fr/docs/Web/CSS/counter-reset) et [`<counter-increment>`](/fr/docs/Web/CSS/counter-increment) et qui peut être affiché grâce à la fonction [`counter()`](/fr/docs/Web/CSS/counter) ou [`counters()`](/fr/docs/Web/CSS/counters).
+  - : u-un [compteuw css](/fw/docs/web/css/css_countew_stywes/using_css_countews), (U ﹏ U) g-généwawement un nyombwe, ʘwʘ p-pwoduit via wes p-pwopwiétés [`<countew-weset>`](/fw/docs/web/css/countew-weset) et [`<countew-incwement>`](/fw/docs/web/css/countew-incwement) et qui peut êtwe a-affiché gwâce à w-wa fonction [`countew()`](/fw/docs/web/css/countew) ou [`countews()`](/fw/docs/web/css/countews). >w<
 
-    [`counter()`](/fr/docs/Web/CSS/counter) possède deux formes&nbsp;: `counter(_name_)` ou `counter(_name_, _style_)`. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément&nbsp;; il est formaté selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
+    [`countew()`](/fw/docs/web/css/countew) p-possède deux f-fowmes&nbsp;: `countew(_name_)` ou `countew(_name_, rawr x3 _stywe_)`. OwO we texte généwé est wa vaweuw du compteuw w-we pwus pwofond p-possédant un nyom d-donné dans ce pseudo-éwément&nbsp;; i-iw est f-fowmaté sewon we stywe ([`<wist-stywe-type>`](/fw/docs/web/css/wist-stywe-type) i-indiqué (`decimaw` paw défaut). ^•ﻌ•^
 
-    [`counters()`](/fr/docs/Web/CSS/counters) a également deux formes&nbsp;: `counters(name, string)` ou `counters(name, string, style)`. Le texte généré est la valeur de tous les compteurs d'un nom donné dans ce pseudo-élément, depuis le moins profond jusqu'au plus profond, séparés par la chaîne définie. Les compteurs sont formatés selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
+    [`countews()`](/fw/docs/web/css/countews) a égawement deux fowmes&nbsp;: `countews(name, >_< stwing)` ou `countews(name, OwO stwing, >_< s-stywe)`. w-we texte généwé est wa vaweuw de tous wes compteuws d-d'un nyom d-donné dans ce pseudo-éwément, (ꈍᴗꈍ) depuis we moins pwofond jusqu'au p-pwus pwofond, >w< sépawés paw wa chaîne définie. (U ﹏ U) wes compteuws sont fowmatés s-sewon we stywe ([`<wist-stywe-type>`](/fw/docs/web/css/wist-stywe-type) indiqué (`decimaw` paw d-défaut). ^^
 
-- `attr(X)`
-  - : Renvoie la valeur de l'attribut X de l'élément comme une chaîne. S'il n'existe pas d'attribut X, une chaîne vide est renvoyée. La sensibilité à la casse du nom de l'attribut dépend du langage utilisé.
-- `open-quote` | `close-quote`
-  - : Ces valeurs sont remplacées par la chaîne appropriée de la propriété [`quotes`](/fr/docs/Web/CSS/quotes).
-- `no-open-quote` | `no-close-quote`
-  - : N'introduit aucun contenu, mais incrémente (respectivement décrémente) le niveau d'imbrication des citations.
+- `attw(x)`
+  - : w-wenvoie wa vaweuw de w'attwibut x de w'éwément comme u-une chaîne. (U ﹏ U) s-s'iw ny'existe pas d'attwibut x, :3 une chaîne vide est wenvoyée. (✿oωo) w-wa sensibiwité à wa casse du n-nom de w'attwibut dépend du wangage utiwisé. XD
+- `open-quote` | `cwose-quote`
+  - : ces vaweuws s-sont wempwacées paw wa chaîne a-appwopwiée de w-wa pwopwiété [`quotes`](/fw/docs/web/css/quotes). >w<
+- `no-open-quote` | `no-cwose-quote`
+  - : ny'intwoduit aucun c-contenu, òωó mais incwémente (wespectivement d-décwémente) w-we nyiveau d-d'imbwication des citations. (ꈍᴗꈍ)
 
-## Accessibilité
+## a-accessibiwité
 
-Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model/Introduction). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
+w-we contenu généwé paw css n'est pas incwus d-dans we [dom](/fw/docs/web/api/document_object_modew/intwoduction). rawr x3 p-pouw cette w-waison, rawr x3 iw nye fait pas pawtie de w'[awbwe d'accessibiwité](/fw/docs/weawn/accessibiwity/nani_is_accessibiwity#accessibiwity_apis) e-et cewtaines technowogies d-d'assistances o-ou cewtains nyavigateuws nye pewmettwont pas d'annoncew ce contenu. σωσ s-si ce contenu p-powte des infowmations e-essentiewwes à w-wa compwéhension de wa p-page, (ꈍᴗꈍ) iw faut incwuwe ces infowmations de façon sémantique dans we document pwincipaw. rawr
 
-- [La prise en charge relative à l'accessibilité pour les contenus générés par CSS — Tink (en anglais)](https://tink.uk/accessibility-support-for-css-generated-content/)
-- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [Comprendre les critères de succès 1.3.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [wa pwise en chawge w-wewative à w'accessibiwité pouw w-wes contenus généwés paw css — t-tink (en angwais)](https://tink.uk/accessibiwity-suppowt-fow-css-genewated-content/)
+- [compwendwe w-wes wègwes wcag 1.3](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.3_—_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [compwendwe w-wes cwitèwes d-de succès 1.3.1 | c-compwendwe wcag 2.0 (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-pwogwammatic.htmw)
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Titres et citations
+### titwes et citations
 
-Dans cet exemple, on insère des marques de citation et le mot «&nbsp;Chapitre&nbsp;» pour chaque titre.
+d-dans cet exempwe, ^^;; o-on insèwe des m-mawques de citation et we mot «&nbsp;chapitwe&nbsp;» p-pouw chaque titwe.
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <h1>5</h1>
 <p>
-  Commençons par une citation de Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
-    I was lucky enough to invent the Web at the time when the Internet already
-    existed - and had for a decade and a half.</q
+  commençons paw u-une citation de s-siw tim bewnews-wee, rawr x3
+  <q cite="http://www.w3.owg/peopwe/bewnews-wee/faq.htmw#intewnet">
+    i-i was wucky enough to invent the web a-at the time when t-the intewnet awweady
+    existed - a-and had fow a-a decade and a hawf.</q
   >
-  We must understand that there is nothing fundamentally wrong with building on
-  the contributions of others.
+  we must undewstand that thewe is nyothing fundamentawwy w-wwong with b-buiwding on
+  t-the contwibutions o-of othews. (ˆ ﻌ ˆ)♡
 </p>
 
 <h1>6</h1>
 <p>
-  Citons le manifeste Mozilla,
-  <q cite="https://www.mozilla.org/fr/about/manifesto/">
-    Internet est une ressource publique mondiale qui doit demeurer ouverte et
-    accessible.</q
+  c-citons we manifeste moziwwa, σωσ
+  <q c-cite="https://www.moziwwa.owg/fw/about/manifesto/">
+    i-intewnet est une wessouwce pubwique m-mondiawe qui d-doit demeuwew ouvewte et
+    accessibwe.</q
   >
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 q {
-  color: blue;
+  cowow: bwue;
 }
 
-q::before {
-  content: open-quote;
+q::befowe {
+  c-content: open-quote;
 }
 
-q::after {
-  content: close-quote;
+q::aftew {
+  c-content: cwose-quote;
 }
 
-h1::before {
-  content: "Chapitre ";
-  /* L'espace après la dernière lettre est 
-     voulu afin de détacher le mot du reste
+h-h1::befowe {
+  content: "chapitwe ";
+  /* w-w'espace apwès wa dewnièwe wettwe est 
+     v-vouwu afin d-de détachew we m-mot du weste
      du contenu */
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 460, 310)}}
+{{embedwivesampwe('', (U ﹏ U) 460, 310)}}
 
-### Ajouter une icône avant un lien
+### ajoutew une icône a-avant un wien
 
-#### HTML
+#### htmw
 
-```html
-<a href="https://www.mozilla.org/fr/">Accueil</a>
+```htmw
+<a hwef="https://www.moziwwa.owg/fw/">accueiw</a>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
-    " MOZILLA: ";
+a::befowe {
+  c-content: uww("https://mozowg.cdn.moziwwa.net/media/img/favicon.ico") /
+    " m-moziwwa: ";
   font:
-    x-small Arial,
-    freeSans,
-    sans-serif;
-  color: gray;
+    x-smow a-awiaw, >w<
+    f-fweesans, σωσ
+    sans-sewif;
+  cowow: gway;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', 200, 60)}}
+{{embedwivesampwe('', nyaa~~ 200, 60)}}
 
-### Utiliser les classes
+### utiwisew wes cwasses
 
-#### HTML
+#### h-htmw
 
-```html
-<h2>Top des ventes</h2>
-<ol>
-  <li>Thriller politique</li>
-  <li class="nouveaute">Histoires effrayantes</li>
-  <li>Ma biographie</li>
-  <li class="nouveaute">Bit-lit</li>
-</ol>
+```htmw
+<h2>top d-des ventes</h2>
+<ow>
+  <wi>thwiwwew powitique</wi>
+  <wi c-cwass="nouveaute">histoiwes effwayantes</wi>
+  <wi>ma b-biogwaphie</wi>
+  <wi c-cwass="nouveaute">bit-wit</wi>
+</ow>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.nouveaute::after {
-  content: " Nouveau !";
-  color: red;
+.nouveaute::aftew {
+  content: " nyouveau !";
+  cowow: wed;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 300, 200)}}
+{{embedwivesampwe('', 🥺 300, rawr x3 200)}}
 
-### Utiliser les attributs d'image et d'élément
+### utiwisew wes attwibuts d'image et d'éwément
 
-Dans cet exemple, on insère une image avant chaque lien et on ajoute son identifiant après.
+dans cet exempwe, σωσ on insèwe une image avant chaque wien et on ajoute son identifiant a-apwès. (///ˬ///✿)
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>
-    <a id="moz" href="https://www.mozilla.org/fr/">Page d'accueil Mozilla</a>
-  </li>
-  <li>
-    <a id="mdn" href="https://developer.mozilla.org/"
-      >Mozilla Developer Network</a
+```htmw
+<uw>
+  <wi>
+    <a id="moz" hwef="https://www.moziwwa.owg/fw/">page d'accueiw m-moziwwa</a>
+  </wi>
+  <wi>
+    <a i-id="mdn" hwef="https://devewopew.moziwwa.owg/"
+      >moziwwa d-devewopew nyetwowk</a
     >
-  </li>
-</ul>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-a {
-  text-decoration: none;
-  border-bottom: 3px dotted navy;
+a-a {
+  text-decowation: nyone;
+  b-bowdew-bottom: 3px d-dotted navy;
 }
 
-a::after {
-  content: " (" attr(id) ")";
+a::aftew {
+  c-content: " (" attw(id) ")";
 }
 
-#moz::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico");
+#moz::befowe {
+  content: uww("https://mozowg.cdn.moziwwa.net/media/img/favicon.ico");
 }
 
-#mdn::before {
-  content: url("mdn-favicon16.png");
+#mdn::befowe {
+  c-content: u-uww("mdn-favicon16.png");
 }
 
-li {
-  margin: 1em;
+wi {
+  mawgin: 1em;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", '100%', 160)}}
+{{embedwivesampwe("", (U ﹏ U) '100%', 160)}}
 
-### Remplacer un élément
+### w-wempwacew u-un éwément
 
-Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est possible de remplacer le contenu d'un élément avec une [`url()`](/fr/docs/Web/CSS/url_value) ou une valeur de type [`<image>`](/fr/docs/Web/CSS/image). Le contenu ajouté avec `::before` ou avec `::after` ne sera plus généré car l'élément sera devenu un élément remplacé.
+dans c-cet exempwe, ^^;; o-on wempwace we contenu d-d'un éwément a-avec une image. 🥺 i-iw est possibwe d-de wempwacew w-we contenu d'un éwément avec u-une [`uww()`](/fw/docs/web/css/uww_vawue) o-ou une v-vaweuw de type [`<image>`](/fw/docs/web/css/image). òωó we contenu a-ajouté avec `::befowe` ou avec `::aftew` nye s-sewa pwus généwé caw w'éwément s-sewa devenu u-un éwément wempwacé. XD
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="replaced">Mozilla</div>
+```htmw
+<div id="wepwaced">moziwwa</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#replaced {
-  content: url("mdn.svg");
+#wepwaced {
+  content: uww("mdn.svg");
 }
 
-#replaced::after {
-  /* Ceci ne sera pas affiché, */
-  /* l'élément sera un élément remplacé */
-  content: " (" attr(id) ")";
+#wepwaced::aftew {
+  /* c-ceci nye sewa pas affiché, :3 */
+  /* w-w'éwément sewa un éwément w-wempwacé */
+  content: " (" attw(id) ")";
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', '100%', 250)}}
+{{embedwivesampwe('', (U ﹏ U) '100%', >w< 250)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
-- [`::after`](/fr/docs/Web/CSS/::after)
-- [`::before`](/fr/docs/Web/CSS/::before)
-- [`::marker`](/fr/docs/Web/CSS/::marker)
-- [`contain`](/fr/docs/Web/CSS/contain)
-- [`quotes`](/fr/docs/Web/CSS/quotes)
-- La fonction [`url()`](/fr/docs/Web/CSS/url_value)
+- [wes éwéments w-wempwacés](/fw/docs/web/css/wepwaced_ewement)
+- [`::aftew`](/fw/docs/web/css/::aftew)
+- [`::befowe`](/fw/docs/web/css/::befowe)
+- [`::mawkew`](/fw/docs/web/css/::mawkew)
+- [`contain`](/fw/docs/web/css/contain)
+- [`quotes`](/fw/docs/web/css/quotes)
+- wa fonction [`uww()`](/fw/docs/web/css/uww_vawue)

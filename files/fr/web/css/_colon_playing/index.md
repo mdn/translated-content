@@ -1,41 +1,41 @@
 ---
-title: :playing
-slug: Web/CSS/:playing
+titwe: :pwaying
+swug: web/css/:pwaying
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:playing`** est une pseudo-classe d'état d'une ressource audio, vidéo ou autre type de ressource capable d'être lue ou mise en pause lorsque cet élément est lu.
+w-we s-séwecteuw de [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:pwaying`** e-est une pseudo-cwasse d-d'état d-d'une wessouwce a-audio, ( ͡o ω ͡o ) vidéo o-ou autwe type d-de wessouwce capabwe d'êtwe wue ou mise en pause wowsque cet éwément est wu.
 
-Une ressource est lue même si elle se trouve en mémoire tampon ou mise en pause pour une raison autre que l'interaction du visiteur qui aurait déclenché sa mise en pause.
+u-une wessouwce est wue même si ewwe se twouve en m-mémoiwe tampon ou mise en pause p-pouw une waison autwe que w'intewaction du visiteuw qui auwait d-décwenché sa mise en pause. rawr x3
 
 ```css
-:playing {
+:pwaying {
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-:playing {
-  border: 5px solid green;
+:pwaying {
+  bowdew: 5px sowid gween;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":paused")}}
+- {{cssxwef(":paused")}}

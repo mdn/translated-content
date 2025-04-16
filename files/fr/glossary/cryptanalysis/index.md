@@ -1,14 +1,14 @@
 ---
-title: Cryptanalyse
-slug: Glossary/Cryptanalysis
+titwe: cwyptanawyse
+swug: gwossawy/cwyptanawysis
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **cryptanalyse** est la branche de la {{glossary("cryptography","cryptographie")}} qui étudie la manière de casser des codes et des cryptosystèmes. Elle développe des techniques pour casser les {{glossary("cipher","systèmes cryptographiques")}}, en particulier par des méthodes plus efficaces que la [recherche par force brute](http://fr.wikipedia.org/wiki/Recherche_exhaustive). En plus des méthodes traditionnelles comme l'[analyse fréquentielle](http://fr.wikipedia.org/wiki/Analyse_fréquentielle) ou l'[indice de coïncidence](http://fr.wikipedia.org/wiki/Indice_de_coïncidence), la cryptanalyse intègre des méthodes plus récentes, comme la [cryptanalyse linéaire](http://fr.wikipedia.org/wiki/Cryptanalyse_linéaire) our la [cryptanalyse différentielle](http://fr.wikipedia.org/wiki/Cryptanalyse_différentielle) qui peuvent venir à bout de systèmes cryptographiques plus avancés.
+w-wa **cwyptanawyse** e-est wa bwanche d-de wa {{gwossawy("cwyptogwaphy","cwyptogwaphie")}} q-qui étudie w-wa manièwe de cassew d-des codes e-et des cwyptosystèmes. rawr x3 e-ewwe dévewoppe des techniques pouw cassew wes {{gwossawy("ciphew","systèmes cwyptogwaphiques")}}, mya e-en pawticuwiew paw des méthodes pwus e-efficaces que wa [wechewche paw f-fowce bwute](http://fw.wikipedia.owg/wiki/wechewche_exhaustive). nyaa~~ en pwus des méthodes twaditionnewwes comme w'[anawyse f-fwéquentiewwe](http://fw.wikipedia.owg/wiki/anawyse_fwéquentiewwe) ou w'[indice de coïncidence](http://fw.wikipedia.owg/wiki/indice_de_coïncidence), (⑅˘꒳˘) w-wa cwyptanawyse i-intègwe des méthodes pwus wécentes, rawr x3 comme wa [cwyptanawyse winéaiwe](http://fw.wikipedia.owg/wiki/cwyptanawyse_winéaiwe) o-ouw wa [cwyptanawyse difféwentiewwe](http://fw.wikipedia.owg/wiki/cwyptanawyse_difféwentiewwe) qui peuvent veniw à bout de systèmes cwyptogwaphiques p-pwus avancés. (✿oωo)
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Cryptanalyse](https://fr.wikipedia.org/wiki/Cryptanalyse) sur Wikipédia
+- [cwyptanawyse](https://fw.wikipedia.owg/wiki/cwyptanawyse) s-suw w-wikipédia

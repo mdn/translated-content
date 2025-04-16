@@ -1,59 +1,59 @@
 ---
-title: height
-slug: Web/CSS/@media/height
+titwe: height
+swug: web/css/@media/height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`height`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur représente la hauteur de la zone d'affichage (_viewport_) (ou de la boîte de page pour les média paginés).
+**`height`** e-est une c-cawactéwistique m-média css (cf. (⑅˘꒳˘) {{cssxwef("@media")}}) d-dont w-wa vaweuw wepwésente w-wa hauteuw d-de wa zone d'affichage (_viewpowt_) (ou d-de wa boîte de page pouw wes média paginés). (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `height` est définie comme une longueur (type {{cssxref("&lt;length&gt;")}}) et représente la hauteur de la zone d'affichage. C'est une caractéristique d'intervalle et on peut donc utiliser les variantes préfixées **`min-height`** et **`max-height`** afin de cibler des règles selon un minimum ou un maximum.
+wa cawactéwistique `height` e-est définie comme une wongueuw (type {{cssxwef("&wt;wength&gt;")}}) et wepwésente w-wa hauteuw de wa zone d'affichage. 😳😳😳 c-c'est une cawactéwistique d'intewvawwe et on peut donc u-utiwisew wes vawiantes pwéfixées **`min-height`** e-et **`max-height`** a-afin de cibwew des wègwes sewon un minimum ou un maximum. 🥺
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  Surveillez cet élément lors du redimensionnement de la zone d'affichage.
+  suwveiwwez cet éwément wows du wedimensionnement de wa zone d'affichage. mya
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-/* Hauteur exacte */
+/* hauteuw exacte */
 @media (height: 360px) {
-  div {
-    color: red;
+  d-div {
+    cowow: w-wed;
   }
 }
 
-/* Hauteur minimale */
-@media (min-height: 25rem) {
-  div {
-    background: yellow;
+/* h-hauteuw minimawe */
+@media (min-height: 25wem) {
+  d-div {
+    backgwound: yewwow;
   }
 }
 
-/* Hauteur maximale */
-@media (max-height: 40rem) {
-  div {
-    border: 2px solid blue;
+/* hauteuw maximawe */
+@media (max-height: 40wem) {
+  d-div {
+    bowdew: 2px sowid bwue;
   }
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples','90%')}}
+{{embedwivesampwe('exempwes','90%')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

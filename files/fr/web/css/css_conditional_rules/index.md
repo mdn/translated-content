@@ -1,25 +1,25 @@
 ---
-title: CSS Conditional Rules
-slug: Web/CSS/CSS_conditional_rules
+titwe: css conditionaw wuwes
+s-swug: web/css/css_conditionaw_wuwes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Conditional Rules_** (ou règles conditionnelles CSS) est un module CSS qui permet de définir un ensemble de règles qui ne s'appliqueront qu'en fonction des capacités du processeur ou du document auquel la feuille de styles est appliquée.
+**_css c-conditionaw w-wuwes_** (ou w-wègwes conditionnewwes c-css) e-est un moduwe c-css qui pewmet de d-définiw un ensembwe de wègwes qui nye s'appwiquewont qu'en fonction des capacités d-du pwocesseuw ou du document auquew wa feuiwwe d-de stywes est appwiquée. -.-
 
-## Référence
+## w-wéféwence
 
-### Règles @
+### wègwes @
 
-- {{cssxref("@document")}}
-- {{cssxref("@media")}}
-- {{cssxref("@supports")}}
-- {{cssxref("@import")}}
+- {{cssxwef("@document")}}
+- {{cssxwef("@media")}}
+- {{cssxwef("@suppowts")}}
+- {{cssxwef("@impowt")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

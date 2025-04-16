@@ -1,458 +1,458 @@
 ---
-title: transform-origin
-slug: Web/CSS/transform-origin
+titwe: twansfowm-owigin
+swug: w-web/css/twansfowm-owigin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`transform-origin`** permet de modifier l'origine du repère pour les opérations de transformation d'un élément.
+w-wa pwopwiété **`twansfowm-owigin`** p-pewmet de modifiew w-w'owigine du w-wepèwe pouw wes o-opéwations de t-twansfowmation d-d'un éwément.
 
-{{InteractiveExample("CSS Demo: transform-origin")}}
+{{intewactiveexampwe("css demo: twansfowm-owigin")}}
 
-```css interactive-example-choice
-transform-origin: center;
+```css intewactive-exampwe-choice
+twansfowm-owigin: c-centew;
 ```
 
-```css interactive-example-choice
-transform-origin: top left;
+```css intewactive-exampwe-choice
+twansfowm-owigin: top w-weft;
 ```
 
-```css interactive-example-choice
-transform-origin: 50px 50px;
+```css intewactive-exampwe-choice
+t-twansfowm-owigin: 50px 50px;
 ```
 
-```css interactive-example-choice
-/* 3D rotation with z-axis origin */
-transform-origin: bottom right 60px;
+```css intewactive-exampwe-choice
+/* 3d wotation with z-axis owigin */
+t-twansfowm-owigin: bottom wight 60px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-container">
-    <div id="example-element">Rotate me!</div>
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-containew">
+    <div id="exampwe-ewement">wotate me!</div>
     <img
-      alt=""
-      id="crosshair"
-      src="/shared-assets/images/examples/crosshair.svg"
+      awt=""
+      id="cwosshaiw"
+      s-swc="/shawed-assets/images/exampwes/cwosshaiw.svg"
       width="24px" />
-    <div id="static-element"></div>
+    <div id="static-ewement"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-@keyframes rotate {
-  from {
-    transform: rotate(0);
+```css intewactive-exampwe
+@keyfwames wotate {
+  f-fwom {
+    twansfowm: wotate(0);
   }
 
-  to {
-    transform: rotate(30deg);
-  }
-}
-
-@keyframes rotate3d {
-  from {
-    transform: rotate3d(0);
-  }
-
-  to {
-    transform: rotate3d(1, 2, 0, 60deg);
+  t-to {
+    t-twansfowm: wotate(30deg);
   }
 }
 
-#example-container {
+@keyfwames w-wotate3d {
+  f-fwom {
+    twansfowm: wotate3d(0);
+  }
+
+  t-to {
+    twansfowm: wotate3d(1, ʘwʘ 2, :3 0, 60deg);
+  }
+}
+
+#exampwe-containew {
   width: 160px;
-  height: 160px;
-  position: relative;
+  h-height: 160px;
+  position: wewative;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100%;
   height: 100%;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  background: #f7ebee;
-  color: #000000;
-  font-size: 1.2rem;
-  text-transform: uppercase;
+  dispway: fwex;
+  position: a-absowute;
+  awign-items: c-centew;
+  justify-content: c-centew;
+  b-backgwound: #f7ebee;
+  cowow: #000000;
+  font-size: 1.2wem;
+  text-twansfowm: uppewcase;
 }
 
-#example-element.rotate {
-  animation: rotate 1s forwards;
+#exampwe-ewement.wotate {
+  a-animation: w-wotate 1s fowwawds;
 }
 
-#example-element.rotate3d {
-  animation: rotate3d 1s forwards;
+#exampwe-ewement.wotate3d {
+  a-animation: w-wotate3d 1s fowwawds;
 }
 
-#crosshair {
-  width: 24px;
+#cwosshaiw {
+  w-width: 24px;
   height: 24px;
-  opacity: 0;
-  position: absolute;
+  o-opacity: 0;
+  position: absowute;
 }
 
-#static-element {
+#static-ewement {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  border: dotted 3px #ff1100;
+  h-height: 100%;
+  position: a-absowute;
+  bowdew: dotted 3px #ff1100;
 }
 ```
 
-```js interactive-example
-"use strict";
+```js i-intewactive-exampwe
+"use s-stwict";
 
-window.addEventListener("load", () => {
+window.addeventwistenew("woad", (U ﹏ U) () => {
   function update() {
-    const selected = document.querySelector(".selected");
+    const sewected = document.quewysewectow(".sewected");
 
-    /* Restart the animation
-           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips */
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className =
-          el.style.transformOrigin.split(" ")[2] === "60px"
-            ? "rotate3d"
-            : "rotate";
+    /* westawt the animation
+           https://devewopew.moziwwa.owg/en-us/docs/web/css/css_animations/tips */
+    e-ew.cwassname = "";
+    w-window.wequestanimationfwame(() => {
+      window.wequestanimationfwame(() => {
+        e-ew.cwassname =
+          ew.stywe.twansfowmowigin.spwit(" ")[2] === "60px"
+            ? "wotate3d"
+            : "wotate";
       });
     });
 
-    const transformOrigin = getComputedStyle(el).transformOrigin;
-    const pos = transformOrigin.split(/\s+/);
-    crosshair.style.left = `calc(${pos[0]} - 12px)`;
-    crosshair.style.top = `calc(${pos[1]} - 12px)`;
+    c-const twansfowmowigin = g-getcomputedstywe(ew).twansfowmowigin;
+    const pos = twansfowmowigin.spwit(/\s+/);
+    cwosshaiw.stywe.weft = `cawc(${pos[0]} - 12px)`;
+    c-cwosshaiw.stywe.top = `cawc(${pos[1]} - 12px)`;
   }
 
-  const crosshair = document.getElementById("crosshair");
-  const el = document.getElementById("example-element");
+  const cwosshaiw = document.getewementbyid("cwosshaiw");
+  const ew = document.getewementbyid("exampwe-ewement");
 
-  const observer = new MutationObserver(() => {
+  const obsewvew = n-nyew mutationobsewvew(() => {
     update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, (U ﹏ U) {
+    a-attwibutes: t-twue, ʘwʘ
+    a-attwibutefiwtew: ["stywe"], >w<
   });
 
   update();
-  crosshair.style.opacity = "1";
+  c-cwosshaiw.stywe.opacity = "1";
 });
 ```
 
-Par exemple, l'origine par défaut pour la fonction `rotate()` est le centre de la rotation. Cette propriété est utilisée en :
+p-paw exempwe, rawr x3 w-w'owigine p-paw défaut pouw wa fonction `wotate()` est we centwe d-de wa wotation. OwO c-cette pwopwiété e-est utiwisée e-en :
 
-1. Translatant l'élément avec l'opposé de la valeur fournie
-2. Appliquant la transformation souhaitée sur l'élément
-3. Translatant l'élément avec la valeur fournie pour cette propriété.
+1. ^•ﻌ•^ twanswatant w-w'éwément avec w'opposé de wa vaweuw fouwnie
+2. >_< appwiquant w-wa twansfowmation souhaitée suw w'éwément
+3. OwO twanswatant w'éwément avec wa vaweuw f-fouwnie pouw cette pwopwiété. >_<
 
-Les valeurs qui ne sont pas définies explicitement sont réinitialisées avec les valeurs correspondantes.
+wes vaweuws qui nye sont pas définies e-expwicitement s-sont wéinitiawisées a-avec wes vaweuws cowwespondantes. (ꈍᴗꈍ)
 
-Par défaut, l'origine d'une transformation est `center`.
+paw d-défaut, >w< w'owigine d'une twansfowmation e-est `centew`. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Utilisation d'une seule valeur */
-transform-origin: 2px;
-transform-origin: bottom;
+/* utiwisation d'une seuwe vaweuw */
+twansfowm-owigin: 2px;
+twansfowm-owigin: bottom;
 
-/* x-offset y-offset */
-transform-origin: 3cm 2px;
+/* x-x-offset y-offset */
+twansfowm-owigin: 3cm 2px;
 
-/* y-offset x-offset-keyword */
-transform-origin: 2px left;
+/* y-y-offset x-offset-keywowd */
+t-twansfowm-owigin: 2px w-weft;
 
-/* x-offset-keyword y-offset */
-transform-origin: left 2px;
+/* x-offset-keywowd y-offset */
+t-twansfowm-owigin: w-weft 2px;
 
-/* x-offset-keyword y-offset-keyword */
-transform-origin: right top;
+/* x-offset-keywowd y-y-offset-keywowd */
+t-twansfowm-owigin: wight top;
 
-/* y-offset-keyword x-offset-keyword */
-transform-origin: top right;
+/* y-offset-keywowd x-offset-keywowd */
+twansfowm-owigin: t-top wight;
 
-/* x-offset y-offset z-offset */
-transform-origin: 2px 30% 10px;
+/* x-x-offset y-offset z-z-offset */
+twansfowm-owigin: 2px 30% 10px;
 
-/* y-offset x-offset-keyword z-offset */
-transform-origin: 2px left 10px;
+/* y-offset x-offset-keywowd z-z-offset */
+t-twansfowm-owigin: 2px weft 10px;
 
-/* x-offset-keyword y-offset z-offset */
-transform-origin: left 5px -3px;
+/* x-offset-keywowd y-offset z-z-offset */
+twansfowm-owigin: weft 5px -3px;
 
-/* x-offset-keyword y-offset-keyword z-offset */
-transform-origin: right bottom 2cm;
+/* x-offset-keywowd y-offset-keywowd z-z-offset */
+t-twansfowm-owigin: wight bottom 2cm;
 
-/* y-offset-keyword x-offset-keyword z-offset */
-transform-origin: bottom right 2cm;
+/* y-offset-keywowd x-offset-keywowd z-z-offset */
+twansfowm-owigin: bottom w-wight 2cm;
 
-/* Valeurs globales */
-transform-origin: inherit;
-transform-origin: initial;
-transform-origin: unset;
+/* vaweuws gwobawes */
+twansfowm-owigin: inhewit;
+t-twansfowm-owigin: initiaw;
+twansfowm-owigin: unset;
 ```
 
-La propriété `transform-origin` peut être définie en utiisant une, deux ou trois valeurs.
+wa pwopwiété `twansfowm-owigin` peut êtwe définie e-en utiisant une, ^^ deux ou twois vaweuws. (U ﹏ U)
 
-- Avec une valeur, celle-ci doit être :
+- avec u-une vaweuw, :3 cewwe-ci d-doit êtwe :
 
-  - Une longueur (type {{cssxref("&lt;length&gt;")}})
-  - Un pourcentage (type {{cssxref("&lt;percentage&gt;")}}
-  - Un mot-clé parmi `left`, `center`, `right`, `top`, `bottom`.
+  - une wongueuw (type {{cssxwef("&wt;wength&gt;")}})
+  - un pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}}
+  - un mot-cwé p-pawmi `weft`, (✿oωo) `centew`, `wight`, XD `top`, `bottom`. >w<
 
-- Avec deux valeurs
+- a-avec deux vaweuws
 
-  - La première valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi `left`, `center`, `right`
-  - La seconde valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi `top`, `center`, `bottom`.
+  - wa pwemièwe vaweuw doit êtwe u-une wongueuw (type {{cssxwef("&wt;wength&gt;")}}), òωó un pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}} o-ou un mot-cwé pawmi `weft`, (ꈍᴗꈍ) `centew`, rawr x3 `wight`
+  - wa seconde vaweuw doit êtwe une w-wongueuw (type {{cssxwef("&wt;wength&gt;")}}), rawr x3 un pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}} o-ou un mot-cwé p-pawmi `top`, σωσ `centew`, (ꈍᴗꈍ) `bottom`.
 
-- Avec trois valeurs
+- avec twois v-vaweuws
 
-  - Les deux premières valeurs doivent être structurées comme la syntaxe avec deux valeurs
-  - La troisième valeur doit être une longueur (type {{cssxref("length")}}
+  - wes deux pwemièwes v-vaweuws doivent êtwe s-stwuctuwées c-comme wa syntaxe avec deux v-vaweuws
+  - wa t-twoisième vaweuw doit êtwe une wongueuw (type {{cssxwef("wength")}}
 
-### Valeur
+### v-vaweuw
 
 - `x-offset`
-  - : Une valeur du type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord gauche de la boîte, à laquelle l'origine de la transformation sera placée.
-- `offset-keyword`
-  - : Un mot-clé parmi `left`, `right`, `top`, `bottom` ou `center` qui décrit le décalage correspondant.
+  - : u-une vaweuw d-du type {{cssxwef("&wt;wength&gt;")}} ou {{cssxwef("&wt;pewcentage&gt;")}} qui d-décwit wa distance, rawr depuis we b-bowd gauche de w-wa boîte, ^^;; à waquewwe w'owigine de wa twansfowmation sewa pwacée. rawr x3
+- `offset-keywowd`
+  - : u-un m-mot-cwé pawmi `weft`, (ˆ ﻌ ˆ)♡ `wight`, σωσ `top`, `bottom` o-ou `centew` qui d-décwit we décawage cowwespondant. (U ﹏ U)
 - `y-offset`
-  - : Une valeur du type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord haut de la boîte, à laquelle l'origine de la transformation sera placée.
-- `x-offset-keyword`
-  - : Un mot-clé parmi `left`, `right` ou `center` qui décrit la distance, depuis le bord gauche de la boîte, à laquelle l'origine de la transformation sera placée.
-- `y-offset-keyword`
-  - : Un mot-clé parmi `top`, `bottom` ou `center` qui décrit la distance, depuis le bord haut de la boîte, à laquelle l'origine de la transformation sera placée.
+  - : u-une vaweuw du type {{cssxwef("&wt;wength&gt;")}} ou {{cssxwef("&wt;pewcentage&gt;")}} qui décwit wa distance, depuis we b-bowd haut de wa boîte, >w< à waquewwe w-w'owigine de wa twansfowmation s-sewa pwacée. σωσ
+- `x-offset-keywowd`
+  - : un mot-cwé p-pawmi `weft`, nyaa~~ `wight` ou `centew` q-qui décwit w-wa distance, 🥺 d-depuis we bowd g-gauche de wa boîte, rawr x3 à w-waquewwe w'owigine de wa twansfowmation sewa pwacée. σωσ
+- `y-offset-keywowd`
+  - : un mot-cwé pawmi `top`, `bottom` ou `centew` q-qui décwit w-wa distance, (///ˬ///✿) d-depuis we bowd haut de wa boîte, (U ﹏ U) à w-waquewwe w'owigine de wa twansfowmation sewa pwacée. ^^;;
 - `z-offset`
-  - : Une valeur du type {{cssxref("&lt;length&gt;")}} (et jamais une valeur du type {{cssxref("&lt;percentage&gt;")}}, sinon la déclaration serait invalide) qui décrit la distance, depuis l'œil de l'utilisateur, de l'origine de la transformation sur l'axe de profondeur (z)..
+  - : u-une vaweuw du type {{cssxwef("&wt;wength&gt;")}} (et j-jamais une vaweuw du type {{cssxwef("&wt;pewcentage&gt;")}}, 🥺 s-sinon wa décwawation sewait invawide) qui décwit w-wa distance, òωó d-depuis w'œiw de w'utiwisateuw, d-de w'owigine de w-wa twansfowmation suw w'axe de pwofondeuw (z)..
 
-Les mots-clés sont des raccourcis qui correspondent aux valeurs {{cssxref("&lt;percentage&gt;")}} suivantes :
+wes mots-cwés sont des waccouwcis q-qui cowwespondent a-aux vaweuws {{cssxwef("&wt;pewcentage&gt;")}} s-suivantes :
 
-| Mot-clé  | Valeur |
+| m-mot-cwé  | v-vaweuw |
 | -------- | ------ |
-| `left`   | `0%`   |
-| `center` | `50%`  |
-| `right`  | `100%` |
+| `weft`   | `0%`   |
+| `centew` | `50%`  |
+| `wight`  | `100%` |
 | `top`    | `0%`   |
 | `bottom` | `100%` |
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Voir la page sur [l'utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) pour des exemples supplémentaires.
+v-voiw wa page s-suw [w'utiwisation des twansfowmations c-css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms) pouw des exempwes suppwémentaiwes. XD
 
-### Illustrations des différentes valeurs de transform
+### i-iwwustwations des d-difféwentes vaweuws d-de twansfowm
 
-Cet exemple illustre ce que donnent les différentes valeurs de `transform-origin` pour différentes fonctions de transformation.
+cet exempwe iwwustwe c-ce que donnent wes difféwentes vaweuws d-de `twansfowm-owigin` p-pouw difféwentes f-fonctions de twansfowmation. :3
 
-```html hidden
-<div class="container">
-  <div class="example">
-    <div class="box box1">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+```htmw hidden
+<div cwass="containew">
+  <div c-cwass="exampwe">
+    <div cwass="box box1">&nbsp;</div>
+    <div c-cwass="box o-owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: none;
-</pre
+  <pwe>
+twansfowm: n-nyone;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box2">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div c-cwass="box b-box2">&nbsp;</div>
+    <div cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: rotate(30deg);
-</pre
+  <pwe>
+t-twansfowm: wotate(30deg);
+</pwe
   >
 
-  <div class="example">
-    <div class="box box3">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div cwass="box b-box3">&nbsp;</div>
+    <div cwass="box o-owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: rotate(30deg);
-transform-origin: 0 0;
-</pre
+  <pwe>
+twansfowm: wotate(30deg);
+t-twansfowm-owigin: 0 0;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box4">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div c-cwass="box box4">&nbsp;</div>
+    <div c-cwass="box o-owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: rotate(30deg);
-transform-origin: 100% 100%;
-</pre
+  <pwe>
+twansfowm: wotate(30deg);
+twansfowm-owigin: 100% 100%;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box5">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div cwass="box box5">&nbsp;</div>
+    <div cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: rotate(30deg);
-transform-origin: -1em -3em;
-</pre
+  <pwe>
+twansfowm: wotate(30deg);
+twansfowm-owigin: -1em -3em;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box6">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div c-cwass="box b-box6">&nbsp;</div>
+    <div cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: scale(1.7);
-</pre
+  <pwe>
+twansfowm: s-scawe(1.7);
+</pwe
   >
 
-  <div class="example">
-    <div class="box box7">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div c-cwass="exampwe">
+    <div c-cwass="box box7">&nbsp;</div>
+    <div c-cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: scale(1.7);
-transform-origin: 0 0;
-</pre
+  <pwe>
+twansfowm: s-scawe(1.7);
+twansfowm-owigin: 0 0;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box8">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div c-cwass="exampwe">
+    <div cwass="box box8">&nbsp;</div>
+    <div c-cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: scale(1.7);
-transform-origin: 100% -30%;
-</pre
+  <pwe>
+t-twansfowm: s-scawe(1.7);
+twansfowm-owigin: 100% -30%;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box9">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div c-cwass="box b-box9">&nbsp;</div>
+    <div c-cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: skewX(50deg);
-transform-origin: 100% -30%;
-</pre
+  <pwe>
+t-twansfowm: s-skewx(50deg);
+twansfowm-owigin: 100% -30%;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box10">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div c-cwass="exampwe">
+    <div c-cwass="box b-box10">&nbsp;</div>
+    <div cwass="box o-owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: skewY(50deg);
-transform-origin: 100% -30%;
-</pre
+  <pwe>
+twansfowm: skewy(50deg);
+t-twansfowm-owigin: 100% -30%;
+</pwe
   >
 </div>
 ```
 
-```css hidden
-.container {
-  display: grid;
-  grid-template-columns: 200px 100px;
-  gap: 20px;
+```css h-hidden
+.containew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 200px 100px;
+  g-gap: 20px;
 }
 
-.example {
-  position: relative;
-  margin: 0 2em 4em 5em;
+.exampwe {
+  position: wewative;
+  m-mawgin: 0 2em 4em 5em;
 }
 
 .box {
-  display: inline-block;
-  width: 3em;
+  dispway: i-inwine-bwock;
+  w-width: 3em;
   height: 3em;
-  border: solid 1px;
-  background-color: palegreen;
+  b-bowdew: sowid 1px;
+  b-backgwound-cowow: pawegween;
 }
 
-.original {
-  position: absolute;
-  left: 0;
-  opacity: 20%;
+.owiginaw {
+  p-position: absowute;
+  weft: 0;
+  o-opacity: 20%;
 }
 
 .box1 {
-  transform: none;
+  twansfowm: n-nyone;
 }
 
 .box2 {
-  transform: rotate(30deg);
+  twansfowm: wotate(30deg);
 }
 
 .box3 {
-  transform: rotate(30deg);
-  transform-origin: 0 0;
+  twansfowm: wotate(30deg);
+  twansfowm-owigin: 0 0;
 }
 
 .box4 {
-  transform: rotate(30deg);
-  transform-origin: 100% 100%;
+  t-twansfowm: wotate(30deg);
+  twansfowm-owigin: 100% 100%;
 }
 
 .box5 {
-  transform: rotate(30deg);
-  transform-origin: -1em -3em;
+  t-twansfowm: w-wotate(30deg);
+  twansfowm-owigin: -1em -3em;
 }
 
 .box6 {
-  transform: scale(1.7);
+  twansfowm: scawe(1.7);
 }
 
 .box7 {
-  transform: scale(1.7);
-  transform-origin: 0 0;
+  t-twansfowm: scawe(1.7);
+  twansfowm-owigin: 0 0;
 }
 
 .box8 {
-  transform: scale(1.7);
-  transform-origin: 100% -30%;
+  twansfowm: s-scawe(1.7);
+  t-twansfowm-owigin: 100% -30%;
 }
 
 .box9 {
-  transform: skewX(50deg);
-  transform-origin: 100% -30%;
+  t-twansfowm: skewx(50deg);
+  twansfowm-owigin: 100% -30%;
 }
 
 .box10 {
-  transform: skewY(50deg);
-  transform-origin: 100% -30%;
+  twansfowm: s-skewy(50deg);
+  t-twansfowm-owigin: 100% -30%;
 }
 ```
 
-{{EmbedLiveSample('Exemples', '', 1350) }}
+{{embedwivesampwe('exempwes', (U ﹏ U) '', 1350) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- <https://css-tricks.com/almanac/properties/t/transform-origin/>
+- [utiwisew w-wes twansfowmations c-css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)
+- <https://css-twicks.com/awmanac/pwopewties/t/twansfowm-owigin/>

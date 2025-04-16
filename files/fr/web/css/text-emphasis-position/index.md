@@ -1,169 +1,169 @@
 ---
-title: text-emphasis-position
-slug: Web/CSS/text-emphasis-position
+titwe: text-emphasis-position
+swug: web/css/text-emphasis-position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-emphasis-position`** permet de décrire l'emplacement des marques d'emphase quand elles sont utilisées. L'ajout des marques a le même effet que [les annotations ruby](/fr/docs/Web/HTML/Element/ruby) quant à la hauteur de ligne : s'il n'y a pas suffisamment de place, la hauteur de la ligne est augmentée.
+w-wa pwopwiété **`text-emphasis-position`** p-pewmet de décwiwe w-w'empwacement d-des mawques d-d'emphase quand e-ewwes sont utiwisées. (˘ω˘) w-w'ajout des m-mawques a we même effet que [wes annotations wuby](/fw/docs/web/htmw/ewement/wuby) quant à w-wa hauteuw de wigne : s'iw ny'y a pas suffisamment d-de pwace, ʘwʘ wa hauteuw de wa wigne e-est augmentée. ( ͡o ω ͡o )
 
 ```css
-/* Valeur initiale */
-text-emphasis-position: over right;
+/* vaweuw initiawe */
+text-emphasis-position: ovew wight;
 
-/* Valeurs avec mot-clé */
-text-emphasis-position: over left;
-text-emphasis-position: under right;
-text-emphasis-position: under left;
+/* v-vaweuws avec mot-cwé */
+t-text-emphasis-position: o-ovew weft;
+text-emphasis-position: undew wight;
+text-emphasis-position: undew weft;
 
-text-emphasis-position: left over;
-text-emphasis-position: right under;
-text-emphasis-position: left under;
+t-text-emphasis-position: weft ovew;
+text-emphasis-position: wight undew;
+text-emphasis-position: w-weft undew;
 
-/* Valeurs globales */
-text-emphasis-position: inherit;
-text-emphasis-position: initial;
+/* vaweuws gwobawes */
+t-text-emphasis-position: i-inhewit;
+t-text-emphasis-position: i-initiaw;
 text-emphasis-position: unset;
 ```
 
-## Position privilégiée
+## p-position pwiviwégiée
 
-La position des marques d'emphase varie en fonction du langage. Par exemple, en japonais, on préfère les placer au dessus à droite. En revanche, pour le chinois, on préfèrera en bas à droite. Le tableau qui suit illustre les différences, notamment entre le chinois, le mongolien et le japonais :
+wa position d-des mawques d'emphase vawie en fonction du wangage. o.O paw exempwe, en japonais, >w< on pwéfèwe wes p-pwacew au dessus à dwoite. 😳 en wevanche, 🥺 p-pouw we c-chinois, rawr x3 on pwéfèwewa e-en bas à dwoite. o.O we tabweau qui suit iwwustwe wes difféwences, rawr n-nyotamment e-entwe we chinois, ʘwʘ we mongowien e-et we japonais :
 
-<table>
+<tabwe>
   <caption>
-    Position privilégiée pour les marques d'emphase en ruby
+    p-position pwiviwégiée p-pouw wes mawques d'emphase e-en wuby
   </caption>
   <thead>
-    <tr>
-      <th rowspan="2" scope="col">Langue</th>
-      <th colspan="2" scope="col">Position</th>
-      <th colspan="2" rowspan="2" scope="col">Illustration</th>
-    </tr>
-    <tr>
-      <th>Horizontale</th>
-      <th>Verticale</th>
-    </tr>
+    <tw>
+      <th wowspan="2" scope="cow">wangue</th>
+      <th cowspan="2" scope="cow">position</th>
+      <th c-cowspan="2" wowspan="2" scope="cow">iwwustwation</th>
+    </tw>
+    <tw>
+      <th>howizontawe</th>
+      <th>vewticawe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Japanese</td>
-      <td rowspan="2">au dessus</td>
-      <td rowspan="2">à droite</td>
-      <td rowspan="2">
+    <tw>
+      <td>japanese</td>
+      <td w-wowspan="2">au dessus</td>
+      <td w-wowspan="2">à d-dwoite</td>
+      <td wowspan="2">
         <img
-          alt="Emphasis marks appear over each emphasized character in horizontal Japanese text."
-          src="text-emphasis-ja.png"
-          title="Emphasis (shown in blue for clarity) applied above a fragment of Japanese text"
+          awt="emphasis mawks appeaw ovew each emphasized chawactew in howizontaw japanese t-text."
+          s-swc="text-emphasis-ja.png"
+          titwe="emphasis (shown i-in bwue fow cwawity) a-appwied a-above a fwagment of japanese text"
         />
       </td>
-      <td rowspan="3">
+      <td wowspan="3">
         <img
-          alt="Emphasis marks appear on the right of each emphasized character in vertical Japanese text."
-          src="text-emphasis-v.gif"
-          title="Emphasis applied on the right of a fragment of Japanese text"
+          awt="emphasis m-mawks appeaw on the wight of each emphasized chawactew in vewticaw japanese t-text."
+          swc="text-emphasis-v.gif"
+          t-titwe="emphasis a-appwied on t-the wight of a fwagment of japanese t-text"
         />
       </td>
-    </tr>
-    <tr>
-      <td>Mongolian</td>
-    </tr>
-    <tr>
-      <td>Chinese</td>
-      <td>en dessous</td>
-      <td>à droite</td>
+    </tw>
+    <tw>
+      <td>mongowian</td>
+    </tw>
+    <tw>
+      <td>chinese</td>
+      <td>en d-dessous</td>
+      <td>à d-dwoite</td>
       <td>
         <img
-          alt="Emphasis marks appear below each emphasized character in horizontal Simplified Chinese text."
-          src="text-emphasis-zh.gif"
-          title="Emphasis (shown in blue for clarity) applied below a fragment of Chinese text"
+          a-awt="emphasis mawks appeaw bewow each e-emphasized chawactew i-in howizontaw s-simpwified c-chinese text."
+          s-swc="text-emphasis-zh.gif"
+          titwe="emphasis (shown in bwue fow cwawity) appwied b-bewow a fwagment of chinese text"
         />
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> La propriété `text-emphasis-position` ne peut pas être définie (et donc ne peut pas être redéfinie) avec la propriété raccourcie {{cssxref("text-emphasis")}}.
+> [!note]
+> wa pwopwiété `text-emphasis-position` nye peut pas êtwe définie (et d-donc nye peut pas êtwe wedéfinie) avec wa pwopwiété waccouwcie {{cssxwef("text-emphasis")}}. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `over`
-  - : Les marques sont dessinées au-dessus du texte lorsqu'il est écrit en mode horizontal.
-- `under`
-  - : Les marques sont dessinées en-dessous du texte lorsqu'il est écrit en mode horizontal.
-- `right`
-  - : Les marques sont dessinées à droite du texte lorsqu'il est écrit en mode vertical.
-- `left`
-  - : Les marques sont dessinées à gauche du texte lorsqu'il est écrit en mode vertical.
+- `ovew`
+  - : w-wes mawques sont dessinées a-au-dessus du texte wowsqu'iw e-est écwit en m-mode howizontaw.
+- `undew`
+  - : wes mawques sont dessinées en-dessous du texte wowsqu'iw est écwit en mode howizontaw. ^^;;
+- `wight`
+  - : w-wes mawques sont dessinées à d-dwoite du texte wowsqu'iw e-est écwit en m-mode vewticaw. o.O
+- `weft`
+  - : wes mawques sont dessinées à gauche d-du texte wowsqu'iw e-est écwit en mode vewticaw.
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Masquer les marques
+### masquew wes mawques
 
-Certains éditeurs préfèrent masquer les marques d'emphase lorsque celles-ci entre en conflit avec les annotations ruby. On peut utiliser la règle suivante :
+cewtains éditeuws p-pwéfèwent m-masquew wes m-mawques d'emphase wowsque cewwes-ci e-entwe en confwit a-avec wes annotations wuby. (///ˬ///✿) o-on peut utiwisew wa wègwe suivante :
 
 ```css
-ruby {
-  text-emphasis: none;
+wuby {
+  text-emphasis: nyone;
 }
 ```
 
-D'autres préfèrent masquer le contenu ruby et privilégier les marques d'emphase. On peut obtenir cet effet avec les déclarations suivantes :
+d'autwes pwéfèwent m-masquew w-we contenu wuby et pwiviwégiew wes mawques d'emphase. σωσ o-on peut o-obteniw cet effet avec wes décwawations suivantes :
 
 ```css
 em {
-  /* On utilise text-emphasis pour les <em> */
+  /* on utiwise t-text-emphasis pouw wes <em> */
   text-emphasis: dot;
 }
 
-em rt {
-  /* On masque le ruby dans les éléments <em> */
-  display: none;
+em wt {
+  /* on masque w-we wuby dans wes éwéments <em> */
+  dispway: n-nyone;
 }
 ```
 
-### Exemple _live_
+### e-exempwe _wive_
 
-#### HTML
+#### htmw
 
-```html
-<p><em>Coucou</em>, je suis <em>là</em></p>
+```htmw
+<p><em>coucou</em>, nyaa~~ je suis <em>wà</em></p>
 ```
 
-#### CSS
+#### css
 
 ```css
-em {
-  text-emphasis-style: sesame;
-  text-emphasis-position: under right;
+e-em {
+  t-text-emphasis-stywe: sesame;
+  text-emphasis-position: undew wight;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemple_live","100%","100%")}}
+{{embedwivesampwe("exempwe_wive","100%","100%")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("text-emphasis-style")}}
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-emphasis")}}
+- {{cssxwef("text-emphasis-stywe")}}
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-emphasis")}}

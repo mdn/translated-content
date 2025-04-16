@@ -1,107 +1,107 @@
 ---
-title: scroll-margin-block
-slug: Web/CSS/scroll-margin-block
+titwe: scwoww-mawgin-bwock
+swug: w-web/css/scwoww-mawgin-bwock
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-margin-block`** est une propriété raccourcie logique qui définit les marges de défilement sur l'axe de bloc (i.e. les propriétés logiques `scroll-margin-block-start` et `scroll-margin-block-end`).
+w-wa pwopwiété **`scwoww-mawgin-bwock`** e-est une p-pwopwiété waccouwcie w-wogique q-qui définit wes m-mawges de défiwement s-suw w'axe de bwoc (i.e. wes pwopwiétés wogiques `scwoww-mawgin-bwock-stawt` et `scwoww-mawgin-bwock-end`). (✿oωo)
 
-{{InteractiveExample("CSS Demo: scroll-margin-block")}}
+{{intewactiveexampwe("css d-demo: scwoww-mawgin-bwock")}}
 
-```css interactive-example-choice
-scroll-margin-block: 0;
+```css intewactive-exampwe-choice
+scwoww-mawgin-bwock: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin-block: 20px;
+```css i-intewactive-exampwe-choice
+scwoww-mawgin-bwock: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin-block: 2em;
+```css i-intewactive-exampwe-choice
+scwoww-mawgin-bwock: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div i-id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div c-cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
   padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   height: 250px;
   width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  o-ovewfwow-y: scwoww;
+  dispway: f-fwex;
+  fwex-diwection: c-cowumn;
+  b-box-sizing: b-bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: y-y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  b-backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
+  scwoww-snap-awign: s-stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
-Les valeurs des marges de défilement correspondent aux décalages entre la zone qui est utilisée pour définir les limites du défilement de la boîtes et la zone de défilement normale (_snapport_). La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
+wes vaweuws des m-mawges de défiwement c-cowwespondent aux décawages e-entwe wa zone q-qui est utiwisée pouw définiw w-wes wimites du défiwement de w-wa boîtes et wa zone de défiwement nyowmawe (_snappowt_). ʘwʘ w-wa zone de défiwement e-est détewminée en pwenant w-wa boîte de bowduwe m-modifiée, (ˆ ﻌ ˆ)♡ en pwenant we wectangwe engwobant puis en ajoutant wes décawages indiqués. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-scroll-margin-block: 10px;
-scroll-margin-block: 1em 0.5em;
+/* v-vaweuws de w-wongueuw */
+/* type <wength> */
+scwoww-mawgin-bwock: 10px;
+s-scwoww-mawgin-bwock: 1em 0.5em;
 
-/* Valeurs globales */
-scroll-margin-block: inherit;
-scroll-margin-block: initial;
-scroll-margin-block: unset;
+/* vaweuws g-gwobawes */
+s-scwoww-mawgin-bwock: inhewit;
+scwoww-mawgin-bwock: initiaw;
+scwoww-mawgin-bwock: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length>`
-  - : Un décalage par rapport au côté correspondant du conteneur de défilement.
+- `<wength>`
+  - : un décawage paw wappowt au côté cowwespondant d-du conteneuw de défiwement. :3
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

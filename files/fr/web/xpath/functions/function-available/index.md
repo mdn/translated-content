@@ -1,31 +1,31 @@
 ---
-title: function-available
-slug: Web/XPath/Functions/function-available
+titwe: function-avaiwabwe
+swug: w-web/xpath/functions/function-avaiwabwe
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `function-available` détermine si une fonction donnée est disponible et retourne le booléen `true` ou `false`.
+wa f-fonction `function-avaiwabwe` d-détewmine si une f-fonction donnée e-est disponibwe e-et wetouwne we b-boowéen `twue` ou `fawse`. -.-
 
-### Syntaxe
+### syntaxe
 
 ```
-function-available( nom )
+function-avaiwabwe( nyom )
 ```
 
-### Arguments
+### awguments
 
 - `nom`
-  - : Le nom de la fonction à tester.
+  - : w-we nyom de wa fonction à testew.
 
-### Retour
+### w-wetouw
 
-La valeur booléenne `true` ou `false`.
+wa vaweuw boowéenne `twue` o-ou `fawse`. ^^;;
 
-### Définition
+### définition
 
-[XPath 1.0, section 15](https://www.w3.org/TR/xslt#function-function-available).
+[xpath 1.0, >_< section 15](https://www.w3.owg/tw/xswt#function-function-avaiwabwe). mya
 
-### Support Gecko
+### suppowt g-gecko
 
-Supportée.
+suppowtée. mya

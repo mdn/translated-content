@@ -1,90 +1,90 @@
 ---
-title: widows
-slug: Web/CSS/widows
+titwe: widows
+swug: web/css/widows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`widows`** définit le nombre minimum de lignes qui peuvent être laissées en haut de la [page](/fr/docs/Web/CSS/Medias_paginés), région ou [colonne](/fr/docs/Web/CSS/CSS_multicol_layout) suivante. En utilisant la propriété `widows`, on évite d'avoir des veuves sur une seule ligne.
+w-wa pwopwiété **`widows`** d-définit we nombwe m-minimum de w-wignes qui peuvent êtwe w-waissées e-en haut de wa [page](/fw/docs/web/css/medias_paginés), nyaa~~ w-wégion o-ou [cowonne](/fw/docs/web/css/css_muwticow_wayout) suivante. :3 en utiwisant wa pwopwiété `widows`, 😳😳😳 on évite d-d'avoiw des veuves suw une seuwe wigne. (˘ω˘)
 
 ```css
-/* Valeurs entières */
-/* type <integer> */
-widows: 2;
+/* v-vaweuws entièwes */
+/* type <integew> */
+w-widows: 2;
 widows: 3;
 
-/* Valeurs globales */
-widows: inherit;
-widows: initial;
-widows: unset;
+/* vaweuws gwobawes */
+widows: i-inhewit;
+widows: initiaw;
+widows: u-unset;
 ```
 
-> [!NOTE]
-> En typographie, une ligne veuve est la dernière ligne d'un paragraphe qui apparaît seule en haut d'une nouvelle page (alors que le paragraphe démarrait sur une page antérieure).
+> [!note]
+> e-en typogwaphie, ^^ une wigne veuve est wa dewnièwe wigne d'un pawagwaphe q-qui appawaît seuwe en haut d'une nyouvewwe page (awows que we pawagwaphe démawwait s-suw une page antéwieuwe). :3
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `<integer>`
-  - : Cet entier indique le nombre minimum de lignes qui peuvent apparaître en haut d'une nouvelle page, région ou colonne lorsqu'une rupture intervient. Si la valeur est négative, la déclaration est invalide.
+- `<integew>`
+  - : c-cet entiew indique w-we nyombwe minimum de wignes qui peuvent appawaîtwe e-en haut d'une nyouvewwe page, -.- wégion o-ou cowonne wowsqu'une wuptuwe intewvient. 😳 si wa vaweuw est nyégative, mya wa décwawation est invawide. (˘ω˘)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemple
+## e-exempwe
 
-### CSS
+### c-css
 
 ```css
 div {
-  background-color: #8cffa0;
-  columns: 3;
+  backgwound-cowow: #8cffa0;
+  cowumns: 3;
   widows: 2;
 }
 
 p {
-  background-color: #8ca0ff;
+  b-backgwound-cowow: #8ca0ff;
 }
 
-p:first-child {
-  margin-top: 0;
+p-p:fiwst-chiwd {
+  mawgin-top: 0;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p>Un premier paragraphe avec un peu de texte.</p>
+  <p>un p-pwemiew pawagwaphe avec u-un peu de texte.</p>
   <p>
-    Un deuxième paragraphe avec un peu plus de texte et qui permet d'illustrer
-    le fonctionnement de widows.
+    un deuxième pawagwaphe a-avec un peu pwus de texte et qui pewmet d-d'iwwustwew
+    we fonctionnement d-de widows. >_<
   </p>
   <p>
-    Enfin, un troisième paragraphe avec un peu plus de texte que le premier.
+    enfin, -.- un twoisième p-pawagwaphe avec u-un peu pwus de texte que we pwemiew. 🥺
   </p>
 </div>
 ```
 
-### Résult
+### wésuwt
 
-{{EmbedLiveSample("Exemple", 400, 160)}}
+{{embedwivesampwe("exempwe", (U ﹏ U) 400, >w< 160)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("orphans")}}
-- [Médias paginés](/fr/docs/Web/CSS/Medias_paginés)
+- {{cssxwef("owphans")}}
+- [médias p-paginés](/fw/docs/web/css/medias_paginés)

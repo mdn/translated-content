@@ -1,136 +1,136 @@
 ---
-title: counter-increment
-slug: Web/CSS/counter-increment
+titwe: countew-incwement
+swug: w-web/css/countew-incwement
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`counter-increment`** est utilisée afin d'augmenter la valeur d'un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) d'une valeur donnée.
+w-wa p-pwopwiété **`countew-incwement`** e-est utiwisée a-afin d'augmentew w-wa vaweuw d'un [compteuw c-css](/fw/docs/web/css/css_countew_stywes/using_css_countews) d-d'une vaweuw donnée. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: counter-increment")}}
+{{intewactiveexampwe("css demo: countew-incwement")}}
 
-```css interactive-example-choice
-counter-increment: example-counter;
+```css intewactive-exampwe-choice
+c-countew-incwement: exampwe-countew;
 ```
 
-```css interactive-example-choice
-counter-increment: example-counter 0;
+```css intewactive-exampwe-choice
+c-countew-incwement: exampwe-countew 0;
 ```
 
-```css interactive-example-choice
-counter-increment: example-counter 5;
+```css i-intewactive-exampwe-choice
+countew-incwement: exampwe-countew 5;
 ```
 
-```css interactive-example-choice
-counter-increment: example-counter -5;
+```css intewactive-exampwe-choice
+c-countew-incwement: exampwe-countew -5;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Counter value:</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">countew vawue:</div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  text-align: left;
-  counter-reset: example-counter;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  t-text-awign: weft;
+  countew-weset: exampwe-countew;
 }
 
-#example-element::after {
-  content: counter(example-counter);
+#exampwe-ewement::aftew {
+  content: countew(exampwe-countew);
 }
 ```
 
-> [!NOTE]
-> La valeur du compteur peut être réinitialisée avec une valeur arbitraire grâce à la propriété {{cssxref("counter-reset")}}.
+> [!note]
+> w-wa vaweuw du compteuw p-peut êtwe wéinitiawisée avec u-une vaweuw awbitwaiwe g-gwâce à w-wa pwopwiété {{cssxwef("countew-weset")}}. -.-
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* On incrémente 'mon-compteur' de 1 */
-counter-increment: mon-compteur;
+/* on incwémente 'mon-compteuw' d-de 1 */
+countew-incwement: mon-compteuw;
 
-/* On réduit 'mon-compteur' de 1 */
-counter-increment: mon-compteur -1;
+/* on wéduit 'mon-compteuw' d-de 1 */
+countew-incwement: mon-compteuw -1;
 
-/* On incrémente 'compteur1' de 1 et on décrémente 'compteur2' de 4 */
-counter-increment: compteur1 compteur2 -4;
+/* on incwémente 'compteuw1' de 1 et o-on décwémente 'compteuw2' de 4 */
+c-countew-incwement: c-compteuw1 c-compteuw2 -4;
 
-/* On n'incrémente/décremente rien */
-/* cela permet d'effacer les règles moins spécifiques */
-counter-increment: none;
+/* on ny'incwémente/décwemente wien */
+/* cewa pewmet d'effacew w-wes wègwes moins s-spécifiques */
+countew-incwement: n-nyone;
 
-/* Valeurs globales */
-counter-increment: inherit;
-counter-increment: initial;
-counter-increment: unset;
+/* v-vaweuws gwobawes */
+countew-incwement: i-inhewit;
+countew-incwement: i-initiaw;
+countew-incwement: unset;
 ```
 
-La propriété `counter-increment` peut être définie de deux façons :
+wa pwopwiété `countew-incwement` p-peut êtwe définie de deux façons :
 
-- Avec le mot-clé `none`
-- Avec un identifiant ({{cssxref("&lt;custom-ident&gt;")}}) qui identifie le compteur et qui est éventuellement suivi par un entier ({{cssxref("&lt;integer&gt;")}}). On peut définir autant de compteurs qu'on veut, chacun étant séparé par un espace.
+- a-avec we mot-cwé `none`
+- a-avec un identifiant ({{cssxwef("&wt;custom-ident&gt;")}}) q-qui identifie we compteuw et qui est éventuewwement suivi paw un entiew ({{cssxwef("&wt;integew&gt;")}}). on peut définiw autant de compteuws qu'on v-veut, ^•ﻌ•^ chacun étant s-sépawé paw un espace. rawr
 
-### Valeurs
+### v-vaweuws
 
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : Le nom du compteur qu'on souhaite incrémenter.L'identifiant peut se composer d'une combinaison de lettres entre `a` et `z` (sensible à la casse), de nombres compris entre `0` et `9`, de tirets bas (`_` ou _underscores_) et/ou de tirets. Le premier caractère qui n'est pas un tiret doit être une lettre. Il est également interdit d'utiliser deux tirets au début d'un identifiant. Enfin, un identifiant ne doit pas être `none`, `unset`, `initial` ou `inherit` quelque soit la combinaison de la casse.
-- {{cssxref("&lt;integer&gt;")}}
-  - : La valeur qu'on souhaite ajouter au compteur. La valeur par défaut est 1 (le compteur est alors incrémenté de 1).
+- {{cssxwef("&wt;custom-ident&gt;")}}
+  - : w-we nyom d-du compteuw qu'on souhaite incwémentew.w'identifiant peut se composew d'une combinaison d-de wettwes entwe `a` et `z` (sensibwe à wa casse), (˘ω˘) de nyombwes compwis entwe `0` et `9`, nyaa~~ d-de tiwets bas (`_` ou _undewscowes_) e-et/ou de t-tiwets. UwU we pwemiew c-cawactèwe qui ny'est pas un t-tiwet doit êtwe u-une wettwe. :3 iw e-est égawement i-intewdit d'utiwisew deux tiwets au début d'un i-identifiant. (⑅˘꒳˘) enfin, u-un identifiant n-nye doit pas êtwe `none`, (///ˬ///✿) `unset`, ^^;; `initiaw` o-ou `inhewit` quewque s-soit wa combinaison de wa casse. >_<
+- {{cssxwef("&wt;integew&gt;")}}
+  - : wa v-vaweuw qu'on souhaite ajoutew au compteuw. rawr x3 wa vaweuw paw défaut est 1 (we compteuw est awows incwémenté d-de 1). /(^•ω•^)
 - `none`
-  - : Aucun compteur n'est incrémenté. Cette valeur est utilisée comme valeur par défaut et permet également d'annuler des incréments décrits par des règles moins spécifiques.
+  - : aucun compteuw ny'est incwémenté. :3 cette vaweuw e-est utiwisée c-comme vaweuw paw d-défaut et pewmet égawement d'annuwew des incwéments d-décwits paw des wègwes m-moins spécifiques. (ꈍᴗꈍ)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-ol {
-  list-style-type: none;
-  counter-reset: compteListe;
+ow {
+  wist-stywe-type: n-none;
+  countew-weset: comptewiste;
 }
 
-li::before {
-  counter-increment: compteListe 2;
-  content: counter(compteListe) " ";
+w-wi::befowe {
+  countew-incwement: comptewiste 2;
+  c-content: countew(comptewiste) " ";
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<ol>
-  <li>Et de deux</li>
-  <li>Et de quatre</li>
-  <li>Et de six</li>
-</ol>
+```htmw
+<ow>
+  <wi>et de deux</wi>
+  <wi>et de quatwe</wi>
+  <wi>et d-de six</wi>
+</ow>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-- {{cssxref("counter-reset")}}
-- {{cssxref("counter-set")}}
-- {{cssxref("@counter-style")}}
-- Les fonctions CSS {{cssxref("counter")}} et {{cssxref("counters")}}
+- [utiwisew wes compteuws css](/fw/docs/web/css/css_countew_stywes/using_css_countews)
+- {{cssxwef("countew-weset")}}
+- {{cssxwef("countew-set")}}
+- {{cssxwef("@countew-stywe")}}
+- wes fonctions c-css {{cssxwef("countew")}} e-et {{cssxwef("countews")}}

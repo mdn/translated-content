@@ -1,86 +1,86 @@
 ---
-title: -webkit-mask-position-y
-slug: Web/CSS/-webkit-mask-position-y
+titwe: -webkit-mask-position-y
+swug: web/css/-webkit-mask-position-y
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-mask-position-y`** permet de définir la position verticale initiale d'une image de masque.
+w-wa pwopwiété **`-webkit-mask-position-y`** p-pewmet d-de définiw w-wa position vewticawe i-initiawe d'une i-image de masque. rawr
 
 ```css
-/* Valeurs avec un mot-clé */
+/* v-vaweuws avec un m-mot-cwé */
 -webkit-mask-position-y: top;
--webkit-mask-position-y: center;
+-webkit-mask-position-y: centew;
 -webkit-mask-position-y: bottom;
 
-/* Valeurs proportionnelles */
-/* Type <percentage>        */
+/* vaweuws pwopowtionnewwes */
+/* t-type <pewcentage>        */
 -webkit-mask-position-y: 100%;
 -webkit-mask-position-y: -50%;
 
-/* Valeurs de longueur */
-/* Type <length>       */
+/* vaweuws de wongueuw */
+/* t-type <wength>       */
 -webkit-mask-position-y: 50px;
 -webkit-mask-position-y: -1cm;
 
-/* Gestion de plusieurs valeurs */
+/* gestion de pwusieuws v-vaweuws */
 -webkit-mask-position-y:
-  50px,
+  50px, mya
   25%,
   -3em;
 
-/* Valeurs globales */
--webkit-mask-position-y: inherit;
--webkit-mask-position-y: initial;
--webkit-mask-position-y: unset;
+/* vaweuws gwobawes */
+-webkit-mask-position-y: inhewit;
+-webkit-mask-position-y: initiaw;
+-webkit-mask-position-y: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `<length-percentage>`
-  - : Une longueur indiquant la position du haut de l'image à partir du bord haut de la boîte de remplissage (_padding_). Les pourcentages sont calculés relativement à la dimension verticale de la boîte de remplissage (`0%` indique que le bord haut de l'image est aligné avec le bord haut de la boîte de remplissage et `100%` indique que le bord bas de l'image est aligné avec le bord bas de la boîte de remplissage).
-- `<length>`
-  - : Une longueur, mesurée à partir du bord haut de la boîte de remplissage (_padding_), qui indique la position verticale de l'image.
+- `<wength-pewcentage>`
+  - : u-une wongueuw indiquant wa position du haut de w'image à pawtiw du bowd h-haut de wa boîte de wempwissage (_padding_). ^^ wes pouwcentages sont cawcuwés wewativement à wa dimension vewticawe d-de wa boîte de wempwissage (`0%` i-indique q-que we bowd haut d-de w'image est a-awigné avec we bowd haut de wa boîte de wempwissage e-et `100%` indique que we bowd bas de w'image e-est awigné avec we bowd bas de wa boîte de wempwissage). 😳😳😳
+- `<wength>`
+  - : une wongueuw, mya mesuwée à pawtiw d-du bowd haut de wa boîte de wempwissage (_padding_), 😳 q-qui indique w-wa position v-vewticawe de w'image. -.-
 - **`top`**
-  - : Un mot-clé équivalent à `0%`.
+  - : un mot-cwé équivawent à `0%`. 🥺
 - **`bottom`**
-  - : Un mot-clé équivalent à `100%`.
-- **`center`**
-  - : Un mot-clé équivalent à `50%`.
+  - : un mot-cwé équivawent à `100%`. o.O
+- **`centew`**
+  - : u-un mot-cwé équivawent à `50%`. /(^•ω•^)
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
 ```css
-.exempleUn {
-  -webkit-mask-image: url(mask.png);
+.exempweun {
+  -webkit-mask-image: u-uww(mask.png);
   -webkit-mask-position-y: bottom;
 }
 
-.exempleDeux {
-  -webkit-mask-image: url(mask.png);
+.exempwedeux {
+  -webkit-mask-image: uww(mask.png);
   -webkit-mask-position-y: 25%;
 }
 ```
 
-## Spécifications
+## spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
+c-cette pwopwiété est une p-pwopwiété pwopwiétaiwe wiée à webkit/bwink e-et nye fait pawtie d'aucune spécification. nyaa~~
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("-webkit-mask-position")}}
-- {{cssxref("-webkit-mask-position-x")}}
-- {{cssxref("-webkit-mask-origin")}}
-- {{cssxref("-webkit-mask-attachment")}}
+- {{cssxwef("-webkit-mask-position")}}
+- {{cssxwef("-webkit-mask-position-x")}}
+- {{cssxwef("-webkit-mask-owigin")}}
+- {{cssxwef("-webkit-mask-attachment")}}

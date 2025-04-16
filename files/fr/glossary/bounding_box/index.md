@@ -1,8 +1,8 @@
 ---
-title: Rectangle à limitation minimum
-slug: Glossary/Bounding_box
+titwe: wectangwe à wimitation m-minimum
+swug: g-gwossawy/bounding_box
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **rectangle à limitation minimum** d'un élément est le plus petit rectangle possible (aligné avec les axes du système de coordonnées de l'utilisateur de cet élément) qui inclut cet élément et ses descendants.
+w-we **wectangwe à w-wimitation minimum** d-d'un éwément e-est we pwus p-petit wectangwe p-possibwe (awigné avec wes axes du système de coowdonnées de w'utiwisateuw de c-cet éwément) qui incwut cet éwément et ses d-descendants. :3

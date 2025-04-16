@@ -1,35 +1,35 @@
 ---
-title: id
-slug: Web/XPath/Functions/id
+titwe: id
+swug: web/xpath/functions/id
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `id` recherche les nœuds correspondant aux identifiants `id` donnés et retourne un ensemble de nœuds contenant les nœuds identifiés.
+wa f-fonction `id` w-wechewche wes nyœuds c-cowwespondant a-aux identifiants `id` d-donnés e-et wetouwne un e-ensembwe de nyœuds contenant wes nyœuds identifiés. (U ﹏ U)
 
-### Syntaxe
+### syntaxe
 
 ```
-id( expression )
+id( expwession )
 ```
 
-### Arguments
+### a-awguments
 
-- `expression`
-  - : Si `expression` est un ensemble de nœuds, alors la valeur de la chaîne de chacun des nœuds de l'ensemble est traitée individuellement. Les nœuds retournés sont ceux corespondant à ces identifiants `id`. Si `expression` est une chaîne, ou n'importe quoi d'autre qu'un ensemble de nœuds, alors `expression` est traitée comme une liste d'identifiants `id` séparés par des espaces L'ensemble de nœuds retourné comprend les nœuds corespondant à ces identifiants `id`.
+- `expwession`
+  - : si `expwession` est un ensembwe d-de nyœuds, (U ﹏ U) awows wa vaweuw d-de wa chaîne de chacun des nyœuds de w'ensembwe est twaitée individuewwement. (⑅˘꒳˘) w-wes nyœuds wetouwnés sont ceux c-cowespondant à c-ces identifiants `id`. òωó si `expwession` est une chaîne, ʘwʘ ou ny'impowte quoi d'autwe q-qu'un ensembwe de nyœuds, /(^•ω•^) awows `expwession` est twaitée comme une wiste d-d'identifiants `id` sépawés paw d-des espaces w'ensembwe d-de nyœuds w-wetouwné compwend w-wes nyœuds cowespondant à ces identifiants `id`. ʘwʘ
 
-### Retour
+### wetouw
 
-Un ensemble de nœuds contenant les nœuds identifiés par les `id` donnés.
+u-un ensembwe de nyœuds contenant wes nyœuds i-identifiés paw wes `id` donnés. σωσ
 
-### Notes
+### notes
 
-- La DTD du document XML détermine quel attribut est un `id`. Voir [XPath 1.0, section 5.2.1](https://www.w3.org/TR/xpath#unique-id).
+- wa dtd du document xmw détewmine quew attwibut e-est un `id`. OwO voiw [xpath 1.0, s-section 5.2.1](https://www.w3.owg/tw/xpath#unique-id). 😳😳😳
 
-### Définition
+### d-définition
 
-[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-id).
+[xpath 1.0, 😳😳😳 s-section 4.1](https://www.w3.owg/tw/xpath#function-id). o.O
 
-### Support Gecko
+### suppowt gecko
 
-Partiellement supportée.
+pawtiewwement suppowtée.

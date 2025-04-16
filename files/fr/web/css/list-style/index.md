@@ -1,237 +1,237 @@
 ---
-title: list-style
-slug: Web/CSS/list-style
+titwe: wist-stywe
+swug: web/css/wist-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir [`list-style-type`](/fr/docs/Web/CSS/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/list-style-image) et [`list-style-position`](/fr/docs/Web/CSS/list-style-position).
+wa p-pwopwiété **`wist-stywe`** est u-une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui pewmet d-de définiw [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type), òωó [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image) e-et [`wist-stywe-position`](/fw/docs/web/css/wist-stywe-position). (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: list-style")}}
+{{intewactiveexampwe("css d-demo: w-wist-stywe")}}
 
-```css interactive-example-choice
-list-style: square;
+```css intewactive-exampwe-choice
+wist-stywe: squawe;
 ```
 
-```css interactive-example-choice
-list-style: inside;
+```css intewactive-exampwe-choice
+wist-stywe: i-inside;
 ```
 
-```css interactive-example-choice
-list-style: url("/shared-assets/images/examples/rocket.svg");
+```css intewactive-exampwe-choice
+wist-stywe: u-uww("/shawed-assets/images/exampwes/wocket.svg");
 ```
 
-```css interactive-example-choice
-list-style: none;
+```css intewactive-exampwe-choice
+w-wist-stywe: nyone;
 ```
 
-```css interactive-example-choice
-list-style: georgian inside url("/shared-assets/images/examples/rocket.svg");
+```css intewactive-exampwe-choice
+wist-stywe: g-geowgian inside uww("/shawed-assets/images/exampwes/wocket.svg");
 ```
 
-```css interactive-example-choice
-list-style: georgian outside url("/non-existent.svg");
+```css i-intewactive-exampwe-choice
+w-wist-stywe: geowgian outside uww("/non-existent.svg");
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
   <div>
-    <p>NASA Notable Missions</p>
-    <ul class="transition-all" id="example-element">
-      <li>Apollo</li>
-      <li>Hubble</li>
-      <li>Chandra</li>
-      <li>Cassini-Huygens</li>
-      <li>Spitzer</li>
-    </ul>
+    <p>nasa nyotabwe missions</p>
+    <uw cwass="twansition-aww" id="exampwe-ewement">
+      <wi>apowwo</wi>
+      <wi>hubbwe</wi>
+      <wi>chandwa</wi>
+      <wi>cassini-huygens</wi>
+      <wi>spitzew</wi>
+    </uw>
   </div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  font-size: 1.2rem;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  f-font-size: 1.2wem;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100%;
-  background: #be094b;
-  color: white;
+  b-backgwound: #be094b;
+  c-cowow: white;
 }
 
-section {
-  text-align: left;
-  flex-direction: column;
+s-section {
+  t-text-awign: weft;
+  fwex-diwection: cowumn;
 }
 
-hr {
+h-hw {
   width: 50%;
-  color: lightgray;
-  margin: 0.5em;
+  cowow: wightgway;
+  mawgin: 0.5em;
 }
 
 .note {
-  font-size: 0.8rem;
+  f-font-size: 0.8wem;
 }
 
 .note a {
-  color: #009e5f;
+  cowow: #009e5f;
 }
 
-@counter-style space-counter {
-  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+@countew-stywe space-countew {
+  symbows: "\1f680" "\1f6f8" "\1f6f0" "\1f52d";
   suffix: " ";
 }
 ```
 
-> [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
+> [!note]
+> cette p-pwopwiété s'appwique aux éwéments d-d'une w-wiste (c'est-à-diwe a-aux éwéments pouw wesquews [`dispway`](/fw/docs/web/css/dispway) vaut `wist-item`). -.- [paw défaut](https://www.w3.owg/tw/htmw5/wendewing.htmw#wists), c-cewa i-incwut wes éwéments [`<wi>`](/fw/docs/web/htmw/ewement/wi). :3 cette pwopwiété p-peut êtwe héwitée p-paw wes éwéments et si on v-veut donc géwew une wiste de f-façon unifowme, ʘwʘ on pouwwa appwiquew wa pwopwiété à w-w'éwément pawent (qui cowwespond e-en généwaw à [`<ow>`](/fw/docs/web/htmw/ewement/ow) ou à [`<uw>`](/fw/docs/web/htmw/ewement/uw)). 🥺
 
-## Propriétés détaillées correspondantes
+## p-pwopwiétés d-détaiwwées cowwespondantes
 
-Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;:
+cette pwopwiété est une pwopwiété waccouwcie pouw wes pwopwiétés css&nbsp;:
 
-- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
+- [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image)
+- [`wist-stywe-position`](/fw/docs/web/css/wist-stywe-position)
+- [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Type */
-list-style: square;
+/* t-type */
+w-wist-stywe: squawe;
 
-/* Image */
-list-style: url("../img/etoile.png");
+/* image */
+w-wist-stywe: u-uww("../img/etoiwe.png");
 
-/* Position */
-list-style: inside;
+/* p-position */
+wist-stywe: inside;
 
 /* type | position */
-list-style: georgian inside;
+w-wist-stywe: geowgian inside;
 
 /* type | image | position */
-list-style: lower-roman url("../img/etoile.png") outside;
+wist-stywe: wowew-woman u-uww("../img/etoiwe.png") outside;
 
-/* Valeur avec un mot-clé */
-list-style: none;
+/* vaweuw a-avec un mot-cwé */
+w-wist-stywe: n-nyone;
 
-/* Valeurs globales */
-list-style: inherit;
-list-style: initial;
-list-style: revert;
-list-style: unset;
+/* vaweuws gwobawes */
+w-wist-stywe: i-inhewit;
+wist-stywe: i-initiaw;
+wist-stywe: w-wevewt;
+wist-stywe: unset;
 ```
 
-Cette propriété raccourcie peut prendre un, deux ou trois mots-clés, dans n'importe quel ordre. Si [`list-style-type`](/fr/docs/Web/CSS/list-style-type) et [`list-style-image`](/fr/docs/Web/CSS/list-style-image) sont tous les deux définis, `list-style-type` sera utilisé si l'image est indisponible.
+cette p-pwopwiété waccouwcie p-peut pwendwe u-un, >_< deux ou t-twois mots-cwés, ʘwʘ d-dans ny'impowte quew owdwe. (˘ω˘) si [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type) et [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image) sont tous wes d-deux définis, `wist-stywe-type` sewa utiwisé si w'image est indisponibwe. (✿oωo)
 
-### Valeurs
+### vaweuws
 
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-  - : Voir [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
-- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
-  - : Voir [`list-style-image`](/fr/docs/Web/CSS/list-style-image).
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
-  - : Voir [`list-style-position`](/fr/docs/Web/CSS/list-style-position).
+- [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type)
+  - : voiw [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type). (///ˬ///✿)
+- [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image)
+  - : voiw [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image). rawr x3
+- [`wist-stywe-position`](/fw/docs/web/css/wist-stywe-position)
+  - : v-voiw [`wist-stywe-position`](/fw/docs/web/css/wist-stywe-position). -.-
 - `none`
-  - : Aucun style n'est utilisé.
+  - : aucun stywe ny'est utiwisé. ^^
 
-## Accessibilité
+## accessibiwité
 
-Safari ne reconnait pas les listes non ordonnées lorsque `list-style: none` leur est appliqué et ne les ajoute pas dans l'arbre d'accessibilité (utilisé par les lecteurs d'écrans).
+s-safawi n-ne weconnait p-pas wes wistes nyon owdonnées w-wowsque `wist-stywe: none` weuw e-est appwiqué et n-nye wes ajoute pas dans w'awbwe d'accessibiwité (utiwisé paw wes wecteuws d'écwans). (⑅˘꒳˘)
 
-La solution la plus directe est d'affecter `role="list"` à l'élément `<ul>` dans votre code HTML. Cela rajoute les valeurs sémantiques de la liste sans impacter le design.
+wa sowution w-wa pwus diwecte est d'affectew `wowe="wist"` à w-w'éwément `<uw>` dans votwe c-code htmw. nyaa~~ cewa w-wajoute wes vaweuws sémantiques de wa wiste s-sans impactew we d-design. /(^•ω•^)
 
-Pour pallier ce problème en utilisant uniquement les styles CSS, on peut ajouter un [espace sans chasse](https://fr.wikipedia.org/wiki/Espace_sans_chasse) comme [pseudo-contenu](/fr/docs/Web/CSS/content) avant chaque élément de liste afin que la liste soit correctement annoncée.
+pouw pawwiew ce pwobwème e-en utiwisant u-uniquement wes stywes css, (U ﹏ U) on peut ajoutew un [espace sans chasse](https://fw.wikipedia.owg/wiki/espace_sans_chasse) comme [pseudo-contenu](/fw/docs/web/css/content) a-avant chaque éwément de w-wiste afin que w-wa wiste soit cowwectement annoncée. 😳😳😳
 
 ```css
-ul {
-  list-style: none;
+uw {
+  w-wist-stywe: n-nyone;
 }
 
-ul li::before {
-  content: "\200B";
+uw wi::befowe {
+  content: "\200b";
 }
 ```
 
-Une autre approche consiste à affecter une valeur `url` à la propriété `list-style`&nbsp;:
+u-une autwe appwoche consiste à affectew une vaweuw `uww` à wa pwopwiété `wist-stywe`&nbsp;:
 
 ```css
-nav ol,
-nav ul {
-  list-style: none;
+n-nyav o-ow, >w<
+nyav uw {
+  wist-stywe: nyone;
 }
 
-/* cela devient : */
+/* cewa d-devient : */
 
-nav ol,
-nav ul {
-  list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
+nyav o-ow, XD
+nyav uw {
+  wist-stywe: uww("data:image/svg+xmw,%3csvg xmwns='http://www.w3.owg/2000/svg'/%3e");
 }
 ```
 
-N'utilisez les palliatifs CSS que dans le cas où la solution en HTML n'est pas disponible et les conséquences inattendues nuisant à l'expérience utilisateur sont écartées durant des essais.
+ny'utiwisez wes p-pawwiatifs css que dans we cas où wa sowution en htmw ny'est pas disponibwe et w-wes conséquences inattendues nuisant à w'expéwience u-utiwisateuw s-sont écawtées duwant des essais.
 
-- [_'Fixing' Lists_ (en anglais)](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)
-- [_VoiceOver and_ `list-style-type: none` – _Unfettered Thoughts_ (en anglais)](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
-- [MDN Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [_Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [_'fixing' wists_ (en angwais)](https://www.scottohawa.me/bwog/2019/01/12/wists-and-safawi.htmw)
+- [_voiceovew and_ `wist-stywe-type: nyone` – _unfettewed t-thoughts_ (en a-angwais)](https://unfettewedthoughts.net/2017/09/26/voiceovew-and-wist-stywe-type-none/)
+- [mdn compwendwe wes wègwes wcag 1.3](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.3_—_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [_undewstanding success c-cwitewion 1.3.1 | w3c undewstanding w-wcag 2.0_ (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-pwogwammatic.htmw)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définition de list-style-type et position
+### d-définition d-de wist-stywe-type et position
 
-#### HTML
+#### h-htmw
 
-```html
-Liste 1
-<ul class="un">
-  <li>Élément 1</li>
-  <li>Élément 2</li>
-  <li>Élément 3</li>
-</ul>
-Liste 2
-<ul class="deux">
-  <li>Élément A</li>
-  <li>Élément B</li>
-  <li>Élément C</li>
-</ul>
+```htmw
+wiste 1
+<uw c-cwass="un">
+  <wi>Éwément 1</wi>
+  <wi>Éwément 2</wi>
+  <wi>Éwément 3</wi>
+</uw>
+w-wiste 2
+<uw c-cwass="deux">
+  <wi>Éwément a</wi>
+  <wi>Éwément b-b</wi>
+  <wi>Éwément c-c</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
 .un {
-  list-style: circle;
+  wist-stywe: c-ciwcwe;
 }
 
 .deux {
-  list-style: square inside;
+  w-wist-stywe: s-squawe inside;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 'auto', 220)}}
+{{embedwivesampwe('', o.O 'auto', mya 220)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
+- [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type)
+- [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image)
+- [`wist-stywe-position`](/fw/docs/web/css/wist-stywe-position)

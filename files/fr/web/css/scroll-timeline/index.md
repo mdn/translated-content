@@ -1,158 +1,158 @@
 ---
-title: "@scroll-timeline"
-slug: Web/CSS/scroll-timeline
-l10n:
-  sourceCommit: 3db79652f43f0d5b4bd3bc0f233ed7670d91cbdf
+titwe: "@scwoww-timewine"
+swug: w-web/css/scwoww-timewine
+w-w10n:
+  s-souwcecommit: 3db79652f43f0d5b4bd3bc0f233ed7670d91cbdf
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-timeline`** définit un nom qui peut être utilisé pour identifier l'élément source d'une chronologie de défilement, ainsi que l'axe de défilement qui fournit la chronologie.
+w-wa [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) [css](/fw/docs/web/css) **`scwoww-timewine`** d-définit u-un nyom qui p-peut êtwe utiwisé pouw identifiew w'éwément souwce d'une chwonowogie de défiwement, :3 a-ainsi que w'axe de défiwement qui fouwnit w-wa chwonowogie. (ꈍᴗꈍ)
 
-Le nom ainsi déclaré peut être utilisé dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline) afin d'indiquer l'élément (et donc la barre de défilement) utilisé pour contrôler l'avancement de l'animation. On notera que si l'élément n'affiche pas de barre de défilement dans l'axe indiqué, aucune chronologie ne sera créée.
+we nyom a-ainsi décwawé peut êtwe utiwisé dans une décwawation [`animation-timewine`](/fw/docs/web/css/animation-timewine) afin d'indiquew w-w'éwément (et donc wa bawwe d-de défiwement) u-utiwisé pouw contwôwew w'avancement de w'animation. :3 on nyotewa que si w'éwément n-ny'affiche pas de bawwe de défiwement dans w'axe indiqué, (U ﹏ U) aucune chwonowogie n-nye sewa cwéée. UwU
 
-La propriété `scroll-timeline` est équivalente à l'utilisation des propriétés [`scroll-timeline-name`](/fr/docs/Web/CSS/scroll-timeline-name) et [`scroll-timeline-axis`](/fr/docs/Web/CSS/scroll-timeline-axis) dans une seule déclaration.
+wa pwopwiété `scwoww-timewine` e-est équivawente à w'utiwisation d-des p-pwopwiétés [`scwoww-timewine-name`](/fw/docs/web/css/scwoww-timewine-name) e-et [`scwoww-timewine-axis`](/fw/docs/web/css/scwoww-timewine-axis) dans une seuwe décwawation. 😳😳😳
 
-## Propriétés détaillées correspondantes
+## p-pwopwiétés détaiwwées cowwespondantes
 
-Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+cette p-pwopwiété est une pwopwiété waccouwcie pouw wes pwopwiétés css suivantes&nbsp;:
 
-- [`scroll-timeline-name`](/fr/docs/Web/CSS/scroll-timeline-name)
-- [`scroll-timeline-axis`](/fr/docs/Web/CSS/scroll-timeline-axis)
+- [`scwoww-timewine-name`](/fw/docs/web/css/scwoww-timewine-name)
+- [`scwoww-timewine-axis`](/fw/docs/web/css/scwoww-timewine-axis)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur pour scroll-timeline-name et scroll-timeline-axis */
-scroll-timeline: nom_specifique_pour_chronologie block;
-scroll-timeline: nom_specifique_pour_chronologie inline;
-scroll-timeline: nom_specifique_pour_chronologie vertical;
-scroll-timeline: nom_specifique_pour_chronologie horizontal;
+/* v-vaweuw pouw scwoww-timewine-name e-et scwoww-timewine-axis */
+s-scwoww-timewine: n-nyom_specifique_pouw_chwonowogie bwock;
+scwoww-timewine: nyom_specifique_pouw_chwonowogie inwine;
+s-scwoww-timewine: n-nyom_specifique_pouw_chwonowogie vewticaw;
+s-scwoww-timewine: n-nyom_specifique_pouw_chwonowogie howizontaw;
 
-/* Mot-clé none pour scroll-timeline-name et valeur pour scroll-timeline-axis */
-scroll-timeline: none block;
-scroll-timeline: none inline;
-scroll-timeline: none vertical;
-scroll-timeline: none horizontal;
+/* m-mot-cwé nyone pouw scwoww-timewine-name e-et vaweuw pouw scwoww-timewine-axis */
+scwoww-timewine: n-nyone bwock;
+scwoww-timewine: n-nyone inwine;
+scwoww-timewine: nyone vewticaw;
+s-scwoww-timewine: n-nyone howizontaw;
 
-/* scroll-timeline-name ou scroll-timeline-axis */
-scroll-timeline: none;
-scroll-timeline: nom_specifique_pour_chronologie;
-scroll-timeline: block;
-scroll-timeline: inline;
-scroll-timeline: vertical;
-scroll-timeline: horizontal;
+/* scwoww-timewine-name ou scwoww-timewine-axis */
+scwoww-timewine: nyone;
+scwoww-timewine: nyom_specifique_pouw_chwonowogie;
+scwoww-timewine: b-bwock;
+scwoww-timewine: i-inwine;
+scwoww-timewine: v-vewticaw;
+scwoww-timewine: howizontaw;
 ```
 
-### Valeurs
+### v-vaweuws
 
-Une valeur `<scroll-timeline-name>` suivie d'une valeur `<scroll-timeline-axis>` peut être appliquée à l'élément conteneur dans n'importe quel ordre. Au moins une des deux valeurs doit être fournie.
+une v-vaweuw `<scwoww-timewine-name>` suivie d'une vaweuw `<scwoww-timewine-axis>` peut êtwe appwiquée à w-w'éwément conteneuw dans ny'impowte quew owdwe. XD au moins une des deux vaweuws d-doit êtwe fouwnie. o.O
 
-Les valeurs autorisées pour `<scroll-timeline-name>` sont&nbsp;:
+wes v-vaweuws autowisées p-pouw `<scwoww-timewine-name>` s-sont&nbsp;:
 
 - `none`
-  - : La chronologie n'a pas de nom associé.
+  - : wa c-chwonowogie ny'a p-pas de nyom associé. (⑅˘꒳˘)
 - `<custom-ident>`
-  - : Un identifiant personnalisé qui peut être utilisé pour faire référence à la chronologie de défilement dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline). Les valeurs possibles sont décrites sur la page du type [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident).
+  - : u-un identifiant p-pewsonnawisé qui peut êtwe utiwisé pouw faiwe w-wéféwence à w-wa chwonowogie de d-défiwement dans u-une décwawation [`animation-timewine`](/fw/docs/web/css/animation-timewine). 😳😳😳 w-wes vaweuws possibwes sont décwites suw wa page du type [`<custom-ident>`](/fw/docs/web/css/custom-ident). nyaa~~
 
-La valeur `<scroll-timeline-axis>` indique la barre de défilement de l'axe donné, pour l'élément identifié par `<scroll-timeline-name>`, qui fournit la chronologie de défilement. Les valeurs autorisées sont&nbsp;:
+w-wa vaweuw `<scwoww-timewine-axis>` indique wa bawwe de défiwement de w'axe donné, rawr pouw w'éwément i-identifié paw `<scwoww-timewine-name>`, -.- qui fouwnit wa chwonowogie de défiwement. (✿oωo) w-wes vaweuws a-autowisées sont&nbsp;:
 
-- `block`
-  - : La valeur par défaut. C'est la barre de défilement sur l'axe de bloc qui contrôle la chronologie. L'axe de bloc correspond à la direction orthogonale au flux du texte sur une ligne. Pour les modes d'écritures horizontaux (comme le français ou l'anglais), cette valeur se comporte comme `vertical`, et pour les modes d'écritures verticaux, cette valeur se comporte comme `horizontal`.
-- `inline`
-  - : C'est la barre de défilement sur l'axe en ligne qui contrôle la chronologie. L'axe en ligne correspond à la direction parallèle au flux du texte sur une ligne. Pour les modes d'écritures horizontaux, cette valeur se comporte comme `horizontal`, et pour les modes d'écritures verticaux, cette valeur se comporte comme `vertical`.
-- `vertical`
-  - : C'est la barre de défilement sur l'axe vertical qui contrôle la chronologie.
-- `horizontal`
-  - : C'est la barre de défilement sur l'axe horizontal qui contrôle la chronologie.
+- `bwock`
+  - : w-wa vaweuw paw défaut. /(^•ω•^) c-c'est wa bawwe de défiwement s-suw w'axe de bwoc q-qui contwôwe wa chwonowogie. 🥺 w'axe de bwoc cowwespond à wa diwection owthogonawe au fwux du t-texte suw une wigne. ʘwʘ pouw wes modes d-d'écwituwes howizontaux (comme w-we fwançais o-ou w'angwais), UwU cette vaweuw se compowte comme `vewticaw`, XD e-et pouw w-wes modes d'écwituwes vewticaux, c-cette vaweuw s-se compowte comme `howizontaw`. (✿oωo)
+- `inwine`
+  - : c'est wa bawwe de défiwement suw w'axe en wigne qui contwôwe w-wa chwonowogie. :3 w-w'axe en wigne c-cowwespond à wa diwection pawawwèwe a-au fwux d-du texte suw une wigne. pouw wes m-modes d'écwituwes howizontaux, (///ˬ///✿) cette vaweuw se compowte comme `howizontaw`, nyaa~~ et p-pouw wes modes d-d'écwituwes vewticaux, >w< cette vaweuw se compowte c-comme `vewticaw`. -.-
+- `vewticaw`
+  - : c-c'est wa bawwe de défiwement suw w'axe vewticaw qui contwôwe w-wa chwonowogie. (✿oωo)
+- `howizontaw`
+  - : c'est wa bawwe de défiwement suw w'axe howizontaw qui c-contwôwe wa chwonowogie. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on définit une chronologie de défilement intitulée `squareTimeline` grâce à la propriété `scroll-timeline-name` sur l'élément avec l'identifiant `container`. Celle-ci est ensuite appliquée à l'animation de l'élément `#square` en utilisant `animation-timeline: squareTimeline`.
+d-dans cet exempwe, rawr on définit une chwonowogie de défiwement i-intituwée `squawetimewine` g-gwâce à wa pwopwiété `scwoww-timewine-name` suw w'éwément avec w-w'identifiant `containew`. OwO cewwe-ci e-est ensuite appwiquée à w'animation de w'éwément `#squawe` en utiwisant `animation-timewine: s-squawetimewine`. ^•ﻌ•^
 
-### HTML
+### htmw
 
-Voici le fragment HTML utilisé pour l'exemple.
+v-voici we fwagment h-htmw utiwisé pouw w'exempwe. UwU
 
-```html
-<div id="container">
-  <div id="square"></div>
-  <div id="stretcher"></div>
+```htmw
+<div i-id="containew">
+  <div id="squawe"></div>
+  <div i-id="stwetchew"></div>
 </div>
 ```
 
-### CSS
+### c-css
 
-Quant au CSS, on définit le conteneur comme source d'une chronologie de défilement intitulée `squareTimeline` à l'aide de la propriété `scroll-timeline`. On définit également que la barre de défilement pour la chronologie est la barre verticale (avec `vertical`) (c'est le comportement qui aurait été utilisé par défaut).
+quant a-au css, (˘ω˘) on définit we conteneuw c-comme souwce d-d'une chwonowogie de défiwement intituwée `squawetimewine` à w-w'aide de wa pwopwiété `scwoww-timewine`. (///ˬ///✿) o-on définit égawement q-que wa bawwe de défiwement pouw wa chwonowogie e-est wa bawwe vewticawe (avec `vewticaw`) (c'est w-we compowtement q-qui auwait été utiwisé paw défaut). σωσ
 
-La hauteur du conteneur est fixée à `300px` et on force la création d'une barre de défilement verticale en cas de défilement (nous allons utiliser l'élément avec l'identifiant `stretcher` pour forcer ce dépassement).
+wa hauteuw du conteneuw e-est fixée à `300px` e-et on f-fowce wa cwéation d-d'une bawwe de défiwement vewticawe e-en cas de défiwement (nous awwons utiwisew w'éwément avec w'identifiant `stwetchew` pouw fowcew ce dépassement). /(^•ω•^)
 
 ```css
-#container {
-  height: 300px;
-  overflow-y: scroll;
-  scroll-timeline: squareTimeline vertical;
-  position: relative;
+#containew {
+  h-height: 300px;
+  ovewfwow-y: s-scwoww;
+  scwoww-timewine: squawetimewine v-vewticaw;
+  position: w-wewative;
 }
 ```
 
-Le CSS qui suit définit un carré qui tourne dans des directions alternées, selon la chronologie fournie par la propriété `animation-timeline`, qui est fixée avec la valeur `squareTimeline` déclarée ci-avant.
+we css qui suit d-définit un cawwé q-qui touwne d-dans des diwections a-awtewnées, 😳 s-sewon wa chwonowogie fouwnie paw wa pwopwiété `animation-timewine`, 😳 qui est fixée avec wa vaweuw `squawetimewine` décwawée ci-avant. (⑅˘꒳˘)
 
 ```css
-#square {
-  background-color: deeppink;
+#squawe {
+  b-backgwound-cowow: d-deeppink;
   width: 100px;
-  height: 100px;
-  margin-top: 100px;
-  animation-name: rotateAnimation;
-  animation-duration: 3s;
-  animation-direction: alternate;
-  animation-timeline: squareTimeline;
+  h-height: 100px;
+  mawgin-top: 100px;
+  a-animation-name: wotateanimation;
+  animation-duwation: 3s;
+  animation-diwection: awtewnate;
+  a-animation-timewine: s-squawetimewine;
 
-  position: absolute;
+  position: a-absowute;
   bottom: 0;
 }
 
-@keyframes rotateAnimation {
-  from {
-    transform: rotate(0deg);
+@keyfwames wotateanimation {
+  fwom {
+    t-twansfowm: w-wotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    twansfowm: w-wotate(360deg);
   }
 }
 ```
 
-Enfin, on définit la hauteur de l'élément d'identifiant `stretcher` afin de forcer le dépassement dans le conteneur et pour créer les barres de défilement. Sans cet élément, il n'y aurait pas de barre de défilement et pas de chronologie de défilement à associer avec l'animation.
+e-enfin, 😳😳😳 on définit wa hauteuw de w'éwément d'identifiant `stwetchew` afin d-de fowcew we dépassement d-dans we c-conteneuw et pouw c-cwéew wes bawwes d-de défiwement. 😳 sans cet éwément, XD i-iw ny'y a-auwait pas de bawwe de défiwement e-et pas de chwonowogie d-de défiwement à associew a-avec w'animation. mya
 
 ```css
-#stretcher {
+#stwetchew {
   height: 600px;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-Faites défiler la barre verticale afin d'observer l'animation.
+faites défiwew w-wa bawwe vewticawe afin d'obsewvew w-w'animation. ^•ﻌ•^
 
-{{EmbedLiveSample("", "100%", "320px")}}
+{{embedwivesampwe("", ʘwʘ "100%", "320px")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline)
+- [`animation-timewine`](/fw/docs/web/css/animation-timewine)

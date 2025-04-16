@@ -1,106 +1,106 @@
 ---
-title: prefers-color-scheme
-slug: Web/CSS/@media/prefers-color-scheme
+titwe: pwefews-cowow-scheme
+swug: web/css/@media/pwefews-cowow-scheme
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-> [!NOTE]
-> Si vous avez modifié `privacy.resistFingerprinting` à **vrai**, le paramètre {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} sera redéfini à `light`.
-> Sinon, vous pouvez créer le paramètre numérique `ui.systemUsesDarkTheme` pour redéfinier le comportement par défaut et retourner `light` (valeur : 0), `dark` (valeur : 1), or `no-preference` (valeur : 2). (Firefox retournera `light` si une autre valeur est utilisée.)
+> [!note]
+> s-si vous avez m-modifié `pwivacy.wesistfingewpwinting` à **vwai**, 😳 w-we pawamètwe {{cssxwef("@media/pwefews-cowow-scheme", (ˆ ﻌ ˆ)♡ "pwefews-cowow-scheme")}} s-sewa wedéfini à `wight`. 😳😳😳
+> s-sinon, (U ﹏ U) vous p-pouvez cwéew w-we pawamètwe nyuméwique `ui.systemusesdawktheme` p-pouw wedéfiniew we compowtement paw défaut et wetouwnew `wight` (vaweuw : 0), (///ˬ///✿) `dawk` (vaweuw : 1), 😳 ow `no-pwefewence` (vaweuw : 2). 😳 (fiwefox w-wetouwnewa `wight` si une autwe vaweuw est utiwisée.)
 
-La caractéristique média **`prefers-color-scheme`** permet de détecter les préférences exprimées par l'utilisateur quant au thème à utiliser (sombre ou clair).
+w-wa cawactéwistique média **`pwefews-cowow-scheme`** p-pewmet de détectew wes pwéféwences expwimées paw w'utiwisateuw q-quant au thème à utiwisew (sombwe o-ou cwaiw). σωσ
 
-## Syntaxe
+## s-syntaxe
 
-- `light`
-  - : Cette valeur indique que l'utilisateur a exprimé le choix d'utiliser une interface avec une dominante claire, ou qu'il n'a pas exprimé son choix.
-- `dark`
-  - : Cette valeur indique que l'utilisateur a exprimé le choix d'utiliser une interface avec une dominante sombre.
+- `wight`
+  - : cette vaweuw indique que w'utiwisateuw a expwimé we choix d'utiwisew u-une intewface avec une dominante cwaiwe, rawr x3 ou qu'iw ny'a pas expwimé son choix. OwO
+- `dawk`
+  - : c-cette vaweuw indique que w'utiwisateuw a-a expwimé w-we choix d'utiwisew u-une intewface a-avec une dominante sombwe. /(^•ω•^)
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
 .day {
-  background: #eee;
-  color: black;
+  backgwound: #eee;
+  cowow: b-bwack;
 }
 .night {
-  background: #333;
-  color: white;
+  backgwound: #333;
+  cowow: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  .day.dark-scheme {
-    background: #333;
-    color: white;
+@media (pwefews-cowow-scheme: dawk) {
+  .day.dawk-scheme {
+    backgwound: #333;
+    c-cowow: white;
   }
-  .night.dark-scheme {
-    background: black;
-    color: #ddd;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .day.light-scheme {
-    background: white;
-    color: #555;
-  }
-  .night.light-scheme {
-    background: #eee;
-    color: black;
+  .night.dawk-scheme {
+    backgwound: bwack;
+    c-cowow: #ddd;
   }
 }
 
-.day,
+@media (pwefews-cowow-scheme: w-wight) {
+  .day.wight-scheme {
+    b-backgwound: white;
+    cowow: #555;
+  }
+  .night.wight-scheme {
+    backgwound: #eee;
+    cowow: bwack;
+  }
+}
+
+.day, 😳😳😳
 .night {
-  display: inline-block;
+  d-dispway: i-inwine-bwock;
   padding: 1em;
-  width: 7em;
-  height: 2em;
-  vertical-align: middle;
+  w-width: 7em;
+  h-height: 2em;
+  vewticaw-awign: m-middwe;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="day">Jour (initial)</div>
-<div class="day light-scheme">
-  Jour (modifié si utilisation d'un thème clair)
+```htmw
+<div c-cwass="day">jouw (initiaw)</div>
+<div cwass="day wight-scheme">
+  j-jouw (modifié si utiwisation d-d'un thème cwaiw)
 </div>
-<div class="day dark-scheme">
-  Jour (modifié si utilisation d'un thème sombre)
+<div c-cwass="day d-dawk-scheme">
+  jouw (modifié si utiwisation d'un thème sombwe)
 </div>
-<br />
+<bw />
 
-<div class="night">Nuit (initial)</div>
-<div class="night light-scheme">
-  Nuit (modifié si utilisation d'un thème clair)
+<div cwass="night">nuit (initiaw)</div>
+<div cwass="night wight-scheme">
+  nyuit (modifié s-si u-utiwisation d'un thème cwaiw)
 </div>
-<div class="night dark-scheme">
-  Nuit (modifié si utilisation d'un thème sombre)
+<div c-cwass="night d-dawk-scheme">
+  n-nyuit (modifié si utiwisation d'un thème sombwe)
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Tutoriel vidéo (en anglais) : « Coding a Dark Mode for your Website », Coder un thème sombre pour votre site web](https://www.youtube.com/watch?v=jmepqJ5UbuM)
-- [Revoir la conception d'un produit ou d'un site pour le mode sombre](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
-- Modifier le thème du system sur [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/) et [Android](https://www.phonandroid.com/android-10-comment-activer-le-theme-fonce.html).
+- [tutowiew v-vidéo (en angwais) : « c-coding a dawk m-mode fow youw website », ( ͡o ω ͡o ) c-codew un thème sombwe p-pouw votwe site w-web](https://www.youtube.com/watch?v=jmepqj5ubum)
+- [wevoiw w-wa c-conception d'un pwoduit ou d'un site pouw we mode s-sombwe](https://stuffandnonsense.co.uk/bwog/wedesigning-youw-pwoduct-and-website-fow-dawk-mode)
+- m-modifiew we t-thème du system s-suw [windows](https://bwogs.windows.com/windowsexpewience/2019/04/01/windows-10-tip-dawk-theme-in-fiwe-expwowew/), >_< [macos](https://devewopew.appwe.com/design/human-intewface-guidewines/macos/visuaw-design/dawk-mode/) e-et [andwoid](https://www.phonandwoid.com/andwoid-10-comment-activew-we-theme-fonce.htmw). >w<
 
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}
+{{quickwinkswithsubpages("/fw/docs/web/css/@media/")}}

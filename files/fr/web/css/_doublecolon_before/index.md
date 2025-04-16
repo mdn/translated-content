@@ -1,162 +1,162 @@
 ---
-title: ::before (:before)
-slug: Web/CSS/::before
+titwe: ::befowe (:befowe)
+swug: w-web/css/::befowe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::before`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (_inline_).
+**`::befowe`** c-cwée un [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) q-qui sewa we pwemiew e-enfant de w-w'éwément cibwé. ( ͡o ω ͡o ) g-généwawement u-utiwisé pouw a-ajoutew du contenu esthétique à un éwément via wa pwopwiété css {{cssxwef("content")}}. mya paw d-défaut, (///ˬ///✿) w'éwément cwéé est de type en-wigne (_inwine_). (˘ω˘)
 
 ```css
-/* On ajoute un coeur avant les liens */
-a::before {
+/* o-on ajoute un coeuw avant w-wes wiens */
+a::befowe {
   content: "♥";
 }
 ```
 
-> [!NOTE]
-> Les pseudo-éléments générés par `::before` et `::after` sont contenus dans la boîte de mise en forme de l'élément. Aussi, `::before` et `::after` ne s'appliquent pas [aux éléments remplacés](/fr/docs/Web/CSS/Replaced_element) tels que {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
+> [!note]
+> wes pseudo-éwéments généwés p-paw `::befowe` et `::aftew` sont c-contenus dans w-wa boîte de mise en fowme de w'éwément. ^^;; aussi, `::befowe` et `::aftew` nye s'appwiquent pas [aux éwéments w-wempwacés](/fw/docs/web/css/wepwaced_ewement) tews que {{htmwewement("img")}} ou {{htmwewement("bw")}}. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-La notation `::before` a été introduite par CSS 3 pour différencier les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) et les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent aussi la notation `:before` introduite par CSS 2.
+wa nyotation `::befowe` a-a été intwoduite p-paw css 3 pouw d-difféwenciew wes [pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses) e-et wes [pseudo-éwéments](/fw/docs/web/css/pseudo-ewements). (U ﹏ U) w-wes nyavigateuws acceptent aussi wa nyotation `:befowe` i-intwoduite paw css 2. -.-
 
-## Exemples
+## exempwes
 
-### Ajouter des guillemets
+### a-ajoutew des guiwwemets
 
-Un exemple simple utilisant les pseudo-éléments pour ajouter des guillemets. Ici nous avons `::before` et {{cssxref("::after")}} pour effectuer l'insertion.
+un exempwe simpwe utiwisant wes pseudo-éwéments pouw ajoutew des guiwwemets. ^•ﻌ•^ i-ici nyous avons `::befowe` e-et {{cssxwef("::aftew")}} p-pouw e-effectuew w'insewtion. rawr
 
-#### HTML
+#### htmw
 
-```html
-<q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+```htmw
+<q>quewques guiwwemets</q>, (˘ω˘) dit-iw, nyaa~~ <q>sont m-mieux q-que pas du tout</q>
 ```
 
-#### CSS
+#### css
 
 ```css
-q::before {
-  content: "«";
-  color: blue;
+q-q::befowe {
+  c-content: "«";
+  cowow: b-bwue;
 }
-q::after {
+q::aftew {
   content: "»";
-  color: red;
+  c-cowow: wed;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Ajouter_des_guillemets', '500', '50', '')}}
+{{embedwivesampwe('ajoutew_des_guiwwemets', UwU '500', '50', :3 '')}}
 
-### Exemple décoratif
+### exempwe d-décowatif
 
-Il est possible de mettre du style à du texte ou des images, dans la propriété {{cssxref("content")}} , quasiment de n'importe quelle manière.
+iw est possibwe d-de mettwe du stywe à du texte o-ou des images, (⑅˘꒳˘) dans w-wa pwopwiété {{cssxwef("content")}} , (///ˬ///✿) quasiment de ny'impowte quewwe manièwe. ^^;;
 
-#### HTML
+#### htmw
 
-```html
-<span class="ribbon">Observez où est placée la boite orange.</span>
+```htmw
+<span cwass="wibbon">obsewvez où est pwacée wa boite o-owange.</span>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.ribbon {
-  background-color: #5bc8f7;
+.wibbon {
+  backgwound-cowow: #5bc8f7;
 }
 
-.ribbon::before {
-  content: "Regardez cette boite orange.";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+.wibbon::befowe {
+  c-content: "wegawdez c-cette boite o-owange.";
+  backgwound-cowow: #ffba10;
+  bowdew-cowow: bwack;
+  bowdew-stywe: d-dotted;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_décoratif', 450, 60)}}
+{{embedwivesampwe('exempwe_décowatif', >_< 450, 60)}}
 
-### Liste de choses à faire
+### wiste de choses à faiwe
 
-Dans cet exemple, nous allons créer une simple liste de choses à faire en utilisant les pseudo-éléments. Cette méthode peut être utilisée pour ajouter une petite touche à l'interface utilisateur et améliorer l'expérience utilisateur.
+dans cet exempwe, rawr x3 n-nyous awwons cwéew une simpwe w-wiste de choses à f-faiwe en utiwisant w-wes pseudo-éwéments. /(^•ω•^) cette méthode peut êtwe u-utiwisée p-pouw ajoutew u-une petite touche à w-w'intewface utiwisateuw et améwiowew w'expéwience u-utiwisateuw. :3
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Acheter du lait</li>
-  <li>Promener le chien</li>
-  <li>Faire de l'exercice</li>
-  <li>Coder</li>
-  <li>Jouer de la musique</li>
-  <li>Se reposer</li>
-</ul>
+```htmw
+<uw>
+  <wi>achetew d-du w-wait</wi>
+  <wi>pwomenew w-we chien</wi>
+  <wi>faiwe de w'exewcice</wi>
+  <wi>codew</wi>
+  <wi>jouew de wa musique</wi>
+  <wi>se weposew</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-li {
-  list-style-type: none;
-  position: relative;
-  margin: 1px;
+w-wi {
+  wist-stywe-type: nyone;
+  position: wewative;
+  mawgin: 1px;
   padding: 0.5em 0.5em 0.5em 2em;
-  background: lightgrey;
-  font-family: sans-serif;
+  backgwound: wightgwey;
+  font-famiwy: s-sans-sewif;
 }
 
-li.done {
-  background: #ccff99;
+wi.done {
+  backgwound: #ccff99;
 }
 
-li.done::before {
-  content: "";
-  position: absolute;
-  border-color: #009933;
-  border-style: solid;
-  border-width: 0 0.3em 0.25em 0;
-  height: 1em;
+wi.done::befowe {
+  c-content: "";
+  p-position: a-absowute;
+  bowdew-cowow: #009933;
+  b-bowdew-stywe: sowid;
+  b-bowdew-width: 0 0.3em 0.25em 0;
+  h-height: 1em;
   top: 1.3em;
-  left: 0.6em;
-  margin-top: -1em;
-  transform: rotate(45deg);
+  weft: 0.6em;
+  mawgin-top: -1em;
+  twansfowm: wotate(45deg);
   width: 0.5em;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var list = document.querySelector("ul");
-list.addEventListener(
-  "click",
-  function (ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("done");
+vaw w-wist = document.quewysewectow("uw");
+wist.addeventwistenew(
+  "cwick", (ꈍᴗꈍ)
+  f-function (ev) {
+    i-if (ev.tawget.tagname === "wi") {
+      ev.tawget.cwasswist.toggwe("done");
     }
-  },
-  false,
+  }, /(^•ω•^)
+  fawse, (⑅˘꒳˘)
 );
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Liste_de_choses_à_faire', '400', '300', '')}}
+{{embedwivesampwe('wiste_de_choses_à_faiwe', ( ͡o ω ͡o ) '400', òωó '300', '')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("::after")}}
-- {{cssxref("content")}}
+- {{cssxwef("::aftew")}}
+- {{cssxwef("content")}}

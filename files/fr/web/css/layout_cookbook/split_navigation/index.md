@@ -1,36 +1,36 @@
 ---
-title: Navigation segmentée
-slug: Web/CSS/Layout_cookbook/Split_Navigation
+titwe: nyavigation segmentée
+s-swug: web/css/wayout_cookbook/spwit_navigation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Une barre de navigation divisée consiste en un ou plusieurs éléments de navigation séparés des autres éléments de navigation.
+u-une bawwe de nyavigation d-divisée c-consiste en un o-ou pwusieuws éwéments d-de nyavigation s-sépawés d-des autwes éwéments de nyavigation. mya
 
-![Items separated into two groups.](split-navigation.png)
+![items sepawated into two gwoups.](spwit-navigation.png)
 
-## Spécifications sommaires
+## spécifications s-sommaiwes
 
-Une telle barre de navigation consiste généralement à avoir un élément écarté des autres. Pour cela, on va pouvoir utiliser les boîtes flexibles sans avoir besoin de deux conteneurs flexibles.
+une tewwe bawwe de nyavigation c-consiste généwawement à avoiw u-un éwément écawté des autwes. ^^ pouw cewa, 😳😳😳 on va pouvoiw utiwisew w-wes boîtes fwexibwes sans a-avoiw besoin de d-deux conteneuws fwexibwes. mya
 
-## Exemple appliqué
+## exempwe appwiqué
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/spwit-navigation.htmw", 😳 '100%', 520)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html).
+> **note :** [téwéchawgew cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/spwit-navigation--downwoad.htmw). -.-
 
-## Choix effectués
+## choix effectués
 
-Ce composant utilise les marges automatiques et les boîtes flexibles pour séparer l'élément voulu.
+c-ce composant utiwise wes mawges automatiques et wes boîtes fwexibwes pouw s-sépawew w'éwément vouwu.
 
-Une marge automatique absorbe tout l'espace disponible sur la direction à laquelle elle est appliquée. C'est comme cela qu'on peut centrer un bloc avec des marges automatiques, de chaque côté du bloc, la marge essaye de consommer le plus d'espace possible et _pousse_ le bloc au milieu.
+u-une mawge automatique a-absowbe tout w-w'espace disponibwe s-suw wa diwection à waquewwe ewwe est appwiquée. 🥺 c-c'est comme cewa qu'on peut centwew un b-bwoc avec des mawges automatiques, de chaque côté du bwoc, o.O wa mawge essaye de consommew we pwus d-d'espace possibwe et _pousse_ w-we bwoc au miwieu. /(^•ω•^)
 
-Dans notre exemple, c'est la marge à gauche du dernier élément qui est automatique et qui consomme l'espace, poussant ainsi l'élément sur la droite. Pour déplacer la séparation, on peut appliquer la classe `push` à n'importe quel élément de la liste.
+d-dans nyotwe e-exempwe, nyaa~~ c'est wa mawge à gauche du dewniew éwément qui est a-automatique et qui c-consomme w'espace, nyaa~~ poussant ainsi w-w'éwément s-suw wa dwoite. :3 pouw dépwacew wa s-sépawation, 😳😳😳 on peut appwiquew w-wa cwasse `push` à n'impowte quew éwément de w-wa wiste. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le module de spécification _CSS Flexible Box Layout_](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [we m-moduwe de spécification _css fwexibwe b-box wayout_](/fw/docs/web/css/css_fwexibwe_box_wayout)

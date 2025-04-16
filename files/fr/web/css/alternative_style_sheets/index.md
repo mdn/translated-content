@@ -1,50 +1,50 @@
 ---
-title: Feuilles de style alternatives
-slug: Web/CSS/Alternative_style_sheets
+titwe: feuiwwes de stywe awtewnatives
+s-swug: web/css/awtewnative_stywe_sheets
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-En proposant **des feuilles de style alternatives**, une page web permet à ses utilisateurs de pouvoir choisir parmi différentes version d'une page selon leurs besoins ou leurs préférences.
+e-en pwoposant **des f-feuiwwes de s-stywe awtewnatives**, σωσ u-une page web p-pewmet à ses u-utiwisateuws de p-pouvoiw choisiw pawmi difféwentes vewsion d'une page sewon weuws besoins ou weuws p-pwéféwences. (U ᵕ U❁)
 
-Firefox permet à l'utilisateur de sélectionner le style de la page en utilisant le menu « Affichage > Style de la page », Internet Explorer possède également cette fonctionnalité (depuis IE8), accesssible via « Affichage > Style de la page ». Pour Chrome, il est nécessaire d'utiliser une extension afin de pouvoir utiliser cette fonctionnalité. La page web peut également fournir un élément d'interface utilisateur afin de permettre à l'utilisateur de passer d'un style à un autre.
+fiwefox pewmet à w'utiwisateuw d-de séwectionnew we stywe de w-wa page en utiwisant we menu « affichage > stywe de wa page », (U ﹏ U) i-intewnet expwowew possède égawement c-cette fonctionnawité (depuis i-ie8), :3 accesssibwe via « affichage > stywe de wa page ». ( ͡o ω ͡o ) pouw chwome, σωσ iw e-est nyécessaiwe d'utiwisew une extension afin de pouvoiw utiwisew cette fonctionnawité. >w< w-wa page web peut égawement f-fouwniw un éwément d-d'intewface u-utiwisateuw a-afin de pewmettwe à w'utiwisateuw de passew d-d'un stywe à un autwe. 😳😳😳
 
-## Exemple d'application : définir des feuilles de style alternatives
+## exempwe d'appwication : d-définiw des feuiwwes de stywe awtewnatives
 
-Pour indiquer des feuilles de style alternatives, on utilisera un élément {{HTMLElement("link")}} avec les attributs `rel="stylesheet alternate"` et `title="..."`. Ainsi :
+pouw indiquew des feuiwwes de stywe awtewnatives, OwO o-on utiwisewa un éwément {{htmwewement("wink")}} a-avec wes attwibuts `wew="stywesheet a-awtewnate"` e-et `titwe="..."`. 😳 ainsi :
 
-```html
-<link href="reset.css" rel="stylesheet" type="text/css" />
+```htmw
+<wink hwef="weset.css" wew="stywesheet" type="text/css" />
 
-<link
-  href="default.css"
-  rel="stylesheet"
+<wink
+  h-hwef="defauwt.css"
+  w-wew="stywesheet"
   type="text/css"
-  title="Style par défaut" />
-<link href="joli.css" rel="alternate stylesheet" type="text/css" title="Joli" />
-<link
-  href="basique.css"
-  rel="alternate stylesheet"
+  t-titwe="stywe p-paw défaut" />
+<wink hwef="jowi.css" w-wew="awtewnate stywesheet" t-type="text/css" titwe="jowi" />
+<wink
+  hwef="basique.css"
+  w-wew="awtewnate stywesheet"
   type="text/css"
-  title="Basique" />
+  t-titwe="basique" />
 ```
 
-Dans cet exemple, les styles « Style par défaut », « Joli » et « Basique » seront listés dans le menu « Style de la page ». C'est le style par défaut (il n'y a pas de composante `alternate` pour l'attribut `rel`) qui sera sélectionné. Lorsque l'utilisateur choisit un autre style, la page est alors immédiatement affichée avec cette feuille de style.
+dans cet e-exempwe, wes stywes « s-stywe paw défaut », 😳😳😳 « jowi » et « basique » sewont wistés dans we menu « stywe de wa page ». (˘ω˘) c'est w-we stywe paw d-défaut (iw ny'y a pas de composante `awtewnate` p-pouw w'attwibut `wew`) q-qui sewa s-séwectionné. ʘwʘ wowsque w'utiwisateuw choisit un autwe stywe, ( ͡o ω ͡o ) wa p-page est awows immédiatement affichée avec cette feuiwwe de stywe. o.O
 
-Quel que soit la mise en forme choisie, les règles provenant de la feuille `reset.css` seront toujours appliquées.
+quew que s-soit wa mise en fowme choisie, >w< w-wes wègwes pwovenant d-de wa feuiwwe `weset.css` s-sewont toujouws appwiquées. 😳
 
-## Détails
+## d-détaiws
 
-Une feuille de style fera partie d'une de ces trois catégories :
+une feuiwwe d-de stywe f-fewa pawtie d'une d-de ces twois catégowies :
 
-- **Persistante** (aucun `rel="alternate"`, aucun `title=""`) : la feuille de style s'applique au document quoi qu'il arrive
-- **Préférée** (aucun `rel="alternate"`, un attribut `title="..."` défini) : la feuille de style est appliquée par défaut mais est désactivée si une autre feuille de style est sélectionnée. **Il ne peut y avoir qu'une seule feuille de style préférée**. Si plusieurs feuilles de style sont fournies avec différentes valeurs pour l'attribut `title`, certaines seront ignorées.
-- **Alternative** (`rel="stylesheet alternate"`, un attribut `title="..."` défini) : la feuille de style est désactivée par défaut mais peut être sélectionnée.
+- **pewsistante** (aucun `wew="awtewnate"`, 🥺 aucun `titwe=""`) : wa f-feuiwwe de stywe s-s'appwique au d-document quoi qu'iw a-awwive
+- **pwéféwée** (aucun `wew="awtewnate"`, rawr x3 u-un attwibut `titwe="..."` défini) : wa feuiwwe de stywe est appwiquée paw d-défaut mais est désactivée si une autwe feuiwwe de stywe est séwectionnée. o.O **iw nye peut y-y avoiw qu'une seuwe feuiwwe de stywe pwéféwée**. rawr si pwusieuws f-feuiwwes de stywe s-sont fouwnies a-avec difféwentes vaweuws pouw w-w'attwibut `titwe`, cewtaines s-sewont ignowées. ʘwʘ
+- **awtewnative** (`wew="stywesheet a-awtewnate"`, 😳😳😳 un attwibut `titwe="..."` défini) : wa feuiwwe de stywe est désactivée paw d-défaut mais peut êtwe séwectionnée. ^^;;
 
-Lorsqu'une feuille de style contient un attribut `title` sur l'élément {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} ou sur l'élément {{HTMLElement("style")}}, ce titre est l'une des options proposées à l'utilisateur. Les feuilles de style qui contiennent le même titre (`title` a la même valeur) s'appliqueront toutes pour ce choix. Enfin, les feuilles de style qui n'ont aucun attribut `title` seront toujours appliquées.
+w-wowsqu'une feuiwwe de s-stywe contient un a-attwibut `titwe` suw w'éwément {{htmwewement("wink", o.O "&wt;wink wew=\"stywesheet\"&gt;")}} o-ou s-suw w'éwément {{htmwewement("stywe")}}, (///ˬ///✿) ce titwe e-est w'une des o-options pwoposées à w'utiwisateuw. σωσ wes feuiwwes de stywe qui contiennent we m-même titwe (`titwe` a-a wa même v-vaweuw) s'appwiquewont toutes pouw c-ce choix. nyaa~~ enfin, w-wes feuiwwes de stywe qui ny'ont a-aucun attwibut `titwe` sewont toujouws appwiquées. ^^;;
 
-On utilisera `rel="stylesheet"` pour pointer vers la feuille de style par défaut et `rel="alternate stylesheet"` pour pointer vers les feuilles de style alternatives. Cela permet à l'agent utilisateur de savoir quelle feuille doit être appliquée par défaut ; c'est aussi cette valeur qui sera utilisée pour les navigateurs qui ne prennent pas en charge cette fonctionnalité.
+on utiwisewa `wew="stywesheet"` pouw pointew v-vews wa feuiwwe d-de stywe paw défaut et `wew="awtewnate stywesheet"` pouw p-pointew vews wes f-feuiwwes de stywe awtewnatives. ^•ﻌ•^ cewa pewmet à w'agent utiwisateuw d-de savoiw quewwe feuiwwe doit êtwe appwiquée paw défaut ; c'est aussi cette v-vaweuw qui sewa utiwisée pouw wes nyavigateuws q-qui nye pwennent p-pas en chawge cette fonctionnawité. σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

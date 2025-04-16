@@ -1,305 +1,305 @@
 ---
-title: flex
-slug: Web/CSS/flex
+titwe: fwex
+swug: web/css/fwex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`flex`** est une propriété raccourcie qui définit la capacité d'un élément flexible à modifier ses dimensions afin de remplir l'espace disponible de son conteneur.
+w-wa pwopwiété **`fwex`** e-est u-une pwopwiété w-waccouwcie qui d-définit wa capacité d-d'un éwément f-fwexibwe à m-modifiew ses dimensions afin de wempwiw w'espace disponibwe de son conteneuw. (ˆ ﻌ ˆ)♡
 
-Les propriétés détaillées correspondantes à cette propriété raccourcie sont {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}.
+w-wes pwopwiétés détaiwwées cowwespondantes à cette pwopwiété w-waccouwcie sont {{cssxwef("fwex-gwow")}}, (U ﹏ U) {{cssxwef("fwex-shwink")}} et {{cssxwef("fwex-basis")}}. UwU
 
-Les éléments flexibles peuvent être étirés ou réduits pour utiliser un espace proportionnel à leur coefficient de grossissement ou de rétrécissement afin de ne pas dépasser d'un conteneur.
+w-wes éwéments fwexibwes peuvent êtwe étiwés ou wéduits p-pouw utiwisew un espace pwopowtionnew à w-weuw c-coefficient de gwossissement ou de wétwécissement afin de nye pas dépassew d'un c-conteneuw. XD
 
-{{InteractiveExample("CSS Demo: flex")}}
+{{intewactiveexampwe("css demo: fwex")}}
 
-```css interactive-example-choice
-flex: 1;
+```css intewactive-exampwe-choice
+fwex: 1;
 ```
 
-```css interactive-example-choice
-flex: 2;
+```css i-intewactive-exampwe-choice
+fwex: 2;
 ```
 
-```css interactive-example-choice
-flex: 1 30px;
+```css i-intewactive-exampwe-choice
+f-fwex: 1 30px;
 ```
 
-```css interactive-example-choice
-flex: 1 1 100px;
+```css i-intewactive-exampwe-choice
+f-fwex: 1 1 100px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Change me</div>
-  <div>flex: 1</div>
-  <div>flex: 1</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">change me</div>
+  <div>fwex: 1</div>
+  <div>fwex: 1</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  bowdew: 1px sowid #c5c5c5;
   width: auto;
   max-height: 300px;
-  display: flex;
+  dispway: f-fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
+.defauwt-exampwe > div {
+  b-backgwound-cowow: w-wgba(0, ʘwʘ 0, 255, 0.2);
+  bowdew: 3px s-sowid bwue;
+  mawgin: 10px;
+  fwex-gwow: 1;
+  fwex-shwink: 1;
+  f-fwex-basis: 0;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  b-backgwound-cowow: wgba(255, rawr x3 0, 200, 0.2);
+  b-bowdew: 3px s-sowid webeccapuwpwe;
 }
 ```
 
-## Description
+## d-descwiption
 
-Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initial`, `none` ou un nombre positif sans unité. Pour voir l'effet de ces valeurs, essayez de redimensionner les conteneurs flexibles ci-après :
+pouw wa pwupawt d-des cas, ^^;; on utiwisewa une des vaweuws suivantes : `auto`, `initiaw`, ʘwʘ `none` o-ou un nyombwe positif sans unité. (U ﹏ U) p-pouw voiw w'effet de ces vaweuws, (˘ω˘) e-essayez de w-wedimensionnew wes conteneuws fwexibwes ci-apwès :
 
-```html hidden
-<div class="flex-container">
-  <div class="item auto">auto</div>
-  <div class="item auto">auto</div>
-  <div class="item auto">auto</div>
+```htmw hidden
+<div cwass="fwex-containew">
+  <div cwass="item auto">auto</div>
+  <div cwass="item a-auto">auto</div>
+  <div c-cwass="item auto">auto</div>
 </div>
 
-<div class="flex-container">
-  <div class="item auto">auto</div>
-  <div class="item initial">initial</div>
-  <div class="item initial">initial</div>
+<div cwass="fwex-containew">
+  <div c-cwass="item a-auto">auto</div>
+  <div cwass="item i-initiaw">initiaw</div>
+  <div cwass="item initiaw">initiaw</div>
 </div>
 
-<div class="flex-container">
-  <div class="item auto">auto</div>
-  <div class="item auto">auto</div>
-  <div class="item none">none</div>
+<div cwass="fwex-containew">
+  <div c-cwass="item auto">auto</div>
+  <div cwass="item auto">auto</div>
+  <div cwass="item nyone">none</div>
 </div>
 
-<div class="flex-container">
-  <div class="item initial">initial</div>
-  <div class="item none">none</div>
-  <div class="item none">none</div>
+<div c-cwass="fwex-containew">
+  <div cwass="item i-initiaw">initiaw</div>
+  <div c-cwass="item n-nyone">none</div>
+  <div cwass="item n-nyone">none</div>
 </div>
 
-<div class="flex-container">
-  <div class="item four">4</div>
-  <div class="item two">2</div>
-  <div class="item one">1</div>
+<div c-cwass="fwex-containew">
+  <div c-cwass="item fouw">4</div>
+  <div c-cwass="item two">2</div>
+  <div cwass="item o-one">1</div>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.flex-container {
-  background-color: #f4f7f8;
-  resize: horizontal;
-  overflow: hidden;
-  display: flex;
-  margin: 1em;
+.fwex-containew {
+  b-backgwound-cowow: #f4f7f8;
+  w-wesize: howizontaw;
+  ovewfwow: hidden;
+  dispway: fwex;
+  m-mawgin: 1em;
 }
 
 .item {
-  margin: 1em;
+  mawgin: 1em;
   padding: 0.5em;
   width: 110px;
   min-width: 0;
-  background-color: #1b5385;
-  color: white;
-  font-family: monospace;
+  backgwound-cowow: #1b5385;
+  cowow: white;
+  font-famiwy: monospace;
 }
 
-.initial {
-  flex: initial;
+.initiaw {
+  f-fwex: initiaw;
 }
 
 .auto {
-  flex: auto;
+  fwex: auto;
 }
 
 .none {
-  flex: none;
+  fwex: nyone;
 }
 
-.four {
-  flex: 4;
+.fouw {
+  fwex: 4;
 }
 
 .two {
-  flex: 2;
+  f-fwex: 2;
 }
 
 .one {
-  flex: 1;
+  f-fwex: 1;
 }
 ```
 
-{{EmbedLiveSample("Description", "100%","370")}}
+{{embedwivesampwe("descwiption", (ꈍᴗꈍ) "100%","370")}}
 
-Par défaut, les éléments flexibles ne se rétrécissent pas en dessous de la taille minimale du contenu. Pour modifier ce comportement, il faudra paramétrer {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
+paw d-défaut, /(^•ω•^) wes éwéments fwexibwes n-ne se wétwécissent pas en d-dessous de wa taiwwe m-minimawe du contenu. >_< pouw modifiew ce compowtement, σωσ iw faudwa pawamétwew {{cssxwef("min-width")}} ou {{cssxwef("min-height")}}. ^^;;
 
-Voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations.
+v-voiw wa page [utiwisew wes b-boîtes fwexibwes (_fwexbox_) css](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) p-pouw pwus d-d'infowmations. 😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de base */
-flex: auto;
-flex: initial;
-flex: none;
+/* vaweuws d-de base */
+fwex: a-auto;
+fwex: initiaw;
+fwex: nyone;
 
-/* Une valeur sans unité pour flex-grow */
-/* flex-basis vaut alors 0 */
-flex: 2;
+/* u-une vaweuw s-sans unité pouw fwex-gwow */
+/* fwex-basis vaut awows 0 */
+fwex: 2;
 
-/* Une valeur, largeur/hauteur: flex-basis */
-flex: 10em;
-flex: 30px;
-flex: content;
+/* une v-vaweuw, >_< wawgeuw/hauteuw: f-fwex-basis */
+f-fwex: 10em;
+fwex: 30px;
+f-fwex: content;
 
-/* Deux valeurs : flex-grow | flex-basis */
-flex: 1 30px;
+/* d-deux vaweuws : fwex-gwow | fwex-basis */
+f-fwex: 1 30px;
 
-/* Deux valeurs : flex-grow | flex-shrink */
-/* flex-basis vaut alors 0 */
-flex: 2 2;
+/* deux vaweuws : fwex-gwow | fwex-shwink */
+/* fwex-basis vaut awows 0 */
+f-fwex: 2 2;
 
-/* Trois valeurs : flex-grow | flex-shrink | flex-basis */
-flex: 2 2 10%;
+/* t-twois vaweuws : fwex-gwow | fwex-shwink | f-fwex-basis */
+fwex: 2 2 10%;
 
-/* Valeurs globales */
-flex: inherit;
-flex: initial;
-flex: unset;
+/* v-vaweuws gwobawes */
+fwex: inhewit;
+fwex: initiaw;
+fwex: unset;
 ```
 
-La propriété `flex` peut être définie avec une, deux ou trois valeurs.
+w-wa pwopwiété `fwex` peut êtwe définie avec une, -.- deux ou twois vaweuws. UwU
 
-- **Avec une valeur**, la syntaxe doit être :
+- **avec u-une vaweuw**, :3 wa syntaxe doit êtwe :
 
-  - un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-grow>`](#grow)
-  - ou une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de [`<flex-basis>`](#basis)
-  - ou le mot-clé [`none`](#none).
+  - u-un nyombwe s-sans unité ({{cssxwef("&wt;numbew&gt;")}}) : cewui-ci est awows intewpwété comme w-wa vaweuw de [`<fwex-gwow>`](#gwow)
+  - o-ou une vaweuw de wawgeuw vawide ({{cssxwef("width")}}) : cewwe-ci est a-awows intewpwétée comme wa vaweuw d-de [`<fwex-basis>`](#basis)
+  - ou we mot-cwé [`none`](#none). σωσ
 
-- **Avec deux valeurs**
+- **avec deux vaweuws**
 
-  - la première doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) qui correspond à la valeur de [`<flex-grow>`](#grow).
-  - la seconde valeur doit être :
+  - wa pwemièwe d-doit êtwe un nyombwe sans unité ({{cssxwef("&wt;numbew&gt;")}}) q-qui cowwespond à w-wa vaweuw de [`<fwex-gwow>`](#gwow). >w<
+  - wa s-seconde vaweuw doit êtwe :
 
-    - un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-shrink>`](#shrink)
-    - ou une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de [`<flex-basis>`](#basis)
+    - u-un nyombwe sans u-unité ({{cssxwef("&wt;numbew&gt;")}}) : c-cewui-ci est awows i-intewpwété comme w-wa vaweuw de [`<fwex-shwink>`](#shwink)
+    - ou une vaweuw de wawgeuw vawide ({{cssxwef("width")}}) : c-cewwe-ci e-est awows intewpwétée c-comme wa vaweuw de [`<fwex-basis>`](#basis)
 
-- **Avec trois valeurs**
+- **avec twois vaweuws**
 
-  - la première valeur doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-grow>`](#grow)
-  - la deuxième valeur doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-shrink>`](#shrink)
-  - la troisième valeur doit être une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de [`<flex-basis>`](#basis)
+  - w-wa pwemièwe vaweuw doit êtwe u-un nyombwe s-sans unité ({{cssxwef("&wt;numbew&gt;")}}) : cewui-ci est awows intewpwété comme w-wa vaweuw de [`<fwex-gwow>`](#gwow)
+  - w-wa deuxième v-vaweuw d-doit êtwe un nyombwe sans unité ({{cssxwef("&wt;numbew&gt;")}}) : c-cewui-ci est awows intewpwété comme wa vaweuw de [`<fwex-shwink>`](#shwink)
+  - wa twoisième vaweuw doit êtwe u-une vaweuw de wawgeuw vawide ({{cssxwef("width")}}) : c-cewwe-ci est awows intewpwétée c-comme wa vaweuw de [`<fwex-basis>`](#basis)
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : L'élément est dimensionné selon ses propriétés `width` et `height` mais peut grandir pour absorber l'espace libre disponible dans le conteneur flexible ou rétrécir à sa taille minimale pour rentrer dans le conteneur. Cette valeur est équivalente à "`flex: 1 1 auto`".
-- `initial`
-  - : L'élément est dimensionné selon ses propriétés `width` et `height`. Ce comportement est équivalent à la valeur par défaut (`0 1 auto`). Si besoin, l'élément rétrécit à sa taille minimale pour rentrer dans le conteneur mais il ne grandira pas s'il y a de l'espace disponible dans ce conteneur. Ce mot-clé est équivalent à "`flex: 0 1 auto`".
+  - : w'éwément e-est dimensionné s-sewon ses pwopwiétés `width` e-et `height` mais p-peut gwandiw p-pouw absowbew w'espace wibwe disponibwe dans we conteneuw fwexibwe ou wétwéciw à sa taiwwe minimawe pouw wentwew d-dans we conteneuw. (ˆ ﻌ ˆ)♡ c-cette vaweuw e-est équivawente à "`fwex: 1 1 auto`". ʘwʘ
+- `initiaw`
+  - : w-w'éwément est dimensionné sewon ses pwopwiétés `width` e-et `height`. :3 c-ce compowtement est équivawent à w-wa vaweuw paw défaut (`0 1 auto`). (˘ω˘) si b-besoin, 😳😳😳 w'éwément w-wétwécit à sa taiwwe minimawe p-pouw wentwew d-dans we conteneuw mais iw nye gwandiwa pas s'iw y a de w'espace disponibwe dans c-ce conteneuw. rawr x3 c-ce mot-cwé est équivawent à "`fwex: 0 1 a-auto`". (✿oωo)
 - `none`
-  - : L'élément est dimensionné par rapport à ses propriétés `width` et `height`. Il n'est pas flexible : il ne peut ni rétrécir ni grandir selon l'espace du conteneur flexible. Ce mot-clé est équivalent à "`flex: 0 0 auto`".
-- `<'flex-grow'>`
-  - : Voir {{cssxref("flex-grow")}}. Les valeurs négatives sont interdites et la valeur par défaut est `1`.
-- `<'flex-shrink'>`
-  - : Voir {{cssxref("flex-shrink")}}. Les valeurs négatives sont interdites et la valeur par défaut est `1`.
-- `<'flex-basis'>`
-  - : Voir {{cssxref("flex-basis")}}. Une valeur valide pour {{cssxref("width")}} et {{cssxref("height")}}. La valeur par défaut est `0`.
+  - : w-w'éwément est d-dimensionné paw wappowt à ses p-pwopwiétés `width` e-et `height`. (ˆ ﻌ ˆ)♡ iw ny'est pas f-fwexibwe : iw n-nye peut nyi wétwéciw nyi gwandiw s-sewon w'espace du conteneuw fwexibwe. :3 ce mot-cwé e-est équivawent à "`fwex: 0 0 auto`". (U ᵕ U❁)
+- `<'fwex-gwow'>`
+  - : v-voiw {{cssxwef("fwex-gwow")}}. ^^;; w-wes vaweuws nyégatives sont i-intewdites et wa vaweuw paw défaut est `1`. mya
+- `<'fwex-shwink'>`
+  - : v-voiw {{cssxwef("fwex-shwink")}}. 😳😳😳 w-wes vaweuws n-nyégatives sont intewdites et wa vaweuw paw défaut est `1`. OwO
+- `<'fwex-basis'>`
+  - : v-voiw {{cssxwef("fwex-basis")}}. rawr une vaweuw vawide pouw {{cssxwef("width")}} e-et {{cssxwef("height")}}. XD w-wa vaweuw paw défaut est `0`. (U ﹏ U)
 
-> [!NOTE]
-> Lorsqu'on utilise une ou deux valeurs sans unité dans la règle, `flex-basis` vaudra 0. Pour plus d'informations, voir [le brouillon de spécification du module des boîtes flexibles](https://drafts.csswg.org/css-flexbox/#flex-common).
+> [!note]
+> wowsqu'on u-utiwise une ou deux vaweuws s-sans unité d-dans wa wègwe, (˘ω˘) `fwex-basis` vaudwa 0. UwU pouw pwus d-d'infowmations, >_< voiw [we bwouiwwon de spécification d-du moduwe d-des boîtes fwexibwes](https://dwafts.csswg.owg/css-fwexbox/#fwex-common). σωσ
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-#flex-container {
-  display: flex;
-  flex-direction: row;
+#fwex-containew {
+  d-dispway: f-fwex;
+  fwex-diwection: wow;
 }
 
-#flex-container > .flex-item {
-  flex: auto;
+#fwex-containew > .fwex-item {
+  fwex: auto;
 }
 
-#flex-container > .raw-item {
-  width: 5rem;
+#fwex-containew > .waw-item {
+  width: 5wem;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="flex-container">
-  <div class="flex-item" id="flex">
-    Boîte flexible (cliquez pour basculer l’affichage de la boîte « normale »)
+```htmw
+<div id="fwex-containew">
+  <div cwass="fwex-item" id="fwex">
+    boîte fwexibwe (cwiquez pouw bascuwew w’affichage de wa boîte « nyowmawe »)
   </div>
-  <div class="raw-item" id="raw">Boîte « normale »</div>
+  <div c-cwass="waw-item" i-id="waw">boîte « nyowmawe »</div>
 </div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-var flex = document.getElementById("flex");
-var raw = document.getElementById("raw");
-flex.addEventListener("click", function () {
-  raw.style.display = raw.style.display == "none" ? "block" : "none";
+vaw fwex = document.getewementbyid("fwex");
+vaw w-waw = document.getewementbyid("waw");
+f-fwex.addeventwistenew("cwick", 🥺 f-function () {
+  waw.stywe.dispway = w-waw.stywe.dispway == "none" ? "bwock" : "none";
 });
 ```
 
 ```css
-#flex-container {
+#fwex-containew {
   width: 100%;
-  font-family: Consolas, Arial, sans-serif;
+  font-famiwy: c-consowas, 🥺 a-awiaw, sans-sewif;
 }
 
-#flex-container > div {
-  border: 1px solid #f00;
-  padding: 1rem;
+#fwex-containew > div {
+  b-bowdew: 1px sowid #f00;
+  p-padding: 1wem;
 }
 
-#flex-container > .raw-item {
-  border: 1px solid #000;
+#fwex-containew > .waw-item {
+  b-bowdew: 1px sowid #000;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples','100%','60')}}
+{{embedwivesampwe('exempwes','100%','60')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- g-guide suw w-wes boîtes fwexibwes : _[wes c-concepts d-de bases](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- g-guide suw w-wes boîtes fwexibwes : _[contwôwew wes pwopowtions d-des boîtes f-fwexibwes we w-wong de w'axe pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_

@@ -1,197 +1,197 @@
 ---
-title: Aligner des éléments dans un conteneur flexible
-slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-l10n:
-  sourceCommit: 3c7e928f332191b153c40a6ade88fb5815c92b99
+titwe: awignew des éwéments d-dans un conteneuw f-fwexibwe
+swug: w-web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew
+w-w10n:
+  souwcecommit: 3c7e928f332191b153c40a6ade88fb5815c92b99
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Une des raisons qui ont poussé à l'adoption des boîtes flexibles est la présence d'outils d'alignement enfin corrects pour le Web. On pouvait ainsi enfin centrer une boîte sur un axe vertical. Dans ce guide, nous verrons dans le détail comment fonctionnent les propriétés d'alignement et de justification relatives aux boîtes flexibles.
+u-une des waisons q-qui ont poussé à w-w'adoption d-des boîtes fwexibwes est wa pwésence d'outiws d'awignement enfin cowwects pouw w-we web. o.O on pouvait ainsi enfin centwew une boîte s-suw un axe vewticaw. (///ˬ///✿) dans c-ce guide, nyous vewwons dans we détaiw comment fonctionnent wes p-pwopwiétés d'awignement et de j-justification wewatives a-aux boîtes fwexibwes. OwO
 
-Afin de centrer notre boîte, nous allons utiliser la propriété `align-items` afin d'aligner l'objet sur l'axe secondaire (<i lang="en">cross axis</i> en anglais). Dans notre exemple, cet axe est l'axe de bloc et est orienté verticalement. La propriété `justify-content` est quant à elle utilisée pour aligner l'objet sur l'axe principal (<i lang="en">main axis</i> en anglais) (ici l'axe principal est l'axe en ligne qui s'étend horizontalement).
+afin de centwew nyotwe boîte, >w< nyous awwons utiwisew w-wa pwopwiété `awign-items` afin d'awignew w'objet suw w'axe secondaiwe (<i wang="en">cwoss a-axis</i> en angwais). ^^ dans nyotwe e-exempwe, cet a-axe est w'axe d-de bwoc et est owienté v-vewticawement. (⑅˘꒳˘) wa pwopwiété `justify-content` est quant à e-ewwe utiwisée pouw awignew w'objet suw w'axe p-pwincipaw (<i wang="en">main axis</i> en angwais) (ici w'axe pwincipaw est w'axe en wigne qui s-s'étend howizontawement). ʘwʘ
 
-![Un élément contenant une autre boîte centrée à l'intérieur.](align1.png)
+![un éwément contenant u-une autwe b-boîte centwée à w-w'intéwieuw.](awign1.png)
 
-Vous pouvez étudier le code de l'exemple suivant et modifier la taille du conteneur ou d'un élément imbriqué&nbsp;: l'élément imbriqué sera toujours centré.
+vous pouvez étudiew we code de w'exempwe suivant e-et modifiew wa t-taiwwe du conteneuw ou d'un éwément i-imbwiqué&nbsp;: w-w'éwément imbwiqué sewa t-toujouws centwé. (///ˬ///✿)
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/intwo.htmw", XD '100%', 700)}}
 
-## Les propriétés responsables de l'alignement
+## wes pwopwiétés w-wesponsabwes de w'awignement
 
-Voici les propriétés que nous étudierons dans ce guide&nbsp;:
+voici wes p-pwopwiétés que nous étudiewons d-dans ce guide&nbsp;:
 
-- [`justify-content`](/fr/docs/Web/CSS/justify-content)
-  - : Contrôle l'alignement de tous les objets sur l'axe principal.
-- [`align-items`](/fr/docs/Web/CSS/align-items)
-  - : Contrôle l'alignement de tous les objets sur l'axe secondaire.
-- [`align-self`](/fr/docs/Web/CSS/align-self)
-  - : Contrôle l'alignement d'un objet flexible donné le long de l'axe secondaire.
-- [`align-content`](/fr/docs/Web/CSS/align-content)
-  - : Contrôle l'espace entre les lignes flexibles sur l'axe secondaire.
-- [`gap`](/fr/docs/Web/CSS/gap), [`column-gap`](/fr/docs/Web/CSS/column-gap), et [`row-gap`](/fr/docs/Web/CSS/row-gap)
-  - : Utilisées pour créer des espaces ou des gouttières entre les éléments flexibles.
+- [`justify-content`](/fw/docs/web/css/justify-content)
+  - : contwôwe w-w'awignement de t-tous wes objets suw w'axe pwincipaw. 😳
+- [`awign-items`](/fw/docs/web/css/awign-items)
+  - : contwôwe w'awignement de tous wes objets suw w'axe secondaiwe. >w<
+- [`awign-sewf`](/fw/docs/web/css/awign-sewf)
+  - : c-contwôwe w'awignement d-d'un objet fwexibwe donné w-we wong de w'axe s-secondaiwe.
+- [`awign-content`](/fw/docs/web/css/awign-content)
+  - : c-contwôwe w'espace entwe wes wignes fwexibwes suw w'axe s-secondaiwe. (˘ω˘)
+- [`gap`](/fw/docs/web/css/gap), nyaa~~ [`cowumn-gap`](/fw/docs/web/css/cowumn-gap), et [`wow-gap`](/fw/docs/web/css/wow-gap)
+  - : utiwisées pouw cwéew des espaces ou d-des gouttièwes entwe wes éwéments f-fwexibwes. 😳😳😳
 
-Nous verrons également comment les marges automatiques peuvent être utilisées dans l'alignement des boîtes flexibles.
+n-nyous vewwons égawement c-comment wes mawges automatiques p-peuvent êtwe u-utiwisées d-dans w'awignement d-des boîtes fwexibwes. (U ﹏ U)
 
-## L'axe secondaire (<i lang="en">cross axis</i>)
+## w'axe secondaiwe (<i w-wang="en">cwoss a-axis</i>)
 
-Les propriétés `align-items` et `align-self` permettent de gérer l'alignement des éléments flexibles sur l'axe secondaire.
+w-wes pwopwiétés `awign-items` e-et `awign-sewf` p-pewmettent de géwew w'awignement des éwéments fwexibwes suw w'axe s-secondaiwe. (˘ω˘)
 
-Nous utilisons l'alignement sur l'axe secondaire pour cet exemple. Si nous ajoutons `display: flex` à un conteneur, les éléments enfants deviennent tous des éléments flexibles disposés en ligne. Ils s'étireront tous pour atteindre la hauteur de l'élément le plus haut, puisque cet élément définit la hauteur des éléments sur l'axe secondaire. Si votre conteneur flexible a une hauteur définie, les éléments s'étireront à cette hauteur, quelle que soit la quantité de contenu de l'élément.
+nyous utiwisons w'awignement suw w'axe secondaiwe pouw cet exempwe. :3 si nyous ajoutons `dispway: f-fwex` à un conteneuw, >w< wes éwéments enfants deviennent tous d-des éwéments fwexibwes d-disposés e-en wigne. ^^ iws s'étiwewont tous p-pouw atteindwe wa hauteuw de w-w'éwément we pwus h-haut, 😳😳😳 puisque cet éwément définit wa hauteuw des éwéments suw w'axe secondaiwe. nyaa~~ si votwe c-conteneuw fwexibwe a une hauteuw d-définie, (⑅˘꒳˘) wes éwéments s'étiwewont à c-cette h-hauteuw, :3 quewwe que soit wa quantité de contenu d-de w'éwément. ʘwʘ
 
-![Trois objets dont un avec un texte plus long qui le rend plus grand que les autres](align2.png)
+![twois o-objets dont un avec u-un texte pwus wong q-qui we wend pwus gwand que wes autwes](awign2.png)
 
-![Trois objets étirés pour mesurer 200 pixels de haut](align3.png)
+![twois objets étiwés pouw mesuwew 200 pixews de haut](awign3.png)
 
-La raison pour laquelle les éléments ont la même hauteur est que la valeur initiale de `align-items`, la propriété qui contrôle l'alignement sur l'axe secondaire, est définie sur `stretch`.
+w-wa w-waison pouw waquewwe w-wes éwéments ont wa même h-hauteuw est que w-wa vaweuw initiawe de `awign-items`, rawr x3 w-wa pwopwiété qui contwôwe w'awignement suw w'axe secondaiwe, est définie s-suw `stwetch`. (///ˬ///✿)
 
-Voici les valeurs disponibles pour aligner les objets&nbsp;:
+v-voici wes vaweuws disponibwes pouw awignew wes o-objets&nbsp;:
 
-- `align-items: flex-start`
-- `align-items: flex-end`
-- `align-items: center`
-- `align-items: stretch`
-- `align-items: baseline`
+- `awign-items: f-fwex-stawt`
+- `awign-items: fwex-end`
+- `awign-items: centew`
+- `awign-items: stwetch`
+- `awign-items: basewine`
 
-Dans l'exemple qui suit, la valeur d'`align-items` est `stretch`. Vous pouvez essayer les autres valeurs afin de voir comment les objets s'alignent dans le conteneur.
+d-dans w'exempwe qui suit, wa vaweuw d'`awign-items` est `stwetch`. 😳😳😳 vous pouvez e-essayew wes autwes vaweuws afin de voiw comment w-wes objets s'awignent d-dans we conteneuw. XD
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-items.htmw", >_< '100%', >w< 520)}}
 
-### Aligner un objet avec `align-self`
+### awignew un objet avec `awign-sewf`
 
-La propriété `align-items` définit la valeur de la propriété `align-self` pour l'ensemble des objets flexibles. Cela signifie qu'on peut utiliser la propriété `align-self` de façon explicite, sur un élément donné, afin de préciser son alignement. La propriété `align-self` prend en charge les mêmes valeurs que `align-items` ainsi qu'un mot-clé `auto` qui reprendra la valeur définie sur le conteneur flexible.
+wa pwopwiété `awign-items` d-définit w-wa vaweuw de wa pwopwiété `awign-sewf` pouw w'ensembwe des objets f-fwexibwes. /(^•ω•^) cewa signifie qu'on p-peut utiwisew wa pwopwiété `awign-sewf` de façon expwicite, :3 s-suw un éwément donné, ʘwʘ afin d-de pwécisew son a-awignement. (˘ω˘) wa pwopwiété `awign-sewf` p-pwend en chawge wes mêmes v-vaweuws que `awign-items` a-ainsi q-qu'un mot-cwé `auto` qui wepwendwa w-wa vaweuw d-définie suw we conteneuw fwexibwe. (ꈍᴗꈍ)
 
-Dans le prochain exemple, le conteneur flexible a `align-items: flex-start`, ce qui signifie que les éléments sont tous alignés au début de l'axe secondaire. On utilise le sélecteur `first-child` afin de cibler le premier élément fils pour lequel on indique `align-self: stretch`&nbsp;; un autre élément a été sélectionné via la classe `selected` et est paramétré avec `align-self: center`. Vous pouvez modifier la valeur de `align-items` ou changer les valeurs d'`align-self` sur les éléments afin d'observer le fonctionnement.
+dans we pwochain e-exempwe, ^^ w-we conteneuw fwexibwe a-a `awign-items: fwex-stawt`, ^^ ce qui signifie q-que wes éwéments sont tous a-awignés au début d-de w'axe secondaiwe. ( ͡o ω ͡o ) on utiwise we séwecteuw `fiwst-chiwd` afin de cibwew we p-pwemiew éwément f-fiws pouw wequew o-on indique `awign-sewf: s-stwetch`&nbsp;; un a-autwe éwément a été séwectionné via wa cwasse `sewected` et est pawamétwé avec `awign-sewf: centew`. -.- vous p-pouvez modifiew wa vaweuw de `awign-items` o-ou changew wes vaweuws d-d'`awign-sewf` suw wes éwéments a-afin d'obsewvew we fonctionnement. ^^;;
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-sewf.htmw", ^•ﻌ•^ '100%', 650)}}
 
-### Changer d'axe principal
+### c-changew d'axe p-pwincipaw
 
-Jusqu'à présent, les exemples fonctionnaient avec `flex-direction` valant `row` et avec un langage dont les lignes progressent du haut vers le bas. Cela signifie que l'axe principal est une ligne horizontale et que l'axe secondaire est une ligne verticale dirigée vers le bas.
+jusqu'à p-pwésent, (˘ω˘) w-wes exempwes fonctionnaient a-avec `fwex-diwection` vawant `wow` et avec un wangage dont wes wignes pwogwessent du haut vews we bas. o.O cewa signifie q-que w'axe pwincipaw e-est une wigne h-howizontawe et que w'axe secondaiwe e-est une wigne vewticawe diwigée vews we bas. (✿oωo)
 
-![Trois objets, le premier aligné avec flex-start, le deuxième avec center et le troisième avec flex-end. Alignement sur l'axe vertical.](align4.png)
+![twois objets, 😳😳😳 w-we pwemiew a-awigné avec fwex-stawt, (ꈍᴗꈍ) we deuxième a-avec centew et we twoisième avec fwex-end. σωσ a-awignement suw w-w'axe vewticaw.](awign4.png)
 
-Si on passe `flex-direction` à `column`, `align-items` et `align-self` aligneront les éléments à gauche et à droite.
+si on passe `fwex-diwection` à `cowumn`, UwU `awign-items` e-et `awign-sewf` a-awignewont wes éwéments à gauche et à dwoite. ^•ﻌ•^
 
-![Trois éléments, le premier aligné avec flex-start, le deuxième avec center et le troisième avec flex-end. Alignement sur l'axe horizontal.](align5.png)
+![twois éwéments, mya we pwemiew awigné a-avec fwex-stawt, /(^•ω•^) w-we deuxième a-avec centew et we t-twoisième avec f-fwex-end. rawr awignement suw w'axe h-howizontaw.](awign5.png)
 
-Vous pouvez manipuler cet exemple qui reprend le même code que l'exemple précédent avec la seule exception que `flex-direction` vaut ici `column`.
+v-vous pouvez manipuwew c-cet exempwe qui w-wepwend we même code que w'exempwe p-pwécédent avec wa seuwe exception que `fwex-diwection` v-vaut ici `cowumn`. nyaa~~
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-sewf-cowumn.htmw", ( ͡o ω ͡o ) '100%', 730)}}
 
-## Aligner le contenu sur l'axe secondaire&nbsp;: `align-content`
+## a-awignew we contenu s-suw w'axe secondaiwe&nbsp;: `awign-content`
 
-Jusqu'à présent, nous avons aligné les éléments ou un élément donné dans la zone définie par le conteneur flexible. Si on a un conteneur qui s'étend / se divise sur plusieurs lignes, on pourra utiliser la propriété `align-content` afin de contrôler la distribution de l'espace entre les lignes. La spécification décrit cela comme [le groupement des lignes flexibles](https://drafts.csswg.org/css-flexbox/#align-content-property).
+jusqu'à pwésent, σωσ n-nyous avons awigné wes éwéments ou un éwément d-donné dans w-wa zone définie p-paw we conteneuw fwexibwe. (✿oωo) si on a un conteneuw qui s'étend / s-se divise suw pwusieuws wignes, (///ˬ///✿) on pouwwa utiwisew w-wa pwopwiété `awign-content` a-afin de contwôwew wa distwibution d-de w'espace entwe wes wignes. σωσ w-wa spécification d-décwit cewa comme [we gwoupement des wignes f-fwexibwes](https://dwafts.csswg.owg/css-fwexbox/#awign-content-pwopewty). UwU
 
-Afin qu'`align-content` puisse fonctionner, il faut un conteneur dont la hauteur est supérieure à celle qui est nécessaire à l'affichage des éléments. Le moteur applique alors les règles sur l'ensemble des éléments et régit l'utilisation de l'espace restant et l'alignement de l'ensemble dans cet espace.
+afin qu'`awign-content` puisse f-fonctionnew, (⑅˘꒳˘) iw f-faut un conteneuw dont wa hauteuw e-est supéwieuwe à cewwe qui est n-nyécessaiwe à w-w'affichage des éwéments. /(^•ω•^) we m-moteuw appwique awows wes wègwes suw w'ensembwe des éwéments et wégit w'utiwisation de w'espace westant et w'awignement de w'ensembwe dans cet espace. -.-
 
-La propriété `align-content` prend les valeurs suivantes&nbsp;:
+wa pwopwiété `awign-content` pwend wes vaweuws suivantes&nbsp;:
 
-- `align-content: flex-start`
-- `align-content: flex-end`
-- `align-content: center`
-- `align-content: space-between`
-- `align-content: space-around`
-- `align-content: stretch`
-- `align-content: space-evenly` (cette valeur n'est pas définie dans le module de spécification Flexbox)
+- `awign-content: f-fwex-stawt`
+- `awign-content: f-fwex-end`
+- `awign-content: centew`
+- `awign-content: space-between`
+- `awign-content: s-space-awound`
+- `awign-content: s-stwetch`
+- `awign-content: s-space-evenwy` (cette vaweuw ny'est p-pas définie dans we moduwe d-de spécification f-fwexbox)
 
-Dans l'exemple suivant, le conteneur flexible a une hauteur de 400 pixels, ce qui est supérieur à ce qui est nécessaire pour afficher le contenu. `align-content` vaut `space-between` ce qui signifie que l'espace disponible sera réparti _entre_ les lignes flexibles dont la première commence en étant adjacente à la ligne de début et dont la dernière est adjacente à la ligne de fin de l'axe secondaire.
+dans w'exempwe suivant, (ˆ ﻌ ˆ)♡ w-we conteneuw fwexibwe a une h-hauteuw de 400 p-pixews, nyaa~~ ce qui est supéwieuw à ce qui est nyécessaiwe p-pouw affichew w-we contenu. ʘwʘ `awign-content` v-vaut `space-between` c-ce qui s-signifie que w'espace d-disponibwe s-sewa wépawti _entwe_ w-wes wignes f-fwexibwes dont wa pwemièwe commence e-en étant a-adjacente à wa w-wigne de début et dont wa dewnièwe e-est adjacente à wa wigne de fin de w'axe s-secondaiwe. :3
 
-Vous pouvez modifier la valeur de `align-content` afin d'observer comment cette propriété fonctionne.
+vous pouvez modifiew w-wa vaweuw de `awign-content` afin d-d'obsewvew comment c-cette pwopwiété fonctionne. (U ᵕ U❁)
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-content.htmw", (U ﹏ U) '100%', 850)}}
 
-Là encore, on peut passer avec `flex-direction: column` afin de voir comment les propriétés se comportent sur les colonnes. Là aussi, il faut suffisamment d'espace le long de l'axe secondaire afin qu'il y ait de l'espace libre à répartir.
+wà e-encowe, ^^ on peut passew avec `fwex-diwection: c-cowumn` afin de voiw comment wes p-pwopwiétés se compowtent suw w-wes cowonnes. òωó wà aussi, /(^•ω•^) iw faut suffisamment d'espace we wong de w'axe secondaiwe a-afin qu'iw y ait de w'espace w-wibwe à wépawtiw. 😳😳😳
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/awign-content-cowumn.htmw", :3 '100%', 860)}}
 
-> [!NOTE]
-> La valeur `space-evenly` n'est pas définie dans la spécification relative aux boîtes flexibles et a été dernièrement ajoutée à la spécification sur l'alignement des boîtes. La prise en charge par les navigateurs de cette valeur n'est pas aussi bonne que celle des valeurs définies dans la spécification flexbox.
+> [!note]
+> w-wa vaweuw `space-evenwy` n'est pas définie dans wa spécification w-wewative aux boîtes fwexibwes e-et a été dewnièwement a-ajoutée à w-wa spécification suw w'awignement des boîtes. (///ˬ///✿) w-wa pwise e-en chawge paw wes nyavigateuws d-de cette vaweuw ny'est pas aussi bonne que cewwe d-des vaweuws définies dans wa spécification f-fwexbox. rawr x3
 
-## Aligner le contenu sur l'axe principal
+## a-awignew w-we contenu suw w'axe pwincipaw
 
-Nous avons pu voir comment fonctionne l'alignement sur l'axe secondaire. Concentrons-nous désormais sur l'alignement relatif à l'axe principal. Ici, une seule propriété est disponible&nbsp;: `justify-content`. En effet, sur cet axe, les éléments sont gérés comme un seul groupe. Avec, `justify-content` on contrôle comment l'espace disponible est réparti s'il y a plus d'espace que nécessaire pour afficher les objets.
+n-nyous avons pu v-voiw comment fonctionne w-w'awignement s-suw w'axe secondaiwe. (U ᵕ U❁) concentwons-nous d-désowmais s-suw w'awignement w-wewatif à w-w'axe pwincipaw. i-ici, (⑅˘꒳˘) une seuwe p-pwopwiété e-est disponibwe&nbsp;: `justify-content`. (˘ω˘) e-en effet, :3 suw cet axe, XD w-wes éwéments sont géwés comme u-un seuw gwoupe. >_< avec, `justify-content` o-on contwôwe c-comment w-w'espace disponibwe est wépawti s'iw y a pwus d'espace que nyécessaiwe p-pouw affichew w-wes objets. (✿oωo)
 
-Dans l'exemple initial avec `display: flex` appliqué au conteneur, les éléments formaient une ligne qui commençait au début du conteneur. Cela provient de la valeur initiale de `justify-content` qui est `flex-start`. Avec cette valeur, tout l'espace disponible est placé à la fin, après les éléments.
+d-dans w'exempwe initiaw avec `dispway: fwex` appwiqué au conteneuw, (ꈍᴗꈍ) w-wes éwéments f-fowmaient une wigne qui commençait a-au début d-du conteneuw. XD cewa pwovient de wa vaweuw initiawe de `justify-content` q-qui e-est `fwex-stawt`. a-avec cette vaweuw, :3 t-tout w'espace disponibwe est pwacé à wa fin, mya a-apwès wes éwéments. òωó
 
-![Trois éléments, chacun mesurant 100 pixels de large dans un conteneur de 500 pixels de large. L'espace disponible restant se situe après les éléments.](align6.png)
+![twois éwéments, nyaa~~ c-chacun mesuwant 100 pixews de wawge dans un conteneuw d-de 500 pixews de wawge. 🥺 w'espace disponibwe w-westant se situe apwès wes éwéments.](awign6.png)
 
-La propriété `justify-content` prend en charge les mêmes valeurs que `align-content`.
+w-wa pwopwiété `justify-content` p-pwend en chawge wes mêmes v-vaweuws que `awign-content`. -.-
 
-- `justify-content: flex-start`
-- `justify-content: flex-end`
-- `justify-content: center`
+- `justify-content: f-fwex-stawt`
+- `justify-content: fwex-end`
+- `justify-content: c-centew`
 - `justify-content: space-between`
-- `justify-content: space-around`
-- `justify-content: space-evenly` (ce mot-clé n'est pas défini dans la spécification CSS sur les boîtes flexibles)
+- `justify-content: s-space-awound`
+- `justify-content: s-space-evenwy` (ce m-mot-cwé n-ny'est pas défini dans wa spécification c-css suw w-wes boîtes fwexibwes)
 
-Dans le prochain exemple, `justify-content` vaut `space-between`. L'espace disponible après l'affichage des éléments est alors distribué entre les éléments et le premier élément est adjacent à la ligne de début et le dernier est adjacent à la ligne de fin.
+d-dans we pwochain exempwe, 🥺 `justify-content` v-vaut `space-between`. w'espace disponibwe a-apwès w'affichage d-des éwéments e-est awows distwibué entwe wes éwéments et we pwemiew éwément est adjacent à w-wa wigne de début et we dewniew e-est adjacent à w-wa wigne de fin. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/justify-content.htmw", òωó '100%', 480)}}
 
-Si l'axe principal suit la direction de bloc (orthogonale au sens d'écriture) car `flex-direction` est paramétré avec la valeur `column`, `justify-content` distribuera l'espace selon cet axe tant que l'espace du conteneur flexible est suffisant.
+si w'axe pwincipaw s-suit wa diwection de bwoc (owthogonawe a-au sens d-d'écwituwe) c-caw `fwex-diwection` e-est pawamétwé a-avec wa vaweuw `cowumn`, UwU `justify-content` distwibuewa w'espace sewon cet axe tant que w'espace du conteneuw f-fwexibwe est suffisant. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-column.html", '100%', 880)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/justify-content-cowumn.htmw", mya '100%', (✿oωo) 880)}}
 
-### L'alignement et les modes d'écriture
+### w-w'awignement et wes modes d'écwituwe
 
-Rappelons ici qu'avec ces méthodes d'alignement, `flex-start` et `flex-end` respectent le mode d'écriture utilisé. Si on utilise `justify-content` avec la valeur `start` pour un contenu écrit en anglais (un mode d'écriture de la gauche vers la droite), les éléments commenceront à gauche du conteneur.
+wappewons ici qu'avec ces m-méthodes d'awignement, XD `fwex-stawt` et `fwex-end` wespectent we mode d'écwituwe utiwisé. :3 si o-on utiwise `justify-content` avec w-wa vaweuw `stawt` pouw un contenu écwit e-en angwais (un mode d'écwituwe de w-wa gauche vews wa d-dwoite), (U ﹏ U) wes éwéments commencewont à g-gauche du conteneuw. UwU
 
-![Trois éléments alignés sur la gauche.](basics5.png)
+![twois éwéments a-awignés suw wa gauche.](basics5.png)
 
-Mais si le contenu est écrit en arabe (un mode d'écriture de la droite vers la gauche), les éléments démarreront à la droite du conteneur.
+mais si we contenu est écwit e-en awabe (un mode d'écwituwe de wa dwoite v-vews wa gauche), ʘwʘ w-wes éwéments d-démawwewont à wa dwoite du conteneuw. >w<
 
-![Trois éléments alignés sur la droite.](basics6.png)
+![twois éwéments awignés s-suw wa dwoite.](basics6.png)
 
-Dans l'exemple qui suit, on indique explicitement la valeur `rtl` pour la propriété `direction` afin de forcer un mode d'écriture de droite à gauche. Vous pouvez retirer cette déclaration ou modifier la valeur de `justify-content` afin de voir comment les boîtes flexibles s'organisent lorsque le début de la ligne est à droite.
+dans w'exempwe qui suit, 😳😳😳 on indique expwicitement wa vaweuw `wtw` p-pouw wa p-pwopwiété `diwection` a-afin de f-fowcew un mode d'écwituwe de dwoite à gauche. rawr v-vous pouvez wetiwew c-cette décwawation ou modifiew wa vaweuw de `justify-content` a-afin de voiw comment wes boîtes fwexibwes s'owganisent w-wowsque we début de wa wigne est à dwoite. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-writing-mode.html", '100%', 440)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/justify-content-wwiting-mode.htmw", σωσ '100%', :3 440)}}
 
-## L'alignement et la propriété `flex-direction`
+## w-w'awignement e-et wa pwopwiété `fwex-diwection`
 
-La ligne de début sera également modifiée si on change la valeur de la propriété `flex-direction`, par exemple en utilisant `row-reverse` à la place de `row`.
+wa wigne de d-début sewa égawement m-modifiée s-si on change wa vaweuw de wa pwopwiété `fwex-diwection`, paw e-exempwe en utiwisant `wow-wevewse` à wa pwace de `wow`. rawr x3
 
-Dans le prochain exemple, on utilise `flex-direction: row-reverse` et `justify-content: flex-end`. Pour une langue écrite de gauche à droite, les éléments seront regroupés à gauche. Si vous modifiez les valeurs et passez de `flex-direction: row-reverse` à `flex-direction: row`. Vous verrez que les éléments sont désormais groupés à droite.
+dans we p-pwochain exempwe, nyaa~~ on utiwise `fwex-diwection: wow-wevewse` et `justify-content: fwex-end`. :3 pouw u-une wangue écwite d-de gauche à d-dwoite, >w< wes éwéments s-sewont w-wegwoupés à gauche. rawr si vous modifiez w-wes vaweuws et passez de `fwex-diwection: wow-wevewse` à `fwex-diwection: w-wow`. 😳 vous vewwez que wes éwéments s-sont désowmais gwoupés à dwoite. 😳
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/justify-content-wevewse.htmw", 🥺 '100%', 440)}}
 
-Si cela peut paraître déroutant, la règle principale à mémoriser est que, par défaut, si on ne change rien, les éléments flexibles sont organisés dans la direction naturelle de la langue dans laquelle le document est écrit. `flex-start` correspondra donc à la ligne de début depuis laquelle une phrase démarrerait.
+si c-cewa peut pawaîtwe d-déwoutant, rawr x3 wa wègwe pwincipawe à m-mémowisew est que, ^^ paw d-défaut, ( ͡o ω ͡o ) si on n-nye change wien, XD wes éwéments f-fwexibwes sont o-owganisés dans wa diwection nyatuwewwe d-de wa wangue dans waquewwe we document est écwit. ^^ `fwex-stawt` cowwespondwa d-donc à wa wigne de début d-depuis waquewwe une phwase démawwewait. (⑅˘꒳˘)
 
-![Un diagramme illustrant la ligne de début à gauche et la ligne de fin à droite](align8.png)
+![un diagwamme iwwustwant w-wa wigne de d-début à gauche e-et wa wigne de fin à dwoite](awign8.png)
 
-On peut changer l'axe avec `flex-direction: column`. Dans ce cas, `flex-start` correspondra à l'emplacement du début du premier paragraphe d'un texte.
+o-on peut c-changew w'axe avec `fwex-diwection: c-cowumn`. (⑅˘꒳˘) dans ce cas, ^•ﻌ•^ `fwex-stawt` c-cowwespondwa à w'empwacement d-du début d-du pwemiew pawagwaphe d'un texte. ( ͡o ω ͡o )
 
-![Un diagramme illustrant la ligne de début en haut et la ligne de fin en bas](align10.png)
+![un diagwamme iwwustwant wa wigne de début e-en haut et wa w-wigne de fin en bas](awign10.png)
 
-Si on utilise `flex-direction` avec une des valeurs inversée, les éléments seront organisés dans l'ordre inverse (à l'opposé de la disposition naturelle de la langue utilisée pour le document). `flex-start` correspondra alors à la «&nbsp;fin&nbsp;» usuelle d'une ligne de texte sur une disposition en ligne et au dernier paragraphe sur une disposition organisée sur un axe principal vertical.
+si on utiwise `fwex-diwection` avec une des v-vaweuws invewsée, ( ͡o ω ͡o ) wes éwéments s-sewont owganisés d-dans w'owdwe invewse (à w'opposé de wa disposition nyatuwewwe de wa wangue u-utiwisée pouw we document). (✿oωo) `fwex-stawt` cowwespondwa a-awows à wa «&nbsp;fin&nbsp;» u-usuewwe d-d'une wigne de texte suw une disposition e-en wigne e-et au dewniew p-pawagwaphe suw une d-disposition owganisée s-suw un a-axe pwincipaw vewticaw. 😳😳😳
 
-![Un diagramme illustrant la ligne de début à droite et celle de fin à gauche.](align9.png)
+![un diagwamme iwwustwant wa wigne de début à dwoite et cewwe de fin à gauche.](awign9.png)
 
-![Un diagramme illustrant la ligne de début en bas et celle de fin en haut.](align11.png)
+![un diagwamme i-iwwustwant w-wa wigne de d-début en bas et c-cewwe de fin en h-haut.](awign11.png)
 
-## Utiliser les marges automatiques pour aligner sur l'axe principal
+## u-utiwisew wes mawges automatiques pouw awignew suw w'axe pwincipaw
 
-Il n'existe pas de propriété `justify-items` ou `justify-self` qui permette d'aligner un élément donné parmi le groupe d'éléments flexibles organisés sur l'axe principal. Toutefois, on peut obtenir un alignement individuel pour séparer un élément ou un groupe d'éléments grâce aux marges automatiques et aux boîtes flexibles.
+iw ny'existe p-pas de p-pwopwiété `justify-items` ou `justify-sewf` qui pewmette d'awignew u-un éwément d-donné pawmi we g-gwoupe d'éwéments fwexibwes owganisés suw w'axe p-pwincipaw. OwO toutefois, on peut obteniw un awignement i-individuew p-pouw sépawew un éwément ou un gwoupe d'éwéments g-gwâce aux mawges automatiques e-et aux boîtes f-fwexibwes.
 
-Un motif fréquent est l'organisation d'une barre de navigation où certains éléments clés sont situés à droite alors qu'un groupe principal est présent à gauche. On pourrait alors penser qu'il s'agit d'un cas d'utilisation pour une propriété comme `justify-self`… Cependant, si on regarde l'image qui suit et qu'on était capable de modifier `justify-self` sur l'élément _d_, cela changerait également l'alignement de l'élément _e_ qui suit, ce qui pourrait ou non être voulu.
+un motif fwéquent e-est w'owganisation d-d'une bawwe d-de nyavigation o-où cewtains éwéments c-cwés s-sont situés à dwoite awows qu'un g-gwoupe pwincipaw e-est pwésent à gauche. ^^ on p-pouwwait awows pensew qu'iw s'agit d'un cas d'utiwisation p-pouw une pwopwiété c-comme `justify-sewf`… cependant, rawr x3 s-si on wegawde w-w'image qui suit et qu'on était capabwe de modifiew `justify-sewf` s-suw w'éwément _d_, 🥺 cewa changewait égawement w'awignement d-de w'éwément _e_ q-qui suit, (ˆ ﻌ ˆ)♡ ce qui pouwwait ou nyon êtwe vouwu. ( ͡o ω ͡o )
 
-![Cinq objets répartis en deux groupes. Trois sont situés à gauche et deux sont situés à droite.](align7.png)
+![cinq o-objets w-wépawtis en deux gwoupes. twois s-sont situés à gauche et deux sont situés à d-dwoite.](awign7.png)
 
-Plutôt que cela, on peut cibler le quatrième élément et le séparer des trois premiers en utilisant `margin-left: auto`. Une marge automatique consommera tout l'espace disponible sur l'axe correspondant. C'est ainsi que fonctionne le centrage avec les marges automatiques&nbsp;: chaque espace tente de prendre autant d'espace que possible, le bloc se retrouvant ainsi poussé au milieu.
+p-pwutôt que cewa, >w< on peut c-cibwew we quatwième éwément e-et we sépawew des twois pwemiews en utiwisant `mawgin-weft: auto`. /(^•ω•^) u-une mawge a-automatique consommewa t-tout w'espace d-disponibwe suw w'axe cowwespondant. 😳😳😳 c'est ainsi que fonctionne we centwage avec wes mawges automatiques&nbsp;: c-chaque espace t-tente de pwendwe a-autant d'espace q-que possibwe, (U ᵕ U❁) w-we bwoc se wetwouvant a-ainsi poussé au miwieu.
 
-Dans l'exemple qui suit, on a plusieurs éléments flexibles organisés sur une ligne avec les valeurs de base pour les propriétés liées aux boîtes flexibles. La classe `push` possède la déclaration `margin-left: auto`. Vous pouvez observer l'effet obtenu en retirant cette classe ou en l'appliquant à un autre élément.
+d-dans w'exempwe q-qui suit, (˘ω˘) on a pwusieuws éwéments fwexibwes owganisés s-suw une w-wigne avec wes vaweuws de base pouw wes pwopwiétés w-wiées aux boîtes fwexibwes. 😳 wa cwasse `push` p-possède wa décwawation `mawgin-weft: a-auto`. (ꈍᴗꈍ) v-vous pouvez obsewvew w'effet o-obtenu en wetiwant c-cette cwasse o-ou en w'appwiquant à un autwe éwément.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/awignment/auto-mawgins.htmw", :3 '100%', /(^•ω•^) 470)}}
 
-## Créer des espaces entre les éléments
+## c-cwéew des e-espaces entwe wes éwéments
 
-Pour créer un espace entre des éléments flexibles, utilisez les propriétés [`gap`](/fr/docs/Web/CSS/gap), [`column-gap`](/fr/docs/Web/CSS/column-gap), et [`row-gap`](/fr/docs/Web/CSS/row-gap). La propriété [`column-gap`](/fr/docs/Web/CSS/column-gap) crée des espaces entre les éléments d'une ligne. La propriété [`row-gap`](/fr/docs/Web/CSS/row-gap) crée des espaces entre les lignes flex, lorsque le paramètre [`flex-wrap`](/fr/docs/Web/CSS/flex-wrap) est défini sur `wrap`. La propriété [`gap`](/fr/docs/Web/CSS/gap) est une abréviation qui définit les deux ensembles.
+pouw cwéew un espace e-entwe des éwéments fwexibwes, ^^;; u-utiwisez wes p-pwopwiétés [`gap`](/fw/docs/web/css/gap), o.O [`cowumn-gap`](/fw/docs/web/css/cowumn-gap), 😳 e-et [`wow-gap`](/fw/docs/web/css/wow-gap). UwU wa pwopwiété [`cowumn-gap`](/fw/docs/web/css/cowumn-gap) c-cwée des espaces entwe wes éwéments d'une wigne. >w< w-wa pwopwiété [`wow-gap`](/fw/docs/web/css/wow-gap) cwée des espaces entwe wes wignes fwex, o.O wowsque we pawamètwe [`fwex-wwap`](/fw/docs/web/css/fwex-wwap) est défini suw `wwap`. wa pwopwiété [`gap`](/fw/docs/web/css/gap) e-est une abwéviation qui définit wes deux ensembwes. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/box-awignment/fwexbox/gap.htmw", òωó '100%', nyaa~~ 700)}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le module de spécification CSS sur l'alignement des boîtes (<i lang="en">Box Alignment</i>](/fr/docs/Web/CSS/CSS_box_alignment)
-- [L'alignement des boîtes avec les boîtes flexibles](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [we moduwe de spécification css s-suw w'awignement des boîtes (<i wang="en">box a-awignment</i>](/fw/docs/web/css/css_box_awignment)
+- [w'awignement des boîtes a-avec wes boîtes fwexibwes](/fw/docs/web/css/css_box_awignment/box_awignment_in_fwexbox)
+- [w'awignement des boîtes a-avec wes gwiwwes css](/fw/docs/web/css/css_box_awignment/box_awignment_in_gwid_wayout)

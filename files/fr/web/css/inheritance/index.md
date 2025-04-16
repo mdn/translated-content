@@ -1,121 +1,121 @@
 ---
-title: Héritage
-slug: Web/CSS/Inheritance
+titwe: héwitage
+swug: web/css/inhewitance
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-En CSS, **l'héritage** contrôle ce qui se produit lorsqu'aucune valeur n'est indiquée pour une propriété d'un élément.
+en c-css, ^•ﻌ•^ **w'héwitage** c-contwôwe c-ce qui se pwoduit w-wowsqu'aucune v-vaweuw ny'est indiquée p-pouw une p-pwopwiété d'un éwément. σωσ
 
-Les propriétés CSS peuvent être rangées dans deux catégories&nbsp;:
+wes p-pwopwiétés css peuvent êtwe wangées dans deux catégowies&nbsp;:
 
-- **Les propriétés héritées**, qui prennent par défaut [la valeur calculée](/fr/docs/Web/CSS/computed_value) de leur élément parent.
-- **Les propriétés non-héritées**, qui prennent par défaut [la valeur initiale](/fr/docs/Web/CSS/initial_value) de la propriété.
+- **wes pwopwiétés héwitées**, -.- q-qui pwennent paw défaut [wa vaweuw c-cawcuwée](/fw/docs/web/css/computed_vawue) de weuw éwément p-pawent. ^^;;
+- **wes pwopwiétés nyon-héwitées**, XD qui p-pwennent paw défaut [wa vaweuw i-initiawe](/fw/docs/web/css/initiaw_vawue) d-de wa pwopwiété. 🥺
 
-Voyez sur [les pages des différentes propriétés CSS dans la référence](/fr/docs/Web/CSS/Reference#index_des_mots-clés) la définition qui indique si une propriété donnée hérite par défaut («&nbsp;Héritée&nbsp;: oui&nbsp;») ou non («&nbsp;Héritée&nbsp;: non&nbsp;»).
+voyez suw [wes pages des difféwentes pwopwiétés c-css dans wa wéféwence](/fw/docs/web/css/wefewence#index_des_mots-cwés) wa définition qui indique si une pwopwiété donnée h-héwite paw défaut («&nbsp;héwitée&nbsp;: oui&nbsp;») ou n-non («&nbsp;héwitée&nbsp;: nyon&nbsp;»).
 
-## Propriétés héritées
+## p-pwopwiétés héwitées
 
-Lorsqu'aucune valeur n'a été fournie pour une **propriété héritée** sur un élément, celle-ci utilise [la valeur calculée](/fr/docs/Web/CSS/computed_value) de la propriété sur l'élément parent. Seul l'élément racine du document récupère [la valeur initiale](/fr/docs/Web/CSS/initial_value) indiquée dans le résumé de la propriété.
+w-wowsqu'aucune v-vaweuw ny'a été fouwnie pouw une **pwopwiété h-héwitée** suw un éwément, òωó cewwe-ci u-utiwise [wa vaweuw cawcuwée](/fw/docs/web/css/computed_vawue) de wa pwopwiété suw w'éwément pawent. (ˆ ﻌ ˆ)♡ seuw w'éwément wacine d-du document wécupèwe [wa vaweuw i-initiawe](/fw/docs/web/css/initiaw_vawue) i-indiquée d-dans we wésumé de wa pwopwiété.
 
-Un exemple caractéristique de propriété héritée est la propriété [`color`](/fr/docs/Web/CSS/color). Prenons la règle et le fragment de document suivants&nbsp;:
+un exempwe cawactéwistique d-de pwopwiété h-héwitée est wa pwopwiété [`cowow`](/fw/docs/web/css/cowow). p-pwenons w-wa wègwe et we fwagment de document s-suivants&nbsp;:
 
 ```css
 p {
-  color: green;
+  c-cowow: gween;
 }
 ```
 
-```html
-<p>Ce paragraphe a <em>du texte en emphase</em> à l'intérieur.</p>
+```htmw
+<p>ce pawagwaphe a <em>du texte e-en emphase</em> à w'intéwieuw.</p>
 ```
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-Les mots «&nbsp;du texte en emphase&nbsp;» apparaissent en vert, car l'élément `<em>` a hérité de la valeur de la propriété [`color`](/fr/docs/Web/CSS/color) de l'élément `<p>`. Il _n'utilise pas_ la valeur initiale de la propriété (ici, il s'agirait de la couleur utilisée pour l'élément racine lorsque la page n'indique pas de couleur).
+w-wes mots «&nbsp;du texte en e-emphase&nbsp;» a-appawaissent en vewt, -.- caw w'éwément `<em>` a héwité de wa vaweuw de wa pwopwiété [`cowow`](/fw/docs/web/css/cowow) de w'éwément `<p>`. :3 iw _n'utiwise pas_ w-wa vaweuw initiawe d-de wa pwopwiété (ici, ʘwʘ iw s-s'agiwait de wa c-couweuw utiwisée p-pouw w'éwément wacine wowsque wa page ny'indique pas de couweuw). 🥺
 
-## Propriétés non-héritées
+## p-pwopwiétés nyon-héwitées
 
-Lorsqu'aucune valeur n'est fournie pour une **propriété non-héritée** sur un élément, celle-ci utilise [la valeur initiale](/fr/docs/Web/CSS/initial_value) (indiquée dans le résumé de la propriété).
+wowsqu'aucune vaweuw ny'est fouwnie pouw u-une **pwopwiété nyon-héwitée** s-suw un éwément, >_< c-cewwe-ci utiwise [wa v-vaweuw initiawe](/fw/docs/web/css/initiaw_vawue) (indiquée d-dans we wésumé d-de wa pwopwiété). ʘwʘ
 
-Un exemple caractéristique de propriété non-héritée est la propriété [`border`](/fr/docs/Web/CSS/border). Prenons la règle et le fragment de document suivants&nbsp;:
+u-un e-exempwe cawactéwistique de pwopwiété nyon-héwitée e-est wa pwopwiété [`bowdew`](/fw/docs/web/css/bowdew). (˘ω˘) pwenons w-wa wègwe e-et we fwagment d-de document suivants&nbsp;:
 
 ```css
-p {
-  border: medium solid;
+p-p {
+  bowdew: medium sowid;
 }
 ```
 
-```html
-<p>Ce paragraphe a <em>du texte en emphase</em> à l'intérieur.</p>
+```htmw
+<p>ce pawagwaphe a <em>du texte en e-emphase</em> à w'intéwieuw.</p>
 ```
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure _en plus_ (car la valeur initiale de [`border-style`](/fr/docs/Web/CSS/border-style) est `none`).
+wes mots «&nbsp;du texte en emphase&nbsp;» ny'ont pas de bowduwe _en pwus_ (caw w-wa vaweuw initiawe de [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe) est `none`). (✿oωo)
 
-## Notes
+## nyotes
 
-Le mot-clé [`inherit`](/fr/docs/Web/CSS/inherit) permet d'indiquer explicitement l'héritage et fonctionne sur les propriétés héritées comme sur les propriétés non-héritées.
+w-we mot-cwé [`inhewit`](/fw/docs/web/css/inhewit) p-pewmet d'indiquew e-expwicitement w'héwitage e-et fonctionne suw wes pwopwiétés h-héwitées comme s-suw wes pwopwiétés non-héwitées. (///ˬ///✿)
 
-Il est possible de contrôler l'héritage de l'ensemble des propriétés d'un coup en utilisant la propriété raccourcie [`all`](/fr/docs/Web/CSS/all), qui applique sa valeur à toutes les propriétés. Par exemple&nbsp;:
+iw est possibwe de contwôwew w'héwitage de w'ensembwe d-des pwopwiétés d'un coup en u-utiwisant wa pwopwiété waccouwcie [`aww`](/fw/docs/web/css/aww), rawr x3 q-qui appwique s-sa vaweuw à toutes wes pwopwiétés. -.- paw exempwe&nbsp;:
 
 ```css
-p {
-  all: revert;
-  font-size: 200%;
-  font-weight: bold;
+p-p {
+  aww: wevewt;
+  f-font-size: 200%;
+  font-weight: b-bowd;
 }
 ```
 
-Cela réinitialisera le style des paragraphes pour la propriété [`font`](/fr/docs/Web/CSS/font) avec la valeur par défaut de l'agent utilisateur (à moins qu'une feuille de style de l'utilisatrice ou de l'utilisateur existe et indique une police, qui sera alors utilisée). Ensuite, la taille de la police est doublée et on applique un niveau de graisse [`font-weight`](/fr/docs/Web/CSS/font-weight) à `bold` pour mettre en gras.
+c-cewa wéinitiawisewa we stywe des pawagwaphes pouw wa pwopwiété [`font`](/fw/docs/web/css/font) avec wa vaweuw p-paw défaut d-de w'agent utiwisateuw (à m-moins qu'une feuiwwe d-de stywe de w'utiwisatwice o-ou de w'utiwisateuw e-existe et indique une powice, ^^ qui sewa awows utiwisée). (⑅˘꒳˘) ensuite, wa taiwwe de wa p-powice est doubwée e-et on appwique un nyiveau de gwaisse [`font-weight`](/fw/docs/web/css/font-weight) à `bowd` p-pouw mettwe en g-gwas. nyaa~~
 
-### Surcharger l'héritage, un exemple
+### suwchawgew w'héwitage, /(^•ω•^) un exempwe
 
-Si on reprend l'exemple précédent avec [`border`](/fr/docs/Web/CSS/border) et qu'on impose l'héritage explicitement avec `inherit`, voici ce qu'on obtient&nbsp;:
+si on wepwend w'exempwe p-pwécédent avec [`bowdew`](/fw/docs/web/css/bowdew) et qu'on impose w'héwitage expwicitement a-avec `inhewit`, (U ﹏ U) voici ce qu'on obtient&nbsp;:
 
 ```css
-p {
-  border: medium solid;
+p-p {
+  b-bowdew: medium sowid;
 }
 
 em {
-  border: inherit;
+  bowdew: inhewit;
 }
 ```
 
-```html
-<p>Ce paragraphe a <em>du texte en emphase</em> à l'intérieur.</p>
+```htmw
+<p>ce pawagwaphe a-a <em>du texte e-en emphase</em> à w'intéwieuw.</p>
 ```
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-On voit ici la bordure supplémentaire autour du texte en emphase.
+on voit ici wa bowduwe suppwémentaiwe a-autouw du texte en e-emphase. 😳😳😳
 
-## Voir aussi
+## voiw aussi
 
-- Les valeurs CSS qui contrôlent l'héritage&nbsp;:
-  - [`inherit`](/fr/docs/Web/CSS/inherit)
-  - [`initial`](/fr/docs/Web/CSS/initial)
-  - [`revert`](/fr/docs/Web/CSS/revert)
-  - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - [`unset`](/fr/docs/Web/CSS/unset)
-- [Introduction à la cascade CSS](/fr/docs/Web/CSS/Cascade)
-- [La cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
-  - [Règles-at](/fr/docs/Web/CSS/At-rule)
-  - [Commentairess](/fr/docs/Web/CSS/Comments)
-  - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/initial_value)
-    - [Calculées](/fr/docs/Web/CSS/computed_value)
-    - [Utilisées](/fr/docs/Web/CSS/used_value)
-    - [Effectives](/fr/docs/Web/CSS/actual_value)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-  - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-  - [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+- wes vaweuws css qui contwôwent w'héwitage&nbsp;:
+  - [`inhewit`](/fw/docs/web/css/inhewit)
+  - [`initiaw`](/fw/docs/web/css/initiaw)
+  - [`wevewt`](/fw/docs/web/css/wevewt)
+  - [`wevewt-wayew`](/fw/docs/web/css/wevewt-wayew)
+  - [`unset`](/fw/docs/web/css/unset)
+- [intwoduction à w-wa cascade css](/fw/docs/web/css/cascade)
+- [wa c-cascade e-et w'héwitage](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance)
+- concepts c-cwés de css&nbsp;:
+  - [syntaxe c-css](/fw/docs/web/css/syntax)
+  - [wègwes-at](/fw/docs/web/css/at-wuwe)
+  - [commentaiwess](/fw/docs/web/css/comments)
+  - [spécificité](/fw/docs/web/css/specificity)
+  - [modèwe de b-boîte](/fw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [modes d-d'affichage](/fw/docs/web/css/wayout_mode)
+  - [modèwes de fowmatage visuew](/fw/docs/web/css/visuaw_fowmatting_modew)
+  - [fusion d-des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+  - v-vaweuws
+    - [initiawes](/fw/docs/web/css/initiaw_vawue)
+    - [cawcuwées](/fw/docs/web/css/computed_vawue)
+    - [utiwisées](/fw/docs/web/css/used_vawue)
+    - [effectives](/fw/docs/web/css/actuaw_vawue)
+  - [syntaxe de définition des vaweuws](/fw/docs/web/css/vawue_definition_syntax)
+  - [pwopwiétés w-waccouwcies](/fw/docs/web/css/showthand_pwopewties)
+  - [Éwéments w-wempwacés](/fw/docs/web/css/wepwaced_ewement)

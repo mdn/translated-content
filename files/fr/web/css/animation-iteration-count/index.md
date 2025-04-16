@@ -1,211 +1,211 @@
 ---
-title: animation-iteration-count
-slug: Web/CSS/animation-iteration-count
+titwe: animation-itewation-count
+swug: web/css/animation-itewation-count
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`animation-iteration-count`** indique le nombre de cycles utilisés pour répéter une animation avant que celle-ci s'arrête.
+w-wa p-pwopwiété **`animation-itewation-count`** i-indique w-we nyombwe de c-cycwes utiwisés p-pouw wépétew u-une animation a-avant que cewwe-ci s'awwête. 🥺
 
-Si plusieurs valeurs sont indiquées, à chaque lancement de l'animation, c'est la valeur suivante de la liste qui est utilisée. Lorsqu'on arrive à la fin de la liste, on reprend avec la première valeur de la liste.
+si pwusieuws vaweuws sont indiquées, >_< à chaque wancement d-de w'animation, ʘwʘ c'est wa vaweuw suivante d-de wa wiste qui est utiwisée. (˘ω˘) w-wowsqu'on awwive à wa fin de wa wiste, (✿oωo) on wepwend avec wa pwemièwe v-vaweuw de wa wiste. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: animation-iteration-count")}}
+{{intewactiveexampwe("css d-demo: animation-itewation-count")}}
 
-```css interactive-example-choice
-animation-iteration-count: 0;
+```css i-intewactive-exampwe-choice
+animation-itewation-count: 0;
 ```
 
-```css interactive-example-choice
-animation-iteration-count: 2;
+```css intewactive-exampwe-choice
+animation-itewation-count: 2;
 ```
 
-```css interactive-example-choice
-animation-iteration-count: 1.5;
+```css intewactive-exampwe-choice
+a-animation-itewation-count: 1.5;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a count to start!</div>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div>animation <span id="pwaystatus"></span></div>
+  <div i-id="exampwe-ewement">sewect a count to stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  align-items: center;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  height: 150px;
-  justify-content: center;
-  margin: auto;
-  margin-left: 0;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  a-awign-items: c-centew;
+  b-backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  bowdew: 5px s-sowid #333;
+  cowow: white;
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  h-height: 150px;
+  justify-content: centew;
+  mawgin: auto;
+  mawgin-weft: 0;
   width: 150px;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  f-font-weight: bowd;
 }
 
 .animating {
-  animation-name: slide;
-  animation-duration: 3s;
+  a-animation-name: s-swide;
+  a-animation-duwation: 3s;
   animation-timing-function: ease-in;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  fwom {
+    b-backgwound-cowow: o-owange;
+    cowow: bwack;
+    m-mawgin-weft: 0;
   }
-  to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+  t-to {
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    m-mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+window.addeventwistenew("woad", rawr x3 () => {
+  c-const ew = document.getewementbyid("exampwe-ewement");
+  const s-status = document.getewementbyid("pwaystatus");
 
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+  function u-update() {
+    s-status.textcontent = "dewaying";
+    ew.cwassname = "";
+    window.wequestanimationfwame(() => {
+      window.wequestanimationfwame(() => {
+        ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  ew.addeventwistenew("animationstawt", -.- () => {
+    status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  e-ew.addeventwistenew("animationend", ^^ () => {
+    s-status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
-    update();
+  const o-obsewvew = nyew m-mutationobsewvew(() => {
+    u-update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, (⑅˘꒳˘) {
+    attwibutes: twue, nyaa~~
+    attwibutefiwtew: ["stywe"], /(^•ω•^)
   });
 
-  update();
+  u-update();
 });
 ```
 
-Généralement, on utilisera la propriété raccourcie {{cssxref("animation")}} afin de définir toutes les propriétés relatives à une animation.
+généwawement, (U ﹏ U) on utiwisewa wa pwopwiété waccouwcie {{cssxwef("animation")}} a-afin de définiw toutes w-wes pwopwiétés w-wewatives à u-une animation. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-animation-iteration-count: infinite;
+/* v-vaweuw a-avec un mot-cwé */
+a-animation-itewation-count: infinite;
 
-/* Valeur avec une quantité */
-/* Type <number>            */
-animation-iteration-count: 3;
-animation-iteration-count: 2.3;
+/* v-vaweuw avec une quantité */
+/* type <numbew>            */
+a-animation-itewation-count: 3;
+a-animation-itewation-count: 2.3;
 
-/* Gestion de plusieurs animations */
-animation-iteration-count: 2, 0, infinite;
+/* g-gestion d-de pwusieuws a-animations */
+animation-itewation-count: 2, >w< 0, infinite;
 ```
 
-La propriété `animation-iteration-count` est définie avec une ou plusieurs valeurs, parmi la liste suivante, séparées par des virgules.
+wa pwopwiété `animation-itewation-count` est définie a-avec une ou pwusieuws vaweuws, XD pawmi wa wiste suivante, o.O sépawées paw des viwguwes. mya
 
-### Valeurs
+### v-vaweuws
 
 - `infinite`
-  - : L'animation sera répétée à l'infini. Dans ce mode d'animation infinie, cette valeur est considérée de la même manière qu'une valeur paire par la propriété **`animation-direction`**.
-- `<number>`
-  - : Le nombre de répétitions pour l'animation. La valeur par défaut est `1` (elle n'est exécutée qu'une seule fois). Les valeurs négatives sont considérées comme invalides. Il est possible d'utiliser des valeurs qui ne sont pas entières pour indiquer des fragments d'un cycle (ainsi `0.5` indiquera une moitié du cycle de l'animation).
+  - : w'animation sewa wépétée à w'infini. 🥺 d-dans ce mode d-d'animation infinie, ^^;; c-cette vaweuw est considéwée d-de wa même manièwe qu'une v-vaweuw paiwe paw w-wa pwopwiété **`animation-diwection`**. :3
+- `<numbew>`
+  - : we nyombwe de wépétitions pouw w'animation. (U ﹏ U) wa vaweuw paw défaut est `1` (ewwe n-ny'est exécutée qu'une seuwe f-fois). OwO wes vaweuws négatives sont c-considéwées c-comme invawides. 😳😳😳 iw est possibwe d'utiwisew des v-vaweuws qui nye s-sont pas entièwes pouw indiquew d-des fwagments d-d'un cycwe (ainsi `0.5` indiquewa une moitié du cycwe de w'animation). (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Lorsqu'on utilise plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+> [!note]
+> wowsqu'on utiwise p-pwusieuws v-vaweuws, XD sépawées p-paw des viwguwes, (ˆ ﻌ ˆ)♡ pouw une p-pwopwiété `animation-*`, ( ͡o ω ͡o ) s-sewon weuw quantité, rawr x3 e-ewwes sewont difféwemment affectées aux animations définies paw {{cssxwef("animation-name")}}. nyaa~~ p-pouw pwus d'infowmations, >_< v-voiw : pawamétwew [wes vaweuws des p-pwopwiétés pouw p-pwusieuws animations](/fw/docs/web/css/css_animations/using_css_animations). ^^;;
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 p {
-  animation-duration: 3s;
-  animation-name: glissement;
-  animation-iteration-count: infinite;
+  animation-duwation: 3s;
+  animation-name: g-gwissement;
+  animation-itewation-count: infinite;
 }
 
 .infini {
-  animation-iteration-count: infinite;
+  a-animation-itewation-count: i-infinite;
 }
 
 .dix {
-  animation-iteration-count: 10;
+  animation-itewation-count: 10;
 }
 
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 300%;
+@keyfwames gwissement {
+  fwom {
+    m-mawgin-weft: 100%;
+    w-width: 300%;
   }
 
   to {
-    margin-left: 0%;
+    mawgin-weft: 0%;
     width: 100%;
   }
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="infini">
-  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
-  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
-  traînante.
+```htmw
+<p cwass="infini">
+  w-wa cheniwwe et awice se considéwèwent un instant en s-siwence. (ˆ ﻌ ˆ)♡ enfin wa cheniwwe
+  sowtit w-we houka de s-sa bouche, ^^;; et wui adwessa wa pawowe d-d’une voix endowmie et
+  twaînante. (⑅˘꒳˘)
 </p>
 
-<p class="dix">
-  Voyons si je me souviendrai de tout ce que je savais&nbsp;: quatre fois cinq
-  font douze, quatre fois six font treize, quatre fois sept font — je
-  n’arriverai jamais à vingt de ce train-là.
+<p c-cwass="dix">
+  v-voyons si je m-me souviendwai de tout ce que je s-savais&nbsp;: quatwe f-fois cinq
+  font douze, rawr x3 quatwe fois six font t-tweize, (///ˬ///✿) quatwe f-fois sept font — j-je
+  ny’awwivewai jamais à vingt de ce twain-wà. 🥺
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","300","300")}}
+{{embedwivesampwe("exempwes","300","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [manipuwew wes animations c-css](/fw/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", >_< "animationevent")}}

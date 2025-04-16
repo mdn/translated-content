@@ -1,668 +1,668 @@
 ---
-title: L'alignement des boîtes avec les grilles CSS
-slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
+titwe: w'awignement des boîtes a-avec wes gwiwwes c-css
+swug: web/css/css_gwid_wayout/box_awignment_in_gwid_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture","Web/CSS/CSS_Grid_Layout")}}
+{{pweviousmenunext("web/css/css_gwid_wayout/pwacement_automatique_suw_une_gwiwwe_css", ( ͡o ω ͡o ) "web/css/css_gwid_wayout/wes_gwiwwes_css_wes_vaweuws_wogiques_wes_modes_d_écwituwe","web/css/css_gwid_wayout")}}
 
-Si vous connaissez [les boîtes flexibles (flexbox)](/fr/docs/Web/CSS/CSS_flexible_box_layout) vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.
+s-si v-vous connaissez [wes b-boîtes fwexibwes (fwexbox)](/fw/docs/web/css/css_fwexibwe_box_wayout) v-vous s-savez déjà comment a-awignew wes éwéments fwexibwes à w'intéwieuw d'un conteneuw fwexibwe. 😳😳😳 c-ces pwopwiétés d'awignement, ^•ﻌ•^ initiawement spécifiée d-dans wa spécification d-des boîtes fwexibwes, (˘ω˘) sont désowmais spécifiées dans une nyouvewwe s-spécification [box awignment w-wevew 3](https://dwafts.csswg.owg/css-awign/). (˘ω˘) c-cette spécification détaiwwe we fonctionnement de w'awignement pouw wes difféwentes m-méthodes de disposition. -.-
 
-Chaque méthode de disposition qui implémente cette nouvelle spécification se comportera légèrement différemment selon les différences de contraintes et de fonctionnalités (et aussi selon le comportement historique). On ne pourra donc pas avoir un alignement exactement homogène. La spécification pour l'alignement des boîtes détaille le fonctionnement de chaque méthode mais malheureusement, à l'heure actuelle, aucun navigateur ne prend en charge cette spécification. À l'heure actuelle, les navigateurs respectent les règles de cette spécification pour l'alignement et la répartition de l'espace lorsqu'on utilise une disposition en grille. Dans cet article, nous verrons comment celles-ci fonctionnent. On retrouvera de nombreux points communs avec les boîtes flexibles pour le fonctionnement de ces propriétés et valeurs. Toutefois, les grilles fonctionnant sur deux axes et les boîtes flexibles sur un seul, il faudra faire attention à quelques différences. Commençons par analyser les deux axes utilisés lorsqu'il s'agit d'aligner des objets sur une grille.
+chaque méthode de disposition qui impwémente c-cette nyouvewwe spécification s-se compowtewa w-wégèwement difféwemment s-sewon w-wes difféwences de contwaintes et de fonctionnawités (et a-aussi sewon we compowtement histowique). ^•ﻌ•^ o-on nye pouwwa donc pas avoiw un awignement exactement homogène. /(^•ω•^) wa spécification pouw w'awignement d-des boîtes détaiwwe w-we fonctionnement d-de chaque méthode m-mais mawheuweusement, (///ˬ///✿) à w'heuwe actuewwe, mya aucun nyavigateuw nye pwend en c-chawge cette spécification. o.O À w-w'heuwe actuewwe, ^•ﻌ•^ wes nyavigateuws w-wespectent wes w-wègwes de cette spécification p-pouw w'awignement et wa wépawtition d-de w'espace wowsqu'on utiwise une disposition e-en gwiwwe. (U ᵕ U❁) dans cet awticwe, :3 n-nyous vewwons comment cewwes-ci f-fonctionnent. (///ˬ///✿) o-on wetwouvewa de nyombweux points communs avec wes boîtes fwexibwes pouw we fonctionnement de ces pwopwiétés e-et vaweuws. (///ˬ///✿) toutefois, 🥺 w-wes gwiwwes fonctionnant s-suw deux axes et w-wes boîtes fwexibwes s-suw un seuw, -.- iw faudwa faiwe attention à quewques difféwences. nyaa~~ c-commençons paw anawysew wes deux axes utiwisés wowsqu'iw s'agit d'awignew d-des objets suw une gwiwwe. (///ˬ///✿)
 
-## Les deux axes d'une grille
+## w-wes deux axes d-d'une gwiwwe
 
-Lorsqu'on manipule une grille, on dispose de deux axes sur lesquels aligner les objets. L'axe de bloc et l'axe en ligne. L'axe de bloc est l'axe selon lequel les blocs sont disposés quand on a une disposition en bloc (_block layout_). Par exemple, si on a deux paragraphes sur une page, par défaut, ils s'affichent l'un en dessous de l'autre.
+w-wowsqu'on manipuwe une gwiwwe, 🥺 on d-dispose de deux a-axes suw wesquews a-awignew wes o-objets. >w< w'axe de bwoc et w'axe en wigne. rawr x3 w'axe de b-bwoc est w'axe s-sewon wequew wes b-bwocs sont disposés q-quand on a-a une disposition en bwoc (_bwock wayout_). (⑅˘꒳˘) paw exempwe, σωσ si on a d-deux pawagwaphes suw une page, paw défaut, XD iws s'affichent w'un en dessous de w'autwe. -.-
 
-![](7_block_axis.png)
+![](7_bwock_axis.png)
 
-**L'axe en ligne est orthogonal à l'axe de bloc. C'est la direction selon laquelle progresse le texte.**
+**w'axe e-en wigne est owthogonaw à w'axe de bwoc. >_< c'est wa diwection s-sewon waquewwe p-pwogwesse we t-texte.**
 
-![](7_inline_axis.png)
+![](7_inwine_axis.png)
 
-Grâce aux propriétés et à leurs valeurs, nous serons en mesure d'aligner le contenu de la grillle par rapport à ces deux axes.
+gwâce aux pwopwiétés e-et à weuws vaweuws, rawr n-nyous sewons en m-mesuwe d'awignew we contenu de wa gwiwwwe paw wappowt à ces deux axes. 😳😳😳
 
-## Aligner des objets sur l'axe de bloc (_block axis_)
+## awignew des objets s-suw w'axe de bwoc (_bwock axis_)
 
-Les propriétés {{cssxref("align-self")}} et {{cssxref("align-items")}} permettent de contrôler l'alignement selon l'axe de bloc. Lorsqu'on utilise ces propriétés, on modifie l'alignement de l'objet au sein de la zone de grille sur laquelle il est placé.
+w-wes pwopwiétés {{cssxwef("awign-sewf")}} et {{cssxwef("awign-items")}} p-pewmettent d-de contwôwew w'awignement sewon w'axe de b-bwoc. UwU wowsqu'on u-utiwise ces pwopwiétés, (U ﹏ U) on modifie w-w'awignement d-de w'objet au sein de wa zone de gwiwwe suw waquewwe iw est pwacé. (˘ω˘)
 
-### Utiliser align-items
+### utiwisew a-awign-items
 
-Dans l'exemple suivant, on a quatre zones sur la grille. On peut utiliser la propriété {{cssxref("align-items")}} sur le conteneur de la grille afin d'aligner les objets avec l'une des valeurs suivantes :
-
-- `auto`
-- `normal`
-- `start`
-- `end`
-- `center`
-- `stretch`
-- `baseline`
-- `first baseline`
-- `last baseline`
-
-```css hidden
-* {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: 100px;
-  grid-template-areas:
-    "a a a a b b b b"
-    "a a a a b b b b"
-    "c c c c d d d d"
-    "c c c c d d d d";
-  align-items: start;
-}
-.item1 {
-  grid-area: a;
-}
-.item2 {
-  grid-area: b;
-}
-.item3 {
-  grid-area: c;
-}
-.item4 {
-  grid-area: d;
-}
-```
-
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
-</div>
-```
-
-{{EmbedLiveSample('Utiliser_align-items', '500', '450')}}
-
-Lorsqu'on utilise `align-self: start`, la hauteur de chaque `<div>` sera déterminée par le contenu du `<div>`. En revanche, si on n'utilise pas {{cssxref("align-self")}}, chaque `<div>` sera étiré afin de remplir la zone de la grille.
-
-La propriété {{cssxref("align-items")}} définit en fait la valeur de la propriété {{cssxref("align-self")}} pour tous les éléments fils de la grille. Cela signifie qu'on peut avoir un réglage plus fin sur chacun des objets de la grille en utilisant `align-self` pour les objets.
-
-### Utiliser align-self
-
-Dans le prochain exemple, on utilise la propriété `align-self` afin d'illustrer les différentes valeurs pour l'alignement. La première zone illustre le comportement par défaut pour `align-self` : l'objet est étiré. Le deuxième objet utilise la valeur `start`, le troisième utilise `end` et le quatrième utilise `center`.
-
-```css hidden
-* {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: 100px;
-  grid-template-areas:
-    "a a a a b b b b"
-    "a a a a b b b b"
-    "c c c c d d d d"
-    "c c c c d d d d";
-}
-.item1 {
-  grid-area: a;
-}
-.item2 {
-  grid-area: b;
-  align-self: start;
-}
-.item3 {
-  grid-area: c;
-  align-self: end;
-}
-.item4 {
-  grid-area: d;
-  align-self: center;
-}
-```
-
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
-</div>
-```
-
-{{EmbedLiveSample('Utiliser_align-self', '500', '450')}}
-
-### Gestion des objets avec un ratio intrinsèque
-
-La spécification indique que le comportement par défaut pour {{cssxref("align-self")}} est d'étirer l'objet sauf si celui-ci possède un ratio intrinsèque. Dans ce cas, le comportement par défaut correspond à la valeur `start`. En effet, si le comportement par défaut était le même pour les éléments avec un ratio intrinsèque (une image matricielle par exemple), l'étirement distordrait l'objet.
-
-Bien que ce comportement ait récemment été clarifié dans la spécification, il n'est pas encore implémenté dans les différents navigateurs. Pour le moment, il faut donc s'assurer d'utiliser {{cssxref("align-self")}} et {{cssxref("justify-self")}} avec les valeurs `start` pour les éléments concernés comme les images. Cela correspondra au comportement par défaut lorsqu'il aura été implémenté.
-
-## Justifier les objets sur l'axe en ligne (_inline axis_)
-
-{{cssxref("align-items")}} et {{cssxref("align-self")}} gèrent l'alignement des objets sur l'axe de bloc. {{cssxref("justify-items")}} et {{cssxref("justify-self")}} permettent quant à eux de gérer l'alignement sur l'axe en ligne. Les valeurs disponibles sont les mêmes que pour `align-self` :
+d-dans w'exempwe s-suivant, /(^•ω•^) on a quatwe zones suw wa g-gwiwwe. on peut u-utiwisew wa pwopwiété {{cssxwef("awign-items")}} suw we conteneuw d-de wa gwiwwe afin d'awignew wes objets avec w'une des vaweuws suivantes :
 
 - `auto`
-- `normal`
-- `start`
+- `nowmaw`
+- `stawt`
 - `end`
-- `center`
-- `stretch`
-- `baseline`
-- `first baseline`
-- `last baseline`
-
-Juste après, on voit le même exemple qu'avec {{cssxref("align-items")}} où on a utilisé la propriété {{cssxref("justify-self")}}.
-
-Là encore, la valeur par défaut `stretch` pour les objets qui n'ont pas de ratio intrinsèque. Cela signifie que, par défaut, les objets de la grille couvriront l'ensemble de la zone de grille sur laquelle ils sont placés. Dans l'exemple qui suit, le premier objet illustre cet alignement par défaut.
+- `centew`
+- `stwetch`
+- `basewine`
+- `fiwst b-basewine`
+- `wast b-basewine`
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: 100px;
-  grid-template-areas:
-    "a a a a b b b b"
-    "a a a a b b b b"
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(8, (U ﹏ U) 1fw);
+  g-gwid-gap: 10px;
+  gwid-auto-wows: 100px;
+  gwid-tempwate-aweas:
+    "a a a a-a b b b b"
+    "a a-a a a b b b b"
     "c c c c d d d d"
+    "c c c c d d d d";
+  a-awign-items: stawt;
+}
+.item1 {
+  gwid-awea: a;
+}
+.item2 {
+  g-gwid-awea: b;
+}
+.item3 {
+  gwid-awea: c;
+}
+.item4 {
+  g-gwid-awea: d;
+}
+```
+
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="item1">objet 1</div>
+  <div c-cwass="item2">objet 2</div>
+  <div cwass="item3">objet 3</div>
+  <div c-cwass="item4">objet 4</div>
+</div>
+```
+
+{{embedwivesampwe('utiwisew_awign-items', ^•ﻌ•^ '500', '450')}}
+
+wowsqu'on u-utiwise `awign-sewf: s-stawt`, >w< w-wa hauteuw de chaque `<div>` sewa d-détewminée paw w-we contenu du `<div>`. ʘwʘ en wevanche, òωó si on ny'utiwise p-pas {{cssxwef("awign-sewf")}}, o.O c-chaque `<div>` s-sewa étiwé afin de wempwiw wa zone de wa g-gwiwwe. ( ͡o ω ͡o )
+
+wa pwopwiété {{cssxwef("awign-items")}} définit en f-fait wa vaweuw de w-wa pwopwiété {{cssxwef("awign-sewf")}} pouw tous wes éwéments fiws de wa gwiwwe. mya c-cewa signifie q-qu'on peut a-avoiw un wégwage p-pwus fin suw chacun des objets d-de wa gwiwwe en utiwisant `awign-sewf` pouw wes objets. >_<
+
+### utiwisew awign-sewf
+
+dans we pwochain e-exempwe, rawr on utiwise wa pwopwiété `awign-sewf` a-afin d'iwwustwew wes difféwentes v-vaweuws pouw w'awignement. >_< w-wa pwemièwe zone iwwustwe we compowtement p-paw d-défaut pouw `awign-sewf` : w-w'objet e-est étiwé. (U ﹏ U) w-we deuxième objet utiwise wa vaweuw `stawt`, rawr we twoisième utiwise `end` et we quatwième utiwise `centew`. (U ᵕ U❁)
+
+```css hidden
+* {
+  box-sizing: bowdew-box;
+}
+
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+}
+
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  padding: 1em;
+  cowow: #d9480f;
+}
+```
+
+```css
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(8, (ˆ ﻌ ˆ)♡ 1fw);
+  g-gwid-gap: 10px;
+  gwid-auto-wows: 100px;
+  gwid-tempwate-aweas:
+    "a a a a b-b b b b"
+    "a a-a a a b b b b"
+    "c c c c d d d-d d"
+    "c c c c-c d d d d";
+}
+.item1 {
+  gwid-awea: a;
+}
+.item2 {
+  gwid-awea: b;
+  awign-sewf: s-stawt;
+}
+.item3 {
+  g-gwid-awea: c-c;
+  awign-sewf: e-end;
+}
+.item4 {
+  g-gwid-awea: d;
+  awign-sewf: centew;
+}
+```
+
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="item1">objet 1</div>
+  <div cwass="item2">objet 2</div>
+  <div c-cwass="item3">objet 3</div>
+  <div c-cwass="item4">objet 4</div>
+</div>
+```
+
+{{embedwivesampwe('utiwisew_awign-sewf', >_< '500', '450')}}
+
+### gestion des objets a-avec un watio intwinsèque
+
+wa spécification i-indique que we compowtement paw d-défaut pouw {{cssxwef("awign-sewf")}} e-est d'étiwew w'objet s-sauf si cewui-ci possède un watio intwinsèque. ^^;; d-dans ce cas, ʘwʘ we c-compowtement paw d-défaut cowwespond à wa vaweuw `stawt`. 😳😳😳 en effet, UwU si we compowtement p-paw défaut était we même pouw wes éwéments a-avec un w-watio intwinsèque (une image matwiciewwe p-paw exempwe), OwO w'étiwement d-distowdwait w-w'objet. :3
+
+bien que ce compowtement ait wécemment été c-cwawifié dans wa spécification, -.- iw ny'est p-pas encowe i-impwémenté dans wes difféwents n-nyavigateuws. 🥺 pouw we moment, -.- i-iw faut donc s'assuwew d-d'utiwisew {{cssxwef("awign-sewf")}} e-et {{cssxwef("justify-sewf")}} avec wes vaweuws `stawt` pouw wes éwéments concewnés comme wes images. -.- cewa cowwespondwa au compowtement paw défaut wowsqu'iw auwa été impwémenté. (U ﹏ U)
+
+## justifiew wes objets suw w-w'axe en wigne (_inwine a-axis_)
+
+{{cssxwef("awign-items")}} et {{cssxwef("awign-sewf")}} gèwent w-w'awignement d-des objets suw w'axe d-de bwoc. rawr {{cssxwef("justify-items")}} et {{cssxwef("justify-sewf")}} p-pewmettent quant à eux d-de géwew w'awignement s-suw w'axe en wigne. mya wes v-vaweuws disponibwes sont wes mêmes q-que pouw `awign-sewf` :
+
+- `auto`
+- `nowmaw`
+- `stawt`
+- `end`
+- `centew`
+- `stwetch`
+- `basewine`
+- `fiwst b-basewine`
+- `wast basewine`
+
+juste apwès, on voit w-we même exempwe q-qu'avec {{cssxwef("awign-items")}} o-où on a u-utiwisé wa pwopwiété {{cssxwef("justify-sewf")}}. ( ͡o ω ͡o )
+
+w-wà encowe, /(^•ω•^) w-wa vaweuw paw d-défaut `stwetch` p-pouw wes objets q-qui ny'ont pas de watio intwinsèque. >_< c-cewa signifie q-que, (✿oωo) paw d-défaut, 😳😳😳 wes objets de wa gwiwwe c-couvwiwont w'ensembwe de wa zone de gwiwwe suw w-waquewwe iws sont pwacés. (ꈍᴗꈍ) dans w-w'exempwe qui suit, 🥺 w-we pwemiew objet i-iwwustwe cet awignement paw d-défaut. mya
+
+```css hidden
+* {
+  box-sizing: b-bowdew-box;
+}
+
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+}
+
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
+}
+```
+
+```css
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(8, (ˆ ﻌ ˆ)♡ 1fw);
+  gwid-gap: 10px;
+  gwid-auto-wows: 100px;
+  g-gwid-tempwate-aweas:
+    "a a a a b b b-b b"
+    "a a a a-a b b b b"
+    "c c-c c c d d d d"
     "c c c c d d d d";
 }
 .item1 {
-  grid-area: a;
+  g-gwid-awea: a-a;
 }
 .item2 {
-  grid-area: b;
-  justify-self: start;
+  gwid-awea: b;
+  j-justify-sewf: stawt;
 }
 .item3 {
-  grid-area: c;
-  justify-self: end;
+  gwid-awea: c;
+  justify-sewf: e-end;
 }
 .item4 {
-  grid-area: d;
-  justify-self: center;
+  gwid-awea: d;
+  j-justify-sewf: c-centew;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item1">objet 1</div>
+  <div c-cwass="item2">objet 2</div>
+  <div c-cwass="item3">objet 3</div>
+  <div c-cwass="item4">objet 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Justifier_les_objets_sur_laxe_en_ligne_inline_axis', '500', '450')}}
+{{embedwivesampwe('justifiew_wes_objets_suw_waxe_en_wigne_inwine_axis', (⑅˘꒳˘) '500', òωó '450')}}
 
-Comme pour {{cssxref("align-self")}} et {{cssxref("align-items")}}, on peut utiliser la propriété {{cssxref("justify-items")}} sur le conteneur de la grille afin de régler la valeur de {{cssxref("justify-self")}} pour l'ensemble des objets de la grille.
+comme p-pouw {{cssxwef("awign-sewf")}} et {{cssxwef("awign-items")}}, o.O o-on peut utiwisew w-wa pwopwiété {{cssxwef("justify-items")}} s-suw we conteneuw d-de wa gwiwwe afin d-de wégwew wa v-vaweuw de {{cssxwef("justify-sewf")}} p-pouw w'ensembwe d-des objets de wa gwiwwe. XD
 
-Les propriétés {{cssxref("justify-self")}} et {{cssxref("justify-items")}} ne sont pas disponibles lorsqu'on utilise les boîtes flexibles car celles-ci s'étendent uniquement sur une dimension. Pour aligner les éléments sur l'axe principale d'une boîte flexible, on utilisera la propriété {{cssxref("justify-content")}}.
+w-wes pwopwiétés {{cssxwef("justify-sewf")}} et {{cssxwef("justify-items")}} n-nye sont pas disponibwes w-wowsqu'on u-utiwise wes boîtes f-fwexibwes caw cewwes-ci s'étendent uniquement suw une dimension. (˘ω˘) p-pouw awignew w-wes éwéments s-suw w'axe pwincipawe d'une boîte fwexibwe, (ꈍᴗꈍ) on utiwisewa wa pwopwiété {{cssxwef("justify-content")}}. >w<
 
-### Propriétés raccourcies
+### p-pwopwiétés waccouwcies
 
-La propriété {{CSSxRef("place-items")}} est une propriété raccourcie qui synthétise {{CSSxRef("align-items")}} et {{CSSxRef("justify-items")}}. {{CSSxRef("place-self")}} est une propriété raccourcie qui synthétise {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}}.
+w-wa pwopwiété {{cssxwef("pwace-items")}} est une pwopwiété w-waccouwcie q-qui synthétise {{cssxwef("awign-items")}} et {{cssxwef("justify-items")}}. XD {{cssxwef("pwace-sewf")}} est une pwopwiété waccouwcie q-qui synthétise {{cssxwef("awign-sewf")}} e-et {{cssxwef("justify-sewf")}}.
 
-## Centrer un objet sur une zone
+## c-centwew un o-objet suw une zone
 
-En combinant les propriétés `align-*` et `justify-*`, on peut facilement centrer un objet sur sa zone de grille.
+en combinant wes pwopwiétés `awign-*` e-et `justify-*`, -.- o-on peut faciwement centwew un objet s-suw sa zone de gwiwwe.
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: 200px;
-  grid-template-areas:
-    ". a a ."
-    ". a a .";
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(4, ^^;; 1fw);
+  gwid-gap: 10px;
+  g-gwid-auto-wows: 200px;
+  g-gwid-tempwate-aweas:
+    ". XD a-a a ."
+    ". :3 a a .";
 }
 .item1 {
-  grid-area: a;
-  align-self: center;
-  justify-self: center;
+  g-gwid-awea: a;
+  awign-sewf: centew;
+  justify-sewf: c-centew;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="item1">objet 1</div>
 </div>
 ```
 
-{{EmbedLiveSample('Centrer_un_objet_sur_une_zone', '500', '480')}}
+{{embedwivesampwe('centwew_un_objet_suw_une_zone', σωσ '500', '480')}}
 
-## Aligner les pistes d'une grille sur l'axe de bloc
+## awignew wes pistes d'une gwiwwe suw w'axe de bwoc
 
-Si on a des pistes qui n'occupent pas tout l'espace du conteneur, on pourra aligner les pistes au sein du conteneur. Là aussi, on peut obtenir cet alignement sur l'axe des colonnes et l'axe des lignes : {{cssxref("align-content")}} permet d'aligner les pistes selon l'axe des colonnes et {{cssxref("justify-content")}} permettant d'aligner sur l'axe en ligne.
+si on a des pistes q-qui ny'occupent pas tout w'espace d-du conteneuw, XD o-on pouwwa awignew wes pistes au sein du conteneuw. :3 w-wà aussi, rawr on peut obteniw c-cet awignement s-suw w'axe des c-cowonnes et w'axe d-des wignes : {{cssxwef("awign-content")}} p-pewmet d'awignew wes pistes sewon w'axe des cowonnes et {{cssxwef("justify-content")}} p-pewmettant d'awignew suw w'axe e-en wigne. 😳
 
-La propriété {{cssxref("place-content")}} est une propriété raccourcie pour {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
+wa pwopwiété {{cssxwef("pwace-content")}} est une pwopwiété waccouwcie p-pouw {{cssxwef("awign-content")}} et {{cssxwef("justify-content")}}. 😳😳😳
 
-Les valeurs disponibles pour {{cssxref("align-content")}}, {{cssxref("justify-content")}} et {{cssxref("place-content")}} sont :
+wes vaweuws disponibwes pouw {{cssxwef("awign-content")}}, (ꈍᴗꈍ) {{cssxwef("justify-content")}} e-et {{cssxwef("pwace-content")}} s-sont :
 
-- `normal`
-- `start`
+- `nowmaw`
+- `stawt`
 - `end`
-- `center`
-- `stretch`
-- `space-around`
+- `centew`
+- `stwetch`
+- `space-awound`
 - `space-between`
-- `space-evenly`
-- `baseline`
-- `first baseline`
-- `last baseline`
+- `space-evenwy`
+- `basewine`
+- `fiwst basewine`
+- `wast b-basewine`
 
-Dans l'exemple qui suit, on a un conteneur qui mesure 500 pixels de haut sur 500 pixels de large. On définit trois pistes de ligne et trois pistes de colonnes qui mesurent chacune 100 pixels et avec une gouttière de 10 pixels. On a donc un espace disponible dans le conteneur dans chaque direction.
+dans w'exempwe qui suit, 🥺 on a un conteneuw q-qui mesuwe 500 p-pixews de haut suw 500 pixews d-de wawge. ^•ﻌ•^ on définit twois pistes d-de wigne et twois pistes de cowonnes qui mesuwent chacune 100 p-pixews et avec une gouttièwe de 10 pixews. XD o-on a donc un espace d-disponibwe dans w-we conteneuw dans chaque diwection.
 
-La propriété `align-content` s'applique sur le conteneur de la grille car elle porte sur l'ensemble de la grille. Pour une disposition en grille, la valeur par défaut est `start` : cela indique que les pistes commencent à partir du coin en haut à gauche de la grille.
+wa pwopwiété `awign-content` s-s'appwique suw we conteneuw de wa gwiwwe caw ewwe powte suw w'ensembwe de w-wa gwiwwe. ^•ﻌ•^ pouw u-une disposition e-en gwiwwe, ^^;; wa v-vaweuw paw défaut est `stawt` : cewa indique que w-wes pistes commencent à p-pawtiw du coin en haut à gauche de wa g-gwiwwe. ʘwʘ
 
-### Alignement par défaut
+### awignement paw défaut
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, OwO 100px);
+  g-gwid-tempwate-wows: wepeat(3, 🥺 100px);
   height: 500px;
   width: 500px;
-  grid-gap: 10px;
-  grid-template-areas:
-    "a a b"
-    "a a b"
+  g-gwid-gap: 10px;
+  g-gwid-tempwate-aweas:
+    "a a-a b"
+    "a a-a b"
     "c d d";
 }
 .item1 {
-  grid-area: a;
+  g-gwid-awea: a;
 }
 .item2 {
-  grid-area: b;
+  gwid-awea: b-b;
 }
 .item3 {
-  grid-area: c;
+  gwid-awea: c;
 }
 .item4 {
-  grid-area: d;
+  g-gwid-awea: d;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="item1">objet 1</div>
+  <div cwass="item2">objet 2</div>
+  <div cwass="item3">objet 3</div>
+  <div c-cwass="item4">objet 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Alignement_par_défaut', '500', '520')}}
+{{embedwivesampwe('awignement_paw_défaut', (⑅˘꒳˘) '500', '520')}}
 
-### Utiliser align-content: end
+### u-utiwisew awign-content: e-end
 
-Si on ajoute `align-content` avec la valeur `end` sur le conteneur, les pistes seront déplacées à la fin du conteneur selon l'axe des colonnes.
+si on ajoute `awign-content` a-avec wa vaweuw `end` s-suw we conteneuw, wes p-pistes sewont d-dépwacées à wa fin du conteneuw s-sewon w'axe des cowonnes. (///ˬ///✿)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, (✿oωo) 100px);
+  gwid-tempwate-wows: w-wepeat(3, nyaa~~ 100px);
   height: 500px;
-  width: 500px;
-  grid-gap: 10px;
-  grid-template-areas:
+  w-width: 500px;
+  g-gwid-gap: 10px;
+  gwid-tempwate-aweas:
     "a a b"
     "a a b"
     "c d d";
-  align-content: end;
+  awign-content: e-end;
 }
 .item1 {
-  grid-area: a;
+  g-gwid-awea: a;
 }
 .item2 {
-  grid-area: b;
+  gwid-awea: b;
 }
 .item3 {
-  grid-area: c;
+  g-gwid-awea: c;
 }
 .item4 {
-  grid-area: d;
+  gwid-awea: d-d;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item1">objet 1</div>
+  <div cwass="item2">objet 2</div>
+  <div cwass="item3">objet 3</div>
+  <div cwass="item4">objet 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Utiliser_align-content_end', '500', '520')}}
+{{embedwivesampwe('utiwisew_awign-content_end', >w< '500', '520')}}
 
-### Utiliser align-content: space-between
+### u-utiwisew awign-content: space-between
 
-Pour cette propriété, on peut également utiliser des valeurs qu'on manipule avec les boîtes flexibles : `space-between`, `space-around` et `space-evenly` qui permettent de répartir l'espace. Si on utilise {{cssxref("align-content")}} avec `space-between` pour notre exemple, on voit alors que les éléments sont espacés de façon équitable.
+p-pouw cette pwopwiété, (///ˬ///✿) on p-peut égawement u-utiwisew des vaweuws qu'on manipuwe a-avec wes boîtes f-fwexibwes : `space-between`, rawr `space-awound` e-et `space-evenwy` q-qui pewmettent d-de wépawtiw w'espace. (U ﹏ U) s-si on utiwise {{cssxwef("awign-content")}} avec `space-between` pouw notwe exempwe, ^•ﻌ•^ on voit awows que wes éwéments sont e-espacés de façon équitabwe.
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, (///ˬ///✿) 100px);
+  g-gwid-tempwate-wows: w-wepeat(3, o.O 100px);
   height: 500px;
   width: 500px;
-  grid-gap: 10px;
-  grid-template-areas:
+  g-gwid-gap: 10px;
+  gwid-tempwate-aweas:
     "a a b"
     "a a b"
-    "c d d";
-  align-content: space-between;
+    "c d-d d";
+  a-awign-content: space-between;
 }
 .item1 {
-  grid-area: a;
+  gwid-awea: a-a;
 }
 .item2 {
-  grid-area: b;
+  gwid-awea: b-b;
 }
 .item3 {
-  grid-area: c;
+  g-gwid-awea: c;
 }
 .item4 {
-  grid-area: d;
+  gwid-awea: d-d;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="item1">objet 1</div>
+  <div c-cwass="item2">objet 2</div>
+  <div c-cwass="item3">objet 3</div>
+  <div c-cwass="item4">objet 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Utiliser_align-content_space-between', '500', '1570')}}
+{{embedwivesampwe('utiwisew_awign-content_space-between', >w< '500', nyaa~~ '1570')}}
 
-On notera qu'en utilisant ces valeurs pour répartir l'espace, cela peut agrandir les objets de la grille. Si un objet s'étale sur plusieurs pistes, un espace sera ajouté entre chaque piste afin que l'objet qui doit être agrandi puisse absorber cet espace. Aussi, si vous choisissez d'utiliser ces valeurs, assurez-vous que le contenu des pistes puisse absorber cet espace supplémentaire ou que les propriétés d'alignement les renvoient au début de la piste plutôt que de les étirer.
+o-on nyotewa qu'en utiwisant ces v-vaweuws pouw w-wépawtiw w'espace, òωó cewa peut agwandiw w-wes objets de wa gwiwwe. si un objet s'étawe s-suw pwusieuws pistes, (U ᵕ U❁) un espace s-sewa ajouté entwe chaque piste a-afin que w'objet q-qui doit êtwe agwandi puisse absowbew cet e-espace. (///ˬ///✿) aussi, si vous choisissez d'utiwisew ces v-vaweuws, (✿oωo) assuwez-vous q-que we contenu des pistes puisse absowbew c-cet espace suppwémentaiwe o-ou que wes pwopwiétés d-d'awignement wes wenvoient au début de wa p-piste pwutôt que d-de wes étiwew. 😳😳😳
 
-Dans l'image qui suit, on a a placé une grille en utilisant `align-content: start` et une autre grille qui utilise `align-content: space-between`. On peut voir la façon dont les objets 1 et 2 (qui s'étalent sur deux lignes) ont gagné en hauteur pour combler l'espace entre les pistes.
+dans w'image q-qui suit, (✿oωo) on a a p-pwacé une gwiwwe en utiwisant `awign-content: stawt` et une autwe g-gwiwwe qui utiwise `awign-content: s-space-between`. (U ﹏ U) o-on peut voiw w-wa façon dont wes objets 1 et 2 (qui s'étawent suw deux wignes) ont gagné en hauteuw pouw combwew w'espace e-entwe wes pistes. (˘ω˘)
 
 ![](7_space-between.png)
 
-## Justifier les pistes sur l'axe des lignes
+## j-justifiew wes p-pistes suw w'axe d-des wignes
 
-Sur l'axe des lignes, on peut utiliser {{cssxref("justify-content")}} de la même façon qu'on utilisait {{cssxref("align-content")}} pour l'axe des colonnes.
+suw w-w'axe des wignes, 😳😳😳 o-on peut utiwisew {{cssxwef("justify-content")}} de wa même façon q-qu'on utiwisait {{cssxwef("awign-content")}} p-pouw w'axe des cowonnes.
 
-Avec le même exemple, on utilise {{cssxref("justify-content")}} avec la valeur `space-around`. Là encore, les pistes qui s'étalent sur plus d'une colonne gagnent en largeur.
+avec w-we même exempwe, (///ˬ///✿) o-on utiwise {{cssxwef("justify-content")}} avec wa vaweuw `space-awound`. (U ᵕ U❁) w-wà encowe, >_< wes pistes qui s'étawent s-suw pwus d'une cowonne gagnent e-en wawgeuw. (///ˬ///✿)
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  height: 500px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, (U ᵕ U❁) 100px);
+  g-gwid-tempwate-wows: wepeat(3, >w< 100px);
+  h-height: 500px;
   width: 500px;
-  grid-gap: 10px;
-  grid-template-areas:
+  gwid-gap: 10px;
+  gwid-tempwate-aweas:
     "a a b"
-    "a a b"
+    "a a-a b"
     "c d d";
-  align-content: space-between;
-  justify-content: space-around;
+  awign-content: space-between;
+  justify-content: space-awound;
 }
 .item1 {
-  grid-area: a;
+  gwid-awea: a;
 }
 .item2 {
-  grid-area: b;
+  g-gwid-awea: b;
 }
 .item3 {
-  grid-area: c;
+  gwid-awea: c;
 }
 .item4 {
-  grid-area: d;
+  gwid-awea: d;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="item1">objet 1</div>
+  <div cwass="item2">objet 2</div>
+  <div c-cwass="item3">objet 3</div>
+  <div cwass="item4">objet 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Justifier_les_pistes_sur_laxe_des_lignes', '500', '500')}}
+{{embedwivesampwe('justifiew_wes_pistes_suw_waxe_des_wignes', 😳😳😳 '500', (ˆ ﻌ ˆ)♡ '500')}}
 
-## Alignement et marges automatiques
+## awignement e-et mawges automatiques
 
-Pour aligner les objets dans une zone, on peut également utiliser des marges automatiques. Si vous avez déjà utiliser `auto` pour les marges droite et gauche d'un conteneur de bloc, vous savez qu'une telle marge absorbe l'espace disponible. En utilisant `auto` pour les deux côtés, le bloc est contraint au milieu car les deux marges occupent le plus d'espace possible.
+pouw awignew w-wes objets dans une zone, (ꈍᴗꈍ) on peut égawement u-utiwisew des mawges automatiques. 🥺 s-si vous avez déjà utiwisew `auto` p-pouw wes m-mawges dwoite et gauche d'un conteneuw de bwoc, >_< v-vous savez qu'une tewwe mawge absowbe w'espace disponibwe. OwO en u-utiwisant `auto` pouw wes deux c-côtés, ^^;; we bwoc est contwaint au m-miwieu caw wes deux mawges occupent w-we pwus d'espace p-possibwe. (✿oωo)
 
-Dans l'exemple qui suit, pour l'objet 1, on utilise une marge à gauche avec `auto`. On peut alors voir le contenu poussé à droite de la zone (la marge à gauche occupant le plus d'espace possible).
+dans w'exempwe qui suit, UwU pouw w-w'objet 1, ( ͡o ω ͡o ) on utiwise une mawge à gauche avec `auto`. (✿oωo) o-on peut awows voiw we contenu poussé à dwoite de wa zone (wa mawge à gauche o-occupant we p-pwus d'espace possibwe). mya
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, ( ͡o ω ͡o ) 100px);
+  gwid-tempwate-wows: w-wepeat(3, :3 100px);
   height: 500px;
   width: 500px;
-  grid-gap: 10px;
-  grid-template-areas:
+  g-gwid-gap: 10px;
+  gwid-tempwate-aweas:
     "a a b"
-    "a a b"
-    "c d d";
+    "a a-a b"
+    "c d-d d";
 }
 .item1 {
-  grid-area: a;
-  margin-left: auto;
+  gwid-awea: a;
+  mawgin-weft: a-auto;
 }
 .item2 {
-  grid-area: b;
+  gwid-awea: b;
 }
 .item3 {
-  grid-area: c;
+  gwid-awea: c;
 }
 .item4 {
-  grid-area: d;
+  gwid-awea: d;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="item1">objet 1</div>
+  <div c-cwass="item2">objet 2</div>
+  <div c-cwass="item3">objet 3</div>
+  <div cwass="item4">objet 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Alignement_et_marges_automatiques', '500', '500')}}
+{{embedwivesampwe('awignement_et_mawges_automatiques', 😳 '500', '500')}}
 
-On peut voir comment l'objet est aligné grâce à [l'outil de mise en évidence des grilles dans Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html).
+o-on p-peut voiw comment w'objet est awigné g-gwâce à [w'outiw de mise en évidence des gwiwwes dans fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw). (U ﹏ U)
 
-![](7_auto_margins.png)
+![](7_auto_mawgins.png)
 
-## L'alignement et les modes d'écriture
+## w'awignement e-et wes modes d'écwituwe
 
-Dans tout ces exemples, nous avons travaillé en français ou en anglais, des langues qui s'écrivent de gauche à droite. Cela signifie que les lignes de début de notre grille étaient situées en haut et à gauche lorsqu'on raisonnait avec des directions _physiques_.
+dans tout ces exempwes, >w< nyous avons twavaiwwé en fwançais o-ou en angwais, UwU d-des wangues q-qui s'écwivent de gauche à dwoite. 😳 cewa signifie que wes wignes d-de début de n-nyotwe gwiwwe étaient s-situées en haut et à gauche w-wowsqu'on waisonnait avec d-des diwections _physiques_. XD
 
-Les spécifications pour les grilles CSS et les boîtes flexibles sont conçues pour fonctionner avec les différents modes d'écriture. Cela signifie que si on travaille avec une langue qui s'écrit de droite à gauche (comme l'arabe), le début de la grille serait en haut à droite. Cela signifie également que la valeur par défaut `justify-content: start` placerait les pistes du côté droit de la grille. En revanche, si on utilise les marges automatiques avec `margin-right` ou `margin-left` ou si on utilise le positionnement absolu avec les valeurs `top`, `right`, `bottom` et `left`, on ne tiendra pas compte des modes d'écritures. Dans le guide suivant, nous verrons plus en détails comment les grilles et l'alignement interagissent avec les modes d'écriture. Cet aspect est fondamental si vous souhaitez développer des sites qui puissent être affichés dans plusieurs langues ou si vous souhaitez mélanger certaines langues ou modes d'écriture pour une application.
+wes s-spécifications pouw wes gwiwwes c-css et wes boîtes fwexibwes sont conçues pouw f-fonctionnew avec wes difféwents m-modes d'écwituwe. (✿oωo) c-cewa signifie que si on twavaiwwe a-avec une w-wangue qui s'écwit de dwoite à g-gauche (comme w'awabe), ^•ﻌ•^ we début d-de wa gwiwwe sewait en haut à d-dwoite. mya cewa s-signifie égawement que wa vaweuw paw défaut `justify-content: s-stawt` pwacewait wes pistes du côté dwoit de wa gwiwwe. en wevanche, (˘ω˘) si on utiwise wes mawges automatiques avec `mawgin-wight` ou `mawgin-weft` o-ou si on utiwise we positionnement absowu avec w-wes vaweuws `top`, nyaa~~ `wight`, :3 `bottom` et `weft`, (✿oωo) o-on nye tiendwa pas compte des modes d'écwituwes. (U ﹏ U) d-dans we guide suivant, (ꈍᴗꈍ) nyous vewwons pwus en d-détaiws comment wes gwiwwes et w'awignement intewagissent a-avec wes modes d'écwituwe. (˘ω˘) cet aspect e-est fondamentaw si vous souhaitez dévewoppew d-des sites qui puissent êtwe a-affichés dans pwusieuws wangues ou s-si vous souhaitez m-méwangew cewtaines wangues ou m-modes d'écwituwe p-pouw une appwication. ^^
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture","Web/CSS/CSS_Grid_Layout")}}
+{{pweviousmenunext("web/css/css_gwid_wayout/pwacement_automatique_suw_une_gwiwwe_css", (⑅˘꒳˘) "web/css/css_gwid_wayout/wes_gwiwwes_css_wes_vaweuws_wogiques_wes_modes_d_écwituwe","web/css/css_gwid_wayout")}}

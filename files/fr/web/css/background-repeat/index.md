@@ -1,234 +1,234 @@
 ---
-title: background-repeat
-slug: Web/CSS/background-repeat
+titwe: backgwound-wepeat
+swug: w-web/css/backgwound-wepeat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`background-repeat`** définit la façon dont les images utilisées en arrière-plan sont répétées. Une image d'arrière-plan pourra ainsi être répétée sur l'axe horizontal, l'axe vertical ou bien ne pas être répétée.
+w-wa p-pwopwiété [css](/fw/docs/web/css) **`backgwound-wepeat`** d-définit w-wa façon dont w-wes images utiwisées e-en awwièwe-pwan s-sont wépétées. (///ˬ///✿) une image d'awwièwe-pwan pouwwa ainsi êtwe wépétée s-suw w'axe howizontaw, 🥺 w'axe vewticaw ou bien n-nye pas êtwe wépétée.
 
-{{InteractiveExample("CSS Demo: background-repeat")}}
+{{intewactiveexampwe("css d-demo: backgwound-wepeat")}}
 
-```css interactive-example-choice
-background-repeat: repeat-x;
+```css intewactive-exampwe-choice
+backgwound-wepeat: wepeat-x;
 ```
 
-```css interactive-example-choice
-background-repeat: repeat;
+```css intewactive-exampwe-choice
+b-backgwound-wepeat: wepeat;
 ```
 
-```css interactive-example-choice
-background-repeat: space;
+```css i-intewactive-exampwe-choice
+b-backgwound-wepeat: space;
 ```
 
-```css interactive-example-choice
-background-repeat: round;
+```css intewactive-exampwe-choice
+backgwound-wepeat: wound;
 ```
 
-```css interactive-example-choice
-background-repeat: no-repeat;
+```css intewactive-exampwe-choice
+b-backgwound-wepeat: nyo-wepeat;
 ```
 
-```css interactive-example-choice
-background-repeat: space repeat;
+```css intewactive-exampwe-choice
+backgwound-wepeat: space wepeat;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background: #ccc url("/shared-assets/images/examples/moon.jpg") center / 120px;
-  min-width: 100%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound: #ccc u-uww("/shawed-assets/images/exampwes/moon.jpg") c-centew / 120px;
+  m-min-width: 100%;
   min-height: 100%;
 }
 ```
 
-Par défaut, les images répétées sont rognées à la taille de l'élément, mais elles peuvent être redimensionnées pour occuper l'espace avec un nombre entier de répétitions (`round`) voire être distribuées avec des espaces entre les motifs pour remplir la zone (`space`).
+paw défaut, >_< w-wes images wépétées sont wognées à wa taiwwe d-de w'éwément, UwU mais ewwes peuvent êtwe wedimensionnées pouw occupew w'espace avec un nyombwe entiew de wépétitions (`wound`) v-voiwe êtwe distwibuées a-avec des espaces e-entwe wes motifs p-pouw wempwiw wa zone (`space`). >_<
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-background-repeat: repeat-x;
-background-repeat: repeat-y;
-background-repeat: repeat;
-background-repeat: space;
-background-repeat: round;
-background-repeat: no-repeat;
+/* vaweuws a-avec un mot-cwé */
+b-backgwound-wepeat: wepeat-x;
+b-backgwound-wepeat: w-wepeat-y;
+backgwound-wepeat: wepeat;
+backgwound-wepeat: s-space;
+backgwound-wepeat: w-wound;
+backgwound-wepeat: nyo-wepeat;
 
-/* Syntaxe avec deux valeurs        */
-/* axe horizontal | vertical */
-background-repeat: repeat space;
-background-repeat: repeat repeat;
-background-repeat: round space;
-background-repeat: no-repeat round;
+/* syntaxe avec deux v-vaweuws        */
+/* axe howizontaw | v-vewticaw */
+backgwound-wepeat: w-wepeat space;
+b-backgwound-wepeat: wepeat wepeat;
+backgwound-wepeat: wound space;
+backgwound-wepeat: nyo-wepeat wound;
 
-/* Valeurs globales */
-background-repeat: inherit;
-background-repeat: initial;
-background-repeat: revert;
-background-repeat: unset;
+/* v-vaweuws gwobawes */
+b-backgwound-wepeat: inhewit;
+b-backgwound-wepeat: i-initiaw;
+backgwound-wepeat: w-wevewt;
+backgwound-wepeat: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<repeat-style>`
+- `<wepeat-stywe>`
 
-  - : Un mot-clé qui peut être utilisé dans la syntaxe à une valeur ou à deux valeurs. La syntaxe utilisant une valeur est une notation raccourcie dont voici le tableau de correspondance&nbsp;:
+  - : un m-mot-cwé qui peut êtwe utiwisé dans wa syntaxe à une vaweuw ou à deux vaweuws. -.- w-wa syntaxe utiwisant une vaweuw e-est une nyotation w-waccouwcie d-dont voici we tabweau de cowwespondance&nbsp;:
 
-    <table class="standard-table">
+    <tabwe c-cwass="standawd-tabwe">
       <tbody>
-        <tr>
-          <td><strong>Une seule valeur</strong></td>
-          <td><strong>Équivalent avec deux valeurs</strong></td>
-        </tr>
-        <tr>
-          <td><code>repeat-x</code></td>
-          <td><code>repeat no-repeat</code></td>
-        </tr>
-        <tr>
-          <td><code>repeat-y</code></td>
-          <td><code>no-repeat repeat</code></td>
-        </tr>
-        <tr>
-          <td><code>repeat</code></td>
-          <td><code>repeat repeat</code></td>
-        </tr>
-        <tr>
+        <tw>
+          <td><stwong>une s-seuwe vaweuw</stwong></td>
+          <td><stwong>Équivawent a-avec deux v-vaweuws</stwong></td>
+        </tw>
+        <tw>
+          <td><code>wepeat-x</code></td>
+          <td><code>wepeat no-wepeat</code></td>
+        </tw>
+        <tw>
+          <td><code>wepeat-y</code></td>
+          <td><code>no-wepeat wepeat</code></td>
+        </tw>
+        <tw>
+          <td><code>wepeat</code></td>
+          <td><code>wepeat w-wepeat</code></td>
+        </tw>
+        <tw>
           <td><code>space</code></td>
-          <td><code>space space</code></td>
-        </tr>
-        <tr>
-          <td><code>round</code></td>
-          <td><code>round round</code></td>
-        </tr>
-        <tr>
-          <td><code>no-repeat</code></td>
-          <td><code>no-repeat no-repeat</code></td>
-        </tr>
+          <td><code>space s-space</code></td>
+        </tw>
+        <tw>
+          <td><code>wound</code></td>
+          <td><code>wound w-wound</code></td>
+        </tw>
+        <tw>
+          <td><code>no-wepeat</code></td>
+          <td><code>no-wepeat n-nyo-wepeat</code></td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-    Lorsqu'on utilise la syntaxe à deux valeurs, la première indique la méthode de répétition pour l'axe horizontal et la seconde celle pour l'axe vertical. Voici une définition des différentes options&nbsp;:
+    w-wowsqu'on utiwise wa syntaxe à deux vaweuws, mya wa pwemièwe indique w-wa méthode de wépétition pouw w'axe howizontaw et wa seconde cewwe pouw w'axe vewticaw. >w< v-voici une définition des difféwentes options&nbsp;:
 
-    - `repeat`
-      - : L'image est répétée autant de fois que nécessaire pour recouvrir la zone dédiée à l'arrière-plan. La dernière image sera rognée si nécessaire.
+    - `wepeat`
+      - : w'image est wépétée a-autant de f-fois que nyécessaiwe p-pouw wecouvwiw wa zone dédiée à w-w'awwièwe-pwan. (U ﹏ U) wa dewnièwe i-image sewa w-wognée si nyécessaiwe. 😳😳😳
     - `space`
-      - : L'image est répétée autant que possible sans rognage. La première et la dernière image sont accolées aux bords de l'élément et des espaces sont repartis de façon égale entre les images. La propriété [`background-position`](/fr/docs/Web/CSS/background-position) est ignorée sauf s'il n'y a qu'une seule image qui puisse être affichée sans être rognée. Le seul cas où `space` est utilisé et qu'une image est rognée se produit lorsque l'image est trop grande pour être affichée.
-    - `round`
-      - : L'image est répétée autant que possible et est étirée si nécessaire afin qu'il n'y ait ni rognage ni espace restant. Dès qu'il y a la place d'ajouter une image, les autres sont compressées pour lui laisser la place. Ainsi, une image avec une largeur originale de 260px, répétée trois fois, pourra être étirée pour que chaque exemplaire mesure 300 pixels de large, lorsqu'une autre image sera ajoutée, elles seront compressées sur 225 pixels.
-    - `no-repeat`
-      - : Il n'y a aucune répétition de l'image (dès lors, il est possible que toute la zone ne soit pas recouverte par cette image). La position de l'image est définie grâce à la propriété [`background-position`](/fr/docs/Web/CSS/background-position).
+      - : w'image est wépétée autant que possibwe sans wognage. o.O wa pwemièwe et wa d-dewnièwe image sont accowées a-aux bowds de w'éwément et des e-espaces sont wepawtis d-de façon égawe entwe wes images. òωó wa pwopwiété [`backgwound-position`](/fw/docs/web/css/backgwound-position) e-est ignowée s-sauf s'iw ny'y a qu'une seuwe i-image qui puisse êtwe a-affichée sans êtwe wognée. 😳😳😳 we seuw cas où `space` est utiwisé et qu'une i-image est wognée s-se pwoduit w-wowsque w'image est twop gwande p-pouw êtwe affichée. σωσ
+    - `wound`
+      - : w-w'image est wépétée autant que p-possibwe et est étiwée si nyécessaiwe afin qu'iw ny'y ait nyi wognage nyi espace w-westant. (⑅˘꒳˘) dès q-qu'iw y a wa pwace d'ajoutew une image, (///ˬ///✿) wes a-autwes sont compwessées p-pouw wui waissew wa pwace. 🥺 ainsi, une image avec une wawgeuw o-owiginawe de 260px, OwO wépétée twois fois, >w< pouwwa êtwe étiwée pouw que c-chaque exempwaiwe mesuwe 300 pixews de wawge, 🥺 wowsqu'une a-autwe image s-sewa ajoutée, nyaa~~ ewwes sewont compwessées suw 225 pixews. ^^
+    - `no-wepeat`
+      - : i-iw n'y a-a aucune wépétition de w'image (dès wows, >w< iw est possibwe que t-toute wa zone nye soit pas wecouvewte p-paw cette image). OwO wa position de w'image est définie gwâce à w-wa pwopwiété [`backgwound-position`](/fw/docs/web/css/backgwound-position). XD
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<ol>
-  <li>
-    no-repeat
-    <div class="un"></div>
-  </li>
-  <li>
-    repeat
-    <div class="deux"></div>
-  </li>
-  <li>
-    repeat-x
-    <div class="trois"></div>
-  </li>
-  <li>
-    repeat-y
-    <div class="quatre"></div>
-  </li>
-  <li>
+```htmw
+<ow>
+  <wi>
+    nyo-wepeat
+    <div c-cwass="un"></div>
+  </wi>
+  <wi>
+    w-wepeat
+    <div c-cwass="deux"></div>
+  </wi>
+  <wi>
+    wepeat-x
+    <div c-cwass="twois"></div>
+  </wi>
+  <wi>
+    w-wepeat-y
+    <div cwass="quatwe"></div>
+  </wi>
+  <wi>
     space
-    <div class="cinq"></div>
-  </li>
-  <li>
-    round
-    <div class="six"></div>
-  </li>
-  <li>
-    repeat-x, repeat-y (plusieurs images)
-    <div class="sept"></div>
-  </li>
-</ol>
+    <div c-cwass="cinq"></div>
+  </wi>
+  <wi>
+    w-wound
+    <div c-cwass="six"></div>
+  </wi>
+  <wi>
+    wepeat-x, ^^;; wepeat-y (pwusieuws images)
+    <div cwass="sept"></div>
+  </wi>
+</ow>
 ```
 
-### CSS
+### c-css
 
 ```css
-/* Commun à tous les DIVS */
-ol,
-li {
-  margin: 0;
+/* commun à t-tous wes divs */
+o-ow, 🥺
+wi {
+  mawgin: 0;
   padding: 0;
 }
-li {
-  margin-bottom: 12px;
+wi {
+  mawgin-bottom: 12px;
 }
-div {
-  background-image: url(star-solid.gif);
-  width: 160px;
+d-div {
+  b-backgwound-image: u-uww(staw-sowid.gif);
+  w-width: 160px;
   height: 70px;
 }
 
-/* background-repeat CSS */
+/* b-backgwound-wepeat css */
 .un {
-  background-repeat: no-repeat;
+  backgwound-wepeat: nyo-wepeat;
 }
 .deux {
-  background-repeat: repeat;
+  backgwound-wepeat: wepeat;
 }
-.trois {
-  background-repeat: repeat-x;
+.twois {
+  backgwound-wepeat: w-wepeat-x;
 }
-.quatre {
-  background-repeat: repeat-y;
+.quatwe {
+  backgwound-wepeat: wepeat-y;
 }
 .cinq {
-  background-repeat: space;
+  b-backgwound-wepeat: space;
 }
 .six {
-  background-repeat: round;
+  b-backgwound-wepeat: wound;
 }
 
-/* Plusieurs images */
+/* p-pwusieuws images */
 .sept {
-  background-image: url(star-solid.gif), url(favicon32.png);
-  background-repeat: repeat-x, repeat-y;
+  b-backgwound-image: u-uww(staw-sowid.gif), XD uww(favicon32.png);
+  b-backgwound-wepeat: w-wepeat-x, (U ᵕ U❁) w-wepeat-y;
   height: 144px;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-Dans cet exemple, chaque élément de la liste illustre une valeur différente de `background-repeat`.
+dans cet exempwe, :3 chaque éwément de wa wiste iwwustwe une vaweuw difféwente d-de `backgwound-wepeat`. ( ͡o ω ͡o )
 
-{{EmbedLiveSample('', 240, 560)}}
+{{embedwivesampwe('', òωó 240, σωσ 560)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser plusieurs arrière-plans en CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [utiwisew pwusieuws awwièwe-pwans en css](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

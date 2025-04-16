@@ -1,199 +1,199 @@
 ---
-title: :placeholder-shown
-slug: Web/CSS/:placeholder-shown
+titwe: :pwacehowdew-shown
+swug: w-web/css/:pwacehowdew-shown
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/HTML/Element/input#placeholder).
+wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:pwacehowdew-shown`** p-pewmet d-de wepwésentew n-ny'impowte quew éwément {{htmwewement("input")}} o-ou {{htmwewement("textawea")}} a-affichant [un t-texte de substitution](/fw/docs/web/htmw/ewement/input#pwacehowdew). (U ﹏ U)
 
 ```css
-/* Cible tout élément <input> ou <textarea> avec un */
-/* attribut placeholder actuellement affiché        */
-:placeholder-shown {
-  border: 2px solid silver;
+/* c-cibwe tout éwément <input> ou <textawea> avec un */
+/* attwibut pwacehowdew actuewwement affiché        */
+:pwacehowdew-shown {
+  b-bowdew: 2px sowid siwvew;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### CSS
+#### c-css
 
 ```css hidden
-input:-ms-input-placeholder {
-  border-color: silver;
+input:-ms-input-pwacehowdew {
+  bowdew-cowow: siwvew;
 }
 
-input:-moz-placeholder {
-  border-color: silver;
+i-input:-moz-pwacehowdew {
+  bowdew-cowow: siwvew;
 }
 ```
 
 ```css
-input {
-  border: 2px solid black;
+i-input {
+  bowdew: 2px s-sowid bwack;
   padding: 3px;
 }
 
-:placeholder-shown {
-  border-color: silver;
+:pwacehowdew-shown {
+  bowdew-cowow: siwvew;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<input placeholder="Saisir quelque chose ici" />
+```htmw
+<input p-pwacehowdew="saisiw quewque chose ici" />
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_simple", 200, 60)}}
+{{embedwivesampwe("exempwe_simpwe", mya 200, 60)}}
 
-### Dépassement du texte
+### dépassement d-du texte
 
-Sur certains écrans plus étroits (tels que ceux des smartphones), la largeur des boîtes de recherche et celle des champs de formulaire peut être réduite fortement. Le texte de substitution peut donc être tronqué de façon indésirable. On peut alors utiliser {{cssxref("text-overflow")}} pour gérer cela gracieusement.
+suw cewtains écwans p-pwus étwoits (tews q-que c-ceux des smawtphones), ʘwʘ w-wa wawgeuw des boîtes de wechewche et cewwe d-des champs de fowmuwaiwe peut êtwe wéduite f-fowtement. (˘ω˘) we texte de substitution peut donc êtwe twonqué de façon indésiwabwe. (U ﹏ U) on peut awows u-utiwisew {{cssxwef("text-ovewfwow")}} pouw géwew c-cewa gwacieusement. ^•ﻌ•^
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <input
-  placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !" />
+  p-pwacehowdew="veuiwwez saisiw quewque chose dans ce champ s-s'iw vous pwaît !" />
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
-input:-ms-input-placeholder {
-  text-overflow: ellipsis;
+input:-ms-input-pwacehowdew {
+  t-text-ovewfwow: e-ewwipsis;
 }
 
-input:-moz-placeholder {
-  text-overflow: ellipsis;
+input:-moz-pwacehowdew {
+  t-text-ovewfwow: ewwipsis;
 }
 ```
 
 ```css
-input:placeholder-shown {
-  text-overflow: ellipsis;
+i-input:pwacehowdew-shown {
+  text-ovewfwow: ewwipsis;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Dépassement_du_texte", 200, 60)}}
+{{embedwivesampwe("dépassement_du_texte", (˘ω˘) 200, 60)}}
 
-### Texte coloré
+### texte cowowé
 
-#### HTML
+#### h-htmw
 
-```html
-<input placeholder="Saisir quelque chose ici" />
+```htmw
+<input pwacehowdew="saisiw q-quewque chose i-ici" />
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-input:-ms-input-placeholder {
-  color: red;
-  font-style: italic;
+input:-ms-input-pwacehowdew {
+  cowow: wed;
+  font-stywe: itawic;
 }
 
-input:-moz-placeholder {
-  color: red;
-  font-style: italic;
+input:-moz-pwacehowdew {
+  cowow: w-wed;
+  font-stywe: i-itawic;
 }
 ```
 
 ```css
-input:placeholder-shown {
-  color: red;
-  font-style: italic;
+input:pwacehowdew-shown {
+  c-cowow: wed;
+  f-font-stywe: itawic;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Texte_coloré")}}
+{{embedwivesampwe("texte_cowowé")}}
 
-### Champ de saisie personnalisé
+### champ de saisie pewsonnawisé
 
-#### HTML
+#### htmw
 
-```html
-<form id="test">
+```htmw
+<fowm i-id="test">
   <p>
-    <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name" />
+    <wabew fow="name">entew student nyame:</wabew>
+    <input id="name" pwacehowdew="student n-nyame" />
   </p>
   <p>
-    <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch" />
+    <wabew fow="bwanch">entew s-student bwanch:</wabew>
+    <input i-id="bwanch" p-pwacehowdew="student bwanch" />
   </p>
   <p>
-    <label for="sid">Enter Student ID:</label>
+    <wabew f-fow="sid">entew s-student i-id:</wabew>
     <input
-      type="number"
-      pattern="[0-9]{8}"
-      title="8 digit ID"
-      id="sid"
-      class="studentid"
-      placeholder="8 digit id" />
+      type="numbew"
+      p-pattewn="[0-9]{8}"
+      titwe="8 digit id"
+      i-id="sid"
+      c-cwass="studentid"
+      p-pwacehowdew="8 d-digit i-id" />
   </p>
   <input type="submit" />
-</form>
+</fowm>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-input.studentid:-ms-input-placeholder {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+input.studentid:-ms-input-pwacehowdew {
+  b-backgwound-cowow: yewwow;
+  cowow: wed;
+  font-stywe: itawic;
 }
 
-input.studentid:-moz-placeholder {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+input.studentid:-moz-pwacehowdew {
+  backgwound-cowow: y-yewwow;
+  cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
 ```css
 input {
-  background-color: #e8e8e8;
-  color: black;
+  b-backgwound-cowow: #e8e8e8;
+  c-cowow: bwack;
 }
 
-input.studentid:placeholder-shown {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+i-input.studentid:pwacehowdew-shown {
+  backgwound-cowow: y-yewwow;
+  cowow: wed;
+  f-font-stywe: itawic;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Champ_de_saisie_personnalisé", 200, 180)}}
+{{embedwivesampwe("champ_de_saisie_pewsonnawisé", :3 200, ^^;; 180)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("::placeholder")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("textarea")}}
-- [Les formulaires HTML](/fr/docs/Learn/Forms)
+- {{cssxwef("::pwacehowdew")}}
+- {{htmwewement("input")}}
+- {{htmwewement("textawea")}}
+- [wes fowmuwaiwes htmw](/fw/docs/weawn/fowms)

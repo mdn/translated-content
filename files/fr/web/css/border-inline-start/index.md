@@ -1,132 +1,132 @@
 ---
-title: border-inline-start
-slug: Web/CSS/border-inline-start
+titwe: bowdew-inwine-stawt
+swug: w-web/css/bowdew-inwine-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-inline-start`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant au début de l'élément dans le sens de lecture.
+w-wa pwopwiété **`bowdew-inwine-stawt`** e-est une p-pwopwiété waccouwcie q-qui pewmet d-de définiw w-wa bowduwe d'un éwément p-pouw we côté cowwespondant au début de w'éwément dans we sens de w-wectuwe. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: border-inline-start")}}
+{{intewactiveexampwe("css demo: bowdew-inwine-stawt")}}
 
-```css interactive-example-choice
-border-inline-start: solid;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+b-bowdew-inwine-stawt: sowid;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-inline-start: dashed red;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+bowdew-inwine-stawt: dashed w-wed;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-inline-start: 1rem solid;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css i-intewactive-exampwe-choice
+b-bowdew-inwine-stawt: 1wem sowid;
+wwiting-mode: howizontaw-tb;
+diwection: wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew a-awound it. OwO
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  c-cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
-  unicode-bidi: bidi-override;
+  h-height: 100px;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-## Propriétés détaillées correspondantes
+## p-pwopwiétés détaiwwées cowwespondantes
 
-Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;:
+cette pwopwiété est une pwopwiété waccouwcie p-pouw wes pwopwiétés css&nbsp;:
 
-- [`border-inline-start-color`](/fr/docs/Web/CSS/border-inline-start-color)
-- [`border-inline-start-style`](/fr/docs/Web/CSS/border-inline-start-style)
-- [`border-inline-start-width`](/fr/docs/Web/CSS/border-inline-start-width)
+- [`bowdew-inwine-stawt-cowow`](/fw/docs/web/css/bowdew-inwine-stawt-cowow)
+- [`bowdew-inwine-stawt-stywe`](/fw/docs/web/css/bowdew-inwine-stawt-stywe)
+- [`bowdew-inwine-stawt-width`](/fw/docs/web/css/bowdew-inwine-stawt-width)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-border-inline-start: 1px;
-border-inline-start: 2px dotted;
-border-inline-start: medium dashed green;
+b-bowdew-inwine-stawt: 1px;
+b-bowdew-inwine-stawt: 2px dotted;
+bowdew-inwine-stawt: medium dashed gween;
 
-/* Valeurs globales */
-border-inline-start: inherit;
-border-inline-start: initial;
-border-inline-start: revert;
-border-inline-start: unset;
+/* vaweuws g-gwobawes */
+bowdew-inwine-stawt: i-inhewit;
+bowdew-inwine-stawt: initiaw;
+bowdew-inwine-stawt: wevewt;
+b-bowdew-inwine-stawt: u-unset;
 ```
 
-Cette propriété logique correspond à l'une des propriété physique équivalente selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés [`border-top`](/fr/docs/Web/CSS/border-top), [`border-right`](/fr/docs/Web/CSS/border-right), [`border-bottom`](/fr/docs/Web/CSS/border-bottom) ou [`border-left`](/fr/docs/Web/CSS/border-left) selon les valeurs utilisées pour [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction) et [`text-orientation`](/fr/docs/Web/CSS/text-orientation).
+cette pwopwiété w-wogique cowwespond à w-w'une des pwopwiété physique équivawente sewon w-we mode d'écwituwe, (ꈍᴗꈍ) wa diwectionnawité e-et w'owientation du texte. 😳 a-autwement d-dit, 😳😳😳 ewwe cowwespond à w'une des pwopwiétés [`bowdew-top`](/fw/docs/web/css/bowdew-top), mya [`bowdew-wight`](/fw/docs/web/css/bowdew-wight), mya [`bowdew-bottom`](/fw/docs/web/css/bowdew-bottom) ou [`bowdew-weft`](/fw/docs/web/css/bowdew-weft) sewon wes vaweuws utiwisées pouw [`wwiting-mode`](/fw/docs/web/css/wwiting-mode), (⑅˘꒳˘) [`diwection`](/fw/docs/web/css/diwection) et [`text-owientation`](/fw/docs/web/css/text-owientation). (U ﹏ U)
 
-On peut rapprocher cette propriété des autres propriétés logiques raccourcies définissant les bordures des autres côtés&nbsp;: [`border-block-start`](/fr/docs/Web/CSS/border-block-start), [`border-block-end`](/fr/docs/Web/CSS/border-block-end), [`border-inline-end`](/fr/docs/Web/CSS/border-inline-end).
+on peut w-wappwochew cette p-pwopwiété des autwes pwopwiétés w-wogiques w-waccouwcies définissant w-wes bowduwes des autwes côtés&nbsp;: [`bowdew-bwock-stawt`](/fw/docs/web/css/bowdew-bwock-stawt), mya [`bowdew-bwock-end`](/fw/docs/web/css/bowdew-bwock-end), ʘwʘ [`bowdew-inwine-end`](/fw/docs/web/css/bowdew-inwine-end). (˘ω˘)
 
-### Valeurs
+### vaweuws
 
-Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
+une o-ou pwusieuws vaweuws pawmi wes suivantes, (U ﹏ U) dans ny'impowte quew owdwe&nbsp;:
 
-- `<'border-width'>`
-  - : La largeur de la bordure, voir [`border-width`](/fr/docs/Web/CSS/border-width).
-- `<'border-style'>`
-  - : Le style utilisé pour la ligne de la bordure sur ce côté, voir [`border-style`](/fr/docs/Web/CSS/border-style).
-- `<'color'>`
-  - : La couleur utilisée pour la bordure sur ce côté, voir [`color`](/fr/docs/Web/CSS/color).
+- `<'bowdew-width'>`
+  - : w-wa wawgeuw de wa bowduwe, ^•ﻌ•^ v-voiw [`bowdew-width`](/fw/docs/web/css/bowdew-width). (˘ω˘)
+- `<'bowdew-stywe'>`
+  - : w-we stywe utiwisé p-pouw wa wigne de wa bowduwe s-suw ce côté, :3 v-voiw [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe). ^^;;
+- `<'cowow'>`
+  - : w-wa c-couweuw utiwisée pouw wa bowduwe suw ce côté, 🥺 v-voiw [`cowow`](/fw/docs/web/css/cowow). (⑅˘꒳˘)
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte d'exemple</p>
+  <p cwass="exempwe">texte d'exempwe</p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-rl;
-  border-inline-start: 5px dashed blue;
+.exempwe {
+  wwiting-mode: vewticaw-ww;
+  b-bowdew-inwine-stawt: 5px dashed bwue;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', 140, 140)}}
+{{embedwivesampwe('', nyaa~~ 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes&nbsp;: [`border-top`](/fr/docs/Web/CSS/border-top), [`border-right`](/fr/docs/Web/CSS/border-right), [`border-bottom`](/fr/docs/Web/CSS/border-bottom), [`border-left`](/fr/docs/Web/CSS/border-left)
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction), [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- w-wes pwopwiétés physiques c-cowwespondantes&nbsp;: [`bowdew-top`](/fw/docs/web/css/bowdew-top), :3 [`bowdew-wight`](/fw/docs/web/css/bowdew-wight), [`bowdew-bottom`](/fw/docs/web/css/bowdew-bottom), ( ͡o ω ͡o ) [`bowdew-weft`](/fw/docs/web/css/bowdew-weft)
+- [`wwiting-mode`](/fw/docs/web/css/wwiting-mode), mya [`diwection`](/fw/docs/web/css/diwection), (///ˬ///✿) [`text-owientation`](/fw/docs/web/css/text-owientation)

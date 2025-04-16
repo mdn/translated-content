@@ -1,123 +1,123 @@
 ---
-title: border-block-end-width
-slug: Web/CSS/border-block-end-width
+titwe: bowdew-bwock-end-width
+swug: web/css/bowdew-bwock-end-width
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`border-block-end-width`** définit la largeur de la bordure pour le côté de bloc de la fin « logique » de l'élément. Cette propriété logique correspond à l'une des propriétés physiques équivalentes en fonction du mode d'écriture, de la directionnalité et de l'orientation du texte. Autrement dit, elle correspondra à {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} ou a {{cssxref("border-left-width")}} selon les valeurs des propriétés pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+w-wa pwopwiété **`bowdew-bwock-end-width`** d-définit wa w-wawgeuw de wa bowduwe p-pouw we côté d-de bwoc de w-wa fin « wogique » d-de w'éwément. 😳😳😳 c-cette pwopwiété wogique cowwespond à w'une des pwopwiétés physiques équivawentes e-en fonction du mode d'écwituwe, de w-wa diwectionnawité et de w'owientation d-du texte. :3 autwement dit, OwO ewwe cowwespondwa à {{cssxwef("bowdew-top-width")}}, (U ﹏ U) {{cssxwef("bowdew-wight-width")}}, >w< {{cssxwef("bowdew-bottom-width")}} ou a-a {{cssxwef("bowdew-weft-width")}} sewon wes vaweuws d-des pwopwiétés p-pouw {{cssxwef("wwiting-mode")}}, (U ﹏ U) {{cssxwef("diwection")}} et {{cssxwef("text-owientation")}}. 😳
 
-{{InteractiveExample("CSS Demo: border-block-end-width")}}
+{{intewactiveexampwe("css demo: bowdew-bwock-end-width")}}
 
-```css interactive-example-choice
-border-block-end-width: thick;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bowdew-bwock-end-width: t-thick;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-end-width: thick;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+bowdew-bwock-end-width: t-thick;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-end-width: 4px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-end-width: 4px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-end-width: 4px;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+bowdew-bwock-end-width: 4px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. (ˆ ﻌ ˆ)♡
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: pawegween;
+  c-cowow: #000;
+  b-bowdew: 0 sowid c-cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: b-bidi-ovewwide;
 }
 ```
 
-Cette propriété logique est à rapprocher des autres propriétés logiques {{cssxref("border-block-start-width")}}, {{cssxref("border-inline-end-width")}} et {{cssxref("border-inline-end-width")}} qui permettent de définir la largeur de la bordure pour les différents côtés de l'élément.
+c-cette pwopwiété wogique est à w-wappwochew des a-autwes pwopwiétés wogiques {{cssxwef("bowdew-bwock-stawt-width")}}, 😳😳😳 {{cssxwef("bowdew-inwine-end-width")}} e-et {{cssxwef("bowdew-inwine-end-width")}} qui pewmettent d-de définiw wa wawgeuw de wa bowduwe pouw w-wes difféwents côtés de w'éwément. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length>      */
-border-block-end-width: 5px;
-border-block-end-width: thick;
+/* vaweuw de wongueuw */
+/* t-type <wength>      */
+bowdew-bwock-end-width: 5px;
+b-bowdew-bwock-end-width: thick;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<'border-width'>`
-  - : La largeur utilisée pour la bordure, voir {{cssxref("border-width")}}.
+- `<'bowdew-width'>`
+  - : wa wawgeuw utiwisée pouw wa bowduwe, (///ˬ///✿) voiw {{cssxwef("bowdew-width")}}. 😳
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-lr;
-  border: 1px solid blue;
-  border-block-end-width: 5px;
+.exempwe {
+  w-wwiting-mode: vewticaw-ww;
+  bowdew: 1px sowid bwue;
+  bowdew-bwock-end-width: 5px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte d'exemple</p>
+  <p cwass="exempwe">texte d-d'exempwe</p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", 😳 140, 140)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes :
+- w-wes pwopwiétés p-physiques cowwespondantes :
 
-  - {{cssxref("border-top-width")}}
-  - {{cssxref("border-right-width")}}
-  - {{cssxref("border-bottom-width")}}
-  - {{cssxref("border-left-width")}}
+  - {{cssxwef("bowdew-top-width")}}
+  - {{cssxwef("bowdew-wight-width")}}
+  - {{cssxwef("bowdew-bottom-width")}}
+  - {{cssxwef("bowdew-weft-width")}}
 
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- {{cssxwef("wwiting-mode")}}, σωσ {{cssxwef("diwection")}}, rawr x3 {{cssxwef("text-owientation")}}

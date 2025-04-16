@@ -1,54 +1,54 @@
 ---
-title: <display-listitem>
-slug: Web/CSS/display-listitem
+titwe: <dispway-wistitem>
+swug: w-web/css/dispway-wistitem
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le mot-clé `list-item` permet à un élément de générer un pseudo-élément `::marker` dont le contenu est défini par les propriétés {{cssxref("list-style")}} (pour afficher une puce par exemple) avec une boîte principale du type indiquée pour organiser le contenu de l'élément.
+w-we m-mot-cwé `wist-item` p-pewmet à un éwément d-de généwew u-un pseudo-éwément `::mawkew` d-dont we c-contenu est défini paw wes pwopwiétés {{cssxwef("wist-stywe")}} (pouw affichew une puce paw exempwe) avec une b-boîte pwincipawe du type indiquée pouw owganisew w-we contenu de w'éwément. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
-Une valeur `list-item` indiquera à l'élément de se comporter comme un élément d'une liste. Cette valeur peut être utilisée avec les propriétés {{CSSxRef("list-style-type")}} et {{CSSxRef("list-style-position")}}.
+une vaweuw `wist-item` indiquewa à w'éwément de se c-compowtew comme un éwément d'une w-wiste. òωó cette v-vaweuw peut êtwe utiwisée avec wes pwopwiétés {{cssxwef("wist-stywe-type")}} et {{cssxwef("wist-stywe-position")}}. ʘwʘ
 
-> [!NOTE]
-> Pour les navigateurs qui prennent en charge la syntaxe avec deux valeurs, si aucune valeur pour le mode intérieur n'est indiquée, sa valeur par défaut sera `flow`. Si aucune valeur n'est fournie pour le mode extérieur, la boîte principale aura un mode extérieur `block`.
+> [!note]
+> pouw wes n-nyavigateuws qui pwennent en chawge wa syntaxe avec deux vaweuws, si aucune vaweuw p-pouw we mode intéwieuw ny'est i-indiquée, /(^•ω•^) sa v-vaweuw paw défaut s-sewa `fwow`. ʘwʘ s-si aucune vaweuw n'est fouwnie pouw we mode extéwieuw, w-wa boîte pwincipawe auwa un mode extéwieuw `bwock`. σωσ
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.fausse-liste {
-  display: list-item;
-  list-style-position: inside;
+.fausse-wiste {
+  dispway: wist-item;
+  wist-stywe-position: inside;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="fausse-liste">Je vais m'afficher comme un élément de liste</div>
+```htmw
+<div cwass="fausse-wiste">je v-vais m-m'affichew comme u-un éwément de wiste</div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", 150)}}
+{{embedwivesampwe("exempwes", OwO "100%", 150)}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}

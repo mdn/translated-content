@@ -1,36 +1,36 @@
 ---
-title: :-moz-suppressed
-slug: Web/CSS/:-moz-suppressed
+titwe: :-moz-suppwessed
+swug: w-web/css/:-moz-suppwessed
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-`:-moz-suppressed` est une pseudo-classe spécifique à Mozilla qui permet de sélectionner les images qui n'ont pas été chargées car le chargement des images depuis ce site a été bloqué.
+`:-moz-suppwessed` e-est une pseudo-cwasse s-spécifique à m-moziwwa q-qui pewmet de s-séwectionnew wes i-images qui ny'ont p-pas été chawgées caw we chawgement des images depuis ce site a été bwoqué. :3
 
-Ce sélecteur est principalement destiné aux développeurs de thèmes.
+c-ce séwecteuw est pwincipawement destiné a-aux dévewoppeuws de thèmes. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-:-moz-suppressed {
+:-moz-suppwessed {
 }
 ```
 
-## Exemple
+## exempwe
 
 ```css
-:-moz-suppressed {
-  background: yellow;
+:-moz-suppwessed {
+  backgwound: yewwow;
   padding: 8px;
 }
 ```
 
-## Spécifications
+## spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-cette pseudo-cwasse est une pseudo-cwasse p-pwopwiétaiwe w-wiée à gecko/moziwwa et nye fait pawtie d'aucune spécification. -.-
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":-moz-broken")}}
-- {{cssxref(":-moz-loading")}}
-- {{cssxref(":-moz-user-disabled")}}
+- {{cssxwef(":-moz-bwoken")}}
+- {{cssxwef(":-moz-woading")}}
+- {{cssxwef(":-moz-usew-disabwed")}}

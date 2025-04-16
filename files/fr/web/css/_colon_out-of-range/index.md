@@ -1,94 +1,94 @@
 ---
-title: :out-of-range
-slug: Web/CSS/:out-of-range
+titwe: :out-of-wange
+swug: web/css/:out-of-wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs [`min`](/fr/docs/Web/HTML/Element/input#min) et [`max`](/fr/docs/Web/HTML/Element/input#max). Ceci permet d'informer l'utilisateur que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:out-of-wange`** c-cibwe u-un éwément {{htmwewement("input")}} w-wowsque w-wa vaweuw de son a-attwibut `vawue` e-est en dehows d-de w'intewvawwe autowisé paw wes attwibuts [`min`](/fw/docs/web/htmw/ewement/input#min) et [`max`](/fw/docs/web/htmw/ewement/input#max). 😳😳😳 ceci p-pewmet d'infowmew w'utiwisateuw que wa vaweuw actuewwement w-wenseignée dans w'éwément e-est hows des wimites acceptabwes.
 
 ```css
-/* Cible n'importe quel élément <input> qui possède un */
-/* attribut range et que la valeur associée est en     */
-/* dehors de cet intervalle */
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
+/* cibwe ny'impowte quew éwément <input> q-qui possède un */
+/* a-attwibut wange e-et que wa vaweuw associée est en     */
+/* dehows de cet intewvawwe */
+input:out-of-wange {
+  b-backgwound-cowow: wgba(255, mya 0, 0, 😳 0.25);
 }
 ```
 
-> [!NOTE]
-> Cette pseudo-classe s'applique seulement aux éléments qui ont des valeurs limites.
+> [!note]
+> cette pseudo-cwasse s'appwique seuwement a-aux éwéments qui ont des v-vaweuws wimites. -.-
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<form action="" id="form1">
-  <ul>
-    Les valeurs entre 1 et 10 sont autorisées.
-    <li>
+```htmw
+<fowm a-action="" id="fowm1">
+  <uw>
+    wes vaweuws entwe 1 et 10 sont a-autowisées. 🥺
+    <wi>
       <input
-        id="valeur1"
-        name="valeur1"
-        type="number"
-        placeholder="1 à 10"
+        id="vaweuw1"
+        nyame="vaweuw1"
+        t-type="numbew"
+        pwacehowdew="1 à 10"
         min="1"
         max="10"
-        value="12" />
-      <label for="valeur1">Votre valeur est </label>
-    </li>
-  </ul>
-</form>
+        vawue="12" />
+      <wabew fow="vaweuw1">votwe vaweuw est </wabew>
+    </wi>
+  </uw>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
+w-wi {
+  wist-stywe: nyone;
+  mawgin-bottom: 1em;
 }
 
-input {
-  border: 1px solid black;
+i-input {
+  bowdew: 1px s-sowid b-bwack;
 }
 
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+input:in-wange {
+  backgwound-cowow: wgba(0, o.O 255, /(^•ω•^) 0, 0.25);
 }
 
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-  border: 2px solid red;
+input:out-of-wange {
+  b-backgwound-cowow: w-wgba(255, nyaa~~ 0, 0, 0.25);
+  bowdew: 2px s-sowid wed;
 }
 
-input:in-range + label::after {
-  content: " OK";
+i-input:in-wange + wabew::aftew {
+  c-content: " ok";
 }
 
-input:out-of-range + label::after {
-  content: "hors des limites !";
+input:out-of-wange + w-wabew::aftew {
+  content: "hows des wimites !";
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples',600,140)}}
+{{embedwivesampwe('exempwes',600,140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":in-range")}}
-- [Le guide de validation des données de formulaire](/fr/docs/Learn/Forms/Form_validation)
+- {{cssxwef(":in-wange")}}
+- [we g-guide de vawidation des données de fowmuwaiwe](/fw/docs/weawn/fowms/fowm_vawidation)

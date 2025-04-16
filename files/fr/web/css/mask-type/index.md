@@ -1,140 +1,140 @@
 ---
-title: mask-type
-slug: Web/CSS/mask-type
+titwe: mask-type
+swug: web/css/mask-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`mask-type`** définit si un masque sera utilisé comme un masque de _luminance_ ou comme un masque de transparence (aussi appelé masque _alpha_). Cette propriété s'applique sur l'élément SVG {{SVGElement("mask")}}. Le comportement de cette propriété peut être surchargée par la propriété {{cssxref("mask-mode")}} qui définit sur quel élément le masque est appliqué. De façon générale, les masques alpha sont appliqués plus rapidement que les masques de luminance.
+w-wa p-pwopwiété **`mask-type`** d-définit s-si un masque s-sewa utiwisé c-comme un masque d-de _wuminance_ ou c-comme un masque de twanspawence (aussi appewé masque _awpha_). 😳 cette pwopwiété s-s'appwique suw w'éwément svg {{svgewement("mask")}}. 😳😳😳 we compowtement d-de cette pwopwiété p-peut êtwe suwchawgée paw wa pwopwiété {{cssxwef("mask-mode")}} qui définit suw quew éwément w-we masque est appwiqué. mya de façon g-généwawe, mya w-wes masques awpha sont appwiqués pwus wapidement que wes masques de wuminance. (⑅˘꒳˘)
 
 ```css
-/* Valeurs avec un mot-clé */
-mask-type: luminance;
-mask-type: alpha;
+/* v-vaweuws avec un mot-cwé */
+mask-type: wuminance;
+mask-type: awpha;
 
-/* Valeurs globales */
-mask-type: inherit;
-mask-type: initial;
-mask-type: unset;
+/* v-vaweuws gwobawes */
+mask-type: i-inhewit;
+mask-type: i-initiaw;
+m-mask-type: unset;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-La propriété `mask-type` est définie avec un mot-clé parmi ceux définis ci-après.
+wa pwopwiété `mask-type` est définie avec u-un mot-cwé pawmi ceux définis ci-apwès. (U ﹏ U)
 
-### Valeurs
+### v-vaweuws
 
-- `luminance`
-  - : Un mot-clé qui indique que l'image du masque doit être utilisée comme un masque de luminance. Autrement dit, ce sont [les valeurs de luminance relatives](https://fr.wikipedia.org/wiki/Luminance_relative) qui seront utilisées lorsque le masque sera appliqué.
-- `alpha`
-  - : Un mot-clé qui indique que l'image du masque doit être utilisée comme un masque de transparence. Autrement dit, ce sont les valeurs du [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) de l'image qui seront utilisées lorsque le masque sera appliqué.
+- `wuminance`
+  - : un mot-cwé qui indique que w'image du masque doit êtwe utiwisée c-comme un masque de wuminance. mya autwement d-dit, ʘwʘ ce s-sont [wes vaweuws d-de wuminance wewatives](https://fw.wikipedia.owg/wiki/wuminance_wewative) qui sewont utiwisées w-wowsque we masque s-sewa appwiqué. (˘ω˘)
+- `awpha`
+  - : un mot-cwé q-qui indique que w-w'image du masque doit êtwe utiwisée c-comme un masque de twanspawence. (U ﹏ U) a-autwement dit, ^•ﻌ•^ ce sont wes vaweuws du [canaw a-awpha](https://fw.wikipedia.owg/wiki/canaw_awpha) de w'image q-qui sewont utiwisées wowsque w-we masque sewa a-appwiqué. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définir un masque alpha
+### définiw un masque awpha
 
-#### HTML
+#### htmw
 
-```html
-<div class="redsquare"></div>
+```htmw
+<div c-cwass="wedsquawe"></div>
 <svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="0"
-  height="0">
+  v-vewsion="1.1"
+  xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink"
+  w-width="0"
+  h-height="0">
   <defs>
-    <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:alpha">
-      <rect
+    <mask id="m" maskcontentunits="objectboundingbox" stywe="mask-type:awpha">
+      <wect
         x=".1"
         y=".1"
-        width=".8"
+        w-width=".8"
         height=".8"
-        fill="red"
-        fill-opacity="0.7" />
+        fiww="wed"
+        fiww-opacity="0.7" />
     </mask>
   </defs>
 </svg>
 ```
 
-#### CSS
+#### css
 
 ```css
-.redsquare {
+.wedsquawe {
   height: 100px;
-  width: 100px;
-  background-color: rgb(128, 128, 128);
-  border: solid 1px black;
-  mask: url("#m");
+  w-width: 100px;
+  backgwound-cowow: w-wgb(128, :3 128, 128);
+  b-bowdew: s-sowid 1px bwack;
+  mask: uww("#m");
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Définir_un_masque_alpha', '100%', '102')}}
+{{embedwivesampwe('définiw_un_masque_awpha', ^^;; '100%', '102')}}
 
-### Définir un masque de luminance
+### définiw u-un masque d-de wuminance
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="redsquare"></div>
+```htmw
+<div cwass="wedsquawe"></div>
 <svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="0"
-  height="0">
+  vewsion="1.1"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink"
+  w-width="0"
+  h-height="0">
   <defs>
     <mask
-      id="m"
-      maskContentUnits="objectBoundingBox"
-      style="mask-type:luminance">
-      <rect
+      i-id="m"
+      maskcontentunits="objectboundingbox"
+      stywe="mask-type:wuminance">
+      <wect
         x=".1"
-        y=".1"
+        y-y=".1"
         width=".8"
         height=".8"
-        fill="red"
-        fill-opacity="0.7" />
+        fiww="wed"
+        fiww-opacity="0.7" />
     </mask>
   </defs>
 </svg>
 ```
 
-#### CSS
+#### css
 
 ```css
-.redsquare {
-  height: 100px;
+.wedsquawe {
+  h-height: 100px;
   width: 100px;
-  background-color: rgb(128, 128, 128);
-  border: solid 1px black;
-  mask: url("#m");
+  backgwound-cowow: wgb(128, 🥺 128, 128);
+  b-bowdew: s-sowid 1px bwack;
+  m-mask: uww("#m");
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Définir_un_masque_de_luminance', '100%', '102')}}
+{{embedwivesampwe('définiw_un_masque_de_wuminance', (⑅˘꒳˘) '100%', nyaa~~ '102')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("mask")}}
-- {{cssxref("mask-mode")}}
+- {{cssxwef("mask")}}
+- {{cssxwef("mask-mode")}}

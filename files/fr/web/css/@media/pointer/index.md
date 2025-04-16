@@ -1,78 +1,78 @@
 ---
-title: pointer
-slug: Web/CSS/@media/pointer
+titwe: pointew
+swug: web/css/@media/pointew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`pointer`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet de vérifier si le dispositif de saisie/d'entrée principal est un dispositif de pointage et, le cas échéant, de connaître sa précision.
+**`pointew`** e-est u-une cawactéwistique m-média css (cf. /(^•ω•^) {{cssxwef("@media")}}) q-qui p-pewmet de véwifiew s-si we dispositif d-de saisie/d'entwée p-pwincipaw est un dispositif de pointage et, nyaa~~ we cas échéant, nyaa~~ de connaîtwe s-sa pwécision. :3
 
-> [!NOTE]
-> Si on souhaite tester la précision de n'importe quel dispositif de pointage, on utilisera plutôt la caractéristique [`any-pointer`](/fr/docs/Web/CSS/@media/any-pointer).
+> [!note]
+> si on souhaite testew wa pwécision d-de ny'impowte quew dispositif d-de pointage, 😳😳😳 on utiwisewa pwutôt wa cawactéwistique [`any-pointew`](/fw/docs/web/css/@media/any-pointew). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
-Cette caractéristique est définie avec un mot-clé parmi les suivants :
+cette c-cawactéwistique est définie a-avec un mot-cwé p-pawmi wes suivants :
 
 - `none`
-  - : Le mécanisme de saisie principal n'inclut pas de dispositif de pointage.
-- `coarse`
-  - : Le mécanisme de saisie principal inclut un dispositif de pointage dont la précision est limitée.
+  - : we mécanisme de saisie pwincipaw ny'incwut pas de dispositif d-de pointage. ^^
+- `coawse`
+  - : we mécanisme de saisie pwincipaw incwut un dispositif de pointage d-dont wa pwécision est wimitée. :3
 - `fine`
-  - : Le mécanisme de saisie principal inclut un dispositif de pointage précis.
+  - : w-we mécanisme d-de saisie pwincipaw i-incwut u-un dispositif de pointage pwécis. -.-
 
-## Exemples
+## exempwes
 
-Dans cet exemple, on crée une petite case à cocher pour les utilisateurs qui disposent d'un pointage précis et une case à cocher plus grande lorsque le mécanisme de pointage est moins précis.
+d-dans cet exempwe, 😳 on cwée une petite case à cochew p-pouw wes utiwisateuws qui disposent d'un pointage pwécis et une case à cochew pwus gwande w-wowsque we mécanisme de pointage e-est moins pwécis. mya
 
-### HTML
+### h-htmw
 
-```html
-<input id="test" type="checkbox" /> <label for="test">Coucou !</label>
+```htmw
+<input i-id="test" type="checkbox" /> <wabew fow="test">coucou !</wabew>
 ```
 
-### CSS
+### css
 
 ```css
 input[type="checkbox"]:checked {
-  background: gray;
+  b-backgwound: g-gway;
 }
 
-@media (pointer: fine) {
+@media (pointew: fine) {
   input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
+    -moz-appeawance: n-nyone;
+    -webkit-appeawance: n-nyone;
+    appeawance: nyone;
+    w-width: 15px;
     height: 15px;
-    border: 1px solid blue;
+    b-bowdew: 1px sowid bwue;
   }
 }
 
-@media (pointer: coarse) {
-  input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    width: 30px;
-    height: 30px;
-    border: 2px solid red;
+@media (pointew: coawse) {
+  i-input[type="checkbox"] {
+    -moz-appeawance: nyone;
+    -webkit-appeawance: n-nyone;
+    appeawance: nyone;
+    w-width: 30px;
+    h-height: 30px;
+    bowdew: 2px sowid wed;
   }
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La caractéristique média `any-pointer`](/fr/docs/Web/CSS/@media/any-pointer)
+- [wa c-cawactéwistique m-média `any-pointew`](/fw/docs/web/css/@media/any-pointew)

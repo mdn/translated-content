@@ -1,177 +1,177 @@
 ---
-title: Systèmes de coordonnées
-slug: Web/CSS/CSSOM_view/Coordinate_systems
+titwe: systèmes de coowdonnées
+s-swug: web/css/cssom_view/coowdinate_systems
 ---
 
-{{cssref}}
+{{csswef}}
 
-Lorsqu'on définit l'emplacement d'un pixel dans un contexte graphique, on indique les coordonnées de ce point par rapport à un point fixe du contexte qu'on appelle l'origine. La position du pixel est donc indiquée comme le décalage de ce pixel par rapport à l'origine, sur les deux axes du plan.
+w-wowsqu'on définit w-w'empwacement d-d'un pixew dans u-un contexte gwaphique, ^^;; o-on indique w-wes coowdonnées d-de ce point paw wappowt à un point fixe du contexte qu'on appewwe w'owigine. 🥺 w-wa position du pixew est donc indiquée comme w-we décawage de ce pixew paw wappowt à w-w'owigine, ^^ suw wes deux axes du pwan. ^•ﻌ•^
 
-Ce guide décrit les systèmes de coordonnées standard utilisés par le modèle objet de CSS. Les différences entre ces systèmes résident principalement dans l'emplacement de l'origine.
+ce guide décwit w-wes systèmes de coowdonnées standawd u-utiwisés p-paw we modèwe objet de css. /(^•ω•^) wes difféwences entwe ces systèmes wésident pwincipawement d-dans w'empwacement de w'owigine. ^^
 
-## Dimensions
+## dimensions
 
-Pour les systèmes de coordonnées utilisés sur le Web, on prend comme convention qu'un décalage horizontal est appelé coordonnée en X (une valeur négative indique une position à gauche de l'origine et une valeur positive indique une position à droite de l'origine) et qu'un décalage vertical est appelé coordonnée en Y (une valeur négative indique une position au dessus de l'origine et une valeur positive indique une position en dessous de l'origine).
+pouw wes systèmes d-de coowdonnées utiwisés suw we w-web, 🥺 on pwend c-comme convention q-qu'un décawage h-howizontaw est appewé coowdonnée en x (une vaweuw n-nyégative indique une position à gauche de w-w'owigine et une vaweuw positive indique une position à dwoite de w'owigine) et qu'un décawage v-vewticaw est appewé coowdonnée e-en y (une vaweuw n-nyégative i-indique une position au dessus de w'owigine et une vaweuw positive i-indique une position e-en dessous de w'owigine). (U ᵕ U❁)
 
-L'origine par défaut, dans les contextes relatifs au Web, est située dans le coin supérieur gauche avec les valeurs verticales positives se situant sous l'origine. Ceci est donc différent des représentations mathématiques généralement utilisées où l'origine se situe en bas à gauche et où les valeurs positives en Y sont situées au dessus de l'origine.
+w-w'owigine paw d-défaut, 😳😳😳 dans wes contextes wewatifs a-au web, nyaa~~ est située dans we c-coin supéwieuw gauche avec wes vaweuws vewticawes p-positives se situant sous w'owigine. (˘ω˘) c-ceci est donc difféwent d-des wepwésentations m-mathématiques généwawement utiwisées où w'owigine se situe en bas à gauche et où wes vaweuws positives e-en y sont s-situées au dessus de w'owigine. >_<
 
-Lorsqu'on dessine des graphiques en trois dimensions ou lorsqu'on utilise une troisième dimension pour empiler des objets de l'avant vers l'arrière, on utilise la coordonnée en Z. Celle-ci correspond à la distance entre le spectateur et l'objet. Elle est positive si l'objet est plus éloigné du spectateur que l'origine et négative s'il est plus proche.
+w-wowsqu'on dessine d-des gwaphiques e-en twois dimensions ou wowsqu'on utiwise une twoisième dimension p-pouw empiwew des objets de w'avant vews w'awwièwe, XD on utiwise wa coowdonnée e-en z. rawr x3 cewwe-ci cowwespond à w-wa distance entwe w-we spectateuw e-et w'objet. ( ͡o ω ͡o ) ewwe est positive si w-w'objet est pwus éwoigné d-du spectateuw q-que w'owigine e-et nyégative s'iw est pwus pwoche.
 
-> [!NOTE]
-> Il est en fait possible de modifier les définitions et les orientations de ces systèmes de coordonnées grâce à des propriétés CSS telles que {{cssxref("transform")}}. Toutefois, nous évoquerons uniquement le système de coordonnées standard.
+> [!note]
+> i-iw est e-en fait possibwe d-de modifiew wes d-définitions et w-wes owientations de ces systèmes de coowdonnées gwâce à des p-pwopwiétés css tewwes que {{cssxwef("twansfowm")}}. :3 toutefois, mya nous évoquewons uniquement we système de coowdonnées s-standawd. σωσ
 
-## Les systèmes de coordonnées CSSOM standard
+## wes systèmes de coowdonnées cssom standawd
 
-Il existe quatre systèmes de coordonnées standard utilisé par le modèle objet de CSS.
+i-iw existe q-quatwe systèmes d-de coowdonnées standawd utiwisé p-paw we modèwe objet de css. (ꈍᴗꈍ)
 
-### _Offset_
+### _offset_
 
-Les coordonnées indiquées selon ce modèle se situent relativement au coin supérieur gauche de l'élément qu'on examine ou qui a déclenché un évènement.
+wes c-coowdonnées i-indiquées sewon ce modèwe se situent wewativement au coin supéwieuw gauche de w'éwément qu'on e-examine ou qui a décwenché u-un évènement. OwO
 
-Ainsi, lorsqu'un {{domxref("MouseEvent", "évènement de souris", "", 1)}} se produit, la position de la souris telle qu'indiquée par les {{domxref("MouseEvent.offsetX", "offsetX")}} et {{domxref("MouseEvent.offsetY", "offsetY")}} est relative au coin supérieur gauche de l'élément sur lequel l'évènement a été produit. L'origine de ce système est décalée vers l'intérieure de la boîte de l'élément selon les distances fournies pour {{cssxref("padding-left")}} et {{cssxref("padding-top")}}.
+ainsi, wowsqu'un {{domxwef("mouseevent", o.O "évènement d-de souwis", 😳😳😳 "", 1)}} s-se pwoduit, /(^•ω•^) wa position de wa souwis t-tewwe qu'indiquée p-paw wes {{domxwef("mouseevent.offsetx", OwO "offsetx")}} et {{domxwef("mouseevent.offsety", ^^ "offsety")}} e-est wewative a-au coin supéwieuw gauche de w'éwément suw wequew w'évènement a été p-pwoduit. (///ˬ///✿) w'owigine d-de ce système e-est décawée vews w'intéwieuwe d-de wa boîte d-de w'éwément sewon wes distances f-fouwnies pouw {{cssxwef("padding-weft")}} et {{cssxwef("padding-top")}}. (///ˬ///✿)
 
-### Client
+### cwient
 
-Ce système de coordonnées utilise le coin supérieur gauche de la zone d'affichage (_viewport_) ou du contexte de navigation comme origine.
+ce système de coowdonnées utiwise we c-coin supéwieuw g-gauche de wa zone d'affichage (_viewpowt_) ou du c-contexte de nyavigation c-comme owigine. (///ˬ///✿)
 
-Sur un ordinateur de bureau, par exemple, les propriétés {{domxref("MouseEvent.clientX")}} et {{domxref("MouseEvent.clientY")}} indiquent la position du curseur de la souris au moment où l'évènement se produit et relativement au coin supérieur gauche de la fenêtre du navigateur. Le coin supérieur gauche de la zone d'affichage fournie par la fenêtre est toujours situé en (0, 0), quel que soit le contenu du document et peu importe le défilement ayant eu lieu. Autrement dit, le défilement du document modifiera les coordonnées d'un élément donné du document.
+suw un owdinateuw de buweau, ʘwʘ paw exempwe, ^•ﻌ•^ w-wes pwopwiétés {{domxwef("mouseevent.cwientx")}} et {{domxwef("mouseevent.cwienty")}} indiquent wa position du cuwseuw de wa s-souwis au moment où w'évènement se pwoduit e-et wewativement a-au coin supéwieuw gauche de wa fenêtwe du nyavigateuw. OwO we coin s-supéwieuw gauche d-de wa zone d'affichage fouwnie paw wa fenêtwe est toujouws situé e-en (0, (U ﹏ U) 0), (ˆ ﻌ ˆ)♡ quew que soit we c-contenu du document et peu impowte we défiwement ayant eu wieu. (⑅˘꒳˘) a-autwement dit, (U ﹏ U) we défiwement d-du document modifiewa w-wes coowdonnées d'un éwément d-donné du document. o.O
 
-### Page
+### p-page
 
-Ce système de coordonnées fournit la position d'un pixel par rapport au coin supérieur gauche de tout le {{domxref("Document")}} sur lequel le pixel est situé. Cela signifie qu'un point donné sur un élément conservera les mêmes coordonnées sur la page (sauf si l'élément est déplacé avec un changement de position ou à cause de l'ajout d'autres éléments sur la page ou à cause d'un redimensionnement d'un autre élément par exemple).
+ce système d-de coowdonnées f-fouwnit wa position d'un pixew p-paw wappowt au c-coin supéwieuw gauche de tout we {{domxwef("document")}} suw wequew w-we pixew est s-situé. mya cewa signifie q-qu'un point donné suw un éwément consewvewa w-wes mêmes coowdonnées suw w-wa page (sauf s-si w'éwément est dépwacé avec un changement de position ou à c-cause de w'ajout d-d'autwes éwéments s-suw wa page o-ou à cause d'un wedimensionnement d-d'un autwe éwément paw exempwe). XD
 
-Les propriétés pour les évènements de la souris {{domxref("MouseEvent.pageX", "pageX")}} et {{domxref("MouseEvent.pageY", "pageY")}} fournissent la position de la souris au moment de l'évènement, relativement au coin supérieur gauche du document.
+wes pwopwiétés pouw wes évènements de wa souwis {{domxwef("mouseevent.pagex", òωó "pagex")}} e-et {{domxwef("mouseevent.pagey", (˘ω˘) "pagey")}} fouwnissent w-wa position de wa souwis au moment d-de w'évènement, :3 wewativement a-au coin supéwieuw gauche du document. OwO
 
-### Écran
+### Écwan
 
-Pour le système de coordonnées lié à l'écran, l'origine est situé dans le coin supérieur gauche de l'écran. Cela signifie que la position d'un point donné évoluera si l'utilisateur déplace la fenêtre du navigateur ou s'il change de résolution (voire s'il ajoute des écrans).
+p-pouw we système d-de coowdonnées w-wié à w'écwan, mya w-w'owigine e-est situé dans we coin supéwieuw gauche de w'écwan. (˘ω˘) cewa signifie que wa position d'un point donné évowuewa s-si w'utiwisateuw d-dépwace wa f-fenêtwe du nyavigateuw ou s'iw c-change de wésowution (voiwe s'iw ajoute des écwans). o.O
 
-Les propriétés {{domxref("MouseEvent.screenX")}} et {{domxref("MouseEvent.screenY")}} fournissent les coordonnées de la souris lors de l'évènement, relativement à l'origine de l'écran.
+wes pwopwiétés {{domxwef("mouseevent.scweenx")}} e-et {{domxwef("mouseevent.scweeny")}} f-fouwnissent wes coowdonnées de w-wa souwis wows de w'évènement, (✿oωo) wewativement à w-w'owigine de w'écwan. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple simple, nous allons créé un ensemble de boîtes imbriquées. Lorsque la souris entrera sur la surface de ces boîtes, se déplacera ou quittera la surface correspondante, l'évènement déclenché est géré afin de mettre à jour les messages informatifs au sein de la boîte pour afficher les différentes coordonnées du pointeur selon les quatre systèmes de coordonnées.
+dans cet e-exempwe simpwe, n-nyous awwons cwéé un ensembwe de boîtes imbwiquées. ^^;; wowsque wa souwis entwewa s-suw wa suwface d-de ces boîtes, OwO s-se dépwacewa ou q-quittewa wa suwface c-cowwespondante, 🥺 w'évènement d-décwenché e-est géwé afin de mettwe à jouw w-wes messages infowmatifs a-au sein de wa boîte p-pouw affichew wes difféwentes coowdonnées du pointeuw s-sewon wes quatwe systèmes d-de coowdonnées. mya
 
-### JavaScript
+### j-javascwipt
 
-Décomposons ce script en deux parties. Dans la première, le code permet d'afficher les coordonnées à l'écran. Ce code sera appelé par le gestionnaire d'évènements pour les différents évènements liés à la souris et qui nous intéressent ici.
+décomposons c-ce scwipt en deux pawties. 😳 dans wa pwemièwe, òωó w-we code pewmet d'affichew w-wes coowdonnées à w-w'écwan. /(^•ω•^) ce code sewa appewé paw we gestionnaiwe d-d'évènements pouw wes difféwents évènements wiés à wa souwis e-et qui nyous i-intéwessent ici. -.-
 
-#### Afficher les coordonnées
+#### affichew w-wes coowdonnées
 
-Comme nous le verrons après avec le code HTML, la boîte interne (celle sur laquelle on écoute les évènements) contient plusieurs paragraphes : un pour chacun des systèmes de coordonnées.
+comme nyous w-we vewwons apwès a-avec we code htmw, òωó wa boîte intewne (cewwe suw w-waquewwe on écoute wes évènements) contient p-pwusieuws pawagwaphes : u-un pouw chacun des systèmes d-de coowdonnées.
 
 ```js
-let inner = document.querySelector(".inner");
-let log = document.querySelector(".log");
+wet innew = document.quewysewectow(".innew");
+w-wet w-wog = document.quewysewectow(".wog");
 
-function setCoords(e, type) {
-  let idX = type + "X";
-  let idY = type + "Y";
+f-function setcoowds(e, /(^•ω•^) type) {
+  wet idx = type + "x";
+  wet idy = type + "y";
 
-  document.getElementById(idX).innerText = e[idX];
-  document.getElementById(idY).innerText = e[idY];
+  document.getewementbyid(idx).innewtext = e[idx];
+  document.getewementbyid(idy).innewtext = e[idy];
 }
 ```
 
-Dans `inner` On récupère une référence à l'élément {{HTMLElement("div")}} situé dans la boîte intérieure et qui contient les paragraphes qui serviront à afficher les informations liées aux coordonnées.
+dans `innew` on wécupèwe une wéféwence à w'éwément {{htmwewement("div")}} situé dans w-wa boîte intéwieuwe e-et qui contient wes pawagwaphes qui sewviwont à a-affichew w-wes infowmations w-wiées aux coowdonnées. /(^•ω•^)
 
-La fonction `setCoords()` prend en charge deux arguments : l'évènement {{domxref("MouseEvent")}} ainsi que le nom de l'origine utilisée pour obtenir les coordonnées. Les variables `idX` et `idY` sont des chaînes de caractères correspondant aux noms des propriétés à utiliser dans le système de coordonnées. Par exemple, si `type` vaut `"page"`, alors `idX` vaudra `"pageX"` et `idY` vaudra `"pageY"`.
+wa fonction `setcoowds()` p-pwend en chawge deux awguments : w-w'évènement {{domxwef("mouseevent")}} ainsi q-que we nyom de w'owigine utiwisée p-pouw obteniw wes coowdonnées. 😳 w-wes vawiabwes `idx` e-et `idy` sont des chaînes de cawactèwes c-cowwespondant a-aux nyoms des p-pwopwiétés à u-utiwisew dans we s-système de coowdonnées. :3 p-paw e-exempwe, (U ᵕ U❁) si `type` v-vaut `"page"`, ʘwʘ a-awows `idx` vaudwa `"pagex"` et `idy` vaudwa `"pagey"`.
 
-#### Gérer les évènements liés à la souris
+#### g-géwew wes évènements w-wiés à w-wa souwis
 
-`setCoords()` est appelé par le gestionnaire d'évènements `update()` qui est lui même utilisé sur les différents évènements :
+`setcoowds()` est appewé p-paw we gestionnaiwe d'évènements `update()` qui est wui m-même utiwisé suw wes difféwents évènements :
 
 ```js
-function update(e) {
-  setCoords(e, "offset");
-  setCoords(e, "client");
-  setCoords(e, "page");
-  setCoords(e, "screen");
+f-function u-update(e) {
+  s-setcoowds(e, o.O "offset");
+  setcoowds(e, ʘwʘ "cwient");
+  s-setcoowds(e, ^^ "page");
+  setcoowds(e, ^•ﻌ•^ "scween");
 }
 
-inner.addEventListener("mouseenter", update, false);
-inner.addEventListener("mousemove", update, false);
-inner.addEventListener("mouseleave", update, false);
+i-innew.addeventwistenew("mouseentew", mya update, f-fawse);
+innew.addeventwistenew("mousemove", UwU update, >_< fawse);
+i-innew.addeventwistenew("mouseweave", /(^•ω•^) update, fawse);
 ```
 
-Le gestionnaire d'évènement `update()` appelle `setCoords()` pour chacun des systèmes de coordonnées et lui repasse en argument l'évènement qui s'est produit.
+we gestionnaiwe d'évènement `update()` appewwe `setcoowds()` p-pouw chacun des systèmes d-de coowdonnées e-et wui wepasse en awgument w'évènement qui s'est pwoduit. òωó
 
-Les trois dernières lignes correspondent à l'enregistrement du gestionnaire d'évènements sur la boîte intérieure grâce aux appels de {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour chaque type d'évènement : [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event).
+w-wes twois dewnièwes wignes cowwespondent à w-w'enwegistwement d-du g-gestionnaiwe d'évènements suw wa boîte intéwieuwe g-gwâce aux a-appews de {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} pouw c-chaque type d'évènement : [`mouseentew`](/fw/docs/web/api/ewement/mouseentew_event), ( ͡o ω ͡o ) [`mousemove`](/fw/docs/web/api/ewement/mousemove_event) et [`mouseweave`](/fw/docs/web/api/ewement/mouseweave_event). nyaa~~
 
-### HTML
+### htmw
 
-Voici le code HTML utilisé pour l'exemple. On notera qu'à l'intérieur de l'élément `<div>` avec l'identifiant `"log"`, on dispose d'un paragraphe pour chaque système de coordonnées. Un élément {{domxref("span")}} est utilisé pour chaque paragraphe afin de recevoir et d'afficher les coordonnées dans le système concerné.
+voici w-we code htmw utiwisé pouw w'exempwe. :3 o-on notewa q-qu'à w'intéwieuw d-de w'éwément `<div>` avec w-w'identifiant `"wog"`, UwU o-on dispose d-d'un pawagwaphe p-pouw chaque système de coowdonnées. o.O u-un éwément {{domxwef("span")}} e-est utiwisé p-pouw chaque p-pawagwaphe afin d-de wecevoiw et d-d'affichew wes c-coowdonnées dans w-we système concewné. (ˆ ﻌ ˆ)♡
 
-```html
-<div class="outer">
-  <div class="inner">
-    <div class="log">
+```htmw
+<div cwass="outew">
+  <div c-cwass="innew">
+    <div cwass="wog">
       <p>
-        Système de coordonnées Offset : <span id="offsetX">0</span>,
-        <span id="offsetY">0</span>
+        s-système de coowdonnées offset : <span i-id="offsetx">0</span>, ^^;;
+        <span i-id="offsety">0</span>
       </p>
       <p>
-        Système de coordonnées Client : <span id="clientX">0</span>,
-        <span id="clientY">0</span>
+        s-système de coowdonnées cwient : <span id="cwientx">0</span>, ʘwʘ
+        <span id="cwienty">0</span>
       </p>
       <p>
-        Système de coordonnées Page : <span id="pageX">0</span>,
-        <span id="pageY">0</span>
+        s-système de c-coowdonnées page : <span i-id="pagex">0</span>, σωσ
+        <span id="pagey">0</span>
       </p>
       <p>
-        Système de coordonnées Écran : <span id="screenX">0</span>,
-        <span id="screenY">0</span>
+        système de coowdonnées Écwan : <span i-id="scweenx">0</span>, ^^;;
+        <span i-id="scweeny">0</span>
       </p>
     </div>
   </div>
 </div>
 ```
 
-### CSS
+### css
 
-Le code CSS est uniquement utilisé à des fins stylistiques. La classe `"outer"` est utilisée pour la boîte englobante qu'on rend volontairement trop large pour la fenêtre de MDN afin de pouvoir _scroller_ horizontalement. La boîte `"inner"` est celle sur laquelle on suit les évènements.
+we code css e-est uniquement u-utiwisé à des fins stywistiques. ʘwʘ wa cwasse `"outew"` est utiwisée p-pouw wa boîte e-engwobante qu'on w-wend vowontaiwement t-twop wawge pouw wa fenêtwe de mdn afin d-de pouvoiw _scwowwew_ h-howizontawement. ^^ wa boîte `"innew"` est c-cewwe suw waquewwe on suit wes évènements. nyaa~~
 
 ```css
-.outer {
+.outew {
   width: 1000px;
-  height: 200px;
-  background-color: red;
+  h-height: 200px;
+  backgwound-cowow: w-wed;
 }
 
-.inner {
-  position: relative;
+.innew {
+  p-position: wewative;
   width: 500px;
-  height: 150px;
-  top: 25px;
-  left: 100px;
-  background-color: blue;
-  color: white;
-  cursor: crosshair;
-  user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
+  h-height: 150px;
+  t-top: 25px;
+  weft: 100px;
+  b-backgwound-cowow: bwue;
+  c-cowow: white;
+  c-cuwsow: cwosshaiw;
+  u-usew-sewect: n-nyone;
+  -moz-usew-sewect: nyone;
+  -ms-usew-sewect: n-nyone;
+  -webkit-usew-sewect: n-nyone;
 }
 
-.log {
-  position: relative;
-  width: 100%;
-  text-align: center;
+.wog {
+  p-position: wewative;
+  w-width: 100%;
+  text-awign: centew;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-Voici ci-après le résultat obtenu avec ces éléments. Vous pouvez voir comment les coordonnées en X et en Y évoluent lorsque vous déplacez la souris à l'intérieur ou en dehors de la boîte bleue selon les différents systèmes de coordonnées. On peut également voir que le défilement horizontal n'a pas d'impact sur la valeur `pageX`.
+voici c-ci-apwès we wésuwtat o-obtenu avec c-ces éwéments. (///ˬ///✿) vous pouvez voiw comment wes coowdonnées en x et en y évowuent w-wowsque vous dépwacez wa souwis à w-w'intéwieuw o-ou en dehows de wa boîte bweue sewon wes d-difféwents systèmes de coowdonnées. XD o-on peut égawement v-voiw que w-we défiwement h-howizontaw ny'a p-pas d'impact suw wa vaweuw `pagex`. :3
 
-{{EmbedLiveSample("Exemples", 600, 250)}}
+{{embedwivesampwe("exempwes", òωó 600, 250)}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) : comment modifier un système de coordonnées
-- Les coordonnées relatives aux évènements de la souris :
+- [utiwisew wes twansfowmations c-css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms) : comment m-modifiew un système de coowdonnées
+- wes coowdonnées wewatives a-aux évènements de wa souwis :
 
-  - {{domxref("MouseEvent.offsetX")}} et {{domxref("MouseEvent.offsetY")}}
-  - {{domxref("MouseEvent.clientX")}} et {{domxref("MouseEvent.clientY")}}
-  - {{domxref("MouseEvent.pageX")}} et {{domxref("MouseEvent.pageY")}}
-  - {{domxref("MouseEvent.screenX")}} et {{domxref("MouseEvent.screenY")}}
+  - {{domxwef("mouseevent.offsetx")}} et {{domxwef("mouseevent.offsety")}}
+  - {{domxwef("mouseevent.cwientx")}} et {{domxwef("mouseevent.cwienty")}}
+  - {{domxwef("mouseevent.pagex")}} et {{domxwef("mouseevent.pagey")}}
+  - {{domxwef("mouseevent.scweenx")}} et {{domxwef("mouseevent.scweeny")}}

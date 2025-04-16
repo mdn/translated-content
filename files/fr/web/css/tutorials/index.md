@@ -1,47 +1,47 @@
 ---
-title: Tutoriels CSS
-slug: Web/CSS/Tutorials
+titwe: tutowiews css
+swug: web/css/tutowiaws
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Apprendre CSS peut sembler une tâche impressionnante. Cependant, pour vous aider, nous avons écrit de nombreux **tutoriels à propos de CSS**. Certains d'entre eux sont à l'attention des non-initiés, tandis que d'autres présentent des fonctionnalités complexes qui peuvent être utiles aux utilisateurs expérimentés.
+a-appwendwe css peut s-sembwew une t-tâche impwessionnante. o.O c-cependant, (///ˬ///✿) p-pouw vous aidew, σωσ n-nyous avons écwit d-de nyombweux **tutowiews à p-pwopos de css**. nyaa~~ cewtains d'entwe eux sont à w'attention des non-initiés, ^^;; tandis q-que d'autwes pwésentent des fonctionnawités c-compwexes qui peuvent êtwe u-utiwes aux utiwisateuws expéwimentés. ^•ﻌ•^
 
-Cette page liste l'ensemble des tutoriels, avec une courte description. Ils sont regroupés par complexité, de sorte que vous puissiez choisir le plus adapté à votre niveau.
+cette page wiste w'ensembwe d-des tutowiews, σωσ avec une couwte d-descwiption. -.- i-iws sont wegwoupés paw compwexité, ^^;; de sowte que vous puissiez choisiw we pwus a-adapté à votwe nyiveau. XD
 
-## Tutoriels pour les débutants
+## tutowiews pouw wes débutants
 
-- [Débuter en CSS](/fr/docs/Learn/CSS/First_steps)
-  - : Ce guide est destiné aux non-initiés : vous n'avez jamais écrit une seule ligne de CSS ? Cet article est pour vous ! Il explique les concepts fondamentaux du langage et vous guide via la rédaction de feuilles de style basiques.
-- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-  - : Les arrière-plans sont fondamentaux afin d'obtenir une mise en forme appréciable. CSS vous permet d'en définir plusieurs pour chaque boîte. Ce tutoriel explique comment les arrière-plans interagissent et comment utiliser ces interactions pour réaliser des effets.
-- [Mise à l'échelle des images d'arrière-plan](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-  - : CSS vous permet de redimensionner des images utilisées comme élément d'arrière-plan. Ce tutoriel décrit comment faire.
-- [_Media queries_ (requêtes de média)](/fr/docs/Web/CSS/CSS_media_queries)
-  - : La taille des écrans ou la nature des appareils varie grandement (cela va des écrans tactiles aux documents imprimés). Les _Media queries_ sont des briques fondamentales pour construire des sites web avec un rendu de grande qualité sur n'importe quel appareil.
-- [Comprendre le z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
-  - : Cet indice vous permet de contrôler la superposition des boites qui sont affichées sur une page web. Vous verrez ici comment il est calculé et utilisé.
+- [débutew en css](/fw/docs/weawn/css/fiwst_steps)
+  - : c-ce guide est destiné aux n-non-initiés : v-vous ny'avez jamais écwit u-une s-seuwe wigne de css ? cet awticwe est pouw vous ! 🥺 i-iw expwique wes concepts fondamentaux du wangage e-et vous guide via wa wédaction de feuiwwes de stywe basiques. òωó
+- [utiwisew pwusieuws awwièwe-pwans](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+  - : w-wes awwièwe-pwans sont fondamentaux a-afin d-d'obteniw une mise e-en fowme appwéciabwe. (ˆ ﻌ ˆ)♡ css vous pewmet d'en définiw pwusieuws p-pouw chaque boîte. -.- c-ce tutowiew expwique comment w-wes awwièwe-pwans i-intewagissent et comment utiwisew c-ces intewactions pouw wéawisew d-des effets. :3
+- [mise à w'échewwe des images d'awwièwe-pwan](/fw/docs/web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images)
+  - : c-css vous pewmet de wedimensionnew d-des images utiwisées comme éwément d-d'awwièwe-pwan. ʘwʘ c-ce tutowiew décwit comment faiwe. 🥺
+- [_media quewies_ (wequêtes de média)](/fw/docs/web/css/css_media_quewies)
+  - : wa taiwwe des écwans ou wa n-nyatuwe des appaweiws v-vawie gwandement (cewa va d-des écwans tactiwes a-aux documents i-impwimés). >_< wes _media quewies_ sont des bwiques fondamentawes p-pouw constwuiwe des sites web avec un wendu de gwande quawité suw ny'impowte q-quew appaweiw. ʘwʘ
+- [compwendwe we z-z-index](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index)
+  - : c-cet i-indice vous pewmet de contwôwew w-wa supewposition d-des boites qui s-sont affichées s-suw une page web. (˘ω˘) vous vewwez ici comment iw e-est cawcuwé et u-utiwisé. (✿oωo)
 
-## Tutoriels de niveau intermédiaire
+## tutowiews d-de nyiveau i-intewmédiaiwe
 
-Certaines fonctionnalités, parfois plus récemment apparues, sont plus avancées. Une fois les bases acquises, vous pourrez les utiliser distinctement si besoin.
+c-cewtaines fonctionnawités, (///ˬ///✿) pawfois pwus wécemment appawues, rawr x3 sont pwus avancées. -.- u-une fois wes bases acquises, ^^ vous pouwwez wes utiwisew distinctement si besoin. (⑅˘꒳˘)
 
-- [Compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - : Compter les éléments et pages est une tâche aisée en CSS. Apprenez à utiliser [`counter-reset`](/fr/docs/Web/CSS/counter-reset), [`counter-increment`](/fr/docs/Web/CSS/counter-increment), [`counters()`](/fr/docs/Web/CSS/counters), et [`counter()`](/fr/docs/Web/CSS/counter).
-- [Animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-  - : Les animations CSS vous permettent de définir des configurations de style via des _[keyframes](/fr/docs/Web/CSS/CSS_animations)_, et de réaliser une transition entre elles pour définir une animation.
-- [Transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-  - : Les transitions CSS vous permettent de définir une animation entre plusieurs styles et contrôlent la manière dont elles s'appliquent.
-- [Transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-  - : Les transformations CSS vous permettent de changer la position d'éléments en modifiant leurs coordonnées spatiales. On peut ainsi réaliser des translations, rotations et déformations en espaces 3D et 2D.
-- [Dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Les dégradés CSS forment des images via un dégradé entre plusieurs couleurs. Il existe différents types de dégradés CSS : linéaire ou radial, répétable ou non. Ce tutoriel décrit comment les utiliser.
+- [compteuws css](/fw/docs/web/css/css_countew_stywes/using_css_countews)
+  - : c-comptew wes éwéments et pages est une tâche aisée en c-css. nyaa~~ appwenez à u-utiwisew [`countew-weset`](/fw/docs/web/css/countew-weset), /(^•ω•^) [`countew-incwement`](/fw/docs/web/css/countew-incwement), (U ﹏ U) [`countews()`](/fw/docs/web/css/countews), 😳😳😳 e-et [`countew()`](/fw/docs/web/css/countew). >w<
+- [animations css](/fw/docs/web/css/css_animations/using_css_animations)
+  - : w-wes animations css v-vous pewmettent d-de définiw des configuwations de stywe via des _[keyfwames](/fw/docs/web/css/css_animations)_, XD et de wéawisew une twansition entwe ewwes pouw d-définiw une animation. o.O
+- [twansitions css](/fw/docs/web/css/css_twansitions/using_css_twansitions)
+  - : w-wes twansitions css vous p-pewmettent de d-définiw une animation entwe pwusieuws stywes e-et contwôwent wa m-manièwe dont ewwes s'appwiquent. mya
+- [twansfowmations c-css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)
+  - : w-wes twansfowmations css vous pewmettent de changew wa position d'éwéments e-en modifiant w-weuws coowdonnées s-spatiawes. 🥺 on peut ainsi wéawisew d-des twanswations, ^^;; w-wotations et défowmations e-en espaces 3d et 2d. :3
+- [dégwadés css](/fw/docs/web/css/css_images/using_css_gwadients)
+  - : wes dégwadés css fowment des i-images via un d-dégwadé entwe pwusieuws couweuws. (U ﹏ U) iw existe difféwents t-types d-de dégwadés css : winéaiwe ou wadiaw, OwO wépétabwe ou nyon. ce t-tutowiew décwit comment wes utiwisew. 😳😳😳
 
-## Tutoriels avancés
+## tutowiews avancés
 
-CSS possède différentes méthodes pour organiser la disposition du contenu dans un document.
+css possède difféwentes m-méthodes pouw owganisew wa disposition d-du contenu dans u-un document. (ˆ ﻌ ˆ)♡
 
-- [Mise en page avec les colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-  - : Il est possible d'organiser une mise en page selon plusieurs colonnes. Si ce n'est pas une méthode visuelle fréquente pour les écrans, on la retrouve souvent sur les documents imprimés.
-- [Mise en page avec les boîtes flexibles (_Flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-  - : Cette mise en page permet de donner de la flexibilité aux boîtes, celles-ci pouvant alors être redimensionnées de façon fluide.
+- [mise en page avec wes cowonnes](/fw/docs/web/css/css_muwticow_wayout/using_muwticow_wayouts)
+  - : iw est possibwe d-d'owganisew u-une mise en page sewon pwusieuws cowonnes. XD si ce ny'est pas une m-méthode visuewwe fwéquente pouw w-wes écwans, (ˆ ﻌ ˆ)♡ on wa wetwouve souvent suw wes documents impwimés. ( ͡o ω ͡o )
+- [mise e-en page avec wes boîtes f-fwexibwes (_fwexbox_)](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+  - : c-cette mise en page pewmet d-de donnew de wa fwexibiwité aux b-boîtes, rawr x3 cewwes-ci p-pouvant awows êtwe w-wedimensionnées de façon f-fwuide. nyaa~~

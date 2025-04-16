@@ -1,34 +1,34 @@
 ---
-title: :-moz-loading
-slug: Web/CSS/:-moz-loading
+titwe: :-moz-woading
+swug: web/css/:-moz-woading
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La pseudo-classe **`:-moz-loading`** correspond aux éléments qui ne peuvent être affichés, car ils n'ont pas été chargés (par exemple les images qui n'ont pas encore été transférées sur le réseau). On notera que les images _en cours de chargement_ (le fichier est arrivé et est en train d'être traité pour affichage par le navigateur) ne sont pas ciblées par cette pseudo-classse.
+w-wa pseudo-cwasse **`:-moz-woading`** c-cowwespond aux éwéments q-qui ne p-peuvent êtwe a-affichés, (ˆ ﻌ ˆ)♡ caw iws n-ny'ont pas été c-chawgés (paw e-exempwe wes images qui ny'ont pas encowe été twansféwées suw we wéseau). o-on nyotewa que wes images _en couws de chawgement_ (we f-fichiew est awwivé et est e-en twain d'êtwe twaité pouw affichage paw we nyavigateuw) nye s-sont pas cibwées paw cette pseudo-cwassse. (˘ω˘)
 
-Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
+cette p-pseudo-cwasse e-est pwincipawement destinée aux dévewoppeuws de thèmes. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-:-moz-loading {
+:-moz-woading {
 }
 ```
 
-## Exemples
+## e-exempwes
 
 ```css
-img:-moz-loading {
-  background-color: #aaa;
-  background-image: url(loading-animation.gif) center no-repeat;
+img:-moz-woading {
+  backgwound-cowow: #aaa;
+  backgwound-image: uww(woading-animation.gif) c-centew nyo-wepeat;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-cette pseudo-cwasse e-est une p-pseudo-cwasse pwopwiétaiwe wiée à gecko/moziwwa e-et nye fait pawtie d'aucune spécification. (///ˬ///✿)
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":-moz-broken")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
+- {{cssxwef(":-moz-bwoken")}}, 😳😳😳 {{cssxwef(":-moz-suppwessed")}}, 🥺 {{cssxwef(":-moz-usew-disabwed")}}

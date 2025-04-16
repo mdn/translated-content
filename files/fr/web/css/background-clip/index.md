@@ -1,147 +1,147 @@
 ---
-title: background-clip
-slug: Web/CSS/background-clip
+titwe: backgwound-cwip
+swug: w-web/css/backgwound-cwip
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`background-clip`** définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (_padding_) ou la boîte de contenu.
+w-wa pwopwiété **`backgwound-cwip`** d-définit w-wa façon d-dont w'awwièwe-pwan d-d'un éwément (que c-ce soit w-w'image ou wa couweuw) s'étend sous wa boîte de bowduwe, (///ˬ///✿) wa boîte de wempwissage (_padding_) o-ou wa boîte de contenu. (˘ω˘)
 
-{{InteractiveExample("CSS Demo: background-clip")}}
+{{intewactiveexampwe("css demo: backgwound-cwip")}}
 
-```css interactive-example-choice
-background-clip: border-box;
+```css i-intewactive-exampwe-choice
+backgwound-cwip: b-bowdew-box;
 ```
 
-```css interactive-example-choice
-background-clip: padding-box;
+```css intewactive-exampwe-choice
+backgwound-cwip: padding-box;
 ```
 
-```css interactive-example-choice
-background-clip: content-box;
+```css i-intewactive-exampwe-choice
+backgwound-cwip: c-content-box;
 ```
 
-```css interactive-example-choice
-background-clip: text;
-color: transparent;
+```css i-intewactive-exampwe-choice
+backgwound-cwip: text;
+cowow: twanspawent;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is the content of the element.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">this is the content of the ewement.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-image: url("/shared-assets/images/examples/leopard.jpg");
-  color: #d73611;
-  text-shadow: 2px 2px black;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-image: uww("/shawed-assets/images/exampwes/weopawd.jpg");
+  c-cowow: #d73611;
+  t-text-shadow: 2px 2px b-bwack;
   padding: 20px;
-  border: 10px dashed #333;
+  b-bowdew: 10px dashed #333;
   font-size: 2em;
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 ```
 
-Si aucune image ({{cssxref("background-image")}}) ni couleur ({{cssxref("background-color")}}) d'arrière-plan n'est définie, cette propriété aura uniquement un effet visuel lorsque la bordure possède des régions transparentes (via {{cssxref("border-style")}} ou {{cssxref("border-image")}}). Dans les autres cas, la bordure recouvrira la zone où se situera la différence .
+si aucune image ({{cssxwef("backgwound-image")}}) n-nyi couweuw ({{cssxwef("backgwound-cowow")}}) d'awwièwe-pwan ny'est définie, ^^;; cette pwopwiété auwa uniquement un effet visuew w-wowsque wa bowduwe possède d-des wégions twanspawentes (via {{cssxwef("bowdew-stywe")}} o-ou {{cssxwef("bowdew-image")}}). d-dans wes autwes cas, (✿oωo) wa bowduwe wecouvwiwa wa zone o-où se situewa w-wa difféwence . (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs utilisant un mot-clé */
-background-clip: border-box;
-background-clip: padding-box;
-background-clip: content-box;
-background-clip: text;
+/* v-vaweuws u-utiwisant un mot-cwé */
+backgwound-cwip: b-bowdew-box;
+backgwound-cwip: p-padding-box;
+backgwound-cwip: content-box;
+b-backgwound-cwip: text;
 
-/* Valeurs globales */
-background-clip: inherit;
-background-clip: initial;
-background-clip: unset;
+/* vaweuws g-gwobawes */
+backgwound-cwip: i-inhewit;
+backgwound-cwip: i-initiaw;
+backgwound-cwip: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `border-box`
-  - : L'arrière-plan s'étend jusqu'à la limite externe de la bordure. L'arrière-plan sera situé sous la bordure en termes d'ordre z.
+- `bowdew-box`
+  - : w'awwièwe-pwan s'étend jusqu'à wa wimite e-extewne de wa bowduwe. -.- w-w'awwièwe-pwan sewa situé s-sous wa bowduwe e-en tewmes d'owdwe z-z. ^•ﻌ•^
 - `padding-box`
-  - : Aucun arrière-plan n'est dessiné dans la boîte de bordure. L'arrière-plan s'étend jusqu'à la limite de la boîte de remplissage (_padding_).
+  - : aucun awwièwe-pwan ny'est dessiné d-dans wa boîte de bowduwe. rawr w'awwièwe-pwan s'étend jusqu'à wa wimite de wa boîte d-de wempwissage (_padding_). (˘ω˘)
 - `content-box`
-  - : L'arrière-plan est limité (rogné) à la boîte de contenu.
-- `text` {{experimental_inline}}
-  - : L'arrière-plan est limité (rogné) au texte en premier plan.
+  - : w'awwièwe-pwan e-est wimité (wogné) à w-wa boîte de contenu.
+- `text` {{expewimentaw_inwine}}
+  - : w-w'awwièwe-pwan est w-wimité (wogné) a-au texte en pwemiew p-pwan. nyaa~~
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-p {
-  border: 10px navy;
-  border-style: dotted double;
-  margin: 1em;
+p-p {
+  bowdew: 10px n-nyavy;
+  b-bowdew-stywe: dotted d-doubwe;
+  mawgin: 1em;
   padding: 2em;
-  background: #f8d575;
-  font: 900 1.2em sans-serif;
-  text-decoration: underline;
+  backgwound: #f8d575;
+  font: 900 1.2em s-sans-sewif;
+  text-decowation: undewwine;
 }
 
-.border-box {
-  background-clip: border-box;
+.bowdew-box {
+  backgwound-cwip: bowdew-box;
 }
 
 .padding-box {
-  background-clip: padding-box;
+  backgwound-cwip: p-padding-box;
 }
 
 .content-box {
-  background-clip: content-box;
+  backgwound-cwip: content-box;
 }
 
 .text {
-  background-clip: text;
-  color: rgba(0, 0, 0, 0.2);
+  backgwound-cwip: t-text;
+  cowow: w-wgba(0, UwU 0, :3 0, 0.2);
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="border-box">L'arrière-plan s'étend sous la bordure.</p>
-<p class="padding-box">L'arrière-plan s'étend jusqu'avant la bordure.</p>
-<p class="content-box">L'arrière-plan s'arrête à la boîte de contenu.</p>
-<p class="text">L'arrière-plan se limite au texte au premier-plan.</p>
+```htmw
+<p c-cwass="bowdew-box">w'awwièwe-pwan s'étend sous w-wa bowduwe.</p>
+<p cwass="padding-box">w'awwièwe-pwan s-s'étend j-jusqu'avant wa bowduwe.</p>
+<p cwass="content-box">w'awwièwe-pwan s'awwête à wa boîte de contenu.</p>
+<p cwass="text">w'awwièwe-pwan s-se wimite au texte au p-pwemiew-pwan.</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', 600, 580)}}
+{{embedwivesampwe('exempwes', (⑅˘꒳˘) 600, 580)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{cssxref("clip-path")}}
-- Les propriétés relatives à l'arrière-plan :
+- {{cssxwef("cwip-path")}}
+- wes pwopwiétés w-wewatives à w-w'awwièwe-pwan :
 
-  - {{cssxref("background")}}
-  - {{cssxref("background-color")}}
-  - {{cssxref("background-image")}}
-  - {{cssxref("background-origin")}}
+  - {{cssxwef("backgwound")}}
+  - {{cssxwef("backgwound-cowow")}}
+  - {{cssxwef("backgwound-image")}}
+  - {{cssxwef("backgwound-owigin")}}
 
-- [Le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [we modèwe de boîtes css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)

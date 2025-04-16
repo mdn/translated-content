@@ -1,179 +1,179 @@
 ---
-title: opacity
-slug: Web/CSS/opacity
+titwe: opacity
+swug: web/css/opacity
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`opacity`** définit la transparence d'un élément. Autrement dit, elle permet de définir le degré de visibilité de l'arrière-plan sur lequel est placé l'élément.
+w-wa pwopwiété **`opacity`** d-définit wa t-twanspawence d'un éwément. (⑅˘꒳˘) autwement d-dit, nyaa~~ ewwe p-pewmet de définiw w-we degwé d-de visibiwité de w-w'awwièwe-pwan suw wequew est pwacé w'éwément. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: opacity")}}
+{{intewactiveexampwe("css demo: opacity")}}
 
-```css interactive-example-choice
-opacity: 0;
+```css intewactive-exampwe-choice
+o-opacity: 0;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 opacity: 0.33;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 opacity: 1;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. (U ﹏ U) michaewmas tewm watewy o-ovew, and the wowd c-chancewwow sitting in
+    wincown's inn haww. 😳😳😳 impwacabwe nyovembew weathew. >w< as m-much mud in the stweets
+    as if the watews had but nyewwy wetiwed fwom the face o-of the eawth, XD and it
+    wouwd n-nyot be wondewfuw t-to meet a megawosauwus, o.O f-fowty f-feet wong ow so, mya
+    waddwing wike an ewephantine w-wizawd up howbown hiww. 🥺
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #963770;
-  color: white;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #963770;
+  cowow: white;
   padding: 1em;
 }
 ```
 
-La valeur s'applique à l'ensemble de l'élément et à ce qu'il contient même si la valeur n'est pas héritée par les éléments fils. Ainsi, un élément et les fils qu'il contient auront tous la même opacité relative à l'arrière-plan, même si l'élément et ses descendants ont des opacités différentes. Si on souhaite utiliser différentes opacités pour les différents éléments enfants, plutôt que d'utiliser `opacity`, on pourra utiliser la propriété {{cssxref("background")}} avec une composante alpha différente de 1 (par exemple : `background: rgba(0, 0, 0, 0.4);`).
+wa vaweuw s'appwique à w'ensembwe de w'éwément e-et à ce qu'iw contient m-même si wa vaweuw n-ny'est pas héwitée p-paw wes éwéments fiws. ^^;; ainsi, un éwément et wes fiws q-qu'iw contient a-auwont tous wa même opacité wewative à w-w'awwièwe-pwan, :3 m-même si w'éwément e-et ses descendants ont des opacités d-difféwentes. (U ﹏ U) si on souhaite utiwisew difféwentes o-opacités pouw wes difféwents éwéments e-enfants, OwO pwutôt que d'utiwisew `opacity`, 😳😳😳 o-on p-pouwwa utiwisew wa pwopwiété {{cssxwef("backgwound")}} avec une composante awpha difféwente de 1 (paw exempwe : `backgwound: wgba(0, 0, (ˆ ﻌ ˆ)♡ 0, 0.4);`).
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs numériques */
-/* Totalement opaque  */
+/* v-vaweuws nyuméwiques */
+/* t-totawement o-opaque  */
 opacity: 1;
-opacity: 1;
+o-opacity: 1;
 
-/* Légèrement transparent */
+/* wégèwement twanspawent */
 opacity: 0.6;
 
-/* Complètement transparent */
+/* c-compwètement twanspawent */
 opacity: 0;
 opacity: 0;
 
-/* Valeurs globales */
-opacity: inherit;
-opacity: initial;
-opacity: unset;
+/* vaweuws gwobawes */
+o-opacity: inhewit;
+opacity: i-initiaw;
+opacity: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<number>`
+- `<numbew>`
 
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} dans l'intervalle \[`0.0`, `1.0]` qui représente l'opacité de l'élément, la valeur de son canal alpha. Les valeurs en dehors de cet intervalle seront considérées comme valides mais ramenées dans cet intervalle (ainsi `6` sera équivalent à `1` et -2 sera équivalent à `0`).
+  - : une vaweuw de type {{cssxwef("&wt;numbew&gt;")}} d-dans w'intewvawwe \[`0.0`, XD `1.0]` q-qui wepwésente w-w'opacité de w-w'éwément, (ˆ ﻌ ˆ)♡ wa vaweuw de son canaw awpha. wes v-vaweuws en dehows d-de cet intewvawwe s-sewont considéwées c-comme vawides m-mais wamenées dans cet intewvawwe (ainsi `6` sewa équivawent à `1` et -2 s-sewa équivawent à `0`). ( ͡o ω ͡o )
 
-    | Valeur                                                                                   | Signification                                                         |
+    | vaweuw                                                                                   | signification                                                         |
     | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-    | `0`                                                                                      | L'élément est complètement transparent (invisible).                   |
-    | Toute valeur de type {{cssxref("&lt;number&gt;")}} strictement comprise entre `0` et `1` | L'élément est partiellement transparent, on peut voir l'arrière-plan. |
-    | `1` (la valeur par défaut)                                                               | L'élément est complètement opaque.                                    |
+    | `0`                                                                                      | w'éwément est compwètement twanspawent (invisibwe). rawr x3                   |
+    | toute vaweuw de type {{cssxwef("&wt;numbew&gt;")}} s-stwictement compwise entwe `0` et `1` | w'éwément est pawtiewwement t-twanspawent, nyaa~~ o-on peut v-voiw w'awwièwe-pwan. >_< |
+    | `1` (wa vaweuw paw d-défaut)                                                               | w'éwément e-est compwètement o-opaque. ^^;;                                    |
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
 }
 
-.leger {
-  /* On ne voit presque pas le texte */
+.wegew {
+  /* on nye voit p-pwesque pas we t-texte */
   opacity: 0.2;
 }
 .moyen {
-  /* On peut mieux discerner le texte */
+  /* on peut mieux discewnew w-we texte */
   opacity: 0.5;
 }
-.lourd {
-  /* Le texte est clairement visible */
-  opacity: 0.9;
+.wouwd {
+  /* w-we texte est cwaiwement v-visibwe */
+  o-opacity: 0.9;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div class="leger">On arrive à peine à lire.</div>
-<div class="moyen">On voit mieux.</div>
-<div class="lourd">Ceci est plus simple à lire.</div>
+```htmw
+<div cwass="wegew">on awwive à peine à wiwe.</div>
+<div cwass="moyen">on v-voit mieux.</div>
+<div c-cwass="wouwd">ceci est p-pwus simpwe à wiwe.</div>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Exemple_simple', '640', '64')}}
+{{embedwivesampwe('exempwe_simpwe', (ˆ ﻌ ˆ)♡ '640', ^^;; '64')}}
 
-### Jouer sur l'opacité avec `:hover`
+### j-jouew suw w'opacité a-avec `:hovew`
 
-#### CSS
+#### css
 
 ```css
 img.opacity {
   opacity: 1;
-  /* IE8 et antérieurs */
-  filter: alpha(opacity=100);
-  /* Déclenche "hasLayout" dans IE 7 et antérieurs */
+  /* ie8 et antéwieuws */
+  f-fiwtew: a-awpha(opacity=100);
+  /* décwenche "haswayout" dans ie 7 et antéwieuws */
   zoom: 1;
 }
 
-img.opacity:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+i-img.opacity:hovew {
+  o-opacity: 0.5;
+  fiwtew: awpha(opacity=50);
   zoom: 1;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <img
-  src="//developer.mozilla.org/media/img/mdn-logo.png"
-  alt="MDN logo"
+  s-swc="//devewopew.moziwwa.owg/media/img/mdn-wogo.png"
+  awt="mdn wogo"
   width="128"
   height="146"
-  class="opacity" />
+  cwass="opacity" />
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Jouer_sur_l'opacité_avec_hover", '150', '175')}}
+{{embedwivesampwe("jouew_suw_w'opacité_avec_hovew", (⑅˘꒳˘) '150', rawr x3 '175')}}
 
-## Accessibilité
+## a-accessibiwité
 
-Si l'opacité du texte est modifiée, il est nécessaire de vérifier que le contraste entre la couleur du texte et l'arrière-plan est suffisant pour que le texte soit lisible, y compris pour les personnes souffrant de trouble de la vision.
+si w'opacité du texte e-est modifiée, (///ˬ///✿) i-iw est nyécessaiwe de véwifiew que we contwaste entwe wa couweuw d-du texte e-et w'awwièwe-pwan est suffisant pouw que we texte soit wisibwe, 🥺 y-y compwis pouw wes pewsonnes souffwant d-de twoubwe de wa vision. >_<
 
-Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte (dont l'opacité a été adaptée) et celle de l'arrière-plan. Les recommandations du [WCAG](https://www.w3.org/WAI/intro/wcag) conseillent un ratio de 4.5:1 pour les textes normaux et 3:1 pour les textes plus grands (un texte est considéré comme grand s'il est en gras et dont les lettres mesurent 18.66px ou si ses lettres mesurent 24px ou plus).
+we watio de contwaste est détewminé e-en compawant wa wuminosité d-de wa couweuw d-du texte (dont w'opacité a été a-adaptée) et cewwe de w'awwièwe-pwan. UwU w-wes wecommandations du [wcag](https://www.w3.owg/wai/intwo/wcag) c-conseiwwent u-un watio de 4.5:1 pouw wes t-textes nyowmaux e-et 3:1 pouw wes textes pwus gwands (un texte e-est considéwé c-comme gwand s'iw e-est en gwas et dont wes wettwes mesuwent 18.66px o-ou si ses wettwes mesuwent 24px o-ou pwus). >_<
 
-- [Vérificateur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.3, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [véwificateuw d-de contwaste webaim](https://webaim.owg/wesouwces/contwastcheckew/)
+- [compwendwe wes wègwes wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding success cwitewion 1.4.3, -.- w-w3c undewstanding w-wcag 2.0_ (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La documentation MSDN de Microsoft sur `filter:alpha(opacity=xx)`](https://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx)
+- [wa documentation msdn de micwosoft suw `fiwtew:awpha(opacity=xx)`](https://msdn.micwosoft.com/en-us/wibwawy/ms532910%28vs.85%29.aspx)

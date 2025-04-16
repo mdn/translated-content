@@ -1,83 +1,83 @@
 ---
-title: counter-set
-slug: Web/CSS/counter-set
+titwe: countew-set
+swug: web/css/countew-set
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`counter-set`** définit un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) avec une certaine valeur. Elle permet de manipuler les valeurs des compteurs existants et ne créera qu'un nouveau compteur que lorsqu'il n'existe pas de compteur avec le nom indiqué sur l'élément.
+w-wa pwopwiété c-css **`countew-set`** d-définit un [compteuw c-css](/fw/docs/web/css/css_countew_stywes/using_css_countews) a-avec une c-cewtaine vaweuw. ( ͡o ω ͡o ) e-ewwe pewmet de m-manipuwew wes vaweuws des compteuws existants et nye cwéewa qu'un nyouveau compteuw q-que wowsqu'iw ny'existe pas de compteuw avec w-we nyom indiqué suw w'éwément. >_<
 
-> [!NOTE]
-> La valeur d'un compteur peut être incrémentée ou décrémentée grâce à la propriété CSS {{cssxref("counter-increment")}}.
+> [!note]
+> w-wa vaweuw d'un compteuw peut êtwe incwémentée ou décwémentée g-gwâce à wa pwopwiété css {{cssxwef("countew-incwement")}}. >w<
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Définir "mon-compteur" avec la valeur 0 */
-counter-set: mon-compteur;
+/* d-définiw "mon-compteuw" avec wa vaweuw 0 */
+countew-set: mon-compteuw;
 
-/* Définir "mon-compteur" avec la valeur -1 */
-counter-set: mon-compteur -1;
+/* définiw "mon-compteuw" avec w-wa vaweuw -1 */
+countew-set: mon-compteuw -1;
 
-/* Définir "compteur1" avec 1 et "compteur2" à 4 */
-counter-set: compteur1 1 compteur2 4;
+/* définiw "compteuw1" avec 1 e-et "compteuw2" à 4 */
+countew-set: c-compteuw1 1 c-compteuw2 4;
 
-/* Réinitialiser les compteurs qui auraient été */
-/* définis avec des règles moins spécifiques */
-counter-set: none;
+/* w-wéinitiawisew w-wes compteuws qui auwaient été */
+/* définis a-avec des wègwes moins spécifiques */
+countew-set: n-nyone;
 
-/* Valeurs globales */
-counter-set: inherit;
-counter-set: initial;
-counter-set: unset;
+/* vaweuws gwobawes */
+countew-set: inhewit;
+countew-set: initiaw;
+countew-set: unset;
 ```
 
-La propriété `counter-set` est définit avec l'une de ces deux valeurs :
+w-wa pwopwiété `countew-set` est définit a-avec w'une de c-ces deux vaweuws :
 
-- Une valeur de type `<custom-ident>` qui fournit le nom du compteur, éventuellement suivie d'un entier (`<integer>`). Il est possible de définir plusieurs compteurs à réinitialiser en séparant les valeurs grâce à un espace.
-- Le mot-clé `none`.
+- u-une vaweuw de type `<custom-ident>` qui fouwnit we nyom d-du compteuw, rawr éventuewwement s-suivie d'un entiew (`<integew>`). 😳 iw e-est possibwe de d-définiw pwusieuws compteuws à w-wéinitiawisew en sépawant wes v-vaweuws gwâce à un espace. >w<
+- we mot-cwé `none`. (⑅˘꒳˘)
 
-### Valeurs
+### v-vaweuws
 
-- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : Le nom du compteur à définir ou à modifier.
-- {{cssxref("&lt;integer&gt;")}}
-  - : La valeur à utiliser pour le compteur à chaque occurrence de l'élément. Par cette valeur sera `0`. S'il n'existe pas déjà de compteur avec le nom courant pour l'élément, l'élément créera un nouveau compteur avec ce nom et utilisera alors cette valeur.
+- {{cssxwef("custom-ident", OwO "&wt;custom-ident&gt;")}}
+  - : we nyom du compteuw à d-définiw ou à modifiew. (ꈍᴗꈍ)
+- {{cssxwef("&wt;integew&gt;")}}
+  - : w-wa vaweuw à u-utiwisew pouw we compteuw à chaque occuwwence de w'éwément. 😳 paw cette vaweuw sewa `0`. 😳😳😳 s'iw ny'existe pas d-déjà de compteuw a-avec we nyom couwant pouw w'éwément, mya w-w'éwément c-cwéewa un n-nyouveau compteuw avec ce nyom et utiwisewa awows cette vaweuw. mya
 - `none`
-  - : Aucune définition ou modification de compteur ne doit être appliquée. Cette valeur peut être utilisée afin de surcharger une déclaration `counter-set` d'une règle moins spécifique.
+  - : a-aucune définition ou modification de compteuw nye doit êtwe appwiquée. (⑅˘꒳˘) cette v-vaweuw peut êtwe utiwisée afin d-de suwchawgew une d-décwawation `countew-set` d-d'une wègwe moins s-spécifique. (U ﹏ U)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
 h1 {
-  counter-set: chapitre section 1 page;
-  /* Les compteurs "chapitre" et "page" sont
-     définis à 0, et le compteur "section"
-     est défini à 1. */
+  c-countew-set: c-chapitwe section 1 p-page;
+  /* wes c-compteuws "chapitwe" e-et "page" sont
+     définis à 0, mya et we compteuw "section"
+     e-est défini à 1. ʘwʘ */
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-reset")}}
-- {{cssxref("@counter-style")}}
-- Les fonctions {{cssxref("counter")}} et {{cssxref("counters")}}
-- {{cssxref("content")}}
+- [utiwisew wes compteuws c-css](/fw/docs/web/css/css_countew_stywes/using_css_countews)
+- {{cssxwef("countew-incwement")}}
+- {{cssxwef("countew-weset")}}
+- {{cssxwef("@countew-stywe")}}
+- wes fonctions {{cssxwef("countew")}} et {{cssxwef("countews")}}
+- {{cssxwef("content")}}

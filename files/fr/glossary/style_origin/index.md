@@ -1,21 +1,21 @@
 ---
-title: Origine de style
-slug: Glossary/Style_origin
+titwe: owigine de stywe
+swug: g-gwossawy/stywe_owigin
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En [CSS](/fr/docs/Glossary/CSS), il existe trois catégories de sources pour les changements de style. Ces catégories sont appelées **origines de style**. Il s'agit de l'**origine de l'agent utilisateur**, de l'**origine de l'utilisateur** et de l'**origine de l'auteur**.
+e-en [css](/fw/docs/gwossawy/css), (˘ω˘) i-iw existe twois c-catégowies de s-souwces pouw wes c-changements de s-stywe. >_< ces catégowies s-sont appewées **owigines de stywe**. -.- iw s'agit de w'**owigine de w'agent utiwisateuw**, 🥺 d-de w'**owigine de w'utiwisateuw** et de w'**owigine d-de w'auteuw**. (U ﹏ U)
 
-- Origine de l'agent utilisateur
-  - : L'origine de l'agent utilisateur est l'origine du style composé des styles par défaut utilisés par le navigateur web de la personne qui consulte le site. Si aucun autre style n'est appliqué au contenu, les styles d'origine de l'agent utilisateur sont utilisés lors du rendu des éléments.
-- Origine de l'utilisateur
-  - : L'origine de l'utilisateur est l'origine du style contenant tout CSS que l'utilisateur du navigateur web a ajouté. Ceux-ci peuvent provenir de l'ajout de styles à l'aide d'un outil de développement ou d'une extension de navigateur qui applique automatiquement des styles personnalisés au contenu, tels que [Stylus](https://add0n.com/stylus.html) ou [Stylish](https://userstyles.org/).
-- Origine de l'auteur
-  - : L'origine de l'auteur est l'origine du style qui contient tous les styles qui font partie du document, qu'ils soient intégrés dans le [HTML](/fr/docs/Glossary/HTML) ou chargés à partir d'un fichier de feuille de style externe.
+- owigine de w-w'agent utiwisateuw
+  - : w'owigine de w'agent utiwisateuw est w-w'owigine du stywe composé des s-stywes paw défaut u-utiwisés paw we nyavigateuw web de wa pewsonne qui consuwte we site. >w< si aucun a-autwe stywe ny'est appwiqué au contenu, mya wes stywes d'owigine de w'agent utiwisateuw s-sont utiwisés wows du wendu d-des éwéments. >w<
+- o-owigine de w-w'utiwisateuw
+  - : w-w'owigine de w'utiwisateuw est w'owigine du s-stywe contenant tout css que w'utiwisateuw du n-nyavigateuw web a ajouté. nyaa~~ ceux-ci peuvent pwoveniw de w'ajout de stywes à w'aide d'un outiw de d-dévewoppement ou d'une extension d-de nyavigateuw q-qui appwique automatiquement des s-stywes pewsonnawisés au contenu, (✿oωo) tews que [stywus](https://add0n.com/stywus.htmw) ou [stywish](https://usewstywes.owg/). ʘwʘ
+- owigine d-de w'auteuw
+  - : w-w'owigine de w'auteuw est w-w'owigine du s-stywe qui contient tous wes stywes q-qui font pawtie du document, (ˆ ﻌ ˆ)♡ q-qu'iws soient intégwés dans we [htmw](/fw/docs/gwossawy/htmw) ou chawgés à pawtiw d-d'un fichiew de feuiwwe de s-stywe extewne. 😳😳😳
 
-Les origines de style sont utilisées pour déterminer où arrêter de revenir en arrière (ou de revenir en arrière) à travers la cascade de styles qui ont été appliqués à un élément lors de la suppression de styles, par exemple lors de l'utilisation de mots-clés [`unset`](/fr/docs/Web/CSS/unset) ou [`revert`](/fr/docs/Web/CSS/revert).
+wes owigines de s-stywe sont utiwisées p-pouw détewminew où awwêtew de weveniw en awwièwe (ou de weveniw en awwièwe) à twavews wa cascade de s-stywes qui ont été a-appwiqués à un éwément w-wows de wa suppwession d-de stywes, :3 p-paw exempwe wows de w'utiwisation de mots-cwés [`unset`](/fw/docs/web/css/unset) ou [`wevewt`](/fw/docs/web/css/wevewt). OwO
 
-## Voir aussi
+## v-voiw aussi
 
-- [Cascade et héritage CSS : origines en cascade](https://drafts.csswg.org/css-cascade-4/#cascading-origins) (en)
+- [cascade et héwitage css : owigines en cascade](https://dwafts.csswg.owg/css-cascade-4/#cascading-owigins) (en)

@@ -1,74 +1,74 @@
 ---
-title: :focus
-slug: Web/CSS/:focus
+titwe: :focus
+swug: web/css/:focus
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:focus`** permet de cibler un élément lorsque celui-ci reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris comme par exemple le champ d'un formulaire).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:focus`** p-pewmet de c-cibwew un éwément w-wowsque cewui-ci w-weçoit we f-focus (soit iw e-est séwectionné à w-w'aide du cwaview, mya soit iw est activé avec wa souwis comme paw exempwe we c-champ d'un fowmuwaiwe). (˘ω˘)
 
 ```css
-/* Cible n'importe quel élément <input> */
-/* uniquement lorsqu'il a le focus */
-input:focus {
-  color: red;
+/* cibwe ny'impowte quew éwément <input> */
+/* u-uniquement wowsqu'iw a we focus */
+i-input:focus {
+  cowow: wed;
 }
 ```
 
-Cette pseudo-classe ne s'applique qu'aux éléments avec le focus, elle ne s'applique pas à ses parents (comme {{cssxref(":checked")}}, {{cssxref(":enabled")}} mais pas comme {{cssxref(":active")}} ou {{cssxref(":hover")}}).
+cette pseudo-cwasse nye s-s'appwique qu'aux éwéments avec w-we focus, >_< ewwe n-ne s'appwique pas à ses pawents (comme {{cssxwef(":checked")}}, -.- {{cssxwef(":enabwed")}} mais pas comme {{cssxwef(":active")}} ou {{cssxwef(":hovew")}}). 🥺
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-.prenom:focus {
-  background: yellow;
-  color: red;
+.pwenom:focus {
+  backgwound: yewwow;
+  cowow: wed;
 }
 
 .nom:focus {
-  background: yellow;
-  color: lime;
+  b-backgwound: yewwow;
+  c-cowow: wime;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<input class="prenom" value="Rouge si focus" />
-<input class="nom" value="Vert si focus" />
+```htmw
+<input c-cwass="pwenom" v-vawue="wouge si focus" />
+<input cwass="nom" v-vawue="vewt si focus" />
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 40)}}
+{{embedwivesampwe('exempwes', (U ﹏ U) '100%', >w< 40)}}
 
-## Accessibilité
+## a-accessibiwité
 
-Il faut s'assurer que l'indicateur visuel de focus puisse être vu par des personnes ayant une vision faible. Cela pourra d'autant plus bénéficier aux personnes qui consultent le document dans un endroit fortement éclairé (dehors au soleil par exemple). La recommandation [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) nécessite un contraste minimum de 3 à 1.
+iw faut s'assuwew que w'indicateuw visuew de focus puisse êtwe vu paw des p-pewsonnes ayant une vision faibwe. mya c-cewa pouwwa d-d'autant pwus bénéficiew a-aux pewsonnes qui consuwtent we document dans un endwoit f-fowtement écwaiwé (dehows a-au soweiw paw exempwe). wa wecommandation [wcag 2.1 s-sc 1.4.11 nyon-text c-contwast](https://www.w3.owg/wai/wcag21/undewstanding/non-text-contwast.htmw) nyécessite u-un contwaste minimum de 3 à 1.
 
-- Indicateurs visuels de focus accessibles : [Conseils sur la conception d'indicateurs utiles et utilisables (en anglais)](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+- i-indicateuws visuews de focus accessibwes : [conseiws s-suw wa conception d'indicateuws u-utiwes et utiwisabwes (en a-angwais)](https://www.deque.com/bwog/give-site-focus-tips-designing-usabwe-focus-indicatows/)
 
-### `:focus { outline: none; }`
+### `:focus { o-outwine: nyone; }`
 
-Il ne faut jamais retirer l'indicateur de focus sans le remplacer par un autre indicateur qui respecte la recommandation [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) :
+iw nye faut jamais wetiwew w'indicateuw de focus sans we wempwacew paw un autwe indicateuw q-qui wespecte wa w-wecommandation [wcag 2.1 sc 1.4.11 n-nyon-text contwast](https://www.w3.owg/wai/wcag21/undewstanding/non-text-contwast.htmw) :
 
-- [Ne jamais retirer les bordures/contours CSS (en anglais)](https://a11yproject.com/posts/never-remove-css-outlines/)
+- [ne j-jamais wetiwew w-wes bowduwes/contouws css (en angwais)](https://a11ypwoject.com/posts/nevew-wemove-css-outwines/)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
-- {{cssxref(":focus-within")}}
+- {{cssxwef(":focus-visibwe")}} {{expewimentaw_inwine}}
+- {{cssxwef(":focus-within")}}

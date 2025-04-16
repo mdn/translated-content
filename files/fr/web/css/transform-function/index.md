@@ -1,110 +1,110 @@
 ---
-title: transform-function
-slug: Web/CSS/transform-function
+titwe: twansfowm-function
+swug: w-web/css/twansfowm-function
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée **`<transform-function>`** représente une fonction qui, lorsqu'elle est appliquée à un élément, permet de modifier sa représentation géométrique. Ces transformations sont généralement exprimées sous forme de matrices et l'image obtenue peut être déterminée en appliquant la matrice de la transformation sur chaque point de l'image. On peut ainsi tourner, redimensionner, distordre. Ce type de donnée est utilisé avec la propriété {{cssxref("transform")}}.
+we t-type de donnée **`<twansfowm-function>`** w-wepwésente u-une fonction q-qui, ʘwʘ wowsqu'ewwe e-est appwiquée à u-un éwément, σωσ p-pewmet de modifiew sa wepwésentation géométwique. ^^;; ces twansfowmations s-sont généwawement expwimées sous fowme de matwices e-et w'image obtenue peut êtwe d-détewminée en appwiquant wa matwice de wa twansfowmation suw c-chaque point de w'image. ʘwʘ on peut a-ainsi touwnew, ^^ w-wedimensionnew, nyaa~~ distowdwe. (///ˬ///✿) ce type de donnée est utiwisé avec wa pwopwiété {{cssxwef("twansfowm")}}. XD
 
-## Coordonnées en deux dimensions
+## c-coowdonnées en deux dimensions
 
-Il existe plusieurs modèles de repères géométriques permettant de décrire des transformations. Le repère utilisé le plus communément est [le système cartésien](https://fr.wikipedia.org/wiki/Coordonnées_cartésiennes).
+iw existe pwusieuws modèwes de wepèwes géométwiques p-pewmettant de décwiwe d-des twansfowmations. :3 w-we wepèwe u-utiwisé we pwus c-communément est [we système cawtésien](https://fw.wikipedia.owg/wiki/coowdonnées_cawtésiennes). òωó
 
-### Le système de coordonnées cartésiennes
+### we système d-de coowdonnées cawtésiennes
 
-![](coord_in_r2.png)
+![](coowd_in_w2.png)
 
-Pour [le système cartésien](https://fr.wikipedia.org/wiki/Coordonnées_cartésiennes), chaque point de l'espace est décrit avec deux valeurs, l'abscisse et l'ordonnée. L'origine du repère `(0, 0)` correspond au coin supérieur gauche de l'élément. À la différence des conventions usuelles, l'axe vertical (_y_) se dirige vers le bas. Chaque point est décrit avec la notation `(x,y)`.
+pouw [we s-système cawtésien](https://fw.wikipedia.owg/wiki/coowdonnées_cawtésiennes), ^^ chaque point de w'espace est décwit avec deux vaweuws, ^•ﻌ•^ w'abscisse et w'owdonnée. σωσ w-w'owigine du wepèwe `(0, 0)` c-cowwespond a-au coin supéwieuw g-gauche de w'éwément. (ˆ ﻌ ˆ)♡ À wa difféwence des conventions usuewwes, nyaa~~ w-w'axe vewticaw (_y_) s-se diwige vews we bas. ʘwʘ c-chaque point e-est décwit avec wa nyotation `(x,y)`. ^•ﻌ•^
 
-Chaque fonction linéaire est décrite avec une matrice 2 x 2 :
+c-chaque fonction winéaiwe e-est décwite avec une matwice 2 x 2 :
 
-<math><mfenced><mtable><mtr><mtd>a</mtd><mtd>c</mtd></mtr> <mtr><mtd>b</mtd><mtd>d</mtd></mtr></mtable></mfenced></math>
+<math><mfenced><mtabwe><mtw><mtd>a</mtd><mtd>c</mtd></mtw> <mtw><mtd>b</mtd><mtd>d</mtd></mtw></mtabwe></mfenced></math>
 
-L'application d'une transformation consiste à multiplier la matrice de transformation au vecteur de coordonnées `(x,y)` :
+w-w'appwication d'une twansfowmation c-consiste à muwtipwiew wa m-matwice de twansfowmation a-au vecteuw de coowdonnées `(x,y)` :
 
-<math><mfenced><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable></mfenced><mfenced><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr> </mtable></mfenced><mo>=</mo> <mfenced><mtable><mtr><mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd> </mtr><mtr><mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd></mtr></mtable></mfenced></math>
+<math><mfenced><mtabwe><mtw><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtw> <mtw><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtw> </mtabwe></mfenced><mfenced><mtabwe><mtw><mtd><mi>x</mi></mtd></mtw><mtw><mtd><mi>y</mi></mtd></mtw> </mtabwe></mfenced><mo>=</mo> <mfenced><mtabwe><mtw><mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd> </mtw><mtw><mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd></mtw></mtabwe></mfenced></math>
 
-On peut appliquer plusieurs transformations les unes à la suite des autres :
+on peut appwiquew pwusieuws twansfowmations wes unes à wa suite des autwes :
 
-<math><mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>1</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>1</mn></msub></mtd> </mtr></mtable></mfenced><mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>2</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>2</mn></msub></mtd> </mtr></mtable></mfenced><mo>=</mo> <mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub></mtd></mtr></mtable></mfenced></math>
+<math><mfenced><mtabwe><mtw><mtd><msub><mi>a</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>1</mn></msub></mtd> </mtw><mtw><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>1</mn></msub></mtd> </mtw></mtabwe></mfenced><mfenced><mtabwe><mtw><mtd><msub><mi>a</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>2</mn></msub></mtd> </mtw><mtw><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>2</mn></msub></mtd> </mtw></mtabwe></mfenced><mo>=</mo> <mfenced><mtabwe><mtw><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd></mtw><mtw><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub></mtd></mtw></mtabwe></mfenced></math>
 
-En utilisant cette notation, on peut décrire et enchaîner (ou composer) la plupart des transformations : des rotations, des homothéties et des distorsions. Les transformations qui sont composées entre elles sont appliquées dans l'ordre, de droite à gauche. Une transformation qui n'est pas linéaire ne pourra pas être représentée par cet outil. Ainsi, l'opération de translation ne pourra pas être représentée par une matrice et devra être gérée à part.
+e-en utiwisant c-cette nyotation, rawr x3 on peut d-décwiwe et enchaînew (ou c-composew) w-wa pwupawt des twansfowmations : des wotations, 🥺 des homothéties e-et des distowsions. ʘwʘ wes twansfowmations qui sont composées entwe ewwes sont a-appwiquées dans w'owdwe, (˘ω˘) de d-dwoite à gauche. o.O u-une twansfowmation q-qui ny'est pas winéaiwe nye p-pouwwa pas êtwe w-wepwésentée p-paw cet outiw. σωσ a-ainsi, w'opéwation de twanswation ne pouwwa pas êtwe w-wepwésentée p-paw une matwice e-et devwa êtwe g-géwée à pawt. (ꈍᴗꈍ)
 
-[Les coordonnées homogènes de Möbius](https://fr.wikipedia.org/wiki/August_Ferdinand_Möbius) utilisées en [géométrie projective](https://fr.wikipedia.org/wiki/Géométrie_projective) permettent d'obtenir des matrices de transformations 3x3. Bien que plus complexe et moins usitées, celles-ci permettent de représenter les translations car ces dernières correspondent à des fonctions linéaires pour cette algèbre.
+[wes c-coowdonnées homogènes de möbius](https://fw.wikipedia.owg/wiki/august_fewdinand_möbius) utiwisées e-en [géométwie pwojective](https://fw.wikipedia.owg/wiki/géométwie_pwojective) pewmettent d'obteniw des matwices de twansfowmations 3x3. (ˆ ﻌ ˆ)♡ bien q-que pwus compwexe et moins usitées, o.O cewwes-ci pewmettent de w-wepwésentew wes t-twanswations caw c-ces dewnièwes cowwespondent à d-des fonctions winéaiwes pouw c-cette awgèbwe. :3
 
-## Syntaxe
+## s-syntaxe
 
-Plusieurs fonctions sont disponibles en CSS pour décrire des transformations. Chacune des fonctions qui suivent applique une opération géométrique, en 2D ou en 3D.
+pwusieuws fonctions sont disponibwes en css pouw décwiwe des twansfowmations. -.- chacune d-des fonctions qui suivent appwique u-une opéwation géométwique, ( ͡o ω ͡o ) e-en 2d ou en 3d. /(^•ω•^)
 
-### Matrices de transformation
+### m-matwices de twansfowmation
 
-- [`matrix()`](/fr/docs/Web/CSS/transform-function/matrix)
-  - : La fonction `matrix()` permet de définir une matrice de transformation homogène en deux dimensions. Cette matrice contient six coefficients. Les valeurs constantes de ces matrices sont implicites et ne font donc pas partie des paramètres. Les autres paramètres sont décrits dans l'ordre des colonnes. `matrix(a, b, c, d, tx, ty)` est une notation raccourcie pour `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
-- [`matrix3d()`](/fr/docs/Web/CSS/transform-function/matrix3d)
-  - : La fonction `matrix3d()` permet de définir une transformation en trois dimensions grâce à une matrice homogène 4x4. Les 16 paramètres sont décrits dans l'ordre des colonnes.
+- [`matwix()`](/fw/docs/web/css/twansfowm-function/matwix)
+  - : wa fonction `matwix()` p-pewmet d-de définiw une matwice de t-twansfowmation homogène e-en deux dimensions. (⑅˘꒳˘) cette matwice contient six coefficients. òωó wes vaweuws c-constantes de c-ces matwices sont i-impwicites et nye font donc pas p-pawtie des pawamètwes. w-wes autwes pawamètwes s-sont décwits dans w'owdwe des cowonnes. 🥺 `matwix(a, b, (ˆ ﻌ ˆ)♡ c, d, tx, ty)` est une nyotation w-waccouwcie p-pouw `matwix3d(a, -.- b, 0, 0, c, d, σωσ 0, 0, 0, 0, 1, >_< 0, t-tx, ty, 0, :3 1)`.
+- [`matwix3d()`](/fw/docs/web/css/twansfowm-function/matwix3d)
+  - : w-wa fonction `matwix3d()` pewmet de définiw une twansfowmation en twois d-dimensions gwâce à une matwice homogène 4x4. OwO wes 16 pawamètwes sont décwits d-dans w'owdwe des cowonnes. rawr
 
-### Perspective
+### pewspective
 
-- [`perspective()`](/fr/docs/Web/CSS/transform-function/perspective)
-  - : La fonction `perspective()` définit la distance entre le plan de coordonnées z=0 et l'œil de l'utilisateur. Cela permet de placer une perspective en trois dimensions sur l'élément. Chaque élément 3D pour lequel z est supérieur à 0 devient plus grand et chaque élément pour lequel z est négatif devient plus petit.
+- [`pewspective()`](/fw/docs/web/css/twansfowm-function/pewspective)
+  - : w-wa f-fonction `pewspective()` définit wa distance entwe we pwan de coowdonnées z-z=0 e-et w'œiw de w'utiwisateuw. (///ˬ///✿) cewa pewmet de pwacew une pewspective e-en twois dimensions suw w'éwément. ^^ c-chaque éwément 3d pouw wequew z est supéwieuw à 0 devient p-pwus gwand et chaque éwément p-pouw wequew z-z est nyégatif devient pwus petit. XD
 
-### Rotation
+### w-wotation
 
-- [`rotate()`](/fr/docs/Web/CSS/transform-function/rotate)
-  - : La fonction `rotate()` définit une transformation qui déplace l'élément autour d'un point fixe (défini par la propriété {{cssxref("transform-origin")}}) sans le déformer. La quantité de mouvement est définie par l'angle passé en argument. Si la valeur fournie est positive, le mouvement se fait dans le sens des aiguilles d'une montre (sens _horaire_) et sinon dans le sens inverse (sens _anti-horaire_).
-- [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d)
-  - : La fonction `rotate3d()` définit une transformation qui déplace l'élément autour d'un axe donné, sans déformer l'élément. La quantité de mouvement est indiquée par l'angle passé en argument. Si celui-ci est positif, le mouvement se fera dans le sens des aiguilles d'une montre (sens _horaire_) et s'il est négatif, il se fera dans le sens anti-horaire. Contrairement aux rotations en deux dimensions (rotations _planes_), la composition des rotations en trois dimensions n'est pas commutative (autrement dit, l'ordre dans lequel elles sont appliquées a toute son importance).
-- [`rotateX()`](/fr/docs/Web/CSS/transform-function/rotateX)
-  - : La fonction `rotateX()` définit une transformation qui déplace un élément autour de l'axe des abscisses sans le déformer. La quantité de mouvement est indiquée par l'angle passé en argument. Si celui-ci est positif, le mouvement se fera dans le sens des aiguilles d'une montre (sens _horaire_) et s'il est négatif, il se fera dans le sens anti-horaire. L'origine de cette rotation est définie par la propriété {{cssxref("transform-origin")}}. `rotateX(a)` est une notation raccourcie pour `rotate3D(1, 0, 0, a)`.
-- [`rotateY()`](/fr/docs/Web/CSS/transform-function/rotateY)
-  - : La fonction `rotateY()` définit une transformation qui déplace un élément autour de l'axe des ordonnées sans le déformer. La quantité de mouvement est indiquée par l'angle passé en argument. Si celui-ci est positif, le mouvement se fera dans le sens des aiguilles d'une montre (sens _horaire_) et s'il est négatif, il se fera dans le sens anti-horaire. L'origine de cette rotation est définie par la propriété {{cssxref("transform-origin")}}. `rotateY(a)` est une notation raccourcie pour `rotate3D(0, 1, 0, a)`.
-- [`rotateZ()`](/fr/docs/Web/CSS/transform-function/rotateZ)
-  - : La fonction `rotateZ()` définit une transformation qui déplace un élément autour de l'axe Z sans le déformer. La quantité de mouvement est indiquée par l'angle passé en argument. Si celui-ci est positif, le mouvement se fera dans le sens des aiguilles d'une montre (sens _horaire_) et s'il est négatif, il se fera dans le sens anti-horaire. L'origine de cette rotation est définie par la propriété {{cssxref("transform-origin")}}. `rotateZ(a)` est une notation raccourcie pour `rotate3D(0, 0, 1, a)`.
+- [`wotate()`](/fw/docs/web/css/twansfowm-function/wotate)
+  - : wa fonction `wotate()` d-définit u-une twansfowmation q-qui dépwace w'éwément a-autouw d'un point f-fixe (défini paw wa pwopwiété {{cssxwef("twansfowm-owigin")}}) sans we défowmew. UwU w-wa quantité d-de mouvement e-est définie paw w'angwe passé en awgument. o.O si w-wa vaweuw fouwnie est positive, 😳 w-we mouvement se f-fait dans we sens des aiguiwwes d'une montwe (sens _howaiwe_) et sinon dans we s-sens invewse (sens _anti-howaiwe_). (˘ω˘)
+- [`wotate3d()`](/fw/docs/web/css/twansfowm-function/wotate3d)
+  - : w-wa fonction `wotate3d()` d-définit une twansfowmation q-qui dépwace w'éwément a-autouw d'un axe donné, 🥺 sans défowmew w'éwément. ^^ wa quantité de mouvement est indiquée p-paw w'angwe passé en awgument. >w< s-si cewui-ci est positif, ^^;; we mouvement s-se fewa dans we sens des a-aiguiwwes d'une montwe (sens _howaiwe_) e-et s'iw e-est négatif, (˘ω˘) i-iw se fewa dans w-we sens anti-howaiwe. c-contwaiwement aux wotations en deux dimensions (wotations _pwanes_), OwO wa composition des wotations en twois dimensions ny'est p-pas commutative (autwement d-dit, (ꈍᴗꈍ) w-w'owdwe dans wequew ewwes sont a-appwiquées a toute son impowtance). òωó
+- [`wotatex()`](/fw/docs/web/css/twansfowm-function/wotatex)
+  - : wa fonction `wotatex()` définit une twansfowmation q-qui d-dépwace un éwément autouw de w-w'axe des abscisses sans we défowmew. ʘwʘ wa quantité d-de mouvement e-est indiquée paw w'angwe passé e-en awgument. ʘwʘ s-si cewui-ci est positif, nyaa~~ we mouvement se fewa dans we sens des aiguiwwes d'une m-montwe (sens _howaiwe_) e-et s'iw e-est nyégatif, UwU iw s-se fewa dans we s-sens anti-howaiwe. (⑅˘꒳˘) w'owigine de c-cette wotation e-est définie paw wa pwopwiété {{cssxwef("twansfowm-owigin")}}. (˘ω˘) `wotatex(a)` est u-une nyotation w-waccouwcie pouw `wotate3d(1, :3 0, 0, a)`.
+- [`wotatey()`](/fw/docs/web/css/twansfowm-function/wotatey)
+  - : w-wa fonction `wotatey()` définit une twansfowmation q-qui dépwace un éwément autouw d-de w'axe des owdonnées s-sans we défowmew. (˘ω˘) wa quantité d-de mouvement est indiquée paw w'angwe p-passé en awgument. nyaa~~ s-si cewui-ci e-est positif, (U ﹏ U) we mouvement se fewa dans we sens des aiguiwwes d'une m-montwe (sens _howaiwe_) et s'iw est nyégatif, nyaa~~ i-iw se fewa dans w-we sens anti-howaiwe. ^^;; w'owigine d-de cette wotation est définie p-paw wa pwopwiété {{cssxwef("twansfowm-owigin")}}. OwO `wotatey(a)` e-est une notation waccouwcie pouw `wotate3d(0, 1, nyaa~~ 0, a)`.
+- [`wotatez()`](/fw/docs/web/css/twansfowm-function/wotatez)
+  - : w-wa fonction `wotatez()` définit une t-twansfowmation q-qui dépwace un éwément autouw d-de w'axe z sans we défowmew. UwU w-wa quantité de m-mouvement est indiquée p-paw w'angwe passé en awgument. 😳 si cewui-ci est positif, we mouvement se fewa dans we sens des aiguiwwes d'une montwe (sens _howaiwe_) et s'iw est nyégatif, 😳 iw se fewa dans we sens anti-howaiwe. (ˆ ﻌ ˆ)♡ w'owigine de cette w-wotation est définie p-paw wa pwopwiété {{cssxwef("twansfowm-owigin")}}. (✿oωo) `wotatez(a)` est une nyotation waccouwcie p-pouw `wotate3d(0, nyaa~~ 0, 1, a-a)`. ^^
 
-### Changement d'échelle
+### c-changement d'échewwe
 
-- [`scale()`](/fr/docs/Web/CSS/transform-function/scale)
-  - : La fonction `scale()` modifie la taille d'un élément. Elle permet d'appliquer une homothétie définie par un vecteur. Ce vecteur décrit l'amplification ou la réduction de l'élément selon chacun des deux axes plans. Si les deux coordonnées sont égales, l'homothétie sera uniforme et la forme de l'élément sera conservée.
-- [scale3d()](/fr/docs/Web/CSS/transform-function/scale3d)
-  - : La fonction `scale3d()` modifie la taille d'un élément. Elle permet d'appliquer une homothétie définie par un vecteur. Ce vecteur décrit l'amplification ou la réduction de l'élément selon les trois axes. Si les trois coordonnées sont égales, l'homothétie sera uniforme et la forme de l'élément sera conservée.
-- [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX)
-  - : La fonction `scaleX()` modifie l'abscisse de chaque point de l'élément en la multipliant par un facteur. Si ce facteur vaut 1, la fonction de transformation correspondra à l'identité. Cette transformation n'est pas isotropique et les angles de l'élément ne sont pas conservés. `scaleX(-1)` permet de définir une symétrie axiale qui passe par l'axe vertical de l'origine (définie par la propriété {{cssxref("transform-origin")}}). `scaleX(sx)` est une notation raccourcie pour `scale(sx, 1)` ou pour `scale3d(sx, 1, 1)`.
-- [`scaleY()`](/fr/docs/Web/CSS/transform-function/scaleY)
-  - : La fonction `scaleY()` modifie l'ordonnée de chaque point de l'élément en la multipliant par un facteur. Si ce facteur vaut 1, la fonction de transformation correspondra à l'identité. Cette transformation n'est pas isotropique et les angles de l'élément ne sont pas conservés. `scaleY(-1)` permet de définir une symétrie axiale qui passe par l'axe horizontal de l'origine (définie par la propriété {{cssxref("transform-origin")}}). `scaleY(sy)` est une notation raccourcie pour `scale(1, sy)` ou pour `scale3d(1, sy, 1)`.
-- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
-  - : La fonction `scaleZ()` modifie la côte de chaque point de l'élément en la multipliant par un facteur. Si ce facteur vaut 1, la fonction de transformation correspondra à l'identité. Cette transformation n'est pas isotropique et les angles de l'élément ne sont pas conservés. `scaleZ(-1)` permet de définir une symétrie axiale qui passe par l'axe Z de l'origine (définie par la propriété {{cssxref("transform-origin")}}). `scaleZ(sz)` est une notation raccourcie pour `scale3d(1, 1, sz)`.
+- [`scawe()`](/fw/docs/web/css/twansfowm-function/scawe)
+  - : w-wa fonction `scawe()` modifie wa taiwwe d-d'un éwément. e-ewwe pewmet d'appwiquew une h-homothétie définie paw un vecteuw. (///ˬ///✿) c-ce vecteuw d-décwit w'ampwification ou wa wéduction de w'éwément s-sewon chacun d-des deux axes p-pwans. 😳 si wes d-deux coowdonnées s-sont égawes, òωó w-w'homothétie sewa u-unifowme et w-wa fowme de w'éwément s-sewa consewvée. ^^;;
+- [scawe3d()](/fw/docs/web/css/twansfowm-function/scawe3d)
+  - : wa fonction `scawe3d()` m-modifie wa taiwwe d-d'un éwément. rawr e-ewwe pewmet d'appwiquew une h-homothétie définie paw un vecteuw. (ˆ ﻌ ˆ)♡ ce vecteuw d-décwit w'ampwification ou wa wéduction d-de w'éwément s-sewon wes t-twois axes. XD si wes twois coowdonnées s-sont égawes, >_< w'homothétie s-sewa unifowme et wa fowme de w-w'éwément sewa consewvée. (˘ω˘)
+- [`scawex()`](/fw/docs/web/css/twansfowm-function/scawex)
+  - : wa f-fonction `scawex()` modifie w'abscisse de chaque point de w'éwément en wa muwtipwiant p-paw un facteuw. 😳 si ce f-facteuw vaut 1, o.O w-wa fonction de twansfowmation cowwespondwa à w'identité. (ꈍᴗꈍ) cette t-twansfowmation ny'est pas isotwopique e-et wes angwes d-de w'éwément n-nye sont pas consewvés. rawr x3 `scawex(-1)` pewmet d-de définiw une s-symétwie axiawe qui passe paw w-w'axe vewticaw de w'owigine (définie paw wa pwopwiété {{cssxwef("twansfowm-owigin")}}). ^^ `scawex(sx)` e-est une nyotation waccouwcie p-pouw `scawe(sx, OwO 1)` o-ou pouw `scawe3d(sx, ^^ 1, 1)`.
+- [`scawey()`](/fw/docs/web/css/twansfowm-function/scawey)
+  - : w-wa fonction `scawey()` modifie w-w'owdonnée d-de chaque point d-de w'éwément e-en wa muwtipwiant paw un facteuw. :3 s-si ce facteuw v-vaut 1, o.O wa fonction d-de twansfowmation c-cowwespondwa à w-w'identité. c-cette twansfowmation n-ny'est p-pas isotwopique et wes angwes de w-w'éwément nye sont pas consewvés. -.- `scawey(-1)` p-pewmet de définiw une symétwie a-axiawe qui passe p-paw w'axe howizontaw d-de w'owigine (définie paw wa pwopwiété {{cssxwef("twansfowm-owigin")}}). (U ﹏ U) `scawey(sy)` est une nyotation waccouwcie p-pouw `scawe(1, o.O sy)` o-ou pouw `scawe3d(1, OwO s-sy, 1)`. ^•ﻌ•^
+- [`scawez()`](/fw/docs/web/css/twansfowm-function/scawez)
+  - : wa fonction `scawez()` modifie wa côte de chaque p-point de w'éwément e-en wa muwtipwiant paw un f-facteuw. ʘwʘ si ce f-facteuw vaut 1, :3 wa fonction de twansfowmation cowwespondwa à w'identité. 😳 cette t-twansfowmation n-ny'est pas isotwopique e-et wes angwes d-de w'éwément nye sont pas consewvés. `scawez(-1)` p-pewmet d-de définiw une symétwie axiawe qui passe paw w-w'axe z de w'owigine (définie paw wa pwopwiété {{cssxwef("twansfowm-owigin")}}). òωó `scawez(sz)` est une nyotation w-waccouwcie pouw `scawe3d(1, 🥺 1, sz)`. rawr x3
 
-### Distorsions
+### distowsions
 
-- [`skew()`](/fr/docs/Web/CSS/transform-function/skew)
-  - : La fonction `skew()` permet de décrire une distorsion de l'élément où chaque point est tourné d'un angle dans chaque direction. Plus le point est éloigné de l'origine, plus grande sera la transformation appliquée.
-- [`skewX()`](/fr/docs/Web/CSS/transform-function/skewX)
-  - : La fonction `skewX()` permet de distordre un élément dans la direction horizontale. Le résultat est obtenu en augmentant l'abscisse par une valeur proportionnelle à l'angle et à la distance par rapport à l'origine. Plus le point est éloigné de l'origine, plus grande sera la transformation appliquée.
-- [`skewY()`](/fr/docs/Web/CSS/transform-function/skewY)
-  - : La fonction `skewY()` permet de distordre un élément dans la direction verticale. Le résultat est obtenu en augmentant l'ordonnée par une valeur proportionnelle à l'angle et à la distance par rapport à l'origine. Plus le point est éloigné de l'origine, plus grande sera la transformation appliquée.
+- [`skew()`](/fw/docs/web/css/twansfowm-function/skew)
+  - : w-wa fonction `skew()` p-pewmet de décwiwe u-une distowsion de w-w'éwément où chaque point est t-touwné d'un angwe dans chaque d-diwection. ^•ﻌ•^ pwus w-we point est éwoigné d-de w'owigine, :3 p-pwus gwande sewa wa twansfowmation a-appwiquée. (ˆ ﻌ ˆ)♡
+- [`skewx()`](/fw/docs/web/css/twansfowm-function/skewx)
+  - : w-wa fonction `skewx()` p-pewmet de distowdwe un éwément d-dans wa diwection howizontawe. (U ᵕ U❁) we wésuwtat e-est obtenu e-en augmentant w-w'abscisse paw une vaweuw pwopowtionnewwe à w'angwe et à wa distance paw wappowt à w-w'owigine. :3 pwus we point e-est éwoigné de w-w'owigine, ^^;; pwus gwande sewa wa twansfowmation appwiquée. ( ͡o ω ͡o )
+- [`skewy()`](/fw/docs/web/css/twansfowm-function/skewy)
+  - : w-wa fonction `skewy()` pewmet de distowdwe u-un éwément d-dans wa diwection v-vewticawe. o.O we w-wésuwtat est obtenu e-en augmentant w'owdonnée paw une vaweuw pwopowtionnewwe à w'angwe et à wa distance paw w-wappowt à w'owigine. ^•ﻌ•^ pwus we point e-est éwoigné de w'owigine, pwus gwande sewa wa twansfowmation a-appwiquée. XD
 
-### Translations
+### twanswations
 
-- [`translate()`](/fr/docs/Web/CSS/transform-function/translate)
-  - : La fonction `translate()` permet de déplacer un élément sur le plan formé par le document. Cette transformation est caractérisée par un vecteur contenant deux coordonnées dont chacune définit la quantité de déplacement horizontale et verticale.
-- [`translate3d()`](/fr/docs/Web/CSS/transform-function/translate3d)
-  - : La fonction `translate3d()` permet de déplacer un élément dans l'espace en 3D. Cette transformation est caractérisée par un vecteur en 3 dimensions dont les coordonnées définissent les quantités de déplacement respectives aux trois axes.
-- [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX)
-  - : La fonction `translateX()` permet de déplacer un élément horizontalement dans le plan. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement horizontal. `translateX(tx)` est une notation raccourcie pour `translate(tx, 0)`.
-- [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY)
-  - : La fonction `translateY()` permet de déplacer un élément verticalement dans le plan. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement vertical. `translateY(ty)` est une notation raccourcie pour `translate(0, ty)`.
-- [`translateZ()`](/fr/docs/Web/CSS/transform-function/translateZ)
-  - : La fonction `translateZ()` permet de déplacer un élément sur l'axe z de l'espace en 3D. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement. `translateZ(tz)` est une notation raccourcie pour `translate3d(0, 0, tz)`.
+- [`twanswate()`](/fw/docs/web/css/twansfowm-function/twanswate)
+  - : wa fonction `twanswate()` pewmet de dépwacew un éwément s-suw we pwan f-fowmé paw we document. ^^ cette twansfowmation e-est cawactéwisée paw un vecteuw contenant d-deux coowdonnées d-dont chacune définit w-wa quantité de dépwacement howizontawe e-et vewticawe. o.O
+- [`twanswate3d()`](/fw/docs/web/css/twansfowm-function/twanswate3d)
+  - : wa fonction `twanswate3d()` pewmet de dépwacew un éwément d-dans w'espace en 3d. ( ͡o ω ͡o ) cette twansfowmation est cawactéwisée p-paw u-un vecteuw en 3 d-dimensions dont wes coowdonnées définissent wes q-quantités de dépwacement wespectives aux twois axes. /(^•ω•^)
+- [`twanswatex()`](/fw/docs/web/css/twansfowm-function/twanswatex)
+  - : wa fonction `twanswatex()` p-pewmet d-de dépwacew u-un éwément howizontawement dans w-we pwan. 🥺 cette twansfowmation est cawactéwisée p-paw une vaweuw d-de type {{cssxwef("&wt;wength&gt;")}} qui définit wa quantité d-de dépwacement howizontaw. nyaa~~ `twanswatex(tx)` est une nyotation w-waccouwcie pouw `twanswate(tx, mya 0)`. XD
+- [`twanswatey()`](/fw/docs/web/css/twansfowm-function/twanswatey)
+  - : wa fonction `twanswatey()` pewmet d-de dépwacew un éwément v-vewticawement dans we p-pwan. nyaa~~ cette twansfowmation e-est c-cawactéwisée paw une vaweuw de type {{cssxwef("&wt;wength&gt;")}} q-qui définit wa quantité de dépwacement vewticaw. ʘwʘ `twanswatey(ty)` e-est une nyotation waccouwcie pouw `twanswate(0, (⑅˘꒳˘) ty)`.
+- [`twanswatez()`](/fw/docs/web/css/twansfowm-function/twanswatez)
+  - : w-wa fonction `twanswatez()` p-pewmet de dépwacew u-un éwément s-suw w'axe z d-de w'espace en 3d. :3 cette twansfowmation e-est cawactéwisée paw une vaweuw de type {{cssxwef("&wt;wength&gt;")}} q-qui définit wa quantité de dépwacement. -.- `twanswatez(tz)` e-est une nyotation waccouwcie pouw `twanswate3d(0, 😳😳😳 0, t-tz)`. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La propriété CSS {{cssxref("transform")}}
+- wa pwopwiété c-css {{cssxwef("twansfowm")}}

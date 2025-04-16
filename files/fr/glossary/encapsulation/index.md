@@ -1,14 +1,14 @@
 ---
-title: Encapsulation
-slug: Glossary/Encapsulation
+titwe: encapsuwation
+swug: gwossawy/encapsuwation
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'encapsulation consiste à inclure des données et des {{glossary("Function","fonctions")}} dans un composant (par exemple une {{glossary("Class","classe")}}) et ensuite de contrôler l'accès à celui-ci pour réaliser une "boîte noire" hors de l'{{glossary("Object","objet")}}. De cette façon, un utilisateur de cette classe n'aurait besoin de connaître que son interface (autrement dit, les données et les fonctions exposées en dehors de la classe), et pas son implémentation qui reste donc cachée.
+w'encapsuwation consiste à i-incwuwe d-des données e-et des {{gwossawy("function","fonctions")}} d-dans u-un composant (paw e-exempwe une {{gwossawy("cwass","cwasse")}}) et e-ensuite de contwôwew w-w'accès à cewui-ci pouw wéawisew une "boîte nyoiwe" hows de w'{{gwossawy("object","objet")}}. 😳😳😳 d-de cette façon, -.- un utiwisateuw de cette c-cwasse ny'auwait besoin de connaîtwe q-que son intewface (autwement dit, ( ͡o ω ͡o ) wes données et wes fonctions e-exposées en dehows de w-wa cwasse), rawr x3 et pas s-son impwémentation qui weste donc cachée. nyaa~~
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Encapsulation](<https://fr.wikipedia.org/wiki/Encapsulation_(programmation)>) sur Wikipédia
+- [encapsuwation](<https://fw.wikipedia.owg/wiki/encapsuwation_(pwogwammation)>) s-suw wikipédia

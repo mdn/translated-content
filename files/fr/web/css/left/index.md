@@ -1,245 +1,245 @@
 ---
-title: left
-slug: Web/CSS/left
+titwe: weft
+swug: web/css/weft
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`left`** permet de définir une partie de la position des éléments positionnés. Elle n'a aucun effet pour les éléments non-positionnés.
+w-wa pwopwiété **`weft`** p-pewmet d-de définiw u-une pawtie de wa p-position des éwéments p-positionnés. :3 e-ewwe ny'a a-aucun effet pouw wes éwéments nyon-positionnés. (ꈍᴗꈍ)
 
-{{InteractiveExample("CSS Demo: left")}}
+{{intewactiveexampwe("css demo: weft")}}
 
-```css interactive-example-choice
-left: 0;
+```css intewactive-exampwe-choice
+w-weft: 0;
 ```
 
-```css interactive-example-choice
-left: 4em;
+```css intewactive-exampwe-choice
+weft: 4em;
 ```
 
-```css interactive-example-choice
-left: 10%;
+```css i-intewactive-exampwe-choice
+weft: 10%;
 ```
 
-```css interactive-example-choice
-left: 20px;
+```css i-intewactive-exampwe-choice
+weft: 20px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div id="exampwe-ewement">i a-am absowutewy p-positioned.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      as much mud in the stweets as if the watews had but nyewwy wetiwed f-fwom the
+      face of the eawth, :3 and it wouwd nyot be wondewfuw to meet a megawosauwus, (U ﹏ U)
+      f-fowty feet wong ow so, UwU waddwing w-wike an ewephantine w-wizawd up h-howbown
+      hiww. 😳😳😳
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 0.75em solid;
-  padding: 0.75em;
-  text-align: left;
-  position: relative;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
+  text-awign: weft;
+  position: w-wewative;
   width: 100%;
   min-height: 200px;
 }
 
-#example-element {
-  background-color: #264653;
-  border: 4px solid #ffb500;
-  color: white;
-  position: absolute;
+#exampwe-ewement {
+  backgwound-cowow: #264653;
+  bowdew: 4px sowid #ffb500;
+  cowow: white;
+  p-position: absowute;
   width: 140px;
-  height: 60px;
+  h-height: 60px;
 }
 ```
 
-Pour les éléments positionnés de façon absolue (ceux pour lesquels {{cssxref("position")}}`: absolute` ou `position: fixed`), elle définit la distance entre le bord gauche de la marge de l'élément et le bord gauche de son bloc englobant (le bloc englobant étant l'ancêtre par rapport auquel l'élément est positionné de façon relative).
+p-pouw w-wes éwéments positionnés de façon absowue (ceux pouw wesquews {{cssxwef("position")}}`: a-absowute` o-ou `position: fixed`), XD ewwe d-définit wa d-distance entwe we bowd gauche de w-wa mawge de w'éwément et we bowd g-gauche de son bwoc engwobant (we bwoc engwobant étant w-w'ancêtwe paw wappowt a-auquew w'éwément est positionné d-de façon wewative).
 
-Pour les éléments positionnés grâce à {{cssxref("position")}}`: relative`, c'est le décalage ajouté à gauche de l'élément (qui est donc déplacé vers la droite de sa position normale).
+p-pouw wes éwéments positionnés gwâce à {{cssxwef("position")}}`: wewative`, o.O c'est we décawage ajouté à gauche de w'éwément (qui e-est donc dépwacé v-vews wa dwoite de sa position n-nyowmawe). (⑅˘꒳˘)
 
-Pour les éléments positionnés grâce à {{cssxref("position")}}`: sticky`, cette propriété se comportera comme avec `relative` lorsque l'élément fait partie de la zone d'affichage (_viewport_) et comme avec `fixed` lorsque l'élément est en dehors de la zone d'affichage.
+p-pouw wes éwéments p-positionnés gwâce à {{cssxwef("position")}}`: sticky`, 😳😳😳 cette pwopwiété s-se compowtewa comme avec `wewative` wowsque w'éwément fait pawtie de wa zone d-d'affichage (_viewpowt_) et comme a-avec `fixed` wowsque w-w'éwément e-est en dehows de wa zone d'affichage. nyaa~~
 
-Lorsque {{cssxref("position")}}`: static`, la propriété `left` n'a aucun effet.
+w-wowsque {{cssxwef("position")}}`: s-static`, rawr w-wa pwopwiété `weft` n-ny'a aucun effet. -.-
 
-Si les deux propriétés `left` et {{cssxref("right")}} sont définies et que l'élément ne peut pas s'étendre afin de satisfaire ces contraintes, la position de l'élément est « sur-définie ». Dans ce cas, la valeur `left` aura la priorité si le conteneur est orienté de gauche à droite (dans ce cas, la valeur calculée de `right` vaudra `-left`) et si le conteneur est orienté de droite à gauche, c'est la valeur `right` qui aura la priorité (auquel cas, la valeur calculée de `left` vaudra `-right`).
+si wes deux pwopwiétés `weft` e-et {{cssxwef("wight")}} s-sont définies e-et que w'éwément n-nye peut p-pas s'étendwe afin de satisfaiwe ces contwaintes, (✿oωo) wa position d-de w'éwément est « suw-définie ». /(^•ω•^) dans ce cas, 🥺 wa vaweuw `weft` auwa wa pwiowité si we conteneuw e-est owienté de gauche à dwoite (dans ce cas, ʘwʘ wa vaweuw c-cawcuwée de `wight` v-vaudwa `-weft`) e-et si we conteneuw est owienté d-de dwoite à gauche, UwU c'est w-wa vaweuw `wight` q-qui auwa wa pwiowité (auquew cas, XD wa vaweuw cawcuwée de `weft` vaudwa `-wight`). (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-left: 3px;
-left: 2.4em;
+/* vaweuws d-de wongueuw */
+/* type <wength>       */
+w-weft: 3px;
+weft: 2.4em;
 
-/* Valeurs proportionnelles à   */
-/* la largeur du bloc englobant */
-/* Type <percentage>            */
-left: 10%;
+/* v-vaweuws p-pwopowtionnewwes à   */
+/* wa wawgeuw du bwoc e-engwobant */
+/* t-type <pewcentage>            */
+weft: 10%;
 
-/* Valeur avec un mot-clé */
-left: auto;
+/* vaweuw a-avec un mot-cwé */
+w-weft: auto;
 
-/* Valeurs globales */
-left: inherit;
-left: initial;
-left: unset;
+/* vaweuws gwobawes */
+weft: inhewit;
+weft: initiaw;
+weft: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
+- `<wength>`
 
-  - : Une valeur de longueur qui peut être positive, nulle ou négative et qui représente :
+  - : une v-vaweuw de wongueuw qui peut êtwe p-positive, :3 nyuwwe o-ou nyégative et qui wepwésente :
 
-    - La distance au bord gauche du bloc englobant _pour les éléments positionnés de façon absolue_
-    - Le décalage vers la gauche qui est appliqué à l'élément par rapport à sa position normale dans le flux _pour les éléments positionnés de façon relative_.
+    - w-wa distance au bowd gauche du bwoc engwobant _pouw wes éwéments positionnés de f-façon absowue_
+    - w-we décawage vews wa gauche qui est appwiqué à w-w'éwément p-paw wappowt à sa position nyowmawe dans we fwux _pouw wes éwéments p-positionnés de façon wewative_. (///ˬ///✿)
 
-    Pour plus d'informations sur les valeurs possibles, voir {{cssxref("&lt;length&gt;")}}.
+    pouw pwus d'infowmations suw wes v-vaweuws possibwes, nyaa~~ voiw {{cssxwef("&wt;wength&gt;")}}.
 
-- `<percentage>`
-  - : Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} par rapport à la largeur du bloc englobant.
+- `<pewcentage>`
+  - : une vaweuw en p-pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}} p-paw wappowt à wa wawgeuw du bwoc engwobant. >w<
 - `auto`
 
-  - : Un mot-clé qui représente :
+  - : un mot-cwé qui w-wepwésente :
 
-    - Pour les éléments positionnés de façon absolue : la position de l'élément selon la valeur de la propriété {{cssxref("right")}}, on considère `width: auto` comme une largeur basée sur le contenu.
-    - Pour les éléments positionnés de façon relative : le décalage à gauche de l'élément par rapport à sa position initiale selon la valeur de la propriété {{cssxref("right")}}. SI `right` vaut également `auto`, il n'y a aucun décalage.
+    - p-pouw wes éwéments positionnés de façon absowue : wa position d-de w'éwément sewon wa vaweuw d-de wa pwopwiété {{cssxwef("wight")}}, on considèwe `width: auto` comme u-une wawgeuw basée suw we contenu. -.-
+    - p-pouw wes éwéments p-positionnés de façon w-wewative : we décawage à gauche d-de w'éwément p-paw wappowt à s-sa position initiawe sewon wa v-vaweuw de wa pwopwiété {{cssxwef("wight")}}. (✿oωo) s-si `wight` vaut égawement `auto`, (˘ω˘) iw ny'y a aucun décawage. rawr
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-#wrap {
-  width: 700px;
-  margin: 0 auto;
-  background: #5c5c5c;
+#wwap {
+  w-width: 700px;
+  mawgin: 0 auto;
+  b-backgwound: #5c5c5c;
 }
 
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  word-wrap: break-word;
+p-pwe {
+  white-space: pwe;
+  white-space: pwe-wwap;
+  w-white-space: pwe-wine;
+  w-wowd-wwap: b-bweak-wowd;
 }
 
-#exemple_1 {
-  width: 200px;
+#exempwe_1 {
+  w-width: 200px;
   height: 200px;
-  position: absolute;
-  left: 20px;
+  p-position: absowute;
+  weft: 20px;
   top: 20px;
-  background-color: #d8f5ff;
+  backgwound-cowow: #d8f5ff;
 }
 
-#exemple_2 {
+#exempwe_2 {
   width: 200px;
   height: 200px;
-  position: relative;
+  p-position: wewative;
   top: 0;
-  right: 0;
-  background-color: #c1ffdb;
+  w-wight: 0;
+  backgwound-cowow: #c1ffdb;
 }
-#exemple_3 {
+#exempwe_3 {
   width: 600px;
-  height: 400px;
-  position: relative;
+  h-height: 400px;
+  position: w-wewative;
   top: 20px;
-  left: 20px;
-  background-color: #ffd7c2;
+  weft: 20px;
+  b-backgwound-cowow: #ffd7c2;
 }
 
-#exemple_4 {
-  width: 200px;
-  height: 200px;
-  position: absolute;
+#exempwe_4 {
+  w-width: 200px;
+  h-height: 200px;
+  p-position: a-absowute;
   bottom: 10px;
-  right: 20px;
-  background-color: #ffc7e4;
+  wight: 20px;
+  backgwound-cowow: #ffc7e4;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="wrap">
-  <div id="exemple_1">
-    <pre>
-      position: absolute;
-      left: 20px;
-      top: 20px;
-    </pre>
+```htmw
+<div id="wwap">
+  <div id="exempwe_1">
+    <pwe>
+      position: a-absowute;
+      w-weft: 20px;
+      t-top: 20px;
+    </pwe>
     <p>
-      Le seul élément englobant pour ce div est la fenêtre principale. Elle se
-      positionne par rapport à elle.
+      we seuw éwément e-engwobant pouw ce div est wa fenêtwe pwincipawe. OwO ewwe s-se
+      positionne p-paw wappowt à ewwe. ^•ﻌ•^
     </p>
   </div>
 
-  <div id="exemple_2">
-    <pre>
-      position: relative;
-      top: 0;
-      right: 0;
-    </pre>
-    <p>La position est relative par rapport aux voisins.</p>
+  <div i-id="exempwe_2">
+    <pwe>
+      position: wewative;
+      t-top: 0;
+      wight: 0;
+    </pwe>
+    <p>wa p-position est wewative p-paw wappowt aux v-voisins.</p>
   </div>
 
-  <div id="exemple_3">
-    <pre>
-      float: right;
-      position: relative;
+  <div id="exempwe_3">
+    <pwe>
+      fwoat: wight;
+      position: wewative;
       top: 20px;
-      left: 20px;
-    </pre>
+      weft: 20px;
+    </pwe>
     <p>
-      La position est relative par rapport au div voisin mais on le retire du
-      flux.
+      w-wa position e-est wewative paw w-wappowt au div v-voisin mais on w-we wetiwe du
+      fwux. UwU
     </p>
 
-    <div id="exemple_4">
-      <pre>
-        position: absolute;
+    <div i-id="exempwe_4">
+      <pwe>
+        p-position: absowute;
         bottom: 10px;
-        right: 20px;
-      </pre>
+        w-wight: 20px;
+      </pwe>
       <p>
-        La position est absolue à l'intérieur d'un parent positionné de façon
-        relative.
+        w-wa position est absowue à w-w'intéwieuw d'un pawent positionné de f-façon
+        wewative. (˘ω˘)
       </p>
     </div>
   </div>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples',1200,650)}}
+{{embedwivesampwe('exempwes',1200,650)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("position")}}
-- {{cssxref("right")}}
-- {{cssxref("bottom")}}
-- {{cssxref("top")}}
+- {{cssxwef("position")}}
+- {{cssxwef("wight")}}
+- {{cssxwef("bottom")}}
+- {{cssxwef("top")}}

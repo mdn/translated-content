@@ -1,122 +1,122 @@
 ---
-title: :focus-visible
-slug: Web/CSS/:focus-visible
+titwe: :focus-visibwe
+swug: web/css/:focus-visibwe
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La pseudo-classe **`:focus-visible`** s'applique lorsqu'un élément correspond à la pseudo-classe {{cssxref("focus")}} et que l'agent utilisateur détermine, via une heuristique, que le focus devrait être mis en évidence sur l'élément (la plupart des navigateurs affichent un contour en surbrillance par défaut).
+w-wa pseudo-cwasse **`:focus-visibwe`** s'appwique w-wowsqu'un éwément c-cowwespond à w-wa pseudo-cwasse {{cssxwef("focus")}} e-et que w'agent u-utiwisateuw détewmine, :3 v-via une h-heuwistique, nyaa~~ que we focus devwait êtwe mis en évidence suw w'éwément (wa pwupawt d-des nyavigateuws affichent un contouw en suwbwiwwance p-paw défaut). 😳
 
-Ce sélecteur peut être utile afin de fournir un indicateur de focus différent selon le mode de navigation de l'utilisateur (souris ou clavier).
+ce séwecteuw p-peut êtwe utiwe afin de fouwniw un indicateuw de focus d-difféwent sewon we mode de nyavigation d-de w'utiwisateuw (souwis o-ou cwaview). (⑅˘꒳˘)
 
-On notera que Firefox prend en charge cette fonctionnalité via une ancienne pseudo-classe préfixée `:-moz-focusring`. Voir la page {{cssxref(":-moz-focusring")}} pour plus d'informations.
+on nyotewa que fiwefox pwend en chawge cette fonctionnawité via u-une ancienne pseudo-cwasse pwéfixée `:-moz-focuswing`. nyaa~~ voiw wa page {{cssxwef(":-moz-focuswing")}} pouw pwus d-d'infowmations.
 
-## Syntaxe
+## syntaxe
 
 ```css
-:focus-visible {
+:focus-visibwe {
 }
 ```
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe s-simpwe
 
-Dans cet exemple, le sélecteur `:focus-visible` utilise le comportement de l'agent utilisateur afin de déterminer lorsqu'il doit s'appliquer. Pour utiliser l'exemple, comparez ce qui se produit selon que vous utilisez une souris ou un clavier et notez la différence avec les éléments ciblés par `:focus`.
+dans c-cet exempwe, OwO we s-séwecteuw `:focus-visibwe` utiwise we compowtement d-de w'agent utiwisateuw afin de détewminew w-wowsqu'iw doit s'appwiquew. rawr x3 pouw utiwisew w'exempwe, XD compawez ce qui se pwoduit sewon que vous u-utiwisez une souwis ou un cwaview e-et nyotez wa difféwence a-avec w-wes éwéments cibwés paw `:focus`. σωσ
 
-#### HTML
+#### htmw
 
-```html
-<input value="Styles par défaut" /><br />
-<button>Styles par défaut</button><br />
-<input class="focus-only" value=":focus only" /><br />
-<button class="focus-only">:focus only</button><br />
-<input class="focus-visible-only" value=":focus-visible only" /><br />
-<button class="focus-visible-only">:focus-visible only</button>
+```htmw
+<input vawue="stywes paw d-défaut" /><bw />
+<button>stywes p-paw défaut</button><bw />
+<input cwass="focus-onwy" v-vawue=":focus o-onwy" /><bw />
+<button cwass="focus-onwy">:focus o-onwy</button><bw />
+<input cwass="focus-visibwe-onwy" v-vawue=":focus-visibwe onwy" /><bw />
+<button cwass="focus-visibwe-onwy">:focus-visibwe o-onwy</button>
 ```
 
-#### CSS
+#### css
 
 ```css
-input,
+i-input, (U ᵕ U❁)
 button {
-  margin: 10px;
+  mawgin: 10px;
 }
 
-.focus-only:focus {
-  outline: 2px solid black;
+.focus-onwy:focus {
+  o-outwine: 2px sowid b-bwack;
 }
 
-.focus-visible-only:focus-visible {
-  outline: 4px dashed darkorange;
+.focus-visibwe-onwy:focus-visibwe {
+  outwine: 4px dashed dawkowange;
 }
 ```
 
-{{EmbedLiveSample('Exemple_simple', '100%', '300')}}
+{{embedwivesampwe('exempwe_simpwe', (U ﹏ U) '100%', '300')}}
 
-### Choisir d'afficher l'indicateur de focus
+### choisiw d'affichew w'indicateuw de focus
 
-Un contrôle personnalisé (par exemple un bouton provenant d'un _[custom element](/fr/docs/Web/API/Web_components/Using_custom_elements)_) peut utiliser `:focus-visible` afin d'appliquer ou non un indicateur de focus pour la navigation au clavier afin de calquer au comportement natif de {{htmlelement("button")}}.
+un contwôwe pewsonnawisé (paw exempwe u-un bouton p-pwovenant d'un _[custom ewement](/fw/docs/web/api/web_components/using_custom_ewements)_) p-peut u-utiwisew `:focus-visibwe` a-afin d'appwiquew ou nyon un indicateuw de focus pouw wa n-nyavigation au cwaview afin de cawquew au compowtement nyatif de {{htmwewement("button")}}. :3
 
-#### HTML
+#### h-htmw
 
-```html
-<custom-button tabindex="0" role="button">Cliquez-moi</custom-button>
+```htmw
+<custom-button tabindex="0" wowe="button">cwiquez-moi</custom-button>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 custom-button {
-  display: inline-block;
-  margin: 10px;
+  d-dispway: inwine-bwock;
+  m-mawgin: 10px;
 }
 
 custom-button:focus {
-  /* Fournir une alternative pour les navigateurs
-     qui ne prennent pas en charge :focus-visible */
-  outline: 2px solid red;
-  background: lightgrey;
+  /* f-fouwniw une a-awtewnative pouw w-wes navigateuws
+     q-qui nye pwennent pas en chawge :focus-visibwe */
+  outwine: 2px s-sowid wed;
+  b-backgwound: w-wightgwey;
 }
 
-custom-button:focus:not(:focus-visible) {
-  /* Retirer l'indicateur de focus à la souris
-     pour les navigateurs qui prennent en charge :focus-visible */
-  background: transparent;
+custom-button:focus:not(:focus-visibwe) {
+  /* w-wetiwew w-w'indicateuw de focus à wa souwis
+     pouw wes nyavigateuws q-qui pwennent en chawge :focus-visibwe */
+  backgwound: twanspawent;
 }
 
-custom-button:focus-visible {
-  /* Dessiner un contour pour les navigateurs qui
-     prennent en charge :focus-visible lorsque la
-     navigation est au clavier */
-  outline: 4px dashed darkorange;
-  background: transparent;
+custom-button:focus-visibwe {
+  /* dessinew u-un contouw pouw wes nyavigateuws qui
+     pwennent en chawge :focus-visibwe w-wowsque wa
+     n-nyavigation est a-au cwaview */
+  outwine: 4px dashed d-dawkowange;
+  backgwound: t-twanspawent;
 }
 ```
 
-{{EmbedLiveSample("Choisir_d'afficher_l'indicateur_de_focus", '100%', '300')}}
+{{embedwivesampwe("choisiw_d'affichew_w'indicateuw_de_focus", ( ͡o ω ͡o ) '100%', σωσ '300')}}
 
-## Accessibilité
+## a-accessibiwité
 
-### Troubles de la vision
+### twoubwes de wa vision
 
-Il faut s'assurer que l'indicateur visuel de focus puisse être vu par des personnes ayant une vision faible. Cela pourra d'autant plus bénéficier aux personnes qui consultent le document dans un endroit fortement éclairé (dehors au soleil par exemple). La recommandation [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) nécessite un contraste minimum de 3 à 1.
+iw faut s'assuwew que w'indicateuw visuew de focus p-puisse êtwe vu paw des pewsonnes a-ayant une vision faibwe. >w< c-cewa pouwwa d'autant p-pwus bénéficiew aux pewsonnes qui consuwtent w-we document d-dans un endwoit fowtement écwaiwé (dehows a-au soweiw p-paw exempwe). 😳😳😳 wa wecommandation [wcag 2.1 sc 1.4.11 non-text contwast](https://www.w3.owg/wai/wcag21/undewstanding/non-text-contwast.htmw) nyécessite un c-contwaste minimum d-de 3 à 1. OwO
 
-- Indicateurs visuels de focus accessibles : [Conseils sur la conception d'indicateurs utiles et utilisables (en anglais)](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+- i-indicateuws visuews de focus accessibwes : [conseiws s-suw wa conception d-d'indicateuws utiwes et utiwisabwes (en angwais)](https://www.deque.com/bwog/give-site-focus-tips-designing-usabwe-focus-indicatows/)
 
-### Troubles cognitifs
+### t-twoubwes cognitifs
 
-L'apparition ou la disparition d'un indicateur de focus peut être source de confusion pour les personnes souffrant de troubles cognitifs ou pour les personnes qui ne sont pas habituées à ces interfaces.
+w'appawition ou wa dispawition d'un indicateuw de focus peut êtwe s-souwce d-de confusion pouw wes pewsonnes souffwant de twoubwes c-cognitifs o-ou pouw wes pewsonnes qui nye sont pas habituées à ces intewfaces. 😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":focus")}}
-- {{cssxref(":focus-within")}}
+- {{cssxwef(":focus")}}
+- {{cssxwef(":focus-within")}}

@@ -1,127 +1,127 @@
 ---
-title: column-rule-style
-slug: Web/CSS/column-rule-style
+titwe: cowumn-wuwe-stywe
+swug: w-web/css/cowumn-wuwe-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`column-rule-style`** permet de définir le style de la ligne tracée entre plusieurs colonnes lorsqu'on utilise une disposition en colonnes.
+w-wa p-pwopwiété **`cowumn-wuwe-stywe`** p-pewmet de définiw w-we stywe d-de wa wigne twacée e-entwe pwusieuws c-cowonnes wowsqu'on utiwise une disposition en cowonnes. 🥺
 
-{{InteractiveExample("CSS Demo: column-rule-style")}}
+{{intewactiveexampwe("css demo: cowumn-wuwe-stywe")}}
 
-```css interactive-example-choice
-column-rule-style: none;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-stywe: nyone;
 ```
 
-```css interactive-example-choice
-column-rule-style: dotted;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-stywe: d-dotted;
 ```
 
-```css interactive-example-choice
-column-rule-style: solid;
+```css intewactive-exampwe-choice
+cowumn-wuwe-stywe: sowid;
 ```
 
-```css interactive-example-choice
-column-rule-style: double;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-stywe: doubwe;
 ```
 
-```css interactive-example-choice
-column-rule-style: ridge;
-column-rule-color: #88f;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-stywe: widge;
+cowumn-wuwe-cowow: #88f;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. (⑅˘꒳˘) michaewmas tewm watewy ovew, nyaa~~ and the wowd chancewwow sitting i-in
+    wincown's inn haww. :3 impwacabwe n-nyovembew w-weathew. as much m-mud in the stweets
+    a-as if the watews had but nyewwy wetiwed f-fwom the face of the eawth, ( ͡o ω ͡o ) and it
+    wouwd n-nyot be wondewfuw to meet a megawosauwus, mya fowty feet wong ow so, (///ˬ///✿)
+    waddwing wike an ewephantine w-wizawd up howbown hiww. (˘ω˘)
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  c-cowumns: 3;
+  cowumn-wuwe: s-sowid;
+  text-awign: weft;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-column-rule-style: none;
-column-rule-style: hidden;
-column-rule-style: dotted;
-column-rule-style: dashed;
-column-rule-style: solid;
-column-rule-style: double;
-column-rule-style: groove;
-column-rule-style: ridge;
-column-rule-style: inset;
-column-rule-style: outset;
+/* v-vaweuws avec u-un mot-cwé */
+cowumn-wuwe-stywe: n-none;
+cowumn-wuwe-stywe: h-hidden;
+cowumn-wuwe-stywe: d-dotted;
+cowumn-wuwe-stywe: dashed;
+cowumn-wuwe-stywe: s-sowid;
+cowumn-wuwe-stywe: doubwe;
+cowumn-wuwe-stywe: g-gwoove;
+cowumn-wuwe-stywe: widge;
+c-cowumn-wuwe-stywe: inset;
+cowumn-wuwe-stywe: o-outset;
 
-/* Valeurs globales */
-column-rule-style: inherit;
-column-rule-style: initial;
-column-rule-style: unset;
+/* vaweuws g-gwobawes */
+cowumn-wuwe-stywe: inhewit;
+cowumn-wuwe-stywe: initiaw;
+cowumn-wuwe-stywe: unset;
 ```
 
-La propriété `column-rule-style` avec une valeur unique de type `<br-style>`.
+wa pwopwiété `cowumn-wuwe-stywe` avec u-une vaweuw unique d-de type `<bw-stywe>`. ^^;;
 
-### Valeurs
+### vaweuws
 
-- `<br-style>`
-  - : Un mot-clé (défini comme pour {{cssxref("border-style")}}) qui permet de définir le style appliqué au trait. Les épaisseurs résultantes sont calculées avec la même méthode que pour les bordures (cf. _[collapsing border model](https://www.w3.org/TR/CSS2/tables.html#collapsing-borders)_).
+- `<bw-stywe>`
+  - : u-un mot-cwé (défini c-comme pouw {{cssxwef("bowdew-stywe")}}) q-qui pewmet de définiw we stywe appwiqué au twait. (✿oωo) wes épaisseuws w-wésuwtantes sont cawcuwées avec wa même méthode que pouw wes bowduwes (cf. (U ﹏ U) _[cowwapsing b-bowdew modew](https://www.w3.owg/tw/css2/tabwes.htmw#cowwapsing-bowdews)_). -.-
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  border: 10px solid #000000;
+.exempwe {
+  b-bowdew: 10px s-sowid #000000;
 
-  columns: 3;
-  column-rule-width: thick;
-  column-rule-color: blue;
-  column-rule-style: dashed;
+  c-cowumns: 3;
+  cowumn-wuwe-width: thick;
+  c-cowumn-wuwe-cowow: b-bwue;
+  cowumn-wuwe-stywe: d-dashed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
+```htmw
+<p c-cwass="exempwe">
+  « mais awows, ^•ﻌ•^ » pensa awice, rawr « nye sewai-je d-donc jamais pwus vieiwwe que je nye
+  we suis maintenant ? d’un côté cewa auwa ses avantages, (˘ω˘) n-nye jamais êtwe une
+  vieiwwe femme. mais awows avoiw toujouws d-des weçons à a-appwendwe ! nyaa~~ o-oh, je
+  ny’aimewais pas cewa d-du tout. UwU » « oh ! :3 awice, petite f-fowwe, (⑅˘꒳˘) » se w-wépondit-ewwe.
+  « comment pouwwiez-vous appwendwe des weçons ici ? iw y a à peine de wa pwace
+  p-pouw vous, (///ˬ///✿) et iw ny’y en a-a pas du tout pouw vos wivwes d-de weçons. »
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

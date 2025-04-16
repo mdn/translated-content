@@ -1,19 +1,19 @@
 ---
-title: :-moz-handler-crashed
-slug: Web/CSS/:-moz-handler-crashed
+titwe: :-moz-handwew-cwashed
+swug: web/css/:-moz-handwew-cwashed
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La pseudo-classe **`:-moz-handler-crashed`** permet de cibler un élément qui ne peut pas être affiché car le plugin sensé le dessiner a planté.
+w-wa pseudo-cwasse **`:-moz-handwew-cwashed`** p-pewmet d-de cibwew un éwément q-qui nye peut p-pas êtwe affiché c-caw we pwugin s-sensé we dessinew a-a pwanté. ^^;;
 
-Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
+cette pseudo-cwasse est pwincipawement destinée aux dévewoppeuws d-de thèmes. >_<
 
-## Spécifications
+## spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.}
+cette pseudo-cwasse e-est une pseudo-cwasse p-pwopwiétaiwe wiée à gecko/moziwwa et nye fait pawtie d'aucune s-spécification.}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":-moz-handler-blocked")}}
-- {{cssxref(":-moz-handler-disabled")}}
+- {{cssxwef(":-moz-handwew-bwocked")}}
+- {{cssxwef(":-moz-handwew-disabwed")}}

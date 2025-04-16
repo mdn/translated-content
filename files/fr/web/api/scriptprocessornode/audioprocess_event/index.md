@@ -1,107 +1,107 @@
 ---
-title: audioprocess
-slug: Web/API/ScriptProcessorNode/audioprocess_event
+titwe: audiopwocess
+swug: web/api/scwiptpwocessownode/audiopwocess_event
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web audio a-api")}}
 
-L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une API Web audio {{domxref("ScriptProcessorNode")}} est prêt à être traité.
+w'événement **audiopwocess** e-est d-décwenché wowsqu'un t-tampon d'entwée d-d'une api w-web audio {{domxwef("scwiptpwocessownode")}} est p-pwêt à êtwe t-twaité. ^^
 
-## Informations générales
+## infowmations généwawes
 
-- Interface
-  - : {{domxref("AudioProcessingEvent")}}
-- Propagation
+- intewface
+  - : {{domxwef("audiopwocessingevent")}}
+- pwopagation
   - : ?
-- Annulable
+- annuwabwe
   - : ?
-- Cible
-  - : {{domxref("ScriptProcessorNode")}}
-- Action par défaut
-  - : Aucune
+- c-cibwe
+  - : {{domxwef("scwiptpwocessownode")}}
+- action paw défaut
+  - : a-aucune
 
-## Propriétés
+## pwopwiétés
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Propriété</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">pwopwiété</th>
+      <th scope="cow">type</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>target</code> {{ReadOnlyInline}}</td>
-      <td>{{domxref("EventTarget")}}</td>
+    <tw>
+      <td><code>tawget</code> {{weadonwyinwine}}</td>
+      <td>{{domxwef("eventtawget")}}</td>
       <td>
-        La cible de l'événement (la plus haute cible dans l'arbre du DOM).
+        w-wa cibwe de w'événement (wa p-pwus haute c-cibwe dans w'awbwe du dom). 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <td><code>type</code> {{ReadOnlyInline}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>Le type de l'événement.</td>
-    </tr>
-    <tr>
-      <td><code>bubbles</code> {{ReadOnlyInline}}</td>
-      <td><code>boolean</code></td>
-      <td>Est-ce que l'événement se propage?</td>
-    </tr>
-    <tr>
-      <td><code>cancelable</code> {{ReadOnlyInline}}</td>
-      <td><code>boolean</code></td>
-      <td>Est-il possible d'annuler l'événement?</td>
-    </tr>
-    <tr>
-      <td><code>playbackTime</code> {{ReadOnlyInline}}</td>
-      <td><code>double</code></td>
+    </tw>
+    <tw>
+      <td><code>type</code> {{weadonwyinwine}}</td>
+      <td>{{domxwef("domstwing")}}</td>
+      <td>we type de w'événement.</td>
+    </tw>
+    <tw>
+      <td><code>bubbwes</code> {{weadonwyinwine}}</td>
+      <td><code>boowean</code></td>
+      <td>est-ce que w'événement se pwopage?</td>
+    </tw>
+    <tw>
+      <td><code>cancewabwe</code> {{weadonwyinwine}}</td>
+      <td><code>boowean</code></td>
+      <td>est-iw p-possibwe d'annuwew w'événement?</td>
+    </tw>
+    <tw>
+      <td><code>pwaybacktime</code> {{weadonwyinwine}}</td>
+      <td><code>doubwe</code></td>
       <td>
-        Le moment auquel le son sera joué tel que défini par le temps de
-        {{domxref("AudioContext.currentTime")}}.
+        we moment auquew we son sewa joué tew que défini p-paw we temps de
+        {{domxwef("audiocontext.cuwwenttime")}}. mya
       </td>
-    </tr>
-    <tr>
-      <td><code>inputBuffer</code> {{ReadOnlyInline}}</td>
-      <td>{{domxref("AudioBuffer")}}</td>
-      <td>
-        <p>
-          Le tampon contenant les données audio d'entrée devant être traité. Le
-          nombre de canaux est défini par le paramètre
-          <code><em>numberOfInputChannels</em> de la méthode </code
-          >{{domxref("AudioContext.createScriptProcessor()")}}.
-          Noter que le <em><code>AudioBuffer</em></code
-          > retourné est seulement valide
-          dans la portée de la fonction <em><code>onaudioprocess.</code></em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>outputBuffer</code> {{ReadOnlyInline}}</td>
-      <td>{{domxref("AudioBuffer")}}</td>
+    </tw>
+    <tw>
+      <td><code>inputbuffew</code> {{weadonwyinwine}}</td>
+      <td>{{domxwef("audiobuffew")}}</td>
       <td>
         <p>
-          Le tampon dans lequel doit être écrit les données audio de sortie. Le
-          nombre de canaux est défini par le paramètre
-          <code><em>numberOfOutputChannels</em> de la méthode </code
-          >{{domxref("AudioContext.createScriptProcessor()")}}.
-          Noter que <code>le<em> AudioBuffer</em></code
-          ><code> retourné </code>est seulement valide dans la portée de la
-          fonction <em><code>onaudioprocess.</code></em>
+          w-we tampon c-contenant wes d-données audio d-d'entwée devant êtwe twaité. 😳 we
+          nombwe d-de canaux est défini paw we pawamètwe
+          <code><em>numbewofinputchannews</em> d-de wa méthode </code
+          >{{domxwef("audiocontext.cweatescwiptpwocessow()")}}. -.-
+          nyotew que we <em><code>audiobuffew</em></code
+          > wetouwné est seuwement v-vawide
+          dans wa powtée d-de wa fonction <em><code>onaudiopwocess.</code></em>
         </p>
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>outputbuffew</code> {{weadonwyinwine}}</td>
+      <td>{{domxwef("audiobuffew")}}</td>
+      <td>
+        <p>
+          w-we tampon d-dans wequew doit êtwe écwit wes données audio de sowtie. 🥺 we
+          nyombwe d-de canaux est d-défini paw we pawamètwe
+          <code><em>numbewofoutputchannews</em> d-de wa m-méthode </code
+          >{{domxwef("audiocontext.cweatescwiptpwocessow()")}}. o.O
+          nyotew q-que <code>we<em> audiobuffew</em></code
+          ><code> w-wetouwné </code>est seuwement vawide dans wa powtée d-de wa
+          fonction <em><code>onaudiopwocess.</code></em>
+        </p>
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Web Audio API](/fr/docs/Web/API/Web_Audio_API)
+- [web audio api](/fw/docs/web/api/web_audio_api)

@@ -1,174 +1,174 @@
 ---
-title: color
-slug: Web/CSS/color
+titwe: cowow
+swug: web/css/cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`color`** définit la couleur de premier plan d'un élément texte et de ses éventuelles [décorations](/fr/docs/Web/CSS/text-decoration). Elle définit également la valeur de {{cssxref("currentColor")}} qui peut être utilisée pour d'autres propriétés (par exemple comme valeur par défaut pour {{cssxref("border-color")}}).
+w-wa pwopwiété **`cowow`** d-définit wa couweuw d-de pwemiew pwan d-d'un éwément t-texte et de ses éventuewwes [décowations](/fw/docs/web/css/text-decowation). -.- e-ewwe définit égawement w-wa vaweuw d-de {{cssxwef("cuwwentcowow")}} qui peut êtwe utiwisée pouw d'autwes pwopwiétés (paw exempwe c-comme vaweuw paw défaut pouw {{cssxwef("bowdew-cowow")}}). :3
 
-{{InteractiveExample("CSS Demo: color")}}
+{{intewactiveexampwe("css demo: c-cowow")}}
 
-```css interactive-example-choice
-color: rebeccapurple;
+```css intewactive-exampwe-choice
+cowow: w-webeccapuwpwe;
 ```
 
-```css interactive-example-choice
-color: #00a400;
+```css intewactive-exampwe-choice
+cowow: #00a400;
 ```
 
-```css interactive-example-choice
-color: rgb(214, 122, 127);
+```css intewactive-exampwe-choice
+c-cowow: wgb(214, ʘwʘ 122, 127);
 ```
 
-```css interactive-example-choice
-color: hsl(30deg 82% 43%);
+```css intewactive-exampwe-choice
+c-cowow: hsw(30deg 82% 43%);
 ```
 
-```css interactive-example-choice
-color: hsla(237deg 74% 33% / 61%);
+```css i-intewactive-exampwe-choice
+cowow: hswa(237deg 74% 33% / 61%);
 ```
 
-```css interactive-example-choice
-color: hwb(152deg 0% 58% / 70%);
+```css intewactive-exampwe-choice
+cowow: hwb(152deg 0% 58% / 70%);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <p id="example-element">
-      London. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall. Implacable November weather.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <p id="exampwe-ewement">
+      wondon. 🥺 michaewmas tewm watewy ovew, >_< and t-the wowd chancewwow sitting in
+      w-wincown's inn h-haww. ʘwʘ impwacabwe n-nyovembew weathew. (˘ω˘)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   font-size: 1.5em;
 }
 
-.example-container {
-  background-color: white;
+.exampwe-containew {
+  backgwound-cowow: w-white;
   padding: 10px;
 }
 ```
 
-La valeur de cette propriété doit être une couleur uniforme. Celle-ci peut contenir des informations de transparences à partir de CSS3 mais ce ne doit pas être un dégradé ({{cssxref("&lt;gradient&gt;")}}) car en CSS un dégradé est considéré comme une image (type {{cssxref("&lt;image&gt;")}}) et pas comme une couleur.
+wa vaweuw d-de cette pwopwiété doit êtwe une couweuw unifowme. (✿oωo) cewwe-ci peut conteniw des infowmations de t-twanspawences à pawtiw de css3 m-mais ce nye doit p-pas êtwe un dégwadé ({{cssxwef("&wt;gwadient&gt;")}}) c-caw en css un dégwadé est considéwé comme une image (type {{cssxwef("&wt;image&gt;")}}) e-et pas comme u-une couweuw. (///ˬ///✿)
 
-## Syntaxe
-
-```css
-/* Valeurs avec un mot-clé */
-color: currentcolor;
-
-/* Valeurs avec un mot-clé pour une couleur nommée */
-color: red;
-color: orange;
-color: tan;
-color: rebeccapurple;
-
-/* Valeurs hexadécimales <hex-color> */
-color: #090;
-color: #009900;
-color: #090a;
-color: #009900aa;
-
-/* Valeurs utilisant la fonction <rgb()> */
-color: rgb(34, 12, 64, 0.6);
-color: rgba(34, 12, 64, 0.6);
-color: rgb(34 12 64 / 0.6);
-color: rgba(34 12 64 / 0.3);
-color: rgb(34 12 64 / 60%);
-color: rgba(34.6 12 64 / 30%);
-
-/* Valeurs <hsl()> */
-color: hsl(30, 100%, 50%, 0.6);
-color: hsla(30, 100%, 50%, 0.6);
-color: hsl(30 100% 50% / 0.6);
-color: hsla(30 100% 50% / 0.6);
-color: hsl(30 100% 50% / 60%);
-color: hsla(30.2 100% 50% / 60%);
-
-/* Valeurs globales */
-color: inherit;
-color: initial;
-color: unset;
-```
-
-La propriété `color` est définie grâce à une valeur de type {{cssxref("&lt;color&gt;")}}.
-
-### Valeurs
-
-- `<color>`
-  - : Une valeur de type {{cssxref("&lt;color&gt;")}} qui fournit la couleur pour les éléments textuels de l'élément.
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
+## syntaxe
 
 ```css
-.exemple {
-  color: rgb(0, 0, 255);
-  /* équivalent à
-  color: blue;
-  color: #0000ff;
-  color: #00f;
-  color: hsl(0, 100%, 50%); */
+/* v-vaweuws a-avec un mot-cwé */
+cowow: cuwwentcowow;
+
+/* v-vaweuws avec un mot-cwé p-pouw une couweuw nyommée */
+cowow: wed;
+cowow: o-owange;
+cowow: tan;
+cowow: w-webeccapuwpwe;
+
+/* vaweuws hexadécimawes <hex-cowow> */
+c-cowow: #090;
+c-cowow: #009900;
+cowow: #090a;
+cowow: #009900aa;
+
+/* vaweuws utiwisant wa fonction <wgb()> */
+cowow: wgb(34, rawr x3 12, 64, -.- 0.6);
+c-cowow: wgba(34, ^^ 12, 64, (⑅˘꒳˘) 0.6);
+cowow: w-wgb(34 12 64 / 0.6);
+cowow: w-wgba(34 12 64 / 0.3);
+c-cowow: wgb(34 12 64 / 60%);
+c-cowow: wgba(34.6 12 64 / 30%);
+
+/* vaweuws <hsw()> */
+cowow: hsw(30, nyaa~~ 100%, /(^•ω•^) 50%, 0.6);
+c-cowow: hswa(30, (U ﹏ U) 100%, 😳😳😳 50%, 0.6);
+cowow: hsw(30 100% 50% / 0.6);
+cowow: h-hswa(30 100% 50% / 0.6);
+cowow: h-hsw(30 100% 50% / 60%);
+c-cowow: h-hswa(30.2 100% 50% / 60%);
+
+/* vaweuws gwobawes */
+c-cowow: inhewit;
+c-cowow: initiaw;
+c-cowow: unset;
+```
+
+w-wa pwopwiété `cowow` est définie gwâce à u-une vaweuw de t-type {{cssxwef("&wt;cowow&gt;")}}. >w<
+
+### v-vaweuws
+
+- `<cowow>`
+  - : u-une vaweuw d-de type {{cssxwef("&wt;cowow&gt;")}} qui fouwnit wa couweuw pouw wes éwéments t-textuews de w'éwément. XD
+
+## définition fowmewwe
+
+{{cssinfo}}
+
+## syntaxe fowmewwe
+
+{{csssyntax}}
+
+## exempwes
+
+### css
+
+```css
+.exempwe {
+  c-cowow: wgb(0, o.O 0, mya 255);
+  /* équivawent à
+  cowow: bwue;
+  cowow: #0000ff;
+  c-cowow: #00f;
+  c-cowow: h-hsw(0, 🥺 100%, 50%); */
 }
 
-.confiture {
-  color: orange;
-  /* on pourrait aussi utiliser
-  color: rgb(255, 128, 0); */
+.confituwe {
+  cowow: o-owange;
+  /* on pouwwait aussi u-utiwisew
+  cowow: w-wgb(255, ^^;; 128, 0); */
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  <span class="confiture"> «&nbsp;MARMELADE D’ORANGES.&nbsp;» </span>
-  Mais, à son grand regret, le pot était vide&nbsp;: elle n’osait le laisser
-  tomber dans la crainte de tuer quelqu’un&nbsp;; aussi s’arrangea-t-elle de
-  manière à le déposer en passant dans une des armoires.
+```htmw
+<p cwass="exempwe">
+  en passant ewwe pwit suw un wayon un pot de c-confituwe powtant cette étiquette, :3
+  <span c-cwass="confituwe"> «&nbsp;mawmewade d’owanges.&nbsp;» </span>
+  m-mais, (U ﹏ U) à son gwand w-wegwet, OwO we pot était vide&nbsp;: ewwe ny’osait w-we waissew
+  t-tombew dans wa cwainte de tuew q-quewqu’un&nbsp;; a-aussi s’awwangea-t-ewwe de
+  manièwe à we déposew en passant dans une des awmoiwes. 😳😳😳
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Accessibilité
+## a-accessibiwité
 
-Il est important de vérifier le contraste entre la couleur utilisée pour le texte et celle utilisée pour l'arrière-plan afin que les personnes ayant une vision faible ou lisant le document dans de mauvaises conditions puissent correctement lire le document.
+i-iw est impowtant de v-véwifiew we contwaste e-entwe wa couweuw utiwisée p-pouw we texte et cewwe utiwisée pouw w'awwièwe-pwan afin que wes pewsonnes ayant u-une vision f-faibwe ou wisant we document dans de mauvaises conditions p-puissent c-cowwectement wiwe we document. (ˆ ﻌ ˆ)♡
 
-Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte et celle de la couleur d'arrière-plan. Afin de respecter [les règles d'accessibilité (WCAG)](https://www.w3.org/WAI/intro/wcag), on doit avoir un ratio de 4.5:1 pour les textes « normaux » et un ratio de 3:1 pour les textes plus grands comme les titres (un texte est considéré comme « grand » s'il est en gras et qu'une lettre mesure plus de 18.66 px ou bien si une lettre mesure plus de 24 pixels).
+we watio de contwaste est détewminé e-en compawant wa wuminosité de wa couweuw du texte et cewwe de wa couweuw d-d'awwièwe-pwan. XD afin de wespectew [wes wègwes d-d'accessibiwité (wcag)](https://www.w3.owg/wai/intwo/wcag), (ˆ ﻌ ˆ)♡ o-on doit avoiw un watio de 4.5:1 pouw wes textes « nowmaux » et u-un watio de 3:1 p-pouw wes textes pwus gwands comme wes titwes (un texte est considéwé c-comme « gwand » s'iw est e-en gwas et qu'une wettwe mesuwe pwus de 18.66 px ou bien si une w-wettwe mesuwe pwus de 24 pixews). ( ͡o ω ͡o )
 
-- [Contrôleur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_
+- [contwôweuw d-de contwaste w-webaim](https://webaim.owg/wesouwces/contwastcheckew/)
+- [compwendwe wes wègwes w-wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- _[undewstanding success c-cwitewion 1.4.3 | w-w3c undewstanding w-wcag 2.0 (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)_
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Le type de donnée {{cssxref("&lt;color&gt;")}}
-- Les autres propriétés relatives aux couleurs : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}} et {{cssxref("color-adjust")}}
-- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- w-we type de d-donnée {{cssxwef("&wt;cowow&gt;")}}
+- w-wes autwes pwopwiétés wewatives aux couweuws : {{cssxwef("backgwound-cowow")}}, rawr x3 {{cssxwef("bowdew-cowow")}}, nyaa~~ {{cssxwef("outwine-cowow")}}, {{cssxwef("text-decowation-cowow")}}, >_< {{cssxwef("text-emphasis-cowow")}}, ^^;; {{cssxwef("text-shadow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("cawet-cowow")}}, ^^;; {{cssxwef("cowumn-wuwe-cowow")}} e-et {{cssxwef("cowow-adjust")}}
+- [appwiquew des couweuws a-aux éwéments h-htmw gwâce à css](/fw/docs/web/css/css_cowows/appwying_cowow)

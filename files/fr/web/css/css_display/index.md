@@ -1,67 +1,67 @@
 ---
-title: CSS Display
-slug: Web/CSS/CSS_display
+titwe: css dispway
+swug: web/css/css_dispway
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**L'affichage CSS** (_CSS Display)_ est un module CSS qui définit la façon dont l'arbre des boîtes pour la mise en forme est généré à partir de l'arbre des éléments du document et qui définit les propriétés qui le contrôlent.
+**w'affichage css** (_css d-dispway)_ e-est un moduwe c-css qui définit w-wa façon dont w-w'awbwe des boîtes p-pouw wa mise e-en fowme est g-généwé à pawtiw de w'awbwe des éwéments du document et qui définit wes pwopwiétés q-qui we contwôwent. (✿oωo)
 
-## Référence
+## wéféwence
 
-### Propriétés CSS
+### p-pwopwiétés css
 
-- {{cssxref("display")}}
+- {{cssxwef("dispway")}}
 
-### Types de donnée CSS
+### t-types de donnée css
 
-- {{CSSxRef("&lt;display-outside&gt;")}}
-- {{CSSxRef("&lt;display-inside&gt;")}}
-- {{CSSxRef("&lt;display-listitem&gt;")}}
-- {{CSSxRef("&lt;display-box&gt;")}}
-- {{CSSxRef("&lt;display-internal&gt;")}}
-- {{CSSxRef("&lt;display-legacy&gt;")}}
+- {{cssxwef("&wt;dispway-outside&gt;")}}
+- {{cssxwef("&wt;dispway-inside&gt;")}}
+- {{cssxwef("&wt;dispway-wistitem&gt;")}}
+- {{cssxwef("&wt;dispway-box&gt;")}}
+- {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+- {{cssxwef("&wt;dispway-wegacy&gt;")}}
 
-## Guides
+## guides
 
-### Disposition en flux (`display: block`, `display: inline`)
+### disposition en fwux (`dispway: b-bwock`, ʘwʘ `dispway: inwine`)
 
-- [Les dispositions de bloc et en ligne dans le flux normal](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [La disposition en flux et les dépassements](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
-- [La disposition en flux et les modes d'écriture](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
-- [Explications sur les contextes de formatage](/fr/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
-- [Être ou non dans le flux](/fr/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
+- [wes dispositions d-de bwoc e-et en wigne dans we fwux nyowmaw](/fw/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow)
+- [wa disposition en fwux et wes dépassements](/fw/docs/web/css/css_fwow_wayout/fwow_wayout_and_ovewfwow)
+- [wa d-disposition en fwux et wes modes d'écwituwe](/fw/docs/web/css/css_fwow_wayout/fwow_wayout_and_wwiting_modes)
+- [expwications suw wes contextes d-de fowmatage](/fw/docs/web/css/css_fwow_wayout/intwoduction_to_fowmatting_contexts)
+- [Êtwe ou n-non dans we fwux](/fw/docs/web/css/css_fwow_wayout/in_fwow_and_out_of_fwow)
 
-### Les boîtes flexibles (`display: flex`)
+### w-wes boîtes fwexibwes (`dispway: f-fwex`)
 
-- [Concepts de base des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Contrôler les proportions des objets flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [_Mixins_ Flexbox pour les différents navigateurs](/fr/docs/Glossary/Flexbox)
-- [Maîtriser le passage à la ligne des objets flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [Ordonner les objets flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [Les relations entre les boîtes flexibles et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [La rétrocompatiblité des boîtes flexibles](/fr/docs/Glossary/Flexbox)
-- [Les cas d'usage type pour les boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [concepts d-de base des boîtes fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [awignew des objets dans u-un conteneuw fwexibwe](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+- [contwôwew wes pwopowtions d-des objets fwexibwes we wong de w'axe pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)
+- [_mixins_ fwexbox pouw wes difféwents nyavigateuws](/fw/docs/gwossawy/fwexbox)
+- [maîtwisew we passage à w-wa wigne des objets fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)
+- [owdonnew w-wes objets f-fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)
+- [wes w-wewations entwe wes boîtes fwexibwes et wes autwes méthodes d-de disposition](/fw/docs/web/css/css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods)
+- [wa w-wétwocompatibwité des boîtes f-fwexibwes](/fw/docs/gwossawy/fwexbox)
+- [wes c-cas d'usage type pouw wes boîtes f-fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox)
 
-### Les grilles CSS (`display: grid`)
+### wes gwiwwes c-css (`dispway: gwid`)
 
-- [Concepts de base des grilles](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Les relations entre les grilles et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [Le placement sur les lignes](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [Les modèles de zone de grilles](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [Les dispositions utilisant les lignes nommées](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [Le placement automatique dans les grilles](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [L'alignement des boîtes dans les grilles](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [Les grilles, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [Les grilles et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [Les grilles et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Réaliser des dispositions courantes à l'aide de grilles](/fr/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [concepts de base d-des gwiwwes](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [wes wewations entwe w-wes gwiwwes et wes autwes méthodes d-de disposition](/fw/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+- [we p-pwacement suw wes wignes](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+- [wes modèwes de zone de gwiwwes](/fw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- [wes dispositions utiwisant wes wignes nyommées](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+- [we p-pwacement automatique d-dans wes gwiwwes](/fw/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+- [w'awignement d-des boîtes d-dans wes gwiwwes](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [wes g-gwiwwes, (ˆ ﻌ ˆ)♡ wes vaweuws wogiques et wes modes d'écwituwe](/fw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- [wes g-gwiwwes et w'accessibiwité](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+- [wes gwiwwes et w'améwiowation pwogwessive](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+- [wéawisew d-des dispositions couwantes à w-w'aide de g-gwiwwes](/fw/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

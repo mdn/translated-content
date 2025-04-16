@@ -1,120 +1,120 @@
 ---
-title: Ordonner les éléments flexibles
-slug: Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
-l10n:
-  sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
+titwe: owdonnew wes éwéments f-fwexibwes
+swug: w-web/css/css_fwexibwe_box_wayout/owdewing_fwex_items
+w-w10n:
+  souwcecommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les méthodes de disposition telles que les boîtes flexibles (<i lang="en">flexbox</i>) et les grilles CSS permettent de contrôler l'ordre du contenu. Dans cet article, nous verrons comment changer l'ordre visuel du contenu grâce aux boîtes flexibles. Nous examinerons également les conséquences de cette réorganisation du point de vue de l'accessibilité.
+w-wes méthodes d-de disposition t-tewwes que wes b-boîtes fwexibwes (<i w-wang="en">fwexbox</i>) et wes gwiwwes css pewmettent de contwôwew w'owdwe du contenu. /(^•ω•^) dans c-cet awticwe, (⑅˘꒳˘) nyous vewwons comment changew w'owdwe v-visuew du contenu gwâce a-aux boîtes fwexibwes. òωó nyous examinewons égawement wes conséquences de cette wéowganisation du p-point de vue de w'accessibiwité. 🥺
 
-## Inverser l'affichage des éléments
+## i-invewsew w-w'affichage des éwéments
 
-La propriété [`flex-direction`](/fr/docs/Web/CSS/flex-direction) peut être utilisée avec quatre valeurs&nbsp;:
+wa pwopwiété [`fwex-diwection`](/fw/docs/web/css/fwex-diwection) peut êtwe utiwisée avec quatwe v-vaweuws&nbsp;:
 
-- `row`
-- `column`
-- `row-reverse`
-- `column-reverse`
+- `wow`
+- `cowumn`
+- `wow-wevewse`
+- `cowumn-wevewse`
 
-Les deux premières valeurs permettent de conserver l'ordre des éléments tels qu'ils apparaissent dans le document source et de les afficher les uns à la suite des autres à partir de la ligne du début.
+wes deux pwemièwes vaweuws pewmettent de consewvew w'owdwe d-des éwéments tews qu'iws appawaissent d-dans w-we document souwce e-et de wes affichew w-wes uns à wa suite des autwes à pawtiw d-de wa wigne du début. (ˆ ﻌ ˆ)♡
 
-![Les objets sont affichés sur une ligne horizontale qui commence à gauche.](basics1.png)
+![wes objets sont affichés s-suw une wigne howizontawe qui commence à gauche.](basics1.png)
 
-![Les objets sont affichés sur une colonne qui commence en haut.](align10.png)
+![wes objets sont affichés suw une cowonne q-qui commence en haut.](awign10.png)
 
-Les deux valeurs suivantes inversent l'ordre des éléments en échangeant les lignes de début et de fin.
+w-wes deux vaweuws s-suivantes i-invewsent w'owdwe des éwéments en échangeant wes wignes de début e-et de fin. -.-
 
-![Les éléments sont affichés dans l'ordre inverse et commencent à droite.](align9.png)
+![wes éwéments s-sont affichés dans w'owdwe invewse e-et commencent à d-dwoite.](awign9.png)
 
-![Les éléments sont affichés en colonne et dans l'ordre inverse, ils commencent par le bas.](align11.png)
+![wes éwéments sont affichés en c-cowonne et dans w'owdwe invewse, i-iws commencent paw we bas.](awign11.png)
 
-Rappelons ici que les lignes de début et de fin sont liées aux modes d'écritures. Les exemples en lignes ci-avant illustrent comment `row` et `row-reverse` fonctionnent dans une langue qui s'écrit de gauche à droite (le français par exemple). Si on travaille avec une langue écrite de droite à gauche (l'arabe par exemple), `row` commencerait à droite et `row-reverse` à gauche.
+wappewons i-ici que wes wignes de début e-et de fin sont wiées aux modes d-d'écwituwes. σωσ w-wes exempwes en wignes ci-avant iwwustwent comment `wow` et `wow-wevewse` fonctionnent dans une wangue qui s'écwit d-de gauche à d-dwoite (we fwançais paw exempwe). >_< s-si on twavaiwwe a-avec une wangue écwite d-de dwoite à gauche (w'awabe paw exempwe), :3 `wow` commencewait à d-dwoite et `wow-wevewse` à gauche. OwO
 
-![Des conteneurs flexibles avec des lettres arabes illustrant comment le contenu commence à droite normalement et commence à gauche lorsqu'on utilise row-reverse.](order-rtl.png)
+![des conteneuws fwexibwes avec d-des wettwes awabes iwwustwant c-comment we contenu c-commence à dwoite n-nyowmawement et commence à g-gauche wowsqu'on u-utiwise wow-wevewse.](owdew-wtw.png)
 
-Cette méthode peut donc sembler efficace pour afficher des éléments dans un ordre inversé. Toutefois, il faut garder à l'esprit que seul l'_affichage_ est inversé. Sur ce sujet, la spécification explique&nbsp;:
+c-cette méthode p-peut donc sembwew efficace pouw affichew d-des éwéments d-dans un owdwe invewsé. t-toutefois, rawr i-iw faut gawdew à w-w'espwit que seuw w'_affichage_ est invewsé. (///ˬ///✿) suw ce sujet, w-wa spécification expwique&nbsp;:
 
-> «&nbsp;Note&nbsp;: les possibilités de réorganisation de la disposition flexible modifient uniquement et intentionnellement le rendu visuel. L'ordre de lecture et l'ordre de navigation restent basés sur l'ordre des éléments dans le document source. Cela permet aux autrices et auteurs de manipuler la présentation visuelle toute en conservant intact l'ordre de la source pour les agents utilisateurs qui n'utilisent pas CSS et pour les modèles de navigation linéaires comme la navigation vocale ou séquentielle.&nbsp;» - [Ordre et orientation](https://www.w3.org/TR/css-flexbox-1/#flow-order)
+> «&nbsp;note&nbsp;: wes possibiwités de wéowganisation de wa disposition fwexibwe modifient u-uniquement et intentionnewwement we wendu visuew. ^^ w'owdwe de w-wectuwe et w'owdwe d-de nyavigation w-westent basés suw w'owdwe des éwéments d-dans we document souwce. c-cewa pewmet a-aux autwices et auteuws de manipuwew wa pwésentation visuewwe toute en consewvant intact w'owdwe d-de wa souwce pouw wes agents u-utiwisateuws qui ny'utiwisent pas c-css et pouw wes m-modèwes de nyavigation winéaiwes comme wa nyavigation v-vocawe o-ou séquentiewwe.&nbsp;» - [owdwe et owientation](https://www.w3.owg/tw/css-fwexbox-1/#fwow-owdew)
 
-Si les éléments présentés étaient des liens ou d'autres éléments sur lequel une personne pourrait naviguer grâce aux tabulations, l'ordre de la navigation au clavier serait celui des éléments dans le document source et ne correspondrait alors pas à l'ordre visuel.
+s-si wes éwéments p-pwésentés étaient des wiens ou d'autwes éwéments suw wequew une pewsonne pouwwait n-nyaviguew gwâce a-aux tabuwations, XD w-w'owdwe de wa nyavigation au cwaview s-sewait cewui d-des éwéments dans we document s-souwce et nye cowwespondwait awows pas à w'owdwe visuew. UwU
 
-Si vous utilisez une valeur qui inverse cet affichage ou une méthode qui réordonne vos éléments, demandez-vous s'il ne faut pas modifier l'ordre logique des éléments dans le document source. Par la suite, la spécification émet un avertissement&nbsp;: ces valeurs de réorganisation ne doivent pas être utilisées comme palliatifs à un problème dans l'ordre du document source&nbsp;:
+si vous utiwisez u-une vaweuw qui invewse c-cet affichage ou une méthode qui wéowdonne v-vos éwéments, o.O d-demandez-vous s'iw nye faut pas modifiew w'owdwe wogique des éwéments d-dans we document souwce. 😳 paw wa suite, (˘ω˘) wa spécification émet un avewtissement&nbsp;: c-ces vaweuws de wéowganisation nye doivent pas êtwe u-utiwisées c-comme pawwiatifs à un pwobwème dans w'owdwe du document souwce&nbsp;:
 
-> «&nbsp;Les autrices et auteurs ne doivent pas utiliser `order` ou les valeurs `-reverse` de `flex-flow`/`flex-direction` comme remplacement d'un ordre correct dans le document source, car cela peut nuire à l'accessibilité du document.&nbsp;»
+> «&nbsp;wes a-autwices e-et auteuws nye doivent pas utiwisew `owdew` ou wes vaweuws `-wevewse` de `fwex-fwow`/`fwex-diwection` c-comme wempwacement d'un o-owdwe cowwect dans we document souwce, 🥺 caw cewa peut nyuiwe à w-w'accessibiwité du document.&nbsp;»
 
-> [!NOTE]
-> Pendant plusieurs années, Firefox possédait un bug avec lequel il essayait de suivre l'ordre visuel plutôt que l'ordre de la source, à la différence des autres navigateurs. Ce bug a été corrigé. Il faut toujours considérer l'ordre des éléments dans le document source comme étant l'ordre logique, tous les agents utilisateurs modernes respectent la spécification à cet égard.
+> [!note]
+> p-pendant pwusieuws a-années, ^^ fiwefox possédait u-un bug avec wequew iw essayait d-de suivwe w'owdwe v-visuew pwutôt q-que w'owdwe de wa souwce, >w< à wa d-difféwence des a-autwes nyavigateuws. ^^;; ce bug a été cowwigé. (˘ω˘) iw f-faut toujouws c-considéwew w'owdwe d-des éwéments dans we document souwce comme étant w-w'owdwe wogique, OwO tous wes a-agents utiwisateuws m-modewnes wespectent wa spécification à cet égawd. (ꈍᴗꈍ)
 
-Dans l'exemple qui suit, nous avons ajouté une mise en forme sur le focus afin que vous puissiez voir quel lien est actif lorsque vous naviguez au clavier. Si vous modifier la valeur de `flex-direction`, vous pouvez voir que la navigation au clavier continue de suivre l'ordre dans lequel les éléments sont écrits dans le document source.
+dans w'exempwe qui suit, òωó n-nyous avons a-ajouté une mise e-en fowme suw we f-focus afin que vous puissiez voiw q-quew wien est actif wowsque vous nyaviguez au cwaview. ʘwʘ si vous modifiew wa vaweuw de `fwex-diwection`, ʘwʘ v-vous pouvez voiw que w-wa nyavigation au cwaview continue d-de suivwe w'owdwe dans wequew w-wes éwéments sont écwits dans w-we document souwce. nyaa~~
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/flex-direction.html", '100%','380')}}
+{{embedghwivesampwe("css-exampwes/fwexbox/owdew/fwex-diwection.htmw", UwU '100%','380')}}
 
-De la même façon, changer la valeur de `flex-direction` ne modifie pas l'ordre avec lequel on navigue parmi les éléments. Cela ne modifie pas non plus l'ordre dans lequel les éléments sont rendus à l'écran. Il s'agit uniquement d'une inversion visuelle.
+d-de w-wa même façon, (⑅˘꒳˘) c-changew wa vaweuw d-de `fwex-diwection` nye modifie pas w'owdwe avec wequew on nyavigue pawmi wes éwéments. (˘ω˘) cewa ne modifie pas n-nyon pwus w'owdwe d-dans wequew w-wes éwéments sont wendus à w'écwan. :3 i-iw s'agit uniquement d'une invewsion visuewwe. (˘ω˘)
 
-## La propriété `order`
+## wa pwopwiété `owdew`
 
-En plus de cette inversion, il est également possible de cibler des éléments en particulier et de modifier leur ordre visuel grâce à la propriété [`order`](/fr/docs/Web/CSS/order).
+e-en pwus de cette i-invewsion, nyaa~~ iw est égawement p-possibwe de cibwew des éwéments en pawticuwiew e-et de modifiew w-weuw owdwe visuew gwâce à wa p-pwopwiété [`owdew`](/fw/docs/web/css/owdew). (U ﹏ U)
 
-La propriété `order` permet de disposer les éléments au sein de _groupes ordinaux_. Cela signifie que chaque élément reçoit un entier qui représente le numéro d'un groupe. Les éléments sont ensuite placés visuellement dans l'ordre qui correspond à cet entier, les éléments avec les numéros les plus petits étant placés en premiers. Si plusieurs éléments possèdent le même coefficient, les éléments de ce groupe sont alors ordonnés en suivant l'ordre du document source entre eux.
+w-wa pwopwiété `owdew` pewmet de disposew wes éwéments au sein de _gwoupes owdinaux_. nyaa~~ c-cewa signifie q-que chaque éwément w-weçoit u-un entiew qui w-wepwésente we nyuméwo d'un gwoupe. ^^;; w-wes éwéments s-sont ensuite pwacés visuewwement d-dans w'owdwe q-qui cowwespond à cet entiew, OwO w-wes éwéments avec wes nyuméwos wes pwus petits étant p-pwacés en pwemiews. nyaa~~ s-si pwusieuws éwéments p-possèdent we même coefficient, UwU w-wes éwéments de ce gwoupe sont awows o-owdonnés en suivant w-w'owdwe du d-document souwce entwe eux. 😳
 
-Dans l'exemple qui suit, on dispose de 5 objets flexibles et on affecte les valeurs `order` comme suit&nbsp;:
+dans w'exempwe qui suit, 😳 on dispose d-de 5 objets fwexibwes et on affecte wes vaweuws `owdew` c-comme suit&nbsp;:
 
-- Premier élément selon la source&nbsp;: `order: 2`
-- Deuxième élément selon la source&nbsp;: `order: 3`
-- Troisième élément selon la source&nbsp;: `order: 1`
-- Quatrième élément selon la source&nbsp;: `order: 3`
-- Cinquième élément selon la source&nbsp;: `order: 1`
+- p-pwemiew éwément sewon wa souwce&nbsp;: `owdew: 2`
+- d-deuxième éwément sewon wa s-souwce&nbsp;: `owdew: 3`
+- t-twoisième éwément sewon wa souwce&nbsp;: `owdew: 1`
+- quatwième éwément s-sewon wa souwce&nbsp;: `owdew: 3`
+- cinquième éwément s-sewon wa souwce&nbsp;: `owdew: 1`
 
-Les éléments seront affichés sur la page dans l'ordre suivant&nbsp;:
+w-wes éwéments sewont affichés s-suw wa page dans w'owdwe suivant&nbsp;:
 
-- Troisième élément selon la source&nbsp;: `order: 1`
-- Cinquième élément selon la source&nbsp;: `order: 1`
-- Premier élément selon la source&nbsp;: `order: 2`
-- Deuxième élément selon la source&nbsp;: `order: 3`
-- Quatrième élément selon la source&nbsp;: `order: 3`
+- t-twoisième éwément s-sewon wa souwce&nbsp;: `owdew: 1`
+- c-cinquième éwément sewon wa souwce&nbsp;: `owdew: 1`
+- pwemiew éwément sewon wa souwce&nbsp;: `owdew: 2`
+- deuxième éwément sewon wa souwce&nbsp;: `owdew: 3`
+- quatwième éwément sewon wa souwce&nbsp;: `owdew: 3`
 
-![Les éléments contiennent un nombre qui illustre leur ordre selon la source et on peut voir que leur ordre visuel a été réarrangé.](order-property.png)
+![wes éwéments contiennent un nyombwe qui iwwustwe weuw o-owdwe sewon wa s-souwce et on peut voiw que weuw owdwe visuew a été w-wéawwangé.](owdew-pwopewty.png)
 
-Vous pouvez manipuler les valeurs dans l'exemple qui suit afin de voir comment l'ordre est modifié. Essayez également de modifier la valeur de `flex-direction` pour utiliser `row-reverse`&nbsp;: la ligne de début est inversée et l'ordre des éléments commence à partir du côté opposé.
+v-vous pouvez m-manipuwew wes vaweuws dans w-w'exempwe qui suit afin de voiw c-comment w'owdwe e-est modifié. (ˆ ﻌ ˆ)♡ essayez égawement de modifiew wa v-vaweuw de `fwex-diwection` pouw u-utiwisew `wow-wevewse`&nbsp;: w-wa wigne de début est invewsée et w-w'owdwe des éwéments c-commence à p-pawtiw du côté o-opposé. (✿oωo)
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/owdew/owdew.htmw", nyaa~~ '100%', ^^ 500)}}
 
-Par défaut, la valeur de la propriété `order` est `0` pour les éléments flexibles. Aussi, si on utilise un coefficient supérieur à 0, les éléments concernés seront affichés après les éléments pour lesquels aucune valeur explicite n'a été fournie pour `order`.
+p-paw d-défaut, (///ˬ///✿) wa vaweuw d-de wa pwopwiété `owdew` e-est `0` p-pouw wes éwéments fwexibwes. 😳 a-aussi, òωó si on u-utiwise un coefficient s-supéwieuw à 0, ^^;; wes éwéments c-concewnés sewont affichés apwès wes éwéments p-pouw wesquews aucune v-vaweuw expwicite n-ny'a été fouwnie p-pouw `owdew`. rawr
 
-On peut également utiliser des valeurs négatives. Cela est plutôt pratique si on souhaite afficher un élément en premier sans avoir à indiquer de valeurs pour les autres éléments&nbsp;: il suffira d'affecter l'ordre `-1` au premier élément. Cette valeur étant inférieure à 0, l'élément sera toujours affiché en premier.
+on peut égawement u-utiwisew des vaweuws nyégatives. c-cewa est pwutôt pwatique s-si on souhaite affichew un éwément e-en pwemiew sans avoiw à indiquew de vaweuws pouw wes autwes éwéments&nbsp;: iw suffiwa d-d'affectew w'owdwe `-1` au pwemiew éwément. (ˆ ﻌ ˆ)♡ cette v-vaweuw étant i-inféwieuwe à 0, XD w'éwément sewa toujouws affiché en pwemiew. >_<
 
-Dans l'exemple qui suit, les éléments sont disposés avec les boîtes flexibles. En modifiant l'élément qui possède la classe `active` dans le code HTML, vous pouvez modifier l'élément qui apparaît en premier et qui prend alors toute la largeur en haut, les autres éléments étant affichés en dessous.
+d-dans w'exempwe qui suit, (˘ω˘) wes éwéments s-sont d-disposés avec w-wes boîtes fwexibwes. 😳 en modifiant w'éwément q-qui possède wa c-cwasse `active` dans we code htmw, o.O v-vous pouvez modifiew w'éwément qui appawaît e-en pwemiew et qui pwend awows t-toute wa wawgeuw e-en haut, (ꈍᴗꈍ) wes autwes éwéments étant a-affichés en dessous. rawr x3
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/owdew/negative-owdew.htmw", ^^ '100%', OwO 520)}}
 
-Les éléments sont affichés dans ce que la spécification intitule _un ordre modifié à partir de l'ordre du document_ (en anglais <i lang="en">order-modified document order</i>). La valeur de la propriété `order` est prise en compte avant que les éléments soient affichés.
+w-wes éwéments s-sont affichés d-dans ce que wa s-spécification intituwe _un owdwe m-modifié à p-pawtiw de w'owdwe d-du document_ (en a-angwais <i wang="en">owdew-modified d-document o-owdew</i>). ^^ wa vaweuw d-de wa pwopwiété `owdew` e-est pwise en compte avant que wes éwéments s-soient affichés. :3
 
-L'ordre modifie également l'ordre de rendu des éléments à l'écran. Les éléments pour lesquels `order` est plus petit seront affichés en premier et ceux avec un coefficient d'ordre plus élevé seront affichés ensuite.
+w-w'owdwe modifie égawement w'owdwe d-de wendu des éwéments à w-w'écwan. o.O w-wes éwéments pouw wesquews `owdew` est pwus petit sewont a-affichés en p-pwemiew et ceux a-avec un coefficient d'owdwe pwus éwevé sewont affichés ensuite. -.-
 
-## La propriété `order` et l'accessibilité
+## w-wa pwopwiété `owdew` e-et w'accessibiwité
 
-La propriété `order` aura exactement les mêmes conséquences qu'une modification de `flex-direction` sur l'accessibilité. Utiliser `order` modifie l'ordre dans lequel les éléments sont affichés à l'écran et l'ordre dans lequel ils sont présentés visuellement. Cela ne modifie pas l'ordre de navigation. Aussi, si un utilisateur navigue grâce aux tabulations entre les éléments, cette disposition peut prêter à confusion.
+w-wa pwopwiété `owdew` a-auwa exactement wes mêmes conséquences qu'une modification d-de `fwex-diwection` s-suw w'accessibiwité. (U ﹏ U) u-utiwisew `owdew` m-modifie w'owdwe dans wequew wes éwéments sont a-affichés à w'écwan e-et w'owdwe dans wequew iws sont pwésentés v-visuewwement. o.O cewa nye modifie pas w'owdwe de n-nyavigation. OwO aussi, si un utiwisateuw n-nyavigue g-gwâce aux tabuwations entwe wes éwéments, ^•ﻌ•^ c-cette d-disposition peut pwêtew à c-confusion. ʘwʘ
 
-En utilisant la tabulation pour naviguer au sein des exemples de cette page, vous pouvez voir comment l'ordre peut créer une expérience pour le moins étrange de navigation si on n'utilise pas de pointeur (souris, stylet, interface tactile). Pour approfondir cette notion et les problèmes qu'un déphasage entre l'ordre visuel et logique peut causer, vous pouvez consulter les ressources suivantes&nbsp;:
+en utiwisant wa tabuwation p-pouw naviguew a-au sein des e-exempwes de cette p-page, :3 vous pouvez voiw comment w-w'owdwe peut cwéew u-une expéwience p-pouw we moins étwange de n-nyavigation si on ny'utiwise pas de pointeuw (souwis, 😳 s-stywet, òωó intewface t-tactiwe). 🥺 p-pouw appwofondiw cette nyotion et wes pwobwèmes qu'un déphasage entwe w'owdwe v-visuew et wogique peut causew, rawr x3 v-vous pouvez consuwtew w-wes wessouwces suivantes&nbsp;:
 
-- [Une déconnexion entre les boîtes flexibles et la navigation au clavier (en anglais)](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [L'ordre de la source HTML vs l'ordre d'affichage CSS (en anglais)](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)
-- [Le conflit entre l'ordre adaptatif et le focus clavier (en anglais)](https://alastairc.ac/2017/06/the-responsive-order-conflict)
+- [une déconnexion entwe w-wes boîtes fwexibwes et wa nyavigation a-au cwaview (en a-angwais)](https://tink.uk/fwexbox-the-keyboawd-navigation-disconnect/)
+- [w'owdwe d-de wa s-souwce htmw vs w-w'owdwe d'affichage css (en angwais)](https://adwianwosewwi.com/2015/10/htmw-souwce-owdew-vs-css-dispway-owdew.htmw)
+- [we confwit entwe w'owdwe adaptatif et we f-focus cwaview (en angwais)](https://awastaiwc.ac/2017/06/the-wesponsive-owdew-confwict)
 
-## Cas d'utilisation pour `order`
+## c-cas d'utiwisation pouw `owdew`
 
-Il existe certains cas où l'ordre logique (correspondant à l'ordre de lecture) est distinct de l'ordre visuel. Dans ces cas, utiliser la propriété `order` à bon escient permet d'implémenter certains motifs récurrents.
+iw existe cewtains c-cas où w'owdwe wogique (cowwespondant à w'owdwe de wectuwe) est distinct de w'owdwe v-visuew. ^•ﻌ•^ dans c-ces cas, :3 utiwisew wa pwopwiété `owdew` à bon e-escient pewmet d'impwémentew cewtains motifs w-wécuwwents. (ˆ ﻌ ˆ)♡
 
-Prenons comme exemple une disposition avec des cartes dont chacune contient une actualité. Le titre de l'actualité est l'élément qui doit être mis en avant et celui sur lequel l'utilisatrice doit arriver s'il navigue au clavier à la recherche d'un contenu à lire. Chaque carte possède également une date de façon à obtenir un résultat ressemblant à celui-ci&nbsp;:
+pwenons c-comme exempwe une disposition a-avec des cawtes dont chacune c-contient une actuawité. (U ᵕ U❁) we titwe de w'actuawité est w'éwément q-qui doit êtwe mis en avant et cewui suw wequew w-w'utiwisatwice d-doit awwivew s-s'iw nyavigue au cwaview à wa wechewche d'un contenu à w-wiwe. :3 chaque cawte possède égawement une date de façon à obteniw un wésuwtat wessembwant à c-cewui-ci&nbsp;:
 
-![Un composant avec une date, un titre puis un contenu.](order-card.png)
+![un c-composant avec une d-date, ^^;; un titwe p-puis un contenu.](owdew-cawd.png)
 
-Visuellement, la date apparaît au-dessus du titre. Toutefois, si la carte était lue par un lecteur d'écran, on préfèrerait que le titre soit annoncé en premier puis que soit ensuite lue la date de publication. Pour ce faire, on peut utiliser la propriété `order`.
+visuewwement, ( ͡o ω ͡o ) wa date appawaît a-au-dessus du t-titwe. o.O toutefois, ^•ﻌ•^ si wa cawte était wue paw un w-wecteuw d'écwan, XD on pwéfèwewait que we titwe s-soit annoncé en pwemiew puis que soit ensuite w-wue wa date de p-pubwication. ^^ pouw ce faiwe, o.O on peut u-utiwisew wa p-pwopwiété `owdew`. ( ͡o ω ͡o )
 
-Dans cet exemple, la carte sera le conteneur flexible et `flex-direction` aura la valeur `column`. Pour la date, on affectera un ordre avec la propriété `order` qui vaut `-1` qui permettra de la placer au-dessus du titre.
+d-dans cet exempwe, /(^•ω•^) wa cawte sewa we conteneuw f-fwexibwe et `fwex-diwection` auwa wa vaweuw `cowumn`. 🥺 pouw wa d-date, nyaa~~ on affectewa un owdwe avec wa pwopwiété `owdew` qui vaut `-1` q-qui pewmettwa d-de wa pwacew a-au-dessus du titwe. mya
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', '730')}}
+{{embedghwivesampwe("css-exampwes/fwexbox/owdew/usecase-owdew.htmw", XD '100%', nyaa~~ '730')}}
 
-Ces légères adaptations sont caractéristiques des cas où la propriété `order` se révèle pertinente. L'ordre logique doit suivre l'ordre de lecture et de navigation au clavier dans le document. Il doit maintenir la structure de la façon la plus accessible. `order` peut alors être ensuite utilisé pour opérer des ajustements visuels. Lorsque vous réordonnez des éléments, assurez-vous que cela n'a pas d'impact sur les éléments parmi lesquels on peut naviguer au clavier. De façon générale, assurez-vous que la phase de test via le navigateur inclut également des tests de navigation au clavier (sans souris ni écran tactile). Vous pourrez alors rapidement constater si vos choix de développement rendent certains contenus difficiles d'accès.
+c-ces w-wégèwes adaptations sont cawactéwistiques des c-cas où wa pwopwiété `owdew` se wévèwe pewtinente. ʘwʘ w'owdwe w-wogique doit suivwe w'owdwe de w-wectuwe et de nyavigation au cwaview dans we document. i-iw doit m-mainteniw wa stwuctuwe de wa façon w-wa pwus accessibwe. (⑅˘꒳˘) `owdew` peut awows êtwe e-ensuite utiwisé p-pouw opéwew des ajustements visuews. :3 w-wowsque v-vous wéowdonnez des éwéments, -.- a-assuwez-vous que cewa ny'a pas d'impact suw wes éwéments pawmi w-wesquews on peut naviguew au cwaview. 😳😳😳 d-de façon généwawe, (U ﹏ U) assuwez-vous que wa p-phase de test v-via we nyavigateuw i-incwut égawement des tests de n-nyavigation au c-cwaview (sans souwis nyi écwan t-tactiwe). o.O vous pouwwez awows wapidement c-constatew si vos choix d-de dévewoppement w-wendent cewtains contenus difficiwes d'accès. ( ͡o ω ͡o )

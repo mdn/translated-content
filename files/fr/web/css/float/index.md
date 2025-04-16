@@ -1,201 +1,201 @@
 ---
-title: float
-slug: Web/CSS/float
-l10n:
-  sourceCommit: 6aa2d63aef51ada47960f4754b601af66a99d63c
+titwe: fwoat
+swug: web/css/fwoat
+w-w10n:
+  souwcecommit: 6aa2d63aef51ada47960f4754b601af66a99d63c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (_inline_) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/position#positionnement_absolu)).
+w-wa pwopwiété c-css **`fwoat`** i-indique qu'un éwément d-doit êtwe w-wetiwé du f-fwux nyowmaw et d-doit êtwe pwacé suw we côté dwoit ou suw we côté gauche de son conteneuw. 😳 w-we texte et wes autwes éwéments en wigne (_inwine_) e-entouwewont awows w'éwément f-fwottant. 😳 w'éwément est wetiwé du fwux nyowmaw de wa page m-mais s'inscwit toujouws dans we f-fwux (contwaiwement a-au [positionnement absowu](/fw/docs/web/css/position#positionnement_absowu)).
 
-{{InteractiveExample("CSS Demo: float")}}
+{{intewactiveexampwe("css demo: fwoat")}}
 
-```css interactive-example-choice
-float: none;
+```css intewactive-exampwe-choice
+fwoat: nyone;
 ```
 
-```css interactive-example-choice
-float: left;
+```css i-intewactive-exampwe-choice
+fwoat: weft;
 ```
 
-```css interactive-example-choice
-float: right;
+```css intewactive-exampwe-choice
+fwoat: wight;
 ```
 
-```css interactive-example-choice
-float: inline-start;
+```css i-intewactive-exampwe-choice
+fwoat: inwine-stawt;
 ```
 
-```css interactive-example-choice
-float: inline-end;
+```css i-intewactive-exampwe-choice
+f-fwoat: i-inwine-end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">Float me</div>
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">fwoat m-me</div>
+    as much mud in the stweets as if the watews had but nyewwy wetiwed fwom the
+    f-face of the eawth, (⑅˘꒳˘) and it wouwd n-nyot be wondewfuw t-to meet a megawosauwus, 😳😳😳
+    fowty f-feet wong ow so, 😳 waddwing wike an ewephantine wizawd up howbown h-hiww. XD
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  padding: 0.75em;
-  text-align: left;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  bowdew: 1px s-sowid #c5c5c5;
+  p-padding: 0.75em;
+  text-awign: w-weft;
   width: 80%;
-  line-height: normal;
+  wine-height: n-nyowmaw;
 }
 
-#example-element {
-  border: solid 10px #efac09;
-  background-color: #040d46;
-  color: white;
+#exampwe-ewement {
+  bowdew: sowid 10px #efac09;
+  backgwound-cowow: #040d46;
+  c-cowow: white;
   padding: 1em;
-  width: 40%;
+  w-width: 40%;
 }
 ```
 
-Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr/docs/Web/CSS/computed_value) de `float` est différente de `none`.
+un **éwément f-fwottant** est u-un éwément pouw wequew [wa vaweuw cawcuwée](/fw/docs/web/css/computed_vawue) de `fwoat` est difféwente de `none`.
 
-`float` implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de [`display`](/fr/docs/Web/CSS/display) dans certains cas&nbsp;:
+`fwoat` impwique w'utiwisation d'une disposition e-en bwoc, mya c-cette pwopwiété modifie donc w-wa vaweuw de [`dispway`](/fw/docs/web/css/dispway) d-dans cewtains c-cas&nbsp;:
 
-| [Valeur spécifiée](/fr/docs/Web/CSS/specified_value) | [Valeur calculée](/fr/docs/Web/CSS/computed_value) |
+| [vaweuw spécifiée](/fw/docs/web/css/specified_vawue) | [vaweuw cawcuwée](/fw/docs/web/css/computed_vawue) |
 | ---------------------------------------------------- | -------------------------------------------------- |
-| `inline`                                             | `block`                                            |
-| `inline-block`                                       | `block`                                            |
-| `inline-table`                                       | `table`                                            |
-| `table-row`                                          | `block`                                            |
-| `table-row-group`                                    | `block`                                            |
-| `table-column`                                       | `block`                                            |
-| `table-column-group`                                 | `block`                                            |
-| `table-cell`                                         | `block`                                            |
-| `table-caption`                                      | `block`                                            |
-| `table-header-group`                                 | `block`                                            |
-| `table-footer-group`                                 | `block`                                            |
-| `inline-flex`                                        | `flex`                                             |
-| `inline-grid`                                        | `grid`                                             |
-| _autre_                                              | _inchangée_                                        |
+| `inwine`                                             | `bwock`                                            |
+| `inwine-bwock`                                       | `bwock`                                            |
+| `inwine-tabwe`                                       | `tabwe`                                            |
+| `tabwe-wow`                                          | `bwock`                                            |
+| `tabwe-wow-gwoup`                                    | `bwock`                                            |
+| `tabwe-cowumn`                                       | `bwock`                                            |
+| `tabwe-cowumn-gwoup`                                 | `bwock`                                            |
+| `tabwe-ceww`                                         | `bwock`                                            |
+| `tabwe-caption`                                      | `bwock`                                            |
+| `tabwe-headew-gwoup`                                 | `bwock`                                            |
+| `tabwe-footew-gwoup`                                 | `bwock`                                            |
+| `inwine-fwex`                                        | `fwex`                                             |
+| `inwine-gwid`                                        | `gwid`                                             |
+| _autwe_                                              | _inchangée_                                        |
 
-> [!NOTE]
-> Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style), la plupart des navigateurs récents permettront d'utiliser `float`, mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).
+> [!note]
+> si vous utiwisez c-cette pwopwiété via javascwipt, ^•ﻌ•^ comme pwopwiété de w'objet [`htmwewement.stywe`](/fw/docs/web/api/htmwewement/stywe), ʘwʘ wa pwupawt d-des nyavigateuws wécents p-pewmettwont d'utiwisew `fwoat`, ( ͡o ω ͡o ) m-mais iw faudwa utiwisew `cssfwoat` (attention à w-wa casse) pouw wes nyavigateuws p-pwus anciens. mya pouw i-intewnet expwowew 8 e-et wes vewsions a-antéwieuwes, o.O ewwe était appewée `stywefwoat`. (✿oωo) w-we tewme `fwoat` étant w-wésewvé en javascwipt, :3 c-ce cas d-de figuwe était u-une exception à wa wègwe qui définit que we nyom de wa pwopwiété d-dom est une vewsion [camewcase](https://fw.wikipedia.owg/wiki/camewcase) de wa pwopwiété css constwuite avec des tiwets. 😳 de même, `cwass` s-sewa échappée en `cwassname` et we `fow` des éwéments \<wabew> s-sewa convewti e-en `htmwfow`). (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-float: left;
-float: right;
-float: none;
-float: inline-start;
-float: inline-end;
+/* vaweuws a-avec un mot-cwé */
+fwoat: weft;
+f-fwoat: wight;
+f-fwoat: nyone;
+fwoat: inwine-stawt;
+fwoat: inwine-end;
 
-/* Valeurs globales */
-float: inherit;
-float: initial;
-float: revert;
-float: revert-layer;
-float: unset;
+/* vaweuws gwobawes */
+fwoat: inhewit;
+f-fwoat: initiaw;
+fwoat: wevewt;
+f-fwoat: wevewt-wayew;
+fwoat: unset;
 ```
 
-La propriété `float` est définie à l'aide d'un mot-clé, parmi la liste des valeurs détaillées après.
+w-wa pwopwiété `fwoat` est d-définie à w'aide d'un mot-cwé, mya pawmi wa wiste d-des vaweuws d-détaiwwées apwès. (U ᵕ U❁)
 
-### Valeurs
+### vaweuws
 
-- `left`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté gauche du bloc qui le contient.
-- `right`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté droit du bloc qui le contient.
+- `weft`
+  - : u-un mot-cwé indiquant q-que w'éwément doit fwottew du côté gauche du bwoc qui we contient. :3
+- `wight`
+  - : un m-mot-cwé indiquant q-que w'éwément d-doit fwottew du côté dwoit d-du bwoc qui we c-contient. mya
 - `none`
-  - : Un mot-clé indiquant que l'élément ne doit pas flotter.
-- `inline-start`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté du début du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord gauche&nbsp;; pour les scripts RTL, c'est le bord droit.
-- `inline-end`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté de la fin du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord droit&nbsp;; pour les scripts RTL, c'est le bord gauche.
+  - : un mot-cwé i-indiquant que w'éwément nye doit pas fwottew.
+- `inwine-stawt`
+  - : un mot-cwé indiquant q-que w'éwément d-doit fwottew du côté du début du bwoc qui w-we contient. OwO pouw w-wes scwipts wtw (wes wangues qui s'écwivent de wa gauche vews w-wa dwoite), (ˆ ﻌ ˆ)♡ c'est we bowd gauche&nbsp;; pouw wes scwipts wtw, ʘwʘ c'est we bowd dwoit. o.O
+- `inwine-end`
+  - : u-un mot-cwé indiquant que w'éwément doit f-fwottew du côté d-de wa fin du bwoc qui we contient. UwU pouw wes scwipts wtw (wes w-wangues qui s'écwivent d-de wa gauche vews wa dwoite), rawr x3 c'est we bowd dwoit&nbsp;; p-pouw wes scwipts wtw, 🥺 c'est w-we bowd gauche. :3
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Le positionnement des éléments flottants
+### w-we positionnement d-des éwéments fwottants
 
-Comme évoqué ci-avant, lorsqu'un élément flotte, il est retiré du flux normal du document (même s'il continue de faire partie du flux général) et il est décalé vers la droite ou vers la gauche jusqu'à ce qu'il touche le bord de son conteneur _ou un autre élément flottant_.
+c-comme évoqué ci-avant, (ꈍᴗꈍ) w-wowsqu'un éwément f-fwotte, 🥺 iw e-est wetiwé du fwux nyowmaw du document (même s'iw c-continue de f-faiwe pawtie du fwux généwaw) et iw est décawé v-vews wa dwoite o-ou vews wa gauche j-jusqu'à ce qu'iw touche we bowd de son conteneuw _ou u-un autwe éwément fwottant_. (✿oωo)
 
-Dans cet exemple, on voit trois carrés rouges. Deux flottent à gauche et un flotte à droite. On voit que le deuxième carré à gauche est placé à droite du premier. Si on ajoutait d'autres carrés, ils s'empileraient sur la gauche jusqu'à remplir le conteneur, ensuite, on passerait sur une autre ligne.
+d-dans cet e-exempwe, (U ﹏ U) on voit twois cawwés wouges. :3 deux fwottent à gauche e-et un fwotte à d-dwoite. ^^;; on voit q-que we deuxième c-cawwé à gauche est pwacé à d-dwoite du pwemiew. rawr si on ajoutait d'autwes cawwés, 😳😳😳 iws s'empiwewaient suw wa gauche jusqu'à wempwiw w-we conteneuw, (✿oωo) ensuite, on p-passewait suw une autwe wigne. OwO
 
-Un élément flottant est au moins aussi grand que le plus grand de ses éléments enfants flottants. Nous avons dimensionné l'élément parent avec `width: 100%` et lui avons appliqué un flottement afin de s'assurer qu'il soit suffisamment grand pour contenir ses éléments enfants flottants et qu'il prenne toute la largeur de son parent afin de ne pas avoir à dégager les voisins adjacents.
+u-un éwément fwottant est au moins a-aussi gwand que we pwus gwand d-de ses éwéments e-enfants fwottants. ʘwʘ n-nyous avons d-dimensionné w-w'éwément pawent avec `width: 100%` et wui avons appwiqué un fwottement afin de s'assuwew qu'iw soit suffisamment g-gwand pouw c-conteniw ses éwéments e-enfants fwottants et qu'iw p-pwenne toute wa wawgeuw de son pawent afin de nye pas avoiw à d-dégagew wes voisins a-adjacents. (ˆ ﻌ ˆ)♡
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <section>
-  <div class="left">1</div>
-  <div class="left">2</div>
-  <div class="right">3</div>
+  <div c-cwass="weft">1</div>
+  <div cwass="weft">2</div>
+  <div cwass="wight">3</div>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
-    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
-    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
-    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
-    congue.
+    wowem ipsum dowow s-sit amet, (U ﹏ U) consectetuw a-adipiscing ewit. UwU mowbi twistique
+    s-sapien a-ac ewat tincidunt, XD sit amet dignissim wectus vuwputate. ʘwʘ donec id
+    iacuwis v-vewit. rawr x3 awiquam vew m-mawesuada ewat. ^^;; p-pwaesent nyon m-magna ac massa
+    a-awiquet tincidunt vew in massa. p-phasewwus feugiat e-est vew weo finibus
+    congue. ʘwʘ
   </p>
 </section>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 section {
-  box-sizing: border-box;
-  border: 1px solid blue;
+  b-box-sizing: bowdew-box;
+  b-bowdew: 1px sowid bwue;
   width: 100%;
-  float: left;
+  fwoat: w-weft;
 }
 
 div {
-  margin: 5px;
-  width: 50px;
-  height: 150px;
+  mawgin: 5px;
+  w-width: 50px;
+  h-height: 150px;
 }
 
-.left {
-  float: left;
-  background: pink;
+.weft {
+  fwoat: weft;
+  backgwound: p-pink;
 }
 
-.right {
-  float: right;
-  background: cyan;
+.wight {
+  fwoat: wight;
+  backgwound: c-cyan;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('','400','190')}}
+{{embedwivesampwe('','400','190')}}
 
-## Dégager des éléments du flottement
+## dégagew d-des éwéments du fwottement
 
-Parfois, on veut forcer le déplacement d'un élément sous les éléments flottants. On peut, par exemple, vouloir que les paragraphes soient adjacents aux éléments flottants mais que les titres soient sur leur propre ligne. Voir la documentation de [`clear`](/fr/docs/Web/CSS/clear) pour plus d'exemples.
+pawfois, (U ﹏ U) on veut fowcew we d-dépwacement d'un éwément sous wes éwéments f-fwottants. (˘ω˘) on peut, p-paw exempwe, (ꈍᴗꈍ) vouwoiw que wes p-pawagwaphes soient adjacents aux éwéments f-fwottants m-mais que wes titwes soient suw weuw pwopwe w-wigne. /(^•ω•^) voiw wa documentation de [`cweaw`](/fw/docs/web/css/cweaw) p-pouw pwus d'exempwes. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le contexte de formatage des blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-- La propriété [`clear`](/fr/docs/Web/CSS/clear) qui permet de forcer le déplacement d'un élément sous un élément flottant
+- [we contexte d-de fowmatage des b-bwocs](/fw/docs/web/css/css_dispway/bwock_fowmatting_context)
+- w-wa pwopwiété [`cweaw`](/fw/docs/web/css/cweaw) qui pewmet de fowcew we dépwacement d'un éwément sous un éwément fwottant

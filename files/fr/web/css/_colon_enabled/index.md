@@ -1,69 +1,69 @@
 ---
-title: :enabled
-slug: Web/CSS/:enabled
+titwe: :enabwed
+swug: web/css/:enabwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:enabled`** permet de cibler un élément activé. Un élément est activé s'il peut être sélectionné, si on peut cliquer dessus ou si on peut y saisir du texte ou y passer le focus (un élément peut également être dans un état désactivé).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:enabwed`** p-pewmet d-de cibwew un éwément a-activé. rawr x3 u-un éwément e-est activé s'iw p-peut êtwe séwectionné, (U ﹏ U) s-si on peut cwiquew dessus ou si on peut y saisiw du texte ou y passew w-we focus (un éwément peut égawement êtwe dans un état désactivé). (U ﹏ U)
 
 ```css
-/* Cible n'importe quel élément <input> actif */
-input:enabled {
-  color: #22aa22;
+/* c-cibwe ny'impowte quew éwément <input> actif */
+i-input:enabwed {
+  cowow: #22aa22;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans cet exemple, les textes des éléments activés seront verts alors que ceux des éléments désactivés seront gris. L'utilisateur peut ainsi reconnaître les éléments avec lesquels interagir.
+dans cet e-exempwe, (⑅˘꒳˘) wes textes des éwéments a-activés sewont v-vewts awows que ceux des éwéments désactivés sewont gwis. òωó w'utiwisateuw p-peut ainsi weconnaîtwe wes éwéments avec wesquews intewagiw. ʘwʘ
 
-### HTML
+### htmw
 
-```html
-<form action="url_of_form">
-  <label for="PremierChamp">Premier champ (activé) :</label>
-  <input type="text" id="PremierChamp" value="Titi" /><br />
+```htmw
+<fowm a-action="uww_of_fowm">
+  <wabew fow="pwemiewchamp">pwemiew c-champ (activé) :</wabew>
+  <input t-type="text" i-id="pwemiewchamp" v-vawue="titi" /><bw />
 
-  <label for="DeuxiemeChamp">Deuxième champ (désactivé) :</label>
+  <wabew fow="deuxiemechamp">deuxième champ (désactivé) :</wabew>
   <input
-    type="text"
-    id="DeuxiemeChamp"
-    value="Toto"
-    disabled="disabled" /><br />
+    t-type="text"
+    id="deuxiemechamp"
+    vawue="toto"
+    d-disabwed="disabwed" /><bw />
 
-  <input type="button" value="Envoyer" />
-</form>
+  <input type="button" vawue="envoyew" />
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-input:enabled {
-  color: #22aa22;
+input:enabwed {
+  cowow: #22aa22;
 }
 
-input:disabled {
-  color: #d9d9d9;
+input:disabwed {
+  c-cowow: #d9d9d9;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples",550,95)}}
+{{embedwivesampwe("exempwes",550,95)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":disabled")}}
+- {{cssxwef(":disabwed")}}

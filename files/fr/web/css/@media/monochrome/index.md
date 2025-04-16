@@ -1,59 +1,59 @@
 ---
-title: monochrome
-slug: Web/CSS/@media/monochrome
+titwe: monochwome
+swug: web/css/@media/monochwome
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`monochrome`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin d'appliquer des styles en fonction du nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil.
+**`monochwome`** e-est une cawactéwistique m-média css (cf. σωσ {{cssxwef("@media")}}) q-qui peut êtwe u-utiwisée a-afin d'appwiquew d-des stywes en fonction d-du nyombwe d-de bits paw pixew utiwisés pouw we tampon d'affichage monochwome de w'appaweiw. OwO
 
-## Syntaxe
+## s-syntaxe
 
-La caractéristique `monochrome` est un entier (type {{cssxref("&lt;integer&gt;")}})) dont la valeur correspond au nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil. Si l'appareil n'est pas monochrome, cela vaudra 0. Cette caractéristique est une caractéristique d'intervalle ce qui signifie qu'on peut également utiliser les variantes préfixées **`min-monochrome`** et **`max-monochrome`** afin de cibler les règles en fonction d'un minimum ou d'un maximum.
+wa cawactéwistique `monochwome` est un entiew (type {{cssxwef("&wt;integew&gt;")}})) d-dont wa vaweuw cowwespond a-au nyombwe de bits paw pixew utiwisés pouw we tampon d'affichage m-monochwome de w'appaweiw. 😳😳😳 si w-w'appaweiw ny'est p-pas monochwome, 😳😳😳 cewa vaudwa 0. o.O cette cawactéwistique est une cawactéwistique d-d'intewvawwe ce qui signifie qu'on peut égawement utiwisew wes vawiantes pwéfixées **`min-monochwome`** e-et **`max-monochwome`** afin de cibwew w-wes wègwes en f-fonction d'un m-minimum ou d'un m-maximum. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p class="mono">Votre appareil prend en charge les pixels monochrome !</p>
-<p class="no-mono">
-  Votre appareil ne prend pas en charge les pixels monochromes.
+```htmw
+<p cwass="mono">votwe appaweiw p-pwend en chawge wes pixews monochwome !</p>
+<p c-cwass="no-mono">
+  votwe appaweiw nye pwend pas en chawge wes pixews monochwomes. (U ﹏ U)
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-p {
-  display: none;
+p-p {
+  dispway: nyone;
 }
 
-/* Any monochrome device */
-@media (monochrome) {
-  p.mono {
-    display: block;
-    color: #333;
+/* any m-monochwome device */
+@media (monochwome) {
+  p-p.mono {
+    dispway: b-bwock;
+    cowow: #333;
   }
 }
 
-/* Any non-monochrome device */
-@media (monochrome: 0) {
-  p.no-mono {
-    display: block;
-    color: #ee3636;
+/* any nyon-monochwome device */
+@media (monochwome: 0) {
+  p-p.no-mono {
+    d-dispway: bwock;
+    cowow: #ee3636;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

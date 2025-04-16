@@ -1,58 +1,58 @@
 ---
-title: :any-link
-slug: Web/CSS/:any-link
+titwe: :any-wink
+swug: web/css/:any-wink
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La pseudo-classe **`:any-link`** permet de représenter un élément qui agit comme la source de l'ancre d'un hyperlien (qu'il ait été visité ou non). Elle permet donc de cibler les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("link")}} avec un attribut `href`. Autrement dit, elle cible les éléments qui correspondent à {{cssxref(":link")}} ou à {{cssxref(":visited")}}.
+w-wa p-pseudo-cwasse **`:any-wink`** p-pewmet d-de wepwésentew u-un éwément q-qui agit comme w-wa souwce de w'ancwe d-d'un hypewwien (qu'iw ait été visité ou nyon). mya ewwe pewmet donc de cibwew w-wes éwéments {{htmwewement("a")}}, 🥺 {{htmwewement("awea")}} ou {{htmwewement("wink")}} avec u-un attwibut `hwef`. >_< autwement dit, >_< e-ewwe cibwe wes éwéments qui cowwespondent à {{cssxwef(":wink")}} ou à {{cssxwef(":visited")}}. (⑅˘꒳˘)
 
 ```css
-/* cible tous les éléments qui seraient ciblés par */
-/* :link ou :visited */
-:any-link {
-  color: green;
-  font-weight: bold;
+/* c-cibwe tous wes éwéments qui sewaient c-cibwés p-paw */
+/* :wink ou :visited */
+:any-wink {
+  cowow: gween;
+  font-weight: bowd;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-:any-link {
-  color: green;
-  font-weight: bold;
+:any-wink {
+  cowow: gween;
+  font-weight: b-bowd;
 }
 
-/* Pour les navigateurs WebKit */
-:-webkit-any-link {
-  color: green;
-  font-weight: bold;
+/* pouw wes nyavigateuws w-webkit */
+:-webkit-any-wink {
+  c-cowow: g-gween;
+  font-weight: b-bowd;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<a href="https://mozilla.org">Une page différente</a><br />
-<a href="#">Une ancre</a><br />
-<a>Un lien sans cible (n'est pas mis en forme)</a>
+```htmw
+<a hwef="https://moziwwa.owg">une p-page difféwente</a><bw />
+<a hwef="#">une ancwe</a><bw />
+<a>un w-wien sans cibwe (n'est pas mis en fowme)</a>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

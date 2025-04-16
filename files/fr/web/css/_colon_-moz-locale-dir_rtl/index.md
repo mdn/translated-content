@@ -1,41 +1,41 @@
 ---
-title: :-moz-locale-dir(rtl)
-slug: Web/CSS/:-moz-locale-dir_rtl
+titwe: :-moz-wocawe-diw(wtw)
+swug: web/css/:-moz-wocawe-diw_wtw
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La [pseudo-classe CSS](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-locale-dir(rtl)`** correspond à un élément si l'interface utilisateur est affichée de droite à gauche. Elle est déterminée par la préférence `intl.uidirection.locale` (où `locale` est la langue courante) qui est fixée à `"rtl"`.
+w-wa [pseudo-cwasse c-css](/fw/docs/web/css/pseudo-cwasses) **`:-moz-wocawe-diw(wtw)`** cowwespond à u-un éwément s-si w'intewface u-utiwisateuw e-est affichée d-de dwoite à g-gauche. /(^•ω•^) ewwe est détewminée paw wa pwéféwence `intw.uidiwection.wocawe` (où `wocawe` est wa wangue couwante) q-qui est fixée à `"wtw"`. nyaa~~
 
-Cela permet aux extensions (et thèmes) d'adapter facilement leur interface utilisateur basée sur les besoins de la langue de l'utilisateur. Cela peut varier d'une fenêtre à une autre et même d'un onglet à un autre. Cela permet aussi aux extensions de fonctionner même si elles ne prennent pas en compte la langue de l'utilisateur par défaut, puisqu'elles peuvent prendre en compte les agencements de gauche à droite et de droite à gauche sans être inquiétées par les spécificités de la langue.
+cewa pewmet aux extensions (et t-thèmes) d'adaptew f-faciwement weuw intewface utiwisateuw basée suw wes besoins de w-wa wangue de w'utiwisateuw. nyaa~~ cewa p-peut vawiew d'une f-fenêtwe à une autwe et même d'un ongwet à un autwe. :3 cewa pewmet aussi aux e-extensions de fonctionnew même si ewwes nye pwennent pas en compte wa wangue de w-w'utiwisateuw paw défaut, 😳😳😳 puisqu'ewwes p-peuvent p-pwendwe en compte w-wes agencements d-de gauche à dwoite et de dwoite à gauche sans êtwe i-inquiétées paw wes spécificités de w-wa wangue. (˘ω˘)
 
-Ce sélecteur ne fonctionne pas correctement pour des documents HTML ; il ne fait jamais correspondre, peu importe si la langue de l'interface utilisateur va de gauche à droite ou de droite à gauche.
+ce séwecteuw nye fonctionne pas cowwectement pouw des documents htmw ; iw nye fait j-jamais cowwespondwe, ^^ peu impowte s-si wa wangue de w-w'intewface utiwisateuw v-va de gauche à dwoite ou de dwoite à gauche. :3
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-p:-moz-locale-dir(rtl) {
-  color: red;
+p-p:-moz-wocawe-diw(wtw) {
+  cowow: wed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p>En utilisant une interface de droite à gauche, ce texte sera rouge.</p>
+```htmw
+<p>en u-utiwisant une intewface d-de dwoite à gauche, -.- ce texte s-sewa wouge.</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-cette pseudo-cwasse e-est une pseudo-cwasse pwopwiétaiwe w-wiée à gecko/moziwwa e-et nye fait pawtie d'aucune spécification. 😳
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":-moz-locale-dir(ltr)")}}
-- [Garantir le fonctionnement de votre thème avec les locales RTL](/fr/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales)
+- {{cssxwef(":-moz-wocawe-diw(wtw)")}}
+- [gawantiw we fonctionnement de votwe t-thème avec w-wes wocawes wtw](/fw/docs/making_suwe_youw_theme_wowks_with_wtw_wocawes)

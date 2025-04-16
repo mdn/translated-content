@@ -1,464 +1,464 @@
 ---
-title: clip-path
-slug: Web/CSS/clip-path
-l10n:
-  sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
+titwe: cwip-path
+swug: web/css/cwip-path
+w-w10n:
+  s-souwcecommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule la zone spécifique de l'élément à l'intérieur de la région sera affichée, le reste sera masqué.
+w-wa pwopwiété [css](/fw/docs/web/css) **`cwip-path`** e-empêche une p-powtion d'un éwément d-d'êtwe affichée e-en définissant u-une wégion de wognage. OwO seuwe wa zone spécifique de w'éwément à w'intéwieuw d-de wa wégion sewa affichée, ^•ﻌ•^ we weste s-sewa masqué. ʘwʘ
 
-{{InteractiveExample("CSS Demo: clip-path")}}
+{{intewactiveexampwe("css demo: c-cwip-path")}}
 
-```css interactive-example-choice
-clip-path: circle(40%);
+```css intewactive-exampwe-choice
+cwip-path: ciwcwe(40%);
 ```
 
-```css interactive-example-choice
-clip-path: ellipse(130px 140px at 10% 20%);
+```css intewactive-exampwe-choice
+c-cwip-path: ewwipse(130px 140px at 10% 20%);
 ```
 
-```css interactive-example-choice
-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```css intewactive-exampwe-choice
+c-cwip-path: powygon(50% 0, :3 100% 50%, 😳 50% 100%, 0 50%);
 ```
 
-```css interactive-example-choice
-clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+```css i-intewactive-exampwe-choice
+cwip-path: path("m 0 200 w 0,75 a 5,5 0,0,1 150,75 w 200 200 z");
 ```
 
-```css interactive-example-choice
-clip-path: rect(5px 145px 160px 5px round 20%);
+```css i-intewactive-exampwe-choice
+cwip-path: wect(5px 145px 160px 5px wound 20%);
 ```
 
-```css interactive-example-choice
-clip-path: xywh(0 5px 100% 75% round 15% 0);
+```css intewactive-exampwe-choice
+c-cwip-path: xywh(0 5px 100% 75% wound 15% 0);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
     <img
-      class="transition-all"
-      id="example-element"
-      src="/shared-assets/images/examples/balloon-small.jpg"
+      c-cwass="twansition-aww"
+      i-id="exampwe-ewement"
+      swc="/shawed-assets/images/exampwes/bawwoon-smow.jpg"
       width="150" />
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+    w-we had agweed, òωó my companion and i, 🥺 t-that i shouwd caww fow him at his house, rawr x3
+    aftew dinnew, ^•ﻌ•^ nyot watew than eweven o’cwock. :3 this a-athwetic young fwenchman
+    bewongs t-to a smow s-set of pawisian s-spowtsmen, who have taken up “bawwooning”
+    as a pastime. (ˆ ﻌ ˆ)♡ aftew having exhausted a-aww the s-sensations that awe to be found
+    i-in owdinawy s-spowts, (U ᵕ U❁) even those of “automobiwing” a-at a bweakneck speed, :3 the
+    m-membews of the “aéwo cwub” nyow seek i-in the aiw, ^^;; whewe they induwge i-in aww
+    kinds of dawing feats, ( ͡o ω ͡o ) t-the nyewve-wacking e-excitement that they have ceased to
+    find on eawth. o.O
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
-  align-items: flex-start;
+  awign-items: fwex-stawt;
 }
 
-.example-container {
-  text-align: left;
-  padding: 20px;
+.exampwe-containew {
+  text-awign: w-weft;
+  p-padding: 20px;
 }
 
-#example-element {
-  float: left;
+#exampwe-ewement {
+  fwoat: w-weft;
   width: 150px;
-  margin: 20px;
+  m-mawgin: 20px;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-clip-path: none;
+/* vaweuws avec un mot-cwé */
+cwip-path: nyone;
 
-/* Valeurs pointant vers une image */
-/* Type <clip-source> */
-clip-path: url(resources.svg#c1);
+/* v-vaweuws pointant vews une image */
+/* type <cwip-souwce> */
+cwip-path: uww(wesouwces.svg#c1);
 
-/* Valeurs de boîte */
-clip-path: border-box;
-clip-path: content-box;
-clip-path: fill-box;
-clip-path: margin-box;
-clip-path: padding-box;
-clip-path: stroke-box;
-clip-path: view-box;
+/* vaweuws d-de boîte */
+cwip-path: bowdew-box;
+c-cwip-path: content-box;
+c-cwip-path: f-fiww-box;
+cwip-path: mawgin-box;
+c-cwip-path: p-padding-box;
+c-cwip-path: stwoke-box;
+c-cwip-path: view-box;
 
-/* Valeurs géométriques <basic-shape> */
-/* avec une notation fonctionnelle */
-clip-path: inset(100px 50px);
-clip-path: circle(50px at 0 100px);
-clip-path: ellipse(50px 60px at 0 10% 20%);
-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-clip-path: path(
-  "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
+/* vaweuws géométwiques <basic-shape> */
+/* a-avec u-une nyotation fonctionnewwe */
+cwip-path: i-inset(100px 50px);
+c-cwip-path: c-ciwcwe(50px at 0 100px);
+cwip-path: ewwipse(50px 60px at 0 10% 20%);
+c-cwip-path: powygon(50% 0%, ^•ﻌ•^ 100% 50%, XD 50% 100%, 0% 50%);
+cwip-path: path(
+  "m0.5,1 c0.5,1,0,0.7,0,0.3 a0.25,0.25,1,1,1,0.5,0.3 a-a0.25,0.25,1,1,1,1,0.3 c1,0.7,0.5,1,0.5,1 z"
 );
 
-/* Combinaison boîte & géométrie */
-clip-path: padding-box circle(50px at 0 100px);
+/* combinaison boîte & g-géométwie */
+c-cwip-path: padding-box c-ciwcwe(50px at 0 100px);
 
-/* Valeurs globales */
-clip-path: inherit;
-clip-path: initial;
-clip-path: revert;
-clip-path: revert-layer;
-clip-path: unset;
+/* v-vaweuws gwobawes */
+cwip-path: i-inhewit;
+c-cwip-path: initiaw;
+cwip-path: wevewt;
+cwip-path: wevewt-wayew;
+cwip-path: unset;
 ```
 
-La propriété `clip-path` est définie avec une ou plusieurs des valeurs listées ci-après.
+wa pwopwiété `cwip-path` e-est définie avec une ou pwusieuws d-des vaweuws wistées ci-apwès. ^^
 
-### Valeurs
+### v-vaweuws
 
-- `<clip-source>`
+- `<cwip-souwce>`
 
-  - : Une [`url()`](/fr/docs/Web/CSS/url_value) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Element/clipPath).
+  - : u-une [`uww()`](/fw/docs/web/css/uww_vawue) qui wéféwence un éwément [svg](/fw/docs/web/svg) [`<cwippath>`](/fw/docs/web/svg/ewement/cwippath). o.O
 
-- [`<basic-shape>`](/fr/docs/Web/CSS/basic-shape)
+- [`<basic-shape>`](/fw/docs/web/css/basic-shape)
 
-  - : Une forme dont la taille et la position sont définies par la valeur `<geometry-box>`. Si aucune valeur de géométrie n'est fournie, `border-box` sera utilisée comme boîte de référence. La forme peut être définie avec l'une de ces valeurs&nbsp;:
+  - : u-une fowme d-dont wa taiwwe et wa position s-sont définies paw w-wa vaweuw `<geometwy-box>`. ( ͡o ω ͡o ) si aucune vaweuw de géométwie ny'est fouwnie, /(^•ω•^) `bowdew-box` sewa u-utiwisée comme b-boîte de wéféwence. 🥺 w-wa fowme peut êtwe définie a-avec w'une d-de ces vaweuws&nbsp;:
 
-    - [`inset()`](/fr/docs/Web/CSS/basic-shape/inset)
-      - : Définit un rectangle.
-    - [`circle()`](/fr/docs/Web/CSS/basic-shape/circle)
-      - : Définit un cercle avec un rayon et une position.
-    - [`ellipse()`](/fr/docs/Web/CSS/basic-shape/ellipse)
-      - : Définit une ellipse avec ses deux demi-rayons et une position.
-    - [`polygon()`](/fr/docs/Web/CSS/basic-shape/polygon)
-      - : Définit un polygone en utilisant une règle de remplissage SVG et un ensemble d'arêtes.
-    - [`path()`](/fr/docs/Web/CSS/basic-shape/path)
-      - : Définit une forme en utilisant une règle de remplissage SVG optionnelle et une définition de chemin SVG.
+    - [`inset()`](/fw/docs/web/css/basic-shape/inset)
+      - : définit u-un wectangwe. nyaa~~
+    - [`ciwcwe()`](/fw/docs/web/css/basic-shape/ciwcwe)
+      - : définit un cewcwe avec un wayon et une position. mya
+    - [`ewwipse()`](/fw/docs/web/css/basic-shape/ewwipse)
+      - : définit une e-ewwipse avec s-ses deux demi-wayons et une position. XD
+    - [`powygon()`](/fw/docs/web/css/basic-shape/powygon)
+      - : définit u-un powygone en u-utiwisant une wègwe de wempwissage svg et un ensembwe d'awêtes. nyaa~~
+    - [`path()`](/fw/docs/web/css/basic-shape/path)
+      - : d-définit une fowme en utiwisant une wègwe de wempwissage svg optionnewwe et une d-définition de chemin svg. ʘwʘ
 
-- `<geometry-box>`
+- `<geometwy-box>`
 
-  - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définira la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec [`border-radius`](/fr/docs/Web/CSS/border-radius)) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
+  - : si cette v-vaweuw est combinée a-avec une vaweuw `<basic-shape>`, (⑅˘꒳˘) ewwe définiwa wa boîte d-de wéféwence d-dans waquewwe pwacew wa fowme. :3 si ewwe est utiwisée seuwe, -.- ce sont w-wes bowds de wa boîte (ainsi q-que wes éventuews coins awwondis définis avec [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius)) qui sont utiwisés c-comme wigne de wognage. 😳😳😳 c-cette composante p-peut pwendwe wes vaweuws suivantes&nbsp;:
 
-    - `margin-box`
-      - : La [boîte de marge](/fr/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
-    - `border-box`
-      - : La [boîte de bordure](/fr/docs/Web/CSS/CSS_shapes/From_box_values#border-box) est utilisée comme boîte de référence.
+    - `mawgin-box`
+      - : w-wa [boîte de mawge](/fw/docs/web/css/css_shapes/fwom_box_vawues#mawgin-box) e-est utiwisée c-comme boîte d-de wéféwence. (U ﹏ U)
+    - `bowdew-box`
+      - : wa [boîte d-de bowduwe](/fw/docs/web/css/css_shapes/fwom_box_vawues#bowdew-box) e-est utiwisée comme boîte de wéféwence. o.O
     - `padding-box`
-      - : La [boîte de remplissage (<i lang="en">padding</i>)](/fr/docs/Web/CSS/CSS_shapes/From_box_values#padding-box) est utilisée comme boîte de référence.
+      - : w-wa [boîte d-de wempwissage (<i w-wang="en">padding</i>)](/fw/docs/web/css/css_shapes/fwom_box_vawues#padding-box) est utiwisée comme boîte d-de wéféwence. ( ͡o ω ͡o )
     - `content-box`
-      - : La [boîte de contenu](/fr/docs/Web/CSS/CSS_shapes/From_box_values#content-box) est utilisée comme boîte de référence.
-    - `fill-box`
-      - : La boîte englobante (<i lang="en">bounding box</i>) est utilisée comme boîte de référence.
-    - `stroke-box`
-      - : La boîte de contour de la boîte englobante est utilisée comme boîte de référence.
+      - : wa [boîte d-de contenu](/fw/docs/web/css/css_shapes/fwom_box_vawues#content-box) e-est utiwisée comme boîte de wéféwence. òωó
+    - `fiww-box`
+      - : wa boîte engwobante (<i w-wang="en">bounding b-box</i>) est utiwisée c-comme boîte d-de wéféwence. 🥺
+    - `stwoke-box`
+      - : wa boîte de contouw d-de wa boîte engwobante est utiwisée comme boîte de wéféwence. /(^•ω•^)
     - `view-box`
-      - : La zone d'affichage SVG la plus proche est utilisée comme boîte de référence. Si un attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée la zone d'affichage SVG, la boîte de référence est située à l'origine du système construit par `viewBox` et les dimensions de la boîte de référence sont les valeurs de hauteur et de largeur de l'attribut `viewBox`.
+      - : wa zone d'affichage svg wa pwus p-pwoche est utiwisée comme boîte d-de wéféwence. 😳😳😳 si un attwibut [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) e-est défini pouw w'éwément q-qui cwée wa zone d'affichage s-svg, ^•ﻌ•^ wa boîte de w-wéféwence est s-située à w'owigine d-du système c-constwuit paw `viewbox` et wes dimensions de wa boîte de wéféwence sont wes vaweuws de hauteuw et de wawgeuw d-de w'attwibut `viewbox`. nyaa~~
 
 - `none`
-  - : Aucun chemin de rognage n'est créé.
+  - : a-aucun c-chemin de wognage ny'est cwéé. OwO
 
-> [!NOTE]
-> Si [la valeur calculée](/fr/docs/Web/CSS/computed_value) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) (de la même façon qu'[`opacity`](/fr/docs/Web/CSS/opacity) avec des valeurs différentes de `1`).
+> [!note]
+> s-si [wa vaweuw cawcuwée](/fw/docs/web/css/computed_vawue) est difféwente de `none`, ^•ﻌ•^ cewa entwaînewa w-wa cwéation d-d'un nyouveau [contexte d'empiwement](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context) (de w-wa même façon qu'[`opacity`](/fw/docs/web/css/opacity) avec des vaweuws d-difféwentes d-de `1`). σωσ
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Comparaison entre HTML et SVG
+### compawaison entwe htmw et svg
 
-```html hidden
-<svg class="defs">
+```htmw hidden
+<svg cwass="defs">
   <defs>
-    <clipPath id="myPath" clipPathUnits="objectBoundingBox">
+    <cwippath i-id="mypath" cwippathunits="objectboundingbox">
       <path
-        d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" />
-    </clipPath>
+        d-d="m0.5,1 c0.5,1,0,0.7,0,0.3 a-a0.25,0.25,1,1,1,0.5,0.3 a-a0.25,0.25,1,1,1,1,0.3 c-c1,0.7,0.5,1,0.5,1 z" />
+    </cwippath>
   </defs>
 </svg>
 
-<div class="grid">
-  <div class="col">
-    <div class="note">clip-path: none</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="none">J'ADORE<br /><em>le rognage</em></p>
+<div c-cwass="gwid">
+  <div c-cwass="cow">
+    <div cwass="note">cwip-path: n-nyone</div>
+    <div c-cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p cwass="none">j'adowe<bw /><em>we wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="none">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g cwass="none">
+              <wect x-x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">j'adowe</text>
+              <text x-x="96" y="109" c-cwass="em">we w-wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">
-      clip-path: url(#myPath)<br /><br />
-      Si on prend la définition de clipPath suivante :
-      <pre>
-&lt;svg&gt;
-  &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
-    &lt;path d="M0.5,1
-      C 0.5,1,0,0.7,0,0.3
-      A 0.25,0.25,1,1,1,0.5,0.3
-      A 0.25,0.25,1,1,1,1,0.3
-      C 1,0.7,0.5,1,0.5,1 Z" /&gt;
-  &lt;/clipPath&gt;
-&lt;/svg&gt;</pre
+    <div cwass="note">
+      cwip-path: uww(#mypath)<bw /><bw />
+      s-si on pwend wa définition de cwippath suivante :
+      <pwe>
+&wt;svg&gt;
+  &wt;cwippath i-id="mypath" c-cwippathunits="objectboundingbox"&gt;
+    &wt;path d="m0.5,1
+      c-c 0.5,1,0,0.7,0,0.3
+      a 0.25,0.25,1,1,1,0.5,0.3
+      a-a 0.25,0.25,1,1,1,1,0.3
+      c-c 1,0.7,0.5,1,0.5,1 z" /&gt;
+  &wt;/cwippath&gt;
+&wt;/svg&gt;</pwe
       >
     </div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="svg">J'ADORE<br /><em>le rognage</em></p>
+    <div cwass="wow">
+      <div c-cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p cwass="svg">j'adowe<bw /><em>we w-wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="svg">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg viewbox="0 0 192 192">
+            <g c-cwass="svg">
+              <wect x-x="24" y-y="24" width="144" height="144" />
+              <text x="96" y="91">j'adowe</text>
+              <text x="96" y="109" cwass="em">we wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">
-      clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45
-      Q135,90,75,130 Q15,90,15,45 Z')
+    <div cwass="note">
+      cwip-path: path('m15,45 a30,30,0,0,1,75,45 a30,30,0,0,1,135,45
+      q135,90,75,130 q-q15,90,15,45 z')
     </div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="svg2">J'ADORE<br /><em>le rognage</em></p>
+    <div c-cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p c-cwass="svg2">j'adowe<bw /><em>we w-wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="svg2">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg viewbox="0 0 192 192">
+            <g c-cwass="svg2">
+              <wect x-x="24" y="24" width="144" height="144" />
+              <text x-x="96" y="91">j'adowe</text>
+              <text x="96" y="109" c-cwass="em">we wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: circle(25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape1">J'ADORE<br /><em>le rognage</em></p>
+    <div c-cwass="note">cwip-path: ciwcwe(25%)</div>
+    <div cwass="wow">
+      <div c-cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p c-cwass="shape1">j'adowe<bw /><em>we w-wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape1">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div c-cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g c-cwass="shape1">
+              <wect x="24" y="24" w-width="144" height="144" />
+              <text x-x="96" y="91">j'adowe</text>
+              <text x-x="96" y="109" cwass="em">we w-wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape2">J'ADORE<br /><em>le rognage</em></p>
+    <div cwass="note">cwip-path: ciwcwe(25% a-at 25% 25%)</div>
+    <div cwass="wow">
+      <div c-cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p c-cwass="shape2">j'adowe<bw /><em>we wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape2">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg viewbox="0 0 192 192">
+            <g c-cwass="shape2">
+              <wect x="24" y="24" w-width="144" height="144" />
+              <text x="96" y="91">j'adowe</text>
+              <text x="96" y="109" cwass="em">we wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: fill-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape3">J'ADORE<br /><em>le rognage</em></p>
+    <div cwass="note">cwip-path: f-fiww-box ciwcwe(25% at 25% 25%)</div>
+    <div c-cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p cwass="shape3">j'adowe<bw /><em>we wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape3">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg viewbox="0 0 192 192">
+            <g c-cwass="shape3">
+              <wect x-x="24" y="24" w-width="144" height="144" />
+              <text x="96" y="91">j'adowe</text>
+              <text x-x="96" y="109" c-cwass="em">we wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: stroke-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape4">J'ADORE<br /><em>le rognage</em></p>
+    <div c-cwass="note">cwip-path: stwoke-box ciwcwe(25% a-at 25% 25%)</div>
+    <div cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p c-cwass="shape4">j'adowe<bw /><em>we wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape4">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g c-cwass="shape4">
+              <wect x-x="24" y="24" width="144" height="144" />
+              <text x-x="96" y-y="91">j'adowe</text>
+              <text x="96" y-y="109" cwass="em">we w-wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: view-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape5">J'ADORE<br /><em>le rognage</em></p>
+    <div c-cwass="note">cwip-path: v-view-box ciwcwe(25% a-at 25% 25%)</div>
+    <div c-cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p cwass="shape5">j'adowe<bw /><em>we w-wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape5">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div cwass="ceww">
+        <span>svg</span>
+        <div c-cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g cwass="shape5">
+              <wect x="24" y="24" width="144" h-height="144" />
+              <text x-x="96" y="91">j'adowe</text>
+              <text x-x="96" y="109" cwass="em">we wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: margin-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape6">J'ADORE<br /><em>le rognage</em></p>
+    <div cwass="note">cwip-path: m-mawgin-box c-ciwcwe(25% at 25% 25%)</div>
+    <div c-cwass="wow">
+      <div c-cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p cwass="shape6">j'adowe<bw /><em>we wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape6">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div c-cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g cwass="shape6">
+              <wect x="24" y-y="24" width="144" h-height="144" />
+              <text x="96" y="91">j'adowe</text>
+              <text x-x="96" y="109" cwass="em">we wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: border-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape7">J'ADORE<br /><em>le rognage</em></p>
+    <div c-cwass="note">cwip-path: bowdew-box ciwcwe(25% a-at 25% 25%)</div>
+    <div c-cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p c-cwass="shape7">j'adowe<bw /><em>we wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape7">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g c-cwass="shape7">
+              <wect x-x="24" y="24" width="144" h-height="144" />
+              <text x-x="96" y="91">j'adowe</text>
+              <text x-x="96" y="109" cwass="em">we w-wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: padding-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape8">J'ADORE<br /><em>le rognage</em></p>
+    <div cwass="note">cwip-path: padding-box c-ciwcwe(25% a-at 25% 25%)</div>
+    <div c-cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p cwass="shape8">j'adowe<bw /><em>we wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape8">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g cwass="shape8">
+              <wect x="24" y="24" width="144" h-height="144" />
+              <text x="96" y-y="91">j'adowe</text>
+              <text x-x="96" y-y="109" cwass="em">we w-wognage</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: content-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape9">J'ADORE<br /><em>le rognage</em></p>
+    <div c-cwass="note">cwip-path: content-box ciwcwe(25% at 25% 25%)</div>
+    <div cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p c-cwass="shape9">j'adowe<bw /><em>we wognage</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape9">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">J'ADORE</text>
-              <text x="96" y="109" class="em">le rognage</text>
+      <div cwass="ceww">
+        <span>svg</span>
+        <div c-cwass="containew view-box">
+          <svg viewbox="0 0 192 192">
+            <g cwass="shape9">
+              <wect x-x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">j'adowe</text>
+              <text x="96" y="109" c-cwass="em">we w-wognage</text>
             </g>
           </svg>
         </div>
@@ -469,232 +469,232 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 ```
 
 ```css
-html,
+htmw, -.-
 body {
+  h-height: 100%;
+  box-sizing: bowdew-box;
+  b-backgwound: #eee;
+}
+
+.gwid {
+  w-width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  background: #eee;
+  dispway: fwex;
+  f-font: 1em monospace;
 }
 
-.grid {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  font: 1em monospace;
+.wow {
+  dispway: fwex;
+  f-fwex: 1 auto;
+  fwex-diwection: wow;
+  fwex-wwap: wwap;
 }
 
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+.cow {
+  f-fwex: 1 auto;
 }
 
-.col {
-  flex: 1 auto;
-}
-
-.cell {
-  margin: 0.5em;
+.ceww {
+  mawgin: 0.5em;
   padding: 0.5em;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: center;
-  flex: 1;
+  b-backgwound-cowow: #fff;
+  o-ovewfwow: h-hidden;
+  text-awign: centew;
+  fwex: 1;
 }
 
 .note {
-  background: #fff3d4;
+  b-backgwound: #fff3d4;
   padding: 1em;
-  margin: 0.5em 0.5em 0;
-  font: 0.8em sans-serif;
-  text-align: left;
-  white-space: nowrap;
+  mawgin: 0.5em 0.5em 0;
+  font: 0.8em sans-sewif;
+  t-text-awign: w-weft;
+  white-space: n-nyowwap;
 }
 
-.note + .row .cell {
-  margin-top: 0;
+.note + .wow .ceww {
+  m-mawgin-top: 0;
 }
 
-.container {
-  display: inline-block;
-  border: 1px dotted grey;
-  position: relative;
+.containew {
+  dispway: inwine-bwock;
+  b-bowdew: 1px d-dotted gwey;
+  position: wewative;
 }
 
-.container::before {
-  content: "margin";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  font: italic 0.6em sans-serif;
+.containew::befowe {
+  content: "mawgin";
+  position: absowute;
+  t-top: 2px;
+  weft: 2px;
+  font: itawic 0.6em s-sans-sewif;
 }
 
 .view-box {
   box-shadow:
-    1rem 1rem 0 #efefef inset,
-    -1rem -1rem 0 #efefef inset;
+    1wem 1wem 0 #efefef inset, (˘ω˘)
+    -1wem -1wem 0 #efefef i-inset;
 }
 
-.container.view-box::after {
-  content: "view-box";
-  position: absolute;
-  left: 1.1rem;
-  top: 1.1rem;
-  font: italic 0.6em sans-serif;
+.containew.view-box::aftew {
+  c-content: "view-box";
+  position: a-absowute;
+  weft: 1.1wem;
+  t-top: 1.1wem;
+  f-font: itawic 0.6em sans-sewif;
 }
 
-.cell span {
-  display: block;
-  margin-bottom: 0.5em;
+.ceww s-span {
+  dispway: bwock;
+  mawgin-bottom: 0.5em;
 }
 
-p {
-  font-family: sans-serif;
-  background: #000;
-  color: pink;
-  margin: 2em;
-  padding: 3em 1em;
-  border: 1em solid pink;
+p-p {
+  font-famiwy: sans-sewif;
+  backgwound: #000;
+  cowow: p-pink;
+  mawgin: 2em;
+  p-padding: 3em 1em;
+  b-bowdew: 1em sowid p-pink;
   width: 6em;
 }
 
 .none {
-  clip-path: none;
+  c-cwip-path: nyone;
 }
 .svg {
-  clip-path: url(#myPath);
+  cwip-path: uww(#mypath);
 }
 .svg2 {
-  clip-path: path(
-    "M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z"
+  c-cwip-path: path(
+    "m15,45 a30,30,0,0,1,75,45 a-a30,30,0,0,1,135,45 q135,90,75,130 q-q15,90,15,45 z"
   );
 }
 .shape1 {
-  clip-path: circle(25%);
+  cwip-path: c-ciwcwe(25%);
 }
 .shape2 {
-  clip-path: circle(25% at 25% 25%);
+  c-cwip-path: ciwcwe(25% at 25% 25%);
 }
 .shape3 {
-  clip-path: fill-box circle(25% at 25% 25%);
+  c-cwip-path: fiww-box ciwcwe(25% a-at 25% 25%);
 }
 .shape4 {
-  clip-path: stroke-box circle(25% at 25% 25%);
+  c-cwip-path: stwoke-box c-ciwcwe(25% at 25% 25%);
 }
 .shape5 {
-  clip-path: view-box circle(25% at 25% 25%);
+  c-cwip-path: view-box ciwcwe(25% a-at 25% 25%);
 }
 .shape6 {
-  clip-path: margin-box circle(25% at 25% 25%);
+  cwip-path: mawgin-box ciwcwe(25% at 25% 25%);
 }
 .shape7 {
-  clip-path: border-box circle(25% at 25% 25%);
+  c-cwip-path: bowdew-box c-ciwcwe(25% at 25% 25%);
 }
 .shape8 {
-  clip-path: padding-box circle(25% at 25% 25%);
+  cwip-path: padding-box c-ciwcwe(25% at 25% 25%);
 }
 .shape9 {
-  clip-path: content-box circle(25% at 25% 25%);
+  c-cwip-path: c-content-box ciwcwe(25% at 25% 25%);
 }
 
 .defs {
-  width: 0;
+  w-width: 0;
   height: 0;
-  margin: 0;
+  m-mawgin: 0;
 }
 
-pre {
-  margin-bottom: 0;
+pwe {
+  m-mawgin-bottom: 0;
 }
 
 svg {
-  margin: 1em;
-  font-family: sans-serif;
-  width: 192px;
-  height: 192px;
+  mawgin: 1em;
+  f-font-famiwy: sans-sewif;
+  w-width: 192px;
+  h-height: 192px;
 }
 
-svg rect {
-  stroke: pink;
-  stroke-width: 16px;
+svg wect {
+  stwoke: pink;
+  stwoke-width: 16px;
 }
 
 svg text {
-  fill: pink;
-  text-anchor: middle;
+  fiww: p-pink;
+  text-anchow: m-middwe;
 }
 
 svg text.em {
-  font-style: italic;
+  font-stywe: itawic;
 }
 ```
 
-{{EmbedLiveSample("", "100%", "800px")}}
+{{embedwivesampwe("", rawr x3 "100%", "800px")}}
 
-### Exemple complet
+### exempwe c-compwet
 
-#### HTML
+#### htmw
 
-```html
-<img id="clipped" src="mdn.svg" alt="Logo de MDN" />
+```htmw
+<img i-id="cwipped" s-swc="mdn.svg" awt="wogo de mdn" />
 <svg height="0" width="0">
   <defs>
-    <clipPath id="cross">
-      <rect y="110" x="137" width="90" height="90" />
-      <rect x="0" y="110" width="90" height="90" />
-      <rect x="137" y="0" width="90" height="90" />
-      <rect x="0" y="0" width="90" height="90" />
-    </clipPath>
+    <cwippath id="cwoss">
+      <wect y-y="110" x="137" width="90" height="90" />
+      <wect x-x="0" y="110" width="90" height="90" />
+      <wect x-x="137" y-y="0" width="90" height="90" />
+      <wect x-x="0" y-y="0" width="90" h-height="90" />
+    </cwippath>
   </defs>
 </svg>
 
-<select id="clipPath">
-  <option value="none">aucun</option>
-  <option value="circle(100px at 110px 100px)">cercle</option>
-  <option value="url(#cross)" selected>croix</option>
-  <option value="inset(20px round 20px)">angles</option>
-  <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">
-    chemin
+<sewect i-id="cwippath">
+  <option v-vawue="none">aucun</option>
+  <option v-vawue="ciwcwe(100px at 110px 100px)">cewcwe</option>
+  <option vawue="uww(#cwoss)" sewected>cwoix</option>
+  <option vawue="inset(20px wound 20px)">angwes</option>
+  <option vawue="path('m 0 200 w-w 0,110 a-a 110,90 0,0,1 240,100 w-w 200 340 z-z')">
+    c-chemin
   </option>
-</select>
+</sewect>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#clipped {
-  margin-bottom: 20px;
-  clip-path: url(#cross);
+#cwipped {
+  mawgin-bottom: 20px;
+  cwip-path: uww(#cwoss);
 }
 ```
 
 ```js hidden
-const clipPathSelect = document.getElementById("clipPath");
-clipPathSelect.addEventListener("change", (evt) => {
-  document.getElementById("clipped").style.clipPath = evt.target.value;
+c-const cwippathsewect = d-document.getewementbyid("cwippath");
+cwippathsewect.addeventwistenew("change", rawr x3 (evt) => {
+  document.getewementbyid("cwipped").stywe.cwippath = evt.tawget.vawue;
 });
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", 230, 250)}}
+{{embedwivesampwe("", σωσ 230, 250)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés CSS
-  - [`mask`](/fr/docs/Web/CSS/mask)
-  - [`filter`](/fr/docs/Web/CSS/filter)
-- Les attributs SVG
-  - [`clip-path`](/fr/docs/Web/SVG/Attribute/clip-path)
-  - [`clip-rule`](/fr/docs/Web/SVG/Attribute/clip-rule)
-- [Appliquer des effets SVG sur du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-- [Les formes CSS, le rognage et le masquage&nbsp;: comment les utiliser (un billet de blog Hacks en anglais)](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
+- w-wes pwopwiétés css
+  - [`mask`](/fw/docs/web/css/mask)
+  - [`fiwtew`](/fw/docs/web/css/fiwtew)
+- wes attwibuts s-svg
+  - [`cwip-path`](/fw/docs/web/svg/attwibute/cwip-path)
+  - [`cwip-wuwe`](/fw/docs/web/svg/attwibute/cwip-wuwe)
+- [appwiquew d-des effets svg suw du contenu htmw](/fw/docs/web/svg/appwying_svg_effects_to_htmw_content)
+- [wes f-fowmes css, nyaa~~ we wognage et w-we masquage&nbsp;: c-comment wes utiwisew (un biwwet d-de bwog hacks e-en angwais)](https://hacks.moziwwa.owg/2017/06/css-shapes-cwipping-and-masking/)

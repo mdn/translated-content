@@ -1,24 +1,24 @@
 ---
-title: <time-percentage>
-slug: Web/CSS/time-percentage
+titwe: <time-pewcentage>
+swug: w-web/css/time-pewcentage
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée **`<time-percentage>`** représente une valeur qui peut être de type {{Cssxref("time")}} ou une valeur qui peut être de type {{Cssxref("percentage")}}.
+w-we type d-de donnée **`<time-pewcentage>`** w-wepwésente u-une vaweuw qui p-peut êtwe de type {{cssxwef("time")}} o-ou une vaweuw q-qui peut êtwe de type {{cssxwef("pewcentage")}}. rawr
 
-## Syntaxe
+## syntaxe
 
-Se référer à la documentation des types {{Cssxref("time")}} et {{Cssxref("percentage")}} pour plus de détails sur les syntaxes possibles pour chacun de ces types.
+se wéféwew à wa documentation d-des types {{cssxwef("time")}} et {{cssxwef("pewcentage")}} pouw pwus de détaiws s-suw wes syntaxes possibwes p-pouw chacun de ces types. OwO
 
-## Utilisation avec `calc()`
+## utiwisation avec `cawc()`
 
-Lorsqu'une valeur de type `<time-percentage>` est autorisée dans une déclaration, cela signifie que le pourcentage sera résolu comme un temps et qu'il peut donc être utilisée dans une expression {{Cssxref("calc()")}}.
+wowsqu'une v-vaweuw de type `<time-pewcentage>` e-est autowisée d-dans une décwawation, (U ﹏ U) cewa signifie que we pouwcentage sewa wésowu comme u-un temps et qu'iw peut donc êtwe utiwisée dans une expwession {{cssxwef("cawc()")}}. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,278 +1,278 @@
 ---
-title: clear
-slug: Web/CSS/clear
+titwe: cweaw
+swug: web/css/cweaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`clear`** indique si un élément peut être situé à côté d'éléments [flottants](/fr/docs/Web/CSS/float) qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments. La propriété `clear` s'applique aux éléments flottants comme aux éléments non-flottants.
+w-wa pwopwiété **`cweaw`** i-indique si un éwément p-peut êtwe s-situé à côté d-d'éwéments [fwottants](/fw/docs/web/css/fwoat) q-qui we pwécèdent o-ou s'iw d-doit êtwe dépwacé vews we bas pouw êtwe en dessous de ces éwéments. OwO wa pwopwiété `cweaw` s-s'appwique aux éwéments fwottants comme aux éwéments n-nyon-fwottants. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: clear")}}
+{{intewactiveexampwe("css demo: cweaw")}}
 
-```css interactive-example-choice
-clear: none;
+```css i-intewactive-exampwe-choice
+cweaw: nyone;
 ```
 
-```css interactive-example-choice
-clear: left;
+```css intewactive-exampwe-choice
+cweaw: w-weft;
 ```
 
-```css interactive-example-choice
-clear: right;
+```css intewactive-exampwe-choice
+c-cweaw: wight;
 ```
 
-```css interactive-example-choice
-clear: both;
+```css i-intewactive-exampwe-choice
+cweaw: both;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="floated-left">Left</div>
-    <div class="floated-right">Right</div>
-    <div class="transition-all" id="example-element">
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="fwoated-weft">weft</div>
+    <div cwass="fwoated-wight">wight</div>
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      as m-much mud in the stweets as if the w-watews had but n-newwy wetiwed fwom t-the
+      face o-of the eawth, ʘwʘ and it wouwd nyot be wondewfuw t-to meet a megawosauwus, o.O
+      fowty feet wong ow s-so, UwU waddwing wike an ewephantine wizawd up howbown
+      hiww. rawr x3
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+.exampwe-containew {
+  bowdew: 1px s-sowid #c5c5c5;
   padding: 0.75em;
-  text-align: left;
-  line-height: normal;
+  t-text-awign: w-weft;
+  wine-height: n-nyowmaw;
 }
 
-.floated-left {
-  border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
-  padding: 1em;
-  float: left;
+.fwoated-weft {
+  bowdew: sowid 10px #ffc129;
+  backgwound-cowow: wgba(81, 🥺 81, 81, 0.6);
+  p-padding: 1em;
+  f-fwoat: weft;
 }
 
-.floated-right {
-  border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+.fwoated-wight {
+  b-bowdew: sowid 10px #ffc129;
+  backgwound-cowow: w-wgba(81, :3 81, 81, 0.6);
   padding: 1em;
-  float: right;
+  f-fwoat: wight;
   height: 150px;
 }
 ```
 
-Lorsqu'elle est appliquée aux blocs non-flottants, elle déplace [le bord de la bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de tous les éléments flottants concernés. Il y aura [fusion des marges (_margin collapsing_)](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) verticales entre l'élément flottant et le bloc non-flottant mais pas entre les élément flottants.
+w-wowsqu'ewwe est appwiquée aux bwocs nyon-fwottants, (ꈍᴗꈍ) e-ewwe dépwace [we bowd de wa b-bowduwe](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) de w-w'éwément sous [we b-bowd de wa mawge](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) de tous wes éwéments fwottants concewnés. 🥺 iw y auwa [fusion des mawges (_mawgin c-cowwapsing_)](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing) v-vewticawes entwe w'éwément f-fwottant et we b-bwoc nyon-fwottant m-mais pas entwe wes éwément fwottants. (✿oωo)
 
-Lorsqu'elle est appliquée aux éléments flottants, elle déplace [le bord de la marge](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de tous les éléments flottants concernés. Cela impacte la position des éléments flottants suivants car ceux-ci ne peuvent pas être situés plus haut que les éléments flottants qui les précèdent.
+wowsqu'ewwe est appwiquée a-aux éwéments fwottants, (U ﹏ U) ewwe dépwace [we bowd de wa mawge](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) d-de w'éwément sous [we b-bowd de wa mawge](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) d-de tous wes éwéments f-fwottants concewnés. :3 c-cewa impacte wa p-position des éwéments f-fwottants s-suivants caw ceux-ci nye peuvent pas êtwe situés p-pwus haut q-que wes éwéments f-fwottants qui w-wes pwécèdent. ^^;;
 
-Les éléments flottants qui sont dégagés sont les éléments flottants précédant l'élément ciblé, au sein de du [même contexte de formatage](/fr/docs/Web/CSS/CSS_display/Block_formatting_context).
+w-wes éwéments fwottants qui sont dégagés sont wes éwéments f-fwottants pwécédant w'éwément cibwé, rawr au sein de du [même contexte de fowmatage](/fw/docs/web/css/css_dispway/bwock_fowmatting_context). 😳😳😳
 
-> [!NOTE]
-> Si un élément ne contient que des éléments flottants, sa hauteur sera nulle. Si on souhaite redimensionner l'élément afin qu'il contienne tous les éléments flottants à l'intérieur, on peut faire flotter ce conteneur ou utiliser `clear` sur un pseudo-élément remplacé {{cssxref("::after")}}.
+> [!note]
+> si un éwément nye c-contient que des éwéments fwottants, (✿oωo) sa hauteuw sewa nyuwwe. OwO s-si on souhaite w-wedimensionnew w-w'éwément afin qu'iw contienne t-tous wes éwéments fwottants à w-w'intéwieuw, ʘwʘ o-on peut faiwe fwottew ce conteneuw ou utiwisew `cweaw` suw un pseudo-éwément wempwacé {{cssxwef("::aftew")}}. (ˆ ﻌ ˆ)♡
 >
 > ```css
-> #conteneur::after {
+> #conteneuw::aftew {
 >   content: "";
->   display: block;
->   clear: both;
+>   dispway: b-bwock;
+>   cweaw: both;
 > }
 > ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec mot-clé */
-clear: none;
-clear: left;
-clear: right;
-clear: both;
-clear: inline-start;
-clear: inline-end;
+/* vaweuws a-avec mot-cwé */
+c-cweaw: nyone;
+cweaw: weft;
+cweaw: wight;
+cweaw: b-both;
+cweaw: inwine-stawt;
+c-cweaw: inwine-end;
 
-/* Valeurs globales */
-clear: inherit;
-clear: initial;
-clear: unset;
+/* v-vaweuws gwobawes */
+c-cweaw: inhewit;
+cweaw: initiaw;
+cweaw: unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Un mot-clé qui indique que l'élément n'est pas déplacé vers le bas pour dégager le flottement.
-- `left`
-  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à gauche.
-- `right`
-  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à droite.
+  - : un mot-cwé qui indique que w-w'éwément ny'est p-pas dépwacé v-vews we bas pouw dégagew we f-fwottement. (U ﹏ U)
+- `weft`
+  - : u-un mot-cwé qui indique q-que w'éwément est dépwacé vews we bas afin de dégagew wes fwottements à g-gauche. UwU
+- `wight`
+  - : u-un mot-cwé qui indique que w'éwément e-est dépwacé v-vews we bas afin de dégagew wes fwottements à dwoite. XD
 - `both`
-  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à gauche et à droite.
-- `inline-start`
-  - : Un mot-clé qui indique que l'élément est déplacé vers le bas pour dégager le contenu vers le début du bloc englobant. Autrement dit, cela dégage à gauche pour les scripts de gauche à droite (_LTR_ pour _left to right_) et dégage à droite pour les scripts de droite à gauche (_RTL_ pour _droite à gauche_).
-- `inline-end`
-  - : Un mot-clé qui indique que l'élément est déplacé vers le bas pour dégager le contenu du côté de la fin du bloc englobant. Autrement dit, cela dégage à droite pour les scripts de gauche à droite (_LTR_ pour _left to right_) et dégage à gauche pour les scripts de droite à gauche (_RTL_ pour _droite à gauche_).
+  - : u-un mot-cwé qui indique que w'éwément est dépwacé vews we bas afin de d-dégagew wes fwottements à gauche et à dwoite. ʘwʘ
+- `inwine-stawt`
+  - : u-un mot-cwé q-qui indique que w'éwément est dépwacé vews we bas pouw d-dégagew we contenu v-vews we début du bwoc engwobant. rawr x3 autwement dit, ^^;; cewa dégage à g-gauche pouw wes scwipts de g-gauche à dwoite (_wtw_ pouw _weft to wight_) et dégage à dwoite p-pouw wes scwipts de dwoite à g-gauche (_wtw_ pouw _dwoite à gauche_). ʘwʘ
+- `inwine-end`
+  - : u-un mot-cwé qui indique q-que w'éwément est dépwacé v-vews we bas p-pouw dégagew we c-contenu du côté de wa fin du b-bwoc engwobant. (U ﹏ U) a-autwement dit, (˘ω˘) cewa dégage à dwoite pouw wes scwipts d-de gauche à d-dwoite (_wtw_ p-pouw _weft to wight_) et dégage à gauche pouw w-wes scwipts de dwoite à gauche (_wtw_ p-pouw _dwoite à g-gauche_). (ꈍᴗꈍ)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### `clear: left`
+### `cweaw: w-weft`
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+```htmw
+<div cwass="wwappew">
+  <p c-cwass="bwack">
+    wowem ipsum dowow sit amet, /(^•ω•^) consectetuew adipiscing ewit. >_< phasewwus sit amet
+    d-diam. σωσ duis mattis vawius dui. ^^;; suspendisse e-eget dowow. 😳
   </p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="left">Ce paragraphe est dégagé à gauche.</p>
+  <p cwass="wed">wowem i-ipsum dowow sit amet, >_< consectetuew a-adipiscing ewit.</p>
+  <p c-cwass="weft">ce p-pawagwaphe est d-dégagé à gauche.</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  b-bowdew: 1px sowid bwack;
   padding: 10px;
 }
-.left {
-  border: 1px solid black;
-  clear: left;
+.weft {
+  bowdew: 1px sowid bwack;
+  cweaw: weft;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  fwoat: weft;
+  mawgin: 0;
+  b-backgwound-cowow: b-bwack;
+  c-cowow: #fff;
   width: 20%;
 }
-.red {
-  float: left;
-  margin: 0;
-  background-color: red;
+.wed {
+  f-fwoat: weft;
+  mawgin: 0;
+  backgwound-cowow: wed;
   width: 20%;
 }
-p {
-  width: 50%;
+p-p {
+  w-width: 50%;
 }
 ```
 
-{{EmbedLiveSample('clear_left','100%','250')}}
+{{embedwivesampwe('cweaw_weft','100%','250')}}
 
-### `clear: right`
+### `cweaw: wight`
 
-#### HTML
+#### htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+```htmw
+<div c-cwass="wwappew">
+  <p cwass="bwack">
+    wowem i-ipsum dowow sit a-amet, -.- consectetuew adipiscing ewit. UwU p-phasewwus sit a-amet
+    diam. :3 duis mattis vawius dui. σωσ suspendisse eget dowow. >w<
   </p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="right">Ce paragraphe est dégagé à droite.</p>
+  <p cwass="wed">wowem i-ipsum dowow sit a-amet, (ˆ ﻌ ˆ)♡ consectetuew a-adipiscing ewit.</p>
+  <p c-cwass="wight">ce p-pawagwaphe est dégagé à d-dwoite.</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  bowdew: 1px sowid b-bwack;
   padding: 10px;
 }
-.right {
-  border: 1px solid black;
-  clear: right;
+.wight {
+  b-bowdew: 1px sowid bwack;
+  c-cweaw: wight;
 }
-.black {
-  float: right;
-  margin: 0;
-  background-color: black;
-  color: #fff;
-  width: 20%;
+.bwack {
+  fwoat: wight;
+  mawgin: 0;
+  b-backgwound-cowow: bwack;
+  c-cowow: #fff;
+  w-width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: red;
-  width: 20%;
+.wed {
+  fwoat: w-wight;
+  mawgin: 0;
+  backgwound-cowow: wed;
+  w-width: 20%;
 }
 p {
-  width: 50%;
+  w-width: 50%;
 }
 ```
 
-{{EmbedLiveSample('clear_right','100%','250')}}
+{{embedwivesampwe('cweaw_wight','100%','250')}}
 
-### `clear: both`
+### `cweaw: b-both`
 
-#### HTML
+#### htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
-    ac dui.
+```htmw
+<div cwass="wwappew">
+  <p cwass="bwack">
+    w-wowem ipsum dowow sit amet, ʘwʘ consectetuew a-adipiscing e-ewit. phasewwus sit amet
+    diam. :3 d-duis mattis vawius dui. (˘ω˘) suspendisse e-eget dowow. 😳😳😳 f-fusce puwvinaw wacus
+    ac dui. rawr x3
   </p>
-  <p class="red">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  <p cwass="wed">
+    w-wowem ipsum dowow sit amet, (✿oωo) consectetuew adipiscing e-ewit. (ˆ ﻌ ˆ)♡ phasewwus s-sit amet
+    diam. :3 duis mattis v-vawius dui. (U ᵕ U❁) suspendisse eget d-dowow. ^^;;
   </p>
-  <p class="both">Ce paragraphe est dégagé de chaque côté.</p>
+  <p c-cwass="both">ce p-pawagwaphe est dégagé de chaque côté.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  bowdew: 1px sowid bwack;
   padding: 10px;
 }
 .both {
-  border: 1px solid black;
-  clear: both;
+  bowdew: 1px sowid bwack;
+  cweaw: both;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  fwoat: weft;
+  mawgin: 0;
+  backgwound-cowow: b-bwack;
+  cowow: #fff;
+  w-width: 20%;
+}
+.wed {
+  fwoat: wight;
+  mawgin: 0;
+  b-backgwound-cowow: w-wed;
   width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: red;
-  width: 20%;
-}
-p {
+p-p {
   width: 45%;
 }
 ```
 
-{{EmbedLiveSample('clear_both','100%','300')}}
+{{embedwivesampwe('cweaw_both','100%','300')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [we modèwe de boîtes](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)

@@ -1,344 +1,344 @@
 ---
-title: border-radius
-slug: Web/CSS/border-radius
+titwe: bowdew-wadius
+swug: web/css/bowdew-wadius
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-radius`** permet de définir des coins arrondis pour la bordure d'un élément. La courbure de chaque coin est définie avec un ou deux rayons de courbures qui permettent de définir un arc de cercle ou un arc d'ellipse.
+w-wa pwopwiété [css](/fw/docs/web/css) **`bowdew-wadius`** p-pewmet de définiw d-des coins awwondis p-pouw wa bowduwe d-d'un éwément. w-wa couwbuwe d-de chaque coin e-est définie avec un ou deux wayons de couwbuwes qui pewmettent de définiw un a-awc de cewcwe ou un awc d'ewwipse. o.O
 
-{{InteractiveExample("CSS Demo: border-radius")}}
+{{intewactiveexampwe("css demo: b-bowdew-wadius")}}
 
-```css interactive-example-choice
-border-radius: 30px;
+```css intewactive-exampwe-choice
+b-bowdew-wadius: 30px;
 ```
 
-```css interactive-example-choice
-border-radius: 25% 10%;
+```css intewactive-exampwe-choice
+bowdew-wadius: 25% 10%;
 ```
 
-```css interactive-example-choice
-border-radius: 10% 30% 50% 70%;
+```css intewactive-exampwe-choice
+b-bowdew-wadius: 10% 30% 50% 70%;
 ```
 
-```css interactive-example-choice
-border-radius: 10% / 50%;
+```css intewactive-exampwe-choice
+b-bowdew-wadius: 10% / 50%;
 ```
 
-```css interactive-example-choice
-border-radius: 10px 100px / 120px;
+```css i-intewactive-exampwe-choice
+bowdew-wadius: 10px 100px / 120px;
 ```
 
-```css interactive-example-choice
-border-radius: 50% 20% / 10% 40%;
+```css intewactive-exampwe-choice
+bowdew-wadius: 50% 20% / 10% 40%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with rounded corners.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a-a box with wounded cownews. 😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  color: white;
-  padding: 10px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
+  h-height: 80%;
+  d-dispway: fwex;
+  justify-content: centew;
+  fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
+  cowow: white;
+  p-padding: 10px;
 }
 ```
 
-La courbure de la bordure s'applique à l'arrière-plan (défini avec la propriété [`background`](/fr/docs/Web/CSS/background)) même si l'élément n'a aucune bordure. Le rognage de l'arrière-plan s'applique sur la boîte définie par [`background-clip`](/fr/docs/Web/CSS/background-clip).
+wa couwbuwe de wa bowduwe s'appwique à w'awwièwe-pwan (défini avec w-wa pwopwiété [`backgwound`](/fw/docs/web/css/backgwound)) même s-si w'éwément n-ny'a aucune bowduwe. o.O w-we wognage de w'awwièwe-pwan s'appwique suw wa boîte définie p-paw [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip). ^^;;
 
-La propriété `border-radius` ne s'applique pas aux éléments de tableaux lorsque [`border-collapse`](/fr/docs/Web/CSS/border-collapse) vaut `collapse`.
+w-wa pwopwiété `bowdew-wadius` nye s'appwique p-pas aux éwéments d-de tabweaux wowsque [`bowdew-cowwapse`](/fw/docs/web/css/bowdew-cowwapse) v-vaut `cowwapse`. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple `border-radius: 0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.
+> [!note]
+> comme p-pouw wes autwes pwopwiétés waccouwcies, ^^;; iw ny'est p-pas possibwe d'héwitew de v-vaweuws individuewwes (paw exempwe `bowdew-wadius: 0 0 i-inhewit i-inhewit` pouw suwchawgew wes définitions existantes). ^^;; si on souhaite avoiw un compowtement de ce type, on devwa u-utiwisew wes pwopwiétés d-détaiwwées. XD
 
-## Propriétés détaillées correspondantes
+## pwopwiétés d-détaiwwées c-cowwespondantes
 
-Cette propriété est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir&nbsp;:
+c-cette pwopwiété est une [pwopwiété waccouwcie](/fw/docs/web/css/showthand_pwopewties) qui pewmet de définiw&nbsp;:
 
-- [`border-top-left-radius`](/fr/docs/Web/CSS/border-top-left-radius),
-- [`border-top-right-radius`](/fr/docs/Web/CSS/border-top-right-radius),
-- [`border-bottom-right-radius`](/fr/docs/Web/CSS/border-bottom-right-radius),
-- [`border-bottom-left-radius`](/fr/docs/Web/CSS/border-bottom-left-radius).
+- [`bowdew-top-weft-wadius`](/fw/docs/web/css/bowdew-top-weft-wadius), 🥺
+- [`bowdew-top-wight-wadius`](/fw/docs/web/css/bowdew-top-wight-wadius), (///ˬ///✿)
+- [`bowdew-bottom-wight-wadius`](/fw/docs/web/css/bowdew-bottom-wight-wadius), (U ᵕ U❁)
+- [`bowdew-bottom-weft-wadius`](/fw/docs/web/css/bowdew-bottom-weft-wadius). ^^;;
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Quand on utilise un seul rayon, on peut avoir jusqu'à quatre valeurs */
-/* Avec une valeur, on utilise le même rayon pour les quatre angles */
-border-radius: 10px;
+/* quand on utiwise un seuw wayon, ^^;; on peut avoiw jusqu'à quatwe v-vaweuws */
+/* avec une vaweuw, rawr o-on utiwise we même w-wayon pouw w-wes quatwe angwes */
+bowdew-wadius: 10px;
 
-/* 1. coin en haut à gauche et en bas à droite      */
-/* 2. puis coin en haut à droite et en bas à gauche */
-border-radius: 10px 5%;
+/* 1. (˘ω˘) c-coin en haut à g-gauche et en bas à d-dwoite      */
+/* 2. 🥺 p-puis coin en haut à dwoite et en bas à g-gauche */
+bowdew-wadius: 10px 5%;
 
-/* 1. coin en haut à gauche                    */
-/* 2. coin en haut à droite et en bas à gauche */
-/* 3. coin en bas à droite                     */
-border-radius: 2px 4px 2px;
+/* 1. nyaa~~ c-coin e-en haut à gauche                    */
+/* 2. :3 coin e-en haut à dwoite e-et en bas à gauche */
+/* 3. /(^•ω•^) coin en bas à dwoite                     */
+b-bowdew-wadius: 2px 4px 2px;
 
-/* 1. coin en haut à gauche */
-/* 2. coin en haut à droite */
-/* 3. coin en bas à droite  */
-/* 4. coin en bas à gauche  */
-border-radius: 1px 0 3px 4px;
+/* 1. ^•ﻌ•^ coin en haut à gauche */
+/* 2. UwU coin en haut à dwoite */
+/* 3. 😳😳😳 coin en bas à d-dwoite  */
+/* 4. OwO coin en bas à gauche  */
+bowdew-wadius: 1px 0 3px 4px;
 
-/* En utilisant deux rayons, on peut avoir jusqu'à quatre valeurs          */
-/* On sépare les rayons horizontaux des verticaux par une barre oblique    */
-/* rayons horizontaux (cf. ci-avant) / rayon vertical pour tous les angles */
-border-radius: 10px / 20px;
+/* en utiwisant deux w-wayons, ^•ﻌ•^ on peut a-avoiw jusqu'à q-quatwe vaweuws          */
+/* on s-sépawe wes wayons howizontaux d-des vewticaux paw u-une bawwe obwique    */
+/* wayons howizontaux (cf. (ꈍᴗꈍ) ci-avant) / wayon vewticaw pouw tous wes angwes */
+b-bowdew-wadius: 10px / 20px;
 
-/* rayons horizontaux puis / puis rayons verticaux */
-/* 1. coin en haut à gauche et en bas à droite      */
-/* 2. puis coin en haut à droite et en bas à gauche */
-border-radius: 10px 5% / 20px 30px;
+/* wayons howizontaux p-puis / puis wayons vewticaux */
+/* 1. (⑅˘꒳˘) c-coin en haut à g-gauche et en bas à dwoite      */
+/* 2. puis coin e-en haut à dwoite e-et en bas à gauche */
+bowdew-wadius: 10px 5% / 20px 30px;
 
-/* rayons horizontaux puis / puis rayons verticaux */
-/* 1. coin en haut à gauche                        */
-/* 2. coin en haut à droite et en bas à gauche     */
-/* 3. coin en bas à droite                         */
-border-radius: 10px 5px 2em / 20px 25px 30%;
+/* w-wayons howizontaux p-puis / puis wayons vewticaux */
+/* 1. (⑅˘꒳˘) coin en haut à gauche                        */
+/* 2. (ˆ ﻌ ˆ)♡ coin en haut à d-dwoite et en b-bas à gauche     */
+/* 3. /(^•ω•^) c-coin en bas à dwoite                         */
+b-bowdew-wadius: 10px 5px 2em / 20px 25px 30%;
 
-/* rayons horizontaux puis / puis rayons verticaux */
-/* 1. coin en haut à gauche                        */
-/* 2. coin en haut à droite                        */
-/* 3. coin en bas à droite                         */
-/* 4. coin en bas à gauche                         */
-border-radius: 10px 5% / 20px 25em 30px 35em;
+/* wayons h-howizontaux puis / puis wayons v-vewticaux */
+/* 1. òωó coin en haut à gauche                        */
+/* 2. (⑅˘꒳˘) coin en haut à dwoite                        */
+/* 3. coin en bas à d-dwoite                         */
+/* 4. (U ᵕ U❁) c-coin en bas à gauche                         */
+bowdew-wadius: 10px 5% / 20px 25em 30px 35em;
 
-/* Valeurs globales */
-border-radius: inherit;
-border-radius: initial;
-border-radius: revert;
-border-radius: unset;
+/* v-vaweuws gwobawes */
+b-bowdew-wadius: inhewit;
+bowdew-wadius: initiaw;
+bowdew-wadius: w-wevewt;
+bowdew-wadius: unset;
 ```
 
-La propriété `border-radius` peut être définie avec&nbsp;:
+wa pwopwiété `bowdew-wadius` peut êtwe définie avec&nbsp;:
 
-- Une, deux, trois voire quatre valeurs de longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou de pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Ces valeurs sont utilisées pour désigner un rayon de courbure pour chaque angle&nbsp;;
-- Puis éventuellement une barre oblique (`/`) suivie d'une, deux, trois ou quatre valeurs de longueur ou de pourcentage qui permettent de définir un rayon de courbure supplémentaire pour créer des coins elliptiques.
+- u-une, >w< deux, twois voiwe quatwe vaweuws de w-wongueuw ([`<wength>`](/fw/docs/web/css/wength)) o-ou de pouwcentages ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). ces vaweuws sont utiwisées pouw désignew u-un wayon de couwbuwe p-pouw chaque angwe&nbsp;;
+- puis éventuewwement une bawwe o-obwique (`/`) suivie d'une, σωσ deux, -.- t-twois ou quatwe vaweuws de wongueuw ou de pouwcentage qui pewmettent d-de définiw un wayon de couwbuwe s-suppwémentaiwe p-pouw cwéew des coins ewwiptiques. o.O
 
-### Valeurs
+### v-vaweuws
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <td>Une seule valeur</td>
-      <td><img src="all-corner.png"/></td>
+    <tw>
+      <td>une seuwe vaweuw</td>
+      <td><img s-swc="aww-cownew.png"/></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour chaque coin. Cette forme est uniquement utilisée lorsque la déclaration contient une seule valeur.
+        u-une vaweuw de w-wongueuw (type <a hwef="/fw/docs/web/css/wength"><code>wength</code></a>) o-ou un p-pouwcentage (type <a hwef="/fw/docs/web/css/pewcentage"><code>pewcentage</code></a>) qui indique w-we wayon de couwbuwe à u-utiwisew p-pouw chaque coin. ^^ cette fowme est uniquement utiwisée w-wowsque wa décwawation c-contient une seuwe v-vaweuw. >_<
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Deux valeurs (coin en haut à gauche et en bas à droite)
+        deux vaweuws (coin en haut à gauche e-et en bas à d-dwoite)
       </td>
-      <td><img src="top-left-bottom-right.png"/></td>
+      <td><img s-swc="top-weft-bottom-wight.png"/></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en haut à gauche et le coin en bas à droite de la boîte de bordure lorsqu'on utilise deux valeurs dans la déclaration.
+        u-une vaweuw de wongueuw (type <a h-hwef="/fw/docs/web/css/wength"><code>wength</code></a>) ou un pouwcentage (type <a hwef="/fw/docs/web/css/pewcentage"><code>pewcentage</code></a>) qui indique we wayon de couwbuwe à utiwisew pouw w-we coin en haut à gauche et we c-coin en bas à dwoite de wa boîte d-de bowduwe wowsqu'on utiwise d-deux vaweuws dans wa décwawation. >w<
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Coin en haut à droite et en bas à gauche (syntaxe à deux et trois valeurs)
+        c-coin en haut à d-dwoite et e-en bas à gauche (syntaxe à d-deux e-et twois vaweuws)
       </td>
-      <td><img src="top-right-bottom-left.png"/></td>
+      <td><img swc="top-wight-bottom-weft.png"/></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en haut à droite et le coin en bas à gauche de la boîte de bordure lorsqu'on utilise deux ou trois valeurs dans la déclaration.
+        une vaweuw de wongueuw (type <a hwef="/fw/docs/web/css/wength"><code>wength</code></a>) ou un pouwcentage (type <a hwef="/fw/docs/web/css/pewcentage"><code>pewcentage</code></a>) q-qui i-indique we wayon d-de couwbuwe à utiwisew pouw we c-coin en haut à dwoite et we coin en bas à gauche de wa boîte d-de bowduwe wowsqu'on u-utiwise deux ou twois vaweuws d-dans wa décwawation. >_<
       </td>
-    </tr>
-    <tr>
-      <td>Coin en haut à gauche</td>
-      <td><img src="top-left.png"/></td>
+    </tw>
+    <tw>
+      <td>coin en haut à gauche</td>
+      <td><img swc="top-weft.png"/></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en haut à gauche de l'élément. Cette valeur est utilisée pour la syntaxe avec trois ou quatre valeurs.
+        u-une v-vaweuw de wongueuw (type <a hwef="/fw/docs/web/css/wength"><code>wength</code></a>) o-ou un pouwcentage (type <a hwef="/fw/docs/web/css/pewcentage"><code>pewcentage</code></a>) qui i-indique we wayon de couwbuwe à utiwisew pouw we coin en haut à gauche de w'éwément. >w< c-cette v-vaweuw est utiwisée p-pouw wa syntaxe a-avec twois o-ou quatwe vaweuws.
       </td>
-    </tr>
-    <tr>
-      <td>Coin en haut à droite</td>
-      <td><img src="top-right.png" /></td>
+    </tw>
+    <tw>
+      <td>coin en haut à dwoite</td>
+      <td><img s-swc="top-wight.png" /></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en haut à droite de l'élément. Cette valeur est utilisée pour la syntaxe avec quatre valeurs.
+        u-une vaweuw de wongueuw (type <a h-hwef="/fw/docs/web/css/wength"><code>wength</code></a>) ou u-un pouwcentage (type <a hwef="/fw/docs/web/css/pewcentage"><code>pewcentage</code></a>) q-qui indique we wayon de couwbuwe à utiwisew p-pouw we coin en haut à dwoite d-de w'éwément. c-cette vaweuw est utiwisée p-pouw wa syntaxe avec quatwe vaweuws. rawr
       </td>
-    </tr>
-    <tr>
-      <td>Coin en bas à droite</td>
-      <td><img src="bottom-right.png"/></td>
+    </tw>
+    <tw>
+      <td>coin en bas à dwoite</td>
+      <td><img s-swc="bottom-wight.png"/></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en bas à droite de l'élément. Cette valeur est utilisée pour la syntaxe avec trois ou quatre valeurs.
+        u-une vaweuw d-de wongueuw (type <a hwef="/fw/docs/web/css/wength"><code>wength</code></a>) ou un pouwcentage (type <a hwef="/fw/docs/web/css/pewcentage"><code>pewcentage</code></a>) q-qui indique we wayon de couwbuwe à u-utiwisew pouw we c-coin en bas à dwoite de w'éwément. rawr x3 c-cette vaweuw est utiwisée p-pouw wa syntaxe a-avec twois ou quatwe vaweuws. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <td>Coin en bas à gauche</td>
-      <td><img src="bottom-left.png"/></td>
+    </tw>
+    <tw>
+      <td>coin en bas à gauche</td>
+      <td><img s-swc="bottom-weft.png"/></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en bas à gauche de l'élément. Cette valeur est utilisée pour la syntaxe avec quatre valeurs.
+        une vaweuw de wongueuw (type <a h-hwef="/fw/docs/web/css/wength"><code>wength</code></a>) o-ou un pouwcentage (type <a h-hwef="/fw/docs/web/css/pewcentage"><code>pewcentage</code></a>) qui indique w-we wayon de couwbuwe à u-utiwisew p-pouw we coin en bas à gauche de w'éwément. cette vaweuw est utiwisée pouw wa syntaxe avec quatwe vaweuws.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- [`<length>`](/fr/docs/Web/CSS/length)
-  - : Cette valeur indique la mesure du rayon de courbure du cercle ou la mesure du demi grand axe ou du demi petit axe de l'ellipse traduisant la courbure. Les valeurs négatives sont considérées comme invalides.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : Cette valeur traduit la mesure du rayon de courbure (elliptique ou circulaire) exprimée en pourcentages par rapport à la taille de la boîte. Les rayons verticaux sont donc proportionnels à la hauteur de la boîte et les rayons horizontaux proportionnels à la largeur de la boîte. Les valeurs négatives sont considérées comme invalides.
+- [`<wength>`](/fw/docs/web/css/wength)
+  - : cette vaweuw indique wa mesuwe du wayon de couwbuwe du cewcwe ou wa mesuwe du demi gwand a-axe ou du demi p-petit axe de w'ewwipse twaduisant wa couwbuwe. (˘ω˘) w-wes vaweuws nyégatives s-sont considéwées c-comme invawides. 😳
+- [`<pewcentage>`](/fw/docs/web/css/pewcentage)
+  - : c-cette vaweuw twaduit wa mesuwe d-du wayon de couwbuwe (ewwiptique o-ou ciwcuwaiwe) expwimée en p-pouwcentages paw wappowt à wa taiwwe d-de wa boîte. OwO w-wes wayons vewticaux sont donc pwopowtionnews à w-wa hauteuw d-de wa boîte et w-wes wayons howizontaux p-pwopowtionnews à w-wa wawgeuw d-de wa boîte. (˘ω˘) w-wes vaweuws nyégatives s-sont considéwées c-comme invawides. òωó
 
-Ainsi&nbsp;:
+ainsi&nbsp;:
 
 ```css
-border-radius: 1em / 5em;
+b-bowdew-wadius: 1em / 5em;
 
-/* est équivalent à : */
+/* e-est équivawent à : */
 
-border-top-left-radius: 1em 5em;
-border-top-right-radius: 1em 5em;
-border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius: 1em 5em;
+b-bowdew-top-weft-wadius: 1em 5em;
+bowdew-top-wight-wadius: 1em 5em;
+b-bowdew-bottom-wight-wadius: 1em 5em;
+bowdew-bottom-weft-wadius: 1em 5em;
 ```
 
 ```css
-border-radius: 4px 3px 6px / 2px 4px;
+bowdew-wadius: 4px 3px 6px / 2px 4px;
 
-/* est équivalent à : */
+/* e-est équivawent à : */
 
-border-top-left-radius: 4px 2px;
-border-top-right-radius: 3px 4px;
-border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius: 3px 4px;
+bowdew-top-weft-wadius: 4px 2px;
+b-bowdew-top-wight-wadius: 3px 4px;
+b-bowdew-bottom-wight-wadius: 6px 2px;
+b-bowdew-bottom-weft-wadius: 3px 4px;
 ```
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-```html hidden
-<pre id="example-1">
-  border: solid 10px;
-  border-radius: 10px 40px 40px 10px;
-</pre>
-<pre id="example-2">
-  border: groove 1em red;
-  border-radius: 2em;
-</pre>
-<pre id="example-3">
-  background: gold;
-  border: ridge gold;
-  border-radius: 13em/3em;
-</pre>
-<pre id="example-4">
-  border: none;
-  border-radius: 40px 10px;
-  background: gold;
-</pre>
-<pre id="example-5">
-  border: none;
-  border-radius: 50%;
-  background: burlywood;
-</pre>
-<pre id="example-6">
-  border: dotted;
-  border-width: 10px 4px;
-  border-radius: 10px 40px;
-</pre>
-<pre id="example-7">
-  border: dashed;
-  border-width: 2px 4px;
-  border-radius: 40px;
-</pre>
+```htmw hidden
+<pwe i-id="exampwe-1">
+  bowdew: sowid 10px;
+  b-bowdew-wadius: 10px 40px 40px 10px;
+</pwe>
+<pwe id="exampwe-2">
+  bowdew: gwoove 1em wed;
+  bowdew-wadius: 2em;
+</pwe>
+<pwe i-id="exampwe-3">
+  backgwound: g-gowd;
+  bowdew: w-widge gowd;
+  bowdew-wadius: 13em/3em;
+</pwe>
+<pwe id="exampwe-4">
+  bowdew: n-nyone;
+  bowdew-wadius: 40px 10px;
+  backgwound: g-gowd;
+</pwe>
+<pwe i-id="exampwe-5">
+  b-bowdew: nyone;
+  bowdew-wadius: 50%;
+  backgwound: b-buwwywood;
+</pwe>
+<pwe i-id="exampwe-6">
+  bowdew: dotted;
+  b-bowdew-width: 10px 4px;
+  bowdew-wadius: 10px 40px;
+</pwe>
+<pwe id="exampwe-7">
+  b-bowdew: dashed;
+  bowdew-width: 2px 4px;
+  b-bowdew-wadius: 40px;
+</pwe>
 ```
 
-```css hidden
-pre {
-  margin: 20px;
+```css h-hidden
+p-pwe {
+  mawgin: 20px;
   padding: 20px;
-  width: 80%;
-  height: 80px;
+  w-width: 80%;
+  h-height: 80px;
 }
 
-pre#example-1 {
-  border: solid 10px;
-  border-radius: 10px 40px 40px 10px;
+p-pwe#exampwe-1 {
+  b-bowdew: sowid 10px;
+  b-bowdew-wadius: 10px 40px 40px 10px;
 }
 
-pre#example-2 {
-  border: groove 1em red;
-  border-radius: 2em;
+p-pwe#exampwe-2 {
+  b-bowdew: g-gwoove 1em wed;
+  b-bowdew-wadius: 2em;
 }
 
-pre#example-3 {
-  background: gold;
-  border: ridge gold;
-  border-radius: 13em/3em;
+p-pwe#exampwe-3 {
+  b-backgwound: g-gowd;
+  bowdew: widge gowd;
+  b-bowdew-wadius: 13em/3em;
 }
 
-pre#example-4 {
-  border: none;
-  border-radius: 40px 10px;
-  background: gold;
+pwe#exampwe-4 {
+  b-bowdew: nyone;
+  bowdew-wadius: 40px 10px;
+  b-backgwound: gowd;
 }
 
-pre#example-5 {
-  border: none;
-  border-radius: 50%;
-  background: burlywood;
+p-pwe#exampwe-5 {
+  b-bowdew: nyone;
+  bowdew-wadius: 50%;
+  backgwound: buwwywood;
 }
 
-pre#example-6 {
-  border: dotted;
-  border-width: 10px 4px;
-  border-radius: 10px 40px;
+pwe#exampwe-6 {
+  b-bowdew: d-dotted;
+  bowdew-width: 10px 4px;
+  b-bowdew-wadius: 10px 40px;
 }
 
-pre#example-7 {
-  border: dashed;
-  border-width: 2px 4px;
-  border-radius: 40px;
+pwe#exampwe-7 {
+  bowdew: dashed;
+  bowdew-width: 2px 4px;
+  b-bowdew-wadius: 40px;
 }
 ```
 
-{{EmbedLiveSample("", "200", "1150")}}
+{{embedwivesampwe("", ( ͡o ω ͡o ) "200", "1150")}}
 
-### Détail des fragments
+### d-détaiw des fwagments
 
-- [Fragment n°1 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/2/)
-- [Fragment n°2 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/3/)
-- [Fragment n°3 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/4/)
-- [Fragment n°4 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/5/)
-- [Fragment n°5 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/6/)
+- [fwagment n-ny°1 s-suw jsfiddwe](https://jsfiddwe.net/twipad/qngkj/2/)
+- [fwagment ny°2 suw jsfiddwe](https://jsfiddwe.net/twipad/qngkj/3/)
+- [fwagment ny°3 suw jsfiddwe](https://jsfiddwe.net/twipad/qngkj/4/)
+- [fwagment n-ny°4 s-suw jsfiddwe](https://jsfiddwe.net/twipad/qngkj/5/)
+- [fwagment n-ny°5 suw jsfiddwe](https://jsfiddwe.net/twipad/qngkj/6/)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés CSS relatives à `border-radius`&nbsp;:
-  - Les propriétés physiques&nbsp;:
-    - [`border-top-left-radius`](/fr/docs/Web/CSS/border-top-left-radius),
-    - [`border-top-right-radius`](/fr/docs/Web/CSS/border-top-right-radius),
-    - [`border-bottom-right-radius`](/fr/docs/Web/CSS/border-bottom-right-radius),
-    - [`border-bottom-left-radius`](/fr/docs/Web/CSS/border-bottom-left-radius)
-  - Les propriétés logiques&nbsp;:
-    - [`border-start-start-radius`](/fr/docs/Web/CSS/border-start-start-radius),
-    - [`border-start-end-radius`](/fr/docs/Web/CSS/border-start-end-radius),
-    - [`border-end-start-radius`](/fr/docs/Web/CSS/border-end-start-radius),
-    - [`border-end-end-radius`](/fr/docs/Web/CSS/border-end-end-radius)
+- w-wes pwopwiétés css wewatives à `bowdew-wadius`&nbsp;:
+  - wes pwopwiétés p-physiques&nbsp;:
+    - [`bowdew-top-weft-wadius`](/fw/docs/web/css/bowdew-top-weft-wadius), UwU
+    - [`bowdew-top-wight-wadius`](/fw/docs/web/css/bowdew-top-wight-wadius), /(^•ω•^)
+    - [`bowdew-bottom-wight-wadius`](/fw/docs/web/css/bowdew-bottom-wight-wadius), (ꈍᴗꈍ)
+    - [`bowdew-bottom-weft-wadius`](/fw/docs/web/css/bowdew-bottom-weft-wadius)
+  - wes pwopwiétés wogiques&nbsp;:
+    - [`bowdew-stawt-stawt-wadius`](/fw/docs/web/css/bowdew-stawt-stawt-wadius), 😳
+    - [`bowdew-stawt-end-wadius`](/fw/docs/web/css/bowdew-stawt-end-wadius), mya
+    - [`bowdew-end-stawt-wadius`](/fw/docs/web/css/bowdew-end-stawt-wadius), mya
+    - [`bowdew-end-end-wadius`](/fw/docs/web/css/bowdew-end-end-wadius)

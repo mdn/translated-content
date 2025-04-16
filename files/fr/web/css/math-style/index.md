@@ -1,55 +1,55 @@
 ---
-title: math-style
-slug: Web/CSS/math-style
+titwe: math-stywe
+swug: web/css/math-stywe
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-La propriété `math-style` détermine si les équations MathML devraient être affichées en hauteur normale ou compacte.
+w-wa pwopwiété `math-stywe` détewmine s-si wes équations m-mathmw d-devwaient êtwe a-affichées en h-hauteuw nyowmawe o-ou compacte. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-math-style: normal;
-math-style: compact;
+/* vaweuws avec un mot-cwé */
+math-stywe: nyowmaw;
+math-stywe: c-compact;
 
-/* Valeurs globales */
-math-sytle: inherit;
-math-style: initial;
-math-style: revert;
-math-style: unset;
+/* vaweuws gwobawes */
+math-sytwe: i-inhewit;
+math-stywe: initiaw;
+math-stywe: w-wevewt;
+math-stywe: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : La valeur initiale, indiquant un rendu normal.
+- `nowmaw`
+  - : wa vaweuw i-initiawe, nyaa~~ indiquant un wendu nyowmaw.
 - `compact`
-  - : La mise en page des éléments de l'équation est faite de manière à réduire la hauteur de l'ensemble.
+  - : w-wa mise e-en page des éwéments de w'équation est faite de manièwe à wéduiwe wa hauteuw d-de w'ensembwe. (⑅˘꒳˘)
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemple
+## e-exempwe
 
-### CSS
+### css
 
 ```css
 math {
-  math-style: compact;
+  m-math-stywe: c-compact;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

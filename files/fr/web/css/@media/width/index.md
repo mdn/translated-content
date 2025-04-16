@@ -1,73 +1,73 @@
 ---
-title: width
-slug: Web/CSS/@media/width
+titwe: width
+swug: web/css/@media/width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`width`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet d'appliquer des styles différents en fonction de la largeur de la zone d'affichage (_viewport_) ou de la largeur de la page (pour [les média paginés](/fr/docs/Web/CSS/CSS_paged_media)). La largeur est exprimée comme une longueur CSS (type {{cssxref("&lt;length&gt;")}}.
+**`width`** e-est une c-cawactéwistique m-média css (cf. (U ﹏ U) {{cssxwef("@media")}}) q-qui pewmet d-d'appwiquew des s-stywes difféwents e-en fonction d-de wa wawgeuw de wa zone d'affichage (_viewpowt_) ou de wa wawgeuw de wa page (pouw [wes média p-paginés](/fw/docs/web/css/css_paged_media)). (⑅˘꒳˘) wa wawgeuw est expwimée comme une w-wongueuw css (type {{cssxwef("&wt;wength&gt;")}}. òωó
 
-## Syntaxe
+## syntaxe
 
-**`width`** est une valeur décrivant la largeur d'affichage, les versions préfixées **`min-width`** et **`max-width`** peuvent également être utilisées afin de décrire la largeur minimale (resp. la largeur maximale).
+**`width`** e-est une vaweuw décwivant wa wawgeuw d'affichage, ʘwʘ w-wes vewsions pwéfixées **`min-width`** et **`max-width`** p-peuvent égawement êtwe u-utiwisées afin de décwiwe wa wawgeuw minimawe (wesp. /(^•ω•^) wa wawgeuw maximawe). ʘwʘ
 
 ```css
-/* Largeur exacte */
+/* w-wawgeuw exacte */
 @media (width: 300px) {
 }
 
-/* Un viewport avec une largeur minimale */
+/* un viewpowt avec une wawgeuw minimawe */
 @media (min-width: 50em) {
 }
 
-/* Un viewport avec une largeur maximale */
+/* u-un viewpowt avec une wawgeuw m-maximawe */
 @media (max-width: 1000px) {
 }
 ```
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  Observez cet élément lorsque vous redimensionnez la largeur du viewport.
+  o-obsewvez cet éwément wowsque vous wedimensionnez w-wa wawgeuw du viewpowt.
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-/* Largeur exacte */
+/* w-wawgeuw exacte */
 @media (width: 360px) {
   div {
-    color: red;
+    cowow: wed;
   }
 }
 
-/* Largeur minimale */
-@media (min-width: 35rem) {
+/* wawgeuw minimawe */
+@media (min-width: 35wem) {
   div {
-    background: yellow;
+    backgwound: yewwow;
   }
 }
 
-/* Largeur maximale */
-@media (max-width: 50rem) {
-  div {
-    border: 2px solid blue;
+/* w-wawgeuw maximawe */
+@media (max-width: 50wem) {
+  d-div {
+    b-bowdew: 2px s-sowid bwue;
   }
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples','90%')}}
+{{embedwivesampwe('exempwes','90%')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

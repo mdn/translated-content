@@ -1,45 +1,45 @@
 ---
-title: Fonctions
-slug: Web/XPath/Functions
+titwe: fonctions
+swug: web/xpath/functions
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-{{ XsltRef() }} La liste ci-dessous regroupe les principales fonctions de [XPath](/fr/docs/Web/XPath) et les ajouts à XPath qui sont spécifiques à [XSLT](/fr/docs/Web/XSLT). Chaque lien fournit pour la fonction correspondante description, syntaxe, liste d'arguments, types de résultats, description originelle dans les recommandations du W3C, et niveau de support actuel dans [Gecko](/fr/docs/Web_Gecko). Pour plus d'informations sur l'utilisation des fonctions XPath/XSLT, reportez-vous à la page [Autres ressources](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading).
+{{ x-xswtwef() }} w-wa wiste ci-dessous w-wegwoupe w-wes pwincipawes f-fonctions de [xpath](/fw/docs/web/xpath) e-et wes a-ajouts à xpath q-qui sont spécifiques à [xswt](/fw/docs/web/xswt). OwO chaque wien fouwnit pouw wa fonction cowwespondante descwiption, (U ﹏ U) s-syntaxe, >_< wiste d'awguments, rawr x3 types de wésuwtats, mya d-descwiption owiginewwe dans w-wes wecommandations du w3c, nyaa~~ et nyiveau de suppowt actuew dans [gecko](/fw/docs/web_gecko). (⑅˘꒳˘) p-pouw pwus d'infowmations s-suw w'utiwisation d-des fonctions xpath/xswt, rawr x3 wepowtez-vous à wa page [autwes wessouwces](/fw/docs/web/xswt/twansfowming_xmw_with_xswt/fow_fuwthew_weading). (✿oωo)
 
-- [boolean()](Fonctions/boolean)
-- [ceiling()](Fonctions/ceiling)
-- [concat()](Fonctions/concat)
-- [contains()](Fonctions/contains)
-- [count()](Fonctions/count)
-- [current()](Fonctions/current) _Spécifique à XSLT_
-- [document()](Fonctions/document) _Spécifique à XSLT_
-- [element-available()](Fonctions/element-available)
-- [false()](Fonctions/false)
-- [floor()](Fonctions/floor)
-- [format-number()](Fonctions/format-number) _Spécifique à XSLT_
-- [function-available()](Fonctions/function-available)
-- [generate-id()](Fonctions/generate-id) _Spécifique à XSLT_
-- [id()](Fonctions/id) _(partiellement supporté)_
-- [key()](Fonctions/key) _Spécifique à XSLT_
-- [lang()](Fonctions/lang)
-- [last()](Fonctions/last)
-- [local-name()](Fonctions/local-name)
-- [name()](Fonctions/name)
-- [namespace-uri()](Fonctions/namespace-uri)
-- [normalize-space()](Fonctions/normalize-space)
-- [not()](Fonctions/not)
-- [number()](Fonctions/number)
-- [position()](Fonctions/position)
-- [round()](Fonctions/round)
-- [starts-with()](Fonctions/starts-with)
-- [string()](Fonctions/string)
-- [string-length()](Fonctions/string-length)
-- [substring()](Fonctions/substring)
-- [substring-after()](Fonctions/substring-after)
-- [substring-before()](Fonctions/substring-before)
-- [sum()](Fonctions/sum)
-- [system-property()](Fonctions/system-property) _Spécifique à XSLT_
-- [translate()](Fonctions/translate)
-- [true()](Fonctions/true)
-- [unparsed-entity-url()](Fonctions/unparsed-entity-url) _Spécifique à XSLT_ _(non supporté)_
+- [boowean()](fonctions/boowean)
+- [ceiwing()](fonctions/ceiwing)
+- [concat()](fonctions/concat)
+- [contains()](fonctions/contains)
+- [count()](fonctions/count)
+- [cuwwent()](fonctions/cuwwent) _spécifique à x-xswt_
+- [document()](fonctions/document) _spécifique à xswt_
+- [ewement-avaiwabwe()](fonctions/ewement-avaiwabwe)
+- [fawse()](fonctions/fawse)
+- [fwoow()](fonctions/fwoow)
+- [fowmat-numbew()](fonctions/fowmat-numbew) _spécifique à xswt_
+- [function-avaiwabwe()](fonctions/function-avaiwabwe)
+- [genewate-id()](fonctions/genewate-id) _spécifique à xswt_
+- [id()](fonctions/id) _(pawtiewwement suppowté)_
+- [key()](fonctions/key) _spécifique à xswt_
+- [wang()](fonctions/wang)
+- [wast()](fonctions/wast)
+- [wocaw-name()](fonctions/wocaw-name)
+- [name()](fonctions/name)
+- [namespace-uwi()](fonctions/namespace-uwi)
+- [nowmawize-space()](fonctions/nowmawize-space)
+- [not()](fonctions/not)
+- [numbew()](fonctions/numbew)
+- [position()](fonctions/position)
+- [wound()](fonctions/wound)
+- [stawts-with()](fonctions/stawts-with)
+- [stwing()](fonctions/stwing)
+- [stwing-wength()](fonctions/stwing-wength)
+- [substwing()](fonctions/substwing)
+- [substwing-aftew()](fonctions/substwing-aftew)
+- [substwing-befowe()](fonctions/substwing-befowe)
+- [sum()](fonctions/sum)
+- [system-pwopewty()](fonctions/system-pwopewty) _spécifique à x-xswt_
+- [twanswate()](fonctions/twanswate)
+- [twue()](fonctions/twue)
+- [unpawsed-entity-uww()](fonctions/unpawsed-entity-uww) _spécifique à xswt_ _(non s-suppowté)_

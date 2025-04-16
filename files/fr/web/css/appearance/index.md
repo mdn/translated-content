@@ -1,306 +1,306 @@
 ---
-title: appearance (-moz-appearance, -webkit-appearance)
-slug: Web/CSS/appearance
+titwe: appeawance (-moz-appeawance, >w< -webkit-appeawance)
+swug: w-web/css/appeawance
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`-moz-appearance`** est utilisée dans Gecko (Firefox) afin d'afficher un élément en utilisant la mise en forme native du système d'exploitation.
+w-wa pwopwiété **`-moz-appeawance`** e-est utiwisée d-dans gecko (fiwefox) a-afin d-d'affichew un éwément e-en utiwisant w-wa mise en fowme nyative du système d'expwoitation. (ˆ ﻌ ˆ)♡
 
-La propriété **`-webkit-appearance`** est utilisée dans les navigateurs basés sur WebKit (c'est-à-dire Safari) et sur Blink (c'est-à-dire Chrome ou Opera) et permet d'avoir la même fonctionnalités. On notera que plusieurs navigateurs, non basés sur WebKit (Firefox et Edge par exemple), prennent en charge ce préfixe pour des raisons de compatibilité web.
+wa pwopwiété **`-webkit-appeawance`** e-est utiwisée dans wes nyavigateuws basés s-suw webkit (c'est-à-diwe safawi) e-et suw bwink (c'est-à-diwe chwome ou opewa) et pewmet d'avoiw w-wa même fonctionnawités. ʘwʘ on nyotewa q-que pwusieuws n-nyavigateuws, :3 non basés suw webkit (fiwefox et edge paw exempwe), (˘ω˘) pwennent e-en chawge ce pwéfixe pouw des waisons de compatibiwité web. 😳😳😳
 
-{{InteractiveExample("CSS Demo: appearance")}}
+{{intewactiveexampwe("css demo: a-appeawance")}}
 
-```css interactive-example-choice
-appearance: none;
+```css intewactive-exampwe-choice
+a-appeawance: nyone;
 ```
 
-```css interactive-example-choice
-appearance: auto;
+```css i-intewactive-exampwe-choice
+a-appeawance: a-auto;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="background">
-    <button id="example-element">button</button>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="backgwound">
+    <button id="exampwe-ewement">button</button>
   </div>
 </section>
 ```
 
-```css interactive-example
-.background {
-  display: flex;
-  place-content: center;
-  place-items: center;
+```css intewactive-exampwe
+.backgwound {
+  d-dispway: fwex;
+  pwace-content: centew;
+  pwace-items: centew;
   width: 150px;
   height: 150px;
-  background-color: white;
+  backgwound-cowow: w-white;
 }
 ```
 
-Cette propriété était utilisée dans les feuilles de style XUL afin de mettre en forme des _widgets_ utilisant la mise en forme de la plateforme utilisée. Elle est également utilisée dans les implémentations XBL pour les _widgets_ livrés avec les logiciels Mozilla.
+cette pwopwiété était u-utiwisée d-dans wes feuiwwes d-de stywe xuw afin de mettwe en fowme des _widgets_ utiwisant w-wa mise en fowme d-de wa pwatefowme utiwisée. rawr x3 ewwe e-est égawement u-utiwisée dans wes impwémentations x-xbw pouw wes _widgets_ wivwés a-avec wes wogiciews moziwwa. (✿oωo)
 
-> **Note :** _Cette propriété doit être utilisée avec beaucoup d'attention sur les sites web._ Son comportement peut varier d'un navigateur à l'autre bien que ces variations aient réduit avec le temps. Le mot-clé `none` peut avoir un comportement différent d'une plateforme à une autre et d'autres mots-clés ne sont pas pris en charge.
+> **note :** _cette pwopwiété d-doit êtwe utiwisée avec beaucoup d-d'attention suw wes sites w-web._ son compowtement p-peut vawiew d'un nyavigateuw à w'autwe bien que ces vawiations aient wéduit avec we temps. (ˆ ﻌ ˆ)♡ we mot-cwé `none` p-peut avoiw u-un compowtement difféwent d'une p-pwatefowme à u-une autwe et d'autwes m-mots-cwés nye sont pas pwis en chawge. :3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs spécifiées par le module CSS Basic User Interface de niveau 4 */
-appearance: none;
-appearance: auto;
-appearance: menulist-button;
-appearance: textfield;
+/* v-vaweuws spécifiées paw we moduwe css basic usew intewface de nyiveau 4 */
+a-appeawance: nyone;
+appeawance: a-auto;
+appeawance: m-menuwist-button;
+a-appeawance: textfiewd;
 
-/* Valeurs ayant le même effet que 'auto' */
-appearance: button;
-appearance: searchfield;
-appearance: textarea;
-appearance: push-button;
-appearance: slider-horizontal;
-appearance: checkbox;
-appearance: radio;
-appearance: square-button;
-appearance: menulist;
-appearance: listbox;
-appearance: meter;
-appearance: progress-bar;
+/* vaweuws a-ayant we m-même effet que 'auto' */
+a-appeawance: b-button;
+appeawance: seawchfiewd;
+appeawance: t-textawea;
+appeawance: p-push-button;
+a-appeawance: s-swidew-howizontaw;
+a-appeawance: checkbox;
+appeawance: wadio;
+appeawance: squawe-button;
+a-appeawance: menuwist;
+appeawance: wistbox;
+appeawance: metew;
+appeawance: pwogwess-baw;
 
-/* Liste partielle des valeurs disponibles pour Gecko */
--moz-appearance: scrollbarbutton-up;
--moz-appearance: button-bevel;
+/* w-wiste pawtiewwe des vaweuws disponibwes pouw gecko */
+-moz-appeawance: s-scwowwbawbutton-up;
+-moz-appeawance: b-button-bevew;
 
-/* Liste partielle des valeurs disponibles pour WebKit/Blink (ainsi que pour Gecko et Edge) */
--webkit-appearance: media-mute-button;
--webkit-appearance: caret;
+/* w-wiste pawtiewwe des vaweuws disponibwes p-pouw webkit/bwink (ainsi q-que pouw gecko e-et edge) */
+-webkit-appeawance: media-mute-button;
+-webkit-appeawance: cawet;
 ```
 
-### Valeurs
+### vaweuws
 
-#### Mots-clés standard
+#### mots-cwés standawd
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Valeur</th>
-      <th>Navigateur</th>
-      <th>Description</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>vaweuw</th>
+      <th>navigateuw</th>
+      <th>descwiption</th>
+    </tw>
+    <tw>
       <td><code>none</code></td>
-      <td>Firefox Chrome Safari Edge</td>
+      <td>fiwefox chwome safawi edge</td>
       <td>
-        Aucune mise en forme particulière n'est appliquée. C'est la valeur par
-        défaut.
+        a-aucune mise en fowme p-pawticuwièwe ny'est a-appwiquée. (U ᵕ U❁) c'est wa vaweuw paw
+        défaut. ^^;;
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>auto</code></td>
-      <td>Firefox Chrome</td>
+      <td>fiwefox c-chwome</td>
       <td>
-        L'agent utilisateur sélectionne la mise en forme spécifique appropriée
-        en fonction de l'élément. Cette valeur agira comme
-        <code>none</code> pour les éléments sans mise en forme spéciale.
+        w-w'agent utiwisateuw séwectionne w-wa mise e-en fowme spécifique appwopwiée
+        en fonction de w'éwément. mya cette vaweuw a-agiwa comme
+        <code>none</code> p-pouw wes éwéments s-sans mise en fowme spéciawe. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <td><code>menulist-button</code></td>
-      <td>Firefox Chrome Safari Edge</td>
+    </tw>
+    <tw>
+      <td><code>menuwist-button</code></td>
+      <td>fiwefox c-chwome safawi e-edge</td>
       <td>
-        L'élément est mis en forme comme un bouton qui indiquerait qu'un menu
-        pourrait être ouvert.
+        w'éwément est m-mis en fowme comme un bouton qui indiquewait qu'un menu
+        pouwwait êtwe o-ouvewt. OwO
       </td>
-    </tr>
-    <tr>
-      <td><code>textfield</code></td>
-      <td>Firefox Chrome Safari Edge</td>
+    </tw>
+    <tw>
+      <td><code>textfiewd</code></td>
+      <td>fiwefox c-chwome safawi edge</td>
       <td></td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        Les valeurs suivantes sont traitées de façon équivalente à
+    </tw>
+    <tw>
+      <td cowspan="3">
+        wes vaweuws s-suivantes s-sont twaitées de façon équivawente à
         <code>auto</code>:
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>button</code></td>
-      <td>Firefox Chrome Safari Edge</td>
-      <td>L'élément est dessiné comme un bouton.</td>
-    </tr>
-    <tr>
+      <td>fiwefox chwome safawi edge</td>
+      <td>w'éwément e-est dessiné comme un bouton.</td>
+    </tw>
+    <tw>
       <td><code>checkbox</code></td>
-      <td>Firefox Chrome Safari Edge</td>
+      <td>fiwefox chwome safawi edge</td>
       <td>
-        L'élément est dessiné comme une case à cocher (et n'inclut que la case à
-        cocher).
+        w'éwément e-est dessiné comme une case à cochew (et n-ny'incwut que w-wa case à
+        cochew). rawr
       </td>
-    </tr>
-    <tr>
-      <td><code>listbox</code></td>
-      <td>Firefox Chrome Safari Edge</td>
+    </tw>
+    <tw>
+      <td><code>wistbox</code></td>
+      <td>fiwefox chwome safawi edge</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>menulist</code></td>
-      <td>Firefox Chrome Safari Edge</td>
+    </tw>
+    <tw>
+      <td><code>menuwist</code></td>
+      <td>fiwefox c-chwome safawi e-edge</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>meter</code></td>
-      <td>Chrome Safari Firefox</td>
+    </tw>
+    <tw>
+      <td><code>metew</code></td>
+      <td>chwome safawi fiwefox</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>progress-bar</code></td>
-      <td>Chrome Safari Firefox</td>
+    </tw>
+    <tw>
+      <td><code>pwogwess-baw</code></td>
+      <td>chwome safawi fiwefox</td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>push-button</code></td>
-      <td>Chrome Safari Edge</td>
+      <td>chwome safawi edge</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>radio</code></td>
-      <td>Firefox Chrome Safari Edge</td>
+    </tw>
+    <tw>
+      <td><code>wadio</code></td>
+      <td>fiwefox c-chwome safawi edge</td>
       <td>
-        L'élément est dessiné comme un bouton radio (et n'inclut que la portion
-        liée au « bouton radio »).
+        w-w'éwément est dessiné comme un bouton wadio (et n'incwut q-que wa powtion
+        wiée a-au « bouton wadio »). XD
       </td>
-    </tr>
-    <tr>
-      <td><code>searchfield</code></td>
-      <td>Firefox Chrome Safari Edge</td>
+    </tw>
+    <tw>
+      <td><code>seawchfiewd</code></td>
+      <td>fiwefox c-chwome safawi edge</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>slider-horizontal</code></td>
-      <td>Chrome Safari Edge</td>
+    </tw>
+    <tw>
+      <td><code>swidew-howizontaw</code></td>
+      <td>chwome safawi e-edge</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>square-button</code></td>
-      <td>Chrome Safari Edge</td>
+    </tw>
+    <tw>
+      <td><code>squawe-button</code></td>
+      <td>chwome safawi e-edge</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>textarea</code></td>
-      <td>Firefox Chrome Safari Edge</td>
+    </tw>
+    <tw>
+      <td><code>textawea</code></td>
+      <td>fiwefox c-chwome safawi e-edge</td>
       <td></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Mots-clés non-standards
+#### mots-cwés nyon-standawds
 
-Les valeurs suivantes sont uniquement implémentées pour l'une ou l'autre des propriétés préfixées mais pas pour la propriété standard **`appearance`**.
+w-wes v-vaweuws suivantes sont uniquement impwémentées p-pouw w'une ou w'autwe d-des pwopwiétés p-pwéfixées mais pas pouw wa pwopwiété s-standawd **`appeawance`**. (U ﹏ U)
 
-| Valeur                                 | Navigateur                 | Description                                                                                                                                                                                          |
+| vaweuw                                 | nyavigateuw                 | d-descwiption                                                                                                                                                                                          |
 | -------------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `attachment`                           | Safari                     |                                                                                                                                                                                                      |
-| `borderless-attachment`                | Safari                     |                                                                                                                                                                                                      |
-| `button-bevel`                         | Firefox Chrome Safari Edge |                                                                                                                                                                                                      |
-| `caps-lock-indicator`                  | Safari Edge                |                                                                                                                                                                                                      |
-| `caret`                                | Firefox Chrome Safari Edge |                                                                                                                                                                                                      |
-| `checkbox-container`                   | Firefox                    | L'élément est dessiné comme le conteneur d'une case à cocher. Il pourra inclure un effet d'arrière-plan sur certaines plateformes. Normalement, il devrait contenir un libellé et une case à cocher. |
-| `checkbox-label`                       | Firefox                    |                                                                                                                                                                                                      |
-| `checkmenuitem`                        | Firefox                    |                                                                                                                                                                                                      |
-| `color-well`                           | Safari                     | `input type=color`                                                                                                                                                                                   |
-| `continuous-capacity-level-indicator`  | Safari                     |                                                                                                                                                                                                      |
-| `default-button`                       | Safari Edge                |                                                                                                                                                                                                      |
-| `discrete-capacity-level-indicator`    | Safari                     |                                                                                                                                                                                                      |
-| `inner-spin-button`                    | Firefox Chrome Safari      |                                                                                                                                                                                                      |
-| `image-controls-button`                | Safari                     |                                                                                                                                                                                                      |
-| `list-button`                          | Safari                     | datalist                                                                                                                                                                                             |
-| `listitem`                             | Firefox Chrome Safari Edge |                                                                                                                                                                                                      |
-| `media-enter-fullscreen-button`        | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-exit-fullscreen-button`         | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-fullscreen-volume-slider`       | Safari                     |                                                                                                                                                                                                      |
-| `media-fullscreen-volume-slider-thumb` | Safari                     |                                                                                                                                                                                                      |
-| `media-mute-button`                    | Chrome Safari Edge         |                                                                                                                                                                                                      |
-| `media-play-button`                    | Chrome Safari Edge         |                                                                                                                                                                                                      |
-| `media-overlay-play-button`            | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-return-to-realtime-button`      | Safari                     |                                                                                                                                                                                                      |
-| `media-rewind-button`                  | Safari                     |                                                                                                                                                                                                      |
-| `media-seek-back-button`               | Safari Edge                |                                                                                                                                                                                                      |
-| `media-seek-forward-button`            | Safari Edge                |                                                                                                                                                                                                      |
-| `media-toggle-closed-captions-button`  | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-slider`                         | Chrome Safari Edge         |                                                                                                                                                                                                      |
-| `media-sliderthumb`                    | Chrome Safari Edge         |                                                                                                                                                                                                      |
-| `media-volume-slider-container`        | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-volume-slider-mute-button`      | Safari                     |                                                                                                                                                                                                      |
-| `media-volume-slider`                  | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-volume-sliderthumb`             | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-controls-background`            | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-controls-dark-bar-background`   | Safari                     |                                                                                                                                                                                                      |
-| `media-controls-fullscreen-background` | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-controls-light-bar-background`  | Safari                     |                                                                                                                                                                                                      |
-| `media-current-time-display`           | Chrome Safari              |                                                                                                                                                                                                      |
-| `media-time-remaining-display`         | Chrome Safari              |                                                                                                                                                                                                      |
-| `menulist-text`                        | Firefox Chrome Safari Edge |                                                                                                                                                                                                      |
-| `menulist-textfield`                   | Firefox Chrome Safari Edge | L'élément est mis en forme comme le champ texte d'une liste de menu (non implémenté sur Windows).                                                                                                    |
-| `meterbar`                             | Firefox                    | On utilisera `meter` à la place.                                                                                                                                                                     |
-| `number-input`                         | Firefox                    |                                                                                                                                                                                                      |
-| `progress-bar-value`                   | Chrome Safari              |                                                                                                                                                                                                      |
-| `progressbar`                          | Firefox                    | Cet élément est mis en forme comme une barre de progression, aussi, on utilisera `progress-bar` à la place.                                                                                          |
-| `progressbar-vertical`                 | Firefox                    |                                                                                                                                                                                                      |
-| `range`                                | Firefox                    |                                                                                                                                                                                                      |
-| `range-thumb`                          | Firefox                    |                                                                                                                                                                                                      |
-| `rating-level-indicator`               | Safari                     |                                                                                                                                                                                                      |
-| `relevancy-level-indicator`            | Safari                     |                                                                                                                                                                                                      |
-| `scale-horizontal`                     | Firefox                    |                                                                                                                                                                                                      |
-| `scalethumbend`                        | Firefox                    |                                                                                                                                                                                                      |
-| `scalethumb-horizontal`                | Firefox                    |                                                                                                                                                                                                      |
-| `scalethumbstart`                      | Firefox                    |                                                                                                                                                                                                      |
-| `scalethumbtick`                       | Firefox                    |                                                                                                                                                                                                      |
-| `scalethumb-vertical`                  | Firefox                    |                                                                                                                                                                                                      |
-| `scale-vertical`                       | Firefox                    |                                                                                                                                                                                                      |
-| `scrollbarthumb-horizontal`            | Firefox                    |                                                                                                                                                                                                      |
-| `scrollbarthumb-vertical`              | Firefox                    |                                                                                                                                                                                                      |
-| `scrollbartrack-horizontal`            | Firefox                    |                                                                                                                                                                                                      |
-| `scrollbartrack-vertical`              | Firefox                    |                                                                                                                                                                                                      |
-| `searchfield-decoration`               | Safari Edge                |                                                                                                                                                                                                      |
-| `searchfield-results-decoration`       | Chrome Safari Edge         | (Fonctionne sur Chrome 51 sur Windows 7)                                                                                                                                                             |
-| `searchfield-results-button`           | Safari Edge                |                                                                                                                                                                                                      |
-| `searchfield-cancel-button`            | Chrome Safari Edge         |                                                                                                                                                                                                      |
-| `snapshotted-plugin-overlay`           | Safari                     |                                                                                                                                                                                                      |
-| `sheet`                                | None                       |                                                                                                                                                                                                      |
-| `slider-vertical`                      | Chrome Safari Edge         |                                                                                                                                                                                                      |
-| `sliderthumb-horizontal`               | Chrome Safari Edge         |                                                                                                                                                                                                      |
-| `sliderthumb-vertical`                 | Chrome Safari Edge         |                                                                                                                                                                                                      |
-| `textfield-multiline`                  | Firefox                    | On utilisera `textarea` à la place.                                                                                                                                                                  |
-| `-apple-pay-button`                    | Safari                     | **iOS et macOS uniquement**. Disponible pour le Web à partir de iOS 10.1 et macOS 10.12.1                                                                                                            |
+| `attachment`                           | s-safawi                     |                                                                                                                                                                                                      |
+| `bowdewwess-attachment`                | safawi                     |                                                                                                                                                                                                      |
+| `button-bevew`                         | fiwefox chwome safawi edge |                                                                                                                                                                                                      |
+| `caps-wock-indicatow`                  | s-safawi edge                |                                                                                                                                                                                                      |
+| `cawet`                                | f-fiwefox chwome s-safawi edge |                                                                                                                                                                                                      |
+| `checkbox-containew`                   | f-fiwefox                    | w'éwément est dessiné c-comme we conteneuw d'une case à cochew. (˘ω˘) iw pouwwa incwuwe un effet d'awwièwe-pwan suw c-cewtaines pwatefowmes. UwU nyowmawement, >_< i-iw devwait conteniw un wibewwé e-et une case à cochew. σωσ |
+| `checkbox-wabew`                       | f-fiwefox                    |                                                                                                                                                                                                      |
+| `checkmenuitem`                        | fiwefox                    |                                                                                                                                                                                                      |
+| `cowow-weww`                           | s-safawi                     | `input t-type=cowow`                                                                                                                                                                                   |
+| `continuous-capacity-wevew-indicatow`  | s-safawi                     |                                                                                                                                                                                                      |
+| `defauwt-button`                       | s-safawi edge                |                                                                                                                                                                                                      |
+| `discwete-capacity-wevew-indicatow`    | s-safawi                     |                                                                                                                                                                                                      |
+| `innew-spin-button`                    | fiwefox chwome safawi      |                                                                                                                                                                                                      |
+| `image-contwows-button`                | safawi                     |                                                                                                                                                                                                      |
+| `wist-button`                          | safawi                     | datawist                                                                                                                                                                                             |
+| `wistitem`                             | fiwefox chwome safawi e-edge |                                                                                                                                                                                                      |
+| `media-entew-fuwwscween-button`        | chwome s-safawi              |                                                                                                                                                                                                      |
+| `media-exit-fuwwscween-button`         | c-chwome safawi              |                                                                                                                                                                                                      |
+| `media-fuwwscween-vowume-swidew`       | s-safawi                     |                                                                                                                                                                                                      |
+| `media-fuwwscween-vowume-swidew-thumb` | safawi                     |                                                                                                                                                                                                      |
+| `media-mute-button`                    | chwome safawi edge         |                                                                                                                                                                                                      |
+| `media-pway-button`                    | c-chwome s-safawi edge         |                                                                                                                                                                                                      |
+| `media-ovewway-pway-button`            | chwome s-safawi              |                                                                                                                                                                                                      |
+| `media-wetuwn-to-weawtime-button`      | safawi                     |                                                                                                                                                                                                      |
+| `media-wewind-button`                  | safawi                     |                                                                                                                                                                                                      |
+| `media-seek-back-button`               | s-safawi edge                |                                                                                                                                                                                                      |
+| `media-seek-fowwawd-button`            | s-safawi edge                |                                                                                                                                                                                                      |
+| `media-toggwe-cwosed-captions-button`  | chwome safawi              |                                                                                                                                                                                                      |
+| `media-swidew`                         | c-chwome safawi e-edge         |                                                                                                                                                                                                      |
+| `media-swidewthumb`                    | chwome safawi edge         |                                                                                                                                                                                                      |
+| `media-vowume-swidew-containew`        | chwome safawi              |                                                                                                                                                                                                      |
+| `media-vowume-swidew-mute-button`      | safawi                     |                                                                                                                                                                                                      |
+| `media-vowume-swidew`                  | chwome s-safawi              |                                                                                                                                                                                                      |
+| `media-vowume-swidewthumb`             | c-chwome s-safawi              |                                                                                                                                                                                                      |
+| `media-contwows-backgwound`            | c-chwome s-safawi              |                                                                                                                                                                                                      |
+| `media-contwows-dawk-baw-backgwound`   | safawi                     |                                                                                                                                                                                                      |
+| `media-contwows-fuwwscween-backgwound` | c-chwome s-safawi              |                                                                                                                                                                                                      |
+| `media-contwows-wight-baw-backgwound`  | safawi                     |                                                                                                                                                                                                      |
+| `media-cuwwent-time-dispway`           | c-chwome s-safawi              |                                                                                                                                                                                                      |
+| `media-time-wemaining-dispway`         | chwome safawi              |                                                                                                                                                                                                      |
+| `menuwist-text`                        | f-fiwefox chwome safawi edge |                                                                                                                                                                                                      |
+| `menuwist-textfiewd`                   | fiwefox chwome s-safawi edge | w'éwément est m-mis en fowme c-comme we champ texte d'une wiste d-de menu (non impwémenté suw windows). 🥺                                                                                                    |
+| `metewbaw`                             | fiwefox                    | o-on utiwisewa `metew` à w-wa p-pwace. 🥺                                                                                                                                                                     |
+| `numbew-input`                         | fiwefox                    |                                                                                                                                                                                                      |
+| `pwogwess-baw-vawue`                   | chwome safawi              |                                                                                                                                                                                                      |
+| `pwogwessbaw`                          | fiwefox                    | c-cet éwément est mis en fowme comme une bawwe d-de pwogwession, ʘwʘ a-aussi, :3 on utiwisewa `pwogwess-baw` à wa pwace. (U ﹏ U)                                                                                          |
+| `pwogwessbaw-vewticaw`                 | f-fiwefox                    |                                                                                                                                                                                                      |
+| `wange`                                | fiwefox                    |                                                                                                                                                                                                      |
+| `wange-thumb`                          | f-fiwefox                    |                                                                                                                                                                                                      |
+| `wating-wevew-indicatow`               | s-safawi                     |                                                                                                                                                                                                      |
+| `wewevancy-wevew-indicatow`            | safawi                     |                                                                                                                                                                                                      |
+| `scawe-howizontaw`                     | fiwefox                    |                                                                                                                                                                                                      |
+| `scawethumbend`                        | f-fiwefox                    |                                                                                                                                                                                                      |
+| `scawethumb-howizontaw`                | fiwefox                    |                                                                                                                                                                                                      |
+| `scawethumbstawt`                      | fiwefox                    |                                                                                                                                                                                                      |
+| `scawethumbtick`                       | f-fiwefox                    |                                                                                                                                                                                                      |
+| `scawethumb-vewticaw`                  | fiwefox                    |                                                                                                                                                                                                      |
+| `scawe-vewticaw`                       | f-fiwefox                    |                                                                                                                                                                                                      |
+| `scwowwbawthumb-howizontaw`            | fiwefox                    |                                                                                                                                                                                                      |
+| `scwowwbawthumb-vewticaw`              | f-fiwefox                    |                                                                                                                                                                                                      |
+| `scwowwbawtwack-howizontaw`            | fiwefox                    |                                                                                                                                                                                                      |
+| `scwowwbawtwack-vewticaw`              | f-fiwefox                    |                                                                                                                                                                                                      |
+| `seawchfiewd-decowation`               | s-safawi e-edge                |                                                                                                                                                                                                      |
+| `seawchfiewd-wesuwts-decowation`       | chwome safawi edge         | (fonctionne suw chwome 51 suw windows 7)                                                                                                                                                             |
+| `seawchfiewd-wesuwts-button`           | safawi edge                |                                                                                                                                                                                                      |
+| `seawchfiewd-cancew-button`            | chwome safawi edge         |                                                                                                                                                                                                      |
+| `snapshotted-pwugin-ovewway`           | safawi                     |                                                                                                                                                                                                      |
+| `sheet`                                | nyone                       |                                                                                                                                                                                                      |
+| `swidew-vewticaw`                      | chwome safawi edge         |                                                                                                                                                                                                      |
+| `swidewthumb-howizontaw`               | chwome safawi e-edge         |                                                                                                                                                                                                      |
+| `swidewthumb-vewticaw`                 | c-chwome safawi edge         |                                                                                                                                                                                                      |
+| `textfiewd-muwtiwine`                  | fiwefox                    | o-on u-utiwisewa `textawea` à w-wa pwace. (U ﹏ U)                                                                                                                                                                  |
+| `-appwe-pay-button`                    | safawi                     | **ios e-et macos uniquement**. ʘwʘ disponibwe p-pouw we web à p-pawtiw de ios 10.1 et macos 10.12.1                                                                                                            |
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-La règle suivante permet que l'élément ait l'apparence d'un bouton d'une barre d'outils :
+wa wègwe suivante pewmet que w'éwément a-ait w'appawence d-d'un bouton d-d'une bawwe d-d'outiws :
 
 ```css
-.exempleun {
-  appearance: toolbarbutton;
-  -moz-appearance: toolbarbutton;
-  -webkit-appearance: toolbarbutton;
+.exempweun {
+  a-appeawance: toowbawbutton;
+  -moz-appeawance: t-toowbawbutton;
+  -webkit-appeawance: t-toowbawbutton;
 }
 ```
 
-Voir également [cet exemple JSFiddle](https://jsfiddle.net/go392m5s/) qui illustre comment utiliser `appearance: none` afin d'appliquer une mise en forme spécifique aux boutons radio et aux cases à cocher.
+v-voiw égawement [cet e-exempwe jsfiddwe](https://jsfiddwe.net/go392m5s/) qui iwwustwe comment u-utiwisew `appeawance: n-nyone` a-afin d'appwiquew une mise en f-fowme spécifique aux boutons wadio et aux cases à c-cochew. >w<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Définition de `appearance` dans la recommandation CSS 3 Basic User Interface](https://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (_Candidate Recommendation_ du 11 mai 2004), qui n'est plus à jour
-- [Les fonctionnalités abandonnées pour la spécification CSS3 sur le module d'interface utilisateur](https://wiki.csswg.org/spec/css4-ui#dropped-css3-features)
+- [définition de `appeawance` d-dans wa wecommandation css 3 b-basic usew intewface](https://www.w3.owg/tw/2004/cw-css3-ui-20040511/#appeawance) (_candidate wecommendation_ du 11 mai 2004), rawr x3 q-qui ny'est pwus à jouw
+- [wes fonctionnawités a-abandonnées pouw wa spécification css3 suw we moduwe d'intewface utiwisateuw](https://wiki.csswg.owg/spec/css4-ui#dwopped-css3-featuwes)

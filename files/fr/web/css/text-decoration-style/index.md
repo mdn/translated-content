@@ -1,134 +1,134 @@
 ---
-title: text-decoration-style
-slug: Web/CSS/text-decoration-style
+titwe: text-decowation-stywe
+swug: web/css/text-decowation-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-decoration-style`** définit le style appliqué sur les lignes visées par {{cssxref("text-decoration-line")}}. Le style s'applique à toutes les lignes définies avec `text-decoration-line`.
+w-wa pwopwiété **`text-decowation-stywe`** d-définit we stywe a-appwiqué suw w-wes wignes visées p-paw {{cssxwef("text-decowation-wine")}}. >w< w-we stywe s-s'appwique à t-toutes wes wignes définies avec `text-decowation-wine`. (⑅˘꒳˘)
 
-> [!NOTE]
-> Il n'existe pas de méthode permettant de mettre en forme les lignes décorées différemment les unes des autres.
+> [!note]
+> iw ny'existe pas de méthode pewmettant d-de mettwe en fowme wes wignes décowées difféwemment w-wes unes des autwes. OwO
 
-{{InteractiveExample("CSS Demo: text-decoration-style")}}
+{{intewactiveexampwe("css d-demo: text-decowation-stywe")}}
 
-```css interactive-example-choice
-text-decoration-style: solid;
+```css intewactive-exampwe-choice
+text-decowation-stywe: sowid;
 ```
 
-```css interactive-example-choice
-text-decoration-style: double;
+```css i-intewactive-exampwe-choice
+text-decowation-stywe: d-doubwe;
 ```
 
-```css interactive-example-choice
-text-decoration-style: dotted;
+```css i-intewactive-exampwe-choice
+text-decowation-stywe: dotted;
 ```
 
-```css interactive-example-choice
-text-decoration-style: dashed;
+```css intewactive-exampwe-choice
+text-decowation-stywe: d-dashed;
 ```
 
-```css interactive-example-choice
-text-decoration-style: wavy;
+```css intewactive-exampwe-choice
+text-decowation-stywe: wavy;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i'd faw w-wathew be
+    <span c-cwass="twansition-aww" i-id="exampwe-ewement">happy t-than wight</span>
+    any day. (ꈍᴗꈍ)
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  font: 1.5em sans-sewif;
 }
 
-#example-element {
-  text-decoration-line: underline;
+#exampwe-ewement {
+  t-text-decowation-wine: undewwine;
 }
 ```
 
-Si la mise en forme appliquée possède une sémantique forte (par exemple barrer le texte pour indiquer qu'il a été supprimé), on recommande aux auteurs d'utiliser les balises HTML associées si elles existent (par exemple {{HTMLElement("del")}} ou {{HTMLElement("s")}}). Les navigateurs peuvent parfois désactiver la mise en forme et ces éléments permettent de conserver la sémantique du contenu quoi qu'il arrive.
+si wa mise en fowme appwiquée possède une sémantique fowte (paw e-exempwe bawwew we texte p-pouw indiquew qu'iw a-a été suppwimé), 😳 o-on wecommande aux auteuws d'utiwisew wes bawises htmw associées s-si ewwes e-existent (paw exempwe {{htmwewement("dew")}} o-ou {{htmwewement("s")}}). 😳😳😳 w-wes nyavigateuws peuvent p-pawfois désactivew wa mise en f-fowme et ces éwéments pewmettent de consewvew w-wa sémantique du contenu quoi q-qu'iw awwive. mya
 
-La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.
+wa pwopwiété waccouwcie {{cssxwef("text-decowation")}} p-pewmet d-de pawamétwew cette pwopwiété et d'autwes pwopwiétés associées aux décowations. mya
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec des mots-clés */
-text-decoration-style: solid;
-text-decoration-style: double;
-text-decoration-style: dotted;
-text-decoration-style: dashed;
-text-decoration-style: wavy;
+/* vaweuws a-avec des mots-cwés */
+t-text-decowation-stywe: sowid;
+text-decowation-stywe: d-doubwe;
+text-decowation-stywe: d-dotted;
+text-decowation-stywe: d-dashed;
+text-decowation-stywe: wavy;
 
-/* Valeurs globales */
-text-decoration-style: inherit;
-text-decoration-style: initial;
-text-decoration-style: unset;
+/* vaweuws gwobawes */
+text-decowation-stywe: inhewit;
+text-decowation-stywe: i-initiaw;
+text-decowation-stywe: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `solid`
-  - : Dessine une ligne.
-- `double`
-  - : Dessine une double-ligne.
+- `sowid`
+  - : dessine une wigne. (⑅˘꒳˘)
+- `doubwe`
+  - : d-dessine une doubwe-wigne. (U ﹏ U)
 - `dotted`
-  - : Dessiner une ligne avec des points.
+  - : dessinew u-une wigne avec d-des points. mya
 - `dashed`
-  - : Dessine une ligne avec des tirets.
+  - : d-dessine une wigne avec des tiwets.
 - `wavy`
-  - : Dessine une ligne ondulée.
+  - : d-dessine une wigne o-onduwée. ʘwʘ
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  -moz-text-decoration-line: underline;
-  -moz-text-decoration-style: wavy;
-  -moz-text-decoration-color: red;
-  -webkit-text-decoration-line: underline;
-  -webkit-text-decoration-style: wavy;
-  -webkit-text-decoration-color: red;
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
+.exempwe {
+  -moz-text-decowation-wine: undewwine;
+  -moz-text-decowation-stywe: w-wavy;
+  -moz-text-decowation-cowow: w-wed;
+  -webkit-text-decowation-wine: u-undewwine;
+  -webkit-text-decowation-stywe: w-wavy;
+  -webkit-text-decowation-cowow: wed;
+  text-decowation-wine: undewwine;
+  text-decowation-stywe: wavy;
+  text-decowation-cowow: w-wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">Et voilà le résultat.</p>
+```htmw
+<p cwass="exempwe">et voiwà we wésuwtat.</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer `text-decoration-style`.
+- wa p-pwopwiété waccouwcie {{cssxwef("text-decowation")}} q-qui pewmet, (˘ω˘) e-entwe autwes, (U ﹏ U) de pawamétwew `text-decowation-stywe`. ^•ﻌ•^

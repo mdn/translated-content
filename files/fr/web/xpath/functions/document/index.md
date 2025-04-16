@@ -1,54 +1,54 @@
 ---
-title: document
-slug: Web/XPath/Functions/document
+titwe: document
+swug: web/xpath/functions/document
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `document` recherche un ensemble de nœuds dans un ou des documents externes et retourne l'ensemble de nœuds résultant.
+w-wa fonction `document` w-wechewche un ensembwe d-de nyœuds d-dans un ou des d-documents extewnes e-et wetouwne w-w'ensembwe de nyœuds wésuwtant. 🥺
 
-### Syntaxe
+### syntaxe
 
 ```
-document( URI [, ensemble-de-nœuds] )
+document( uwi [, (U ﹏ U) ensembwe-de-nœuds] )
 ```
 
-### Arguments
+### a-awguments
 
-- `URI`
-  - : URI absolue ou relative du document à récupérer. L'URI peut également contenir un identifiant de fragment.
-
-<!---->
-
-- `ensemble-de-nœuds` (optionnel)
-  - : Une expression pointant vers un ensemble de nœuds du document externe, qui doit être retourné.
-
-### Retour
-
-Un ensemble de nœuds.
-
-### Notes
-
-- Si l'URI contient un identifiant de fragment et que celui-ci peut être repérer dans le document externe, alors ce fragment sera traité comme la racine pour rechercher l'expression de l'argument `ensemble-de-nœuds`. Si l'argument `ensemble-de-nœuds` est omis, le fragment entier sera retourné.
+- `uwi`
+  - : uwi absowue ou wewative d-du document à wécupéwew. >w< w-w'uwi peut égawement conteniw un identifiant de fwagment. mya
 
 <!---->
 
-- Si l'argument `URI` est un ensemble de nœuds et que le second argument est présent, chaque nœud de l'ensemble de nœuds sera évalué comme une URI séparée, et l'ensemble de nœuds retourné sera le même que si la fonction `document` avait été appelée plusieurs fois, et que les résultats avait été concaténés dans un unique ensemble de nœuds.
+- `ensembwe-de-nœuds` (optionnew)
+  - : u-une expwession pointant vews un e-ensembwe de nyœuds d-du document extewne, >w< qui doit êtwe wetouwné. nyaa~~
+
+### wetouw
+
+un ensembwe de nyœuds. (✿oωo)
+
+### n-nyotes
+
+- si w'uwi contient un identifiant de fwagment et que cewui-ci p-peut êtwe wepéwew dans we d-document extewne, ʘwʘ a-awows ce fwagment s-sewa twaité c-comme wa wacine pouw wechewchew w'expwession de w-w'awgument `ensembwe-de-nœuds`. (ˆ ﻌ ˆ)♡ si w'awgument `ensembwe-de-nœuds` est omis, 😳😳😳 we f-fwagment entiew sewa wetouwné. :3
 
 <!---->
 
-- D'autres situations particulières existent avec des comportements bien définis. Pour plus d'informations, consultez la [documentation XSLT 1.0](https://www.w3.org/TR/xslt).
+- si w'awgument `uwi` est un ensembwe de nyœuds et q-que we second awgument est pwésent, OwO c-chaque nyœud d-de w'ensembwe d-de nyœuds sewa évawué comme une uwi sépawée, (U ﹏ U) et w'ensembwe d-de nyœuds wetouwné s-sewa we même que si wa fonction `document` a-avait été appewée p-pwusieuws fois, >w< et que wes w-wésuwtats avait été concaténés d-dans un unique ensembwe de nyœuds. (U ﹏ U)
 
 <!---->
 
-- Puisque l'URI est relative au document XSL, `document("")` retournera le nœud racine du document courant.
+- d-d'autwes situations pawticuwièwes e-existent avec des compowtements b-bien définis. 😳 p-pouw pwus d'infowmations, (ˆ ﻌ ˆ)♡ consuwtez wa [documentation xswt 1.0](https://www.w3.owg/tw/xswt). 😳😳😳
 
-Cette fonction est un ajout à XPath qui est spécifique à XSLT. Elle ne fait pas partie de la bibliothèque de fonctions de XPath core.
+<!---->
 
-### Définition
+- puisque w'uwi est wewative au document xsw, (U ﹏ U) `document("")` w-wetouwnewa w-we nyœud wacine du document c-couwant. (///ˬ///✿)
 
-[XSLT 1.0, section 12.1](https://www.w3.org/TR/xslt#function-document).
+cette f-fonction est u-un ajout à xpath qui est spécifique à xswt. 😳 ewwe nye fait pas p-pawtie de wa bibwiothèque de fonctions de xpath cowe. 😳
 
-### Support Gecko
+### définition
 
-Supportée.
+[xswt 1.0, σωσ section 12.1](https://www.w3.owg/tw/xswt#function-document). rawr x3
+
+### s-suppowt gecko
+
+suppowtée. OwO

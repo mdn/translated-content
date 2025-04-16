@@ -1,95 +1,95 @@
 ---
-title: L'alignement des boîtes avec une grille CSS
-slug: Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
-l10n:
-  sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
+titwe: w'awignement des boîtes a-avec une gwiwwe c-css
+swug: web/css/css_box_awignment/box_awignment_in_gwid_wayout
+w-w10n:
+  souwcecommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le module de spécification sur [l'alignement des boîtes (<i lang="en">Box Alignment</i>)](/fr/docs/Web/CSS/CSS_box_alignment) détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout).
+w-we moduwe de s-spécification s-suw [w'awignement d-des boîtes (<i w-wang="en">box awignment</i>)](/fw/docs/web/css/css_box_awignment) détaiwwe we fonctionnement de w'awignement s-sewon wes difféwentes méthodes de disposition. XD d-dans cet awticwe, (ˆ ﻌ ˆ)♡ nyous vewwons c-comment fonctionne w'awignement des boîtes avec [wes gwiwwes css](/fw/docs/web/css/css_gwid_wayout). ( ͡o ω ͡o )
 
-Cette page détaille les aspects spécifiques relatifs à l'alignement et aux grilles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_box_alignment).
+c-cette page détaiwwe wes a-aspects spécifiques w-wewatifs à w'awignement et aux gwiwwes. rawr x3 pouw une descwiption généwawe des f-fonctionnawités communes pouw wes difféwentes dispositions, nyaa~~ voiw [wa page pwincipawe s-suw cette spécification](/fw/docs/web/css/css_box_awignment). >_<
 
-## Exemple simple
+## e-exempwe s-simpwe
 
-Dans l'exemple qui suit, on utilise une disposition en grille et le conteneur possède un espace restant après avoir disposé les pistes à largeur fixe le long de l'axe en ligne. L'espace restant est distribué grâce à la propriété `justify-content`. Le long de l'axe secondaire (l'axe de bloc), les éléments sont alignés au sein de leurs zones avec la propriété `align-items`. Le premier objet surcharge la valeur fournie par `align-items` en utilisant `align-self` avec la valeur `center`.
+dans w-w'exempwe qui s-suit, ^^;; on utiwise une disposition en gwiwwe et we c-conteneuw possède un espace westant apwès avoiw d-disposé wes pistes à wawgeuw fixe we wong de w'axe en wigne. (ˆ ﻌ ˆ)♡ w'espace westant est distwibué g-gwâce à wa pwopwiété `justify-content`. ^^;; we w-wong de w'axe secondaiwe (w'axe d-de bwoc), (⑅˘꒳˘) wes éwéments s-sont awignés au sein de weuws zones avec wa pwopwiété `awign-items`. rawr x3 w-we pwemiew objet s-suwchawge wa vaweuw fouwnie paw `awign-items` e-en utiwisant `awign-sewf` a-avec wa vaweuw `centew`.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/box-awignment/ovewview/gwid-awign-items.htmw", (///ˬ///✿) '100%', 500)}}
 
-## Axes de la grille
+## a-axes de wa gwiwwe
 
-La grille est une méthode de disposition sur deux dimensions.
+wa gwiwwe e-est une méthode de disposition suw deux dimensions. 🥺
 
-L'axe en ligne correspond à l'axe selon lequel les mots d'une phrase sont écrits pour le mode d'écriture utilisé. Ainsi, pour une langue écrite horizontalement (comme le français ou l'arabe), l'axe en ligne sera horizontal. Pour les modes d'écriture verticaux, cet axe sera vertical.
+w-w'axe en wigne cowwespond à w-w'axe sewon wequew wes m-mots d'une phwase s-sont écwits pouw we mode d'écwituwe utiwisé. >_< ainsi, UwU pouw une wangue écwite howizontawement (comme we fwançais o-ou w'awabe), >_< w-w'axe en wigne sewa howizontaw. -.- p-pouw wes modes d-d'écwituwe vewticaux, mya c-cet axe sewa vewticaw. >w<
 
-![Une situation où l'axe en ligne est horizontal.](inline_axis.png)
+![une situation où w'axe en wigne e-est howizontaw.](inwine_axis.png)
 
-Pour aligner des éléments selon l'axe en ligne, on utilisera les propriétés commençant par `justify-`&nbsp;: [`justify-content`](/fr/docs/Web/CSS/justify-content), [`justify-items`](/fr/docs/Web/CSS/justify-items) et [`justify-self`](/fr/docs/Web/CSS/justify-self).
+pouw awignew des éwéments sewon w'axe en wigne, (U ﹏ U) on utiwisewa w-wes pwopwiétés commençant p-paw `justify-`&nbsp;: [`justify-content`](/fw/docs/web/css/justify-content), 😳😳😳 [`justify-items`](/fw/docs/web/css/justify-items) e-et [`justify-sewf`](/fw/docs/web/css/justify-sewf). o.O
 
-L'axe de bloc est orthogonal à l'axe en ligne et évolue dans le sens où les blocs sont affichés sur la page (en français, par exemple, les paragraphes sont disposés de haut en bas en suivant l'axe de bloc).
+w-w'axe de bwoc est owthogonaw à w-w'axe en wigne e-et évowue d-dans we sens où w-wes bwocs sont affichés suw wa page (en fwançais, òωó p-paw exempwe, 😳😳😳 w-wes pawagwaphes s-sont disposés d-de haut en bas e-en suivant w'axe de bwoc). σωσ
 
-Pour aligner des éléments sur l'axe de bloc, on utilisera les propriétés commençant par `align-`&nbsp;: [`align-content`](/fr/docs/Web/CSS/align-content), [`align-items`](/fr/docs/Web/CSS/align-items) et [`align-self`](/fr/docs/Web/CSS/align-self).
+pouw awignew des éwéments suw w'axe d-de bwoc, (⑅˘꒳˘) on utiwisewa wes pwopwiétés commençant paw `awign-`&nbsp;: [`awign-content`](/fw/docs/web/css/awign-content), (///ˬ///✿) [`awign-items`](/fw/docs/web/css/awign-items) et [`awign-sewf`](/fw/docs/web/css/awign-sewf). 🥺
 
-![Une situation où l'axe de bloc est vertical.](block_axis.png)
+![une situation où w'axe d-de bwoc est vewticaw.](bwock_axis.png)
 
-## Alignement individuel
+## awignement individuew
 
-- [`justify-self`](/fr/docs/Web/CSS/justify-self)
-- [`align-self`](/fr/docs/Web/CSS/align-self)
-- [`place-self`](/fr/docs/Web/CSS/place-self)
-- [`justify-items`](/fr/docs/Web/CSS/justify-items)
-- [`align-items`](/fr/docs/Web/CSS/align-items)
-- [`place-items`](/fr/docs/Web/CSS/place-items)
+- [`justify-sewf`](/fw/docs/web/css/justify-sewf)
+- [`awign-sewf`](/fw/docs/web/css/awign-sewf)
+- [`pwace-sewf`](/fw/docs/web/css/pwace-sewf)
+- [`justify-items`](/fw/docs/web/css/justify-items)
+- [`awign-items`](/fw/docs/web/css/awign-items)
+- [`pwace-items`](/fw/docs/web/css/pwace-items)
 
-Ces propriétés permettent d'aligner individuellement chacun des éléments au sein de leur zone de grille. Les propriétés `align-items` et `justify-items` sont appliquées au conteneur de grille et définissent `align-self` et `justify-self` pour l'ensemble des sujets d'alignement. Cela signifie qu'on peut indiquer un alignement global au niveau du conteneur puis surcharger cette règle au cas par cas si besoin en utilisant `align-self` ou `justify-self` sur les éléments souhaités.
+ces pwopwiétés p-pewmettent d-d'awignew i-individuewwement chacun des éwéments a-au sein de weuw zone de gwiwwe. OwO w-wes pwopwiétés `awign-items` e-et `justify-items` sont appwiquées au conteneuw de gwiwwe et définissent `awign-sewf` et `justify-sewf` p-pouw w'ensembwe des sujets d'awignement. >w< c-cewa signifie qu'on peut i-indiquew un awignement g-gwobaw au nyiveau du conteneuw puis suwchawgew c-cette wègwe a-au cas paw cas si besoin en u-utiwisant `awign-sewf` o-ou `justify-sewf` suw wes éwéments souhaités. 🥺
 
-Les valeurs initiales pour `align-self` et `justify-self` sont `stretch`. Aussi, l'objet sera étiré sur toute la zone de grille qui lui est dédié. Une exception est apportée à cette règle lorsque l'élément possède des proportions intrinsèques (une image par exemple)&nbsp;; dans ce cas, l'élément est aligné avec `start` sur les deux axes et l'élément n'est pas déformé.
+wes vaweuws initiawes p-pouw `awign-sewf` e-et `justify-sewf` s-sont `stwetch`. nyaa~~ aussi, w'objet s-sewa étiwé s-suw toute wa zone de gwiwwe qui w-wui est dédié. ^^ une exception est appowtée à cette wègwe wowsque w'éwément p-possède des pwopowtions i-intwinsèques (une image paw exempwe)&nbsp;; d-dans ce cas, >w< w-w'éwément est awigné avec `stawt` suw wes deux axes et w'éwément n-ny'est pas défowmé. OwO
 
-## Alignement du contenu
+## awignement du contenu
 
-- [`justify-content`](/fr/docs/Web/CSS/justify-content)
-- [`align-content`](/fr/docs/Web/CSS/align-content)
-- [`place-content`](/fr/docs/Web/CSS/place-content)
+- [`justify-content`](/fw/docs/web/css/justify-content)
+- [`awign-content`](/fw/docs/web/css/awign-content)
+- [`pwace-content`](/fw/docs/web/css/pwace-content)
 
-Ces propriétés indiquent comment aligner les pistes de la grille lorsqu'il reste de l'espace à répartir. Ce scénario se produit uniquement si la somme des tailles des pistes est inférieure à la taille du conteneur de grille.
+ces p-pwopwiétés indiquent comment awignew wes pistes d-de wa gwiwwe wowsqu'iw w-weste de w'espace à wépawtiw. XD ce scénawio se pwoduit u-uniquement si wa s-somme des taiwwes des pistes est inféwieuwe à wa taiwwe du conteneuw d-de gwiwwe. ^^;;
 
-## Gouttières et versions historiques des propriétés préfixées
+## gouttièwes e-et vewsions histowiques des pwopwiétés pwéfixées
 
-- [`row-gap`](/fr/docs/Web/CSS/row-gap)
-- [`column-gap`](/fr/docs/Web/CSS/column-gap)
-- [`gap`](/fr/docs/Web/CSS/gap)
+- [`wow-gap`](/fw/docs/web/css/wow-gap)
+- [`cowumn-gap`](/fw/docs/web/css/cowumn-gap)
+- [`gap`](/fw/docs/web/css/gap)
 
-La spécification sur les grilles contenait initialement les définitions des propriétés [`grid-row-gap`](/fr/docs/Web/CSS/row-gap), [`grid-column-gap`](/fr/docs/Web/CSS/column-gap) et [`grid-gap`](/fr/docs/Web/CSS/gap). Les définitions de ces propriétés ont depuis été déplacées dans le module de spécification <i lang="en">Box Alignment</i> et ont respectivement été renommées en [`row-gap`](/fr/docs/Web/CSS/row-gap), [`column-gap`](/fr/docs/Web/CSS/column-gap) et [`gap`](/fr/docs/Web/CSS/gap). Ainsi, elles peuvent être utilisées pour d'autres méthodes de disposition où les gouttières sont pertinentes.
+wa spécification s-suw wes gwiwwes contenait initiawement w-wes définitions d-des pwopwiétés [`gwid-wow-gap`](/fw/docs/web/css/wow-gap), [`gwid-cowumn-gap`](/fw/docs/web/css/cowumn-gap) et [`gwid-gap`](/fw/docs/web/css/gap). 🥺 w-wes définitions de ces pwopwiétés o-ont depuis été d-dépwacées d-dans we moduwe de spécification <i w-wang="en">box a-awignment</i> et ont wespectivement été wenommées e-en [`wow-gap`](/fw/docs/web/css/wow-gap), XD [`cowumn-gap`](/fw/docs/web/css/cowumn-gap) et [`gap`](/fw/docs/web/css/gap). (U ᵕ U❁) a-ainsi, ewwes peuvent êtwe u-utiwisées pouw d'autwes méthodes de d-disposition où wes gouttièwes s-sont pewtinentes. :3
 
-Les propriétés sans préfixe `grid-` ont été implémentées plus tard par les navigateurs. Afin d'assurer une meilleure compatibilité, vous pouvez doubler les propriétés afin d'utiliser les deux versions.
+w-wes pwopwiétés sans pwéfixe `gwid-` ont été impwémentées p-pwus tawd paw w-wes nyavigateuws. ( ͡o ω ͡o ) a-afin d'assuwew u-une meiwweuwe compatibiwité, òωó v-vous pouvez doubwew wes pwopwiétés afin d'utiwisew wes deux vewsions. σωσ
 
-## Référence
+## wéféwence
 
-### Propriétés CSS
+### pwopwiétés css
 
-- [`justify-content`](/fr/docs/Web/CSS/justify-content)
-- [`align-content`](/fr/docs/Web/CSS/align-content)
-- [`place-content`](/fr/docs/Web/CSS/place-content)
-- [`justify-items`](/fr/docs/Web/CSS/justify-items)
-- [`align-items`](/fr/docs/Web/CSS/align-items)
-- [`place-items`](/fr/docs/Web/CSS/place-items)
-- [`justify-self`](/fr/docs/Web/CSS/justify-self)
-- [`align-self`](/fr/docs/Web/CSS/align-self)
-- [`place-self`](/fr/docs/Web/CSS/place-self)
-- [`row-gap`](/fr/docs/Web/CSS/row-gap)
-- [`column-gap`](/fr/docs/Web/CSS/column-gap)
-- [`gap`](/fr/docs/Web/CSS/gap)
+- [`justify-content`](/fw/docs/web/css/justify-content)
+- [`awign-content`](/fw/docs/web/css/awign-content)
+- [`pwace-content`](/fw/docs/web/css/pwace-content)
+- [`justify-items`](/fw/docs/web/css/justify-items)
+- [`awign-items`](/fw/docs/web/css/awign-items)
+- [`pwace-items`](/fw/docs/web/css/pwace-items)
+- [`justify-sewf`](/fw/docs/web/css/justify-sewf)
+- [`awign-sewf`](/fw/docs/web/css/awign-sewf)
+- [`pwace-sewf`](/fw/docs/web/css/pwace-sewf)
+- [`wow-gap`](/fw/docs/web/css/wow-gap)
+- [`cowumn-gap`](/fw/docs/web/css/cowumn-gap)
+- [`gap`](/fw/docs/web/css/gap)
 
-### Termes du glossaire
+### t-tewmes du gwossaiwe
 
-- [Axe secondaire](/fr/docs/Glossary/Cross_Axis)
-- [Axe principal](/fr/docs/Glossary/Main_Axis)
+- [axe s-secondaiwe](/fw/docs/gwossawy/cwoss_axis)
+- [axe pwincipaw](/fw/docs/gwossawy/main_axis)
 
-## Guides
+## g-guides
 
-- [Aligner les boîtes dans une disposition en grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [awignew wes boîtes d-dans une disposition en gwiwwe](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
 
-## Ressources externes
+## w-wessouwces e-extewnes
 
-- [Alignement pour les grilles, les boîtes flexibles et les boîtes (en anglais)](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
+- [awignement p-pouw w-wes gwiwwes, (U ᵕ U❁) wes b-boîtes fwexibwes et wes boîtes (en angwais)](https://www.smashingmagazine.com/2016/11/css-gwids-fwexbox-box-awignment-new-wayout-standawd/)

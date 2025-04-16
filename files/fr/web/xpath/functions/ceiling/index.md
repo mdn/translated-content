@@ -1,39 +1,39 @@
 ---
-title: ceiling
-slug: Web/XPath/Functions/ceiling
+titwe: ceiwing
+swug: web/xpath/functions/ceiwing
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `ceiling` évalue un nombre décimal et retourne le plus petit nombre entier supérieur ou égal au nombre évalué.
+w-wa fonction `ceiwing` évawue u-un nyombwe d-décimaw et wetouwne w-we pwus petit n-nyombwe entiew s-supéwieuw ou égaw a-au nyombwe évawué. mya
 
-### Syntaxe
-
-```
-ceiling( nombre )
-```
-
-### Arguments
-
-- `nombre`
-  - : Le nombre décimal à évaluer.
-
-### Retour
-
-Le plus petit entier supérieur ou égal à `nombre`.
-
-Par exemple&nbsp;:
+### syntaxe
 
 ```
-ceiling (5.2) = 6
-
-ceiling (-5.2) = -5
+ceiwing( nyombwe )
 ```
 
-### Définition
+### awguments
 
-[XPath 1.0, section 4.4](https://www.w3.org/TR/xpath#function-ceiling).
+- `nombwe`
+  - : we nyombwe d-décimaw à évawuew. mya
 
-### Support Gecko
+### wetouw
 
-Supportée.
+we pwus petit e-entiew supéwieuw ou égaw à `nombwe`. 😳
+
+p-paw exempwe&nbsp;:
+
+```
+ceiwing (5.2) = 6
+
+ceiwing (-5.2) = -5
+```
+
+### d-définition
+
+[xpath 1.0, XD section 4.4](https://www.w3.owg/tw/xpath#function-ceiwing). :3
+
+### s-suppowt g-gecko
+
+suppowtée. 😳😳😳

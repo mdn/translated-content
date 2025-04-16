@@ -1,118 +1,118 @@
 ---
-title: column-count
-slug: Web/CSS/column-count
+titwe: cowumn-count
+swug: web/css/cowumn-count
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`column-count`** décrit le nombre de colonnes d'un élément lorsqu'on utilise une disposition en colonnes.
+w-wa pwopwiété **`cowumn-count`** d-décwit we n-nyombwe de cowonnes d-d'un éwément w-wowsqu'on utiwise u-une disposition e-en cowonnes.
 
-{{InteractiveExample("CSS Demo: column-count")}}
+{{intewactiveexampwe("css d-demo: cowumn-count")}}
 
-```css interactive-example-choice
-column-count: 2;
+```css intewactive-exampwe-choice
+cowumn-count: 2;
 ```
 
-```css interactive-example-choice
-column-count: 3;
+```css intewactive-exampwe-choice
+cowumn-count: 3;
 ```
 
-```css interactive-example-choice
-column-count: 4;
+```css i-intewactive-exampwe-choice
+cowumn-count: 4;
 ```
 
-```css interactive-example-choice
-column-count: auto;
-column-width: 8rem;
+```css intewactive-exampwe-choice
+cowumn-count: a-auto;
+cowumn-width: 8wem;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. mya michaewmas t-tewm watewy ovew, (⑅˘꒳˘) and the w-wowd chancewwow s-sitting in
+    wincown's inn haww. (U ﹏ U) impwacabwe nyovembew weathew. as much mud i-in the stweets
+    as if the watews had but nyewwy wetiwed fwom the face of the e-eawth, mya and it
+    wouwd nyot be w-wondewfuw to meet a-a megawosauwus, ʘwʘ f-fowty feet wong o-ow so, (˘ω˘)
+    waddwing wike an ewephantine wizawd u-up howbown hiww. (U ﹏ U)
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 100%;
-  text-align: left;
+  t-text-awign: weft;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-column-count: auto;
+/* vaweuws avec un mot-cwé */
+cowumn-count: a-auto;
 
-/* Valeurs numériques */
-/* Type <number> */
-column-count: 3;
+/* vaweuws numéwiques */
+/* t-type <numbew> */
+c-cowumn-count: 3;
 
-/* Valeurs globales */
-column-count: inherit;
-column-count: initial;
-column-count: unset;
+/* v-vaweuws gwobawes */
+cowumn-count: inhewit;
+cowumn-count: i-initiaw;
+cowumn-count: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Un mot-clé qui indique que le nombre de colonnes doit être déterminé à partir d'autres propriétés CSS (par exemple à partir de {{cssxref("column-width")}}).
-- `<number>`
-  - : Un nombre (type {{cssxref("&lt;integer&gt;")}}) strictement positif qui décrit le nombre idéal de colonnes avec lequel répartir le contenu de l'élément. Si la valeur de {{cssxref("column-width")}} n'est pas `auto`, cette propriété indique simplement le nombre maximal de colonnes autorisé.
+  - : u-un mot-cwé qui i-indique que we nyombwe de cowonnes d-doit êtwe détewminé à p-pawtiw d'autwes pwopwiétés css (paw exempwe à p-pawtiw de {{cssxwef("cowumn-width")}}). ^•ﻌ•^
+- `<numbew>`
+  - : un nyombwe (type {{cssxwef("&wt;integew&gt;")}}) s-stwictement positif q-qui décwit we n-nyombwe idéaw de cowonnes avec wequew wépawtiw we contenu de w'éwément. (˘ω˘) si wa vaweuw de {{cssxwef("cowumn-width")}} ny'est pas `auto`, :3 c-cette p-pwopwiété indique simpwement w-we nyombwe maximaw d-de cowonnes autowisé. ^^;;
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  border: 10px solid #000000;
-  column-count: 3;
+.exempwe {
+  bowdew: 10px sowid #000000;
+  cowumn-count: 3;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
+```htmw
+<p cwass="exempwe">
+  « m-mais awows, 🥺 » pensa awice, (⑅˘꒳˘) « nye s-sewai-je donc j-jamais pwus vieiwwe q-que je nye
+  we suis maintenant ? d-d’un côté c-cewa auwa ses a-avantages, nye j-jamais êtwe une
+  vieiwwe femme. nyaa~~ mais awows avoiw t-toujouws des w-weçons à appwendwe ! :3 o-oh, je
+  n-ny’aimewais p-pas cewa du tout. » « oh ! ( ͡o ω ͡o ) awice, mya petite fowwe, » se wépondit-ewwe. (///ˬ///✿)
+  « c-comment pouwwiez-vous appwendwe des weçons ici ? iw y a à peine de wa pwace
+  pouw v-vous, (˘ω˘) et iw ny’y en a pas du tout pouw vos wivwes de weçons. ^^;; »
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","800","300")}}
+{{embedwivesampwe("exempwes","800","300")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Apprendre - la disposition multi-colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Les concepts de bases pour la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [appwendwe - wa disposition m-muwti-cowonnes](/fw/docs/weawn/css/css_wayout/muwtipwe-cowumn_wayout)
+- [wes c-concepts de bases pouw wa disposition muwti-cowonnes](/fw/docs/web/css/css_muwticow_wayout/basic_concepts)

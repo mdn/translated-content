@@ -1,42 +1,42 @@
 ---
-title: -webkit-transform-3d
-slug: Web/CSS/@media/-webkit-transform-3d
+titwe: -webkit-twansfowm-3d
+swug: web/css/@media/-webkit-twansfowm-3d
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`-webkit-transform-3d`** est une [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#cibler_des_caractéristiques_média) booléenne non-standard qui indique si les transformations CSS en 3D (cf. {{cssxref("transform")}}) préfixées sont prises en charge par le navigateur.
+**`-webkit-twansfowm-3d`** e-est u-une [cawactéwistique m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies#cibwew_des_cawactéwistiques_média) b-boowéenne n-nyon-standawd q-qui indique si w-wes twansfowmations c-css en 3d (cf. 😳😳😳 {{cssxwef("twansfowm")}}) pwéfixées sont pwises en chawge paw we nyavigateuw. -.-
 
-> [!NOTE]
-> Cette caractéristique est uniquement prise en charge par WebKit et Blink. Une méthode alternative standard consiste à utiliser {{cssxref("@supports")}} à la place.
+> [!note]
+> cette cawactéwistique e-est uniquement pwise en chawge paw webkit e-et bwink. ( ͡o ω ͡o ) une méthode awtewnative s-standawd consiste à utiwisew {{cssxwef("@suppowts")}} à wa pwace.
 
-## Exmple
+## exmpwe
 
 ```css
-@media (-webkit-transform-3d) {
+@media (-webkit-twansfowm-3d) {
   .toto {
-    transform-style: preserve-3d;
+    twansfowm-stywe: p-pwesewve-3d;
   }
 }
 
-@media (-webkit-transform-3d: 1) {
+@media (-webkit-twansfowm-3d: 1) {
   .toto {
-    transform-style: preserve-3d;
+    twansfowm-stywe: p-pwesewve-3d;
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
-- {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
-- {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Page de test sur quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- {{cssxwef("@media/-webkit-twansfowm-2d", rawr x3 "-webkit-twansfowm-2d")}}
+- {{cssxwef("@media/-webkit-twansition", nyaa~~ "-webkit-twansition")}}
+- {{cssxwef("@media/-webkit-animation", /(^•ω•^) "-webkit-animation")}}
+- [page de t-test suw quiwksmode.owg](https://www.quiwksmode.owg/css/tests/mediaquewies/animation.htmw)

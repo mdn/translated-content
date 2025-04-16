@@ -1,107 +1,107 @@
 ---
-title: :first-child
-slug: Web/CSS/:first-child
+titwe: :fiwst-chiwd
+swug: web/css/:fiwst-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:first-child`** permet de cibler un élément qui est le premier élément fils par rapport à son élément parent.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:fiwst-chiwd`** p-pewmet d-de cibwew un éwément q-qui est w-we pwemiew éwément f-fiws paw wappowt à s-son éwément p-pawent. ^^
 
 ```css
-/* Cible n'importe quel élément <p> qui est */
-/* le premier fils de son élément parent */
-p:first-child {
-  color: lime;
-  background-color: black;
+/* cibwe ny'impowte quew éwément <p> qui est */
+/* we pwemiew f-fiws de son éwément pawent */
+p:fiwst-chiwd {
+  c-cowow: wime;
+  backgwound-cowow: b-bwack;
 }
 ```
 
-> [!NOTE]
-> Tel que défini initialement, il était nécessaire que l'élément sélectionné ait un élément parent. À partir de la spécification de niveau 4 pour les sélecteurs, cela n'est plus obligatoire.
+> [!note]
+> tew que défini initiawement, 😳😳😳 iw était nyécessaiwe q-que w'éwément séwectionné a-ait un éwément p-pawent. mya À pawtiw de wa spécification de nyiveau 4 pouw wes séwecteuws, 😳 c-cewa ny'est pwus obwigatoiwe. -.-
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Premier exemple
+### pwemiew exempwe
 
-#### CSS
+#### c-css
 
 ```css
-p:first-child {
-  color: lime;
-  background-color: black;
+p:fiwst-chiwd {
+  cowow: wime;
+  b-backgwound-cowow: b-bwack;
   padding: 5px;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
   <p>
-    Ce paragraphe est mis en forme car c'est un élément p ET que c'est le
-    premier fils de l'élément div.
+    c-ce pawagwaphe est mis en fowme caw c'est un éwément p-p et que c'est we
+    pwemiew fiws de w'éwément d-div. 🥺
   </p>
   <p>
-    En revanche, ce paragraphe n'est pas mis en forme car ce n'est pas le
-    premier !
+    en wevanche, o.O ce pawagwaphe ny'est pas mis en fowme caw ce ny'est pas we
+    pwemiew ! /(^•ω•^)
   </p>
 </div>
 
 <div>
-  <h2>Ce titre h2 n'est pas mis en forme car ce n'est pas un paragraphe.</h2>
+  <h2>ce t-titwe h2 ny'est pas mis en f-fowme caw ce ny'est p-pas un pawagwaphe.</h2>
   <p>
-    Et ce paragraphe n'est pas mis en forme car ce n'est pas le premier fils !
+    e-et ce pawagwaphe n'est pas mis en fowme caw ce ny'est pas w-we pwemiew fiws ! nyaa~~
   </p>
 </div>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Premier_exemple','100%',300)}}
+{{embedwivesampwe('pwemiew_exempwe','100%',300)}}
 
-### Utiliser les listes non ordonnées
+### utiwisew w-wes wistes n-nyon owdonnées
 
-#### CSS
+#### css
 
 ```css
-li {
-  color: blue;
+w-wi {
+  cowow: bwue;
 }
 
-li:first-child {
-  color: green;
+wi:fiwst-chiwd {
+  c-cowow: gween;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>Élément 1 de la liste</li>
-  <li>Élément 2</li>
-  <li>Élément 3</li>
-</ul>
+```htmw
+<uw>
+  <wi>Éwément 1 d-de wa wiste</wi>
+  <wi>Éwément 2</wi>
+  <wi>Éwément 3</wi>
+</uw>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Utiliser_les_listes_non_ordonnées',300,100)}}
+{{embedwivesampwe('utiwisew_wes_wistes_non_owdonnées',300,100)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":last-child")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{cssxref(":last-of-type")}}
-- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd", nyaa~~ ":nth-chiwd()")}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":-moz-fiwst-node")}} {{non-standawd_inwine}}

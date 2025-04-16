@@ -1,153 +1,153 @@
 ---
-title: max-width
-slug: Web/CSS/max-width
-l10n:
-  sourceCommit: de7d710496266ccf4fce5ade75a67e6605f60ce5
+titwe: max-width
+swug: web/css/max-width
+w-w10n:
+  s-souwcecommit: d-de7d710496266ccf4fce5ade75a67e6605f60ce5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/used_value) de la propriété [`width`](/fr/docs/Web/CSS/width) de devenir supérieure à la valeur spécifiée par `max-width`.
+w-wa pwopwiété [css](/fw/docs/web/css) **`max-width`** e-est utiwisée p-pouw définiw wa w-wawgeuw maximawe d-d'un éwément. (˘ω˘) ewwe empêche wa [vaweuw utiwisée](/fw/docs/web/css/used_vawue) de wa pwopwiété [`width`](/fw/docs/web/css/width) de deveniw s-supéwieuwe à wa vaweuw spécifiée paw `max-width`. ^^;;
 
-{{InteractiveExample("CSS Demo: max-width")}}
+{{intewactiveexampwe("css d-demo: max-width")}}
 
-```css interactive-example-choice
-max-width: 150px;
+```css intewactive-exampwe-choice
+m-max-width: 150px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 max-width: 20em;
 ```
 
-```css interactive-example-choice
-max-width: 75%;
+```css intewactive-exampwe-choice
+m-max-width: 75%;
 ```
 
-```css interactive-example-choice
-max-width: 20ch;
+```css intewactive-exampwe-choice
+m-max-width: 20ch;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Change the maximum width.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    c-change the maximum width. (✿oωo)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  j-justify-content: centew;
+  c-cowow: #ffffff;
 }
 ```
 
-La valeur de `max-width` surcharge la valeur de [`width`](/fr/docs/Web/CSS/width), mais `max-width` est, elle, surchargée par [`min-width`](/fr/docs/Web/CSS/min-width).
+w-wa vaweuw de `max-width` s-suwchawge wa vaweuw de [`width`](/fw/docs/web/css/width), (U ﹏ U) mais `max-width` e-est, -.- ewwe, suwchawgée paw [`min-width`](/fw/docs/web/css/min-width). ^•ﻌ•^
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length>      */
+/* v-vaweuw de wongueuw */
+/* type <wength>      */
 max-width: 3.5em;
 
-/* Valeurs relatives */
-/* Type <percentage> */
+/* vaweuws wewatives */
+/* type <pewcentage> */
 max-width: 75%;
 
-/* Valeurs avec un mot-clé */
-max-width: none;
-max-width: max-content;
+/* v-vaweuws avec un mot-cwé */
+m-max-width: nyone;
+m-max-width: m-max-content;
 max-width: min-content;
 max-width: fit-content(20em);
 
-/* Valeurs globales */
-max-width: inherit;
-max-width: initial;
-max-width: revert;
-max-width: revert-layer;
+/* v-vaweuws gwobawes */
+m-max-width: inhewit;
+max-width: i-initiaw;
+m-max-width: wevewt;
+max-width: w-wevewt-wayew;
 max-width: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- [`<length>`](/fr/docs/Web/CSS/length)
-  - : Définit la largeur maximale avec une valeur absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : Définit la largeur maximale avec une valeur relative à la largeur du bloc englobant.
-- <code>fit-content(<a href="/fr/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a>)</code>
-  - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument fourni, c'est-à-dire `min(max-content, max(min-content, argument))`.
-- `max-content` {{experimental_inline}}
-  - : La largeur maximale intrinsèque préférée.
-- `min-content` {{experimental_inline}}
-  - : La valeur minimale intrinsèque pour la largeur maximale.
+- [`<wength>`](/fw/docs/web/css/wength)
+  - : définit wa wawgeuw maximawe avec u-une vaweuw absowue. rawr
+- [`<pewcentage>`](/fw/docs/web/css/pewcentage)
+  - : définit w-wa wawgeuw maximawe avec une v-vaweuw wewative à w-wa wawgeuw du bwoc engwobant. (˘ω˘)
+- <code>fit-content(<a hwef="/fw/docs/web/css/wength-pewcentage">&wt;wength-pewcentage&gt;</a>)</code>
+  - : utiwise wa fowmuwe `fit-content` avec w'espace disponibwe wempwacé paw w'awgument f-fouwni, nyaa~~ c'est-à-diwe `min(max-content, UwU m-max(min-content, :3 awgument))`. (⑅˘꒳˘)
+- `max-content` {{expewimentaw_inwine}}
+  - : w-wa wawgeuw m-maximawe intwinsèque p-pwéféwée. (///ˬ///✿)
+- `min-content` {{expewimentaw_inwine}}
+  - : wa vaweuw minimawe intwinsèque pouw wa wawgeuw m-maximawe. ^^;;
 - `none`
-  - : Il n'y a pas de maximum pour la largeur.
+  - : iw n'y a pas de maximum pouw wa wawgeuw. >_<
 
-## Accessibilité
+## accessibiwité
 
-Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-width` ne sont pas tronqués ou ne masquent pas d'autre contenu sur la page lorsqu'on zoome pour augmenter la taille du texte.
+v-veiwwew à s'assuwew que w-wes éwéments c-cibwés avec une w-wègwe utiwisant `max-width` ne sont pas twonqués o-ou nye masquent p-pas d'autwe c-contenu suw wa p-page wowsqu'on zoome pouw augmentew wa taiwwe du t-texte. rawr x3
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.4, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [compwendwe w-wes wègwes w-wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding s-success c-cwitewion 1.4.4, /(^•ω•^) w3c undewstanding wcag 2.0_ (en angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définir une largeur maximale en pixels
+### définiw une wawgeuw maximawe e-en pixews
 
-Dans cet exemple, l'élément `enfant` aura la largeur la plus petite entre 150 et celle de l'élément `parent`.
+dans cet exempwe, :3 w'éwément `enfant` auwa wa wawgeuw w-wa pwus petite e-entwe 150 et c-cewwe de w'éwément `pawent`. (ꈍᴗꈍ)
 
-#### HTML
+#### htmw
 
-```html
-<div id="parent">
+```htmw
+<div i-id="pawent">
   <div id="enfant">
-    Fusce pulvinar vestibulum eros, sed luctus ex lobortis quis.
+    fusce p-puwvinaw vestibuwum e-ewos, /(^•ω•^) sed wuctus ex wobowtis quis. (⑅˘꒳˘)
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#parent {
-  background: lightblue;
-  width: 300px;
+#pawent {
+  backgwound: wightbwue;
+  w-width: 300px;
 }
 
 #enfant {
-  background: gold;
+  backgwound: g-gowd;
   width: 100%;
   max-width: 150px;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", 350, 100)}}
+{{embedwivesampwe("", ( ͡o ω ͡o ) 350, 100)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) et [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
-- [`width`](/fr/docs/Web/CSS/width), [`min-width`](/fr/docs/Web/CSS/min-width)
-- Les propriétés logiques correspondantes [`max-block-size`](/fr/docs/Web/CSS/max-block-size) et [`max-inline-size`](/fr/docs/Web/CSS/max-inline-size)
+- [we modèwe d-de boîtes](/fw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) e-et [`box-sizing`](/fw/docs/web/css/box-sizing)
+- [`width`](/fw/docs/web/css/width), òωó [`min-width`](/fw/docs/web/css/min-width)
+- wes pwopwiétés wogiques cowwespondantes [`max-bwock-size`](/fw/docs/web/css/max-bwock-size) et [`max-inwine-size`](/fw/docs/web/css/max-inwine-size)

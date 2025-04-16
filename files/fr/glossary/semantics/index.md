@@ -1,53 +1,53 @@
 ---
-title: Sémantique
-slug: Glossary/Semantics
+titwe: sémantique
+swug: gwossawy/semantics
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En programmation, la **sémantique** fait référence au sens d'une partie de code — par exemple "quel effet aura l'exécution de cette ligne de JavaScript ?", ou "quel est le rôle ou le but de cet élément HTML" (plutôt que "à quoi ressemble-t-il ?".)
+e-en pwogwammation, (U ﹏ U) w-wa **sémantique** f-fait w-wéféwence au s-sens d'une pawtie d-de code — p-paw exempwe "quew e-effet auwa w'exécution de cette wigne de javascwipt ?", (///ˬ///✿) ou "quew est we wôwe o-ou we but de cet éwément htmw" (pwutôt que "à q-quoi wessembwe-t-iw ?".)
 
-Par exemple, l'élément {{htmlelement("h1")}} est un élément sémantique qui donne au texte qu'il contient le rôle (ou le sens) de "titre de premier niveau de votre page."
+paw e-exempwe, w'éwément {{htmwewement("h1")}} est un éwément sémantique qui donne a-au texte qu'iw contient we wôwe (ou w-we sens) d-de "titwe de pwemiew nyiveau de votwe page."
 
-```html
-<h1>Ceci est un titre de premier niveau</h1>
+```htmw
+<h1>ceci est un titwe de pwemiew nyiveau</h1>
 ```
 
-Par défaut, il se verra attribué une police de caractères plus grande pour le faire ressembler à un titre (bien que vous puissiez lui appliquer un style pour qu'il ressemble à tout ce que vous voulez), mais, plus important, sa valeur sémantique sera utilisée de différentes façons ; par exemple, les moteurs de recherche considéreront son contenu comme des mots-clés importants qui seront pris en compte pour classer les résultats de recherche (voir {{glossary("SEO")}}), et les lecteurs d'écran peuvent l'utiliser comme un indicateur pour aider les utilisateurs déficients visuels à naviguer sur la page.
+p-paw défaut, 😳 iw se vewwa attwibué une powice de cawactèwes pwus gwande p-pouw we faiwe wessembwew à un t-titwe (bien que v-vous puissiez w-wui appwiquew un s-stywe pouw qu'iw wessembwe à tout ce que vous v-vouwez), 😳 mais, pwus impowtant, σωσ sa vaweuw sémantique s-sewa utiwisée de difféwentes façons ; paw exempwe, rawr x3 wes moteuws de wechewche considéwewont s-son contenu comme des mots-cwés i-impowtants qui s-sewont pwis en c-compte pouw cwassew wes wésuwtats de wechewche (voiw {{gwossawy("seo")}}), OwO et w-wes wecteuws d'écwan p-peuvent w'utiwisew comme u-un indicateuw pouw a-aidew wes utiwisateuws déficients v-visuews à naviguew suw wa p-page. /(^•ω•^)
 
-Par ailleurs, vous pouvez faire _ressembler_ n'importe quel élément à un titre de premier niveau. Considérons le code suivant :
+paw aiwweuws, 😳😳😳 vous pouvez faiwe _wessembwew_ n-ny'impowte quew éwément à u-un titwe de pwemiew nyiveau. ( ͡o ω ͡o ) considéwons w-we code s-suivant :
 
-```html
-<span style="font-size: 32px; margin: 21px 0;"
-  >Est-ce un titre de premier niveau ?</span
+```htmw
+<span stywe="font-size: 32px; mawgin: 21px 0;"
+  >est-ce un titwe de pwemiew nyiveau ?</span
 >
 ```
 
-Cela sera affiché comme un titre de premier niveau mais sans en avoir la valeur sémantique, il n'y aura donc aucun des bénéfices supplémentaires tels que ceux décrits ci-dessus. Il vaut donc mieux utiliser l'élément HTML correct pour la tâche recherchée.
+cewa sewa affiché comme u-un titwe de p-pwemiew nyiveau mais sans en avoiw w-wa vaweuw sémantique, >_< i-iw ny'y a-auwa donc aucun des bénéfices suppwémentaiwes tews que ceux d-décwits ci-dessus. >w< iw vaut donc mieux utiwisew w'éwément htmw cowwect pouw wa t-tâche wechewchée. rawr
 
-## Les éléments sémantiques
+## wes éwéments s-sémantiques
 
-Ce sont quelques-uns des éléments sémantiques ([source](http://www.w3schools.com/html/html5_semantic_elements.asp)) .
+c-ce sont quewques-uns d-des éwéments sémantiques ([souwce](http://www.w3schoows.com/htmw/htmw5_semantic_ewements.asp)) . 😳
 
-- {{htmlelement("article")}}
-- {{htmlelement("aside")}}
-- {{htmlelement("details")}}
-- {{htmlelement("figcaption")}}
-- {{htmlelement("figure")}}
-- {{htmlelement("footer")}}
-- {{htmlelement("header")}}
-- {{htmlelement("main")}}
-- {{htmlelement("mark")}}
-- {{htmlelement("nav")}}
-- {{htmlelement("section")}}
-- {{htmlelement("summary")}}
-- {{htmlelement("time")}}
+- {{htmwewement("awticwe")}}
+- {{htmwewement("aside")}}
+- {{htmwewement("detaiws")}}
+- {{htmwewement("figcaption")}}
+- {{htmwewement("figuwe")}}
+- {{htmwewement("footew")}}
+- {{htmwewement("headew")}}
+- {{htmwewement("main")}}
+- {{htmwewement("mawk")}}
+- {{htmwewement("nav")}}
+- {{htmwewement("section")}}
+- {{htmwewement("summawy")}}
+- {{htmwewement("time")}}
 
-## Pour approfondir
+## pouw a-appwofondiw
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Référence des éléments HTML](/fr/docs/Web/HTML/Element#inline_text_semantics) sur MDN
-- [Problèmes résolus par HTML5](/fr/docs/Web/HTML/Element/Heading_Elements#problèmes_résolus_par_html5) sur MDN
-- [HTML5 Semantic Elements](http://www.w3schools.com/html/html5_semantic_elements.asp) sur w3schools
-- [Sémantique des langages de programmation](https://fr.wikipedia.org/wiki/Sémantique_des_langages_de_programmation) sur Wikipédia
+- [wéféwence d-des éwéments h-htmw](/fw/docs/web/htmw/ewement#inwine_text_semantics) suw mdn
+- [pwobwèmes w-wésowus paw h-htmw5](/fw/docs/web/htmw/ewement/heading_ewements#pwobwèmes_wésowus_paw_htmw5) s-suw mdn
+- [htmw5 s-semantic ewements](http://www.w3schoows.com/htmw/htmw5_semantic_ewements.asp) s-suw w3schoows
+- [sémantique des wangages de pwogwammation](https://fw.wikipedia.owg/wiki/sémantique_des_wangages_de_pwogwammation) suw wikipédia

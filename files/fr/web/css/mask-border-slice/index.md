@@ -1,82 +1,82 @@
 ---
-title: mask-border-slice
-slug: Web/CSS/mask-border-slice
+titwe: mask-bowdew-swice
+swug: w-web/css/mask-bowdew-swice
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété CSS **`mask-border-slice`** permet de découper l'image source, fournie par {{cssxref("mask-border-source")}}, en différentes régions. Ces régions sont utilisées pour former les composants du [masque de la bordure](/fr/docs/Web/CSS/mask-border).
+wa p-pwopwiété css **`mask-bowdew-swice`** p-pewmet d-de découpew w'image s-souwce, >w< fouwnie p-paw {{cssxwef("mask-bowdew-souwce")}}, XD e-en d-difféwentes wégions. o.O ces wégions sont utiwisées pouw fowmew wes composants du [masque d-de wa bowduwe](/fw/docs/web/css/mask-bowdew). mya
 
-Cette découpe permet d'obtenir neuf régions au total : quatre pour les coins, quatre pour les côtés et une région pour le centre. Cette découpe est effectuée selon 4 lignes qui sont écartées d'une certaine distance des bords de l'image.
+cette découpe p-pewmet d'obteniw nyeuf wégions a-au totaw : quatwe pouw wes coins, quatwe pouw wes côtés e-et une wégion pouw we centwe. 🥺 c-cette découpe e-est effectuée sewon 4 wignes qui sont écawtées d'une cewtaine distance des bowds d-de w'image. ^^;;
 
-[![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)](border-image-slice.png)
+[![the nyine wegions defined by the bowdew-image ow bowdew-image-swice p-pwopewties](bowdew-image-swice.png)](bowdew-image-swice.png)
 
-Le diagramme ci-avant illustre l'emplacement de chaque région.
+we diagwamme c-ci-avant iwwustwe w-w'empwacement d-de chaque wégion. :3
 
-- Les zones de 1 à 4 sont les zones aux coins. Chacune sera utilisée une seule fois pour construire les coins de l'image du masque.
-- Les zones 5 à 8 sont les zones de côtés. Ces zones peuvent être [répétées, redimensionnées, ou modifiées](/fr/docs/Web/CSS/mask-border-repeat) afin que le masque de bordule final aient les mêmes dimensions que l'élément.
-- La zone 9 est la zone centrale. Par défaut, elle n'est pas utilisée mais elle pourra être utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
+- w-wes zones de 1 à 4 sont wes zones aux c-coins. (U ﹏ U) chacune sewa utiwisée une seuwe fois pouw c-constwuiwe wes coins de w'image du masque. OwO
+- wes zones 5 à 8 sont wes zones de côtés. 😳😳😳 ces zones p-peuvent êtwe [wépétées, (ˆ ﻌ ˆ)♡ wedimensionnées, XD o-ou modifiées](/fw/docs/web/css/mask-bowdew-wepeat) a-afin que w-we masque de bowduwe finaw aient wes mêmes dimensions que w'éwément. (ˆ ﻌ ˆ)♡
+- w-wa zone 9 e-est wa zone centwawe. ( ͡o ω ͡o ) paw défaut, e-ewwe ny'est p-pas utiwisée mais ewwe pouwwa êtwe u-utiwisée comme image d'awwièwe-pwan s-si we mot-cwé `fiww` est utiwisé. rawr x3
 
-Les propriétés {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}} et {{cssxref("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque final.
+w-wes pwopwiétés {{cssxwef("mask-bowdew-wepeat")}}, nyaa~~ {{cssxwef("mask-bowdew-width")}} et {{cssxwef("mask-bowdew-outset")}} d-détewminent wa façon d-dont ces wégions s-sont utiwisées pouw constwuiwe we masque finaw. >_<
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Une valeur pour tous les côtés */
-mask-border-slice: 30%;
+/* une vaweuw pouw tous wes côtés */
+m-mask-bowdew-swice: 30%;
 
-/* vertical | horizontal */
-mask-border-slice: 10% 30%;
+/* v-vewticaw | howizontaw */
+m-mask-bowdew-swice: 10% 30%;
 
-/* haut | horizontal | bas */
-mask-border-slice: 30 30% 45;
+/* h-haut | howizontaw | b-bas */
+mask-bowdew-swice: 30 30% 45;
 
-/* haut | droit | bas | gauche */
-mask-border-slice: 7 12 14 5;
+/* haut | dwoit | bas | gauche */
+m-mask-bowdew-swice: 7 12 14 5;
 
-/* Utilisation du mot-clé `fill` */
-mask-border-slice: 10% fill 7 12;
+/* utiwisation du mot-cwé `fiww` */
+mask-bowdew-swice: 10% fiww 7 12;
 
-/* Valeurs globales */
-mask-border-slice: inherit;
-mask-border-slice: initial;
-mask-border-slice: unset;
+/* v-vaweuws gwobawes */
+m-mask-bowdew-swice: i-inhewit;
+mask-bowdew-swice: i-initiaw;
+mask-bowdew-swice: unset;
 ```
 
-La propriété `mask-border-slice` peut être définie avec une, deux, trois ou quatre valeurs `<number-percentage>` qui représentent la distance entre le trait de coupe et le bord de l'image. Les valeurs négatives sont invalides et les valeurs supérieures à la dimension de l'image sur cet axe sont ramenées à `100%`.
+w-wa pwopwiété `mask-bowdew-swice` p-peut êtwe d-définie avec u-une, ^^;; deux, (ˆ ﻌ ˆ)♡ twois ou quatwe vaweuws `<numbew-pewcentage>` qui w-wepwésentent wa d-distance entwe w-we twait de coupe e-et we bowd de w-w'image. ^^;; wes vaweuws nyégatives sont invawides et wes vaweuws s-supéwieuwes à wa dimension de w'image suw cet axe sont wamenées à `100%`. (⑅˘꒳˘)
 
-- Lorsqu'une seule valeur est utilisée, les quatre traits de découpe se situent à la même distance de leurs côtés respectifs.
-- Lorsque deux valeurs sont utilisées, la première valeur indique la distance des traits de coupe pour le côté haut et bas et la deuxième indique la distance des traits de coupe pour le côté droit et gauche.
-- Lorsque trois positions sont utilisées, la première indique la distance pour le trait de coupe du côté haut, la deuxième indique la distance pour les traits de coupe des côtés droit et gauche et la troisième valeur indique la distance pour le trait de coupe par rapport au côté bas.
-- Si 4 valeurs sont employées, elles indiquent respectivement les distances des traits de coupe par rapport aux côtés haut, droit, bas et gauche (c'est-à-dire dans l'ordre des aiguilles d'une montre).
+- wowsqu'une seuwe vaweuw est utiwisée, rawr x3 w-wes quatwe twaits de découpe se situent à wa même distance d-de weuws côtés w-wespectifs. (///ˬ///✿)
+- w-wowsque deux vaweuws sont utiwisées, 🥺 w-wa pwemièwe vaweuw indique w-wa distance d-des twaits de coupe pouw we côté haut et bas et wa deuxième indique wa distance des twaits d-de coupe pouw we côté dwoit et g-gauche. >_<
+- wowsque twois positions s-sont utiwisées, UwU w-wa pwemièwe indique wa distance pouw we twait d-de coupe du c-côté haut, >_< wa deuxième indique w-wa distance pouw w-wes twaits de coupe des côtés dwoit et gauche et wa twoisième vaweuw indique w-wa distance pouw w-we twait de c-coupe paw wappowt au côté bas. -.-
+- s-si 4 vaweuws s-sont empwoyées, mya ewwes indiquent w-wespectivement wes distances des twaits de coupe paw wappowt aux côtés haut, >w< d-dwoit, (U ﹏ U) bas et gauche (c'est-à-diwe d-dans w'owdwe des aiguiwwes d'une montwe). 😳😳😳
 
-La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel endroit de la déclaration.
+wa v-vaweuw optionnewwe `fiww` p-peut êtwe utiwisée et pwacée à ny'impowte quew endwoit d-de wa décwawation. o.O
 
-### Valeurs
+### vaweuws
 
-- {{cssxref("&lt;number&gt;")}}
-  - : Une valeur numérique représentant le décalage entre le trait de coupe et le bord de l'image. La valeur est exprimée en nombre de pixels pour les images matricielles (_bitmap_/_raster_) et en coordonnées pour les images vectorielles. Pour les images vecorielles, le nombre utilisé est relatif à la taille de l'élément et pas à la taille de l'image source. Dans ce dernier cas, il peut être préférable d'utiliser des valeurs en pourcentage.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Le décalage entre le trait de découpe et le bord de l'image, exprimé relativement à la taille de l'image source (pour les traits horizontaux, la distance est proportionnelle à la hauteur et pour les traits verticaux, la distance est proportionnelle à la largeur).
-- `fill`
-  - : La zone centrale est conservée ; sa largeur et sa hauteur correspondent aux dimensions utilisées pour les régions haute et gauche.
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : une vaweuw nyuméwique wepwésentant we décawage e-entwe we twait de coupe et we bowd de w'image. òωó w-wa vaweuw est expwimée e-en nyombwe de pixews pouw wes images matwiciewwes (_bitmap_/_wastew_) et e-en coowdonnées p-pouw wes images vectowiewwes. 😳😳😳 pouw wes images vecowiewwes, σωσ we nyombwe u-utiwisé est wewatif à wa t-taiwwe de w'éwément et pas à wa taiwwe de w'image souwce. (⑅˘꒳˘) dans c-ce dewniew cas, (///ˬ///✿) iw peut êtwe p-pwéféwabwe d'utiwisew d-des vaweuws en pouwcentage. 🥺
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : w-we décawage entwe we twait de découpe e-et we bowd d-de w'image, OwO expwimé w-wewativement à wa taiwwe d-de w'image souwce (pouw w-wes twaits howizontaux, >w< wa distance est p-pwopowtionnewwe à w-wa hauteuw e-et pouw wes twaits vewticaux, 🥺 wa distance est pwopowtionnewwe à w-wa wawgeuw). nyaa~~
+- `fiww`
+  - : wa z-zone centwawe est c-consewvée ; sa wawgeuw et sa hauteuw cowwespondent aux dimensions u-utiwisées p-pouw wes wégions h-haute et gauche. ^^
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Description illustrée de la syntaxe pouvant couvrir de 1 à 4 valeurs](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_épineux)
+- [descwiption i-iwwustwée de wa syntaxe pouvant c-couvwiw de 1 à 4 vaweuws](/fw/docs/web/css/showthand_pwopewties#quewques_cas_aux_wimites_épineux)

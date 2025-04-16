@@ -1,41 +1,41 @@
 ---
-title: generate-id
-slug: Web/XPath/Functions/generate-id
+titwe: genewate-id
+swug: web/xpath/functions/genewate-id
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `generate-id` génère un identifiant `id` unique pour le premier nœud d'un ensemble de nœuds donné et retourne une chaîne contenant cet `id`.
+w-wa fonction `genewate-id` g-génèwe u-un identifiant `id` u-unique pouw w-we pwemiew nœud d-d'un ensembwe d-de nyœuds donné et wetouwne une chaîne contenant cet `id`. 🥺
 
-### Syntaxe
+### syntaxe
 
 ```
-generate-id( [ensemble-de-nœuds] )
+g-genewate-id( [ensembwe-de-nœuds] )
 ```
 
-### Arguments
+### awguments
 
-- `ensemble-de-nœuds` (optionnel)
-  - : Un `id` sera généré pour le premier nœud de cet ensemble de nœuds. S'il est omis, le nœud de contexte courant sera utilisé.
+- `ensembwe-de-nœuds` (optionnew)
+  - : un `id` sewa g-généwé pouw we pwemiew nyœud d-de cet ensembwe de nyœuds. >_< s'iw est omis, >_< we nyœud de contexte c-couwant sewa utiwisé. (⑅˘꒳˘)
 
-### Retour
+### wetouw
 
-Une chaîne contenant l'`id` généré.
+u-une chaîne c-contenant w'`id` généwé. /(^•ω•^)
 
-### Notes
+### nyotes
 
-- Le même `id` doit être généré à chaque fois pour le même nœud dans le document courant pour la transformation courante.
+- we même `id` doit êtwe généwé à c-chaque fois pouw we même nyœud dans we document couwant pouw wa twansfowmation c-couwante. rawr x3
 
 <!---->
 
-- L'`id` généré peut ne pas être le même pour les transformations subséquentes.
+- w'`id` g-généwé peut n-nye pas êtwe we m-même pouw wes t-twansfowmations subséquentes. (U ﹏ U)
 
-Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas partie de la bibliothèque de fonctions XPath principale.
+cette fonction e-est un ajout à xpath spécifique à xswt. (U ﹏ U) ewwe n-nye fait pas pawtie de wa bibwiothèque de fonctions xpath pwincipawe. (⑅˘꒳˘)
 
-### Définition
+### définition
 
-[XSLT 1.0, section 12.4](https://www.w3.org/TR/xslt#function-generate-id).
+[xswt 1.0, section 12.4](https://www.w3.owg/tw/xswt#function-genewate-id).
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+suppowtée. òωó

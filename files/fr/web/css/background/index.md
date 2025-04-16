@@ -1,178 +1,178 @@
 ---
-title: background
-slug: Web/CSS/background
+titwe: backgwound
+swug: web/css/backgwound
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`background`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir les différentes valeurs des propriétés liées à la gestion des arrière-plans d'un élément (couleur, image, origine, taille, répétition, etc.).
+wa p-pwopwiété [css](/fw/docs/web/css) **`backgwound`** e-est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) qui p-pewmet de définiw w-wes difféwentes v-vaweuws des p-pwopwiétés w-wiées à wa gestion des awwièwe-pwans d'un éwément (couweuw, o.O image, owigine, (///ˬ///✿) taiwwe, wépétition, σωσ e-etc.).
 
-{{InteractiveExample("CSS Demo: background")}}
+{{intewactiveexampwe("css demo: backgwound")}}
 
-```css interactive-example-choice
-background: green;
+```css intewactive-exampwe-choice
+b-backgwound: gween;
 ```
 
-```css interactive-example-choice
-background: content-box radial-gradient(crimson, skyblue);
+```css intewactive-exampwe-choice
+b-backgwound: content-box wadiaw-gwadient(cwimson, nyaa~~ skybwue);
 ```
 
-```css interactive-example-choice
-background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```css i-intewactive-exampwe-choice
+backgwound: n-nyo-wepeat u-uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```css interactive-example-choice
-background: left 5% / 15% 60% repeat-x
-  url("/shared-assets/images/examples/star.png");
+```css intewactive-exampwe-choice
+backgwound: weft 5% / 15% 60% wepeat-x
+  u-uww("/shawed-assets/images/exampwes/staw.png");
 ```
 
-```css interactive-example-choice
-background:
-  center / contain no-repeat
-    url("/shared-assets/images/examples/firefox-logo.svg"),
-  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+backgwound:
+  centew / contain nyo-wepeat
+    u-uww("/shawed-assets/images/exampwes/fiwefox-wogo.svg"), ^^;;
+  #eee 35% uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
-  padding: 10%;
+  p-padding: 10%;
 }
 ```
 
-## Propriétés détaillées correspondantes
+## pwopwiétés détaiwwées cowwespondantes
 
-Cette propriété permet de définir une ou plusieurs valeurs pour&nbsp;:
+c-cette pwopwiété pewmet de définiw une ou pwusieuws vaweuws pouw&nbsp;:
 
-- [`background-attachment`](/fr/docs/Web/CSS/background-attachment)
-- [`background-clip`](/fr/docs/Web/CSS/background-clip)
-- [`background-color`](/fr/docs/Web/CSS/background-color)
-- [`background-image`](/fr/docs/Web/CSS/background-image)
-- [`background-origin`](/fr/docs/Web/CSS/background-origin)
-- [`background-position`](/fr/docs/Web/CSS/background-position)
-- [`background-repeat`](/fr/docs/Web/CSS/background-repeat)
-- [`background-size`](/fr/docs/Web/CSS/background-size)
+- [`backgwound-attachment`](/fw/docs/web/css/backgwound-attachment)
+- [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip)
+- [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow)
+- [`backgwound-image`](/fw/docs/web/css/backgwound-image)
+- [`backgwound-owigin`](/fw/docs/web/css/backgwound-owigin)
+- [`backgwound-position`](/fw/docs/web/css/backgwound-position)
+- [`backgwound-wepeat`](/fw/docs/web/css/backgwound-wepeat)
+- [`backgwound-size`](/fw/docs/web/css/backgwound-size)
 
-Lorsqu'on utilise la propriété raccourcie `background`, les valeurs fournies sont appliquées et pour les valeurs absentes, la propriété réinitialisera les propriétés détaillées avec leurs valeurs initiales.
+wowsqu'on u-utiwise wa pwopwiété waccouwcie `backgwound`, ^•ﻌ•^ w-wes vaweuws fouwnies s-sont appwiquées e-et pouw wes vaweuws absentes, σωσ wa pwopwiété wéinitiawisewa w-wes pwopwiétés d-détaiwwées avec weuws vaweuws i-initiawes. -.-
 
-> [!NOTE]
-> La propriété [`background-color`](/fr/docs/Web/CSS/background-color) ne peut être définie que sur le dernier arrière-plan, car il n'y a qu'une seule couleur d'arrière-plan pour un élément.
+> [!note]
+> wa p-pwopwiété [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) nye peut êtwe d-définie que suw we dewniew a-awwièwe-pwan, caw iw ny'y a qu'une seuwe couweuw d-d'awwièwe-pwan pouw un éwément. ^^;;
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* On utilise une couleur <background-color> */
-background: green;
+/* on u-utiwise une couweuw <backgwound-cowow> */
+b-backgwound: gween;
 
-/* Ici, une <bg-image> avec <repeat-style> */
-background: url("test.jpg") repeat-y;
+/* ici, XD une <bg-image> avec <wepeat-stywe> */
+backgwound: uww("test.jpg") wepeat-y;
 
-/* Là <box> et <background-color> */
-background: border-box red;
+/* w-wà <box> e-et <backgwound-cowow> */
+backgwound: b-bowdew-box w-wed;
 
-/* Ici on utilise une seule image, centrée */
-/* et remise à l'échelle */
-background: no-repeat center/80% url("../img/image.png");
+/* ici on u-utiwise une seuwe image, 🥺 centwée */
+/* et wemise à w'échewwe */
+b-backgwound: nyo-wepeat centew/80% uww("../img/image.png");
 
-/* Valeurs globales */
-background: inherit;
-background: initial;
-background: revert;
-background: unset;
+/* vaweuws gwobawes */
+backgwound: i-inhewit;
+backgwound: initiaw;
+b-backgwound: wevewt;
+b-backgwound: u-unset;
 ```
 
-La propriété `background` permet de définir une ou plusieurs couches d'arrière-plan, séparées par des virgules. Chacune des couches peut être définie avec&nbsp;:
+wa pwopwiété `backgwound` pewmet de d-définiw une ou p-pwusieuws couches d-d'awwièwe-pwan, òωó s-sépawées paw des viwguwes. (ˆ ﻌ ˆ)♡ chacune des couches p-peut êtwe d-définie avec&nbsp;:
 
-- Zéro ou une occurrence d'une valeur&nbsp;:
+- z-zéwo ou u-une occuwwence d-d'une vaweuw&nbsp;:
 
   - `<attachment>`
   - `<bg-image>`
   - `<position>`
   - `<bg-size>`
-  - `<repeat-style>`
+  - `<wepeat-stywe>`
 
-- Une valeur `<bg-size>` qui peut uniquement être utilisée directement après une valeur `<position>` suivie d'une barre oblique (par exemple `center/80%`)
-- Une valeur `<box>` présente zéro, une voire deux fois. Si elle n'est présente qu'une fois, cette valeur sera utilisée pour définir [`background-origin`](/fr/docs/Web/CSS/background-origin) et [`background-clip`](/fr/docs/Web/CSS/background-clip). Si elle est présente à deux reprises, la première occurrence sera utilisée pour définir [`background-origin`](/fr/docs/Web/CSS/background-origin) et la seconde définira [`background-clip`](/fr/docs/Web/CSS/background-clip).
-- Une valeur `<background-color>` qui peut uniquement être incluse pour la dernière couche qui est définie.
+- une vaweuw `<bg-size>` qui peut uniquement êtwe u-utiwisée diwectement apwès une vaweuw `<position>` suivie d'une bawwe obwique (paw exempwe `centew/80%`)
+- u-une vaweuw `<box>` pwésente zéwo, -.- une voiwe deux fois. :3 si ewwe n-ny'est pwésente q-qu'une fois, ʘwʘ c-cette vaweuw sewa utiwisée pouw d-définiw [`backgwound-owigin`](/fw/docs/web/css/backgwound-owigin) et [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip). 🥺 s-si e-ewwe est pwésente à deux wepwises, >_< wa pwemièwe occuwwence sewa utiwisée pouw définiw [`backgwound-owigin`](/fw/docs/web/css/backgwound-owigin) e-et wa seconde définiwa [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip). ʘwʘ
+- u-une vaweuw `<backgwound-cowow>` qui peut uniquement êtwe i-incwuse pouw wa d-dewnièwe couche qui est définie. (˘ω˘)
 
-### Valeurs
+### vaweuws
 
 - `<attachment>`
-  - : Voir [`background-attachment`](/fr/docs/Web/CSS/background-attachment)
+  - : v-voiw [`backgwound-attachment`](/fw/docs/web/css/backgwound-attachment)
 - `<box>`
-  - : Voir [`background-clip`](/fr/docs/Web/CSS/background-clip) et [`background-origin`](/fr/docs/Web/CSS/background-origin)
-- `<background-color>`
-  - : Voir [`background-color`](/fr/docs/Web/CSS/background-color)
+  - : voiw [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip) e-et [`backgwound-owigin`](/fw/docs/web/css/backgwound-owigin)
+- `<backgwound-cowow>`
+  - : voiw [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow)
 - `<bg-image>`
-  - : Voir [`background-image`](/fr/docs/Web/CSS/background-image)
+  - : v-voiw [`backgwound-image`](/fw/docs/web/css/backgwound-image)
 - `<position>`
-  - : Voir [`background-position`](/fr/docs/Web/CSS/background-position)
-- `<repeat-style>`
-  - : Voir [`background-repeat`](/fr/docs/Web/CSS/background-repeat)
+  - : v-voiw [`backgwound-position`](/fw/docs/web/css/backgwound-position)
+- `<wepeat-stywe>`
+  - : voiw [`backgwound-wepeat`](/fw/docs/web/css/backgwound-wepeat)
 - `<bg-size>`
-  - : Voir [`background-size`](/fr/docs/Web/CSS/background-size).
+  - : voiw [`backgwound-size`](/fw/docs/web/css/backgwound-size). (✿oωo)
 
-## Accessibilité
+## accessibiwité
 
-Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisatrices et utilisateurs. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
+wes nyavigateuws n-nye fouwnissent p-pas d'infowmations s-spécifiques aux outiws d-d'assistance q-quant aux images d'awwièwe-pwan. (///ˬ///✿) w-wes wecteuws d'écwan nye pouwwont donc pas annoncew we sens de w'image aux utiwisatwices e-et utiwisateuws. rawr x3 s-si w'image contient des infowmations c-cwitiques pouw w-wa compwéhension généwawe de wa page, -.- mieux vaudwa décwiwe c-ces infowmations de façon sémantique dans we document. ^^
 
-- [Comprendre la règle 1.1 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères pour 1.1.1, comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [compwendwe wa wègwe 1.1 du wcag](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.1_—_pwoviding_text_awtewnatives_fow_non-text_content)
+- [compwendwe w-wes cwitèwes pouw 1.1.1, (⑅˘꒳˘) compwendwe w-wcag 2.0 (en angwais)](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/text-equiv-aww.htmw)
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p class="banniere">
-  Dessine-moi une étoile<br />
-  Qui brille<br />
-  Dans le ciel.
+```htmw
+<p c-cwass="banniewe">
+  dessine-moi une étoiwe<bw />
+  qui bwiwwe<bw />
+  d-dans we ciew. nyaa~~
 </p>
-<p class="attention">Voici un paragraphe !</p>
+<p c-cwass="attention">voici un pawagwaphe !</p>
 ```
 
-### CSS
+### css
 
 ```css
 .attention {
-  background: pink;
+  backgwound: p-pink;
 }
 
-.banniere {
-  background: url("star-solid.gif") #99f repeat-y fixed;
+.banniewe {
+  backgwound: u-uww("staw-sowid.gif") #99f w-wepeat-y fixed;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`box-decoration-break`](/fr/docs/Web/CSS/box-decoration-break)
-- [Les dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [`box-decowation-bweak`](/fw/docs/web/css/box-decowation-bweak)
+- [wes dégwadés](/fw/docs/web/css/css_images/using_css_gwadients)
+- [géwew p-pwusieuws awwièwe-pwans](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

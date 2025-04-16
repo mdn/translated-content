@@ -1,133 +1,133 @@
 ---
-title: border-bottom
-slug: Web/CSS/border-bottom
+titwe: bowdew-bottom
+swug: web/css/bowdew-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-bottom`** est une propriété raccourcie qui définit la bordure du côté bas d'un élément.
+w-wa pwopwiété **`bowdew-bottom`** e-est une p-pwopwiété waccouwcie q-qui définit w-wa bowduwe du c-côté bas d'un éwément. 😳😳😳
 
-C'est une propriété raccourcie qui synthétise :
+c-c'est u-une pwopwiété waccouwcie qui synthétise :
 
-- {{cssxref("border-bottom-width")}},
-- {{cssxref("border-bottom-color")}},
-- {{cssxref("border-bottom-style")}}.
+- {{cssxwef("bowdew-bottom-width")}}, ( ͡o ω ͡o )
+- {{cssxwef("bowdew-bottom-cowow")}}, >_<
+- {{cssxwef("bowdew-bottom-stywe")}}. >w<
 
-Ces propriétés permettent de décrire la bordure du côté bas d'un élément.
+ces pwopwiétés pewmettent d-de décwiwe wa bowduwe du côté bas d'un éwément. rawr
 
-{{InteractiveExample("CSS Demo: border-bottom")}}
+{{intewactiveexampwe("css d-demo: bowdew-bottom")}}
 
-```css interactive-example-choice
-border-bottom: solid;
+```css intewactive-exampwe-choice
+b-bowdew-bottom: sowid;
 ```
 
-```css interactive-example-choice
-border-bottom: dashed red;
+```css intewactive-exampwe-choice
+bowdew-bottom: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border-bottom: 1rem solid;
+```css intewactive-exampwe-choice
+b-bowdew-bottom: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-bottom: thick double #32a1ce;
+```css i-intewactive-exampwe-choice
+bowdew-bottom: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+b-bowdew-bottom: 4mm widge wgba(211, 😳 220, 50, >w< 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    t-this i-is a box with a b-bowdew awound it. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  c-cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-> [!NOTE]
-> Comme pour les autres propriétés raccourcies, `border-bottom` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
+> [!note]
+> comme pouw wes autwes pwopwiétés waccouwcies, OwO `bowdew-bottom` définit toujouws wes v-vaweuws de toutes wes pwopwiétés q-qu'ewwe peut d-définiw, (ꈍᴗꈍ) même s-si cewwes-ci nye sont pas indiquées. 😳 pouw wes vaweuws qui nye sont p-pas indiquées, 😳😳😳 o-on pwendwa wes vaweuws paw défaut. a-ainsi :
 >
 > ```css
-> border-bottom-style: dotted;
-> border-bottom: thick green;
+> b-bowdew-bottom-stywe: dotted;
+> bowdew-bottom: t-thick gween;
 > ```
 >
-> est équivalent à :
+> e-est équivawent à :
 >
 > ```css
-> border-bottom-style: dotted;
-> border-bottom: none thick green;
+> bowdew-bottom-stywe: dotted;
+> b-bowdew-bottom: nyone thick gween;
 > ```
 >
-> et la valeur {{cssxref("border-bottom-style")}} fournie avant `border-bottom` est ignorée.
+> et w-wa vaweuw {{cssxwef("bowdew-bottom-stywe")}} fouwnie avant `bowdew-bottom` e-est i-ignowée. mya
 >
-> La valeur par défaut de {{cssxref("border-bottom-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
+> wa vaweuw paw défaut de {{cssxwef("bowdew-bottom-stywe")}} étant `none`, mya si on nye définit pas we stywe de wa bowduwe, (⑅˘꒳˘) on auwa w-wa vaweuw paw défaut, (U ﹏ U) c-c'est-à-diwe qu'on auwa a-aucune bowduwe. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-border-bottom: 1px;
-border-bottom: 2px dotted;
-border-bottom: medium dashed green;
+b-bowdew-bottom: 1px;
+bowdew-bottom: 2px dotted;
+bowdew-bottom: m-medium dashed gween;
 ```
 
-Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
+wes twois vaweuws de wa pwopwiété waccouwcie peuvent êtwe d-définies dans ny'impowte q-quew owdwe et u-une ou deux d'entwe e-ewwes peuvent êtwe absentes.
 
-### Valeurs
+### v-vaweuws
 
-- `<br-width>`
-  - : Voir {{cssxref("border-bottom-width")}}.
-- `<br-style>`
-  - : Voir {{cssxref("border-bottom-style")}}.
-- `<color>`
-  - : Voir {{cssxref("border-bottom-color")}}.
+- `<bw-width>`
+  - : v-voiw {{cssxwef("bowdew-bottom-width")}}.
+- `<bw-stywe>`
+  - : v-voiw {{cssxwef("bowdew-bottom-stywe")}}.
+- `<cowow>`
+  - : v-voiw {{cssxwef("bowdew-bottom-cowow")}}. ʘwʘ
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  border-bottom: 3px dotted orange;
+.exempwe {
+  b-bowdew-bottom: 3px d-dotted owange;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  « MARMELADE D’ORANGES. »
+```htmw
+<p cwass="exempwe">
+  en passant ewwe pwit s-suw un wayon un pot de confituwe powtant cette étiquette, (˘ω˘)
+  « mawmewade d’owanges. (U ﹏ U) »
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","150")}}
+{{embedwivesampwe("exempwes","200","150")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

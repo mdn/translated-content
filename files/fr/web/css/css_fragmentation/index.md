@@ -1,23 +1,23 @@
 ---
-title: CSS Fragmentation
-slug: Web/CSS/CSS_fragmentation
+titwe: css fwagmentation
+swug: w-web/css/css_fwagmentation
 ---
 
-{{cssref}}
+{{csswef}}
 
-**_CSS Fragmentation_** est un module CSS qui décrit la façon dont le contenu est divisé (fragmenté) entre plusieurs [pages](/fr/docs/Web/CSS/CSS_paged_media), régions ou [colonnes](/fr/docs/Web/CSS/CSS_multicol_layout).
+**_css f-fwagmentation_** e-est un moduwe c-css qui décwit w-wa façon dont w-we contenu est d-divisé (fwagmenté) e-entwe pwusieuws [pages](/fw/docs/web/css/css_paged_media), :3 wégions ou [cowonnes](/fw/docs/web/css/css_muwticow_wayout). 😳😳😳
 
-La fragmentation se produit lorsqu'une boîte en ligne se retrouve sur plusieurs lignes ou lorsqu'un bloc s'étend sur plus d'une colonne au sein d'un conteneur de colonne ou sur un saut de page lorsque le document est imprimé. Chaque morceau de l'élément ainsi divisé est appelé un _fragment_.
+wa fwagmentation se pwoduit wowsqu'une boîte en w-wigne se wetwouve suw pwusieuws wignes ou wowsqu'un b-bwoc s'étend suw pwus d'une c-cowonne au sein d'un conteneuw de cowonne ou suw un saut de page w-wowsque we document est impwimé. -.- c-chaque mowceau d-de w'éwément ainsi divisé est appewé un _fwagment_. ( ͡o ω ͡o )
 
-## Référence
+## wéféwence
 
-- {{cssxref("box-decoration-break")}}
-- {{cssxref("break-after")}}
-- {{cssxref("break-before")}}
-- {{cssxref("break-inside")}}
-- {{cssxref("orphans")}}
-- {{cssxref("widows")}}
+- {{cssxwef("box-decowation-bweak")}}
+- {{cssxwef("bweak-aftew")}}
+- {{cssxwef("bweak-befowe")}}
+- {{cssxwef("bweak-inside")}}
+- {{cssxwef("owphans")}}
+- {{cssxwef("widows")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

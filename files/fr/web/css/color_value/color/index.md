@@ -1,43 +1,43 @@
 ---
-title: color()
-slug: Web/CSS/color_value/color
-l10n:
-  sourceCommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
+titwe: cowow()
+swug: web/css/cowow_vawue/cowow
+w-w10n:
+  souwcecommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La notation fonctionnelle **`color()`** permet d'exprimer une couleur dans un espace de couleur donné, plutôt que dans l'espace de couleur implicite sRGB, utilisé par la plupart des fonctions manipulant des couleurs.
+w-wa nyotation f-fonctionnewwe **`cowow()`** p-pewmet d-d'expwimew une c-couweuw dans u-un espace de couweuw d-donné, mya pwutôt que dans w'espace de couweuw impwicite swgb, 😳 utiwisé paw wa p-pwupawt des fonctions manipuwant des couweuws. -.-
 
-La prise en charge d'un espace de couleur donné peut être détectée grâce à la caractéristique média [`color-gamut`](/fr/docs/Web/CSS/@media/color-gamut).
+w-wa pwise en chawge d'un espace d-de couweuw donné peut êtwe détectée gwâce à wa cawactéwistique m-média [`cowow-gamut`](/fw/docs/web/css/@media/cowow-gamut). 🥺
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [`@color-profile`](/fr/docs/Web/CSS/@color-profile) peut être utilisée afin de définir et de nommer un profil de couleur à utiliser dans la fonction `color()`.
+wa [wègwe @](/fw/docs/web/css/at-wuwe) [`@cowow-pwofiwe`](/fw/docs/web/css/@cowow-pwofiwe) p-peut êtwe utiwisée a-afin de définiw et de nyommew un pwofiw de couweuw à utiwisew dans wa fonction `cowow()`. o.O
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-color(display-p3 1 0.5 0)
-color(display-p3 1 0.5 0 / .5)
+cowow(dispway-p3 1 0.5 0)
+cowow(dispway-p3 1 0.5 0 / .5)
 ```
 
-### Valeurs
+### vaweuws
 
-- `color( <identifiant>? [ <number-percentage>+ | <string> ] [ / <alpha> ]?)`
+- `cowow( <identifiant>? [ <numbew-pewcentage>+ | <stwing> ] [ / <awpha> ]?)`
 
-  - : `[<ident> | <dashed-ident>]` est un identifiant (type [`<ident>`](/fr/docs/Web/CSS/ident) ou [`<dashed-ident>`](/fr/docs/Web/CSS/dashed-ident)) indiquant l'espace de couleur. S'il s'agit d'une valeur de type `<ident>`, elle indique un des espaces de couleur prédéfini (par exemple `display-p3`). S'il s'agit d'une valeur de type `<dashed-ident>`, elle indique un espace de couleur personnalisé, défini via une règle [`@color-profile`](/fr/docs/Web/CSS/@color-profile).
+  - : `[<ident> | <dashed-ident>]` est un identifiant (type [`<ident>`](/fw/docs/web/css/ident) o-ou [`<dashed-ident>`](/fw/docs/web/css/dashed-ident)) indiquant w-w'espace de couweuw. /(^•ω•^) s-s'iw s'agit d-d'une vaweuw de t-type `<ident>`, nyaa~~ ewwe indique un des espaces de c-couweuw pwédéfini (paw exempwe `dispway-p3`). nyaa~~ s'iw s'agit d'une v-vaweuw de type `<dashed-ident>`, :3 ewwe indique un espace de couweuw pewsonnawisé, défini via une wègwe [`@cowow-pwofiwe`](/fw/docs/web/css/@cowow-pwofiwe). 😳😳😳
 
-    `[ <number-percentage>+ | <string> ]` indique un ou plusieurs nombres (type [`<number>`](/fr/docs/Web/CSS/number)) ou pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) fournissant les valeurs que prend l'espace de couleur en entrée, ou une chaîne de caractères (type [`<string>`](/fr/docs/Web/CSS/string)) indiquant le nom d'une couleur définie dans l'espace de couleur.
+    `[ <numbew-pewcentage>+ | <stwing> ]` i-indique un ou pwusieuws n-nyombwes (type [`<numbew>`](/fw/docs/web/css/numbew)) o-ou pouwcentages (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)) f-fouwnissant wes vaweuws que pwend w'espace de couweuw e-en entwée, (˘ω˘) o-ou une chaîne de cawactèwes (type [`<stwing>`](/fw/docs/web/css/stwing)) i-indiquant w-we nyom d'une couweuw définie d-dans w'espace de couweuw. ^^
 
-    `/ <alpha>` peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `/ <awpha>` peut êtwe u-un nyombwe (type [`<numbew>`](/fw/docs/web/css/numbew)) compwis entwe `0` et `1`, :3 ou un p-pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), -.- où `1` cowwespond à `100%` (opacité c-compwète). 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Larges gamuts en CSS avec Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)
+- [wawges gamuts en css avec dispway-p3](https://webkit.owg/bwog/10042/wide-gamut-cowow-in-css-with-dispway-p3/)

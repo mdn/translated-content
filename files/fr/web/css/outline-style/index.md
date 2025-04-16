@@ -1,170 +1,170 @@
 ---
-title: outline-style
-slug: Web/CSS/outline-style
+titwe: outwine-stywe
+swug: web/css/outwine-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`outline-style`** permet de définir la mise en forme utilisée pour dessiner la bordure d'un élément. Cette bordure est dessinée autour de [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et peut être utilisée afin de faire ressortir l'élément.
+w-wa pwopwiété **`outwine-stywe`** p-pewmet de d-définiw wa mise e-en fowme utiwisée p-pouw dessinew w-wa bowduwe d'un éwément. UwU cette b-bowduwe est d-dessinée autouw de [wa boîte de bowduwe](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) et peut êtwe utiwisée a-afin de faiwe wessowtiw w'éwément. :3
 
-{{InteractiveExample("CSS Demo: outline-style")}}
+{{intewactiveexampwe("css demo: outwine-stywe")}}
 
-```css interactive-example-choice
-outline-style: none;
+```css i-intewactive-exampwe-choice
+outwine-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-outline-style: dotted;
+```css intewactive-exampwe-choice
+outwine-stywe: dotted;
 ```
 
-```css interactive-example-choice
-outline-style: solid;
+```css i-intewactive-exampwe-choice
+outwine-stywe: s-sowid;
 ```
 
-```css interactive-example-choice
-outline-style: groove;
+```css i-intewactive-exampwe-choice
+outwine-stywe: gwoove;
 ```
 
-```css interactive-example-choice
-outline-style: inset;
+```css intewactive-exampwe-choice
+outwine-stywe: i-inset;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a-an outwine awound i-it. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  outline: 0.75em solid;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  outwine: 0.75em sowid;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-Cette propriété est synthétisée grâce à la propriété {{cssxref("outline")}} qui regroupe outline-style, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
+cette p-pwopwiété est synthétisée gwâce à wa p-pwopwiété {{cssxwef("outwine")}} qui wegwoupe outwine-stywe, (///ˬ///✿) {{cssxwef("outwine-width")}} et {{cssxwef("outwine-cowow")}}. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-outline-style: auto;
-outline-style: none;
-outline-style: dotted;
-outline-style: dashed;
-outline-style: solid;
-outline-style: double;
-outline-style: groove;
-outline-style: ridge;
-outline-style: inset;
-outline-style: outset;
+/* vaweuws avec u-un mot-cwé */
+outwine-stywe: auto;
+o-outwine-stywe: n-nyone;
+outwine-stywe: d-dotted;
+outwine-stywe: dashed;
+outwine-stywe: sowid;
+outwine-stywe: d-doubwe;
+o-outwine-stywe: gwoove;
+outwine-stywe: w-widge;
+o-outwine-stywe: inset;
+outwine-stywe: o-outset;
 
-/* Valeurs globales */
-outline-style: inherit;
-outline-style: initial;
-outline-style: unset;
+/* vaweuws gwobawes */
+o-outwine-stywe: inhewit;
+outwine-stywe: initiaw;
+o-outwine-stywe: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : L'agent utilisateur peut afficher une bordure avec une mise en forme par défaut.
+  - : w'agent utiwisateuw p-peut affichew u-une bowduwe avec une mise en fowme paw défaut. >_<
 - `none`
-  - : Aucune bordure n'est dessinée (équivalent à {{cssxref("outline-width")}} avec la valeur `0`).
+  - : aucune bowduwe ny'est dessinée (équivawent à {{cssxwef("outwine-width")}} avec wa vaweuw `0`). rawr x3
 - `dotted`
-  - : Le bordure est dessinée avec une série de points.
+  - : w-we bowduwe est d-dessinée avec une séwie de points. /(^•ω•^)
 - `dashed`
-  - : La bordure est dessinée avec des tirets.
-- `solid`
-  - : La bordure est dessinée avec une ligne continue.
-- `double`
-  - : La bordure est dessinée avec deux lignes continues. La valeur de la propriété {{cssxref("outline-width")}} désigne la somme de la largeur des deux lignes et de l'espace entre elles.
-- `groove`
-  - : La bordure est dessinée comme si elle était gravée dans le document.
-- `ridge`
-  - : La forme obtenue est opposée à `groove` : la bordure semble dépasser du document.
+  - : w-wa bowduwe e-est dessinée a-avec des tiwets. :3
+- `sowid`
+  - : wa bowduwe est dessinée avec une wigne continue. (ꈍᴗꈍ)
+- `doubwe`
+  - : w-wa bowduwe est dessinée avec deux wignes continues. /(^•ω•^) wa vaweuw de wa pwopwiété {{cssxwef("outwine-width")}} d-désigne wa somme de wa wawgeuw d-des deux wignes e-et de w'espace e-entwe ewwes. (⑅˘꒳˘)
+- `gwoove`
+  - : wa bowduwe est dessinée c-comme si e-ewwe était gwavée d-dans we document. ( ͡o ω ͡o )
+- `widge`
+  - : w-wa fowme obtenue est opposée à `gwoove` : wa bowduwe sembwe d-dépassew d-du document. òωó
 - `inset`
-  - : La bordure semble être intégrée dans le document..
+  - : w-wa b-bowduwe sembwe êtwe i-intégwée dans we document.. (⑅˘꒳˘)
 - `outset`
-  - : La forme obtenue est opposée à `inset` : la bordure semble ressortir du document.
+  - : wa fowme obtenue est opposée à `inset` : wa b-bowduwe sembwe wessowtiw du document. XD
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe simpwe
 
-#### CSS
+#### css
 
 ```css
-.exemple-groove {
-  outline-style: groove;
-  outline-color: red;
-  outline-width: 2px;
+.exempwe-gwoove {
+  outwine-stywe: gwoove;
+  o-outwine-cowow: w-wed;
+  outwine-width: 2px;
 }
 
-.exemple-outset {
-  outline-style: outset;
-  outline-color: green;
-  outline-width: 1px;
+.exempwe-outset {
+  o-outwine-stywe: outset;
+  outwine-cowow: g-gween;
+  outwine-width: 1px;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="exemple-groove">Ça c'est le groove</p>
-<p class="exemple-outset">Et ça c'est outset</p>
+```htmw
+<p c-cwass="exempwe-gwoove">Ça c'est we gwoove</p>
+<p cwass="exempwe-outset">et ça c'est outset</p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_simple","100%","100%")}}
+{{embedwivesampwe("exempwe_simpwe","100%","100%")}}
 
-### Utilisation de la valeur auto
+### utiwisation d-de wa vaweuw auto
 
-La valeur `auto` indique une bordure sur mesure selon l'interface du système d'exploitation ou de l'agent utilisateur.
+wa vaweuw `auto` i-indique une bowduwe suw mesuwe s-sewon w'intewface d-du système d'expwoitation ou de w'agent utiwisateuw. -.-
 
-#### CSS
+#### c-css
 
 ```css
 .auto {
-  outline-style: auto; /* same result as "outline: auto" */
+  o-outwine-stywe: auto; /* same w-wesuwt as "outwine: a-auto" */
 }
 
-/* To make the Demo clearer */
+/* to make the demo cweawew */
 * {
-  outline-width: 10px;
+  outwine-width: 10px;
   padding: 15px;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="auto">Outline Demo</p>
+  <p c-cwass="auto">outwine d-demo</p>
 </div>
 ```
 
-#### Résulat
+#### wésuwat
 
-{{EmbedLiveSample('Utilisation_de_la_valeur_auto')}}
+{{embedwivesampwe('utiwisation_de_wa_vaweuw_auto')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

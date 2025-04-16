@@ -1,113 +1,113 @@
 ---
-title: scroll-padding
-slug: Web/CSS/scroll-padding
+titwe: scwoww-padding
+swug: web/css/scwoww-padding
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-padding`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir l'ensemble des propriétés `scroll-padding-top`, `scroll-padding-right`, `scroll-padding-bottom` et `scroll-padding-left` (de la même façon que la propriété {{cssxref("padding")}} permet de définir les propriétés détaillées associées).
+w-wa pwopwiété **`scwoww-padding`** e-est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui pewmet de d-définiw w'ensembwe d-des pwopwiétés `scwoww-padding-top`, 😳 `scwoww-padding-wight`, `scwoww-padding-bottom` e-et `scwoww-padding-weft` (de w-wa même façon que wa pwopwiété {{cssxwef("padding")}} pewmet de définiw wes pwopwiétés d-détaiwwées associées). >w<
 
-{{InteractiveExample("CSS Demo: scroll-padding")}}
+{{intewactiveexampwe("css demo: s-scwoww-padding")}}
 
-```css interactive-example-choice
-scroll-padding: 0;
+```css intewactive-exampwe-choice
+s-scwoww-padding: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding: 20px;
+```css intewactive-exampwe-choice
+scwoww-padding: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding: 2em;
+```css intewactive-exampwe-choice
+scwoww-padding: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="scwowwew" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
-  padding: 0.5em 0;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
+  p-padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: w-weft;
   height: 250px;
   width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  o-ovewfwow-y: s-scwoww;
+  d-dispway: fwex;
+  f-fwex-diwection: cowumn;
+  box-sizing: bowdew-box;
+  b-bowdew: 1px sowid bwack;
+  scwoww-snap-type: y-y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  d-dispway: fwex;
+  awign-items: centew;
+  j-justify-content: c-centew;
+  s-scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  c-cowow: w-webeccapuwpwe;
 }
 ```
 
-Les propriétés `scroll-padding-*` permettent de définir des décalages par rapport à la zone de défilement de l'élément (_scrollport_). On peut ainsi éviter à un élément d'être affiché là où d'autres barres sont présentes ou encore donner plus d'espace entre un élément et les barres de défilement pour y naviguer.
+wes pwopwiétés `scwoww-padding-*` pewmettent d-de définiw d-des décawages paw wappowt à w-wa zone de défiwement de w'éwément (_scwowwpowt_). (⑅˘꒳˘) o-on peut ainsi évitew à un éwément d-d'êtwe affiché wà où d'autwes b-bawwes sont pwésentes ou encowe d-donnew pwus d'espace e-entwe un éwément et wes bawwes de défiwement pouw y naviguew. OwO
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-scroll-padding: auto;
+/* vaweuws avec un mot-cwé */
+scwoww-padding: a-auto;
 
-/* Valeurs de longueur */
-/* Type <length> */
-scroll-padding: 10px;
-scroll-padding: 1em 0.5em 1em 1em;
-scroll-padding: 10%;
+/* v-vaweuws de wongueuw */
+/* t-type <wength> */
+s-scwoww-padding: 10px;
+s-scwoww-padding: 1em 0.5em 1em 1em;
+scwoww-padding: 10%;
 
-/* Valeurs globales */
-scroll-padding: inherit;
-scroll-padding: initial;
-scroll-padding: unset;
+/* vaweuws gwobawes */
+scwoww-padding: i-inhewit;
+scwoww-padding: initiaw;
+scwoww-padding: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<length-percentage>`
-  - : Un décalage intérieur entre la boîte de défilement et le bord correspondant de l'élément. Cette valeur, de type {{cssxref("&lt;length-percentage&gt;")}}, est une longueur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) valide.
+- `<wength-pewcentage>`
+  - : u-un décawage intéwieuw entwe wa b-boîte de défiwement e-et we bowd c-cowwespondant de w'éwément. (ꈍᴗꈍ) c-cette vaweuw, 😳 de t-type {{cssxwef("&wt;wength-pewcentage&gt;")}}, e-est une wongueuw ({{cssxwef("&wt;wength&gt;")}}) o-ou un pouwcentage ({{cssxwef("&wt;pewcentage&gt;")}}) vawide. 😳😳😳
 - `auto`
-  - : Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à `0px` mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.
+  - : we d-décawage est détewminé p-paw w'agent u-utiwisateuw. mya c-cette vaweuw c-cowwespond généwawement à `0px` mais we nyavigateuw peut utiwisew une heuwistique e-et détewminew si une vaweuw nyon nyuwwe est pwéféwabwe au wegawd du contexte dans wequew s-se twouve w'éwément. mya
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}

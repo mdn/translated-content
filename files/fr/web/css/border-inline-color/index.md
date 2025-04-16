@@ -1,80 +1,80 @@
 ---
-title: border-inline-color
-slug: Web/CSS/border-inline-color
+titwe: bowdew-inwine-cowow
+swug: w-web/css/bowdew-inwine-cowow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`border-inline-color`** définit la couleur de la bordure d'un élément sur les côtés de l'axe en ligne. Cette propriété correspondra à différentes propriétés physiques pour les couleurs de la bordure selon le mode d'écriture de l'élément, sa direction et l'orientation du texte. Autrement dit, cette propriété logique peut correspondre à {{cssxref("border-top-color")}} et {{cssxref("border-bottom-color")}} ou à {{cssxref("border-right-color")}} et {{cssxref("border-left-color")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+w-wa pwopwiété **`bowdew-inwine-cowow`** d-définit w-wa couweuw d-de wa bowduwe d'un éwément s-suw w-wes côtés de w-w'axe en wigne. cette pwopwiété cowwespondwa à difféwentes pwopwiétés physiques p-pouw wes couweuws de wa bowduwe sewon we mode d-d'écwituwe de w'éwément, rawr s-sa diwection et w'owientation du texte. mya autwement dit, ^^ cette pwopwiété w-wogique peut cowwespondwe à {{cssxwef("bowdew-top-cowow")}} e-et {{cssxwef("bowdew-bottom-cowow")}} o-ou à {{cssxwef("bowdew-wight-cowow")}} et {{cssxwef("bowdew-weft-cowow")}} sewon wes vaweuws des pwopwiétés {{cssxwef("wwiting-mode")}}, 😳😳😳 {{cssxwef("diwection")}} et {{cssxwef("text-owientation")}}. mya
 
 ```css
-border-inline-color: yellow;
-border-inline-color: #f5f6f7;
+b-bowdew-inwine-cowow: yewwow;
+bowdew-inwine-cowow: #f5f6f7;
 ```
 
-Pour définir la couleur de la bordure sur l'autre dimension, on pourra utiliser la propriété logique {{cssxref("border-block-color")}} qui définit {{cssxref("border-block-start-color")}} et {{cssxref("border-block-end-color")}}.
+pouw définiw wa couweuw de wa bowduwe s-suw w'autwe dimension, 😳 on pouwwa u-utiwisew wa p-pwopwiété wogique {{cssxwef("bowdew-bwock-cowow")}} q-qui définit {{cssxwef("bowdew-bwock-stawt-cowow")}} e-et {{cssxwef("bowdew-bwock-end-cowow")}}. -.-
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-- `<'color'>`
-  - : La couleur de la bordure. Voir {{cssxref("color")}}.
+- `<'cowow'>`
+  - : w-wa couweuw de wa bowduwe. 🥺 voiw {{cssxwef("cowow")}}. o.O
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
+  backgwound-cowow: yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.texteExemple {
-  writing-mode: vertical-lr;
-  border: 10px solid blue;
-  border-inline-color: red;
+.texteexempwe {
+  w-wwiting-mode: v-vewticaw-ww;
+  b-bowdew: 10px sowid bwue;
+  bowdew-inwine-cowow: wed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="texteExemple">Texte d'exemple</p>
+  <p cwass="texteexempwe">texte d-d'exempwe</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", /(^•ω•^) 140, 140)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques qui peuvent correspondre à cette propriété :
+- wes pwopwiétés p-physiques qui peuvent cowwespondwe à cette p-pwopwiété :
 
-  - {{cssxref("border-top-color")}},
-  - {{cssxref("border-right-color")}},
-  - {{cssxref("border-bottom-color")}},
-  - {{cssxref("border-left-color")}}.
+  - {{cssxwef("bowdew-top-cowow")}}, nyaa~~
+  - {{cssxwef("bowdew-wight-cowow")}}, nyaa~~
+  - {{cssxwef("bowdew-bottom-cowow")}}, :3
+  - {{cssxwef("bowdew-weft-cowow")}}. 😳😳😳
 
-- Les propriétés relatives aux propriétés logiques : {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
-- [bug Firefox 1297097](https://bugzil.la/1297097)
+- wes pwopwiétés w-wewatives aux pwopwiétés wogiques : {{cssxwef("wwiting-mode")}}, (˘ω˘) {{cssxwef("diwection")}}, ^^ {{cssxwef("text-owientation")}}
+- [bug f-fiwefox 1297097](https://bugziw.wa/1297097)

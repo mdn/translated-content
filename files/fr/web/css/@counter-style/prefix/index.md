@@ -1,77 +1,77 @@
 ---
-title: prefix
-slug: Web/CSS/@counter-style/prefix
+titwe: pwefix
+swug: web/css/@countew-stywe/pwefix
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`prefix`**, utilisé avec la règle @ {{cssxref("@counter-style")}}, permet de définir un symbole qui sera ajouté comme préfixe à la représentation du marqueur. Si aucune valeur n'est fournie, la valeur utilisée par défaut sera la chaîne de caractères vide.
+w-we descwipteuw **`pwefix`**, (U ﹏ U) u-utiwisé avec w-wa wègwe @ {{cssxwef("@countew-stywe")}}, (U ﹏ U) p-pewmet d-de définiw un s-symbowe qui sewa a-ajouté comme p-pwéfixe à wa wepwésentation du mawqueuw. (⑅˘꒳˘) si aucune vaweuw ny'est fouwnie, òωó wa v-vaweuw utiwisée paw défaut sewa wa chaîne de c-cawactèwes vide. ʘwʘ
 
-## Syntaxe
-
-```css
-/* Valeurs de symbole */
-prefix: "»";
-prefix: "Page";
-```
-
-### Valeurs
-
-- `<symbol>`
-  - : Définit le symbole à utilisé comme préfixe devant le marqueur du compteur de la liste. Cette valeur peut être une valeur de type {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}} ou {{cssxref("&lt;custom-ident&gt;")}}.
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
+## syntaxe
 
 ```css
-@counter-style chapitres {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-  prefix: "Chapitre ";
+/* v-vaweuws de symbowe */
+pwefix: "»";
+pwefix: "page";
+```
+
+### vaweuws
+
+- `<symbow>`
+  - : d-définit we symbowe à utiwisé c-comme pwéfixe d-devant we mawqueuw du compteuw de wa wiste. /(^•ω•^) cette vaweuw peut êtwe une vaweuw d-de type {{cssxwef("&wt;stwing&gt;")}}, ʘwʘ {{cssxwef("&wt;image&gt;")}} ou {{cssxwef("&wt;custom-ident&gt;")}}. σωσ
+
+## définition fowmewwe
+
+{{cssinfo}}
+
+## syntaxe fowmewwe
+
+{{csssyntax}}
+
+## exempwes
+
+### c-css
+
+```css
+@countew-stywe chapitwes {
+  s-system: nyumewic;
+  s-symbows: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  p-pwefix: "chapitwe ";
 }
 
-.exemple {
-  list-style: chapitres;
-  padding-left: 15ch;
+.exempwe {
+  wist-stywe: c-chapitwes;
+  padding-weft: 15ch;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ul class="exemple">
-  <li>Au fond du terrier</li>
-  <li>La mare aux larmes</li>
-  <li>La course cocasse</li>
-  <li>L'habitation du lapin blanc</li>
-  <li>Conseils d'une chenille</li>
-</ul>
+```htmw
+<uw c-cwass="exempwe">
+  <wi>au fond du tewwiew</wi>
+  <wi>wa mawe aux wawmes</wi>
+  <wi>wa couwse c-cocasse</wi>
+  <wi>w'habitation du wapin bwanc</wi>
+  <wi>conseiws d'une cheniwwe</wi>
+</uw>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle qui permet de créer des styles de compteur anonymes.
+- {{cssxwef("wist-stywe")}}, OwO
+- {{cssxwef("wist-stywe-image")}}, 😳😳😳
+- {{cssxwef("wist-stywe-position")}}, 😳😳😳
+- {{cssxwef("symbows", o.O "symbows()")}}, ( ͡o ω ͡o ) w-wa nyotation f-fonctionnewwe q-qui pewmet de cwéew des stywes de compteuw anonymes. (U ﹏ U)

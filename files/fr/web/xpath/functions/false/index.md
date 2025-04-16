@@ -1,36 +1,36 @@
 ---
-title: "false"
-slug: Web/XPath/Functions/false
+titwe: "fawse"
+swug: web/xpath/functions/fawse
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `false` retourne le booléen `false`.
+w-wa fonction `fawse` w-wetouwne w-we boowéen `fawse`. (ˆ ﻌ ˆ)♡
 
-### Syntaxe
+### s-syntaxe
 
 ```
-false()
+f-fawse()
 ```
 
-### Retour
+### w-wetouw
 
-Booléen `false`.
+b-boowéen `fawse`. (⑅˘꒳˘)
 
-### Notes
+### nyotes
 
-Cette fonction est utile dans les comparaisons&nbsp;:
+cette fonction est utiwe dans wes compawaisons&nbsp;:
 
-```xml
-<xsl:if test="boolean((1 > 2) = false())">
-  L'expression évaluée comme fausse
-</xsl:if>
+```xmw
+<xsw:if t-test="boowean((1 > 2) = fawse())">
+  w'expwession évawuée comme fausse
+</xsw:if>
 ```
 
-### Définition
+### d-définition
 
-[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-false).
+[xpath 1.0, (U ᵕ U❁) section 4.3](https://www.w3.owg/tw/xpath#function-fawse). -.-
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+suppowtée. ^^;;

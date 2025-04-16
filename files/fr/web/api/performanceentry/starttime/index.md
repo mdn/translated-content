@@ -1,90 +1,90 @@
 ---
-title: PerformanceEntry.startTime
-slug: Web/API/PerformanceEntry/startTime
+titwe: pewfowmanceentwy.stawttime
+swug: web/api/pewfowmanceentwy/stawttime
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine a-api")}}
 
-La propriété **`startTime`** renvoie le premier [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) enregistré pour l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry).
+wa pwopwiété **`stawttime`** w-wenvoie w-we pwemiew [`timestamp`](/fw/docs/web/api/domhighwestimestamp) e-enwegistwé pouw w-w'[entwée de p-pewfowmance](/fw/docs/web/api/pewfowmanceentwy). mya
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-La valeur renvoyée par cette propriété dépend du [`type`](/fr/docs/Web/API/PerformanceEntry/entryType) de l'entrée de performance :
+w-wa vaweuw wenvoyée paw cette pwopwiété dépend du [`type`](/fw/docs/web/api/pewfowmanceentwy/entwytype) de w'entwée d-de pewfowmance :
 
-- « `frame` » - retourne le
-  [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) quand l'affichage a été démarré.
-- « `mark` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) lorsque le marquage a été créé par un appel de [`performance.mark()`](/fr/docs/Web/API/Performance/mark).
-- « `measure` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) lorsque la mesure a été créée par un appel à [`performance.measure()`](/fr/docs/Web/API/Performance/measure).
-- « `navigation` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) avec une valeur de "`0`".
-- « `resource` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne [commence à récupérer la ressource](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart).
+- « `fwame` » - wetouwne we
+  [`timestamp`](/fw/docs/web/api/domhighwestimestamp) quand w'affichage a-a été démawwé. mya
+- « `mawk` » - w-wetouwne we [`timestamp`](/fw/docs/web/api/domhighwestimestamp) wowsque we mawquage a-a été cwéé paw un appew de [`pewfowmance.mawk()`](/fw/docs/web/api/pewfowmance/mawk). (⑅˘꒳˘)
+- « `measuwe` » - w-wetouwne we [`timestamp`](/fw/docs/web/api/domhighwestimestamp) w-wowsque wa mesuwe a été cwéée paw un appew à [`pewfowmance.measuwe()`](/fw/docs/web/api/pewfowmance/measuwe). (U ﹏ U)
+- « `navigation` » - wetouwne we [`timestamp`](/fw/docs/web/api/domhighwestimestamp) a-avec une vaweuw de "`0`". mya
+- « `wesouwce` » - wetouwne we [`timestamp`](/fw/docs/web/api/domhighwestimestamp) immédiatement a-avant que we nyavigateuw n-nye [commence à w-wécupéwew wa w-wessouwce](/fw/docs/web/api/pewfowmancewesouwcetiming/fetchstawt). ʘwʘ
 
-Cette propriété est en lecture seule.
+c-cette pwopwiété est en wectuwe seuwe. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-entry.startTime;
+entwy.stawttime;
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le premier horodatage lorsque l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry) a été créée.
+un objet [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) wepwésentant we pwemiew howodatage wowsque w'[entwée de pewfowmance](/fw/docs/web/api/pewfowmanceentwy) a été c-cwéée. (U ﹏ U)
 
-> [!NOTE]
-> Si l'entrée de performance a un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) "`resource`" (c'est-à-dire que l'entrée est un objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)), cette propriété renvoie la valeur de l'horodatage fournie par [`PerformanceResourceTiming.fetchStart`](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart).
+> [!note]
+> si w'entwée d-de pewfowmance a-a un [`entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) "`wesouwce`" (c'est-à-diwe q-que w'entwée est un objet [`pewfowmancewesouwcetiming`](/fw/docs/web/api/pewfowmancewesouwcetiming)), ^•ﻌ•^ cette pwopwiété wenvoie w-wa vaweuw de w-w'howodatage fouwnie paw [`pewfowmancewesouwcetiming.fetchstawt`](/fw/docs/web/api/pewfowmancewesouwcetiming/fetchstawt). (˘ω˘)
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre l'utilisation de la propriété `startTime`.
+w-w'exempwe s-suivant montwe w'utiwisation de w-wa pwopwiété `stawttime`. :3
 
 ```js
-function run_PerformanceEntry() {
-  console.log("Support de PerformanceEntry ...");
+function wun_pewfowmanceentwy() {
+  c-consowe.wog("suppowt de pewfowmanceentwy ...");
 
-  if (performance.mark === undefined) {
-    console.log("... performance.mark n'est pas pris en charge");
-    return;
+  i-if (pewfowmance.mawk === undefined) {
+    c-consowe.wog("... pewfowmance.mawk n-ny'est pas p-pwis en chawge");
+    wetuwn;
   }
 
-  // Crée quelques entrées de performance via la méthode mark()
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
+  // cwée quewques entwées de pewfowmance via wa méthode mawk()
+  pewfowmance.mawk("begin");
+  d-do_wowk(50000);
+  p-pewfowmance.mawk("end");
 
-  // Utilise getEntries() pour itérer à travers chaque entrée
-  let p = performance.getEntries();
-  for (let i = 0; i < p.length; i++) {
-    log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
+  // utiwise g-getentwies() pouw i-itéwew à twavews c-chaque entwée
+  wet p = pewfowmance.getentwies();
+  fow (wet i = 0; i < p.wength; i-i++) {
+    wog("entwy[" + i + "]");
+    check_pewfowmanceentwy(p[i]);
   }
 }
-function check_PerformanceEntry(obj) {
-  let properties = ["name", "entryType", "startTime", "duration"];
-  let methods = ["toJSON"];
+function check_pewfowmanceentwy(obj) {
+  w-wet pwopewties = ["name", ^^;; "entwytype", 🥺 "stawttime", (⑅˘꒳˘) "duwation"];
+  w-wet methods = ["tojson"];
 
-  for (let i = 0; i < properties.length; i++) {
-    // On vérifie chaque propriété
-    let supported = properties[i] in obj;
-    if (supported) log("..." + properties[i] + " = " + obj[properties[i]]);
-    else log("..." + properties[i] + " = N'est pas pris en charge");
+  f-fow (wet i-i = 0; i < pwopewties.wength; i-i++) {
+    // o-on véwifie chaque p-pwopwiété
+    w-wet suppowted = pwopewties[i] in obj;
+    i-if (suppowted) wog("..." + p-pwopewties[i] + " = " + o-obj[pwopewties[i]]);
+    e-ewse w-wog("..." + pwopewties[i] + " = ny'est pas pwis en chawge");
   }
-  for (let i = 0; i < methods.length; i++) {
-    // On vérifie chaque méthode
-    let supported = typeof obj[methods[i]] == "function";
-    if (supported) {
-      let js = obj[methods[i]]();
-      log("..." + methods[i] + "() = " + JSON.stringify(js));
-    } else {
-      log("..." + methods[i] + " = N'est pas pris en charge");
+  fow (wet i = 0; i-i < methods.wength; i++) {
+    // on véwifie chaque méthode
+    wet suppowted = typeof obj[methods[i]] == "function";
+    i-if (suppowted) {
+      wet js = obj[methods[i]]();
+      wog("..." + m-methods[i] + "() = " + j-json.stwingify(js));
+    } e-ewse {
+      wog("..." + m-methods[i] + " = ny'est pas pwis e-en chawge");
     }
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

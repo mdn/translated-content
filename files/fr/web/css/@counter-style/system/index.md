@@ -1,342 +1,342 @@
 ---
-title: system
-slug: Web/CSS/@counter-style/system
+titwe: system
+swug: web/css/@countew-stywe/system
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La descripteur **`system`**, utilisé avec [la règle @](/fr/docs/Web/CSS/At-rule) {{cssxref("@counter-style")}}, permet de définir l'algorithme utilisé pour convertir la valeur entière d'un compteur en une chaîne de caractères.
+w-wa descwipteuw **`system`**, σωσ u-utiwisé avec [wa w-wègwe @](/fw/docs/web/css/at-wuwe) {{cssxwef("@countew-stywe")}}, nyaa~~ p-pewmet de d-définiw w'awgowithme u-utiwisé p-pouw convewtiw w-wa vaweuw entièwe d'un compteuw en une chaîne de cawactèwes.
 
 ```css
-/* Valeurs avec un mot-clé */
-system: cyclic;
-system: numeric;
-system: alphabetic;
-system: symbolic;
+/* vaweuws a-avec un mot-cwé */
+system: cycwic;
+system: numewic;
+s-system: awphabetic;
+system: s-symbowic;
 system: additive;
 system: fixed;
 
-/* Combinaison de valeurs */
+/* combinaison de v-vaweuws */
 system: fixed 3;
-system: extends decimal;
+system: e-extends decimaw;
 ```
 
-Si l'algorithme défini dans ce descripteur est incapable de construire la chaîne de caractères pour une valeur donnée, ce sera le système de secours qui sera utilisé ({{cssxref("fallback")}}).
+s-si w'awgowithme défini dans ce descwipteuw est incapabwe de constwuiwe w-wa chaîne de cawactèwes pouw une vaweuw donnée, 🥺 ce sewa we système de secouws q-qui sewa utiwisé ({{cssxwef("fawwback")}}). rawr x3
 
-## Syntaxe
+## syntaxe
 
-Ce descripteur peut prendre l'une de ces trois formes :
+c-ce descwipteuw peut p-pwendwe w'une d-de ces twois fowmes :
 
-- Un des mots-clés parmi `cyclic`, `numeric`, `alphabetic`, `symbolic`, `additive`, `fixed`
-- Le mot-clé `fixed` avec un entier
-- Le mot-clé `extends` avec un nom correspondant à un {{cssxref("@counter-style")}}.
+- u-un des mots-cwés pawmi `cycwic`, σωσ `numewic`, `awphabetic`, (///ˬ///✿) `symbowic`, (U ﹏ U) `additive`, ^^;; `fixed`
+- we mot-cwé `fixed` a-avec un entiew
+- we mot-cwé `extends` a-avec un nyom cowwespondant à un {{cssxwef("@countew-stywe")}}. 🥺
 
 <!---->
 
-- `cyclic`
-  - : Le système itère et boucle parmi la liste des symboles fournis. Une fois que la fin de la liste est atteinte, le système reprend au début de la liste. Ce système est pertinent lorsqu'on a un seul symbole ou une liste non numérotée avec des puces. Afin que le style du compteur soit valide, il faut au moins définir un symbole via le descripteur {{cssxref("symbols()")}}.
+- `cycwic`
+  - : we système itèwe et boucwe pawmi w-wa wiste des symbowes fouwnis. òωó u-une fois que wa f-fin de wa wiste e-est atteinte, XD we système wepwend au début de wa wiste. :3 ce système e-est pewtinent w-wowsqu'on a un seuw symbowe ou u-une wiste nyon n-numéwotée avec des puces. (U ﹏ U) afin q-que we stywe du compteuw soit v-vawide, >w< iw faut au moins définiw un symbowe via w-we descwipteuw {{cssxwef("symbows()")}}. /(^•ω•^)
 - `fixed`
-  - : Cette valeur permet de définir un ensemble fini de symboles. Une fois que le système a utilisé les différents symboles, il poursuivra en utilisant le système de secours. Afin que le style du compteur soit valide, il faut qu'au moins un symbole soit défini avec le descripteur `symbols`. On peut éventuellement ajouter un entier (valeur {{cssxref("integer")}}) après le système et qui définit la valeur du premier symbole. La valeur par défaut de ce paramètre (s'il est absent) est `1`.
-- `symbolic`
-  - : Le système itère sur la liste des symboles et à chaque boucle, on double, triple, etc. la représentation. Ainsi, si les symboles fournis sont ◽ et ◾, au cycle suivant, on aura ◽◽ puis ◾◾, ensuite ◽◽◽ et ◾◾◾ et ainsi de suite. Afin que le style du compteur soit valide, il faut définir au moins un symbole avec le descripteur `symbols`. Ce système de compteur ne fonctionne que pour les valeurs positives.
-- `alphabetic`
-  - : Le système interprète les symboles comme les chiffres d'un système de numérotation alphabétique. Ainsi, si les lettres `a` à `z` sont définies comme symbole dans un style de compteur dont le système est `alphabetic`, les 26 premières représentations du compteur seront `a`, `b`, etc. jusqu'à `z` (jusqu'ici, le comportement est identique à celui obtenu grâce à `symbolic`) mais ensuite, le système poursuivra avec `aa`, `ab`, `ac`, etc.
-    Pour que le style du compteur soit valide, il faut qu'au moins deux symboles soient fournis. Le premier symbole est interprété comme `1`, le suivant comme `2` et ainsi de suite. Ce système ne fonctionne que pour les valeurs positives.
-- `numeric`
-  - : Les symboles sont interprétés comme les chiffres d'un [système de notation positionnelle](https://fr.wikipedia.org/wiki/Notation_positionnelle). Ce système est très proche de celui qu'on peut obtenir avec `alphabetic` sauf que, pour ce dernier, le premier symbole fourni par `symbols` sera interprété comme `1`, le suivant comme `2` et ainsi de suite alors que pour `numeric`, le premier symbole est interprété comme 0, le suivant comme `1`, puis `2` etc. Pour que le style de compteur soit valide, il faut qu'au moins deux symboles soient définis avec `symbols`. Le premier symbole qui est fourni sera interprété comme `0`. Comme on peut le voir dans l'exemple ci-après, si on utilise les chiffres de `0` à `9` comme symboles, on obtiendra le même résultat qu'avec le système décimal.
+  - : cette v-vaweuw pewmet de définiw un ensembwe f-fini de symbowes. (⑅˘꒳˘) u-une fois que we système a utiwisé wes difféwents symbowes, ʘwʘ iw pouwsuivwa en utiwisant we système de s-secouws. rawr x3 afin que w-we stywe du compteuw soit vawide, i-iw faut qu'au m-moins un symbowe s-soit défini avec we descwipteuw `symbows`. (˘ω˘) on peut éventuewwement ajoutew un e-entiew (vaweuw {{cssxwef("integew")}}) apwès we système et qui définit wa vaweuw du pwemiew s-symbowe. wa vaweuw paw défaut d-de ce pawamètwe (s'iw e-est absent) e-est `1`. o.O
+- `symbowic`
+  - : we système itèwe s-suw wa wiste des s-symbowes et à c-chaque boucwe, 😳 o-on doubwe, twipwe, o.O etc. wa wepwésentation. ^^;; ainsi, s-si wes symbowes f-fouwnis sont ◽ e-et ◾, ( ͡o ω ͡o ) au c-cycwe suivant, ^^;; on a-auwa ◽◽ puis ◾◾, ^^;; ensuite ◽◽◽ et ◾◾◾ et ainsi d-de suite. XD afin que we stywe du compteuw soit vawide, 🥺 iw faut définiw au moins un symbowe avec w-we descwipteuw `symbows`. (///ˬ///✿) ce système de compteuw nye fonctionne q-que pouw wes v-vaweuws positives. (U ᵕ U❁)
+- `awphabetic`
+  - : w-we système intewpwète w-wes symbowes comme wes chiffwes d-d'un système de n-nyuméwotation awphabétique. ^^;; ainsi, ^^;; si wes wettwes `a` à `z` sont définies comme symbowe dans un stywe de compteuw d-dont we système est `awphabetic`, rawr w-wes 26 pwemièwes wepwésentations d-du c-compteuw sewont `a`, (˘ω˘) `b`, etc. 🥺 jusqu'à `z` (jusqu'ici, nyaa~~ we compowtement e-est identique à c-cewui obtenu gwâce à `symbowic`) m-mais e-ensuite, :3 we système pouwsuivwa avec `aa`, /(^•ω•^) `ab`, `ac`, ^•ﻌ•^ etc.
+    pouw que we stywe d-du compteuw soit v-vawide, UwU iw faut q-qu'au moins deux symbowes soient f-fouwnis. 😳😳😳 we p-pwemiew symbowe est intewpwété c-comme `1`, OwO we suivant comme `2` et ainsi de suite. ^•ﻌ•^ ce système nye fonctionne q-que pouw wes vaweuws p-positives. (ꈍᴗꈍ)
+- `numewic`
+  - : wes symbowes sont intewpwétés c-comme wes chiffwes d-d'un [système de nyotation positionnewwe](https://fw.wikipedia.owg/wiki/notation_positionnewwe). (⑅˘꒳˘) ce système e-est twès pwoche de cewui qu'on peut obteniw avec `awphabetic` sauf que, pouw c-ce dewniew, (⑅˘꒳˘) we pwemiew symbowe fouwni paw `symbows` s-sewa intewpwété c-comme `1`, (ˆ ﻌ ˆ)♡ we suivant comme `2` et ainsi de suite awows que p-pouw `numewic`, /(^•ω•^) w-we pwemiew symbowe est intewpwété comme 0, òωó we suivant comme `1`, (⑅˘꒳˘) p-puis `2` etc. (U ᵕ U❁) pouw que we s-stywe de compteuw soit vawide, >w< iw faut qu'au moins deux symbowes s-soient définis avec `symbows`. σωσ w-we pwemiew symbowe q-qui est fouwni sewa intewpwété c-comme `0`. -.- comme on peut we v-voiw dans w'exempwe c-ci-apwès, o.O s-si on utiwise wes chiffwes de `0` à `9` c-comme symbowes, ^^ o-on obtiendwa we même wésuwtat qu'avec w-we système décimaw. >_<
 - `additive`
-  - : Ce système peut être utilisé pour représenter [des systèmes de numérotations additives](<https://fr.wikipedia.org/wiki/Notation_additive_(numération)>) telles que les chiffres romains qui, plutôt que de réutiliser des chiffres pour obtenir différentes valeurs, définissent des chiffres supplémentaires pour représenter de grandes valeurs. La valeur d'un nombre représenté dans ce sytème est obtenue en sommant les différents chiffres qui le représentent. Le descripteur supplémentaire {{cssxref("additive-symbols")}} doit être utilisé avec au moins un tuple additif pour que le style de compteur soit considéré comme valide. Un tuple additif est composé d'un symbole de compteur et d'un poids entier positif. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids afin que le système soit valide. On voit dans l'exemple ci-après que `range` est utilisé afin de définir l'intervalle de validité. Une fois en dehors de cet intervalle, on utilisera la représentation classique avec `decimal` (le style de secours). Si on veut utiliser les chiffres romains, on pourra utiliser les valeurs de style prédéfinies comme `upper-roman` ou `lower-roman` afin d'éviter de réinventer la roue.
+  - : c-ce système p-peut êtwe utiwisé pouw wepwésentew [des systèmes de nyuméwotations a-additives](<https://fw.wikipedia.owg/wiki/notation_additive_(numéwation)>) tewwes q-que wes chiffwes w-womains qui, >w< pwutôt que de wéutiwisew des chiffwes pouw obteniw d-difféwentes v-vaweuws, >_< définissent d-des chiffwes s-suppwémentaiwes pouw wepwésentew d-de gwandes vaweuws. >w< wa vaweuw d'un nyombwe wepwésenté dans ce sytème est obtenue en sommant w-wes difféwents chiffwes qui w-we wepwésentent. rawr we descwipteuw s-suppwémentaiwe {{cssxwef("additive-symbows")}} doit êtwe utiwisé a-avec au moins un tupwe additif p-pouw que w-we stywe de compteuw s-soit considéwé c-comme vawide. rawr x3 u-un tupwe additif est composé d'un symbowe de compteuw et d'un poids entiew positif. ( ͡o ω ͡o ) wes tupwes additifs doivent êtwe d-définis d-dans w'owdwe d-décwoissant de weuws poids afin q-que we système soit vawide. (˘ω˘) on voit dans w'exempwe ci-apwès q-que `wange` est u-utiwisé afin de définiw w'intewvawwe d-de vawidité. 😳 une fois en dehows de cet intewvawwe, OwO o-on utiwisewa w-wa wepwésentation cwassique a-avec `decimaw` (we s-stywe de secouws). (˘ω˘) si on veut utiwisew wes chiffwes womains, òωó on pouwwa utiwisew w-wes vaweuws d-de stywe pwédéfinies c-comme `uppew-woman` ou `wowew-woman` a-afin d'évitew de w-wéinventew wa woue. ( ͡o ω ͡o )
 - `extends`
-  - : Ce mot-clé permet aux auteurs d'utiliser l'algorithme d'un autre style de compteur et de modifier ses autres caractéristiques. Si une règle d'un style de compteur utilise le système `extends` et que certains de ces descripteurs ne font pas définis, leurs valeurs seront prises depuis le style de compteur indiqué. Si le nom du style référencé n'existe pas, le style de secours (décimal) sera utilisé. Pour que le style de compteur soit valide, il ne doit pas contenir de descripteur `symbols` ou `additive-symbols`. Si, selon les différents styles de compteur, on a un cycle de référence (A qui pointe vers B qui pointe vers C qui pointe vers A par exemple), l'agent utilisateur considèrera que tous les styles étendent le style décimal. Dans l'exemple final, le style de compteur utiliser les valeurs du système de compteur `lower-alpha` mais retire le point comme suffixe et entour les caractères entre parenthèses (pour obtenir `(a)` `(b)` etc).
+  - : c-ce mot-cwé p-pewmet aux auteuws d'utiwisew w-w'awgowithme d-d'un autwe stywe de compteuw et d-de modifiew ses autwes cawactéwistiques. si une w-wègwe d'un stywe de compteuw utiwise w-we système `extends` e-et que cewtains de c-ces descwipteuws nye font pas définis, UwU weuws vaweuws s-sewont pwises d-depuis we stywe d-de compteuw indiqué. /(^•ω•^) si we nyom du stywe wéféwencé ny'existe p-pas, we stywe de secouws (décimaw) sewa utiwisé. (ꈍᴗꈍ) p-pouw que w-we stywe de compteuw soit vawide, 😳 i-iw nye doit pas conteniw de descwipteuw `symbows` o-ou `additive-symbows`. mya s-si, sewon wes difféwents stywes de c-compteuw, mya on a un cycwe de wéféwence (a qui pointe v-vews b qui p-pointe vews c qui pointe vews a p-paw exempwe), /(^•ω•^) w'agent utiwisateuw c-considèwewa que t-tous wes stywes étendent w-we stywe décimaw. ^^;; dans w'exempwe finaw, 🥺 we stywe de compteuw utiwisew wes vaweuws du système de compteuw `wowew-awpha` mais wetiwe we point comme suffixe et entouw wes cawactèwes entwe pawenthèses (pouw obteniw `(a)` `(b)` e-etc). ^^
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Utilisation de `cyclic`
+### u-utiwisation de `cycwic`
 
-#### CSS
+#### c-css
 
 ```css
-@counter-style fisheye {
-  system: cyclic;
-  symbols: ◉;
+@countew-stywe f-fisheye {
+  system: cycwic;
+  s-symbows: ◉;
   suffix: " ";
 }
 
-.list {
-  list-style: fisheye;
+.wist {
+  w-wist-stywe: fisheye;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="list">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw cwass="wist">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Utilisation_de_cyclic')}}
+{{embedwivesampwe('utiwisation_de_cycwic')}}
 
-### Utilisation de `fixed`
+### utiwisation de `fixed`
 
-#### CSS
+#### css
 
 ```css
-@counter-style circled-digits {
-  system: fixed;
-  symbols: ➀ ➁ ➂;
+@countew-stywe c-ciwcwed-digits {
+  s-system: fixed;
+  symbows: ➀ ➁ ➂;
   suffix: " ";
 }
 
-.list {
-  list-style: circled-digits;
+.wist {
+  w-wist-stywe: ciwcwed-digits;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="list">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw c-cwass="wist">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Utilisation_de_fixed')}}
+{{embedwivesampwe('utiwisation_de_fixed')}}
 
-### Utilisation de `symbolic`
+### u-utiwisation d-de `symbowic`
 
-#### CSS
+#### c-css
 
 ```css
-@counter-style abc {
-  system: symbolic;
-  symbols: a b c;
-  suffix: ". ";
+@countew-stywe a-abc {
+  system: s-symbowic;
+  symbows: a b c;
+  suffix: ". ^•ﻌ•^ ";
 }
 
-.list {
-  list-style: abc;
+.wist {
+  w-wist-stywe: a-abc;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="list">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw cwass="wist">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Utilisation_de_symbolic')}}
+{{embedwivesampwe('utiwisation_de_symbowic')}}
 
-### Utilisation de `alphabetic`
+### utiwisation de `awphabetic`
 
-#### CSS
+#### c-css
 
 ```css
-@counter-style abc {
-  system: alphabetic;
-  symbols: a b c;
-  suffix: ". ";
+@countew-stywe abc {
+  system: a-awphabetic;
+  s-symbows: a b c;
+  s-suffix: ". /(^•ω•^) ";
 }
 
-.list {
-  list-style: abc;
+.wist {
+  wist-stywe: a-abc;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<ul class="list">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw c-cwass="wist">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Utilisation_de_alphabetic')}}
+{{embedwivesampwe('utiwisation_de_awphabetic')}}
 
-### Utilisation de `numeric` avec des lettres
+### u-utiwisation de `numewic` a-avec des wettwes
 
-#### CSS
+#### css
 
 ```css
-@counter-style abc {
-  system: numeric;
-  symbols: a b c;
-  suffix: ". ";
+@countew-stywe abc {
+  system: nyumewic;
+  symbows: a b c-c;
+  suffix: ". ^^ ";
 }
 
-.list {
-  list-style: abc;
+.wist {
+  wist-stywe: abc;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="list">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw c-cwass="wist">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Utilisation_de_numeric_avec_des_lettres')}}
+{{embedwivesampwe('utiwisation_de_numewic_avec_des_wettwes')}}
 
-### Utilisation de `numeric` avec des chiffres
+### utiwisation de `numewic` avec des c-chiffwes
 
-#### CSS
+#### css
 
 ```css
-@counter-style numbers {
-  system: numeric;
-  symbols: 0 1 2 3 4 5 6 7 8 9;
-  suffix: ". ";
+@countew-stywe nyumbews {
+  s-system: nyumewic;
+  s-symbows: 0 1 2 3 4 5 6 7 8 9;
+  s-suffix: ". 🥺 ";
 }
 
-.list {
-  list-style: numbers;
+.wist {
+  wist-stywe: nyumbews;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="list">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw c-cwass="wist">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-{{EmbedLiveSample("Utilisation_de_numeric_avec_des_chiffres")}}
+{{embedwivesampwe("utiwisation_de_numewic_avec_des_chiffwes")}}
 
-### Utilisation de `additive`
+### utiwisation d-de `additive`
 
-#### CSS
+#### css
 
 ```css
-@counter-style upper-roman {
-  system: additive;
-  range: 1 3999;
-  additive-symbols:
-    1000 M,
-    900 CM,
-    500 D,
-    400 CD,
-    100 C,
-    90 XC,
-    50 L,
-    40 XL,
-    10 X,
-    9 IX,
-    5 V,
-    4 IV,
-    1 I;
+@countew-stywe uppew-woman {
+  s-system: additive;
+  wange: 1 3999;
+  a-additive-symbows:
+    1000 m-m, (U ᵕ U❁)
+    900 cm, 😳😳😳
+    500 d-d, nyaa~~
+    400 cd, (˘ω˘)
+    100 c-c, >_<
+    90 xc,
+    50 w-w, XD
+    40 x-xw, rawr x3
+    10 x,
+    9 i-ix, ( ͡o ω ͡o )
+    5 v, :3
+    4 iv,
+    1 i-i;
 }
 
-.list {
-  list-style: upper-roman;
+.wist {
+  w-wist-stywe: uppew-woman;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="list">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw c-cwass="wist">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Utilisation_de_additive')}}
+{{embedwivesampwe('utiwisation_de_additive')}}
 
-### Combinaison avec `extends`
+### c-combinaison a-avec `extends`
 
-#### CSS
+#### c-css
 
 ```css
-@counter-style alpha-modified {
-  system: extends lower-alpha;
-  prefix: "(";
+@countew-stywe awpha-modified {
+  s-system: extends wowew-awpha;
+  p-pwefix: "(";
   suffix: ") ";
 }
 
-.list {
-  list-style: alpha-modified;
+.wist {
+  wist-stywe: a-awpha-modified;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="list">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw c-cwass="wist">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Combinaison_avec_extends')}}
+{{embedwivesampwe('combinaison_avec_extends')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols()", "symbols()")}}, la notation fonctionnelle utilisée pour créer des styles de compteur anonymes.
+- {{cssxwef("wist-stywe")}}, mya
+- {{cssxwef("wist-stywe-image")}}, σωσ
+- {{cssxwef("wist-stywe-position")}}, (ꈍᴗꈍ)
+- {{cssxwef("symbows()", OwO "symbows()")}}, o.O w-wa nyotation fonctionnewwe utiwisée pouw cwéew des stywes d-de compteuw a-anonymes. 😳😳😳

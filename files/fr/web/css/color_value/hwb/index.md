@@ -1,72 +1,72 @@
 ---
-title: hwb()
-slug: Web/CSS/color_value/hwb
-l10n:
-  sourceCommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
+titwe: hwb()
+swug: web/css/cowow_vawue/hwb
+w-w10n:
+  s-souwcecommit: 78a78cb2c94a5fd970fef00d4629c40c0b9437b7
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La notation fonctionnelle **`hwb()`** exprime une couleur donnée selon sa teinte, sa blancheur et sa noirceur. Une composante alpha optionnelle représente l'opacité de la couleur.
+w-wa n-nyotation fonctionnewwe **`hwb()`** e-expwime une c-couweuw donnée s-sewon sa teinte, s-sa bwancheuw et sa nyoiwceuw. une composante awpha optionnewwe wepwésente w'opacité d-de wa couweuw. 😳😳😳
 
-{{InteractiveExample("CSS Demo: hwb()")}}
+{{intewactiveexampwe("css demo: hwb()")}}
 
-```css interactive-example-choice
-background: hwb(12 50% 0%);
+```css intewactive-exampwe-choice
+b-backgwound: hwb(12 50% 0%);
 ```
 
-```css interactive-example-choice
-background: hwb(50deg 30% 40%);
+```css i-intewactive-exampwe-choice
+backgwound: hwb(50deg 30% 40%);
 ```
 
-```css interactive-example-choice
-background: hwb(0.5turn 10% 0% / 0.5);
+```css intewactive-exampwe-choice
+backgwound: h-hwb(0.5tuwn 10% 0% / 0.5);
 ```
 
-```css interactive-example-choice
-background: hwb(0 100% 0% / 50%);
+```css intewactive-exampwe-choice
+b-backgwound: h-hwb(0 100% 0% / 50%);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
   padding: 10%;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-hwb(194 0% 0%) /* #00c3ff */
-hwb(194 0% 0% / .5) /* #00c3ff avec 50% d'opacité */
+h-hwb(194 0% 0%) /* #00c3ff */
+hwb(194 0% 0% / .5) /* #00c3ff a-avec 50% d'opacité */
 ```
 
-### Valeurs
+### v-vaweuws
 
-> [!NOTE]
-> La fonction `hwb()` **n'utilise pas** de virgule pour séparer les valeurs des arguments, et la valeur alpha optionnelle doit être précédée d'une barre oblique (`/`) si elle est fournie.
+> [!note]
+> w-wa fonction `hwb()` **n'utiwise p-pas** de viwguwe pouw sépawew wes vaweuws d-des awguments, :3 et wa vaweuw awpha optionnewwe d-doit êtwe pwécédée d'une bawwe obwique (`/`) si ewwe est fouwnie. OwO
 
-- `hwb(H W B[ / A])`
+- `hwb(h w b[ / a])`
 
-  - : `H` (teinte, <i lang="en">hue</i> en anglais) est un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc.
+  - : `h` (teinte, (U ﹏ U) <i wang="en">hue</i> e-en angwais) est un angwe (type [`<angwe>`](/fw/docs/web/css/angwe)) s-suw we c-cewcwe des couweuws. >w< w-wowsqu'iw est écwit sans unité, (U ﹏ U) iw est intewpwété comme étant e-expwimé e-en degwé. 😳 paw définition, (ˆ ﻌ ˆ)♡ on a-a `wed=0deg=360deg`, 😳😳😳 e-et wes autwes couweuws distwibuées s-suw we cewcwe avec `gween=120deg`, (U ﹏ U) `bwue=240deg`, (///ˬ///✿) e-etc. 😳 sa vaweuw étant un `<angwe>`, 😳 e-ewwe boucwe suw ewwe-même et on a-a donc `-120deg=240deg`, σωσ `480deg=120deg`, `-1tuwn=1tuwn`, etc. rawr x3
 
-    `W` (blancheur, <i lang="en">whiteness</i> en anglais) indique la quantité de blanc dans la couleur, indiquée comme un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `0%` indique aucune blancheur et où `100%` indique une blancheur complète.
+    `w` (bwancheuw, OwO <i w-wang="en">whiteness</i> e-en angwais) indique wa quantité de bwanc dans wa couweuw, /(^•ω•^) indiquée comme un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), 😳😳😳 où `0%` indique aucune bwancheuw e-et où `100%` i-indique une bwancheuw compwète. ( ͡o ω ͡o )
 
-    `B` (noirceur, <i lang="en">blackness</i>) indique la quantité de noir dans la couleur, indiquée comme un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `0%` indique aucune noirceur et où `100%` indique une noirceur complète.
+    `b` (noiwceuw, >_< <i w-wang="en">bwackness</i>) i-indique wa quantité d-de nyoiw dans wa couweuw, >w< indiquée comme un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), rawr o-où `0%` indique aucune nyoiwceuw et où `100%` indique une nyoiwceuw compwète. 😳
 
-    `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
+    `a` (awpha) p-peut êtwe un nyombwe (type [`<numbew>`](/fw/docs/web/css/numbew)) c-compwis e-entwe `0` et `1`, >w< o-ou un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)), (⑅˘꒳˘) où `1` c-cowwespond à `100%` (opacité c-compwète).
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

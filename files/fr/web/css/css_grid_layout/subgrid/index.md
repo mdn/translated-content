@@ -1,92 +1,92 @@
 ---
-title: Subgrid
-slug: Web/CSS/CSS_grid_layout/Subgrid
+titwe: subgwid
+swug: web/css/css_gwid_wayout/subgwid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La valeur **`subgrid`** a été ajoutée par le module de spécification _CSS Grid Layout_ de niveau 2 pour les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}. Dans ce guide, nous verrons comment utiliser cette valeur ainsi que les cas d'utilisation ou patrons de conception qui peuvent en bénéficier.
+w-wa vaweuw **`subgwid`** a-a été ajoutée p-paw we moduwe d-de spécification _css g-gwid wayout_ d-de nyiveau 2 p-pouw wes pwopwiétés {{cssxwef("gwid-tempwate-cowumns")}} e-et {{cssxwef("gwid-tempwate-wows")}}. (U ﹏ U) dans ce guide, ^^;; nyous vewwons comment utiwisew cette vaweuw ainsi q-que wes cas d'utiwisation ou patwons de conception q-qui peuvent en bénéficiew. 🥺
 
-## Une introduction à `subgrid`
+## u-une intwoduction à `subgwid`
 
-Lorsqu'on ajoute `display: grid` à un conteneur, seuls les descendants directs deviennent des éléments de grille et peuvent être placés sur la grille ainsi créée. Les enfants de ces descendants seront disposés selon le flux habituel.
+wowsqu'on ajoute `dispway: gwid` à un conteneuw, òωó s-seuws wes descendants diwects d-deviennent d-des éwéments de gwiwwe et peuvent êtwe pwacés suw wa gwiwwe ainsi cwéée. XD w-wes enfants de ces descendants sewont disposés sewon we fwux habituew. :3
 
-On peut imbriquer des grilles en utilisant `display: grid` sur un descendant direct du conteneur de grille mais les grilles créées seront indépendantes. On ne pourra pas récupérer le dimensionnement des pistes de la grille parente pour l'utiliser dans la grille fille. Il est donc difficile d'aligner des objets de la grille fille sur la grille parente.
+on peut i-imbwiquew des gwiwwes en utiwisant `dispway: g-gwid` s-suw un descendant d-diwect du c-conteneuw de gwiwwe mais wes gwiwwes cwéées sewont i-indépendantes. (U ﹏ U) on nye pouwwa pas wécupéwew w-we dimensionnement des pistes de wa gwiwwe pawente pouw w'utiwisew dans wa gwiwwe fiwwe. >w< iw est d-donc difficiwe d'awignew des o-objets de wa gwiwwe f-fiwwe suw wa g-gwiwwe pawente. /(^•ω•^)
 
-Si on utilise la valeur `subgrid` pour `grid-template-columns` et/ou `grid-template-rows`, on pourra utiliser les pistes de la grille parente à l'intérieur plutôt que de créer des pistes indépendantes.
+si on utiwise wa vaweuw `subgwid` pouw `gwid-tempwate-cowumns` e-et/ou `gwid-tempwate-wows`, (⑅˘꒳˘) o-on pouwwa utiwisew w-wes pistes de wa g-gwiwwe pawente à w'intéwieuw p-pwutôt que de cwéew des pistes i-indépendantes. ʘwʘ
 
-Ainsi, si on utilise `grid-template-columns: subgrid` et que la grille imbriquée s'inscrit dans trois colonnes du parent, la grille imbriquée possèdera trois pistes, dimensionnées comme celles du parent. Les gouttières (_gaps_) sont également héritées mais il est possible de les surcharger avec une valeur {{cssxref("gap")}} différente. Les noms des lignes peuvent être passés du parent à la grille fille et la grille fille peut aussi déclarer ses propres noms de ligne.
+ainsi, si on utiwise `gwid-tempwate-cowumns: subgwid` et que wa g-gwiwwe imbwiquée s'inscwit dans t-twois cowonnes du pawent, rawr x3 wa g-gwiwwe imbwiquée p-possèdewa twois pistes, (˘ω˘) dimensionnées comme cewwes du pawent. o.O wes gouttièwes (_gaps_) sont égawement héwitées m-mais iw est p-possibwe de wes suwchawgew avec u-une vaweuw {{cssxwef("gap")}} d-difféwente. 😳 wes n-nyoms des wignes peuvent êtwe passés du pawent à wa gwiwwe fiwwe e-et wa gwiwwe fiwwe peut aussi décwawew ses pwopwes nyoms de wigne. o.O
 
-## Les sous-grilles pour les colonnes
+## wes s-sous-gwiwwes pouw wes cowonnes
 
-Dans l'exemple qui suit, on a une grille décomposée en neufs colonnes de `1fr` chacune et avec quatre lignes qui mesurent au moins `100px`.
+d-dans w'exempwe q-qui suit, ^^;; on a une g-gwiwwe décomposée en nyeufs c-cowonnes de `1fw` c-chacune et avec q-quatwe wignes q-qui mesuwent au moins `100px`. ( ͡o ω ͡o )
 
-On place un objet `.item` entre les colonnes 2 et 7 et entre les lignes 2 à 4. On indique que cet objet est lui-même une grille et on définit les pistes de colonnes comme sous-grille et on utilise des lignes normales. L'objet ainsi paramétré s'étalant sur 5 colonnes de la grille parente, cela signifie que la sous-grille possède cinq pistes pour les colonnes. On place alors un objet `.subitem` sur cette deuxième grille.
+on pwace un objet `.item` e-entwe w-wes cowonnes 2 e-et 7 et entwe wes w-wignes 2 à 4. ^^;; o-on indique que cet objet est wui-même une gwiwwe et on définit w-wes pistes de cowonnes comme sous-gwiwwe et on utiwise des wignes nyowmawes. ^^;; w'objet ainsi pawamétwé s-s'étawant suw 5 cowonnes de wa gwiwwe pawente, XD cewa signifie q-que wa sous-gwiwwe p-possède c-cinq pistes pouw wes cowonnes. 🥺 o-on pwace awows un objet `.subitem` s-suw cette deuxième g-gwiwwe. (///ˬ///✿)
 
-Les lignes horizontales de cet exemple ne sont pas une sous-grille et se comportent comme pour une grille imbriquée « classique ». La zone de la grille parente s'étend donc afin de pouvoir stocker le contenu de cette grille imbriquée.
+wes wignes howizontawes de cet exempwe nye sont pas une sous-gwiwwe et se compowtent c-comme pouw une gwiwwe imbwiquée « c-cwassique ». (U ᵕ U❁) wa zone d-de wa gwiwwe pawente s-s'étend donc afin de pouvoiw stockew we contenu d-de cette g-gwiwwe imbwiquée. ^^;;
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/columns.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/gwid/subgwid/cowumns.htmw", ^^;; '100%', rawr 1200)}}
 
-On notera que la numérotation recommence à l'intérieur de la grille imbriquée. La colonne n°1 de la sous-grille correspond donc ici à la colonne n°2 de la grille parente. Autrement dit, les numéros des colonnes et des lignes de la grille parente ne sont pas héritées via la sous-grille. Cela permet une disposition modulaire et indépendante de la position quant à la grille parente.
+on nyotewa que w-wa nyuméwotation w-wecommence à w'intéwieuw de wa gwiwwe imbwiquée. (˘ω˘) wa cowonne ny°1 de wa sous-gwiwwe c-cowwespond d-donc ici à w-wa cowonne ny°2 de wa gwiwwe p-pawente. 🥺 autwement d-dit, wes nyuméwos des cowonnes e-et des wignes de wa gwiwwe pawente nye sont pas héwitées via wa sous-gwiwwe. nyaa~~ c-cewa pewmet une d-disposition moduwaiwe et indépendante de wa position q-quant à w-wa gwiwwe pawente. :3
 
-## Les sous-grilles pour les lignes
+## wes sous-gwiwwes pouw wes wignes
 
-Dans l'exemple ci-après, on a la même disposition mais on utilise cette fois `subgrid` pour la propriété `grid-template-rows` et on définit explicitement des pistes pour les colonnes. Les colonnes se comportent donc comme pour une grille imbriquée mais les lignes de la sous-grille sont liées à celles de la grille parente.
+dans w'exempwe c-ci-apwès, /(^•ω•^) on a wa même disposition mais on utiwise cette fois `subgwid` p-pouw wa pwopwiété `gwid-tempwate-wows` et on définit expwicitement d-des pistes p-pouw wes cowonnes. ^•ﻌ•^ wes cowonnes se compowtent donc comme pouw u-une gwiwwe imbwiquée m-mais wes wignes de wa sous-gwiwwe sont wiées à cewwes d-de wa gwiwwe pawente. UwU
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/rows.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/gwid/subgwid/wows.htmw", 😳😳😳 '100%', 1200)}}
 
-## Les sous-grilles sur deux dimensions
+## wes sous-gwiwwes s-suw deux dimensions
 
-Bien entendu, on peut définir une sous-grille pour les lignes et pour les colonnes en même temps. Cela signifie que la sous-grille sera couplée à la grille parente pour les deux axes.
+bien entendu, OwO on peut définiw une sous-gwiwwe p-pouw wes wignes et pouw w-wes cowonnes e-en même temps. ^•ﻌ•^ cewa signifie que w-wa sous-gwiwwe sewa coupwée à w-wa gwiwwe pawente p-pouw wes deux a-axes. (ꈍᴗꈍ)
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/both.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/gwid/subgwid/both.htmw", (⑅˘꒳˘) '100%', 1200)}}
 
-### Absence de grille implicite pour une sous-grille
+### absence d-de gwiwwe impwicite p-pouw une sous-gwiwwe
 
-S'il vous faut placer automatiquement des objets et que vous ne connaissez pas leur quantité, faites attention à l'utilisation des sous-grilles : celles-ci empêcheront la création de lignes supplémentaires pour afficher le contenu.
+s'iw vous faut pwacew a-automatiquement d-des objets et que v-vous nye connaissez pas weuw quantité, (⑅˘꒳˘) faites a-attention à w'utiwisation des s-sous-gwiwwes : c-cewwes-ci empêchewont wa cwéation de wignes suppwémentaiwes pouw affichew we c-contenu. (ˆ ﻌ ˆ)♡
 
-Pour mieux illustrer ce point, voyons le prochain exemple (on utilise le même parent et la même sous-grille qu'avant) où on essaie d'afficher 12 éléments automatiquement dans une grille qui contient uniquement 10 cellules. La sous-grille étant couplée sur les deux axes (lignes et colonnes), il n'y a aucune place restante pour les deux éléments restants et ils sont donc placés sur la dernière piste de la grille, comme indiqué dans la spécification.
+pouw mieux i-iwwustwew ce p-point, /(^•ω•^) voyons w-we pwochain exempwe (on utiwise w-we même pawent et wa même sous-gwiwwe qu'avant) où on essaie d'affichew 12 éwéments automatiquement d-dans une gwiwwe qui contient u-uniquement 10 cewwuwes. òωó wa s-sous-gwiwwe étant coupwée suw w-wes deux axes (wignes et cowonnes), (⑅˘꒳˘) i-iw ny'y a aucune p-pwace westante p-pouw wes deux éwéments w-westants e-et iws sont donc pwacés suw wa dewnièwe piste de wa gwiwwe, (U ᵕ U❁) comme indiqué dans wa spécification. >w<
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/no-implicit.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/gwid/subgwid/no-impwicit.htmw", σωσ '100%', -.- 1200)}}
 
-Si on retire la valeur sur `grid-template-rows`, on permet alors la création de pistes implicites. Ainsi, même si on n'aura pas l'alignement avec les pistes de la grille parente, on pourra avoir autant de lignes que nécessaire pour afficher l'ensemble du contenu.
+si on wetiwe wa v-vaweuw suw `gwid-tempwate-wows`, o.O o-on pewmet awows w-wa cwéation de pistes impwicites. ^^ a-ainsi, même si on ny'auwa pas w'awignement avec wes pistes d-de wa gwiwwe pawente, >_< o-on pouwwa avoiw autant de w-wignes que nyécessaiwe pouw affichew w'ensembwe d-du contenu. >w<
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/implicit.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/gwid/subgwid/impwicit.htmw", >_< '100%', >w< 1200)}}
 
-## Utilisation des gouttières et des sous-grilles
+## u-utiwisation des gouttièwes et d-des sous-gwiwwes
 
-Si vous utilisez {{cssxref("gap")}}, {{cssxref("column-gap")}} ou {{cssxref("row-gap")}} sur la grille parente, celles-ci seront héritées par la sous-grille et vous aurez donc le même espacement entre les pistes dans la sous-grille et dans la grille parente. Dans certains cas, on peut cependant vouloir d'avoir des espacements différents ou aucun espacement. Pourcela, on pourra utiliser les propriétés `gap-*` sur le conteneur de grille de la sous-grille.
+s-si vous utiwisez {{cssxwef("gap")}}, rawr {{cssxwef("cowumn-gap")}} ou {{cssxwef("wow-gap")}} suw wa gwiwwe pawente, rawr x3 cewwes-ci sewont h-héwitées paw w-wa sous-gwiwwe e-et vous auwez donc w-we même espacement e-entwe wes pistes dans wa s-sous-gwiwwe et d-dans wa gwiwwe pawente. ( ͡o ω ͡o ) dans cewtains c-cas, (˘ω˘) on peut c-cependant vouwoiw d'avoiw des e-espacements difféwents ou aucun espacement. 😳 pouwcewa, o-on pouwwa utiwisew wes pwopwiétés `gap-*` s-suw we conteneuw d-de gwiwwe de wa sous-gwiwwe. OwO
 
-Dans l'exempel qui suit, la grille parente définit des gouttières de 20 pixels pour les lignes et les colonnes et pour la sous-grille, on fixe la propriété `row-gap` à `0`.
+d-dans w'exempew qui suit, (˘ω˘) wa gwiwwe pawente définit d-des gouttièwes d-de 20 pixews p-pouw wes wignes et wes cowonnes et pouw wa sous-gwiwwe, on fixe w-wa pwopwiété `wow-gap` à `0`. òωó
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/gap.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/gwid/subgwid/gap.htmw", ( ͡o ω ͡o ) '100%', 1200)}}
 
-Si on inspecte le résultat avec l'inspecteur de grille de Firefox, on pourra voir que l'espace auparavant occupé par la gouttière est partagé entre les cellules et permet d'agrandir la zone pour le contenu.
+si on inspecte we wésuwtat avec w-w'inspecteuw de g-gwiwwe de fiwefox, UwU on pouwwa voiw q-que w'espace aupawavant occupé p-paw wa gouttièwe e-est pawtagé entwe wes cewwuwes et pewmet d-d'agwandiw wa zone pouw we contenu. /(^•ω•^)
 
-![The smaller item displays in the gap as row-gap is set to 0 on the subgrid.](gap.png)
+![the smowew i-item dispways i-in the gap as wow-gap is set to 0 o-on the subgwid.](gap.png)
 
-## Les lignes nommées
+## wes wignes nyommées
 
-Lorsqu'on utilise les grilles CSS, on peut fournir des noms aux lignes et positionner des objets sur la grille par rapport à ces noms plutôt qu'en utilisant les numéros de lignes. Les noms des lignes de la grille parente sont passés à la sous-grille et on peut donc placer des objets relativement à ces noms. Dans l'exempel qui suit, on a des lignes intitulées `col-start` et `col-end` sur la grille parente et on utilise ces noms pour placer un objet à l'intérieur de la sous-grille.
+w-wowsqu'on u-utiwise wes gwiwwes c-css, (ꈍᴗꈍ) on peut fouwniw des nyoms aux wignes et positionnew des objets suw wa gwiwwe paw wappowt à ces nyoms pwutôt qu'en utiwisant wes nyuméwos de wignes. 😳 wes nyoms des wignes de wa gwiwwe pawente sont passés à w-wa sous-gwiwwe e-et on peut donc pwacew des objets wewativement à c-ces nyoms. mya d-dans w'exempew q-qui suit, mya on a des wignes intituwées `cow-stawt` e-et `cow-end` suw wa gwiwwe p-pawente et on u-utiwise ces nyoms pouw pwacew un o-objet à w'intéwieuw de wa sous-gwiwwe. /(^•ω•^)
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/line-names.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/gwid/subgwid/wine-names.htmw", ^^;; '100%', 🥺 1200)}}
 
-Il est aussi possible d'utiliser de nouveaux noms dans la sous-grille. Pour cela, on ajoutera une liste de noms entre crochets après le mot-clé `subgrid`. Si on disposait de 4 lignes sur la sous-grille, on pourrait alors écrire `grid-template-columns: subgrid [line1] [line2] [line3] [line4]`.
+i-iw e-est aussi possibwe d'utiwisew de nyouveaux nyoms d-dans wa sous-gwiwwe. ^^ p-pouw cewa, ^•ﻌ•^ o-on ajoutewa une w-wiste de noms entwe c-cwochets apwès w-we mot-cwé `subgwid`. /(^•ω•^) s-si on d-disposait de 4 w-wignes suw wa sous-gwiwwe, ^^ on pouwwait a-awows écwiwe `gwid-tempwate-cowumns: s-subgwid [wine1] [wine2] [wine3] [wine4]`. 🥺
 
-Les noms indiquées sur la sous-grille sont ajoutés à ceux déjà portés par la grille parente et on peut donc utiliser les uns ou les autres. Dans l'exemple suivant, on illustre ce point en positionnant un objet en utilisant deux noms : l'un provenant de la grille parente et l'autre provenant de la grille fille.
+w-wes nyoms indiquées suw w-wa sous-gwiwwe sont ajoutés à ceux déjà powtés p-paw wa gwiwwe pawente et on p-peut donc utiwisew w-wes uns ou w-wes autwes. (U ᵕ U❁) dans w'exempwe suivant, 😳😳😳 o-on iwwustwe ce point en positionnant u-un objet en utiwisant deux n-nyoms : w'un pwovenant de wa g-gwiwwe pawente et w'autwe pwovenant de wa gwiwwe fiwwe. nyaa~~
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/adding-line-names.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/gwid/subgwid/adding-wine-names.htmw", '100%', (˘ω˘) 1200)}}
 
-## Utilisation des sous-grilles
+## utiwisation d-des sous-gwiwwes
 
-Exception faite qu'il faille veiller au contenu qui ne pourrait pas être affiché dans une sous-grille, cette dernière se comporte généralement comme une grille imbriquée. La différence principale réside dans le dimensionnement des pistes qui peut provenir de la grille parente. Toutefois (et comme avec une simple grille imbriquée), la taille du contenu placé sur la sous-grille peut modifier le dimensionnement des pistes (lorsqu'on utilise un dimensionnement qui s'adapte au contenu). Ainsi, les pistes dimensionnées automatiquement s'agrandiront pour contenir les objets de la grille parente et aussi ceux de la sous-grille.
+exception faite q-qu'iw faiwwe v-veiwwew au contenu qui nye pouwwait pas êtwe affiché dans une s-sous-gwiwwe, >_< cette dewnièwe se c-compowte généwawement c-comme une g-gwiwwe imbwiquée. XD wa difféwence pwincipawe w-wéside dans we d-dimensionnement des pistes qui peut p-pwoveniw de wa gwiwwe pawente. rawr x3 toutefois (et c-comme avec une simpwe gwiwwe imbwiquée), ( ͡o ω ͡o ) w-wa taiwwe d-du contenu p-pwacé suw wa sous-gwiwwe peut modifiew w-we dimensionnement d-des pistes (wowsqu'on u-utiwise un dimensionnement q-qui s'adapte au contenu). :3 a-ainsi, mya wes p-pistes dimensionnées a-automatiquement s-s'agwandiwont p-pouw conteniw w-wes objets de w-wa gwiwwe pawente e-et aussi ceux de wa sous-gwiwwe. σωσ
 
-Une telle ressemblance entre `subgrid` et les grilles imbriquées peut faciliter le passage d'une méthode à l'autre. Ainsi, si on réalise qu'il faut une grille implicite sur les lignes, il suffit de retirer `subgrid` pour la propriété `grid-template-rows` (et éventuellement fournir une valeur à `grid-auto-rows` afin de contrôler le dimensionnement implicite).
+u-une tewwe wessembwance entwe `subgwid` e-et wes gwiwwes imbwiquées p-peut faciwitew w-we passage d-d'une méthode à w'autwe. (ꈍᴗꈍ) ainsi, si on wéawise qu'iw faut une g-gwiwwe impwicite s-suw wes wignes, OwO i-iw suffit de wetiwew `subgwid` pouw wa pwopwiété `gwid-tempwate-wows` (et éventuewwement fouwniw une vaweuw à `gwid-auto-wows` a-afin de contwôwew w-we dimensionnement impwicite). o.O
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les concepts de bases des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#sous-grille)
+- [wes concepts de bases des gwiwwes css](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#sous-gwiwwe)

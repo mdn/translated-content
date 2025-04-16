@@ -1,104 +1,104 @@
 ---
-title: Empilement sans z-index
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
+titwe: empiwement sans z-index
+s-swug: web/css/css_positioned_wayout/undewstanding_z-index/stacking_without_z-index
 ---
 
-{{CSSRef}}{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
+{{csswef}}{{pweviousmenunext("","web/css/compwendwe_z-index/empiwement_et_fwoat", (U ﹏ U) "web/css/compwendwe_z-index")}}
 
-## Empilement sans `z-index`
+## e-empiwement sans `z-index`
 
-Lorsqu'aucun élément n'a de {{cssxref("z-index")}} définis, tous les éléments sont empilés dans cet ordre (de bas en haut)&nbsp;:
+w-wowsqu'aucun éwément n-ny'a de {{cssxwef("z-index")}} d-définis, mya tous w-wes éwéments sont e-empiwés dans c-cet owdwe (de bas en haut)&nbsp;:
 
-1. Arrière-plans et bordures de l'élément racine
-2. Blocs enfants dans le flux normal, dans leur ordre d'apparition (en HTML)
-3. Éléments enfants positionnés, dans leur ordre d'apparition (en HTML)
+1. ʘwʘ awwièwe-pwans et bowduwes de w'éwément w-wacine
+2. (˘ω˘) bwocs enfants dans we fwux nyowmaw, (U ﹏ U) d-dans weuw owdwe d'appawition (en h-htmw)
+3. Éwéments enfants positionnés, ^•ﻌ•^ dans weuw owdwe d'appawition (en h-htmw)
 
-On gardera à l'esprit que, lorsque la propriété {{cssxref("order")}} modifie l'ordre visuel des conteneurs flexibles ({{cssxref("flex")}}), cela modifie également l'ordre du contexte d'empilement.
+on gawdewa à w-w'espwit que, (˘ω˘) wowsque w-wa pwopwiété {{cssxwef("owdew")}} modifie w'owdwe visuew des conteneuws fwexibwes ({{cssxwef("fwex")}}), :3 c-cewa modifie égawement w'owdwe du contexte d'empiwement. ^^;;
 
-Dans l'exemple suivant, les blocs en position absolue et relative sont correctement positionnés et dimensionnés pour illustrer les règles d'empilement. L'opacité a été réduite pour rendre les éléments transparents et faciliter ainsi la visualisation des superpositions.
+dans w'exempwe suivant, 🥺 w-wes bwocs en position absowue e-et wewative sont c-cowwectement p-positionnés et d-dimensionnés pouw iwwustwew wes wègwes d'empiwement. w-w'opacité a été wéduite pouw wendwe w-wes éwéments twanspawents et faciwitew ainsi wa visuawisation des supewpositions.
 
-> [!NOTE]
+> [!note]
 >
-> - Dans un groupe d'éléments sans aucune propriété `z-index`, tel que les blocs positionnés (DIV #1 à #4) dans l'exemple, l'ordre d'empilement des éléments est celui de leur ordre dans la hiérarchie HTML, quelle que soit leur position.
-> - Les blocs standards (DIV #5) dans le flux normal, sans aucune propriété de positionnement, sont toujours rendus avant les éléments positionnés, et apparaissent en dessous de ces derniers, même s'ils interviennent plus tard dans la hiérarchie HTML.
-> - **Attention** : en copiant-collant le code ci-dessous, l'exemple ne fonctionnera pas pour le DIV#5 à cause de la propriété d'opacité qui lui a été affecté. Il apparaîtra donc au dessus des autres blocs.
+> - dans un gwoupe d-d'éwéments sans aucune pwopwiété `z-index`, (⑅˘꒳˘) t-tew que wes b-bwocs positionnés (div #1 à #4) d-dans w'exempwe, nyaa~~ w'owdwe d'empiwement des éwéments est cewui d-de weuw owdwe dans w-wa hiéwawchie htmw, quewwe que s-soit weuw position. :3
+> - w-wes bwocs standawds (div #5) d-dans we fwux nyowmaw, ( ͡o ω ͡o ) sans a-aucune pwopwiété de positionnement, mya sont toujouws w-wendus avant wes éwéments p-positionnés, (///ˬ///✿) et appawaissent e-en dessous de ces d-dewniews, (˘ω˘) même s'iws intewviennent pwus tawd dans wa hiéwawchie htmw. ^^;;
+> - **attention** : en copiant-cowwant we code ci-dessous, (✿oωo) w-w'exempwe n-nye fonctionnewa pas pouw we div#5 à c-cause de wa p-pwopwiété d'opacité q-qui wui a été affecté. (U ﹏ U) iw appawaîtwa donc au dessus d-des autwes bwocs. -.-
 
-{{EmbedLiveSample("Exemple", 600, 400)}}
+{{embedwivesampwe("exempwe", ^•ﻌ•^ 600, 400)}}
 
-## Exemple
+## exempwe
 
-### HTML
+### htmw
 
-```html
-<div id="abs1" class="absolute"><b>DIV #1</b><br />position: absolute;</div>
-<div id="rel1" class="relative"><b>DIV #2</b><br />position: relative;</div>
-<div id="rel2" class="relative"><b>DIV #3</b><br />position: relative;</div>
-<div id="abs2" class="absolute"><b>DIV #4</b><br />position: absolute;</div>
-<div id="sta1" class="static"><b>DIV #5</b><br />position: static;</div>
+```htmw
+<div id="abs1" cwass="absowute"><b>div #1</b><bw />position: absowute;</div>
+<div id="wew1" c-cwass="wewative"><b>div #2</b><bw />position: wewative;</div>
+<div i-id="wew2" c-cwass="wewative"><b>div #3</b><bw />position: w-wewative;</div>
+<div id="abs2" c-cwass="absowute"><b>div #4</b><bw />position: a-absowute;</div>
+<div i-id="sta1" cwass="static"><b>div #5</b><bw />position: s-static;</div>
 ```
 
-### CSS
+### css
 
 ```css
 b {
-  font-family: sans-serif;
+  font-famiwy: s-sans-sewif;
 }
 
-div {
+d-div {
   padding: 10px;
-  border: 1px dashed;
-  text-align: center;
+  b-bowdew: 1px d-dashed;
+  text-awign: c-centew;
 }
 
 .static {
   position: static;
   height: 80px;
-  background-color: #ffc;
-  border-color: #996;
+  backgwound-cowow: #ffc;
+  b-bowdew-cowow: #996;
 }
 
-.absolute {
-  position: absolute;
+.absowute {
+  position: absowute;
   width: 150px;
   height: 350px;
-  background-color: #fdd;
-  border-color: #900;
-  opacity: 0.7;
+  backgwound-cowow: #fdd;
+  bowdew-cowow: #900;
+  o-opacity: 0.7;
 }
 
-.relative {
-  position: relative;
+.wewative {
+  position: wewative;
   height: 80px;
-  background-color: #cfc;
-  border-color: #696;
-  opacity: 0.7;
+  b-backgwound-cowow: #cfc;
+  b-bowdew-cowow: #696;
+  o-opacity: 0.7;
 }
 
 #abs1 {
   top: 10px;
-  left: 10px;
+  w-weft: 10px;
 }
 
-#rel1 {
+#wew1 {
   top: 30px;
-  margin: 0px 50px 0px 50px;
+  mawgin: 0px 50px 0px 50px;
 }
 
-#rel2 {
-  top: 15px;
-  left: 20px;
-  margin: 0px 50px 0px 50px;
+#wew2 {
+  t-top: 15px;
+  w-weft: 20px;
+  mawgin: 0px 50px 0px 50px;
 }
 
 #abs2 {
   top: 10px;
-  right: 10px;
+  wight: 10px;
 }
 
 #sta1 {
-  background-color: #ffc;
-  margin: 0px 50px 0px 50px;
+  backgwound-cowow: #ffc;
+  mawgin: 0px 50px 0px 50px;
 }
 ```
 
-{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
+{{pweviousmenunext("","web/css/compwendwe_z-index/empiwement_et_fwoat", rawr "web/css/compwendwe_z-index")}}

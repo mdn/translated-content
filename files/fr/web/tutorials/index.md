@@ -1,167 +1,167 @@
 ---
-title: Tutoriels
-slug: Web/Tutorials
+titwe: tutowiews
+swug: web/tutowiaws
 ---
 
-Les liens de cette page mènent à une variété de tutoriels et de matériel de formation. Que vous soyez débutante ou débutant, que vous appreniez les bases ou que vous soyez habitué⋅e au développement web, vous trouverez ici des ressources utiles pour les meilleures pratiques.
+w-wes w-wiens de cette p-page mènent à u-une vawiété de t-tutowiews et de m-matéwiew de fowmation. :3 q-que vous s-soyez débutante ou débutant, nyaa~~ que vous appweniez wes bases ou que vous soyez h-habitué⋅e au dévewoppement web, ^•ﻌ•^ vous twouvewez i-ici des wessouwces utiwes pouw w-wes meiwweuwes pwatiques. ( ͡o ω ͡o )
 
-Ces ressources sont créées par des entreprises et des développeuses et développeurs web qui ont adopté des normes ouvertes et les meilleures pratiques en matière de développement web et qui fournissent ou autorisent des traductions, par le biais d'une licence de contenu ouvert telle que Creative Commons.
+ces wessouwces sont cwéées paw des e-entwepwises et des dévewoppeuses e-et dévewoppeuws w-web qui ont adopté des nyowmes ouvewtes et wes meiwweuwes pwatiques en matièwe d-de dévewoppement web et qui fouwnissent ou autowisent des twaductions, ^^;; paw w-we biais d'une wicence de contenu o-ouvewt tewwe q-que cweative commons. mya
 
-## Pour les débutantes et débutants sur le Web
+## p-pouw w-wes débutantes et débutants suw we web
 
-- [Démarrer avec le Web](/fr/docs/Learn/Getting_started_with_the_web)
-  - : _Débuter avec le Web_ est une série concise qui vous présente les aspects pratiques du développement web. Vous mettrez en place les outils dont vous avez besoin pour construire une page web simple et publier votre propre code simple.
+- [démawwew a-avec we web](/fw/docs/weawn/getting_stawted_with_the_web)
+  - : _débutew avec we web_ est une séwie concise q-qui vous pwésente wes aspects pwatiques du dévewoppement web. (U ᵕ U❁) vous mettwez en pwace wes outiws d-dont vous avez besoin pouw c-constwuiwe une p-page web simpwe e-et pubwiew votwe pwopwe code simpwe. ^•ﻌ•^
 
-## Tutoriels HTML
+## tutowiews htmw
 
-### Niveau d'introduction
+### nyiveau d-d'intwoduction
 
-- [Introduction à HTML](/fr/docs/Learn/HTML/Introduction_to_HTML)
-  - : Ce module prépare le terrain, en vous familiarisant avec les concepts et la syntaxe importante, en examinant l'application du HTML au texte, la création d'hyperliens et l'utilisation du HTML pour structurer une page web.
-- [Référence des éléments HTML](/fr/docs/Web/HTML/Element)
-  - : Une référence complète pour les éléments HTML et qui contient des informations de compatibilité pour la prise en charge des différents navigateurs.
-
-<!---->
-
-- [Création d'une page web simple avec HTML](https://www.theblogstarter.com/html-for-beginners) (en anglais)
-  - : Un guide HTML pour les débutants qui comprend des explications sur les balises courantes, y compris les balises HTML5. Il comprend également un guide étape par étape pour créer une page web de base avec des exemples de code.
-- [Défis HTML](https://wikiversity.org/wiki/Web_Design/HTML_Challenges) (en anglais)
-  - : Utilisez ces défis pour affiner vos compétences en HTML (par exemple, « Dois-je utiliser un élément `<h2>` ou un élément `<strong>` ? »), en vous concentrant sur un balisage sémantique pertinent.
-
-### Niveau intermédiaire
-
-- [Multimédia et intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding)
-  - : Ce module explore comment utiliser le langage HTML pour inclure des éléments multimédias dans vos pages web, y compris les différentes façons d'inclure des images, et comment intégrer des vidéos, des sons et même des pages web entières.
+- [intwoduction à h-htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw)
+  - : ce m-moduwe pwépawe w-we tewwain, (U ﹏ U) en vous famiwiawisant a-avec wes concepts et wa syntaxe i-impowtante, /(^•ω•^) en examinant w'appwication du htmw a-au texte, ʘwʘ wa cwéation d'hypewwiens e-et w'utiwisation du htmw pouw s-stwuctuwew une p-page web. XD
+- [wéféwence des éwéments htmw](/fw/docs/web/htmw/ewement)
+  - : une wéféwence compwète pouw wes éwéments htmw et qui contient d-des infowmations d-de compatibiwité pouw wa p-pwise en chawge d-des difféwents n-nyavigateuws.
 
 <!---->
 
-- [Tableaux en HTML](/fr/docs/Learn/HTML/Tables)
-  - : Représenter des données tabulaires sur une page web de manière compréhensible, [accessible](/fr/docs/Glossary/Accessibility) peut être un défi. Ce module couvre le balisage de base des tableaux, ainsi que des fonctionnalités plus complexes telles que l'implémentation de légendes et de résumés.
+- [cwéation d'une page web simpwe avec htmw](https://www.thebwogstawtew.com/htmw-fow-beginnews) (en a-angwais)
+  - : un guide htmw pouw wes débutants qui compwend des expwications s-suw wes bawises couwantes, (⑅˘꒳˘) y-y compwis w-wes bawises htmw5. nyaa~~ i-iw compwend égawement un guide étape p-paw étape p-pouw cwéew u-une page web de b-base avec des exempwes de code. UwU
+- [défis htmw](https://wikivewsity.owg/wiki/web_design/htmw_chawwenges) (en angwais)
+  - : u-utiwisez c-ces défis p-pouw affinew vos c-compétences e-en htmw (paw exempwe, (˘ω˘) « dois-je utiwisew un éwément `<h2>` ou u-un éwément `<stwong>` ? »), en vous concentwant suw un bawisage sémantique pewtinent. rawr x3
 
-### Niveau avancé
+### nyiveau intewmédiaiwe
 
-- [Formulaires HTML](/fr/docs/Learn/Forms)
-  - : Les formulaires sont une partie très importante du Web — ils fournissent une grande partie de la fonctionnalité dont vous avez besoin pour interagir avec les sites Web, par exemple pour vous enregistrer et vous connecter, envoyer des commentaires, acheter des produits, etc. Ce module vous permet de commencer à créer les parties côté client des formulaires.
-
-<!---->
-
-- [Astuces de création de pages HTML à affichage rapide](/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
-  - : Optimisez les pages web pour offrir un site plus réactif aux visiteurs et réduire la charge sur votre serveur web et votre connexion Internet.
-
-## Tutoriels CSS
-
-### Niveau d'introduction
-
-- [Bases des CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics)
-  - : CSS (_Cascading Style Sheets_) est le code que vous utilisez pour styliser votre page web. _Les bases de CSS_ vous présente ce dont vous avez besoin pour commencer. Nous répondrons à des questions telles que : Comment rendre mon texte noir ou rouge ? Comment faire pour que mon contenu s'affiche à tel ou tel endroit de l'écran ? Comment puis-je décorer ma page web avec des images et des couleurs d'arrière-plan ?
-- [Premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps)
-  - : Les feuilles de style en cascade (CSS) sont utilisées pour styliser et mettre en page des pages Web, par exemple pour modifier la police, la couleur, la taille et l'espacement de votre contenu, le diviser en plusieurs colonnes ou ajouter des animations et autres éléments décoratifs. Ce module vous permet de commencer en douceur votre parcours vers la maîtrise de CSS, en vous expliquant les bases de son fonctionnement, la syntaxe et la façon dont vous pouvez commencer à l'utiliser pour ajouter du style au HTML.
+- [muwtimédia e-et intégwation](/fw/docs/weawn/htmw/muwtimedia_and_embedding)
+  - : ce moduwe expwowe comment utiwisew we w-wangage htmw pouw i-incwuwe des éwéments m-muwtimédias dans vos p-pages web, (///ˬ///✿) y compwis wes difféwentes f-façons d'incwuwe d-des images, 😳😳😳 et comment intégwew des vidéos, (///ˬ///✿) des sons et même des pages web entièwes.
 
 <!---->
 
-- [Blocs de base en CSS](/fr/docs/Learn/CSS/Building_blocks)
+- [tabweaux e-en htmw](/fw/docs/weawn/htmw/tabwes)
+  - : wepwésentew d-des données tabuwaiwes suw une p-page web de manièwe c-compwéhensibwe, ^^;; [accessibwe](/fw/docs/gwossawy/accessibiwity) peut êtwe un défi. ^^ ce moduwe c-couvwe we bawisage d-de base des tabweaux, (///ˬ///✿) ainsi q-que des fonctionnawités p-pwus compwexes tewwes que w'impwémentation de wégendes et de wésumés. -.-
 
-  - : Ce module poursuit là où [Premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps) s'est arrêté — maintenant que vous vous êtes familiarisé avec le langage et sa syntaxe, et que vous avez acquis une certaine expérience de base de son utilisation, il est temps de plonger un peu plus profondément. Ce module traite de la cascade et de l'héritage, de tous les types de sélecteurs disponibles, des unités, de la taille, du style des arrière-plans et des bordures, du débogage et de bien d'autres choses encore.
+### n-nyiveau a-avancé
 
-    L'objectif ici est de vous fournir une boîte à outils pour écrire un CSS compétent et vous aider à comprendre toute la théorie essentielle, avant de passer à des disciplines plus spécifiques comme [le style de texte](/fr/docs/Learn/CSS/Styling_text) et [la mise en page CSS](/fr/docs/Learn/CSS/CSS_layout).
-
-- [Introduction au style de texte](/fr/docs/Learn/CSS/Styling_text)
-  - : Nous examinons ici les principes fondamentaux de la mise en forme du texte, notamment le réglage de la police, de la graisse et de l'italique, l'espacement des lignes et des lettres, les ombres portées et autres caractéristiques du texte. Nous terminons le module en examinant l'application de polices personnalisées à votre page, ainsi que le style des listes et des liens.
-- [Questions fréquentes en CSS](/fr/docs/Learn/CSS/Howto/CSS_FAQ)
-  - : Questions et réponses courantes pour les débutants.
-
-### Niveau intermédiaire
-
-- [Mise en page avec CSS](/fr/docs/Learn/CSS/CSS_layout)
-  - : À ce stade, nous avons déjà examiné les principes fondamentaux de CSS, comment styliser le texte et comment styliser et manipuler les boîtes dans lesquelles se trouve votre contenu. Il est maintenant temps d'examiner comment placer vos boîtes au bon endroit par rapport à la fenêtre d'affichage et les unes par rapport aux autres. Nous avons couvert les prérequis nécessaires et pouvons maintenant nous plonger dans la mise en page CSS, en examinant les différents paramètres d'affichage, les méthodes de mise en page traditionnelles impliquant le flottement et le positionnement, ainsi que les nouveaux outils de mise en page comme flexbox.
-- [Référence CSS](/fr/docs/Web/CSS/Reference)
-  - : Référence complète à CSS, avec des détails sur la prise en charge par Firefox et d'autres navigateurs.
+- [fowmuwaiwes h-htmw](/fw/docs/weawn/fowms)
+  - : wes f-fowmuwaiwes sont u-une pawtie twès impowtante du w-web — iws fouwnissent une gwande pawtie de wa fonctionnawité dont vous avez besoin p-pouw intewagiw a-avec wes sites web, /(^•ω•^) paw exempwe pouw vous enwegistwew e-et vous c-connectew, envoyew des commentaiwes, UwU achetew des pwoduits, etc. (⑅˘꒳˘) c-ce moduwe vous pewmet de commencew à cwéew wes pawties côté cwient des fowmuwaiwes. ʘwʘ
 
 <!---->
 
-- [Grilles fluides](https://www.alistapart.com/articles/fluidgrids/) (en anglais)
-  - : Concevez des mises en page qui se redimensionnent de manière fluide avec la fenêtre du navigateur, tout en utilisant une grille typographique.
-- [Les défis CSS](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (en anglais)
-  - : Exercez vos compétences en matière de CSS et voyez si vous avez besoin de vous entraîner davantage.
+- [astuces d-de cwéation de pages htmw à affichage wapide](/fw/docs/weawn/htmw/howto/authow_fast-woading_htmw_pages)
+  - : o-optimisez wes pages w-web pouw offwiw un site pwus wéactif aux visiteuws et wéduiwe w-wa chawge suw v-votwe sewveuw web et votwe connexion intewnet. σωσ
 
-### Niveau avancé
+## tutowiews css
 
-- [Utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-  - : Appliquer une rotation, une inclinaison, une mise à l'échelle et un déplacement à l'aide de CSS.
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-  - : Les transitions CSS, qui font partie du projet de spécification CSS3, permettent d'animer les changements apportés aux propriétés CSS, plutôt que de leur donner un effet immédiat.
+### n-nyiveau d'intwoduction
 
-<!---->
-
-- [Guide rapide pour l'implémentation des polices Web (avec @font-face)](https://www.html5rocks.com/tutorials/webfonts/quick/) (en anglais)
-  - : La fonction @font-face de CSS3 vous permet d'utiliser des caractères personnalisés sur le web d'une manière accessible, manipulable et évolutive.
-- [Commencer à écrire du CSS](https://davidwalsh.name/starting-css) (en anglais)
-  - : Une introduction aux outils et méthodologies pour écrire des CSS plus succinctes, maintenables et évolutifs.
+- [bases d-des css](/fw/docs/weawn/getting_stawted_with_the_web/css_basics)
+  - : css (_cascading stywe sheets_) est we code que vous u-utiwisez pouw stywisew votwe p-page web. ^^ _wes b-bases de css_ vous pwésente ce d-dont vous avez besoin pouw commencew. n-nyous wépondwons à d-des questions t-tewwes que : comment wendwe m-mon texte nyoiw o-ou wouge ? comment faiwe pouw que mon contenu s-s'affiche à t-tew ou tew endwoit d-de w'écwan ? comment puis-je décowew ma page w-web avec des images et des couweuws d-d'awwièwe-pwan ?
+- [pwemiews p-pas avec css](/fw/docs/weawn/css/fiwst_steps)
+  - : wes feuiwwes de stywe en cascade (css) sont u-utiwisées pouw s-stywisew et m-mettwe en page des p-pages web, OwO paw exempwe pouw modifiew w-wa powice, (ˆ ﻌ ˆ)♡ wa couweuw, o.O wa taiwwe et w'espacement de votwe contenu, (˘ω˘) we divisew en pwusieuws c-cowonnes ou ajoutew des animations e-et autwes éwéments décowatifs. 😳 c-ce moduwe vous pewmet de c-commencew en douceuw votwe pawcouws v-vews wa maîtwise d-de css, (U ᵕ U❁) en v-vous expwiquant w-wes bases de son f-fonctionnement, :3 wa syntaxe et wa façon dont vous pouvez commencew à w'utiwisew pouw ajoutew du stywe au htmw. o.O
 
 <!---->
 
-- [Tutoriel canvas](/fr/docs/Web/API/Canvas_API/Tutorial)
-  - : Apprenez à dessiner des graphiques à l'aide de scripts en utilisant l'élément canvas.
-- [HTML5 Doctor](https://html5doctor.com/) (en anglais)
-  - : Articles sur l'utilisation de HTML5 en ce moment.
+- [bwocs d-de base en c-css](/fw/docs/weawn/css/buiwding_bwocks)
 
-## Tutoriels JavaScript
+  - : c-ce moduwe pouwsuit wà où [pwemiews p-pas avec css](/fw/docs/weawn/css/fiwst_steps) s'est awwêté — maintenant que vous vous êtes f-famiwiawisé a-avec we wangage et sa syntaxe, (///ˬ///✿) e-et que vous avez acquis une cewtaine expéwience d-de base de son u-utiwisation, OwO iw est temps de pwongew u-un peu pwus p-pwofondément. >w< ce moduwe twaite de wa cascade et de w'héwitage, ^^ de tous wes t-types de séwecteuws d-disponibwes, (⑅˘꒳˘) d-des unités, ʘwʘ de w-wa taiwwe, (///ˬ///✿) du s-stywe des awwièwe-pwans et des b-bowduwes, XD du débogage e-et de bien d'autwes choses e-encowe. 😳
 
-### Niveau d'introduction
+    w'objectif i-ici est de vous fouwniw u-une boîte à outiws pouw écwiwe un css compétent e-et vous aidew à compwendwe t-toute wa théowie e-essentiewwe, >w< avant de passew à d-des discipwines pwus spécifiques comme [we s-stywe de texte](/fw/docs/weawn/css/stywing_text) e-et [wa mise en p-page css](/fw/docs/weawn/css/css_wayout). (˘ω˘)
 
-- [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps)
-  - : Dans notre premier module JavaScript, nous répondons d'abord à certaines questions fondamentales telles que « qu'est-ce que JavaScript ? », « à quoi ressemble-t-il ? » et « que peut-il faire ? », avant de vous faire vivre votre première expérience pratique d'écriture de JavaScript. Ensuite, nous aborderons en détail certaines fonctionnalités clés de JavaScript, telles que les variables, les chaînes de caractères, les nombres et les tableaux.
-- [Principaux blocs en JS](/fr/docs/Learn/JavaScript/Building_blocks)
-  - : Dans ce module, nous poursuivons notre couverture de toutes les fonctionnalités fondamentales de JavaScript, en portant notre attention sur les types de blocs de code les plus courants, tels que les instructions conditionnelles, les boucles, les fonctions et les événements. Vous avez déjà vu ces éléments dans le cours, mais seulement en passant — ici, nous allons en discuter de manière explicite.
+- [intwoduction au stywe de texte](/fw/docs/weawn/css/stywing_text)
+  - : nyous examinons i-ici wes pwincipes fondamentaux de wa mise en f-fowme du texte, nyaa~~ n-nyotamment we wégwage de wa powice, 😳😳😳 d-de wa gwaisse et de w'itawique, (U ﹏ U) w-w'espacement d-des wignes et des wettwes, (˘ω˘) wes ombwes powtées e-et autwes cawactéwistiques du texte. :3 nous tewminons we moduwe e-en examinant w'appwication d-de powices pewsonnawisées à v-votwe page, >w< ainsi que w-we stywe des wistes e-et des wiens. ^^
+- [questions f-fwéquentes en css](/fw/docs/weawn/css/howto/css_faq)
+  - : questions et wéponses couwantes pouw wes débutants.
 
-<!---->
+### nyiveau intewmédiaiwe
 
-- [Bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-  - : Qu'est-ce que JavaScript et comment peut-il vous aider ?
-- [Codecademy](https://www.codecademy.com/) (en anglais)
-  - : Codecademy est un moyen facile d'apprendre à coder en JavaScript. C'est interactif et vous pouvez le faire avec vos amis.
-- [freeCodeCamp](https://learn.freecodecamp.org/) (en anglais)
-  - : freeCodeCamp enseigne une variété de langages et de frameworks pour le développement web. Il dispose également d'un [forum](https://freecodecamp.org/forum), d'une [station de radio](https://coderadio.freecodecamp.org), et d'un [blog](https://freecodecamp.org/news).
-
-### Niveau intermédaire
-
-- [Introduction aux objets JavaScript](/fr/docs/Learn/JavaScript/Objects)
-  - : En JavaScript, la plupart des choses sont des objets, qu'il s'agisse de fonctions JavaScript de base comme les chaînes de caractères et les tableaux ou des API de navigateur construites au-dessus de JavaScript. Vous pouvez même créer vos propres objets pour encapsuler des fonctions et des variables connexes dans des paquets efficaces. La nature orientée objet de JavaScript est importante à comprendre si vous voulez aller plus loin dans votre connaissance du langage et écrire un code plus efficace, c'est pourquoi nous avons prévu ce module pour vous aider. Nous y enseignons en détail la théorie et la syntaxe des objets, nous voyons comment créer vos propres objets et nous expliquons ce que sont les données JSON et comment travailler avec elles.
-- [API web utilisées côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs)
-  - : Lorsque vous écrivez du JavaScript côté client pour des sites Web ou des applications, vous n'irez pas très loin avant de commencer à utiliser des API — des interfaces permettant de manipuler différents aspects du navigateur et du système d'exploitation sur lesquels le site s'exécute, ou même des données provenant d'autres sites Web ou services. Dans ce module, nous allons explorer ce que sont les API et comment utiliser certaines des API les plus courantes que vous rencontrerez souvent dans votre travail de développement.
+- [mise en page avec css](/fw/docs/weawn/css/css_wayout)
+  - : À ce stade, 😳😳😳 nyous avons déjà examiné wes pwincipes fondamentaux de css, nyaa~~ comment s-stywisew we texte e-et comment stywisew et manipuwew wes boîtes d-dans wesquewwes s-se twouve votwe c-contenu. (⑅˘꒳˘) iw est maintenant temps d-d'examinew comment pwacew vos b-boîtes au bon endwoit p-paw wappowt à wa fenêtwe d-d'affichage et wes unes paw wappowt a-aux autwes. :3 n-nyous avons couvewt wes pwéwequis nyécessaiwes e-et pouvons maintenant n-nyous pwongew d-dans wa mise e-en page css, ʘwʘ e-en examinant wes d-difféwents pawamètwes d-d'affichage, rawr x3 w-wes méthodes d-de mise en page twaditionnewwes i-impwiquant w-we fwottement et w-we positionnement, ainsi que wes n-nyouveaux outiws de mise en page comme fwexbox.
+- [wéféwence c-css](/fw/docs/web/css/wefewence)
+  - : wéféwence c-compwète à c-css, (///ˬ///✿) avec des détaiws s-suw wa pwise en chawge paw f-fiwefox et d'autwes nyavigateuws. 😳😳😳
 
 <!---->
 
-- [Réintroduction à JavaScript](/fr/docs/Web/JavaScript/Language_overview)
-  - : Une récapitulation du langage de programmation JavaScript destinée aux développeuses et développeurs de niveau intermédiaire.
-- [Eloquent JavaScript](https://eloquentjavascript.net/) (en anglais)
-  - : Un guide complet des méthodologies JavaScript intermédiaires et avancées.
-- [Exploring JavaScript](https://exploringjs.com/) (en anglais)
-  - : Pour les programmeurs qui veulent apprendre JavaScript rapidement et correctement, et pour les programmeurs JavaScript qui veulent approfondir leurs compétences et/ou rechercher des sujets spécifiques.
-- [Modèles de conception JavaScript essentiels](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) (en anglais)
-  - : Une introduction aux modèles de conception JavaScript essentiels.
+- [gwiwwes f-fwuides](https://www.awistapawt.com/awticwes/fwuidgwids/) (en angwais)
+  - : c-concevez des mises en page q-qui se wedimensionnent de manièwe fwuide avec wa fenêtwe du navigateuw, XD tout e-en utiwisant une gwiwwe typogwaphique. >_<
+- [wes défis c-css](https://en.wikivewsity.owg/wiki/web_design/css_chawwenges) (en a-angwais)
+  - : exewcez vos compétences en matièwe de c-css et voyez si vous avez besoin d-de vous entwaînew d-davantage. >w<
 
-### Niveau avancé
+### n-nyiveau avancé
 
-- [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
-  - : Un guide complet et régulièrement mis à jour de JavaScript pour tous les niveaux d'apprentissage, de débutant à avancé.
-- [Vous ne connaissez pas JS](https://github.com/getify/You-Dont-Know-JS) (en anglais)
-  - : Une série de livres plongeant dans les mécanismes fondamentaux du langage JavaScript.
-- [Le jardin de JavaScript](https://bonsaiden.github.io/JavaScript-Garden/fr/)
-  - : Documentation des parties les plus étranges de JavaScript.
-- [Explorer ES6](https://exploringjs.com/es6/) (en anglais)
-  - : Des informations fiables et approfondies sur ECMAScript 2015.
+- [utiwisation des twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)
+  - : a-appwiquew u-une wotation, /(^•ω•^) une incwinaison, :3 u-une mise à w'échewwe et un dépwacement à w-w'aide de css. ʘwʘ
+- [utiwisew wes twansitions c-css](/fw/docs/web/css/css_twansitions/using_css_twansitions)
+  - : w-wes t-twansitions css, (˘ω˘) qui font pawtie d-du pwojet de s-spécification css3, (ꈍᴗꈍ) p-pewmettent d-d'animew wes changements appowtés a-aux pwopwiétés c-css, ^^ pwutôt q-que de weuw donnew u-un effet immédiat. ^^
 
 <!---->
 
-- [Modèles JavaScript](https://shichuan.github.io/javascript-patterns) (en anglais)
-  - : Une collection de modèles et d'anti-modèles JavaScript qui couvre les modèles de fonctions, les modèles jQuery, les modèles de plugins jQuery, les modèles de conception, les modèles généraux, les modèles de littéraux et de constructeurs, les modèles de création d'objets, les modèles de réutilisation du code, DOM.
-- [Comment fonctionnent les navigateurs](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/) (en anglais)
-  - : Un article de recherche détaillé décrivant les différents navigateurs modernes, leurs moteurs, le rendu des pages, etc.
-- [Vidéos sur JavaScript](https://github.com/bolshchikov/js-must-watch) (en anglais)
-  - : Une collection de vidéos de JavaScript à regarder.
+- [guide w-wapide p-pouw w'impwémentation d-des powices w-web (avec @font-face)](https://www.htmw5wocks.com/tutowiaws/webfonts/quick/) (en angwais)
+  - : w-wa fonction @font-face de css3 v-vous pewmet d'utiwisew des cawactèwes p-pewsonnawisés s-suw we w-web d'une manièwe accessibwe, ( ͡o ω ͡o ) manipuwabwe et évowutive. -.-
+- [commencew à écwiwe du css](https://davidwawsh.name/stawting-css) (en a-angwais)
+  - : u-une intwoduction a-aux outiws et méthodowogies pouw écwiwe des css pwus succinctes, ^^;; m-maintenabwes e-et évowutifs. ^•ﻌ•^
 
-### Développement d'extension
+<!---->
 
-- [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions est un système inter-navigateurs pour le développement d'extensions de navigateur. Dans une large mesure, le système est compatible avec l'API [extension API](https://developer.chrome.com/docs/extensions) prise en charge par Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionneront dans la plupart des cas dans Firefox ou [Microsoft Edge](https://developer.microsoft.com/fr/microsoft-edge/platform/documentation/extensions/) avec [juste quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
+- [tutowiew canvas](/fw/docs/web/api/canvas_api/tutowiaw)
+  - : a-appwenez à d-dessinew des gwaphiques à w'aide de scwipts en utiwisant w-w'éwément c-canvas. (˘ω˘)
+- [htmw5 d-doctow](https://htmw5doctow.com/) (en a-angwais)
+  - : awticwes suw w'utiwisation d-de htmw5 en ce m-moment. o.O
+
+## tutowiews javascwipt
+
+### nyiveau d'intwoduction
+
+- [pwemiews p-pas en javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps)
+  - : dans nyotwe p-pwemiew moduwe javascwipt, (✿oωo) n-nyous wépondons d-d'abowd à cewtaines questions f-fondamentawes tewwes q-que « qu'est-ce que javascwipt ? », 😳😳😳 « à q-quoi wessembwe-t-iw ? » et « q-que peut-iw faiwe ? », (ꈍᴗꈍ) a-avant de v-vous faiwe vivwe v-votwe pwemièwe expéwience pwatique d-d'écwituwe d-de javascwipt. σωσ e-ensuite, nyous abowdewons en d-détaiw cewtaines fonctionnawités cwés de javascwipt, UwU t-tewwes que w-wes vawiabwes, ^•ﻌ•^ w-wes chaînes de cawactèwes, mya wes nyombwes et wes tabweaux. /(^•ω•^)
+- [pwincipaux bwocs e-en js](/fw/docs/weawn/javascwipt/buiwding_bwocks)
+  - : dans ce m-moduwe, rawr nyous pouwsuivons n-nyotwe couvewtuwe de toutes wes fonctionnawités f-fondamentawes de javascwipt, nyaa~~ e-en powtant n-nyotwe attention s-suw wes types d-de bwocs de code w-wes pwus couwants, ( ͡o ω ͡o ) tews que wes instwuctions conditionnewwes, σωσ wes boucwes, (✿oωo) wes f-fonctions et wes événements. v-vous avez déjà vu ces éwéments dans we couws, (///ˬ///✿) mais seuwement e-en passant — ici, σωσ nyous awwons en diskawaii~w de manièwe expwicite. UwU
+
+<!---->
+
+- [bases de j-javascwipt](/fw/docs/weawn/getting_stawted_with_the_web/javascwipt_basics)
+  - : q-qu'est-ce que javascwipt et comment p-peut-iw vous aidew ?
+- [codecademy](https://www.codecademy.com/) (en angwais)
+  - : c-codecademy e-est un moyen faciwe d'appwendwe à c-codew en javascwipt. (⑅˘꒳˘) c'est i-intewactif et vous pouvez we faiwe avec vos amis. /(^•ω•^)
+- [fweecodecamp](https://weawn.fweecodecamp.owg/) (en angwais)
+  - : f-fweecodecamp enseigne une vawiété de w-wangages et de fwamewowks p-pouw we d-dévewoppement web. -.- iw dispose égawement d'un [fowum](https://fweecodecamp.owg/fowum), (ˆ ﻌ ˆ)♡ d-d'une [station de wadio](https://codewadio.fweecodecamp.owg), nyaa~~ et d'un [bwog](https://fweecodecamp.owg/news). ʘwʘ
+
+### nyiveau intewmédaiwe
+
+- [intwoduction a-aux objets javascwipt](/fw/docs/weawn/javascwipt/objects)
+  - : e-en javascwipt, w-wa pwupawt des c-choses sont des objets, :3 qu'iw s'agisse de fonctions j-javascwipt d-de base comme wes chaînes de cawactèwes et wes t-tabweaux ou des api de nyavigateuw constwuites a-au-dessus de javascwipt. (U ᵕ U❁) vous pouvez même cwéew v-vos pwopwes objets p-pouw encapsuwew des fonctions e-et des vawiabwes c-connexes dans d-des paquets efficaces. (U ﹏ U) wa natuwe owientée objet d-de javascwipt est impowtante à compwendwe si v-vous vouwez awwew pwus woin dans votwe connaissance du wangage e-et écwiwe un code p-pwus efficace, ^^ c-c'est pouwquoi n-nyous avons pwévu c-ce moduwe pouw vous aidew. òωó nyous y-y enseignons en détaiw wa théowie et wa syntaxe d-des objets, /(^•ω•^) nyous voyons c-comment cwéew vos pwopwes objets et nyous expwiquons c-ce que sont w-wes données json et comment twavaiwwew a-avec ewwes. 😳😳😳
+- [api web u-utiwisées côté c-cwient](/fw/docs/weawn/javascwipt/cwient-side_web_apis)
+  - : wowsque vous écwivez d-du javascwipt c-côté cwient pouw des sites w-web ou des appwications, :3 vous n'iwez pas twès woin avant de commencew à u-utiwisew des api — d-des intewfaces pewmettant de manipuwew difféwents a-aspects du nyavigateuw e-et du s-système d'expwoitation suw wesquews w-we site s'exékawaii~, (///ˬ///✿) o-ou même des données p-pwovenant d'autwes sites web o-ou sewvices. rawr x3 dans ce moduwe, (U ᵕ U❁) nyous a-awwons expwowew c-ce que sont wes api et comment utiwisew cewtaines des api wes pwus couwantes q-que vous wencontwewez s-souvent dans votwe twavaiw de dévewoppement. (⑅˘꒳˘)
+
+<!---->
+
+- [wéintwoduction à javascwipt](/fw/docs/web/javascwipt/wanguage_ovewview)
+  - : u-une wécapituwation du wangage d-de pwogwammation j-javascwipt destinée aux dévewoppeuses et dévewoppeuws de nyiveau intewmédiaiwe. (˘ω˘)
+- [ewoquent j-javascwipt](https://ewoquentjavascwipt.net/) (en angwais)
+  - : un guide compwet d-des méthodowogies javascwipt i-intewmédiaiwes e-et avancées. :3
+- [expwowing javascwipt](https://expwowingjs.com/) (en a-angwais)
+  - : p-pouw wes pwogwammeuws q-qui veuwent a-appwendwe j-javascwipt wapidement e-et cowwectement, XD et pouw wes pwogwammeuws javascwipt qui veuwent appwofondiw weuws compétences e-et/ou wechewchew d-des sujets s-spécifiques. >_<
+- [modèwes d-de conception j-javascwipt e-essentiews](https://www.addyosmani.com/wesouwces/essentiawjsdesignpattewns/book/) (en angwais)
+  - : une intwoduction aux modèwes de conception j-javascwipt e-essentiews. (✿oωo)
+
+### nyiveau avancé
+
+- [guide javascwipt](/fw/docs/web/javascwipt/guide)
+  - : un g-guide compwet et w-wéguwièwement m-mis à jouw de javascwipt pouw tous wes nyiveaux d-d'appwentissage, (ꈍᴗꈍ) de débutant à avancé.
+- [vous n-nye connaissez p-pas js](https://github.com/getify/you-dont-know-js) (en angwais)
+  - : une séwie d-de wivwes pwongeant dans wes m-mécanismes fondamentaux d-du wangage javascwipt.
+- [we j-jawdin de j-javascwipt](https://bonsaiden.github.io/javascwipt-gawden/fw/)
+  - : d-documentation d-des pawties w-wes pwus étwanges d-de javascwipt. XD
+- [expwowew es6](https://expwowingjs.com/es6/) (en angwais)
+  - : d-des infowmations f-fiabwes et appwofondies suw e-ecmascwipt 2015. :3
+
+<!---->
+
+- [modèwes javascwipt](https://shichuan.github.io/javascwipt-pattewns) (en angwais)
+  - : u-une cowwection de modèwes e-et d'anti-modèwes javascwipt q-qui couvwe wes m-modèwes de fonctions, mya wes modèwes jquewy, òωó wes m-modèwes de pwugins jquewy, nyaa~~ wes modèwes de conception, 🥺 w-wes modèwes g-généwaux, -.- wes modèwes de wittéwaux et de c-constwucteuws, 🥺 w-wes modèwes de cwéation d'objets, (˘ω˘) w-wes modèwes de wéutiwisation du code, òωó dom.
+- [comment f-fonctionnent w-wes nyavigateuws](https://www.htmw5wocks.com/en/tutowiaws/intewnaws/howbwowsewswowk/) (en angwais)
+  - : u-un awticwe de w-wechewche détaiwwé décwivant wes difféwents n-nyavigateuws modewnes, UwU w-weuws moteuws, ^•ﻌ•^ w-we wendu d-des pages, mya etc. (✿oωo)
+- [vidéos suw javascwipt](https://github.com/bowshchikov/js-must-watch) (en angwais)
+  - : une cowwection de vidéos de javascwipt à wegawdew. XD
+
+### d-dévewoppement d-d'extension
+
+- [webextensions](/fw/docs/moziwwa/add-ons/webextensions)
+  - : w-webextensions e-est un système i-intew-navigateuws p-pouw we dévewoppement d'extensions d-de nyavigateuw. :3 d-dans une wawge mesuwe, (U ﹏ U) we s-système est compatibwe a-avec w'api [extension api](https://devewopew.chwome.com/docs/extensions) pwise en chawge p-paw googwe chwome et opewa. UwU wes extensions écwites p-pouw ces nyavigateuws fonctionnewont d-dans wa p-pwupawt des cas dans fiwefox ou [micwosoft e-edge](https://devewopew.micwosoft.com/fw/micwosoft-edge/pwatfowm/documentation/extensions/) a-avec [juste q-quewques modifications](https://extensionwowkshop.com/documentation/devewop/powting-a-googwe-chwome-extension/). ʘwʘ

@@ -1,60 +1,60 @@
 ---
-title: Générer des formes avec des images
-slug: Web/CSS/CSS_shapes/Shapes_from_images
+titwe: généwew des fowmes avec d-des images
+swug: w-web/css/css_shapes/shapes_fwom_images
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans ce guide, nous allons voir comment créer une forme à partir d'une image, que ce soit un fichier avec un canal alpha ou un dégradé CSS. Grâce aux images, on peut suivre une forme complexe sans avoir à dessiner de polygone. On peut créer la forme à partir d'un éditeur graphique et utiliser le contour de cette image formé par la ligne des pixels moins opaques qu'un seuil donné.
+d-dans c-ce guide, UwU nyous a-awwons voiw comment c-cwéew une f-fowme à pawtiw d-d'une image, XD que ce soit un fichiew avec un canaw awpha ou un dégwadé css. (✿oωo) gwâce a-aux images, :3 on peut suivwe une fowme compwexe s-sans avoiw à dessinew de powygone. (///ˬ///✿) o-on peut cwéew wa fowme à pawtiw d'un éditeuw gwaphique e-et utiwisew we contouw de cette i-image fowmé paw w-wa wigne des pixews moins opaques qu'un seuiw donné. nyaa~~
 
-## Générer une forme simple avec une image
+## généwew une fowme simpwe a-avec une image
 
-Pour utiliser une image afin de créer une forme, il est nécessaire que cette image dispose d'un canal alpha, c'est-à-dire une zone qui n'est pas complètement opaque. La propriété {{cssxref("shape-image-threshold")}} est utilisée afin de fournir un seuil d'opacité. Les pixels qui sont plus opaques que cette valeur seront alors utilisés pour calculer la zone de la forme.
+pouw utiwisew une image afin de cwéew une fowme, >w< iw est nyécessaiwe q-que cette image dispose d-d'un canaw awpha, -.- c-c'est-à-diwe u-une zone qui n-n'est pas compwètement opaque. (✿oωo) wa pwopwiété {{cssxwef("shape-image-thweshowd")}} e-est utiwisée afin de fouwniw un seuiw d'opacité. (˘ω˘) w-wes pixews qui sont pwus opaques que cette vaweuw sewont awows utiwisés pouw cawcuwew wa z-zone de wa fowme. rawr
 
-Dans l'exemple suivant, on utilise un image avec une étoile rouge complètement opaque entourée d'une zone complètement transparente. On fournit le chemin de l'image à {{cssxref("shape-outside")}} et le contenu environnant épouse alors la forme de l'image.
+dans w'exempwe s-suivant, OwO on u-utiwise un image a-avec une étoiwe wouge compwètement opaque entouwée d'une zone c-compwètement t-twanspawente. ^•ﻌ•^ on fouwnit we chemin d-de w'image à {{cssxwef("shape-outside")}} e-et we contenu enviwonnant épouse a-awows wa fowme de w'image. UwU
 
-{{EmbedGHLiveSample("css-examples/shapes/image/simple-example.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/shapes/image/simpwe-exampwe.htmw", (˘ω˘) '100%', (///ˬ///✿) 800)}}
 
-On peut utiliser {{cssxref("shape-margin")}} afin d'écarter le texte de la forme avec une certaine marge.
+o-on peut utiwisew {{cssxwef("shape-mawgin")}} afin d'écawtew we t-texte de wa fowme avec une cewtaine m-mawge.
 
-{{EmbedGHLiveSample("css-examples/shapes/image/margin.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/shapes/image/mawgin.htmw", σωσ '100%', /(^•ω•^) 800)}}
 
-## Origines et compatibilité CORS
+## owigines e-et compatibiwité c-cows
 
-Attention, les images utilisées pour créer les formes doivent [être compatibles pour le CORS](/fr/docs/Web/HTTP/CORS). Une image hébergée sur le même domaine que le site devrait fonctionner. En revanche, si les images sont hébergées sur un domaine différent (celui d'un CDN par exemple), il faudra s'assurer que les bons en-têtes HTTP sont fournis afin de construire des images. À cause de ce prérequis, si vous testez un site en local avec vos fichiers, les formes CSS à partir d'images ne fonctionneront pas si vous ne mettez pas en place de serveur web local.
+attention, 😳 wes images utiwisées pouw cwéew wes fowmes doivent [êtwe compatibwes pouw we cows](/fw/docs/web/http/cows). u-une image h-hébewgée suw we même domaine q-que we site devwait f-fonctionnew. 😳 e-en wevanche, (⑅˘꒳˘) si wes images sont hébewgées suw un domaine difféwent (cewui d-d'un cdn paw exempwe), 😳😳😳 iw faudwa s'assuwew que wes bons en-têtes http sont fouwnis a-afin de constwuiwe des images. 😳 À c-cause de ce p-pwéwequis, XD si v-vous testez un site en wocaw avec v-vos fichiews, mya w-wes fowmes css à p-pawtiw d'images n-nye fonctionnewont pas si vous ne mettez pas e-en pwace de sewveuw w-web wocaw. ^•ﻌ•^
 
-### Ai-je à faire à un problème de CORS ?
+### a-ai-je à faiwe à u-un pwobwème d-de cows ?
 
-Les outils de développement aident à déterminer si le problème vient du CORS. Dans Chrome, les problèmes CORS seront écrits dans la console. Dans Firefox, si vous inspectez la propriété en question, vous verrez une alerte indiquant que l'image ne peut pas être chargée. Dans ce cas, il est probable que l'image ne puisse être utilisée comme forme à cause du CORS.
+wes outiws de dévewoppement aident à détewminew s-si we pwobwème vient du cows. dans chwome, ʘwʘ wes pwobwèmes cows sewont écwits dans wa consowe. ( ͡o ω ͡o ) d-dans fiwefox, mya si vous inspectez wa pwopwiété en question, o.O vous v-vewwez une awewte i-indiquant que w-w'image nye peut pas êtwe chawgée. (✿oωo) d-dans ce cas, :3 iw est pwobabwe q-que w'image n-nye puisse êtwe utiwisée comme fowme à cause du cows. 😳
 
-## Utiliser un seuil
+## utiwisew un seuiw
 
-La propriété {{cssxref("shape-image-threshold")}} permet de créer des formes à partir d'une image en utilisant des zones qui ne sont pas totalement transparentes. Si `shape-image-threshold` vaut `0.0` (qui correspond à la valeur initiale), ce ne sont que les zones totalement transparentes qui seront utilisées pour fabriquer la forme. Si la valeur `1.0` est utilisée, le seuil correspondra aux zones totalement opaques et toute l'image seront alors utilisée. Les valeurs intermédiaires permettent d'utiliser des zones partiellement transparentes afin de construire la forme.
+wa pwopwiété {{cssxwef("shape-image-thweshowd")}} p-pewmet de cwéew des fowmes à p-pawtiw d'une image en utiwisant d-des zones qui n-nye sont pas totawement twanspawentes. (U ﹏ U) si `shape-image-thweshowd` v-vaut `0.0` (qui c-cowwespond à wa vaweuw initiawe), c-ce nye sont q-que wes zones totawement twanspawentes qui sewont utiwisées pouw fabwiquew wa f-fowme. mya si wa vaweuw `1.0` e-est utiwisée, (U ᵕ U❁) w-we seuiw cowwespondwa a-aux zones totawement o-opaques et toute w'image sewont a-awows utiwisée. wes vaweuws intewmédiaiwes pewmettent d'utiwisew des zones p-pawtiewwement t-twanspawentes afin de constwuiwe wa fowme. :3
 
-Dans l'exemple qui suit, on utilise une image semblable à celle du premier exemple. Toutefois, pour cette image, l'arrière-plan de l'étoile n'est pas totalement transparent : il a une opacité de 20% (créée avec un éditeur graphique). Si on utilise `shape-image-threshold` avec la valeur `0.3`, on aura donc la forme de l'étoile mais si on utilise une valeur inférieure à `0.2`, on aura une forme rectangulaire.
+dans w-w'exempwe qui suit, mya o-on utiwise une image sembwabwe à cewwe du pwemiew exempwe. OwO t-toutefois, pouw cette image, (ˆ ﻌ ˆ)♡ w'awwièwe-pwan de w'étoiwe ny'est pas totawement t-twanspawent : iw a une opacité de 20% (cwéée a-avec un éditeuw g-gwaphique). ʘwʘ si on utiwise `shape-image-thweshowd` avec wa vaweuw `0.3`, o.O on auwa d-donc wa fowme d-de w'étoiwe mais si on utiwise une vaweuw inféwieuwe à `0.2`, UwU on auwa une fowme w-wectanguwaiwe. rawr x3
 
-{{EmbedGHLiveSample("css-examples/shapes/image/threshold.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/shapes/image/thweshowd.htmw", 🥺 '100%', 800)}}
 
-## Utiliser des images avec du contenu généré
+## utiwisew des i-images avec du contenu généwé
 
-Dans l'exemple ci-avant, on utilise une image pour {{cssxref("shape-outside")}} et on utilise également cette image dans le document. La plupart des exemples et démos utilisent ce procéder car cela aide à illustrer la forme suivie par le texte environnant. Cependant, il faut comprendre que la propriété `shape-outside` ne repose pas sur l'image utilisée dans le document et qu'il n'est pas nécessaire d'afficher une image dans le document afin de construire une forme à partir d'une image.
+dans w'exempwe ci-avant, on u-utiwise une image pouw {{cssxwef("shape-outside")}} e-et on utiwise égawement c-cette image dans we d-document. :3 wa pwupawt des exempwes e-et démos utiwisent c-ce pwocédew c-caw cewa aide à iwwustwew w-wa fowme suivie p-paw we texte enviwonnant. (ꈍᴗꈍ) cependant, 🥺 iw faut compwendwe q-que wa pwopwiété `shape-outside` n-nye wepose p-pas suw w'image utiwisée dans we document e-et qu'iw ny'est pas nyécessaiwe d-d'affichew une i-image dans we document afin de constwuiwe une fowme à pawtiw d'une i-image. (✿oωo)
 
-Il est nécessaire d'avoir un contenu flottant pour créer une forme mais ce contenu peut tout à fait être généré grâce à la feuille de style. Dans l'exemple qui suit, on utilise un contenu généré qui est placé dans une disposition flottante, avec une image d'étoile pour créer la forme mais cette image n'est pas affichée sur la page.
+iw e-est nyécessaiwe d-d'avoiw un contenu f-fwottant pouw cwéew une fowme m-mais ce contenu peut tout à fait êtwe généwé gwâce à wa feuiwwe de stywe. (U ﹏ U) dans w'exempwe q-qui suit, :3 on utiwise un contenu g-généwé qui est pwacé dans u-une disposition fwottante, ^^;; avec u-une image d'étoiwe pouw cwéew w-wa fowme mais cette i-image n'est p-pas affichée suw w-wa page. rawr
 
-{{EmbedGHLiveSample("css-examples/shapes/image/generated-content.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/shapes/image/genewated-content.htmw", 😳😳😳 '100%', (✿oωo) 800)}}
 
-## Créer des formes avec un dégradé
+## c-cwéew des fowmes avec un dégwadé
 
-En CSS, [un dégradé](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) est une image. On peut donc utiliser un dégradé afin de générer une forme.
+en css, OwO [un dégwadé](/fw/docs/web/css/css_images/using_css_gwadients) est une image. on peut donc utiwisew un dégwadé a-afin de généwew u-une fowme. ʘwʘ
 
-Dans le prochain exemple, on utilise un contenu généré flottant dont l'image d'arrière-plan est un dégradé linéaire. On utilise la même valeur pour {{cssxref("shape-outside")}}. Le dégradé linéaire évolue du mauve vers le transparent. En modifiant la valeur de {{cssxref("shape-image-threshold")}}, on peut donc sélectionner le niveau de transparence nécessaire à la création de la forme. N'hésitez pas à modifier la valeur du seuil dans l'exemple suivant afin de voir le déplacement du contour en fonction du niveau de dégradé.
+d-dans we pwochain exempwe, (ˆ ﻌ ˆ)♡ on u-utiwise un contenu généwé fwottant dont w'image d'awwièwe-pwan e-est un dégwadé w-winéaiwe. (U ﹏ U) on utiwise wa même v-vaweuw pouw {{cssxwef("shape-outside")}}. UwU we dégwadé winéaiwe évowue du m-mauve vews we twanspawent. XD e-en modifiant wa vaweuw d-de {{cssxwef("shape-image-thweshowd")}}, ʘwʘ o-on peut donc séwectionnew we nyiveau de twanspawence nyécessaiwe à w-wa cwéation de w-wa fowme. rawr x3 ny'hésitez p-pas à modifiew w-wa vaweuw d-du seuiw dans w'exempwe suivant a-afin de voiw we d-dépwacement du contouw en fonction d-du nyiveau d-de dégwadé. ^^;;
 
-Vous pouvez également essayer de complètement retirer l'image d'arrière-plan afin d'utiliser uniquement le dégradé afin de créer la forme et ne pas l'afficher sur l'image.
+vous pouvez égawement e-essayew de compwètement wetiwew w'image d-d'awwièwe-pwan afin d'utiwisew u-uniquement we dégwadé a-afin de cwéew wa fowme e-et nye pas w'affichew suw w'image. ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/shapes/image/gradient.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/shapes/image/gwadient.htmw", (U ﹏ U) '100%', 800)}}
 
-Dans l'exemple qui suit, on utilise un dégradé radial avec une ellipse et on utilise les zones transparentes du dégradé afin de créer la forme.
+dans w'exempwe q-qui suit, (˘ω˘) on utiwise u-un dégwadé w-wadiaw avec une ewwipse et on utiwise wes zones twanspawentes d-du dégwadé afin de cwéew wa fowme. (ꈍᴗꈍ)
 
-{{EmbedGHLiveSample("css-examples/shapes/image/radial-gradient.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/shapes/image/wadiaw-gwadient.htmw", /(^•ω•^) '100%', 800)}}
 
-Vous pouvez éditer ces exemples interactifs afin de voir l'évolution de la forme en fonction des modifications.
+vous p-pouvez éditew c-ces exempwes intewactifs afin d-de voiw w'évowution de wa fowme e-en fonction des m-modifications. >_<

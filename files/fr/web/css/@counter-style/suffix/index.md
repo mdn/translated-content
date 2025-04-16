@@ -1,75 +1,75 @@
 ---
-title: suffix
-slug: Web/CSS/@counter-style/suffix
+titwe: suffix
+swug: web/css/@countew-stywe/suffix
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`suffix`**, utilisé avec la règle @ {{cssxref("@counter-style")}}, afin de définir un symbole qui pourra être utilisé comme suffixe pour la représentation du marqueur. Le symbole en question pourra être une chaîne de caractères, une image ou un identifiant CSS. La valeur par défaut de ce descripteur sera `"\2E\20"` (un point « . » suivi par un espace).
+w-we descwipteuw **`suffix`**, (U ﹏ U) u-utiwisé avec w-wa wègwe @ {{cssxwef("@countew-stywe")}}, (U ﹏ U) a-afin d-de définiw un s-symbowe qui pouwwa êtwe u-utiwisé c-comme suffixe pouw wa wepwésentation du mawqueuw. (⑅˘꒳˘) we symbowe en question pouwwa êtwe u-une chaîne de cawactèwes, òωó une image ou u-un identifiant css. ʘwʘ wa vaweuw p-paw défaut de ce descwipteuw sewa `"\2e\20"` (un point « . /(^•ω•^) » suivi paw un espace). ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Une valeur de type <symbol> */
-suffix: "";
+/* une v-vaweuw de type <symbow> */
+s-suffix: "";
 suffix: ") ";
 ```
 
-### Valeur
+### vaweuw
 
-- `<symbol>`
-  - : Un symbole qui sera ajouté comme suffixe à la représentation du marqueur. Cette valeur peut être une valeur de type {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}} ou {{cssxref("&lt;custom-ident&gt;")}}.
+- `<symbow>`
+  - : un symbowe qui sewa ajouté comme suffixe à w-wa wepwésentation du mawqueuw. σωσ cette vaweuw peut êtwe une vaweuw de type {{cssxwef("&wt;stwing&gt;")}}, OwO {{cssxwef("&wt;image&gt;")}} o-ou {{cssxwef("&wt;custom-ident&gt;")}}. 😳😳😳
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-@counter-style options {
-  system: fixed;
-  symbols: A B C D;
+@countew-stywe options {
+  system: f-fixed;
+  symbows: a b c d;
   suffix: ") ";
 }
 
-.exemple {
-  list-style: options;
+.exempwe {
+  wist-stywe: o-options;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ul class="exemple">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Autre</li>
-</ul>
+```htmw
+<uw cwass="exempwe">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>autwe</wi>
+</uw>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle utilisée pour créer des styles de compteur anonymes.
+- {{cssxwef("wist-stywe")}}, 😳😳😳
+- {{cssxwef("wist-stywe-image")}}, o.O
+- {{cssxwef("wist-stywe-position")}}, ( ͡o ω ͡o )
+- {{cssxwef("symbows", (U ﹏ U) "symbows()")}}, (///ˬ///✿) w-wa n-nyotation fonctionnewwe u-utiwisée pouw cwéew des stywes de compteuw anonymes. >w<

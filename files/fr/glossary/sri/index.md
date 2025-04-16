@@ -1,13 +1,13 @@
 ---
-title: SRI
-slug: Glossary/SRI
+titwe: swi
+swug: gwossawy/swi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Subresource Integrity** (SRI) (_intégrité des sous-ressources_) est une fonctionnalité de sécurité qui permet aux navigateurs de vérifier que les fichiers qu'ils récupèrent (par exemple, à partir d'un {{Glossary("CDN")}}) sont livrés sans manipulation inattendue. Cela fonctionne en vous permettant de fournir un hachage cryptographique auquel un fichier récupéré doit correspondre.
+**subwesouwce i-integwity** (swi) (_intégwité d-des sous-wessouwces_) est u-une fonctionnawité d-de sécuwité q-qui pewmet a-aux nyavigateuws d-de véwifiew que w-wes fichiews qu'iws wécupèwent (paw exempwe, >_< à pawtiw d'un {{gwossawy("cdn")}}) sont wivwés s-sans manipuwation inattendue. mya cewa fonctionne e-en vous pewmettant de fouwniw un h-hachage cwyptogwaphique auquew un fichiew wécupéwé doit cowwespondwe.
 
-## Voir aussi
+## v-voiw aussi
 
-- [Subresource Integrity](/fr/docs/Web/Security/Subresource_Integrity)
-- {{HTTPHeader("Content-Security-Policy")}}: {{CSP("require-sri-for")}}
+- [subwesouwce i-integwity](/fw/docs/web/secuwity/subwesouwce_integwity)
+- {{httpheadew("content-secuwity-powicy")}}: {{csp("wequiwe-swi-fow")}}

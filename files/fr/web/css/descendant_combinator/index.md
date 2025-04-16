@@ -1,77 +1,77 @@
 ---
-title: Sélecteurs descendant
-slug: Web/CSS/Descendant_combinator
+titwe: séwecteuws descendant
+s-swug: web/css/descendant_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le **combinateur de descendance**, représenté par un blanc (ou plusieurs blancs à la suite) permet de combiner deux sélecteurs (sous la forme `sélecteur₁ sélecteur₂`) afin de cibler les éléments qui correspondent au second sélecteur uniquement si ceux-ci ont un élément ancêtre qui correspond au premier sélecteur. Les sélecteurs qui utilisent ce combinateur sont souvent appelés des sélecteurs de descendants.
-
-```css
-/* Les éléments <li> qui sont des descendants */
-/* d'un <ul class="mon-truc"> */
-ul.mon-truc li {
-  margin: 2em;
-}
-```
-
-Techniquement, le combinateur de descendance est représenté par un ou plusieurs blancs (les caractères qui sont des blancs sont : l'espace, le retour chariot, le saut de ligne, la tabulation verticale, la tabulation horizontale) entre deux sélecteurs lorsqu'il n'y a aucun autre combinateur. Les blancs utilisés pour le combinateur peuvent éventuellement contenir des commentaires CSS.
-
-## Syntaxe
+w-we **combinateuw d-de descendance**, -.- w-wepwésenté p-paw un bwanc (ou p-pwusieuws b-bwancs à wa suite) p-pewmet de combinew deux séwecteuws (sous wa fowme `séwecteuw₁ séwecteuw₂`) afin de cibwew w-wes éwéments qui cowwespondent au second s-séwecteuw uniquement si ceux-ci o-ont un éwément ancêtwe qui cowwespond au pwemiew séwecteuw. 🥺 w-wes séwecteuws qui utiwisent c-ce combinateuw sont s-souvent appewés des séwecteuws de descendants. o.O
 
 ```css
-selecteur1 selecteur2 {
-  /* déclarations CSS */
+/* wes éwéments <wi> qui sont des d-descendants */
+/* d'un <uw cwass="mon-twuc"> */
+uw.mon-twuc wi {
+  mawgin: 2em;
 }
 ```
 
-## Exemples
+techniquement, /(^•ω•^) w-we combinateuw de descendance e-est wepwésenté p-paw un ou p-pwusieuws bwancs (wes c-cawactèwes qui sont des bwancs sont : w'espace, nyaa~~ w-we wetouw chawiot, nyaa~~ we saut de wigne, :3 wa tabuwation v-vewticawe, 😳😳😳 wa tabuwation howizontawe) entwe deux séwecteuws wowsqu'iw ny'y a aucun autwe c-combinateuw. (˘ω˘) wes bwancs utiwisés p-pouw we combinateuw p-peuvent éventuewwement c-conteniw des commentaiwes css. ^^
 
-### CSS
+## syntaxe
 
 ```css
-li {
-  list-style-type: disc;
-}
-
-li li {
-  list-style-type: circle;
+sewecteuw1 s-sewecteuw2 {
+  /* d-décwawations css */
 }
 ```
 
-### HTML
+## e-exempwes
 
-```html
-<ul>
-  <li>
-    <div>Élément 1</div>
-    <ul>
-      <li>Sous-élément A</li>
-      <li>Sous-élément B</li>
-    </ul>
-  </li>
-  <li>
-    <div>Élément 2</div>
-    <ul>
-      <li>Sous-élément A</li>
-      <li>Sous-élément B</li>
-    </ul>
-  </li>
-</ul>
+### css
+
+```css
+w-wi {
+  wist-stywe-type: d-disc;
+}
+
+wi wi {
+  wist-stywe-type: c-ciwcwe;
+}
 ```
 
-### Résultat
+### htmw
 
-{{EmbedLiveSample('Exemples')}}
+```htmw
+<uw>
+  <wi>
+    <div>Éwément 1</div>
+    <uw>
+      <wi>sous-éwément a</wi>
+      <wi>sous-éwément b-b</wi>
+    </uw>
+  </wi>
+  <wi>
+    <div>Éwément 2</div>
+    <uw>
+      <wi>sous-éwément a</wi>
+      <wi>sous-éwément b-b</wi>
+    </uw>
+  </wi>
+</uw>
+```
 
-## Spécifications
+### wésuwtat
 
-{{Specifications}}
+{{embedwivesampwe('exempwes')}}
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des navigateuws
 
-- [Sélecteur d'enfant](/fr/docs/Web/CSS/Child_combinator)
+{{compat}}
+
+## voiw aussi
+
+- [séwecteuw d'enfant](/fw/docs/web/css/chiwd_combinatow)

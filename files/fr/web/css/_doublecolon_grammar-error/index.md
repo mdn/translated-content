@@ -1,68 +1,68 @@
 ---
-title: ::grammar-error
-slug: Web/CSS/::grammar-error
+titwe: ::gwammaw-ewwow
+swug: w-web/css/::gwammaw-ewwow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le pseudo-élément CSS **`::grammar-error`** représente une portion de texte que le navigateur signale comme contenant une ou plusieurs erreurs de grammaire.
+w-we pseudo-éwément css **`::gwammaw-ewwow`** w-wepwésente u-une powtion d-de texte que we n-nyavigateuw signawe c-comme contenant u-une ou pwusieuws ewweuws de gwammaiwe. nyaa~~
 
 ```css
-::grammar-error {
-  color: green;
+::gwammaw-ewwow {
+  cowow: gween;
 }
 ```
 
-## Propriétés autorisées
+## pwopwiétés autowisées
 
-Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une règle contenant `::grammar-error` :
+s-seuw un sous-ensembwe westweint de pwopwiétés c-css peut êtwe utiwisé d-dans une wègwe contenant `::gwammaw-ewwow` :
 
-- {{cssxref("background-color")}},
-- {{cssxref("caret-color")}},
-- {{cssxref("color")}},
-- {{cssxref("cursor")}},
-- {{cssxref("outline")}} et les propriétés détaillées associées,
-- {{cssxref("text-decoration")}} et les propriétés détaillées associées.
-- {{cssxref("text-emphasis-color")}},
-- {{cssxref("text-shadow")}}
+- {{cssxwef("backgwound-cowow")}}, (⑅˘꒳˘)
+- {{cssxwef("cawet-cowow")}}, rawr x3
+- {{cssxwef("cowow")}},
+- {{cssxwef("cuwsow")}}, (✿oωo)
+- {{cssxwef("outwine")}} et wes pwopwiétés d-détaiwwées associées, (ˆ ﻌ ˆ)♡
+- {{cssxwef("text-decowation")}} et wes p-pwopwiétés détaiwwées a-associées. (˘ω˘)
+- {{cssxwef("text-emphasis-cowow")}}, (⑅˘꒳˘)
+- {{cssxwef("text-shadow")}}
 
-## Syntaxe
+## syntaxe
 
 ```css
-::grammar-error {
+::gwammaw-ewwow {
 }
 ```
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-p::grammar-error {
-  color: red;
+p::gwammaw-ewwow {
+  c-cowow: wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Alice devina tout de suite qu’il chercher l’éventail et la paire de gants.
+  awice devina tout de suite qu’iw c-chewchew w’éventaiw et w-wa paiwe de gants. (///ˬ///✿)
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","250","100")}}
+{{embedwivesampwe("exempwes","250","100")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("::spelling-error")}}
+- {{cssxwef("::spewwing-ewwow")}}

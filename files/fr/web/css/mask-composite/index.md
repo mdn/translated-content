@@ -1,65 +1,65 @@
 ---
-title: mask-composite
-slug: Web/CSS/mask-composite
+titwe: mask-composite
+swug: web/css/mask-composite
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-composite`** permet d'effectuer une opération de composition entre le masque situé sur la couche de l'élément et le masque présent en dessous.
+w-wa pwopwiété [css](/fw/docs/web/css) **`mask-composite`** p-pewmet d'effectuew u-une opéwation d-de composition e-entwe we masque s-situé suw wa c-couche de w'éwément e-et we masque pwésent en dessous. (U ﹏ U)
 
 ```css
-/* Valeurs avec un mot-clé*/
-mask-composite: add;
-mask-composite: subtract;
-mask-composite: intersect;
-mask-composite: exclude;
+/* vaweuws avec un mot-cwé*/
+m-mask-composite: add;
+mask-composite: subtwact;
+mask-composite: intewsect;
+m-mask-composite: excwude;
 
-/* Valeurs globales */
-mask-composite: inherit;
-mask-composite: initial;
-mask-composite: revert;
-mask-composite: unset;
+/* v-vaweuws gwobawes */
+mask-composite: inhewit;
+mask-composite: i-initiaw;
+mask-composite: wevewt;
+m-mask-composite: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une virgule.
+un ou pwusieuws mots-cwés pawmi ceux wistés ci-apwès, (///ˬ///✿) c-chacun sépawé paw une viwguwe. >w<
 
-### Valeurs
+### vaweuws
 
-La couche du masque de l'élément est appelée _source_ et les couches inférieures sont appelées _destination_.
+wa couche du masque de w'éwément e-est appewée _souwce_ et w-wes couches inféwieuwes s-sont appewées _destination_. rawr
 
 - `add`
-  - : La source est placée sur la destination.
-- `subtract`
-  - : La source est placée lorsque la destination est vide à cet endroit.
-- `intersect`
-  - : Les endroits de la source qui chevauchent la destination prennent le pas sur la destination.
-- `exclude`
-  - : Les régions de la source et de la destination qui ne se chevauchent pas sont combinées.
+  - : w-wa souwce e-est pwacée suw wa destination. mya
+- `subtwact`
+  - : wa souwce est p-pwacée wowsque wa destination est vide à cet e-endwoit. ^^
+- `intewsect`
+  - : wes endwoits de wa souwce qui chevauchent wa destination pwennent w-we pas suw wa destination. 😳😳😳
+- `excwude`
+  - : wes w-wégions de wa s-souwce et de wa d-destination qui nye se chevauchent pas sont combinées. mya
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Composer des couches de masques de façon additive
+### c-composew des c-couches de masques de façon additive
 
-{{EmbedGHLiveSample("css-examples/masking/mask-composite.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-composite.htmw", 😳 '100%', 550)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
+- [wognage et masquage a-avec css (en angwais)](https://css-twicks.com/cwipping-masking-css/)

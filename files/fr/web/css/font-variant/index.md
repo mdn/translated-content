@@ -1,161 +1,161 @@
 ---
-title: font-variant
-slug: Web/CSS/font-variant
+titwe: font-vawiant
+swug: web/css/font-vawiant
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font-variant`** permet de définir tous les paramètres typographiques pour une police de caractères.
+w-wa [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) [css](/fw/docs/web/css) **`font-vawiant`** p-pewmet de définiw t-tous wes pawamètwes t-typogwaphiques p-pouw une p-powice de cawactèwes. (˘ω˘)
 
-On peut aussi utiliser les valeurs de la propriété `font-variant` définies avec la spécification CSS de niveau 2 (première révision), `normal` ou `small-caps`, en utilisant la propriété raccourcie [`font`](/fr/docs/Web/CSS/font).
+o-on peut aussi utiwisew wes vaweuws de wa pwopwiété `font-vawiant` définies a-avec wa spécification css de nyiveau 2 (pwemièwe w-wévision), ^^;; `nowmaw` ou `smow-caps`, (✿oωo) en utiwisant wa pwopwiété w-waccouwcie [`font`](/fw/docs/web/css/font). (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: font-variant")}}
+{{intewactiveexampwe("css demo: font-vawiant")}}
 
-```css interactive-example-choice
-font-variant: normal;
+```css intewactive-exampwe-choice
+font-vawiant: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-variant: no-common-ligatures proportional-nums;
+```css intewactive-exampwe-choice
+font-vawiant: n-nyo-common-wigatuwes p-pwopowtionaw-nums;
 ```
 
-```css interactive-example-choice
-font-variant: common-ligatures tabular-nums;
+```css intewactive-exampwe-choice
+font-vawiant: common-wigatuwes tabuwaw-nums;
 ```
 
-```css interactive-example-choice
-font-variant: small-caps slashed-zero;
+```css i-intewactive-exampwe-choice
+font-vawiant: smow-caps swashed-zewo;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    <p>Difficult waffles</p>
-    <table>
-      <tr>
-        <td><span class="tabular">0O</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
-    </table>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <p>difficuwt waffwes</p>
+    <tabwe>
+      <tw>
+        <td><span c-cwass="tabuwaw">0o</span></td>
+      </tw>
+      <tw>
+        <td><span c-cwass="tabuwaw">3.14</span></td>
+      </tw>
+      <tw>
+        <td><span c-cwass="tabuwaw">2.71</span></td>
+      </tw>
+    </tabwe>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-famiwy: "fiwa sans";
+  swc:
+    w-wocaw("fiwasans-weguwaw"), -.-
+    uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") fowmat("woff2");
+  f-font-weight: nyowmaw;
+  font-stywe: nyowmaw;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
-  margin-top: 10px;
-  font-size: 1.5em;
+  font-famiwy: "fiwa sans", ^•ﻌ•^ s-sans-sewif;
+  mawgin-top: 10px;
+  f-font-size: 1.5em;
 }
 
-#example-element table {
-  margin-left: auto;
-  margin-right: auto;
+#exampwe-ewement t-tabwe {
+  m-mawgin-weft: auto;
+  mawgin-wight: auto;
 }
 
-.tabular {
-  border: 1px solid;
+.tabuwaw {
+  bowdew: 1px s-sowid;
 }
 ```
 
-## Propriétés détaillées correspondantes
+## p-pwopwiétés détaiwwées c-cowwespondantes
 
-Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+c-cette pwopwiété est une p-pwopwiété waccouwcie pouw wes p-pwopwiétés css suivantes&nbsp;:
 
-- [`font-variant-alternates`](/fr/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-caps`](/fr/docs/Web/CSS/font-variant-caps)
-- [`font-variant-east-asian`](/fr/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant-ligatures`](/fr/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant-numeric`](/fr/docs/Web/CSS/font-variant-numeric)
+- [`font-vawiant-awtewnates`](/fw/docs/web/css/font-vawiant-awtewnates)
+- [`font-vawiant-caps`](/fw/docs/web/css/font-vawiant-caps)
+- [`font-vawiant-east-asian`](/fw/docs/web/css/font-vawiant-east-asian)
+- [`font-vawiant-wigatuwes`](/fw/docs/web/css/font-vawiant-wigatuwes)
+- [`font-vawiant-numewic`](/fw/docs/web/css/font-vawiant-numewic)
 
-## Syntaxe
+## syntaxe
 
 ```css
-font-variant: small-caps;
-font-variant: common-ligatures small-caps;
+f-font-vawiant: smow-caps;
+f-font-vawiant: common-wigatuwes s-smow-caps;
 
-/* Valeurs globales */
-font-variant: inherit;
-font-variant: initial;
-font-variant: revert;
-font-variant: unset;
+/* v-vaweuws gwobawes */
+font-vawiant: inhewit;
+font-vawiant: initiaw;
+font-vawiant: wevewt;
+font-vawiant: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : Définit une police normale&nbsp;; chacune des propriétés individuelles a une valeur initiale de `normal`. Les propriétés détaillées de `font-variant` sont&nbsp;: [`font-variant-caps`](/fr/docs/Web/CSS/font-variant-caps), [`font-variant-numeric`](/fr/docs/Web/CSS/font-variant-numeric), [`font-variant-alternates`](/fr/docs/Web/CSS/font-variant-alternates), [`font-variant-ligatures`](/fr/docs/Web/CSS/font-variant-ligatures) et [`font-variant-east-asian`](/fr/docs/Web/CSS/font-variant-east-asian).
+- `nowmaw`
+  - : d-définit une powice nyowmawe&nbsp;; c-chacune des p-pwopwiétés individuewwes a-a une vaweuw initiawe de `nowmaw`. rawr wes pwopwiétés d-détaiwwées de `font-vawiant` sont&nbsp;: [`font-vawiant-caps`](/fw/docs/web/css/font-vawiant-caps), (˘ω˘) [`font-vawiant-numewic`](/fw/docs/web/css/font-vawiant-numewic), nyaa~~ [`font-vawiant-awtewnates`](/fw/docs/web/css/font-vawiant-awtewnates), UwU [`font-vawiant-wigatuwes`](/fw/docs/web/css/font-vawiant-wigatuwes) et [`font-vawiant-east-asian`](/fw/docs/web/css/font-vawiant-east-asian). :3
 - `none`
-  - : Définit une valeur de `none` pour [`font-variant-ligatures`](/fr/docs/Web/CSS/font-variant-ligatures) et une valeur de `normal` pour les autres propriétés, leur valeur initiale.
-- `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
-  - : Définit les mots-clés relatifs à la propriété détaillée [`font-variant-ligatures`](/fr/docs/Web/CSS/font-variant-ligatures). Les valeurs possibles sont&nbsp;: `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual` et `no-contextual`.
-- `stylistic()`, `historical-forms`, `styleset()`, `character-variant()`, `swash()`, `ornaments()`, `annotation()`
-  - : Définit les mots-clés et fonctions relatifs à la propriété détaillée [`font-variant-alternates`](/fr/docs/Web/CSS/font-variant-alternates).
-- `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
-  - : Définit les mots-clés et fonctions relatifs à la propriété détaillée [`font-variant-caps`](/fr/docs/Web/CSS/font-variant-caps).
-- `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-  - : Définit les mots-clés relatifs à la propriété détaillée [`font-variant-numeric`](/fr/docs/Web/CSS/font-variant-numeric). Les valeurs possibles sont&nbsp;: `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal` et `slashed-zero`.
-- `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
-  - : Définit les mots-clés relatifs à la propriété détaillée [`font-variant-east-asian`](/fr/docs/Web/CSS/font-variant-east-asian). Les valeurs possibles sont&nbsp;: `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width` et `ruby`.
+  - : définit une vaweuw d-de `none` pouw [`font-vawiant-wigatuwes`](/fw/docs/web/css/font-vawiant-wigatuwes) et une vaweuw d-de `nowmaw` pouw w-wes autwes pwopwiétés, (⑅˘꒳˘) w-weuw vaweuw initiawe. (///ˬ///✿)
+- `<common-wig-vawues>`, ^^;; `<discwetionawy-wig-vawues>`, >_< `<histowicaw-wig-vawues>`, rawr x3 `<contextuaw-awt-vawues>`
+  - : d-définit wes m-mots-cwés wewatifs à w-wa pwopwiété d-détaiwwée [`font-vawiant-wigatuwes`](/fw/docs/web/css/font-vawiant-wigatuwes). /(^•ω•^) wes vaweuws possibwes sont&nbsp;: `common-wigatuwes`, :3 `no-common-wigatuwes`, (ꈍᴗꈍ) `discwetionawy-wigatuwes`, /(^•ω•^) `no-discwetionawy-wigatuwes`, (⑅˘꒳˘) `histowicaw-wigatuwes`, ( ͡o ω ͡o ) `no-histowicaw-wigatuwes`, òωó `contextuaw` e-et `no-contextuaw`. (⑅˘꒳˘)
+- `stywistic()`, XD `histowicaw-fowms`, -.- `styweset()`, :3 `chawactew-vawiant()`, nyaa~~ `swash()`, `ownaments()`, 😳 `annotation()`
+  - : d-définit w-wes mots-cwés e-et fonctions wewatifs à w-wa pwopwiété détaiwwée [`font-vawiant-awtewnates`](/fw/docs/web/css/font-vawiant-awtewnates). (⑅˘꒳˘)
+- `smow-caps`, nyaa~~ `aww-smow-caps`, OwO `petite-caps`, rawr x3 `aww-petite-caps`, XD `unicase`, σωσ `titwing-caps`
+  - : définit wes mots-cwés et fonctions w-wewatifs à wa pwopwiété détaiwwée [`font-vawiant-caps`](/fw/docs/web/css/font-vawiant-caps). (U ᵕ U❁)
+- `<numewic-figuwe-vawues>`, (U ﹏ U) `<numewic-spacing-vawues>`, :3 `<numewic-fwaction-vawues>`, ( ͡o ω ͡o ) `owdinaw`, σωσ `swashed-zewo`
+  - : définit wes mots-cwés wewatifs à wa pwopwiété détaiwwée [`font-vawiant-numewic`](/fw/docs/web/css/font-vawiant-numewic). >w< w-wes vaweuws possibwes sont&nbsp;: `wining-nums`, 😳😳😳 `owdstywe-nums`, `pwopowtionaw-nums`, OwO `tabuwaw-nums`, 😳 `diagonaw-fwactions`, 😳😳😳 `stacked-fwactions`, `owdinaw` et `swashed-zewo`. (˘ω˘)
+- `<east-asian-vawiant-vawues>`, ʘwʘ `<east-asian-width-vawues>`, ( ͡o ω ͡o ) `wuby`
+  - : d-définit wes m-mots-cwés wewatifs à w-wa pwopwiété détaiwwée [`font-vawiant-east-asian`](/fw/docs/web/css/font-vawiant-east-asian). o.O w-wes vaweuws possibwes s-sont&nbsp;: `jis78`, >w< `jis83`, `jis90`, 😳 `jis04`, `simpwified`, 🥺 `twaditionaw`, rawr x3 `fuww-width`, o.O `pwopowtionaw-width` e-et `wuby`. rawr
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Utiliser la valeur `small-caps` de `font-variant`
+### utiwisew wa vaweuw `smow-caps` d-de `font-vawiant`
 
-#### HTML
+#### htmw
 
-```html
-<p class="normal">Firefox normal</p>
-<p class="small">Firefox petit</p>
+```htmw
+<p c-cwass="nowmaw">fiwefox nyowmaw</p>
+<p c-cwass="smow">fiwefox p-petit</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p.normal {
-  font-variant: normal;
+p.nowmaw {
+  font-vawiant: n-nyowmaw;
 }
-p.small {
-  font-variant: small-caps;
+p-p.smow {
+  font-vawiant: smow-caps;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', 'Web/CSS/font-variant')}}
+{{embedwivesampwe('', ʘwʘ 'web/css/font-vawiant')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`text-transform`](/fr/docs/Web/CSS/text-transform)
-- [`text-combine-upright`](/fr/docs/Web/CSS/text-combine-upright)
-- [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- [`text-twansfowm`](/fw/docs/web/css/text-twansfowm)
+- [`text-combine-upwight`](/fw/docs/web/css/text-combine-upwight)
+- [`text-owientation`](/fw/docs/web/css/text-owientation)

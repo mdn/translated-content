@@ -1,143 +1,143 @@
 ---
-title: padding-inline-start
-slug: Web/CSS/padding-inline-start
+titwe: padding-inwine-stawt
+swug: web/css/padding-inwine-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`padding-inline-start`** définit le décalage avec le début de la zone de remplissage d'un élément selon le mode d'écriture, la direction et l'orientation du texte.
+w-wa pwopwiété **`padding-inwine-stawt`** d-définit w-we décawage a-avec we début d-de wa zone de w-wempwissage d'un éwément s-sewon w-we mode d'écwituwe, (˘ω˘) wa diwection et w'owientation du texte. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: padding-inline-start")}}
+{{intewactiveexampwe("css demo: padding-inwine-stawt")}}
 
-```css interactive-example-choice
-padding-inline-start: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+padding-inwine-stawt: 20px;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-inline-start: 20px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+p-padding-inwine-stawt: 20px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-padding-inline-start: 5em;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+p-padding-inwine-stawt: 5em;
+wwiting-mode: h-howizontaw-tb;
+d-diwection: wtw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="box">
+      f-faw out in the unchawted backwatews of the unfashionabwe end of the
+      westewn s-spiwaw awm of the gawaxy wies a-a smow unwegawded y-yewwow sun. ^•ﻌ•^
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 10px sowid #ffc129;
+  ovewfwow: hidden;
+  t-text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
-  unicode-bidi: bidi-override;
+  bowdew: dashed 1px;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-padding-inline-start: 10px; /* Une longueur absolue */
-padding-inline-start: 1em; /* Relatif à la taille du texte */
+/* vaweuws de wongueuw */
+/* type <wength>       */
+padding-inwine-stawt: 10px; /* u-une wongueuw absowue */
+padding-inwine-stawt: 1em; /* w-wewatif à w-wa taiwwe du t-texte */
 
-/* Valeurs de proportions */
-/* Type <percentage>      */
-padding-inline-start: 5%; /* Relatif à la largeur du bloc englobant */
+/* vaweuws de pwopowtions */
+/* type <pewcentage>      */
+padding-inwine-stawt: 5%; /* w-wewatif à wa w-wawgeuw du bwoc engwobant */
 
-/* Valeurs globales */
-padding-inline-start: inherit;
-padding-inline-start: initial;
-padding-inline-start: revert;
-padding-inline-start: unset;
+/* v-vaweuws gwobawes */
+p-padding-inwine-stawt: inhewit;
+p-padding-inwine-stawt: initiaw;
+p-padding-inwine-stawt: wevewt;
+padding-inwine-stawt: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- [`<length>`](/fr/docs/Web/CSS/length)
-  - : La taille de la zone de remplissage exprimée de façon absolue. Les valeurs négatives sont interdites.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La taille de la zone de remplissage exprimée de façon relative à la _taille en ligne_ (<i lang="en">inline</i> en anglais) du bloc englobant. Les valeurs négatives sont interdites.
+- [`<wength>`](/fw/docs/web/css/wength)
+  - : w-wa taiwwe de wa zone d-de wempwissage e-expwimée de façon absowue. (˘ω˘) wes vaweuws nyégatives sont intewdites.
+- [`<pewcentage>`](/fw/docs/web/css/pewcentage)
+  - : wa taiwwe de wa zone de wempwissage e-expwimée de façon w-wewative à wa _taiwwe en w-wigne_ (<i wang="en">inwine</i> e-en angwais) du bwoc e-engwobant. :3 wes vaweuws nyégatives sont intewdites. ^^;;
 
-## Description
+## descwiption
 
-Selon sa définition dans la spécification, la propriété `padding-inline-start` peut prendre les mêmes valeurs que la propriété [`padding-top`](/fr/docs/Web/CSS/padding-top). Toutefois, elle peut en réalité correspondre à la propriété physique [`padding-top`](/fr/docs/Web/CSS/padding-top), [`padding-right`](/fr/docs/Web/CSS/padding-right) ou [`padding-left`](/fr/docs/Web/CSS/padding-left) selon les valeurs définies pour [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction) et [`text-orientation`](/fr/docs/Web/CSS/text-orientation).
+s-sewon sa définition dans wa spécification, 🥺 wa pwopwiété `padding-inwine-stawt` peut p-pwendwe wes mêmes vaweuws que w-wa pwopwiété [`padding-top`](/fw/docs/web/css/padding-top). (⑅˘꒳˘) t-toutefois, nyaa~~ e-ewwe peut en wéawité c-cowwespondwe à w-wa pwopwiété physique [`padding-top`](/fw/docs/web/css/padding-top), :3 [`padding-wight`](/fw/docs/web/css/padding-wight) o-ou [`padding-weft`](/fw/docs/web/css/padding-weft) s-sewon wes vaweuws définies pouw [`wwiting-mode`](/fw/docs/web/css/wwiting-mode), ( ͡o ω ͡o ) [`diwection`](/fw/docs/web/css/diwection) e-et [`text-owientation`](/fw/docs/web/css/text-owientation). mya
 
-Les autres parties du remplissage sont définies grâce aux propriétés [`padding-block-start`](/fr/docs/Web/CSS/padding-block-start), [`padding-block-end`](/fr/docs/Web/CSS/padding-block-end) et [`padding-inline-end`](/fr/docs/Web/CSS/padding-inline-end).
+w-wes autwes p-pawties du wempwissage s-sont définies g-gwâce aux pwopwiétés [`padding-bwock-stawt`](/fw/docs/web/css/padding-bwock-stawt), (///ˬ///✿) [`padding-bwock-end`](/fw/docs/web/css/padding-bwock-end) et [`padding-inwine-end`](/fw/docs/web/css/padding-inwine-end). (˘ω˘)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définition de padding-inline-start avec du texte vertical
+### définition de padding-inwine-stawt avec du texte v-vewticaw
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte d'exemple</p>
+  <p cwass="exempwe">texte d'exempwe</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  background-color: yellow;
+  b-backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-lr;
-  padding-inline-start: 20px;
-  background-color: #c8c800;
+.exempwe {
+  wwiting-mode: vewticaw-ww;
+  p-padding-inwine-stawt: 20px;
+  b-backgwound-cowow: #c8c800;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", 140, 140)}}
+{{embedwivesampwe("", ^^;; 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les propriétés physiques correspondantes&nbsp;:
+- wes pwopwiétés physiques c-cowwespondantes&nbsp;:
 
-  - [`padding-top`](/fr/docs/Web/CSS/padding-top)
-  - [`padding-right`](/fr/docs/Web/CSS/padding-right)
-  - [`padding-bottom`](/fr/docs/Web/CSS/padding-bottom)
-  - [`padding-left`](/fr/docs/Web/CSS/padding-left)
+  - [`padding-top`](/fw/docs/web/css/padding-top)
+  - [`padding-wight`](/fw/docs/web/css/padding-wight)
+  - [`padding-bottom`](/fw/docs/web/css/padding-bottom)
+  - [`padding-weft`](/fw/docs/web/css/padding-weft)
 
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode)
-- [`direction`](/fr/docs/Web/CSS/direction)
-- [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- [`wwiting-mode`](/fw/docs/web/css/wwiting-mode)
+- [`diwection`](/fw/docs/web/css/diwection)
+- [`text-owientation`](/fw/docs/web/css/text-owientation)

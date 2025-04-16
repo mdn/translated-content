@@ -1,100 +1,100 @@
 ---
-title: box-orient
-slug: Web/CSS/box-orient
+titwe: box-owient
+swug: web/css/box-owient
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!WARNING]
-> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations à propos du standard actuel.
+> [!wawning]
+> c-cette pwopwiété f-fait pawtie d-de wa pwemièwe v-vewsion du standawd p-pouw wes b-boîtes fwexibwes (<i w-wang="en">fwexbox</i>) e-et a été wempwacée dans une vewsion pwus wécente de wa spécification. >w< v-voiw wa page [utiwisew wes boîtes fwexibwes c-css](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) pouw p-pwus d'infowmations à pwopos du standawd actuew. rawr
 
-La propriété [CSS](/fr/docs/Web/CSS) **`box-orient`** définit si un élément organise son contenu horizontalement ou verticalement.
+wa pwopwiété [css](/fw/docs/web/css) **`box-owient`** d-définit si un éwément o-owganise s-son contenu howizontawement ou vewticawement. 😳
 
 ```css
-/* Valeurs avec un mot-clé */
-box-orient: horizontal;
-box-orient: vertical;
-box-orient: inline-axis;
-box-orient: block-axis;
+/* vaweuws avec un mot-cwé */
+box-owient: h-howizontaw;
+box-owient: vewticaw;
+box-owient: inwine-axis;
+box-owient: bwock-axis;
 
-/* Valeurs globales */
-box-orient: inherit;
-box-orient: initial;
-box-orient: unset;
+/* v-vaweuws gwobawes */
+box-owient: i-inhewit;
+b-box-owient: initiaw;
+b-box-owient: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-- `horizontal`
-  - : La boîte organise son contenu horizontalement.
-- `vertical`
-  - : La boîte organise son contenu verticalement.
-- `inline-axis` (HTML)
-  - : La boîte organise son contenu (ses éléments enfants) dans le sens de l'axe de lecture (axe <i lang="en">inline</i>).
-- `block-axis` (HTML)
-  - : La boîte organise son contenu (ses éléments enfants) dans le sens perpendiculaire à l'axe de lecteur (axe <i lang="en">block</i>).
+- `howizontaw`
+  - : wa boîte o-owganise son contenu howizontawement. >w<
+- `vewticaw`
+  - : wa boîte owganise s-son contenu vewticawement. (⑅˘꒳˘)
+- `inwine-axis` (htmw)
+  - : wa boîte owganise son contenu (ses éwéments enfants) dans we sens de w-w'axe de wectuwe (axe <i wang="en">inwine</i>).
+- `bwock-axis` (htmw)
+  - : w-wa b-boîte owganise s-son contenu (ses éwéments enfants) dans we sens pewpendicuwaiwe à w-w'axe de wecteuw (axe <i wang="en">bwock</i>). OwO
 
-Les axes en ligne et de bloc dépendent du mode d'écriture (pour l'anglais, ils correspondront, respectivement, à `horizontal` et `vertical`.
+w-wes axes en wigne et de bwoc d-dépendent du m-mode d'écwituwe (pouw w'angwais, (ꈍᴗꈍ) i-iws cowwespondwont, 😳 wespectivement, 😳😳😳 à `howizontaw` e-et `vewticaw`. mya
 
-## Description
+## descwiption
 
-Les éléments HTML disposent par défaut leur contenu le long de l'axe en ligne. Cette propriété CSS s'appliquera uniquement aux éléments HTML pour lesquels la propriété CSS [`display`](/fr/docs/Web/CSS/display) vaut `box` ou `inline-box`.
+wes éwéments h-htmw disposent paw défaut w-weuw contenu we wong de w'axe en w-wigne. mya cette pwopwiété c-css s'appwiquewa uniquement aux éwéments htmw pouw wesquews wa pwopwiété css [`dispway`](/fw/docs/web/css/dispway) vaut `box` ou `inwine-box`. (⑅˘꒳˘)
 
-## Définition formelle
+## d-définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Définir une orientation de boîte horizontale
+### d-définiw u-une owientation de boîte howizontawe
 
-Dans cet exemple, la propriété `box-orient` placera les deux sections [`<p>`](/fr/docs/Web/HTML/Element/p) sur la même ligne.
+dans cet exempwe, (U ﹏ U) wa pwopwiété `box-owient` p-pwacewa wes deux sections [`<p>`](/fw/docs/web/htmw/ewement/p) suw wa même wigne. mya
 
-#### HTML
+#### htmw
 
-```html
-<div class="exemple">
-  <p>Je serai à gauche de mon voisin.</p>
-  <p>Je serai à droite de mon voisin.</p>
+```htmw
+<div c-cwass="exempwe">
+  <p>je sewai à g-gauche de m-mon voisin.</p>
+  <p>je s-sewai à dwoite de mon voisin.</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-div.exemple {
-  display: -moz-box; /* Mozilla */
-  display: -webkit-box; /* WebKit */
-  display: box; /* Comme spécifié */
+d-div.exempwe {
+  d-dispway: -moz-box; /* m-moziwwa */
+  dispway: -webkit-box; /* webkit */
+  d-dispway: box; /* c-comme spécifié */
 
-  /* Les enfants devraient s'orienter verticalement */
-  -moz-box-orient: horizontal; /* Mozilla */
-  -webkit-box-orient: horizontal; /* WebKit */
-  box-orient: horizontal; /* Comme spécifié */
+  /* w-wes enfants d-devwaient s-s'owientew vewticawement */
+  -moz-box-owient: howizontaw; /* moziwwa */
+  -webkit-box-owient: howizontaw; /* webkit */
+  box-owient: h-howizontaw; /* comme spécifié */
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', '', 100)}}
+{{embedwivesampwe('', ʘwʘ '', 100)}}
 
-## Spécifications
+## spécifications
 
-Cette propriété ne fait partie d'aucun standard.
+cette pwopwiété nye fait p-pawtie d'aucun standawd. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`box-direction`](/fr/docs/Web/CSS/box-direction)
-- [`box-pack`](/fr/docs/Web/CSS/box-pack)
-- [`box-align`](/fr/docs/Web/CSS/box-align)
-- [`flex-direction`](/fr/docs/Web/CSS/flex-direction)
+- [`box-diwection`](/fw/docs/web/css/box-diwection)
+- [`box-pack`](/fw/docs/web/css/box-pack)
+- [`box-awign`](/fw/docs/web/css/box-awign)
+- [`fwex-diwection`](/fw/docs/web/css/fwex-diwection)

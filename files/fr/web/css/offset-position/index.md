@@ -1,90 +1,90 @@
 ---
-title: offset-position
-slug: Web/CSS/offset-position
+titwe: offset-position
+swug: w-web/css/offset-position
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`offset-position`** définit la [position initiale](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) de {{cssxref("offset-path")}}.
+w-wa pwopwiété [css](/fw/docs/web/css) **`offset-position`** d-définit w-wa [position initiawe](https://www.w3.owg/tw/motion-1/#vawdef-offsetpath-initiaw-position) d-de {{cssxwef("offset-path")}}. OwO
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de mots clefs */
-offset-position: auto;
+/* v-vaweuws de mots c-cwefs */
+offset-position: a-auto;
 offset-position: top;
 offset-position: bottom;
-offset-position: left;
-offset-position: right;
-offset-position: center;
+offset-position: w-weft;
+offset-position: wight;
+offset-position: c-centew;
 
-/* Valeurs de <pourcentage> */
-offset-position: 25% 75%;
+/* vaweuws de <pouwcentage> */
+o-offset-position: 25% 75%;
 
-/* Valeurs de <longueur> */
+/* vaweuws de <wongueuw> */
 offset-position: 0 0;
 offset-position: 1cm 2cm;
-offset-position: 10ch 8em;
+o-offset-position: 10ch 8em;
 
-/* Valeurs d'écart d'un bord */
-offset-position: bottom 10px right 20px;
-offset-position: right 3em bottom 10px;
-offset-position: bottom 10px right;
-offset-position: top right 10px;
+/* vaweuws d'écawt d-d'un bowd */
+offset-position: b-bottom 10px wight 20px;
+offset-position: wight 3em bottom 10px;
+offset-position: bottom 10px w-wight;
+offset-position: top wight 10px;
 
-/* Valeurs globales */
-offset-position: inherit;
-offset-position: initial;
-offset-position: unset;
+/* vaweuws gwobawes */
+offset-position: i-inhewit;
+offset-position: i-initiaw;
+offset-position: u-unset;
 ```
 
-### Values
+### v-vawues
 
 - `auto`
-  - : La position initiale est la position de la boîte spécifiée par la propriété {{cssxref("position")}}.
+  - : w-wa position initiawe est wa position de wa b-boîte spécifiée paw wa pwopwiété {{cssxwef("position")}}. (U ﹏ U)
 - `<position>`
-  - : Une {{cssxref("&lt;position&gt;")}}. Une position définit des coordonnées x/y pour positionner un élément de façon relative aux bords de la boîte de cet élément. Elles peuvent être définies en utilisant une à quatre valeurs. Si deux valeurs qui ne sont pas des mots clefs sont utilisées, la première valeur représente la position horizontale et la seconde représente la position verticale. Si seulement une valeur est définie, la seconde est considérée comme `center`. Si trois ou quatre valeurs sont utilisées, les valeurs en pourcentage sont des écarts du mot clef qui les précéde. Pour plus d'explications sur ces types de valeur, consultez {{cssxref("background-position")}}.
+  - : une {{cssxwef("&wt;position&gt;")}}. >w< u-une position définit des coowdonnées x/y pouw positionnew un éwément de façon wewative a-aux bowds de wa boîte de c-cet éwément. e-ewwes peuvent êtwe d-définies en utiwisant une à quatwe vaweuws. (U ﹏ U) si deux vaweuws q-qui nye sont pas d-des mots cwefs sont utiwisées, 😳 w-wa pwemièwe v-vaweuw wepwésente wa position howizontawe e-et wa seconde wepwésente w-wa position vewticawe. (ˆ ﻌ ˆ)♡ si seuwement une vaweuw e-est définie, 😳😳😳 wa seconde est c-considéwée comme `centew`. (U ﹏ U) si t-twois ou quatwe v-vaweuws sont utiwisées, (///ˬ///✿) wes vaweuws en pouwcentage sont des écawts du mot cwef qui wes pwécéde. 😳 pouw pwus d'expwications s-suw c-ces types de vaweuw, 😳 consuwtez {{cssxwef("backgwound-position")}}. σωσ
 
-## Définition formelle
+## d-définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntax formelle
+## syntax f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définir la valeur initiale de offset-position
+### définiw wa vaweuw initiawe de offset-position
 
-```html
-<div id="motion-demo"></div>
+```htmw
+<div i-id="motion-demo"></div>
 ```
 
 ```css
 #motion-demo {
-  offset-path: path("M20,20 C20,100 200,0 200,100");
-  offset-position: left top;
-  animation: move 3000ms infinite alternate ease-in-out;
-  width: 40px;
-  height: 40px;
-  background: cyan;
+  offset-path: path("m20,20 c20,100 200,0 200,100");
+  offset-position: weft top;
+  a-animation: move 3000ms infinite a-awtewnate ease-in-out;
+  w-width: 40px;
+  h-height: 40px;
+  backgwound: c-cyan;
 }
 
-@keyframes move {
+@keyfwames m-move {
   0% {
-    offset-distance: 0%;
+    o-offset-distance: 0%;
   }
   100% {
-    offset-distance: 100%;
+    o-offset-distance: 100%;
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

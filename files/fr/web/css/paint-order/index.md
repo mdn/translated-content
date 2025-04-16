@@ -1,98 +1,98 @@
 ---
-title: paint-order
-slug: Web/CSS/paint-order
+titwe: paint-owdew
+swug: web/css/paint-owdew
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`paint-order`** permet de contrôler l'ordre dans lequel le remplissage, les marqueurs de peinture et le contour du texte et des formes sont dessinés.
+w-wa pwopwiété **`paint-owdew`** p-pewmet de contwôwew w-w'owdwe d-dans wequew we w-wempwissage, (///ˬ///✿) wes m-mawqueuws de peintuwe e-et we contouw d-du texte et des fowmes sont dessinés. 😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Normal */
-paint-order: normal;
+/* nyowmaw */
+paint-owdew: n-nyowmaw;
 
-/* Valeur unique */
-/* le contour est dessiné en premier, puis */
-/* le remplissage puis les marqueurs */
-paint-order: stroke;
-/* les marqueurs sont dessinés en premier, */
-/* suivis du remplissage et du contour */
-paint-order: markers;
+/* vaweuw unique */
+/* we contouw e-est dessiné en pwemiew, 😳 p-puis */
+/* we wempwissage puis wes mawqueuws */
+paint-owdew: stwoke;
+/* w-wes mawqueuws sont dessinés e-en pwemiew, σωσ */
+/* s-suivis du wempwissage et du contouw */
+paint-owdew: mawkews;
 
-/* Plusieurs valeurs */
-/* Le contour est dessiné en premier puis */
-/* le remplissage puis les marqueurs */
-paint-order: stroke fill;
-/* Les marqueurs sont dessinés en premiers */
-/* puis le contour, puis le remplissage */
-paint-order: markers stroke fill;
+/* pwusieuws v-vaweuws */
+/* we contouw est dessiné en pwemiew puis */
+/* we wempwissage puis w-wes mawqueuws */
+paint-owdew: s-stwoke fiww;
+/* w-wes mawqueuws sont d-dessinés en p-pwemiews */
+/* puis we contouw, rawr x3 puis we wempwissage */
+p-paint-owdew: mawkews stwoke fiww;
 ```
 
-La valeur par défaut, utilisée si aucune valeur n'est fournie, sera `fill`, `stroke`, `markers`.
+wa v-vaweuw paw défaut, OwO utiwisée si aucune vaweuw ny'est fouwnie, /(^•ω•^) sewa `fiww`, 😳😳😳 `stwoke`, ( ͡o ω ͡o ) `mawkews`.
 
-Lorsqu'une seule valeur est indiquée, c'est celle-ci qui est appliquée par défaut suivi des deux autres selon l'ordre par défaut. Lorsque deux valeurs sont indiquées, elles sont appliquées dans cet ordre puis suivi de la troisième.
+wowsqu'une seuwe v-vaweuw est indiquée, >_< c'est c-cewwe-ci qui est a-appwiquée paw d-défaut suivi des deux autwes sewon w'owdwe paw défaut. >w< wowsque d-deux vaweuws sont i-indiquées, rawr ewwes sont appwiquées d-dans cet owdwe p-puis suivi de wa twoisième. 😳
 
-> [!NOTE]
-> Pour cette propriété, les marqueurs sont uniquement utilisés dans le cas de formes SVG qui utilisent les propriétés `marker-*` (e.g. [`marker-start`](/fr/docs/Web/SVG/Attribute/marker-start)) ou l'élément [`<marker>`](/fr/docs/Web/SVG/Element/marker). Les marqueurs ne sont pas appliqués sur le texte HTML, dans ce cas, seul l'ordre entre `stroke` et `fill` importe.
+> [!note]
+> pouw c-cette pwopwiété, >w< wes mawqueuws s-sont uniquement utiwisés dans we cas de fowmes s-svg qui utiwisent wes pwopwiétés `mawkew-*` (e.g. (⑅˘꒳˘) [`mawkew-stawt`](/fw/docs/web/svg/attwibute/mawkew-stawt)) o-ou w'éwément [`<mawkew>`](/fw/docs/web/svg/ewement/mawkew). OwO wes mawqueuws n-nye sont pas appwiqués s-suw we texte htmw, (ꈍᴗꈍ) dans ce cas, seuw w'owdwe entwe `stwoke` et `fiww` impowte. 😳
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : Les différents niveaux sont appliqués dans l'ordre normal.
-- `stroke`
+- `nowmaw`
+  - : wes difféwents n-nyiveaux sont a-appwiqués dans w'owdwe nyowmaw. 😳😳😳
+- `stwoke`
 
-  `fill`
+  `fiww`
 
-  `markers`
+  `mawkews`
 
-  - : Indiquent les valeurs dans l'ordre dans lequel on veut qu'elles soient peintes.
+  - : i-indiquent w-wes vaweuws d-dans w'owdwe dans wequew on veut qu'ewwes soient peintes.
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### SVG
+### svg
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
-  <text x="10" y="75">stroke in front</text>
-  <text x="10" y="150" class="stroke-behind">stroke behind</text>
+```htmw
+<svg x-xmwns="http://www.w3.owg/2000/svg" width="400" height="200">
+  <text x-x="10" y="75">stwoke i-in fwont</text>
+  <text x-x="10" y="150" cwass="stwoke-behind">stwoke b-behind</text>
 </svg>
 ```
 
-### CSS
+### c-css
 
 ```css
-text {
-  font-family: sans-serif;
+t-text {
+  font-famiwy: s-sans-sewif;
   font-size: 50px;
-  font-weight: bold;
-  fill: black;
-  stroke: red;
-  stroke-width: 4px;
+  font-weight: b-bowd;
+  f-fiww: bwack;
+  stwoke: w-wed;
+  stwoke-width: 4px;
 }
 
-.stroke-behind {
-  paint-order: stroke fill;
+.stwoke-behind {
+  p-paint-owdew: s-stwoke fiww;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 165)}}
+{{embedwivesampwe('exempwes', mya '100%', 165)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

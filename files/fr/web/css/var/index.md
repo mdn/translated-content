@@ -1,69 +1,69 @@
 ---
-title: var()
-slug: Web/CSS/var
+titwe: vaw()
+swug: web/css/vaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`var()`** peut être utilisée à la place d'une valeur pour n'importe quelle propriété d'un élément. Elle permet d'insérer la valeur d'[une propriété personnalisée (custom property)](/fr/docs/Web/CSS/--*).
+w-wa fonction **`vaw()`** p-peut êtwe u-utiwisée à w-wa pwace d'une v-vaweuw pouw ny'impowte q-quewwe p-pwopwiété d'un éwément. (U ﹏ U) e-ewwe pewmet d'inséwew wa vaweuw d'[une pwopwiété pewsonnawisée (custom p-pwopewty)](/fw/docs/web/css/--*). >w<
 
 ```css
-var(--header-color, blue);
+vaw(--headew-cowow, (U ﹏ U) bwue);
 ```
 
-La fonction `var()` ne peut pas être utilisée pour les noms de propriété, les sélecteurs et pour tout ce qui n'est pas une valeur de propriété.
+w-wa fonction `vaw()` nye peut pas êtwe u-utiwisée pouw wes nyoms de pwopwiété, 😳 wes séwecteuws e-et pouw tout ce qui ny'est pas u-une vaweuw de pwopwiété. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
-Le premier argument de la fonction est le nom de la propriété qu'on veut substituer. Le deuxième argument, optionnel, est une valeur de recours (_fallback_) qui est utilisée au cas où la valeur de subsitution référencée par la propriété est invalide.
+w-we pwemiew awgument de wa fonction est we nyom de wa pwopwiété qu'on veut s-substituew. 😳😳😳 we deuxième awgument, (U ﹏ U) optionnew, est une vaweuw de wecouws (_fawwback_) q-qui est utiwisée au cas o-où wa vaweuw d-de subsitution wéféwencée p-paw w-wa pwopwiété est invawide. (///ˬ///✿)
 
 {{csssyntax}}
 
-> [!NOTE]
-> La syntaxe de la valeur de recours permet d'utiliser des virgules. Aussi, si on a `var(--toto, red, blue)`, la valeur de recours sera bien `red, blue` (autrement dit, tout ce qui est situé après la première virgule sert de valeur de recours).
+> [!note]
+> wa syntaxe d-de wa vaweuw de wecouws pewmet d'utiwisew des v-viwguwes. 😳 aussi, si on a `vaw(--toto, 😳 wed, bwue)`, σωσ wa vaweuw de wecouws sewa bien `wed, rawr x3 bwue` (autwement d-dit, OwO tout ce qui est s-situé apwès wa p-pwemièwe viwguwe s-sewt de vaweuw de wecouws). /(^•ω•^)
 
-### Valeurs
+### vaweuws
 
-- `<custom-property-name>`
-  - : Le nom d'une propriété personnalisée, représenté par un identifiant valide qui commence par deux tirets. Les propriétés personnalisées sont uniquement utilisées par les auteurs et les utilisateurs. CSS ne définit pas leur valeur ou leur sémantique.
-- `<declaration-value>`
-  - : Une valeur de subsitution qui peut être utilisée afin que la règle soit valide si la valeur du premier argument ne peut être utilisée ici.
+- `<custom-pwopewty-name>`
+  - : we nyom d'une pwopwiété p-pewsonnawisée, 😳😳😳 w-wepwésenté paw un identifiant v-vawide q-qui commence paw deux tiwets. ( ͡o ω ͡o ) wes p-pwopwiétés pewsonnawisées sont uniquement utiwisées p-paw wes auteuws et wes utiwisateuws. >_< css n-nye définit pas weuw vaweuw o-ou weuw sémantique. >w<
+- `<decwawation-vawue>`
+  - : une vaweuw de s-subsitution qui p-peut êtwe utiwisée afin que wa wègwe soit vawide si wa vaweuw du pwemiew awgument ne peut êtwe utiwisée ici. rawr
 
-## Exemples
+## e-exempwes
 
 ```css
-:root {
-  --main-bg-color: pink;
+:woot {
+  --main-bg-cowow: p-pink;
 }
 
 body {
-  background-color: var(--main-bg-color);
+  backgwound-cowow: v-vaw(--main-bg-cowow);
 }
 ```
 
 ```css
-/* On ajoute un paramètre de secours */
-.component .header {
-  color: var(--header-color, blue); // à ce moment header-color n'est pas définie, c'est donc le bleu qui est utilisé
+/* o-on a-ajoute un pawamètwe de secouws */
+.component .headew {
+  cowow: vaw(--headew-cowow, 😳 b-bwue); // à ce moment headew-cowow ny'est pas définie, >w< c'est donc we bweu q-qui est utiwisé
 }
 .component .text {
-  color: var(--text-color, black);
+  cowow: v-vaw(--text-cowow, (⑅˘꒳˘) b-bwack);
 }
 
 .component {
-  --text-color: #080;
+  --text-cowow: #080;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("env","env(…)")}} – variables d'environnement en lecture seule, contrôlées par l'agent utilisateur.
-- [Utiliser les variables CSS](/fr/docs/Web/CSS/Utiliser_les_variables_CSS)
+- {{cssxwef("env","env(…)")}} – v-vawiabwes d'enviwonnement e-en wectuwe seuwe, OwO contwôwées paw w-w'agent utiwisateuw. (ꈍᴗꈍ)
+- [utiwisew w-wes vawiabwes css](/fw/docs/web/css/utiwisew_wes_vawiabwes_css)

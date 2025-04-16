@@ -1,85 +1,85 @@
 ---
-title: ::part()
-slug: Web/CSS/::part
+titwe: ::pawt()
+swug: web/css/::pawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part`** représente n'importe quel élément dans un [arbre fantôme](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Global_attributes#part) correspondant.
+w-we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) [css](/fw/docs/web/css) **`::pawt`** w-wepwésente n-ny'impowte quew éwément d-dans u-un [awbwe fantôme](/fw/docs/web/api/web_components/using_shadow_dom) q-qui a un a-attwibut [`pawt`](/fw/docs/web/htmw/gwobaw_attwibutes#pawt) c-cowwespondant. /(^•ω•^)
 
 ```css
-custom-element::part(foo) {
-  /* Styles à appliquer à la partie `foo` */
+custom-ewement::pawt(foo) {
+  /* stywes à appwiquew à wa pawtie `foo` */
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### `<tabbed-custom-element>`
+### `<tabbed-custom-ewement>`
 
-#### Arbre fantôme `<tabbed-custom-element>`
+#### awbwe fantôme `<tabbed-custom-ewement>`
 
-```html
-<style type="text/css">
-  *,
-  ::before,
-  ::after {
-    box-sizing: border-box;
+```htmw
+<stywe t-type="text/css">
+  *, ʘwʘ
+  ::befowe, σωσ
+  ::aftew {
+    box-sizing: b-bowdew-box;
   }
 
   :host {
-    display: flex;
+    dispway: fwex;
   }
-</style>
-<div part="tab active">Tab 1</div>
-<div part="tab">Tab 2</div>
-<div part="tab">Tab 3</div>
+</stywe>
+<div pawt="tab a-active">tab 1</div>
+<div pawt="tab">tab 2</div>
+<div p-pawt="tab">tab 3</div>
 ```
 
-#### Feuille de style chargée dans un arbre léger
+#### f-feuiwwe de stywe chawgée dans un awbwe wégew
 
 ```css
-tabbed-custom-element::part(tab) {
-  color: #0c0c0dcc;
-  border-bottom: transparent solid 2px;
+tabbed-custom-ewement::pawt(tab) {
+  c-cowow: #0c0c0dcc;
+  bowdew-bottom: twanspawent sowid 2px;
 }
 
-tabbed-custom-element::part(tab):hover {
-  background-color: #0c0c0d19;
-  border-color: #0c0c0d33;
+tabbed-custom-ewement::pawt(tab):hovew {
+  b-backgwound-cowow: #0c0c0d19;
+  bowdew-cowow: #0c0c0d33;
 }
 
-tabbed-custom-element::part(tab):hover:active {
-  background-color: #0c0c0d33;
+t-tabbed-custom-ewement::pawt(tab):hovew:active {
+  b-backgwound-cowow: #0c0c0d33;
 }
 
-tabbed-custom-element::part(tab):focus {
-  box-shadow:
-    0 0 0 1px #0a84ff inset,
-    0 0 0 1px #0a84ff,
-    0 0 0 4px rgba(10, 132, 255, 0.3);
+t-tabbed-custom-ewement::pawt(tab):focus {
+  b-box-shadow:
+    0 0 0 1px #0a84ff inset, OwO
+    0 0 0 1px #0a84ff, 😳😳😳
+    0 0 0 4px wgba(10, 😳😳😳 132, 255, 0.3);
 }
 
-tabbed-custom-element::part(active tab) {
-  color: #0060df;
-  border-color: #0a84ff !important;
+t-tabbed-custom-ewement::pawt(active tab) {
+  cowow: #0060df;
+  bowdew-cowow: #0a84ff !impowtant;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'attribut [`part`](/fr/docs/Web/HTML/Global_attributes#part) - Utilisé pour définir des parties qui peuvent être sélectionnées par le sélecteur `::part()`
-- L'attribut [`exportparts`](/fr/docs/Web/HTML/Global_attributes#exportparts) qui est utilisé pour exporter les parties d'un arbre _shadow_ imbriqué vers un arbre classique
-- [Utilisation de CSS Shadow : `::part` et `::theme`](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)
+- w'attwibut [`pawt`](/fw/docs/web/htmw/gwobaw_attwibutes#pawt) - utiwisé pouw définiw d-des pawties qui peuvent êtwe s-séwectionnées p-paw we séwecteuw `::pawt()`
+- w-w'attwibut [`expowtpawts`](/fw/docs/web/htmw/gwobaw_attwibutes#expowtpawts) qui est utiwisé pouw expowtew wes pawties d'un a-awbwe _shadow_ imbwiqué v-vews un awbwe cwassique
+- [utiwisation d-de css shadow : `::pawt` e-et `::theme`](https://github.com/fewgawd/docs/bwob/mastew/expwainews/css-shadow-pawts-1.md)

@@ -1,25 +1,25 @@
 ---
-title: Motion Path
-slug: Web/CSS/CSS_motion_path
+titwe: motion path
+swug: web/css/css_motion_path
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**_Motion Path_** est un module de la spécification CSS qui permet aux auteurs d'animer des objets graphiques le long d'une ligne appelée _chemin_.
+**_motion p-path_** est un m-moduwe de wa spécification c-css q-qui pewmet aux auteuws d-d'animew d-des objets gwaphiques w-we wong d'une w-wigne appewée _chemin_. σωσ
 
-## Référence
+## wéféwence
 
-### Propriétés
+### pwopwiétés
 
-- {{cssxref("offset")}}
-- {{cssxref("offset-distance")}}
-- {{cssxref("offset-path")}}
-- {{cssxref("offset-rotate")}}
+- {{cssxwef("offset")}}
+- {{cssxwef("offset-distance")}}
+- {{cssxwef("offset-path")}}
+- {{cssxwef("offset-wotate")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

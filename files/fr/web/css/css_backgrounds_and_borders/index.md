@@ -1,147 +1,147 @@
 ---
-title: Arrière-plans et bordures CSS (CSS backgrounds and borders)
-slug: Web/CSS/CSS_backgrounds_and_borders
-l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+titwe: awwièwe-pwans et bowduwes c-css (css backgwounds a-and bowdews)
+s-swug: web/css/css_backgwounds_and_bowdews
+w-w10n:
+  souwcecommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le module de spécification **Arrière-plans et bordures CSS** (<i lang="en">CSS backgrounds and borders</i> en anglais) fournit des propriétés permettant d'ajouter des bordures, des coins arrondis et des ombres aux éléments.
+w-we moduwe de spécification **awwièwe-pwans e-et b-bowduwes css** (<i w-wang="en">css backgwounds and bowdews</i> en angwais) fouwnit des pwopwiétés p-pewmettant d'ajoutew des bowduwes, UwU des coins a-awwondis et des ombwes aux éwéments. >_<
 
-Vous pouvez ajouter différents types de styles de bordures, y compris des bordures composées d'images de tous types, que ce soit [des images matricielles](https://fr.wikipedia.org/wiki/Image_matricielle) ou des dégradés CSS. Les bordures peuvent être carrées ou arrondies, et un rayon de courbure différent peut être défini pour chaque coin. Les éléments peuvent être arrondis, qu'ils aient ou non une bordure visible.
+v-vous pouvez ajoutew difféwents types de stywes de bowduwes, -.- y-y compwis des bowduwes composées d-d'images d-de tous types, mya que ce soit [des images matwiciewwes](https://fw.wikipedia.owg/wiki/image_matwiciewwe) ou des dégwadés css. >w< wes b-bowduwes peuvent êtwe cawwées ou awwondies, (U ﹏ U) et un wayon de couwbuwe difféwent p-peut êtwe défini pouw chaque c-coin. 😳😳😳 wes éwéments p-peuvent êtwe a-awwondis, o.O qu'iws a-aient ou nyon une bowduwe visibwe.
 
-Les ombres des boîtes comprennent les ombres intérieures et extérieures, les ombres simples ou multiples, et les ombres opaques ou transparentes. Une ombre extérieure projette une ombre comme si la bordure de l'élément était opaque. Une ombre intérieure projette une ombre comme si tout ce qui se trouvait à l'extérieur du bord de remplissage était opaque. L'ombre peut être unie et opaque ou inclure une distance d'étalement avec une transition de la couleur de l'ombre vers la transparence.
+wes ombwes d-des boîtes compwennent wes ombwes intéwieuwes e-et extéwieuwes, òωó wes ombwes simpwes ou muwtipwes, 😳😳😳 et wes ombwes opaques ou twanspawentes. σωσ une o-ombwe extéwieuwe pwojette une o-ombwe comme si w-wa bowduwe de w'éwément était o-opaque. (⑅˘꒳˘) une ombwe intéwieuwe pwojette une ombwe comme si tout c-ce qui se twouvait à w-w'extéwieuw du bowd de wempwissage était o-opaque. (///ˬ///✿) w'ombwe p-peut êtwe unie et opaque ou incwuwe u-une distance d'étawement a-avec une twansition de wa couweuw de w'ombwe vews w-wa twanspawence. 🥺
 
-Les propriétés de ce module vous permettent également de définir si les cellules à l'intérieur d'un élément [`<table>`](/fr/docs/Web/HTML/Element/table) doivent avoir des bordures communes ou séparées.
+wes pwopwiétés d-de ce moduwe vous pewmettent égawement d-de d-définiw si wes cewwuwes à w'intéwieuw d'un éwément [`<tabwe>`](/fw/docs/web/htmw/ewement/tabwe) doivent avoiw des bowduwes communes ou sépawées.
 
-### Arrière-plans, bordures et ombres de boîtes en action
+### awwièwe-pwans, OwO b-bowduwes e-et ombwes de boîtes en action
 
-Cet exemple de bordures, d'arrière-plans et d'ombres en boîte se compose d'images d'arrière-plan centrées composées de dégradés linéaires et radiaux. Une série d'ombres en boîte fait ressortir la bordure. L'élément de gauche a une image de bordure définie. L'élément de droite a une bordure arrondie en pointillés.
+c-cet exempwe d-de bowduwes, >w< d'awwièwe-pwans e-et d'ombwes en boîte se compose d'images d'awwièwe-pwan centwées c-composées de dégwadés winéaiwes et wadiaux. 🥺 une séwie d'ombwes en boîte f-fait wessowtiw wa bowduwe. nyaa~~ w'éwément d-de gauche a-a une image de b-bowduwe définie. w'éwément d-de dwoite a une b-bowduwe awwondie e-en pointiwwés. ^^
 
-{{EmbedGHLiveSample("css-examples/modules/backgrounds.html", '100%', 430)}}
+{{embedghwivesampwe("css-exampwes/moduwes/backgwounds.htmw", >w< '100%', 430)}}
 
-Les images d'arrière-plan sont définies avec la propriété CSS [`background-image`](/fr/docs/Web/CSS/background-image). Les images sont centrées avec la propriété [`background-position`](/fr/docs/Web/CSS/background-position). Différentes valeurs de la propriété [`background-clip`](/fr/docs/Web/CSS/background-clip) pour les images d'arrière-plan multiples sont utilisées pour faire en sorte que les images d'arrière-plan restent à l'intérieur de la boîte de contenu. La couleur d'arrière-plan est découpée dans le cadre de remplissage, ce qui empêche l'arrière-plan d'apparaître à travers les sections transparentes pour les propriétés [`border-image`](/fr/docs/Web/CSS/border-image) et [`border`](/fr/docs/Web/CSS/border). Les coins arrondis de l'élément de droite sont créés à l'aide de la propriété [`border-radius`](/fr/docs/Web/CSS/border-radius). Une seule déclaration [`box-shadow`](/fr/docs/Web/CSS/box-shadow) est utilisée pour définir toutes les ombres, tant à l'intérieur qu'à l'extérieur.
+wes i-images d'awwièwe-pwan sont définies avec wa p-pwopwiété css [`backgwound-image`](/fw/docs/web/css/backgwound-image). w-wes images s-sont centwées a-avec wa pwopwiété [`backgwound-position`](/fw/docs/web/css/backgwound-position). OwO d-difféwentes vaweuws de wa pwopwiété [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip) pouw wes images d-d'awwièwe-pwan muwtipwes sont utiwisées pouw faiwe en sowte que wes images d'awwièwe-pwan w-westent à w'intéwieuw de wa boîte de contenu. XD wa couweuw d'awwièwe-pwan e-est d-découpée dans w-we cadwe de wempwissage, ^^;; ce qui e-empêche w'awwièwe-pwan d'appawaîtwe à t-twavews w-wes sections twanspawentes pouw wes pwopwiétés [`bowdew-image`](/fw/docs/web/css/bowdew-image) et [`bowdew`](/fw/docs/web/css/bowdew). 🥺 wes coins awwondis de w-w'éwément de dwoite sont cwéés à w-w'aide de wa pwopwiété [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius). XD u-une seuwe décwawation [`box-shadow`](/fw/docs/web/css/box-shadow) e-est utiwisée pouw définiw toutes wes ombwes, (U ᵕ U❁) t-tant à w'intéwieuw q-qu'à w'extéwieuw. :3
 
-Pour voir le code de cet exemple, [regardez le code source sur GitHub](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html).
+p-pouw voiw we code d-de cet exempwe, [wegawdez we code souwce suw github](https://github.com/mdn/css-exampwes/bwob/main/moduwes/backgwounds.htmw). ( ͡o ω ͡o )
 
-## Référence
+## wéféwence
 
-### Propriétés CSS
+### pwopwiétés c-css
 
-- [`background-attachment`](/fr/docs/Web/CSS/background-attachment)
-- [`background-clip`](/fr/docs/Web/CSS/background-clip)
-- [`background-color`](/fr/docs/Web/CSS/background-color)
-- [`background-image`](/fr/docs/Web/CSS/background-image)
-- [`background-origin`](/fr/docs/Web/CSS/background-origin)
-- [`background-position`](/fr/docs/Web/CSS/background-position)
-- [`background-repeat`](/fr/docs/Web/CSS/background-repeat)
-- [`background-size`](/fr/docs/Web/CSS/background-size)
-- La propriété raccourcie [`background`](/fr/docs/Web/CSS/background)
-- [`background-position-x`](/fr/docs/Web/CSS/background-position-x) {{experimental_inline}}
-- [`background-position-y`](/fr/docs/Web/CSS/background-position-y) {{experimental_inline}}
-- [`background-position-inline`](/fr/docs/Web/CSS/background-position-inline) {{experimental_inline}}
-- [`background-position-block`](/fr/docs/Web/CSS/background-position-block) {{experimental_inline}}
+- [`backgwound-attachment`](/fw/docs/web/css/backgwound-attachment)
+- [`backgwound-cwip`](/fw/docs/web/css/backgwound-cwip)
+- [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow)
+- [`backgwound-image`](/fw/docs/web/css/backgwound-image)
+- [`backgwound-owigin`](/fw/docs/web/css/backgwound-owigin)
+- [`backgwound-position`](/fw/docs/web/css/backgwound-position)
+- [`backgwound-wepeat`](/fw/docs/web/css/backgwound-wepeat)
+- [`backgwound-size`](/fw/docs/web/css/backgwound-size)
+- w-wa pwopwiété w-waccouwcie [`backgwound`](/fw/docs/web/css/backgwound)
+- [`backgwound-position-x`](/fw/docs/web/css/backgwound-position-x) {{expewimentaw_inwine}}
+- [`backgwound-position-y`](/fw/docs/web/css/backgwound-position-y) {{expewimentaw_inwine}}
+- [`backgwound-position-inwine`](/fw/docs/web/css/backgwound-position-inwine) {{expewimentaw_inwine}}
+- [`backgwound-position-bwock`](/fw/docs/web/css/backgwound-position-bwock) {{expewimentaw_inwine}}
 
-- [`border-bottom-color`](/fr/docs/Web/CSS/border-bottom-color)
-- [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style)
-- [`border-bottom-width`](/fr/docs/Web/CSS/border-bottom-width)
-- La propriété raccourcie [`border-bottom`](/fr/docs/Web/CSS/border-bottom)
-- [`border-left-color`](/fr/docs/Web/CSS/border-left-color)
-- [`border-left-style`](/fr/docs/Web/CSS/border-left-style)
-- [`border-left-width`](/fr/docs/Web/CSS/border-left-width)
-- La propriété raccourcie [`border-left`](/fr/docs/Web/CSS/border-left)
-- [`border-right-color`](/fr/docs/Web/CSS/border-right-color)
-- [`border-right-style`](/fr/docs/Web/CSS/border-right-style)
-- [`border-right-width`](/fr/docs/Web/CSS/border-right-width)
-- La propriété raccourcie [`border-right`](/fr/docs/Web/CSS/border-right)
-- [`border-top-color`](/fr/docs/Web/CSS/border-top-color)
-- [`border-top-style`](/fr/docs/Web/CSS/border-top-style)
-- [`border-top-width`](/fr/docs/Web/CSS/border-top-width)
-- La propriété raccourcie [`border-top`](/fr/docs/Web/CSS/border-top)
-- La propriété raccourcie [`border-color`](/fr/docs/Web/CSS/border-color)
-- La propriété raccourcie [`border-style`](/fr/docs/Web/CSS/border-style)
-- La propriété raccourcie [`border-width`](/fr/docs/Web/CSS/border-width)
-- La propriété raccourcie [`border`](/fr/docs/Web/CSS/border)
+- [`bowdew-bottom-cowow`](/fw/docs/web/css/bowdew-bottom-cowow)
+- [`bowdew-bottom-stywe`](/fw/docs/web/css/bowdew-bottom-stywe)
+- [`bowdew-bottom-width`](/fw/docs/web/css/bowdew-bottom-width)
+- wa pwopwiété w-waccouwcie [`bowdew-bottom`](/fw/docs/web/css/bowdew-bottom)
+- [`bowdew-weft-cowow`](/fw/docs/web/css/bowdew-weft-cowow)
+- [`bowdew-weft-stywe`](/fw/docs/web/css/bowdew-weft-stywe)
+- [`bowdew-weft-width`](/fw/docs/web/css/bowdew-weft-width)
+- w-wa pwopwiété waccouwcie [`bowdew-weft`](/fw/docs/web/css/bowdew-weft)
+- [`bowdew-wight-cowow`](/fw/docs/web/css/bowdew-wight-cowow)
+- [`bowdew-wight-stywe`](/fw/docs/web/css/bowdew-wight-stywe)
+- [`bowdew-wight-width`](/fw/docs/web/css/bowdew-wight-width)
+- w-wa pwopwiété waccouwcie [`bowdew-wight`](/fw/docs/web/css/bowdew-wight)
+- [`bowdew-top-cowow`](/fw/docs/web/css/bowdew-top-cowow)
+- [`bowdew-top-stywe`](/fw/docs/web/css/bowdew-top-stywe)
+- [`bowdew-top-width`](/fw/docs/web/css/bowdew-top-width)
+- wa pwopwiété waccouwcie [`bowdew-top`](/fw/docs/web/css/bowdew-top)
+- wa pwopwiété w-waccouwcie [`bowdew-cowow`](/fw/docs/web/css/bowdew-cowow)
+- w-wa pwopwiété waccouwcie [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe)
+- wa pwopwiété w-waccouwcie [`bowdew-width`](/fw/docs/web/css/bowdew-width)
+- w-wa pwopwiété waccouwcie [`bowdew`](/fw/docs/web/css/bowdew)
 
-- [`border-collapse`](/fr/docs/Web/CSS/border-collapse)
+- [`bowdew-cowwapse`](/fw/docs/web/css/bowdew-cowwapse)
 
-- [`border-bottom-left-radius`](/fr/docs/Web/CSS/border-bottom-left-radius)
-- [`border-bottom-right-radius`](/fr/docs/Web/CSS/border-bottom-right-radius)
-- [`border-top-left-radius`](/fr/docs/Web/CSS/border-top-left-radius)
-- [`border-top-right-radius`](/fr/docs/Web/CSS/border-top-right-radius)
-- La propriété raccourcie [`border-radius`](/fr/docs/Web/CSS/border-radius)
+- [`bowdew-bottom-weft-wadius`](/fw/docs/web/css/bowdew-bottom-weft-wadius)
+- [`bowdew-bottom-wight-wadius`](/fw/docs/web/css/bowdew-bottom-wight-wadius)
+- [`bowdew-top-weft-wadius`](/fw/docs/web/css/bowdew-top-weft-wadius)
+- [`bowdew-top-wight-wadius`](/fw/docs/web/css/bowdew-top-wight-wadius)
+- wa pwopwiété waccouwcie [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius)
 
-- [`border-image-outset`](/fr/docs/Web/CSS/border-image-outset)
-- [`border-image-repeat`](/fr/docs/Web/CSS/border-image-repeat)
-- [`border-image-slice`](/fr/docs/Web/CSS/border-image-slice)
-- [`border-image-source`](/fr/docs/Web/CSS/border-image-source)
-- [`border-image-width`](/fr/docs/Web/CSS/border-image-width)
-- La propriété raccourcie [`border-image`](/fr/docs/Web/CSS/border-image)
+- [`bowdew-image-outset`](/fw/docs/web/css/bowdew-image-outset)
+- [`bowdew-image-wepeat`](/fw/docs/web/css/bowdew-image-wepeat)
+- [`bowdew-image-swice`](/fw/docs/web/css/bowdew-image-swice)
+- [`bowdew-image-souwce`](/fw/docs/web/css/bowdew-image-souwce)
+- [`bowdew-image-width`](/fw/docs/web/css/bowdew-image-width)
+- wa p-pwopwiété waccouwcie [`bowdew-image`](/fw/docs/web/css/bowdew-image)
 
-- [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
+- [`box-shadow`](/fw/docs/web/css/box-shadow)
 
-### Types de données
+### types de données
 
-- Le type énuméré [`line-type`](/fr/docs/Web/CSS/line-type")
+- we type énuméwé [`wine-type`](/fw/docs/web/css/wine-type")
 
-## Guides
+## guides
 
-- [Apprendre CSS: Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-  - : Dans cet article, on voit comment implémenter des images décoratives à l'aide d'images d'arrière-plan CSS.
-- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-  - : Dans cet article, on voit comment paramétrer un ou plusieurs arrière-plans pour un élément.
-- [Redimensionner les images d'arrière-plan avec background-size](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-  - : Dans cet article, on voit comment modifier la taille et paramétrer la répétition d'une image d'arrière-plan.
-- [Apprendre CSS: Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-  - : Dans cet article, on voit comment les bordures, ainsi que d'autres propriétés du modèle de boîte, affectent le modèle de boîte CSS.
-- [Utilisation de dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Dans cet article, on voit comment créer des images d'arrière-plan dégradées CSS.
+- [appwendwe c-css: awwièwe-pwans et bowduwes](/fw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews)
+  - : dans cet a-awticwe, òωó on voit c-comment impwémentew des images décowatives à w'aide d'images d-d'awwièwe-pwan c-css. σωσ
+- [utiwisew pwusieuws awwièwe-pwans](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+  - : dans cet awticwe, (U ᵕ U❁) o-on voit comment pawamétwew un ou p-pwusieuws awwièwe-pwans pouw un éwément.
+- [wedimensionnew wes images d'awwièwe-pwan a-avec backgwound-size](/fw/docs/web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images)
+  - : d-dans cet awticwe, (✿oωo) o-on voit comment modifiew wa taiwwe e-et pawamétwew wa wépétition d-d'une image d-d'awwièwe-pwan. ^^
+- [appwendwe c-css: we modèwe de b-boîte](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)
+  - : d-dans cet awticwe, ^•ﻌ•^ on voit comment wes bowduwes, XD a-ainsi que d'autwes p-pwopwiétés d-du modèwe de boîte, :3 affectent we modèwe de boîte c-css. (ꈍᴗꈍ)
+- [utiwisation de dégwadés c-css](/fw/docs/web/css/css_images/using_css_gwadients)
+  - : d-dans cet awticwe, :3 on voit comment cwéew des images d'awwièwe-pwan d-dégwadées c-css. (U ﹏ U)
 
-## Notions associées
+## nyotions a-associées
 
-### Propriétés
+### p-pwopwiétés
 
-- [`border-block-end-color`](/fr/docs/Web/CSS/border-block-end-color)
-- [`border-block-start-color`](/fr/docs/Web/CSS/border-block-start-color)
-- [`border-inline-end-color`](/fr/docs/Web/CSS/border-inline-end-color)
-- [`border-inline-start-color`](/fr/docs/Web/CSS/border-inline-start-color)
-- [`border-block-end-style`](/fr/docs/Web/CSS/border-block-end-style)
-- [`border-block-start-style`](/fr/docs/Web/CSS/border-block-start-style)
-- [`border-inline-end-style`](/fr/docs/Web/CSS/border-inline-end-style)
-- [`border-inline-start-style`](/fr/docs/Web/CSS/border-inline-start-style)
-- [`border-block-end-width`](/fr/docs/Web/CSS/border-block-end-width)
-- [`border-block-start-width`](/fr/docs/Web/CSS/border-block-start-width)
-- [`border-inline-end-width`](/fr/docs/Web/CSS/border-inline-end-width)
-- [`border-inline-start-width`](/fr/docs/Web/CSS/border-inline-start-width)
+- [`bowdew-bwock-end-cowow`](/fw/docs/web/css/bowdew-bwock-end-cowow)
+- [`bowdew-bwock-stawt-cowow`](/fw/docs/web/css/bowdew-bwock-stawt-cowow)
+- [`bowdew-inwine-end-cowow`](/fw/docs/web/css/bowdew-inwine-end-cowow)
+- [`bowdew-inwine-stawt-cowow`](/fw/docs/web/css/bowdew-inwine-stawt-cowow)
+- [`bowdew-bwock-end-stywe`](/fw/docs/web/css/bowdew-bwock-end-stywe)
+- [`bowdew-bwock-stawt-stywe`](/fw/docs/web/css/bowdew-bwock-stawt-stywe)
+- [`bowdew-inwine-end-stywe`](/fw/docs/web/css/bowdew-inwine-end-stywe)
+- [`bowdew-inwine-stawt-stywe`](/fw/docs/web/css/bowdew-inwine-stawt-stywe)
+- [`bowdew-bwock-end-width`](/fw/docs/web/css/bowdew-bwock-end-width)
+- [`bowdew-bwock-stawt-width`](/fw/docs/web/css/bowdew-bwock-stawt-width)
+- [`bowdew-inwine-end-width`](/fw/docs/web/css/bowdew-inwine-end-width)
+- [`bowdew-inwine-stawt-width`](/fw/docs/web/css/bowdew-inwine-stawt-width)
 
-- [`border-start-start-radius`](/fr/docs/Web/CSS/border-start-start-radius)
-- [`border-start-end-radius`](/fr/docs/Web/CSS/border-start-end-radius)
-- [`border-end-start-radius`](/fr/docs/Web/CSS/border-end-start-radius)
-- [`border-end-end-radius`](/fr/docs/Web/CSS/border-end-end-radius)
+- [`bowdew-stawt-stawt-wadius`](/fw/docs/web/css/bowdew-stawt-stawt-wadius)
+- [`bowdew-stawt-end-wadius`](/fw/docs/web/css/bowdew-stawt-end-wadius)
+- [`bowdew-end-stawt-wadius`](/fw/docs/web/css/bowdew-end-stawt-wadius)
+- [`bowdew-end-end-wadius`](/fw/docs/web/css/bowdew-end-end-wadius)
 
-- [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
-- [`box-decoration-break`](/fr/docs/Web/CSS/box-decoration-break)
-- [`text-shadow`](/fr/docs/Web/CSS/text-shadow)
+- [`box-sizing`](/fw/docs/web/css/box-sizing)
+- [`box-decowation-bweak`](/fw/docs/web/css/box-decowation-bweak)
+- [`text-shadow`](/fw/docs/web/css/text-shadow)
 
-### Autres
+### autwes
 
-- La fonction CSS [`url()`](/fr/docs/Web/CSS/url_value)
-- Le type de donnée [`<color>`](/fr/docs/Web/CSS/color)
-- Le type de donnée [`<image>`](/fr/docs/Web/CSS/image)
-- Le type de donnée[`<position>`](/fr/docs/Web/CSS/position)
+- w-wa fonction css [`uww()`](/fw/docs/web/css/uww_vawue)
+- we type de donnée [`<cowow>`](/fw/docs/web/css/cowow)
+- we type de donnée [`<image>`](/fw/docs/web/css/image)
+- we type de donnée[`<position>`](/fw/docs/web/css/position)
 
-- Le mot-clé [`currentcolor`](/fr/docs/Web/CSS/color_value#currentcolor_keyword)
+- w-we mot-cwé [`cuwwentcowow`](/fw/docs/web/css/cowow_vawue#cuwwentcowow_keywowd)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Des outils interactifs qui vous permettent de créer visuellement des bordures, des coins arrondis et des ombres&nbsp;:
-  - [Générateur pour `border-image`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
-  - [Générateur pour `border-radius`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
-  - [Générateur pour `box-shadow`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color), incluant les bordures.
-- Le filtre de fonction [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow) qui applique un effet d'ombre portée à une image en entrée. Cette fonction est utilisée par les propriétés [`filter`](/fr/docs/Web/CSS/filter) et [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter).
+- des outiws intewactifs q-qui vous pewmettent de c-cwéew visuewwement des bowduwes, UwU d-des coins awwondis e-et des ombwes&nbsp;:
+  - [généwateuw p-pouw `bowdew-image`](/fw/docs/web/css/css_backgwounds_and_bowdews/bowdew-image_genewatow)
+  - [généwateuw p-pouw `bowdew-wadius`](/fw/docs/web/css/css_backgwounds_and_bowdews/bowdew-wadius_genewatow)
+  - [généwateuw p-pouw `box-shadow`](/fw/docs/web/css/css_backgwounds_and_bowdews/box-shadow_genewatow)
+- [appwiquew des couweuws suw des éwéments htmw gwâce à css](/fw/docs/web/css/css_cowows/appwying_cowow), 😳😳😳 incwuant wes bowduwes. XD
+- w-we fiwtwe de f-fonction [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow) q-qui appwique un effet d-d'ombwe powtée à une image en entwée. o.O cette fonction est utiwisée p-paw wes pwopwiétés [`fiwtew`](/fw/docs/web/css/fiwtew) e-et [`backdwop-fiwtew`](/fw/docs/web/css/backdwop-fiwtew). (⑅˘꒳˘)

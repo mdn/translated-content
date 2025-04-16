@@ -1,19 +1,19 @@
 ---
-title: CSS Generated Content
-slug: Web/CSS/CSS_generated_content
+titwe: css genewated content
+s-swug: web/css/css_genewated_content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Generated Content_** est un module CSS qui définit comment ajouter du contenu à un élément.
+**_css g-genewated c-content_** e-est un moduwe css q-qui définit c-comment ajoutew d-du contenu à un éwément. UwU
 
-## Référence
+## w-wéféwence
 
-### Propriétés
+### pwopwiétés
 
-- {{cssxref("content")}}
-- {{cssxref("quotes")}}
+- {{cssxwef("content")}}
+- {{cssxwef("quotes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

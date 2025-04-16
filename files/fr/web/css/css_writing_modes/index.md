@@ -1,23 +1,23 @@
 ---
-title: CSS Writing Modes
-slug: Web/CSS/CSS_writing_modes
+titwe: css wwiting modes
+swug: w-web/css/css_wwiting_modes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Writing Modes_** (ou modes d'écriture CSS) est un module qui définit différents modes d'écriture internationaux comme l'écriture de gauche à droite (e.g. utilisée par les langues latines et indiennes), de droite à gauche (e.g. utilisée par l'hébreu ou l'arabe), bidirectionnelle (utilisée quand il y a à la fois des écritures de gauche à droite et de droite à gauche sont ) et verticale (e.g. utilisée par certains écrits asiatiques).
+**_css w-wwiting modes_** (ou m-modes d'écwituwe c-css) e-est un moduwe qui d-définit difféwents m-modes d'écwituwe i-intewnationaux comme w'écwituwe de gauche à dwoite (e.g. -.- utiwisée paw w-wes wangues watines et indiennes), ( ͡o ω ͡o ) de dwoite à g-gauche (e.g. rawr x3 utiwisée paw w'hébweu o-ou w'awabe), nyaa~~ bidiwectionnewwe (utiwisée quand iw y a à wa fois des écwituwes d-de gauche à dwoite et de d-dwoite à gauche s-sont ) et vewticawe (e.g. /(^•ω•^) utiwisée paw cewtains écwits asiatiques). rawr
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("direction")}}
-- {{cssxref("glyph-orientation-horizontal")}}
-- {{cssxref("text-combine-upright")}}
-- {{cssxref("text-orientation")}}
-- {{cssxref("unicode-bidi")}}
-- {{cssxref("writing-mode")}}
+- {{cssxwef("diwection")}}
+- {{cssxwef("gwyph-owientation-howizontaw")}}
+- {{cssxwef("text-combine-upwight")}}
+- {{cssxwef("text-owientation")}}
+- {{cssxwef("unicode-bidi")}}
+- {{cssxwef("wwiting-mode")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

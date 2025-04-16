@@ -1,134 +1,134 @@
 ---
-title: text-rendering
-slug: Web/CSS/text-rendering
+titwe: text-wendewing
+swug: web/css/text-wendewing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`text-rendering`** donne de l'information au moteur de rendu sur ce qu'il doit optimiser lors de l'affichage du texte.
+w-wa pwopwiété **`text-wendewing`** d-donne d-de w'infowmation a-au moteuw de wendu s-suw ce qu'iw d-doit optimisew w-wows de w'affichage d-du texte. ʘwʘ
 
-Le navigateur fait des compromis entre la vitesse, la lisibilité et la précision géométrique.
+we nyavigateuw fait des compwomis entwe wa vitesse, (˘ω˘) wa wisibiwité e-et wa pwécision géométwique. (✿oωo)
 
 ```css
-/* Avec un mot-clé */
-text-rendering: auto;
-text-rendering: optimizeSpeed;
-text-rendering: optimizeLegibility;
-text-rendering: geometricPrecision;
+/* avec u-un mot-cwé */
+text-wendewing: a-auto;
+text-wendewing: optimizespeed;
+text-wendewing: optimizewegibiwity;
+t-text-wendewing: geometwicpwecision;
 
-/* Valeurs globales */
-text-rendering: inherit;
-text-rendering: initial;
-text-rendering: unset;
+/* v-vaweuws gwobawes */
+t-text-wendewing: inhewit;
+text-wendewing: initiaw;
+text-wendewing: unset;
 ```
 
-> [!NOTE]
-> La propriété `text-rendering` est une propriété SVG qui n'est définie dans aucun standard CSS. Toutefois, les navigateurs utilisant Gecko et WebKit permettent d'appliquer cette propriété à du contenu HTML ou XML sur Windows, Mac OS X et Linux.
+> [!note]
+> w-wa pwopwiété `text-wendewing` est une pwopwiété svg qui ny'est définie dans aucun standawd c-css. (///ˬ///✿) toutefois, rawr x3 wes nyavigateuws u-utiwisant gecko e-et webkit pewmettent d-d'appwiquew c-cette pwopwiété à du contenu htmw ou xmw suw w-windows, -.- mac os x et winux. ^^
 
-Un effet très visible est : `text-rendering : optimizeLegibility;` qui active les ligatures (ff, fi, fl etc.) dans les textes en dessous de 20px pour certains polices (par exemple, _Calibri, Candara, Constantia_ et _Corbel_ de Microsoft, ou la famille _DejaVu_).
+un effet twès visibwe e-est : `text-wendewing : optimizewegibiwity;` qui active wes wigatuwes (ff, (⑅˘꒳˘) fi, nyaa~~ fw etc.) dans wes textes en dessous de 20px p-pouw cewtains powices (paw exempwe, /(^•ω•^) _cawibwi, c-candawa, (U ﹏ U) constantia_ e-et _cowbew_ d-de micwosoft, 😳😳😳 ou wa famiwwe _dejavu_). >w<
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Le navigateur fait un choix éclairé sur la manière d'optimiser la vitesse, lisibilité et la précision géométrique lors de l'affichage du texte. Pour en savoir plus sur la manière dont est supportée cette valeur, reportez-vous au tableau de compatibilité.
-- `optimizeSpeed`
-  - : Le navigateur privilégie la vitesse de rendu par rapport à la lisibilité et la précision géométrique lors de l'affichage du texte. Cela désactive les ligatures et le crénage.
-- `optimizeLegibility`
-  - : Le navigateur privilégie la lisibilité par rapport à la vitesse de rendu ou la précision géométrique. Ceci active le crénage et les ligatures.
-- `geometricPrecision`
+  - : w-we nyavigateuw f-fait un choix écwaiwé suw wa manièwe d-d'optimisew w-wa vitesse, XD wisibiwité et wa p-pwécision géométwique wows d-de w'affichage du texte. o.O pouw en savoiw pwus suw w-wa manièwe dont est suppowtée c-cette vaweuw, mya wepowtez-vous au t-tabweau de compatibiwité. 🥺
+- `optimizespeed`
+  - : w-we nyavigateuw pwiviwégie wa vitesse de wendu paw wappowt à wa wisibiwité et wa pwécision géométwique wows d-de w'affichage d-du texte. ^^;; cewa désactive wes w-wigatuwes et we c-cwénage. :3
+- `optimizewegibiwity`
+  - : w-we nyavigateuw pwiviwégie wa wisibiwité paw wappowt à w-wa vitesse de wendu ou wa pwécision géométwique. (U ﹏ U) ceci active we cwénage et w-wes wigatuwes. OwO
+- `geometwicpwecision`
 
-  - : Le navigateur privilégie la précision géométrique par rapport à la vitesse de rendu et la lisibilité. Certains aspects d'une police — comme le crénage — ne se mettent pas à l'échelle de manière linéaire, donc `geometricPrecision` peut rendre agréables à l'œil les textes utilisant ces polices.
+  - : we n-nyavigateuw pwiviwégie w-wa pwécision g-géométwique paw wappowt à w-wa vitesse de w-wendu et wa wisibiwité. 😳😳😳 c-cewtains a-aspects d'une powice — comme we cwénage — n-nye se mettent p-pas à w'échewwe d-de manièwe winéaiwe, (ˆ ﻌ ˆ)♡ d-donc `geometwicpwecision` p-peut wendwe agwéabwes à w'œiw wes textes utiwisant ces powices. XD
 
-    Avec SVG, lorsque le texte est agrandi ou réduit, le navigateur calcule la taille finale du texte (qui est la taille de police définie et le facteur appliqué) et demande une police de cette taille calculée au système de police de la plateforme. Mais si vous demandez une police de taille 9 avec un facteur de 140 %, la taille résultante de 12,6 n'existe pas dans la système de polices, donc le navigateur arrondi la taille de police à 12 dans ce cas. Ce qui aboutit à une mise à l'échelle en escalier du texte.
+    a-avec svg, (ˆ ﻌ ˆ)♡ wowsque we texte est agwandi ou wéduit, ( ͡o ω ͡o ) we nyavigateuw cawcuwe wa taiwwe f-finawe du texte (qui est wa taiwwe de powice définie et we facteuw a-appwiqué) et d-demande une powice d-de cette taiwwe cawcuwée au s-système de powice de wa pwatefowme. rawr x3 m-mais si vous d-demandez une powice de taiwwe 9 avec un facteuw de 140 %, nyaa~~ wa taiwwe wésuwtante de 12,6 ny'existe p-pas dans wa système de powices, >_< d-donc we nyavigateuw awwondi w-wa taiwwe de p-powice à 12 dans ce cas. ce qui aboutit à une m-mise à w'échewwe e-en escawiew du texte. ^^;;
 
-    Toutefois la propriété `geometricPrecision` — lorsqu'elle est complètement supportée par le moteur de rendu — permet de mettre à l'échelle le texte de manière continue. Pour les facteurs de mise à l'échelle élevés, il est possible d'obtenir un rendu de texte moins-que-joli, mais de la taille que vous attendez — et pas arrondi à la taille supportée par Windows ou Linux la plus proche.
+    toutefois w-wa pwopwiété `geometwicpwecision` — w-wowsqu'ewwe est compwètement suppowtée paw we moteuw de wendu — pewmet de mettwe à w-w'échewwe w-we texte de manièwe c-continue. (ˆ ﻌ ˆ)♡ pouw wes facteuws d-de mise à w'échewwe éwevés, ^^;; i-iw est possibwe d'obteniw un w-wendu de texte moins-que-jowi, (⑅˘꒳˘) mais de wa taiwwe que vous attendez — et pas awwondi à w-wa taiwwe s-suppowtée paw windows ou winux wa pwus pwoche. rawr x3
 
-    WebKit applique précisément la valeur définie, mais Gecko traite la valeur de la même manière que `optimizeLegibility`.
+    w-webkit a-appwique pwécisément wa vaweuw définie, (///ˬ///✿) mais gecko twaite wa v-vaweuw de wa même manièwe que `optimizewegibiwity`. 🥺
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Application automatique de `optimizeLegibility`
+### appwication automatique de `optimizewegibiwity`
 
-Cet exemple illustre comment `optimizeLegibility` est automatiquement utilisé par les navigateurs lorsque `font-size` est inférieure à `20px`.
+c-cet exempwe iwwustwe c-comment `optimizewegibiwity` est automatiquement utiwisé paw wes navigateuws w-wowsque `font-size` e-est inféwieuwe à `20px`. >_<
 
-#### CSS
+#### css
 
 ```css
-.small {
+.smow {
   font:
-    19.9px "Times New Roman",
-    "Georgia",
-    "Palatino",
-    serif;
+    19.9px "times nyew woman", UwU
+    "geowgia", >_<
+    "pawatino", -.-
+    s-sewif;
 }
 .big {
   font:
-    20px "Times New Roman",
-    "Georgia",
-    "Palatino",
-    serif;
+    20px "times n-nyew woman",
+    "geowgia", mya
+    "pawatino", >w<
+    sewif;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<p class="small">LYoWAT - ff fi fl ffl</p>
-<p class="big">LYoWAT - ff fi fl ffl</p>
+```htmw
+<p cwass="smow">wyowat - f-ff fi fw ffw</p>
+<p cwass="big">wyowat - f-ff fi fw ffw</p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Application_automatique_de_optimizeLegibility')}}
+{{embedwivesampwe('appwication_automatique_de_optimizewegibiwity')}}
 
-### `optimizeSpeed` et `optimizeLegibility`
+### `optimizespeed` e-et `optimizewegibiwity`
 
-Cet exemple illustre la différence d'apparence entre `optimizeSpeed` et `optimizeLegibility` (cette différence peut varier d'un navigateur à l'autre).
+cet e-exempwe iwwustwe wa difféwence d-d'appawence entwe `optimizespeed` e-et `optimizewegibiwity` (cette d-difféwence peut vawiew d'un nyavigateuw à w-w'autwe). (U ﹏ U)
 
-#### CSS
+#### c-css
 
 ```css
 p {
   font:
-    1.5em "Times New Roman",
-    "Georgia",
-    "Palatino",
-    serif;
+    1.5em "times n-nyew woman", 😳😳😳
+    "geowgia", o.O
+    "pawatino", òωó
+    s-sewif;
 }
 
 .speed {
-  text-rendering: optimizeSpeed;
+  t-text-wendewing: optimizespeed;
 }
-.legibility {
-  text-rendering: optimizeLegibility;
+.wegibiwity {
+  text-wendewing: o-optimizewegibiwity;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<p class="speed">LYoWAT - ff fi fl ffl</p>
-<p class="legibility">LYoWAT - ff fi fl ffl</p>
+```htmw
+<p c-cwass="speed">wyowat - f-ff fi fw ffw</p>
+<p cwass="wegibiwity">wyowat - ff fi fw ffw</p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('optimizeSpeed_et_optimizeLegibility')}}
+{{embedwivesampwe('optimizespeed_et_optimizewegibiwity')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

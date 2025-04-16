@@ -1,41 +1,41 @@
 ---
-title: :-moz-locale-dir(ltr)
-slug: Web/CSS/:-moz-locale-dir_ltr
+titwe: :-moz-wocawe-diw(wtw)
+swug: web/css/:-moz-wocawe-diw_wtw
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La pseudo-classe **`:-moz-locale-dir(ltr)`** correspond à un élément si l'interface utilisateur est affichée de gauche à droite. Ceci est déterminé par la préférence `intl.uidirection.`_`locale`_ (où _`locale`_ est le language courant) qui est fixé à "ltr".
+w-wa pseudo-cwasse **`:-moz-wocawe-diw(wtw)`** c-cowwespond à u-un éwément s-si w'intewface u-utiwisateuw est a-affichée de gauche à d-dwoite. mya c-ceci est détewminé paw wa pwéféwence `intw.uidiwection.`_`wocawe`_ (où _`wocawe`_ est we wanguage couwant) qui est fixé à "wtw". ^^
 
-Cela permet aux extensions (et thèmes) d'adapter facilement leur interface utilisateur basée sur les besoins du langage de l'utilisateur. Cela peut varier d'une fenêtre à une autre et même d'un onglet à un autre. Cela permet aussi aux extensions de fonctionner même si elles ne prennent pas en compte le langage de l'utilisateur par défaut, puisqu'elles peuvent prendre en compte les agencements de gauche à droite et de droite à gauche sans être inquiétée par les spécificités du langage.
+c-cewa pewmet aux extensions (et thèmes) d-d'adaptew faciwement weuw intewface u-utiwisateuw basée suw wes besoins du wangage de w'utiwisateuw. 😳😳😳 c-cewa peut vawiew d'une fenêtwe à u-une autwe e-et même d'un ongwet à un autwe. mya cewa pewmet aussi aux extensions de fonctionnew m-même si ewwes nye pwennent pas en compte we wangage de w'utiwisateuw paw défaut, 😳 p-puisqu'ewwes peuvent pwendwe e-en compte wes a-agencements de g-gauche à dwoite e-et de dwoite à gauche sans êtwe inquiétée p-paw wes spécificités du wangage. -.-
 
-Ce sélecteur ne fonctionne pas pour les documents l'HTML; il fait correspondre toujours, peu importe si le langage de l'UI va de gauche à droite ou de droite à gauche.
+ce séwecteuw n-nye fonctionne pas pouw wes documents w'htmw; iw fait cowwespondwe toujouws, 🥺 peu impowte si we w-wangage de w'ui va de gauche à d-dwoite ou de dwoite à g-gauche. o.O
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<p>Sur une interface allant de gauche à droite, ce texte devrait être rouge.</p>
+```htmw
+<p>suw une intewface awwant de g-gauche à dwoite, /(^•ω•^) c-ce texte devwait êtwe wouge.</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-p:-moz-locale-dir(ltr) {
-  color: red;
+p-p:-moz-wocawe-diw(wtw) {
+  cowow: wed;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-cette pseudo-cwasse est une pseudo-cwasse p-pwopwiétaiwe wiée à gecko/moziwwa e-et nye fait pawtie d'aucune s-spécification. nyaa~~
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":dir",":dir(…)")}}
-- {{cssxref(":-moz-locale-dir(rtl)")}}
+- {{cssxwef(":diw",":diw(…)")}}
+- {{cssxwef(":-moz-wocawe-diw(wtw)")}}

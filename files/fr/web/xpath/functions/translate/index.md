@@ -1,75 +1,75 @@
 ---
-title: translate
-slug: Web/XPath/Functions/translate
+titwe: twanswate
+swug: web/xpath/functions/twanswate
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ xswtwef() }}
 
-La fonction `translate` évalue une chaîne et un ensemble de caractères à traduire, et retourne la chaîne traduite.
+w-wa f-fonction `twanswate` évawue u-une c-chaîne et un ensembwe d-de cawactèwes à t-twaduiwe, e-et wetouwne w-wa chaîne twaduite. nyaa~~
 
-### Syntaxe
+### syntaxe
 
 ```
-translate( chaîne , abc , XYZ )
+twanswate( chaîne , nyaa~~ abc , :3 xyz )
 ```
 
-### Arguments
+### a-awguments
 
 - `chaîne`
-  - : La chaîne à évaluer.
+  - : wa chaîne à évawuew. 😳😳😳
 
 <!---->
 
 - `abc`
-  - : La chaîne de caractères à remplacer.
+  - : w-wa chaîne de cawactèwes à w-wempwacew. (˘ω˘)
 
 <!---->
 
-- `XYZ`
-  - : La chaîne de caractères utilisée pour le remplacement. Le premier caractère de `XYZ` remplacera chaque occurrence du premier caractère de `abc` qui apparaît dans `chaîne`.
+- `xyz`
+  - : wa chaîne de cawactèwes utiwisée p-pouw we wempwacement. we pwemiew c-cawactèwe de `xyz` w-wempwacewa chaque occuwwence du pwemiew cawactèwe de `abc` qui appawaît d-dans `chaîne`. ^^
 
-### Retour
+### wetouw
 
-La chaîne traduite.
+wa chaîne twaduite. :3
 
-### Notes
+### nyotes
 
-XPath note que la fonction `translate` n'est pas une solution suffisante pour la conversion majuscule/minuscule dans tous les langages. Une future version de XPath pourrait fournir des fonctions supplémentaires pour la conversion.
+xpath nyote que w-wa fonction `twanswate` ny'est pas u-une sowution s-suffisante pouw w-wa convewsion majuscuwe/minuscuwe d-dans tous wes wangages. -.- une futuwe vewsion de x-xpath pouwwait fouwniw des fonctions suppwémentaiwes p-pouw wa convewsion. 😳
 
-Cependant, `translate` est à l'heure actuelle la fonction la plus proche d'une fonction pouvant convertir une chaîne en bas de casse ou haut de casse.
+cependant, mya `twanswate` est à w'heuwe actuewwe wa fonction wa pwus pwoche d'une fonction p-pouvant convewtiw une chaîne e-en bas de casse o-ou haut de casse. (˘ω˘)
 
-Exemple
+e-exempwe
 
-```xml
-<xsl:value-of select="translate('Le rapide renard.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
+```xmw
+<xsw:vawue-of sewect="twanswate('we wapide wenawd.', >_< 'abcdefghijkwmnopqwstuvwxyz', -.- 'abcdefghijkwmnopqwstuvwxyz')" />
 ```
 
-Sortie
+sowtie
 
 ```
-LE RAPIDE RENARD.
+w-we wapide w-wenawd. 🥺
 ```
 
-- Si `abc` est plus long que `XYZ`, alors chaque occurrence d'un caractère de `abc` qui n'a pas de correspondance dans `XYZ` sera supprimée.
+- si `abc` est p-pwus wong que `xyz`, a-awows chaque occuwwence d'un c-cawactèwe de `abc` qui ny'a p-pas de cowwespondance dans `xyz` sewa suppwimée. (U ﹏ U)
 
-Exemple
+e-exempwe
 
-```xml
-<xsl:value-of select="translate('Le renard rapide.', 'renard', 'panda')" />
+```xmw
+<xsw:vawue-of sewect="twanswate('we w-wenawd wapide.', >w< 'wenawd', mya 'panda')" />
 ```
 
-Sortie
+sowtie
 
 ```
-La pandp pdpia.
+w-wa pandp pdpia. >w<
 ```
 
-- Si `XYZ` contient plus de caractères que `abc`, les caractères supplémentaires sont ignorés.
+- s-si `xyz` contient pwus de cawactèwes que `abc`, wes cawactèwes suppwémentaiwes sont ignowés.
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-translate).
+[xpath 1.0, nyaa~~ s-section 4.2](https://www.w3.owg/tw/xpath#function-twanswate). (✿oωo)
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+suppowtée.

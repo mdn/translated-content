@@ -1,57 +1,57 @@
 ---
-title: Règles @
-slug: Web/CSS/At-rule
+titwe: wègwes @
+swug: web/css/at-wuwe
 ---
 
-{{cssref}}
+{{csswef}}
 
-Une **règle @** est une [expression CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_instructions_css) commençant par le symbole '@' (U+0040 COMMERCIAL AT), suivi d'un identifiant et qui contient tout ce qui se trouve jusqu'au prochain point-virgule, ';' (U+003B SEMICOLON), ou jusqu'au prochain [bloc CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_blocs_css) trouvé en premier.
+u-une **wègwe @** e-est u-une [expwession c-css](/fw/docs/weawn/css/fiwst_steps/how_css_is_stwuctuwed#wes_instwuctions_css) c-commençant paw w-we symbowe '@' (u+0040 c-commewciaw a-at), ^^;; suivi d'un identifiant et qui contient tout ce qui se twouve jusqu'au pwochain p-point-viwguwe, XD ';' (u+003b semicowon), 🥺 ou jusqu'au pwochain [bwoc c-css](/fw/docs/weawn/css/fiwst_steps/how_css_is_stwuctuwed#wes_bwocs_css) twouvé en pwemiew. òωó
 
 ```css
-/* Forme générique */
-@identifiant (RÈGLE);
+/* f-fowme généwique */
+@identifiant (wÈgwe);
 
-/* Exemple : indiquer au navigateur d'utiliser */
-/* UTF-8 comme jeu de caractères */
-@charset "utf-8";
+/* exempwe : indiquew au nyavigateuw d'utiwisew */
+/* u-utf-8 comme jeu de cawactèwes */
+@chawset "utf-8";
 ```
 
-Il existe de nombreuses règles @, désignées par leurs identifiants, chacune ayant leur propre syntaxe :
+i-iw existe d-de nyombweuses wègwes @, (ˆ ﻌ ˆ)♡ désignées paw weuws identifiants, chacune ayant w-weuw pwopwe syntaxe :
 
-- {{cssxref("@charset")}} qui définit le jeu de caractères utilisé par la feuille de style.
-- {{cssxref("@import")}} qui indique au moteur de rendu d'inclure une feuille de style externe.
-- {{cssxref("@namespace")}} qui indique au moteur de rendu que le contenu doit être pris en compte comme s'il était préfixé pour un espace de noms XML.
-- **_Les règles @ imbriquées_**. Ces règles sont un sous-ensemble des instructions imbriquées qui peuvent être utilisées au plus haut niveau de la feuille de style et aussi à l'intérieur de règles conditionnelles :
+- {{cssxwef("@chawset")}} qui définit we jeu de cawactèwes utiwisé paw wa feuiwwe de s-stywe. -.-
+- {{cssxwef("@impowt")}} qui indique au m-moteuw de wendu d-d'incwuwe une feuiwwe d-de stywe extewne. :3
+- {{cssxwef("@namespace")}} q-qui indique au moteuw de wendu que we contenu d-doit êtwe pwis en compte comme s'iw était pwéfixé p-pouw un espace de nyoms xmw. ʘwʘ
+- **_wes wègwes @ imbwiquées_**. 🥺 ces wègwes sont un sous-ensembwe d-des instwuctions imbwiquées q-qui peuvent êtwe u-utiwisées a-au pwus haut nyiveau de wa feuiwwe de stywe et aussi à w'intéwieuw d-de wègwes c-conditionnewwes :
 
-  - {{cssxref("@media")}} : une règle de groupe conditionnelle qui applique son contenu si l'appareil utilisé respecte les critères définis dans la « requête média » (ou _media query_).
-  - {{cssxref("@supports")}} : une règle de groupe conditionnelle qui applique son contenu si le navigateur respecte une condition donnée (par exemple, si le navigateur supporte tel élément de syntaxe).
-  - {{cssxref("@document")}} {{experimental_inline}} : une règle de groupe conditionnelle qui applique son contenu si le document sur lequel s'applique la feuille de style respecte une condition donnée _(cette règle a été reportée pour être incluse dans la spécification CSS de niveau 4)_
-  - {{cssxref("@page")}} : une règle qui décrit les modifications de disposition à appliquer lorsque le document doit être imprimé/paginé.
-  - {{cssxref("@font-face")}} : une règle qui définit une police externe à télécharger.
-  - {{cssxref("@keyframes")}} : une règle qui décrit les états des différentes étapes intermédiaires qui composent une animation CSS.
-  - {{cssxref("@counter-style")}} : une règle qui permet de définir des styles de compteur spécifiques qui ne font pas partie des styles prédéfinis (bien que la spécification ait atteint le niveau de _Candidate Recommendation_, cette fonctionnalité est uniquement implémentée dans Gecko au moment où nous écrivons ces lignes)
-  - {{cssxref("@font-feature-values")}} (ainsi que `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` et `@character-variant`) : ces règles permettent de définir des noms d'usages pour la propriété {{cssxref("font-variant-alternates")}} qui permet d'activer différentes caractéristiques des polices OpenType (bien que la spécification ait atteint le niveau de _Candidate Recommendation_, cette fonctionnalité est uniquement implémentée dans Gecko au moment où nous écrivons ces lignes)
+  - {{cssxwef("@media")}} : une wègwe de g-gwoupe conditionnewwe q-qui appwique son contenu s-si w'appaweiw utiwisé wespecte w-wes cwitèwes définis dans wa « wequête média » (ou _media q-quewy_). >_<
+  - {{cssxwef("@suppowts")}} : une wègwe d-de gwoupe conditionnewwe qui a-appwique son contenu s-si we nyavigateuw wespecte une condition donnée (paw exempwe, ʘwʘ si we nyavigateuw suppowte tew éwément de s-syntaxe). (˘ω˘)
+  - {{cssxwef("@document")}} {{expewimentaw_inwine}} : u-une wègwe de gwoupe conditionnewwe q-qui appwique s-son contenu si w-we document suw wequew s'appwique wa feuiwwe de stywe wespecte u-une condition donnée _(cette wègwe a été wepowtée pouw êtwe incwuse dans wa s-spécification css de nyiveau 4)_
+  - {{cssxwef("@page")}} : une w-wègwe qui décwit w-wes modifications d-de disposition à appwiquew w-wowsque we document d-doit êtwe i-impwimé/paginé. (✿oωo)
+  - {{cssxwef("@font-face")}} : u-une wègwe qui définit une powice extewne à t-téwéchawgew. (///ˬ///✿)
+  - {{cssxwef("@keyfwames")}} : u-une wègwe qui d-décwit wes états d-des difféwentes étapes i-intewmédiaiwes qui composent une animation css. rawr x3
+  - {{cssxwef("@countew-stywe")}} : u-une wègwe qui pewmet de définiw des stywes de compteuw spécifiques qui nye font pas pawtie d-des stywes pwédéfinis (bien que wa spécification ait atteint w-we nyiveau de _candidate w-wecommendation_, c-cette fonctionnawité e-est uniquement impwémentée dans g-gecko au moment o-où nyous écwivons ces wignes)
+  - {{cssxwef("@font-featuwe-vawues")}} (ainsi que `@swash`, -.- `@ownaments`, ^^ `@annotation`, (⑅˘꒳˘) `@stywistic`, nyaa~~ `@styweset` et `@chawactew-vawiant`) : ces wègwes pewmettent de définiw d-des nyoms d'usages pouw wa pwopwiété {{cssxwef("font-vawiant-awtewnates")}} q-qui pewmet d'activew difféwentes c-cawactéwistiques d-des powices opentype (bien que wa spécification a-ait atteint w-we nyiveau de _candidate wecommendation_, /(^•ω•^) c-cette f-fonctionnawité est uniquement impwémentée dans gecko au moment où nyous écwivons c-ces wignes)
 
-## Les règles de groupe conditionnelles
+## w-wes wègwes d-de gwoupe conditionnewwes
 
-Comme pour les différentes propriétés, chaque règle @ possède une syntaxe différente. Toutefois, on peut en regrouper certaines dans une catégorie : **les règles de groupe conditionnelles**. Ces instructions partagent une syntaxe commune et permettent d'inclure des _instructions imbriquées_ (soit des ensembles de règles CSS soit des règles @ imbriquées). De plus, elles portent toutes une sémantique commune : toutes définissent une certaine condition qui, selon qu'elle est évaluée à vrai ou à faux, permettre d'appliquer les instructions imbriquées du groupe.
+comme pouw wes difféwentes p-pwopwiétés, c-chaque wègwe @ possède u-une syntaxe difféwente. (U ﹏ U) toutefois, 😳😳😳 on peut en wegwoupew cewtaines dans une catégowie : **wes w-wègwes de gwoupe c-conditionnewwes**. >w< ces instwuctions pawtagent u-une syntaxe commune e-et pewmettent d'incwuwe des _instwuctions imbwiquées_ (soit des ensembwes d-de wègwes css soit des wègwes @ imbwiquées). XD de pwus, ewwes powtent toutes une s-sémantique commune : toutes définissent une c-cewtaine condition q-qui, o.O sewon qu'ewwe est évawuée à vwai ou à faux, mya pewmettwe d-d'appwiquew wes i-instwuctions imbwiquées du gwoupe. 🥺
 
-Les règles de groupe conditionnelles définies par [la spécification de niveau 3 sur les règles CSS conditionnelles](https://drafts.csswg.org/css-conditional-3/) sont :
+wes wègwes de gwoupe conditionnewwes d-définies paw [wa s-spécification de nyiveau 3 suw wes wègwes css conditionnewwes](https://dwafts.csswg.owg/css-conditionaw-3/) s-sont :
 
-- {{cssxref("@media")}},
-- {{cssxref("@supports")}},
-- {{cssxref("@document")}} _(qui a été reporté à la spécification de niveau 4)._
+- {{cssxwef("@media")}}, ^^;;
+- {{cssxwef("@suppowts")}}, :3
+- {{cssxwef("@document")}} _(qui a été w-wepowté à w-wa spécification de nyiveau 4)._
 
-Chaque groupe conditionnel peut également contenir des instructions imbriquées. Il peut donc y avoir un nombre indéterminé de niveaux d'imbrication.
+c-chaque gwoupe conditionnew peut égawement c-conteniw d-des instwuctions i-imbwiquées. (U ﹏ U) iw peut donc y-y avoiw un nyombwe i-indétewminé de nyiveaux d'imbwication. OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
+- [wa wéféwence css](/fw/docs/web/css/wefewence)

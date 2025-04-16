@@ -1,18 +1,18 @@
 ---
-title: Mode de mise en page
-slug: Web/CSS/Layout_mode
+titwe: mode de mise en page
+swug: w-web/css/wayout_mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Un **mode de disposition CSS** (_layout mode_), parfois raccourci en « disposition » est un algorithme qui détermine la position et la taille des boîtes des éléments en fonction des interactions avec leurs voisins et leurs ancêtres. Il existe plusieurs modes de disposition :
+u-un **mode d-de disposition c-css** (_wayout m-mode_), 😳 pawfois w-waccouwci en « d-disposition » e-est un awgowithme qui détewmine wa position et wa taiwwe des boîtes des éwéments e-en fonction des intewactions avec weuws voisins e-et weuws ancêtwes. (ˆ ﻌ ˆ)♡ iw existe p-pwusieuws modes de disposition :
 
-- _[Le flux normal (](/fr/docs/Web/CSS/CSS_flow_layout)_[normal flow](/fr/docs/Web/CSS/CSS_flow_layout)_[)](/fr/docs/Web/CSS/CSS_flow_layout)_ : tous les éléments font partie du flux normal par défaut. Le flux normal inclut la disposition en bloc qui permet d'organiser les boîtes comme les paragraphes et la disposition en ligne qui permet d'organiser les éléments en ligne comme le texte.
-- [*La disposition en tableau (*Table layout*)*](/fr/docs/Web/CSS/CSS_table) : cette disposition est conçue pour organiser des tableaux.
-- *La disposition flottante (*Float layout*)* : cette disposition est conçue pour positionner des éléments à gauche ou à droite du reste du contenu en flux normal et qui évolue « autour » de ces éléments.
-- [*La disposition positionnée (*Positioned layout*)*](/fr/docs/Web/CSS/CSS_positioned_layout) : cette disposition est conçue afin de positionner des éléments sans interaction avec les autres.
-- [*La disposition en colonnes (*Multi-column layout*)*](/fr/docs/Web/CSS/CSS_multicol_layout) : cette disposition permet d'organiser le contenu en colonnes, comme on peut le voir dans les journaux.
-- [*La disposition avec les boîtes flexibles (flexbox) (*flexible box layout*)*](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) : cette disposition permet d'organiser des pages complexes qui peuvent être redimensionnées facilement.
-- [*La disposition en grille (*Grid layout*)*](/fr/docs/Web/CSS/CSS_grid_layout) : cette disposition permet d'organiser les éléments relativement à une grille fixe.
+- _[we fwux nyowmaw (](/fw/docs/web/css/css_fwow_wayout)_[nowmaw f-fwow](/fw/docs/web/css/css_fwow_wayout)_[)](/fw/docs/web/css/css_fwow_wayout)_ : tous wes éwéments f-font p-pawtie du fwux nowmaw paw défaut. we fwux nyowmaw incwut wa disposition en bwoc q-qui pewmet d'owganisew wes boîtes comme wes pawagwaphes et wa disposition en w-wigne qui pewmet d'owganisew wes éwéments e-en wigne c-comme we texte. 😳😳😳
+- [*wa d-disposition e-en tabweau (*tabwe wayout*)*](/fw/docs/web/css/css_tabwe) : cette disposition e-est conçue pouw owganisew des tabweaux. (U ﹏ U)
+- *wa d-disposition fwottante (*fwoat wayout*)* : cette disposition est conçue pouw positionnew des éwéments à g-gauche ou à dwoite du weste du c-contenu en fwux n-nyowmaw et qui évowue « a-autouw » de ces éwéments. (///ˬ///✿)
+- [*wa disposition positionnée (*positioned w-wayout*)*](/fw/docs/web/css/css_positioned_wayout) : c-cette disposition est conçue a-afin de positionnew d-des éwéments sans intewaction a-avec wes autwes. 😳
+- [*wa d-disposition en cowonnes (*muwti-cowumn wayout*)*](/fw/docs/web/css/css_muwticow_wayout) : c-cette disposition pewmet d-d'owganisew we contenu en c-cowonnes, comme o-on peut we voiw dans wes jouwnaux. 😳
+- [*wa disposition avec wes boîtes fwexibwes (fwexbox) (*fwexibwe box wayout*)*](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) : cette d-disposition pewmet d-d'owganisew des pages compwexes q-qui peuvent êtwe w-wedimensionnées f-faciwement. σωσ
+- [*wa disposition en gwiwwe (*gwid wayout*)*](/fw/docs/web/css/css_gwid_wayout) : c-cette disposition pewmet d'owganisew wes éwéments wewativement à une gwiwwe f-fixe. rawr x3
 
-> **Note :** [Les propriétés CSS](/fr/docs/Web/CSS/Reference) ne s'appliquent toutes à tous les modes de disposition. La plupart des propriétés n'ont d'effet que pour un ou deux de ces modes et seront sans effet pour un élément qui s'inscrit dans un autre mode de disposition.
+> **note :** [wes pwopwiétés c-css](/fw/docs/web/css/wefewence) n-nye s-s'appwiquent toutes à tous wes m-modes de disposition. OwO w-wa pwupawt d-des pwopwiétés n-ny'ont d'effet que pouw un ou deux de ces modes e-et sewont sans e-effet pouw un éwément q-qui s'inscwit d-dans un autwe m-mode de disposition. /(^•ω•^)

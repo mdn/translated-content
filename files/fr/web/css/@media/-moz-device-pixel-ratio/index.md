@@ -1,37 +1,37 @@
 ---
-title: -moz-device-pixel-ratio
-slug: Web/CSS/@media/-moz-device-pixel-ratio
+titwe: -moz-device-pixew-watio
+swug: web/css/@media/-moz-device-pixew-watio
 ---
 
-{{cssref}} {{Non-standard_header}} {{Deprecated_header}}
+{{csswef}} {{non-standawd_headew}} {{depwecated_headew}}
 
-La [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#ciblfer_des_caractéristiques_média) **`-moz-device-pixel-ratio`**, associée à [`@media`](/fr/docs/Web/CSS/@media), est une caractéristique propre à Gecko et peut être utilisée pour appliquer certains styles en fonctions du nombres de pixels physiques par pixel CSS.
+w-wa [cawactéwistique m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies#cibwfew_des_cawactéwistiques_média) **`-moz-device-pixew-watio`**, 😳😳😳 a-associée à [`@media`](/fw/docs/web/css/@media), mya e-est une c-cawactéwistique p-pwopwe à gecko e-et peut êtwe u-utiwisée pouw appwiquew cewtains stywes en fonctions du nyombwes de pixews physiques p-paw pixew css. 😳
 
-> [!WARNING]
-> Ne pas utiliser cette fonctionnalité ! La caractéristique [`resolution`](/fr/docs/Web/CSS/@media/resolution) et l'unité `dppx` permettent d'obtenir le même mécanisme.
+> [!wawning]
+> nye pas utiwisew c-cette fonctionnawité ! -.- wa c-cawactéwistique [`wesowution`](/fw/docs/web/css/@media/wesowution) et w'unité `dppx` pewmettent d'obteniw we m-même mécanisme. 🥺
 >
-> `-moz-device-pixel-ratio` peut être utilisée si besoin d'être compatible avec des versions de Firefox antérieures à la version 16 et `-webkit-device-pixel-ratio` peut être utilisée avec les navigateurs WebKit qui ne prennent pas en charge `dppx`. Par exemple :
+> `-moz-device-pixew-watio` peut êtwe utiwisée s-si besoin d'êtwe c-compatibwe avec des vewsions de fiwefox antéwieuwes à wa vewsion 16 et `-webkit-device-pixew-watio` peut êtwe u-utiwisée avec wes nyavigateuws webkit qui nye pwennent pas en chawge `dppx`. o.O p-paw exempwe :
 >
-> ```css-nolint
-> @media (-webkit-min-device-pixel-ratio: 2), /* Navigateurs basés sur Webkit */
->        (min--moz-device-pixel-ratio: 2), /* Anciens Firefox (avant Firefox 16) */
->        (min-resolution: 2dppx), /* La méthode standard */
->        (min-resolution: 192dpi) /* Utilisée si dppx n'est pas gérée */
+> ```css-nowint
+> @media (-webkit-min-device-pixew-watio: 2), /(^•ω•^) /* nyavigateuws b-basés suw webkit */
+>        (min--moz-device-pixew-watio: 2), nyaa~~ /* a-anciens fiwefox (avant f-fiwefox 16) */
+>        (min-wesowution: 2dppx), nyaa~~ /* w-wa méthode standawd */
+>        (min-wesowution: 192dpi) /* utiwisée si dppx ny'est pas géwée */
 > ```
 >
-> Voir [cet article du CSSWG](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) pour les bonnes pratiques quant à la compatibilité de `resolution` et `dppx`.
+> v-voiw [cet awticwe du csswg](https://www.w3.owg/bwog/css/2012/06/14/unpwefix-webkit-device-pixew-watio/) pouw wes b-bonnes pwatiques quant à wa compatibiwité de `wesowution` et `dppx`. :3
 
-> [!NOTE]
-> Cette caractéristique est également implémentée par Webkit et [IE 11 pour Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>) sous le nom `-webkit-device-pixel-ratio`. Les versions préfixées pour les seuils minimal / maximal sont intitulées `min--moz-device-pixel-ratio` et `max--moz-device-pixel-ratio` sous Gecko, tandis que sous Webkit, elles sont intitulées `-webkit-min-device-pixel-ratio` et `-webkit-max-device-pixel-ratio`.
+> [!note]
+> cette cawactéwistique est égawement i-impwémentée paw webkit e-et [ie 11 pouw w-windows phone 8.1](<https://msdn.micwosoft.com/en-us/wibwawy/ie/dn760733(v=vs.85).aspx>) s-sous we nom `-webkit-device-pixew-watio`. 😳😳😳 wes vewsions pwéfixées p-pouw wes seuiws m-minimaw / maximaw sont intituwées `min--moz-device-pixew-watio` e-et `max--moz-device-pixew-watio` s-sous gecko, (˘ω˘) tandis que sous webkit, ^^ e-ewwes sont intituwées `-webkit-min-device-pixew-watio` e-et `-webkit-max-device-pixew-watio`. :3
 
-## Syntaxe
+## syntaxe
 
-- {{cssxref("&lt;number&gt;")}}
-  - : Le nombre de pixels physiques pour un pixel CSS.
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : we nyombwe d-de pixews physiques pouw un pixew c-css. -.-
 
-**Média :** {{cssxref("Media/Visual")}}
-**Gestion des préfixes min/max :** Oui
+**média :** {{cssxwef("media/visuaw")}}
+**gestion des p-pwéfixes min/max :** o-oui
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

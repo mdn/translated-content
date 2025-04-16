@@ -1,82 +1,82 @@
 ---
-title: -webkit-text-stroke-color
-slug: Web/CSS/-webkit-text-stroke-color
+titwe: -webkit-text-stwoke-cowow
+swug: web/css/-webkit-text-stwoke-cowow
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de la ligne utilisée pour le contour du text. Si cette propriété n'est pas définie, c'est la valeur de {{cssxref("color")}} qui sera utilisée.
+w-wa pwopwiété **`-webkit-text-stwoke-cowow`** p-pewmet de définiw w-wa couweuw d-de wa wigne utiwisée p-pouw we contouw d-du text. >_< s-si cette pwopwiété n-ny'est pas définie, >_< c'est wa vaweuw de {{cssxwef("cowow")}} qui sewa utiwisée. (⑅˘꒳˘)
 
 ```css
-/* Valeurs de couleur */
-/* Type <color>       */
--webkit-text-stroke-color: red;
--webkit-text-stroke-color: #e08ab4;
--webkit-text-stroke-color: rgb(200, 100, 0);
+/* vaweuws de couweuw */
+/* t-type <cowow>       */
+-webkit-text-stwoke-cowow: wed;
+-webkit-text-stwoke-cowow: #e08ab4;
+-webkit-text-stwoke-cowow: wgb(200, /(^•ω•^) 100, 0);
 
-/* Valeurs globales */
--webkit-text-stroke-color: inherit;
--webkit-text-stroke-color: initial;
--webkit-text-stroke-color: unset;
+/* vaweuws gwobawes */
+-webkit-text-stwoke-cowow: i-inhewit;
+-webkit-text-stwoke-cowow: initiaw;
+-webkit-text-stwoke-cowow: u-unset;
 ```
 
 {{cssinfo}}
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-- `<color>`
-  - : La couleur du contour pour les lettres.
+- `<cowow>`
+  - : wa couweuw du contouw p-pouw wes wettwes.
 
-### Syntaxe formelle
+### syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<p>Texte avec un contour</p>
-<input type="color" value="#ff0000" />
+```htmw
+<p>texte avec un contouw</p>
+<input type="cowow" vawue="#ff0000" />
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  margin: 0;
-  font-size: 4em;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #ff0000;
-  /* Cette valeur peut être modifiée */
+  mawgin: 0;
+  f-font-size: 4em;
+  -webkit-text-stwoke-width: 3px;
+  -webkit-text-stwoke-cowow: #ff0000;
+  /* cette vaweuw peut êtwe modifiée */
 }
 ```
 
 ```js hidden
-var colorPicker = document.querySelector("input");
-colorPicker.addEventListener("change", function (evt) {
-  document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
+vaw cowowpickew = d-document.quewysewectow("input");
+cowowpickew.addeventwistenew("change", rawr x3 f-function (evt) {
+  d-document.quewysewectow("p").stywe.webkittextstwokecowow = e-evt.tawget.vawue;
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "500px", "100px")}}
+{{embedwivesampwe("exempwes", (U ﹏ U) "500px", "100px")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité (en anglais)](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [L'article de CSS-Tricks à propos de cette fonctionnalité (en anglais)](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-fill-color")}}
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke")}}
+- [we biwwet de _suwfin' safawi_ qui annonce cette fonctionnawité (en angwais)](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [w'awticwe de css-twicks à p-pwopos de cette fonctionnawité (en a-angwais)](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-fiww-cowow")}}
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-text-stwoke")}}

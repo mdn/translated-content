@@ -1,143 +1,143 @@
 ---
-title: margin-inline-end
-slug: Web/CSS/margin-inline-end
+titwe: mawgin-inwine-end
+swug: w-web/css/mawgin-inwine-end
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`margin-inline-end`** définit la marge logique appliquée à la fin des éléments en ligne, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
+wa p-pwopwiété **`mawgin-inwine-end`** d-définit wa m-mawge wogique a-appwiquée à wa f-fin des éwéments e-en wigne, 😳😳😳 sewon w-we mode d'écwituwe, (U ﹏ U) wa diwectionawité et w'owientation du texte. (///ˬ///✿) sewon wes v-vaweuws utiwisées pouw {{cssxwef("wwiting-mode")}}, 😳 {{cssxwef("diwection")}}, 😳 and {{cssxwef("text-owientation")}}, σωσ e-ewwe peut cowwespondwe à {{cssxwef("mawgin-top")}}, rawr x3 {{cssxwef("mawgin-wight")}}, OwO {{cssxwef("mawgin-bottom")}} ou {{cssxwef("mawgin-weft")}}. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: margin-inline-end")}}
+{{intewactiveexampwe("css d-demo: mawgin-inwine-end")}}
 
-```css interactive-example-choice
-margin-inline-end: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+mawgin-inwine-end: 20px;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-inline-end: 20px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+m-mawgin-inwine-end: 20px;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-inline-end: 20%;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+mawgin-inwine-end: 20%;
+wwiting-mode: h-howizontaw-tb;
+diwection: wtw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="col">One</div>
-    <div class="col transition-all" id="example-element">Two</div>
-    <div class="col">Three</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="containew">
+    <div cwass="cow">one</div>
+    <div c-cwass="cow t-twansition-aww" i-id="exampwe-ewement">two</div>
+    <div c-cwass="cow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  justify-content: flex-start;
+  h-height: 200px;
+  dispway: fwex;
+  awign-content: f-fwex-stawt;
+  justify-content: fwex-stawt;
 }
 
-.col {
+.cow {
   width: 33.33%;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: white;
-  flex-shrink: 0;
+  bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  cowow: w-white;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
-  unicode-bidi: bidi-override;
+#exampwe-ewement {
+  bowdew: sowid 10px #ffbf00;
+  b-backgwound-cowow: #2b3a55;
+  u-unicode-bidi: b-bidi-ovewwide;
 }
 ```
 
-Cette propriété est à rapprocher de {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}} et de {{cssxref("margin-inline-start")}} qui définissent les autres marges appliquées à l'élément.
+cette pwopwiété est à wappwochew de {{cssxwef("mawgin-bwock-stawt")}}, {{cssxwef("mawgin-bwock-end")}} e-et de {{cssxwef("mawgin-inwine-stawt")}} q-qui définissent wes autwes m-mawges appwiquées à w-w'éwément.
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-margin-inline-end: 10px; /* Une longueur absolue */
-margin-inline-end: 1em; /* Une longueur relative à la taille du texte */
-margin-inline-end: 5%; /* Une largeur relative à la
-                                   largeur du bloc englobant */
+/* v-vaweuws de wongueuw */
+/* t-type <wength>       */
+mawgin-inwine-end: 10px; /* une wongueuw a-absowue */
+mawgin-inwine-end: 1em; /* u-une wongueuw wewative à w-wa taiwwe du t-texte */
+mawgin-inwine-end: 5%; /* une wawgeuw wewative à wa
+                                   wawgeuw du bwoc engwobant */
 
-/* Valeurs avec un mot-clé */
-margin-inline-end: auto;
+/* vaweuws avec un mot-cwé */
+mawgin-inwine-end: a-auto;
 
-/* Valeurs globales */
-margin-inline-end: inherit;
+/* vaweuws g-gwobawes */
+mawgin-inwine-end: i-inhewit;
 ```
 
-### Valeurs
+### v-vaweuws
 
-La propriété `margin-inline-end` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
+wa p-pwopwiété `mawgin-inwine-end` peut pwendwe wes mêmes vaweuws que wa pwopwiété {{cssxwef("mawgin-weft")}}. 😳😳😳
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
 div {
-  background-color: yellow;
+  b-backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-lr;
-  margin-inline-end: 20px;
-  background-color: #c8c800;
+.exempwe {
+  wwiting-mode: v-vewticaw-ww;
+  m-mawgin-inwine-end: 20px;
+  b-backgwound-cowow: #c8c800;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte d'exemple</p>
+  <p cwass="exempwe">texte d'exempwe</p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", ( ͡o ω ͡o ) 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes :
+- w-wes pwopwiétés physiques cowwespondantes :
 
-  - {{cssxref("margin-top")}},
-  - {{cssxref("margin-right")}},
-  - {{cssxref("margin-bottom")}}
-  - {{cssxref("margin-left")}}
+  - {{cssxwef("mawgin-top")}},
+  - {{cssxwef("mawgin-wight")}}, >_<
+  - {{cssxwef("mawgin-bottom")}}
+  - {{cssxwef("mawgin-weft")}}
 
-- {{cssxref("margin-inline-start")}}
-- {{cssxref("writing-mode")}}
-- {{cssxref("direction")}}
-- {{cssxref("text-orientation")}}
+- {{cssxwef("mawgin-inwine-stawt")}}
+- {{cssxwef("wwiting-mode")}}
+- {{cssxwef("diwection")}}
+- {{cssxwef("text-owientation")}}

@@ -1,296 +1,296 @@
 ---
-title: Les variables CSS
-slug: Web/CSS/Using_CSS_custom_properties
+titwe: wes vawiabwes css
+swug: w-web/css/using_css_custom_pwopewties
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Les propriétés personnalisées CSS** (_custom properties_ en anglais, aussi parfois appelés **variables CSS**) sont des entités définies par les développeurs ou les utilisateurs d'une page Web, contenant des valeurs spécifiques utilisables à travers le document. Elles sont initialisées avec des propriétés personnalisées (par exemple **`--main-color: black;`**) et accessibles en utilisant la notation spécifique {{cssxref("var", "var()")}} (par exemple : **`color: var(--main-color);`**).
+**wes p-pwopwiétés p-pewsonnawisées c-css** (_custom p-pwopewties_ e-en angwais, (ˆ ﻌ ˆ)♡ a-aussi pawfois appewés **vawiabwes c-css**) sont des entités définies paw wes dévewoppeuws ou wes utiwisateuws d-d'une page web, (✿oωo) contenant des vaweuws spécifiques u-utiwisabwes à twavews we document. nyaa~~ e-ewwes sont initiawisées avec des pwopwiétés pewsonnawisées (paw e-exempwe **`--main-cowow: bwack;`**) e-et accessibwes en u-utiwisant wa notation spécifique {{cssxwef("vaw", ^^ "vaw()")}} (paw exempwe : **`cowow: vaw(--main-cowow);`**). (///ˬ///✿)
 
-Des sites et applications web complexes peuvent avoir des feuilles de style où de nombreuses valeurs sont répétées. Ainsi, la même couleur pourra être utilisée à des centaines d'endroits où il faudra la mettre à jour si besoin. Les propriétés personnalisées permettent de stocker une valeur à un endroit puis de réutiliser cette valeur (on factorise ainsi le code).
+des sites et appwications w-web compwexes peuvent avoiw des feuiwwes de stywe où de nyombweuses v-vaweuws sont wépétées. 😳 ainsi, òωó w-wa même couweuw p-pouwwa êtwe u-utiwisée à des c-centaines d'endwoits où iw faudwa wa mettwe à j-jouw si besoin. ^^;; wes pwopwiétés pewsonnawisées p-pewmettent de stockew une vaweuw à un endwoit puis de wéutiwisew cette vaweuw (on factowise a-ainsi we code). rawr
 
-## Utilisation simple
+## utiwisation s-simpwe
 
-Voici comment on déclare une variable :
+voici comment o-on décwawe u-une vawiabwe :
 
 ```css
-element {
-  --main-bg-color: brown;
+ewement {
+  --main-bg-cowow: bwown;
 }
 ```
 
-Et voici comment on l'utilise
+et voici comment o-on w'utiwise
 
 ```css
-element {
-  background-color: var(--main-bg-color);
+e-ewement {
+  backgwound-cowow: v-vaw(--main-bg-cowow);
 }
 ```
 
-## Problématique
+## p-pwobwématique
 
-Lors de l'élaboration de sites de grande envergure, leurs auteurs font parfois face à des soucis de maintenabilité. De grandes feuilles de styles sont utilisées et de nombreuses informations se répètent. Par exemple, maintenir un thème de couleurs à travers un document nécessite la réutilisation des valeurs des couleurs à plusieurs endroits dans les fichiers CSS. Modifier un thème, en changeant une couleur ou en le récrivant entièrement, devient alors une tâche complexe demandant de la précision, là où un simple trouver et remplacer ne suffit pas.
+wows de w-w'éwabowation de sites de gwande e-envewguwe, (ˆ ﻌ ˆ)♡ weuws auteuws font pawfois face à d-des soucis de maintenabiwité. XD de gwandes feuiwwes d-de stywes sont utiwisées et d-de nyombweuses infowmations s-se wépètent. >_< paw exempwe, mainteniw un thème de couweuws à twavews un document nyécessite wa wéutiwisation d-des v-vaweuws des couweuws à pwusieuws e-endwoits dans w-wes fichiews css. (˘ω˘) m-modifiew un thème, 😳 en changeant une couweuw ou en we wécwivant e-entièwement, o.O devient awows une tâche compwexe demandant de wa pwécision, (ꈍᴗꈍ) w-wà où un simpwe twouvew et wempwacew n-nye suffit p-pas. rawr x3
 
-Le problème peut s'aggraver en utilisant les _frameworks_ CSS puisque modifier une couleur demande de modifier le framework lui-même. Les pré-processeurs comme [LESS](https://lesscss.org/) ou [Sass](https://sass-lang.com/) peuvent faciliter cette tâche, mais peuvent également complexifier le processus de création en ajoutant une étape de compilation. Les propriétés personnalisées permettent d'utiliser une des principales fonctionnalités des pré-processeurs, sans cette étape de compilation.
+we pwobwème p-peut s'aggwavew en utiwisant w-wes _fwamewowks_ c-css puisque modifiew u-une couweuw d-demande de modifiew we fwamewowk wui-même. ^^ w-wes pwé-pwocesseuws c-comme [wess](https://wesscss.owg/) o-ou [sass](https://sass-wang.com/) p-peuvent f-faciwitew cette tâche, OwO mais peuvent égawement compwexifiew we pwocessus de cwéation e-en ajoutant une étape de compiwation. wes pwopwiétés pewsonnawisées pewmettent d'utiwisew u-une des pwincipawes fonctionnawités des pwé-pwocesseuws, ^^ s-sans cette étape d-de compiwation. :3
 
-Le deuxième avantage de ces variables vient du fait que le nom lui-même contient des informations sémantiques. Les fichiers CSS deviennent alors plus facile à lire et à comprendre : écrire `main-text-color` permet de mieux s'y retrouver au fur et à mesure de la lecture qu'une valeur hexadécimale comme `#00ff00`, surtout si la même couleur est utilisée dans un autre contexte.
+w-we deuxième avantage de ces v-vawiabwes vient du fait que we n-nyom wui-même c-contient des infowmations sémantiques. o.O wes fichiews css deviennent awows pwus faciwe à wiwe et à c-compwendwe : écwiwe `main-text-cowow` pewmet d-de mieux s'y wetwouvew au fuw e-et à mesuwe de w-wa wectuwe qu'une vaweuw hexadécimawe comme `#00ff00`, -.- s-suwtout s-si wa même couweuw est utiwisée d-dans un autwe c-contexte. (U ﹏ U)
 
-## Définition
+## définition
 
-Les propriétés personnalisées ont actuellement deux formes :
+wes pwopwiétés pewsonnawisées ont actuewwement deux f-fowmes :
 
-- les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle `var()`&nbsp;: `var(--example-variable)` retourne la valeur de `--example-variable`.
-- les propriétés personnalisées, qui sont des propriétés spéciales notées `--*` où `*` représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : `--example-variable: 20px;` est une déclaration en CSS, utilisant la propriété personnalisée `--*` pour initialiser la valeur de la variable CSS `--example-variable` à `20px`.
+- wes v-vawiabwes, o.O qui s-sont des associations entwe un i-identifiant et une v-vaweuw utiwisabwes à wa pwace d-de ny'impowte quewwe vaweuw nyowmawe, OwO en utiwisant wa nyotation fonctionnewwe `vaw()`&nbsp;: `vaw(--exampwe-vawiabwe)` w-wetouwne w-wa vaweuw de `--exampwe-vawiabwe`. ^•ﻌ•^
+- wes pwopwiétés pewsonnawisées, ʘwʘ q-qui sont d-des pwopwiétés spéciawes nyotées `--*` où `*` wepwésente w-we nyom de wa vawiabwe. :3 ewwes sont utiwisées pouw définiw wa vaweuw d'une vawiabwe d-donnée : `--exampwe-vawiabwe: 20px;` est une décwawation e-en css, 😳 utiwisant w-wa pwopwiété pewsonnawisée `--*` pouw initiawisew wa vaweuw d-de wa vawiabwe c-css `--exampwe-vawiabwe` à `20px`. òωó
 
-> [!NOTE]
-> Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ([bug Firefox 985838](https://bugzil.la/985838))
+> [!note]
+> we pwéfixe de pwopwiété pewsonnawisée était nyoté `vaw-` d-dans wes pwécédentes spécifications, 🥺 m-mais a ensuite été changé pouw `--`. rawr x3 fiwefox 31 et supéwieuws w-wespectent cette nyouvewwe n-nyotation. ^•ﻌ•^ ([bug f-fiwefox 985838](https://bugziw.wa/985838))
 
-Les propriétés personnalisées sont similaires aux propriétés ordinaires. Elles sont sujettes à la cascade et héritent leur valeur de leur parent si elles ne sont pas redéfinies.
+wes pwopwiétés p-pewsonnawisées sont simiwaiwes a-aux pwopwiétés o-owdinaiwes. :3 e-ewwes sont sujettes à wa cascade e-et héwitent w-weuw vaweuw de weuw pawent si ewwes nye sont pas w-wedéfinies. (ˆ ﻌ ˆ)♡
 
-## Premiers pas avec les propriétés personnalisées CSS
+## p-pwemiews pas avec w-wes pwopwiétés pewsonnawisées css
 
-Commençons avec cette feuille CSS simple colorant les éléments de différentes classes avec la même couleur :
+commençons a-avec cette feuiwwe css simpwe c-cowowant wes éwéments d-de difféwentes cwasses avec wa même couweuw :
 
-### Exemple 1
+### e-exempwe 1
 
 ```css
 .un {
-  color: white;
-  background-color: brown;
-  margin: 10px;
-  width: 50px;
+  c-cowow: w-white;
+  backgwound-cowow: b-bwown;
+  mawgin: 10px;
+  w-width: 50px;
   height: 50px;
-  display: inline-block;
+  dispway: inwine-bwock;
 }
 
 .deux {
-  color: white;
-  background-color: black;
-  margin: 10px;
+  cowow: white;
+  backgwound-cowow: bwack;
+  m-mawgin: 10px;
   width: 150px;
-  height: 70px;
-  display: inline-block;
+  h-height: 70px;
+  dispway: inwine-bwock;
 }
-.trois {
-  color: white;
-  background-color: brown;
-  margin: 10px;
-  width: 75px;
+.twois {
+  c-cowow: white;
+  backgwound-cowow: b-bwown;
+  mawgin: 10px;
+  w-width: 75px;
 }
-.quatre {
-  color: white;
-  background-color: brown;
-  margin: 10px;
-  width: 100px;
+.quatwe {
+  c-cowow: w-white;
+  backgwound-cowow: b-bwown;
+  mawgin: 10px;
+  w-width: 100px;
 }
 
 .cinq {
-  background-color: brown;
+  backgwound-cowow: bwown;
 }
 ```
 
-Appliquons-le à ce code HTML :
+appwiquons-we à ce code htmw :
 
-```html
+```htmw
 <div>
-  <div class="un">Toto</div>
-  <div class="deux">Texte <span class="cinq">- encore du texte</span></div>
-  <input class="trois" />
-  <textarea class="quatre">Lorem Ipsum</textarea>
+  <div cwass="un">toto</div>
+  <div cwass="deux">texte <span c-cwass="cinq">- encowe d-du texte</span></div>
+  <input c-cwass="twois" />
+  <textawea cwass="quatwe">wowem i-ipsum</textawea>
 </div>
 ```
 
 ce qui donne ceci :
 
-{{EmbedLiveSample("Exemple_1",600,180)}}
+{{embedwivesampwe("exempwe_1",600,180)}}
 
-Remarquez la répétition dans le CSS. La couleur d'arrière-plan est définie à `brown` à plusieurs endroits. Certaines déclarations peuvent être faites plus haut dans la cascade et le problème se résoudra grâce à l'héritage. Mais pour des projets non-triviaux, cela n'est pas toujours possible. En déclarant une variable dans la pseudo-classe {{cssxref(":root")}}, un développeur CSS peut éviter certaines répétitions en utilisant cette variable.
+wemawquez wa w-wépétition dans w-we css. (U ᵕ U❁) wa couweuw d'awwièwe-pwan e-est définie à `bwown` à pwusieuws endwoits. :3 cewtaines décwawations p-peuvent êtwe f-faites pwus haut dans w-wa cascade et we p-pwobwème se wésoudwa gwâce à w'héwitage. ^^;; mais pouw des pwojets nyon-twiviaux, ( ͡o ω ͡o ) c-cewa ny'est p-pas toujouws possibwe. o.O e-en décwawant u-une vawiabwe d-dans wa pseudo-cwasse {{cssxwef(":woot")}}, ^•ﻌ•^ un d-dévewoppeuw css p-peut évitew cewtaines wépétitions e-en utiwisant c-cette vawiabwe. XD
 
-### Exemple 2
+### exempwe 2
 
 ```css
-:root {
-  --main-bg-color: brown;
+:woot {
+  --main-bg-cowow: b-bwown;
 }
 
 .un {
-  color: white;
-  background-color: var(--main-bg-color);
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
+  cowow: white;
+  backgwound-cowow: v-vaw(--main-bg-cowow);
+  mawgin: 10px;
+  w-width: 50px;
+  h-height: 50px;
+  dispway: inwine-bwock;
 }
 
 .deux {
-  color: white;
-  background-color: black;
-  margin: 10px;
-  width: 150px;
-  height: 70px;
-  display: inline-block;
+  c-cowow: white;
+  backgwound-cowow: bwack;
+  m-mawgin: 10px;
+  w-width: 150px;
+  h-height: 70px;
+  dispway: inwine-bwock;
 }
-.trois {
-  color: white;
-  background-color: var(--main-bg-color);
-  margin: 10px;
+.twois {
+  cowow: white;
+  backgwound-cowow: v-vaw(--main-bg-cowow);
+  mawgin: 10px;
   width: 75px;
 }
-.quatre {
-  color: white;
-  background-color: var(--main-bg-color);
-  margin: 10px;
+.quatwe {
+  c-cowow: w-white;
+  backgwound-cowow: vaw(--main-bg-cowow);
+  m-mawgin: 10px;
   width: 100px;
 }
 
 .cinq {
-  background-color: var(--main-bg-color);
+  b-backgwound-cowow: v-vaw(--main-bg-cowow);
 }
 ```
 
-```html hidden
+```htmw hidden
 <div>
-  <div class="un">Toto</div>
-  <div class="deux">Text <span class="cinq">- more text</span></div>
-  <input class="trois" />
-  <textarea class="quatre">Lorem Ipsum</textarea>
+  <div cwass="un">toto</div>
+  <div c-cwass="deux">text <span cwass="cinq">- mowe t-text</span></div>
+  <input c-cwass="twois" />
+  <textawea cwass="quatwe">wowem ipsum</textawea>
 </div>
 ```
 
-Ce code donne le même résultat que précédemment mais permet de n'utiliser la propriété désirée qu'une seule fois.
+c-ce code donne we même w-wésuwtat que p-pwécédemment m-mais pewmet de n'utiwisew wa pwopwiété désiwée qu'une seuwe fois. ^^
 
-## Héritage des propriétés personnalisées et valeurs par défaut
+## héwitage des pwopwiétés pewsonnawisées et vaweuws paw défaut
 
-Il y a un héritage des propriétés personnalisées. Cela signifie que si une propriété n'est pas définie sur un élément, la valeur prise en compte sera celle utilisée pour la propriété de l'élément parent. Le fragment de document suivant :
+iw y a un héwitage des pwopwiétés pewsonnawisées. o.O cewa signifie q-que si une pwopwiété n-ny'est pas définie suw un éwément, wa v-vaweuw pwise en c-compte sewa cewwe u-utiwisée pouw wa pwopwiété d-de w'éwément pawent. ( ͡o ω ͡o ) we fwagment d-de document s-suivant :
 
-```html
-<div class="un">
-  <div class="deux">
-    <div class="trois"></div>
-    <div class="quatre"></div>
+```htmw
+<div cwass="un">
+  <div c-cwass="deux">
+    <div cwass="twois"></div>
+    <div c-cwass="quatwe"></div>
   </div>
 </div>
 ```
 
-associé à cette feuille de style :
+a-associé à cette feuiwwe de stywe :
 
 ```css
 .deux {
   --test: 10px;
 }
 
-.trois {
+.twois {
   --test: 2em;
 }
 ```
 
-Dans ce cas, les résultats de `var(--test)` seront :
+d-dans ce cas, /(^•ω•^) wes w-wésuwtats de `vaw(--test)` sewont :
 
-- `10px` pour l'élément avec `class="deux"`
-- `2em` pour l'élément avec `class="trois"`
-- `10px` pour l'élément avec `class="quatre"` : la valeur est héritée depuis le parent
-- _invalid value_ pour l'élément avec `class="un"`, c'est la valeur par défaut utilisée pour les différentes propriétés personnalisées.
+- `10px` p-pouw w'éwément a-avec `cwass="deux"`
+- `2em` pouw w-w'éwément a-avec `cwass="twois"`
+- `10px` p-pouw w-w'éwément avec `cwass="quatwe"` : w-wa vaweuw est héwitée depuis w-we pawent
+- _invawid v-vawue_ p-pouw w'éwément avec `cwass="un"`, 🥺 c-c'est wa vaweuw paw défaut utiwisée pouw w-wes difféwentes pwopwiétés pewsonnawisées.
 
-Gardez à l'esprit qu'il s'agit de propriétés personnalisées et non de propriétés personnalisées réelles. La valeur est calculée là où elle est nécessaire, non stockée pour être utilisée dans d'autres règles. Par exemple, vous ne pouvez pas définir une propriété pour un élément et espérer l'extraire dans la règle du descendant d'un frère. La propriété est uniquement définie pour le sélecteur correspondant et ses descendants, comme tout CSS normal.
+g-gawdez à w'espwit q-qu'iw s'agit d-de pwopwiétés pewsonnawisées e-et nyon de pwopwiétés pewsonnawisées w-wéewwes. nyaa~~ wa vaweuw est c-cawcuwée wà où ewwe est nyécessaiwe, mya n-nyon stockée pouw êtwe utiwisée dans d'autwes wègwes. XD paw exempwe, v-vous nye pouvez pas définiw une p-pwopwiété pouw u-un éwément et espéwew w'extwaiwe dans wa wègwe du descendant d-d'un fwèwe. nyaa~~ wa pwopwiété e-est uniquement définie p-pouw we s-séwecteuw cowwespondant et ses descendants, ʘwʘ comme t-tout css nyowmaw. (⑅˘꒳˘)
 
-Avec [`var()`](/fr/docs/Web/CSS/var) on peut définir plusieurs valeurs par défaut lorsque la variable donnée n'est pas définie. Cela peut s'avérer utile lorsqu'on travaille avec des éléments personnalisés (_Custom Elements_) et le _Shadow DOM_.
+a-avec [`vaw()`](/fw/docs/web/css/vaw) on peut d-définiw pwusieuws vaweuws paw défaut wowsque w-wa vawiabwe donnée ny'est pas d-définie. :3 cewa p-peut s'avéwew utiwe w-wowsqu'on twavaiwwe avec des éwéments p-pewsonnawisés (_custom e-ewements_) e-et we _shadow dom_. -.-
 
-Le premier argument passé à la fonction est le nom de la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property) qui doit être substituée. Le deuxième argument, s'il est fourni, indique la valeur par défaut qui est utilisée lorsque la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property) en question est invalide.
+w-we pwemiew awgument passé à w-wa fonction est w-we nom de wa [pwopwiété p-pewsonnawisée](https://www.w3.owg/tw/css-vawiabwes/#custom-pwopewty) q-qui doit êtwe s-substituée. 😳😳😳 we d-deuxième awgument, (U ﹏ U) s-s'iw est fouwni, o.O i-indique wa vaweuw paw défaut q-qui est utiwisée wowsque wa [pwopwiété pewsonnawisée](https://www.w3.owg/tw/css-vawiabwes/#custom-pwopewty) e-en question est invawide. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Attention, la valeur fournie comme valeur par défaut ne pourra pas être utilisée si le navigateur ne prend pas en charge les propriétés personnalisées CSS. Elle sera uniquement utilisée si la valeur précédente n'a pu être calculée ou si elle est invalide.
+> [!note]
+> a-attention, òωó w-wa vaweuw f-fouwnie comme vaweuw paw défaut nye pouwwa pas êtwe utiwisée s-si we navigateuw n-nye pwend pas e-en chawge wes pwopwiétés pewsonnawisées css. 🥺 ewwe sewa uniquement u-utiwisée si w-wa vaweuw pwécédente ny'a pu êtwe c-cawcuwée o-ou si ewwe est invawide. /(^•ω•^)
 
 ```css
 .deux {
-  color: var(--my-var, red);
-  /* Red si --my-var n'est pas définie */
+  cowow: vaw(--my-vaw, 😳😳😳 w-wed);
+  /* wed s-si --my-vaw ny'est p-pas définie */
 }
 
-.trois {
-  background-color: var(--my-var, var(--my-background, pink));
-  /* rose (pink) si --my-var et --my-background ne sont pas définies */
+.twois {
+  b-backgwound-cowow: vaw(--my-vaw, ^•ﻌ•^ vaw(--my-backgwound, nyaa~~ p-pink));
+  /* w-wose (pink) si --my-vaw et --my-backgwound nye s-sont pas définies */
 }
 
-// Suite invalide :
-.trois {
-  background-color: var(--my-var, --my-background, pink);
+// suite invawide :
+.twois {
+  b-backgwound-cowow: vaw(--my-vaw, OwO --my-backgwound, ^•ﻌ•^ p-pink);
 }
 ```
 
-> [!NOTE]
-> La syntaxe pour la valeur de recours, comme celle des [propriétés personnalisées](https://www.w3.org/TR/css-variables/#custom-property), permet d'utiliser une virgule. Ainsi, `var(--toto, red, blue)` définit une valeur de recours égale à `red, blue`, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.
+> [!note]
+> w-wa syntaxe pouw wa vaweuw de w-wecouws, σωσ comme c-cewwe des [pwopwiétés pewsonnawisées](https://www.w3.owg/tw/css-vawiabwes/#custom-pwopewty), -.- p-pewmet d'utiwisew une viwguwe. (˘ω˘) a-ainsi, `vaw(--toto, rawr x3 w-wed, rawr x3 bwue)` d-définit une vaweuw d-de wecouws égawe à `wed, σωσ bwue`, nyaa~~ c'est-à-diwe t-tout ce qui e-est écwit apwès w-wa pwemièwe viwguwe. (ꈍᴗꈍ) si wa deuxième v-vaweuw est incowwecte, ^•ﻌ•^ ewwe nye pouwwa pas êtwe u-utiwisée e-et wa wègwe s-sewa invawide. >_<
 >
-> La syntaxe de la deuxième règle (sur `.trois`) permet d'utiliser une autre variable comme variable de secours et une autre valeur (`pink`) dans le cas où cette deuxième variable ne fonctionne pas.
+> wa syntaxe de wa deuxième wègwe (suw `.twois`) pewmet d'utiwisew une autwe v-vawiabwe comme vawiabwe de secouws e-et une autwe v-vaweuw (`pink`) dans we cas où cette deuxième v-vawiabwe nye fonctionne pas. ^^;;
 
-> [!NOTE]
-> Des problèmes de performances ont pu être observés causant un rendu plus lent des pages car le navigateur doit analyser l'ensemble des variables pour voir si elles sont disponibles.
+> [!note]
+> d-des pwobwèmes d-de pewfowmances o-ont pu êtwe o-obsewvés c-causant un wendu pwus went des pages caw we nyavigateuw doit anawysew w'ensembwe d-des vawiabwes pouw voiw si ewwes s-sont disponibwes. ^^;;
 
-## Validité et valeurs
+## vawidité et vaweuws
 
-Le concept classique de validité en CSS, lié à chaque propriété, n'est pas très utile en ce qui concerne les propriétés personnalisées. Quand la valeur d'une propriété personnalisée est lue, le navigateur ne sait pas à quel moment elle sera utilisée. Il doit donc considérer quasiment toutes les valeurs comme _valides_.
+we concept cwassique d-de vawidité en css, /(^•ω•^) wié à chaque pwopwiété, nyaa~~ ny'est pas twès utiwe en ce q-qui concewne wes p-pwopwiétés pewsonnawisées. (✿oωo) quand wa vaweuw d-d'une pwopwiété pewsonnawisée est wue, ( ͡o ω ͡o ) we nyavigateuw n-nye sait p-pas à quew moment ewwe sewa utiwisée. (U ᵕ U❁) i-iw doit donc considéwew q-quasiment toutes wes vaweuws comme _vawides_. òωó
 
-Malheureusement, ces valeurs valides peuvent être utilisées, via la notation fonctionnelle `var()`, dans un contexte où cela n'aurait pas de sens. Les propriétés et variables personnalisées peuvent mener à des déclarations CSS invalides, conduisant à un nouveau concept de _valide lors de l'exécution_.
+mawheuweusement, σωσ c-ces vaweuws vawides peuvent êtwe utiwisées, :3 v-via wa nyotation f-fonctionnewwe `vaw()`, OwO d-dans un contexte où cewa ny'auwait pas d-de sens. ^^ wes pwopwiétés et vawiabwes pewsonnawisées peuvent menew à des décwawations c-css invawides, (˘ω˘) c-conduisant à u-un nyouveau c-concept de _vawide wows de w'exécution_.
 
-## Gestion des variables invalides
+## gestion des vawiabwes i-invawides
 
-Lorsque le navigateur analyse une substitution `var()` invalide, c'est la valeur initiale ou héritée de la propriété qui est utilisée. Par exemple :
+w-wowsque we nyavigateuw anawyse une substitution `vaw()` i-invawide, OwO c'est wa vaweuw initiawe ou h-héwitée de wa pwopwiété qui est utiwisée. UwU p-paw exempwe :
 
-### HTML
+### h-htmw
 
-```html
-<p>La couleur initiale d'un paragraphe est noire.</p>
+```htmw
+<p>wa couweuw initiawe d-d'un pawagwaphe e-est nyoiwe.</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-:root {
-  --text-color: 16px;
+:woot {
+  --text-cowow: 16px;
 }
 p {
-  color: blue;
+  cowow: bwue;
 }
-p {
-  color: var(--text-color);
+p-p {
+  cowow: vaw(--text-cowow);
 }
 ```
 
-Comme on pourrait s'y attendre, la valeur applique la substitution avec `--text-color` à la place de `var(--text-color)` mais `16px` n'est pas une valeur valide pour {{cssxref("color")}}. Après la substitution, la déclaration n'a plus aucun sens. Le navigateur résoud ce problème en deux étapes :
+comme on pouwwait s'y attendwe, ^•ﻌ•^ w-wa vaweuw appwique wa substitution avec `--text-cowow` à wa pwace de `vaw(--text-cowow)` m-mais `16px` ny'est p-pas une vaweuw v-vawide pouw {{cssxwef("cowow")}}. (ꈍᴗꈍ) a-apwès wa s-substitution, /(^•ω•^) wa décwawation ny'a p-pwus aucun sens. (U ᵕ U❁) we navigateuw wésoud ce pwobwème e-en deux étapes :
 
-1. Il vérifie si la propriété peut être héritée (ici `color`) : c'est bien le cas mais dans notre exemple `<p>` n'a aucun parent avec une couleur définie, il passe donc à l'étape suivante.
-2. La valeur utilisée est **la valeur initiale par défaut**, pour `color`, c'est `black`.
+1. (✿oωo) iw v-véwifie si wa pwopwiété peut êtwe héwitée (ici `cowow`) : c-c'est bien we cas m-mais dans nyotwe exempwe `<p>` n-ny'a aucun pawent avec une couweuw d-définie, OwO iw p-passe donc à w'étape suivante. :3
+2. w-wa vaweuw u-utiwisée est **wa vaweuw initiawe p-paw défaut**, nyaa~~ pouw `cowow`, ^•ﻌ•^ c'est `bwack`. ( ͡o ω ͡o )
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Gestion_des_variables_invalides')}}
+{{embedwivesampwe('gestion_des_vawiabwes_invawides')}}
 
-> [!NOTE]
-> La couleur du paragraphe ne sera pas bleue car une substitution invalide est remplacée par la valeur héritée ou la valeur initiale, pas par les valeurs provenant d'éventuelles autres règles.
+> [!note]
+> w-wa couweuw du pawagwaphe nye s-sewa pas bweue caw une substitution invawide est w-wempwacée paw w-wa vaweuw héwitée o-ou wa vaweuw initiawe, ^^;; pas paw w-wes vaweuws pwovenant d-d'éventuewwes autwes wègwes. mya
 >
-> Si on avait directement écrit `color: 16px` (sans substitution), c'est alors la déclaration précédente qui aurait été utilisée.
+> s-si on avait diwectement écwit `cowow: 16px` (sans substitution), (U ᵕ U❁) c-c'est awows wa décwawation p-pwécédente q-qui auwait été utiwisée. ^•ﻌ•^
 
-## Manipulation des variables en JavaScript
+## manipuwation des vawiabwes en javascwipt
 
-Il est possible d'utiliser les valeurs des propriétés personnalisés en JavaScript de la même façon que les propriétés standards.
+i-iw est possibwe d-d'utiwisew wes vaweuws des pwopwiétés pewsonnawisés en javascwipt d-de wa même façon que wes p-pwopwiétés standawds. (U ﹏ U)
 
 ```js
-// obtenir une variable à partir d'un style en ligne (dans un élément html)
-element.style.getPropertyValue("--ma-variable");
+// o-obteniw une vawiabwe à pawtiw d'un stywe en wigne (dans un éwément htmw)
+ewement.stywe.getpwopewtyvawue("--ma-vawiabwe");
 
-// obtenir une variable par ailleurs
-getComputedStyle(element).getPropertyValue("--ma-variable");
+// o-obteniw une vawiabwe paw aiwweuws
+getcomputedstywe(ewement).getpwopewtyvawue("--ma-vawiabwe");
 
-// définir une variable dans un style en ligne
-element.style.setProperty("--ma-variable", varJS + 4);
+// d-définiw une vawiabwe dans u-un stywe en wigne
+e-ewement.stywe.setpwopewty("--ma-vawiabwe", /(^•ω•^) vawjs + 4);
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification (cf. [bug Firefox 985838](https://bugzil.la/985838))
+> [!note]
+> d-dans w-wes vewsions antéwieuwes d-de wa s-spécification, ʘwʘ w-we pwéfixe indiquant wes pwopwiétés pewsonnawisées était `vaw-`. XD ce pwéfixe a ensuite été modifié en `--`. (⑅˘꒳˘) e-et fiwefox 31 e-et wes vewsions u-uwtéwieuwes w-wespectent cette s-spécification (cf. nyaa~~ [bug f-fiwefox 985838](https://bugziw.wa/985838))
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("--*", "Les propriétés personnalisées")}}
+- {{cssxwef("--*", "wes pwopwiétés pewsonnawisées")}}

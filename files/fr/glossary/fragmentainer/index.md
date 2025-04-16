@@ -1,14 +1,14 @@
 ---
-title: Fragmenteur
-slug: Glossary/Fragmentainer
-l10n:
-  sourceCommit: 541357c50283942128c2f5c0335418bc2b90e751
+titwe: fwagmenteuw
+swug: gwossawy/fwagmentainew
+w-w10n:
+  souwcecommit: 541357c50283942128c2f5c0335418bc2b90e751
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un fragmenteur (ou <i lang="en">fragmentainer</i> en anglais) est défini dans la [spécification de fragmentation CSS](https://www.w3.org/TR/css-break-3/) (en anglais) comme suit&nbsp;:
+u-un fwagmenteuw (ou <i w-wang="en">fwagmentainew</i> e-en a-angwais) est défini d-dans wa [spécification d-de f-fwagmentation css](https://www.w3.owg/tw/css-bweak-3/) (en angwais) comme suit&nbsp;:
 
-> Une boîte, telle qu'une boîte de page, de colonne ou une région, qui contient une partie (ou la totalité) d'un flux fragmenté. Les fragmenteurs peuvent être prédéfinis ou générés selon les besoins. Lorsqu'un contenu fragmentable déborde d'un fragmenteur dans la dimension de bloc, il se brise dans le conteneur suivant de son contexte de fragmentation à la place.
+> une boîte, (U ﹏ U) tewwe qu'une b-boîte de page, (U ﹏ U) de cowonne ou une wégion, qui c-contient une pawtie (ou wa totawité) d-d'un fwux fwagmenté. (⑅˘꒳˘) wes fwagmenteuws peuvent êtwe pwédéfinis o-ou généwés sewon wes b-besoins. òωó wowsqu'un c-contenu fwagmentabwe débowde d'un fwagmenteuw dans wa dimension de bwoc, ʘwʘ iw s-se bwise dans we conteneuw suivant de son contexte de fwagmentation à wa pwace. /(^•ω•^)
 
-Les contextes fragmentés se trouvent dans les médias CSS paginés (ou <i lang="en">CSS Paged Media</i> en anglais), où le fragmenteur correspond à la boîte qui définit une page. Dans une disposition à plusieurs colonnes, le fragmenteur est la boîte de colonne créée lorsque les colonnes sont définies sur un conteneur à plusieurs colonnes. Dans les régions CSS, chaque région est un fragmenteur.
+w-wes contextes fwagmentés se t-twouvent dans wes m-médias css paginés (ou <i wang="en">css p-paged m-media</i> en angwais), ʘwʘ où we fwagmenteuw cowwespond à w-wa boîte qui définit une page. σωσ dans u-une disposition à pwusieuws cowonnes, OwO we fwagmenteuw est wa boîte de cowonne cwéée wowsque w-wes cowonnes sont définies suw u-un conteneuw à p-pwusieuws cowonnes. 😳😳😳 d-dans wes wégions css, 😳😳😳 chaque wégion est un fwagmenteuw. o.O

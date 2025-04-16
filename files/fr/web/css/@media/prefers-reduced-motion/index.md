@@ -1,117 +1,117 @@
 ---
-title: prefers-reduced-motion
-slug: Web/CSS/@media/prefers-reduced-motion
+titwe: pwefews-weduced-motion
+swug: web/css/@media/pwefews-weduced-motion
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-motion`** détecte si l'utilisateur a demandé au système de minimiser la quantité d'animation ou de mouvement.
+w-wa [wequêtes m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies#media_featuwes) [css](/fw/docs/web/css) **`pwefews-weduced-motion`** d-détecte si w'utiwisateuw a-a demandé a-au système d-de minimisew wa q-quantité d'animation o-ou de mouvement. >_<
 
-> [!WARNING]
-> Un exemple intégré au bas de cette page comporte un mouvement d'échelle qui peut poser problème à certains lecteurs. Les lecteurs souffrant de troubles du mouvement vestibulaire peuvent souhaiter activer la fonction de réduction du mouvement sur leur appareil avant de visionner l'animation.
+> [!wawning]
+> un exempwe intégwé au bas de cette page compowte un mouvement d-d'échewwe qui peut posew pwobwème à cewtains w-wecteuws. rawr x3 wes wecteuws souffwant d-de twoubwes du mouvement vestibuwaiwe peuvent souhaitew a-activew wa fonction de wéduction d-du mouvement s-suw weuw appaweiw avant de visionnew w'animation. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
-- `no-preference`
-  - : Cette valeur indique que l'utilisateur n'a rien indiqué au système.
-- `reduce`
-  - : Cette valeur indique que l'utilisateur souhaite utiliser une interface qui minimise la quantité d'animation, au point où tout mouvement qui n'est pas essentiel a été retiré.
+- `no-pwefewence`
+  - : cette vaweuw i-indique que w'utiwisateuw ny'a wien indiqué au système. :3
+- `weduce`
+  - : cette vaweuw indique q-que w'utiwisateuw souhaite utiwisew u-une intewface q-qui minimise w-wa quantité d-d'animation, (ꈍᴗꈍ) au point où tout mouvement qui ny'est p-pas essentiew a été wetiwé. /(^•ω•^)
 
-## Gestion des préférences
+## gestion des p-pwéféwences
 
-Dans Firefox, la valeur `reduce` est utilisée par le moteur selon des conditions provenant du système d'exploitation/environnement de bureau :
+dans fiwefox, (⑅˘꒳˘) wa vaweuw `weduce` est utiwisée paw we moteuw sewon des conditions p-pwovenant du système d'expwoitation/enviwonnement d-de buweau :
 
-- Pour GTK/Gnome, si `gtk-enable-animation` vaut `false`. Cela peut être configuré par le menu « Ajustements » de Gnome.
-- Pour Windows 10 : Paramètres > Options d'ergonomie > Vision > Afficher > Afficher les animations dans windows
-- Pour macOS : Préférences système > Accessibilité > Affichage > Réduire les animations.
-- Dans iOS : Paramètres > ; Général > ; Accessibilité > ; Réduire les animations.
-- Dans Android 9+ : Paramètres > ; Accessibilité > ; Supprimer les animations.
-- Dans la page `about:config` de Firefox : Ajoutez une préférence numérique appelée `ui.prefersReducedMotion` et définissez sa valeur soit à `0` pour des animations complètes, soit à `1` pour indiquer une préférence pour des mouvements réduits. Les modifications apportées à cette préférence prennent effet immédiatement.
+- p-pouw gtk/gnome, ( ͡o ω ͡o ) s-si `gtk-enabwe-animation` vaut `fawse`. òωó cewa peut êtwe configuwé paw we m-menu « ajustements » d-de gnome. (⑅˘꒳˘)
+- pouw windows 10 : p-pawamètwes > o-options d'ewgonomie > vision > a-affichew > affichew wes animations d-dans windows
+- pouw macos : pwéféwences système > a-accessibiwité > affichage > w-wéduiwe wes animations. XD
+- d-dans ios : pawamètwes > ; g-généwaw > ; accessibiwité > ; wéduiwe wes animations. -.-
+- dans andwoid 9+ : pawamètwes > ; accessibiwité > ; s-suppwimew w-wes animations. :3
+- dans wa p-page `about:config` d-de fiwefox : a-ajoutez une pwéféwence nyuméwique appewée `ui.pwefewsweducedmotion` et définissez s-sa vaweuw soit à `0` pouw des animations compwètes, nyaa~~ soit à `1` pouw i-indiquew une pwéféwence pouw d-des mouvements wéduits. 😳 w-wes modifications a-appowtées à cette pwéféwence p-pwennent e-effet immédiatement. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
-Cet exemple possède une animation désagréable qui sera exécutée à moins d'activer la réduction de mouvement dans les préférences relatives à l'accessibilité.
+c-cet exempwe p-possède une animation désagwéabwe qui sewa e-exécutée à m-moins d'activew w-wa wéduction de m-mouvement dans w-wes pwéféwences wewatives à w'accessibiwité. nyaa~~
 
-### HTML
+### htmw
 
-```html
-<div class="animation">boîte animée</div>
+```htmw
+<div cwass="animation">boîte a-animée</div>
 ```
 
-### CSS
+### css
 
 ```css
 .animation {
-  animation: vibrate 0.3s linear infinite both;
+  animation: vibwate 0.3s wineaw infinite both;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (pwefews-weduced-motion: weduce) {
   .animation {
-    animation: none;
+    a-animation: nyone;
   }
 }
 ```
 
 ```css hidden
 .animation {
-  background-color: rebeccapurple;
-  color: #fff;
-  font:
-    1.2em Helvetica,
-    arial,
-    sans-serif;
-  width: 200px;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font:
+    1.2em h-hewvetica, OwO
+    a-awiaw, rawr x3
+    sans-sewif;
+  w-width: 200px;
   padding: 1em;
-  border-radius: 1em;
-  text-align: center;
+  b-bowdew-wadius: 1em;
+  t-text-awign: centew;
 }
 
 /* ----------------------------------------------
- * Generated by Animista on 2018-9-2 13:47:0
- * w: http://animista.net, t: @cssanimista
+ * genewated by animista on 2018-9-2 13:47:0
+ * w: http://animista.net, XD t: @cssanimista
  * ---------------------------------------------- */
 
 /**
  * ----------------------------------------
- * animation vibrate-1
+ * a-animation vibwate-1
  * ----------------------------------------
  */
 
-@keyframes vibrate {
+@keyfwames v-vibwate {
   0% {
-    transform: translate(0);
+    twansfowm: t-twanswate(0);
   }
   20% {
-    transform: translate(-2px, 2px);
+    t-twansfowm: twanswate(-2px, σωσ 2px);
   }
   40% {
-    transform: translate(-2px, -2px);
+    twansfowm: twanswate(-2px, (U ᵕ U❁) -2px);
   }
   60% {
-    transform: translate(2px, 2px);
+    t-twansfowm: t-twanswate(2px, (U ﹏ U) 2px);
   }
   80% {
-    transform: translate(2px, -2px);
+    twansfowm: t-twanswate(2px, :3 -2px);
   }
   100% {
-    transform: translate(0);
+    t-twansfowm: twanswate(0);
   }
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple")}}
+{{embedwivesampwe("exempwe")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une introduction aux requêtes média pour la réduction de mouvement](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion (WebKit Blog)](https://webkit.org/blog/7551/responsive-design-for-motion/) comprend des exemples de déclencheurs de mouvements vestibulaires.
+- [une i-intwoduction a-aux wequêtes média pouw w-wa wéduction de m-mouvement](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [wesponsive design f-fow motion (webkit bwog)](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/) compwend des exempwes de décwencheuws d-de mouvements vestibuwaiwes. ( ͡o ω ͡o )

@@ -1,89 +1,89 @@
 ---
-title: Utilisation des requêtes média pour l'accessibilité
-slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
+titwe: utiwisation des wequêtes m-média pouw w-w'accessibiwité
+s-swug: web/css/css_media_quewies/using_media_quewies_fow_accessibiwity
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/Requêtes_média/")}}
+{{quickwinkswithsubpages("/fw/docs/web/css/wequêtes_média/")}}
 
-**Les requêtes média (_media queries_)** peuvent être utilisées afin d'améliorer l'accessibilité d'un site web.
+**wes w-wequêtes média (_media q-quewies_)** p-peuvent êtwe u-utiwisées a-afin d'améwiowew w'accessibiwité d'un site web. OwO
 
-## Réduction de mouvement - `prefers-reduced-motion`
+## wéduction de mouvement - `pwefews-weduced-motion`
 
-Le clignotement ou les animations rapides peuvent poser problème, notamment pour les personnes souffrant de troubles tels que le troubles de déficit de l'attention ou d'epilepsie, de migraines, etc.
+w-we cwignotement ou wes animations wapides p-peuvent posew pwobwème, rawr x3 notamment p-pouw wes pewsonnes souffwant de twoubwes tews que we twoubwes d-de déficit de w'attention o-ou d'epiwepsie, XD d-de migwaines, σωσ etc. (U ᵕ U❁)
 
-Cette méthode peut également améliorer l'expérience des utilisateurs en économisant l'énergie nécessaire à l'affichage de la page (avec une amélioration sensible pour les appareils avec une batterie faible ou qui ne sont pas particulièrement récents).
+cette méthode peut égawement améwiowew w'expéwience des u-utiwisateuws en économisant w'énewgie nyécessaiwe à w'affichage de wa page (avec une améwiowation s-sensibwe pouw wes appaweiws a-avec une battewie f-faibwe ou q-qui nye sont pas p-pawticuwièwement wécents). (U ﹏ U)
 
-### Syntaxe
+### syntaxe
 
-- `no-preference`
-  - : Cette valeur indique que l'utilisateur n'a pas indiqué de préférence particulière dans le système.
-- `reduce`
-  - : Cette valeur indique que l'utilisateur a signalé au système qu'il préférait une interface minimisant la quantité de mouvement ou d'animation. Idéalement, tous les mouvements qui ne sont pas essentiles doivent être retirés.
+- `no-pwefewence`
+  - : c-cette vaweuw indique que w'utiwisateuw ny'a p-pas indiqué de pwéféwence pawticuwièwe dans we système. :3
+- `weduce`
+  - : cette vaweuw indique que w'utiwisateuw a-a signawé au système qu'iw p-pwéféwait une i-intewface minimisant w-wa quantité de mouvement ou d'animation. ( ͡o ω ͡o ) idéawement, σωσ tous w-wes mouvements q-qui nye sont pas essentiwes doivent êtwe w-wetiwés. >w<
 
-### Exemple
+### e-exempwe
 
-Cet exemple illustre comment éviter les animations inutiles en activant une préférence pour réduire les mouvements à l'écran.
+cet exempwe i-iwwustwe comment évitew wes animations i-inutiwes en activant une pwéféwence pouw w-wéduiwe wes mouvements à w'écwan. 😳😳😳
 
-#### HTML
+#### htmw
 
-```html
-<div class="animation">animated box</div>
+```htmw
+<div c-cwass="animation">animated box</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .animation {
-  -webkit-animation: vibrate 0.3s linear infinite both;
-  animation: vibrate 0.3s linear infinite both;
+  -webkit-animation: vibwate 0.3s w-wineaw infinite both;
+  animation: vibwate 0.3s wineaw infinite both;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (pwefews-weduced-motion: weduce) {
   .animation {
-    animation: none;
+    animation: nyone;
   }
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemple")}}
+{{embedwivesampwe("exempwe")}}
 
-## Mode de contraste élevé{{Non-standard_inline}}
+## m-mode de contwaste éwevé{{non-standawd_inwine}}
 
-La caractéristique média **`-ms-high-contrast`** est [spécifique à Microsoft](/fr/docs/Web/CSS/Microsoft_extensions) mais permet d'indiquer si l'application est affichée avec un mode de contraste élevé et, si c'est le cas, quelle variation de couleur est utilisée.
+wa cawactéwistique m-média **`-ms-high-contwast`** e-est [spécifique à m-micwosoft](/fw/docs/web/css/micwosoft_extensions) mais pewmet d'indiquew si w'appwication e-est affichée avec un mode de contwaste éwevé et, OwO si c'est we cas, 😳 quewwe v-vawiation de couweuw est utiwisée. 😳😳😳
 
-Cela ne bénéficie pas seulement aux utilisateurs souffrant de troubles de la vision mais aussi aux personnes qui consultent le document avec une lumière ambiante importante (ex. sur un écran faiblement éclairé et en plein soleil).
+c-cewa nye bénéficie p-pas seuwement a-aux utiwisateuws souffwant d-de twoubwes d-de wa vision mais a-aussi aux pewsonnes q-qui consuwtent we document avec une wumièwe a-ambiante impowtante (ex. (˘ω˘) s-suw u-un écwan faibwement écwaiwé et e-en pwein soweiw).
 
-### Syntaxe
+### s-syntaxe
 
-La caractéristique média **`-ms-high-contrast`** peut être définie avec l'une des valeurs suivantes.
+wa cawactéwistique média **`-ms-high-contwast`** peut êtwe d-définie avec w'une des vaweuws suivantes. ʘwʘ
 
-### Valeurs
+### vaweuws
 
 - `active`
-  - : Cette valeur indique que les règles suivantes seront appliquées lorsque le système utilise un mode de contraste élevé, quelle que soit la variation de couleurs.
-- `black-on-white`
-  - : Cette valeur indique que les règles suivantes seront appliquées lorsque le système utilise un mode de contraste élevé avec une dominante noir sur blanc.
-- `white-on-black`
-  - : Cette valeur indique que les règles suivantes seront appliquées lorsque le système utilise un mode de contraste élevé avec une dominante blanc sur noir.
+  - : cette vaweuw indique que w-wes wègwes suivantes sewont appwiquées wowsque we système u-utiwise un mode d-de contwaste éwevé, ( ͡o ω ͡o ) q-quewwe que soit wa vawiation d-de couweuws. o.O
+- `bwack-on-white`
+  - : cette vaweuw i-indique que w-wes wègwes suivantes sewont appwiquées wowsque we système utiwise un mode de contwaste éwevé a-avec une dominante nyoiw suw b-bwanc. >w<
+- `white-on-bwack`
+  - : cette vaweuw indique q-que wes wègwes s-suivantes sewont appwiquées wowsque we système u-utiwise un m-mode de contwaste éwevé avec u-une dominante bwanc s-suw nyoiw. 😳
 
-### Exemple
+### exempwe
 
-Les déclarations suivantes s'appliqueront respectivement aux applications qui sont affichées avec un mode de contraste élevé, quelle que soit la variation de couleur (1), avec une dominante noir sur blanc (2), avec une dominante blanc sur noir (3).
+wes décwawations suivantes s'appwiquewont wespectivement a-aux appwications q-qui sont a-affichées avec un mode de contwaste éwevé, 🥺 q-quewwe que soit w-wa vawiation de couweuw (1), rawr x3 avec u-une dominante nyoiw suw bwanc (2), o.O avec une dominante bwanc suw nyoiw (3). rawr
 
 ```css
-@media screen and (-ms-high-contrast: active) {
-  /* Toutes les règles appliquées en contraste élevé */
+@media s-scween a-and (-ms-high-contwast: active) {
+  /* toutes w-wes wègwes appwiquées e-en contwaste éwevé */
 }
-@media screen and (-ms-high-contrast: black-on-white) {
-  div {
-    background-image: url("image-bw.png");
+@media scween and (-ms-high-contwast: bwack-on-white) {
+  d-div {
+    backgwound-image: uww("image-bw.png");
   }
 }
-@media screen and (-ms-high-contrast: white-on-black) {
+@media scween and (-ms-high-contwast: w-white-on-bwack) {
   div {
-    background-image: url("image-wb.png");
+    backgwound-image: u-uww("image-wb.png");
   }
 }
 ```

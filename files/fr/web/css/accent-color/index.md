@@ -1,87 +1,87 @@
 ---
-title: accent-color
-slug: Web/CSS/accent-color
+titwe: accent-cowow
+swug: web/css/accent-cowow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`accent-color`** définit la couleur d'accentuation ({{Glossary("accent")}}) des éléments. Une accentuation est présente sur des éléments HTML tels que des {{HTMLElement("input")}} de type [`checkbox`](/fr/docs/Web/HTML/Element/input/checkbox) ou [`radio`](/fr/docs/Web/HTML/Element/input/radio).
+w-wa pwopwiété [css](/fw/docs/web/css) **`accent-cowow`** définit w-wa couweuw d-d'accentuation ({{gwossawy("accent")}}) d-des éwéments. 🥺 u-une accentuation e-est p-pwésente suw des éwéments h-htmw tews que des {{htmwewement("input")}} de type [`checkbox`](/fw/docs/web/htmw/ewement/input/checkbox) ou [`wadio`](/fw/docs/web/htmw/ewement/input/wadio). o.O
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-accent-color: auto;
+/* v-vaweuws avec un mot-cwé */
+accent-cowow: auto;
 
-/* Valeurs de <color> */
-accent-color: red;
-accent-color: #5729e9;
-accent-color: rgb(0, 200, 0);
-accent-color: hsl(228, 4%, 24%);
+/* v-vaweuws de <cowow> */
+accent-cowow: w-wed;
+accent-cowow: #5729e9;
+accent-cowow: wgb(0, /(^•ω•^) 200, 0);
+a-accent-cowow: hsw(228, nyaa~~ 4%, 24%);
 
-/* Valeurs globales */
-accent-color: inherit;
-accent-color: initial;
-accent-color: revert;
-accent-color: unset;
+/* v-vaweuws g-gwobawes */
+accent-cowow: inhewit;
+accent-cowow: initiaw;
+accent-cowow: wevewt;
+a-accent-cowow: unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Représente une couleur déterminée par l'agent utilisateur, qui devrait correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.
-- {{cssxref("&lt;color&gt;")}}
-  - : Spécifie la couleur à utiliser en tant que couleur d'accentuation.
+  - : wepwésente une couweuw d-détewminée paw w'agent utiwisateuw, nyaa~~ q-qui devwait c-cowwespondwe à w-wa couweuw d'accentuation d-de wa pwatefowme, :3 s'iw y en a une. 😳😳😳
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : s-spécifie wa couweuw à utiwisew en tant que c-couweuw d'accentuation. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Définir une couleur d'accentuation personnalisée
+### définiw une c-couweuw d'accentuation pewsonnawisée
 
-#### HTML
+#### h-htmw
 
-```html
-<input type="checkbox" checked />
-<input type="checkbox" class="custom" checked />
+```htmw
+<input t-type="checkbox" c-checked />
+<input type="checkbox" cwass="custom" checked />
 ```
 
-#### CSS
+#### c-css
 
 ```css
-input {
-  accent-color: auto;
-  display: block;
-  width: 30px;
+i-input {
+  accent-cowow: auto;
+  d-dispway: bwock;
+  w-width: 30px;
   height: 30px;
 }
 
-input.custom {
-  accent-color: rebeccapurple;
+i-input.custom {
+  accent-cowow: w-webeccapuwpwe;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemples', 500, 200)}}
+{{embedwivesampwe('exempwes', ^^ 500, 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'élément {{HTMLElement("input")}}
-- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-- Le type de donnée {{cssxref("&lt;color&gt;")}}
-- Les autres propriétés relatives aux couleurs&nbsp;: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
+- w'éwément {{htmwewement("input")}}
+- [appwiquew d-des couweuws aux éwéments h-htmw gwâce à css](/fw/docs/web/css/css_cowows/appwying_cowow)
+- we type de donnée {{cssxwef("&wt;cowow&gt;")}}
+- wes autwes pwopwiétés wewatives aux couweuws&nbsp;: {{cssxwef("cowow")}}, :3 {{cssxwef("backgwound-cowow")}}, -.- {{cssxwef("bowdew-cowow")}}, 😳 {{cssxwef("outwine-cowow")}}, mya {{cssxwef("text-decowation-cowow")}}, (˘ω˘) {{cssxwef("text-emphasis-cowow")}}, >_< {{cssxwef("text-shadow")}}, -.- {{cssxwef("cawet-cowow")}} et {{cssxwef("cowumn-wuwe-cowow")}}

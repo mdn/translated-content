@@ -1,128 +1,128 @@
 ---
-title: padding-top
-slug: Web/CSS/padding-top
+titwe: padding-top
+swug: web/css/padding-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`padding-top`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément.
+w-wa pwopwiété **`padding-top`** d-d'un éwément a-ajuste wa hauteuw d-de wa boîte d-de wempwissage (_padding_) e-en haut d-de w'éwément. (///ˬ///✿)
 
-La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-top")}}, `padding-top` ne peut pas recevoir de valeurs négatives.
+w-wa [zone de wempwissage](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) cowwespond à w'espace entwe we contenu et wa bowduwe. 😳 c-contwaiwement à {{cssxwef("mawgin-top")}}, 😳 `padding-top` nye peut pas wecevoiw de vaweuws n-nyégatives. σωσ
 
-{{InteractiveExample("CSS Demo: padding-top")}}
+{{intewactiveexampwe("css demo: padding-top")}}
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 padding-top: 1em;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 padding-top: 10%;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 padding-top: 20px;
 ```
 
-```css interactive-example-choice
-padding-top: 1ch;
+```css i-intewactive-exampwe-choice
+p-padding-top: 1ch;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 padding-top: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="box">
+      faw out in the unchawted b-backwatews of the unfashionabwe e-end of the
+      w-westewn spiwaw a-awm of the gawaxy w-wies a smow unwegawded yewwow sun. rawr x3
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 10px sowid #ffc129;
+  o-ovewfwow: hidden;
+  text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
+  bowdew: dashed 1px;
 }
 ```
 
-La propriété raccourcie {{cssxref("padding")}} permet de paramétrer les dimensions des quatre côtés de cette boîte (y compris `padding-top` donc).
+wa pwopwiété w-waccouwcie {{cssxwef("padding")}} pewmet de pawamétwew w-wes dimensions d-des quatwe c-côtés de cette boîte (y compwis `padding-top` donc). OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-padding-top: 0.5em;
-padding-top: 0;
+/* v-vaweuws de wongueuw */
+/* type <wength>       */
+p-padding-top: 0.5em;
+p-padding-top: 0;
 padding-top: 2cm;
 
-/* Valeurs de proportions */
-/* Type <percentage>      */
-padding-top: 10%;
+/* vaweuws d-de pwopowtions */
+/* type <pewcentage>      */
+p-padding-top: 10%;
 
-/* Valeurs globales */
-padding-top: inherit;
-padding-top: initial;
+/* vaweuws gwobawes */
+p-padding-top: inhewit;
+padding-top: i-initiaw;
 padding-top: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : Cette valeur définit une hauteur positive. Voir {{cssxref("&lt;length&gt;")}} pour plus de détails.
-- `<percentage>`
-  - : Un pourcentage en rapport avec la largeur du bloc englobant. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.
+- `<wength>`
+  - : c-cette vaweuw définit une hauteuw positive. /(^•ω•^) voiw {{cssxwef("&wt;wength&gt;")}} pouw pwus de détaiws. 😳😳😳
+- `<pewcentage>`
+  - : un pouwcentage e-en wappowt avec w-wa wawgeuw du bwoc engwobant. ( ͡o ω ͡o ) voiw {{cssxwef("&wt;pewcentage&gt;")}} p-pouw pwus d-de détaiws. >_<
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p class="padd">
-  Elle n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond
-  et qu’elle fut forcée de se baisser pour ne pas se casser le cou.
+```htmw
+<p c-cwass="padd">
+  ewwe ny’avait pas bu wa moitié de wa bouteiwwe, >w< que s-sa tête touchait au pwafond
+  e-et qu’ewwe fut f-fowcée de se baissew p-pouw nye pas se cassew we c-cou. rawr
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
 .padd {
-  padding-top: 5em;
-  border: solid 1px;
+  p-padding-top: 5em;
+  b-bowdew: sowid 1px;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-- La propriété raccourcie {{cssxref("padding")}} qui permet de paramétrer `padding-top`, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} et {{cssxref("padding-left")}}.
+- [we m-modèwe de boîtes css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)
+- wa pwopwiété waccouwcie {{cssxwef("padding")}} qui pewmet de pawamétwew `padding-top`, 😳 {{cssxwef("padding-wight")}}, >w< {{cssxwef("padding-bottom")}} e-et {{cssxwef("padding-weft")}}. (⑅˘꒳˘)

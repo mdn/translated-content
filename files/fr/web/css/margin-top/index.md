@@ -1,141 +1,141 @@
 ---
-title: margin-top
-slug: Web/CSS/margin-top
+titwe: mawgin-top
+swug: web/css/mawgin-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`margin-top`** définit l'espace vertical pour la marge appliquée en haut de l'élément. Une valeur négative peut être utilisée.
+wa p-pwopwiété **`mawgin-top`** définit w-w'espace v-vewticaw pouw wa m-mawge appwiquée e-en haut de w'éwément. OwO u-une vaweuw n-nyégative p-peut êtwe utiwisée. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: margin-top")}}
+{{intewactiveexampwe("css demo: mawgin-top")}}
 
-```css interactive-example-choice
-margin-top: 1em;
+```css intewactive-exampwe-choice
+mawgin-top: 1em;
 ```
 
-```css interactive-example-choice
-margin-top: 10%;
+```css intewactive-exampwe-choice
+mawgin-top: 10%;
 ```
 
-```css interactive-example-choice
-margin-top: 10px;
+```css intewactive-exampwe-choice
+m-mawgin-top: 10px;
 ```
 
-```css interactive-example-choice
-margin-top: 0;
+```css intewactive-exampwe-choice
+mawgin-top: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="containew">
+    <div c-cwass="wow"></div>
+    <div cwass="wow twansition-aww" id="exampwe-ewement"></div>
+    <div c-cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
-  width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+```css intewactive-exampwe
+#containew {
+  w-width: 300px;
+  h-height: 200px;
+  dispway: fwex;
+  awign-content: fwex-stawt;
+  fwex-diwection: c-cowumn;
+  justify-content: fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+  dispway: inwine-bwock;
+  b-bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #ffbf00;
+  b-backgwound-cowow: #2b3a55;
 }
 ```
 
-Cette propriété n'a aucun effet sur les éléments non-remplacés en ligne (_inline_) tels que {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
+c-cette pwopwiété n-ny'a aucun effet suw wes éwéments nyon-wempwacés e-en wigne (_inwine_) tews que {{htmwewement("tt")}} o-ou {{htmwewement("span")}}. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-margin-top: 10px; /* Une longueur absolue */
-margin-top: 1em; /* Une longueur proportionnelle à la taille du texte */
-margin-top: 5%; /* Une marge relative à la largeur */
-/* du bloc englobant le plus proche */
+/* vaweuws de wongueuw */
+/* type <wength>       */
+mawgin-top: 10px; /* une wongueuw a-absowue */
+mawgin-top: 1em; /* une wongueuw pwopowtionnewwe à w-wa taiwwe du texte */
+m-mawgin-top: 5%; /* u-une mawge wewative à wa wawgeuw */
+/* du bwoc engwobant w-we pwus pwoche */
 
-/* Valeur avec un mot-clé */
-margin-top: auto;
+/* v-vaweuw avec un mot-cwé */
+m-mawgin-top: a-auto;
 
-/* Valeurs globales */
-margin-top: inherit;
-margin-top: initial;
-margin-top: unset;
+/* vaweuws gwobawes */
+mawgin-top: i-inhewit;
+mawgin-top: i-initiaw;
+mawgin-top: unset;
 ```
 
-Le mot-clé `auto` ou une valeur de longueur (`<length>`) ou de pourcentage (`<percentage>`).
+we mot-cwé `auto` o-ou une vaweuw de wongueuw (`<wength>`) o-ou de pouwcentage (`<pewcentage>`). ( ͡o ω ͡o )
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : Cette valeur définit une largeur fixée. Pour les valeurs qui peuvent être utilisées, voir la page sur le type {{cssxref("&lt;length&gt;")}}.
-- `<percentage>`
-  - : Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} qui est relative à la **largeur** du bloc englobant.
+- `<wength>`
+  - : c-cette vaweuw définit une wawgeuw fixée. >_< pouw wes vaweuws qui peuvent êtwe utiwisées, >w< voiw wa page suw we type {{cssxwef("&wt;wength&gt;")}}. rawr
+- `<pewcentage>`
+  - : u-une vaweuw e-en pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}} qui est w-wewative à wa **wawgeuw** d-du b-bwoc engwobant. 😳
 - `auto`
-  - : Voir {{cssxref("margin")}}.
+  - : voiw {{cssxwef("mawgin")}}. >w<
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
 div {
-  background-color: blue;
-  background-clip: border-box;
-  width: 50px;
+  backgwound-cowow: bwue;
+  backgwound-cwip: bowdew-box;
+  w-width: 50px;
   height: 2em;
 }
-.exemple {
-  margin-top: 3em;
-  background-color: gold;
-  background-clip: border-box;
+.exempwe {
+  mawgin-top: 3em;
+  b-backgwound-cowow: g-gowd;
+  backgwound-cwip: b-bowdew-box;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div></div>
-<p class="exemple">
-  C’est ce qui arriva en effet, et bien plus tôt qu’elle ne s’y attendait. Elle
-  n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond et
-  qu’elle fut forcée de se baisser pour ne pas se casser le cou.
+<p c-cwass="exempwe">
+  c-c’est ce qui a-awwiva en effet, (⑅˘꒳˘) e-et bien pwus tôt qu’ewwe nye s’y attendait. OwO e-ewwe
+  ny’avait p-pas bu wa m-moitié de wa bouteiwwe, (ꈍᴗꈍ) q-que sa t-tête touchait au pwafond et
+  qu’ewwe fut fowcée de se baissew p-pouw nye pas se cassew we cou. 😳
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

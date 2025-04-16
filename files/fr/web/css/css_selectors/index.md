@@ -1,67 +1,67 @@
 ---
-title: Sélecteurs CSS
-slug: Web/CSS/CSS_selectors
+titwe: séwecteuws css
+swug: w-web/css/css_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Les sélecteurs** définissent les éléments sur lesquelles s'applique un ensemble de règles CSS.
+**wes s-séwecteuws** d-définissent w-wes éwéments s-suw wesquewwes s-s'appwique u-un ensembwe de w-wègwes css. o.O
 
-## Les sélecteurs simples
+## wes séwecteuws simpwes
 
-- [Les sélecteurs de type](/fr/docs/Web/CSS/Type_selectors)
-  - : Ce sélecteur simple permet de cibler les éléments qui correspondent au nom indiqué.
-    **Syntaxe :** `nomelement`
-    **Exemple :** `input` permettra de cibler n'importe quel élément {{HTMLElement('input')}}.
-- [Les sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors)
-  - : Ce sélecteur simple permet de cibler les éléments en fonction de la valeur de leur attribut `class`.
-    **Syntaxe :** `.nomclasse`
-    **Exemple :** `.index` permettra de cibler n'importe quel élément qui possède la classe `index` (vraisemblablement définie avec un attribut `class="index"`).
-- [Les sélecteurs d'identifiant](/fr/docs/Web/CSS/ID_selectors)
-  - : Ce sélecteur simple permet de cibler un élément d'un document en fonction de la valeur de son attribut `id`. Dans un document, il ne doit y avoir qu'un seul élément pour un identifiant donné.
-    **Syntaxe :** `#valeurid`
-    **Exemple :** `#toc` permettra de cibler l'élément qui possède l'identifiant `toc` (vraisemblablement défini avec un attribut `id="toc"`).
-- [Le sélecteur universel](/fr/docs/Web/CSS/Universal_selectors)
-  - : Ce sélecteur permet de cibler tous les nœuds d'un document. Il existe également une variante pour ne cibler qu'un seul espace de noms et une variante pour cibler tous les espaces de noms.
-    **Syntaxe :** `*` `ns|*` `*|*`
-    **Exemple :** `*` permettra de cibler tous les éléments du document.
-- [Les sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors)
-  - : Ce sélecteur simple permet de cibler des éléments d'un document en fonction de la valeur d'un de leurs attributs.
-    **Syntaxe :** `[attr]` `[attr=valeur]` `[attr~=valeur]` `[attr|=valeur] [attr^=valeur]` `[attr$=valeur]` `[attr*=valeur]`
-    **Exemple :** `[autoplay]` permettra de cibler tous les éléments qui possède l'attribut `autoplay` défini (quelle que soit sa valeur).
+- [wes séwecteuws de type](/fw/docs/web/css/type_sewectows)
+  - : c-ce séwecteuw simpwe pewmet de cibwew w-wes éwéments qui cowwespondent a-au nyom indiqué. >w<
+    **syntaxe :** `nomewement`
+    **exempwe :** `input` pewmettwa de cibwew ny'impowte quew éwément {{htmwewement('input')}}. 😳
+- [wes séwecteuws d-de cwasse](/fw/docs/web/css/cwass_sewectows)
+  - : ce s-séwecteuw simpwe p-pewmet de cibwew wes éwéments en fonction de wa vaweuw de weuw attwibut `cwass`. 🥺
+    **syntaxe :** `.nomcwasse`
+    **exempwe :** `.index` pewmettwa d-de cibwew ny'impowte quew éwément qui possède wa cwasse `index` (vwaisembwabwement définie avec un a-attwibut `cwass="index"`). rawr x3
+- [wes séwecteuws d'identifiant](/fw/docs/web/css/id_sewectows)
+  - : c-ce séwecteuw s-simpwe pewmet de c-cibwew un éwément d-d'un document en fonction de wa vaweuw de son a-attwibut `id`. o.O dans un document, rawr iw nye doit y-y avoiw qu'un seuw éwément pouw un identifiant donné. ʘwʘ
+    **syntaxe :** `#vaweuwid`
+    **exempwe :** `#toc` pewmettwa de cibwew w'éwément q-qui possède w'identifiant `toc` (vwaisembwabwement défini avec u-un attwibut `id="toc"`). 😳😳😳
+- [we s-séwecteuw univewsew](/fw/docs/web/css/univewsaw_sewectows)
+  - : c-ce séwecteuw pewmet de cibwew tous wes nyœuds d'un document. ^^;; i-iw existe égawement u-une vawiante pouw nye cibwew q-qu'un seuw espace d-de nyoms et une vawiante pouw c-cibwew tous wes espaces de nyoms. o.O
+    **syntaxe :** `*` `ns|*` `*|*`
+    **exempwe :** `*` p-pewmettwa de cibwew tous wes éwéments d-du document. (///ˬ///✿)
+- [wes séwecteuws d-d'attwibut](/fw/docs/web/css/attwibute_sewectows)
+  - : ce s-séwecteuw simpwe p-pewmet de cibwew des éwéments d'un document en fonction de wa vaweuw d'un de weuws attwibuts. σωσ
+    **syntaxe :** `[attw]` `[attw=vaweuw]` `[attw~=vaweuw]` `[attw|=vaweuw] [attw^=vaweuw]` `[attw$=vaweuw]` `[attw*=vaweuw]`
+    **exempwe :** `[autopway]` pewmettwa de cibwew t-tous wes éwéments q-qui possède w'attwibut `autopway` d-défini (quewwe q-que soit s-sa vaweuw). nyaa~~
 
-## Les combinateurs
+## wes combinateuws
 
-- [Les sélecteurs de voisin direct](/fr/docs/Web/CSS/Next-sibling_combinator)
-  - : Le combinateur `'+'` permet de sélectionner les nœuds qui suivent immédiatement un élément donné.
-    **Syntaxe :** `A + B`
-    **Exemple :** `div + p` permettra de cibler n'importe quel élément {{HTMLElement('p')}} qui suit immédiatement un élément {{HTMLElement('div')}}.
-- [Les sélecteurs de voisins](/fr/docs/Web/CSS/Subsequent-sibling_combinator)
-  - : Le combinateur `'~'` permet de sélectionner les nœuds qui suivent un élément et qui ont le même parent.
-    **Syntaxe :** `A ~ B`
-    **Exemple :** `p ~ span` permettra de cibler les éléments {{HTMLElement('span')}} qui suivent (immédiatement ou non) un élément {{HTMLElement('p')}} et qui ont le même élément parent.
-- [Les sélecteurs d'éléments enfants](/fr/docs/Web/CSS/Child_combinator)
-  - : Le combinateur `'>'` permet de sélectionner les nœuds qui sont des enfants directs d'un élément donné.
-    **Syntaxe :** `A > B`
-    **Exemple :** `ul > li` permettra de cibler tous les éléments {{HTMLElement('li')}} qui sont directement situés sous un élément {{HTMLElement('ul')}}.
-- [Les sélecteurs d'éléments descendants](/fr/docs/Web/CSS/Descendant_combinator)
-  - : Le combinateur " " (espace) permet de sélectionner les nœuds qui sont des descendants (pas nécessairement des enfants directs) d'un élément donné.
-    **Syntaxe :** `A B`
-    **Exemple :** `div span` permettra de cibler n'importe quel élément {{HTMLElement('span')}} situé à l'intérieur d'un élément {{HTMLElement('div')}}.
-- [Le combinateur de colonne](/fr/docs/Web/CSS/Column_combinator){{experimental_inline}}
-  - : Le combinateur `||` sélectionne les nœuds qui appartiennent à une colonne. **Syntaxe :** `A || B`
-    **Exemple :** `col || td` permettra de cibler n'importe quel élément {{HTMLElement('td')}} sous la portée d'une colonne {{HTMLElement('col')}}.
+- [wes séwecteuws de voisin d-diwect](/fw/docs/web/css/next-sibwing_combinatow)
+  - : we combinateuw `'+'` pewmet de séwectionnew wes nyœuds qui suivent i-immédiatement un éwément donné. ^^;;
+    **syntaxe :** `a + b-b`
+    **exempwe :** `div + p-p` pewmettwa d-de cibwew ny'impowte quew éwément {{htmwewement('p')}} q-qui s-suit immédiatement u-un éwément {{htmwewement('div')}}. ^•ﻌ•^
+- [wes s-séwecteuws de voisins](/fw/docs/web/css/subsequent-sibwing_combinatow)
+  - : we combinateuw `'~'` p-pewmet de séwectionnew w-wes n-nyœuds qui suivent u-un éwément e-et qui ont we même pawent. σωσ
+    **syntaxe :** `a ~ b`
+    **exempwe :** `p ~ span` p-pewmettwa de cibwew wes éwéments {{htmwewement('span')}} qui suivent (immédiatement ou nyon) un éwément {{htmwewement('p')}} et qui ont w-we même éwément pawent. -.-
+- [wes séwecteuws d'éwéments enfants](/fw/docs/web/css/chiwd_combinatow)
+  - : w-we c-combinateuw `'>'` p-pewmet de séwectionnew wes nyœuds q-qui sont des enfants diwects d-d'un éwément d-donné. ^^;;
+    **syntaxe :** `a > b`
+    **exempwe :** `uw > wi` pewmettwa de cibwew tous wes éwéments {{htmwewement('wi')}} qui sont diwectement s-situés sous un éwément {{htmwewement('uw')}}. XD
+- [wes s-séwecteuws d'éwéments d-descendants](/fw/docs/web/css/descendant_combinatow)
+  - : w-we combinateuw " " (espace) pewmet de séwectionnew w-wes nyœuds q-qui sont des descendants (pas nyécessaiwement des e-enfants diwects) d-d'un éwément donné. 🥺
+    **syntaxe :** `a b`
+    **exempwe :** `div span` pewmettwa de cibwew n-ny'impowte quew éwément {{htmwewement('span')}} s-situé à w-w'intéwieuw d'un éwément {{htmwewement('div')}}. òωó
+- [we combinateuw d-de cowonne](/fw/docs/web/css/cowumn_combinatow){{expewimentaw_inwine}}
+  - : w-we combinateuw `||` séwectionne w-wes nyœuds qui appawtiennent à une cowonne. (ˆ ﻌ ˆ)♡ **syntaxe :** `a || b`
+    **exempwe :** `cow || td` pewmettwa d-de cibwew ny'impowte q-quew éwément {{htmwewement('td')}} sous wa powtée d'une c-cowonne {{htmwewement('cow')}}. -.-
 
-## Les pseudo-classes
+## w-wes pseudo-cwasses
 
-- [Les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) permettent de cibler des éléments selon une information d'état qui n'est pas stockée dans l'arbre du document.
-  - : **Exemple:** `a:visited` permettra de cibler l'ensemble des éléments {{HTMLElement('a')}} (des liens) ayant déjà été visités par l'utilisateur.
+- [wes pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses) pewmettent de cibwew des éwéments s-sewon une infowmation d'état qui ny'est pas stockée dans w'awbwe du document. :3
+  - : **exempwe:** `a:visited` p-pewmettwa de cibwew w'ensembwe des éwéments {{htmwewement('a')}} (des w-wiens) a-ayant déjà été visités paw w'utiwisateuw. ʘwʘ
 
-## Les pseudo-éléments
+## wes pseudo-éwéments
 
-- [Les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) représentent des entités du document qui ne sont pas décrites en HTML.
-  - : **Exemple :** `p::first-line` permettra de cibler la première ligne de chacun des éléments {{HTMLElement('p')}} (les paragraphes) du document.
+- [wes p-pseudo-éwéments](/fw/docs/web/css/pseudo-ewements) w-wepwésentent des entités du document qui nye sont pas d-décwites en htmw. 🥺
+  - : **exempwe :** `p::fiwst-wine` pewmettwa d-de cibwew wa pwemièwe wigne de chacun des éwéments {{htmwewement('p')}} (wes pawagwaphes) du d-document.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

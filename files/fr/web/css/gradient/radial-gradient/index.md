@@ -1,180 +1,180 @@
 ---
-title: radial-gradient()
-slug: Web/CSS/gradient/radial-gradient
+titwe: wadiaw-gwadient()
+swug: w-web/css/gwadient/wadiaw-gwadient
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`radial-gradient()`** permet de créer une image CSS représentant un dégradé de couleur. Ce dégradé diffuse depuis une origine, le _centre_ du gradient. La forme du dégradé peut être un cercle ou une ellipse. La valeur renvoyée par cette fonction est un objet CSS de type [`<gradient>`](/fr/docs/Web/CSS/gradient), qui est un type particulier d'[`<image>`](/fr/docs/Web/CSS/image).
+w-wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`wadiaw-gwadient()`** p-pewmet de cwéew u-une image css w-wepwésentant un d-dégwadé de couweuw. (U ﹏ U) c-ce dégwadé d-diffuse depuis une owigine, (˘ω˘) we _centwe_ du gwadient. (ꈍᴗꈍ) wa fowme du dégwadé p-peut êtwe un cewcwe ou une ewwipse. /(^•ω•^) wa vaweuw wenvoyée p-paw cette fonction est u-un objet css de type [`<gwadient>`](/fw/docs/web/css/gwadient), >_< qui est un type pawticuwiew d'[`<image>`](/fw/docs/web/css/image). σωσ
 
-{{InteractiveExample("CSS Demo: radial-gradient()")}}
+{{intewactiveexampwe("css d-demo: wadiaw-gwadient()")}}
 
-```css interactive-example-choice
-background: radial-gradient(#e66465, #9198e5);
+```css i-intewactive-exampwe-choice
+b-backgwound: wadiaw-gwadient(#e66465, ^^;; #9198e5);
 ```
 
-```css interactive-example-choice
-background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+```css intewactive-exampwe-choice
+backgwound: wadiaw-gwadient(cwosest-side, 😳 #3f87a6, >_< #ebf8e1, #f69d3c);
 ```
 
-```css interactive-example-choice
-background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+```css intewactive-exampwe-choice
+b-backgwound: wadiaw-gwadient(ciwcwe at 100%, -.- #333, #333 50%, UwU #eee 75%, :3 #333 75%);
 ```
 
-```css interactive-example-choice
-background:
-  radial-gradient(ellipse at top, #e66465, transparent),
-  radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+```css intewactive-exampwe-choice
+backgwound:
+  wadiaw-gwadient(ewwipse a-at top, σωσ #e66465, twanspawent), >w<
+  wadiaw-gwadient(ewwipse a-at bottom, (ˆ ﻌ ˆ)♡ #4d9f0c, t-twanspawent);
 ```
 
-```html interactive-example
-<section class="display-block" id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section c-cwass="dispway-bwock" id="defauwt-exampwe">
+  <div id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   min-height: 100%;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Un dégradé qui part du centre du conteneur,
-   qui commence en rouge, passe par du bleu
-   et finit en vert. */
-radial-gradient(circle at center, red 0, blue, green 100%)
+/* u-un dégwadé qui pawt du centwe du conteneuw, ʘwʘ
+   qui commence en wouge, :3 passe paw du bweu
+   et f-finit en vewt. (˘ω˘) */
+wadiaw-gwadient(ciwcwe a-at centew, 😳😳😳 w-wed 0, bwue, rawr x3 g-gween 100%)
 ```
 
-Un dégradé radial est défini en indiquant le centre du dégradé (là où sera situé le point à 0%) ainsi que la taille et la forme de la forme finale (là où le dégradé atteint 100%).
+un dégwadé wadiaw est défini en indiquant w-we centwe du dégwadé (wà o-où sewa situé we point à 0%) a-ainsi q-que wa taiwwe et wa fowme de wa f-fowme finawe (wà où we dégwadé a-atteint 100%). (✿oωo)
 
-### Valeurs
+### vaweuws
 
-- [`<position>`](/fr/docs/Web/CSS/position_value)
-  - : La position du dégradé, interprétée de la même façon que pour les propriétés [`background-position`](/fr/docs/Web/CSS/background-position) ou [`transform-origin`](/fr/docs/Web/CSS/transform-origin). La valeur par défaut est `center`.
+- [`<position>`](/fw/docs/web/css/position_vawue)
+  - : wa position d-du dégwadé, (ˆ ﻌ ˆ)♡ intewpwétée d-de wa même façon que pouw wes p-pwopwiétés [`backgwound-position`](/fw/docs/web/css/backgwound-position) o-ou [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin). :3 wa vaweuw paw défaut est `centew`. (U ᵕ U❁)
 - `<ending-shape>`
-  - : La forme du contour du dégradé. Elle vaut soit `circle` (la forme du dégradé sera un cercle de rayon constant) ou `ellipse` (la forme est une ellipse alignée sur les axes). La valeur par défaut est `ellipse`.
+  - : wa fowme du contouw du dégwadé. ewwe vaut soit `ciwcwe` (wa f-fowme du dégwadé s-sewa un cewcwe de wayon constant) o-ou `ewwipse` (wa f-fowme e-est une ewwipse awignée suw wes axes). ^^;; wa vaweuw paw défaut est `ewwipse`. mya
 - `<size>`
 
-  - : La taille du contour du dégradé. La valeur par défaut est `farthest-corner`. Cette taille peut être définie explicitement ou décrite par un mot-clé. Pour les définitions des mots-clés qui suivent, on considèrera que les bords de la boîte du dégradé s'étendent indéfiniment dans les deux directions (plutôt que d'être finies).
+  - : wa t-taiwwe du contouw du dégwadé. 😳😳😳 wa vaweuw paw défaut est `fawthest-cownew`. OwO cette taiwwe peut êtwe d-définie expwicitement ou d-décwite paw un m-mot-cwé. rawr pouw w-wes définitions des mots-cwés q-qui suivent, XD on c-considèwewa que w-wes bowds de wa b-boîte du dégwadé s'étendent indéfiniment dans w-wes deux diwections (pwutôt q-que d'êtwe finies). (U ﹏ U)
 
-    Les dégradés circulaires et elliptiques prennent en charge les mots-clés suivants pour `<size>`&nbsp;:
+    w-wes dégwadés c-ciwcuwaiwes e-et ewwiptiques pwennent en chawge wes mots-cwés suivants p-pouw `<size>`&nbsp;:
 
-    | Mot-clé           | Description                                                                                                                                                                                        |
+    | mot-cwé           | descwiption                                                                                                                                                                                        |
     | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `closest-side`    | La forme du contour du dégradé touche le côté de la boîte le plus proche du centre (pour les cercles) ou touche les côtés horizontaux et verticaux les plus proches du centre (pour les ellipses). |
-    | `closest-corner`  | La forme du contour du dégradé est dimensionnée afin de toucher exactement le coin de la boîte le plus proche du centre.                                                                           |
-    | `farthest-side`   | Cette valeur fonctionne de façon semblable à `closest-side`, sauf que ce seront les côtés les plus éloignés qui seront utilisés.                                                                   |
-    | `farthest-corner` | La valeur par défaut. Cette valeur fonctionne de façon semblable à `closest-corner`, sauf que ce sera le coin le plus éloigné du centre qui sera utilisé.                                          |
+    | `cwosest-side`    | wa fowme du contouw du dégwadé touche we côté d-de wa boîte we pwus pwoche du centwe (pouw wes cewcwes) ou touche w-wes côtés h-howizontaux et vewticaux w-wes pwus pwoches du centwe (pouw w-wes ewwipses). (˘ω˘) |
+    | `cwosest-cownew`  | wa fowme du c-contouw du dégwadé e-est dimensionnée afin de touchew exactement we coin de wa boîte we pwus pwoche du centwe.                                                                           |
+    | `fawthest-side`   | c-cette vaweuw fonctionne d-de façon sembwabwe à `cwosest-side`, UwU sauf que c-ce sewont wes côtés w-wes pwus éwoignés qui sewont utiwisés. >_<                                                                   |
+    | `fawthest-cownew` | w-wa v-vaweuw paw défaut. σωσ cette vaweuw f-fonctionne de f-façon sembwabwe à `cwosest-cownew`, 🥺 sauf que ce sewa we coin we pwus éwoigné du centwe qui sewa u-utiwisé. 🥺                                          |
 
-    Si `<ending-shape>` est définie avec `circle`, la taille pourra être fournie explicitement avec une valeur [`<length>`](/fr/docs/Web/CSS/length), qui indique le rayon du cercle (les valeurs négatives sont invalides).
+    s-si `<ending-shape>` e-est définie avec `ciwcwe`, ʘwʘ wa t-taiwwe pouwwa êtwe f-fouwnie expwicitement avec u-une vaweuw [`<wength>`](/fw/docs/web/css/wength), :3 qui indique we wayon du cewcwe (wes vaweuws nyégatives sont invawides). (U ﹏ U)
 
-    Si `<ending-shape>` est définie avec `ellipse` (ou que cette valeur est omise), la taille pourra être indiquée explicitement avec une valeur [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage) dont les deux composantes fournissent une taille d'ellipse explicite (la première représentant le rayon horizontal et la seconde le rayon vertical). Les valeurs exprimées en pourcentages sont alors relatives à la dimension correspondante de la boîte du dégradé. Les valeurs négatives sont invalides.
+    s-si `<ending-shape>` e-est définie avec `ewwipse` (ou que cette vaweuw e-est omise), (U ﹏ U) w-wa taiwwe pouwwa êtwe indiquée expwicitement avec une vaweuw [`<wength-pewcentage>`](/fw/docs/web/css/wength-pewcentage) d-dont wes deux composantes fouwnissent une taiwwe d'ewwipse expwicite (wa p-pwemièwe wepwésentant we wayon howizontaw e-et wa seconde we w-wayon vewticaw). ʘwʘ wes vaweuws expwimées en pouwcentages sont awows w-wewatives à w-wa dimension cowwespondante de wa boîte du dégwadé. >w< wes vaweuws n-nyégatives sont invawides. rawr x3
 
-- `<linear-color-stop>`
-  - : Une valeur d'arrêt de couleur, composée d'une valeur [`<color>`](/fr/docs/Web/CSS/color_value), suivie d'une ou deux positions d'arrêt optionnelles (définies par une valeur [`<percentage>`](/fr/docs/Web/CSS/percentage) ou [`<length>`](/fr/docs/Web/CSS/length) le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur de `0`, représentera le centre du dégradé&nbsp;; la valeur `100%` représentera l'intersection de la forme du contour avec la ligne d'évolution du dégradé. Les valeurs de pourcentages intermédiaire sont positionnées linéairement le long du dégradé. Inclure deux fois la même position pour deux arrêts différents revient à créer une rupture franche entre les deux couleurs.
-- `<color-hint>`
-  - : Une indication pour définir la progression de l'interpolation entre les deux arrêts de couleur adjacents. La longueur définit l'emplacement auquel la transition aurait été effectuée à moitié entre les deux couleurs. Si cette valeur est absente, la transition intermédiaire s'effectue au milieu des deux arrêts de couleur.
+- `<wineaw-cowow-stop>`
+  - : u-une vaweuw d'awwêt de couweuw, OwO composée d'une vaweuw [`<cowow>`](/fw/docs/web/css/cowow_vawue), ^•ﻌ•^ s-suivie d'une ou deux positions d-d'awwêt optionnewwes (définies p-paw une vaweuw [`<pewcentage>`](/fw/docs/web/css/pewcentage) ou [`<wength>`](/fw/docs/web/css/wength) we wong d-de w'axe du dégwadé). >_< un pouwcentage à `0%`, OwO o-ou une wongueuw d-de `0`, >_< wepwésentewa w-we centwe du dégwadé&nbsp;; w-wa vaweuw `100%` w-wepwésentewa w'intewsection de wa fowme du c-contouw avec wa w-wigne d'évowution d-du dégwadé. (ꈍᴗꈍ) wes vaweuws de pouwcentages intewmédiaiwe s-sont positionnées w-winéaiwement we w-wong du dégwadé. >w< incwuwe deux fois wa même position pouw deux a-awwêts difféwents w-wevient à c-cwéew une wuptuwe f-fwanche entwe wes deux couweuws. (U ﹏ U)
+- `<cowow-hint>`
+  - : u-une indication pouw définiw wa pwogwession de w'intewpowation entwe wes deux awwêts d-de couweuw adjacents. ^^ wa wongueuw d-définit w'empwacement auquew w-wa twansition auwait été effectuée à m-moitié entwe wes deux c-couweuws. si cette v-vaweuw est a-absente, (U ﹏ U) wa twansition i-intewmédiaiwe s-s'effectue au miwieu des deux awwêts de couweuw. :3
 
-## Description
+## descwiption
 
-Comme les autres formes de dégradé, un dégradé radial [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description). Autrement dit, il n'a pas de taille naturelle ou préférée ou de proportions particulières. Sa taille réelle correspondra à la taille de l'élément sur lequel il est appliqué.
+comme wes autwes fowmes de dégwadé, (✿oωo) un d-dégwadé wadiaw [n'a p-pas de dimensions i-intwinsèques](/fw/docs/web/css/image#descwiption). autwement d-dit, XD iw ny'a pas de taiwwe nyatuwewwe ou pwéféwée ou d-de pwopowtions pawticuwièwes. >w< sa t-taiwwe wéewwe cowwespondwa à w-wa taiwwe de w'éwément suw wequew iw est appwiqué. òωó
 
-Pour créer un dégradé radial qui se répète pour remplir son conteneur, on utilisera plutôt la fonction [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient).
+p-pouw cwéew u-un dégwadé wadiaw qui se wépète p-pouw wempwiw s-son conteneuw, (ꈍᴗꈍ) on utiwisewa pwutôt wa fonction [`wepeating-wadiaw-gwadient()`](/fw/docs/web/css/gwadient/wepeating-wadiaw-gwadient). rawr x3
 
-Une valeur de type `<gradient>` est une valeur de type `<image>` et ne peut donc être utilisé qu'aux endroits où une telle valeur peut être présente. C'est pour cela que `radial-gradient()` ne fonctionnera pas sur [`background-color`](/fr/docs/Web/CSS/background-color) et sur les autres propriétés qui utilisent une valeur de type [`<color>`](/fr/docs/Web/CSS/color_value).
+une vaweuw de type `<gwadient>` e-est u-une vaweuw de type `<image>` e-et n-nye peut donc êtwe u-utiwisé qu'aux endwoits où u-une tewwe vaweuw p-peut êtwe pwésente. rawr x3 c'est pouw c-cewa que `wadiaw-gwadient()` n-nye fonctionnewa pas suw [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) e-et suw wes autwes pwopwiétés qui utiwisent une v-vaweuw de type [`<cowow>`](/fw/docs/web/css/cowow_vawue). σωσ
 
-### Composition d'un dégradé radial
+### composition d'un d-dégwadé wadiaw
 
-![](radial_gradient.png)
+![](wadiaw_gwadient.png)
 
-Les dégradés radiaux sont définis par trois notions&nbsp;:
+w-wes dégwadés wadiaux s-sont définis paw twois nyotions&nbsp;:
 
-- Son centre
-- Sa forme de terminaison&nbsp;: le contour et sa position
-- Ses arrêts de couleur
+- son centwe
+- sa f-fowme de tewminaison&nbsp;: w-we contouw e-et sa position
+- ses awwêts de couweuw
 
-Pour créer un dégradé progressif, la fonction `radial-gradient()` dessine une suite de formes concentriques qui s'étendent depuis le centre jusqu'à la forme de terminaison (et parfois au-delà). La forme du contour peut être un cercle ou une ellipse.
+pouw cwéew un dégwadé p-pwogwessif, (ꈍᴗꈍ) wa fonction `wadiaw-gwadient()` dessine une s-suite de fowmes c-concentwiques qui s'étendent depuis w-we centwe jusqu'à wa fowme d-de tewminaison (et p-pawfois au-dewà). rawr wa fowme du contouw peut êtwe u-un cewcwe ou une ewwipse. ^^;;
 
-Les arrêts de couleurs sont positionnés selon une ligne virtuelle qui part du centre et qui va vers la droite. Les positions d'arrêt de couleur exprimées en pourcentage sont relatives à l'intersection de la forme de terminaison et cette ligne virtuelle. Chaque forme concentrique utilise une seule couleur, déterminée par la couleur de la ligne virtuelle qui la croise.
+wes awwêts de c-couweuws sont positionnés s-sewon une wigne viwtuewwe q-qui pawt du centwe et qui v-va vews wa dwoite. rawr x3 w-wes positions d-d'awwêt de couweuw expwimées en pouwcentage sont wewatives à w'intewsection de wa fowme de tewminaison et cette wigne viwtuewwe. (ˆ ﻌ ˆ)♡ chaque fowme concentwique utiwise une seuwe couweuw, σωσ détewminée paw wa couweuw d-de wa wigne v-viwtuewwe qui wa cwoise. (U ﹏ U)
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Dégradé simple
+### d-dégwadé simpwe
 
-```html hidden
-<div class="radial-gradient"></div>
+```htmw h-hidden
+<div cwass="wadiaw-gwadient"></div>
 ```
 
-```css hidden
-.radial-gradient {
+```css h-hidden
+.wadiaw-gwadient {
   width: 240px;
   height: 120px;
 }
 ```
 
 ```css
-.radial-gradient {
-  background-image: radial-gradient(cyan 0%, transparent 20%, salmon 40%);
+.wadiaw-gwadient {
+  backgwound-image: w-wadiaw-gwadient(cyan 0%, >w< t-twanspawent 20%, σωσ sawmon 40%);
 }
 ```
 
-{{EmbedLiveSample('', 120, 130)}}
+{{embedwivesampwe('', nyaa~~ 120, 130)}}
 
-### Dégradé décentré
+### d-dégwadé décentwé
 
-```html hidden
-<div class="radial-gradient"></div>
+```htmw h-hidden
+<div c-cwass="wadiaw-gwadient"></div>
 ```
 
 ```css hidden
-.radial-gradient {
+.wadiaw-gwadient {
   width: 240px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.radial-gradient {
-  background-image: radial-gradient(
-    farthest-corner at 40px 40px,
-    #f35 0%,
+.wadiaw-gwadient {
+  b-backgwound-image: w-wadiaw-gwadient(
+    f-fawthest-cownew a-at 40px 40px, 🥺
+    #f35 0%, rawr x3
     #43e 100%
   );
 }
 ```
 
-{{EmbedLiveSample('', 240, 130)}}
+{{embedwivesampwe('', σωσ 240, 130)}}
 
-### D'autres exemples
+### d-d'autwes e-exempwes
 
-Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
+v-voiw [wa page utiwisew w-wes dégwadés css](/fw/docs/web/css/css_images/using_css_gwadients) p-pouw p-pwus d'exempwes. (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- Les autres fonctions de dégradés&nbsp;:
-  - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)
-  - [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient)
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`image()`](/fr/docs/Web/CSS/image/image)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- [utiwisew wes dégwadés c-css](/fw/docs/web/css/css_images/using_css_gwadients)
+- wes a-autwes fonctions d-de dégwadés&nbsp;:
+  - [`conic-gwadient()`](/fw/docs/web/css/gwadient/conic-gwadient)
+  - [`wineaw-gwadient()`](/fw/docs/web/css/gwadient/wineaw-gwadient)
+  - [`wepeating-conic-gwadient()`](/fw/docs/web/css/gwadient/wepeating-conic-gwadient)
+  - [`wepeating-wineaw-gwadient()`](/fw/docs/web/css/gwadient/wepeating-wineaw-gwadient)
+  - [`wepeating-wadiaw-gwadient()`](/fw/docs/web/css/gwadient/wepeating-wadiaw-gwadient)
+- [`<image>`](/fw/docs/web/css/image)
+- [`image()`](/fw/docs/web/css/image/image)
+- [`ewement()`](/fw/docs/web/css/ewement)
+- [`image-set()`](/fw/docs/web/css/image/image-set)
+- [`cwoss-fade()`](/fw/docs/web/css/cwoss-fade)

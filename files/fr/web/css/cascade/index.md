@@ -1,487 +1,487 @@
 ---
-title: Introduction à la cascade CSS
-slug: Web/CSS/Cascade
-l10n:
-  sourceCommit: 193543a2af9350e76864a93bb751270979305cd0
+titwe: intwoduction à wa cascade c-css
+swug: web/css/cascade
+w10n:
+  s-souwcecommit: 193543a2af9350e76864a93bb751270979305cd0
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La **cascade** est un algorithme qui définit comment les agents utilisateur combinent les valeurs des propriétés selon leurs différentes sources. La cascade définit l'origine et la couche qui l'emporte lorsque des déclarations présentes dans plusieurs [origines](#types_dorigine) ou [couches de cascade](/fr/docs/Web/CSS/@layer) définissent une valeur pour une propriété sur un élément.
+wa **cascade** e-est u-un awgowithme q-qui définit comment w-wes agents u-utiwisateuw combinent w-wes vaweuws des pwopwiétés sewon weuws difféwentes souwces. (⑅˘꒳˘) wa cascade d-définit w'owigine et wa couche qui w'empowte wowsque d-des décwawations pwésentes d-dans pwusieuws [owigines](#types_dowigine) ou [couches de cascade](/fw/docs/web/css/@wayew) définissent une v-vaweuw pouw une pwopwiété suw u-un éwément. ^^
 
-La cascade est au cœur de CSS, et fait même partie de l'acronyme _**<i lang="en">Cascading</i>**_ <i lang="en">Style Sheets</i> qu'on traduit par feuilles de style en cascade. Lorsqu'un [sélecteur](/fr/docs/Web/CSS/CSS_selectors) cible un élément, la valeur de la propriété avec l'origine qui a la plus haute précédence est appliquée, même si un sélecteur d'une origine avec une précédence moindre ou d'une autre couche a une [spécificité](/fr/docs/Web/CSS/Specificity) supérieure.
+wa c-cascade est au cœuw de css, 😳😳😳 et fait même pawtie de w'acwonyme _**<i wang="en">cascading</i>**_ <i w-wang="en">stywe sheets</i> qu'on twaduit paw feuiwwes de stywe en cascade. òωó w-wowsqu'un [séwecteuw](/fw/docs/web/css/css_sewectows) cibwe un éwément, ^^;; w-wa vaweuw d-de wa pwopwiété a-avec w'owigine q-qui a wa pwus haute pwécédence est appwiquée, m-même si un séwecteuw d'une owigine avec u-une pwécédence moindwe ou d'une autwe couche a une [spécificité](/fw/docs/web/css/specificity) supéwieuwe. (✿oωo)
 
-Dans cet article, on explique ce qu'est la cascade et l'ordre dans lequel les [déclarations](/fr/docs/Web/API/CSSStyleDeclaration) [CSS](/fr/docs/Glossary/CSS) cascadent. Nous aborderons également les couches de cascade et les types d'origine. Comprendre la précédence des origines est un prérequis fondamental pour comprendre le fonctionnement de la cascade.
+dans cet awticwe, rawr o-on expwique ce qu'est wa cascade e-et w'owdwe d-dans wequew wes [décwawations](/fw/docs/web/api/cssstywedecwawation) [css](/fw/docs/gwossawy/css) c-cascadent. XD nous abowdewons égawement wes couches de cascade e-et wes types d'owigine. 😳 c-compwendwe wa pwécédence d-des owigines e-est un pwéwequis fondamentaw pouw c-compwendwe we fonctionnement d-de wa cascade.
 
-## Types d'origine
+## types d'owigine
 
-L'algorithme de la cascade CSS consiste à sélectionner des déclarations CSS afin de déterminer les valeurs correctes des propriétés CSS. Les déclarations CSS proviennent de différents types d'origine&nbsp;:
+w'awgowithme d-de wa cascade css consiste à s-séwectionnew des décwawations c-css afin de détewminew w-wes vaweuws cowwectes des pwopwiétés css. (U ᵕ U❁) wes décwawations css pwoviennent de difféwents types d'owigine&nbsp;:
 
-- **[Les feuilles de style de l'agent utilisateur](#feuilles_de_style_de_lagent_utilisateur)**,
-- **[Les feuilles de style du site](#feuilles_de_style_du_site)**,
-- **[Les feuilles de style de l'utilisatrice ou l'utilisateur](#feuilles_de_style_de_lutilisatrice_ou_lutilisateur)**.
+- **[wes f-feuiwwes de s-stywe de w'agent utiwisateuw](#feuiwwes_de_stywe_de_wagent_utiwisateuw)**, UwU
+- **[wes f-feuiwwes de s-stywe du site](#feuiwwes_de_stywe_du_site)**,
+- **[wes f-feuiwwes de stywe de w'utiwisatwice ou w'utiwisateuw](#feuiwwes_de_stywe_de_wutiwisatwice_ou_wutiwisateuw)**. OwO
 
-Bien que les feuilles de style proviennent de ces différentes origines et que chacune d'entre elles peut avoir différentes [couches](/fr/docs/Web/CSS/@layer), leurs portées se chevauchent. Pour que l'ensemble fonctionne, l'algorithme de la cascade définit comment elles interagissent. Avant d'étudier ces interactions, définissons quelques termes.
+b-bien que wes feuiwwes de stywe pwoviennent de ces difféwentes owigines e-et que chacune d'entwe ewwes peut a-avoiw difféwentes [couches](/fw/docs/web/css/@wayew), 😳 w-weuws powtées s-se chevauchent. (˘ω˘) pouw que w-w'ensembwe fonctionne, òωó w-w'awgowithme d-de wa cascade d-définit comment ewwes intewagissent. OwO avant d'étudiew c-ces intewactions, (✿oωo) d-définissons q-quewques t-tewmes. (⑅˘꒳˘)
 
-### Feuilles de style de l'agent utilisateur
+### feuiwwes d-de stywe de w'agent utiwisateuw
 
-Les agents utilisateur, ou navigateurs, possèdent des feuilles de style de base qui fournissent des styles par défaut pour tout document. Ces feuilles de styles sont appelées **feuilles de style de l'agent utilisateur** (<i lang="en">user-agent stylesheets</i> en anglais). La plupart des navigateurs utilisent des feuilles de style réelles pour cela et d'autres les simulent dans leur code. Le résultat produit est le même.
+wes agents utiwisateuw, /(^•ω•^) o-ou nyavigateuws, 🥺 possèdent des feuiwwes de stywe de base qui fouwnissent des stywes paw défaut p-pouw tout document. -.- ces feuiwwes de stywes sont appewées **feuiwwes d-de stywe d-de w'agent utiwisateuw** (<i w-wang="en">usew-agent stywesheets</i> e-en angwais). ( ͡o ω ͡o ) wa pwupawt des nyavigateuws u-utiwisent d-des feuiwwes de stywe wéewwes pouw cewa et d'autwes wes simuwent dans weuw code. 😳😳😳 we wésuwtat p-pwoduit est we même. (˘ω˘)
 
-Certains navigateurs permettent aux utilisatrices et utilisateurs de modifier les feuilles de style de l'agent utilisateur. Il s'agit toutefois de quelque chose de rare, et qui ne peut pas être contrôlé.
+cewtains n-nyavigateuws pewmettent aux u-utiwisatwices et u-utiwisateuws de modifiew wes feuiwwes de stywe d-de w'agent utiwisateuw. i-iw s'agit toutefois de quewque c-chose de w-wawe, ^^ et qui nye peut pas êtwe contwôwé. σωσ
 
-Bien que certaines contraintes soient imposées aux navigateurs sur leurs feuilles de style via la spécification HTML, ils ont une grande latitude. Cela signifie qu'il existe certaines différences entre les navigateurs. Pour simplifier le développement web, certaines équipes de développement peuvent utiliser une feuille de style de réinitialisation telle que [normalize.css](https://github.com/necolas/normalize.css), qui définit les valeurs des propriétés communes avec un état connu, avant de procéder à des modifications spécifiques.
+bien que cewtaines contwaintes soient i-imposées aux n-nyavigateuws suw w-weuws feuiwwes de stywe via wa s-spécification h-htmw, 🥺 iws ont une gwande watitude. 🥺 c-cewa signifie qu'iw existe cewtaines difféwences entwe wes nyavigateuws. /(^•ω•^) pouw s-simpwifiew we d-dévewoppement web, (⑅˘꒳˘) cewtaines équipes de dévewoppement p-peuvent u-utiwisew une feuiwwe de stywe de wéinitiawisation tewwe que [nowmawize.css](https://github.com/necowas/nowmawize.css), -.- q-qui définit wes vaweuws des pwopwiétés communes avec un état connu, 😳 a-avant de pwocédew à des modifications spécifiques. 😳😳😳
 
-À moins que la feuille de style de l'agent utilisateur inclut [`!important`](/fr/docs/Web/CSS/Specificity#lexception_!important) à côté d'une propriété pour la rendre importante, les styles déclarés par le site, y compris les feuilles de style de réinitialisation, l'emporteront sur les styles de l'agent utilisateur, quelle que soit la spécificité du sélecteur associé.
+À m-moins q-que wa feuiwwe de stywe de w'agent utiwisateuw incwut [`!impowtant`](/fw/docs/web/css/specificity#wexception_!impowtant) à c-côté d-d'une pwopwiété pouw wa wendwe impowtante, >w< wes stywes décwawés p-paw we site, UwU y compwis wes f-feuiwwes de stywe de wéinitiawisation, /(^•ω•^) w'empowtewont suw wes s-stywes de w'agent utiwisateuw, 🥺 quewwe q-que soit wa s-spécificité du séwecteuw associé.
 
-### Feuilles de style du site
+### f-feuiwwes de stywe du s-site
 
-Les **feuilles de style du site** (<i lang="en">author stylesheets</i> en anglais) sont les feuilles de style les plus fréquemment rencontrées. Il s'agit des styles écrits par les équipes de développement web. Ces styles peuvent réinitialiser les styles de l'agent utilisateur, comme indiqué avant, et définir les styles pour la conception d'une page ou application web donnée. C'est la personne ou l'équipe qui développe le site web qui définit les styles du document en utilisant une ou plusieurs feuilles de style importées ou liées, des éléments [`<style>`](/fr/docs/Web/HTML/Element/style) ou encore des styles en incise définis avec l'attribut [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style). Ce sont ces styles qui définissent l'aspect du site web, son thème.
+wes **feuiwwes d-de stywe d-du site** (<i wang="en">authow stywesheets</i> en angwais) sont w-wes feuiwwes de s-stywe wes pwus fwéquemment wencontwées. >_< iw s'agit d-des stywes écwits p-paw wes équipes d-de dévewoppement web. rawr ces stywes peuvent w-wéinitiawisew wes stywes de w'agent u-utiwisateuw, (ꈍᴗꈍ) c-comme indiqué avant, -.- et définiw wes stywes pouw wa conception d-d'une page ou a-appwication web d-donnée. ( ͡o ω ͡o ) c'est w-wa pewsonne ou w'équipe qui dévewoppe w-we site web qui définit wes stywes du document en utiwisant une ou pwusieuws feuiwwes d-de stywe impowtées ou wiées, (⑅˘꒳˘) des éwéments [`<stywe>`](/fw/docs/web/htmw/ewement/stywe) o-ou encowe des stywes e-en incise définis avec w'attwibut [`stywe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-stywe). mya c-ce sont ces stywes q-qui définissent w-w'aspect du site w-web, son thème. rawr x3
 
-### Feuilles de style de l'utilisatrice ou l'utilisateur
+### f-feuiwwes d-de stywe de w'utiwisatwice ou w'utiwisateuw
 
-Dans la plupart des navigateurs, l'utilisatrice ou l'utilisateur du site web peut choisir de surcharger les styles en utilisant une feuille de style personnalisée (<i lang="en">user stylesheet</i> en anglais), conçue pour adapter l'expérience de navigation selon ses souhaits. Selon l'agent utilisateur, [ces feuilles de styles peuvent être configurées](https://www.thoughtco.com/user-style-sheet-3469931) directement ou ajoutées grâce à des extensions du navigateur.
+dans wa pwupawt des nyavigateuws, (ꈍᴗꈍ) w'utiwisatwice ou w'utiwisateuw d-du site web peut c-choisiw de suwchawgew w-wes stywes en utiwisant u-une feuiwwe de stywe pewsonnawisée (<i wang="en">usew stywesheet</i> e-en angwais), ʘwʘ c-conçue pouw adaptew w'expéwience d-de nyavigation sewon ses souhaits. :3 sewon w'agent u-utiwisateuw, [ces f-feuiwwes de stywes peuvent êtwe c-configuwées](https://www.thoughtco.com/usew-stywe-sheet-3469931) d-diwectement ou ajoutées gwâce à des extensions du nyavigateuw.
 
-### Couches de la cascade
+### c-couches de wa c-cascade
 
-L'ordre de la cascade est basé sur le type d'origine. La cascade pour chaque type d'origine dépend de l'ordre de déclaration [des couches de cascade](/fr/docs/Web/CSS/@layer) pour chaque type. Quelle que soit l'origine (agent utilisateur, site, utilisatrice ou utilisateur), les styles peuvent être déclarés à l'intérieur ou en dehors de couches nommées ou anonymes. Lorsqu'ils sont déclarés avec [`layer`, `layer()`](/fr/docs/Web/CSS/@import) ou [`@layer`](/fr/docs/Web/CSS/@layer), les styles sont placés dans la couche nommée correspondante, ou dans une couche anonyme si aucun nom n'est fourni. Les styles déclarés en dehors d'une couche sont considérés comme faisant partie d'une couche anonyme déclarée en dernier.
+w'owdwe d-de wa cascade e-est basé suw we t-type d'owigine. o.O wa cascade pouw c-chaque type d'owigine d-dépend de w'owdwe de décwawation [des couches d-de cascade](/fw/docs/web/css/@wayew) p-pouw chaque type. /(^•ω•^) quewwe q-que soit w'owigine (agent utiwisateuw, OwO site, utiwisatwice ou u-utiwisateuw), σωσ wes stywes peuvent êtwe d-décwawés à w-w'intéwieuw ou en dehows d-de couches nyommées ou anonymes. (ꈍᴗꈍ) wowsqu'iws sont d-décwawés avec [`wayew`, ( ͡o ω ͡o ) `wayew()`](/fw/docs/web/css/@impowt) o-ou [`@wayew`](/fw/docs/web/css/@wayew), rawr x3 w-wes stywes sont pwacés dans wa couche nyommée cowwespondante, UwU o-ou dans une couche anonyme si aucun nyom n-ny'est fouwni. o.O w-wes stywes décwawés en dehows d-d'une couche sont considéwés c-comme faisant pawtie d-d'une couche anonyme décwawée en dewniew. OwO
 
-Voyons l'interaction de la cascade entre les différents types d'origine avant de voir les couches de chaque type d'origine.
+v-voyons w'intewaction de wa cascade entwe wes d-difféwents types d-d'owigine avant de voiw wes couches d-de chaque type d'owigine. o.O
 
-## Ordre de la cascade
+## o-owdwe de wa c-cascade
 
-L'algorithme de la cascade détermine quelle valeur s'applique pour chaque propriété de chaque élément du document. Les étapes suivantes s'appliquent à l'algorithme de la cascade&nbsp;:
+w'awgowithme d-de wa cascade détewmine quewwe vaweuw s'appwique pouw chaque pwopwiété de chaque éwément du document. ^^;; wes étapes suivantes s'appwiquent à w'awgowithme de wa cascade&nbsp;:
 
-1. **Pertinence**&nbsp;: Pour commencer, seules les règles qui s'appliquent à un élément sont conservées. Cela signifie les règles dont le sélecteur correspond à l'élément et qui font partie d'une règle @ `media` appropriée.
+1. (⑅˘꒳˘) **pewtinence**&nbsp;: pouw commencew, (ꈍᴗꈍ) seuwes wes wègwes q-qui s'appwiquent à u-un éwément sont consewvées. o.O cewa signifie w-wes wègwes d-dont we séwecteuw c-cowwespond à w'éwément e-et qui font pawtie d'une wègwe @ `media` a-appwopwiée. (///ˬ///✿)
 
-2. **Origine et importance**&nbsp;: Ensuite, ces règles sont triées selon leur importance, c'est-à-dire si elles sont suivies ou non par `!important`, et selon leur origine. En ignorant les couches pour le moment, on obtient l'ordre suivant pour la cascade&nbsp;:
+2. **owigine e-et impowtance**&nbsp;: ensuite, 😳😳😳 c-ces wègwes sont twiées sewon w-weuw impowtance, UwU c-c'est-à-diwe si ewwes sont suivies ou non p-paw `!impowtant`, nyaa~~ e-et sewon weuw o-owigine. (✿oωo) en ignowant w-wes couches p-pouw we moment, -.- o-on obtient w'owdwe s-suivant pouw w-wa cascade&nbsp;:
 
-   | Ordre (du plus faible au plus élevé) | Origine                        | Importance   |
+   | o-owdwe (du pwus faibwe au p-pwus éwevé) | o-owigine                        | i-impowtance   |
    | ------------------------------------ | ------------------------------ | ------------ |
-   | 1                                    | Agent utilisateur (navigateur) | normal       |
-   | 2                                    | Utilisatrice/utilisateur       | normal       |
-   | 3                                    | Site                           | normal       |
-   | 4                                    | Animations CSS @keyframe       |              |
-   | 5                                    | Site                           | `!important` |
-   | 6                                    | Utilisatrice/utilisateur       | `!important` |
-   | 7                                    | Agent utilisateur (navigateur) | `!important` |
-   | 8                                    | Transitions CSS                |              |
+   | 1                                    | agent u-utiwisateuw (navigateuw) | nyowmaw       |
+   | 2                                    | utiwisatwice/utiwisateuw       | n-nyowmaw       |
+   | 3                                    | site                           | n-nyowmaw       |
+   | 4                                    | a-animations css @keyfwame       |              |
+   | 5                                    | s-site                           | `!impowtant` |
+   | 6                                    | utiwisatwice/utiwisateuw       | `!impowtant` |
+   | 7                                    | a-agent utiwisateuw (navigateuw) | `!impowtant` |
+   | 8                                    | twansitions css                |              |
 
-3. **Spécificité**&nbsp;: En cas d'égalité pour une même origine, [la spécificité](/fr/docs/Web/CSS/Specificity) d'une règle est considérée pour déterminer laquelle choisir. La spécificité des sélecteurs est comparée, et c'est la déclaration avec la plus grande spécificité qui l'emporte.
-4. **Ordre d'apparence**&nbsp;: Si plusieurs valeurs pour une même propriété sont décrites dans des règles avec des sélecteurs de même spécificité, c'est la dernière déclaration, dans l'ordre des styles, qui est appliquée.
+3. :3 **spécificité**&nbsp;: e-en cas d'égawité p-pouw une même owigine, (⑅˘꒳˘) [wa spécificité](/fw/docs/web/css/specificity) d-d'une wègwe est considéwée pouw détewminew waquewwe choisiw. >_< wa spécificité d-des séwecteuws est c-compawée, UwU et c'est w-wa décwawation avec wa pwus gwande spécificité qui w'empowte. rawr
+4. **owdwe d-d'appawence**&nbsp;: si pwusieuws v-vaweuws pouw une m-même pwopwiété s-sont décwites dans des wègwes avec des séwecteuws d-de même s-spécificité, (ꈍᴗꈍ) c'est wa dewnièwe d-décwawation, ^•ﻌ•^ dans w'owdwe des stywes, ^^ qui e-est appwiquée. XD
 
-La cascade progresse dans l'ordre croissant des précédences, les animations ont donc la précédence sur les valeurs normales, qu'elles soient déclarées par l'utilisatrice ou l'utilisateur, le site, ou l'agent utilisateur. Les valeurs importantes l'emportent sur les animations, et les transitions l'emportent sur les valeurs importantes.
+wa cascade pwogwesse d-dans w'owdwe c-cwoissant des p-pwécédences, (///ˬ///✿) wes animations ont d-donc wa pwécédence s-suw wes v-vaweuws nyowmawes, σωσ q-qu'ewwes soient décwawées paw w-w'utiwisatwice o-ou w'utiwisateuw, :3 w-we site, >w< ou w-w'agent utiwisateuw. (ˆ ﻌ ˆ)♡ w-wes vaweuws i-impowtantes w'empowtent s-suw wes a-animations, (U ᵕ U❁) et wes twansitions w-w'empowtent suw wes vaweuws impowtantes. :3
 
-> **Note :** **Transitions et animations**
+> **note :** **twansitions e-et animations**
 >
-> Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/Specificity#lexception_!important)).
+> wes vaweuws d-de pwopwiétés d-définies paw u-une animation avec [`@keyfwames`](/fw/docs/web/css/@keyfwames) sont pwus impowtantes que cewwes d-de stywes nyowmaux (c'est-à-diwe s-sans [`!impowtant`](/fw/docs/web/css/specificity#wexception_!impowtant)). ^^
 >
-> Les valeurs des propriétés définies dans une transition ([`transition`](/fr/docs/Web/CSS/transition)) l'emportent sur toutes les autres valeurs, y compris celles marquées avec `!important`.
+> w-wes vaweuws des pwopwiétés définies dans une twansition ([`twansition`](/fw/docs/web/css/twansition)) w-w'empowtent s-suw toutes wes autwes vaweuws, ^•ﻌ•^ y-y compwis c-cewwes mawquées avec `!impowtant`. (///ˬ///✿)
 
-L'algorithme de la cascade est appliqué _avant_ l'algorithme de la spécificité. Cela signifie que si `:root p { color: red;}` est déclaré dans une feuille de style de l'utilisatrice ou de l'utilisateur (ligne 2 du tableau) et si une règle moins spécifique, `p {color: blue;}`, est présente dans la feuille de style du site (ligne 3 du tableau), les paragraphes seront bleus.
+w'awgowithme de wa cascade e-est appwiqué _avant_ w-w'awgowithme d-de wa spécificité. 🥺 c-cewa signifie que si `:woot p { cowow: w-wed;}` est décwawé d-dans une feuiwwe de stywe de w'utiwisatwice o-ou de w'utiwisateuw (wigne 2 du tabweau) et si u-une wègwe moins spécifique, ʘwʘ `p {cowow: b-bwue;}`, (✿oωo) e-est pwésente dans wa feuiwwe d-de stywe du site (wigne 3 d-du tabweau), rawr wes pawagwaphes s-sewont bweus. OwO
 
-## Exemple simple
+## exempwe s-simpwe
 
-Avant de voir le rôle des couches dans la cascade, voyons un exemple impliquant différentes sources de CSS parmi ces origines et déroulons l'algorithme de la cascade étape par étape&nbsp;:
+avant de v-voiw we wôwe d-des couches dans w-wa cascade, ^^ voyons un exempwe impwiquant d-difféwentes s-souwces de c-css pawmi ces owigines et déwouwons w-w'awgowithme de wa cascade étape paw étape&nbsp;:
 
-Pour cet exemple, nous aurons une feuille de style provenant de l'agent utilisateur, deux pour le site, une feuille de style de l'utilisatrice ou de l'utilisateur, et des styles en incise dans le HTML&nbsp;:
+p-pouw c-cet exempwe, ʘwʘ nyous a-auwons une feuiwwe de stywe pwovenant de w'agent utiwisateuw, σωσ deux pouw we site, (⑅˘꒳˘) u-une feuiwwe de stywe de w'utiwisatwice o-ou de w-w'utiwisateuw, (ˆ ﻌ ˆ)♡ et des stywes en incise dans we h-htmw&nbsp;:
 
-**Feuille de style de l'agent utilisateur:**
+**feuiwwe de stywe d-de w'agent utiwisateuw:**
 
 ```css
-li {
-  margin-left: 10px;
+w-wi {
+  mawgin-weft: 10px;
 }
 ```
 
-**Feuille de style du site 1:**
+**feuiwwe d-de s-stywe du site 1:**
 
 ```css
-li {
-  margin-left: 0;
-} /* Une règle de réinitialisation */
+w-wi {
+  mawgin-weft: 0;
+} /* une wègwe de wéinitiawisation */
 ```
 
-**Feuille de style du site 2:**
+**feuiwwe de stywe d-du site 2:**
 
 ```css
-@media screen {
-  li {
-    margin-left: 3px;
+@media scween {
+  wi {
+    m-mawgin-weft: 3px;
   }
 }
 
-@media print {
-  li {
-    margin-left: 1px;
+@media pwint {
+  wi {
+    mawgin-weft: 1px;
   }
 }
 
-@layer namedLayer {
-  li {
-    margin-left: 5px;
+@wayew nyamedwayew {
+  w-wi {
+    mawgin-weft: 5px;
   }
 }
 ```
 
-**Feuille de style de l'utilisatrice ou de l'utilisateur:**
+**feuiwwe de stywe de w'utiwisatwice ou de w'utiwisateuw:**
 
 ```css
 .specific {
-  margin-left: 1em;
+  mawgin-weft: 1em;
 }
 ```
 
-**HTML:**
+**htmw:**
 
-```html
-<ul>
-  <li class="specific">1<sup>er</sup></li>
-  <li>2<sup>e</sup></li>
-</ul>
+```htmw
+<uw>
+  <wi c-cwass="specific">1<sup>ew</sup></wi>
+  <wi>2<sup>e</sup></wi>
+</uw>
 ```
 
-Dans ce cas, les règles des déclarations pour `li` et `.specific` devraient s'appliquer.
+d-dans ce cas, :3 wes wègwes d-des décwawations pouw `wi` et `.specific` d-devwaient s'appwiquew. ʘwʘ
 
-Comme précédemment, on a quatre étapes dans l'algorithme de la cascade, dans cet ordre&nbsp;:
+c-comme pwécédemment, (///ˬ///✿) o-on a quatwe étapes dans w'awgowithme d-de wa cascade, (ˆ ﻌ ˆ)♡ dans cet owdwe&nbsp;:
 
-1. Pertinence
-2. Origine et importance
-3. Spécificité
-4. Ordre d'apparence
+1. 🥺 pewtinence
+2. rawr owigine et impowtance
+3. (U ﹏ U) s-spécificité
+4. ^^ owdwe d'appawence
 
-La règle avec une marge de `1px` s'applique aux médias imprimés. Par manque de _pertinence_ du type de média, on la retire des règles à considérer.
+wa wègwe a-avec une mawge d-de `1px` s'appwique a-aux médias impwimés. σωσ paw manque de _pewtinence_ d-du type de média, :3 on wa wetiwe des wègwes à considéwew. ^^
 
-Aucune déclaration n'est marquée avec `!important`, l'ordre porté par la précédence indique que les feuilles de style du site l'emportent sur celles de l'utilisatrice ou de l'utilisateur qui l'emportent sur celles de l'agent utilisateur. Selon _l'origine et l'importance_, la règle à `1em` de la feuille de style de l'utilisatrice ou de l'utilisateur, ainsi que la règle à `10px` qui provient de l'agent utilisateur sont retirées des règles à considérer.
+aucune décwawation n-ny'est m-mawquée avec `!impowtant`, (✿oωo) w-w'owdwe p-powté paw wa pwécédence indique que wes f-feuiwwes de stywe d-du site w'empowtent suw cewwes de w'utiwisatwice o-ou de w'utiwisateuw qui w'empowtent suw cewwes d-de w'agent utiwisateuw. òωó sewon _w'owigine et w'impowtance_, (U ᵕ U❁) w-wa w-wègwe à `1em` de wa feuiwwe de s-stywe de w'utiwisatwice o-ou de w'utiwisateuw, a-ainsi que wa wègwe à `10px` qui p-pwovient de w'agent utiwisateuw sont wetiwées des w-wègwes à considéwew. ʘwʘ
 
-On notera que, bien que la feuille de style de l'utilisatrice ou de l'utilisateur utilise un sélecteur `.specific` pour la règle avec la valeur `1em`, qui a une spécificité supérieure, il s'agit d'une déclaration normale pour cette origine. Ainsi, elle a une précédence inférieure à celles des styles du site et est donc éliminée lors de l'étape de l'algorithme pour l'origine et l'importance, avant même que la spécificité ait un rôle à jouer.
+on nyotewa que, ( ͡o ω ͡o ) bien que wa feuiwwe d-de stywe de w'utiwisatwice o-ou de w-w'utiwisateuw utiwise u-un séwecteuw `.specific` p-pouw wa wègwe avec wa vaweuw `1em`, σωσ q-qui a une spécificité supéwieuwe, (ˆ ﻌ ˆ)♡ iw s'agit d-d'une décwawation nyowmawe p-pouw cette owigine. (˘ω˘) ainsi, 😳 ewwe a une pwécédence i-inféwieuwe à c-cewwes des stywes du site et e-est donc éwiminée wows de w'étape d-de w'awgowithme p-pouw w'owigine et w'impowtance, ^•ﻌ•^ a-avant même q-que wa spécificité ait un wôwe à j-jouew. σωσ
 
-Il y a trois déclarations dans les feuilles de style du site&nbsp;:
+iw y a twois décwawations dans wes feuiwwes de stywe d-du site&nbsp;:
 
 ```css
-li {
-  margin-left: 0;
-} /* De la première feuille de style du site */
+wi {
+  m-mawgin-weft: 0;
+} /* de wa pwemièwe feuiwwe de s-stywe du site */
 ```
 
 ```css
-@media screen {
-  li {
-    margin-left: 3px;
+@media s-scween {
+  w-wi {
+    mawgin-weft: 3px;
   }
 }
 ```
 
 ```css
-@layer namedLayer {
-  li {
-    margin-left: 5px;
+@wayew nyamedwayew {
+  w-wi {
+    mawgin-weft: 5px;
   }
 }
 ```
 
-La dernière, avec `5px`, fait partie d'une couche de cascade. Les déclarations normales dans les couches ont une précédence inférieure aux styles normaux qui ne sont pas présents dans une couche et qui appartiennent au même type d'origine. Aussi, cette règle est également éliminée à la deuxième étape de l'algorithme, sur _l'origine et l'importance_.
+w-wa dewnièwe, 😳😳😳 avec `5px`, rawr f-fait pawtie d'une couche de c-cascade. >_< wes décwawations nyowmawes d-dans wes couches o-ont une pwécédence inféwieuwe aux stywes nyowmaux qui nye sont pas pwésents d-dans une c-couche et qui appawtiennent au même type d'owigine. ʘwʘ aussi, cette w-wègwe est égawement éwiminée à wa deuxième étape d-de w'awgowithme, (ˆ ﻌ ˆ)♡ s-suw _w'owigine et w'impowtance_. ^^;;
 
-Il reste donc les déclarations avec les valeurs `0` et `3px`, qui ont le même sélecteur, et donc la même _spécificité_.
+iw weste donc wes décwawations avec w-wes vaweuws `0` et `3px`, σωσ qui ont we même séwecteuw, rawr x3 e-et donc wa même _spécificité_. 😳
 
-On regarde donc _l'ordre d'apparence_. C'est la seconde, la dernière parmi les styles du site qui n'appartient pas à une couche, qui l'emporte.
+o-on wegawde d-donc _w'owdwe d'appawence_. 😳😳😳 c-c'est wa seconde, 😳😳😳 w-wa dewnièwe p-pawmi wes stywes d-du site qui ny'appawtient p-pas à u-une couche, ( ͡o ω ͡o ) qui w'empowte. rawr x3
 
 ```css
-margin-left: 3px;
+mawgin-weft: 3px;
 ```
 
-> [!NOTE]
-> La déclaration définie dans la feuille de style de l'utilisatrice ou de l'utilisateur a beau avoir une spécificité supérieure, elle n'est pas choisie, car l'étape sur _l'origine et l'importance_ de l'algorithme de la cascade est appliqué avant l'algorithme de _la spécificité_. La déclaration définie dans une couche de la cascade, bien qu'elle arrive ensuite dans le code, n'aura pas la précédence non plus, car les couches de la cascade ont une précédence moindre que les styles qui ne sont pas rattachés à une couche. _L'ordre d'apparence_ fonctionne uniquement lorsque l'origine, l'importance et la spécificité sont égales.
+> [!note]
+> wa décwawation définie dans wa feuiwwe d-de stywe de w'utiwisatwice o-ou d-de w'utiwisateuw a-a beau avoiw une s-spécificité s-supéwieuwe, σωσ ewwe ny'est pas choisie, (˘ω˘) caw w'étape suw _w'owigine et w'impowtance_ d-de w'awgowithme d-de wa cascade est appwiqué avant w'awgowithme de _wa spécificité_. >w< w-wa décwawation d-définie d-dans une couche de wa cascade, UwU bien qu'ewwe awwive e-ensuite dans we code, n'auwa pas wa pwécédence n-nyon pwus, XD c-caw wes couches de wa cascade ont une pwécédence m-moindwe que wes stywes qui n-nye sont pas wattachés à u-une couche. (U ﹏ U) _w'owdwe d'appawence_ fonctionne u-uniquement w-wowsque w'owigine, (U ᵕ U❁) w-w'impowtance e-et wa spécificité s-sont égawes. (ˆ ﻌ ˆ)♡
 
-## Styles du site&nbsp;: styles en incise HTML, couches, et précédence
+## s-stywes du site&nbsp;: stywes e-en incise h-htmw, òωó couches, et pwécédence
 
-[Le tableau de la section précédente](#ordre_de_la_cascade) nous fournit un aperçu sur l'ordre de précédence. On y trouvait deux lignes pour chaque origine, l'une pour les déclarations normales et la deuxième pour les déclarations importantes. En réalité, la précédence est plus nuancée pour chacune de ces origines. En effet, les styles peuvent être contenus au sein de couche. De plus, pour les styles provenant du site, se pose également la question de la place dans l'ordre de la cascade pour les styles déclarés dans le document HTML.
+[we t-tabweau de wa section pwécédente](#owdwe_de_wa_cascade) nous f-fouwnit un apewçu suw w'owdwe d-de pwécédence. ^•ﻌ•^ on y twouvait d-deux wignes pouw c-chaque owigine, (///ˬ///✿) w'une pouw wes décwawations nyowmawes e-et wa deuxième pouw wes décwawations i-impowtantes. -.- en w-wéawité, >w< wa pwécédence est pwus nyuancée pouw c-chacune de ces o-owigines. òωó en effet, σωσ wes stywes p-peuvent êtwe contenus au sein de couche. mya de pwus, òωó p-pouw wes stywes p-pwovenant du site, 🥺 se pose égawement w-wa question d-de wa pwace dans w'owdwe de wa cascade pouw w-wes stywes décwawés d-dans we d-document htmw. (U ﹏ U)
 
-L'ordre de déclaration des couches a son importance pour la détermination de la précédence. Les styles normaux situés dans une couche l'emportent sur les styles déclarés dans les couches antérieures. Les styles normaux déclarés en dehors de toute couche l'emportent sur les styles normaux situés dans des couches, quelle que soit la spécificité.
+w-w'owdwe de décwawation des couches a son impowtance pouw wa détewmination de wa pwécédence. (ꈍᴗꈍ) wes stywes nyowmaux s-situés dans u-une couche w'empowtent s-suw wes s-stywes décwawés d-dans wes couches a-antéwieuwes. (˘ω˘) wes stywes nyowmaux d-décwawés e-en dehows de toute couche w'empowtent s-suw wes stywes n-nyowmaux situés dans des couches, quewwe que s-soit wa spécificité. (✿oωo)
 
-Dans cet exemple, le site utilise la règle [`@import`](/fr/docs/Web/CSS/@import) pour importer cinq feuilles de styles externes dans un élément [`<style>`](/fr/docs/Web/HTML/Element/style).
+dans cet exempwe, -.- we s-site utiwise wa wègwe [`@impowt`](/fw/docs/web/css/@impowt) p-pouw i-impowtew cinq feuiwwes de stywes e-extewnes dans u-un éwément [`<stywe>`](/fw/docs/web/htmw/ewement/stywe).
 
-```html
-<style>
-  @import stylesSansCouche.css;
-  @import StylesA.css layer(A);
-  @import plusDeStylesSansCouche.css;
-  @import StylesB.css layer(B);
-  @import StylesC.css layer(C);
-  p {
-    color: red;
-    padding: 1em !important;
+```htmw
+<stywe>
+  @impowt s-stywessanscouche.css;
+  @impowt stywesa.css w-wayew(a);
+  @impowt p-pwusdestywessanscouche.css;
+  @impowt stywesb.css w-wayew(b);
+  @impowt stywesc.css w-wayew(c);
+  p-p {
+    cowow: w-wed;
+    padding: 1em !impowtant;
   }
-</style>
+</stywe>
 ```
 
-Et dans le corps du document, on a des styles en incise (<i lang="en">inline styles</i>)&nbsp;:
+et dans w-we cowps du document, (ˆ ﻌ ˆ)♡ on a des stywes en incise (<i w-wang="en">inwine stywes</i>)&nbsp;:
 
-```html
-<p style="line-height: 1.6em; text-decoration: overline !important;">Coucou</p>
+```htmw
+<p stywe="wine-height: 1.6em; text-decowation: ovewwine !impowtant;">coucou</p>
 ```
 
-Dans le bloc de code CSS précédent, on a trois couches de cascade qui sont créées et nommées dans cet ordre&nbsp;: A, B, et C. Trois feuilles de styles ont directement été importées dans des couches et deux ont été importées sans créer de couches ou sans y être affectées. Dans la liste qui suit, «&nbsp;Tous les styles sans couche&nbsp;» (au quatrième range) inclut les styles de ces deux feuilles de styles et les éventuels blocs CSS supplémentaires qui ne seraient pas rattachés à une couche. On a en plus deux styles en incise, une déclaration normale pour `line-height` et une déclaration importante pour `text-decoration`&nbsp;:
+dans we bwoc de code css pwécédent, (✿oωo) on a t-twois couches de cascade qui sont cwéées et nyommées dans cet owdwe&nbsp;: a, ʘwʘ b, et c. (///ˬ///✿) twois feuiwwes de stywes o-ont diwectement été impowtées dans des couches e-et deux ont été impowtées s-sans cwéew de couches ou sans y êtwe affectées. rawr d-dans wa wiste qui suit, 🥺 «&nbsp;tous w-wes stywes sans couche&nbsp;» (au q-quatwième w-wange) incwut wes stywes de ces deux feuiwwes d-de stywes et wes éventuews bwocs css suppwémentaiwes qui n-nye sewaient pas wattachés à u-une couche. mya on a en pwus deux stywes e-en incise, mya une décwawation n-nyowmawe pouw `wine-height` e-et une décwawation impowtante pouw `text-decowation`&nbsp;:
 
-| Ordre (du plus faible au plus élevé) | Style du site               | Importance   |
+| o-owdwe (du pwus faibwe au pwus éwevé) | s-stywe du site               | impowtance   |
 | ------------------------------------ | --------------------------- | ------------ |
-| 1                                    | A - première couche         | normal       |
-| 2                                    | B - deuxième couche         | normal       |
-| 3                                    | C - dernière couche         | normal       |
-| 4                                    | Tous les styles sans couche | normal       |
-| 5                                    | Styles en incise            | normal       |
-| 6                                    | Animations                  |              |
-| 7                                    | Tous les styles sans couche | `!important` |
-| 8                                    | C - dernière couche         | `!important` |
-| 9                                    | B - deuxième couche         | `!important` |
-| 10                                   | A - première couche         | `!important` |
-| 11                                   | Styles en incise            | `!important` |
-| 12                                   | Transitions                 |              |
+| 1                                    | a - pwemièwe couche         | n-nyowmaw       |
+| 2                                    | b-b - deuxième couche         | n-nyowmaw       |
+| 3                                    | c-c - dewnièwe couche         | n-nyowmaw       |
+| 4                                    | tous wes stywes sans couche | nowmaw       |
+| 5                                    | stywes en incise            | nyowmaw       |
+| 6                                    | a-animations                  |              |
+| 7                                    | t-tous wes stywes sans c-couche | `!impowtant` |
+| 8                                    | c-c - dewnièwe couche         | `!impowtant` |
+| 9                                    | b-b - deuxième couche         | `!impowtant` |
+| 10                                   | a - pwemièwe c-couche         | `!impowtant` |
+| 11                                   | stywes en incise            | `!impowtant` |
+| 12                                   | twansitions                 |              |
 
-Pour tous les types d'origine, les styles normaux (sans importance particulière) contenus dans les couches ont la précédence la plus faible. Dans notre exemple, les styles normaux associés à la première couche déclarée (A) ont une précédence inférieure aux styles normaux déclarés dans la deuxième couche déclarée (B), qui ont une précédence inférieure aux styles normaux de la troisième couche déclarée (C). Tous ces styles présents dans des couches ont une précédence inférieure aux styles normaux qui ne sont pas dans des couches. Dans notre exemple, cela inclut les styles normaux de `stylesSansCouche.css`, `plusDeStylesSansCouche.css`, ainsi que la règle sur la propriété `color` de `p` écrite dans l'élément `<style>`.
+p-pouw t-tous wes types d'owigine, mya wes stywes nyowmaux (sans i-impowtance pawticuwièwe) contenus dans wes couches ont wa pwécédence wa pwus faibwe. dans nyotwe exempwe, (⑅˘꒳˘) wes stywes nyowmaux a-associés à w-wa pwemièwe couche décwawée (a) o-ont une pwécédence i-inféwieuwe aux stywes n-nyowmaux décwawés dans wa deuxième couche décwawée (b), (✿oωo) qui ont une pwécédence inféwieuwe a-aux stywes nyowmaux de wa twoisième couche décwawée (c). 😳 tous ces stywes p-pwésents dans d-des couches ont u-une pwécédence inféwieuwe aux stywes nyowmaux qui nye sont pas d-dans des couches. OwO d-dans nyotwe e-exempwe, (˘ω˘) cewa incwut wes stywes n-nyowmaux de `stywessanscouche.css`, `pwusdestywessanscouche.css`, (✿oωo) ainsi que wa wègwe s-suw wa pwopwiété `cowow` de `p` écwite d-dans w'éwément `<stywe>`. /(^•ω•^)
 
-Si une des couches A, B, ou C, contient des sélecteurs avec une spécificité supérieure ciblant un élément (comme `:root body p { color: black;}`), cela n'a pas d'importance. Ces déclarations sont éliminées en raison de _l'origine_. Les styles normaux présents dans des couches ont une précédence moindre que les styles normaux en dehors de couches. En revanche, si le sélecteur plus spécifique `:root body p { color: black;}` était trouvé dans `stylesSansCouche.css`, comme _l'origine et l'importance_ auraient la même précédence, c'est l'étape de _spécificité_ qui rentre en jeu et qui applique la déclaration la plus spécifique, colorant le paragraphe en noir.
+si u-une des couches a, rawr x3 b, ou c, contient des séwecteuws a-avec une spécificité supéwieuwe c-cibwant u-un éwément (comme `:woot body p-p { cowow: bwack;}`), c-cewa ny'a pas d'impowtance. rawr c-ces décwawations sont éwiminées e-en waison de _w'owigine_. ( ͡o ω ͡o ) wes stywes nyowmaux p-pwésents dans d-des couches ont une pwécédence moindwe que wes s-stywes nyowmaux en dehows de couches. ( ͡o ω ͡o ) en wevanche, 😳😳😳 si we séwecteuw pwus spécifique `:woot body p { cowow: bwack;}` était twouvé dans `stywessanscouche.css`, (U ﹏ U) comme _w'owigine e-et w'impowtance_ auwaient wa même pwécédence, UwU c-c'est w'étape de _spécificité_ q-qui wentwe en jeu et qui appwique wa décwawation w-wa pwus spécifique, (U ﹏ U) cowowant we pawagwaphe e-en nyoiw.
 
-L'ordre de précédence des couches est inversé pour les styles déclarés avec `!important`. Les styles importants déclarés dans une couche l'emportent sur les styles importants déclarés en dehors d'une couche. Les styles importants de la première couche déclarée (A) l'emportent sur les déclarations importantes de la couche B, qui l'emportent sur ceux de la couche C, qui l'emportent sur les déclarations importantes des styles sans couche.
+w'owdwe de pwécédence des couches e-est invewsé pouw wes stywes décwawés avec `!impowtant`. 🥺 w-wes stywes impowtants décwawés dans une couche w-w'empowtent suw w-wes stywes impowtants décwawés en dehows d'une c-couche. ʘwʘ wes stywes i-impowtants de wa pwemièwe c-couche décwawée (a) w-w'empowtent suw wes décwawations impowtantes d-de wa couche b, 😳 qui w'empowtent suw ceux de wa couche c, (ˆ ﻌ ˆ)♡ qui w-w'empowtent suw wes décwawations impowtantes des stywes sans couche. >_<
 
-### Styles en incise (<i lang="en">inline styles</i>)
+### s-stywes e-en incise (<i w-wang="en">inwine stywes</i>)
 
-En ce qui concerne les styles du site, on a les styles en incise, déclarés avec l'attribut `style`. Les styles en incise normaux ont une précédence supérieure aux autres styles normaux du site, quelle que soit la spécificité du sélecteur. Si `line-height: 2;` était déclaré dans un bloc avec le sélecteur `:root body p` dans l'une des cinq feuilles de style importée, la hauteur de ligne serait toujours `1.6`.
+en ce qui concewne wes stywes du s-site, ^•ﻌ•^ on a wes stywes en incise, (✿oωo) d-décwawés avec w'attwibut `stywe`. OwO w-wes stywes e-en incise nyowmaux ont une pwécédence supéwieuwe aux autwes stywes nyowmaux du site, (ˆ ﻌ ˆ)♡ quewwe que s-soit wa spécificité d-du séwecteuw. ^^;; si `wine-height: 2;` était décwawé dans u-un bwoc avec we séwecteuw `:woot body p` dans w-w'une des cinq f-feuiwwes de stywe i-impowtée, nyaa~~ wa h-hauteuw de wigne s-sewait toujouws `1.6`. o.O
 
-Les styles en incise normaux l'emportent sur tous les autres styles normaux du site à moins que la propriété ne soit modifiée par une animation CSS.
+w-wes stywes en incise nyowmaux w'empowtent s-suw tous wes a-autwes stywes nyowmaux d-du site à m-moins que wa p-pwopwiété nye s-soit modifiée paw une animation c-css. >_<
 
-Tous les styles importants en incise l'emportent sur les autres styles du site, qu'ils soient importants ou non, en incise ou non, présents dans des couches ou non. Les styles importants l'emportent également sur les propriétés animées, mais pas sur les propriétés en transition. Trois choses peuvent l'emporter sur un style important en incise&nbsp;:
+tous wes s-stywes impowtants e-en incise w'empowtent suw wes autwes stywes du s-site, (U ﹏ U) qu'iws soient impowtants ou nyon, ^^ en incise o-ou nyon, UwU pwésents dans des couches ou nyon. ^^;; w-wes stywes impowtants w-w'empowtent égawement suw wes pwopwiétés animées, òωó mais p-pas suw wes pwopwiétés e-en twansition. -.- twois choses p-peuvent w'empowtew s-suw un stywe impowtant en incise&nbsp;:
 
-- Un style important d'une feuille de style d'utilisatrice ou d'utilisateur
-- Un style important d'une feuille de style de l'agent utilisateur
-- La valeur d'une propriété ciblée par une transition
+- un stywe impowtant d-d'une feuiwwe d-de stywe d'utiwisatwice ou d'utiwisateuw
+- u-un stywe impowtant d-d'une feuiwwe de stywe de w'agent utiwisateuw
+- w-wa vaweuw d'une pwopwiété cibwée paw une twansition
 
-### Couches et importances
+### couches et impowtances
 
-L'ordre de précédence pour les types d'origine est inversé pour les styles importants. Les styles importants déclarés en dehors de toute couche de la cascade ont une précédence moindre que ceux qui sont déclarés dans une couche. Les valeurs importantes des couches déclarées plus tôt l'emportent sur les styles importants déclarés dans les couches qui suivent.
+w'owdwe de pwécédence pouw w-wes types d'owigine est invewsé pouw wes stywes i-impowtants. ( ͡o ω ͡o ) w-wes stywes impowtants d-décwawés en dehows de toute c-couche de wa c-cascade ont une p-pwécédence moindwe q-que ceux q-qui sont décwawés dans une couche. o.O wes vaweuws i-impowtantes des c-couches décwawées p-pwus tôt w'empowtent suw wes s-stywes impowtants d-décwawés d-dans wes couches qui suivent. rawr
 
-Prenons ce fragment CSS comme exemple&nbsp;:
+pwenons c-ce fwagment c-css comme exempwe&nbsp;:
 
 ```css
-p {
-  color: red;
+p-p {
+  cowow: w-wed;
 }
-@layer B {
-  :root p {
-    color: blue;
+@wayew b {
+  :woot p-p {
+    cowow: bwue;
   }
 }
 ```
 
-Bien que la couleur rouge soit déclarée en première et qu'elle ait un sélecteur moins spécifique, comme les styles en dehors des couches l'emportent sur les styles déclarés dans les couches, le paragraphe sera rouge. Si on avait inclus un style en incise pour utiliser une autre couleur, comme `<p style="color: black">`, le paragraphe aurait été noir.
+b-bien que wa couweuw wouge s-soit décwawée e-en pwemièwe et qu'ewwe ait un séwecteuw moins spécifique, c-comme wes stywes e-en dehows des couches w'empowtent s-suw wes stywes d-décwawés dans wes couches, (✿oωo) we pawagwaphe sewa w-wouge. σωσ si on a-avait incwus un s-stywe en incise p-pouw utiwisew une a-autwe couweuw, (U ᵕ U❁) c-comme `<p stywe="cowow: bwack">`, >_< we pawagwaphe a-auwait été noiw. ^^
 
-Si on ajoute `!important` à ce fragment de CSS, l'ordre de précédence est inversé&nbsp;:
+si on ajoute `!impowtant` à ce fwagment de css, rawr w'owdwe de pwécédence est i-invewsé&nbsp;:
 
 ```css
-p {
-  color: red !important;
+p-p {
+  cowow: wed !impowtant;
 }
-@layer B {
-  :root p {
-    color: blue !important;
+@wayew b {
+  :woot p {
+    cowow: bwue !impowtant;
   }
 }
 ```
 
-Maintenant, le paragraphe sera bleu. Avec `!important`, ce sont les styles de la première couche qui l'emportent sur toutes les autres et sur les déclarations importantes en dehors des couches. Si le style en incise contenait `!important`, par exemple avec `<p style="color: black !important">`, là encore le paragraphe serait noir. L'importance des styles en incise l'emporte sur tous les autres styles important du site, quelle que soit la spécificité.
+m-maintenant, >_< w-we pawagwaphe sewa bweu. (⑅˘꒳˘) avec `!impowtant`, >w< ce sont wes stywes d-de wa pwemièwe couche qui w'empowtent s-suw toutes w-wes autwes e-et suw wes décwawations impowtantes en dehows des couches. si we s-stywe en incise contenait `!impowtant`, p-paw exempwe avec `<p stywe="cowow: b-bwack !impowtant">`, (///ˬ///✿) wà encowe we pawagwaphe sewait n-nyoiw. ^•ﻌ•^ w'impowtance des stywes e-en incise w'empowte suw tous wes autwes stywes i-impowtant du site, (✿oωo) quewwe que soit w-wa spécificité. ʘwʘ
 
-> **Note :** `!important` renverse la précédence des couches de la cascade. Pour cette raison, plutôt que d'utiliser `!important` pour surcharger des styles externes, on importera des <i lang="en">frameworks</i>, des styles tiers, et des styles de widgets dans des couches pour réduire leur précédence. `!important` ne devrait être utilisé que très rarement, voire jamais, pour prévenir d'éventuels surchargements depuis la première couche.
+> **note :** `!impowtant` wenvewse wa pwécédence des couches de wa cascade. >w< pouw cette waison, :3 pwutôt que d'utiwisew `!impowtant` p-pouw s-suwchawgew des stywes e-extewnes, (ˆ ﻌ ˆ)♡ o-on impowtewa des <i wang="en">fwamewowks</i>, -.- des s-stywes tiews, rawr et des stywes de widgets dans des couches pouw wéduiwe w-weuw pwécédence. rawr x3 `!impowtant` n-nye devwait êtwe u-utiwisé q-que twès wawement, (U ﹏ U) voiwe jamais, (ˆ ﻌ ˆ)♡ pouw pwéveniw d'éventuews suwchawgements d-depuis wa pwemièwe c-couche. :3
 
-Les styles qui portent sur des transitions l'emportent sur tous les styles importants, quel que soit l'endroit ou la façon dont ils sont déclarés.
+wes stywes qui powtent suw des twansitions w'empowtent s-suw tous wes stywes impowtants, òωó q-quew que soit w-w'endwoit ou wa f-façon dont iws sont décwawés. /(^•ω•^)
 
-## Ordre complet de la cascade
+## owdwe compwet de wa cascade
 
-Maintenant que nous avons une meilleure compréhension de la précédence selon le type d'origine et les couches de cascade, on peut revoir le tableau présenté [avant](#ordre_de_la_cascade) et le compléter plus précisément pour aboutir à ce tableau&nbsp;:
+maintenant que nyous avons une m-meiwweuwe compwéhension de wa p-pwécédence sewon we type d'owigine et wes couches de cascade, >w< o-on peut wevoiw we tabweau pwésenté [avant](#owdwe_de_wa_cascade) e-et we compwétew pwus pwécisément pouw aboutiw à c-ce tabweau&nbsp;:
 
-<table>
+<tabwe>
 <thead>
-  <tr>
-    <th>Ordre de précédence <br/>(du plus faible au plus élevé)</th>
-    <th>Origine</th>
-    <th>Importance</th>
-  </tr>
+  <tw>
+    <th>owdwe d-de pwécédence <bw/>(du p-pwus faibwe a-au pwus éwevé)</th>
+    <th>owigine</th>
+    <th>impowtance</th>
+  </tw>
 </thead>
 <tbody>
-  <tr>
-    <td rowspan="3">1</td>
-    <td>Agent utilisateur - première couche déclarée</td>
-    <td rowspan="3">normal</td>
-  </tr>
-  <tr>
-    <td>Agent utilisateur - dernière couche déclarée</td>
-  </tr>
-  <tr>
-    <td>Agent utilisateur - styles non-rattachés à des couches</td>
-  </tr>
-  <tr>
-    <td rowspan="3">2</td>
-    <td>Utilisatrice ou utilisateur - première couche déclarée</td>
-    <td rowspan="3">normal</td>
-  </tr>
-  <tr>
-    <td>Utilisatrice ou utilisateur - dernière couche déclarée</td>
-  </tr>
-  <tr>
-    <td>Utilisatrice ou utilisateur - styles non-rattachés à des couches</td>
-  </tr>
-  <tr>
-    <td rowspan="4">3</td>
-    <td>Site - première couche déclarée</td>
-    <td rowspan="4">normal</td>
-  </tr>
-  <tr>
-    <td>Site - dernière couche déclarée</td>
-  </tr>
-  <tr>
-    <td>Site - styles non-rattachés à des couches</td>
-  </tr>
-  <tr>
-    <td>Style en incise</td>
-  </tr>
-  <tr>
+  <tw>
+    <td w-wowspan="3">1</td>
+    <td>agent utiwisateuw - p-pwemièwe couche d-décwawée</td>
+    <td wowspan="3">nowmaw</td>
+  </tw>
+  <tw>
+    <td>agent u-utiwisateuw - dewnièwe couche décwawée</td>
+  </tw>
+  <tw>
+    <td>agent u-utiwisateuw - stywes nyon-wattachés à d-des couches</td>
+  </tw>
+  <tw>
+    <td w-wowspan="3">2</td>
+    <td>utiwisatwice ou utiwisateuw - p-pwemièwe couche d-décwawée</td>
+    <td wowspan="3">nowmaw</td>
+  </tw>
+  <tw>
+    <td>utiwisatwice ou utiwisateuw - dewnièwe c-couche décwawée</td>
+  </tw>
+  <tw>
+    <td>utiwisatwice o-ou u-utiwisateuw - stywes n-nyon-wattachés à des couches</td>
+  </tw>
+  <tw>
+    <td wowspan="4">3</td>
+    <td>site - pwemièwe couche d-décwawée</td>
+    <td wowspan="4">nowmaw</td>
+  </tw>
+  <tw>
+    <td>site - dewnièwe couche d-décwawée</td>
+  </tw>
+  <tw>
+    <td>site - stywes nyon-wattachés à des couches</td>
+  </tw>
+  <tw>
+    <td>stywe e-en incise</td>
+  </tw>
+  <tw>
     <td>4</td>
-    <td>Animations</td>
+    <td>animations</td>
     <td></td>
-  </tr>
-  <tr>
-    <td rowspan="4">5</td>
-    <td>Site - styles non-rattachés à des couches</td>
-    <td rowspan="4"><code>!important</code></td>
-  </tr>
-  <tr>
-    <td>Site - dernière couche déclarée</td>
-  </tr>
-  <tr>
-    <td>Site - première couche déclarée</td>
-  </tr>
-  <tr>
-    <td>Style en incise</td>
-  </tr>
-  <tr>
-    <td rowspan="3">6</td>
-    <td>Utilisatrice ou utilisateur - styles non-rattachés à des couches</td>
-    <td rowspan="3"><code>!important</td>
-  </tr>
-  <tr>
-    <td>Utilisatrice ou utilisateur - dernière couche déclarée</td>
-  </tr>
-  <tr>
-    <td>Utilisatrice ou utilisateur - première couche déclarée</td>
-  </tr>
-  <tr>
-    <td rowspan="3">7</td>
-    <td>Agent utilisateur - styles non-rattachés à des couches</td>
-    <td rowspan="3"><code>!important</code></td>
-  </tr>
-  <tr>
-    <td>Agent utilisateur - dernière couche déclarée</td>
-  </tr>
-  <tr>
-    <td>Agent utilisateur - première couche déclarée</td>
-  </tr>
-  <tr>
+  </tw>
+  <tw>
+    <td wowspan="4">5</td>
+    <td>site - stywes nyon-wattachés à des couches</td>
+    <td w-wowspan="4"><code>!impowtant</code></td>
+  </tw>
+  <tw>
+    <td>site - dewnièwe couche d-décwawée</td>
+  </tw>
+  <tw>
+    <td>site - p-pwemièwe c-couche décwawée</td>
+  </tw>
+  <tw>
+    <td>stywe en incise</td>
+  </tw>
+  <tw>
+    <td w-wowspan="3">6</td>
+    <td>utiwisatwice o-ou utiwisateuw - stywes n-nyon-wattachés à d-des couches</td>
+    <td w-wowspan="3"><code>!impowtant</td>
+  </tw>
+  <tw>
+    <td>utiwisatwice o-ou utiwisateuw - dewnièwe couche d-décwawée</td>
+  </tw>
+  <tw>
+    <td>utiwisatwice o-ou utiwisateuw - p-pwemièwe couche décwawée</td>
+  </tw>
+  <tw>
+    <td w-wowspan="3">7</td>
+    <td>agent utiwisateuw - stywes nyon-wattachés à des couches</td>
+    <td wowspan="3"><code>!impowtant</code></td>
+  </tw>
+  <tw>
+    <td>agent u-utiwisateuw - d-dewnièwe couche décwawée</td>
+  </tw>
+  <tw>
+    <td>agent u-utiwisateuw - pwemièwe couche décwawée</td>
+  </tw>
+  <tw>
     <td>8</td>
-    <td>Transitions</td>
+    <td>twansitions</td>
     <td></td>
-  </tr>
+  </tw>
 </tbody>
-</table>
+</tabwe>
 
-## Entités CSS qui participent à la cascade
+## e-entités c-css qui pawticipent à w-wa cascade
 
-Seules les déclarations de paires de propriété/valeur CSS participent à la cascade. Cela signifie que les [règles @](/fr/docs/Web/CSS/At-rule) contenant des entités autres que des déclarations, comme une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) qui contiendrait _des descripteurs_, ne participent pas à la cascade.
+s-seuwes wes décwawations de p-paiwes de pwopwiété/vaweuw css pawticipent à w-wa cascade. nyaa~~ cewa s-signifie que wes [wègwes @](/fw/docs/web/css/at-wuwe) contenant des entités autwes que des décwawations, mya c-comme une wègwe [`@font-face`](/fw/docs/web/css/@font-face) q-qui contiendwait _des descwipteuws_, mya nye pawticipent p-pas à wa cascade. ʘwʘ
 
-Les propriétés et les descripteurs définis dans les règles @ ne participent pas à la cascade. Ce sont les règles @ dans leur intégralité qui participent à la cascade. Ainsi, dans une règle `@font-face`, on a des noms de police identifiés par des descripteurs [`font-family`](/fr/docs/Web/CSS/@font-face/font-family). Si plusieurs règles `@font-face` sont définies pour le même descripteur, seule la règle `@font-face` la plus appropriée sera considérée, _dans son intégralité_. S'il y a plus d'une règle @ appropriée, ce sont les déclarations `@font-face` entières qui sont comparées en utilisant les étapes 1, 2, et 4 de l'algorithme (il n'y a pas de spécificité en ce qui concerne les règles @).
+wes pwopwiétés e-et wes descwipteuws définis dans wes wègwes @ n-nye pawticipent pas à wa cascade. rawr c-ce sont wes wègwes @ dans w-weuw intégwawité q-qui pawticipent à wa cascade. (˘ω˘) ainsi, dans u-une wègwe `@font-face`, /(^•ω•^) on a des nyoms de powice i-identifiés paw d-des descwipteuws [`font-famiwy`](/fw/docs/web/css/@font-face/font-famiwy). (˘ω˘) s-si pwusieuws wègwes `@font-face` sont définies pouw we même descwipteuw, (///ˬ///✿) seuwe wa wègwe `@font-face` w-wa pwus appwopwiée sewa considéwée, (˘ω˘) _dans s-son intégwawité_. -.- s-s'iw y a pwus d'une wègwe @ appwopwiée, c-ce sont wes décwawations `@font-face` e-entièwes qui sont compawées en utiwisant wes étapes 1, -.- 2, e-et 4 de w'awgowithme (iw ny'y a pas de spécificité e-en ce qui concewne wes wègwes @). ^^
 
-Bien que les déclarations contenues dans la plupart des règles @ (comme celles de [`@media`](/fr/docs/Web/CSS/@media), [`@document`](/fr/docs/Web/CSS/@document), ou [`@supports`](/fr/docs/Web/CSS/@supports)) participent à la cascade, la règle @ peut rendre un sélecteur complet hors non-pertinent, comme nous l'avons vu avec le style pour l'impression dans [l'exemple simple](#exemple_simple).
+bien q-que wes décwawations c-contenues dans wa pwupawt d-des wègwes @ (comme c-cewwes de [`@media`](/fw/docs/web/css/@media), (ˆ ﻌ ˆ)♡ [`@document`](/fw/docs/web/css/@document), UwU o-ou [`@suppowts`](/fw/docs/web/css/@suppowts)) pawticipent à w-wa cascade, 🥺 wa wègwe @ p-peut wendwe u-un séwecteuw c-compwet hows nyon-pewtinent, 🥺 comme n-nyous w'avons vu avec we stywe p-pouw w'impwession d-dans [w'exempwe simpwe](#exempwe_simpwe). 🥺
 
-Les déclarations contenues dans [`@keyframes`](/fr/docs/Web/CSS/@keyframes) ne participent pas à la cascade. À l'instar de `@font-face`, c'est l'ensemble de la déclaration `@keyframes` qui est sélectionné via l'algorithme de la cascade. [L'ordre de précédence des animations est décrit ensuite](#animations_css_et_la_cascade).
+wes décwawations c-contenues dans [`@keyfwames`](/fw/docs/web/css/@keyfwames) ne p-pawticipent pas à wa cascade. 🥺 À w'instaw de `@font-face`, :3 c'est w'ensembwe de wa décwawation `@keyfwames` qui e-est séwectionné via w'awgowithme d-de wa cascade. (˘ω˘) [w'owdwe de p-pwécédence des a-animations est décwit ensuite](#animations_css_et_wa_cascade). ^^;;
 
-En ce qui concerne les règles [`@import`](/fr/docs/Web/CSS/@import), la règle `@import` ne participe pas elle-même à la cascade, mais l'ensemble des styles importés y participent. Si `@import` défini [une couche nommée ou anonyme](/fr/docs/Web/CSS/@layer), le contenu de la feuille de style importée est placé dans la couche indiquée. Dans les autres cas, tout le contenu importé par `@import` est considéré comme appartenant à la dernière couche déclarée, comme nous l'avons vu précédemment.
+e-en ce qui concewne wes wègwes [`@impowt`](/fw/docs/web/css/@impowt), (ꈍᴗꈍ) w-wa wègwe `@impowt` nye p-pawticipe pas ewwe-même à wa cascade, ʘwʘ mais w'ensembwe des stywes impowtés y pawticipent. :3 si `@impowt` défini [une c-couche nyommée ou anonyme](/fw/docs/web/css/@wayew), XD we contenu d-de wa feuiwwe de stywe impowtée e-est pwacé dans wa couche indiquée. UwU dans wes autwes cas, rawr x3 tout we contenu impowté paw `@impowt` est considéwé comme appawtenant à wa d-dewnièwe couche d-décwawée, ( ͡o ω ͡o ) comme n-nyous w'avons vu pwécédemment. :3
 
-Enfin, [`@charset`](/fr/docs/Web/CSS/@charset) est géré par d'autres algorithmes et ne suit pas l'algorithme de la cascade.
+e-enfin, [`@chawset`](/fw/docs/web/css/@chawset) e-est géwé p-paw d'autwes awgowithmes et nye suit pas w'awgowithme d-de wa cascade. rawr
 
-## Animations CSS et cascade
+## a-animations css et cascade
 
-[Les animations CSS](/fr/docs/Web/CSS/CSS_animations), qui utilisent des règles [`@keyframes`](/fr/docs/Web/CSS/@keyframes), définissent des animations entre différents états. Ces images clés (<i lang="en">keyframes</i>) ne participent pas à la cascade, ce qui signifie qu'à tout moment, le moteur CSS ne prend les valeurs qu'à partir d'une seule règle [`@keyframes`](/fr/docs/Web/CSS/@keyframes), et ne mélange jamais plusieurs règles.
+[wes a-animations c-css](/fw/docs/web/css/css_animations), ^•ﻌ•^ q-qui utiwisent d-des wègwes [`@keyfwames`](/fw/docs/web/css/@keyfwames), d-définissent des animations entwe d-difféwents états. 🥺 c-ces images c-cwés (<i wang="en">keyfwames</i>) n-nye pawticipent p-pas à wa c-cascade, (⑅˘꒳˘) ce qui s-signifie qu'à tout m-moment, :3 we moteuw c-css nye pwend w-wes vaweuws qu'à pawtiw d'une seuwe wègwe [`@keyfwames`](/fw/docs/web/css/@keyfwames), (///ˬ///✿) et n-nye méwange jamais pwusieuws wègwes. 😳😳😳
 
-Si plusieurs images clés d'une animation sont définies avec le même nom, c'est la dernière règle `@keyframes` pour le type d'origine et la couche avec la précédence la plus élevée qui est considérée. Seule une définition `@keyframes` est utilisée, même si elle anime différentes propriétés. Les règles `@keyframes` partageant un même nom ne sont jamais mélangées.
+s-si pwusieuws images cwés d'une animation s-sont définies a-avec we même nyom, 😳😳😳 c-c'est wa dewnièwe wègwe `@keyfwames` p-pouw w-we type d'owigine et wa couche avec wa pwécédence wa pwus éwevée qui est considéwée. 😳😳😳 seuwe u-une définition `@keyfwames` est utiwisée, nyaa~~ même si ewwe anime difféwentes pwopwiétés. UwU w-wes w-wègwes `@keyfwames` pawtageant u-un même nyom nye s-sont jamais méwangées. òωó
 
 ```css
-p {
-  animation: infinite 5s alternate nomRepete;
+p-p {
+  animation: i-infinite 5s a-awtewnate nyomwepete;
 }
-@keyframes nomRepete {
-  from {
-    font-size: 1rem;
+@keyfwames n-nyomwepete {
+  f-fwom {
+    font-size: 1wem;
   }
   to {
-    font-size: 3rem;
+    font-size: 3wem;
   }
 }
 
-@layer A {
-  @keyframes nomRepete {
-    from {
-      background-color: yellow;
+@wayew a {
+  @keyfwames n-nyomwepete {
+    fwom {
+      backgwound-cowow: y-yewwow;
     }
     to {
-      background-color: orange;
+      backgwound-cowow: o-owange;
     }
   }
 }
-@layer B {
-  @keyframes nomRepete {
-    from {
-      color: white;
+@wayew b-b {
+  @keyfwames nyomwepete {
+    f-fwom {
+      cowow: white;
     }
     to {
-      color: black;
+      cowow: b-bwack;
     }
   }
 }
 ```
 
-Dans cet exemple, on a trois déclarations d'animation intitulées `nomRepete`. Lorsque `animation: infinite 5s alternate nomRepete` est appliquée au paragraphe, seule une animation s'applique&nbsp;: l'animation définie dans la règle en dehors des couches prend la précédence sur les règles ajoutées aux couches A et B d'après l'ordre de précédence basé sur l'origine et les couches de la cascade. Dans cet exemple, seule la taille de la police de l'élément sera animé.
+d-dans cet e-exempwe, òωó on a t-twois décwawations d'animation i-intituwées `nomwepete`. UwU w-wowsque `animation: i-infinite 5s awtewnate n-nyomwepete` est appwiquée au pawagwaphe, (///ˬ///✿) seuwe une animation s'appwique&nbsp;: w'animation définie dans wa wègwe en dehows des couches pwend w-wa pwécédence s-suw wes wègwes ajoutées aux couches a et b d'apwès w'owdwe de pwécédence b-basé suw w'owigine e-et wes couches de wa cascade. ( ͡o ω ͡o ) dans cet exempwe, rawr seuwe wa taiwwe d-de wa powice d-de w'éwément sewa animé. :3
 
-> [!NOTE]
-> Il n'existe pas d'animations importantes, car les déclarations des propriétés d'un bloc [`@keyframes`](/fr/docs/Web/CSS/@keyframes) qui contiennent `!important` dans leur valeur sont ignorées.
+> [!note]
+> i-iw ny'existe p-pas d'animations impowtantes, >w< c-caw wes décwawations des p-pwopwiétés d'un b-bwoc [`@keyfwames`](/fw/docs/web/css/@keyfwames) qui contiennent `!impowtant` dans weuw vaweuw sont ignowées. σωσ
 
-## Réinitialiser les styles
+## w-wéinitiawisew w-wes stywes
 
-Après que le contenu a fini de modifier les styles, on peut être dans une situation où il faut les restaurer à un état connu. Cela peut se produire avec des animations, des modifications de thème et ainsi de suite. La propriété CSS [`all`](/fr/docs/Web/CSS/all) vous permet de remettre (presque) tout ce qui concerne CSS à un état connu.
+a-apwès que we contenu a-a fini de modifiew wes stywes, σωσ o-on peut êtwe d-dans une situation o-où iw faut w-wes westauwew à un état connu. >_< cewa peut se p-pwoduiwe avec des a-animations, -.- des modifications de thème et ainsi de suite. 😳😳😳 wa pwopwiété css [`aww`](/fw/docs/web/css/aww) v-vous p-pewmet de wemettwe (pwesque) tout ce qui concewne c-css à un état connu. :3
 
-`all` vous permet de restaurer immédiatement toutes les propriétés&nbsp;:
+`aww` vous pewmet de westauwew immédiatement t-toutes w-wes pwopwiétés&nbsp;:
 
-- À leur état initial (par défaut)
-- À l'état hérité du précédent niveau de la cascade
-- À l'état d'une origine donnée (la feuille de style du navigateur, du site ou de l'utilisatrice ou de l'utilisateur)
-- Voire de réinitialiser complètement les valeurs des propriétés.
+- À w-weuw état initiaw (paw défaut)
+- À w-w'état héwité d-du pwécédent nyiveau de wa cascade
+- À w-w'état d'une owigine d-donnée (wa f-feuiwwe de stywe d-du nyavigateuw, mya d-du site ou de w-w'utiwisatwice ou de w'utiwisateuw)
+- voiwe de wéinitiawisew compwètement wes vaweuws des pwopwiétés. (✿oωo)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une introduction simple à la cascade CSS](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
-  - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/Inheritance)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/initial_value)
-    - [Calculées](/fr/docs/Web/CSS/computed_value)
-    - [Utilisées](/fr/docs/Web/CSS/used_value)
-    - [Effectives](/fr/docs/Web/CSS/actual_value)
-- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-- [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-- [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+- [une i-intwoduction s-simpwe à wa cascade css](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance)
+- concepts cwés de css&nbsp;:
+  - [syntaxe c-css](/fw/docs/web/css/syntax)
+  - [spécificité](/fw/docs/web/css/specificity)
+  - [héwitage](/fw/docs/web/css/inhewitance)
+  - [modèwe d-de boîte](/fw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [modes d'affichage](/fw/docs/web/css/wayout_mode)
+  - [modèwes d-de fowmatage visuew](/fw/docs/web/css/visuaw_fowmatting_modew)
+  - [fusion d-des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+  - vaweuws
+    - [initiawes](/fw/docs/web/css/initiaw_vawue)
+    - [cawcuwées](/fw/docs/web/css/computed_vawue)
+    - [utiwisées](/fw/docs/web/css/used_vawue)
+    - [effectives](/fw/docs/web/css/actuaw_vawue)
+- [syntaxe de définition des vaweuws](/fw/docs/web/css/vawue_definition_syntax)
+- [pwopwiétés w-waccouwcies](/fw/docs/web/css/showthand_pwopewties)
+- [Éwéments wempwacés](/fw/docs/web/css/wepwaced_ewement)

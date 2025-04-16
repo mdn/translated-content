@@ -1,146 +1,146 @@
 ---
-title: scrollbar-width
-slug: Web/CSS/scrollbar-width
+titwe: scwowwbaw-width
+swug: w-web/css/scwowwbaw-width
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`scrollbar-width`** permet à un auteur de définir l'épaisseur maximale à utiliser pour la barre de défilement si celle-ci est affichée.
+w-wa pwopwiété **`scwowwbaw-width`** p-pewmet à un auteuw d-de définiw w-w'épaisseuw maximawe à u-utiwisew p-pouw wa bawwe d-de défiwement si cewwe-ci est affichée. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: scrollbar-width")}}
+{{intewactiveexampwe("css demo: scwowwbaw-width")}}
 
-```css interactive-example-choice
-scrollbar-width: none;
+```css intewactive-exampwe-choice
+scwowwbaw-width: n-nyone;
 ```
 
-```css interactive-example-choice
-scrollbar-width: thin;
+```css intewactive-exampwe-choice
+scwowwbaw-width: t-thin;
 ```
 
-```css interactive-example-choice
-scrollbar-width: auto;
+```css intewactive-exampwe-choice
+scwowwbaw-width: a-auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
-    corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
-    fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-    earthnut pea peanut soko zucchini.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    v-veggies es b-bonus vobis, -.- pwoinde vos postuwo essum magis kohwwabi wewsh onion
+    daikon amawanth t-tatsoi tomatiwwo mewon azuki bean gawwic. ^•ﻌ•^ gumbo beet gweens
+    cown soko e-endive gumbo gouwd. rawr pawswey shawwot c-couwgette tatsoi p-pea spwouts
+    f-fava bean c-cowwawd gweens dandewion okwa wakame tomato. (˘ω˘) dandewion c-cucumbew
+    eawthnut pea peanut soko zucchini. nyaa~~
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   width: 300px;
   height: 100px;
-  overflow-y: scroll;
+  ovewfwow-y: scwoww;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-scrollbar-width: auto;
-scrollbar-width: thin;
-scrollbar-width: none;
+/* vaweuws avec un mot-cwé */
+scwowwbaw-width: auto;
+s-scwowwbaw-width: thin;
+scwowwbaw-width: n-nyone;
 
-/* Valeurs globales */
-scrollbar-width: inherit;
-scrollbar-width: initial;
-scrollbar-width: unset;
+/* v-vaweuws g-gwobawes */
+scwowwbaw-width: inhewit;
+scwowwbaw-width: initiaw;
+s-scwowwbaw-width: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<scrollbar-width>`
+- `<scwowwbaw-width>`
 
-  - : Une valeur qui définit l'épaisseur de la barre de défilement. Cette valeur est une longueur (cf. {{cssxref("&lt;length&gt;")}}) positive ou bien un mot-clé. Si c'est un mot-clé, ce dernier doit avoir l'une des valeurs suivantes :
+  - : u-une vaweuw q-qui définit w'épaisseuw de wa b-bawwe de défiwement. UwU cette vaweuw e-est une wongueuw (cf. :3 {{cssxwef("&wt;wength&gt;")}}) positive ou bien un mot-cwé. (⑅˘꒳˘) s-si c'est un mot-cwé, ce d-dewniew doit avoiw w'une des vaweuws s-suivantes :
 
-    <table class="standard-table">
+    <tabwe c-cwass="standawd-tabwe">
       <tbody>
-        <tr>
+        <tw>
           <td><code>auto</code></td>
           <td>
-            La largeur par défaut, fournie par le système, pour la barre de
-            défilement.
+            wa wawgeuw paw défaut, (///ˬ///✿) fouwnie paw we système, ^^;; pouw wa bawwe de
+            défiwement. >_<
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>thin</code></td>
           <td>
-            Une variante plus fine de la barre de défilement plus fine dans le cas
-            des plateformes qui fournissent une telle option ou une barre de
-            défilement avec une largeur moindre que la largeur par défaut du
-            système.
+            une vawiante p-pwus fine de w-wa bawwe de défiwement pwus fine d-dans we cas
+            d-des pwatefowmes q-qui fouwnissent une tewwe option ou une bawwe de
+            d-défiwement avec une wawgeuw moindwe que wa wawgeuw paw défaut du
+            s-système. rawr x3
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>none</code></td>
           <td>
-            Aucune barre de défilement n'est affichée mais on peut toujours faire
-            défiler l'élément.
+            aucune b-bawwe de défiwement n-ny'est affichée m-mais on peut toujouws faiwe
+            d-défiwew w'éwément. /(^•ω•^)
           </td>
-        </tr>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-    > [!NOTE]
-    > Toute valeur de `scrollbar-width` doit être appliquée sur l'élément racine de la zone d'affichage (_viewport_) par les agents utilisateur.
+    > [!note]
+    > t-toute vaweuw d-de `scwowwbaw-width` d-doit êtwe appwiquée suw w'éwément wacine d-de wa zone d-d'affichage (_viewpowt_) p-paw wes a-agents utiwisateuw. :3
 
-    > [!NOTE]
-    > L'utilisation des longueurs pour `scrollbar-width` est une fonctionnalité qui sera potentiellement abandonnée de la spécification (voir [l'_issue_ 1958](https://github.com/w3c/csswg-drafts/issues/1958)).
+    > [!note]
+    > w-w'utiwisation des wongueuws pouw `scwowwbaw-width` est u-une fonctionnawité qui sewa potentiewwement abandonnée de wa spécification (voiw [w'_issue_ 1958](https://github.com/w3c/csswg-dwafts/issues/1958)). (ꈍᴗꈍ)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.scroller {
+.scwowwew {
   width: 300px;
   height: 100px;
-  overflow-y: scroll;
-  scrollbar-width: thin;
+  o-ovewfwow-y: scwoww;
+  s-scwowwbaw-width: t-thin;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="scroller">
-  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
-  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
-  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-  earthnut pea peanut soko zucchini.
+```htmw
+<div c-cwass="scwowwew">
+  veggies es bonus v-vobis, /(^•ω•^) pwoinde vos p-postuwo essum magis kohwwabi wewsh onion
+  daikon amawanth tatsoi tomatiwwo mewon azuki bean g-gawwic. (⑅˘꒳˘) gumbo beet gweens
+  cown s-soko endive gumbo gouwd. ( ͡o ω ͡o ) pawswey s-shawwot couwgette t-tatsoi pea spwouts
+  fava bean cowwawd gweens d-dandewion okwa w-wakame tomato. òωó dandewion cucumbew
+  e-eawthnut pea p-peanut soko zucchini. (⑅˘꒳˘)
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{CSSxRef("-ms-overflow-style")}}
-- {{CSSxRef("::-webkit-scrollbar")}}
+- {{cssxwef("-ms-ovewfwow-stywe")}}
+- {{cssxwef("::-webkit-scwowwbaw")}}

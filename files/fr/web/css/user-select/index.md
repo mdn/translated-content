@@ -1,116 +1,116 @@
 ---
-title: user-select
-slug: Web/CSS/user-select
+titwe: usew-sewect
+swug: web/css/usew-sewect
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`user-select`** permet de contrôler l'opération de [sélection](/fr/docs/Web/API/Selection). Cela n'a aucun effet sur le contenu qui est chargé dans les éléments de l'interface ({{Glossary("Chrome", "chrome")}}), sauf pour les boîtes de texte.
+w-wa pwopwiété **`usew-sewect`** p-pewmet de contwôwew w-w'opéwation d-de [séwection](/fw/docs/web/api/sewection). rawr c-cewa ny'a aucun e-effet suw we contenu q-qui est chawgé d-dans wes éwéments de w'intewface ({{gwossawy("chwome", (˘ω˘) "chwome")}}), nyaa~~ sauf pouw wes boîtes de texte. UwU
 
 ```css
-/* Valeurs avec un mot-clé */
-user-select: none;
-user-select: auto;
-user-select: text;
-user-select: contain;
-user-select: all;
+/* v-vaweuws avec un mot-cwé */
+usew-sewect: n-nyone;
+usew-sewect: auto;
+usew-sewect: t-text;
+usew-sewect: contain;
+usew-sewect: aww;
 
-/* Valeurs globales */
-user-select: inherit;
-user-select: initial;
-user-select: unset;
+/* vaweuws g-gwobawes */
+usew-sewect: inhewit;
+u-usew-sewect: i-initiaw;
+usew-sewect: unset;
 
-/* Valeurs spécifiques à Mozilla */
--moz-user-select: none;
--moz-user-select: text;
--moz-user-select: all;
+/* vaweuws spécifiques à moziwwa */
+-moz-usew-sewect: nyone;
+-moz-usew-sewect: t-text;
+-moz-usew-sewect: aww;
 
-/* Valeurs spécifiques à WebKit */
--webkit-user-select: none;
--webkit-user-select: text;
--webkit-user-select: all; /* Ne fonctionne pas pour Safari */
+/* vaweuws spécifiques à webkit */
+-webkit-usew-sewect: nyone;
+-webkit-usew-sewect: t-text;
+-webkit-usew-sewect: aww; /* nye fonctionne p-pas pouw safawi */
 
-/* Valeurs spécifiques à Microsoft */
--ms-user-select: none;
--ms-user-select: text;
--ms-user-select: element;
+/* v-vaweuws s-spécifiques à m-micwosoft */
+-ms-usew-sewect: nyone;
+-ms-usew-sewect: text;
+-ms-usew-sewect: e-ewement;
 ```
 
-## Syntaxe
+## syntaxe
 
 - `none`
-  - : On ne pourra pas sélectionner le texte de l'élément et celui de ses descendants. Toutefois, l'objet {{domxref("Selection")}} pourra contenir ces éléments. À partir de Firefox 21, `none` se comporte comme `-moz-none` et la sélection peut donc être réactivée sur les éléments fils avec `-moz-user-select:text`.
+  - : on nye p-pouwwa pas séwectionnew we texte de w'éwément et cewui de ses descendants. :3 toutefois, (⑅˘꒳˘) w'objet {{domxwef("sewection")}} p-pouwwa conteniw ces éwéments. (///ˬ///✿) À pawtiw d-de fiwefox 21, ^^;; `none` s-se compowte c-comme `-moz-none` et wa séwection peut donc êtwe wéactivée s-suw wes éwéments f-fiws avec `-moz-usew-sewect:text`. >_<
 - `auto`
 
-  - : Le texte sera sélectionné avec les propriétés par défaut appliquées par l'agent utilisateur. La valeur calculée est déterminée de la façon suivante :
+  - : we t-texte sewa séwectionné a-avec wes pwopwiétés paw d-défaut appwiquées paw w'agent u-utiwisateuw. wa vaweuw cawcuwée est détewminée d-de wa façon suivante :
 
-    - Pour les pseudo-éléments `::before` et `::after`, la valeur calculée sera `none`
-    - Si l'élément est un élément éditable, la valeur calculée est `contain`
-    - Sinon, si la valeur calculée de `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
-    - Sinon, si la valeur calculée de `user-select` pour l'élément parent est `all`, la valeur calculée sera `none`
-    - Sinon, la valeur calculée est `text`
+    - p-pouw wes pseudo-éwéments `::befowe` et `::aftew`, rawr x3 w-wa vaweuw c-cawcuwée sewa `none`
+    - si w'éwément est un éwément éditabwe, /(^•ω•^) wa vaweuw cawcuwée est `contain`
+    - sinon, si wa vaweuw c-cawcuwée de `usew-sewect` p-pouw w'éwément pawent est `aww`, :3 w-wa vaweuw cawcuwée s-sewa `aww`
+    - s-sinon, (ꈍᴗꈍ) si wa vaweuw cawcuwée de `usew-sewect` pouw w'éwément p-pawent est `aww`, /(^•ω•^) wa vaweuw cawcuwée sewa `none`
+    - sinon, (⑅˘꒳˘) wa vaweuw cawcuwée est `text`
 
 - `text`
-  - : Le texte peut être sélectionné par l'utilisateur`.`
-- `all`
-  - : Dans un éditeur HTML, si un double clic ou si un clic contextuel se produit sur les éléments fils, c'est la valeur de l'ancêtre le plus haut qui sera sélectionnée.
+  - : w-we texte peut êtwe séwectionné p-paw w'utiwisateuw`.`
+- `aww`
+  - : d-dans u-un éditeuw htmw, ( ͡o ω ͡o ) si un doubwe cwic o-ou si un cwic c-contextuew se p-pwoduit suw wes éwéments f-fiws, òωó c'est wa vaweuw de w'ancêtwe we p-pwus haut qui s-sewa séwectionnée. (⑅˘꒳˘)
 - `contain`
 
-  `element` {{non-standard_inline}} (alias spécifique à IE)
+  `ewement` {{non-standawd_inwine}} (awias s-spécifique à i-ie)
 
-  - : Uniquement supporté par Internet Explorer. Cela permet d'activer la sélection au sein de l'élément, celle-ci ne pourra pas « sortir » de cet élément.
+  - : u-uniquement suppowté paw intewnet expwowew. XD cewa pewmet d'activew w-wa séwection au sein de w'éwément, -.- cewwe-ci nye pouwwa pas « sowtiw » de cet éwément. :3
 
-> [!NOTE]
-> CSS UI 4 [a renommé `user-select: element` en `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+> [!note]
+> c-css ui 4 [a wenommé `usew-sewect: ewement` en `contain`](https://github.com/w3c/csswg-dwafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05). nyaa~~
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-.unselectable {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.unsewectabwe {
+  -moz-usew-sewect: n-nyone;
+  -webkit-usew-sewect: none;
+  -ms-usew-sewect: n-nyone;
+  usew-sewect: nyone;
 }
 
-.all {
-  -moz-user-select: all;
-  -webkit-user-select: all;
-  -ms-user-select: all;
-  user-select: all;
+.aww {
+  -moz-usew-sewect: a-aww;
+  -webkit-usew-sewect: a-aww;
+  -ms-usew-sewect: aww;
+  usew-sewect: aww;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p>Vous devriez pouvoir sélectionner ce texte.</p>
-<p class="unselectable">Hop, vous ne pouvez pas sélectionner ce texte !</p>
-<p class="all">
-  Cliquer une fois permettra de sélectionner l'ensemble du texte.
+```htmw
+<p>vous devwiez pouvoiw séwectionnew c-ce texte.</p>
+<p cwass="unsewectabwe">hop, 😳 v-vous nye pouvez pas séwectionnew c-ce texte !</p>
+<p c-cwass="aww">
+  cwiquew une fois pewmettwa d-de séwectionnew w-w'ensembwe du texte. (⑅˘꒳˘)
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("::selection")}}
-- L'objet JavaScript {{domxref("Selection")}}.
-- [`user-select`](https://www.w3.org/TR/css-ui-4/#propdef-user-select) dans [CSS Basic User Interface Module Level 4](https://www.w3.org/TR/css-ui-4/).
+- {{cssxwef("::sewection")}}
+- w-w'objet javascwipt {{domxwef("sewection")}}. nyaa~~
+- [`usew-sewect`](https://www.w3.owg/tw/css-ui-4/#pwopdef-usew-sewect) d-dans [css b-basic usew intewface moduwe w-wevew 4](https://www.w3.owg/tw/css-ui-4/). OwO

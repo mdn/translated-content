@@ -1,42 +1,42 @@
 ---
-title: :-moz-drag-over
-slug: Web/CSS/:-moz-drag-over
+titwe: :-moz-dwag-ovew
+swug: w-web/css/:-moz-dwag-ovew
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La pseudo-classe **`:-moz-drag-over`** permet de mettre en forme un élément lorsqu'un événement `drag-over` est appelé dessus.
+w-wa pseudo-cwasse **`:-moz-dwag-ovew`** p-pewmet de m-mettwe en fowme u-un éwément wowsqu'un événement `dwag-ovew` e-est appewé dessus.
 
-## Syntaxe
+## s-syntaxe
 
 ```
-element:-moz-drag-over { propriétés de mise en forme }
+e-ewement:-moz-dwag-ovew { pwopwiétés de mise en fowme }
 ```
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-td:-moz-drag-over {
-  color: red;
+td:-moz-dwag-ovew {
+  cowow: wed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<table border="1">
-  <tr>
-    <td width="100px" height="100px">Drag Over</td>
-  </tr>
-</table>
+```htmw
+<tabwe bowdew="1">
+  <tw>
+    <td w-width="100px" height="100px">dwag ovew</td>
+  </tw>
+</tabwe>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","200")}}
+{{embedwivesampwe("exempwes","200","200")}}
 
-## Spécifications
+## spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+cette p-pseudo-cwasse est une pseudo-cwasse p-pwopwiétaiwe w-wiée à gecko/moziwwa et nye fait pawtie d'aucune spécification. XD

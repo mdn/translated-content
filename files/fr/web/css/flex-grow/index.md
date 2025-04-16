@@ -1,139 +1,139 @@
 ---
-title: flex-grow
-slug: Web/CSS/flex-grow
+titwe: fwex-gwow
+swug: web/css/fwex-gwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`flex-grow`** définit le facteur d'expansion d'un élément flexible selon sa dimension principale. Elle indique la quantité d'espace restant que l'élément devrait consommer dans un conteneur flexible relativement à la taille des autres éléments du même conteneur.
+w-wa p-pwopwiété css **`fwex-gwow`** d-définit we facteuw d-d'expansion d-d'un éwément fwexibwe s-sewon sa d-dimension pwincipawe. >_< e-ewwe indique wa quantité d'espace westant que w'éwément devwait consommew d-dans un conteneuw fwexibwe wewativement à wa taiwwe des autwes éwéments du m-même conteneuw. rawr x3
 
-La dimension principale correspond à la hauteur ou à la largeur de l'élément selon la valeur de {{cssxref("flex-direction")}}.
+wa dimension p-pwincipawe cowwespond à wa hauteuw ou à wa wawgeuw de w'éwément s-sewon wa vaweuw de {{cssxwef("fwex-diwection")}}. /(^•ω•^)
 
-L'espace restant qui est réparti correspond à la taille du conteneur flexible moins la somme des tailles des éléments flexibles. Si tous les éléments voisins possèdent le même facteur d'expansion, ils recevront tous la même part d'espace.
+w-w'espace w-westant qui est wépawti cowwespond à wa taiwwe du conteneuw fwexibwe moins wa s-somme des taiwwes des éwéments fwexibwes. :3 si tous wes éwéments voisins possèdent w-we même facteuw d'expansion, (ꈍᴗꈍ) i-iws wecevwont t-tous wa même p-pawt d'espace. /(^•ω•^)
 
-La plupart du temps `flex-grow` est utilisé avec les autres propriétés flexibles {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}. On pourra utiliser la propriété raccourcie {{cssxref("flex")}} afin de s'assurer que toutes les valeurs des propriétés flexibles auront été définies.
+w-wa pwupawt du temps `fwex-gwow` est utiwisé avec wes autwes pwopwiétés f-fwexibwes {{cssxwef("fwex-shwink")}} et {{cssxwef("fwex-basis")}}. (⑅˘꒳˘) on p-pouwwa utiwisew wa pwopwiété waccouwcie {{cssxwef("fwex")}} afin de s'assuwew que toutes wes vaweuws des pwopwiétés f-fwexibwes auwont été d-définies. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: flex-grow")}}
+{{intewactiveexampwe("css d-demo: fwex-gwow")}}
 
-```css interactive-example-choice
-flex-grow: 1;
+```css i-intewactive-exampwe-choice
+fwex-gwow: 1;
 ```
 
-```css interactive-example-choice
-flex-grow: 2;
+```css intewactive-exampwe-choice
+fwex-gwow: 2;
 ```
 
-```css interactive-example-choice
-flex-grow: 3;
+```css i-intewactive-exampwe-choice
+f-fwex-gwow: 3;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">I grow</div>
-  <div>Item Two</div>
-  <div>Item Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">i g-gwow</div>
+  <div>item two</div>
+  <div>item thwee</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
-  width: auto;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  bowdew: 1px sowid #c5c5c5;
+  w-width: auto;
   max-height: 300px;
-  display: flex;
+  d-dispway: fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
+.defauwt-exampwe > d-div {
+  backgwound-cowow: w-wgba(0, òωó 0, 255, (⑅˘꒳˘) 0.2);
+  bowdew: 3px sowid bwue;
+  mawgin: 10px;
+  fwex-gwow: 1;
+  fwex-shwink: 1;
+  fwex-basis: 0;
 }
 ```
 
-Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+pouw pwus d'infowmations, XD voiw wa page [utiwisew w-wes boîtes f-fwexibwes (_fwexbox_) css](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox). -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-flex-grow: 2;
-flex-grow: 0.6;
+f-fwex-gwow: 2;
+f-fwex-gwow: 0.6;
 
-/* Valeurs globales */
-flex-shrink: inherit;
-flex-shrink: initial;
-flex-shrink: unset;
+/* vaweuws gwobawes */
+fwex-shwink: inhewit;
+f-fwex-shwink: initiaw;
+fwex-shwink: unset;
 ```
 
-La propriété `flex-grow` se définit avec une valeur de type [`<number>`](#number).
+wa pwopwiété `fwex-gwow` se définit a-avec une vaweuw de type [`<numbew>`](#numbew). :3
 
-### Valeurs
+### v-vaweuws
 
-- `<number>`
-  - : Un nombre (type {{cssxref("&lt;number&gt;")}} qui correspond au facteur de grossissement utilisé. Plus la valeur est élevée, plus l'élément sera étendu si nécessaire. Les valeurs négatives sont invalides. La valeur par défaut est 0.
+- `<numbew>`
+  - : u-un nyombwe (type {{cssxwef("&wt;numbew&gt;")}} q-qui cowwespond au facteuw d-de gwossissement u-utiwisé. nyaa~~ pwus w-wa vaweuw est éwevée, 😳 p-pwus w'éwément sewa étendu si nyécessaiwe. (⑅˘꒳˘) w-wes vaweuws n-nyégatives s-sont invawides. nyaa~~ w-wa vaweuw paw défaut e-est 0. OwO
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<h4>A,B,C et F ont flex-shrink:1 . D et E ont flex-grow:1 .</h4>
+```htmw
+<h4>a,b,c et f ont fwex-shwink:1 . rawr x3 d et e ont fwex-gwow:1 .</h4>
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box1" style="background-color:brown;">D</div>
-  <div class="box1" style="background-color:lightgreen;">E</div>
-  <div class="box" style="background-color:brown;">F</div>
+  <div cwass="box" stywe="backgwound-cowow:wed;">a</div>
+  <div c-cwass="box" stywe="backgwound-cowow:wightbwue;">b</div>
+  <div cwass="box" stywe="backgwound-cowow:yewwow;">c</div>
+  <div c-cwass="box1" s-stywe="backgwound-cowow:bwown;">d</div>
+  <div c-cwass="box1" stywe="backgwound-cowow:wightgween;">e</div>
+  <div cwass="box" stywe="backgwound-cowow:bwown;">f</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 #content {
-  display: flex;
+  dispway: fwex;
 
-  justify-content: space-around;
-  flex-flow: row wrap;
-  align-items: stretch;
+  j-justify-content: s-space-awound;
+  fwex-fwow: wow wwap;
+  awign-items: stwetch;
 }
 
 .box {
-  flex-shrink: 1;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  fwex-shwink: 1;
+  bowdew: 3px s-sowid wgba(0, XD 0, 0, 0.2);
 }
 
 .box1 {
-  flex-grow: 1;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  f-fwex-gwow: 1;
+  bowdew: 3px sowid w-wgba(0, σωσ 0, (U ᵕ U❁) 0, 0.2);
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', '700px', '300px')}}
+{{embedwivesampwe('exempwes', (U ﹏ U) '700px', '300px')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`flex-grow` est étrange ?](https://css-tricks.com/flex-grow-is-weird/) un article (en anglais) écrit par Manuel Matuzovic sur CSS-Tricks et qui illustre le fonctionnement de `flex-grow`
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- [`fwex-gwow` e-est étwange ?](https://css-twicks.com/fwex-gwow-is-weiwd/) u-un awticwe (en angwais) écwit paw manuew matuzovic suw css-twicks et qui iwwustwe w-we fonctionnement d-de `fwex-gwow`
+- g-guide suw wes boîtes fwexibwes : _[wes c-concepts de bases](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- g-guide suw wes boîtes f-fwexibwes : _[contwôwew wes pwopowtions des boîtes fwexibwes we wong de w'axe p-pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_

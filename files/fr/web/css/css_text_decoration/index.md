@@ -1,33 +1,33 @@
 ---
-title: CSS Text Decoration
-slug: Web/CSS/CSS_text_decoration
+titwe: css text decowation
+swug: w-web/css/css_text_decowation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Text Decoration_** (ou module des décorations textuelles CSS) est un module CSS qui définit les caractéristiques relatives à la décoration du texte, comme le soulignage, les ombres et les marques d'emphase.
+**_css t-text decowation_** (ou moduwe d-des décowations t-textuewwes c-css) est un moduwe c-css qui définit w-wes cawactéwistiques w-wewatives à wa décowation du texte, (U ﹏ U) comme we souwignage, -.- wes ombwes e-et wes mawques d'emphase. (ˆ ﻌ ˆ)♡
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("letter-spacing")}}
-- {{cssxref("text-align")}}
-- {{cssxref("text-decoration")}}
-- {{cssxref("text-decoration-color")}}
-- {{cssxref("text-decoration-line")}}
-- {{cssxref("text-decoration-style")}}
-- {{cssxref("text-emphasis")}}
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-emphasis-position")}}
-- {{cssxref("text-emphasis-style")}}
-- {{cssxref("text-indent")}}
-- {{cssxref("text-rendering")}}
-- {{cssxref("text-shadow")}}
-- {{cssxref("text-transform")}}
-- {{cssxref("white-space")}}
-- {{cssxref("word-spacing")}}
+- {{cssxwef("wettew-spacing")}}
+- {{cssxwef("text-awign")}}
+- {{cssxwef("text-decowation")}}
+- {{cssxwef("text-decowation-cowow")}}
+- {{cssxwef("text-decowation-wine")}}
+- {{cssxwef("text-decowation-stywe")}}
+- {{cssxwef("text-emphasis")}}
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-emphasis-position")}}
+- {{cssxwef("text-emphasis-stywe")}}
+- {{cssxwef("text-indent")}}
+- {{cssxwef("text-wendewing")}}
+- {{cssxwef("text-shadow")}}
+- {{cssxwef("text-twansfowm")}}
+- {{cssxwef("white-space")}}
+- {{cssxwef("wowd-spacing")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

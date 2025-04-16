@@ -1,433 +1,433 @@
 ---
-title: Extensions WebKit
-slug: Web/CSS/WebKit_Extensions
+titwe: extensions webkit
+swug: w-web/css/webkit_extensions
 ---
 
-{{CSSRef}}
-
-Les applications basées sur WebKit ou Blink, telles que Safari et Chrome, prennent en charge plusieurs **extensions spécifiques à [CSS](/fr/docs/Web/CSS)**. Ces extensions sont généralement préfixées par `-webkit`. Certaines propriétés préfixées par `-webkit` peuvent également fonctionner avec le préfixe `-apple`. Quelques unes de ces extensions sont préfixées avec `-epub`.
-
-## Propriétés spécifiques WebKit (ne pas utiliser sur le Web)
-
-> [!NOTE]
-> Ces propriétés ne fonctionneront que pour les applications WebKit et ne sont pas en voie de standardisation.
-
-### A
-
-- {{CSSxRef("-webkit-aspect-ratio")}}
-
-### B
-
-- {{CSSxRef("-webkit-background-composite")}}
-- {{CSSxRef("background-origin-x")}} (unprefixed!)
-- {{CSSxRef("background-origin-y")}} (unprefixed!)
-- {{CSSxRef("-webkit-border-after")}}
-- {{CSSxRef("-webkit-border-after-color")}}
-- {{CSSxRef("-webkit-border-after-style")}}
-- {{CSSxRef("-webkit-border-after-width")}}
-- {{CSSxRef("-webkit-border-before")}}
-- {{CSSxRef("-webkit-border-before-color")}}
-- {{CSSxRef("-webkit-border-before-style")}}
-- {{CSSxRef("-webkit-border-before-width")}}
-- {{CSSxRef("-webkit-border-end")}}
-- {{CSSxRef("-webkit-border-end-color")}}
-- {{CSSxRef("-webkit-border-end-style")}}
-- {{CSSxRef("-webkit-border-end-width")}}
-- {{CSSxRef("-webkit-border-fit")}}
-- {{CSSxRef("-webkit-border-horizontal-spacing")}}
-- {{CSSxRef("-webkit-border-start")}}
-- {{CSSxRef("-webkit-border-start-color")}}
-- {{CSSxRef("-webkit-border-start-style")}}
-- {{CSSxRef("-webkit-border-start-width")}}
-- {{CSSxRef("-webkit-border-vertical-spacing")}}
-- {{CSSxRef("-webkit-box-align")}}
-- {{CSSxRef("-webkit-box-direction")}}
-- {{CSSxRef("-webkit-box-flex")}}
-- {{CSSxRef("-webkit-box-flex-group")}}
-- {{CSSxRef("-webkit-box-lines")}}
-- {{CSSxRef("-webkit-box-ordinal-group")}}
-- {{CSSxRef("-webkit-box-orient")}}
-- {{CSSxRef("-webkit-box-pack")}}
-- {{CSSxRef("-webkit-box-reflect")}}
-- {{CSSxRef("-webkit-box-shadow")}}
-
-### C – G
-
-- {{CSSxRef("-webkit-column-axis")}}
-- {{CSSxRef("-webkit-column-break-after")}}
-- {{CSSxRef("-webkit-column-break-before")}}
-- {{CSSxRef("-webkit-column-break-inside")}}
-- {{CSSxRef("-webkit-dashboard-region")}}
-- {{CSSxRef("-webkit-font-smoothing")}}
-- {{CSSxRef("-webkit-grid-columns")}}
-- {{CSSxRef("-webkit-grid-rows")}}
-
-### H – I
-
-- {{CSSxRef("-webkit-highlight")}}
-- {{CSSxRef("-webkit-hyphenate-charset")}}
-- {{CSSxRef("-webkit-hyphenate-limit-after")}}
-- {{CSSxRef("-webkit-hyphenate-limit-before")}}
-- {{CSSxRef("-webkit-hyphenate-limit-lines")}}
-- {{CSSxRef("-webkit-image-set")}}
-
-### L
-
-- {{CSSxRef("-webkit-line-align")}}
-- {{CSSxRef("-webkit-line-box-contain")}}
-- {{CSSxRef("-webkit-line-break")}}
-- {{CSSxRef("-webkit-line-clamp")}}
-- {{CSSxRef("-webkit-line-grid")}}
-- {{CSSxRef("-webkit-line-snap")}}
-- {{CSSxRef("-webkit-locale")}}
-- {{CSSxRef("-webkit-logical-height")}}
-- {{CSSxRef("-webkit-logical-width")}}
-
-### M
-
-- {{CSSxRef("-webkit-margin-after")}}
-- {{CSSxRef("-webkit-margin-after-collapse")}}
-- {{CSSxRef("-webkit-margin-before")}}
-- {{CSSxRef("-webkit-margin-before-collapse")}}
-- {{CSSxRef("-webkit-margin-bottom-collapse")}}
-- {{CSSxRef("-webkit-margin-collapse")}}
-- {{CSSxRef("-webkit-margin-end")}}
-- {{CSSxRef("-webkit-margin-start")}}
-- {{CSSxRef("-webkit-margin-top-collapse")}}
-- {{CSSxRef("-webkit-marquee")}}
-- {{CSSxRef("-webkit-marquee-direction")}}
-- {{CSSxRef("-webkit-marquee-increment")}}
-- {{CSSxRef("-webkit-marquee-repetition")}}
-- {{CSSxRef("-webkit-marquee-speed")}}
-- {{CSSxRef("-webkit-marquee-style")}}
-- {{CSSxRef("-webkit-mask-attachment")}}
-- {{CSSxRef("-webkit-mask-box-image")}}
-- {{CSSxRef("-webkit-mask-box-image-outset")}}
-- {{CSSxRef("-webkit-mask-box-image-repeat")}}
-- {{CSSxRef("-webkit-mask-box-image-slice")}}
-- {{CSSxRef("-webkit-mask-box-image-source")}}
-- {{CSSxRef("-webkit-mask-box-image-width")}}
-- {{CSSxRef("-webkit-mask-position-x")}}
-- {{CSSxRef("-webkit-mask-position-y")}}
-- {{CSSxRef("-webkit-mask-repeat-x")}}
-- {{CSSxRef("-webkit-mask-repeat-y")}}
-- {{CSSxRef("-webkit-match-nearest-mail-blockquote-color")}}
-- {{CSSxRef("-webkit-max-logical-height")}}
-- {{CSSxRef("-webkit-max-logical-width")}}
-- {{CSSxRef("-webkit-min-logical-height")}}
-- {{CSSxRef("-webkit-min-logical-width")}}
-
-### N – O
-
-- {{CSSxRef("-webkit-nbsp-mode")}}
-- {{CSSxRef("-webkit-overflow-scrolling")}}
-
-### P
-
-- {{CSSxRef("-webkit-padding-after")}}
-- {{CSSxRef("-webkit-padding-before")}}
-- {{CSSxRef("-webkit-padding-end")}}
-- {{CSSxRef("-webkit-padding-start")}}
-- {{CSSxRef("-webkit-perspective-origin-x")}}
-- {{CSSxRef("-webkit-perspective-origin-y")}}
-- {{CSSxRef("-webkit-print-color-adjust")}}
-
-### R – S
-
-- {{CSSxRef("-webkit-region-break-after")}}
-- {{CSSxRef("-webkit-region-break-before")}}
-- {{CSSxRef("-webkit-region-break-inside")}}
-- {{CSSxRef("-webkit-region-fragment")}}
-- {{CSSxRef("-webkit-<code>resizer</code>")}}
-- {{CSSxRef("-webkit-rtl-ordering")}}
-- {{CSSxRef(" <code>-webkit-scrollbar</code>")}}
-- {{CSSxRef(" <code>-webkit-scrollbar-button</code>")}}
-- {{CSSxRef(" <code>-webkit-scrollbar-corner</code>")}}
-- {{CSSxRef("-webkit-<code>scrollbar-thumb</code>")}}
-- {{CSSxRef("-webkit-<code>scrollbar-track</code>")}}
-- {{CSSxRef("-webkit-<code>scrollbar-track-piece</code>")}}
-- {{CSSxRef("-webkit-shape-inside")}}
-- {{CSSxRef("-webkit-svg-shadow")}}
-
-### T
-
-- {{CSSxRef("-webkit-tap-highlight-color")}}
-- {{CSSxRef("-webkit-text-combine")}}
-- {{CSSxRef("-epub-text-combine")}}
-- {{CSSxRef("-webkit-text-decorations-in-effect")}}
-- {{CSSxRef("-webkit-text-fill-color")}}
-- {{CSSxRef("-epub-text-orientation")}}
-- {{CSSxRef("-webkit-text-security")}}
-- {{CSSxRef("-webkit-text-size-adjust")}}
-- {{CSSxRef("-webkit-text-stroke")}}
-- {{CSSxRef("-webkit-text-stroke-color")}}
-- {{CSSxRef("-webkit-text-stroke-width")}}
-- {{CSSxRef("-webkit-touch-callout")}}
-
-## Propriétés WebKit en voie de standardisation
-
-- {{CSSxRef("appearance", "-webkit-appearance")}}
-- {{CSSxRef("-webkit-font-size-delta")}}
-- {{CSSxRef("-webkit-mask-composite")}}
-- {{CSSxRef("-webkit-mask-position-x")}}
-- {{CSSxRef("-webkit-mask-position-y")}}
-- {{CSSxRef("-webkit-mask-repeat-x")}}
-- {{CSSxRef("-webkit-mask-repeat-y")}}
-
-## Anciennes propriétés spécifiques désormais standardisées
-
-> [!NOTE]
-> Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
-
-### A
-
-- {{CSSxRef("align-content","-webkit-align-content")}}
-- {{CSSxRef("align-items","-webkit-align-items")}}
-- {{CSSxRef("align-self","-webkit-align-self")}}
-- {{CSSxRef("animation","-webkit-animation")}}
-- {{CSSxRef("animation-delay","-webkit-animation-delay")}}
-- {{CSSxRef("animation-direction","-webkit-animation-direction")}}
-- {{CSSxRef("animation-duration","-webkit-animation-duration")}}
-- {{CSSxRef("animation-fill-mode","-webkit-animation-fill-mode")}}
-- {{CSSxRef("animation-iteration-count","-webkit-animation-iteration-count")}}
-- {{CSSxRef("animation-name","-webkit-animation-name")}}
-- {{CSSxRef("animation-play-state","-webkit-animation-play-state")}}
-- {{CSSxRef("animation-timing-function","-webkit-animation-timing-function")}}
-
-### B
-
-- {{CSSxRef("backface-visibility","-webkit-backface-visibility")}}
-- {{CSSxRef("background-clip","-webkit-background-clip")}}
-- {{CSSxRef("background-origin","-webkit-background-origin")}}
-- {{CSSxRef("background-size","-webkit-background-size")}}
-- {{CSSxRef("border-bottom-left-radius","-webkit-border-bottom-left-radius")}}
-- {{CSSxRef("border-bottom-right-radius","-webkit-border-bottom-right-radius")}}
-- {{CSSxRef("border-image","-webkit-border-image")}}
-- {{CSSxRef("border-radius","-webkit-border-radius")}}
-- {{CSSxRef("border-top-left-radius","-webkit-border-top-left-radius")}}
-- {{CSSxRef("border-top-right-radius","-webkit-border-top-right-radius")}}
-- {{CSSxRef("box-shadow","-webkit-box-shadow")}}
-- {{CSSxRef("box-sizing","-webkit-box-sizing")}}
-
-### C
-
-- {{CSSxRef("column-count","-webkit-column-count")}}
-- {{CSSxRef("column-gap","-webkit-column-gap")}}
-- {{CSSxRef("column-rule","-webkit-column-rule")}}
-- {{CSSxRef("column-rule-color","-webkit-column-rule-color")}}
-- {{CSSxRef("column-rule-style","-webkit-column-rule-style")}}
-- {{CSSxRef("column-rule-width","-webkit-column-rule-width")}}
-- {{CSSxRef("column-span","-webkit-column-span")}}
-- {{CSSxRef("column-width","-webkit-column-width")}}
-- {{CSSxRef("columns","-webkit-columns")}}
-
-### F
-
-- {{CSSxRef("filter","-webkit-filter")}}
-- {{CSSxRef("flex","-webkit-flex")}}
-- {{CSSxRef("flex-basis","-webkit-flex-basis")}}
-- {{CSSxRef("flex-direction","-webkit-flex-direction")}}
-- {{CSSxRef("flex-flow","-webkit-flex-flow")}}
-- {{CSSxRef("flex-grow","-webkit-flex-grow")}}
-- {{CSSxRef("flex-shrink","-webkit-flex-shrink")}}
-- {{CSSxRef("flex-wrap","-webkit-flex-wrap")}}
-- {{CSSxRef("-webkit-font-feature-settings")}}
-- {{CSSxRef("-webkit-font-kerning")}}
-- {{CSSxRef("-webkit-font-variant-ligatures")}}
-
-### G-J
-
-- {{CSSxRef("grid-column","-webkit-grid-column")}}
-- {{CSSxRef("grid-row","-webkit-grid-row")}}
-- {{CSSxRef("hyphens","-webkit-hyphens")}}
-- {{CSSxRef("justify-content","-webkit-justify-content")}}
-
-### M
-
-- {{CSSxRef("mask","-webkit-mask")}}
-- {{CSSxRef("mask-clip","-webkit-mask-clip")}}
-- {{CSSxRef("mask-image","-webkit-mask-image")}}
-- {{CSSxRef("mask-origin","-webkit-mask-origin")}}
-- {{CSSxRef("mask-position","-webkit-mask-position")}}
-- {{CSSxRef("mask-repeat","-webkit-mask-repeat")}}
-- {{CSSxRef("mask-size","-webkit-mask-size")}}
-
-### O-S
-
-- {{CSSxRef("opacity","-webkit-opacity")}}
-- {{CSSxRef("order","-webkit-order")}}
-- {{CSSxRef("perspective","-webkit-perspective")}}
-- {{CSSxRef("perspective-origin","-webkit-perspective-origin")}}
-- {{CSSxRef("shape-outside","-webkit-shape-outside")}}
-
-### T
-
-- {{CSSxRef("text-emphasis", "-epub-text-emphasis")}}
-- {{CSSxRef("-webkit-text-emphasis")}}
-- {{CSSxRef("text-emphasis-color", "-epub-text-emphasis-color")}}
-- {{CSSxRef("-webkit-text-emphasis-color")}}
-- {{CSSxRef("-webkit-text-emphasis-position")}}
-- {{CSSxRef("-epub-text-emphasis-style")}}
-- {{CSSxRef("-webkit-text-emphasis-style")}}
-- {{CSSxRef("text-size-adjust","-webkit-text-size-adjust")}}
-- {{CSSxRef("transform","-webkit-transform")}}
-- {{CSSxRef("transform-origin","-webkit-transform-origin")}}
-- {{CSSxRef("transform-style","-webkit-transform-style")}}
-- {{CSSxRef("transition","-webkit-transition")}}
-- {{CSSxRef("transition-delay","-webkit-transition-delay")}}
-- {{CSSxRef("transition-duration","-webkit-transition-duration")}}
-- {{CSSxRef("transition-property","-webkit-transition-property")}}
-- {{CSSxRef("transition-timing-function","-webkit-transition-timing-function")}}
-
-### W
-
-- {{CSSxRef("word-break", "-epub-word-break")}}
-- {{CSSxRef("writing-mode", "-epub-writing-mode")}}
-
-## Spécificités prises en charge par Firefox
-
-Les propriétés suivantes peuvent être utilisées avec le préfixe `-webkit-` sous Firefox. La plupart de ces propriétés peuvent également s'utiliser sans préfixes (voir la section sur les [propriétés anciennement spécifiques et désormais standard](#spe_std) ci-avant).
-
-> [!NOTE]
-> En raison du code historique utilisé dans de nombreux sites web et contenant des propriétés préfixées avec `-webkit-`, Edge et Firefox redirigent de nombreuses propriétés préfixées avec `-webkit-` vers les équivalents sans préfixe ou avec `-moz-` ou `-ms-`.
-
-### A
-
-- {{CSSxRef("-webkit-align-content")}}
-- {{CSSxRef("-webkit-align-items")}}
-- {{CSSxRef("-webkit-align-self")}}
-- {{CSSxRef("-webkit-animation")}}
-- {{CSSxRef("-webkit-animation-delay")}}
-- {{CSSxRef("-webkit-animation-direction")}}
-- {{CSSxRef("-webkit-animation-duration")}}
-- {{CSSxRef("-webkit-animation-fill-mode")}}
-- {{CSSxRef("-webkit-animation-iteration-count")}}
-- {{CSSxRef("-webkit-animation-name")}}
-- {{CSSxRef("-webkit-animation-play-state")}}
-- {{CSSxRef("-webkit-animation-timing-function")}}
-- {{CSSxRef("-webkit-appearance")}}
-
-### B
-
-- {{CSSxRef("-webkit-backface-visibility")}}
-- {{CSSxRef("-webkit-background-clip")}}
-- {{CSSxRef("-webkit-background-origin")}}
-- {{CSSxRef("-webkit-background-size")}}
-- {{CSSxRef("-webkit-border-bottom-left-radius")}}
-- {{CSSxRef("-webkit-border-bottom-right-radius")}}
-- {{CSSxRef("-webkit-border-image")}}
-- {{CSSxRef("-webkit-border-radius")}}
-- {{CSSxRef("-webkit-box-align")}}
-- {{CSSxRef("-webkit-box-direction")}}
-- {{CSSxRef("-webkit-box-flex")}}
-- {{CSSxRef("-webkit-box-orient")}}
-- {{CSSxRef("-webkit-box-pack")}}
-- {{CSSxRef("-webkit-box-shadow")}}
-- {{CSSxRef("-webkit-box-sizing")}}
-- {{CSSxRef("-webkit-border-top-left-radius")}}
-- {{CSSxRef("-webkit-border-top-right-radius")}}
-
-### F
-
-- {{CSSxRef("-webkit-filter")}}
-- {{CSSxRef("-webkit-flex")}}
-- {{CSSxRef("-webkit-flex-basis")}}
-- {{CSSxRef("-webkit-flex-direction")}}
-- {{CSSxRef("-webkit-flex-flow")}}
-- {{CSSxRef("-webkit-flex-grow")}}
-- {{CSSxRef("-webkit-flex-shrink")}}
-- {{CSSxRef("-webkit-flex-wrap")}}
-
-### J
-
-- {{CSSxRef("-webkit-justify-content")}}
-
-### M
-
-- {{CSSxRef("-webkit-mask")}}
-- {{CSSxRef("-webkit-mask-clip")}}
-- {{CSSxRef("-webkit-mask-composite")}}
-- {{CSSxRef("-webkit-mask-image")}}
-- {{CSSxRef("-webkit-mask-origin")}}
-- {{CSSxRef("-webkit-mask-position")}}
-- {{CSSxRef("-webkit-mask-position-x")}}
-- {{CSSxRef("-webkit-mask-position-y")}}
-- {{CSSxRef("-webkit-mask-repeat")}}
-- {{CSSxRef("-webkit-mask-size")}}
-
-### O-P
-
-- {{CSSxRef("-webkit-order")}}
-- {{CSSxRef("-webkit-perspective")}}
-- {{CSSxRef("-webkit-perspective-origin")}}
-
-### T
-
-- {{CSSxRef("-webkit-text-fill-color")}}
-- {{CSSxRef("-webkit-text-size-adjust")}}
-- {{CSSxRef("-webkit-text-stroke")}}
-- {{CSSxRef("-webkit-text-stroke-color")}}
-- {{CSSxRef("-webkit-text-stroke-width")}}
-- {{CSSxRef("-webkit-transform")}}
-- {{CSSxRef("-webkit-transform-origin")}}
-- {{CSSxRef("-webkit-transition")}}
-- {{CSSxRef("-webkit-transition-delay")}}
-- {{CSSxRef("-webkit-transition-duration")}}
-- {{CSSxRef("-webkit-transition-property")}}
-- {{CSSxRef("-webkit-transition-timing-function")}}
-
-### U
-
-- {{CSSxRef("-webkit-user-select")}}
-
-Prise en charge avec les préfixes `-moz-` et `-webkit-` dans Firefox mais pas pris en charge sans préfixe. Microsoft Edge et IE Mobile prennent en charge cette propriété avec le préfixe `-webkit-` plutôt qu'avec `-ms-` à des fins d'interopérabilité. Ces valeurs sont prises en charges bien qu'elles ne soient pas standard et qu'elles ne soient pas en cours de standardisation. On privliégiera l'utilisation des propriétés `flex-box`.
-
-## Pseudo-classes
-
-- {{CSSxRef(":animating-full-screen-transition", ":-webkit-animating-full-screen-transition")}}
-- {{CSSxRef(":any()", ":-webkit-any()")}}
-- {{CSSxRef(":any-link", ":-webkit-any-link")}}
-- {{CSSxRef(":autofill",":-webkit-autofill")}}
-- {{CSSxRef(":autofill-strong-password",":-webkit-autofill-strong-password")}}
-- {{CSSxRef(":drag",":-webkit-drag")}}
-- {{CSSxRef(":full-page-media",":-webkit-full-page-media")}}
-- {{CSSxRef(":full-screen", ":-webkit-full-screen")}}
-- {{CSSxRef(":full-screen-ancestor",":-webkit-full-screen-ancestor")}}
-- {{CSSxRef(":full-screen-document",":-webkit-full-screen-document")}}
-- {{CSSxRef(":full-screen-controls-hidden",":-webkit-full-screen-controls-hidden")}}
-
-## Pseudo-éléments
-
-Pour des raisons de compatibilité web, Blink, WebKit et Gecko considèrent les pseudo-éléments commençant par `::-webkit-` comme valides.
-
-- {{CSSxRef("::-webkit-file-upload-button")}}
-- {{CSSxRef("::-webkit-inner-spin-button")}}
-- {{CSSxRef("::-webkit-input-placeholder")}}
-- {{CSSxRef("::-webkit-meter-bar")}}
-- {{CSSxRef("::-webkit-meter-even-less-good-value")}}
-- {{CSSxRef("::-webkit-meter-inner-element")}}
-- {{CSSxRef("::-webkit-meter-optimum-value")}}
-- {{CSSxRef("::-webkit-meter-suboptimum-value")}}
-- {{CSSxRef("::-webkit-outer-spin-button")}}
-- {{CSSxRef("::-webkit-progress-bar")}}
-- {{CSSxRef("::-webkit-progress-inner-element")}}
-- {{CSSxRef("::-webkit-progress-value")}}
-- {{CSSxRef("::-webkit-search-cancel-button")}}
-- {{CSSxRef("::-webkit-search-results-button")}}
-- {{CSSxRef("::-webkit-slider-runnable-track")}}
-- {{CSSxRef("::-webkit-slider-thumb")}}
-
-## Caractéristiques média
-
-- {{CSSxRef("@media/-webkit-animation", "-webkit-animation")}}
-- {{CSSxRef("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
-- {{CSSxRef("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
-- {{CSSxRef("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
-- {{CSSxRef("@media/-webkit-transition", "-webkit-transition")}}
-
-## Voir aussi
-
-- [La mise en forme des contrôles de formulaires sur le Trac WebKit (en anglais)](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
-- Une liste complémentaire d'extensions WebKit <https://gist.github.com/afabbro/3759334>
-- [Les extensions CSS relatives à Microsoft](/fr/docs/Web/CSS/Microsoft_CSS_extensions)
-- [Les extensions CSS relatives à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions)
+{{csswef}}
+
+w-wes a-appwications basées s-suw webkit o-ou bwink, 😳 tewwes q-que safawi et c-chwome, (⑅˘꒳˘) pwennent e-en chawge pwusieuws **extensions spécifiques à [css](/fw/docs/web/css)**. nyaa~~ ces extensions sont généwawement p-pwéfixées paw `-webkit`. OwO cewtaines pwopwiétés p-pwéfixées paw `-webkit` peuvent égawement fonctionnew a-avec we pwéfixe `-appwe`. rawr x3 quewques unes de ces extensions s-sont pwéfixées avec `-epub`. XD
+
+## p-pwopwiétés s-spécifiques webkit (ne pas utiwisew suw we web)
+
+> [!note]
+> ces pwopwiétés n-nye fonctionnewont que pouw wes appwications webkit et nye sont pas en voie d-de standawdisation. σωσ
+
+### a
+
+- {{cssxwef("-webkit-aspect-watio")}}
+
+### b-b
+
+- {{cssxwef("-webkit-backgwound-composite")}}
+- {{cssxwef("backgwound-owigin-x")}} (unpwefixed!)
+- {{cssxwef("backgwound-owigin-y")}} (unpwefixed!)
+- {{cssxwef("-webkit-bowdew-aftew")}}
+- {{cssxwef("-webkit-bowdew-aftew-cowow")}}
+- {{cssxwef("-webkit-bowdew-aftew-stywe")}}
+- {{cssxwef("-webkit-bowdew-aftew-width")}}
+- {{cssxwef("-webkit-bowdew-befowe")}}
+- {{cssxwef("-webkit-bowdew-befowe-cowow")}}
+- {{cssxwef("-webkit-bowdew-befowe-stywe")}}
+- {{cssxwef("-webkit-bowdew-befowe-width")}}
+- {{cssxwef("-webkit-bowdew-end")}}
+- {{cssxwef("-webkit-bowdew-end-cowow")}}
+- {{cssxwef("-webkit-bowdew-end-stywe")}}
+- {{cssxwef("-webkit-bowdew-end-width")}}
+- {{cssxwef("-webkit-bowdew-fit")}}
+- {{cssxwef("-webkit-bowdew-howizontaw-spacing")}}
+- {{cssxwef("-webkit-bowdew-stawt")}}
+- {{cssxwef("-webkit-bowdew-stawt-cowow")}}
+- {{cssxwef("-webkit-bowdew-stawt-stywe")}}
+- {{cssxwef("-webkit-bowdew-stawt-width")}}
+- {{cssxwef("-webkit-bowdew-vewticaw-spacing")}}
+- {{cssxwef("-webkit-box-awign")}}
+- {{cssxwef("-webkit-box-diwection")}}
+- {{cssxwef("-webkit-box-fwex")}}
+- {{cssxwef("-webkit-box-fwex-gwoup")}}
+- {{cssxwef("-webkit-box-wines")}}
+- {{cssxwef("-webkit-box-owdinaw-gwoup")}}
+- {{cssxwef("-webkit-box-owient")}}
+- {{cssxwef("-webkit-box-pack")}}
+- {{cssxwef("-webkit-box-wefwect")}}
+- {{cssxwef("-webkit-box-shadow")}}
+
+### c-c – g
+
+- {{cssxwef("-webkit-cowumn-axis")}}
+- {{cssxwef("-webkit-cowumn-bweak-aftew")}}
+- {{cssxwef("-webkit-cowumn-bweak-befowe")}}
+- {{cssxwef("-webkit-cowumn-bweak-inside")}}
+- {{cssxwef("-webkit-dashboawd-wegion")}}
+- {{cssxwef("-webkit-font-smoothing")}}
+- {{cssxwef("-webkit-gwid-cowumns")}}
+- {{cssxwef("-webkit-gwid-wows")}}
+
+### h-h – i
+
+- {{cssxwef("-webkit-highwight")}}
+- {{cssxwef("-webkit-hyphenate-chawset")}}
+- {{cssxwef("-webkit-hyphenate-wimit-aftew")}}
+- {{cssxwef("-webkit-hyphenate-wimit-befowe")}}
+- {{cssxwef("-webkit-hyphenate-wimit-wines")}}
+- {{cssxwef("-webkit-image-set")}}
+
+### w-w
+
+- {{cssxwef("-webkit-wine-awign")}}
+- {{cssxwef("-webkit-wine-box-contain")}}
+- {{cssxwef("-webkit-wine-bweak")}}
+- {{cssxwef("-webkit-wine-cwamp")}}
+- {{cssxwef("-webkit-wine-gwid")}}
+- {{cssxwef("-webkit-wine-snap")}}
+- {{cssxwef("-webkit-wocawe")}}
+- {{cssxwef("-webkit-wogicaw-height")}}
+- {{cssxwef("-webkit-wogicaw-width")}}
+
+### m
+
+- {{cssxwef("-webkit-mawgin-aftew")}}
+- {{cssxwef("-webkit-mawgin-aftew-cowwapse")}}
+- {{cssxwef("-webkit-mawgin-befowe")}}
+- {{cssxwef("-webkit-mawgin-befowe-cowwapse")}}
+- {{cssxwef("-webkit-mawgin-bottom-cowwapse")}}
+- {{cssxwef("-webkit-mawgin-cowwapse")}}
+- {{cssxwef("-webkit-mawgin-end")}}
+- {{cssxwef("-webkit-mawgin-stawt")}}
+- {{cssxwef("-webkit-mawgin-top-cowwapse")}}
+- {{cssxwef("-webkit-mawquee")}}
+- {{cssxwef("-webkit-mawquee-diwection")}}
+- {{cssxwef("-webkit-mawquee-incwement")}}
+- {{cssxwef("-webkit-mawquee-wepetition")}}
+- {{cssxwef("-webkit-mawquee-speed")}}
+- {{cssxwef("-webkit-mawquee-stywe")}}
+- {{cssxwef("-webkit-mask-attachment")}}
+- {{cssxwef("-webkit-mask-box-image")}}
+- {{cssxwef("-webkit-mask-box-image-outset")}}
+- {{cssxwef("-webkit-mask-box-image-wepeat")}}
+- {{cssxwef("-webkit-mask-box-image-swice")}}
+- {{cssxwef("-webkit-mask-box-image-souwce")}}
+- {{cssxwef("-webkit-mask-box-image-width")}}
+- {{cssxwef("-webkit-mask-position-x")}}
+- {{cssxwef("-webkit-mask-position-y")}}
+- {{cssxwef("-webkit-mask-wepeat-x")}}
+- {{cssxwef("-webkit-mask-wepeat-y")}}
+- {{cssxwef("-webkit-match-neawest-maiw-bwockquote-cowow")}}
+- {{cssxwef("-webkit-max-wogicaw-height")}}
+- {{cssxwef("-webkit-max-wogicaw-width")}}
+- {{cssxwef("-webkit-min-wogicaw-height")}}
+- {{cssxwef("-webkit-min-wogicaw-width")}}
+
+### ny – o
+
+- {{cssxwef("-webkit-nbsp-mode")}}
+- {{cssxwef("-webkit-ovewfwow-scwowwing")}}
+
+### p-p
+
+- {{cssxwef("-webkit-padding-aftew")}}
+- {{cssxwef("-webkit-padding-befowe")}}
+- {{cssxwef("-webkit-padding-end")}}
+- {{cssxwef("-webkit-padding-stawt")}}
+- {{cssxwef("-webkit-pewspective-owigin-x")}}
+- {{cssxwef("-webkit-pewspective-owigin-y")}}
+- {{cssxwef("-webkit-pwint-cowow-adjust")}}
+
+### w – s
+
+- {{cssxwef("-webkit-wegion-bweak-aftew")}}
+- {{cssxwef("-webkit-wegion-bweak-befowe")}}
+- {{cssxwef("-webkit-wegion-bweak-inside")}}
+- {{cssxwef("-webkit-wegion-fwagment")}}
+- {{cssxwef("-webkit-<code>wesizew</code>")}}
+- {{cssxwef("-webkit-wtw-owdewing")}}
+- {{cssxwef(" <code>-webkit-scwowwbaw</code>")}}
+- {{cssxwef(" <code>-webkit-scwowwbaw-button</code>")}}
+- {{cssxwef(" <code>-webkit-scwowwbaw-cownew</code>")}}
+- {{cssxwef("-webkit-<code>scwowwbaw-thumb</code>")}}
+- {{cssxwef("-webkit-<code>scwowwbaw-twack</code>")}}
+- {{cssxwef("-webkit-<code>scwowwbaw-twack-piece</code>")}}
+- {{cssxwef("-webkit-shape-inside")}}
+- {{cssxwef("-webkit-svg-shadow")}}
+
+### t
+
+- {{cssxwef("-webkit-tap-highwight-cowow")}}
+- {{cssxwef("-webkit-text-combine")}}
+- {{cssxwef("-epub-text-combine")}}
+- {{cssxwef("-webkit-text-decowations-in-effect")}}
+- {{cssxwef("-webkit-text-fiww-cowow")}}
+- {{cssxwef("-epub-text-owientation")}}
+- {{cssxwef("-webkit-text-secuwity")}}
+- {{cssxwef("-webkit-text-size-adjust")}}
+- {{cssxwef("-webkit-text-stwoke")}}
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-touch-cawwout")}}
+
+## p-pwopwiétés webkit en voie de standawdisation
+
+- {{cssxwef("appeawance", (U ᵕ U❁) "-webkit-appeawance")}}
+- {{cssxwef("-webkit-font-size-dewta")}}
+- {{cssxwef("-webkit-mask-composite")}}
+- {{cssxwef("-webkit-mask-position-x")}}
+- {{cssxwef("-webkit-mask-position-y")}}
+- {{cssxwef("-webkit-mask-wepeat-x")}}
+- {{cssxwef("-webkit-mask-wepeat-y")}}
+
+## anciennes pwopwiétés spécifiques désowmais s-standawdisées
+
+> [!note]
+> afin d'obteniw w-wa meiwweuwe c-compatibiwité possibwe, (U ﹏ U) v-vous devwiez utiwisew wes vewsions standawds, :3 nyon-pwéfixées, ( ͡o ω ͡o ) d-de ces p-pwopwiétés pwutôt que wes vewsions s-spécifiques. σωσ g-généwawement, wowsqu'une pwopwiété e-est standawdisée et i-impwémentée, >w< wa vewsion pwéfixée est généwawement a-abandonnée ensuite. 😳😳😳
+
+### a-a
+
+- {{cssxwef("awign-content","-webkit-awign-content")}}
+- {{cssxwef("awign-items","-webkit-awign-items")}}
+- {{cssxwef("awign-sewf","-webkit-awign-sewf")}}
+- {{cssxwef("animation","-webkit-animation")}}
+- {{cssxwef("animation-deway","-webkit-animation-deway")}}
+- {{cssxwef("animation-diwection","-webkit-animation-diwection")}}
+- {{cssxwef("animation-duwation","-webkit-animation-duwation")}}
+- {{cssxwef("animation-fiww-mode","-webkit-animation-fiww-mode")}}
+- {{cssxwef("animation-itewation-count","-webkit-animation-itewation-count")}}
+- {{cssxwef("animation-name","-webkit-animation-name")}}
+- {{cssxwef("animation-pway-state","-webkit-animation-pway-state")}}
+- {{cssxwef("animation-timing-function","-webkit-animation-timing-function")}}
+
+### b
+
+- {{cssxwef("backface-visibiwity","-webkit-backface-visibiwity")}}
+- {{cssxwef("backgwound-cwip","-webkit-backgwound-cwip")}}
+- {{cssxwef("backgwound-owigin","-webkit-backgwound-owigin")}}
+- {{cssxwef("backgwound-size","-webkit-backgwound-size")}}
+- {{cssxwef("bowdew-bottom-weft-wadius","-webkit-bowdew-bottom-weft-wadius")}}
+- {{cssxwef("bowdew-bottom-wight-wadius","-webkit-bowdew-bottom-wight-wadius")}}
+- {{cssxwef("bowdew-image","-webkit-bowdew-image")}}
+- {{cssxwef("bowdew-wadius","-webkit-bowdew-wadius")}}
+- {{cssxwef("bowdew-top-weft-wadius","-webkit-bowdew-top-weft-wadius")}}
+- {{cssxwef("bowdew-top-wight-wadius","-webkit-bowdew-top-wight-wadius")}}
+- {{cssxwef("box-shadow","-webkit-box-shadow")}}
+- {{cssxwef("box-sizing","-webkit-box-sizing")}}
+
+### c-c
+
+- {{cssxwef("cowumn-count","-webkit-cowumn-count")}}
+- {{cssxwef("cowumn-gap","-webkit-cowumn-gap")}}
+- {{cssxwef("cowumn-wuwe","-webkit-cowumn-wuwe")}}
+- {{cssxwef("cowumn-wuwe-cowow","-webkit-cowumn-wuwe-cowow")}}
+- {{cssxwef("cowumn-wuwe-stywe","-webkit-cowumn-wuwe-stywe")}}
+- {{cssxwef("cowumn-wuwe-width","-webkit-cowumn-wuwe-width")}}
+- {{cssxwef("cowumn-span","-webkit-cowumn-span")}}
+- {{cssxwef("cowumn-width","-webkit-cowumn-width")}}
+- {{cssxwef("cowumns","-webkit-cowumns")}}
+
+### f-f
+
+- {{cssxwef("fiwtew","-webkit-fiwtew")}}
+- {{cssxwef("fwex","-webkit-fwex")}}
+- {{cssxwef("fwex-basis","-webkit-fwex-basis")}}
+- {{cssxwef("fwex-diwection","-webkit-fwex-diwection")}}
+- {{cssxwef("fwex-fwow","-webkit-fwex-fwow")}}
+- {{cssxwef("fwex-gwow","-webkit-fwex-gwow")}}
+- {{cssxwef("fwex-shwink","-webkit-fwex-shwink")}}
+- {{cssxwef("fwex-wwap","-webkit-fwex-wwap")}}
+- {{cssxwef("-webkit-font-featuwe-settings")}}
+- {{cssxwef("-webkit-font-kewning")}}
+- {{cssxwef("-webkit-font-vawiant-wigatuwes")}}
+
+### g-j
+
+- {{cssxwef("gwid-cowumn","-webkit-gwid-cowumn")}}
+- {{cssxwef("gwid-wow","-webkit-gwid-wow")}}
+- {{cssxwef("hyphens","-webkit-hyphens")}}
+- {{cssxwef("justify-content","-webkit-justify-content")}}
+
+### m
+
+- {{cssxwef("mask","-webkit-mask")}}
+- {{cssxwef("mask-cwip","-webkit-mask-cwip")}}
+- {{cssxwef("mask-image","-webkit-mask-image")}}
+- {{cssxwef("mask-owigin","-webkit-mask-owigin")}}
+- {{cssxwef("mask-position","-webkit-mask-position")}}
+- {{cssxwef("mask-wepeat","-webkit-mask-wepeat")}}
+- {{cssxwef("mask-size","-webkit-mask-size")}}
+
+### o-s
+
+- {{cssxwef("opacity","-webkit-opacity")}}
+- {{cssxwef("owdew","-webkit-owdew")}}
+- {{cssxwef("pewspective","-webkit-pewspective")}}
+- {{cssxwef("pewspective-owigin","-webkit-pewspective-owigin")}}
+- {{cssxwef("shape-outside","-webkit-shape-outside")}}
+
+### t
+
+- {{cssxwef("text-emphasis", OwO "-epub-text-emphasis")}}
+- {{cssxwef("-webkit-text-emphasis")}}
+- {{cssxwef("text-emphasis-cowow", 😳 "-epub-text-emphasis-cowow")}}
+- {{cssxwef("-webkit-text-emphasis-cowow")}}
+- {{cssxwef("-webkit-text-emphasis-position")}}
+- {{cssxwef("-epub-text-emphasis-stywe")}}
+- {{cssxwef("-webkit-text-emphasis-stywe")}}
+- {{cssxwef("text-size-adjust","-webkit-text-size-adjust")}}
+- {{cssxwef("twansfowm","-webkit-twansfowm")}}
+- {{cssxwef("twansfowm-owigin","-webkit-twansfowm-owigin")}}
+- {{cssxwef("twansfowm-stywe","-webkit-twansfowm-stywe")}}
+- {{cssxwef("twansition","-webkit-twansition")}}
+- {{cssxwef("twansition-deway","-webkit-twansition-deway")}}
+- {{cssxwef("twansition-duwation","-webkit-twansition-duwation")}}
+- {{cssxwef("twansition-pwopewty","-webkit-twansition-pwopewty")}}
+- {{cssxwef("twansition-timing-function","-webkit-twansition-timing-function")}}
+
+### w
+
+- {{cssxwef("wowd-bweak", 😳😳😳 "-epub-wowd-bweak")}}
+- {{cssxwef("wwiting-mode", (˘ω˘) "-epub-wwiting-mode")}}
+
+## spécificités pwises e-en chawge paw fiwefox
+
+w-wes pwopwiétés suivantes p-peuvent êtwe u-utiwisées avec w-we pwéfixe `-webkit-` sous fiwefox. ʘwʘ wa pwupawt de ces pwopwiétés p-peuvent égawement s'utiwisew sans pwéfixes (voiw wa section suw wes [pwopwiétés a-anciennement spécifiques e-et désowmais s-standawd](#spe_std) c-ci-avant). ( ͡o ω ͡o )
+
+> [!note]
+> en waison d-du code histowique u-utiwisé d-dans de nyombweux s-sites web et contenant des pwopwiétés pwéfixées a-avec `-webkit-`, o.O e-edge et f-fiwefox wediwigent d-de nyombweuses p-pwopwiétés pwéfixées avec `-webkit-` vews wes équivawents s-sans pwéfixe ou avec `-moz-` ou `-ms-`. >w<
+
+### a
+
+- {{cssxwef("-webkit-awign-content")}}
+- {{cssxwef("-webkit-awign-items")}}
+- {{cssxwef("-webkit-awign-sewf")}}
+- {{cssxwef("-webkit-animation")}}
+- {{cssxwef("-webkit-animation-deway")}}
+- {{cssxwef("-webkit-animation-diwection")}}
+- {{cssxwef("-webkit-animation-duwation")}}
+- {{cssxwef("-webkit-animation-fiww-mode")}}
+- {{cssxwef("-webkit-animation-itewation-count")}}
+- {{cssxwef("-webkit-animation-name")}}
+- {{cssxwef("-webkit-animation-pway-state")}}
+- {{cssxwef("-webkit-animation-timing-function")}}
+- {{cssxwef("-webkit-appeawance")}}
+
+### b
+
+- {{cssxwef("-webkit-backface-visibiwity")}}
+- {{cssxwef("-webkit-backgwound-cwip")}}
+- {{cssxwef("-webkit-backgwound-owigin")}}
+- {{cssxwef("-webkit-backgwound-size")}}
+- {{cssxwef("-webkit-bowdew-bottom-weft-wadius")}}
+- {{cssxwef("-webkit-bowdew-bottom-wight-wadius")}}
+- {{cssxwef("-webkit-bowdew-image")}}
+- {{cssxwef("-webkit-bowdew-wadius")}}
+- {{cssxwef("-webkit-box-awign")}}
+- {{cssxwef("-webkit-box-diwection")}}
+- {{cssxwef("-webkit-box-fwex")}}
+- {{cssxwef("-webkit-box-owient")}}
+- {{cssxwef("-webkit-box-pack")}}
+- {{cssxwef("-webkit-box-shadow")}}
+- {{cssxwef("-webkit-box-sizing")}}
+- {{cssxwef("-webkit-bowdew-top-weft-wadius")}}
+- {{cssxwef("-webkit-bowdew-top-wight-wadius")}}
+
+### f
+
+- {{cssxwef("-webkit-fiwtew")}}
+- {{cssxwef("-webkit-fwex")}}
+- {{cssxwef("-webkit-fwex-basis")}}
+- {{cssxwef("-webkit-fwex-diwection")}}
+- {{cssxwef("-webkit-fwex-fwow")}}
+- {{cssxwef("-webkit-fwex-gwow")}}
+- {{cssxwef("-webkit-fwex-shwink")}}
+- {{cssxwef("-webkit-fwex-wwap")}}
+
+### j-j
+
+- {{cssxwef("-webkit-justify-content")}}
+
+### m
+
+- {{cssxwef("-webkit-mask")}}
+- {{cssxwef("-webkit-mask-cwip")}}
+- {{cssxwef("-webkit-mask-composite")}}
+- {{cssxwef("-webkit-mask-image")}}
+- {{cssxwef("-webkit-mask-owigin")}}
+- {{cssxwef("-webkit-mask-position")}}
+- {{cssxwef("-webkit-mask-position-x")}}
+- {{cssxwef("-webkit-mask-position-y")}}
+- {{cssxwef("-webkit-mask-wepeat")}}
+- {{cssxwef("-webkit-mask-size")}}
+
+### o-p
+
+- {{cssxwef("-webkit-owdew")}}
+- {{cssxwef("-webkit-pewspective")}}
+- {{cssxwef("-webkit-pewspective-owigin")}}
+
+### t
+
+- {{cssxwef("-webkit-text-fiww-cowow")}}
+- {{cssxwef("-webkit-text-size-adjust")}}
+- {{cssxwef("-webkit-text-stwoke")}}
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-twansfowm")}}
+- {{cssxwef("-webkit-twansfowm-owigin")}}
+- {{cssxwef("-webkit-twansition")}}
+- {{cssxwef("-webkit-twansition-deway")}}
+- {{cssxwef("-webkit-twansition-duwation")}}
+- {{cssxwef("-webkit-twansition-pwopewty")}}
+- {{cssxwef("-webkit-twansition-timing-function")}}
+
+### u-u
+
+- {{cssxwef("-webkit-usew-sewect")}}
+
+p-pwise en c-chawge avec wes pwéfixes `-moz-` e-et `-webkit-` dans fiwefox mais p-pas pwis en c-chawge sans pwéfixe. 😳 micwosoft edge et ie mobiwe pwennent en chawge cette pwopwiété avec we pwéfixe `-webkit-` p-pwutôt qu'avec `-ms-` à des f-fins d'intewopéwabiwité. 🥺 ces v-vaweuws sont pwises e-en chawges bien qu'ewwes nye soient pas standawd e-et qu'ewwes n-nye soient pas en couws de standawdisation. rawr x3 o-on p-pwivwiégiewa w'utiwisation des pwopwiétés `fwex-box`. o.O
+
+## pseudo-cwasses
+
+- {{cssxwef(":animating-fuww-scween-twansition", rawr ":-webkit-animating-fuww-scween-twansition")}}
+- {{cssxwef(":any()", ʘwʘ ":-webkit-any()")}}
+- {{cssxwef(":any-wink", 😳😳😳 ":-webkit-any-wink")}}
+- {{cssxwef(":autofiww",":-webkit-autofiww")}}
+- {{cssxwef(":autofiww-stwong-passwowd",":-webkit-autofiww-stwong-passwowd")}}
+- {{cssxwef(":dwag",":-webkit-dwag")}}
+- {{cssxwef(":fuww-page-media",":-webkit-fuww-page-media")}}
+- {{cssxwef(":fuww-scween", ^^;; ":-webkit-fuww-scween")}}
+- {{cssxwef(":fuww-scween-ancestow",":-webkit-fuww-scween-ancestow")}}
+- {{cssxwef(":fuww-scween-document",":-webkit-fuww-scween-document")}}
+- {{cssxwef(":fuww-scween-contwows-hidden",":-webkit-fuww-scween-contwows-hidden")}}
+
+## pseudo-éwéments
+
+p-pouw des w-waisons de compatibiwité w-web, o.O bwink, webkit et g-gecko considèwent w-wes pseudo-éwéments commençant p-paw `::-webkit-` comme vawides. (///ˬ///✿)
+
+- {{cssxwef("::-webkit-fiwe-upwoad-button")}}
+- {{cssxwef("::-webkit-innew-spin-button")}}
+- {{cssxwef("::-webkit-input-pwacehowdew")}}
+- {{cssxwef("::-webkit-metew-baw")}}
+- {{cssxwef("::-webkit-metew-even-wess-good-vawue")}}
+- {{cssxwef("::-webkit-metew-innew-ewement")}}
+- {{cssxwef("::-webkit-metew-optimum-vawue")}}
+- {{cssxwef("::-webkit-metew-suboptimum-vawue")}}
+- {{cssxwef("::-webkit-outew-spin-button")}}
+- {{cssxwef("::-webkit-pwogwess-baw")}}
+- {{cssxwef("::-webkit-pwogwess-innew-ewement")}}
+- {{cssxwef("::-webkit-pwogwess-vawue")}}
+- {{cssxwef("::-webkit-seawch-cancew-button")}}
+- {{cssxwef("::-webkit-seawch-wesuwts-button")}}
+- {{cssxwef("::-webkit-swidew-wunnabwe-twack")}}
+- {{cssxwef("::-webkit-swidew-thumb")}}
+
+## cawactéwistiques média
+
+- {{cssxwef("@media/-webkit-animation", σωσ "-webkit-animation")}}
+- {{cssxwef("@media/-webkit-device-pixew-watio", nyaa~~ "-webkit-device-pixew-watio")}}
+- {{cssxwef("@media/-webkit-twansfowm-2d", ^^;; "-webkit-twansfowm-2d")}}
+- {{cssxwef("@media/-webkit-twansfowm-3d", ^•ﻌ•^ "-webkit-twansfowm-3d")}}
+- {{cssxwef("@media/-webkit-twansition", σωσ "-webkit-twansition")}}
+
+## voiw aussi
+
+- [wa m-mise en fowme d-des contwôwes de fowmuwaiwes suw we twac webkit (en a-angwais)](https://twac.webkit.owg/wiki/stywing%20fowm%20contwows)
+- u-une wiste compwémentaiwe d'extensions webkit <https://gist.github.com/afabbwo/3759334>
+- [wes e-extensions css wewatives à micwosoft](/fw/docs/web/css/micwosoft_css_extensions)
+- [wes extensions css wewatives à m-moziwwa](/fw/docs/web/css/moziwwa_extensions)

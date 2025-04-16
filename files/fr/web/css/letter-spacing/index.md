@@ -1,135 +1,135 @@
 ---
-title: letter-spacing
-slug: Web/CSS/letter-spacing
+titwe: wettew-spacing
+swug: web/css/wettew-spacing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`letter-spacing`** définit [l'interlettre](https://fr.wikipedia.org/wiki/Interlettre) utilisée pour les caractères qui composent le texte.
+w-wa pwopwiété **`wettew-spacing`** d-définit [w'intewwettwe](https://fw.wikipedia.owg/wiki/intewwettwe) utiwisée p-pouw wes c-cawactèwes qui c-composent we texte.
 
-{{InteractiveExample("CSS Demo: letter-spacing")}}
+{{intewactiveexampwe("css d-demo: wettew-spacing")}}
 
-```css interactive-example-choice
-letter-spacing: normal;
+```css i-intewactive-exampwe-choice
+w-wettew-spacing: nyowmaw;
 ```
 
-```css interactive-example-choice
-letter-spacing: 0.2rem;
+```css intewactive-exampwe-choice
+wettew-spacing: 0.2wem;
 ```
 
-```css interactive-example-choice
-letter-spacing: 1px;
+```css intewactive-exampwe-choice
+w-wettew-spacing: 1px;
 ```
 
-```css interactive-example-choice
-letter-spacing: -1px;
+```css intewactive-exampwe-choice
+wettew-spacing: -1px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    as much mud in the stweets as if the w-watews had but nyewwy wetiwed f-fwom the
+    face o-of the eawth, nyaa~~ and it wouwd nyot be wondewfuw to meet a megawosauwus, UwU
+    fowty f-feet wong ow so, waddwing wike an ewephantine wizawd up howbown hiww. :3
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  f-font-famiwy: amstewvaw;
+  f-font-stywe: n-nyowmaw;
 }
 
-section {
+s-section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-famiwy: amstewvaw;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-letter-spacing: 0.3em;
-letter-spacing: 3px;
-letter-spacing: 0.3px;
+/* vaweuws de wongueuw */
+/* t-type <wength>       */
+wettew-spacing: 0.3em;
+wettew-spacing: 3px;
+wettew-spacing: 0.3px;
 
-/* Valeur avec mot-clé */
-letter-spacing: normal;
+/* vaweuw avec mot-cwé */
+wettew-spacing: n-nyowmaw;
 
-/* Valeurs globales */
-letter-spacing: inherit;
-letter-spacing: initial;
-letter-spacing: unset;
+/* vaweuws gwobawes */
+w-wettew-spacing: i-inhewit;
+w-wettew-spacing: initiaw;
+wettew-spacing: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : L'interlettre est dictée par la police utilisée. À la différence de 0, cette valeur permet à l'agent utilisateur de modifier l'espace entre les caractères afin de le justifier.
-- `<length>`
-  - : Cette valeur indique l'espace **ajouté** à l'espace par défaut. Les valeurs peuvent être négatives mais les limites imposées dépendent de l'implémentation du moteur. Les agents utilisateurs ne pourront plus augmenter ou réduire l'interlettre afin de justifier le texte. Pour les différentes unités possibles, se référer à la page {{cssxref("&lt;length&gt;")}}.
+- `nowmaw`
+  - : w-w'intewwettwe e-est dictée paw wa powice utiwisée. À w-wa difféwence d-de 0, (⑅˘꒳˘) cette vaweuw pewmet à w-w'agent utiwisateuw de modifiew w-w'espace entwe wes cawactèwes afin de we j-justifiew. (///ˬ///✿)
+- `<wength>`
+  - : cette vaweuw indique w-w'espace **ajouté** à w'espace p-paw défaut. ^^;; w-wes vaweuws peuvent êtwe nyégatives mais wes wimites imposées dépendent de w'impwémentation du moteuw. >_< wes a-agents utiwisateuws n-nye pouwwont pwus augmentew o-ou wéduiwe w'intewwettwe a-afin d-de justifiew we texte. rawr x3 pouw wes difféwentes unités possibwes, /(^•ω•^) s-se wéféwew à wa page {{cssxwef("&wt;wength&gt;")}}. :3
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-.premier {
-  letter-spacing: 0.4em;
+.pwemiew {
+  w-wettew-spacing: 0.4em;
 }
 .deuxieme {
-  letter-spacing: 1em;
+  w-wettew-spacing: 1em;
 }
-.troisieme {
-  letter-spacing: -0.05em;
+.twoisieme {
+  w-wettew-spacing: -0.05em;
 }
-.quatrieme {
-  letter-spacing: 6px;
+.quatwieme {
+  wettew-spacing: 6px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="premier">Et voici l'interlettre</p>
-<p class="deuxieme">Et voici l'interlettre</p>
-<p class="troisieme">Et voici l'interlettre</p>
-<p class="quatrieme">Et voici l'interlettre</p>
+```htmw
+<p c-cwass="pwemiew">et v-voici w'intewwettwe</p>
+<p c-cwass="deuxieme">et voici w'intewwettwe</p>
+<p cwass="twoisieme">et v-voici w'intewwettwe</p>
+<p c-cwass="quatwieme">et v-voici w'intewwettwe</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', 440, 185)}}
+{{embedwivesampwe('exempwes', (ꈍᴗꈍ) 440, /(^•ω•^) 185)}}
 
-## Accessibilité
+## a-accessibiwité
 
-Utiliser une valeur trop grande (positive ou négative) pour `letter-spacing` rendra les mots illisibles. Si une valeur positive trop importante est utilisée, les lettres seront trop éloignées les unes des autres et on ne pourra pas distinguer les mots. Si une valeur négative trop faible est employée, les lettres se chevaucheront et on ne pourra pas lire le texte.
+utiwisew une vaweuw twop gwande (positive ou nyégative) p-pouw `wettew-spacing` wendwa wes mots iwwisibwes. (⑅˘꒳˘) si une vaweuw positive twop impowtante est utiwisée, ( ͡o ω ͡o ) w-wes wettwes sewont twop éwoignées wes unes des autwes et on n-nye pouwwa pas distinguew w-wes mots. òωó s-si une vaweuw nyégative twop f-faibwe est empwoyée, (⑅˘꒳˘) wes wettwes s-se chevauchewont e-et on nye pouwwa pas wiwe we texte. XD
 
-L'espacement doit être déterminé au cas par cas car chaque famille de polices utilise des caractères de largeurs différentes. Il n'existe pas de valeur unique qui permette de s'assurer que, quelle que soit la police utilisée, le texte soit lisible.
+w'espacement doit êtwe détewminé au cas paw cas caw c-chaque famiwwe de powices utiwise d-des cawactèwes de wawgeuws difféwentes. -.- i-iw n-ny'existe pas de vaweuw unique qui pewmette de s'assuwew q-que, :3 quewwe q-que soit wa powice utiwisée, nyaa~~ w-we texte soit w-wisibwe. 😳
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.8, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [compwendwe wes wègwes wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [_undewstanding success cwitewion 1.4.8, (⑅˘꒳˘) w-w3c undewstanding w-wcag 2.0_ (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("font-kerning")}}
+- {{cssxwef("font-kewning")}}

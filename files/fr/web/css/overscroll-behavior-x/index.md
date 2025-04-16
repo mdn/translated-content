@@ -1,74 +1,74 @@
 ---
-title: overscroll-behavior-x
-slug: Web/CSS/overscroll-behavior-x
+titwe: ovewscwoww-behaviow-x
+swug: web/css/ovewscwoww-behaviow-x
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`overscroll-behavior-x`** définit le comportement de l'agent utilisateur lorsqu'on atteint la limite de la zone de défilement sur l'axe horizontal.
+w-wa pwopwiété c-css **`ovewscwoww-behaviow-x`** d-définit we c-compowtement de w-w'agent utiwisateuw w-wowsqu'on atteint w-wa wimite d-de wa zone de défiwement suw w'axe howizontaw.
 
-> [!NOTE]
-> Voir {{cssxref("overscroll-behavior")}} pour plus de détails.
+> [!note]
+> voiw {{cssxwef("ovewscwoww-behaviow")}} pouw pwus de d-détaiws. mya
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-overscroll-behavior-x: auto;
-overscroll-behavior-x: contain;
-overscroll-behavior-x: none;
+/* vaweuws avec u-un mot-cwé */
+ovewscwoww-behaviow-x: auto;
+ovewscwoww-behaviow-x: c-contain;
+ovewscwoww-behaviow-x: nyone;
 
-/* Valeurs globales */
-overscroll-behavior-x: inherit;
-overscroll-behavior-x: initial;
-overscroll-behavior-x: unset;
+/* vaweuws gwobawes */
+ovewscwoww-behaviow-x: i-inhewit;
+ovewscwoww-behaviow-x: i-initiaw;
+o-ovewscwoww-behaviow-x: unset;
 ```
 
-La propriété `overscroll-behavior-x` est définie avec un des mots-clés définis ci-après.
+wa pwopwiété `ovewscwoww-behaviow-x` est définie avec un d-des mots-cwés définis ci-apwès. mya
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Le dépassement de la zone de défilement se déroule normalement.
+  - : we dépassement de wa zone de défiwement s-se déwouwe nyowmawement. (⑅˘꒳˘)
 - `contain`
-  - : Le comportement normal est utilisé à l'intérieur de l'élément pour lequel s'applique cette valeur (on a donc un effet de rebondissement) mais aucun effet associé n'a lieu sur les zones de défilement environnantes. Autrement dit, les éléments sous-jacents ne défilent pas.
+  - : w-we compowtement n-nyowmaw est u-utiwisé à w'intéwieuw d-de w'éwément pouw wequew s'appwique c-cette vaweuw (on a donc un effet de webondissement) m-mais aucun effet associé ny'a wieu suw wes zones de défiwement enviwonnantes. (U ﹏ U) autwement d-dit, mya wes éwéments sous-jacents n-nye défiwent pas. ʘwʘ
 - `none`
-  - : Il n'y a pas d'effet associé sur les zones de défilement environnantes et on empêche le comportement normal de se produire sur l'élément lorsqu'on dépasse de la zone de défilement.
+  - : i-iw ny'y a pas d-d'effet associé suw wes zones de défiwement enviwonnantes et o-on empêche we compowtement n-nyowmaw de se pwoduiwe s-suw w'éwément w-wowsqu'on dépasse de wa zone d-de défiwement. (˘ω˘)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans l'exemple [`overscroll-behavior-x`](https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x) (cf. [le code source](https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html) associé), on dispose de deux boîtes de bloc, l'une contenue à l'intérieure de l'autre. La boîte englobante possède une grande largeur avec {{cssxref("width")}} afin que la page puisse défiler horizontalement. La boîte intérieure a une petite largeur (et une petite hauteur, définie avec {{cssxref("height")}}) afin de pouvoir être facilement contenue dans la zone d'affichage mais son contenu possède une grande largeur afin de défiler horizontalement.
+d-dans w'exempwe [`ovewscwoww-behaviow-x`](https://mdn.github.io/css-exampwes/ovewscwoww-behaviow/ovewscwoww-behaviow-x) (cf. (U ﹏ U) [we code souwce](https://github.com/mdn/css-exampwes/bwob/mastew/ovewscwoww-behaviow/ovewscwoww-behaviow-x.htmw) a-associé), ^•ﻌ•^ on dispose de deux b-boîtes de bwoc, (˘ω˘) w-w'une contenue à w'intéwieuwe de w'autwe. :3 wa boîte engwobante possède une gwande wawgeuw avec {{cssxwef("width")}} a-afin q-que wa page puisse défiwew howizontawement. ^^;; w-wa b-boîte intéwieuwe a-a une petite wawgeuw (et une petite hauteuw, 🥺 définie avec {{cssxwef("height")}}) a-afin de pouvoiw êtwe faciwement contenue dans wa zone d'affichage mais son c-contenu possède une gwande wawgeuw a-afin de défiwew h-howizontawement. (⑅˘꒳˘)
 
-Par défaut, lorsqu'on fait défiler la boîte intérieure et qu'on atteint une limite de défilement, c'est toute la page qui commence à défiler. Si ce n'est pas le comportement souhaité, on peut empêcher ça en utilisant `overscroll-behavior-x: contain` sur la boîte intérieure :
+p-paw défaut, nyaa~~ wowsqu'on f-fait défiwew wa b-boîte intéwieuwe e-et qu'on atteint u-une wimite de défiwement, :3 c'est toute wa page q-qui commence à d-défiwew. ( ͡o ω ͡o ) si c-ce ny'est pas we c-compowtement souhaité, mya o-on peut empêchew ça en utiwisant `ovewscwoww-behaviow-x: contain` suw w-wa boîte intéwieuwe :
 
 ```css
 main > div {
   height: 300px;
   width: 500px;
-  overflow: auto;
-  position: relative;
-  top: 100px;
-  left: 100px;
-  overscroll-behavior-x: contain;
+  ovewfwow: auto;
+  position: wewative;
+  t-top: 100px;
+  weft: 100px;
+  ovewscwoww-behaviow-x: contain;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects (en anglais)](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- [take c-contwow of youw scwoww: c-customizing p-puww-to-wefwesh and ovewfwow effects (en angwais)](https://devewopews.googwe.com/web/updates/2017/11/ovewscwoww-behaviow#demo)

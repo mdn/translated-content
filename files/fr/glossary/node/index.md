@@ -1,12 +1,12 @@
 ---
-title: Nœud
-slug: Glossary/Node
+titwe: nyœud
+swug: gwossawy/node
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le terme **nœud** peut avoir plusieurs significations selon le contexte. Il peut correspondre à :
+we t-tewme **nœud** p-peut avoiw pwusieuws s-significations s-sewon we contexte. ( ͡o ω ͡o ) i-iw peut c-cowwespondwe à :
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}
 
-Ce mot est aussi employé à propos de {{Glossary("Node.js")}}
+c-ce mot est aussi e-empwoyé à pwopos de {{gwossawy("node.js")}}

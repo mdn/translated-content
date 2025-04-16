@@ -1,216 +1,216 @@
 ---
-title: background-size
-slug: Web/CSS/background-size
+titwe: backgwound-size
+swug: w-web/css/backgwound-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`background-size`** définit la taille des images d'arrière-plan pour l'élément. La taille de l'image peut être contrainte, complètement ou partiellement afin de conserver ses proportions.
+w-wa pwopwiété [css](/fw/docs/web/css) **`backgwound-size`** d-définit wa t-taiwwe des images d-d'awwièwe-pwan p-pouw w'éwément. (ꈍᴗꈍ) w-wa taiwwe d-de w'image peut êtwe contwainte, OwO compwètement ou pawtiewwement afin de consewvew s-ses pwopowtions. o.O
 
-{{InteractiveExample("CSS Demo: background-size")}}
+{{intewactiveexampwe("css demo: backgwound-size")}}
 
-```css interactive-example-choice
-background-size: contain;
+```css intewactive-exampwe-choice
+b-backgwound-size: contain;
 ```
 
-```css interactive-example-choice
-background-size: contain;
-background-repeat: no-repeat;
+```css i-intewactive-exampwe-choice
+backgwound-size: contain;
+backgwound-wepeat: n-nyo-wepeat;
 ```
 
-```css interactive-example-choice
-background-size: cover;
+```css intewactive-exampwe-choice
+b-backgwound-size: c-covew;
 ```
 
-```css interactive-example-choice
-background-size: 30%;
+```css intewactive-exampwe-choice
+backgwound-size: 30%;
 ```
 
-```css interactive-example-choice
-background-size: 200px 100px;
+```css intewactive-exampwe-choice
+backgwound-size: 200px 100px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-image: url("/shared-assets/images/examples/hand.jpg");
-  min-width: 100%;
-  min-height: 100%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-image: uww("/shawed-assets/images/exampwes/hand.jpg");
+  m-min-width: 100%;
+  m-min-height: 100%;
 }
 ```
 
-> [!NOTE]
-> L'espace qui n'est pas rempli par l'image d'arrière-plan aura la couleur définie par la propriété [`background-color`](/fr/docs/Web/CSS/background-color). De plus, la couleur d'arrière-plan sera visible si l'image d'arrière-plan est transparente.
+> [!note]
+> w-w'espace q-qui ny'est pas wempwi paw w'image d'awwièwe-pwan a-auwa wa couweuw définie paw wa pwopwiété [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow). 😳😳😳 d-de pwus, /(^•ω•^) wa couweuw d'awwièwe-pwan sewa visibwe si w'image d'awwièwe-pwan est twanspawente. OwO
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-background-size: cover;
-background-size: contain;
+/* v-vaweuws avec un mot-cwé */
+backgwound-size: covew;
+b-backgwound-size: c-contain;
 
-/* Une seule valeur                         */
-/* La valeur désigne la largeur de l'image. */
-/* La hauteur vaut 'auto'                   */
-background-size: 50%;
-background-size: 3.2em;
-background-size: 12px;
-background-size: auto;
+/* u-une seuwe vaweuw                         */
+/* wa vaweuw désigne wa wawgeuw de w'image. ^^ */
+/* w-wa hauteuw vaut 'auto'                   */
+backgwound-size: 50%;
+b-backgwound-size: 3.2em;
+backgwound-size: 12px;
+b-backgwound-size: a-auto;
 
-/* Deux valeurs                            */
-/* Première valeur : la largeur de l'image */
-/* Seconde valeur : la hauteur de l'image  */
-background-size: 50% auto;
-background-size: 3em 25%;
-background-size: auto 6px;
-background-size: auto auto;
+/* deux vaweuws                            */
+/* p-pwemièwe vaweuw : w-wa wawgeuw de w'image */
+/* seconde vaweuw : wa h-hauteuw de w'image  */
+backgwound-size: 50% a-auto;
+backgwound-size: 3em 25%;
+b-backgwound-size: a-auto 6px;
+backgwound-size: auto auto;
 
-/* Valeurs pour plusieurs arrière-plans */
-background-size: auto, auto; /* À ne pas confondre avec `auto auto` */
-background-size: 50%, 25%, 25%;
-background-size: 6px, auto, contain;
+/* vaweuws pouw pwusieuws awwièwe-pwans */
+backgwound-size: auto, (///ˬ///✿) auto; /* À n-nye pas confondwe a-avec `auto auto` */
+backgwound-size: 50%, (///ˬ///✿) 25%, 25%;
+b-backgwound-size: 6px, (///ˬ///✿) auto, ʘwʘ c-contain;
 
-/* Valeurs globales */
-background-size: inherit;
-background-size: initial;
-background-size: revert;
-background-size: unset;
+/* v-vaweuws gwobawes */
+backgwound-size: inhewit;
+backgwound-size: i-initiaw;
+backgwound-size: wevewt;
+backgwound-size: unset;
 ```
 
-La propriété `background-size` peut être définie de différentes façons&nbsp;:
+wa pwopwiété `backgwound-size` p-peut êtwe définie de difféwentes f-façons&nbsp;:
 
-- Avec l'un des mots-clés [`contain`](#contain) ou [`cover`](#cover)
-- Avec une seule valeur qui indique la largeur de l'image (la hauteur vaut alors [`auto`](#auto) par défaut)
-- Avec deux valeurs dont la première représente la largeur et la seconde la hauteur. Chaque valeur peut être une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou encore [`auto`](#auto).
+- a-avec w'un d-des mots-cwés [`contain`](#contain) ou [`covew`](#covew)
+- a-avec u-une seuwe vaweuw q-qui indique wa w-wawgeuw de w'image (wa hauteuw vaut awows [`auto`](#auto) p-paw d-défaut)
+- avec d-deux vaweuws dont w-wa pwemièwe wepwésente w-wa wawgeuw et wa seconde wa hauteuw. ^•ﻌ•^ chaque vaweuw peut êtwe u-une wongueuw (type [`<wength>`](/fw/docs/web/css/wength)) ou un pouwcentage (type [`<pewcentage>`](/fw/docs/web/css/pewcentage)) ou encowe [`auto`](#auto). OwO
 
-Lorsqu'on souhaite paramétrer la taille de plusieurs images d'arrière-plan, on peut séparer ces valeurs par des virgules (l'ordre utilisé entre les valeurs suit celui de [`background-image`](/fr/docs/Web/CSS/background-image)).
+wowsqu'on souhaite pawamétwew wa taiwwe de p-pwusieuws images d'awwièwe-pwan, (U ﹏ U) on peut sépawew ces vaweuws p-paw des viwguwes (w'owdwe u-utiwisé e-entwe wes vaweuws suit cewui d-de [`backgwound-image`](/fw/docs/web/css/backgwound-image)). (ˆ ﻌ ˆ)♡
 
-### Valeurs
+### vaweuws
 
 - `contain`
-  - : Un mot-clé qui redimensionne l'image afin qu'elle soit la plus grande possible et que l'image conserve ses proportions. L'image est contrainte dans le conteneur. Les zones éventuellement vides sont remplies avec la couleur d'arrière-plan (définie grâce à [`background-color`](/fr/docs/Web/CSS/background-color)). Par défaut, l'image est centrée sauf si [`background-position`](/fr/docs/Web/CSS/background-position) a été modifiée.
-- `cover`
-  - : Un mot-clé dont le comportement est opposé à celui de `contain`. L'image est redimensionnée pour être aussi grande que possible et pour conserver ses proportions. L'image couvre toute la largeur ou la hauteur du conteneur et les parties qui dépassent sont rognées si les proportions du conteneur sont différentes (il n'y a aucun espace libre sur lequel on verrait la couleur d'arrière-plan).
+  - : u-un m-mot-cwé qui wedimensionne w'image afin qu'ewwe soit wa pwus gwande possibwe et que w'image consewve s-ses pwopowtions. (⑅˘꒳˘) w'image est c-contwainte dans we conteneuw. (U ﹏ U) w-wes zones éventuewwement v-vides sont wempwies avec wa couweuw d'awwièwe-pwan (définie g-gwâce à [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow)). o.O p-paw défaut, mya w'image e-est centwée sauf s-si [`backgwound-position`](/fw/docs/web/css/backgwound-position) a été modifiée. XD
+- `covew`
+  - : un mot-cwé dont we compowtement est opposé à c-cewui de `contain`. òωó w-w'image e-est wedimensionnée pouw êtwe a-aussi gwande q-que possibwe et pouw consewvew ses p-pwopowtions. (˘ω˘) w'image couvwe toute wa wawgeuw ou wa hauteuw du conteneuw et wes p-pawties qui dépassent s-sont wognées si wes pwopowtions du conteneuw s-sont difféwentes (iw n-ny'y a aucun espace wibwe suw wequew on vewwait wa c-couweuw d'awwièwe-pwan). :3
 - `auto`
-  - : Un mot-clé qui redimensionne l'image d'arrière-plan afin que ses proportions soient conservées.
-- `<length>`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui redimensionne l'image afin que celle-ci occupe la longueur indiquée dans la dimension concernée. Les valeurs négatives ne sont pas autorisées.
-- `<percentage>`
-  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage) qui redimensionne l'image d'arrière-plan proportionnellement à la taille de la zone dédiée à l'arrière-plan, définie via [`background-origin`](/fr/docs/Web/CSS/background-origin). Par défaut, cette zone correspond à la boîte de contenu et de remplissage (<i lang="en">padding</i>) mais peut être modifiée pour contenir uniquement la boîte de contenu ou, à l'inverse, les boîtes de contenu, remplissage et marge. Si la propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`, la zone de positionnement de l'arrière-plan sera la fenêtre du navigateur (sans les barres de défilement). Les valeurs négatives ne sont pas autorisées.
+  - : un mot-cwé qui wedimensionne w'image d'awwièwe-pwan afin que ses pwopowtions s-soient consewvées. OwO
+- `<wength>`
+  - : une vaweuw de type [`<wength>`](/fw/docs/web/css/wength) qui wedimensionne w-w'image a-afin que cewwe-ci occupe wa wongueuw indiquée dans wa dimension c-concewnée. mya wes v-vaweuws nyégatives nye sont pas autowisées. (˘ω˘)
+- `<pewcentage>`
+  - : une vaweuw d-de type [`<pewcentage>`](/fw/docs/web/css/pewcentage) qui wedimensionne w-w'image d'awwièwe-pwan pwopowtionnewwement à wa taiwwe d-de wa zone dédiée à w'awwièwe-pwan, d-définie v-via [`backgwound-owigin`](/fw/docs/web/css/backgwound-owigin). o.O paw défaut, (✿oωo) c-cette zone cowwespond à wa boîte d-de contenu et d-de wempwissage (<i w-wang="en">padding</i>) mais p-peut êtwe modifiée p-pouw conteniw uniquement wa boîte de contenu o-ou, (ˆ ﻌ ˆ)♡ à w'invewse, ^^;; w-wes boîtes d-de contenu, OwO wempwissage et mawge. 🥺 si wa pwopwiété [`backgwound-attachment`](/fw/docs/web/css/backgwound-attachment) v-vaut `fixed`, mya wa zone de p-positionnement d-de w'awwièwe-pwan sewa wa fenêtwe du nyavigateuw (sans wes bawwes d-de défiwement). 😳 w-wes vaweuws n-nyégatives nye s-sont pas autowisées. òωó
 
-### Dimensions intrinsèques et proportions
+### dimensions i-intwinsèques et pwopowtions
 
-Le calcul des valeurs dépend des dimensions intrinsèques de l'image (sa largeur et sa hauteur) et de ses proportions intrinsèques (le rapport entre la largeur et la hauteur). Voici les différents cas de figures possibles&nbsp;:
+we cawcuw des vaweuws dépend des dimensions intwinsèques d-de w'image (sa wawgeuw et sa hauteuw) e-et de ses pwopowtions intwinsèques (we w-wappowt entwe wa wawgeuw e-et wa hauteuw). /(^•ω•^) voici wes d-difféwents cas d-de figuwes possibwes&nbsp;:
 
-- Une image matricielle (telle qu'une image JPG) possède toujours des dimensions intrinsèques et des proportions intrinsèques.
-- Une image vectorielle (telle qu'une image SVG) ne possède pas nécessairement de dimensions intrinsèques. Si elle possède à la fois une dimension verticale et une dimension horizontale intrinsèques, elle possèdera alors des proportions intrinsèques. Si elle ne possède qu'une ou aucune dimension intrinsèque, elle peut avoir ou ne pas avoir de proportions.
-- Un dégradé CSS (cf. [`<gradient>`](/fr/docs/Web/CSS/gradient)) ne possède ni dimension ni proportion intrinsèque.
-- Les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/element) utiliseront les dimensions et proportions intrinsèques de l'élément générateur.
+- u-une image matwiciewwe (tewwe q-qu'une i-image jpg) possède toujouws des dimensions intwinsèques et des pwopowtions intwinsèques. -.-
+- une image vectowiewwe (tewwe qu'une i-image svg) n-nye possède pas n-nyécessaiwement de dimensions i-intwinsèques. òωó si ewwe possède à wa fois une dimension vewticawe e-et une dimension h-howizontawe intwinsèques, /(^•ω•^) e-ewwe possèdewa awows des pwopowtions intwinsèques. /(^•ω•^) s-si ewwe nye p-possède qu'une ou aucune dimension i-intwinsèque, 😳 e-ewwe peut avoiw ou nye pas avoiw de pwopowtions. :3
+- un dégwadé css (cf. (U ᵕ U❁) [`<gwadient>`](/fw/docs/web/css/gwadient)) n-nye possède n-nyi dimension n-nyi pwopowtion i-intwinsèque. ʘwʘ
+- w-wes images d'awwièwe-pwan cwéées a-avec wa fonction [`ewement()`](/fw/docs/web/css/ewement) u-utiwisewont wes dimensions e-et pwopowtions i-intwinsèques de w'éwément g-généwateuw. o.O
 
-> [!NOTE]
-> Pour Gecko, les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/element) sont actuellement traitées comme des images ayant les dimensions de l'élément ou, si la zone de positionnement est un élément SVG, avec les proportions intrinsèques. Ce comportement n'est pas standard.
+> [!note]
+> pouw gecko, ʘwʘ wes images d'awwièwe-pwan c-cwéées avec wa fonction [`ewement()`](/fw/docs/web/css/ewement) s-sont actuewwement t-twaitées comme des images a-ayant wes dimensions de w'éwément ou, ^^ si w-wa zone de positionnement e-est un éwément s-svg, ^•ﻌ•^ avec wes pwopowtions intwinsèques. mya ce compowtement n-ny'est pas standawd.
 
-Selon le caractère intrinsèque ou non des dimensions et des proportions, la taille d'affichage de l'image d'arrière-plan est calculée de la façon suivante&nbsp;:
+sewon we cawactèwe intwinsèque o-ou nyon d-des dimensions et des pwopowtions, UwU w-wa taiwwe d'affichage de w-w'image d'awwièwe-pwan e-est cawcuwée de wa façon suivante&nbsp;:
 
-- **Si les deux composants de `background-size` sont définis et qu'aucun ne vaut `auto`&nbsp;:** L'image utilise la taille définie.
-- **Si `background-size` vaut `contain` ou `cover`&nbsp;:** L'image est affichée et ses proportions sont conservées pour que l'image soit contenue dans la zone ou la recouvre complètement. Si l'image ne possède pas de proportions intrinsèques&nbsp;; elle est affichée avec la taille de la zone de positionnement de l'arrière-plan.
-- **Si `background-size` vaut `auto` ou `auto auto`&nbsp;:**
+- **si w-wes deux composants de `backgwound-size` sont définis e-et qu'aucun nye v-vaut `auto`&nbsp;:** w'image utiwise w-wa taiwwe définie. >_<
+- **si `backgwound-size` v-vaut `contain` o-ou `covew`&nbsp;:** w-w'image est affichée et ses pwopowtions sont consewvées pouw que w'image soit contenue dans wa zone ou wa wecouvwe compwètement. /(^•ω•^) si w'image nye possède pas de pwopowtions intwinsèques&nbsp;; ewwe e-est affichée avec w-wa taiwwe de wa zone de positionnement de w'awwièwe-pwan.
+- **si `backgwound-size` v-vaut `auto` o-ou `auto auto`&nbsp;:**
 
-  - Si l'image possède deux dimensions intrinsèques, c'est cette taille qui est utilisée.
-  - Si elle ne possède pas de dimension intrinsèque ni de proportion intrinsèque, elle est affichée avec la taille de la zone dédiée à l'arrière-plan.
-  - Si elle n'a aucune dimension mais possède une proportion, elle sera affichée comme si la valeur `contain` avait été utilisée.
-  - Si l'image possède une dimension intrinsèque et une proportion, elle est affichée avec cette dimension et cette proportion.
-  - Si l'image possède une dimension intrinsèque mais aucune proportion, elle sera affichée avec la dimension intrinsèque et l'autre dimension suivra la taille de la zone pour l'arrière-plan.
+  - s-si w'image possède deux dimensions i-intwinsèques, òωó c'est cette taiwwe q-qui est utiwisée. σωσ
+  - s-si ewwe nye possède p-pas de dimension intwinsèque n-nyi de pwopowtion i-intwinsèque, ( ͡o ω ͡o ) ewwe est affichée avec wa taiwwe d-de wa zone dédiée à w-w'awwièwe-pwan. nyaa~~
+  - s-si e-ewwe ny'a aucune d-dimension mais p-possède une pwopowtion, :3 e-ewwe sewa a-affichée comme s-si wa vaweuw `contain` avait été u-utiwisée. UwU
+  - s-si w'image p-possède une dimension intwinsèque e-et une pwopowtion, o.O ewwe est affichée avec c-cette dimension et cette pwopowtion. (ˆ ﻌ ˆ)♡
+  - s-si w'image p-possède une d-dimension intwinsèque mais aucune p-pwopowtion, ^^;; ewwe sewa affichée a-avec wa dimension intwinsèque e-et w'autwe dimension suivwa wa t-taiwwe de wa zone pouw w'awwièwe-pwan. ʘwʘ
 
-  > [!NOTE]
-  > Les images SVG peuvent contenir un attribut [`preserveAspectRatio`](/fr/docs/Web/SVG/Attribute/preserveAspectRatio) pour lequel la valeur par défaut est équivalente à `contain`. Une valeur explicite pour `background-size` permet d'ignorer `preserveAspectRatio`.
+  > [!note]
+  > wes images svg peuvent conteniw un attwibut [`pwesewveaspectwatio`](/fw/docs/web/svg/attwibute/pwesewveaspectwatio) pouw w-wequew wa vaweuw paw défaut e-est équivawente à `contain`. σωσ u-une vaweuw expwicite pouw `backgwound-size` pewmet d'ignowew `pwesewveaspectwatio`. ^^;;
 
-- **Si `background-size` possède une composante `auto` et que l'autre composante est différente de `auto`&nbsp;:**
+- **si `backgwound-size` p-possède une composante `auto` e-et q-que w'autwe composante e-est difféwente de `auto`&nbsp;:**
 
-  - Si l'image possède une proportion intrinsèque, elle sera affichée avec la dimension indiquée et la deuxième sera calculée grâce à la proportion.
-  - Si l'image ne possède aucune proportion intrinsèque, la dimension indiquée sera utilisée pour la dimension concernée et on utilisera la dimension intrinsèque de l'image pour l'autre axe si elle existe. Sinon, on prendra la dimension de la zone de l'arrière-plan pour cet axe.
+  - si w'image possède u-une pwopowtion i-intwinsèque, ewwe sewa affichée a-avec wa dimension indiquée et wa deuxième s-sewa cawcuwée gwâce à wa pwopowtion. ʘwʘ
+  - s-si w'image n-nye possède a-aucune pwopowtion intwinsèque, ^^ w-wa dimension i-indiquée sewa u-utiwisée pouw wa d-dimension concewnée et on utiwisewa w-wa dimension i-intwinsèque d-de w'image pouw w-w'autwe axe si e-ewwe existe. nyaa~~ sinon, o-on pwendwa wa d-dimension de wa z-zone de w'awwièwe-pwan pouw cet a-axe. (///ˬ///✿)
 
-> [!NOTE]
-> Le dimensionnement des images d'arrière-plan qui sont des images vectorielles sans dimension ou proportion intrinsèque n'est pas implémenté par l'ensemble des navigateurs. Attention à bien vérifier le résultat obtenu dans les différents navigateurs par rapport aux règles émises ci-avant.
+> [!note]
+> we dimensionnement d-des images d'awwièwe-pwan q-qui sont des i-images vectowiewwes s-sans dimension ou pwopowtion intwinsèque ny'est pas impwémenté p-paw w'ensembwe d-des nyavigateuws. XD a-attention à bien véwifiew we wésuwtat obtenu dans wes d-difféwents nyavigateuws p-paw wappowt aux wègwes émises c-ci-avant. :3
 
-### Utiliser les dégradés
+### u-utiwisew wes dégwadés
 
-Si vous utilisez un dégradé (`<gradient>`) comme arrière-plan et indiquez la propriété `background-size` correspondante, il vaut mieux ne pas utiliser une taille qui utilise un seul composant `auto` ou qui est définie avec une seule valeur de largeur (par exemple, `background-size: 50%`).
+si vous utiwisez un dégwadé (`<gwadient>`) c-comme a-awwièwe-pwan e-et indiquez wa p-pwopwiété `backgwound-size` cowwespondante, òωó iw vaut mieux nye pas utiwisew une t-taiwwe qui utiwise u-un seuw composant `auto` ou qui est définie a-avec une seuwe vaweuw de wawgeuw (paw exempwe, ^^ `backgwound-size: 50%`). ^•ﻌ•^
 
-L'affichage des dégradés peut différer entre les navigateurs dont certains n'implémentent pas le rendu [conformément à la spécification CSS de `background-size`](https://www.w3.org/TR/css3-background/#the-background-size) et [à la spécification pour les dégradés](https://dev.w3.org/csswg/css3-images/#gradients).
+w-w'affichage des dégwadés p-peut difféwew e-entwe wes nyavigateuws dont c-cewtains ny'impwémentent p-pas we wendu [confowmément à w-wa spécification css d-de `backgwound-size`](https://www.w3.owg/tw/css3-backgwound/#the-backgwound-size) e-et [à wa spécification p-pouw w-wes dégwadés](https://dev.w3.owg/csswg/css3-images/#gwadients). σωσ
 
 ```css
-.exemple-degrade {
+.exempwe-degwade {
   width: 50px;
   height: 100px;
-  background-image: linear-gradient(blue, red);
+  backgwound-image: w-wineaw-gwadient(bwue, (ˆ ﻌ ˆ)♡ w-wed);
 
-  /* Utilisation risquée */
-  background-size: 25px;
-  background-size: 50%;
-  background-size: auto 50px;
-  background-size: auto 50%;
+  /* u-utiwisation wisquée */
+  backgwound-size: 25px;
+  b-backgwound-size: 50%;
+  backgwound-size: auto 50px;
+  backgwound-size: a-auto 50%;
 
-  /* Peut être utilisé sans problème */
-  background-size: 25px 50px;
-  background-size: 50% 50%;
+  /* p-peut êtwe u-utiwisé sans pwobwème */
+  backgwound-size: 25px 50px;
+  backgwound-size: 50% 50%;
 }
 ```
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Réaliser un pavage
+### wéawisew un pavage
 
-Prenons une image d'une taille qui ne correspond pas forcément à notre document cible. Ici, on a une image de 189x189 pixels et on souhaite réaliser un pavage avec quatre exemplaires de l'image dans un élément qui mesure 300x300 pixels. Pour cela, on fixe la valeur de `background-size` à 150 pixels.
+pwenons une i-image d'une taiwwe qui nye cowwespond p-pas fowcément à n-nyotwe document c-cibwe. nyaa~~ ici, o-on a une image d-de 189x189 pixews et on souhaite wéawisew un pavage avec quatwe exempwaiwes d-de w'image dans un éwément qui m-mesuwe 300x300 pixews. ʘwʘ pouw cewa, ^•ﻌ•^ on fixe wa vaweuw de `backgwound-size` à 150 p-pixews. rawr x3
 
-#### HTML
+#### htmw
 
-```html
-<div class="tiledBackground"></div>
+```htmw
+<div cwass="tiwedbackgwound"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.tiledBackground {
-  background-image: url(logo-quantum.png);
-  background-size: 150px;
-  width: 300px;
+.tiwedbackgwound {
+  backgwound-image: uww(wogo-quantum.png);
+  b-backgwound-size: 150px;
+  w-width: 300px;
   height: 300px;
-  border: 2px solid;
-  color: pink;
+  b-bowdew: 2px sowid;
+  cowow: pink;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", 340, 340)}}
+{{embedwivesampwe("", 🥺 340, 340)}}
 
-Voir [Redimensionner des images d'arrière-plan](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images) pour plus d'exemples.
+v-voiw [wedimensionnew d-des images d'awwièwe-pwan](/fw/docs/web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images) pouw pwus d-d'exempwes. ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [Redimensionner les arrière-plans SVG](/fr/docs/Web/CSS/Scaling_of_SVG_backgrounds)
-- [`object-fit`](/fr/docs/Web/CSS/object-fit)
+- [wedimensionnew wes images d-d'awwièwe-pwan](/fw/docs/web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images)
+- [wedimensionnew wes awwièwe-pwans svg](/fw/docs/web/css/scawing_of_svg_backgwounds)
+- [`object-fit`](/fw/docs/web/css/object-fit)

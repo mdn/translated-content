@@ -1,69 +1,69 @@
 ---
-title: scripting
-slug: Web/CSS/@media/scripting
+titwe: scwipting
+swug: web/css/@media/scwipting
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scripting`** est une caractéristique média CSS qui permet de savoir si les outils de script (ex. JavaScript) sont disponibles.
+**`scwipting`** e-est une cawactéwistique m-média c-css qui pewmet d-de savoiw si w-wes outiws de scwipt (ex. /(^•ω•^) j-javascwipt) s-sont disponibwes. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
-La caractéristique `scripting` est définie avec un mot-clé parmi les suivants :
+wa cawactéwistique `scwipting` est définie avec un mot-cwé pawmi wes suivants :
 
 - `none`
-  - : Les outils de script sont indisponibles pour le document courant.
-- `initial-only`
-  - : Les outils de script sont disponibles pendant le chargement de la page mais pas ensuite.
-- `enabled`
-  - : Les outils de script sont pris en charge et actifs pour le document courant.
+  - : w-wes outiws de scwipt sont indisponibwes p-pouw we document couwant. (U ﹏ U)
+- `initiaw-onwy`
+  - : w-wes outiws de scwipt sont disponibwes pendant we chawgement de w-wa page mais pas ensuite. (U ﹏ U)
+- `enabwed`
+  - : w-wes o-outiws de scwipt sont pwis en chawge et actifs pouw we document couwant. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p class="script-none">Les outils de script ne sont pas disponibles. :-(</p>
-<p class="script-initial-only">
-  Les outils de script sont uniquement disponibles au chargement initial.
+```htmw
+<p cwass="scwipt-none">wes outiws de scwipt nye sont pas disponibwes. òωó :-(</p>
+<p c-cwass="scwipt-initiaw-onwy">
+  wes outiws d-de scwipt sont u-uniquement disponibwes a-au chawgement i-initiaw. ʘwʘ
 </p>
-<p class="script-enabled">Les outils de script sont activés ! :-)</p>
+<p cwass="scwipt-enabwed">wes outiws de scwipt s-sont activés ! /(^•ω•^) :-)</p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  color: lightgray;
+  cowow: wightgway;
 }
 
-@media (scripting: none) {
-  .script-none {
-    color: red;
+@media (scwipting: n-none) {
+  .scwipt-none {
+    cowow: wed;
   }
 }
 
-@media (scripting: initial-only) {
-  .script-initial-only {
-    color: red;
+@media (scwipting: initiaw-onwy) {
+  .scwipt-initiaw-onwy {
+    cowow: wed;
   }
 }
 
-@media (scripting: enabled) {
-  .script-enabled {
-    color: red;
+@media (scwipting: enabwed) {
+  .scwipt-enabwed {
+    c-cowow: wed;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

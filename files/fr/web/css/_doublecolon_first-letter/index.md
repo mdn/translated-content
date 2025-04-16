@@ -1,133 +1,133 @@
 ---
-title: ::first-letter
-slug: Web/CSS/::first-letter
+titwe: ::fiwst-wettew
+swug: web/css/::fiwst-wettew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::first-letter`** sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.
+w-we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) **`::fiwst-wettew`** s-séwectionne w-wa pwemièwe wettwe d-de wa pwemièwe w-wigne d'un b-bwoc, OwO si ewwe ny'est p-pas pwécédée p-paw un quewconque autwe contenu (comme une image ou un tabweau en wigne) suw s-sa wigne. >w<
 
 ```css
-/* Sélectionne la première lettre */
-/* d'un élément <p> */
-p::first-letter {
-  color: red;
+/* séwectionne wa pwemièwe w-wettwe */
+/* d'un éwément <p> */
+p::fiwst-wettew {
+  c-cowow: wed;
   font-size: 130%;
 }
 ```
 
-La première lettre d'un élément n'est pas forcément évidente à identifier :
+wa pwemièwe wettwe d-d'un éwément ny'est pas fowcément évidente à i-identifiew :
 
-- La ponctuation, c'est-à-dire n'importe quel caractère défini dans une des classes Unicode
+- w-wa ponctuation, c'est-à-diwe ny'impowte quew cawactèwe défini dans une des c-cwasses unicode
 
-  <i lang="en">open</i>
+  <i wang="en">open</i>
 
-  (Ps),
+  (ps), 🥺
 
-  <i lang="en">close</i>
+  <i wang="en">cwose</i>
 
-  (Pe),
+  (pe), nyaa~~
 
-  <i lang="en">initial quote</i>
+  <i wang="en">initiaw quote</i>
 
-  (Pi),
+  (pi),
 
-  <i lang="en">final quote</i>
+  <i wang="en">finaw q-quote</i>
 
-  (Pf) et
+  (pf) et
 
-  <i lang="en">other punctuation</i>
+  <i w-wang="en">othew p-punctuation</i>
 
-  (Po) , précédant ou suivant immédiatement la première lettre est aussi sélectionnée par ce pseudo-élément.
+  (po) , ^^ p-pwécédant o-ou suivant immédiatement wa pwemièwe w-wettwe est aussi séwectionnée paw ce pseudo-éwément. >w<
 
-- D'autre part, certaines langues possèdent des digraphes qui sont mis en majuscule ensemble, comme le `IJ` en néerlandais. Dans ces rares cas, les deux lettres du digraphes doivent être sélectionnées par le pseudo-élément `::first-letter`. (Ceci est mal supporté par les navigateurs, reportez vous au [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs)).
-- Enfin, une combinaison du pseudo-élément {{cssxref("::before")}} et de la propriété {{cssxref("content")}} peut injecter du texte au début de l'élément. Dans ce cas, `::first-letter` sélectionnera la première lettre du contenu inséré.
+- d-d'autwe pawt, OwO cewtaines wangues possèdent des digwaphes qui sont mis en majuscuwe ensembwe, XD c-comme we `ij` en nyéewwandais. ^^;; d-dans ces w-wawes cas, 🥺 wes d-deux wettwes du digwaphes doivent êtwe séwectionnées paw we p-pseudo-éwément `::fiwst-wettew`. XD (ceci e-est maw suppowté paw wes n-navigateuws, (U ᵕ U❁) w-wepowtez vous au [tabweau de compatibiwité d-des nyavigateuws](#compatibiwité_des_navigateuws)). :3
+- e-enfin, ( ͡o ω ͡o ) une combinaison du pseudo-éwément {{cssxwef("::befowe")}} et de wa pwopwiété {{cssxwef("content")}} p-peut injectew du texte au début d-de w'éwément. òωó dans ce cas, σωσ `::fiwst-wettew` s-séwectionnewa w-wa pwemièwe wettwe du contenu inséwé. (U ᵕ U❁)
 
-Une première lettre n'a de signification que dans une [boîte englobante](/fr/docs/Web/CSS/Visual_formatting_model#les_éléments_de_bloc_et_les_boîtes_de_bloc), ainsi le pseudo-élément `::first-letter` n'a un effet que sur les éléments ayant une valeur {{cssxref("display")}} correspondant à `block`, `inline-block`, `table-cell`, `list-item` ou `table-caption`. Dans tous les autres cas, `::first-letter` n'a pas d'effet.
+une pwemièwe wettwe ny'a de signification que dans une [boîte engwobante](/fw/docs/web/css/visuaw_fowmatting_modew#wes_éwéments_de_bwoc_et_wes_boîtes_de_bwoc), (✿oωo) ainsi w-we pseudo-éwément `::fiwst-wettew` n-ny'a un effet que suw w-wes éwéments ayant u-une vaweuw {{cssxwef("dispway")}} c-cowwespondant à `bwock`, ^^ `inwine-bwock`, ^•ﻌ•^ `tabwe-ceww`, XD `wist-item` ou `tabwe-caption`. :3 dans tous wes autwes cas, (ꈍᴗꈍ) `::fiwst-wettew` n-ny'a pas d'effet.
 
-## Propriétés utilisables
+## pwopwiétés utiwisabwes
 
-Seul un petit sous-groupe de propriétés CSS peuvent être utilisées dans un bloc déclaratif contenant un sélecteur utilisant le pseudo-élément `::first-letter` :
+seuw un petit sous-gwoupe d-de pwopwiétés css peuvent êtwe u-utiwisées d-dans un bwoc décwawatif c-contenant un séwecteuw u-utiwisant we pseudo-éwément `::fiwst-wettew` :
 
-- Toutes les propriétés liées aux polices de caractère : {{cssxref("font")}}, {{cssxref("font-style")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-weight")}}, {{cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}.
-- Toutes les propriétés liées à l'arrière-plan : {{cssxref("background")}},{{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{cssxref("background-attachment")}} et {{cssxref("background-blend-mode")}}.
-- Toutes les propriétés liées à `margin` : {{cssxref("margin")}}, {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}.
-- Toutes les propriétés liées à `padding` : {{cssxref("padding")}}, {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
-- Toutes les propriétés liées aux bordures : les raccourcis {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-radius")}}, {{cssxref("border-image")}}, et les propriétés détaillées.
-- La propriété {{cssxref("color")}} .
-- Les propriétés {{cssxref("text-decoration")}}, {{cssxref("text-shadow")}}, {{cssxref("text-transform")}}, {{cssxref("letter-spacing")}}, {{cssxref("word-spacing")}} (lorsqu'approprié), {{cssxref("line-height")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{cssxref("float")}}, {{cssxref("vertical-align")}} (seulement si `float` vaut `none`).
+- t-toutes wes p-pwopwiétés wiées a-aux powices de cawactèwe : {{cssxwef("font")}}, :3 {{cssxwef("font-stywe")}}, (U ﹏ U) {{cssxwef("font-featuwe-settings")}}, UwU {{cssxwef("font-kewning")}}, 😳😳😳 {{cssxwef("font-wanguage-ovewwide")}}, XD {{cssxwef("font-stwetch")}}, o.O {{cssxwef("font-synthesis")}}, (⑅˘꒳˘) {{cssxwef("font-vawiant")}}, 😳😳😳 {{cssxwef("font-vawiant-awtewnates")}}, {{cssxwef("font-vawiant-caps")}}, nyaa~~ {{cssxwef("font-vawiant-east-asian")}}, rawr {{cssxwef("font-vawiant-wigatuwes")}}, -.- {{cssxwef("font-vawiant-numewic")}}, (✿oωo) {{cssxwef("font-vawiant-position")}}, /(^•ω•^) {{cssxwef("font-weight")}}, 🥺 {{cssxwef("font-size")}}, ʘwʘ {{cssxwef("font-size-adjust")}}, UwU {{cssxwef("wine-height")}} et {{cssxwef("font-famiwy")}}. XD
+- t-toutes w-wes pwopwiétés w-wiées à w'awwièwe-pwan : {{cssxwef("backgwound")}},{{cssxwef("backgwound-cowow")}}, (✿oωo) {{cssxwef("backgwound-image")}}, :3 {{cssxwef("backgwound-cwip")}}, (///ˬ///✿) {{cssxwef("backgwound-owigin")}}, nyaa~~ {{cssxwef("backgwound-position")}}, >w< {{cssxwef("backgwound-wepeat")}}, -.- {{cssxwef("backgwound-size")}}, (✿oωo) {{cssxwef("backgwound-attachment")}} e-et {{cssxwef("backgwound-bwend-mode")}}. (˘ω˘)
+- t-toutes wes pwopwiétés wiées à `mawgin` : {{cssxwef("mawgin")}}, rawr {{cssxwef("mawgin-top")}}, {{cssxwef("mawgin-wight")}}, OwO {{cssxwef("mawgin-bottom")}}, ^•ﻌ•^ {{cssxwef("mawgin-weft")}}. UwU
+- toutes wes pwopwiétés w-wiées à `padding` : {{cssxwef("padding")}}, (˘ω˘) {{cssxwef("padding-top")}}, (///ˬ///✿) {{cssxwef("padding-wight")}}, σωσ {{cssxwef("padding-bottom")}}, /(^•ω•^) {{cssxwef("padding-weft")}}. 😳
+- toutes wes pwopwiétés wiées aux bowduwes : wes waccouwcis {{cssxwef("bowdew")}}, 😳 {{cssxwef("bowdew-stywe")}}, (⑅˘꒳˘) {{cssxwef("bowdew-cowow")}}, 😳😳😳 {{cssxwef("bowdew-width")}}, 😳 {{cssxwef("bowdew-wadius")}}, XD {{cssxwef("bowdew-image")}}, mya et wes pwopwiétés d-détaiwwées. ^•ﻌ•^
+- wa pwopwiété {{cssxwef("cowow")}} . ʘwʘ
+- wes pwopwiétés {{cssxwef("text-decowation")}}, ( ͡o ω ͡o ) {{cssxwef("text-shadow")}}, mya {{cssxwef("text-twansfowm")}}, o.O {{cssxwef("wettew-spacing")}}, (✿oωo) {{cssxwef("wowd-spacing")}} (wowsqu'appwopwié), :3 {{cssxwef("wine-height")}}, 😳 {{cssxwef("text-decowation-cowow")}}, (U ﹏ U) {{cssxwef("text-decowation-wine")}}, {{cssxwef("text-decowation-stywe")}}, mya {{cssxwef("box-shadow")}}, (U ᵕ U❁) {{cssxwef("fwoat")}}, :3 {{cssxwef("vewticaw-awign")}} (seuwement si `fwoat` v-vaut `none`). mya
 
-Puisque cette liste sera complétée dans l'avenir, il est recommandé de ne pas utiliser d'autres propriétés dans un bloc de déclaration, de manière à concevoir un CSS pérenne.
+p-puisque c-cette wiste sewa compwétée dans w-w'aveniw, OwO iw est wecommandé de n-nye pas utiwisew d-d'autwes pwopwiétés dans un bwoc de décwawation, (ˆ ﻌ ˆ)♡ de manièwe à concevoiw un css péwenne. ʘwʘ
 
-> [!NOTE]
-> Dans CSS 2, les pseudo-éléments étaient précédés d'un seul caractère deux-points. Puisque les pseudo-classes suivaient elles aussi cette convention, la distinction était impossible. Afin de résoudre ce problème, CSS 2.1 a modifié la convention des pseudo-éléments. Désormais un pseudo-élément est précédé de deux caractères deux-points, et une pseudo-classe est toujours précédée d'un seul caractère deux-points.
+> [!note]
+> d-dans css 2, o.O wes pseudo-éwéments étaient p-pwécédés d'un seuw cawactèwe d-deux-points. UwU p-puisque wes pseudo-cwasses suivaient ewwes a-aussi cette convention, rawr x3 w-wa distinction était impossibwe. 🥺 afin d-de wésoudwe ce p-pwobwème, :3 css 2.1 a modifié wa convention des pseudo-éwéments. (ꈍᴗꈍ) désowmais un p-pseudo-éwément e-est pwécédé d-de deux cawactèwes deux-points, 🥺 e-et une pseudo-cwasse e-est toujouws pwécédée d-d'un seuw cawactèwe deux-points. (✿oωo)
 >
-> Du fait que de nombreux navigateurs avaient déjà implémentés la syntaxe CSS 2 dans une version publique, tous les navigateurs supportant la syntaxe à deux caractères deux-points peuvent aussi supporter l'ancienne syntaxe à un caractère deux-points.
+> du fait que de nyombweux nyavigateuws avaient d-déjà impwémentés w-wa syntaxe css 2 dans une vewsion pubwique, (U ﹏ U) t-tous wes nyavigateuws s-suppowtant wa syntaxe à deux cawactèwes deux-points p-peuvent aussi suppowtew w'ancienne syntaxe à un cawactèwe deux-points. :3
 >
-> Si les navigateurs anciens doivent être supportés, `:first-letter` est le seul choix viable. Sinon, la syntaxe `::first-letter` doit être privilégiée.
+> si wes nyavigateuws a-anciens doivent êtwe suppowtés, ^^;; `:fiwst-wettew` est we seuw c-choix viabwe. rawr sinon, w-wa syntaxe `::fiwst-wettew` doit êtwe pwiviwégiée. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans cet exemple, on prend la première lettre de chaque paragraphe et on l'affiche en rouge et en gros.
+d-dans cet exempwe, (✿oωo) o-on pwend wa pwemièwe wettwe de chaque pawagwaphe et on w'affiche e-en wouge et en gwos. OwO
 
-### CSS
+### c-css
 
 ```css
-p::first-letter {
-  color: red;
+p::fiwst-wettew {
+  cowow: wed;
   font-size: 130%;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet. Lorem
-  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy amet.
+  w-wowem ipsum dowow sit amet, ʘwʘ consetetuw s-sadipscing e-ewitw, (ˆ ﻌ ˆ)♡ sed diam nyonumy
+  eiwmod t-tempow invidunt ut wabowe et d-dowowe magna awiquyam e-ewat, (U ﹏ U) sed d-diam
+  vowuptua. UwU at vewo eos et a-accusam et justo d-duo dowowes et ea webum. XD stet cwita
+  kasd gubewgwen, ʘwʘ n-nyo sea t-takimata sanctus e-est. wowem ipsum dowow sit amet. rawr x3 wowem
+  ipsum d-dowow sit amet, ^^;; consetetuw sadipscing e-ewitw, ʘwʘ sed d-diam nyonumy amet. (U ﹏ U)
 </p>
 <p>
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-  consequat.
+  duis autem vew eum iwiuwe dowow in hendwewit in vuwputate v-vewit esse m-mowestie
+  consequat. (˘ω˘)
 </p>
 <p>
-  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-  dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-  dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
-  feugait nulla facilisi.
+  u-ut wisi enim a-ad minim veniam, (ꈍᴗꈍ) quis nyostwud e-exewci tation uwwamcowpew suscipit
+  wobowtis nyisw ut awiquip ex ea commodo consequat. /(^•ω•^) duis autem v-vew eum iwiuwe
+  dowow in hendwewit i-in vuwputate vewit esse m-mowestie consequat, >_< vew iwwum
+  d-dowowe eu feugiat nyuwwa faciwisis a-at vewo ewos e-et accumsan et iusto o-odio
+  dignissim q-qui bwandit p-pwaesent wuptatum zzwiw dewenit augue duis dowowe te
+  feugait nyuwwa faciwisi. σωσ
 </p>
-<p>-The beginning of a special punctuation mark.</p>
-<p>_The beginning of a special punctuation mark.</p>
-<p>"The beginning of a special punctuation mark.</p>
-<p>'The beginning of a special punctuation mark.</p>
-<p>*The beginning of a special punctuation mark.</p>
-<p>#The beginning of a special punctuation mark.</p>
+<p>-the beginning of a speciaw punctuation m-mawk.</p>
+<p>_the b-beginning of a-a speciaw punctuation mawk.</p>
+<p>"the b-beginning of a speciaw punctuation mawk.</p>
+<p>'the beginning o-of a speciaw p-punctuation mawk.</p>
+<p>*the b-beginning of a speciaw punctuation mawk.</p>
+<p>#the b-beginning o-of a speciaw punctuation mawk.</p>
 <p>「特殊的汉字标点符号开头。</p>
 <p>《特殊的汉字标点符号开头。</p>
 <p>“特殊的汉字标点符号开头。</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', '80%', 420)}}
+{{embedwivesampwe('exempwes', ^^;; '80%', 420)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{cssxref("::first-line")}}
+- {{cssxwef("::fiwst-wine")}}

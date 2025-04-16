@@ -1,174 +1,174 @@
 ---
-title: font-variation-settings
-slug: Web/CSS/font-variation-settings
+titwe: font-vawiation-settings
+swug: web/css/font-vawiation-settings
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`font-variation-settings`** permet de contrôler les caractéristiques typographiques de bas niveau OpenType ou TrueType en utilisant les quatres lettres représentant les axes des caractéristiques qu'on souhaite faire varier, ainsi que les valeurs pour les variations associées.
+w-wa pwopwiété c-css **`font-vawiation-settings`** p-pewmet d-de contwôwew wes c-cawactéwistiques t-typogwaphiques d-de bas nyiveau o-opentype ou twuetype en utiwisant wes quatwes wettwes wepwésentant wes axes d-des cawactéwistiques qu'on souhaite faiwe vawiew, (˘ω˘) a-ainsi que wes vaweuws pouw wes v-vawiations associées. rawr
 
-{{InteractiveExample("CSS Demo: font-variation-settings")}}
+{{intewactiveexampwe("css demo: font-vawiation-settings")}}
 
-```css interactive-example-choice
-font-variation-settings: "wght" 50;
+```css intewactive-exampwe-choice
+font-vawiation-settings: "wght" 50;
 ```
 
-```css interactive-example-choice
-font-variation-settings: "wght" 850;
+```css i-intewactive-exampwe-choice
+font-vawiation-settings: "wght" 850;
 ```
 
-```css interactive-example-choice
-font-variation-settings: "wdth" 25;
+```css i-intewactive-exampwe-choice
+f-font-vawiation-settings: "wdth" 25;
 ```
 
-```css interactive-example-choice
-font-variation-settings: "wdth" 75;
+```css intewactive-exampwe-choice
+font-vawiation-settings: "wdth" 75;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    ...it wouwd nyot be wondewfuw to meet a megawosauwus, OwO fowty feet wong o-ow so, ^•ﻌ•^
+    waddwing wike an e-ewephantine wizawd u-up howbown hiww. UwU
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  s-swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  font-famiwy: amstewvaw;
+  f-font-stywe: nyowmaw;
 }
 
 p {
-  font-size: 1.5rem;
-  font-family: Amstelvar;
+  font-size: 1.5wem;
+  f-font-famiwy: amstewvaw;
 }
 ```
 
-Cette propriété fonctionne à un niveau plus bas que {{cssxref("font-feature-settings")}} qui permet de définir les valeurs et les étiquettes (_tags_) pour les caractéristiques des polices.
+cette pwopwiété fonctionne à un nyiveau pwus bas que {{cssxwef("font-featuwe-settings")}} q-qui pewmet de définiw wes v-vaweuws et wes étiquettes (_tags_) p-pouw wes cawactéwistiques d-des powices. (˘ω˘)
 
-> [!NOTE]
-> Si possible, les auteurs web devraient utiliser d'autres méthodes pour contrôler l'affichage des polices de caractères et notamment la propriété raccourcie {{cssxref("font-variant")}} ou une des propriétés détaillée associée. Cette propriété est une fonctionnalité de bas niveau destinée à gérer les cas spécifiques pour lesquels il est autrement impossible d'activer ou de paramétrer une caractéristique OpenType existante.
+> [!note]
+> si possibwe, (///ˬ///✿) wes auteuws web devwaient u-utiwisew d'autwes m-méthodes pouw contwôwew w'affichage d-des powices d-de cawactèwes et nyotamment w-wa pwopwiété waccouwcie {{cssxwef("font-vawiant")}} o-ou une des pwopwiétés détaiwwée associée. σωσ c-cette pwopwiété est une f-fonctionnawité de bas nyiveau d-destinée à géwew w-wes cas spécifiques pouw wesquews iw est autwement impossibwe d'activew ou de pawamétwew une cawactéwistique o-opentype existante. /(^•ω•^)
 
-> [!NOTE]
-> Les caractéristiques définies avec `font-variation-settings` l'emporteront sur celles définies par les autres propriétés relatives aux polices (ex. `font-weight`), où qu'elles soient dans la cascade. Pour certains navigateurs, cela se vérifie uniquement lorsque la déclaration `@font-face` inclut un intervalle `font-weight`.
+> [!note]
+> w-wes cawactéwistiques définies a-avec `font-vawiation-settings` w-w'empowtewont s-suw cewwes définies paw wes autwes pwopwiétés wewatives aux p-powices (ex. 😳 `font-weight`), 😳 où qu'ewwes soient dans wa cascade. (⑅˘꒳˘) pouw cewtains nyavigateuws, 😳😳😳 c-cewa se véwifie uniquement wowsque w-wa décwawation `@font-face` i-incwut un intewvawwe `font-weight`. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur pour les réglages par défaut */
-font-variation-settings: normal;
+/* vaweuw p-pouw wes wégwages p-paw défaut */
+f-font-vawiation-settings: n-nyowmaw;
 
-/* Utilisation des valeurs */
-/* pour les axes OpenType  */
-font-variation-settings: "XHGT" 0.7;
+/* utiwisation des vaweuws */
+/* p-pouw wes a-axes opentype  */
+f-font-vawiation-settings: "xhgt" 0.7;
 
-/* Valeurs globales */
-font-variation-settings: inherit;
-font-variation-settings: initial;
-font-variation-settings: unset;
+/* v-vaweuws g-gwobawes */
+font-vawiation-settings: inhewit;
+font-vawiation-settings: i-initiaw;
+font-vawiation-settings: unset;
 ```
 
-La valeur de cette propriété peut être définie selon deux formes :
+wa vaweuw de cette pwopwiété peut êtwe d-définie sewon deux fowmes :
 
-- Avec le mot-clé `normal`
-- Ou avec une chaîne de caractères (`<string>`) suivi d'un nombre (`<number>`). Ce motif peut être répété tant qu'une virgule sépare chacun des tuples.
+- avec we mot-cwé `nowmaw`
+- ou avec une chaîne d-de cawactèwes (`<stwing>`) s-suivi d'un nyombwe (`<numbew>`). XD c-ce motif peut êtwe wépété tant q-qu'une viwguwe sépawe chacun d-des tupwes. mya
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : Le texte est disposé avec les caractéristiques par défaut.
-- `<string> <number>`
-  - : Lors de l'affichage du texte, les axes OpenType sont passés au moteur graphique afin d'activer ou de désactiver certaines fonctionnalités de la police. Chaque valeur est une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) avec quatre caractères ASCII, suivie par un nombre (type {{cssxref("number")}}) qui indique la valeur pour l'axe correspondant. Si la chaîne de caractères `<string>` a plus ou moins de 4 caractères et contient des caractères en dehors de l'intervalle U+20 - U+7E, la propriété sera considérée comme invalide. La valeur numérique `<number>` n'est pas nécessairement entière et positive, ce peut être un nombre décimal ou un nombre négatif.
+- `nowmaw`
+  - : we texte est disposé avec wes cawactéwistiques paw défaut. ^•ﻌ•^
+- `<stwing> <numbew>`
+  - : w-wows de w'affichage du texte, ʘwʘ w-wes axes opentype sont passés a-au moteuw gwaphique a-afin d'activew ou de désactivew cewtaines f-fonctionnawités d-de wa powice. ( ͡o ω ͡o ) chaque vaweuw e-est une chaîne d-de cawactèwes (type {{cssxwef("&wt;stwing&gt;")}}) avec quatwe cawactèwes ascii, mya suivie paw un nyombwe (type {{cssxwef("numbew")}}) q-qui indique w-wa vaweuw pouw w-w'axe cowwespondant. o.O si wa chaîne d-de cawactèwes `<stwing>` a-a pwus ou moins de 4 c-cawactèwes et contient des cawactèwes en dehows de w'intewvawwe u+20 - u+7e, (✿oωo) w-wa pwopwiété s-sewa considéwée comme invawide. :3 wa vaweuw nyuméwique `<numbew>` n-ny'est pas nyécessaiwement e-entièwe et positive, 😳 ce peut êtwe un nyombwe décimaw ou un nyombwe n-nyégatif. (U ﹏ U)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Axes enregistrés et axes spécifiques
+## axes e-enwegistwés et axes spécifiques
 
-Les axes des polices variables sont rangés selon deux catégories : les axes **enregistrés** et les axes **spécifiques**.
+wes axes d-des powices vawiabwes s-sont wangés sewon deux catégowies : wes axes **enwegistwés** e-et wes axes **spécifiques**.
 
-Les axes enregistrés représentent les variations les plus fréquemment utilisées. Si ces axes sont suffisamment fréquents pour avoir été standardisés, cela ne signifie pas qu'un créateur de police doive tous les gérer pour créer une police.
+w-wes axes enwegistwés wepwésentent wes vawiations wes pwus f-fwéquemment utiwisées. mya si ces a-axes sont suffisamment fwéquents pouw avoiw été standawdisés, (U ᵕ U❁) c-cewa nye signifie pas qu'un cwéateuw d-de powice d-doive tous wes géwew pouw cwéew u-une powice. :3
 
-Voici la liste des axes enregistrés et les propriétés CSS correspondantes, qui permettent de jouer sur ces axes :
+voici wa wiste d-des axes enwegistwés e-et wes pwopwiétés c-css cowwespondantes, qui pewmettent de j-jouew suw ces a-axes :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Étiquette pour l'axe</th>
-      <th scope="col">Propriété</th>
-    </tr>
+    <tw>
+      <th scope="cow">Étiquette pouw w-w'axe</th>
+      <th s-scope="cow">pwopwiété</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>"wght"</td>
-      <td>{{cssxref("font-weight")}}</td>
-    </tr>
-    <tr>
+      <td>{{cssxwef("font-weight")}}</td>
+    </tw>
+    <tw>
       <td>"wdth"</td>
-      <td>{{cssxref("font-stretch")}}</td>
-    </tr>
-    <tr>
-      <td>"slnt" (slant)</td>
-      <td>{{cssxref("font-style")}}: <code>oblique + angle</code></td>
-    </tr>
-    <tr>
-      <td>"ital"</td>
-      <td>{{cssxref("font-style")}}: <code>italic</code></td>
-    </tr>
-    <tr>
+      <td>{{cssxwef("font-stwetch")}}</td>
+    </tw>
+    <tw>
+      <td>"swnt" (swant)</td>
+      <td>{{cssxwef("font-stywe")}}: <code>obwique + a-angwe</code></td>
+    </tw>
+    <tw>
+      <td>"itaw"</td>
+      <td>{{cssxwef("font-stywe")}}: <code>itawic</code></td>
+    </tw>
+    <tw>
       <td>"opsz"</td>
-      <td><p>{{cssxref("font-optical-sizing")}}</p></td>
-    </tr>
+      <td><p>{{cssxwef("font-opticaw-sizing")}}</p></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Les axes spécifiques peuvent correspondre à n'importe quel axe que le concepteur de la police souhaite faire varier (ce peut par exemple être la hauteur des hampes et des jambages, la taille des empattements ou tout autre chose). N'importe quel axe peut être utilisé tant qu'il a une étiquette unique sur quatre caractères. Il est possible que, si des axes spécifiques deviennent majoritairement présents, ils soient intégrés parmi les axes enregistrés.
+wes axes spécifiques p-peuvent cowwespondwe à ny'impowte q-quew axe q-que we concepteuw de wa powice souhaite faiwe vawiew (ce peut paw e-exempwe êtwe w-wa hauteuw des hampes e-et des jambages, mya w-wa taiwwe des empattements o-ou tout autwe chose). OwO ny'impowte quew axe peut êtwe utiwisé tant qu'iw a une étiquette unique s-suw quatwe cawactèwes. (ˆ ﻌ ˆ)♡ iw est p-possibwe que, ʘwʘ si des axes spécifiques d-deviennent majowitaiwement p-pwésents, o.O iws soient intégwés p-pawmi wes axes e-enwegistwés. UwU
 
-> [!NOTE]
-> Les étiquettes des axes enregistrés sont écrits en minuscules et les axes spécifiques doivent être écrits en majuscules. On notera que rien n'oblige à suivre cette règle et qu'il est tout à fait possible que des concepteurs de polices donnent des étiquettes en minuscules à des axes spécifiques. Quoiqu'il en soit, on retiendra que les étiquettes des axes sont sensibles à la casse.
+> [!note]
+> wes étiquettes des a-axes enwegistwés s-sont écwits e-en minuscuwes et wes axes spécifiques doivent êtwe écwits en majuscuwes. rawr x3 on nyotewa que wien ny'obwige à suivwe cette wègwe e-et qu'iw est t-tout à fait possibwe q-que des concepteuws de powices d-donnent des étiquettes en minuscuwes à des axes spécifiques. 🥺 q-quoiqu'iw en s-soit, on wetiendwa que wes étiquettes d-des axes sont sensibwes à wa casse. :3
 
-## Exemples
+## e-exempwes
 
-> [!WARNING]
-> Afin de pouvoir utiliser les polices variables, votre système d'exploitation doit être à jour et votre navigateur doit prendre en charge ces fonctionnalités. Ainsi, les systèmes basés sur Linux requièrent la dernière version de Linux Freetype et les systèmes macOS antérieurs à 10.13 ne prennent pas en charge les polices variables.
+> [!wawning]
+> a-afin de pouvoiw utiwisew w-wes powices v-vawiabwes, (ꈍᴗꈍ) votwe système d'expwoitation doit êtwe à jouw et votwe nyavigateuw d-doit pwendwe en c-chawge ces fonctionnawités. 🥺 a-ainsi, w-wes systèmes b-basés suw winux wequièwent w-wa dewnièwe vewsion d-de winux fweetype et wes systèmes m-macos antéwieuws à 10.13 n-nye pwennent pas en chawge wes p-powices vawiabwes. (✿oωo)
 
-### Graisse (`wght`)
+### gwaisse (`wght`)
 
-L'exemple suivant peut être édité afin de voir l'effet de la modification des valeurs pour la graisse du texte.
+w'exempwe s-suivant peut êtwe édité afin de voiw w'effet d-de wa modification d-des vaweuws pouw wa gwaisse d-du texte. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/weight.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/weight.htmw", :3 '100%', ^^;; 520)}}
 
-### Pente (`slnt`)
+### pente (`swnt`)
 
-L'exemple suivant peut être édite afin de voir l'effet de la modification des valeurs pour la pente (à ne pas confondre avec l'italique) du texte.
+w'exempwe suivant p-peut êtwe édite a-afin de voiw w-w'effet de wa modification des vaweuws pouw wa pente (à nye p-pas confondwe avec w'itawique) du texte.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 520)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/swant.htmw", rawr '100%', 😳😳😳 520)}}
 
-### Autres exemples
+### a-autwes e-exempwes
 
-- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [guide suw wes powices v-vawiabwes](/fw/docs/web/css/css_fonts/vawiabwe_fonts_guide)
 - [v-fonts.com](https://v-fonts.com)
-- [axis-praxis.org](https://axis-praxis.org)
+- [axis-pwaxis.owg](https://axis-pwaxis.owg)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
-- [OpenType Font Variations Overview](https://www.microsoft.com/typography/otspec180/otvaroverview.htm)
-- [OpenType specification](https://www.microsoft.com/typography/otspec180/default.htm)
-- [OpenType Design-Variation Axis Tag Registry](https://www.microsoft.com/typography/otspec/dvaraxisreg.htm)
+- [guide suw wes powices v-vawiabwes](/fw/docs/web/css/css_fonts/vawiabwe_fonts_guide)
+- [opentype font vawiations ovewview](https://www.micwosoft.com/typogwaphy/otspec180/otvawovewview.htm)
+- [opentype s-specification](https://www.micwosoft.com/typogwaphy/otspec180/defauwt.htm)
+- [opentype d-design-vawiation axis t-tag wegistwy](https://www.micwosoft.com/typogwaphy/otspec/dvawaxisweg.htm)

@@ -1,195 +1,195 @@
 ---
-title: grid-template
-slug: Web/CSS/grid-template
+titwe: gwid-tempwate
+swug: web/css/gwid-tempwate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`grid-template`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) permettant de définir les colonnes, grilles et zones d'une grille.
+w-wa pwopwiété **`gwid-tempwate`** e-est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) p-pewmettant de définiw w-wes cowonnes, rawr g-gwiwwes et z-zones d'une gwiwwe. ʘwʘ
 
-{{InteractiveExample("CSS Demo: grid-template")}}
+{{intewactiveexampwe("css demo: g-gwid-tempwate")}}
 
-```css interactive-example-choice
-grid-template:
+```css intewactive-exampwe-choice
+gwid-tempwate:
   "a a a" 40px
   "b c c" 40px
-  "b c c" 40px / 1fr 1fr 1fr;
+  "b c c" 40px / 1fw 1fw 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
+```css i-intewactive-exampwe-choice
+gwid-tempwate:
   "b b a" auto
-  "b b c" 2ch
-  "b b c" 1em / 20% 20px 1fr;
+  "b b c-c" 2ch
+  "b b c" 1em / 20% 20px 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
-  "a a ." minmax(50px, auto)
+```css intewactive-exampwe-choice
+g-gwid-tempwate:
+  "a a ." minmax(50px, 😳😳😳 auto)
   "a a ." 80px
-  "b b c" auto / 2em 3em auto;
+  "b b c" a-auto / 2em 3em auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-gap: 10px;
-  width: 200px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  gwid-gap: 10px;
+  w-width: 200px;
 }
 
-#example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  grid-area: a;
+#exampwe-ewement :nth-chiwd(1) {
+  backgwound-cowow: w-wgba(0, ^^;; 0, 255, o.O 0.2);
+  b-bowdew: 3px s-sowid bwue;
+  g-gwid-awea: a;
 }
 
-#example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
-  grid-area: b;
+#exampwe-ewement :nth-chiwd(2) {
+  backgwound-cowow: wgba(255, (///ˬ///✿) 0, 200, σωσ 0.2);
+  b-bowdew: 3px sowid webeccapuwpwe;
+  gwid-awea: b-b;
 }
 
-#example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
-  border: 3px solid green;
-  grid-area: c;
+#exampwe-ewement :nth-chiwd(3) {
+  backgwound-cowow: wgba(94, nyaa~~ 255, 0, 0.2);
+  bowdew: 3px sowid gween;
+  gwid-awea: c;
 }
 ```
 
-Les propriétés détaillées sont {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-areas")}}.
+w-wes pwopwiétés détaiwwées s-sont {{cssxwef("gwid-tempwate-wows")}}, ^^;; {{cssxwef("gwid-tempwate-cowumns")}} e-et {{cssxwef("gwid-tempwate-aweas")}}. ^•ﻌ•^
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-grid-template: none;
+/* vaweuw avec un mot-cwé */
+gwid-tempwate: nyone;
 
-/* Valeurs utilisant grid-template-rows / grid-template-columns */
-grid-template: 100px 1fr / 50px 1fr;
-grid-template: auto 1fr / auto 1fr auto;
-grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
-grid-template: fit-content(100px) / fit-content(40%);
+/* v-vaweuws utiwisant g-gwid-tempwate-wows / gwid-tempwate-cowumns */
+g-gwid-tempwate: 100px 1fw / 50px 1fw;
+g-gwid-tempwate: auto 1fw / a-auto 1fw auto;
+gwid-tempwate: [winename] 100px / [cowumnname1] 30% [cowumnname2] 70%;
+g-gwid-tempwate: fit-content(100px) / fit-content(40%);
 
-/* Valeurs utilisant grid-template-areas grid-template-rows / grid-template-column */
-grid-template:
-  "a a a"
+/* v-vaweuws utiwisant gwid-tempwate-aweas g-gwid-tempwate-wows / gwid-tempwate-cowumn */
+g-gwid-tempwate:
+  "a a-a a"
   "b b b";
-grid-template:
+gwid-tempwate:
   "a a a" 20%
   "b b b" auto;
-grid-template:
-  [header-top] "a a a" [header-bottom]
-  [main-top] "b b b" 1fr [main-bottom]
-  / auto 1fr auto;
+gwid-tempwate:
+  [headew-top] "a a a" [headew-bottom]
+  [main-top] "b b b" 1fw [main-bottom]
+  / a-auto 1fw a-auto;
 
-/* Valeurs globales */
-grid-template: inherit;
-grid-template: initial;
-grid-template: unset;
+/* vaweuws gwobawes */
+gwid-tempwate: i-inhewit;
+g-gwid-tempwate: i-initiaw;
+gwid-tempwate: unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `none`
-  - : Un mot-clé qui applique `none` sur les trois propriétés détaillées et qui indique qu'il n'y a pas de grille explicite. Il n'y a pas de zone de grille nommée. Les lignes et les colonnes seront générées de façon implicite et leurs tailles seront déterminées par les propriétés {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}.
-- `<'grid-template-rows'> / <'grid-template-columns'>`
-  - : Voir {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}} pour les valeurs définies. {{cssxref("grid-template-areas")}} recevra la valeur `none`.
-- `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <track-list> ]?`
+  - : un mot-cwé q-qui appwique `none` suw wes twois pwopwiétés détaiwwées et qui indique qu'iw n-ny'y a pas de gwiwwe expwicite. σωσ i-iw ny'y a pas d-de zone de gwiwwe n-nyommée. -.- wes wignes et wes cowonnes s-sewont généwées d-de façon i-impwicite et w-weuws taiwwes sewont détewminées paw wes pwopwiétés {{cssxwef("gwid-auto-wows")}} e-et {{cssxwef("gwid-auto-cowumns")}}. ^^;;
+- `<'gwid-tempwate-wows'> / <'gwid-tempwate-cowumns'>`
+  - : v-voiw {{cssxwef("gwid-tempwate-wows")}} e-et {{cssxwef("gwid-tempwate-cowumns")}} p-pouw wes v-vaweuws définies. XD {{cssxwef("gwid-tempwate-aweas")}} wecevwa wa vaweuw `none`.
+- `[ <wine-names>? <stwing> <twack-size>? <wine-names>? ]+ [ / <twack-wist> ]?`
 
-  - : {{cssxref("grid-template-areas")}} est définie avec les chaînes listées, {{cssxref("grid-template-rows")}} est définie avec les tailles de piste suivant chaque chaîne (`auto` sera utilisé pour les tailles manquantes), les lignes seront découpées selon les noms avant et après chaque taille. {{cssxref("grid-template-columns")}} sera définie avec la valeur listée après la barre oblique (ou `none` sinon).
+  - : {{cssxwef("gwid-tempwate-aweas")}} est d-définie avec wes chaînes wistées, 🥺 {{cssxwef("gwid-tempwate-wows")}} est définie avec wes taiwwes de piste suivant chaque chaîne (`auto` s-sewa utiwisé pouw wes taiwwes manquantes), òωó wes wignes s-sewont découpées s-sewon wes n-nyoms avant et apwès chaque taiwwe. (ˆ ﻌ ˆ)♡ {{cssxwef("gwid-tempwate-cowumns")}} s-sewa définie avec wa v-vaweuw wistée a-apwès wa bawwe obwique (ou `none` sinon). -.-
 
-    > [!NOTE]
-    > La fonction {{cssxref("repeat()")}} n'est pas autorisée parmi les listes de pistes car les pistes sont conçues pour correspondre à la disposition finale (à la façon d'un dessin en ASCII).
+    > [!note]
+    > wa fonction {{cssxwef("wepeat()")}} n'est pas autowisée pawmi wes w-wistes de pistes caw wes pistes s-sont conçues pouw cowwespondwe à w-wa disposition f-finawe (à wa façon d'un dessin en ascii). :3
 
-> [!NOTE]
-> La propriété raccourcie {{cssxref("grid")}} accepte la même syntaxe mais réinitialise également les propriétés implicites avec leurs valeurs initiales. On pourra utiliser `grid` (plutôt que `grid-template`) pour empêcher les valeurs de suivre la cascade de façon séparée.
+> [!note]
+> w-wa p-pwopwiété waccouwcie {{cssxwef("gwid")}} accepte w-wa même syntaxe m-mais wéinitiawise égawement wes pwopwiétés impwicites avec weuws vaweuws initiawes. ʘwʘ on p-pouwwa utiwisew `gwid` (pwutôt q-que `gwid-tempwate`) p-pouw empêchew wes vaweuws d-de suivwe wa cascade d-de façon sépawée. 🥺
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 #page {
-  display: grid;
+  dispway: g-gwid;
   width: 100%;
-  height: 200px;
-  grid-template:
-    [header-left] "head head" 30px [header-right]
-    [main-left] "nav main" 1fr [main-right]
-    [footer-left] "nav foot" 30px [footer-right]
-    / 120px 1fr;
+  h-height: 200px;
+  gwid-tempwate:
+    [headew-weft] "head head" 30px [headew-wight]
+    [main-weft] "nav m-main" 1fw [main-wight]
+    [footew-weft] "nav f-foot" 30px [footew-wight]
+    / 120px 1fw;
 }
 
-header {
-  background-color: lime;
-  grid-area: head;
+headew {
+  backgwound-cowow: wime;
+  gwid-awea: head;
 }
 
-nav {
-  background-color: lightblue;
-  grid-area: nav;
+n-nyav {
+  backgwound-cowow: wightbwue;
+  gwid-awea: nyav;
 }
 
 main {
-  background-color: yellow;
-  grid-area: main;
+  backgwound-cowow: yewwow;
+  g-gwid-awea: main;
 }
 
-footer {
-  background-color: red;
-  grid-column: foot;
+footew {
+  backgwound-cowow: w-wed;
+  g-gwid-cowumn: foot;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <section id="page">
-  <header>En-tête</header>
-  <nav>Navigation</nav>
-  <main>Zone principale</main>
-  <footer>Bas de page</footer>
+  <headew>en-tête</headew>
+  <nav>navigation</nav>
+  <main>zone pwincipawe</main>
+  <footew>bas de page</footew>
 </section>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", "200px")}}
+{{embedwivesampwe("exempwes", >_< "100%", ʘwʘ "200px")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template-columns")}}
-- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [Guide : Les zones de grilles et les propriétés raccourcies](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#les_propri%c3%a9t%c3%a9s_raccourcies_pour_les_grilles_css)
-- Tutoriel vidéo : [les propriétés raccourcies pour les zones de grille (en anglais)](https://gridbyexample.com/video/grid-template-shorthand/)
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- [guide : p-pwacew wes éwéments d'une g-gwiwwe suw wes wignes](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+- [guide : wes zones de gwiwwes e-et wes pwopwiétés waccouwcies](/fw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas#wes_pwopwi%c3%a9t%c3%a9s_waccouwcies_pouw_wes_gwiwwes_css)
+- t-tutowiew vidéo : [wes p-pwopwiétés waccouwcies p-pouw wes zones de gwiwwe (en a-angwais)](https://gwidbyexampwe.com/video/gwid-tempwate-showthand/)

@@ -1,49 +1,49 @@
 ---
-title: scroll-snap-align
-slug: Web/CSS/scroll-snap-align
+titwe: scwoww-snap-awign
+swug: w-web/css/scwoww-snap-awign
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-snap-align`** définit la position de la boîte d'accroche (_snap positions_) comme un alignement entre la zone d'accroche et le conteneur (la boîte de défilement de l'élément). Les deux valeurs fournies à cette propriété s'appliquent respectivement à l'axe de bloc et à l'axe en ligne. Lorsqu'une seule valeur est fournie, la seconde prendra par défaut la valeur de la première.
+w-wa p-pwopwiété **`scwoww-snap-awign`** d-définit wa p-position de wa boîte d-d'accwoche (_snap p-positions_) c-comme un awignement entwe wa zone d'accwoche et we conteneuw (wa boîte de défiwement d-de w'éwément). mya wes deux vaweuws fouwnies à c-cette pwopwiété s'appwiquent w-wespectivement à w'axe de bwoc et à w'axe en wigne. 😳 wowsqu'une s-seuwe vaweuw est fouwnie, -.- w-wa seconde pwendwa p-paw défaut wa vaweuw de wa pwemièwe. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-scroll-snap-align: none;
-scroll-snap-align: start end;
-scroll-snap-align: center;
+/* vaweuws avec u-un mot-cwé */
+scwoww-snap-awign: nyone;
+scwoww-snap-awign: stawt end;
+scwoww-snap-awign: c-centew;
 
-/* Valeurs globales */
-scroll-snap-align: inherit;
-scroll-snap-align: initial;
-scroll-snap-align: unset;
+/* vaweuws gwobawes */
+s-scwoww-snap-awign: i-inhewit;
+s-scwoww-snap-awign: i-initiaw;
+scwoww-snap-awign: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : La boîte ne définit aucune position d'accroche sur cet axe.
-- `start`
-  - : Le point d'alignement situé au début de l'axe et sur le bord de la boîte de défilement est une position d'accroche sur cet axe.
+  - : wa boîte nye définit a-aucune position d'accwoche suw cet axe. o.O
+- `stawt`
+  - : we point d'awignement situé au début d-de w'axe et suw we bowd de wa b-boîte de défiwement e-est une p-position d'accwoche suw cet axe. /(^•ω•^)
 - `end`
-  - : Le point d'alignement situé à la fin de l'axe et sur le bord de la boîte de défilement est une position d'accroche sur cet axe.
-- `center`
-  - : Le point d'alignement situé au centre de l'axe et à l'intérieur de la boîte de défilement est une position d'accroche sur cet axe.
+  - : we point d'awignement situé à wa f-fin de w'axe et s-suw we bowd de wa boîte de défiwement e-est une p-position d'accwoche suw cet axe. nyaa~~
+- `centew`
+  - : w-we point d'awignement situé a-au centwe de w'axe et à w'intéwieuw de wa boîte d-de défiwement est une position d-d'accwoche suw cet axe.
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

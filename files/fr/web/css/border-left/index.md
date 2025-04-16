@@ -1,133 +1,133 @@
 ---
-title: border-left
-slug: Web/CSS/border-left
+titwe: bowdew-weft
+swug: web/css/bowdew-weft
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-left`** est une propriété raccourcie qui permet de définir la bordure gauche d'un élément
+w-wa pwopwiété **`bowdew-weft`** e-est une pwopwiété w-waccouwcie q-qui pewmet de définiw w-wa bowduwe g-gauche d'un éwément
 
-Cette propriété raccourcie définit les valeurs des propriétés détaillées suivantes :
+c-cette p-pwopwiété waccouwcie définit wes vaweuws des pwopwiétés détaiwwées suivantes :
 
-- {{cssxref("border-left-width")}},
-- {{cssxref("border-left-style")}},
-- {{cssxref("border-left-color")}}.
+- {{cssxwef("bowdew-weft-width")}}, rawr x3
+- {{cssxwef("bowdew-weft-stywe")}}, OwO
+- {{cssxwef("bowdew-weft-cowow")}}. /(^•ω•^)
 
-Ces propriétés permettent de décrire la bordure du côté gauche d'un élément.
+c-ces pwopwiétés pewmettent de décwiwe wa bowduwe d-du côté gauche d'un éwément. 😳😳😳
 
-{{InteractiveExample("CSS Demo: border-left")}}
+{{intewactiveexampwe("css d-demo: bowdew-weft")}}
 
-```css interactive-example-choice
-border-left: solid;
+```css intewactive-exampwe-choice
+bowdew-weft: sowid;
 ```
 
-```css interactive-example-choice
-border-left: dashed red;
+```css i-intewactive-exampwe-choice
+bowdew-weft: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border-left: 1rem solid;
+```css i-intewactive-exampwe-choice
+bowdew-weft: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-left: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-weft: t-thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-left: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+bowdew-weft: 4mm widge wgba(211, 220, ( ͡o ω ͡o ) 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement">
+    t-this is a box with a-a bowdew awound it.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
 
-> [!NOTE]
-> Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
+> [!note]
+> wes twois vaweuws de wa pwopwiété waccouwcie peuvent êtwe définies dans ny'impowte q-quew owdwe et une ou deux d-d'entwe ewwes peuvent êtwe a-absentes. >_<
 >
-> Comme pour les autres propriétés raccourcies, `border-left` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
->
-> ```css
-> border-left-style: dotted;
-> border-left: thick green;
-> ```
->
-> est équivalent à :
+> c-comme pouw wes autwes pwopwiétés waccouwcies, >w< `bowdew-weft` définit t-toujouws wes vaweuws d-de toutes wes pwopwiétés q-qu'ewwe peut définiw, rawr m-même si cewwes-ci nye s-sont pas indiquées. 😳 pouw wes vaweuws q-qui nye sont pas indiquées, >w< on pwendwa wes v-vaweuws paw défaut. (⑅˘꒳˘) ainsi :
 >
 > ```css
-> border-left-style: dotted;
-> border-left: none thick green;
+> b-bowdew-weft-stywe: dotted;
+> bowdew-weft: t-thick gween;
 > ```
 >
-> et la valeur {{cssxref("border-left-style")}} fournie avant `border-left` est ignorée.
+> e-est équivawent à :
 >
-> La valeur par défaut de {{cssxref("border-left-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
+> ```css
+> bowdew-weft-stywe: dotted;
+> bowdew-weft: nyone thick gween;
+> ```
+>
+> et wa vaweuw {{cssxwef("bowdew-weft-stywe")}} fouwnie avant `bowdew-weft` est ignowée. OwO
+>
+> w-wa vaweuw paw d-défaut de {{cssxwef("bowdew-weft-stywe")}} étant `none`, (ꈍᴗꈍ) si on n-nye définit pas w-we stywe de wa b-bowduwe, 😳 on auwa wa vaweuw paw défaut, 😳😳😳 c'est-à-diwe qu'on auwa a-aucune bowduwe. mya
 
-## Syntaxe
+## syntaxe
 
 ```css
-border-left: 1px;
-border-left: 2px dotted;
-border-left: medium dashed green;
+bowdew-weft: 1px;
+bowdew-weft: 2px dotted;
+b-bowdew-weft: medium dashed gween;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<br-width>`
-  - : Voir {{cssxref("border-left-width")}}.
-- `<br-style>`
-  - : Voir {{cssxref("border-left-style")}}.
-- `<color>`
-  - : Voir {{cssxref("border-left-color")}}.
+- `<bw-width>`
+  - : v-voiw {{cssxwef("bowdew-weft-width")}}. mya
+- `<bw-stywe>`
+  - : v-voiw {{cssxwef("bowdew-weft-stywe")}}. (⑅˘꒳˘)
+- `<cowow>`
+  - : voiw {{cssxwef("bowdew-weft-cowow")}}. (U ﹏ U)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  border-left: 3px dotted orange;
+.exempwe {
+  bowdew-weft: 3px dotted o-owange;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  « MARMELADE D’ORANGES. »
+```htmw
+<p c-cwass="exempwe">
+  e-en passant e-ewwe pwit suw un wayon un pot de confituwe powtant cette étiquette, mya
+  « mawmewade d-d’owanges. ʘwʘ »
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","150")}}
+{{embedwivesampwe("exempwes","200","150")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

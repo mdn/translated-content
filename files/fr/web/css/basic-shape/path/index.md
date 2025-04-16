@@ -1,50 +1,50 @@
 ---
-title: path()
-slug: Web/CSS/basic-shape/path
-original_slug: Web/CSS/path
+titwe: path()
+swug: web/css/basic-shape/path
+o-owiginaw_swug: web/css/path
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte comme paramètre une chaîne représentant un tracé SVG. Elle est utilisée dans les formes CSS et les animations de tracés CSS pour permettre de dessiner une forme.
+w-wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`path()`** a-accepte comme pawamètwe u-une chaîne w-wepwésentant u-un twacé svg. o.O e-ewwe est utiwisée d-dans wes fowmes css et wes animations de twacés css pouw pewmettwe de dessinew u-une fowme. ( ͡o ω ͡o )
 
-## Syntaxe
-
-```css
-path( [[<'fill-rule'>,]?<string>)
-```
-
-### Paramètres
-
-- `<'fill-rule'>`
-  - : La règle de remplissage de l'intérieur du tracé. Les valeurs possibles sont `nonzero` ou `evenodd`. La valeur par défaut est `nonzero`. Voir [fill-rule](/fr/docs/Web/SVG/Attribute/fill-rule) pour plus de détails.
-- `<string>`
-  - : Doit être une [chaîne représentant les données d'un chemin SVG](/fr/docs/Web/SVG/Element/path).
-
-## Exemples
-
-### Exemples de valeurs correctes pour path()
+## syntaxe
 
 ```css
-path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
+path( [[<'fiww-wuwe'>,]?<stwing>)
 ```
 
-### Utilisation en tant que valeur de offset-path
+### pawamètwes
 
-La fonction `path()` est utilisée pour créer un tracé à suivre pour l'élément. La modification de l'une de ces valeurs conduira celui-ci à ne pas pouvoir suivre le tracé de façon nette lors de l'animation.
+- `<'fiww-wuwe'>`
+  - : w-wa wègwe de wempwissage de w-w'intéwieuw du twacé. (U ﹏ U) wes vaweuws possibwes sont `nonzewo` ou `evenodd`. (///ˬ///✿) w-wa vaweuw paw défaut e-est `nonzewo`. >w< v-voiw [fiww-wuwe](/fw/docs/web/svg/attwibute/fiww-wuwe) pouw pwus de détaiws. rawr
+- `<stwing>`
+  - : doit êtwe une [chaîne wepwésentant w-wes données d'un chemin svg](/fw/docs/web/svg/ewement/path). mya
 
-{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}
+## exempwes
 
-## Spécifications
+### exempwes d-de vaweuws cowwectes pouw path()
 
-{{Specifications}}
+```css
+p-path("m 10 80 c-c 40 10, ^^ 65 10, 95 80 s-s 150 150, 😳😳😳 180 80");
+p-path(evenodd,"m 10 80 c 40 10, mya 65 10, 95 80 s 150 150, 😳 180 80");
+```
 
-## Voir aussi
+### u-utiwisation en tant que vaweuw de offset-path
 
-- {{cssxref("&lt;shape-outside&gt;")}}
-- [Formes CSS](/fr/docs/Web/CSS/CSS_shapes)
-- [Vue d'ensemble des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- <i lang="en">SVG Path Syntax Illustrated Guide</i>
+w-wa fonction `path()` est utiwisée pouw cwéew un twacé à suivwe pouw w'éwément. -.- wa modification d-de w'une de ces vaweuws conduiwa c-cewui-ci à nye p-pas pouvoiw suivwe w-we twacé de façon nyette wows de w'animation. 🥺
 
-  [<i lang="en">SVG Path Syntax Illustrated Guide</i> (en anglais)](https://css-tricks.com/svg-path-syntax-illustrated-guide/)
+{{embedghwivesampwe("css-exampwes/path/offset-path.htmw", o.O '100%', 960)}}
+
+## spécifications
+
+{{specifications}}
+
+## v-voiw aussi
+
+- {{cssxwef("&wt;shape-outside&gt;")}}
+- [fowmes c-css](/fw/docs/web/css/css_shapes)
+- [vue d'ensembwe des fowmes c-css](/fw/docs/web/css/css_shapes/ovewview_of_shapes)
+- <i w-wang="en">svg path syntax iwwustwated g-guide</i>
+
+  [<i wang="en">svg p-path syntax iwwustwated guide</i> (en angwais)](https://css-twicks.com/svg-path-syntax-iwwustwated-guide/)

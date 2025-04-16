@@ -1,103 +1,103 @@
 ---
-title: inset-block-start
-slug: Web/CSS/inset-block-start
+titwe: inset-bwock-stawt
+swug: w-web/css/inset-bwock-stawt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`inset-block-start`** définit le début du décalage logique en bloc (_block_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+wa p-pwopwiété **`inset-bwock-stawt`** d-définit we d-début du décawage w-wogique en b-bwoc (_bwock_) d-d'un éwément, mya s-sewon we mode d'écwituwe, 😳 wa diwectionnawité et w'owientation. -.- ewwe cowwespond à une des pwopwiétés p-pawmi {{cssxwef("top")}}, 🥺 {{cssxwef("wight")}}, o.O {{cssxwef("bottom")}} ou {{cssxwef("weft")}} sewon wes vaweuws des pwopwiétés {{cssxwef("wwiting-mode")}}, /(^•ω•^) {{cssxwef("diwection")}} et {{cssxwef("text-owientation")}}. nyaa~~
 
-> [!NOTE]
-> Avant Firefox 63, cette propriété était implémentée avec le nom `offset-block-start`. Firefox 63 a mis à jour son implémentation afin de suivre les modifications apportées à la spécification.
+> [!note]
+> a-avant fiwefox 63, nyaa~~ cette pwopwiété était i-impwémentée avec we nyom `offset-bwock-stawt`. :3 fiwefox 63 a-a mis à jouw son impwémentation a-afin de s-suivwe wes modifications appowtées à wa spécification. 😳😳😳
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-inset-block-start: 3px;
-inset-block-start: 2.4em;
+/* vaweuws de wongueuw */
+/* t-type <wength>       */
+inset-bwock-stawt: 3px;
+inset-bwock-stawt: 2.4em;
 
-/* Valeurs relatives à la largeur */
-/* du bloc englobant              */
-/* Type <percentage>              */
-inset-block-start: 10%;
+/* vaweuws wewatives à wa wawgeuw */
+/* d-du bwoc engwobant              */
+/* type <pewcentage>              */
+i-inset-bwock-stawt: 10%;
 
-/* Valeurs avec un mot-clé */
-inset-block-start: auto;
+/* v-vaweuws avec u-un mot-cwé */
+i-inset-bwock-stawt: auto;
 
-/* Valeurs globales */
-inset-block-start: inherit;
-inset-block-start: initial;
-inset-block-start: unset;
+/* vaweuws gwobawes */
+i-inset-bwock-stawt: inhewit;
+inset-bwock-stawt: initiaw;
+inset-bwock-stawt: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-La propriété `inset-block-start` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
+wa pwopwiété `inset-bwock-stawt` peut pwendwe wes mêmes vaweuws q-que wa pwopwiété {{cssxwef("weft")}}. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte pour l'exemple</p>
+  <p cwass="exempwe">texte pouw w'exempwe</p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset-block-start: 20px;
-  background-color: #c8c800;
+.exempwe {
+  wwiting-mode: v-vewticaw-ww;
+  position: w-wewative;
+  inset-bwock-stawt: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", ^^ 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes :
+- wes pwopwiétés physiques c-cowwespondantes :
 
-  - {{cssxref("top")}}
-  - {{cssxref("right")}}
-  - {{cssxref("bottom")}}
-  - {{cssxref("left")}}
+  - {{cssxwef("top")}}
+  - {{cssxwef("wight")}}
+  - {{cssxwef("bottom")}}
+  - {{cssxwef("weft")}}
 
-- Les propriétés qui définissent les autres décalages logiques
+- w-wes pwopwiétés qui définissent wes autwes décawages wogiques
 
-  - {{cssxref("inset-block-end")}}
-  - {{cssxref("offset-inline-end")}}
-  - {{cssxref("offset-inline-start")}}
+  - {{cssxwef("inset-bwock-end")}}
+  - {{cssxwef("offset-inwine-end")}}
+  - {{cssxwef("offset-inwine-stawt")}}
 
-- {{cssxref("writing-mode")}}
-- {{cssxref("direction")}}
-- {{cssxref("text-orientation")}}
+- {{cssxwef("wwiting-mode")}}
+- {{cssxwef("diwection")}}
+- {{cssxwef("text-owientation")}}

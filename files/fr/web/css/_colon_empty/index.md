@@ -1,86 +1,86 @@
 ---
-title: :empty
-slug: Web/CSS/:empty
+titwe: :empty
+swug: web/css/:empty
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:empty`** correspond à un élément qui n'a aucun enfant. Seules les feuilles de l'arbre et le texte (espaces inclus) sont pris en compte. Les commentaires, les attributs ou le contenu généré en CSS avec {{cssxref("content")}} n'ont pas d'influence sur le contenu de l'élément (autrement dit, si un élément ne contient que des commentaires, il sera considéré comme vide).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:empty`** c-cowwespond à u-un éwément q-qui ny'a aucun e-enfant. mya seuwes w-wes feuiwwes de w-w'awbwe et we texte (espaces i-incwus) sont pwis en compte. mya wes commentaiwes, (⑅˘꒳˘) wes attwibuts ou we c-contenu généwé en css avec {{cssxwef("content")}} ny'ont pas d-d'infwuence suw we contenu de w'éwément (autwement d-dit, (U ﹏ U) si un éwément nye contient que des commentaiwes, mya iw s-sewa considéwé comme vide). ʘwʘ
 
 ```css
-/* Cible tous les éléments <div> qui */
-/* n'ont pas de contenu */
+/* c-cibwe t-tous wes éwéments <div> qui */
+/* ny'ont pas de contenu */
 div:empty {
-  background: lime;
+  backgwound: w-wime;
 }
 ```
 
-> [!NOTE]
-> Avec CSS4 Selectors, le sélecteur `:empty` a été modifié afin de se comporter comme {{CSSxRef(":-moz-only-whitespace")}} mais, à l'heure actuelle, aucun navigateur ne prend en charge cette fonctionnalité.
+> [!note]
+> avec css4 sewectows, (˘ω˘) we séwecteuw `:empty` a été modifié afin d-de se compowtew comme {{cssxwef(":-moz-onwy-whitespace")}} m-mais, (U ﹏ U) à w-w'heuwe actuewwe, ^•ﻌ•^ a-aucun nyavigateuw n-nye pwend en chawge cette fonctionnawité. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 body {
-  display: flex;
-  justify-content: space-around;
+  d-dispway: fwex;
+  justify-content: space-awound;
 }
 
 .box {
-  background: red;
+  backgwound: wed;
   height: 100px;
   width: 100px;
 }
 
 .box:empty {
-  background: blue;
+  b-backgwound: bwue;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="box"><!-- Je serai bleu. --></div>
-<div class="box">Je serai rouge.</div>
-<div class="box">
-  <!-- Je serai rouge à cause des espaces autour du commentaire -->
+```htmw
+<div c-cwass="box"><!-- j-je sewai bweu. :3 --></div>
+<div cwass="box">je sewai wouge.</div>
+<div c-cwass="box">
+  <!-- j-je sewai wouge à cause des espaces a-autouw du commentaiwe -->
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples','100%','105')}}
+{{embedwivesampwe('exempwes','100%','105')}}
 
-## Accessibilité
+## a-accessibiwité
 
-Les technologies d'assistance telles que les lecteurs d'écran ne peuvent pas analyser un contenu interactif vide. Tout contenu interactif doit avoir un nom accessible, fourni sous la forme d'une valeur textuelle via l'élément parent du contrôle ({{HTMLElement("a")}}, {{HTMLElement("button")}}, etc.). Les noms accessibles pemettent d'exposer le contrôle interactif au sein de [l'arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility), une API communiquant des informations qui peuvent être utilisées par les technologies d'assistance.
+wes technowogies d-d'assistance tewwes q-que wes wecteuws d'écwan nye peuvent pas anawysew u-un contenu intewactif vide. ^^;; tout c-contenu intewactif doit avoiw u-un nyom accessibwe, 🥺 f-fouwni sous wa fowme d'une vaweuw textuewwe via w'éwément pawent du contwôwe ({{htmwewement("a")}}, (⑅˘꒳˘) {{htmwewement("button")}}, etc.). nyaa~~ wes nyoms accessibwes p-pemettent d'exposew w-we contwôwe intewactif a-au sein de [w'awbwe d-d'accessibiwité](/fw/docs/weawn/accessibiwity/nani_is_accessibiwity), :3 u-une api communiquant des infowmations qui peuvent êtwe u-utiwisées paw wes technowogies d'assistance. ( ͡o ω ͡o )
 
-Le texte fournissant le nom accessible peut être masqué grâce [à des propriétés](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) afin de le retirer visuellement mais de le conserver pour les technologies d'assistance. Cette méthode est généralement utilisée pour les boutons utilisant une simple icône comme indication.
+we texte fouwnissant we nyom a-accessibwe peut êtwe masqué gwâce [à d-des pwopwiétés](https://gomakethings.com/hidden-content-fow-bettew-a11y/#hiding-the-wink) a-afin de we w-wetiwew visuewwement mais de we c-consewvew pouw wes t-technowogies d-d'assistance. cette m-méthode est généwawement utiwisée pouw wes b-boutons utiwisant u-une simpwe i-icône comme indication. mya
 
-- [Qu'est-ce qu'un nom accessible ? The Paciello Group (en anglais)](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
-- <i lang="en">Hidden content for better a11y</i>
+- [qu'est-ce q-qu'un nyom a-accessibwe ? the paciewwo gwoup (en angwais)](https://devewopew.paciewwogwoup.com/bwog/2017/04/nani-is-an-accessibwe-name/)
+- <i wang="en">hidden c-content fow bettew a11y</i>
 
-  [<i lang="en">Hidden content for better a11y</i> (en anglais)](https://gomakethings.com/hidden-content-for-better-a11y/)
+  [<i wang="en">hidden content fow bettew a11y</i> (en angwais)](https://gomakethings.com/hidden-content-fow-bettew-a11y/)
 
-- [Comprendre la règle WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- <i lang="en">Understanding Success Criterion 2.4.4</i>
+- [compwendwe w-wa wègwe wcag 2.4](/fw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.4_—_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- <i wang="en">undewstanding success c-cwitewion 2.4.4</i>
 
-  [<i lang="en">Understanding Success Criterion 2.4.4</i> (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
+  [<i w-wang="en">undewstanding s-success cwitewion 2.4.4</i> (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-wefs.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":blank")}}{{Experimental_inline}}
+- {{cssxwef(":bwank")}}{{expewimentaw_inwine}}

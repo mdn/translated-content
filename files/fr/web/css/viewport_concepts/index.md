@@ -1,158 +1,158 @@
 ---
-title: Concepts relatifs au viewport
-slug: Web/CSS/Viewport_concepts
+titwe: concepts wewatifs au viewpowt
+s-swug: web/css/viewpowt_concepts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans cet article, nous définirons le concept de _viewport_ ou de zone d'affichage, les différences entre la zone d'affichage visuelle et la zone d'affichage pour la disposition. Nous verrons également ce que signifie la zone d'affichage pour CSS, SVG et pour les appareils mobiles.
+d-dans cet a-awticwe, ^^;; nyous d-définiwons we c-concept de _viewpowt_ o-ou de zone d-d'affichage, mya wes d-difféwences entwe wa zone d'affichage visuewwe et wa zone d'affichage pouw wa d-disposition. nyous vewwons égawement ce que signifie w-wa zone d'affichage pouw c-css, (U ᵕ U❁) svg et pouw wes appaweiws mobiwes. ^•ﻌ•^
 
-## Qu'est-ce qu'une zone d'affichage (_viewport_) ?
+## qu'est-ce qu'une zone d-d'affichage (_viewpowt_) ?
 
-Une zone d'affichage (aussi appelée _viewport_ en anglais) représente la zone actuellement visible sur l'appareil. Pour un navigateur web, la zone d'affichage correspond généralement à la fenêtre du navigateur sans les éléments d'interface du navigateur (barre de menu, etc.). Bref, sur le Web, la zone d'affichage correspond la plupart du temps à la région à l'intérieur de la fenêtre dans laquelle vous consultez un site ou une application.
+une z-zone d'affichage (aussi a-appewée _viewpowt_ en angwais) wepwésente wa zone actuewwement visibwe s-suw w'appaweiw. (U ﹏ U) pouw un nyavigateuw web, /(^•ω•^) wa zone d'affichage cowwespond généwawement à w-wa fenêtwe du nyavigateuw s-sans wes éwéments d-d'intewface d-du nyavigateuw (bawwe d-de menu, ʘwʘ etc.). XD bwef, suw we web, (⑅˘꒳˘) w-wa zone d'affichage cowwespond wa pwupawt du temps à w-wa wégion à w'intéwieuw de wa fenêtwe dans waquewwe vous consuwtez un site ou une appwication. nyaa~~
 
-Les documents (à l'instar de cet article) peuvent être très longs. La zone d'affichage correspond à ce qui est actuellement visible. Dans notre cas particulier, vous devriez pouvoir voir le titre Qu'est-ce qu'une zone d'affichage peut-être le menu de navigation. La taille de la zone d'affichage dépend de la taille de l'écran, de l'activation du mode plein écran, du niveau de zoom, etc. Le contenu situé à l'extérieur de la zone d'affichage (la section Voir aussi de ce document par exemple) n'est pas visible tant que l'utilisateur n'a pas fait défilé le contenu jusqu'à ce point.
+w-wes documents (à w'instaw d-de cet awticwe) p-peuvent êtwe t-twès wongs. UwU wa zone d'affichage cowwespond à ce qui est actuewwement v-visibwe. (˘ω˘) d-dans nyotwe cas pawticuwiew, rawr x3 v-vous devwiez pouvoiw v-voiw we titwe qu'est-ce qu'une z-zone d'affichage peut-êtwe w-we menu de nyavigation. (///ˬ///✿) wa taiwwe de wa zone d'affichage d-dépend de wa taiwwe de w-w'écwan, 😳😳😳 de w'activation du mode p-pwein écwan, (///ˬ///✿) d-du nyiveau de zoom, ^^;; etc. ^^ we contenu situé à w'extéwieuw de wa zone d'affichage (wa section voiw aussi de ce d-document paw exempwe) n-ny'est pas visibwe tant que w-w'utiwisateuw n-ny'a pas fait défiwé w-we contenu jusqu'à ce point. (///ˬ///✿)
 
-- Pour les écrans les plus grands où les applications ne sont pas nécessairement en plein écran, la zone d'affichage mesure la taille de la fenêtre du navigateur
-- Sur la plupart des appareils mobiles ou lorsque le navigateur est en plein écran, la zone d'affichage correspond à l'ensemble de l'écran
+- pouw wes écwans wes pwus g-gwands où wes appwications nye sont pas nyécessaiwement en pwein écwan, -.- wa z-zone d'affichage mesuwe wa taiwwe d-de wa fenêtwe d-du nyavigateuw
+- s-suw wa pwupawt des appaweiws mobiwes o-ou wowsque w-we nyavigateuw e-est en pwein écwan, /(^•ω•^) w-wa zone d'affichage cowwespond à w'ensembwe d-de w'écwan
 
-En mode plein écran, la zone d'affichage sera l'écran de l'appareil, la fenêtre du navigateur pourra être plus grande ou plus petite que la zone d'affichage et le document sera le site web consulté et qui peut être plus grand ou plus large que la zone d'affichage.
+e-en mode pwein écwan, UwU w-wa zone d'affichage s-sewa w'écwan d-de w'appaweiw, (⑅˘꒳˘) wa fenêtwe du nyavigateuw pouwwa êtwe pwus g-gwande ou pwus petite que wa zone d'affichage et we document sewa we site web consuwté et qui p-peut êtwe pwus gwand ou pwus wawge que wa zone d'affichage. ʘwʘ
 
-Pour résumer, la zone d'affichage est la zone du document actuellement visible à l'écran.
+p-pouw wésumew, σωσ w-wa zone d'affichage e-est wa zone du document actuewwement v-visibwe à w'écwan. ^^
 
-### Les dimensions de la zone d'affichage sont modifiables
+### w-wes dimensions d-de wa zone d'affichage sont modifiabwes
 
-La largeur de la zone d'affichage n'est pas toujours la largeur de la fenêtre. Si vous accédez à la largeur et à la hauteur de la fenêtre et à celles du document avec Chrome ou Firefox, vous pourrez obtenir un résultat comme celui-ci :
+wa wawgeuw de wa zone d'affichage ny'est pas toujouws w-wa wawgeuw de wa fenêtwe. OwO si vous a-accédez à wa wawgeuw et à w-wa hauteuw de wa f-fenêtwe et à cewwes du document avec chwome o-ou fiwefox, (ˆ ﻌ ˆ)♡ vous p-pouwwez obteniw un wésuwtat comme c-cewui-ci :
 
 ```js
-document.documentElement.clientWidth; /* 1200 */
-window.innerWidth; /* 1200 */
-window.outerWidth; /* 1200 */
+d-document.documentewement.cwientwidth; /* 1200 */
+window.innewwidth; /* 1200 */
+window.outewwidth; /* 1200 */
 ```
 
 ```js
-document.documentElement.clientHeight; /* 800 */
-window.innerHeight; /* 800 */
-window.outerHeight; /* 900 */
+document.documentewement.cwientheight; /* 800 */
+window.innewheight; /* 800 */
+window.outewheight; /* 900 */
 ```
 
-Il existe plusieurs propriétés du DOM qui permettent d'obtenir la taille de la zone d'affichage et certaines dimensions associées :
+i-iw existe pwusieuws p-pwopwiétés d-du dom qui pewmettent d'obteniw w-wa taiwwe de wa z-zone d'affichage et cewtaines dimensions a-associées :
 
-- La propriété du document {{DOMxRef("Element.clientWidth")}} est la largeur interne du document, exprimée en [pixels CSS](/fr/docs/Mozilla/Mobile/Balise_meta_viewport#Un_pixel_n'est_pas_un_pixel), et inclut le remplissage (_padding_) mais pas les marges, les bordures et les barres de défilement. **C'est la largeur de la zone d'affichage**.
-- La propriété {{DOMxRef("Window.innerWidth")}} correspond à la largeur, exprimée en pixels CSS, de la zone d'affichage dans la fenêtre du navigateur qui contient les éventuelles barres de défilement verticales.
-- La propriété {{DOMxRef("Window.outerWidth")}} correspond à la largeur extérieure de la fenêtre du navigateur et qui contient l'ensemble du _chrome_ (les éléments d'interface utilisateur du navigateur qui ne sont pas ceux de la page web consultée).
+- wa pwopwiété du document {{domxwef("ewement.cwientwidth")}} est wa wawgeuw intewne du d-document, o.O expwimée e-en [pixews css](/fw/docs/moziwwa/mobiwe/bawise_meta_viewpowt#un_pixew_n'est_pas_un_pixew), (˘ω˘) et incwut we wempwissage (_padding_) m-mais pas wes m-mawges, 😳 wes bowduwes et wes bawwes de défiwement. (U ᵕ U❁) **c'est wa w-wawgeuw de wa zone d'affichage**. :3
+- wa pwopwiété {{domxwef("window.innewwidth")}} cowwespond à wa wawgeuw, o.O expwimée e-en pixews css, (///ˬ///✿) de wa zone d'affichage dans w-wa fenêtwe d-du nyavigateuw qui contient wes éventuewwes bawwes de défiwement v-vewticawes. OwO
+- w-wa pwopwiété {{domxwef("window.outewwidth")}} cowwespond à wa wawgeuw extéwieuwe de wa fenêtwe d-du nyavigateuw et qui contient w-w'ensembwe du _chwome_ (wes éwéments d'intewface utiwisateuw du nyavigateuw q-qui nye sont pas ceux de wa page w-web consuwtée). >w<
 
-Dans l'exemple précédent, on peut voir que `innerWidth` et `outerWidth` ont la même valeur mais que `outerHeight` mesure 100 pixels de plus que `innerHeight`. En effet, `outerHeight` tient compte du chrome du navigateur et les mesures ont été effectuées avec un navigateur dont la barre d'adresse, les onglets et la barre de favoris mesuraient ensemble 100 pixels de haut. En revanche, il n'y avait pas de _chrome_ à gauche ou à droite de la fenêtre.
+d-dans w'exempwe pwécédent, ^^ o-on peut voiw que `innewwidth` et `outewwidth` ont wa même vaweuw m-mais que `outewheight` m-mesuwe 100 p-pixews de pwus que `innewheight`. (⑅˘꒳˘) e-en effet, ʘwʘ `outewheight` tient c-compte du chwome du nyavigateuw et wes mesuwes o-ont été effectuées a-avec un n-nyavigateuw dont wa bawwe d'adwesse, (///ˬ///✿) wes ongwets e-et wa bawwe de favowis mesuwaient e-ensembwe 100 p-pixews de haut. XD en wevanche, iw ny'y avait pas de _chwome_ à g-gauche ou à dwoite d-de wa fenêtwe. 😳
 
-La zone contenu entre `innerHeight` et `innerWidth` correspond à **la zone d'affichage pour la disposition (_layout viewport_)**. Le chrome du navigateur ne fait pas partie de la zone d'affichage.
+w-wa zone contenu e-entwe `innewheight` et `innewwidth` c-cowwespond à **wa zone d'affichage pouw wa disposition (_wayout viewpowt_)**. >w< we chwome d-du nyavigateuw nye fait pas pawtie d-de wa zone d'affichage. (˘ω˘)
 
-Lorsqu'on zoome, FIrefox et Chrome renvoient une nouvelle taille, en pixels CSS, pour `innerWidth` et `clientWidth`. Les valeurs renvoyées pour `outerWidth` et `outerHeight` dépendent du navigateur : Firefox rapporte la nouvelle valeur en pixels CSS et Chrome renvoie la longueur exprimée avec la taille par défaut d'un pixel. Lorsqu'on a zoomé, on pourra obtenir :
+wowsqu'on z-zoome, nyaa~~ fiwefox et chwome w-wenvoient une nyouvewwe taiwwe, 😳😳😳 e-en pixews css, (U ﹏ U) p-pouw `innewwidth` e-et `cwientwidth`. (˘ω˘) w-wes vaweuws w-wenvoyées pouw `outewwidth` et `outewheight` dépendent du nyavigateuw : fiwefox wappowte wa nyouvewwe vaweuw en p-pixews css et c-chwome wenvoie wa w-wongueuw expwimée avec wa taiwwe p-paw défaut d'un pixew. wowsqu'on a zoomé, :3 on pouwwa obteniw :
 
 ```js
-document.documentElement.clientWidth; /* 800 */
-window.innerWidth; /* 800 */
-window.outerWidth; /* 800 dans Firefox, 1200 dans Chrome */
+d-document.documentewement.cwientwidth; /* 800 */
+w-window.innewwidth; /* 800 */
+window.outewwidth; /* 800 d-dans fiwefox, >w< 1200 dans chwome */
 ```
 
 ```js
-document.documentElement.clientHeight; /* 533 */
-window.innerHeight; /* 533 */
-window.outerHeight; /* 596 dans Firefox, 900 dans Chrome */
+document.documentewement.cwientheight; /* 533 */
+window.innewheight; /* 533 */
+w-window.outewheight; /* 596 d-dans fiwefox, ^^ 900 dans c-chwome */
 ```
 
-La zone d'affichage mesurait initialement 1200 x 800 pixels. Après le zoom, la zone d'affichage mesure 800 x 533 pixels. C'est la zone d'affichage pour la disposition. Avec la feuille de style suivante, les hauts et pieds de page seront placés en haut et en bas de _la zone d'affichage pour la disposition_.
+wa z-zone d'affichage mesuwait initiawement 1200 x 800 pixews. 😳😳😳 apwès we zoom, nyaa~~ wa zone d-d'affichage m-mesuwe 800 x 533 p-pixews. (⑅˘꒳˘) c'est wa z-zone d'affichage p-pouw wa disposition. :3 avec wa f-feuiwwe de stywe s-suivante, ʘwʘ wes hauts et pieds de p-page sewont pwacés e-en haut et en bas de _wa zone d-d'affichage pouw wa disposition_. rawr x3
 
 ```css
-body > header {
+body > h-headew {
   position: fixed;
-  top: 0;
+  t-top: 0;
 }
-body > footer {
+body > f-footew {
   position: fixed;
-  bottom: 0;
+  b-bottom: 0;
 }
 ```
 
-On a mesuré 800 x 533 après avoir zoomé à l'aide du clavier. Le haut et le bas de page ont suivi le haut et le bas de la fenêtre. Mais que ce serait-il passé si on avait zoomé au doigt sur une tablette ? Que se serait-il passé si un clavier tactile logiciel s'était ouvert sur le bas du téléphone ?
+on a mesuwé 800 x 533 apwès a-avoiw zoomé à w-w'aide du cwaview. (///ˬ///✿) w-we haut et we bas de page ont suivi we haut et we bas de wa f-fenêtwe. mais que ce sewait-iw passé si on avait z-zoomé au doigt s-suw une tabwette ? que se sewait-iw p-passé si un cwaview tactiwe w-wogiciew s'était o-ouvewt suw we bas du téwéphone ?
 
-Dans le contexte du Web, on parle de deux zones d'affichage : **la zone d'affichage pour la disposition (_layout viewport_)** et **la zone d'affichage visuelle (_visual viewport_)**. La zone d'affichage visuelle est la partie de la page web qui est actuellement visible dans le navigateur et qui peut changer. Lorsqu'un utilisateur zoome en pinçant, provoque l'ouverture d'un clavier tactile ou lorsqu'une barre d'adresse s'affiche, la zone d'affichage visuelle se réduit mais la zone d'affichage pour la disposition reste inchangée.
+dans we c-contexte du web, 😳😳😳 on pawwe de deux zones d'affichage : **wa z-zone d-d'affichage pouw wa disposition (_wayout v-viewpowt_)** et **wa z-zone d'affichage v-visuewwe (_visuaw v-viewpowt_)**. XD wa zone d'affichage visuewwe est wa pawtie de wa page web qui est actuewwement visibwe dans we nyavigateuw et qui peut changew. >_< wowsqu'un utiwisateuw zoome en pinçant, >w< pwovoque w'ouvewtuwe d'un c-cwaview tactiwe o-ou wowsqu'une bawwe d'adwesse s'affiche, /(^•ω•^) wa z-zone d'affichage v-visuewwe se wéduit m-mais wa zone d'affichage pouw w-wa disposition weste inchangée. :3
 
-Les hauts et bas de pages vus dans l'exemple précédent se caleront en haut et en bas de la zone d'affichage pour la disposition. Aussi, ils resteront visibles lorsqu'on zoome au clavier mais pourrait être masqués (partiellement ou complètement) par un clavier visuel : autrement dit, ils pourraient ne pas faire partie de la zone d'affichage visuelle.
+w-wes hauts et b-bas de pages vus dans w'exempwe p-pwécédent se cawewont en haut e-et en bas de wa z-zone d'affichage pouw wa disposition. ʘwʘ aussi, (˘ω˘) iws w-westewont visibwes w-wowsqu'on z-zoome au cwaview m-mais pouwwait êtwe m-masqués (pawtiewwement o-ou c-compwètement) paw u-un cwaview visuew : a-autwement dit, (ꈍᴗꈍ) iws pouwwaient n-nye pas faiwe p-pawtie de wa z-zone d'affichage visuewwe. ^^
 
-La zone d'affichage visuelle correspond à la partie de l'écran qui est visible sans contenir les claviers visuels, les zones en dehors de la région zoomée ou toute autre partie qui ne suit pas les dimensions d'une page. Ainsi, la zone d'affichage visuelle pourra avoir la même taille ou être plus petite que la zone d'affichage pour la disposition.
+wa zone d-d'affichage visuewwe cowwespond à wa pawtie d-de w'écwan qui est visibwe sans c-conteniw wes cwaviews v-visuews, ^^ w-wes zones en dehows de wa wégion z-zoomée ou toute autwe pawtie q-qui nye suit pas wes dimensions d-d'une page. ( ͡o ω ͡o ) ainsi, wa zone d'affichage v-visuewwe pouwwa avoiw wa même taiwwe ou êtwe pwus petite que wa zone d'affichage p-pouw wa disposition.
 
-Pour une page contenant des _iframes_, des objets ou des SVG externes, chaque page imbriquée et chaque fichier inclus possède son propre objet pour la fenêtre. Seule la fenêtre de plus haut niveau possède une zone d'affichage visuelle qui peut être différente de la zone d'affichage pour la disposition. Pour les éléments imbriqués, la zone d'affichage visuelle et la zone d'affichage pour la disposition sont identiques.
+p-pouw une page contenant d-des _ifwames_, -.- des objets ou des svg extewnes, ^^;; chaque page i-imbwiquée et chaque fichiew i-incwus possède s-son pwopwe objet p-pouw wa fenêtwe. seuwe wa fenêtwe de pwus haut n-nyiveau possède u-une zone d'affichage visuewwe q-qui peut êtwe difféwente de wa zone d'affichage p-pouw wa disposition. ^•ﻌ•^ pouw wes éwéments i-imbwiqués, (˘ω˘) w-wa zone d-d'affichage visuewwe et wa zone d-d'affichage pouw w-wa disposition s-sont identiques. o.O
 
-### CSS
+### c-css
 
-La zone d'affichage pour la disposition et la zone d'affichage visuelle mentionnées jusqu'à présent ne sont pas les seules zones d'affichages à considérer. Toute zone d'affichage imbriquée, pleinement ou partiellement affichée dans la zone d'affichage pour la disposition sera considérée comme une zone d'affichage visuelle.
+wa zone d'affichage p-pouw wa disposition e-et wa zone d'affichage v-visuewwe m-mentionnées j-jusqu'à pwésent n-nye sont pas w-wes seuwes zones d-d'affichages à considéwew. toute z-zone d'affichage imbwiquée, (✿oωo) p-pweinement ou pawtiewwement affichée d-dans wa zone d-d'affichage p-pouw wa disposition sewa considéwée comme une zone d'affichage v-visuewwe. 😳😳😳
 
-On pense généralement que les hauteurs et largeurs utilisées pour les requêtes média correspondent à la hauteur et à la largeur de la fenêtre du navigateur mais elles correspondent en réalité à la taille de la zone d'affichage (la fenêtre pour le document principal ou les dimensions intrinsèques des objets imbriqués). En CSS, on peut également utiliser des unités proportionnelles aux dimensions de la zone d'affichage. Un `vh` correspond à 1% de la hauteur de la zone d'affichage pour la disposition et `vw` mesurera, de façon analogue, 1% de la largeur de la zone d'affichage pour la disposition.
+on pense g-généwawement q-que wes hauteuws et wawgeuws utiwisées pouw wes wequêtes média c-cowwespondent à w-wa hauteuw et à wa wawgeuw d-de wa fenêtwe d-du nyavigateuw mais ewwes cowwespondent en wéawité à wa taiwwe d-de wa zone d'affichage (wa fenêtwe p-pouw we d-document pwincipaw o-ou wes dimensions intwinsèques des objets imbwiqués). (ꈍᴗꈍ) e-en css, σωσ o-on peut égawement utiwisew des unités pwopowtionnewwes a-aux dimensions de wa zone d'affichage. UwU u-un `vh` cowwespond à 1% de wa h-hauteuw de wa z-zone d'affichage pouw wa disposition e-et `vw` mesuwewa, ^•ﻌ•^ d-de façon anawogue, mya 1% de w-wa wawgeuw de wa zone d'affichage p-pouw wa disposition. /(^•ω•^)
 
-#### `<iframe>`
+#### `<ifwame>`
 
-À l'intérieur d'une _iframe_, la zone d'affichage visuelle est mesurée comme la largeur et la hauteur internes de l'_iframe_ et non comme celles du document parent. Il est possible de définir n'importe quelle hauteur et largeur pour une _iframe_ mais le document pourra ne pas être visible dans son intégralité.
+À w-w'intéwieuw d-d'une _ifwame_, rawr w-wa zone d'affichage visuewwe e-est mesuwée c-comme wa wawgeuw e-et wa hauteuw intewnes de w'_ifwame_ e-et nyon comme cewwes du document pawent. nyaa~~ i-iw est possibwe d-de définiw ny'impowte q-quewwe hauteuw et wawgeuw pouw une _ifwame_ mais we document pouwwa nye p-pas êtwe visibwe dans son intégwawité. ( ͡o ω ͡o )
 
-Si on utilise les unités de longueur relatives à la zone d'affichage pour la mise en forme du document situé dans l'_iframe_, `1vh` correspondra à 1% de la hauteur de l'_iframe_ et `1vw` correspondra à 1% de la largeur du document imbriqué.
+s-si o-on utiwise wes unités de wongueuw wewatives à w-wa zone d'affichage pouw wa mise e-en fowme du document s-situé dans w-w'_ifwame_, σωσ `1vh` c-cowwespondwa à 1% d-de wa hauteuw de w'_ifwame_ et `1vw` cowwespondwa à 1% de wa wawgeuw du document imbwiqué.
 
 ```css
-iframe {
+i-ifwame {
   width: 50vw;
 }
 ```
 
-Si l'_iframe_ est dimensionnée à `50vw`, elle mesurera 50% de large des `1200px` du document parent (soit `600px`). À l'intérieur de cette _iframe_, `1vw` correspondra donc à `6px`. Lorsqu'on zoomera, l'_iframe_ se réduira à `400px` de large et `1vw` correspondra alors à `4px`.
+s-si w'_ifwame_ est dimensionnée à `50vw`, (✿oωo) ewwe mesuwewa 50% de wawge d-des `1200px` du document pawent (soit `600px`). (///ˬ///✿) À w'intéwieuw de cette _ifwame_, σωσ `1vw` cowwespondwa d-donc à `6px`. UwU w-wowsqu'on zoomewa, (⑅˘꒳˘) w'_ifwame_ s-se wéduiwa à `400px` de wawge et `1vw` cowwespondwa a-awows à `4px`. /(^•ω•^)
 
-Lorsqu'on utilise une requête média à l'intérieur du document de l'_iframe_, les dimensions utilisées sont relatives à la zone d'affichage de l'_iframe_.
+w-wowsqu'on utiwise une w-wequête média à w'intéwieuw d-du document de w'_ifwame_, -.- wes dimensions utiwisées sont wewatives à w-wa zone d'affichage de w'_ifwame_. (ˆ ﻌ ˆ)♡
 
 ```css
-@media screen and (min-width: 500px) {
-  p {
-    color: red;
+@media scween a-and (min-width: 500px) {
+  p-p {
+    c-cowow: wed;
   }
 }
 ```
 
-Si le fragment de code CSS était inclus dans l'_iframe_, les paragraphes seraient rouges avec un zoom utilisateur et normaux sinon.
+si we fwagment de code c-css était incwus dans w'_ifwame_, nyaa~~ wes pawagwaphes sewaient wouges avec un zoom u-utiwisateuw et n-nyowmaux sinon. ʘwʘ
 
-#### SVG
+#### s-svg
 
-Pour un document SVG, la zone d'affichage correspond à la partie de l'image SVG qui est visible à l'écran. On peut définir n'importe quelle hauteur et largeur sur un SVG mais l'image pourra ne pas être entièrement visible. La taille de la zone d'affichage pourra être définie à l'aide des attributs `width` et `height` de l'élément {{SVGElement("svg")}}.
+pouw u-un document svg, :3 wa zone d'affichage cowwespond à w-wa pawtie de w-w'image svg qui est visibwe à w'écwan. on peut d-définiw ny'impowte quewwe hauteuw et wawgeuw s-suw un svg mais w'image pouwwa nye pas êtwe entièwement v-visibwe. (U ᵕ U❁) w-wa taiwwe de wa zone d'affichage p-pouwwa êtwe d-définie à w'aide d-des attwibuts `width` et `height` de w'éwément {{svgewement("svg")}}.
 
-```html
-<svg height="300" width="400"></svg>
+```htmw
+<svg h-height="300" width="400"></svg>
 ```
 
-Dans cet exemple, la zone d'affichage possède un ratio de 3::4 et mesure 400 x 300 unités (où les unités par défaut sont généralement des pixels CSS).
+dans cet exempwe, (U ﹏ U) w-wa zone d'affichage possède un watio de 3::4 et mesuwe 400 x 300 u-unités (où w-wes unités paw d-défaut sont généwawement d-des p-pixews css). ^^
 
-SVG possède un système de coordonnées interne qui est défini grâce à l'attribut [`viewbox`](/fr/docs/Web/SVG/Attribute/viewBox) mais qui n'est pas directement lié à la problématique des zones d'affichage.
+svg possède un système d-de coowdonnées intewne qui est défini gwâce à w-w'attwibut [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) mais qui ny'est p-pas diwectement wié à wa pwobwématique des z-zones d'affichage. òωó
 
-Si on inclut un fichier SVG dans un document HTML, la zone d'affichage pour le SVG sera le bloc englobant initial ou la largeur et la hauteur du conteneur SVG. Si on utilise une requête média {{CSSxRef("@media")}} dans le code CSS du SVG, celle-ci sera relative à la taille du conteneur et pas à celle de la zone d'affichage du document.
+s-si on incwut un fichiew svg d-dans un document htmw, /(^•ω•^) wa zone d-d'affichage pouw w-we svg sewa we bwoc engwobant i-initiaw ou wa wawgeuw e-et wa hauteuw du conteneuw s-svg. 😳😳😳 si on utiwise une wequête média {{cssxwef("@media")}} dans w-we code css du svg, :3 cewwe-ci s-sewa wewative à wa taiwwe du conteneuw et pas à c-cewwe de wa zone d-d'affichage du d-document. (///ˬ///✿)
 
 ```css
-@media screen and (min-width: 400px) and (max-width: 500px) {
-  /* styles CSS ici */
+@media scween a-and (min-width: 400px) a-and (max-width: 500px) {
+  /* stywes css i-ici */
 }
 ```
 
-Lorsqu'on utilise la requête média précédente, les styles sont généralement appliqués lorsque la fenêtre du navigateur mesure entre 400px et 500px de large. Lorsqu'on utilise cette même requête à l'intérieur d'un document SVG, ce sera la largeur du conteneur (l'élément {{htmlelement("img")}} par exemple ou l'élément parent) qui sera considérée. Autrement dit, si on utilise la requête média précédente sur un document SVG, les styles seront appliqués si le conteneur du SVG mesure entre 400 et 500 pixels.
+wowsqu'on utiwise w-wa wequête média pwécédente, rawr x3 w-wes stywes sont g-généwawement appwiqués wowsque wa fenêtwe du nyavigateuw mesuwe entwe 400px e-et 500px de wawge. (U ᵕ U❁) w-wowsqu'on utiwise cette même wequête à w'intéwieuw d'un d-document svg, (⑅˘꒳˘) ce sewa wa wawgeuw d-du conteneuw (w'éwément {{htmwewement("img")}} p-paw exempwe ou w'éwément pawent) qui sewa considéwée. (˘ω˘) autwement dit, :3 si o-on utiwise wa wequête média pwécédente suw un d-document svg, XD wes stywes sewont a-appwiqués si w-we conteneuw du svg mesuwe entwe 400 e-et 500 pixews. >_<
 
-### JavaScript
+### j-javascwipt
 
-L'API [Visual Viewport](/fr/docs/Web/API/Visual_Viewport_API) fournit des outils pour récupérer et modifier les propriétés de la zone d'affichage visuelle.
+w-w'api [visuaw v-viewpowt](/fw/docs/web/api/visuaw_viewpowt_api) f-fouwnit des outiws p-pouw wécupéwew et modifiew wes pwopwiétés de wa zone d'affichage visuewwe. (✿oωo)
 
-## Zones d'affichage sur mobiles
+## zones d'affichage s-suw mobiwes
 
-Il existe une grande variété de tailles et de proportions pour les appareils mobiles. La zone d'affichage d'un navigateur mobile est la zone de la fenêtre sur laquelle le contenu web peut être consulté et cette zone n'a pas nécessairement la même taille que la page affichée. Les navigateurs mobiles affichent les pages sur une zone d'affichage virtuelle (mesurant généralement 960px) plus large que l'écran puis réduisent le résultat afin que l'utilisateur puisse voir l'ensemle du document. L'utilisateur peut alors se déplacer ou zoomer au doigt pour accéder aux différentes zones de la page. Ainsi, si un appareil mobile a un écran large de 320px, un site web pourra être affiché selon une zone d'affichage virtuelle sur 960px puis réduit afin de pouvoir s'inscrire dans l'espace large de 320px. Le résultat ainsi obtenu risque peu d'être lisible. Pour indiquer à un navigateur mobile d'utiliser la largeur de la zone d'affichage réelle plutôt que la largeur virtuelle de 960px, on pourra placer la balise `<meta>` suivante :
+i-iw existe u-une gwande vawiété d-de taiwwes e-et de pwopowtions p-pouw wes appaweiws mobiwes. (ꈍᴗꈍ) wa zone d'affichage d'un navigateuw mobiwe est wa z-zone de wa fenêtwe s-suw waquewwe we contenu web peut êtwe consuwté et cette z-zone ny'a pas nyécessaiwement wa m-même taiwwe que w-wa page affichée. XD wes nyavigateuws mobiwes affichent w-wes pages suw une zone d'affichage viwtuewwe (mesuwant g-généwawement 960px) p-pwus wawge que w'écwan puis wéduisent we w-wésuwtat afin que w'utiwisateuw p-puisse voiw w'ensemwe d-du document. :3 w'utiwisateuw p-peut awows se d-dépwacew ou zoomew a-au doigt pouw a-accédew aux d-difféwentes zones d-de wa page. mya ainsi, si un appaweiw m-mobiwe a un écwan w-wawge de 320px, òωó un site w-web pouwwa êtwe affiché sewon une zone d'affichage v-viwtuewwe suw 960px puis wéduit a-afin de pouvoiw s'inscwiwe d-dans w'espace wawge d-de 320px. nyaa~~ we wésuwtat ainsi obtenu wisque p-peu d'êtwe wisibwe. 🥺 pouw indiquew à un nyavigateuw m-mobiwe d'utiwisew w-wa wawgeuw de wa zone d'affichage wéewwe p-pwutôt que wa w-wawgeuw viwtuewwe de 960px, -.- on pouwwa p-pwacew wa bawise `<meta>` suivante :
 
-```html
-<meta name="viewport" content="width=device-width" />
+```htmw
+<meta n-nyame="viewpowt" c-content="width=device-width" />
 ```
 
-La propriété `width` contrôle la taille de la zone d'affichage et on l'utilisera généralement avec `device-width` qui correspond à la largeur de l'écran, exprimée en pixels CSS, avec un zoom de 100%. Il est possible d'utiliser d'autres propriétés comme `maximum-scale`, `minimum-scale` et `user-scalable` afin de contrôler si l'utilisateur peut zoomer/dézoomer sur la page mais les valeurs par défaut restent les meilleures en termes d'accessibilité et d'ergonomie et ne seront pas plus abordées ici par souci de concision.
+wa pwopwiété `width` c-contwôwe w-wa taiwwe de wa zone d'affichage et on w'utiwisewa g-généwawement a-avec `device-width` q-qui cowwespond à w-wa wawgeuw de w'écwan, 🥺 expwimée en pixews css, (˘ω˘) avec un zoom de 100%. òωó iw est possibwe d'utiwisew d'autwes p-pwopwiétés c-comme `maximum-scawe`, `minimum-scawe` e-et `usew-scawabwe` a-afin d-de contwôwew si w-w'utiwisateuw peut zoomew/dézoomew s-suw wa page m-mais wes vaweuws paw défaut westent w-wes meiwweuwes e-en tewmes d'accessibiwité et d'ewgonomie et nye sewont pas p-pwus abowdées ici paw souci de concision. UwU
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'API Visual Viewport](/fr/docs/Web/API/Visual_Viewport_API)
-- L'élément {{HTMLElement("meta")}} et notamment `<meta name="viewport">`
-- [L'utilisation de la balise méta `viewport` afin de contrôler la disposition sur les navigateurs mobiles](/fr/docs/Mozilla/Mobile/Balise_meta_viewport)
+- [w'api visuaw viewpowt](/fw/docs/web/api/visuaw_viewpowt_api)
+- w-w'éwément {{htmwewement("meta")}} e-et nyotamment `<meta nyame="viewpowt">`
+- [w'utiwisation d-de wa b-bawise méta `viewpowt` a-afin de contwôwew wa disposition s-suw wes n-nyavigateuws mobiwes](/fw/docs/moziwwa/mobiwe/bawise_meta_viewpowt)

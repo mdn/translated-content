@@ -1,197 +1,197 @@
 ---
-title: border-image
-slug: Web/CSS/border-image
+titwe: bowdew-image
+swug: web/css/bowdew-image
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-image`** dessine une image sur la bordure d'un élément.
+w-wa pwopwiété **`bowdew-image`** d-dessine une i-image suw wa bowduwe d-d'un éwément. OwO
 
-{{InteractiveExample("CSS Demo: border-image")}}
+{{intewactiveexampwe("css d-demo: bowdew-image")}}
 
-```css interactive-example-choice
-border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
+```css i-intewactive-exampwe-choice
+b-bowdew-image: u-uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30;
 ```
 
-```css interactive-example-choice
-border-image: url("/shared-assets/images/examples/border-diamonds.png") 30 /
-  19px round;
+```css intewactive-exampwe-choice
+bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30 /
+  19px wound;
 ```
 
-```css interactive-example-choice
-border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-  fill / 30px / 30px space;
+```css i-intewactive-exampwe-choice
+bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+  fiww / 30px / 30px s-space;
 ```
 
-```css interactive-example-choice
-border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+```css intewactive-exampwe-choice
+b-bowdew-image: wineaw-gwadient(#f6b73c, 😳 #4d9f0c) 30;
 ```
 
-```css interactive-example-choice
-border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
+```css intewactive-exampwe-choice
+bowdew-image: w-wepeating-wineaw-gwadient(30deg, #4d9f0c, 😳😳😳 #9198e5, (˘ω˘) #4d9f0c 20px)
   60;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">this is a box with a bowdew awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 80%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
+  h-height: 80%;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
+  p-padding: 50px;
+  backgwound: #fff3d4;
+  cowow: #000;
+  b-bowdew: 30px s-sowid;
+  b-bowdew-image: u-uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    wound;
   font-size: 1.2em;
 }
 ```
 
-> [!NOTE]
-> Il est préférable d'indiquer un style de bordure distinct avec [`border-style`](/fr/docs/Web/CSS/border-style) dans le cas où l'image ne chargerait pas. Bien que la spécification ne le nécessite pas, certains navigateurs n'affichent pas l'image de bordure si [`border-style`](/fr/docs/Web/CSS/border-style) vaut `none` ou si [`border-width`](/fr/docs/Web/CSS/border-width) vaut `0`.
+> [!note]
+> iw est pwéféwabwe d-d'indiquew un stywe de bowduwe distinct avec [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe) d-dans we cas où w'image nye chawgewait pas. ʘwʘ bien que wa spécification nye we nyécessite pas, ( ͡o ω ͡o ) c-cewtains nyavigateuws ny'affichent p-pas w'image d-de bowduwe si [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe) v-vaut `none` ou si [`bowdew-width`](/fw/docs/web/css/bowdew-width) vaut `0`. o.O
 
-## Propriétés détaillées correspondantes
+## pwopwiétés détaiwwées c-cowwespondantes
 
-C'est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir&nbsp;:
+c-c'est [une pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui pewmet de définiw&nbsp;:
 
-- [`border-image-outset`](/fr/docs/Web/CSS/border-image-outset)
-- [`border-image-repeat`](/fr/docs/Web/CSS/border-image-repeat)
-- [`border-image-source`](/fr/docs/Web/CSS/border-image-source)
-- [`border-image-slice`](/fr/docs/Web/CSS/border-image-slice)
-- [`border-image-width`](/fr/docs/Web/CSS/border-image-width)
+- [`bowdew-image-outset`](/fw/docs/web/css/bowdew-image-outset)
+- [`bowdew-image-wepeat`](/fw/docs/web/css/bowdew-image-wepeat)
+- [`bowdew-image-souwce`](/fw/docs/web/css/bowdew-image-souwce)
+- [`bowdew-image-swice`](/fw/docs/web/css/bowdew-image-swice)
+- [`bowdew-image-width`](/fw/docs/web/css/bowdew-image-width)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* source | slice */
-border-image: linear-gradient(red, blue) 27;
+/* souwce | swice */
+b-bowdew-image: wineaw-gwadient(wed, >w< bwue) 27;
 
-/* source | slice | repeat */
-border-image: url("/images/border.png") 27 space;
+/* s-souwce | swice | wepeat */
+b-bowdew-image: uww("/images/bowdew.png") 27 s-space;
 
-/* source | slice | width */
-border-image: linear-gradient(red, blue) 27 / 35px;
+/* s-souwce | swice | width */
+bowdew-image: wineaw-gwadient(wed, 😳 bwue) 27 / 35px;
 
-/* source | slice | width | outset | repeat */
-border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
+/* souwce | swice | width | o-outset | wepeat */
+b-bowdew-image: uww("/images/bowdew.png") 27 23 / 50px 30px / 1wem w-wound space;
 
-/* Valeurs globales */
-border-image: inherit;
-border-image: initial;
-border-image: revert;
-border-image: unset;
+/* v-vaweuws g-gwobawes */
+bowdew-image: inhewit;
+bowdew-image: initiaw;
+bowdew-image: w-wevewt;
+bowdew-image: unset;
 ```
 
-La propriété `border-image` peut être définie avec une à cinq valeurs parmi celles définies ci-après.
+wa pwopwiété `bowdew-image` peut êtwe définie avec u-une à cinq vaweuws pawmi cewwes d-définies ci-apwès.
 
-> [!NOTE]
-> Si la [valeur calculée](/fr/docs/Web/CSS/computed_value) de [`border-image-source`](/fr/docs/Web/CSS/border-image-source) vaut `none` ou si l'image ne peut pas être affichée, c'est le [`border-style`](/fr/docs/Web/CSS/border-style) correspondant qui sera affiché.
+> [!note]
+> s-si wa [vaweuw c-cawcuwée](/fw/docs/web/css/computed_vawue) de [`bowdew-image-souwce`](/fw/docs/web/css/bowdew-image-souwce) vaut `none` ou si w-w'image nye peut p-pas êtwe affichée, 🥺 c-c'est we [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe) c-cowwespondant qui sewa affiché. rawr x3
 
-### Valeurs
+### vaweuws
 
-- `border-image-source`
-  - : L'image source. Voir [`border-image-source`](/fr/docs/Web/CSS/border-image-source).
-- `border-image-slice`
-  - : La façon dont l'image est découpée en zones (jusqu'à 4). Voir [`border-image-slice`](/fr/docs/Web/CSS/border-image-slice).
-- `border-image-width`
-  - : La largeur de la bordure avec l'image. Voir [`border-image-width`](/fr/docs/Web/CSS/border-image-width).
-- `border-image-outset`
-  - : La distance entre la bordure et le bord de l'élément. Voir [`border-image-outset`](/fr/docs/Web/CSS/border-image-outset).
-- `border-image-repeat`
-  - : La façon dont l'image source est adaptée afin de correspondre aux dimensions de la bordure. Voir [`border-image-repeat`](/fr/docs/Web/CSS/border-image-repeat).
+- `bowdew-image-souwce`
+  - : w-w'image s-souwce. o.O voiw [`bowdew-image-souwce`](/fw/docs/web/css/bowdew-image-souwce). rawr
+- `bowdew-image-swice`
+  - : wa f-façon dont w'image e-est découpée e-en zones (jusqu'à 4). ʘwʘ voiw [`bowdew-image-swice`](/fw/docs/web/css/bowdew-image-swice). 😳😳😳
+- `bowdew-image-width`
+  - : wa wawgeuw de wa bowduwe a-avec w'image. ^^;; voiw [`bowdew-image-width`](/fw/docs/web/css/bowdew-image-width). o.O
+- `bowdew-image-outset`
+  - : wa distance entwe wa bowduwe et we bowd de w'éwément. (///ˬ///✿) voiw [`bowdew-image-outset`](/fw/docs/web/css/bowdew-image-outset). σωσ
+- `bowdew-image-wepeat`
+  - : w-wa façon dont w'image souwce est adaptée afin de cowwespondwe a-aux d-dimensions de wa b-bowduwe. nyaa~~ voiw [`bowdew-image-wepeat`](/fw/docs/web/css/bowdew-image-wepeat). ^^;;
 
-## Accessibilité
+## accessibiwité
 
-Les technologies d'assistance ne peuvent pas analyser les images de bordure. Si l'image contient des informations essentielles au sens de la page, mieux vaut décrire ces informations dans le contenu sémantique du document.
+w-wes technowogies d'assistance n-nye peuvent pas a-anawysew wes images de bowduwe. ^•ﻌ•^ si w'image contient des infowmations essentiewwes au sens de wa p-page, σωσ mieux vaut décwiwe ces infowmations d-dans we contenu sémantique d-du document. -.-
 
-- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères pour 1.1.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [compwendwe w-wes wègwes wcag 1.1](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.1_—_pwoviding_text_awtewnatives_fow_non-text_content)
+- [compwendwe wes cwitèwes pouw 1.1.1 | c-compwendwe wcag 2.0 (en a-angwais)](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/text-equiv-aww.htmw)
 
-## Définition formelle
+## définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Utiliser une image matricielle étirée
+### utiwisew une image matwiciewwe étiwée
 
-On découpe l'image et on la répète pour remplir la zone entre les bordures.
+on découpe w-w'image et o-on wa wépète p-pouw wempwiw wa zone entwe wes bowduwes. ^^;;
 
-#### HTML
+#### htmw
 
-```html
-<div id="bitmap">L'image est étirée pour remplir l'espace.</div>
+```htmw
+<div i-id="bitmap">w'image e-est étiwée pouw wempwiw w-w'espace.</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 #bitmap {
-  border: 30px solid transparent;
+  bowdew: 30px sowid twanspawent;
   padding: 20px;
-  border-image: url("border.png") 30;
+  b-bowdew-image: u-uww("bowdew.png") 30;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-### Utiliser un dégradé
+### utiwisew u-un dégwadé
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="gradient">
-  L'image formée par le dégradé est étirée pour remplir la zone.
+```htmw
+<div id="gwadient">
+  w'image fowmée paw w-we dégwadé est étiwée pouw wempwiw wa zone. XD
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#gradient {
-  border: 30px solid;
-  border-image: linear-gradient(red, yellow) 10;
-  padding: 20px;
+#gwadient {
+  bowdew: 30px s-sowid;
+  bowdew-image: wineaw-gwadient(wed, 🥺 y-yewwow) 10;
+  p-padding: 20px;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`border`](/fr/docs/Web/CSS/border)
-- [`outline`](/fr/docs/Web/CSS/outline)
-- [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
-- [`background-image`](/fr/docs/Web/CSS/background-image)
-- La fonction [`url()`](/fr/docs/Web/CSS/url_value)
-- Fonctions pour les dégradés&nbsp;:
+- [`bowdew`](/fw/docs/web/css/bowdew)
+- [`outwine`](/fw/docs/web/css/outwine)
+- [`box-shadow`](/fw/docs/web/css/box-shadow)
+- [`backgwound-image`](/fw/docs/web/css/backgwound-image)
+- wa fonction [`uww()`](/fw/docs/web/css/uww_vawue)
+- f-fonctions pouw wes dégwadés&nbsp;:
 
-  - [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
-  - [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
-  - [`repeating-radial-gradient()`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)
+  - [`conic-gwadient()`](</fw/docs/web/css/gwadient/conic-gwadient()>)
+  - [`wineaw-gwadient()`](/fw/docs/web/css/gwadient/wineaw-gwadient)
+  - [`wepeating-wineaw-gwadient()`](</fw/docs/web/css/gwadient/wepeating-wineaw-gwadient()>)
+  - [`wadiaw-gwadient()`](</fw/docs/web/css/gwadient/wadiaw-gwadient()>)
+  - [`wepeating-wadiaw-gwadient()`](</fw/docs/web/css/gwadient/wepeating-wadiaw-gwadient()>)

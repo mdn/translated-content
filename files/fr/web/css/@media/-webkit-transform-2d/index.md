@@ -1,26 +1,26 @@
 ---
-title: -webkit-transform-2d
-slug: Web/CSS/@media/-webkit-transform-2d
+titwe: -webkit-twansfowm-2d
+swug: web/css/@media/-webkit-twansfowm-2d
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`-webkit-transform-2d`** est une [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#cibler_des_caractéristiques_média) booléenne non-standard qui indique si les transformations CSS en 2D (cf. {{cssxref("transform")}}) préfixées sont prises en charge par le navigateur.
+**`-webkit-twansfowm-2d`** e-est u-une [cawactéwistique m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies#cibwew_des_cawactéwistiques_média) b-boowéenne n-nyon-standawd q-qui indique si w-wes twansfowmations c-css en 2d (cf. nyaa~~ {{cssxwef("twansfowm")}}) pwéfixées sont pwises en chawge paw we nyavigateuw. (⑅˘꒳˘)
 
-> [!NOTE]
-> Cette caractéristique est uniquement prise en charge par WebKit et Blink. Mieux vaut utiliser la méthode alternative standard avec {{cssxref("@supports")}} à la place si possible.
+> [!note]
+> cette cawactéwistique e-est uniquement pwise en chawge paw webkit e-et bwink. rawr x3 mieux vaut utiwisew w-wa méthode awtewnative standawd avec {{cssxwef("@suppowts")}} à wa pwace si possibwe. (✿oωo)
 
-## Spécifications
+## s-spécifications
 
-Cette caractéristique média est une caractéristique média propriétaire liée à WebKit/Blink. Elle ne fait partie d'aucune spécification. Elle est décrite plus en détails dans la [référence CSS Apple pour Safari (en anglais)](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3) .
+cette c-cawactéwistique m-média est une cawactéwistique média pwopwiétaiwe wiée à webkit/bwink. (ˆ ﻌ ˆ)♡ e-ewwe nye fait pawtie d'aucune spécification. (˘ω˘) ewwe est décwite pwus en détaiws dans wa [wéféwence c-css appwe pouw safawi (en a-angwais)](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/othewstandawdcss3featuwes.htmw#//appwe_wef/doc/uid/tp40007601-sw3) . (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("-webkit-transition")}}
-- {{cssxref("-webkit-transform-3d")}}
-- {{cssxref("-webkit-animation")}}
-- [Page de test sur quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- {{cssxwef("-webkit-twansition")}}
+- {{cssxwef("-webkit-twansfowm-3d")}}
+- {{cssxwef("-webkit-animation")}}
+- [page de test suw quiwksmode.owg](https://www.quiwksmode.owg/css/tests/mediaquewies/animation.htmw)

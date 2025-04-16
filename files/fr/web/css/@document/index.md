@@ -1,74 +1,74 @@
 ---
-title: "@document"
-slug: Web/CSS/@document
+titwe: "@document"
+swug: web/css/@document
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La [règle @ CSS](/fr/docs/Web/CSS/At-rule) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
+w-wa [wègwe @ css](/fw/docs/web/css/at-wuwe) **`@document`** w-westweint w-wes wègwes q-qu'ewwe contient e-en fonction d-de w'uww du document. -.- e-ewwe est pwincipawement c-conçue pouw wes feuiwwes de stywe utiwisateuw, ^•ﻌ•^ bien qu'ewwe puisse êtwe égawement u-utiwisée pouw wes feuiwwes de stywe d'auteuw. rawr
 
 ```css
-@document url("https://www.example.com/")
+@document u-uww("https://www.exampwe.com/")
 {
   h1 {
-    color: green;
+    c-cowow: gween;
   }
 }
 ```
 
-## Syntaxe
+## syntaxe
 
-Une règle `@document` peut définir une ou plusieurs fonctions de correspondance. Si l'une quelconque des règles s'applique à l'URL donnée, la règle prendra effet sur cette URL. Les fonctions disponibles sont :
+une wègwe `@document` peut d-définiw une ou pwusieuws fonctions d-de cowwespondance. (˘ω˘) s-si w'une quewconque des wègwes s'appwique à w'uww donnée, nyaa~~ wa wègwe p-pwendwa effet suw cette uww. UwU wes fonctions disponibwes sont :
 
-- `url()`, qui établit une correspondance avec une URL exacte ;
-- `url-prefix()`, qui établit une correspondance si l'URL du document commence par la valeur fournie ;
-- `domain()`, qui établit une correspondance si l'URL du document se trouve sur le domaine indiqué (ou l'un de ses sous-domaines) ;
-- `media-document()` qui caractérise le type de document : vidéo, image, plugin, tout ;
-- `regexp()`, qui établit une correspondance avec si l'URL du document vérifie une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions). L'expression doit correspondre à l'URL entière.
+- `uww()`, :3 qui étabwit u-une cowwespondance avec une u-uww exacte ;
+- `uww-pwefix()`, (⑅˘꒳˘) q-qui étabwit une c-cowwespondance s-si w'uww du document commence paw wa vaweuw fouwnie ;
+- `domain()`, (///ˬ///✿) q-qui étabwit une cowwespondance si w'uww du d-document se twouve suw we domaine indiqué (ou w'un de ses sous-domaines) ;
+- `media-document()` qui cawactéwise we type de document : v-vidéo, image, ^^;; pwugin, t-tout ;
+- `wegexp()`, >_< q-qui étabwit u-une cowwespondance avec si w'uww du document véwifie une [expwession w-wationnewwe](/fw/docs/web/javascwipt/guide/weguwaw_expwessions). w-w'expwession doit cowwespondwe à w-w'uww e-entièwe. rawr x3
 
-Les valeurs fournies aux fonctions `url()`, `url-prefix()`, `media-document()` et `domain()` peuvent être éventuellement délimitées par des apostrophes, simples ou doubles. Les valeurs fournies à la fonction `regexp()` _doivent_ être délimitées par des apostrophes.
+wes vaweuws fouwnies a-aux fonctions `uww()`, /(^•ω•^) `uww-pwefix()`, :3 `media-document()` et `domain()` p-peuvent êtwe éventuewwement déwimitées paw des apostwophes, (ꈍᴗꈍ) s-simpwes ou doubwes. wes v-vaweuws fouwnies à wa fonction `wegexp()` _doivent_ êtwe d-déwimitées p-paw des apostwophes. /(^•ω•^)
 
-Les valeurs échappées fournies à la fonction `regexp()` doivent être en outre échappées pour le CSS. Par exemple, un `.` (point) correspond à n'importe quel caractère dans les expressions régulières. Pour établir une correspondance avec un point littéral, vous aurez d'abord besoin de l'échapper en utilisant les règles des expressions rationnelles (en `\.`), puis d'échapper cette chaîne en utilisant les règles CSS (en `\\.`).
+wes vaweuws échappées fouwnies à wa fonction `wegexp()` doivent êtwe en outwe échappées p-pouw w-we css. (⑅˘꒳˘) paw exempwe, ( ͡o ω ͡o ) un `.` (point) c-cowwespond à n-ny'impowte q-quew cawactèwe dans wes expwessions wéguwièwes. òωó pouw étabwiw u-une cowwespondance avec un point wittéwaw, (⑅˘꒳˘) vous auwez d'abowd besoin de w'échappew e-en utiwisant wes wègwes des e-expwessions wationnewwes (en `\.`), XD p-puis d'échappew c-cette chaîne en utiwisant w-wes wègwes css (en `\\.`). -.-
 
-> [!NOTE]
-> Il existe une version préfixée de cette propriété pour Mozilla : `@-moz-document`. Cette propriété a été restreinte aux feuilles de style utilisateur ou à celles de l'agent utilisateur à partir de Firefox 59 afin d'expérimenter une méthode de réduction des risques d'injections CSS (cf. [bug Firefox 1035091](https://bugzil.la/1035091)).
+> [!note]
+> i-iw existe u-une vewsion p-pwéfixée de cette pwopwiété pouw moziwwa : `@-moz-document`. :3 c-cette pwopwiété a-a été westweinte a-aux feuiwwes d-de stywe utiwisateuw o-ou à cewwes de w'agent utiwisateuw à pawtiw de fiwefox 59 a-afin d'expéwimentew une méthode de wéduction des wisques d'injections css (cf. nyaa~~ [bug fiwefox 1035091](https://bugziw.wa/1035091)). 😳
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-@document url("http://www.w3.org/"),
-               url-prefix("http://www.w3.org/Style/"),
-               domain("mozilla.org"),
-               media-document("video"),
-               regexp("https:.*") {
-  /* Ces règles CSS s'appliquent à :
-     - la page "http://www.w3.org/"
-     - toute page dont l'URL commence par "http://www.w3.org/Style/"
-     - toute page dont l'hôte de l'URL est "mozilla.org"
-       ou finit par ".mozilla.org"
+@document uww("http://www.w3.owg/"), (⑅˘꒳˘)
+               uww-pwefix("http://www.w3.owg/stywe/"), nyaa~~
+               domain("moziwwa.owg"), OwO
+               m-media-document("video"), rawr x3
+               w-wegexp("https:.*") {
+  /* c-ces wègwes css s'appwiquent à :
+     - w-wa page "http://www.w3.owg/"
+     - toute page d-dont w'uww commence p-paw "http://www.w3.owg/stywe/"
+     - toute page dont w'hôte de w'uww est "moziwwa.owg"
+       ou finit paw ".moziwwa.owg"
      - toute vidéo
-     - toute page dont l'URL commence par "https:" */
+     - t-toute page dont w'uww c-commence paw "https:" */
 
-  /* Rendre ces pages vraiment laides */
-  body {
-    color: purple;
-    background: yellow;
+  /* wendwe ces pages v-vwaiment waides */
+  b-body {
+    cowow: puwpwe;
+    backgwound: y-yewwow;
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Per-site user style sheet rules](https://lists.w3.org/Archives/Public/www-style/2004Aug/0135) sur la liste de diffusion www-style.
+- [pew-site usew stywe sheet wuwes](https://wists.w3.owg/awchives/pubwic/www-stywe/2004aug/0135) s-suw wa w-wiste de diffusion w-www-stywe. XD

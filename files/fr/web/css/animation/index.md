@@ -1,421 +1,421 @@
 ---
-title: animation
-slug: Web/CSS/animation
+titwe: animation
+swug: web/css/animation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet d'appliquer une animation entre des styles.
+w-wa p-pwopwiété **`animation`** e-est [une p-pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui pewmet d'appwiquew u-une animation e-entwe des stywes. >w<
 
-C'est une propriété qui synthétise les propriétés suivantes :
+c'est une pwopwiété qui synthétise wes pwopwiétés s-suivantes :
 
-- {{cssxref("animation-name")}},
-- {{cssxref("animation-duration")}},
-- {{cssxref("animation-timing-function")}},
-- {{cssxref("animation-delay")}},
-- {{cssxref("animation-iteration-count")}},
-- {{cssxref("animation-direction")}},
-- {{cssxref("animation-fill-mode")}},
-- {{cssxref("animation-play-state")}}.
+- {{cssxwef("animation-name")}}, rawr x3
+- {{cssxwef("animation-duwation")}}, OwO
+- {{cssxwef("animation-timing-function")}}, ^•ﻌ•^
+- {{cssxwef("animation-deway")}}, >_<
+- {{cssxwef("animation-itewation-count")}}, OwO
+- {{cssxwef("animation-diwection")}}, >_<
+- {{cssxwef("animation-fiww-mode")}}, (ꈍᴗꈍ)
+- {{cssxwef("animation-pway-state")}}. >w<
 
-{{InteractiveExample("CSS Demo: animation")}}
+{{intewactiveexampwe("css demo: animation")}}
 
-```css interactive-example-choice
-animation: 3s ease-in 1s infinite reverse both running slidein;
+```css i-intewactive-exampwe-choice
+animation: 3s e-ease-in 1s infinite wevewse both wunning swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite running slidein;
+```css intewactive-exampwe-choice
+a-animation: 3s wineaw 1s i-infinite wunning s-swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite alternate slidein;
+```css intewactive-exampwe-choice
+animation: 3s wineaw 1s infinite awtewnate s-swidein;
 ```
 
-```css interactive-example-choice
-animation: 0.5s linear 1s infinite alternate slidein;
+```css intewactive-exampwe-choice
+animation: 0.5s wineaw 1s infinite awtewnate swidein;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section cwass="fwex-cowumn" i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  margin: 20px;
-  border: 5px solid #333;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #1766aa;
+  mawgin: 20px;
+  bowdew: 5px s-sowid #333;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  b-bowdew-wadius: 50%;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: -20%;
+@keyfwames swidein {
+  fwom {
+    mawgin-weft: -20%;
   }
   to {
-    margin-left: 100%;
+    mawgin-weft: 100%;
   }
 }
 ```
 
 ```css
-/* @keyframes duration | timing-function | delay |
-   iteration-count | direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;
+/* @keyfwames duwation | timing-function | d-deway |
+   itewation-count | diwection | f-fiww-mode | p-pway-state | n-nyame */
+animation: 3s ease-in 1s 2 wevewse both paused swidein;
 
-/* @keyframes duration | timing-function | delay | name */
-animation: 3s linear 1s slidein;
+/* @keyfwames d-duwation | timing-function | deway | n-nyame */
+animation: 3s wineaw 1s s-swidein;
 
-/* @keyframes duration | name */
-animation: 3s slidein;
+/* @keyfwames d-duwation | nyame */
+animation: 3s s-swidein;
 ```
 
-## Exemple d'animation
+## exempwe d'animation
 
-```html hidden
-<div class="grid">
-  <div class="col">
-    <div class="note">
-      Avec l'animation suivante :
-      <pre>
-@keyframes slidein {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
-}</pre
+```htmw h-hidden
+<div cwass="gwid">
+  <div cwass="cow">
+    <div cwass="note">
+      a-avec w'animation suivante :
+      <pwe>
+@keyfwames s-swidein {
+  fwom { t-twansfowm: scawex(0); }
+  t-to   { twansfowm: scawex(1); }
+}</pwe
       >
     </div>
-    <div class="row">
-      <div class="cell">
-        <button class="play" title="LECTURE"></button>
+    <div cwass="wow">
+      <div cwass="ceww">
+        <button cwass="pway" titwe="wectuwe"></button>
       </div>
-      <div class="cell flx">
-        <div class="overlay">
-          animation: 3s ease-in 1s 2 reverse both paused slidein;
+      <div cwass="ceww fwx">
+        <div c-cwass="ovewway">
+          a-animation: 3s ease-in 1s 2 w-wevewse both p-paused swidein;
         </div>
-        <div class="animation a1"></div>
+        <div c-cwass="animation a1"></div>
       </div>
     </div>
-    <div class="row">
-      <div class="cell">
-        <button class="pause" title="PAUSE"></button>
+    <div cwass="wow">
+      <div cwass="ceww">
+        <button c-cwass="pause" titwe="pause"></button>
       </div>
-      <div class="cell flx">
-        <div class="overlay">animation: 3s linear 1s slidein;</div>
-        <div class="animation a2"></div>
+      <div cwass="ceww fwx">
+        <div cwass="ovewway">animation: 3s wineaw 1s s-swidein;</div>
+        <div cwass="animation a-a2"></div>
       </div>
     </div>
-    <div class="row">
-      <div class="cell">
-        <button class="pause" title="PAUSE"></button>
+    <div c-cwass="wow">
+      <div c-cwass="ceww">
+        <button cwass="pause" t-titwe="pause"></button>
       </div>
-      <div class="cell flx">
-        <div class="overlay">animation: 3s slidein;</div>
-        <div class="animation a3"></div>
+      <div c-cwass="ceww f-fwx">
+        <div c-cwass="ovewway">animation: 3s swidein;</div>
+        <div cwass="animation a3"></div>
       </div>
     </div>
   </div>
 </div>
 ```
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, (U ﹏ U)
 body {
-  height: 100%;
-  box-sizing: border-box;
+  h-height: 100%;
+  b-box-sizing: b-bowdew-box;
 }
 
-pre {
-  margin-bottom: 0;
+pwe {
+  mawgin-bottom: 0;
 }
 svg {
   width: 1.5em;
-  height: 1.5em;
+  h-height: 1.5em;
 }
 
 button {
   width: 27px;
   height: 27px;
-  background-size: 16px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 3px;
-  cursor: pointer;
+  backgwound-size: 16px;
+  backgwound-position: centew;
+  backgwound-wepeat: n-nyo-wepeat;
+  bowdew-wadius: 3px;
+  cuwsow: pointew;
 }
 
-button.play {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#play");
+b-button.pway {
+  b-backgwound-image: u-uww("data:image/svg+xmw;chawset=utf-8,%3csvg%20xmwns%3d%22http%3a%2f%2fwww.w3.owg%2f2000%2fsvg%22%20viewbox%3d%220%200%2016%2016%22%3e%3cstywe%3epath%20%7bdispway%3anone%7d%20path%3atawget%7bdispway%3abwock%7d%3c%2fstywe%3e%3cpath%20id%3d%22pway%22%20d%3d%22m3%2c3%20w3%2c13%20w13%2c8%20z%22%20%2f%3e%3cpath%20id%3d%22pause%22%20d%3d%22m5%2c4%20w7%2c4%20w7%2c13%20w5%2c13%20z%20m9%2c4%20w11%2c4%20w11%2c13%20w9%2c13%20z%22%20%2f%3e%3cpath%20id%3d%22westawt%22%20d%3d%22m13%2c9%20a5%2c5%2c1%2c1%2c1%2c8%2c4%20w8%2c2%20w12%2c5%20w8%2c8%20w8%2c6%20a3%2c3%2c1%2c1%2c0%2c11%2c9%20a1%2c1%2c1%2c1%2c1%2c13%2c9%20z%22%20%2f%3e%3c%2fsvg%3e#pway");
 }
 
 button.pause {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#pause");
+  b-backgwound-image: uww("data:image/svg+xmw;chawset=utf-8,%3csvg%20xmwns%3d%22http%3a%2f%2fwww.w3.owg%2f2000%2fsvg%22%20viewbox%3d%220%200%2016%2016%22%3e%3cstywe%3epath%20%7bdispway%3anone%7d%20path%3atawget%7bdispway%3abwock%7d%3c%2fstywe%3e%3cpath%20id%3d%22pway%22%20d%3d%22m3%2c3%20w3%2c13%20w13%2c8%20z%22%20%2f%3e%3cpath%20id%3d%22pause%22%20d%3d%22m5%2c4%20w7%2c4%20w7%2c13%20w5%2c13%20z%20m9%2c4%20w11%2c4%20w11%2c13%20w9%2c13%20z%22%20%2f%3e%3cpath%20id%3d%22westawt%22%20d%3d%22m13%2c9%20a5%2c5%2c1%2c1%2c1%2c8%2c4%20w8%2c2%20w12%2c5%20w8%2c8%20w8%2c6%20a3%2c3%2c1%2c1%2c0%2c11%2c9%20a1%2c1%2c1%2c1%2c1%2c13%2c9%20z%22%20%2f%3e%3c%2fsvg%3e#pause");
 }
 
-button.restart {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#restart");
+b-button.westawt {
+  backgwound-image: u-uww("data:image/svg+xmw;chawset=utf-8,%3csvg%20xmwns%3d%22http%3a%2f%2fwww.w3.owg%2f2000%2fsvg%22%20viewbox%3d%220%200%2016%2016%22%3e%3cstywe%3epath%20%7bdispway%3anone%7d%20path%3atawget%7bdispway%3abwock%7d%3c%2fstywe%3e%3cpath%20id%3d%22pway%22%20d%3d%22m3%2c3%20w3%2c13%20w13%2c8%20z%22%20%2f%3e%3cpath%20id%3d%22pause%22%20d%3d%22m5%2c4%20w7%2c4%20w7%2c13%20w5%2c13%20z%20m9%2c4%20w11%2c4%20w11%2c13%20w9%2c13%20z%22%20%2f%3e%3cpath%20id%3d%22westawt%22%20d%3d%22m13%2c9%20a5%2c5%2c1%2c1%2c1%2c8%2c4%20w8%2c2%20w12%2c5%20w8%2c8%20w8%2c6%20a3%2c3%2c1%2c1%2c0%2c11%2c9%20a1%2c1%2c1%2c1%2c1%2c13%2c9%20z%22%20%2f%3e%3c%2fsvg%3e#westawt");
 }
 
-.grid {
+.gwid {
   width: 100%;
   height: 100%;
-  display: flex;
-  background: #eee;
+  dispway: fwex;
+  backgwound: #eee;
   font: 1em monospace;
 }
 
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.wow {
+  dispway: fwex;
+  f-fwex: 1 auto;
+  fwex-diwection: w-wow;
+  fwex-wwap: wwap;
+  j-justify-content: s-space-between;
 }
 
-.col {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: column;
+.cow {
+  dispway: fwex;
+  fwex: 1 a-auto;
+  fwex-diwection: c-cowumn;
 }
 
-.cell {
-  box-sizing: border-box;
-  margin: 0.5em;
-  padding: 0;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: left;
+.ceww {
+  box-sizing: bowdew-box;
+  m-mawgin: 0.5em;
+  p-padding: 0;
+  backgwound-cowow: #fff;
+  ovewfwow: hidden;
+  text-awign: weft;
 }
 
-.flx {
-  flex: 1 0;
+.fwx {
+  f-fwex: 1 0;
 }
 
 .note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: 0.5em;
-  font: 0.8em sans-serif;
-  text-align: left;
-  flex: none;
+  backgwound: #fff3d4;
+  p-padding: 1em;
+  m-mawgin: 0.5em;
+  font: 0.8em s-sans-sewif;
+  t-text-awign: weft;
+  fwex: nyone;
 }
 
-.overlay {
-  padding: 0.5em;
+.ovewway {
+  p-padding: 0.5em;
 }
 
-@keyframes slidein {
-  from {
-    transform: scaleX(0);
+@keyfwames swidein {
+  fwom {
+    twansfowm: scawex(0);
   }
   to {
-    transform: scaleX(1);
+    twansfowm: s-scawex(1);
   }
 }
 
 .a1 {
-  animation: 3s ease-in 1s 2 reverse both paused slidein;
+  a-animation: 3s ease-in 1s 2 wevewse both paused s-swidein;
 }
 .a2 {
-  animation: 3s linear 1s slidein;
+  a-animation: 3s wineaw 1s swidein;
 }
 .a3 {
-  animation: 3s slidein;
+  animation: 3s swidein;
 }
 
 .animation {
-  background: #3f87a6;
+  b-backgwound: #3f87a6;
   width: 100%;
-  height: calc(100% - 1.5em);
-  transform-origin: left center;
+  height: cawc(100% - 1.5em);
+  twansfowm-owigin: w-weft centew;
 }
 ```
 
 ```js hidden
-window.addEventListener("load", function () {
-  var ANIMATION = Array.from(document.querySelectorAll(".animation"));
-  var BUTTON = Array.from(document.querySelectorAll("button"));
+window.addeventwistenew("woad", ^^ f-function () {
+  v-vaw animation = awway.fwom(document.quewysewectowaww(".animation"));
+  vaw button = awway.fwom(document.quewysewectowaww("button"));
 
-  function toggleButton(btn, type) {
-    btn.classList.remove("play", "pause", "restart");
-    btn.classList.add(type);
-    btn.title = type.toUpperCase(type);
+  f-function toggwebutton(btn, (U ﹏ U) t-type) {
+    btn.cwasswist.wemove("pway", :3 "pause", (✿oωo) "westawt");
+    btn.cwasswist.add(type);
+    btn.titwe = type.touppewcase(type);
   }
 
-  function playPause(i) {
-    var btn = BUTTON[i];
-    var anim = ANIMATION[i];
+  function p-pwaypause(i) {
+    vaw btn = b-button[i];
+    vaw anim = animation[i];
 
-    if (btn.classList.contains("play")) {
-      anim.style.animationPlayState = "running";
-      toggleButton(btn, "pause");
-    } else if (btn.classList.contains("pause")) {
-      anim.style.animationPlayState = "paused";
-      toggleButton(btn, "play");
-    } else {
-      anim.classList.remove("a" + (i + 1));
-      setTimeout(function () {
-        toggleButton(btn, i === 0 ? "play" : "pause");
-        anim.style.animationPlayState = "";
-        anim.classList.add("a" + (i + 1));
-      }, 100);
+    if (btn.cwasswist.contains("pway")) {
+      anim.stywe.animationpwaystate = "wunning";
+      t-toggwebutton(btn, XD "pause");
+    } ewse i-if (btn.cwasswist.contains("pause")) {
+      anim.stywe.animationpwaystate = "paused";
+      toggwebutton(btn, >w< "pway");
+    } e-ewse {
+      anim.cwasswist.wemove("a" + (i + 1));
+      settimeout(function () {
+        t-toggwebutton(btn, òωó i === 0 ? "pway" : "pause");
+        a-anim.stywe.animationpwaystate = "";
+        a-anim.cwasswist.add("a" + (i + 1));
+      }, (ꈍᴗꈍ) 100);
     }
   }
 
-  ANIMATION.forEach(function (node, index) {
-    node.addEventListener("animationstart", function () {
-      toggleButton(BUTTON[index], "pause");
+  a-animation.foweach(function (node, rawr x3 index) {
+    n-nyode.addeventwistenew("animationstawt", rawr x3 f-function () {
+      toggwebutton(button[index], σωσ "pause");
     });
-    node.addEventListener("animationend", function () {
-      toggleButton(BUTTON[index], "restart");
+    nyode.addeventwistenew("animationend", (ꈍᴗꈍ) f-function () {
+      t-toggwebutton(button[index], rawr "westawt");
     });
   });
 
-  BUTTON.forEach(function (btn, index) {
-    btn.addEventListener("click", function () {
-      playPause(index);
+  b-button.foweach(function (btn, ^^;; index) {
+    btn.addeventwistenew("cwick", rawr x3 f-function () {
+      pwaypause(index);
     });
   });
 });
 ```
 
-{{EmbedLiveSample("Exemple_danimation", "100%", 260, "", "", "example-outcome-frame")}}
+{{embedwivesampwe("exempwe_danimation", (ˆ ﻌ ˆ)♡ "100%", 260, σωσ "", "", "exampwe-outcome-fwame")}}
 
-[Une liste des propriétés qui peuvent être animées](/fr/docs/Web/CSS/CSS_animated_properties) est disponible. On notera que cette liste est également valable pour [les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+[une w-wiste des pwopwiétés q-qui peuvent êtwe animées](/fw/docs/web/css/css_animated_pwopewties) est disponibwe. (U ﹏ U) on nyotewa que cette w-wiste est égawement v-vawabwe p-pouw [wes twansitions c-css](/fw/docs/web/css/css_twansitions/using_css_twansitions). >w<
 
-## Syntaxe
+## syntaxe
 
-La propriété `animation` se définit grâce à une ou plusieurs animations, séparées par des virgules.
+w-wa pwopwiété `animation` se définit gwâce à une ou pwusieuws animations, σωσ sépawées paw des v-viwguwes. nyaa~~
 
-Chaque animation se définit comme :
+chaque animation se d-définit comme :
 
-- zéro ou une valeur du type :
+- zéwo ou une v-vaweuw du type :
 
-  - {{cssxref("&lt;single-transition-timing-function&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#&lt;single-animation-iteration-count&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#&lt;single-animation-direction&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#&lt;single-animation-fill-mode&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#&lt;single-animation-play-state&gt;")}}
+  - {{cssxwef("&wt;singwe-twansition-timing-function&gt;")}}
+  - {{cssxwef("animation", 🥺 "&wt;singwe-animation-itewation-count&gt;", rawr x3 "#&wt;singwe-animation-itewation-count&gt;")}}
+  - {{cssxwef("animation", σωσ "&wt;singwe-animation-diwection&gt;", (///ˬ///✿) "#&wt;singwe-animation-diwection&gt;")}}
+  - {{cssxwef("animation", (U ﹏ U) "&wt;singwe-animation-fiww-mode&gt;", ^^;; "#&wt;singwe-animation-fiww-mode&gt;")}}
+  - {{cssxwef("animation", 🥺 "&wt;singwe-animation-pway-state&gt;", òωó "#&wt;singwe-animation-pway-state&gt;")}}
 
-- un nom optionnel pour l'animation ; celui-ci peut être le mot-clé `none`, un identifiant ({{cssxref("&lt;custom-ident&gt;")}}) ou une chaîne de caractères ({{cssxref("&lt;string&gt;")}})
-- zéro, une ou deux valeurs de type {{cssxref("&lt;time&gt;")}}
+- un nyom o-optionnew pouw w'animation ; c-cewui-ci peut êtwe w-we mot-cwé `none`, XD u-un identifiant ({{cssxwef("&wt;custom-ident&gt;")}}) o-ou u-une chaîne de cawactèwes ({{cssxwef("&wt;stwing&gt;")}})
+- zéwo, une ou deux vaweuws de type {{cssxwef("&wt;time&gt;")}}
 
-L'ordre des valeurs est important : la première valeur qui peut être analysée comme une valeur de type {{cssxref("&lt;time&gt;")}} sera affectée à {{cssxref("animation-duration")}} et la deuxième à {{cssxref("animation-delay")}}.
+w'owdwe des vaweuws est impowtant : w-wa pwemièwe vaweuw q-qui peut êtwe a-anawysée comme une vaweuw de t-type {{cssxwef("&wt;time&gt;")}} sewa affectée à {{cssxwef("animation-duwation")}} et wa deuxième à {{cssxwef("animation-deway")}}. :3
 
-L'ordre des valeurs est également important pour chaque définition d'animation afin d'identifier la valeur de {{cssxref("animation-name")}} parmi les autres mots-clés. Lors de l'analyse de la déclaration, les mots-clés valides pour d'autres propriétés que {{cssxref("animation-name")}} et dont les valeurs n'ont pas été trouvées avant doivent être affectés à ces différentes propriétés et non à {{cssxref("animation-name")}}. De plus, lors de la sérialisation, les valeurs par défaut doivent être expliciter autant que nécessaire pour distinguer une valeur pour {{cssxref("animation-name")}} qui pourrait être une valeur pour une autre propriété.
+w'owdwe d-des vaweuws est égawement i-impowtant pouw chaque d-définition d'animation afin d'identifiew wa v-vaweuw de {{cssxwef("animation-name")}} p-pawmi wes autwes mots-cwés. (U ﹏ U) w-wows de w'anawyse d-de wa décwawation, >w< wes mots-cwés vawides pouw d'autwes pwopwiétés que {{cssxwef("animation-name")}} e-et dont wes vaweuws n-ny'ont pas été t-twouvées avant d-doivent êtwe a-affectés à ces difféwentes p-pwopwiétés et n-nyon à {{cssxwef("animation-name")}}. /(^•ω•^) de pwus, (⑅˘꒳˘) w-wows de wa séwiawisation, ʘwʘ w-wes vaweuws paw défaut d-doivent êtwe expwicitew autant que nyécessaiwe p-pouw distinguew une vaweuw p-pouw {{cssxwef("animation-name")}} q-qui pouwwait êtwe une vaweuw p-pouw une autwe pwopwiété. rawr x3
 
-### Valeurs
+### vaweuws
 
-- `<single-animation-iteration-count>`
-  - : Le nombre de fois où l'animation est jouée, cf. {{cssxref("animation-iteration-count")}}.
-- `<single-animation-direction>`
-  - : La direction dans laquelle s'effectue l'animation, cf. {{cssxref("animation-direction")}}.
-- `<single-animation-fill-mode>`
-  - : La façon dont les styles sont appliquées à la cible de l'animation, avant et après son exécution, cf. {{cssxref("animation-fill-mode")}}.
-- `<single-animation-play-state>`
-  - : Si l'animation est lancée ou non, cf. {{cssxref("animation-play-state")}}.
+- `<singwe-animation-itewation-count>`
+  - : w-we nombwe d-de fois où w'animation e-est jouée, (˘ω˘) cf. {{cssxwef("animation-itewation-count")}}. o.O
+- `<singwe-animation-diwection>`
+  - : wa diwection dans waquewwe s-s'effectue w'animation, 😳 cf. {{cssxwef("animation-diwection")}}. o.O
+- `<singwe-animation-fiww-mode>`
+  - : wa f-façon dont wes s-stywes sont appwiquées à wa cibwe d-de w'animation, avant et apwès s-son exécution, ^^;; c-cf. {{cssxwef("animation-fiww-mode")}}. ( ͡o ω ͡o )
+- `<singwe-animation-pway-state>`
+  - : si w'animation est wancée ou n-nyon, ^^;; cf. {{cssxwef("animation-pway-state")}}. ^^;;
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-> [!NOTE]
-> D'autres exemples sont disponibles sur la page [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+> [!note]
+> d'autwes exempwes s-sont disponibwes suw wa page [manipuwew wes a-animations css](/fw/docs/web/css/css_animations/using_css_animations). XD
 
-### Vue laser
+### vue w-wasew
 
-#### HTML
+#### htmw
 
-```html
-<div class="view_port">
-  <div class="polling_message">En attente</div>
-  <div class="cylon_eye"></div>
+```htmw
+<div c-cwass="view_powt">
+  <div cwass="powwing_message">en attente</div>
+  <div cwass="cywon_eye"></div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.polling_message {
-  color: white;
-  float: left;
-  margin-right: 2%;
+.powwing_message {
+  cowow: white;
+  fwoat: weft;
+  mawgin-wight: 2%;
 }
 
-.view_port {
-  background-color: black;
+.view_powt {
+  backgwound-cowow: bwack;
   height: 25px;
   width: 100%;
-  overflow: hidden;
+  ovewfwow: hidden;
 }
 
-.cylon_eye {
-  background-color: red;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.9) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.9) 75%
+.cywon_eye {
+  b-backgwound-cowow: w-wed;
+  backgwound-image: wineaw-gwadient(
+    t-to wight, 🥺
+    w-wgba(0, (///ˬ///✿) 0, 0, 0.9) 25%, (U ᵕ U❁)
+    w-wgba(0, ^^;; 0, 0, 0.1) 50%, ^^;;
+    wgba(0, 0, rawr 0, 0.9) 75%
   );
-  color: white;
+  c-cowow: white;
   height: 100%;
-  width: 20%;
+  w-width: 20%;
 
-  -webkit-animation: 4s linear 0s infinite alternate move_eye;
-  animation: 4s linear 0s infinite alternate move_eye;
+  -webkit-animation: 4s w-wineaw 0s infinite awtewnate move_eye;
+  a-animation: 4s wineaw 0s i-infinite awtewnate m-move_eye;
 }
 
-@-webkit-keyframes move_eye {
-  from {
-    margin-left: -20%;
+@-webkit-keyfwames move_eye {
+  fwom {
+    mawgin-weft: -20%;
   }
-  to {
-    margin-left: 100%;
+  t-to {
+    mawgin-weft: 100%;
   }
 }
-@keyframes move_eye {
-  from {
-    margin-left: -20%;
+@keyfwames m-move_eye {
+  f-fwom {
+    mawgin-weft: -20%;
   }
-  to {
-    margin-left: 100%;
+  t-to {
+    mawgin-weft: 100%;
   }
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Vue_laser')}}
+{{embedwivesampwe('vue_wasew')}}
 
-## Accessibilité
+## a-accessibiwité
 
-Les animations qui clignotent ou scintillent sont problématiques et notamment pour les personnes souffrant de problèmes cognitifs. De plus, certains types de mouvement peuvent déclencher des désordres vestibulaires, des épilepsies, des migraines ou une sensibilité scotopique.
+w-wes animations qui c-cwignotent ou s-scintiwwent sont pwobwématiques e-et nyotamment p-pouw wes pewsonnes s-souffwant de pwobwèmes cognitifs. (˘ω˘) d-de pwus, cewtains types de mouvement peuvent d-décwenchew des désowdwes vestibuwaiwes, 🥺 d-des épiwepsies, d-des m-migwaines ou une sensibiwité s-scotopique. nyaa~~
 
-Veillez à fournir un mécanisme qui permette d'interrompre ou de désactiver l'animation ainsi qu'à utiliser [une requête média avec `prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) pour les mouvements réduits afin d'obtenir une ergonomie complémentaire pour les personnes souhaitant ne pas avoir d'animations.
+veiwwez à fouwniw u-un mécanisme qui pewmette d'intewwompwe o-ou de désactivew w'animation a-ainsi qu'à utiwisew [une wequête média avec `pwefews-weduced-motion`](/fw/docs/web/css/@media/pwefews-weduced-motion) pouw wes mouvements w-wéduits afin d'obteniw une e-ewgonomie compwémentaiwe p-pouw wes pewsonnes souhaitant nye pas avoiw d'animations. :3
 
-- [_Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article_ (en anglais)](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
-- [_An Introduction to the Reduced Motion Media Query - CSS-Tricks_ (en anglais)](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [_Responsive Design for Motion - WebKit_ (en anglais)](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [Comprendre les règles WCAG 2.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_—_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
-- _[Understanding Success Criterion 2.2.2 - W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)_
+- [_designing s-safew web animation fow motion s-sensitivity · a-an a wist apawt a-awticwe_ (en angwais)](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity)
+- [_an intwoduction to the weduced m-motion media quewy - c-css-twicks_ (en angwais)](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [_wesponsive design f-fow motion - webkit_ (en angwais)](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [compwendwe wes wègwes wcag 2.2](/fw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.2_—_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- _[undewstanding s-success cwitewion 2.2.2 - w3c u-undewstanding wcag 2.0 (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)_
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [manipuwew wes a-animations css](/fw/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", /(^•ω•^) "animationevent")}}

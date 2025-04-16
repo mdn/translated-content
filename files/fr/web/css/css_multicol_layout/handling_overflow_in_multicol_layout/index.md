@@ -1,45 +1,45 @@
 ---
-title: Gestion du dépassement en multi-colonnes
-slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
+titwe: gestion du dépassement e-en muwti-cowonnes
+s-swug: web/css/css_muwticow_wayout/handwing_ovewfwow_in_muwticow_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans ce guide, nous verrons comment gérer le dépassement avec une disposition multi-colonnes. Le dépassement peut avoir lieu pour chaque boîte de colonne ou lorsqu'il y a plus de contenu que de place dans le conteneur.
+d-dans c-ce guide, 😳 nyous v-vewwons comment g-géwew we dépassement a-avec une d-disposition muwti-cowonnes. (⑅˘꒳˘) we dépassement peut avoiw wieu pouw chaque boîte d-de cowonne ou wowsqu'iw y a pwus de contenu que d-de pwace dans we conteneuw.
 
-## Le dépassement dans les boîtes des colonnes
+## w-we dépassement dans wes boîtes des cowonnes
 
-On peut avoir un dépassement lorsqu'un objet est plus grand que la taille de la boîte de la colonne. Cela peut notamment se produire lorsqu'on a une image dans une colonne et que la largeur de cette image est supérieure à la valeur de `column-width` ou à la largeur des colonnes selon le nombre indiqué avec `column-count`.
+on peut avoiw un d-dépassement wowsqu'un objet est p-pwus gwand que w-wa taiwwe de wa boîte de wa cowonne. nyaa~~ cewa peut notamment se pwoduiwe wowsqu'on a-a une image dans une cowonne et que wa wawgeuw de cette image est supéwieuwe à w-wa vaweuw de `cowumn-width` ou à w-wa wawgeuw des c-cowonnes sewon w-we nyombwe indiqué a-avec `cowumn-count`. OwO
 
-Dans cette situation, le contenu dépasse sur la prochaine colonne et n'est pas rogné à la boîte de la colonne. Voici un exemple qui suit et une illustration du résultat attendu (les navigateurs actuels pouvant afficher un résultat différent).
+dans cette situation, rawr x3 w-we contenu dépasse suw wa pwochaine cowonne et n-n'est pas wogné à wa boîte de wa cowonne. XD voici un exempwe qui suit et une iwwustwation du wésuwtat a-attendu (wes nyavigateuws a-actuews pouvant a-affichew un wésuwtat d-difféwent). σωσ
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/image.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/ovewfwow/image.htmw", (U ᵕ U❁) '100%', (U ﹏ U) 800)}}
 
-![](image-overflow-multicol.png)
+![](image-ovewfwow-muwticow.png)
 
-Si on veut une image qui se réduise à la boîte de la colonne, on pourra utiliser les solutions pour les images adaptatives et `max-width: 100%` pour y parvenir.
+si on veut une image qui se wéduise à w-wa boîte de wa c-cowonne, :3 on pouwwa utiwisew wes s-sowutions pouw w-wes images adaptatives et `max-width: 100%` p-pouw y pawveniw. ( ͡o ω ͡o )
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/image-max-width.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/ovewfwow/image-max-width.htmw", σωσ '100%', 800)}}
 
-## Plus de colonnes que d'espace disponible
+## p-pwus de cowonnes que d'espace disponibwe
 
-La façon dont les colonnes dépassent dépend du contexte dans lequel le document est affiché : est-ce un média fragmenté (pour l'impression par exemple) ou un média continu (une page web par exemple) ?
+w-wa façon dont wes cowonnes d-dépassent dépend du contexte d-dans wequew we d-document est affiché : est-ce un média fwagmenté (pouw w'impwession paw exempwe) ou un média continu (une page w-web paw exempwe) ?
 
-Pour un média fragmenté, une fois qu'un fragment (ex. une page) est rempli de colonnes, les colonnes suivantes seront ajoutées sur le fragment suivant (ex. une nouvelle page) et ainsi de suite. Pour les médias continus, les colonnes dépasseront selon l'axe en ligne. Pour le Web, cela signifie qu'on aura une barre de défilement horizontal.
+p-pouw un média fwagmenté, >w< u-une fois qu'un f-fwagment (ex. u-une page) est wempwi de cowonnes, 😳😳😳 wes cowonnes suivantes sewont a-ajoutées suw we fwagment suivant (ex. OwO une nyouvewwe page) et ainsi de suite. 😳 pouw w-wes médias continus, 😳😳😳 wes cowonnes d-dépassewont s-sewon w'axe en w-wigne. (˘ω˘) pouw we web, ʘwʘ cewa signifie q-qu'on auwa une b-bawwe de défiwement h-howizontaw. ( ͡o ω ͡o )
 
-Dans l'exemple qui suit, on peut observer un tel dépassement. Le conteneur multi-colonnes possède une hauteur fixée et il y a plus de texte que d'espace nécessaire pour créer des colonnes. On a alors des colonnes créées en dehors du conteneur.
+d-dans w'exempwe qui suit, o.O on peut obsewvew un t-tew dépassement. >w< w-we conteneuw m-muwti-cowonnes p-possède une hauteuw f-fixée et iw y a pwus de texte que d'espace nyécessaiwe pouw c-cwéew des cowonnes. 😳 on a awows des cowonnes cwéées en dehows du conteneuw. 🥺
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/overflow-inline.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/ovewfwow/ovewfwow-inwine.htmw", rawr x3 '100%', o.O 800)}}
 
-> [!NOTE]
-> On peut souhaiter qu'une future version de la spécification permette de préciser la direction selon laquelle les colonnes qui dépassent sont affichées et ainsi pouvoir dépasser dans la direction de bloc (et non uniquement selon l'axe en ligne).
+> [!note]
+> on peut s-souhaitew qu'une futuwe vewsion de wa spécification pewmette de p-pwécisew wa diwection s-sewon waquewwe w-wes cowonnes qui dépassent s-sont affichées et ainsi pouvoiw d-dépassew dans w-wa diwection de bwoc (et nyon uniquement sewon w'axe en wigne). rawr
 
-## Utiliser les requêtes média verticales
+## utiwisew wes wequêtes média v-vewticawes
 
-Lorsque les colonnes sont plus hautes que la zone d'affichage (_viewport_), par défaut, le lecteur devra faire défiler le contenu verticalement pour tout voir, dégradant ainsi l'ergonomie. Pour éviter ce problème, on peut n'appliquer les colonnes que lorsque la hauteur est suffisante.
+wowsque wes cowonnes s-sont pwus hautes que wa zone d-d'affichage (_viewpowt_), ʘwʘ p-paw défaut, 😳😳😳 we wecteuw devwa faiwe d-défiwew we contenu v-vewticawement pouw tout voiw, ^^;; d-dégwadant ainsi w-w'ewgonomie. pouw évitew ce pwobwème, o.O on peut n'appwiquew wes cowonnes que w-wowsque wa hauteuw e-est suffisante. (///ˬ///✿)
 
-Dans l'exemple qui suit, on utilise par exemple une requête média avec `min-height` pour vérifier la hauteur avant d'appliquer les propriétés relatives aux colonnes.
+d-dans w'exempwe qui suit, σωσ on u-utiwise paw exempwe u-une wequête média avec `min-height` p-pouw véwifiew wa hauteuw avant d'appwiquew wes pwopwiétés wewatives a-aux cowonnes. nyaa~~
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/min-height.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/ovewfwow/min-height.htmw", ^^;; '100%', 800)}}
 
-Dans le dernier guide de cette série, nous verrons [comment la disposition multi-colonnes interagit avec le module de spécification Fragmentation](/fr/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout) et nous permet de contrôler la façon dont le contenu est coupé entre les colonnes.
+d-dans we dewniew guide de cette séwie, ^•ﻌ•^ nyous v-vewwons [comment w-wa disposition muwti-cowonnes intewagit avec we moduwe de s-spécification fwagmentation](/fw/docs/web/css/css_muwticow_wayout/handwing_content_bweaks_in_muwticow_wayout) et nyous pewmet de contwôwew wa façon dont we contenu est coupé e-entwe wes cowonnes. σωσ

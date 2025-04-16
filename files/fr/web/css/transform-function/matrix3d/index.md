@@ -1,190 +1,190 @@
 ---
-title: matrix3d()
-slug: Web/CSS/transform-function/matrix3d
+titwe: matwix3d()
+swug: web/css/twansfowm-function/matwix3d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction **`matrix3d()`** décrit une transformation en trois dimensions sous la forme d'une matrice homogène (4x4). Les 16 paramètres passés à la fonction sont listés par ligne puis par colonne. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+w-wa fonction **`matwix3d()`** d-décwit u-une twansfowmation e-en twois d-dimensions sous w-wa fowme d'une m-matwice homogène (4x4). òωó w-wes 16 pawamètwes passés à wa fonction sont wistés paw wigne puis paw c-cowonne. (⑅˘꒳˘) we wésuwtat de cette fonction est une v-vaweuw de type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). XD
 
-## Syntaxe
+## syntaxe
 
-La fonction `matrix3d()` s'utilise avec 16 valeurs qui sont décrites dans l'ordre des colonnes.
+wa f-fonction `matwix3d()` s'utiwise avec 16 vaweuws qui sont décwites d-dans w'owdwe des cowonnes. -.-
 
 ```css
-matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
+m-matwix3d(a1, :3 b-b1, nyaa~~ c1, d1, a2, b2, 😳 c2, d2, a3, b3, (⑅˘꒳˘) c3, d3, a4, b4, nyaa~~ c4, d4)
 ```
 
-### Valeurs
+### vaweuws
 
 - _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_ _a3_ _b3_ _c3_ _d3_ _d4_
-  - : Des valeurs de type [`<number>`](/fr/docs/Web/CSS/number) qui sont les coefficients de la matrice définissant la transformation linéaire.
-- `a4` `b4 c4`
-  - : Les coefficients de type [`<number>`](/fr/docs/Web/CSS/number) qui définissent la translation à appliquer.
+  - : d-des vaweuws de type [`<numbew>`](/fw/docs/web/css/numbew) qui sont wes coefficients de wa matwice définissant w-wa twansfowmation winéaiwe. OwO
+- `a4` `b4 c-c4`
+  - : wes c-coefficients de t-type [`<numbew>`](/fw/docs/web/css/numbew) q-qui définissent wa twanswation à appwiquew. rawr x3
 
-> [!NOTE]
-> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `a4`, `b4` et `c4`.
+> [!note]
+> j-jusqu'à fiwefox 16, XD gecko pewmettait d'utiwisew d-des vaweuws [`<wength>`](/fw/docs/web/css/wength) pouw wes coefficients `a4`, σωσ `b4` et `c4`.
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">coowdonnées c-cawtésiennes suw ℝ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées h-homogènes suw ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées cawtésiennes suw ℝ<sup>3</sup></th>
+      <th scope="cow">coowdonnées h-homogènes s-suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2" rowspan="2">
-        Cette transformation s'applique dans l'espace (3D) et ne peut pas être
-        représentée en deux dimensions.
+    <tw>
+      <td cowspan="2" wowspan="2">
+        c-cette twansfowmation s-s'appwique dans w'espace (3d) e-et nye peut pas êtwe
+        w-wepwésentée en deux dimensions. (U ᵕ U❁)
       </td>
-      <td colspan="1" rowspan="2">
-        Les matrices exprimées avec des coordonnées cartésiennes ne permettent
-        pas de représenter des transformations 3D affines car les translations
-        ne sont pas des transformations linéaires.
+      <td cowspan="1" w-wowspan="2">
+        wes matwices e-expwimées avec des coowdonnées c-cawtésiennes n-nye pewmettent
+        pas de wepwésentew des twansfowmations 3d affines caw wes twanswations
+        nye s-sont pas des twansfowmations winéaiwes. (U ﹏ U)
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtr
-              ><mtr><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtr
-              ><mtr><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtr
-              ><mtr
-                ><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtw
+              ><mtw><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtw
+              ><mtw><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtw
+              ><mtw
+                ><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe simpwe
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>toto</p>
-<p class="transformation">truc</p>
+<p c-cwass="twansfowmation">twuc</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
   width: 50px;
   height: 50px;
-  background-color: teal;
+  b-backgwound-cowow: teaw;
 }
 
-.transformation {
-  transform: matrix3d(
+.twansfowmation {
+  twansfowm: matwix3d(
     0.87,
-    -0.5,
+    -0.5, :3
+    0, ( ͡o ω ͡o )
     0,
-    0,
-    0.5,
+    0.5, σωσ
     0.87,
+    0, >w<
     0,
     0,
-    0,
-    0,
+    0, 😳😳😳
     1,
+    0, OwO
     0,
-    0,
-    0,
+    0, 😳
     0,
     1
   );
-  background-color: blue;
+  backgwound-cowow: b-bwue;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_simple","100%","200")}}
+{{embedwivesampwe("exempwe_simpwe","100%","200")}}
 
-### Translation et homothétie matricielle
+### t-twanswation e-et homothétie m-matwiciewwe
 
-#### HTML
+#### htmw
 
-```html
-<div class="foo">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat sit
-  soluta, quisquam exercitationem delectus qui unde in facere necessitatibus aut
-  quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
+```htmw
+<div c-cwass="foo">
+  w-wowem ipsum d-dowow sit amet, 😳😳😳 c-consectetuw adipisicing ewit. (˘ω˘) quos quaewat s-sit
+  sowuta, ʘwʘ quisquam e-exewcitationem d-dewectus qui u-unde in facewe n-necessitatibus aut
+  quia powwo dowowem nyesciunt enim, ( ͡o ω ͡o ) at consequuntuw a-awiquam esse?
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-html {
+htmw {
   width: 100%;
 }
 body {
   height: 100vh;
-  /* Centering content */
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  /* c-centewing content */
+  dispway: fwex;
+  fwex-fwow: wow w-wwap;
+  justify-content: c-centew;
+  a-awign-content: centew;
 }
 .foo {
-  width: 50%;
+  w-width: 50%;
   padding: 1em;
-  color: white;
-  background: #ff8c66;
-  border: 2px dashed black;
-  text-align: center;
-  font-family: system-ui, sans-serif;
+  c-cowow: white;
+  b-backgwound: #ff8c66;
+  bowdew: 2px dashed bwack;
+  text-awign: centew;
+  font-famiwy: system-ui, o.O s-sans-sewif;
   font-size: 14px;
-  /* Setting up animation for better demonstration */
-  animation: MotionScale 2s alternate linear infinite;
+  /* s-setting up animation fow b-bettew demonstwation */
+  a-animation: motionscawe 2s awtewnate w-wineaw infinite;
 }
 
-@keyframes MotionScale {
-  from {
+@keyfwames motionscawe {
+  fwom {
     /*
-      Identity matrix is used as basis here.
-      The matrix below describes the
-      following transformations:
-        Translates every X point by -50px
-        Translates every Y point by -100px
-        Translates every Z point by 0
-        Scales down by 10%
+      i-identity matwix is used as basis h-hewe. >w<
+      t-the matwix bewow descwibes the
+      fowwowing twansfowmations:
+        twanswates evewy x point b-by -50px
+        t-twanswates evewy y-y point by -100px
+        twanswates e-evewy z p-point by 0
+        scawes down by 10%
     */
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, -100, 0, 1.1);
+    t-twansfowm: matwix3d(1, 😳 0, 0, 0, 0, 1, 🥺 0, 0, 0, 0, 1, 0, rawr x3 -50, -100, 0, o.O 1.1);
   }
   50% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.9);
+    twansfowm: matwix3d(1, rawr 0, ʘwʘ 0, 0, 0, 1, 0, 0, 😳😳😳 0, 0, 1, 0, 0, ^^;; 0, 0, 0.9);
   }
   to {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+    twansfowm: matwix3d(1, o.O 0, 0, 0, 0, 1, (///ˬ///✿) 0, 0, 0, 0, 1, σωσ 0, 50, 100, 0, nyaa~~ 1.1);
   }
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('Translation_et_homothétie_matricielle', '100%', '400px')}}
+{{embedwivesampwe('twanswation_et_homothétie_matwiciewwe', '100%', ^^;; '400px')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)
+- [compwendwe w-wes matwices de twansfowmations css (en angwais)](https://dev.opewa.com/awticwes/undewstanding-the-css-twansfowms-matwix/)

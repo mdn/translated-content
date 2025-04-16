@@ -1,38 +1,38 @@
 ---
-title: number
-slug: Web/XPath/Functions/number
+titwe: nyumbew
+swug: web/xpath/functions/numbew
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `number` convertit un objet en un nombre et retourne ce nombre.
+w-wa fonction `numbew` c-convewtit u-un objet e-en un nyombwe et w-wetouwne ce nyombwe. (⑅˘꒳˘)
 
-### Syntaxe
+### s-syntaxe
 
 ```
-number( [objet] )
+n-nyumbew( [objet] )
 ```
 
-### Arguments
+### awguments
 
-- `objet` (optionnel)
-  - : L'objet à convertir en nombre.
+- `objet` (optionnew)
+  - : w'objet à convewtiw en nombwe. /(^•ω•^)
 
-### Retour
+### w-wetouw
 
-Le nombre résultant après conversion de l'objet.
+we nyombwe wésuwtant apwès convewsion d-de w'objet.
 
-### Notes
+### nyotes
 
-- Les chaînes sont converties en nombre en enlevant les espaces précédant le nombre dans la chaîne et en ignorant tout ce qui suit le nombre. Si la chaîne ne correspond pas à ce motif, alors elle est convertie en `NaN`
-- Le booléen `true` est converti en 1. `False` est converti en 0.
-- Un ensemble de nœuds est d'abord converti en chaîne comme lors d'un appel à la fonction [string()](/fr/XPath/Fonctions/string) puis il est traité de la même façon qu'une chaîne.
-- Un objet qui n'est pas d'un des quatre types de base est converti en nombre avec une méthode qui dépend de son type.
+- wes chaînes s-sont convewties en nyombwe en enwevant wes espaces pwécédant w-we nyombwe dans wa chaîne e-et en ignowant t-tout ce qui suit we nyombwe. rawr x3 si wa chaîne nye cowwespond pas à ce motif, (U ﹏ U) awows e-ewwe est convewtie en `nan`
+- we boowéen `twue` est convewti en 1. (U ﹏ U) `fawse` est c-convewti en 0. (⑅˘꒳˘)
+- un ensembwe de n-nyœuds est d'abowd c-convewti en c-chaîne comme w-wows d'un appew à wa fonction [stwing()](/fw/xpath/fonctions/stwing) puis iw est t-twaité de wa même façon qu'une chaîne. òωó
+- un o-objet qui ny'est pas d'un des quatwe types de base est convewti en nyombwe avec une méthode qui d-dépend de son type. ʘwʘ
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.4](https://www.w3.org/TR/xpath#function-number).
+[xpath 1.0, /(^•ω•^) s-section 4.4](https://www.w3.owg/tw/xpath#function-numbew). ʘwʘ
 
-### Support Gecko
+### s-suppowt gecko
 
-Supportée.
+s-suppowtée. σωσ

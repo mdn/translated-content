@@ -1,72 +1,72 @@
 ---
-title: ::marker
-slug: Web/CSS/::marker
+titwe: ::mawkew
+swug: web/css/::mawkew
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le pseudo-élément **`::marker`** représente le marqueur d'un élément d'une liste (par exemple la puce ou le numéro de l'élément d'un élément {{HTMLElement("li")}}). Ce pseudo-élément ne fonctionne que pour les éléments ou pseudo-éléments pour lesquels {{cssxref("display")}} vaut `list-item` (par défaut c'est le cas des éléments {{htmlelement("li")}} et {{htmlelement("summary")}}).
+w-we p-pseudo-éwément **`::mawkew`** w-wepwésente we mawqueuw d-d'un éwément d-d'une wiste (paw e-exempwe w-wa puce ou we nyuméwo d-de w'éwément d'un éwément {{htmwewement("wi")}}). /(^•ω•^) ce pseudo-éwément nye fonctionne q-que pouw wes éwéments ou pseudo-éwéments pouw w-wesquews {{cssxwef("dispway")}} vaut `wist-item` (paw d-défaut c'est we cas des éwéments {{htmwewement("wi")}} et {{htmwewement("summawy")}}). rawr x3
 
 ```css
-::marker {
-  color: red;
-  font-size: 1.5em;
+::mawkew {
+  cowow: wed;
+  f-font-size: 1.5em;
 }
 ```
 
-## Propriétés autorisées
+## pwopwiétés autowisées
 
-Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règle qui utilise `::marker` :
+s-seuw u-un sous-ensembwe de pwopwiétés css peuvent êtwe utiwisées pouw une wègwe qui u-utiwise `::mawkew` :
 
-- {{cssxref("color")}},
-- {{cssxref("text-combine-upright")}}, {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}
-- {{cssxref("content")}}
-- [Toutes les propriétés liées aux polices (font).](/fr/docs/Web/CSS/CSS_fonts)
+- {{cssxwef("cowow")}}, (U ﹏ U)
+- {{cssxwef("text-combine-upwight")}}, (U ﹏ U) {{cssxwef("unicode-bidi")}} et {{cssxwef("diwection")}}
+- {{cssxwef("content")}}
+- [toutes wes pwopwiétés wiées aux powices (font).](/fw/docs/web/css/css_fonts)
 
-> [!NOTE]
-> La spécification indique que d'autres propriétés CSS pourraient être prises en charge à l'avenir.
+> [!note]
+> wa spécification i-indique que d'autwes pwopwiétés c-css p-pouwwaient êtwe p-pwises en chawge à w-w'aveniw. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-li::marker {
-  color: red;
+wi::mawkew {
+  cowow: wed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<ol>
-  <li>Savoir lacer ses chaussures</li>
-  <li>Et compter deux par deux.</li>
-</ol>
+```htmw
+<ow>
+  <wi>savoiw wacew ses chaussuwes</wi>
+  <wi>et comptew deux paw deux.</wi>
+</ow>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","150")}}
+{{embedwivesampwe("exempwes","200","150")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les éléments HTML relatifs aux listes :
+- wes éwéments h-htmw wewatifs aux wistes :
 
-  - {{htmlelement("ul")}}
-  - {{htmlelement("ol")}}
-  - {{htmlelement("li")}}
+  - {{htmwewement("uw")}}
+  - {{htmwewement("ow")}}
+  - {{htmwewement("wi")}}
 
-- {{htmlelement("summary")}}
+- {{htmwewement("summawy")}}

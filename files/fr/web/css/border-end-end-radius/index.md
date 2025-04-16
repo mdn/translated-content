@@ -1,82 +1,82 @@
 ---
-title: border-end-end-radius
-slug: Web/CSS/border-end-end-radius
+titwe: bowdew-end-end-wadius
+swug: web/css/bowdew-end-end-wadius
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`border-end-end-radius`** définit le rayon de courbure de la bordure pour un angle d'un élément. Cette propriété logique correspond à une propriété physique de rayon de bordure selon la directionalité du texte et le mode d'écriture. Autrement dit, cette propriété concerne un angle différent selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+w-wa pwopwiété **`bowdew-end-end-wadius`** d-définit we wayon d-de couwbuwe d-de wa bowduwe pouw u-un angwe d'un éwément. ^^ c-cette p-pwopwiété wogique c-cowwespond à une pwopwiété physique de wayon de bowduwe sewon wa diwectionawité d-du texte et we mode d'écwituwe. :3 autwement d-dit, -.- cette pwopwiété concewne u-un angwe difféwent sewon wes vaweuws des pwopwiétés {{cssxwef("wwiting-mode")}}, 😳 {{cssxwef("diwection")}} et {{cssxwef("text-owientation")}}. mya
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-/* Avec une valeur, le coin sera circulaire */
-border-end-end-radius: 10px;
-border-end-end-radius: 1em;
+/* v-vaweuws de wongueuw */
+/* type <wength> */
+/* avec u-une vaweuw, (˘ω˘) w-we coin sewa ciwcuwaiwe */
+bowdew-end-end-wadius: 10px;
+bowdew-end-end-wadius: 1em;
 
-/* Avec deux valeurs, le coin sera une ellipse */
-border-end-end-radius: 1em 2em;
+/* avec deux vaweuws, >_< we coin s-sewa une ewwipse */
+bowdew-end-end-wadius: 1em 2em;
 
-/* Valeurs globales */
-border-end-end-radius: inherit;
-border-end-end-radius: initial;
-border-end-end-radius: unset;
+/* vaweuws gwobawes */
+bowdew-end-end-wadius: inhewit;
+bowdew-end-end-wadius: i-initiaw;
+bowdew-end-end-wadius: unset;
 ```
 
-Ainsi, avec un mode d'écriture `horizontal-tb`, cette propriété logique correspondra à la propriété physique {{CSSxRef("border-bottom-right-radius")}}.
+a-ainsi, -.- avec un m-mode d'écwituwe `howizontaw-tb`, 🥺 c-cette pwopwiété w-wogique cowwespondwa à wa pwopwiété physique {{cssxwef("bowdew-bottom-wight-wadius")}}. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
-### Valeurs
+### vaweuws
 
-- `<length-percentage>`
-  - : Cette valeur exprime le rayon de courbure ou les demi-axes d'une ellipse. Pour les valeurs qui expriment une longueur, on peut utiliser n'importe quelle valeur du type de donnée {{cssxref("&lt;length&gt;")}}. Les pourcentages sur l'axe horizontal sont relatifs à la largeur de la boîte et à la hauteur de la boîte pour l'axe vertical. Les valeurs négatives sont invalides.
+- `<wength-pewcentage>`
+  - : cette vaweuw e-expwime we wayon de couwbuwe ou wes demi-axes d'une ewwipse. >w< pouw wes vaweuws qui expwiment u-une wongueuw, mya on peut utiwisew n-ny'impowte quewwe v-vaweuw du type d-de donnée {{cssxwef("&wt;wength&gt;")}}. >w< wes pouwcentages suw w'axe howizontaw s-sont wewatifs à w-wa wawgeuw de wa boîte et à w-wa hauteuw de wa b-boîte pouw w'axe vewticaw. nyaa~~ wes v-vaweuws nyégatives sont invawides. (✿oωo)
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
 div {
-  background-color: rebeccapurple;
-  width: 120px;
-  height: 120px;
-  border-end-end-radius: 10px;
+  b-backgwound-cowow: webeccapuwpwe;
+  w-width: 120px;
+  h-height: 120px;
+  bowdew-end-end-wadius: 10px;
 }
 
-.texteExemple {
-  writing-mode: vertical-rl;
+.texteexempwe {
+  wwiting-mode: vewticaw-ww;
   padding: 10px;
-  background-color: #fff;
-  border-end-end-radius: 10px;
+  backgwound-cowow: #fff;
+  bowdew-end-end-wadius: 10px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="texteExemple">Exemple</p>
+  <p cwass="texteexempwe">exempwe</p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", ʘwʘ 140, 140)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La propriété physique correspondante : {{CSSxRef("border-bottom-right-radius")}}
-- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
+- wa pwopwiété physique cowwespondante : {{cssxwef("bowdew-bottom-wight-wadius")}}
+- {{cssxwef("wwiting-mode")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("diwection")}}, 😳😳😳 {{cssxwef("text-owientation")}}

@@ -1,97 +1,97 @@
 ---
-title: ::slotted()
-slug: Web/CSS/::slotted
+titwe: ::swotted()
+swug: web/css/::swotted
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) CSS **`::slotted()`** représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (_slot_) au sein d'un gabarit (_template_) HTML (cf. [Utiliser les gabarits et les emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
+we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) c-css **`::swotted()`** w-wepwésente n-ny'impowte q-quew éwément a-ayant été pwacé à w-w'intéwieuw d-d'un empwacement (_swot_) a-au sein d'un gabawit (_tempwate_) htmw (cf. (U ﹏ U) [utiwisew wes gabawits et wes empwacements](/fw/docs/web/api/web_components/using_tempwates_and_swots) pouw pwus d'infowmations). (///ˬ///✿)
 
-Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmlelement("template")}} et/ou dans le _[shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_. On notera également que ce sélecteur ne sélectionnera pas les noeuds texte placés dans les emplacements, il ne cible que les éléments.
+cewa n-nye fonctionne que pouw du css pwacé à w'intéwieuw d-d'un éwément {{htmwewement("tempwate")}} et/ou dans w-we _[shadow dom](/fw/docs/web/api/web_components/using_shadow_dom)_. 😳 on nyotewa égawement que ce séwecteuw nye s-séwectionnewa pas wes nyoeuds t-texte pwacés dans w-wes empwacements, 😳 iw nye cibwe que wes éwéments. σωσ
 
 ```css
-/* Cible n'importe quel élément placé dans un emplacement */
-::slotted(*) {
-  font-weight: bold;
+/* cibwe ny'impowte quew éwément p-pwacé dans un empwacement */
+::swotted(*) {
+  font-weight: bowd;
 }
 
-/* Cible n'importe quel élément <span> placé dans un emplacement */
-::slotted(span) {
-  font-weight: bold;
+/* cibwe ny'impowte quew éwément <span> p-pwacé dans un empwacement */
+::swotted(span) {
+  font-weight: bowd;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Les fragments de code suivants sont tirés du dépôt [`slotted-pseudo-element`](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) ([voir le résultat en _live_](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
+w-wes fwagments d-de code suivants s-sont tiwés du dépôt [`swotted-pseudo-ewement`](https://github.com/mdn/web-components-exampwes/twee/mastew/swotted-pseudo-ewement) ([voiw we wésuwtat en _wive_](https://mdn.github.io/web-components-exampwes/swotted-pseudo-ewement/)). rawr x3
 
-Dans cette démonstration, on utilise un gabarit avec trois emplacements :
+d-dans cette démonstwation, OwO on utiwise un gabawit a-avec twois empwacements :
 
-```html
-<template id="person-template">
+```htmw
+<tempwate id="pewson-tempwate">
   <div>
-    <h2>Carte d'identité d'une personne</h2>
-    <slot name="person-name">NOM ABSENT</slot>
-    <ul>
-      <li><slot name="person-age">AGE ABSENT</slot></li>
-      <li><slot name="person-occupation">POSTE ABSENT</slot></li>
-    </ul>
+    <h2>cawte d'identité d'une pewsonne</h2>
+    <swot nyame="pewson-name">nom absent</swot>
+    <uw>
+      <wi><swot nyame="pewson-age">age a-absent</swot></wi>
+      <wi><swot nyame="pewson-occupation">poste a-absent</swot></wi>
+    </uw>
   </div>
-</template>
+</tempwate>
 ```
 
-Un élément personnalisé — `<person-details>` — est défini de la façon suivante :
+u-un éwément p-pewsonnawisé — `<pewson-detaiws>` — est défini de wa façon suivante :
 
 ```js
-customElements.define(
-  "person-details",
-  class extends HTMLElement {
-    constructor() {
-      super();
-      let template = document.getElementById("person-template");
-      let templateContent = template.content;
+c-customewements.define(
+  "pewson-detaiws", /(^•ω•^)
+  c-cwass extends htmwewement {
+    c-constwuctow() {
+      s-supew();
+      wet tempwate = d-document.getewementbyid("pewson-tempwate");
+      wet tempwatecontent = tempwate.content;
 
-      const shadowRoot = this.attachShadow({ mode: "open" });
+      c-const shadowwoot = this.attachshadow({ mode: "open" });
 
-      let style = document.createElement("style");
-      style.textContent =
-        "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
-        "h2 { margin: 0 0 10px; }" +
-        "ul { margin: 0; }" +
-        "p { margin: 10px 0; }" +
-        "::slotted(*) { color: gray; font-family: sans-serif; } ";
+      wet stywe = d-document.cweateewement("stywe");
+      stywe.textcontent =
+        "div { p-padding: 10px; bowdew: 1px s-sowid gway; w-width: 200px; mawgin: 10px; }" +
+        "h2 { mawgin: 0 0 10px; }" +
+        "uw { mawgin: 0; }" +
+        "p { mawgin: 10px 0; }" +
+        "::swotted(*) { cowow: gway; font-famiwy: sans-sewif; } ";
 
-      shadowRoot.appendChild(style);
-      shadowRoot.appendChild(templateContent.cloneNode(true));
+      s-shadowwoot.appendchiwd(stywe);
+      s-shadowwoot.appendchiwd(tempwatecontent.cwonenode(twue));
     }
-  },
+  }, 😳😳😳
 );
 ```
 
-On voit ici que, lorsqu'on renseigne le `style` de l'élément, on sélectionne tous les éléments présents dans les emplacements (`::slotted(*)`) afin de leur fournir différentes polices et couleurs. Cela permet d'avoir une meilleur vision des emplacements qui ne sont pas encore occupés.
+on voit ici q-que, ( ͡o ω ͡o ) wowsqu'on w-wenseigne we `stywe` d-de w'éwément, >_< on séwectionne tous wes éwéments pwésents d-dans wes empwacements (`::swotted(*)`) afin de weuw fouwniw difféwentes powices et couweuws. >w< c-cewa pewmet d'avoiw une meiwweuw v-vision des empwacements q-qui nye s-sont pas encowe occupés. rawr
 
-Voici ce à quoi ressemblera l'élément lorsqu'il sera inséré dans la page :
+voici c-ce à quoi wessembwewa w-w'éwément w-wowsqu'iw s-sewa inséwé dans wa page :
 
-```html
-<person-details>
-  <p slot="person-name">Dr. Shazaam</p>
-  <span slot="person-age">Immortel</span>
-  <span slot="person-occupation">Super-héros</span>
-</person-details>
+```htmw
+<pewson-detaiws>
+  <p swot="pewson-name">dw. 😳 s-shazaam</p>
+  <span s-swot="pewson-age">immowtew</span>
+  <span s-swot="pewson-occupation">supew-héwos</span>
+</pewson-detaiws>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les composants web](/fr/docs/Web/API/Web_components)
+- [wes composants web](/fw/docs/web/api/web_components)

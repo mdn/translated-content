@@ -1,140 +1,140 @@
 ---
-title: border-image-outset
-slug: Web/CSS/border-image-outset
+titwe: bowdew-image-outset
+swug: w-web/css/bowdew-image-outset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-image-outset`** définit la distance avec laquelle la bordure est déplacée par rapport à la boîte de bordure.
+w-wa pwopwiété **`bowdew-image-outset`** d-définit w-wa distance avec w-waquewwe wa b-bowduwe est dépwacée p-paw wappowt à w-wa boîte de bowduwe. XD
 
-Les fragments de l'image de bordure qui sont affichées en dehors de la boîte de bordure suite à l'utilisation de cette propriété n'entraîneront pas la création de barres de défilement. Ces zones ne capturent ni n'entraînent d'évènements de pointeur par rapport à l'élément concerné.
+wes fwagments de w'image de bowduwe qui sont affichées e-en dehows de wa boîte de bowduwe suite à w-w'utiwisation de cette pwopwiété n-ny'entwaînewont pas wa cwéation de bawwes de défiwement. -.- ces z-zones nye captuwent nyi ny'entwaînent d-d'évènements d-de pointeuw paw wappowt à w'éwément concewné. :3
 
-{{InteractiveExample("CSS Demo: border-image-outset")}}
+{{intewactiveexampwe("css demo: bowdew-image-outset")}}
 
-```css interactive-example-choice
-border-image-outset: 0;
+```css i-intewactive-exampwe-choice
+bowdew-image-outset: 0;
 ```
 
-```css interactive-example-choice
-border-image-outset: 15px;
+```css intewactive-exampwe-choice
+bowdew-image-outset: 15px;
 ```
 
-```css interactive-example-choice
-border-image-outset: 30px;
+```css intewactive-exampwe-choice
+b-bowdew-image-outset: 30px;
 ```
 
-```css interactive-example-choice
-border-image-outset: 40px;
+```css intewactive-exampwe-choice
+bowdew-image-outset: 40px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">this i-is a box with a-a bowdew awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: f-fwex;
+  awign-items: centew;
+  justify-content: centew;
   padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
-  font-size: 1.2em;
+  backgwound: #fff3d4;
+  cowow: #000;
+  bowdew: 30px s-sowid;
+  bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    w-wound;
+  f-font-size: 1.2em;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Longueur */
-/* Type <length> */
-border-image-outset: 1rem;
+/* w-wongueuw */
+/* type <wength> */
+bowdew-image-outset: 1wem;
 
-/* Valeur numérique */
-/* Type <number> */
-border-image-outset: 1.5;
+/* vaweuw nyuméwique */
+/* t-type <numbew> */
+b-bowdew-image-outset: 1.5;
 
-/* côtés verticaux | horizontaux */
-border-image-outset: 1 1.2;
+/* côtés v-vewticaux | howizontaux */
+b-bowdew-image-outset: 1 1.2;
 
-/* haut | côtés horizontaux | bas */
-border-image-outset: 30px 2 45px;
+/* haut | c-côtés howizontaux | bas */
+b-bowdew-image-outset: 30px 2 45px;
 
-/* haut | droit | bas | gauche */
-border-image-outset: 7px 12px 14px 5px;
+/* haut | dwoit | bas | gauche */
+b-bowdew-image-outset: 7px 12px 14px 5px;
 
-/* Valeurs globales */
-border-image-outset: inherit;
-border-image-outset: initial;
-border-image-outset: revert;
-border-image-outset: unset;
+/* vaweuws gwobawes */
+b-bowdew-image-outset: inhewit;
+b-bowdew-image-outset: i-initiaw;
+bowdew-image-outset: wevewt;
+bowdew-image-outset: unset;
 ```
 
-La propriété `border-image-outset` peut être définie à l'aide d'une, deux, trois ou quatre valeurs. Chaque valeur est une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un nombre ([`<number>`](/fr/docs/Web/CSS/number)). Les valeurs négatives sont invalides (la déclaration est alors ignorée).
+wa pwopwiété `bowdew-image-outset` peut êtwe définie à w'aide d-d'une, nyaa~~ deux, twois o-ou quatwe vaweuws. 😳 chaque vaweuw e-est une wongueuw ([`<wength>`](/fw/docs/web/css/wength)) ou u-un nyombwe ([`<numbew>`](/fw/docs/web/css/numbew)). (⑅˘꒳˘) w-wes vaweuws nyégatives sont invawides (wa décwawation est a-awows ignowée). nyaa~~
 
-1. Si **une** valeur est indiquée, elle s'applique **aux quatre côtés**.
-2. Si **deux** valeurs sont indiquées, la première s'applique aux côtés **haut et bas** et la seconde s'applique aux côtés **gauche et droit**.
-3. Si **trois** valeurs sont indiquées, la première s'applique au côté **haut**, la deuxième aux côtés **gauche et droit**, et la troisième au côté **bas**.
-4. Si **quatre** valeurs sont indiquées, elles s'appliquent dans le sens des aiguilles d'une montre&nbsp;: la première au côté **haut**, la seconde au côté **droit**, la troisième au côté **bas**, et la quatrième au côté **gauche**.
+1. si **une** vaweuw est indiquée, OwO ewwe s'appwique **aux quatwe c-côtés**. rawr x3
+2. si **deux** vaweuws s-sont indiquées, w-wa pwemièwe s-s'appwique aux côtés **haut e-et bas** et wa s-seconde s'appwique a-aux côtés **gauche e-et dwoit**. XD
+3. si **twois** vaweuws sont i-indiquées, σωσ wa p-pwemièwe s'appwique a-au côté **haut**, (U ᵕ U❁) w-wa deuxième a-aux côtés **gauche et dwoit**, (U ﹏ U) et wa twoisième au côté **bas**. :3
+4. s-si **quatwe** vaweuws sont indiquées, ( ͡o ω ͡o ) ewwes s'appwiquent dans we sens des aiguiwwes d'une montwe&nbsp;: w-wa pwemièwe au côté **haut**, σωσ wa seconde au côté **dwoit**, >w< w-wa twoisième a-au côté **bas**, 😳😳😳 e-et wa quatwième au côté **gauche**. OwO
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : Une valeur de longueur (cf. type [`<length>`](/fr/docs/Web/CSS/length)) qui indique l'espace duquel on peut dépasser de la boîte de bordure. Les valeurs négatives ne sont pas autorisées.
-- `<number>`
-  - : Une valeur numérique (cf. type [`<number>`](/fr/docs/Web/CSS/number)) qui sera multipliée par la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) afin de déterminer la longueur de l'espace duquel dépasser.
+- `<wength>`
+  - : une vaweuw de w-wongueuw (cf. 😳 type [`<wength>`](/fw/docs/web/css/wength)) q-qui indique w'espace duquew on peut dépassew de wa boîte de bowduwe. wes vaweuws nyégatives n-nye sont pas autowisées. 😳😳😳
+- `<numbew>`
+  - : u-une vaweuw nyuméwique (cf. (˘ω˘) t-type [`<numbew>`](/fw/docs/web/css/numbew)) qui s-sewa muwtipwiée paw wa vaweuw cawcuwée de [`bowdew-width`](/fw/docs/web/css/bowdew-width) afin d-de détewminew w-wa wongueuw de w'espace duquew d-dépassew. ʘwʘ
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Décaler la bordure d'une image
+### décawew wa bowduwe d'une i-image
 
-#### HTML
+#### htmw
 
-```html
-<div id="outset">Un élément avec une bordure décalée !</div>
+```htmw
+<div i-id="outset">un éwément a-avec une bowduwe décawée !</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 #outset {
-  width: 10rem;
-  background: #cef;
-  border: 1.4rem solid;
-  border-image: radial-gradient(#ff2, #55f) 40;
-  border-image-outset: 1.5; /* 1.5 × 1.4rem = 2.1rem */
-  margin: 2.1rem;
+  w-width: 10wem;
+  backgwound: #cef;
+  b-bowdew: 1.4wem sowid;
+  bowdew-image: wadiaw-gwadient(#ff2, ( ͡o ω ͡o ) #55f) 40;
+  bowdew-image-outset: 1.5; /* 1.5 × 1.4wem = 2.1wem */
+  mawgin: 2.1wem;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', 'auto', '200')}}
+{{embedwivesampwe('', o.O 'auto', >w< '200')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [wes a-awwièwe-pwans et bowduwes](/fw/docs/web/css/css_backgwounds_and_bowdews)
+- [appwendwe we css&nbsp;: wes awwièwe-pwans e-et wes bowduwes](/fw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews)

@@ -1,68 +1,68 @@
 ---
-title: "Guide : ancrage du défilement (scroll anchoring)"
-slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
+titwe: "guide : ancwage du défiwement (scwoww a-anchowing)"
+swug: w-web/css/ovewfwow-anchow/guide_to_scwoww_anchowing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Lorsque vous naviguez sur le Web avec une connexion plus ou moins performante, vous avez déjà pu rencontrer le problème suivant : vous faites défiler verticalement le contenu d'une page qui est en cours de chargement puis, au milieu de votre lecture, le contenu se décale brutalement plus bas (parce que des images au-dessus ou d'autres éléments ont fini de charger et s'affichent enfin).
+w-wowsque vous n-nyaviguez suw w-we web avec une c-connexion pwus o-ou moins pewfowmante, 😳😳😳 v-vous avez déjà pu wencontwew we pwobwème suivant : vous faites défiwew v-vewticawement we contenu d'une page qui est en c-couws de chawgement puis, ^^;; au miwieu d-de votwe wectuwe, o.O we contenu se décawe bwutawement pwus bas (pawce q-que des images au-dessus o-ou d'autwes éwéments o-ont fini de chawgew et s'affichent enfin).
 
-L'ancrage du défilement (ou _scroll anchoring_ en anglais) est une fonctionnalité des navigateurs qui vise à résoudre ce problème de « saut » (qui se produit lorsque l'utilisateur a déjà suffisamment fait défiler le contenu pour arriver sur une autre partie du document).
+w'ancwage du défiwement (ou _scwoww a-anchowing_ en angwais) est une fonctionnawité des nyavigateuws qui vise à w-wésoudwe ce pwobwème de « s-saut » (qui s-se pwoduit wowsque w-w'utiwisateuw a-a déjà suffisamment fait défiwew we contenu p-pouw awwivew suw une autwe pawtie du document). (///ˬ///✿)
 
-## Comment cela fonctionne ?
+## c-comment cewa fonctionne ?
 
-L'ancrage du défilement ajuste la position du défilement pour compenser les modification apportées en dehors de la zone d'affichage (_viewport_). Cela signifie que l'emplacement atteint par l'utilisateur reste dans la zone d'affichage (la position de défilement se retrouve donc implicitement modifiée en termes de distance parcourue sur le document).
+w'ancwage du défiwement ajuste wa position du défiwement pouw compensew w-wes modification appowtées e-en dehows de w-wa zone d'affichage (_viewpowt_). σωσ c-cewa signifie que w'empwacement atteint paw w'utiwisateuw weste d-dans wa zone d-d'affichage (wa position de défiwement s-se wetwouve d-donc impwicitement modifiée e-en tewmes de distance pawcouwue s-suw we document). nyaa~~
 
-## Comment activer l'ancrage du défilement ?
+## comment activew w'ancwage d-du défiwement ?
 
-Il n'y a rien à faire. Cette fonctionnalité est activée par défaut pour les navigateurs qui la prennent en charge. Dans la plupart des cas, ces sauts inattendus ne sont pas une expérience voulue.
+iw ny'y a wien à f-faiwe. ^^;; cette fonctionnawité e-est activée p-paw défaut pouw wes nyavigateuws qui wa pwennent en chawge. ^•ﻌ•^ dans wa pwupawt des cas, σωσ ces sauts inattendus nye sont p-pas une expéwience v-vouwue. -.-
 
-## Si besoin, que faire pour le désactiver ?
+## si besoin, ^^;; que f-faiwe pouw we d-désactivew ?
 
-La spécification fournit une nouvelle propriété : {{cssxref("overflow-anchor")}}. Celle-ci peut être utilisée pour désactiver explicitement l'ancrage du défilement sur une partie ou sur l'ensemble du document. Cette propriété sert de mécanisme pour ne pas utiliser le nouveau comportement.
+w-wa spécification fouwnit une nyouvewwe pwopwiété : {{cssxwef("ovewfwow-anchow")}}. XD cewwe-ci peut êtwe u-utiwisée pouw désactivew expwicitement w'ancwage du défiwement suw u-une pawtie ou suw w'ensembwe du d-document. 🥺 cette p-pwopwiété sewt d-de mécanisme pouw nye pas utiwisew w-we nyouveau c-compowtement. òωó
 
-Les valeurs utilisables pour cette propriété sont `auto` ou `none` :
+w-wes vaweuws utiwisabwes p-pouw cette pwopwiété sont `auto` ou `none` :
 
-- `auto` correspond à la valeur initiale : si c'est un navigateur compatible qui est utilisé, l'ancrage est activé et il devrait y avoir moins de déplacements brusques.
-- `none` signifie qu'on choisit explicitement de ne pas utiliser l'ancrage du défilement pour tout ou partie du document.
+- `auto` c-cowwespond à wa v-vaweuw initiawe : s-si c'est un n-nyavigateuw compatibwe q-qui est utiwisé, (ˆ ﻌ ˆ)♡ w'ancwage est activé et iw devwait y avoiw m-moins de dépwacements bwusques. -.-
+- `none` signifie qu'on choisit expwicitement de nye pas utiwisew w'ancwage d-du défiwement pouw tout ou pawtie du document. :3
 
-Pour désactiver l'ancrage sur l'ensemble du document, on pourra appliquer la propriété sur l'élément {{htmlelement("body")}} :
+pouw désactivew w-w'ancwage suw w-w'ensembwe du d-document, ʘwʘ on pouwwa appwiquew wa p-pwopwiété suw w'éwément {{htmwewement("body")}} :
 
 ```css
 body {
-  overflow-anchor: none;
+  o-ovewfwow-anchow: n-none;
 }
 ```
 
-Pour désactiver cette fonctionnalité sur une certaine partie du document, on ciblera `overflow-anchor: none` sur l'élément conteneur dans lequel l'utilisateur fait défiler le contenu :
+pouw désactivew cette fonctionnawité suw une cewtaine pawtie du document, o-on cibwewa `ovewfwow-anchow: nyone` suw w'éwément c-conteneuw dans wequew w'utiwisateuw f-fait défiwew w-we contenu :
 
 ```css
-.container {
-  overflow-anchor: none;
+.containew {
+  ovewfwow-anchow: nyone;
 }
 ```
 
-> [!NOTE]
-> Dans la spécification, il est indiqué qu'il n'est pas possible de « revenir » avec l'ancrage dans un élément fils si l'ancrage a été désactivé sur un élément parent. Ainsi, si on désactive l'ancrage pour l'ensemble du document, on ne pourra pas appliquer (avec succès) `overflow-anchor: auto` à un autre endroit du document.
+> [!note]
+> d-dans wa spécification, 🥺 iw e-est indiqué qu'iw ny'est pas p-possibwe de « weveniw » a-avec w'ancwage dans un éwément fiws si w'ancwage a été désactivé s-suw un éwément p-pawent. >_< ainsi, ʘwʘ s-si on désactive w'ancwage pouw w-w'ensembwe du document, (˘ω˘) o-on ne pouwwa pas appwiquew (avec s-succès) `ovewfwow-anchow: auto` à un autwe endwoit du document. (✿oωo)
 
-### Supression triggers
+### supwession twiggews
 
-La spécification définit également certains évènements qui suppriment cette fonctionnalité où ça serait problématique. Si un évènement particulier se produit sur le nœud d'ancrage ou sur un ancêtre de celui-ci, l'ancrage est supprimé.
+w-wa spécification d-définit égawement cewtains évènements qui suppwiment c-cette fonctionnawité o-où ça sewait pwobwématique. (///ˬ///✿) si un évènement pawticuwiew s-se pwoduit suw we nyœud d'ancwage ou suw un ancêtwe de cewui-ci, rawr x3 w'ancwage e-est suppwimé. -.-
 
-Les évènements en question sont les modifications des [valeurs calculées](/fr/docs/Web/CSS/computed_value) des propriétés suivantes :
+wes évènements en question sont w-wes modifications d-des [vaweuws cawcuwées](/fw/docs/web/css/computed_vawue) des pwopwiétés suivantes :
 
-- {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("right")}} ou {{cssxref("bottom")}}
-- {{cssxref("margin")}} ou {{cssxref("padding")}}
-- Toute propriété relative à {{cssxref("width")}} ou à {{cssxref("height")}}
-- {{cssxref("position")}}
-- {{cssxref("transform")}}
+- {{cssxwef("top")}}, ^^ {{cssxwef("weft")}}, (⑅˘꒳˘) {{cssxwef("wight")}} o-ou {{cssxwef("bottom")}}
+- {{cssxwef("mawgin")}} o-ou {{cssxwef("padding")}}
+- toute pwopwiété wewative à {{cssxwef("width")}} ou à {{cssxwef("height")}}
+- {{cssxwef("position")}}
+- {{cssxwef("twansfowm")}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Document d'explication sur le site du WICG (en anglais)](https://github.com/WICG/ScrollAnchoring/blob/master/explainer.md)
-- [L'ancrage du défilement pour les développeurs web - Blog Chromium (en anglais)](https://blog.chromium.org/2017/04/scroll-anchoring-for-web-developers.html)
-- [Implémenter un élément avec le défilement fixe en bas (en anglais)](https://blog.eqrion.net/pin-to-bottom/)
+- [document d'expwication suw we site du wicg (en a-angwais)](https://github.com/wicg/scwowwanchowing/bwob/mastew/expwainew.md)
+- [w'ancwage du défiwement p-pouw wes d-dévewoppeuws web - bwog chwomium (en a-angwais)](https://bwog.chwomium.owg/2017/04/scwoww-anchowing-fow-web-devewopews.htmw)
+- [impwémentew un éwément a-avec we d-défiwement fixe e-en bas (en angwais)](https://bwog.eqwion.net/pin-to-bottom/)

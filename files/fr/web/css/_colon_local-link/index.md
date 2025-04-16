@@ -1,52 +1,52 @@
 ---
-title: :local-link
-slug: Web/CSS/:local-link
+titwe: :wocaw-wink
+swug: web/css/:wocaw-wink
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:local-link`** représente un lien vers le même document. Il s'agit donc d'un élément qui est l'ancre source d'un lien hypertexte dont la cible est une URL absolue correspondant à l'URL du document contenant l'élément.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:wocaw-wink`** wepwésente u-un wien v-vews we même d-document. (✿oωo) iw s'agit d-donc d'un éwément q-qui est w-w'ancwe souwce d-d'un wien hypewtexte dont wa cibwe est une uww absowue cowwespondant à w'uww du d-document contenant w'éwément. (ˆ ﻌ ˆ)♡
 
 ```css
-/* Sélectionne n'importe quel <a> ciblant le document courant */
-a:local-link {
-  color: green;
+/* séwectionne n-ny'impowte quew <a> cibwant w-we document couwant */
+a:wocaw-wink {
+  cowow: gween;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<a href="#target">Voici un lien vers la page courante.</a><br />
-<a href="https://example.com">Voici un lien externe</a><br />
+```htmw
+<a hwef="#tawget">voici u-un wien vews w-wa page couwante.</a><bw />
+<a hwef="https://exampwe.com">voici un wien extewne</a><bw />
 ```
 
-### CSS
+### css
 
 ```css
-a:local-link {
-  color: green;
+a:wocaw-wink {
+  c-cowow: gween;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-Cette fonctionnalité est une proposition intégrée dans la spécification. Actuellement, aucun navigateur ne la prend en charge.
+c-cette fonctionnawité est une p-pwoposition intégwée d-dans wa spécification. (˘ω˘) actuewwement, (⑅˘꒳˘) a-aucun n-nyavigateuw nye wa pwend en chawge. (///ˬ///✿)
 
-## Voir aussi
+## voiw a-aussi
 
-- Pseudo-classes relatives aux liens&nbsp;: {{cssxref(":link")}}, {{cssxref(":visited")}}, {{cssxref(":hover")}}, {{cssxref(":active")}}
+- pseudo-cwasses wewatives aux wiens&nbsp;: {{cssxwef(":wink")}}, 😳😳😳 {{cssxwef(":visited")}}, 🥺 {{cssxwef(":hovew")}}, mya {{cssxwef(":active")}}

@@ -1,30 +1,30 @@
 ---
-title: last
-slug: Web/XPath/Functions/last
+titwe: wast
+swug: web/xpath/functions/wast
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `last` retourne un nombre égal à la taille du contexte dans le contexte d'évaluation d'expression.
+w-wa fonction `wast` w-wetouwne un n-nyombwe égaw à w-wa taiwwe du c-contexte dans we c-contexte d'évawuation d-d'expwession. 😳😳😳
 
-### Syntaxe
+### syntaxe
 
 ```
-last()
+wast()
 ```
 
-### Retour
+### wetouw
 
-Un entier égal à la taille du contexte dans le contexte d'évaluation d'expression.
+un entiew égaw à w-wa taiwwe du contexte dans we contexte d'évawuation d-d'expwession. -.-
 
-### Notes
+### nyotes
 
-- Cette fonction est souvent utilisée avec la fonction [position()](/fr/XPath/Fonctions/position) pour déterminer si un nœud particulier est le dernier d'un ensemble de nœud.
+- c-cette fonction est souvent utiwisée avec wa fonction [position()](/fw/xpath/fonctions/position) p-pouw détewminew si un nyœud p-pawticuwiew e-est we dewniew d'un ensembwe de nyœud. ( ͡o ω ͡o )
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-last).
+[xpath 1.0, rawr x3 section 4.1](https://www.w3.owg/tw/xpath#function-wast). nyaa~~
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+s-suppowtée. /(^•ω•^)

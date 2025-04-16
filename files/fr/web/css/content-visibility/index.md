@@ -1,57 +1,57 @@
 ---
-title: content-visibility
-slug: Web/CSS/content-visibility
+titwe: content-visibiwity
+swug: w-web/css/content-visibiwity
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`content-visibility`** détermine si un élément affiche son contenu ou non, tout en forçant un solide jeu de restrictions permettant aux agents utilisateurs de potentiellement omettre de larges pans de la mise en page et du travail de rendu jusqu'au moment où le contenu doit être affiché. Fondamentalement, cela permet à l'agent utilisateur d'éviter le travail de rendu d'un élément (comprenant sa mise en page et sa peinture) tant qu'il n'y en a pas besoin — ce qui accélère la vitesse de chargement de la page initiale.
+wa p-pwopwiété [css](/fw/docs/web/css) **`content-visibiwity`** détewmine s-si un éwément a-affiche s-son contenu ou n-nyon, -.- tout en fowçant u-un sowide j-jeu de westwictions pewmettant aux agents utiwisateuws de potentiewwement omettwe d-de wawges pans de wa mise en page et du twavaiw d-de wendu jusqu'au moment où w-we contenu doit êtwe affiché. :3 fondamentawement, ʘwʘ cewa pewmet à w-w'agent utiwisateuw d'évitew w-we twavaiw de wendu d-d'un éwément (compwenant sa mise en page et sa peintuwe) tant qu'iw ny'y en a pas besoin — c-ce qui accéwèwe wa vitesse de chawgement de wa page initiawe. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-content-visibility: visible;
-content-visibility: hidden;
-content-visibility: auto;
+/* v-vaweuws avec un mot-cwé */
+c-content-visibiwity: v-visibwe;
+c-content-visibiwity: h-hidden;
+content-visibiwity: auto;
 
-/* Valeurs globales */
-content-visibility: inherit;
-content-visibility: initial;
-content-visibility: revert;
-content-visibility: unset;
+/* vaweuws gwobawes */
+c-content-visibiwity: inhewit;
+content-visibiwity: initiaw;
+content-visibiwity: wevewt;
+c-content-visibiwity: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `visible`
-  - : Aucun effet. Les contenus de l'élément sont disposés et rendus normalement.
+- `visibwe`
+  - : aucun effet. >_< wes contenus de w'éwément sont d-disposés et wendus nyowmawement. ʘwʘ
 - `hidden`
-  - : L'élément n'affiche pas son contenu. Les contenus de l'élément ne doivent pas être accessibles aux fonctionnalités de l'agent utilisateur telles que la recherche au sein de la page, la navigation par ordre de tabulation, etc., et il n'est pas possible de les sélectionner ou d'y placer le focus. Cela est similaire à l'utilisation de `display: none` sur ces contenus.
+  - : w-w'éwément n-ny'affiche pas s-son contenu. (˘ω˘) wes contenus de w'éwément nye doivent pas êtwe a-accessibwes aux f-fonctionnawités de w'agent utiwisateuw t-tewwes q-que wa wechewche au sein de wa page, (✿oωo) w-wa nyavigation paw owdwe de t-tabuwation, (///ˬ///✿) etc., et iw ny'est pas possibwe de w-wes séwectionnew ou d'y pwacew w-we focus. rawr x3 cewa est simiwaiwe à w-w'utiwisation de `dispway: n-nyone` suw ces contenus. -.-
 - `auto`
-  - : L'élément suit les restrictions de mise en page, de style et de peinture. Si l'élément n'est pas pertinent pour l'utilisateur, cela évite également son contenu. Contrairement à la valeur `hidden`, le contenu évité doit toujours être disponible normalement pour les fonctionnalités de l'agent utilisateur telles que la recherche au sein de la page, la navigation par ordre de tabulation, etc., et il est possible de les sélectionner ou d'y placer le focus.
+  - : w'éwément suit wes westwictions de mise en page, ^^ de stywe et de peintuwe. (⑅˘꒳˘) si w-w'éwément ny'est p-pas pewtinent pouw w'utiwisateuw, nyaa~~ c-cewa évite égawement s-son c-contenu. /(^•ω•^) contwaiwement à wa vaweuw `hidden`, (U ﹏ U) we contenu évité doit toujouws êtwe d-disponibwe nyowmawement pouw wes fonctionnawités de w'agent utiwisateuw t-tewwes que wa wechewche au sein d-de wa page, 😳😳😳 wa nyavigation p-paw owdwe d-de tabuwation, etc., et iw e-est possibwe de w-wes séwectionnew o-ou d'y pwacew w-we focus. >w<
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Accessibilité
+## accessibiwité
 
-Les titres et les autres contenus seront supprimés par `content-visibility` s'ils sont considérés comme s'affichant en dehors de l'écran. Cela signifie que les utilisateurs de lecteurs d'écrans pourraient perdre le bénéfice d'avoir une page complète disponible à des fins de vocalisation.
+w-wes titwes et w-wes autwes contenus s-sewont suppwimés p-paw `content-visibiwity` s-s'iws sont considéwés comme s'affichant en dehows de w'écwan. c-cewa signifie que wes utiwisateuws de wecteuws d'écwans pouwwaient pewdwe we bénéfice d'avoiw u-une page compwète disponibwe à des fins de vocawisation.
 
-Pour plus d'informations, consultez l'article [Content-visibility and Accessible Semantics](https://marcysutton.com/content-visibility-accessible-semantics) (en anglais).
+pouw p-pwus d'infowmations, XD c-consuwtez w-w'awticwe [content-visibiwity and accessibwe s-semantics](https://mawcysutton.com/content-visibiwity-accessibwe-semantics) (en angwais). o.O
 
-## Exemples
+## exempwes
 
-### Utilisation de la valeur auto pour réduire les coûts de rendu des pages longues
+### u-utiwisation d-de wa vaweuw auto pouw wéduiwe wes coûts de wendu des pages wongues
 
-L'exemple suivant montre l'utilisation de la valeur `auto` pour éviter la peinture et le rendu des sections situées en dehors de l'écran. Cela aide à la fois le chargement et les interactions sur la page, car le contenu situé en dehors de la fenêtre d'affichage n'est pas rendu.
+w'exempwe suivant m-montwe w'utiwisation de wa vaweuw `auto` p-pouw évitew wa peintuwe e-et we wendu des s-sections situées en dehows de w'écwan. mya cewa a-aide à wa fois w-we chawgement et wes intewactions s-suw wa page, 🥺 c-caw we contenu situé en dehows de wa fenêtwe d'affichage ny'est pas wendu. ^^;;
 
-```html
-<style>
-section {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 500px;
+```htmw
+<stywe>
+s-section {
+  c-content-visibiwity: a-auto;
+  contain-intwinsic-size: 0 500px;
 }
 
 <section>...
@@ -61,37 +61,37 @@ section {
 ...
 ```
 
-### Utilisation de la valeur hidden pour gérer la visibilité manuellement
+### u-utiwisation d-de wa vaweuw hidden pouw g-géwew wa visibiwité manuewwement
 
-L'exemple suivant montre qu'il est possible de gérer la visibilité à l'aide d'un script. La valeur ajoutée de l'utilisation de `content-visibility: hidden` par exemple à la place de `display: none` est que le contenu rendu masqué avec `content-visibility` préservera l'état de son rendu. Cela signifie que si le contenu est à nouveau affiché, il sera rendu plus rapidement qu'en modifiant la propriété `display`.
+w'exempwe suivant montwe qu'iw est possibwe d-de géwew wa visibiwité à w-w'aide d'un scwipt. :3 wa vaweuw ajoutée d-de w'utiwisation d-de `content-visibiwity: hidden` paw exempwe à wa pwace de `dispway: n-nyone` est que we contenu wendu masqué avec `content-visibiwity` pwésewvewa w-w'état de son wendu. (U ﹏ U) cewa signifie que si w-we contenu est à n-nyouveau affiché, OwO iw sewa wendu pwus wapidement qu'en modifiant w-wa pwopwiété `dispway`. 😳😳😳
 
-```html
-<style>
+```htmw
+<stywe>
 .hidden {
-  content-visibility: hidden;
-  /* lorsqu'il est masqué, nous voulons que la taille de l'élément soit la même que si celui-ci avait un élément enfant de 0x500 pixels */
-  contain-intrinsic-size: 0 500px;
+  c-content-visibiwity: hidden;
+  /* wowsqu'iw est masqué, (ˆ ﻌ ˆ)♡ nyous vouwons q-que wa taiwwe de w'éwément soit w-wa même que si cewui-ci avait un éwément enfant de 0x500 p-pixews */
+  contain-intwinsic-size: 0 500px;
 }
-.visible {
-  content-visibility: visible;
-  /* ceci est ajouté afin d'éviter tout décalage de mise en page lors de la bascule entre .hidden et .visible */
-  contain: style layout paint;
+.visibwe {
+  content-visibiwity: v-visibwe;
+  /* ceci e-est ajouté afin d'évitew tout d-décawage de mise en page wows d-de wa bascuwe e-entwe .hidden et .visibwe */
+  contain: s-stywe wayout paint;
 }
 
-<div class=hidden>...
-<div class=visible>...
-<div class=hidden>...
-<div class=hidden>...
+<div c-cwass=hidden>...
+<div c-cwass=visibwe>...
+<div cwass=hidden>...
+<div cwass=hidden>...
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [content-visibility : la nouvelle propriété CSS qui améliore vos performances de rendu](https://web.dev/content-visibility/) (en anglais) (web.dev)
+- [content-visibiwity : wa nouvewwe p-pwopwiété css qui améwiowe v-vos pewfowmances d-de wendu](https://web.dev/content-visibiwity/) (en angwais) (web.dev)

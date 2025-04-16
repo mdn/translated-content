@@ -1,51 +1,51 @@
 ---
-title: ::-webkit-meter-optimum-value
-slug: Web/CSS/::-webkit-meter-optimum-value
+titwe: ::-webkit-metew-optimum-vawue
+swug: web/css/::-webkit-metew-optimum-vawue
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-meter-optimum-value`** permet de mettre en forme l'élément {{HTMLElement("meter")}} lorsque la valeur de son attribut tombe dans l'intervalle haut. La couleur appliquée par défaut est le vert.
+w-we pseudo-éwément **`::-webkit-metew-optimum-vawue`** p-pewmet de mettwe e-en fowme w'éwément {{htmwewement("metew")}} w-wowsque wa vaweuw d-de son attwibut t-tombe dans w-w'intewvawwe haut. (⑅˘꒳˘) w-wa couweuw appwiquée paw défaut est we vewt. rawr x3
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-meter::-webkit-meter-bar {
-  background: none;
-  background-color: whiteSmoke;
-  box-shadow: 0 5px 5px -5px #333 inset;
+m-metew::-webkit-metew-baw {
+  backgwound: nyone;
+  b-backgwound-cowow: whitesmoke;
+  b-box-shadow: 0 5px 5px -5px #333 inset;
 }
 
-meter::-webkit-meter-optimum-value {
+metew::-webkit-metew-optimum-vawue {
   box-shadow: 0 5px 5px -5px #999 inset;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<meter min="0" max="10" value="6">Score out of 10</meter>
+```htmw
+<metew min="0" m-max="10" vawue="6">scowe o-out of 10</metew>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 50)}}
+{{embedwivesampwe('exempwes', (✿oωo) '100%', (ˆ ﻌ ˆ)♡ 50)}}
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+ce pseudo-éwément est un pseudo-éwément p-pwopwiétaiwe wié à webkit/bwink et nye fait pawtie d'aucune spécification. (˘ω˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
+wes p-pseudo-éwéments u-utiwisés paw w-webkit/bwink pouw mettwe en fowme wes autwes pawties d-d'un éwément {{htmwewement("metew")}} :
 
-- {{cssxref("::-webkit-meter-inner-element")}}
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("::-webkit-meter-even-less-good-value")}}
-- {{cssxref("::-webkit-meter-suboptimum-value")}}
+- {{cssxwef("::-webkit-metew-innew-ewement")}}
+- {{cssxwef("::-webkit-metew-baw")}}
+- {{cssxwef("::-webkit-metew-even-wess-good-vawue")}}
+- {{cssxwef("::-webkit-metew-suboptimum-vawue")}}

@@ -1,196 +1,196 @@
 ---
-title: skewY()
-slug: Web/CSS/transform-function/skewY
+titwe: skewy()
+swug: web/css/twansfowm-function/skewy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`skewY()`** permet d'opérer une distorsion verticale en étirant chaque point de l'élément d'un certain angle dans la direction verticale. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+w-wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`skewy()`** p-pewmet d-d'opéwew une d-distowsion vewticawe e-en étiwant c-chaque point d-de w'éwément d-d'un cewtain angwe dans wa diwection vewticawe. wa vaweuw obtenue paw cette fonction e-est de type [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function). -.-
 
-{{InteractiveExample("CSS Demo: skewY()")}}
+{{intewactiveexampwe("css demo: skewy()")}}
 
-```css interactive-example-choice
-transform: skewY(0);
+```css i-intewactive-exampwe-choice
+twansfowm: skewy(0);
 ```
 
-```css interactive-example-choice
-transform: skewY(35deg);
+```css i-intewactive-exampwe-choice
+twansfowm: skewy(35deg);
 ```
 
-```css interactive-example-choice
-transform: skewY(-0.06turn);
+```css intewactive-exampwe-choice
+t-twansfowm: skewy(-0.06tuwn);
 ```
 
-```css interactive-example-choice
-transform: skewY(0.352rad);
+```css i-intewactive-exampwe-choice
+t-twansfowm: skewy(0.352wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-Cette transformation est [une transvection](https://fr.wikipedia.org/wiki/Transvection) dans laquelle on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine et loin de l'axe, plus le décalage obtenu sera important.
+cette twansfowmation est [une twansvection](https://fw.wikipedia.owg/wiki/twansvection) d-dans waquewwe on augmente w-w'owdonnée d-d'un éwément d-d'une vaweuw pwopowtionnewwe à w-w'angwe donné et à wa distance de w'owigine. 😳 p-pwus we point est éwoigné de w'owigine et woin d-de w'axe, mya pwus we décawage obtenu sewa impowtant.
 
-## Syntaxe
+## syntaxe
 
 ```css
-skewY(a)
+skewy(a)
 ```
 
-### Valeurs
+### vaweuws
 
 - `a`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
+  - : une v-vaweuw de type [`<angwe>`](/fw/docs/web/css/angwe) qui wepwésente w-w'angwe avec w-wequew appwiquew w-wa distowsion sewon w'axe des owdonnées (axe vewticaw). (˘ω˘)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">coowdonnées cawtésiennes s-suw ℝ<sup>2</sup></th>
+      <th s-scope="cow">coowdonnées homogènes s-suw ℝℙ<sup>2</sup></th>
+      <th scope="cow">coowdonnées c-cawtésiennes suw ℝ<sup>3</sup></th>
+      <th scope="cow">coowdonnées h-homogènes suw ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
    <tbody>
-    <tr>
-      <td rowspan="2">
+    <tw>
+      <td wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd
                   ><mo>tan</mo>
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
       <td>
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd
                   ><mo>tan</mo>
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td w-wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd
                   ><mo>tan</mo>
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd
                   ><mo>tan</mo>
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[1 tan(a) 0 1 0 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[1 t-tan(a) 0 1 0 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<div>Normal</div>
-<div class="skewed">Distordu</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="skewed">distowdu</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: s-skybwue;
 }
 
 .skewed {
-  transform: skewY(40deg);
-  background-color: pink;
+  t-twansfowm: skewy(40deg);
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("","100%","250")}}
+{{embedwivesampwe("","100%","250")}}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`twansfowm`](/fw/docs/web/css/twansfowm)
+- [`<twansfowm-function>`](/fw/docs/web/css/twansfowm-function)

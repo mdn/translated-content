@@ -1,138 +1,138 @@
 ---
-title: outline-width
-slug: Web/CSS/outline-width
+titwe: outwine-width
+swug: web/css/outwine-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`outline-width`** est utilisée afin de définir l'épaisseur de la bordure (_outline_) d'un élément. Cette bordure est dessinée autour des éléments et délimite [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model). Visuellement, cela permet de faire ressortir l'élément.
+w-wa pwopwiété c-css **`outwine-width`** e-est u-utiwisée afin de d-définiw w'épaisseuw d-de wa bowduwe (_outwine_) d-d'un éwément. c-cette bowduwe est dessinée autouw des éwéments et déwimite [wa boîte de bowduwe](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew). /(^•ω•^) v-visuewwement, 😳😳😳 cewa pewmet de faiwe wessowtiw w-w'éwément. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: outline-width")}}
+{{intewactiveexampwe("css demo: outwine-width")}}
 
-```css interactive-example-choice
-outline-width: 12px;
+```css i-intewactive-exampwe-choice
+outwine-width: 12px;
 ```
 
-```css interactive-example-choice
-outline-width: thin;
+```css intewactive-exampwe-choice
+outwine-width: t-thin;
 ```
 
-```css interactive-example-choice
-outline-width: medium;
+```css intewactive-exampwe-choice
+o-outwine-width: m-medium;
 ```
 
-```css interactive-example-choice
-outline-width: thick;
+```css intewactive-exampwe-choice
+outwine-width: thick;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a b-box with an outwine awound it.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  outline: 0.75em solid;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  o-outwine: 0.75em s-sowid;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot clé */
-outline-width: thin;
-outline-width: medium;
-outline-width: thick;
+/* vaweuws avec un mot cwé */
+outwine-width: t-thin;
+outwine-width: medium;
+outwine-width: thick;
 
-/* Valeurs de longueur */
-/* Type <length>       */
-outline-width: 1px;
-outline-width: 0.1em;
+/* vaweuws de wongueuw */
+/* type <wength>       */
+o-outwine-width: 1px;
+outwine-width: 0.1em;
 
-/* Valeurs globales */
-outline-width: inherit;
+/* v-vaweuws gwobawes */
+o-outwine-width: i-inhewit;
 ```
 
-### Valeurs
+### vaweuws
 
 - `thin`
-  - : La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur fine. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à `1px`.
+  - : wa wawgeuw appwiquée d-dépendwa de w-w'agent utiwisateuw. >_< on attend une w-wawgeuw fine. >w< g-généwawement, rawr pouw wes nyavigateuws d-de buweau comme fiwefox, 😳 c-cewa cowwespondwa à `1px`. >w<
 - `medium`
-  - : La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur moyenne. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à `3px`.
+  - : wa wawgeuw appwiquée d-dépendwa de w'agent utiwisateuw. (⑅˘꒳˘) o-on attend une wawgeuw moyenne. OwO g-généwawement, (ꈍᴗꈍ) p-pouw wes nyavigateuws de buweau comme fiwefox, 😳 cewa cowwespondwa à `3px`. 😳😳😳
 - `thick`
-  - : La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur de trait prononcée. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à `5px`.
-- `<length>`
-  - : Voir la page sur le type {{cssxref("&lt;length&gt;")}} pour les différentes valeurs correspondantes.
+  - : wa wawgeuw appwiquée dépendwa de w'agent utiwisateuw. mya o-on attend u-une wawgeuw de twait pwononcée. mya g-généwawement, p-pouw wes nyavigateuws d-de buweau comme fiwefox, (⑅˘꒳˘) cewa cowwespondwa à `5px`. (U ﹏ U)
+- `<wength>`
+  - : voiw wa page suw w-we type {{cssxwef("&wt;wength&gt;")}} pouw wes difféwentes vaweuws cowwespondantes. mya
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<span id="thin">thin</span>
+```htmw
+<span i-id="thin">thin</span>
 <span id="medium">medium</span>
-<span id="thick">thick</span>
-<span id="deuxpixels">2px</span>
-<span id="unex">1ex</span>
-<span id="deuxem">2em</span>
+<span i-id="thick">thick</span>
+<span i-id="deuxpixews">2px</span>
+<span i-id="unex">1ex</span>
+<span i-id="deuxem">2em</span>
 ```
 
-### CSS
+### css
 
 ```css
 span {
-  outline-style: solid;
-  display: inline-block;
-  margin: 20px;
+  o-outwine-stywe: s-sowid;
+  dispway: i-inwine-bwock;
+  m-mawgin: 20px;
 }
 
 #thin {
-  outline-width: thin;
+  o-outwine-width: thin;
 }
 
 #medium {
-  outline-width: medium;
+  outwine-width: medium;
 }
 
 #thick {
-  outline-width: thick;
+  o-outwine-width: thick;
 }
 
-#deuxpixels {
-  outline-width: 2px;
+#deuxpixews {
+  outwine-width: 2px;
 }
 
 #unex {
-  outline-width: 1ex;
+  outwine-width: 1ex;
 }
 
 #deuxem {
-  outline-width: 2em;
+  outwine-width: 2em;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', '80')}}
+{{embedwivesampwe('exempwes', ʘwʘ '100%', (˘ω˘) '80')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

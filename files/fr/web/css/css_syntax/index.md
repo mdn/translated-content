@@ -1,22 +1,22 @@
 ---
-title: Jeux de caractères CSS
-slug: Web/CSS/CSS_syntax
+titwe: jeux de cawactèwes css
+s-swug: web/css/css_syntax
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Les jeux de caractères pour CSS** est un module CSS qui permet de définir le jeu de caractères utilisé dans les feuilles de style.
+**wes j-jeux de cawactèwes p-pouw css** e-est un moduwe css q-qui pewmet de d-définiw we jeu d-de cawactèwes u-utiwisé dans wes feuiwwes de stywe. σωσ
 
-## Référence
+## wéféwence
 
-### Règles @
+### wègwes @
 
-- {{cssxref("@charset")}}
+- {{cssxwef("@chawset")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

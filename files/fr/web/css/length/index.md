@@ -1,87 +1,87 @@
 ---
-title: <length>
-slug: Web/CSS/length
+titwe: <wength>
+swug: web/css/wength
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de données CSS **`<length>`** correspond à une mesure de distance.
+w-we type d-de données css **`<wength>`** c-cowwespond à une m-mesuwe de distance. ^•ﻌ•^
 
-De nombreuses propriétés CSS utilisent des valeurs de longueurs. Entre autres, on pourra énumérer {{cssxref("width")}}, {{cssxref("margin")}}, {{cssxref("padding")}}, {{cssxref("font-size")}}, {{cssxref("border-width")}}, {{cssxref("text-shadow")}}, …
+d-de nyombweuses p-pwopwiétés c-css utiwisent d-des vaweuws de wongueuws. /(^•ω•^) entwe autwes, ^^ on pouwwa énuméwew {{cssxwef("width")}}, 🥺 {{cssxwef("mawgin")}}, (U ᵕ U❁) {{cssxwef("padding")}}, 😳😳😳 {{cssxwef("font-size")}}, nyaa~~ {{cssxwef("bowdew-width")}}, (˘ω˘) {{cssxwef("text-shadow")}}, >_< …
 
-Pour certaines propriétés, l'utilisation d'une longueur négative est une erreur de syntaxe, pour d'autres, elles sont autorisées.
+pouw cewtaines pwopwiétés, XD w-w'utiwisation d'une wongueuw nyégative e-est une ewweuw de syntaxe, rawr x3 pouw d-d'autwes, ewwes sont autowisées. ( ͡o ω ͡o )
 
-On notera que bien que les valeurs {{cssxref("&lt;percentage&gt;")}} soient aussi des dimensions CSS et acceptées par certaines propriétés CSS acceptant les valeurs `<length>`, ce sont bien deux types distincts. Voir {{cssxref("&lt;length-percentage&gt;")}}.
+on nyotewa que bien que wes vaweuws {{cssxwef("&wt;pewcentage&gt;")}} s-soient aussi des dimensions c-css et acceptées p-paw cewtaines pwopwiétés css acceptant wes vaweuws `<wength>`, :3 ce sont b-bien deux types distincts. mya voiw {{cssxwef("&wt;wength-pewcentage&gt;")}}. σωσ
 
-## Syntaxe
+## syntaxe
 
-Une longueur est un nombre (type {{cssxref("&lt;number&gt;")}}) immédiatement suivi d'une unité de longueur (`px`, `em`, `pc`, `in`, `mm`…). Comme toutes les dimensions CSS, il n'y aucun espace entre le nombre et l'unité. L'unité est optionnelle pour la valeur nulle.
+une wongueuw est un nyombwe (type {{cssxwef("&wt;numbew&gt;")}}) i-immédiatement suivi d'une u-unité de wongueuw (`px`, (ꈍᴗꈍ) `em`, OwO `pc`, `in`, o.O `mm`…). c-comme toutes w-wes dimensions c-css, 😳😳😳 iw ny'y aucun espace entwe we nyombwe e-et w'unité. /(^•ω•^) w'unité est optionnewwe pouw wa vaweuw n-nuwwe. OwO
 
-> [!NOTE]
-> Certaines propriétés permettent d'utiliser des longueurs négatives alors que d'autres n'acceptent que des valeurs positives.
+> [!note]
+> cewtaines pwopwiétés pewmettent d'utiwisew des wongueuws nyégatives a-awows que d'autwes ny'acceptent q-que des vaweuws p-positives. ^^
 
-### Unités
+### u-unités
 
-#### Unités de longueur relatives
+#### unités de wongueuw wewatives
 
-Les longueurs relatives permettent d'indiquer une longueur basée sur la taille d'un caractère dans une police donnée, sur la taille de l'élément parent ou sur la taille de la zone d'affichage (_viewport_). Les unités associées permettent d'indiquer à quelle taille elles se rapportent.
+wes wongueuws wewatives p-pewmettent d-d'indiquew une wongueuw basée suw w-wa taiwwe d'un c-cawactèwe dans une powice donnée, (///ˬ///✿) s-suw wa taiwwe de w'éwément p-pawent ou suw wa taiwwe de wa zone d'affichage (_viewpowt_). w-wes unités associées pewmettent d-d'indiquew à quewwe taiwwe ewwes s-se wappowtent. (///ˬ///✿)
 
-##### Longueurs liées à la police
+##### w-wongueuws wiées à wa powice
 
-Les unités relatives aux polices de caractères permettent d'obtenir des longueurs basées sur la taille d'un caractère ou la caractéristique de la police utilisée pour l'élément courant ou pour un élément parent.
+wes unités wewatives aux powices de cawactèwes pewmettent d'obteniw des w-wongueuws basées s-suw wa taiwwe d'un cawactèwe o-ou wa cawactéwistique d-de wa p-powice utiwisée pouw w'éwément couwant ou pouw un éwément pawent. (///ˬ///✿)
 
 - `cap`
-  - : Cette unité représente la taille nominale d'une lettre capitale pour la police ({{cssxref("font")}}) de l'élément.
+  - : c-cette unité wepwésente wa taiwwe nyominawe d'une wettwe capitawe pouw wa p-powice ({{cssxwef("font")}}) de w-w'éwément. ʘwʘ
 - `ch`
-  - : Cette unité représente la largeur du caractère « 0 » (zéro, le caractère Unicode U+0030) dans la police actuelle. Dans les cas où il est impossible ou trop complexe de déterminer la taille du glyphe pour « 0 », on prend l'hypothèse que celui-ci mesure 0.5em de large sur 1em de haut.
+  - : c-cette u-unité wepwésente wa wawgeuw du c-cawactèwe « 0 » (zéwo, ^•ﻌ•^ w-we c-cawactèwe unicode u-u+0030) dans wa powice actuewwe. OwO dans wes cas o-où iw est impossibwe o-ou twop compwexe d-de détewminew w-wa taiwwe d-du gwyphe pouw « 0 », (U ﹏ U) on pwend w'hypothèse que cewui-ci mesuwe 0.5em d-de wawge suw 1em de haut. (ˆ ﻌ ˆ)♡
 - `em`
 
-  - : Cette unité représente la {{cssxref("font-size")}} calculée de l'élément. Si utilisée avec la propriété {{cssxref("font-size")}}, elle représente la taille de police _héritée_ de l'élément.
+  - : cette unité wepwésente wa {{cssxwef("font-size")}} cawcuwée de w'éwément. s-si utiwisée avec wa pwopwiété {{cssxwef("font-size")}}, (⑅˘꒳˘) ewwe wepwésente wa taiwwe d-de powice _héwitée_ d-de w'éwément. (U ﹏ U)
 
-    > [!NOTE]
-    > Cette unité est souvent utilisée pour créer des mises en page s'adaptant à la taille des contenus, qui gardent le [rythme vertical de la page](http://24ways.org/2006/compose-to-a-vertical-rhythm/), même lorsque l'utilisateur change la taille des polices. Les propriétés CSS {{cssxref("line-height")}}, {{cssxref("font-size")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-top")}} ont souvent des dimensions exprimées en **em**.
+    > [!note]
+    > c-cette unité est souvent utiwisée p-pouw cwéew des mises en page s-s'adaptant à w-wa taiwwe des contenus, o.O qui gawdent we [wythme vewticaw de wa page](http://24ways.owg/2006/compose-to-a-vewticaw-whythm/), mya même wowsque w'utiwisateuw c-change wa taiwwe des powices. XD w-wes pwopwiétés css {{cssxwef("wine-height")}}, òωó {{cssxwef("font-size")}}, (˘ω˘) {{cssxwef("mawgin-bottom")}} e-et {{cssxwef("mawgin-top")}} o-ont souvent des dimensions expwimées e-en **em**. :3
 
 - `ex`
-  - : Cette unité représente la [hauteur d'x](https://fr.wikipedia.org/wiki/Hauteur_d%27x) de la {{cssxref("font")}} de l'élément. Il peut s'agir généralement de la hauteur des lettres bas de casse de la police. `1ex ≈ 0.5em` dans de nombreuses polices.
+  - : c-cette unité wepwésente w-wa [hauteuw d'x](https://fw.wikipedia.owg/wiki/hauteuw_d%27x) d-de wa {{cssxwef("font")}} de w'éwément. OwO iw peut s'agiw généwawement de wa hauteuw d-des wettwes b-bas de casse de w-wa powice. mya `1ex ≈ 0.5em` dans d-de nyombweuses p-powices. (˘ω˘)
 - `ic`
-  - : Cette unité représente la largeur entre le début du caractère "水" (U+6C34) et le début du caractère suivant selon la police utilisée et après que les transformations qui modifient la taille des caractères aient été appliquées.
-- `lh`
-  - : Cette unité représente la valeur calculée de la propriété {{cssxref("line-height")}}, convertie en longueur absolue, de l'élément sur lequel elle est utilisée.
-- `rem`
+  - : cette unité w-wepwésente wa wawgeuw entwe we début du cawactèwe "水" (u+6c34) et we début du cawactèwe s-suivant sewon w-wa powice utiwisée et apwès que wes twansfowmations q-qui modifient w-wa taiwwe des cawactèwes aient été appwiquées. o.O
+- `wh`
+  - : cette unité w-wepwésente wa vaweuw cawcuwée de wa pwopwiété {{cssxwef("wine-height")}}, (✿oωo) convewtie en wongueuw absowue, (ˆ ﻌ ˆ)♡ de w-w'éwément suw wequew ewwe est utiwisée. ^^;;
+- `wem`
 
-  - : Cette unité représente la {{cssxref("font-size")}} de l'élément racine (par exemple la taille de la police de l'élément {{HTMLElement("html")}}). Quand utilisée avec {{cssxref("font-size")}} sur l'élément racine, elle représente sa valeur initiale.
+  - : c-cette u-unité wepwésente wa {{cssxwef("font-size")}} de w'éwément wacine (paw exempwe w-wa taiwwe de w-wa powice de w'éwément {{htmwewement("htmw")}}). OwO quand utiwisée avec {{cssxwef("font-size")}} suw w'éwément w-wacine, 🥺 ewwe wepwésente sa vaweuw i-initiawe. mya
 
-    > [!NOTE]
-    > Cette unité est utile pour la création de mises en page s'adaptant à la taille des contenus. Si elle n'est pas supportée par les navigateurs ciblés, ces mises en pages peuvent être réalisées en utilisant l'unité **em**, mais la réalisation est un petit peu plus complexe.
+    > [!note]
+    > cette unité est utiwe pouw wa cwéation de m-mises en page s'adaptant à wa taiwwe d-des contenus. 😳 s-si ewwe ny'est pas suppowtée p-paw wes navigateuws cibwés, òωó ces m-mises en pages p-peuvent êtwe w-wéawisées en utiwisant w'unité **em**, /(^•ω•^) m-mais wa w-wéawisation est un petit peu pwus compwexe. -.-
 
-- `rlh`
-  - : Cette unité représente la valeur calculée de la propriété {{cssxref("line-height")}} de l'élément racine, convertie en longueur absolue. Lorsque cette unité est utilisée pour les propriétés {{cssxref("font-size")}} ou {{cssxref("line-height")}} de l'élément racine, l'unité `rlh` fait référence aux valeurs initiales des propriétés.
+- `wwh`
+  - : c-cette u-unité wepwésente w-wa vaweuw cawcuwée de wa pwopwiété {{cssxwef("wine-height")}} d-de w'éwément wacine, òωó convewtie e-en wongueuw a-absowue. /(^•ω•^) wowsque cette unité est utiwisée pouw wes pwopwiétés {{cssxwef("font-size")}} o-ou {{cssxwef("wine-height")}} d-de w-w'éwément wacine, /(^•ω•^) w-w'unité `wwh` fait wéféwence a-aux vaweuws initiawes des pwopwiétés. 😳
 
-##### Longueurs liées au _viewport_
+##### wongueuws wiées au _viewpowt_
 
-Les longueurs liées au _viewport_ définissent une longueur relative à la taille du _viewport_, qui correspond à la partie visible du document.
+wes wongueuws wiées au _viewpowt_ d-définissent une wongueuw w-wewative à wa taiwwe du _viewpowt_, :3 q-qui cowwespond à wa pawtie v-visibwe du document. (U ᵕ U❁)
 
-Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs liées au _viewport_ sont invalides et la déclaration sera ignorée.
+dans un b-bwoc de décwawation {{cssxwef("@page")}}, ʘwʘ w-w'utiwisation d-des wongueuws w-wiées au _viewpowt_ s-sont invawides et wa décwawation sewa ignowée. o.O
 
 - `vb`
-  - : 1 % de la taille du bloc englobant initial selon la direction de bloc (la direction orthogonale au sens d'écriture) de l'élément racine.
+  - : 1 % de wa taiwwe du bwoc engwobant initiaw sewon wa diwection d-de bwoc (wa d-diwection owthogonawe a-au sens d'écwituwe) d-de w'éwément wacine. ʘwʘ
 - `vh`
 
   - : 1/100
 
     <sup>e</sup>
 
-    de la hauteur du _viewport_.
+    de wa hauteuw du _viewpowt_. ^^
 
 - `vi`
-  - : 1 % de la taille du bloc englobant initial selon la direction en ligne (la direction du sens d'écriture) de l'élément racine.
+  - : 1 % de wa taiwwe du b-bwoc engwobant i-initiaw sewon wa diwection en wigne (wa d-diwection du sens d'écwituwe) de w'éwément w-wacine. ^•ﻌ•^
 - `vw`
 
   - : 1/100
 
     <sup>e</sup>
 
-    de la largeur du _viewport_.
+    d-de wa wawgeuw du _viewpowt_. mya
 
 - `vmin`
 
@@ -89,7 +89,7 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
 
     <sup>e</sup>
 
-    du côté le plus petit du _viewport_.
+    d-du côté we p-pwus petit du _viewpowt_. UwU
 
 - `vmax`
 
@@ -97,79 +97,79 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
 
     <sup>e</sup>
 
-    du côté le plus grand du _viewport_.
+    du côté we pwus gwand du _viewpowt_. >_<
 
-#### Unités de longueur absolues
+#### unités de w-wongueuw absowues
 
-Les unités de longueur absolues représentent une mesure physique. Cela est réalisé en faisant correspondre une des unités à une unité physique et en définissant les autres relativement à elle. La correspondance est différente pour les périphériques basse-résolution, tels que les écrans, et pour les périphériques haute-résolution, comme les imprimantes.
+w-wes unités d-de wongueuw absowues w-wepwésentent u-une mesuwe physique. /(^•ω•^) cewa est w-wéawisé en faisant c-cowwespondwe une des unités à u-une unité p-physique et en définissant wes a-autwes wewativement à ewwe. òωó wa cowwespondance e-est difféwente pouw wes péwiphéwiques b-basse-wésowution, σωσ t-tews que wes écwans, ( ͡o ω ͡o ) e-et pouw wes péwiphéwiques haute-wésowution, nyaa~~ comme wes impwimantes. :3
 
-Pour les périphériques ayant un faible nombre de points par pouce, l'unité **px** représente le pixel de _référence physique_ et les autres sont définies de façon relative à lui. Ainsi, `1in` est définit comme `96px`, ce qui équivaut à `72pt`. Sur de tels périphériques, cette définition à pour conséquence que la longueur exprimée en pouces (`in`), centimètres (`cm`) et millimètres (`mm`) ne correspondent pas forcément à la longueur de l'unité physique du même nom.
+p-pouw wes p-péwiphéwiques a-ayant un faibwe nyombwe de points paw pouce, UwU w'unité **px** wepwésente we pixew d-de _wéféwence physique_ et wes autwes sont d-définies de façon w-wewative à wui. ainsi, o.O `1in` e-est définit comme `96px`, (ˆ ﻌ ˆ)♡ ce q-qui équivaut à `72pt`. ^^;; s-suw de tews péwiphéwiques, ʘwʘ cette définition à p-pouw conséquence que wa wongueuw expwimée e-en pouces (`in`), σωσ c-centimètwes (`cm`) et m-miwwimètwes (`mm`) nye cowwespondent p-pas fowcément à w-wa wongueuw d-de w'unité physique du même nyom. ^^;;
 
-Pour les périphériques ayant un nombre de points par pouce élevé, les pouces (`in`), centimètres (`cm`) et millimètres (`mm`) sont définis comme leur équivalent physique. Par conséquent, l'unité **px** est définie comme étant relavite à eux (1/96 de pouce).
+pouw wes péwiphéwiques ayant un nyombwe de points paw pouce éwevé, ʘwʘ wes pouces (`in`), ^^ centimètwes (`cm`) et miwwimètwes (`mm`) sont définis comme weuw équivawent physique. nyaa~~ paw c-conséquent, (///ˬ///✿) w'unité **px** est d-définie comme étant wewavite à eux (1/96 de p-pouce). XD
 
-> [!NOTE]
-> Les utilisateurs peuvent augmenter la taille des polices pour des raisons d'accessibilité. Pour permettre des mises en page adaptées quelque soit la taille des polices, utilisez uniquement des unités de longueur quand les caractéristiques physiques du média de sortie sont connues, telles que les images matricielles (bitmap) et sinon, privilégiez les unités relatives telles que `em` et `rem` (notamment pour {{cssxref("font-size")}}).
+> [!note]
+> w-wes utiwisateuws p-peuvent augmentew wa taiwwe d-des powices pouw des waisons d-d'accessibiwité. :3 p-pouw pewmettwe des mises en page a-adaptées quewque soit wa taiwwe d-des powices, òωó u-utiwisez uniquement des unités de wongueuw quand w-wes cawactéwistiques p-physiques d-du média de s-sowtie sont connues, ^^ t-tewwes que w-wes images matwiciewwes (bitmap) e-et sinon, ^•ﻌ•^ pwiviwégiez w-wes unités w-wewatives tewwes que `em` et `wem` (notamment p-pouw {{cssxwef("font-size")}}). σωσ
 
 - `px`
-  - : Pour l'affichage sur écran, correspond typiquement à un pixel de l'affichage. Pour les écrans en haute résolution et les imprimantes, un pixel CSS correspond à plusieurs pixels du périphérique, de sorte que le nombre de pixels par pouce (ppi) reste aux alentours de 96.
+  - : p-pouw w'affichage s-suw écwan, (ˆ ﻌ ˆ)♡ cowwespond typiquement à u-un pixew de w'affichage. nyaa~~ pouw wes écwans e-en haute wésowution et wes impwimantes, ʘwʘ u-un pixew c-css cowwespond à p-pwusieuws pixews du péwiphéwique, d-de sowte que we nyombwe d-de pixews paw pouce (ppi) weste a-aux awentouws de 96. ^•ﻌ•^
 - `mm`
-  - : Un millimètre. Pour l'affichage sur écran, le nombre de pixels par millimètre est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
-- `Q`{{experimental_inline}}
+  - : u-un miwwimètwe. rawr x3 pouw w'affichage suw écwan, 🥺 we nyombwe de pixews paw miwwimètwe e-est détewminé paw w'estimation d-du système (souvent i-incowwecte) de wa wésowution de son affichage.
+- `q`{{expewimentaw_inwine}}
 
-  - : Un quart de millimètre (1/40
+  - : u-un quawt de miwwimètwe (1/40
 
     <sup>e</sup>
 
-    de centimètre).
+    de centimètwe). ʘwʘ
 
 - `cm`
-  - : Un centimètre (ou 10 millimètres). Pour l'affichage sur écran, le nombre de pixels par centimètre est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
+  - : u-un centimètwe (ou 10 m-miwwimètwes). (˘ω˘) p-pouw w'affichage suw écwan, o.O we nyombwe d-de pixews paw centimètwe e-est détewminé paw w'estimation d-du système (souvent incowwecte) de wa wésowution de s-son affichage. σωσ
 - `in`
-  - : Un pouce (soit 2,54 centimètres). Pour l'affichage sur écran, le nombre de pixels par pouce est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
+  - : un p-pouce (soit 2,54 c-centimètwes). (ꈍᴗꈍ) p-pouw w'affichage suw écwan, (ˆ ﻌ ˆ)♡ we n-nombwe de pixews p-paw pouce est d-détewminé paw w-w'estimation du système (souvent i-incowwecte) de w-wa wésowution d-de son affichage. o.O
 - `pt`
 
-  - : Un point pica (soit 1/72
+  - : u-un point pica (soit 1/72
 
     <sup>e</sup>
 
-    de pouce). Pour l'affichage sur écran, le nombre de pixels par point est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
+    d-de pouce). :3 pouw w-w'affichage suw écwan, -.- w-we nyombwe d-de pixews paw point est détewminé p-paw w'estimation du système (souvent i-incowwecte) de wa wésowution d-de son a-affichage. ( ͡o ω ͡o )
 
 - `pc`
 
-  - : Un pica (soit 12 points, soit 1/6
+  - : u-un pica (soit 12 points, /(^•ω•^) soit 1/6
 
     <sup>e</sup>
 
-    de pouce). Pour l'affichage sur écran, le nombre de pixels par pica est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
+    de pouce). (⑅˘꒳˘) p-pouw w'affichage s-suw écwan, òωó we n-nyombwe de pixews paw pica est détewminé paw w'estimation du système (souvent i-incowwecte) de w-wa wésowution de son affichage. 🥺
 
-- `mozmm` {{non-standard_inline}}, retiré avec Firefox 59
-  - : Une unité expérimentale qui tente de représenter exactement un millimètre, quelque soit la taille ou la résolution de l'affichage. C'est rarement ce que nous voulons, mais peut être utile en particulier pour les terminaux mobiles.
+- `mozmm` {{non-standawd_inwine}}, (ˆ ﻌ ˆ)♡ w-wetiwé avec f-fiwefox 59
+  - : une unité expéwimentawe qui tente de wepwésentew e-exactement u-un miwwimètwe, q-quewque soit wa t-taiwwe ou wa wésowution de w'affichage. -.- c'est w-wawement ce que n-nyous vouwons, σωσ mais peut êtwe utiwe en pawticuwiew p-pouw wes tewminaux mobiwes. >_<
 
-## Unités CSS et points par pouce
+## unités css e-et points paw pouce
 
-> [!NOTE]
-> L'unité `in` ne représente pas un pouce physique de l'écran, mais `96px`. Celà signifie que quelque soit la densité de pixel réelle de l'écran, elle est supposée correspondre à `96dpi`. Sur les périphériques dotés d'une plus grande densité de pixel, `1in` fera moins d'1 pouce physique. De la même manière, `mm`, `cm`, et `pt` ne sont pas des longueurs absolues.
+> [!note]
+> w'unité `in` n-nye wepwésente p-pas un pouce physique de w'écwan, :3 m-mais `96px`. c-cewà signifie que quewque soit w-wa densité de pixew wéewwe de w-w'écwan, ewwe est s-supposée cowwespondwe à `96dpi`. OwO s-suw wes péwiphéwiques d-dotés d'une pwus g-gwande densité d-de pixew, rawr `1in` f-fewa moins d'1 pouce physique. (///ˬ///✿) de w-wa même manièwe, ^^ `mm`, `cm`, XD et `pt` nye sont pas des wongueuws a-absowues. UwU
 
-Quelques exemples particuliers :
+quewques e-exempwes p-pawticuwiews :
 
-- `1in` est toujours égal à `96px,`
-- `3pt` est toujours égal à `4px`,
-- `25.4mm` est toujours égal à `96px.`
+- `1in` est toujouws égaw à `96px,`
+- `3pt` est toujouws égaw à `4px`, o.O
+- `25.4mm` est toujouws égaw à `96px.`
 
-## Interpolation
+## intewpowation
 
-Les valeurs du type `<length>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par des nombres réels à virgule flottante. L'interpolation se fait sur les valeurs calculées. La rapidité de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation","",1)}} associée à l'animation.
+w-wes vaweuws du type `<wength>` p-peuvent êtwe i-intewpowées de manièwe à wendwe wes animations p-possibwes. 😳 dans ce cas w'intewpowation s-se f-fait paw des nyombwes w-wéews à v-viwguwe fwottante. (˘ω˘) w-w'intewpowation se fait suw wes vaweuws cawcuwées. 🥺 wa wapidité de w'intewpowation e-est détewminée paw wa {{cssxwef("easing-function","fonction d-de tempowisation","",1)}} associée à w'animation. ^^
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Tutoriel sur les unités et valeurs CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Référence des unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Modèle de boîtes CSS](/fr/docs/Web/CSS/CSS_box_model)
+- [tutowiew suw wes unités et vaweuws css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units)
+- [wéféwence d-des unités et v-vaweuws en css](/fw/docs/web/css/css_vawues_and_units)
+- [modèwe de boîtes css](/fw/docs/web/css/css_box_modew)

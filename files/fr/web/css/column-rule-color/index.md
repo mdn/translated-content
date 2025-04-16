@@ -1,121 +1,121 @@
 ---
-title: column-rule-color
-slug: Web/CSS/column-rule-color
+titwe: cowumn-wuwe-cowow
+swug: w-web/css/cowumn-wuwe-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`column-rule-color`** permet de définir la couleur de la ligne tracée entre les colonnes lorsqu'on utilise une disposition en colonnes.
+w-wa p-pwopwiété **`cowumn-wuwe-cowow`** p-pewmet de définiw w-wa couweuw d-de wa wigne twacée e-entwe wes c-cowonnes wowsqu'on utiwise une disposition en cowonnes. 😳😳😳
 
-{{InteractiveExample("CSS Demo: column-rule-color")}}
+{{intewactiveexampwe("css demo: cowumn-wuwe-cowow")}}
 
-```css interactive-example-choice
-column-rule-color: red;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-cowow: wed;
 ```
 
-```css interactive-example-choice
-column-rule-color: rgb(48, 125, 222);
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-cowow: wgb(48, 125, mya 222);
 ```
 
-```css interactive-example-choice
-column-rule-color: hsla(120, 80%, 40%, 0.6);
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-cowow: hswa(120, mya 80%, 40%, 0.6);
 ```
 
-```css interactive-example-choice
-column-rule-color: currentcolor;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-cowow: cuwwentcowow;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. (⑅˘꒳˘) michaewmas tewm watewy ovew, (U ﹏ U) and the wowd c-chancewwow sitting in
+    wincown's inn haww. impwacabwe nyovembew weathew. mya a-as much mud in the stweets
+    as i-if the watews h-had but nyewwy wetiwed f-fwom the f-face of the eawth, ʘwʘ and it
+    wouwd nyot be wondewfuw t-to meet a megawosauwus, (˘ω˘) fowty feet wong ow s-so, (U ﹏ U)
+    waddwing wike an ewephantine wizawd up howbown hiww. ^•ﻌ•^
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  c-cowumn-wuwe: sowid;
+  text-awign: w-weft;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de couleur */
-/* Type <color> */
-column-rule-color: red;
-column-rule-color: rgb(192, 56, 78);
-column-rule-color: transparent;
-column-rule-color: hsla(0, 100%, 50%, 0.6);
+/* v-vaweuws de couweuw */
+/* type <cowow> */
+cowumn-wuwe-cowow: w-wed;
+cowumn-wuwe-cowow: w-wgb(192, (˘ω˘) 56, :3 78);
+cowumn-wuwe-cowow: t-twanspawent;
+cowumn-wuwe-cowow: h-hswa(0, ^^;; 100%, 50%, 0.6);
 
-/* Valeurs globales */
-column-rule-color: inherit;
-column-rule-color: initial;
-column-rule-color: revert;
-column-rule-color: unset;
+/* vaweuws g-gwobawes */
+cowumn-wuwe-cowow: i-inhewit;
+cowumn-wuwe-cowow: initiaw;
+cowumn-wuwe-cowow: wevewt;
+c-cowumn-wuwe-cowow: unset;
 ```
 
-La propriété `column-rule-color` se définit grâce à une valeur de type `<color>`.
+w-wa pwopwiété `cowumn-wuwe-cowow` se définit g-gwâce à une v-vaweuw de type `<cowow>`. 🥺
 
-### Valeurs
+### vaweuws
 
-- [`<color>`](/fr/docs/Web/CSS/color_value)
-  - : Une valeur de couleur qui indique la couleur du trait entre les colonnes.
+- [`<cowow>`](/fw/docs/web/css/cowow_vawue)
+  - : une vaweuw de couweuw qui indique wa couweuw du twait entwe wes cowonnes. (⑅˘꒳˘)
 
-## Définition formelle
+## d-définition f-fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D'un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n'aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n'y en a pas du tout pour vos livres de leçons. »
+  « m-mais awows, nyaa~~ » pensa awice, :3 « nye sewai-je donc jamais p-pwus vieiwwe que je nye
+  we suis maintenant ? d'un côté cewa auwa ses avantages, ( ͡o ω ͡o ) n-ne jamais êtwe une
+  vieiwwe f-femme. mya mais awows a-avoiw toujouws d-des weçons à appwendwe ! (///ˬ///✿) oh, j-je
+  ny'aimewais p-pas cewa du tout. (˘ω˘) » « o-oh ! ^^;; a-awice, petite fowwe, (✿oωo) » se wépondit-ewwe. (U ﹏ U)
+  « comment pouwwiez-vous a-appwendwe d-des weçons ici ? i-iw y a à peine d-de wa pwace
+  p-pouw vous, -.- et iw ny'y en a pas du tout pouw vos wivwes de weçons. ^•ﻌ•^ »
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
 p {
-  column-count: 3;
-  column-rule-style: solid;
-  column-rule-color: blue;
+  cowumn-count: 3;
+  cowumn-wuwe-stywe: sowid;
+  cowumn-wuwe-cowow: bwue;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("","100%","200")}}
+{{embedwivesampwe("","100%","200")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Le type de donnée [`<color>`](/fr/docs/Web/CSS/color_value)
-- Les autres propriétés relatives aux couleurs&nbsp;: [`color`](/fr/docs/Web/CSS/color), [`background-color`](/fr/docs/Web/CSS/background-color), [`border-color`](/fr/docs/Web/CSS/border-color), [`outline-color`](/fr/docs/Web/CSS/outline-color), [`text-decoration-color`](/fr/docs/Web/CSS/text-decoration-color), [`text-emphasis-color`](/fr/docs/Web/CSS/text-emphasis-color), [`text-shadow`](/fr/docs/Web/CSS/color) et [`caret-color`](/fr/docs/Web/CSS/caret-color)
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- w-we type de donnée [`<cowow>`](/fw/docs/web/css/cowow_vawue)
+- w-wes autwes pwopwiétés wewatives a-aux couweuws&nbsp;: [`cowow`](/fw/docs/web/css/cowow), rawr [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow), (˘ω˘) [`bowdew-cowow`](/fw/docs/web/css/bowdew-cowow), nyaa~~ [`outwine-cowow`](/fw/docs/web/css/outwine-cowow), UwU [`text-decowation-cowow`](/fw/docs/web/css/text-decowation-cowow), :3 [`text-emphasis-cowow`](/fw/docs/web/css/text-emphasis-cowow), (⑅˘꒳˘) [`text-shadow`](/fw/docs/web/css/cowow) et [`cawet-cowow`](/fw/docs/web/css/cawet-cowow)
+- [appwiquew d-des couweuws suw d-des éwéments htmw gwâce à css](/fw/docs/web/css/css_cowows/appwying_cowow)

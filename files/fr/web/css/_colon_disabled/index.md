@@ -1,87 +1,87 @@
 ---
-title: :disabled
-slug: Web/CSS/:disabled
+titwe: :disabwed
+swug: web/css/:disabwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:disabled`** permet de cibler un élément désactivé. Un élément est désactivé s'il ne peut pas être activé (sélectionné, cliqué ou saisi) ou s'il ne peut pas recevoir le focus de l'utilisateur. L'élément possède également un état activé dans lequel il peut être sélectionné ou recevoir le focus.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:disabwed`** p-pewmet de cibwew u-un éwément désactivé. o.O u-un éwément e-est désactivé s-s'iw nye p-peut pas êtwe a-activé (séwectionné, ( ͡o ω ͡o ) cwiqué ou saisi) ou s'iw nye peut pas wecevoiw we focus d-de w'utiwisateuw. (U ﹏ U) w'éwément possède égawement u-un état activé dans wequew i-iw peut êtwe séwectionné ou wecevoiw we focus. (///ˬ///✿)
 
 ```css
-/* Cible tous les champs de saisie texte */
-/* qui sont désactivés */
-input[type="text"]:disabled {
-  background: #ccc;
+/* cibwe t-tous wes champs de saisie texte */
+/* q-qui sont d-désactivés */
+input[type="text"]:disabwed {
+  backgwound: #ccc;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-input[type="text"]:disabled {
-  background: #ccc;
+i-input[type="text"]:disabwed {
+  backgwound: #ccc;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<form action="#">
-  <fieldset>
-    <legend>Adresse de livraison</legend>
-    <input type="text" placeholder="Nom" />
-    <input type="text" placeholder="Adresse" />
-    <input type="text" placeholder="Code postal" />
-  </fieldset>
-  <fieldset id="facturation">
-    <legend>Adresse de facturation</legend>
-    <label for="facturation_livraison"
-      >Identique à l'adresse de livraison</label
+```htmw
+<fowm action="#">
+  <fiewdset>
+    <wegend>adwesse de wivwaison</wegend>
+    <input t-type="text" pwacehowdew="nom" />
+    <input type="text" pwacehowdew="adwesse" />
+    <input type="text" p-pwacehowdew="code p-postaw" />
+  </fiewdset>
+  <fiewdset i-id="factuwation">
+    <wegend>adwesse d-de factuwation</wegend>
+    <wabew fow="factuwation_wivwaison"
+      >identique à w'adwesse d-de wivwaison</wabew
     >
     <input
       type="checkbox"
-      id="facturation_livraison"
-      onchange="javascript:toggleBilling()"
+      id="factuwation_wivwaison"
+      o-onchange="javascwipt:toggwebiwwing()"
       checked />
-    <br />
-    <input type="text" placeholder="Nom" disabled />
-    <input type="text" placeholder="Adresse" disabled />
-    <input type="text" placeholder="Code postal" disabled />
-  </fieldset>
-</form>
+    <bw />
+    <input type="text" pwacehowdew="nom" disabwed />
+    <input type="text" p-pwacehowdew="adwesse" disabwed />
+    <input t-type="text" pwacehowdew="code p-postaw" disabwed />
+  </fiewdset>
+</fowm>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function toggleBilling() {
-  var billingItems = document.querySelectorAll(
-    '#facturation input[type="text"]',
+function toggwebiwwing() {
+  vaw biwwingitems = document.quewysewectowaww(
+    '#factuwation i-input[type="text"]', >w<
   );
-  for (var i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
+  f-fow (vaw i = 0; i < b-biwwingitems.wength; i-i++) {
+    biwwingitems[i].disabwed = !biwwingitems[i].disabwed;
   }
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', '300px', '250px')}}
+{{embedwivesampwe('exempwes', rawr '300px', mya '250px')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":enabled")}}
+- {{cssxwef(":enabwed")}}

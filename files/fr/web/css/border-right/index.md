@@ -1,133 +1,133 @@
 ---
-title: border-right
-slug: Web/CSS/border-right
+titwe: bowdew-wight
+swug: web/css/bowdew-wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-right`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de décrire la bordure droite d'un élément.
+w-wa pwopwiété **`bowdew-wight`** e-est une [pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) q-qui p-pewmet de décwiwe w-wa bowduwe dwoite d-d'un éwément. >w<
 
-Elle définit les valeurs des propriétés suivantes :
+e-ewwe définit wes vaweuws des pwopwiétés suivantes :
 
-- {{cssxref("border-right-width")}},
-- {{cssxref("border-right-style")}},
-- {{cssxref("border-right-color")}}.
+- {{cssxwef("bowdew-wight-width")}}, rawr
+- {{cssxwef("bowdew-wight-stywe")}}, 😳
+- {{cssxwef("bowdew-wight-cowow")}}. >w<
 
-{{InteractiveExample("CSS Demo: border-right")}}
+{{intewactiveexampwe("css demo: bowdew-wight")}}
 
-```css interactive-example-choice
-border-right: solid;
+```css i-intewactive-exampwe-choice
+bowdew-wight: sowid;
 ```
 
-```css interactive-example-choice
-border-right: dashed red;
+```css i-intewactive-exampwe-choice
+bowdew-wight: dashed w-wed;
 ```
 
-```css interactive-example-choice
-border-right: 1rem solid;
+```css intewactive-exampwe-choice
+bowdew-wight: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-right: thick double #32a1ce;
+```css i-intewactive-exampwe-choice
+bowdew-wight: thick d-doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-right: 4mm ridge rgba(211, 220, 50, 0.6);
+```css i-intewactive-exampwe-choice
+bowdew-wight: 4mm widge wgba(211, (⑅˘꒳˘) 220, 50, OwO 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a-a bowdew awound it. (ꈍᴗꈍ)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  c-cowow: #8b008b;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-Ces propriétés permettent de décrire la bordure du côté droit d'un élément.
+c-ces pwopwiétés pewmettent de décwiwe wa bowduwe d-du côté dwoit d'un éwément. 😳
 
-> [!NOTE]
-> Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
+> [!note]
+> wes twois vaweuws de wa pwopwiété waccouwcie peuvent êtwe définies d-dans ny'impowte quew owdwe e-et une ou deux d-d'entwe ewwes peuvent êtwe a-absentes. 😳😳😳
 >
-> Comme pour les autres propriétés raccourcies, `border-right` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
+> comme pouw wes autwes pwopwiétés waccouwcies, mya `bowdew-wight` d-définit t-toujouws wes vaweuws de toutes w-wes pwopwiétés q-qu'ewwe peut définiw, mya même s-si cewwes-ci nye sont pas indiquées. (⑅˘꒳˘) p-pouw wes vaweuws qui nye sont pas indiquées, (U ﹏ U) o-on pwendwa wes vaweuws paw défaut. mya a-ainsi :
 >
 > ```css
-> border-right-style: dotted;
-> border-right: thick green;
+> bowdew-wight-stywe: d-dotted;
+> bowdew-wight: t-thick gween;
 > ```
 >
-> est équivalent à :
+> est équivawent à :
 >
 > ```css
-> border-right-style: dotted;
-> border-right: none thick green;
+> bowdew-wight-stywe: dotted;
+> bowdew-wight: nyone thick gween;
 > ```
 >
-> et la valeur {{cssxref("border-right-style")}} fournie avant `border-right` est ignorée.
+> et wa v-vaweuw {{cssxwef("bowdew-wight-stywe")}} f-fouwnie avant `bowdew-wight` e-est ignowée. ʘwʘ
 >
-> La valeur par défaut de {{cssxref("border-right-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
+> w-wa vaweuw p-paw défaut de {{cssxwef("bowdew-wight-stywe")}} étant `none`, (˘ω˘) si on nye définit pas we stywe de wa bowduwe, (U ﹏ U) o-on auwa wa vaweuw paw défaut, ^•ﻌ•^ c'est-à-diwe qu'on auwa aucune bowduwe. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```css
-border-right: 1px;
-border-right: 2px dotted;
-border-right: medium dashed green;
+b-bowdew-wight: 1px;
+bowdew-wight: 2px d-dotted;
+bowdew-wight: m-medium d-dashed gween;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<br-width>`
-  - : Voir {{cssxref("border-right-width")}}.
-- `<br-style>`
-  - : Voir {{cssxref("border-right-style")}}.
-- `<color>`
-  - : Voir {{cssxref("border-right-color")}}.
+- `<bw-width>`
+  - : v-voiw {{cssxwef("bowdew-wight-width")}}. :3
+- `<bw-stywe>`
+  - : v-voiw {{cssxwef("bowdew-wight-stywe")}}. ^^;;
+- `<cowow>`
+  - : v-voiw {{cssxwef("bowdew-wight-cowow")}}. 🥺
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  border-right: 3px dotted orange;
+.exempwe {
+  b-bowdew-wight: 3px d-dotted owange;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  « MARMELADE D’ORANGES. »
+```htmw
+<p cwass="exempwe">
+  e-en passant ewwe pwit suw un wayon un pot de confituwe powtant cette étiquette, (⑅˘꒳˘)
+  « mawmewade d-d’owanges. nyaa~~ »
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","150")}}
+{{embedwivesampwe("exempwes","200","150")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

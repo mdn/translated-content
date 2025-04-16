@@ -1,74 +1,74 @@
 ---
-title: blur()
-slug: Web/CSS/filter-function/blur
+titwe: bwuw()
+swug: web/css/fiwtew-function/bwuw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`blur()`** permet d'appliquer [un flou gaussien](https://en.wikipedia.org/wiki/Gaussian_blur) sur l'image d'entrée. Le résultat de cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+w-wa fonction c-css **`bwuw()`** p-pewmet d'appwiquew [un f-fwou gaussien](https://en.wikipedia.owg/wiki/gaussian_bwuw) s-suw w'image d-d'entwée. 😳😳😳 we wésuwtat d-de cette f-fonction est une vaweuw [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function). o.O
 
-{{InteractiveExample("CSS Demo: blur()")}}
+{{intewactiveexampwe("css demo: bwuw()")}}
 
-```css interactive-example-choice
-filter: blur(0);
+```css intewactive-exampwe-choice
+f-fiwtew: bwuw(0);
 ```
 
-```css interactive-example-choice
-filter: blur(4px);
+```css intewactive-exampwe-choice
+fiwtew: bwuw(4px);
 ```
 
-```css interactive-example-choice
-filter: blur(1.5rem);
+```css i-intewactive-exampwe-choice
+fiwtew: bwuw(1.5wem);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-blur(rayon)
+b-bwuw(wayon)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `rayon`
-  - : Le rayon d'application du flou, défini par une longueur CSS ([`<length>`](/fr/docs/Web/CSS/length)). Cela définit l'écart-type de la fonction gaussienne appliquée (c'est-à-dire le nombre de pixels qui se mélangeront). Ainsi, plus la valeur est grande, plus le flou sera prononcé. Si on utilise la longueur nulle `0`, l'image ne sera pas modifiée. La valeur utilisée par défaut lors d'une interpolation est `0`.
+- `wayon`
+  - : we wayon d'appwication du fwou, ( ͡o ω ͡o ) défini paw u-une wongueuw css ([`<wength>`](/fw/docs/web/css/wength)). (U ﹏ U) cewa définit w'écawt-type de wa fonction g-gaussienne appwiquée (c'est-à-diwe w-we n-nyombwe de pixews q-qui se méwangewont). (///ˬ///✿) a-ainsi, >w< pwus wa vaweuw est gwande, rawr pwus we f-fwou sewa pwononcé. mya si on utiwise wa wongueuw n-nyuwwe `0`, ^^ w'image nye sewa pas modifiée. 😳😳😳 wa vaweuw utiwisée paw défaut wows d'une intewpowation e-est `0`. mya
 
-## Exemples
+## exempwes
 
-### Définir un flou en pixels ou en rem
+### d-définiw un fwou e-en pixews ou en w-wem
 
 ```css
-blur(0);        /* Aucun effet */
-blur(8px);      /* Un flou avec un rayon de 8px */
-blur(1.17rem);  /* Un flou avec un rayon de 1.17rem */
+bwuw(0);        /* aucun effet */
+bwuw(8px);      /* un fwou avec u-un wayon de 8px */
+b-bwuw(1.17wem);  /* un fwou avec u-un wayon de 1.17wem */
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+- [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function) e-et wes autwes fonctions associées
+  - [`bwightness()`](/fw/docs/web/css/fiwtew-function/bwightness)
+  - [`contwast()`](/fw/docs/web/css/fiwtew-function/contwast)
+  - [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow)
+  - [`gwayscawe()`](/fw/docs/web/css/fiwtew-function/gwayscawe)
+  - [`hue-wotate()`](/fw/docs/web/css/fiwtew-function/hue-wotate)
+  - [`invewt()`](/fw/docs/web/css/fiwtew-function/invewt)
+  - [`opacity()`](/fw/docs/web/css/fiwtew-function/opacity)
+  - [`satuwate()`](/fw/docs/web/css/fiwtew-function/satuwate)
+  - [`sepia()`](/fw/docs/web/css/fiwtew-function/sepia)

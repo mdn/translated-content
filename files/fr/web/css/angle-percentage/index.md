@@ -1,24 +1,24 @@
 ---
-title: <angle-percentage>
-slug: Web/CSS/angle-percentage
+titwe: <angwe-pewcentage>
+swug: w-web/css/angwe-pewcentage
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée **`<angle-percentage>`** représente une valeur qui peut être une valeur de type {{cssxref("angle")}} ou une valeur de type {{cssxref("percentage")}}.
+w-we t-type de donnée **`<angwe-pewcentage>`** w-wepwésente u-une vaweuw q-qui peut êtwe une v-vaweuw de type {{cssxwef("angwe")}} o-ou une vaweuw de type {{cssxwef("pewcentage")}}. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
-Voir la documentation des types {{cssxref("angle")}} et {{cssxref("percentage")}} pour plus de détails sur les syntaxes possibles avec chacun de ces types.
+voiw wa documentation des types {{cssxwef("angwe")}} e-et {{cssxwef("pewcentage")}} pouw pwus de détaiws suw w-wes syntaxes possibwes avec chacun d-de ces types. >_<
 
-## Utilisation avec `calc()`
+## utiwisation avec `cawc()`
 
-Lorsqu'il est possible d'utiliser une valeur de type `<angle-percentage>` dans une déclaration, cela signifie que le pourcentage sera résolu avec une valeur angulaire et qu'il peut être utilisé dans une expression {{Cssxref("calc()")}}.
+wowsqu'iw est possibwe d-d'utiwisew une vaweuw de t-type `<angwe-pewcentage>` d-dans une décwawation, rawr x3 cewa signifie que we pouwcentage sewa wésowu a-avec une vaweuw anguwaiwe et qu'iw peut êtwe utiwisé dans une expwession {{cssxwef("cawc()")}}.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

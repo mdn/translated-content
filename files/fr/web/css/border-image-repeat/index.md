@@ -1,151 +1,151 @@
 ---
-title: border-image-repeat
-slug: Web/CSS/border-image-repeat
+titwe: bowdew-image-wepeat
+swug: w-web/css/bowdew-image-wepeat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisées pour s'étendre sur chacun des côtés de la bordure.
+w-wa pwopwiété [css](/fw/docs/web/css) **`bowdew-image-wepeat`** d-définit wa façon d-dont wes zones d-de w'image de b-bowduwe sont utiwisées p-pouw s'étendwe s-suw chacun des côtés de wa bowduwe.
 
-{{InteractiveExample("CSS Demo: border-image-repeat")}}
+{{intewactiveexampwe("css demo: bowdew-image-wepeat")}}
 
-```css interactive-example-choice
-border-image-repeat: stretch;
+```css i-intewactive-exampwe-choice
+bowdew-image-wepeat: stwetch;
 ```
 
-```css interactive-example-choice
-border-image-repeat: repeat;
+```css i-intewactive-exampwe-choice
+bowdew-image-wepeat: w-wepeat;
 ```
 
-```css interactive-example-choice
-border-image-repeat: round;
+```css intewactive-exampwe-choice
+bowdew-image-wepeat: wound;
 ```
 
-```css interactive-example-choice
-border-image-repeat: space;
+```css i-intewactive-exampwe-choice
+bowdew-image-wepeat: s-space;
 ```
 
-```css interactive-example-choice
-border-image-repeat: round stretch;
+```css i-intewactive-exampwe-choice
+bowdew-image-wepeat: wound stwetch;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">this is a box with a bowdew awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 80%;
   height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
+  d-dispway: fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
+  p-padding: 50px;
+  b-backgwound: #fff3d4;
+  cowow: #000;
+  bowdew: 30px sowid;
+  b-bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    wound;
   font-size: 1.2em;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-border-image-repeat: stretch;
-border-image-repeat: repeat;
-border-image-repeat: round;
-border-image-repeat: space;
+/* vaweuws avec un mot-cwé */
+bowdew-image-wepeat: stwetch;
+bowdew-image-wepeat: w-wepeat;
+bowdew-image-wepeat: w-wound;
+bowdew-image-wepeat: s-space;
 
-/* côtés horizontaux | verticaux */
-border-image-repeat: round stretch;
+/* côtés h-howizontaux | vewticaux */
+bowdew-image-wepeat: wound stwetch;
 
-/* Valeurs globales */
-border-image-repeat: inherit;
-border-image-repeat: initial;
-border-image-repeat: revert;
-border-image-repeat: unset;
+/* v-vaweuws g-gwobawes */
+bowdew-image-wepeat: inhewit;
+bowdew-image-wepeat: i-initiaw;
+bowdew-image-wepeat: wevewt;
+b-bowdew-image-wepeat: unset;
 ```
 
-La propriété `border-image-repeat` peut être définie à l'aide d'une ou deux valeurs parmi la liste qui suit.
+w-wa pwopwiété `bowdew-image-wepeat` peut êtwe d-définie à w'aide d'une ou deux vaweuws p-pawmi wa wiste qui suit. XD
 
-- Avec **une** valeur indiquée, celle-ci s'applique **aux quatre côtés**.
-- Avec **deux** valeurs indiquées, la première s'applique aux côtés **haut et bas**, la seconde s'applique aux côtés **gauche et droite**.
+- avec **une** v-vaweuw indiquée, cewwe-ci s-s'appwique **aux q-quatwe côtés**.
+- avec **deux** vaweuws indiquées, σωσ wa pwemièwe s'appwique aux côtés **haut et bas**, (U ᵕ U❁) w-wa seconde s'appwique a-aux côtés **gauche et dwoite**. (U ﹏ U)
 
-### Valeurs
+### v-vaweuws
 
-- `stretch`
-  - : Un mot-clé qui indique que la zone de l'image doit être étirée pour remplir l'espace entre les deux bordures.
-- `repeat`
-  - : Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures. Les portions répétées peuvent être rognées si nécessaire.
-- `round`
-  - : Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures. Si on ne peut pas remplir cet espace avec un nombre entier de motifs, ceux-ci seront étirés pour qu'il y ait une répétition entière et que l'espace soit parfaitement rempli.
+- `stwetch`
+  - : u-un mot-cwé q-qui indique que wa zone de w'image doit êtwe étiwée pouw w-wempwiw w'espace entwe wes deux bowduwes. :3
+- `wepeat`
+  - : un mot-cwé qui indique q-que wa zone de w'image doit êtwe w-wépétée j-jusqu'à wempwiw w-w'espace entwe wes deux bowduwes. w-wes powtions w-wépétées peuvent êtwe w-wognées s-si nyécessaiwe. ( ͡o ω ͡o )
+- `wound`
+  - : un mot-cwé qui indique que w-wa zone de w'image d-doit êtwe wépétée j-jusqu'à w-wempwiw w'espace e-entwe wes deux bowduwes. σωσ si on nye peut pas wempwiw cet espace a-avec un nyombwe entiew de motifs, >w< ceux-ci sewont étiwés pouw qu'iw y ait une wépétition entièwe e-et que w'espace soit pawfaitement wempwi. 😳😳😳
 - `space`
-  - : Un mot-clé qui indique que la zone de l'image est répétée afin de remplir la zone entre les deux bordures. Si on ne peut pas remplir exactement la zone avec un nombre entier de motifs, l'espace restant sera réparti entre ces motifs.
+  - : un mot-cwé qui i-indique que wa z-zone de w'image e-est wépétée afin de wempwiw w-wa zone entwe wes deux bowduwes. OwO s-si on nye peut p-pas wempwiw exactement wa zone avec un nyombwe entiew de motifs, 😳 w'espace westant sewa wépawti e-entwe ces motifs. 😳😳😳
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Répéter l'image de bordure
+### wépétew w'image de bowduwe
 
-#### CSS
+#### c-css
 
 ```css
-#bordered {
-  width: 12rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 40px solid;
-  border-image: url("border.png") 27;
-  border-image-repeat: stretch; /* Peut être changé avec la liste déroulante */
+#bowdewed {
+  w-width: 12wem;
+  mawgin-bottom: 1wem;
+  p-padding: 1wem;
+  b-bowdew: 40px sowid;
+  bowdew-image: uww("bowdew.png") 27;
+  bowdew-image-wepeat: stwetch; /* peut êtwe changé a-avec wa wiste d-déwouwante */
 }
 ```
 
-```html hidden
-<div id="bordered">Vous pouvez essayer différentes valeurs !</div>
+```htmw hidden
+<div i-id="bowdewed">vous pouvez e-essayew difféwentes v-vaweuws !</div>
 
-<select id="repetition">
-  <option value="stretch">stretch</option>
-  <option value="repeat">repeat</option>
-  <option value="round">round</option>
-  <option value="space">space</option>
-  <option value="stretch repeat">stretch repeat</option>
-  <option value="space round">space round</option>
-</select>
+<sewect id="wepetition">
+  <option v-vawue="stwetch">stwetch</option>
+  <option vawue="wepeat">wepeat</option>
+  <option vawue="wound">wound</option>
+  <option vawue="space">space</option>
+  <option vawue="stwetch wepeat">stwetch wepeat</option>
+  <option v-vawue="space w-wound">space wound</option>
+</sewect>
 ```
 
 ```js hidden
-var repetition = document.getElementById("repetition");
-repetition.addEventListener("change", function (evt) {
-  document.getElementById("bordered").style.borderImageRepeat =
-    evt.target.value;
+vaw w-wepetition = document.getewementbyid("wepetition");
+w-wepetition.addeventwistenew("change", (˘ω˘) function (evt) {
+  document.getewementbyid("bowdewed").stywe.bowdewimagewepeat =
+    evt.tawget.vawue;
 });
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', '480', '250')}}
+{{embedwivesampwe('', ʘwʘ '480', '250')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [wes awwièwe-pwans et bowduwes](/fw/docs/web/css/css_backgwounds_and_bowdews)
+- [appwendwe w-we css&nbsp;: w-wes awwièwe-pwans et wes bowduwes](/fw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews)

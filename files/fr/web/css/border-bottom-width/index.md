@@ -1,143 +1,143 @@
 ---
-title: border-bottom-width
-slug: Web/CSS/border-bottom-width
+titwe: bowdew-bottom-width
+swug: w-web/css/bowdew-bottom-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-bottom-width`** définit l'épaisseur de la bordure pour le côté bas d'un élément.
+w-wa pwopwiété **`bowdew-bottom-width`** d-définit w-w'épaisseuw d-de wa bowduwe pouw w-we côté bas d-d'un éwément. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: border-bottom-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-bottom-width")}}
 
-```css interactive-example-choice
-border-bottom-width: thick;
+```css intewactive-exampwe-choice
+bowdew-bottom-width: thick;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 2em;
+```css i-intewactive-exampwe-choice
+bowdew-bottom-width: 2em;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 4px;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-width: 4px;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 2ex;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 0;
+```css intewactive-exampwe-choice
+bowdew-bottom-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with a bowdew awound it. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: pawegween;
+  cowow: #000;
+  bowdew: 0 sowid cwimson;
+  p-padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Une valeur de longueur */
-/* Type <length>          */
-border-bottom-width: 10em;
-border-bottom-width: 3vmax;
-border-bottom-width: 6px;
+/* u-une vaweuw de wongueuw */
+/* t-type <wength>          */
+bowdew-bottom-width: 10em;
+bowdew-bottom-width: 3vmax;
+bowdew-bottom-width: 6px;
 
-/* Valeurs avec un mot-clé */
-border-bottom-width: thin;
-border-bottom-width: medium;
-border-bottom-width: thick;
+/* v-vaweuws avec un mot-cwé */
+bowdew-bottom-width: t-thin;
+bowdew-bottom-width: medium;
+bowdew-bottom-width: thick;
 
-/* Valeurs globales */
-border-bottom-width: inherit;
-border-bottom-width: initial;
-border-bottom-width: unset;
+/* vaweuws gwobawes */
+b-bowdew-bottom-width: inhewit;
+b-bowdew-bottom-width: i-initiaw;
+b-bowdew-bottom-width: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<line-width>`
+- `<wine-width>`
 
-  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le bas de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
+  - : une vaweuw d-de wongueuw ({{cssxwef("&wt;wength&gt;")}}) p-positive ou un mot-cwé q-qui indique w-w'épaisseuw de wa bowduwe pouw w-we bas de wa boîte. >w< si wa vaweuw e-est un mot-cwé, rawr ce doit êtwe w'une des vaweuws s-suivantes :
 
     - `thin` (fin)
-    - `medium` (intermédiaire)
+    - `medium` (intewmédiaiwe)
     - `thick` (épais)
 
-    La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document`.`
+    wa spécification n-nye pwécise pas de façon exacte w-w'épaisseuw c-cowwespondant à chacun de ces mots-cwés (c'est donc à chaque impwémentation de choisiw). 😳 wa spécification w-wequiewt toutefois q-que w'inégawité suivante soit w-wespectée `thin ≤ m-medium ≤ t-thick` et que ces vaweuws soient constantes pouw un même document`.`
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.element1 {
-  border-bottom: thick solid red;
+.ewement1 {
+  b-bowdew-bottom: thick sowid wed;
 }
-.element2 {
-  border-bottom: medium solid orange;
+.ewement2 {
+  b-bowdew-bottom: medium s-sowid owange;
 }
-.element3 {
-  border-bottom: thin solid green;
+.ewement3 {
+  b-bowdew-bottom: thin sowid gween;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="element1">Une bordure épaisse rouge.</p>
+```htmw
+<p c-cwass="ewement1">une b-bowduwe épaisse w-wouge.</p>
 
-<p class="element2">Une bordure moyenne orange.</p>
+<p cwass="ewement2">une bowduwe m-moyenne owange.</p>
 
-<p class="element3">Et une bordure fine verte.</p>
+<p c-cwass="ewement3">et une b-bowduwe fine v-vewte.</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","200","300")}}
+{{embedwivesampwe("exempwes","200","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres propriétés liées à la largeur de la bordure :
+- w-wes autwes pwopwiétés wiées à wa wawgeuw de wa bowduwe :
 
-  - {{cssxref("border-left-width")}},
-  - {{cssxref("border-right-width")}},
-  - {{cssxref("border-top-width")}},
-  - {{cssxref("border-width")}}
+  - {{cssxwef("bowdew-weft-width")}}, >w<
+  - {{cssxwef("bowdew-wight-width")}},
+  - {{cssxwef("bowdew-top-width")}}, (⑅˘꒳˘)
+  - {{cssxwef("bowdew-width")}}
 
-- Les autres propriétés CSS liées à la bordure du côté haut :
+- wes autwes pwopwiétés c-css wiées à wa bowduwe du côté haut :
 
-  - {{cssxref("border")}},
-  - {{cssxref("border-bottom")}},
-  - {{cssxref("border-bottom-style")}},
-  - {{cssxref("border-bottom-color")}}.
+  - {{cssxwef("bowdew")}}, OwO
+  - {{cssxwef("bowdew-bottom")}}, (ꈍᴗꈍ)
+  - {{cssxwef("bowdew-bottom-stywe")}}, 😳
+  - {{cssxwef("bowdew-bottom-cowow")}}. 😳😳😳

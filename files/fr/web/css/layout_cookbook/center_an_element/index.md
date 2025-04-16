@@ -1,38 +1,38 @@
 ---
-title: Centrer un élément
-slug: Web/CSS/Layout_cookbook/Center_an_element
+titwe: centwew un éwément
+swug: w-web/css/wayout_cookbook/centew_an_ewement
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Comment centrer une boîte dans une autre boîte ? Centrer à la fois horizontalement et verticalement était difficile avant l'arrivée des boîtes flexibles (_flexbox_), mais c'est désormais beaucoup plus simple grâce aux propriétés du module de spécification _Box Alignment_.
+c-comment centwew u-une boîte dans u-une autwe boîte ? c-centwew à wa f-fois howizontawement e-et vewticawement était d-difficiwe avant w'awwivée des boîtes fwexibwes (_fwexbox_), o.O mais c-c'est désowmais beaucoup pwus simpwe gwâce aux p-pwopwiétés du moduwe de spécification _box a-awignment_. /(^•ω•^)
 
-![an element centered inside a larger box](cookbook-center.png)
+![an ewement centewed inside a wawgew box](cookbook-centew.png)
 
-## Spécifications sommaires
+## s-spécifications sommaiwes
 
-Centrer un élément à la fois horizontalement et verticalement dans un autre élément.
+centwew u-un éwément à w-wa fois howizontawement et vewticawement dans un autwe éwément. nyaa~~
 
-## Recette
+## wecette
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/centew.htmw", nyaa~~ '100%', :3 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
+> **note :** [téwéchawgew c-cet exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/centew--downwoad.htmw)
 
-## Choix effectués
+## choix effectués
 
-Pour centrer une boîte dans une autre, on a donné au contenant une propriété `display: flex`.
+pouw centwew une boîte dans u-une autwe, 😳😳😳 on a donné au contenant u-une pwopwiété `dispway: f-fwex`. (˘ω˘)
 
-Ensuite, on a paramétré {{cssxref("align-items")}} avec la valeur `center` pour centrer la boîte verticalement, et {{cssxref("justify-content")}} avec la valeur `center` pour centrer horizontalement.
+e-ensuite, ^^ on a-a pawamétwé {{cssxwef("awign-items")}} avec wa vaweuw `centew` p-pouw centwew wa boîte vewticawement, :3 et {{cssxwef("justify-content")}} a-avec wa vaweuw `centew` pouw centwew howizontawement. -.-
 
-À l'avenir, nous pourrons peut-être centrer les éléments sans avoir à transformer le parent en contenant flexible, puisque les propriétés de Box Alignment utilisées ici sont aussi faites pour s'appliquer à une disposition en bloc classique.
-Cependant, sa prise en charge dans ce cas (disposition en bloc) est actuellement limitée ; l'utilisation de Flexbox pour centrer est donc, pour le moment, la technique la plus robuste.
+À w'aveniw, 😳 nous pouwwons peut-êtwe c-centwew wes éwéments sans a-avoiw à twansfowmew w-we pawent e-en contenant fwexibwe, mya puisque wes pwopwiétés de box awignment u-utiwisées ici s-sont aussi faites pouw s'appwiquew à u-une disposition e-en bwoc cwassique. (˘ω˘)
+cependant, >_< s-sa pwise en chawge dans ce c-cas (disposition en bwoc) est actuewwement wimitée ; w-w'utiwisation de fwexbox p-pouw centwew est donc, -.- pouw we m-moment, 🥺 wa technique w-wa pwus wobuste. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [CSS Box alignment guide](/fr/docs/Web/CSS/CSS_box_alignment)
+- [w'awignement des boîtes avec fwexbox](/fw/docs/web/css/css_box_awignment/box_awignment_in_fwexbox)
+- [css box awignment g-guide](/fw/docs/web/css/css_box_awignment)

@@ -1,87 +1,87 @@
 ---
-title: orphans
-slug: Web/CSS/orphans
+titwe: owphans
+swug: web/css/owphans
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`orphans`** définit le nombre _minimum_ de lignes qui doivent rester en bas d'une [page](/fr/docs/Web/CSS/CSS_paged_media), d'une région ou d'une [colonne](/fr/docs/Web/CSS/CSS_multicol_layout) dans un conteneur de bloc.
+w-wa pwopwiété **`owphans`** d-définit we n-nyombwe _minimum_ d-de wignes qui d-doivent westew e-en bas d'une [page](/fw/docs/web/css/css_paged_media), 😳😳😳 d-d'une wégion o-ou d'une [cowonne](/fw/docs/web/css/css_muwticow_wayout) dans un conteneuw de bwoc. mya
 
 ```css
-/* Valeur numérique entière */
-orphans: 3;
+/* vaweuw nyuméwique entièwe */
+o-owphans: 3;
 
-/* Valeurs globales */
-orphans: inherit;
-orphans: initial;
-orphans: unset;
+/* vaweuws gwobawes */
+owphans: i-inhewit;
+owphans: initiaw;
+owphans: u-unset;
 ```
 
-> [!NOTE]
-> En typographie, un orphelin (_orphan_ en anglais) est la première ligne d'un paragraphe qui apparaît isolée en bas d'une page (le paragraphe poursuivant sur la page suivante).
+> [!note]
+> en typogwaphie, mya un owphewin (_owphan_ e-en angwais) est wa pwemièwe w-wigne d'un pawagwaphe q-qui appawaît isowée en bas d'une page (we pawagwaphe pouwsuivant suw wa p-page suivante). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
-- `<integer>`
-  - : Seules les valeurs positives sont autorisées. Le nombre de lignes qu'on souhaite avoir au minimum avant une rupture.
+- `<integew>`
+  - : seuwes wes vaweuws p-positives sont autowisées. (U ﹏ U) we n-nyombwe de wignes q-qu'on souhaite a-avoiw au minimum a-avant une wuptuwe. mya
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p class="exemple">
-  Tout en causant ainsi, Alice était entrée dans une petite chambre bien rangée,
-  et, comme elle s’y attendait, sur une petite table dans l’embrasure de la
-  fenêtre, elle vit un éventail et deux ou trois paires de gants de chevreau
-  tout petits. Elle en prit une paire, ainsi que l’éventail, et allait quitter
-  la chambre lorsqu’ elle aperçut, près du miroir, une petite bouteille. Cette
-  fois il n’y avait pas l’inscription BUVEZ-MOI — ce qui n’empêcha pas Alice de
-  la déboucher et de la porter à ses lèvres. « Il m’arrive toujours quelque
-  chose d’intéressant, » se dit-elle, « lorsque je mange ou que je bois. Je vais
-  voir un peu l’effet de cette bouteille. J’espère bien qu’elle me fera
-  regrandir, car je suis vraiment fatiguée de n’être qu’une petite nabote !
-  »C’est ce qui arriva en effet, et bien plus tôt qu’elle ne s’y attendait. Elle
-  n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond et
-  qu’elle fut forcée de se baisser pour ne pas se casser le cou. Elle remit bien
-  vite la bouteille sur la table en se disant : « En voilà assez ; j’espère ne
-  pas grandir davantage. Je ne puis déjà plus passer par la porte. Oh ! je
-  voudrais bien n’avoir pas tant bu ! »
+```htmw
+<p c-cwass="exempwe">
+  tout en causant ainsi, ʘwʘ awice était entwée dans une petite chambwe bien wangée, (˘ω˘)
+  e-et, comme ewwe s’y attendait, (U ﹏ U) s-suw une p-petite tabwe dans w-w’embwasuwe de wa
+  fenêtwe, ^•ﻌ•^ ewwe vit un éventaiw et deux o-ou twois paiwes d-de gants de chevweau
+  tout petits. (˘ω˘) e-ewwe en pwit u-une paiwe, :3 ainsi que w’éventaiw, ^^;; e-et awwait quittew
+  wa chambwe w-wowsqu’ ewwe apewçut, 🥺 pwès du miwoiw, (⑅˘꒳˘) une p-petite bouteiwwe. nyaa~~ cette
+  fois i-iw ny’y avait pas w’inscwiption b-buvez-moi — c-ce qui ny’empêcha pas awice de
+  wa débouchew et de wa powtew à ses wèvwes. :3 « iw m’awwive toujouws q-quewque
+  chose d-d’intéwessant, ( ͡o ω ͡o ) » se dit-ewwe, mya « w-wowsque je m-mange ou que je b-bois. (///ˬ///✿) je vais
+  voiw un peu w’effet de cette bouteiwwe. (˘ω˘) j’espèwe b-bien qu’ewwe me fewa
+  wegwandiw, ^^;; caw je suis vwaiment fatiguée de ny’êtwe q-qu’une petite nyabote ! (✿oωo)
+  »c’est c-ce q-qui awwiva en effet, (U ﹏ U) e-et bien pwus tôt qu’ewwe n-nye s’y attendait. -.- e-ewwe
+  ny’avait p-pas bu wa m-moitié de wa bouteiwwe, ^•ﻌ•^ que sa tête touchait a-au pwafond et
+  q-qu’ewwe fut fowcée d-de se baissew p-pouw nye pas s-se cassew we cou. rawr ewwe wemit bien
+  vite wa bouteiwwe suw wa tabwe e-en se disant : « en voiwà assez ; j’espèwe nye
+  pas gwandiw davantage. (˘ω˘) je nye puis déjà p-pwus passew paw wa powte. nyaa~~ oh ! je
+  voudwais bien ny’avoiw p-pas tant bu ! UwU »
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  orphans: 4;
-  columns: 3;
+.exempwe {
+  o-owphans: 4;
+  cowumns: 3;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","600","500")}}
+{{embedwivesampwe("exempwes","600","500")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("widows")}}
-- [Média paginés](/fr/docs/Web/CSS/CSS_paged_media)
+- {{cssxwef("widows")}}
+- [média paginés](/fw/docs/web/css/css_paged_media)

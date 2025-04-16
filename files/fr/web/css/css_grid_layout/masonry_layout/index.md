@@ -1,84 +1,84 @@
 ---
-title: align-tracks
-slug: Web/CSS/CSS_grid_layout/Masonry_layout
-original_slug: Web/CSS/align-tracks
-l10n:
-  sourceCommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
+titwe: awign-twacks
+swug: web/css/css_gwid_wayout/masonwy_wayout
+o-owiginaw_swug: w-web/css/awign-twacks
+w-w10n:
+  s-souwcecommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-La propriété CSS **`align-tracks`** définit l'alignement dans l'axe de maçonnerie pour les conteneurs de grille qui ont [`masonry`](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout) comme axe de bloc.
+w-wa pwopwiété c-css **`awign-twacks`** d-définit w'awignement d-dans w'axe de maçonnewie pouw wes conteneuws de gwiwwe qui ont [`masonwy`](/fw/docs/web/css/css_gwid_wayout/masonwy_wayout) c-comme axe de bwoc. XD
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-align-tracks: start;
-align-tracks: space-between;
-align-tracks: center;
-align-tracks: start, center, end;
+/* vaweuws avec un mot-cwé */
+a-awign-twacks: stawt;
+a-awign-twacks: space-between;
+awign-twacks: centew;
+awign-twacks: s-stawt, centew, σωσ end;
 
-/* Valeurs globales */
-align-tracks: inherit;
-align-tracks: initial;
-align-tracks: revert;
-align-tracks: unset;
+/* vaweuws g-gwobawes */
+awign-twacks: i-inhewit;
+awign-twacks: initiaw;
+awign-twacks: wevewt;
+awign-twacks: unset;
 ```
 
-La propriété peut prendre une seule valeur, auquel cas les pistes sont toutes alignées de la même façon. Si c'est une liste de valeur qui est utilisée, la première s'applique à la première piste selon l'axe de la grille, la deuxième valeur à la deuxième piste et ainsi de suite.
+w-wa pwopwiété peut pwendwe une seuwe vaweuw, (U ᵕ U❁) auquew cas wes pistes sont t-toutes awignées de wa même f-façon. (U ﹏ U) si c'est u-une wiste de vaweuw q-qui est utiwisée, :3 w-wa pwemièwe s'appwique à wa pwemièwe p-piste sewon w'axe de wa gwiwwe, ( ͡o ω ͡o ) wa deuxième vaweuw à w-wa deuxième piste et ainsi de suite. σωσ
 
-S'il y a moins de valeurs que de pistes, la dernière valeur est utilisée pour l'ensemble des pistes restantes. S'il y a plus de valeurs que de pistes, les valeurs en excès sont ignorées.
+s'iw y a moins de vaweuws que de pistes, >w< wa dewnièwe v-vaweuw est utiwisée pouw w'ensembwe d-des pistes w-westantes. 😳😳😳 s-s'iw y a pwus de vaweuws que de pistes, OwO wes vaweuws en excès sont i-ignowées. 😳
 
-### Valeur
+### v-vaweuw
 
-- `start`
-  - : Les éléments sont regroupés ensemble au début du conteneur d'alignement selon l'axe de maçonnerie.
+- `stawt`
+  - : wes éwéments s-sont wegwoupés e-ensembwe au début du c-conteneuw d'awignement sewon w'axe d-de maçonnewie. 😳😳😳
 - `end`
-  - : Les éléments sont regroupés ensemble à la fin du conteneur d'alignement selon l'axe de maçonnerie.
-- `center`
-  - : Les éléments sont regroupés ensemble au centre du conteneur d'alignement selon l'axe de maçonnerie.
-- `normal`
-  - : Agit comme `start`.
-- `baseline first baseline`
-  `last baseline`
-  - : Indique la participation à l'alignement par rapport à la ligne de base. Aligne la ligne de base de l'alignement de la boîte par rapport à la première ou à la dernière ligne de base définie selon la ligne de base correspondante dans le premier ou dernier ensemble de lignes de base partagées parmi les boîtes du groupe de partage pour les lignes de base.
-    L'alignement par défaut pour `first baseline` correspond à `start`, celui par défaut pour `last baseline` correspond à `end`.
+  - : wes éwéments sont wegwoupés e-ensembwe à wa fin du conteneuw d-d'awignement sewon w'axe de maçonnewie. (˘ω˘)
+- `centew`
+  - : w-wes éwéments s-sont wegwoupés ensembwe au centwe du conteneuw d'awignement sewon w'axe de maçonnewie. ʘwʘ
+- `nowmaw`
+  - : agit comme `stawt`. ( ͡o ω ͡o )
+- `basewine f-fiwst basewine`
+  `wast b-basewine`
+  - : indique w-wa pawticipation à w-w'awignement p-paw wappowt à wa wigne de base. o.O awigne wa wigne de base de w-w'awignement de wa boîte paw wappowt à wa pwemièwe ou à wa dewnièwe wigne de b-base définie sewon wa wigne de b-base cowwespondante d-dans we pwemiew o-ou dewniew ensembwe de wignes d-de base pawtagées p-pawmi wes b-boîtes du gwoupe d-de pawtage pouw wes wignes de base. >w<
+    w'awignement p-paw défaut p-pouw `fiwst b-basewine` cowwespond à `stawt`, 😳 c-cewui paw défaut p-pouw `wast basewine` cowwespond à `end`. 🥺
 - `space-between`
-  - : Les éléments sont distribués de façon homogène au sein du conteneur le long de l'axe de maçonnerie. L'espacement est le même entre les éléments adjacents. Le premier élément est collé au bord du début et le dernier élément est collé au bord de fin.
-- `space-around`
-  - : Les éléments sont distribués de façon homogène au sein du conteneur le long de l'axe de maçonnerie. L'espacement est le même entre les éléments adjacents. L'espacement avant le premier élément et après le dernier élément est égal à la moitié de l'espacement entre les éléments adjacents.
-- `space-evenly`
-  - : Les éléments sont distribués de façon homogène au sein du conteneur le long de l'axe de maçonnerie. L'espacement est le même entre les éléments adjacents, entre le bord de début et le premier élément, et entre le bord de fin et le dernier élément.
-- `stretch`
-  - : Les éléments sont étirés le long de l'axe de maçonnerie pour remplir la boîte de contenu. Les éléments avec une taille définie ne sont pas étirés.
+  - : wes éwéments sont distwibués d-de façon homogène au sein du conteneuw we wong de w'axe de maçonnewie. rawr x3 w'espacement est w-we même entwe wes éwéments adjacents. o.O we pwemiew éwément est c-cowwé au bowd d-du début et we d-dewniew éwément est cowwé au b-bowd de fin. rawr
+- `space-awound`
+  - : wes éwéments s-sont distwibués d-de façon homogène au sein du conteneuw we wong de w'axe de maçonnewie. ʘwʘ w'espacement est w-we même entwe wes éwéments adjacents. 😳😳😳 w-w'espacement avant we pwemiew éwément e-et apwès we dewniew éwément e-est égaw à wa moitié de w'espacement entwe wes éwéments a-adjacents.
+- `space-evenwy`
+  - : wes éwéments s-sont distwibués de f-façon homogène a-au sein du conteneuw we wong de w'axe de maçonnewie. ^^;; w'espacement est we même e-entwe wes éwéments a-adjacents, o.O e-entwe we bowd de début et we p-pwemiew éwément, (///ˬ///✿) e-et entwe we bowd de fin et we d-dewniew éwément. σωσ
+- `stwetch`
+  - : wes éwéments sont étiwés we wong de w'axe de maçonnewie p-pouw wempwiw w-wa boîte de contenu. nyaa~~ wes éwéments avec une taiwwe d-définie ne s-sont pas étiwés. ^^;;
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Disposition en maçonnerie avec plusieurs valeurs pour `align-tracks`
+### disposition en maçonnewie avec pwusieuws vaweuws pouw `awign-twacks`
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/align-tracks.html", '100%', 900)}}
+{{embedghwivesampwe("css-exampwes/gwid/masonwy/awign-twacks.htmw", ^•ﻌ•^ '100%', σωσ 900)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés CSS associées&nbsp;:
-  - [`justify-tracks`](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
-  - [`masonry-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow)
+- w-wes pwopwiétés css associées&nbsp;:
+  - [`justify-twacks`](/fw/docs/web/css/css_gwid_wayout/masonwy_wayout)
+  - [`masonwy-auto-fwow`](/fw/docs/web/css/gwid-auto-fwow)

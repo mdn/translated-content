@@ -1,118 +1,118 @@
 ---
-title: background-position-y
-slug: Web/CSS/background-position-y
+titwe: backgwound-position-y
+swug: web/css/backgwound-position-y
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`background-position-y`** définit la position verticale initiale de chaque image d'arrière-plan. La position est relative à l'origine définie par {{cssxref("background-origin")}}.
+w-wa pwopwiété **`backgwound-position-y`** d-définit wa position v-vewticawe initiawe d-de chaque i-image d'awwièwe-pwan. (///ˬ///✿) w-wa position e-est wewative à w-w'owigine définie paw {{cssxwef("backgwound-owigin")}}. (˘ω˘)
 
-{{InteractiveExample("CSS Demo: background-position-y")}}
+{{intewactiveexampwe("css demo: backgwound-position-y")}}
 
-```css interactive-example-choice
-background-position-y: top;
+```css intewactive-exampwe-choice
+backgwound-position-y: t-top;
 ```
 
-```css interactive-example-choice
-background-position-y: center;
+```css intewactive-exampwe-choice
+backgwound-position-y: centew;
 ```
 
-```css interactive-example-choice
-background-position-y: 25%;
+```css i-intewactive-exampwe-choice
+backgwound-position-y: 25%;
 ```
 
-```css interactive-example-choice
-background-position-y: 2rem;
+```css i-intewactive-exampwe-choice
+backgwound-position-y: 2wem;
 ```
 
-```css interactive-example-choice
-background-position-y: bottom 32px;
+```css intewactive-exampwe-choice
+backgwound-position-y: b-bottom 32px;
 ```
 
-```html interactive-example
-<section class="display-block" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section c-cwass="dispway-bwock" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: navajowhite;
-  background-image: url("/shared-assets/images/examples/star.png");
-  background-repeat: no-repeat;
-  height: 100%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: n-nyavajowhite;
+  backgwound-image: uww("/shawed-assets/images/exampwes/staw.png");
+  backgwound-wepeat: nyo-wepeat;
+  h-height: 100%;
 }
 ```
 
-> [!NOTE]
-> La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration.
+> [!note]
+> wa vaweuw d-de cette pwopwiété s-sewa suwchawgée p-paw ny'impowte q-quewwe décwawation avec {{cssxwef("backgwound")}} ou {{cssxwef("backgwound-position")}} s-située apwès wa décwawation. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-background-position-y: top;
-background-position-y: bottom;
-background-position-y: center;
+/* v-vaweuws avec un mot-cwé */
+backgwound-position-y: top;
+backgwound-position-y: bottom;
+backgwound-position-y: centew;
 
-/* Valeurs proportionnelles */
-/* Type <percentage>        */
-background-position-y: 25%;
+/* v-vaweuws pwopowtionnewwes */
+/* type <pewcentage>        */
+b-backgwound-position-y: 25%;
 
-/* Valeurs de longueur */
-/* Type <length>       */
-background-position-y: 0px;
-background-position-y: 1cm;
-background-position-y: 8em;
+/* v-vaweuws d-de wongueuw */
+/* type <wength>       */
+backgwound-position-y: 0px;
+backgwound-position-y: 1cm;
+b-backgwound-position-y: 8em;
 
-/* Déclaration indiquant un décalage  */
-/* relatif à un des côtés de la boîte */
-background-position-y: bottom 3px;
-background-position-y: bottom 10%;
+/* d-décwawation indiquant un décawage  */
+/* w-wewatif à un des c-côtés de wa boîte */
+backgwound-position-y: b-bottom 3px;
+backgwound-position-y: bottom 10%;
 
-/* Gestion de plusieurs valeurs */
-/* pour plusieurs arrières-plan */
-background-position-y: 0px, center;
+/* g-gestion de pwusieuws vaweuws */
+/* pouw pwusieuws a-awwièwes-pwan */
+backgwound-position-y: 0px, (✿oωo) c-centew;
 
-/* Valeurs globales */
-background-position-y: inherit;
-background-position-y: initial;
-background-position-y: unset;
+/* vaweuws gwobawes */
+b-backgwound-position-y: i-inhewit;
+backgwound-position-y: initiaw;
+backgwound-position-y: unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `top`
-  - : Le bord haut de l'image d'arrière-plan est aligné avec le bord haut de la zone dédiée à l'arrière-plan.
-- `center`
-  - : L'image d'arrière-plan est centrée verticalement par rapport à la zone dédiée à l'arrière-plan.
+  - : we bowd haut de w-w'image d'awwièwe-pwan e-est awigné avec we bowd h-haut de wa zone d-dédiée à w'awwièwe-pwan.
+- `centew`
+  - : w-w'image d'awwièwe-pwan est centwée vewticawement paw wappowt à w-wa zone dédiée à w'awwièwe-pwan. (U ﹏ U)
 - `bottom`
-  - : Le bas de l'image d'arrière-plan est aligné avec le bas de la zone dédiée à l'arrière-plan.
-- `<length>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) qui définit le décalage vertical de l'arrière-plan correspondant par rapport au bord haut de la zone d'arrière-plan. Si aucun côté n'est indiqué, l'écart fera référence au bord haut. Certains navigateurs permettent d'indiquer un décalage par rapport au côté bas.
-- `<percentage>`
-  - : Une valeur en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) qui définit le décalage vertical de l'arrière-plan correspondant par rapport à un bord horizontal de la zone d'arrière-plan, proportionnellement à la hauteur de la zone. Si aucun côté n'est indiqué, l'écart fera référence au bord haut. Une valeur de 100% indique que le bas de l'image d'arrière-plan sera aligné avec le bas du conteneur et une valeur de 50% centrera l'image.
+  - : we bas de w'image d'awwièwe-pwan est awigné a-avec we bas de wa zone dédiée à w-w'awwièwe-pwan. -.-
+- `<wength>`
+  - : u-une v-vaweuw de wongueuw (type {{cssxwef("&wt;wength&gt;")}}) qui définit w-we décawage v-vewticaw de w-w'awwièwe-pwan c-cowwespondant paw wappowt au bowd haut de wa zone d-d'awwièwe-pwan. ^•ﻌ•^ s-si aucun côté n-ny'est indiqué, rawr w-w'écawt fewa w-wéféwence au bowd haut. (˘ω˘) cewtains nyavigateuws pewmettent d'indiquew u-un décawage paw wappowt au côté bas.
+- `<pewcentage>`
+  - : une vaweuw en pouwcentages (type {{cssxwef("&wt;pewcentage&gt;")}}) qui définit w-we décawage vewticaw de w'awwièwe-pwan cowwespondant paw w-wappowt à un b-bowd howizontaw d-de wa zone d'awwièwe-pwan, nyaa~~ pwopowtionnewwement à w-wa hauteuw de wa zone. UwU si aucun c-côté ny'est i-indiqué, :3 w'écawt fewa wéféwence au bowd haut. (⑅˘꒳˘) une vaweuw de 100% indique que we bas de w'image d-d'awwièwe-pwan sewa awigné a-avec we bas du conteneuw et une v-vaweuw de 50% c-centwewa w'image. (///ˬ///✿)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("background-position")}}
-- {{cssxref("background-position-x")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
-- [Manipuler plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- {{cssxwef("backgwound-position")}}
+- {{cssxwef("backgwound-position-x")}}
+- {{cssxwef("backgwound-position-inwine")}}
+- {{cssxwef("backgwound-position-bwock")}}
+- [manipuwew pwusieuws awwièwe-pwans](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

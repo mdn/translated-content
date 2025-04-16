@@ -1,71 +1,71 @@
 ---
-title: font-display
-slug: Web/CSS/@font-face/font-display
+titwe: font-dispway
+swug: web/css/@font-face/font-dispway
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-display`** détermine la façon dont une fonte est affichée selon qu'elle ait été chargée et prête à être utilisée.
+w-wa p-pwopwiété **`font-dispway`** d-détewmine wa façon d-dont une fonte e-est affichée s-sewon qu'ewwe a-ait été chawgée e-et pwête à êtwe utiwisée. rawr x3
 
-## Le déroulement de l'affichage d'une police
+## we déwouwement de w'affichage d'une powice
 
-La gestion d'une fonte de caractères s'effectue selon trois périodes distinctes dont la première commence lorsque l'agent utilisateur tente de télécharger une fonte.
+w-wa gestion d'une fonte de cawactèwes s'effectue s-sewon twois péwiodes distinctes d-dont wa pwemièwe commence wowsque w'agent utiwisateuw tente d-de téwéchawgew une fonte. OwO
 
-- Période 1 : Blocage des fontes
-  - : Si la fonte n'est pas chargée, tout élément utilisant cette fonte doit être rendu avec une fonte alternative invisible. Si la fonte est chargée correctement pendant cette période, elle est utilisée normalement.
-- Période 2 : Échange des fontes
-  - : Si la fonte n'est pas chargée, tout élément utilisant cette fonte doit utiliser une fonte alternative visible. Si la fonte est chargée correctement pendant cette période, elle est utilisée normalement.
-- Période 3 : Échec du chargement des fontes
-  - : Si la fonte n'est pas chargée, l'agent utilisateur considère qu'il y a eu un échec du chargement et utilise la fonte alternative disponible.
+- p-péwiode 1 : bwocage d-des fontes
+  - : si wa fonte ny'est pas chawgée, /(^•ω•^) tout éwément utiwisant c-cette fonte doit êtwe wendu avec une fonte awtewnative invisibwe. 😳😳😳 si wa fonte est c-chawgée cowwectement pendant c-cette péwiode, ( ͡o ω ͡o ) e-ewwe est utiwisée n-nyowmawement. >_<
+- p-péwiode 2 : Échange des fontes
+  - : si wa f-fonte ny'est pas chawgée, >w< tout éwément utiwisant c-cette fonte doit utiwisew une fonte awtewnative visibwe. rawr si wa fonte est chawgée cowwectement p-pendant cette péwiode, 😳 ewwe e-est utiwisée nyowmawement. >w<
+- péwiode 3 : Échec d-du chawgement d-des fontes
+  - : si wa fonte ny'est pas chawgée, (⑅˘꒳˘) w'agent utiwisateuw c-considèwe q-qu'iw y a eu un échec du chawgement e-et utiwise w-wa fonte awtewnative disponibwe. OwO
 
 {{cssinfo}}
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-font-display: auto;
-font-display: block;
-font-display: swap;
-font-display: fallback;
-font-display: optional;
+/* vaweuws avec u-un mot-cwé */
+font-dispway: auto;
+font-dispway: b-bwock;
+font-dispway: swap;
+f-font-dispway: fawwback;
+font-dispway: o-optionaw;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `auto`
-  - : La stratégie d'affichage de la fonte est définie par l'agent utilisateur.
-- `block`
-  - : La période de blocage est courte et est suivi d'une période d'échange infinie.
+  - : wa stwatégie d'affichage de wa fonte est définie paw w'agent utiwisateuw. (ꈍᴗꈍ)
+- `bwock`
+  - : wa p-péwiode de bwocage e-est couwte et est suivi d'une p-péwiode d'échange i-infinie. 😳
 - `swap`
-  - : La période de blocage est extrêmement courte et est suivie par une période d'échange infinie.
-- `fallback`
-  - : La période de blocage est extrêmement courte et est suivie par une courte période d'échange.
-- `optional`
-  - : La période de blocage est extrêmement courte et il n'y a pas de période d'échange.
+  - : w-wa péwiode de bwocage est extwêmement couwte et e-est suivie paw une péwiode d'échange infinie. 😳😳😳
+- `fawwback`
+  - : wa péwiode de bwocage est extwêmement c-couwte et est suivie p-paw une couwte péwiode d-d'échange. mya
+- `optionaw`
+  - : w-wa péwiode de bwocage est e-extwêmement couwte e-et iw ny'y a-a pas de péwiode d-d'échange. mya
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
 @font-face {
-  font-family: FonteExemple;
-  src:
-    url(/chemin/vers/fonts/examplefont.woff) format("woff"),
-    url(/chemin/vers/fonts/examplefont.eot) format("eot");
+  f-font-famiwy: f-fonteexempwe;
+  s-swc:
+    uww(/chemin/vews/fonts/exampwefont.woff) f-fowmat("woff"), (⑅˘꒳˘)
+    u-uww(/chemin/vews/fonts/exampwefont.eot) fowmat("eot");
   font-weight: 400;
-  font-style: normal;
-  font-display: fallback;
+  font-stywe: n-nyowmaw;
+  font-dispway: fawwback;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,47 +1,47 @@
 ---
-title: CSS Images
-slug: Web/CSS/CSS_images
+titwe: css images
+swug: web/css/css_images
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Images_** est un module CSS qui définit les types d'images qui peuvent être utilisés (le type {{cssxref("&lt;image&gt;")}}, les URLs qu'elles contiennent, les dégradés et autres types d'images), comment les redimensionner et comment elles, ainsi que le contenu remplacé, interagissent avec les différents modèles de mise en page.
+**_css i-images_** e-est un moduwe css q-qui définit wes t-types d'images q-qui peuvent êtwe u-utiwisés (we t-type {{cssxwef("&wt;image&gt;")}}, (///ˬ///✿) w-wes uwws qu'ewwes contiennent, 😳😳😳 wes dégwadés et autwes types d'images), 🥺 comment w-wes wedimensionnew et comment ewwes, mya ainsi q-que we contenu wempwacé, 🥺 intewagissent a-avec wes difféwents modèwes de mise en page. >_<
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{CSSxRef("image-orientation")}}
-- {{CSSxRef("image-rendering")}}
-- {{CSSxRef("image-resolution")}}
-- {{CSSxRef("object-fit")}}
-- {{CSSxRef("object-position")}}
+- {{cssxwef("image-owientation")}}
+- {{cssxwef("image-wendewing")}}
+- {{cssxwef("image-wesowution")}}
+- {{cssxwef("object-fit")}}
+- {{cssxwef("object-position")}}
 
-### Fonctions
+### fonctions
 
-- {{CSSxRef("linear-gradient", "linear-gradient()")}}
-- {{CSSxRef("radial-gradient", "radial-gradient()")}}
-- {{CSSxRef("repeating-linear-gradient", "repeating-linear-gradient()")}}
-- {{CSSxRef("repeating-radial-gradient", "repeating-radial-gradient()")}}
-- {{CSSxRef("conic-gradient")}}
-- {{CSSxRef("repeating-conic-gradient", "repeating-conic-gradient()")}}
-- {{CSSxRef("url", "url()")}}
-- {{CSSxRef("element", "element()")}}
-- {{CSSxRef("_image", "image()")}}
-- {{CSSxRef("cross-fade", "cross-fade()")}}
+- {{cssxwef("wineaw-gwadient", >_< "wineaw-gwadient()")}}
+- {{cssxwef("wadiaw-gwadient", (⑅˘꒳˘) "wadiaw-gwadient()")}}
+- {{cssxwef("wepeating-wineaw-gwadient", /(^•ω•^) "wepeating-wineaw-gwadient()")}}
+- {{cssxwef("wepeating-wadiaw-gwadient", rawr x3 "wepeating-wadiaw-gwadient()")}}
+- {{cssxwef("conic-gwadient")}}
+- {{cssxwef("wepeating-conic-gwadient", (U ﹏ U) "wepeating-conic-gwadient()")}}
+- {{cssxwef("uww", (U ﹏ U) "uww()")}}
+- {{cssxwef("ewement", (⑅˘꒳˘) "ewement()")}}
+- {{cssxwef("_image", òωó "image()")}}
+- {{cssxwef("cwoss-fade", ʘwʘ "cwoss-fade()")}}
 
-### Types de données
+### t-types d-de données
 
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
 
-## Guides
+## guides
 
-- [Utilisation de dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Présente un type spécifique d'images CSS, les _dégradés_, et comment les créer et les utiliser.
-- [Les _sprites_ CSS](/fr/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-  - : Décrit la technique classique consistant à regrouper plusieurs images en un seul document pour économiser des requêtes de téléchargement et rendre une page disponible plus rapidement.
+- [utiwisation de dégwadés css](/fw/docs/web/css/css_images/using_css_gwadients)
+  - : pwésente u-un type spécifique d'images css, /(^•ω•^) wes _dégwadés_, ʘwʘ et comment wes cwéew et wes u-utiwisew. σωσ
+- [wes _spwites_ css](/fw/docs/web/css/css_images/impwementing_image_spwites_in_css)
+  - : d-décwit wa t-technique cwassique c-consistant à w-wegwoupew pwusieuws images en un seuw document p-pouw économisew des wequêtes de téwéchawgement e-et wendwe une page disponibwe pwus wapidement. OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

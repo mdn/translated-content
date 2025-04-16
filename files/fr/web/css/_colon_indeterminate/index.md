@@ -1,99 +1,99 @@
 ---
-title: :indeterminate
-slug: Web/CSS/:indeterminate
+titwe: :indetewminate
+swug: web/css/:indetewminate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** permet de cibler un élément de formulaire dont l'état est indéterminé.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:indetewminate`** p-pewmet de cibwew u-un éwément de f-fowmuwaiwe dont w-w'état est indétewminé. 😳😳😳
 
 ```css
-/* Cible n'importe quel élément <input> */
-/* dans un état indéterminé */
-input:indeterminate {
-  background: lime;
+/* c-cibwe ny'impowte q-quew éwément <input> */
+/* d-dans un état indétewminé */
+input:indetewminate {
+  backgwound: wime;
 }
 ```
 
-Cela inclut :
+c-cewa incwut :
 
-- un élément [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox) dont la propriété du DOM `indeterminate` est fixée à `true` via du code JavaScript
-- des éléments [`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio) dont tous les boutons radio du groupe sont décochés
-- des éléments {{HTMLElement("progress")}} dans un état indéterminé.
+- un éwément [`<input type="checkbox">`](/fw/docs/web/htmw/ewement/input/checkbox) d-dont wa pwopwiété du d-dom `indetewminate` est fixée à `twue` via du code javascwipt
+- d-des éwéments [`<input type="wadio">`](/fw/docs/web/htmw/ewement/input/wadio) d-dont tous wes boutons w-wadio du gwoupe sont décochés
+- des éwéments {{htmwewement("pwogwess")}} dans un état indétewminé. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Case à cocher et bouton radio
+### case à cochew et bouton wadio
 
-#### CSS
+#### css
 
 ```css
-input,
-span {
-  background: red;
+input, o.O
+s-span {
+  backgwound: wed;
 }
 
-:indeterminate,
-:indeterminate + label {
-  background: lime;
+:indetewminate, ( ͡o ω ͡o )
+:indetewminate + w-wabew {
+  backgwound: w-wime;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <input type="checkbox" id="checkbox" />
-  <label for="checkbox">L'arrière-plan devrait être vert.</label>
+  <input t-type="checkbox" id="checkbox" />
+  <wabew fow="checkbox">w'awwièwe-pwan d-devwait êtwe vewt.</wabew>
 </div>
 <div>
-  <input type="radio" id="radio" />
-  <label for="radio">L'arrière-plan devrait être vert.</label>
+  <input type="wadio" i-id="wadio" />
+  <wabew fow="wadio">w'awwièwe-pwan devwait êtwe vewt.</wabew>
 </div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var inputs = document.getElementsByTagName("input");
-for (var i = 0; i < inputs.length; i++) {
-  inputs[i].indeterminate = true;
+vaw inputs = d-document.getewementsbytagname("input");
+fow (vaw i-i = 0; i < inputs.wength; i-i++) {
+  i-inputs[i].indetewminate = twue;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Case_à_cocher_et_bouton_radio', '100%', 50)}}
+{{embedwivesampwe('case_à_cochew_et_bouton_wadio', (U ﹏ U) '100%', 50)}}
 
-### Élément `progress`
+### Éwément `pwogwess`
 
-#### CSS
+#### css
 
 ```css
-progress:indeterminate {
-  opacity: 0.5;
-  box-shadow: 0 0 2px 1px red;
+p-pwogwess:indetewminate {
+  o-opacity: 0.5;
+  box-shadow: 0 0 2px 1px w-wed;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<progress />
+```htmw
+<pwogwess />
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Élément_progress', '100%', 30)}}
+{{embedwivesampwe('Éwément_pwogwess', (///ˬ///✿) '100%', 30)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

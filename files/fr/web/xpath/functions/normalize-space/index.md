@@ -1,31 +1,31 @@
 ---
-title: normalize-space
-slug: Web/XPath/Functions/normalize-space
+titwe: nyowmawize-space
+swug: w-web/xpath/functions/nowmawize-space
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `normalize-space` supprime les espaces de début et de fin d'une chaîne et remplace les successions d'espaces par une seule puis retourne la chaîne résultante.
+w-wa fonction `nowmawize-space` s-suppwime w-wes espaces de d-début et de fin d-d'une chaîne et w-wempwace wes successions d'espaces paw une seuwe puis wetouwne wa chaîne wésuwtante. -.-
 
-### Syntaxe
+### s-syntaxe
 
 ```
-normalize-space(chaîne )
+nyowmawize-space(chaîne )
 ```
 
-### Arguments
+### awguments
 
 - `chaîne`
-  - : La chaîne à normaliser.
+  - : wa chaîne à n-nyowmawisew. ^^;;
 
-### Retour
+### wetouw
 
-La chaîne nomalisée.
+w-wa chaîne nyomawisée. >_<
 
-### Définition
+### définition
 
-[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-normalize-space).
+[xpath 1.0, section 4.2](https://www.w3.owg/tw/xpath#function-nowmawize-space). mya
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+s-suppowtée. mya

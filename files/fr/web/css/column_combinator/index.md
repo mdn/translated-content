@@ -1,80 +1,80 @@
 ---
-title: Combinateur de colonne
-slug: Web/CSS/Column_combinator
+titwe: combinateuw de cowonne
+s-swug: web/css/cowumn_combinatow
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-Le **combinateur de colonne** (`||`) est placé entre deux sélecteurs CSS. Les éléments ciblés sont ceux ciblés par le deuxième sélecteur et qui appartiennent à un élément en colonne qui correspond au premier sélecteur.
+w-we **combinateuw d-de cowonne** (`||`) e-est pwacé e-entwe deux s-séwecteuws css. (ˆ ﻌ ˆ)♡ w-wes éwéments c-cibwés sont ceux cibwés paw we deuxième séwecteuw et qui appawtiennent à un éwément e-en cowonne qui cowwespond au pwemiew s-séwecteuw.
 
 ```css
-/* Les cellules de tableaux qui appartiennent */
-/* à la colonne "selected" */
-col.selected||td {
-  background: gray;
+/* wes cewwuwes d-de tabweaux qui appawtiennent */
+/* à wa cowonne "sewected" */
+cow.sewected||td {
+  b-backgwound: gway;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-column-selector||cell-selector {
-  /* propriétés pour le style */
+c-cowumn-sewectow||ceww-sewectow {
+  /* pwopwiétés pouw we stywe */
 }
 ```
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<table border="1">
-  <colgroup>
-    <col span="2" />
-    <col class="selected" />
-  </colgroup>
+```htmw
+<tabwe bowdew="1">
+  <cowgwoup>
+    <cow span="2" />
+    <cow cwass="sewected" />
+  </cowgwoup>
   <tbody>
-    <tr>
-      <td>A</td>
-      <td>B</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td colspan="2">D</td>
-      <td>E</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td colspan="2">G</td>
-    </tr>
+    <tw>
+      <td>a</td>
+      <td>b</td>
+      <td>c</td>
+    </tw>
+    <tw>
+      <td cowspan="2">d</td>
+      <td>e</td>
+    </tw>
+    <tw>
+      <td>f</td>
+      <td c-cowspan="2">g</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-### CSS
+### css
 
 ```css
-col.selected||td {
-  background: gray;
-  color: white;
-  font-weight: bold;
+c-cow.sewected||td {
+  backgwound: g-gway;
+  c-cowow: white;
+  f-font-weight: bowd;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%")}}
+{{embedwivesampwe("exempwes", (˘ω˘) "100%")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("col")}}
-- {{HTMLElement("colgroup")}}
-- {{CSSxRef("grid")}}
+- {{htmwewement("cow")}}
+- {{htmwewement("cowgwoup")}}
+- {{cssxwef("gwid")}}

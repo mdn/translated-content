@@ -1,25 +1,25 @@
 ---
-title: Média (CSS)
-slug: Glossary/Media/CSS
+titwe: média (css)
+swug: gwossawy/media/css
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans le contexte de {{Glossary("CSS")}} (Cascading Style Sheets), le terme **_média_** fait référence à la destination vers laquelle le document doit être dessiné par le {{Glossary("rendering engine")}}. Il s'agit généralement d'un écran—mais il peut également s'agir d'une imprimante, d'un synthétiseur vocal, d'un afficheur Braille ou d'un autre type de périphérique.
+d-dans we c-contexte de {{gwossawy("css")}} (cascading s-stywe s-sheets), o.O we tewme **_média_** f-fait wéféwence à w-wa destination v-vews waquewwe w-we document doit êtwe dessiné paw we {{gwossawy("wendewing engine")}}. /(^•ω•^) iw s'agit généwawement d-d'un écwan—mais iw peut égawement s'agiw d-d'une impwimante, nyaa~~ d'un synthétiseuw v-vocaw, nyaa~~ d'un afficheuw bwaiwwe ou d'un autwe type de péwiphéwique. :3
 
-CSS offre plusieurs fonctionnalités qui vous permettent d'ajuster les styles de votre document—ou même d'offrir différents styles—en fonction du **type** de support (tel que l'écran ou impression, pour n'en nommer que deux) ou des **capacités** de support (telles que la largeur, la résolution ou d'autres valeurs) de l'appareil du spectateur.
+c-css offwe pwusieuws f-fonctionnawités q-qui vous pewmettent d'ajustew wes stywes de votwe document—ou même d'offwiw d-difféwents stywes—en fonction du **type** de suppowt (tew que w'écwan ou impwession, 😳😳😳 p-pouw ny'en nyommew que d-deux) ou des **capacités** d-de suppowt (tewwes que w-wa wawgeuw, (˘ω˘) wa w-wésowution ou d'autwes vaweuws) de w'appaweiw d-du spectateuw. ^^
 
-## Apprendre plus
+## appwendwe pwus
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Utilisation des requêtes multimédias](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [utiwisation des wequêtes muwtimédias](/fw/docs/web/css/css_media_quewies/using_media_quewies)
 
-### Référence technique
+### wéféwence technique
 
-- [Requêtes médias](/fr/docs/Web/CSS/CSS_media_queries)
-  - : Définissez un ensemble de caractéristiques ou de paramètres requis pour appliquer les styles CSS qui sont spécifiés entre les accolades de la requête multimédia; par exemple: appliquer uniquement certains styles CSS pour les appareils inférieurs à 768 pixels.
-- {{cssxref("@media")}} [at-rule](/fr/docs/Web/CSS/At-rule)
-  - : Appliquez conditionnellement une partie d'une [feuille de style](/fr/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html), en fonction du résultat d'une requête multimédia.
-- {{domxref("Window.matchMedia()")}}
-  - : Testez le périphérique de visualisation par rapport à une requête multimédia.
+- [wequêtes médias](/fw/docs/web/css/css_media_quewies)
+  - : d-définissez un ensembwe d-de cawactéwistiques o-ou de pawamètwes w-wequis pouw appwiquew wes stywes css qui sont spécifiés e-entwe wes accowades d-de wa wequête muwtimédia; p-paw exempwe: a-appwiquew uniquement cewtains stywes c-css pouw wes appaweiws inféwieuws à 768 p-pixews. :3
+- {{cssxwef("@media")}} [at-wuwe](/fw/docs/web/css/at-wuwe)
+  - : appwiquez conditionnewwement u-une pawtie d'une [feuiwwe d-de stywe](/fw/docs/weawn/css/fiwst_steps/how_css_wowks#how_to_appwy_youw_css_to_youw_htmw), -.- en f-fonction du wésuwtat d-d'une wequête muwtimédia. 😳
+- {{domxwef("window.matchmedia()")}}
+  - : testez we péwiphéwique de visuawisation paw wappowt à une wequête m-muwtimédia. mya

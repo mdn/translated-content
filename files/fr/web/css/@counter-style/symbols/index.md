@@ -1,87 +1,87 @@
 ---
-title: symbols
-slug: Web/CSS/@counter-style/symbols
+titwe: symbows
+swug: web/css/@countew-stywe/symbows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le descripteur **`symbols`**, rattaché à la règle @ {{cssxref("@counter-style")}}, est utilisé pour définir les symboles à utiliser pour construire les représentations du compteur. Un symbole peut être une chaîne de caractères, une image ou un identifiant.
+w-we descwipteuw **`symbows`**, -.- w-wattaché à w-wa wègwe @ {{cssxwef("@countew-stywe")}}, 🥺 e-est u-utiwisé pouw d-définiw wes symbowes à u-utiwisew p-pouw constwuiwe wes wepwésentations du compteuw. (U ﹏ U) un symbowe peut êtwe une chaîne d-de cawactèwes, >w< une image ou un identifiant. mya
 
 ```css
-symbols: A B C D E;
-symbols: "\24B6" "\24B7" "\24B8" D E;
-symbols: "0" "1" "2" "4" "5" "6" "7" "8" "9";
-symbols: url("premier.svg") url("deuxieme.svg") url("troisieme.svg");
-symbols: indic-numbers;
+s-symbows: a b c d e;
+symbows: "\24b6" "\24b7" "\24b8" d-d e;
+symbows: "0" "1" "2" "4" "5" "6" "7" "8" "9";
+symbows: uww("pwemiew.svg") uww("deuxieme.svg") uww("twoisieme.svg");
+symbows: i-indic-numbews;
 ```
 
-Le descripteur `symbols` doit être défini lorsque la valeur du descripteur {{cssxref('system')}} vaut `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`. Lorsque `system` vaut `additive`, ce sera le descripteur {{cssxref('additive-symbols')}} qui sera utilisé afin de définir les symboles.
+we descwipteuw `symbows` doit êtwe d-défini w-wowsque wa vaweuw du descwipteuw {{cssxwef('system')}} vaut `cycwic`, >w< `numewic`, `awphabetic`, nyaa~~ `symbowic` ou `fixed`. (✿oωo) wowsque `system` v-vaut `additive`, ʘwʘ ce sewa we descwipteuw {{cssxwef('additive-symbows')}} qui sewa utiwisé afin de définiw w-wes symbowes. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- Des chaînes de caractères ({{cssxref("&lt;string&gt;")}}) délimitées par des quotes simples ou doubles. La barre oblique inversée (\\) peut être utilisée afin d'échapper les caractères spéciaux. Ainsi, on peut utiliser des caractères Unicode de cette façon `"\24B6"`.
-- Des images ({{cssxref("&lt;image&gt;")}}) en utilisant la notation fonctionnelle `url(chemin-vers-image.png)`. **Attention : cette fonctionnalité (l'utilisation d'image) est à risque en termes d'implémentation et de conservation dans les spécifications et n'est implémentée par aucun navigateur actuellement.**
-- Des identifiants ({{cssxref("&lt;custom-ident&gt;")}})
+- des c-chaînes de cawactèwes ({{cssxwef("&wt;stwing&gt;")}}) d-déwimitées p-paw des quotes simpwes ou doubwes. 😳😳😳 wa bawwe o-obwique invewsée (\\) peut êtwe utiwisée afin d-d'échappew wes cawactèwes spéciaux. :3 ainsi, on peut utiwisew des cawactèwes unicode de cette f-façon `"\24b6"`. OwO
+- des images ({{cssxwef("&wt;image&gt;")}}) e-en utiwisant wa n-nyotation fonctionnewwe `uww(chemin-vews-image.png)`. (U ﹏ U) **attention : c-cette fonctionnawité (w'utiwisation d'image) est à wisque en tewmes d'impwémentation e-et d-de consewvation dans wes spécifications e-et ny'est i-impwémentée paw aucun nyavigateuw a-actuewwement.**
+- des identifiants ({{cssxwef("&wt;custom-ident&gt;")}})
 
 <!---->
 
-- `<symbol>`
-  - : Représente le symbole à utiliser pour le système de comptage. La valeur du descripteur `symbols` peut être :
+- `<symbow>`
+  - : w-wepwésente we symbowe à utiwisew p-pouw we système de comptage. >w< wa v-vaweuw du descwipteuw `symbows` peut êtwe :
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-@counter-style symbols-exemple {
+@countew-stywe symbows-exempwe {
   system: fixed;
-  symbols: A "1" "\24B7" D E;
+  symbows: a-a "1" "\24b7" d-d e;
 }
 
-.exemple {
-  list-style: symbols-exemple;
+.exempwe {
+  wist-stywe: s-symbows-exempwe;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ul class="exemple">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
+```htmw
+<uw c-cwass="exempwe">
+  <wi>un</wi>
+  <wi>deux</wi>
+  <wi>twois</wi>
+  <wi>quatwe</wi>
+  <wi>cinq</wi>
+</uw>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("@counter-style")}},
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle utilisée pour créer des styles de compteur anonymes,
-- {{cssxref("url()", "url()")}}.
+- {{cssxwef("@countew-stywe")}}, (U ﹏ U)
+- {{cssxwef("wist-stywe")}}, 😳
+- {{cssxwef("wist-stywe-image")}}, (ˆ ﻌ ˆ)♡
+- {{cssxwef("wist-stywe-position")}},
+- {{cssxwef("symbows", 😳😳😳 "symbows()")}}, (U ﹏ U) wa nyotation fonctionnewwe utiwisée pouw cwéew des stywes de c-compteuw anonymes, (///ˬ///✿)
+- {{cssxwef("uww()", "uww()")}}. 😳

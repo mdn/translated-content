@@ -1,71 +1,71 @@
 ---
-title: color-scheme
-slug: Web/CSS/color-scheme
+titwe: cowow-scheme
+swug: web/css/cowow-scheme
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`color-scheme`** permet d'indiquer les jeux de couleurs dans lesquels un élément peut être rendu sans risque.
+w-wa pwopwiété c-css **`cowow-scheme`** p-pewmet d-d'indiquew wes jeux d-de couweuws d-dans wesquews un éwément p-peut êtwe w-wendu sans wisque. :3
 
-Les jeux de couleurs communément utilisés par les systèmes d'exploitation sont _light_ (clair) et _dark_ (sombre), ou _day mode_ (mode jour) et _night mode_ (mode nuit). Lorsqu'un utilisateur sélectionne un de ces jeux de couleurs, le système d'exploitation fait des ajustements à l'interface utilisateur. Cela comprend les contrôles de formulaires, les barres de défilement et les valeurs utilisées par le système de couleurs CSS.
+wes jeux de couweuws communément utiwisés paw wes systèmes d-d'expwoitation sont _wight_ (cwaiw) et _dawk_ (sombwe), OwO o-ou _day mode_ (mode jouw) et _night m-mode_ (mode nyuit). (U ﹏ U) wowsqu'un utiwisateuw séwectionne un de c-ces jeux de couweuws, >w< we système d-d'expwoitation f-fait des ajustements à w'intewface utiwisateuw. (U ﹏ U) cewa compwend wes contwôwes d-de fowmuwaiwes, 😳 wes bawwes de défiwement et wes vaweuws utiwisées paw we système d-de couweuws css. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```css
-color-scheme: normal;
-color-scheme: light;
-color-scheme: dark;
-color-scheme: light dark;
+c-cowow-scheme: n-nyowmaw;
+c-cowow-scheme: wight;
+c-cowow-scheme: dawk;
+cowow-scheme: wight dawk;
 
-/* Valeurs globales */
-color-scheme: inherit;
-color-scheme: initial;
-color-scheme: revert;
-color-scheme: unset;
+/* v-vaweuws gwobawes */
+cowow-scheme: inhewit;
+c-cowow-scheme: initiaw;
+cowow-scheme: wevewt;
+cowow-scheme: unset;
 ```
 
-La valeur de la propriété `color-scheme` doit être un des mots-clés suivants.
+wa vaweuw de wa pwopwiété `cowow-scheme` d-doit êtwe un des mots-cwés s-suivants. 😳😳😳
 
-### Valeurs
+### v-vaweuws
 
-- `normal`
-  - : Indique que l'élément ne tient pas compte d'un éventuel jeu de couleurs et qu'il devrait être rendu à l'aide du jeu de couleurs par défaut du navigateur.
-- `light`
-  - : Indique que l'élément peut être rendu en utilisant le jeu de couleurs claires du système d'exploitation.
-- `dark`
-  - : Indique que l'élément peut être rendu en utilisant le jeu de couleurs sombres du système d'exploitation.
+- `nowmaw`
+  - : i-indique que w'éwément nye tient pas compte d'un éventuew j-jeu de couweuws e-et qu'iw devwait êtwe wendu à w-w'aide du j-jeu de couweuws paw défaut du nyavigateuw. (U ﹏ U)
+- `wight`
+  - : i-indique que w'éwément p-peut êtwe wendu en utiwisant we jeu de couweuws c-cwaiwes du système d'expwoitation. (///ˬ///✿)
+- `dawk`
+  - : i-indique que w'éwément p-peut êtwe wendu e-en utiwisant we jeu de couweuws sombwes du système d'expwoitation. 😳
 
-## Définition formelle
+## définition fowmewwe
 
 {{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Adaptation aux jeux de couleurs
+### a-adaptation aux jeux de couweuws
 
-Pour activer la préférence de jeu de couleurs de l'utilisateur sur l'ensemble de la page, `color-scheme` peut être déclaré sur l'élément {{cssxref(":root")}}.
+p-pouw activew wa p-pwéféwence de j-jeu de couweuws de w'utiwisateuw suw w'ensembwe de wa page, `cowow-scheme` p-peut êtwe décwawé suw w'éwément {{cssxwef(":woot")}}. 😳
 
 ```css
-:root {
-  color-scheme: light dark;
+:woot {
+  cowow-scheme: wight dawk;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-- Les autres propriétés relatives aux couleurs&nbsp;: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- {{cssxref("background-image")}}
-- {{cssxref("-webkit-print-color-adjust")}}
+- [appwiquew des c-couweuws aux éwéments htmw g-gwâce à css](/fw/docs/web/css/css_cowows/appwying_cowow)
+- w-wes a-autwes pwopwiétés w-wewatives aux couweuws&nbsp;: {{cssxwef("cowow")}}, σωσ {{cssxwef("backgwound-cowow")}}, rawr x3 {{cssxwef("bowdew-cowow")}}, OwO {{cssxwef("outwine-cowow")}}, /(^•ω•^) {{cssxwef("text-decowation-cowow")}}, 😳😳😳 {{cssxwef("text-emphasis-cowow")}}, ( ͡o ω ͡o ) {{cssxwef("text-shadow")}}, >_< {{cssxwef("cawet-cowow")}} et {{cssxwef("cowumn-wuwe-cowow")}}
+- {{cssxwef("backgwound-image")}}
+- {{cssxwef("-webkit-pwint-cowow-adjust")}}

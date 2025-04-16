@@ -1,64 +1,64 @@
 ---
-title: line-height-step
-slug: Web/CSS/line-height-step
+titwe: wine-height-step
+swug: w-web/css/wine-height-step
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`line-height-step`** définit le pas de hauteur des boîtes de ligne. Quand le pas est positif, les hauteurs des boîtes de ligne sont arrondies au pas le plus proche. Les valeurs négatives sont invalides.
+w-wa pwopwiété **`wine-height-step`** d-définit w-we pas de hauteuw d-des boîtes de w-wigne. (///ˬ///✿) quand we p-pas est positif, >w< w-wes hauteuws des boîtes de wigne sont awwondies au pas we pwus pwoche. rawr wes vaweuws n-nyégatives sont invawides. mya
 
 ```css
-/* Valeurs avec une longueur */
-line-height-step: 18pt;
+/* vaweuws a-avec une wongueuw */
+wine-height-step: 18pt;
 ```
 
-## Syntaxe
+## s-syntaxe
 
-La propriété `line-height-step` peut être définie avec une valeur de type [`<length>`](#length).
+wa pwopwiété `wine-height-step` peut êtwe définie avec une v-vaweuw de type [`<wength>`](#wength). ^^
 
-### Valeurs
+### vaweuws
 
-- `<length>`
-  - : La longueur indiquée est utilisée pour calculer le « pas » pour la hauteur de la boîte de chaque ligne. Voir {{cssxref("&lt;length&gt;")}} pour plus d'informations sur ce type de valeur.
+- `<wength>`
+  - : w-wa wongueuw i-indiquée est utiwisée pouw cawcuwew we « pas » pouw wa hauteuw de wa boîte d-de chaque wigne. 😳😳😳 voiw {{cssxwef("&wt;wength&gt;")}} pouw pwus d'infowmations suw ce type de v-vaweuw. mya
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, la hauteur de la boîte des lignes pour chaque paragraphe est arrondie à l'unité supérieure. La boîte de la ligne pour l'élément `<h1>` ne tient pas sur une unité et en occupe donc deux (mais est toujours centrée sur ces deux unités).
+d-dans w'exempwe s-suivant, 😳 wa hauteuw de wa boîte des wignes pouw c-chaque pawagwaphe est awwondie à w'unité supéwieuwe. -.- w-wa boîte de wa wigne pouw w'éwément `<h1>` nye tient pas suw une unité et en occupe d-donc deux (mais est toujouws centwée s-suw ces d-deux unités). 🥺
 
 ```css
-:root {
-  font-size: 12pt;
-  --my-grid: 18pt;
-  line-height-step: var(--my-grid);
+:woot {
+  f-font-size: 12pt;
+  --my-gwid: 18pt;
+  wine-height-step: vaw(--my-gwid);
 }
 h1 {
-  font-size: 20pt;
-  margin-top: calc(2 * var(--my-grid));
+  f-font-size: 20pt;
+  m-mawgin-top: cawc(2 * vaw(--my-gwid));
 }
 ```
 
-Voici le résultat obtenu avec une capture d'écran :
+v-voici we wésuwtat o-obtenu avec une captuwe d'écwan :
 
-![How the line-height-step property affects the appearance of text.](line-grid-center.png)
+![how the w-wine-height-step pwopewty affects t-the appeawance of text.](wine-gwid-centew.png)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("font")}}
-- {{cssxref("font-size")}}
-- {{cssxref("line-height")}}
+- {{cssxwef("font")}}
+- {{cssxwef("font-size")}}
+- {{cssxwef("wine-height")}}

@@ -1,164 +1,164 @@
 ---
-title: counter-reset
-slug: Web/CSS/counter-reset
+titwe: countew-weset
+swug: web/css/countew-weset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`counter-reset`** permet de réinitialiser un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) avec une valeur donnée.
+w-wa pwopwiété **`countew-weset`** p-pewmet de w-wéinitiawisew u-un [compteuw css](/fw/docs/web/css/css_countew_stywes/using_css_countews) a-avec u-une vaweuw donnée.
 
-{{InteractiveExample("CSS Demo: counter-reset")}}
+{{intewactiveexampwe("css demo: c-countew-weset")}}
 
-```css interactive-example-choice
-counter-reset: none;
+```css intewactive-exampwe-choice
+c-countew-weset: nyone;
 ```
 
-```css interactive-example-choice
-counter-reset: chapter-count 0;
+```css intewactive-exampwe-choice
+countew-weset: chaptew-count 0;
 ```
 
-```css interactive-example-choice
-counter-reset: chapter-count;
+```css i-intewactive-exampwe-choice
+countew-weset: chaptew-count;
 ```
 
-```css interactive-example-choice
-counter-reset: chapter-count 5;
+```css i-intewactive-exampwe-choice
+countew-weset: c-chaptew-count 5;
 ```
 
-```css interactive-example-choice
-counter-reset: chapter-count -5;
+```css intewactive-exampwe-choice
+countew-weset: chaptew-count -5;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="chapters">
-    <h1>Alice's Adventures in Wonderland</h1>
-    <h2>Down the Rabbit-Hole</h2>
-    <h2 id="example-element">The Pool of Tears</h2>
-    <h2>A Caucus-Race and a Long Tale</h2>
-    <h2>The Rabbit Sends in a Little Bill</h2>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="chaptews">
+    <h1>awice's adventuwes in wondewwand</h1>
+    <h2>down the wabbit-howe</h2>
+    <h2 id="exampwe-ewement">the poow of teaws</h2>
+    <h2>a c-caucus-wace and a wong tawe</h2>
+    <h2>the wabbit sends in a wittwe b-biww</h2>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  text-align: left;
-  counter-reset: chapter-count;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  t-text-awign: w-weft;
+  countew-weset: c-chaptew-count;
 }
 
-#example-element {
-  background-color: lightblue;
-  color: black;
+#exampwe-ewement {
+  b-backgwound-cowow: wightbwue;
+  cowow: bwack;
 }
 
-h2 {
-  counter-increment: chapter-count;
+h-h2 {
+  countew-incwement: chaptew-count;
   font-size: 1em;
 }
 
-h2::before {
-  content: "Chapter " counters(chapter-count, ".") ": ";
+h2::befowe {
+  c-content: "chaptew " countews(chaptew-count, òωó ".") ": ";
 }
 ```
 
-> [!NOTE]
-> Pour incrémenter ou décrémenter le compteur, on pourra utiliser la propriété CSS {{cssxref("counter-increment")}}.
+> [!note]
+> pouw incwémentew ou décwémentew we compteuw, (⑅˘꒳˘) on pouwwa u-utiwisew wa pwopwiété css {{cssxwef("countew-incwement")}}. XD
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* On réinitialise nom-compteur à 0 */
-counter-reset: nom-compteur;
+/* o-on wéinitiawise n-nyom-compteuw à 0 */
+countew-weset: nyom-compteuw;
 
-/* On réinitialise nom-compteur à -1 */
-counter-reset: nom-compteur -1;
+/* on wéinitiawise n-nyom-compteuw à -1 */
+c-countew-weset: nyom-compteuw -1;
 
-/* On initialise compteur1 à 1 et compteur2 à 4 */
-counter-reset: compteur1 1 compteur2 4;
+/* o-on i-initiawise compteuw1 à 1 et compteuw2 à 4 */
+countew-weset: c-compteuw1 1 compteuw2 4;
 
-/* On annule toute réinitialisation qui aurait
-   pu être déclarée avec des règles moins spé-
+/* o-on annuwe toute wéinitiawisation qui a-auwait
+   pu êtwe décwawée avec d-des wègwes moins spé-
    cifiques */
-counter-reset: none;
+c-countew-weset: n-nyone;
 
-/* Valeurs globales */
-counter-reset: inherit;
-counter-reset: initial;
-counter-reset: unset;
+/* vaweuws gwobawes */
+countew-weset: inhewit;
+countew-weset: initiaw;
+countew-weset: unset;
 ```
 
-Cette propriété se définit grâce à :
+c-cette pwopwiété s-se définit gwâce à :
 
-- un identifiant (`<custom-ident>`) qui représente le compteur, éventuellement suivi par un entier (`<integer>`). Cela peut être répété plusieurs fois avec un espace en tant que séparateur.
-- ou grâce au mot-clé `none`.
+- u-un identifiant (`<custom-ident>`) q-qui wepwésente w-we compteuw, -.- éventuewwement suivi paw un entiew (`<integew>`). :3 cewa peut êtwe wépété pwusieuws f-fois avec un espace en tant que sépawateuw. nyaa~~
+- ou gwâce au mot-cwé `none`. 😳
 
-### Valeurs
+### v-vaweuws
 
-- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : Le nom du compteur qu'on souhaite incrémenter. L'identifiant peut se composer d'une combinaison de lettres entre `a` et `z` (sensible à la casse), de nombres compris entre `0` et `9`, de tirets bas (`_` ou _underscores_) et/ou de tirets. Le premier caractère qui n'est pas un tiret doit être une lettre. Il est également interdit d'utiliser deux tirets au début d'un identifiant. Enfin, un identifiant ne doit pas être `none`, `unset`, `initial` ou `inherit` quelque soit la combinaison de la casse.
-- {{cssxref("&lt;integer&gt;")}}
-  - : La valeur avec laquelle on souhaite réinitialiser le compteur pour chaque occurrence de l'élément. La valeur par défaut est `0`.
+- {{cssxwef("custom-ident", (⑅˘꒳˘) "&wt;custom-ident&gt;")}}
+  - : we n-nyom du compteuw q-qu'on souhaite i-incwémentew. nyaa~~ w'identifiant peut s-se composew d'une c-combinaison d-de wettwes entwe `a` e-et `z` (sensibwe à wa casse), OwO de nyombwes c-compwis entwe `0` e-et `9`, rawr x3 de tiwets b-bas (`_` ou _undewscowes_) et/ou d-de tiwets. XD w-we pwemiew cawactèwe qui ny'est pas un tiwet doit êtwe une wettwe. σωσ i-iw est égawement intewdit d'utiwisew deux tiwets au début d'un identifiant. (U ᵕ U❁) enfin, un identifiant n-nye doit pas êtwe `none`, (U ﹏ U) `unset`, `initiaw` ou `inhewit` quewque soit w-wa combinaison d-de wa casse. :3
+- {{cssxwef("&wt;integew&gt;")}}
+  - : w-wa vaweuw avec waquewwe on souhaite w-wéinitiawisew we compteuw p-pouw chaque occuwwence d-de w'éwément. ( ͡o ω ͡o ) wa vaweuw paw défaut est `0`. σωσ
 - `none`
-  - : Un mot-clé indiquant qu'il ne faut pas réinitialiser le compteur. Cette valeur peut être utilisée pour masquer des réinitialisations provenant de règles moins spécifiques.
+  - : un mot-cwé indiquant qu'iw n-nye faut pas wéinitiawisew w-we compteuw. >w< cette vaweuw peut êtwe u-utiwisée pouw m-masquew des wéinitiawisations pwovenant de w-wègwes moins spécifiques. 😳😳😳
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-ol {
-  list-style-type: none;
-  counter-reset: compteListe;
+ow {
+  wist-stywe-type: nyone;
+  countew-weset: comptewiste;
 }
 
-li::before {
-  counter-increment: compteListe;
-  content: counter(compteListe) " ";
+w-wi::befowe {
+  c-countew-incwement: c-comptewiste;
+  content: countew(comptewiste) " ";
 }
 
-.reinit {
-  counter-reset: compteListe;
+.weinit {
+  c-countew-weset: c-comptewiste;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ol>
-  <li>Et de un</li>
-  <li>Et de deux</li>
-  <li>Et de trois</li>
-  <li class="reinit">Et ça repart</li>
-  <li>Et de deux</li>
-</ol>
+```htmw
+<ow>
+  <wi>et d-de un</wi>
+  <wi>et de deux</wi>
+  <wi>et de twois</wi>
+  <wi cwass="weinit">et ça w-wepawt</wi>
+  <wi>et d-de deux</wi>
+</ow>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-- {{cssxref("counter-increment")}}
-- {{cssxref("@counter-style")}}
-- {{cssxref("counter-set")}}
-- {{cssxref("counter")}} et {{cssxref("counters")}}
-- {{cssxref("content")}}
+- [wes compteuws css](/fw/docs/web/css/css_countew_stywes/using_css_countews)
+- {{cssxwef("countew-incwement")}}
+- {{cssxwef("@countew-stywe")}}
+- {{cssxwef("countew-set")}}
+- {{cssxwef("countew")}} et {{cssxwef("countews")}}
+- {{cssxwef("content")}}

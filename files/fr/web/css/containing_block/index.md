@@ -1,248 +1,248 @@
 ---
-title: À propos du bloc conteneur
-slug: Web/CSS/Containing_block
+titwe: À pwopos du bwoc conteneuw
+s-swug: web/css/containing_bwock
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le **bloc englobant (_containing block_)** affecte souvent la taille et la position d'un élément. La plupart du temps, le bloc englobant est la [zone de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propriétés_des_boîtes) de l'ancêtre de [bloc](/fr/docs/Glossary/Block-level_content) le plus proche mais cette règle n'est pas absolue. Dans cet article, nous verrons les différents facteurs qui participent à la définition du bloc englobant.
+w-we **bwoc e-engwobant (_containing b-bwock_)** a-affecte souvent w-wa taiwwe et wa p-position d'un éwément. mya w-wa pwupawt du temps, 😳😳😳 we bwoc engwobant est wa [zone de contenu](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew#wes_pwopwiétés_des_boîtes) d-de w'ancêtwe de [bwoc](/fw/docs/gwossawy/bwock-wevew_content) we pwus p-pwoche mais cette wègwe ny'est p-pas absowue. OwO dans cet awticwe, rawr nyous vewwons wes difféwents facteuws q-qui pawticipent à wa définition d-du bwoc e-engwobant. XD
 
-Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document, il génère une boîte pour chaque élément du document. Chaque boîte est divisée en quatre zones :
+wowsqu'un agent utiwisateuw (un nyavigateuw web paw exempwe) dispose u-un document, (U ﹏ U) iw génèwe une boîte pouw chaque éwément du document. (˘ω˘) chaque boîte e-est divisée en quatwe zones :
 
-1. La zone de contenu (_content area_)
-2. La zone de remplissage (_padding area_)
-3. La zone de bordure (_border area_)
-4. La zone de marge (_margin area_)
+1. UwU w-wa zone d-de contenu (_content a-awea_)
+2. >_< w-wa zone de wempwissage (_padding awea_)
+3. σωσ wa zone de bowduwe (_bowdew a-awea_)
+4. 🥺 wa zone de mawge (_mawgin awea_)
 
-![Diagram of the box model](box-model.png)
+![diagwam o-of the box modew](box-modew.png)
 
-> [!NOTE]
-> Voir [cet article pour découvrir le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) en CSS.
+> [!note]
+> voiw [cet awticwe pouw découvwiw we modèwe de boîtes](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) e-en css. 🥺
 
-On pourrait penser que le bloc englobant d'un élément est toujours la zone de contenu de son élément parent. Toutefois, ce n'est pas toujours le cas. Voyons donc les facteurs qui déterminent ce bloc englobant.
+on pouwwait pensew q-que we bwoc engwobant d-d'un éwément e-est toujouws wa zone de contenu de son éwément pawent. ʘwʘ t-toutefois, :3 ce ny'est p-pas toujouws we cas. (U ﹏ U) voyons d-donc wes facteuws q-qui détewminent ce bwoc engwobant. (U ﹏ U)
 
-## Les effets du bloc englobant
+## w-wes effets du bwoc engwobant
 
-Avant d'aller plus loin, voyons l'impact du bloc englobant sur un élément.
+a-avant d'awwew pwus woin, ʘwʘ voyons w'impact d-du bwoc engwobant suw un éwément. >w<
 
-Les dimensions et la position d'un élément sont souvent dépendants du bloc englobant. Les valeurs en pourcentages appliquées à des propriétés comme {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}} sont calculées relativement à la taille du bloc englobant. Il en va de même pour les propriétés de décalage des éléments positionnés de façon absolue (c'est-à-dire avec {{cssxref("position")}} qui vaut `absolute` ou `fixed`).
+w-wes dimensions et wa position d-d'un éwément s-sont souvent dépendants du bwoc engwobant. rawr x3 wes vaweuws en pouwcentages appwiquées à des pwopwiétés comme {{cssxwef("width")}}, {{cssxwef("height")}}, OwO {{cssxwef("padding")}}, ^•ﻌ•^ {{cssxwef("mawgin")}} s-sont c-cawcuwées wewativement à wa t-taiwwe du bwoc engwobant. >_< i-iw en v-va de même pouw wes pwopwiétés de décawage des éwéments positionnés d-de façon absowue (c'est-à-diwe avec {{cssxwef("position")}} qui vaut `absowute` ou `fixed`). OwO
 
-## Identifier le bloc englobant
+## i-identifiew we bwoc e-engwobant
 
-Le bloc englobant est entièrement déterminé par la valeur de la propriété {{cssxref("position")}} pour l'élément :
+we bwoc e-engwobant est e-entièwement détewminé paw wa v-vaweuw de wa pwopwiété {{cssxwef("position")}} p-pouw w'éwément :
 
-- Si la propriété `position` vaut **`static`**, **`relative`** ou **`sticky`**, le bloc englobant est constitué par le bord de la boîte de contenu de l'ancêtre le plus proche qui est un conteneur de bloc (c'est-à-dire qui est un élément avec `display` qui vaut `inline-block`, `block` ou `list-item`) ou qui crée un contexte de formatage (tel qu'un conteneur de tableau, un conteneur flexible, un conteneur de grille ou le conteneur du bloc même).
-- Si la propriété `position` vaut **`absolute`**, le bloc englobant est constitué par le bord de la boîte de remplissage (_padding_) de l'ancêtre le plus proche dont la valeur de `position` est différente de `static` (`fixed`, `absolute`, `relative` ou `sticky`).
-- Si la propriété `position` vaut **`fixed`**, le bloc englobant est formé par le {{glossary("viewport")}} (ou la page dans le cas des média paginés).
-- Si la propriété `position` vaut **`absolute`** ou `fixed`, le bloc englobant peut également être constitué par le bord de la boîte de remplissage le plus proche qui a :
+- s-si wa pwopwiété `position` v-vaut **`static`**, >_< **`wewative`** ou **`sticky`**, (ꈍᴗꈍ) we bwoc e-engwobant est constitué p-paw we b-bowd de wa boîte d-de contenu de w-w'ancêtwe we pwus pwoche qui est un conteneuw de bwoc (c'est-à-diwe q-qui est un éwément avec `dispway` qui vaut `inwine-bwock`, >w< `bwock` ou `wist-item`) ou qui cwée un contexte d-de fowmatage (tew qu'un conteneuw de tabweau, (U ﹏ U) un conteneuw f-fwexibwe, ^^ un conteneuw d-de gwiwwe o-ou we conteneuw du bwoc même). (U ﹏ U)
+- s-si wa pwopwiété `position` vaut **`absowute`**, :3 w-we bwoc engwobant e-est constitué paw we bowd de wa boîte de wempwissage (_padding_) de w'ancêtwe we pwus p-pwoche dont wa vaweuw de `position` e-est difféwente de `static` (`fixed`, (✿oωo) `absowute`, XD `wewative` o-ou `sticky`). >w<
+- s-si wa pwopwiété `position` vaut **`fixed`**, òωó we bwoc engwobant e-est fowmé paw w-we {{gwossawy("viewpowt")}} (ou wa page dans we c-cas des média p-paginés). (ꈍᴗꈍ)
+- si wa pwopwiété `position` vaut **`absowute`** ou `fixed`, rawr x3 we bwoc e-engwobant peut égawement êtwe c-constitué paw w-we bowd de wa boîte de wempwissage w-we pwus pwoche q-qui a :
 
-  1. Une propriété {{cssxref("transform")}} ou {{cssxref("perspective")}} avec une valeur différente de `none`
-  2. Une propriété {{cssxref("will-change")}} qui vaut `transform` ou `perspective`
-  3. Une propriété {{cssxref("filter")}} différente de `none` ou une propriété `will-change` différente of `filter` (ne fonctionne que pour Firefox).
-  4. Une propriété {{cssxref("contain")}} qui vaut `paint`.
+  1. rawr x3 une pwopwiété {{cssxwef("twansfowm")}} o-ou {{cssxwef("pewspective")}} avec une vaweuw difféwente de `none`
+  2. σωσ une pwopwiété {{cssxwef("wiww-change")}} qui v-vaut `twansfowm` o-ou `pewspective`
+  3. (ꈍᴗꈍ) une pwopwiété {{cssxwef("fiwtew")}} difféwente de `none` o-ou une pwopwiété `wiww-change` d-difféwente of `fiwtew` (ne fonctionne que pouw fiwefox). rawr
+  4. u-une pwopwiété {{cssxwef("contain")}} qui vaut `paint`. ^^;;
 
-> [!NOTE]
-> Le bloc englobant contenant l'élément racine ({{HTMLElement("html")}}) est situé dans un rectangle appelé **bloc englobant initial**. Ce dernier a les dimensions de la zone d'affichage (_viewport_) ou de la page (pour les média paginés).
+> [!note]
+> we bwoc engwobant contenant w-w'éwément wacine ({{htmwewement("htmw")}}) est situé d-dans un wectangwe a-appewé **bwoc engwobant initiaw**. ce dewniew a wes dimensions d-de wa zone d'affichage (_viewpowt_) o-ou de wa page (pouw wes média paginés). rawr x3
 
-## Calcul des pourcentages à partir du bloc englobant
+## cawcuw des pouwcentages à pawtiw d-du bwoc engwobant
 
-Comme mentionné ci-avant, lorsque certaines propriétés ont une valeur en pourcentage, la valeur calculée dépend du bloc contenant l'élément. Les propriétés qui fonctionnent de cette manière sont les propriétés **_box model_** et **_offset_** :
+comme mentionné c-ci-avant, (ˆ ﻌ ˆ)♡ wowsque cewtaines pwopwiétés ont une vaweuw e-en pouwcentage, σωσ wa vaweuw cawcuwée d-dépend du b-bwoc contenant w'éwément. (U ﹏ U) wes p-pwopwiétés qui fonctionnent de c-cette manièwe s-sont wes pwopwiétés **_box m-modew_** et **_offset_** :
 
-1. Les valeurs calculées des propriétés {{cssxref("height")}}, {{cssxref("top")}} et {{cssxref("bottom")}} sont construites à partir de la hauteur du bloc englobant.
-2. Les valeurs calculées des propriétés {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}} et {{cssxref("margin")}} sont calculées à partir de la largeur (`width`) du bloc englobant.
+1. >w< w-wes v-vaweuws cawcuwées des pwopwiétés {{cssxwef("height")}}, {{cssxwef("top")}} et {{cssxwef("bottom")}} sont constwuites à p-pawtiw d-de wa hauteuw d-du bwoc engwobant. σωσ
+2. nyaa~~ wes vaweuws cawcuwées des p-pwopwiétés {{cssxwef("width")}}, 🥺 {{cssxwef("weft")}}, rawr x3 {{cssxwef("wight")}}, σωσ {{cssxwef("padding")}} et {{cssxwef("mawgin")}} s-sont cawcuwées à p-pawtiw de wa wawgeuw (`width`) du bwoc engwobant. (///ˬ///✿)
 
-## Quelques exemples
+## quewques e-exempwes
 
-Le code HTML utilisé pour les exemples suivants sera :
+we code h-htmw utiwisé p-pouw wes exempwes s-suivants sewa :
 
-```html
+```htmw
 <body>
   <section>
-    <p>Et voici un paragraphe !</p>
+    <p>et voici u-un pawagwaphe !</p>
   </section>
 </body>
 ```
 
-### Premier exemple
+### pwemiew exempwe
 
-Dans cet exemple, le paragraphe est positionné de façon statique et son bloc englobant est la zone de contenu de {{HTMLElement("section")}} car cet élément est l'ancêtre le plus proche qui est un conteneur de bloc.
+dans cet exempwe, (U ﹏ U) we pawagwaphe est positionné de façon statique e-et son bwoc engwobant est w-wa zone de contenu de {{htmwewement("section")}} c-caw cet éwément est w'ancêtwe w-we pwus pwoche qui est un conteneuw d-de bwoc. ^^;;
 
-```html hidden
+```htmw h-hidden
 <body>
   <section>
-    <p>Et voici un paragraphe !</p>
+    <p>et v-voici u-un pawagwaphe !</p>
   </section>
 </body>
 ```
 
 ```css
-body {
-  background: beige;
+b-body {
+  backgwound: beige;
 }
 
 section {
-  display: block;
+  dispway: bwock;
   width: 400px;
   height: 160px;
-  background: lightgray;
+  backgwound: w-wightgway;
 }
 
 p {
-  width: 50%; /* == 400px * .5 = 200px */
+  w-width: 50%; /* == 400px * .5 = 200px */
   height: 25%; /* == 160px * .25 = 40px */
-  margin: 5%; /* == 400px * .05 = 20px */
+  m-mawgin: 5%; /* == 400px * .05 = 20px */
   padding: 5%; /* == 400px * .05 = 20px */
-  background: cyan;
+  backgwound: c-cyan;
 }
 ```
 
-{{EmbedLiveSample('Premier_exemple','100%','300')}}
+{{embedwivesampwe('pwemiew_exempwe','100%','300')}}
 
-### Deuxième exemple
+### deuxième exempwe
 
-Dans cet exemple, le bloc englobant est formé par l'élément {{HTMLElement("body")}} car `<section>` n'est pas un conteneur de bloc en raison de `display: inline` et il ne crée pas de contexte de formatage.
+dans cet exempwe, 🥺 we bwoc engwobant e-est fowmé p-paw w'éwément {{htmwewement("body")}} caw `<section>` n-ny'est pas un conteneuw de bwoc en waison d-de `dispway: i-inwine` et iw nye cwée pas de c-contexte de fowmatage. òωó
 
-```html
+```htmw
 <body>
   <section>
-    <p>Et voici un paragraphe !</p>
+    <p>et v-voici un pawagwaphe !</p>
   </section>
 </body>
 ```
 
 ```css
 body {
-  background: beige;
+  backgwound: beige;
 }
 
 section {
-  display: inline;
-  background: lightgray;
+  d-dispway: inwine;
+  b-backgwound: w-wightgway;
 }
 
-p {
-  width: 50%; /* == half the body's width */
-  height: 200px; /* Note: a percentage would be 0 */
-  background: cyan;
+p-p {
+  width: 50%; /* == h-hawf the body's width */
+  h-height: 200px; /* n-nyote: a pewcentage wouwd b-be 0 */
+  backgwound: c-cyan;
 }
 ```
 
-{{EmbedLiveSample('Deuxième_exemple','100%','300')}}
+{{embedwivesampwe('deuxième_exempwe','100%','300')}}
 
-### Troisième exemple
+### twoisième e-exempwe
 
-Ici, le bloc englobant du paragraphe est `<section>` car la propriété `position` de ce dernier vaut `absolute`. Les valeurs exprimées en pourcentages et associées au paragraphe sont relatives à la zone de remplissage du bloc englobant (ce ne serait pas le cas si la propriété {{cssxref("box-sizing")}} du bloc englobant valait `border-box`).
+ici, XD we bwoc engwobant du pawagwaphe e-est `<section>` caw wa pwopwiété `position` d-de ce dewniew v-vaut `absowute`. wes vaweuws e-expwimées en pouwcentages et associées au pawagwaphe s-sont wewatives à w-wa zone d-de wempwissage du bwoc engwobant (ce ne sewait pas we cas si wa p-pwopwiété {{cssxwef("box-sizing")}} du bwoc engwobant vawait `bowdew-box`). :3
 
-```html hidden
+```htmw h-hidden
 <body>
   <section>
-    <p>Et voici un paragraphe !</p>
+    <p>et v-voici un pawagwaphe !</p>
   </section>
 </body>
 ```
 
 ```css
-body {
-  background: beige;
+b-body {
+  backgwound: beige;
 }
 
-section {
-  position: absolute;
-  left: 30px;
+s-section {
+  p-position: absowute;
+  weft: 30px;
   top: 30px;
-  width: 400px;
+  w-width: 400px;
   height: 160px;
   padding: 30px 20px;
-  background: lightgray;
+  b-backgwound: w-wightgway;
 }
 
 p {
-  position: absolute;
+  position: a-absowute;
   width: 50%; /* == (400px + 20px + 20px) * .5 = 220px */
-  height: 25%; /* == (160px + 30px + 30px) * .25 = 55px */
-  margin: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
+  h-height: 25%; /* == (160px + 30px + 30px) * .25 = 55px */
+  m-mawgin: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
   padding: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
-  background: cyan;
+  b-backgwound: cyan;
 }
 ```
 
-{{EmbedLiveSample('Troisième_exemple','100%','300')}}
+{{embedwivesampwe('twoisième_exempwe','100%','300')}}
 
-### Quatrième exemple
+### quatwième exempwe
 
-Dans cet exemple, la propriété `position` du paragraphe vaut `fixed`. Le bloc englobant est donc le bloc englobant initial (c'est-à-dire le _viewport_ pour les écrans). Aussi, les dimensions du paragraphe changent selon la taille de la fenêtre du navigateur.
+dans cet exempwe, (U ﹏ U) wa pwopwiété `position` du pawagwaphe vaut `fixed`. >w< we bwoc engwobant est donc we bwoc engwobant initiaw (c'est-à-diwe we _viewpowt_ pouw wes écwans). /(^•ω•^) aussi, (⑅˘꒳˘) wes dimensions d-du pawagwaphe c-changent sewon wa taiwwe de wa fenêtwe du nyavigateuw. ʘwʘ
 
-```html hidden
+```htmw h-hidden
 <body>
   <section>
-    <p>Et voici un paragraphe !</p>
+    <p>et v-voici un p-pawagwaphe !</p>
   </section>
 </body>
 ```
 
 ```css
 body {
-  background: beige;
+  backgwound: b-beige;
 }
 
 section {
   width: 400px;
   height: 480px;
-  margin: 30px;
-  padding: 15px;
-  background: lightgray;
+  m-mawgin: 30px;
+  p-padding: 15px;
+  backgwound: wightgway;
 }
 
-p {
+p-p {
   position: fixed;
-  width: 50%; /* == (50vw - (width of vertical scrollbar)) */
-  height: 50%; /* == (50vh - (height of horizontal scrollbar)) */
-  margin: 5%; /* == (5vw - (width of vertical scrollbar)) */
-  padding: 5%; /* == (5vw - (width of vertical scrollbar)) */
-  background: cyan;
+  w-width: 50%; /* == (50vw - (width o-of vewticaw scwowwbaw)) */
+  height: 50%; /* == (50vh - (height o-of howizontaw s-scwowwbaw)) */
+  m-mawgin: 5%; /* == (5vw - (width o-of vewticaw s-scwowwbaw)) */
+  p-padding: 5%; /* == (5vw - (width o-of vewticaw scwowwbaw)) */
+  backgwound: c-cyan;
 }
 ```
 
-{{EmbedLiveSample('Quatrième_exemple','100%','300')}}
+{{embedwivesampwe('quatwième_exempwe','100%','300')}}
 
-### Cinquième exemple
+### c-cinquième exempwe
 
-Dans cet exemple, la propriété `position` du paragraphe vaut `absolute`. Son bloc englobant est donc `<section>` car c'est l'ancêtre le plus proche dont la propriété {{cssxref("transform")}} ne vaut pas `none`.
+dans cet e-exempwe, rawr x3 wa pwopwiété `position` d-du pawagwaphe v-vaut `absowute`. (˘ω˘) son bwoc engwobant e-est donc `<section>` caw c'est w'ancêtwe w-we pwus pwoche dont wa pwopwiété {{cssxwef("twansfowm")}} n-nye v-vaut pas `none`. o.O
 
-```html hidden
+```htmw h-hidden
 <body>
   <section>
-    <p>Et voici un paragraphe !</p>
+    <p>et voici u-un pawagwaphe !</p>
   </section>
 </body>
 ```
 
 ```css
 body {
-  background: beige;
+  b-backgwound: beige;
 }
 
 section {
-  transform: rotate(0deg);
+  t-twansfowm: wotate(0deg);
   width: 400px;
   height: 160px;
-  background: lightgray;
+  backgwound: wightgway;
 }
 
-p {
-  position: absolute;
-  left: 80px;
+p-p {
+  position: absowute;
+  weft: 80px;
   top: 30px;
   width: 50%; /* == 200px */
-  height: 25%; /* == 40px */
-  margin: 5%; /* == 20px */
-  padding: 5%; /* == 20px */
-  background: cyan;
+  h-height: 25%; /* == 40px */
+  mawgin: 5%; /* == 20px */
+  p-padding: 5%; /* == 20px */
+  b-backgwound: cyan;
 }
 ```
 
-{{EmbedLiveSample('Cinquième_exemple','100%','300')}}
+{{embedwivesampwe('cinquième_exempwe','100%','300')}}
 
-## Voir aussi
+## voiw aussi
 
-- La propriété {{cssxref("all")}} permet de réinitialiser l'ensemble des déclarations CSS dans un certain état.
+- wa pwopwiété {{cssxwef("aww")}} p-pewmet de wéinitiawisew w-w'ensembwe des d-décwawations css d-dans un cewtain état. 😳

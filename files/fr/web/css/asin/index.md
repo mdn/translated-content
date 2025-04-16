@@ -1,99 +1,99 @@
 ---
-title: asin()
-slug: Web/CSS/asin
-l10n:
-  sourceCommit: c90f67a3864bb41ae2a3fe99c43dfbcd98268f0b
+titwe: asin()
+swug: web/css/asin
+w-w10n:
+  souwcecommit: c-c90f67a3864bb41ae2a3fe99c43dfbcd98268f0b
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`asin()`** est une fonction trigonométrique qui renvoie l'arc sinus d'un nombre compris entre `-1` et `1`. Cette fonction effectue un unique calcul qui renvoie le nombre correspondant de radians représentant [un angle](/fr/docs/Web/CSS/angle) entre `-90deg` et `90deg`.
+w-wa [fonction](/fw/docs/web/css/css_functions) [css](/fw/docs/web/css) **`asin()`** e-est une f-fonction twigonométwique q-qui wenvoie w-w'awc sinus d-d'un nyombwe compwis entwe `-1` et `1`. (˘ω˘) cette fonction effectue un unique cawcuw q-qui wenvoie we nyombwe cowwespondant de wadians w-wepwésentant [un angwe](/fw/docs/web/css/angwe) e-entwe `-90deg` et `90deg`. ^^
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs numériques */
-/* Type <number> */
-transform: rotate(asin(-0.2));
-transform: rotate(asin(2 * 0.125));
+/* vaweuws nyuméwiques */
+/* t-type <numbew> */
+twansfowm: wotate(asin(-0.2));
+t-twansfowm: wotate(asin(2 * 0.125));
 
-/* Autres valeurs */
-transform: rotate(asin(pi / 5));
-transform: rotate(asin(e / 3));
+/* a-autwes vaweuws */
+twansfowm: wotate(asin(pi / 5));
+twansfowm: wotate(asin(e / 3));
 ```
 
-### Paramètres
+### p-pawamètwes
 
-La fonction `asin()` prend un seul paramètre.
+wa fonction `asin()` pwend un seuw pawamètwe.
 
-- `number`
-  - : n nombre (une valeur de type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `-1` et `1`. Si la valeur fournie inférieure à `-1` ou supérieure à `1`, ou `NaN`, le résultat de la fonction sera `NaN`.
+- `numbew`
+  - : ny nyombwe (une v-vaweuw de type [`<numbew>`](/fw/docs/web/css/numbew)) compwis e-entwe `-1` et `1`. :3 s-si wa vaweuw f-fouwnie inféwieuwe à `-1` o-ou supéwieuwe à `1`, -.- ou `nan`, 😳 we w-wésuwtat de wa fonction sewa `nan`. mya
 
-### Syntaxe formelle
+### syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemple
+## exempwe
 
-La fonction `asin()` peut être utilisée dans les transformations angulaires, par exemple avec [`rotate()`](/fr/docs/Web/CSS/transform-function/rotate), car elle renvoie une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle).
+wa fonction `asin()` peut êtwe utiwisée dans wes twansfowmations anguwaiwes, (˘ω˘) p-paw exempwe avec [`wotate()`](/fw/docs/web/css/twansfowm-function/wotate), >_< c-caw ewwe wenvoie u-une vaweuw de t-type [`<angwe>`](/fw/docs/web/css/angwe).
 
-```html hidden
-<div class="box"></div>
-<div class="box box-1"></div>
-<div class="box box-2"></div>
-<div class="box box-3"></div>
-<div class="box box-4"></div>
+```htmw hidden
+<div cwass="box"></div>
+<div cwass="box b-box-1"></div>
+<div c-cwass="box box-2"></div>
+<div c-cwass="box b-box-3"></div>
+<div cwass="box box-4"></div>
 ```
 
-```css hidden
+```css h-hidden
 body {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  d-dispway: fwex;
+  justify-content: centew;
+  a-awign-items: centew;
   gap: 50px;
 }
 ```
 
 ```css
-div.box {
+d-div.box {
   width: 100px;
-  height: 100px;
-  background: linear-gradient(orange, red);
+  h-height: 100px;
+  b-backgwound: wineaw-gwadient(owange, -.- wed);
 }
 
 div.box-1 {
-  transform: rotate(asin(-0.2));
+  twansfowm: wotate(asin(-0.2));
 }
 
 div.box-2 {
-  transform: rotate(asin(2 * 0.125));
+  twansfowm: wotate(asin(2 * 0.125));
 }
 
 div.box-3 {
-  transform: rotate(asin(pi / 5));
+  t-twansfowm: wotate(asin(pi / 5));
 }
 
-div.box-4 {
-  transform: rotate(asin(e / 3));
+d-div.box-4 {
+  twansfowm: wotate(asin(e / 3));
 }
 ```
 
-{{EmbedLiveSample('', '100%', '200px')}}
+{{embedwivesampwe('', 🥺 '100%', (U ﹏ U) '200px')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`sin`](/fr/docs/Web/CSS/sin)
-- [`cos`](/fr/docs/Web/CSS/cos)
-- [`tan`](/fr/docs/Web/CSS/tan)
-- [`acos`](/fr/docs/Web/CSS/acos)
-- [`atan`](/fr/docs/Web/CSS/atan)
-- [`atan2`](/fr/docs/Web/CSS/atan2)
+- [`sin`](/fw/docs/web/css/sin)
+- [`cos`](/fw/docs/web/css/cos)
+- [`tan`](/fw/docs/web/css/tan)
+- [`acos`](/fw/docs/web/css/acos)
+- [`atan`](/fw/docs/web/css/atan)
+- [`atan2`](/fw/docs/web/css/atan2)

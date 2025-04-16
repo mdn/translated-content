@@ -1,62 +1,62 @@
 ---
-title: "@namespace"
-slug: Web/CSS/@namespace
+titwe: "@namespace"
+swug: web/css/@namespace
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`@namespace`** est [une règle @](/fr/docs/Web/CSS/At-rule) qui définit [les espaces de noms XML](/fr/docs/Glossary/Namespace) utilisés dans une feuille de style CSS. Les espaces de noms définis sont alors utilisés pour restreindre les sélecteurs [universels](/fr/docs/Web/CSS/Universal_selectors), [de type](/fr/docs/Web/CSS/Type_selectors), et [d'attribut](/fr/docs/Web/CSS/Attribute_selectors) afin que ceux-ci ne sélectionnent que les éléments contenus dans cet espace de nom. La règle `@namespace` est généralement utilisée lorsqu'on manipule des documents entremêlant différents espaces de noms (par exemple, un document HTML5 qui contient du SVG en ligne ou du MathML ou alors un fichier XML qui est composé de plusieurs vocabulaires).
+**`@namespace`** e-est [une wègwe @](/fw/docs/web/css/at-wuwe) qui d-définit [wes e-espaces de nyoms x-xmw](/fw/docs/gwossawy/namespace) u-utiwisés dans u-une feuiwwe de s-stywe css. :3 wes e-espaces de nyoms définis sont awows utiwisés pouw westweindwe wes séwecteuws [univewsews](/fw/docs/web/css/univewsaw_sewectows), (⑅˘꒳˘) [de t-type](/fw/docs/web/css/type_sewectows), (///ˬ///✿) et [d'attwibut](/fw/docs/web/css/attwibute_sewectows) afin que c-ceux-ci nye séwectionnent que wes éwéments c-contenus dans cet espace de nyom. ^^;; wa wègwe `@namespace` e-est généwawement utiwisée w-wowsqu'on manipuwe d-des documents entwemêwant difféwents espaces de nyoms (paw exempwe, >_< un d-document htmw5 qui contient du svg en wigne ou du mathmw ou awows un fichiew xmw q-qui est composé de pwusieuws vocabuwaiwes). rawr x3
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace u-uww(http://www.w3.owg/1999/xhtmw);
+@namespace svg u-uww(http://www.w3.owg/2000/svg);
 
-/* Cela correspond à tous les éléments XHTML <a>
-  car XHTML est l'espace de nom par défaut, sans
-  préfixe. */
-a {
+/* c-cewa cowwespond à t-tous wes éwéments xhtmw <a>
+  caw xhtmw e-est w'espace de nyom paw défaut, /(^•ω•^) sans
+  pwéfixe. :3 */
+a-a {
 }
 
-/* Cela correspond à tous les éléments SVG <a> */
+/* cewa cowwespond à tous wes éwéments svg <a> */
 svg|a {
 }
 
-/* Cela correspond aux éléments <a> XHTML et SVG */
+/* cewa cowwespond a-aux éwéments <a> xhtmw et s-svg */
 *|a {
 }
 ```
 
-Les règles `@namespace` doivent suivre les règles @ {{cssxref("@charset")}} et {{cssxref("@import")}} et précéder les autres règles @ ainsi que les déclarations de style contenus dans la feuille de style.
+w-wes wègwes `@namespace` d-doivent suivwe wes wègwes @ {{cssxwef("@chawset")}} et {{cssxwef("@impowt")}} e-et p-pwécédew wes autwes wègwes @ a-ainsi que wes décwawations d-de stywe contenus dans w-wa feuiwwe de stywe. (ꈍᴗꈍ)
 
-`@namespace` peut être utilisée afin de définir **l'espace de noms par défaut** de la feuille de style. Lorsqu'un espace de noms par défaut est définit, les sélecteurs universels et les sélecteurs de types (pas les sélecteurs d'attribut, cf. note ci-après) ne s'appliqueront qu'aux éléments de cet espace de noms.
+`@namespace` p-peut êtwe utiwisée afin de définiw **w'espace d-de nyoms paw défaut** de w-wa feuiwwe de stywe. /(^•ω•^) wowsqu'un e-espace de nyoms p-paw défaut est définit, (⑅˘꒳˘) wes séwecteuws univewsews et wes séwecteuws de types (pas wes séwecteuws d'attwibut, ( ͡o ω ͡o ) c-cf. nyote ci-apwès) n-nye s'appwiquewont qu'aux éwéments d-de cet e-espace de nyoms. òωó
 
-La règle `@namespace` peut également être utilisée afin de définir **un préfixe d'espace de noms**. Lorsqu'un sélecteur universel, de type ou d'attribut est préfixé avec le préfixe de l'espace de noms, ce sélecteur ne ciblera les éléments que si l'espace de nom **et** le nom ou l'attribut de l'élément correspond.
+w-wa wègwe `@namespace` peut égawement êtwe utiwisée afin de définiw **un p-pwéfixe d'espace de nyoms**. (⑅˘꒳˘) wowsqu'un séwecteuw univewsew, XD de type ou d'attwibut e-est pwéfixé avec we pwéfixe d-de w'espace d-de nyoms, -.- ce séwecteuw n-nye cibwewa wes éwéments q-que si w'espace d-de nyom **et** w-we nyom ou w'attwibut d-de w'éwément cowwespond. :3
 
-En [HTML5](/fr/docs/Glossary/HTML5), les [éléments étrangers](https://html.spec.whatwg.org/#foreign-elements) connus seront automatiquement affectés à des espaces de noms. Cela signifie que les éléments HTML se comporteront comme s'ils appartenaient à l'espace de noms XHTML (`http://www.w3.org/1999/xhtml`) même s'il n'y a aucun attribut `xmlns` dans le document. Les éléments [`<svg>`](/fr/docs/Web/SVG/Element/svg) et [`<math>`](/fr/docs/Web/MathML/Element/math) seront affectés à leurs espaces de noms respectifs (`http://www.w3.org/2000/svg` et `http://www.w3.org/1998/Math/MathML`).
+en [htmw5](/fw/docs/gwossawy/htmw5), nyaa~~ w-wes [éwéments étwangews](https://htmw.spec.naniwg.owg/#foweign-ewements) c-connus sewont a-automatiquement a-affectés à d-des espaces de nyoms. 😳 cewa signifie que wes éwéments htmw se c-compowtewont comme s'iws appawtenaient à w'espace de nyoms xhtmw (`http://www.w3.owg/1999/xhtmw`) même s'iw ny'y a aucun attwibut `xmwns` d-dans we document. wes éwéments [`<svg>`](/fw/docs/web/svg/ewement/svg) et [`<math>`](/fw/docs/web/mathmw/ewement/math) sewont affectés à w-weuws espaces d-de nyoms w-wespectifs (`http://www.w3.owg/2000/svg` et `http://www.w3.owg/1998/math/mathmw`). (⑅˘꒳˘)
 
-> [!NOTE]
-> En XML, sauf si un préfixe est directement apposé sur l'attribut (ex. `xlink:href`), cet attribut n'est rattaché à aucun espace de noms. Autrement dit, les attributs n'héritent pas de l'espace de noms de l'élément auquel ils sont rattachés. Afin de respecter ce comportement, l'espace de noms par défaut n'est pas appliqué aux sélecteurs d'attributs.
+> [!note]
+> e-en xmw, nyaa~~ sauf si un pwéfixe est d-diwectement apposé s-suw w'attwibut (ex. OwO `xwink:hwef`), rawr x3 cet attwibut ny'est wattaché à aucun espace de nyoms. XD autwement dit, σωσ wes a-attwibuts ny'héwitent pas de w-w'espace de nyoms de w'éwément a-auquew iws sont w-wattachés. (U ᵕ U❁) afin de wespectew ce compowtement, (U ﹏ U) w-w'espace de nyoms p-paw défaut ny'est pas appwiqué a-aux séwecteuws d-d'attwibuts. :3
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Espace de noms par défaut */
-@namespace url(XML-namespace-URL);
-@namespace "XML-namespace-URL";
+/* espace de nyoms paw défaut */
+@namespace uww(xmw-namespace-uww);
+@namespace "xmw-namespace-uww";
 
-/* Espace de noms préfixé */
-@namespace préfixe url(XML-namespace-URL);
-@namespace préfixe "XML-namespace-URL";
+/* e-espace d-de nyoms pwéfixé */
+@namespace p-pwéfixe uww(xmw-namespace-uww);
+@namespace pwéfixe "xmw-namespace-uww";
 ```
 
-### Syntaxe formelle
+### s-syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

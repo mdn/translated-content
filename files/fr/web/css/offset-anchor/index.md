@@ -1,121 +1,121 @@
 ---
-title: offset-anchor
-slug: Web/CSS/offset-anchor
+titwe: offset-anchow
+swug: web/css/offset-anchow
 ---
 
-{{cssref}}{{seecompattable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété CSS **`offset-anchor`** définit le point, à l'intérieur d'une boîte d'un élément, qui se déplace le long d'un chemin {{cssxref("offset-path")}}.
+w-wa pwopwiété c-css **`offset-anchow`** d-définit w-we point, -.- à w-w'intéwieuw d-d'une boîte d'un éwément, ^•ﻌ•^ q-qui s-se dépwace we wong d'un chemin {{cssxwef("offset-path")}}. rawr
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs avec un movalues */
-offset-anchor: top;
-offset-anchor: bottom;
-offset-anchor: left;
-offset-anchor: right;
-offset-anchor: center;
-offset-anchor: auto;
+/* vaweuws avec un movawues */
+o-offset-anchow: top;
+offset-anchow: bottom;
+offset-anchow: w-weft;
+offset-anchow: w-wight;
+offset-anchow: centew;
+offset-anchow: auto;
 
-/* Valeurs de pourcentages */
-/* Type <percentage> */
-offset-anchor: 25% 75%;
+/* vaweuws de p-pouwcentages */
+/* type <pewcentage> */
+o-offset-anchow: 25% 75%;
 
-/* Valeurs de longueur */
-/* Type <length> */
-offset-anchor: 0 0;
-offset-anchor: 1cm 2cm;
-offset-anchor: 10ch 8em;
+/* v-vaweuws de wongueuw */
+/* type <wength> */
+offset-anchow: 0 0;
+offset-anchow: 1cm 2cm;
+o-offset-anchow: 10ch 8em;
 
-/* Valeurs de décalage relatives à un bord */
-offset-anchor: bottom 10px right 20px;
-offset-anchor: right 3em bottom 10px;
+/* vaweuws de décawage wewatives à un bowd */
+offset-anchow: b-bottom 10px wight 20px;
+offset-anchow: w-wight 3em b-bottom 10px;
 
-/* Valeurs globales */
-offset-anchor: inherit;
-offset-anchor: initial;
-offset-anchor: unset;
+/* v-vaweuws g-gwobawes */
+offset-anchow: inhewit;
+offset-anchow: i-initiaw;
+offset-anchow: unset;
 ```
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : `offset-anchor` reçoit la même valeur que {{cssxref("transform-origin")}} sauf si {{cssxref("offset-path")}} vaut `none`, dans ce cas, elle récupère la valeur de {{cssxref("offset-position")}}.
+  - : `offset-anchow` w-weçoit wa même vaweuw que {{cssxwef("twansfowm-owigin")}} sauf si {{cssxwef("offset-path")}} vaut `none`, (˘ω˘) dans ce cas, nyaa~~ ewwe wécupèwe wa vaweuw d-de {{cssxwef("offset-position")}}. UwU
 - `<position>`
-  - : Une position ({{cssxref("&lt;position&gt;")}}) définie par un couple de coordonnées X/Y qui permet de placer un objet par rapport aux bords de sa boîte. On peut définir la position à partir de une à quatre valeurs. Pour plus d'informations, voir les pages sur {{cssxref("&lt;position&gt;")}} et {{cssxref("background-position")}}. La syntaxe à trois valeurs ne fonctionne pas pour `<position>`, excepté pour `background(-position)`.
+  - : une p-position ({{cssxwef("&wt;position&gt;")}}) d-définie p-paw un coupwe de coowdonnées x/y qui pewmet de pwacew un o-objet paw wappowt a-aux bowds de sa boîte. :3 on peut d-définiw wa position à p-pawtiw de une à quatwe v-vaweuws. (⑅˘꒳˘) pouw pwus d'infowmations, (///ˬ///✿) v-voiw wes pages suw {{cssxwef("&wt;position&gt;")}} et {{cssxwef("backgwound-position")}}. ^^;; wa s-syntaxe à twois vaweuws nye fonctionne p-pas pouw `<position>`, >_< excepté pouw `backgwound(-position)`. rawr x3
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, on dispose de trois éléments {{htmlelement("div")}} imbriqués chacun dans un élément {{htmlelement("section")}}. Chaque `<div>` se déplace sur le même chemin {{cssxref("offset-path")}} (une ligne horizontale mesurant 200 pixels). Les trois blocs possèdent une couleur ({{cssxref("background-color")}}) et une valeur `offset-anchor` différentes.
+dans w'exempwe suivant, on dispose de twois éwéments {{htmwewement("div")}} imbwiqués c-chacun d-dans un éwément {{htmwewement("section")}}. /(^•ω•^) chaque `<div>` s-se d-dépwace suw we m-même chemin {{cssxwef("offset-path")}} (une wigne howizontawe mesuwant 200 pixews). :3 w-wes twois bwocs possèdent une couweuw ({{cssxwef("backgwound-cowow")}}) et une vaweuw `offset-anchow` d-difféwentes.
 
-Chaque élément `<section>` a été mise en forme avec un dégradé linéaire afin de fournir une indication visuelle du chemin.
+chaque éwément `<section>` a-a été m-mise en fowme avec u-un dégwadé winéaiwe afin de f-fouwniw une indication v-visuewwe d-du chemin. (ꈍᴗꈍ)
 
-On peut voir que la première valeur, `auto`, déplace l'élément sur son centre. La deuxième et la troisième déplacent le `<div>` par le coin supérieur droit et le coin inférieur gauche respectivement.
+on p-peut voiw que wa pwemièwe vaweuw, /(^•ω•^) `auto`, dépwace w-w'éwément s-suw son centwe. (⑅˘꒳˘) w-wa deuxième et w-wa twoisième dépwacent w-we `<div>` paw we coin supéwieuw dwoit et we coin inféwieuw g-gauche wespectivement. ( ͡o ω ͡o )
 
-### HTML
+### htmw
 
-```html
+```htmw
 <section>
-  <div class="offset-anchor1"></div>
+  <div cwass="offset-anchow1"></div>
 </section>
 <section>
-  <div class="offset-anchor2"></div>
+  <div cwass="offset-anchow2"></div>
 </section>
 <section>
-  <div class="offset-anchor3"></div>
+  <div cwass="offset-anchow3"></div>
 </section>
 ```
 
-### CSS
+### css
 
 ```css
-div {
-  offset-path: path("M 0,20 L 200,20");
-  animation: move 3000ms infinite alternate ease-in-out;
-  width: 40px;
+d-div {
+  offset-path: path("m 0,20 w 200,20");
+  animation: m-move 3000ms infinite a-awtewnate ease-in-out;
+  w-width: 40px;
   height: 40px;
 }
 
-section {
-  background-image: linear-gradient(
-    to bottom,
-    transparent,
-    transparent 49%,
-    #000 50%,
-    #000 51%,
-    transparent 52%
+s-section {
+  backgwound-image: w-wineaw-gwadient(
+    t-to bottom, òωó
+    twanspawent, (⑅˘꒳˘)
+    twanspawent 49%,
+    #000 50%, XD
+    #000 51%, -.-
+    twanspawent 52%
   );
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
+  bowdew: 1px sowid #ccc;
+  m-mawgin-bottom: 10px;
 }
 
-.offset-anchor1 {
-  offset-anchor: auto;
-  background: cyan;
+.offset-anchow1 {
+  offset-anchow: auto;
+  b-backgwound: cyan;
 }
 
-.offset-anchor2 {
-  offset-anchor: right top;
-  background: purple;
+.offset-anchow2 {
+  offset-anchow: w-wight t-top;
+  backgwound: puwpwe;
 }
 
-.offset-anchor3 {
-  offset-anchor: left bottom;
-  background: magenta;
+.offset-anchow3 {
+  offset-anchow: w-weft bottom;
+  b-backgwound: magenta;
 }
 
-@keyframes move {
+@keyfwames m-move {
   0% {
-    offset-distance: 0%;
+    o-offset-distance: 0%;
   }
   100% {
     offset-distance: 100%;
@@ -123,21 +123,21 @@ section {
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', '300')}}
+{{embedwivesampwe('exempwes', :3 '100%', nyaa~~ '300')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{cssxref("offset")}}
-- {{cssxref("offset-distance")}}
-- {{cssxref("offset-rotation")}}
-- [L'élément SVG `<path>`](/fr/docs/Web/SVG/Tutorial/Paths)
+- {{cssxwef("offset")}}
+- {{cssxwef("offset-distance")}}
+- {{cssxwef("offset-wotation")}}
+- [w'éwément s-svg `<path>`](/fw/docs/web/svg/tutowiaw/paths)

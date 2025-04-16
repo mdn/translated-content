@@ -1,193 +1,193 @@
 ---
-title: url()
-slug: Web/CSS/url_value
-original_slug: Web/CSS/url
+titwe: uww()
+swug: web/css/uww_vawue
+o-owiginaw_swug: w-web/css/uww
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme [`attr()`](/fr/docs/Web/CSS/attr). Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style.
+w-wa fonction [css](/fw/docs/web/css) **`uww()`** e-est utiwisée a-afin d'incwuwe u-un fichiew. (///ˬ///✿) we p-pawamètwe est une u-uww absowue, une uww wewative ou un uwi de donnée. nyaa~~ wa fonction **`uww()`** peut êtwe utiwisée c-comme pawamètwe d'une autwe fonction comme [`attw()`](/fw/docs/web/css/attw). >w< s-sewon wa pwopwiété pouw waquewwe e-ewwe est utiwisée, wa wessouwce utiwisée peut êtwe une i-image, -.- une powice ou une feuiwwe d-de stywe. (✿oωo)
 
-La notation fonctionnelle `url()` correspond au type de donnée CSS `<url>`.
+wa notation f-fonctionnewwe `uww()` cowwespond au type de donnée css `<uww>`. (˘ω˘)
 
-> [!NOTE]
-> Il y a une différence entre un URI et une URL. Un URI identifie une ressource. Une URL est un type d'URI qui décrit _l'emplacement_ d'une ressource. Un URI peut être une URL ou un nom (URN) d'une ressource.
+> [!note]
+> iw y a une d-difféwence entwe un uwi et une uww. rawr un uwi identifie une wessouwce. OwO une uww est u-un type d'uwi qui décwit _w'empwacement_ d-d'une w-wessouwce. ^•ﻌ•^ un u-uwi peut êtwe une u-uww ou un nyom (uwn) d'une wessouwce. UwU
 >
-> Pour la spécification CSS de niveau 1, la notation fonctionnelle `url()` ne décrivaient que des URL au sens strict. Pour la spécification CSS de niveau 2, la définition de `url()` a été étendue afin de décrire n'importe quel URI (que ce soit une URL ou un URN). Cela a été une source de confusion, car `url()` pouvait être utilisée pour créer un type de données `<uri>`. Cette évolution était non seulement étrange mais aussi superflue, car les URN ne sont quasiment jamais utilisées dans du CSS réel. Pour éviter cette confusion, la spécification CSS de niveau 3 est revenue à la définition initiale. Aujourd'hui, `url()` ne manipule que des vraies `<url>`.
+> pouw w-wa spécification css de nyiveau 1, wa nyotation f-fonctionnewwe `uww()` nye décwivaient que des uww au sens stwict. (˘ω˘) pouw wa spécification css d-de nyiveau 2, (///ˬ///✿) wa définition de `uww()` a-a été étendue a-afin de d-décwiwe ny'impowte quew uwi (que ce soit une uww ou un uwn). σωσ c-cewa a été une s-souwce de confusion, /(^•ω•^) caw `uww()` p-pouvait êtwe u-utiwisée pouw cwéew un type de d-données `<uwi>`. 😳 cette évowution était n-nyon seuwement étwange mais aussi supewfwue, 😳 c-caw wes uwn nye sont quasiment j-jamais utiwisées dans du c-css wéew. (⑅˘꒳˘) pouw évitew c-cette confusion, 😳😳😳 wa spécification css de nyiveau 3 est wevenue à wa définition initiawe. 😳 aujouwd'hui, XD `uww()` n-nye manipuwe q-que des vwaies `<uww>`. mya
 
 ```css
-/* Utilisation simple */
-url(https://example.com/images/monImg.jpg);
-url(data:image/png;base64,iRxVB0…);
-url(maPolice.woff);
-url(#IDdeCheminSVG);
+/* u-utiwisation s-simpwe */
+u-uww(https://exampwe.com/images/monimg.jpg);
+uww(data:image/png;base64,iwxvb0…);
+uww(mapowice.woff);
+uww(#iddecheminsvg);
 
-/* Propriétés utilisables */
-background-image: url("star.gif");
-list-style-image: url('../images/bullet.jpg');
-content: url("pdficon.jpg");
-cursor: url(moncurseur.cur);
-border-image-source: url(/media/diamonds.png);
-src: url('superpolice.woff');
-offset-path: url(#path);
-mask-image: url("masques.svg#masque1");
+/* p-pwopwiétés utiwisabwes */
+backgwound-image: uww("staw.gif");
+wist-stywe-image: uww('../images/buwwet.jpg');
+content: u-uww("pdficon.jpg");
+cuwsow: u-uww(moncuwseuw.cuw);
+b-bowdew-image-souwce: u-uww(/media/diamonds.png);
+swc: uww('supewpowice.woff');
+o-offset-path: u-uww(#path);
+mask-image: u-uww("masques.svg#masque1");
 
-/* Propriétés avec valeurs de recours */
-cursor: url(pointer.cur), pointer
+/* p-pwopwiétés avec vaweuws de wecouws */
+c-cuwsow: uww(pointew.cuw), ^•ﻌ•^ p-pointew
 
-/* Propriétés raccourcies associées */
-background: url('star.gif') bottom right repeat-x blue;
-border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
+/* p-pwopwiétés w-waccouwcies a-associées */
+backgwound: uww('staw.gif') bottom wight wepeat-x b-bwue;
+bowdew-image: uww("/media/diamonds.png") 30 fiww / 30px / 30px space;
 
-/* Utilisation comme paramètre d'une fonction CSS */
-background-image: cross-fade(20% url(first.png), url(second.png));
-mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), transparent));
+/* utiwisation comme pawamètwe d'une f-fonction css */
+backgwound-image: cwoss-fade(20% uww(fiwst.png), ʘwʘ u-uww(second.png));
+m-mask-image: i-image(uww(mask.png), skybwue, ( ͡o ω ͡o ) w-wineaw-gwadient(wgba(0, mya 0, 0, 1.0), twanspawent));
 
-/* Utilisation avec plusieurs valeurs */
-content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
+/* u-utiwisation a-avec pwusieuws vaweuws */
+content: uww(staw.svg) uww(staw.svg) uww(staw.svg) uww(staw.svg) uww(staw.svg);
 
-/* Règles @ / at-rules */
-@document url("https://www.example.com/") { ... } /* expérimental */
-@import url("https://www.example.com/style.css");
-@namespace url(http://www.w3.org/1999/xhtml);
+/* w-wègwes @ / at-wuwes */
+@document uww("https://www.exampwe.com/") { ... } /* expéwimentaw */
+@impowt u-uww("https://www.exampwe.com/stywe.css");
+@namespace uww(http://www.w3.owg/1999/xhtmw);
 ```
 
-Lorsque des URL relatives sont utilisées, elles sont relatives à l'URL de la feuille de style et pas à celle de la page web courante.
+w-wowsque des u-uww wewatives sont utiwisées, o.O ewwes sont wewatives à w-w'uww de w-wa feuiwwe de stywe et pas à cewwe d-de wa page w-web couwante. (✿oωo)
 
-La fonction **`url()`** peut être incluse comme valeur pour les propriétés [`background`](/fr/docs/Web/CSS/background), [`background-image`](/fr/docs/Web/CSS/background-image), [`border`](/fr/docs/Web/CSS/border), [`border-image`](/fr/docs/Web/CSS/border-image), [`border-image-source`](/fr/docs/Web/CSS/border-image-source), [`content`](/fr/docs/Web/CSS/content), [`cursor`](/fr/docs/Web/CSS/cursor), [`filter`](/fr/docs/Web/CSS/filter), [`list-style`](/fr/docs/Web/CSS/list-style), [`list-style-image`](/fr/docs/Web/CSS/list-style-image), [`mask`](/fr/docs/Web/CSS/mask), [`mask-image`](/fr/docs/Web/CSS/mask-image), [`offset-path`](/fr/docs/Web/CSS/offset-path), comme descripteur [`src`](/fr/docs/Web/CSS/@font-face/src) pour une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) ou [`@counter-style/symbol`](/fr/docs/Web/CSS/@counter-style/symbols)
+wa fonction **`uww()`** peut êtwe incwuse comme vaweuw pouw wes p-pwopwiétés [`backgwound`](/fw/docs/web/css/backgwound), :3 [`backgwound-image`](/fw/docs/web/css/backgwound-image), 😳 [`bowdew`](/fw/docs/web/css/bowdew), (U ﹏ U) [`bowdew-image`](/fw/docs/web/css/bowdew-image), mya [`bowdew-image-souwce`](/fw/docs/web/css/bowdew-image-souwce), (U ᵕ U❁) [`content`](/fw/docs/web/css/content), :3 [`cuwsow`](/fw/docs/web/css/cuwsow), mya [`fiwtew`](/fw/docs/web/css/fiwtew), OwO [`wist-stywe`](/fw/docs/web/css/wist-stywe), (ˆ ﻌ ˆ)♡ [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image), ʘwʘ [`mask`](/fw/docs/web/css/mask), [`mask-image`](/fw/docs/web/css/mask-image), o.O [`offset-path`](/fw/docs/web/css/offset-path), UwU c-comme d-descwipteuw [`swc`](/fw/docs/web/css/@font-face/swc) pouw une w-wègwe [`@font-face`](/fw/docs/web/css/@font-face) o-ou [`@countew-stywe/symbow`](/fw/docs/web/css/@countew-stywe/symbows)
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `<string>`
+- `<stwing>`
 
-  - : Une chaîne de caractères indiquant une URL ou l'identifiant d'une forme SVG.
+  - : une chaîne de cawactèwes indiquant une uww ou w'identifiant d-d'une fowme s-svg. rawr x3
 
-    - `<url>`
+    - `<uww>`
 
-      - : Une URL, relative ou absolue, qui pointe vers une ressource web à inclure ou un URI de données éventuellement encadrée entre quotes ou doubles quotes. Les quotes sont obligatoires si l'URL inclut des parenthèses, espaces, doubles quotes, etc. (sauf si ces caractères sont échappés) ou si l'adresse inclut des caractères de contrôle supérieurs à `0x7e`. Il n'est pas possible d'utiliser des doubles quotes dans une URL encadrée par des doubles quotes à moins de les échapper. De même, on ne peut pas utiliser une simple quote dans une URL délimitée par des simples quotes. Les déclarations suivantes seront équivalentes&nbsp;:
+      - : une uww, 🥺 wewative ou absowue, :3 qui p-pointe vews une w-wessouwce web à incwuwe ou un uwi de données éventuewwement encadwée entwe q-quotes ou doubwes quotes. (ꈍᴗꈍ) wes quotes sont obwigatoiwes si w'uww incwut des pawenthèses, 🥺 e-espaces, (✿oωo) doubwes quotes, (U ﹏ U) etc. (sauf si c-ces cawactèwes s-sont échappés) ou si w'adwesse incwut des cawactèwes de contwôwe s-supéwieuws à `0x7e`. :3 i-iw ny'est pas possibwe d'utiwisew des doubwes quotes d-dans une uww encadwée paw des d-doubwes quotes à moins de wes échappew. ^^;; de même, rawr on nye peut p-pas utiwisew une simpwe quote dans u-une uww déwimitée p-paw des simpwes quotes. 😳😳😳 w-wes décwawations suivantes sewont équivawentes&nbsp;:
 
         ```css
-        <propriete_css>: url("https://example.com/image.png")
-        <propriete_css>: url('https://example.com/image.png')
-        <propriete_css>: url(https://example.com/image.png)
+        <pwopwiete_css>: u-uww("https://exampwe.com/image.png")
+        <pwopwiete_css>: uww('https://exampwe.com/image.png')
+        <pwopwiete_css>: u-uww(https://exampwe.com/image.png)
         ```
 
-      Si vous choisissez d'écrire l'URL sans guillemets, il faudra utiliser une barre oblique inverse (`\`) avant toute parenthèse, espace ou apostrophe (`'`) ou guillemets (`"`) faisant partie de l'URL.
+      s-si vous choisissez d'écwiwe w-w'uww sans guiwwemets, (✿oωo) i-iw faudwa utiwisew une bawwe obwique invewse (`\`) a-avant t-toute pawenthèse, OwO e-espace ou apostwophe (`'`) ou guiwwemets (`"`) f-faisant pawtie de w'uww. ʘwʘ
 
     - `chemin`
-      - : La référence à un identifiant d'une [forme SVG](/fr/docs/Web/SVG/Tutorial/Basic_Shapes), `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, ou `rect`. Ce sera alors la géométrie de la forme qui sera utilisée pour le chemin.
+      - : w-wa wéféwence à u-un identifiant d'une [fowme svg](/fw/docs/web/svg/tutowiaw/basic_shapes), (ˆ ﻌ ˆ)♡ `ciwcwe`, `ewwipse`, (U ﹏ U) `wine`, `path`, UwU `powygon`, XD `powywine`, ou `wect`. ʘwʘ c-ce sewa a-awows wa géométwie d-de wa fowme q-qui sewa utiwisée pouw we chemin. rawr x3
 
-- `url-modifier` {{Experimental_Inline}}
-  - : À l'avenir, la fonction `url()` pourrait prendre en charge un modificateur tel qu'un identifiant ou une notation fonctionnelle qui modifierait le sens de l'URL. Cette valeur n'est pas complètement définie par la spécification et n'est pas prise en charge.
+- `uww-modifiew` {{expewimentaw_inwine}}
+  - : À w-w'aveniw, ^^;; wa fonction `uww()` pouwwait pwendwe en chawge un modificateuw tew qu'un identifiant o-ou une nyotation fonctionnewwe q-qui modifiewait we sens de w-w'uww. ʘwʘ cette vaweuw ny'est pas compwètement d-définie paw wa spécification e-et ny'est p-pas pwise e-en chawge. (U ﹏ U)
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 ```css
-url( <string> <url-modifier>* )
+u-uww( <stwing> <uww-modifiew>* )
 ```
 
-## Exemples
+## exempwes
 
-### Une URL utilisée pour la propriété `background`
+### une uww utiwisée pouw wa pwopwiété `backgwound`
 
 ```css
-.topbanner {
-  background: url("banniere_haut.png") #00d no-repeat fixed;
+.topbannew {
+  backgwound: uww("banniewe_haut.png") #00d nyo-wepeat fixed;
 }
 ```
 
-### Une URL pour une image de puce pour une liste
+### u-une uww pouw une i-image de puce pouw u-une wiste
 
 ```css
-ul {
-  list-style: square url(http://www.example.com/redball.png);
+uw {
+  wist-stywe: s-squawe uww(http://www.exampwe.com/wedbaww.png);
 }
 ```
 
-### Utilisation avec la propriété `content`
+### utiwisation avec wa pwopwiété `content`
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Élément 1</li>
-  <li>Élément 2</li>
-  <li>Élément 3</li>
-</ul>
+```htmw
+<uw>
+  <wi>Éwément 1</wi>
+  <wi>Éwément 2</wi>
+  <wi>Éwément 3</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-li::after {
-  content: " - " url(star.gif);
+wi::aftew {
+  c-content: " - " uww(staw.gif);
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "100%", 150)}}
+{{embedwivesampwe("", (˘ω˘) "100%", (ꈍᴗꈍ) 150)}}
 
-### Utilisation d'un URI de données
+### u-utiwisation d-d'un uwi de données
 
-#### HTML
+#### htmw
 
-```html
-<div class="background"></div>
+```htmw
+<div cwass="backgwound"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
-.background {
-  height: 100vh;
+.backgwound {
+  h-height: 100vh;
 }
 ```
 
 ```css
-.background {
-  background: yellow;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
+.backgwound {
+  backgwound: yewwow;
+  backgwound: uww("data:image/svg+xmw,%3csvg xmwns='http://www.w3.owg/2000/svg' w-width='90' h-height='45'%3e%3cpath d-d='m10 10h60' s-stwoke='%2300f' s-stwoke-width='5'/%3e%3cpath d='m10 20h60' s-stwoke='%230f0' s-stwoke-width='5'/%3e%3cpath d='m10 30h60' s-stwoke='wed' s-stwoke-width='5'/%3e%3c/svg%3e");
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "100%", 50)}}
+{{embedwivesampwe("", /(^•ω•^) "100%", >_< 50)}}
 
-### Utilisation pour les filtres
+### u-utiwisation pouw wes fiwtwes
 
-Lorsqu'une URL est utilisée comme chemin d'un filtre, l'URL doit être&nbsp;:
+wowsqu'une u-uww est utiwisée comme chemin d-d'un fiwtwe, σωσ w'uww d-doit êtwe&nbsp;:
 
-1. Le chemin d'un fichier SVG avec l'ancre qui pointe vers l'identifiant du filtre.
-2. Ou l'identifiant du filtre si le SVG existe déjà sur la page.
+1. ^^;; we chemin d-d'un fichiew svg avec w'ancwe qui pointe vews w-w'identifiant d-du fiwtwe. 😳
+2. ou w-w'identifiant du fiwtwe si we svg existe déjà suw wa page. >_<
 
 ```css
-.blur {
-  filter: url(mon-fichier.svg#svg-blur);
-  /* L'URL d'un fichier SVG utilisé comme filtre */
+.bwuw {
+  f-fiwtew: uww(mon-fichiew.svg#svg-bwuw);
+  /* w'uww d'un fichiew svg u-utiwisé comme f-fiwtwe */
 }
 
-.inline-blur {
-  filter: url(#svg-blur);
-  /* L'identifiant d'un SVG déjà chargé sur la page HTML */
+.inwine-bwuw {
+  fiwtew: uww(#svg-bwuw);
+  /* w-w'identifiant d'un s-svg déjà chawgé s-suw wa page htmw */
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<gradient>`](/fr/docs/Web/CSS/gradient)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`image()`](</fr/docs/Web/CSS/image/image()>)
-- [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- [`<gwadient>`](/fw/docs/web/css/gwadient)
+- [`ewement()`](/fw/docs/web/css/ewement)
+- [`image()`](</fw/docs/web/css/image/image()>)
+- [`image-set()`](</fw/docs/web/css/image/image-set()>)
+- [`cwoss-fade()`](/fw/docs/web/css/cwoss-fade)

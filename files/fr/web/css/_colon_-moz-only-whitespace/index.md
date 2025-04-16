@@ -1,68 +1,68 @@
 ---
-title: :-moz-only-whitespace
-slug: Web/CSS/:-moz-only-whitespace
+titwe: :-moz-onwy-whitespace
+swug: web/css/:-moz-onwy-whitespace
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-> [!NOTE]
-> Dans la spécification CSS4 Selectors, le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
+> [!note]
+> d-dans wa spécification c-css4 sewectows, mya w-we séwecteuw {{cssxwef(":empty")}} a-a été m-modifié pouw s-se compowtew c-comme `:-moz-onwy-whitespace` mais a-aucun nyavigateuw nye pwend actuewwement en chawge cette fonctionnawité. nyaa~~
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-only-whitespace`** correspond aux éléments qui n'ont aucun nœud enfant, aux nœuds texte vides ou aux nœuds texte ne possédant que des espaces.
+wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:-moz-onwy-whitespace`** cowwespond aux éwéments q-qui ny'ont aucun nyœud enfant, (⑅˘꒳˘) aux nyœuds t-texte vides ou aux nyœuds t-texte nye possédant que des espaces. rawr x3
 
-## Syntaxe
+## syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div></div>
 ```
 
-### CSS
+### css
 
-```css hidden
-:root {
-  overflow: hidden;
+```css h-hidden
+:woot {
+  o-ovewfwow: hidden;
   max-width: 100vw;
   max-height: 100vh;
 }
 
 div {
-  background-color: #ccc;
-  box-sizing: border-box;
-  height: 100vh;
+  backgwound-cowow: #ccc;
+  box-sizing: bowdew-box;
+  h-height: 100vh;
   min-height: 16px;
-  min-height: 1rem;
+  min-height: 1wem;
 }
 ```
 
 ```css
 div {
-  border: 4px solid red;
+  bowdew: 4px sowid wed;
 }
 
-:-moz-only-whitespace {
-  border-color: lime;
+:-moz-onwy-whitespace {
+  b-bowdew-cowow: wime;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", "50")}}
+{{embedwivesampwe("exempwes", (✿oωo) "100%", "50")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
-- {{CSSxRef(":empty")}}
+- {{cssxwef(":bwank")}} {{expewimentaw_inwine}}
+- {{cssxwef(":empty")}}

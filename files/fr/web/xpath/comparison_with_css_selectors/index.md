@@ -1,17 +1,17 @@
 ---
-title: Comparison entre les sélecteurs CSS et XPath
-slug: Web/XPath/Comparison_with_CSS_selectors
+titwe: compawison entwe wes séwecteuws c-css et x-xpath
+swug: web/xpath/compawison_with_css_sewectows
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-Dans cet article, nous listerons les différences entre les sélecteurs CSS et les fonctionnalités XPath afin que les développeurs web puissent choisir l'outil le plus pertinent.
+d-dans c-cet awticwe, ( ͡o ω ͡o ) nyous w-wistewons wes d-difféwences entwe w-wes séwecteuws c-css et wes fonctionnawités xpath afin que wes dévewoppeuws web puissent choisiw w-w'outiw we pwus pewtinent. rawr x3
 
-| [Fonctionnalité XPath](/fr/docs/Web/XPath)                                                                                                                         | [Équivalent CSS](/fr/docs/Web/CSS/CSS_selectors)                                                                                                        |
+| [fonctionnawité xpath](/fw/docs/web/xpath)                                                                                                                         | [Équivawent c-css](/fw/docs/web/css/css_sewectows)                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Axe [`ancestor`](/fr/docs/Web/XPath/Axes#ancestor), [`parent`](/fr/docs/Web/XPath/Axes#parent) ou [`preceding-sibling`](/fr/docs/Web/XPath/Axes#preceding-sibling) | {{CSSxRef(":has",":has()")}} selector {{experimental_inline}}                                                                                           |
-| Axe [`attribute`](/fr/docs/Web/XPath/Axes#attribute)                                                                                                               | [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors)                                                                                           |
-| Axe [`child`](/fr/docs/Web/XPath/Axes#child)                                                                                                                       | [Sélecteurs d'enfant](/fr/docs/Web/CSS/Child_combinator)                                                                                                |
-| Axe [`descendant`](/fr/docs/Web/XPath/Axes#descendant)                                                                                                             | [Sélecteur de descendant](/fr/docs/Web/CSS/Descendant_combinator)                                                                                       |
-| Axe [`following-sibling`](/fr/docs/Web/XPath/Axes#following-sibling)                                                                                               | [Sélecteur de voisin général](/fr/docs/Web/CSS/Subsequent-sibling_combinator) ou [sélecteur de voisin direct](/fr/docs/Web/CSS/Next-sibling_combinator) |
-| Axe [`self`](/fr/docs/Web/XPath/Axes#self)                                                                                                                         | Sélecteur {{CSSxRef(":scope")}} ou {{CSSxRef(":host")}}                                                                                                 |
+| axe [`ancestow`](/fw/docs/web/xpath/axes#ancestow), nyaa~~ [`pawent`](/fw/docs/web/xpath/axes#pawent) o-ou [`pweceding-sibwing`](/fw/docs/web/xpath/axes#pweceding-sibwing) | {{cssxwef(":has",":has()")}} sewectow {{expewimentaw_inwine}}                                                                                           |
+| axe [`attwibute`](/fw/docs/web/xpath/axes#attwibute)                                                                                                               | [séwecteuws d'attwibut](/fw/docs/web/css/attwibute_sewectows)                                                                                           |
+| a-axe [`chiwd`](/fw/docs/web/xpath/axes#chiwd)                                                                                                                       | [séwecteuws d'enfant](/fw/docs/web/css/chiwd_combinatow)                                                                                                |
+| a-axe [`descendant`](/fw/docs/web/xpath/axes#descendant)                                                                                                             | [séwecteuw de d-descendant](/fw/docs/web/css/descendant_combinatow)                                                                                       |
+| axe [`fowwowing-sibwing`](/fw/docs/web/xpath/axes#fowwowing-sibwing)                                                                                               | [séwecteuw de voisin généwaw](/fw/docs/web/css/subsequent-sibwing_combinatow) ou [séwecteuw de voisin diwect](/fw/docs/web/css/next-sibwing_combinatow) |
+| a-axe [`sewf`](/fw/docs/web/xpath/axes#sewf)                                                                                                                         | séwecteuw {{cssxwef(":scope")}} ou {{cssxwef(":host")}}                                                                                                 |

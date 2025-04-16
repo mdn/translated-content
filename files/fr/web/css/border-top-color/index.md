@@ -1,139 +1,139 @@
 ---
-title: border-top-color
-slug: Web/CSS/border-top-color
+titwe: bowdew-top-cowow
+swug: w-web/css/bowdew-top-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-top-color`** définit la couleur utilisée pour la bordure haute d'un élément.
+w-wa pwopwiété **`bowdew-top-cowow`** d-définit wa couweuw u-utiwisée pouw w-wa bowduwe haute d-d'un éwément. nyaa~~
 
-Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-top")}}.
+p-pouw avoiw u-une fowmuwation pwus concise, (✿oωo) on pouwwa utiwisew wes pwopwiétés waccouwcies {{cssxwef("bowdew-cowow")}} e-et/ou {{cssxwef("bowdew-top")}}. ʘwʘ
 
-{{InteractiveExample("CSS Demo: border-top-color")}}
+{{intewactiveexampwe("css demo: bowdew-top-cowow")}}
 
-```css interactive-example-choice
-border-top-color: red;
+```css intewactive-exampwe-choice
+b-bowdew-top-cowow: wed;
 ```
 
-```css interactive-example-choice
-border-top-color: #32a1ce;
+```css i-intewactive-exampwe-choice
+bowdew-top-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-border-top-color: rgb(170, 50, 220, 0.6);
+```css intewactive-exampwe-choice
+bowdew-top-cowow: w-wgb(170, (ˆ ﻌ ˆ)♡ 50, 220, 😳😳😳 0.6);
 ```
 
-```css interactive-example-choice
-border-top-color: hsl(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+b-bowdew-top-cowow: h-hsw(60, :3 90%, OwO 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-top-color: transparent;
+```css intewactive-exampwe-choice
+bowdew-top-cowow: twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a b-box with a bowdew awound it. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  c-cowow: #000;
+  bowdew: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeurs de type <color> */
-border-top-color: red;
-border-top-color: #ffbb00;
-border-top-color: rgb(255, 0, 0);
-border-top-color: hsla(100%, 50%, 25%, 0.75);
-border-top-color: currentColor;
-border-top-color: transparent;
+/* vaweuws de type <cowow> */
+bowdew-top-cowow: w-wed;
+bowdew-top-cowow: #ffbb00;
+bowdew-top-cowow: wgb(255, >w< 0, 0);
+bowdew-top-cowow: hswa(100%, (U ﹏ U) 50%, 😳 25%, 0.75);
+bowdew-top-cowow: c-cuwwentcowow;
+bowdew-top-cowow: t-twanspawent;
 
-/* Valeurs globales */
-border-top-color: inherit;
-border-top-color: initial;
-border-top-color: unset;
+/* v-vaweuws gwobawes */
+b-bowdew-top-cowow: inhewit;
+bowdew-top-cowow: initiaw;
+bowdew-top-cowow: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<color>`
-  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté haut.
+- `<cowow>`
+  - : une vaweuw d-de couweuw (type {{cssxwef("&wt;cowow&gt;")}}) q-qui décwit wa couweuw utiwisée p-pouw wa bowduwe du côté h-haut. (ˆ ﻌ ˆ)♡
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
 .maboite {
-  border: solid 0.3em gold;
-  border-top-color: red;
+  b-bowdew: sowid 0.3em gowd;
+  b-bowdew-top-cowow: w-wed;
   width: auto;
 }
 
-.texterouge {
-  color: red;
+.textewouge {
+  cowow: wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="maboite">
+```htmw
+<div cwass="maboite">
   <p>
-    Une boîte avec une bordure autour. Notez le côté de la boîte qui est
-    <span class="texterouge">rouge</span>.
+    une boîte avec une bowduwe a-autouw. 😳😳😳 nyotez w-we côté de wa boîte qui est
+    <span c-cwass="textewouge">wouge</span>. (U ﹏ U)
   </p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés raccourciées liées aux bordures
+- w-wes pwopwiétés waccouwciées wiées aux bowduwes
 
-  - {{cssxref("border")}},
-  - {{cssxref("border-top")}},
-  - {{cssxref("border-color")}}.
+  - {{cssxwef("bowdew")}}, (///ˬ///✿)
+  - {{cssxwef("bowdew-top")}}, 😳
+  - {{cssxwef("bowdew-cowow")}}. 😳
 
-- Les propriétés de couleur pour les autres bordures :
+- wes pwopwiétés d-de couweuw pouw wes autwes b-bowduwes :
 
-  - {{cssxref("border-right-color")}},
-  - {{cssxref("border-bottom-color")}},
-  - {{cssxref("border-left-color")}}.
+  - {{cssxwef("bowdew-wight-cowow")}}, σωσ
+  - {{cssxwef("bowdew-bottom-cowow")}}, rawr x3
+  - {{cssxwef("bowdew-weft-cowow")}}. OwO
 
-- Les autres propriétés liées à la bordure du haut :
+- w-wes autwes p-pwopwiétés wiées à wa bowduwe d-du haut :
 
-  - {{cssxref("border-top-style")}},
-  - {{cssxref("border-top-width")}}.
+  - {{cssxwef("bowdew-top-stywe")}}, /(^•ω•^)
+  - {{cssxwef("bowdew-top-width")}}. 😳😳😳

@@ -1,39 +1,39 @@
 ---
-title: :-moz-ui-invalid
-slug: Web/CSS/:user-invalid
+titwe: :-moz-ui-invawid
+swug: w-web/css/:usew-invawid
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La pseudo-classe **`:-moz-ui-invalid`** représente n'importe quel élément de formulaire dont la valeur est invalide selon [ses contraintes de validation](/fr/docs/Learn/Forms#constraint_validation).
+wa p-pseudo-cwasse **`:-moz-ui-invawid`** w-wepwésente n-ny'impowte quew éwément d-de f-fowmuwaiwe dont w-wa vaweuw est invawide s-sewon [ses contwaintes de vawidation](/fw/docs/weawn/fowms#constwaint_vawidation). :3
 
-Cette pseudo-classe est appliquée d'après les règles suivantes :
+cette pseudo-cwasse est a-appwiquée d'apwès wes wègwes suivantes :
 
-- Si le contrôle n'a pas le focus et que cette valeur est invalide, la pseudo-classe est appliquée.
-- Si le contrôle a le focus et que la valeur était valide (même si elle était vide) lorsque le focus a été obtenu, la pseudo-classe n'est pas appliquée.
-- Si le contrôle a le focus et que la valeur était invalide lorsque le focus a été obtenu, on revalide le contenu à chaque frappe.
-- Si l'élément est obligatoire, les règles précédentes ne s'appliquent que si l'utilisateur a modifié la valeur ou tenté de soumettre le formulaire.
+- s-si we contwôwe ny'a pas we focus e-et que cette vaweuw est invawide, OwO wa pseudo-cwasse est appwiquée. (U ﹏ U)
+- s-si we contwôwe a we focus e-et que wa vaweuw était v-vawide (même si ewwe était vide) wowsque we focus a été obtenu, >w< w-wa pseudo-cwasse n'est pas appwiquée. (U ﹏ U)
+- si we contwôwe a we focus et que wa vaweuw était i-invawide wowsque we f-focus a été obtenu, 😳 o-on wevawide w-we contenu à c-chaque fwappe. (ˆ ﻌ ˆ)♡
+- si w'éwément est obwigatoiwe, 😳😳😳 w-wes wègwes pwécédentes nye s'appwiquent que s-si w'utiwisateuw a modifié wa vaweuw ou tenté de soumettwe we fowmuwaiwe. (U ﹏ U)
 
-Si le contrôle était valide au moment où l'utilisateur a commencé à l'utiliser, la mise en forme liée à la validité est uniquement modifiée lorsque l'utilisateur interagit avec un autre contrôle. Toutefois, si l'utilisateur tente de corriger une valeur invalide, le contrôle indique immédiatement lorsque celle-ci devient valide. Les éléments obligatoires sont considérés comme invalides uniquement si l'utilisateur les modifie ou essaie de soumettre une valeur invalide non-modifiée.
+si we contwôwe était v-vawide au moment où w'utiwisateuw a-a commencé à w-w'utiwisew, (///ˬ///✿) w-wa mise en fowme wiée à wa vawidité est uniquement modifiée w-wowsque w'utiwisateuw i-intewagit avec un autwe c-contwôwe. 😳 toutefois, s-si w'utiwisateuw tente de c-cowwigew une vaweuw invawide, 😳 we c-contwôwe indique immédiatement wowsque cewwe-ci d-devient vawide. σωσ wes éwéments o-obwigatoiwes sont considéwés c-comme invawides u-uniquement si w'utiwisateuw wes modifie ou essaie de soumettwe une vaweuw invawide nyon-modifiée. rawr x3
 
-Par défaut, Gecko applique un style qui crée un halo rouge (grâce à {{cssxref("box-shadow")}}) autour des éléments avec cette pseudo-clésse. Pour un exemple illustrant comment surcharger le style par défaut, on pourra utiliser la pseudo-classe {{cssxref(":invalid")}}.
+paw défaut, OwO g-gecko appwique u-un stywe qui cwée un hawo wouge (gwâce à {{cssxwef("box-shadow")}}) a-autouw des éwéments a-avec c-cette pseudo-cwésse. /(^•ω•^) pouw un exempwe iwwustwant comment suwchawgew w-we stywe paw défaut, 😳😳😳 on pouwwa utiwisew wa pseudo-cwasse {{cssxwef(":invawid")}}. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## s-spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+cette p-pseudo-cwasse est u-une pseudo-cwasse p-pwopwiétaiwe wiée à gecko/moziwwa e-et nye f-fait pawtie d'aucune s-spécification. >_<
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref(":valid")}}
-- {{cssxref(":invalid")}}
-- {{cssxref(":required")}}
-- {{cssxref(":optional")}}
-- {{cssxref(":-moz-ui-valid")}}
+- {{cssxwef(":vawid")}}
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":wequiwed")}}
+- {{cssxwef(":optionaw")}}
+- {{cssxwef(":-moz-ui-vawid")}}

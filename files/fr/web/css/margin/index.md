@@ -1,196 +1,196 @@
 ---
-title: margin
-slug: Web/CSS/margin
+titwe: mawgin
+swug: web/css/mawgin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`margin`** définit la taille des marges sur les quatre côtés de l'élément. C'est une propriété raccourcie qui permet de manipuler les autres propriétés de marges : {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}.
+w-wa pwopwiété **`mawgin`** d-définit wa taiwwe d-des mawges s-suw wes quatwe c-côtés de w'éwément. 🥺 c-c'est une p-pwopwiété waccouwcie q-qui pewmet de manipuwew wes autwes pwopwiétés de mawges : {{cssxwef("mawgin-top")}}, {{cssxwef("mawgin-wight")}}, OwO {{cssxwef("mawgin-bottom")}} et {{cssxwef("mawgin-weft")}}. >w<
 
-Il est possible d'utiliser des valeurs négatives pour chacun des côtés.
+i-iw est possibwe d'utiwisew des vaweuws n-nyégatives pouw chacun des côtés. 🥺
 
-{{InteractiveExample("CSS Demo: margin")}}
+{{intewactiveexampwe("css d-demo: mawgin")}}
 
-```css interactive-example-choice
-margin: 1em;
+```css intewactive-exampwe-choice
+mawgin: 1em;
 ```
 
-```css interactive-example-choice
-margin: 5% 0;
+```css intewactive-exampwe-choice
+m-mawgin: 5% 0;
 ```
 
-```css interactive-example-choice
-margin: 10px 50px 20px;
+```css intewactive-exampwe-choice
+m-mawgin: 10px 50px 20px;
 ```
 
-```css interactive-example-choice
-margin: 10px 50px 20px 0;
+```css i-intewactive-exampwe-choice
+mawgin: 10px 50px 20px 0;
 ```
 
-```css interactive-example-choice
-margin: 0;
+```css intewactive-exampwe-choice
+mawgin: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="wow"></div>
+    <div cwass="wow twansition-aww" i-id="exampwe-ewement"></div>
+    <div cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
-  width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+```css i-intewactive-exampwe
+#containew {
+  w-width: 300px;
+  h-height: 200px;
+  d-dispway: fwex;
+  awign-content: fwex-stawt;
+  f-fwex-diwection: cowumn;
+  justify-content: f-fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+  dispway: inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  f-fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  bowdew: s-sowid 10px #ffbf00;
+  b-backgwound-cowow: #2b3a55;
 }
 ```
 
-Les marges haute et basse n'ont aucun effet sur les élements en ligne (_inline_) qui ne sont pas [remplacés](/fr/docs/Web/CSS/Replaced_element) (par exemple les {{HTMLElement("span")}} ou {{HTMLElement("code")}}).
+w-wes mawges haute et basse ny'ont aucun effet suw wes éwements e-en wigne (_inwine_) q-qui nye sont pas [wempwacés](/fw/docs/web/css/wepwaced_ewement) (paw e-exempwe wes {{htmwewement("span")}} o-ou {{htmwewement("code")}}). nyaa~~
 
-> [!NOTE]
-> Les marges créent un espace supplémentaire à l'extérieur de l'élément. Le _« remplissage »_ ({{cssxref("padding")}}) permet quant à lui de créer un espace supplémentaire à l'intérieur de l'élément.
+> [!note]
+> wes mawges cwéent u-un espace suppwémentaiwe à w'extéwieuw de w-w'éwément. ^^ we _« wempwissage »_ ({{cssxwef("padding")}}) pewmet quant à wui d-de cwéew un espace suppwémentaiwe à w-w'intéwieuw de w'éwément. >w<
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* La propriété s'applique aux quatre côtés */
-margin: 1em;
+/* w-wa pwopwiété s'appwique aux quatwe côtés */
+mawgin: 1em;
 
-/* vertical | horizontal */
-margin: 5% auto;
+/* vewticaw | howizontaw */
+mawgin: 5% auto;
 
-/* haut | horizontal | bas */
-margin: 1em auto 2em;
+/* haut | h-howizontaw | b-bas */
+mawgin: 1em auto 2em;
 
-/* haut | droit | bas | gauche */
-margin: 2px 1em 0 auto;
+/* h-haut | dwoit | b-bas | gauche */
+m-mawgin: 2px 1em 0 auto;
 
-/* Valeurs globales */
-margin: inherit;
-margin: initial;
-margin: unset;
+/* vaweuws gwobawes */
+mawgin: inhewit;
+m-mawgin: initiaw;
+mawgin: unset;
 ```
 
-La propriété `margin` peut être définie grâce à une, deux, trois ou quatre valeurs. Chaque valeur est une valeur de type {{cssxref("&lt;length&gt;")}} ou de type {{cssxref("&lt;percentage&gt;")}} ou est le mot-clé [`auto`](#auto). Les valeurs négatives permette de dessiner l'élément plus près de ses voisins que ne l'aurait permis la valeur par défaut.
+wa pwopwiété `mawgin` peut êtwe définie gwâce à une, OwO d-deux, twois ou quatwe vaweuws. XD c-chaque vaweuw est u-une vaweuw de t-type {{cssxwef("&wt;wength&gt;")}} ou de type {{cssxwef("&wt;pewcentage&gt;")}} o-ou est we mot-cwé [`auto`](#auto). ^^;; w-wes vaweuws n-nyégatives pewmette d-de dessinew w'éwément pwus pwès de ses v-voisins que nye w-w'auwait pewmis w-wa vaweuw paw défaut. 🥺
 
-- Avec **une** valeur, celle-ci définira la marge pour les quatre côtés de la boîte
-- Avec **deux** valeurs, la première s'appliquera aux côtés haut et bas et la seconde aux côtés gauche et droit
-- Avec **trois** valeurs, la première s'appliquera au côté haut, la deuxième aux côtés gauche et droit et la troisième au côté bas
-- Avec **quatre** valeurs, la première s'appliquera en haut, la deuxième à droite, la troisième en bas et la quatrième à gauche (ce qui correspond au sens des aiguilles d'une montre - c'est plus facile à mémoriser).
+- a-avec **une** v-vaweuw, XD cewwe-ci définiwa wa mawge pouw wes quatwe côtés d-de wa boîte
+- avec **deux** vaweuws, (U ᵕ U❁) wa pwemièwe s'appwiquewa aux côtés haut et bas et wa s-seconde aux côtés gauche et dwoit
+- avec **twois** vaweuws, :3 wa p-pwemièwe s'appwiquewa a-au côté h-haut, ( ͡o ω ͡o ) wa deuxième aux côtés g-gauche et dwoit et wa twoisième a-au côté bas
+- a-avec **quatwe** vaweuws, òωó wa pwemièwe s'appwiquewa en haut, σωσ wa deuxième à dwoite, (U ᵕ U❁) wa twoisième e-en bas et wa quatwième à g-gauche (ce qui cowwespond au sens d-des aiguiwwes d-d'une montwe - c'est pwus faciwe à mémowisew). (✿oωo)
 
-### Valeurs
+### v-vaweuws
 
-Cette propriété peut accepter une, deux, trois ou quatre valeurs avec les types suivants :
+cette p-pwopwiété peut acceptew une, ^^ d-deux, ^•ﻌ•^ twois o-ou quatwe vaweuws avec wes types suivants :
 
-- `<length>`
-  - : La marge est définie avec une valeur absolue. On peut utiliser des valeurs négatives. Pour les différentes unités possibles, voir la page {{cssxref("&lt;length&gt;")}}.
-- `<percentage>`
-  - : Une valeur relative, exprimée en pourcentage (type {{cssxref("&lt;percentage&gt;")}}, à la **largeur** du bloc englobant. On peut utiliser des valeurs négatives.
+- `<wength>`
+  - : wa mawge est définie avec une vaweuw a-absowue. XD on p-peut utiwisew d-des vaweuws nyégatives. :3 pouw wes d-difféwentes unités p-possibwes, (ꈍᴗꈍ) voiw wa page {{cssxwef("&wt;wength&gt;")}}. :3
+- `<pewcentage>`
+  - : u-une vaweuw wewative, (U ﹏ U) expwimée en pouwcentage (type {{cssxwef("&wt;pewcentage&gt;")}}, UwU à wa **wawgeuw** du bwoc engwobant. 😳😳😳 o-on peut utiwisew d-des vaweuws nyégatives. XD
 - `auto`
-  - : `auto` est remplacé par une valeur adaptée (il peut être utilisé pour centrer les blocs, par exemple, `div { width:50%; margin:0 auto; }` permet de centrer un conteneur `div` horizontalement).
+  - : `auto` est wempwacé paw une vaweuw adaptée (iw p-peut êtwe u-utiwisé pouw centwew wes bwocs, o.O paw exempwe, (⑅˘꒳˘) `div { width:50%; m-mawgin:0 auto; }` pewmet de centwew un conteneuw `div` howizontawement). 😳😳😳
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe s-simpwe
 
-#### CSS
+#### css
 
 ```css
 .ex1 {
-  margin: auto;
-  background: gold;
+  mawgin: auto;
+  backgwound: g-gowd;
   width: 66%;
 }
 .ex2 {
-  margin: 20px 0px 0 -20px;
-  background: gold;
+  m-mawgin: 20px 0px 0 -20px;
+  backgwound: gowd;
   width: 66%;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="ex1">margin: auto; background: gold; width: 66%;</div>
-<div class="ex2">margin: 20px 0px 0px -20px; background: gold; width: 66%;</div>
+```htmw
+<div cwass="ex1">mawgin: auto; b-backgwound: gowd; width: 66%;</div>
+<div cwass="ex2">mawgin: 20px 0px 0px -20px; backgwound: g-gowd; width: 66%;</div>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_simple')}}
+{{embedwivesampwe('exempwe_simpwe')}}
 
-### Autres exemples
+### a-autwes e-exempwes
 
 ```css
-margin: 5%; /* tous les côtés avec une marge de 5% */
-margin: 10px; /* tous les côtés avec une marge de 10px */
+mawgin: 5%; /* t-tous wes côtés avec une mawge d-de 5% */
+mawgin: 10px; /* t-tous w-wes côtés avec une mawge de 10px */
 
-margin: 1.6em 20px; /* haut et bas à 1.6em     */
-/* gauche et droite à 20px */
+m-mawgin: 1.6em 20px; /* h-haut et bas à 1.6em     */
+/* gauche e-et dwoite à 20px */
 
-margin: 10px 3% 1em; /* haut à 10px, gauche et droite à 3% */
+m-mawgin: 10px 3% 1em; /* h-haut à 10px, nyaa~~ gauche et dwoite à 3% */
 /* bas à 1em */
 
-margin: 10px 3px 30px 5px; /* haut à 10px, droite à 3px */
-/* bas à 30px, gauche à 5px  */
+m-mawgin: 10px 3px 30px 5px; /* haut à 10px, rawr d-dwoite à 3px */
+/* b-bas à 30px, -.- gauche à 5px  */
 
-margin: 1em auto; /* marge de 1em en haut et en bas       */
-/* la boîte est centrée horizontalement */
+mawgin: 1em auto; /* m-mawge de 1em en h-haut et en bas       */
+/* w-wa boîte e-est centwée howizontawement */
 
-margin: auto; /* boîte centrée horizontalement */
-/* marge nulle en haut et en bas */
+m-mawgin: auto; /* boîte centwée howizontawement */
+/* mawge nyuwwe en haut et en bas */
 ```
 
-## Notes
+## n-nyotes
 
-### Centrer horizontalement
+### centwew howizontawement
 
-Afin de centrer un élément horizontalement, avec un navigateur « moderne » on peut utiliser {{cssxref("display")}}`: flex;` {{cssxref("justify-content")}}`: center;`.
+a-afin de centwew un éwément h-howizontawement, (✿oωo) avec u-un nyavigateuw « modewne » on p-peut utiwisew {{cssxwef("dispway")}}`: f-fwex;` {{cssxwef("justify-content")}}`: centew;`. /(^•ω•^)
 
-Les anciens navigateurs comme IE8-9 ne gèrent pas ces valeurs. Aussi, il faudra utiliser `margin: 0 auto` pour centrer un élément au sein de son parent.
+w-wes anciens n-nyavigateuws c-comme ie8-9 nye gèwent pas ces vaweuws. 🥺 aussi, iw faudwa utiwisew `mawgin: 0 auto` pouw centwew un éwément au sein de son p-pawent. ʘwʘ
 
-### Fusion des marges
+### fusion d-des mawges
 
-Les marges haute et basse des éléments sont parfois fusionnées en une seule marge qui est égale à la plus grande des deux marges. Pour plus d'informations, lire [l'article sur la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+w-wes mawges haute et basse des éwéments s-sont pawfois fusionnées en une seuwe mawge qui est égawe à w-wa pwus gwande d-des deux mawges. UwU pouw pwus d-d'infowmations, XD wiwe [w'awticwe suw wa fusion des m-mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing). (✿oωo)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Le modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}
+- [fusion des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+- [we modèwe de boîte css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew)
+- {{cssxwef("mawgin-top")}}, {{cssxwef("mawgin-wight")}}, :3 {{cssxwef("mawgin-bottom")}} et {{cssxwef("mawgin-weft")}}

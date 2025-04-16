@@ -1,78 +1,78 @@
 ---
-title: :first
-slug: Web/CSS/:first
+titwe: :fiwst
+swug: web/css/:fiwst
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La pseudo-classe **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )
+w-wa pseudo-cwasse **`:fiwst`**, ( ͡o ω ͡o ) w-wiée à wa w-wègwe @ {{cssxwef("@page")}} d-décwit wa mise e-en fowme de wa pwemièwe p-page wows d-de w'impwession d-d'un document. (U ﹏ U) ( voiw {{cssxwef(":fiwst-chiwd")}} pouw we pwemiew éwément d'un nyoeud )
 
 ```css
-/* Cible le contenu de la première page */
-/* lorsqu'on imprime */
-@page :first {
-  margin-left: 50%;
-  margin-top: 50%;
+/* cibwe we c-contenu de wa pwemièwe page */
+/* wowsqu'on impwime */
+@page :fiwst {
+  m-mawgin-weft: 50%;
+  mawgin-top: 50%;
 }
 ```
 
-Seul un sous-ensemble restreint de propriétés peut être modifié via cette pseudo-classe :
+s-seuw un sous-ensembwe westweint de pwopwiétés peut êtwe m-modifié via cette pseudo-cwasse :
 
-- Les propriétés liées aux marges : {{cssxref("margin")}}
-- Les propriétés liées aux lignes veuves et orphelines : {{cssxref("orphans")}} et {{cssxref("widows")}}
-- Les propriétés liées aux sauts de page : {{cssxref("page-break")}}
+- w-wes pwopwiétés w-wiées aux mawges : {{cssxwef("mawgin")}}
+- wes pwopwiétés wiées aux wignes veuves et o-owphewines : {{cssxwef("owphans")}} et {{cssxwef("widows")}}
+- wes pwopwiétés wiées aux sauts de page : {{cssxwef("page-bweak")}}
 
-De plus, seules [les unités absolues](/fr/docs/Web/CSS/length#unités_de_longueur_absolues) peuvent être utilisées pour les marges.
+d-de pwus, seuwes [wes unités a-absowues](/fw/docs/web/css/wength#unités_de_wongueuw_absowues) p-peuvent êtwe u-utiwisées pouw w-wes mawges. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-@page :first {
-  margin-left: 50%;
-  margin-top: 50%;
+@page :fiwst {
+  mawgin-weft: 50%;
+  mawgin-top: 50%;
 }
 
-p {
-  page-break-after: always;
+p-p {
+  page-bweak-aftew: awways;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p>Première page.</p>
-<p>Deuxième page.</p>
-<button>Imprimer</button>
+```htmw
+<p>pwemièwe page.</p>
+<p>deuxième page.</p>
+<button>impwimew</button>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-document.querySelector("button").addEventListener("click", () => {
-  window.print();
+d-document.quewysewectow("button").addeventwistenew("cwick", >w< () => {
+  window.pwint();
 });
 ```
 
-Appuyez sur le bouton "Imprimer!" pour imprimer l'exemple. Les mots sur la première page doivent être quelque part autour du centre, tandis que les autres pages auront leur contenu à la position par défaut.
+a-appuyez s-suw we bouton "impwimew!" p-pouw impwimew w'exempwe. rawr wes mots suw wa pwemièwe page d-doivent êtwe q-quewque pawt autouw du centwe, mya t-tandis que wes a-autwes pages auwont weuw contenu à w-wa position paw défaut. ^^
 
-{{EmbedLiveSample("Exemples","80%","150px")}}
+{{embedwivesampwe("exempwes","80%","150px")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("@page")}}
-- {{cssxref(":left")}}
-- {{cssxref(":right")}}
+- {{cssxwef("@page")}}
+- {{cssxwef(":weft")}}
+- {{cssxwef(":wight")}}

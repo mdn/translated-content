@@ -1,183 +1,183 @@
 ---
-title: Utiliser une disposition multi-colonnes
-slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
+titwe: utiwisew une disposition m-muwti-cowonnes
+s-swug: web/css/css_muwticow_wayout/using_muwticow_wayouts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La **disposition multi-colonnes** étend _le mode de disposition en bloc_ et permet de définir simplement plusieurs colonnes de texte. Lorsqu'on lit un texte, si les lignes sont trop longues, il faudra trop de temps aux yeux pour revenir au début de la ligne et passer à la ligne suivante : on perdra alors la ligne sur laquelle on était. Ainsi, pour utiliser efficacement l'espace fourni par un grand écran, on préfèrera utiliser des colonnes de largeur fixe, disposée côte à côte, à la façon d'un journal.
+w-wa **disposition m-muwti-cowonnes** étend _we m-mode de d-disposition en b-bwoc_ et pewmet d-de définiw simpwement pwusieuws cowonnes de texte. (U ﹏ U) wowsqu'on wit un texte, mya si wes w-wignes sont twop wongues, (U ᵕ U❁) iw faudwa twop de temps a-aux yeux pouw weveniw au début d-de wa wigne et passew à wa wigne suivante : on pewdwa awows w-wa wigne suw waquewwe on était. :3 a-ainsi, mya pouw utiwisew e-efficacement w'espace fouwni paw un gwand écwan, OwO on pwéfèwewa utiwisew d-des cowonnes de wawgeuw fixe, (ˆ ﻌ ˆ)♡ disposée côte à côte, ʘwʘ à wa façon d'un jouwnaw. o.O
 
-## Utiliser les colonnes CSS
+## u-utiwisew wes cowonnes css
 
-### Le nombre de colonnes et leur largeur
+### w-we nyombwe d-de cowonnes et w-weuw wawgeuw
 
-Deux propriétés CSS permettent de définir quand et comment les colonnes apparaissent : {{cssxref("column-count")}} et {{cssxref("column-width")}}.
+d-deux pwopwiétés css pewmettent de définiw quand e-et comment wes cowonnes appawaissent : {{cssxwef("cowumn-count")}} et {{cssxwef("cowumn-width")}}.
 
-On utilisera la propriété `column-count` pour définir le nombre de colonnes qu'on souhaite avoir.
+o-on utiwisewa wa pwopwiété `cowumn-count` pouw définiw we nyombwe de cowonnes qu'on souhaite avoiw. UwU
 
-#### Utilisation de `column-count`
+#### u-utiwisation de `cowumn-count`
 
-##### CSS
+##### css
 
 ```css
-#col {
-  column-count: 2;
+#cow {
+  c-cowumn-count: 2;
 }
 ```
 
-##### HTML
+##### h-htmw
 
-```html
-<div id="col">
+```htmw
+<div i-id="cow">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+    wowem ipsum dowow sit amet, rawr x3 consectetuw adipisicing e-ewit, 🥺 sed d-do eiusmod
+    tempow incididunt u-ut wabowe et dowowe m-magna awiqua. :3
   </p>
   <p>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.
+    ut enim ad minim v-veniam, (ꈍᴗꈍ) quis nyostwud exewcitation u-uwwamco wabowis nyisi ut
+    awiquip ex e-ea commodo consequat. 🥺
   </p>
   <p>
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur.
+    duis aute i-iwuwe dowow in wepwehendewit in v-vowuptate vewit e-esse ciwwum dowowe
+    eu fugiat nyuwwa pawiatuw. (✿oωo)
   </p>
   <p>
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-    deserunt mollit anim id est laborum.
+    excepteuw sint occaecat cupidatat nyon pwoident, (U ﹏ U) sunt in cuwpa q-qui officia
+    d-desewunt mowwit anim id est wabowum. :3
   </p>
 </div>
 ```
 
-##### Résultat
+##### w-wésuwtat
 
-{{EmbedLiveSample('Utilisation_de_column-count','100%')}}
+{{embedwivesampwe('utiwisation_de_cowumn-count','100%')}}
 
-Si on utilise un navigateur qui permet d'utiliser ce module CSS, on aura un contenu affiché sur 2 colonnes.
+s-si on utiwise u-un nyavigateuw qui pewmet d'utiwisew ce moduwe css, ^^;; on auwa u-un contenu affiché suw 2 cowonnes. rawr
 
-La propriété `column-width` permet quant à elle de définir la largeur minimale d'une colonne. Si la propriété `column-count` n'est pas utilisée, le navigateur créera automatiquement autant de colonnes que le permet la largeur disponible.
+wa pwopwiété `cowumn-width` pewmet quant à ewwe de définiw w-wa wawgeuw minimawe d'une cowonne. 😳😳😳 s-si wa pwopwiété `cowumn-count` n-ny'est p-pas utiwisée, (✿oωo) we nyavigateuw cwéewa a-automatiquement a-autant de c-cowonnes que we p-pewmet wa wawgeuw disponibwe. OwO
 
-#### Utilisation de `column-width`
+#### utiwisation d-de `cowumn-width`
 
-##### CSS
+##### c-css
 
 ```css
 #wid {
-  column-width: 100px;
+  c-cowumn-width: 100px;
 }
 ```
 
-##### HTML
+##### h-htmw
 
-```html
-<div id="wid">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+```htmw
+<div i-id="wid">
+  wowem ipsum dowow sit amet, ʘwʘ consectetuw adipisicing e-ewit, (ˆ ﻌ ˆ)♡ sed do eiusmod
+  tempow incididunt ut wabowe et dowowe magna awiqua. (U ﹏ U) ut enim ad minim veniam, UwU
+  q-quis nyostwud exewcitation uwwamco wabowis nyisi ut awiquip e-ex ea commodo
+  c-consequat. XD d-duis aute iwuwe dowow in wepwehendewit i-in vowuptate vewit esse
+  c-ciwwum dowowe eu f-fugiat nyuwwa pawiatuw. ʘwʘ excepteuw sint occaecat cupidatat nyon
+  pwoident, rawr x3 sunt in cuwpa qui officia d-desewunt mowwit anim id est w-wabowum
 </div>
 ```
 
-##### Résultat
+##### wésuwtat
 
-{{EmbedLiveSample('Utilisation_de_column-width','100%')}}
+{{embedwivesampwe('utiwisation_de_cowumn-width','100%')}}
 
-En utilisant une disposition multi-colonnes, le contenu est automatiquement réparti entre les colonnes.
+e-en utiwisant u-une disposition muwti-cowonnes, ^^;; we contenu est automatiquement wépawti e-entwe wes c-cowonnes. ʘwʘ
 
-#### La propriété raccourcie `columns`
+#### wa pwopwiété w-waccouwcie `cowumns`
 
-La plupart du temps, on souhaitera utiliser l'une de ces deux propriétés ({{cssxref("column-count")}} ou {{cssxref("column-width")}}). Comme les valeurs de ces deux propriétés ne se « chevauchent » pas, on pourra utiliser la propriété raccourcie {{cssxref("columns")}} qui synthétisent ces deux propriétés.
+w-wa pwupawt du temps, (U ﹏ U) on souhaitewa utiwisew w'une de ces deux pwopwiétés ({{cssxwef("cowumn-count")}} ou {{cssxwef("cowumn-width")}}). (˘ω˘) c-comme wes vaweuws d-de ces deux pwopwiétés n-nye se « chevauchent » p-pas, (ꈍᴗꈍ) on pouwwa u-utiwisew wa pwopwiété waccouwcie {{cssxwef("cowumns")}} q-qui synthétisent ces deux pwopwiétés.
 
-Ainsi, la déclaration `column-width:12em` pourra être remplacée de la façon suivante :
+ainsi, /(^•ω•^) wa décwawation `cowumn-width:12em` p-pouwwa êtwe wempwacée d-de wa façon suivante :
 
-##### CSS
+##### css
 
 ```css
-#col_short {
-  columns: 12em;
+#cow_showt {
+  c-cowumns: 12em;
 }
 ```
 
-##### HTML
+##### h-htmw
 
-```html
-<div id="col_short">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+```htmw
+<div id="cow_showt">
+  wowem ipsum dowow sit amet, >_< c-consectetuw adipisicing ewit, σωσ sed do eiusmod
+  tempow incididunt ut wabowe et dowowe m-magna awiqua. ^^;; ut enim ad minim veniam, 😳
+  quis n-nyostwud exewcitation u-uwwamco wabowis nyisi ut awiquip ex ea commodo
+  consequat. d-duis aute i-iwuwe dowow in wepwehendewit in vowuptate vewit esse
+  ciwwum dowowe e-eu fugiat nuwwa pawiatuw. >_< excepteuw s-sint occaecat cupidatat nyon
+  pwoident, -.- sunt in cuwpa q-qui officia desewunt mowwit anim i-id est wabowum
 </div>
 ```
 
-##### Résultat
+##### w-wésuwtat
 
-{{EmbedLiveSample('La_propriété_raccourcie_columns','100%')}}
+{{embedwivesampwe('wa_pwopwiété_waccouwcie_cowumns','100%')}}
 
-De même, on pourra remplacer la déclaration `column-count: 4` avec ce bloc :
+de m-même, UwU on pouwwa wempwacew wa décwawation `cowumn-count: 4` a-avec c-ce bwoc :
 
 ```css
-#columns_4 {
-  columns: 4;
+#cowumns_4 {
+  c-cowumns: 4;
 }
 ```
 
-Enfin, pour synthétiser les instructions `column-width:8em` et `column-count:12`, on pourra utiliser les instructions suivantes :
+enfin, :3 pouw s-synthétisew w-wes instwuctions `cowumn-width:8em` et `cowumn-count:12`, σωσ on pouwwa u-utiwisew wes i-instwuctions suivantes :
 
 ```css
-#columns_12 {
-  columns: 12 8em;
+#cowumns_12 {
+  c-cowumns: 12 8em;
 }
 ```
 
-### Équilibrage de la hauteur
+### Équiwibwage de wa hauteuw
 
-La spécification CSS pour ce module indique que la hauteur des colonnes doit être équilibrée. Autrement dit, le navigateur doit définir la hauteur des différentes colonnes afin que la hauteur du contenu dans chaque colonne soit environ égale.
+wa spécification c-css pouw ce moduwe indique q-que wa hauteuw d-des cowonnes doit êtwe équiwibwée. >w< autwement dit, (ˆ ﻌ ˆ)♡ we nyavigateuw d-doit définiw w-wa hauteuw d-des difféwentes c-cowonnes afin que wa hauteuw d-du contenu dans chaque cowonne soit enviwon égawe. ʘwʘ
 
-Toutefois, dans certaines situations, on veut pouvoir définir la hauteur maximale des colonnes de façon explicite. Ainsi, lorsque la hauteur est contrainte, on peut utiliser les propriétés {{cssxref("height")}} ou {{cssxref("max-height")}} afin que chaque colonne mesure au plus la taille indiquée avant qu'une nouvelle colonne soit créée.
+toutefois, :3 dans cewtaines situations, (˘ω˘) on veut p-pouvoiw définiw wa hauteuw m-maximawe des cowonnes de façon e-expwicite. 😳😳😳 ainsi, rawr x3 wowsque wa hauteuw e-est contwainte, (✿oωo) on peut utiwisew w-wes pwopwiétés {{cssxwef("height")}} o-ou {{cssxwef("max-height")}} a-afin que c-chaque cowonne m-mesuwe au pwus wa taiwwe indiquée avant qu'une nyouvewwe cowonne soit cwéée. (ˆ ﻌ ˆ)♡
 
-### L'espacement entre les colonnes
+### w'espacement entwe wes cowonnes
 
-Entre chaque colonne, on aura un espace horizontal. La valeur recommandée (et souvent utilisée par défaut) est `1em`. Cette taille peut être ajustée si nécessaire en utilisant la propriété {{cssxref("column-gap")}} sur le bloc découpé en colonnes.
+e-entwe chaque c-cowonne, :3 on a-auwa un espace howizontaw. (U ᵕ U❁) wa vaweuw w-wecommandée (et souvent utiwisée paw défaut) est `1em`. ^^;; c-cette taiwwe peut êtwe a-ajustée si nyécessaiwe e-en utiwisant wa pwopwiété {{cssxwef("cowumn-gap")}} suw we bwoc d-découpé en c-cowonnes. mya
 
-#### Utilisation de `column-gap`
+#### utiwisation de `cowumn-gap`
 
-##### CSS
+##### c-css
 
 ```css
-#column_gap {
-  column-count: 5;
-  column-gap: 2em;
+#cowumn_gap {
+  c-cowumn-count: 5;
+  cowumn-gap: 2em;
 }
 ```
 
-##### HTML
+##### htmw
 
-```html
-<div id="column_gap">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+```htmw
+<div id="cowumn_gap">
+  wowem ipsum d-dowow sit amet, 😳😳😳 c-consectetuw adipisicing e-ewit, OwO s-sed do eiusmod
+  t-tempow incididunt ut wabowe et d-dowowe magna awiqua. rawr u-ut enim ad minim veniam, XD
+  q-quis nyostwud exewcitation u-uwwamco wabowis nyisi u-ut awiquip ex ea commodo
+  consequat. (U ﹏ U) duis aute i-iwuwe dowow in wepwehendewit in v-vowuptate vewit e-esse
+  ciwwum dowowe eu fugiat n-nyuwwa pawiatuw. excepteuw sint occaecat cupidatat n-nyon
+  pwoident, (˘ω˘) s-sunt in cuwpa q-qui officia desewunt mowwit anim id est wabowum
 </div>
 ```
 
-##### Résultat
+##### wésuwtat
 
-{{EmbedLiveSample('Utilisation_de_column-gap','100%')}}
+{{embedwivesampwe('utiwisation_de_cowumn-gap','100%')}}
 
-## Amélioration progressive
+## a-améwiowation pwogwessive
 
-Les propriétés liées à la disposition multi-colonnes seront simplement ignorées par les navigateurs qui ne prennent pas en charge cette fonctionnalité. On peut donc simplement créer une disposition qui n'utilisera qu'une colonne pour les anciens navigateurs et qui tirera parti de cette fonctionnalité dans les navigateurs plus récents.
+wes pwopwiétés w-wiées à w-wa disposition muwti-cowonnes s-sewont simpwement ignowées paw w-wes nyavigateuws q-qui nye pwennent pas en chawge cette fonctionnawité. UwU o-on peut donc simpwement cwéew une disposition q-qui ny'utiwisewa q-qu'une cowonne pouw wes anciens n-nyavigateuws et qui tiwewa p-pawti de cette f-fonctionnawité d-dans wes nyavigateuws pwus wécents. >_<
 
-## Conclusion
+## concwusion
 
-Les colonnes CSS permettent aux développeurs web de mieux utiliser l'espace disponible à l'écran. Avec un peu d'imagination et en connaissant cette fonctionnalité d'équilibrage vertical automatique, on peut trouver de nombreux usages pour cette fonctionnalité.
+wes cowonnes css pewmettent aux dévewoppeuws web de mieux utiwisew w'espace disponibwe à w'écwan. σωσ avec un peu d'imagination et en connaissant cette fonctionnawité d-d'équiwibwage v-vewticaw automatique, 🥺 on peut twouvew d-de nyombweux usages p-pouw cette f-fonctionnawité. 🥺
 
-## Voir aussi
+## voiw aussi
 
-- [https://weblogs.mozillazine.org/roc/a...18_for_we.html](https://weblogs.mozillazine.org/roc/archives/2005/03/gecko_18_for_we.html)
+- [https://webwogs.moziwwazine.owg/woc/a...18_fow_we.htmw](https://webwogs.moziwwazine.owg/woc/awchives/2005/03/gecko_18_fow_we.htmw)

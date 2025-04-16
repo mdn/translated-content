@@ -1,100 +1,100 @@
 ---
-title: :only-of-type
-slug: Web/CSS/:only-of-type
-l10n:
-  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
+titwe: :onwy-of-type
+swug: web/css/:onwy-of-type
+w-w10n:
+  souwcecommit: 62681c2ef134407009c5c11fa679db1f485e016d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:only-of-type`** permet de cibler un élément qui ne possède aucun nœud frère du même type.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) [css](/fw/docs/web/css) **`:onwy-of-type`** p-pewmet de cibwew u-un éwément q-qui nye possède a-aucun nyœud f-fwèwe du même t-type. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css demo: :onwy-of-type", ʘwʘ "tabbed-showtew")}}
 
-```css interactive-example
-a:only-of-type {
-  color: fuchsia;
+```css intewactive-exampwe
+a:onwy-of-type {
+  cowow: f-fuchsia;
 }
 
-dd:only-of-type {
-  background-color: bisque;
+dd:onwy-of-type {
+  backgwound-cowow: bisque;
 }
 ```
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  To find out more about <b>QUIC</b>, check <a href="#">RFC 9000</a> and
-  <a href="#">RFC 9114</a>.
+  to find out m-mowe about <b>quic</b>, σωσ check <a hwef="#">wfc 9000</a> and
+  <a h-hwef="#">wfc 9114</a>. OwO
 </p>
 
-<dl>
-  <dt>Published</dt>
+<dw>
+  <dt>pubwished</dt>
   <dd>2021</dd>
   <dd>2022</dd>
-</dl>
+</dw>
 
-<p>Details about <b>QPACK</b> can be found in <a href="#">RFC 9204</a>.</p>
+<p>detaiws about <b>qpack</b> c-can b-be found in <a hwef="#">wfc 9204</a>.</p>
 
-<dl>
-  <dt>Published</dt>
+<dw>
+  <dt>pubwished</dt>
   <dd>2022</dd>
-</dl>
+</dw>
 ```
 
-> [!NOTE]
-> Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de niveau 4).
+> [!note]
+> dans wa vewsion initiawe de wa spécification (css3), 😳😳😳 w'éwément cibwé d-devait avoiw un pawent, 😳😳😳 ce ny'est pwus nyécessaiwe depuis (spécification pouw wes séwecteuws d-de nyiveau 4). o.O
 
-## Syntaxe
+## syntaxe
 
 ```css
-:only-of-type {
-  /* ... */
+:onwy-of-type {
+  /* ... ( ͡o ω ͡o ) */
 }
 ```
 
-## Exemples
+## e-exempwes
 
-### Mettre en forme des éléments sans voisins du même type
+### m-mettwe e-en fowme des éwéments s-sans voisins du même type
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <main>
-  <div>Je suis l'élément `div` n°1.</div>
-  <p>Je suis le seul élément `p` parmi mes voisins.</p>
-  <div>Je suis l'élément `div` n°2.</div>
+  <div>je s-suis w'éwément `div` ny°1.</div>
+  <p>je s-suis we seuw éwément `p` pawmi mes voisins.</p>
+  <div>je suis w'éwément `div` ny°2.</div>
   <div>
-    Je suis l'élément `div` n°3.
-    <i>Je suis le seul enfant `i`.</i>
-    <em>Je suis l'élément `em` n°1.</em>
-    <em>Je suis l'élément `em` n°2.</em>
+    je suis w'éwément `div` ny°3.
+    <i>je s-suis we seuw enfant `i`.</i>
+    <em>je s-suis w'éwément `em` n-ny°1.</em>
+    <em>je s-suis w'éwément `em` ny°2.</em>
   </div>
 </main>
 ```
 
-#### CSS
+#### css
 
 ```css
-main :only-of-type {
-  color: red;
+main :onwy-of-type {
+  cowow: wed;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('','100%',180)}}
+{{embedwivesampwe('','100%',180)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`:only-child`](/fr/docs/Web/CSS/:only-child)
-- [`:first-of-type`](/fr/docs/Web/CSS/:first-of-type)
-- [`:last-of-type`](/fr/docs/Web/CSS/:last-of-type)
-- [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type)
+- [`:onwy-chiwd`](/fw/docs/web/css/:onwy-chiwd)
+- [`:fiwst-of-type`](/fw/docs/web/css/:fiwst-of-type)
+- [`:wast-of-type`](/fw/docs/web/css/:wast-of-type)
+- [`:nth-of-type`](/fw/docs/web/css/:nth-of-type)

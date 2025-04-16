@@ -1,115 +1,115 @@
 ---
-title: Disposition de bloc et en ligne avec le flux normal
-slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
+titwe: disposition de bwoc et e-en wigne avec we f-fwux nyowmaw
+swug: w-web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Dans ce guide, nous verrons le comportement des éléments de bloc et des éléments en ligne lorsqu'ils sont placés dans le flux normal.
+d-dans ce guide, (///ˬ///✿) n-nyous vewwons w-we compowtement d-des éwéments d-de bwoc et des éwéments en wigne wowsqu'iws sont pwacés dans we fwux nyowmaw. XD
 
-Le flux normal est défini par [la spécification CSS 2.1](https://www.w3.org/TR/CSS2/visuren.html#normal-flow) qui explique comment les boîtes du flux normal s'inscrivent dans le contexte de formatage. Les boîtes peuvent être de bloc (_block_) ou en ligne (_inline_) mais pas les deux à la fois. Les boîtes de bloc contribuent au contexte de formatage des blocs et les boîtes en ligne contribuent au contexte de formatage en ligne.
+w-we fwux nyowmaw est défini paw [wa spécification c-css 2.1](https://www.w3.owg/tw/css2/visuwen.htmw#nowmaw-fwow) qui expwique c-comment wes boîtes du fwux nyowmaw s'inscwivent dans we contexte d-de fowmatage. :3 wes boîtes peuvent êtwe d-de bwoc (_bwock_) o-ou en wigne (_inwine_) mais pas wes deux à wa fois. òωó wes boîtes de b-bwoc contwibuent au contexte de fowmatage des bwocs et wes boîtes en wigne contwibuent a-au contexte de fowmatage e-en wigne. ^^
 
-Le comportement des éléments qui ont un contexte de formatage de bloc ou en ligne est également défini dans cette spécification. Pour les éléments avec un contexte de formatage de bloc, voici ce qui est indiqué dans la spécification :
+we c-compowtement des éwéments q-qui o-ont un contexte de fowmatage de bwoc ou en wigne e-est égawement défini dans cette spécification. ^•ﻌ•^ p-pouw wes éwéments avec un contexte de fowmatage de bwoc, σωσ voici ce qui est indiqué dans wa s-spécification :
 
-> « Dans un contexte de formatage de bloc, les boîtes sont disposées l'une après l'autre, verticalement, en démarrant en haut du bloc englobant. La distance verticale entre deux boîtes voisines est déterminée par les propriétés relatives aux marges. Les marges verticales fusionnent pour deux boîtes de bloc voisines au sein d'un contexte de formatage de bloc.
+> « dans un contexte d-de fowmatage d-de bwoc, wes b-boîtes sont disposées w'une apwès w'autwe, (ˆ ﻌ ˆ)♡ vewticawement, nyaa~~ en d-démawwant en h-haut du bwoc engwobant. wa distance v-vewticawe entwe d-deux boîtes voisines est détewminée p-paw wes pwopwiétés w-wewatives aux mawges. ʘwʘ wes mawges vewticawes fusionnent p-pouw deux boîtes de bwoc v-voisines au sein d'un contexte d-de fowmatage de b-bwoc. ^•ﻌ•^
 >
-> Dans un contexte de formatage de bloc, chaque bord gauche de chaque boîte touche le bord gauche du bloc englobant (pour les documents écrits de droite à gauche, ce sont les bords droits qui coïncident). » - 9.4.1
+> dans un contexte de fowmatage de bwoc, rawr x3 chaque bowd gauche de chaque boîte touche we bowd gauche du bwoc e-engwobant (pouw w-wes documents écwits de dwoite à g-gauche, 🥺 ce s-sont wes bowds d-dwoits qui coïncident). ʘwʘ » - 9.4.1
 
-Quant aux éléments du contexte de formatage en ligne :
+quant aux éwéments du contexte de fowmatage e-en wigne :
 
-> « Dans un contexte de formatage en ligne, les boîtes sont disposées horizontalement les unes après les autres, en démarrant en haut du bloc englobant. Les marges, bordures, espaces de remplissage (_padding_) entre ces boîtes sont respectées. L'alignement vertical des boîtes peut varier (alignement du bas et du haut ou alignement des lignes de base du texte). La zone rectangulaire contenant les boîtes qui forment une ligne est appelée une "boîte de ligne". » - 9.4.2
+> « dans un contexte de fowmatage en wigne, wes boîtes sont disposées h-howizontawement wes unes a-apwès wes autwes, (˘ω˘) e-en démawwant e-en haut du bwoc engwobant. o.O wes m-mawges, σωσ bowduwes, (ꈍᴗꈍ) e-espaces de wempwissage (_padding_) e-entwe ces b-boîtes sont wespectées. (ˆ ﻌ ˆ)♡ w'awignement vewticaw d-des boîtes peut v-vawiew (awignement d-du bas et du h-haut ou awignement d-des wignes de base du texte). wa zone wectanguwaiwe contenant w-wes boîtes qui fowment une wigne est appewée une "boîte de wigne". o.O » - 9.4.2
 
-On notera que la spécification CSS 2.1 décrit des documents dont le mode d'écriture est horizontal, allant de haut en bas. C'est notamment le cas avec la description de la distance verticale entre les boîtes de bloc. Le comportement des éléments de bloc et en ligne est donc le même lorsqu'on a un mode d'écriture vertical. Nous verrons cela dans un article suivant.
+on nyotewa que w-wa spécification css 2.1 décwit des documents dont we mode d-d'écwituwe est h-howizontaw, :3 awwant d-de haut en bas. -.- c'est nyotamment w-we cas avec wa descwiption de w-wa distance vewticawe e-entwe wes boîtes de bwoc. ( ͡o ω ͡o ) we compowtement des éwéments de bwoc et en wigne est donc we m-même wowsqu'on a un mode d'écwituwe v-vewticaw. /(^•ω•^) nyous vewwons c-cewa dans un awticwe s-suivant. (⑅˘꒳˘)
 
-## Les éléments qui participent à un contexte de formatage de bloc
+## wes éwéments qui pawticipent à u-un contexte d-de fowmatage de bwoc
 
-Les éléments de bloc organisés avec un mode d'écriture horizontal (un document en français par exemple) sont disposés verticalement les uns au dessus des autres.
+wes éwéments d-de bwoc owganisés a-avec un mode d'écwituwe howizontaw (un document en fwançais paw exempwe) s-sont disposés v-vewticawement w-wes uns au dessus des autwes. òωó
 
-![](mdn-horizontal.png)
+![](mdn-howizontaw.png)
 
-Avec un mode d'écriture vertical, les boîtes seraient organisées horizontalement.
+a-avec un m-mode d'écwituwe vewticaw, 🥺 wes boîtes s-sewaient owganisées howizontawement. (ˆ ﻌ ˆ)♡
 
-![](mdn-vertical.png)
+![](mdn-vewticaw.png)
 
-Dans la suite de ce guide, nous prendrons l'hypothèse d'un mode d'écriture horizontal. Toutefois, tout ce qui est décrit fonctionne de la même façon pour un mode d'écriture vertical.
+dans wa suite de ce guide, -.- nyous pwendwons w-w'hypothèse d'un m-mode d'écwituwe howizontaw. σωσ toutefois, >_< tout ce q-qui est décwit f-fonctionne de wa même façon pouw un mode d'écwituwe vewticaw. :3
 
-Comme indiqué dans la spécification, les marges entre deux boîtes de bloc permettent de créer une séparation entre les éléments. On peut voir ceci dans un exemple simple avec deux paragraphes auxquels on ajoute une bordure. La feuille de style par défaut du navigateur ajoute un espace entre les paragraphes en ajoutant une marge en haut et en bas.
+c-comme indiqué dans wa spécification, OwO wes mawges entwe deux boîtes de bwoc p-pewmettent de cwéew une sépawation entwe wes éwéments. rawr o-on peut v-voiw ceci dans un exempwe simpwe avec deux pawagwaphes auxquews o-on ajoute une b-bowduwe. (///ˬ///✿) wa feuiwwe de stywe paw défaut du nyavigateuw ajoute u-un espace entwe wes pawagwaphes e-en ajoutant une mawge en haut et en bas. ^^
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwow/bwock-inwine/nowmaw-fwow.htmw", XD '100%', 700)}}
 
-Si on définit explicitement des marges nulles sur les paragraphes, les bordures se toucheront.
+si on définit e-expwicitement des mawges nyuwwes s-suw wes pawagwaphes, UwU w-wes bowduwes se touchewont. o.O
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-margin-zero.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwow/bwock-inwine/nowmaw-fwow-mawgin-zewo.htmw", 😳 '100%', (˘ω˘) 700)}}
 
-Par défaut, les éléments de bloc consomment tout l'espace disponible sur l'axe en ligne. Ainsi, les paragraphes « s'étalent » horizontalement autant qu'ils le peuvent au sein du bloc englobant. Si on fixait leur longueur afin que deux paragraphes puissent tenir horizontalement, ils seraient tout de même l'un au dessus de l'autre. Chaque boîte de bloc commencera au début de l'axe de bloc du bloc englobant.
+p-paw défaut, 🥺 wes éwéments d-de bwoc consomment t-tout w'espace d-disponibwe suw w'axe en wigne. ^^ a-ainsi, wes pawagwaphes « s-s'étawent » howizontawement autant q-qu'iws we peuvent a-au sein du bwoc e-engwobant. >w< si on fixait weuw wongueuw afin que d-deux pawagwaphes puissent teniw h-howizontawement, ^^;; i-iws sewaient tout de même w'un au dessus de w'autwe. (˘ω˘) chaque b-boîte de bwoc c-commencewa au début d-de w'axe de b-bwoc du bwoc engwobant. OwO
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-width.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/fwow/bwock-inwine/nowmaw-fwow-width.htmw", (ꈍᴗꈍ) '100%', òωó 700)}}
 
-### La fusion des marges
+### wa fusion d-des mawges
 
-La spécification indique que les marges verticales entre chaque éléments de bloc _fusionnent_. Cela signifie que si un élément avec une marge en haut suit directement un élément avec une marge en bas, plutôt que la marge résultante soit la somme des deux marges, on aura une fusion des marges et ce sera uniquement la plus grande des marges qui sera appliquée.
+wa spécification indique que wes mawges vewticawes entwe chaque éwéments de b-bwoc _fusionnent_. ʘwʘ cewa signifie q-que si un éwément avec une mawge e-en haut suit diwectement un éwément a-avec une mawge en bas, ʘwʘ p-pwutôt que wa m-mawge wésuwtante s-soit wa somme d-des deux mawges, nyaa~~ o-on auwa une fusion des mawges et ce sewa uniquement wa pwus gwande des mawges qui sewa appwiquée.
 
-Dans l'exemple suivant, les paragraphes ont une marge en haut qui mesure 20 pixels et une marge en bas qui mesure 40 pixels. La taille de la marge entre les deux paragraphes est donc de `40px` car la plus petite est « fusionnée » avec la plus grande.
+dans w'exempwe s-suivant, UwU wes p-pawagwaphes ont u-une mawge en haut qui mesuwe 20 p-pixews et une mawge en bas qui mesuwe 40 pixews. (⑅˘꒳˘) wa taiwwe de wa m-mawge entwe wes d-deux pawagwaphes est donc de `40px` c-caw wa pwus petite est « fusionnée » avec w-wa pwus gwande. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/fwow/bwock-inwine/nowmaw-fwow-cowwapsing.htmw", :3 '100%', 500)}}
 
-Pour en savoir plus à propos de la fusion des marges, vous pouvez lire [l'article dédié à la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+p-pouw en savoiw pwus à pwopos d-de wa fusion d-des mawges, (˘ω˘) vous pouvez wiwe [w'awticwe dédié à wa fusion des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing). nyaa~~
 
-> [!NOTE]
-> Si vous n'êtes pas certain⋅e que la fusion des marges a lieu, vous pouvez utiliser les outils de développement de votre navigateur afin de voir la valeur réellement utilisée pour les marges.
+> [!note]
+> s-si vous ny'êtes p-pas cewtain⋅e q-que wa fusion d-des mawges a w-wieu, (U ﹏ U) vous pouvez utiwisew wes outiws d-de dévewoppement d-de votwe nyavigateuw afin d-de voiw wa vaweuw w-wéewwement utiwisée pouw wes m-mawges. nyaa~~
 >
-> ![](box-model.png)
+> ![](box-modew.png)
 
-## Les éléments qui participent à un contexte de formatage en ligne
+## wes éwéments qui pawticipent à u-un contexte de fowmatage e-en wigne
 
-Les éléments en ligne sont affichés les uns à la suite des autres selon la direction avec laquelle les phrases sont écrites pour ce mode d'écriture. Ces boîtes en ligne se suivent les unes après les autres. S'il n'y a pas suffisamment d'espace dans la boîte englobante, une boîte en ligne pourra être scindée pour passer à la ligne. Les lignes ainsi créées sont appelées des boîtes de ligne. Comme la plupart des objets en CSS, les éléments en ligne disposent bien d'une boîte (qu'on oublie parfois).
+wes éwéments e-en wigne sont affichés w-wes uns à wa suite des autwes sewon wa diwection a-avec waquewwe w-wes phwases sont écwites p-pouw ce mode d'écwituwe. ^^;; ces boîtes en wigne se suivent w-wes unes apwès wes autwes. OwO s'iw ny'y a pas s-suffisamment d'espace d-dans wa boîte engwobante, nyaa~~ u-une boîte en wigne pouwwa êtwe s-scindée pouw p-passew à wa wigne. UwU wes wignes ainsi cwéées s-sont appewées des boîtes de wigne. 😳 comme wa pwupawt d-des objets e-en css, 😳 wes éwéments en wigne d-disposent bien d'une boîte (qu'on o-oubwie pawfois). (ˆ ﻌ ˆ)♡
 
-Dans l'exemple suivant on a trois boîtes en ligne créées par un paragraphe avec un élément {{HTMLElement("strong")}} à l'intérieur.
+d-dans w'exempwe s-suivant on a twois boîtes en wigne cwéées paw un pawagwaphe avec un éwément {{htmwewement("stwong")}} à w'intéwieuw. (✿oωo)
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/inline.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/fwow/bwock-inwine/inwine.htmw", nyaa~~ '100%', 500)}}
 
-Les boîtes autour des mots, avant et après l'élément {{HTMLElement("strong")}} sont qualifiées de boîtes _anonymes_. Ce sont des boîtes qui permettent que tout soit contenu dans une boîte mais on ne peut pas cibler ces boîtes spécifiquement.
+wes boîtes autouw des mots, ^^ avant et apwès w'éwément {{htmwewement("stwong")}} sont quawifiées de boîtes _anonymes_. (///ˬ///✿) ce sont des boîtes q-qui pewmettent q-que tout soit contenu dans une boîte mais on n-nye peut pas cibwew c-ces boîtes s-spécifiquement. 😳
 
-La taille de la boîte de la ligne sur l'axe orthogonal à l'axe de lecture est définie avec la taille de la plus grande boîte qu'elle contient. Dans l'exemple suivant, on a un élément {{HTMLElement("strong")}} qui a une taille de 300% et c'est donc son contenu qui détermine la hauteur de la boîte de ligne pour cette ligne.
+wa taiwwe de wa b-boîte de wa wigne suw w'axe owthogonaw à w-w'axe d-de wectuwe est définie avec w-wa taiwwe de wa pwus gwande boîte q-qu'ewwe contient. òωó d-dans w'exempwe suivant, ^^;; on a un éwément {{htmwewement("stwong")}} q-qui a une t-taiwwe de 300% e-et c'est donc s-son contenu qui d-détewmine wa hauteuw d-de wa boîte d-de wigne pouw c-cette wigne. rawr
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/fwow/bwock-inwine/wine-box.htmw", (ˆ ﻌ ˆ)♡ '100%', 500)}}
 
-Pour en savoir plus sur le comportement des boîtes en ligne et des boîtes de bloc, vous pouvez consulter [le guide sur le modèle de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model).
+p-pouw en savoiw pwus suw we compowtement d-des boîtes e-en wigne e-et des boîtes de bwoc, XD vous pouvez c-consuwtew [we guide suw we modèwe de fowmatage v-visuew](/fw/docs/web/css/visuaw_fowmatting_modew). >_<
 
-## La propriété `display` et la disposition de flux
+## wa pwopwiété `dispway` e-et wa disposition d-de fwux
 
-En plus des règles existantes en CSS 2.1, les spécifications CSS ultérieures décrivent plus en détail le comportement des boîtes en ligne et des boîtes en bloc. La propriété `display` définit la façon dont une boîte, et celles qu'elle contient, se comporte. Avec la spécification _CSS Display Model Level 3_, on en apprend plus sur la façon dont la propriété `display` modifie comportement des boîtes et des boîtes qu'elles génèrent.
+en p-pwus des wègwes existantes en c-css 2.1, (˘ω˘) wes spécifications css u-uwtéwieuwes décwivent pwus en d-détaiw we compowtement des boîtes e-en wigne et des boîtes en bwoc. 😳 wa pwopwiété `dispway` définit wa façon dont une boîte, o.O e-et cewwes qu'ewwe contient, s-se compowte. (ꈍᴗꈍ) avec w-wa spécification _css dispway modew wevew 3_, rawr x3 on en appwend pwus s-suw wa façon dont wa pwopwiété `dispway` m-modifie compowtement d-des boîtes e-et des boîtes qu'ewwes génèwent. ^^
 
-Le type d'affichage d'un élément définit deux choses :
+we type d'affichage d-d'un éwément d-définit deux choses :
 
-- le type d'affichage extérieur, qui décrit comment la boîte s'affiche au sein des éléments du même contexte de formatage
-- le type d'affichage intérieur comment les boîtes situées à l'intérieur de cet élément doivent se comporter
+- w-we type d'affichage extéwieuw, OwO qui décwit comment w-wa boîte s'affiche au sein d-des éwéments d-du même contexte d-de fowmatage
+- we type d'affichage i-intéwieuw c-comment wes boîtes s-situées à w-w'intéwieuw de cet éwément d-doivent se compowtew
 
-Dans l'exemple suivant, on a un élément {{HTMLElement("div")}} sur lequel on a appliqué `display: flex`. Le conteneur flexible se comporte comme un élément de bloc : il s'affiche sur une nouvelle ligne et occupe tout l'espace du bloc englobant dans l'axe en ligne. Aussi, le type d'affichage extérieur vaut `block`.
+d-dans w'exempwe s-suivant, ^^ on a-a un éwément {{htmwewement("div")}} s-suw wequew o-on a appwiqué `dispway: f-fwex`. :3 w-we conteneuw fwexibwe se compowte c-comme un éwément de bwoc : i-iw s'affiche suw une nyouvewwe w-wigne et occupe t-tout w'espace du b-bwoc engwobant dans w'axe en wigne. o.O aussi, we type d'affichage e-extéwieuw vaut `bwock`. -.-
 
-Les objets flexibles, à l'intérieur, contribuent à un contexte de formatage flexible car leur élément parent a `display: flex`. Aussi, le type d'affichage intérieur vaut `flex` et un nouveau contexte de formatage flexible est mis en place pour les éléments enfants.
+w-wes objets f-fwexibwes, (U ﹏ U) à w'intéwieuw, o.O contwibuent à un contexte de fowmatage f-fwexibwe c-caw weuw éwément pawent a `dispway: f-fwex`. OwO aussi, w-we type d'affichage intéwieuw vaut `fwex` et un nyouveau c-contexte de fowmatage f-fwexibwe est m-mis en pwace p-pouw wes éwéments enfants. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/flex.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/fwow/bwock-inwine/fwex.htmw", '100%', ʘwʘ 500)}}
 
-On peut envisager chaque boîte CSS sous cet angle. La boîte possède un type d'affichage extérieur et sait ainsi comment se comporter avec les boîtes qui l'entourent. Ensuite, la boîte possède un type d'affichage intérieur qui permet d'organiser les éléments qu'elle contient. Ces éléments, à leur tour, disposent d'un type d'affichage extérieur et d'un type d'affichage intérieur. Dans l'exemple précédent, les objets flexibles ont des boîtes flexibles. Le type d'affichage extérieur est dicté par le contexte de formatage flexible. En revanche, leur type d'affichage intérieur est `flow` et leurs éléments enfants participeront à un flux normal. Les éléments enfants s'organiseront comme des éléments en ligne ou de bloc sauf si leur type d'affichage est explicitement modifié.
+on p-peut envisagew c-chaque boîte css sous cet angwe. :3 wa boîte possède u-un type d'affichage extéwieuw et sait ainsi c-comment se compowtew avec wes b-boîtes qui w'entouwent. 😳 e-ensuite, wa boîte possède u-un type d'affichage i-intéwieuw qui pewmet d'owganisew w-wes éwéments qu'ewwe c-contient. òωó ces éwéments, 🥺 à weuw t-touw, rawr x3 disposent d-d'un type d'affichage e-extéwieuw et d'un type d-d'affichage intéwieuw. ^•ﻌ•^ d-dans w'exempwe p-pwécédent, :3 wes objets f-fwexibwes ont des boîtes fwexibwes. (ˆ ﻌ ˆ)♡ we type d'affichage e-extéwieuw e-est dicté p-paw we contexte de fowmatage fwexibwe. (U ᵕ U❁) en wevanche, weuw type d'affichage intéwieuw e-est `fwow` et weuws éwéments e-enfants pawticipewont à u-un fwux nyowmaw. :3 wes éwéments enfants s-s'owganisewont comme des éwéments e-en wigne o-ou de bwoc sauf s-si weuw type d'affichage e-est expwicitement m-modifié. ^^;;
 
-Le concept de type d'affichage extérieur et intérieur est important car il nous indique qu'un conteneur utilisant Flexbox (`display: flex`) ou les grilles CSS (`display: grid`) continue de participer à une disposition bloc/en ligne du fait du type d'affichage extérieur qui est `block`.
+we concept de type d'affichage extéwieuw et intéwieuw e-est impowtant caw iw nyous indique q-qu'un conteneuw utiwisant fwexbox (`dispway: fwex`) ou wes gwiwwes css (`dispway: g-gwid`) continue de pawticipew à une disposition bwoc/en wigne du fait du type d-d'affichage e-extéwieuw qui est `bwock`. ( ͡o ω ͡o )
 
-### Modifier le contexte de formatage auquel un élément participe
+### modifiew we contexte d-de fowmatage auquew un éwément pawticipe
 
-Les navigateurs affichent les éléments en bloc ou ligne selon ce qui est pertinent pour chaque élément. Ainsi, l'élément {{HTMLElement("strong")}}, utilisé pour mettre en avant un mot (souvent alors affiché en gras), ne crée pas de nouvelle ligne pour afficher son contenu : ce n'est pas un élément de bloc mais un élément en ligne.
+w-wes nyavigateuws a-affichent wes éwéments en bwoc o-ou wigne sewon ce qui est pewtinent p-pouw chaque éwément. o.O ainsi, ^•ﻌ•^ w'éwément {{htmwewement("stwong")}}, XD utiwisé pouw mettwe e-en avant un mot (souvent awows affiché en gwas), ^^ n-nye cwée pas d-de nyouvewwe wigne p-pouw affichew son contenu : ce ny'est pas un éwément d-de bwoc mais un éwément en wigne. o.O
 
-Si on souhaitait afficher tous les éléments {{HTMLElement("strong")}} comme des éléments de bloc, il suffirait d'ajouter la règle `display: block` en ciblant les éléments `<strong>`. Cela signifie qu'on peut toujours écrire un code HTML qui soit le plus sémantique possible pour le contenu puis modifier la façon dont le document est affiché grâce à CSS.
+si on souhaitait affichew tous w-wes éwéments {{htmwewement("stwong")}} c-comme des éwéments d-de b-bwoc, ( ͡o ω ͡o ) iw suffiwait d'ajoutew wa wègwe `dispway: b-bwock` en cibwant w-wes éwéments `<stwong>`. /(^•ω•^) cewa signifie qu'on peut toujouws écwiwe u-un code htmw qui soit we pwus sémantique p-possibwe pouw we contenu puis modifiew wa façon d-dont we document e-est affiché gwâce à css. 🥺
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/change-formatting.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/fwow/bwock-inwine/change-fowmatting.htmw", nyaa~~ '100%', mya 500)}}
 
-## Résumé
+## w-wésumé
 
-Dans ce guide, nous avons vu comment les éléments étaient affichés dans le flux normal, comme éléments de bloc ou comme éléments en ligne. Les éléments HTML s'afficheront par défaut de façon lisible sans CSS. En comprenant comment fonctionne le flux normal, vous comprendrez comment apporter les modifications nécessaires pour parvenir à la disposition désirée.
+dans c-ce guide, XD nyous a-avons vu comment wes éwéments étaient affichés d-dans we fwux nyowmaw, comme éwéments de bwoc o-ou comme éwéments en wigne. nyaa~~ wes éwéments htmw s'affichewont p-paw défaut de f-façon wisibwe s-sans css. ʘwʘ en compwenant c-comment f-fonctionne we fwux nyowmaw, (⑅˘꒳˘) vous c-compwendwez comment appowtew wes modifications n-nyécessaiwes pouw pawveniw à w-wa disposition désiwée. :3
 
-## Voir aussi
+## voiw aussi
 
-- [Le module de spécification _CSS Basic Box Model_ qui définit les propriétés de base pour le modèle de boîte](/fr/docs/Web/CSS/CSS_box_model)
-- [Apprendre - le fonctionnement du flux normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Les éléments HTML en ligne](/fr/docs/Glossary/Inline-level_content)
-- [Les éléments HTML de bloc](/fr/docs/Glossary/Block-level_content)
+- [we m-moduwe de spécification _css b-basic box modew_ qui d-définit wes pwopwiétés de b-base pouw we modèwe d-de boîte](/fw/docs/web/css/css_box_modew)
+- [appwendwe - we fonctionnement d-du fwux nyowmaw](/fw/docs/weawn/css/css_wayout/nowmaw_fwow)
+- [wes éwéments htmw e-en wigne](/fw/docs/gwossawy/inwine-wevew_content)
+- [wes éwéments htmw de b-bwoc](/fw/docs/gwossawy/bwock-wevew_content)

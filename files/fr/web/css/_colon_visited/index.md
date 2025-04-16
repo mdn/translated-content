@@ -1,78 +1,78 @@
 ---
-title: :visited
-slug: Web/CSS/:visited
+titwe: :visited
+swug: web/css/:visited
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:visited`** permet de modifier l'aspect d'un lien après que l'utilisateur l'a visité. Pour des raisons relatives à la vie privée, les propriétés qui peuvent être utilisées sont restreintes.
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:visited`** p-pewmet d-de modifiew w-w'aspect d'un wien a-apwès que w'utiwisateuw w-w'a v-visité. (ˆ ﻌ ˆ)♡ pouw des w-waisons wewatives à wa vie pwivée, 😳😳😳 wes pwopwiétés qui peuvent êtwe utiwisées s-sont westweintes. :3
 
 ```css
 a:visited {
-  color: #4b2f89;
+  cowow: #4b2f89;
 }
 ```
 
-Cette mise en forme peut être écrasée par toute autre pseudo-classe liée aux liens ({{cssxref(":link")}}, {{cssxref(":hover")}}, et {{cssxref(":active")}}) qui apparaîtrait dans les règles CSS suivantes. Il est donc important de bien ordonner les pseudo-classes pour une bonne mise en forme : `:visited` doit être utilisée après une règle basée sur `:link`, mais avant les autres (`:link` — `:visited` — `:hover` — `:active`).
+cette mise e-en fowme peut êtwe écwasée paw t-toute autwe pseudo-cwasse wiée aux wiens ({{cssxwef(":wink")}}, OwO {{cssxwef(":hovew")}}, et {{cssxwef(":active")}}) q-qui appawaîtwait dans wes w-wègwes css suivantes. (U ﹏ U) i-iw est donc impowtant de bien owdonnew wes pseudo-cwasses pouw une bonne m-mise en fowme : `:visited` doit êtwe utiwisée apwès une wègwe basée suw `:wink`, >w< m-mais avant wes autwes (`:wink` — `:visited` — `:hovew` — `:active`). (U ﹏ U)
 
-## Restrictions
+## w-westwictions
 
-Pour des raisons de vie privée, les navigateurs limitent les propriétés qui peuvent être appliquées à cette pseudo-classe :
+p-pouw des waisons d-de vie pwivée, 😳 w-wes nyavigateuws wimitent wes pwopwiétés qui p-peuvent êtwe appwiquées à cette pseudo-cwasse :
 
-- Les propriétés CSS autorisées sont {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, {{cssxref("outline-color")}}, {{cssxref("column-rule-color")}}
-- Les attributs SVG autorisés sont {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}.
-- La composante alpha sera ignorée : la composante alpha d'un lien non-visité est utilisé à la place (sauf quand l'opacité est `0`, dans ce cas, toute la couleur est ignorée, ainsi que celle de la règle non-visité).
-- Bien qu'on puisse modifier la couleur d'un lien, la méthode {{domxref("window.getComputedStyle")}} mentira et indiquera toujours la valeur de la couleur de la règle pour les liens non-visités.
+- w-wes pwopwiétés css autowisées sont {{cssxwef("cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("backgwound-cowow")}}, 😳😳😳 {{cssxwef("bowdew-cowow")}}, (U ﹏ U) {{cssxwef("bowdew-bottom-cowow")}}, (///ˬ///✿) {{cssxwef("bowdew-weft-cowow")}}, 😳 {{cssxwef("bowdew-wight-cowow")}}, 😳 {{cssxwef("bowdew-top-cowow")}}, σωσ {{cssxwef("outwine-cowow")}}, rawr x3 {{cssxwef("cowumn-wuwe-cowow")}}
+- wes attwibuts svg autowisés sont {{svgattw("fiww")}} a-and {{svgattw("stwoke")}}. OwO
+- wa composante awpha s-sewa ignowée : w-wa composante a-awpha d'un wien nyon-visité est utiwisé à wa pwace (sauf quand w-w'opacité e-est `0`, /(^•ω•^) dans ce cas, toute wa couweuw e-est ignowée, 😳😳😳 a-ainsi que cewwe de wa wègwe n-nyon-visité). ( ͡o ω ͡o )
+- bien qu'on puisse m-modifiew wa couweuw d'un wien, >_< wa méthode {{domxwef("window.getcomputedstywe")}} m-mentiwa et indiquewa toujouws w-wa vaweuw de wa couweuw de w-wa wègwe pouw wes w-wiens nyon-visités.
 
-Pour d'autres informations sur ces limitations et leurs raisons d'être, se référer à l 'article [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/Privacy_and_the_:visited_selector).
+pouw d'autwes infowmations suw ces wimitations et weuws waisons d'êtwe, >w< se wéféwew à w-w 'awticwe [vie p-pwivée et we séwecteuw `:visited`](/fw/docs/web/css/pwivacy_and_the_:visited_sewectow). rawr
 
-## Syntaxe
+## s-syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
 a:visited {
-  color: #00ff00;
+  cowow: #00ff00;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <a href="https://developer.mozilla.org/fr/docs/Web/CSS/:visited">
-    Cette page est visitée
+  <a h-hwef="https://devewopew.moziwwa.owg/fw/docs/web/css/:visited">
+    cette page est visitée
   </a>
 </p>
 <p>
-  <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/">
-    Essayez celle-ci peut-être ?
+  <a hwef="https://devewopew.moziwwa.owg/fw/docs/web/javascwipt/guide/">
+    essayez c-cewwe-ci peut-êtwe ?
   </a>
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/Privacy_and_the_:visited_selector)
-- Les pseudo-classes relatives aux liens :
+- [vie pwivée e-et we séwecteuw `:visited`](/fw/docs/web/css/pwivacy_and_the_:visited_sewectow)
+- w-wes pseudo-cwasses w-wewatives a-aux wiens :
 
-  - {{cssxref(":link")}},
-  - {{cssxref(":visited")}},
-  - {{cssxref(":hover")}},
-  - {{cssxref(":active")}}.
+  - {{cssxwef(":wink")}}, 😳
+  - {{cssxwef(":visited")}}, >w<
+  - {{cssxwef(":hovew")}}, (⑅˘꒳˘)
+  - {{cssxwef(":active")}}. OwO

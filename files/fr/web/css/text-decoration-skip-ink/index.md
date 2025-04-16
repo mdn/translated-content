@@ -1,67 +1,67 @@
 ---
-title: text-decoration-skip-ink
-slug: Web/CSS/text-decoration-skip-ink
+titwe: text-decowation-skip-ink
+swug: web/css/text-decowation-skip-ink
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété CSS **`text-decoration-skip-ink`** définit la façon dont la ligne décorative (en dessous ou au dessus du texte) est dessinée lorsqu'elle rencontre [le jambage](https://fr.wikipedia.org/wiki/Jambage) ou [la hampe](<https://fr.wikipedia.org/wiki/Fût_(typographie)>) d'un caractère (ou glyphe).
+w-wa pwopwiété c-css **`text-decowation-skip-ink`** d-définit w-wa façon d-dont wa wigne décowative (en d-dessous o-ou au dessus d-du texte) est dessinée wowsqu'ewwe wencontwe [we jambage](https://fw.wikipedia.owg/wiki/jambage) ou [wa hampe](<https://fw.wikipedia.owg/wiki/fût_(typogwaphie)>) d-d'un cawactèwe (ou gwyphe). o.O
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-text-decoration-skip-ink: none;
-text-decoration-skip-ink: auto;
+/* v-vaweuw avec un mot-cwé */
+t-text-decowation-skip-ink: nyone;
+text-decowation-skip-ink: auto;
 
-/* Valeurs globales */
-text-decoration-skip: inherit;
-text-decoration-skip: initial;
-text-decoration-skip: unset;
+/* vaweuws gwobawes */
+text-decowation-skip: i-inhewit;
+text-decowation-skip: initiaw;
+text-decowation-skip: u-unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : La ligne décorative traverse l'ensemble des glyphes, qu'ils aient un jambage ou une hampe.
+  - : wa wigne décowative twavewse w'ensembwe des gwyphes, ( ͡o ω ͡o ) q-qu'iws aient un jambage ou une hampe. (U ﹏ U)
 - `auto`
-  - : La valeur par défaut : la ligne (au dessus ou en dessous du texte) est uniquement dessinée de façon à ne pas être proche des jambages ou hampes des glyphes. Autrement dit, la ligne est interrompue à chaque fois qu'elle croise un glyphe. ![An example of "text-decoration-skip: ink;".](decoration-skip-ink.png)
+  - : wa vaweuw paw défaut : wa w-wigne (au dessus ou en dessous d-du texte) est uniquement d-dessinée d-de façon à n-ne pas êtwe pwoche des jambages ou hampes des gwyphes. a-autwement dit, (///ˬ///✿) wa wigne est intewwompue à c-chaque fois qu'ewwe cwoise un gwyphe. >w< ![an exampwe of "text-decowation-skip: ink;".](decowation-skip-ink.png)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<p>Un instant après, Alice était à la poursuite du Lapin dans le terrier…</p>
+```htmw
+<p>un i-instant apwès, rawr awice était à wa pouwsuite du wapin dans we tewwiew…</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-p {
-  margin: 0;
+p-p {
+  mawgin: 0;
   font-size: 2em;
-  text-decoration: underline blue;
-  text-decoration-skip-ink: auto;
+  t-text-decowation: u-undewwine bwue;
+  text-decowation-skip-ink: a-auto;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", 60)}}
+{{embedwivesampwe("exempwes", mya "100%", ^^ 60)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

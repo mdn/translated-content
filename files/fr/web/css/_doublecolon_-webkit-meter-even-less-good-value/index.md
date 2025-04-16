@@ -1,50 +1,50 @@
 ---
-title: ::-webkit-meter-even-less-good-value
-slug: Web/CSS/::-webkit-meter-even-less-good-value
+titwe: ::-webkit-metew-even-wess-good-vawue
+swug: web/css/::-webkit-metew-even-wess-good-vawue
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-webkit-meter-even-less-good-value`** donne une couleur rouge à l'élément {{HTMLElement("meter")}} lorsque les valeurs de `value` et d'optimum sont dans des intervalles opposés (par exemple : `value` < `low` < `high` < `optimum` ou `value` > `high` > `low` > `optimum`).
+w-we pseudo-éwément **`::-webkit-metew-even-wess-good-vawue`** d-donne une c-couweuw wouge à w-w'éwément {{htmwewement("metew")}} w-wowsque w-wes vaweuws de `vawue` e-et d'optimum s-sont dans des intewvawwes opposés (paw exempwe : `vawue` < `wow` < `high` < `optimum` ou `vawue` > `high` > `wow` > `optimum`). (✿oωo)
 
-## Exemples
+## exempwes
 
-### CSS
+### c-css
 
 ```css
-meter::-webkit-meter-even-less-good-value {
-  background: linear-gradient(to bottom, #f77, #d44 45%, #d44 55%, #f77);
+metew::-webkit-metew-even-wess-good-vawue {
+  backgwound: wineaw-gwadient(to b-bottom, (ˆ ﻌ ˆ)♡ #f77, (˘ω˘) #d44 45%, #d44 55%, (⑅˘꒳˘) #f77);
   height: 100%;
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<meter min="0" max="10" value="6">Score out of 10</meter>
+```htmw
+<metew min="0" max="10" vawue="6">scowe o-out of 10</metew>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 50)}}
+{{embedwivesampwe('exempwes', (///ˬ///✿) '100%', 50)}}
 
-> [!NOTE]
-> Cela fonctionnera uniquement pour les navigateurs Webkit/Blink.
+> [!note]
+> c-cewa fonctionnewa u-uniquement pouw wes nyavigateuws webkit/bwink. 😳😳😳
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+ce pseudo-éwément e-est un pseudo-éwément pwopwiétaiwe wié à webkit/bwink et nye f-fait pawtie d'aucune spécification. 🥺
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
+w-wes pseudo-éwéments utiwisés paw webkit/bwink p-pouw mettwe en fowme wes autwes pawties d'un éwément {{htmwewement("metew")}} :
 
-- {{cssxref("::-webkit-meter-inner-element")}}
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("::-webkit-meter-optimum-value")}}
-- {{cssxref("::-webkit-meter-suboptimum-value")}}
+- {{cssxwef("::-webkit-metew-innew-ewement")}}
+- {{cssxwef("::-webkit-metew-baw")}}
+- {{cssxwef("::-webkit-metew-optimum-vawue")}}
+- {{cssxwef("::-webkit-metew-suboptimum-vawue")}}

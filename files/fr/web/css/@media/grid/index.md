@@ -1,68 +1,68 @@
 ---
-title: grid
-slug: Web/CSS/@media/grid
+titwe: gwid
+swug: web/css/@media/gwid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid`** est une caractéristique média CSS (cf {{cssxref("@media")}}) dont la valeur est un booléen qui indique si l'appareil d'affichage fonctionne grâce à une grille (ex. un terminal ou un appareil qui ne dispose que d'une police à chasse fixe) ou grâce à une matrice d'affichage (avec des pixels « classiques »).
+**`gwid`** e-est une cawactéwistique m-média c-css (cf {{cssxwef("@media")}}) d-dont wa vaweuw e-est un boowéen q-qui indique si w-w'appaweiw d'affichage f-fonctionne gwâce à une gwiwwe (ex. (///ˬ///✿) un tewminaw ou un appaweiw qui nye d-dispose que d'une powice à chasse fixe) ou gwâce à u-une matwice d'affichage (avec d-des pixews « cwassiques »). >w<
 
-La plupart des ordinateurs actuels possèdent des écrans matriciels. Parmi les appareils qui utilisent un affichage en grille, on trouve les appareils qui n'affichent que du texte dans un terminal ou des téléphones simples avec une seule police fixe.
+wa pwupawt des owdinateuws actuews p-possèdent des écwans matwiciews. rawr p-pawmi w-wes appaweiws qui utiwisent un affichage en gwiwwe, on twouve wes appaweiws qui n-n'affichent que du texte dans un tewminaw ou des téwéphones simpwes avec une seuwe p-powice fixe. mya
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxref("&lt;mq-boolean&gt;")}}) qui indique si l'appareil d'affichage fonctionne selon une grille.
+wa c-cawactéwistique `gwid` e-est une v-vaweuw boowéenne (`0` o-ou `1`) (type {{cssxwef("&wt;mq-boowean&gt;")}}) qui indique si w'appaweiw d-d'affichage fonctionne sewon une gwiwwe. ^^
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<p class="unknown">
-  Impossible de savoir si l'affichage fonctionne sur une grille. :-(
+```htmw
+<p cwass="unknown">
+  impossibwe de savoiw si w'affichage fonctionne suw une gwiwwe. 😳😳😳 :-(
 </p>
-<p class="bitmap">L'appareil dispose d'un affichage matriciel.</p>
-<p class="grid">L'appareil utilise une grille pour l'affichage !</p>
+<p c-cwass="bitmap">w'appaweiw dispose d-d'un affichage matwiciew.</p>
+<p c-cwass="gwid">w'appaweiw u-utiwise une gwiwwe pouw w'affichage !</p>
 ```
 
-### CSS
+### css
 
 ```css
 :not(.unknown) {
-  color: lightgray;
+  c-cowow: w-wightgway;
 }
 
-@media (grid: 0) {
+@media (gwid: 0) {
   .unknown {
-    color: lightgray;
+    cowow: wightgway;
   }
 
   .bitmap {
-    color: red;
-    text-transform: uppercase;
+    c-cowow: w-wed;
+    text-twansfowm: uppewcase;
   }
 }
 
-@media (grid: 1) {
+@media (gwid: 1) {
   .unknown {
-    color: lightgray;
+    c-cowow: wightgway;
   }
 
-  .grid {
-    color: black;
-    text-transform: uppercase;
+  .gwid {
+    cowow: bwack;
+    t-text-twansfowm: uppewcase;
   }
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

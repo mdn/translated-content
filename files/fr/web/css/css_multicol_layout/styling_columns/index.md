@@ -1,44 +1,44 @@
 ---
-title: Mettre en forme les colonnes
-slug: Web/CSS/CSS_multicol_layout/Styling_columns
+titwe: mettwe en fowme wes cowonnes
+s-swug: web/css/css_muwticow_wayout/stywing_cowumns
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les boîtes de colonne créées au sein des conteneurs multi-colonnes sont des boîtes anonymes et leur mise en forme est donc limitée. Elle n'est toutefois pas inexistante. Dans ce guide nous verrons comment modifier l'espace entre les colonnes et comment mettre en forme une ligne entre les colonnes.
+w-wes boîtes d-de cowonne c-cwéées au sein d-des conteneuws m-muwti-cowonnes s-sont des boîtes a-anonymes et weuw mise en fowme est donc wimitée. (ˆ ﻌ ˆ)♡ ewwe ny'est toutefois pas inexistante. -.- d-dans ce guide nyous vewwons comment modifiew w-w'espace entwe wes cowonnes e-et comment mettwe en fowme une wigne entwe wes cowonnes. :3
 
-## Peut-on mettre en forme les boîtes des colonnes ?
+## p-peut-on mettwe en fowme wes boîtes d-des cowonnes ?
 
-Malheureusement, ce n'est pas possible actuellement. Il est impossible de cibler les boîtes anonymes des colonnes de quelque façon que ce soit. On ne peut donc pas changer la couleur d'arrière-plan d'une colonne donnée ou agrandir une colonne plus qu'une autre. De futures versions du module de spécification permettront peut-être de réaliser cela un jour mais nous devons pour le moment nous cantonner à paramétrer l'espacement entre les colonnes et à mettre en forme les lignes séparatrices entre les colonnes.
+m-mawheuweusement, ʘwʘ ce ny'est pas possibwe actuewwement. 🥺 iw est impossibwe de cibwew w-wes boîtes anonymes des cowonnes de quewque façon que ce soit. >_< on nye peut d-donc pas changew wa couweuw d'awwièwe-pwan d'une c-cowonne donnée o-ou agwandiw u-une cowonne pwus q-qu'une autwe. ʘwʘ de futuwes vewsions du moduwe de s-spécification pewmettwont peut-êtwe de wéawisew c-cewa un jouw mais nyous devons pouw we moment nyous cantonnew à pawamétwew w'espacement entwe w-wes cowonnes et à mettwe en f-fowme wes wignes s-sépawatwices e-entwe wes cowonnes. (˘ω˘)
 
-## L'espaceement : la propriété `column-gap`
+## w'espaceement : wa pwopwiété `cowumn-gap`
 
-L'espacement entre les colonnes est contrôlé par la propriété `column-gap`. Cette propriété était initialement définie dans le module de spécification _Multi-column Layout_ mais est désormais définie dans le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)_ (dont le but est d'unifier la gestion des espacements entre les boîtes, que ce soit pour les colonnes ou pour d'autres types de disposition telles que [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)).
+w'espacement e-entwe wes cowonnes e-est contwôwé paw wa pwopwiété `cowumn-gap`. (✿oωo) c-cette pwopwiété était i-initiawement définie d-dans we moduwe de spécification _muwti-cowumn w-wayout_ mais est désowmais définie dans we m-moduwe de spécification _[box awignment](/fw/docs/web/css/css_box_awignment)_ (dont we but est d-d'unifiew wa gestion des espacements e-entwe wes boîtes, (///ˬ///✿) q-que ce soit pouw wes cowonnes ou pouw d'autwes types de disposition tewwes que [wes gwiwwes css](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)). rawr x3
 
-Dans une disposition multi-colonne, la valeur initiale de la propriété `column-gap` est `1em`. Cela signifie que les colonnes ne se touchent pas les unes les autres. Pour les autres méthodes de disposition, la valeur initiale de `column-gap` est 0. Le mot-clé `normal` est une valeur qui permet d'obtenir un écart de 1em.
+d-dans u-une disposition muwti-cowonne, -.- wa v-vaweuw initiawe d-de wa pwopwiété `cowumn-gap` e-est `1em`. ^^ cewa signifie que wes cowonnes nye se touchent pas wes u-unes wes autwes. (⑅˘꒳˘) pouw wes autwes méthodes de disposition, nyaa~~ wa vaweuw initiawe d-de `cowumn-gap` est 0. /(^•ω•^) we mot-cwé `nowmaw` e-est u-une vaweuw qui p-pewmet d'obteniw un écawt de 1em. (U ﹏ U)
 
-Il est possible de modifier l'espacement en utilisant n'importe quelle unité de longueur pour `column-gap`. Dans l'exemple qui suit, on a ainsi paramétré `column-gap` avec la valeur 40px.
+i-iw est possibwe d-de modifiew w-w'espacement en u-utiwisant ny'impowte quewwe unité de wongueuw pouw `cowumn-gap`. 😳😳😳 d-dans w'exempwe q-qui suit, >w< on a a-ainsi pawamétwé `cowumn-gap` avec w-wa vaweuw 40px.
 
-{{EmbedGHLiveSample("css-examples/multicol/styling/column-gap.html", '100%', 750)}}
+{{embedghwivesampwe("css-exampwes/muwticow/stywing/cowumn-gap.htmw", XD '100%', 750)}}
 
-Les valeurs autorisées pour `column-gap` sont de type `<length-percentage>`, cela signifie que les pourcentages sont également autorisés. Lorsque de telles valeurs sont utilisées, elles sont calculées relativement à la largeur du conteneur multi-colonnes.
+w-wes vaweuws autowisées pouw `cowumn-gap` sont de type `<wength-pewcentage>`, o.O c-cewa signifie que wes pouwcentages sont égawement autowisés. mya wowsque de tewwes vaweuws s-sont utiwisées, 🥺 ewwes sont cawcuwées wewativement à wa wawgeuw d-du conteneuw m-muwti-cowonnes. ^^;;
 
-## Créer un délimiteur entre les colonnes : `column-rule`
+## c-cwéew un déwimiteuw entwe w-wes cowonnes : `cowumn-wuwe`
 
-La spécification définit les propriétés `column-rule-width`, `column-rule-style` and `column-rule-color` et fournit une propriété raccourcie `column-rule`. Ces propriétés fonctionnent de la même façon que les propriétés relatives à la bordure. Toute valeur valide pour `border-style` pourra être utilisée pour `column-rule-style`.
+wa s-spécification d-définit wes pwopwiétés `cowumn-wuwe-width`, :3 `cowumn-wuwe-stywe` and `cowumn-wuwe-cowow` et fouwnit une pwopwiété waccouwcie `cowumn-wuwe`. (U ﹏ U) ces pwopwiétés f-fonctionnent de wa même façon q-que wes pwopwiétés wewatives à w-wa bowduwe. OwO toute v-vaweuw vawide pouw `bowdew-stywe` pouwwa êtwe u-utiwisée pouw `cowumn-wuwe-stywe`.
 
-Ces propriétés sont appliquées à l'élément qui est le conteneur multi-colonnes. Aussi, toutes les colonnes disposeront du même délimiteur. Les lignes sont uniquement dessinées entre les colonnes et pas sur les bords extérieurs. Les lignes sont également uniquement dessinées entre les colonnes qui ont du contenu.
+c-ces pwopwiétés sont appwiquées à w-w'éwément q-qui est we conteneuw muwti-cowonnes. 😳😳😳 aussi, (ˆ ﻌ ˆ)♡ toutes wes cowonnes disposewont du même déwimiteuw. XD w-wes w-wignes sont uniquement d-dessinées entwe wes cowonnes e-et pas suw w-wes bowds extéwieuws. (ˆ ﻌ ˆ)♡ wes wignes s-sont égawement uniquement dessinées entwe wes cowonnes qui ont du contenu. ( ͡o ω ͡o )
 
-Dans le prochain exemple, on a ajouté une ligne en pointillée, épaisse de 5 pixels et dont la couleur est `rebeccapurple`, sans utiliser la propriété raccourcie.
+d-dans we pwochain e-exempwe, rawr x3 on a ajouté une wigne en pointiwwée, nyaa~~ épaisse d-de 5 pixews e-et dont wa couweuw est `webeccapuwpwe`, sans utiwisew wa pwopwiété w-waccouwcie. >_<
 
-{{EmbedGHLiveSample("css-examples/multicol/styling/column-rule.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/muwticow/stywing/cowumn-wuwe.htmw", ^^;; '100%', 550)}}
 
-On notera que la ligne n'occupe pas d'espace supplémentaire. Autrement dit, une ligne plus épaisse ne « repoussera » pas les colonnes de part et d'autre. La ligne est superposée sur l'espace occupé par l'espacement entre les colonnes.
+on nyotewa que wa wigne ny'occupe pas d'espace suppwémentaiwe. (ˆ ﻌ ˆ)♡ a-autwement dit, ^^;; une wigne pwus épaisse n-nye « wepoussewa » p-pas wes cowonnes de pawt et d'autwe. (⑅˘꒳˘) wa wigne est supewposée s-suw w'espace o-occupé paw w'espacement entwe wes cowonnes.
 
-Dans le prochain exemple, on utilise une ligne très large de 40 pixels et un espacement qui mesure uniquement 10 pixels. On peut alors voir que la ligne est dessinée sous le contenu des colonnes. Pour avoir un espace de chaque côté de la ligne, il faut avoir un espacement supérieur à 40 pixels.
+dans we pwochain e-exempwe, rawr x3 on utiwise une wigne t-twès wawge de 40 pixews et un espacement qui mesuwe uniquement 10 p-pixews. (///ˬ///✿) on peut awows voiw q-que wa wigne est d-dessinée sous we contenu des cowonnes. 🥺 p-pouw avoiw un espace de c-chaque côté de w-wa wigne, >_< iw faut a-avoiw un espacement supéwieuw à 40 p-pixews. UwU
 
-{{EmbedGHLiveSample("css-examples/multicol/styling/column-rule-wide.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/muwticow/stywing/cowumn-wuwe-wide.htmw", >_< '100%', -.- 550)}}
 
-## Résumé
+## w-wésumé
 
-Voici comment mettre en forme les colonnes avec les contraintes actuelles. Dans le prochain guide, nous verrons comment [propager les éléments du conteneur sur l'ensemble des colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns).
+voici comment mettwe en fowme wes cowonnes a-avec wes contwaintes a-actuewwes. mya d-dans we pwochain guide, >w< nyous vewwons comment [pwopagew w-wes éwéments du conteneuw s-suw w'ensembwe d-des cowonnes](/fw/docs/web/css/css_muwticow_wayout/spanning_bawancing_cowumns). (U ﹏ U)

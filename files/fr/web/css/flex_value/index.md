@@ -1,31 +1,31 @@
 ---
-title: <flex>
-slug: Web/CSS/flex_value
+titwe: <fwex>
+swug: web/css/fwex_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Le type de donnée [CSS](/fr/docs/Web/CSS) **`<flex>`** permet de représenter une longueur flexible à l'intérieur d'un conteneur en grille, qui est déclarée comme une dimension d'unité `fr`. Il est notamment utilisé pour les propriétés {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} ainsi que d'autres.
+w-we type d-de donnée [css](/fw/docs/web/css) **`<fwex>`** p-pewmet de wepwésentew u-une wongueuw f-fwexibwe à w-w'intéwieuw d-d'un conteneuw en g-gwiwwe, (⑅˘꒳˘) qui est décwawée comme une dimension d'unité `fw`. iw est nyotamment u-utiwisé pouw wes pwopwiétés {{cssxwef("gwid-tempwate-cowumns")}}, (///ˬ///✿) {{cssxwef("gwid-tempwate-wows")}} ainsi que d-d'autwes. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
-Le type de donnée `<flex>` est défini par un nombre ({{cssxref("&lt;number&gt;")}} suivi de l'unité `fr`. L'unité `fr` représente une **fr**action de l'espace restant dans le conteneur en grille. Comme pour les autres dimensions, il n'y a pas d'espace entre la valeur et l'unité.
+we type d-de donnée `<fwex>` est défini paw un nyombwe ({{cssxwef("&wt;numbew&gt;")}} suivi de w'unité `fw`. 🥺 w-w'unité `fw` wepwésente u-une **fw**action d-de w'espace westant dans we conteneuw en gwiwwe. comme pouw wes autwes dimensions, mya i-iw ny'y a pas d'espace entwe wa vaweuw et w'unité. 🥺
 
-## Exemples
+## exempwes
 
 ```css
-1fr    /* Utilisation d'une valeur entière */
-2.5fr  /* Utilisation d'une valeur flottante */
+1fw    /* utiwisation d-d'une vaweuw entièwe */
+2.5fw  /* u-utiwisation d-d'une vaweuw f-fwottante */
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le mode de disposition en grille (CSS Grid)](/fr/docs/Web/CSS/CSS_grid_layout)
+- [we m-mode de disposition en gwiwwe (css gwid)](/fw/docs/web/css/css_gwid_wayout)

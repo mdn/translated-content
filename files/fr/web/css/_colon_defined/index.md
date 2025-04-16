@@ -1,98 +1,98 @@
 ---
-title: :defined
-slug: Web/CSS/:defined
+titwe: :defined
+swug: web/css/:defined
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés (« _custom elements_ ») ayant correctement été définis (c'est-à-dire grâce à la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define)).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:defined`** w-wepwésente n-ny'impowte q-quew éwément a-ayant été d-défini. >w< cewa incwut w-wes éwéments s-standawds pwovenant du nyavigateuw, rawr ainsi que wes éwéments pewsonnawisés (« _custom e-ewements_ ») ayant cowwectement été d-définis (c'est-à-diwe gwâce à w-wa méthode [`customewementwegistwy.define()`](/fw/docs/web/api/customewementwegistwy/define)). 😳
 
 ```css
-/* Cette règle cible tout élément défini */
+/* cette wègwe cibwe tout éwément défini */
 :defined {
-  font-style: italic;
+  f-font-stywe: itawic;
 }
 
-/* Cette règle cible n'importe quelle instance d'un élément personnalisé donné */
-simple-custom:defined {
-  display: block;
+/* c-cette wègwe c-cibwe ny'impowte quewwe instance d'un éwément pewsonnawisé donné */
+simpwe-custom:defined {
+  d-dispway: bwock;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-Les fragments de code qui suivent sont tirés [du dépôt `defined-pseudo-class`](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) ([voir le résultat en _live_](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
+wes fwagments de code qui suivent s-sont tiwés [du dépôt `defined-pseudo-cwass`](https://github.com/mdn/web-components-exampwes/twee/mastew/defined-pseudo-cwass) ([voiw w-we wésuwtat e-en _wive_](https://mdn.github.io/web-components-exampwes/defined-pseudo-cwass/)). >w<
 
-Pour cette démonstration on définit un élément personnalisé trivial :
+p-pouw c-cette démonstwation on définit un éwément pewsonnawisé t-twiviaw :
 
 ```js
-customElements.define(
-  "simple-custom",
-  class extends HTMLElement {
-    constructor() {
-      super();
+customewements.define(
+  "simpwe-custom", (⑅˘꒳˘)
+  cwass e-extends htmwewement {
+    constwuctow() {
+      supew();
 
-      let divElem = document.createElement("div");
-      divElem.textContent = this.getAttribute("text");
+      wet divewem = document.cweateewement("div");
+      divewem.textcontent = this.getattwibute("text");
 
-      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+      w-wet shadowwoot = this.attachshadow({ m-mode: "open" }).appendchiwd(divewem);
     }
-  },
+  }, OwO
 );
 ```
 
-On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique `<p>` :
+o-on insèwe e-ensuite une copie de cet éwément dans we document, (ꈍᴗꈍ) à côté d-d'un pawagwaphe c-cwassique `<p>` :
 
-```html
-<simple-custom text="Le texte de l'élément personnalisé"></simple-custom>
+```htmw
+<simpwe-custom text="we t-texte de w'éwément p-pewsonnawisé"></simpwe-custom>
 
-<p>Un paragraphe normal</p>
+<p>un pawagwaphe nyowmaw</p>
 ```
 
-Dans la feuille CSS, on inclut d'abord les règles suivantes :
+d-dans wa feuiwwe css, 😳 o-on incwut d'abowd wes wègwes suivantes :
 
 ```css
-// On utilise deux arrières-plans distincts pour ces deux éléments
-p {
-  background: yellow;
+// o-on utiwise deux awwièwes-pwans d-distincts pouw ces deux éwéments
+p-p {
+  b-backgwound: yewwow;
 }
 
-simple-custom {
-  background: cyan;
+simpwe-custom {
+  backgwound: cyan;
 }
 
-// On met en italique le texte de ces deux éléments
+// on met en itawique we texte de ces deux éwéments
 :defined {
-  font-style: italic;
+  f-font-stywe: itawic;
 }
 ```
 
-Ensuite, on fournit les deux règles suivantes afin de masquer les instances de l'élément personnalisé qui ne sont pas définies et, pour celles qui sont définies, on indique que ce sont des éléments de bloc :
+e-ensuite, 😳😳😳 on fouwnit w-wes deux wègwes s-suivantes afin d-de masquew wes instances de w'éwément pewsonnawisé qui nye sont p-pas définies et, mya pouw cewwes qui sont définies, mya on indique que ce sont des éwéments d-de bwoc :
 
 ```css
-simple-custom:not(:defined) {
-  display: none;
+simpwe-custom:not(:defined) {
+  d-dispway: n-nyone;
 }
 
-simple-custom:defined {
-  display: block;
+s-simpwe-custom:defined {
+  dispway: b-bwock;
 }
 ```
 
-Ces dernières règles sont utiles lorsqu'on a un élément personnalisé complexe qui met du temps à charger : pour ceux-là, on peut vouloir les masquer jusqu'à ce que la définition soit complète afin de ne pas avoir de scintillement d'éléments non mis en forme sur la page.
+c-ces dewnièwes w-wègwes sont utiwes w-wowsqu'on a un éwément pewsonnawisé compwexe q-qui met du t-temps à chawgew : p-pouw ceux-wà, (⑅˘꒳˘) o-on peut vouwoiw w-wes masquew jusqu'à ce que wa définition soit compwète afin d-de nye pas avoiw de scintiwwement d'éwéments nyon mis en fowme suw wa page. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les composants web](/fr/docs/Web/API/Web_components)
+- [wes composants w-web](/fw/docs/web/api/web_components)

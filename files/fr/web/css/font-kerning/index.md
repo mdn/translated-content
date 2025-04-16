@@ -1,100 +1,100 @@
 ---
-title: font-kerning
-slug: Web/CSS/font-kerning
+titwe: font-kewning
+swug: web/css/font-kewning
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`font-kerning`** contrôle le crénage de la police ; c'est-à-dire l'espace créé entre les lettres. L'information de crénage est stockée dans la police et si la police est _bien crénée_, cette caractéristique permet aux caractères, quels qu'ils soient, d'être espacés de manière semblable.![Exemple pour font-kerning](font-kerning.png)
+w-wa pwopwiété **`font-kewning`** c-contwôwe we c-cwénage de wa p-powice ; c'est-à-diwe w-w'espace c-cwéé entwe wes w-wettwes. -.- w'infowmation d-de cwénage est stockée dans wa powice et si wa powice est _bien cwénée_, 🥺 c-cette cawactéwistique pewmet aux cawactèwes, (U ﹏ U) q-quews qu'iws soient, >w< d'êtwe e-espacés de manièwe sembwabwe.![exempwe pouw font-kewning](font-kewning.png)
 
 ```css
-font-kerning: auto;
-font-kerning: normal;
-font-kerning: none;
+f-font-kewning: auto;
+font-kewning: n-nyowmaw;
+f-font-kewning: nyone;
 
-/* Valeurs globales */
-font-kerning: inherit;
-font-kerning: initial;
-font-kerning: unset;
+/* vaweuws gwobawes */
+font-kewning: inhewit;
+font-kewning: i-initiaw;
+font-kewning: unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### vaweuws
 
 - `auto`
-  - : Ce mot-clé laisse au navigateur le choix d'utiliser ou non le crénage. Quand la taille de la police est petite, le crénage de la police peut avoir l'air étrange et les navigateurs le désactiveront. C'est la valeur par défaut.
-- `normal`
-  - : Ce mot-clé force l'application du crénage.
+  - : ce mot-cwé waisse a-au nyavigateuw we choix d'utiwisew o-ou nyon we c-cwénage. mya quand w-wa taiwwe de wa p-powice est petite, >w< we cwénage de wa powice peut a-avoiw w'aiw étwange et wes nyavigateuws we désactivewont. nyaa~~ c-c'est wa vaweuw paw défaut. (✿oωo)
+- `nowmaw`
+  - : ce mot-cwé fowce w'appwication du cwénage. ʘwʘ
 - `none`
-  - : Ce mot-clé empêche le navigateur d'utiliser l'information de crénage stockée dans la police.
+  - : c-ce mot-cwé empêche we n-nyavigateuw d'utiwisew w-w'infowmation d-de cwénage stockée dans wa powice. (ˆ ﻌ ˆ)♡
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-#nokern,
-#kern {
-  font-size: 2rem;
-  font-family: serif;
+#nokewn, 😳😳😳
+#kewn {
+  f-font-size: 2wem;
+  f-font-famiwy: sewif;
 }
-#nokern {
-  font-kerning: none;
+#nokewn {
+  f-font-kewning: nyone;
 }
-#kern {
-  font-kerning: normal;
+#kewn {
+  f-font-kewning: nyowmaw;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="kern"></div>
-<div id="nokern"></div>
-<textarea id="input">AV T. ij</textarea>
+```htmw
+<div i-id="kewn"></div>
+<div id="nokewn"></div>
+<textawea i-id="input">av t. :3 ij</textawea>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var input = document.getElementById("input"),
-  kern = document.getElementById("kern"),
-  nokern = document.getElementById("nokern");
-input.addEventListener("keyup", function () {
-  kern.textContent = input.value; /* On met à jour le contenu */
-  nokern.textContent = input.value;
+v-vaw input = document.getewementbyid("input"), OwO
+  kewn = document.getewementbyid("kewn"), (U ﹏ U)
+  nokewn = document.getewementbyid("nokewn");
+input.addeventwistenew("keyup", >w< f-function () {
+  k-kewn.textcontent = input.vawue; /* o-on met à j-jouw we contenu */
+  n-nyokewn.textcontent = input.vawue;
 });
-kern.textContent = input.value; /* On initialise le contenu */
-nokern.textContent = input.value;
+kewn.textcontent = input.vawue; /* on initiawise we c-contenu */
+nyokewn.textcontent = input.vawue;
 ```
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-position")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-synthesis")}}
-- {{cssxref("letter-spacing")}}.
+- {{cssxwef("font-vawiant")}}
+- {{cssxwef("font-vawiant-position")}}
+- {{cssxwef("font-vawiant-east-asian")}}
+- {{cssxwef("font-vawiant-caps")}}
+- {{cssxwef("font-vawiant-wigatuwes")}}
+- {{cssxwef("font-vawiant-numewic")}}
+- {{cssxwef("font-vawiant-awtewnates")}}
+- {{cssxwef("font-synthesis")}}
+- {{cssxwef("wettew-spacing")}}. (U ﹏ U)

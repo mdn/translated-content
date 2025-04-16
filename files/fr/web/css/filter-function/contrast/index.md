@@ -1,79 +1,79 @@
 ---
-title: contrast()
-slug: Web/CSS/filter-function/contrast
+titwe: contwast()
+swug: web/css/fiwtew-function/contwast
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`contrast()`** permet d'ajuster le contraste d'une image. Le résultat de cette fonction est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+w-wa f-fonction css **`contwast()`** p-pewmet d-d'ajustew we c-contwaste d'une i-image. (U ﹏ U) we wésuwtat d-de cette fonction e-est une vaweuw de type [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function). (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: contrast()")}}
+{{intewactiveexampwe("css demo: contwast()")}}
 
-```css interactive-example-choice
-filter: contrast(1);
+```css intewactive-exampwe-choice
+fiwtew: c-contwast(1);
 ```
 
-```css interactive-example-choice
-filter: contrast(1.75);
+```css intewactive-exampwe-choice
+fiwtew: contwast(1.75);
 ```
 
-```css interactive-example-choice
-filter: contrast(50%);
+```css i-intewactive-exampwe-choice
+fiwtew: contwast(50%);
 ```
 
-```css interactive-example-choice
-filter: contrast(0);
+```css i-intewactive-exampwe-choice
+fiwtew: contwast(0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-contrast(multiplicateur)
+contwast(muwtipwicateuw)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `multiplicateur`
-  - : La modification de contraste à appliquer à l'image, exprimée sous la forme d'un nombre ([`<number>`](/fr/docs/Web/CSS/number)) ou d'un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Une valeur inférieure à `100%` réduira le contraste et une valeur supérieure à `100%` accentuera le contraste. Une valeur de `0%` permettra d'obtenir une image complètement grise et une valeur de `100%` laissera l'image inchangée. La valeur par défaut utilisée pour les interpolations est `1`.
+- `muwtipwicateuw`
+  - : wa modification de contwaste à a-appwiquew à w'image, expwimée sous wa fowme d'un nombwe ([`<numbew>`](/fw/docs/web/css/numbew)) ou d-d'un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). >w< une vaweuw inféwieuwe à `100%` w-wéduiwa we c-contwaste et une v-vaweuw supéwieuwe à `100%` a-accentuewa we contwaste. rawr une vaweuw d-de `0%` pewmettwa d'obteniw une image compwètement g-gwise et une vaweuw de `100%` waissewa w'image inchangée. mya wa vaweuw paw défaut utiwisée p-pouw wes intewpowations est `1`.
 
-## Exemples
+## e-exempwes
 
-### Définir un contraste à l'aide de nombres et de pourcentages
+### d-définiw un c-contwaste à w'aide de nyombwes et de pouwcentages
 
 ```css
-contrast(0);     /* Complètement gris */
-contrast(65%);   /* 65% de contraste */
-contrast(1);     /* Aucun effet */
-contrast(200%);  /* Contraste doublé */
+contwast(0);     /* compwètement g-gwis */
+c-contwast(65%);   /* 65% de c-contwaste */
+contwast(1);     /* a-aucun effet */
+contwast(200%);  /* c-contwaste doubwé */
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+- [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function) et w-wes autwes fonctions associées
+  - [`bwuw()`](/fw/docs/web/css/fiwtew-function/bwuw)
+  - [`bwightness()`](/fw/docs/web/css/fiwtew-function/bwightness)
+  - [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow)
+  - [`gwayscawe()`](/fw/docs/web/css/fiwtew-function/gwayscawe)
+  - [`hue-wotate()`](/fw/docs/web/css/fiwtew-function/hue-wotate)
+  - [`invewt()`](/fw/docs/web/css/fiwtew-function/invewt)
+  - [`opacity()`](/fw/docs/web/css/fiwtew-function/opacity)
+  - [`satuwate()`](/fw/docs/web/css/fiwtew-function/satuwate)
+  - [`sepia()`](/fw/docs/web/css/fiwtew-function/sepia)

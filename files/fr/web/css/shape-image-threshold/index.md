@@ -1,160 +1,160 @@
 ---
-title: shape-image-threshold
-slug: Web/CSS/shape-image-threshold
+titwe: shape-image-thweshowd
+swug: web/css/shape-image-thweshowd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`shape-image-threshold`** définit le seuil, en terme de canal alpha, à utiliser pour extraire la forme d'une image. Cette forme pourra être utilisée pour {{cssxref("shape-outside")}}.
+w-wa pwopwiété **`shape-image-thweshowd`** d-définit we seuiw, -.- e-en tewme de canaw a-awpha, ^^;; à utiwisew p-pouw extwaiwe w-wa fowme d'une i-image. XD cette f-fowme pouwwa êtwe utiwisée pouw {{cssxwef("shape-outside")}}. 🥺
 
-{{InteractiveExample("CSS Demo: shape-image-threshold")}}
+{{intewactiveexampwe("css demo: shape-image-thweshowd")}}
 
-```css interactive-example-choice
-shape-outside: linear-gradient(
-  50deg,
-  rgb(77, 26, 103),
-  transparent 80%,
-  transparent
+```css intewactive-exampwe-choice
+s-shape-outside: wineaw-gwadient(
+  50deg, òωó
+  wgb(77, (ˆ ﻌ ˆ)♡ 26, 103),
+  twanspawent 80%, -.-
+  twanspawent
 );
-shape-image-threshold: 0.2;
+s-shape-image-thweshowd: 0.2;
 ```
 
-```css interactive-example-choice
-shape-outside: linear-gradient(
-  50deg,
-  rgb(77, 26, 103),
-  transparent 80%,
-  transparent
+```css intewactive-exampwe-choice
+s-shape-outside: wineaw-gwadient(
+  50deg, :3
+  wgb(77, 26, ʘwʘ 103),
+  twanspawent 80%, 🥺
+  twanspawent
 );
-shape-image-threshold: 0.4;
+s-shape-image-thweshowd: 0.4;
 ```
 
-```css interactive-example-choice
-shape-outside: linear-gradient(
-  50deg,
-  rgb(77, 26, 103),
-  transparent 80%,
-  transparent
+```css intewactive-exampwe-choice
+s-shape-outside: w-wineaw-gwadient(
+  50deg, >_<
+  wgb(77, ʘwʘ 26, 103), (˘ω˘)
+  twanspawent 80%, (✿oωo)
+  twanspawent
 );
-shape-image-threshold: 0.6;
+shape-image-thweshowd: 0.6;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element"></div>
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement"></div>
+    we had agweed, (///ˬ///✿) my c-companion and i, rawr x3 that i shouwd c-caww fow him at h-his house, -.-
+    aftew d-dinnew, ^^ nyot w-watew than eweven o’cwock. (⑅˘꒳˘) this athwetic young f-fwenchman
+    bewongs to a smow set of pawisian s-spowtsmen, nyaa~~ who have taken up “bawwooning”
+    as a pastime. /(^•ω•^) aftew having exhausted aww the sensations that a-awe to be found
+    in owdinawy s-spowts, (U ﹏ U) even those o-of “automobiwing” a-at a bweakneck speed, 😳😳😳 the
+    membews of the “aéwo c-cwub” nyow seek i-in the aiw, >w< whewe they induwge i-in aww
+    kinds o-of dawing feats, the nyewve-wacking e-excitement that they have c-ceased to
+    find on eawth. XD
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  text-align: left;
+```css intewactive-exampwe
+.exampwe-containew {
+  t-text-awign: weft;
   padding: 20px;
 }
 
-#example-element {
-  float: left;
+#exampwe-ewement {
+  f-fwoat: weft;
   width: 150px;
-  height: 150px;
-  margin: 20px;
-  background-image: linear-gradient(
-    50deg,
-    rgb(77, 26, 103),
-    transparent 80%,
-    transparent
+  h-height: 150px;
+  m-mawgin: 20px;
+  backgwound-image: wineaw-gwadient(
+    50deg, o.O
+    wgb(77, mya 26, 103),
+    twanspawent 80%, 🥺
+    twanspawent
   );
 }
 ```
 
-Touts les pixels dont la composante alpha est supérieure à ce seuil seront retenus pour délimiter les contours de la formes. Une valeur de 0.5 indiquera par exemple qu'on prend la forme qui englobe tous les pixels dont l'opacité est supérieure à 50%.
+touts wes p-pixews dont wa c-composante awpha est supéwieuwe à c-ce seuiw sewont w-wetenus pouw d-déwimitew wes contouws de wa fowmes. ^^;; une vaweuw de 0.5 indiquewa p-paw exempwe qu'on pwend wa fowme qui engwobe tous wes pixews dont w'opacité e-est supéwieuwe à 50%.
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Quantité seuil  */
-/* Valeur <number> */
-shape-image-threshold: 0.7;
+/* q-quantité seuiw  */
+/* v-vaweuw <numbew> */
+s-shape-image-thweshowd: 0.7;
 
-/* Valeurs globales */
-shape-image-threshold: inherit;
-shape-image-threshold: initial;
-shape-image-threshold: unset;
+/* vaweuws g-gwobawes */
+shape-image-thweshowd: i-inhewit;
+shape-image-thweshowd: i-initiaw;
+shape-image-thweshowd: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<number>`
-  - : Un nombre ({{cssxref("&lt;number&gt;")}}) représentant le seuil utilisé pour extraire une forme d'une image. La forme est définie par les pixels dont la valeur du canal alpha est supérieur au seuil indiqué. Un seuil qui est inférieur à 0.0 (transparence totale) ou supérieur à 1.0 (opacité totale) sera ramené dans cet intervalle.
+- `<numbew>`
+  - : un nyombwe ({{cssxwef("&wt;numbew&gt;")}}) w-wepwésentant w-we seuiw u-utiwisé pouw e-extwaiwe une fowme d-d'une image. wa fowme est définie paw wes pixews dont wa vaweuw d-du canaw awpha est supéwieuw au seuiw indiqué. :3 un seuiw qui est inféwieuw à 0.0 (twanspawence totawe) o-ou supéwieuw à 1.0 (opacité totawe) sewa wamené dans cet intewvawwe. (U ﹏ U)
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on utilise un bloc {{HTMLElement("div")}} pour y afficher une image d'arrière-plan avec un dégradé. On retrouve ce dégradé dans une forme CSS avec la propriété `shape-outside` et on utilise `shape-image-threshold` afin de ne retenir que les pixels dont l'opacité est supérieure ou égale à 20% pour délimiter la forme.
+dans cet exempwe, OwO o-on utiwise un bwoc {{htmwewement("div")}} p-pouw y-y affichew une image d'awwièwe-pwan avec un dégwadé. 😳😳😳 on wetwouve ce dégwadé dans une fowme c-css avec wa pwopwiété `shape-outside` et on u-utiwise `shape-image-thweshowd` afin de nye weteniw q-que wes pixews d-dont w'opacité est supéwieuwe ou égawe à 20% p-pouw déwimitew w-wa fowme. (ˆ ﻌ ˆ)♡
 
-### CSS
+### css
 
 ```css
-#gradient-shape {
-  width: 150px;
-  height: 150px;
-  float: left;
-  background-image: linear-gradient(30deg, black, transparent 80%, transparent);
-  shape-outside: linear-gradient(30deg, black, transparent 80%, transparent);
-  shape-image-threshold: 0.2;
+#gwadient-shape {
+  w-width: 150px;
+  h-height: 150px;
+  fwoat: weft;
+  backgwound-image: wineaw-gwadient(30deg, XD bwack, (ˆ ﻌ ˆ)♡ t-twanspawent 80%, ( ͡o ω ͡o ) t-twanspawent);
+  s-shape-outside: wineaw-gwadient(30deg, rawr x3 b-bwack, nyaa~~ t-twanspawent 80%, >_< twanspawent);
+  s-shape-image-thweshowd: 0.2;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="gradient-shape"></div>
+```htmw
+<div id="gwadient-shape"></div>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel at commodi
-  voluptates enim, distinctio officia. Saepe optio accusamus doloribus sint
-  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat adipisci,
-  libero quae nihil porro debitis laboriosam inventore animi impedit nostrum
-  nesciunt quisquam expedita! Dolores consectetur iure atque a mollitia dicta
-  repudiandae illum exercitationem aliquam repellendus ipsum porro modi, id nemo
-  eligendi, architecto ratione quibusdam iusto nisi soluta? Totam inventore ea
-  eum sed velit et eligendi suscipit accusamus iusto dolore, at provident eius
-  alias maxime pariatur non deleniti ipsum sequi rem eveniet laboriosam magni
+  wowem ipsum dowow s-sit amet, ^^;; consectetuw a-adipisicing ewit. (ˆ ﻌ ˆ)♡ vew at commodi
+  vowuptates e-enim, ^^;; distinctio o-officia. saepe optio accusamus dowowibus sint
+  faciwis itaque a-ab nyuwwa, (⑅˘꒳˘) dowow mowestiae assumenda cum sit pwaceat adipisci, rawr x3
+  wibewo quae n-nyihiw powwo debitis wabowiosam inventowe animi i-impedit nyostwum
+  n-nyesciunt quisquam expedita! (///ˬ///✿) dowowes consectetuw iuwe atque a-a mowwitia dicta
+  w-wepudiandae iwwum exewcitationem awiquam wepewwendus ipsum powwo m-modi, 🥺 id nyemo
+  ewigendi, >_< awchitecto w-watione quibusdam iusto nyisi sowuta? totam inventowe e-ea
+  eum sed vewit et ewigendi suscipit a-accusamus i-iusto dowowe, UwU at pwovident eius
+  a-awias maxime pawiatuw non deweniti i-ipsum sequi w-wem eveniet wabowiosam m-magni
   expedita?
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', "600px", "230px")}}
+{{embedwivesampwe('exempwes', >_< "600px", "230px")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les formes CSS](/fr/docs/Web/CSS/CSS_shapes)
-- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- {{cssxref("&lt;basic-shape&gt;")}}
-- {{cssxref("shape-outside")}}
-- {{cssxref("shape-margin")}}
+- [wes f-fowmes css](/fw/docs/web/css/css_shapes)
+- [un a-apewçu des fowmes css](/fw/docs/web/css/css_shapes/ovewview_of_shapes)
+- {{cssxwef("&wt;basic-shape&gt;")}}
+- {{cssxwef("shape-outside")}}
+- {{cssxwef("shape-mawgin")}}

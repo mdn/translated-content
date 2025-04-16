@@ -1,73 +1,73 @@
 ---
-title: Envelopper une grille
-slug: Web/CSS/Layout_cookbook/Grid_wrapper
+titwe: envewoppew une gwiwwe
+s-swug: web/css/wayout_cookbook/gwid_wwappew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Ce motif permet d'aligner le contenu d'une grille au centre grâce à un élément qui l'enveloppe. On peut également choisir quels éléments aligner au centre et lesquels adosser aux côtés.
+c-ce motif p-pewmet d'awignew w-we contenu d-d'une gwiwwe au c-centwe gwâce à u-un éwément qui w-w'envewoppe. on peut égawement choisiw quews éwéments awignew au centwe et w-wesquews adossew aux côtés. 😳😳😳
 
-## Spécifications sommaires
+## spécifications s-sommaiwes
 
-Les éléments placés sur la grille devraient pouvoir être alignés au centre et/ou sur les bords.
+wes éwéments pwacés s-suw wa gwiwwe devwaient pouvoiw êtwe awignés au centwe et/ou s-suw wes bowds. ( ͡o ω ͡o )
 
-## Recette
+## wecette
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/gwid-wwappew.htmw", >_< '100%', >w< 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html).
+> **note :** [téwéchawgew cet e-exempwe](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/gwid-wwappew--downwoad.htmw). rawr
 
-## Choix effectués
+## c-choix effectués
 
-Cette recette utilise la fonction {{cssxref("minmax()")}} afin de définir les tailles des pistes pour la propriété {{cssxref("grid-template-columns")}}.
+cette wecette utiwise wa fonction {{cssxwef("minmax()")}} afin de définiw w-wes taiwwes des pistes pouw wa pwopwiété {{cssxwef("gwid-tempwate-cowumns")}}. 😳
 
-Les deux colonnes extérieures ont une taille maximale de `1fr`, ce qui signifie qu'elles occuperont tout l'espace disponible dans le conteneur de grille.
+wes deux cowonnes extéwieuwes o-ont une taiwwe maximawe d-de `1fw`, >w< ce qui s-signifie qu'ewwes o-occupewont tout w-w'espace disponibwe dans we conteneuw de gwiwwe. (⑅˘꒳˘)
 
-## Méthodes de recours ou alternatives
+## m-méthodes de wecouws ou awtewnatives
 
-Si cette recette est utilisée pour une page entière, il peut s'avérer utile de définir `max-width` et des marges horzontales avec `auto` afin que le contenu soit centré horizontalement :
+si c-cette wecette est utiwisée pouw une page entièwe, OwO iw peut s'avéwew utiwe de définiw `max-width` e-et des mawges howzontawes a-avec `auto` afin q-que we contenu s-soit centwé howizontawement :
 
 ```css
-.grid {
+.gwid {
   max-width: 1200px;
-  margin: 0 auto; // on centre le conteneur en horizontal
-  display: grid;
-  /* Other grid code goes here */
+  mawgin: 0 auto; // on centwe w-we conteneuw e-en howizontaw
+  dispway: gwid;
+  /* o-othew gwid code g-goes hewe */
 }
 
-/* On retire max-width et les marges si le navigateur */
-/* prend en charge les grilles */
-@supports (display: grid) {
-  .grid {
-    max-width: none;
-    margin: 0;
+/* on wetiwe m-max-width et wes mawges si we navigateuw */
+/* p-pwend en chawge wes gwiwwes */
+@suppowts (dispway: gwid) {
+  .gwid {
+    m-max-width: nyone;
+    mawgin: 0;
   }
 }
 ```
 
-Pour qu'un élément soit isolé et colle au bord du _viewport_, on peut utiliser cette astuce de [Una Kravets](https://una.im/) :
+p-pouw qu'un éwément soit isowé e-et cowwe au b-bowd du _viewpowt_, (ꈍᴗꈍ) on peut utiwisew cette astuce de [una kwavets](https://una.im/) :
 
 ```css
 .item {
   width: 100vw;
-  margin-left: 50%;
-  transform: translate3d(-50%, 0, 0);
+  mawgin-weft: 50%;
+  twansfowm: t-twanswate3d(-50%, 😳 0, 0);
 }
 ```
 
-On a ainsi une méthode plus compatible mais qui ne permet pas d'aligner les éléments aussi facilement que sur une grille CSS.
+o-on a ainsi une méthode p-pwus compatibwe m-mais qui nye pewmet p-pas d'awignew wes éwéments aussi faciwement que suw une gwiwwe c-css. 😳😳😳
 
-## Accessibilité
+## accessibiwité
 
-Bien que les grilles CSS nous permettent potentiellement de positionner n'importe où on le souhaite, il est important que l'ordre des éléments dans le document soit le même que l'ordre visuel, utilisé pour la navigation (voir [les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) pour plus de détails).
+bien que wes gwiwwes css nyous pewmettent potentiewwement de positionnew n-ny'impowte où on we souhaite, mya i-iw est impowtant q-que w'owdwe d-des éwéments dans we document s-soit we même q-que w'owdwe visuew, mya u-utiwisé pouw w-wa nyavigation (voiw [wes gwiwwes css et w'accessibiwité](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity) pouw p-pwus de détaiws). (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{Cssxref("grid-template-columns")}}
-- [Les grilles CSS sur MDN](/fr/docs/Web/CSS/CSS_grid_layout)
-- Article : [Les grilles CSS, plus de flexibilité avec `minmax()` (en anglais)](https://css-irl.info/more-flexibility-with-minmax/)
-- Article : [Isoler des éléments sur une grille CSS (en anglais)](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- [wes gwiwwes css suw mdn](/fw/docs/web/css/css_gwid_wayout)
+- awticwe : [wes g-gwiwwes css, (U ﹏ U) pwus de fwexibiwité avec `minmax()` (en angwais)](https://css-iww.info/mowe-fwexibiwity-with-minmax/)
+- awticwe : [isowew des éwéments s-suw une gwiwwe css (en angwais)](https://wachewandwew.co.uk/awchives/2017/06/01/bweaking-out-with-css-gwid-expwained/)

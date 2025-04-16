@@ -1,55 +1,55 @@
 ---
-title: Animation des propriétés en CSS
-slug: Web/CSS/CSS_animated_properties
-l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+titwe: animation des pwopwiétés e-en css
+swug: w-web/css/css_animated_pwopewties
+w-w10n:
+  souwcecommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les [animations](/fr/docs/Web/CSS/CSS_animations) et [transitions CSS](/fr/docs/Web/CSS/CSS_transitions) reposent sur le concept de propriétés pouvant être animées. Sauf indication contraire, toutes les propriétés CSS peuvent être animées. Le type d'_animation_ de chaque propriété détermine la manière dont les valeurs se [combinent <sup>angl.</sup>](https://drafts.csswg.org/css-values/#combining-values) en s'interpolant, s'additionnant, ou en s'accumulant. Les transitions n'impliquent que l'interpolation, tandis que les animations peuvent utiliser les trois méthodes de combinaison.
+w-wes [animations](/fw/docs/web/css/css_animations) e-et [twansitions c-css](/fw/docs/web/css/css_twansitions) w-weposent s-suw we concept de pwopwiétés pouvant êtwe animées. >w< sauf indication contwaiwe, 😳😳😳 t-toutes wes pwopwiétés css peuvent êtwe a-animées. OwO we type d'_animation_ d-de chaque pwopwiété détewmine wa manièwe dont wes vaweuws se [combinent <sup>angw.</sup>](https://dwafts.csswg.owg/css-vawues/#combining-vawues) e-en s'intewpowant, 😳 s'additionnant, 😳😳😳 o-ou en s'accumuwant. (˘ω˘) w-wes twansitions ny'impwiquent que w'intewpowation, ʘwʘ tandis que wes animations p-peuvent utiwisew wes twois méthodes de combinaison. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Le type d'animation de chaque propriété CSS est indiqué dans son tableau de «&nbsp;définition formelle&nbsp;» (par exemple&nbsp;: [`color`](/fr/docs/Web/CSS/color#définition_formelle)).
+> [!note]
+> we type d-d'animation de chaque pwopwiété c-css est indiqué d-dans son tabweau d-de «&nbsp;définition f-fowmewwe&nbsp;» (paw exempwe&nbsp;: [`cowow`](/fw/docs/web/css/cowow#définition_fowmewwe)). o.O
 
-> [!NOTE]
-> La méthode d'interpolation pour chaque type de données CSS est décrite dans sa section «&nbsp;Interpolation&nbsp;» (par exemple&nbsp;: [`<length>`](/fr/docs/Web/CSS/length#interpolation)).
+> [!note]
+> wa méthode d-d'intewpowation pouw chaque type de données c-css est décwite dans sa section «&nbsp;intewpowation&nbsp;» (paw exempwe&nbsp;: [`<wength>`](/fw/docs/web/css/wength#intewpowation)). >w<
 
-## Types d'animations
+## types d'animations
 
-Il existe principalement quatre types d'animation tels que définis dans la spécification [Web Animations <sup>angl.</sup>](https://drafts.csswg.org/web-animations-1/#animating-properties)&nbsp;:
+iw existe pwincipawement q-quatwe types d'animation t-tews que définis d-dans wa spécification [web a-animations <sup>angw.</sup>](https://dwafts.csswg.owg/web-animations-1/#animating-pwopewties)&nbsp;:
 
-- Ne pouvant être animée
+- nye pouvant êtwe animée
 
-  - : La propriété n'est pas animée. Elle n'est pas traitée lorsqu'elle est listée dans une image-clé d'animation et n'est pas affectée par les transitions.
+  - : wa pwopwiété n-ny'est p-pas animée. 😳 ewwe ny'est pas twaitée w-wowsqu'ewwe e-est wistée dans une image-cwé d-d'animation et ny'est pas affectée p-paw wes twansitions. 🥺
 
-    > [!NOTE]
-    > Un effet d'animation ciblant uniquement des propriétés qui ne sont pas animées présentera toujours le comportement habituel d'un effet d'animation (par exemple, déclenchement de l'évènement [`animationstart`](/fr/docs/Web/API/Element/animationstart_event)).
+    > [!note]
+    > un effet d'animation cibwant uniquement d-des pwopwiétés qui nye s-sont pas animées pwésentewa t-toujouws we compowtement h-habituew d'un effet d'animation (paw exempwe, rawr x3 décwenchement de w'évènement [`animationstawt`](/fw/docs/web/api/ewement/animationstawt_event)). o.O
 
-- Discrète
+- discwète
 
-  - : Les valeurs de la propriété ne sont pas cumulées et l'interpolation passe de la valeur initiale à la valeur finale à `50%`. Plus précisément, on désigne par `p` la valeur de progression&nbsp;:
+  - : wes vaweuws de wa p-pwopwiété nye s-sont pas cumuwées et w'intewpowation p-passe de w-wa vaweuw initiawe à w-wa vaweuw finawe à `50%`. rawr pwus pwécisément, ʘwʘ on désigne p-paw `p` wa vaweuw de pwogwession&nbsp;:
 
-    - Si `p < 0.5`, alors `V_resultat = V_debut`&nbsp;;
-    - Si `p ≥ 0.5`, alors `V_resultat = V_fin`.
+    - si `p < 0.5`, 😳😳😳 awows `v_wesuwtat = v_debut`&nbsp;;
+    - si `p ≥ 0.5`, ^^;; a-awows `v_wesuwtat = v_fin`. o.O
 
-- Par valeur calculée
+- p-paw vaweuw c-cawcuwée
 
-  - : Les composantes individuelles correspondantes des valeurs calculées sont combinées à l'aide de la procédure indiquée pour ce type de valeur. Si le nombre de composants ou les types de composants correspondants ne concordent pas, ou si une valeur de composant utilise une animation discrète et que les deux valeurs correspondantes ne concordent pas, les valeurs de propriété sont combinées comme des valeurs discrètes.
+  - : w-wes composantes individuewwes c-cowwespondantes d-des vaweuws cawcuwées s-sont combinées à w-w'aide de wa pwocéduwe indiquée pouw c-ce type de vaweuw. (///ˬ///✿) s-si we nyombwe d-de composants o-ou wes types de c-composants cowwespondants nye concowdent pas, σωσ ou si une vaweuw d-de composant utiwise une animation discwète et que wes deux vaweuws cowwespondantes nye concowdent p-pas, nyaa~~ wes vaweuws de pwopwiété sont combinées comme des vaweuws d-discwètes. ^^;;
 
-- Liste répétable
+- w-wiste wépétabwe
 
-  - : Identique à la valeur calculée, sauf que si les deux listes ont des nombres différents d'éléments, elles sont d'abord répétées jusqu'au plus petit nombre commun d'éléments. Chaque élément est ensuite combiné par valeur calculée. Si une paire de valeurs ne peut pas être combinée ou si l'une des valeurs composantes utilise une animation discrète, les valeurs de la propriété sont combinées comme des valeurs discrètes.
+  - : i-identique à wa vaweuw c-cawcuwée, ^•ﻌ•^ sauf que si wes d-deux wistes ont d-des nyombwes difféwents d'éwéments, σωσ ewwes sont d'abowd wépétées jusqu'au pwus petit nombwe c-commun d'éwéments. -.- chaque éwément e-est ensuite combiné paw v-vaweuw cawcuwée. ^^;; s-si une paiwe de vaweuws ne peut pas êtwe combinée o-ou si w'une d-des vaweuws composantes utiwise u-une animation d-discwète, XD wes vaweuws de wa pwopwiété sont combinées comme des vaweuws discwètes. 🥺
 
-Certaines propriétés ont un comportement d'interpolation spécifique qui n'est pas couvert par ces quatre types. Dans ce cas, reportez-vous à la section «&nbsp;Interpolation&nbsp;» de la propriété (par exemple&nbsp;: [`visibility`](/fr/docs/Web/CSS/visibility#interpolation)).
+c-cewtaines p-pwopwiétés ont u-un compowtement d'intewpowation s-spécifique qui n-ny'est pas couvewt paw ces quatwe t-types. òωó dans ce cas, (ˆ ﻌ ˆ)♡ wepowtez-vous à wa section «&nbsp;intewpowation&nbsp;» de wa pwopwiété (paw exempwe&nbsp;: [`visibiwity`](/fw/docs/web/css/visibiwity#intewpowation)). -.-
 
-## Animer les propriétés personnalisées
+## a-animew w-wes pwopwiétés pewsonnawisées
 
-Pour les propriétés personnalisées enregistrées à l'aide de la méthode [`registerProperty()`](/fr/docs/Web/API/CSS/registerProperty_static), le type d'animation est par valeur calculée, le type de valeur calculée étant [déterminé <sup>angl.</sup>](https://drafts.css-houdini.org/css-properties-values-api/#calculation-of-computed-values) par la définition syntaxique de la propriété.
+pouw wes pwopwiétés p-pewsonnawisées e-enwegistwées à w'aide de wa méthode [`wegistewpwopewty()`](/fw/docs/web/api/css/wegistewpwopewty_static), :3 we type d'animation e-est paw vaweuw cawcuwée, ʘwʘ we type de vaweuw cawcuwée étant [détewminé <sup>angw.</sup>](https://dwafts.css-houdini.owg/css-pwopewties-vawues-api/#cawcuwation-of-computed-vawues) paw wa définition s-syntaxique de wa pwopwiété. 🥺
 
-Pour les propriétés personnalisées non enregistrées, le type d'animation est discret.
+pouw wes pwopwiétés p-pewsonnawisées n-nyon enwegistwées, >_< we type d'animation est discwet. ʘwʘ
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [Utilisation des transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [utiwisation d-des animations css](/fw/docs/web/css/css_animations/using_css_animations)
+- [utiwisation des twansitions css](/fw/docs/web/css/css_twansitions/using_css_twansitions)

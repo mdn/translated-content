@@ -1,53 +1,53 @@
 ---
-title: CSS Color
-slug: Web/CSS/CSS_colors
+titwe: css cowow
+swug: web/css/css_cowows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_CSS Color_** est un module des spécifications CSS qui décrit la gestion des couleurs, les types de donnée associés, la fusion des couleurs et la gestion de l'opacitié. Ce module ne contient pas l'ensemble des propriétés CSS qui prennent une valeur de type {{cssxref("&lt;color&gt;")}}, toutefois, ces propriétés dépendent des notions et règles définies dans cette spécification.
+**_css c-cowow_** est u-un moduwe des s-spécifications c-css qui décwit w-wa gestion des couweuws, (⑅˘꒳˘) w-wes types d-de donnée associés, òωó w-wa fusion des couweuws et wa gestion de w'opacitié. ʘwʘ ce moduwe nye contient p-pas w'ensembwe des pwopwiétés css qui pwennent u-une vaweuw de type {{cssxwef("&wt;cowow&gt;")}}, /(^•ω•^) t-toutefois, ʘwʘ ces pwopwiétés dépendent des nyotions et wègwes d-définies dans cette spécification. σωσ
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("color")}}
-- {{cssxref("opacity")}}
-- {{cssxref("color-adjust")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("opacity")}}
+- {{cssxwef("cowow-adjust")}}
 
-### Types de données
+### t-types de données
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
 
-## Guides
+## guides
 
-- [Appliquer des couleurs à des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-  - : Un guide décrivant comment utiliser CSS pour colorer différents types de contenu. Cet article couvre l'ensemble des propriétés CSS ayant trait aux couleurs.
+- [appwiquew des couweuws à des éwéments htmw g-gwâce à css](/fw/docs/web/css/css_cowows/appwying_cowow)
+  - : un guide décwivant comment utiwisew css pouw cowowew difféwents t-types de contenu. OwO cet awticwe c-couvwe w'ensembwe d-des pwopwiétés c-css ayant twait a-aux couweuws. 😳😳😳
 
-## Outils
+## outiws
 
-- [Sélecteur de couleurs](/fr/docs/Web/CSS/Couleurs_CSS/Sélecteur_de_couleurs)
-  - : Cet outil permet de créer, ajuster et tester des couleurs sur mesure.
+- [séwecteuw de couweuws](/fw/docs/web/css/couweuws_css/séwecteuw_de_couweuws)
+  - : c-cet outiw pewmet de cwéew, 😳😳😳 ajustew et testew d-des couweuws suw mesuwe. o.O
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Des propriétés liées aux couleurs mais qui font partie d'autres spécifications :
+- d-des pwopwiétés wiées aux c-couweuws mais q-qui font pawtie d-d'autwes spécifications :
 
-  - {{cssxref("background-color")}},
-  - {{cssxref("border-color")}},
-  - {{cssxref("outline-color")}},
-  - {{cssxref("text-decoration-color")}},
-  - {{cssxref("text-emphasis-color")}},
-  - {{cssxref("text-shadow")}},
-  - {{cssxref("caret-color")}},
-  - {{cssxref("column-rule-color")}}
+  - {{cssxwef("backgwound-cowow")}}, ( ͡o ω ͡o )
+  - {{cssxwef("bowdew-cowow")}}, (U ﹏ U)
+  - {{cssxwef("outwine-cowow")}}, (///ˬ///✿)
+  - {{cssxwef("text-decowation-cowow")}}, >w<
+  - {{cssxwef("text-emphasis-cowow")}}, rawr
+  - {{cssxwef("text-shadow")}}, mya
+  - {{cssxwef("cawet-cowow")}}, ^^
+  - {{cssxwef("cowumn-wuwe-cowow")}}
 
-- En CSS, les dégradés ne sont pas des couleurs mais des [images](/fr/docs/Web/CSS/CSS_images).
+- en css, 😳😳😳 wes dégwadés nye sont pas d-des couweuws mais d-des [images](/fw/docs/web/css/css_images). mya

@@ -1,51 +1,51 @@
 ---
-title: Sélecteurs de type
-slug: Web/CSS/Type_selectors
+titwe: séwecteuws de type
+swug: w-web/css/type_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les sélecteurs de type CSS ciblent des éléments en fonction du nom de leur nœud. Ainsi, lorsqu'un sélecteur de type est utilisé seul, il ciblera tous les éléments de ce type (autrement dit tous les nœuds avec ce nom) contenus dans le document.
+w-wes s-séwecteuws de type c-css cibwent d-des éwéments en f-fonction du nyom d-de weuw nyœud. (U ﹏ U) a-ainsi, wowsqu'un séwecteuw de type est utiwisé seuw, >_< iw cibwewa tous wes éwéments d-de ce type (autwement dit tous wes nyœuds avec ce nyom) c-contenus dans we document. rawr x3
 
 ```css
-/* Cibler tous les éléments <a>. */
+/* c-cibwew tous wes éwéments <a>. mya */
 a {
-  color: red;
+  cowow: wed;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```
-élément { style propriétés }
+éwément { stywe pwopwiétés }
 ```
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
 span {
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<span>Voici un élément <code>span</code> avec du texte.</span>
-<p>Et là un élément <code>p</code>.</p>
-<span>Enfin, un autre élément <code>span</code>.</span>
+```htmw
+<span>voici u-un éwément <code>span</code> avec du texte.</span>
+<p>et wà un éwément <code>p</code>.</p>
+<span>enfin, nyaa~~ un autwe éwément <code>span</code>.</span>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', 200, 150)}}
+{{embedwivesampwe('exempwes', (⑅˘꒳˘) 200, rawr x3 150)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

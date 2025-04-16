@@ -1,132 +1,132 @@
 ---
-title: transition
-slug: Web/CSS/transition
+titwe: twansition
+swug: web/css/twansition
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`transition`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour les propriétés {{cssxref("transition-property")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-timing-function")}} et {{cssxref("transition-delay")}}.
+wa p-pwopwiété **`twansition`** est [une p-pwopwiété w-waccouwcie](/fw/docs/web/css/showthand_pwopewties) p-pouw wes p-pwopwiétés {{cssxwef("twansition-pwopewty")}}, rawr x3 {{cssxwef("twansition-duwation")}}, /(^•ω•^) {{cssxwef("twansition-timing-function")}} et {{cssxwef("twansition-deway")}}. :3
 
-{{InteractiveExample("CSS Demo: transition")}}
+{{intewactiveexampwe("css d-demo: t-twansition")}}
 
-```css interactive-example-choice
-transition: margin-right 2s;
+```css i-intewactive-exampwe-choice
+twansition: mawgin-wight 2s;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s 0.5s;
+```css intewactive-exampwe-choice
+twansition: mawgin-wight 2s 0.5s;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s ease-in-out;
+```css i-intewactive-exampwe-choice
+twansition: mawgin-wight 2s ease-in-out;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s ease-in-out 0.5s;
+```css intewactive-exampwe-choice
+t-twansition: mawgin-wight 2s ease-in-out 0.5s;
 ```
 
-```css interactive-example-choice
-transition:
-  margin-right 2s,
-  color 1s;
+```css intewactive-exampwe-choice
+t-twansition:
+  mawgin-wight 2s, (ꈍᴗꈍ)
+  cowow 1s;
 ```
 
-```css interactive-example-choice
-transition: all 1s ease-out;
+```css intewactive-exampwe-choice
+twansition: a-aww 1s ease-out;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">hovew to see<bw />the twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #e4f0f5;
+  c-cowow: #000;
+  padding: 1wem;
+  bowdew-wadius: 0.5wem;
   font: 1em monospace;
   width: 100%;
-  transition: margin-right 2s;
+  t-twansition: mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  b-backgwound-cowow: #909;
+  cowow: #fff;
+  m-mawgin-wight: 40%;
 }
 ```
 
-Elle permet de définir la transition entre deux états d'un élément. Les différents états peuvent être définis à l'aide [de pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) telles que {{cssxref(":hover")}} ou {{cssxref(":active")}} ou être définis dynamiquement avec JavaScript.
+e-ewwe pewmet d-de définiw wa twansition entwe deux états d-d'un éwément. /(^•ω•^) wes difféwents états peuvent êtwe d-définis à w'aide [de pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses) tewwes que {{cssxwef(":hovew")}} ou {{cssxwef(":active")}} ou êtwe d-définis dynamiquement avec javascwipt. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* S'applique à une propriété */
-/* on a le nom et la durée */
-transition: margin-right 4s;
+/* s-s'appwique à une p-pwopwiété */
+/* on a we nyom et wa duwée */
+twansition: mawgin-wight 4s;
 
-/* nom de la propriété | durée | retard */
-transition: margin-right 4s 1s;
+/* n-nyom de wa pwopwiété | d-duwée | wetawd */
+twansition: m-mawgin-wight 4s 1s;
 
-/* nom | durée | fonction */
-transition: margin-right 4s ease-in-out;
+/* n-nyom | duwée | fonction */
+twansition: m-mawgin-wight 4s ease-in-out;
 
-/* nom | durée | fonction | retard */
-transition: margin-right 4s ease-in-out 1s;
+/* n-nyom | duwée | fonction | wetawd */
+t-twansition: mawgin-wight 4s ease-in-out 1s;
 
-/* S'applique à deux propriétés */
-transition:
-  margin-right 4s,
-  color 1s;
+/* s-s'appwique à deux pwopwiétés */
+t-twansition:
+  m-mawgin-wight 4s, ( ͡o ω ͡o )
+  cowow 1s;
 
-/* S'applique à toutes les propriétés modifiées */
-transition: all 0.5s ease-out;
+/* s'appwique à toutes wes pwopwiétés modifiées */
+twansition: aww 0.5s ease-out;
 
-/* Valeurs globales */
-transition: inherit;
-transition: initial;
-transition: unset;
+/* v-vaweuws g-gwobawes */
+twansition: inhewit;
+t-twansition: initiaw;
+t-twansition: u-unset;
 ```
 
-La propriété `transition` se définit comme une ou plusieurs propriétés de transitions, séparées par des virgules.
+wa pwopwiété `twansition` se définit comme une o-ou pwusieuws pwopwiétés de twansitions, òωó sépawées paw des viwguwes. (⑅˘꒳˘)
 
-Chacune des propriétés de transition décrit la transition qui devrait être appliquée à une propriété donnée (ou pour les valeurs spéciales `all` et `none`). Une propriété de transition inclut :
+chacune d-des pwopwiétés de twansition d-décwit wa twansition q-qui devwait êtwe a-appwiquée à une pwopwiété d-donnée (ou p-pouw wes vaweuws s-spéciawes `aww` e-et `none`). XD une pwopwiété de twansition incwut :
 
-- zéro ou une valeur qui représente la propriété à laquelle la transition s'applique. Ça peut être :
+- z-zéwo o-ou une vaweuw qui w-wepwésente wa p-pwopwiété à w-waquewwe wa twansition s'appwique. -.- Ça peut êtwe :
 
-  - le mot-clé `none`
-  - le mot-clé `all`
-  - Un identifiant ({{cssxref("&lt;custom-ident&gt;")}}) qui nomme une propriété CSS.
+  - we mot-cwé `none`
+  - w-we mot-cwé `aww`
+  - un identifiant ({{cssxwef("&wt;custom-ident&gt;")}}) qui nyomme une pwopwiété css. :3
 
-- zéro ou une valeur {{cssxref("&lt;single-transition-timing-function&gt;")}} qui représente la fonction de temporisation utilisée pour la transition
-- zéro, une ou deux valeurs {{cssxref("&lt;time&gt;")}}. La première valeur qui peut être interprétée comme un temps sera affectée à la propriété {{cssxref("transition-duration")}} et la seconde valeur qui peut être affectée comme un temps sera affectée à la propriété {{cssxref("transition-delay")}}.
+- zéwo ou une vaweuw {{cssxwef("&wt;singwe-twansition-timing-function&gt;")}} q-qui wepwésente wa fonction de tempowisation utiwisée p-pouw wa twansition
+- z-zéwo, nyaa~~ une o-ou deux vaweuws {{cssxwef("&wt;time&gt;")}}. 😳 wa pwemièwe vaweuw q-qui peut êtwe intewpwétée c-comme un temps sewa a-affectée à wa pwopwiété {{cssxwef("twansition-duwation")}} et wa seconde vaweuw qui peut êtwe affectée comme un temps s-sewa affectée à wa pwopwiété {{cssxwef("twansition-deway")}}. (⑅˘꒳˘)
 
-Si la liste des valeurs est trop courte pour les différentes propriétés, les valeurs seront répétées. Si la liste est trop longue, elle sera tronquée.
+s-si wa wiste des vaweuws est twop c-couwte pouw w-wes difféwentes pwopwiétés, nyaa~~ wes vaweuws sewont w-wépétées. OwO si w-wa wiste est twop wongue, rawr x3 ewwe s-sewa twonquée. XD
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+pwusieuws e-exempwes de twansitions c-css sont p-pwésentés [suw w'awticwe suw w-wes twansitions c-css](/fw/docs/web/css/css_twansitions/using_css_twansitions). σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("TransitionEvent")}}
+- [utiwisew w-wes twansitions c-css](/fw/docs/web/css/css_twansitions/using_css_twansitions)
+- {{domxwef("twansitionevent")}}

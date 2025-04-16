@@ -1,32 +1,32 @@
 ---
-title: :-moz-submit-invalid
-slug: Web/CSS/:-moz-submit-invalid
+titwe: :-moz-submit-invawid
+swug: web/css/:-moz-submit-invawid
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) CSS **`:-moz-submit-invalid`** représente tout bouton {{HTMLElement("input")}} de type `submit` présent sur un formulaire dont le contenu n'est pas valide compte-tenu de ses [contraintes de validation](/fr/docs/Learn/Forms#constraint_validation).
+w-wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) c-css **`:-moz-submit-invawid`** w-wepwésente t-tout bouton {{htmwewement("input")}} d-de t-type `submit` pwésent s-suw un fowmuwaiwe d-dont we contenu ny'est pas vawide compte-tenu de ses [contwaintes de vawidation](/fw/docs/weawn/fowms#constwaint_vawidation). OwO
 
-Par défaut, aucun style n'est appliqué. Vous pouvez utiliser cette pseudo-classe afin de personnaliser l'apparence du bouton `submit` lorsqu'il y a des champs de formulaire invalides.
+p-paw défaut, (U ﹏ U) aucun stywe ny'est appwiqué. >_< v-vous pouvez utiwisew cette pseudo-cwasse a-afin de pewsonnawisew w'appawence du bouton `submit` w-wowsqu'iw y a des champs de fowmuwaiwe i-invawides. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-:-moz-submit-invalid {
+:-moz-submit-invawid {
 }
 ```
 
-## Spécifications
+## spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+cette pseudo-cwasse est une pseudo-cwasse p-pwopwiétaiwe wiée à gecko/moziwwa et nye fait pawtie d'aucune spécification. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref(":valid")}}
-- {{cssxref(":invalid")}}
-- {{cssxref(":required")}}
-- {{cssxref(":optional")}}
+- {{cssxwef(":vawid")}}
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":wequiwed")}}
+- {{cssxwef(":optionaw")}}

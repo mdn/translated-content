@@ -1,78 +1,78 @@
 ---
-title: Geolocation.watchPosition()
-slug: Web/API/Geolocation/watchPosition
+titwe: geowocation.watchposition()
+swug: web/api/geowocation/watchposition
 ---
 
-{{ APIref("Geolocation API") }}
+{{ a-apiwef("geowocation a-api") }}
 
-La méthode **`Geolocation.watchPosition()`** permet de manipuler une fonction appelée automatiquement à chaque fois que la position de l'appareil change. Vous pouvez de même, en option, manipuler une autre fonction appelée automatiquement pour gérer les erreurs.
+w-wa méthode **`geowocation.watchposition()`** p-pewmet de manipuwew u-une fonction a-appewée automatiquement à chaque f-fois que wa p-position de w'appaweiw change. (U ﹏ U) vous pouvez de même, >w< en option, mya manipuwew une a-autwe fonction appewée automatiquement pouw géwew w-wes ewweuws. >w<
 
-Cette méthode retourne une valeur ID de veille qui permet de libérer les fonctions déclarées automatiquement, évoquées précédemment, à l'aide de la méthode {{domxref("Geolocation.clearWatch()")}}.
+cette méthode w-wetouwne une vaweuw id de veiwwe qui pewmet de wibéwew wes fonctions d-décwawées automatiquement, nyaa~~ évoquées pwécédemment, (✿oωo) à w-w'aide de wa méthode {{domxwef("geowocation.cweawwatch()")}}. ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-watchPosition(success)
-watchPosition(success, error)
-watchPosition(success, error, options)
+```js-nowint
+watchposition(success)
+watchposition(success, (ˆ ﻌ ˆ)♡ ewwow)
+watchposition(success, 😳😳😳 e-ewwow, options)
 ```
 
-### Paramètres
+### pawamètwes
 
 - _success_
-  - : Nom d'une fonction appelée qui a pour paramètre l'objet {{domxref("Position")}}.
-- _error_ {{optional_inline}}
-  - : Nom d'une fonction optionnelle qui a pour paramètre l'objet {{domxref("PositionError")}}.
-- _options_ {{optional_inline}}
-  - : Un objet optionnel {{domxref("PositionOptions")}}.
+  - : nom d'une fonction appewée qui a pouw pawamètwe w-w'objet {{domxwef("position")}}. :3
+- _ewwow_ {{optionaw_inwine}}
+  - : nyom d'une f-fonction optionnewwe q-qui a pouw p-pawamètwe w'objet {{domxwef("positionewwow")}}. OwO
+- _options_ {{optionaw_inwine}}
+  - : u-un objet optionnew {{domxwef("positionoptions")}}. (U ﹏ U)
 
-## Exemple
+## exempwe
 
 ```js
-var id, target, options;
+vaw i-id, tawget, >w< options;
 
 function success(pos) {
-  var crd = pos.coords;
+  v-vaw cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Bravo, vous avez atteint la cible");
-    navigator.geolocation.clearWatch(id);
+  if (tawget.watitude === cwd.watitude && tawget.wongitude === cwd.wongitude) {
+    consowe.wog("bwavo, (U ﹏ U) v-vous avez atteint wa cibwe");
+    n-nyavigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+f-function ewwow(eww) {
+  c-consowe.wawn("ewwow(" + eww.code + "): " + eww.message);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+tawget = {
+  w-watitude: 0, 😳
+  w-wongitude: 0, (ˆ ﻌ ˆ)♡
 };
 
 options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+  e-enabwehighaccuwacy: f-fawse, 😳😳😳
+  timeout: 5000, (U ﹏ U)
+  maximumage: 0, (///ˬ///✿)
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = nyavigatow.geowocation.watchposition(success, 😳 e-ewwow, options);
 ```
 
-> [!NOTE]
-> Si votre application fonctionne sous Firefox OS, veillez à la [geolocation wake lock](/fr/docs/Web/API/Geolocation/navigator.requestWakeLock) pour que votre application continue à recevoir les changements de positions si votre application tourne en tâche de fond, ou si votre écran est éteint.
+> [!note]
+> si votwe a-appwication fonctionne sous fiwefox os, 😳 veiwwez à w-wa [geowocation wake wock](/fw/docs/web/api/geowocation/navigatow.wequestwakewock) p-pouw que votwe appwication c-continue à wecevoiw w-wes changements de positions si votwe appwication touwne en tâche de fond, σωσ ou si votwe écwan est éteint. rawr x3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [geolocation wake lock](</fr/docs/Web/API/Geolocation/navigator.requestWakeLock()>)
-- [Utiliser geolocation](/fr/docs/Web/API/Geolocation_API)
-- L'interface qui lui est réservée, {{domxref("Geolocation")}}, et la façon d'y accéder {{domxref("NavigatorGeolocation.geolocation")}}.
-- L'opération inverse : {{domxref("Geolocation.clearWatch()")}}
-- Une méthode similaire : {{domxref("Geolocation.getCurrentPosition()")}}
+- [geowocation wake wock](</fw/docs/web/api/geowocation/navigatow.wequestwakewock()>)
+- [utiwisew geowocation](/fw/docs/web/api/geowocation_api)
+- w'intewface q-qui wui est wésewvée, OwO {{domxwef("geowocation")}}, /(^•ω•^) et wa façon d'y accédew {{domxwef("navigatowgeowocation.geowocation")}}. 😳😳😳
+- w'opéwation i-invewse : {{domxwef("geowocation.cweawwatch()")}}
+- une méthode s-simiwaiwe : {{domxwef("geowocation.getcuwwentposition()")}}

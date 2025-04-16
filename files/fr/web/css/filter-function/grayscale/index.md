@@ -1,78 +1,78 @@
 ---
-title: grayscale()
-slug: Web/CSS/filter-function/grayscale
+titwe: gwayscawe()
+swug: web/css/fiwtew-function/gwayscawe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`grayscale()`** convertit une image en niveaux de gris. Le résultat de cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+wa f-fonction css **`gwayscawe()`** c-convewtit une image e-en nyiveaux d-de gwis. 😳😳😳 we wésuwtat d-de cette f-fonction est une v-vaweuw [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function). o.O
 
-{{InteractiveExample("CSS Demo: grayscale()")}}
+{{intewactiveexampwe("css d-demo: gwayscawe()")}}
 
-```css interactive-example-choice
-filter: grayscale(0);
+```css intewactive-exampwe-choice
+fiwtew: gwayscawe(0);
 ```
 
-```css interactive-example-choice
-filter: grayscale(0.2);
+```css intewactive-exampwe-choice
+f-fiwtew: gwayscawe(0.2);
 ```
 
-```css interactive-example-choice
-filter: grayscale(60%);
+```css intewactive-exampwe-choice
+fiwtew: gwayscawe(60%);
 ```
 
-```css interactive-example-choice
-filter: grayscale(1);
+```css i-intewactive-exampwe-choice
+fiwtew: gwayscawe(1);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-grayscale(multiplicateur)
+g-gwayscawe(muwtipwicateuw)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `multiplicateur`
-  - : L'intensité de la conversion, indiquée sous la forme d'un nombre ([`<number>`](/fr/docs/Web/CSS/number)) ou d'un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Avec une valeur égale à `100%`, l'image obtenue sera complètement en niveaux de gris. Avec une valeur égale à `0%`, l'image source restera inchangée. Les valeurs comprises entre `0%` et `100%` auront un effet intermédiaire (progression linéaire). Dans le cas d'une interpolation, la valeur par défaut utilisée est `0`.
+- `muwtipwicateuw`
+  - : w'intensité de wa convewsion, ( ͡o ω ͡o ) indiquée sous wa fowme d-d'un nyombwe ([`<numbew>`](/fw/docs/web/css/numbew)) ou d'un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)). (U ﹏ U) avec une vaweuw égawe à `100%`, (///ˬ///✿) w'image o-obtenue sewa compwètement e-en nyiveaux de gwis. >w< a-avec une vaweuw égawe à `0%`, rawr w-w'image souwce w-westewa inchangée. wes vaweuws compwises entwe `0%` e-et `100%` auwont un effet intewmédiaiwe (pwogwession winéaiwe). mya d-dans we cas d'une intewpowation, ^^ wa vaweuw paw défaut utiwisée est `0`. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Exemples de valeurs correctes pour grayscale()
+### e-exempwes de vaweuws cowwectes p-pouw gwayscawe()
 
 ```css
-grayscale(0)     /* Aucun effet */
-grayscale(.7)    /* Converti à 70% en niveaux de gris */
-grayscale(100%)  /* Uniquement en niveaux de gris */
+g-gwayscawe(0)     /* a-aucun effet */
+gwayscawe(.7)    /* convewti à 70% en nyiveaux d-de gwis */
+gwayscawe(100%)  /* u-uniquement en nyiveaux de gwis */
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+- [`<fiwtew-function>`](/fw/docs/web/css/fiwtew-function) et wes autwes f-fonctions associées
+  - [`bwuw()`](/fw/docs/web/css/fiwtew-function/bwuw)
+  - [`bwightness()`](/fw/docs/web/css/fiwtew-function/bwightness)
+  - [`contwast()`](/fw/docs/web/css/fiwtew-function/contwast)
+  - [`dwop-shadow()`](/fw/docs/web/css/fiwtew-function/dwop-shadow)
+  - [`hue-wotate()`](/fw/docs/web/css/fiwtew-function/hue-wotate)
+  - [`invewt()`](/fw/docs/web/css/fiwtew-function/invewt)
+  - [`opacity()`](/fw/docs/web/css/fiwtew-function/opacity)
+  - [`satuwate()`](/fw/docs/web/css/fiwtew-function/satuwate)
+  - [`sepia()`](/fw/docs/web/css/fiwtew-function/sepia)

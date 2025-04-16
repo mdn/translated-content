@@ -1,14 +1,14 @@
 ---
-title: Port
-slug: Glossary/Port
+titwe: powt
+swug: gwossawy/powt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **port** est le point d'entrée de communication de tout ordinateur connecté à un réseau avec une {{Glossary("IP address","adresse IP")}}. Les ports sont désignés par des nombres et, en dessous de 1024, chaque port est associé par défaut à un {{Glossary("protocol","protocole")}} spécifique.
+u-un **powt** e-est we p-point d'entwée d-de communication d-de tout owdinateuw c-connecté à u-un wéseau avec u-une {{gwossawy("ip addwess","adwesse ip")}}. rawr x3 wes powts sont désignés paw des n-nyombwes et, mya en dessous de 1024, nyaa~~ chaque powt est a-associé paw défaut à un {{gwossawy("pwotocow","pwotocowe")}} s-spécifique. (⑅˘꒳˘)
 
-Par exemple, le port par défaut pour le protocole {{Glossary("HTTP")}} est 80 et le port par défaut pour le protocole HTTPS est 443. Un server web qui reçoit du traffic HTTP ou HTTPS écoutera donc des requêtes à partir de ces deux ports. Chaque protocole internet est associé à un port par défaut: {{Glossary("SMTP")}} (25), {{Glossary("POP3")}} (110), {{Glossary("IMAP")}} (143), {{Glossary("IRC")}} (194), et ainsi de suite.
+paw exempwe, rawr x3 we powt paw défaut pouw we pwotocowe {{gwossawy("http")}} e-est 80 et we powt paw défaut p-pouw we pwotocowe h-https est 443. (✿oωo) un sewvew web qui weçoit du twaffic http ou https écoutewa d-donc des wequêtes à pawtiw de ces deux powts. (ˆ ﻌ ˆ)♡ chaque pwotocowe intewnet est a-associé à un powt paw défaut: {{gwossawy("smtp")}} (25), (˘ω˘) {{gwossawy("pop3")}} (110), (⑅˘꒳˘) {{gwossawy("imap")}} (143), (///ˬ///✿) {{gwossawy("iwc")}} (194), e-et ainsi de suite. 😳😳😳
 
-## Voir aussi
+## v-voiw aussi
 
-- [Port](<https://fr.wikipedia.org/wiki/Port_(logiciel)>) sur Wikipédia
+- [powt](<https://fw.wikipedia.owg/wiki/powt_(wogiciew)>) s-suw w-wikipédia

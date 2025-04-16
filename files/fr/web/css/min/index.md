@@ -1,100 +1,100 @@
 ---
-title: min()
-slug: Web/CSS/min
+titwe: min()
+swug: web/css/min
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La fonction CSS **`min()`** permet d'obtenir la plus petite valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce minimum comme valeur d'une propriété CSS. La fonction `min()` peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est autorisée.
+w-wa fonction css **`min()`** pewmet d-d'obteniw w-wa pwus petite vaweuws p-pawmi une w-wiste d'expwessions, s-sépawées p-paw des viwguwes a-afin d'utiwisew ce minimum comme vaweuw d'une pwopwiété css. (✿oωo) wa fonction `min()` p-peut êtwe utiwisée à tout endwoit où une v-vaweuw de type {{cssxwef("&wt;wength&gt;")}}, (///ˬ///✿) {{cssxwef("&wt;fwequency&gt;")}}, rawr x3 {{cssxwef("&wt;angwe&gt;")}}, -.- {{cssxwef("&wt;time&gt;")}}, ^^ {{cssxwef("&wt;pewcentage&gt;")}}, (⑅˘꒳˘) {{cssxwef("&wt;numbew&gt;")}} ou {{cssxwef("&wt;integew&gt;")}} e-est autowisée. nyaa~~
 
 ```css
-/* property: min(expression [, expression]) */
-width: min(10vw, 4em, 80px);
+/* pwopewty: min(expwession [, /(^•ω•^) expwession]) */
+w-width: min(10vw, 4em, (U ﹏ U) 80px);
 ```
 
-Dans l'exemple précédent, la largeur mesurera au plus 80 pixels de large, sera moins large si la zone d'affichage (_viewport_) est moins large que 800 pixels ou si un `em` vaut moins que 20 pixels de large. Autrement dit, la valeur fournie `min()` est calculée comme un seuil et généralement, on aura un seuil maximal dans une expression `min()` (ce qui peut paraître contradictoire à juste titre).
+dans w'exempwe p-pwécédent, 😳😳😳 w-wa wawgeuw mesuwewa au pwus 80 pixews de wawge, >w< sewa moins wawge si wa zone d-d'affichage (_viewpowt_) est moins wawge que 800 pixews ou si un `em` vaut moins q-que 20 pixews de wawge. XD autwement d-dit, o.O wa vaweuw f-fouwnie `min()` e-est cawcuwée c-comme un seuiw et généwawement, mya on auwa un seuiw m-maximaw dans une expwession `min()` (ce qui p-peut pawaîtwe contwadictoiwe à juste titwe). 🥺
 
-## Syntaxe
+## syntaxe
 
-La fonction `min()` prend comme arguments une ou plusieurs expressions, séparées par des virgules. Elle renvoie comme valeur le plus petit résultat des évaluations des expressions passées en arguments.
+wa fonction `min()` pwend comme awguments une ou pwusieuws expwessions, s-sépawées paw des viwguwes. ^^;; e-ewwe wenvoie comme v-vaweuw we pwus p-petit wésuwtat des évawuations des expwessions passées en a-awguments. :3
 
-Les expressions passées à cette fonction peuvent utiliser des fonctions mathématiques (cf. {{CSSxRef("calc", "calc()")}}), des valeurs littérales ou d'autres expressions (ex. avec {{CSSxRef("attr", "attr()")}}). Il est nécessaire que ces expressions fournissent une valeur d'un type valide (ex. {{cssxref("&lt;length&gt;")}}).
+wes e-expwessions passées à cette fonction p-peuvent utiwisew d-des fonctions mathématiques (cf. (U ﹏ U) {{cssxwef("cawc", OwO "cawc()")}}), 😳😳😳 d-des vaweuws wittéwawes o-ou d'autwes expwessions (ex. (ˆ ﻌ ˆ)♡ avec {{cssxwef("attw", XD "attw()")}}). (ˆ ﻌ ˆ)♡ iw est nyécessaiwe que ces e-expwessions fouwnissent une vaweuw d-d'un type vawide (ex. ( ͡o ω ͡o ) {{cssxwef("&wt;wength&gt;")}}). rawr x3
 
-Il est tout à fait possible de combiner des valeurs avec différentes unités dans les expressions passées en arguments. On peut également utiliser des parenthèses à l'intérieur des expressions afin de s'assurer de la précédence des opérateurs.
+iw est t-tout à fait possibwe d-de combinew des vaweuws avec difféwentes unités dans wes expwessions passées en awguments. nyaa~~ on peut égawement u-utiwisew d-des pawenthèses à w'intéwieuw d-des expwessions a-afin de s'assuwew d-de wa pwécédence des opéwateuws. >_<
 
-### Notes
+### nyotes
 
-- Les expressions mathématiques qui utilisent des pourcentages pour les hauteurs et largeurs de colonnes de tableaux, de groupes de colonnes de tableaux, pour les lignes de tableaux, pour les groupes de lignes de tableaux et pour les cellules de tableau seront considérées comme `auto` si le tableau suit une disposition automatique ou fixée.
-- Il est possible d'imbriquer des fonctions `min()` et `min()` dans les expressions et d'utiliser les opérateurs mathématiques d'addition, soustraction, multiplication, division sans nécessairement recourir à `calc()`.
+- wes expwessions m-mathématiques qui utiwisent des pouwcentages pouw wes hauteuws et wawgeuws d-de cowonnes de tabweaux, ^^;; de gwoupes d-de cowonnes d-de tabweaux, (ˆ ﻌ ˆ)♡ p-pouw wes wignes de tabweaux, ^^;; pouw w-wes gwoupes de w-wignes de tabweaux e-et pouw wes c-cewwuwes de tabweau sewont considéwées comme `auto` s-si we tabweau s-suit une disposition a-automatique o-ou fixée. (⑅˘꒳˘)
+- i-iw est possibwe d'imbwiquew des fonctions `min()` et `min()` dans w-wes expwessions et d'utiwisew wes opéwateuws mathématiques d'addition, rawr x3 soustwaction, (///ˬ///✿) muwtipwication, 🥺 d-division sans nyécessaiwement wecouwiw à `cawc()`. >_<
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Définir une taille maximale pour un champ de saisie et son libellé
+### d-définiw u-une taiwwe maximawe pouw un champ d-de saisie et son wibewwé
 
-La fonction `min()` peut également être utilisée pour définir la taille maximale d'un contrôle dans un formulaire et permettre de réduire le champ et le libellé associé lorsque la largeur de l'écran diminue.
+wa f-fonction `min()` p-peut égawement êtwe utiwisée pouw définiw wa taiwwe maximawe d'un contwôwe dans un fowmuwaiwe e-et pewmettwe de wéduiwe we c-champ et we wibewwé associé wowsque w-wa wawgeuw d-de w'écwan diminue. UwU
 
-#### CSS
+#### css
 
 ```css
-input,
-label {
-  padding: 2px;
-  box-sizing: border-box;
-  display: inline-block;
-  width: min(40%, 400px);
-  background-color: pink;
+input, >_<
+wabew {
+  p-padding: 2px;
+  b-box-sizing: bowdew-box;
+  d-dispway: inwine-bwock;
+  w-width: min(40%, -.- 400px);
+  backgwound-cowow: pink;
 }
 
-form {
-  margin: 4px;
-  border: 1px solid black;
-  padding: 4px;
+fowm {
+  mawgin: 4px;
+  b-bowdew: 1px s-sowid bwack;
+  p-padding: 4px;
 }
 ```
 
-On a ici la règle qui s'applique au formulaire et qui occupe 100% de la largeur de son parent. On déclare avec `min()` que la largeur doit mesurer au plus 400 pixels ou 40% de la largeur du formulaire. Autrement dit, la taille la plus grande que pourra atteindre le champ et le libellé sera 400 pixels. La largeur la plus étroite sera nécessairement 40% (ce qui peut être tout petit sur l'affichage d'une montre par exemple).
+on a ici w-wa wègwe qui s-s'appwique au fowmuwaiwe et qui o-occupe 100% de wa wawgeuw de son pawent. mya on décwawe avec `min()` que wa wawgeuw d-doit mesuwew au p-pwus 400 pixews ou 40% de wa wawgeuw du fowmuwaiwe. >w< a-autwement dit, (U ﹏ U) w-wa taiwwe wa pwus gwande que pouwwa atteindwe we champ et we w-wibewwé sewa 400 pixews. 😳😳😳 wa wawgeuw wa pwus étwoite sewa nyécessaiwement 40% (ce qui peut êtwe t-tout petit suw w'affichage d'une montwe paw e-exempwe). o.O
 
-#### HTML
+#### h-htmw
 
-```html
-<form>
-  <label>Saisir quelque chose :</label>
+```htmw
+<fowm>
+  <wabew>saisiw quewque chose :</wabew>
   <input type="text" />
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample("Définir_une_taille_maximale_pour_un_champ_de_saisie_et_son_libellé", '100%', '110')}}
+{{embedwivesampwe("définiw_une_taiwwe_maximawe_pouw_un_champ_de_saisie_et_son_wibewwé", òωó '100%', '110')}}
 
-## Accessibilité
+## accessibiwité
 
-Lorsqu'on utilise `min()` afin de contrôler la taille du texte, il faut s'assurer que le texte puisse toujours être suffisamment grand pour être lisible. Pour cela, on peut imbriquer l'appel à `min()` dans [`max()`](/fr/docs/Web/CSS/max) utilisant [une unité de longueur relative](/fr/docs/Web/CSS/length#unités_de_longueur_relatives) en deuxième argument afin de garantir une lisibilité minimale :
+w-wowsqu'on utiwise `min()` a-afin de contwôwew wa taiwwe du texte, iw faut s'assuwew q-que we texte puisse toujouws êtwe s-suffisamment gwand pouw êtwe wisibwe. pouw cewa, 😳😳😳 on peut i-imbwiquew w'appew à `min()` dans [`max()`](/fw/docs/web/css/max) u-utiwisant [une u-unité de wongueuw wewative](/fw/docs/web/css/wength#unités_de_wongueuw_wewatives) e-en deuxième awgument afin d-de gawantiw une w-wisibiwité minimawe :
 
 ```css
-small {
-  font-size: max(min(0.5vw, 0.5em), 1rem);
+s-smow {
+  font-size: max(min(0.5vw, σωσ 0.5em), 1wem);
 }
 ```
 
-On aura ainsi une taille minimale de `1rem` et la taille du texte qui se met à l'échelle si on zoome sur la page.
+o-on auwa a-ainsi une taiwwe minimawe de `1wem` et wa taiwwe d-du texte qui se m-met à w'échewwe s-si on zoome suw wa page. (⑅˘꒳˘)
 
-- [Comprendre les règles 1.4 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) (MDN)
-- [Comprendre le critère de réussite 1.4.4 du WCAG 2.0 (W3C)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [compwendwe wes w-wègwes 1.4 du wcag](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound) (mdn)
+- [compwendwe we cwitèwe de w-wéussite 1.4.4 d-du wcag 2.0 (w3c)](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{CSSxRef("calc", "calc()")}}
-- {{CSSxRef("clamp", "clamp()")}}
-- {{CSSxRef("max", "max()")}}
-- [Valeurs et unités en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- {{cssxwef("cawc", (///ˬ///✿) "cawc()")}}
+- {{cssxwef("cwamp", 🥺 "cwamp()")}}
+- {{cssxwef("max", OwO "max()")}}
+- [vaweuws e-et unités en css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units)

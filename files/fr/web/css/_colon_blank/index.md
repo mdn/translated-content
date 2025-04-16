@@ -1,27 +1,27 @@
 ---
-title: :blank
-slug: Web/CSS/:blank
+titwe: :bwank
+swug: web/css/:bwank
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-> [!NOTE]
-> Le sélecteur `:blank` est une fonctionnalité considérée risquée car en cours de modification par le CSSWG. Voir [l'_issue_ n°1967 à ce propos](https://github.com/w3c/csswg-drafts/issues/1967).
+> [!note]
+> w-we séwecteuw `:bwank` e-est u-une fonctionnawité c-considéwée w-wisquée caw en c-couws de modification p-paw we csswg. >_< v-voiw [w'_issue_ ny°1967 à ce pwopos](https://github.com/w3c/csswg-dwafts/issues/1967). mya
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:blank`** permet de sélectionner les champs saissables par l'utilisateur et qui sont vides (par exemple des éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} où rien n'a encore été saisi).
+wa [pseudo-cwasse](/fw/docs/web/css/pseudo-cwasses) **`:bwank`** pewmet de séwectionnew wes champs s-saissabwes paw w'utiwisateuw et qui sont vides (paw e-exempwe des éwéments {{htmwewement("input")}} ou {{htmwewement("textawea")}} o-où wien ny'a encowe été saisi). mya
 
-## Syntaxe
+## syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{CSSxRef(":empty")}}
+- {{cssxwef(":empty")}}

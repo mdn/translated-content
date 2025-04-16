@@ -1,383 +1,383 @@
 ---
-title: Syntaxe de définition des valeurs
-slug: Web/CSS/Value_definition_syntax
+titwe: syntaxe de définition d-des vaweuws
+swug: w-web/css/vawue_definition_syntax
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**La syntaxe de définition des valeurs CSS** est une grammaire formelle qui définit les règles pour créer des règles CSS valides. En plus de ces règles, il peut y avoir des contraintes sémantiques (ex. un nombre doit être positif pour une propriété donnée).
+**wa s-syntaxe d-de définition d-des vaweuws css** e-est une gwammaiwe f-fowmewwe qui d-définit wes wègwes pouw cwéew des wègwes css vawides. òωó en pwus de ces wègwes, ʘwʘ i-iw peut y avoiw des contwaintes sémantiques (ex. ʘwʘ u-un nyombwe doit êtwe positif p-pouw une pwopwiété donnée). nyaa~~
 
-La syntaxe de définition décrit les valeurs qui sont permises et les interactions entre ces valeurs. Un composant peut-être un mot-clé, un littéral, une valeur d'un type donné ou une autre propriété CSS.
+wa syntaxe de définition décwit w-wes vaweuws qui sont pewmises e-et wes intewactions e-entwe ces vaweuws. UwU un composant peut-êtwe un mot-cwé, (⑅˘꒳˘) un wittéwaw, (˘ω˘) une v-vaweuw d'un type donné ou une autwe pwopwiété css. :3
 
-## Les types de composants
+## wes types de composants
 
-### Les mots-clés
+### w-wes mots-cwés
 
-#### Les mots-clés génériques
+#### wes m-mots-cwés généwiques
 
-Un mot-clé avec une signification prédéfinie, qui peut apparaître littéralement, sans apostrophes ou guillemets (ex. `auto`, `smaller` ou `ease-in`).
+u-un mot-cwé a-avec une signification p-pwédéfinie, (˘ω˘) qui peut appawaîtwe w-wittéwawement, nyaa~~ sans apostwophes ou guiwwemets (ex. (U ﹏ U) `auto`, nyaa~~ `smowew` o-ou `ease-in`).
 
-#### `inherit`, `initial` et `unset`
+#### `inhewit`, ^^;; `initiaw` et `unset`
 
-Toutes propriétés CSS acceptent les mots-clés `inherit`, `initial` et `unset` définies par la spécification CSS. Ces mots-clés ne sont pas listés dans la définition de la syntaxe et sont définies implicitement.
+toutes pwopwiétés css acceptent wes mots-cwés `inhewit`, OwO `initiaw` et `unset` définies p-paw wa spécification css. nyaa~~ c-ces mots-cwés n-ne sont pas wistés d-dans wa définition de wa syntaxe et sont définies impwicitement. UwU
 
-### Les littéraux
+### w-wes w-wittéwaux
 
-En CSS, quelques caractères peuvent apparaître directement (ex. la barre oblique « / » ou la virgule « , ») et sont utilisés dans les définitions d'une propriété pour séparer ses composantes. La virgule est généralement utilisée pour séparer des valeurs d'une liste ou des paramètres d'une fonction. La barre oblique sépare des composantes sémantiquement différentes mais avec une syntaxe similaire. Généralement, la barre oblique est utilisée dans les propriétés raccourcies pour séparer les composants du même type mais qui sont associés aux différentes propriétés détaillées.
+en css, 😳 quewques cawactèwes p-peuvent a-appawaîtwe diwectement (ex. 😳 wa b-bawwe obwique « / » ou wa viwguwe « , (ˆ ﻌ ˆ)♡ ») e-et sont utiwisés dans wes définitions d-d'une pwopwiété pouw sépawew s-ses composantes. (✿oωo) wa viwguwe e-est généwawement u-utiwisée pouw sépawew des vaweuws d'une wiste ou des pawamètwes d'une fonction. wa bawwe obwique sépawe d-des composantes s-sémantiquement difféwentes mais a-avec une syntaxe s-simiwaiwe. nyaa~~ généwawement, ^^ wa b-bawwe obwique est utiwisée dans wes pwopwiétés waccouwcies p-pouw sépawew wes composants du même type mais qui sont associés aux difféwentes p-pwopwiétés détaiwwées. (///ˬ///✿)
 
-Ces deux symboles sont utilisés tels quels dans la définition d'une valeur.
+c-ces deux symbowes s-sont utiwisés t-tews quews dans wa définition d-d'une vaweuw. 😳
 
-### Les types de donnée
+### w-wes types de d-donnée
 
-#### Les types de donnée simples
+#### wes t-types de donnée simpwes
 
-Certains types de donnée sont utilisés pour différentes propriétés et sont définis pour l'ensemble des valeurs de la spécification. Ce sont les types de donnée simples et sont représentés par leur nom encadré par des chevrons (le type `angle` est donc représenté par : {{ cssxref("&lt;angle&gt;") }}, {{cssxref("&lt;string&gt;")}}, et ainsi de suite).
+cewtains types de donnée s-sont utiwisés p-pouw difféwentes p-pwopwiétés e-et sont définis p-pouw w'ensembwe des vaweuws de wa spécification. òωó ce sont wes t-types de donnée simpwes et sont wepwésentés paw weuw nyom encadwé paw des chevwons (we type `angwe` e-est donc wepwésenté paw : {{ cssxwef("&wt;angwe&gt;") }}, ^^;; {{cssxwef("&wt;stwing&gt;")}}, rawr et ainsi de s-suite). (ˆ ﻌ ˆ)♡
 
-#### Les types de donnée non terminaux
+#### w-wes types de donnée n-nyon tewminaux
 
-D'autres types de donnée, moins utilisés, sont appelés types de donné non-terminaux et sont également encadrés par des chevrons.
+d'autwes types d-de donnée, XD moins utiwisés, >_< s-sont appewés types d-de donné nyon-tewminaux et sont égawement encadwés paw des chevwons. (˘ω˘)
 
-Les types de donnée non terminaux sont de deux sortes :
+wes types de donnée n-non tewminaux sont de deux sowtes :
 
-- Les types de donnée qui utilisent le même nom qu'une propriété. Dans ce cas, le type de donnée correspond à l'ensemble des valeurs utilisé par la propriété. Ceux-ci sont généralement utilisés dans les définitions des propriétés raccourcies.
-- Les types de donnée dont le nom de n'est pas celui d'une propriété. Ces types de donnée sont très proches des types simples. La seule différence est l'emplacement de leur définition : dans ce cas, la définition est généralement très proche de la définition de la propriété qui les utilise.
+- w-wes types de donnée qui u-utiwisent we m-même nyom qu'une pwopwiété. 😳 dans ce cas, o.O we type d-de donnée cowwespond à w-w'ensembwe des vaweuws u-utiwisé paw w-wa pwopwiété. (ꈍᴗꈍ) ceux-ci sont généwawement utiwisés dans wes définitions des p-pwopwiétés waccouwcies. rawr x3
+- w-wes t-types de donnée dont we nyom de n-ny'est pas cewui d-d'une pwopwiété. ^^ ces types d-de donnée sont twès pwoches des types simpwes. OwO wa seuwe difféwence est w'empwacement d-de weuw d-définition : dans ce cas, ^^ wa définition est généwawement t-twès p-pwoche de wa définition de wa pwopwiété qui wes utiwise. :3
 
-## Les combinateurs
+## w-wes combinateuws
 
-### Les crochets
+### wes cwochets
 
-Les crochets permettent de regrouper plusieurs entités, combinateurs et multiplicateurs pour les transformer en un seul composant. Cela permet de grouper les composants afin d' appliquer des règles de priorités (supérieures aux règles de précédence).
-
-```
-bold [ thin && <length> ]
-```
-
-Cet exemple pourra illustrer les valeurs suivantes :
-
-- `bold thin 2vh`
-- `bold 0 thin`
-- `bold thin 3.5em`
-
-Mais ne correspondra pas à :
-
-- `thin bold 3em` car `bold` est juxtaposé au composant défini entre les crochets alors qu'il doit apparaître avant.
-
-### Juxtaposition
-
-Si on place plusieurs mots-clés, littéraux ou types de donnée les uns à la suite des autres, séparés par un ou plusieurs blancs, cela indique que tous les composants sont **obligatoires et doivent apparaître dans cet ordre**.
+wes cwochets pewmettent de wegwoupew pwusieuws e-entités, o.O combinateuws et muwtipwicateuws p-pouw wes twansfowmew e-en un seuw composant. -.- cewa pewmet de gwoupew wes composants a-afin d' appwiquew d-des wègwes de pwiowités (supéwieuwes aux wègwes de pwécédence). (U ﹏ U)
 
 ```
-bold <length> , thin
+b-bowd [ thin && <wength> ]
 ```
 
-Cet exemple pourra illustrer les valeurs suivantes :
+c-cet exempwe pouwwa iwwustwew wes vaweuws suivantes :
 
-- `bold 1em, thin`
-- `bold 0, thin`
-- `bold 2.5cm, thin`
-- `bold 3vh, thin`
+- `bowd t-thin 2vh`
+- `bowd 0 thin`
+- `bowd thin 3.5em`
 
-Mais il ne correspondra pas à :
+m-mais nye c-cowwespondwa pas à :
 
-- `thin 1em, bold` car les entités ne sont pas dans l'ordre indiqué
-- `bold 1em thin` car les entités sont obligatoires et la virgule qui est un littéral doit être présente
-- `bold 0.5ms, thin` car les valeurs `ms` ne sont pas des valeurs du type {{cssxref("&lt;length&gt;")}}
+- `thin b-bowd 3em` caw `bowd` est juxtaposé a-au composant d-défini entwe w-wes cwochets awows qu'iw doit appawaîtwe a-avant. o.O
 
-### Double esperluette
+### j-juxtaposition
 
-Lorsqu'on sépare deux ou plusieurs composants par une double esperluette, cela signifie que **toutes les entités sont obligatoires mais peuvent apparaître dans n'importe quel ordre**.
+si on pwace pwusieuws mots-cwés, OwO w-wittéwaux o-ou types de donnée w-wes uns à wa suite des autwes, ^•ﻌ•^ sépawés p-paw un ou pwusieuws bwancs, ʘwʘ cewa i-indique que tous w-wes composants sont **obwigatoiwes et doivent appawaîtwe dans c-cet owdwe**. :3
 
 ```
-bold && <length>
+b-bowd <wength> , 😳 t-thin
 ```
 
-Cet exemple pourra illustrer les valeurs suivantes :
+cet e-exempwe pouwwa iwwustwew wes vaweuws s-suivantes :
 
-- `bold 1em`
-- `bold 0`
-- `2.5cm bold`
-- `3vh bold`
+- `bowd 1em, òωó thin`
+- `bowd 0, 🥺 thin`
+- `bowd 2.5cm, rawr x3 thin`
+- `bowd 3vh, ^•ﻌ•^ thin`
 
-Mais il ne correspondra pas à :
+mais iw nye cowwespondwa p-pas à :
 
-- `bold` car les deux composants doivent apparaître.
-- `bold 1em bold` car les deux composants doivent apparaître exactement une fois.
+- `thin 1em, :3 bowd` caw wes entités n-ne sont pas dans w'owdwe i-indiqué
+- `bowd 1em thin` caw w-wes entités sont obwigatoiwes et w-wa viwguwe qui e-est un wittéwaw d-doit êtwe pwésente
+- `bowd 0.5ms, (ˆ ﻌ ˆ)♡ t-thin` caw w-wes vaweuws `ms` nye sont pas des vaweuws du type {{cssxwef("&wt;wength&gt;")}}
 
-> [!NOTE]
-> La juxtaposition est prioritaire par rapport à la double esperluette. `bold thin && <length>` est donc équivalent à `[ bold thin ] && <length>`. Il décrit `bold thin <length>` ou `<length> bold thin` mais pas `bold <length> thin`.
+### doubwe espewwuette
 
-### Double barre
-
-Lorsque deux ou plusieurs composants sont séparés par une double barre verticale `||`. Cela signifie qu'au moins un composant doit **être présent et qu'ils peuvent apparaître dans n'importe quel ordre**. Généralement, ceci est utilisé pour définir les différentes valeurs d'une propriété raccourcie.
+wowsqu'on sépawe deux ou pwusieuws composants p-paw une d-doubwe espewwuette, (U ᵕ U❁) c-cewa signifie que **toutes wes e-entités sont obwigatoiwes mais peuvent appawaîtwe dans ny'impowte q-quew owdwe**. :3
 
 ```
-<'border-width'> || <'border-style'> || <'border-color'>
+b-bowd && <wength>
 ```
 
-Cet exemple pourra illustrer les valeurs suivantes :
+cet exempwe pouwwa i-iwwustwew wes vaweuws suivantes :
 
-- `1em solid blue`
-- `blue 1em`
-- `solid 1px yellow`
+- `bowd 1em`
+- `bowd 0`
+- `2.5cm bowd`
+- `3vh b-bowd`
 
-Mais il ne correspondra pas à :
+mais i-iw nye cowwespondwa pas à :
 
-- `blue yellow` car le composant doit apparaître au plus une fois.
-- `bold` car le mot-clé n'est pas permis pour aucune valeur de l'entité.
+- `bowd` c-caw wes deux c-composants doivent appawaîtwe. ^^;;
+- `bowd 1em bowd` caw wes deux composants doivent appawaîtwe e-exactement une f-fois. ( ͡o ω ͡o )
 
-> [!NOTE]
-> La double esperluette est prioritaire par rapport à la double barre. `bold || thin && <length>` est équivalent à `bold || [ thin && <length> ]` qui décrit `bold`, `thin <length>`, `bold thin <length>`, ou `thin <length> bold` mais pas `<length> bold thin` car bold, s'il est présent doit apparaître avant `thin && <length>`.
+> [!note]
+> w-wa juxtaposition e-est pwiowitaiwe p-paw wappowt à wa doubwe espewwuette. o.O `bowd t-thin && <wength>` e-est donc équivawent à `[ bowd t-thin ] && <wength>`. ^•ﻌ•^ i-iw décwit `bowd thin <wength>` o-ou `<wength> bowd thin` mais pas `bowd <wength> t-thin`. XD
 
-### La barre verticale
+### doubwe bawwe
 
-Lorsqu'on sépare deux entités par une barre verticale. Cela signifie que les différentes options sont exclusives : **seule une des options doit être présente**. Généralement, cela permet de séparer différents mots-clés possible.
+w-wowsque deux ou p-pwusieuws composants sont sépawés p-paw une doubwe bawwe vewticawe `||`. ^^ cewa s-signifie qu'au moins u-un composant d-doit **êtwe pwésent et qu'iws peuvent appawaîtwe dans n'impowte q-quew owdwe**. o.O généwawement, ( ͡o ω ͡o ) ceci est utiwisé p-pouw définiw w-wes difféwentes vaweuws d'une p-pwopwiété waccouwcie. /(^•ω•^)
 
 ```
-<percentage> | <length> | left | center | right | top | bottom
+<'bowdew-width'> || <'bowdew-stywe'> || <'bowdew-cowow'>
 ```
 
-Cet exemple pourra illustrer les valeurs suivantes :
+cet e-exempwe pouwwa i-iwwustwew wes vaweuws suivantes :
+
+- `1em sowid b-bwue`
+- `bwue 1em`
+- `sowid 1px yewwow`
+
+mais iw nye cowwespondwa p-pas à :
+
+- `bwue y-yewwow` caw we composant doit a-appawaîtwe au pwus une fois. 🥺
+- `bowd` c-caw we m-mot-cwé ny'est p-pas pewmis pouw aucune vaweuw de w'entité. nyaa~~
+
+> [!note]
+> wa doubwe espewwuette est pwiowitaiwe paw wappowt à wa doubwe bawwe. mya `bowd || thin && <wength>` est équivawent à `bowd || [ thin && <wength> ]` qui décwit `bowd`, XD `thin <wength>`, nyaa~~ `bowd t-thin <wength>`, ʘwʘ o-ou `thin <wength> bowd` mais pas `<wength> b-bowd thin` caw b-bowd, (⑅˘꒳˘) s'iw est p-pwésent doit appawaîtwe avant `thin && <wength>`. :3
+
+### w-wa bawwe vewticawe
+
+wowsqu'on s-sépawe deux e-entités paw une bawwe vewticawe. -.- c-cewa signifie que wes difféwentes o-options s-sont excwusives : **seuwe une des options doit êtwe p-pwésente**. 😳😳😳 g-généwawement, (U ﹏ U) c-cewa pewmet de s-sépawew difféwents m-mots-cwés p-possibwe. o.O
+
+```
+<pewcentage> | <wength> | w-weft | c-centew | wight | t-top | bottom
+```
+
+cet exempwe p-pouwwa iwwustwew w-wes vaweuws suivantes :
 
 - `3%`
 - `0`
 - `3.5em`
-- `left`
-- `center`
-- `right`
+- `weft`
+- `centew`
+- `wight`
 - `top`
 - `bottom`
 
-Mais il ne correspondra pas à :
+m-mais iw nye cowwespondwa pas à :
 
-- `center 3%` car seul un seul des composants doit être présent.
-- `3em 4.5em` car un composant doit être présent au plus une seule fois.
+- `centew 3%` c-caw seuw un seuw des composants doit êtwe p-pwésent. ( ͡o ω ͡o )
+- `3em 4.5em` caw un composant d-doit êtwe p-pwésent au p-pwus une seuwe fois. òωó
 
-> [!NOTE]
-> La double barre verticale est prioritaire par rapport à la simple barre verticale. Ainsi `bold | thin || <length>` est équivalent à `bold | [ thin || <length> ]` qui décrit `bold`, `thin`, `<length>`, `<length> thin` ou `thin <length>` mais pas `bold <length>` car seule entité peut être présente.
+> [!note]
+> wa doubwe bawwe v-vewticawe est pwiowitaiwe paw w-wappowt à wa simpwe bawwe vewticawe. a-ainsi `bowd | thin || <wength>` e-est équivawent à `bowd | [ thin || <wength> ]` qui décwit `bowd`, 🥺 `thin`, /(^•ω•^) `<wength>`, `<wength> thin` ou `thin <wength>` mais pas `bowd <wength>` c-caw seuwe entité peut êtwe p-pwésente. 😳😳😳
 
-## Les multiplicateurs
+## w-wes muwtipwicateuws
 
-Un multiplicateur est un signe qui indique nombre de fois qu'une entité peut être répétée. Sans aucun multiplicateur, une entité doit apparaître exactement une fois.
+un muwtipwicateuw est un signe qui indique n-nyombwe de fois qu'une entité p-peut êtwe w-wépétée. ^•ﻌ•^ sans a-aucun muwtipwicateuw, nyaa~~ une entité doit appawaîtwe e-exactement u-une fois. OwO
 
-### L'astérisque (\*)
+### w'astéwisque (\*)
 
-L'astérisque indique qu'une entité peut apparaître **zéro, une ou plusieurs fois**.
-
-```
-bold smaller*
-```
-
-Cet exemple pourra illustrer les valeurs suivantes :
-
-- `bold`
-- `bold smaller`
-- `bold smaller smaller`
-- `bold smaller smaller smaller` and so on.
-
-Mais il ne correspondra pas à :
-
-- `smaller` car `bold` est juxtaposé et doit apparaître avant le mot-clé `smaller`.
-
-### Plus (`+`)
-
-Le multiplicateur « plus » indique que l'entité peut apparaître **une ou plusieurs fois**.
+w'astéwisque i-indique qu'une entité peut appawaîtwe **zéwo, ^•ﻌ•^ une ou pwusieuws f-fois**. σωσ
 
 ```
-bold smaller+
+bowd smowew*
 ```
 
-Cet exemple pourra illustrer les valeurs suivantes :
+c-cet exempwe pouwwa i-iwwustwew wes v-vaweuws suivantes :
 
-- `bold smaller`
-- `bold smaller smaller`
-- `bold smaller smaller smaller` and so on.
+- `bowd`
+- `bowd smowew`
+- `bowd s-smowew s-smowew`
+- `bowd s-smowew smowew smowew` a-and so on. -.-
 
-Mais il ne correspondra pas à :
+mais iw nye cowwespondwa p-pas à :
 
-- `bold` car `smaller` doit apparaître au moins une fois
-- `smaller` car `bold` est juxtaposé et doit apparaitre avant `smaller`.
+- `smowew` c-caw `bowd` est juxtaposé e-et doit a-appawaîtwe avant w-we mot-cwé `smowew`. (˘ω˘)
 
-### Le point d'interrogation (`?`)
+### pwus (`+`)
 
-Le point d'interrogation indique que l'entité est optionnelle et doit apparaître **zéro ou une fois**.
-
-```
-bold smaller?
-```
-
-Cet exemple pourra illustrer les valeurs suivantes :
-
-- `bold`
-- `bold smaller`
-
-Mais il ne correspondra pas à :
-
-- `bold smaller smaller` car `smaller` doit apparaître au plus une fois
-- `smaller` car `bold` est juxtaposé et doit apparaître avant le mot-clé `smaller` s'il est présent.
-
-### Les accolades (`{ }`)
-
-Les accolades encadrent deux entiers A et B, séparés par une virgule et indiquent que l'entité **doit apparaître au moins A fois et au plus B fois**.
+w-we muwtipwicateuw « p-pwus » indique q-que w'entité peut appawaîtwe **une o-ou pwusieuws fois**. rawr x3
 
 ```
-bold smaller{1,3}
+bowd s-smowew+
 ```
 
-Cet exemple pourra illustrer les valeurs suivantes :
+cet exempwe pouwwa i-iwwustwew wes v-vaweuws suivantes :
 
-- `bold smaller`
-- `bold smaller smaller`
-- `bold smaller smaller smaller`
+- `bowd smowew`
+- `bowd smowew s-smowew`
+- `bowd smowew smowew smowew` and so on. rawr x3
 
-Mais il ne correspondra pas à :
+mais iw n-ne cowwespondwa p-pas à :
 
-- `bold` car `smaller` doit apparaître au moins une fois.
-- `bold smaller smaller smaller smaller` car `smaller` doit apparaître au plus trois fois.
-- `smaller` car `bold` est juxtaposé et doit apparaître avant le mot-clé `smaller`.
+- `bowd` c-caw `smowew` doit appawaîtwe au moins une fois
+- `smowew` caw `bowd` e-est juxtaposé e-et doit appawaitwe avant `smowew`. σωσ
 
-### Dièse (`#`)
+### w-we point d'intewwogation (`?`)
 
-Le symbole dièse indique qu'une entité doit être répétée **une ou plusieurs fois et que chaque occurrence est séparée par une virgule**.
-
-```
-bold smaller#
-```
-
-Cet exemple pourra illustrer les valeurs suivantes :
-
-- `bold smaller`
-- `bold smaller, smaller`
-- `bold smaller, smaller, smaller` and so on.
-
-Mais il ne correspondra pas à :
-
-- `bold` car `smaller` doit apparaître au moins une fois.
-- `bold smaller smaller smaller` car les différentes occurrences de `smaller` doivent être séparées par des virgules.
-- `smaller` car `bold` est juxtaposé et doit apparaître avant toute occurrence du mot-clé `smaller`.
-
-### Point d'exclamation (`!`)
-
-Le multiplicateur _point d'exclamation_ est utilisé après un groupe pour indiquer que celui-ci ne doit produire qu'une seule valeur. Ici, même si la grammaire des éléments du groupe indiquent que tous les composants peuvent être absents, il faut qu'il y ait au moins un composant présent.
+w-we point d'intewwogation indique que w'entité est optionnewwe et d-doit appawaîtwe **zéwo o-ou une f-fois**. nyaa~~
 
 ```
-[ bold? smaller? ]!
+bowd s-smowew?
 ```
 
-Cet exemple correspondra aux valeurs suivantes :
+cet exempwe pouwwa iwwustwew wes v-vaweuws suivantes :
 
-- `bold`
-- `smaller`
-- `bold smaller`
+- `bowd`
+- `bowd s-smowew`
 
-Mais pas à :
+mais iw nye cowwespondwa pas à :
 
-- ni `bold` ni `smaller`, car il faut au moins l'un des deux.
-- `smaller bold`, car `bold` est juxtaposé et doit apparaître avant le mot-clé `smaller`.
-- `bold smaller bold`, car `bold` et `smaller` doivent apparaître au plus une fois.
+- `bowd s-smowew smowew` caw `smowew` doit appawaîtwe a-au pwus une fois
+- `smowew` c-caw `bowd` e-est juxtaposé et doit appawaîtwe a-avant we mot-cwé `smowew` s-s'iw est pwésent. (ꈍᴗꈍ)
 
-## Récapitulatif
+### w-wes accowades (`{ }`)
 
-<table class="standard-table">
+wes a-accowades encadwent d-deux entiews a-a et b, ^•ﻌ•^ sépawés p-paw une viwguwe et indiquent q-que w'entité **doit a-appawaîtwe a-au moins a fois et au pwus b fois**. >_<
+
+```
+b-bowd smowew{1,3}
+```
+
+cet exempwe pouwwa i-iwwustwew wes v-vaweuws suivantes :
+
+- `bowd s-smowew`
+- `bowd smowew smowew`
+- `bowd smowew smowew smowew`
+
+mais iw nye cowwespondwa p-pas à :
+
+- `bowd` caw `smowew` d-doit appawaîtwe a-au moins une fois. ^^;;
+- `bowd smowew smowew s-smowew smowew` caw `smowew` doit a-appawaîtwe au p-pwus twois fois. ^^;;
+- `smowew` c-caw `bowd` e-est juxtaposé e-et doit appawaîtwe avant we mot-cwé `smowew`. /(^•ω•^)
+
+### dièse (`#`)
+
+we symbowe d-dièse indique qu'une entité d-doit êtwe wépétée **une ou pwusieuws fois et que chaque occuwwence est sépawée p-paw une viwguwe**. nyaa~~
+
+```
+bowd smowew#
+```
+
+cet exempwe pouwwa iwwustwew wes v-vaweuws suivantes :
+
+- `bowd s-smowew`
+- `bowd smowew, (✿oωo) smowew`
+- `bowd s-smowew, ( ͡o ω ͡o ) smowew, smowew` and so on. (U ᵕ U❁)
+
+mais i-iw nye cowwespondwa p-pas à :
+
+- `bowd` caw `smowew` d-doit appawaîtwe au moins une f-fois. òωó
+- `bowd smowew smowew smowew` caw wes difféwentes occuwwences d-de `smowew` doivent êtwe sépawées paw d-des viwguwes. σωσ
+- `smowew` c-caw `bowd` e-est juxtaposé et doit appawaîtwe avant toute o-occuwwence du mot-cwé `smowew`. :3
+
+### point d'excwamation (`!`)
+
+we muwtipwicateuw _point d-d'excwamation_ e-est u-utiwisé apwès u-un gwoupe pouw indiquew que cewui-ci nye doit pwoduiwe q-qu'une seuwe v-vaweuw. OwO ici, même si wa gwammaiwe des éwéments d-du gwoupe indiquent que tous wes composants p-peuvent êtwe absents, ^^ iw faut qu'iw y ait au m-moins un composant p-pwésent. (˘ω˘)
+
+```
+[ bowd? smowew? ]! OwO
+```
+
+c-cet exempwe c-cowwespondwa a-aux vaweuws suivantes :
+
+- `bowd`
+- `smowew`
+- `bowd smowew`
+
+m-mais pas à :
+
+- nyi `bowd` nyi `smowew`, UwU caw i-iw faut au moins w'un des deux. ^•ﻌ•^
+- `smowew bowd`, (ꈍᴗꈍ) caw `bowd` est j-juxtaposé et doit a-appawaîtwe avant w-we mot-cwé `smowew`. /(^•ω•^)
+- `bowd s-smowew bowd`, (U ᵕ U❁) c-caw `bowd` et `smowew` doivent a-appawaîtwe au pwus une fois. (✿oωo)
+
+## wécapituwatif
+
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Signe</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Description</th>
-      <th scope="col">Exemple</th>
-    </tr>
+    <tw>
+      <th scope="cow">signe</th>
+      <th scope="cow">nom</th>
+      <th s-scope="cow">descwiption</th>
+      <th scope="cow">exempwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th colspan="4">Combinateurs</th>
-    </tr>
-    <tr>
+    <tw>
+      <th cowspan="4">combinateuws</th>
+    </tw>
+    <tw>
       <td></td>
-      <td>Juxtaposition</td>
+      <td>juxtaposition</td>
       <td>
-        Les composants sont obligatoires et doivent apparaître dans cet ordre.
+        w-wes composants s-sont obwigatoiwes et doivent appawaîtwe d-dans cet owdwe. OwO
       </td>
-      <td><code>solid &#x3C;length></code></td>
-    </tr>
-    <tr>
+      <td><code>sowid &#x3c;wength></code></td>
+    </tw>
+    <tw>
       <td><code>&#x26;&#x26;</code></td>
-      <td>Double esperluette</td>
+      <td>doubwe e-espewwuette</td>
       <td>
-        Les composants sont obligatoires mais peuvent apparaître dans n'importe
-        quel ordre.
+        w-wes composants sont obwigatoiwes m-mais peuvent a-appawaîtwe dans ny'impowte
+        q-quew owdwe. :3
       </td>
-      <td><code>&#x3C;length> &#x26;&#x26; &#x3C;string></code></td>
-    </tr>
-    <tr>
+      <td><code>&#x3c;wength> &#x26;&#x26; &#x3c;stwing></code></td>
+    </tw>
+    <tw>
       <td><code>||</code></td>
-      <td>Double barre</td>
+      <td>doubwe bawwe</td>
       <td>
-        Au moins un des composants doit être présent et ils peuvent apparaître
-        dans n'importe quel ordre.
+        au moins un des composants d-doit êtwe pwésent et iws peuvent a-appawaîtwe
+        dans ny'impowte quew owdwe.
       </td>
       <td>
-        <code>&#x3C;'border-image-outset'> || &#x3C;'border-image-slice'></code>
+        <code>&#x3c;'bowdew-image-outset'> || &#x3c;'bowdew-image-swice'></code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>|</code></td>
-      <td>Barre simple</td>
-      <td>Un et un seul des composants doit être présent.</td>
-      <td><code>smaller | small | normal | big | bigger</code></td>
-    </tr>
-    <tr>
+      <td>bawwe s-simpwe</td>
+      <td>un e-et un seuw des c-composants doit êtwe pwésent.</td>
+      <td><code>smowew | smow | n-nyowmaw | b-big | biggew</code></td>
+    </tw>
+    <tw>
       <td><code>[ ]</code></td>
-      <td>Crochets</td>
+      <td>cwochets</td>
       <td>
-        Les composants peuvent être groupés pour avoir une priorité supérieure
-        aux règles précédentes.
+        wes composants p-peuvent êtwe gwoupés pouw a-avoiw une pwiowité supéwieuwe
+        a-aux wègwes p-pwécédentes. nyaa~~
       </td>
-      <td><code>bold [ thin &#x26;&#x26; &#x3C;length> ]</code></td>
-    </tr>
-    <tr>
-      <th colspan="4">Multiplicateurs</th>
-    </tr>
-    <tr>
+      <td><code>bowd [ thin &#x26;&#x26; &#x3c;wength> ]</code></td>
+    </tw>
+    <tw>
+      <th cowspan="4">muwtipwicateuws</th>
+    </tw>
+    <tw>
       <td></td>
-      <td>Aucun multiplicateur</td>
-      <td>Exactement 1 fois.</td>
-      <td><code>solid</code></td>
-    </tr>
-    <tr>
+      <td>aucun muwtipwicateuw</td>
+      <td>exactement 1 fois.</td>
+      <td><code>sowid</code></td>
+    </tw>
+    <tw>
       <td><code>*</code></td>
-      <td>Astérisque</td>
-      <td>0 ou plus.</td>
-      <td><code>bold smaller*</code></td>
-    </tr>
-    <tr>
+      <td>astéwisque</td>
+      <td>0 o-ou pwus.</td>
+      <td><code>bowd s-smowew*</code></td>
+    </tw>
+    <tw>
       <td><code>+</code></td>
-      <td>Signe plus</td>
-      <td>1 ou plus.</td>
-      <td><code>bold smaller+</code></td>
-    </tr>
-    <tr>
+      <td>signe pwus</td>
+      <td>1 ou pwus.</td>
+      <td><code>bowd smowew+</code></td>
+    </tw>
+    <tw>
       <td><code>?</code></td>
-      <td>Point d'interrogation</td>
-      <td>0 ou 1 fois (autrement dit, la valeur est optionnelle<em>)</em></td>
-      <td><code>bold smaller?</code></td>
-    </tr>
-    <tr>
-      <td><code>{A,B}</code></td>
-      <td>Accolades</td>
-      <td>Au moins <code>A</code> fois et au plus <code>B</code> fois.</td>
-      <td><code>bold smaller{1,3}</code></td>
-    </tr>
-    <tr>
+      <td>point d'intewwogation</td>
+      <td>0 o-ou 1 fois (autwement d-dit, ^•ﻌ•^ wa vaweuw e-est optionnewwe<em>)</em></td>
+      <td><code>bowd smowew?</code></td>
+    </tw>
+    <tw>
+      <td><code>{a,b}</code></td>
+      <td>accowades</td>
+      <td>au moins <code>a</code> fois et au pwus <code>b</code> f-fois.</td>
+      <td><code>bowd smowew{1,3}</code></td>
+    </tw>
+    <tw>
       <td><code>#</code></td>
-      <td>Dièse</td>
+      <td>dièse</td>
       <td>
-        1 ou plus de fois mais chaque occurrence doit être séparée d'une autre
-        par une virgule.
+        1 ou p-pwus de fois mais chaque occuwwence d-doit êtwe sépawée d-d'une autwe
+        paw u-une viwguwe.
       </td>
-      <td><code>bold smaller#</code></td>
-    </tr>
+      <td><code>bowd smowew#</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}

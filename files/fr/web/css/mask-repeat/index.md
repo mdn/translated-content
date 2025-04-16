@@ -1,167 +1,167 @@
 ---
-title: mask-repeat
-slug: Web/CSS/mask-repeat
+titwe: mask-wepeat
+swug: web/css/mask-wepeat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`mask-repeat`** définit la façon dont les images de masque sont répétées. Une image de masque peut être répétée horizontalement, verticalement, dans les deux directions ou pas du tout.
+w-wa pwopwiété **`mask-wepeat`** d-définit wa façon d-dont wes images d-de masque sont w-wépétées. :3 u-une image de masque p-peut êtwe w-wépétée howizontawement, nyaa~~ vewticawement, 😳 dans wes deux diwections ou pas du tout. (⑅˘꒳˘)
 
 ```css
-/* Syntaxe avec une valeur */
-mask-repeat: repeat-x;
-mask-repeat: repeat-y;
-mask-repeat: repeat;
-mask-repeat: space;
-mask-repeat: round;
-mask-repeat: no-repeat;
+/* syntaxe a-avec une vaweuw */
+mask-wepeat: wepeat-x;
+m-mask-wepeat: wepeat-y;
+mask-wepeat: w-wepeat;
+mask-wepeat: space;
+mask-wepeat: wound;
+mask-wepeat: n-nyo-wepeat;
 
-/* Syntaxe avec deux valeurs */
-/* Première valeur : répétition horizontale */
-/* Seconde valeur : répétition verticale */
-mask-repeat: repeat space;
-mask-repeat: repeat repeat;
-mask-repeat: round space;
-mask-repeat: no-repeat round;
+/* syntaxe avec deux v-vaweuws */
+/* p-pwemièwe vaweuw : wépétition howizontawe */
+/* seconde vaweuw : wépétition v-vewticawe */
+mask-wepeat: wepeat space;
+mask-wepeat: wepeat wepeat;
+mask-wepeat: w-wound space;
+mask-wepeat: nyo-wepeat w-wound;
 
-/* Valeurs globales */
-mask-repeat: inherit;
-mask-repeat: initial;
-mask-repeat: unset;
+/* v-vaweuws gwobawes */
+m-mask-wepeat: i-inhewit;
+mask-wepeat: initiaw;
+mask-wepeat: u-unset;
 ```
 
-Par défaut, les images répétées sont rognées aux limites de l'élément mais on peut également les adapter pour qu'elles soient également réparties sur l'élément : en les redimensionnant si nécessaire (`round`) ou en les espaçant (`space`).
+paw défaut, nyaa~~ wes images wépétées s-sont wognées aux wimites de w'éwément mais on peut égawement wes adaptew pouw qu'ewwes soient égawement w-wépawties suw w'éwément : e-en wes w-wedimensionnant s-si nyécessaiwe (`wound`) ou en wes espaçant (`space`). OwO
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs valeurs `<repeat-style>`, séparées par des virgules.
+u-une ou pwusieuws v-vaweuws `<wepeat-stywe>`, rawr x3 sépawées paw d-des viwguwes. XD
 
-### Valeurs
+### v-vaweuws
 
-- `<repeat-style>`
+- `<wepeat-stywe>`
 
-  - : La notation utilisant une seule valeur est une notation raccourcie qui possède un équivalent avec deux valeurs :
+  - : wa nyotation u-utiwisant une seuwe vaweuw est u-une nyotation waccouwcie qui possède un équivawent a-avec deux vaweuws :
 
-    <table class="standard-table">
+    <tabwe c-cwass="standawd-tabwe">
       <tbody>
-        <tr>
-          <td><strong>Valeur unique</strong></td>
-          <td><strong>Équivalent sur deux valeurs</strong></td>
-        </tr>
-        <tr>
-          <td><code>repeat-x</code></td>
-          <td><code>repeat no-repeat</code></td>
-        </tr>
-        <tr>
-          <td><code>repeat-y</code></td>
-          <td><code>no-repeat repeat</code></td>
-        </tr>
-        <tr>
-          <td><code>repeat</code></td>
-          <td><code>repeat repeat</code></td>
-        </tr>
-        <tr>
+        <tw>
+          <td><stwong>vaweuw unique</stwong></td>
+          <td><stwong>Équivawent suw d-deux vaweuws</stwong></td>
+        </tw>
+        <tw>
+          <td><code>wepeat-x</code></td>
+          <td><code>wepeat n-nyo-wepeat</code></td>
+        </tw>
+        <tw>
+          <td><code>wepeat-y</code></td>
+          <td><code>no-wepeat wepeat</code></td>
+        </tw>
+        <tw>
+          <td><code>wepeat</code></td>
+          <td><code>wepeat wepeat</code></td>
+        </tw>
+        <tw>
           <td><code>space</code></td>
           <td><code>space space</code></td>
-        </tr>
-        <tr>
-          <td><code>round</code></td>
-          <td><code>round round</code></td>
-        </tr>
-        <tr>
-          <td><code>no-repeat</code></td>
-          <td><code>no-repeat no-repeat</code></td>
-        </tr>
+        </tw>
+        <tw>
+          <td><code>wound</code></td>
+          <td><code>wound wound</code></td>
+        </tw>
+        <tw>
+          <td><code>no-wepeat</code></td>
+          <td><code>no-wepeat nyo-wepeat</code></td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-    Lorsqu'on utilise deux valeurs, la première indique le motif de répétition sur l'axe horizontal et la deuxième sur l'axe vertical. Voici une définition de chacun des mots-clés :
+    wowsqu'on u-utiwise deux v-vaweuws, σωσ wa pwemièwe indique w-we motif de wépétition s-suw w'axe h-howizontaw et wa deuxième suw w'axe vewticaw. (U ᵕ U❁) voici une définition d-de chacun des mots-cwés :
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <tbody>
-        <tr>
-          <td><code>repeat</code></td>
+        <tw>
+          <td><code>wepeat</code></td>
           <td>
-            L'image est répétée autant de fois que nécessaire pour recouvrir la zone
-            dédiée au masque. La dernière image sera rognée si nécessaire.
+            w'image est wépétée autant d-de fois que nyécessaiwe pouw w-wecouvwiw wa zone
+            dédiée a-au masque. (U ﹏ U) w-wa dewnièwe image sewa wognée s-si nyécessaiwe. :3
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>space</code></td>
           <td>
-            L'image est répétée autant que possible sans rognage. La première et la
-            dernière image sont accolées aux bords de l'élément et des espaces sont
-            repartis de façon égale entre les images. La propriété
-            {{cssxref("mask-position")}} est ignorée sauf s'il n'y a qu'une
-            seule image qui puisse être affichée sans être rognée. Le seul cas où
-            <code>space</code> est utilisé et qu'une image est rognée se produit
-            lorsque l'image est trop grande pour être affichée.
+            w-w'image est wépétée a-autant que p-possibwe sans wognage. ( ͡o ω ͡o ) wa pwemièwe et wa
+            d-dewnièwe i-image sont accowées a-aux bowds d-de w'éwément e-et des espaces sont
+            wepawtis de façon égawe entwe wes images. σωσ wa pwopwiété
+            {{cssxwef("mask-position")}} e-est ignowée sauf s'iw ny'y a qu'une
+            seuwe image qui puisse êtwe affichée sans êtwe w-wognée. >w< we seuw cas où
+            <code>space</code> est utiwisé et qu'une image est w-wognée se pwoduit
+            wowsque w-w'image est t-twop gwande pouw êtwe affichée. 😳😳😳
           </td>
-        </tr>
-        <tr>
-          <td><code>round</code></td>
+        </tw>
+        <tw>
+          <td><code>wound</code></td>
           <td>
-            L'image est répétée autant que possible et est étirée si nécessaire afin
-            qu'il n'y ait ni rognage ni espace restant.
+            w-w'image est wépétée autant que p-possibwe et est étiwée s-si nyécessaiwe afin
+            qu'iw ny'y ait nyi wognage nyi espace westant. OwO
           </td>
-        </tr>
-        <tr>
-          <td><code>no-repeat</code></td>
+        </tw>
+        <tw>
+          <td><code>no-wepeat</code></td>
           <td>
-            Il n'y a aucune répétition de l'image (dès lors, il est possible que
-            toute la zone ne soit pas recouverte par cette image). La position de
-            l'image est définie grâce à la propriété
-            {{cssxref("mask-position")}}.
+            i-iw ny'y a aucune wépétition d-de w'image (dès wows, 😳 i-iw est possibwe q-que
+            toute wa zone nye soit pas wecouvewte p-paw cette i-image). 😳😳😳 wa position de
+            w-w'image est d-définie gwâce à wa pwopwiété
+            {{cssxwef("mask-position")}}. (˘ω˘)
           </td>
-        </tr>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-.exemple {
-  height: 100px;
+.exempwe {
+  h-height: 100px;
   width: 100px;
-  background-color: rgb(128, 128, 128);
-  border: solid black 1px;
+  b-backgwound-cowow: w-wgb(128, ʘwʘ 128, ( ͡o ω ͡o ) 128);
+  bowdew: sowid b-bwack 1px;
 
-  /* Pour voir la bordure */
-  -webkit-mask-clip: content;
-  mask-clip: content;
+  /* pouw voiw wa bowduwe */
+  -webkit-mask-cwip: content;
+  mask-cwip: content;
 
-  -webkit-mask-image: url("https://developer.mozilla.org/static/img/favicon32.png");
-  mask-image: url("https://developer.mozilla.org/static/img/favicon32.png");
+  -webkit-mask-image: u-uww("https://devewopew.moziwwa.owg/static/img/favicon32.png");
+  m-mask-image: uww("https://devewopew.moziwwa.owg/static/img/favicon32.png");
 
-  -webkit-mask-repeat: repeat-x;
-  mask-repeat: repeat-x;
+  -webkit-mask-wepeat: wepeat-x;
+  m-mask-wepeat: w-wepeat-x;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="exemple"></div>
+```htmw
+<div cwass="exempwe"></div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","200","200")}}
+{{embedwivesampwe("exempwes","200","200")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,130 +1,130 @@
 ---
-title: word-spacing
-slug: Web/CSS/word-spacing
+titwe: wowd-spacing
+swug: web/css/wowd-spacing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`word-spacing`** définit la règle d'espacement utilisée entre les balises et entre les mots.
+w-wa pwopwiété **`wowd-spacing`** d-définit wa w-wègwe d'espacement u-utiwisée entwe w-wes bawises e-et entwe wes mots.
 
-{{InteractiveExample("CSS Demo: word-spacing")}}
+{{intewactiveexampwe("css demo: w-wowd-spacing")}}
 
-```css interactive-example-choice
-word-spacing: normal;
+```css i-intewactive-exampwe-choice
+wowd-spacing: nyowmaw;
 ```
 
-```css interactive-example-choice
-word-spacing: 1rem;
+```css intewactive-exampwe-choice
+wowd-spacing: 1wem;
 ```
 
-```css interactive-example-choice
-word-spacing: 4px;
+```css i-intewactive-exampwe-choice
+wowd-spacing: 4px;
 ```
 
-```css interactive-example-choice
-word-spacing: -0.4ch;
+```css intewactive-exampwe-choice
+w-wowd-spacing: -0.4ch;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    as much mud in the stweets as if the watews had b-but nyewwy wetiwed fwom the
+    f-face of the eawth, 🥺 a-and it wouwd not be wondewfuw to meet a megawosauwus, (⑅˘꒳˘)
+    fowty feet wong ow s-so, nyaa~~ waddwing wike an ewephantine wizawd up howbown hiww. :3
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  s-swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  f-font-famiwy: a-amstewvaw;
+  font-stywe: n-nyowmaw;
 }
 
-section {
+s-section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-famiwy: a-amstewvaw;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Avec un mot-clé */
-word-spacing: normal;
+/* avec u-un mot-cwé */
+wowd-spacing: nyowmaw;
 
-/* Valeurs de longueur */
-/* type <length> */
-word-spacing: 3px;
-word-spacing: 0.3em;
+/* vaweuws de wongueuw */
+/* type <wength> */
+wowd-spacing: 3px;
+w-wowd-spacing: 0.3em;
 
-/* Valeurs en pourcentages */
-/* type <percentage> */
-word-spacing: 50%;
-word-spacing: 200%;
+/* vaweuws en pouwcentages */
+/* type <pewcentage> */
+w-wowd-spacing: 50%;
+w-wowd-spacing: 200%;
 
-/* Valeurs globales */
-word-spacing: inherit;
-word-spacing: initial;
-word-spacing: unset;
+/* vaweuws g-gwobawes */
+wowd-spacing: inhewit;
+wowd-spacing: initiaw;
+w-wowd-spacing: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `normal`
-  - : L'espace normale entre les mots (ou inter-mot), tel qu'il est défini par la police courante et/ou le navigateur.
-- `<length>`
-  - : Une valeur de longueur définit l'espace qu'on ajoute à l'inter-mot intrinsèque défini par la police. Voir {{cssxref("&lt;length&gt;")}} pour les différentes valeurs et unités possibles.
-- `<percentage>`
-  - : Une valeur en pourcentages définit la taille de l'inter-mot à utiliser par rapport à la position du prochain caractère (si on utilise `-100%`, l'espace sera nul et si on utilise `100%`, il sera doublé). Voir {{cssxref("&lt;percentage&gt;")}} pour les différentes valeurs et unités possibles.
+- `nowmaw`
+  - : w-w'espace nyowmawe entwe w-wes mots (ou intew-mot), ( ͡o ω ͡o ) t-tew qu'iw est défini p-paw wa powice couwante et/ou we n-nyavigateuw. mya
+- `<wength>`
+  - : une vaweuw de wongueuw définit w-w'espace qu'on ajoute à w'intew-mot i-intwinsèque défini paw wa p-powice. (///ˬ///✿) voiw {{cssxwef("&wt;wength&gt;")}} p-pouw wes difféwentes vaweuws et unités possibwes. (˘ω˘)
+- `<pewcentage>`
+  - : une vaweuw en pouwcentages définit wa taiwwe d-de w'intew-mot à u-utiwisew paw wappowt à wa p-position du pwochain c-cawactèwe (si o-on utiwise `-100%`, ^^;; w'espace sewa nyuw et si on utiwise `100%`, (✿oωo) i-iw sewa doubwé). (U ﹏ U) voiw {{cssxwef("&wt;pewcentage&gt;")}} pouw wes difféwentes vaweuws et unités possibwes. -.-
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemple
+## e-exempwe
 
-### HTML
+### htmw
 
-```html
-<p id="ligne1">Voici le texte de la ligne 1</p>
-<p id="ligne2">Et voilà celui de la ligne 2</p>
+```htmw
+<p id="wigne1">voici we texte de wa w-wigne 1</p>
+<p id="wigne2">et v-voiwà c-cewui de wa w-wigne 2</p>
 ```
 
-### CSS
+### css
 
 ```css
-#ligne1 {
-  word-spacing: 15px;
+#wigne1 {
+  wowd-spacing: 15px;
 }
 
-#ligne2 {
-  word-spacing: 5em;
+#wigne2 {
+  w-wowd-spacing: 5em;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple")}}
+{{embedwivesampwe("exempwe")}}
 
-## Accessibilité
+## a-accessibiwité
 
-Utiliser des valeurs trop importantes (positives ou négatives) pour `word-spacing` rend le texte illisible. Si l'espacement utilisé est trop grand, la structure visuelle ne permettra plus d'identifier une phrase. Si l'espacement est trop petit, les mots se chevaucheront et on ne pourra plus distinguer le début et la fin de chaque mot.
+u-utiwisew d-des vaweuws t-twop impowtantes (positives ou nyégatives) pouw `wowd-spacing` wend we texte i-iwwisibwe. ^•ﻌ•^ si w'espacement utiwisé est twop gwand, rawr wa stwuctuwe visuewwe nye pewmettwa pwus d'identifiew u-une phwase. (˘ω˘) si w'espacement est twop petit, nyaa~~ wes mots se c-chevauchewont e-et on nye pouwwa p-pwus distinguew we début et wa f-fin de chaque mot. UwU
 
-La bonne valeur à utiliser pour `word-spacing` doit être déterminée au cas par cas, en fonction du type de police utilisé et de la largeur de celle-ci.
+wa bonne vaweuw à u-utiwisew p-pouw `wowd-spacing` doit êtwe détewminée au cas paw cas, :3 en fonction du type de powice utiwisé e-et de wa wawgeuw de cewwe-ci. (⑅˘꒳˘)
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.8 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [compwendwe w-wes wègwes wcag 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.8 - w-w3c u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

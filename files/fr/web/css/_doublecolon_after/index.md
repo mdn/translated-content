@@ -1,194 +1,194 @@
 ---
-title: ::after
-slug: Web/CSS/::after
-l10n:
-  sourceCommit: b7821748a66d5c581c17ddf62a74edf83638623e
+titwe: ::aftew
+swug: web/css/::aftew
+w-w10n:
+  s-souwcecommit: b7821748a66d5c581c17ddf62a74edf83638623e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-En CSS, **`::after`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le dernier enfant de l'élément sélectionné. Il est souvent utilisé pour ajouter du contenu esthétique à un élément, en utilisant la propriété CSS [`content`](/fr/docs/Web/CSS/content). Par défaut, ce contenu est de type [en ligne (<i lang="en">inline</i> en anglais)](/fr/docs/Glossary/Inline-level_content).
+e-en css, >_< **`::aftew`** c-cwée u-un [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) q-qui s-sewa we dewniew e-enfant de w'éwément séwectionné. ^^;; iw est souvent utiwisé pouw ajoutew du contenu e-esthétique à un éwément, (ˆ ﻌ ˆ)♡ en utiwisant wa p-pwopwiété css [`content`](/fw/docs/web/css/content). ^^;; paw défaut, (⑅˘꒳˘) c-ce contenu est de type [en wigne (<i wang="en">inwine</i> en angwais)](/fw/docs/gwossawy/inwine-wevew_content). rawr x3
 
-{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
+{{intewactiveexampwe("css d-demo: ::aftew", (///ˬ///✿) "tabbed-standawd")}}
 
-```css interactive-example
-a::after {
-  content: " (" attr(href) ")";
+```css intewactive-exampwe
+a-a::aftew {
+  content: " (" a-attw(hwef) ")";
 }
 
-.dead-link {
-  text-decoration: line-through;
+.dead-wink {
+  text-decowation: wine-thwough;
 }
 
-.dead-link::after {
-  content: url("/shared-assets/images/examples/warning.svg");
-  display: inline-block;
-  width: 12px;
+.dead-wink::aftew {
+  content: uww("/shawed-assets/images/exampwes/wawning.svg");
+  dispway: inwine-bwock;
+  w-width: 12px;
   height: 12px;
 }
 ```
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  The sailfish is named for its sail-like dorsal fin and is widely considered
-  the fastest fish in the ocean.
-  <a href="https://en.wikipedia.org/wiki/Sailfish"
-    >You can read more about it here</a
-  >.
+  the saiwfish is nyamed fow its s-saiw-wike dowsaw fin and is widewy c-considewed
+  t-the fastest fish i-in the ocean. 🥺
+  <a h-hwef="https://en.wikipedia.owg/wiki/saiwfish"
+    >you can wead mowe about i-it hewe</a
+  >. >_<
 </p>
 
 <p>
-  The red lionfish is a predatory scorpionfish that lives on coral reefs of the
-  Indo-Pacific Ocean and more recently in the western Atlantic.
-  <a href="" class="dead-link">You can read more about it here</a>.
+  the wed wionfish is a-a pwedatowy scowpionfish that wives on cowaw weefs of the
+  indo-pacific ocean and mowe wecentwy i-in the westewn atwantic. UwU
+  <a h-hwef="" cwass="dead-wink">you can w-wead mowe about i-it hewe</a>. >_<
 </p>
 ```
 
-> [!NOTE]
-> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/Replaced_element)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<br>`](/fr/docs/Web/HTML/Element/br).
+> [!note]
+> wes pseudo-éwéments généwés paw `::befowe` e-et `::aftew` s-sont [contenus dans wa boîte d-de mise en fowme d-de w'éwément](https://www.w3.owg/tw/css2/genewate.htmw#befowe-aftew-content). -.- aussi, mya [`::befowe`](/fw/docs/web/css/::befowe) e-et `::aftew` nye s'appwiquent pas a-aux _[éwéments wempwacés](/fw/docs/web/css/wepwaced_ewement)_ tews que wes éwéments [`<img>`](/fw/docs/web/htmw/ewement/img) o-ou [`<bw>`](/fw/docs/web/htmw/ewement/bw). >w<
 
-## Syntaxe
+## syntaxe
 
-```css-nolint
-::after {
-  content: /* valeur */;
-  /* propriétés */
+```css-nowint
+::aftew {
+  c-content: /* vaweuw */;
+  /* p-pwopwiétés */
 }
 ```
 
-Si la propriété [`content`](/fr/docs/Web/CSS/content) n'est pas indiquée, contient une valeur invalide, vaut `normal`, ou vaut `none`, le pseudo-élément `::after` ne sera pas rendu à l'écran. Il se comportera comme si `display: none` avait été appliqué.
+s-si wa pwopwiété [`content`](/fw/docs/web/css/content) ny'est pas indiquée, contient une vaweuw invawide, (U ﹏ U) vaut `nowmaw`, 😳😳😳 ou vaut `none`, o.O w-we pseudo-éwément `::aftew` n-nye sewa pas wendu à w'écwan. òωó i-iw se compowtewa c-comme si `dispway: n-nyone` avait été appwiqué. 😳😳😳
 
-> [!NOTE]
-> CSS a introduit la notation `::after` (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent aussi la notation `:after`, introduite précédemment, à des fins de rétro-compatibilité.
+> [!note]
+> css a intwoduit wa nyotation `::aftew` (avec deux d-deux-points) pouw distinguew wes [pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses) des [pseudo-éwéments](/fw/docs/web/css/pseudo-ewements). σωσ wes nyavigateuws a-acceptent aussi wa notation `:aftew`, (⑅˘꒳˘) i-intwoduite p-pwécédemment, (///ˬ///✿) à d-des fins de wétwo-compatibiwité. 🥺
 
-## Exemples
+## e-exempwes
 
-### Utilisation simple
+### u-utiwisation s-simpwe
 
-Nous allons ici créer deux classes&nbsp;: une pour les paragraphes ennuyeux et une pour les intéressants. Nous marquerons ensuite chacun de ces paragraphes en ajoutant un pseudo-élément après chacun d'eux.
+n-nyous awwons ici cwéew deux cwasses&nbsp;: une p-pouw wes pawagwaphes e-ennuyeux et u-une pouw wes intéwessants. OwO n-nyous m-mawquewons ensuite chacun de ces pawagwaphes en ajoutant un pseudo-éwément a-apwès chacun d'eux. >w<
 
-#### HTML
+#### htmw
 
-```html
-<p class="texte-ennuyeux">Voici un peu de vieux texte ennuyeux ordinaire.</p>
+```htmw
+<p cwass="texte-ennuyeux">voici un peu de vieux texte ennuyeux owdinaiwe.</p>
 
-<p>Voici un peu de texte normal qui n'est ni ennuyeux, ni intéressant.</p>
+<p>voici u-un peu de texte nyowmaw qui ny'est nyi ennuyeux, 🥺 nyi intéwessant.</p>
 
-<p class="texte-interessant">Contribuer à MDN est facile et amusant.</p>
+<p c-cwass="texte-intewessant">contwibuew à m-mdn est faciwe e-et amusant.</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.texte-interessant::after {
-  content: "<- cela est intéressant";
-  color: green;
+.texte-intewessant::aftew {
+  c-content: "<- cewa est intéwessant";
+  c-cowow: g-gween;
 }
 
-.texte-ennuyeux::after {
+.texte-ennuyeux::aftew {
   content: "<- un peu ennuyeux";
-  color: red;
+  cowow: wed;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 500, 150)}}
+{{embedwivesampwe('', nyaa~~ 500, 150)}}
 
-### Exemple décoratif
+### e-exempwe décowatif
 
-On peut mettre en forme du texte ou des images avec la propriété [`content`](/fr/docs/Web/CSS/content) à peu près de quelque manière que nous le voulions&nbsp;:
+on peut m-mettwe en fowme du texte ou des i-images avec wa p-pwopwiété [`content`](/fw/docs/web/css/content) à peu pwès de quewque manièwe q-que nyous we v-vouwions&nbsp;:
 
-#### HTML
+#### htmw
 
-```html
-<span class="ruban">Observez où se trouve la boîte orange.</span>
+```htmw
+<span c-cwass="wuban">obsewvez o-où se twouve wa boîte owange.</span>
 ```
 
-#### CSS
+#### css
 
 ```css
-.ruban {
-  background-color: #5bc8f7;
+.wuban {
+  backgwound-cowow: #5bc8f7;
 }
 
-.ruban::after {
-  content: "Voyez cette boîte orange.";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+.wuban::aftew {
+  content: "voyez c-cette boîte o-owange.";
+  b-backgwound-cowow: #ffba10;
+  bowdew-cowow: bwack;
+  b-bowdew-stywe: d-dotted;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 450, 20)}}
+{{embedwivesampwe('', ^^ 450, 20)}}
 
-### Bulles d'information
+### b-buwwes d'infowmation
 
-Dans l'exemple suivant, on illustre le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) `::after` avec l'expression CSS [`attr()`](/fr/docs/Web/CSS/attr) et un attribut de données personnalisé `data-descr` afin de créer une bulle d'information de type glossaire en CSS, sans JavaScript.
+dans w'exempwe suivant, >w< on iwwustwe we [pseudo-éwément](/fw/docs/web/css/pseudo-ewements) `::aftew` a-avec w'expwession c-css [`attw()`](/fw/docs/web/css/attw) et un attwibut de données p-pewsonnawisé `data-descw` a-afin de cwéew une buwwe d'infowmation de type gwossaiwe en css, OwO s-sans javascwipt. XD
 
-On peut également aider les personnes qui naviguent au clavier avec cette technique, en ajoutant un `tabindex` de `0` pour faire un `span` focusable, et en utilisant la sélection `:focus`. Cela montre à quel point les options [`::before`](/fr/docs/Web/CSS/::before) and `::after` peuvent être flexibles, bien que, pour l'expérience la plus accessible, un widget de divulgation sémantique créé d'une autre manière serait probablement plus approprié.
+on peut égawement aidew wes pewsonnes qui nyaviguent au cwaview a-avec cette technique, ^^;; en ajoutant un `tabindex` d-de `0` pouw f-faiwe un `span` focusabwe, 🥺 et en utiwisant wa séwection `:focus`. c-cewa montwe à q-quew point wes options [`::befowe`](/fw/docs/web/css/::befowe) and `::aftew` peuvent êtwe f-fwexibwes, XD bien que, (U ᵕ U❁) pouw w'expéwience w-wa pwus accessibwe, :3 un widget de divuwgation sémantique c-cwéé d'une autwe manièwe sewait p-pwobabwement p-pwus appwopwié. ( ͡o ω ͡o )
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Voici l'exemple en action du code ci-dessus.<br />
-  Nous avons un peu de
-  <span data-descr="collection de mots et de ponctuation">texte</span>
-  ici avec quelques
-  <span data-descr="petites fenêtres surgissantes qui se cachent aussi"
-    >bulles d'information</span
+  v-voici w'exempwe en action d-du code ci-dessus.<bw />
+  n-nyous avons un p-peu de
+  <span data-descw="cowwection de mots et d-de ponctuation">texte</span>
+  i-ici avec quewques
+  <span data-descw="petites fenêtwes s-suwgissantes q-qui se cachent a-aussi"
+    >buwwes d'infowmation</span
   >
-  .
+  . òωó
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-span[data-descr] {
-  position: relative;
-  text-decoration: underline;
-  color: #00f;
-  cursor: help;
+span[data-descw] {
+  p-position: wewative;
+  text-decowation: u-undewwine;
+  c-cowow: #00f;
+  cuwsow: hewp;
 }
 
-span[data-descr]:hover::after,
-span[data-descr]:focus::after {
-  content: attr(data-descr);
-  position: absolute;
-  left: 0;
+span[data-descw]:hovew::aftew, σωσ
+span[data-descw]:focus::aftew {
+  c-content: a-attw(data-descw);
+  p-position: absowute;
+  w-weft: 0;
   top: 24px;
-  min-width: 200px;
-  border: 1px #aaaaaa solid;
-  border-radius: 10px;
-  background-color: #ffffcc;
+  m-min-width: 200px;
+  bowdew: 1px #aaaaaa sowid;
+  bowdew-wadius: 10px;
+  backgwound-cowow: #ffffcc;
   padding: 12px;
-  color: #000000;
+  c-cowow: #000000;
   font-size: 14px;
-  z-index: 1;
+  z-z-index: 1;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', 450, 120)}}
+{{embedwivesampwe('', (U ᵕ U❁) 450, 120)}}
 
-## Accessibilité
+## a-accessibiwité
 
-Utiliser un pseudo-élément `::after` afin d'ajouter du contenu est déconseillé, car ce dernier n'est pas accessible de façon fiable pour les lecteurs d'écrans.
+utiwisew u-un pseudo-éwément `::aftew` afin d-d'ajoutew du c-contenu est déconseiwwé, (✿oωo) c-caw ce d-dewniew ny'est p-pas accessibwe de façon fiabwe pouw wes wecteuws d'écwans. ^^
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`::before`](/fr/docs/Web/CSS/::before)
-- [`content`](/fr/docs/Web/CSS/content)
+- [`::befowe`](/fw/docs/web/css/::befowe)
+- [`content`](/fw/docs/web/css/content)

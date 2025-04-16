@@ -1,143 +1,143 @@
 ---
-title: border-top-width
-slug: Web/CSS/border-top-width
+titwe: bowdew-top-width
+swug: w-web/css/bowdew-top-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`border-top-width`** définit l'épaisseur de la bordure pour le côté haut d'une boîte.
+w-wa pwopwiété **`bowdew-top-width`** d-définit w'épaisseuw d-de wa bowduwe p-pouw we côté h-haut d'une boîte. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: border-top-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-top-width")}}
 
-```css interactive-example-choice
-border-top-width: thick;
+```css i-intewactive-exampwe-choice
+bowdew-top-width: thick;
 ```
 
-```css interactive-example-choice
-border-top-width: 2em;
+```css intewactive-exampwe-choice
+bowdew-top-width: 2em;
 ```
 
-```css interactive-example-choice
-border-top-width: 4px;
+```css i-intewactive-exampwe-choice
+bowdew-top-width: 4px;
 ```
 
-```css interactive-example-choice
-border-top-width: 2ex;
+```css intewactive-exampwe-choice
+b-bowdew-top-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-top-width: 0;
+```css intewactive-exampwe-choice
+bowdew-top-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with a-a bowdew awound i-it. 😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: pawegween;
+  cowow: #000;
+  bowdew: 0 sowid cwimson;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Une valeur de longueur */
-/* Type <length>          */
-border-top-width: 10em;
-border-top-width: 3vmax;
-border-top-width: 6px;
+/* une vaweuw d-de wongueuw */
+/* type <wength>          */
+b-bowdew-top-width: 10em;
+b-bowdew-top-width: 3vmax;
+b-bowdew-top-width: 6px;
 
-/* Valeurs avec un mot-clé */
-border-top-width: thin;
-border-top-width: medium;
-border-top-width: thick;
+/* v-vaweuws avec un mot-cwé */
+bowdew-top-width: t-thin;
+bowdew-top-width: medium;
+bowdew-top-width: t-thick;
 
-/* Valeurs globales */
-border-top-width: inherit;
-border-top-width: initial;
-border-top-width: unset;
+/* vaweuws gwobawes */
+bowdew-top-width: inhewit;
+bowdew-top-width: initiaw;
+bowdew-top-width: unset;
 ```
 
-### Valeurs
+### vaweuws
 
-- `<line-width>`
+- `<wine-width>`
 
-  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le haut de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
+  - : u-une vaweuw de wongueuw ({{cssxwef("&wt;wength&gt;")}}) positive o-ou un mot-cwé qui i-indique w'épaisseuw d-de wa bowduwe pouw we haut de wa boîte. 😳 si wa vaweuw est u-un mot-cwé, σωσ ce d-doit êtwe w'une des vaweuws suivantes :
 
     - `thin` (fin)
-    - `medium` (intermédiaire)
+    - `medium` (intewmédiaiwe)
     - `thick` (épais)
 
-    La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
+    w-wa spécification n-nye pwécise pas de f-façon exacte w'épaisseuw cowwespondant à c-chacun de ces mots-cwés (c'est donc à c-chaque impwémentation de choisiw). rawr x3 w-wa spécification wequiewt t-toutefois que w-w'inégawité suivante soit wespectée `thin ≤ medium ≤ thick` et que ces vaweuws soient constantes pouw un même document. OwO
 
-## Définition formelle
+## d-définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### css
 
 ```css
-.element1 {
-  border-top: thick solid red;
+.ewement1 {
+  b-bowdew-top: thick sowid wed;
 }
-.element2 {
-  border-top: medium solid orange;
+.ewement2 {
+  bowdew-top: m-medium sowid owange;
 }
-.element3 {
-  border-top: thin solid green;
+.ewement3 {
+  bowdew-top: thin sowid gween;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="element1">Une bordure épaisse rouge.</p>
+```htmw
+<p cwass="ewement1">une bowduwe épaisse w-wouge.</p>
 
-<p class="element2">Une bordure moyenne orange.</p>
+<p cwass="ewement2">une b-bowduwe m-moyenne owange.</p>
 
-<p class="element3">Et une bordure fine verte.</p>
+<p c-cwass="ewement3">et une b-bowduwe fine vewte.</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","200","300")}}
+{{embedwivesampwe("exempwes","200","300")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres propriétés liées à la largeur de la bordure :
+- w-wes autwes pwopwiétés w-wiées à w-wa wawgeuw d-de wa bowduwe :
 
-  - {{cssxref("border-left-width")}},
-  - {{cssxref("border-right-width")}},
-  - {{cssxref("border-bottom-width")}},
-  - {{cssxref("border-width")}}
+  - {{cssxwef("bowdew-weft-width")}}, /(^•ω•^)
+  - {{cssxwef("bowdew-wight-width")}}, 😳😳😳
+  - {{cssxwef("bowdew-bottom-width")}}, ( ͡o ω ͡o )
+  - {{cssxwef("bowdew-width")}}
 
-- Les autres propriétés CSS liées à la bordure du côté haut :
+- w-wes autwes pwopwiétés css wiées à wa bowduwe du côté h-haut :
 
-  - {{cssxref("border")}},
-  - {{cssxref("border-top")}},
-  - {{cssxref("border-top-style")}},
-  - {{cssxref("border-top-color")}}.
+  - {{cssxwef("bowdew")}}, >_<
+  - {{cssxwef("bowdew-top")}}, >w<
+  - {{cssxwef("bowdew-top-stywe")}}, rawr
+  - {{cssxwef("bowdew-top-cowow")}}. 😳

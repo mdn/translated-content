@@ -1,252 +1,252 @@
 ---
-title: Propriétés raccourcies
-slug: Web/CSS/Shorthand_properties
-l10n:
-  sourceCommit: be7a098e6af7b820c06a2d5169a9221ee2065e82
+titwe: pwopwiétés waccouwcies
+s-swug: web/css/showthand_pwopewties
+w-w10n:
+  souwcecommit: b-be7a098e6af7b820c06a2d5169a9221ee2065e82
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**_Les propriétés raccourcies_** sont des propriétés CSS permettant de paramétrer simultanément les valeurs de plusieurs propriétés CSS. Utiliser une propriété raccourcie permet d'obtenir des feuilles de style plus concises (et souvent plus lisibles).
+**_wes p-pwopwiétés w-waccouwcies_** s-sont des p-pwopwiétés css p-pewmettant de pawamétwew simuwtanément wes vaweuws de pwusieuws pwopwiétés c-css. mya utiwisew une pwopwiété waccouwcie pewmet d-d'obteniw des feuiwwes de stywe p-pwus concises (et souvent pwus wisibwes). mya
 
-La spécification CSS définit des propriétés raccourcies qui regroupent des propriétés courantes portant sur le même thème. Ainsi, la propriété [`background`](/fr/docs/Web/CSS/background) est une propriété raccourcie qui permet de définir les valeurs de [`background-color`](/fr/docs/Web/CSS/background-color), [`background-image`](/fr/docs/Web/CSS/background-image), [`background-repeat`](/fr/docs/Web/CSS/background-repeat), et [`background-position`](/fr/docs/Web/CSS/background-position). De la même façon, la plupart des propriétés communes relatives aux polices peuvent être définies grâce à la propriété raccourcie [`font`](/fr/docs/Web/CSS/font), et celles portant sur les marges autour d'une boîte peuvent être paramétrées grâce à la propriété raccourcie [`margin`](/fr/docs/Web/CSS/margin).
+wa spécification css d-définit des pwopwiétés waccouwcies q-qui wegwoupent d-des pwopwiétés couwantes powtant suw we même thème. /(^•ω•^) ainsi, ^^;; wa pwopwiété [`backgwound`](/fw/docs/web/css/backgwound) e-est une pwopwiété waccouwcie qui pewmet de définiw wes vaweuws de [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow), 🥺 [`backgwound-image`](/fw/docs/web/css/backgwound-image), ^^ [`backgwound-wepeat`](/fw/docs/web/css/backgwound-wepeat), ^•ﻌ•^ e-et [`backgwound-position`](/fw/docs/web/css/backgwound-position). /(^•ω•^) de wa même f-façon, ^^ wa pwupawt d-des pwopwiétés c-communes wewatives a-aux powices peuvent êtwe définies gwâce à w-wa pwopwiété waccouwcie [`font`](/fw/docs/web/css/font), 🥺 et cewwes powtant s-suw wes mawges autouw d'une boîte peuvent êtwe pawamétwées gwâce à wa pwopwiété waccouwcie [`mawgin`](/fw/docs/web/css/mawgin). (U ᵕ U❁)
 
-## Quelques cas aux limites délicats
+## q-quewques cas aux wimites déwicats
 
-Il existe quelques cas aux limites qu'il convient de garder à l'esprit lorsqu'on utilise les propriétés raccourcies.
+i-iw existe quewques c-cas aux wimites q-qu'iw convient de gawdew à w'espwit wowsqu'on utiwise wes p-pwopwiétés waccouwcies. 😳😳😳
 
-### L'omission de propriétés
+### w-w'omission de pwopwiétés
 
-Lorsqu'une valeur n'est pas fournie dans la propriété raccourcie, la propriété correspondante utilise alors sa valeur initiale. Cela signifie que la déclaration de la propriété raccourcie **l'emportera** sur les valeurs des éventuelles déclarations précédentes. Prenons par exemple&nbsp;:
+wowsqu'une v-vaweuw n'est p-pas fouwnie dans wa pwopwiété w-waccouwcie, nyaa~~ wa pwopwiété c-cowwespondante utiwise awows sa vaweuw initiawe. (˘ω˘) c-cewa signifie que wa décwawation d-de wa pwopwiété waccouwcie **w'empowtewa** s-suw wes vaweuws d-des éventuewwes décwawations pwécédentes. >_< pwenons paw exempwe&nbsp;:
 
 ```css
 p {
-  background-color: red;
-  background: url(images/bg.gif) no-repeat left top;
+  backgwound-cowow: wed;
+  backgwound: uww(images/bg.gif) no-wepeat w-weft top;
 }
 ```
 
-La couleur de l'arrière-plan ne sera pas rouge (`red`), ce sera la valeur par défaut de [`background-color`](/fr/docs/Web/CSS/background-color) qui sera utilisée&nbsp;: `transparent`.
+w-wa couweuw de w'awwièwe-pwan n-nye sewa p-pas wouge (`wed`), XD c-ce sewa wa vaweuw paw défaut de [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) qui s-sewa utiwisée&nbsp;: `twanspawent`. rawr x3
 
-Seules les propriétés détaillées permettent l'héritage. Comme les valeurs manquantes dans une déclaration raccourcie sont remplacées par les valeurs initiales correspondantes, il est impossible de permettre l'héritage des propriétés détaillées en les omettant. Le mot-clé `inherit` peut être appliqué à une propriété, mais uniquement dans son ensemble et non comme un mot-clé pour une valeur parmi d'autres. Cela signifie que la seule façon pour qu'une valeur donnée soit héritée consiste à utiliser la propriété détaillée avec le mot-clé `inherit`.
+seuwes wes pwopwiétés détaiwwées pewmettent w'héwitage. ( ͡o ω ͡o ) c-comme wes vaweuws manquantes d-dans une décwawation w-waccouwcie s-sont wempwacées paw wes vaweuws i-initiawes cowwespondantes, :3 i-iw e-est impossibwe d-de pewmettwe w'héwitage des pwopwiétés détaiwwées e-en wes omettant. mya w-we mot-cwé `inhewit` p-peut êtwe a-appwiqué à u-une pwopwiété, σωσ mais uniquement dans son ensembwe et nyon c-comme un mot-cwé pouw une vaweuw pawmi d'autwes. (ꈍᴗꈍ) cewa signifie que wa seuwe façon pouw qu'une v-vaweuw donnée soit héwitée consiste à utiwisew wa pwopwiété d-détaiwwée avec w-we mot-cwé `inhewit`. OwO
 
-### L'ordre des propriétés
+### w-w'owdwe des pwopwiétés
 
-Les propriétés raccourcies essaient de ne pas imposer un ordre spécifique pour les valeurs des propriétés qu'elles synthétisent. Cela fonctionne bien lorsque les propriétés détaillées sont de différents types, l'ordre n'ayant alors pas d'importance. En revanche, cela ne peut pas fonctionner si plusieurs des propriétés détaillées permettent d'utiliser des mêmes valeurs.
+wes pwopwiétés w-waccouwcies essaient d-de nye pas imposew u-un owdwe spécifique pouw wes vaweuws des pwopwiétés qu'ewwes synthétisent. cewa fonctionne b-bien wowsque wes pwopwiétés d-détaiwwées sont de difféwents t-types, o.O w'owdwe n-ny'ayant awows pas d'impowtance. 😳😳😳 en wevanche, /(^•ω•^) cewa n-ne peut pas fonctionnew s-si pwusieuws des pwopwiétés d-détaiwwées p-pewmettent d'utiwisew des mêmes vaweuws. OwO
 
-Il y a deux thèmes pour lesquels l'ordre est important&nbsp;:
+iw y a deux thèmes pouw wesquews w-w'owdwe est impowtant&nbsp;:
 
-- Les propriétés relatives aux bords d'une boîte, comme [`border-style`](/fr/docs/Web/CSS/border-style), [`margin`](/fr/docs/Web/CSS/margin) ou [`padding`](/fr/docs/Web/CSS/padding).
-- Les propriétés relatives aux coins d'une boîte, comme [`border-radius`](/fr/docs/Web/CSS/border-radius)
+- w-wes pwopwiétés w-wewatives aux bowds d'une boîte, ^^ c-comme [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe), (///ˬ///✿) [`mawgin`](/fw/docs/web/css/mawgin) o-ou [`padding`](/fw/docs/web/css/padding). (///ˬ///✿)
+- wes p-pwopwiétés wewatives aux coins d'une boîte, (///ˬ///✿) comme [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius)
 
-#### Propriétés pour les bords d'une boîte
+#### pwopwiétés p-pouw w-wes bowds d'une boîte
 
-Les propriétés raccourcies qui portent sur les bords d'une boîte, comme [`border-style`](/fr/docs/Web/CSS/border-style), [`margin`](/fr/docs/Web/CSS/margin) ou [`padding`](/fr/docs/Web/CSS/padding), utilisent toutes une syntaxe cohérente ayant 1 à 4 valeurs&nbsp;:
+wes pwopwiétés waccouwcies q-qui powtent s-suw wes bowds d'une boîte, ʘwʘ comme [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe), ^•ﻌ•^ [`mawgin`](/fw/docs/web/css/mawgin) ou [`padding`](/fw/docs/web/css/padding), OwO utiwisent toutes u-une syntaxe cohéwente ayant 1 à 4 vaweuws&nbsp;:
 
-- Syntaxe avec une valeur
+- syntaxe avec une vaweuw
 
-  - : `border-width: 1em` — la valeur représente tous les bords&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant une valeur.](border1.png)
+  - : `bowdew-width: 1em` — w-wa vaweuw wepwésente tous wes bowds&nbsp;: ![wes bowds de wa boîte a-avec une syntaxe u-utiwisant une vaweuw.](bowdew1.png)
 
-- Syntaxe avec deux valeurs
+- syntaxe avec deux vaweuws
 
-  - : `border-width: 1em 2em` — la première valeur représente les bords sur l'axe vertical, c'est-à-dire les bords haut et bas&nbsp;; la seconde représente les bords sur l'axe horizontal, c'est-à-dire les bords gauche et droit&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant deux valeurs.](border2.png)
+  - : `bowdew-width: 1em 2em` — w-wa pwemièwe v-vaweuw wepwésente wes bowds suw w'axe vewticaw, (U ﹏ U) c'est-à-diwe w-wes bowds haut et bas&nbsp;; w-wa seconde wepwésente wes bowds suw w'axe howizontaw, (ˆ ﻌ ˆ)♡ c'est-à-diwe w-wes bowds gauche et dwoit&nbsp;: ![wes bowds d-de wa boîte a-avec une syntaxe utiwisant deux v-vaweuws.](bowdew2.png)
 
-- Syntaxe avec trois valeurs
+- syntaxe a-avec twois vaweuws
 
-  - : `border-width: 1em 2em 3em` — la première valeur représente le bord haut, la deuxième représente les bords de l'axe horizontal&nbsp;: gauche et droit, et la troisième représente le bord bas&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant trois valeurs.](border3.png)
+  - : `bowdew-width: 1em 2em 3em` — w-wa p-pwemièwe vaweuw wepwésente we b-bowd haut, (⑅˘꒳˘) wa deuxième w-wepwésente wes bowds de w'axe howizontaw&nbsp;: g-gauche e-et dwoit, (U ﹏ U) et wa t-twoisième wepwésente we bowd bas&nbsp;: ![wes b-bowds de wa boîte avec une syntaxe u-utiwisant twois v-vaweuws.](bowdew3.png)
 
-- Syntaxe avec quatre valeurs
-  - : `border-width: 1em 2em 3em 4em` — les quatre valeurs représentent respectivement les bords haut, droit, bas et gauche (et toujours dans cet ordre), soit un sens horaire à partir du haut&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant quatre valeurs.](border4.png) Un moyen mnémotechnique pour mémoriser l'ordre consiste à visualiser le mouvement des aiguilles sur une horloge&nbsp;: la première valeur (ici `1em`) commence à midi, puis la deuxième (ici `2em`) à 15h, puis la troisième (ici `3em`) à 18h, et la dernière (`4em` dans notre exemple) à 21h.
+- syntaxe avec quatwe vaweuws
+  - : `bowdew-width: 1em 2em 3em 4em` — wes quatwe v-vaweuws wepwésentent w-wespectivement w-wes bowds haut, o.O d-dwoit, mya bas et gauche (et toujouws d-dans cet owdwe), XD soit un sens howaiwe à pawtiw du haut&nbsp;: ![wes bowds de wa boîte avec u-une syntaxe utiwisant quatwe v-vaweuws.](bowdew4.png) un moyen m-mnémotechnique pouw mémowisew w-w'owdwe consiste à visuawisew w-we mouvement des a-aiguiwwes suw une h-howwoge&nbsp;: w-wa pwemièwe vaweuw (ici `1em`) c-commence à midi, puis wa deuxième (ici `2em`) à 15h, òωó puis wa twoisième (ici `3em`) à 18h, (˘ω˘) et wa dewnièwe (`4em` dans nyotwe exempwe) à 21h. :3
 
-#### Propriétés pour les coins d'une boîte
+#### p-pwopwiétés p-pouw wes c-coins d'une boîte
 
-De la même manière, les propriétés raccourcies qui portent sur les coins d'une boîte (par exemple [`border-radius`](/fr/docs/Web/CSS/border-radius)) utilisent toutes une syntaxe cohérente ayant 1 à 4 valeurs&nbsp;:
+de wa même m-manièwe, OwO wes pwopwiétés waccouwcies qui powtent suw wes coins d-d'une boîte (paw e-exempwe [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius)) utiwisent toutes u-une syntaxe cohéwente ayant 1 à 4 vaweuws&nbsp;:
 
-- Syntaxe avec une valeur
+- s-syntaxe avec u-une vaweuw
 
-  - : `border-radius: 1em` — la valeur unique représente tous les coins&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant une valeur.](corner1.png)
+  - : `bowdew-wadius: 1em` — wa v-vaweuw unique wepwésente t-tous wes coins&nbsp;: ![wes coins de wa boîte avec une syntaxe utiwisant u-une vaweuw.](cownew1.png)
 
-- Syntaxe avec deux valeurs
+- s-syntaxe avec deux v-vaweuws
 
-  - : `border-radius: 1em 2em` — la première valeur porte sur les coins supérieur gauche et inférieur droit, la seconde porte sur les coins supérieur droit et inférieur gauche&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant deux valeurs.](corner2.png)
+  - : `bowdew-wadius: 1em 2em` — w-wa pwemièwe vaweuw p-powte suw wes coins supéwieuw g-gauche et inféwieuw d-dwoit, mya wa seconde powte s-suw wes coins supéwieuw d-dwoit et inféwieuw gauche&nbsp;: ![wes c-coins de wa boîte avec une syntaxe utiwisant deux v-vaweuws.](cownew2.png)
 
-- Syntaxe avec trois valeurs
+- syntaxe a-avec twois v-vaweuws
 
-  - : `border-radius: 1em 2em 3em` — la première valeur représente le coin supérieur gauche, la deuxième les coins supérieur droit et inférieur gauche, la troisième le coin inférieur droit&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant trois valeurs.](corner3.png)
+  - : `bowdew-wadius: 1em 2em 3em` — wa pwemièwe vaweuw w-wepwésente we coin supéwieuw gauche, (˘ω˘) wa deuxième w-wes coins s-supéwieuw dwoit e-et inféwieuw gauche, o.O wa twoisième we coin inféwieuw dwoit&nbsp;: ![wes c-coins de wa boîte avec une syntaxe u-utiwisant twois v-vaweuws.](cownew3.png)
 
-- Syntaxe avec quatre valeurs
-  - : `border-radius: 1em 2em 3em 4em` — les quatre valeurs représentent respectivement les coins supérieur gauche, supérieur droit, inférieur droit et inférieur gauche (et toujours dans cet ordre), soit un sens horaire à partir du coin supérieur gauche&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant quatre valeurs.](corner4.png)
+- syntaxe a-avec quatwe vaweuws
+  - : `bowdew-wadius: 1em 2em 3em 4em` — w-wes quatwe vaweuws w-wepwésentent wespectivement wes coins supéwieuw g-gauche, (✿oωo) supéwieuw dwoit, (ˆ ﻌ ˆ)♡ inféwieuw dwoit e-et inféwieuw g-gauche (et toujouws dans cet owdwe), ^^;; s-soit un sens howaiwe à pawtiw d-du coin supéwieuw g-gauche&nbsp;: ![wes c-coins de wa boîte avec une syntaxe utiwisant quatwe vaweuws.](cownew4.png)
 
-## Propriétés pour l'arrière-plan
+## pwopwiétés pouw w'awwièwe-pwan
 
-Prenons un arrière-plan déclaré comme tel&nbsp;:
+pwenons un awwièwe-pwan décwawé comme tew&nbsp;:
 
 ```css
-background-color: #000;
-background-image: url(images/bg.gif);
-background-repeat: no-repeat;
-background-position: left top;
+backgwound-cowow: #000;
+backgwound-image: uww(images/bg.gif);
+b-backgwound-wepeat: n-nyo-wepeat;
+backgwound-position: weft t-top;
 ```
 
-On pourra synthétiser ces quatre déclarations en une&nbsp;:
+on pouwwa s-synthétisew c-ces quatwe décwawations en une&nbsp;:
 
 ```css
-background: #000 url(images/bg.gif) no-repeat left top;
+b-backgwound: #000 uww(images/bg.gif) n-nyo-wepeat w-weft top;
 ```
 
-Voir [`background`](/fr/docs/Web/CSS/background) pour plus d'informations.
+voiw [`backgwound`](/fw/docs/web/css/backgwound) p-pouw pwus d'infowmations. OwO
 
-> [!NOTE]
-> La forme raccourcie correspond plus précisément aux propriétés détaillées indiquées ici avec également, `background-attachment: scroll` et d'autres propriétés supplémentaires.
+> [!note]
+> wa fowme w-waccouwcie cowwespond p-pwus pwécisément aux pwopwiétés détaiwwées i-indiquées i-ici avec égawement, `backgwound-attachment: s-scwoww` et d'autwes p-pwopwiétés s-suppwémentaiwes. 🥺
 
-## Propriétés typographiques
+## p-pwopwiétés t-typogwaphiques
 
-Prenons les déclarations suivantes&nbsp;:
+p-pwenons wes d-décwawations suivantes&nbsp;:
 
 ```css
-font-style: italic;
-font-weight: bold;
+font-stywe: i-itawic;
+font-weight: b-bowd;
 font-size: 0.8em;
-line-height: 1.2;
-font-family: Arial, sans-serif;
+w-wine-height: 1.2;
+font-famiwy: awiaw, mya s-sans-sewif;
 ```
 
-On pourra les raccourcir ainsi&nbsp;:
+on pouwwa wes waccouwciw a-ainsi&nbsp;:
 
 ```css
 font:
-  italic bold 0.8em/1.2 Arial,
-  sans-serif;
+  itawic b-bowd 0.8em/1.2 a-awiaw, 😳
+  sans-sewif;
 ```
 
-Voir [`font`](/fr/docs/Web/CSS/font) pour plus d'informations sur cette propriété.
+v-voiw [`font`](/fw/docs/web/css/font) pouw pwus d'infowmations s-suw cette pwopwiété. òωó
 
-> [!NOTE]
-> Cette déclaration raccourcie avec [`font`](/fr/docs/Web/CSS/font) est en réalité équivalente aux déclarations détaillées présentes ici, avec en plus `font-variant: normal`, `font-size-adjust: none`, et `font-stretch: normal`.
+> [!note]
+> cette d-décwawation waccouwcie avec [`font`](/fw/docs/web/css/font) e-est en wéawité équivawente aux décwawations d-détaiwwées pwésentes ici, /(^•ω•^) avec en pwus `font-vawiant: nyowmaw`, -.- `font-size-adjust: nyone`, òωó e-et `font-stwetch: nyowmaw`. /(^•ω•^)
 
-## Propriétés pour les bordures
+## p-pwopwiétés pouw w-wes bowduwes
 
-Les épaisseurs, couleurs et styles d'une bordure peuvent être exprimés avec une seule déclaration. Si on part du fragment de CSS suivant&nbsp;:
+wes épaisseuws, /(^•ω•^) couweuws et stywes d'une bowduwe p-peuvent êtwe expwimés avec une s-seuwe décwawation. 😳 s-si on pawt d-du fwagment de css suivant&nbsp;:
 
 ```css
-border-width: 1px;
-border-style: solid;
-border-color: #000;
+bowdew-width: 1px;
+bowdew-stywe: s-sowid;
+b-bowdew-cowow: #000;
 ```
 
-On pourra le simplifier de la façon suivante&nbsp;:
+on p-pouwwa we simpwifiew de wa façon suivante&nbsp;:
 
 ```css
-border: 1px solid #000;
+b-bowdew: 1px sowid #000;
 ```
 
-Voir [`border`](/fr/docs/Web/CSS/border) pour plus d'informations sur cette propriété.
+v-voiw [`bowdew`](/fw/docs/web/css/bowdew) p-pouw pwus d'infowmations s-suw cette pwopwiété. :3
 
-## Propriétés pour les marges et le remplissage (<i lang="en">padding</i>)
+## p-pwopwiétés p-pouw wes mawges e-et we wempwissage (<i w-wang="en">padding</i>)
 
-Les propriétés raccourcies pour les marges et le remplissage fonctionnent de la même façon. La propriété [`margin`](/fr/docs/Web/CSS/margin) permet une syntaxe avec une, deux, trois ou quatre valeurs. Prenons les déclarations de ce fragment&nbsp;:
+wes pwopwiétés w-waccouwcies pouw w-wes mawges et we w-wempwissage fonctionnent d-de wa m-même façon. (U ᵕ U❁) wa p-pwopwiété [`mawgin`](/fw/docs/web/css/mawgin) p-pewmet une syntaxe a-avec une, ʘwʘ deux, twois ou quatwe v-vaweuws. o.O pwenons wes décwawations d-de ce fwagment&nbsp;:
 
 ```css
-margin-top: 10px;
-margin-right: 5px;
-margin-bottom: 10px;
-margin-left: 5px;
+mawgin-top: 10px;
+m-mawgin-wight: 5px;
+m-mawgin-bottom: 10px;
+m-mawgin-weft: 5px;
 ```
 
-On pourra les condenser en une seule déclaration équivalente (on notera l'ordre dans le sens horaire&nbsp;: haut, droit, bas, gauche)&nbsp;:
+on pouwwa wes condensew en une seuwe décwawation équivawente (on n-nyotewa w-w'owdwe dans we s-sens howaiwe&nbsp;: haut, ʘwʘ dwoit, ^^ bas, gauche)&nbsp;:
 
 ```css
-margin: 10px 5px 10px 5px;
+mawgin: 10px 5px 10px 5px;
 ```
 
-## Propriétés de position
+## pwopwiétés de p-position
 
-Pour positionner un élément, plutôt que d'utiliser les propriétés détaillées `top`, `right`, `bottom` et `left` comme ceci&nbsp;:
+pouw p-positionnew un éwément, ^•ﻌ•^ pwutôt q-que d'utiwisew w-wes pwopwiétés détaiwwées `top`, mya `wight`, `bottom` et `weft` comme ceci&nbsp;:
 
 ```css
-top: 0;
-right: 20px;
-bottom: 0;
-left: 20px;
+t-top: 0;
+w-wight: 20px;
+b-bottom: 0;
+weft: 20px;
 ```
 
-On pourra utiliser la propriété [`inset`](/fr/docs/Web/CSS/inset) qui les synthétise&nbsp;:
+o-on pouwwa utiwisew wa pwopwiété [`inset`](/fw/docs/web/css/inset) q-qui wes synthétise&nbsp;:
 
 ```css
-inset: 0 20px 0 20px;
+i-inset: 0 20px 0 20px;
 ```
 
-À l'instar des marges et du remplissage, les valeurs suivent l'ordre horaire (haut, droit, bas, puis gauche).
+À w'instaw des mawges et du wempwissage, w-wes vaweuws suivent w'owdwe howaiwe (haut, UwU d-dwoit, >_< bas, puis gauche). /(^•ω•^)
 
-## La propriété raccourcie universelle
+## w-wa pwopwiété w-waccouwcie univewsewwe
 
-CSS fournit une propriété raccourcie universelle, [`all`](/fr/docs/Web/CSS/all), qui applique sa valeur à toutes les propriétés du document. Elle permet ainsi de changer le modèle d'héritage des propriétés.
+css fouwnit u-une pwopwiété w-waccouwcie univewsewwe, [`aww`](/fw/docs/web/css/aww), òωó q-qui appwique sa vaweuw à t-toutes wes p-pwopwiétés du d-document. σωσ ewwe p-pewmet ainsi de changew we modèwe d-d'héwitage d-des pwopwiétés. ( ͡o ω ͡o )
 
-Voir les articles [La cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) ou [Introduction à la cascade CSS](/fr/docs/Web/CSS/Cascade) pour plus d'informations sur le fonctionnement de l'héritage en CSS.
+v-voiw wes awticwes [wa cascade e-et w'héwitage](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance) ou [intwoduction à wa cascade css](/fw/docs/web/css/cascade) p-pouw p-pwus d'infowmations s-suw we fonctionnement de w'héwitage en css. nyaa~~
 
-## Voir aussi
+## voiw aussi
 
-- Les concepts fondamentaux de CSS&nbsp;:
-  - [La syntaxe CSS](/fr/docs/Web/CSS/Syntax)
-  - [Les règles @](/fr/docs/Web/CSS/At-rule)
-  - [Les commentaires](/fr/docs/Web/CSS/Comments)
-  - [La spécificité](/fr/docs/Web/CSS/Specificity)
-  - [L'héritage](/fr/docs/Web/CSS/Inheritance)
-  - [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Les modes de disposition](/fr/docs/Web/CSS/Layout_mode)
-  - [Les modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-  - [La fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Les différentes valeurs
-    - [Les valeurs initiales](/fr/docs/Web/CSS/initial_value)
-    - [Les valeurs calculées](/fr/docs/Web/CSS/computed_value)
-    - [Les valeurs utilisées](/fr/docs/Web/CSS/used_value)
-    - [Les valeurs réelles](/fr/docs/Web/CSS/actual_value)
-  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-  - [Les éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
-- Les propriétés raccourcies&nbsp;:
-  - [`all`](/fr/docs/Web/CSS/all)
-  - [`animation`](/fr/docs/Web/CSS/animation)
-  - [`background`](/fr/docs/Web/CSS/background)
-  - [`border`](/fr/docs/Web/CSS/border)
-  - [`border-block-end`](/fr/docs/Web/CSS/border-block-end)
-  - [`border-block-start`](/fr/docs/Web/CSS/border-block-start)
-  - [`border-bottom`](/fr/docs/Web/CSS/border-bottom)
-  - [`border-color`](/fr/docs/Web/CSS/border-color)
-  - [`border-image`](/fr/docs/Web/CSS/border-image)
-  - [`border-inline-end`](/fr/docs/Web/CSS/border-inline-end)
-  - [`border-inline-start`](/fr/docs/Web/CSS/border-inline-start)
-  - [`border-left`](/fr/docs/Web/CSS/border-left)
-  - [`border-radius`](/fr/docs/Web/CSS/border-radius)
-  - [`border-right`](/fr/docs/Web/CSS/border-right)
-  - [`border-style`](/fr/docs/Web/CSS/border-style)
-  - [`border-top`](/fr/docs/Web/CSS/border-top)
-  - [`border-width`](/fr/docs/Web/CSS/border-width)
-  - [`column-rule`](/fr/docs/Web/CSS/column-rule)
-  - [`columns`](/fr/docs/Web/CSS/columns)
-  - [`contain-intrinsic-size`](/fr/docs/Web/CSS/contain-intrinsic-size)
-  - [`flex`](/fr/docs/Web/CSS/flex)
-  - [`flex-flow`](/fr/docs/Web/CSS/flex-flow)
-  - [`font`](/fr/docs/Web/CSS/font)
-  - [`gap`](/fr/docs/Web/CSS/gap)
-  - [`grid`](/fr/docs/Web/CSS/grid)
-  - [`grid-area`](/fr/docs/Web/CSS/grid-area)
-  - [`grid-column`](/fr/docs/Web/CSS/grid-column)
-  - [`grid-row`](/fr/docs/Web/CSS/grid-row)
-  - [`grid-template`](/fr/docs/Web/CSS/grid-template)
-  - [`inset`](/fr/docs/Web/CSS/inset)
-  - [`list-style`](/fr/docs/Web/CSS/list-style)
-  - [`margin`](/fr/docs/Web/CSS/margin)
-  - [`mask`](/fr/docs/Web/CSS/mask)
-  - [`offset`](/fr/docs/Web/CSS/offset)
-  - [`outline`](/fr/docs/Web/CSS/outline)
-  - [`overflow`](/fr/docs/Web/CSS/overflow)
-  - [`padding`](/fr/docs/Web/CSS/padding)
-  - [`place-content`](/fr/docs/Web/CSS/place-content)
-  - [`place-items`](/fr/docs/Web/CSS/place-items)
-  - [`place-self`](/fr/docs/Web/CSS/place-self)
-  - [`scroll-margin`](/fr/docs/Web/CSS/scroll-margin)
-  - [`scroll-padding`](/fr/docs/Web/CSS/scroll-padding)
-  - [`scroll-timeline`](/fr/docs/Web/CSS/scroll-timeline)
-  - [`text-decoration`](/fr/docs/Web/CSS/text-decoration)
-  - [`text-emphasis`](/fr/docs/Web/CSS/text-emphasis)
-  - [`transition`](/fr/docs/Web/CSS/transition)
+- wes concepts f-fondamentaux de css&nbsp;:
+  - [wa s-syntaxe css](/fw/docs/web/css/syntax)
+  - [wes w-wègwes @](/fw/docs/web/css/at-wuwe)
+  - [wes commentaiwes](/fw/docs/web/css/comments)
+  - [wa spécificité](/fw/docs/web/css/specificity)
+  - [w'héwitage](/fw/docs/web/css/inhewitance)
+  - [we m-modèwe de boîtes](/fw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [wes m-modes de disposition](/fw/docs/web/css/wayout_mode)
+  - [wes m-modèwes de fowmatage v-visuew](/fw/docs/web/css/visuaw_fowmatting_modew)
+  - [wa f-fusion des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+  - w-wes difféwentes vaweuws
+    - [wes vaweuws initiawes](/fw/docs/web/css/initiaw_vawue)
+    - [wes vaweuws cawcuwées](/fw/docs/web/css/computed_vawue)
+    - [wes v-vaweuws utiwisées](/fw/docs/web/css/used_vawue)
+    - [wes vaweuws wéewwes](/fw/docs/web/css/actuaw_vawue)
+  - [wa s-syntaxe de définition des vaweuws](/fw/docs/web/css/vawue_definition_syntax)
+  - [wes éwéments wempwacés](/fw/docs/web/css/wepwaced_ewement)
+- wes p-pwopwiétés waccouwcies&nbsp;:
+  - [`aww`](/fw/docs/web/css/aww)
+  - [`animation`](/fw/docs/web/css/animation)
+  - [`backgwound`](/fw/docs/web/css/backgwound)
+  - [`bowdew`](/fw/docs/web/css/bowdew)
+  - [`bowdew-bwock-end`](/fw/docs/web/css/bowdew-bwock-end)
+  - [`bowdew-bwock-stawt`](/fw/docs/web/css/bowdew-bwock-stawt)
+  - [`bowdew-bottom`](/fw/docs/web/css/bowdew-bottom)
+  - [`bowdew-cowow`](/fw/docs/web/css/bowdew-cowow)
+  - [`bowdew-image`](/fw/docs/web/css/bowdew-image)
+  - [`bowdew-inwine-end`](/fw/docs/web/css/bowdew-inwine-end)
+  - [`bowdew-inwine-stawt`](/fw/docs/web/css/bowdew-inwine-stawt)
+  - [`bowdew-weft`](/fw/docs/web/css/bowdew-weft)
+  - [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius)
+  - [`bowdew-wight`](/fw/docs/web/css/bowdew-wight)
+  - [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe)
+  - [`bowdew-top`](/fw/docs/web/css/bowdew-top)
+  - [`bowdew-width`](/fw/docs/web/css/bowdew-width)
+  - [`cowumn-wuwe`](/fw/docs/web/css/cowumn-wuwe)
+  - [`cowumns`](/fw/docs/web/css/cowumns)
+  - [`contain-intwinsic-size`](/fw/docs/web/css/contain-intwinsic-size)
+  - [`fwex`](/fw/docs/web/css/fwex)
+  - [`fwex-fwow`](/fw/docs/web/css/fwex-fwow)
+  - [`font`](/fw/docs/web/css/font)
+  - [`gap`](/fw/docs/web/css/gap)
+  - [`gwid`](/fw/docs/web/css/gwid)
+  - [`gwid-awea`](/fw/docs/web/css/gwid-awea)
+  - [`gwid-cowumn`](/fw/docs/web/css/gwid-cowumn)
+  - [`gwid-wow`](/fw/docs/web/css/gwid-wow)
+  - [`gwid-tempwate`](/fw/docs/web/css/gwid-tempwate)
+  - [`inset`](/fw/docs/web/css/inset)
+  - [`wist-stywe`](/fw/docs/web/css/wist-stywe)
+  - [`mawgin`](/fw/docs/web/css/mawgin)
+  - [`mask`](/fw/docs/web/css/mask)
+  - [`offset`](/fw/docs/web/css/offset)
+  - [`outwine`](/fw/docs/web/css/outwine)
+  - [`ovewfwow`](/fw/docs/web/css/ovewfwow)
+  - [`padding`](/fw/docs/web/css/padding)
+  - [`pwace-content`](/fw/docs/web/css/pwace-content)
+  - [`pwace-items`](/fw/docs/web/css/pwace-items)
+  - [`pwace-sewf`](/fw/docs/web/css/pwace-sewf)
+  - [`scwoww-mawgin`](/fw/docs/web/css/scwoww-mawgin)
+  - [`scwoww-padding`](/fw/docs/web/css/scwoww-padding)
+  - [`scwoww-timewine`](/fw/docs/web/css/scwoww-timewine)
+  - [`text-decowation`](/fw/docs/web/css/text-decowation)
+  - [`text-emphasis`](/fw/docs/web/css/text-emphasis)
+  - [`twansition`](/fw/docs/web/css/twansition)

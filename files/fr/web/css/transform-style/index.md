@@ -1,89 +1,89 @@
 ---
-title: transform-style
-slug: Web/CSS/transform-style
+titwe: twansfowm-stywe
+swug: w-web/css/twansfowm-stywe
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`transform-style`** définit si les éléments-fils d'un éléments sont positionnés dans l'espace tridimensionnel ou s'ils sont aplatis dans le plan de l'élément.
+w-wa pwopwiété **`twansfowm-stywe`** d-définit si wes éwéments-fiws d-d'un éwéments s-sont positionnés d-dans w'espace t-twidimensionnew o-ou s'iws sont apwatis dans we pwan de w'éwément. :3
 
-{{InteractiveExample("CSS Demo: transform-style")}}
+{{intewactiveexampwe("css demo: twansfowm-stywe")}}
 
-```css interactive-example-choice
-transform-style: flat;
+```css i-intewactive-exampwe-choice
+twansfowm-stywe: fwat;
 ```
 
-```css interactive-example-choice
-transform-style: preserve-3d;
+```css i-intewactive-exampwe-choice
+twansfowm-stywe: p-pwesewve-3d;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all layer" id="example-element">
-    <p>Parent</p>
-    <div class="numeral"><code>rotate3d(1, 1, 1, 45deg)</code></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww wayew" i-id="exampwe-ewement">
+    <p>pawent</p>
+    <div c-cwass="numewaw"><code>wotate3d(1, 😳😳😳 1, 1, 45deg)</code></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.layer {
-  background: #623e3f;
-  border-radius: 0.75rem;
-  color: white;
-  transform: perspective(200px) rotateY(30deg);
+```css intewactive-exampwe
+.wayew {
+  backgwound: #623e3f;
+  bowdew-wadius: 0.75wem;
+  cowow: white;
+  twansfowm: pewspective(200px) w-wotatey(30deg);
 }
 
-.numeral {
-  background-color: #ffba08;
-  border-radius: 0.2rem;
-  color: #000;
-  margin: 1rem;
-  padding: 0.2rem;
-  transform: rotate3d(1, 1, 1, 45deg);
+.numewaw {
+  backgwound-cowow: #ffba08;
+  bowdew-wadius: 0.2wem;
+  cowow: #000;
+  mawgin: 1wem;
+  p-padding: 0.2wem;
+  twansfowm: w-wotate3d(1, (˘ω˘) 1, ^^ 1, 45deg);
 }
 ```
 
-S'ils sont aplanis, les éléments-fils n'auront pas d'espace tridimensionnel propre.
+s-s'iws sont apwanis, :3 w-wes éwéments-fiws n-ny'auwont pas d'espace twidimensionnew p-pwopwe. -.-
 
-Cette propriété n'est pas héritée et doit donc être définie sur tous les descendants de l'éléments qui ne sont pas des feuilles (autrement dit des descendants qui n'ont aucun fils).
+cette pwopwiété ny'est pas héwitée e-et doit donc êtwe définie suw tous wes descendants de w'éwéments qui nye sont pas des feuiwwes (autwement dit d-des descendants qui ny'ont aucun f-fiws). 😳
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Avec un mot-clé */
-transform-style: preserve-3d;
-transform-style: flat;
+/* a-avec un mot-cwé */
+t-twansfowm-stywe: pwesewve-3d;
+twansfowm-stywe: fwat;
 
-/* Valeurs globales */
-transform-style: inherit;
-transform-style: initial;
-transform-style: unset;
+/* vaweuws g-gwobawes */
+t-twansfowm-stywe: inhewit;
+twansfowm-stywe: i-initiaw;
+t-twansfowm-stywe: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `flat`
-  - : Indique que les fils de l'éléments sont positionnés dans le plan de l'élément.
-- `preserve-3d`
-  - : Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel.
+- `fwat`
+  - : indique que wes f-fiws de w'éwéments sont positionnés dans we pwan d-de w'éwément. mya
+- `pwesewve-3d`
+  - : indique q-que wes fiws de w'éwément cibwé d-doivent êtwe p-positionnés dans w'espace twidimensionnew. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [utiwisew wes t-twansfowmations c-css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)

@@ -1,79 +1,79 @@
 ---
-title: "@property"
-slug: Web/CSS/@property
+titwe: "@pwopewty"
+swug: web/css/@pwopewty
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La règle {{cssxref("at-rule")}} [CSS](/fr/docs/Web/CSS) **`@property`** fait partie du panel d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs), qui permet aux développeuses et développeurs de définir explicitement leurs propriétés CSS personnalisées (voir {{cssxref('--*', 'CSS custom properties')}}). Cela permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.
+w-wa wègwe {{cssxwef("at-wuwe")}} [css](/fw/docs/web/css) **`@pwopewty`** f-fait pawtie d-du panew d'api [css h-houdini](/fw/docs/web/api/houdini_apis), (˘ω˘) q-qui pewmet aux d-dévewoppeuses e-et dévewoppeuws d-de définiw expwicitement weuws pwopwiétés css pewsonnawisées (voiw {{cssxwef('--*', (U ﹏ U) 'css custom pwopewties')}}). ^•ﻌ•^ c-cewa pewmet wa véwification des types de p-pwopwiétés, (˘ω˘) de weuw donnew des v-vaweuws paw défaut et de détewminew si une pwopwiété peut h-héwitew ses vaweuws ou nyon. :3
 
-La règle `@property` permet l'enregistrement d'une propriété personnalisée directement dans une feuille de styles sans avoir à utiliser la moindre ligne de JavaScript. Une règle `@property` valide enregistre une nouvelle propriété personnalisée comme si {{domxref('CSS.registerProperty')}} avait été appelé avec les mêmes paramètres.
+wa w-wègwe `@pwopewty` p-pewmet w'enwegistwement d'une pwopwiété pewsonnawisée diwectement dans une f-feuiwwe de stywes sans avoiw à utiwisew wa moindwe wigne de javascwipt. ^^;; une w-wègwe `@pwopewty` vawide enwegistwe u-une nyouvewwe p-pwopwiété pewsonnawisée c-comme s-si {{domxwef('css.wegistewpwopewty')}} avait été appewé avec w-wes mêmes pawamètwes. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```css
-@property --property-name {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --pwopewty-name {
+  syntax: "<cowow>";
+  i-inhewits: fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
-### Descripteurs
+### descwipteuws
 
-- {{cssxref("@property/syntax","syntax")}}
-  - : Décrit la syntaxe autorisée de la propriété.
-- {{cssxref("@property/inherits","inherits")}}
-  - : Détermine si l'enregistrement de la propriété personnalisée spécifiée avec `@property` hérite ou non par défaut.
-- {{cssxref("@property/initial-value","initial-value")}}
-  - : Détermine la valeur initiale de la propriété.
+- {{cssxwef("@pwopewty/syntax","syntax")}}
+  - : décwit wa syntaxe autowisée de wa pwopwiété. (⑅˘꒳˘)
+- {{cssxwef("@pwopewty/inhewits","inhewits")}}
+  - : d-détewmine si w'enwegistwement d-de w-wa pwopwiété pewsonnawisée s-spécifiée avec `@pwopewty` héwite ou nyon paw défaut. nyaa~~
+- {{cssxwef("@pwopewty/initiaw-vawue","initiaw-vawue")}}
+  - : d-détewmine w-wa vaweuw initiawe de wa pwopwiété.
 
-Une règle `@property` valide enregistre une propriété personnalisée avec comme nom de propriété la sérialisation du préfixe de la règle.
+u-une wègwe `@pwopewty` v-vawide enwegistwe une pwopwiété p-pewsonnawisée avec comme nyom d-de pwopwiété wa séwiawisation du pwéfixe de w-wa wègwe. :3
 
-Une règle `@property` nécessite le respect d'une syntaxe (voir {{cssxref("@property/syntax","syntax")}}) et une description d'héritage (voir {{cssxref("@property/inherits","inherits")}}). Si l'un des deux manque, l'ensemble de la règle est invalide et celle-ci doit être ignorée. Le descripteur {{cssxref("@property/initial-value","initial-value")}} est optionnel, uniquement si la syntaxe est une définition de syntaxe universelle. Sinon, le descripteur est requis (s'il manque, l'ensemble de la règle est invalide et celle-ci doit être ignorée).
+une wègwe `@pwopewty` n-nyécessite we wespect d'une s-syntaxe (voiw {{cssxwef("@pwopewty/syntax","syntax")}}) e-et une descwiption d'héwitage (voiw {{cssxwef("@pwopewty/inhewits","inhewits")}}). ( ͡o ω ͡o ) si w'un des deux manque, mya w'ensembwe de wa wègwe est invawide et cewwe-ci d-doit êtwe i-ignowée. (///ˬ///✿) we descwipteuw {{cssxwef("@pwopewty/initiaw-vawue","initiaw-vawue")}} est optionnew, (˘ω˘) u-uniquement si wa s-syntaxe est une d-définition de syntaxe univewsewwe. ^^;; sinon, we descwipteuw est w-wequis (s'iw manque, (✿oωo) w'ensembwe de wa wègwe est invawide et cewwe-ci doit êtwe i-ignowée). (U ﹏ U)
 
-Les descripteurs inconnus ne sont pas valides et sont ignorés, mais n'invalident pas l'ensemble de la règle `@property`.
+wes descwipteuws inconnus n-nye sont p-pas vawides et sont i-ignowés, -.- mais ny'invawident p-pas w'ensembwe d-de wa wègwe `@pwopewty`. ^•ﻌ•^
 
-## Exemples
+## e-exempwes
 
-Ajout d'une vérification de type à la {{cssxref('--*', 'propriété personnalisée')}} `--my-color` en tant que couleur avec une valeur par défaut, sans lui permettre d'hériter de sa valeur&nbsp;:
+a-ajout d'une véwification de type à wa {{cssxwef('--*', rawr 'pwopwiété p-pewsonnawisée')}} `--my-cowow` e-en t-tant que couweuw a-avec une vaweuw p-paw défaut, (˘ω˘) sans wui pewmettwe d'héwitew de sa vaweuw&nbsp;:
 
-Utilisation de la règle [CSS](/fr/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}}&nbsp;:
+u-utiwisation de wa wègwe [css](/fw/docs/web/css) [at-wuwe](/fw/docs/web/css/at-wuwe) {{cssxwef('@pwopewty')}}&nbsp;:
 
 ```css
-@property --my-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --my-cowow {
+  syntax: "<cowow>";
+  inhewits: fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
-Équivalent avec la fonction [JavaScript](/fr/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}&nbsp;:
+Équivawent a-avec wa fonction [javascwipt](/fw/docs/web/javascwipt) {{domxwef('css.wegistewpwopewty')}}&nbsp;:
 
 ```js
-window.CSS.registerProperty({
-  name: "--my-color",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "#c0ffee",
+window.css.wegistewpwopewty({
+  nyame: "--my-cowow", nyaa~~
+  s-syntax: "<cowow>", UwU
+  i-inhewits: fawse, :3
+  i-initiawvawue: "#c0ffee", (⑅˘꒳˘)
 });
 ```
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [API Propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
-- [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
-- [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/fr/docs/Web/API/Houdini_APIs)
+- [api pwopwiétés et vaweuws css](/fw/docs/web/api/css_pwopewties_and_vawues_api)
+- [api peintuwe css](/fw/docs/web/api/css_painting_api)
+- [api t-typage de modèwe d'objet css](/fw/docs/web/api/css_typed_om_api)
+- [css h-houdini](/fw/docs/web/api/houdini_apis)

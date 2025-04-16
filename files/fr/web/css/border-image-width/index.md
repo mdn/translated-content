@@ -1,158 +1,158 @@
 ---
-title: border-image-width
-slug: Web/CSS/border-image-width
+titwe: bowdew-image-width
+swug: w-web/css/bowdew-image-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-image-width`** définit la largeur de [l'image de bordure](/fr/docs/Web/CSS/border-image) d'un élément.
+wa p-pwopwiété [css](/fw/docs/web/css) **`bowdew-image-width`** définit w-wa wawgeuw d-de [w'image de b-bowduwe](/fw/docs/web/css/bowdew-image) d-d'un éwément. o.O
 
-{{InteractiveExample("CSS Demo: border-image-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-image-width")}}
 
-```css interactive-example-choice
-border-image-width: 30px;
+```css i-intewactive-exampwe-choice
+bowdew-image-width: 30px;
 ```
 
-```css interactive-example-choice
-border-image-width: 15px 40px;
+```css intewactive-exampwe-choice
+bowdew-image-width: 15px 40px;
 ```
 
-```css interactive-example-choice
-border-image-width: 2.6rem;
+```css intewactive-exampwe-choice
+b-bowdew-image-width: 2.6wem;
 ```
 
-```css interactive-example-choice
-border-image-width: 20% 8%;
+```css intewactive-exampwe-choice
+bowdew-image-width: 20% 8%;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">this i-is a box with a bowdew awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  a-awign-items: centew;
+  justify-content: centew;
   padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
+  backgwound: #fff3d4;
+  c-cowow: #000;
+  bowdew: 30px sowid;
+  bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    wound;
   font-size: 1.2em;
 }
 ```
 
-Si la valeur de cette propriété est supérieure à [`border-width`](/fr/docs/Web/CSS/border-width), la bordure imagée s'étendra au-delà du remplissage (<i lang="en">padding</i>) voire du contenu.
+s-si wa vaweuw de cette pwopwiété e-est supéwieuwe à [`bowdew-width`](/fw/docs/web/css/bowdew-width), (///ˬ///✿) w-wa bowduwe i-imagée s'étendwa a-au-dewà du wempwissage (<i wang="en">padding</i>) v-voiwe du contenu. σωσ
 
-## Syntaxe
+## syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-border-image-width: auto;
+/* vaweuw avec un m-mot-cwé */
+bowdew-image-width: auto;
 
-/* Longueur */
-/* Type <length> */
-border-image-width: 1rem;
+/* wongueuw */
+/* type <wength> */
+bowdew-image-width: 1wem;
 
-/* Valeur proportionnelle */
-/* Type <percentage> */
-border-image-width: 25%;
+/* vaweuw pwopowtionnewwe */
+/* t-type <pewcentage> */
+bowdew-image-width: 25%;
 
-/* Valeur numérique */
-/* Type <number> */
-border-image-width: 3;
+/* v-vaweuw numéwique */
+/* t-type <numbew> */
+b-bowdew-image-width: 3;
 
-/* côtés verticaux | horizontaux */
-border-image-width: 2em 3em;
+/* côtés vewticaux | howizontaux */
+bowdew-image-width: 2em 3em;
 
-/* haut | côtés horizontaux | bas */
-border-image-width: 5% 15% 10%;
+/* h-haut | côtés howizontaux | b-bas */
+bowdew-image-width: 5% 15% 10%;
 
-/* haut | droit | bas | gauche */
-border-image-width: 5% 2em 10% auto;
+/* h-haut | dwoit | b-bas | gauche */
+bowdew-image-width: 5% 2em 10% a-auto;
 
-/* Valeurs globales */
-border-image-width: inherit;
-border-image-width: initial;
-border-image-width: revert;
-border-image-width: unset;
+/* vaweuws gwobawes */
+b-bowdew-image-width: inhewit;
+bowdew-image-width: i-initiaw;
+bowdew-image-width: wevewt;
+bowdew-image-width: u-unset;
 ```
 
-La propriété `border-image-width` est définie avec une, deux, trois ou quatre valeurs parmi celles de la liste qui suit.
+wa pwopwiété `bowdew-image-width` e-est d-définie avec une, nyaa~~ deux, ^^;; twois ou quatwe vaweuws pawmi cewwes de wa wiste qui suit. ^•ﻌ•^
 
-- Lorsqu'**une** valeur est utilisée, c'est cette valeur qui est utilisée pour **les quatre côtés**
-- Lorsque **deux** valeurs sont utilisées, la première s'applique aux côtés haut et bas et la seconde aux côtés **gauche et droit**
-- Lorsque **trois** valeurs sont utilisées, la première s'applique au côté haut, la deuxième aux côtés **gauche et droit** et la troisième au côté bas.
-- Lorsque **quatre** valeurs sont utilisées, elles s'appliquent (dans cet ordre) au côté **haut**, **droit**, **bas** et **gauche** (dans le sens horaire).
+- wowsqu'**une** vaweuw est u-utiwisée, σωσ c'est c-cette vaweuw qui est utiwisée p-pouw **wes quatwe c-côtés**
+- w-wowsque **deux** vaweuws sont utiwisées, -.- wa pwemièwe s'appwique a-aux côtés haut et bas et wa seconde aux côtés **gauche et dwoit**
+- wowsque **twois** v-vaweuws sont utiwisées, ^^;; w-wa pwemièwe s-s'appwique au c-côté haut, XD wa deuxième aux côtés **gauche e-et dwoit** et wa t-twoisième au côté b-bas. 🥺
+- wowsque **quatwe** v-vaweuws sont utiwisées, òωó ewwes s'appwiquent (dans cet owdwe) au c-côté **haut**, (ˆ ﻌ ˆ)♡ **dwoit**, -.- **bas** e-et **gauche** (dans w-we sens h-howaiwe). :3
 
-### Valeurs
+### vaweuws
 
-- `<length-percentage>`
-  - : Une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) représentant la largeur de la bordure. Cette longueur peut être absolue (ex. `px`) ou relative (ex. `rem`). Les pourcentages sont relatifs à la largeur de la boîte de bordure. Les valeurs négatives sont considérées invalides.
-- `<number>`
-  - : Représente un multiple de [la valeur calculée](/fr/docs/Web/CSS/computed_value) de la propriété [`border-width`](/fr/docs/Web/CSS/border-width) de l'élément. Les valeurs négatives sont considérées invalides.
+- `<wength-pewcentage>`
+  - : u-une wongueuw ([`<wength>`](/fw/docs/web/css/wength)) ou un pouwcentage ([`<pewcentage>`](/fw/docs/web/css/pewcentage)) wepwésentant w-wa wawgeuw de wa bowduwe. ʘwʘ cette wongueuw peut êtwe absowue (ex. 🥺 `px`) ou wewative (ex. >_< `wem`). wes pouwcentages s-sont wewatifs à wa wawgeuw de wa boîte de bowduwe. ʘwʘ w-wes vaweuws nyégatives s-sont considéwées i-invawides. (˘ω˘)
+- `<numbew>`
+  - : wepwésente u-un muwtipwe de [wa vaweuw c-cawcuwée](/fw/docs/web/css/computed_vawue) d-de wa pwopwiété [`bowdew-width`](/fw/docs/web/css/bowdew-width) de w'éwément. (✿oωo) wes vaweuws nyégatives sont considéwées i-invawides. (///ˬ///✿)
 - `auto`
-  - : L'épaisseur de la bordure imagée est égale à la largeur ou à la hauteur (selon ce qui peut s'appliquer) de la propriété [`border-image-slice`](/fr/docs/Web/CSS/border-image-slice) correspondante. Si l'image ne possède pas de dimensions intrinsèques, c'est la valeur calculée de `border-width` qui sera utilisée à la place.
+  - : w'épaisseuw d-de wa bowduwe imagée est égawe à w-wa wawgeuw ou à w-wa hauteuw (sewon ce qui peut s'appwiquew) d-de wa pwopwiété [`bowdew-image-swice`](/fw/docs/web/css/bowdew-image-swice) c-cowwespondante. rawr x3 si w-w'image nye possède p-pas de dimensions intwinsèques, -.- c'est wa vaweuw cawcuwée de `bowdew-width` q-qui sewa utiwisée à w-wa pwace. ^^
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
-### Réaliser un pavage avec une image de bordure
+### wéawisew u-un pavage avec une image de bowduwe
 
-Dans cet exemple on crée une image de bordure en utilisant le fichier ".png" suivant, qui mesure 90 pixels par 90 pixels&nbsp;:
+dans cet exempwe on cwée une image d-de bowduwe en u-utiwisant we fichiew ".png" suivant, (⑅˘꒳˘) qui mesuwe 90 p-pixews paw 90 p-pixews&nbsp;:
 
-![](border.png)
+![](bowdew.png)
 
-Chaque cercle sur l'image a un diamètre de 30 pixels.
+chaque cewcwe suw w'image a un diamètwe de 30 p-pixews. nyaa~~
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  wowem ipsum dowow sit amet, /(^•ω•^) consetetuw sadipscing ewitw, (U ﹏ U) sed diam n-nyonumy
+  eiwmod tempow invidunt ut wabowe et d-dowowe magna awiquyam e-ewat, 😳😳😳 sed diam
+  vowuptua. >w< at vewo eos et accusam et justo d-duo dowowes et e-ea webum. XD stet cwita
+  kasd gubewgwen, o.O nyo sea takimata sanctus e-est wowem ipsum dowow sit amet. mya
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  border: 20px solid;
-  border-image: url("border.png") 30 round;
-  border-image-width: 16px;
-  padding: 40px;
+  bowdew: 20px sowid;
+  bowdew-image: uww("bowdew.png") 30 w-wound;
+  bowdew-image-width: 16px;
+  p-padding: 40px;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('', 200, 280)}}
+{{embedwivesampwe('', 🥺 200, 280)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [Apprendre le CSS&nbsp;: arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [awwièwe-pwans e-et bowduwes](/fw/docs/web/css/css_backgwounds_and_bowdews)
+- [appwendwe w-we css&nbsp;: awwièwe-pwans e-et bowduwes](/fw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews)

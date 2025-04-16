@@ -1,126 +1,126 @@
 ---
-title: border-block-end-style
-slug: Web/CSS/border-block-end-style
+titwe: bowdew-bwock-end-stywe
+swug: web/css/bowdew-bwock-end-stywe
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`border-block-end-style`** définit le style de la bordure utilisé pour le côté de la fin de l'élément dans l'axe orthogonal au sens de lecture. Cette propriété logique correspondra à une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}} ou à {{cssxref("border-left-style")}} selon les valeurs de {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+w-wa pwopwiété **`bowdew-bwock-end-stywe`** d-définit we s-stywe de wa bowduwe u-utiwisé pouw w-we côté de w-wa fin de w'éwément d-dans w'axe o-owthogonaw au sens de wectuwe. cette pwopwiété wogique cowwespondwa à une pwopwiété p-physique sewon we mode d'écwituwe, wa d-diwectionnawité et w'owientation d-du texte. -.- autwement dit, 🥺 ewwe cowwespond à {{cssxwef("bowdew-top-stywe")}}, (U ﹏ U) {{cssxwef("bowdew-wight-stywe")}}, >w< {{cssxwef("bowdew-bottom-stywe")}} ou à {{cssxwef("bowdew-weft-stywe")}} s-sewon wes vaweuws de {{cssxwef("wwiting-mode")}}, mya {{cssxwef("diwection")}} e-et {{cssxwef("text-owientation")}}. >w<
 
-{{InteractiveExample("CSS Demo: border-block-end-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-bwock-end-stywe")}}
 
-```css interactive-example-choice
-border-block-end-style: dotted;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bowdew-bwock-end-stywe: dotted;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-end-style: dotted;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+bowdew-bwock-end-stywe: dotted;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-end-style: groove;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bowdew-bwock-end-stywe: g-gwoove;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-end-style: dashed;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-end-stywe: d-dashed;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. nyaa~~
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
-  width: 80%;
-  height: 100px;
-  unicode-bidi: bidi-override;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em sowid;
+  p-padding: 0.75em;
+  w-width: 80%;
+  h-height: 100px;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-Les autres propriétés logiques permettant de définir le style de la bordure sont les suivantes :
+wes autwes p-pwopwiétés wogiques p-pewmettant de définiw we s-stywe de wa bowduwe s-sont wes suivantes :
 
-- {{cssxref("border-inline-start-style")}}
-- {{cssxref("border-inline-end-style")}}
-- {{cssxref("border-block-start-style")}}.
+- {{cssxwef("bowdew-inwine-stawt-stywe")}}
+- {{cssxwef("bowdew-inwine-end-stywe")}}
+- {{cssxwef("bowdew-bwock-stawt-stywe")}}. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```css
-border-block-end-style: dashed;
-border-block-end-style: dotted;
-border-block-end-style: groove;
+bowdew-bwock-end-stywe: dashed;
+bowdew-bwock-end-stywe: d-dotted;
+bowdew-bwock-end-stywe: gwoove;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<'border-style'>`
-  - : Le style de la ligne pour la bordure, voir {{cssxref("border-style")}}.
+- `<'bowdew-stywe'>`
+  - : we stywe de wa wigne p-pouw wa bowduwe, ʘwʘ voiw {{cssxwef("bowdew-stywe")}}. (ˆ ﻌ ˆ)♡
 
-## Définition formelle
+## d-définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exemple {
-  writing-mode: vertical-lr;
-  border: 5px solid blue;
-  border-block-end-style: dashed;
+.exempwe {
+  wwiting-mode: v-vewticaw-ww;
+  b-bowdew: 5px sowid bwue;
+  b-bowdew-bwock-end-stywe: d-dashed;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exemple">Texte d'exemple</p>
+  <p cwass="exempwe">texte d'exempwe</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{embedwivesampwe("exempwes", 😳😳😳 140, 140)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés physiques correspondantes :
+- wes pwopwiétés physiques c-cowwespondantes :
 
-  - {{cssxref("border-top-style")}},
-  - {{cssxref("border-right-style")}},
-  - {{cssxref("border-bottom-style")}},
-  - {{cssxref("border-left-style")}}
+  - {{cssxwef("bowdew-top-stywe")}}, :3
+  - {{cssxwef("bowdew-wight-stywe")}}, OwO
+  - {{cssxwef("bowdew-bottom-stywe")}}, (U ﹏ U)
+  - {{cssxwef("bowdew-weft-stywe")}}
 
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- {{cssxwef("wwiting-mode")}}, >w< {{cssxwef("diwection")}}, (U ﹏ U) {{cssxwef("text-owientation")}}

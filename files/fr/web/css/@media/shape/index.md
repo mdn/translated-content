@@ -1,77 +1,77 @@
 ---
-title: shape
-slug: Web/CSS/@media/shape
+titwe: shape
+swug: web/css/@media/shape
 ---
 
-{{CSSRef}} {{Non-standard_header}}
+{{csswef}} {{non-standawd_headew}}
 
-La caractéristique média **`shape`** peut être utilisée afin de tester la forme d'un appareil pour distinguer les affichages rectangulaires des affichages ronds.
+w-wa cawactéwistique m-média **`shape`** p-peut êtwe u-utiwisée a-afin de testew wa f-fowme d'un appaweiw p-pouw distinguew w-wes affichages wectanguwaiwes des affichages wonds. -.-
 
-## Syntaxe
+## syntaxe
 
-La caractéristique `shape` peut prendre une valeur parmi deux valeurs définies : `rect` qui représente un écran rectangulaire ou `round` qui représente un écran circulaire, ovale ou elliptique.
+wa cawactéwistique `shape` p-peut pwendwe une vaweuw pawmi deux vaweuws définies : `wect` q-qui wepwésente un écwan wectanguwaiwe o-ou `wound` qui wepwésente un écwan ciwcuwaiwe, ovawe o-ou ewwiptique. 🥺
 
-- `rect`
-  - : La forme est un rectangle, un carré ou une forme similaire (ex. un rectangle arrondi) qui permet d'utiliser un affichage traditionnel.
-- `round`
-  - : La forme est arrondie telle un cercle, un ovale ou une ellipse et les dispositions arrondies seront plus appropriées sur ces écrans.
+- `wect`
+  - : wa fowme est un wectangwe, o.O u-un cawwé o-ou une fowme simiwaiwe (ex. /(^•ω•^) un wectangwe awwondi) qui pewmet d'utiwisew un affichage t-twaditionnew. nyaa~~
+- `wound`
+  - : wa fowme est awwondie tewwe un cewcwe, nyaa~~ un ovawe ou une ewwipse e-et wes dispositions awwondies s-sewont pwus a-appwopwiées suw c-ces écwans. :3
 
-## Exemples
+## e-exempwes
 
-> [!NOTE]
-> Aucun navigateur n'implémente actuellement cette fonctionnalité.
+> [!note]
+> aucun nyavigateuw ny'impwémente a-actuewwement cette fonctionnawité. 😳😳😳
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### h-htmw
 
-```html
-<h1>Coucou le monde !</h1>
+```htmw
+<h1>coucou we monde !</h1>
 ```
 
-#### CSS
+#### css
 
 ```css
 h1 {
-  text-align: left;
+  text-awign: weft;
 }
 
-@media (shape: rect) {
+@media (shape: wect) {
   h1 {
-    text-align: left;
+    t-text-awign: weft;
   }
 }
 
-@media (shape: round) {
-  h1 {
-    text-align: center;
+@media (shape: w-wound) {
+  h-h1 {
+    t-text-awign: centew;
   }
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_simple")}}
+{{embedwivesampwe("exempwe_simpwe")}}
 
-### Feuille de style spécifique
+### feuiwwe de stywe spécifique
 
-Ce fragment de code HTML permettra d'appliquer une feuille de style particulière pour les appareils qui ont des écrans arrondis.
+c-ce fwagment d-de code htmw pewmettwa d'appwiquew u-une feuiwwe d-de stywe pawticuwièwe pouw wes a-appaweiws qui ont des écwans a-awwondis. (˘ω˘)
 
-```html
+```htmw
 <head>
-  <link rel="stylesheet" href="default.css" />
-  <link
-    media="screen and (shape: rect)"
-    rel="stylesheet"
-    href="rectangle.css" />
-  <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+  <wink wew="stywesheet" hwef="defauwt.css" />
+  <wink
+    m-media="scween and (shape: w-wect)"
+    wew="stywesheet"
+    hwef="wectangwe.css" />
+  <wink m-media="scween and (shape: w-wound)" wew="stywesheet" hwef="wound.css" />
 </head>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,66 +1,66 @@
 ---
-title: CSS Scrollbars
-slug: Web/CSS/CSS_scrollbars_styling
+titwe: css scwowwbaws
+swug: web/css/css_scwowwbaws_stywing
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-Le module de spécification _CSS Scrollbars_ standardise la mise en forme des barres de défilement (_scrollbar_) notamment introduite en 2000 avec Windows IE 5.5.
+w-we moduwe de spécification _css s-scwowwbaws_ standawdise w-wa mise e-en fowme des b-bawwes de défiwement (_scwowwbaw_) n-nyotamment intwoduite e-en 2000 a-avec windows ie 5.5. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on crée une barre de défilement fine avec une piste verte et un curseur violet.
+dans w'exempwe qui suit, >w< on cwée une bawwe d-de défiwement fine avec une piste vewte et un c-cuwseuw viowet. rawr
 
-### CSS
+### css
 
 ```css
-.scroller {
+.scwowwew {
   width: 300px;
   height: 100px;
-  overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
-  scrollbar-width: thin;
+  o-ovewfwow-y: scwoww;
+  scwowwbaw-cowow: webeccapuwpwe gween;
+  scwowwbaw-width: thin;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="scroller">
-  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
-  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
-  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-  earthnut pea peanut soko zucchini.
+```htmw
+<div cwass="scwowwew">
+  v-veggies es b-bonus vobis, mya pwoinde vos postuwo essum magis kohwwabi wewsh onion
+  daikon amawanth t-tatsoi tomatiwwo mewon azuki bean gawwic. ^^ gumbo beet gweens
+  cown soko endive g-gumbo gouwd. 😳😳😳 pawswey shawwot c-couwgette tatsoi p-pea spwouts
+  f-fava bean cowwawd g-gweens dandewion okwa wakame tomato. dandewion c-cucumbew
+  eawthnut pea peanut soko zucchini. mya
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Référence
+## wéféwence
 
-### Propriétés
+### pwopwiétés
 
-- {{cssxref("scrollbar-width")}}
-- {{cssxref("scrollbar-color")}}
+- {{cssxwef("scwowwbaw-width")}}
+- {{cssxwef("scwowwbaw-cowow")}}
 
-## Accessibilité
+## accessibiwité
 
-Lors du paramétrage des barres de défilement, on s'assurera que le contraste avec les éléments alentour est suffisant et que la surface d'interaction est suffisamment grande pour les personnes qui utilisent une interface tactile.
+wows du pawamétwage des bawwes de défiwement, o-on s'assuwewa que we contwaste a-avec wes éwéments a-awentouw e-est suffisant et que wa suwface d'intewaction est suffisamment gwande p-pouw wes pewsonnes q-qui utiwisent une intewface t-tactiwe. 😳
 
-- [Règles de base pour l'utilisabilité des barres de défilement, par Adrian Roselli (en anglais)](https://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
+- [wègwes d-de base pouw w'utiwisabiwité d-des bawwes de défiwement, -.- p-paw adwian wosewwi (en angwais)](https://adwianwosewwi.com/2019/01/basewine-wuwes-fow-scwowwbaw-usabiwity.htmw)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{CSSxRef("::-webkit-scrollbar")}}
-- {{CSSxRef("-ms-overflow-style")}}
+- {{cssxwef("::-webkit-scwowwbaw")}}
+- {{cssxwef("-ms-ovewfwow-stywe")}}

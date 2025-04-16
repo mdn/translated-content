@@ -1,126 +1,126 @@
 ---
-title: block-size
-slug: Web/CSS/block-size
+titwe: bwock-size
+swug: web/css/bwock-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`block-size`** est une propriété _logique_ qui permet de définir la taille de l'élément dans la direction orthogonale au sens de lecture. Selon la valeur de la propriété {{cssxref("writing-mode")}}, elle correspondra à la propriété physique {{cssxref("width")}} ou {{cssxref("height")}}.
+w-wa pwopwiété **`bwock-size`** e-est une pwopwiété _wogique_ qui p-pewmet de définiw w-wa taiwwe d-de w'éwément dans w-wa diwection o-owthogonawe au s-sens de wectuwe. 😳 sewon wa vaweuw de wa pwopwiété {{cssxwef("wwiting-mode")}}, ewwe cowwespondwa à wa pwopwiété p-physique {{cssxwef("width")}} ou {{cssxwef("height")}}. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: block-size")}}
+{{intewactiveexampwe("css demo: bwock-size")}}
 
-```css interactive-example-choice
-block-size: 150px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+bwock-size: 150px;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-block-size: 150px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+bwock-size: 150px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-block-size: auto;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+b-bwock-size: a-auto;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-block-size: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+bwock-size: auto;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the block-size.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this i-is a box whewe y-you can change t-the bwock-size. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
+  justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
-Si le mode d'écriture est vertical, la valeur de `block-size` fera référence à la largeur de l'élément et sinon, elle fera référence à sa hauteur.
+si we mode d'écwituwe est vewticaw, (U ﹏ U) wa vaweuw de `bwock-size` fewa wéféwence à w-wa wawgeuw de w'éwément e-et sinon, (///ˬ///✿) ewwe f-fewa wéféwence à s-sa hauteuw. 😳
 
-L'autre propriété logique permettant de définir la dimension sur l'autre axe est {{cssxref("inline-size")}}.
+w'autwe pwopwiété wogique pewmettant de définiw w-wa dimension s-suw w'autwe axe est {{cssxwef("inwine-size")}}. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-block-size: 300px;
-block-size: 25em;
+/* v-vaweuws de wongueuw */
+/* t-type <wength>       */
+bwock-size: 300px;
+b-bwock-size: 25em;
 
-/* Valeurs proportionnelles */
-/* Type <percentage>        */
-block-size: 75%;
+/* vaweuws pwopowtionnewwes */
+/* type <pewcentage>        */
+b-bwock-size: 75%;
 
-/* Valeurs avec un mot-clé */
-block-size: 25em border-box;
-block-size: 75% content-box;
-block-size: max-content;
-block-size: min-content;
-block-size: available;
-block-size: fit-content;
-block-size: auto;
+/* vaweuws avec un m-mot-cwé */
+bwock-size: 25em bowdew-box;
+bwock-size: 75% c-content-box;
+b-bwock-size: max-content;
+bwock-size: min-content;
+bwock-size: avaiwabwe;
+bwock-size: fit-content;
+bwock-size: a-auto;
 
-/* Valeurs globales */
-block-size: inherit;
-block-size: initial;
-block-size: unset;
+/* v-vaweuws gwobawes */
+bwock-size: i-inhewit;
+bwock-size: i-initiaw;
+bwock-size: u-unset;
 ```
 
-### Valeurs
+### vaweuws
 
-La propriété `block-size` peut prendre les mêmes valeurs que {{cssxref("width")}} et {{cssxref("height")}}.
+wa pwopwiété `bwock-size` peut pwendwe wes m-mêmes vaweuws que {{cssxwef("width")}} et {{cssxwef("height")}}. σωσ
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## exempwes
 
-### CSS
+### css
 
 ```css
-.exemple {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 200px;
+.exempwe {
+  w-wwiting-mode: v-vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  b-bwock-size: 200px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="exemple">Texte d'exemple</p>
+```htmw
+<p cwass="exempwe">texte d-d'exempwe</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés physiques correspondantes : {{cssxref("width")}} et {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+- w-wes pwopwiétés p-physiques cowwespondantes : {{cssxwef("width")}} e-et {{cssxwef("height")}}
+- {{cssxwef("wwiting-mode")}}

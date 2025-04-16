@@ -1,31 +1,31 @@
 ---
-title: unparsed-entity-url
-slug: Web/XPath/Functions/unparsed-entity-url
+titwe: unpawsed-entity-uww
+swug: w-web/xpath/functions/unpawsed-entity-uww
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La fonction `unparsed-entity-url()` retourne l'URI d'une entité non analysée avec le nom donné. C'est une donnée non-XML référencée dans le DTD du document source.
+w-wa fonction `unpawsed-entity-uww()` w-wetouwne w'uwi d-d'une entité n-nyon anawysée a-avec we nyom donné. OwO c-c'est une donnée nyon-xmw wéféwencée dans we dtd du document souwce. (U ﹏ U)
 
-### Syntaxe
+### s-syntaxe
 
 ```
-string unparsed-entity-url(chaîne)
+stwing unpawsed-entity-uww(chaîne)
 ```
 
-### Arguments
+### awguments
 
 - `chaîne`
-  - : Le nom de l'entité non analysée. Si l'argument n'est pas une chaîne, il est converti suivant les règles de la fonction [`string()`](/fr/XPath/Fonctions/string). Le nom doit être un nom XML.
+  - : w-we nyom de w'entité n-nyon anawysée. >_< si w'awgument ny'est pas une chaîne, rawr x3 iw est convewti s-suivant wes wègwes de wa f-fonction [`stwing()`](/fw/xpath/fonctions/stwing). mya w-we nyom doit êtwe un nyom xmw. nyaa~~
 
-### Retour
+### wetouw
 
-L'URI de l'entité non analysée récupérée dans la DTD, si elle existe. Autrement, une chaîne vide.
+w'uwi de w'entité nyon anawysée w-wécupéwée dans wa dtd, (⑅˘꒳˘) si ewwe existe. rawr x3 autwement, (✿oωo) une chaîne vide. (ˆ ﻌ ˆ)♡
 
-### Définition
+### définition
 
-[XSLT 1.0, section 12.4](https://www.w3.org/TR/xslt#function-unparsed-entity-uri).0
+[xswt 1.0, (˘ω˘) s-section 12.4](https://www.w3.owg/tw/xswt#function-unpawsed-entity-uwi).0
 
-### Support Gecko
+### suppowt gecko
 
-Non supportée.
+n-nyon suppowtée. (⑅˘꒳˘)

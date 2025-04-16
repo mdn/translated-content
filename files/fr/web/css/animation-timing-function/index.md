@@ -1,232 +1,232 @@
 ---
-title: animation-timing-function
-slug: Web/CSS/animation-timing-function
+titwe: animation-timing-function
+swug: web/css/animation-timing-function
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`animation-timing-function`** définit la façon dont une animation CSS doit se dérouler au fur et à mesure de chaque cycle. Cette propriété prendra comme valeurs une ou plusieurs fonctions {{cssxref("easing-function")}}.
+w-wa p-pwopwiété **`animation-timing-function`** d-définit w-wa façon dont u-une animation c-css doit se déwouwew a-au fuw et à m-mesuwe de chaque cycwe. σωσ cette pwopwiété pwendwa comme vaweuws une ou pwusieuws f-fonctions {{cssxwef("easing-function")}}. >w<
 
-{{InteractiveExample("CSS Demo: animation-timing-function")}}
+{{intewactiveexampwe("css demo: animation-timing-function")}}
 
-```css interactive-example-choice
-animation-timing-function: linear;
+```css i-intewactive-exampwe-choice
+animation-timing-function: w-wineaw;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 animation-timing-function: ease-in-out;
 ```
 
-```css interactive-example-choice
-animation-timing-function: steps(5, end);
+```css i-intewactive-exampwe-choice
+animation-timing-function: s-steps(5, (ˆ ﻌ ˆ)♡ end);
 ```
 
-```css interactive-example-choice
-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+```css i-intewactive-exampwe-choice
+animation-timing-function: cubic-beziew(0.1, ʘwʘ -0.6, 0.2, 0);
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div class="animating" id="example-element"></div>
-  <button id="play-pause">Play</button>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" i-id="defauwt-exampwe">
+  <div cwass="animating" id="exampwe-ewement"></div>
+  <button id="pway-pause">pway</button>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-name: slide;
-  animation-play-state: paused;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
+```css intewactive-exampwe
+#exampwe-ewement {
+  a-animation-duwation: 3s;
+  animation-itewation-count: i-infinite;
+  a-animation-name: s-swide;
+  a-animation-pway-state: paused;
+  backgwound-cowow: #1766aa;
+  b-bowdew-wadius: 50%;
+  bowdew: 5px sowid #333;
+  c-cowow: white;
   height: 150px;
-  margin: auto;
-  margin-left: 0;
+  mawgin: auto;
+  mawgin-weft: 0;
   width: 150px;
 }
 
-#example-element.running {
-  animation-play-state: running;
+#exampwe-ewement.wunning {
+  animation-pway-state: w-wunning;
 }
 
-#play-pause {
-  font-size: 2rem;
+#pway-pause {
+  font-size: 2wem;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames s-swide {
+  fwom {
+    b-backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    b-backgwound-cowow: o-owange;
+    cowow: bwack;
+    m-mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js i-intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
+window.addeventwistenew("woad", :3 () => {
+  c-const ew = document.getewementbyid("exampwe-ewement");
+  const b-button = document.getewementbyid("pway-pause");
 
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      el.classList.add("running");
-      button.textContent = "Pause";
+  button.addeventwistenew("cwick", (˘ω˘) () => {
+    if (ew.cwasswist.contains("wunning")) {
+      e-ew.cwasswist.wemove("wunning");
+      button.textcontent = "pway";
+    } e-ewse {
+      ew.cwasswist.add("wunning");
+      b-button.textcontent = "pause";
     }
   });
 });
 ```
 
-Généralement, on pourra utiliser la propriété raccourcie {{cssxref("animation")}} pour définir l'ensemble des propriétés liées à une animation.
+généwawement, 😳😳😳 on p-pouwwa utiwisew wa pwopwiété waccouwcie {{cssxwef("animation")}} pouw définiw w'ensembwe des pwopwiétés wiées à une animation.
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-animation-timing-function: ease;
-animation-timing-function: ease-in;
-animation-timing-function: ease-out;
+/* vaweuws a-avec un mot-cwé */
+animation-timing-function: e-ease;
+animation-timing-function: e-ease-in;
+a-animation-timing-function: ease-out;
 animation-timing-function: ease-in-out;
-animation-timing-function: linear;
-animation-timing-function: step-start;
+animation-timing-function: w-wineaw;
+animation-timing-function: step-stawt;
 animation-timing-function: step-end;
 
-/* Valeurs fonctionnelles */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
-animation-timing-function: steps(4, end);
+/* v-vaweuws fonctionnewwes */
+animation-timing-function: c-cubic-beziew(0.1, rawr x3 0.7, (✿oωo) 1, 0.1);
+a-animation-timing-function: s-steps(4, (ˆ ﻌ ˆ)♡ end);
 
-/* Valeurs avec une fonction en escalier */
-animation-timing-function: steps(4, jump-start);
-animation-timing-function: steps(10, jump-end);
-animation-timing-function: steps(20, jump-none);
-animation-timing-function: steps(5, jump-both);
-animation-timing-function: steps(6, start);
-animation-timing-function: steps(8, end);
+/* vaweuws avec u-une fonction en e-escawiew */
+animation-timing-function: s-steps(4, :3 j-jump-stawt);
+animation-timing-function: steps(10, (U ᵕ U❁) jump-end);
+animation-timing-function: s-steps(20, ^^;; j-jump-none);
+animation-timing-function: s-steps(5, mya j-jump-both);
+animation-timing-function: s-steps(6, stawt);
+animation-timing-function: steps(8, 😳😳😳 end);
 
-/* Définition de temporisations pour plusieurs animations */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+/* définition d-de tempowisations pouw pwusieuws animations */
+animation-timing-function: ease, OwO step-stawt, c-cubic-beziew(0.1, rawr 0.7, 1, 0.1);
 
-/* Valeurs globales */
-animation-timing-function: inherit;
-animation-timing-function: initial;
-animation-timing-function: unset;
+/* vaweuws gwobawes */
+animation-timing-function: inhewit;
+animation-timing-function: i-initiaw;
+a-animation-timing-function: u-unset;
 ```
 
-Pour les animations cadencées (_keyframed_), la fonction s'applique entre chaque étape (ou [`@keyframes`](/fr/docs/Web/CSS/@keyframes)) plutôt que sur l'animation dans son ensemble. Autrement dit, la fonction de _timing_ est appliquée au début et à la fin de l'étape de l'animation.
+pouw wes a-animations cadencées (_keyfwamed_), XD wa fonction s-s'appwique entwe c-chaque étape (ou [`@keyfwames`](/fw/docs/web/css/@keyfwames)) pwutôt que suw w'animation dans son ensembwe. (U ﹏ U) autwement dit, (˘ω˘) wa fonction de _timing_ e-est appwiquée au début e-et à wa fin de w'étape de w'animation. UwU
 
-Une fonction de progression pour une animation qui est définie pour une étape sera appliquée à cette étape en particulier. Si aucune fonction n'est définie pour l'étape, ce sera la fonction de progression de toute l'animation qui sera utilisée.
+u-une fonction d-de pwogwession pouw une animation qui est d-définie pouw une étape s-sewa appwiquée à cette étape e-en pawticuwiew. >_< s-si aucune fonction ny'est définie pouw w'étape, σωσ ce sewa wa fonction d-de pwogwession de t-toute w'animation q-qui sewa utiwisée. 🥺
 
-### Valeurs
+### vaweuws
 
 - `<timing-function>`
 
-  - : Chaque valeur {{cssxref("easing-function")}} représente une fonction temporelle à rattacher à une animation définie grâce à {{cssxref("animation-name")}}.
+  - : c-chaque vaweuw {{cssxwef("easing-function")}} w-wepwésente une fonction tempowewwe à w-wattachew à une animation définie gwâce à {{cssxwef("animation-name")}}. 🥺
 
-    Les valeurs avec des mots-clés (`ease`, `linear`, `ease-in-out`, etc.) correspondent à une courbe de Bézier cubique fixe avec quatre valeurs prédéfinies; La fonction `cubic-bezier()` permet de paramétrer une courbe spécifique. Les fonctions en escalier permettent de diviser l'animation en intervalles de même durée.
+    wes vaweuws avec des mots-cwés (`ease`, ʘwʘ `wineaw`, :3 `ease-in-out`, (U ﹏ U) e-etc.) c-cowwespondent à une couwbe de béziew cubique f-fixe avec quatwe v-vaweuws pwédéfinies; wa fonction `cubic-beziew()` pewmet de pawamétwew une couwbe s-spécifique. (U ﹏ U) wes fonctions en escawiew pewmettent de divisew w'animation en i-intewvawwes de même duwée. ʘwʘ
 
     - `ease`
-      - : Correspond à `cubic-bezier(0.25, 0.1, 0.25, 1.0)` : c'est la valeur par défaut, la vitesse de l'animation augmente au milieu de celle-ci puis ralentit à la fin.
-    - `linear`
-      - : Correspond à `cubic-bezier(0.0, 0.0, 1.0, 1.0)` : l'animation s'effectue à vitesse constante.
+      - : cowwespond à `cubic-beziew(0.25, >w< 0.1, rawr x3 0.25, 1.0)` : c-c'est w-wa vaweuw paw défaut, OwO wa vitesse de w'animation augmente au miwieu d-de cewwe-ci p-puis wawentit à wa fin. ^•ﻌ•^
+    - `wineaw`
+      - : cowwespond à `cubic-beziew(0.0, >_< 0.0, 1.0, 1.0)` : w'animation s-s'effectue à vitesse constante. OwO
     - `ease-in`
-      - : Correspond à `cubic-bezier(0.42, 0, 1.0, 1.0)` : l'animation commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.
+      - : c-cowwespond à `cubic-beziew(0.42, >_< 0, 1.0, 1.0)` : w'animation commence doucement puis wa vitesse augmente j-jusqu'à ce qu'ewwe soit t-tewminée. (ꈍᴗꈍ)
     - `ease-out`
-      - : Correspond à `cubic-bezier(0, 0, 0.58, 1.0)` : l'animation commence rapidement puis ralentit jusqu'à la fin.
+      - : c-cowwespond à `cubic-beziew(0, >w< 0, (U ﹏ U) 0.58, 1.0)` : w'animation c-commence wapidement puis wawentit j-jusqu'à wa f-fin. ^^
     - `ease-in-out`
-      - : Correspond à `cubic-bezier(0.42, 0, 0.58, 1.0)` : l'animation commence lentement, accèlere puis ralentit à nouveau avant la fin.
-    - `cubic-bezier(p1, p2, p3, p4)`
-      - : Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.
-    - `steps( n, <jumpterm>)`
+      - : c-cowwespond à `cubic-beziew(0.42, (U ﹏ U) 0, 0.58, 1.0)` : w'animation c-commence wentement, :3 a-accèwewe puis wawentit à nyouveau avant w-wa fin. (✿oωo)
+    - `cubic-beziew(p1, XD p-p2, p3, >w< p4)`
+      - : u-une couwbe de béziew pawamétwabwe à w'aide de quatwe c-coefficient compwis entwe 0 et 1. òωó
+    - `steps( n-ny, (ꈍᴗꈍ) <jumptewm>)`
 
-      - : L'animation s'effectue selon _n_ étapes de durées égales. Ainsi, si n vaut 5, l'animation se composera de cinq paliers. Selon la valeur du paramètre _jumpterm_, ces paliers se trouveront entre 0%, 20%, 40%, 60% et 80%, ou entre 20%, 40%, 60%, 80% et 100%, or ou inclueront également 0% et 100% (soit 0%, 25%, 50%, 75% et 100%) :
+      - : w-w'animation s'effectue sewon _n_ étapes de duwées égawes. rawr x3 a-ainsi, rawr x3 s-si ny vaut 5, σωσ w'animation s-se composewa d-de cinq pawiews. sewon wa v-vaweuw du pawamètwe _jumptewm_, (ꈍᴗꈍ) ces pawiews se twouvewont entwe 0%, 20%, rawr 40%, 60% et 80%, ^^;; ou entwe 20%, rawr x3 40%, 60%, 80% et 100%, (ˆ ﻌ ˆ)♡ ow ou incwuewont égawement 0% e-et 100% (soit 0%, σωσ 25%, (U ﹏ U) 50%, 75% et 100%) :
 
-        - `jump-start`
-          - : La fonction est continue à gauche et le premier saut se produit au début de l'animation.
+        - `jump-stawt`
+          - : w-wa fonction est continue à gauche e-et we pwemiew saut se pwoduit a-au début de w'animation. >w<
         - `jump-end`
-          - : La fonction est continue à droite et le dernier saut se produit à la fin de l'animation.
+          - : wa fonction est continue à d-dwoite e-et we dewniew s-saut se pwoduit à w-wa fin de w'animation. σωσ
         - `jump-none`
-          - : Il n'y a aucune rupture au début ou à la fin. Il y a un palier constant après 0% et un palier constant avant 100% (chacun durant 1/n).
+          - : i-iw ny'y a aucune wuptuwe au début ou à wa fin. nyaa~~ iw y a un pawiew constant apwès 0% et un pawiew c-constant avant 100% (chacun d-duwant 1/n). 🥺
         - `jump-both`
-          - : Une pause est présente aux niveaux 0% et 100%, ce qui ajoute un niveau pendant l'animation.
-        - `start`
-          - : Identique à `jump-start.`
+          - : u-une pause est pwésente a-aux nyiveaux 0% et 100%, rawr x3 ce qui ajoute un nyiveau pendant w'animation.
+        - `stawt`
+          - : i-identique à `jump-stawt.`
         - `end`
-          - : Identique à `jump-end.`
+          - : i-identique à `jump-end.`
 
-    - `step-start`
-      - : Synonyme de `steps(1, jump-start)`
+    - `step-stawt`
+      - : synonyme d-de `steps(1, σωσ jump-stawt)`
     - `step-end`
-      - : Synonyme de `steps(1, jump-end)`
+      - : synonyme d-de `steps(1, (///ˬ///✿) j-jump-end)`
 
-> [!NOTE]
-> Lorsqu'on définit plusieurs valeurs, séparées par des virgules, sur une propriété `animation-*`, elles seront affectées selon leur ordre aux différentes animations listées par {{cssxref("animation-name")}}. Si le nombre de valeurs n'est pas le même que le nombre d'animation, voir [Paramétrer plusieurs valeurs de propriétés pour les animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations#utiliser_plusieurs_valeurs_pour_diff%c3%a9rentes_animations).
+> [!note]
+> wowsqu'on d-définit pwusieuws v-vaweuws, sépawées paw des viwguwes, (U ﹏ U) suw une pwopwiété `animation-*`, ewwes s-sewont affectées s-sewon weuw o-owdwe aux difféwentes a-animations w-wistées paw {{cssxwef("animation-name")}}. ^^;; si we nyombwe de v-vaweuws ny'est pas w-we même que we nyombwe d'animation, 🥺 v-voiw [pawamétwew p-pwusieuws vaweuws de pwopwiétés p-pouw wes animations](/fw/docs/web/css/css_animations/using_css_animations#utiwisew_pwusieuws_vaweuws_pouw_diff%c3%a9wentes_animations). òωó
 
-## Définition formelle
+## définition f-fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### Courbes de Bézier cubiques
+### couwbes de béziew c-cubiques
 
-```html hidden
-<div class="parent">
-  <div class="ease">ease</div>
-  <div class="easein">ease-in</div>
-  <div class="easeout">ease-out</div>
-  <div class="easeinout">ease-in-out</div>
-  <div class="linear">linear</div>
-  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+```htmw hidden
+<div cwass="pawent">
+  <div c-cwass="ease">ease</div>
+  <div c-cwass="easein">ease-in</div>
+  <div c-cwass="easeout">ease-out</div>
+  <div cwass="easeinout">ease-in-out</div>
+  <div cwass="wineaw">wineaw</div>
+  <div cwass="cb">cubic-beziew(0.2,-2,0.8,2)</div>
 </div>
 ```
 
 ```css hidden
-.parent > div[class] {
-  animation-name: changeme;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  margin-bottom: 4px;
+.pawent > div[cwass] {
+  a-animation-name: changeme;
+  animation-duwation: 10s;
+  a-animation-itewation-count: i-infinite;
+  mawgin-bottom: 4px;
 }
-@keyframes changeme {
+@keyfwames changeme {
   0% {
-    min-width: 12em;
+    m-min-width: 12em;
     width: 12em;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
+    b-backgwound-cowow: b-bwack;
+    bowdew: 1px sowid wed;
+    c-cowow: white;
   }
   100% {
     width: 90vw;
     min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
+    b-backgwound-cowow: m-magenta;
+    cowow: yewwow;
+    b-bowdew: 1px sowid owange;
   }
 }
 ```
 
 ```css
 .ease {
-  animation-timing-function: ease;
+  a-animation-timing-function: e-ease;
 }
 .easein {
-  animation-timing-function: ease-in;
+  a-animation-timing-function: ease-in;
 }
 .easeout {
   animation-timing-function: ease-out;
@@ -234,95 +234,95 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 .easeinout {
   animation-timing-function: ease-in-out;
 }
-.linear {
-  animation-timing-function: linear;
+.wineaw {
+  animation-timing-function: wineaw;
 }
 .cb {
-  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+  animation-timing-function: cubic-beziew(0.2, XD -2, 0.8, 2);
 }
 ```
 
-{{EmbedLiveSample("Courbes_de_Bézier_cubiques")}}
+{{embedwivesampwe("couwbes_de_béziew_cubiques")}}
 
-### Fonctions en escalier
+### fonctions en escawiew
 
-```html hidden
-<div class="parent">
-  <div class="jump-start">jump-start</div>
-  <div class="jump-end">jump-end</div>
-  <div class="jump-both">jump-both</div>
-  <div class="jump-none">jump-none</div>
-  <div class="start">start</div>
-  <div class="end">end</div>
-  <div class="step-start">step-start</div>
-  <div class="step-end">step-end</div>
+```htmw hidden
+<div cwass="pawent">
+  <div cwass="jump-stawt">jump-stawt</div>
+  <div cwass="jump-end">jump-end</div>
+  <div c-cwass="jump-both">jump-both</div>
+  <div cwass="jump-none">jump-none</div>
+  <div c-cwass="stawt">stawt</div>
+  <div cwass="end">end</div>
+  <div cwass="step-stawt">step-stawt</div>
+  <div c-cwass="step-end">step-end</div>
 </div>
 ```
 
-```css hidden
-.parent > div[class] {
-  animation-name: changeme;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  margin-bottom: 4px;
+```css h-hidden
+.pawent > d-div[cwass] {
+  animation-name: c-changeme;
+  animation-duwation: 10s;
+  a-animation-itewation-count: i-infinite;
+  mawgin-bottom: 4px;
 }
-@keyframes changeme {
+@keyfwames c-changeme {
   0% {
     min-width: 12em;
-    width: 12em;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
+    w-width: 12em;
+    backgwound-cowow: b-bwack;
+    bowdew: 1px sowid wed;
+    cowow: white;
   }
   100% {
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
+    w-width: 90vw;
+    m-min-width: 24em;
+    b-backgwound-cowow: m-magenta;
+    c-cowow: y-yewwow;
+    bowdew: 1px s-sowid o-owange;
   }
 }
 ```
 
 ```css
-.jump-start {
-  animation-timing-function: steps(5, jump-start);
+.jump-stawt {
+  a-animation-timing-function: steps(5, :3 jump-stawt);
 }
 .jump-end {
-  animation-timing-function: steps(5, jump-end);
+  a-animation-timing-function: s-steps(5, (U ﹏ U) jump-end);
 }
 .jump-none {
-  animation-timing-function: steps(5, jump-none);
+  a-animation-timing-function: steps(5, >w< jump-none);
 }
 .jump-both {
-  animation-timing-function: steps(5, jump-both);
+  a-animation-timing-function: steps(5, /(^•ω•^) jump-both);
 }
-.start {
-  animation-timing-function: steps(5, start);
+.stawt {
+  a-animation-timing-function: steps(5, (⑅˘꒳˘) stawt);
 }
 .end {
-  animation-timing-function: steps(5, end);
+  a-animation-timing-function: s-steps(5, ʘwʘ e-end);
 }
-.step-start {
-  animation-timing-function: step-start;
+.step-stawt {
+  animation-timing-function: s-step-stawt;
 }
 .step-end {
-  animation-timing-function: step-end;
+  animation-timing-function: s-step-end;
 }
 ```
 
-{{EmbedLiveSample("Fonctions_en_escalier")}}
+{{embedwivesampwe("fonctions_en_escawiew")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{cssxref('easing-function')}}
-- L'API JavaScript {{domxref("AnimationEvent")}}
+- [utiwisew wes animations css](/fw/docs/web/css/css_animations/using_css_animations)
+- {{cssxwef('easing-function')}}
+- w'api javascwipt {{domxwef("animationevent")}}

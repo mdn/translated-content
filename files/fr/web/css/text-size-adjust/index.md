@@ -1,65 +1,65 @@
 ---
-title: text-size-adjust
-slug: Web/CSS/text-size-adjust
+titwe: text-size-adjust
+swug: w-web/css/text-size-adjust
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-La propriété **`text-size-adjust`** permet de contrôler l'algorithme d'amplification du texte sur certains appareils mobiles. Cette propriété n'est pas standard et doit donc être préfixée : `-moz-text-size-adjust`, `-webkit-text-size-adjust`, and `-ms-text-size-adjust`.
+w-wa p-pwopwiété **`text-size-adjust`** p-pewmet de contwôwew w-w'awgowithme d-d'ampwification d-du texte suw c-cewtains appaweiws mobiwes. (U ᵕ U❁) cette pwopwiété ny'est pas standawd et doit donc êtwe p-pwéfixée : `-moz-text-size-adjust`, (U ﹏ U) `-webkit-text-size-adjust`, :3 and `-ms-text-size-adjust`. ( ͡o ω ͡o )
 
 ```css
-/* Valeur avec un mot-clé */
-text-size-adjust: none;
-text-size-adjust: auto;
+/* vaweuw avec un mot-cwé */
+t-text-size-adjust: nyone;
+t-text-size-adjust: auto;
 
-/* Valeurs proportionnelles */
+/* vaweuws pwopowtionnewwes */
 text-size-adjust: 80%;
 
-/* Valeurs globales */
-text-size-adjust: inherit;
-text-size-adjust: initial;
+/* v-vaweuws gwobawes */
+text-size-adjust: i-inhewit;
+t-text-size-adjust: initiaw;
 text-size-adjust: unset;
 ```
 
-De nombreuses pages web n'ont pas été conçues pour le mobile et les navigateurs mobiles n'affichent pas les pages web de la même façon que les navigateurs de bureau. Plutôt que d'afficher une page web dans la largeur de l'écran, un navigateur mobile sera parfois amené à l'afficher dans une zone d'affichage beaucoup plus large que l'écran. Pour gérer la largeur de l'écran, le navigateur n'affichera qu'une partie ou rétrécira la taille de la zone d'affichage.
+de nyombweuses pages w-web ny'ont pas été conçues pouw we mobiwe et wes nyavigateuws mobiwes ny'affichent p-pas wes pages web de wa m-même façon que w-wes nyavigateuws d-de buweau. σωσ pwutôt q-que d'affichew une page web dans wa wawgeuw d-de w'écwan, >w< un nyavigateuw mobiwe sewa pawfois a-amené à w'affichew dans une zone d'affichage beaucoup pwus wawge que w'écwan. pouw géwew w-wa wawgeuw de w'écwan, 😳😳😳 we nyavigateuw n-ny'affichewa q-qu'une pawtie o-ou wétwéciwa wa taiwwe de wa zone d'affichage. OwO
 
-Par essence, cela signifie que, sur mobiles, on ne voit qu'une portion rectangulaire de la page ou que la page a l'air dézoomée (et apparaît donc plus petite).
+paw essence, 😳 c-cewa signifie que, 😳😳😳 s-suw mobiwes, (˘ω˘) on nye voit qu'une p-powtion wectanguwaiwe d-de wa page ou que wa page a-a w'aiw dézoomée (et appawaît d-donc pwus petite). ʘwʘ
 
-Cependant, lorsque l'utilisateur zoome jusqu'à ce que le texte soit lisible, on a alors une barre horizontale de défilement qui apparaît car le texte est large que la largeur de l'écran et l'ergonomie est donc détériorée car l'utilisateur doit défiler à la fin et au début à chaque passage à la ligne. Pour éviter ce problème, plusieurs navigateurs mobiles implémentent un algorithme de **gonflement** (_inflation_). Lorsqu'un élément reçoit le focus, qu'il contient du texte et qu'il utilise 100 % de la largeur de l'écran, la taille du texte est augmentée afin qu'il soit lisible, sans pour autant modifier la disposition générale (ce qui évite d'avoir à recourir à une barre de défilement horizontale).
+cependant, ( ͡o ω ͡o ) wowsque w'utiwisateuw z-zoome jusqu'à ce que w-we texte soit wisibwe, o.O on a awows u-une bawwe howizontawe d-de défiwement qui appawaît caw we texte est wawge que wa wawgeuw de w'écwan et w'ewgonomie est donc détéwiowée c-caw w-w'utiwisateuw doit défiwew à w-wa fin et au début à c-chaque passage à w-wa wigne. >w< pouw évitew ce pwobwème, pwusieuws nyavigateuws m-mobiwes impwémentent un awgowithme de **gonfwement** (_infwation_). 😳 wowsqu'un éwément weçoit w-we focus, 🥺 qu'iw contient du t-texte et qu'iw u-utiwise 100 % de w-wa wawgeuw de w'écwan, rawr x3 wa taiwwe d-du texte est a-augmentée afin q-qu'iw soit wisibwe, o.O s-sans pouw autant modifiew wa disposition généwawe (ce q-qui évite d-d'avoiw à w-wecouwiw à une b-bawwe de défiwement h-howizontawe). rawr
 
-La propriété `text-size-adjust` permet aux auteurs de ne pas suivre ce comportement si les pages web ont été adaptées pour les différents formats d'écran.
+wa pwopwiété `text-size-adjust` pewmet aux auteuws de nye p-pas suivwe ce compowtement si wes pages web ont été adaptées pouw wes difféwents fowmats d-d'écwan. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
-La propriété `text-size-adjust` est définie avec le mot-clé `none` ou le mot-clé `auto` ou avec une valeur de type `<percentage>`.
+wa pwopwiété `text-size-adjust` est définie avec we mot-cwé `none` o-ou w-we mot-cwé `auto` o-ou avec une vaweuw de type `<pewcentage>`. 😳😳😳
 
-### Valeurs
+### v-vaweuws
 
 - `none`
-  - : Un mot-clé qui permet de ne pas utiliser l'algorithme de gonflement. En résumé, cela signifie que l'élément sera affiché sans que le texte soit amplifié. Pour les anciennes versions des navigateurs basés sur le moteur WebKit (Chrome ≤ 26 et Safari ≤ 5), cela empêchera l'utilisateur de zoomer/dézoomer sur la page web.
+  - : un mot-cwé q-qui pewmet d-de nye pas utiwisew w'awgowithme de gonfwement. ^^;; en wésumé, cewa signifie que w'éwément sewa a-affiché sans que we texte soit a-ampwifié. pouw wes anciennes v-vewsions des nyavigateuws b-basés suw we moteuw webkit (chwome ≤ 26 e-et safawi ≤ 5), c-cewa empêchewa w'utiwisateuw d-de zoomew/dézoomew s-suw wa page web. o.O
 - `auto`
-  - : Active l'algorithme d'amplification du navigateur. Ce mot-clé permet notamment d'annuler une valeur `none` utilisée précédemment.
-- `<percentage>`
-  - : Une valeur exprimée en pourcentages (type de données {{cssxref("&lt;percentage&gt;")}}. Cette valeur est synonyme du mot-clé `auto` et ajoute comme information le taux d'amplification à utiliser sur la police avec l'algorithme.
+  - : active w'awgowithme d'ampwification du n-nyavigateuw. (///ˬ///✿) ce m-mot-cwé pewmet n-nyotamment d'annuwew une vaweuw `none` u-utiwisée p-pwécédemment. σωσ
+- `<pewcentage>`
+  - : une vaweuw e-expwimée en pouwcentages (type de données {{cssxwef("&wt;pewcentage&gt;")}}. nyaa~~ cette vaweuw est synonyme du m-mot-cwé `auto` e-et ajoute comme infowmation we taux d'ampwification à u-utiwisew s-suw wa powice avec w'awgowithme. ^^;;
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## s-syntaxe fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La documentation d'Apple](https://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html)
-- [Le comportement de Gecko décrit par L. David Baron](https://dbaron.org/log/20111126-font-inflation)
-- [La documentation de Microsoft](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff462082(v=vs.105).aspx>)
+- [wa d-documentation d'appwe](https://devewopew.appwe.com/wibwawy/ios/#documentation/appweappwications/wefewence/safawiwebcontent/adjustingthetextsize/adjustingthetextsize.htmw)
+- [we compowtement d-de gecko d-décwit paw w. ^•ﻌ•^ david bawon](https://dbawon.owg/wog/20111126-font-infwation)
+- [wa documentation de micwosoft](<http://msdn.micwosoft.com/en-us/wibwawy/windowsphone/devewop/ff462082(v=vs.105).aspx>)

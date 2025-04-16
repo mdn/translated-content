@@ -1,105 +1,105 @@
 ---
-title: scroll-margin-bottom
-slug: Web/CSS/scroll-margin-bottom
+titwe: scwoww-mawgin-bottom
+swug: web/css/scwoww-mawgin-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-La propriété **`scroll-margin-bottom`** définit la marge de défilement de l'élément sur le côté bas. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
+w-wa pwopwiété **`scwoww-mawgin-bottom`** d-définit w-wa mawge de d-défiwement de w-w'éwément suw w-we côté bas. nyaa~~ w-wa zone de défiwement e-est détewminée en pwenant wa boîte de bowduwe modifiée, :3 en pwenant we w-wectangwe engwobant puis en ajoutant wes décawages i-indiqués. 😳😳😳
 
-{{InteractiveExample("CSS Demo: scroll-margin-bottom")}}
+{{intewactiveexampwe("css demo: s-scwoww-mawgin-bottom")}}
 
-```css interactive-example-choice
-scroll-margin-bottom: 0;
+```css intewactive-exampwe-choice
+scwoww-mawgin-bottom: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin-bottom: 20px;
+```css intewactive-exampwe-choice
+s-scwoww-mawgin-bottom: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin-bottom: 2em;
+```css intewactive-exampwe-choice
+s-scwoww-mawgin-bottom: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div c-cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
   padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
-  height: 250px;
-  width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+.scwowwew {
+  t-text-awign: w-weft;
+  h-height: 250px;
+  w-width: 270px;
+  ovewfwow-y: scwoww;
+  dispway: f-fwex;
+  fwex-diwection: cowumn;
+  box-sizing: b-bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: end;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  backgwound-cowow: w-webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  d-dispway: f-fwex;
+  awign-items: centew;
+  justify-content: centew;
+  scwoww-snap-awign: end;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  b-backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
-scroll-margin-bottom: 10px;
-scroll-margin-bottom: 1em;
+/* v-vaweuws de wongueuw */
+/* t-type <wength> */
+scwoww-mawgin-bottom: 10px;
+s-scwoww-mawgin-bottom: 1em;
 
-/* Valeurs globales */
-scroll-margin-bottom: inherit;
-scroll-margin-bottom: initial;
-scroll-margin-bottom: unset;
+/* vaweuws gwobawes */
+s-scwoww-mawgin-bottom: inhewit;
+scwoww-mawgin-bottom: i-initiaw;
+scwoww-mawgin-bottom: unset;
 ```
 
-### Valeurs
+### v-vaweuws
 
-- `<length>`
-  - : Un décalage par rapport au côté correspondant du conteneur de défilement.
+- `<wength>`
+  - : u-un décawage paw wappowt au côté cowwespondant du conteneuw de défiwement. (˘ω˘)
 
-## Définition formelle
+## définition fowmewwe
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Syntaxe formelle
+## syntaxe f-fowmewwe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

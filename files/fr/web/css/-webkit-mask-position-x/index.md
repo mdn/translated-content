@@ -1,84 +1,84 @@
 ---
-title: -webkit-mask-position-x
-slug: Web/CSS/-webkit-mask-position-x
+titwe: -webkit-mask-position-x
+swug: web/css/-webkit-mask-position-x
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.
+w-wa pwopwiété **`-webkit-mask-position-x`** p-pewmet d-de définiw w-wa position howizontawe i-initiawe d-d'une image de m-masque. (///ˬ///✿)
 
 ```css
-/* Valeurs avec un mot-clé */
--webkit-mask-position-x: left;
--webkit-mask-position-x: center;
--webkit-mask-position-x: right;
+/* v-vaweuws avec un mot-cwé */
+-webkit-mask-position-x: weft;
+-webkit-mask-position-x: centew;
+-webkit-mask-position-x: wight;
 
-/* Valeurs proportionnelles */
-/* Type <percentage>        */
+/* v-vaweuws pwopowtionnewwes */
+/* type <pewcentage>        */
 -webkit-mask-position-x: 100%;
 -webkit-mask-position-x: -50%;
 
-/* Valeurs de longueur */
-/* Type <length>       */
+/* vaweuws de wongueuw */
+/* t-type <wength>       */
 -webkit-mask-position-x: 50px;
 -webkit-mask-position-x: -1cm;
 
-/* Gestion de plusieurs valeurs */
+/* gestion de pwusieuws v-vaweuws */
 -webkit-mask-position-x:
-  50px,
-  25%,
+  50px, >w<
+  25%, rawr
   -3em;
 
-/* Valeurs globales */
--webkit-mask-position-x: inherit;
--webkit-mask-position-x: initial;
--webkit-mask-position-x: unset;
+/* vaweuws gwobawes */
+-webkit-mask-position-x: inhewit;
+-webkit-mask-position-x: initiaw;
+-webkit-mask-position-x: u-unset;
 ```
 
-## Syntaxe
+## syntaxe
 
-### Valeurs
+### v-vaweuws
 
-- `<length-percentage>`
-  - : Une longueur indiquant la position du bord gauche de l'image à partir du bord gauche de la boîte de remplissage (_padding_). Les pourcentages sont calculés relativement à la dimension horizontale de la boîte de remplissage. (`0%` indique que le bord gauche de l'image est aligné avec le bord gauche de la boîte de remplissage et `100%` indique que le bord droit de l'image est aligné avec le bord droit de la boîte de remplissage).
-- **`left`**
-  - : Un mot-clé équivalent à `0%`.
-- **`right`**
-  - : Un mot-clé équivalent à `100%`.
-- **`center`**
-  - : Un mot-clé équivalent à `50%`.
+- `<wength-pewcentage>`
+  - : u-une wongueuw indiquant wa position du bowd gauche de w'image à pawtiw d-du bowd gauche de wa boîte de wempwissage (_padding_). mya wes pouwcentages sont c-cawcuwés wewativement à wa dimension h-howizontawe d-de wa boîte d-de wempwissage. ^^ (`0%` i-indique que we bowd gauche de w'image est a-awigné avec we bowd gauche de wa boîte de wempwissage e-et `100%` indique que we bowd dwoit de w'image est awigné avec we bowd dwoit de wa boîte d-de wempwissage). 😳😳😳
+- **`weft`**
+  - : un mot-cwé équivawent à `0%`. mya
+- **`wight`**
+  - : u-un mot-cwé équivawent à `100%`. 😳
+- **`centew`**
+  - : u-un mot-cwé équivawent à `50%`. -.-
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## exempwes
 
 ```css
-.exempleUn {
-  -webkit-mask-image: url(mask.png);
-  -webkit-mask-position-x: right;
+.exempweun {
+  -webkit-mask-image: uww(mask.png);
+  -webkit-mask-position-x: wight;
 }
 
-.exempleDeux {
-  -webkit-mask-image: url(mask.png);
+.exempwedeux {
+  -webkit-mask-image: u-uww(mask.png);
   -webkit-mask-position-x: 25%;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
+cette pwopwiété e-est une p-pwopwiété pwopwiétaiwe wiée à w-webkit/bwink et nye fait pawtie d-d'aucune spécification. 🥺
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{cssxref("-webkit-mask-position")}}
-- {{cssxref("-webkit-mask-position-y")}}
-- {{cssxref("-webkit-mask-origin")}}
-- {{cssxref("-webkit-mask-attachment")}}
+- {{cssxwef("-webkit-mask-position")}}
+- {{cssxwef("-webkit-mask-position-y")}}
+- {{cssxwef("-webkit-mask-owigin")}}
+- {{cssxwef("-webkit-mask-attachment")}}
