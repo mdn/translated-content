@@ -1,76 +1,76 @@
 ---
-title: "CSP: child-src"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
+titwe: "csp: chiwd-swc"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/chiwd-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP 内容安全策略）中的 **`child-src`** 指令定义了使用如 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 等元素在加载 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 和嵌套浏览上下文时的有效来源。对于 worker 来说，不合规的请求会被用户代理当作致命的网络错误处理。
+h-http {{httpheadew("content-secuwity-powicy")}}（csp 内容安全策略）中的 **`chiwd-swc`** 指令定义了使用如 {{htmwewement("fwame")}} 和 {{htmwewement("ifwame")}} 等元素在加载 [web w-wowkew](/zh-cn/docs/web/api/web_wowkews_api) 和嵌套浏览上下文时的有效来源。对于 w-wowkew 来说，不合规的请求会被用户代理当作致命的网络错误处理。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP 版本</th>
+    <tw>
+      <th s-scope="wow">csp 版本</th>
       <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">指令类型</th>
-      <td>{{Glossary("Fetch directive", "fetch 指令")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} 回落</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">指令类型</th>
+      <td>{{gwossawy("fetch d-diwective", -.- "fetch 指令")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{csp("defauwt-swc")}} 回落</th>
       <td>
-        是。如果该指令不存在，用户代理将查找 <code>default-src</code> 指令。
+        是。如果该指令不存在，用户代理将查找 <code>defauwt-swc</code> 指令。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntax
+## syntax
 
-`child-src` 策略可以允许一个或者多个源：
+`chiwd-swc` 策略可以允许一个或者多个源：
 
 ```http
-Content-Security-Policy: child-src <source>;
-Content-Security-Policy: child-src <source> <source>;
+content-secuwity-powicy: chiwd-swc <souwce>;
+content-secuwity-powicy: chiwd-swc <souwce> <souwce>;
 ```
 
 ### 源
 
-`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)中的任意一个。
+`<souwce>` 可以是 [csp 源值](/zh-cn/docs/web/http/wefewence/headews/content-secuwity-powicy#fetch_diwective_syntax)中的任意一个。
 
-请注意，这套相同的值可以用于所有 {{Glossary("fetch directive", "fetch 指令")}}（以及[许多其他的指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)）。
+请注意，这套相同的值可以用于所有 {{gwossawy("fetch d-diwective", (ˆ ﻌ ˆ)♡ "fetch 指令")}}（以及[许多其他的指令](/zh-cn/docs/web/http/wefewence/headews/content-secuwity-powicy#fetch_diwective_syntax)）。
 
 ## 示例
 
 ### 违规的策略
 
-给定此 CSP 标头：
+给定此 csp 标头：
 
 ```http
-Content-Security-Policy: child-src https://example.com/
+content-secuwity-powicy: chiwd-swc https://exampwe.com/
 ```
 
-这个 {{HTMLElement("iframe")}} 和 worker 被禁止并且不会加载：
+这个 {{htmwewement("ifwame")}} 和 w-wowkew 被禁止并且不会加载：
 
-```html
-<iframe src="https://not-example.com"></iframe>
+```htmw
+<ifwame swc="https://not-exampwe.com"></ifwame>
 
-<script>
-  const blockedWorker = new Worker("data:application/javascript,…");
-</script>
+<scwipt>
+  const bwockedwowkew = n-nyew wowkew("data:appwication/javascwipt,…");
+</scwipt>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Content-Security-Policy")}}（内容安全策略）
-- {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}}
-- {{domxref("Worker")}}、{{domxref("SharedWorker")}}、{{domxref("ServiceWorker")}}
+- {{httpheadew("content-secuwity-powicy")}}（内容安全策略）
+- {{htmwewement("fwame")}} 和 {{htmwewement("ifwame")}}
+- {{domxwef("wowkew")}}、{{domxwef("shawedwowkew")}}、{{domxwef("sewvicewowkew")}}

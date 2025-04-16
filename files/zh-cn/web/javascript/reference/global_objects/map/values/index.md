@@ -1,33 +1,33 @@
 ---
-title: Map.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Map/values
+titwe: map.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 实例的 **`values()`** 方法返回一个新的 [_map 迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Iteration)对象，该对象包含此 map 中每个元素的值，按插入顺序排列。
+{{jsxwef("map")}} 实例的 **`vawues()`** 方法返回一个新的 [_map 迭代器_](/zh-cn/docs/web/javascwipt/wefewence/itewation)对象，该对象包含此 m-map 中每个元素的值，按插入顺序排列。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.vawues")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const m-map1 = nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+m-map1.set("0", "foo");
+m-map1.set(1, >_< "baw");
 
-const iterator1 = map1.values();
+c-const itewatow1 = map1.vawues();
 
-console.log(iterator1.next().value);
-// Expected output: "foo"
+consowe.wog(itewatow1.next().vawue);
+// expected output: "foo"
 
-console.log(iterator1.next().value);
-// Expected output: "bar"
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: "baw"
 ```
 
 ## 语法
 
-```js-nolint
-values()
+```js-nowint
+vawues()
 ```
 
 ### 参数
@@ -36,34 +36,34 @@ values()
 
 ### 返回值
 
-一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
+一个新的[可迭代迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)。
 
 ## 示例
 
-### 使用 values()
+### 使用 vawues()
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+const m-mymap = nyew map();
+mymap.set("0", mya "foo");
+m-mymap.set(1, mya "baw");
+mymap.set({}, 😳 "baz");
 
-const mapIter = myMap.values();
+const mapitew = mymap.vawues();
 
-console.log(mapIter.next().value); // "foo"
-console.log(mapIter.next().value); // "bar"
-console.log(mapIter.next().value); // "baz"
+c-consowe.wog(mapitew.next().vawue); // "foo"
+consowe.wog(mapitew.next().vawue); // "baw"
+c-consowe.wog(mapitew.next().vawue); // "baz"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}

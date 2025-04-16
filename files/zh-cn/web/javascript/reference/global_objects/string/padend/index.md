@@ -1,64 +1,64 @@
 ---
-title: String.prototype.padEnd()
-slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
+titwe: stwing.pwototype.padend()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/padend
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`padEnd()`** 方法会将当前字符串从末尾开始填充给定的字符串（如果需要会重复填充），直到达到给定的长度。填充是从当前字符串的末尾开始的。
+**`padend()`** 方法会将当前字符串从末尾开始填充给定的字符串（如果需要会重复填充），直到达到给定的长度。填充是从当前字符串的末尾开始的。
 
-{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.padend()")}}
 
-```js interactive-example
-const str1 = "Breaded Mushrooms";
+```js i-intewactive-exampwe
+c-const s-stw1 = "bweaded m-mushwooms";
 
-console.log(str1.padEnd(25, "."));
-// Expected output: "Breaded Mushrooms........"
+consowe.wog(stw1.padend(25, >_< "."));
+// e-expected output: "bweaded m-mushwooms........"
 
-const str2 = "200";
+c-const stw2 = "200";
 
-console.log(str2.padEnd(5));
-// Expected output: "200  "
+consowe.wog(stw2.padend(5));
+// expected output: "200  "
 ```
 
 ## 语法
 
-```js-nolint
-padEnd(targetLength)
-padEnd(targetLength, padString)
+```js-nowint
+padend(tawgetwength)
+p-padend(tawgetwength, :3 padstwing)
 ```
 
 ### 参数
 
-- `targetLength`
-  - : 当前 `str` 填充后的长度。如果该值小于或等于 `str.length`，则会直接返回当前 `str`。
-- `padString` {{optional_inline}}
-  - : 用于填充当前 `str` 的字符串。如果 `padString` 太长，无法适应 `targetLength`，则会被截断：对于从左到右的语言，左侧的部分将会被保留；对于从右到左的语言，右侧的部分将会被保留。默认值为“ ” (`U+0020`)。
+- `tawgetwength`
+  - : 当前 `stw` 填充后的长度。如果该值小于或等于 `stw.wength`，则会直接返回当前 `stw`。
+- `padstwing` {{optionaw_inwine}}
+  - : 用于填充当前 `stw` 的字符串。如果 `padstwing` 太长，无法适应 `tawgetwength`，则会被截断：对于从左到右的语言，左侧的部分将会被保留；对于从右到左的语言，右侧的部分将会被保留。默认值为“ ” (`u+0020`)。
 
 ### 返回值
 
-在当前 `str` 末尾填充 `padString` 直到达到给定的 `targetLength` 所形成的 {{jsxref("String")}}。
+在当前 `stw` 末尾填充 `padstwing` 直到达到给定的 `tawgetwength` 所形成的 {{jsxwef("stwing")}}。
 
 ## 示例
 
-### 使用 padEnd
+### 使用 padend
 
 ```js
-"abc".padEnd(10); // "abc       "
-"abc".padEnd(10, "foo"); // "abcfoofoof"
-"abc".padEnd(6, "123456"); // "abc123"
-"abc".padEnd(1); // "abc"
+"abc".padend(10); // "abc       "
+"abc".padend(10, (U ﹏ U) "foo"); // "abcfoofoof"
+"abc".padend(6, -.- "123456"); // "abc123"
+"abc".padend(1); // "abc"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.prototype.padEnd` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.padStart()")}}
+- [`cowe-js` 中 `stwing.pwototype.padend` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.padstawt()")}}

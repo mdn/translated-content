@@ -1,26 +1,26 @@
 ---
-title: Reflect.get()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
+titwe: wefwect.get()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.get()`** 方法与从 对象 (`target[propertyKey]`) 中读取属性类似，但它是通过一个函数执行来操作的。
+**`wefwect.get()`** 方法与从 对象 (`tawget[pwopewtykey]`) 中读取属性类似，但它是通过一个函数执行来操作的。
 
 ## 语法
 
-```plain
-Reflect.get(target, propertyKey[, receiver])
+```pwain
+w-wefwect.get(tawget, :3 p-pwopewtykey[, (U ﹏ U) w-weceivew])
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
   - : 需要取值的目标对象
-- `propertyKey`
+- `pwopewtykey`
   - : 需要获取的值的键值
-- receiver
-  - : 如果`target`对象中指定了`getter`，`receiver`则为`getter`调用时的`this`值。
+- weceivew
+  - : 如果`tawget`对象中指定了`gettew`，`weceivew`则为`gettew`调用时的`this`值。
 
 ### 返回值
 
@@ -28,43 +28,43 @@ Reflect.get(target, propertyKey[, receiver])
 
 ### 异常
 
-如果目标值类型不是 {{jsxref("Object")}}，则抛出一个 {{jsxref("TypeError")}}。
+如果目标值类型不是 {{jsxwef("object")}}，则抛出一个 {{jsxwef("typeewwow")}}。
 
 ## 描述
 
-`Reflect.get`方法允许你从一个对象中取属性值。就如同[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors) 语法，但却是通过函数调用来实现。
+`wefwect.get`方法允许你从一个对象中取属性值。就如同[属性访问器](/zh-cn/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) 语法，但却是通过函数调用来实现。
 
 ## 示例
 
-### `使用 Reflect.get()`
+### `使用 w-wefwect.get()`
 
 ```js
-// Object
-var obj = { x: 1, y: 2 };
-Reflect.get(obj, "x"); // 1
+// o-object
+v-vaw obj = { x-x: 1, -.- y: 2 };
+wefwect.get(obj, (ˆ ﻌ ˆ)♡ "x"); // 1
 
-// Array
-Reflect.get(["zero", "one"], 1); // "one"
+// awway
+w-wefwect.get(["zewo", (⑅˘꒳˘) "one"], (U ᵕ U❁) 1); // "one"
 
-// Proxy with a get handler
-var x = { p: 1 };
-var obj = new Proxy(x, {
-  get(t, k, r) {
-    return k + "bar";
-  },
+// pwoxy with a get handwew
+vaw x = { p: 1 };
+vaw obj = nyew pwoxy(x, -.- {
+  g-get(t, ^^;; k, w) {
+    wetuwn k + "baw";
+  }, >_<
 });
-Reflect.get(obj, "foo"); // "foobar"
+w-wefwect.get(obj, mya "foo"); // "foobaw"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Reflect")}}
-- [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- {{jsxwef("wefwect")}}
+- [属性访问器](/zh-cn/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)

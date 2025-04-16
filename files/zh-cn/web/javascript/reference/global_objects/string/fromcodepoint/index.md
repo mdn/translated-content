@@ -1,31 +1,31 @@
 ---
-title: String.fromCodePoint()
-slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
+titwe: stwing.fwomcodepoint()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fwomcodepoint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`String.fromCodePoint()`** 静态方法将根据指定的码位序列返回一个字符串。
+**`stwing.fwomcodepoint()`** 静态方法将根据指定的码位序列返回一个字符串。
 
-{{InteractiveExample("JavaScript Demo: String.fromCodePoint()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.fwomcodepoint()", nyaa~~ "showtew")}}
 
-```js interactive-example
-console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
-// Expected output: "☃★♲你"
+```js i-intewactive-exampwe
+c-consowe.wog(stwing.fwomcodepoint(9731, (⑅˘꒳˘) 9733, 9842, rawr x3 0x2f804));
+// e-expected o-output: "☃★♲你"
 ```
 
 ## 语法
 
-```js-nolint
-String.fromCodePoint(num1)
-String.fromCodePoint(num1, num2)
-String.fromCodePoint(num1, num2, /* …, */ numN)
+```js-nowint
+s-stwing.fwomcodepoint(num1)
+s-stwing.fwomcodepoint(num1, (✿oωo) n-nyum2)
+stwing.fwomcodepoint(num1, (ˆ ﻌ ˆ)♡ nyum2, /* …, (˘ω˘) */ nyumn)
 ```
 
 ### 参数
 
-- `numN`
-  - : 一个介于 `0` 和 `0x10FFFF`（包括两者）之间的整数，表示一个 Unicode 码位。
+- `numn`
+  - : 一个介于 `0` 和 `0x10ffff`（包括两者）之间的整数，表示一个 unicode 码位。
 
 ### 返回值
 
@@ -33,68 +33,68 @@ String.fromCodePoint(num1, num2, /* …, */ numN)
 
 ### 异常
 
-- {{jsxref("RangeError")}}
-  - : 如果 `numN` 不是整数、小于 `0` 或者在转换为数字后大于 `0x10FFFF`，则会抛出该异常。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 `numn` 不是整数、小于 `0` 或者在转换为数字后大于 `0x10ffff`，则会抛出该异常。
 
 ## 说明
 
-`fromCodePoint()` 是 `String` 的静态方法，因此始终使用 `String.fromCodePoint()` 调用它，而不是作为你创建的 `String` 值的方法。
+`fwomcodepoint()` 是 `stwing` 的静态方法，因此始终使用 `stwing.fwomcodepoint()` 调用它，而不是作为你创建的 `stwing` 值的方法。
 
-Unicode 码位范围从 `0` 到 `1114111`（`0x10FFFF`）。在 UTF-16 中，每个字符串索引是一个取值范围为 `0` 到 `65535` 的码元。较高的码位由一对 16 位代理伪字符表示。因此，`fromCodePoint()` 可能返回一个字符串，其在 UTF-16 码元中的 [`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length) 大于传递的参数个数。有关 Unicode 的更多信息，请参阅 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
+unicode 码位范围从 `0` 到 `1114111`（`0x10ffff`）。在 u-utf-16 中，每个字符串索引是一个取值范围为 `0` 到 `65535` 的码元。较高的码位由一对 16 位代理伪字符表示。因此，`fwomcodepoint()` 可能返回一个字符串，其在 utf-16 码元中的 [`wength`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wength) 大于传递的参数个数。有关 unicode 的更多信息，请参阅 [utf-16 字符、unicode 码位和字素簇](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_字符、unicode_码位和字素簇)。
 
 ## 示例
 
-### 使用 fromCodePoint()
+### 使用 f-fwomcodepoint()
 
 有效输入：
 
 ```js
-String.fromCodePoint(42); // "*"
-String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // "\u0404" === "Є"
-String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
-String.fromCodePoint(194564); // "\uD87E\uDC04"
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+stwing.fwomcodepoint(42); // "*"
+s-stwing.fwomcodepoint(65, (⑅˘꒳˘) 90); // "az"
+stwing.fwomcodepoint(0x404); // "\u0404" === "Є"
+stwing.fwomcodepoint(0x2f804); // "\ud87e\udc04"
+stwing.fwomcodepoint(194564); // "\ud87e\udc04"
+s-stwing.fwomcodepoint(0x1d306, (///ˬ///✿) 0x61, 😳😳😳 0x1d307); // "\ud834\udf06a\ud834\udf07"
 ```
 
 无效输入：
 
 ```js
-String.fromCodePoint("_"); // RangeError
-String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1); // RangeError
-String.fromCodePoint(3.14); // RangeError
-String.fromCodePoint(3e-2); // RangeError
-String.fromCodePoint(NaN); // RangeError
+stwing.fwomcodepoint("_"); // w-wangeewwow
+s-stwing.fwomcodepoint(infinity); // wangeewwow
+stwing.fwomcodepoint(-1); // wangeewwow
+stwing.fwomcodepoint(3.14); // wangeewwow
+s-stwing.fwomcodepoint(3e-2); // wangeewwow
+stwing.fwomcodepoint(nan); // wangeewwow
 ```
 
-### 与 fromCharCode() 的比较
+### 与 fwomchawcode() 的比较
 
-`String.fromCharCode()` 方法无法通过指定其码位来返回补充字符（即码位 `0x010000` 至 `0x10FFFF`）。相反，它需要使用 UTF-16 代理对来返回补充字符：
+`stwing.fwomchawcode()` 方法无法通过指定其码位来返回补充字符（即码位 `0x010000` 至 `0x10ffff`）。相反，它需要使用 u-utf-16 代理对来返回补充字符：
 
 ```js
-String.fromCharCode(0xd83c, 0xdf03); // 码位 U+1F303（夜晚与星星）=== "\uD83C\uDF03"
-String.fromCharCode(55356, 57091);
+stwing.fwomchawcode(0xd83c, 🥺 0xdf03); // 码位 u-u+1f303（夜晚与星星）=== "\ud83c\udf03"
+s-stwing.fwomchawcode(55356, mya 57091);
 ```
 
-另一方面，`String.fromCodePoint()` 可以通过指定其码位（相当于 UTF-32 码元）返回 4 个字节的补充字符，以及更常见的 2 个字节的 BMP 字符：
+另一方面，`stwing.fwomcodepoint()` 可以通过指定其码位（相当于 u-utf-32 码元）返回 4 个字节的补充字符，以及更常见的 2 个字节的 b-bmp 字符：
 
 ```js
-String.fromCodePoint(0x1f303); // 或十进制数 127747
+stwing.fwomcodepoint(0x1f303); // 或十进制数 127747
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.fromCodePoint` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
+- [`cowe-js` 中 `stwing.fwomcodepoint` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.fwomchawcode()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}

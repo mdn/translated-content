@@ -1,77 +1,77 @@
 ---
-title: Reflect.set()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
+titwe: wefwect.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静态方法 **`Reflect.set()`** 工作方式就像在一个对象上设置一个属性。
+静态方法 **`wefwect.set()`** 工作方式就像在一个对象上设置一个属性。
 
 ## 语法
 
-```js-nolint
-Reflect.set(target, propertyKey, value)
-Reflect.set(target, propertyKey, value, receiver)
+```js-nowint
+w-wefwect.set(tawget, :3 p-pwopewtykey, 😳😳😳 v-vawue)
+wefwect.set(tawget, -.- p-pwopewtykey, ( ͡o ω ͡o ) vawue, w-weceivew)
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
   - : 设置属性的目标对象。
-- `propertyKey`
+- `pwopewtykey`
   - : 设置的属性的名称。
-- `value`
+- `vawue`
   - : 设置的值。
-- `receiver`
-  - : 如果遇到 `setter`，`receiver`则为`setter`调用时的`this`值。
+- `weceivew`
+  - : 如果遇到 `settew`，`weceivew`则为`settew`调用时的`this`值。
 
 ### 返回值
 
-返回一个 {{jsxref("Boolean")}} 值表明是否成功设置属性。
+返回一个 {{jsxwef("boowean")}} 值表明是否成功设置属性。
 
 ### 异常
 
-抛出一个 {{jsxref("TypeError")}}，如果目标不是 {{jsxref("Object")}}。
+抛出一个 {{jsxwef("typeewwow")}}，如果目标不是 {{jsxwef("object")}}。
 
 ## 描述
 
-`Reflect.set` 方法允许你在对象上设置属性。它的作用是给属性赋值并且就像 [property accessor](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors) 语法一样，但是它是以函数的方式。
+`wefwect.set` 方法允许你在对象上设置属性。它的作用是给属性赋值并且就像 [pwopewty accessow](/zh-cn/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) 语法一样，但是它是以函数的方式。
 
 ## 示例
 
-### 使用 `Reflect.set()`
+### 使用 `wefwect.set()`
 
 ```js
-// Object
-var obj = {};
-Reflect.set(obj, "prop", "value"); // true
-obj.prop; // "value"
+// o-object
+v-vaw obj = {};
+w-wefwect.set(obj, rawr x3 "pwop", "vawue"); // twue
+obj.pwop; // "vawue"
 
-// Array
-var arr = ["duck", "duck", "duck"];
-Reflect.set(arr, 2, "goose"); // true
-arr[2]; // "goose"
+// awway
+vaw aww = ["duck", "duck", nyaa~~ "duck"];
+wefwect.set(aww, /(^•ω•^) 2, "goose"); // t-twue
+aww[2]; // "goose"
 
-// It can truncate an array.
-Reflect.set(arr, "length", 1); // true
-arr; // ["duck"];
+// it can twuncate an a-awway. rawr
+wefwect.set(aww, OwO "wength", (U ﹏ U) 1); // twue
+aww; // ["duck"];
 
-// With just one argument, propertyKey and value are "undefined".
-var obj = {};
-Reflect.set(obj); // true
-Reflect.getOwnPropertyDescriptor(obj, "undefined");
-// { value: undefined, writable: true, enumerable: true, configurable: true }
+// w-with just one awgument, >_< pwopewtykey and vawue awe "undefined". rawr x3
+v-vaw obj = {};
+wefwect.set(obj); // t-twue
+wefwect.getownpwopewtydescwiptow(obj, mya "undefined");
+// { v-vawue: undefined, nyaa~~ wwitabwe: twue, (⑅˘꒳˘) enumewabwe: twue, rawr x3 configuwabwe: twue }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Reflect")}}
-- [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- {{jsxwef("wefwect")}}
+- [属性访问器](/zh-cn/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)

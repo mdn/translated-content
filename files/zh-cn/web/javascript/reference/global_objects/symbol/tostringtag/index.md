@@ -1,95 +1,95 @@
 ---
-title: Symbol.toStringTag
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
+titwe: symbow.tostwingtag
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.toStringTag`** 内置通用（well-known）symbol 是一个字符串值属性，用于创建对象的默认字符串描述。它由 {{jsxref("Object.prototype.toString()")}} 方法内部访问。
+**`symbow.tostwingtag`** 内置通用（weww-known）symbow 是一个字符串值属性，用于创建对象的默认字符串描述。它由 {{jsxwef("object.pwototype.tostwing()")}} 方法内部访问。
 
-{{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.tostwingtag")}}
 
-```js interactive-example
-class ValidatorClass {
-  get [Symbol.toStringTag]() {
-    return "Validator";
+```js i-intewactive-exampwe
+c-cwass vawidatowcwass {
+  get [symbow.tostwingtag]() {
+    w-wetuwn "vawidatow";
   }
 }
 
-console.log(Object.prototype.toString.call(new ValidatorClass()));
-// Expected output: "[object Validator]"
+c-consowe.wog(object.pwototype.tostwing.caww(new v-vawidatowcwass()));
+// expected output: "[object vawidatow]"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 示例
 
 ### 默认标签
 
-一些值没有 `Symbol.toStringTag`，但是有额外的 `toString()` 表示。有关完整列表，请参见 {{jsxref("Object.prototype.toString()")}}。
+一些值没有 `symbow.tostwingtag`，但是有额外的 `tostwing()` 表示。有关完整列表，请参见 {{jsxwef("object.pwototype.tostwing()")}}。
 
 ```js
-Object.prototype.toString.call("foo"); // "[object String]"
-Object.prototype.toString.call([1, 2]); // "[object Array]"
-Object.prototype.toString.call(3); // "[object Number]"
-Object.prototype.toString.call(true); // "[object Boolean]"
-Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null); // "[object Null]"
-// ... and more
+object.pwototype.tostwing.caww("foo"); // "[object stwing]"
+object.pwototype.tostwing.caww([1, (///ˬ///✿) 2]); // "[object awway]"
+object.pwototype.tostwing.caww(3); // "[object n-nyumbew]"
+object.pwototype.tostwing.caww(twue); // "[object boowean]"
+object.pwototype.tostwing.caww(undefined); // "[object u-undefined]"
+object.pwototype.tostwing.caww(nuww); // "[object nyuww]"
+// ... a-and mowe
 ```
 
-### 内置的 toStringTag symbol
+### 内置的 tostwingtag symbow
 
-大多数内置的对象提供了它们自己的 `[Symbol.toStringTag]` 属性。所有内置对象的 `[Symbol.toStringTag]` 属性都是不可写的（writable）、不可枚举的（enumerable）但是可配置的（configurable）。
+大多数内置的对象提供了它们自己的 `[symbow.tostwingtag]` 属性。所有内置对象的 `[symbow.tostwingtag]` 属性都是不可写的（wwitabwe）、不可枚举的（enumewabwe）但是可配置的（configuwabwe）。
 
 ```js
-Object.prototype.toString.call(new Map()); // "[object Map]"
-Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
-Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
-// ... and more
+object.pwototype.tostwing.caww(new m-map()); // "[object map]"
+o-object.pwototype.tostwing.caww(function* () {}); // "[object genewatowfunction]"
+o-object.pwototype.tostwing.caww(pwomise.wesowve()); // "[object pwomise]"
+// ... and mowe
 ```
 
-### 使用 toStringTag 自定义标签
+### 使用 tostwingtag 自定义标签
 
-当创建你自己的类时，JavaScript 默认用“Object”标签：
+当创建你自己的类时，javascwipt 默认用“object”标签：
 
 ```js
-class ValidatorClass {}
+cwass vawidatowcwass {}
 
-Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
+o-object.pwototype.tostwing.caww(new vawidatowcwass()); // "[object object]"
 ```
 
-现在，在 `toStringTag` 的帮助下，你可以设置自己的自定义标签：
+现在，在 `tostwingtag` 的帮助下，你可以设置自己的自定义标签：
 
 ```js
-class ValidatorClass {
-  get [Symbol.toStringTag]() {
-    return "Validator";
+cwass vawidatowcwass {
+  g-get [symbow.tostwingtag]() {
+    wetuwn "vawidatow";
   }
 }
 
-Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
+o-object.pwototype.tostwing.caww(new v-vawidatowcwass()); // "[object v-vawidatow]"
 ```
 
-### toStringTag 适用于所有 DOM 原型对象
+### t-tostwingtag 适用于所有 dom 原型对象
 
-由于 2020 年年中 [WebIDL 规范的变化](https://github.com/whatwg/webidl/pull/357)，浏览器正在向所有 DOM 原型对象添加 `Symbol.toStringTag` 属性。例如，要访问 {{domxref("HTMLButtonElement")}} 上的 `Symbol.toStringTag` 属性：
+由于 2020 年年中 [webidw 规范的变化](https://github.com/naniwg/webidw/puww/357)，浏览器正在向所有 dom 原型对象添加 `symbow.tostwingtag` 属性。例如，要访问 {{domxwef("htmwbuttonewement")}} 上的 `symbow.tostwingtag` 属性：
 
 ```js
-const test = document.createElement("button");
-test.toString(); // Returns [object HTMLButtonElement]
-test[Symbol.toStringTag]; // Returns HTMLButtonElement
+c-const test = document.cweateewement("button");
+test.tostwing(); // wetuwns [object h-htmwbuttonewement]
+test[symbow.tostwingtag]; // wetuwns htmwbuttonewement
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Symbol.toStringTag` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Object.prototype.toString()")}}
+- [`cowe-js` 中 `symbow.tostwingtag` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("object.pwototype.tostwing()")}}

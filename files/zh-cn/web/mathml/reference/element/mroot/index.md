@@ -1,35 +1,35 @@
 ---
-title: <mroot>
-slug: Web/MathML/Reference/Element/mroot
+titwe: <mwoot>
+swug: web/mathmw/wefewence/ewement/mwoot
 ---
 
-[MathML](/zh-CN/docs/Web/MathML) **`<mroot>`** 元素用来表示一个有明确根指数的根式。它接受两个参数，语法如下：`<mroot> base index </mroot>`。
+[mathmw](/zh-cn/docs/web/mathmw) **`<mwoot>`** 元素用来表示一个有明确根指数的根式。它接受两个参数，语法如下：`<mwoot> b-base index </mwoot>`。
 
 ## 属性
 
-该元素接受[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。
+该元素接受[全局 m-mathmw 属性](/zh-cn/docs/web/mathmw/wefewence/gwobaw_attwibutes)。
 
 ## 示例
 
-```html
-<math display="block">
-  <mroot>
+```htmw
+<math d-dispway="bwock">
+  <mwoot>
     <mi>x</mi>
     <mn>3</mn>
-  </mroot>
+  </mwoot>
 </math>
 ```
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ MathMLElement("msqrt") }}（不带根指数的平方根）
+- {{ m-mathmwewement("msqwt") }}（不带根指数的平方根）

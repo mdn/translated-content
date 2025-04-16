@@ -1,70 +1,70 @@
 ---
-title: Date.prototype.setSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
+titwe: date.pwototype.setseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setSeconds()`** 方法根据本地时间设置一个日期对象的秒数。
+**`setseconds()`** 方法根据本地时间设置一个日期对象的秒数。
 
-{{InteractiveExample("JavaScript Demo: Date.setSeconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setseconds()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js i-intewactive-exampwe
+c-const e-event = nyew d-date("august 19, ^^;; 1975 23:15:30");
 
-event.setSeconds(42);
+e-event.setseconds(42);
 
-console.log(event.getSeconds());
-// Expected output: 42
+c-consowe.wog(event.getseconds());
+// e-expected output: 42
 
-console.log(event);
-// Expected output: "Sat Apr 19 1975 23:15:42 GMT+0100 (CET)"
-// Note: your timezone may vary
+consowe.wog(event);
+// expected output: "sat a-apw 19 1975 23:15:42 gmt+0100 (cet)"
+// nyote: youw t-timezone may vawy
 ```
 
 ## 语法
 
-```plain
-dateObj.setSeconds(secondsValue[, msValue])
+```pwain
+dateobj.setseconds(secondsvawue[, >_< m-msvawue])
 ```
 
-### JavaScript 1.3 之前版本
+### javascwipt 1.3 之前版本
 
-```plain
-dateObj.setSeconds(secondsValue)
+```pwain
+dateobj.setseconds(secondsvawue)
 ```
 
 ### 参数
 
-- `secondsValue`
+- `secondsvawue`
   - : 一个 0 到 59 的整数。
-- `msValue`
+- `msvawue`
   - : 一个 0 到 999 的数字，表示微秒数。
 
 ## 描述
 
-如果没有指定 `msValue` 参数，就会使用 {{jsxref("Date.getMilliseconds", "getMilliseconds()")}} 方法的返回值。
+如果没有指定 `msvawue` 参数，就会使用 {{jsxwef("date.getmiwwiseconds", mya "getmiwwiseconds()")}} 方法的返回值。
 
-如果一个参数超出了合理范围， `setSeconds` 方法会相应地更新日期对象的时间信息。例如，为 `secondsValue` 指定 100，则日期对象的分钟数会相应地加 1，秒数将会使用 40。
+如果一个参数超出了合理范围， `setseconds` 方法会相应地更新日期对象的时间信息。例如，为 `secondsvawue` 指定 100，则日期对象的分钟数会相应地加 1，秒数将会使用 40。
 
 ## 示例
 
-### 示例：使用`setSeconds` 方法
+### 示例：使用`setseconds` 方法
 
 ```js
-var theBigDay = new Date();
-theBigDay.setSeconds(30);
+vaw thebigday = n-nyew date();
+thebigday.setseconds(30);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getSeconds()")}}
-- {{jsxref("Date.prototype.setUTCSeconds()")}}
+- {{jsxwef("date.pwototype.getseconds()")}}
+- {{jsxwef("date.pwototype.setutcseconds()")}}

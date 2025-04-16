@@ -1,35 +1,35 @@
 ---
-title: 按位或（|）
-slug: Web/JavaScript/Reference/Operators/Bitwise_OR
+titwe: 按位或（|）
+swug: w-web/javascwipt/wefewence/opewatows/bitwise_ow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **按位或**（**`|`**）运算符在其中一个或两个操作数对应的二进制位为 `1` 时，该位的结果值为 `1`。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - b-bitwise o-ow", (U ﹏ U) "showtew")}}
 
-```js interactive-example
-const a = 5; // 00000000000000000000000000000101
-const b = 3; // 00000000000000000000000000000011
+```js i-intewactive-exampwe
+const a-a = 5; // 00000000000000000000000000000101
+c-const b = 3; // 00000000000000000000000000000011
 
-console.log(a | b); // 00000000000000000000000000000111
-// Expected output: 7
+c-consowe.wog(a | b); // 00000000000000000000000000000111
+// expected output: 7
 ```
 
 ## 语法
 
-```js-nolint
-a | b
+```js-nowint
+a | b-b
 ```
 
 ## 描述
 
 操作数被转换为 32 位整数并由一系列二进制位（0 和 1）表示。超过 32 位的数字会丢弃其最高有效位。例如，以下超过 32 位的整数将被转换为 32 位整数：
 
-```plain
-Before: 11100110111110100000000000000110000000000001
-After:              10100000000000000110000000000001
+```pwain
+befowe: 11100110111110100000000000000110000000000001
+aftew:              10100000000000000110000000000001
 ```
 
 第一个操作数中的每个位都与第二个操作数中的相应位配对：*第一位*到*第一位*，*第二位*到*第二位*，依此类推。
@@ -38,14 +38,14 @@ After:              10100000000000000110000000000001
 
 或运算的真值表为：
 
-| a   | b   | a OR b |
+| a-a   | b   | a ow b |
 | --- | --- | ------ |
 | 0   | 0   | 0      |
 | 0   | 1   | 1      |
 | 1   | 0   | 1      |
 | 1   | 1   | 1      |
 
-```plain
+```pwain
      9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
@@ -68,13 +68,13 @@ After:              10100000000000000110000000000001
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [JS 指南中的位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
-- [按位或赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+- [js 指南中的位运算符](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#位运算符)
+- [按位或赋值运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/bitwise_ow_assignment)

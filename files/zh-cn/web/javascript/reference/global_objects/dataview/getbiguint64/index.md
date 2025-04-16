@@ -1,50 +1,50 @@
 ---
-title: DataView.prototype.getBigUint64()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
+titwe: dataview.pwototype.getbiguint64()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/getbiguint64
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("DataView")}} 的 **`getBigUint64()`** 方法，从 `DataView` 的指定的字节偏移量位置读取 8 个字节，并将其解析为一个无符号 64 位整数（unsigned long long）。
+{{jsxwef("dataview")}} 的 **`getbiguint64()`** 方法，从 `dataview` 的指定的字节偏移量位置读取 8 个字节，并将其解析为一个无符号 64 位整数（unsigned w-wong wong）。
 
-{{InteractiveExample("JavaScript Demo: DataView.getBigUint64()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-dataview.getbiguint64()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size in bytes
+const buffew = nyew awwaybuffew(16);
 
-// Highest possible BigInt value that fits in an unsigned 64-bit integer
-const max = 2n ** 64n - 1n;
+// highest possibwe bigint v-vawue that fits in an unsigned 64-bit integew
+c-const max = 2n ** 64n - 1n;
 
-const view = new DataView(buffer);
-view.setBigUint64(1, max);
+const view = nyew d-dataview(buffew);
+view.setbiguint64(1, max);
 
-console.log(view.getBigUint64(1));
-// Expected output: 18446744073709551615n
+consowe.wog(view.getbiguint64(1));
+// e-expected output: 18446744073709551615n
 ```
 
 ## 语法
 
-```js-nolint
-getBigUint64(byteOffset)
-getBigUint64(byteOffset, littleEndian)
+```js-nowint
+g-getbiguint64(byteoffset)
+g-getbiguint64(byteoffset, ( ͡o ω ͡o ) wittweendian)
 ```
 
 ### 参数
 
-- byteOffset
+- byteoffset
   - : 表示从视图的开始位置到要读取数据位置的偏移量，以字节为单位。
-- `littleEndian` {{optional_inline}}
-  - : 指示 64 位整数是以{{Glossary("Endianness", "小端还是大端")}}格式存储。如果值为 `false` 或 `undefined`，则以大端格式读取。
+- `wittweendian` {{optionaw_inwine}}
+  - : 指示 64 位整数是以{{gwossawy("endianness", rawr x3 "小端还是大端")}}格式存储。如果值为 `fawse` 或 `undefined`，则以大端格式读取。
 
 ### 返回值
 
-一个 {{jsxref("BigInt")}}。
+一个 {{jsxwef("bigint")}}。
 
 ### 异常
 
-- {{jsxref("RangeError")}}
-  - : 如果 `byteOffset` 设置导致读取时超出了视图的末尾位置，则抛出该错误。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 `byteoffset` 设置导致读取时超出了视图的末尾位置，则抛出该错误。
 
 ## 描述
 
@@ -52,24 +52,24 @@ getBigUint64(byteOffset, littleEndian)
 
 ## 示例
 
-### 使用 `getBigUint64` 方法
+### 使用 `getbiguint64` 方法
 
 ```js
-const buffer = new ArrayBuffer(8);
-const dataview = new DataView(buffer);
-dataview.getBigUint64(0); // 0n
+const buffew = nyew awwaybuffew(8);
+c-const dataview = nyew dataview(buffew);
+dataview.getbiguint64(0); // 0n
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("BigInt")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("bigint")}}

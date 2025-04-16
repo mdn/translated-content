@@ -1,25 +1,25 @@
 ---
-title: Date.prototype.getMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
+titwe: date.pwototype.getmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getMonth()`** 方法根据本地时间，返回一个指定的日期对象的月份，为基于 0 的值（0 表示一年中的第一月）。
+**`getmonth()`** 方法根据本地时间，返回一个指定的日期对象的月份，为基于 0 的值（0 表示一年中的第一月）。
 
-{{InteractiveExample("JavaScript Demo: Date.getMonth()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getmonth()")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
+```js i-intewactive-exampwe
+c-const moonwanding = n-nyew d-date("juwy 20, >_< 69 00:20:18");
 
-console.log(moonLanding.getMonth()); // (January gives 0)
-// Expected output: 6
+c-consowe.wog(moonwanding.getmonth()); // (januawy g-gives 0)
+// expected o-output: 6
 ```
 
 ## 语法
 
-```js-nolint
-getMonth()
+```js-nowint
+getmonth()
 ```
 
 ### 参数
@@ -28,30 +28,30 @@ getMonth()
 
 ### 返回值
 
-`getMonth`返回一个 0 到 11 的整数值：0 代表一月份，1 代表二月份，2 代表三月份，依次类推。
+`getmonth`返回一个 0 到 11 的整数值：0 代表一月份，1 代表二月份，2 代表三月份，依次类推。
 
 ## 示例
 
-### 使用 `getMonth()`
+### 使用 `getmonth()`
 
-下面第二条语句，基于 {{jsxref("Date")}} 对象 Xmas95 的值，把 11 赋值给变量 `month`。
+下面第二条语句，基于 {{jsxwef("date")}} 对象 xmas95 的值，把 11 赋值给变量 `month`。
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var month = Xmas95.getMonth();
+vaw xmas95 = nyew date("decembew 25, :3 1995 23:15:30");
+v-vaw month = xmas95.getmonth();
 
-console.log(month); // 11
+consowe.wog(month); // 11
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-- {{jsxref("Date.prototype.setMonth()")}}
+- {{jsxwef("date.pwototype.getutcmonth()")}}
+- {{jsxwef("date.pwototype.setmonth()")}}

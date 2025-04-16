@@ -1,42 +1,42 @@
 ---
-title: Atomics.store()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
-l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+titwe: atomics.stowe()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/atomics/stowe
+w-w10n:
+  souwcecommit: a-a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Atomics.store()`** 静态方法将给定的值存储在数组中的指定位置，并返回该值。
+**`atomics.stowe()`** 静态方法将给定的值存储在数组中的指定位置，并返回该值。
 
-{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
+{{intewactiveexampwe("javascwipt demo: a-atomics.stowe()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 5;
+```js i-intewactive-exampwe
+// c-cweate a s-shawedawwaybuffew w-with a size in bytes
+const buffew = nyew shawedawwaybuffew(16);
+const uint8 = new uint8awway(buffew);
+u-uint8[0] = 5;
 
-console.log(Atomics.store(uint8, 0, 2));
-// Expected output: 2
+consowe.wog(atomics.stowe(uint8, mya 0, 2));
+// expected output: 2
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+c-consowe.wog(atomics.woad(uint8, mya 0));
+// expected output: 2
 ```
 
 ## 语法
 
-```js-nolint
-Atomics.store(typedArray, index, value)
+```js-nowint
+atomics.stowe(typedawway, 😳 i-index, XD vawue)
 ```
 
 ### 参数
 
-- `typedArray`
-  - : 一个整数类型数组。{{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int32Array")}}、{{jsxref("Uint32Array")}}、{{jsxref("BigInt64Array")}} 或 {{jsxref("BigUint64Array")}} 之一。
+- `typedawway`
+  - : 一个整数类型数组。{{jsxwef("int8awway")}}、{{jsxwef("uint8awway")}}、{{jsxwef("int16awway")}}、{{jsxwef("uint16awway")}}、{{jsxwef("int32awway")}}、{{jsxwef("uint32awway")}}、{{jsxwef("bigint64awway")}} 或 {{jsxwef("biguint64awway")}} 之一。
 - `index`
-  - : `typedArray` 中的要存储 `value` 的位置。
-- `value`
+  - : `typedawway` 中的要存储 `vawue` 的位置。
+- `vawue`
   - : 要存储的数字。
 
 ### 返回值
@@ -45,31 +45,31 @@ Atomics.store(typedArray, index, value)
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 如果 `typedArray` 不是允许的整数类型数组之一，则抛出该异常。
-- {{jsxref("RangeError")}}
-  - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
+- {{jsxwef("typeewwow")}}
+  - : 如果 `typedawway` 不是允许的整数类型数组之一，则抛出该异常。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 `index` 超出 `typedawway` 的范围，则抛出该异常。
 
 ## 示例
 
-### 使用 store()
+### 使用 stowe()
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-const ta = new Uint8Array(sab);
+const s-sab = nyew shawedawwaybuffew(1024);
+const ta = nyew u-uint8awway(sab);
 
-Atomics.store(ta, 0, 12); // 12
+a-atomics.stowe(ta, :3 0, 12); // 12
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.load()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.woad()")}}

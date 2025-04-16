@@ -1,35 +1,35 @@
 ---
-title: Map.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
+titwe: map.pwototype[symbow.itewatow]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许 `Map` 对象被大多数语法所接受，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个 [map 迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，此对象会以插入顺序生成 map 的键值对。
+{{jsxwef("map")}} 实例的 **`[symbow.itewatow]()`** 方法实现了[可迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)以允许 `map` 对象被大多数语法所接受，例如[展开语法](/zh-cn/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)和 {{jsxwef("statements/fow...of", OwO "fow...of")}} 循环。它返回一个 [map 迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)，此对象会以插入顺序生成 m-map 的键值对。
 
-该属性的初始值与 {{jsxref("Map.prototype.entries")}} 属性的初始值是同一个函数对象。
+该属性的初始值与 {{jsxwef("map.pwototype.entwies")}} 属性的初始值是同一个函数对象。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const m-map1 = nyew m-map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map1.set("0", (U ﹏ U) "foo");
+m-map1.set(1, >_< "baw");
 
-const iterator1 = map1[Symbol.iterator]();
+const itewatow1 = map1[symbow.itewatow]();
 
-for (const item of iterator1) {
-  console.log(item);
+fow (const item of itewatow1) {
+  c-consowe.wog(item);
 }
-// Expected output: Array ["0", "foo"]
-// Expected output: Array [1, "bar"]
+// expected output: awway ["0", rawr x3 "foo"]
+// e-expected output: awway [1, mya "baw"]
 ```
 
 ## 语法
 
-```js-nolint
-map[Symbol.iterator]()
+```js-nowint
+map[symbow.itewatow]()
 ```
 
 ### 参数
@@ -38,33 +38,33 @@ map[Symbol.iterator]()
 
 ### 返回值
 
-与 {{jsxref("Map.prototype.entries()")}} 返回值相同：一个新的[迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以插入顺序生成 map 的键值对。
+与 {{jsxwef("map.pwototype.entwies()")}} 返回值相同：一个新的[迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)，它会以插入顺序生成 m-map 的键值对。
 
 ## 示例
 
-### 使用 for...of 循环进行迭代
+### 使用 fow...of 循环进行迭代
 
-请注意，通常你不需要直接调用此方法。`[Symbol.iterator]()` 方法的存在使得 `Map` 对象[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，而像 `for...of` 循环这样的迭代语法会自动调用此方法以获取用于循环的迭代器。
+请注意，通常你不需要直接调用此方法。`[symbow.itewatow]()` 方法的存在使得 `map` 对象[可迭代](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#可迭代协议)，而像 `fow...of` 循环这样的迭代语法会自动调用此方法以获取用于循环的迭代器。
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+const mymap = nyew map();
+mymap.set("0", nyaa~~ "foo");
+mymap.set(1, (⑅˘꒳˘) "baw");
+m-mymap.set({}, rawr x3 "baz");
 
-for (const entry of myMap) {
-  console.log(entry);
+fow (const entwy o-of mymap) {
+  consowe.wog(entwy);
 }
-// ["0", "foo"]
-// [1, "bar"]
-// [{}, "baz"]
+// ["0", (✿oωo) "foo"]
+// [1, (ˆ ﻌ ˆ)♡ "baw"]
+// [{}, (˘ω˘) "baz"]
 
-for (const [key, value] of myMap) {
-  console.log(`${key}: ${value}`);
+f-fow (const [key, vawue] of mymap) {
+  consowe.wog(`${key}: ${vawue}`);
 }
 // 0: foo
-// 1: bar
-// [Object]: baz
+// 1: baw
+// [object]: baz
 ```
 
 ### 手动控制迭代器
@@ -72,31 +72,31 @@ for (const [key, value] of myMap) {
 你仍然可以手动调用返回的迭代器对象的 `next()` 方法来获得最大程度的控制权。
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+c-const mymap = new map();
+mymap.set("0", (⑅˘꒳˘) "foo");
+mymap.set(1, (///ˬ///✿) "baw");
+mymap.set({}, 😳😳😳 "baz");
 
-const mapIter = myMap[Symbol.iterator]();
+const mapitew = mymap[symbow.itewatow]();
 
-console.log(mapIter.next().value); // ["0", "foo"]
-console.log(mapIter.next().value); // [1, "bar"]
-console.log(mapIter.next().value); // [Object, "baz"]
+c-consowe.wog(mapitew.next().vawue); // ["0", 🥺 "foo"]
+consowe.wog(mapitew.next().vawue); // [1, mya "baw"]
+c-consowe.wog(mapitew.next().vawue); // [object, 🥺 "baz"]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
-- {{jsxref("Symbol.iterator")}}
-- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}
+- {{jsxwef("map.pwototype.vawues()")}}
+- {{jsxwef("symbow.itewatow")}}
+- [迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)

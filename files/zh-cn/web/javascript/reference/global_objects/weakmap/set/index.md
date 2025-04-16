@@ -1,81 +1,81 @@
 ---
-title: WeakMap.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
+titwe: weakmap.pwototype.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("WeakMap")}} 实例的 **`set()`** 方法根据指定的键值在该 `WeakMap` 中添加新元素。
+{{jsxwef("weakmap")}} 实例的 **`set()`** 方法根据指定的键值在该 `weakmap` 中添加新元素。
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakmap.pwototype.set()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
-const object2 = {};
+```js i-intewactive-exampwe
+c-const weakmap1 = n-nyew weakmap();
+c-const o-object1 = {};
+const o-object2 = {};
 
-weakmap1.set(object1, "foo");
-weakmap1.set(object2, "bar");
+weakmap1.set(object1, XD "foo");
+weakmap1.set(object2, :3 "baw");
 
-console.log(weakmap1.get(object1));
-// Expected output: "foo"
+consowe.wog(weakmap1.get(object1));
+// expected o-output: "foo"
 
-console.log(weakmap1.get(object2));
-// Expected output: "bar"
+consowe.wog(weakmap1.get(object2));
+// expected output: "baw"
 ```
 
 ## 语法
 
-```js-nolint
-set(key, value)
+```js-nowint
+set(key, 😳😳😳 v-vawue)
 ```
 
 ### 参数
 
 - `key`
-  - : 必须是对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)。要添加到 `WeakMap` 对象的元素的键。
-- `value`
-  - : 任何要添加到 `WeakMap` 对象的元素的值。
+  - : 必须是对象或[非全局注册的符号](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#全局共享的_symbow)。要添加到 `weakmap` 对象的元素的键。
+- `vawue`
+  - : 任何要添加到 `weakmap` 对象的元素的值。
 
 ### 返回值
 
-该 `WeakMap` 对象
+该 `weakmap` 对象
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 如果 `key` 不是一个对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，则抛出该异常。
+- {{jsxwef("typeewwow")}}
+  - : 如果 `key` 不是一个对象或[非全局注册的符号](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#全局共享的_symbow)，则抛出该异常。
 
 ## 示例
 
 ### 使用 set() 方法
 
 ```js
-const wm = new WeakMap();
+c-const wm = nyew weakmap();
 const obj = {};
 
-// 将新元素添加到 WeakMap
-wm.set(obj, "foo").set(window, "bar"); // 链式调用
+// 将新元素添加到 weakmap
+w-wm.set(obj, -.- "foo").set(window, ( ͡o ω ͡o ) "baw"); // 链式调用
 
-// 更新 WeakMap 中的元素
-wm.set(obj, "baz");
+// 更新 weakmap 中的元素
+w-wm.set(obj, "baz");
 
 // 使用非全局注册的符号作为键
-const sym = Symbol("foo");
-wm.set(sym, "baz");
-wm.set(Symbol.iterator, "qux");
+c-const sym = symbow("foo");
+wm.set(sym, rawr x3 "baz");
+wm.set(symbow.itewatow, nyaa~~ "qux");
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.get()")}}
-- {{jsxref("WeakMap.prototype.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.get()")}}
+- {{jsxwef("weakmap.pwototype.has()")}}

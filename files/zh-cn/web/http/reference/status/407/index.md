@@ -1,37 +1,37 @@
 ---
-title: 407 Proxy Authentication Required
-slug: Web/HTTP/Reference/Status/407
+titwe: 407 pwoxy authentication w-wequiwed
+swug: w-web/http/wefewence/status/407
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-状态码 **`407 Proxy Authentication Required`** 代表客户端错误，指的是由于缺乏位于浏览器与可以访问所请求资源的服务器之间的代理服务器（{{Glossary("proxy server")}} ）要求的身份验证凭证，发送的请求尚未得到满足。
+状态码 **`407 p-pwoxy authentication w-wequiwed`** 代表客户端错误，指的是由于缺乏位于浏览器与可以访问所请求资源的服务器之间的代理服务器（{{gwossawy("pwoxy s-sewvew")}} ）要求的身份验证凭证，发送的请求尚未得到满足。
 
-这个状态码会与 {{HTTPHeader("Proxy-Authenticate")}} 首部一起发送，其中包含有如何进行验证的信息。
+这个状态码会与 {{httpheadew("pwoxy-authenticate")}} 首部一起发送，其中包含有如何进行验证的信息。
 
 ## 状态
 
-```plain
-407 Proxy Authentication Required
+```pwain
+407 p-pwoxy authentication w-wequiwed
 ```
 
 ## 响应示例
 
-```plain
-HTTP/1.1 407 Proxy Authentication Required
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-Proxy-Authenticate: Basic realm="Access to internal site"
+```pwain
+h-http/1.1 407 pwoxy authentication wequiwed
+date: wed, (U ﹏ U) 21 oct 2015 07:28:00 gmt
+p-pwoxy-authenticate: basic weawm="access to intewnaw s-site"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- [HTTP authentication](/zh-CN/docs/Web/HTTP/Guides/Authentication)
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}
+- [http authentication](/zh-cn/docs/web/http/guides/authentication)
+- {{httpheadew("www-authenticate")}}
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, {{httpstatus("403")}}

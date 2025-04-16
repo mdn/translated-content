@@ -1,77 +1,77 @@
 ---
-title: TypedArray.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
+titwe: typedawway.pwototype[symbow.itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("TypedArray")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许类型化数组被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[数组迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以类型化数组中的每个索引的值生成数组。
+{{jsxwef("typedawway")}} 实例的 **`[symbow.itewatow]()`** 方法实现了[可迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)以允许类型化数组被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-cn/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)和 {{jsxwef("statements/fow...of", 😳😳😳 "fow...of")}} 循环。它返回一个[数组迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)，它会以类型化数组中的每个索引的值生成数组。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30]);
-const iterator1 = uint8[Symbol.iterator]();
+```js intewactive-exampwe
+c-const uint8 = n-nyew uint8awway([10, -.- 20, 30]);
+c-const itewatow1 = u-uint8[symbow.itewatow]();
 
-for (const value of iterator1) {
-  console.log(value);
+f-fow (const v-vawue of i-itewatow1) {
+  consowe.wog(vawue);
 }
 
-// Expected output: 10
-// Expected output: 20
-// Expected output: 30
+// expected output: 10
+// expected output: 20
+// e-expected output: 30
 ```
 
 ## 语法
 
-```js-nolint
-typedArray[Symbol.iterator]()
+```js-nowint
+typedawway[symbow.itewatow]()
 ```
 
 ### 返回值
 
-数组的 **迭代器** 函数，通常是 {{jsxref("TypedArray.prototype.values()", "values()")}}函数。
+数组的 **迭代器** 函数，通常是 {{jsxwef("typedawway.pwototype.vawues()", ( ͡o ω ͡o ) "vawues()")}}函数。
 
 ## 示例
 
-### 使用`for...of` 循环的迭代
+### 使用`fow...of` 循环的迭代
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-// 你的浏览器必须支持 for..of 循环
-// 以及 for 循环中的 let 区域变量
-for (let n of arr) {
-  console.log(n);
+vaw a-aww = nyew uint8awway([10, rawr x3 20, 30, 40, 50]);
+// 你的浏览器必须支持 fow..of 循环
+// 以及 fow 循环中的 w-wet 区域变量
+fow (wet ny of aww) {
+  consowe.wog(n);
 }
 ```
 
 ### 备选迭代
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr[Symbol.iterator]();
-console.log(eArr.next().value); // 10
-console.log(eArr.next().value); // 20
-console.log(eArr.next().value); // 30
-console.log(eArr.next().value); // 40
-console.log(eArr.next().value); // 50
+v-vaw aww = nyew uint8awway([10, nyaa~~ 20, 30, 40, /(^•ω•^) 50]);
+v-vaw eaww = aww[symbow.itewatow]();
+c-consowe.wog(eaww.next().vawue); // 10
+consowe.wog(eaww.next().vawue); // 20
+consowe.wog(eaww.next().vawue); // 30
+consowe.wog(eaww.next().vawue); // 40
+consowe.wog(eaww.next().vawue); // 50
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `TypedArray.prototype[Symbol.iterator]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.entries()")}}
-- {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("Symbol.iterator")}}
-- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`cowe-js` 中 `typedawway.pwototype[symbow.itewatow]` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt 类型化数组](/zh-cn/docs/web/javascwipt/guide/typed_awways)指南
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.entwies()")}}
+- {{jsxwef("typedawway.pwototype.keys()")}}
+- {{jsxwef("typedawway.pwototype.vawues()")}}
+- {{jsxwef("symbow.itewatow")}}
+- [迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)

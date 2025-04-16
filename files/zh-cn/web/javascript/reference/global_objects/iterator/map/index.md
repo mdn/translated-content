@@ -1,32 +1,32 @@
 ---
-title: Iterator.prototype.map()
-slug: Web/JavaScript/Reference/Global_Objects/Iterator/map
-l10n:
-  sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
+titwe: itewatow.pwototype.map()
+swug: web/javascwipt/wefewence/gwobaw_objects/itewatow/map
+w-w10n:
+  s-souwcecommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{jswef}}{{seecompattabwe}}
 
-{{jsxref("Iterator")}} 实例的 **`map()`** 方法返回一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#%e8%bf%ad%e4%bb%a3%e5%99%a8%e8%be%85%e5%8a%a9%e6%96%b9%e6%b3%95)，该方法生成由映射函数转换后的迭代器的元素。
+{{jsxwef("itewatow")}} 实例的 **`map()`** 方法返回一个新的[迭代器辅助方法](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow#%e8%bf%ad%e4%bb%a3%e5%99%a8%e8%be%85%e5%8a%a9%e6%96%b9%e6%b3%95)，该方法生成由映射函数转换后的迭代器的元素。
 
 ## 语法
 
-```js-nolint
-map(callbackFn)
+```js-nowint
+m-map(cawwbackfn)
 ```
 
 ### 参数
 
-- `callbackFn`
+- `cawwbackfn`
   - : 为迭代器中的每个元素执行的函数。其返回值将由迭代器辅助方法生成。该函数被调用时将传入以下参数：
-    - `element`
+    - `ewement`
       - : 当前正在处理的元素。
     - `index`
       - : 正在处理的当前元素的索引。
 
 ### 返回值
 
-一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#%e8%bf%ad%e4%bb%a3%e5%99%a8%e8%be%85%e5%8a%a9%e6%96%b9%e6%b3%95)。每当迭代器辅助方法的 `next()` 方法被调用时，它从底层迭代器中获取下一个元素，调用 `callbackFn`，并产生返回值。当底层迭代器完成时，迭代器辅助方法也会完成（`next()` 方法产生 `{ value: undefined, done: true }`）。
+一个新的[迭代器辅助方法](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow#%e8%bf%ad%e4%bb%a3%e5%99%a8%e8%be%85%e5%8a%a9%e6%96%b9%e6%b3%95)。每当迭代器辅助方法的 `next()` 方法被调用时，它从底层迭代器中获取下一个元素，调用 `cawwbackfn`，并产生返回值。当底层迭代器完成时，迭代器辅助方法也会完成（`next()` 方法产生 `{ v-vawue: u-undefined, nyaa~~ done: t-twue }`）。
 
 ## 描述
 
@@ -34,35 +34,35 @@ map(callbackFn)
 
 ## 示例
 
-### 使用 map()
+### 使用 m-map()
 
 下面的示例创建了一个生成斐波那契数列中的项的迭代器，并将其转换为每个项的平方的新迭代器，然后读取前几个项：
 
 ```js
-function* fibonacci() {
-  let current = 1;
-  let next = 1;
-  while (true) {
-    yield current;
-    [current, next] = [next, current + next];
+f-function* fibonacci() {
+  wet cuwwent = 1;
+  wet nyext = 1;
+  whiwe (twue) {
+    yiewd cuwwent;
+    [cuwwent, /(^•ω•^) nyext] = [next, rawr cuwwent + n-nyext];
   }
 }
 
-const seq = fibonacci().map((x) => x ** 2);
-console.log(seq.next().value); // 1
-console.log(seq.next().value); // 1
-console.log(seq.next().value); // 4
+const seq = fibonacci().map((x) => x-x ** 2);
+consowe.wog(seq.next().vawue); // 1
+c-consowe.wog(seq.next().vawue); // 1
+consowe.wog(seq.next().vawue); // 4
 ```
 
-### 在 for...of 循环中使用 map()
+### 在 fow...of 循环中使用 map()
 
-当你不想手动迭代迭代器时，`map()` 是最方便的。因为迭代器也是可迭代的，所以你可以用 {{jsxref("Statements/for...of", "for...of")}} 循环来迭代返回的辅助方法：
+当你不想手动迭代迭代器时，`map()` 是最方便的。因为迭代器也是可迭代的，所以你可以用 {{jsxwef("statements/fow...of", OwO "fow...of")}} 循环来迭代返回的辅助方法：
 
 ```js
-for (const n of fibonacci().map((x) => x ** 2)) {
-  console.log(n);
+f-fow (const ny of fibonacci().map((x) => x-x ** 2)) {
+  c-consowe.wog(n);
   if (n > 30) {
-    break;
+    bweak;
   }
 }
 
@@ -78,23 +78,23 @@ for (const n of fibonacci().map((x) => x ** 2)) {
 等价于：
 
 ```js
-for (const n of fibonacci()) {
-  const n2 = n ** 2;
-  console.log(n2);
+fow (const ny of fibonacci()) {
+  c-const ny2 = ny ** 2;
+  consowe.wog(n2);
   if (n2 > 30) {
-    break;
+    bweak;
   }
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Iterator.prototype.map` 的 polyfill](https://github.com/zloirock/core-js#iterator-helpers)
+- [`cowe-js` 中 `itewatow.pwototype.map` 的 powyfiww](https://github.com/zwoiwock/cowe-js#itewatow-hewpews)

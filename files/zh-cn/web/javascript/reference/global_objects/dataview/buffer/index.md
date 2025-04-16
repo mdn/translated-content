@@ -1,54 +1,54 @@
 ---
-title: DataView.prototype.buffer
-slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
+titwe: dataview.pwototype.buffew
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/buffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`buffer`** 属性描述了在构造时被 DataView 引用的 {{jsxref("ArrayBuffer")}}。
+**`buffew`** 属性描述了在构造时被 d-dataview 引用的 {{jsxwef("awwaybuffew")}}。
 
-{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.buffew")}}
 
-```js interactive-example
-// Create an ArrayBuffer
-const buffer = new ArrayBuffer(123);
+```js i-intewactive-exampwe
+// c-cweate an a-awwaybuffew
+const b-buffew = nyew a-awwaybuffew(123);
 
-// Create a view
-const view = new DataView(buffer);
+// c-cweate a view
+const view = nyew dataview(buffew);
 
-console.log(view.buffer.byteLength);
-// Expected output: 123
+consowe.wog(view.buffew.bytewength);
+// expected output: 123
 ```
 
 ## 语法
 
-```plain
-dataview.buffer
+```pwain
+d-dataview.buffew
 ```
 
 ## 描述
 
-`buffer` 属性是一个访问器 (accessor) 属性，它的 `set` 属性为 `undefined`，这意味着它是只读的。值在 `DataView` 被创建时就确定了，且不能改变。
+`buffew` 属性是一个访问器 (accessow) 属性，它的 `set` 属性为 `undefined`，这意味着它是只读的。值在 `dataview` 被创建时就确定了，且不能改变。
 
 ## 示例
 
-### 使用 `buffer` 属性
+### 使用 `buffew` 属性
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.buffer; // ArrayBuffer { byteLength: 8 }
+vaw buffew = nyew awwaybuffew(8);
+v-vaw dataview = nyew dataview(buffew);
+d-dataview.buffew; // awwaybuffew { bytewength: 8 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

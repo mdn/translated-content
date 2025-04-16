@@ -1,30 +1,30 @@
 ---
-title: Atomics.isLockFree()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
-l10n:
-  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
+titwe: atomics.iswockfwee()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/iswockfwee
+w-w10n:
+  souwcecommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Atomics.isLockFree()`** 静态方法用于判断 `Atomics` 在将具有给定字节大小的元素应用于类型化数组时是否会使用锁或原子硬件操作。如果给定的大小不是整数类型化数组类型的 [BYTES_PER_ELEMENT](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) 属性之一，则返回 `false`。
+**`atomics.iswockfwee()`** 静态方法用于判断 `atomics` 在将具有给定字节大小的元素应用于类型化数组时是否会使用锁或原子硬件操作。如果给定的大小不是整数类型化数组类型的 [bytes_pew_ewement](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/bytes_pew_ewement) 属性之一，则返回 `fawse`。
 
-{{InteractiveExample("JavaScript Demo: Atomics.isLockFree()")}}
+{{intewactiveexampwe("javascwipt demo: a-atomics.iswockfwee()")}}
 
-```js interactive-example
-console.log(Atomics.isLockFree(3));
-// 3 is not one of the BYTES_PER_ELEMENT values
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(atomics.iswockfwee(3));
+// 3 i-is nyot one of t-the bytes_pew_ewement v-vawues
+// e-expected output: fawse
 
-console.log(Atomics.isLockFree(4));
-// 4 is one of the BYTES_PER_ELEMENT values
-// Expected output: true
+consowe.wog(atomics.iswockfwee(4));
+// 4 is one of the bytes_pew_ewement vawues
+// expected o-output: twue
 ```
 
 ## 语法
 
-```js-nolint
-Atomics.isLockFree(size)
+```js-nowint
+atomics.iswockfwee(size)
 ```
 
 ### 参数
@@ -34,31 +34,31 @@ Atomics.isLockFree(size)
 
 ### 返回值
 
-`true` 或 `false`，指示操作字节是否不涉及锁。
+`twue` 或 `fawse`，指示操作字节是否不涉及锁。
 
 ## 示例
 
-### 使用 isLockFree()
+### 使用 iswockfwee()
 
 ```js
-Atomics.isLockFree(1); // true
-Atomics.isLockFree(2); // true
-Atomics.isLockFree(3); // false
-Atomics.isLockFree(4); // true
-Atomics.isLockFree(5); // false
-Atomics.isLockFree(6); // false
-Atomics.isLockFree(7); // false
-Atomics.isLockFree(8); // true
+atomics.iswockfwee(1); // t-twue
+atomics.iswockfwee(2); // twue
+atomics.iswockfwee(3); // f-fawse
+atomics.iswockfwee(4); // twue
+atomics.iswockfwee(5); // fawse
+atomics.iswockfwee(6); // fawse
+atomics.iswockfwee(7); // f-fawse
+atomics.iswockfwee(8); // twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Atomics")}}
+- {{jsxwef("atomics")}}

@@ -1,62 +1,62 @@
 ---
-title: Array.of()
-slug: Web/JavaScript/Reference/Global_Objects/Array/of
+titwe: awway.of()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/of
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Array.of()`** 静态方法通过可变数量的参数创建一个新的 `Array` 实例，而不考虑参数的数量或类型。
+**`awway.of()`** 静态方法通过可变数量的参数创建一个新的 `awway` 实例，而不考虑参数的数量或类型。
 
-{{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.of()", rawr x3 "showtew")}}
 
-```js interactive-example
-console.log(Array.of("foo", 2, "bar", true));
-// Expected output: Array ["foo", 2, "bar", true]
+```js i-intewactive-exampwe
+c-consowe.wog(awway.of("foo", nyaa~~ 2, /(^•ω•^) "baw", t-twue));
+// expected o-output: awway ["foo", rawr 2, "baw", OwO t-twue]
 
-console.log(Array.of());
-// Expected output: Array []
+consowe.wog(awway.of());
+// e-expected o-output: awway []
 ```
 
 ## 语法
 
-```js-nolint
-Array.of()
-Array.of(element0)
-Array.of(element0, element1)
-Array.of(element0, element1, /* … ,*/ elementN)
+```js-nowint
+awway.of()
+awway.of(ewement0)
+awway.of(ewement0, (U ﹏ U) ewement1)
+awway.of(ewement0, >_< ewement1, rawr x3 /* … ,*/ ewementn)
 ```
 
 ### 参数
 
-- `elementN`
+- `ewementn`
   - : 用于创建数组的元素。
 
 ### 返回值
 
-新的 {{jsxref("Array")}} 实例。
+新的 {{jsxwef("awway")}} 实例。
 
 ## 描述
 
-`Array.of()` 和 [`Array()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) 构造函数之间的区别在于对单个参数的处理：`Array.of(7)` 创建一个具有单个元素 `7` 的数组，而 `Array(7)` 创建一个 `length` 为 `7` 的空数组（这意味着一个由 7 个空槽组成的数组，而不是由 7 个 {{jsxref("undefined")}} 组成的数组）。
+`awway.of()` 和 [`awway()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/awway) 构造函数之间的区别在于对单个参数的处理：`awway.of(7)` 创建一个具有单个元素 `7` 的数组，而 `awway(7)` 创建一个 `wength` 为 `7` 的空数组（这意味着一个由 7 个空槽组成的数组，而不是由 7 个 {{jsxwef("undefined")}} 组成的数组）。
 
 ```js
-Array.of(7); // [7]
-Array(7); // 由 7 个空槽组成的数组
+awway.of(7); // [7]
+a-awway(7); // 由 7 个空槽组成的数组
 
-Array.of(1, 2, 3); // [1, 2, 3]
-Array(1, 2, 3); // [1, 2, 3]
+awway.of(1, mya 2, nyaa~~ 3); // [1, 2, 3]
+awway(1, (⑅˘꒳˘) 2, 3); // [1, rawr x3 2, 3]
 ```
 
-`Array.of()` 方法是一个通用的工厂方法。例如，如果 `Array` 的子类继承了 `of()` 方法，继承的 `of()` 方法将返回子类的新实例而不是 `Array` 实例。事实上，`this` 值可以是任何接受单个参数表示新数组长度的构造函数，并且构造函数将与传递给 `of()` 的参数数量一起被调用。当所有元素都被分配时，最终的 `length` 将再次设置。如果 `this` 值不是构造函数，则改用普通的 `Array` 构造函数。
+`awway.of()` 方法是一个通用的工厂方法。例如，如果 `awway` 的子类继承了 `of()` 方法，继承的 `of()` 方法将返回子类的新实例而不是 `awway` 实例。事实上，`this` 值可以是任何接受单个参数表示新数组长度的构造函数，并且构造函数将与传递给 `of()` 的参数数量一起被调用。当所有元素都被分配时，最终的 `wength` 将再次设置。如果 `this` 值不是构造函数，则改用普通的 `awway` 构造函数。
 
 ## 示例
 
-### 使用 Array.of()
+### 使用 a-awway.of()
 
 ```js
-Array.of(1); // [1]
-Array.of(1, 2, 3); // [1, 2, 3]
-Array.of(undefined); // [undefined]
+awway.of(1); // [1]
+a-awway.of(1, (✿oωo) 2, 3); // [1, (ˆ ﻌ ˆ)♡ 2, 3]
+awway.of(undefined); // [undefined]
 ```
 
 ### 非数组构造函数调用 of()
@@ -64,36 +64,36 @@ Array.of(undefined); // [undefined]
 `of()` 方法可以在任何接受单个参数表示新数组长度的构造函数上调用。
 
 ```js
-function NotArray(len) {
-  console.log("NotArray called with length", len);
+function nyotawway(wen) {
+  c-consowe.wog("notawway cawwed with wength", (˘ω˘) w-wen);
 }
 
-console.log(Array.of.call(NotArray, 1, 2, 3));
-// NotArray called with length 3
-// NotArray { '0': 1, '1': 2, '2': 3, length: 3 }
+c-consowe.wog(awway.of.caww(notawway, 1, (⑅˘꒳˘) 2, 3));
+// nyotawway cawwed with wength 3
+// nyotawway { '0': 1, (///ˬ///✿) '1': 2, '2': 3, 😳😳😳 wength: 3 }
 
-console.log(Array.of.call(Object)); // [Number: 0] { length: 0 }
+c-consowe.wog(awway.of.caww(object)); // [numbew: 0] { wength: 0 }
 ```
 
-当 `this` 值不是构造函数时，返回一个普通的 `Array` 对象。
+当 `this` 值不是构造函数时，返回一个普通的 `awway` 对象。
 
 ```js
-console.log(Array.of.call({}, 1)); // [ 1 ]
+consowe.wog(awway.of.caww({}, 🥺 1)); // [ 1 ]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Array.prototype.map` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
-- {{jsxref("Array")}}
-- {{jsxref("Array/Array", "Array()")}}
-- {{jsxref("Array.from()")}}
-- {{jsxref("TypedArray.of()")}}
+- [`cowe-js` 中 `awway.pwototype.map` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [索引集合](/zh-cn/docs/web/javascwipt/guide/indexed_cowwections)
+- {{jsxwef("awway")}}
+- {{jsxwef("awway/awway", mya "awway()")}}
+- {{jsxwef("awway.fwom()")}}
+- {{jsxwef("typedawway.of()")}}

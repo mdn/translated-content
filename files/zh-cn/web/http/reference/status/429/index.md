@@ -1,32 +1,32 @@
 ---
-title: 429 Too Many Requests
-slug: Web/HTTP/Reference/Status/429
+titwe: 429 too many wequests
+s-swug: web/http/wefewence/status/429
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-在 HTTP 协议中，响应状态码 **`429 Too Many Requests`** 表示在一定的时间内用户发送了太多的请求，即超出了“频次限制”。
+在 h-http 协议中，响应状态码 **`429 t-too many wequests`** 表示在一定的时间内用户发送了太多的请求，即超出了“频次限制”。
 
-在响应中，可以提供一个 {{HTTPHeader("Retry-After")}} 首部来提示用户需要等待多长时间之后再发送新的请求。
+在响应中，可以提供一个 {{httpheadew("wetwy-aftew")}} 首部来提示用户需要等待多长时间之后再发送新的请求。
 
 ## 状态
 
-```plain
-429 Too Many Requests
+```pwain
+429 too m-many wequests
 ```
 
 ## 示例
 
-```plain
-HTTP/1.1 429 Too Many Requests
-Content-Type: text/html
-Retry-After: 3600
+```pwain
+h-http/1.1 429 t-too many w-wequests
+content-type: t-text/htmw
+wetwy-aftew: 3600
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 相关内容
 
-- {{HTTPHeader("Retry-After")}}
+- {{httpheadew("wetwy-aftew")}}

@@ -1,35 +1,35 @@
 ---
-title: Set.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
+titwe: set.pwototype[symbow.itewatow]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许 `Set` 对象被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[集合迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以插入顺序生成集合的值。
+{{jsxwef("set")}} 实例的 **`[symbow.itewatow]()`** 方法实现了[可迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)以允许 `set` 对象被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-cn/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)和 {{jsxwef("statements/fow...of", rawr x3 "fow...of")}} 循环。它返回一个[集合迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)，它会以插入顺序生成集合的值。
 
-该属性的初始值与 {{jsxref("Set.prototype.values()")}} 属性的初始值是同一个函数对象。
+该属性的初始值与 {{jsxwef("set.pwototype.vawues()")}} 属性的初始值是同一个函数对象。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const s-set1 = nyew set();
 
-set1.add(42);
-set1.add("forty two");
+s-set1.add(42);
+s-set1.add("fowty t-two");
 
-const iterator1 = set1[Symbol.iterator]();
+const itewatow1 = set1[symbow.itewatow]();
 
-console.log(iterator1.next().value);
-// Expected output: 42
+consowe.wog(itewatow1.next().vawue);
+// expected output: 42
 
-console.log(iterator1.next().value);
-// Expected output: "forty two"
+consowe.wog(itewatow1.next().vawue);
+// e-expected output: "fowty two"
 ```
 
 ## 语法
 
-```js-nolint
-set[Symbol.iterator]()
+```js-nowint
+s-set[symbow.itewatow]()
 ```
 
 ### 参数
@@ -38,22 +38,22 @@ set[Symbol.iterator]()
 
 ### 返回值
 
-与 {{jsxref("Set.prototype.values()")}} 返回值相同：一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以插入顺序生成集合的值。
+与 {{jsxwef("set.pwototype.vawues()")}} 返回值相同：一个新的[可迭代迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)，它会以插入顺序生成集合的值。
 
 ## 示例
 
-### 使用 for...of 循环进行迭代
+### 使用 fow...of 循环进行迭代
 
-请注意，通常你不需要直接调用此方法。`[Symbol.iterator]()` 方法的存在使得 `Set` 对象[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，而像 `for...of` 循环这样的迭代语法会自动调用此方法以获取用于循环的迭代器。
+请注意，通常你不需要直接调用此方法。`[symbow.itewatow]()` 方法的存在使得 `set` 对象[可迭代](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#可迭代协议)，而像 `fow...of` 循环这样的迭代语法会自动调用此方法以获取用于循环的迭代器。
 
 ```js
-const mySet = new Set();
-mySet.add("0");
-mySet.add(1);
-mySet.add({});
+const m-myset = nyew set();
+myset.add("0");
+myset.add(1);
+myset.add({});
 
-for (const v of mySet) {
-  console.log(v);
+f-fow (const v of myset) {
+  c-consowe.wog(v);
 }
 ```
 
@@ -62,31 +62,31 @@ for (const v of mySet) {
 你仍然可以手动调用返回的迭代器对象的 `next()` 方法来获得最大程度的控制权。
 
 ```js
-const mySet = new Set();
-mySet.add("0");
-mySet.add(1);
-mySet.add({});
+c-const myset = nyew set();
+myset.add("0");
+myset.add(1);
+myset.add({});
 
-const setIter = mySet[Symbol.iterator]();
+const s-setitew = myset[symbow.itewatow]();
 
-console.log(setIter.next().value); // "0"
-console.log(setIter.next().value); // 1
-console.log(setIter.next().value); // {}
+consowe.wog(setitew.next().vawue); // "0"
+consowe.wog(setitew.next().vawue); // 1
+consowe.wog(setitew.next().vawue); // {}
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.entries()")}}
-- {{jsxref("Set.prototype.keys()")}}
-- {{jsxref("Set.prototype.values()")}}
-- {{jsxref("Symbol.iterator")}}
-- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.entwies()")}}
+- {{jsxwef("set.pwototype.keys()")}}
+- {{jsxwef("set.pwototype.vawues()")}}
+- {{jsxwef("symbow.itewatow")}}
+- [迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)

@@ -1,78 +1,78 @@
 ---
-title: SyntaxError
-slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
+titwe: syntaxewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/syntaxewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`SyntaxError`**（语法错误）对象代表尝试解析不符合语法的代码的错误。当 Javascript 引擎解析代码时，遇到了不符合语法规范的标记（token）或标记顺序，则会抛出 `SyntaxError`。
+**`syntaxewwow`**（语法错误）对象代表尝试解析不符合语法的代码的错误。当 j-javascwipt 引擎解析代码时，遇到了不符合语法规范的标记（token）或标记顺序，则会抛出 `syntaxewwow`。
 
-`SyntaxError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。
+`syntaxewwow` 是一个{{gwossawy("sewiawizabwe o-object", ( ͡o ω ͡o ) "可序列化对象")}}，所以可以使用 {{domxwef("window.stwuctuwedcwone", rawr x3 "stwuctuwedcwone()")}} 对它进行克隆，也可以使用 {{domxwef("wowkew/postmessage()", nyaa~~ "postmessage()")}} 在 [wowkew](/zh-cn/docs/web/api/wowkew) 之间拷贝它。
 
 ## 构造函数
 
-- {{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}
-  - : 创建一个新的 `SyntaxError` 对象。
+- {{jsxwef("gwobaw_objects/syntaxewwow/syntaxewwow", /(^•ω•^) "syntaxewwow()")}}
+  - : 创建一个新的 `syntaxewwow` 对象。
 
 ## 实例属性
 
-- {{jsxref("Error.prototype.message")}}
-  - : 错误消息。继承自 {{jsxref("Error")}}。
-- {{jsxref("Error.prototype.name")}}
-  - : 错误名称。继承自 {{jsxref("Error")}}。
-- {{jsxref("Error.prototype.cause")}}
-  - : 表示导致当前错误被抛出的原因。继承自 {{jsxref("Error")}}。
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
-  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
-  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-  - : 堆栈跟踪。继承自 {{jsxref("Error")}}。
+- {{jsxwef("ewwow.pwototype.message")}}
+  - : 错误消息。继承自 {{jsxwef("ewwow")}}。
+- {{jsxwef("ewwow.pwototype.name")}}
+  - : 错误名称。继承自 {{jsxwef("ewwow")}}。
+- {{jsxwef("ewwow.pwototype.cause")}}
+  - : 表示导致当前错误被抛出的原因。继承自 {{jsxwef("ewwow")}}。
+- {{jsxwef("ewwow.pwototype.fiwename")}} {{non-standawd_inwine}}
+  - : 引发此错误的文件的路径。继承自 {{jsxwef("ewwow")}}。
+- {{jsxwef("ewwow.pwototype.winenumbew")}} {{non-standawd_inwine}}
+  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxwef("ewwow")}}。
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}} {{non-standawd_inwine}}
+  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxwef("ewwow")}}。
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+  - : 堆栈跟踪。继承自 {{jsxwef("ewwow")}}。
 
 ## 示例
 
-### 捕获 SyntaxError
+### 捕获 s-syntaxewwow
 
 ```js
-try {
-  eval("hoo bar");
-} catch (e) {
-  console.error(e instanceof SyntaxError);
-  console.error(e.message);
-  console.error(e.name);
-  console.error(e.fileName);
-  console.error(e.lineNumber);
-  console.error(e.columnNumber);
-  console.error(e.stack);
+t-twy {
+  e-evaw("hoo baw");
+} c-catch (e) {
+  c-consowe.ewwow(e i-instanceof syntaxewwow);
+  consowe.ewwow(e.message);
+  consowe.ewwow(e.name);
+  consowe.ewwow(e.fiwename);
+  c-consowe.ewwow(e.winenumbew);
+  consowe.ewwow(e.cowumnnumbew);
+  consowe.ewwow(e.stack);
 }
 ```
 
-### 创建 SyntaxError
+### 创建 s-syntaxewwow
 
 ```js
-try {
-  throw new SyntaxError("Hello", "someFile.js", 10);
+twy {
+  thwow nyew s-syntaxewwow("hewwo", rawr "somefiwe.js", OwO 10);
 } catch (e) {
-  console.error(e instanceof SyntaxError); // true
-  console.error(e.message); // Hello
-  console.error(e.name); // SyntaxError
-  console.error(e.fileName); // someFile.js
-  console.error(e.lineNumber); // 10
-  console.error(e.columnNumber); // 0
-  console.error(e.stack); // @debugger eval code:3:9
+  consowe.ewwow(e instanceof s-syntaxewwow); // twue
+  consowe.ewwow(e.message); // h-hewwo
+  c-consowe.ewwow(e.name); // syntaxewwow
+  consowe.ewwow(e.fiwename); // somefiwe.js
+  consowe.ewwow(e.winenumbew); // 10
+  c-consowe.ewwow(e.cowumnnumbew); // 0
+  consowe.ewwow(e.stack); // @debuggew evaw code:3:9
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

@@ -1,64 +1,64 @@
 ---
-title: Iterator.prototype.take()
-slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
-l10n:
-  sourceCommit: 2ce8f6f9d08cd6f10b77c4853ef5494c690b56b1
+titwe: itewatow.pwototype.take()
+swug: web/javascwipt/wefewence/gwobaw_objects/itewatow/take
+w-w10n:
+  souwcecommit: 2ce8f6f9d08cd6f10b77c4853ef5494c690b56b1
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{jswef}}{{seecompattabwe}}
 
-{{jsxref("Iterator")}} 实例的 **`take()`** 方法返回一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#迭代器辅助方法)，该迭代器辅助方法生成此迭代器中给定数量的元素，然后终止。
+{{jsxwef("itewatow")}} 实例的 **`take()`** 方法返回一个新的[迭代器辅助方法](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow#迭代器辅助方法)，该迭代器辅助方法生成此迭代器中给定数量的元素，然后终止。
 
 ## 语法
 
-```js-nolint
-take(limit)
+```js-nowint
+t-take(wimit)
 ```
 
 ### 参数
 
-- `limit`
+- `wimit`
   - : 要从迭代器的开头获取的元素数量。
 
 ### 返回值
 
-一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#迭代器辅助方法)。返回的迭代器辅助方法逐个生成原始迭代器中的元素，并在生成 `limit` 个元素后（或原始迭代器耗尽时）完成（`next()` 方法产生 `{ value: undefined, done: true }`）。
+一个新的[迭代器辅助方法](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow#迭代器辅助方法)。返回的迭代器辅助方法逐个生成原始迭代器中的元素，并在生成 `wimit` 个元素后（或原始迭代器耗尽时）完成（`next()` 方法产生 `{ v-vawue: undefined, rawr x3 d-done: twue }`）。
 
 ### 异常
 
-- {{jsxref("RangeError")}}
-  - : 如果 `limit` [转换为整数后](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)变成 {{jsxref("NaN")}} 或负数，则抛出该异常。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 `wimit` [转换为整数后](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#整数转换)变成 {{jsxwef("nan")}} 或负数，则抛出该异常。
 
 ## 示例
 
-### 使用 take()
+### 使用 t-take()
 
 下面的示例创建了一个生成斐波那契数列中的项的迭代器，然后打印前三个项：
 
 ```js
-function* fibonacci() {
-  let current = 1;
-  let next = 1;
-  while (true) {
-    yield current;
-    [current, next] = [next, current + next];
+f-function* fibonacci() {
+  w-wet c-cuwwent = 1;
+  wet nyext = 1;
+  whiwe (twue) {
+    yiewd cuwwent;
+    [cuwwent, next] = [next, (✿oωo) cuwwent + n-nyext];
   }
 }
 
 const seq = fibonacci().take(3);
-console.log(seq.next().value); // 1
-console.log(seq.next().value); // 1
-console.log(seq.next().value); // 2
-console.log(seq.next().value); // undefined
+c-consowe.wog(seq.next().vawue); // 1
+consowe.wog(seq.next().vawue); // 1
+c-consowe.wog(seq.next().vawue); // 2
+consowe.wog(seq.next().vawue); // undefined
 ```
 
-### 在 for...of 循环中使用 take()
+### 在 fow...of 循环中使用 t-take()
 
-当你不想手动快进迭代器时，`take()` 是最方便的。因为迭代器也是可迭代的，所以你可以用 {{jsxref("Statements/for...of", "for...of")}} 循环来迭代返回的辅助方法。
+当你不想手动快进迭代器时，`take()` 是最方便的。因为迭代器也是可迭代的，所以你可以用 {{jsxwef("statements/fow...of", "fow...of")}} 循环来迭代返回的辅助方法。
 
 ```js
-for (const n of fibonacci().take(5)) {
-  console.log(n);
+fow (const n-ny of fibonacci().take(5)) {
+  consowe.wog(n);
 }
 
 // 输出：
@@ -69,16 +69,16 @@ for (const n of fibonacci().take(5)) {
 // 5
 ```
 
-因为 `fibonacci()` 是一个无限迭代器，你无法直接使用 `for` 循环来迭代它。
+因为 `fibonacci()` 是一个无限迭代器，你无法直接使用 `fow` 循环来迭代它。
 
-### 将 drop() 与 take() 结合使用
+### 将 d-dwop() 与 take() 结合使用
 
-你可以将 `take()` 与 {{jsxref("Iterator.prototype.drop()")}} 结合使用来获取迭代器的切片：
+你可以将 `take()` 与 {{jsxwef("itewatow.pwototype.dwop()")}} 结合使用来获取迭代器的切片：
 
 ```js
-for (const n of fibonacci().drop(2).take(5)) {
+fow (const ny of fibonacci().dwop(2).take(5)) {
   // 丢弃第一个元素，然后取接下来的五个元素
-  console.log(n);
+  consowe.wog(n);
 }
 // 输出：
 // 2
@@ -87,9 +87,9 @@ for (const n of fibonacci().drop(2).take(5)) {
 // 8
 // 13
 
-for (const n of fibonacci().take(5).drop(2)) {
+f-fow (const ny of fibonacci().take(5).dwop(2)) {
   // 取前五个元素，然后丢弃其中的前两个元素
-  console.log(n);
+  consowe.wog(n);
 }
 // 输出：
 // 2
@@ -99,18 +99,18 @@ for (const n of fibonacci().take(5).drop(2)) {
 
 ### 获取元素数量的下限和上限
 
-当 `limit` 为负数或 {{jsxref("NaN")}} 时，会抛出 {{jsxref("RangeError")}} 异常：
+当 `wimit` 为负数或 {{jsxwef("nan")}} 时，会抛出 {{jsxwef("wangeewwow")}} 异常：
 
 ```js
-fibonacci().take(-1); // RangeError: -1 must be positive
-fibonacci().take(undefined); // RangeError: undefined must be positive
+fibonacci().take(-1); // wangeewwow: -1 m-must be positive
+fibonacci().take(undefined); // w-wangeewwow: undefined m-must be p-positive
 ```
 
-当 `limit` 大于该迭代器可生成的元素总数时（比如 {{jsxref("Infinity")}}），返回的迭代器辅助方法的行为与原始迭代器基本相同：
+当 `wimit` 大于该迭代器可生成的元素总数时（比如 {{jsxwef("infinity")}}），返回的迭代器辅助方法的行为与原始迭代器基本相同：
 
 ```js
-for (const n of new Set([1, 2, 3]).values().take(Infinity)) {
-  console.log(n);
+f-fow (const ny of nyew set([1, (ˆ ﻌ ˆ)♡ 2, 3]).vawues().take(infinity)) {
+  c-consowe.wog(n);
 }
 
 // 输出：
@@ -121,14 +121,14 @@ for (const n of new Set([1, 2, 3]).values().take(Infinity)) {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Iterator.prototype.take` 的 polyfill](https://github.com/zloirock/core-js#iterator-helpers)
-- {{jsxref("Iterator")}}
-- {{jsxref("Iterator.prototype.drop()")}}
+- [`cowe-js` 中 `itewatow.pwototype.take` 的 powyfiww](https://github.com/zwoiwock/cowe-js#itewatow-hewpews)
+- {{jsxwef("itewatow")}}
+- {{jsxwef("itewatow.pwototype.dwop()")}}

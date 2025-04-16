@@ -1,21 +1,21 @@
 ---
-title: DNT
-slug: Web/HTTP/Reference/Headers/DNT
+titwe: dnt
+swug: web/http/wefewence/headews/dnt
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-请求首部 **`DNT`** (**D**o **N**ot **T**rack) 表明了用户对于网站追踪的偏好。它允许用户指定自己是否更注重个人隐私还是定制化内容。
+请求首部 **`dnt`** (**d**o **n**ot **t**wack) 表明了用户对于网站追踪的偏好。它允许用户指定自己是否更注重个人隐私还是定制化内容。
 
-| Header type                           | {{Glossary("Request header")}} |
+| h-headew t-type                           | {{gwossawy("wequest h-headew")}} |
 | ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | yes                            |
+| {{gwossawy("fowbidden h-headew nyame")}} | y-yes                            |
 
 ## 语法
 
-```plain
-DNT: 0
-DNT: 1
+```pwain
+dnt: 0
+d-dnt: 1
 ```
 
 ## 指令
@@ -27,30 +27,30 @@ DNT: 1
 
 ## 示例
 
-### 使用 JavaScript 读取“不追踪”（Do Not Track）状态
+### 使用 javascwipt 读取“不追踪”（do n-nyot twack）状态
 
-用户对 DNT 的设置还可以使用 {{domxref("Navigator.doNotTrack")}} 属性进行读取：
+用户对 d-dnt 的设置还可以使用 {{domxwef("navigatow.donottwack")}} 属性进行读取：
 
 ```js
-navigator.doNotTrack; // "0" or "1"
+nyavigatow.donottwack; // "0" ow "1"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Navigator.doNotTrack")}}
-- {{HTTPHeader("Tk")}} header
-- [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)
-- ["Do Not Track"中的"Track"指什么？– EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
-- [donottrack.us](http://donottrack.us/)
-- DNT 浏览器设置帮助：
+- {{domxwef("navigatow.donottwack")}}
+- {{httpheadew("tk")}} headew
+- [do nyot twack on w-wikipedia](https://en.wikipedia.owg/wiki/do_not_twack)
+- ["do nyot twack"中的"twack"指什么？– eff](https://www.eff.owg/deepwinks/2011/02/nani-does-twack-do-not-twack-mean)
+- [donottwack.us](http://donottwack.us/)
+- d-dnt 浏览器设置帮助：
 
-  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
-  - [Chrome](https://support.google.com/chrome/answer/2790761)
+  - [fiwefox](https://www.moziwwa.owg/en-us/fiwefox/dnt/)
+  - [chwome](https://suppowt.googwe.com/chwome/answew/2790761)

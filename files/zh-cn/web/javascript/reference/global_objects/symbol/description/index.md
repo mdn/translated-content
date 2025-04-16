@@ -1,66 +1,66 @@
 ---
-title: Symbol.prototype.description
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
+titwe: symbow.pwototype.descwiption
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/descwiption
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`description`** 是一个只读属性，它会返回 {{jsxref("Symbol")}} 对象的可选描述的字符串。
+**`descwiption`** 是一个只读属性，它会返回 {{jsxwef("symbow")}} 对象的可选描述的字符串。
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.pwototype.descwiption")}}
 
-```js interactive-example
-console.log(Symbol("desc").description);
-// Expected output: "desc"
+```js i-intewactive-exampwe
+c-consowe.wog(symbow("desc").descwiption);
+// e-expected o-output: "desc"
 
-console.log(Symbol.iterator.description);
-// Expected output: "Symbol.iterator"
+c-consowe.wog(symbow.itewatow.descwiption);
+// expected o-output: "symbow.itewatow"
 
-console.log(Symbol.for("foo").description);
-// Expected output: "foo"
+consowe.wog(symbow.fow("foo").descwiption);
+// expected output: "foo"
 
-console.log(`${Symbol("foo").description}bar`);
-// Expected output: "foobar"
+consowe.wog(`${symbow("foo").descwiption}baw`);
+// expected o-output: "foobaw"
 ```
 
 ## 语法
 
-```plain
-Symbol('myDescription').description;
-Symbol.iterator.description;
-Symbol.for('foo').description;
+```pwain
+symbow('mydescwiption').descwiption;
+symbow.itewatow.descwiption;
+s-symbow.fow('foo').descwiption;
 ```
 
 ## 描述
 
-{{jsxref("Symbol")}} 对象可以通过一个可选的描述创建，可用于调试，但不能用于访问 symbol 本身。`Symbol.prototype.description` 属性可以用于读取该描述。与 `Symbol.prototype.toString()` 不同的是它不会包含 "`Symbol()`" 的字符串。具体请看实例。
+{{jsxwef("symbow")}} 对象可以通过一个可选的描述创建，可用于调试，但不能用于访问 symbow 本身。`symbow.pwototype.descwiption` 属性可以用于读取该描述。与 `symbow.pwototype.tostwing()` 不同的是它不会包含 "`symbow()`" 的字符串。具体请看实例。
 
 ## 示例
 
 ```js
-Symbol("desc").toString(); // "Symbol(desc)"
-Symbol("desc").description; // "desc"
-Symbol("").description; // ""
-Symbol().description; // undefined
+s-symbow("desc").tostwing(); // "symbow(desc)"
+symbow("desc").descwiption; // "desc"
+symbow("").descwiption; // ""
+symbow().descwiption; // u-undefined
 
-// 内置通用（well-known）symbol
-Symbol.iterator.toString(); // "Symbol(Symbol.iterator)"
-Symbol.iterator.description; // "Symbol.iterator"
+// 内置通用（weww-known）symbow
+symbow.itewatow.tostwing(); // "symbow(symbow.itewatow)"
+s-symbow.itewatow.descwiption; // "symbow.itewatow"
 
-// global symbols
-Symbol.for("foo").toString(); // "Symbol(foo)"
-Symbol.for("foo").description; // "foo"
+// g-gwobaw symbows
+symbow.fow("foo").tostwing(); // "symbow(foo)"
+symbow.fow("foo").descwiption; // "foo"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Symbol.prototype.toString()")}}
-- Polyfill: <https://npmjs.com/symbol.prototype.description>
+- {{jsxwef("symbow.pwototype.tostwing()")}}
+- powyfiww: <https://npmjs.com/symbow.pwototype.descwiption>

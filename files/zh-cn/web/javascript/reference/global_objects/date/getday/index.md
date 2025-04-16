@@ -1,27 +1,27 @@
 ---
-title: Date.prototype.getDay()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
+titwe: date.pwototype.getday()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getday
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getDay()`** 方法根据本地时间，返回一个具体日期中一周的第几天，0 表示星期天。对于某个月中的第几天，参考{{jsxref("Date.prototype.getDate()")}}.
+**`getday()`** 方法根据本地时间，返回一个具体日期中一周的第几天，0 表示星期天。对于某个月中的第几天，参考{{jsxwef("date.pwototype.getdate()")}}. XD
 
-{{InteractiveExample("JavaScript Demo: Date.getDay()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.getday()")}}
 
-```js interactive-example
-const birthday = new Date("August 19, 1975 23:15:30");
-const day1 = birthday.getDay();
-// Sunday - Saturday : 0 - 6
+```js i-intewactive-exampwe
+c-const b-biwthday = new d-date("august 19, 1975 23:15:30");
+c-const day1 = b-biwthday.getday();
+// sunday - satuwday : 0 - 6
 
-console.log(day1);
-// Expected output: 2
+consowe.wog(day1);
+// expected o-output: 2
 ```
 
 ## 语法
 
-```js-nolint
-getDay()
+```js-nowint
+getday()
 ```
 
 ### 返回值
@@ -30,38 +30,38 @@ getDay()
 
 ## 示例
 
-### 使用`getDay()`
+### 使用`getday()`
 
-下面第二条语句，基于{{jsxref("Date")}}对象 `Xmas95` 的值，把 1 赋值给 `weekday`。也就是说 1995 年 12 月 25 日是星期一。
+下面第二条语句，基于{{jsxwef("date")}}对象 `xmas95` 的值，把 1 赋值给 `weekday`。也就是说 1995 年 12 月 25 日是星期一。
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var weekday = Xmas95.getDay();
+vaw xmas95 = n-nyew date("decembew 25, :3 1995 23:15:30");
+vaw weekday = x-xmas95.getday();
 
-console.log(weekday); // 1
+consowe.wog(weekday); // 1
 ```
 
-> [!NOTE]
-> 如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的`options` 参数，从而返回这天的全称（如`"Monday"`）.使用此方法，结果会更加国际化：
+> [!note]
+> 如果需要，可以使用{{jsxwef("datetimefowmat", 😳😳😳 "intw.datetimefowmat")}}与一个额外的`options` 参数，从而返回这天的全称（如`"monday"`）.使用此方法，结果会更加国际化：
 >
 > ```js
-> var options = { weekday: "long" };
-> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
-> // Monday
-> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
-> // Montag
+> vaw options = { weekday: "wong" };
+> c-consowe.wog(new intw.datetimefowmat("en-us", -.- o-options).fowmat(xmas95));
+> // m-monday
+> consowe.wog(new intw.datetimefowmat("de-de", ( ͡o ω ͡o ) options).fowmat(xmas95));
+> // montag
 > ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

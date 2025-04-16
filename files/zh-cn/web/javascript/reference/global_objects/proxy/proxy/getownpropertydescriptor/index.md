@@ -1,98 +1,98 @@
 ---
-title: handler.getOwnPropertyDescriptor()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
+titwe: handwew.getownpwopewtydescwiptow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/getownpwopewtydescwiptow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.getOwnPropertyDescriptor()`** 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的钩子。
+**`handwew.getownpwopewtydescwiptow()`** 方法是 {{jsxwef("object.getownpwopewtydescwiptow()")}} 的钩子。
 
 ## 语法
 
 ```js
-var p = new Proxy(target, {
-  getOwnPropertyDescriptor: function (target, prop) {},
+v-vaw p = nyew pwoxy(tawget, /(^•ω•^) {
+  g-getownpwopewtydescwiptow: f-function (tawget, rawr p-pwop) {}, OwO
 });
 ```
 
 ### 参数
 
-`下列参数会被传入 getOwnPropertyDescriptor` 方法中。这是绑定到 handler 上。
+`下列参数会被传入 g-getownpwopewtydescwiptow` 方法中。这是绑定到 h-handwew 上。
 
-- `target`
+- `tawget`
   - : 目标对象。
-- `prop`
+- `pwop`
   - : 返回属性名称的描述。
 
 ### 返回值
 
-`getOwnPropertyDescriptor` 方法必须返回一个 object 或 `undefined`。
+`getownpwopewtydescwiptow` 方法必须返回一个 object 或 `undefined`。
 
 ## 描述
 
-**`handler.getOwnPropertyDescriptor()`** 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的陷阱。
+**`handwew.getownpwopewtydescwiptow()`** 方法是 {{jsxwef("object.getownpwopewtydescwiptow()")}} 的陷阱。
 
 ### 拦截
 
 这个陷阱可以拦截这些操作：
 
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}
 
 ### 不变量
 
-如果下列不变量被违反，代理将抛出一个 {{jsxref("TypeError")}}：
+如果下列不变量被违反，代理将抛出一个 {{jsxwef("typeewwow")}}：
 
-- `getOwnPropertyDescriptor` 必须返回一个 object 或 `undefined`。
+- `getownpwopewtydescwiptow` 必须返回一个 o-object 或 `undefined`。
 - 如果属性作为目标对象的不可配置的属性存在，则该属性无法报告为不存在。
 - 如果属性作为目标对象的属性存在，并且目标对象不可扩展，则该属性无法报告为不存在。
 - 如果属性不存在作为目标对象的属性，并且目标对象不可扩展，则不能将其报告为存在。
 - 属性不能被报告为不可配置，如果它不作为目标对象的自身属性存在，或者作为目标对象的可配置的属性存在。
-- Object.getOwnPropertyDescriptor（target）的结果可以使用 Object.defineProperty 应用于目标对象，也不会抛出异常。
+- object.getownpwopewtydescwiptow（tawget）的结果可以使用 object.definepwopewty 应用于目标对象，也不会抛出异常。
 
 ## 示例
 
-以下是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的代码陷阱：
+以下是 {{jsxwef("object.getownpwopewtydescwiptow()")}} 的代码陷阱：
 
 ```js
-var p = new Proxy(
-  { a: 20 },
+vaw p = nyew pwoxy(
+  { a-a: 20 }, (U ﹏ U)
   {
-    getOwnPropertyDescriptor: function (target, prop) {
-      console.log("called: " + prop);
-      return { configurable: true, enumerable: true, value: 10 };
-    },
-  },
+    getownpwopewtydescwiptow: function (tawget, p-pwop) {
+      consowe.wog("cawwed: " + p-pwop);
+      wetuwn { configuwabwe: twue, >_< enumewabwe: twue, rawr x3 v-vawue: 10 };
+    }, mya
+  }, nyaa~~
 );
 
-console.log(Object.getOwnPropertyDescriptor(p, "a").value); // "called: a"; output 10
+consowe.wog(object.getownpwopewtydescwiptow(p, (⑅˘꒳˘) "a").vawue); // "cawwed: a-a"; output 10
 ```
 
 以下代码则违反了不变量。
 
 ```js
-var obj = { a: 10 };
-Object.preventExtensions(obj);
-var p = new Proxy(obj, {
-  getOwnPropertyDescriptor: function (target, prop) {
-    return undefined;
-  },
+v-vaw obj = { a: 10 };
+object.pweventextensions(obj);
+vaw p = new pwoxy(obj, rawr x3 {
+  getownpwopewtydescwiptow: f-function (tawget, (✿oωo) pwop) {
+    wetuwn undefined;
+  }, (ˆ ﻌ ˆ)♡
 });
 
-Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
+object.getownpwopewtydescwiptow(p, (˘ω˘) "a"); // typeewwow is t-thwown
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", (⑅˘꒳˘) "handwew")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}

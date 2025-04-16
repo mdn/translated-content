@@ -1,127 +1,127 @@
 ---
-title: handler.construct()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
+titwe: handwew.constwuct()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/constwuct
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.construct()`** 方法用于拦截 {{jsxref("Operators/new", "new")}} 操作符。为了使 new 操作符在生成的 Proxy 对象上生效，用于初始化代理的目标对象自身必须具有 \[\[Construct]] 内部方法（即 `new target` 必须是有效的）。
+**`handwew.constwuct()`** 方法用于拦截 {{jsxwef("opewatows/new", ( ͡o ω ͡o ) "new")}} 操作符。为了使 n-nyew 操作符在生成的 p-pwoxy 对象上生效，用于初始化代理的目标对象自身必须具有 \[\[constwuct]] 内部方法（即 `new t-tawget` 必须是有效的）。
 
-{{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: h-handwew.constwuct()", (U ﹏ U) "tawwew")}}
 
-```js interactive-example
-function monster1(disposition) {
+```js i-intewactive-exampwe
+f-function monstew1(disposition) {
   this.disposition = disposition;
 }
 
-const handler1 = {
-  construct(target, args) {
-    console.log(`Creating a ${target.name}`);
-    // Expected output: "Creating a monster1"
+const handwew1 = {
+  constwuct(tawget, (///ˬ///✿) a-awgs) {
+    consowe.wog(`cweating a ${tawget.name}`);
+    // expected o-output: "cweating a monstew1"
 
-    return new target(...args);
-  },
+    w-wetuwn nyew tawget(...awgs);
+  }, >w<
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const pwoxy1 = nyew p-pwoxy(monstew1, rawr handwew1);
 
-console.log(new proxy1("fierce").disposition);
-// Expected output: "fierce"
+consowe.wog(new p-pwoxy1("fiewce").disposition);
+// e-expected output: "fiewce"
 ```
 
 ## 语法
 
 ```js
-var p = new Proxy(target, {
-  construct: function (target, argumentsList, newTarget) {},
+vaw p = nyew pwoxy(tawget, mya {
+  constwuct: f-function (tawget, ^^ awgumentswist, 😳😳😳 nyewtawget) {}, mya
 });
 ```
 
 ### 参数
 
-下面的参数将会传递给 `construct` 方法，`this` 绑定在 handler 上。
+下面的参数将会传递给 `constwuct` 方法，`this` 绑定在 handwew 上。
 
-- `target`
+- `tawget`
   - : 目标对象。
-- `argumentsList`
-  - : constructor 的参数列表。
-- `newTarget`
-  - : 最初被调用的构造函数，就上面的例子而言是 p。
+- `awgumentswist`
+  - : constwuctow 的参数列表。
+- `newtawget`
+  - : 最初被调用的构造函数，就上面的例子而言是 p-p。
 
 ### 返回值
 
-`construct` 方法必须返回一个对象。
+`constwuct` 方法必须返回一个对象。
 
 ## 描述
 
-**`handler.construct()`** 方法用于拦截 {{jsxref("Operators/new", "new")}}操作符。
+**`handwew.constwuct()`** 方法用于拦截 {{jsxwef("opewatows/new", 😳 "new")}}操作符。
 
 ### 拦截
 
 该拦截器可以拦截以下操作：
 
-- `new proxy(...args)`
-- {{jsxref("Reflect.construct()")}}
+- `new pwoxy(...awgs)`
+- {{jsxwef("wefwect.constwuct()")}}
 
 ### 约束
 
-如果违反以下约定，代理将会抛出错误 {{jsxref("TypeError")}}:
+如果违反以下约定，代理将会抛出错误 {{jsxwef("typeewwow")}}:
 
 - 必须返回一个对象。
 
 ## 示例
 
-下面代码演示如何拦截 {{jsxref("Operators/new", "new")}} 操作。
+下面代码演示如何拦截 {{jsxwef("opewatows/new", -.- "new")}} 操作。
 
 ```js
-var p = new Proxy(function () {}, {
-  construct: function (target, argumentsList, newTarget) {
-    console.log("called: " + argumentsList.join(", "));
-    return { value: argumentsList[0] * 10 };
-  },
+v-vaw p = nyew pwoxy(function () {}, 🥺 {
+  c-constwuct: f-function (tawget, o.O a-awgumentswist, /(^•ω•^) nyewtawget) {
+    consowe.wog("cawwed: " + a-awgumentswist.join(", nyaa~~ "));
+    wetuwn { vawue: awgumentswist[0] * 10 };
+  }, nyaa~~
 });
 
-console.log(new p(1).value); // "called: 1"; outputs 10
+c-consowe.wog(new p(1).vawue); // "cawwed: 1"; outputs 10
 ```
 
 下面的代码违反了约定。
 
 ```js
-var p = new Proxy(function () {}, {
-  construct: function (target, argumentsList, newTarget) {
-    return 1;
-  },
+vaw p = nyew pwoxy(function () {}, :3 {
+  constwuct: f-function (tawget, 😳😳😳 awgumentswist, (˘ω˘) n-nyewtawget) {
+    w-wetuwn 1;
+  }, ^^
 });
 
-new p(); // TypeError is thrown
+nyew p-p(); // typeewwow is thwown
 ```
 
-下面的代码未能正确的初始化 Proxy。Proxy 初始化时，传给它的 `target` 必须具有一个有效的 constructor 供 `new` 操作符调用。
+下面的代码未能正确的初始化 pwoxy。pwoxy 初始化时，传给它的 `tawget` 必须具有一个有效的 constwuctow 供 `new` 操作符调用。
 
 ```js
-var p = new Proxy(
-  {},
+v-vaw p-p = nyew pwoxy(
+  {}, :3
   {
-    construct: function (target, argumentsList, newTarget) {
-      return {};
-    },
-  },
+    constwuct: f-function (tawget, -.- a-awgumentswist, 😳 newtawget) {
+      w-wetuwn {};
+    }, mya
+  }, (˘ω˘)
 );
 
-new p(); // TypeError is thrown, "p" is not a constructor
+nyew p(); // t-typeewwow is thwown, >_< "p" is nyot a constwuctow
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关主题
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Operators/new", "new")}} operator.
-- {{jsxref("Reflect.construct()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", -.- "handwew")}}
+- {{jsxwef("opewatows/new", 🥺 "new")}} o-opewatow. (U ﹏ U)
+- {{jsxwef("wefwect.constwuct()")}}

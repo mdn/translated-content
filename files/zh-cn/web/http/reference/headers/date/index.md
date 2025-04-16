@@ -1,79 +1,79 @@
 ---
-title: Date
-slug: Web/HTTP/Reference/Headers/Date
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: date
+swug: web/http/wefewence/headews/date
+w-w10n:
+  souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Date`** 通用 HTTP 标头包含了消息创建时的日期和时间。
+**`date`** 通用 h-http 标头包含了消息创建时的日期和时间。
 
-> [!WARNING]
-> 在 fetch 规范中，`Date` 被列为[禁止修改的标头](https://fetch.spec.whatwg.org/#forbidden-header-name)，因此这段代码不会发送 `Date` 标头：
+> [!wawning]
+> 在 f-fetch 规范中，`date` 被列为[禁止修改的标头](https://fetch.spec.naniwg.owg/#fowbidden-headew-name)，因此这段代码不会发送 `date` 标头：
 >
 > ```js
-> fetch("https://httpbin.org/get", {
->   headers: {
->     Date: new Date().toUTCString(),
->   },
+> f-fetch("https://httpbin.owg/get", {
+>   h-headews: {
+>     date: n-nyew date().toutcstwing(), (ˆ ﻌ ˆ)♡
+>   }, (⑅˘꒳˘)
 > });
 > ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">标头类型</th>
+    <tw>
+      <th s-scope="wow">标头类型</th>
       <td>
-        {{Glossary("Request header", "请求标头")}}、{{Glossary("Response header", "响应标头")}}
+        {{gwossawy("wequest headew", (U ᵕ U❁) "请求标头")}}、{{gwossawy("wesponse headew", -.- "响应标头")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-name", ^^;; "禁止修改的标头")}}</th>
       <td>是</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
 ```http
-Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+date: <day-name>, <day> <month> <yeaw> <houw>:<minute>:<second> gmt
 ```
 
 ## 指令
 
 - \<day-name>
-  - : “Mon”、“Tue”、“Wed”、“Thu”、“Fri”、“Sat”或“Sun”之一（区分大小写）。
+  - : “mon”、“tue”、“wed”、“thu”、“fwi”、“sat”或“sun”之一（区分大小写）。
 - \<day>
   - : 2 位数的日期，例如“04”或“23”。
 - \<month>
-  - : “Jan”、“Feb”、“Mar”、“Apr”、“May”、“Jun”、“Jul”、“Aug”、“Sep”、“Oct”、“Nov”、“Dec”之一（区分大小写）。
-- \<year>
+  - : “jan”、“feb”、“maw”、“apw”、“may”、“jun”、“juw”、“aug”、“sep”、“oct”、“nov”、“dec”之一（区分大小写）。
+- \<yeaw>
   - : 4 位数的年份，例如“1990”或“2016”。
-- \<hour>
+- \<houw>
   - : 2 位数的小时，例如“09”或“23”。
 - \<minute>
   - : 2 位数的分钟，例如“04”或“59”。
 - \<second>
   - : 2 位数的秒数，例如“04”或“59”。
-- GMT
-  - : 格林威治标准时间。HTTP 日期总是以 GMT 表示，而不是本地时间。
+- gmt
+  - : 格林威治标准时间。http 日期总是以 g-gmt 表示，而不是本地时间。
 
 ## 示例
 
 ```http
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+date: wed, >_< 21 o-oct 2015 07:28:00 gmt
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Age")}}
+- {{httpheadew("age")}}

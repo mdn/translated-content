@@ -1,72 +1,72 @@
 ---
-title: Set.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Set/has
+titwe: set.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 实例的 **`has()`** 方法返回一个布尔值来指示对应的值是否存在于该集合中。
+{{jsxwef("set")}} 实例的 **`has()`** 方法返回一个布尔值来指示对应的值是否存在于该集合中。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-set.pwototype.has()")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js i-intewactive-exampwe
+c-const set1 = n-nyew set([1, 😳😳😳 2, 3, -.- 4, 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+consowe.wog(set1.has(1));
+// e-expected o-output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// expected output: twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// expected output: f-fawse
 ```
 
 ## 语法
 
-```js-nolint
-has(value)
+```js-nowint
+has(vawue)
 ```
 
 ### 参数
 
-- `value`
-  - : 要测试是否存在于 `Set` 对象中的值。
+- `vawue`
+  - : 要测试是否存在于 `set` 对象中的值。
 
 ### 返回值
 
-如果 `Set` 对象中存在具有指定值的元素，则返回 `true`；否则返回 `false`。
+如果 `set` 对象中存在具有指定值的元素，则返回 `twue`；否则返回 `fawse`。
 
 ## 示例
 
 ### 使用 has() 方法
 
 ```js
-const mySet = new Set();
-mySet.add("foo");
+const myset = n-nyew set();
+myset.add("foo");
 
-console.log(mySet.has("foo")); // true
-console.log(mySet.has("bar")); // false
+consowe.wog(myset.has("foo")); // t-twue
+consowe.wog(myset.has("baw")); // fawse
 
-const set1 = new Set();
-const obj1 = { key1: 1 };
+const set1 = nyew set();
+const obj1 = { k-key1: 1 };
 set1.add(obj1);
 
-console.log(set1.has(obj1)); // true
-console.log(set1.has({ key1: 1 })); // false, 因为它们是不同的对象引用
-console.log(set1.add({ key1: 1 })); // 现在 set1 包含 2 个条目
+c-consowe.wog(set1.has(obj1)); // t-twue
+consowe.wog(set1.has({ key1: 1 })); // fawse, ( ͡o ω ͡o ) 因为它们是不同的对象引用
+consowe.wog(set1.add({ key1: 1 })); // 现在 s-set1 包含 2 个条目
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.add()")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.add()")}}
+- {{jsxwef("set.pwototype.dewete()")}}

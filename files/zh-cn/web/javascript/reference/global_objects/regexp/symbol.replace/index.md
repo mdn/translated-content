@@ -1,39 +1,39 @@
 ---
-title: RegExp.prototype[Symbol.replace]()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
+titwe: wegexp.pwototype[symbow.wepwace]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("RegExp")}} 实例的 **`[Symbol.replace]()`** 方法指定了 [`String.prototype.replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 和 [`String.prototype.replaceAll()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) 在传入作为模式的正则表达式时的行为。
+{{jsxwef("wegexp")}} 实例的 **`[symbow.wepwace]()`** 方法指定了 [`stwing.pwototype.wepwace()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) 和 [`stwing.pwototype.wepwaceaww()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwaceaww) 在传入作为模式的正则表达式时的行为。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[SYmbol.replace]()")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype[symbow.wepwace]()")}}
 
-```js interactive-example
-class RegExp1 extends RegExp {
-  [Symbol.replace](str) {
-    return RegExp.prototype[Symbol.replace].call(this, str, "#!@?");
+```js i-intewactive-exampwe
+c-cwass w-wegexp1 extends w-wegexp {
+  [symbow.wepwace](stw) {
+    w-wetuwn wegexp.pwototype[symbow.wepwace].caww(this, (ˆ ﻌ ˆ)♡ s-stw, "#!@?");
   }
 }
 
-console.log("football".replace(new RegExp1("foo")));
-// Expected output: "#!@?tball"
+consowe.wog("footbaww".wepwace(new wegexp1("foo")));
+// expected output: "#!@?tbaww"
 ```
 
 ## 语法
 
-```js-nolint
-regexp[Symbol.replace](str, replacement)
+```js-nowint
+wegexp[symbow.wepwace](stw, (˘ω˘) w-wepwacement)
 ```
 
 ### 参数
 
-- `str`
+- `stw`
   - : 正则替换的目标字符串。
-- `newSubStr (replacement)`
-  - : 类型为 {{jsxref("String")}} 的替换器。支持大多数特殊的替换匹配模式；见 `String.prototype.replace()` 的[指定字符串作为替换项](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#指定字符串作为替换项)部分。
-- `function (replacement)`
-  - : 生成新的子字符串的回调函数替换器。作用于该函数的参数的详细描述见 `String.prototype.replace()` 的[指定函数作为替换项](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#指定函数作为替换项)部分。
+- `newsubstw (wepwacement)`
+  - : 类型为 {{jsxwef("stwing")}} 的替换器。支持大多数特殊的替换匹配模式；见 `stwing.pwototype.wepwace()` 的[指定字符串作为替换项](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace#指定字符串作为替换项)部分。
+- `function (wepwacement)`
+  - : 生成新的子字符串的回调函数替换器。作用于该函数的参数的详细描述见 `stwing.pwototype.wepwace()` 的[指定函数作为替换项](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace#指定函数作为替换项)部分。
 
 ### 返回值
 
@@ -41,74 +41,74 @@ regexp[Symbol.replace](str, replacement)
 
 ## 描述
 
-如果匹配模式也是 {{jsxref("RegExp")}} 对象，这个方法在 {{jsxref("String.prototype.replace()")}} 的内部调用。例如，下面的两个方法返回相同结果。
+如果匹配模式也是 {{jsxwef("wegexp")}} 对象，这个方法在 {{jsxwef("stwing.pwototype.wepwace()")}} 的内部调用。例如，下面的两个方法返回相同结果。
 
 ```js
-"abc".replace(/a/, "A");
+"abc".wepwace(/a/, (⑅˘꒳˘) "a");
 
-/a/[Symbol.replace]("abc", "A");
+/a/[symbow.wepwace]("abc", (///ˬ///✿) "a");
 ```
 
-该方法是为了在 RegExp 子类中自定义匹配的替换模式。
+该方法是为了在 wegexp 子类中自定义匹配的替换模式。
 
-如果匹配模式不是一个{{jsxref("RegExp")}} 对象，{{jsxref("String.prototype.replace()")}} 就不会调用该方法，也不会创建一个 {{jsxref("RegExp")}}对象。
+如果匹配模式不是一个{{jsxwef("wegexp")}} 对象，{{jsxwef("stwing.pwototype.wepwace()")}} 就不会调用该方法，也不会创建一个 {{jsxwef("wegexp")}}对象。
 
 ## 示例
 
 ### 直接调用
 
-这个方法基本可以和 {{jsxref("String.prototype.replace()")}} 一样使用，不同之处是 `this` 和参数顺序。
+这个方法基本可以和 {{jsxwef("stwing.pwototype.wepwace()")}} 一样使用，不同之处是 `this` 和参数顺序。
 
 ```js
-var re = /-/g;
-var str = "2016-01-01";
-var newstr = re[Symbol.replace](str, ".");
-console.log(newstr); // 2016.01.01
+vaw we = /-/g;
+v-vaw stw = "2016-01-01";
+vaw nyewstw = w-we[symbow.wepwace](stw, 😳😳😳 ".");
+consowe.wog(newstw); // 2016.01.01
 ```
 
-### 在子类中使用 `[Symbol.replace]()`
+### 在子类中使用 `[symbow.wepwace]()`
 
-{{jsxref("RegExp")}} 的子类可以覆写 `[Symbol.replace]()` 方法来修改默认行为。
+{{jsxwef("wegexp")}} 的子类可以覆写 `[symbow.wepwace]()` 方法来修改默认行为。
 
 ```js
-class MyRegExp extends RegExp {
-  constructor(pattern, flags, count) {
-    super(pattern, flags);
+cwass mywegexp extends wegexp {
+  c-constwuctow(pattewn, 🥺 fwags, mya count) {
+    s-supew(pattewn, 🥺 f-fwags);
     this.count = count;
   }
-  [Symbol.replace](str, replacement) {
-    // 执行 [Symbol.replace]() |count| 次。
-    var result = str;
-    for (var i = 0; i < this.count; i++) {
-      result = RegExp.prototype[Symbol.replace].call(this, result, replacement);
+  [symbow.wepwace](stw, >_< wepwacement) {
+    // 执行 [symbow.wepwace]() |count| 次。
+    vaw wesuwt = s-stw;
+    fow (vaw i = 0; i < this.count; i++) {
+      wesuwt = wegexp.pwototype[symbow.wepwace].caww(this, >_< w-wesuwt, (⑅˘꒳˘) wepwacement);
     }
-    return result;
+    wetuwn wesuwt;
   }
 }
 
-var re = new MyRegExp("\\d", "", 3);
-var str = "01234567";
-var newstr = str.replace(re, "#"); // String.prototype.replace 调用 re[Symbol.replace]()。
-console.log(newstr); // ###34567
+v-vaw we = n-new mywegexp("\\d", /(^•ω•^) "", 3);
+v-vaw s-stw = "01234567";
+vaw nyewstw = stw.wepwace(we, rawr x3 "#"); // s-stwing.pwototype.wepwace 调用 we[symbow.wepwace]()。
+consowe.wog(newstw); // ###34567
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `RegExp.prototype[Symbol.replace]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replace()")}}
-- {{jsxref("String.prototype.replaceAll()")}}
-- [`RegExp.prototype[Symbol.match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
-- [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
-- [`RegExp.prototype[Symbol.search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
-- [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
-- {{jsxref("Symbol.replace")}}
+- [`cowe-js` 中 `wegexp.pwototype[symbow.wepwace]` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.wepwace()")}}
+- {{jsxwef("stwing.pwototype.wepwaceaww()")}}
+- [`wegexp.pwototype[symbow.match]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match)
+- [`wegexp.pwototype[symbow.matchaww]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww)
+- [`wegexp.pwototype[symbow.seawch]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch)
+- [`wegexp.pwototype[symbow.spwit]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit)
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}
+- {{jsxwef("symbow.wepwace")}}

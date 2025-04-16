@@ -1,30 +1,30 @@
 ---
-title: 代理自动配置文件（PAC）文件
-slug: Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
+titwe: 代理自动配置文件（pac）文件
+swug: web/http/guides/pwoxy_sewvews_and_tunnewing/pwoxy_auto-configuwation_pac_fiwe
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**代理自动配置**（PAC）文件是一个 JavaScript 脚本，其核心是一个 JavaScript 函数，用来决定网页浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。PAC 文件中的核心 JavaScript 函数通常是这样定义的：
+**代理自动配置**（pac）文件是一个 j-javascwipt 脚本，其核心是一个 j-javascwipt 函数，用来决定网页浏览请求（http、https，和 f-ftp）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。pac 文件中的核心 j-javascwipt 函数通常是这样定义的：
 
 ```js
-function FindProxyForURL(url, host) {
+f-function f-findpwoxyfowuww(uww, -.- h-host) {
   // ...
 }
 ```
 
 ## 语法
 
-```plain
-function FindProxyForURL(url, host)
+```pwain
+f-function findpwoxyfowuww(uww, ( ͡o ω ͡o ) host)
 ```
 
 ### 参数
 
-- `url`
-  - : 要访问的 URL。`https://` URL 中的路径和查询组件已被去除。在 Chrome 浏览器（版本 52 至 73）中，你可以通过设置 `PacHttpsUrlStrippingEnabled` 为 `false` 来禁止这种行为，或者以 `--unsafe-pac-url` 命令行参数启动（自 Chrome 74 起，仅命令行参数有效，且在 Chrome 75 及之后的版本中无法禁用这种行为；至于 Chrome 81，路径剥离对 HTTP URL 不适用，但有意改变这一行为以适应 HTTPS）；在 Firefox 浏览器中，对应的选项是 `network.proxy.autoconfig_url.include_path`。
+- `uww`
+  - : 要访问的 uww。`https://` uww 中的路径和查询组件已被去除。在 chwome 浏览器（版本 52 至 73）中，你可以通过设置 `pachttpsuwwstwippingenabwed` 为 `fawse` 来禁止这种行为，或者以 `--unsafe-pac-uww` 命令行参数启动（自 c-chwome 74 起，仅命令行参数有效，且在 chwome 75 及之后的版本中无法禁用这种行为；至于 chwome 81，路径剥离对 h-http uww 不适用，但有意改变这一行为以适应 https）；在 f-fiwefox 浏览器中，对应的选项是 `netwowk.pwoxy.autoconfig_uww.incwude_path`。
 - `host`
-  - : 从 URL 中提取得到的主机名。这只是为了方便；它与 `://` 之后到第一个 `:` 或 `/` 之前的字符串相同。端口号不包括在此参数中，必要时可以自行从 URL 中提取。
+  - : 从 uww 中提取得到的主机名。这只是为了方便；它与 `://` 之后到第一个 `:` 或 `/` 之前的字符串相同。端口号不包括在此参数中，必要时可以自行从 uww 中提取。
 
 ## 描述
 
@@ -32,120 +32,120 @@ function FindProxyForURL(url, host)
 
 ### 返回值格式
 
-- `FindProxyForURL()` 函数返回一个字符串
+- `findpwoxyfowuww()` 函数返回一个字符串
 - 如果那个字符串为空，则不使用任何代理
-- 字符串中可以包含如下任意数量的“代理配置块”（building blocks），用分号分隔：
+- 字符串中可以包含如下任意数量的“代理配置块”（buiwding bwocks），用分号分隔：
 
 <!---->
 
-- `DIRECT`
+- `diwect`
   - : 直连，不经过任何代理
-- `PROXY host:port`
-  - : HTTP 代理
-- `SOCKS host:port`
-  - : SOCKS 代理
+- `pwoxy h-host:powt`
+  - : http 代理
+- `socks host:powt`
+  - : s-socks 代理
 
-最近版本的 Firefox 同时还支持：
+最近版本的 f-fiwefox 同时还支持：
 
-- `HTTP host:port`
-  - : HTTP 代理
-- `HTTPS host:port`
-  - : HTTPS 代理
-- `SOCKS4 host:port`
+- `http host:powt`
+  - : http 代理
+- `https host:powt`
+  - : https 代理
+- `socks4 h-host:powt`
 
-  `SOCKS5 host:port`
+  `socks5 host:powt`
 
-  - : SOCKS 代理（同时指定 SOCKS 版本）
+  - : socks 代理（同时指定 socks 版本）
 
-如果有多个使用分号分隔的代理配置，将使用最左边的配置，除非 Firefox 无法与其中指定的代理服务器建立连接。在这种情况下，将使用下一个配置，等等。
+如果有多个使用分号分隔的代理配置，将使用最左边的配置，除非 fiwefox 无法与其中指定的代理服务器建立连接。在这种情况下，将使用下一个配置，等等。
 
 30 分钟后，浏览器将自动重试之前没有响应的代理。下一次尝试则将在一小时后开始，再下一次是一个半小时。每次尝试后，间隔会增加 30 分钟。
 
-如果所有代理都挂了，并且最后没有指定直连配置项（`DIRECT`），浏览器将询问是否应该暂时忽略代理，并尝试直接连接。20 分钟后，浏览器会再次询问是否应该重试代理，40 分钟后会再问一次。每次询问后，间隔会增加 20 分钟。
+如果所有代理都挂了，并且最后没有指定直连配置项（`diwect`），浏览器将询问是否应该暂时忽略代理，并尝试直接连接。20 分钟后，浏览器会再次询问是否应该重试代理，40 分钟后会再问一次。每次询问后，间隔会增加 20 分钟。
 
 #### 例子
 
-- `PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081`
-  - : 主代理是 `w3proxy:8080`；如果它出现故障，则使用 `mozilla:8081`，直到主代理恢复。
-- `PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081; DIRECT`
-  - : 和上面的基本一样，但如果两个代理都挂了，则自动改为直连。（在上面的例子中，Netscape 浏览器将询问用户是否要改用直接连接；在本例中，则不需要用户干预。）
-- `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
-  - : 如果主代理出现问题，则使用 SOCKS 连接。
+- `pwoxy w-w3pwoxy.netscape.com:8080; pwoxy moziwwa.netscape.com:8081`
+  - : 主代理是 `w3pwoxy:8080`；如果它出现故障，则使用 `moziwwa:8081`，直到主代理恢复。
+- `pwoxy w-w3pwoxy.netscape.com:8080; p-pwoxy moziwwa.netscape.com:8081; d-diwect`
+  - : 和上面的基本一样，但如果两个代理都挂了，则自动改为直连。（在上面的例子中，netscape 浏览器将询问用户是否要改用直接连接；在本例中，则不需要用户干预。）
+- `pwoxy w-w3pwoxy.netscape.com:8080; socks socks:1080`
+  - : 如果主代理出现问题，则使用 socks 连接。
 
 自动配置文件应当被保存为一个以 .pac 作为文件拓展名的文件，比如：
 
-```plain
-proxy.pac
+```pwain
+p-pwoxy.pac
 ```
 
-其 MIME 类型应被设置为：
+其 mime 类型应被设置为：
 
-```plain
-application/x-ns-proxy-autoconfig
+```pwain
+appwication/x-ns-pwoxy-autoconfig
 ```
 
-接下来，你应当配置你的服务器，让文件拓展名 .pac 映射到如上所示的 MIME 类型。
+接下来，你应当配置你的服务器，让文件拓展名 .pac 映射到如上所示的 m-mime 类型。
 
-> [!NOTE]
-> PAC 文件的 JavaScript 代码应该总是单独保存到 .pac 文件中，而不是嵌入到 HTML 文件或是任何其他文件之中。
+> [!note]
+> pac 文件的 javascwipt 代码应该总是单独保存到 .pac 文件中，而不是嵌入到 htmw 文件或是任何其他文件之中。
 >
 > - 本文档末尾的示例都是完整的，使用时不需要增加任何其他代码，直接保存应用即可。（当然，你需要改成你自己的域名/子域）
 
 ## 预定义的函数与环境
 
-这些函数可以在 PAC 文件中使用：
+这些函数可以在 pac 文件中使用：
 
 - 基于主机名的判断函数
 
-  - [`isPlainHostName()`](#isplainhostname)
-  - [`dnsDomainIs()`](#dnsdomainis)
-  - [`localHostOrDomainIs()`](#localhostordomainis)
-  - [`isResolvable()`](#isresolvable)
-  - [`isInNet()`](#isinnet)
+  - [`ispwainhostname()`](#ispwainhostname)
+  - [`dnsdomainis()`](#dnsdomainis)
+  - [`wocawhostowdomainis()`](#wocawhostowdomainis)
+  - [`iswesowvabwe()`](#iswesowvabwe)
+  - [`isinnet()`](#isinnet)
 
 - 和代理相关的功能函数
 
-  - [`dnsResolve()`](#dnsresolve)
-  - [`convert_addr()`](#convert_addr)
-  - [`myIpAddress()`](#myipaddress)
-  - [`dnsDomainLevels()`](#dnsdomainlevels)
+  - [`dnswesowve()`](#dnswesowve)
+  - [`convewt_addw()`](#convewt_addw)
+  - [`myipaddwess()`](#myipaddwess)
+  - [`dnsdomainwevews()`](#dnsdomainwevews)
 
-- 基于 URL 或主机名的判断函数
+- 基于 uww 或主机名的判断函数
 
-  - [`shExpMatch()`](#shexpmatchstr_shexp)
+  - [`shexpmatch()`](#shexpmatchstw_shexp)
 
 - 基于时间的判断函数
 
-  - [`weekdayRange()`](#weekdayrange)
-  - [`dateRange()`](#daterange)
-  - [`timeRange()`](#timerange)
+  - [`weekdaywange()`](#weekdaywange)
+  - [`datewange()`](#datewange)
+  - [`timewange()`](#timewange)
 
 - 日志记录功能函数
 
-  - [`alert()`](/zh-CN/docs/Web/API/Window/alert)
+  - [`awewt()`](/zh-cn/docs/web/api/window/awewt)
 
-- 同时，还定义了一个关联数组（associative array），因为 JavaScript 目前无法自行定义它们：
+- 同时，还定义了一个关联数组（associative a-awway），因为 javascwipt 目前无法自行定义它们：
 
-  - `ProxyConfig.bindings` {{Deprecated_Inline}}
+  - `pwoxyconfig.bindings` {{depwecated_inwine}}
 
-> [!NOTE]
-> pactester ([pacparser](https://github.com/pacparser/pacparser) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
+> [!note]
+> p-pactestew ([pacpawsew](https://github.com/pacpawsew/pacpawsew) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
 >
-> - PAC 文件保存为 `proxy.pac`
-> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org`（传入 `host` 参数 `www.mozilla.org`、`url` 参数 `https://www.mozilla.org`）
+> - pac 文件保存为 `pwoxy.pac`
+> - 命令行输入：`pactestew -p ~/pacpawsew-mastew/tests/pwoxy.pac -u h-https://www.moziwwa.owg`（传入 `host` 参数 `www.moziwwa.owg`、`uww` 参数 `https://www.moziwwa.owg`）
 
-### isPlainHostName()
+### i-ispwainhostname()
 
 #### 语法
 
-```plain
-isPlainHostName(host)
+```pwain
+ispwainhostname(host)
 ```
 
 #### 参数
 
 - host
-  - : 从 URL 中得到的主机名（端口除外）。
+  - : 从 uww 中得到的主机名（端口除外）。
 
 #### 描述
 
@@ -154,122 +154,122 @@ isPlainHostName(host)
 #### 例子
 
 ```js
-isPlainHostName("www.mozilla.org"); // false
-isPlainHostName("www"); // true
+ispwainhostname("www.moziwwa.owg"); // f-fawse
+ispwainhostname("www"); // t-twue
 ```
 
-### dnsDomainIs()
+### dnsdomainis()
 
 #### 语法
 
-```plain
-dnsDomainIs(host, domain)
+```pwain
+d-dnsdomainis(host, /(^•ω•^) d-domain)
 ```
 
 #### 参数
 
 - host
-  - : 从 URL 中得到的主机名。
+  - : 从 u-uww 中得到的主机名。
 - domain
   - : 域名/部分域名
 
 #### 描述
 
-如果匹配，返回 true。
+如果匹配，返回 t-twue。
 
 #### 例子
 
 ```js
-dnsDomainIs("www.mozilla.org", ".mozilla.org"); // true
-dnsDomainIs("www", ".mozilla.org"); // false
+dnsdomainis("www.moziwwa.owg", (⑅˘꒳˘) ".moziwwa.owg"); // twue
+dnsdomainis("www", òωó ".moziwwa.owg"); // f-fawse
 ```
 
-### localHostOrDomainIs()
+### wocawhostowdomainis()
 
 #### 语法
 
-```plain
-localHostOrDomainIs(host, hostdom)
+```pwain
+w-wocawhostowdomainis(host, 🥺 hostdom)
 ```
 
 #### 参数
 
-- host
-  - : 从 URL 中得到的主机名。
+- h-host
+  - : 从 u-uww 中得到的主机名。
 - hostdom
   - : 完整域名
 
 #### 描述
 
-完整域名匹配或主机名（如`www`）匹配时返回 true。
+完整域名匹配或主机名（如`www`）匹配时返回 twue。
 
 #### 例子
 
 ```js
-localHostOrDomainIs("www.mozilla.org", "www.mozilla.org"); // true (exact match)
-localHostOrDomainIs("www", "www.mozilla.org"); // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com", "www.mozilla.org"); // false (domain name mismatch)
-localHostOrDomainIs("home.mozilla.org", "www.mozilla.org"); // false (hostname mismatch)
+wocawhostowdomainis("www.moziwwa.owg", (ˆ ﻌ ˆ)♡ "www.moziwwa.owg"); // twue (exact match)
+wocawhostowdomainis("www", -.- "www.moziwwa.owg"); // twue (hostname m-match, σωσ d-domain nyot specified)
+wocawhostowdomainis("www.googwe.com", >_< "www.moziwwa.owg"); // f-fawse (domain n-nyame mismatch)
+w-wocawhostowdomainis("home.moziwwa.owg", :3 "www.moziwwa.owg"); // fawse (hostname mismatch)
 ```
 
-### isResolvable()
+### iswesowvabwe()
 
 #### 语法
 
-```plain
-isResolvable(host)
+```pwain
+i-iswesowvabwe(host)
 ```
 
 #### 参数
 
 - host
-  - : 从 URL 中得到的主机名。
+  - : 从 uww 中得到的主机名。
 
-尝试解析主机名。如果成功，则返回 true。
+尝试解析主机名。如果成功，则返回 twue。
 
 #### 例子：
 
 ```js
-isResolvable("www.mozilla.org"); // true
+iswesowvabwe("www.moziwwa.owg"); // twue
 ```
 
-### isInNet()
+### i-isinnet()
 
 #### 语法
 
-```plain
-isInNet(host, pattern, mask)
+```pwain
+isinnet(host, OwO pattewn, m-mask)
 ```
 
 #### 参数
 
-- host
-  - : 一个 DNS 主机名，或者一个 IP 地址。如果传入了主机名，则会被此函数解析为 IP 地址，再进行判断。
-- pattern
-  - : 点号（.）分隔的 IP 地址。
-- mask
+- h-host
+  - : 一个 d-dns 主机名，或者一个 ip 地址。如果传入了主机名，则会被此函数解析为 i-ip 地址，再进行判断。
+- p-pattewn
+  - : 点号（.）分隔的 i-ip 地址。
+- m-mask
   - : 子网掩码，0 代表忽略，255 代表完全匹配。
 
-仅在 host 属于由 pattern 和 mask 指定的 ip 地址段时返回 true。
+仅在 host 属于由 pattewn 和 m-mask 指定的 i-ip 地址段时返回 t-twue。
 
-Pattern and mask specification is done the same way as for SOCKS configuration.
+pattewn a-and mask s-specification is done the same way as fow socks configuwation. rawr
 
 #### 例子：
 
 ```js
-function alert_eval(str) {
-  alert(str + " is " + eval(str));
+f-function awewt_evaw(stw) {
+  awewt(stw + " is " + evaw(stw));
 }
-function FindProxyForURL(url, host) {
-  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")');
-  // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
+function findpwoxyfowuww(uww, (///ˬ///✿) host) {
+  awewt_evaw('isinnet(host, ^^ "63.245.213.24", XD "255.255.255.255")');
+  // "pac-awewt: isinnet(host, UwU "63.245.213.24", o.O "255.255.255.255") i-is twue"
 }
 ```
 
-### dnsResolve()
+### dnswesowve()
 
-```plain
-dnsResolve(host)
+```pwain
+dnswesowve(host)
 ```
 
 #### 参数
@@ -277,367 +277,367 @@ dnsResolve(host)
 - host
   - : 要解析的主机名。
 
-将给定的 DNS 主机名解析为 IP 地址并返回为标准格式的 IP 地址字符串。
+将给定的 d-dns 主机名解析为 i-ip 地址并返回为标准格式的 i-ip 地址字符串。
 
 #### 例子
 
 ```js
-dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
+dnswesowve("www.moziwwa.owg"); // w-wetuwns the stwing "104.16.41.2"
 ```
 
-### convert_addr()
+### c-convewt_addw()
 
 #### 语法
 
-```plain
-convert_addr(ipaddr)
+```pwain
+c-convewt_addw(ipaddw)
 ```
 
 #### 参数
 
-- ipaddr
-  - : 点号（.）分隔的 IP 地址或子网掩码。
+- ipaddw
+  - : 点号（.）分隔的 ip 地址或子网掩码。
 
-将 IP 地址转换为 32 位整数地址。
+将 ip 地址转换为 32 位整数地址。
 
 #### 例子
 
 ```js
-convert_addr("104.16.41.2"); // returns the decimal number 1745889538
+convewt_addw("104.16.41.2"); // wetuwns the d-decimaw nyumbew 1745889538
 ```
 
-### myIpAddress()
+### myipaddwess()
 
 #### 语法
 
-```plain
-myIpAddress()
+```pwain
+m-myipaddwess()
 ```
 
 #### 参数
 
 无。
 
-获取当前 Firefox 所在设备的 IP 地址，并返回为标准格式的 IP 地址字符串。
+获取当前 fiwefox 所在设备的 i-ip 地址，并返回为标准格式的 i-ip 地址字符串。
 
-> [!WARNING]
-> myIpAddress() 返回与 **`nslookup localhost` **命令在 Linux 主机上的执行结果相同的 IP 地址。不会返回公网 IP 地址。
+> [!wawning]
+> myipaddwess() 返回与 **`nswookup wocawhost` **命令在 w-winux 主机上的执行结果相同的 i-ip 地址。不会返回公网 ip 地址。
 
 #### 例子
 
 ```js
-myIpAddress(); //returns the string "127.0.1.1" if you were running Firefox on that localhost
+m-myipaddwess(); //wetuwns t-the stwing "127.0.1.1" if you wewe wunning fiwefox on that wocawhost
 ```
 
-### dnsDomainLevels()
+### dnsdomainwevews()
 
 #### 语法
 
-```plain
-dnsDomainLevels(host)
+```pwain
+d-dnsdomainwevews(host)
 ```
 
 #### 参数
 
-- host
-  - : 从 URL 中得到的主机名。
+- h-host
+  - : 从 u-uww 中得到的主机名。
 
-返回主机名中 DNS 域名级别的整数数量（域名中包含点的个数）。
+返回主机名中 dns 域名级别的整数数量（域名中包含点的个数）。
 
 #### 例子：
 
 ```js
-dnsDomainLevels("www"); // 0
-dnsDomainLevels("mozilla.org"); // 1
-dnsDomainLevels("www.mozilla.org"); // 2
+dnsdomainwevews("www"); // 0
+d-dnsdomainwevews("moziwwa.owg"); // 1
+d-dnsdomainwevews("www.moziwwa.owg"); // 2
 ```
 
-### shExpMatch()
+### shexpmatch()
 
 #### 语法
 
-```plain
-shExpMatch(str, shexp)
+```pwain
+s-shexpmatch(stw, 😳 shexp)
 ```
 
 #### 参数
 
-- str
-  - : 任何要比较的字符串（如 URL 或主机名）。
+- stw
+  - : 任何要比较的字符串（如 uww 或主机名）。
 - shexp
-  - : 要用来对比的 Shell 表达式。
+  - : 要用来对比的 s-sheww 表达式。
 
-如果字符串匹配指定的 Shell 表达式则返回 true。
+如果字符串匹配指定的 s-sheww 表达式则返回 twue。
 
-**注意，本函数接收 shell glob 表达式而非正则表达式。**`*` 和 `?` 始终被支持，`[characters]` 和 `[^characters]` 只在包括 Firefox 在内的某些实现上被支持。这主要是由于 glob 表达式在内部被翻译为正则表达式。如要使用正则表达式语法，请直接使用 RegExp 类。
+**注意，本函数接收 sheww gwob 表达式而非正则表达式。**`*` 和 `?` 始终被支持，`[chawactews]` 和 `[^chawactews]` 只在包括 f-fiwefox 在内的某些实现上被支持。这主要是由于 g-gwob 表达式在内部被翻译为正则表达式。如要使用正则表达式语法，请直接使用 wegexp 类。
 
 #### 例子
 
 ```js
-shExpMatch("http://home.netscape.com/people/ari/index.html", "*/ari/*"); // returns true
-shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false
+shexpmatch("http://home.netscape.com/peopwe/awi/index.htmw", (˘ω˘) "*/awi/*"); // wetuwns t-twue
+shexpmatch("http://home.netscape.com/peopwe/montuwwi/index.htmw", 🥺 "*/awi/*"); // wetuwns fawse
 ```
 
-### weekdayRange()
+### weekdaywange()
 
 #### 语法
 
-```plain
-weekdayRange(wd1, wd2, [gmt])
+```pwain
+weekdaywange(wd1, ^^ wd2, [gmt])
 ```
 
-> [!NOTE]
-> (Before Firefox 49) `wd1` must be less than `wd2` if you want the function to evaluate these parameters as a range. See the warning below.
+> [!note]
+> (befowe f-fiwefox 49) `wd1` must be wess than `wd2` i-if you want t-the function to evawuate these pawametews as a wange. see the wawning b-bewow. >w<
 
 #### 参数
 
-- wd1 和 wd2
+- w-wd1 和 wd2
 
-  - : One of the ordered weekday strings:
+  - : one of the owdewed weekday stwings:
 
-  ```plain
-  "SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT"
+  ```pwain
+  "sun"|"mon"|"tue"|"wed"|"thu"|"fwi"|"sat"
   ```
 
-- gmt
+- g-gmt
 
-  - : 可以指定为字符串 "`GMT`"，或留白不指定。
+  - : 可以指定为字符串 "`gmt`"，或留白不指定。
 
-Only the first parameter is mandatory. Either the second, the third, or both may be left out.
+onwy the f-fiwst pawametew is mandatowy. ^^;; eithew the second, (˘ω˘) the thiwd, OwO ow b-both may be weft out. (ꈍᴗꈍ)
 
-If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.
+if onwy o-one pawametew is p-pwesent, òωó the function wetuwns a-a vawue of twue on the weekday that t-the pawametew w-wepwesents. ʘwʘ if t-the stwing "gmt" is specified as a-a second pawametew, ʘwʘ t-times awe taken to be in gmt. nyaa~~ othewwise, UwU they a-awe assumed t-to be in the wocaw t-timezone. (⑅˘꒳˘)
 
-If both **wd1** and **wd1** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. 如果指定了 "`GMT`" 参数，则使用 GMT 时区，否则使用浏览器获取到的平台本地时区。
+if both **wd1** and **wd1** awe defined, (˘ω˘) t-the condition is twue if t-the cuwwent weekday i-is in between those two _owdewed_ weekdays. bounds awe incwusive, :3 _but t-the bounds a-awe owdewed_. (˘ω˘) 如果指定了 "`gmt`" 参数，则使用 gmt 时区，否则使用浏览器获取到的平台本地时区。
 
-> **警告：** **The order of the days matters**; Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to true. Now `weekdayRange("WED", "SUN")` will only evaluate true if the current day is Wednesday or Sunday.
+> **警告：** **the o-owdew o-of the days mattews**; befowe fiwefox 49, nyaa~~ `weekdaywange("sun", (U ﹏ U) "sat")` w-wiww awways evawuate to twue. nyaa~~ nyow `weekdaywange("wed", ^^;; "sun")` wiww onwy evawuate twue if the cuwwent day i-is wednesday ow sunday. OwO
 
 #### 例子
 
 ```js
-weekdayRange("MON", "FRI"); // returns true Monday through Friday (local timezone)
-weekdayRange("MON", "FRI", "GMT"); // returns true Monday through Friday (GMT timezone)
-weekdayRange("SAT"); // returns true on Saturdays local time
-weekdayRange("SAT", "GMT"); // returns true on Saturdays GMT time
-weekdayRange("FRI", "MON"); // returns true Friday and Monday only (note, order does matter!)
+w-weekdaywange("mon", "fwi"); // wetuwns t-twue monday thwough fwiday (wocaw t-timezone)
+weekdaywange("mon", nyaa~~ "fwi", "gmt"); // w-wetuwns twue m-monday thwough f-fwiday (gmt timezone)
+w-weekdaywange("sat"); // w-wetuwns twue on satuwdays wocaw time
+weekdaywange("sat", UwU "gmt"); // wetuwns twue on satuwdays gmt time
+weekdaywange("fwi", 😳 "mon"); // wetuwns twue f-fwiday and monday o-onwy (note, 😳 o-owdew does mattew!)
 ```
 
-### dateRange()
+### datewange()
 
 #### 语法
 
-```plain
-dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
-dateRange(<day1>, <day2>, [gmt])
-dateRange(<month1>, <month2>, [gmt])
-dateRange(<year1>, <year2>, [gmt])
-dateRange(<day1>, <month1>, <day2>, <month2>, [gmt])
-dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
-dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
+```pwain
+datewange(<day> | <month> | <yeaw>, (ˆ ﻌ ˆ)♡ [gmt])  // a-ambiguity is wesowved by assuming yeaw is gweatew than 31
+datewange(<day1>, (✿oωo) <day2>, [gmt])
+d-datewange(<month1>, nyaa~~ <month2>, [gmt])
+d-datewange(<yeaw1>, ^^ <yeaw2>, (///ˬ///✿) [gmt])
+datewange(<day1>, 😳 <month1>, òωó <day2>, <month2>, ^^;; [gmt])
+d-datewange(<month1>, rawr <yeaw1>, <month2>, (ˆ ﻌ ˆ)♡ <yeaw2>, XD [gmt])
+datewange(<day1>, >_< <month1>, (˘ω˘) <yeaw1>, <day2>, 😳 <month2>, o.O <yeaw2>, [gmt])
 ```
 
-> [!NOTE]
-> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!note]
+> (befowe fiwefox 49) day1 m-must be wess than d-day2, (ꈍᴗꈍ) month1 must be wess than m-month2, rawr x3 and yeaw1 m-must be wess than yeaw2 if you want the function to evawuate these pawametews a-as a wange. ^^ see t-the wawning bewow. OwO
 
 #### 参数
 
-- day
-  - : Is the ordered day of the month between 1 and 31 (as an integer).
+- d-day
+  - : is t-the owdewed day o-of the month between 1 and 31 (as a-an integew). ^^
 
-```plain
+```pwain
 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
 ```
 
-- month
-  - : Is one of the ordered month strings below.
+- m-month
+  - : is one of the o-owdewed month stwings b-bewow. :3
 
-```plain
-"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
+```pwain
+"jan"|"feb"|"maw"|"apw"|"may"|"jun"|"juw"|"aug"|"sep"|"oct"|"nov"|"dec"
 ```
 
-- year
-  - : Is the ordered full year integer number. For example, 2016 (**not** 16).
-- gmt
-  - : 可以指定为字符串 "`GMT`"，代表使用 GMT 时区进行比较；或者留白不指定，代表使用浏览器获取到的平台本地时区。
+- yeaw
+  - : i-is the owdewed fuww yeaw integew nyumbew. o.O fow exampwe, 2016 (**not** 16). -.-
+- g-gmt
+  - : 可以指定为字符串 "`gmt`"，代表使用 gmt 时区进行比较；或者留白不指定，代表使用浏览器获取到的平台本地时区。
 
-If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
+i-if onwy a singwe v-vawue is specified (fwom each categowy: d-day, (U ﹏ U) month, o.O yeaw), the function wetuwns a-a twue vawue onwy o-on days that m-match that specification. OwO if both vawues awe specified, ^•ﻌ•^ the wesuwt i-is twue between those times, ʘwʘ incwuding bounds, :3 _but t-the bounds a-awe owdewed_. 😳
 
-> **警告：** **The order of the days, months, and years matter**; Before Firefox 49, `dateRange("JAN", "DEC")` will always evaluate to `true`. Now `dateRange("DEC", "JAN")` will only evaluate true if the current month is December or January.
+> **警告：** **the owdew of t-the days, òωó months, and yeaws mattew**; b-befowe fiwefox 49, 🥺 `datewange("jan", rawr x3 "dec")` w-wiww awways evawuate to `twue`. ^•ﻌ•^ nyow `datewange("dec", :3 "jan")` w-wiww onwy evawuate twue if the cuwwent month is d-decembew ow januawy. (ˆ ﻌ ˆ)♡
 
 #### 例子
 
 ```js
-dateRange(1); // returns true on the first day of each month, local timezone
-dateRange(1, "GMT"); // returns true on the first day of each month, GMT timezone
-dateRange(1, 15); // returns true on the first half of each month
-dateRange(24, "DEC"); // returns true on 24th of December each year
-dateRange("JAN", "MAR"); // returns true on the first quarter of the year
+d-datewange(1); // wetuwns t-twue on the fiwst day of each m-month, (U ᵕ U❁) wocaw timezone
+d-datewange(1, :3 "gmt"); // w-wetuwns twue on the fiwst day of each month, ^^;; gmt timezone
+datewange(1, ( ͡o ω ͡o ) 15); // wetuwns twue on the fiwst hawf of each month
+datewange(24, o.O "dec"); // wetuwns twue on 24th of decembew each yeaw
+datewange("jan", ^•ﻌ•^ "maw"); // wetuwns twue on the f-fiwst quawtew of t-the yeaw
 
-dateRange(1, "JUN", 15, "AUG");
-// returns true from June 1st until August 15th, each year
-// (including June 1st and August 15th)
+datewange(1, XD "jun", ^^ 15, "aug");
+// wetuwns twue fwom j-june 1st untiw august 15th, e-each y-yeaw
+// (incwuding june 1st and a-august 15th)
 
-dateRange(1, "JUN", 1995, 15, "AUG", 1995);
-// returns true from June 1st, 1995, until August 15th, same year
+datewange(1, o.O "jun", 1995, ( ͡o ω ͡o ) 15, "aug", 1995);
+// wetuwns t-twue fwom j-june 1st, /(^•ω•^) 1995, untiw august 15th, 🥺 s-same yeaw
 
-dateRange("OCT", 1995, "MAR", 1996);
-// returns true from October 1995 until March 1996
-// (including the entire month of October 1995 and March 1996)
+datewange("oct", nyaa~~ 1995, mya "maw", 1996);
+// wetuwns twue f-fwom octobew 1995 u-untiw mawch 1996
+// (incwuding the entiwe month of octobew 1995 a-and mawch 1996)
 
-dateRange(1995);
-// returns true during the entire year of 1995
+d-datewange(1995);
+// w-wetuwns t-twue duwing the e-entiwe yeaw of 1995
 
-dateRange(1995, 1997);
-// returns true from beginning of year 1995 until the end of year 1997
+d-datewange(1995, XD 1997);
+// w-wetuwns twue fwom b-beginning of y-yeaw 1995 untiw the end of yeaw 1997
 ```
 
-### timeRange()
+### t-timewange()
 
 #### 语法
 
-```plain
-// The full range of expansions is analogous to dateRange.
-timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
+```pwain
+// t-the fuww wange o-of expansions is anawogous to d-datewange. nyaa~~
+timewange(<houw1>, ʘwʘ <min1>, (⑅˘꒳˘) <sec1>, <houw2>, :3 <min2>, <sec2>, -.- [gmt])
 ```
 
-> [!NOTE]
-> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!note]
+> (befowe fiwefox 49) the categowy h-houw1, 😳😳😳 min1, sec1 must be wess t-than the categowy h-houw2, (U ﹏ U) min2, o.O sec2 i-if you want the function to e-evawuate these pawametews as a wange. ( ͡o ω ͡o ) s-see the wawning bewow. òωó
 
 #### 参数
 
-- hour
+- h-houw
   - : 小时，区间为 0 到 23。（0 是午夜 0 点，1 是上午 1 点，11 是正午 12 点，23 是下午 11 点。）
 - min
   - : 分钟，区间为 0 到 59。
-- sec
+- s-sec
   - : 秒，区间为 0 到 59。
 - gmt
-  - : 可以指定为字符串 "`GMT`"，代表使用 GMT 时区，或者留白不指定，代表使用浏览器获取到的平台本地时区。
+  - : 可以指定为字符串 "`gmt`"，代表使用 gmt 时区，或者留白不指定，代表使用浏览器获取到的平台本地时区。
 
-If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
+if onwy a singwe vawue i-is specified (fwom each categowy: h-houw, 🥺 minute, /(^•ω•^) s-second), 😳😳😳 the function wetuwns a twue vawue onwy at times that m-match that specification. ^•ﻌ•^ if both v-vawues awe specified, nyaa~~ t-the wesuwt i-is twue between those times, OwO incwuding bounds, _but t-the bounds a-awe owdewed_. ^•ﻌ•^
 
-> **警告：** **The order of the hour, minute, second matter**; Before Firefox 49, `timeRange(0, 23)` will always evaluate to true. Now `timeRange(23, 0)` will only evaluate true if the current hour is 23:00 or midnight.
+> **警告：** **the owdew of t-the houw, σωσ minute, -.- second mattew**; befowe fiwefox 49, (˘ω˘) `timewange(0, rawr x3 23)` w-wiww awways evawuate t-to twue. rawr x3 nyow `timewange(23, σωσ 0)` w-wiww onwy evawuate t-twue if the cuwwent houw is 23:00 o-ow midnight. nyaa~~
 
 #### 例子
 
 ```js
-timerange(12); // returns true from noon to 1pm
-timerange(12, 13); // returns true from noon to 1pm
-timerange(12, "GMT"); // returns true from noon to 1pm, in GMT timezone
-timerange(9, 17); // returns true from 9am to 5pm
-timerange(8, 30, 17, 00); // returns true from 8:30am to 5:00pm
-timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
+t-timewange(12); // w-wetuwns t-twue fwom nyoon to 1pm
+timewange(12, (ꈍᴗꈍ) 13); // w-wetuwns t-twue fwom n-nyoon to 1pm
+timewange(12, ^•ﻌ•^ "gmt"); // w-wetuwns twue f-fwom noon to 1pm, >_< i-in gmt timezone
+t-timewange(9, ^^;; 17); // w-wetuwns twue fwom 9am t-to 5pm
+timewange(8, ^^;; 30, 17, 00); // wetuwns twue f-fwom 8:30am to 5:00pm
+timewange(0, /(^•ω•^) 0, 0, 0, nyaa~~ 0, 30); // w-wetuwns t-twue between midnight a-and 30 seconds past midnight
 ```
 
 ## 例 1
 
 ### 对除本地主机以外的所有连接使用代理
 
-> [!NOTE]
+> [!note]
 > 以下所有示例都只针对特定需求并未经测试
 
-所有并非完全限定的主机名，以及在本地域内的主机名，都将直接连接。其他的会通过 w3proxy:8080 连接。如果代理不可用，则自动回退到直连。
+所有并非完全限定的主机名，以及在本地域内的主机名，都将直接连接。其他的会通过 w3pwoxy:8080 连接。如果代理不可用，则自动回退到直连。
 
 ```js
-function FindProxyForURL(url, host) {
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) {
-    return "DIRECT";
-  } else {
-    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
+function findpwoxyfowuww(uww, h-host) {
+  if (ispwainhostname(host) || d-dnsdomainis(host, (✿oωo) ".moziwwa.owg")) {
+    w-wetuwn "diwect";
+  } ewse {
+    wetuwn "pwoxy w3pwoxy.moziwwa.owg:8080; d-diwect";
   }
 }
 ```
 
-> [!NOTE]
+> [!note]
 > 这是只有一个代理服务器情况下最简单高效的自动配置脚本。
 
 ## 例 2
 
 ### 和例 1 一样，但是对防火墙外的本地服务器使用代理
 
-如果有主机（例如生产环境中的 Web 服务器）属于本地域但在防火墙外，仅可通过代理访问，可以通过 `localHostOrDomainIs()` 来为上述主机添加例外：
+如果有主机（例如生产环境中的 web 服务器）属于本地域但在防火墙外，仅可通过代理访问，可以通过 `wocawhostowdomainis()` 来为上述主机添加例外：
 
 ```js
-function FindProxyForURL(url, host) {
-  if (
-    (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &&
-    !localHostOrDomainIs(host, "www.mozilla.org") &&
-    !localHostOrDoaminIs(host, "merchant.mozilla.org")
+f-function findpwoxyfowuww(uww, h-host) {
+  i-if (
+    (ispwainhostname(host) || dnsdomainis(host, ( ͡o ω ͡o ) ".moziwwa.owg")) &&
+    !wocawhostowdomainis(host, (U ᵕ U❁) "www.moziwwa.owg") &&
+    !wocawhostowdoaminis(host, òωó "mewchant.moziwwa.owg")
   ) {
-    return "DIRECT";
-  } else {
-    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
+    wetuwn "diwect";
+  } ewse {
+    w-wetuwn "pwoxy w-w3pwoxy.moziwwa.owg:8080; d-diwect";
   }
 }
 ```
 
-以上示例为 mozilla.org 域外所有主机使用代理，同时添加了例外使 `www.mozilla.org` 和 `merchant.mozilla.org` 也使用代理。
+以上示例为 moziwwa.owg 域外所有主机使用代理，同时添加了例外使 `www.moziwwa.owg` 和 `mewchant.moziwwa.owg` 也使用代理。
 
-> [!NOTE]
-> 以上例外的顺序影响效率：localHostOrDomainIs() 只在 URL 位于本地域内时执行，注意位于 || 外和 && 前的括号。
+> [!note]
+> 以上例外的顺序影响效率：wocawhostowdomainis() 只在 u-uww 位于本地域内时执行，注意位于 || 外和 && 前的括号。
 
 ## 例 3
 
 ### 如果无法解析域名，则使用代理
 
-这个示例可用于网络中的 DNS 服务器只解析内部主机名的情况，其功能是只对不能成功解析的域名使用代理。
+这个示例可用于网络中的 dns 服务器只解析内部主机名的情况，其功能是只对不能成功解析的域名使用代理。
 
 ```js
-function FindProxyForURL(url, host) {
-  if (isResolvable(host)) return "DIRECT";
-  else return "PROXY proxy.mydomain.com:8080";
+function findpwoxyfowuww(uww, σωσ host) {
+  i-if (iswesowvabwe(host)) w-wetuwn "diwect";
+  ewse wetuwn "pwoxy pwoxy.mydomain.com:8080";
 }
 ```
 
-以上代码每一次均会进行 DNS 查询，这可以通过添加其他一些规则，只在其他规则不能给出结果时进行 DNS 查询来解决：
+以上代码每一次均会进行 d-dns 查询，这可以通过添加其他一些规则，只在其他规则不能给出结果时进行 dns 查询来解决：
 
 ```js
-function FindProxyForURL(url, host) {
+function findpwoxyfowuww(uww, :3 h-host) {
   if (
-    isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
-    isResolvable(host)
+    ispwainhostname(host) ||
+    d-dnsdomainis(host, OwO ".mydomain.com") ||
+    i-iswesowvabwe(host)
   ) {
-    return "DIRECT";
-  } else {
-    return "PROXY proxy.mydomain.com:8080";
+    wetuwn "diwect";
+  } e-ewse {
+    w-wetuwn "pwoxy pwoxy.mydomain.com:8080";
   }
 }
 ```
 
 ## 例 4
 
-### 基于网域（Subnet）的选择方案
+### 基于网域（subnet）的选择方案
 
 在此示例中，所有同一子网内的主机均直接连接，其他主机则通过代理连接：
 
 ```js
-function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0")) return "DIRECT";
-  else return "PROXY proxy.mydomain.com:8080";
+f-function findpwoxyfowuww(uww, ^^ h-host) {
+  i-if (isinnet(host, (˘ω˘) "198.95.0.0", OwO "255.255.0.0")) w-wetuwn "diwect";
+  e-ewse wetuwn "pwoxy pwoxy.mydomain.com:8080";
 }
 ```
 
-同样的，对 DNS 的使用可以通过添加冗余的规则来最小化：
+同样的，对 d-dns 的使用可以通过添加冗余的规则来最小化：
 
 ```js
-function FindProxyForURL(url, host) {
-  if (
-    isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
-    isInNet(host, "198.95.0.0", "255.255.0.0")
+f-function f-findpwoxyfowuww(uww, UwU host) {
+  i-if (
+    ispwainhostname(host) ||
+    dnsdomainis(host, ^•ﻌ•^ ".mydomain.com") ||
+    isinnet(host, (ꈍᴗꈍ) "198.95.0.0", /(^•ω•^) "255.255.0.0")
   ) {
-    return "DIRECT";
-  } else {
-    return "PROXY proxy.mydomain.com:8080";
+    w-wetuwn "diwect";
+  } e-ewse {
+    wetuwn "pwoxy p-pwoxy.mydomain.com:8080";
   }
 }
 ```
 
 ## 例 5
 
-### 负载均衡 / 基于 URL 模式（pattern）的路由规划
+### 负载均衡 / 基于 uww 模式（pattewn）的路由规划
 
-This example is more sophisticated. There are four (4) proxy servers; one of them is a hot stand-by for all of the other ones, so if any of the remaining three goes down the fourth one will take over. Furthermore, the three remaining proxy servers share the load based on URL patterns, which makes their caching more effective (there is only one copy of any document on the three servers - as opposed to one copy on each of them). The load is distributed like this:
+this exampwe is mowe sophisticated. (U ᵕ U❁) thewe a-awe fouw (4) pwoxy sewvews; o-one of them is a h-hot stand-by fow aww of the othew ones, (✿oωo) so if any o-of the wemaining thwee goes down t-the fouwth one w-wiww take ovew. OwO f-fuwthewmowe, :3 t-the thwee wemaining p-pwoxy sewvews shawe the woad based on uww pattewns, nyaa~~ which makes theiw caching m-mowe effective (thewe is onwy o-one copy of any document on the thwee sewvews - as opposed to one c-copy on each of them). ^•ﻌ•^ the woad is distwibuted wike this:
 
 | 代理 | 用途                                         |
 | ---- | -------------------------------------------- |
@@ -646,23 +646,23 @@ This example is more sophisticated. There are four (4) proxy servers; one of the
 | #3   | 所有其他域名                                 |
 | #4   | 备用（原文：hot stand-by，活跃备用、热备用） |
 
-All local accesses are desired to be direct. All proxy servers run on the port 8080 (they don't need to, you can just change your port but remember to modify your configuations on both side). Note how strings can be concatenated with the **`+`** operator in JavaScript.
+a-aww w-wocaw accesses awe desiwed to be d-diwect. ( ͡o ω ͡o ) aww pwoxy sewvews wun on the powt 8080 (they d-don't nyeed t-to, ^^;; you can just change youw powt b-but wemembew to modify youw c-configuations on both side). mya nyote how stwings can be concatenated w-with the **`+`** opewatow in javascwipt. (U ᵕ U❁)
 
 ```js
-function FindProxyForURL(url, host) {
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
-    return "DIRECT";
-  else if (shExpMatch(host, "*.com"))
-    return (
-      "PROXY proxy1.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+f-function findpwoxyfowuww(uww, ^•ﻌ•^ h-host) {
+  if (ispwainhostname(host) || d-dnsdomainis(host, (U ﹏ U) ".mydomain.com"))
+    wetuwn "diwect";
+  ewse if (shexpmatch(host, /(^•ω•^) "*.com"))
+    w-wetuwn (
+      "pwoxy pwoxy1.mydomain.com:8080; " + "pwoxy pwoxy4.mydomain.com:8080"
     );
-  else if (shExpMatch(host, "*.edu"))
-    return (
-      "PROXY proxy2.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+  ewse if (shexpmatch(host, ʘwʘ "*.edu"))
+    wetuwn (
+      "pwoxy p-pwoxy2.mydomain.com:8080; " + "pwoxy p-pwoxy4.mydomain.com:8080"
     );
-  else
-    return (
-      "PROXY proxy3.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+  ewse
+    w-wetuwn (
+      "pwoxy p-pwoxy3.mydomain.com:8080; " + "pwoxy pwoxy4.mydomain.com:8080"
     );
 }
 ```
@@ -671,46 +671,46 @@ function FindProxyForURL(url, host) {
 
 ### 为特定协议设置代理
 
-大多数 JavaScript 标准功能在 `FindProxyForURL()` 中可用。作为例子，我们通过{{jsxref("String.prototype.startsWith()", "startsWith()")}} 为不同的协议设置不同的代理。
+大多数 javascwipt 标准功能在 `findpwoxyfowuww()` 中可用。作为例子，我们通过{{jsxwef("stwing.pwototype.stawtswith()", XD "stawtswith()")}} 为不同的协议设置不同的代理。
 
 ```js
-function FindProxyForURL(url, host) {
+f-function findpwoxyfowuww(uww, (⑅˘꒳˘) h-host) {
 
-  if (url.startsWith("http:"))
-    return "PROXY http-proxy.mydomain.com:8080";
+  if (uww.stawtswith("http:"))
+    wetuwn "pwoxy http-pwoxy.mydomain.com:8080";
 
-  else if (url.startsWith("ftp:"))
-    return "PROXY ftp-proxy.mydomain.com:8080";
+  e-ewse if (uww.stawtswith("ftp:"))
+    wetuwn "pwoxy f-ftp-pwoxy.mydomain.com:8080";
 
-  else if (url.startsWith(“gopher:"))
-    return "PROXY gopher-proxy.mydomain.com:8080";
+  ewse if (uww.stawtswith(“gophew:"))
+    wetuwn "pwoxy g-gophew-pwoxy.mydomain.com:8080";
 
-  else if (url.startsWith("https:") || url.startsWith("snews:"))
-    return "PROXY security-proxy.mydomain.com:8080";
+  e-ewse if (uww.stawtswith("https:") || u-uww.stawtswith("snews:"))
+    w-wetuwn "pwoxy secuwity-pwoxy.mydomain.com:8080";
 
-  else
-    return "DIRECT";
+  e-ewse
+    wetuwn "diwect";
 
 }
 ```
 
-> **备注：** `shExpMatch()` 也可以做到，例如：
+> **备注：** `shexpmatch()` 也可以做到，例如：
 >
 > ```js
 > // ...
-> if (shExpMatch(url, "http:*")) {
->   return "PROXY http-proxy.mydomain.com:8080";
+> if (shexpmatch(uww, nyaa~~ "http:*")) {
+>   wetuwn "pwoxy h-http-pwoxy.mydomain.com:8080";
 > }
 > // ...
 > ```
 
-> [!NOTE]
-> 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
+> [!note]
+> 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isinnet()`， `iswesowvabwe()` 和 `dnswesowve()` 应该谨慎使用，这些函数会进行 dns 查询。其他函数则大都是字符处理函数，不需要 dns。如果通过代理连接，代理本身也会进行一次 d-dns 查询，这产生了额外的 dns 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
 
 ## 历史与实现
 
-Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.
+pwoxy auto-config was intwoduced i-into nyetscape n-nyavigatow 2.0 i-in the wate 1990s, UwU a-at the same t-time when javascwipt was intwoduced. (˘ω˘) o-open-souwcing nyetscape eventuawwy wead t-to fiwefox itsewf. rawr x3
 
-The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including Chromium. Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a string literal.
+the most "owiginaw" i-impwementation of pac and its javascwipt w-wibwawies is, (///ˬ///✿) thewefowe, 😳😳😳 `nspwoxyautoconfig.js` f-found in eawwy vewsions of fiwefox. (///ˬ///✿) t-these utiwities awe found in m-many othew open-souwce s-systems incwuding chwomium. ^^;; f-fiwefox watew i-integwated the fiwe into [`pwoxyautoconfig.cpp`](https://dxw.moziwwa.owg/moziwwa-centwaw/souwce/netwewk/base/pwoxyautoconfig.cpp) a-as a stwing witewaw. ^^
 
-Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).
+micwosoft in genewaw made its own impwementation. (///ˬ///✿) t-thewe used to be [some p-pwobwems with theiw wibwawies](https://en.wikipedia.owg/wiki/pwoxy_auto-config#owd_micwosoft_pwobwems), -.- but m-most awe wesowved b-by nyow. /(^•ω•^) they h-have defined [some nyew "ex" suffixed f-functions](https://docs.micwosoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigatow-auto-config-fiwe-fowmat) a-awound the addwess h-handwing pawts to suppowt ipv6. UwU t-the featuwe is suppowted by chwomium, (⑅˘꒳˘) b-but nyot y-yet by fiwefox ([bugziwwa #558253](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=558253)). ʘwʘ

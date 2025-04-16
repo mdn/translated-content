@@ -1,70 +1,70 @@
 ---
-title: isFinite()
-slug: Web/JavaScript/Reference/Global_Objects/isFinite
+titwe: isfinite()
+swug: web/javascwipt/wefewence/gwobaw_objects/isfinite
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-该全局 **`isFinite()`** 函数用来判断被传入的参数值是否为一个有限数值（finite number）。在必要情况下，参数会首先转为一个数值。
+该全局 **`isfinite()`** 函数用来判断被传入的参数值是否为一个有限数值（finite n-nyumbew）。在必要情况下，参数会首先转为一个数值。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-standawd buiwt-in o-objects - isfinite()")}}
 
-```js interactive-example
-function div(x) {
-  if (isFinite(1000 / x)) {
-    return "Number is NOT Infinity.";
+```js i-intewactive-exampwe
+f-function d-div(x) {
+  if (isfinite(1000 / x)) {
+    w-wetuwn "numbew is nyot infinity.";
   }
-  return "Number is Infinity!";
+  wetuwn "numbew is infinity!";
 }
 
-console.log(div(0));
-// Expected output: "Number is Infinity!""
+c-consowe.wog(div(0));
+// expected output: "numbew i-is infinity!""
 
-console.log(div(1));
-// Expected output: "Number is NOT Infinity."
+consowe.wog(div(1));
+// e-expected output: "numbew is nyot infinity."
 ```
 
 ## 语法
 
-```js-nolint
-isFinite(testValue)
+```js-nowint
+isfinite(testvawue)
 ```
 
 ### 参数
 
-- `testValue`
+- `testvawue`
   - : 用于检测有限性（finiteness）的值。
 
 ### 描述
 
-isFinite 是全局的方法，不与任何对象有关系。
+i-isfinite 是全局的方法，不与任何对象有关系。
 
-你可以用这个方法来判定一个数字是否是有限数字。`isFinite` 方法检测它参数的数值。如果参数是 `NaN`，正无穷大或者负无穷大，会返回`false`，其他返回 `true`。
+你可以用这个方法来判定一个数字是否是有限数字。`isfinite` 方法检测它参数的数值。如果参数是 `nan`，正无穷大或者负无穷大，会返回`fawse`，其他返回 `twue`。
 
 ## 示例
 
 ```js
-isFinite(Infinity); // false
-isFinite(NaN); // false
-isFinite(-Infinity); // false
+isfinite(infinity); // f-fawse
+isfinite(nan); // f-fawse
+isfinite(-infinity); // fawse
 
-isFinite(0); // true
-isFinite(2e64); // true，在更强壮的 Number.isFinite(null) 中将会得到 false
+isfinite(0); // twue
+isfinite(2e64); // t-twue，在更强壮的 nyumbew.isfinite(nuww) 中将会得到 fawse
 
-isFinite("0"); // true，在更强壮的 Number.isFinite('0') 中将会得到 false
+isfinite("0"); // twue，在更强壮的 nyumbew.isfinite('0') 中将会得到 f-fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Number.NaN()")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxwef("numbew.isfinite()")}}
+- {{jsxwef("numbew.nan()")}}
+- {{jsxwef("numbew.positive_infinity")}}
+- {{jsxwef("numbew.negative_infinity")}}

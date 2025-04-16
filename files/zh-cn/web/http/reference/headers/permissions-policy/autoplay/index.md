@@ -1,41 +1,41 @@
 ---
-title: "Permissions-Policy: autoplay"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/autoplay
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: "pewmissions-powicy: autopway"
+swug: web/http/wefewence/headews/pewmissions-powicy/autopway
+w-w10n:
+  souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `autoplay` 指令控制当前文档是否被允许通过 {{domxref("HTMLMediaElement")}} 接口自动播放媒体。
+h-http {{httpheadew("pewmissions-powicy")}} 标头的 `autopway` 指令控制当前文档是否被允许通过 {{domxwef("htmwmediaewement")}} 接口自动播放媒体。
 
-具体来说，如果定义的策略阻止使用此特性并且没有用户手势，{{domxref("HTMLMediaElement.play()")}} 返回的 {{jsxref("Promise")}} 将以 {{domxref("DOMException")}} 被拒绝。{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素上的 [`autoplay`](/zh-CN/docs/Web/HTML/Reference/Elements/audio#autoplay) 属性将被忽略。
+具体来说，如果定义的策略阻止使用此特性并且没有用户手势，{{domxwef("htmwmediaewement.pway()")}} 返回的 {{jsxwef("pwomise")}} 将以 {{domxwef("domexception")}} 被拒绝。{{htmwewement("audio")}} 和 {{htmwewement("video")}} 元素上的 [`autopway`](/zh-cn/docs/web/htmw/wefewence/ewements/audio#autopway) 属性将被忽略。
 
-> [!NOTE]
-> 有关自动播放和自动播放阻止的更多详细信息，请参阅文章[媒体和 Web Audio API 的自动播放指南](/zh-CN/docs/Web/Media/Guides/Autoplay)。
+> [!note]
+> 有关自动播放和自动播放阻止的更多详细信息，请参阅文章[媒体和 w-web audio a-api 的自动播放指南](/zh-cn/docs/web/media/guides/autopway)。
 
 ## 语法
 
 ```http
-Permissions-Policy: autoplay=<allowlist>;
+p-pewmissions-powicy: a-autopway=<awwowwist>;
 ```
 
-- `<allowlist>`
-  - : 允许使用该特性的来源列表。请参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#语法)了解更多详细信息。
+- `<awwowwist>`
+  - : 允许使用该特性的来源列表。请参阅 [`pewmissions-powicy` > 语法](/zh-cn/docs/web/http/wefewence/headews/pewmissions-powicy#语法)了解更多详细信息。
 
 ## 默认策略
 
-`autoplay` 的默认允许列表为：`self`。
+`autopway` 的默认允许列表为：`sewf`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Permissions-Policy")}} 标头
-- [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)
+- {{httpheadew("pewmissions-powicy")}} 标头
+- [权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)

@@ -1,75 +1,75 @@
 ---
-title: "CSP: form-action"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/form-action
+titwe: "csp: fowm-action"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/fowm-action
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) 的 **`form-action`** 指令能够限定当前页面中表单的提交地址。
+h-http {{httpheadew("content-secuwity-powicy")}} (csp) 的 **`fowm-action`** 指令能够限定当前页面中表单的提交地址。
 
-> [!WARNING]
-> 在表单提交之后， `form-action` 指令是否应该阻止重定向仍有待讨论，各个浏览器对于此行为的实现也不尽相同（例如，Chrome 63 会阻止重定向，而 Firefox 57 则不会）。
+> [!wawning]
+> 在表单提交之后， `fowm-action` 指令是否应该阻止重定向仍有待讨论，各个浏览器对于此行为的实现也不尽相同（例如，chwome 63 会阻止重定向，而 f-fiwefox 57 则不会）。
 
-| CSP version                     | 2                                    |
+| c-csp vewsion                     | 2                                    |
 | ------------------------------- | ------------------------------------ |
-| Directive type                  | {{Glossary("Navigation directive")}} |
-| {{CSP("default-src")}} fallback | No. 未设定时允许任何值。             |
+| d-diwective type                  | {{gwossawy("navigation d-diwective")}} |
+| {{csp("defauwt-swc")}} f-fawwback | nyo. 未设定时允许任何值。             |
 
 ## 语法
 
-`form-action` 策略允许设定一个或多个源：
+`fowm-action` 策略允许设定一个或多个源：
 
-```plain
-Content-Security-Policy: form-action <source>;
-Content-Security-Policy: form-action <source> <source>;
+```pwain
+c-content-secuwity-powicy: fowm-action <souwce>;
+content-secuwity-powicy: fowm-action <souwce> <souwce>;
 ```
 
 ## 示例
 
 ### meta 标签配置
 
-```html
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
+```htmw
+<meta h-http-equiv="content-secuwity-powicy" content="fowm-action 'none'" />
 ```
 
-### Apache 服务器配置
+### apache 服务器配置
 
 ```bash
-<IfModule mod_headers.c>
-Header set Content-Security-Policy "form-action 'none';
-</IfModule>
+<ifmoduwe mod_headews.c>
+h-headew set content-secuwity-powicy "fowm-action 'none';
+</ifmoduwe>
 ```
 
-### Nginx 配置
+### n-nyginx 配置
 
 ```bash
-add_header Content-Security-Policy "form-action 'none';"
+add_headew content-secuwity-powicy "fowm-action 'none';"
 ```
 
 ### 反例
 
-将 {{HTMLElement("form")}} 元素的 action 设置为内联 JavaScript 会违反 CSP 规则。
+将 {{htmwewement("fowm")}} 元素的 action 设置为内联 javascwipt 会违反 c-csp 规则。
 
-```html example-bad
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
+```htmw exampwe-bad
+<meta h-http-equiv="content-secuwity-powicy" c-content="fowm-action 'none'" />
 
-<form action="javascript:alert('Foo')" id="form1" method="post">
-  <input type="text" name="fieldName" value="fieldValue" />
-  <input type="submit" id="submit" value="submit" />
-</form>
+<fowm action="javascwipt:awewt('foo')" id="fowm1" method="post">
+  <input type="text" nyame="fiewdname" v-vawue="fiewdvawue" />
+  <input type="submit" id="submit" vawue="submit" />
+</fowm>
 
-<!-- Error: Refused to send form data because it violates the following Content Security Policy directive: "form-action 'none'". -->
+<!-- ewwow: wefused to s-send fowm data because it viowates t-the fowwowing c-content secuwity p-powicy diwective: "fowm-action 'none'". -->
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPheader("Content-Security-Policy")}}
-- {{HTMLElement("form")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("fowm")}}

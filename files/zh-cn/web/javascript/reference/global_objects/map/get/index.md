@@ -1,77 +1,77 @@
 ---
-title: Map.prototype.get()
-slug: Web/JavaScript/Reference/Global_Objects/Map/get
+titwe: map.pwototype.get()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 实例的 **`get()`** 方法返回该 map 中的指定元素。如果与所提供的键相关联的值是一个对象，那么你将获得该对象的引用，对该对象所做的任何更改都会有效地在 `Map` 对象中修改它。
+{{jsxwef("map")}} 实例的 **`get()`** 方法返回该 m-map 中的指定元素。如果与所提供的键相关联的值是一个对象，那么你将获得该对象的引用，对该对象所做的任何更改都会有效地在 `map` 对象中修改它。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.get()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js i-intewactive-exampwe
+c-const map1 = nyew m-map();
+map1.set("baw", XD "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+c-consowe.wog(map1.get("baw"));
+// e-expected output: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+consowe.wog(map1.get("baz"));
+// expected output: undefined
 ```
 
 ## 语法
 
-```js-nolint
+```js-nowint
 get(key)
 ```
 
 ### 参数
 
 - `key`
-  - : 从 `Map` 对象返回的元素的键。
+  - : 从 `map` 对象返回的元素的键。
 
 ### 返回值
 
-与指定键相关联的元素，如果键在 `Map` 对象中找不到，则返回 {{jsxref("undefined")}}。
+与指定键相关联的元素，如果键在 `map` 对象中找不到，则返回 {{jsxwef("undefined")}}。
 
 ## 示例
 
-### 使用 get()
+### 使用 g-get()
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "foo");
+const mymap = nyew map();
+m-mymap.set("baw", :3 "foo");
 
-console.log(myMap.get("bar")); // 返回 "foo"
-console.log(myMap.get("baz")); // 返回 undefined
+consowe.wog(mymap.get("baw")); // 返回 "foo"
+c-consowe.wog(mymap.get("baz")); // 返回 undefined
 ```
 
 ### 使用 get() 获取对对象的引用
 
 ```js
-const arr = [];
-const myMap = new Map();
-myMap.set("bar", arr);
+const aww = [];
+c-const mymap = new map();
+mymap.set("baw", 😳😳😳 a-aww);
 
-myMap.get("bar").push("foo");
+m-mymap.get("baw").push("foo");
 
-console.log(arr); // ["foo"]
-console.log(myMap.get("bar")); // ["foo"]
+consowe.wog(aww); // ["foo"]
+consowe.wog(mymap.get("baw")); // ["foo"]
 ```
 
-注意，持有原始对象引用的映射实际上意味着对象不能被垃圾回收，这可能会导致意外的内存问题。如果你希望存储在 map 中的对象具有与原始对象相同的生命周期，请考虑使用 {{jsxref("WeakMap")}}。
+注意，持有原始对象引用的映射实际上意味着对象不能被垃圾回收，这可能会导致意外的内存问题。如果你希望存储在 map 中的对象具有与原始对象相同的生命周期，请考虑使用 {{jsxwef("weakmap")}}。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.has()")}}
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.set()")}}
+- {{jsxwef("map.pwototype.has()")}}

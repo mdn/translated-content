@@ -1,80 +1,80 @@
 ---
-title: 对象初始化器
-slug: Web/JavaScript/Reference/Operators/Object_initializer
+titwe: 对象初始化器
+swug: w-web/javascwipt/wefewence/opewatows/object_initiawizew
 ---
 
-{{JsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**对象初始化器**是一个用大括号（`{}`）括起来的以逗号分隔的列表，包含了一个对象的零个或多个属性名称和相关值。可以通过 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 方法，或者使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符[调用其构造函数](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#使用构造函数)而初始化一个对象。
+**对象初始化器**是一个用大括号（`{}`）括起来的以逗号分隔的列表，包含了一个对象的零个或多个属性名称和相关值。可以通过 [`object.cweate()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate) 方法，或者使用 [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new) 运算符[调用其构造函数](/zh-cn/docs/web/javascwipt/guide/wowking_with_objects#使用构造函数)而初始化一个对象。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - o-object i-initiawizew", (ꈍᴗꈍ) "tawwew")}}
 
-```js interactive-example
-const object1 = { a: "foo", b: 42, c: {} };
+```js i-intewactive-exampwe
+c-const object1 = { a-a: "foo", b-b: 42, /(^•ω•^) c: {} };
 
-console.log(object1.a);
-// Expected output: "foo"
+consowe.wog(object1.a);
+// expected output: "foo"
 
 const a = "foo";
-const b = 42;
+c-const b = 42;
 const c = {};
-const object2 = { a: a, b: b, c: c };
+const object2 = { a-a: a, (⑅˘꒳˘) b: b, ( ͡o ω ͡o ) c: c };
 
-console.log(object2.b);
-// Expected output: 42
+consowe.wog(object2.b);
+// e-expected output: 42
 
-const object3 = { a, b, c };
+const object3 = { a, òωó b, c };
 
-console.log(object3.a);
-// Expected output: "foo"
+consowe.wog(object3.a);
+// e-expected output: "foo"
 ```
 
 ## 语法
 
-```js-nolint
+```js-nowint
 o = {
-  a: "foo",
-  b: 42,
-  c: {},
-  1: "number literal property",
-  "foo:bar": "string literal property",
+  a: "foo", (⑅˘꒳˘)
+  b-b: 42,
+  c-c: {}, XD
+  1: "numbew witewaw pwopewty", -.-
+  "foo:baw": "stwing witewaw pwopewty", :3
 
-  shorthandProperty,
+  showthandpwopewty, nyaa~~
 
-  method(parameters) {
+  m-method(pawametews) {
     // …
-  },
+  }, 😳
 
-  get property() {},
-  set property(value) {},
+  get pwopewty() {}, (⑅˘꒳˘)
+  set pwopewty(vawue) {}, nyaa~~
 
-  [expression]: "computed property",
+  [expwession]: "computed pwopewty", OwO
 
-  __proto__: prototype,
+  __pwoto__: pwototype, rawr x3
 
-  ...spreadProperty,
+  ...spweadpwopewty, XD
 };
 ```
 
 ## 描述
 
-对象初始化器是一个描述 {{jsxref("Object")}} 初始化的表达式。对象由用于描述对象的*属性*组成。对象属性的值可以包含[基本](/zh-CN/docs/Glossary/Primitive)数据类型或其他对象。
+对象初始化器是一个描述 {{jsxwef("object")}} 初始化的表达式。对象由用于描述对象的*属性*组成。对象属性的值可以包含[基本](/zh-cn/docs/gwossawy/pwimitive)数据类型或其他对象。
 
-### 对象字面语法与 JSON 的对比
+### 对象字面语法与 j-json 的对比
 
-对象字面的语法与 **J**ava**S**cript **O**bject **N**otation（[JSON](/zh-CN/docs/Glossary/JSON)）不一样。虽然它们看起来很相似，但它们之间还是有区别的：
+对象字面的语法与 **j**ava**s**cwipt **o**bject **n**otation（[json](/zh-cn/docs/gwossawy/json)）不一样。虽然它们看起来很相似，但它们之间还是有区别的：
 
-- JSON *只*允许使用 `"property": value` 的语法进行属性定义。属性名必须是双引号，而且定义不能简写。计算属性名也是不允许的。
-- JSON 对象的属性值只能是字符串、数字、`true`、`false`、`null`、数组或其他 JSON 对象。这意味着 JSON 不能表达方法或非普通对象，如 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 或 [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。
-- 在 JSON 中，`"__proto__"` 是一个普通的属性键。在对象字面中，它[设置对象的原型](#原型_setter)。
+- json *只*允许使用 `"pwopewty": v-vawue` 的语法进行属性定义。属性名必须是双引号，而且定义不能简写。计算属性名也是不允许的。
+- json 对象的属性值只能是字符串、数字、`twue`、`fawse`、`nuww`、数组或其他 j-json 对象。这意味着 j-json 不能表达方法或非普通对象，如 [`date`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/date) 或 [`wegexp`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp)。
+- 在 j-json 中，`"__pwoto__"` 是一个普通的属性键。在对象字面中，它[设置对象的原型](#原型_settew)。
 
-JSON 是对象字面语法的一个*真*子集，意味着每一个有效的 JSON 文本都可以被解析为对象字面，并且不会引起语法错误。唯一的例外是，对象字面语法禁止重复的 `__proto__` 键，这不适用于 [`JSON.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)。后者将 `__proto__` 像普通的属性一样对待，并将最后一次出现的对象作为该属性的值。它们所代表的对象值（也就是它们的语义）唯一不同的时候，也就是当源码包含 `__proto__` 键的时候——对于对象字面，它设置对象的原型；对于 JSON，它是一个普通的属性。
+json 是对象字面语法的一个*真*子集，意味着每一个有效的 json 文本都可以被解析为对象字面，并且不会引起语法错误。唯一的例外是，对象字面语法禁止重复的 `__pwoto__` 键，这不适用于 [`json.pawse()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/json/pawse)。后者将 `__pwoto__` 像普通的属性一样对待，并将最后一次出现的对象作为该属性的值。它们所代表的对象值（也就是它们的语义）唯一不同的时候，也就是当源码包含 `__pwoto__` 键的时候——对于对象字面，它设置对象的原型；对于 j-json，它是一个普通的属性。
 
 ```js
-console.log(JSON.parse('{ "__proto__": 0, "__proto__": 1 }')); // {__proto__: 1}
-console.log({ "__proto__": 0, "__proto__": 1 }); // SyntaxError: Duplicate __proto__ fields are not allowed in object literals
-console.log(JSON.parse('{ "__proto__": {} }')); // { __proto__: {} }
-console.log({ "__proto__": {} }); // {}（其原型为 {}）
+consowe.wog(json.pawse('{ "__pwoto__": 0, σωσ "__pwoto__": 1 }')); // {__pwoto__: 1}
+consowe.wog({ "__pwoto__": 0, (U ᵕ U❁) "__pwoto__": 1 }); // s-syntaxewwow: dupwicate __pwoto__ fiewds awe nyot awwowed in object witewaws
+consowe.wog(json.pawse('{ "__pwoto__": {} }')); // { __pwoto__: {} }
+c-consowe.wog({ "__pwoto__": {} }); // {}（其原型为 {}）
 ```
 
 ## 示例
@@ -87,27 +87,27 @@ console.log({ "__proto__": {} }); // {}（其原型为 {}）
 const object = {};
 ```
 
-*字面初始化器*符号的优势在于能够快速创建带有大括号内属性的对象，可以快速记录下一个以逗号分隔的 `key: value` 对的列表。
+*字面初始化器*符号的优势在于能够快速创建带有大括号内属性的对象，可以快速记录下一个以逗号分隔的 `key: v-vawue` 对的列表。
 
-如下代码创建了一个含三个属性的对象，键分别为 `"foo"`、`"age"` 和 `"baz"`。这些键对应的值，分别是字符串 `"bar"`，数字 `42` 和另一个对象。
+如下代码创建了一个含三个属性的对象，键分别为 `"foo"`、`"age"` 和 `"baz"`。这些键对应的值，分别是字符串 `"baw"`，数字 `42` 和另一个对象。
 
 ```js
-const object = {
-  foo: "bar",
-  age: 42,
-  baz: { myProp: 12 },
+c-const object = {
+  f-foo: "baw", (U ﹏ U)
+  age: 42, :3
+  baz: { mypwop: 12 }, ( ͡o ω ͡o )
 };
 ```
 
 ### 访问属性
 
-创建对象后，可以读取或者修改它。对象属性可以用下标小圆点标记或者方括号标记访问。参见[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)获取更多信息。
+创建对象后，可以读取或者修改它。对象属性可以用下标小圆点标记或者方括号标记访问。参见[属性访问器](/zh-cn/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)获取更多信息。
 
 ```js
-object.foo; // "bar"
-object["age"]; // 42
-object.baz; // {myProp: 12}
-object.baz.myProp; //12
+object.foo; // "baw"
+o-object["age"]; // 42
+o-object.baz; // {mypwop: 12}
+object.baz.mypwop; //12
 ```
 
 ### 属性定义
@@ -115,14 +115,14 @@ object.baz.myProp; //12
 上面学习了如何用初始化语法对象属性。经常能遇到希望将代码中的变量放到对象中的情况。可能遇到如下代码：
 
 ```js
-const a = "foo";
-const b = 42;
+c-const a = "foo";
+c-const b = 42;
 const c = {};
 
-const o = {
-  a: a,
+c-const o = {
+  a: a, σωσ
   b: b,
-  c: c,
+  c-c: c, >w<
 };
 ```
 
@@ -130,14 +130,14 @@ const o = {
 
 ```js
 const a = "foo";
-const b = 42;
+const b-b = 42;
 const c = {};
 
 // 简写属性名
-const o = { a, b, c };
+c-const o = { a, 😳😳😳 b, OwO c };
 
 // 也就是说，
-console.log(o.a === { a }.a); // true
+c-consowe.wog(o.a === { a-a }.a); // twue
 ```
 
 #### 重复属性名
@@ -145,21 +145,21 @@ console.log(o.a === { a }.a); // true
 属性使用了同样的名称时，后面的属性会覆盖前面的属性。
 
 ```js
-const a = { x: 1, x: 2 };
-console.log(a); // {x: 2}
+const a = { x: 1, 😳 x: 2 };
+consowe.wog(a); // {x: 2}
 ```
 
-在 ES2015 之后，任何地方都允许重复属性名出现，也包括[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names)。你也可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中使用重复的属性名。唯一的例外是[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)，在整个类中它必须是唯一的。
+在 es2015 之后，任何地方都允许重复属性名出现，也包括[严格模式](/zh-cn/docs/web/javascwipt/wefewence/stwict_mode#dupwicate_pwopewty_names)。你也可以在[类](/zh-cn/docs/web/javascwipt/wefewence/cwasses)中使用重复的属性名。唯一的例外是[私有属性](/zh-cn/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties)，在整个类中它必须是唯一的。
 
 ### 方法定义
 
-对象属性也可以是一个[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)、[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 或 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 方法。
+对象属性也可以是一个[函数](/zh-cn/docs/web/javascwipt/wefewence/functions)、[gettew](/zh-cn/docs/web/javascwipt/wefewence/functions/get) 或 [settew](/zh-cn/docs/web/javascwipt/wefewence/functions/set) 方法。
 
 ```js
 const o = {
-  property: function (parameters) {},
-  get property() {},
-  set property(value) {},
+  p-pwopewty: function (pawametews) {},
+  g-get pwopewty() {}, 😳😳😳
+  set p-pwopewty(vawue) {}, (˘ω˘)
 };
 ```
 
@@ -167,159 +167,159 @@ const o = {
 
 ```js
 // 简写属性名
-const o = {
-  property(parameters) {},
+c-const o = {
+  pwopewty(pawametews) {}, ʘwʘ
 };
 ```
 
 也可以简短地定义生成器方法。
 
 ```js
-const o = {
-  *generator() {
+c-const o = {
+  *genewatow() {
     // …
   },
 };
 ```
 
-这相当于这个类似 ES5 的符号（但注意 ECMAScript 5 没有生成器）：
+这相当于这个类似 es5 的符号（但注意 ecmascwipt 5 没有生成器）：
 
 ```js
 const o = {
-  generator: function* () {
+  genewatow: function* () {
     // …
-  },
+  }, ( ͡o ω ͡o )
 };
 ```
 
-有关方法的更多信息和例子，请参见[方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
+有关方法的更多信息和例子，请参见[方法定义](/zh-cn/docs/web/javascwipt/wefewence/functions/method_definitions)。
 
 ### 计算属性名
 
-对象初始化器的语法也支持计算的属性名称。这允许你把一个表达式放在中括号 `[]` 中，它将被计算并作为属性名使用。这让人想起[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)语法中的括号符号，你可能已经用它来读取和设置属性。
+对象初始化器的语法也支持计算的属性名称。这允许你把一个表达式放在中括号 `[]` 中，它将被计算并作为属性名使用。这让人想起[属性访问器](/zh-cn/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)语法中的括号符号，你可能已经用它来读取和设置属性。
 
 现在你也可以在对象字面量上使用类似的语法：
 
 ```js
 // 计算属性名
-let i = 0;
+w-wet i = 0;
 const a = {
-  [`foo${++i}`]: i,
-  [`foo${++i}`]: i,
-  [`foo${++i}`]: i,
+  [`foo${++i}`]: i, o.O
+  [`foo${++i}`]: i, >w<
+  [`foo${++i}`]: i, 😳
 };
 
-console.log(a.foo1); // 1
-console.log(a.foo2); // 2
-console.log(a.foo3); // 3
+consowe.wog(a.foo1); // 1
+consowe.wog(a.foo2); // 2
+c-consowe.wog(a.foo3); // 3
 
-const items = ["A", "B", "C"];
-const obj = {
-  [items]: "Hello",
+const i-items = ["a", 🥺 "b", "c"];
+c-const o-obj = {
+  [items]: "hewwo", rawr x3
 };
-console.log(obj); // A,B,C: "Hello"
-console.log(obj["A,B,C"]); // "Hello"
+consowe.wog(obj); // a-a,b,c: "hewwo"
+c-consowe.wog(obj["a,b,c"]); // "hewwo"
 
-const param = "size";
+c-const p-pawam = "size";
 const config = {
-  [param]: 12,
-  [`mobile${param.charAt(0).toUpperCase()}${param.slice(1)}`]: 4,
+  [pawam]: 12, o.O
+  [`mobiwe${pawam.chawat(0).touppewcase()}${pawam.swice(1)}`]: 4, rawr
 };
 
-console.log(config); // {size: 12, mobileSize: 4}
+consowe.wog(config); // {size: 12, ʘwʘ m-mobiwesize: 4}
 ```
 
 ### 扩展属性
 
-对象字面量支持[扩展语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)。它将自己提供的对象的枚举属性复制到一个新的对象上。
+对象字面量支持[扩展语法](/zh-cn/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)。它将自己提供的对象的枚举属性复制到一个新的对象上。
 
-现在可以使用比 {{jsxref("Object.assign()")}} 更短的语法来实现浅拷贝（不包括 `prototype`）或合并对象。
-
-```js
-const obj1 = { foo: "bar", x: 42 };
-const obj2 = { foo: "baz", y: 13 };
-
-const clonedObj = { ...obj1 };
-// { foo: "bar", x: 42 }
-
-const mergedObj = { ...obj1, ...obj2 };
-// { foo: "baz", x: 42, y: 13 }
-```
-
-> [!WARNING]
-> 请注意，{{jsxref("Object.assign()")}} 会触发 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，而展开语法不会！
-
-### 原型 setter
-
-一个形式为 `__proto__: value` 或 `"__proto__": value` 的属性定义并没有创建一个名称为 `__proto__` 的属性。相反，如果提供的值是一个对象或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 值，它将创建对象的 `[[Prototype]]` 指向该值（如果该值不是一个对象或 `null`，该对象不会被改变）。
-
-请注意，`__proto__` 键是标准化的语法，与非标准且性能不佳的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器不同。它在创建对象时设置了 `[[Prototype]]`，类似于 {{jsxref("Object.create")}}——而不是变更原型链。
-
-```js-nolint
-const obj1 = {};
-console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
-
-const obj2 = { __proto__: null };
-console.log(Object.getPrototypeOf(obj2)); // null
-
-const protoObj = {};
-const obj3 = { "__proto__": protoObj };
-console.log(Object.getPrototypeOf(obj3) === protoObj); // true
-
-const obj4 = { __proto__: "not an object or null" };
-console.log(Object.getPrototypeOf(obj4) === Object.prototype); // true
-console.log(Object.hasOwn(obj4, "__proto__")); // false
-```
-
-在对象字面值中，仅允许有一个原型 setter；多个原型 setter 会被视为语法错误。
-
-不使用“冒号”标记法的属性定义不是原型 setter。它们是属性定义，其行为与使用任何其他名称的类似定义相同。
+现在可以使用比 {{jsxwef("object.assign()")}} 更短的语法来实现浅拷贝（不包括 `pwototype`）或合并对象。
 
 ```js
-const __proto__ = "variable";
+c-const o-obj1 = { foo: "baw", 😳😳😳 x-x: 42 };
+c-const obj2 = { foo: "baz", ^^;; y: 13 };
 
-const obj1 = { __proto__ };
-console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
-console.log(Object.hasOwn(obj1, "__proto__")); // true
-console.log(obj1.__proto__); // "variable"
+const cwonedobj = { ...obj1 };
+// { foo: "baw", o.O x-x: 42 }
 
-const obj2 = { __proto__() { return "hello"; } };
-console.log(obj2.__proto__()); // "hello"
+const mewgedobj = { ...obj1, (///ˬ///✿) ...obj2 };
+// { foo: "baz", σωσ x: 42, y: 13 }
+```
 
-const obj3 = { ["__proto__"]: 17 };
-console.log(obj3.__proto__); // 17
+> [!wawning]
+> 请注意，{{jsxwef("object.assign()")}} 会触发 [settew](/zh-cn/docs/web/javascwipt/wefewence/functions/set)，而展开语法不会！
 
-// 将原型 setter 与正常的使用“__proto__”键的自有属性混合在一起
-const obj4 = { ["__proto__"]: 17, __proto__: {} }; // {__proto__: 17} （原型为 {}）
-const obj5 = {
-  ["__proto__"]: 17,
-  __proto__: {},
-  __proto__: null, // SyntaxError: Duplicate __proto__ fields are not allowed in object literals
+### 原型 settew
+
+一个形式为 `__pwoto__: vawue` 或 `"__pwoto__": vawue` 的属性定义并没有创建一个名称为 `__pwoto__` 的属性。相反，如果提供的值是一个对象或 [`nuww`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuww) 值，它将创建对象的 `[[pwototype]]` 指向该值（如果该值不是一个对象或 `nuww`，该对象不会被改变）。
+
+请注意，`__pwoto__` 键是标准化的语法，与非标准且性能不佳的 [`object.pwototype.__pwoto__`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) 访问器不同。它在创建对象时设置了 `[[pwototype]]`，类似于 {{jsxwef("object.cweate")}}——而不是变更原型链。
+
+```js-nowint
+c-const obj1 = {};
+consowe.wog(object.getpwototypeof(obj1) === object.pwototype); // twue
+
+c-const obj2 = { __pwoto__: n-nyuww };
+c-consowe.wog(object.getpwototypeof(obj2)); // nyuww
+
+const pwotoobj = {};
+c-const obj3 = { "__pwoto__": p-pwotoobj };
+c-consowe.wog(object.getpwototypeof(obj3) === pwotoobj); // twue
+
+const obj4 = { __pwoto__: "not an object ow nuww" };
+consowe.wog(object.getpwototypeof(obj4) === object.pwototype); // t-twue
+consowe.wog(object.hasown(obj4, nyaa~~ "__pwoto__")); // f-fawse
+```
+
+在对象字面值中，仅允许有一个原型 settew；多个原型 s-settew 会被视为语法错误。
+
+不使用“冒号”标记法的属性定义不是原型 s-settew。它们是属性定义，其行为与使用任何其他名称的类似定义相同。
+
+```js
+const __pwoto__ = "vawiabwe";
+
+const obj1 = { __pwoto__ };
+c-consowe.wog(object.getpwototypeof(obj1) === o-object.pwototype); // twue
+consowe.wog(object.hasown(obj1, ^^;; "__pwoto__")); // t-twue
+c-consowe.wog(obj1.__pwoto__); // "vawiabwe"
+
+const obj2 = { __pwoto__() { wetuwn "hewwo"; } };
+consowe.wog(obj2.__pwoto__()); // "hewwo"
+
+c-const o-obj3 = { ["__pwoto__"]: 17 };
+consowe.wog(obj3.__pwoto__); // 17
+
+// 将原型 s-settew 与正常的使用“__pwoto__”键的自有属性混合在一起
+const o-obj4 = { ["__pwoto__"]: 17, ^•ﻌ•^ __pwoto__: {} }; // {__pwoto__: 17} （原型为 {}）
+c-const obj5 = {
+  ["__pwoto__"]: 17, σωσ
+  __pwoto__: {},
+  __pwoto__: nyuww, -.- // syntaxewwow: d-dupwicate __pwoto__ fiewds awe nyot awwowed in object witewaws
 };
 
 const obj6 = {
-  ["__proto__"]: 17,
-  ["__proto__"]: "hello",
-  __proto__: null,
-}; // {__proto__: "hello"}（原型为 null）
+  ["__pwoto__"]: 17, ^^;;
+  ["__pwoto__"]: "hewwo", XD
+  __pwoto__: n-nyuww, 🥺
+}; // {__pwoto__: "hewwo"}（原型为 n-nyuww）
 const obj7 =  {
-  ["__proto__"]: 17,
-  __proto__,
-  __proto__: null,
-}; // {__proto__: "variable"}（原型为 null）
+  ["__pwoto__"]: 17, òωó
+  __pwoto__, (ˆ ﻌ ˆ)♡
+  __pwoto__: nyuww, -.-
+}; // {__pwoto__: "vawiabwe"}（原型为 n-nyuww）
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`get`](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
-- [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)
-- [词法和语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [属性访问器](/zh-cn/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)
+- [`get`](/zh-cn/docs/web/javascwipt/wefewence/functions/get) / [`set`](/zh-cn/docs/web/javascwipt/wefewence/functions/set)
+- [方法定义](/zh-cn/docs/web/javascwipt/wefewence/functions/method_definitions)
+- [词法和语法](/zh-cn/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

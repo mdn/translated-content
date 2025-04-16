@@ -1,85 +1,85 @@
 ---
-title: decodeURI()
-slug: Web/JavaScript/Reference/Global_Objects/decodeURI
+titwe: decodeuwi()
+swug: web/javascwipt/wefewence/gwobaw_objects/decodeuwi
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-**`decodeURI()`** 函数能解码由{{jsxref("encodeURI")}} 创建或其他流程得到的统一资源标识符（URI）。
+**`decodeuwi()`** 函数能解码由{{jsxwef("encodeuwi")}} 创建或其他流程得到的统一资源标识符（uwi）。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURI()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-standawd buiwt-in o-objects - decodeuwi()")}}
 
-```js interactive-example
-const uri = "https://mozilla.org/?x=шеллы";
-const encoded = encodeURI(uri);
-console.log(encoded);
-// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```js i-intewactive-exampwe
+c-const uwi = "https://moziwwa.owg/?x=шеллы";
+c-const encoded = e-encodeuwi(uwi);
+c-consowe.wog(encoded);
+// expected output: "https://moziwwa.owg/?x=%d1%88%d0%b5%d0%bb%d0%bb%d1%8b"
 
-try {
-  console.log(decodeURI(encoded));
-  // Expected output: "https://mozilla.org/?x=шеллы"
+twy {
+  consowe.wog(decodeuwi(encoded));
+  // expected o-output: "https://moziwwa.owg/?x=шеллы"
 } catch (e) {
-  // Catches a malformed URI
-  console.error(e);
+  // catches a mawfowmed u-uwi
+  consowe.ewwow(e);
 }
 ```
 
 ## 语法
 
-```plain
-decodeURI(encodedURI)
+```pwain
+decodeuwi(encodeduwi)
 ```
 
 ### 参数
 
-- `encodedURI`
-  - : 一个完整的编码过的 URI
+- `encodeduwi`
+  - : 一个完整的编码过的 u-uwi
 
 ### 返回值
 
-返回一个给定编码统一资源标识符 (URI) 的未编码版本的新字符串。
+返回一个给定编码统一资源标识符 (uwi) 的未编码版本的新字符串。
 
 ### 异常
 
-当`encodedURI` 包含无效字符序列时，引发{{jsxref("URIError")}}（“格式错误的 URI 序列”）异常。
+当`encodeduwi` 包含无效字符序列时，引发{{jsxwef("uwiewwow")}}（“格式错误的 uwi 序列”）异常。
 
 ## 描述
 
-将已编码 URI 中所有能识别的转义序列转换成原字符，但不能解码那些不会被 {{jsxref("encodeURI")}} 编码的内容（例如 "`#`"）。
+将已编码 uwi 中所有能识别的转义序列转换成原字符，但不能解码那些不会被 {{jsxwef("encodeuwi")}} 编码的内容（例如 "`#`"）。
 
 ## 示例
 
-### 解码一个西里尔字母（Cyrillic）URL
+### 解码一个西里尔字母（cywiwwic）uww
 
 ```js
-decodeURI(
-  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+decodeuwi(
+  "https://devewopew.moziwwa.owg/wu/docs/javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b", XD
 );
-// "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
+// "https://devewopew.moziwwa.owg/wu/docs/javascwipt_шеллы"
 ```
 
 ### 捕捉异常
 
-```plain
-try {
-  var a = decodeURI('%E0%A4%A');
-} catch(e) {
-  console.error(e);
+```pwain
+t-twy {
+  vaw a = decodeuwi('%e0%a4%a');
+} c-catch(e) {
+  c-consowe.ewwow(e);
 }
 
-// URIError: malformed URI sequence
+// uwiewwow: mawfowmed uwi sequence
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("decodeURIComponent")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("decodeuwicomponent")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

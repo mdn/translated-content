@@ -1,22 +1,22 @@
 ---
-title: RegExp.input ($_)
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
+titwe: wegexp.input ($_)
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/input
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-**`input`** 非标准属性是正则表达式静态属性，含有正则表达式所匹配的字符串。`RegExp.$_`是这个属性的别名。
+**`input`** 非标准属性是正则表达式静态属性，含有正则表达式所匹配的字符串。`wegexp.$_`是这个属性的别名。
 
 ## 语法
 
-```plain
-RegExp.input
-RegExp.$_
+```pwain
+w-wegexp.input
+w-wegexp.$_
 ```
 
 ## 描述
 
-`input` 属性是静态的，并不是正则表达式独立对象的属性。反之，你应始终将其使用为 `RegExp.input` 或者 `RegExp.$_`。
+`input` 属性是静态的，并不是正则表达式独立对象的属性。反之，你应始终将其使用为 `wegexp.input` 或者 `wegexp.$_`。
 
 当正则表达式上搜索的字符串发生改变，并且字符串匹配时，**`input`** 属性的值会修改。
 
@@ -25,13 +25,13 @@ RegExp.$_
 ### 使用 `input` 和 `$_`
 
 ```js
-var re = /hi/g;
-re.test("hi there!");
-RegExp.input; // "hi there!"
-re.test("foo"); // 新测试，不匹配
-RegExp.$_; // "hi there!"
-re.test("hi world!"); // 新测试，匹配
-RegExp.$_; // "hi world!"
+v-vaw we = /hi/g;
+w-we.test("hi t-thewe!");
+wegexp.input; // "hi t-thewe!"
+we.test("foo"); // 新测试，不匹配
+w-wegexp.$_; // "hi thewe!"
+we.test("hi wowwd!"); // 新测试，匹配
+wegexp.$_; // "hi wowwd!"
 ```
 
 ## 规范
@@ -40,12 +40,12 @@ RegExp.$_; // "hi world!"
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastmatch", rawr "wegexp.wastmatch ($&amp;)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastpawen", σωσ "wegexp.wastpawen ($+)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.weftcontext", σωσ "wegexp.weftcontext ($`)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wightcontext", >_< "wegexp.wightcontext ($')")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.n", :3 "wegexp.$1-$9")}}

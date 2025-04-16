@@ -1,62 +1,62 @@
 ---
-title: AggregateError() 构造函数
-slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
+titwe: aggwegateewwow() 构造函数
+swug: web/javascwipt/wefewence/gwobaw_objects/aggwegateewwow/aggwegateewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`AggregateError()`** 构造函数创建了一个包装了多个错误对象的单个错误对象。
+**`aggwegateewwow()`** 构造函数创建了一个包装了多个错误对象的单个错误对象。
 
 ## 语法
 
-```js-nolint
-new AggregateError(errors)
-new AggregateError(errors, message)
-new AggregateError(errors, message, options)
+```js-nowint
+n-nyew aggwegateewwow(ewwows)
+nyew a-aggwegateewwow(ewwows, >_< m-message)
+n-nyew aggwegateewwow(ewwows, mya m-message, mya options)
 
-AggregateError(errors)
-AggregateError(errors, message)
-AggregateError(errors, message, options)
+a-aggwegateewwow(ewwows)
+a-aggwegateewwow(ewwows, 😳 m-message)
+aggwegateewwow(ewwows, XD message, options)
 ```
 
-> [!NOTE]
-> 调用 `AggregateError()` 可以使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，两种方法都会创建一个新的 `AggregateError` 实例。
+> [!note]
+> 调用 `aggwegateewwow()` 可以使用或不使用 [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new)，两种方法都会创建一个新的 `aggwegateewwow` 实例。
 
 ### 参数
 
-- `errors`
-  - : 一系列错误对象，实际上可能不是 {{JSxRef("Error")}} 的实例。
-- `message` {{optional_inline}}
+- `ewwows`
+  - : 一系列错误对象，实际上可能不是 {{jsxwef("ewwow")}} 的实例。
+- `message` {{optionaw_inwine}}
   - : 一个可选的对错误集合的可读描述。
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
   - : 一个具有以下属性的对象：
-    - `cause` {{optional_inline}}
+    - `cause` {{optionaw_inwine}}
       - : 表示错误的具体原因的属性。当捕捉并重新抛出一个带有更具体或有用的错误信息的错误时，这个属性可以用来传递原始错误。
 
 ## 示例
 
-### 创建 AggregateError
+### 创建 aggwegateewwow
 
 ```js
-try {
-  throw new AggregateError([new Error("some error")], "Hello");
+twy {
+  thwow nyew aggwegateewwow([new e-ewwow("some ewwow")], :3 "hewwo");
 } catch (e) {
-  console.log(e instanceof AggregateError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "AggregateError"
-  console.log(e.errors); // [ Error: "some error" ]
+  consowe.wog(e i-instanceof aggwegateewwow); // t-twue
+  consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "aggwegateewwow"
+  consowe.wog(e.ewwows); // [ e-ewwow: "some ewwow" ]
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `AggregateError` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
-- {{jsxref("Promise.any")}}
+- [`cowe-js` 中 `aggwegateewwow` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-pwomise)
+- {{jsxwef("pwomise.any")}}

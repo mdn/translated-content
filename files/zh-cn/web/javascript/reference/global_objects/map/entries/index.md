@@ -1,33 +1,33 @@
 ---
-title: Map.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Map/entries
+titwe: map.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 实例的 **`entries()`** 方法返回一个新的 [_map 迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象包含了此 map 中的每个元素的 `[key, value]` 对，按插入顺序排列。
+{{jsxwef("map")}} 实例的 **`entwies()`** 方法返回一个新的 [_map 迭代器_](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)对象，该对象包含了此 map 中的每个元素的 `[key, v-vawue]` 对，按插入顺序排列。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.entwies()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const map1 = n-nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+m-map1.set("0", mya "foo");
+m-map1.set(1, "baw");
 
-const iterator1 = map1.entries();
+c-const itewatow1 = map1.entwies();
 
-console.log(iterator1.next().value);
-// Expected output: Array ["0", "foo"]
+consowe.wog(itewatow1.next().vawue);
+// expected output: awway ["0", 😳 "foo"]
 
-console.log(iterator1.next().value);
-// Expected output: Array [1, "bar"]
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: awway [1, "baw"]
 ```
 
 ## 语法
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 参数
@@ -36,34 +36,34 @@ entries()
 
 ### 返回值
 
-一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
+一个新的[可迭代迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)。
 
 ## 示例
 
-### 使用 entries()
+### 使用 entwies()
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+c-const mymap = nyew map();
+mymap.set("0", XD "foo");
+mymap.set(1, :3 "baw");
+mymap.set({}, 😳😳😳 "baz");
 
-const mapIter = myMap.entries();
+c-const mapitew = mymap.entwies();
 
-console.log(mapIter.next().value); // ["0", "foo"]
-console.log(mapIter.next().value); // [1, "bar"]
-console.log(mapIter.next().value); // [Object, "baz"]
+c-consowe.wog(mapitew.next().vawue); // ["0", -.- "foo"]
+c-consowe.wog(mapitew.next().vawue); // [1, ( ͡o ω ͡o ) "baw"]
+consowe.wog(mapitew.next().vawue); // [object, rawr x3 "baz"]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
+- {{jsxwef("map.pwototype.keys()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

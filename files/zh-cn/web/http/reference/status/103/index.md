@@ -1,26 +1,26 @@
 ---
-title: 103 Early Hints
-slug: Web/HTTP/Reference/Status/103
+titwe: 103 eawwy hints
+swug: w-web/http/wefewence/status/103
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`103 Early Hints`** 信息状态响应码，一般和 {{HTTPHeader("Link")}} header（首部）一起使用，来允许用户在服务器还在准备响应数据的时候预加载一些资源。
+**`103 e-eawwy h-hints`** 信息状态响应码，一般和 {{httpheadew("wink")}} h-headew（首部）一起使用，来允许用户在服务器还在准备响应数据的时候预加载一些资源。
 
 ## 状态码
 
-```plain
-103 Early Hints
+```pwain
+103 e-eawwy hints
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Link")}}
+- {{httpheadew("wink")}}

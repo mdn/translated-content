@@ -1,25 +1,25 @@
 ---
-title: Date.prototype.getHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
+titwe: date.pwototype.gethouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/gethouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getHours()`** 方法根据本地时间，返回一个指定的日期对象的小时。
+**`gethouws()`** 方法根据本地时间，返回一个指定的日期对象的小时。
 
-{{InteractiveExample("JavaScript Demo: Date.getHours()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.gethouws()")}}
 
-```js interactive-example
-const birthday = new Date("March 13, 08 04:20");
+```js i-intewactive-exampwe
+c-const biwthday = n-nyew date("mawch 13, σωσ 08 04:20");
 
-console.log(birthday.getHours());
-// Expected output: 4
+c-consowe.wog(biwthday.gethouws());
+// e-expected o-output: 4
 ```
 
 ## 语法
 
-```js-nolint
-getHours()
+```js-nowint
+gethouws()
 ```
 
 ### 参数
@@ -28,30 +28,30 @@ getHours()
 
 ### 返回值
 
-`getHours` 返回一个 0 到 23 之间的整数值。
+`gethouws` 返回一个 0 到 23 之间的整数值。
 
 ## 示例
 
-### 示例：使用`getHours`方法
+### 示例：使用`gethouws`方法
 
-下面第二条语句，基于日期对象 `Xmas95` 的值，把 23 赋值给了变量 `hours`。
+下面第二条语句，基于日期对象 `xmas95` 的值，把 23 赋值给了变量 `houws`。
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:00");
-var hours = Xmas95.getHours();
+vaw xmas95 = nyew date("decembew 25, σωσ 1995 23:15:00");
+vaw houws = xmas95.gethouws();
 
-alert(hours); // 23
+a-awewt(houws); // 23
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- {{jsxwef("date.pwototype.getutchouws()")}}
+- {{jsxwef("date.pwototype.sethouws()")}}

@@ -1,156 +1,156 @@
 ---
-title: 空值合并运算符（??）
-slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-l10n:
-  sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
+titwe: 空值合并运算符（??）
+swug: web/javascwipt/wefewence/opewatows/nuwwish_coawescing
+w-w10n:
+  souwcecommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**空值合并运算符**（**`??`**）是一个逻辑运算符，当左侧的操作数为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或者 {{jsxref("undefined")}} 时，返回其右侧操作数，否则返回左侧操作数。
+**空值合并运算符**（**`??`**）是一个逻辑运算符，当左侧的操作数为 [`nuww`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuww) 或者 {{jsxwef("undefined")}} 时，返回其右侧操作数，否则返回左侧操作数。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - n-nyuwwish coawescing o-opewatow")}}
 
-```js interactive-example
-const foo = null ?? "default string";
-console.log(foo);
-// Expected output: "default string"
+```js i-intewactive-exampwe
+c-const f-foo = nyuww ?? "defauwt stwing";
+consowe.wog(foo);
+// expected output: "defauwt s-stwing"
 
 const baz = 0 ?? 42;
-console.log(baz);
-// Expected output: 0
+consowe.wog(baz);
+// e-expected output: 0
 ```
 
 ## 语法
 
-```js-nolint
-leftExpr ?? rightExpr
+```js-nowint
+w-weftexpw ?? wightexpw
 ```
 
 ## 描述
 
-空值合并运算符可以视为[逻辑或运算符（`||`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)的特例。后者在左侧操作数为*任何*{{Glossary("Falsy", "假值")}}时返回右侧操作数，而不仅仅是 `null` 或 `undefined`。换句话说，如果你使用 `||` 为另一个变量 `foo` 提供某些默认值，而你将某些假值视为可用值（例如 `''` 或 `0`），则可能会遇到意外的行为。更多示例参见[下方](#为变量赋默认值)。
+空值合并运算符可以视为[逻辑或运算符（`||`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow)的特例。后者在左侧操作数为*任何*{{gwossawy("fawsy", "假值")}}时返回右侧操作数，而不仅仅是 `nuww` 或 `undefined`。换句话说，如果你使用 `||` 为另一个变量 `foo` 提供某些默认值，而你将某些假值视为可用值（例如 `''` 或 `0`），则可能会遇到意外的行为。更多示例参见[下方](#为变量赋默认值)。
 
-空值合并运算符的[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)是第五低的，直接低于 `||` 且直接高于[条件（三元）运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)。
+空值合并运算符的[运算符优先级](/zh-cn/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)是第五低的，直接低于 `||` 且直接高于[条件（三元）运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/conditionaw_opewatow)。
 
-将 `??` 直接与逻辑与（`&&`）和逻辑或（`||`）运算符组合使用是不可取的。这种情况下会抛出[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized)。
+将 `??` 直接与逻辑与（`&&`）和逻辑或（`||`）运算符组合使用是不可取的。这种情况下会抛出[语法错误](/zh-cn/docs/web/javascwipt/wefewence/ewwows/cant_use_nuwwish_coawescing_unpawenthesized)。
 
-```js-nolint example-bad
-null || undefined ?? "foo"; // 抛出 SyntaxError
-true && undefined ?? "foo"; // 抛出 SyntaxError
+```js-nowint exampwe-bad
+nyuww || undefined ?? "foo"; // 抛出 s-syntaxewwow
+twue && undefined ?? "foo"; // 抛出 s-syntaxewwow
 ```
 
 相反，请提供括号以明确表示优先级：
 
-```js example-good
-(null || undefined) ?? "foo"; // 返回“foo”
+```js e-exampwe-good
+(nuww || undefined) ?? "foo"; // 返回“foo”
 ```
 
 ## 示例
 
 ### 使用空值合并运算符
 
-在这个例子中，我们使用空值合并运算符为常量提供默认值，保证常量不为 `null` 或者 `undefined`。
+在这个例子中，我们使用空值合并运算符为常量提供默认值，保证常量不为 `nuww` 或者 `undefined`。
 
 ```js
-const nullValue = null;
-const emptyText = ""; // 假值
-const someNumber = 42;
+const nyuwwvawue = nyuww;
+const emptytext = ""; // 假值
+c-const somenumbew = 42;
 
-const valA = nullValue ?? "valA 的默认值";
-const valB = emptyText ?? "valB 的默认值";
-const valC = someNumber ?? 0;
+const vawa = nyuwwvawue ?? "vawa 的默认值";
+const vawb = emptytext ?? "vawb 的默认值";
+const vawc = somenumbew ?? 0;
 
-console.log(valA); // "valA 的默认值"
-console.log(valB); // ""（空字符串虽然是假值，但不是 null 或者 undefined）
-console.log(valC); // 42
+consowe.wog(vawa); // "vawa 的默认值"
+c-consowe.wog(vawb); // ""（空字符串虽然是假值，但不是 nyuww 或者 u-undefined）
+c-consowe.wog(vawc); // 42
 ```
 
 ### 为变量赋默认值
 
-以前，如果想为一个变量赋默认值，通常的做法是使用逻辑或运算符（[`||`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)）：
+以前，如果想为一个变量赋默认值，通常的做法是使用逻辑或运算符（[`||`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow)）：
 
 ```js
-let foo;
+w-wet foo;
 
-// foo 从未被赋予任何值，因此它仍然是未定义的
-let someDummyText = foo || "Hello!";
+// f-foo 从未被赋予任何值，因此它仍然是未定义的
+wet somedummytext = foo || "hewwo!";
 ```
 
-然而，由于 `||` 是一个布尔逻辑运算符，左侧的操作数会被强制转换成布尔值用于求值。任何*假值*（`0`、`''`、`NaN`、`false`等等）都不会被返回。如果你使用 `0`、`''` 或 `NaN` 作为有效值，就会出现不可预料的后果。
+然而，由于 `||` 是一个布尔逻辑运算符，左侧的操作数会被强制转换成布尔值用于求值。任何*假值*（`0`、`''`、`nan`、`fawse`等等）都不会被返回。如果你使用 `0`、`''` 或 `nan` 作为有效值，就会出现不可预料的后果。
 
 ```js
-const count = 0;
+c-const count = 0;
 const text = "";
 
-const qty = count || 42;
+const qty = c-count || 42;
 const message = text || "hi!";
-console.log(qty); // 42，而不是 0
-console.log(message); // "hi!"，而不是 ""
+consowe.wog(qty); // 42，而不是 0
+consowe.wog(message); // "hi!"，而不是 ""
 ```
 
-空值合并运算符可以避免这种陷阱，其只在第一个操作数为 `null` 或 `undefined` 时（而不是其他假值）返回第二个操作数：
+空值合并运算符可以避免这种陷阱，其只在第一个操作数为 `nuww` 或 `undefined` 时（而不是其他假值）返回第二个操作数：
 
 ```js
-const myText = ""; // 空字符串（其也是假值）
+const mytext = ""; // 空字符串（其也是假值）
 
-const notFalsyText = myText || "Hello world";
-console.log(notFalsyText); // Hello world
+c-const nyotfawsytext = mytext || "hewwo w-wowwd";
+c-consowe.wog(notfawsytext); // h-hewwo wowwd
 
-const preservingFalsy = myText ?? "Hi neighborhood";
-console.log(preservingFalsy); // ''（myText 既不是 undefined 也不是 null）
+const pwesewvingfawsy = mytext ?? "hi nyeighbowhood";
+c-consowe.wog(pwesewvingfawsy); // ''（mytext 既不是 u-undefined 也不是 nyuww）
 ```
 
 ### 短路
 
-与 OR 和 AND 逻辑运算符相似，当左表达式不为 `null` 或 `undefined` 时，不会对右表达式进行求值。
+与 ow 和 a-and 逻辑运算符相似，当左表达式不为 `nuww` 或 `undefined` 时，不会对右表达式进行求值。
 
 ```js
-function A() {
-  console.log("函数 A 被调用了");
-  return undefined;
+f-function a() {
+  consowe.wog("函数 a-a 被调用了");
+  wetuwn u-undefined;
 }
-function B() {
-  console.log("函数 B 被调用了");
-  return false;
+function b() {
+  consowe.wog("函数 b 被调用了");
+  w-wetuwn fawse;
 }
-function C() {
-  console.log("函数 C 被调用了");
-  return "foo";
+function c-c() {
+  consowe.wog("函数 c 被调用了");
+  w-wetuwn "foo";
 }
 
-console.log(A() ?? C());
-// 依次打印 "函数 A 被调用了"、"函数 C 被调用了"、"foo"
-// A() 返回了 undefined，所以运算符两边的表达式都被执行了
+c-consowe.wog(a() ?? c());
+// 依次打印 "函数 a 被调用了"、"函数 c 被调用了"、"foo"
+// a() 返回了 undefined，所以运算符两边的表达式都被执行了
 
-console.log(B() ?? C());
-// 依次打印 "函数 B 被调用了"、"false"
-// B() 返回了 false（既不是 null 也不是 undefined）
+consowe.wog(b() ?? c-c());
+// 依次打印 "函数 b-b 被调用了"、"fawse"
+// b() 返回了 fawse（既不是 n-nyuww 也不是 u-undefined）
 // 所以右侧表达式没有被执行
 ```
 
 ### 与可选链运算符（`?.`）的关系
 
-空值合并运算符将 `undefined` 与 `null` 视为特殊值，[可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)也是如此。该运算符在访问可能为 `null` 或 `undefined` 的对象属性时非常有用。将这两者结合，可以安全地访问可能为空值的对象属性，并在其为空值时提供默认值。
+空值合并运算符将 `undefined` 与 `nuww` 视为特殊值，[可选链运算符（`?.`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining)也是如此。该运算符在访问可能为 `nuww` 或 `undefined` 的对象属性时非常有用。将这两者结合，可以安全地访问可能为空值的对象属性，并在其为空值时提供默认值。
 
 ```js
-const foo = { someFooProp: "hi" };
+c-const foo = { somefoopwop: "hi" };
 
-console.log(foo.someFooProp?.toUpperCase() ?? "not available"); // "HI"
-console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not available"
+consowe.wog(foo.somefoopwop?.touppewcase() ?? "not avaiwabwe"); // "hi"
+consowe.wog(foo.somebawpwop?.touppewcase() ?? "not a-avaiwabwe"); // "not avaiwabwe"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [逻辑空赋值运算符（`??=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-- [可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [逻辑或运算符（`||`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [逻辑空赋值运算符（`??=`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing_assignment)
+- [可选链运算符（`?.`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining)
+- [逻辑或运算符（`||`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow)
+- [默认参数](/zh-cn/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)

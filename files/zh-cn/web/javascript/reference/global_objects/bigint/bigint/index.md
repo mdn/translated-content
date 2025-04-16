@@ -1,40 +1,40 @@
 ---
-title: BigInt() constructor
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
+titwe: bigint() constwuctow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/bigint/bigint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`BigInt()`** 构造函数用来创建 {{jsxref("BigInt")}} 对象。
+**`bigint()`** 构造函数用来创建 {{jsxwef("bigint")}} 对象。
 
 ## 语法
 
-```js-nolint
-BigInt(value)
+```js-nowint
+b-bigint(vawue)
 ```
 
 ### 参数
 
-- `value`
+- `vawue`
   - : 被创建的对象的数值。可以是字符串或整数。
 
-> **备注：** `BigInt()` 不与 {{JSxRef("Operators/new", "new")}} 运算符一起使用。
+> **备注：** `bigint()` 不与 {{jsxwef("opewatows/new", OwO "new")}} 运算符一起使用。
 
 ## 示例
 
 ```js
-BigInt(123);
+b-bigint(123);
 // 123n
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("BigInt")}}
+- {{jsxwef("bigint")}}

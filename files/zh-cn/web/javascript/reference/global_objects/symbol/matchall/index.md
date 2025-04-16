@@ -1,60 +1,60 @@
 ---
-title: Symbol.matchAll
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
+titwe: symbow.matchaww
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/matchaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.matchAll`** 内置通用（well-known）符号指定方法返回一个迭代器，该迭代器根据字符串生成正则表达式的匹配项。此函数可以被 {{jsxref("String.prototype.matchAll()")}} 方法调用。
+**`symbow.matchaww`** 内置通用（weww-known）符号指定方法返回一个迭代器，该迭代器根据字符串生成正则表达式的匹配项。此函数可以被 {{jsxwef("stwing.pwototype.matchaww()")}} 方法调用。
 
-详细信息请参阅 [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) 和 {{jsxref("String.prototype.matchAll()")}}。
+详细信息请参阅 [`wegexp.pwototype[symbow.matchaww]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww) 和 {{jsxwef("stwing.pwototype.matchaww()")}}。
 
-{{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.matchaww")}}
 
-```js interactive-example
-const re = /[0-9]+/g;
-const str = "2016-01-02|2019-03-07";
-const result = re[Symbol.matchAll](str);
+```js intewactive-exampwe
+c-const we = /[0-9]+/g;
+c-const stw = "2016-01-02|2019-03-07";
+c-const w-wesuwt = we[symbow.matchaww](stw);
 
-console.log(Array.from(result, (x) => x[0]));
-// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+c-consowe.wog(awway.fwom(wesuwt, (ˆ ﻌ ˆ)♡ (x) => x[0]));
+// expected output: awway ["2016", (⑅˘꒳˘) "01", "02", (U ᵕ U❁) "2019", "03", -.- "07"]
 ```
 
 ## 值
 
-内置通用符号 `Symbol.matchAll`。
+内置通用符号 `symbow.matchaww`。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, ^^;; 0, 0)}}
 
 ## 示例
 
-### 使用 Symbol.matchAll
+### 使用 symbow.matchaww
 
 ```js
-const str = "2016-01-02|2019-03-07";
-const numbers = {
-  *[Symbol.matchAll](str) {
-    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
-  },
+c-const stw = "2016-01-02|2019-03-07";
+const nyumbews = {
+  *[symbow.matchaww](stw) {
+    fow (const n-ny of stw.matchaww(/[0-9]+/g)) yiewd ny[0];
+  }, >_<
 };
-console.log(Array.from(str.matchAll(numbers)));
-// ["2016", "01", "02", "2019", "03", "07"]
+c-consowe.wog(awway.fwom(stw.matchaww(numbews)));
+// ["2016", mya "01", "02", mya "2019", "03", 😳 "07"]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Symbol.matchAll` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("String.prototype.matchAll()")}}
-- [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
+- [`cowe-js` 中 `symbow.matchaww` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("stwing.pwototype.matchaww()")}}
+- [`wegexp.pwototype[symbow.matchaww]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww)

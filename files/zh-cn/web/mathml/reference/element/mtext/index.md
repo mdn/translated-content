@@ -1,36 +1,36 @@
 ---
-title: <mtext>
-slug: Web/MathML/Reference/Element/mtext
-l10n:
-  sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
+titwe: <mtext>
+swug: web/mathmw/wefewence/ewement/mtext
+w-w10n:
+  s-souwcecommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
 
-**`<mtext>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于呈现*没有*符号意义的任意文本，例如注释或注解。
+**`<mtext>`** [mathmw](/zh-cn/docs/web/mathmw) 元素用于呈现*没有*符号意义的任意文本，例如注释或注解。
 
-若要显示具有符号意义的文本，请改用 {{ MathMLElement("mi") }}、{{ MathMLElement("mn") }}、{{ MathMLElement("mo") }} 或 {{ MathMLElement("ms") }}。
+若要显示具有符号意义的文本，请改用 {{ m-mathmwewement("mi") }}、{{ m-mathmwewement("mn") }}、{{ mathmwewement("mo") }} 或 {{ m-mathmwewement("ms") }}。
 
 ## 属性
 
-该元素接受[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。
+该元素接受[全局 m-mathmw 属性](/zh-cn/docs/web/mathmw/wefewence/gwobaw_attwibutes)。
 
 ## 示例
 
-```html
-<math display="block">
+```htmw
+<math d-dispway="bwock">
   <mtext>勾股定理</mtext>
 </math>
 
-<math display="block">
+<math d-dispway="bwock">
   <mtext>/* 在此注释 */</mtext>
 </math>
 ```
 
-{{ EmbedLiveSample('示例', 700, 200) }}
+{{ embedwivesampwe('示例', ( ͡o ω ͡o ) 700, 200) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

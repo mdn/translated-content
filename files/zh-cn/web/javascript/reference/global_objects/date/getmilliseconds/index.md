@@ -1,26 +1,26 @@
 ---
-title: Date.prototype.getMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
+titwe: date.pwototype.getmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getMilliseconds()`** 方法根据本地时间，返回一个指定的日期对象的毫秒数。
+**`getmiwwiseconds()`** 方法根据本地时间，返回一个指定的日期对象的毫秒数。
 
-{{InteractiveExample("JavaScript Demo: Date.getMilliseconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getmiwwiseconds()")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
-moonLanding.setMilliseconds(123);
+```js i-intewactive-exampwe
+c-const moonwanding = n-nyew date("juwy 20, σωσ 69 00:20:18");
+m-moonwanding.setmiwwiseconds(123);
 
-console.log(moonLanding.getMilliseconds());
-// Expected output: 123
+c-consowe.wog(moonwanding.getmiwwiseconds());
+// e-expected output: 123
 ```
 
 ## 语法
 
-```js-nolint
-getMilliseconds()
+```js-nowint
+getmiwwiseconds()
 ```
 
 ### 参数
@@ -29,29 +29,29 @@ getMilliseconds()
 
 ### 描述
 
-`getMilliseconds()` 方法返回一个 0 到 999 的整数。
+`getmiwwiseconds()` 方法返回一个 0 到 999 的整数。
 
 ## 示例
 
-### 示例：使用`getMilliseconds`方法
+### 示例：使用`getmiwwiseconds`方法
 
 下例中，将当前时间的毫秒数赋值给变量 `ms`。
 
 ```js
-var ms;
-Today = new Date();
-ms = Today.getMilliseconds();
+vaw ms;
+today = nyew d-date();
+ms = today.getmiwwiseconds();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
-- {{jsxref("Date.prototype.setMilliseconds()")}}
+- {{jsxwef("date.pwototype.getutcmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setmiwwiseconds()")}}

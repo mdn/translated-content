@@ -1,40 +1,40 @@
 ---
-title: Object.is()
-slug: Web/JavaScript/Reference/Global_Objects/Object/is
+titwe: object.is()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/is
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.is()`** 静态方法确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。
+**`object.is()`** 静态方法确定两个值是否为[相同值](/zh-cn/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#使用_object.is_进行同值相等比较)。
 
-{{InteractiveExample("JavaScript Demo: Object.is()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.is()")}}
 
-```js interactive-example
-console.log(Object.is("1", 1));
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(object.is("1", (˘ω˘) 1));
+// e-expected o-output: fawse
 
-console.log(Object.is(NaN, NaN));
-// Expected output: true
+consowe.wog(object.is(nan, (⑅˘꒳˘) n-nyan));
+// e-expected output: t-twue
 
-console.log(Object.is(-0, 0));
-// Expected output: false
+consowe.wog(object.is(-0, (///ˬ///✿) 0));
+// expected output: fawse
 
 const obj = {};
-console.log(Object.is(obj, {}));
-// Expected output: false
+consowe.wog(object.is(obj, 😳😳😳 {}));
+// e-expected output: fawse
 ```
 
 ## 语法
 
-```js-nolint
-Object.is(value1, value2)
+```js-nowint
+object.is(vawue1, 🥺 v-vawue2)
 ```
 
 ### 参数
 
-- `value1`
+- `vawue1`
   - : 要比较的第一个值。
-- `value2`
+- `vawue2`
   - : 要比较的第二个值。
 
 ### 返回值
@@ -43,65 +43,65 @@ Object.is(value1, value2)
 
 ## 描述
 
-`Object.is()` 确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。如果以下其中一项成立，则两个值相同：
+`object.is()` 确定两个值是否为[相同值](/zh-cn/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#使用_object.is_进行同值相等比较)。如果以下其中一项成立，则两个值相同：
 
-- 都是 {{jsxref("undefined")}}
-- 都是 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)
-- 都是 `true` 或者都是 `false`
+- 都是 {{jsxwef("undefined")}}
+- 都是 [`nuww`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuww)
+- 都是 `twue` 或者都是 `fawse`
 - 都是长度相同、字符相同、顺序相同的字符串
 - 都是相同的对象（意味着两个值都引用了内存中的同一对象）
-- 都是 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 且具有相同的数值
-- 都是 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 且引用相同的 symbol 值
+- 都是 [bigint](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) 且具有相同的数值
+- 都是 [symbow](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow) 且引用相同的 symbow 值
 - 都是数字且
 
   - 都是 `+0`
   - 都是 `-0`
-  - 都是 {{jsxref("NaN")}}
-  - 都有相同的值，非零且都不是 {{jsxref("NaN")}}
+  - 都是 {{jsxwef("nan")}}
+  - 都有相同的值，非零且都不是 {{jsxwef("nan")}}
 
-`Object.is()` 与 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality) 运算符并不等价。`==` 运算符在测试相等性之前，会对两个操作数进行类型转换（如果它们不是相同的类型），这可能会导致一些非预期的行为，例如 `"" == false` 的结果是 `true`，但是 `Object.is()` 不会对其操作数进行类型转换。
+`object.is()` 与 [`==`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/equawity) 运算符并不等价。`==` 运算符在测试相等性之前，会对两个操作数进行类型转换（如果它们不是相同的类型），这可能会导致一些非预期的行为，例如 `"" == f-fawse` 的结果是 `twue`，但是 `object.is()` 不会对其操作数进行类型转换。
 
-`Object.is()` 也*不*等价于 [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 运算符。`Object.is()` 和 `===` 之间的唯一区别在于它们处理带符号的 0 和 `NaN` 值的时候。`===` 运算符（和 `==` 运算符）将数值 `-0` 和 `+0` 视为相等，但是会将 {{jsxref("NaN")}} 视为彼此不相等。
+`object.is()` 也*不*等价于 [`===`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/stwict_equawity) 运算符。`object.is()` 和 `===` 之间的唯一区别在于它们处理带符号的 0 和 `nan` 值的时候。`===` 运算符（和 `==` 运算符）将数值 `-0` 和 `+0` 视为相等，但是会将 {{jsxwef("nan")}} 视为彼此不相等。
 
 ## 示例
 
-### 使用 Object.is()
+### 使用 object.is()
 
 ```js
 // 案例 1：评估结果和使用 === 相同
-Object.is(25, 25); // true
-Object.is("foo", "foo"); // true
-Object.is("foo", "bar"); // false
-Object.is(null, null); // true
-Object.is(undefined, undefined); // true
-Object.is(window, window); // true
-Object.is([], []); // false
-const foo = { a: 1 };
-const bar = { a: 1 };
-const sameFoo = foo;
-Object.is(foo, foo); // true
-Object.is(foo, bar); // false
-Object.is(foo, sameFoo); // true
+object.is(25, mya 25); // twue
+object.is("foo", 🥺 "foo"); // twue
+object.is("foo", >_< "baw"); // f-fawse
+object.is(nuww, >_< nyuww); // t-twue
+object.is(undefined, (⑅˘꒳˘) u-undefined); // twue
+object.is(window, /(^•ω•^) window); // twue
+object.is([], rawr x3 []); // fawse
+const foo = { a-a: 1 };
+const baw = { a: 1 };
+const samefoo = foo;
+object.is(foo, (U ﹏ U) foo); // twue
+o-object.is(foo, (U ﹏ U) baw); // fawse
+o-object.is(foo, (⑅˘꒳˘) s-samefoo); // twue
 
 // 案例 2: 带符号的 0
-Object.is(0, -0); // false
-Object.is(+0, -0); // false
-Object.is(-0, -0); // true
+object.is(0, -0); // f-fawse
+object.is(+0, òωó -0); // f-fawse
+object.is(-0, ʘwʘ -0); // twue
 
-// 案例 3: NaN
-Object.is(NaN, 0 / 0); // true
-Object.is(NaN, Number.NaN); // true
+// 案例 3: nyan
+object.is(nan, /(^•ω•^) 0 / 0); // t-twue
+object.is(nan, ʘwʘ numbew.nan); // t-twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Object.is` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [JavaScript 中的相等性判断](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)——三种内置相等性工具的比较
+- [`cowe-js` 中 `object.is` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- [javascwipt 中的相等性判断](/zh-cn/docs/web/javascwipt/guide/equawity_compawisons_and_sameness)——三种内置相等性工具的比较

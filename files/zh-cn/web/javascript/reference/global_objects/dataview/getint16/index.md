@@ -1,37 +1,37 @@
 ---
-title: DataView.prototype.getInt16()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
+titwe: dataview.pwototype.getint16()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/getint16
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getInt16()`** 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个 16-bit 数 (短整型，2 个字节)。
+**`getint16()`** 方法从 {{jsxwef("dataview")}} 相对于起始位置偏移 n-ny 个字节处开始，获取一个 16-bit 数 (短整型，2 个字节)。
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt16()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.getint16()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew a-awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt16(1, 32767); // Max signed 16-bit integer
+const view = nyew dataview(buffew);
+view.setint16(1, mya 32767); // max signed 16-bit i-integew
 
-console.log(view.getInt16(1));
-// Expected output: 32767
+consowe.wog(view.getint16(1));
+// expected output: 32767
 ```
 
 ## 语法
 
-```plain
-dataview.getInt16(byteOffset [, littleEndian])
+```pwain
+dataview.getint16(byteoffset [, mya wittweendian])
 ```
 
 ### 参数
 
-- byteOffset
+- byteoffset
   - : 偏移量，单位为字节，从头开始计算。
-- littleEndian
-  - : {{optional_inline}} 表示该 16 位整数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储的（就是使用的字节序格式，具体参考链接页面）；如果传入的值为 `true`，就表示使用 little-endian（低字节序），如果传入的值为 `false` 或者 `undefined`，则会使用 big-endian（高字节序）方式读值。
+- w-wittweendian
+  - : {{optionaw_inwine}} 表示该 16 位整数是否以 {{gwossawy("endianness", 😳 "wittwe- ow big-endian")}} 格式存储的（就是使用的字节序格式，具体参考链接页面）；如果传入的值为 `twue`，就表示使用 w-wittwe-endian（低字节序），如果传入的值为 `fawse` 或者 `undefined`，则会使用 big-endian（高字节序）方式读值。
 
 ### 返回
 
@@ -39,8 +39,8 @@ dataview.getInt16(byteOffset [, littleEndian])
 
 ### 抛出错误
 
-- {{jsxref("RangeError")}}
-  - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 byteoffset 超出了视图能储存的值，就会抛出错误。
 
 ## 描述
 
@@ -49,20 +49,20 @@ dataview.getInt16(byteOffset [, littleEndian])
 ## 示例
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getInt16(1); // 0
+vaw buffew = n-nyew awwaybuffew(8);
+vaw dataview = n-nyew dataview(buffew);
+d-dataview.getint16(1); // 0
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

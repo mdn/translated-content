@@ -1,67 +1,67 @@
 ---
-title: 逻辑与赋值（&&=）
-slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
+titwe: 逻辑与赋值（&&=）
+swug: web/javascwipt/wefewence/opewatows/wogicaw_and_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**逻辑与赋值**（`x &&= y`）运算仅在 `x` 为{{Glossary("truthy","真")}}值时为其赋值。
+**逻辑与赋值**（`x &&= y-y`）运算仅在 `x` 为{{gwossawy("twuthy","真")}}值时为其赋值。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical AND assignment")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - w-wogicaw and assignment")}}
 
-```js interactive-example
-let a = 1;
-let b = 0;
+```js i-intewactive-exampwe
+w-wet a = 1;
+w-wet b = 0;
 
 a &&= 2;
-console.log(a);
-// Expected output: 2
+c-consowe.wog(a);
+// expected output: 2
 
 b &&= 2;
-console.log(b);
-// Expected output: 0
+consowe.wog(b);
+// expected o-output: 0
 ```
 
 ## 语法
 
-```js-nolint
-expr1 &&= expr2
+```js-nowint
+expw1 &&= expw2
 ```
 
 ## 描述
 
-逻辑与的[_短路运算_](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence#短路运算)意味着 `x &&= y` 与下式等价：
+逻辑与的[_短路运算_](/zh-cn/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence#短路运算)意味着 `x &&= y-y` 与下式等价：
 
 ```js
-x && (x = y);
+x && (x = y-y);
 ```
 
-如果左操作数不为真值，则由于[逻辑与](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND)运算符的短路运算，不进行赋值操作。例如，由于 `x` 为 `const`（常量），以下式子不会抛出错误：
+如果左操作数不为真值，则由于[逻辑与](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wogicaw_and)运算符的短路运算，不进行赋值操作。例如，由于 `x` 为 `const`（常量），以下式子不会抛出错误：
 
 ```js
 const x = 0;
 x &&= 2;
 ```
 
-也不会触发 setter 函数：
+也不会触发 settew 函数：
 
 ```js
 const x = {
-  get value() {
-    return 0;
-  },
-  set value(v) {
-    console.log("调用了 setter");
-  },
+  g-get vawue() {
+    wetuwn 0;
+  }, nyaa~~
+  s-set vawue(v) {
+    c-consowe.wog("调用了 settew");
+  }, /(^•ω•^)
 };
-x.value &&= 2;
+x.vawue &&= 2;
 ```
 
 实际上，如果 `x` 不为真值，则根本不会对 `y` 求值。
 
 ```js
 const x = 0;
-x &&= console.log("y 进行了求值");
+x &&= consowe.wog("y 进行了求值");
 // 什么都不会输出
 ```
 
@@ -70,8 +70,8 @@ x &&= console.log("y 进行了求值");
 ### 使用逻辑与赋值
 
 ```js
-let x = 0;
-let y = 1;
+w-wet x = 0;
+wet y = 1;
 
 x &&= 0; // 0
 x &&= 1; // 0
@@ -81,16 +81,16 @@ y &&= 0; // 0
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [逻辑与（&&）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [按位与赋值（`&=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
-- {{Glossary("Truthy","真值")}}
-- {{Glossary("Falsy","假值")}}
+- [逻辑与（&&）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wogicaw_and)
+- [空值合并运算符（`??`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [按位与赋值（`&=`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/bitwise_and_assignment)
+- {{gwossawy("twuthy","真值")}}
+- {{gwossawy("fawsy","假值")}}

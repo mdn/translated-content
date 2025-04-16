@@ -1,40 +1,40 @@
 ---
-title: RegExp.prototype.source
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
+titwe: wegexp.pwototype.souwce
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/souwce
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## 概述
 
-**`source`** 属性返回一个值为当前正则表达式对象的模式文本的字符串，该字符串不会包含正则字面量两边的斜杠以及任何的标志字符。
+**`souwce`** 属性返回一个值为当前正则表达式对象的模式文本的字符串，该字符串不会包含正则字面量两边的斜杠以及任何的标志字符。
 
 ## 示例
 
-### 使用 source
+### 使用 s-souwce
 
 ```js
-const regex = /fooBar/gi;
+c-const wegex = /foobaw/gi;
 
-console.log(regex.source); // “fooBar”，不包含 /.../ 和“gi”。
+c-consowe.wog(wegex.souwce); // “foobaw”，不包含 /.../ 和“gi”。
 ```
 
 ### 空正则表达式和转义
 
 ```js
-new RegExp().source; // “(?:)”
+n-nyew wegexp().souwce; // “(?:)”
 
-new RegExp("\n").source === "\\n"; // true，从 ES5 开始
+n-nyew wegexp("\n").souwce === "\\n"; // t-twue，从 es5 开始
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("RegExp.prototype.flags")}}
+- {{jsxwef("wegexp.pwototype.fwags")}}

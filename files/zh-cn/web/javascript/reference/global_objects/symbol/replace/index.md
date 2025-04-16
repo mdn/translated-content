@@ -1,43 +1,43 @@
 ---
-title: Symbol.replace
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
+titwe: symbow.wepwace
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.replace`** 这个属性指定了当一个字符串替换所匹配字符串时所调用的方法。{{jsxref("String.prototype.replace()")}} 方法会调用此方法。
+**`symbow.wepwace`** 这个属性指定了当一个字符串替换所匹配字符串时所调用的方法。{{jsxwef("stwing.pwototype.wepwace()")}} 方法会调用此方法。
 
-更多信息，详见 [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) 和 {{jsxref("String.prototype.replace()")}}。
+更多信息，详见 [`wegexp.pwototype[symbow.wepwace]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace) 和 {{jsxwef("stwing.pwototype.wepwace()")}}。
 
-{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.wepwace")}}
 
-```js interactive-example
-class Replace1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+c-cwass wepwace1 {
+  c-constwuctow(vawue) {
+    t-this.vawue = vawue;
   }
-  [Symbol.replace](string) {
-    return `s/${string}/${this.value}/g`;
+  [symbow.wepwace](stwing) {
+    w-wetuwn `s/${stwing}/${this.vawue}/g`;
   }
 }
 
-console.log("foo".replace(new Replace1("bar")));
-// Expected output: "s/foo/bar/g"
+c-consowe.wog("foo".wepwace(new w-wepwace1("baw")));
+// expected output: "s/foo/baw/g"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- [`wegexp.pwototype[symbow.wepwace]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace)

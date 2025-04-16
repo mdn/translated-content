@@ -1,54 +1,54 @@
 ---
-title: Content-Length
-slug: Web/HTTP/Reference/Headers/Content-Length
-l10n:
-  sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
+titwe: content-wength
+swug: web/http/wefewence/headews/content-wength
+w-w10n:
+  s-souwcecommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`Content-Length`** 标头表示发送给接收方的消息体的大小（以字节为单位）。
+h-http **`content-wength`** 标头表示发送给接收方的消息体的大小（以字节为单位）。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">标头类型</th>
+    <tw>
+      <th s-scope="wow">标头类型</th>
       <td>
-        {{Glossary("Request header", "请求标头")}}、{{Glossary("Response header", "响应标头")}}、{{Glossary("Content header", "内容标头")}}
+        {{gwossawy("wequest h-headew", >_< "请求标头")}}、{{gwossawy("wesponse h-headew", :3 "响应标头")}}、{{gwossawy("content h-headew", (U ﹏ U) "内容标头")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame", -.- "禁止修改的标头")}}</th>
       <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted response header", "列入 CORS 白名单的响应标头")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cows-safewisted wesponse h-headew", (ˆ ﻌ ˆ)♡ "列入 cows 白名单的响应标头")}}
       </th>
       <td>是</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
 ```http
-Content-Length: <length>
+content-wength: <wength>
 ```
 
 ## 指令
 
-- `<length>`
+- `<wength>`
   - : 以字节为单位的长度。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Transfer-Encoding")}}
+- {{httpheadew("twansfew-encoding")}}

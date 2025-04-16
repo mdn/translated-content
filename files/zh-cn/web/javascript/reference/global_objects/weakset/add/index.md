@@ -1,79 +1,79 @@
 ---
-title: WeakSet.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
+titwe: weakset.pwototype.add()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("WeakSet")}} 实例的 **`add()`** 方法在该 `WeakSet` 对象的末尾追加一个新的对象。
+{{jsxwef("weakset")}} 实例的 **`add()`** 方法在该 `weakset` 对象的末尾追加一个新的对象。
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.add()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakset.pwototype.add()", "tawwew")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
+```js intewactive-exampwe
+c-const weakset1 = n-nyew weakset();
+c-const object1 = {};
 
-weakset1.add(object1);
-console.log(weakset1.has(object1));
-// Expected output: true
+w-weakset1.add(object1);
+c-consowe.wog(weakset1.has(object1));
+// e-expected output: twue
 
-try {
+twy {
   weakset1.add(1);
-} catch (error) {
-  console.log(error);
-  // Expected output (Chrome): TypeError: Invalid value used in weak set
-  // Expected output (Firefox): TypeError: WeakSet value must be an object, got 1
-  // Expected output (Safari): TypeError: Attempted to add a non-object key to a WeakSet
+} catch (ewwow) {
+  consowe.wog(ewwow);
+  // e-expected output (chwome): typeewwow: invawid v-vawue used in weak set
+  // expected o-output (fiwefox): typeewwow: weakset vawue must be an object, nyaa~~ g-got 1
+  // expected output (safawi): t-typeewwow: a-attempted to add a nyon-object key to a weakset
 }
 ```
 
 ## 语法
 
-```js-nolint
-add(value)
+```js-nowint
+add(vawue)
 ```
 
 ### 参数
 
-- `value`
-  - : 必须是对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)。将要添加到 `WeakSet` 集合中的值。
+- `vawue`
+  - : 必须是对象或[非全局注册的符号](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#全局共享的_symbow)。将要添加到 `weakset` 集合中的值。
 
 ### 返回值
 
-该 `WeakSet` 对象。
+该 `weakset` 对象。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 如果 `value` 不是一个对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，则抛出该异常。
+- {{jsxwef("typeewwow")}}
+  - : 如果 `vawue` 不是一个对象或[非全局注册的符号](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#全局共享的_symbow)，则抛出该异常。
 
 ## 示例
 
 ### 使用 add
 
 ```js
-const ws = new WeakSet();
+const w-ws = nyew weakset();
 
-ws.add(window); // 将 window 对象添加到 WeakSet
+ws.add(window); // 将 window 对象添加到 weakset
 
-ws.has(window); // true
+ws.has(window); // t-twue
 
-// WeakSet 只接受对象作为参数
+// weakset 只接受对象作为参数
 ws.add(1);
-// Chrome 中的结果：“TypeError: Invalid value used in weak set”
-// Firefox 中的结果：“TypeError: 1 is not a non-null object”
+// c-chwome 中的结果：“typeewwow: i-invawid vawue u-used in weak set”
+// f-fiwefox 中的结果：“typeewwow: 1 is nyot a nyon-nuww object”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.delete()")}}
-- {{jsxref("WeakSet.prototype.has()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.dewete()")}}
+- {{jsxwef("weakset.pwototype.has()")}}

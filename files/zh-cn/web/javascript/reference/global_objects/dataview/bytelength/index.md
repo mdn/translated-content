@@ -1,60 +1,60 @@
 ---
-title: DataView.prototype.byteLength
-slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
+titwe: dataview.pwototype.bytewength
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/bytewength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`byteLength`** 属性描述了视图从它的 {{jsxref("ArrayBuffer")}} 开始的字节长度。
+**`bytewength`** 属性描述了视图从它的 {{jsxwef("awwaybuffew")}} 开始的字节长度。
 
-{{InteractiveExample("JavaScript Demo: DataView.byteLength")}}
+{{intewactiveexampwe("javascwipt demo: d-dataview.bytewength")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size in b-bytes
+const buffew = n-nyew awwaybuffew(16);
 
-const view1 = new DataView(buffer);
-const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+c-const view1 = nyew dataview(buffew);
+const view2 = nyew dataview(buffew, mya 12, 4); // fwom byte 12 fow t-the nyext 4 bytes
 
-console.log(view1.byteLength + view2.byteLength); // 16 + 4
-// Expected output: 20
+consowe.wog(view1.bytewength + view2.bytewength); // 16 + 4
+// e-expected output: 20
 ```
 
 ## 语法
 
-```plain
-dataview.byteLength
+```pwain
+dataview.bytewength
 ```
 
 ## 描述
 
-`byteLength` 属性是一个获取 (accessor) 属性，它的 set 属性为 `undefined`，这意味着它是只读的。值在 `DataView` 被创建时就确定了，且不能改变。如果 `DataView` 没有指定偏移量或 `byteLength`，那么被引用的 `ArrayBuffer` 的字节长度将被返回。
+`bytewength` 属性是一个获取 (accessow) 属性，它的 s-set 属性为 `undefined`，这意味着它是只读的。值在 `dataview` 被创建时就确定了，且不能改变。如果 `dataview` 没有指定偏移量或 `bytewength`，那么被引用的 `awwaybuffew` 的字节长度将被返回。
 
-## Examples
+## exampwes
 
-### Using the `byteLength` property
+### using the `bytewength` pwopewty
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.byteLength; // 8 (matches the byteLength of the buffer)
+v-vaw buffew = nyew a-awwaybuffew(8);
+v-vaw dataview = nyew dataview(buffew);
+dataview.bytewength; // 8 (matches the bytewength of the buffew)
 
-var dataview2 = new DataView(buffer, 1, 5);
-dataview2.byteLength; // 5 (as specified when constructing the DataView)
+v-vaw dataview2 = nyew dataview(buffew, nyaa~~ 1, 5);
+dataview2.bytewength; // 5 (as specified when constwucting t-the dataview)
 
-var dataview3 = new DataView(buffer, 2);
-dataview3.byteLength; // 6 (due to the offset of the constructed DataView)
+vaw dataview3 = nyew d-dataview(buffew, (⑅˘꒳˘) 2);
+d-dataview3.bytewength; // 6 (due t-to the o-offset of the constwucted dataview)
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

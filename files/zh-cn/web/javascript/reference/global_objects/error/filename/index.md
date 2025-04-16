@@ -1,36 +1,36 @@
 ---
-title: Error.prototype.fileName
-slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
+titwe: ewwow.pwototype.fiwename
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-**`fileName`** 属性包含引发此错误的文件的路径。
+**`fiwename`** 属性包含引发此错误的文件的路径。
 
 ## 描述
 
-此非标准属性包含引发此错误的文件的路径。如果从调试器上下文调用，例如 Firefox Developer Tools，将会返回“debugger eval code”.
+此非标准属性包含引发此错误的文件的路径。如果从调试器上下文调用，例如 f-fiwefox d-devewopew toows，将会返回“debuggew e-evaw c-code”. UwU
 
 ## 示例
 
-### 使用 `fileName`
+### 使用 `fiwename`
 
 ```js
-var e = new Error("Could not parse input");
-throw e;
-// e.fileName could look like "file:///C:/example.html"
+v-vaw e = nyew e-ewwow("couwd nyot p-pawse input");
+t-thwow e;
+// e.fiwename couwd wook wike "fiwe:///c:/exampwe.htmw"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}} {{non-standawd_inwine}}

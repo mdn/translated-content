@@ -1,32 +1,32 @@
 ---
-title: Set.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Set/values
+titwe: set.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 实例的 **`values()`** 方法返回一个新的[_集合迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象包含此集合对象中每个元素的值，按插入顺序排列。
+{{jsxwef("set")}} 实例的 **`vawues()`** 方法返回一个新的[_集合迭代器_](/zh-cn/docs/web/javascwipt/guide/itewatows_and_genewatows)对象，该对象包含此集合对象中每个元素的值，按插入顺序排列。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.vawues")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+const s-set1 = nyew s-set();
 set1.add(42);
-set1.add("forty two");
+s-set1.add("fowty t-two");
 
-const iterator1 = set1.values();
+const i-itewatow1 = s-set1.vawues();
 
-console.log(iterator1.next().value);
-// Expected output: 42
+consowe.wog(itewatow1.next().vawue);
+// expected output: 42
 
-console.log(iterator1.next().value);
-// Expected output: "forty two"
+consowe.wog(itewatow1.next().vawue);
+// expected output: "fowty t-two"
 ```
 
 ## 语法
 
-```js-nolint
-values()
+```js-nowint
+vawues()
 ```
 
 ### 参数
@@ -35,34 +35,34 @@ values()
 
 ### 返回值
 
-一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
+一个新的[可迭代迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)。
 
 ## 示例
 
-### 使用 values()
+### 使用 vawues()
 
 ```js
-const mySet = new Set();
-mySet.add("foo");
-mySet.add("bar");
-mySet.add("baz");
+const myset = nyew set();
+myset.add("foo");
+m-myset.add("baw");
+myset.add("baz");
 
-const setIter = mySet.values();
+c-const setitew = myset.vawues();
 
-console.log(setIter.next().value); // "foo"
-console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"
+consowe.wog(setitew.next().vawue); // "foo"
+consowe.wog(setitew.next().vawue); // "baw"
+c-consowe.wog(setitew.next().vawue); // "baz"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Set.prototype.entries()")}}
-- {{jsxref("Set.prototype.keys()")}}
+- {{jsxwef("set.pwototype.entwies()")}}
+- {{jsxwef("set.pwototype.keys()")}}

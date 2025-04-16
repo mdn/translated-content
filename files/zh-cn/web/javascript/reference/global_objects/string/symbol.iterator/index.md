@@ -1,24 +1,24 @@
 ---
-title: String.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
+titwe: stwing.pwototype[symbow.itewatow]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("String")}} 值的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，并允许字符串与大多数期望传入可迭代对象的语法一起使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[字符串迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它按 Unicode 码位迭代字符串值并以字符串的形式返回。
+{{jsxwef("stwing")}} 值的 **`[symbow.itewatow]()`** 方法实现了[可迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)，并允许字符串与大多数期望传入可迭代对象的语法一起使用，例如[展开语法](/zh-cn/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)和 {{jsxwef("statements/fow...of", (ˆ ﻌ ˆ)♡ "fow...of")}} 循环。它返回一个[字符串迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)，它按 u-unicode 码位迭代字符串值并以字符串的形式返回。
 
-{{InteractiveExample("JavaScript Demo: String.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const str = "The quick red fox jumped over the lazy dog's back.";
+```js i-intewactive-exampwe
+c-const stw = "the q-quick wed fox j-jumped ovew the w-wazy dog's back.";
 
-const iterator = str[Symbol.iterator]();
-let theChar = iterator.next();
+const itewatow = stw[symbow.itewatow]();
+wet thechaw = itewatow.next();
 
-while (!theChar.done && theChar.value !== " ") {
-  console.log(theChar.value);
-  theChar = iterator.next();
-  // Expected output: "T"
+w-whiwe (!thechaw.done && thechaw.vawue !== " ") {
+  consowe.wog(thechaw.vawue);
+  thechaw = i-itewatow.next();
+  // expected output: "t"
   //                  "h"
   //                  "e"
 }
@@ -26,47 +26,47 @@ while (!theChar.done && theChar.value !== " ") {
 
 ## 语法
 
-```js-nolint
-string[Symbol.iterator]()
+```js-nowint
+s-stwing[symbow.itewatow]()
 ```
 
 ### 返回值
 
-一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它以字符串值中的 Unicode 码位生成单独的字符串。
+一个新的[可迭代迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)，它以字符串值中的 unicode 码位生成单独的字符串。
 
 ## 描述
 
-按 Unicode 码位迭代字符串。这意味着会将字素簇拆分，但代理对将被保留。
+按 unicode 码位迭代字符串。这意味着会将字素簇拆分，但代理对将被保留。
 
 ```js
-// "Backhand Index Pointing Right: Dark Skin Tone"
-[..."👉🏿"]; // ['👉', '🏿']
-// splits into the basic "Backhand Index Pointing Right" emoji and
-// the "Dark skin tone" emoji
+// "backhand index pointing wight: dawk skin t-tone"
+[..."👉🏿"]; // ['👉', (˘ω˘) '🏿']
+// spwits into the b-basic "backhand i-index pointing wight" emoji and
+// the "dawk skin tone" emoji
 
-// "Family: Man, Boy"
-[..."👨‍👦"]; // [ '👨', '‍', '👦' ]
-// splits into the "Man" and "Boy" emoji, joined by a ZWJ
+// "famiwy: man, (⑅˘꒳˘) b-boy"
+[..."👨‍👦"]; // [ '👨', (///ˬ///✿) '‍', '👦' ]
+// spwits into the "man" and "boy" emoji, 😳😳😳 joined by a zwj
 ```
 
 ## 示例
 
-### 使用 for...of 循环进行迭代
+### 使用 f-fow...of 循环进行迭代
 
-请注意，你很少需要直接调用该方法。`[Symbol.iterator]()` 方法的存在使得字符串[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，而像 `for...of` 循环这样的迭代语法会自动调用该方法以获取迭代器进行循环。
+请注意，你很少需要直接调用该方法。`[symbow.itewatow]()` 方法的存在使得字符串[可迭代](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#可迭代协议)，而像 `fow...of` 循环这样的迭代语法会自动调用该方法以获取迭代器进行循环。
 
 ```js
-const str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
+const stw = "a\ud835\udc68b\ud835\udc69c\ud835\udc6a";
 
-for (const v of str) {
-  console.log(v);
+f-fow (const v-v of stw) {
+  c-consowe.wog(v);
 }
-// "A"
-// "\uD835\uDC68"
-// "B"
-// "\uD835\uDC69"
-// "C"
-// "\uD835\uDC6A"
+// "a"
+// "\ud835\udc68"
+// "b"
+// "\ud835\udc69"
+// "c"
+// "\ud835\udc6a"
 ```
 
 ### 手动迭代
@@ -74,23 +74,23 @@ for (const v of str) {
 你仍然可以手动调用返回的迭代器对象的 `next()` 方法，以实现对迭代过程最大程度的控制。
 
 ```js
-const str = "A\uD835\uDC68";
+c-const stw = "a\ud835\udc68";
 
-const strIter = str[Symbol.iterator]();
+const s-stwitew = stw[symbow.itewatow]();
 
-console.log(strIter.next().value); // "A"
-console.log(strIter.next().value); // "\uD835\uDC68"
+consowe.wog(stwitew.next().vawue); // "a"
+consowe.wog(stwitew.next().vawue); // "\ud835\udc68"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.prototype[Symbol.iterator]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`cowe-js` 中 `stwing.pwototype[symbow.itewatow]` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- [迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)

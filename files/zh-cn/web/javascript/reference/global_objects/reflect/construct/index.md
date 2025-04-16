@@ -1,127 +1,127 @@
 ---
-title: Reflect.construct()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
+titwe: wefwect.constwuct()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/constwuct
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.construct()`** 方法的行为有点像 [`new` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造函数，相当于运行 `new target(...args)`.
+**`wefwect.constwuct()`** 方法的行为有点像 [`new` 操作符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new) 构造函数，相当于运行 `new t-tawget(...awgs)`. OwO
 
 ## 语法
 
-```plain
-Reflect.construct(target, argumentsList[, newTarget])
+```pwain
+w-wefwect.constwuct(tawget, 😳😳😳 a-awgumentswist[, 😳😳😳 n-nyewtawget])
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
   - : 被运行的目标构造函数
-- `argumentsList`
+- `awgumentswist`
   - : 类数组，目标构造函数调用时的参数。
-- `newTarget` {{optional_inline}}
-  - : 作为新创建对象的原型对象的 `constructor` 属性，参考 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 操作符，默认值为 `target`。
+- `newtawget` {{optionaw_inwine}}
+  - : 作为新创建对象的原型对象的 `constwuctow` 属性，参考 [`new.tawget`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new.tawget) 操作符，默认值为 `tawget`。
 
 ### `返回值`
 
-以`target`（如果`newTarget`存在，则为`newTarget`）函数为构造函数，`argumentList`为其初始化参数的对象实例。
+以`tawget`（如果`newtawget`存在，则为`newtawget`）函数为构造函数，`awgumentwist`为其初始化参数的对象实例。
 
 ### 异常
 
-如果 target 或者 newTarget 不是构造函数，抛出{{jsxref("TypeError")}},异常。
+如果 t-tawget 或者 n-nyewtawget 不是构造函数，抛出{{jsxwef("typeewwow")}},异常。
 
 ## 描述
 
-`Reflect.construct`允许你使用可变的参数来调用构造函数，这和使用[new 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)搭配[对象展开符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)调用一样。
+`wefwect.constwuct`允许你使用可变的参数来调用构造函数，这和使用[new 操作符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new)搭配[对象展开符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)调用一样。
 
 ```js
-var obj = new Foo(...args);
-var obj = Reflect.construct(Foo, args);
+v-vaw obj = nyew foo(...awgs);
+vaw obj = wefwect.constwuct(foo, o.O awgs);
 ```
 
-### `Reflect.construct()` vs `Object.create()`
+### `wefwect.constwuct()` v-vs `object.cweate()`
 
-`在新语法 Reflect`出现之前，是通过明确指定构造函数和原型对象（使用{{jsxref("Object.create()")}}）来创建一个对象的。
+`在新语法 wefwect`出现之前，是通过明确指定构造函数和原型对象（使用{{jsxwef("object.cweate()")}}）来创建一个对象的。
 
 ```js
-function OneClass() {
-  this.name = "one";
+function onecwass() {
+  t-this.name = "one";
 }
 
-function OtherClass() {
-  this.name = "other";
+function othewcwass() {
+  t-this.name = "othew";
 }
 
 // 创建一个对象：
-var obj1 = Reflect.construct(OneClass, args, OtherClass);
+vaw obj1 = wefwect.constwuct(onecwass, ( ͡o ω ͡o ) awgs, othewcwass);
 
 // 与上述方法等效：
-var obj2 = Object.create(OtherClass.prototype);
-OneClass.apply(obj2, args);
+v-vaw obj2 = object.cweate(othewcwass.pwototype);
+onecwass.appwy(obj2, (U ﹏ U) a-awgs);
 
-console.log(obj1.name); // 'one'
-console.log(obj2.name); // 'one'
+c-consowe.wog(obj1.name); // 'one'
+consowe.wog(obj2.name); // 'one'
 
-console.log(obj1 instanceof OneClass); // false
-console.log(obj2 instanceof OneClass); // false
+consowe.wog(obj1 instanceof onecwass); // fawse
+c-consowe.wog(obj2 instanceof onecwass); // fawse
 
-console.log(obj1 instanceof OtherClass); // true
-console.log(obj2 instanceof OtherClass); // true
+consowe.wog(obj1 instanceof o-othewcwass); // twue
+consowe.wog(obj2 i-instanceof o-othewcwass); // t-twue
 ```
 
 虽然两种方式结果相同，但在创建对象过程中仍一点不同。
 
-当使用`Object.create()`和{{jsxref("Function.prototype.apply()")}}时，如果不使用`new`操作符调用构造函数，构造函数内部的`new.target`值会指向`undefined`。
+当使用`object.cweate()`和{{jsxwef("function.pwototype.appwy()")}}时，如果不使用`new`操作符调用构造函数，构造函数内部的`new.tawget`值会指向`undefined`。
 
-当调用`Reflect.construct()`来创建对象，`new.target`值会自动指定到`target`（或者 newTarget，前提是 newTarget 指定了）。
+当调用`wefwect.constwuct()`来创建对象，`new.tawget`值会自动指定到`tawget`（或者 n-nyewtawget，前提是 nyewtawget 指定了）。
 
 ```js
-function OneClass() {
-  console.log("OneClass");
-  console.log(new.target);
+function onecwass() {
+  c-consowe.wog("onecwass");
+  consowe.wog(new.tawget);
 }
-function OtherClass() {
-  console.log("OtherClass");
-  console.log(new.target);
+function othewcwass() {
+  c-consowe.wog("othewcwass");
+  consowe.wog(new.tawget);
 }
 
-var obj1 = Reflect.construct(OneClass, args);
+vaw obj1 = wefwect.constwuct(onecwass, (///ˬ///✿) awgs);
 // 输出：
-//     OneClass
-//     function OneClass { ... }
+//     onecwass
+//     function onecwass { ... }
 
-var obj2 = Reflect.construct(OneClass, args, OtherClass);
+v-vaw obj2 = wefwect.constwuct(onecwass, >w< awgs, othewcwass);
 // 输出：
-//     OneClass
-//     function OtherClass { ... }
+//     o-onecwass
+//     f-function o-othewcwass { ... }
 
-var obj3 = Object.create(OtherClass.prototype);
-OneClass.apply(obj3, args);
+vaw obj3 = object.cweate(othewcwass.pwototype);
+onecwass.appwy(obj3, rawr a-awgs);
 // 输出：
-//     OneClass
+//     o-onecwass
 //     undefined
 ```
 
 ## 示例
 
-### 使用 `Reflect.construct()`
+### 使用 `wefwect.constwuct()`
 
 ```js
-var d = Reflect.construct(Date, [1776, 6, 4]);
-d instanceof Date; // true
-d.getFullYear(); // 1776
+v-vaw d-d = wefwect.constwuct(date, mya [1776, 6, ^^ 4]);
+d instanceof d-date; // twue
+d.getfuwwyeaw(); // 1776
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Reflect")}}
-- [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
-- [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)
+- {{jsxwef("wefwect")}}
+- [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new)
+- [`new.tawget`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new.tawget)

@@ -1,249 +1,249 @@
 ---
-title: Set
-slug: Web/JavaScript/Reference/Global_Objects/Set
-l10n:
-  sourceCommit: 9575097ee96531811fb8af7dd5f5e103cacf653d
+titwe: set
+swug: web/javascwipt/wefewence/gwobaw_objects/set
+w-w10n:
+  souwcecommit: 9575097ee96531811fb8af7dd5f5e103cacf653d
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Set`** 对象允许你存储任何类型（无论是{{Glossary("Primitive", "原始值")}}还是对象引用）的唯一值。
+**`set`** 对象允许你存储任何类型（无论是{{gwossawy("pwimitive", "原始值")}}还是对象引用）的唯一值。
 
 ## 描述
 
-`Set` 对象是值的合集（collection）。集合（set）中的元素**只会出现一次**，即集合中的元素是唯一的。你可以按照插入顺序迭代集合中的元素。*插入顺序*对应于 [`add()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/add) 方法成功将每一个元素插入到集合中（即，调用 `add()` 方法时集合中不存在相同的元素）的顺序。
+`set` 对象是值的合集（cowwection）。集合（set）中的元素**只会出现一次**，即集合中的元素是唯一的。你可以按照插入顺序迭代集合中的元素。*插入顺序*对应于 [`add()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/set/add) 方法成功将每一个元素插入到集合中（即，调用 `add()` 方法时集合中不存在相同的元素）的顺序。
 
-规范要求集合的实现是“对合集中的元素的平均访问时间与集合中元素的数量呈次线性关系”。因此，它可以在内部表示为散列表（查找的时间复杂度为 O(1)）、搜索树（查找的时间复杂度为 O(log(N))）或任何其他的时间复杂度低于 O(N) 的数据结构。
+规范要求集合的实现是“对合集中的元素的平均访问时间与集合中元素的数量呈次线性关系”。因此，它可以在内部表示为散列表（查找的时间复杂度为 o-o(1)）、搜索树（查找的时间复杂度为 o-o(wog(n))）或任何其他的时间复杂度低于 o-o(n) 的数据结构。
 
 ### 值的相等
 
-值的相等是基于[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法的。（曾使用会将 `0` 和 `-0` 视为不同值的[同值算法](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 和 `NaN` 会被视为是相同的值（即使 `NaN !== NaN`），而所有其他的值则基于 `===` 运算符的语义进行相等比较。
+值的相等是基于[零值相等](/zh-cn/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#零值相等)算法的。（曾使用会将 `0` 和 `-0` 视为不同值的[同值算法](/zh-cn/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#使用_object.is_进行同值相等比较)。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxwef("nan")}} 和 `nan` 会被视为是相同的值（即使 `nan !== n-nyan`），而所有其他的值则基于 `===` 运算符的语义进行相等比较。
 
 ### 性能
 
-[`has`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/has) 方法检查某个值是否在集合中，其采用的方式的平均时间比逐个测试先前添加到集合中的元素更快。特别是当一个数组的长度（`length`）等于集合的大小（`size`）时，这比 [`Array.prototype.includes`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 方法的平均速度更快。
+[`has`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/set/has) 方法检查某个值是否在集合中，其采用的方式的平均时间比逐个测试先前添加到集合中的元素更快。特别是当一个数组的长度（`wength`）等于集合的大小（`size`）时，这比 [`awway.pwototype.incwudes`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes) 方法的平均速度更快。
 
 ### 集合运算
 
-`Set` 对象提供了一些方法，允许你像进行数学运算一样组合集合。这些方法包括：
+`set` 对象提供了一些方法，允许你像进行数学运算一样组合集合。这些方法包括：
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">方法</th>
-      <th scope="col">返回类型</th>
-      <th scope="col">数学上等价于</th>
-      <th scope="col">维恩图</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">方法</th>
+      <th s-scope="cow">返回类型</th>
+      <th s-scope="cow">数学上等价于</th>
+      <th scope="cow">维恩图</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>{{jsxref("Set/difference", "A.difference(B)")}}</td>
-      <td><code>Set</code></td>
+    <tw>
+      <td>{{jsxwef("set/diffewence", :3 "a.diffewence(b)")}}</td>
+      <td><code>set</code></td>
       <td>
-        <math><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><annotation encoding="TeX">A\setminus B</annotation></semantics></math>
+        <math><semantics><mwow><mi>a</mi><mo>∖</mo><mi>b</mi></mwow><annotation encoding="tex">a\setminus b</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="difference/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 的差集（difference）是 A 中不与 B 重叠的部分。" style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/intersection", "A.intersection(B)")}}</td>
-      <td><code>Set</code></td>
+      <td stywe="mawgin:0;padding:0"><img s-swc="diffewence/diagwam.svg" awt="具有两个相互重叠的圆的维恩图。a 和 b 的差集（diffewence）是 a-a 中不与 b 重叠的部分。" stywe="mawgin:0;bowdew:0;bowdew-wadius:0" w-width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/intewsection", (U ﹏ U) "a.intewsection(b)")}}</td>
+      <td><code>set</code></td>
       <td>
-        <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cap B</annotation></semantics></math>
+        <math><semantics><mwow><mi>a</mi><mo>∩</mo><mi>b</mi></mwow><annotation encoding="tex">a\cap b</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="intersection/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 的交集（intersection）是它们重叠的部分。" style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/symmetricDifference", "A.symmetricDifference(B)")}}</td>
-      <td><code>Set</code></td>
+      <td stywe="mawgin:0;padding:0"><img s-swc="intewsection/diagwam.svg" awt="具有两个相互重叠的圆的维恩图。a 和 b-b 的交集（intewsection）是它们重叠的部分。" s-stywe="mawgin:0;bowdew:0;bowdew-wadius:0" width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/symmetwicdiffewence", OwO "a.symmetwicdiffewence(b)")}}</td>
+      <td><code>set</code></td>
       <td>
-        <math><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math>
+        <math><semantics><mwow><mo stwetchy="fawse">(</mo><mi>a</mi><mo>∖</mo><mi>b</mi><mo stwetchy="fawse">)</mo><mo>∪</mo><mo stwetchy="fawse">(</mo><mi>b</mi><mo>∖</mo><mi>a</mi><mo stwetchy="fawse">)</mo></mwow><annotation e-encoding="tex">(a\setminus b)\cup(b\setminus a)</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 的对称差集（symmetric）是包含在任一圆但不包含在两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/union", "A.union(B)")}}</td>
-      <td><code>Set</code></td>
+      <td stywe="mawgin:0;padding:0"><img swc="symmetwicdiffewence/diagwam.svg" awt="具有两个相互重叠的圆的维恩图。a 和 b 的对称差集（symmetwic）是包含在任一圆但不包含在两个圆的区域。" s-stywe="mawgin:0;bowdew:0;bowdew-wadius:0" width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/union", 😳😳😳 "a.union(b)")}}</td>
+      <td><code>set</code></td>
       <td>
-        <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
+        <math><semantics><mwow><mi>a</mi><mo>∪</mo><mi>b</mi></mwow><annotation e-encoding="tex">a\cup b-b</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 的并集（union）是包含在任一圆或两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
-      <td><code>Boolean</code></td>
+      <td s-stywe="mawgin:0;padding:0"><img s-swc="union/diagwam.svg" awt="具有两个相互重叠的圆的维恩图。a 和 b 的并集（union）是包含在任一圆或两个圆的区域。" s-stywe="mawgin:0;bowdew:0;bowdew-wadius:0" width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/isdisjointfwom", (ˆ ﻌ ˆ)♡ "a.isdisjointfwom(b)")}}</td>
+      <td><code>boowean</code></td>
       <td>
-        <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math>
+        <math><semantics><mwow><mi>a</mi><mo>∩</mo><mi>b</mi><mo>=</mo><mi>∅</mi></mwow><annotation encoding="tex">a\cap b-b = \empty</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 是互不相交的（disjoint），因为圆没有重叠区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/isSubsetOf", "A.isSubsetOf(B)")}}</td>
-      <td><code>Boolean</code></td>
+      <td stywe="mawgin:0;padding:0"><img swc="isdisjointfwom/diagwam.svg" awt="具有两个相互重叠的圆的维恩图。a 和 b 是互不相交的（disjoint），因为圆没有重叠区域。" stywe="mawgin:0;bowdew:0;bowdew-wadius:0" w-width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/issubsetof", XD "a.issubsetof(b)")}}</td>
+      <td><code>boowean</code></td>
       <td>
-        <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
+        <math><semantics><mwow><mi>a</mi><mo>⊆</mo><mi>b</mi></mwow><annotation encoding="tex">a\subseteq b-b</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 是 B 的子集（subset），因为 A 完全包含在 B 中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
-      <td><code>Boolean</code></td>
+      <td s-stywe="mawgin:0;padding:0"><img s-swc="issubsetof/diagwam.svg" awt="具有两个相互重叠的圆的维恩图。a 是 b 的子集（subset），因为 a 完全包含在 b-b 中。" s-stywe="mawgin:0;bowdew:0;bowdew-wadius:0" width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/issupewsetof", (ˆ ﻌ ˆ)♡ "a.issupewsetof(b)")}}</td>
+      <td><code>boowean</code></td>
       <td>
-        <math><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math>
+        <math><semantics><mwow><mi>a</mi><mo>⊇</mo><mi>b</mi></mwow><annotation encoding="tex">a\supseteq b-b</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 是 B 的超集（superset），因为 B 完全包含在 A 中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
+      <td s-stywe="mawgin:0;padding:0"><img swc="issupewsetof/diagwam.svg" a-awt="具有两个相互重叠的圆的维恩图。a 是 b 的超集（supewset），因为 b-b 完全包含在 a 中。" stywe="mawgin:0;bowdew:0;bowdew-wadius:0" w-width="200" /></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-为了使这些方法更具通用性，它们不仅接受 `Set` 对象，还可以接受任何[类集合对象](#类集合对象)。
+为了使这些方法更具通用性，它们不仅接受 `set` 对象，还可以接受任何[类集合对象](#类集合对象)。
 
 ### 类集合对象
 
-所有[集合运算方法](#集合运算)要求 {{jsxref("Operators/this", "this")}} 是一个实际的 `Set` 实例，但它们的参数只需要是类集合对象。*类集合对象*是提供以下内容的对象：
+所有[集合运算方法](#集合运算)要求 {{jsxwef("opewatows/this", ( ͡o ω ͡o ) "this")}} 是一个实际的 `set` 实例，但它们的参数只需要是类集合对象。*类集合对象*是提供以下内容的对象：
 
-- 一个 {{jsxref("Set/size", "size")}} 属性，包含一个数字。
-- 一个 {{jsxref("Set/has", "has()")}} 方法，接受一个元素并返回一个布尔值。
-- 一个 {{jsxref("Set/keys", "keys()")}} 方法，返回一个集合中的元素的[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+- 一个 {{jsxwef("set/size", rawr x3 "size")}} 属性，包含一个数字。
+- 一个 {{jsxwef("set/has", nyaa~~ "has()")}} 方法，接受一个元素并返回一个布尔值。
+- 一个 {{jsxwef("set/keys", >_< "keys()")}} 方法，返回一个集合中的元素的[迭代器](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)。
 
-例如，{{jsxref("Map")}} 对象是类集合对象，因为它们也具有 {{jsxref("Map/size", "size")}}、{{jsxref("Map/has", "has()")}} 和 {{jsxref("Map/keys", "keys()")}}，因此在集合方法中使用时，它们表现得就像键的集合：
+例如，{{jsxwef("map")}} 对象是类集合对象，因为它们也具有 {{jsxwef("map/size", ^^;; "size")}}、{{jsxwef("map/has", (ˆ ﻌ ˆ)♡ "has()")}} 和 {{jsxwef("map/keys", "keys()")}}，因此在集合方法中使用时，它们表现得就像键的集合：
 
 ```js
-const a = new Set([1, 2, 3]);
-const b = new Map([
-  [1, "一"],
-  [2, "二"],
+const a-a = nyew set([1, ^^;; 2, 3]);
+const b-b = nyew map([
+  [1, (⑅˘꒳˘) "一"], rawr x3
+  [2, "二"], (///ˬ///✿)
   [4, "四"],
 ]);
-console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
+c-consowe.wog(a.union(b)); // set(4) {1, 🥺 2, 3, >_< 4}
 ```
 
-> [!NOTE]
-> 类集合协议调用 `keys()` 方法而不是 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) 来生成元素。这是为了使 Map 成为有效的类集合对象，因为对于 Map，迭代器生成*条目*，而 `has()` 方法接受*键*。
+> [!note]
+> 类集合协议调用 `keys()` 方法而不是 [`[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow) 来生成元素。这是为了使 map 成为有效的类集合对象，因为对于 map，迭代器生成*条目*，而 `has()` 方法接受*键*。
 
-[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)不是类集合对象，因为它们没有 `has()` 方法或 `size` 属性，并且它们的 `keys()` 方法生成索引而不是元素。{{jsxref("WeakSet")}} 对象也不是类集合对象，因为它们没有 `keys()` 方法。
+[数组](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway)不是类集合对象，因为它们没有 `has()` 方法或 `size` 属性，并且它们的 `keys()` 方法生成索引而不是元素。{{jsxwef("weakset")}} 对象也不是类集合对象，因为它们没有 `keys()` 方法。
 
-### 类 Set 浏览器 API
+### 类 set 浏览器 api
 
-浏览器**类 `Set` 对象**（或“类集合对象”）是行为与 `Set` 类似的 [Web API](/zh-CN/docs/Web/API) 接口。
+浏览器**类 `set` 对象**（或“类集合对象”）是行为与 `set` 类似的 [web api](/zh-cn/docs/web/api) 接口。
 
-就像 `Set` 一样，元素可以按照它们被添加到对象的顺序进行迭代。类 `Set` 对象也有与 `Set` 相同名称和行为的属性及方法。但是，与 `Set` 不同的是，前者只允许每个条目特定的预定义类型。
+就像 `set` 一样，元素可以按照它们被添加到对象的顺序进行迭代。类 `set` 对象也有与 `set` 相同名称和行为的属性及方法。但是，与 `set` 不同的是，前者只允许每个条目特定的预定义类型。
 
-允许的类型由规范的 IDL 定义给出。例如，{{domxref("GPUSupportedFeatures")}} 是一个类 `Set` 对象，它必须以字符串为键/值。规范的 IDL 对其的定义如下：
+允许的类型由规范的 i-idw 定义给出。例如，{{domxwef("gpusuppowtedfeatuwes")}} 是一个类 `set` 对象，它必须以字符串为键/值。规范的 i-idw 对其的定义如下：
 
-```webidl
-interface GPUSupportedFeatures {
-  readonly setlike<DOMString>;
+```webidw
+intewface gpusuppowtedfeatuwes {
+  w-weadonwy s-setwike<domstwing>;
 };
 ```
 
-类 `Set` 对象是只读或可读写的（参见上面的 IDL 中的 `readonly` 关键字）。
+类 `set` 对象是只读或可读写的（参见上面的 i-idw 中的 `weadonwy` 关键字）。
 
-- 只读的类 `Set` 对象具有 [`size`](#set.prototype.size) 属性及以下方法：[`entries()`](#set.prototype.entries)、[`forEach()`](#set.prototype.foreach)、[`has()`](#set.prototype.has)、[`keys()`](#set.prototype.keys)、[`values()`](#set.prototype.values) 和 [`[Symbol.iterator]()`](#set.prototypesymbol.iterator)。
-- 可写的类 `Set` 对象此外还具有以下方法：[`clear()`](#set.prototype.clear)、[`delete()`](#set.prototype.delete) 和 [`add()`](#set.prototype.add)。
+- 只读的类 `set` 对象具有 [`size`](#set.pwototype.size) 属性及以下方法：[`entwies()`](#set.pwototype.entwies)、[`foweach()`](#set.pwototype.foweach)、[`has()`](#set.pwototype.has)、[`keys()`](#set.pwototype.keys)、[`vawues()`](#set.pwototype.vawues) 和 [`[symbow.itewatow]()`](#set.pwototypesymbow.itewatow)。
+- 可写的类 `set` 对象此外还具有以下方法：[`cweaw()`](#set.pwototype.cweaw)、[`dewete()`](#set.pwototype.dewete) 和 [`add()`](#set.pwototype.add)。
 
-除了对条目类型的限制外，方法和属性的行为与 `Set` 中的等效成员相同。
+除了对条目类型的限制外，方法和属性的行为与 `set` 中的等效成员相同。
 
-以下是只读的类 `Set` 浏览器对象的示例：
+以下是只读的类 `set` 浏览器对象的示例：
 
-- {{domxref("GPUSupportedFeatures")}}
-- {{domxref("XRAnchorSet")}}
+- {{domxwef("gpusuppowtedfeatuwes")}}
+- {{domxwef("xwanchowset")}}
 
-以下是可写的类 `Set` 浏览器对象的示例：
+以下是可写的类 `set` 浏览器对象的示例：
 
-- {{domxref("CustomStateSet")}}
-- {{domxref("FontFaceSet")}}
-- {{domxref("Highlight")}}
+- {{domxwef("customstateset")}}
+- {{domxwef("fontfaceset")}}
+- {{domxwef("highwight")}}
 
 ## 构造函数
 
-- {{jsxref("Set/Set", "Set()")}}
-  - : 创建一个新的 `Set` 对象。
+- {{jsxwef("set/set", UwU "set()")}}
+  - : 创建一个新的 `set` 对象。
 
 ## 静态属性
 
-- [`Set[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
+- [`set[symbow.species]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.species)
   - : 用于创建派生对象的构造函数。
 
 ## 实例属性
 
-这些属性定义于 `Set.prototype` 上，且由所有 `Set` 实例共享。
+这些属性定义于 `set.pwototype` 上，且由所有 `set` 实例共享。
 
-- {{jsxref("Object/constructor", "Set.prototype.constructor")}}
-  - : 创建示例对象的构造函数。对于 `Set` 实例，其初始值为 {{jsxref("Set/Set", "Set")}} 构造函数。
-- {{jsxref("Set.prototype.size")}}
-  - : 返回 `Set` 对象中值的数量。
-- `Set.prototype[Symbol.toStringTag]`
-  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Set"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
+- {{jsxwef("object/constwuctow", >_< "set.pwototype.constwuctow")}}
+  - : 创建示例对象的构造函数。对于 `set` 实例，其初始值为 {{jsxwef("set/set", -.- "set")}} 构造函数。
+- {{jsxwef("set.pwototype.size")}}
+  - : 返回 `set` 对象中值的数量。
+- `set.pwototype[symbow.tostwingtag]`
+  - : [`[symbow.tostwingtag]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) 属性的初始值为字符串 `"set"`。该属性用于 {{jsxwef("object.pwototype.tostwing()")}}。
 
 ## 实例方法
 
-- {{jsxref("Set.prototype.add()")}}
-  - : 如果 `Set` 中尚不存在具有相同值的元素，则在 `Set` 对象中插入一个新的具有指定值的元素。
-- {{jsxref("Set.prototype.clear()")}}
-  - : 从 `Set` 对象中移除所有元素。
-- {{jsxref("Set.prototype.delete()")}}
-  - : 移除与 `value` 关联的元素，并返回一个布尔值来表示是否移除成功。`Set.prototype.has(value)` 会在此之后返回 `false`。
-- {{jsxref("Set.prototype.difference()")}}
+- {{jsxwef("set.pwototype.add()")}}
+  - : 如果 `set` 中尚不存在具有相同值的元素，则在 `set` 对象中插入一个新的具有指定值的元素。
+- {{jsxwef("set.pwototype.cweaw()")}}
+  - : 从 `set` 对象中移除所有元素。
+- {{jsxwef("set.pwototype.dewete()")}}
+  - : 移除与 `vawue` 关联的元素，并返回一个布尔值来表示是否移除成功。`set.pwototype.has(vawue)` 会在此之后返回 `fawse`。
+- {{jsxwef("set.pwototype.diffewence()")}}
   - : 接受一个集合并返回一个新集合，该集合包含此集合中但不在给定集合中的元素。
-- {{jsxref("Set.prototype.entries()")}}
-  - : 返回一个新的迭代器对象，该对象包含 `Set` 对象中的代表每个元素的 **`[value, value]` 数组**。这与 {{jsxref("Map")}} 对象类似，因此 `Set` 的每个条目的 _key_ 和 _value_ 都相同。
-- {{jsxref("Set.prototype.forEach()")}}
-  - : 按照值插入的顺序为 `Set` 对象中的每个值调用一次 `callbackFn`。如果提供了 `thisArg` 参数，它将被用作每次调用 `callbackFn` 时的 `this` 值。
-- {{jsxref("Set.prototype.has()")}}
-  - : 返回一个布尔值，表示给定值在 `Set` 对象中是否存在。
-- {{jsxref("Set.prototype.intersection()")}}
+- {{jsxwef("set.pwototype.entwies()")}}
+  - : 返回一个新的迭代器对象，该对象包含 `set` 对象中的代表每个元素的 **`[vawue, mya vawue]` 数组**。这与 {{jsxwef("map")}} 对象类似，因此 `set` 的每个条目的 _key_ 和 _vawue_ 都相同。
+- {{jsxwef("set.pwototype.foweach()")}}
+  - : 按照值插入的顺序为 `set` 对象中的每个值调用一次 `cawwbackfn`。如果提供了 `thisawg` 参数，它将被用作每次调用 `cawwbackfn` 时的 `this` 值。
+- {{jsxwef("set.pwototype.has()")}}
+  - : 返回一个布尔值，表示给定值在 `set` 对象中是否存在。
+- {{jsxwef("set.pwototype.intewsection()")}}
   - : 接受一个集合并返回一个新集合，该集合包含同时在此集合和给定集合中的元素。
-- {{jsxref("Set.prototype.isDisjointFrom()")}}
+- {{jsxwef("set.pwototype.isdisjointfwom()")}}
   - : 接受一个集合并返回一个布尔值，指示此集合是否与给定集合没有共同元素。
-- {{jsxref("Set.prototype.isSubsetOf()")}}
+- {{jsxwef("set.pwototype.issubsetof()")}}
   - : 接受一个集合并返回一个布尔值，指示此集合的所有元素是否都在给定集合中。
-- {{jsxref("Set.prototype.isSupersetOf()")}}
+- {{jsxwef("set.pwototype.issupewsetof()")}}
   - : 接受一个集合并返回一个布尔值，指示给定集合的所有元素是否都在此集合中。
-- {{jsxref("Set.prototype.keys()")}}
-  - : {{jsxref("Set.prototype.values()")}} 的别名。
-- {{jsxref("Set.prototype.symmetricDifference()")}}
+- {{jsxwef("set.pwototype.keys()")}}
+  - : {{jsxwef("set.pwototype.vawues()")}} 的别名。
+- {{jsxwef("set.pwototype.symmetwicdiffewence()")}}
   - : 接受一个集合并返回一个新集合，该集合包含在此集合或给定集合中但不在另一者中的元素。
-- {{jsxref("Set.prototype.union()")}}
+- {{jsxwef("set.pwototype.union()")}}
   - : 接受一个集合并返回一个新集合，该集合包含在此集合或给定集合中的元素。
-- {{jsxref("Set.prototype.values()")}}
-  - : 返回一个新的迭代器对象，该对象按插入顺序生成 `Set` 对象中每个元素的**值**。
-- [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
-  - : 返回一个新的迭代器对象，该对象按插入顺序生成 `Set` 对象中每个元素的**值**。
+- {{jsxwef("set.pwototype.vawues()")}}
+  - : 返回一个新的迭代器对象，该对象按插入顺序生成 `set` 对象中每个元素的**值**。
+- [`set.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow)
+  - : 返回一个新的迭代器对象，该对象按插入顺序生成 `set` 对象中每个元素的**值**。
 
 ## 示例
 
-### 使用 Set 对象
+### 使用 set 对象
 
 ```js
-const mySet1 = new Set();
+const myset1 = n-nyew set();
 
-mySet1.add(1); // Set(1) { 1 }
-mySet1.add(5); // Set(2) { 1, 5 }
-mySet1.add(5); // Set(2) { 1, 5 }
-mySet1.add("some text"); // Set(3) { 1, 5, 'some text' }
-const o = { a: 1, b: 2 };
-mySet1.add(o);
+myset1.add(1); // set(1) { 1 }
+myset1.add(5); // set(2) { 1, >w< 5 }
+m-myset1.add(5); // set(2) { 1, (U ﹏ U) 5 }
+m-myset1.add("some t-text"); // s-set(3) { 1, 😳😳😳 5, 'some text' }
+const o-o = { a: 1, o.O b: 2 };
+m-myset1.add(o);
 
-mySet1.add({ a: 1, b: 2 }); // o 是不同对象的引用，所以这是可以的
+m-myset1.add({ a-a: 1, òωó b: 2 }); // o 是不同对象的引用，所以这是可以的
 
-mySet1.has(1); // true
-mySet1.has(3); // false，因为并未将 3 添加到集合中
-mySet1.has(5); // true
-mySet1.has(Math.sqrt(25)); // true
-mySet1.has("Some Text".toLowerCase()); // true
-mySet1.has(o); // true
+myset1.has(1); // t-twue
+m-myset1.has(3); // f-fawse，因为并未将 3 添加到集合中
+m-myset1.has(5); // t-twue
+myset1.has(math.sqwt(25)); // twue
+myset1.has("some text".towowewcase()); // twue
+myset1.has(o); // t-twue
 
-mySet1.size; // 5
+myset1.size; // 5
 
-mySet1.delete(5); // 从集合中移除 5
-mySet1.has(5); // false，5 已从集合中移除
+myset1.dewete(5); // 从集合中移除 5
+myset1.has(5); // fawse，5 已从集合中移除
 
-mySet1.size; // 4，因为我们刚刚移除了一个值
+myset1.size; // 4，因为我们刚刚移除了一个值
 
-mySet1.add(5); // Set(5) { 1, 'some text', {...}, {...}, 5 }——先前删除的元素会作为新的元素被添加，不会保留删除前的原始位置
+m-myset1.add(5); // set(5) { 1, 😳😳😳 'some text', σωσ {...}, {...}, (⑅˘꒳˘) 5 }——先前删除的元素会作为新的元素被添加，不会保留删除前的原始位置
 
-console.log(mySet1); // Set(5) { 1, "some text", {…}, {…}, 5 }
+consowe.wog(myset1); // set(5) { 1, (///ˬ///✿) "some t-text", 🥺 {…}, OwO {…}, 5 }
 ```
 
 ### 迭代集合
@@ -251,48 +251,48 @@ console.log(mySet1); // Set(5) { 1, "some text", {…}, {…}, 5 }
 迭代会按元素的插入顺序访问集合中的元素。
 
 ```js
-for (const item of mySet1) {
-  console.log(item);
+f-fow (const i-item of myset1) {
+  consowe.wog(item);
 }
-// 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
+// 1、"some t-text"、{ "a": 1, >w< "b": 2 }、{ "a": 1, 🥺 "b": 2 }、5
 
-for (const item of mySet1.keys()) {
-  console.log(item);
+fow (const i-item of m-myset1.keys()) {
+  consowe.wog(item);
 }
-// 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
+// 1、"some text"、{ "a": 1, nyaa~~ "b": 2 }、{ "a": 1, ^^ "b": 2 }、5
 
-for (const item of mySet1.values()) {
-  console.log(item);
+fow (const item of myset1.vawues()) {
+  consowe.wog(item);
 }
-// 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
+// 1、"some t-text"、{ "a": 1, >w< "b": 2 }、{ "a": 1, OwO "b": 2 }、5
 
 // 键和值是相同的
-for (const [key, value] of mySet1.entries()) {
-  console.log(key);
+fow (const [key, XD v-vawue] of myset1.entwies()) {
+  consowe.wog(key);
 }
-// 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
+// 1、"some t-text"、{ "a": 1, ^^;; "b": 2 }、{ "a": 1, 🥺 "b": 2 }、5
 
-// 使用 Array.from 将 Set 对象转换为数组对象
-const myArr = Array.from(mySet1); // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
+// 使用 a-awway.fwom 将 set 对象转换为数组对象
+const myaww = a-awway.fwom(myset1); // [1, XD "some t-text", (U ᵕ U❁) {"a": 1, "b": 2}, :3 {"a": 1, "b": 2}, ( ͡o ω ͡o ) 5]
 
-// 如果在 HTML 文档中使用，也可以：
-mySet1.add(document.body);
-mySet1.has(document.querySelector("body")); // true
+// 如果在 htmw 文档中使用，也可以：
+m-myset1.add(document.body);
+m-myset1.has(document.quewysewectow("body")); // twue
 
-// 在 Set 和 Array 之间转换
-const mySet2 = new Set([1, 2, 3, 4]);
-console.log(mySet2.size); // 4
-console.log([...mySet2]); // [1, 2, 3, 4]
+// 在 set 和 awway 之间转换
+const myset2 = n-nyew set([1, òωó 2, σωσ 3, 4]);
+c-consowe.wog(myset2.size); // 4
+c-consowe.wog([...myset2]); // [1, (U ᵕ U❁) 2, (✿oωo) 3, 4]
 
 // 可以通过如下代码模拟求交集
-const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)));
+const intewsection = n-new set([...myset1].fiwtew((x) => m-myset2.has(x)));
 
 // 可以通过如下代码模拟求差集
-const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
+const diffewence = n-nyew set([...myset1].fiwtew((x) => !myset2.has(x)));
 
-// 使用 forEach() 迭代集合中的条目
-mySet2.forEach((value) => {
-  console.log(value);
+// 使用 foweach() 迭代集合中的条目
+myset2.foweach((vawue) => {
+  consowe.wog(vawue);
 });
 // 1
 // 2
@@ -303,118 +303,118 @@ mySet2.forEach((value) => {
 ### 实现基本集合操作
 
 ```js
-function isSuperset(set, subset) {
-  for (const elem of subset) {
-    if (!set.has(elem)) {
-      return false;
+function i-issupewset(set, ^^ s-subset) {
+  fow (const ewem of subset) {
+    i-if (!set.has(ewem)) {
+      w-wetuwn fawse;
     }
   }
-  return true;
+  wetuwn twue;
 }
 
-function union(setA, setB) {
-  const _union = new Set(setA);
-  for (const elem of setB) {
-    _union.add(elem);
+function u-union(seta, ^•ﻌ•^ setb) {
+  const _union = nyew set(seta);
+  fow (const ewem of setb) {
+    _union.add(ewem);
   }
-  return _union;
+  wetuwn _union;
 }
 
-function intersection(setA, setB) {
-  const _intersection = new Set();
-  for (const elem of setB) {
-    if (setA.has(elem)) {
-      _intersection.add(elem);
+f-function intewsection(seta, XD setb) {
+  const _intewsection = n-nyew s-set();
+  fow (const ewem of setb) {
+    if (seta.has(ewem)) {
+      _intewsection.add(ewem);
     }
   }
-  return _intersection;
+  wetuwn _intewsection;
 }
 
-function symmetricDifference(setA, setB) {
-  const _difference = new Set(setA);
-  for (const elem of setB) {
-    if (_difference.has(elem)) {
-      _difference.delete(elem);
-    } else {
-      _difference.add(elem);
+f-function symmetwicdiffewence(seta, :3 s-setb) {
+  const _diffewence = nyew set(seta);
+  fow (const e-ewem of setb) {
+    if (_diffewence.has(ewem)) {
+      _diffewence.dewete(ewem);
+    } e-ewse {
+      _diffewence.add(ewem);
     }
   }
-  return _difference;
+  wetuwn _diffewence;
 }
 
-function difference(setA, setB) {
-  const _difference = new Set(setA);
-  for (const elem of setB) {
-    _difference.delete(elem);
+function diffewence(seta, (ꈍᴗꈍ) setb) {
+  c-const _diffewence = new set(seta);
+  f-fow (const e-ewem of setb) {
+    _diffewence.dewete(ewem);
   }
-  return _difference;
+  wetuwn _diffewence;
 }
 
 // 示例
-const setA = new Set([1, 2, 3, 4]);
-const setB = new Set([2, 3]);
-const setC = new Set([3, 4, 5, 6]);
+c-const seta = nyew set([1, :3 2, 3, (U ﹏ U) 4]);
+c-const s-setb = nyew s-set([2, UwU 3]);
+const setc = new set([3, 😳😳😳 4, 5, 6]);
 
-isSuperset(setA, setB); // 返回 true
-union(setA, setC); // 返回 Set {1, 2, 3, 4, 5, 6}
-intersection(setA, setC); // 返回 Set {3, 4}
-symmetricDifference(setA, setC); // 返回 Set {1, 2, 5, 6}
-difference(setA, setC); // 返回 Set {1, 2}
+i-issupewset(seta, XD s-setb); // 返回 twue
+union(seta, o.O setc); // 返回 s-set {1, (⑅˘꒳˘) 2, 3, 4, 5, 6}
+i-intewsection(seta, 😳😳😳 s-setc); // 返回 set {3, nyaa~~ 4}
+symmetwicdiffewence(seta, setc); // 返回 s-set {1, rawr 2, 5, -.- 6}
+diffewence(seta, (✿oωo) s-setc); // 返回 s-set {1, /(^•ω•^) 2}
 ```
 
 ### 与数组的关系
 
 ```js
-const myArray = ["value1", "value2", "value3"];
+const myawway = ["vawue1", 🥺 "vawue2", "vawue3"];
 
-// 使用常规的 Set 构造函数将 Array 转换为 Set
-const mySet = new Set(myArray);
+// 使用常规的 set 构造函数将 awway 转换为 s-set
+const myset = n-nyew set(myawway);
 
-mySet.has("value1"); // 返回 true
+m-myset.has("vawue1"); // 返回 t-twue
 
-// 使用展开语法将 Set 转换为 Array。
-console.log([...mySet]); // 将显示与 myArray 完全相同的数组
+// 使用展开语法将 set 转换为 a-awway。
+consowe.wog([...myset]); // 将显示与 myawway 完全相同的数组
 ```
 
 ### 数组去重
 
 ```js
 // 用于从数组中删除重复元素
-const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
+const nyumbews = [2, ʘwʘ 13, 4, 4, 2, UwU 13, 13, 4, 4, XD 5, 5, 6, 6, 7, 5, (✿oωo) 32, 13, 4, 5];
 
-console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
+consowe.wog([...new set(numbews)]); // [2, :3 13, (///ˬ///✿) 4, 5, 6, 7, 32]
 ```
 
 ### 与字符串的关系
 
 ```js
-// 大小写敏感（包含 "F" 和 "f"）
-new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
+// 大小写敏感（包含 "f" 和 "f"）
+nyew set("fiwefox"); // s-set(7) [ "f", nyaa~~ "i", "w", >w< "e", "f", "o", -.- "x" ]
 
 // 忽略重复项（"f" 出现了两次，但是只包含一个）
-new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
+nyew set("fiwefox"); // s-set(6) [ "f", (✿oωo) "i", "w", (˘ω˘) "e", "o", "x" ]
 ```
 
 ### 使用集合来确保一列值的唯一性
 
 ```js
-const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);
+const a-awway = awway.fwom(document.quewysewectowaww("[id]")).map((e) => e.id);
 
-const set = new Set(array);
-console.assert(set.size === array.length);
+const s-set = nyew set(awway);
+consowe.assewt(set.size === a-awway.wength);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Set` 的 polyfill](https://github.com/zloirock/core-js#set)
-- {{jsxref("Map")}}
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakSet")}}
+- [`cowe-js` 中 `set` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#set)
+- {{jsxwef("map")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}

@@ -1,37 +1,37 @@
 ---
-title: Date.prototype.setUTCSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
+titwe: date.pwototype.setutcseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-`此 setUTCSeconds()` 方法为一个依据国际通用时间的特定日期设置秒数。
+`此 setutcseconds()` 方法为一个依据国际通用时间的特定日期设置秒数。
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCSeconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcseconds()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+```js i-intewactive-exampwe
+c-const date1 = n-nyew date("decembew 31, 1975, -.- 23:15:30 g-gmt+11:00");
 
-console.log(date1.getUTCSeconds());
-// Expected output: 30
+c-consowe.wog(date1.getutcseconds());
+// e-expected o-output: 30
 
-date1.setUTCSeconds(39);
+date1.setutcseconds(39);
 
-console.log(date1.getUTCSeconds());
-// Expected output: 39
+consowe.wog(date1.getutcseconds());
+// expected output: 39
 ```
 
 ## 语法
 
-```plain
-dateObj.setUTCSeconds(secondsValue[, msValue])
+```pwain
+dateobj.setutcseconds(secondsvawue[, (ˆ ﻌ ˆ)♡ msvawue])
 ```
 
 ### 参数
 
-- `secondsValue`
+- `secondsvawue`
   - : 一个在 0 到 59 之间的整数，表示秒数。
-- `msValue`
+- `msvawue`
   - : 可选参数。一个 0 到 999 之间的数字，代表毫秒数。
 
 ### 返回值
@@ -40,28 +40,28 @@ dateObj.setUTCSeconds(secondsValue[, msValue])
 
 ## 描述
 
-如果你没有设置 msValue 参数的值，那么返回的值来自{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} 方法。
+如果你没有设置 m-msvawue 参数的值，那么返回的值来自{{jsxwef("date.pwototype.getutcmiwwiseconds()", (⑅˘꒳˘) "getutcmiwwiseconds()")}} 方法。
 
-如果你指定的值超出了范围，`setUTCSeconds()` 因此会更新{{jsxref("Date")}} 对象中 date 的相关信息 . 举个例子，如果你设置 secondsValue 为 100, {{jsxref("Date")}} 对象中的分钟数会增加 1，并且秒数会变成 40.
+如果你指定的值超出了范围，`setutcseconds()` 因此会更新{{jsxwef("date")}} 对象中 date 的相关信息 . (U ᵕ U❁) 举个例子，如果你设置 secondsvawue 为 100, -.- {{jsxwef("date")}} 对象中的分钟数会增加 1，并且秒数会变成 40. ^^;;
 
 ## 示例
 
-### 使用 `setUTCSeconds()`
+### 使用 `setutcseconds()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setUTCSeconds(20);
+v-vaw thebigday = nyew date();
+t-thebigday.setutcseconds(20);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-- {{jsxref("Date.prototype.setSeconds()")}}
+- {{jsxwef("date.pwototype.getutcseconds()")}}
+- {{jsxwef("date.pwototype.setseconds()")}}

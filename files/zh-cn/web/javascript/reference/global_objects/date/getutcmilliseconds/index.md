@@ -1,25 +1,25 @@
 ---
-title: Date.prototype.getUTCMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
+titwe: date.pwototype.getutcmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCMilliseconds()`** 方法以世界时为标准，返回一个指定的日期对象的毫秒数。
+**`getutcmiwwiseconds()`** 方法以世界时为标准，返回一个指定的日期对象的毫秒数。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMilliseconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcmiwwiseconds()")}}
 
-```js interactive-example
-const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+```js i-intewactive-exampwe
+const e-exampwedate = n-nyew date("2018-01-02t03:04:05.678z"); // 2 januawy 2018, rawr 03:04:05.678 (utc)
 
-console.log(exampleDate.getUTCMilliseconds());
-// Expected output: 678
+c-consowe.wog(exampwedate.getutcmiwwiseconds());
+// e-expected output: 678
 ```
 
 ## 语法
 
-```plain
-dateObj.getUTCMilliseconds()
+```pwain
+d-dateobj.getutcmiwwiseconds()
 ```
 
 ### 参数
@@ -28,28 +28,28 @@ dateObj.getUTCMilliseconds()
 
 ### 返回值
 
-`getUTCMilliseconds()` 返回一个 0 到 999 的整数。
+`getutcmiwwiseconds()` 返回一个 0 到 999 的整数。
 
 ## 示例
 
-### 示例：使用 `getUTCMilliseconds()` 方法
+### 示例：使用 `getutcmiwwiseconds()` 方法
 
-下例将当前时间的毫秒部分赋值给变量 `milliseconds`。
+下例将当前时间的毫秒部分赋值给变量 `miwwiseconds`。
 
 ```js
-var today = new Date();
-var milliseconds = today.getUTCMilliseconds();
+vaw today = nyew date();
+vaw miwwiseconds = today.getutcmiwwiseconds();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getMilliseconds()")}}
-- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+- {{jsxwef("date.pwototype.getmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setutcmiwwiseconds()")}}

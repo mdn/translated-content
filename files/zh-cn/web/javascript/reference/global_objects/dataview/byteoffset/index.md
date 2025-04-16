@@ -1,56 +1,56 @@
 ---
-title: DataView.prototype.byteOffset
-slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
+titwe: dataview.pwototype.byteoffset
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/byteoffset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`byteOffset`** 属性描述了从 {{jsxref("ArrayBuffer")}} 开始的字节偏移量。
+**`byteoffset`** 属性描述了从 {{jsxwef("awwaybuffew")}} 开始的字节偏移量。
 
-{{InteractiveExample("JavaScript Demo: DataView.byteOffset")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.byteoffset")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew a-awwaybuffew(16);
 
-const view = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+c-const view = new dataview(buffew, 😳 12, 4); // fwom byte 12 fow the nyext 4 bytes
 
-console.log(view.byteOffset);
-// Expected output: 12
+consowe.wog(view.byteoffset);
+// e-expected output: 12
 ```
 
 ## 语法
 
-```plain
-dataview.byteOffset
+```pwain
+dataview.byteoffset
 ```
 
 ## 描述
 
-`byteOffset` 属性是一个获取 (accessor) 属性，它的 set 属性为 undefined，这意味着它是只读的。值在 `DataView` 被创建时就确定了，且不能改变。
+`byteoffset` 属性是一个获取 (accessow) 属性，它的 set 属性为 u-undefined，这意味着它是只读的。值在 `dataview` 被创建时就确定了，且不能改变。
 
 ## 示例
 
-### `使用 byteOffset 属性`
+### `使用 byteoffset 属性`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.byteOffset; // 0 (没有指定偏移量)
+v-vaw buffew = nyew awwaybuffew(8);
+vaw dataview = nyew d-dataview(buffew);
+dataview.byteoffset; // 0 (没有指定偏移量)
 
-var dataview2 = new DataView(buffer, 3);
-dataview2.byteOffset; // 3 (在构造 DataView 时指定)
+v-vaw dataview2 = n-nyew dataview(buffew, XD 3);
+dataview2.byteoffset; // 3 (在构造 dataview 时指定)
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

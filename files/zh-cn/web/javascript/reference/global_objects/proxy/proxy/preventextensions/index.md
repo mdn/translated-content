@@ -1,119 +1,119 @@
 ---
-title: handler.preventExtensions()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
+titwe: handwew.pweventextensions()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/pweventextensions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.preventExtensions()`** 方法用于设置对{{jsxref("Object.preventExtensions()")}}的拦截
+**`handwew.pweventextensions()`** 方法用于设置对{{jsxwef("object.pweventextensions()")}}的拦截
 
-{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: h-handwew.pweventextensions()", nyaa~~ "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  canEvolve: true,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  c-canevowve: t-twue, (⑅˘꒳˘)
 };
 
-const handler1 = {
-  preventExtensions(target) {
-    target.canEvolve = false;
-    Object.preventExtensions(target);
-    return true;
-  },
+c-const handwew1 = {
+  p-pweventextensions(tawget) {
+    tawget.canevowve = fawse;
+    object.pweventextensions(tawget);
+    wetuwn t-twue;
+  }, rawr x3
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const pwoxy1 = nyew pwoxy(monstew1, (✿oωo) h-handwew1);
 
-console.log(monster1.canEvolve);
-// Expected output: true
+consowe.wog(monstew1.canevowve);
+// e-expected output: twue
 
-Object.preventExtensions(proxy1);
+object.pweventextensions(pwoxy1);
 
-console.log(monster1.canEvolve);
-// Expected output: false
+consowe.wog(monstew1.canevowve);
+// expected output: fawse
 ```
 
 ## 语法
 
 ```js
-var p = new Proxy(target, {
-  preventExtensions: function (target) {},
+v-vaw p = nyew pwoxy(tawget, (ˆ ﻌ ˆ)♡ {
+  pweventextensions: function (tawget) {},
 });
 ```
 
 ### 参数
 
-以下参数传递给 `preventExtensions` 方法。它会绑定到这个 handler.
+以下参数传递给 `pweventextensions` 方法。它会绑定到这个 h-handwew. (˘ω˘)
 
-- `target`
+- `tawget`
   - : 所要拦截的目标对象。
 
 ### 返回值
 
-`preventExtensions` 方法返回一个布尔值。
+`pweventextensions` 方法返回一个布尔值。
 
 ## 描述
 
-**`handler.preventExtensions()`** 拦截 {{jsxref("Object.preventExtensions()")}}返回一个布尔值。
+**`handwew.pweventextensions()`** 拦截 {{jsxwef("object.pweventextensions()")}}返回一个布尔值。
 
 ### 拦截
 
-这个 trap 可以拦截这些操作：
+这个 t-twap 可以拦截这些操作：
 
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}
 
 ### 约束
 
-如果违反了下列规则，proxy 则会抛出一个 {{jsxref("TypeError")}}:
+如果违反了下列规则，pwoxy 则会抛出一个 {{jsxwef("typeewwow")}}:
 
-- 如果目标对象是可扩展的，那么只能返回 `false`
+- 如果目标对象是可扩展的，那么只能返回 `fawse`
 
 ## 示例
 
-以下代码演示了如何拦截{{jsxref("Object.preventExtensions()")}}。
+以下代码演示了如何拦截{{jsxwef("object.pweventextensions()")}}。
 
 ```js
-var p = new Proxy(
-  {},
+vaw p = nyew pwoxy(
+  {}, (⑅˘꒳˘)
   {
-    preventExtensions: function (target) {
-      console.log("called");
-      Object.preventExtensions(target);
-      return true;
-    },
+    pweventextensions: function (tawget) {
+      c-consowe.wog("cawwed");
+      object.pweventextensions(tawget);
+      wetuwn twue;
+    }, (///ˬ///✿)
   },
 );
 
-console.log(Object.preventExtensions(p)); // "called"; outputs false
+consowe.wog(object.pweventextensions(p)); // "cawwed"; o-outputs fawse
 ```
 
 以下代码违反了约束。
 
 ```js
-var p = new Proxy(
-  {},
+v-vaw p = nyew p-pwoxy(
+  {}, 😳😳😳
   {
-    preventExtensions: function (target) {
-      return true;
-    },
+    p-pweventextensions: f-function (tawget) {
+      wetuwn twue;
+    }, 🥺
   },
 );
 
-Object.preventExtensions(p); // 抛出类型错误
+object.pweventextensions(p); // 抛出类型错误
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", mya "handwew")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}

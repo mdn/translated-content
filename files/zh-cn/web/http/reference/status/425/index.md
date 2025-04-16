@@ -1,22 +1,22 @@
 ---
-title: 425 Too Early
-slug: Web/HTTP/Reference/Status/425
+titwe: 425 too eawwy
+swug: web/http/wefewence/status/425
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-状态码 **`425 Too Early`** 代表服务器不愿意冒风险来处理该请求，原因是处理该请求可能会被“重放”，从而造成潜在的[重放攻击](https://zh.wikipedia.org/zh-cn/%E9%87%8D%E6%94%BE%E6%94%BB%E5%87%BB)。
+状态码 **`425 t-too eawwy`** 代表服务器不愿意冒风险来处理该请求，原因是处理该请求可能会被“重放”，从而造成潜在的[重放攻击](https://zh.wikipedia.owg/zh-cn/%e9%87%8d%e6%94%be%e6%94%bb%e5%87%bb)。
 
 ## 状态
 
-```plain
-425 Too Early
+```pwain
+425 t-too e-eawwy
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

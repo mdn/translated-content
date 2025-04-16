@@ -1,69 +1,69 @@
 ---
-title: Set() 构造函数
-slug: Web/JavaScript/Reference/Global_Objects/Set/Set
+titwe: set() 构造函数
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Set()`** 构造函数创建 {{jsxref("Set")}} 对象。
+**`set()`** 构造函数创建 {{jsxwef("set")}} 对象。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype c-constwuctow")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js i-intewactive-exampwe
+const s-set1 = nyew s-set([1, :3 2, 3, 4, 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+c-consowe.wog(set1.has(1));
+// e-expected output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// expected output: twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// e-expected output: fawse
 ```
 
 ## 语法
 
-```js-nolint
-new Set()
-new Set(iterable)
+```js-nowint
+nyew set()
+nyew s-set(itewabwe)
 ```
 
-> **备注：** `Set()` 只能用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构建。试图在没有 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}}。
+> **备注：** `set()` 只能用 [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new) 构建。试图在没有 `new` 的情况下调用它，会抛出 {{jsxwef("typeewwow")}}。
 
 ### 参数
 
-- `iterable` {{optional_inline}}
-  - : 如果传入一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)，它的所有元素将不重复地被添加到新的 `Set` 中。如果不指定此参数或其值为 `null`，则新的 `Set` 为空。
+- `itewabwe` {{optionaw_inwine}}
+  - : 如果传入一个[可迭代对象](/zh-cn/docs/web/javascwipt/wefewence/statements/fow...of)，它的所有元素将不重复地被添加到新的 `set` 中。如果不指定此参数或其值为 `nuww`，则新的 `set` 为空。
 
 ### 返回值
 
-一个新的 `Set` 对象。
+一个新的 `set` 对象。
 
 ## 示例
 
-### 使用 `Set` 对象
+### 使用 `set` 对象
 
 ```js
-const mySet = new Set();
+const myset = n-nyew set();
 
-mySet.add(1); // Set [ 1 ]
-mySet.add(5); // Set [ 1, 5 ]
-mySet.add(5); // Set [ 1, 5 ]
-mySet.add("some text"); // Set [ 1, 5, 'some text' ]
-const o = { a: 1, b: 2 };
-mySet.add(o);
+myset.add(1); // set [ 1 ]
+myset.add(5); // set [ 1, 😳😳😳 5 ]
+m-myset.add(5); // set [ 1, -.- 5 ]
+m-myset.add("some t-text"); // set [ 1, ( ͡o ω ͡o ) 5, 'some text' ]
+const o = { a: 1, rawr x3 b: 2 };
+myset.add(o);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Set` 的 polyfill](https://github.com/zloirock/core-js#set)
-- {{jsxref("Set")}}
+- [`cowe-js` 中 `set` 的 powyfiww](https://github.com/zwoiwock/cowe-js#set)
+- {{jsxwef("set")}}

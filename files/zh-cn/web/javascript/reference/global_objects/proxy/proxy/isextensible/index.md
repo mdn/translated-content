@@ -1,125 +1,125 @@
 ---
-title: handler.isExtensible()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
+titwe: handwew.isextensibwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/isextensibwe
 ---
 
-{{JSRef}}
-**handler.isExtensible()** 方法用于拦截对对象的 Object.isExtensible()。
+{{jswef}}
+**handwew.isextensibwe()** 方法用于拦截对对象的 o-object.isextensibwe()。
 
-{{InteractiveExample("JavaScript Demo: handler.isExtensible()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: h-handwew.isextensibwe()", /(^•ω•^) "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  canEvolve: true,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  c-canevowve: t-twue, rawr x3
 };
 
-const handler1 = {
-  isExtensible(target) {
-    return Reflect.isExtensible(target);
-  },
-  preventExtensions(target) {
-    target.canEvolve = false;
-    return Reflect.preventExtensions(target);
-  },
+const h-handwew1 = {
+  isextensibwe(tawget) {
+    wetuwn wefwect.isextensibwe(tawget);
+  }, (U ﹏ U)
+  pweventextensions(tawget) {
+    t-tawget.canevowve = fawse;
+    wetuwn wefwect.pweventextensions(tawget);
+  }, (U ﹏ U)
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+c-const pwoxy1 = nyew pwoxy(monstew1, (⑅˘꒳˘) h-handwew1);
 
-console.log(Object.isExtensible(proxy1));
-// Expected output: true
+consowe.wog(object.isextensibwe(pwoxy1));
+// expected output: twue
 
-console.log(monster1.canEvolve);
-// Expected output: true
+consowe.wog(monstew1.canevowve);
+// e-expected output: twue
 
-Object.preventExtensions(proxy1);
+object.pweventextensions(pwoxy1);
 
-console.log(Object.isExtensible(proxy1));
-// Expected output: false
+c-consowe.wog(object.isextensibwe(pwoxy1));
+// e-expected output: fawse
 
-console.log(monster1.canEvolve);
-// Expected output: false
+consowe.wog(monstew1.canevowve);
+// expected output: fawse
 ```
 
 ## 语法
 
 ```js
-var p = new Proxy(target, {
-  isExtensible: function (target) {},
+v-vaw p = nyew pwoxy(tawget, òωó {
+  isextensibwe: function (tawget) {}, ʘwʘ
 });
 ```
 
 ### 参数
 
-下列参数将会被传递给 `isExtensible`方法。this 绑定在 handler 对象上。
+下列参数将会被传递给 `isextensibwe`方法。this 绑定在 handwew 对象上。
 
-- `target`
+- `tawget`
   - : 目标对象。
 
 ### 返回值
 
-`isExtensible`方法必须返回一个 Boolean 值或可转换成 Boolean 的值。
+`isextensibwe`方法必须返回一个 boowean 值或可转换成 boowean 的值。
 
 ## 描述
 
-handler.isExtensible() 用于拦截对对象的 Object.isExtensible()。
+h-handwew.isextensibwe() 用于拦截对对象的 object.isextensibwe()。
 
 ### 拦截
 
 该方法会拦截目标对象的以下操作：
 
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Reflect.isExtensible()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("wefwect.isextensibwe()")}}
 
 ### 约束
 
-如果违背了以下的约束，proxy 会抛出 TypeError:
+如果违背了以下的约束，pwoxy 会抛出 t-typeewwow:
 
-- `Object.isExtensible(proxy)` 必须同 `Object.isExtensible(target)` 返回相同值。
+- `object.isextensibwe(pwoxy)` 必须同 `object.isextensibwe(tawget)` 返回相同值。
 
 ## 示例
 
-以下代码演示{{jsxref("Object.isExtensible()")}}.
+以下代码演示{{jsxwef("object.isextensibwe()")}}. /(^•ω•^)
 
 ```js
-var p = new Proxy(
-  {},
+v-vaw p = n-nyew pwoxy(
+  {}, ʘwʘ
   {
-    isExtensible: function (target) {
-      console.log("called");
-      return true; // 也可以 return 1; 等表示为 true 的值
-    },
-  },
+    i-isextensibwe: function (tawget) {
+      consowe.wog("cawwed");
+      wetuwn t-twue; // 也可以 wetuwn 1; 等表示为 twue 的值
+    }, σωσ
+  }, OwO
 );
 
-console.log(Object.isExtensible(p)); // "called"; outputs true
+c-consowe.wog(object.isextensibwe(p)); // "cawwed"; outputs twue
 ```
 
 以下代码演示违反约束的情况。
 
 ```js
-var p = new Proxy(
-  {},
+vaw p = nyew pwoxy(
+  {}, 😳😳😳
   {
-    isExtensible: function (target) {
-      return false; // return 0; return NaN 等都会报错
-    },
+    isextensibwe: function (tawget) {
+      w-wetuwn fawse; // wetuwn 0; w-wetuwn nyan 等都会报错
+    }, 😳😳😳
   },
 );
 
-Object.isExtensible(p); // TypeError is thrown
+o-object.isextensibwe(p); // t-typeewwow is thwown
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Reflect.isExtensible()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", o.O "handwew")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("wefwect.isextensibwe()")}}

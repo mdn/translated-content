@@ -1,72 +1,72 @@
 ---
-title: Date.prototype.setMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
+titwe: date.pwototype.setminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setMinutes()`** 方法根据本地时间为一个日期对象设置分钟数。
+**`setminutes()`** 方法根据本地时间为一个日期对象设置分钟数。
 
-{{InteractiveExample("JavaScript Demo: Date.setMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setminutes()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js i-intewactive-exampwe
+c-const event = nyew d-date("august 19, ^^;; 1975 23:15:30");
 
-event.setMinutes(45);
+e-event.setminutes(45);
 
-console.log(event.getMinutes());
-// Expected output: 45
+c-consowe.wog(event.getminutes());
+// e-expected output: 45
 
-console.log(event);
-// Expected output: "Tue Aug 19 1975 23:45:30 GMT+0200 (CEST)"
-// Note: your timezone may vary
+c-consowe.wog(event);
+// expected output: "tue aug 19 1975 23:45:30 gmt+0200 (cest)"
+// n-nyote: youw timezone may vawy
 ```
 
 ## 语法
 
-```plain
-dateObj.setMinutes(minutesValue[, secondsValue[, msValue]])
+```pwain
+d-dateobj.setminutes(minutesvawue[, >_< secondsvawue[, mya m-msvawue]])
 ```
 
-### JavaScript 1.3 之前版本
+### javascwipt 1.3 之前版本
 
-```plain
-dateObj.setMinutes(minutesValue)
+```pwain
+dateobj.setminutes(minutesvawue)
 ```
 
 ### 参数
 
-- `minutesValue`
+- `minutesvawue`
   - : 一个 0 到 59 的整数，表示分钟数。
-- `secondsValue`
-  - : 一个 0 到 59 的整数，表示秒数。如果指定了 `secondsValue` 参数，则必须同时指定 `minutesValue` 参数。
-- `msValue`
-  - : 一个 0 到 999 的数字，表示微秒数，如果指定了 `msValue` 参数，则必须同时指定 `minutesValue` 和`secondsValue` 参数。
+- `secondsvawue`
+  - : 一个 0 到 59 的整数，表示秒数。如果指定了 `secondsvawue` 参数，则必须同时指定 `minutesvawue` 参数。
+- `msvawue`
+  - : 一个 0 到 999 的数字，表示微秒数，如果指定了 `msvawue` 参数，则必须同时指定 `minutesvawue` 和`secondsvawue` 参数。
 
 ## 描述
 
-如果没有指定 `secondsValue` 和 `msValue` 参数，就会使用 {{jsxref("Date.getSeconds", "getSeconds()")}} 和 {{jsxref("Date.getMilliseconds", "getmilliseconds()")}} 方法的返回值。
+如果没有指定 `secondsvawue` 和 `msvawue` 参数，就会使用 {{jsxwef("date.getseconds", mya "getseconds()")}} 和 {{jsxwef("date.getmiwwiseconds", 😳 "getmiwwiseconds()")}} 方法的返回值。
 
-如果有一个指定的参数超出了合理范围，`setMinutes` 会相应地更新日期对象中的时间信息。例如，为 `secondsValue` 指定 100，分钟数将会加 1，而秒数会为 40。
+如果有一个指定的参数超出了合理范围，`setminutes` 会相应地更新日期对象中的时间信息。例如，为 `secondsvawue` 指定 100，分钟数将会加 1，而秒数会为 40。
 
 ## 示例
 
-### 示例：使用`setMinutes` 方法
+### 示例：使用`setminutes` 方法
 
 ```js
-var theBigDay = new Date();
-theBigDay.setMinutes(45);
+vaw t-thebigday = nyew date();
+thebigday.setminutes(45);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getMinutes()")}}
-- {{jsxref("Date.prototype.setUTCMinutes()")}}
+- {{jsxwef("date.pwototype.getminutes()")}}
+- {{jsxwef("date.pwototype.setutcminutes()")}}

@@ -1,49 +1,49 @@
 ---
-title: WeakRef() 构造函数
-slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
+titwe: weakwef() 构造函数
+swug: web/javascwipt/wefewence/gwobaw_objects/weakwef/weakwef
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`WeakRef()`** 会创建一个 {{jsxref("WeakRef")}} 对象，它是对于目标对象的弱引用。
+**`weakwef()`** 会创建一个 {{jsxwef("weakwef")}} 对象，它是对于目标对象的弱引用。
 
 ## 语法
 
-```js-nolint
-new WeakRef(targetObject)
+```js-nowint
+new w-weakwef(tawgetobject)
 ```
 
-> **备注：** `WeakRef()` 必须通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 关键字调用。试图在没有 `new` 的情况下调用会抛出一个 {{jsxref("TypeError")}}。
+> **备注：** `weakwef()` 必须通过 [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new) 关键字调用。试图在没有 `new` 的情况下调用会抛出一个 {{jsxwef("typeewwow")}}。
 
 ### 参数
 
-- `targetObject`
-  - : WeakRef 要指向的目标对象 (也称作 _referent_）。
+- `tawgetobject`
+  - : w-weakwef 要指向的目标对象 (也称作 _wefewent_）。
 
 ## 示例
 
-### 创建一个新的 WeakRef 对象
+### 创建一个新的 w-weakwef 对象
 
-完整的示例请见 [`WeakRef`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#例子) 主页面。
+完整的示例请见 [`weakwef`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef#例子) 主页面。
 
 ```js
-class Counter {
-  constructor(element) {
-    // 创建一个对 DOM 元素的弱引用
-    this.ref = new WeakRef(element);
-    this.start();
+c-cwass countew {
+  c-constwuctow(ewement) {
+    // 创建一个对 d-dom 元素的弱引用
+    t-this.wef = nyew w-weakwef(ewement);
+    this.stawt();
   }
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("WeakRef")}}
+- {{jsxwef("weakwef")}}

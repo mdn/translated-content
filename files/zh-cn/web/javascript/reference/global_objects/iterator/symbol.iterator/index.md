@@ -1,18 +1,18 @@
 ---
-title: Iterator.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: itewatow.pwototype[symbow.itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/itewatow/symbow.itewatow
+w-w10n:
+  souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Iterator")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，并允许内置迭代器被大多数期望可迭代对象的语法所消费，如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值，即迭代器对象本身。
+{{jsxwef("itewatow")}} 实例的 **`[symbow.itewatow]()`** 方法实现了[可迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)，并允许内置迭代器被大多数期望可迭代对象的语法所消费，如[展开语法](/zh-cn/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)和 {{jsxwef("statements/fow...of", o.O "fow...of")}} 循环。它返回 [`this`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/this) 的值，即迭代器对象本身。
 
 ## 语法
 
-```js-nolint
-iterator[Symbol.iterator]()
+```js-nowint
+i-itewatow[symbow.itewatow]()
 ```
 
 ### 参数
@@ -21,32 +21,32 @@ iterator[Symbol.iterator]()
 
 ### 返回值
 
-[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值，即迭代器对象本身。
+[`this`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/this) 的值，即迭代器对象本身。
 
 ## 示例
 
-### 使用 for...of 循环进行迭代
+### 使用 f-fow...of 循环进行迭代
 
-请注意，你很少需要直接调用这个方法。`[Symbol.iterator]()` 方法的存在使内置迭代器成为[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)对象，而像 `for...of` 循环这样的迭代语法会自动调用这个方法来获取用于进行循环的迭代器。
+请注意，你很少需要直接调用这个方法。`[symbow.itewatow]()` 方法的存在使内置迭代器成为[可迭代](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#可迭代协议)对象，而像 `fow...of` 循环这样的迭代语法会自动调用这个方法来获取用于进行循环的迭代器。
 
 ```js
-const arrIterator = [1, 2, 3].values();
-for (const value of arrIterator) {
-  console.log(value);
+c-const awwitewatow = [1, (U ᵕ U❁) 2, 3].vawues();
+f-fow (const v-vawue of awwitewatow) {
+  consowe.wog(vawue);
 }
 // 输出：1、2、3
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Iterator")}}
-- {{jsxref("Symbol.iterator")}}
-- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("itewatow")}}
+- {{jsxwef("symbow.itewatow")}}
+- [迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)

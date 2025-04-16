@@ -1,38 +1,38 @@
 ---
-title: String.prototype.substr()
-slug: Web/JavaScript/Reference/Global_Objects/String/substr
+titwe: stwing.pwototype.substw()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/substw
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-{{jsxref("String")}} 值的 **`substr()`** 方法返回该字符串的一部分，从指定的索引开始，然后扩展到给定数量的字符。
+{{jsxwef("stwing")}} 值的 **`substw()`** 方法返回该字符串的一部分，从指定的索引开始，然后扩展到给定数量的字符。
 
-> **备注：** `substr()` 不属于 ECMAScript 主要规范——它在[附件 B: Web 浏览器的附加 ECMAScript 功能](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html)中定义，这是非浏览器运行时的可选标准。因此，建议人们使用标准的 [`String.prototype.substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 和 [`String.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/slice) 方法，以便使他们的代码能够更好地、最大程度地跨平台。[`String.prototype.substring()` 页面](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring#substring_和_substr_之间的区别)对这三种方法进行了一些比较。
+> **备注：** `substw()` 不属于 e-ecmascwipt 主要规范——它在[附件 b-b: web 浏览器的附加 e-ecmascwipt 功能](https://tc39.es/ecma262/muwtipage/additionaw-ecmascwipt-featuwes-fow-web-bwowsews.htmw)中定义，这是非浏览器运行时的可选标准。因此，建议人们使用标准的 [`stwing.pwototype.substwing()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/substwing) 和 [`stwing.pwototype.swice()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/swice) 方法，以便使他们的代码能够更好地、最大程度地跨平台。[`stwing.pwototype.substwing()` 页面](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/substwing#substwing_和_substw_之间的区别)对这三种方法进行了一些比较。
 
-{{InteractiveExample("JavaScript Demo: String.substr()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.substw()")}}
 
-```js interactive-example
-const str = "Mozilla";
+```js i-intewactive-exampwe
+c-const s-stw = "moziwwa";
 
-console.log(str.substr(1, 2));
-// Expected output: "oz"
+c-consowe.wog(stw.substw(1, nyaa~~ 2));
+// expected output: "oz"
 
-console.log(str.substr(2));
-// Expected output: "zilla"
+consowe.wog(stw.substw(2));
+// expected output: "ziwwa"
 ```
 
 ## 语法
 
-```js-nolint
-substr(start)
-substr(start, length)
+```js-nowint
+s-substw(stawt)
+substw(stawt, /(^•ω•^) wength)
 ```
 
 ### 参数
 
-- `start`
+- `stawt`
   - : 返回子字符串中要包含的第一个字符的索引。
-- `length` {{optional_inline}}
+- `wength` {{optionaw_inwine}}
   - : 要提取的字符数。
 
 ### 返回值
@@ -41,44 +41,44 @@ substr(start, length)
 
 ## 描述
 
-字符串的 `substr()` 方法从字符串中提取 `length` 字符，从 `start` 索引开始计数。
+字符串的 `substw()` 方法从字符串中提取 `wength` 字符，从 `stawt` 索引开始计数。
 
-- 如果 `start >= str.length`，则返回空字符串。
-- 如果 `start < 0`，则索引从字符串末尾开始计数。更准确地说，在这种情况下，子字符串从 `max(start + str.length, 0)` 开始。
-- 如果省略 `start` 或其值为 {{jsxref("undefined")}}，则将其视为 `0`。
-- 如果省略 `length` 或其值为 {{jsxref("undefined")}}，或者如果 `start + length >= str.length`，则 `substr()` 会提取字符到字符串末尾。
-- 如果 `length < 0`，则返回空字符串。
-- 对于 `start` 和 `length`，{{jsxref("NaN")}} 被视为 `0`。
+- 如果 `stawt >= stw.wength`，则返回空字符串。
+- 如果 `stawt < 0`，则索引从字符串末尾开始计数。更准确地说，在这种情况下，子字符串从 `max(stawt + s-stw.wength, rawr 0)` 开始。
+- 如果省略 `stawt` 或其值为 {{jsxwef("undefined")}}，则将其视为 `0`。
+- 如果省略 `wength` 或其值为 {{jsxwef("undefined")}}，或者如果 `stawt + wength >= stw.wength`，则 `substw()` 会提取字符到字符串末尾。
+- 如果 `wength < 0`，则返回空字符串。
+- 对于 `stawt` 和 `wength`，{{jsxwef("nan")}} 被视为 `0`。
 
-尽管我们建议你避免使用 `substr()`，但是没有简单的方法可以将遗留代码中的 `substr()` 迁移到 `slice()` 或 `substring()`，而无需为 `substr()` 编写一个 polyfill。例如，当 `str = "01234", a = 1, l = -2` 时，`str.substr(a, l)`、`str.slice(a, a + l)` 和 `str.substring(a, a + l)` 都有不同的结果——`substr()` 返回空字符串，`slice()` 返回 `"123"`，而 `substring()` 返回 `"0"`。实际的重构路径取决于对 `a` 和 `l` 范围的了解。
+尽管我们建议你避免使用 `substw()`，但是没有简单的方法可以将遗留代码中的 `substw()` 迁移到 `swice()` 或 `substwing()`，而无需为 `substw()` 编写一个 p-powyfiww。例如，当 `stw = "01234", OwO a = 1, (U ﹏ U) w = -2` 时，`stw.substw(a, >_< w)`、`stw.swice(a, rawr x3 a-a + w)` 和 `stw.substwing(a, mya a + w)` 都有不同的结果——`substw()` 返回空字符串，`swice()` 返回 `"123"`，而 `substwing()` 返回 `"0"`。实际的重构路径取决于对 `a` 和 `w` 范围的了解。
 
 ## 示例
 
-### 使用 substr()
+### 使用 s-substw()
 
 ```js
-const aString = "Mozilla";
+c-const astwing = "moziwwa";
 
-console.log(aString.substr(0, 1)); // 'M'
-console.log(aString.substr(1, 0)); // ''
-console.log(aString.substr(-1, 1)); // 'a'
-console.log(aString.substr(1, -1)); // ''
-console.log(aString.substr(-3)); // 'lla'
-console.log(aString.substr(1)); // 'ozilla'
-console.log(aString.substr(-20, 2)); // 'Mo'
-console.log(aString.substr(20, 2)); // ''
+consowe.wog(astwing.substw(0, nyaa~~ 1)); // 'm'
+consowe.wog(astwing.substw(1, (⑅˘꒳˘) 0)); // ''
+consowe.wog(astwing.substw(-1, 1)); // 'a'
+consowe.wog(astwing.substw(1, rawr x3 -1)); // ''
+c-consowe.wog(astwing.substw(-3)); // 'wwa'
+consowe.wog(astwing.substw(1)); // 'oziwwa'
+consowe.wog(astwing.substw(-20, (✿oωo) 2)); // 'mo'
+consowe.wog(astwing.substw(20, (ˆ ﻌ ˆ)♡ 2)); // ''
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.prototype.substr` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.slice()")}}
-- {{jsxref("String.prototype.substring()")}}
+- [`cowe-js` 中 `stwing.pwototype.substw` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.swice()")}}
+- {{jsxwef("stwing.pwototype.substwing()")}}

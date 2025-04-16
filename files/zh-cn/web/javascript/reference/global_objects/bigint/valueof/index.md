@@ -1,49 +1,49 @@
 ---
-title: BigInt.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
+titwe: bigint.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/bigint/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`valueOf()`** 方法返回 {{jsxref("BigInt")}} 对象包装的原始值。
+**`vawueof()`** 方法返回 {{jsxwef("bigint")}} 对象包装的原始值。
 
-{{InteractiveExample("JavaScript Demo: BigInt.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: bigint.vawueof()")}}
 
-```js interactive-example
-console.log(typeof Object(1n));
-// Expected output: "object"
+```js i-intewactive-exampwe
+c-consowe.wog(typeof o-object(1n));
+// e-expected o-output: "object"
 
-console.log(typeof Object(1n).valueOf());
-// Expected output: "bigint"
+c-consowe.wog(typeof o-object(1n).vawueof());
+// expected output: "bigint"
 ```
 
 ## 语法
 
-```plain
-bigIntObj.valueOf()
+```pwain
+bigintobj.vawueof()
 ```
 
 ### 返回值
 
-表示指定 {{jsxref("BigInt")}} 对象的原始 BigInt 值。
+表示指定 {{jsxwef("bigint")}} 对象的原始 bigint 值。
 
 ## 示例
 
-### Using `valueOf`
+### using `vawueof`
 
 ```js
-typeof Object(1n); // object
-typeof Object(1n).valueOf(); // bigint
+t-typeof object(1n); // object
+typeof object(1n).vawueof(); // b-bigint
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 请参阅
 
-- {{jsxref("BigInt.prototype.toString()")}}
+- {{jsxwef("bigint.pwototype.tostwing()")}}

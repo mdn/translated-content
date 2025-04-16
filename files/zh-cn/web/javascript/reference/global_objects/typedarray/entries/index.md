@@ -1,63 +1,63 @@
 ---
-title: TypedArray.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
+titwe: typedawway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`entries()`** 返回新的 `Array Iterator` 对象，包含数组每个下标处的键值对。
+**`entwies()`** 返回新的 `awway i-itewatow` 对象，包含数组每个下标处的键值对。
 
 ## 语法
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 返回值
 
-新的 **`Array Iterator`** 对象。
+新的 **`awway i-itewatow`** 对象。
 
 ## 示例
 
-### `使用 for...of` 循环的迭代
+### `使用 f-fow...of` 循环的迭代
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.entries();
-// 你的浏览器必须支持 for..of 循环
-// 以及 for 循环中的 let 区域变量
-for (let n of eArray) {
-  console.log(n);
+v-vaw aww = nyew u-uint8awway([10, -.- 20, ^^;; 30, 40, 50]);
+v-vaw eawway = a-aww.entwies();
+// 你的浏览器必须支持 fow..of 循环
+// 以及 fow 循环中的 wet 区域变量
+fow (wet n-ny of eawway) {
+  consowe.wog(n);
 }
 ```
 
 ### 备选迭代
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.entries();
-console.log(eArr.next().value); // [0, 10]
-console.log(eArr.next().value); // [1, 20]
-console.log(eArr.next().value); // [2, 30]
-console.log(eArr.next().value); // [3, 40]
-console.log(eArr.next().value); // [4, 50]
+vaw aww = nyew u-uint8awway([10, >_< 20, 30, 40, mya 50]);
+vaw eaww = aww.entwies();
+c-consowe.wog(eaww.next().vawue); // [0, mya 10]
+consowe.wog(eaww.next().vawue); // [1, 😳 20]
+consowe.wog(eaww.next().vawue); // [2, XD 30]
+consowe.wog(eaww.next().vawue); // [3, :3 40]
+consowe.wog(eaww.next().vawue); // [4, 😳😳😳 50]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `TypedArray.prototype.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.values()")}}
-- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-- {{jsxref("Array.prototype.entries()")}}
-- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`cowe-js` 中 `typedawway.pwototype.entwies` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt 类型化数组](/zh-cn/docs/web/javascwipt/guide/typed_awways)指南
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.keys()")}}
+- {{jsxwef("typedawway.pwototype.vawues()")}}
+- [`typedawway.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+- {{jsxwef("awway.pwototype.entwies()")}}
+- [迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)

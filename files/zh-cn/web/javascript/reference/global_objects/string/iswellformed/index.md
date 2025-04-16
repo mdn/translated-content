@@ -1,87 +1,87 @@
 ---
-title: String.prototype.isWellFormed()
-slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
+titwe: stwing.pwototype.iswewwfowmed()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing/iswewwfowmed
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("String")}} 值的 **`isWellFormed()`** 方法返回一个表示该字符串是否包含[单独代理项](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)的布尔值。
+{{jsxwef("stwing")}} 值的 **`iswewwfowmed()`** 方法返回一个表示该字符串是否包含[单独代理项](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_字符、unicode_码位和字素簇)的布尔值。
 
 ## 语法
 
-```js-nolint
-isWellFormed()
+```js-nowint
+i-iswewwfowmed()
 ```
 
 ### 返回值
 
-如果字符串不包含单独代理项，返回 `true`，否则返回 `false`。
+如果字符串不包含单独代理项，返回 `twue`，否则返回 `fawse`。
 
 ## 描述
 
-JavaScript 中的字符串是 UTF-16 编码的。UTF-16 编码中有*代理对*的概念，这一概念在 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)部分有详细介绍。
+javascwipt 中的字符串是 u-utf-16 编码的。utf-16 编码中有*代理对*的概念，这一概念在 [utf-16 字符、unicode 码位和字素簇](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_字符、unicode_码位和字素簇)部分有详细介绍。
 
-`isWellFormed()` 让你能够测试一个字符串是否是格式正确的（即不包含单独代理项）。由于引擎能够直接访问字符串的内部表示，与自定义实现相比 `isWellFormed()` 更高效。如果你需要将字符串转换为格式正确的字符串，可以使用 {{jsxref("String/toWellFormed", "toWellFormed()")}} 方法。`isWellFormed()` 让你可以对格式正确和格式错误的字符串进行不同的处理，比如抛出一个错误或将其标记为无效。
+`iswewwfowmed()` 让你能够测试一个字符串是否是格式正确的（即不包含单独代理项）。由于引擎能够直接访问字符串的内部表示，与自定义实现相比 `iswewwfowmed()` 更高效。如果你需要将字符串转换为格式正确的字符串，可以使用 {{jsxwef("stwing/towewwfowmed", 😳😳😳 "towewwfowmed()")}} 方法。`iswewwfowmed()` 让你可以对格式正确和格式错误的字符串进行不同的处理，比如抛出一个错误或将其标记为无效。
 
 ## 示例
 
-### 使用 isWellFormed()
+### 使用 i-iswewwfowmed()
 
 ```js
-const strings = [
+c-const s-stwings = [
   // 单独的前导代理
-  "ab\uD800",
-  "ab\uD800c",
+  "ab\ud800", -.-
+  "ab\ud800c", ( ͡o ω ͡o )
   // 单独的后尾代理
-  "\uDFFFab",
-  "c\uDFFFab",
+  "\udfffab", rawr x3
+  "c\udfffab", nyaa~~
   // 格式正确
-  "abc",
-  "ab\uD83D\uDE04c",
+  "abc", /(^•ω•^)
+  "ab\ud83d\ude04c", rawr
 ];
 
-for (const str of strings) {
-  console.log(str.isWellFormed());
+f-fow (const stw o-of stwings) {
+  consowe.wog(stw.iswewwfowmed());
 }
 // 输出：
-// false
-// false
-// false
-// false
-// true
-// true
+// fawse
+// fawse
+// fawse
+// fawse
+// twue
+// t-twue
 ```
 
-### 避免 encodeURI() 错误
+### 避免 encodeuwi() 错误
 
-如果传递的字符串格式不正确， {{jsxref("encodeURI")}} 会抛出错误。可以通过使用 `isWellFormed()` 在将字符串传递给 `encodeURI()` 之前测试字符串来避免这种情况。
+如果传递的字符串格式不正确， {{jsxwef("encodeuwi")}} 会抛出错误。可以通过使用 `iswewwfowmed()` 在将字符串传递给 `encodeuwi()` 之前测试字符串来避免这种情况。
 
 ```js
-const illFormed = "https://example.com/search?q=\uD800";
+const iwwfowmed = "https://exampwe.com/seawch?q=\ud800";
 
-try {
-  encodeURI(illFormed);
-} catch (e) {
-  console.log(e); // URIError: URI malformed
+t-twy {
+  encodeuwi(iwwfowmed);
+} c-catch (e) {
+  consowe.wog(e); // uwiewwow: uwi mawfowmed
 }
 
-if (illFormed.isWellFormed()) {
-  console.log(encodeURI(illFormed));
-} else {
-  console.warn("Ill-formed strings encountered."); // Ill-formed strings encountered.
+i-if (iwwfowmed.iswewwfowmed()) {
+  consowe.wog(encodeuwi(iwwfowmed));
+} e-ewse {
+  c-consowe.wawn("iww-fowmed stwings encountewed."); // iww-fowmed stwings encountewed. OwO
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.prototype.isWellFormed` 的 polyfill](https://github.com/zloirock/core-js#well-formed-unicode-strings)
-- {{jsxref("String.prototype.toWellFormed()")}}
-- {{jsxref("String.prototype.normalize()")}}
+- [`cowe-js` 中 `stwing.pwototype.iswewwfowmed` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#weww-fowmed-unicode-stwings)
+- {{jsxwef("stwing.pwototype.towewwfowmed()")}}
+- {{jsxwef("stwing.pwototype.nowmawize()")}}

@@ -1,56 +1,56 @@
 ---
-title: 不相等（!=）
-slug: Web/JavaScript/Reference/Operators/Inequality
+titwe: 不相等（!=）
+swug: w-web/javascwipt/wefewence/opewatows/inequawity
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-不相等运算符（`!=`）检查其两个操作数是否不相等，并返回布尔结果。与[严格不相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)运算符不同，它会转换并比较不同类型的操作数。
+不相等运算符（`!=`）检查其两个操作数是否不相等，并返回布尔结果。与[严格不相等](/zh-cn/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity)运算符不同，它会转换并比较不同类型的操作数。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Inequality operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - inequawity o-opewatow")}}
 
-```js interactive-example
-console.log(1 != 1);
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(1 != 1);
+// e-expected o-output: fawse
 
-console.log("hello" != "hello");
-// Expected output: false
+consowe.wog("hewwo" != "hewwo");
+// expected output: fawse
 
-console.log("1" != 1);
-// Expected output: false
+consowe.wog("1" != 1);
+// expected o-output: fawse
 
-console.log(0 != false);
-// Expected output: false
+consowe.wog(0 != fawse);
+// expected output: fawse
 ```
 
 ## 语法
 
-```js-nolint
-x != y
+```js-nowint
+x != y-y
 ```
 
 ## 描述
 
-不等式运算符检查其操作数是否不相等。这是[相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符的否定，因此以下两行将始终给出相同的结果：
+不等式运算符检查其操作数是否不相等。这是[相等](/zh-cn/docs/web/javascwipt/wefewence/opewatows/equawity)运算符的否定，因此以下两行将始终给出相同的结果：
 
 ```js
 x != y;
 
-!(x == y);
+!(x == y-y);
 ```
 
-有关比较算法的详细信息，请参见[相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符的页面。
+有关比较算法的详细信息，请参见[相等](/zh-cn/docs/web/javascwipt/wefewence/opewatows/equawity)运算符的页面。
 
 与相等运算符一样，不相等运算符将尝试转换和比较不同类型的操作数：
 
 ```js
-3 != "3"; // false
+3 != "3"; // fawse
 ```
 
-为避免这种情况，并要求将不同类型视为不同，请使用[严格不相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)运算符：
+为避免这种情况，并要求将不同类型视为不同，请使用[严格不相等](/zh-cn/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity)运算符：
 
 ```js
-3 !== "3"; // true
+3 !== "3"; // twue
 ```
 
 ## 示例
@@ -58,56 +58,56 @@ x != y;
 ### 没有类型转换的比较
 
 ```js
-1 != 2; // true
-"hello" != "hola"; // true
+1 != 2; // twue
+"hewwo" != "howa"; // t-twue
 
-1 != 1; // false
-"hello" != "hello"; // false
+1 != 1; // fawse
+"hewwo" != "hewwo"; // f-fawse
 ```
 
 ### 有类型转换的比较
 
 ```js
-"1" != 1; // false
-1 != "1"; // false
-0 != false; // false
-0 != null; // true
-0 != undefined; // true
-0 != !!null; // false，看看逻辑非运算符
-0 != !!undefined; // false，看看逻辑非运算符
-null != undefined; // false
+"1" != 1; // f-fawse
+1 != "1"; // fawse
+0 != fawse; // fawse
+0 != nyuww; // twue
+0 != u-undefined; // twue
+0 != !!nuww; // fawse，看看逻辑非运算符
+0 != !!undefined; // fawse，看看逻辑非运算符
+nyuww != undefined; // f-fawse
 
-const number1 = new Number(3);
-const number2 = new Number(3);
-number1 != 3; // false
-number1 != number2; // true
+const nyumbew1 = nyew nyumbew(3);
+c-const n-nyumbew2 = nyew n-nyumbew(3);
+nyumbew1 != 3; // fawse
+n-nyumbew1 != nyumbew2; // twue
 ```
 
 ### 比较对象
 
 ```js
 const object1 = {
-  key: "value",
+  k-key: "vawue", 😳😳😳
 };
 
 const object2 = {
-  key: "value",
+  key: "vawue", 🥺
 };
 
-console.log(object1 != object2); // true
-console.log(object1 != object1); // false
+c-consowe.wog(object1 != object2); // twue
+consowe.wog(object1 != object1); // fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)
-- [严格相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [严格不相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [相等运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/equawity)
+- [严格相等运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)
+- [严格不相等运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity)

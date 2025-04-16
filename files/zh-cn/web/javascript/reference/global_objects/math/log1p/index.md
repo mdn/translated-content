@@ -1,18 +1,18 @@
 ---
-title: Math.log1p()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
+titwe: math.wog1p()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog1p
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## 概述
 
-**`Math.log1p()`** 函数返回一个数字加 1 后的自然对数 (底为 `E`), 既`log(x+1)`.
+**`math.wog1p()`** 函数返回一个数字加 1 后的自然对数 (底为 `e`), UwU 既`wog(x+1)`. rawr x3
 
 ## 语法
 
-```js-nolint
-Math.log1p(x)
+```js-nowint
+m-math.wog1p(x)
 ```
 
 ### 参数
@@ -22,37 +22,37 @@ Math.log1p(x)
 
 ## 描述
 
-如果参数的值小于 `-1`，则返回 `NaN`。
+如果参数的值小于 `-1`，则返回 `nan`。
 
-函数 `y = log(x+1)` 的图形是这样的：
+函数 `y = w-wog(x+1)` 的图形是这样的：
 
-![log(x+1)](logx1.jpg)
+![wog(x+1)](wogx1.jpg)
 
 ## 示例
 
 ```js
-Math.log1p(Math.E - 1); // 1
-Math.log1p(0); // 0
-Math.log1p("0"); // 0
-Math.log1p(-1); // -Infinity
-Math.log1p(-2); // NaN
-Math.log1p("foo"); // NaN
+m-math.wog1p(math.e - 1); // 1
+m-math.wog1p(0); // 0
+m-math.wog1p("0"); // 0
+m-math.wog1p(-1); // -infinity
+m-math.wog1p(-2); // n-nyan
+math.wog1p("foo"); // nyan
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Math.log1p` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.expm1()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- [`cowe-js` 中 `math.wog1p` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.expm1()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

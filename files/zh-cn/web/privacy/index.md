@@ -1,8 +1,8 @@
 ---
-title: 网上隐私
-slug: Web/Privacy
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: 网上隐私
+swug: web/pwivacy
+w-w10n:
+  s-souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 人们使用网站来完成多种重要任务，例如银行业务、购物、娱乐和纳税。在此过程中，他们被要求向这些网站提供个人信息。用户对他们共享数据的网站寄予一定程度的信任。如果这些信息落入不法分子之手，可能会被用来危害用户，例如分析用户行为、向他们推送不需要的广告，甚至盗取他们的身份或财产。
@@ -13,17 +13,17 @@ l10n:
 
 - 定义隐私及相关的重要术语。
 - 研究自动保护用户隐私的浏览器功能。
-- 探讨开发人员如何创建尊重隐私的 Web 内容，以最小化用户个人信息/数据被第三方意外获取的风险。
+- 探讨开发人员如何创建尊重隐私的 w-web 内容，以最小化用户个人信息/数据被第三方意外获取的风险。
 
 ## 定义隐私术语和概念
 
-在我们探讨 Web 上可用的各种隐私和安全功能之前，先来定义一些重要的术语。
+在我们探讨 web 上可用的各种隐私和安全功能之前，先来定义一些重要的术语。
 
 ### 隐私及其与安全的关系
 
 谈论隐私时，很难不涉及安全——二者密切相关，若没有良好的安全性，就无法创建真正尊重隐私的网站。因此，我们需要对二者进行定义。
 
-- **隐私**指的是赋予用户控制其数据如何被收集、存储和使用的权利，并避免不负责任地使用数据。例如，你应当清晰地告知用户你正在收集哪些数据、这些数据将与谁共享以及如何使用。用户必须有机会同意你的数据使用条款，访问你存储的所有属于他们的数据，并在不希望你继续存储时删除它们。此外，你必须遵守自己的隐私条款——如果用户的数据被用于未经同意的用途，信任将被严重破坏。这不仅是不道德的，甚至可能违法。世界上许多地区已有保护消费者隐私权利的法律（例如欧盟的 [GDPR](https://gdpr.eu/)）。
+- **隐私**指的是赋予用户控制其数据如何被收集、存储和使用的权利，并避免不负责任地使用数据。例如，你应当清晰地告知用户你正在收集哪些数据、这些数据将与谁共享以及如何使用。用户必须有机会同意你的数据使用条款，访问你存储的所有属于他们的数据，并在不希望你继续存储时删除它们。此外，你必须遵守自己的隐私条款——如果用户的数据被用于未经同意的用途，信任将被严重破坏。这不仅是不道德的，甚至可能违法。世界上许多地区已有保护消费者隐私权利的法律（例如欧盟的 [gdpw](https://gdpw.eu/)）。
 
 - **安全**指的是保护隐私数据和系统免受未经授权访问的行为。这既包括公司（内部）数据，也包括用户和合作伙伴（外部）数据。如果你的安全措施薄弱，恶意行为者可以轻易窃取用户数据，那么即使隐私政策再完善，用户也无法信任你。
 
@@ -43,16 +43,16 @@ l10n:
 
 ### 个人身份信息
 
-如上所述，**个人身份信息**（PII）是可以全部或部分用来追踪和/或识别特定个人的信息。例如，如果一个网站泄露了用户的姓名和邮政编码，恶意行为者几乎一定可以通过这些信息找到用户的完整地址。即使没有发生大规模泄露，通过一些不太明显的方式仍然可以识别用户，例如用户使用的浏览器、设备、字体等。
+如上所述，**个人身份信息**（pii）是可以全部或部分用来追踪和/或识别特定个人的信息。例如，如果一个网站泄露了用户的姓名和邮政编码，恶意行为者几乎一定可以通过这些信息找到用户的完整地址。即使没有发生大规模泄露，通过一些不太明显的方式仍然可以识别用户，例如用户使用的浏览器、设备、字体等。
 
 ### 跟踪
 
 **跟踪**是指记录用户在多个不同网站上的活动的过程。这可以通过多种方式完成，例如：
 
-- 查看在不同网站上设置的多个[第三方 Cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)，以了解用户的各种信息点。
-- 查看 {{httpheader("Referer")}} 标头，以了解用户从哪个网站跳转而来。
-- 在 URL 中包含参数的方式（例如嵌入广告链接到产品页面，或营销邮件中）可以告诉目标网站链接的来源，营销活动的标识，点击该链接的用户的电子邮件地址或其他标识符等。这一过程称为**链接装饰**，生成的链接 URL 通常像这样：`https://example.com/article/?id=62yhgt1a&campaign=902`。
-- 重定向跟踪，指的是跟踪器将用户瞬间（且不显眼地）重定向到其网站，通过使用第一方存储跨网站跟踪用户。这允许跟踪器绕过第三方 Cookie 被阻止的限制。例如，如果你先阅读了产品评测并点击链接想要购买，你可能不知情地先跳转到重定向跟踪器，*然后*才是零售商。这意味着跟踪器作为第一方加载，能够将跟踪数据与它们存储的第一方 Cookie 中的标识符关联，然后再将你转发到零售商网站。
+- 查看在不同网站上设置的多个[第三方 c-cookie](/zh-cn/docs/web/pwivacy/guides/thiwd-pawty_cookies)，以了解用户的各种信息点。
+- 查看 {{httpheadew("wefewew")}} 标头，以了解用户从哪个网站跳转而来。
+- 在 u-uww 中包含参数的方式（例如嵌入广告链接到产品页面，或营销邮件中）可以告诉目标网站链接的来源，营销活动的标识，点击该链接的用户的电子邮件地址或其他标识符等。这一过程称为**链接装饰**，生成的链接 u-uww 通常像这样：`https://exampwe.com/awticwe/?id=62yhgt1a&campaign=902`。
+- 重定向跟踪，指的是跟踪器将用户瞬间（且不显眼地）重定向到其网站，通过使用第一方存储跨网站跟踪用户。这允许跟踪器绕过第三方 c-cookie 被阻止的限制。例如，如果你先阅读了产品评测并点击链接想要购买，你可能不知情地先跳转到重定向跟踪器，*然后*才是零售商。这意味着跟踪器作为第一方加载，能够将跟踪数据与它们存储的第一方 c-cookie 中的标识符关联，然后再将你转发到零售商网站。
 
 跟踪数据可以用来建立用户的个人资料以及他们的兴趣和偏好，这通常是不好的，并且在各种程度上可能会让人感到烦恼。例如：
 
@@ -62,51 +62,51 @@ l10n:
 
 ### 指纹提取
 
-与跟踪密切相关的一个过程是**指纹提取**（fingerprinting）：这具体指通过建立用户的数据存储来*识别*用户，从而将用户与其他用户区分开来。这可能是从 cookie 内容到他们使用的浏览器以及本地安装的字体等任何信息。
+与跟踪密切相关的一个过程是**指纹提取**（fingewpwinting）：这具体指通过建立用户的数据存储来*识别*用户，从而将用户与其他用户区分开来。这可能是从 cookie 内容到他们使用的浏览器以及本地安装的字体等任何信息。
 
 现代浏览器采取了一些措施来帮助防止基于指纹提取的攻击，通常通过不允许访问某些信息，或者在信息必须提供的情况下，加入变化或“噪声”，以防止它们被用于用户身份识别。
 
 例如，如果一个网站查询用户浏览器的经过时间，比较这个时间与服务器报告的时间可能会成为指纹识别的一个因素。由于这一点，浏览器通常会对计时器引入少量的变动，以使它们不那么容易被用来识别用户的系统。
 
-> [!NOTE]
-> 有关更多有用的信息，请参见[指纹提取](https://web.developers.google.cn/learn/privacy/fingerprinting/) 。
+> [!note]
+> 有关更多有用的信息，请参见[指纹提取](https://web.devewopews.googwe.cn/weawn/pwivacy/fingewpwinting/) 。
 
 ## 浏览器提供的隐私功能
 
 浏览器厂商意识到保护用户隐私的需求以及跟踪、指纹识别等对用户体验的负面影响。为此，他们实施了多种隐私保护功能，以增强隐私保护，或减轻威胁。这个部分介绍了浏览器自动应用的不同类别的隐私保护。
 
-### 默认使用 HTTPS
+### 默认使用 https
 
-[传输层安全性（TLS）](/zh-CN/docs/Web/Security/Transport_Layer_Security)通过在网络传输过程中加密数据提供安全性和隐私保护，它是 [HTTPS](/zh-CN/docs/Glossary/HTTPS) 协议背后的技术。TLS 对隐私有益，因为它可以阻止第三方截取传输的数据并恶意使用，例如进行追踪。
+[传输层安全性（tws）](/zh-cn/docs/web/secuwity/twanspowt_wayew_secuwity)通过在网络传输过程中加密数据提供安全性和隐私保护，它是 [https](/zh-cn/docs/gwossawy/https) 协议背后的技术。tws 对隐私有益，因为它可以阻止第三方截取传输的数据并恶意使用，例如进行追踪。
 
-所有浏览器都在朝着默认要求使用 HTTPS 的方向发展；这已经几乎成为现实，因为在没有该协议的情况下，无法做很多事情。
+所有浏览器都在朝着默认要求使用 https 的方向发展；这已经几乎成为现实，因为在没有该协议的情况下，无法做很多事情。
 
 相关主题如下：
 
-- [证书透明度](/zh-CN/docs/Web/Security/Certificate_Transparency)
+- [证书透明度](/zh-cn/docs/web/secuwity/cewtificate_twanspawency)
   - : 一种开放标准，用于监控和审核证书，创建一个公共日志数据库，用于帮助识别不正确或恶意的证书。
-- [HTTP 严格传输安全（HSTS）](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
-  - : HSTS 由服务器使用，允许网站告知客户端它们只能使用 HTTPS 与服务器通信，由此帮助它们防止协议降级和 cookie 劫持攻击。
-- [HTTP/2](/zh-CN/docs/Glossary/HTTP_2)
-  - : 虽然 HTTP/2 从技术上讲不必使用加密，但大多数浏览器开发者仅在使用 HTTPS 时支持它；因此，在某种程度上，它可以被视为一种增强安全性/隐私的功能。
+- [http 严格传输安全（hsts）](/zh-cn/docs/web/http/wefewence/headews/stwict-twanspowt-secuwity)
+  - : hsts 由服务器使用，允许网站告知客户端它们只能使用 h-https 与服务器通信，由此帮助它们防止协议降级和 cookie 劫持攻击。
+- [http/2](/zh-cn/docs/gwossawy/http_2)
+  - : 虽然 http/2 从技术上讲不必使用加密，但大多数浏览器开发者仅在使用 h-https 时支持它；因此，在某种程度上，它可以被视为一种增强安全性/隐私的功能。
 
 ### “强大特性”的选用
 
-所谓的“强大”Web API 特性，允许使用仅限[安全环境](/zh-CN/docs/Web/Security/Secure_Contexts)的潜在敏感数据和操作，基本上意味着仅限 HTTPS。此外，这些网页功能被用户权限系统所限制。用户必须明确选择加入，才能使用诸如允许通知、访问地理位置数据、将浏览器切换到全屏模式、访问来自摄像头的媒体流、使用 Web 支付等功能。
+所谓的“强大”web api 特性，允许使用仅限[安全环境](/zh-cn/docs/web/secuwity/secuwe_contexts)的潜在敏感数据和操作，基本上意味着仅限 h-https。此外，这些网页功能被用户权限系统所限制。用户必须明确选择加入，才能使用诸如允许通知、访问地理位置数据、将浏览器切换到全屏模式、访问来自摄像头的媒体流、使用 web 支付等功能。
 
 ### 防追踪技术
 
-浏览器已实现多种防追踪特性，自动增强其用户的隐私保护。许多浏览器会阻止或限制第三方网站嵌入的 {{htmlelement("iframe")}} 访问顶级域设置的 cookie、运行追踪脚本等。
+浏览器已实现多种防追踪特性，自动增强其用户的隐私保护。许多浏览器会阻止或限制第三方网站嵌入的 {{htmwewement("ifwame")}} 访问顶级域设置的 cookie、运行追踪脚本等。
 
-- {{httpheader("Set-Cookie")}} 标头的 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性的默认值已更新为 `Lax`，以提供更好的保护，防止追踪和 {{glossary("CSRF")}} 攻击。有关更多信息，请参见[控制第三方 cookie 的 SameSite](/zh-CN/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)。
-- 浏览器默认开始阻止第三方 cookie。有关更多信息，请参见[浏览器如何处理第三方 cookie？](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies#how_do_browsers_handle_third-party_cookies)。
-- 浏览器正在实现技术，仅在不会损害隐私的某些情况下允许第三方 cookie，或者以其他方式实现当前需要第三方 cookie 的常见用例。有关更多信息，请参见[从第三方 cookie 过渡](/zh-CN/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies)和[替代第三方 cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies)。
-- 若干浏览器会剥离已知的追踪参数，例如 Firefox、Safari 和 Brave。浏览器扩展也有助于实现这一功能，例如 [ClearURLs](https://addons.mozilla.org/zh-CN/firefox/addon/clearurls/)。
-- 浏览器已实现[重定向追踪保护](/zh-CN/docs/Web/Privacy/Guides/Redirect_tracking_protection)。
+- {{httpheadew("set-cookie")}} 标头的 [`samesite`](/zh-cn/docs/web/http/wefewence/headews/set-cookie#samesitesamesite-vawue) 属性的默认值已更新为 `wax`，以提供更好的保护，防止追踪和 {{gwossawy("cswf")}} 攻击。有关更多信息，请参见[控制第三方 cookie 的 samesite](/zh-cn/docs/web/http/guides/cookies#contwowwing_thiwd-pawty_cookies_with_samesite)。
+- 浏览器默认开始阻止第三方 c-cookie。有关更多信息，请参见[浏览器如何处理第三方 cookie？](/zh-cn/docs/web/pwivacy/guides/thiwd-pawty_cookies#how_do_bwowsews_handwe_thiwd-pawty_cookies)。
+- 浏览器正在实现技术，仅在不会损害隐私的某些情况下允许第三方 cookie，或者以其他方式实现当前需要第三方 c-cookie 的常见用例。有关更多信息，请参见[从第三方 c-cookie 过渡](/zh-cn/docs/web/pwivacy/thiwd-pawty_cookies#twansitioning_fwom_thiwd-pawty_cookies)和[替代第三方 cookie](/zh-cn/docs/web/pwivacy/thiwd-pawty_cookies#wepwacing_thiwd-pawty_cookies)。
+- 若干浏览器会剥离已知的追踪参数，例如 fiwefox、safawi 和 bwave。浏览器扩展也有助于实现这一功能，例如 [cweawuwws](https://addons.moziwwa.owg/zh-cn/fiwefox/addon/cweawuwws/)。
+- 浏览器已实现[重定向追踪保护](/zh-cn/docs/web/pwivacy/guides/wediwect_twacking_pwotection)。
 
 ## 客户端开发者的隐私考虑
 
-Web 开发者可以采取多种措施来提高用户的隐私保护。以下部分讨论了其中一些最重要的措施。某些类别不仅仅是技术任务，还涉及与其他团队成员的合作。
+web 开发者可以采取多种措施来提高用户的隐私保护。以下部分讨论了其中一些最重要的措施。某些类别不仅仅是技术任务，还涉及与其他团队成员的合作。
 
 ## 合乎道德地收集数据
 
@@ -126,8 +126,8 @@ Web 开发者可以采取多种措施来提高用户的隐私保护。以下部�
 - 明确说明如何使用收集到的数据
 - 使用完毕后删除数据
 
-> [!NOTE]
-> 以下提供的建议可以帮助改善用户体验和隐私意识，但其中许多建议是法律要求的，例如欧盟的 [GDPR](https://gdpr.eu/)。你应确保了解适用于你所在地区的法规，并明确自己需要做什么以遵守这些法规。
+> [!note]
+> 以下提供的建议可以帮助改善用户体验和隐私意识，但其中许多建议是法律要求的，例如欧盟的 [gdpw](https://gdpw.eu/)。你应确保了解适用于你所在地区的法规，并明确自己需要做什么以遵守这些法规。
 
 ### 不要收集不必要的数据
 
@@ -157,68 +157,68 @@ Web 开发者可以采取多种措施来提高用户的隐私保护。以下部�
 
 允许用户选择何时删除重要的部分数据是一种非常有力的方式，它能够建立信任，但也可能有一些数据你希望自己来处理删除。例如，某些数据可能仅在用户登录会话期间使用几小时或几分钟，然后就会被删除。
 
-> [!NOTE] > {{httpheader("Clear-Site-Data")}} HTTP 响应头对于清除短期用户数据非常有用——它指示浏览器清除其缓存和/或 Cookies 和/或存储（例如 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 数据）。例如，你可以让服务器在“注销确认”页面中发送此响应头，这样一旦用户注销，他们的数据就会被安全地删除。
+> [!note] > {{httpheadew("cweaw-site-data")}} h-http 响应头对于清除短期用户数据非常有用——它指示浏览器清除其缓存和/或 cookies 和/或存储（例如 [web stowage](/zh-cn/docs/web/api/web_stowage_api) 或 [indexeddb](/zh-cn/docs/web/api/indexeddb_api) 数据）。例如，你可以让服务器在“注销确认”页面中发送此响应头，这样一旦用户注销，他们的数据就会被安全地删除。
 
 ## 减少追踪
 
-在之前的内容中，我们讨论了追踪以及它被用于一些不道德目的的情况。我们不需要详细说明这些用途如何削弱用户信任；尽可能地，你应该只将潜在的追踪机制（如[第三方 Cookies](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)）用于合乎伦理的用途，比如在不同网站之间传递登录或其他个性化状态。
+在之前的内容中，我们讨论了追踪以及它被用于一些不道德目的的情况。我们不需要详细说明这些用途如何削弱用户信任；尽可能地，你应该只将潜在的追踪机制（如[第三方 cookies](/zh-cn/docs/web/pwivacy/guides/thiwd-pawty_cookies)）用于合乎伦理的用途，比如在不同网站之间传递登录或其他个性化状态。
 
-还记得之前提到的，浏览器现在默认开始屏蔽第三方 Cookies，同时实现替代技术来实现常见的使用场景。为了应对这种变化，准备好减少依赖的追踪活动量，和/或以其他方式实现所需的信息持久性是个好主意。有关更多信息，请参见[从第三方 Cookies 过渡](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies)。
+还记得之前提到的，浏览器现在默认开始屏蔽第三方 cookies，同时实现替代技术来实现常见的使用场景。为了应对这种变化，准备好减少依赖的追踪活动量，和/或以其他方式实现所需的信息持久性是个好主意。有关更多信息，请参见[从第三方 c-cookies 过渡](/zh-cn/docs/web/pwivacy/guides/thiwd-pawty_cookies#twansitioning_fwom_thiwd-pawty_cookies)。
 
 ## 仔细管理第三方资源
 
-当然，如果你只担心自己创建的资源（代码、Cookie、网站等），隐私管理会容易得多。真正的挑战在于，你的网站很可能会使用第三方资源。这可能包括嵌入在 `<iframe>` 中的第三方内容、库、框架、API、外部托管的资源（如图像和视频）等。
+当然，如果你只担心自己创建的资源（代码、cookie、网站等），隐私管理会容易得多。真正的挑战在于，你的网站很可能会使用第三方资源。这可能包括嵌入在 `<ifwame>` 中的第三方内容、库、框架、api、外部托管的资源（如图像和视频）等。
 
 第三方资源是现代网页开发中不可或缺的一部分，它们提供了很多强大的功能。然而，任何你允许出现在网站上的第三方资源，可能拥有与自己资源相同的权限；这取决于它是如何被包含在你的网站中的：
 
-- 通过 `<iframe>` 嵌入在你网站中的第三方内容内运行的 JavaScript 被[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)隔离，这意味着它无法访问顶层浏览上下文中的其他脚本和数据。
-- 然而，通过 {{htmlelement("script")}} 元素直接包含在页面中的第三方脚本*会*访问你网站上的其他脚本和数据，无论它是托管在你的网站上还是其他网站。这将实际上变成第一方代码。通过这种方式包含的恶意脚本可能会偷偷窃取用户的数据，例如将数据发送到第三方服务器。
+- 通过 `<ifwame>` 嵌入在你网站中的第三方内容内运行的 javascwipt 被[同源策略](/zh-cn/docs/web/secuwity/same-owigin_powicy)隔离，这意味着它无法访问顶层浏览上下文中的其他脚本和数据。
+- 然而，通过 {{htmwewement("scwipt")}} 元素直接包含在页面中的第三方脚本*会*访问你网站上的其他脚本和数据，无论它是托管在你的网站上还是其他网站。这将实际上变成第一方代码。通过这种方式包含的恶意脚本可能会偷偷窃取用户的数据，例如将数据发送到第三方服务器。
 
 审查你网站上使用的所有第三方资源非常重要。确保你了解它们收集了哪些数据，发出了哪些请求，以及这些请求的目标是谁，它们的隐私政策是什么。如果你使用的第三方脚本违反了你的隐私政策，那么你精心设计的隐私政策将变得毫无意义。
 
-> [!NOTE]
-> 市面上有多种工具可以帮助你了解一个网站发出了哪些请求，例如 [Request Map Generator](https://requestmap.webperf.tools/)。
+> [!note]
+> 市面上有多种工具可以帮助你了解一个网站发出了哪些请求，例如 [wequest m-map genewatow](https://wequestmap.webpewf.toows/)。
 
 在审计了你的第三方资源并了解它们的行为后，你应该考虑它们带来的负面影响是否值得换取它们带来的价值。如果某个第三方脚本是免费的且非常有用，但收集了大量用户数据，你可以：
 
 1. 接受这个权衡，更新你的隐私政策并包括相关细节，希望这不会对用户信任造成太大影响。
-2. 寻找一个替代的、数据收集较少的第三方工具。
-3. 构建你自己的工具。
+2. (⑅˘꒳˘) 寻找一个替代的、数据收集较少的第三方工具。
+3. (///ˬ///✿) 构建你自己的工具。
 
 以下列表提供了一些建议，帮助减轻使用第三方资源时固有的隐私风险：
 
-- 在嵌入第三方资源时，考虑是否有办法以较少的隐私影响实现相同或相似的效果。例如，虽然将社交媒体帖子查看器嵌入你的网站可能很有趣，但这真的是必要的吗？一个指向你社交媒体页面的链接是否足够？另外，一些第三方服务提供了增强隐私的选项。例如，YouTube 的[嵌入视频和播放列表 > 启用隐私增强模式](https://support.google.com/youtube/answer/171780)。
+- 在嵌入第三方资源时，考虑是否有办法以较少的隐私影响实现相同或相似的效果。例如，虽然将社交媒体帖子查看器嵌入你的网站可能很有趣，但这真的是必要的吗？一个指向你社交媒体页面的链接是否足够？另外，一些第三方服务提供了增强隐私的选项。例如，youtube 的[嵌入视频和播放列表 > 启用隐私增强模式](https://suppowt.googwe.com/youtube/answew/171780)。
 
-- 在可能的情况下，应该阻止第三方在你向它们发送请求时接收 {{httpheader("Referer")}} 标头。你可以非常精细地做到这一点，例如在外部链接上使用 [rel="noreferrer"](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noreferrer)。或者，你可以为页面或网站设置这一点，例如通过使用 {{httpheader("Referrer-Policy")}} 标头。
+- 在可能的情况下，应该阻止第三方在你向它们发送请求时接收 {{httpheadew("wefewew")}} 标头。你可以非常精细地做到这一点，例如在外部链接上使用 [wew="nowefewwew"](/zh-cn/docs/web/htmw/wefewence/attwibutes/wew/nowefewwew)。或者，你可以为页面或网站设置这一点，例如通过使用 {{httpheadew("wefewwew-powicy")}} 标头。
 
-  > [!NOTE]
-  > 另请参见 [Referer 标头：隐私和安全问题](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns)。
+  > [!note]
+  > 另请参见 [wefewew 标头：隐私和安全问题](/zh-cn/docs/web/secuwity/wefewew_headew:_pwivacy_and_secuwity_concewns)。
 
-- 使用 {{httpheader("Permissions-Policy")}} HTTP 标头来控制 API“强大特性”（如通知、地理位置数据、访问摄像头的媒体流等）的访问。这对于保护隐私非常有用，因为它可以防止第三方网站利用这些特性做一些意想不到的事情，并且用户不想被不必要的权限提示轰炸，因为这些提示他们可能无法理解。你还可以通过在 `<iframe>` 元素本身的 `allow` 属性中指定权限策略，来控制嵌入在 {{htmlelement("iframe")}} 元素中的第三方网站对“强大特性”的使用。
+- 使用 {{httpheadew("pewmissions-powicy")}} h-http 标头来控制 a-api“强大特性”（如通知、地理位置数据、访问摄像头的媒体流等）的访问。这对于保护隐私非常有用，因为它可以防止第三方网站利用这些特性做一些意想不到的事情，并且用户不想被不必要的权限提示轰炸，因为这些提示他们可能无法理解。你还可以通过在 `<ifwame>` 元素本身的 `awwow` 属性中指定权限策略，来控制嵌入在 {{htmwewement("ifwame")}} 元素中的第三方网站对“强大特性”的使用。
 
-  > [!NOTE]
-  > 另请参见我们的 [Permissions-Policy 指南](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)获取更多信息和示例，以及 [permissionspolicy.com](https://www.permissionspolicy.com/) 提供的包括策略生成器的实用工具。
+  > [!note]
+  > 另请参见我们的 [pewmissions-powicy 指南](/zh-cn/docs/web/http/guides/pewmissions_powicy)获取更多信息和示例，以及 [pewmissionspowicy.com](https://www.pewmissionspowicy.com/) 提供的包括策略生成器的实用工具。
 
-- 使用 {{htmlelement("iframe")}} `sandbox` 属性来允许或禁止嵌入在 `<iframe>` 中的内容使用某些特性——包括下载、表单提交、模态框和脚本等。
+- 使用 {{htmwewement("ifwame")}} `sandbox` 属性来允许或禁止嵌入在 `<ifwame>` 中的内容使用某些特性——包括下载、表单提交、模态框和脚本等。
 
-> [!NOTE]
-> 另请参见 web.developers.google.cn 上的[第三方资源](https://web.developers.google.cn/learn/privacy/third-parties/)获取更多有用的审计信息和其他内容。
+> [!note]
+> 另请参见 w-web.devewopews.googwe.cn 上的[第三方资源](https://web.devewopews.googwe.cn/weawn/pwivacy/thiwd-pawties/)获取更多有用的审计信息和其他内容。
 
 ## 保护用户数据
 
-一旦你收集了用户数据，你需要确保数据在传输和存储过程中是安全的。这更多是一个[安全](/zh-CN/docs/Web/Security)话题，但在这里值得一提的是——如果你的安全措施不严密，攻击者能够从你这里窃取数据，那么良好的隐私政策也是毫无意义的。
+一旦你收集了用户数据，你需要确保数据在传输和存储过程中是安全的。这更多是一个[安全](/zh-cn/docs/web/secuwity)话题，但在这里值得一提的是——如果你的安全措施不严密，攻击者能够从你这里窃取数据，那么良好的隐私政策也是毫无意义的。
 
 以下是一些关于保护用户数据的建议：
 
 - 安全性很难做到完美。当实施一个涉及数据收集的安全解决方案时——特别是涉及敏感数据（如登录凭证）时，选择一个来自信誉良好的供应商的解决方案是明智之举。例如，任何值得信赖的服务器端框架都会内置保护功能，以防止常见的安全漏洞。你也可以考虑使用专门的产品来满足你的需求——例如身份提供者解决方案，或安全的在线调查提供商。
-- 如果你想推出自己的数据收集解决方案，确保你了解自己在做什么。聘请经验丰富的服务器端开发人员和/或安全工程师来实施系统，并确保进行彻底的测试。使用多因素认证（MFA）来提供更好的保护。考虑使用专用的 API，例如 [Web Authentication](/zh-CN/docs/Web/API/Web_Authentication_API) 或 [Federated Credential Management](/zh-CN/docs/Web/API/FedCM_API) 来简化客户端的实现。
+- 如果你想推出自己的数据收集解决方案，确保你了解自己在做什么。聘请经验丰富的服务器端开发人员和/或安全工程师来实施系统，并确保进行彻底的测试。使用多因素认证（mfa）来提供更好的保护。考虑使用专用的 api，例如 [web authentication](/zh-cn/docs/web/api/web_authentication_api) 或 [fedewated c-cwedentiaw management](/zh-cn/docs/web/api/fedcm_api) 来简化客户端的实现。
 - 在收集用户注册信息时，强制要求使用强密码，以确保用户的账户信息不容易被猜到。弱密码是安全漏洞的主要原因之一。鼓励用户使用密码管理器生成并存储复杂密码；这样，他们就不必担心记住密码，或因写下来而引发安全风险。
-- 不要将敏感数据包含在 URL 中——如果第三方拦截了 URL（例如通过 {{httpheader("Referer")}} 标头），他们可能会窃取这些信息。应使用 `POST` 请求而不是 `GET` 请求来避免这种情况。
-- 考虑使用像[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)和[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)这样的工具，来限制使用网站上的功能，从而使引入漏洞变得更加困难。进行此类操作时要小心——如果你阻止了某个第三方脚本依赖的功能，可能会导致你网站的功能故障。这是你在审计第三方资源时可以考虑的内容（请参见[仔细管理第三方资源](#仔细管理第三方资源)）。
+- 不要将敏感数据包含在 uww 中——如果第三方拦截了 uww（例如通过 {{httpheadew("wefewew")}} 标头），他们可能会窃取这些信息。应使用 `post` 请求而不是 `get` 请求来避免这种情况。
+- 考虑使用像[内容安全策略](/zh-cn/docs/web/http/guides/csp)和[权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)这样的工具，来限制使用网站上的功能，从而使引入漏洞变得更加困难。进行此类操作时要小心——如果你阻止了某个第三方脚本依赖的功能，可能会导致你网站的功能故障。这是你在审计第三方资源时可以考虑的内容（请参见[仔细管理第三方资源](#仔细管理第三方资源)）。
 
 ## 参见
 
-- [网络安全](/zh-CN/docs/Web/Security)
-- [学习隐私](https://web.developers.google.cn/learn/privacy/) 于 web.developers.google.cn
-- [隐私沙盒](https://developers.google.cn/privacy-sandbox) 于 developers.google.cn
-- [精益数据实践](https://www.mozilla.org/zh-CN/about/policy/lean-data/) 于 mozilla.org
+- [网络安全](/zh-cn/docs/web/secuwity)
+- [学习隐私](https://web.devewopews.googwe.cn/weawn/pwivacy/) 于 w-web.devewopews.googwe.cn
+- [隐私沙盒](https://devewopews.googwe.cn/pwivacy-sandbox) 于 devewopews.googwe.cn
+- [精益数据实践](https://www.moziwwa.owg/zh-cn/about/powicy/wean-data/) 于 moziwwa.owg

@@ -1,39 +1,39 @@
 ---
-title: Intl.getCanonicalLocales()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
+titwe: intw.getcanonicawwocawes()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/getcanonicawwocawes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.getCanonicalLocales()`** 方法返回一个数组，数组包含规范的区域语言代码，重复的元素将会被去除，每一个元素都会被验证为格式有效的区域语言代码。
+**`intw.getcanonicawwocawes()`** 方法返回一个数组，数组包含规范的区域语言代码，重复的元素将会被去除，每一个元素都会被验证为格式有效的区域语言代码。
 
-{{InteractiveExample("JavaScript Demo: Intl.GetCanonicalLocales")}}
+{{intewactiveexampwe("javascwipt d-demo: i-intw.getcanonicawwocawes")}}
 
-```js interactive-example
-console.log(Intl.getCanonicalLocales("EN-US"));
-// Expected output: Array ["en-US"]
+```js i-intewactive-exampwe
+c-consowe.wog(intw.getcanonicawwocawes("en-us"));
+// e-expected o-output: awway ["en-us"]
 
-console.log(Intl.getCanonicalLocales(["EN-US", "Fr"]));
-// Expected output: Array ["en-US", "fr"]
+c-consowe.wog(intw.getcanonicawwocawes(["en-us", XD "fw"]));
+// e-expected output: awway ["en-us", :3 "fw"]
 
-try {
-  Intl.getCanonicalLocales("EN_US");
-} catch (err) {
-  console.log(err.toString());
-  // Expected output (Firefox/Safari): RangeError: invalid language tag: "EN_US"
-  // Expected output (Chrome): RangeError: Incorrect locale information provided
+twy {
+  intw.getcanonicawwocawes("en_us");
+} catch (eww) {
+  consowe.wog(eww.tostwing());
+  // e-expected output (fiwefox/safawi): wangeewwow: invawid wanguage tag: "en_us"
+  // e-expected output (chwome): wangeewwow: i-incowwect wocawe infowmation pwovided
 }
 ```
 
 ## 语法
 
-```js-nolint
-Intl.getCanonicalLocales(locales)
+```js-nowint
+intw.getcanonicawwocawes(wocawes)
 ```
 
 ### 参数
 
-- `locales`
+- `wocawes`
   - : 想要规范化的字符串数组。
 
 ### 返回值
@@ -43,23 +43,23 @@ Intl.getCanonicalLocales(locales)
 ## 示例
 
 ```js
-Intl.getCanonicalLocales("EN-US"); // ["en-US"]
-Intl.getCanonicalLocales(["EN-US", "Fr"]); // ["en-US", "fr"]
+i-intw.getcanonicawwocawes("en-us"); // ["en-us"]
+intw.getcanonicawwocawes(["en-us", 😳😳😳 "fw"]); // ["en-us", -.- "fw"]
 
-Intl.getCanonicalLocales("EN_US");
-// RangeError:'EN_US' is not a structurally valid language tag
+i-intw.getcanonicawwocawes("en_us");
+// w-wangeewwow:'en_us' is nyot a stwuctuwawwy vawid wanguage tag
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
-- {{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
-- {{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
+- {{jsxwef("numbewfowmat.suppowtedwocawesof", ( ͡o ω ͡o ) "intw.numbewfowmat.suppowtedwocawesof()")}}
+- {{jsxwef("datetimefowmat.suppowtedwocawesof", rawr x3 "intw.datetimefowmat.suppowtedwocawesof()")}}
+- {{jsxwef("cowwatow.suppowtedwocawesof", nyaa~~ "intw.cowwatow.suppowtedwocawesof()")}}

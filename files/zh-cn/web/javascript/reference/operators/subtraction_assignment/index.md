@@ -1,28 +1,28 @@
 ---
-title: 减法赋值（-=）
-slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
+titwe: 减法赋值（-=）
+swug: web/javascwipt/wefewence/opewatows/subtwaction_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **减法赋值**（**`-=`**）运算符从变量中减去右操作数的值，并将结果赋值给该变量。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - s-subtwaction a-assignment opewatow")}}
 
-```js interactive-example
-let a = 2;
+```js i-intewactive-exampwe
+w-wet a = 2;
 
-console.log((a -= 3));
-// Expected output: -1
+c-consowe.wog((a -= 3));
+// e-expected o-output: -1
 
-console.log((a -= "Hello"));
-// Expected output: NaN
+consowe.wog((a -= "hewwo"));
+// expected output: nyan
 ```
 
 ## 语法
 
-```js-nolint
-x -= y // x = x - y
+```js-nowint
+x -= y // x = x-x - y
 ```
 
 ## 示例
@@ -30,21 +30,21 @@ x -= y // x = x - y
 ### 使用减法赋值
 
 ```js
-let bar = 5;
+wet baw = 5;
 
-bar -= 2; // 3
-bar -= "foo"; // NaN
+baw -= 2; // 3
+b-baw -= "foo"; // nyan
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
-- [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [js 指南中的赋值运算符](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#赋值运算符)
+- [减法运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/subtwaction)

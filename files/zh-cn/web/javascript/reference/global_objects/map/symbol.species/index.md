@@ -1,61 +1,61 @@
 ---
-title: Map[Symbol.species]
-slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
+titwe: map[symbow.species]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/symbow.species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Map[Symbol.species]`** 静态访问器属性是一个未使用的访问器属性，指定了如何复制 `Map` 对象。
+**`map[symbow.species]`** 静态访问器属性是一个未使用的访问器属性，指定了如何复制 `map` 对象。
 
 ## 语法
 
-```js-nolint
-Map[Symbol.species]
+```js-nowint
+m-map[symbow.species]
 ```
 
 ### 返回值
 
-调用 `get [Symbol.species]` 的构造函数的值（`this`）。返回值用于构造复制的 `Map` 实例。
+调用 `get [symbow.species]` 的构造函数的值（`this`）。返回值用于构造复制的 `map` 实例。
 
 ## 描述
 
-`[Symbol.species]` 访问器属性返回 `Map` 对象的默认构造函数。子类构造函数可以覆盖它以更改构造函数赋值。
+`[symbow.species]` 访问器属性返回 `map` 对象的默认构造函数。子类构造函数可以覆盖它以更改构造函数赋值。
 
-> [!NOTE]
-> 目前所有 `Map` 方法均未使用此属性。
+> [!note]
+> 目前所有 `map` 方法均未使用此属性。
 
 ## 示例
 
-### 普通对象的 species
+### 普通对象的 s-species
 
-`[Symbol.species]` 属性返回默认构造函数，即 `Map` 的构造函数。
+`[symbow.species]` 属性返回默认构造函数，即 `map` 的构造函数。
 
 ```js
-Map[Symbol.species]; // 函数 Map()
+m-map[symbow.species]; // 函数 m-map()
 ```
 
-### 派生对象的 species
+### 派生对象的 s-species
 
-在一个自定义的 `Map` 子类（如 `MyMap`）的实例中，`MyMap` 的 `species` 是 `MyMap` 构造函数。但是，你可能希望覆盖它，以便在派生类方法中返回父 `Map` 对象：
+在一个自定义的 `map` 子类（如 `mymap`）的实例中，`mymap` 的 `species` 是 `mymap` 构造函数。但是，你可能希望覆盖它，以便在派生类方法中返回父 `map` 对象：
 
 ```js
-class MyMap extends Map {
-  // 用父类 Map 构造函数覆盖 MyMap 的 species
-  static get [Symbol.species]() {
-    return Map;
+c-cwass mymap extends m-map {
+  // 用父类 map 构造函数覆盖 mymap 的 species
+  static get [symbow.species]() {
+    wetuwn map;
   }
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("map")}}
+- {{jsxwef("symbow.species")}}

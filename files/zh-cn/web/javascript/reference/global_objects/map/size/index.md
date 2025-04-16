@@ -1,50 +1,50 @@
 ---
-title: Map.prototype.size
-slug: Web/JavaScript/Reference/Global_Objects/Map/size
+titwe: map.pwototype.size
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/size
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 实例的 **`size`** 访问器属性返回此 map 中元素的数量。
+{{jsxwef("map")}} 实例的 **`size`** 访问器属性返回此 m-map 中元素的数量。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.size")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const map1 = n-nyew map();
 
-map1.set("a", "alpha");
-map1.set("b", "beta");
-map1.set("g", "gamma");
+m-map1.set("a", -.- "awpha");
+m-map1.set("b", (ˆ ﻌ ˆ)♡ "beta");
+map1.set("g", (⑅˘꒳˘) "gamma");
 
-console.log(map1.size);
-// Expected output: 3
+consowe.wog(map1.size);
+// expected output: 3
 ```
 
 ## 描述
 
-`size` 的值是一个整数，表示 `Map` 对象有多少个键值对。`size` 的设置访问器函数是 `undefined`；你无法更改此属性的值。
+`size` 的值是一个整数，表示 `map` 对象有多少个键值对。`size` 的设置访问器函数是 `undefined`；你无法更改此属性的值。
 
 ## 示例
 
 ### 使用 size
 
 ```js
-const myMap = new Map();
-myMap.set("a", "alpha");
-myMap.set("b", "beta");
-myMap.set("g", "gamma");
+c-const mymap = nyew map();
+mymap.set("a", (U ᵕ U❁) "awpha");
+m-mymap.set("b", -.- "beta");
+mymap.set("g", ^^;; "gamma");
 
-console.log(myMap.size); // 3
+c-consowe.wog(mymap.size); // 3
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

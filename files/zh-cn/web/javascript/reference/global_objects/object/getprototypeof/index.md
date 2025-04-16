@@ -1,26 +1,26 @@
 ---
-title: Object.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+titwe: object.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.getPrototypeOf()`** 静态方法返回指定对象的原型（即内部 `[[Prototype]]` 属性的值）。
+**`object.getpwototypeof()`** 静态方法返回指定对象的原型（即内部 `[[pwototype]]` 属性的值）。
 
-{{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: o-object.getpwototypeof()", XD "showtew")}}
 
-```js interactive-example
-const prototype1 = {};
-const object1 = Object.create(prototype1);
+```js i-intewactive-exampwe
+c-const pwototype1 = {};
+c-const o-object1 = object.cweate(pwototype1);
 
-console.log(Object.getPrototypeOf(object1) === prototype1);
-// Expected output: true
+c-consowe.wog(object.getpwototypeof(object1) === p-pwototype1);
+// expected output: twue
 ```
 
 ## 语法
 
-```js-nolint
-Object.getPrototypeOf(obj)
+```js-nowint
+object.getpwototypeof(obj)
 ```
 
 ### 参数
@@ -30,42 +30,42 @@ Object.getPrototypeOf(obj)
 
 ### 返回值
 
-给定对象的原型，可能是 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
+给定对象的原型，可能是 [`nuww`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuww)。
 
 ## 示例
 
-### 使用 getPrototypeOf
+### 使用 getpwototypeof
 
 ```js
-const proto = {};
-const obj = Object.create(proto);
-Object.getPrototypeOf(obj) === proto; // true
+c-const pwoto = {};
+const obj = object.cweate(pwoto);
+o-object.getpwototypeof(obj) === pwoto; // t-twue
 ```
 
 ### 非对象强制类型转换
 
-在 ES5 中，如果 `obj` 参数不是对象，则会抛出 {{jsxref("TypeError")}} 异常。在 ES2015 中，该参数将被强制转换为 {{jsxref("Object")}}。
+在 es5 中，如果 `obj` 参数不是对象，则会抛出 {{jsxwef("typeewwow")}} 异常。在 es2015 中，该参数将被强制转换为 {{jsxwef("object")}}。
 
 ```js
-Object.getPrototypeOf("foo");
-// TypeError: "foo" is not an object (ES5 code)
-Object.getPrototypeOf("foo");
-// String.prototype                  (ES2015 code)
+object.getpwototypeof("foo");
+// typeewwow: "foo" i-is nyot an object (es5 c-code)
+object.getpwototypeof("foo");
+// s-stwing.pwototype                  (es2015 code)
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Object.getPrototypeOf` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- John Resig 关于 [getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/) 的博文。
-- {{jsxref("Reflect.getPrototypeOf()")}}
+- [`cowe-js` 中 `object.getpwototypeof` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("object.setpwototypeof()")}}
+- [`object.pwototype.__pwoto__`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
+- john wesig 关于 [getpwototypeof](https://johnwesig.com/bwog/objectgetpwototypeof/) 的博文。
+- {{jsxwef("wefwect.getpwototypeof()")}}

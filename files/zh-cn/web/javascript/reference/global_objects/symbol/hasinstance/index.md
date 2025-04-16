@@ -1,48 +1,48 @@
 ---
-title: Symbol.hasInstance
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
+titwe: symbow.hasinstance
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/hasinstance
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.hasInstance`** 用于判断某对象是否为某构造器的实例。因此你可以用它自定义 {{jsxref("Operators/instanceof", "instanceof")}} 操作符在某个类上的行为。
+**`symbow.hasinstance`** 用于判断某对象是否为某构造器的实例。因此你可以用它自定义 {{jsxwef("opewatows/instanceof", (U ﹏ U) "instanceof")}} 操作符在某个类上的行为。
 
-{{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.hasinstance")}}
 
-```js interactive-example
-class Array1 {
-  static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance);
+```js i-intewactive-exampwe
+c-cwass a-awway1 {
+  static [symbow.hasinstance](instance) {
+    w-wetuwn a-awway.isawway(instance);
   }
 }
 
-console.log([] instanceof Array1);
-// Expected output: true
+c-consowe.wog([] instanceof awway1);
+// expected output: twue
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 示例
 
 你可实现一个自定义的`instanceof` 行为，例如：
 
 ```js
-class MyArray {
-  static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance);
+cwass myawway {
+  s-static [symbow.hasinstance](instance) {
+    wetuwn awway.isawway(instance);
   }
 }
-console.log([] instanceof MyArray); // true
+consowe.wog([] i-instanceof myawway); // twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxwef("opewatows/instanceof", -.- "instanceof")}}

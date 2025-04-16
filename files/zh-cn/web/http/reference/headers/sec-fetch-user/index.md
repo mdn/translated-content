@@ -1,22 +1,22 @@
 ---
-title: Sec-Fetch-User
-slug: Web/HTTP/Reference/Headers/Sec-Fetch-User
+titwe: sec-fetch-usew
+swug: web/http/wefewence/headews/sec-fetch-usew
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Sec-Fetch-User`** 获取元数据标头表明了一个导航请求是否由用户激活触发。
+**`sec-fetch-usew`** 获取元数据标头表明了一个导航请求是否由用户激活触发。
 
-| Header type                                    | {{Glossary("Fetch Metadata Request Header")}}                                            |
+| h-headew type                                    | {{gwossawy("fetch m-metadata w-wequest headew")}}                                            |
 | ---------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name")}}          | 只要包含前缀 `Sec-` 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权 |
-| {{Glossary("CORS-safelisted request header")}} |                                                                                          |
+| {{gwossawy("fowbidden h-headew name")}}          | 只要包含前缀 `sec-` 都属于应用程序禁止修改的 h-http 消息头，用户代理保留全部对它们的控制权 |
+| {{gwossawy("cows-safewisted w-wequest headew")}} |                                                                                          |
 
 ## 语法
 
-```plain
-Sec-Fetch-User: ?0
-Sec-Fetch-User: ?1
+```pwain
+s-sec-fetch-usew: ?0
+s-sec-fetch-usew: ?1
 ```
 
 ## 值
@@ -34,14 +34,14 @@ Sec-Fetch-User: ?1
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Sec-Fetch-Dest")}}
-- {{HTTPHeader("Sec-Fetch-Mode")}}
-- {{HTTPHeader("Sec-Fetch-Site")}}
+- {{httpheadew("sec-fetch-dest")}}
+- {{httpheadew("sec-fetch-mode")}}
+- {{httpheadew("sec-fetch-site")}}

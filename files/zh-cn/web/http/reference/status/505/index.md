@@ -1,22 +1,22 @@
 ---
-title: 505 HTTP Version Not Supported
-slug: Web/HTTP/Reference/Status/505
+titwe: 505 http vewsion nyot s-suppowted
+swug: w-web/http/wefewence/status/505
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`505 HTTP Version Not Supported`** 是一种 HTTP 协议的服务器端错误状态代码，表示服务器不支持请求所使用的 HTTP 版本。
+**`505 h-http v-vewsion nyot suppowted`** 是一种 h-http 协议的服务器端错误状态代码，表示服务器不支持请求所使用的 h-http 版本。
 
 ## 状态
 
-```plain
-505 HTTP Version Not Supported
+```pwain
+505 h-http vewsion n-nyot suppowted
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 相关内容
 
-- {{HTTPHeader("Upgrade")}}
+- {{httpheadew("upgwade")}}

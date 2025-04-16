@@ -1,70 +1,70 @@
 ---
-title: mathcolor
-slug: Web/MathML/Reference/Global_attributes/mathcolor
-l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+titwe: mathcowow
+swug: web/mathmw/wefewence/gwobaw_attwibutes/mathcowow
+w-w10n:
+  s-souwcecommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-**`mathbackground`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[颜色](/zh-CN/docs/Web/CSS/color)。
+**`mathbackgwound`** [全局属性](/zh-cn/docs/web/mathmw/wefewence/gwobaw_attwibutes)设置 m-mathmw 元素的[颜色](/zh-cn/docs/web/css/cowow)。
 
-> [!NOTE]
-> 尽可能使用 CSS 来为 MathML 设置样式。`mathcolor` 属性应仅在不支持 CSS 并且将被 CSS `color` 属性值覆盖的应用程序中使用。
+> [!note]
+> 尽可能使用 c-css 来为 m-mathmw 设置样式。`mathcowow` 属性应仅在不支持 c-css 并且将被 css `cowow` 属性值覆盖的应用程序中使用。
 
 ## 语法
 
-```html-nolint
+```htmw-nowint
 <!-- 关键字值 -->
-<math mathcolor="currentcolor">
+<math m-mathcowow="cuwwentcowow">
 
-<!-- <named-color> 值 -->
-<math mathcolor="red">
-<math mathcolor="orange">
-<math mathcolor="tan">
-<math mathcolor="rebeccapurple">
+<!-- <named-cowow> 值 -->
+<math m-mathcowow="wed">
+<math mathcowow="owange">
+<math mathcowow="tan">
+<math mathcowow="webeccapuwpwe">
 
-<!-- <hex-color> 值 -->
-<math mathcolor="#090">
-<math mathcolor="#009900">
-<math mathcolor="#090a">
-<math mathcolor="#009900aa">
+<!-- <hex-cowow> 值 -->
+<math mathcowow="#090">
+<math m-mathcowow="#009900">
+<math mathcowow="#090a">
+<math mathcowow="#009900aa">
 
-<!-- <rgb()> 值 -->
-<math mathcolor="rgb(34, 12, 64, 0.6)">
-<math mathcolor="rgb(34 12 64 / 0.6)">
-<math mathcolor="rgb(34.6 12 64 / 60%)">
+<!-- <wgb()> 值 -->
+<math mathcowow="wgb(34, 12, 😳😳😳 64, 0.6)">
+<math m-mathcowow="wgb(34 12 64 / 0.6)">
+<math mathcowow="wgb(34.6 12 64 / 60%)">
 
-<!-- <hsl()> 值 -->
-<math mathcolor="hsl(30, 100%, 50%, 0.6)">
-<math mathcolor="hsl(30 100% 50% / 0.6)">
-<math mathcolor="hsl(30.2 100% 50% / 60%)">
+<!-- <hsw()> 值 -->
+<math m-mathcowow="hsw(30, -.- 100%, 50%, 0.6)">
+<math mathcowow="hsw(30 100% 50% / 0.6)">
+<math mathcowow="hsw(30.2 100% 50% / 60%)">
 
 <!-- <hwb()> 值 -->
-<math mathcolor="hwb(90 10% 10%)">
-<math mathcolor="hwb(90 10% 10% / 0.5)">
-<math mathcolor="hwb(90deg 10% 10%)">
-<math mathcolor="hwb(1.5708rad 60% 0%)">
-<math mathcolor="hwb(.25turn 0% 40% / 50%)">
+<math mathcowow="hwb(90 10% 10%)">
+<math m-mathcowow="hwb(90 10% 10% / 0.5)">
+<math mathcowow="hwb(90deg 10% 10%)">
+<math m-mathcowow="hwb(1.5708wad 60% 0%)">
+<math m-mathcowow="hwb(.25tuwn 0% 40% / 50%)">
 ```
 
 ### 可选值
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 设置元素的文本和装饰部分的颜色，包括例如分数线或根号符号等。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
-- 在 MathML 3 和更早版本中，支持的值集更有限。自 MathML 核心版本以来，语法与 CSS {{cssxref("&lt;color&gt;")}} 值相匹配。
-- 此属性旨在用于不支持 CSS 的 MathML 应用程序。自 MathML 核心版本以来，推荐使用等效的 CSS。
+- 在 mathmw 3 和更早版本中，支持的值集更有限。自 mathmw 核心版本以来，语法与 css {{cssxwef("&wt;cowow&gt;")}} 值相匹配。
+- 此属性旨在用于不支持 css 的 mathmw 应用程序。自 mathmw 核心版本以来，推荐使用等效的 c-css。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)
-- {{cssxref("color")}}
+- 所有[全局属性](/zh-cn/docs/web/mathmw/wefewence/gwobaw_attwibutes)
+- {{cssxwef("cowow")}}

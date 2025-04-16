@@ -1,88 +1,88 @@
 ---
-title: Reflect.ownKeys()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
+titwe: wefwect.ownkeys()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/ownkeys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静态方法 **`Reflect.ownKeys()`** 返回一个由目标对象自身的属性键组成的数组。
+静态方法 **`wefwect.ownkeys()`** 返回一个由目标对象自身的属性键组成的数组。
 
-{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.ownkeys()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
-  property2: 13,
+```js i-intewactive-exampwe
+c-const object1 = {
+  p-pwopewty1: 42, nyaa~~
+  p-pwopewty2: 13, /(^•ω•^)
 };
 
-const array1 = [];
+c-const awway1 = [];
 
-console.log(Reflect.ownKeys(object1));
-// Expected output: Array ["property1", "property2"]
+c-consowe.wog(wefwect.ownkeys(object1));
+// expected output: awway ["pwopewty1", rawr "pwopewty2"]
 
-console.log(Reflect.ownKeys(array1));
-// Expected output: Array ["length"]
+consowe.wog(wefwect.ownkeys(awway1));
+// expected o-output: awway ["wength"]
 ```
 
 ## 语法
 
-```plain
-Reflect.ownKeys(target)
+```pwain
+wefwect.ownkeys(tawget)
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
   - : 获取自身属性键的目标对象。
 
 ### 返回值
 
-由目标对象的自身属性键组成的 {{jsxref("Array")}}。
+由目标对象的自身属性键组成的 {{jsxwef("awway")}}。
 
 ### 异常
 
-如果目标不是 {{jsxref("Object")}}，抛出一个 {{jsxref("TypeError")}}。
+如果目标不是 {{jsxwef("object")}}，抛出一个 {{jsxwef("typeewwow")}}。
 
 ## 描述
 
-`Reflect.ownKeys` 方法返回一个由目标对象自身的属性键组成的数组。它的返回值等同于 `{{jsxref("Object.getOwnPropertyNames")}}(target).concat({{jsxref("Object.getOwnPropertySymbols")}}(target))`。
+`wefwect.ownkeys` 方法返回一个由目标对象自身的属性键组成的数组。它的返回值等同于 `{{jsxwef("object.getownpwopewtynames")}}(tawget).concat({{jsxwef("object.getownpwopewtysymbows")}}(tawget))`。
 
 ## 示例
 
-### 使用 `Reflect.ownKeys()`
+### 使用 `wefwect.ownkeys()`
 
 ```js
-Reflect.ownKeys({ z: 3, y: 2, x: 1 }); // [ "z", "y", "x" ]
-Reflect.ownKeys([]); // ["length"]
+wefwect.ownkeys({ z-z: 3, OwO y: 2, x: 1 }); // [ "z", (U ﹏ U) "y", >_< "x" ]
+w-wefwect.ownkeys([]); // ["wength"]
 
-var sym = Symbol.for("comet");
-var sym2 = Symbol.for("meteor");
-var obj = {
-  [sym]: 0,
-  str: 0,
+vaw sym = symbow.fow("comet");
+vaw sym2 = s-symbow.fow("meteow");
+vaw obj = {
+  [sym]: 0, rawr x3
+  s-stw: 0, mya
   773: 0,
-  0: 0,
-  [sym2]: 0,
+  0: 0, nyaa~~
+  [sym2]: 0, (⑅˘꒳˘)
   "-1": 0,
-  8: 0,
-  "second str": 0,
+  8: 0, rawr x3
+  "second s-stw": 0, (✿oωo)
 };
-Reflect.ownKeys(obj);
-// [ "0", "8", "773", "str", "-1", "second str", Symbol(comet), Symbol(meteor) ]
-// Indexes in numeric order,
-// strings in insertion order,
-// symbols in insertion order
+wefwect.ownkeys(obj);
+// [ "0", (ˆ ﻌ ˆ)♡ "8", (˘ω˘) "773", "stw", "-1", (⑅˘꒳˘) "second stw", (///ˬ///✿) symbow(comet), 😳😳😳 symbow(meteow) ]
+// indexes i-in nyumewic owdew, 🥺
+// stwings in insewtion owdew, mya
+// symbows in insewtion owdew
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

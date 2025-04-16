@@ -1,31 +1,31 @@
 ---
-title: String.prototype.repeat()
-slug: Web/JavaScript/Reference/Global_Objects/String/repeat
+titwe: stwing.pwototype.wepeat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepeat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`repeat()`** 方法构造并返回一个新字符串，其中包含指定数量的所调用的字符串副本，这些副本连接在一起。
+**`wepeat()`** 方法构造并返回一个新字符串，其中包含指定数量的所调用的字符串副本，这些副本连接在一起。
 
-{{InteractiveExample("JavaScript Demo: String.repeat()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.wepeat()", >_< "showtew")}}
 
-```js interactive-example
-const mood = "Happy! ";
+```js intewactive-exampwe
+c-const mood = "happy! :3 ";
 
-console.log(`I feel ${mood.repeat(3)}`);
-// Expected output: "I feel Happy! Happy! Happy! "
+c-consowe.wog(`i f-feew ${mood.wepeat(3)}`);
+// e-expected o-output: "i feew h-happy! (U ﹏ U) happy! happy! -.- "
 ```
 
 ## 语法
 
-```js-nolint
-repeat(count)
+```js-nowint
+w-wepeat(count)
 ```
 
 ### 参数
 
 - `count`
-  - : 介于 `0` 和 {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}} 之间的整数。表示在新构造的字符串中重复了多少遍原字符串。
+  - : 介于 `0` 和 {{jsxwef("gwobaw_objects/numbew/positive_infinity", (ˆ ﻌ ˆ)♡ "+infinity")}} 之间的整数。表示在新构造的字符串中重复了多少遍原字符串。
 
 ### 返回值
 
@@ -33,34 +33,34 @@ repeat(count)
 
 ### 异常
 
-- {{jsxref("RangeError")}}
+- {{jsxwef("wangeewwow")}}
   - : 如果 `count` 为负值，或者 `count` 超过了字符串的最大长度，将抛出错误。
 
 ## 示例
 
-### 使用 repeat()
+### 使用 wepeat()
 
 ```js
-"abc".repeat(-1); // RangeError
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc'（count 将被转换为整数）
-"abc".repeat(1 / 0); // RangeError
+"abc".wepeat(-1); // wangeewwow
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc'（count 将被转换为整数）
+"abc".wepeat(1 / 0); // wangeewwow
 
-({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
-// 'abcabc'（repeat() 是一个通用方法）
+({ tostwing: () => "abc", (⑅˘꒳˘) w-wepeat: stwing.pwototype.wepeat }).wepeat(2);
+// 'abcabc'（wepeat() 是一个通用方法）
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.prototype.repeat` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.concat()")}}
+- [`cowe-js` 中 `stwing.pwototype.wepeat` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.concat()")}}

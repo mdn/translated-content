@@ -1,42 +1,42 @@
 ---
-title: SourceMap
-slug: Web/HTTP/Reference/Headers/SourceMap
+titwe: souwcemap
+swug: web/http/wefewence/headews/souwcemap
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`SourceMap`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头链接生成的代码到一个 [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)，使浏览器能够重建原始的资源然后显示在调试器里。
+**`souwcemap`** [http](/zh-cn/docs/web/http) 响应头链接生成的代码到一个 [souwce m-map](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)，使浏览器能够重建原始的资源然后显示在调试器里。
 
-| Header 类型                           | {{Glossary("Response header")}} |
+| h-headew 类型                           | {{gwossawy("wesponse h-headew")}} |
 | ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| {{gwossawy("fowbidden h-headew nyame")}} | n-nyo                              |
 
 ## 语法
 
-```plain
-SourceMap: <url>
-X-SourceMap: <url> (deprecated)
+```pwain
+s-souwcemap: <uww>
+x-x-souwcemap: <uww> (depwecated)
 ```
 
 ### 指令
 
-- `<url>`
-  - : 指向一个 source map 文件的一个相对（于请求的 URL）或者一个绝对的 URL。
+- `<uww>`
+  - : 指向一个 souwce m-map 文件的一个相对（于请求的 uww）或者一个绝对的 uww。
 
 ## 例子
 
-```plain
-SourceMap: /path/to/file.js.map
+```pwain
+souwcemap: /path/to/fiwe.js.map
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Firefox Developer Tools: using a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
+- [fiwefox devewopew toows: using a souwce m-map](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)

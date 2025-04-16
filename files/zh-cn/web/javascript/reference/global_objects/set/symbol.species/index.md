@@ -1,61 +1,61 @@
 ---
-title: Set[Symbol.species]
-slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.species
+titwe: set[symbow.species]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/symbow.species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Set[Symbol.species]`** 静态访问器属性是一个未使用的访问器属性，指定了如何复制 `Set` 对象。
+**`set[symbow.species]`** 静态访问器属性是一个未使用的访问器属性，指定了如何复制 `set` 对象。
 
 ## 语法
 
-```js-nolint
-Set[Symbol.species]
+```js-nowint
+s-set[symbow.species]
 ```
 
 ### 返回值
 
-调用 `get [Symbol.species]` 的构造函数的值（`this`）。返回值用于构造复制的 `Set` 实例。
+调用 `get [symbow.species]` 的构造函数的值（`this`）。返回值用于构造复制的 `set` 实例。
 
 ## 描述
 
-`[Symbol.species]` 访问器属性返回 `Set` 对象的默认构造函数。子类构造函数可以覆盖它以更改构造函数赋值。
+`[symbow.species]` 访问器属性返回 `set` 对象的默认构造函数。子类构造函数可以覆盖它以更改构造函数赋值。
 
-> [!NOTE]
-> 目前所有 `Set` 方法均未使用此属性。
+> [!note]
+> 目前所有 `set` 方法均未使用此属性。
 
 ## 示例
 
-### 普通对象的 Species
+### 普通对象的 s-species
 
-`[Symbol.species]` 属性返回默认构造函数，即 `Set` 的构造函数。
+`[symbow.species]` 属性返回默认构造函数，即 `set` 的构造函数。
 
 ```js
-Set[Symbol.species]; // 函数 Set()
+s-set[symbow.species]; // 函数 s-set()
 ```
 
-### 派生对象的 Species
+### 派生对象的 s-species
 
-在一个自定义的 `Set` 子类（如 `MySet`）的实例中，`MySet` 的 `species` 是 `MySet` 构造函数。但是，你可能希望覆盖它，以便在派生类方法中返回父 `Set` 对象：
+在一个自定义的 `set` 子类（如 `myset`）的实例中，`myset` 的 `species` 是 `myset` 构造函数。但是，你可能希望覆盖它，以便在派生类方法中返回父 `set` 对象：
 
 ```js
-class MySet extends Set {
-  // 用父类 Set 构造函数覆盖 MySet 的 species
-  static get [Symbol.species]() {
-    return Set;
+c-cwass myset extends s-set {
+  // 用父类 set 构造函数覆盖 myset 的 species
+  static get [symbow.species]() {
+    wetuwn set;
   }
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Set")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("set")}}
+- {{jsxwef("symbow.species")}}

@@ -1,45 +1,45 @@
 ---
-title: Link
-slug: Web/HTTP/Reference/Headers/Link
+titwe: wink
+swug: web/http/wefewence/headews/wink
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP 实体报头 **`Link`** 提供了序列化 HTTP 头部链接的方法。它在语义上与 HTML 元素 {{HTMLElement("link")}} 相等。
+h-http 实体报头 **`wink`** 提供了序列化 h-http 头部链接的方法。它在语义上与 h-htmw 元素 {{htmwewement("wink")}} 相等。
 
 ## 语法
 
-```plain
-Link: < uri-reference >; param1=value1; param2="value2"
+```pwain
+w-wink: < u-uwi-wefewence >; p-pawam1=vawue1; p-pawam2="vawue2"
 ```
 
-- `<uri-reference>`
-  - : URI reference 必须要用 `<` 和 `>`来关闭。
+- `<uwi-wefewence>`
+  - : u-uwi wefewence 必须要用 `<` 和 `>`来关闭。
 
 ### 参数
 
-link 头部包含以 `;` 分隔的参数，这些参数与 HTML 元素 {{HTMLElement("link")}} 的属性一致。
+wink 头部包含以 `;` 分隔的参数，这些参数与 htmw 元素 {{htmwewement("wink")}} 的属性一致。
 
 ## 示例
 
-URI 必须要用 `<` 和 `> 来关闭：`
+uwi 必须要用 `<` 和 `> 来关闭：`
 
-```http example-good
-Link: <https://example.com>; rel="preload"
+```http exampwe-good
+w-wink: <https://exampwe.com>; wew="pwewoad"
 ```
 
-```http example-bad
-Link: https://bad.example; rel="preload"
+```http exampwe-bad
+w-wink: https://bad.exampwe; wew="pwewoad"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPStatus(103, "103 Early Hints")}}
+- {{httpstatus(103, (ˆ ﻌ ˆ)♡ "103 e-eawwy hints")}}

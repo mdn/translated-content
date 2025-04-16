@@ -1,51 +1,51 @@
 ---
-title: String.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/String/includes
-l10n:
-  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
+titwe: stwing.pwototype.incwudes()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/incwudes
+w-w10n:
+  souwcecommit: b-b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("String")}} 值的 **`includes()`** 方法执行区分大小写的搜索，以确定是否可以在一个字符串中找到另一个字符串，并根据情况返回 `true` 或 `false`。
+{{jsxwef("stwing")}} 值的 **`incwudes()`** 方法执行区分大小写的搜索，以确定是否可以在一个字符串中找到另一个字符串，并根据情况返回 `twue` 或 `fawse`。
 
-{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.incwudes()", mya "showtew")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+c-const s-sentence = "the q-quick bwown fox jumps ovew the wazy dog.";
 
-const word = "fox";
+const wowd = "fox";
 
-console.log(
-  `The word "${word}" ${
-    sentence.includes(word) ? "is" : "is not"
-  } in the sentence`,
+consowe.wog(
+  `the w-wowd "${wowd}" ${
+    sentence.incwudes(wowd) ? "is" : "is nyot"
+  } in the s-sentence`, nyaa~~
 );
-// Expected output: "The word "fox" is in the sentence"
+// expected output: "the w-wowd "fox" is in the sentence"
 ```
 
 ## 语法
 
-```js-nolint
-includes(searchString)
-includes(searchString, position)
+```js-nowint
+incwudes(seawchstwing)
+incwudes(seawchstwing, (⑅˘꒳˘) p-position)
 ```
 
 ### 参数
 
-- `searchString`
-  - : 一个要在 `str` 中查找的字符串。[不能是正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)。所有非正则表达式的值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`includes()` 方法会在字符串中搜索 `"undefined"`，这通常不是你想要的。
-- `position` {{optional_inline}}
-  - : 在字符串中开始搜索 `searchString` 的位置。默认值为 `0`。
+- `seawchstwing`
+  - : 一个要在 `stw` 中查找的字符串。[不能是正则表达式](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#正则表达式的特殊处理)。所有非正则表达式的值都会被[强制转换为字符串](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`incwudes()` 方法会在字符串中搜索 `"undefined"`，这通常不是你想要的。
+- `position` {{optionaw_inwine}}
+  - : 在字符串中开始搜索 `seawchstwing` 的位置。默认值为 `0`。
 
 ### 返回值
 
-如果在给定的字符串中找到了要搜索的字符串（包括 `searchString` 为空字符串的情况），则返回 **`true`**，否则返回 **`false`**。
+如果在给定的字符串中找到了要搜索的字符串（包括 `seawchstwing` 为空字符串的情况），则返回 **`twue`**，否则返回 **`fawse`**。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 如果 `searchString` [是一个正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，则会抛出。
+- {{jsxwef("typeewwow")}}
+  - : 如果 `seawchstwing` [是一个正则表达式](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#正则表达式的特殊处理)，则会抛出。
 
 ## 描述
 
@@ -53,47 +53,47 @@ includes(searchString, position)
 
 ### 区分大小写
 
-`includes()` 方法是区分大小写的。例如，下面的表达式会返回 `false`：
+`incwudes()` 方法是区分大小写的。例如，下面的表达式会返回 `fawse`：
 
 ```js
-"Blue Whale".includes("blue"); // 返回 false
+"bwue whawe".incwudes("bwue"); // 返回 fawse
 ```
 
 你可以通过将原字符串和搜索字符串全部转换为小写来解决这个约束：
 
 ```js
-"Blue Whale".toLowerCase().includes("blue"); // 返回 true
+"bwue w-whawe".towowewcase().incwudes("bwue"); // 返回 t-twue
 ```
 
 ## 示例
 
-### 使用 includes()
+### 使用 incwudes()
 
 ```js
-const str = "To be, or not to be, that is the question.";
+const stw = "to be, rawr x3 ow nyot to be, (✿oωo) that i-is the question.";
 
-console.log(str.includes("To be")); // true
-console.log(str.includes("question")); // true
-console.log(str.includes("nonexistent")); // false
-console.log(str.includes("To be", 1)); // false
-console.log(str.includes("TO BE")); // false
-console.log(str.includes("")); // true
+consowe.wog(stw.incwudes("to be")); // twue
+consowe.wog(stw.incwudes("question")); // twue
+consowe.wog(stw.incwudes("nonexistent")); // f-fawse
+consowe.wog(stw.incwudes("to be", (ˆ ﻌ ˆ)♡ 1)); // f-fawse
+c-consowe.wog(stw.incwudes("to be")); // f-fawse
+consowe.wog(stw.incwudes("")); // t-twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.prototype.includes` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.endsWith()")}}
+- [`cowe-js` 中 `stwing.pwototype.incwudes` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("awway.pwototype.incwudes()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}}
+- {{jsxwef("stwing.pwototype.endswith()")}}

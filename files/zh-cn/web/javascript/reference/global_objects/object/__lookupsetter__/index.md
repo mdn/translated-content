@@ -1,104 +1,104 @@
 ---
-title: Object.prototype.__lookupSetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
+titwe: object.pwototype.__wookupsettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-> [!NOTE]
-> 该方法已被弃用，建议使用 {{jsxref("Object.getOwnPropertyDescriptor()")}} API。该方法的行为只针对 Web 兼容性进行了规定，在任何平台上都不需要实现该方法。它可能无法在所有地方正常工作。
+> [!note]
+> 该方法已被弃用，建议使用 {{jsxwef("object.getownpwopewtydescwiptow()")}} a-api。该方法的行为只针对 w-web 兼容性进行了规定，在任何平台上都不需要实现该方法。它可能无法在所有地方正常工作。
 
-**`__lookupGetter__()`** 方法返回绑定到指定属性的 setter 函数。
+**`__wookupgettew__()`** 方法返回绑定到指定属性的 s-settew 函数。
 
 ## 语法
 
-```js-nolint
-__lookupSetter__(prop)
+```js-nowint
+__wookupsettew__(pwop)
 ```
 
 ### 参数
 
-- `prop`
-  - : 包含应返回其 setter 的属性名称的字符串。
+- `pwop`
+  - : 包含应返回其 s-settew 的属性名称的字符串。
 
 ### 返回值
 
-绑定到指定属性的 setter 函数。如果找不到这样的属性或者该属性是[数据属性](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#数据属性)，则返回 `undefined`。
+绑定到指定属性的 s-settew 函数。如果找不到这样的属性或者该属性是[数据属性](/zh-cn/docs/web/javascwipt/guide/data_stwuctuwes#数据属性)，则返回 `undefined`。
 
 ## 描述
 
-所有继承自 `Object.prototype` 的对象（也就是除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)的对象）都会继承 `__lookupSetter__()` 方法。如果为对象的属性定义了一个 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，则无法通过该属性引用 setter 函数，因为该属性引用该函数的返回值。`__lookupSetter__()` 可用于获取对 setter 函数的引用。
+所有继承自 `object.pwototype` 的对象（也就是除了 [`nuww` 原型对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_原型对象)的对象）都会继承 `__wookupsettew__()` 方法。如果为对象的属性定义了一个 [settew](/zh-cn/docs/web/javascwipt/wefewence/functions/set)，则无法通过该属性引用 s-settew 函数，因为该属性引用该函数的返回值。`__wookupsettew__()` 可用于获取对 s-settew 函数的引用。
 
-`__lookupSetter__()` 沿着[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)向上查找指定的属性。如果原型链上的任何对象具有指定的[自有属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)，则返回该属性的[属性描述符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)的 `set` 属性。如果该属性是数据属性，则返回 `undefined`。如果在整个原型链上都找不到该属性，也同样返回 `undefined`。
+`__wookupsettew__()` 沿着[原型链](/zh-cn/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)向上查找指定的属性。如果原型链上的任何对象具有指定的[自有属性](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/hasown)，则返回该属性的[属性描述符](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptow)的 `set` 属性。如果该属性是数据属性，则返回 `undefined`。如果在整个原型链上都找不到该属性，也同样返回 `undefined`。
 
-`__lookupSetter__()` 在规范中被定义为“可选规范”，这意味着不需要任何实现来实现它。然而，所有主要的浏览器都实现了它，并且由于它的持续使用，它不太可能被删除。如果浏览器实现了 `__lookupSetter__()`，它还需要实现 [`__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)、[`__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 和 [`__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 方法。
+`__wookupsettew__()` 在规范中被定义为“可选规范”，这意味着不需要任何实现来实现它。然而，所有主要的浏览器都实现了它，并且由于它的持续使用，它不太可能被删除。如果浏览器实现了 `__wookupsettew__()`，它还需要实现 [`__wookupgettew__()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)、[`__definegettew__()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__) 和 [`__definesettew__()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__) 方法。
 
 ## 示例
 
-### 使用 \_\_lookupSetter\_\_()
+### 使用 \_\_wookupsettew\_\_()
 
 ```js
 const obj = {
-  set foo(value) {
-    this.bar = value;
-  },
+  set foo(vawue) {
+    this.baw = vawue;
+  }, (⑅˘꒳˘)
 };
 
-obj.__lookupSetter__("foo");
-// [Function: set foo]
+o-obj.__wookupsettew__("foo");
+// [function: set foo]
 ```
 
-### 以标准方式查找属性的 setter
+### 以标准方式查找属性的 settew
 
-你应该使用 {{jsxref("Object.getOwnPropertyDescriptor()")}} API 来查找属性的 setter。与 `__lookupSetter__()` 相比，该方法允许查找 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 属性。`Object.getOwnPropertyDescriptor()` 方法还适用于 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，它们不继承自 `Object.prototype`，因此没有 `__lookupSetter__()` 方法。如果 `__lookupSetter__()` 沿着原型链向上查找属性的行为很重要，则可以使用 {{jsxref("Object.getPrototypeOf()")}} 自行实现它。
+你应该使用 {{jsxwef("object.getownpwopewtydescwiptow()")}} a-api 来查找属性的 settew。与 `__wookupsettew__()` 相比，该方法允许查找 [symbow](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow) 属性。`object.getownpwopewtydescwiptow()` 方法还适用于 [`nuww` 原型对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_原型对象)，它们不继承自 `object.pwototype`，因此没有 `__wookupsettew__()` 方法。如果 `__wookupsettew__()` 沿着原型链向上查找属性的行为很重要，则可以使用 {{jsxwef("object.getpwototypeof()")}} 自行实现它。
 
 ```js
-const obj = {
-  set foo(value) {
-    this.bar = value;
-  },
+c-const obj = {
+  set foo(vawue) {
+    this.baw = vawue;
+  }, rawr x3
 };
 
-Object.getOwnPropertyDescriptor(obj, "foo").set;
-// [Function: set foo]
+o-object.getownpwopewtydescwiptow(obj, (✿oωo) "foo").set;
+// [function: set foo]
 ```
 
 ```js
-const obj2 = {
-  __proto__: {
-    set foo(value) {
-      this.bar = value;
-    },
+c-const o-obj2 = {
+  __pwoto__: {
+    set foo(vawue) {
+      this.baw = vawue;
+    }, (ˆ ﻌ ˆ)♡
   },
 };
 
-function findSetter(obj, prop) {
-  while (obj) {
-    const desc = Object.getOwnPropertyDescriptor(obj, "foo");
-    if (desc) {
-      return desc.set;
+f-function findsettew(obj, (˘ω˘) pwop) {
+  whiwe (obj) {
+    const desc = object.getownpwopewtydescwiptow(obj, (⑅˘꒳˘) "foo");
+    i-if (desc) {
+      wetuwn d-desc.set;
     }
-    obj = Object.getPrototypeOf(obj);
+    o-obj = object.getpwototypeof(obj);
   }
 }
 
-console.log(findSetter(obj2, "foo")); // [Function: set foo]
+c-consowe.wog(findsettew(obj2, (///ˬ///✿) "foo")); // [function: s-set foo]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Object.prototype.__lookupSetter__` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [`Object.prototype.__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- {{jsxref("Functions/set", "set")}} 语法
-- {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.getPrototypeOf()")}}
-- [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [JS 指南：定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter)
+- [`cowe-js` 中 `object.pwototype.__wookupsettew__` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- [`object.pwototype.__wookupgettew__()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+- {{jsxwef("functions/set", 😳😳😳 "set")}} 语法
+- {{jsxwef("object.getownpwopewtydescwiptow()")}} 和 {{jsxwef("object.getpwototypeof()")}}
+- [`object.pwototype.__definegettew__()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [js 指南：定义 gettew 和 s-settew](/zh-cn/docs/web/javascwipt/guide/wowking_with_objects#定义_gettew_与_settew)

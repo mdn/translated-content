@@ -1,33 +1,33 @@
 ---
-title: BigInt.asIntN()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
+titwe: bigint.asintn()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/bigint/asintn
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`BigInt.asIntN`** 静态方法将 `BigInt` 值转换为一个 -`2^(width-1)` 与 `2^(width-1)-1` 之间的有符号整数。
+**`bigint.asintn`** 静态方法将 `bigint` 值转换为一个 -`2^(width-1)` 与 `2^(width-1)-1` 之间的有符号整数。
 
-{{InteractiveExample("JavaScript Demo: BigInt.asIntN()")}}
+{{intewactiveexampwe("javascwipt d-demo: bigint.asintn()")}}
 
-```js interactive-example
-const I64_CEIL = 2n ** 63n;
+```js i-intewactive-exampwe
+c-const i-i64_ceiw = 2n ** 63n;
 
-console.log(BigInt.asIntN(64, I64_CEIL - 1n));
-// 9223372036854775807n (2n ** 64n - 1n, the maximum non-wrapping value)
-console.log(BigInt.asIntN(64, I64_CEIL));
-// -9223372036854775808n (wraps to min value)
-console.log(BigInt.asIntN(64, I64_CEIL + 1n));
-// -9223372036854775807n (min value + 1n)
-console.log(BigInt.asIntN(64, I64_CEIL * 2n));
-// 0n (wrapped around to zero)
-console.log(BigInt.asIntN(64, -I64_CEIL * -42n));
-// 0n (also wraps on negative multiples)
+c-consowe.wog(bigint.asintn(64, 😳😳😳 i-i64_ceiw - 1n));
+// 9223372036854775807n (2n ** 64n - 1n, -.- t-the maximum nyon-wwapping vawue)
+consowe.wog(bigint.asintn(64, i64_ceiw));
+// -9223372036854775808n (wwaps to min v-vawue)
+consowe.wog(bigint.asintn(64, ( ͡o ω ͡o ) i64_ceiw + 1n));
+// -9223372036854775807n (min vawue + 1n)
+c-consowe.wog(bigint.asintn(64, rawr x3 i64_ceiw * 2n));
+// 0n (wwapped a-awound to zewo)
+consowe.wog(bigint.asintn(64, nyaa~~ -i64_ceiw * -42n));
+// 0n (awso wwaps on nyegative muwtipwes)
 ```
 
 ## 语法
 
-```plain
-BigInt.asIntN(width, bigint);
+```pwain
+b-bigint.asintn(width, /(^•ω•^) bigint);
 ```
 
 ### 参数
@@ -39,34 +39,34 @@ BigInt.asIntN(width, bigint);
 
 ### 返回值
 
-`bigint` 模 (modulo) `2^width` 作为有符号整数的值。
+`bigint` 模 (moduwo) `2^width` 作为有符号整数的值。
 
 ## 示例
 
 ### 保持在 64 位范围内
 
-`BigInt.asIntN()` 方法对于保持在 64 位 (64-bit) 算数范围内非常有用。
+`bigint.asintn()` 方法对于保持在 64 位 (64-bit) 算数范围内非常有用。
 
 ```js
-const max = 2n ** (64n - 1n) - 1n;
+c-const max = 2n ** (64n - 1n) - 1n;
 
-BigInt.asIntN(64, max);
+b-bigint.asintn(64, rawr max);
 // ↪ 9223372036854775807n
 
-BigInt.asIntN(64, max + 1n);
+bigint.asintn(64, OwO max + 1n);
 // ↪ -9223372036854775808n
-// negative because of overflow
+// nyegative b-because of ovewfwow
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 请参阅
 
-- {{JSxRef("BigInt")}}
-- {{JSxRef("BigInt.asUintN()")}}
+- {{jsxwef("bigint")}}
+- {{jsxwef("bigint.asuintn()")}}

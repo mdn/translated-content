@@ -1,38 +1,38 @@
 ---
-title: "Permissions-Policy: web-share"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/web-share
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: "pewmissions-powicy: web-shawe"
+swug: w-web/http/wefewence/headews/pewmissions-powicy/web-shawe
+w-w10n:
+  s-souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{httpsidebaw}}{{seecompattabwe}}
 
-HTTP {{HTTPHeader('Permissions-Policy')}} 标头的 `web-share` 指令控制当前文档是否允许使用 Web Share API 的 {{domxref("Navigator.share","Navigator.share()")}} 方法将文本、链接、图像和其他内容分享到用户选择的任意目标。
+http {{httpheadew('pewmissions-powicy')}} 标头的 `web-shawe` 指令控制当前文档是否允许使用 w-web shawe a-api 的 {{domxwef("navigatow.shawe","navigatow.shawe()")}} 方法将文本、链接、图像和其他内容分享到用户选择的任意目标。
 
-具体而言，如果定义的策略阻止使用此特性，则调用 {{domxref("Navigator.share()")}} 将以 `NotAllowedError` 类型的 {{domxref("DOMException")}} 拒绝其返回的 {{jsxref("Promise")}}。
+具体而言，如果定义的策略阻止使用此特性，则调用 {{domxwef("navigatow.shawe()")}} 将以 `notawwowedewwow` 类型的 {{domxwef("domexception")}} 拒绝其返回的 {{jsxwef("pwomise")}}。
 
 ## 语法
 
 ```http
-Permissions-Policy: web-share=<allowlist>;
+p-pewmissions-powicy: w-web-shawe=<awwowwist>;
 ```
 
-- `<allowlist>`
-  - : 允许使用该特性的来源列表。请参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#语法)了解更多详细信息。
+- `<awwowwist>`
+  - : 允许使用该特性的来源列表。请参阅 [`pewmissions-powicy` > 语法](/zh-cn/docs/web/http/wefewence/headews/pewmissions-powicy#语法)了解更多详细信息。
 
 ## 默认策略
 
-`web-share` 的默认允许列表为：`self`。
+`web-shawe` 的默认允许列表为：`sewf`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader('Permissions-Policy')}} 标头
-- [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)
+- {{httpheadew('pewmissions-powicy')}} 标头
+- [权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)

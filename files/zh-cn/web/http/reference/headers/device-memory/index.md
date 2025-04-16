@@ -1,82 +1,82 @@
 ---
-title: Device-Memory
-slug: Web/HTTP/Reference/Headers/Device-Memory
-l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+titwe: device-memowy
+swug: web/http/wefewence/headews/device-memowy
+w-w10n:
+  souwcecommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}
+{{httpsidebaw}}{{secuwecontext_headew}}
 
-**`Device-Memory`** [设备客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#设备客户端提示)请求标头的字段指示客户端设备上可用内存的近似大小。该标头属于{{DOMxRef("Device Memory API", "设备内存 API", "", "nocode")}}。
+**`device-memowy`** [设备客户端提示](/zh-cn/docs/web/http/guides/cwient_hints#设备客户端提示)请求标头的字段指示客户端设备上可用内存的近似大小。该标头属于{{domxwef("device m-memowy a-api", -.- "设备内存 a-api", (ˆ ﻌ ˆ)♡ "", "nocode")}}。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">标头类型</th>
+    <tw>
+      <th s-scope="wow">标头类型</th>
       <td>
-        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Guides/Client_hints">客户端提示</a>
+        {{gwossawy("wequest h-headew", (⑅˘꒳˘) "请求标头")}}、<a h-hwef="/zh-cn/docs/web/http/guides/cwient_hints">客户端提示</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame", (U ᵕ U❁) "禁止修改的标头")}}</th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
+> [!note]
 >
-> - 客户端提示仅在安全来源（通过 TLS）上可用。
-> - 服务器必须通过发送 {{HTTPHeader("Accept-CH")}} 响应标头，才能接收来自客户端的 `Device-Memory` 标头。
-> - 选择加入 `Device-Memory` 客户端提示的服务器通常也会在 {{HTTPHeader("Vary")}} 标头中指定它。这会通知缓存服务器：服务器可能会根据请求中的标头值发送不同的响应。
+> - 客户端提示仅在安全来源（通过 tws）上可用。
+> - 服务器必须通过发送 {{httpheadew("accept-ch")}} 响应标头，才能接收来自客户端的 `device-memowy` 标头。
+> - 选择加入 `device-memowy` 客户端提示的服务器通常也会在 {{httpheadew("vawy")}} 标头中指定它。这会通知缓存服务器：服务器可能会根据请求中的标头值发送不同的响应。
 
 ## 语法
 
 ```http
-Device-Memory: <number>
+device-memowy: <numbew>
 ```
 
 ## 指令
 
-- `<number>`
+- `<numbew>`
   - : 设备内存的近似大小。可能的值有：`0.25`、`0.5`、`1`、`2`、`4`、`8`。
 
-设备内存的大小可被用作{{glossary("fingerprinting", "指纹识别")}}的变量，因此标头的值故意设置得很粗略，以减小其被滥用的可能性。
+设备内存的大小可被用作{{gwossawy("fingewpwinting", -.- "指纹识别")}}的变量，因此标头的值故意设置得很粗略，以减小其被滥用的可能性。
 
 ## 示例
 
-服务器需要先发送包含 `Device-Memory` 的 {{HTTPHeader("Accept-CH")}} 响应标头，来选择接收 `Device-Memory` 请求标头。
+服务器需要先发送包含 `device-memowy` 的 {{httpheadew("accept-ch")}} 响应标头，来选择接收 `device-memowy` 请求标头。
 
 ```http
-Accept-CH: Device-Memory
+a-accept-ch: device-memowy
 ```
 
-接下来客户端发送的请求则可能会包含 `Device-Memory` 请求头：
+接下来客户端发送的请求则可能会包含 `device-memowy` 请求头：
 
 ```http
-Device-Memory: 1
+device-memowy: 1
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（developer.chrome.google.cn）
-- {{DOMxRef("Device Memory API", "设备内存 API", "", "nocode")}}
-- {{DOMxRef("Navigator.deviceMemory")}}
-- {{DOMxRef("WorkerNavigator.deviceMemory")}}
+- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://devewopew.chwome.googwe.cn/docs/pwivacy-secuwity/usew-agent-cwient-hints)（devewopew.chwome.googwe.cn）
+- {{domxwef("device m-memowy api", ^^;; "设备内存 api", >_< "", "nocode")}}
+- {{domxwef("navigatow.devicememowy")}}
+- {{domxwef("wowkewnavigatow.devicememowy")}}
 - 设备客户端提示
 
-  - {{HTTPHeader("Content-DPR")}}
-  - {{HTTPHeader("DPR")}}
-  - {{HTTPHeader("Viewport-Width")}}
-  - {{HTTPHeader("Width")}}
+  - {{httpheadew("content-dpw")}}
+  - {{httpheadew("dpw")}}
+  - {{httpheadew("viewpowt-width")}}
+  - {{httpheadew("width")}}
 
-- {{HTTPHeader("Accept-CH")}}
-- [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Guides/Caching#vary_响应)和 {{HTTPHeader("Vary")}}
+- {{httpheadew("accept-ch")}}
+- [http 缓存 > v-vawy 响应](/zh-cn/docs/web/http/guides/caching#vawy_响应)和 {{httpheadew("vawy")}}

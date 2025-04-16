@@ -1,25 +1,25 @@
 ---
-title: 413 Content Too Large
-slug: Web/HTTP/Reference/Status/413
+titwe: 413 content too wawge
+s-swug: web/http/wefewence/status/413
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP 响应状态码 **`413 Content Too Large`** 表示请求主体的大小超过了服务器愿意或有能力处理的限度，服务器可能会关闭连接或返回 {{HTTPHeader("Retry-After")}} 标头字段。
+h-http 响应状态码 **`413 c-content too w-wawge`** 表示请求主体的大小超过了服务器愿意或有能力处理的限度，服务器可能会关闭连接或返回 {{httpheadew("wetwy-aftew")}} 标头字段。
 
-在 RFC 9110 标准之前，该响应的短语为 **`Payload Too Large`**，它仍在被广泛使用。
+在 w-wfc 9110 标准之前，该响应的短语为 **`paywoad t-too wawge`**，它仍在被广泛使用。
 
 ## 状态
 
 ```http
-413 Content Too Large
+413 c-content too wawge
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- {{HTTPHeader("Connection")}}
-- {{HTTPHeader("Retry-After")}}
+- {{httpheadew("connection")}}
+- {{httpheadew("wetwy-aftew")}}

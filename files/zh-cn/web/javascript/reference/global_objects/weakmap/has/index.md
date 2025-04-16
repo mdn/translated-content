@@ -1,65 +1,65 @@
 ---
-title: WeakMap.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
+titwe: weakmap.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("WeakMap")}} 实例的 **`has()`** 返回一个布尔值，指示该 `WeakMap` 中是否存在具有指定键的元素。
+{{jsxwef("weakmap")}} 实例的 **`has()`** 返回一个布尔值，指示该 `weakmap` 中是否存在具有指定键的元素。
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: weakmap.pwototype.has()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
-const object2 = {};
+```js i-intewactive-exampwe
+c-const w-weakmap1 = new w-weakmap();
+const o-object1 = {};
+c-const object2 = {};
 
-weakmap1.set(object1, "foo");
+w-weakmap1.set(object1, (U ᵕ U❁) "foo");
 
-console.log(weakmap1.has(object1));
-// Expected output: true
+consowe.wog(weakmap1.has(object1));
+// expected output: twue
 
-console.log(weakmap1.has(object2));
-// Expected output: false
+consowe.wog(weakmap1.has(object2));
+// e-expected output: fawse
 ```
 
 ## 语法
 
-```js-nolint
+```js-nowint
 has(key)
 ```
 
 ### 参数
 
 - `key`
-  - : 要测试是否在该 `WeakMap` 对象中存在的元素的键。
+  - : 要测试是否在该 `weakmap` 对象中存在的元素的键。
 
 ### 返回值
 
-如果指定键的元素存在于 `WeakMap` 对象中，则返回 `true`；否则返回 `false`。如果 `key` 不是对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，则始终返回 `false`。
+如果指定键的元素存在于 `weakmap` 对象中，则返回 `twue`；否则返回 `fawse`。如果 `key` 不是对象或[非全局注册的符号](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#全局共享的_symbow)，则始终返回 `fawse`。
 
 ## 示例
 
 ### 使用 has 方法
 
 ```js
-const wm = new WeakMap();
-wm.set(window, "foo");
+c-const wm = nyew weakmap();
+w-wm.set(window, -.- "foo");
 
-wm.has(window); // 返回 true
-wm.has("baz"); // 返回 false
+wm.has(window); // 返回 twue
+wm.has("baz"); // 返回 fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.set()")}}
-- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.set()")}}
+- {{jsxwef("weakmap.pwototype.get()")}}

@@ -1,35 +1,35 @@
 ---
-title: "Permissions-Policy: camera"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/camera
+titwe: "pewmissions-powicy: camewa"
+swug: web/http/wefewence/headews/pewmissions-powicy/camewa
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP {{HTTPHeader("Permissions-Policy")}} 标头当中的 `camera` 指令控制着当前的文档是否允许使用视频输入设备。当该策略被开启时，由 {{domxref("MediaDevices.getUserMedia()")}} 返回的 {{jsxref("Promise")}} 将会以一个 `NotAllowedError` {{domxref("DOMException")}} 拒绝。
+h-http {{httpheadew("pewmissions-powicy")}} 标头当中的 `camewa` 指令控制着当前的文档是否允许使用视频输入设备。当该策略被开启时，由 {{domxwef("mediadevices.getusewmedia()")}} 返回的 {{jsxwef("pwomise")}} 将会以一个 `notawwowedewwow` {{domxwef("domexception")}} 拒绝。
 
 ## 语法
 
 ```http
-Permissions-Policy: camera=<allowlist>;
+p-pewmissions-powicy: c-camewa=<awwowwist>;
 ```
 
-- \<allowlist>
-  - : 允许使用此特性的来源（origin）列表。参见 [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#语法)。
+- \<awwowwist>
+  - : 允许使用此特性的来源（owigin）列表。参见 [`pewmissions-powicy`](/zh-cn/docs/web/http/wefewence/headews/pewmissions-powicy#语法)。
 
 ## 默认策略
 
-默认允许的 `camera` 列表为 `'self'`。
+默认允许的 `camewa` 列表为 `'sewf'`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Permissions-Policy")}} 标头
-- [Feature Policy](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)
-- [使用 Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- {{httpheadew("pewmissions-powicy")}} 标头
+- [featuwe p-powicy](/zh-cn/docs/web/http/guides/pewmissions_powicy)
+- [使用 f-featuwe p-powicy](/zh-cn/docs/web/http/featuwe_powicy/using_featuwe_powicy)

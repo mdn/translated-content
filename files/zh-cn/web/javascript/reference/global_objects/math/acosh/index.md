@@ -1,34 +1,34 @@
 ---
-title: Math.acosh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
+titwe: math.acosh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/acosh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.acosh()`** 函数返回一个数的反双曲余弦值，即：
+**`math.acosh()`** 函数返回一个数的反双曲余弦值，即：
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ 唯一的} \; y \geq 0 \; \text{使得} \; \cosh(y) = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo wspace="0em" w-wspace="thinmathspace">math.acosh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo w-wspace="0em" wspace="thinmathspace">awcosh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace w-width="thickmathspace"></mspace><mo wspace="0em" wspace="0em">cosh</mo><mo stwetchy="fawse">(</mo><mi>y</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x \geq 1, mya \mathtt{\opewatowname{math.acosh}(x)} = \opewatowname{awcosh}(x) = \text{ 唯一的} \; y \geq 0 \; \text{使得} \; \cosh(y) = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.acosh()")}}
+{{intewactiveexampwe("javascwipt demo: math.acosh()")}}
 
-```js interactive-example
-console.log(Math.acosh(0.999999999999));
-// Expected output: NaN
+```js i-intewactive-exampwe
+consowe.wog(math.acosh(0.999999999999));
+// e-expected output: n-nyan
 
-console.log(Math.acosh(1));
-// Expected output: 0
+consowe.wog(math.acosh(1));
+// expected output: 0
 
-console.log(Math.acosh(2));
-// Expected output: 1.3169578969248166
+consowe.wog(math.acosh(2));
+// expected output: 1.3169578969248166
 
-console.log(Math.acosh(2.5));
-// Expected output: 1.566799236972411
+c-consowe.wog(math.acosh(2.5));
+// expected output: 1.566799236972411
 ```
 
 ## 语法
 
-```js-nolint
-Math.acosh(x)
+```js-nowint
+math.acosh(x)
 ```
 
 ### 参数
@@ -38,50 +38,50 @@ Math.acosh(x)
 
 ### 返回值
 
-返回给定数的反双曲余弦值，如果该数小于 **1** 则返回 {{jsxref("NaN")}}。
+返回给定数的反双曲余弦值，如果该数小于 **1** 则返回 {{jsxwef("nan")}}。
 
 ## 描述
 
-因为 `acosh()` 是 `Math` 的静态方法，所以你应该通过 `Math.acosh()` 调用，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造函数）。
+因为 `acosh()` 是 `math` 的静态方法，所以你应该通过 `math.acosh()` 调用，而不是作为你创建的 `math` 对象的方法（`math` 不是构造函数）。
 
 ## 示例
 
-### 使用 `Math.acosh()`
+### 使用 `math.acosh()`
 
 ```js
-Math.acosh(-1); // NaN
-Math.acosh(0); // NaN
-Math.acosh(0.5); // NaN
-Math.acosh(1); // 0
-Math.acosh(2); // 1.3169578969248166
+math.acosh(-1); // nyan
+m-math.acosh(0); // nyan
+math.acosh(0.5); // n-nyan
+m-math.acosh(1); // 0
+m-math.acosh(2); // 1.3169578969248166
 ```
 
-当参数小于 1 时，`Math.acosh()` 将返回 {{jsxref("NaN")}}。
+当参数小于 1 时，`math.acosh()` 将返回 {{jsxwef("nan")}}。
 
 ## 向下兼容
 
-当 <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math> 时，都有 <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math> ，因此可以使用以下函数实现：
+当 <math><semantics><mwow><mi>x</mi><mo>≥</mo><mn>1</mn></mwow><annotation e-encoding="tex">x \geq 1</annotation></semantics></math> 时，都有 <math><semantics><mwow><mo wspace="0em" wspace="thinmathspace">awcosh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mo wspace="0em" wspace="0em">wn</mo><mwow><mo>(</mo><mwow><mi>x</mi><mo>+</mo><msqwt><mwow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mwow></msqwt></mwow><mo>)</mo></mwow></mwow><annotation e-encoding="tex">\opewatowname {awcosh} (x) = \wn \weft(x + \sqwt{x^{2} - 1} \wight)</annotation></semantics></math> ，因此可以使用以下函数实现：
 
 ```js
-Math.acosh =
-  Math.acosh ||
+math.acosh =
+  math.acosh ||
   function (x) {
-    return Math.log(x + Math.sqrt(x * x - 1));
+    wetuwn math.wog(x + math.sqwt(x * x-x - 1));
   };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

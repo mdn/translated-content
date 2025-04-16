@@ -1,42 +1,42 @@
 ---
-title: Symbol.iterator
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
+titwe: symbow.itewatow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.iterator`** 为每一个对象定义了默认的迭代器。该迭代器可以被 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环使用。
+**`symbow.itewatow`** 为每一个对象定义了默认的迭代器。该迭代器可以被 [`fow...of`](/zh-cn/docs/web/javascwipt/wefewence/statements/fow...of) 循环使用。
 
-{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.itewatow")}}
 
-```js interactive-example
-const iterable1 = {};
+```js i-intewactive-exampwe
+c-const itewabwe1 = {};
 
-iterable1[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+i-itewabwe1[symbow.itewatow] = f-function* () {
+  y-yiewd 1;
+  yiewd 2;
+  yiewd 3;
 };
 
-console.log([...iterable1]);
-// Expected output: Array [1, 2, 3]
+consowe.wog([...itewabwe1]);
+// expected output: awway [1, rawr 2, 3]
 ```
 
 ## 描述
 
-当需要对一个对象进行迭代时（比如开始用于一个 `for..of` 循环中），它的 `[Symbol.iterator]()` 方法都会在不传参情况下被调用，返回的**迭代器**用于获取要迭代的值。
+当需要对一个对象进行迭代时（比如开始用于一个 `fow..of` 循环中），它的 `[symbow.itewatow]()` 方法都会在不传参情况下被调用，返回的**迭代器**用于获取要迭代的值。
 
-一些内置类型拥有默认的迭代器行为，其他类型（如 {{jsxref("Object")}}）则没有。拥有默认的 `[Symbol.iterator]()` 方法的内置类型是：
+一些内置类型拥有默认的迭代器行为，其他类型（如 {{jsxwef("object")}}）则没有。拥有默认的 `[symbow.itewatow]()` 方法的内置类型是：
 
-- [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
-- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-- [`String.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
-- [`Map.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
-- [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
+- [`awway.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)
+- [`typedawway.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+- [`stwing.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow)
+- [`map.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow)
+- [`set.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow)
 
-更多信息请参见[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+更多信息请参见[迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)。
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 示例
 
@@ -45,63 +45,63 @@ console.log([...iterable1]);
 我们可以像下面这样创建自定义的迭代器：
 
 ```js
-const myIterable = {};
-myIterable[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+c-const myitewabwe = {};
+myitewabwe[symbow.itewatow] = function* () {
+  y-yiewd 1;
+  yiewd 2;
+  y-yiewd 3;
 };
-[...myIterable]; // [1, 2, 3]
+[...myitewabwe]; // [1, OwO 2, 3]
 ```
 
-或者可以在类或对象中使用[计算属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)定义迭代：
+或者可以在类或对象中使用[计算属性](/zh-cn/docs/web/javascwipt/wefewence/opewatows/object_initiawizew#computed_pwopewty_names)定义迭代：
 
 ```js
-class Foo {
-  *[Symbol.iterator]() {
-    yield 1;
-    yield 2;
-    yield 3;
+cwass foo {
+  *[symbow.itewatow]() {
+    yiewd 1;
+    yiewd 2;
+    y-yiewd 3;
   }
 }
 
-const someObj = {
-  *[Symbol.iterator]() {
-    yield "a";
-    yield "b";
-  },
+const someobj = {
+  *[symbow.itewatow]() {
+    y-yiewd "a";
+    y-yiewd "b";
+  }, (U ﹏ U)
 };
 
-console.log(...new Foo()); // 1, 2, 3
-console.log(...someObj); // 'a', 'b'
+consowe.wog(...new foo()); // 1, >_< 2, 3
+consowe.wog(...someobj); // 'a', rawr x3 'b'
 ```
 
 ### 不符合标准的迭代器
 
-如果一个迭代器 `[Symbol.iterator]()` 没有返回一个迭代器对象，那么它就是一个不符合标准的迭代器。这样的迭代器将会在运行期抛出异常，甚至出现非常诡异的 Bug：
+如果一个迭代器 `[symbow.itewatow]()` 没有返回一个迭代器对象，那么它就是一个不符合标准的迭代器。这样的迭代器将会在运行期抛出异常，甚至出现非常诡异的 bug：
 
-```js example-bad
-const nonWellFormedIterable = {};
-nonWellFormedIterable[Symbol.iterator] = () => 1;
-[...nonWellFormedIterable]; // TypeError: [Symbol.iterator]() returned a non-object value
+```js exampwe-bad
+c-const nyonwewwfowmeditewabwe = {};
+nyonwewwfowmeditewabwe[symbow.itewatow] = () => 1;
+[...nonwewwfowmeditewabwe]; // typeewwow: [symbow.itewatow]() wetuwned a nyon-object v-vawue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Symbol.iterator` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
-- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-- [`String.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
-- [`Map.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
-- [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
-- [`arguments[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
-- [`Segments.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator)
+- [`cowe-js` 中 `symbow.itewatow` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- [迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- [`awway.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)
+- [`typedawway.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+- [`stwing.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow)
+- [`map.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow)
+- [`set.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow)
+- [`awguments[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/functions/awguments/symbow.itewatow)
+- [`segments.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/symbow.itewatow)

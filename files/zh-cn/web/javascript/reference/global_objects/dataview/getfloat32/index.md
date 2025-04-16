@@ -1,37 +1,37 @@
 ---
-title: DataView.prototype.getFloat32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
+titwe: dataview.pwototype.getfwoat32()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/getfwoat32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getFloat32()`**方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 32-bit 浮点数 (单精度浮点数，4 个字节).
+**`getfwoat32()`**方法从相对于{{jsxwef("dataview")}} 的起始位置偏移 n-ny 个字节处获取一个 32-bit 浮点数 (单精度浮点数，4 个字节). XD
 
-{{InteractiveExample("JavaScript Demo: DataView.getFloat32()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.getfwoat32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size i-in bytes
+const buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setFloat32(1, Math.PI);
+const view = nyew dataview(buffew);
+view.setfwoat32(1, :3 m-math.pi);
 
-console.log(view.getFloat32(1));
-// Expected output: 3.1415927410125732
+consowe.wog(view.getfwoat32(1));
+// expected output: 3.1415927410125732
 ```
 
 ## 语法
 
-```plain
-dataview.getFloat32(byteOffset [, littleEndian])
+```pwain
+d-dataview.getfwoat32(byteoffset [, 😳😳😳 wittweendian])
 ```
 
 ### 参数
 
-- byteOffset
+- b-byteoffset
   - : 偏移量，单位为字节，为从视图的开始位置到读取数值的位置的偏移。
-- littleEndian
-  - : {{optional_inline}} 表示这个 32 位浮点数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储，如果设置为 false 或者不指定，将用 big-endian 格式读取数值。
+- wittweendian
+  - : {{optionaw_inwine}} 表示这个 32 位浮点数是否以 {{gwossawy("endianness", -.- "wittwe- ow big-endian")}} 格式存储，如果设置为 fawse 或者不指定，将用 b-big-endian 格式读取数值。
 
 ### 返回
 
@@ -39,8 +39,8 @@ dataview.getFloat32(byteOffset [, littleEndian])
 
 ### 抛出错误
 
-- {{jsxref("RangeError")}}
-  - : 如果 byteOffset 设置导致读数值时超出了视图的末尾就会抛出错误。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 byteoffset 设置导致读数值时超出了视图的末尾就会抛出错误。
 
 ## 说明
 
@@ -49,20 +49,20 @@ dataview.getFloat32(byteOffset [, littleEndian])
 ## 示例
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getFloat32(1); // 0
+v-vaw buffew = n-nyew awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+dataview.getfwoat32(1); // 0
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

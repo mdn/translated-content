@@ -1,29 +1,29 @@
 ---
-title: 加法赋值（+=）
-slug: Web/JavaScript/Reference/Operators/Addition_assignment
+titwe: 加法赋值（+=）
+swug: web/javascwipt/wefewence/opewatows/addition_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 加法赋值运算符（`+=`）将右操作数的值添加到变量，并将结果分配给该变量。两个操作数的类型决定了加法赋值运算符的行为，可能为加法或拼接。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - a-addition a-assignment opewatow")}}
 
-```js interactive-example
-let a = 2;
-let b = "hello";
+```js i-intewactive-exampwe
+w-wet a = 2;
+wet b-b = "hewwo";
 
-console.log((a += 3)); // Addition
-// Expected output: 5
+c-consowe.wog((a += 3)); // a-addition
+// expected output: 5
 
-console.log((b += " world")); // Concatenation
-// Expected output: "hello world"
+consowe.wog((b += " wowwd")); // concatenation
+// expected o-output: "hewwo wowwd"
 ```
 
 ## 语法
 
-```js-nolint
-x += y // x = x + y
+```js-nowint
+x += y // x-x = x + y
 ```
 
 ## 示例
@@ -31,44 +31,44 @@ x += y // x = x + y
 ### 使用加法赋值
 
 ```js
-let baz = true;
+wet baz = t-twue;
 
-// Boolean + Number -> 加法
+// boowean + nyumbew -> 加法
 baz += 1; // 2
 
-// Number + Boolean -> 加法
-baz += false; // 2
+// nyumbew + b-boowean -> 加法
+baz += f-fawse; // 2
 ```
 
 ```js
-let foo = "foo";
+w-wet foo = "foo";
 
-// String + Boolean -> 拼接
-foo += false; // "foofalse"
+// stwing + boowean -> 拼接
+foo += fawse; // "foofawse"
 
-// String + String -> 拼接
-foo += "bar"; // "foofalsebar"
+// stwing + s-stwing -> 拼接
+foo += "baw"; // "foofawsebaw"
 ```
 
 ```js
-let bar = 5;
+wet baw = 5;
 
-// Number + Number -> 加法
-bar += 2; // 7
+// nyumbew + nyumbew -> 加法
+b-baw += 2; // 7
 
-// Number + String -> 拼接
-bar += "foo"; // "7foo"
+// nyumbew + s-stwing -> 拼接
+b-baw += "foo"; // "7foo"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
-- [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [js 指南中的赋值运算符](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#赋值运算符)
+- [加法运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/addition)

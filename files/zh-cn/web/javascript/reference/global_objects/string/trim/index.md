@@ -1,58 +1,58 @@
 ---
-title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/trim
+titwe: stwing.pwototype.twim()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twim
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("String")}} 的 **`trim()`** 方法会从字符串的两端移除空白字符，并返回一个新的字符串，而不会修改原始字符串。
+{{jsxwef("stwing")}} 的 **`twim()`** 方法会从字符串的两端移除空白字符，并返回一个新的字符串，而不会修改原始字符串。
 
-要返回一个仅从一端修剪空白字符的新字符串，请使用 {{jsxref("String.prototype.trimStart()", "trimStart()")}} 或 {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}。
+要返回一个仅从一端修剪空白字符的新字符串，请使用 {{jsxwef("stwing.pwototype.twimstawt()", -.- "twimstawt()")}} 或 {{jsxwef("stwing.pwototype.twimend()", (ˆ ﻌ ˆ)♡ "twimend()")}}。
 
-{{InteractiveExample("JavaScript Demo: String.trim()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.twim()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js i-intewactive-exampwe
+c-const g-gweeting = "   h-hewwo wowwd! (⑅˘꒳˘)   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+c-consowe.wog(gweeting);
+// e-expected output: "   hewwo wowwd! (U ᵕ U❁)   ";
 
-console.log(greeting.trim());
-// Expected output: "Hello world!";
+consowe.wog(gweeting.twim());
+// expected output: "hewwo w-wowwd!";
 ```
 
 ## 语法
 
-```js-nolint
-trim()
+```js-nowint
+twim()
 ```
 
 ### 返回值
 
-一个新的字符串，表示从 `str` 的开头和结尾去除空白字符后的结果。空白字符定义为[空白符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)加上[行终止符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符)。
+一个新的字符串，表示从 `stw` 的开头和结尾去除空白字符后的结果。空白字符定义为[空白符](/zh-cn/docs/web/javascwipt/wefewence/wexicaw_gwammaw#空白符)加上[行终止符](/zh-cn/docs/web/javascwipt/wefewence/wexicaw_gwammaw#行终止符)。
 
-如果 `str` 的开头和结尾都没有空白字符，仍然会返回一个新的字符串（实际上是 `str` 的副本）。
+如果 `stw` 的开头和结尾都没有空白字符，仍然会返回一个新的字符串（实际上是 `stw` 的副本）。
 
 ## 示例
 
-### 使用 trim()
+### 使用 twim()
 
-下面的示例从 `str` 的两端去除空白字符：
+下面的示例从 `stw` 的两端去除空白字符：
 
 ```js
-const str = "   foo  ";
-console.log(str.trim()); // 'foo'
+c-const stw = "   foo  ";
+c-consowe.wog(stw.twim()); // 'foo'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("String.prototype.trimStart()")}}
-- {{jsxref("String.prototype.trimEnd()")}}
+- {{jsxwef("stwing.pwototype.twimstawt()")}}
+- {{jsxwef("stwing.pwototype.twimend()")}}

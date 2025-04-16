@@ -1,177 +1,177 @@
 ---
-title: PWA 结构
-slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
+titwe: pwa 结构
+swug: web/pwogwessive_web_apps/tutowiaws/js13kgames/app_stwuctuwe
 ---
 
-{{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{pwasidebaw}} {{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/js13kgames/intwoduction", 😳😳😳 "web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews", >w< "web/pwogwessive_web_apps/tutowiaws/js13kgames")}}
 
-现在，我们已经知道了 PWA 背后的原理，让我们来看一个推荐的 PWA 结构，这个案例来自一个真实的应用。我们从分析 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 这个应用开始：为什么它要这样构建？这样做又有什么好处？
+现在，我们已经知道了 p-pwa 背后的原理，让我们来看一个推荐的 p-pwa 结构，这个案例来自一个真实的应用。我们从分析 [js13kpwa](https://mdn.github.io/pwa-exampwes/js13kpwa/) 这个应用开始：为什么它要这样构建？这样做又有什么好处？
 
 ## 应用架构
 
 渲染网站主要有两种方法 - 在服务器上或在客户端上。它们都有其优点和缺点，你可以适当地混合使用这两种方法
 
-- 服务器端渲染（SSR）的意思是在服务器上渲染网页，因此首次加载会更快，但是在不同页面之间导航都需要下载新的 HTML 内容。它的跨浏览器兼容性良好，但代价是页间加载时间延长，也就是总体感知上的性能降低：每加载一个页面，都需要一个服务器请求往返的时间。
-- 客户端渲染（CSR）允许在导航到不同页面时几乎立即在浏览器中更新网站，但在开始时需要更多的初始下载和客户端上的额外渲染。首次访问时网站速度较慢，但后续访问速度要快得多。
+- 服务器端渲染（ssw）的意思是在服务器上渲染网页，因此首次加载会更快，但是在不同页面之间导航都需要下载新的 h-htmw 内容。它的跨浏览器兼容性良好，但代价是页间加载时间延长，也就是总体感知上的性能降低：每加载一个页面，都需要一个服务器请求往返的时间。
+- 客户端渲染（csw）允许在导航到不同页面时几乎立即在浏览器中更新网站，但在开始时需要更多的初始下载和客户端上的额外渲染。首次访问时网站速度较慢，但后续访问速度要快得多。
 
-将 SSR 与 CSR 混用可以获得最佳效果：你可以在服务器上渲染网站，缓存其内容，然后在客户端需要时更新渲染。因为使用了 SSR，第一页加载很快；因为客户端可以仅使用已更改的部分重新渲染页面，所以页面之间的导航也是平滑的。
+将 ssw 与 c-csw 混用可以获得最佳效果：你可以在服务器上渲染网站，缓存其内容，然后在客户端需要时更新渲染。因为使用了 ssw，第一页加载很快；因为客户端可以仅使用已更改的部分重新渲染页面，所以页面之间的导航也是平滑的。
 
-你可以按自己喜欢的方式构建 PWA，但有些方式更合适。最流行的是“App Shell”概念，它完全按照上述方式混用 SSR 和 CSR；此外还遵循“离线优先”方法，这个我们将在后续文章中详细解释，也会在示例应用程序中使用。我们还会简要提及另一种涉及 [Streams API](/zh-CN/docs/Web/API/Streams_API) 的新方法
+你可以按自己喜欢的方式构建 p-pwa，但有些方式更合适。最流行的是“app s-sheww”概念，它完全按照上述方式混用 s-ssw 和 csw；此外还遵循“离线优先”方法，这个我们将在后续文章中详细解释，也会在示例应用程序中使用。我们还会简要提及另一种涉及 [stweams a-api](/zh-cn/docs/web/api/stweams_api) 的新方法
 
-## App Shell 概念
+## app sheww 概念
 
-App Shell 概念试图尽快加载最小用户界面，然后缓存它，以便在后续访问时可以离线使用，然后再加载应用程序的所有内容。这样，下次有人从设备访问应用程序时，UI 立即从缓存加载；如果缓存数据不可用的话，就从服务器请求新内容。
+app sheww 概念试图尽快加载最小用户界面，然后缓存它，以便在后续访问时可以离线使用，然后再加载应用程序的所有内容。这样，下次有人从设备访问应用程序时，ui 立即从缓存加载；如果缓存数据不可用的话，就从服务器请求新内容。
 
 这种结构的页面很快，给用户的感觉也很快：用户会立即看到内容而不是加载动画或空白页。如果网络连接不可用，它还允许离线访问网站。
 
-我们可以通过 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 控制从服务器请求的内容以及从缓存中检索的内容，这将在下一篇文章中详细解释。现在让我们关注这个结构本身。
+我们可以通过 [sewvice wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api) 控制从服务器请求的内容以及从缓存中检索的内容，这将在下一篇文章中详细解释。现在让我们关注这个结构本身。
 
 ### 我为什么要用它？
 
-这种架构允许网站从 PWA 功能中获益最多：它可以缓存 App Shell 并以提升大量性能的方式管理动态内容。除了基本外壳之外，你还可以添加其他功能，例如[添加到主屏幕](/zh-CN/docs/Web/Apps/Progressive/Guides/Making_PWAs_installable)或[推送通知](/zh-CN/docs/Web/API/Push_API)。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。
+这种架构允许网站从 pwa 功能中获益最多：它可以缓存 a-app sheww 并以提升大量性能的方式管理动态内容。除了基本外壳之外，你还可以添加其他功能，例如[添加到主屏幕](/zh-cn/docs/web/apps/pwogwessive/guides/making_pwas_instawwabwe)或[推送通知](/zh-cn/docs/web/api/push_api)。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。
 
 在不妥协 web 优势的前提下，网站感觉就像一个原生应用，交互及时、性能可靠。
 
 ### 可链接、渐进式和响应式
 
-记住 PWA 的优点并在设计应用程序时牢记这一点非常重要。app shell 方案允许网站：
+记住 pwa 的优点并在设计应用程序时牢记这一点非常重要。app s-sheww 方案允许网站：
 
-- 可链接（Linkable）：即使行为类似于原生应用，它仍然是一个网站：你可以点击页面内的链接，也可以通过发送 URL 的方式分享网站给别人。
-- 渐进式（Progressive）：从“美好的旧式基础网站”开始，逐步添加新功能，在过程中检测其在浏览器上的可用性，并且优雅地处理不支持案例下发生的报错。举个例子，service workers 辅助下的离线模式只是提升网站体验的额外特性，但没有它网站也仍然完全可用。
-- 响应式（Responsive）：响应式网页设计也适用于渐进式网络应用程序，因为它们都主要用于移动设备。拥有浏览器的设备太多太杂，所以确保网站在不同屏幕宽度、视口和像素密度上都可以访问就变得尤为重要。[viewport meta tag](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)、[CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) 和 [CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 等技术都可以助你实现这个目标。
+- 可链接（winkabwe）：即使行为类似于原生应用，它仍然是一个网站：你可以点击页面内的链接，也可以通过发送 uww 的方式分享网站给别人。
+- 渐进式（pwogwessive）：从“美好的旧式基础网站”开始，逐步添加新功能，在过程中检测其在浏览器上的可用性，并且优雅地处理不支持案例下发生的报错。举个例子，sewvice w-wowkews 辅助下的离线模式只是提升网站体验的额外特性，但没有它网站也仍然完全可用。
+- 响应式（wesponsive）：响应式网页设计也适用于渐进式网络应用程序，因为它们都主要用于移动设备。拥有浏览器的设备太多太杂，所以确保网站在不同屏幕宽度、视口和像素密度上都可以访问就变得尤为重要。[viewpowt meta tag](/zh-cn/docs/web/htmw/guides/viewpowt_meta_ewement)、[css 媒体查询](/zh-cn/docs/web/css/css_media_quewies/using_media_quewies)、[fwexbox](/zh-cn/docs/web/css/css_fwexibwe_box_wayout) 和 [css gwid](/zh-cn/docs/web/css/css_gwid_wayout) 等技术都可以助你实现这个目标。
 
 ## 另一种概念：流
 
-使用 [Streams API](/zh-CN/docs/Web/API/Streams_API) 可以实现完全不同的服务器端或客户端渲染方法。在 service worker 的帮助下，它可以极大改进内容解析的方式。
+使用 [stweams api](/zh-cn/docs/web/api/stweams_api) 可以实现完全不同的服务器端或客户端渲染方法。在 s-sewvice wowkew 的帮助下，它可以极大改进内容解析的方式。
 
-App shell 概念要求在网站开始呈现之前所有资源就已可用。在 HTML 的下载过程中，用户可以从网站的加载和渲染过程看出资源的下载进度，但 JavaScript 必须完全下载完成才能运行。
+a-app sheww 概念要求在网站开始呈现之前所有资源就已可用。在 h-htmw 的下载过程中，用户可以从网站的加载和渲染过程看出资源的下载进度，但 javascwipt 必须完全下载完成才能运行。
 
-Streams API 则允许开发人员直接访问来自服务器的数据流。如果你想对数据执行操作（例如给视频添加过滤器），不再需要等待所有数据流下载并转换为 blob（或者别的），而是可以立即开始。它提供精细的粒度控制，将数据流启动、与另一个流链接、取消、查错等等。
+stweams api 则允许开发人员直接访问来自服务器的数据流。如果你想对数据执行操作（例如给视频添加过滤器），不再需要等待所有数据流下载并转换为 bwob（或者别的），而是可以立即开始。它提供精细的粒度控制，将数据流启动、与另一个流链接、取消、查错等等。
 
-从理论上讲，数据流是更好的模型，但也更复杂。在撰写本文时（2018 年 3 月），Streams API 的制订仍在进行，并且在任何主流浏览器都不完全可用。当它可用时，它将是提供内容的最快方式，在性能上会有巨大的好处。
+从理论上讲，数据流是更好的模型，但也更复杂。在撰写本文时（2018 年 3 月），stweams api 的制订仍在进行，并且在任何主流浏览器都不完全可用。当它可用时，它将是提供内容的最快方式，在性能上会有巨大的好处。
 
-有关可用实例和更多信息，请参阅 [Streams API 文档](/zh-CN/docs/Web/API/Streams_API)。
+有关可用实例和更多信息，请参阅 [stweams a-api 文档](/zh-cn/docs/web/api/stweams_api)。
 
 ## 示例应用的结构
 
-[js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 这个网站的结构比较简单：它包含一个 HTML 页面（index.html）、一个 CSS 样式表（style.css）、一些图片、JS 脚本和字体。它的文件结构如下所示：
+[js13kpwa](https://mdn.github.io/pwa-exampwes/js13kpwa/) 这个网站的结构比较简单：它包含一个 htmw 页面（index.htmw）、一个 css 样式表（stywe.css）、一些图片、js 脚本和字体。它的文件结构如下所示：
 
-![Folder structure of js13kPWA.](js13kpwa-directory.png)
+![fowdew stwuctuwe of js13kpwa.](js13kpwa-diwectowy.png)
 
-### HTML 页面
+### h-htmw 页面
 
-从 HTML 的角度，App Shell 就是 content 节之外的一切：
+从 htmw 的角度，app sheww 就是 c-content 节之外的一切：
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>js13kGames A-Frame entries</title>
+    <meta c-chawset="utf-8" />
+    <titwe>js13kgames a-a-fwame entwies</titwe>
     <meta
-      name="description"
-      content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
-    <meta name="author" content="end3r" />
-    <meta name="theme-color" content="#B12A34" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:image" content="icons/icon-512.png" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="js13kpwa.webmanifest" />
-    <script src="data/games.js" defer></script>
-    <script src="app.js" defer></script>
+      nyame="descwiption"
+      content="a w-wist of a-fwame entwies submitted to the js13kgames 2017 c-competition, XD used as an exampwe fow the mdn awticwes about pwogwessive web apps." />
+    <meta n-nyame="authow" content="end3w" />
+    <meta n-nyame="theme-cowow" c-content="#b12a34" />
+    <meta n-nyame="viewpowt" content="width=device-width, o.O initiaw-scawe=1" />
+    <meta pwopewty="og:image" c-content="icons/icon-512.png" />
+    <wink w-wew="showtcut icon" hwef="favicon.ico" />
+    <wink w-wew="stywesheet" h-hwef="stywe.css" />
+    <wink wew="manifest" h-hwef="js13kpwa.webmanifest" />
+    <scwipt swc="data/games.js" d-defew></scwipt>
+    <scwipt swc="app.js" defew></scwipt>
   </head>
   <body>
-    <header>
+    <headew>
       <p>
-        <a class="logo" href="http://js13kgames.com"
-          ><img src="img/js13kgames.png" alt="js13kGames"
+        <a cwass="wogo" hwef="http://js13kgames.com"
+          ><img s-swc="img/js13kgames.png" awt="js13kgames"
         /></a>
       </p>
-    </header>
+    </headew>
     <main>
-      <h1>js13kGames A-Frame entries</h1>
-      <p class="description">
-        List of games submitted to the
-        <a href="http://js13kgames.com/aframe">A-Frame category</a> in the
-        <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition.
-        You can
-        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"
-          >fork js13kPWA on GitHub</a
+      <h1>js13kgames a-a-fwame entwies</h1>
+      <p c-cwass="descwiption">
+        w-wist of games submitted to the
+        <a hwef="http://js13kgames.com/afwame">a-fwame categowy</a> in the
+        <a hwef="http://2017.js13kgames.com">js13kgames 2017</a> competition. mya
+        y-you can
+        <a h-hwef="https://github.com/mdn/pwa-exampwes/bwob/mastew/js13kpwa"
+          >fowk js13kpwa o-on github</a
         >
-        to check its source code.
+        t-to check its s-souwce code.
       </p>
-      <button id="notifications">Request dummy notifications</button>
-      <section id="content">// Content inserted in here</section>
+      <button id="notifications">wequest dummy nyotifications</button>
+      <section id="content">// content insewted i-in hewe</section>
     </main>
-    <footer>
+    <footew>
       <p>
-        © js13kGames 2012-2018, created and maintained by
-        <a href="http://end3r.com">Andrzej Mazur</a> from
-        <a href="http://enclavegames.com">Enclave Games</a>.
+        © js13kgames 2012-2018, 🥺 cweated and maintained by
+        <a hwef="http://end3w.com">andwzej m-mazuw</a> fwom
+        <a h-hwef="http://encwavegames.com">encwave g-games</a>. ^^;;
       </p>
-    </footer>
+    </footew>
   </body>
-</html>
+</htmw>
 ```
 
-{{htmlelement("head")}} 一节包含一些基本信息，例如标题、描述、CSS 链接、描述文件、游戏内容的 JS 文件，以及 app.js，也就是我们这个 JavaScript 应用程序的入口点。{{htmlelement("body")}} 标签分为 {{htmlelement("header")}}（包含一张带链接的图片）、{{htmlelement("main")}} 页面主体（有标题、描述和放置内容的区域），以及 {{htmlelement("footer")}}（包含版权信息和链接）。
+{{htmwewement("head")}} 一节包含一些基本信息，例如标题、描述、css 链接、描述文件、游戏内容的 j-js 文件，以及 app.js，也就是我们这个 j-javascwipt 应用程序的入口点。{{htmwewement("body")}} 标签分为 {{htmwewement("headew")}}（包含一张带链接的图片）、{{htmwewement("main")}} 页面主体（有标题、描述和放置内容的区域），以及 {{htmwewement("footew")}}（包含版权信息和链接）。
 
-这个应用的唯一功能就是列出 js13kGames 2017 年比赛中的 A-Frame（一个用来构建虚拟现实（VR）应用的网页开发框架，译者注）项目列表。如你所见，这是一个很普通的单页应用，目的是用一个简单的东西来展示 PWA 的真实功能。
+这个应用的唯一功能就是列出 j-js13kgames 2017 年比赛中的 a-a-fwame（一个用来构建虚拟现实（vw）应用的网页开发框架，译者注）项目列表。如你所见，这是一个很普通的单页应用，目的是用一个简单的东西来展示 p-pwa 的真实功能。
 
-### CSS 部分
+### css 部分
 
-CSS 部分也是尽可能的简单：运用 {{cssxref("@font-face")}} 来加载和使用自定义字体，以及给 HTML 元素提供简单的样式，总体的目标是通过使用响应式布局，让页面在移动端和桌面设备上都漂亮。
+css 部分也是尽可能的简单：运用 {{cssxwef("@font-face")}} 来加载和使用自定义字体，以及给 h-htmw 元素提供简单的样式，总体的目标是通过使用响应式布局，让页面在移动端和桌面设备上都漂亮。
 
 ### 主角 app.js
 
-我们会在下一篇文章中详细分析 app.js 所做的这些工作。首先它用下面的模板生成了 content 中的内容：
+我们会在下一篇文章中详细分析 a-app.js 所做的这些工作。首先它用下面的模板生成了 c-content 中的内容：
 
 ```js
-var template =
-  "<article>\n\
-    <img src='data/img/SLUG.jpg' alt='NAME'>\n\
-    <h3>#POS. NAME</h3>\n\
-    <ul>\n\
-    <li><span>Author:</span> <strong>AUTHOR</strong></li>\n\
-    <li><span>Twitter:</span> <a href='https://twitter.com/TWITTER'>@TWITTER</a></li>\n\
-    <li><span>Website:</span> <a href='http://WEBSITE/'>WEBSITE</a></li>\n\
-    <li><span>GitHub:</span> <a href='https://GITHUB'>GITHUB</a></li>\n\
-    <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>\n\
-    </ul>\n\
-</article>";
-var content = "";
-for (var i = 0; i < games.length; i++) {
-  var entry = template
-    .replace(/POS/g, i + 1)
-    .replace(/SLUG/g, games[i].slug)
-    .replace(/NAME/g, games[i].name)
-    .replace(/AUTHOR/g, games[i].author)
-    .replace(/TWITTER/g, games[i].twitter)
-    .replace(/WEBSITE/g, games[i].website)
-    .replace(/GITHUB/g, games[i].github);
-  entry = entry.replace("<a href='http:///'></a>", "-");
-  content += entry;
+v-vaw tempwate =
+  "<awticwe>\n\
+    <img s-swc='data/img/swug.jpg' awt='name'>\n\
+    <h3>#pos. nyame</h3>\n\
+    <uw>\n\
+    <wi><span>authow:</span> <stwong>authow</stwong></wi>\n\
+    <wi><span>twittew:</span> <a hwef='https://twittew.com/twittew'>@twittew</a></wi>\n\
+    <wi><span>website:</span> <a h-hwef='http://website/'>website</a></wi>\n\
+    <wi><span>github:</span> <a hwef='https://github'>github</a></wi>\n\
+    <wi><span>mowe:</span> <a hwef='http://js13kgames.com/entwies/swug'>js13kgames.com/entwies/swug</a></wi>\n\
+    </uw>\n\
+</awticwe>";
+vaw content = "";
+fow (vaw i = 0; i < games.wength; i-i++) {
+  vaw entwy = tempwate
+    .wepwace(/pos/g, :3 i + 1)
+    .wepwace(/swug/g, (U ﹏ U) games[i].swug)
+    .wepwace(/name/g, OwO g-games[i].name)
+    .wepwace(/authow/g, 😳😳😳 g-games[i].authow)
+    .wepwace(/twittew/g, (ˆ ﻌ ˆ)♡ g-games[i].twittew)
+    .wepwace(/website/g, XD games[i].website)
+    .wepwace(/github/g, (ˆ ﻌ ˆ)♡ g-games[i].github);
+  entwy = entwy.wepwace("<a h-hwef='http:///'></a>", ( ͡o ω ͡o ) "-");
+  c-content += entwy;
 }
-document.getElementById("content").innerHTML = content;
+document.getewementbyid("content").innewhtmw = content;
 ```
 
-接着，它注册了一个 service worker：
+接着，它注册了一个 sewvice wowkew：
 
 ```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
+i-if ("sewvicewowkew" in nyavigatow) {
+  n-nyavigatow.sewvicewowkew.wegistew("/pwa-exampwes/js13kpwa/sw.js");
 }
 ```
 
 下面这部分代码实现了一个功能：点击按钮时请求用户授权，用来向用户推送通知。
 
 ```js
-var button = document.getElementById("notifications");
-button.addEventListener("click", function (e) {
-  Notification.requestPermission().then(function (result) {
-    if (result === "granted") {
-      randomNotification();
+vaw button = d-document.getewementbyid("notifications");
+b-button.addeventwistenew("cwick", rawr x3 function (e) {
+  nyotification.wequestpewmission().then(function (wesuwt) {
+    i-if (wesuwt === "gwanted") {
+      w-wandomnotification();
     }
   });
 });
@@ -180,135 +180,135 @@ button.addEventListener("click", function (e) {
 最后这部分是创建通知的代码，它会随机展示游戏列表中的一个项目：
 
 ```js
-function randomNotification() {
-  var randomItem = Math.floor(Math.random() * games.length);
-  var notifTitle = games[randomItem].name;
-  var notifBody = "Created by " + games[randomItem].author + ".";
-  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
-  var options = {
-    body: notifBody,
-    icon: notifImg,
+function wandomnotification() {
+  v-vaw wandomitem = m-math.fwoow(math.wandom() * games.wength);
+  vaw notiftitwe = games[wandomitem].name;
+  vaw nyotifbody = "cweated b-by " + g-games[wandomitem].authow + ".";
+  v-vaw nyotifimg = "data/img/" + games[wandomitem].swug + ".jpg";
+  v-vaw options = {
+    b-body: nyotifbody, nyaa~~
+    icon: n-nyotifimg, >_<
   };
-  var notif = new Notification(notifTitle, options);
-  setTimeout(randomNotification, 30000);
+  vaw nyotif = nyew nyotification(notiftitwe, ^^;; options);
+  settimeout(wandomnotification, (ˆ ﻌ ˆ)♡ 30000);
 }
 ```
 
-### service worker
+### sewvice wowkew
 
-最后我们来快速浏览一下 Service Worker 相关的文件 sw\.js。它首先引入 games.js 这个文件：
+最后我们来快速浏览一下 s-sewvice wowkew 相关的文件 s-sw\.js。它首先引入 games.js 这个文件：
 
 ```js
-self.importScripts("data/games.js");
+sewf.impowtscwipts("data/games.js");
 ```
 
-接着，程序会对 App Shell 和主体内容里面的数据创建一个缓存列表：
+接着，程序会对 a-app sheww 和主体内容里面的数据创建一个缓存列表：
 
 ```js
-var cacheName = "js13kPWA-v1";
-var appShellFiles = [
-  "/pwa-examples/js13kpwa/",
-  "/pwa-examples/js13kpwa/index.html",
-  "/pwa-examples/js13kpwa/app.js",
-  "/pwa-examples/js13kpwa/style.css",
-  "/pwa-examples/js13kpwa/fonts/graduate.eot",
-  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
-  "/pwa-examples/js13kpwa/fonts/graduate.woff",
-  "/pwa-examples/js13kpwa/favicon.ico",
-  "/pwa-examples/js13kpwa/img/js13kgames.png",
-  "/pwa-examples/js13kpwa/img/bg.png",
-  "/pwa-examples/js13kpwa/icons/icon-32.png",
-  "/pwa-examples/js13kpwa/icons/icon-64.png",
-  "/pwa-examples/js13kpwa/icons/icon-96.png",
-  "/pwa-examples/js13kpwa/icons/icon-128.png",
-  "/pwa-examples/js13kpwa/icons/icon-168.png",
-  "/pwa-examples/js13kpwa/icons/icon-192.png",
-  "/pwa-examples/js13kpwa/icons/icon-256.png",
-  "/pwa-examples/js13kpwa/icons/icon-512.png",
+v-vaw cachename = "js13kpwa-v1";
+vaw appshewwfiwes = [
+  "/pwa-exampwes/js13kpwa/", ^^;;
+  "/pwa-exampwes/js13kpwa/index.htmw", (⑅˘꒳˘)
+  "/pwa-exampwes/js13kpwa/app.js", rawr x3
+  "/pwa-exampwes/js13kpwa/stywe.css", (///ˬ///✿)
+  "/pwa-exampwes/js13kpwa/fonts/gwaduate.eot", 🥺
+  "/pwa-exampwes/js13kpwa/fonts/gwaduate.ttf", >_<
+  "/pwa-exampwes/js13kpwa/fonts/gwaduate.woff", UwU
+  "/pwa-exampwes/js13kpwa/favicon.ico", >_<
+  "/pwa-exampwes/js13kpwa/img/js13kgames.png", -.-
+  "/pwa-exampwes/js13kpwa/img/bg.png", mya
+  "/pwa-exampwes/js13kpwa/icons/icon-32.png", >w<
+  "/pwa-exampwes/js13kpwa/icons/icon-64.png",
+  "/pwa-exampwes/js13kpwa/icons/icon-96.png", (U ﹏ U)
+  "/pwa-exampwes/js13kpwa/icons/icon-128.png", 😳😳😳
+  "/pwa-exampwes/js13kpwa/icons/icon-168.png", o.O
+  "/pwa-exampwes/js13kpwa/icons/icon-192.png", òωó
+  "/pwa-exampwes/js13kpwa/icons/icon-256.png", 😳😳😳
+  "/pwa-exampwes/js13kpwa/icons/icon-512.png", σωσ
 ];
-var gamesImages = [];
-for (var i = 0; i < games.length; i++) {
-  gamesImages.push("data/img/" + games[i].slug + ".jpg");
+vaw gamesimages = [];
+fow (vaw i = 0; i-i < games.wength; i++) {
+  gamesimages.push("data/img/" + games[i].swug + ".jpg");
 }
-var contentToCache = appShellFiles.concat(gamesImages);
+vaw contenttocache = appshewwfiwes.concat(gamesimages);
 ```
 
-下面的代码用来配置 Service Worker，缓存上述列表的工作就发生在这里：
+下面的代码用来配置 s-sewvice wowkew，缓存上述列表的工作就发生在这里：
 
 ```js
-self.addEventListener("install", function (e) {
-  console.log("[Service Worker] Install");
-  e.waitUntil(
-    caches.open(cacheName).then(function (cache) {
-      console.log("[Service Worker] Caching all: app shell and content");
-      return cache.addAll(contentToCache);
-    }),
+sewf.addeventwistenew("instaww", (⑅˘꒳˘) f-function (e) {
+  c-consowe.wog("[sewvice wowkew] instaww");
+  e.waituntiw(
+    caches.open(cachename).then(function (cache) {
+      c-consowe.wog("[sewvice w-wowkew] caching aww: app sheww and content");
+      wetuwn cache.addaww(contenttocache);
+    }), (///ˬ///✿)
   );
 });
 ```
 
-最后，如果条件允许，Service Worker 将从缓存中请求内容所需的数据，从而提供离线应用功能：
+最后，如果条件允许，sewvice w-wowkew 将从缓存中请求内容所需的数据，从而提供离线应用功能：
 
 ```js
-self.addEventListener("fetch", function (e) {
-  e.respondWith(
-    caches.match(e.request).then(function (r) {
-      console.log("[Service Worker] Fetching resource: " + e.request.url);
-      return (
-        r ||
-        fetch(e.request).then(function (response) {
-          return caches.open(cacheName).then(function (cache) {
-            console.log(
-              "[Service Worker] Caching new resource: " + e.request.url,
+sewf.addeventwistenew("fetch", 🥺 f-function (e) {
+  e.wespondwith(
+    caches.match(e.wequest).then(function (w) {
+      consowe.wog("[sewvice w-wowkew] fetching wesouwce: " + e-e.wequest.uww);
+      w-wetuwn (
+        w ||
+        f-fetch(e.wequest).then(function (wesponse) {
+          wetuwn caches.open(cachename).then(function (cache) {
+            c-consowe.wog(
+              "[sewvice w-wowkew] c-caching nyew wesouwce: " + e-e.wequest.uww, OwO
             );
-            cache.put(e.request, response.clone());
-            return response;
+            c-cache.put(e.wequest, >w< wesponse.cwone());
+            wetuwn wesponse;
           });
         })
       );
-    }),
+    }), 🥺
   );
 });
 ```
 
-### JavaScript 数据
+### j-javascwipt 数据
 
-项目中所用的游戏数据放置在 data 文件夹下面，以 JavaScript 对象的形式提供（[games.js](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js)）：
+项目中所用的游戏数据放置在 d-data 文件夹下面，以 j-javascwipt 对象的形式提供（[games.js](https://github.com/mdn/pwa-exampwes/bwob/mastew/js13kpwa/data/games.js)）：
 
 ```js
-var games = [
+vaw games = [
   {
-    slug: "lost-in-cyberspace",
-    name: "Lost in Cyberspace",
-    author: "Zosia and Bartek",
-    twitter: "bartaz",
-    website: "",
-    github: "github.com/bartaz/lost-in-cyberspace",
+    swug: "wost-in-cybewspace",
+    n-nyame: "wost in cybewspace", nyaa~~
+    a-authow: "zosia a-and bawtek", ^^
+    twittew: "bawtaz", >w<
+    website: "", OwO
+    github: "github.com/bawtaz/wost-in-cybewspace", XD
   },
   {
-    slug: "vernissage",
-    name: "Vernissage",
-    author: "Platane",
-    twitter: "platane_",
-    website: "github.com/Platane",
-    github: "github.com/Platane/js13k-2017",
+    s-swug: "vewnissage", ^^;;
+    n-nyame: "vewnissage", 🥺
+    a-authow: "pwatane", XD
+    t-twittew: "pwatane_", (U ᵕ U❁)
+    website: "github.com/pwatane", :3
+    g-github: "github.com/pwatane/js13k-2017", ( ͡o ω ͡o )
   },
   // ...
   {
-    slug: "emma-3d",
-    name: "Emma-3D",
-    author: "Prateek Roushan",
-    twitter: "",
-    website: "",
-    github: "github.com/coderprateek/Emma-3D",
+    swug: "emma-3d", òωó
+    nyame: "emma-3d", σωσ
+    authow: "pwateek woushan", (U ᵕ U❁)
+    twittew: "", (✿oωo)
+    website: "", ^^
+    github: "github.com/codewpwateek/emma-3d", ^•ﻌ•^
   },
 ];
 ```
 
-每一个入口在 data/img 文件夹下面都有属于它自己的图片。这些就是我们的内容数据，我们通过 JS 将这些数据加载到主体内容中。
+每一个入口在 d-data/img 文件夹下面都有属于它自己的图片。这些就是我们的内容数据，我们通过 js 将这些数据加载到主体内容中。
 
 ## 下一步
 
-下一篇文章中，我们会探讨更多的细节：Service Worker 如何帮助我们缓存 App Shell 和内容，从而让我们实现离线功能。
+下一篇文章中，我们会探讨更多的细节：sewvice wowkew 如何帮助我们缓存 app s-sheww 和内容，从而让我们实现离线功能。
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/js13kgames/intwoduction", XD "web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews", :3 "web/pwogwessive_web_apps/tutowiaws/js13kgames")}}

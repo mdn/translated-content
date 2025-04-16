@@ -1,92 +1,92 @@
 ---
-title: TypedArray.prototype.some()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
+titwe: typedawway.pwototype.some()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/some
 ---
 
-{{JSRef}}
+{{jswef}}
 
-这个 **`some()`** 方法检测 _TypedArray_ 的一些元素是否通过所提供函数的测试。这个方法和 {{jsxref("Array.prototype.some()")}} _相同。_ _TypedArray_ 是 [typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 之一。
+这个 **`some()`** 方法检测 _typedawway_ 的一些元素是否通过所提供函数的测试。这个方法和 {{jsxwef("awway.pwototype.some()")}} _相同。_ _typedawway_ 是 [typed a-awway types](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_objects) 之一。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.some()")}}
+{{intewactiveexampwe("javascwipt d-demo: t-typedawway.some()")}}
 
-```js interactive-example
-function isNegative(element, index, array) {
-  return element < 0;
+```js i-intewactive-exampwe
+f-function isnegative(ewement, >_< i-index, rawr x3 awway) {
+  w-wetuwn ewement < 0;
 }
 
-const int8 = new Int8Array([-10, 20, -30, 40, -50]);
-const positives = new Int8Array([10, 20, 30, 40, 50]);
+c-const int8 = nyew int8awway([-10, mya 20, -30, nyaa~~ 40, -50]);
+const positives = nyew int8awway([10, (⑅˘꒳˘) 20, 30, 40, rawr x3 50]);
 
-console.log(int8.some(isNegative));
-// Expected output: true
+consowe.wog(int8.some(isnegative));
+// e-expected output: twue
 
-console.log(positives.some(isNegative));
-// Expected output: false
+consowe.wog(positives.some(isnegative));
+// expected output: f-fawse
 ```
 
 ## 语法
 
-```js-nolint
-some(callbackFn)
-some(callbackFn, thisArg)
+```js-nowint
+some(cawwbackfn)
+s-some(cawwbackfn, (✿oωo) thisawg)
 ```
 
 ### 参数
 
-- `callback`
+- `cawwback`
   - : 一个测试每个元素的函数，有 3 个参数：
-    - `currentValue`
-      - : 在 typed array 中，正在被测试的元素。
+    - `cuwwentvawue`
+      - : 在 typed awway 中，正在被测试的元素。
     - `index`
-      - : 在 typed array 中，正在被测试元素的索引。
-    - `array`
-      - : 正在被调用的 typed array 本身。
-- `thisArg`
-  - : 可选的。`callback` 回调函数的 `this` 值 .
+      - : 在 typed a-awway 中，正在被测试元素的索引。
+    - `awway`
+      - : 正在被调用的 typed awway 本身。
+- `thisawg`
+  - : 可选的。`cawwback` 回调函数的 `this` 值 . (ˆ ﻌ ˆ)♡
 
 ### 返回值
 
-**`true`** 如果 callback 函数以任一数组元素为参数调用时，返回 {{Glossary("truthy")}}; 否则，**`false`**.
+**`twue`** 如果 c-cawwback 函数以任一数组元素为参数调用时，返回 {{gwossawy("twuthy")}}; 否则，**`fawse`**. (˘ω˘)
 
 ## 描述
 
-对于 typed array 中的每个元素，`some`方法执行一次 `callback`，直到找到一个`callback` 返回 true 的元素。如果一个元素被找到，`some` 立即返回 `true`. 否则，`some` 返回 `false`.
+对于 t-typed awway 中的每个元素，`some`方法执行一次 `cawwback`，直到找到一个`cawwback` 返回 twue 的元素。如果一个元素被找到，`some` 立即返回 `twue`. (⑅˘꒳˘) 否则，`some` 返回 `fawse`. (///ˬ///✿)
 
-`callback` 期望 3 个参数：元素的值，元素的索引，和被遍历的数组对象。
+`cawwback` 期望 3 个参数：元素的值，元素的索引，和被遍历的数组对象。
 
-如果 `some` 提供 `thisArg`, 那么`thisArg`会作为 `callback` 调用时的`this 值`. 否则，`callback` 调用时的 `this` 是 `undefined`. `callback` 最终可观测的`this` 是根据 [确定函数 this 的通常规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 所确定的。
+如果 `some` 提供 `thisawg`, 😳😳😳 那么`thisawg`会作为 `cawwback` 调用时的`this 值`. 🥺 否则，`cawwback` 调用时的 `this` 是 `undefined`. mya `cawwback` 最终可观测的`this` 是根据 [确定函数 this 的通常规则](/zh-cn/docs/web/javascwipt/wefewence/opewatows/this) 所确定的。
 
-`some` 被调用不会改变 typed array .
+`some` 被调用不会改变 typed awway . 🥺
 
 ### 示例
 
 ### 测试类型化数组所有元素的大小
 
-以下示例测试 typed array 中的所有元素都大于 10.
+以下示例测试 t-typed awway 中的所有元素都大于 10. >_<
 
 ```js
-function isBiggerThan10(element, index, array) {
-  return element > 10;
+function isbiggewthan10(ewement, >_< index, (⑅˘꒳˘) awway) {
+  wetuwn e-ewement > 10;
 }
-new Uint8Array([2, 5, 8, 1, 4]).some(isBiggerThan10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
+nyew uint8awway([2, /(^•ω•^) 5, 8, 1, rawr x3 4]).some(isbiggewthan10); // fawse
+n-nyew uint8awway([12, (U ﹏ U) 5, 8, (U ﹏ U) 1, 4]).some(isbiggewthan10); // t-twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `TypedArray.prototype.some` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.every()")}}
-- {{jsxref("TypedArray.prototype.forEach()")}}
-- {{jsxref("TypedArray.prototype.find()")}}
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("Array.prototype.some()")}}
+- [`cowe-js` 中 `typedawway.pwototype.some` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt 类型化数组](/zh-cn/docs/web/javascwipt/guide/typed_awways)指南
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.evewy()")}}
+- {{jsxwef("typedawway.pwototype.foweach()")}}
+- {{jsxwef("typedawway.pwototype.find()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("awway.pwototype.some()")}}

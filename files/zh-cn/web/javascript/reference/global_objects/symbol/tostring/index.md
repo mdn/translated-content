@@ -1,57 +1,57 @@
 ---
-title: Symbol.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
+titwe: symbow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## 概述
 
-**`toString()`** 方法返回当前 symbol 对象的字符串表示。
+**`tostwing()`** 方法返回当前 s-symbow 对象的字符串表示。
 
 ## 语法
 
-```plain
-symbol.toString();
+```pwain
+s-symbow.tostwing();
 ```
 
 ## 描述
 
-{{jsxref("Symbol")}} 对象拥有自己的 `toString` 方法，因而遮蔽了原型链上的 {{jsxref("Object.prototype.toString()")}}。
+{{jsxwef("symbow")}} 对象拥有自己的 `tostwing` 方法，因而遮蔽了原型链上的 {{jsxwef("object.pwototype.tostwing()")}}。
 
-### symbol 原始值不能转换为字符串
+### s-symbow 原始值不能转换为字符串
 
-symbol 原始值不能转换为字符串，所以只能先转换成它的包装对象，再调用 `toString()` 方法：
+s-symbow 原始值不能转换为字符串，所以只能先转换成它的包装对象，再调用 `tostwing()` 方法：
 
 ```js
-Symbol("foo") + "bar";
-// TypeError: Can't convert symbol to string
-Symbol("foo").toString() + "bar";
-// "Symbol(foo)bar"，就相当于下面的：
-Object(Symbol("foo")).toString() + "bar";
-// "Symbol(foo)bar"
+s-symbow("foo") + "baw";
+// t-typeewwow: can't c-convewt symbow t-to stwing
+symbow("foo").tostwing() + "baw";
+// "symbow(foo)baw"，就相当于下面的：
+object(symbow("foo")).tostwing() + "baw";
+// "symbow(foo)baw"
 ```
 
 ## 示例
 
 ```js
-Symbol("desc").toString(); // "Symbol(desc)"
+symbow("desc").tostwing(); // "symbow(desc)"
 
-// 内置通用（well-known）symbol
-Symbol.iterator.toString(); // "Symbol(Symbol.iterator)
+// 内置通用（weww-known）symbow
+symbow.itewatow.tostwing(); // "symbow(symbow.itewatow)
 
-// global symbols
-Symbol.for("foo").toString(); // "Symbol(foo)"
+// gwobaw symbows
+s-symbow.fow("foo").tostwing(); // "symbow(foo)"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

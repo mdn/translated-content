@@ -1,32 +1,32 @@
 ---
-title: Set.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Set/clear
+titwe: set.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/cweaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 实例的 **`clear()`** 方法移除该集合中的所有元素。
+{{jsxwef("set")}} 实例的 **`cweaw()`** 方法移除该集合中的所有元素。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt demo: s-set.pwototype.cweaw()")}}
 
-```js interactive-example
-const set1 = new Set();
-set1.add(1);
-set1.add("foo");
+```js i-intewactive-exampwe
+c-const s-set1 = nyew set();
+s-set1.add(1);
+s-set1.add("foo");
 
-console.log(set1.size);
-// Expected output: 2
+c-consowe.wog(set1.size);
+// e-expected output: 2
 
-set1.clear();
+set1.cweaw();
 
-console.log(set1.size);
-// Expected output: 0
+consowe.wog(set1.size);
+// expected o-output: 0
 ```
 
 ## 语法
 
-```js-nolint
-clear()
+```js-nowint
+cweaw()
 ```
 
 ### 参数
@@ -35,35 +35,35 @@ clear()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
-### 使用 clear() 方法
+### 使用 cweaw() 方法
 
 ```js
-const mySet = new Set();
-mySet.add(1);
-mySet.add("foo");
+c-const myset = nyew set();
+m-myset.add(1);
+myset.add("foo");
 
-console.log(mySet.size); // 2
-console.log(mySet.has("foo")); // true
+consowe.wog(myset.size); // 2
+consowe.wog(myset.has("foo")); // t-twue
 
-mySet.clear();
+myset.cweaw();
 
-console.log(mySet.size); // 0
-console.log(mySet.has("foo")); // false
+consowe.wog(myset.size); // 0
+c-consowe.wog(myset.has("foo")); // f-fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}

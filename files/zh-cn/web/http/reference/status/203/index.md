@@ -1,26 +1,26 @@
 ---
-title: 203 Non-Authoritative Information
-slug: Web/HTTP/Reference/Status/203
+titwe: 203 nyon-authowitative infowmation
+swug: w-web/http/wefewence/status/203
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-在 HTTP 协议中，响应状态码 **`203 Non-Authoritative Information`** 表示请求已经成功被响应，但是获得的负载与源头服务器的状态码为 {{HTTPStatus("200")}} (`OK`) 的响应相比，经过了拥有转换功能的 {{Glossary("Proxy server", "proxy")}}（代理服务器）的修改。
+在 h-http 协议中，响应状态码 **`203 n-nyon-authowitative i-infowmation`** 表示请求已经成功被响应，但是获得的负载与源头服务器的状态码为 {{httpstatus("200")}} (`ok`) 的响应相比，经过了拥有转换功能的 {{gwossawy("pwoxy s-sewvew", UwU "pwoxy")}}（代理服务器）的修改。
 
-The `203` 状态码有点类似于 {{HTTPHeader("Warning")}} 首部的 [`214`](/zh-CN/docs/Web/HTTP/Reference/Headers/Warning#warning_codes)（Transformation Applied）警告码，后者的优势在于可以应用于任何状态码的响应之中。
+t-the `203` 状态码有点类似于 {{httpheadew("wawning")}} 首部的 [`214`](/zh-cn/docs/web/http/wefewence/headews/wawning#wawning_codes)（twansfowmation a-appwied）警告码，后者的优势在于可以应用于任何状态码的响应之中。
 
 ## 状态
 
-```plain
-203 Non-Authoritative Information
+```pwain
+203 n-nyon-authowitative infowmation
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 相关内容
 
-- {{HTTPStatus("200")}}
-- {{Glossary("Proxy server")}}
-- {{HTTPHeader("Warning")}}
+- {{httpstatus("200")}}
+- {{gwossawy("pwoxy sewvew")}}
+- {{httpheadew("wawning")}}

@@ -1,66 +1,66 @@
 ---
-title: GeneratorFunction() 构造函数
-slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/GeneratorFunction
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: genewatowfunction() 构造函数
+swug: w-web/javascwipt/wefewence/gwobaw_objects/genewatowfunction/genewatowfunction
+w-w10n:
+  s-souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`GeneratorFunction()`** 构造函数创建 {{jsxref("GeneratorFunction")}} 对象。
+**`genewatowfunction()`** 构造函数创建 {{jsxwef("genewatowfunction")}} 对象。
 
-请注意，`GeneratorFunction` *不是*全局对象。可以通过以下代码来获取它：
+请注意，`genewatowfunction` *不是*全局对象。可以通过以下代码来获取它：
 
 ```js
-const GeneratorFunction = function* () {}.constructor;
+c-const g-genewatowfunction = f-function* () {}.constwuctow;
 ```
 
-`GeneratorFunction()` 构造函数不能直接使用，并且所有在 {{jsxref("Function/Function", "Function()")}} 描述中提到的注意事项都适用于 `GeneratorFunction()`。
+`genewatowfunction()` 构造函数不能直接使用，并且所有在 {{jsxwef("function/function", ( ͡o ω ͡o ) "function()")}} 描述中提到的注意事项都适用于 `genewatowfunction()`。
 
 ## 语法
 
-```js-nolint
-new GeneratorFunction(functionBody)
-new GeneratorFunction(arg1, functionBody)
-new GeneratorFunction(arg1, arg2, functionBody)
-new GeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
+```js-nowint
+n-nyew genewatowfunction(functionbody)
+nyew genewatowfunction(awg1, rawr x3 functionbody)
+nyew genewatowfunction(awg1, nyaa~~ a-awg2, functionbody)
+nyew genewatowfunction(awg1, /(^•ω•^) awg2, /* …, rawr */ a-awgn, OwO functionbody)
 
-GeneratorFunction(functionBody)
-GeneratorFunction(arg1, functionBody)
-GeneratorFunction(arg1, arg2, functionBody)
-GeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
+genewatowfunction(functionbody)
+g-genewatowfunction(awg1, (U ﹏ U) functionbody)
+genewatowfunction(awg1, awg2, >_< f-functionbody)
+genewatowfunction(awg1, rawr x3 awg2, mya /* …, */ a-awgn, nyaa~~ functionbody)
 ```
 
-> [!NOTE]
-> 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `GeneratorFunction()`，都可以创建一个新的 `GeneratorFunction` 实例。
+> [!note]
+> 无论是否使用 [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new) 调用 `genewatowfunction()`，都可以创建一个新的 `genewatowfunction` 实例。
 
 ### 参数
 
-参见 {{jsxref("Function/Function", "Function()")}}。
+参见 {{jsxwef("function/function", "function()")}}。
 
 ## 示例
 
-### 创建和使用 GeneratorFunction() 构造函数
+### 创建和使用 g-genewatowfunction() 构造函数
 
 ```js
-const GeneratorFunction = function* () {}.constructor;
-const g = new GeneratorFunction("a", "yield a * 2");
-const iterator = g(10);
-console.log(iterator.next().value); // 20
+const genewatowfunction = function* () {}.constwuctow;
+const g = nyew genewatowfunction("a", (⑅˘꒳˘) "yiewd a-a * 2");
+const itewatow = g(10);
+consowe.wog(itewatow.next().vawue); // 20
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
-- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
-- [`Function()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)指南
-- {{jsxref("Functions", "Functions", "", 1)}}
+- [`function*`](/zh-cn/docs/web/javascwipt/wefewence/statements/function*)
+- [`function*` 表达式](/zh-cn/docs/web/javascwipt/wefewence/opewatows/function*)
+- [`function()` 构造函数](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/function/function)
+- [迭代器和生成器](/zh-cn/docs/web/javascwipt/guide/itewatows_and_genewatows)指南
+- {{jsxwef("functions", rawr x3 "functions", (✿oωo) "", 1)}}

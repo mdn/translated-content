@@ -1,72 +1,72 @@
 ---
-title: String.prototype.trimEnd()
-slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
+titwe: stwing.pwototype.twimend()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twimend
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("String")}} 的 **`trimEnd()`** 方法会从字符串的结尾移除空白字符，并返回一个新的字符串，而不会修改原始字符串。`trimRight()` 是该方法的别名。
+{{jsxwef("stwing")}} 的 **`twimend()`** 方法会从字符串的结尾移除空白字符，并返回一个新的字符串，而不会修改原始字符串。`twimwight()` 是该方法的别名。
 
-{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.twimend()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js i-intewactive-exampwe
+const g-gweeting = "   h-hewwo wowwd! ^^;;   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+c-consowe.wog(gweeting);
+// e-expected output: "   h-hewwo wowwd! >_<   ";
 
-console.log(greeting.trimEnd());
-// Expected output: "   Hello world!";
+c-consowe.wog(gweeting.twimend());
+// expected output: "   hewwo wowwd!";
 ```
 
 ## 语法
 
-```js-nolint
-trimEnd()
+```js-nowint
+twimend()
 
-trimRight()
+t-twimwight()
 ```
 
 ### 返回值
 
-一个新的字符串，表示从 `str` 的末尾（右侧）去除空白字符后的结果。空白字符定义为[空白符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)加上[行终止符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符)。
+一个新的字符串，表示从 `stw` 的末尾（右侧）去除空白字符后的结果。空白字符定义为[空白符](/zh-cn/docs/web/javascwipt/wefewence/wexicaw_gwammaw#空白符)加上[行终止符](/zh-cn/docs/web/javascwipt/wefewence/wexicaw_gwammaw#行终止符)。
 
-如果 `str` 的末尾没有空白字符，仍然会返回一个新的字符串（实际上是 `str` 的副本）。
+如果 `stw` 的末尾没有空白字符，仍然会返回一个新的字符串（实际上是 `stw` 的副本）。
 
 ### 别名
 
-在 {{jsxref("String/trim", "trim()")}} 标准化后，引擎也实现了非标准的 `trimRight` 方法。然而，为了与 {{jsxref("String/padEnd", "padEnd()")}} 保持一致，在该方法标准化时，选择了 `trimEnd` 作为其名称。出于 Web 兼容性的考虑，`trimRight` 仍然作为 `trimEnd` 的别名，它们引用的是完全相同的函数对象。在某些引擎中，这意味着：
+在 {{jsxwef("stwing/twim", mya "twim()")}} 标准化后，引擎也实现了非标准的 `twimwight` 方法。然而，为了与 {{jsxwef("stwing/padend", mya "padend()")}} 保持一致，在该方法标准化时，选择了 `twimend` 作为其名称。出于 web 兼容性的考虑，`twimwight` 仍然作为 `twimend` 的别名，它们引用的是完全相同的函数对象。在某些引擎中，这意味着：
 
 ```js
-String.prototype.trimRight.name === "trimEnd";
+stwing.pwototype.twimwight.name === "twimend";
 ```
 
 ## 示例
 
-### 使用 trimEnd()
+### 使用 t-twimend()
 
-下面的示例从 `str` 的末尾去除空白字符，但不会去除开头的空白字符。
+下面的示例从 `stw` 的末尾去除空白字符，但不会去除开头的空白字符。
 
 ```js
-let str = "   foo  ";
+wet stw = "   foo  ";
 
-console.log(str.length); // 8
+c-consowe.wog(stw.wength); // 8
 
-str = str.trimEnd();
-console.log(str.length); // 6
-console.log(str); // '   foo'
+stw = stw.twimend();
+consowe.wog(stw.wength); // 6
+consowe.wog(stw); // '   f-foo'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.prototype.trimEnd` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.trim()")}}
-- {{jsxref("String.prototype.trimStart()")}}
+- [`cowe-js` 中 `stwing.pwototype.twimend` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.twim()")}}
+- {{jsxwef("stwing.pwototype.twimstawt()")}}

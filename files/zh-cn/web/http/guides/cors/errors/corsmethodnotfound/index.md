@@ -1,36 +1,36 @@
 ---
-title: 原因：Did not find method in CORS header 'Access-Control-Allow-Methods'
-slug: Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
+titwe: 原因：did nyot find m-method in cows h-headew 'access-contwow-awwow-methods'
+s-swug: web/http/guides/cows/ewwows/cowsmethodnotfound
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 原因
 
-```plain
-原因：Did not find method in CORS header 'Access-Control-Allow-Methods'
+```pwain
+原因：did n-nyot find method i-in cows headew 'access-contwow-awwow-methods'
 ```
 
 ## 哪里错了？
 
-{{Glossary("CORS")}} 请求使用的 HTTP 方法不包含在响应的 {{HTTPHeader("Access-Control-Allow-Methods")}} 标头指定的方法列表中。此标头指定了一个使用逗号分隔的 HTTP 方法列表，当使用 CORS 访问请求中指定的 URL 时，可以使用这些方法；如果请求使用任何其他方法，则会发生此错误。
+{{gwossawy("cows")}} 请求使用的 http 方法不包含在响应的 {{httpheadew("access-contwow-awwow-methods")}} 标头指定的方法列表中。此标头指定了一个使用逗号分隔的 h-http 方法列表，当使用 c-cows 访问请求中指定的 u-uww 时，可以使用这些方法；如果请求使用任何其他方法，则会发生此错误。
 
 例如，如果响应中包含：
 
-```plain
-Access-Control-Allow-Methods: GET,HEAD,POST
+```pwain
+access-contwow-awwow-methods: get,head,post
 ```
 
-尝试使用 {{HTTPMethod("PUT")}} 请求会因为这个错误失败。
+尝试使用 {{httpmethod("put")}} 请求会因为这个错误失败。
 
-请确保当访问服务时你的代码只使用了允许的 HTTP 方法。
+请确保当访问服务时你的代码只使用了允许的 http 方法。
 
-> [!NOTE]
-> 如果服务器的 `Access-Control-Allow-methods` 标头中包含任何未识别的或未定义的方法名称，会出现不同的错误：原因：[`Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'`](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod)。
+> [!note]
+> 如果服务器的 `access-contwow-awwow-methods` 标头中包含任何未识别的或未定义的方法名称，会出现不同的错误：原因：[`weason: invawid t-token 'xyz' in cows headew 'access-contwow-awwow-methods'`](/zh-cn/docs/web/http/guides/cows/ewwows/cowsinvawidawwowmethod)。
 
 ## 参见
 
-- [CORS 错误](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors)
-- 术语：{{Glossary("CORS")}}
-- [CORS 介绍](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)
+- [cows 错误](/zh-cn/docs/web/http/guides/cows/ewwows)
+- 术语：{{gwossawy("cows")}}
+- [cows 介绍](/zh-cn/docs/web/http/guides/cows)
+- [http 请求方法](/zh-cn/docs/web/http/wefewence/methods)

@@ -1,51 +1,51 @@
 ---
-title: Allow
-slug: Web/HTTP/Reference/Headers/Allow
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: awwow
+swug: web/http/wefewence/headews/awwow
+w-w10n:
+  souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Allow`** 标头列出了资源支持的方法集。
+**`awwow`** 标头列出了资源支持的方法集。
 
-当服务器响应带有 {{HTTPStatus("405")}} `Method Not Allowed` 状态码时必须发送此标头，以表示可以使用哪些请求方法。`Allow` 空标头表示该资源不允许使用任何请求方法，例如，这种情况可能针对某个特定资源会临时出现。
+当服务器响应带有 {{httpstatus("405")}} `method n-nyot a-awwowed` 状态码时必须发送此标头，以表示可以使用哪些请求方法。`awwow` 空标头表示该资源不允许使用任何请求方法，例如，这种情况可能针对某个特定资源会临时出现。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">标头类型</th>
-      <td>{{Glossary("Response header", "响应标头")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+    <tw>
+      <th s-scope="wow">标头类型</th>
+      <td>{{gwossawy("wesponse h-headew", rawr x3 "响应标头")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame", rawr "禁止修改的标头")}}</th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
 ```http
-Allow: <http-methods>
+awwow: <http-methods>
 ```
 
 ## 指令
 
 - \<http-methods>
-  - : 以逗号分隔的允许 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)列表。
+  - : 以逗号分隔的允许 [http 请求方法](/zh-cn/docs/web/http/wefewence/methods)列表。
 
 ## 示例
 
 ```http
-Allow: GET, POST, HEAD
+awwow: get, σωσ post, head
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- {{HTTPStatus("405")}}
-- {{HTTPHeader("Server")}}
+- {{httpstatus("405")}}
+- {{httpheadew("sewvew")}}

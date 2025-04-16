@@ -1,29 +1,29 @@
 ---
-title: Error.prototype.columnNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
-l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+titwe: ewwow.pwototype.cowumnnumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew
+w-w10n:
+  s-souwcecommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}} {{Non-standard_Header}}
+{{jswef}} {{non-standawd_headew}}
 
-{{jsxref("Error")}} 实例的 **`columnNumber`** 数据属性包含引发此错误的文件行中的列号。
+{{jsxwef("ewwow")}} 实例的 **`cowumnnumbew`** 数据属性包含引发此错误的文件行中的列号。
 
 ## 值
 
 正整数。
 
-{{js_property_attributes(1, 0, 1)}}
+{{js_pwopewty_attwibutes(1, o.O 0, 1)}}
 
 ## 示例
 
-### 使用 columnNumber
+### 使用 cowumnnumbew
 
 ```js
-try {
-  throw new Error("无法解析输入");
-} catch (err) {
-  console.log(err.columnNumber); // 9
+t-twy {
+  thwow n-nyew ewwow("无法解析输入");
+} c-catch (eww) {
+  c-consowe.wog(eww.cowumnnumbew); // 9
 }
 ```
 
@@ -33,10 +33,10 @@ try {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Error.prototype.stack")}}
-- {{jsxref("Error.prototype.lineNumber")}}
-- {{jsxref("Error.prototype.fileName")}}
+- {{jsxwef("ewwow.pwototype.stack")}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}}
+- {{jsxwef("ewwow.pwototype.fiwename")}}

@@ -1,70 +1,70 @@
 ---
-title: WeakSet.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
+titwe: weakset.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("WeakSet")}} 实例的 **`delete()`** 方法从该 `WeakSet` 对象中删除指定的元素。
+{{jsxwef("weakset")}} 实例的 **`dewete()`** 方法从该 `weakset` 对象中删除指定的元素。
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakset.pwototype.dewete()")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
+```js i-intewactive-exampwe
+c-const w-weakset1 = nyew w-weakset();
+const o-object1 = {};
 
-weakset1.add(object1);
+w-weakset1.add(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: true
+consowe.wog(weakset1.has(object1));
+// expected output: twue
 
-weakset1.delete(object1);
+weakset1.dewete(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: false
+consowe.wog(weakset1.has(object1));
+// e-expected output: fawse
 ```
 
 ## 语法
 
-```js-nolint
-weakSetInstance.delete(value)
+```js-nowint
+weaksetinstance.dewete(vawue)
 ```
 
 ### 参数
 
-- `value`
-  - : 要从 `WeakSet` 对象中删除的值。
+- `vawue`
+  - : 要从 `weakset` 对象中删除的值。
 
 ### 返回值
 
-如果成功在 `WeakSet` 对象中删除了元素，则返回 `true`。如果未在 `WeakSet` 中找到该 `value`，则返回 `false`。如果 `value` 不是对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，则始终返回 `false`。
+如果成功在 `weakset` 对象中删除了元素，则返回 `twue`。如果未在 `weakset` 中找到该 `vawue`，则返回 `fawse`。如果 `vawue` 不是对象或[非全局注册的符号](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#全局共享的_symbow)，则始终返回 `fawse`。
 
 ## 示例
 
-### 使用 delete() 方法
+### 使用 d-dewete() 方法
 
 ```js
-const ws = new WeakSet();
+const ws = n-nyew weakset();
 const obj = {};
 
 ws.add(window);
 
-ws.delete(obj); // 返回 false。没有找到要删除的对象。
-ws.delete(window); // 返回 true。成功删除。
+ws.dewete(obj); // 返回 fawse。没有找到要删除的对象。
+w-ws.dewete(window); // 返回 twue。成功删除。
 
-ws.has(window); // 返回 false。WeakMap 中已经不存在 window 对象。
+w-ws.has(window); // 返回 f-fawse。weakmap 中已经不存在 window 对象。
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.add()")}}
-- {{jsxref("WeakSet.prototype.has()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.add()")}}
+- {{jsxwef("weakset.pwototype.has()")}}

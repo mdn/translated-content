@@ -1,42 +1,42 @@
 ---
-title: Sec-Fetch-Mode
-slug: Web/HTTP/Reference/Headers/Sec-Fetch-Mode
+titwe: sec-fetch-mode
+swug: web/http/wefewence/headews/sec-fetch-mode
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Sec-Fetch-Mode`** 获取元数据标头表明了一个请求的模式。
+**`sec-fetch-mode`** 获取元数据标头表明了一个请求的模式。
 
-| Header type                                    | {{Glossary("Fetch Metadata Request Header")}}                                            |
+| h-headew t-type                                    | {{gwossawy("fetch m-metadata wequest h-headew")}}                                            |
 | ---------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name")}}          | 只要包含前缀 `Sec-` 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权 |
-| {{Glossary("CORS-safelisted request header")}} |                                                                                          |
+| {{gwossawy("fowbidden h-headew nyame")}}          | 只要包含前缀 `sec-` 都属于应用程序禁止修改的 h-http 消息头，用户代理保留全部对它们的控制权 |
+| {{gwossawy("cows-safewisted w-wequest h-headew")}} |                                                                                          |
 
 ## 语法
 
-```plain
-Sec-Fetch-Mode: cors
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Mode: nested-navigate
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Mode: same-origin
-Sec-Fetch-Mode: websocket
+```pwain
+sec-fetch-mode: cows
+sec-fetch-mode: nyavigate
+sec-fetch-mode: nyested-navigate
+sec-fetch-mode: nyo-cows
+sec-fetch-mode: s-same-owigin
+sec-fetch-mode: websocket
 ```
 
 ## 值
 
-- `cors`
-  - : TBD
+- `cows`
+  - : t-tbd
 - `navigate`
-  - : TBD
+  - : tbd
 - `nested-navigate`
-  - : TBD
-- `no-cors`
-  - : TBD
-- `same-origin`
-  - : TBD
+  - : tbd
+- `no-cows`
+  - : t-tbd
+- `same-owigin`
+  - : tbd
 - `websocket`
-  - : TBD
+  - : tbd
 
 ## 示例
 
@@ -44,14 +44,14 @@ Sec-Fetch-Mode: websocket
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Sec-Fetch-Site")}}
-- {{HTTPHeader("Sec-Fetch-User")}}
-- {{HTTPHeader("Sec-Fetch-Dest")}}
+- {{httpheadew("sec-fetch-site")}}
+- {{httpheadew("sec-fetch-usew")}}
+- {{httpheadew("sec-fetch-dest")}}

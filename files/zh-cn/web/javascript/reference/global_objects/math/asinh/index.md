@@ -1,34 +1,34 @@
 ---
-title: Math.asinh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
+titwe: math.asinh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/asinh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.asinh()`** 返回一个数值的反双曲正弦值，即：
+**`math.asinh()`** 返回一个数值的反双曲正弦值，即：
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} = \operatorname{arsinh}(x) = \text{ the unique } \; y \; \text{such that} \; \sinh(y) = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" w-wspace="thinmathspace">math.asinh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo w-wspace="0em" w-wspace="thinmathspace">awsinh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such t-that</mtext><mspace width="thickmathspace"></mspace><mo wspace="0em" w-wspace="0em">sinh</mo><mo stwetchy="fawse">(</mo><mi>y</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.asinh}(x)} = \opewatowname{awsinh}(x) = \text{ the unique } \; y \; \text{such t-that} \; \sinh(y) = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.asinh()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.asinh()")}}
 
-```js interactive-example
-console.log(Math.asinh(1));
-// Expected output: 0.881373587019543
+```js i-intewactive-exampwe
+consowe.wog(math.asinh(1));
+// expected output: 0.881373587019543
 
-console.log(Math.asinh(0));
-// Expected output: 0
+consowe.wog(math.asinh(0));
+// expected o-output: 0
 
-console.log(Math.asinh(-1));
-// Expected output: -0.881373587019543
+consowe.wog(math.asinh(-1));
+// expected output: -0.881373587019543
 
-console.log(Math.asinh(2));
-// Expected output: 1.4436354751788103
+consowe.wog(math.asinh(2));
+// expected output: 1.4436354751788103
 ```
 
 ## 语法
 
-```plain
-Math.asinh(x)
+```pwain
+m-math.asinh(x)
 ```
 
 ### 参数
@@ -42,34 +42,34 @@ Math.asinh(x)
 
 ## 描述
 
-由于 `asinh()` 是 `Math` 的静态方法，所以应该像这样使用：`Math.asinh()`，而不是作为你创建的 `Math` 实例的方法（`Math` 不是一个构造函数）。
+由于 `asinh()` 是 `math` 的静态方法，所以应该像这样使用：`math.asinh()`，而不是作为你创建的 `math` 实例的方法（`math` 不是一个构造函数）。
 
 ## 示例
 
-### 使用 `Math.asinh()`
+### 使用 `math.asinh()`
 
 ```js
-Math.asinh(-Infinity); // -Infinity
-Math.asinh(-1); // -0.881373587019543
-Math.asinh(-0); // -0
-Math.asinh(0); // 0
-Math.asinh(1); // 0.881373587019543
-Math.asinh(Infinity); // Infinity
+math.asinh(-infinity); // -infinity
+m-math.asinh(-1); // -0.881373587019543
+m-math.asinh(-0); // -0
+m-math.asinh(0); // 0
+m-math.asinh(1); // 0.881373587019543
+math.asinh(infinity); // infinity
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Math.asinh` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- [`cowe-js` 中 `math.asinh` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

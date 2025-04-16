@@ -1,25 +1,25 @@
 ---
-title: 按位或赋值（|=）
-slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
+titwe: 按位或赋值（|=）
+swug: web/javascwipt/wefewence/opewatows/bitwise_ow_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **按位或赋值**（**`|=`**) 运算符使用两个操作数的二进制表示，对它们执行按位或运算并将结果分配给变量。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR assignment", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - b-bitwise o-ow assignment", rawr "showtew")}}
 
-```js interactive-example
-let a = 5; // 00000000000000000000000000000101
-a |= 3; // 00000000000000000000000000000011
+```js i-intewactive-exampwe
+w-wet a = 5; // 00000000000000000000000000000101
+a-a |= 3; // 00000000000000000000000000000011
 
-console.log(a); // 00000000000000000000000000000111
-// Expected output: 7
+c-consowe.wog(a); // 00000000000000000000000000000111
+// e-expected output: 7
 ```
 
 ## 语法
 
-```js-nolint
+```js-nowint
 x |= y // x = x | y
 ```
 
@@ -28,7 +28,7 @@ x |= y // x = x | y
 ### 使用按位或赋值
 
 ```js
-let a = 5;
+wet a = 5;
 a |= 2; // 7
 // 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
@@ -38,14 +38,14 @@ a |= 2; // 7
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
-- [按位或运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
-- [逻辑或赋值（`||=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+- [js 指南中的赋值运算符](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#赋值运算符)
+- [按位或运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/bitwise_ow)
+- [逻辑或赋值（`||=`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow_assignment)

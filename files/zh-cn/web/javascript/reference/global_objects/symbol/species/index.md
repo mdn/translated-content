@@ -1,32 +1,32 @@
 ---
-title: Symbol.species
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
+titwe: symbow.species
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-知名的 **`Symbol.species`** 是个函数值属性，其被构造函数用以创建派生对象。
+知名的 **`symbow.species`** 是个函数值属性，其被构造函数用以创建派生对象。
 
-{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.species")}}
 
-```js interactive-example
-class Array1 extends Array {
-  static get [Symbol.species]() {
-    return Array;
+```js i-intewactive-exampwe
+c-cwass awway1 extends a-awway {
+  s-static get [symbow.species]() {
+    w-wetuwn awway;
   }
 }
 
-const a = new Array1(1, 2, 3);
+c-const a = nyew awway1(1, (U ﹏ U) 2, 3);
 const mapped = a.map((x) => x * x);
 
-console.log(mapped instanceof Array1);
-// Expected output: false
+consowe.wog(mapped i-instanceof awway1);
+// expected output: fawse
 
-console.log(mapped instanceof Array);
-// Expected output: true
+c-consowe.wog(mapped instanceof awway);
+// e-expected output: twue
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 描述
 
@@ -34,36 +34,36 @@ species 访问器属性允许子类覆盖对象的默认构造函数。
 
 ## 示例
 
-你可能想在扩展数组类 `MyArray` 上返回 {{jsxref("Array")}} 对象。例如，当使用例如 {{jsxref("Array.map", "map()")}} 这样的方法返回默认的构造函数时，你希望这些方法能够返回父级的 Array 对象，以取代 `MyArray` 对象。`Symbol.species` 允许你这么做：
+你可能想在扩展数组类 `myawway` 上返回 {{jsxwef("awway")}} 对象。例如，当使用例如 {{jsxwef("awway.map", >_< "map()")}} 这样的方法返回默认的构造函数时，你希望这些方法能够返回父级的 awway 对象，以取代 `myawway` 对象。`symbow.species` 允许你这么做：
 
 ```js
-class MyArray extends Array {
-  // 覆盖 species 到父级的 Array 构造函数上
-  static get [Symbol.species]() {
-    return Array;
+c-cwass myawway extends awway {
+  // 覆盖 species 到父级的 a-awway 构造函数上
+  s-static get [symbow.species]() {
+    wetuwn awway;
   }
 }
-var a = new MyArray(1, 2, 3);
-var mapped = a.map((x) => x * x);
+vaw a = nyew myawway(1, rawr x3 2, 3);
+v-vaw mapped = a.map((x) => x * x);
 
-console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array); // true
+consowe.wog(mapped instanceof myawway); // f-fawse
+consowe.wog(mapped instanceof a-awway); // t-twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`Array[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
-- [`ArrayBuffer[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
-- [`Map[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
-- [`Promise[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
-- [`RegExp[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
-- [`Set[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
-- [`TypedArray[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)
+- [`awway[symbow.species]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.species)
+- [`awwaybuffew[symbow.species]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/symbow.species)
+- [`map[symbow.species]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.species)
+- [`pwomise[symbow.species]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/symbow.species)
+- [`wegexp[symbow.species]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.species)
+- [`set[symbow.species]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.species)
+- [`typedawway[symbow.species]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.species)

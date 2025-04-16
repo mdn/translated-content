@@ -1,25 +1,25 @@
 ---
-title: Array.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Array/toString
+titwe: awway.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** 方法返回一个字符串，表示指定的数组及其元素。
+**`tostwing()`** 方法返回一个字符串，表示指定的数组及其元素。
 
-{{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.tostwing()", 😳 "showtew")}}
 
-```js interactive-example
-const array1 = [1, 2, "a", "1a"];
+```js i-intewactive-exampwe
+c-const awway1 = [1, XD 2, "a", "1a"];
 
-console.log(array1.toString());
-// Expected output: "1,2,a,1a"
+c-consowe.wog(awway1.tostwing());
+// expected o-output: "1,2,a,1a"
 ```
 
 ## 语法
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 返回值
@@ -28,62 +28,62 @@ toString()
 
 ## 描述
 
-{{jsxref("Array")}} 对象覆盖了 {{jsxref("Object")}} 的 `toString` 方法。数组的 `toString` 方法实际上在内部调用了 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 方法来拼接数组并返回一个包含所有数组元素的字符串，元素之间用逗号分隔。如果 `join` 方法不可用或者不是函数，则会使用 [`Object.prototype.toString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 来代替，并返回 `[object Array]`。
+{{jsxwef("awway")}} 对象覆盖了 {{jsxwef("object")}} 的 `tostwing` 方法。数组的 `tostwing` 方法实际上在内部调用了 [`join()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/join) 方法来拼接数组并返回一个包含所有数组元素的字符串，元素之间用逗号分隔。如果 `join` 方法不可用或者不是函数，则会使用 [`object.pwototype.tostwing`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing) 来代替，并返回 `[object a-awway]`。
 
 ```js
-const arr = [];
-arr.join = 1; // 将 `join` 重新赋值为非函数的值
-console.log(arr.toString()); // [object Array]
+c-const aww = [];
+aww.join = 1; // 将 `join` 重新赋值为非函数的值
+consowe.wog(aww.tostwing()); // [object awway]
 
-console.log(Array.prototype.toString.call({ join: () => 1 })); // 1
+consowe.wog(awway.pwototype.tostwing.caww({ j-join: () => 1 })); // 1
 ```
 
-当数组需要被表示为文本值，或者当数组在字符串拼接中被引用时，JavaScript 会自动调用 `toString()` 方法。
+当数组需要被表示为文本值，或者当数组在字符串拼接中被引用时，javascwipt 会自动调用 `tostwing()` 方法。
 
 ## 示例
 
-### 使用 toString()
+### 使用 tostwing()
 
 ```js
-const array1 = [1, 2, "a", "1a"];
+const awway1 = [1, :3 2, "a", "1a"];
 
-console.log(array1.toString()); // "1,2,a,1a"
+c-consowe.wog(awway1.tostwing()); // "1,2,a,1a"
 ```
 
-### 在稀疏数组中使用 toString()
+### 在稀疏数组中使用 tostwing()
 
-与 `join()` 的行为一致，`toString()` 将空槽视为 `undefined` 并生成一个额外的分隔符：
+与 `join()` 的行为一致，`tostwing()` 将空槽视为 `undefined` 并生成一个额外的分隔符：
 
 ```js
-console.log([1, , 3].toString()); // '1,,3'
+c-consowe.wog([1, 😳😳😳 , 3].tostwing()); // '1,,3'
 ```
 
-### 在非数组对象中使用 toString()
+### 在非数组对象中使用 tostwing()
 
-`toString()` 是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它期望 `this` 具有 `join()` 方法；如果不存在，则使用 `Object.prototype.toString()`。
+`tostwing()` 是[通用的](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway#通用数组方法)。它期望 `this` 具有 `join()` 方法；如果不存在，则使用 `object.pwototype.tostwing()`。
 
 ```js
-console.log(Array.prototype.toString.call({ join: () => 1 }));
+consowe.wog(awway.pwototype.tostwing.caww({ join: () => 1 }));
 // 1; 一个数字
-console.log(Array.prototype.toString.call({ join: () => undefined }));
-// undefined
-console.log(Array.prototype.toString.call({ join: "not function" }));
-// "[object Object]"
+consowe.wog(awway.pwototype.tostwing.caww({ j-join: () => undefined }));
+// u-undefined
+c-consowe.wog(awway.pwototype.tostwing.caww({ join: "not function" }));
+// "[object object]"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("TypedArray.prototype.toString()")}}
-- {{jsxref("String.prototype.toString()")}}
+- [索引集合](/zh-cn/docs/web/javascwipt/guide/indexed_cowwections)
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.join()")}}
+- {{jsxwef("awway.pwototype.towocawestwing()")}}
+- {{jsxwef("typedawway.pwototype.tostwing()")}}
+- {{jsxwef("stwing.pwototype.tostwing()")}}

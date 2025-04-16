@@ -1,52 +1,52 @@
 ---
-title: Set.prototype.size
-slug: Web/JavaScript/Reference/Global_Objects/Set/size
+titwe: set.pwototype.size
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/size
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 实例的 **`size`** 访问器属性将返回该集合中（唯一的）元素的个数。
+{{jsxwef("set")}} 实例的 **`size`** 访问器属性将返回该集合中（唯一的）元素的个数。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.size")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.size")}}
 
-```js interactive-example
-const set1 = new Set();
-const object1 = {};
+```js i-intewactive-exampwe
+c-const s-set1 = nyew set();
+c-const object1 = {};
 
-set1.add(42);
-set1.add("forty two");
-set1.add("forty two");
+s-set1.add(42);
+s-set1.add("fowty two");
+set1.add("fowty two");
 set1.add(object1);
 
-console.log(set1.size);
-// Expected output: 3
+consowe.wog(set1.size);
+// e-expected output: 3
 ```
 
 ## 描述
 
-`size` 的值是一个整数，表示 `Set` 对象有多少条目。`size` 的 set 访问函数是 `undefined`；你无法改变这个属性。
+`size` 的值是一个整数，表示 `set` 对象有多少条目。`size` 的 set 访问函数是 `undefined`；你无法改变这个属性。
 
 ## 示例
 
 ### 使用 size
 
 ```js
-const mySet = new Set();
-mySet.add(1);
-mySet.add(5);
-mySet.add("some text");
+c-const myset = nyew set();
+m-myset.add(1);
+myset.add(5);
+myset.add("some text");
 
-console.log(mySet.size); // 3
+consowe.wog(myset.size); // 3
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Set")}}
+- {{jsxwef("set")}}

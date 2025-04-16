@@ -1,32 +1,32 @@
 ---
-title: Math.ceil()
-slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
+titwe: math.ceiw()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/ceiw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.ceil()`** 静态方法总是向上舍入，并返回大于等于给定数字的最小整数。
+**`math.ceiw()`** 静态方法总是向上舍入，并返回大于等于给定数字的最小整数。
 
-{{InteractiveExample("JavaScript Demo: Math.ceil()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.ceiw()")}}
 
-```js interactive-example
-console.log(Math.ceil(0.95));
-// Expected output: 1
+```js i-intewactive-exampwe
+c-consowe.wog(math.ceiw(0.95));
+// e-expected o-output: 1
 
-console.log(Math.ceil(4));
-// Expected output: 4
+consowe.wog(math.ceiw(4));
+// e-expected o-output: 4
 
-console.log(Math.ceil(7.004));
-// Expected output: 8
+consowe.wog(math.ceiw(7.004));
+// e-expected output: 8
 
-console.log(Math.ceil(-7.004));
-// Expected output: -7
+consowe.wog(math.ceiw(-7.004));
+// expected output: -7
 ```
 
 ## 语法
 
-```js-nolint
-Math.ceil(x)
+```js-nowint
+math.ceiw(x)
 ```
 
 ### 参数
@@ -36,41 +36,41 @@ Math.ceil(x)
 
 ### 返回值
 
-大于等于 `x` 的最小整数。它的值与 [`-Math.floor(-x)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) 相同。
+大于等于 `x` 的最小整数。它的值与 [`-math.fwoow(-x)`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/math/fwoow) 相同。
 
 ## 描述
 
-因为 `ceil()` 是 `Math` 的静态方法，所以你应始终使用 `Math.ceil()`，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造函数）。
+因为 `ceiw()` 是 `math` 的静态方法，所以你应始终使用 `math.ceiw()`，而不是作为你创建的 `math` 对象的方法（`math` 不是构造函数）。
 
 ## 示例
 
-### 使用 Math.ceil()
+### 使用 math.ceiw()
 
 ```js
-Math.ceil(-Infinity); // -Infinity
-Math.ceil(-7.004); // -7
-Math.ceil(-4); // -4
-Math.ceil(-0.95); // -0
-Math.ceil(-0); // -0
-Math.ceil(0); // 0
-Math.ceil(0.95); // 1
-Math.ceil(4); // 4
-Math.ceil(7.004); // 8
-Math.ceil(Infinity); // Infinity
+m-math.ceiw(-infinity); // -infinity
+math.ceiw(-7.004); // -7
+math.ceiw(-4); // -4
+m-math.ceiw(-0.95); // -0
+math.ceiw(-0); // -0
+m-math.ceiw(0); // 0
+math.ceiw(0.95); // 1
+math.ceiw(4); // 4
+math.ceiw(7.004); // 8
+m-math.ceiw(infinity); // infinity
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}}
+- {{jsxwef("math.twunc()")}}

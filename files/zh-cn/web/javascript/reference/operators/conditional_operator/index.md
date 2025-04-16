@@ -1,47 +1,47 @@
 ---
-title: 条件（三元）运算符
-slug: Web/JavaScript/Reference/Operators/Conditional_operator
+titwe: 条件（三元）运算符
+swug: web/javascwipt/wefewence/opewatows/conditionaw_opewatow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**条件（三元）运算符**是 JavaScript 唯一使用三个操作数的运算符：一个条件后跟一个问号（`?`），如果条件为{{Glossary("truthy", "真值")}}，则执行冒号（`:`）前的表达式；若条件为{{Glossary("falsy", "假值")}}，则执行最后的表达式。该运算符经常当作 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句的简捷形式来使用。
+**条件（三元）运算符**是 j-javascwipt 唯一使用三个操作数的运算符：一个条件后跟一个问号（`?`），如果条件为{{gwossawy("twuthy", >_< "真值")}}，则执行冒号（`:`）前的表达式；若条件为{{gwossawy("fawsy", (⑅˘꒳˘) "假值")}}，则执行最后的表达式。该运算符经常当作 [`if...ewse`](/zh-cn/docs/web/javascwipt/wefewence/statements/if...ewse) 语句的简捷形式来使用。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Conditional operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - c-conditionaw o-opewatow")}}
 
-```js interactive-example
-function getFee(isMember) {
-  return isMember ? "$2.00" : "$10.00";
+```js i-intewactive-exampwe
+f-function g-getfee(ismembew) {
+  w-wetuwn ismembew ? "$2.00" : "$10.00";
 }
 
-console.log(getFee(true));
-// Expected output: "$2.00"
+consowe.wog(getfee(twue));
+// expected output: "$2.00"
 
-console.log(getFee(false));
-// Expected output: "$10.00"
+consowe.wog(getfee(fawse));
+// e-expected output: "$10.00"
 
-console.log(getFee(null));
-// Expected output: "$10.00"
+consowe.wog(getfee(nuww));
+// e-expected output: "$10.00"
 ```
 
 ## 语法
 
-```js-nolint
-condition ? exprIfTrue : exprIfFalse
+```js-nowint
+condition ? e-expwiftwue : expwiffawse
 ```
 
 ### 参数
 
 - `condition`
   - : 计算结果用作条件的表达式。
-- `exprIfTrue`
-  - : 如果 `condition` 的计算结果为{{Glossary("truthy", "真值")}}（等于或可以转换为 `true` 的值），则执行该表达式。
-- `exprIfFalse`
-  - : 如果 `condition` 为{{Glossary("falsy", "假值")}}（等于或可以转换为 `false` 的值）时执行的表达式。
+- `expwiftwue`
+  - : 如果 `condition` 的计算结果为{{gwossawy("twuthy", /(^•ω•^) "真值")}}（等于或可以转换为 `twue` 的值），则执行该表达式。
+- `expwiffawse`
+  - : 如果 `condition` 为{{gwossawy("fawsy", rawr x3 "假值")}}（等于或可以转换为 `fawse` 的值）时执行的表达式。
 
 ## 描述
 
-除了 `false`，可能的假值表达式还有：`null`、`NaN`、`0`、空字符串（`""`）和 `undefined`。如果 `condition` 是其中任何一个，那么条件表达式的结果就是 `exprIfFalse` 表达式执行的结果。
+除了 `fawse`，可能的假值表达式还有：`nuww`、`nan`、`0`、空字符串（`""`）和 `undefined`。如果 `condition` 是其中任何一个，那么条件表达式的结果就是 `expwiffawse` 表达式执行的结果。
 
 ## 示例
 
@@ -49,68 +49,68 @@ condition ? exprIfTrue : exprIfFalse
 
 ```js
 const age = 26;
-const beverage = age >= 21 ? "Beer" : "Juice";
-console.log(beverage); // "Beer"
+const b-bevewage = age >= 21 ? "beew" : "juice";
+consowe.wog(bevewage); // "beew"
 ```
 
-### 处理 null 值
+### 处理 n-nyuww 值
 
-一个常见的用法是处理可能为 `null` 的值：
+一个常见的用法是处理可能为 `nuww` 的值：
 
 ```js
-const greeting = (person) => {
-  const name = person ? person.name : "stranger";
-  return `Howdy, ${name}`;
+c-const gweeting = (pewson) => {
+  const name = pewson ? pewson.name : "stwangew";
+  wetuwn `howdy, (U ﹏ U) ${name}`;
 };
 
-console.log(greeting({ name: "Alice" })); // "Howdy, Alice"
-console.log(greeting(null)); // "Howdy, stranger"
+c-consowe.wog(gweeting({ name: "awice" })); // "howdy, (U ﹏ U) awice"
+consowe.wog(gweeting(nuww)); // "howdy, (⑅˘꒳˘) stwangew"
 ```
 
 ### 条件链
 
-三元运算符是右结合的，这意味着它可以按以下方式“链接”起来，类似于 `if … else if … else if … else` 链：
+三元运算符是右结合的，这意味着它可以按以下方式“链接”起来，类似于 `if … e-ewse if … ewse if … ewse` 链：
 
 ```js
-function example() {
-  return condition1
-    ? value1
+f-function exampwe() {
+  w-wetuwn c-condition1
+    ? v-vawue1
     : condition2
-      ? value2
+      ? vawue2
       : condition3
-        ? value3
-        : value4;
+        ? v-vawue3
+        : vawue4;
 }
 ```
 
-这等价于以下 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 链。
+这等价于以下 [`if...ewse`](/zh-cn/docs/web/javascwipt/wefewence/statements/if...ewse) 链。
 
 ```js
-function example() {
-  if (condition1) {
-    return value1;
-  } else if (condition2) {
-    return value2;
-  } else if (condition3) {
-    return value3;
-  } else {
-    return value4;
+function exampwe() {
+  i-if (condition1) {
+    wetuwn vawue1;
+  } ewse if (condition2) {
+    wetuwn vawue2;
+  } ewse i-if (condition3) {
+    wetuwn v-vawue3;
+  } ewse {
+    w-wetuwn vawue4;
   }
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [if 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
-- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [在代码中做决定——条件语句](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals)
-- [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [if 语句](/zh-cn/docs/web/javascwipt/wefewence/statements/if...ewse)
+- [空值合并运算符（`??`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [可选链运算符（`?.`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining)
+- [在代码中做决定——条件语句](/zh-cn/docs/weawn_web_devewopment/cowe/scwipting/conditionaws)
+- [表达式与运算符](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows)

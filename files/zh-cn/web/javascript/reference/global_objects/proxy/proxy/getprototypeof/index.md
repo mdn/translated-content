@@ -1,43 +1,43 @@
 ---
-title: handler.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
+titwe: handwew.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.getPrototypeOf()`** 是一个代理（Proxy）方法，当读取代理对象的原型时，该方法就会被调用。
+**`handwew.getpwototypeof()`** 是一个代理（pwoxy）方法，当读取代理对象的原型时，该方法就会被调用。
 
-{{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.getpwototypeof()", (///ˬ///✿) "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  eyeCount: 4,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  e-eyecount: 4, >w<
 };
 
-const monsterPrototype = {
-  eyeCount: 2,
+c-const m-monstewpwototype = {
+  e-eyecount: 2, rawr
 };
 
-const handler = {
-  getPrototypeOf(target) {
-    return monsterPrototype;
-  },
+c-const handwew = {
+  getpwototypeof(tawget) {
+    wetuwn monstewpwototype;
+  }, mya
 };
 
-const proxy1 = new Proxy(monster1, handler);
+const p-pwoxy1 = nyew pwoxy(monstew1, ^^ handwew);
 
-console.log(Object.getPrototypeOf(proxy1) === monsterPrototype);
-// Expected output: true
+consowe.wog(object.getpwototypeof(pwoxy1) === m-monstewpwototype);
+// expected output: t-twue
 
-console.log(Object.getPrototypeOf(proxy1).eyeCount);
-// Expected output: 2
+consowe.wog(object.getpwototypeof(pwoxy1).eyecount);
+// expected output: 2
 ```
 
 ## 语法
 
 ```js
-const p = new Proxy(obj, {
-  getPrototypeOf(target) {
+const p = nyew pwoxy(obj, 😳😳😳 {
+  g-getpwototypeof(tawget) {
   ...
   }
 });
@@ -45,98 +45,98 @@ const p = new Proxy(obj, {
 
 ### 参数
 
-当 `getPrototypeOf` 方法被调用时，`this` 指向的是它所属的处理器对象。
+当 `getpwototypeof` 方法被调用时，`this` 指向的是它所属的处理器对象。
 
-- `target`
+- `tawget`
   - : 被代理的目标对象。
 
 ### 返回值
 
-`getPrototypeOf` 方法的返回值必须是一个对象或者 `null`。
+`getpwototypeof` 方法的返回值必须是一个对象或者 `nuww`。
 
 ## 描述
 
-在 JavaScript 中，下面这五种操作（方法/属性/运算符）可以触发 JS 引擎读取一个对象的原型，也就是可以触发 `getPrototypeOf()` 代理方法的运行：
+在 javascwipt 中，下面这五种操作（方法/属性/运算符）可以触发 j-js 引擎读取一个对象的原型，也就是可以触发 `getpwototypeof()` 代理方法的运行：
 
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Reflect.getPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("wefwect.getpwototypeof()")}}
+- [`object.pwototype.__pwoto__`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("opewatows/instanceof", mya "instanceof")}}
 
-如果遇到了下面两种情况，JS 引擎会抛出 {{jsxref("TypeError")}} 异常：
+如果遇到了下面两种情况，js 引擎会抛出 {{jsxwef("typeewwow")}} 异常：
 
-- `getPrototypeOf()` 方法返回的不是对象也不是 `null`。
-- 目标对象是不可扩展的，且 `getPrototypeOf()` 方法返回的原型不是目标对象本身的原型。
+- `getpwototypeof()` 方法返回的不是对象也不是 `nuww`。
+- 目标对象是不可扩展的，且 `getpwototypeof()` 方法返回的原型不是目标对象本身的原型。
 
 ## 示例
 
 ### 基本用法
 
 ```js
-var obj = {};
-var proto = {};
-var handler = {
-  getPrototypeOf(target) {
-    console.log(target === obj); // true
-    console.log(this === handler); // true
-    return proto;
-  },
+v-vaw obj = {};
+vaw pwoto = {};
+vaw handwew = {
+  getpwototypeof(tawget) {
+    consowe.wog(tawget === o-obj); // twue
+    consowe.wog(this === handwew); // twue
+    wetuwn pwoto;
+  }, 😳
 };
 
-var p = new Proxy(obj, handler);
-console.log(Object.getPrototypeOf(p) === proto); // true
+v-vaw p = nyew pwoxy(obj, -.- handwew);
+c-consowe.wog(object.getpwototypeof(p) === pwoto); // t-twue
 ```
 
-### 5 种触发 getPrototypeOf 代理方法的方式
+### 5 种触发 g-getpwototypeof 代理方法的方式
 
 ```js
-var obj = {};
-var p = new Proxy(obj, {
-  getPrototypeOf(target) {
-    return Array.prototype;
-  },
+v-vaw obj = {};
+vaw p = nyew pwoxy(obj, 🥺 {
+  getpwototypeof(tawget) {
+    w-wetuwn awway.pwototype;
+  }, o.O
 });
-console.log(
-  Object.getPrototypeOf(p) === Array.prototype, // true
-  Reflect.getPrototypeOf(p) === Array.prototype, // true
-  p.__proto__ === Array.prototype, // true
-  Array.prototype.isPrototypeOf(p), // true
-  p instanceof Array, // true
+consowe.wog(
+  object.getpwototypeof(p) === a-awway.pwototype, /(^•ω•^) // twue
+  wefwect.getpwototypeof(p) === awway.pwototype, nyaa~~ // twue
+  p.__pwoto__ === awway.pwototype, nyaa~~ // twue
+  a-awway.pwototype.ispwototypeof(p), :3 // twue
+  p i-instanceof awway, 😳😳😳 // t-twue
 );
 ```
 
 ### 两种情况下的异常
 
 ```js
-var obj = {};
-var p = new Proxy(obj, {
-  getPrototypeOf(target) {
-    return "foo";
-  },
+v-vaw obj = {};
+vaw p = nyew pwoxy(obj, (˘ω˘) {
+  getpwototypeof(tawget) {
+    w-wetuwn "foo";
+  }, ^^
 });
-Object.getPrototypeOf(p); // TypeError: "foo" is not an object or null
+o-object.getpwototypeof(p); // typeewwow: "foo" i-is nyot an object o-ow nyuww
 
-var obj = Object.preventExtensions({});
-var p = new Proxy(obj, {
-  getPrototypeOf(target) {
-    return {};
+vaw obj = object.pweventextensions({});
+v-vaw p = nyew pwoxy(obj, :3 {
+  g-getpwototypeof(tawget) {
+    wetuwn {};
   },
 });
-Object.getPrototypeOf(p); // TypeError: expected same prototype value
+object.getpwototypeof(p); // t-typeewwow: expected same pwototype v-vawue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Reflect.getPrototypeOf()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", -.- "handwew")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("wefwect.getpwototypeof()")}}

@@ -1,46 +1,46 @@
 ---
-title: 451 Unavailable For Legal Reasons
-slug: Web/HTTP/Reference/Status/451
+titwe: 451 unavaiwabwe fow wegaw w-weasons
+swug: w-web/http/wefewence/status/451
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`451 Unavailable For Legal Reasons`**（因法律原因不可用）是一种 HTTP 协议的错误状态代码，表示服务器由于法律原因，无法提供客户端请求的资源，例如可能会导致法律诉讼的页面。
+**`451 u-unavaiwabwe f-fow wegaw w-weasons`**（因法律原因不可用）是一种 h-http 协议的错误状态代码，表示服务器由于法律原因，无法提供客户端请求的资源，例如可能会导致法律诉讼的页面。
 
 ## 状态
 
-```plain
-451 Unavailable For Legal Reasons
+```pwain
+451 u-unavaiwabwe f-fow wegaw weasons
 ```
 
 ## 示例
 
-这个响应示例来自 IETF RFC 规范（见下文），其中提到了英国戏剧电影[Monty Python's Life of Brian](https://zh.wikipedia.org/wiki/蒙提·派森之布莱恩的一生)（《蒙提·派森之布莱恩的一生》）。
+这个响应示例来自 ietf wfc 规范（见下文），其中提到了英国戏剧电影[monty python's wife of bwian](https://zh.wikipedia.owg/wiki/蒙提·派森之布莱恩的一生)（《蒙提·派森之布莱恩的一生》）。
 
-注意 {{HTTPHeader("Link")}} 首部中可能会包含一个 `rel="blocked-by"` 字段，用于标明为该资源无法提供负责的主体，例如颁布法令将资源删除的个人或组织的名称。
+注意 {{httpheadew("wink")}} 首部中可能会包含一个 `wew="bwocked-by"` 字段，用于标明为该资源无法提供负责的主体，例如颁布法令将资源删除的个人或组织的名称。
 
-```plain
-HTTP/1.1 451 Unavailable For Legal Reasons
-Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
-Content-Type: text/html
+```pwain
+h-http/1.1 451 unavaiwabwe fow wegaw weasons
+wink: <https://spqw.exampwe.owg/wegiswatione>; w-wew="bwocked-by"
+content-type: t-text/htmw
 
-<html>
-<head><title>Unavailable For Legal Reasons</title></head>
+<htmw>
+<head><titwe>unavaiwabwe fow wegaw weasons</titwe></head>
 <body>
-<h1>Unavailable For Legal Reasons</h1>
-<p>This request may not be serviced in the Roman Province
-of Judea due to the Lex Julia Majestatis, which disallows
-access to resources hosted on servers deemed to be
-operated by the People's Front of Judea.</p>
+<h1>unavaiwabwe fow wegaw weasons</h1>
+<p>this w-wequest may nyot be s-sewviced in the w-woman pwovince
+of judea due to the wex juwia majestatis, >_< which disawwows
+access t-to wesouwces hosted on sewvews deemed to be
+opewated by the peopwe's fwont of judea.</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- [Wikipedia: HTTP 451](https://zh.wikipedia.org/wiki/HTTP_451)
-- [Wikipedia: Fahrenheit 451](https://zh.wikipedia.org/wiki/Fahrenheit_451) (which gave this status code its number)
+- [wikipedia: h-http 451](https://zh.wikipedia.owg/wiki/http_451)
+- [wikipedia: fahwenheit 451](https://zh.wikipedia.owg/wiki/fahwenheit_451) (which g-gave t-this status code i-its nyumbew)

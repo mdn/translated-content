@@ -1,71 +1,71 @@
 ---
-title: RegExp.prototype.hasIndices
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
+titwe: wegexp.pwototype.hasindices
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/hasindices
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`hasIndices`** 访问器属性指示 `d` 标志是否与正则表达式一起使用。
+**`hasindices`** 访问器属性指示 `d` 标志是否与正则表达式一起使用。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.hasindices")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo", "d");
+```js i-intewactive-exampwe
+c-const wegex1 = n-nyew wegexp("foo", 😳😳😳 "d");
 
-console.log(regex1.hasIndices);
-// Expected output: true
+c-consowe.wog(wegex1.hasindices);
+// e-expected o-output: twue
 
-const regex2 = new RegExp("bar");
+c-const wegex2 = nyew wegexp("baw");
 
-console.log(regex2.hasIndices);
-// Expected output: false
+consowe.wog(wegex2.hasindices);
+// expected output: fawse
 ```
 
 ## 描述
 
-如果 `d` 标志被使用，则 `RegExp.prototype.hasIndices` 的值是 `true`；否则是 `false`。`d` 标志表示正则表达式匹配的结果应该包含每个捕获组子字符串开始和结束的索引。它不会以任何方式改变正则表达式的解释或匹配行为，它只在匹配的结果中提供额外的信息。
+如果 `d` 标志被使用，则 `wegexp.pwototype.hasindices` 的值是 `twue`；否则是 `fawse`。`d` 标志表示正则表达式匹配的结果应该包含每个捕获组子字符串开始和结束的索引。它不会以任何方式改变正则表达式的解释或匹配行为，它只在匹配的结果中提供额外的信息。
 
-`hasIndices` 的 set 访问器是 `undefined`。你不能直接修改此属性。
+`hasindices` 的 s-set 访问器是 `undefined`。你不能直接修改此属性。
 
 ## 示例
 
-### 使用 hasIndices
+### 使用 hasindices
 
 ```js
-const str1 = "foo bar foo";
+const stw1 = "foo baw foo";
 
-const regex1 = /foo/dg;
+const w-wegex1 = /foo/dg;
 
-console.log(regex1.hasIndices); // Output: true
+consowe.wog(wegex1.hasindices); // o-output: twue
 
-console.log(regex1.exec(str1).indices[0]); // Output: Array [0, 3]
-console.log(regex1.exec(str1).indices[0]); // Output: Array [8, 11]
+consowe.wog(wegex1.exec(stw1).indices[0]); // output: awway [0, -.- 3]
+consowe.wog(wegex1.exec(stw1).indices[0]); // o-output: awway [8, ( ͡o ω ͡o ) 11]
 
-const str2 = "foo bar foo";
+c-const stw2 = "foo b-baw foo";
 
-const regex2 = /foo/;
+const wegex2 = /foo/;
 
-console.log(regex2.hasIndices); // Output: false
+consowe.wog(wegex2.hasindices); // output: fawse
 
-console.log(regex2.exec(str2).indices); // Output: undefined
+consowe.wog(wegex2.exec(stw2).indices); // o-output: undefined
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{JSxRef("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.exec()")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxwef("wegexp.pwototype.wastindex")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.dotaww")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.unicode")}}

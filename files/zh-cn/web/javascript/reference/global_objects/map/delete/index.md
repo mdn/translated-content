@@ -1,61 +1,61 @@
 ---
-title: Map.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Map/delete
+titwe: map.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 实例的 **`delete()`** 方法从该 map 中删除指定键的元素。
+{{jsxwef("map")}} 实例的 **`dewete()`** 方法从该 m-map 中删除指定键的元素。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.dewete()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+c-const map1 = n-nyew map();
+map1.set("baw", (U ᵕ U❁) "foo");
 
-console.log(map1.delete("bar"));
-// Expected result: true
-// True indicates successful removal
+c-consowe.wog(map1.dewete("baw"));
+// e-expected w-wesuwt: twue
+// t-twue indicates successfuw wemovaw
 
-console.log(map1.has("bar"));
-// Expected result: false
+consowe.wog(map1.has("baw"));
+// expected wesuwt: fawse
 ```
 
 ## 语法
 
-```js-nolint
-mapInstance.delete(key)
+```js-nowint
+m-mapinstance.dewete(key)
 ```
 
 ### 参数
 
 - `key`
-  - : 要从 `Map` 对象中删除的元素的键。
+  - : 要从 `map` 对象中删除的元素的键。
 
 ### 返回值
 
-如果 `Map` 对象中的元素存在并已被移除，则为 `true`；如果该元素不存在，则为 `false`。
+如果 `map` 对象中的元素存在并已被移除，则为 `twue`；如果该元素不存在，则为 `fawse`。
 
 ## 示例
 
-### 使用 delete()
+### 使用 dewete()
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "foo");
+const m-mymap = nyew map();
+mymap.set("baw", -.- "foo");
 
-console.log(myMap.delete("bar")); // 返回 true。成功地移除元素
-console.log(myMap.has("bar")); // 返回 false。"bar" 元素将不再存在于 Map 实例中
+consowe.wog(mymap.dewete("baw")); // 返回 t-twue。成功地移除元素
+consowe.wog(mymap.has("baw")); // 返回 fawse。"baw" 元素将不再存在于 map 实例中
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

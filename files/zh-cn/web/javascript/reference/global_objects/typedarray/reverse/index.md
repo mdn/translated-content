@@ -1,16 +1,16 @@
 ---
-title: TypedArray.prototype.reverse()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
+titwe: typedawway.pwototype.wevewse()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/wevewse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`reverse()`** 方法原地翻转类型化数组。类型化数组的第一个元素变为最后一个，最后一个变为第一个。这个方法的算法和 {{jsxref("Array.prototype.reverse()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
+**`wevewse()`** 方法原地翻转类型化数组。类型化数组的第一个元素变为最后一个，最后一个变为第一个。这个方法的算法和 {{jsxwef("awway.pwototype.wevewse()")}} 相同。_typedawway_ 是这里的[类型化数组类型](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_对象)之一。
 
 ## 语法
 
-```js-nolint
-reverse()
+```js-nowint
+w-wevewse()
 ```
 
 ### 返回值
@@ -20,20 +20,20 @@ reverse()
 ## 示例
 
 ```js
-var uint8 = new Uint8Array([1, 2, 3]);
-uint8.reverse();
+v-vaw uint8 = n-nyew uint8awway([1, o.O 2, 3]);
+u-uint8.wevewse();
 
-console.log(uint8); // Uint8Array [3, 2, 1]
+c-consowe.wog(uint8); // u-uint8awway [3, 2, (U ᵕ U❁) 1]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Array.prototype.reverse()")}}
+- {{jsxwef("awway.pwototype.wevewse()")}}

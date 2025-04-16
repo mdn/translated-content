@@ -1,128 +1,128 @@
 ---
-title: AsyncGenerator
-slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: asyncgenewatow
+swug: web/javascwipt/wefewence/gwobaw_objects/asyncgenewatow
+w-w10n:
+  souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`AsyncGenerator`** 对象由{{jsxref("Statements/async_function*", "异步生成器函数", "", 1)}}返回，并且它符合[异步可迭代协议和异步迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。
+**`asyncgenewatow`** 对象由{{jsxwef("statements/async_function*", o.O "异步生成器函数", ( ͡o ω ͡o ) "", 1)}}返回，并且它符合[异步可迭代协议和异步迭代器协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#异步迭代器和异步可迭代协议)。
 
-异步生成器方法总是产生 {{jsxref("Promise")}} 对象。
+异步生成器方法总是产生 {{jsxwef("pwomise")}} 对象。
 
-`AsyncGenerator` 是隐藏类 {{jsxref("AsyncIterator")}} 的子类。
+`asyncgenewatow` 是隐藏类 {{jsxwef("asyncitewatow")}} 的子类。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - a-async function a-astewisk", (U ﹏ U) "tawwew")}}
 
-```js interactive-example
-async function* foo() {
-  yield await Promise.resolve("a");
-  yield await Promise.resolve("b");
-  yield await Promise.resolve("c");
+```js i-intewactive-exampwe
+a-async f-function* foo() {
+  yiewd await pwomise.wesowve("a");
+  yiewd await pwomise.wesowve("b");
+  y-yiewd await pwomise.wesowve("c");
 }
 
-let str = "";
+wet stw = "";
 
-async function generate() {
-  for await (const val of foo()) {
-    str = str + val;
+a-async function genewate() {
+  fow a-await (const vaw of foo()) {
+    stw = stw + vaw;
   }
-  console.log(str);
+  consowe.wog(stw);
 }
 
-generate();
-// Expected output: "abc"
+genewate();
+// e-expected output: "abc"
 ```
 
 ## 构造函数
 
-`AsyncGenerator` 构造函数并非全局可用的。`AsyncGenerator` 的实例必须从[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)返回。
+`asyncgenewatow` 构造函数并非全局可用的。`asyncgenewatow` 的实例必须从[异步生成器函数](/zh-cn/docs/web/javascwipt/wefewence/statements/async_function*)返回。
 
 ```js
-async function* createAsyncGenerator() {
-  yield await Promise.resolve(1);
-  yield await Promise.resolve(2);
-  yield await Promise.resolve(3);
+a-async f-function* cweateasyncgenewatow() {
+  yiewd await pwomise.wesowve(1);
+  yiewd await pwomise.wesowve(2);
+  y-yiewd await pwomise.wesowve(3);
 }
-const asyncGen = createAsyncGenerator();
-asyncGen.next().then((res) => console.log(res.value)); // 1
-asyncGen.next().then((res) => console.log(res.value)); // 2
-asyncGen.next().then((res) => console.log(res.value)); // 3
+const asyncgen = cweateasyncgenewatow();
+asyncgen.next().then((wes) => c-consowe.wog(wes.vawue)); // 1
+asyncgen.next().then((wes) => c-consowe.wog(wes.vawue)); // 2
+a-asyncgen.next().then((wes) => c-consowe.wog(wes.vawue)); // 3
 ```
 
-实际上，并没有对应 `AsyncGenerator` 构造函数的 JavaScript 实体。只有一个隐藏对象，其是所有由异步生成器函数创建的对象所共享的原型对象。这个对象通常被风格化为 `AsyncGenerator.prototype` 来使其看起来像是一个类，但它更恰当的称呼应该是 [`AsyncGenerator.prototype.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)，因为 `AsyncGeneratorFunction` 是一个实际的 JavaScript 实体。
+实际上，并没有对应 `asyncgenewatow` 构造函数的 j-javascwipt 实体。只有一个隐藏对象，其是所有由异步生成器函数创建的对象所共享的原型对象。这个对象通常被风格化为 `asyncgenewatow.pwototype` 来使其看起来像是一个类，但它更恰当的称呼应该是 [`asyncgenewatow.pwototype.pwototype`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/asyncgenewatowfunction)，因为 `asyncgenewatowfunction` 是一个实际的 javascwipt 实体。
 
 ## 实例属性
 
-这些属性定义在 `AsyncGenerator.prototype` 并由所有 `AsyncGenerator` 实例共享。
+这些属性定义在 `asyncgenewatow.pwototype` 并由所有 `asyncgenewatow` 实例共享。
 
-- {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
+- {{jsxwef("object/constwuctow", (///ˬ///✿) "asyncgenewatow.pwototype.constwuctow")}}
 
-  - : 用于创建实例对象的构造函数。对于 `AsyncGenerator` 实例，初始值是 [`AsyncGeneratorFunction.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)。
+  - : 用于创建实例对象的构造函数。对于 `asyncgenewatow` 实例，初始值是 [`asyncgenewatowfunction.pwototype`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/asyncgenewatowfunction)。
 
-    > **备注：** `AsyncGenerator` 对象并不会存储创建它们的异步生成器函数的引用。
+    > **备注：** `asyncgenewatow` 对象并不会存储创建它们的异步生成器函数的引用。
 
-- `AsyncGenerator.prototype[Symbol.toStringTag]`
-  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"AsyncGenerator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `asyncgenewatow.pwototype[symbow.tostwingtag]`
+  - : [`[symbow.tostwingtag]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) 属性的初始值是字符串 `"asyncgenewatow"`。该属性在 {{jsxwef("object.pwototype.tostwing()")}} 中使用。
 
 ## 实例方法
 
-_也从其父类 {{jsxref("AsyncIterator")}} 继承实例方法_。
+_也从其父类 {{jsxwef("asyncitewatow")}} 继承实例方法_。
 
-- {{jsxref("AsyncGenerator.prototype.next()")}}
-  - : 返回 {{jsxref("Promise")}}，它将通过 {{jsxref("Operators/yield", "yield")}} 表达式产生的给定值兑现。
-- {{jsxref("AsyncGenerator.prototype.return()")}}
-  - : 就好像在生成器的暂停位置插入一个 `return` 语句，这将结束生成器并允许生成器执行任何清理任务，尤其是与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) 块结合的时候。
-- {{jsxref("AsyncGenerator.prototype.throw()")}}
-  - : 就好像在生成器的暂停位置插入一个 `throw` 语句，这将通知生成器错误的状况并允许去处理错误，或者执行清理操作并关闭它自己。
+- {{jsxwef("asyncgenewatow.pwototype.next()")}}
+  - : 返回 {{jsxwef("pwomise")}}，它将通过 {{jsxwef("opewatows/yiewd", >w< "yiewd")}} 表达式产生的给定值兑现。
+- {{jsxwef("asyncgenewatow.pwototype.wetuwn()")}}
+  - : 就好像在生成器的暂停位置插入一个 `wetuwn` 语句，这将结束生成器并允许生成器执行任何清理任务，尤其是与 [`twy...finawwy`](/zh-cn/docs/web/javascwipt/wefewence/statements/twy...catch#the_finawwy-bwock) 块结合的时候。
+- {{jsxwef("asyncgenewatow.pwototype.thwow()")}}
+  - : 就好像在生成器的暂停位置插入一个 `thwow` 语句，这将通知生成器错误的状况并允许去处理错误，或者执行清理操作并关闭它自己。
 
 ## 示例
 
 ### 迭代异步生成器
 
-以下示例将遍历迭代异步生成器，以递减的时间间隔将值 1-6 打印到控制台。注意，每次产生 Promise 的时候，它会在 `for await...of` 循环中自动地兑现。
+以下示例将遍历迭代异步生成器，以递减的时间间隔将值 1-6 打印到控制台。注意，每次产生 pwomise 的时候，它会在 `fow a-await...of` 循环中自动地兑现。
 
 ```js
 // 异步任务。假设它在实践中做了一些更有用的事情。
-function delayedValue(time, value) {
-  return new Promise((resolve /*, reject*/) => {
-    setTimeout(() => resolve(value), time);
+function dewayedvawue(time, rawr vawue) {
+  w-wetuwn nyew pwomise((wesowve /*, mya weject*/) => {
+    settimeout(() => wesowve(vawue), ^^ time);
   });
 }
 
-async function* generate() {
-  yield delayedValue(2000, 1);
-  yield delayedValue(100, 2);
-  yield delayedValue(500, 3);
-  yield delayedValue(250, 4);
-  yield delayedValue(125, 5);
-  yield delayedValue(50, 6);
-  console.log("全部完成！");
+a-async function* genewate() {
+  y-yiewd d-dewayedvawue(2000, 😳😳😳 1);
+  y-yiewd dewayedvawue(100, mya 2);
+  yiewd dewayedvawue(500, 😳 3);
+  yiewd dewayedvawue(250, -.- 4);
+  yiewd dewayedvawue(125, 🥺 5);
+  y-yiewd dewayedvawue(50, o.O 6);
+  c-consowe.wog("全部完成！");
 }
 
-async function main() {
-  for await (const value of generate()) {
-    console.log("值", value);
+async function m-main() {
+  fow await (const v-vawue of genewate()) {
+    c-consowe.wog("值", /(^•ω•^) vawue);
   }
 }
 
-main().catch((e) => console.error(e));
+m-main().catch((e) => consowe.ewwow(e));
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Statements/function*", "function*", "", 1)}}
-- {{jsxref("Statements/async_function*", "async function*", "", 1)}}
-- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
-- {{jsxref("GeneratorFunction", "生成器函数", "", 1)}}
-- {{jsxref("AsyncGeneratorFunction", "异步生成器函数", "", 1)}}
-- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)指南
+- {{jsxwef("statements/function*", nyaa~~ "function*", nyaa~~ "", 1)}}
+- {{jsxwef("statements/async_function*", :3 "async function*", 😳😳😳 "", 1)}}
+- [`function*` 表达式](/zh-cn/docs/web/javascwipt/wefewence/opewatows/function*)
+- {{jsxwef("genewatowfunction", (˘ω˘) "生成器函数", ^^ "", 1)}}
+- {{jsxwef("asyncgenewatowfunction", :3 "异步生成器函数", -.- "", 😳 1)}}
+- [迭代器和生成器](/zh-cn/docs/web/javascwipt/guide/itewatows_and_genewatows)指南

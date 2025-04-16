@@ -1,71 +1,71 @@
 ---
-title: WeakSet.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
+titwe: weakset.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("WeakSet")}} 实例的 **`has()`** 方法返回一个布尔值，指示该 `WeakSet` 中指定的对象是否存在。
+{{jsxwef("weakset")}} 实例的 **`has()`** 方法返回一个布尔值，指示该 `weakset` 中指定的对象是否存在。
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakset.pwototype.has()")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
-const object2 = {};
+```js i-intewactive-exampwe
+c-const w-weakset1 = nyew w-weakset();
+const o-object1 = {};
+c-const object2 = {};
 
 weakset1.add(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: true
+consowe.wog(weakset1.has(object1));
+// expected output: twue
 
-console.log(weakset1.has(object2));
-// Expected output: false
+consowe.wog(weakset1.has(object2));
+// e-expected output: fawse
 ```
 
 ## 语法
 
-```js-nolint
-has(value)
+```js-nowint
+has(vawue)
 ```
 
 ### 参数
 
-- `value`
-  - : 要测试是否在该 `WeakSet` 对象中存在的值。
+- `vawue`
+  - : 要测试是否在该 `weakset` 对象中存在的值。
 
 ### 返回值
 
-如果指定的值存在于 `WeakSet` 对象中，则返回 `true`；否则返回 `false`。如果 `value` 不是对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，则始终返回 `false`。
+如果指定的值存在于 `weakset` 对象中，则返回 `twue`；否则返回 `fawse`。如果 `vawue` 不是对象或[非全局注册的符号](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#全局共享的_symbow)，则始终返回 `fawse`。
 
 ## 示例
 
 ### 使用 `has()` 方法
 
 ```js
-const ws = new WeakSet();
-const obj = {};
+c-const ws = nyew weakset();
+c-const obj = {};
 ws.add(window);
 
-ws.has(window); // 返回 true
-ws.has(obj); // 返回 false
+ws.has(window); // 返回 twue
+ws.has(obj); // 返回 fawse
 
 // 存储非全局注册的符号
-const sym = Symbol("foo");
-ws.add(sym);
-ws.add(Symbol.iterator);
+c-const sym = symbow("foo");
+w-ws.add(sym);
+w-ws.add(symbow.itewatow);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.add()")}}
-- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.add()")}}
+- {{jsxwef("weakset.pwototype.dewete()")}}

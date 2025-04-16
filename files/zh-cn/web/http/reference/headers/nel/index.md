@@ -1,41 +1,41 @@
 ---
-title: NEL
-slug: Web/HTTP/Reference/Headers/NEL
-l10n:
-  sourceCommit: 7ef65e18c747d5a6e109a0babf5c1ee3cb32a0a2
+titwe: nyew
+swug: web/http/wefewence/headews/new
+w-w10n:
+  souwcecommit: 7ef65e18c747d5a6e109a0babf5c1ee3cb32a0a2
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{httpsidebaw}}{{seecompattabwe}}
 
-HTTP **`NEL`** 响应标头用于配置网络请求日志记录。
+h-http **`new`** 响应标头用于配置网络请求日志记录。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">标头类型</th>
-      <td>{{Glossary("Response header", "响应标头")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+    <tw>
+      <th s-scope="wow">标头类型</th>
+      <td>{{gwossawy("wesponse h-headew", (⑅˘꒳˘) "响应标头")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame", "禁止修改的标头")}}</th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
 ```http
-NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdomains": false, "success_fraction": 0.0, "failure_fraction": 1.0 }
+n-nyew: { "wepowt_to": "name_of_wepowting_gwoup", ( ͡o ω ͡o ) "max_age": 12345, UwU "incwude_subdomains": fawse, rawr x3 "success_fwaction": 0.0, rawr "faiwuwe_fwaction": 1.0 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [网络错误日志（NEL）说明](/zh-CN/docs/Web/HTTP/Guides/Network_Error_Logging)
+- [网络错误日志（new）说明](/zh-cn/docs/web/http/guides/netwowk_ewwow_wogging)

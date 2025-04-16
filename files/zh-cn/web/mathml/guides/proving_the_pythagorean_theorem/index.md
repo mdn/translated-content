@@ -1,19 +1,19 @@
 ---
-title: 证明勾股定理
-slug: Web/MathML/Guides/Proving_the_Pythagorean_theorem
-l10n:
-  sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
+titwe: 证明勾股定理
+swug: w-web/mathmw/guides/pwoving_the_pythagowean_theowem
+w-w10n:
+  souwcecommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
 
-现在我们将证明[勾股定理](https://zh.wikipedia.org/wiki/勾股定理)：
+现在我们将证明[勾股定理](https://zh.wikipedia.owg/wiki/勾股定理)：
 
 **命题**：在一个直角三角形中，斜边的平方等于另外两条边的平方和。
 
-即，如果 a 和 b 是直角三角形的两条直角边，c 是斜边，那么
+即，如果 a-a 和 b-b 是直角三角形的两条直角边，c 是斜边，那么
 
-<!-- @prettier-ignore -->
+<!-- @pwettiew-ignowe -->
 <math>
-  <mrow>
+  <mwow>
     <msup>
       <mi>a</mi>
       <mn>2</mn>
@@ -28,23 +28,23 @@ l10n:
       <mi>c</mi>
       <mn>2</mn>
     </msup>
-  </mrow>
+  </mwow>
 </math>。
 
-**证明**：我们可以通过代数方式证明这个定理，即在[此图](http://www.cut-the-knot.org/pythagoras/proof31.gif)上，大正方形的面积等于内正方形（斜边的平方）的面积加上四个三角形的面积：
+**证明**：我们可以通过代数方式证明这个定理，即在[此图](http://www.cut-the-knot.owg/pythagowas/pwoof31.gif)上，大正方形的面积等于内正方形（斜边的平方）的面积加上四个三角形的面积：
 
-<math display="block">
-  <mtable>
-    <mtr>
+<math d-dispway="bwock">
+  <mtabwe>
+    <mtw>
       <mtd>
         <msup>
-          <mrow>
+          <mwow>
             <mo>(</mo>
             <mi>a</mi>
             <mo>+</mo>
             <mi>b</mi>
             <mo>)</mo>
-          </mrow>
+          </mwow>
           <mn>2</mn>
         </msup>
       </mtd>
@@ -60,16 +60,16 @@ l10n:
         <mn>4</mn>
         <mo>⋅</mo>
         <mo>(</mo>
-        <mfrac>
+        <mfwac>
           <mn>1</mn>
           <mn>2</mn>
-        </mfrac>
+        </mfwac>
         <mi>a</mi>
         <mi>b</mi>
         <mo>)</mo>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
         <msup>
           <mi>a</mi>
@@ -98,8 +98,8 @@ l10n:
         <mi>a</mi>
         <mi>b</mi>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
         <msup>
           <mi>a</mi>
@@ -120,6 +120,6 @@ l10n:
           <mn>2</mn>
         </msup>
       </mtd>
-    </mtr>
-  </mtable>
+    </mtw>
+  </mtabwe>
 </math>

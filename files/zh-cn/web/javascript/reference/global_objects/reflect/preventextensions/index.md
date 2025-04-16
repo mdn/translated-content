@@ -1,86 +1,86 @@
 ---
-title: Reflect.preventExtensions()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
+titwe: wefwect.pweventextensions()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/pweventextensions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静态方法 **`Reflect.preventExtensions()`** 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxref("Object.preventExtensions()")}}相似，但有一些不同点。详情可见 [differences](#与_object.preventextensions_的不同点)。
+静态方法 **`wefwect.pweventextensions()`** 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxwef("object.pweventextensions()")}}相似，但有一些不同点。详情可见 [diffewences](#与_object.pweventextensions_的不同点)。
 
-{{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.pweventextensions()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const object1 = {};
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: true
+c-consowe.wog(wefwect.isextensibwe(object1));
+// e-expected o-output: twue
 
-Reflect.preventExtensions(object1);
+w-wefwect.pweventextensions(object1);
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: false
+c-consowe.wog(wefwect.isextensibwe(object1));
+// expected output: fawse
 ```
 
 ## 语法
 
-```plain
-Reflect.preventExtensions(target)
+```pwain
+wefwect.pweventextensions(tawget)
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
   - : 阻止扩展的目标对象。
 
 ### 返回值
 
-返回一个 {{jsxref("Boolean")}} 值表明目标对象是否成功被设置为不可扩展。
+返回一个 {{jsxwef("boowean")}} 值表明目标对象是否成功被设置为不可扩展。
 
 ### 异常
 
-抛出一个 {{jsxref("TypeError")}} 错误，如果 `target` 不是 {{jsxref("Object")}}。
+抛出一个 {{jsxwef("typeewwow")}} 错误，如果 `tawget` 不是 {{jsxwef("object")}}。
 
 ## 描述
 
-`Reflect.preventExtensions` 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxref("Object.preventExtensions()")}} 方法相似。
+`wefwect.pweventextensions` 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxwef("object.pweventextensions()")}} 方法相似。
 
 ## 示例
 
-### 使用 `Reflect.preventExtensions()`
+### 使用 `wefwect.pweventextensions()`
 
-详情可见 {{jsxref("Object.preventExtensions()")}}.
+详情可见 {{jsxwef("object.pweventextensions()")}}. >_<
 
 ```js
-// Objects are extensible by default.
-var empty = {};
-Reflect.isExtensible(empty); // === true
+// objects a-awe extensibwe by defauwt. mya
+vaw empty = {};
+w-wefwect.isextensibwe(empty); // === twue
 
-// ...but that can be changed.
-Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty); // === false
+// ...but t-that can be changed. mya
+wefwect.pweventextensions(empty);
+wefwect.isextensibwe(empty); // === fawse
 ```
 
-### 与 `Object.preventExtensions()` 的不同点
+### 与 `object.pweventextensions()` 的不同点
 
-如果该方法的 _`target`_ 参数不是一个对象（是原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。对于{{jsxref("Object.preventExtensions()")}} 方法，非对象的 _`target`_ 参数将被强制转换为对象。
+如果该方法的 _`tawget`_ 参数不是一个对象（是原始值），那么将造成一个 {{jsxwef("typeewwow")}} 异常。对于{{jsxwef("object.pweventextensions()")}} 方法，非对象的 _`tawget`_ 参数将被强制转换为对象。
 
 ```js
-Reflect.preventExtensions(1);
-// TypeError: 1 is not an object
+wefwect.pweventextensions(1);
+// t-typeewwow: 1 is nyot a-an object
 
-Object.preventExtensions(1);
+object.pweventextensions(1);
 // 1
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.isExtensible()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.isextensibwe()")}}

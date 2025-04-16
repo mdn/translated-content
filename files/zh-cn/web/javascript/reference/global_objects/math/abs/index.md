@@ -1,33 +1,33 @@
 ---
-title: Math.abs()
-slug: Web/JavaScript/Reference/Global_Objects/Math/abs
+titwe: math.abs()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/abs
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.abs(x)`** 函数返回一个数字的绝对值。
+**`math.abs(x)`** 函数返回一个数字的绝对值。
 
-{{InteractiveExample("JavaScript Demo: Math.abs()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.abs()")}}
 
-```js interactive-example
-function difference(a, b) {
-  return Math.abs(a - b);
+```js i-intewactive-exampwe
+f-function d-diffewence(a, nyaa~~ b) {
+  w-wetuwn math.abs(a - b-b);
 }
 
-console.log(difference(3, 5));
-// Expected output: 2
+c-consowe.wog(diffewence(3, /(^•ω•^) 5));
+// e-expected output: 2
 
-console.log(difference(5, 3));
-// Expected output: 2
+consowe.wog(diffewence(5, rawr 3));
+// expected output: 2
 
-console.log(difference(1.23456, 7.89012));
-// Expected output: 6.6555599999999995
+consowe.wog(diffewence(1.23456, OwO 7.89012));
+// expected o-output: 6.6555599999999995
 ```
 
 ## 语法
 
-```js-nolint
-Math.abs(x)
+```js-nowint
+math.abs(x)
 ```
 
 ### 参数
@@ -41,50 +41,50 @@ Math.abs(x)
 
 ## 描述
 
-由于 `abs()` 是 `Math` 中的一个静态方法，所以你应该通过 `Math.abs()` 调用，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造器）。
+由于 `abs()` 是 `math` 中的一个静态方法，所以你应该通过 `math.abs()` 调用，而不是作为你创建的 `math` 对象的方法（`math` 不是构造器）。
 
 ## 示例
 
-### 使用 Math.abs()
+### 使用 math.abs()
 
 ```js
-Math.abs(-Infinity); // Infinity
-Math.abs(-1); // 1
-Math.abs(-0); // 0
-Math.abs(0); // 0
-Math.abs(1); // 1
-Math.abs(Infinity); // Infinity
+m-math.abs(-infinity); // infinity
+m-math.abs(-1); // 1
+math.abs(-0); // 0
+math.abs(0); // 0
+math.abs(1); // 1
+m-math.abs(infinity); // infinity
 ```
 
 ### 强制转换参数
 
-`Math.abs()` 将其参数强制转换为数字。无法强制转换的值将变成 `NaN`，使 `Math.abs()` 也返回 `NaN`。
+`math.abs()` 将其参数强制转换为数字。无法强制转换的值将变成 `nan`，使 `math.abs()` 也返回 `nan`。
 
 ```js
-Math.abs("-1"); // 1
-Math.abs(-2); // 2
-Math.abs(null); // 0
-Math.abs(""); // 0
-Math.abs([]); // 0
-Math.abs([2]); // 2
-Math.abs([1, 2]); // NaN
-Math.abs({}); // NaN
-Math.abs("string"); // NaN
-Math.abs(); // NaN
+m-math.abs("-1"); // 1
+m-math.abs(-2); // 2
+math.abs(nuww); // 0
+math.abs(""); // 0
+math.abs([]); // 0
+math.abs([2]); // 2
+m-math.abs([1, 2]); // nyan
+math.abs({}); // nan
+math.abs("stwing"); // nyan
+math.abs(); // nyan
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}}
+- {{jsxwef("math.twunc()")}}

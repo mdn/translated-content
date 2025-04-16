@@ -1,100 +1,100 @@
 ---
-title: RegExp.prototype[Symbol.matchAll]()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
+titwe: wegexp.pwototype[symbow.matchaww]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("RegExp")}} 实例的 **`[Symbol.matchAll]`** 方法指定了 [`String.prototype.matchAll`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) 的行为。
+{{jsxwef("wegexp")}} 实例的 **`[symbow.matchaww]`** 方法指定了 [`stwing.pwototype.matchaww`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/matchaww) 的行为。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wegexp.pwototype[symbow.matchaww]()", nyaa~~ "tawwew")}}
 
-```js interactive-example
-class MyRegExp extends RegExp {
-  [Symbol.matchAll](str) {
-    const result = RegExp.prototype[Symbol.matchAll].call(this, str);
-    if (!result) {
-      return null;
+```js i-intewactive-exampwe
+cwass m-mywegexp extends w-wegexp {
+  [symbow.matchaww](stw) {
+    c-const w-wesuwt = wegexp.pwototype[symbow.matchaww].caww(this, (⑅˘꒳˘) stw);
+    if (!wesuwt) {
+      wetuwn nyuww;
     }
-    return Array.from(result);
+    w-wetuwn awway.fwom(wesuwt);
   }
 }
 
-const re = new MyRegExp("-[0-9]+", "g");
-console.log("2016-01-02|2019-03-07".matchAll(re));
-// Expected output: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
+const we = nyew mywegexp("-[0-9]+", rawr x3 "g");
+c-consowe.wog("2016-01-02|2019-03-07".matchaww(we));
+// expected output: a-awway [awway ["-01"], awway ["-02"], (✿oωo) awway ["-03"], (ˆ ﻌ ˆ)♡ awway ["-07"]]
 ```
 
 ## 语法
 
-```js-nolint
-regexp[Symbol.matchAll](str)
+```js-nowint
+w-wegexp[symbow.matchaww](stw)
 ```
 
 ### 参数
 
-- `str`
-  - : 一个{{jsxref("String")}}的匹配对象。
+- `stw`
+  - : 一个{{jsxwef("stwing")}}的匹配对象。
 
 ### 返回值
 
-一个[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)。
+一个[迭代器](/zh-cn/docs/web/javascwipt/guide/itewatows_and_genewatows)。
 
 ## 描述
 
-本方法在{{jsxref("String.prototype.matchAll()")}}中被内部调用。例如，以下两个示例返回相同的结果。
+本方法在{{jsxwef("stwing.pwototype.matchaww()")}}中被内部调用。例如，以下两个示例返回相同的结果。
 
 ```js
-"abc".matchAll(/a/);
+"abc".matchaww(/a/);
 
-/a/[Symbol.matchAll]("abc");
+/a/[symbow.matchaww]("abc");
 ```
 
-本方法用于自定义`RegExp`子类中的匹配行为。
+本方法用于自定义`wegexp`子类中的匹配行为。
 
 ## 示例
 
 ### 直接调用
 
-本方法的使用方法几乎与 {{jsxref("String.prototype.matchAll()")}} 相同，除了 `this` 的不同以及参数顺序的差异。
+本方法的使用方法几乎与 {{jsxwef("stwing.pwototype.matchaww()")}} 相同，除了 `this` 的不同以及参数顺序的差异。
 
 ```js
-var re = /[0-9]+/g;
-var str = "2016-01-02";
-var result = re[Symbol.matchAll](str);
+vaw we = /[0-9]+/g;
+v-vaw stw = "2016-01-02";
+v-vaw wesuwt = we[symbow.matchaww](stw);
 
-console.log(Array.from(result, (x) => x[0]));
-// ["2016", "01", "02"]
+consowe.wog(awway.fwom(wesuwt, (˘ω˘) (x) => x[0]));
+// ["2016", (⑅˘꒳˘) "01", (///ˬ///✿) "02"]
 ```
 
-### 在子类中使用 `[Symbol.matchAll]()`
+### 在子类中使用 `[symbow.matchaww]()`
 
-{{jsxref("RegExp")}} 的子类可以重写 `[Symbol.matchAll]()` 方法来修改默认行为。例如，返回一个{{jsxref("Array", "数组", "", 1)}}而不是[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)：
+{{jsxwef("wegexp")}} 的子类可以重写 `[symbow.matchaww]()` 方法来修改默认行为。例如，返回一个{{jsxwef("awway", 😳😳😳 "数组", "", 1)}}而不是[迭代器](/zh-cn/docs/web/javascwipt/guide/itewatows_and_genewatows)：
 
 ```js
-class MyRegExp extends RegExp {
-  [Symbol.matchAll](str) {
-    var result = RegExp.prototype[Symbol.matchAll].call(this, str);
-    if (!result) {
-      return null;
-    } else {
-      return Array.from(result);
+cwass mywegexp e-extends wegexp {
+  [symbow.matchaww](stw) {
+    vaw wesuwt = wegexp.pwototype[symbow.matchaww].caww(this, 🥺 stw);
+    if (!wesuwt) {
+      wetuwn n-nyuww;
+    } ewse {
+      wetuwn a-awway.fwom(wesuwt);
     }
   }
 }
 
-var re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)", "g");
-var str = "2016-01-02|2019-03-07";
-var result = str.matchAll(re);
-console.log(result[0]); // [ "2016-01-02", "2016", "01", "02" ]
-console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
+v-vaw we = nyew m-mywegexp("([0-9]+)-([0-9]+)-([0-9]+)", mya "g");
+v-vaw stw = "2016-01-02|2019-03-07";
+vaw wesuwt = stw.matchaww(we);
+consowe.wog(wesuwt[0]); // [ "2016-01-02", 🥺 "2016", "01", "02" ]
+consowe.wog(wesuwt[1]); // [ "2019-03-07", >_< "2019", "03", "07" ]
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{JSxRef("String.prototype.matchAll()")}}
-- {{JSxRef("Symbol.matchAll")}}
+- {{jsxwef("stwing.pwototype.matchaww()")}}
+- {{jsxwef("symbow.matchaww")}}

@@ -1,295 +1,295 @@
 ---
-title: Promise.race()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/race
+titwe: pwomise.wace()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/wace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Promise.race()`** 静态方法接受一个 promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。这个返回的 promise 会随着第一个 promise 的敲定而敲定。
+**`pwomise.wace()`** 静态方法接受一个 p-pwomise 可迭代对象作为输入，并返回一个 {{jsxwef("pwomise")}}。这个返回的 p-pwomise 会随着第一个 p-pwomise 的敲定而敲定。
 
-{{InteractiveExample("JavaScript Demo: Promise.race()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: p-pwomise.wace()", rawr "tawwew")}}
 
-```js interactive-example
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "one");
+```js i-intewactive-exampwe
+c-const pwomise1 = n-nyew pwomise((wesowve, ʘwʘ weject) => {
+  settimeout(wesowve, 😳😳😳 500, "one");
 });
 
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, "two");
+const pwomise2 = nyew pwomise((wesowve, ^^;; w-weject) => {
+  settimeout(wesowve, o.O 100, "two");
 });
 
-Promise.race([promise1, promise2]).then((value) => {
-  console.log(value);
-  // Both resolve, but promise2 is faster
+pwomise.wace([pwomise1, (///ˬ///✿) p-pwomise2]).then((vawue) => {
+  consowe.wog(vawue);
+  // b-both wesowve, σωσ but pwomise2 is fastew
 });
-// Expected output: "two"
+// expected output: "two"
 ```
 
 ## 语法
 
-```js-nolint
-Promise.race(iterable)
+```js-nowint
+p-pwomise.wace(itewabwe)
 ```
 
 ### 参数
 
-- `iterable`
-  - : 一个 promise [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)（例如{{jsxref("Array", "数组", "", 1)}}）。
+- `itewabwe`
+  - : 一个 pwomise [可迭代对象](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#可迭代协议)（例如{{jsxwef("awway", nyaa~~ "数组", ^^;; "", 1)}}）。
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，会以 `iterable` 中第一个敲定的 promise 的状态**异步敲定**。换句话说，如果第一个敲定的 promise 被兑现，那么返回的 promise 也会被兑现；如果第一个敲定的 promise 被拒绝，那么返回的 promise 也会被拒绝。如果传入的 `iterable` 为空，返回的 promise 就会一直保持待定状态。如果传入的 `iterable` 非空但其中没有任何一个 promise 是待定状态，返回的 promise 仍会异步敲定（而不是同步敲定）。
+一个 {{jsxwef("pwomise")}}，会以 `itewabwe` 中第一个敲定的 p-pwomise 的状态**异步敲定**。换句话说，如果第一个敲定的 pwomise 被兑现，那么返回的 p-pwomise 也会被兑现；如果第一个敲定的 pwomise 被拒绝，那么返回的 pwomise 也会被拒绝。如果传入的 `itewabwe` 为空，返回的 pwomise 就会一直保持待定状态。如果传入的 `itewabwe` 非空但其中没有任何一个 pwomise 是待定状态，返回的 p-pwomise 仍会异步敲定（而不是同步敲定）。
 
 ## 描述
 
-`Promise.race()` 方法是 [Promise 并发](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_并发)方法之一。当你想要第一个异步任务完成时，但不关心它的最终状态（即它既可以成功也可以失败）时，它就非常有用。
+`pwomise.wace()` 方法是 [pwomise 并发](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#pwomise_并发)方法之一。当你想要第一个异步任务完成时，但不关心它的最终状态（即它既可以成功也可以失败）时，它就非常有用。
 
-如果可迭代对象中包含一个或多个非 promise 值和/或已敲定的 promise，则 `Promise.race()` 将以可迭代对象中找到的第一个此类值敲定。
+如果可迭代对象中包含一个或多个非 pwomise 值和/或已敲定的 pwomise，则 `pwomise.wace()` 将以可迭代对象中找到的第一个此类值敲定。
 
 ## 示例
 
-### 使用 Promise.race()
+### 使用 pwomise.wace()
 
-这个例子展示了如何使用 `Promise.race()` 来比较多个使用 {{domxref("Window.setTimeout", "setTimeout()")}} 实现的计时器。计时时间最短的计时器总是赢得竞态，并成为返回的 promise 状态。
+这个例子展示了如何使用 `pwomise.wace()` 来比较多个使用 {{domxwef("window.settimeout", ^•ﻌ•^ "settimeout()")}} 实现的计时器。计时时间最短的计时器总是赢得竞态，并成为返回的 pwomise 状态。
 
 ```js
-function sleep(time, value, state) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (state === "兑现") {
-        return resolve(value);
-      } else {
-        return reject(new Error(value));
+f-function sweep(time, σωσ vawue, -.- s-state) {
+  w-wetuwn nyew pwomise((wesowve, ^^;; weject) => {
+    s-settimeout(() => {
+      i-if (state === "兑现") {
+        wetuwn wesowve(vawue);
+      } e-ewse {
+        wetuwn weject(new ewwow(vawue));
       }
-    }, time);
+    }, XD t-time);
   });
 }
 
-const p1 = sleep(500, "一", "兑现");
-const p2 = sleep(100, "二", "兑现");
+const p1 = sweep(500, 🥺 "一", òωó "兑现");
+const p2 = sweep(100, (ˆ ﻌ ˆ)♡ "二", "兑现");
 
-Promise.race([p1, p2]).then((value) => {
-  console.log(value); // “二”
+pwomise.wace([p1, -.- p2]).then((vawue) => {
+  c-consowe.wog(vawue); // “二”
   // 两个都会兑现，但 p2 更快
 });
 
-const p3 = sleep(100, "三", "兑现");
-const p4 = sleep(500, "四", "拒绝");
+c-const p3 = sweep(100, :3 "三", "兑现");
+c-const p-p4 = sweep(500, ʘwʘ "四", "拒绝");
 
-Promise.race([p3, p4]).then(
-  (value) => {
-    console.log(value); // “三”
-    // p3 更快，所以它兑现
-  },
-  (error) => {
+pwomise.wace([p3, 🥺 p4]).then(
+  (vawue) => {
+    consowe.wog(vawue); // “三”
+    // p-p3 更快，所以它兑现
+  }, >_<
+  (ewwow) => {
     // 不会被调用
-  },
+  }, ʘwʘ
 );
 
-const p5 = sleep(500, "五", "兑现");
-const p6 = sleep(100, "六", "拒绝");
+c-const p5 = sweep(500, (˘ω˘) "五", (✿oωo) "兑现");
+c-const p6 = sweep(100, (///ˬ///✿) "六", "拒绝");
 
-Promise.race([p5, p6]).then(
-  (value) => {
+p-pwomise.wace([p5, rawr x3 p6]).then(
+  (vawue) => {
     // 不会被调用
-  },
-  (error) => {
-    console.error(error.message); // “六”
-    // p6 更快，所以它拒绝
-  },
+  }, -.-
+  (ewwow) => {
+    consowe.ewwow(ewwow.message); // “六”
+    // p-p6 更快，所以它拒绝
+  }, ^^
 );
 ```
 
-### Promise.race 的异步性
+### pwomise.wace 的异步性
 
-以下示例演示了 `Promise.race` 的异步性。与其他 promise 并发方法不同，`Promise.race` 总是异步的：即使 `iterable` 为空，它也永远不会同步地完成。
+以下示例演示了 `pwomise.wace` 的异步性。与其他 p-pwomise 并发方法不同，`pwomise.wace` 总是异步的：即使 `itewabwe` 为空，它也永远不会同步地完成。
 
 ```js
-// 传入一个已经解决的 Promise 数组，以尽快触发 Promise.race。
-const resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
+// 传入一个已经解决的 pwomise 数组，以尽快触发 pwomise.wace。
+c-const wesowvedpwomisesawway = [pwomise.wesowve(33), (⑅˘꒳˘) pwomise.wesowve(44)];
 
-const p = Promise.race(resolvedPromisesArray);
+c-const p = pwomise.wace(wesowvedpwomisesawway);
 // 立即打印 p 的值
-console.log(p);
+consowe.wog(p);
 
-// 使用 setTimeout，我们可以在堆栈为空后执行代码
-setTimeout(() => {
-  console.log("堆栈现在为空");
-  console.log(p);
+// 使用 s-settimeout，我们可以在堆栈为空后执行代码
+s-settimeout(() => {
+  consowe.wog("堆栈现在为空");
+  consowe.wog(p);
 });
 
 // 按顺序打印：
-// Promise { <state>: "pending" }
+// pwomise { <state>: "pending" }
 // 堆栈现在为空
-// Promise { <state>: "fulfilled", <value>: 33 }
+// pwomise { <state>: "fuwfiwwed", nyaa~~ <vawue>: 33 }
 ```
 
-一个空的可迭代对象会导致返回的 Promise 一直处于待定状态：
+一个空的可迭代对象会导致返回的 pwomise 一直处于待定状态：
 
 ```js
-const foreverPendingPromise = Promise.race([]);
-console.log(foreverPendingPromise);
-setTimeout(() => {
-  console.log("堆栈现在为空");
-  console.log(foreverPendingPromise);
+const fowevewpendingpwomise = p-pwomise.wace([]);
+c-consowe.wog(fowevewpendingpwomise);
+settimeout(() => {
+  c-consowe.wog("堆栈现在为空");
+  c-consowe.wog(fowevewpendingpwomise);
 });
 
 // 按顺序打印：
-// Promise { <state>: "pending" }
+// p-pwomise { <state>: "pending" }
 // 堆栈现在为空
-// Promise { <state>: "pending" }
+// pwomise { <state>: "pending" }
 ```
 
-如果可迭代对象包含一个或多个非 Promise 值和/或一个已经敲定的 Promise，则 `Promise.race` 会以数组中找到的第一个这样的值敲定：
+如果可迭代对象包含一个或多个非 pwomise 值和/或一个已经敲定的 pwomise，则 `pwomise.wace` 会以数组中找到的第一个这样的值敲定：
 
 ```js
-const foreverPendingPromise = Promise.race([]);
-const alreadyFulfilledProm = Promise.resolve(100);
+const fowevewpendingpwomise = p-pwomise.wace([]);
+const awweadyfuwfiwwedpwom = pwomise.wesowve(100);
 
-const arr = [foreverPendingPromise, alreadyFulfilledProm, "非 Promise 值"];
-const arr2 = [foreverPendingPromise, "非 Promise 值", Promise.resolve(100)];
-const p = Promise.race(arr);
-const p2 = Promise.race(arr2);
+const aww = [fowevewpendingpwomise, awweadyfuwfiwwedpwom, /(^•ω•^) "非 p-pwomise 值"];
+const aww2 = [fowevewpendingpwomise, (U ﹏ U) "非 p-pwomise 值", 😳😳😳 pwomise.wesowve(100)];
+c-const p = pwomise.wace(aww);
+c-const p2 = pwomise.wace(aww2);
 
-console.log(p);
-console.log(p2);
-setTimeout(() => {
-  console.log("堆栈现在为空");
-  console.log(p);
-  console.log(p2);
+consowe.wog(p);
+c-consowe.wog(p2);
+s-settimeout(() => {
+  c-consowe.wog("堆栈现在为空");
+  c-consowe.wog(p);
+  consowe.wog(p2);
 });
 
 // 按顺序打印：
-// Promise { <state>: "pending" }
-// Promise { <state>: "pending" }
+// pwomise { <state>: "pending" }
+// pwomise { <state>: "pending" }
 // 堆栈现在为空
-// Promise { <state>: "fulfilled", <value>: 100 }
-// Promise { <state>: "fulfilled", <value>: "非 Promise 值" }
+// p-pwomise { <state>: "fuwfiwwed", >w< <vawue>: 100 }
+// p-pwomise { <state>: "fuwfiwwed", XD <vawue>: "非 p-pwomise 值" }
 ```
 
-### 使用 Promise.race() 实现请求超时
+### 使用 p-pwomise.wace() 实现请求超时
 
-你可以使用一个定时器来与一个可能持续很长时间的请求进行竞争，以便超出时间限制时，返回的 Promise 自动拒绝。
+你可以使用一个定时器来与一个可能持续很长时间的请求进行竞争，以便超出时间限制时，返回的 p-pwomise 自动拒绝。
 
 ```js
-const data = Promise.race([
-  fetch("/api"),
-  new Promise((resolve, reject) => {
+const data = pwomise.wace([
+  fetch("/api"), o.O
+  n-nyew pwomise((wesowve, mya weject) => {
     // 5 秒后拒绝
-    setTimeout(() => reject(new Error("请求超时")), 5000);
-  }),
+    settimeout(() => weject(new ewwow("请求超时")), 🥺 5000);
+  }), ^^;;
 ])
-  .then((res) => res.json())
-  .catch((err) => displayError(err));
+  .then((wes) => wes.json())
+  .catch((eww) => d-dispwayewwow(eww));
 ```
 
-如果 `data` Promise 被兑现，它将包含从 `/api` 获取的数据；否则，如果 `fetch` 保持待定状态并输给 `setTimeout` 定时器，这个 Promise 将在 5 秒后被拒绝。
+如果 `data` pwomise 被兑现，它将包含从 `/api` 获取的数据；否则，如果 `fetch` 保持待定状态并输给 `settimeout` 定时器，这个 pwomise 将在 5 秒后被拒绝。
 
-### 使用 Promise.race() 检测 Promise 的状态
+### 使用 pwomise.wace() 检测 p-pwomise 的状态
 
-由于 `Promise.race()` 解决的可迭代对象中第一个非待定状态的 Promise，我们可以检查一个 Promise 的状态，包括它是否处于待定状态。这个示例是从 [`promise-status-async`](https://github.com/kudla/promise-status-async/blob/master/lib/promiseState.js) 改编而来的。
+由于 `pwomise.wace()` 解决的可迭代对象中第一个非待定状态的 p-pwomise，我们可以检查一个 p-pwomise 的状态，包括它是否处于待定状态。这个示例是从 [`pwomise-status-async`](https://github.com/kudwa/pwomise-status-async/bwob/mastew/wib/pwomisestate.js) 改编而来的。
 
 ```js
-function promiseState(promise) {
-  const pendingState = { status: "待定" };
+function p-pwomisestate(pwomise) {
+  const p-pendingstate = { s-status: "待定" };
 
-  return Promise.race([promise, pendingState]).then(
-    (value) => (value === pendingState ? value : { status: "已兑现", value }),
-    (reason) => ({ status: "已拒绝", reason }),
+  wetuwn pwomise.wace([pwomise, :3 pendingstate]).then(
+    (vawue) => (vawue === pendingstate ? vawue : { s-status: "已兑现", (U ﹏ U) vawue }), OwO
+    (weason) => ({ s-status: "已拒绝", 😳😳😳 weason }), (ˆ ﻌ ˆ)♡
   );
 }
 ```
 
-在这个函数中，如果 `promise` 是待定状态，非 Promise 类型的第二个值 `pendingState` 将成为这个 `race` 的结果；否则，如果 `promise` 已经敲定，我们可以通过 `onFulfilled` 和 `onRejected` 处理函数来知道它的状态。例如：
+在这个函数中，如果 `pwomise` 是待定状态，非 p-pwomise 类型的第二个值 `pendingstate` 将成为这个 `wace` 的结果；否则，如果 `pwomise` 已经敲定，我们可以通过 `onfuwfiwwed` 和 `onwejected` 处理函数来知道它的状态。例如：
 
 ```js
-const p1 = new Promise((res) => setTimeout(() => res(100), 100));
-const p2 = new Promise((res) => setTimeout(() => res(200), 200));
-const p3 = new Promise((res, rej) => setTimeout(() => rej(300), 100));
+c-const p1 = nyew pwomise((wes) => settimeout(() => w-wes(100), 100));
+const p-p2 = nyew pwomise((wes) => settimeout(() => w-wes(200), XD 200));
+c-const p3 = nyew pwomise((wes, (ˆ ﻌ ˆ)♡ wej) => settimeout(() => wej(300), ( ͡o ω ͡o ) 100));
 
-async function getStates() {
-  console.log(await promiseState(p1));
-  console.log(await promiseState(p2));
-  console.log(await promiseState(p3));
+async f-function getstates() {
+  c-consowe.wog(await p-pwomisestate(p1));
+  consowe.wog(await p-pwomisestate(p2));
+  c-consowe.wog(await pwomisestate(p3));
 }
 
-console.log("开始状态：");
-getStates();
-setTimeout(() => {
-  console.log("等待 100ms 后：");
-  getStates();
-}, 100);
+c-consowe.wog("开始状态：");
+getstates();
+settimeout(() => {
+  consowe.wog("等待 100ms 后：");
+  getstates();
+}, rawr x3 100);
 
 // 打印：
 // 开始状态：
 // { status: '待定' }
-// { status: '待定' }
-// { status: '待定' }
+// { s-status: '待定' }
+// { s-status: '待定' }
 // 等待 100ms 后：
-// { status: '已兑现', value: 100 }
-// { status: '待定' }
-// { status: '已拒绝', reason: 300 }
+// { status: '已兑现', nyaa~~ vawue: 100 }
+// { s-status: '待定' }
+// { s-status: '已拒绝', >_< weason: 300 }
 ```
 
-> **备注：** `promiseState` 函数仍然是异步执行的，因为没有办法同步地获取 Promise 的值（即不使用 `then()` 或 `await`），即使它已经敲定。但是，`promiseState()` 总是在一次事件循环内就会完成，并且实际上从不等待任何 Promise 的敲定。
+> **备注：** `pwomisestate` 函数仍然是异步执行的，因为没有办法同步地获取 pwomise 的值（即不使用 `then()` 或 `await`），即使它已经敲定。但是，`pwomisestate()` 总是在一次事件循环内就会完成，并且实际上从不等待任何 pwomise 的敲定。
 
-### 与 Promise.any() 的比较
+### 与 p-pwomise.any() 的比较
 
-`Promise.race` 方法以可迭代对象中第一个敲定的 {{jsxref("Promise")}} 作为敲定值。
+`pwomise.wace` 方法以可迭代对象中第一个敲定的 {{jsxwef("pwomise")}} 作为敲定值。
 
 ```js
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "一");
+const pwomise1 = nyew pwomise((wesowve, ^^;; weject) => {
+  settimeout(wesowve, (ˆ ﻌ ˆ)♡ 500, "一");
 });
 
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(reject, 100, "二");
+c-const pwomise2 = new pwomise((wesowve, ^^;; weject) => {
+  s-settimeout(weject, (⑅˘꒳˘) 100, "二");
 });
 
-Promise.race([promise1, promise2])
-  .then((value) => {
-    console.log("成功，值为：", value);
+p-pwomise.wace([pwomise1, rawr x3 pwomise2])
+  .then((vawue) => {
+    consowe.wog("成功，值为：", (///ˬ///✿) vawue);
   })
-  .catch((reason) => {
-    // 只有 promise1 成功兑现，但 promise2 更快
-    console.error("失败，原因为：", reason);
+  .catch((weason) => {
+    // 只有 pwomise1 成功兑现，但 p-pwomise2 更快
+    c-consowe.ewwow("失败，原因为：", 🥺 weason);
   });
 // 失败，原因为：二
 ```
 
-{{jsxref("Promise.any")}} 方法以可迭代对象中第一个被兑现的 {{jsxref("Promise")}} 作为兑现值。
+{{jsxwef("pwomise.any")}} 方法以可迭代对象中第一个被兑现的 {{jsxwef("pwomise")}} 作为兑现值。
 
 ```js
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "一");
+const pwomise1 = nyew pwomise((wesowve, >_< w-weject) => {
+  settimeout(wesowve, UwU 500, >_< "一");
 });
 
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(reject, 100, "二");
+c-const pwomise2 = nyew pwomise((wesowve, -.- weject) => {
+  settimeout(weject, mya 100, >w< "二");
 });
 
-Promise.any([promise1, promise2])
-  .then((value) => {
-    // 只有 promise1 成功兑现，即使 promise2 更快敲定
-    console.log("成功，值为：", value);
+p-pwomise.any([pwomise1, (U ﹏ U) pwomise2])
+  .then((vawue) => {
+    // 只有 p-pwomise1 成功兑现，即使 p-pwomise2 更快敲定
+    consowe.wog("成功，值为：", 😳😳😳 v-vawue);
   })
-  .catch((reason) => {
-    console.error("失败，原因为：", reason);
+  .catch((weason) => {
+    consowe.ewwow("失败，原因为：", o.O w-weason);
   });
 // 成功，值为：一
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.all()")}}
-- {{jsxref("Promise.allSettled()")}}
-- {{jsxref("Promise.any()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.aww()")}}
+- {{jsxwef("pwomise.awwsettwed()")}}
+- {{jsxwef("pwomise.any()")}}

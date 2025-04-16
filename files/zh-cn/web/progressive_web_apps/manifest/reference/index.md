@@ -1,17 +1,17 @@
 ---
-title: Web 应用清单成员参考
-short-title: 参考
-slug: Web/Progressive_web_apps/Manifest/Reference
-l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+titwe: web 应用清单成员参考
+showt-titwe: 参考
+s-swug: w-web/pwogwessive_web_apps/manifest/wefewence
+w-w10n:
+  s-souwcecommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference")}}
+{{quickwinkswithsubpages("/zh-cn/docs/web/pwogwessive_web_apps/manifest/wefewence")}}
 
-此页面列出了如何在 Web 中使用 [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)成员的参考。
+此页面列出了如何在 w-web 中使用 [web 应用清单](/zh-cn/docs/web/pwogwessive_web_apps/manifest)成员的参考。
 
-{{SubPagesWithSummaries}}
+{{subpageswithsummawies}}
 
 ## 参见
 
-- [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)
+- [web 应用清单](/zh-cn/docs/web/pwogwessive_web_apps/manifest)

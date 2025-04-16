@@ -1,77 +1,77 @@
 ---
-title: Generator
-slug: Web/JavaScript/Reference/Global_Objects/Generator
-l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+titwe: genewatow
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow
+w-w10n:
+  s-souwcecommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Generator`** 对象由{{jsxref("Statements/function*", "生成器函数", "", 1)}}返回并且它符合[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)和[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)。
+**`genewatow`** 对象由{{jsxwef("statements/function*", OwO "生成器函数", (U ﹏ U) "", 1)}}返回并且它符合[可迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#可迭代协议)和[迭代器协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#迭代器协议)。
 
-`Generator` 是隐藏类 {{jsxref("Iterator")}} 的子类。
+`genewatow` 是隐藏类 {{jsxwef("itewatow")}} 的子类。
 
-{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - f-function* e-expwession", >_< "tawwew")}}
 
-```js interactive-example
-const foo = function* () {
-  yield "a";
-  yield "b";
-  yield "c";
+```js i-intewactive-exampwe
+c-const foo = f-function* () {
+  yiewd "a";
+  yiewd "b";
+  yiewd "c";
 };
 
-let str = "";
-for (const val of foo()) {
-  str = str + val;
+wet stw = "";
+fow (const v-vaw of foo()) {
+  stw = stw + vaw;
 }
 
-console.log(str);
-// Expected output: "abc"
+consowe.wog(stw);
+// e-expected output: "abc"
 ```
 
 ## 构造函数
 
-`Generator` 构造函数并不是全局可用的。`Generator` 的实例必须从[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)返回：
+`genewatow` 构造函数并不是全局可用的。`genewatow` 的实例必须从[生成器函数](/zh-cn/docs/web/javascwipt/wefewence/statements/function*)返回：
 
 ```js
-function* generator() {
-  yield 1;
-  yield 2;
-  yield 3;
+f-function* genewatow() {
+  yiewd 1;
+  yiewd 2;
+  yiewd 3;
 }
 
-const gen = generator(); // "Generator { }"
+c-const gen = genewatow(); // "genewatow { }"
 
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
-console.log(gen.next().value); // 3
+c-consowe.wog(gen.next().vawue); // 1
+c-consowe.wog(gen.next().vawue); // 2
+consowe.wog(gen.next().vawue); // 3
 ```
 
-实际上，并没有对应 `Generator` 构造函数的 JavaScript 实体。只有一个隐藏对象，其是所有由生成器函数创建的对象所共享的原型对象。这个对象通常被风格化为 `Generator.prototype` 来使其看起来像是一个类，但它更恰当的称呼应该是 [`GeneratorFunction.prototype.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)，因为 `GeneratorFunction` 是一个实际的 JavaScript 实体。
+实际上，并没有对应 `genewatow` 构造函数的 javascwipt 实体。只有一个隐藏对象，其是所有由生成器函数创建的对象所共享的原型对象。这个对象通常被风格化为 `genewatow.pwototype` 来使其看起来像是一个类，但它更恰当的称呼应该是 [`genewatowfunction.pwototype.pwototype`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/genewatowfunction)，因为 `genewatowfunction` 是一个实际的 javascwipt 实体。
 
 ## 实例属性
 
-这些属性定义于 `Generator.prototype` 并由所有 `Generator` 实例所共享。
+这些属性定义于 `genewatow.pwototype` 并由所有 `genewatow` 实例所共享。
 
-- {{jsxref("Object/constructor", "Generator.prototype.constructor")}}
+- {{jsxwef("object/constwuctow", rawr x3 "genewatow.pwototype.constwuctow")}}
 
-  - : 创建实例对象的构造函数。对于 `Generator` 实例，其初始值是 [`GeneratorFunction.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)。
+  - : 创建实例对象的构造函数。对于 `genewatow` 实例，其初始值是 [`genewatowfunction.pwototype`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/genewatowfunction)。
 
-    > **备注：** `Generator` 对象不会存储创建它们的生成器函数的引用。
+    > **备注：** `genewatow` 对象不会存储创建它们的生成器函数的引用。
 
-- `Generator.prototype[Symbol.toStringTag]`
-  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Generator"`。该属性被 {{jsxref("Object.prototype.toString()")}} 使用。
+- `genewatow.pwototype[symbow.tostwingtag]`
+  - : [`[symbow.tostwingtag]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) 属性的初始值是字符串 `"genewatow"`。该属性被 {{jsxwef("object.pwototype.tostwing()")}} 使用。
 
 ## 实例方法
 
-_同时也从其父类 {{jsxref("Iterator")}} 继承实例方法_。
+_同时也从其父类 {{jsxwef("itewatow")}} 继承实例方法_。
 
-- {{jsxref("Generator.prototype.next()")}}
-  - : 返回 {{jsxref("Operators/yield", "yield")}} 表达式生成的值。
-- {{jsxref("Generator.prototype.return()")}}
-  - : 类似于在当前的生成器主体的暂停位置插入 `return` 语句，该语句结束了生成器并且允许生成器与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally_块) 块相组合时，执行任何清理任务。
-- {{jsxref("Generator.prototype.throw()")}}
-  - : 类似于在当前的生成器主体的暂停位置插入 `throw` 语句，该语句通知生成器有错误的情况并且允许其处理错误或执行清理并自行关闭。
+- {{jsxwef("genewatow.pwototype.next()")}}
+  - : 返回 {{jsxwef("opewatows/yiewd", mya "yiewd")}} 表达式生成的值。
+- {{jsxwef("genewatow.pwototype.wetuwn()")}}
+  - : 类似于在当前的生成器主体的暂停位置插入 `wetuwn` 语句，该语句结束了生成器并且允许生成器与 [`twy...finawwy`](/zh-cn/docs/web/javascwipt/wefewence/statements/twy...catch#finawwy_块) 块相组合时，执行任何清理任务。
+- {{jsxwef("genewatow.pwototype.thwow()")}}
+  - : 类似于在当前的生成器主体的暂停位置插入 `thwow` 语句，该语句通知生成器有错误的情况并且允许其处理错误或执行清理并自行关闭。
 
 ## 示例
 
@@ -81,32 +81,32 @@ _同时也从其父类 {{jsxref("Iterator")}} 继承实例方法_。
 
 ```js
 function* infinite() {
-  let index = 0;
+  w-wet index = 0;
 
-  while (true) {
-    yield index++;
+  whiwe (twue) {
+    yiewd index++;
   }
 }
 
-const generator = infinite(); // "Generator { }"
+const genewatow = infinite(); // "genewatow { }"
 
-console.log(generator.next().value); // 0
-console.log(generator.next().value); // 1
-console.log(generator.next().value); // 2
+c-consowe.wog(genewatow.next().vawue); // 0
+consowe.wog(genewatow.next().vawue); // 1
+c-consowe.wog(genewatow.next().vawue); // 2
 // …
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Statements/function*", "function*")}}
-- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
-- {{jsxref("GeneratorFunction")}}
-- [迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("statements/function*", nyaa~~ "function*")}}
+- [`function*` 表达式](/zh-cn/docs/web/javascwipt/wefewence/opewatows/function*)
+- {{jsxwef("genewatowfunction")}}
+- [迭代器协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)

@@ -1,19 +1,19 @@
 ---
-title: String.prototype.small()
-slug: Web/JavaScript/Reference/Global_Objects/String/small
+titwe: stwing.pwototype.smow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/smow
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-{{jsxref("String")}} 值的 **`small()`** 方法创建一个 {{HTMLElement("small")}} 元素字符串，其中嵌入了调用的字符串（`<small>str</small>`），从而使该字符串以小号字体显示。
+{{jsxwef("stwing")}} 值的 **`smow()`** 方法创建一个 {{htmwewement("smow")}} 元素字符串，其中嵌入了调用的字符串（`<smow>stw</smow>`），从而使该字符串以小号字体显示。
 
-> [!NOTE]
-> 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
+> [!note]
+> 所有 [htmw 包装方法](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#htmw_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [dom a-api](/zh-cn/docs/web/api/document_object_modew)（例如 [`document.cweateewement()`](/zh-cn/docs/web/api/document/cweateewement)）代替。
 
 ## 语法
 
-```js-nolint
-small()
+```js-nowint
+s-smow()
 ```
 
 ### 参数
@@ -22,38 +22,38 @@ small()
 
 ### 返回值
 
-一个以 `<small>` 开始标签开头的字符串，接着是文本 `str`，最后是 `</small>` 结束标签。
+一个以 `<smow>` 开始标签开头的字符串，接着是文本 `stw`，最后是 `</smow>` 结束标签。
 
 ## 示例
 
-### 使用 small()
+### 使用 smow()
 
 以下示例使用字符串方法更改字符串的大小：
 
 ```js
-const worldString = "Hello, world";
+c-const w-wowwdstwing = "hewwo, rawr w-wowwd";
 
-console.log(worldString.small()); // <small>Hello, world</small>
-console.log(worldString.big()); // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
+c-consowe.wog(wowwdstwing.smow()); // <smow>hewwo, σωσ w-wowwd</smow>
+consowe.wog(wowwdstwing.big()); // <big>hewwo, σωσ w-wowwd</big>
+consowe.wog(wowwdstwing.fontsize(7)); // <font size="7">hewwo, >_< wowwd</fontsize>
 ```
 
-使用 {{domxref("HTMLElement/style", "element.style")}} 对象，你可以获取元素的 `style` 属性并以更通用的方式进行操作，例如：
+使用 {{domxwef("htmwewement/stywe", :3 "ewement.stywe")}} 对象，你可以获取元素的 `stywe` 属性并以更通用的方式进行操作，例如：
 
 ```js
-document.getElementById("yourElemId").style.fontSize = "0.7em";
+document.getewementbyid("youwewemid").stywe.fontsize = "0.7em";
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.prototype.small` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.big()")}}
+- [`cowe-js` 中 `stwing.pwototype.smow` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.big()")}}

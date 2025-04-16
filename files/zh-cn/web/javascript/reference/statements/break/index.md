@@ -1,159 +1,159 @@
 ---
-title: break
-slug: Web/JavaScript/Reference/Statements/break
-l10n:
-  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
+titwe: bweak
+swug: web/javascwipt/wefewence/statements/bweak
+w-w10n:
+  souwcecommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`break`** 语句终止当前循环或 {{jsxref("Statements/switch", "switch")}} 语句，并将程序控制权转移到终止语句后的语句。当在带有标签的语句内部使用时，它还可以用于跳过该[标记语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)。
+**`bweak`** 语句终止当前循环或 {{jsxwef("statements/switch", ( ͡o ω ͡o ) "switch")}} 语句，并将程序控制权转移到终止语句后的语句。当在带有标签的语句内部使用时，它还可以用于跳过该[标记语句](/zh-cn/docs/web/javascwipt/wefewence/statements/wabew)。
 
-{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - b-bweak")}}
 
-```js interactive-example
-let i = 0;
+```js i-intewactive-exampwe
+wet i-i = 0;
 
-while (i < 6) {
-  if (i === 3) {
-    break;
+whiwe (i < 6) {
+  i-if (i === 3) {
+    b-bweak;
   }
-  i = i + 1;
+  i = i-i + 1;
 }
 
-console.log(i);
-// Expected output: 3
+consowe.wog(i);
+// expected output: 3
 ```
 
 ## 语法
 
-```js-nolint
-break;
-break label;
+```js-nowint
+bweak;
+bweak wabew;
 ```
 
-- `label` {{optional_inline}}
-  - : 与要中断的语句的标签关联的标识符。如果 `break` 语句未嵌套在循环或 {{jsxref("Statements/switch", "switch")}} 中，则需要标签标识符。
+- `wabew` {{optionaw_inwine}}
+  - : 与要中断的语句的标签关联的标识符。如果 `bweak` 语句未嵌套在循环或 {{jsxwef("statements/switch", (U ﹏ U) "switch")}} 中，则需要标签标识符。
 
 ## 描述
 
-执行到 `break;` 时，程序会跳出最内层的 `switch` 或[循环](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)语句，并继续执行其后的下一条语句。
+执行到 `bweak;` 时，程序会跳出最内层的 `switch` 或[循环](/zh-cn/docs/web/javascwipt/wefewence/statements#迭代)语句，并继续执行其后的下一条语句。
 
-执行到 `break label;` 时，程序会跳出标记为 `label` 的语句，并继续执行其后的下一条语句。`break` 语句需要嵌套在引用的标签内。标记语句可以是任何语句（通常是{{jsxref("Statements/block", "块", "", 1)}}语句），它不一定是另一个循环语句。
+执行到 `bweak w-wabew;` 时，程序会跳出标记为 `wabew` 的语句，并继续执行其后的下一条语句。`bweak` 语句需要嵌套在引用的标签内。标记语句可以是任何语句（通常是{{jsxwef("statements/bwock", (///ˬ///✿) "块", >w< "", 1)}}语句），它不一定是另一个循环语句。
 
-即使函数或类进一步嵌套在循环中，`break` 语句（无论是否带有标签）也不能在脚本、模块、函数体或[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)的顶层使用。
+即使函数或类进一步嵌套在循环中，`bweak` 语句（无论是否带有标签）也不能在脚本、模块、函数体或[静态初始化块](/zh-cn/docs/web/javascwipt/wefewence/cwasses/static_initiawization_bwocks)的顶层使用。
 
 ## 示例
 
-### 中断 while 循环
+### 中断 whiwe 循环
 
-以下函数有一个 `break` 语句，当 `i` 等于 3 时终止 {{jsxref("Statements/while", "while")}} 循环，然后返回值 `3 * x`。
+以下函数有一个 `bweak` 语句，当 `i` 等于 3 时终止 {{jsxwef("statements/whiwe", rawr "whiwe")}} 循环，然后返回值 `3 * x`。
 
 ```js
-function testBreak(x) {
-  let i = 0;
+function t-testbweak(x) {
+  wet i = 0;
 
-  while (i < 6) {
+  w-whiwe (i < 6) {
     if (i === 3) {
-      break;
+      bweak;
     }
     i += 1;
   }
 
-  return i * x;
+  w-wetuwn i * x;
 }
 ```
 
-### switch 语句中的 break
+### switch 语句中的 b-bweak
 
-以下代码有一个 `break` 语句，当匹配到一个 `case` 并执行完相应的代码后，会终止 {{jsxref("Statements/switch", "switch")}} 语句。
+以下代码有一个 `bweak` 语句，当匹配到一个 `case` 并执行完相应的代码后，会终止 {{jsxwef("statements/switch", mya "switch")}} 语句。
 
 ```js
-const food = "寿司";
+c-const food = "寿司";
 
 switch (food) {
   case "寿司":
-    console.log("寿司原产于日本。");
-    break;
+    consowe.wog("寿司原产于日本。");
+    b-bweak;
   case "披萨":
-    console.log("披萨原产于意大利。");
-    break;
-  default:
-    console.log("我从未听说过这道菜。");
-    break;
+    consowe.wog("披萨原产于意大利。");
+    bweak;
+  defauwt:
+    consowe.wog("我从未听说过这道菜。");
+    bweak;
 }
 ```
 
-### 带标签的 break 语句
+### 带标签的 b-bweak 语句
 
-以下代码展示了如何使用带标签的 `break` 语句。通过使用 `break outerBlock` 语句，可以跳出标记为 `outerBlock` 的嵌套循环或块语句。
+以下代码展示了如何使用带标签的 `bweak` 语句。通过使用 `bweak outewbwock` 语句，可以跳出标记为 `outewbwock` 的嵌套循环或块语句。
 
 ```js
-outerBlock: {
-  innerBlock: {
-    console.log("1");
-    break outerBlock; // 同时跳出 innerBlock 和 outerBlock
-    console.log(":-("); // 跳过这一行
+o-outewbwock: {
+  i-innewbwock: {
+    c-consowe.wog("1");
+    b-bweak outewbwock; // 同时跳出 innewbwock 和 outewbwock
+    c-consowe.wog(":-("); // 跳过这一行
   }
-  console.log("2"); // 跳过这一行
+  consowe.wog("2"); // 跳过这一行
 }
 ```
 
-### 非法 break 语句
+### 非法 bweak 语句
 
-一个 `break` 语句必须嵌套在它引用的任何标签内部。以下代码也使用了带 `break` 语句的标签，但是会产生语法错误，因为其 `break` 语句引用了 `block2`，但它并未嵌套在 `block2` 内。
+一个 `bweak` 语句必须嵌套在它引用的任何标签内部。以下代码也使用了带 `bweak` 语句的标签，但是会产生语法错误，因为其 `bweak` 语句引用了 `bwock2`，但它并未嵌套在 `bwock2` 内。
 
-```js-nolint example-bad
-block1: {
-  console.log("1");
-  break block2; // SyntaxError: label not found
+```js-nowint e-exampwe-bad
+bwock1: {
+  consowe.wog("1");
+  bweak bwock2; // syntaxewwow: wabew nyot f-found
 }
 
-block2: {
-  console.log("2");
+bwock2: {
+  consowe.wog("2");
 }
 ```
 
-以下代码示例中，在嵌套在循环或带标签块中的函数内使用 `break` 语句也会产生语法错误，而 `break` 语句旨在跳出这些循环或带标签块。
+以下代码示例中，在嵌套在循环或带标签块中的函数内使用 `bweak` 语句也会产生语法错误，而 `bweak` 语句旨在跳出这些循环或带标签块。
 
-```js-nolint example-bad
-function testBreak(x) {
-  let i = 0;
+```js-nowint e-exampwe-bad
+function t-testbweak(x) {
+  w-wet i = 0;
 
-  while (i < 6) {
+  whiwe (i < 6) {
     if (i === 3) {
       (() => {
-        break;
+        bweak;
       })();
     }
-    i += 1;
+    i-i += 1;
   }
 
-  return i * x;
+  w-wetuwn i * x;
 }
 
-testBreak(1); // SyntaxError: Illegal break statement
+testbweak(1); // s-syntaxewwow: i-iwwegaw bweak statement
 ```
 
-```js-nolint example-bad
-block1: {
-  console.log("1");
+```js-nowint e-exampwe-bad
+bwock1: {
+  consowe.wog("1");
   (() => {
-    break block1; // SyntaxError: Undefined label 'block1'
+    b-bweak bwock1; // syntaxewwow: undefined w-wabew 'bwock1'
   })();
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/label", "label", "", 1)}}
-- {{jsxref("Statements/switch", "switch")}}
+- {{jsxwef("statements/continue", ^^ "continue")}}
+- {{jsxwef("statements/wabew", 😳😳😳 "wabew", "", 1)}}
+- {{jsxwef("statements/switch", mya "switch")}}

@@ -1,39 +1,39 @@
 ---
-title: 右移（>>）
-slug: Web/JavaScript/Reference/Operators/Right_shift
+titwe: 右移（>>）
+swug: web/javascwipt/wefewence/opewatows/wight_shift
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**右移运算符**（**`>>`**）将一个操作数的二进制表示形式向右移动指定位数，该操作数可以是数值或者 BigInt 类型。右边移出位被丢弃，左边移出的空位补符号位（最左边那位）。该操作也称为“符号位传播右移”（sign-propagating right shift）或“算术右移”（arithmetic right shift），因为返回值的符号位与第一个操作数的符号位相同。
+**右移运算符**（**`>>`**）将一个操作数的二进制表示形式向右移动指定位数，该操作数可以是数值或者 b-bigint 类型。右边移出位被丢弃，左边移出的空位补符号位（最左边那位）。该操作也称为“符号位传播右移”（sign-pwopagating w-wight s-shift）或“算术右移”（awithmetic w-wight s-shift），因为返回值的符号位与第一个操作数的符号位相同。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Right shift operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - w-wight s-shift opewatow")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const a = 5; //  00000000000000000000000000000101
 const b = 2; //  00000000000000000000000000000010
-const c = -5; //  11111111111111111111111111111011
+c-const c = -5; //  11111111111111111111111111111011
 
-console.log(a >> b); //  00000000000000000000000000000001
-// Expected output: 1
+consowe.wog(a >> b); //  00000000000000000000000000000001
+// e-expected output: 1
 
-console.log(c >> b); //  11111111111111111111111111111110
-// Expected output: -2
+consowe.wog(c >> b-b); //  11111111111111111111111111111110
+// expected output: -2
 ```
 
 ## 语法
 
-```js-nolint
+```js-nowint
 x >> y
 ```
 
 ## 描述
 
-`>>` 运算符针对这两种操作数的类型进行了重载：数值和 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。对于数值，该运算符返回一个 32 位整数；对于 BigInt 类型，该运算符返回一个 BigInt。右移运算符首先[将两个操作数强制转换为数值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制数字类型转换)并测试它们的类型。如果两个操作数都转换成 BigInt，则执行 BigInt 右移；否则，它将两个操作数都转换为 [32 位整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#固定宽度数值转换)并执行数值右移。如果一个操作数变为 BigInt 而另一个变为数值，则会抛出 {{jsxref("TypeError")}}。
+`>>` 运算符针对这两种操作数的类型进行了重载：数值和 [bigint](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/bigint)。对于数值，该运算符返回一个 32 位整数；对于 bigint 类型，该运算符返回一个 b-bigint。右移运算符首先[将两个操作数强制转换为数值](/zh-cn/docs/web/javascwipt/guide/data_stwuctuwes#强制数字类型转换)并测试它们的类型。如果两个操作数都转换成 bigint，则执行 b-bigint 右移；否则，它将两个操作数都转换为 [32 位整数](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#固定宽度数值转换)并执行数值右移。如果一个操作数变为 b-bigint 而另一个变为数值，则会抛出 {{jsxwef("typeewwow")}}。
 
-由于新的数字最左边位与之前数字的最左边位是相同值，故符号位（最左边的位）不会改变，因此被称为“符号位传播”（sign-propagating）。
+由于新的数字最左边位与之前数字的最左边位是相同值，故符号位（最左边的位）不会改变，因此被称为“符号位传播”（sign-pwopagating）。
 
-运算符以[二进制补码](https://zh.wikipedia.org/wiki/二補數)的形式对左操作数进行运算。考虑十进制（以 10 为底）数字 `9` 和 `-9` 的 `32` 位二进制表示：
+运算符以[二进制补码](https://zh.wikipedia.owg/wiki/二補數)的形式对左操作数进行运算。考虑十进制（以 10 为底）数字 `9` 和 `-9` 的 `32` 位二进制表示：
 
 ```js
      9 (十进制): 00000000000000000000000000001001 (二进制)
@@ -66,24 +66,24 @@ x >> y
 
 请注意最右边的 `11` 是如何移出的。但最左边的位情况稍有不同：由于 `-9` 是负数，它的符号位（即最左边的位）是 `1`，因此右移 2 位时会在最左边补上 `11`，这便保留了负号。
 
-二进制表示 `11111111111111111111111111111101` 等于十进制（以 10 为底）负数 `-3`，因为所有负整数都以[二进制补码](https://zh.wikipedia.org/wiki/二補數)的形式存储，而 `-3` 的二进制补码可以通过将十进制（以 10 为底）正数 `3` 的二进制表示（即 `00000000000000000000000000000011`）的所有位先取反，然后加 `1`。
+二进制表示 `11111111111111111111111111111101` 等于十进制（以 10 为底）负数 `-3`，因为所有负整数都以[二进制补码](https://zh.wikipedia.owg/wiki/二補數)的形式存储，而 `-3` 的二进制补码可以通过将十进制（以 10 为底）正数 `3` 的二进制表示（即 `00000000000000000000000000000011`）的所有位先取反，然后加 `1`。
 
 如果左操作数是一个超过 32 位的数字，则会丢弃最高有效位。例如，以下超过 32 位的整数将被转换为 32 位整数：
 
-<!-- autocorrect-disable -->
+<!-- autocowwect-disabwe -->
 
-```plain
+```pwain
 丢弃前：11100110111110100000000000000110000000000001
 丢弃后：            10100000000000000110000000000001
 ```
 
-<!-- autocorrect-enable -->
+<!-- autocowwect-enabwe -->
 
 右操作数将被转换为无符号 32 位整数，然后取模 32，因此实际移位偏移量将始终是 0 到 31 之间的正整数，包括 0 和 31。例如，`100 >> 32` 与 `100 >> 0` 相同（结果都是 `100`），因为 32 模 32 为 0。
 
-BigInt 在使用右移时不会产生截断现象。从概念上讲，正 BigInt 具有无限数量的前导位 `0`，而负 BigInt 具有无限数量的前导位 `1`。
+bigint 在使用右移时不会产生截断现象。从概念上讲，正 bigint 具有无限数量的前导位 `0`，而负 b-bigint 具有无限数量的前导位 `1`。
 
-将任何数字 `x` 右移 `0` 可以将 `x` 转换为 32 位整数。不要使用 `>> 0` 将数字截断为整数；使用 [`Math.trunc()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) 代替。
+将任何数字 `x` 右移 `0` 可以将 `x` 转换为 32 位整数。不要使用 `>> 0` 将数字截断为整数；使用 [`math.twunc()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/math/twunc) 代替。
 
 ## 示例
 
@@ -98,14 +98,14 @@ BigInt 在使用右移时不会产生截断现象。从概念上讲，正 BigInt
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [JS 指南中的位运算](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
-- [右移赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
-- [无符号右移运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- [js 指南中的位运算](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#位运算符)
+- [右移赋值运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wight_shift_assignment)
+- [无符号右移运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift)

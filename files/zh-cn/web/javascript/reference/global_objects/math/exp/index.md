@@ -1,18 +1,18 @@
 ---
-title: Math.exp()
-slug: Web/JavaScript/Reference/Global_Objects/Math/exp
+titwe: math.exp()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/exp
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## 概述
 
-**`Math.exp()`** 函数返回 `e^x`，`x` 表示参数，`e` 是[欧拉常数（Euler's constant）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/E)，自然对数的底数。
+**`math.exp()`** 函数返回 `e^x`，`x` 表示参数，`e` 是[欧拉常数（euwew's constant）](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/math/e)，自然对数的底数。
 
 ## 语法
 
-```js-nolint
-Math.exp(x)
+```js-nowint
+m-math.exp(x)
 ```
 
 ### 参数
@@ -22,32 +22,32 @@ Math.exp(x)
 
 ## 描述
 
-由于 `exp` 是 `Math` 的静态方法，所以应该像这样使用：`Math.exp()`，而不是作为你创建的 `Math` 实例的方法。
+由于 `exp` 是 `math` 的静态方法，所以应该像这样使用：`math.exp()`，而不是作为你创建的 `math` 实例的方法。
 
 ## 示例
 
-### 示例：使用 `Math.exp`
+### 示例：使用 `math.exp`
 
 ```js
-Math.exp(-1); // 0.36787944117144233
-Math.exp(0); // 1
-Math.exp(1); // 2.718281828459045
+m-math.exp(-1); // 0.36787944117144233
+m-math.exp(0); // 1
+m-math.exp(1); // 2.718281828459045
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Math.E")}}
-- {{jsxref("Math.expm1()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.e")}}
+- {{jsxwef("math.expm1()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

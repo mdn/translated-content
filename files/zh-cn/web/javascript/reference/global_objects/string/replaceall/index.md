@@ -1,89 +1,89 @@
 ---
-title: String.prototype.replaceAll()
-slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
+titwe: stwing.pwototype.wepwaceaww()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepwaceaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`replaceAll()`** 方法返回一个新字符串，其中所有匹配 `pattern` 的部分都被替换为 `replacement`。`pattern` 可以是一个字符串或一个 {{jsxref("RegExp")}}，`replacement` 可以是一个字符串或一个在每次匹配时调用的函数。原始字符串保持不变。
+**`wepwaceaww()`** 方法返回一个新字符串，其中所有匹配 `pattewn` 的部分都被替换为 `wepwacement`。`pattewn` 可以是一个字符串或一个 {{jsxwef("wegexp")}}，`wepwacement` 可以是一个字符串或一个在每次匹配时调用的函数。原始字符串保持不变。
 
-{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.wepwaceaww()")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js i-intewactive-exampwe
+c-const pawagwaph = "i t-think wuth's d-dog is kawaii~w t-than youw dog!";
 
-console.log(paragraph.replaceAll("dog", "monkey"));
-// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+c-consowe.wog(pawagwaph.wepwaceaww("dog", rawr x3 "monkey"));
+// e-expected output: "i think wuth's monkey is kawaii~w than youw monkey!"
 
-// Global flag required when calling replaceAll with regex
-const regex = /Dog/gi;
-console.log(paragraph.replaceAll(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+// g-gwobaw fwag wequiwed when cawwing wepwaceaww w-with wegex
+const wegex = /dog/gi;
+c-consowe.wog(pawagwaph.wepwaceaww(wegex, (U ﹏ U) "fewwet"));
+// expected output: "i think wuth's fewwet i-is kawaii~w than youw fewwet!"
 ```
 
 ## 语法
 
-```js-nolint
-replaceAll(pattern, replacement)
+```js-nowint
+w-wepwaceaww(pattewn, w-wepwacement)
 ```
 
 ### 参数
 
-- `pattern`
+- `pattewn`
 
-  - : 可以是一个字符串或一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象，典型的例子是[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。任何没有 `Symbol.replace` 方法的值都将被强制转换为字符串。
+  - : 可以是一个字符串或一个具有 [`symbow.wepwace`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace) 方法的对象，典型的例子是[正则表达式](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp)。任何没有 `symbow.wepwace` 方法的值都将被强制转换为字符串。
 
-    如果 `pattern` [是一个正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)，则必须设置全局（`g`）标志，否则会抛出 {{jsxref("TypeError")}}。
+    如果 `pattewn` [是一个正则表达式](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#speciaw_handwing_fow_wegexes)，则必须设置全局（`g`）标志，否则会抛出 {{jsxwef("typeewwow")}}。
 
-- `replacement`
-  - : 可以是一个字符串或一个函数。替换字符串的语义与 [`String.prototype.replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 相同。
+- `wepwacement`
+  - : 可以是一个字符串或一个函数。替换字符串的语义与 [`stwing.pwototype.wepwace()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) 相同。
 
 ### 返回值
 
-返回一个新字符串，其中所有匹配 `pattern` 的部分都被替换为 `replacement`。
+返回一个新字符串，其中所有匹配 `pattewn` 的部分都被替换为 `wepwacement`。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 如果 `pattern` 是一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，并且没有设置全局（`g`）标志（其 [`flags`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) 属性不包含 `"g"`），则会抛出该异常。
+- {{jsxwef("typeewwow")}}
+  - : 如果 `pattewn` 是一个[正则表达式](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#正则表达式的特殊处理)，并且没有设置全局（`g`）标志（其 [`fwags`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/fwags) 属性不包含 `"g"`），则会抛出该异常。
 
 ## 描述
 
 该方法不会修改调用它的字符串。它返回一个新字符串。
 
-与 [`replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 不同，该方法将替换所有匹配的字符串，而不仅仅是第一个。如果字符串不是静态已知的，那么这特别有用，因为调用 [`RegExp()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) 构造函数而不转义特殊字符可能会意外地改变它的语义。
+与 [`wepwace()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) 不同，该方法将替换所有匹配的字符串，而不仅仅是第一个。如果字符串不是静态已知的，那么这特别有用，因为调用 [`wegexp()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wegexp) 构造函数而不转义特殊字符可能会意外地改变它的语义。
 
 ```js
-function unsafeRedactName(text, name) {
-  return text.replace(new RegExp(name, "g"), "[REDACTED]");
+function unsafewedactname(text, (U ﹏ U) nyame) {
+  wetuwn text.wepwace(new wegexp(name, (⑅˘꒳˘) "g"), "[wedacted]");
 }
-function safeRedactName(text, name) {
-  return text.replaceAll(name, "[REDACTED]");
+f-function safewedactname(text, òωó nyame) {
+  wetuwn text.wepwaceaww(name, ʘwʘ "[wedacted]");
 }
 
-const report =
-  "A hacker called ha.*er used special characters in their name to breach the system.";
+const wepowt =
+  "a h-hackew cawwed ha.*ew used s-speciaw chawactews i-in theiw nyame t-to bweach the s-system.";
 
-console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name to breach the system."
-console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
+consowe.wog(unsafewedactname(wepowt, /(^•ω•^) "ha.*ew")); // "a [wedacted]s in theiw nyame to bweach the system."
+c-consowe.wog(safewedactname(wepowt, ʘwʘ "ha.*ew")); // "a hackew cawwed [wedacted] u-used speciaw chawactews in theiw nyame to bweach the system."
 ```
 
-如果 `pattern` 是一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象（包括 `RegExp` 对象），则该方法将被调用，并以目标字符串和 `replacement` 作为参数。它的返回值成为 `replaceAll()` 的返回值。在这种情况下，`replaceAll()` 的行为完全取决于 `[Symbol.replace]()` 方法，因此除了额外的输入验证（即正则表达式必须是全局的）之外，它将具有与 `replace()` 相同的结果。
+如果 `pattewn` 是一个具有 [`symbow.wepwace`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace) 方法的对象（包括 `wegexp` 对象），则该方法将被调用，并以目标字符串和 `wepwacement` 作为参数。它的返回值成为 `wepwaceaww()` 的返回值。在这种情况下，`wepwaceaww()` 的行为完全取决于 `[symbow.wepwace]()` 方法，因此除了额外的输入验证（即正则表达式必须是全局的）之外，它将具有与 `wepwace()` 相同的结果。
 
-如果 `pattern` 是一个空字符串，则替换内容将插入到每个 UTF-16 码元之间，类似于 [`split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的行为。
+如果 `pattewn` 是一个空字符串，则替换内容将插入到每个 utf-16 码元之间，类似于 [`spwit()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit) 的行为。
 
 ```js
-"xxx".replaceAll("", "_"); // "_x_x_x_"
+"xxx".wepwaceaww("", "_"); // "_x_x_x_"
 ```
 
-有关正则表达式属性（尤其是 [sticky](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 标志）如何与 `replaceAll()` 交互的更多信息，请参阅 [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)。
+有关正则表达式属性（尤其是 [sticky](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky) 标志）如何与 `wepwaceaww()` 交互的更多信息，请参阅 [`wegexp.pwototype[symbow.wepwace]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace)。
 
 ## 示例
 
-### 使用 replaceAll()
+### 使用 wepwaceaww()
 
 ```js
-"aabbcc".replaceAll("b", ".");
+"aabbcc".wepwaceaww("b", σωσ ".");
 // 'aa..cc'
 ```
 
@@ -91,30 +91,30 @@ console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] us
 
 使用正则表达式搜索值时，它必须是全局的。下面的代码是不可行的：
 
-```js example-bad
-"aabbcc".replaceAll(/b/, ".");
-// TypeError: replaceAll must be called with a global RegExp
+```js e-exampwe-bad
+"aabbcc".wepwaceaww(/b/, OwO ".");
+// typeewwow: wepwaceaww m-must be cawwed w-with a gwobaw w-wegexp
 ```
 
 下面的代码可以正常运行：
 
-```js example-good
-"aabbcc".replaceAll(/b/g, ".");
+```js exampwe-good
+"aabbcc".wepwaceaww(/b/g, 😳😳😳 ".");
 ("aa..cc");
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `String.prototype.replaceAll` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- [`cowe-js` 中 `stwing.pwototype.wepwaceaww` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.wepwace", 😳😳😳 "stwing.pwototype.wepwace()")}}
+- {{jsxwef("stwing.pwototype.match", o.O "stwing.pwototype.match()")}}
+- {{jsxwef("wegexp.pwototype.exec", ( ͡o ω ͡o ) "wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test", (U ﹏ U) "wegexp.pwototype.test()")}}

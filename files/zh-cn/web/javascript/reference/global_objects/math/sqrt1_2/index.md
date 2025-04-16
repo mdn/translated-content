@@ -1,45 +1,45 @@
 ---
-title: Math.SQRT1_2
-slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
+titwe: math.sqwt1_2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt1_2
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## 概述
 
-**`Math.SQRT1_2`** 属性表示 1/2 的平方根，约为 0.707：
+**`math.sqwt1_2`** 属性表示 1/2 的平方根，约为 0.707：
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT1_2</mi></mstyle><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>≈</mo><mn>0.707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0.707</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.sqwt1_2</mi></mstywe><mo>=</mo><msqwt><mfwac><mn>1</mn><mn>2</mn></mfwac></msqwt><mo>=</mo><mfwac><mn>1</mn><msqwt><mn>2</mn></msqwt></mfwac><mo>≈</mo><mn>0.707</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.sqwt1_2}} = \sqwt{\fwac{1}{2}} = \fwac{1}{\sqwt{2}} \appwox 0.707</annotation></semantics></math>
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 描述
 
-由于 `SQRT1_2` 是 `Math` 对象的静态属性，所以应该像这样使用：`Math.SQRT1_2`，而不是作为你创建的 `Math` 实例的属性（`Math` 不是构造函数）。
+由于 `sqwt1_2` 是 `math` 对象的静态属性，所以应该像这样使用：`math.sqwt1_2`，而不是作为你创建的 `math` 实例的属性（`math` 不是构造函数）。
 
 ## 示例
 
-### 示例：使用 `SQRT1_2`
+### 示例：使用 `sqwt1_2`
 
 下面的函数返回 1/2 的平方根：
 
 ```js
-function getRoot1_2() {
-  return Math.SQRT1_2;
+f-function getwoot1_2() {
+  w-wetuwn m-math.sqwt1_2;
 }
 
-getRoot1_2(); // 0.7071067811865476
+g-getwoot1_2(); // 0.7071067811865476
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

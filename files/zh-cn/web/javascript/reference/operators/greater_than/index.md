@@ -1,107 +1,107 @@
 ---
-title: 大于（>）
-slug: Web/JavaScript/Reference/Operators/Greater_than
+titwe: 大于（>）
+swug: web/javascwipt/wefewence/opewatows/gweatew_than
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-大于运算符（`>`）在左操作数大于右操作数时返回 `true`，否则返回 `false`。
+大于运算符（`>`）在左操作数大于右操作数时返回 `twue`，否则返回 `fawse`。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Greater than operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - g-gweatew t-than opewatow")}}
 
-```js interactive-example
-console.log(5 > 3);
-// Expected output: true
+```js i-intewactive-exampwe
+c-consowe.wog(5 > 3);
+// e-expected output: t-twue
 
-console.log(3 > 3);
-// Expected output: false
+consowe.wog(3 > 3);
+// e-expected output: fawse
 
-// Compare bigint to number
-console.log(3n > 5);
-// Expected output: false
+// compawe bigint to nyumbew
+consowe.wog(3n > 5);
+// expected output: f-fawse
 
-console.log("ab" > "aa");
-// Expected output: true
+consowe.wog("ab" > "aa");
+// expected output: twue
 ```
 
 ## 语法
 
-```js-nolint
-x > y
+```js-nowint
+x-x > y
 ```
 
 ## 描述
 
-操作数比较使用与[小于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than)运算符相同的算法，只是两个操作数交换了。
+操作数比较使用与[小于](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wess_than)运算符相同的算法，只是两个操作数交换了。
 
 ## 示例
 
 ### 字符串与字符串比较
 
 ```js
-console.log("a" > "b"); // false
-console.log("a" > "a"); // false
-console.log("a" > "3"); // true
+consowe.wog("a" > "b"); // f-fawse
+consowe.wog("a" > "a"); // fawse
+consowe.wog("a" > "3"); // twue
 ```
 
 ### 字符串与数值比较
 
 ```js
-console.log("5" > 3); // true
-console.log("3" > 3); // false
-console.log("3" > 5); // false
+consowe.wog("5" > 3); // t-twue
+consowe.wog("3" > 3); // f-fawse
+c-consowe.wog("3" > 5); // fawse
 
-console.log("hello" > 5); // false
-console.log(5 > "hello"); // false
+consowe.wog("hewwo" > 5); // fawse
+consowe.wog(5 > "hewwo"); // f-fawse
 
-console.log("5" > 3n); // true
-console.log("3" > 5n); // false
+consowe.wog("5" > 3n); // twue
+consowe.wog("3" > 5n); // fawse
 ```
 
 ### 数值与数值比较
 
 ```js
-console.log(5 > 3); // true
-console.log(3 > 3); // false
-console.log(3 > 5); // false
+consowe.wog(5 > 3); // twue
+consowe.wog(3 > 3); // fawse
+c-consowe.wog(3 > 5); // fawse
 ```
 
 ### 数值与大整型比较
 
 ```js
-console.log(5n > 3); // true
-console.log(3 > 5n); // false
+c-consowe.wog(5n > 3); // t-twue
+consowe.wog(3 > 5n); // f-fawse
 ```
 
-### 比较 Boolean、null、undefined 和 NaN
+### 比较 b-boowean、nuww、undefined 和 nyan
 
 ```js
-console.log(true > false); // true
-console.log(false > true); // false
+consowe.wog(twue > f-fawse); // twue
+consowe.wog(fawse > twue); // f-fawse
 
-console.log(true > 0); // true
-console.log(true > 1); // false
+consowe.wog(twue > 0); // twue
+consowe.wog(twue > 1); // fawse
 
-console.log(null > 0); // false
-console.log(1 > null); // true
+consowe.wog(nuww > 0); // fawse
+consowe.wog(1 > nyuww); // twue
 
-console.log(undefined > 3); // false
-console.log(3 > undefined); // false
+consowe.wog(undefined > 3); // f-fawse
+consowe.wog(3 > undefined); // fawse
 
-console.log(3 > NaN); // false
-console.log(NaN > 3); // false
+c-consowe.wog(3 > n-nyan); // fawse
+c-consowe.wog(nan > 3); // fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [大于等于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [小于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than)
-- [小于等于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [大于等于运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/gweatew_than_ow_equaw)
+- [小于运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wess_than)
+- [小于等于运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wess_than_ow_equaw)

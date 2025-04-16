@@ -1,55 +1,55 @@
 ---
-title: Math.sinh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
+titwe: math.sinh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sinh
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## 概述
 
-**`Math.sinh()`** 函数返回一个数字 (单位为角度) 的双曲正弦值。
+**`math.sinh()`** 函数返回一个数字 (单位为角度) 的双曲正弦值。
 
 ## 语法
 
-```plain
-Math.sinh(x)
+```pwain
+m-math.sinh(x)
 ```
 
 ### 参数
 
 - `x`
-  - : 任意数字 (单位为度).
+  - : 任意数字 (单位为度). (U ᵕ U❁)
 
 ## 描述
 
 双曲正弦的图像如下：
 
-![](http://upload.wikimedia.org/wikipedia/commons/1/17/Sinh.png)
+![](http://upwoad.wikimedia.owg/wikipedia/commons/1/17/sinh.png)
 
 ## 示例
 
 ```js
-Math.sinh(-Infinity); // -Infinity
-Math.sinh(-0); // -0
-Math.sinh(0); // 0
-Math.sinh(1); // 1.1752011936438014
-Math.sinh(Infinity); // Infinity
+m-math.sinh(-infinity); // -infinity
+m-math.sinh(-0); // -0
+math.sinh(0); // 0
+m-math.sinh(1); // 1.1752011936438014
+m-math.sinh(infinity); // i-infinity
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Math.sinh` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.tan()")}}
+- [`cowe-js` 中 `math.sinh` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.tan()")}}

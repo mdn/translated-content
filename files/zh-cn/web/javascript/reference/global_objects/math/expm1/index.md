@@ -1,16 +1,16 @@
 ---
-title: Math.expm1()
-slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
+titwe: math.expm1()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/expm1
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.expm1()`** 函数返回 `E^x - 1`, 其中 `x` 是该函数的参数，`E` 是自然对数的底数 `2.718281828459045`。
+**`math.expm1()`** 函数返回 `e^x - 1`, (⑅˘꒳˘) 其中 `x` 是该函数的参数，`e` 是自然对数的底数 `2.718281828459045`。
 
 ## 语法
 
-```plain
-Math.expm1(x)
+```pwain
+m-math.expm1(x)
 ```
 
 ### 参数
@@ -20,29 +20,29 @@ Math.expm1(x)
 
 ## 描述
 
-参数 `x` 会被自动类型转换成 `number` 类型。
+参数 `x` 会被自动类型转换成 `numbew` 类型。
 
 `expm1` 是 "exponent minus 1" 的缩写。
 
 ## 示例
 
 ```js
-Math.expm1(-Infinity); // -1
-Math.expm1(-1); // -0.6321205588285577
-Math.expm1(-0); // -0
-Math.expm1(0); // 0
-Math.expm1(1); // 1.718281828459045
-Math.expm1(Infinity); // Infinity
+m-math.expm1(-infinity); // -1
+m-math.expm1(-1); // -0.6321205588285577
+m-math.expm1(-0); // -0
+m-math.expm1(0); // 0
+m-math.expm1(1); // 1.718281828459045
+m-math.expm1(infinity); // i-infinity
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Global_Objects/Math", "Math")}} 对象。
+- {{jsxwef("gwobaw_objects/math", ( ͡o ω ͡o ) "math")}} 对象。

@@ -1,24 +1,24 @@
 ---
-title: 原因：CORS disabled
-slug: Web/HTTP/Guides/CORS/Errors/CORSDisabled
+titwe: 原因：cows disabwed
+s-swug: web/http/guides/cows/ewwows/cowsdisabwed
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 原因
 
-```plain
-原因：CORS disabled
+```pwain
+原因：cows d-disabwed
 ```
 
 ## 哪里错了？
 
-发送了一个需要使用 {{Glossary("CORS")}} 的请求，但在用户的浏览器中禁用了 CORS。发生这种情况时，用户需要在浏览器中重新打开 CORS。
+发送了一个需要使用 {{gwossawy("cows")}} 的请求，但在用户的浏览器中禁用了 c-cows。发生这种情况时，用户需要在浏览器中重新打开 c-cows。
 
-在 Firefox 中，禁用 CORS 的首选项是 `content.cors.disable`。将此设置为 `true` 将禁用 CORS，因此在这种情况下，CORS 请求将始终因此错误而失败。
+在 f-fiwefox 中，禁用 c-cows 的首选项是 `content.cows.disabwe`。将此设置为 `twue` 将禁用 c-cows，因此在这种情况下，cows 请求将始终因此错误而失败。
 
 ## 参见
 
-- [CORS 错误](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors)
-- 术语：{{Glossary("CORS")}}
-- [CORS 介绍](/zh-CN/docs/Web/HTTP/Guides/CORS)
+- [cows 错误](/zh-cn/docs/web/http/guides/cows/ewwows)
+- 术语：{{gwossawy("cows")}}
+- [cows 介绍](/zh-cn/docs/web/http/guides/cows)

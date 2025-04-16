@@ -1,18 +1,18 @@
 ---
-title: Math.log10()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log10
+titwe: math.wog10()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog10
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## 概述
 
-**`Math.log10()`** 函数返回一个数字以 10 为底的对数。
+**`math.wog10()`** 函数返回一个数字以 10 为底的对数。
 
 ## 语法
 
-```plain
-Math.log10(x)
+```pwain
+m-math.wog10(x)
 ```
 
 ### 参数
@@ -22,33 +22,33 @@ Math.log10(x)
 
 ## 描述
 
-如果传入的参数小于 0，则返回 NaN.
+如果传入的参数小于 0，则返回 n-nyan.
 
 ## 示例
 
 ```js
-Math.log10(10); // 1
-Math.log10(100); // 2
-Math.log10("100"); // 2
-Math.log10(1); // 0
-Math.log10(0); // -Infinity
-Math.log10(-2); // NaN
-Math.log10("foo"); // NaN
+m-math.wog10(10); // 1
+m-math.wog10(100); // 2
+m-math.wog10("100"); // 2
+m-math.wog10(1); // 0
+m-math.wog10(0); // -infinity
+m-math.wog10(-2); // nyan
+math.wog10("foo"); // nyan
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Math.log10` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- [`cowe-js` 中 `math.wog10` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

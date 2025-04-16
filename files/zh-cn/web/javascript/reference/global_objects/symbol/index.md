@@ -1,220 +1,220 @@
 ---
-title: Symbol
-slug: Web/JavaScript/Reference/Global_Objects/Symbol
+titwe: symbow
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**symbol** 是一种{{Glossary("Primitive", "原始数据类型")}}。`Symbol()` 函数会返回 **symbol** 类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的 symbol 注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："`new Symbol()`"。
+**symbow** 是一种{{gwossawy("pwimitive", (ꈍᴗꈍ) "原始数据类型")}}。`symbow()` 函数会返回 **symbow** 类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的 s-symbow 注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："`new s-symbow()`"。
 
-每个从 `Symbol()` 返回的 symbol 值都是唯一的。一个 symbol 值能作为对象属性的标识符；这是该数据类型仅有的目的。更进一步的解析见——[glossary entry for Symbol](/zh-CN/docs/Glossary/Symbol)。
+每个从 `symbow()` 返回的 s-symbow 值都是唯一的。一个 s-symbow 值能作为对象属性的标识符；这是该数据类型仅有的目的。更进一步的解析见——[gwossawy e-entwy fow s-symbow](/zh-cn/docs/gwossawy/symbow)。
 
-{{InteractiveExample("JavaScript Demo: Symbol - Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow - constwuctow")}}
 
-```js interactive-example
-const symbol1 = Symbol();
-const symbol2 = Symbol(42);
-const symbol3 = Symbol("foo");
+```js intewactive-exampwe
+const symbow1 = symbow();
+const symbow2 = symbow(42);
+c-const symbow3 = symbow("foo");
 
-console.log(typeof symbol1);
-// Expected output: "symbol"
+consowe.wog(typeof s-symbow1);
+// expected o-output: "symbow"
 
-console.log(symbol2 === 42);
-// Expected output: false
+consowe.wog(symbow2 === 42);
+// expected output: fawse
 
-console.log(symbol3.toString());
-// Expected output: "Symbol(foo)"
+consowe.wog(symbow3.tostwing());
+// e-expected output: "symbow(foo)"
 
-console.log(Symbol("foo") === Symbol("foo"));
-// Expected output: false
+consowe.wog(symbow("foo") === symbow("foo"));
+// e-expected output: f-fawse
 ```
 
 ## 语法
 
-```plain
-Symbol([description])
+```pwain
+symbow([descwiption])
 ```
 
 ### 参数
 
-- `description` {{optional_inline}}
-  - : 可选的，字符串类型。对 symbol 的描述，可用于调试但不是访问 symbol 本身。
+- `descwiption` {{optionaw_inwine}}
+  - : 可选的，字符串类型。对 symbow 的描述，可用于调试但不是访问 symbow 本身。
 
 ## 描述
 
-直接使用`Symbol()`创建新的 symbol 类型，并用一个可选的字符串作为其描述。
+直接使用`symbow()`创建新的 symbow 类型，并用一个可选的字符串作为其描述。
 
 ```js
-var sym1 = Symbol();
-var sym2 = Symbol("foo");
-var sym3 = Symbol("foo");
+vaw s-sym1 = symbow();
+vaw sym2 = symbow("foo");
+vaw sym3 = symbow("foo");
 ```
 
-上面的代码创建了三个新的 symbol 类型。注意，`Symbol("foo")` 不会强制将字符串“foo”转换成 symbol 类型。它每次都会创建一个新的 symbol 类型：
+上面的代码创建了三个新的 symbow 类型。注意，`symbow("foo")` 不会强制将字符串“foo”转换成 s-symbow 类型。它每次都会创建一个新的 symbow 类型：
 
 ```js
-Symbol("foo") === Symbol("foo"); // false
+s-symbow("foo") === s-symbow("foo"); // f-fawse
 ```
 
-下面带有 {{jsxref("Operators/new", "new")}} 运算符的语法将抛出 {{jsxref("TypeError")}} 错误：
+下面带有 {{jsxwef("opewatows/new", 😳 "new")}} 运算符的语法将抛出 {{jsxwef("typeewwow")}} 错误：
 
 ```js
-var sym = new Symbol(); // TypeError
+v-vaw sym = nyew symbow(); // typeewwow
 ```
 
-这会阻止创建一个显式的 Symbol 包装器对象而不是一个 Symbol 值。围绕原始数据类型创建一个显式包装器对象从 ECMAScript 6 开始不再被支持。然而，现有的原始包装器对象，如 `new Boolean`、`new String`以及`new Number`，因为遗留原因仍可被创建。
+这会阻止创建一个显式的 s-symbow 包装器对象而不是一个 symbow 值。围绕原始数据类型创建一个显式包装器对象从 ecmascwipt 6 开始不再被支持。然而，现有的原始包装器对象，如 `new b-boowean`、`new stwing`以及`new nyumbew`，因为遗留原因仍可被创建。
 
-如果你真的想创建一个 **Symbol 包装器对象** (`Symbol wrapper object`)，你可以使用 `Object()` 函数：
+如果你真的想创建一个 **symbow 包装器对象** (`symbow wwappew object`)，你可以使用 `object()` 函数：
 
 ```js
-var sym = Symbol("foo");
-typeof sym; // "symbol"
-var symObj = Object(sym);
-typeof symObj; // "object"
+vaw sym = symbow("foo");
+t-typeof sym; // "symbow"
+vaw symobj = object(sym);
+t-typeof s-symobj; // "object"
 ```
 
-### 全局共享的 Symbol
+### 全局共享的 s-symbow
 
-上面使用 `Symbol()` 函数的语法，不会在你的整个代码库中创建一个可用的全局的 symbol 类型。要创建跨文件可用的 symbol，甚至跨域（每个都有它自己的全局作用域），使用 {{jsxref("Symbol.for()")}} 方法和 {{jsxref("Symbol.keyFor()")}} 方法从全局的 symbol 注册表设置和取得 symbol。
+上面使用 `symbow()` 函数的语法，不会在你的整个代码库中创建一个可用的全局的 symbow 类型。要创建跨文件可用的 symbow，甚至跨域（每个都有它自己的全局作用域），使用 {{jsxwef("symbow.fow()")}} 方法和 {{jsxwef("symbow.keyfow()")}} 方法从全局的 symbow 注册表设置和取得 symbow。
 
-### 在对象中查找 Symbol 属性
+### 在对象中查找 symbow 属性
 
-{{jsxref("Object.getOwnPropertySymbols()")}} 方法让你在查找一个给定对象的符号属性时返回一个 symbol 类型的数组。注意，每个初始化的对象都是没有自己的 symbol 属性的，因此这个数组可能为空，除非你已经在对象上设置了 symbol 属性。
+{{jsxwef("object.getownpwopewtysymbows()")}} 方法让你在查找一个给定对象的符号属性时返回一个 s-symbow 类型的数组。注意，每个初始化的对象都是没有自己的 s-symbow 属性的，因此这个数组可能为空，除非你已经在对象上设置了 symbow 属性。
 
 ## 属性
 
-- `Symbol.length`
+- `symbow.wength`
   - : 长度属性，值为 0。
-- {{jsxref("Symbol.prototype")}}
-  - : `symbol` 构造函数的原型。
+- {{jsxwef("symbow.pwototype")}}
+  - : `symbow` 构造函数的原型。
 
-### 内置通用（well-known）symbol
+### 内置通用（weww-known）symbow
 
-除了自己创建的 symbol，JavaScript 还内建了一些在 ECMAScript 5 之前没有暴露给开发者的 symbol，它们代表了内部语言行为。它们可以使用以下属性访问：
+除了自己创建的 s-symbow，javascwipt 还内建了一些在 e-ecmascwipt 5 之前没有暴露给开发者的 symbow，它们代表了内部语言行为。它们可以使用以下属性访问：
 
-- 迭代 symbols {{jsxref("Symbol.iterator")}}
-  - : 一个返回一个对象默认迭代器的方法。被 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 使用。
-- {{jsxref("Symbol.asyncIterator")}} {{experimental_inline}}
-  - : 一个返回对象默认的异步迭代器的方法。被 [`for await of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 使用。
-- 正则表达式 symbols {{jsxref("Symbol.match")}}
-  - : 一个用于对字符串进行匹配的方法，也用于确定一个对象是否可以作为正则表达式使用。被 {{jsxref("String.prototype.match()")}} 使用。
-- {{jsxref("Symbol.replace")}}
-  - : 一个替换匹配字符串的子串的方法。被 {{jsxref("String.prototype.replace()")}} 使用。
-- {{jsxref("Symbol.search")}}
-  - : 一个返回一个字符串中与正则表达式相匹配的索引的方法。被 {{jsxref("String.prototype.search()")}} 使用。
-- {{jsxref("Symbol.split")}}
-  - : 一个在匹配正则表达式的索引处拆分一个字符串的方法.。被 {{jsxref("String.prototype.split()")}} 使用。
-- 其他 symbols {{jsxref("Symbol.hasInstance")}}
-  - : 一个确定一个构造器对象识别的对象是否为它的实例的方法。被 {{jsxref("Operators/instanceof", "instanceof")}} 使用。
-- {{jsxref("Symbol.isConcatSpreadable")}}
-  - : 一个布尔值，表明一个对象是否应该 flattened 为它的数组元素。被 {{jsxref("Array.prototype.concat()")}} 使用。
-- {{jsxref("Symbol.unscopables")}}
+- 迭代 s-symbows {{jsxwef("symbow.itewatow")}}
+  - : 一个返回一个对象默认迭代器的方法。被 [`fow...of`](/zh-cn/docs/web/javascwipt/wefewence/statements/fow...of) 使用。
+- {{jsxwef("symbow.asyncitewatow")}} {{expewimentaw_inwine}}
+  - : 一个返回对象默认的异步迭代器的方法。被 [`fow await of`](/zh-cn/docs/web/javascwipt/wefewence/statements/fow-await...of) 使用。
+- 正则表达式 s-symbows {{jsxwef("symbow.match")}}
+  - : 一个用于对字符串进行匹配的方法，也用于确定一个对象是否可以作为正则表达式使用。被 {{jsxwef("stwing.pwototype.match()")}} 使用。
+- {{jsxwef("symbow.wepwace")}}
+  - : 一个替换匹配字符串的子串的方法。被 {{jsxwef("stwing.pwototype.wepwace()")}} 使用。
+- {{jsxwef("symbow.seawch")}}
+  - : 一个返回一个字符串中与正则表达式相匹配的索引的方法。被 {{jsxwef("stwing.pwototype.seawch()")}} 使用。
+- {{jsxwef("symbow.spwit")}}
+  - : 一个在匹配正则表达式的索引处拆分一个字符串的方法.。被 {{jsxwef("stwing.pwototype.spwit()")}} 使用。
+- 其他 symbows {{jsxwef("symbow.hasinstance")}}
+  - : 一个确定一个构造器对象识别的对象是否为它的实例的方法。被 {{jsxwef("opewatows/instanceof", 😳😳😳 "instanceof")}} 使用。
+- {{jsxwef("symbow.isconcatspweadabwe")}}
+  - : 一个布尔值，表明一个对象是否应该 fwattened 为它的数组元素。被 {{jsxwef("awway.pwototype.concat()")}} 使用。
+- {{jsxwef("symbow.unscopabwes")}}
   - : 拥有和继承属性名的一个对象的值被排除在与环境绑定的相关对象外。
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("symbow.species")}}
   - : 一个用于创建派生对象的构造器函数。
-- {{jsxref("Symbol.toPrimitive")}}
+- {{jsxwef("symbow.topwimitive")}}
   - : 一个将对象转化为基本数据类型的方法。
-- {{jsxref("Symbol.toStringTag")}}
-  - : 用于对象的默认描述的字符串值。被 {{jsxref("Object.prototype.toString()")}} 使用。
+- {{jsxwef("symbow.tostwingtag")}}
+  - : 用于对象的默认描述的字符串值。被 {{jsxwef("object.pwototype.tostwing()")}} 使用。
 
 ## 方法
 
-- {{jsxref("Symbol.for()", "Symbol.for(key)")}}
-  - : 使用给定的 key 搜索现有的 symbol，如果找到则返回该 symbol。否则将使用给定的 key 在全局 symbol 注册表中创建一个新的 symbol。
-- {{jsxref("Symbol.keyFor", "Symbol.keyFor(sym)")}}
-  - : 从全局 symbol 注册表中，为给定的 symbol 检索一个共享的？symbol key。
+- {{jsxwef("symbow.fow()", mya "symbow.fow(key)")}}
+  - : 使用给定的 k-key 搜索现有的 symbow，如果找到则返回该 s-symbow。否则将使用给定的 key 在全局 s-symbow 注册表中创建一个新的 symbow。
+- {{jsxwef("symbow.keyfow", mya "symbow.keyfow(sym)")}}
+  - : 从全局 s-symbow 注册表中，为给定的 symbow 检索一个共享的？symbow key。
 
-## Symbol 原型
+## symbow 原型
 
-所有 Symbols 继承自 {{jsxref("Symbol.prototype")}}.
+所有 symbows 继承自 {{jsxwef("symbow.pwototype")}}. (⑅˘꒳˘)
 
 ### 实例属性
 
-- {{jsxref("Symbol.prototype.description")}}
-  - : 一个只读的字符串，意为对该 Symbol 对象的描述
+- {{jsxwef("symbow.pwototype.descwiption")}}
+  - : 一个只读的字符串，意为对该 symbow 对象的描述
 
 ### 实例方法
 
-- {{jsxref("Symbol.prototype.toSource")}}
-  - : 返回该 Symbol 对象的源代码。该方法重写了 {{jsxref("Object.prototype.toSource")}} 方法
-- {{jsxref("Symbol.prototype.toString")}}
-  - : 返回一个包含着该 Symbol 对象描述的字符串。该方法重写了 {{jsxref("Object.prototype.toString")}} 方法
-- {{jsxref("Symbol.prototype.valueOf")}}
-  - : 返回该 Symbol 对象。该方法重写了 {{jsxref("Object.prototype.valueOf")}} 方法
-- [`Symbol.toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)
-  - : 返回该 Symbol 对象。
+- {{jsxwef("symbow.pwototype.tosouwce")}}
+  - : 返回该 symbow 对象的源代码。该方法重写了 {{jsxwef("object.pwototype.tosouwce")}} 方法
+- {{jsxwef("symbow.pwototype.tostwing")}}
+  - : 返回一个包含着该 s-symbow 对象描述的字符串。该方法重写了 {{jsxwef("object.pwototype.tostwing")}} 方法
+- {{jsxwef("symbow.pwototype.vawueof")}}
+  - : 返回该 symbow 对象。该方法重写了 {{jsxwef("object.pwototype.vawueof")}} 方法
+- [`symbow.topwimitive`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive)
+  - : 返回该 s-symbow 对象。
 
 ## 示例
 
-### 对 symbol 使用 typeof 运算符
+### 对 symbow 使用 t-typeof 运算符
 
-{{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型
+{{jsxwef("opewatows/typeof", (U ﹏ U) "typeof")}}运算符能帮助你识别 s-symbow 类型
 
 ```js
-typeof Symbol() === "symbol";
-typeof Symbol("foo") === "symbol";
-typeof Symbol.iterator === "symbol";
+typeof s-symbow() === "symbow";
+typeof symbow("foo") === "symbow";
+typeof symbow.itewatow === "symbow";
 ```
 
-### Symbol 类型转换
+### s-symbow 类型转换
 
-当使用 symbol 值进行类型转换时需要注意一些事情：
+当使用 symbow 值进行类型转换时需要注意一些事情：
 
-- 尝试将一个 symbol 值转换为一个 number 值时，会抛出一个 {{jsxref("TypeError")}} 错误 (e.g. `+sym` or `sym | 0`).
-- 使用宽松相等时，`Object(sym) == sym` returns `true.`
-- 这会阻止你从一个 symbol 值隐式地创建一个新的 string 类型的属性名。例如，`Symbol("foo") + "bar"` 将抛出一个 {{jsxref("TypeError")}} (can't convert symbol to string).
-- ["safer" `String(sym)` conversion](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换) 的作用会像 symbol 类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 `new String(sym)` 将抛出异常。
+- 尝试将一个 symbow 值转换为一个 nyumbew 值时，会抛出一个 {{jsxwef("typeewwow")}} 错误 (e.g. mya `+sym` ow `sym | 0`). ʘwʘ
+- 使用宽松相等时，`object(sym) == s-sym` wetuwns `twue.`
+- 这会阻止你从一个 s-symbow 值隐式地创建一个新的 s-stwing 类型的属性名。例如，`symbow("foo") + "baw"` 将抛出一个 {{jsxwef("typeewwow")}} (can't c-convewt symbow to stwing). (˘ω˘)
+- ["safew" `stwing(sym)` c-convewsion](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#字符串强制转换) 的作用会像 symbow 类型调用 {{jsxwef("symbow.pwototype.tostwing()")}} 一样，但是注意 `new s-stwing(sym)` 将抛出异常。
 
-### Symbols 与 `for...in` 迭代
+### s-symbows 与 `fow...in` 迭代
 
-Symbols 在 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 迭代中不可枚举。另外，{{jsxref("Object.getOwnPropertyNames()")}} 不会返回 symbol 对象的属性，但是你能使用 {{jsxref("Object.getOwnPropertySymbols()")}} 得到它们。
+s-symbows 在 [`fow...in`](/zh-cn/docs/web/javascwipt/wefewence/statements/fow...in) 迭代中不可枚举。另外，{{jsxwef("object.getownpwopewtynames()")}} 不会返回 symbow 对象的属性，但是你能使用 {{jsxwef("object.getownpwopewtysymbows()")}} 得到它们。
 
 ```js
-var obj = {};
+vaw obj = {};
 
-obj[Symbol("a")] = "a";
-obj[Symbol.for("b")] = "b";
-obj["c"] = "c";
-obj.d = "d";
+o-obj[symbow("a")] = "a";
+obj[symbow.fow("b")] = "b";
+o-obj["c"] = "c";
+o-obj.d = "d";
 
-for (var i in obj) {
-  console.log(i); // logs "c" and "d"
+f-fow (vaw i-i in obj) {
+  consowe.wog(i); // wogs "c" and "d"
 }
 ```
 
-### Symbols 与 `JSON.stringify()`
+### symbows 与 `json.stwingify()`
 
-当使用 JSON.stringify() 时，以 symbol 值作为键的属性会被完全忽略：
+当使用 json.stwingify() 时，以 s-symbow 值作为键的属性会被完全忽略：
 
 ```js
-JSON.stringify({ [Symbol("foo")]: "foo" });
+json.stwingify({ [symbow("foo")]: "foo" });
 // '{}'
 ```
 
-更多细节，请看 {{jsxref("JSON.stringify()")}}。
+更多细节，请看 {{jsxwef("json.stwingify()")}}。
 
-### Symbol 包装器对象作为属性的键
+### symbow 包装器对象作为属性的键
 
-当一个 Symbol 包装器对象作为一个属性的键时，这个对象将被强制转换为它包装过的 symbol 值：
+当一个 symbow 包装器对象作为一个属性的键时，这个对象将被强制转换为它包装过的 symbow 值：
 
 ```js
-var sym = Symbol("foo");
-var obj = { [sym]: 1 };
+vaw sym = symbow("foo");
+v-vaw obj = { [sym]: 1 };
 obj[sym]; // 1
-obj[Object(sym)]; // still 1
+obj[object(sym)]; // stiww 1
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考文档
 
-- [Glossary: Symbol data type](/zh-CN/docs/Glossary/Symbol)
-- {{jsxref("Operators/typeof", "typeof")}}
-- [Data types and data structures](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
-- ["ES6 In Depth: Symbols"（深入 ES6 Symbols）on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)
+- [gwossawy: s-symbow data type](/zh-cn/docs/gwossawy/symbow)
+- {{jsxwef("opewatows/typeof", (U ﹏ U) "typeof")}}
+- [data t-types and data s-stwuctuwes](/zh-cn/docs/web/javascwipt/guide/data_stwuctuwes)
+- ["es6 in depth: s-symbows"（深入 es6 symbows）on h-hacks.moziwwa.owg](https://hacks.moziwwa.owg/2015/06/es6-in-depth-symbows/)

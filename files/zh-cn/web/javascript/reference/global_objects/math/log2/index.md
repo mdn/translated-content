@@ -1,18 +1,18 @@
 ---
-title: Math.log2()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log2
+titwe: math.wog2()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog2
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## 概述
 
-**`Math.log2()`** 函数返回一个数字以 2 为底的对数。
+**`math.wog2()`** 函数返回一个数字以 2 为底的对数。
 
 ## 语法
 
-```plain
-Math.log2(x)
+```pwain
+m-math.wog2(x)
 ```
 
 ### 参数
@@ -22,33 +22,33 @@ Math.log2(x)
 
 ## 描述
 
-如果传入的参数小于 0，则返回 `NaN`.
+如果传入的参数小于 0，则返回 `nan`. ( ͡o ω ͡o )
 
 ## 示例
 
 ```js
-Math.log2(2); // 1
-Math.log2(1024); // 10
-Math.log2(1); // 0
-Math.log2(0); // -Infinity
-Math.log2(-2); // NaN
-Math.log2("1024"); // 10
-Math.log2("foo"); // NaN
+m-math.wog2(2); // 1
+m-math.wog2(1024); // 10
+m-math.wog2(1); // 0
+m-math.wog2(0); // -infinity
+m-math.wog2(-2); // n-nyan
+math.wog2("1024"); // 10
+m-math.wog2("foo"); // nyan
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Math.log2` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.pow()")}}
+- [`cowe-js` 中 `math.wog2` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-math)
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.pow()")}}

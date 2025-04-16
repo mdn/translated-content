@@ -1,60 +1,60 @@
 ---
-title: GET
-slug: Web/HTTP/Reference/Methods/GET
+titwe: get
+swug: web/http/wefewence/methods/get
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP `GET` 方法**请求指定资源的表示。使用 `GET` 的请求应该只用于请求数据，而不应该包含数据。
+**http `get` 方法**请求指定资源的表示。使用 `get` 的请求应该只用于请求数据，而不应该包含数据。
 
-> [!NOTE]
-> 在 `GET` 请求中发送请求体或有效载荷可能会导致一些现有的实现拒绝该请求——虽然规范没有禁止，但语义没有定义。最好是避免在 `GET` 请求中发送有效载荷。
+> [!note]
+> 在 `get` 请求中发送请求体或有效载荷可能会导致一些现有的实现拒绝该请求——虽然规范没有禁止，但语义没有定义。最好是避免在 `get` 请求中发送有效载荷。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">请求是否有主体</th>
+    <tw>
+      <th s-scope="wow">请求是否有主体</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">成功的响应是否有主体</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">成功的响应是否有主体</th>
       <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe/http", (⑅˘꒳˘) "安全")}}</th>
       <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent","幂等")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotent","幂等")}}</th>
       <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable","可缓存")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheabwe","可缓存")}}</th>
       <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">允许在 HTML 表单中使用</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许在 h-htmw 表单中使用</th>
       <td>允许</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
 ```http
-GET /index.html
+g-get /index.htmw
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)
-- {{HTTPHeader("Range")}}
-- {{HTTPMethod("POST")}}
+- [http 标头](/zh-cn/docs/web/http/wefewence/headews)
+- {{httpheadew("wange")}}
+- {{httpmethod("post")}}

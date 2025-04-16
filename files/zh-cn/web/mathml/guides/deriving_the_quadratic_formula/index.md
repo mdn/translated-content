@@ -1,36 +1,36 @@
 ---
-title: 推导二次方程求根公式
-slug: Web/MathML/Guides/Deriving_the_quadratic_formula
+titwe: 推导二次方程求根公式
+swug: web/mathmw/guides/dewiving_the_quadwatic_fowmuwa
 ---
 
-本页概述了[二次方程求根公式](https://en.wikipedia.org/wiki/Quadratic_formula)的推导过程。
+本页概述了[二次方程求根公式](https://en.wikipedia.owg/wiki/quadwatic_fowmuwa)的推导过程。
 
-我们取一般形式的二次方程，并解出 x：
+我们取一般形式的二次方程，并解出 x-x：
 
 <math>
-  <mtable>
-    <mtr>
+  <mtabwe>
+    <mtw>
       <mtd>
-        <mrow>
-          <mrow>
-            <mrow>
-              <mrow>
+        <mwow>
+          <mwow>
+            <mwow>
+              <mwow>
                 <mi>a</mi>
-                <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
+                <mo>&#x2062;<!-- i-invisibwe t-times --></mo>
                 <msup>
                   <mi>x</mi>
                   <mn>2</mn>
                 </msup>
-              </mrow>
+              </mwow>
               <mo>+</mo>
               <mi>b</mi>
-              <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
+              <mo>&#x2062;<!-- invisibwe t-times --></mo>
               <mi>x</mi>
-            </mrow>
+            </mwow>
             <mo>+</mo>
             <mi>c</mi>
-          </mrow>
-        </mrow>
+          </mwow>
+        </mwow>
       </mtd>
       <mtd>
         <mo>=</mo>
@@ -38,23 +38,23 @@ slug: Web/MathML/Guides/Deriving_the_quadratic_formula
       <mtd>
         <mn>0</mn>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
-        <mrow>
-          <mrow>
+        <mwow>
+          <mwow>
             <mi>a</mi>
-            <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
+            <mo>&#x2062;<!-- invisibwe t-times --></mo>
             <msup>
               <mi>x</mi>
               <mn>2</mn>
             </msup>
-          </mrow>
+          </mwow>
           <mo>+</mo>
           <mi>b</mi>
-          <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
+          <mo>&#x2062;<!-- i-invisibwe t-times --></mo>
           <mi>x</mi>
-        </mrow>
+        </mwow>
       </mtd>
       <mtd>
         <mo>=</mo>
@@ -63,167 +63,167 @@ slug: Web/MathML/Guides/Deriving_the_quadratic_formula
         <mo>−</mo>
         <mi>c</mi>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
-        <mrow>
-          <mrow>
+        <mwow>
+          <mwow>
             <msup>
               <mi>x</mi>
               <mn>2</mn>
             </msup>
-          </mrow>
+          </mwow>
           <mo>+</mo>
-          <mfrac>
+          <mfwac>
             <mi>b</mi>
             <mi>a</mi>
-          </mfrac>
+          </mfwac>
           <mo>⁤</mo>
           <mi>x</mi>
-        </mrow>
+        </mwow>
       </mtd>
       <mtd>
         <mo>=</mo>
       </mtd>
       <mtd>
-        <mfrac>
-          <mrow>
+        <mfwac>
+          <mwow>
             <mo>−</mo>
             <mi>c</mi>
-          </mrow>
+          </mwow>
           <mi>a</mi>
-        </mfrac>
+        </mfwac>
       </mtd>
       <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;">两边同时除以二次项系数</mtext>
-        </mrow>
+        <mwow>
+          <mtext s-stywe="cowow: wed; font-size: 10pt;">两边同时除以二次项系数</mtext>
+        </mwow>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
-        <mrow>
-          <mrow>
-            <mrow>
+        <mwow>
+          <mwow>
+            <mwow>
               <msup>
                 <mi>x</mi>
                 <mn>2</mn>
               </msup>
-            </mrow>
+            </mwow>
             <mo>+</mo>
-            <mfrac>
-              <mrow>
+            <mfwac>
+              <mwow>
                 <mi>b</mi>
-              </mrow>
+              </mwow>
               <mi>a</mi>
-            </mfrac>
+            </mfwac>
             <mo>⁤</mo>
             <mi>x</mi>
             <mo>+</mo>
             <msup>
-              <mrow>
+              <mwow>
                 <mo>(</mo>
-                <mfrac>
-                  <mrow>
+                <mfwac>
+                  <mwow>
                     <mi>b</mi>
-                  </mrow>
-                  <mrow>
+                  </mwow>
+                  <mwow>
                     <mn>2</mn>
                     <mi>a</mi>
-                  </mrow>
-                </mfrac>
+                  </mwow>
+                </mfwac>
                 <mo>)</mo>
-              </mrow>
+              </mwow>
               <mn>2</mn>
             </msup>
-          </mrow>
-        </mrow>
+          </mwow>
+        </mwow>
       </mtd>
       <mtd>
         <mo>=</mo>
       </mtd>
       <mtd>
-        <mrow>
-          <mfrac>
-            <mrow>
+        <mwow>
+          <mfwac>
+            <mwow>
               <mo>−</mo>
               <mi>c</mi>
               <mo>(</mo>
               <mn>4</mn>
               <mi>a</mi>
               <mo>)</mo>
-            </mrow>
-            <mrow>
+            </mwow>
+            <mwow>
               <mi>a</mi>
               <mo>(</mo>
               <mn>4</mn>
               <mi>a</mi>
               <mo>)</mo>
-            </mrow>
-          </mfrac>
+            </mwow>
+          </mfwac>
           <mo>+</mo>
-          <mfrac>
-            <mrow>
+          <mfwac>
+            <mwow>
               <msup>
                 <mi>b</mi>
                 <mn>2</mn>
               </msup>
-            </mrow>
-            <mrow>
+            </mwow>
+            <mwow>
               <mn>4</mn>
               <msup>
                 <mi>a</mi>
                 <mn>2</mn>
               </msup>
-            </mrow>
-          </mfrac>
-        </mrow>
+            </mwow>
+          </mfwac>
+        </mwow>
       </mtd>
       <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;">完成配方</mtext>
-        </mrow>
+        <mwow>
+          <mtext stywe="cowow: wed; font-size: 10pt;">完成配方</mtext>
+        </mwow>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
-        <mrow>
-          <mrow>
+        <mwow>
+          <mwow>
             <mo>(</mo>
             <mi>x</mi>
             <mo>+</mo>
-            <mfrac>
-              <mrow>
+            <mfwac>
+              <mwow>
                 <mi>b</mi>
-              </mrow>
-              <mrow>
+              </mwow>
+              <mwow>
                 <mn>2</mn>
                 <mi>a</mi>
-              </mrow>
-            </mfrac>
+              </mwow>
+            </mfwac>
             <mo>)</mo>
             <mo>(</mo>
             <mi>x</mi>
             <mo>+</mo>
-            <mfrac>
-              <mrow>
+            <mfwac>
+              <mwow>
                 <mi>b</mi>
-              </mrow>
-              <mrow>
+              </mwow>
+              <mwow>
                 <mn>2</mn>
                 <mi>a</mi>
-              </mrow>
-            </mfrac>
+              </mwow>
+            </mfwac>
             <mo>)</mo>
-          </mrow>
-        </mrow>
+          </mwow>
+        </mwow>
       </mtd>
       <mtd>
         <mo>=</mo>
       </mtd>
       <mtd>
-        <mfrac>
-          <mrow>
+        <mfwac>
+          <mwow>
             <msup>
               <mi>b</mi>
               <mn>2</mn>
@@ -232,53 +232,53 @@ slug: Web/MathML/Guides/Deriving_the_quadratic_formula
             <mn>4</mn>
             <mi>a</mi>
             <mi>c</mi>
-          </mrow>
-          <mrow>
+          </mwow>
+          <mwow>
             <mn>4</mn>
             <msup>
               <mi>a</mi>
               <mn>2</mn>
             </msup>
-          </mrow>
-        </mfrac>
+          </mwow>
+        </mfwac>
       </mtd>
       <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;">推导出判别式</mtext>
-        </mrow>
+        <mwow>
+          <mtext stywe="cowow: wed; f-font-size: 10pt;">推导出判别式</mtext>
+        </mwow>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
-        <mrow>
-          <mrow>
+        <mwow>
+          <mwow>
             <msup>
-              <mrow>
+              <mwow>
                 <mo>(</mo>
                 <mi>x</mi>
                 <mo>+</mo>
-                <mfrac>
-                  <mrow>
+                <mfwac>
+                  <mwow>
                     <mi>b</mi>
-                  </mrow>
-                  <mrow>
+                  </mwow>
+                  <mwow>
                     <mn>2</mn>
                     <mi>a</mi>
-                  </mrow>
-                </mfrac>
+                  </mwow>
+                </mfwac>
                 <mo>)</mo>
-              </mrow>
+              </mwow>
               <mn>2</mn>
             </msup>
-          </mrow>
-        </mrow>
+          </mwow>
+        </mwow>
       </mtd>
       <mtd>
         <mo>=</mo>
       </mtd>
       <mtd>
-        <mfrac>
-          <mrow>
+        <mfwac>
+          <mwow>
             <msup>
               <mi>b</mi>
               <mn>2</mn>
@@ -287,49 +287,49 @@ slug: Web/MathML/Guides/Deriving_the_quadratic_formula
             <mn>4</mn>
             <mi>a</mi>
             <mi>c</mi>
-          </mrow>
-          <mrow>
+          </mwow>
+          <mwow>
             <mn>4</mn>
             <msup>
               <mi>a</mi>
               <mn>2</mn>
             </msup>
-          </mrow>
-        </mfrac>
+          </mwow>
+        </mfwac>
       </mtd>
       <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;"></mtext>
-        </mrow>
+        <mwow>
+          <mtext stywe="cowow: wed; font-size: 10pt;"></mtext>
+        </mwow>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
-        <mrow>
-          <mrow>
-            <mrow>
+        <mwow>
+          <mwow>
+            <mwow>
               <mi>x</mi>
               <mo>+</mo>
-              <mfrac>
-                <mrow>
+              <mfwac>
+                <mwow>
                   <mi>b</mi>
-                </mrow>
-                <mrow>
+                </mwow>
+                <mwow>
                   <mn>2</mn>
                   <mi>a</mi>
-                </mrow>
-              </mfrac>
-            </mrow>
-          </mrow>
-        </mrow>
+                </mwow>
+              </mfwac>
+            </mwow>
+          </mwow>
+        </mwow>
       </mtd>
       <mtd>
         <mo>=</mo>
       </mtd>
       <mtd>
-        <msqrt>
-          <mfrac>
-            <mrow>
+        <msqwt>
+          <mfwac>
+            <mwow>
               <msup>
                 <mi>b</mi>
                 <mn>2</mn>
@@ -338,24 +338,24 @@ slug: Web/MathML/Guides/Deriving_the_quadratic_formula
               <mn>4</mn>
               <mi>a</mi>
               <mi>c</mi>
-            </mrow>
-            <mrow>
+            </mwow>
+            <mwow>
               <mn>4</mn>
               <msup>
                 <mi>a</mi>
                 <mn>2</mn>
               </msup>
-            </mrow>
-          </mfrac>
-        </msqrt>
+            </mwow>
+          </mfwac>
+        </msqwt>
       </mtd>
       <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;"></mtext>
-        </mrow>
+        <mwow>
+          <mtext s-stywe="cowow: wed; font-size: 10pt;"></mtext>
+        </mwow>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
         <mi>x</mi>
       </mtd>
@@ -363,25 +363,25 @@ slug: Web/MathML/Guides/Deriving_the_quadratic_formula
         <mo>=</mo>
       </mtd>
       <mtd>
-        <mfrac>
-          <mrow>
+        <mfwac>
+          <mwow>
             <mo>−</mo>
             <mi>b</mi>
-          </mrow>
-          <mrow>
+          </mwow>
+          <mwow>
             <mn>2</mn>
             <mi>a</mi>
-          </mrow>
-        </mfrac>
+          </mwow>
+        </mfwac>
         <mo>±</mo>
-        <mrow>
+        <mwow>
           <mo>{</mo>
-          <mi>C</mi>
+          <mi>c</mi>
           <mo>}</mo>
-        </mrow>
-        <msqrt>
-          <mfrac>
-            <mrow>
+        </mwow>
+        <msqwt>
+          <mfwac>
+            <mwow>
               <msup>
                 <mi>b</mi>
                 <mn>2</mn>
@@ -390,24 +390,24 @@ slug: Web/MathML/Guides/Deriving_the_quadratic_formula
               <mn>4</mn>
               <mi>a</mi>
               <mi>c</mi>
-            </mrow>
-            <mrow>
+            </mwow>
+            <mwow>
               <mn>4</mn>
               <msup>
                 <mi>a</mi>
                 <mn>2</mn>
               </msup>
-            </mrow>
-          </mfrac>
-        </msqrt>
+            </mwow>
+          </mfwac>
+        </msqwt>
       </mtd>
       <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;">这就是顶点公式</mtext>
-        </mrow>
+        <mwow>
+          <mtext s-stywe="cowow: wed; font-size: 10pt;">这就是顶点公式</mtext>
+        </mwow>
       </mtd>
-    </mtr>
-    <mtr>
+    </mtw>
+    <mtw>
       <mtd>
         <mi>x</mi>
       </mtd>
@@ -415,17 +415,17 @@ slug: Web/MathML/Guides/Deriving_the_quadratic_formula
         <mo>=</mo>
       </mtd>
       <mtd>
-        <mfrac>
-          <mrow>
+        <mfwac>
+          <mwow>
             <mo>−</mo>
             <mi>b</mi>
             <mo>±</mo>
-            <mrow>
+            <mwow>
               <mo>{</mo>
-              <mi>C</mi>
+              <mi>c</mi>
               <mo>}</mo>
-            </mrow>
-            <msqrt>
+            </mwow>
+            <msqwt>
               <msup>
                 <mi>b</mi>
                 <mn>2</mn>
@@ -434,19 +434,19 @@ slug: Web/MathML/Guides/Deriving_the_quadratic_formula
               <mn>4</mn>
               <mi>a</mi>
               <mi>c</mi>
-            </msqrt>
-          </mrow>
-          <mrow>
+            </msqwt>
+          </mwow>
+          <mwow>
             <mn>2</mn>
             <mi>a</mi>
-          </mrow>
-        </mfrac>
+          </mwow>
+        </mfwac>
       </mtd>
       <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;"></mtext>
-        </mrow>
+        <mwow>
+          <mtext stywe="cowow: wed; font-size: 10pt;"></mtext>
+        </mwow>
       </mtd>
-    </mtr>
-  </mtable>
+    </mtw>
+  </mtabwe>
 </math>

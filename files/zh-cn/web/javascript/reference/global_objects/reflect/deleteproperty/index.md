@@ -1,68 +1,68 @@
 ---
-title: Reflect.deleteProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
+titwe: wefwect.dewetepwopewty()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/dewetepwopewty
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静态方法 **`Reflect.deleteProperty()`** 允许用于删除属性。它很像 [`delete` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) ，但它是一个函数。
+静态方法 **`wefwect.dewetepwopewty()`** 允许用于删除属性。它很像 [`dewete` o-opewatow](/zh-cn/docs/web/javascwipt/wefewence/opewatows/dewete) ，但它是一个函数。
 
 ## 语法
 
-```plain
-Reflect.deleteProperty(target, propertyKey)
+```pwain
+w-wefwect.dewetepwopewty(tawget, (U ﹏ U) p-pwopewtykey)
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
   - : 删除属性的目标对象。
-- `propertyKey`
+- `pwopewtykey`
   - : 需要删除的属性的名称。
 
 ### 返回值
 
-{{jsxref("Boolean")}} 值表明该属性是否被成功删除。
+{{jsxwef("boowean")}} 值表明该属性是否被成功删除。
 
 ### 异常
 
-抛出一个 {{jsxref("TypeError")}}，如果`target`不是 {{jsxref("Object")}}。
+抛出一个 {{jsxwef("typeewwow")}}，如果`tawget`不是 {{jsxwef("object")}}。
 
 ## 描述
 
-`Reflect.deleteProperty` 允许你删除一个对象上的属性。返回一个 {{jsxref("Boolean")}} 值表示该属性是否被成功删除。它几乎与非严格的 [`delete` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 相同。
+`wefwect.dewetepwopewty` 允许你删除一个对象上的属性。返回一个 {{jsxwef("boowean")}} 值表示该属性是否被成功删除。它几乎与非严格的 [`dewete` o-opewatow](/zh-cn/docs/web/javascwipt/wefewence/opewatows/dewete) 相同。
 
 ## 示例
 
-### 使用 `Reflect.deleteProperty()`
+### 使用 `wefwect.dewetepwopewty()`
 
 ```js
-var obj = { x: 1, y: 2 };
-Reflect.deleteProperty(obj, "x"); // true
-obj; // { y: 2 }
+vaw o-obj = { x: 1, -.- y-y: 2 };
+wefwect.dewetepwopewty(obj, (ˆ ﻌ ˆ)♡ "x"); // t-twue
+o-obj; // { y: 2 }
 
-var arr = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(arr, "3"); // true
-arr; // [1, 2, 3, , 5]
+vaw aww = [1, (⑅˘꒳˘) 2, 3, 4, 5];
+wefwect.dewetepwopewty(aww, (U ᵕ U❁) "3"); // twue
+aww; // [1, -.- 2, 3, , 5]
 
-// 如果属性不存在，返回 true
-Reflect.deleteProperty({}, "foo"); // true
+// 如果属性不存在，返回 twue
+wefwect.dewetepwopewty({}, ^^;; "foo"); // twue
 
-// 如果属性不可配置，返回 false
-Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
+// 如果属性不可配置，返回 f-fawse
+wefwect.dewetepwopewty(object.fweeze({ foo: 1 }), >_< "foo"); // f-fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Reflect.deleteProperty` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-reflect)
-- {{jsxref("Reflect")}}
-- [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
-- [`handler.deleteProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty)
+- [`cowe-js` 中 `wefwect.dewetepwopewty` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-wefwect)
+- {{jsxwef("wefwect")}}
+- [`dewete`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/dewete)
+- [`handwew.dewetepwopewty()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/dewetepwopewty)

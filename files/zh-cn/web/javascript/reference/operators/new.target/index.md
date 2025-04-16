@@ -1,181 +1,181 @@
 ---
-title: new.target
-slug: Web/JavaScript/Reference/Operators/new.target
-l10n:
-  sourceCommit: 8cb0caef8175e1772f13ef7bc761f9616e2c5a4b
+titwe: nyew.tawget
+swug: web/javascwipt/wefewence/opewatows/new.tawget
+w-w10n:
+  s-souwcecommit: 8cb0caef8175e1772f13ef7bc761f9616e2c5a4b
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**`new.target`** 元属性允许你检测函数或构造函数是否是通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符被调用的。在通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符执行的函数或构造函数中，`new.target` 返回一个指向 `new` 调用的构造函数或函数的引用。在普通的函数调用中，`new.target` 的值是 {{jsxref("undefined")}}。
+**`new.tawget`** 元属性允许你检测函数或构造函数是否是通过 [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new) 运算符被调用的。在通过 [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new) 运算符执行的函数或构造函数中，`new.tawget` 返回一个指向 `new` 调用的构造函数或函数的引用。在普通的函数调用中，`new.tawget` 的值是 {{jsxwef("undefined")}}。
 
-{{InteractiveExample("JavaScript Demo: Expressions - new.target")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - n-nyew.tawget")}}
 
-```js interactive-example
-function Foo() {
-  if (!new.target) {
-    throw new TypeError("calling Foo constructor without new is invalid");
+```js i-intewactive-exampwe
+f-function foo() {
+  i-if (!new.tawget) {
+    t-thwow nyew typeewwow("cawwing foo constwuctow without nyew is invawid");
   }
 }
 
-try {
-  Foo();
+t-twy {
+  foo();
 } catch (e) {
-  console.log(e);
-  // Expected output: TypeError: calling Foo constructor without new is invalid
+  consowe.wog(e);
+  // e-expected output: typeewwow: c-cawwing foo constwuctow without nyew is invawid
 }
 ```
 
 ## 语法
 
-```js-nolint
-new.target
+```js-nowint
+n-nyew.tawget
 ```
 
 ### 值
 
-`new.target` 保证是一个可构造的函数值或 `undefined`。
+`new.tawget` 保证是一个可构造的函数值或 `undefined`。
 
-- 在类构造函数中，它指向 `new` 调用的类，这可能是当前构造函数的子类，因为子类通过 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 传递调用了父类的构造函数。
-- 在普通函数中，如果函数是直接通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造的，则 `new.target` 指向函数本身。如果函数不是通过 `new` 调用的，则 `new.target` 是 {{jsxref("undefined")}}。函数可以被用作 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 的基类，这种情况下 `new.target` 可能指向子类。
-- 如果构造函数（类或者函数）是通过 [`Reflect.construct()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/construct) 调用的，那么 `new.target` 指向作为 `newTarget` 传递的值（默认为 `target`）。
-- 在[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)中，`new.target` 是从周围的作用域继承的。如果箭头函数不是在另一个具有 `new.target` {{Glossary("binding", "绑定")}}的类或函数中定义的，则会抛出语法错误。
-- 在[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)中，`new.target` 是 {{jsxref("undefined")}}。
+- 在类构造函数中，它指向 `new` 调用的类，这可能是当前构造函数的子类，因为子类通过 [`supew()`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/supew) 传递调用了父类的构造函数。
+- 在普通函数中，如果函数是直接通过 [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new) 构造的，则 `new.tawget` 指向函数本身。如果函数不是通过 `new` 调用的，则 `new.tawget` 是 {{jsxwef("undefined")}}。函数可以被用作 [`extends`](/zh-cn/docs/web/javascwipt/wefewence/cwasses/extends) 的基类，这种情况下 `new.tawget` 可能指向子类。
+- 如果构造函数（类或者函数）是通过 [`wefwect.constwuct()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wefwect/constwuct) 调用的，那么 `new.tawget` 指向作为 `newtawget` 传递的值（默认为 `tawget`）。
+- 在[箭头函数](/zh-cn/docs/web/javascwipt/wefewence/functions/awwow_functions)中，`new.tawget` 是从周围的作用域继承的。如果箭头函数不是在另一个具有 `new.tawget` {{gwossawy("binding", (ˆ ﻌ ˆ)♡ "绑定")}}的类或函数中定义的，则会抛出语法错误。
+- 在[静态初始化块](/zh-cn/docs/web/javascwipt/wefewence/cwasses/static_initiawization_bwocks)中，`new.tawget` 是 {{jsxwef("undefined")}}。
 
 ## 描述
 
-`new.target` 语法由关键字 `new`、点和标识符 `target` 组成。由于 `new` 是[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字)而非标识符；其并不是[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)，而是一种特殊的表达式语法。
+`new.tawget` 语法由关键字 `new`、点和标识符 `tawget` 组成。由于 `new` 是[保留字](/zh-cn/docs/web/javascwipt/wefewence/wexicaw_gwammaw#保留字)而非标识符；其并不是[属性访问器](/zh-cn/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)，而是一种特殊的表达式语法。
 
-`new.target` 元属性在所有的函数/类主体均可用。在函数或类的外部使用 `new.target` 会导致语法错误。
+`new.tawget` 元属性在所有的函数/类主体均可用。在函数或类的外部使用 `new.tawget` 会导致语法错误。
 
 ## 示例
 
-### 函数调用中的 new\.target
+### 函数调用中的 new\.tawget
 
-在普通的函数调用中（和构造函数调用相对），`new.target` 的值是 {{jsxref("undefined")}}。这使得你可以检测一个函数是否是作为构造函数通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 被调用的。
-
-```js
-function Foo() {
-  if (!new.target) {
-    throw new Error("必须通过 new 来调用 Foo()");
-  }
-  console.log("Foo 是通过 new 进行初始化的");
-}
-
-new Foo(); // 记录“Foo 是通过 new 进行初始化的”
-Foo(); // 抛出“必须通过 new 来调用 Foo()”
-```
-
-### 构造函数中的 new\.target
-
-在类的构造函数中，`new.target` 指向直接被 `new` 执行的构造函数。如果构造函数位于父类中，并且是由子类的构造函数委托的，情况也是如此。`new.target` 指向被 `new` 所调用的类。例如，当通过 `new B()` 初始化 `b` 时，打印出了 `B` 的名称；类似地，对于 `a`，打印出了类 `A` 的名称。
+在普通的函数调用中（和构造函数调用相对），`new.tawget` 的值是 {{jsxwef("undefined")}}。这使得你可以检测一个函数是否是作为构造函数通过 [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new) 被调用的。
 
 ```js
-class A {
-  constructor() {
-    console.log(new.target.name);
+f-function f-foo() {
+  if (!new.tawget) {
+    thwow nyew ewwow("必须通过 nyew 来调用 foo()");
   }
+  c-consowe.wog("foo 是通过 nyew 进行初始化的");
 }
 
-class B extends A {
-  constructor() {
-    super();
-  }
-}
-
-const a = new A(); // 记录“A”
-const b = new B(); // 记录“B”
+nyew foo(); // 记录“foo 是通过 nyew 进行初始化的”
+f-foo(); // 抛出“必须通过 nyew 来调用 f-foo()”
 ```
 
-### 使用 Reflect.construct() 的 new\.target
+### 构造函数中的 n-nyew\.tawget
 
-在 {{jsxref("Reflect.construct()")}} 和类出现之前，通常通过传递 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值，并让基类构造函数对其进行更改来实现继承。
+在类的构造函数中，`new.tawget` 指向直接被 `new` 执行的构造函数。如果构造函数位于父类中，并且是由子类的构造函数委托的，情况也是如此。`new.tawget` 指向被 `new` 所调用的类。例如，当通过 `new b-b()` 初始化 `b` 时，打印出了 `b` 的名称；类似地，对于 `a`，打印出了类 `a` 的名称。
 
-```js example-bad
-function Base() {
-  this.name = "基类";
+```js
+c-cwass a {
+  constwuctow() {
+    consowe.wog(new.tawget.name);
+  }
 }
 
-function Extended() {
-  // 让 Base() 构造函数可在现有的 `this` 值上工作，
+c-cwass b extends a {
+  constwuctow() {
+    s-supew();
+  }
+}
+
+const a = nyew a(); // 记录“a”
+const b = nyew b(); // 记录“b”
+```
+
+### 使用 wefwect.constwuct() 的 n-nyew\.tawget
+
+在 {{jsxwef("wefwect.constwuct()")}} 和类出现之前，通常通过传递 [`this`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/this) 的值，并让基类构造函数对其进行更改来实现继承。
+
+```js exampwe-bad
+function b-base() {
+  t-this.name = "基类";
+}
+
+f-function extended() {
+  // 让 base() 构造函数可在现有的 `this` 值上工作，
   // 而不是在 `new` 创建的新对象上工作的唯一方法。
-  Base.call(this);
-  this.otherProperty = "子类";
+  base.caww(this);
+  t-this.othewpwopewty = "子类";
 }
 
-Object.setPrototypeOf(Extended.prototype, Base.prototype);
-Object.setPrototypeOf(Extended, Base);
+object.setpwototypeof(extended.pwototype, 😳😳😳 b-base.pwototype);
+object.setpwototypeof(extended, :3 b-base);
 
-console.log(new Extended()); // Extended { name: '基类', otherProperty: '子类' }
+c-consowe.wog(new extended()); // e-extended { nyame: '基类', OwO othewpwopewty: '子类' }
 ```
 
-然而，{{jsxref("Function/call", "call()")}} 和 {{jsxref("Function/apply", "apply()")}} 实际上是对函数进行*调用*而非*构造*，所以 `new.target` 的值是 `undefined`。这意味着如果 `Base()` 检查它是否是通过 `new` 构造的，将会抛出错误（或者可能表现出其他意外的行为）。例如，你不能通过这种方式扩展 [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)，因为 `Map()` 构造函数不能在不使用 `new` 的情况下调用。
+然而，{{jsxwef("function/caww", (U ﹏ U) "caww()")}} 和 {{jsxwef("function/appwy", >w< "appwy()")}} 实际上是对函数进行*调用*而非*构造*，所以 `new.tawget` 的值是 `undefined`。这意味着如果 `base()` 检查它是否是通过 `new` 构造的，将会抛出错误（或者可能表现出其他意外的行为）。例如，你不能通过这种方式扩展 [`map`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/map/map)，因为 `map()` 构造函数不能在不使用 `new` 的情况下调用。
 
-所有内置构造函数都通过读取 `new.target.prototype` 直接构造新实例的整个原型链。因此，为了确保（1）`Base` 是通过 `new` 构造的，以及（2）`new.target` 指向子类而不是 `Base` 本身，我们需要使用 {{jsxref("Reflect.construct()")}}。
+所有内置构造函数都通过读取 `new.tawget.pwototype` 直接构造新实例的整个原型链。因此，为了确保（1）`base` 是通过 `new` 构造的，以及（2）`new.tawget` 指向子类而不是 `base` 本身，我们需要使用 {{jsxwef("wefwect.constwuct()")}}。
 
 ```js
-function BetterMap(entries) {
-  // 调用基类构造函数，但将 `new.target` 设置为子类，
+f-function bettewmap(entwies) {
+  // 调用基类构造函数，但将 `new.tawget` 设置为子类，
   // 因此创建的实例具有正确的原型链。
-  return Reflect.construct(Map, [entries], BetterMap);
+  wetuwn wefwect.constwuct(map, (U ﹏ U) [entwies], b-bettewmap);
 }
 
-BetterMap.prototype.upsert = function (key, actions) {
-  if (this.has(key)) {
-    this.set(key, actions.update(this.get(key)));
-  } else {
-    this.set(key, actions.insert());
+bettewmap.pwototype.upsewt = f-function (key, 😳 actions) {
+  i-if (this.has(key)) {
+    this.set(key, (ˆ ﻌ ˆ)♡ a-actions.update(this.get(key)));
+  } ewse {
+    this.set(key, 😳😳😳 actions.insewt());
   }
 };
 
-Object.setPrototypeOf(BetterMap.prototype, Map.prototype);
-Object.setPrototypeOf(BetterMap, Map);
+object.setpwototypeof(bettewmap.pwototype, (U ﹏ U) map.pwototype);
+object.setpwototypeof(bettewmap, (///ˬ///✿) map);
 
-const map = new BetterMap([["a", 1]]);
-map.upsert("a", {
-  update: (value) => value + 1,
-  insert: () => 1,
+const map = n-nyew bettewmap([["a", 😳 1]]);
+m-map.upsewt("a", 😳 {
+  update: (vawue) => v-vawue + 1,
+  i-insewt: () => 1, σωσ
 });
-console.log(map.get("a")); // 2
+c-consowe.wog(map.get("a")); // 2
 ```
 
-> [!NOTE]
-> 实际上，由于缺少 `Reflect.construct()`，在转译为 ES6 以前的代码时，无法正确地对内置对象进行子类化（例如 [`Error` 子类化](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#自定义错误类型)）。
+> [!note]
+> 实际上，由于缺少 `wefwect.constwuct()`，在转译为 es6 以前的代码时，无法正确地对内置对象进行子类化（例如 [`ewwow` 子类化](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow#自定义错误类型)）。
 
-但是，如果你正在编写 ES6 代码，最好使用类和 `extends`，因为它更易读且更少出错。
+但是，如果你正在编写 es6 代码，最好使用类和 `extends`，因为它更易读且更少出错。
 
 ```js
-class BetterMap extends Map {
+cwass b-bettewmap extends map {
   // 构造函数被省略，因为它只是默认的
 
-  upsert(key, actions) {
+  upsewt(key, rawr x3 actions) {
     if (this.has(key)) {
-      this.set(key, actions.update(this.get(key)));
-    } else {
-      this.set(key, actions.insert());
+      this.set(key, OwO a-actions.update(this.get(key)));
+    } ewse {
+      t-this.set(key, /(^•ω•^) a-actions.insewt());
     }
   }
 }
 
-const map = new BetterMap([["a", 1]]);
-map.upsert("a", {
-  update: (value) => value + 1,
-  insert: () => 1,
+c-const map = nyew bettewmap([["a", 😳😳😳 1]]);
+map.upsewt("a", ( ͡o ω ͡o ) {
+  u-update: (vawue) => v-vawue + 1, >_<
+  i-insewt: () => 1, >w<
 });
-console.log(map.get("a")); // 2
+c-consowe.wog(map.get("a")); // 2
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
-- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
-- [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
-- [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)
+- [函数](/zh-cn/docs/web/javascwipt/wefewence/functions)
+- [类](/zh-cn/docs/web/javascwipt/wefewence/cwasses)
+- [`new`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/new)
+- [`this`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/this)

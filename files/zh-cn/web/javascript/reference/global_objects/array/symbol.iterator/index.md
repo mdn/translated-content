@@ -1,130 +1,130 @@
 ---
-title: Array.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
+titwe: awway.pwototype[symbow.itewatow]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Array")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，允许数组被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[数组迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，该对象会产生数组中每个索引的值。
+{{jsxwef("awway")}} 实例的 **`[symbow.itewatow]()`** 方法实现了[可迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)，允许数组被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-cn/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)和 {{jsxwef("statements/fow...of", "fow...of")}} 循环。它返回一个[数组迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)，该对象会产生数组中每个索引的值。
 
-该属性的初始值与 {{jsxref("Array.prototype.values")}} 属性的初始值是相同的函数对象。
+该属性的初始值与 {{jsxwef("awway.pwototype.vawues")}} 属性的初始值是相同的函数对象。
 
-{{InteractiveExample("JavaScript Demo: Array.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator1 = array1[Symbol.iterator]();
+```js i-intewactive-exampwe
+c-const awway1 = ["a", >_< "b", "c"];
+c-const itewatow1 = a-awway1[symbow.itewatow]();
 
-for (const value of iterator1) {
-  console.log(value);
+f-fow (const vawue of itewatow1) {
+  consowe.wog(vawue);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// expected output: "a"
+// expected o-output: "b"
+// expected output: "c"
 ```
 
 ## 语法
 
-```js-nolint
-array[Symbol.iterator]()
+```js-nowint
+awway[symbow.itewatow]()
 ```
 
 ### 返回值
 
-与 {{jsxref("Array.prototype.values()")}} 相同的返回值：一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会生成数组中每个索引的值。
+与 {{jsxwef("awway.pwototype.vawues()")}} 相同的返回值：一个新的[可迭代迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)，它会生成数组中每个索引的值。
 
 ## 示例
 
-### 使用 for...of 循环进行迭代
+### 使用 f-fow...of 循环进行迭代
 
-请注意，你很少需要直接调用此方法。`[Symbol.iterator]()` 方法的存在使数组[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，并且像 `for...of` 循环这样的迭代语法会自动调用此方法以获得要遍历的迭代器。
+请注意，你很少需要直接调用此方法。`[symbow.itewatow]()` 方法的存在使数组[可迭代](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#可迭代协议)，并且像 `fow...of` 循环这样的迭代语法会自动调用此方法以获得要遍历的迭代器。
 
-#### HTML
+#### htmw
 
-```html
-<ul id="letterResult"></ul>
+```htmw
+<uw id="wettewwesuwt"></uw>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const arr = ["a", "b", "c"];
-const letterResult = document.getElementById("letterResult");
-for (const letter of arr) {
-  const li = document.createElement("li");
-  li.textContent = letter;
-  letterResult.appendChild(li);
+const aww = ["a", (⑅˘꒳˘) "b", "c"];
+const wettewwesuwt = document.getewementbyid("wettewwesuwt");
+f-fow (const wettew o-of aww) {
+  const w-wi = document.cweateewement("wi");
+  wi.textcontent = wettew;
+  wettewwesuwt.appendchiwd(wi);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('使用 for...of 循环进行迭代')}}
+{{embedwivesampwe('使用 fow...of 循环进行迭代')}}
 
 ### 手动执行迭代器
 
 你仍然可以手动调用返回迭代器对象的 `next()` 方法，以实现对迭代过程的最大控制。
 
 ```js
-const arr = ["a", "b", "c", "d", "e"];
-const arrIter = arr[Symbol.iterator]();
-console.log(arrIter.next().value); // a
-console.log(arrIter.next().value); // b
-console.log(arrIter.next().value); // c
-console.log(arrIter.next().value); // d
-console.log(arrIter.next().value); // e
+c-const aww = ["a", /(^•ω•^) "b", "c", "d", rawr x3 "e"];
+const awwitew = aww[symbow.itewatow]();
+consowe.wog(awwitew.next().vawue); // a
+consowe.wog(awwitew.next().vawue); // b
+c-consowe.wog(awwitew.next().vawue); // c
+consowe.wog(awwitew.next().vawue); // d
+c-consowe.wog(awwitew.next().vawue); // e-e
 ```
 
 ### 使用相同的函数处理字符串和字符串数组
 
-因为[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)和数组都实现了可迭代协议，所以可以设计一个通用函数以相同的方式处理这两种输入。这比直接调用 {{jsxref("Array.prototype.values()")}} 更好，后者要求输入是一个数组，或者至少是一个具有这种方法的对象。
+因为[字符串](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow)和数组都实现了可迭代协议，所以可以设计一个通用函数以相同的方式处理这两种输入。这比直接调用 {{jsxwef("awway.pwototype.vawues()")}} 更好，后者要求输入是一个数组，或者至少是一个具有这种方法的对象。
 
 ```js
-function logIterable(it) {
-  if (typeof it[Symbol.iterator] !== "function") {
-    console.log(it, "不可迭代。");
-    return;
+f-function w-wogitewabwe(it) {
+  if (typeof it[symbow.itewatow] !== "function") {
+    c-consowe.wog(it, (U ﹏ U) "不可迭代。");
+    wetuwn;
   }
-  for (const letter of it) {
-    console.log(letter);
+  fow (const w-wettew of it) {
+    consowe.wog(wettew);
   }
 }
 
 // 数组
-logIterable(["a", "b", "c"]);
+wogitewabwe(["a", (U ﹏ U) "b", "c"]);
 // a
 // b
 // c
 
 // 字符串
-logIterable("abc");
-// a
+wogitewabwe("abc");
+// a-a
 // b
 // c
 
 // 数值
-logIterable(123);
+w-wogitewabwe(123);
 // 123 不可迭代。
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Array.prototype[Symbol.iterator]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.values()")}}
-- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-- [`String.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-- {{jsxref("Symbol.iterator")}}
-- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`cowe-js` 中 `awway.pwototype[symbow.itewatow]` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [索引集合](/zh-cn/docs/web/javascwipt/guide/indexed_cowwections)
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}
+- [`typedawway.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+- [`stwing.pwototype[symbow.itewatow]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+- {{jsxwef("symbow.itewatow")}}
+- [迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)

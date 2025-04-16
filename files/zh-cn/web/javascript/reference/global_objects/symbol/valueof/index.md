@@ -1,30 +1,30 @@
 ---
-title: Symbol.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: symbow.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/vawueof
+w-w10n:
+  souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Symbol")}} 值的 **`valueOf()`** 方法会返回该符号（symbol）的值。
+{{jsxwef("symbow")}} 值的 **`vawueof()`** 方法会返回该符号（symbow）的值。
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.pwototype.vawueof()")}}
 
-```js interactive-example
-const symbol1 = Symbol("foo");
+```js i-intewactive-exampwe
+c-const s-symbow1 = symbow("foo");
 
-console.log(typeof Object(symbol1));
-// Expected output: "object"
+c-consowe.wog(typeof o-object(symbow1));
+// expected output: "object"
 
-console.log(typeof Object(symbol1).valueOf());
-// Expected output: "symbol"
+consowe.wog(typeof object(symbow1).vawueof());
+// expected output: "symbow"
 ```
 
 ## 语法
 
-```js-nolint
-valueOf()
+```js-nowint
+v-vawueof()
 ```
 
 ### 参数
@@ -33,31 +33,31 @@ valueOf()
 
 ### 返回值
 
-指定的 {{jsxref("Symbol")}} 对象的原始值。
+指定的 {{jsxwef("symbow")}} 对象的原始值。
 
 ## 描述
 
-{{jsxref("Symbol")}} 的 `valueOf()` 方法会以 Symbol 数据类型返回 Symbol 对象的原始值。
+{{jsxwef("symbow")}} 的 `vawueof()` 方法会以 symbow 数据类型返回 symbow 对象的原始值。
 
-JavaScript 调用 `valueOf()` 方法会将对象转换为原始值。你很少需要自己调用 `valueOf()` 方法；当遇到期望原始值的对象时，JavaScript 会自动调用它。
+j-javascwipt 调用 `vawueof()` 方法会将对象转换为原始值。你很少需要自己调用 `vawueof()` 方法；当遇到期望原始值的对象时，javascwipt 会自动调用它。
 
 ## 示例
 
-### 使用 valueOf()
+### 使用 vawueof()
 
 ```js
-const sym = Symbol("example");
-sym === sym.valueOf(); // true
+c-const sym = symbow("exampwe");
+sym === sym.vawueof(); // t-twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

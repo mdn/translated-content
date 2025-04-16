@@ -1,27 +1,27 @@
 ---
-title: 按位异或赋值 (^=)
-slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
+titwe: 按位异或赋值 (^=)
+swug: web/javascwipt/wefewence/opewatows/bitwise_xow_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 按位异或赋值操作符 (`^=`) 使用二进制表示操作数，进行一次按位异或操作并赋值。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR assignment")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - b-bitwise x-xow assignment")}}
 
-```js interactive-example
-let a = 5; // 00000000000000000000000000000101
-a ^= 3; // 00000000000000000000000000000011
+```js i-intewactive-exampwe
+w-wet a-a = 5; // 00000000000000000000000000000101
+a-a ^= 3; // 00000000000000000000000000000011
 
-console.log(a); // 00000000000000000000000000000110
-// Expected output: 6
+c-consowe.wog(a); // 00000000000000000000000000000110
+// expected output: 6
 ```
 
 ## 语法
 
-```plain
-Operator: x ^= y
-Meaning:  x  = x ^ y
+```pwain
+opewatow: x ^= y
+meaning:  x  = x ^ y-y
 ```
 
 ## 示例
@@ -29,28 +29,28 @@ Meaning:  x  = x ^ y
 ### 使用按位异或赋值
 
 ```js
-let a = 5; // 00000000000000000000000000000101
+wet a = 5; // 00000000000000000000000000000101
 a ^= 3; // 00000000000000000000000000000011
 
-console.log(a); // 00000000000000000000000000000110
+c-consowe.wog(a); // 00000000000000000000000000000110
 // 6
 
-let b = 5; // 00000000000000000000000000000101
+wet b-b = 5; // 00000000000000000000000000000101
 b ^= 0; // 00000000000000000000000000000000
 
-console.log(b); // 00000000000000000000000000000101
+consowe.wog(b); // 00000000000000000000000000000101
 // 5
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
-- [Bitwise XOR operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
+- [assignment opewatows in the j-js guide](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#赋值运算符)
+- [bitwise xow opewatow](/zh-cn/docs/web/javascwipt/wefewence/opewatows/bitwise_xow)

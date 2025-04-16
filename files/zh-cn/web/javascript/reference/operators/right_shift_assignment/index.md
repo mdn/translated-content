@@ -1,32 +1,32 @@
 ---
-title: 右移赋值（>>=）
-slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
+titwe: 右移赋值（>>=）
+swug: web/javascwipt/wefewence/opewatows/wight_shift_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 右移赋值运算符（`>>=`）将变量向右移动指定的位数，并将结果赋值给变量。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Right shift assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - w-wight s-shift assignment o-opewatow")}}
 
-```js interactive-example
-let a = 5; //  00000000000000000000000000000101
+```js i-intewactive-exampwe
+w-wet a-a = 5; //  00000000000000000000000000000101
 
-a >>= 2; //  00000000000000000000000000000001
-console.log(a);
-// Expected output: 1
+a-a >>= 2; //  00000000000000000000000000000001
+consowe.wog(a);
+// expected output: 1
 
-let b = -5; //  11111111111111111111111111111011
+wet b = -5; //  11111111111111111111111111111011
 
-b >>= 2; //  11111111111111111111111111111110
-console.log(b);
-// Expected output: -2
+b-b >>= 2; //  11111111111111111111111111111110
+consowe.wog(b);
+// expected output: -2
 ```
 
 ## 语法
 
-```js-nolint
-x >>= y // x = x >> y
+```js-nowint
+x-x >>= y // x = x >> y
 ```
 
 ## 示例
@@ -34,22 +34,22 @@ x >>= y // x = x >> y
 ### 使用右移赋值
 
 ```js
-let a = 5; //   (00000000000000000000000000000101)
+w-wet a = 5; //   (00000000000000000000000000000101)
 a >>= 2; // 1 (00000000000000000000000000000001)
 
-let b = -5; //  (-00000000000000000000000000000101)
+wet b = -5; //  (-00000000000000000000000000000101)
 b >>= 2; // -2 (-00000000000000000000000000000010)
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
-- [右移运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Right_shift)
+- [js 指南中的赋值运算符](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#赋值运算符)
+- [右移运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wight_shift)

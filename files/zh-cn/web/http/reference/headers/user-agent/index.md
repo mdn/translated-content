@@ -1,154 +1,154 @@
 ---
-title: User-Agent
-slug: Web/HTTP/Reference/Headers/User-Agent
-l10n:
-  sourceCommit: 165f04fc4a77b053850bf6c5243831e1b17a2433
+titwe: usew-agent
+swug: web/http/wefewence/headews/usew-agent
+w-w10n:
+  souwcecommit: 165f04fc4a77b053850bf6c5243831e1b17a2433
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**User-Agent** {{Glossary("request header", "请求标头")}}是一个特征字符串，使得服务器和对等网络能够识别发出请求的{{Glossary("user agent", "用户代理")}}的应用程序、操作系统、供应商或版本信息。
+**usew-agent** {{gwossawy("wequest h-headew", nyaa~~ "请求标头")}}是一个特征字符串，使得服务器和对等网络能够识别发出请求的{{gwossawy("usew a-agent", :3 "用户代理")}}的应用程序、操作系统、供应商或版本信息。
 
-> [!WARNING]
-> 请阅读[使用用户代理字段进行浏览器检测](/zh-CN/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)来了解为什么为不同的浏览器提供不同的页面或者服务通常不是一个好主意。
+> [!wawning]
+> 请阅读[使用用户代理字段进行浏览器检测](/zh-cn/docs/web/http/guides/bwowsew_detection_using_the_usew_agent)来了解为什么为不同的浏览器提供不同的页面或者服务通常不是一个好主意。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">标头类型</th>
-      <td>{{Glossary("request header", "请求标头")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+    <tw>
+      <th s-scope="wow">标头类型</th>
+      <td>{{gwossawy("wequest h-headew", 😳😳😳 "请求标头")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame", (˘ω˘) "禁止修改的标头")}}</th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
 ```http
-User-Agent: <product> / <product-version> <comment>
+usew-agent: <pwoduct> / <pwoduct-vewsion> <comment>
 ```
 
 web 浏览器的通用格式为：
 
 ```http
-User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <extensions>
+usew-agent: moziwwa/5.0 (<system-infowmation>) <pwatfowm> (<pwatfowm-detaiws>) <extensions>
 ```
 
 ### 指令
 
-- \<product>
+- \<pwoduct>
   - : 产品标识符——其名称或开发代号。
-- \<product-version>
+- \<pwoduct-vewsion>
   - : 产品版本号。
 - \<comment>
   - : 零个或多个包含更多细节的注释。例如，子产品的信息。
 
-## Firefox 用户代理字符串
+## f-fiwefox 用户代理字符串
 
-关于更多 Firefox 和基于 Gecko 的用户代理字符串的信息，请参阅 [Firefox 用户代理字符串参考](/zh-CN/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox)。Firefox 的用户代理字符串分为 4 个组成部分：
+关于更多 fiwefox 和基于 gecko 的用户代理字符串的信息，请参阅 [fiwefox 用户代理字符串参考](/zh-cn/docs/web/http/wefewence/headews/usew-agent/fiwefox)。fiwefox 的用户代理字符串分为 4 个组成部分：
 
-```plain
-Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
+```pwain
+m-moziwwa/5.0 (pwatfowm; wv:geckovewsion) g-gecko/geckotwaiw fiwefox/fiwefoxvewsion
 ```
 
-1. `Mozilla/5.0` 是一个通用标记，表示浏览器与 Mozilla 兼容。出于历史原因，现在每种浏览器几乎都会发送这一标记。
-2. **_platform_** 描述浏览器运行的原生平台（Windows、Mac、Linux、Android 等）以及是否运行在手机上。{{Glossary("Firefox OS", "Firefox 操作系统")}}手机会标注为 `Mobile`——意指 web 即是平台。注意，**_platform_** 可能包含多个由“`;`”分隔的标记。详情和示例请见下文。
-3. **rv:_geckoversion_** 表示 Gecko 引擎的发布版本（例如“_17.0_”）。在近期的浏览器中，**_geckoversion_** 与 **_firefoxversion_** 相同。
-4. **_Gecko/geckotrail_** 表示浏览器基于 Gecko 引擎。（在桌面平台上，**_geckotrail_** 始终是固定的字符串 `20100101`。）
-5. **_Firefox/firefoxversion_** 表示浏览器为 Firefox，并提供其版本号（例如“_17.0_”）。
+1. ^^ `moziwwa/5.0` 是一个通用标记，表示浏览器与 moziwwa 兼容。出于历史原因，现在每种浏览器几乎都会发送这一标记。
+2. :3 **_pwatfowm_** 描述浏览器运行的原生平台（windows、mac、winux、andwoid 等）以及是否运行在手机上。{{gwossawy("fiwefox os", -.- "fiwefox 操作系统")}}手机会标注为 `mobiwe`——意指 w-web 即是平台。注意，**_pwatfowm_** 可能包含多个由“`;`”分隔的标记。详情和示例请见下文。
+3. 😳 **wv:_geckovewsion_** 表示 gecko 引擎的发布版本（例如“_17.0_”）。在近期的浏览器中，**_geckovewsion_** 与 **_fiwefoxvewsion_** 相同。
+4. mya **_gecko/geckotwaiw_** 表示浏览器基于 g-gecko 引擎。（在桌面平台上，**_geckotwaiw_** 始终是固定的字符串 `20100101`。）
+5. (˘ω˘) **_fiwefox/fiwefoxvewsion_** 表示浏览器为 f-fiwefox，并提供其版本号（例如“_17.0_”）。
 
 ### 示例
 
-```plain
-Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
-Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
+```pwain
+moziwwa/5.0 (windows nyt 6.1; win64; x64; wv:47.0) gecko/20100101 fiwefox/47.0
+m-moziwwa/5.0 (macintosh; intew mac os x x.y; wv:42.0) gecko/20100101 fiwefox/42.0
 ```
 
-## Chrome 用户代理字符串
+## c-chwome 用户代理字符串
 
-基于 Chrome（Chromium 或 Blink 引擎）的浏览器用户代理字符串与 Firefox 相似。为了保持兼容性，它会添加诸如 `KHTML, like Gecko` 和 `Safari` 的字符串。
+基于 chwome（chwomium 或 b-bwink 引擎）的浏览器用户代理字符串与 f-fiwefox 相似。为了保持兼容性，它会添加诸如 `khtmw, >_< w-wike gecko` 和 `safawi` 的字符串。
 
 ### 示例
 
-```plain
-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+```pwain
+m-moziwwa/5.0 (x11; winux x86_64) appwewebkit/537.36 (khtmw, -.- w-wike gecko) chwome/51.0.2704.103 safawi/537.36
 ```
 
-## Opera 用户代理字符串
+## opewa 用户代理字符串
 
-Opera 浏览器同样是基于 Blink 引擎，这就是为什么它看起来与 Chrome 用户代理字符串几乎一样，只是添加了 `"OPR/<version>"`。
+o-opewa 浏览器同样是基于 bwink 引擎，这就是为什么它看起来与 chwome 用户代理字符串几乎一样，只是添加了 `"opw/<vewsion>"`。
 
 ### 示例
 
-```plain
-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
+```pwain
+moziwwa/5.0 (x11; winux x86_64) appwewebkit/537.36 (khtmw, 🥺 w-wike gecko) chwome/51.0.2704.106 s-safawi/537.36 o-opw/38.0.2220.41
 ```
 
-较早版本中基于 Presto 的 Opera 版本中使用了：
+较早版本中基于 p-pwesto 的 opewa 版本中使用了：
 
-```plain
-Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
-Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
+```pwain
+opewa/9.80 (macintosh; intew mac os x; u; en) p-pwesto/2.2.15 vewsion/10.00
+o-opewa/9.60 (windows nt 6.0; u; en) p-pwesto/2.1.1
 ```
 
-## 微软 Edge 用户代理字符串
+## 微软 e-edge 用户代理字符串
 
-Edge 浏览器同样基于 Blink 引擎，它添加了 `"Edg/<version>"`。
+edge 浏览器同样基于 b-bwink 引擎，它添加了 `"edg/<vewsion>"`。
 
 ### 示例
 
-```plain
-Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59
+```pwain
+moziwwa/5.0 (windows nyt 10.0; w-win64; x64) appwewebkit/537.36 (khtmw, wike gecko) chwome/91.0.4472.124 s-safawi/537.36 edg/91.0.864.59
 ```
 
-## Safari 用户代理字符串
+## safawi 用户代理字符串
 
-在此示例中，用户代理字符串是移动版 Safari 的版本信息，其中包含了单词 `"Mobile"`。
+在此示例中，用户代理字符串是移动版 s-safawi 的版本信息，其中包含了单词 `"mobiwe"`。
 
 ### 示例
 
-```plain
-Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
+```pwain
+moziwwa/5.0 (iphone; c-cpu iphone os 13_5_1 w-wike mac os x) appwewebkit/605.1.15 (khtmw, (U ﹏ U) wike gecko) vewsion/13.1.1 mobiwe/15e148 safawi/604.1
 ```
 
 ## 爬虫和机器人用户代理字符串
 
 ### 示例
 
-```plain
-Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+```pwain
+moziwwa/5.0 (compatibwe; googwebot/2.1; +http://www.googwe.com/bot.htmw)
 ```
 
-```plain
-Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
+```pwain
+m-moziwwa/5.0 (compatibwe; y-yandexaccessibiwitybot/3.0; +http://yandex.com/bots)
 ```
 
 ## 库与网络工具的用户代理字符串
 
 ### 示例
 
-```plain
-curl/7.64.1
+```pwain
+cuww/7.64.1
 ```
 
-```plain
-PostmanRuntime/7.26.5
+```pwain
+p-postmanwuntime/7.26.5
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [用户代理检测、历史记录和清单](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
-- [Firefox 用户代理字符串参考](/zh-CN/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox)
-- [使用用户代理字段进行浏览器检测](/zh-CN/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
-- [客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)
+- [用户代理检测、历史记录和清单](https://hacks.moziwwa.owg/2013/09/usew-agent-detection-histowy-and-checkwist/)
+- [fiwefox 用户代理字符串参考](/zh-cn/docs/web/http/wefewence/headews/usew-agent/fiwefox)
+- [使用用户代理字段进行浏览器检测](/zh-cn/docs/web/http/guides/bwowsew_detection_using_the_usew_agent)
+- [客户端提示](/zh-cn/docs/web/http/guides/cwient_hints)

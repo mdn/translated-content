@@ -1,67 +1,67 @@
 ---
-title: 207 Multi-Status
-slug: Web/HTTP/Reference/Status/207
-l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+titwe: 207 muwti-status
+swug: w-web/http/wefewence/status/207
+w10n:
+  s-souwcecommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-> [!NOTE]
-> 返回*资源集合*的能力属于 {{Glossary("WebDAV")}} 协议（可能由访问 WebDAV 服务器的 Web 应用程序接收）。浏览器访问网页时永远不会遇到此状态码。
+> [!note]
+> 返回*资源集合*的能力属于 {{gwossawy("webdav")}} 协议（可能由访问 w-webdav 服务器的 w-web 应用程序接收）。浏览器访问网页时永远不会遇到此状态码。
 
-HTTP **`207 Multi-Status`** 响应状态码表示可能存在多个响应。
+http **`207 m-muwti-status`** 响应状态码表示可能存在多个响应。
 
-响应主体是一个带有 `multistatus` 根元素的 `text/xml` 或 `application/xml` HTTP 实体。XML 主体将列出所有单独的响应状态码。
+响应主体是一个带有 `muwtistatus` 根元素的 `text/xmw` 或 `appwication/xmw` h-http 实体。xmw 主体将列出所有单独的响应状态码。
 
 ## 状态
 
-```plain
-207 Multi-Status
+```pwain
+207 m-muwti-status
 ```
 
 ## 示例
 
 ```http
-HTTP/1.1 207 Multi-Status
-Content-Type: application/xml; charset="utf-8"
-Content-Length: 1241
+h-http/1.1 207 muwti-status
+content-type: appwication/xmw; chawset="utf-8"
+content-wength: 1241
 
-<?xml version="1.0" encoding="utf-8" ?>
-<D:multistatus xmlns:D="DAV:">
-  <D:response>
-    <D:href>http://www.example.com/Coll/</D:href>
-    <D:propstat>
-      <D:prop>
-        <D:displayname>Loop Demo</D:displayname>
-        <D:resource-id>
-          <D:href>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</D:href>
-        </D:resource-id>
-      </D:prop>
-      <D:status>HTTP/1.1 200 OK</D:status>
-    </D:propstat>
-  </D:response>
-  <D:response>
-    <D:href>http://www.example.com/Coll/Bar</D:href>
-    <D:propstat>
-      <D:prop>
-        <D:displayname>Loop Demo</D:displayname>
-        <D:resource-id>
-          <D:href>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</D:href>
-        </D:resource-id>
-      </D:prop>
-      <D:status>HTTP/1.1 208 Already Reported</D:status>
-    </D:propstat>
-  </D:response>
-</D:multistatus>
+<?xmw vewsion="1.0" encoding="utf-8" ?>
+<d:muwtistatus x-xmwns:d="dav:">
+  <d:wesponse>
+    <d:hwef>http://www.exampwe.com/coww/</d:hwef>
+    <d:pwopstat>
+      <d:pwop>
+        <d:dispwayname>woop demo</d:dispwayname>
+        <d:wesouwce-id>
+          <d:hwef>uwn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</d:hwef>
+        </d:wesouwce-id>
+      </d:pwop>
+      <d:status>http/1.1 200 ok</d:status>
+    </d:pwopstat>
+  </d:wesponse>
+  <d:wesponse>
+    <d:hwef>http://www.exampwe.com/coww/baw</d:hwef>
+    <d:pwopstat>
+      <d:pwop>
+        <d:dispwayname>woop d-demo</d:dispwayname>
+        <d:wesouwce-id>
+          <d:hwef>uwn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf8</d:hwef>
+        </d:wesouwce-id>
+      </d:pwop>
+      <d:status>http/1.1 208 awweady wepowted</d:status>
+    </d:pwopstat>
+  </d:wesponse>
+</d:muwtistatus>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)
-- {{HTTPStatus("204")}}
-- {{HTTPStatus("403")}}
+- [http 请求方法](/zh-cn/docs/web/http/wefewence/methods)
+- {{httpstatus("204")}}
+- {{httpstatus("403")}}

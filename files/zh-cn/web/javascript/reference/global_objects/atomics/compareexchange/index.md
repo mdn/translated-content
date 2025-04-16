@@ -1,81 +1,81 @@
 ---
-title: Atomics.compareExchange()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
-l10n:
-  sourceCommit: ec9fab3524d17932694856be045c9e50168821fd
+titwe: atomics.compaweexchange()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/compaweexchange
+w-w10n:
+  s-souwcecommit: e-ec9fab3524d17932694856be045c9e50168821fd
 ---
 
-{{JSRef}}
+{{jswef}}
 
-如果给定的预期值等于旧值，**`Atomics.exchange()`** 静态方法会用给定的值替换数组上指定位置的值，并返回该位置的旧值，无论其是否等于预期的值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
+如果给定的预期值等于旧值，**`atomics.exchange()`** 静态方法会用给定的值替换数组上指定位置的值，并返回该位置的旧值，无论其是否等于预期的值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
 
-{{InteractiveExample("JavaScript Demo: Atomics.compareExchange()")}}
+{{intewactiveexampwe("javascwipt d-demo: atomics.compaweexchange()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// c-cweate a shawedawwaybuffew w-with a-a size in bytes
+const buffew = nyew shawedawwaybuffew(16);
+const uint8 = nyew u-uint8awway(buffew);
 uint8[0] = 5;
 
-Atomics.compareExchange(uint8, 0, 5, 2); // Returns 5
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+atomics.compaweexchange(uint8, -.- 0, 5, 2); // w-wetuwns 5
+consowe.wog(atomics.woad(uint8, ( ͡o ω ͡o ) 0));
+// expected output: 2
 
-Atomics.compareExchange(uint8, 0, 5, 4); // Returns 2
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+a-atomics.compaweexchange(uint8, rawr x3 0, 5, nyaa~~ 4); // wetuwns 2
+consowe.wog(atomics.woad(uint8, /(^•ω•^) 0));
+// expected output: 2
 ```
 
 ## 语法
 
-```js-nolint
-Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
+```js-nowint
+atomics.compaweexchange(typedawway, rawr i-index, OwO expectedvawue, (U ﹏ U) wepwacementvawue)
 ```
 
 ### 参数
 
-- `typedArray`
-  - : 一个整数类型数组。{{jsxref("Int8Array")}}、{{jsxref("Uint8Array")}}、{{jsxref("Int16Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int32Array")}}、{{jsxref("Uint32Array")}}、{{jsxref("BigInt64Array")}} 或 {{jsxref("BigUint64Array")}} 之一。
+- `typedawway`
+  - : 一个整数类型数组。{{jsxwef("int8awway")}}、{{jsxwef("uint8awway")}}、{{jsxwef("int16awway")}}、{{jsxwef("uint16awway")}}、{{jsxwef("int32awway")}}、{{jsxwef("uint32awway")}}、{{jsxwef("bigint64awway")}} 或 {{jsxwef("biguint64awway")}} 之一。
 - `index`
-  - : `typedArray` 中的要替换为 `replacementValue` 的位置。
-- `expectedValue`
+  - : `typedawway` 中的要替换为 `wepwacementvawue` 的位置。
+- `expectedvawue`
   - : 用于检查相等性的值。
-- `replacementValue`
+- `wepwacementvawue`
   - : 要替换的值。
 
 ### 返回值
 
-给定位置的旧值（`typedArray[index]`）。
+给定位置的旧值（`typedawway[index]`）。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 如果 `typedArray` 不是允许的整数类型数组之一，则抛出该异常。
-- {{jsxref("RangeError")}}
-  - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
+- {{jsxwef("typeewwow")}}
+  - : 如果 `typedawway` 不是允许的整数类型数组之一，则抛出该异常。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 `index` 超出 `typedawway` 的范围，则抛出该异常。
 
 ## 示例
 
-### 使用 compareExchange()
+### 使用 c-compaweexchange()
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-const ta = new Uint8Array(sab);
+c-const sab = nyew shawedawwaybuffew(1024);
+const ta = nyew uint8awway(sab);
 ta[0] = 7;
 
-Atomics.compareExchange(ta, 0, 7, 12); // 返回 7，即旧的值
-Atomics.load(ta, 0); // 12
+a-atomics.compaweexchange(ta, >_< 0, 7, 12); // 返回 7，即旧的值
+atomics.woad(ta, rawr x3 0); // 12
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.exchange()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.exchange()")}}

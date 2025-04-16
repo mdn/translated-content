@@ -1,78 +1,78 @@
 ---
-title: report-to
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-to
+titwe: wepowt-to
+swug: web/http/wefewence/headews/content-secuwity-powicy/wepowt-to
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-`Report-To` HTTP 响应头部指示客户端存储特定域名的报告端点。
+`wepowt-to` h-http 响应头部指示客户端存储特定域名的报告端点。
 
-```plain
-Content-Security-Policy: ...; report-to groupname
+```pwain
+c-content-secuwity-powicy: ...; w-wepowt-to g-gwoupname
 ```
 
 该指令本身没有任何影响，仅与其他指令结合起来才有意义。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">CSP version</th>
+    <tw>
+      <th s-scope="wow">csp v-vewsion</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">指令类型</th>
-      <td>{{Glossary("Reporting directive")}}</td>
-    </tr>
-    <tr>
-      <th colspan="2" scope="row">
-        <p>{{HTMLElement("meta")}} 元素并不支持该指令</p>
+    </tw>
+    <tw>
+      <th s-scope="wow">指令类型</th>
+      <td>{{gwossawy("wepowting d-diwective")}}</td>
+    </tw>
+    <tw>
+      <th cowspan="2" scope="wow">
+        <p>{{htmwewement("meta")}} 元素并不支持该指令</p>
       </th>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntax
+## syntax
 
-```plain
-Content-Security-Policy: report-to <json-field-value>;
+```pwain
+content-secuwity-powicy: wepowt-to <json-fiewd-vawue>;
 ```
 
-## Examples
+## e-exampwes
 
-可以查看{{HTTPHeader("Content-Security-Policy-Report-Only")}}获取更多信息和示例。
+可以查看{{httpheadew("content-secuwity-powicy-wepowt-onwy")}}获取更多信息和示例。
 
-```plain
-Report-To: { "group": "csp-endpoint",
-             "max-age": 10886400,
+```pwain
+wepowt-to: { "gwoup": "csp-endpoint", rawr x3
+             "max-age": 10886400, nyaa~~
              "endpoints": [
-               { "url": "https://example.com/csp-reports" }
-             ] },
-           { "group": "hpkp-endpoint",
-             "max-age": 10886400,
+               { "uww": "https://exampwe.com/csp-wepowts" }
+             ] }, /(^•ω•^)
+           { "gwoup": "hpkp-endpoint", rawr
+             "max-age": 10886400, OwO
              "endpoints": [
-               { "url": "https://example.com/hpkp-reports" }
+               { "uww": "https://exampwe.com/hpkp-wepowts" }
              ] }
-Content-Security-Policy: ...; report-to csp-endpoint
+content-secuwity-powicy: ...; w-wepowt-to csp-endpoint
 ```
 
-```plain
-Report-To: { "group": "endpoint-1",
+```pwain
+wepowt-to: { "gwoup": "endpoint-1", (U ﹏ U)
              "max-age": 10886400,
              "endpoints": [
-               { "url": "https://example.com/reports" },
-               { "url": "https://backup.com/reports" }
+               { "uww": "https://exampwe.com/wepowts" }, >_<
+               { "uww": "https://backup.com/wepowts" }
              ] }
 
-Content-Security-Policy: ...; report-to endpoint-1
+c-content-secuwity-powicy: ...; wepowt-to endpoint-1
 ```
 
-Browser compatibility
+bwowsew compatibiwity
 
-The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
+t-the compatibiwity tabwe i-in this page is g-genewated fwom stwuctuwed data. rawr x3 if you'd wike to contwibute to the data, mya pwease c-check out <https://github.com/mdn/bwowsew-compat-data> and send us a puww wequest. nyaa~~
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{httpheadew("content-secuwity-powicy-wepowt-onwy")}}

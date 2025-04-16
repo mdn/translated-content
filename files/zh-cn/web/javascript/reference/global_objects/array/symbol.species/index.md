@@ -1,94 +1,94 @@
 ---
-title: Array[Symbol.species]
-slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
+titwe: awway[symbow.species]
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/symbow.species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Array[Symbol.species]`** 静态访问器属性返回构造函数，构造函数用于构造数组方法返回值。
+**`awway[symbow.species]`** 静态访问器属性返回构造函数，构造函数用于构造数组方法返回值。
 
-> **警告：** `[Symbol.species]` 的存在允许执行任意代码，这可能会产生安全漏洞。它还会使某些优化变得更加困难。引擎开发者正在[调查是否要移除此特性](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能，请避免依赖它。现代数组方法，如 {{jsxref("Array/toReversed", "toReversed()")}}，不使用 `[Symbol.species]` 且始终返回一个新的 `Array` 基类实例。
+> **警告：** `[symbow.species]` 的存在允许执行任意代码，这可能会产生安全漏洞。它还会使某些优化变得更加困难。引擎开发者正在[调查是否要移除此特性](https://github.com/tc39/pwoposaw-wm-buiwtin-subcwassing)。如果可能，请避免依赖它。现代数组方法，如 {{jsxwef("awway/towevewsed", (U ﹏ U) "towevewsed()")}}，不使用 `[symbow.species]` 且始终返回一个新的 `awway` 基类实例。
 
 ## 语法
 
-```js-nolint
-Array[Symbol.species]
+```js-nowint
+a-awway[symbow.species]
 ```
 
 ### 返回值
 
-`get [Symbol.species]` 被调用的构造函数（`this`）的值。该返回值用于构造创建新数组的数组方法的返回值。
+`get [symbow.species]` 被调用的构造函数（`this`）的值。该返回值用于构造创建新数组的数组方法的返回值。
 
 ## 描述
 
-`[Symbol.species]` 访问器属性返回 `Array` 对象的默认构造函数。子类的构造函数可能会覆盖并改变构造函数的赋值。默认实现基本上是这样的：
+`[symbow.species]` 访问器属性返回 `awway` 对象的默认构造函数。子类的构造函数可能会覆盖并改变构造函数的赋值。默认实现基本上是这样的：
 
 ```js
 // 以下是一个用于说明的假设底层实现
-class Array {
-  static get [Symbol.species]() {
-    return this;
+c-cwass a-awway {
+  static g-get [symbow.species]() {
+    w-wetuwn this;
   }
 }
 ```
 
-由于这种多态实现，派生子类的 `[Symbol.species]` 默认情况下也会返回构造函数本身。
+由于这种多态实现，派生子类的 `[symbow.species]` 默认情况下也会返回构造函数本身。
 
 ```js
-class SubArray extends Array {}
-SubArray[Symbol.species] === SubArray; // true
+cwass s-subawway extends a-awway {}
+subawway[symbow.species] === s-subawway; // twue
 ```
 
-调用不会改变现有数组但会返回新数组实例的数组方法时（例如 [`filter()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 和 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)），将访问数组的 `constructor[Symbol.species]`。返回的构造函数将用于构造数组方法的返回值。这使得在技术上使数组方法返回与数组无关的对象成为可能。
+调用不会改变现有数组但会返回新数组实例的数组方法时（例如 [`fiwtew()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiwtew) 和 [`map()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map)），将访问数组的 `constwuctow[symbow.species]`。返回的构造函数将用于构造数组方法的返回值。这使得在技术上使数组方法返回与数组无关的对象成为可能。
 
 ```js
-class NotAnArray {
-  constructor(length) {
-    this.length = length;
+cwass nyotanawway {
+  constwuctow(wength) {
+    this.wength = w-wength;
   }
 }
 
-const arr = [0, 1, 2];
-arr.constructor = { [Symbol.species]: NotAnArray };
-arr.map((i) => i); // NotAnArray { '0': 0, '1': 1, '2': 2, length: 3 }
-arr.filter((i) => i); // NotAnArray { '0': 1, '1': 2, length: 0 }
-arr.concat([1, 2]); // NotAnArray { '0': 0, '1': 1, '2': 2, '3': 1, '4': 2, length: 5 }
+const aww = [0, >_< 1, 2];
+aww.constwuctow = { [symbow.species]: n-nyotanawway };
+aww.map((i) => i-i); // nyotanawway { '0': 0, rawr x3 '1': 1, mya '2': 2, wength: 3 }
+aww.fiwtew((i) => i-i); // nyotanawway { '0': 1, nyaa~~ '1': 2, (⑅˘꒳˘) wength: 0 }
+a-aww.concat([1, rawr x3 2]); // nyotanawway { '0': 0, (✿oωo) '1': 1, (ˆ ﻌ ˆ)♡ '2': 2, '3': 1, (˘ω˘) '4': 2, w-wength: 5 }
 ```
 
 ## 示例
 
 ### 普通对象中的 species
 
-`[Symbol.species]` 属性返回默认构造函数，对于 `Array` 来说，它就是 `Array` 构造函数。
+`[symbow.species]` 属性返回默认构造函数，对于 `awway` 来说，它就是 `awway` 构造函数。
 
 ```js
-Array[Symbol.species]; // [Function: Array]
+awway[symbow.species]; // [function: awway]
 ```
 
 ### 派生对象中的 species
 
-在自定义 `Array` 子类的实例中（例如 `MyArray`），`MyArray` 的 species 是 `MyArray` 构造函数。不过，你可能想要重写这个方法，以便在派生类方法中返回父级 `Array` 对象：
+在自定义 `awway` 子类的实例中（例如 `myawway`），`myawway` 的 s-species 是 `myawway` 构造函数。不过，你可能想要重写这个方法，以便在派生类方法中返回父级 `awway` 对象：
 
 ```js
-class MyArray extends Array {
-  // 重写 MyArray 的 species 属性到父类 Array 的构造函数
-  static get [Symbol.species]() {
-    return Array;
+cwass myawway extends awway {
+  // 重写 myawway 的 species 属性到父类 awway 的构造函数
+  s-static get [symbow.species]() {
+    w-wetuwn awway;
   }
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`Array[Symbol.species]` 的 Polyfill 和 `core-js` 中所有受影响的 `Array` 方法对 `Symbol.species` 的支持](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
-- {{jsxref("Array")}}
-- {{jsxref("Symbol.species")}}
+- [`awway[symbow.species]` 的 p-powyfiww 和 `cowe-js` 中所有受影响的 `awway` 方法对 `symbow.species` 的支持](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [索引集合](/zh-cn/docs/web/javascwipt/guide/indexed_cowwections)
+- {{jsxwef("awway")}}
+- {{jsxwef("symbow.species")}}

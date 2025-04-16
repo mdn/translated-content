@@ -1,32 +1,32 @@
 ---
-title: Map.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Map/keys
+titwe: map.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/keys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 实例的 **`keys()`** 方法返回一个新的 [_map 迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象包含了此 map 中每个元素的键，按插入顺序排列。
+{{jsxwef("map")}} 实例的 **`keys()`** 方法返回一个新的 [_map 迭代器_](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)对象，该对象包含了此 m-map 中每个元素的键，按插入顺序排列。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.keys()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-map.pwototype.keys()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const map1 = n-nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+m-map1.set("0", >_< "foo");
+m-map1.set(1, mya "baw");
 
-const iterator1 = map1.keys();
+const itewatow1 = map1.keys();
 
-console.log(iterator1.next().value);
-// Expected output: "0"
+consowe.wog(itewatow1.next().vawue);
+// expected output: "0"
 
-console.log(iterator1.next().value);
-// Expected output: 1
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: 1
 ```
 
 ## 语法
 
-```js-nolint
+```js-nowint
 keys()
 ```
 
@@ -36,34 +36,34 @@ keys()
 
 ### 返回值
 
-一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
+一个新的[可迭代迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)。
 
 ## 示例
 
-### 使用 keys()
+### 使用 k-keys()
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+const mymap = nyew m-map();
+mymap.set("0", mya "foo");
+mymap.set(1, 😳 "baw");
+mymap.set({}, XD "baz");
 
-const mapIter = myMap.keys();
+const mapitew = mymap.keys();
 
-console.log(mapIter.next().value); // "0"
-console.log(mapIter.next().value); // 1
-console.log(mapIter.next().value); // {}
+c-consowe.wog(mapitew.next().vawue); // "0"
+consowe.wog(mapitew.next().vawue); // 1
+c-consowe.wog(mapitew.next().vawue); // {}
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.values()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

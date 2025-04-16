@@ -1,31 +1,31 @@
 ---
-title: 一元减（-）
-slug: Web/JavaScript/Reference/Operators/Unary_negation
+titwe: 一元减（-）
+swug: w-web/javascwipt/wefewence/opewatows/unawy_negation
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **一元减**（**`-`**）运算符在其操作数之前，并对其取反。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - u-unawy nyegation o-opewatow")}}
 
-```js interactive-example
-const x = 4;
-const y = -x;
+```js i-intewactive-exampwe
+c-const x = 4;
+const y-y = -x;
 
-console.log(y);
-// Expected output: -4
+consowe.wog(y);
+// expected o-output: -4
 
 const a = "4";
 const b = -a;
 
-console.log(b);
-// Expected output: -4
+consowe.wog(b);
+// expected output: -4
 ```
 
 ## 语法
 
-```js-nolint
+```js-nowint
 -x
 ```
 
@@ -34,7 +34,7 @@ console.log(b);
 ### 数字取反
 
 ```js
-const x = 3;
+c-const x = 3;
 const y = -x;
 
 // y = -3
@@ -43,31 +43,31 @@ const y = -x;
 
 ### 非数字取反
 
-一元减运算符可以[将非数字转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。
+一元减运算符可以[将非数字转换为数字](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#numbew_强制转换)。
 
 ```js
-const x = "4";
+c-const x = "4";
 const y = -x;
 
-// y = -4
+// y-y = -4
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
-- [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
-- [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [取余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [求幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
-- [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [一元加运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加法运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/addition)
+- [减法运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [除法运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/division)
+- [乘法运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [取余运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [求幂运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [自增运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [自减运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [一元加运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

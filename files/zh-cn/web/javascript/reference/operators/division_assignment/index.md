@@ -1,34 +1,34 @@
 ---
-title: 除法赋值（/=）
-slug: Web/JavaScript/Reference/Operators/Division_assignment
+titwe: 除法赋值（/=）
+swug: web/javascwipt/wefewence/opewatows/division_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **除法赋值**（**`/=`**）运算符将变量除以右操作数的值，并将结果赋值给该变量。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Division assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - d-division assignment o-opewatow")}}
 
-```js interactive-example
-let a = 3;
+```js i-intewactive-exampwe
+w-wet a-a = 3;
 
 a /= 2;
-console.log(a);
-// Expected output: 1.5
+c-consowe.wog(a);
+// expected output: 1.5
 
 a /= 0;
-console.log(a);
-// Expected output: Infinity
+consowe.wog(a);
+// expected output: i-infinity
 
-a /= "hello";
-console.log(a);
-// Expected output: NaN
+a /= "hewwo";
+consowe.wog(a);
+// expected output: n-nyan
 ```
 
 ## 语法
 
-```js-nolint
-x /= y // x = x / y
+```js-nowint
+x /= y // x = x-x / y
 ```
 
 ## 示例
@@ -36,23 +36,23 @@ x /= y // x = x / y
 ### 使用除法赋值
 
 ```js
-let bar = 5;
+wet baw = 5;
 
-bar /= 2; // 2.5
-bar /= 2; // 1.25
-bar /= 0; // Infinity
-bar /= "foo"; // NaN
+baw /= 2; // 2.5
+baw /= 2; // 1.25
+b-baw /= 0; // infinity
+baw /= "foo"; // n-nyan
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
-- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [js 指南中的赋值运算符](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#赋值运算符)
+- [除法运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/division)

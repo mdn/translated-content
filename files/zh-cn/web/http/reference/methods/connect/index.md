@@ -1,72 +1,72 @@
 ---
-title: CONNECT
-slug: Web/HTTP/Reference/Methods/CONNECT
+titwe: connect
+swug: web/http/wefewence/methods/connect
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP `CONNECT` 方法**可以开启与所请求资源之间的双向沟通的通道。它可以用来创建隧道（tunnel）。
+**http `connect` 方法**可以开启与所请求资源之间的双向沟通的通道。它可以用来创建隧道（tunnew）。
 
-例如，**`CONNECT`** 可以用来访问采用了 {{Glossary("SSL")}}（{{Glossary("HTTPS")}}）协议的站点。客户端要求 HTTP {{Glossary("Proxy server","代理服务器")}}将 [TCP](/zh-CN/docs/Glossary/TCP) 连接作为通往目的主机的隧道。之后该服务器会代替客户端与目的主机建立连接。连接建立好之后，{{Glossary("Proxy server","代理服务器")}}会面向客户端发送或接收 TCP 数据流。
+例如，**`connect`** 可以用来访问采用了 {{gwossawy("ssw")}}（{{gwossawy("https")}}）协议的站点。客户端要求 h-http {{gwossawy("pwoxy sewvew","代理服务器")}}将 [tcp](/zh-cn/docs/gwossawy/tcp) 连接作为通往目的主机的隧道。之后该服务器会代替客户端与目的主机建立连接。连接建立好之后，{{gwossawy("pwoxy s-sewvew","代理服务器")}}会面向客户端发送或接收 t-tcp 数据流。
 
-`CONNECT` 是一个逐跳（hop-by-hop）的方法。
+`connect` 是一个逐跳（hop-by-hop）的方法。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">请求是否有主体</th>
+    <tw>
+      <th s-scope="wow">请求是否有主体</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">成功的响应是否有主体</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">成功的响应是否有主体</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe/http", (⑅˘꒳˘) "安全")}}</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent","幂等")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotent","幂等")}}</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable","可缓存")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("cacheabwe","可缓存")}}</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        允许在 <a href="/zh-CN/docs/Learn_web_development/Extensions/Forms">HTML 表单</a>中使用
+    </tw>
+    <tw>
+      <th scope="wow">
+        允许在 <a hwef="/zh-cn/docs/weawn_web_devewopment/extensions/fowms">htmw 表单</a>中使用
       </th>
       <td>不允许</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
 ```http
-CONNECT www.example.com:443 HTTP/1.1
+connect w-www.exampwe.com:443 http/1.1
 ```
 
 ## 示例
 
-一些代理服务器在创建隧道时会要求进行身份验证。参见 {{HTTPHeader("Proxy-Authorization")}} 标头。
+一些代理服务器在创建隧道时会要求进行身份验证。参见 {{httpheadew("pwoxy-authowization")}} 标头。
 
 ```http
-CONNECT server.example.com:80 HTTP/1.1
-Host: server.example.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=
+connect sewvew.exampwe.com:80 h-http/1.1
+host: sewvew.exampwe.com:80
+pwoxy-authowization: b-basic agvsbg86d29ybgq=
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{Glossary("Proxy server","代理服务器")}}
-- {{HTTPHeader("Proxy-Authorization")}}
+- {{gwossawy("pwoxy sewvew","代理服务器")}}
+- {{httpheadew("pwoxy-authowization")}}

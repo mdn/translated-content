@@ -1,50 +1,50 @@
 ---
-title: Content-Range
-slug: Web/HTTP/Reference/Headers/Content-Range
-l10n:
-  sourceCommit: beb5d4126bd1e5c838d0fa0eea3e996eb0a9e0b9
+titwe: content-wange
+swug: web/http/wefewence/headews/content-wange
+w-w10n:
+  souwcecommit: b-beb5d4126bd1e5c838d0fa0eea3e996eb0a9e0b9
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Content-Range`** HTTP 响应标头表示部分消息在完整消息中的位置。
+**`content-wange`** h-http 响应标头表示部分消息在完整消息中的位置。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">标头类型</th>
+    <tw>
+      <th s-scope="wow">标头类型</th>
       <td>
-        {{Glossary("Response header", "响应标头")}}、{{Glossary("Payload header", "有效负载标头")}}
+        {{gwossawy("wesponse h-headew", (U ᵕ U❁) "响应标头")}}、{{gwossawy("paywoad h-headew", -.- "有效负载标头")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame", ^^;; "禁止修改的标头")}}</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cows-safewisted wequest h-headew", >_< "列入 cows 白名单的请求标头")}}
       </th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
 ```http
-Content-Range: <unit> <range-start>-<range-end>/<size>
-Content-Range: <unit> <range-start>-<range-end>/*
-Content-Range: <unit> */<size>
+content-wange: <unit> <wange-stawt>-<wange-end>/<size>
+c-content-wange: <unit> <wange-stawt>-<wange-end>/*
+content-wange: <unit> */<size>
 ```
 
 ## 指令
 
 - \<unit>
   - : 指定范围的单位。通常是字节（`bytes`）。
-- \<range-start>
+- \<wange-stawt>
   - : 给定单位中的一个整数，表示所请求范围的起始位置（从零开始，包含起始位置）。
-- \<range-end>
+- \<wange-end>
   - : 给定单位中的一个整数，表示所请求范围的结束位置（从零开始，包含结束位置）。
 - \<size>
   - : 文档的总长度（如果未知，则为 `'*'`）。
@@ -52,21 +52,21 @@ Content-Range: <unit> */<size>
 ## 示例
 
 ```http
-Content-Range: bytes 200-1000/67589
+c-content-wange: bytes 200-1000/67589
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPStatus("206")}} `Partial Content`
-- {{HTTPStatus("416")}} `Range Not Satisfiable`
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}
+- {{httpheadew("content-type")}}
+- {{httpstatus("206")}} `pawtiaw content`
+- {{httpstatus("416")}} `wange nyot satisfiabwe`

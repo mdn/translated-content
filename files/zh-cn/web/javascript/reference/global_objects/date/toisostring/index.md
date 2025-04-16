@@ -1,50 +1,50 @@
 ---
-title: Date.prototype.toISOString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
+titwe: date.pwototype.toisostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/toisostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toISOString()`** 方法返回一个 ISO（[ISO 8601 Extended Format](http://en.wikipedia.org/wiki/ISO_8601)）格式的字符串： **YYYY-MM-DDTHH:mm:ss.sssZ**。时区总是 UTC（协调世界时），加一个后缀“Z”标识。
+**`toisostwing()`** 方法返回一个 i-iso（[iso 8601 e-extended f-fowmat](http://en.wikipedia.owg/wiki/iso_8601)）格式的字符串： **yyyy-mm-ddthh:mm:ss.sssz**。时区总是 u-utc（协调世界时），加一个后缀“z”标识。
 
-{{InteractiveExample("JavaScript Demo: Date.toISOString()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.toisostwing()")}}
 
-```js interactive-example
-const event = new Date("05 October 2011 14:48 UTC");
-console.log(event.toString());
-// Expected output: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
-// Note: your timezone may vary
+```js i-intewactive-exampwe
+c-const e-event = nyew date("05 octobew 2011 14:48 utc");
+consowe.wog(event.tostwing());
+// expected output: "wed o-oct 05 2011 16:48:00 gmt+0200 (cest)"
+// nyote: youw t-timezone may vawy
 
-console.log(event.toISOString());
-// Expected output: "2011-10-05T14:48:00.000Z"
+consowe.wog(event.toisostwing());
+// e-expected output: "2011-10-05t14:48:00.000z"
 ```
 
 ## 语法
 
-```plain
-dateObj.toISOString()
+```pwain
+dateobj.toisostwing()
 ```
 
 ## 示例
 
-### 使用 toISOString()
+### 使用 toisostwing()
 
 ```js
-const d = new Date(0);
+const d = nyew d-date(0);
 
-console.log(d.toISOString()); // "1970-01-01T00:00:00.000Z"
+consowe.wog(d.toisostwing()); // "1970-01-01t00:00:00.000z"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.toutcstwing()")}}

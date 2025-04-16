@@ -1,44 +1,44 @@
 ---
-title: TypedArray.prototype.slice()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
+titwe: typedawway.pwototype.swice()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/swice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`slice()`** 方法将一个类型化数组的一部分浅拷贝到一个新的类型化数组对象中并返回。此方法采用与 {{jsxref("Array.prototype.slice()")}} 相同的算法。_TypedArray_ 指[类型化数组的类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)中的一员。
+**`swice()`** 方法将一个类型化数组的一部分浅拷贝到一个新的类型化数组对象中并返回。此方法采用与 {{jsxwef("awway.pwototype.swice()")}} 相同的算法。_typedawway_ 指[类型化数组的类型](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_对象)中的一员。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.slice()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.swice()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
-const array1 = uint8.slice(1, 3);
+```js i-intewactive-exampwe
+c-const u-uint8 = nyew uint8awway([10, mya 20, 30, 40, mya 50]);
+c-const awway1 = uint8.swice(1, 😳 3);
 
-console.log(array1);
-// Expected output: Uint8Array [20, 30]
+c-consowe.wog(awway1);
+// e-expected o-output: uint8awway [20, XD 30]
 ```
 
 ## 语法
 
-```js-nolint
-slice()
-slice(start)
-slice(start, end)
+```js-nowint
+swice()
+swice(stawt)
+swice(stawt, :3 end)
 ```
 
 ## 参数
 
-- `begin` {{optional_inline}}
-  - : 从 0 开始的索引位置。可以使用负值索引，表示从数组末尾往前的偏移量。`slice(-2)` 表示提取数组中的末尾两个元素。如果没有设定起始位置，则将从开始位置开始截取。
-- `end` {{optional_inline}}
-  - : 从 0 开始到尾元素前的索引值。 `slice` 取出的元素到此位置之前，不包含该位置。例，`slice(1,4)` 表示读取第 2 个元素到第 4 个元素 (元素索引：1, 2, 3)。可以使用负值索引，表示从数组末尾往前的偏移量。 `slice(2,-1)` 表示取出数组中的第 3 个到倒数第 2 个元素。如果没有设定结束位置，则将从开始位置截取到序列尾部。(默认值为`typedarray.length`).
+- `begin` {{optionaw_inwine}}
+  - : 从 0 开始的索引位置。可以使用负值索引，表示从数组末尾往前的偏移量。`swice(-2)` 表示提取数组中的末尾两个元素。如果没有设定起始位置，则将从开始位置开始截取。
+- `end` {{optionaw_inwine}}
+  - : 从 0 开始到尾元素前的索引值。 `swice` 取出的元素到此位置之前，不包含该位置。例，`swice(1,4)` 表示读取第 2 个元素到第 4 个元素 (元素索引：1, 😳😳😳 2, 3)。可以使用负值索引，表示从数组末尾往前的偏移量。 `swice(2,-1)` 表示取出数组中的第 3 个到倒数第 2 个元素。如果没有设定结束位置，则将从开始位置截取到序列尾部。(默认值为`typedawway.wength`). -.-
 
 ### 返回值
 
-包含取出元素的新 typed array。
+包含取出元素的新 typed a-awway。
 
 ## 描述
 
-`slice`方法并不会改变原数组的内容，它只是返回从原数组中取出的元素的浅复制集合。
+`swice`方法并不会改变原数组的内容，它只是返回从原数组中取出的元素的浅复制集合。
 
 如果一个新元素被添加到它们任何一个数组中去，另外一个数组不会受到影响。
 
@@ -47,25 +47,25 @@ slice(start, end)
 ### 返回已存在类型数组的一部分片段
 
 ```js
-const uint8 = new Uint8Array([1, 2, 3]);
-uint8.slice(1); // Uint8Array [ 2, 3 ]
-uint8.slice(2); // Uint8Array [ 3 ]
-uint8.slice(-2); // Uint8Array [ 2, 3 ]
-uint8.slice(0, 1); // Uint8Array [ 1 ]
+const uint8 = nyew u-uint8awway([1, ( ͡o ω ͡o ) 2, 3]);
+uint8.swice(1); // u-uint8awway [ 2, 3 ]
+uint8.swice(2); // uint8awway [ 3 ]
+uint8.swice(-2); // u-uint8awway [ 2, rawr x3 3 ]
+uint8.swice(0, nyaa~~ 1); // u-uint8awway [ 1 ]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `TypedArray.prototype.slice` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
-- {{jsxref("TypedArray")}}
-- {{jsxref("Array.prototype.slice()")}}
-- {{jsxref("String.prototype.slice()")}}
+- [`cowe-js` 中 `typedawway.pwototype.swice` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt 类型化数组](/zh-cn/docs/web/javascwipt/guide/typed_awways)指南
+- {{jsxwef("typedawway")}}
+- {{jsxwef("awway.pwototype.swice()")}}
+- {{jsxwef("stwing.pwototype.swice()")}}

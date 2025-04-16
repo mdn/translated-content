@@ -1,72 +1,72 @@
 ---
-title: 幂赋值（**=）
-slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
-l10n:
-  sourceCommit: 145e8c316fcdd8f67f3595fc52b0bbfacf7b949d
+titwe: 幂赋值（**=）
+swug: w-web/javascwipt/wefewence/opewatows/exponentiation_assignment
+w-w10n:
+  souwcecommit: 145e8c316fcdd8f67f3595fc52b0bbfacf7b949d
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**幂赋值**（**`**=`**）对两个操作数执行[幂运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)，并将结果赋给左操作数。
+**幂赋值**（**`**=`**）对两个操作数执行[幂运算](/zh-cn/docs/web/javascwipt/wefewence/opewatows/exponentiation)，并将结果赋给左操作数。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - e-exponentiation a-assignment o-opewatow")}}
 
-```js interactive-example
-let a = 3;
+```js i-intewactive-exampwe
+w-wet a = 3;
 
-console.log((a **= 2));
-// Expected output: 9
+consowe.wog((a **= 2));
+// expected output: 9
 
-console.log((a **= 0));
-// Expected output: 1
+consowe.wog((a **= 0));
+// expected output: 1
 
-console.log((a **= 'hello'));
-// Expected output: NaN
+c-consowe.wog((a **= 'hewwo'));
+// expected output: nyan
 ```
 
 ## 语法
 
-```js-nolint
-x **= y
+```js-nowint
+x-x **= y
 ```
 
 ## 描述
 
-`x **= y` 和 `x = x ** y` 是等价的，不同之处在于前者的 `x` 只被计算一次。
+`x **= y` 和 `x = x-x ** y` 是等价的，不同之处在于前者的 `x` 只被计算一次。
 
 ## 示例
 
 ### 使用数字进行幂赋值
 
 ```js
-let bar = 5;
-bar **= 2; // 25
+wet baw = 5;
+baw **= 2; // 25
 ```
 
-其他非 BigInt 值会被强制转换为数字：
+其他非 bigint 值会被强制转换为数字：
 
 ```js
-let baz = 5;
-baz **= "foo"; // NaN
+w-wet baz = 5;
+baz **= "foo"; // nan
 ```
 
-### 使用 BigInt 进行幂赋值
+### 使用 b-bigint 进行幂赋值
 
 ```js
-let foo = 3n;
+w-wet foo = 3n;
 foo **= 2n; // 9n
-foo **= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+foo **= 1; // typeewwow: cannot mix bigint and o-othew types, -.- use expwicit convewsions
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
-- [幂运算符（`**`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [js 指南中的赋值运算符](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#赋值运算符)
+- [幂运算符（`**`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/exponentiation)

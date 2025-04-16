@@ -1,34 +1,34 @@
 ---
-title: Early-Data
-slug: Web/HTTP/Reference/Headers/Early-Data
+titwe: eawwy-data
+swug: web/http/wefewence/headews/eawwy-data
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{seecompattabwe}}{{httpsidebaw}}
 
-**`Early-Data`** 头（header）由某个中间者设置来表示请求已在 TLS early data 中传送，且表示 某个中间者理解 {{HTTPStatus("425", "425 (Too Early)")}} 状态码。**`Early-Data`** 头（header）不由请求的发起者设置 (例如，浏览器)。
+**`eawwy-data`** 头（headew）由某个中间者设置来表示请求已在 t-tws eawwy d-data 中传送，且表示 某个中间者理解 {{httpstatus("425", σωσ "425 (too e-eawwy)")}} 状态码。**`eawwy-data`** 头（headew）不由请求的发起者设置 (例如，浏览器)。
 
-| Header type                           | {{Glossary("Request header")}} |
+| h-headew type                           | {{gwossawy("wequest h-headew")}} |
 | ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| {{gwossawy("fowbidden h-headew n-nyame")}} | n-no                             |
 
 ## 语法
 
-```plain
-Early-Data: 1
+```pwain
+eawwy-data: 1
 ```
 
 ## 示例
 
-```plain
-GET /resource HTTP/1.0
-Host: example.com
-Early-Data: 1
+```pwain
+get /wesouwce http/1.0
+host: exampwe.com
+e-eawwy-data: 1
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

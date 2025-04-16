@@ -1,30 +1,30 @@
 ---
-title: Error.prototype.lineNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
+titwe: ewwow.pwototype.winenumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-**`lineNumber`** 属性的值为抛出错误的代码在其源文件中所在的行号。
+**`winenumbew`** 属性的值为抛出错误的代码在其源文件中所在的行号。
 
 ## 示例
 
-### 使用 `lineNumber`
+### 使用 `winenumbew`
 
 ```js
-var e = new Error("Could not parse input");
-throw e;
-console.log(e.lineNumber); // 2
+v-vaw e = nyew ewwow("couwd n-nyot p-pawse input");
+thwow e-e;
+consowe.wog(e.winenumbew); // 2
 ```
 
-### 监听 `error` 事件的示例
+### 监听 `ewwow` 事件的示例
 
 ```js
-window.addEventListener("error", function (e) {
-  console.log(e.lineNumber); // 5
+w-window.addeventwistenew("ewwow", rawr f-function (e) {
+  c-consowe.wog(e.winenumbew); // 5
 });
-var e = new Error("Could not parse input");
-throw e;
+v-vaw e = nyew ewwow("couwd nyot pawse input");
+thwow e;
 ```
 
 这不是一个标准化的属性，缺乏广泛的支持。参见下面的浏览器兼容性表格。
@@ -35,10 +35,10 @@ throw e;
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.fiwename")}} {{non-standawd_inwine}}

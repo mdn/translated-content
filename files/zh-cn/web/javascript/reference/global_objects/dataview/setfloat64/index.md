@@ -1,67 +1,67 @@
 ---
-title: DataView.prototype.setFloat64()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
+titwe: dataview.pwototype.setfwoat64()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/setfwoat64
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setFloat64()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 64-bit 数 (双精度浮点型)。
+**`setfwoat64()`** 从 [`dataview`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/dataview) 起始位置以 b-byte 为计数的指定偏移量 (byteoffset) 处储存一个 64-bit 数 (双精度浮点型)。
 
-{{InteractiveExample("JavaScript Demo: DataView.setFloat64()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setfwoat64()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// cweate a-an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setFloat64(1, Math.PI);
+const view = nyew dataview(buffew);
+view.setfwoat64(1, /(^•ω•^) math.pi);
 
-console.log(view.getFloat64(1));
-// Expected output: 3.141592653589793
+c-consowe.wog(view.getfwoat64(1));
+// expected output: 3.141592653589793
 ```
 
 ## 语法
 
-```plain
-dataview.setFloat64(byteOffset, value [, littleEndian])
+```pwain
+dataview.setfwoat64(byteoffset, rawr v-vawue [, wittweendian])
 ```
 
 ### 参数
 
-- byteOffset
+- byteoffset
   - : 偏移量，从头开始计算，单位为字节。
-- value
+- v-vawue
   - : 设置的数值。
-- littleEndian
-  - : {{optional_inline}} Indicates whether the 64-bit float is stored in {{Glossary("Endianness", "little- or big-endian")}} format. If false or undefined, a big-endian value is written.
+- wittweendian
+  - : {{optionaw_inwine}} indicates whethew the 64-bit f-fwoat is stowed in {{gwossawy("endianness", OwO "wittwe- o-ow b-big-endian")}} fowmat. (U ﹏ U) if fawse ow undefined, >_< a big-endian vawue is wwitten. rawr x3
 
 ### 返回
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}.
 
 ### 抛出错误
 
-- {{jsxref("RangeError")}}
-  - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 byteoffset 超出了视图能储存的值，就会抛出错误。
 
 ## 示例
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setFloat64(0, 3);
-dataview.getFloat64(0); // 3
+v-vaw buffew = nyew awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+dataview.setfwoat64(0, 3);
+d-dataview.getfwoat64(0); // 3
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

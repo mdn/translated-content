@@ -1,82 +1,82 @@
 ---
-title: Reflect.setPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
+titwe: wefwect.setpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/setpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-除了返回类型以外，静态方法 **`Reflect.setPrototypeOf()`** 与 {{jsxref("Object.setPrototypeOf()")}} 方法是一样的。它可设置对象的原型（即内部的 `[[Prototype]]` 属性）为另一个对象或 {{jsxref("null")}}，如果操作成功返回 `true`，否则返回 `false`。
+除了返回类型以外，静态方法 **`wefwect.setpwototypeof()`** 与 {{jsxwef("object.setpwototypeof()")}} 方法是一样的。它可设置对象的原型（即内部的 `[[pwototype]]` 属性）为另一个对象或 {{jsxwef("nuww")}}，如果操作成功返回 `twue`，否则返回 `fawse`。
 
-{{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.setpwototypeof()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const object1 = {};
 
-console.log(Reflect.setPrototypeOf(object1, Object.prototype));
-// Expected output: true
+c-consowe.wog(wefwect.setpwototypeof(object1, o-object.pwototype));
+// expected o-output: t-twue
 
-console.log(Reflect.setPrototypeOf(object1, null));
-// Expected output: true
+consowe.wog(wefwect.setpwototypeof(object1, n-nyuww));
+// expected output: twue
 
 const object2 = {};
 
-console.log(Reflect.setPrototypeOf(Object.freeze(object2), null));
-// Expected output: false
+consowe.wog(wefwect.setpwototypeof(object.fweeze(object2), /(^•ω•^) nyuww));
+// e-expected output: fawse
 ```
 
 ## 语法
 
-```plain
-Reflect.setPrototypeOf(target, prototype)
+```pwain
+wefwect.setpwototypeof(tawget, rawr p-pwototype)
 ```
 
 ### 参数
 
-- _`target`_
+- _`tawget`_
   - : 设置原型的目标对象。
-- _`prototype`_
-  - : 对象的新原型（一个对象或 {{jsxref("null")}}）。
+- _`pwototype`_
+  - : 对象的新原型（一个对象或 {{jsxwef("nuww")}}）。
 
 ### 返回值
 
-返回一个 {{jsxref("Boolean")}} 值表明是否原型已经成功设置。
+返回一个 {{jsxwef("boowean")}} 值表明是否原型已经成功设置。
 
 ### 异常
 
-如果 _`target`_ 不是 {{jsxref("Object")}} ，或 *`prototype` *既不是对象也不是 {{jsxref("null")}}，抛出一个 {{jsxref("TypeError")}} 异常。
+如果 _`tawget`_ 不是 {{jsxwef("object")}} ，或 *`pwototype` *既不是对象也不是 {{jsxwef("nuww")}}，抛出一个 {{jsxwef("typeewwow")}} 异常。
 
 ## 描述
 
-`Reflect.setPrototypeOf` 方法改变指定对象的原型（即，内部的 `[[Prototype]]` 属性值）。
+`wefwect.setpwototypeof` 方法改变指定对象的原型（即，内部的 `[[pwototype]]` 属性值）。
 
 ## 示例
 
-### 使用 `Reflect.setPrototypeOf()`
+### 使用 `wefwect.setpwototypeof()`
 
 ```js
-Reflect.setPrototypeOf({}, Object.prototype); // true
+wefwect.setpwototypeof({}, OwO object.pwototype); // t-twue
 
-// It can change an object's [[Prototype]] to null.
-Reflect.setPrototypeOf({}, null); // true
+// it can change an object's [[pwototype]] to nyuww. (U ﹏ U)
+wefwect.setpwototypeof({}, >_< nyuww); // t-twue
 
-// Returns false if target is not extensible.
-Reflect.setPrototypeOf(Object.freeze({}), null); // false
+// wetuwns fawse if tawget i-is nyot extensibwe.
+w-wefwect.setpwototypeof(object.fweeze({}), rawr x3 nyuww); // fawse
 
-// Returns false if it cause a prototype chain cycle.
-var target = {};
-var proto = Object.create(target);
-Reflect.setPrototypeOf(target, proto); // false
+// wetuwns fawse if it cause a pwototype chain c-cycwe. mya
+vaw tawget = {};
+vaw pwoto = object.cweate(tawget);
+wefwect.setpwototypeof(tawget, nyaa~~ pwoto); // f-fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.setpwototypeof()")}}

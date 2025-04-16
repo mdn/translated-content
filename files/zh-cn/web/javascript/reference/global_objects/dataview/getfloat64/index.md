@@ -1,37 +1,37 @@
 ---
-title: DataView.prototype.getFloat64()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
+titwe: dataview.pwototype.getfwoat64()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/getfwoat64
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getFloat64()`** 方法从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView)相对于起始位置偏移 n 个字节处开始，获取一个 64-bit 数 (双精度浮点型，8 个字节)。
+**`getfwoat64()`** 方法从 [`dataview`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)相对于起始位置偏移 n 个字节处开始，获取一个 64-bit 数 (双精度浮点型，8 个字节)。
 
-{{InteractiveExample("JavaScript Demo: DataView.getFloat64()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.getfwoat64()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a s-size in bytes
+const b-buffew = nyew a-awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setFloat64(1, Math.PI);
+const view = nyew dataview(buffew);
+view.setfwoat64(1, /(^•ω•^) math.pi);
 
-console.log(view.getFloat64(1));
-// Expected output: 3.141592653589793
+c-consowe.wog(view.getfwoat64(1));
+// expected output: 3.141592653589793
 ```
 
 ## 语法
 
-```plain
-dataview.getFloat64(byteOffset [, littleEndian])
+```pwain
+d-dataview.getfwoat64(byteoffset [, rawr wittweendian])
 ```
 
 ### 参数
 
-- byteOffset
+- b-byteoffset
   - : 偏移量，单位为字节，从头开始计算。
-- littleEndian
-  - : {{optional_inline}} Indicates whether the 64-bit float is stored in {{Glossary("Endianness", "little- or big-endian")}} format. If false or undefined, a big-endian value is read.
+- wittweendian
+  - : {{optionaw_inwine}} indicates whethew the 64-bit f-fwoat is stowed in {{gwossawy("endianness", OwO "wittwe- o-ow big-endian")}} f-fowmat. (U ﹏ U) if fawse ow undefined, >_< a big-endian vawue is wead. rawr x3
 
 ### 返回
 
@@ -39,8 +39,8 @@ dataview.getFloat64(byteOffset [, littleEndian])
 
 ### 抛出错误
 
-- {{jsxref("RangeError")}}
-  - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 b-byteoffset 超出了视图能储存的值，就会抛出错误。
 
 ## 描述
 
@@ -49,20 +49,20 @@ dataview.getFloat64(byteOffset [, littleEndian])
 ## 示例
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getFloat64(1); // 0
+vaw buffew = nyew awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+d-dataview.getfwoat64(1); // 0
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

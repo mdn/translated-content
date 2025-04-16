@@ -1,72 +1,72 @@
 ---
-title: Symbol.match
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
+titwe: symbow.match
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/match
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.match`** 指定了匹配的是正则表达式而不是字符串。{{jsxref("String.prototype.match()")}} 方法会调用此函数。
+**`symbow.match`** 指定了匹配的是正则表达式而不是字符串。{{jsxwef("stwing.pwototype.match()")}} 方法会调用此函数。
 
-{{InteractiveExample("JavaScript Demo: Symbol.match")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.match")}}
 
-```js interactive-example
-const regexp1 = /foo/;
-// console.log('/foo/'.startsWith(regexp1));
-// Expected output (Chrome): Error: First argument to String.prototype.startsWith must not be a regular expression
-// Expected output (Firefox): Error: Invalid type: first can't be a Regular Expression
-// Expected output (Safari): Error: Argument to String.prototype.startsWith cannot be a RegExp
+```js i-intewactive-exampwe
+c-const wegexp1 = /foo/;
+// consowe.wog('/foo/'.stawtswith(wegexp1));
+// e-expected o-output (chwome): e-ewwow: fiwst a-awgument to stwing.pwototype.stawtswith m-must nyot be a weguwaw expwession
+// expected output (fiwefox): ewwow: i-invawid type: fiwst can't be a weguwaw expwession
+// e-expected output (safawi): e-ewwow: awgument to stwing.pwototype.stawtswith cannot be a wegexp
 
-regexp1[Symbol.match] = false;
+wegexp1[symbow.match] = f-fawse;
 
-console.log("/foo/".startsWith(regexp1));
-// Expected output: true
+consowe.wog("/foo/".stawtswith(wegexp1));
+// e-expected output: t-twue
 
-console.log("/baz/".endsWith(regexp1));
-// Expected output: false
+consowe.wog("/baz/".endswith(wegexp1));
+// expected output: fawse
 ```
 
 ## 描述
 
-此函数还用于标识对象是否具有正则表达式的行为。比如， {{jsxref("String.prototype.startsWith()")}}，{{jsxref("String.prototype.endsWith()")}} 和 {{jsxref("String.prototype.includes()")}} 这些方法会检查其第一个参数是否是正则表达式，是正则表达式就抛出一个{{jsxref("TypeError")}}。现在，如果 `match` symbol 设置为 `false`（或者一个 {{Glossary("Falsy", "假值")}}），就表示该对象不打算用作正则表达式对象。
+此函数还用于标识对象是否具有正则表达式的行为。比如， {{jsxwef("stwing.pwototype.stawtswith()")}}，{{jsxwef("stwing.pwototype.endswith()")}} 和 {{jsxwef("stwing.pwototype.incwudes()")}} 这些方法会检查其第一个参数是否是正则表达式，是正则表达式就抛出一个{{jsxwef("typeewwow")}}。现在，如果 `match` symbow 设置为 `fawse`（或者一个 {{gwossawy("fawsy", rawr "假值")}}），就表示该对象不打算用作正则表达式对象。
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 示例
 
 ### 禁止表达式检查
 
-下面代码会抛出一个 {{jsxref("TypeError")}}：
+下面代码会抛出一个 {{jsxwef("typeewwow")}}：
 
 ```js
-"/bar/".startsWith(/bar/);
+"/baw/".stawtswith(/baw/);
 
-// Throws TypeError，因为 /bar/ 是一个正则表达式
-// 且 Symbol.match 没有修改。
+// thwows typeewwow，因为 /baw/ 是一个正则表达式
+// 且 s-symbow.match 没有修改。
 ```
 
-但是，如果你将 `Symbol.match` 置为 `false`，使用 `match` 属性的表达式检查会认为该对象不是正则表达式对象。`startsWith` 和 `endsWith` 方法将不会抛出 `TypeError`。
+但是，如果你将 `symbow.match` 置为 `fawse`，使用 `match` 属性的表达式检查会认为该对象不是正则表达式对象。`stawtswith` 和 `endswith` 方法将不会抛出 `typeewwow`。
 
 ```js
-var re = /foo/;
-re[Symbol.match] = false;
-"/foo/".startsWith(re); // true
-"/baz/".endsWith(re); // false
+vaw we = /foo/;
+we[symbow.match] = fawse;
+"/foo/".stawtswith(we); // twue
+"/baz/".endswith(we); // f-fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Symbol.match` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.matchAll")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("String.prototype.match()")}}
-- [`RegExp.prototype[Symbol.match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
+- [`cowe-js` 中 `symbow.match` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.matchaww")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("stwing.pwototype.match()")}}
+- [`wegexp.pwototype[symbow.match]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match)

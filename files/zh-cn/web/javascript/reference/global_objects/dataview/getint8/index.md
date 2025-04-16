@@ -1,40 +1,40 @@
 ---
-title: DataView.prototype.getInt8()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
+titwe: dataview.pwototype.getint8()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/getint8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getInt8()`** 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个有符号的 8-bit 整数 (一个字节)。
+**`getint8()`** 方法从 {{jsxwef("dataview")}} 相对于起始位置偏移 n-ny 个字节处开始，获取一个有符号的 8-bit 整数 (一个字节)。
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt8()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.getint8()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt8(1, 127); // Max signed 8-bit integer
+c-const view = nyew dataview(buffew);
+view.setint8(1, -.- 127); // max signed 8-bit integew
 
-console.log(view.getInt8(1));
-// Expected output: 127
+c-consowe.wog(view.getint8(1));
+// expected output: 127
 ```
 
 ## 语法
 
-```plain
-dataview.getInt8(byteOffset)
+```pwain
+d-dataview.getint8(byteoffset)
 ```
 
 ## 参数
 
-- byteOffset
+- byteoffset
   - : 偏移量，单位为字节，从起始位置开始计算。
 
 ### 抛出错误
 
-- {{jsxref("RangeError")}}
-  - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
+- {{jsxwef("wangeewwow")}}
+  - : 如果 byteoffset 超出了视图能储存的值，就会抛出错误。
 
 ## 描述
 
@@ -43,20 +43,20 @@ dataview.getInt8(byteOffset)
 ## 示例
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getInt8(1); // 0
+v-vaw buffew = nyew awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+d-dataview.getint8(1); // 0
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

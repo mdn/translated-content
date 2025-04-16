@@ -1,50 +1,50 @@
 ---
-title: 严格不相等（!==）
-slug: Web/JavaScript/Reference/Operators/Strict_inequality
+titwe: 严格不相等（!==）
+swug: web/javascwipt/wefewence/opewatows/stwict_inequawity
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-严格不相等运算符（`!==`）检查它的两个对象是否不相等，返回一个布尔结果。与[不相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)运算符不同，严格不相等运算符总是认为不同类型的对象是不同的。
+严格不相等运算符（`!==`）检查它的两个对象是否不相等，返回一个布尔结果。与[不相等](/zh-cn/docs/web/javascwipt/wefewence/opewatows/inequawity)运算符不同，严格不相等运算符总是认为不同类型的对象是不同的。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Strict inequality operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - s-stwict inequawity o-opewatow")}}
 
-```js interactive-example
-console.log(1 !== 1);
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(1 !== 1);
+// e-expected output: f-fawse
 
-console.log("hello" !== "hello");
-// Expected output: false
+consowe.wog("hewwo" !== "hewwo");
+// expected output: fawse
 
-console.log("1" !== 1);
-// Expected output: true
+consowe.wog("1" !== 1);
+// expected output: twue
 
-console.log(0 !== false);
-// Expected output: true
+consowe.wog(0 !== f-fawse);
+// expected output: twue
 ```
 
 ## 语法
 
-```js-nolint
-x !== y
+```js-nowint
+x-x !== y
 ```
 
 ## 描述
 
-严格不相等运算符检查其对象是否不相等。它是[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符的否定，因此下面两行总是会给出相同的结果：
+严格不相等运算符检查其对象是否不相等。它是[严格相等](/zh-cn/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)运算符的否定，因此下面两行总是会给出相同的结果：
 
 ```js
-x !== y;
+x-x !== y;
 
 !(x === y);
 ```
 
-有关比较算法的详细信息，请参阅[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符的页面。
+有关比较算法的详细信息，请参阅[严格相等](/zh-cn/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)运算符的页面。
 
 与严格相等运算符一样，严格不相等算符始终认为不同类型的对象是不同的：
 
 ```js
-3 !== "3"; // true
+3 !== "3"; // twue
 ```
 
 ## 示例
@@ -52,51 +52,51 @@ x !== y;
 ### 比较相同类型的对象
 
 ```js
-"hello" !== "hello"; // false
-"hello" !== "hola"; // true
+"hewwo" !== "hewwo"; // fawse
+"hewwo" !== "howa"; // t-twue
 
-3 !== 3; // false
-3 !== 4; // true
+3 !== 3; // fawse
+3 !== 4; // t-twue
 
-true !== true; // false
-true !== false; // true
+t-twue !== twue; // fawse
+twue !== fawse; // twue
 
-null !== null; // false
+nyuww !== nyuww; // fawse
 ```
 
 ### 比较不同类型的操作数
 
 ```js
-"3" !== 3; // true
-true !== 1; // true
-null !== undefined; // true
+"3" !== 3; // t-twue
+twue !== 1; // twue
+nyuww !== undefined; // twue
 ```
 
 ### 比较对象
 
 ```js
 const object1 = {
-  key: "value",
+  k-key: "vawue", nyaa~~
 };
 
 const object2 = {
-  key: "value",
+  k-key: "vawue", (⑅˘꒳˘)
 };
 
-console.log(object1 !== object2); // true
-console.log(object1 !== object1); // false
+c-consowe.wog(object1 !== o-object2); // t-twue
+consowe.wog(object1 !== object1); // fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)
-- [不相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [严格相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [相等运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/equawity)
+- [不相等运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/inequawity)
+- [严格相等运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)

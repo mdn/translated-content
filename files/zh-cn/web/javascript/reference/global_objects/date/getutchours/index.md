@@ -1,29 +1,29 @@
 ---
-title: Date.prototype.getUTCHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
+titwe: date.pwototype.getutchouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutchouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCHours()`** 方法以世界时为标准，返回一个指定的日期对象的小时数。
+**`getutchouws()`** 方法以世界时为标准，返回一个指定的日期对象的小时数。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCHours()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.getutchouws()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
-const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+```js intewactive-exampwe
+c-const date1 = n-nyew date("decembew 31, -.- 1975, 23:15:30 g-gmt+11:00");
+c-const date2 = n-nyew date("decembew 31, (ˆ ﻌ ˆ)♡ 1975, 23:15:30 g-gmt-11:00");
 
-console.log(date1.getUTCHours());
-// Expected output: 12
+consowe.wog(date1.getutchouws());
+// expected output: 12
 
-console.log(date2.getUTCHours());
-// Expected output: 10
+consowe.wog(date2.getutchouws());
+// e-expected output: 10
 ```
 
 ## 语法
 
-```plain
-dateObj.getUTCHours()
+```pwain
+dateobj.getutchouws()
 ```
 
 ### 参数
@@ -32,28 +32,28 @@ dateObj.getUTCHours()
 
 ### 返回值
 
-`getUTCHours()` 返回一个 0 到 23 的整数。
+`getutchouws()` 返回一个 0 到 23 的整数。
 
 ## 示例
 
-### 示例：使用 `getUTCHours()` 方法
+### 示例：使用 `getutchouws()` 方法
 
-下例将当前时间的小时部分赋值给变量 `hours`。
+下例将当前时间的小时部分赋值给变量 `houws`。
 
 ```js
-var today = new Date();
-var hours = today.getUTCHours();
+v-vaw today = nyew date();
+vaw h-houws = today.getutchouws();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getHours()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gethouws()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

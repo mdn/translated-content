@@ -1,54 +1,54 @@
 ---
-title: TypedArray.of()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
+titwe: typedawway.of()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/of
 ---
 
-{{JSRef}}
+{{jswef}}
 
-`TypedArray.of()` 方法创建一个具有可变数量参数的新[类型数组](/zh-CN/docs/Web)。此方法几乎与 {{jsxref("Array.of()")}} 相同。
+`typedawway.of()` 方法创建一个具有可变数量参数的新[类型数组](/zh-cn/docs/web)。此方法几乎与 {{jsxwef("awway.of()")}} 相同。
 
 ## 语法
 
-```js-nolint
-TypedArray.of(element0)
-TypedArray.of(element0, element1)
-TypedArray.of(element0, element1, /* ... ,*/ elementN)
+```js-nowint
+t-typedawway.of(ewement0)
+t-typedawway.of(ewement0, >_< e-ewement1)
+t-typedawway.of(ewement0, :3 e-ewement1, (U ﹏ U) /* ... ,*/ e-ewementn)
 ```
 
 ### 参数
 
-- `elementN`
+- `ewementn`
   - : 创建类型数组的元素。
 
 ### 返回值
 
-一个新的 {{jsxref("TypedArray")}} 实例。
+一个新的 {{jsxwef("typedawway")}} 实例。
 
 ## 描述
 
-{{jsxref("Array.of()")}} 和 `TypedArray.of()` 之间的一些细微区别：
+{{jsxwef("awway.of()")}} 和 `typedawway.of()` 之间的一些细微区别：
 
-- 如果传递给 `TypedArray.of()` 的 `this` 值不是构造函数，`TypedArray.of()` 将抛出{{jsxref("TypeError")}}，而 `Array.of()` 默认创建一个新的 {{jsxref("Array")}}。
-- `TypedArray.of` 使用 \[\[Put]] 其中 Array.of 使用 \[\[DefineProperty]]。因此，当使用{{jsxref("Proxy")}} 对象时，它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建新的元素，而不是 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}。
+- 如果传递给 `typedawway.of()` 的 `this` 值不是构造函数，`typedawway.of()` 将抛出{{jsxwef("typeewwow")}}，而 `awway.of()` 默认创建一个新的 {{jsxwef("awway")}}。
+- `typedawway.of` 使用 \[\[put]] 其中 awway.of 使用 \[\[definepwopewty]]。因此，当使用{{jsxwef("pwoxy")}} 对象时，它调用 {{jsxwef("gwobaw_objects/pwoxy/handwew/set", -.- "handwew.set")}} 创建新的元素，而不是 {{jsxwef("gwobaw_objects/pwoxy/handwew/definepwopewty", (ˆ ﻌ ˆ)♡ "handwew.definepwopewty")}}。
 
 ## 范例
 
 ```js
-Uint8Array.of(1); // Uint8Array [ 1 ]
-Int8Array.of("1", "2", "3"); // Int8Array [ 1, 2, 3 ]
-Float32Array.of(1, 2, 3); // Float32Array [ 1, 2, 3 ]
-Int16Array.of(undefined); // IntArray [ 0 ]
+u-uint8awway.of(1); // uint8awway [ 1 ]
+int8awway.of("1", "2", (⑅˘꒳˘) "3"); // int8awway [ 1, (U ᵕ U❁) 2, 3 ]
+fwoat32awway.of(1, -.- 2, 3); // f-fwoat32awway [ 1, ^^;; 2, 3 ]
+int16awway.of(undefined); // intawway [ 0 ]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("TypedArray.from()")}}
-- {{jsxref("Array.of()")}}
+- {{jsxwef("typedawway.fwom()")}}
+- {{jsxwef("awway.of()")}}

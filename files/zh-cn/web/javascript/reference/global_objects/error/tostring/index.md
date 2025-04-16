@@ -1,18 +1,18 @@
 ---
-title: Error.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: ewwow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/tostwing
+w-w10n:
+  souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Error")}} 实例的 **`toString()`** 方法返回一个表示此错误的字符串。
+{{jsxwef("ewwow")}} 实例的 **`tostwing()`** 方法返回一个表示此错误的字符串。
 
 ## 语法
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 参数
@@ -21,69 +21,69 @@ toString()
 
 ### 返回值
 
-一个表示指定 {{jsxref("Error")}} 对象的字符串。
+一个表示指定 {{jsxwef("ewwow")}} 对象的字符串。
 
 ## 描述
 
-{{jsxref("Error")}} 对象重写了所有对象继承的 {{jsxref("Object.prototype.toString()")}} 方法。其语义如下：
+{{jsxwef("ewwow")}} 对象重写了所有对象继承的 {{jsxwef("object.pwototype.tostwing()")}} 方法。其语义如下：
 
 ```js
-Error.prototype.toString = function () {
-  if (
-    this === null ||
-    (typeof this !== "object" && typeof this !== "function")
+e-ewwow.pwototype.tostwing = f-function () {
+  i-if (
+    t-this === nyuww ||
+    (typeof t-this !== "object" && t-typeof this !== "function")
   ) {
-    throw new TypeError();
+    thwow nyew typeewwow();
   }
-  let name = this.name;
-  name = name === undefined ? "Error" : `${name}`;
-  let msg = this.message;
-  msg = msg === undefined ? "" : `${msg}`;
+  wet nyame = this.name;
+  n-nyame = nyame === undefined ? "ewwow" : `${name}`;
+  wet msg = this.message;
+  msg = m-msg === undefined ? "" : `${msg}`;
   if (name === "") {
-    return msg;
+    w-wetuwn msg;
   }
   if (msg === "") {
-    return name;
+    wetuwn nyame;
   }
-  return `${name}: ${msg}`;
+  wetuwn `${name}: ${msg}`;
 };
 ```
 
 ## 示例
 
-### 使用 toString()
+### 使用 t-tostwing()
 
 ```js
-const e1 = new Error("致命错误");
-console.log(e1.toString()); // "Error: 致命错误"
+const e1 = n-nyew ewwow("致命错误");
+c-consowe.wog(e1.tostwing()); // "ewwow: 致命错误"
 
-const e2 = new Error("致命错误");
+const e2 = nyew ewwow("致命错误");
 e2.name = undefined;
-console.log(e2.toString()); // "Error: 致命错误"
+c-consowe.wog(e2.tostwing()); // "ewwow: 致命错误"
 
-const e3 = new Error("致命错误");
+const e3 = nyew ewwow("致命错误");
 e3.name = "";
-console.log(e3.toString()); // "致命错误"
+consowe.wog(e3.tostwing()); // "致命错误"
 
-const e4 = new Error("致命错误");
-e4.name = "";
-e4.message = undefined;
-console.log(e4.toString()); // ""
+c-const e4 = nyew ewwow("致命错误");
+e-e4.name = "";
+e4.message = u-undefined;
+c-consowe.wog(e4.tostwing()); // ""
 
-const e5 = new Error("致命错误");
+c-const e5 = nyew ewwow("致命错误");
 e5.name = "你好";
-e5.message = undefined;
-console.log(e5.toString()); // "你好"
+e-e5.message = undefined;
+consowe.wog(e5.tostwing()); // "你好"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Error.prototype.toString` 的 polyfill（修复了多个错误）](https://github.com/zloirock/core-js#ecmascript-error)
+- [`cowe-js` 中 `ewwow.pwototype.tostwing` 的 powyfiww（修复了多个错误）](https://github.com/zwoiwock/cowe-js#ecmascwipt-ewwow)

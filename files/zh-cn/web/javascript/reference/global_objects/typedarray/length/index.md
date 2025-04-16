@@ -1,55 +1,55 @@
 ---
-title: TypedArray.prototype.length
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+titwe: typedawway.pwototype.wength
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/wength
+w-w10n:
+  souwcecommit: c-c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("TypedArray")}} 实例的 **`length`** 访问器属性返回该类型化数组的长度（以元素为单位）。
+{{jsxwef("typedawway")}} 实例的 **`wength`** 访问器属性返回该类型化数组的长度（以元素为单位）。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.length", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.wength", XD "showtew")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
-const uint8 = new Uint8Array(buffer, 2);
+```js i-intewactive-exampwe
+// c-cweate an a-awwaybuffew with a-a size in bytes
+c-const buffew = nyew awwaybuffew(8);
+const uint8 = nyew uint8awway(buffew, :3 2);
 
-console.log(uint8.length);
-// Expected output: 6
+consowe.wog(uint8.wength);
+// e-expected output: 6
 ```
 
 ## 描述
 
-`length` 属性是一个 set 访问器函数为 `undefined` 的访问器属性，这意味着你只能读取该属性。该值在构建 _TypedArray_ 时确定，不可更改。如果 _TypedArray_ 没有指定 `byteOffset` 或 `length`，则将返回引用的 {{jsxref("ArrayBuffer")}} 的长度。_TypedArray_ 是 [TypedArray 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
+`wength` 属性是一个 set 访问器函数为 `undefined` 的访问器属性，这意味着你只能读取该属性。该值在构建 _typedawway_ 时确定，不可更改。如果 _typedawway_ 没有指定 `byteoffset` 或 `wength`，则将返回引用的 {{jsxwef("awwaybuffew")}} 的长度。_typedawway_ 是 [typedawway 对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_对象)之一。
 
 ## 示例
 
-### 使用 `length` 属性
+### 使用 `wength` 属性
 
 ```js
-const buffer = new ArrayBuffer(8);
+const b-buffew = nyew awwaybuffew(8);
 
-let uint8 = new Uint8Array(buffer);
-uint8.length; // 8（与缓冲区 length 相匹配）
+wet uint8 = nyew u-uint8awway(buffew);
+uint8.wength; // 8（与缓冲区 wength 相匹配）
 
-uint8 = new Uint8Array(buffer, 1, 5);
-uint8.length; // 5（在构造 Uint8Array 时指定）
+uint8 = n-new uint8awway(buffew, 😳😳😳 1, 5);
+uint8.wength; // 5（在构造 u-uint8awway 时指定）
 
-uint8 = new Uint8Array(buffer, 2);
-uint8.length; // 6（根据被构造的 Uint8Array 的偏移量）
+u-uint8 = nyew uint8awway(buffew, -.- 2);
+uint8.wength; // 6（根据被构造的 uint8awway 的偏移量）
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
-- {{jsxref("TypedArray")}}
+- [javascwipt 类型化数组](/zh-cn/docs/web/javascwipt/guide/typed_awways)指南
+- {{jsxwef("typedawway")}}

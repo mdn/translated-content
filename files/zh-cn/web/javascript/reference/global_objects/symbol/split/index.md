@@ -1,69 +1,69 @@
 ---
-title: Symbol.split
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
+titwe: symbow.spwit
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/spwit
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.split`** 指向一个正则表达式的索引处分割字符串的方法。这个方法通过 {{jsxref("String.prototype.split()")}} 调用。
+**`symbow.spwit`** 指向一个正则表达式的索引处分割字符串的方法。这个方法通过 {{jsxwef("stwing.pwototype.spwit()")}} 调用。
 
-详情请参阅 [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) 和 {{jsxref("String.prototype.split()")}}。
+详情请参阅 [`wegexp.pwototype[symbow.spwit]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit) 和 {{jsxwef("stwing.pwototype.spwit()")}}。
 
-{{InteractiveExample("JavaScript Demo: Symbol.split", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.spwit", ^^;; "tawwew")}}
 
-```js interactive-example
-class Split1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+c-cwass spwit1 {
+  c-constwuctow(vawue) {
+    t-this.vawue = vawue;
   }
-  [Symbol.split](string) {
-    const index = string.indexOf(this.value);
-    return `${this.value}${string.substring(0, index)}/${string.substring(
-      index + this.value.length,
+  [symbow.spwit](stwing) {
+    c-const index = s-stwing.indexof(this.vawue);
+    wetuwn `${this.vawue}${stwing.substwing(0, index)}/${stwing.substwing(
+      index + this.vawue.wength, >_<
     )}`;
   }
 }
 
-console.log("foobar".split(new Split1("foo")));
-// Expected output: "foo/bar"
+consowe.wog("foobaw".spwit(new s-spwit1("foo")));
+// expected output: "foo/baw"
 ```
 
 ## 值
 
-内置通用符号 `Symbol.split`。
+内置通用符号 `symbow.spwit`。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, mya 0, 0)}}
 
 ## 示例
 
 ### 自定义反向分割
 
 ```js
-class ReverseSplit {
-  [Symbol.split](string) {
-    const array = string.split(" ");
-    return array.reverse();
+cwass wevewsespwit {
+  [symbow.spwit](stwing) {
+    c-const awway = stwing.spwit(" ");
+    w-wetuwn awway.wevewse();
   }
 }
 
-console.log("Another one bites the dust".split(new ReverseSplit()));
-// [ "dust", "the", "bites", "one", "Another" ]
+consowe.wog("anothew one bites the dust".spwit(new w-wevewsespwit()));
+// [ "dust", mya "the", "bites", 😳 "one", "anothew" ]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参阅
 
-- [`core-js` 中 `Symbol.split` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.matchAll")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("String.prototype.split()")}}
-- [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
+- [`cowe-js` 中 `symbow.spwit` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.matchaww")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- [`wegexp.pwototype[symbow.spwit]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit)

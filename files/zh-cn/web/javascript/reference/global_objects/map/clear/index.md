@@ -1,33 +1,33 @@
 ---
-title: Map.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Map/clear
+titwe: map.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/cweaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 实例的 **`clear()`** 方法会移除该 map 中的所有元素。
+{{jsxwef("map")}} 实例的 **`cweaw()`** 方法会移除该 m-map 中的所有元素。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.cweaw()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const m-map1 = nyew map();
 
-map1.set("bar", "baz");
-map1.set(1, "foo");
+m-map1.set("baw", mya "baz");
+m-map1.set(1, mya "foo");
 
-console.log(map1.size);
-// Expected output: 2
+c-consowe.wog(map1.size);
+// expected output: 2
 
-map1.clear();
+map1.cweaw();
 
-console.log(map1.size);
-// Expected output: 0
+consowe.wog(map1.size);
+// e-expected output: 0
 ```
 
 ## 语法
 
-```js-nolint
-clear()
+```js-nowint
+cweaw()
 ```
 
 ### 参数
@@ -36,34 +36,34 @@ clear()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
-### 使用 clear()
+### 使用 c-cweaw()
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "baz");
-myMap.set(1, "foo");
+const mymap = n-nyew map();
+mymap.set("baw", 😳 "baz");
+mymap.set(1, XD "foo");
 
-console.log(myMap.size); // 2
-console.log(myMap.has("bar")); // true
+consowe.wog(mymap.size); // 2
+consowe.wog(mymap.has("baw")); // twue
 
-myMap.clear();
+m-mymap.cweaw();
 
-console.log(myMap.size); // 0
-console.log(myMap.has("bar")); // false
+consowe.wog(mymap.size); // 0
+c-consowe.wog(mymap.has("baw")); // f-fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

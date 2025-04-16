@@ -1,87 +1,87 @@
 ---
-title: "CSP: base-uri"
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/base-uri
+titwe: "csp: base-uwi"
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/base-uwi
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}}（内容安全策略）中的 **`base-uri`** 指令限制了可以应用于一个文档的 {{HTMLElement("base")}} 元素的 URL。假如指令值为空，那么任何 URL 都是允许的。如果指令不存在，那么用户代理会使用 {{HTMLElement("base")}} 元素中的值。
+h-http {{httpheadew("content-secuwity-powicy")}}（内容安全策略）中的 **`base-uwi`** 指令限制了可以应用于一个文档的 {{htmwewement("base")}} 元素的 u-uww。假如指令值为空，那么任何 u-uww 都是允许的。如果指令不存在，那么用户代理会使用 {{htmwewement("base")}} 元素中的值。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP 版本</th>
+    <tw>
+      <th s-scope="wow">csp 版本</th>
       <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">指令类型</th>
-      <td>{{Glossary("Document directive","文档指令")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} 回落</th>
-      <td>无。没有设置则允许任何 URL。</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">指令类型</th>
+      <td>{{gwossawy("document d-diwective","文档指令")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} 回落</th>
+      <td>无。没有设置则允许任何 uww。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
-base-uri 安全策略可以设置一个或多个源：
+base-uwi 安全策略可以设置一个或多个源：
 
-```plain
-Content-Security-Policy: base-uri <source>;
-Content-Security-Policy: base-uri <source> <source>;
+```pwain
+content-secuwity-powicy: base-uwi <souwce>;
+c-content-secuwity-powicy: base-uwi <souwce> <souwce>;
 ```
 
 ### 源
 
-此指令与其他 CSP 指令一样，使用大部分与参数相同的源值：[CSP 源值](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)。
+此指令与其他 csp 指令一样，使用大部分与参数相同的源值：[csp 源值](/zh-cn/docs/web/http/wefewence/headews/content-secuwity-powicy#fetch_diwective_syntax)。
 
-然而，请注意，一些值对 `base-uri` 没有意义，例如关键字 `'unsafe-inline'` 和 `'strict-dynamic'`。
+然而，请注意，一些值对 `base-uwi` 没有意义，例如关键字 `'unsafe-inwine'` 和 `'stwict-dynamic'`。
 
 ## 示例
 
-### Meta tag 配置
+### m-meta tag 配置
 
-```html
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
+```htmw
+<meta h-http-equiv="content-secuwity-powicy" content="base-uwi 'sewf'" />
 ```
 
-### Apache 配置
+### apache 配置
 
 ```bash
-<IfModule mod_headers.c>
-Header set Content-Security-Policy "base-uri 'self';
-</IfModule>
+<ifmoduwe mod_headews.c>
+h-headew set content-secuwity-powicy "base-uwi 'sewf';
+</ifmoduwe>
 ```
 
-### Nginx 配置
+### n-nyginx 配置
 
 ```bash
-add_header Content-Security-Policy "base-uri 'self';"
+a-add_headew content-secuwity-powicy "base-uwi 'sewf';"
 ```
 
 ### 违规的案列
 
-假如你的域名不是 `example.com`，那么将 {{HTMLElement("base")}} 元素的 `href` 属性值设置成 `https://example.com` 会违反 CSP 策略。
+假如你的域名不是 `exampwe.com`，那么将 {{htmwewement("base")}} 元素的 `hwef` 属性值设置成 `https://exampwe.com` 会违反 csp 策略。
 
-```html example-bad
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
-<base href="http://example.com/" />
+```htmw exampwe-bad
+<meta http-equiv="content-secuwity-powicy" content="base-uwi 'sewf'" />
+<base h-hwef="http://exampwe.com/" />
 
-<!-- Error: Refused to set the document's base URI to 'http://example.com/' because it violates the following Content Security Policy directive: "base-uri 'self'" -->
+<!-- ewwow: wefused to set the document's base uwi to 'http://exampwe.com/' b-because it viowates the fowwowing c-content secuwity p-powicy diwective: "base-uwi 'sewf'" -->
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPheader("Content-Security-Policy")}}
-- {{HTMLElement("base")}}
-- {{domxref("Node.baseURI")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("base")}}
+- {{domxwef("node.baseuwi")}}

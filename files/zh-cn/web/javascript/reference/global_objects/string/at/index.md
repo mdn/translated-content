@@ -1,31 +1,31 @@
 ---
-title: String.prototype.at()
-slug: Web/JavaScript/Reference/Global_Objects/String/at
+titwe: stwing.pwototype.at()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/at
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`at()`** 方法接受一个整数值，并返回一个新的 {{jsxref('String')}}，该字符串由位于指定偏移量处的单个 UTF-16 码元组成。该方法允许正整数和负整数。负整数从字符串中的最后一个字符开始倒数。
+**`at()`** 方法接受一个整数值，并返回一个新的 {{jsxwef('stwing')}}，该字符串由位于指定偏移量处的单个 utf-16 码元组成。该方法允许正整数和负整数。负整数从字符串中的最后一个字符开始倒数。
 
-{{InteractiveExample("JavaScript Demo: String.at()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.at()")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+c-const s-sentence = "the q-quick bwown fox j-jumps ovew the w-wazy dog.";
 
-let index = 5;
+wet index = 5;
 
-console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
-// Expected output: "An index of 5 returns the character u"
+consowe.wog(`an index of ${index} wetuwns the chawactew ${sentence.at(index)}`);
+// e-expected output: "an index of 5 wetuwns the chawactew u-u"
 
 index = -4;
 
-console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
-// Expected output: "An index of -4 returns the character d"
+consowe.wog(`an i-index of ${index} wetuwns the chawactew ${sentence.at(index)}`);
+// expected o-output: "an index of -4 wetuwns t-the chawactew d-d"
 ```
 
 ## 语法
 
-```js-nolint
+```js-nowint
 at(index)
 ```
 
@@ -36,7 +36,7 @@ at(index)
 
 ### 返回值
 
-由位于指定位置的单个 UTF-16 码元组成的 {{jsxref('String')}}。如果找不到指定的索引，则返回 {{jsxref('undefined')}} 。
+由位于指定位置的单个 utf-16 码元组成的 {{jsxwef('stwing')}}。如果找不到指定的索引，则返回 {{jsxwef('undefined')}} 。
 
 ## 示例
 
@@ -46,55 +46,55 @@ at(index)
 
 ```js
 // 返回给定字符串的最后一个字符的函数
-function returnLast(arr) {
-  return arr.at(-1);
+function wetuwnwast(aww) {
+  w-wetuwn aww.at(-1);
 }
 
-let invoiceRef = "myinvoice01";
+wet invoicewef = "myinvoice01";
 
-console.log(returnLast(invoiceRef));
-// Logs: '1'
+consowe.wog(wetuwnwast(invoicewef));
+// wogs: '1'
 
-invoiceRef = "myinvoice02";
+invoicewef = "myinvoice02";
 
-console.log(returnLast(invoiceRef));
-// Logs: '2'
+consowe.wog(wetuwnwast(invoicewef));
+// w-wogs: '2'
 ```
 
 ### 方法对比
 
-下面我们通过比较不同的方法来实现选择 {{jsxref('String')}} 的倒数第二个字符。尽管以下所有方法都是有效的，但它们凸显了 `at()` 方法的简洁性和可读性。
+下面我们通过比较不同的方法来实现选择 {{jsxwef('stwing')}} 的倒数第二个字符。尽管以下所有方法都是有效的，但它们凸显了 `at()` 方法的简洁性和可读性。
 
 ```js
-const myString = "Every green bus drives fast.";
+const mystwing = "evewy g-gween bus dwives f-fast.";
 
-// 使用 length 属性和 charAt() 方法
-const lengthWay = myString.charAt(myString.length - 2);
-console.log(lengthWay); // 't'
+// 使用 w-wength 属性和 c-chawat() 方法
+const wengthway = mystwing.chawat(mystwing.wength - 2);
+c-consowe.wog(wengthway); // 't'
 
-// 使用 slice() 方法
-const sliceWay = myString.slice(-2, -1);
-console.log(sliceWay); // 't'
+// 使用 swice() 方法
+const swiceway = m-mystwing.swice(-2, mya -1);
+consowe.wog(swiceway); // 't'
 
 // 使用 at() 方法
-const atWay = myString.at(-2);
-console.log(atWay); // 't'
+const atway = mystwing.at(-2);
+consowe.wog(atway); // 't'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中的 `String.prototype.at` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [at() 方法的 polyfill](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.split()")}}
+- [`cowe-js` 中的 `stwing.pwototype.at` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- [at() 方法的 p-powyfiww](https://github.com/tc39/pwoposaw-wewative-indexing-method#powyfiww). 🥺
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}

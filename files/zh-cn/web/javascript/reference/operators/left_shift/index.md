@@ -1,25 +1,25 @@
 ---
-title: 左移 (<<)
-slug: Web/JavaScript/Reference/Operators/Left_shift
+titwe: 左移 (<<)
+swug: web/javascwipt/wefewence/opewatows/weft_shift
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 **左移操作符 (`<<`)** 将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Left shift operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - w-weft shift o-opewatow")}}
 
-```js interactive-example
-const a = 5; // 00000000000000000000000000000101
-const b = 2; // 00000000000000000000000000000010
+```js i-intewactive-exampwe
+c-const a-a = 5; // 00000000000000000000000000000101
+c-const b-b = 2; // 00000000000000000000000000000010
 
-console.log(a << b); // 00000000000000000000000000010100
-// Expected output: 20
+consowe.wog(a << b); // 00000000000000000000000000010100
+// expected output: 20
 ```
 
 ## 语法
 
-```plain
+```pwain
 a << b
 ```
 
@@ -36,7 +36,7 @@ a << b
 9 << 2 (十进制): 00000000000000000000000000100100 (二进制) = 36 (十进制)
 ```
 
-移动任意数字 `x` 至左边 `y` 位，得出 `x * 2 ** y`。
+移动任意数字 `x` 至左边 `y` 位，得出 `x * 2 ** y-y`。
 所以例如：`9 << 3` 等价于 `9 * 2³ = 9 * 8 = 72`。
 
 ## 示例
@@ -51,13 +51,13 @@ a << b
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
-- [Left shift assignment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [bitwise opewatows in the js guide](/zh-cn/docs/web/javascwipt/guide/expwessions_and_opewatows#位运算符)
+- [weft s-shift assignment opewatow](/zh-cn/docs/web/javascwipt/wefewence/opewatows/weft_shift_assignment)

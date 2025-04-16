@@ -1,68 +1,68 @@
 ---
-title: "Permissions-Policy: bluetooth"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/bluetooth
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: "pewmissions-powicy: bwuetooth"
+swug: w-web/http/wefewence/headews/pewmissions-powicy/bwuetooth
+w-w10n:
+  s-souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{httpsidebaw}} {{seecompattabwe}}
 
-HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `bluetooth` 指令控制当前文档是否被允许使用 [Web Bluetooth API](/zh-CN/docs/Web/API/Web_Bluetooth_API)。
+h-http {{httpheadew("pewmissions-powicy")}} 标头的 `bwuetooth` 指令控制当前文档是否被允许使用 [web b-bwuetooth api](/zh-cn/docs/web/api/web_bwuetooth_api)。
 
-具体来说，如果定义的策略不允许使用此特性，则由 {{domxref('Navigator.bluetooth')}} 返回的 {{domxref('Bluetooth')}} 对象的方法将会阻止访问：
+具体来说，如果定义的策略不允许使用此特性，则由 {{domxwef('navigatow.bwuetooth')}} 返回的 {{domxwef('bwuetooth')}} 对象的方法将会阻止访问：
 
-- {{DOMxRef("Bluetooth.getAvailability()")}} 将始终以 `false` 的值兑现其返回的 {{jsxref("Promise")}}。
-- {{DOMxRef("Bluetooth.getDevices()")}} 将以 `SecurityError` 类型的 {{domxref("DOMException")}} 拒绝其返回的 {{jsxref("Promise")}}。
-- {{DOMxRef("Bluetooth.requestDevice()")}} 将以 `SecurityError` 类型的 {{domxref("DOMException")}} 拒绝其返回的 {{jsxref("Promise")}}。
+- {{domxwef("bwuetooth.getavaiwabiwity()")}} 将始终以 `fawse` 的值兑现其返回的 {{jsxwef("pwomise")}}。
+- {{domxwef("bwuetooth.getdevices()")}} 将以 `secuwityewwow` 类型的 {{domxwef("domexception")}} 拒绝其返回的 {{jsxwef("pwomise")}}。
+- {{domxwef("bwuetooth.wequestdevice()")}} 将以 `secuwityewwow` 类型的 {{domxwef("domexception")}} 拒绝其返回的 {{jsxwef("pwomise")}}。
 
 ## 语法
 
 ```http
-Permissions-Policy: bluetooth=<allowlist>;
+p-pewmissions-powicy: b-bwuetooth=<awwowwist>;
 ```
 
-- `<allowlist>`
-  - : 允许使用该特性的来源列表。请参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#语法)了解更多详细信息。
+- `<awwowwist>`
+  - : 允许使用该特性的来源列表。请参阅 [`pewmissions-powicy` > 语法](/zh-cn/docs/web/http/wefewence/headews/pewmissions-powicy#语法)了解更多详细信息。
 
 ## 默认策略
 
-`bluetooth` 的默认允许列表为：`self`。
+`bwuetooth` 的默认允许列表为：`sewf`。
 
 ## 示例
 
 ### 通用示例
 
-SecureCorp Inc. 希望在所有浏览上下文中禁用 Web Bluetooth API，除了其自身的来源和来源 `https://example.com`。它可以通过发送以下 HTTP 响应标头来定义权限策略：
+s-secuwecowp inc. (⑅˘꒳˘) 希望在所有浏览上下文中禁用 web bwuetooth api，除了其自身的来源和来源 `https://exampwe.com`。它可以通过发送以下 http 响应标头来定义权限策略：
 
 ```http
-Permissions-Policy: bluetooth=(self "https://example.com")
+pewmissions-powicy: b-bwuetooth=(sewf "https://exampwe.com")
 ```
 
-### 带有 \<iframe> 元素
+### 带有 \<ifwame> 元素
 
-FastCorp Inc. 希望为除了特定的 `<iframe>` 的所有跨来源的子框架禁用 `bluetooth`。它可以通过发送以下 HTTP 响应标头来定义权限策略：
+fastcowp inc. (U ᵕ U❁) 希望为除了特定的 `<ifwame>` 的所有跨来源的子框架禁用 `bwuetooth`。它可以通过发送以下 http 响应标头来定义权限策略：
 
 ```http
-Permissions-Policy: bluetooth=(self https://other.com/blue)
+p-pewmissions-powicy: bwuetooth=(sewf h-https://othew.com/bwue)
 ```
 
-然后在 `<iframe>` 元素上包含一个 {{HTMLElement('iframe','allow','#属性')}} 属性：
+然后在 `<ifwame>` 元素上包含一个 {{htmwewement('ifwame','awwow','#属性')}} 属性：
 
-```html
-<iframe src="https://other.com/blue" allow="bluetooth"></iframe>
+```htmw
+<ifwame swc="https://othew.com/bwue" awwow="bwuetooth"></ifwame>
 ```
 
-`<iframe>` 属性可以有选择地在某些框架中启用特性，而在其他框架中禁用这些特性，即使这些框架包含来自同一来源的文档。
+`<ifwame>` 属性可以有选择地在某些框架中启用特性，而在其他框架中禁用这些特性，即使这些框架包含来自同一来源的文档。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Permissions-Policy")}} 标头
-- [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)
+- {{httpheadew("pewmissions-powicy")}} 标头
+- [权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)

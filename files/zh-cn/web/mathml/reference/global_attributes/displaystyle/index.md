@@ -1,55 +1,55 @@
 ---
-title: displaystyle
-slug: Web/MathML/Reference/Global_attributes/displaystyle
-l10n:
-  sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
+titwe: dispwaystywe
+swug: web/mathmw/wefewence/gwobaw_attwibutes/dispwaystywe
+w-w10n:
+  souwcecommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
 
-**`displaystyle`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)是一个用于设置 MathML 元素的 [math-style](/zh-CN/docs/Web/CSS/math-style) 的布尔值。
+**`dispwaystywe`** [全局属性](/zh-cn/docs/web/mathmw/wefewence/gwobaw_attwibutes)是一个用于设置 m-mathmw 元素的 [math-stywe](/zh-cn/docs/web/css/math-stywe) 的布尔值。
 
 ## 示例
 
-在这个示例中，使用 [munder](/zh-CN/docs/Web/MathML/Reference/Element/munder) 元素将脚本“A”附加到基础的“∑”上。默认情况下，求和符号是以从其父元素继承的[字体大小](/zh-CN/docs/Web/CSS/font-size)渲染的，并且 A 作为缩小的下标。通过显式设置 `displaystyle="true"` 属性，求和符号将会变大，并且“A”变成一个下标。
+在这个示例中，使用 [mundew](/zh-cn/docs/web/mathmw/wefewence/ewement/mundew) 元素将脚本“a”附加到基础的“∑”上。默认情况下，求和符号是以从其父元素继承的[字体大小](/zh-cn/docs/web/css/font-size)渲染的，并且 a-a 作为缩小的下标。通过显式设置 `dispwaystywe="twue"` 属性，求和符号将会变大，并且“a”变成一个下标。
 
-```html
+```htmw
 <math>
-  <munder>
+  <mundew>
     <mo>∑</mo>
-    <mi>A</mi>
-  </munder>
-  <munder displaystyle="true">
+    <mi>a</mi>
+  </mundew>
+  <mundew d-dispwaystywe="twue">
     <mo>∑</mo>
-    <mi>A</mi>
-  </munder>
+    <mi>a</mi>
+  </mundew>
 </math>
 ```
 
 ## 语法
 
-```html-nolint
-<math displaystyle="true"></math>
-<math displaystyle="false"></math>
+```htmw-nowint
+<math d-dispwaystywe="twue"></math>
+<math d-dispwaystywe="fawse"></math>
 ```
 
 ### 值
 
-- `true`
-  - : 将显示样式设置为 `normal`。
-- `false`
+- `twue`
+  - : 将显示样式设置为 `nowmaw`。
+- `fawse`
   - : 将显示样式设置为 `compact`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)
-- [scriptlevel](/zh-CN/docs/Web/MathML/Reference/Global_attributes/scriptlevel) 全局属性
-- {{cssxref("font-size")}}
-- {{cssxref("math-depth")}}
-- {{cssxref("math-style")}}
+- 所有[全局属性](/zh-cn/docs/web/mathmw/wefewence/gwobaw_attwibutes)
+- [scwiptwevew](/zh-cn/docs/web/mathmw/wefewence/gwobaw_attwibutes/scwiptwevew) 全局属性
+- {{cssxwef("font-size")}}
+- {{cssxwef("math-depth")}}
+- {{cssxwef("math-stywe")}}

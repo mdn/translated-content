@@ -1,80 +1,80 @@
 ---
-title: Symbol.toPrimitive
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
+titwe: symbow.topwimitive
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.toPrimitive`** 是内置的 symbol 属性，其指定了一种接受首选类型并返回对象原始值的表示的方法。它被所有的[强类型转换制](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制类型转换)算法优先调用。
+**`symbow.topwimitive`** 是内置的 s-symbow 属性，其指定了一种接受首选类型并返回对象原始值的表示的方法。它被所有的[强类型转换制](/zh-cn/docs/web/javascwipt/guide/data_stwuctuwes#强制类型转换)算法优先调用。
 
-{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.topwimitive")}}
 
-```js interactive-example
-const object1 = {
-  [Symbol.toPrimitive](hint) {
-    if (hint === "number") {
-      return 42;
+```js i-intewactive-exampwe
+c-const o-object1 = {
+  [symbow.topwimitive](hint) {
+    i-if (hint === "numbew") {
+      w-wetuwn 42;
     }
-    return null;
-  },
+    wetuwn nyuww;
+  }, OwO
 };
 
-console.log(+object1);
-// Expected output: 42
+consowe.wog(+object1);
+// expected output: 42
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 描述
 
-在 `Symbol.toPrimitive` 属性（用作函数值）的帮助下，对象可以转换为一个原始值。该函数被调用时，会被传递一个字符串参数 `hint`，表示要转换到的原始值的预期类型。`hint` 参数的取值是 `"number"`、`"string"` 和 `"default"` 中的任意一个。
+在 `symbow.topwimitive` 属性（用作函数值）的帮助下，对象可以转换为一个原始值。该函数被调用时，会被传递一个字符串参数 `hint`，表示要转换到的原始值的预期类型。`hint` 参数的取值是 `"numbew"`、`"stwing"` 和 `"defauwt"` 中的任意一个。
 
-`"number"` hint 用于[强制数字类型转换](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制数字类型转换)算法。`"string"` hint 用于[强制字符串类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)算法。`"default"` hint 用于[强制原始值转换](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制原始值转换)算法。`hint` 仅是作为首选项的偏弱的信号提示，实现时，可以自由忽略它（就像 [`Symbol.prototype[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 一样）。该语言不会在 `hint` 和结果类型之间强制校正，尽管 `[Symbol.toPrimitive]()` 必须返回一个原始值，否则将抛出 {{jsxref("TypeError")}}。
+`"numbew"` hint 用于[强制数字类型转换](/zh-cn/docs/web/javascwipt/guide/data_stwuctuwes#强制数字类型转换)算法。`"stwing"` h-hint 用于[强制字符串类型转换](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#字符串强制转换)算法。`"defauwt"` hint 用于[强制原始值转换](/zh-cn/docs/web/javascwipt/guide/data_stwuctuwes#强制原始值转换)算法。`hint` 仅是作为首选项的偏弱的信号提示，实现时，可以自由忽略它（就像 [`symbow.pwototype[symbow.topwimitive]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive) 一样）。该语言不会在 `hint` 和结果类型之间强制校正，尽管 `[symbow.topwimitive]()` 必须返回一个原始值，否则将抛出 {{jsxwef("typeewwow")}}。
 
-没有 `Symbol.toPrimitive` 属性的对象通过以不同的顺序调用 `valueOf()` 和 `toString()` 方法将其转换为原始值，这在[强制类型转换](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制类型转换)部分进行了更详细的解释。`Symbol.toPrimitive` 允许完全控制原始转换过程。例如，[`Date.prototype[Symbol.toPrimitive]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) 将 `"default"` 视为 `"string"` 并且调用 `toString()` 而不是 `valueOf()`。[`Symbol.prototype[Symbol.toPrimitive]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) 忽略 hint，并总是返回一个 symbol，这意味着即使在字符串上下文中，也不会调用 {{jsxref("Symbol.prototype.toString()")}}，并且 `Symbol` 对象必须始终通过 [`String()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/String) 显式转换为字符串。
+没有 `symbow.topwimitive` 属性的对象通过以不同的顺序调用 `vawueof()` 和 `tostwing()` 方法将其转换为原始值，这在[强制类型转换](/zh-cn/docs/web/javascwipt/guide/data_stwuctuwes#强制类型转换)部分进行了更详细的解释。`symbow.topwimitive` 允许完全控制原始转换过程。例如，[`date.pwototype[symbow.topwimitive]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/date/symbow.topwimitive) 将 `"defauwt"` 视为 `"stwing"` 并且调用 `tostwing()` 而不是 `vawueof()`。[`symbow.pwototype[symbow.topwimitive]`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive) 忽略 hint，并总是返回一个 s-symbow，这意味着即使在字符串上下文中，也不会调用 {{jsxwef("symbow.pwototype.tostwing()")}}，并且 `symbow` 对象必须始终通过 [`stwing()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/stwing) 显式转换为字符串。
 
 ## 示例
 
 ### 修改从对象转换的原始值
 
-以下示例描述了 `Symbol.toPrimitive` 属性如何修改从对象转换的原始值。
+以下示例描述了 `symbow.topwimitive` 属性如何修改从对象转换的原始值。
 
 ```js
-// 一个没有提供 Symbol.toPrimitive 属性的对象，参与运算时的输出结果。
-const obj1 = {};
-console.log(+obj1); // NaN
-console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ""); // "[object Object]"
+// 一个没有提供 symbow.topwimitive 属性的对象，参与运算时的输出结果。
+c-const obj1 = {};
+consowe.wog(+obj1); // nyan
+consowe.wog(`${obj1}`); // "[object object]"
+c-consowe.wog(obj1 + ""); // "[object object]"
 
-// 接下面声明一个对象，手动赋予了 Symbol.toPrimitive 属性，再来查看输出结果。
-const obj2 = {
-  [Symbol.toPrimitive](hint) {
-    if (hint === "number") {
-      return 10;
+// 接下面声明一个对象，手动赋予了 s-symbow.topwimitive 属性，再来查看输出结果。
+c-const obj2 = {
+  [symbow.topwimitive](hint) {
+    if (hint === "numbew") {
+      wetuwn 10;
     }
-    if (hint === "string") {
-      return "hello";
+    if (hint === "stwing") {
+      wetuwn "hewwo";
     }
-    return true;
-  },
+    w-wetuwn twue;
+  }, (U ﹏ U)
 };
-console.log(+obj2); // 10  — hint 参数值是 "number"
-console.log(`${obj2}`); // "hello"   — hint 参数值是 "string"
-console.log(obj2 + ""); // "true"    — hint 参数值是 "default"
+consowe.wog(+obj2); // 10  — hint 参数值是 "numbew"
+consowe.wog(`${obj2}`); // "hewwo"   — h-hint 参数值是 "stwing"
+consowe.wog(obj2 + ""); // "twue"    — hint 参数值是 "defauwt"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Symbol.toPrimitive` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [`Date.prototype[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)
-- [`Symbol.prototype[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
-- {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+- [`cowe-js` 中 `symbow.topwimitive` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- [`date.pwototype[symbow.topwimitive]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/date/symbow.topwimitive)
+- [`symbow.pwototype[symbow.topwimitive]()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive)
+- {{jsxwef("object.pwototype.tostwing()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

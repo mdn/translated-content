@@ -1,56 +1,56 @@
 ---
-title: ArrayBuffer.prototype.resizable
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable
-l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+titwe: awwaybuffew.pwototype.wesizabwe
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/wesizabwe
+w-w10n:
+  s-souwcecommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("ArrayBuffer")}} 实例的 **`resizable`** 访问器属性返回此数组缓冲区是否可以调整大小。
+{{jsxwef("awwaybuffew")}} 实例的 **`wesizabwe`** 访问器属性返回此数组缓冲区是否可以调整大小。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.resizable")}}
+{{intewactiveexampwe("javascwipt d-demo: awwaybuffew.wesizabwe")}}
 
-```js interactive-example
-const buffer1 = new ArrayBuffer(8, { maxByteLength: 16 });
-const buffer2 = new ArrayBuffer(8);
+```js i-intewactive-exampwe
+c-const buffew1 = n-nyew awwaybuffew(8, ^^;; { m-maxbytewength: 16 });
+const buffew2 = nyew awwaybuffew(8);
 
-console.log(buffer1.resizable);
-// Expected output: true
+consowe.wog(buffew1.wesizabwe);
+// e-expected output: twue
 
-console.log(buffer2.resizable);
-// Expected output: false
+consowe.wog(buffew2.wesizabwe);
+// expected output: f-fawse
 ```
 
 ## 描述
 
-`resizable` 是一个访问器属性，其 set 访问器函数是 `undefined`，这意味着你只能读取该属性。该属性的值在数组创建时就确定了。如果在构造函数中设置了 `maxByteLength` 选项，`resizable` 将返回 `true`；否则，它将返回 `false`。
+`wesizabwe` 是一个访问器属性，其 set 访问器函数是 `undefined`，这意味着你只能读取该属性。该属性的值在数组创建时就确定了。如果在构造函数中设置了 `maxbytewength` 选项，`wesizabwe` 将返回 `twue`；否则，它将返回 `fawse`。
 
 ## 示例
 
-### 使用 resizable
+### 使用 w-wesizabwe
 
-在这个示例中，我们创建了一个 8 字节缓冲区，该缓冲区可调整到的最大长度为 16 字节，然后检查它的 `resizable` 属性，如果 `resizable` 返回 `true` 则调整它的大小：
+在这个示例中，我们创建了一个 8 字节缓冲区，该缓冲区可调整到的最大长度为 16 字节，然后检查它的 `wesizabwe` 属性，如果 `wesizabwe` 返回 `twue` 则调整它的大小：
 
 ```js
-const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const buffew = nyew awwaybuffew(8, >_< { maxbytewength: 16 });
 
-if (buffer.resizable) {
-  console.log("缓冲区可以调整大小！");
-  buffer.resize(12);
+if (buffew.wesizabwe) {
+  c-consowe.wog("缓冲区可以调整大小！");
+  buffew.wesize(12);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("ArrayBuffer.prototype.maxByteLength")}}
-- {{jsxref("ArrayBuffer.prototype.resize()")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("awwaybuffew.pwototype.maxbytewength")}}
+- {{jsxwef("awwaybuffew.pwototype.wesize()")}}

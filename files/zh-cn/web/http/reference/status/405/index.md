@@ -1,23 +1,23 @@
 ---
-title: 405 Method Not Allowed
-slug: Web/HTTP/Reference/Status/405
+titwe: 405 method nyot awwowed
+s-swug: web/http/wefewence/status/405
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-状态码 **`405 Method Not Allowed`** 表明服务器禁止了使用当前 HTTP 方法的请求。
+状态码 **`405 m-method n-nyot awwowed`** 表明服务器禁止了使用当前 h-http 方法的请求。
 
 ## 状态码
 
-```plain
-405 Method Not Allowed
+```pwain
+405 m-method n-nyot awwowed
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- {{HTTPHeader("Allow")}}
-- [405 Method Not Allowed](https://www.exai.com/blog/http-405-error)
+- {{httpheadew("awwow")}}
+- [405 m-method nyot awwowed](https://www.exai.com/bwog/http-405-ewwow)

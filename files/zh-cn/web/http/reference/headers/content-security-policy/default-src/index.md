@@ -1,95 +1,95 @@
 ---
-title: CSP：default-src
-slug: Web/HTTP/Reference/Headers/Content-Security-Policy/default-src
+titwe: csp：defauwt-swc
+swug: w-web/http/wefewence/headews/content-secuwity-powicy/defauwt-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP）的 **`default-src`** 指令可以为其他 CSP {{Glossary("fetch directive", "fetch 指令")}}提供回退。对于以下列出的指令，假如不存在的话，那么用户代理会查找并应用 `default-src` 指令的值：
+h-http {{httpheadew("content-secuwity-powicy")}}（csp）的 **`defauwt-swc`** 指令可以为其他 c-csp {{gwossawy("fetch d-diwective", mya "fetch 指令")}}提供回退。对于以下列出的指令，假如不存在的话，那么用户代理会查找并应用 `defauwt-swc` 指令的值：
 
-- {{CSP("child-src")}}
-- {{CSP("connect-src")}}
-- {{CSP("font-src")}}
-- {{CSP("frame-src")}}
-- {{CSP("img-src")}}
-- {{CSP("manifest-src")}}
-- {{CSP("media-src")}}
-- {{CSP("object-src")}}
-- {{CSP("script-src")}}
-- {{CSP("style-src")}}
-- {{CSP("worker-src")}}
+- {{csp("chiwd-swc")}}
+- {{csp("connect-swc")}}
+- {{csp("font-swc")}}
+- {{csp("fwame-swc")}}
+- {{csp("img-swc")}}
+- {{csp("manifest-swc")}}
+- {{csp("media-swc")}}
+- {{csp("object-swc")}}
+- {{csp("scwipt-swc")}}
+- {{csp("stywe-swc")}}
+- {{csp("wowkew-swc")}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP 版本</th>
+    <tw>
+      <th s-scope="wow">csp 版本</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">指令类型</th>
-      <td>{{Glossary("Fetch directive", "fetch 指令")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">指令类型</th>
+      <td>{{gwossawy("fetch d-diwective", 😳 "fetch 指令")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 语法
 
-`default-src` 策略允许指定一个或多个源：
+`defauwt-swc` 策略允许指定一个或多个源：
 
 ```http
-Content-Security-Policy: default-src <source>;
-Content-Security-Policy: default-src <source> <source>;
+content-secuwity-powicy: defauwt-swc <souwce>;
+content-secuwity-powicy: defauwt-swc <souwce> <souwce>;
 ```
 
 ### 源
 
-`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)中列出的任何值。
+`<souwce>` 可以是 [csp 源值](/zh-cn/docs/web/http/wefewence/headews/content-secuwity-powicy#fetch_diwective_syntax)中列出的任何值。
 
-注意，这些值可以在所有的 {{Glossary("fetch directive", "fetch 指令")}}（以及[其他指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)）中使用。
+注意，这些值可以在所有的 {{gwossawy("fetch diwective", XD "fetch 指令")}}（以及[其他指令](/zh-cn/docs/web/http/wefewence/headews/content-secuwity-powicy#fetch_diwective_syntax)）中使用。
 
 ## 示例
 
-### 不继承 default-src 的情况
+### 不继承 d-defauwt-swc 的情况
 
-假如设定了其他指令，那么 `default-src` 不会对它们起作用。这个标头：
+假如设定了其他指令，那么 `defauwt-swc` 不会对它们起作用。这个标头：
 
 ```http
-Content-Security-Policy: default-src 'self'; script-src https://example.com
+content-secuwity-powicy: defauwt-swc 'sewf'; scwipt-swc h-https://exampwe.com
 ```
 
 与下面的等价：
 
 ```http
-Content-Security-Policy: connect-src 'self';
-                         font-src 'self';
-                         frame-src 'self';
-                         img-src 'self';
-                         manifest-src 'self';
-                         media-src 'self';
-                         object-src 'self';
-                         script-src https://example.com;
-                         style-src 'self';
-                         worker-src 'self'
+content-secuwity-powicy: c-connect-swc 'sewf';
+                         font-swc 'sewf';
+                         fwame-swc 'sewf';
+                         img-swc 'sewf';
+                         m-manifest-swc 'sewf';
+                         media-swc 'sewf';
+                         object-swc 'sewf';
+                         s-scwipt-swc h-https://exampwe.com;
+                         stywe-swc 'sewf';
+                         wowkew-swc 'sewf'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("connect-src")}}
-- {{CSP("font-src")}}
-- {{CSP("frame-src")}}
-- {{CSP("img-src")}}
-- {{CSP("manifest-src")}}
-- {{CSP("media-src")}}
-- {{CSP("object-src")}}
-- {{CSP("script-src")}}
-- {{CSP("style-src")}}
-- {{CSP("worker-src")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{csp("connect-swc")}}
+- {{csp("font-swc")}}
+- {{csp("fwame-swc")}}
+- {{csp("img-swc")}}
+- {{csp("manifest-swc")}}
+- {{csp("media-swc")}}
+- {{csp("object-swc")}}
+- {{csp("scwipt-swc")}}
+- {{csp("stywe-swc")}}
+- {{csp("wowkew-swc")}}

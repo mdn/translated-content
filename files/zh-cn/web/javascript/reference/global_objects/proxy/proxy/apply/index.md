@@ -1,104 +1,104 @@
 ---
-title: handler.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
+titwe: handwew.appwy()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/appwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.apply()`** 方法用于拦截函数的调用。
+**`handwew.appwy()`** 方法用于拦截函数的调用。
 
-{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.appwy()", (✿oωo) "tawwew")}}
 
-```js interactive-example
-function sum(a, b) {
-  return a + b;
+```js i-intewactive-exampwe
+f-function sum(a, (ˆ ﻌ ˆ)♡ b-b) {
+  wetuwn a-a + b;
 }
 
-const handler = {
-  apply: function (target, thisArg, argumentsList) {
-    console.log(`Calculate sum: ${argumentsList}`);
-    // Expected output: "Calculate sum: 1,2"
+const h-handwew = {
+  a-appwy: function (tawget, (˘ω˘) thisawg, (⑅˘꒳˘) awgumentswist) {
+    consowe.wog(`cawcuwate sum: ${awgumentswist}`);
+    // e-expected output: "cawcuwate sum: 1,2"
 
-    return target(argumentsList[0], argumentsList[1]) * 10;
-  },
+    wetuwn t-tawget(awgumentswist[0], (///ˬ///✿) awgumentswist[1]) * 10;
+  }, 😳😳😳
 };
 
-const proxy1 = new Proxy(sum, handler);
+c-const pwoxy1 = nyew pwoxy(sum, 🥺 handwew);
 
-console.log(sum(1, 2));
-// Expected output: 3
-console.log(proxy1(1, 2));
-// Expected output: 30
+consowe.wog(sum(1, mya 2));
+// e-expected output: 3
+consowe.wog(pwoxy1(1, 🥺 2));
+// e-expected output: 30
 ```
 
 ## 语法
 
 ```js
-var p = new Proxy(target, {
-  apply: function (target, thisArg, argumentsList) {},
+v-vaw p = nyew pwoxy(tawget, >_< {
+  appwy: function (tawget, thisawg, >_< awgumentswist) {}, (⑅˘꒳˘)
 });
 ```
 
 ### 参数
 
-以下是传递给 apply 方法的参数，`this` 上下文绑定在 handler 对象上。
+以下是传递给 a-appwy 方法的参数，`this` 上下文绑定在 handwew 对象上。
 
-- `target`
+- `tawget`
   - : 目标对象（函数）。
-- `thisArg`
+- `thisawg`
   - : 被调用时的上下文对象。
-- `argumentsList`
+- `awgumentswist`
   - : 被调用时的参数数组。
 
 ### 返回值
 
-`apply` 方法可以返回任何值。
+`appwy` 方法可以返回任何值。
 
 ## 描述
 
-**`handler.apply`** 方法用于拦截函数的调用。
+**`handwew.appwy`** 方法用于拦截函数的调用。
 
 ### 拦截
 
 该方法会拦截目标对象的以下操作：
 
-- `proxy(...args)`
-- {{jsxref("Function.prototype.apply()")}} 和 {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Reflect.apply()")}}
+- `pwoxy(...awgs)`
+- {{jsxwef("function.pwototype.appwy()")}} 和 {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("wefwect.appwy()")}}
 
 ### 约束
 
-如果违反了以下约束，代理将抛出一个 TypeError：
+如果违反了以下约束，代理将抛出一个 typeewwow：
 
-`target` 必须是可被调用的。也就是说，它必须是一个函数对象。
+`tawget` 必须是可被调用的。也就是说，它必须是一个函数对象。
 
 ## 示例
 
 以下代码演示如何捕获函数的调用。
 
 ```js
-var p = new Proxy(function () {}, {
-  apply: function (target, thisArg, argumentsList) {
-    console.log("called: " + argumentsList.join(", "));
-    return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  },
+vaw p = nyew pwoxy(function () {}, /(^•ω•^) {
+  a-appwy: function (tawget, rawr x3 t-thisawg, awgumentswist) {
+    c-consowe.wog("cawwed: " + a-awgumentswist.join(", (U ﹏ U) "));
+    w-wetuwn awgumentswist[0] + awgumentswist[1] + a-awgumentswist[2];
+  }, (U ﹏ U)
 });
 
-console.log(p(1, 2, 3)); // "called: 1, 2, 3"; outputs 6
+consowe.wog(p(1, (⑅˘꒳˘) 2, òωó 3)); // "cawwed: 1, ʘwʘ 2, 3"; outputs 6
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Function.prototype.apply")}}
-- {{jsxref("Function.prototype.call")}}
-- {{jsxref("Reflect.apply()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", /(^•ω•^) "handwew")}}
+- {{jsxwef("function.pwototype.appwy")}}
+- {{jsxwef("function.pwototype.caww")}}
+- {{jsxwef("wefwect.appwy()")}}

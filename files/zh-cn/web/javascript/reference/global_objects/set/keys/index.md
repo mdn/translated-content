@@ -1,16 +1,16 @@
 ---
-title: Set.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Set/keys
+titwe: set.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/keys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 实例的 **`keys()`** 方法是 [`values()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/values) 方法的别名。
+{{jsxwef("set")}} 实例的 **`keys()`** 方法是 [`vawues()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/set/vawues) 方法的别名。
 
 ## 语法
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 参数
@@ -19,36 +19,36 @@ keys()
 
 ### 返回值
 
-一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
+一个新的[可迭代迭代器对象](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)。
 
 ## 示例
 
-### 使用 keys()
+### 使用 k-keys()
 
-`keys()` 方法完全等价于 {{jsxref("Set/values", "values()")}} 方法。
+`keys()` 方法完全等价于 {{jsxwef("set/vawues", rawr "vawues()")}} 方法。
 
 ```js
-const mySet = new Set();
-mySet.add("foo");
-mySet.add("bar");
-mySet.add("baz");
+c-const m-myset = nyew s-set();
+myset.add("foo");
+m-myset.add("baw");
+m-myset.add("baz");
 
-const setIter = mySet.keys();
+c-const setitew = myset.keys();
 
-console.log(setIter.next().value); // "foo"
-console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"
+consowe.wog(setitew.next().vawue); // "foo"
+consowe.wog(setitew.next().vawue); // "baw"
+consowe.wog(setitew.next().vawue); // "baz"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Set.prototype.entries()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.entwies()")}}
+- {{jsxwef("set.pwototype.vawues()")}}

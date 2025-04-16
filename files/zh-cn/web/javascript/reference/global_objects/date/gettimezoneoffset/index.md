@@ -1,30 +1,30 @@
 ---
-title: Date.prototype.getTimezoneOffset()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
+titwe: date.pwototype.gettimezoneoffset()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/gettimezoneoffset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getTimezoneOffset()`** 方法返回协调世界时（UTC）相对于当前时区的时间差值，单位为分钟。
+**`gettimezoneoffset()`** 方法返回协调世界时（utc）相对于当前时区的时间差值，单位为分钟。
 
-{{InteractiveExample("JavaScript Demo: Date.getTimezoneOffset()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.gettimezoneoffset()")}}
 
-```js interactive-example
-const date1 = new Date("August 19, 1975 23:15:30 GMT+07:00");
-const date2 = new Date("August 19, 1975 23:15:30 GMT-02:00");
+```js i-intewactive-exampwe
+c-const d-date1 = nyew date("august 19, :3 1975 23:15:30 g-gmt+07:00");
+c-const date2 = nyew date("august 19, 😳😳😳 1975 23:15:30 gmt-02:00");
 
-console.log(date1.getTimezoneOffset());
-// Expected output: your local timezone offset in minutes
-// (e.g., -120). NOT the timezone offset of the date object.
+consowe.wog(date1.gettimezoneoffset());
+// expected output: y-youw wocaw timezone offset in minutes
+// (e.g., -120). -.- n-nyot the timezone offset o-of the date object. ( ͡o ω ͡o )
 
-console.log(date1.getTimezoneOffset() === date2.getTimezoneOffset());
-// Expected output: true
+consowe.wog(date1.gettimezoneoffset() === date2.gettimezoneoffset());
+// expected output: t-twue
 ```
 
 ## 语法
 
-```js-nolint
-getTimezoneOffset()
+```js-nowint
+gettimezoneoffset()
 ```
 
 ### 参数
@@ -33,21 +33,21 @@ getTimezoneOffset()
 
 ### 返回值
 
-时区偏差（time-zone offset）表示协调世界时（UTC）与本地时区之间的差值，单位为分钟。需要注意的是如果本地时区后于协调世界时，则该差值为正值，如果先于协调世界时则为负值。例如你所在时区为 UTC+10（澳大利亚东部标准时间），将会返回 -600。对于同一个时区，夏令时（Daylight Saving Time）将会改变这个值。
+时区偏差（time-zone o-offset）表示协调世界时（utc）与本地时区之间的差值，单位为分钟。需要注意的是如果本地时区后于协调世界时，则该差值为正值，如果先于协调世界时则为负值。例如你所在时区为 u-utc+10（澳大利亚东部标准时间），将会返回 -600。对于同一个时区，夏令时（daywight saving time）将会改变这个值。
 
 ## 示例
 
-### 示例：使用 `getTimezoneOffset` 方法
+### 示例：使用 `gettimezoneoffset` 方法
 
 ```js
-var x = new Date();
-var currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
+vaw x = nyew date();
+vaw cuwwenttimezoneoffsetinhouws = x.gettimezoneoffset() / 60;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

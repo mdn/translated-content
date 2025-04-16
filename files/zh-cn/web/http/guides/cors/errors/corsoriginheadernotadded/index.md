@@ -1,24 +1,24 @@
 ---
-title: 原因：CORS header 'Origin' cannot be added
-slug: Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded
+titwe: 原因：cows headew 'owigin' c-cannot be a-added
+swug: web/http/guides/cows/ewwows/cowsowiginheadewnotadded
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 原因
 
-```plain
-原因：CORS header 'Origin' cannot be added
+```pwain
+原因：cows h-headew 'owigin' c-cannot b-be added
 ```
 
 ## 哪里错了？
 
-{{Glossary("user agent","用户代理")}}不能把所需的 {{HTTPHeader("Origin")}} 标头添加到 {{Glossary("HTTP")}} 请求中。所有的 CORS 请求必须有 `Origin` 标头。
+{{gwossawy("usew a-agent","用户代理")}}不能把所需的 {{httpheadew("owigin")}} 标头添加到 {{gwossawy("http")}} 请求中。所有的 c-cows 请求必须有 `owigin` 标头。
 
-例如，如果 JavaScript 代码以增强的权限运行，允许它访问多个域名的内容，则会发生这种情况。
+例如，如果 j-javascwipt 代码以增强的权限运行，允许它访问多个域名的内容，则会发生这种情况。
 
 ## 参见
 
-- [CORS 错误](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors)
-- 术语：{{Glossary("CORS")}}
-- [CORS 介绍](/zh-CN/docs/Web/HTTP/Guides/CORS)
+- [cows 错误](/zh-cn/docs/web/http/guides/cows/ewwows)
+- 术语：{{gwossawy("cows")}}
+- [cows 介绍](/zh-cn/docs/web/http/guides/cows)

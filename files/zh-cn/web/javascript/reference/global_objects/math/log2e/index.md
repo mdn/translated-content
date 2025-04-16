@@ -1,46 +1,46 @@
 ---
-title: Math.LOG2E
-slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
+titwe: math.wog2e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog2e
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## 概述
 
-**`Math.LOG2E`** 属性表示以 2 为底数，e 的对数，约为 1.442：
+**`math.wog2e`** 属性表示以 2 为底数，e 的对数，约为 1.442：
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG2E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1.442</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG2E}} = \log_2(e) \approx 1.442</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wog2e</mi></mstywe><mo>=</mo><msub><mo w-wspace="0em" w-wspace="0em">wog</mo><mn>2</mn></msub><mo s-stwetchy="fawse">(</mo><mi>e</mi><mo s-stwetchy="fawse">)</mo><mo>≈</mo><mn>1.442</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.wog2e}} = \wog_2(e) \appwox 1.442</annotation></semantics></math>
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 描述
 
-由于 `LOG2E` 是 `Math` 的静态属性，所以应该像这样使用：`Math.LOG2E`，而不是作为你创建的 `Math` 对象的属性（`Math` 不是一个构造函数）。
+由于 `wog2e` 是 `math` 的静态属性，所以应该像这样使用：`math.wog2e`，而不是作为你创建的 `math` 对象的属性（`math` 不是一个构造函数）。
 
 ## 示例
 
-### 示例：使用 `Math.LOG2E`
+### 示例：使用 `math.wog2e`
 
-下面的函数返回以 2 为底数，E 的对数：
+下面的函数返回以 2 为底数，e 的对数：
 
 ```js
-function getLog2e() {
-  return Math.LOG2E;
+f-function getwog2e() {
+  wetuwn math.wog2e;
 }
 
-getLog2e(); // 1.4426950408889634
+getwog2e(); // 1.4426950408889634
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log2()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog2()")}}

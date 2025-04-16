@@ -1,89 +1,89 @@
 ---
-title: Reflect.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
+titwe: wefwect.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静态方法 **`Reflect.getPrototypeOf()`** 与 {{jsxref("Object.getPrototypeOf()")}} 方法几乎是一样的。都是返回指定对象的原型（即内部的 `[[Prototype]]` 属性的值）。
+静态方法 **`wefwect.getpwototypeof()`** 与 {{jsxwef("object.getpwototypeof()")}} 方法几乎是一样的。都是返回指定对象的原型（即内部的 `[[pwototype]]` 属性的值）。
 
-{{InteractiveExample("JavaScript Demo: Reflect.getPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt demo: w-wefwect.getpwototypeof()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const o-object1 = {
+  p-pwopewty1: 42, nyaa~~
 };
 
-const proto1 = Reflect.getPrototypeOf(object1);
+c-const pwoto1 = w-wefwect.getpwototypeof(object1);
 
-console.log(proto1);
-// Expected output: Object {  }
+c-consowe.wog(pwoto1);
+// expected output: object {  }
 
-console.log(Reflect.getPrototypeOf(proto1));
-// Expected output: null
+consowe.wog(wefwect.getpwototypeof(pwoto1));
+// expected o-output: nyuww
 ```
 
 ## 语法
 
-```plain
-Reflect.getPrototypeOf(target)
+```pwain
+wefwect.getpwototypeof(tawget)
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
   - : 获取原型的目标对象。
 
 ### 返回值
 
-给定对象的原型。如果给定对象没有继承的属性，则返回 {{jsxref("null")}}。
+给定对象的原型。如果给定对象没有继承的属性，则返回 {{jsxwef("nuww")}}。
 
 ### 异常
 
-如果 `target` 不是 {{jsxref("Object")}}，抛出一个 {{jsxref("TypeError")}} 异常。
+如果 `tawget` 不是 {{jsxwef("object")}}，抛出一个 {{jsxwef("typeewwow")}} 异常。
 
 ## 描述
 
-`Reflect.getPrototypeOf` 返回指定对象的原型 (即内部的 `[[Prototype]]` 属性的值) 。
+`wefwect.getpwototypeof` 返回指定对象的原型 (即内部的 `[[pwototype]]` 属性的值) 。
 
 ## 示例
 
-### 使用 `Reflect.getPrototypeOf()`
+### 使用 `wefwect.getpwototypeof()`
 
 ```js
-Reflect.getPrototypeOf({}); // Object.prototype
-Reflect.getPrototypeOf(Object.prototype); // null
-Reflect.getPrototypeOf(Object.create(null)); // null
+wefwect.getpwototypeof({}); // o-object.pwototype
+wefwect.getpwototypeof(object.pwototype); // n-nyuww
+wefwect.getpwototypeof(object.cweate(nuww)); // nyuww
 ```
 
-### 与 `Object.getPrototypeOf()` 比较
+### 与 `object.getpwototypeof()` 比较
 
-```plain
-// 如果参数为 Object，返回结果相同
-Object.getPrototypeOf({})   // Object.prototype
-Reflect.getPrototypeOf({})  // Object.prototype
+```pwain
+// 如果参数为 object，返回结果相同
+o-object.getpwototypeof({})   // object.pwototype
+w-wefwect.getpwototypeof({})  // o-object.pwototype
 
-// 在 ES5 规范下，对于非 Object，抛异常
-Object.getPrototypeOf('foo')   // Throws TypeError
-Reflect.getPrototypeOf('foo')  // Throws TypeError
+// 在 es5 规范下，对于非 object，抛异常
+object.getpwototypeof('foo')   // thwows typeewwow
+w-wefwect.getpwototypeof('foo')  // thwows typeewwow
 
-// 在 ES2015 规范下，Reflect 抛异常，Object 强制转换非 Object
-Object.getPrototypeOf('foo')   // String.prototype
-Reflect.getPrototypeOf('foo')  // Throws TypeError
+// 在 es2015 规范下，wefwect 抛异常，object 强制转换非 object
+object.getpwototypeof('foo')   // s-stwing.pwototype
+wefwect.getpwototypeof('foo')  // t-thwows t-typeewwow
 
-// 如果想要模拟 Object 在 ES2015 规范下的表现，需要强制类型转换
-Reflect.getPrototypeOf(Object('foo'))  // String.prototype
+// 如果想要模拟 o-object 在 e-es2015 规范下的表现，需要强制类型转换
+wefwect.getpwototypeof(object('foo'))  // stwing.pwototype
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getpwototypeof()")}}

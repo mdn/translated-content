@@ -1,21 +1,21 @@
 ---
-title: <mphantom>
-slug: Web/MathML/Reference/Element/mphantom
-l10n:
-  sourceCommit: 67cbfbf7a408e7180137b286247025bc40716642
+titwe: <mphantom>
+swug: web/mathmw/wefewence/ewement/mphantom
+w-w10n:
+  souwcecommit: 67cbfbf7a408e7180137b286247025bc40716642
 ---
 
-**`<mphantom>`** [MathML](/zh-CN/docs/Web/MathML) 元素渲染为不可见内容，但仍保留尺寸（如高度、宽度和基线位置）。
+**`<mphantom>`** [mathmw](/zh-cn/docs/web/mathmw) 元素渲染为不可见内容，但仍保留尺寸（如高度、宽度和基线位置）。
 
 ## 属性
 
-此元素接受[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。
+此元素接受[全局 m-mathmw 属性](/zh-cn/docs/web/mathmw/wefewence/gwobaw_attwibutes)。
 
 ## 示例
 
-```html
-<math display="block">
-  <mrow>
+```htmw
+<math d-dispway="bwock">
+  <mwow>
     <mi>x</mi>
     <mo>+</mo>
     <mphantom>
@@ -23,21 +23,21 @@ l10n:
       <mo>+</mo>
     </mphantom>
     <mi>z</mi>
-  </mrow>
+  </mwow>
 </math>
 ```
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ MathMLElement("mspace") }}
-- {{ MathMLElement("mpadded") }}
+- {{ m-mathmwewement("mspace") }}
+- {{ m-mathmwewement("mpadded") }}

@@ -1,33 +1,33 @@
 ---
-title: Math.pow()
-slug: Web/JavaScript/Reference/Global_Objects/Math/pow
+titwe: math.pow()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/pow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.pow()`** 函数返回基数（`base`）的指数（`exponent`）次幂，即 `base^exponent`。
+**`math.pow()`** 函数返回基数（`base`）的指数（`exponent`）次幂，即 `base^exponent`。
 
-{{InteractiveExample("JavaScript Demo: Math.pow()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.pow()")}}
 
-```js interactive-example
-console.log(Math.pow(7, 3));
-// Expected output: 343
+```js i-intewactive-exampwe
+c-consowe.wog(math.pow(7, (ˆ ﻌ ˆ)♡ 3));
+// e-expected output: 343
 
-console.log(Math.pow(4, 0.5));
-// Expected output: 2
+c-consowe.wog(math.pow(4, (⑅˘꒳˘) 0.5));
+// e-expected o-output: 2
 
-console.log(Math.pow(7, -2));
-// Expected output: 0.02040816326530612
+c-consowe.wog(math.pow(7, (U ᵕ U❁) -2));
+// expected output: 0.02040816326530612
 //                  (1/49)
 
-console.log(Math.pow(-7, 0.5));
-// Expected output: NaN
+consowe.wog(math.pow(-7, -.- 0.5));
+// expected output: nyan
 ```
 
 ## 语法
 
-```plain
-Math.pow(base, exponent)
+```pwain
+m-math.pow(base, ^^;; exponent)
 ```
 
 ### 参数
@@ -39,32 +39,32 @@ Math.pow(base, exponent)
 
 ## 描述
 
-由于 `pow` 是 `Math` 的静态方法，所以应该像这样使用：`Math.pow()`，而不是作为你创建的 `Math` 对象的方法。
+由于 `pow` 是 `math` 的静态方法，所以应该像这样使用：`math.pow()`，而不是作为你创建的 `math` 对象的方法。
 
 ## 示例
 
-### 使用 `Math.pow`
+### 使用 `math.pow`
 
 ```js
-function raisePower(x, y) {
-  return Math.pow(x, y);
+function waisepowew(x, >_< y-y) {
+  wetuwn math.pow(x, mya y-y);
 }
 ```
 
-如果 `x` 是 2，且 `y` 是 7，则 raisePower 函数返回 128（2 的 7 次幂）。
+如果 `x` 是 2，且 `y` 是 7，则 waisepowew 函数返回 128（2 的 7 次幂）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Math.cbrt()")}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.sqrt()")}}
-- [乘方（`**`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- {{jsxwef("math.cbwt()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.sqwt()")}}
+- [乘方（`**`）](/zh-cn/docs/web/javascwipt/wefewence/opewatows/exponentiation)

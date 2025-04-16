@@ -1,52 +1,52 @@
 ---
-title: X-Forwarded-Proto
-slug: Web/HTTP/Reference/Headers/X-Forwarded-Proto
+titwe: x-fowwawded-pwoto
+swug: w-web/http/wefewence/headews/x-fowwawded-pwoto
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`X-Forwarded-Proto`** (XFP) 是一个事实上的标准首部，用来确定客户端与代理服务器或者负载均衡服务器之间的连接所采用的传输协议（HTTP 或 HTTPS）。在服务器的访问日志中记录的是负载均衡服务器与服务器之间的连接所使用的传输协议，而非客户端与负载均衡服务器之间所使用的协议。为了确定客户端与负载均衡服务器之间所使用的协议，X-Forwarded-Proto 就派上了用场。
+**`x-fowwawded-pwoto`** (xfp) 是一个事实上的标准首部，用来确定客户端与代理服务器或者负载均衡服务器之间的连接所采用的传输协议（http 或 h-https）。在服务器的访问日志中记录的是负载均衡服务器与服务器之间的连接所使用的传输协议，而非客户端与负载均衡服务器之间所使用的协议。为了确定客户端与负载均衡服务器之间所使用的协议，x-fowwawded-pwoto 就派上了用场。
 
-HTTP 协议中的 {{HTTPHeader("Forwarded")}} 是这个消息首部的标准化版本。
+http 协议中的 {{httpheadew("fowwawded")}} 是这个消息首部的标准化版本。
 
-| Header type                           | {{Glossary("Request header")}} |
+| h-headew t-type                           | {{gwossawy("wequest h-headew")}} |
 | ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| {{gwossawy("fowbidden h-headew nyame")}} | n-nyo                             |
 
 ## 语法
 
-```plain
-X-Forwarded-Proto: <protocol>
+```pwain
+x-x-fowwawded-pwoto: <pwotocow>
 ```
 
 ## 指令
 
-- \<protocol>
+- \<pwotocow>
   - : 经过转发的传输协议（http 或 https）。
 
 ## 示例
 
-```plain
-X-Forwarded-Proto: https
+```pwain
+x-fowwawded-pwoto: https
 ```
 
 其他非标准形式：
 
-```plain
-# Microsoft
-Front-End-Https: on
+```pwain
+# micwosoft
+f-fwont-end-https: on
 
-X-Forwarded-Protocol: https
-X-Forwarded-Ssl: on
-X-Url-Scheme: https
+x-fowwawded-pwotocow: https
+x-fowwawded-ssw: o-on
+x-uww-scheme: https
 ```
 
 ## 规范
 
-不属于任何一份既有规范。这个消息首部的标准版本是 {{HTTPHeader("Forwarded")}}.
+不属于任何一份既有规范。这个消息首部的标准版本是 {{httpheadew("fowwawded")}}. (U ﹏ U)
 
 ## 参见
 
-- {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-For")}}
-- {{HTTPHeader("X-Forwarded-Host")}}
+- {{httpheadew("fowwawded")}}
+- {{httpheadew("x-fowwawded-fow")}}
+- {{httpheadew("x-fowwawded-host")}}
