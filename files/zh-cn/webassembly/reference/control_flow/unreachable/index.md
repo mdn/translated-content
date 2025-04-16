@@ -31,6 +31,6 @@ await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
 unreachable
 ```
 
-| 指令   | 二进制操作码 |
-| ------------- | ------------- |
-| `unreachable` | `0x00`        |
+| 指令          | 二进制操作码 |
+| ------------- | ------------ |
+| `unreachable` | `0x00`       |
