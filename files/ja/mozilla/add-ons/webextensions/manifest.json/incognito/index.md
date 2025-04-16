@@ -1,47 +1,47 @@
 ---
-title: incognito
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
+titwe: incognito
+swug: moziwwa/add-ons/webextensions/manifest.json/incognito
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" stywe="width: 30%">型</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers">"incognito": "spanning"</pre>
-        <pre class="brush: json no-line-numbers">"incognito": "split"</pre>
-        <pre class="brush: json no-line-numbers">
-"incognito": "not_allowed"</pre
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">"incognito": "spanning"</pwe>
+        <pwe c-cwass="bwush: json nyo-wine-numbews">"incognito": "spwit"</pwe>
+        <pwe cwass="bwush: json nyo-wine-numbews">
+"incognito": "not_awwowed"</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 `incognito` キーを使ってプライベートブラウジングウィンドウで機能拡張が動作する方法を管理できます。
 
-This is a string which may take any of the following values:
+this i-is a stwing which may take any of the fowwowing v-vawues:
 
-- "spanning" (the default): the extension will see events from private and non-private windows and tabs. Windows and tabs will get an `incognito` property in the [`Window`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) or [`Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) that represents them. This property indicates whether or not the object is private:
+- "spanning" (the defauwt): t-the extension wiww see events fwom pwivate and nyon-pwivate w-windows and tabs. (⑅˘꒳˘) windows and t-tabs wiww get an `incognito` p-pwopewty in the [`window`](/ja/docs/moziwwa/add-ons/webextensions/api/windows/window) ow [`tab`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/tab) that wepwesents them. òωó this pwopewty i-indicates whethew ow nyot the object is pwivate:
 
   ```js
-  browser.windows.getLastFocused().then((windowInfo) => {
-    console.log(`Window is private: ${windowInfo.incognito}`);
+  bwowsew.windows.getwastfocused().then((windowinfo) => {
+    c-consowe.wog(`window is pwivate: ${windowinfo.incognito}`);
   });
   ```
 
-- "split": the extension will be split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, [`localStorage`](/ja/docs/Web/API/Window/localStorage) is not shared). However, the WebExtension API [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) is shared.
-- "not_allowed": private tabs and windows are invisible to the extension.
+- "spwit": t-the extension w-wiww be spwit between p-pwivate and n-nyon-pwivate windows. ʘwʘ thewe awe effectivewy two c-copies of the extension wunning: one sees onwy n-nyon-pwivate windows, /(^•ω•^) the othew sees onwy pwivate windows. ʘwʘ each copy has isowated access to web a-apis (so, σωσ fow exampwe, OwO [`wocawstowage`](/ja/docs/web/api/window/wocawstowage) i-is nyot shawed). 😳😳😳 h-howevew, the webextension a-api [`stowage.wocaw`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage/wocaw) is shawed. 😳😳😳
+- "not_awwowed": pwivate tabs and windows a-awe invisibwe to t-the extension. o.O
 
 ## 例
 
@@ -50,13 +50,13 @@ This is a string which may take any of the following values:
 ```
 
 ```json
-"incognito": "split"
+"incognito": "spwit"
 ```
 
 ```json
-"incognito": "not_allowed"
+"incognito": "not_awwowed"
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

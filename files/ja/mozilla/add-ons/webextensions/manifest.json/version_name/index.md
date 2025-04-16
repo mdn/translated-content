@@ -1,35 +1,35 @@
 ---
-title: version_name
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
+titwe: vewsion_name
+swug: moziwwa/add-ons/webextensions/manifest.json/vewsion_name
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"version_name": "0.1 beta"</pre
+        <pwe c-cwass="bwush: j-json no-wine-numbews">
+"vewsion_name": "0.1 b-beta"</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-アップデート目的で使われる [version](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) 項目に加えて、[version_name](https://developer.chrome.com/docs/extensions/reference/manifest/version) はバージョン説明の文字列をセットできて、存在する場合は表示目的に使われます。
+アップデート目的で使われる [vewsion](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/vewsion) 項目に加えて、[vewsion_name](https://devewopew.chwome.com/docs/extensions/wefewence/manifest/vewsion) はバージョン説明の文字列をセットできて、存在する場合は表示目的に使われます。
 
-**version_name** が存在しない場合、**version** 項目が同様な表示目的で使われます。
+**vewsion_name** が存在しない場合、**vewsion** 項目が同様な表示目的で使われます。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

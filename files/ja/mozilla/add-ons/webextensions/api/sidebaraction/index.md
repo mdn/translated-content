@@ -1,79 +1,79 @@
 ---
-title: sidebarAction
-slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
+titwe: sidebawaction
+swug: moziwwa/add-ons/webextensions/api/sidebawaction
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 拡張機能のサイドバーのプロパティを取得、設定します。
 
-[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) はブラウザーウィンドウのウェブページの隣の、右側か左側にあるペインです。ブラウザーはユーザーが利用できるサイドバーを見て、表示するサイドバーを選択できる UI を提供します。manifest.json の [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) キーを使って、拡張機能は自身のサイドバーを定義できます。ここで述べる `sidebarAction` API を使って、拡張機能はサイドバーのプロパティを設定、取得できます。
+[サイドバー](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws) はブラウザーウィンドウのウェブページの隣の、右側か左側にあるペインです。ブラウザーはユーザーが利用できるサイドバーを見て、表示するサイドバーを選択できる u-ui を提供します。manifest.json の [`sidebaw_action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/sidebaw_action) キーを使って、拡張機能は自身のサイドバーを定義できます。ここで述べる `sidebawaction` a-api を使って、拡張機能はサイドバーのプロパティを設定、取得できます。
 
-`sidebarAction` API は {{WebExtAPIRef("browserAction")}} API と緊密にモデリングされています。
+`sidebawaction` a-api は {{webextapiwef("bwowsewaction")}} a-api と緊密にモデリングされています。
 
-sidebarAction API は Opera の [sidebarAction API](https://dev.opera.com/extensions/sidebar-action-api/) を元にしていますが、次のものはサポートされていません: `setBadgeText()`, `getBadgeText()`, `setBadgeBackgroundColor()`, `getBadgeBackgroundColor()`, `onFocus`, `onBlur`.
+s-sidebawaction a-api は o-opewa の [sidebawaction a-api](https://dev.opewa.com/extensions/sidebaw-action-api/) を元にしていますが、次のものはサポートされていません: `setbadgetext()`, 😳 `getbadgetext()`, σωσ `setbadgebackgwoundcowow()`, rawr x3 `getbadgebackgwoundcowow()`, OwO `onfocus`, `onbwuw`. /(^•ω•^)
 
 ## 型
 
-- {{WebExtAPIRef("sidebarAction.ImageDataType")}}
-  - : 画像のピクセルデータ。[`ImageData`](/ja/docs/Web/API/ImageData) オブジェクト (例えば、{{htmlelement("canvas")}} 要素からのもの)でなければならない。
+- {{webextapiwef("sidebawaction.imagedatatype")}}
+  - : 画像のピクセルデータ。[`imagedata`](/ja/docs/web/api/imagedata) オブジェクト (例えば、{{htmwewement("canvas")}} 要素からのもの)でなければならない。
 
 ## 関数
 
-- {{WebExtAPIRef("sidebarAction.setPanel()")}}
+- {{webextapiwef("sidebawaction.setpanew()")}}
   - : サイドバーのバネルを設定します。
-- {{WebExtAPIRef("sidebarAction.getPanel()")}}
+- {{webextapiwef("sidebawaction.getpanew()")}}
   - : サイドバーのバネルを取得します。
-- {{WebExtAPIRef("sidebarAction.setTitle()")}}
-  - : サイドバーのタイトルを設定します。これはブラウザーがサイドバーを一覧するあらゆる UI、例えばメニューに表示されます。
-- {{WebExtAPIRef("sidebarAction.getTitle()")}}
+- {{webextapiwef("sidebawaction.settitwe()")}}
+  - : サイドバーのタイトルを設定します。これはブラウザーがサイドバーを一覧するあらゆる ui、例えばメニューに表示されます。
+- {{webextapiwef("sidebawaction.gettitwe()")}}
   - : サイドバーのタイトルを取得します。
-- {{WebExtAPIRef("sidebarAction.setIcon()")}}
+- {{webextapiwef("sidebawaction.seticon()")}}
   - : サイドバーのアイコンを設定します。
-- {{WebExtAPIRef("sidebarAction.open()")}}
+- {{webextapiwef("sidebawaction.open()")}}
   - : サイドバーを開きます。
-- {{WebExtAPIRef("sidebarAction.close()")}}
+- {{webextapiwef("sidebawaction.cwose()")}}
   - : サイドバーを閉じます。
-- {{WebExtAPIRef("sidebarAction.isOpen()")}}
+- {{webextapiwef("sidebawaction.isopen()")}}
   - : サイドバーが開いているか否かをチェックします。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## add-ons の例
 
-- [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page)
+- [annotate-page](https://github.com/mdn/webextensions-exampwes/twee/mastew/annotate-page)
 
-> [!NOTE]
-> This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> this api is based on opewa's [`chwome.sidebawaction`](https://dev.opewa.com/extensions/sidebaw-action-api/) a-api.micwosoft edge compatibiwity data is suppwied b-by micwosoft cowpowation and i-is incwuded hewe undew the cweative commons attwibution 3.0 united s-states wicense. 😳😳😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. ( ͡o ω ͡o ) aww wights wesewved. >_<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, >w< with ow without
+// modification, rawr awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce c-code must w-wetain the above copywight
+// nyotice, 😳 this wist o-of conditions and the fowwowing discwaimew. >w<
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, (⑅˘꒳˘) this wist of c-conditions and the fowwowing discwaimew
+// i-in the d-documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. OwO
+//    * nyeithew the nyame o-of googwe inc. (ꈍᴗꈍ) n-nyow the nyames of its
+// contwibutows m-may be u-used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by t-the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, 😳😳😳 incwuding, but nyot
+// wimited to, mya the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. mya i-in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (⑅˘꒳˘) indiwect, incidentaw, (U ﹏ U)
+// s-speciaw, mya exempwawy, ʘwʘ ow consequentiaw damages (incwuding, (˘ω˘) but nyot
+// w-wimited to, (U ﹏ U) pwocuwement of substitute g-goods ow s-sewvices; woss o-of use, ^•ﻌ•^
+// data, ow pwofits; ow b-business intewwuption) h-howevew caused a-and on any
+// t-theowy of wiabiwity, (˘ω˘) whethew in contwact, :3 stwict w-wiabiwity, ^^;; o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, 🥺 even if advised o-of the possibiwity of such damage. (⑅˘꒳˘)
 -->

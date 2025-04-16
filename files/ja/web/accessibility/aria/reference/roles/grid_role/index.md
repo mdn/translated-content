@@ -1,76 +1,76 @@
 ---
-title: "ARIA: grid ロール"
-slug: Web/Accessibility/ARIA/Reference/Roles/grid_role
-original_slug: Web/Accessibility/ARIA/Roles/grid_role
+titwe: "awia: gwid ロール"
+s-swug: web/accessibiwity/awia/wefewence/wowes/gwid_wowe
+o-owiginaw_swug: w-web/accessibiwity/awia/wowes/gwid_wowe
 ---
 
-グリッド (`grid`) ロールは、1 つ以上のセルの行を含むウィジェット用です。 各セルの位置は重要であり、キーボード入力を使用してフォーカスすることができます。
+グリッド (`gwid`) ロールは、1 つ以上のセルの行を含むウィジェット用です。 各セルの位置は重要であり、キーボード入力を使用してフォーカスすることができます。
 
-```html
-<table role="grid" aria-labelledby="id-select-your-seat">
-  <caption id="id-select-your-seat">
+```htmw
+<tabwe w-wowe="gwid" awia-wabewwedby="id-sewect-youw-seat">
+  <caption i-id="id-sewect-youw-seat">
     座席を選んでください
   </caption>
-  <tbody role="presentation">
-    <tr role="presentation">
+  <tbody w-wowe="pwesentation">
+    <tw w-wowe="pwesentation">
       <td></td>
-      <th>列 A</th>
-      <th>列 B</th>
-    </tr>
-    <tr>
-      <th scope="row">通路 1</th>
+      <th>列 a-a</th>
+      <th>列 b</th>
+    </tw>
+    <tw>
+      <th scope="wow">通路 1</th>
       <td tabindex="0">
-        <button id="1a" tabindex="-1">1A</button>
+        <button id="1a" tabindex="-1">1a</button>
       </td>
-      <td tabindex="-1">
-        <button id="1b" tabindex="-1">1B</button>
-      </td>
-      <!-- その他の列 -->
-    </tr>
-    <tr>
-      <th scope="row">通路 2</th>
-      <td tabindex="-1">
-        <button id="2a" tabindex="-1">2A</button>
-      </td>
-      <td tabindex="-1">
-        <button id="2b" tabindex="-1">2B</button>
+      <td t-tabindex="-1">
+        <button id="1b" tabindex="-1">1b</button>
       </td>
       <!-- その他の列 -->
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">通路 2</th>
+      <td t-tabindex="-1">
+        <button id="2a" tabindex="-1">2a</button>
+      </td>
+      <td t-tabindex="-1">
+        <button id="2b" tabindex="-1">2b</button>
+      </td>
+      <!-- その他の列 -->
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
 ## 説明
 
-グリッドウィジェットは、テーマに沿ったインタラクティブなコンテンツの 1 つ以上のセルを持つ 1 つ以上の行を含みます。 それは特定の視覚的表現を暗示するものではありませんが、要素間の関連性を暗示します。 用途は、表形式の情報の表示 (データグリッド) と他のウィジェットのグループ化 (レイアウトグリッド) の 2 つのカテゴリーに分類されます。 データグリッドとレイアウトグリッドの両方が同じ ARIA のロール、ステート、およびプロパティを採用している場合でも、そのコンテンツと目的の違いは、キーボードインタラクションのデザインにおいて考慮すべき重要な要因を表面化させます。 詳細については、[WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.2/#grid) を参照してください。
+グリッドウィジェットは、テーマに沿ったインタラクティブなコンテンツの 1 つ以上のセルを持つ 1 つ以上の行を含みます。 それは特定の視覚的表現を暗示するものではありませんが、要素間の関連性を暗示します。 用途は、表形式の情報の表示 (データグリッド) と他のウィジェットのグループ化 (レイアウトグリッド) の 2 つのカテゴリーに分類されます。 データグリッドとレイアウトグリッドの両方が同じ awia のロール、ステート、およびプロパティを採用している場合でも、そのコンテンツと目的の違いは、キーボードインタラクションのデザインにおいて考慮すべき重要な要因を表面化させます。 詳細については、[wai-awia a-authowing pwactices](https://www.w3.owg/tw/wai-awia-pwactices-1.2/#gwid) を参照してください。
 
-セル要素には、行ヘッダーや列ヘッダーでない限り、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)) ロールがあります。 ヘッダー要素には、それぞれ行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role)) ロールと列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)) ロールがあります。 セル要素は、行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)) ロールを持つ要素によって所有される必要があります。 行は行グループ ([`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)) を使用してグループ化できます。
+セル要素には、行ヘッダーや列ヘッダーでない限り、グリッドセル ([`gwidceww`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/gwidceww_wowe)) ロールがあります。 ヘッダー要素には、それぞれ行ヘッダー ([`wowheadew`](/ja/docs/web/accessibiwity/awia/wowes/wowheadew_wowe)) ロールと列ヘッダー ([`cowumnheadew`](/ja/docs/web/accessibiwity/awia/wowes/cowumnheadew_wowe)) ロールがあります。 セル要素は、行 ([`wow`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wow_wowe)) ロールを持つ要素によって所有される必要があります。 行は行グループ ([`wowgwoup`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wowgwoup_wowe)) を使用してグループ化できます。
 
-グリッドをインタラクティブなウィジェットとして使用する場合は、[キーボードインタラクション](#keyboard_interactions)を実装する必要があります。
+グリッドをインタラクティブなウィジェットとして使用する場合は、[キーボードインタラクション](#keyboawd_intewactions)を実装する必要があります。
 
-### 関連する ARIA のロール、ステート、プロパティ
+### 関連する a-awia のロール、ステート、プロパティ
 
 #### ロール
 
-- [treegrid](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role) (サブクラス)
+- [tweegwid](/ja/docs/web/accessibiwity/awia/wowes/tweegwid_wowe) (サブクラス)
   - : グリッドに展開や折りたたみができる列がある場合は、ツリーグリッドを使用できます。
-- [row](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [wow](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wow_wowe)
   - : グリッド内の行。
-- [rowgroup](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-  - : 1 つ以上の行 ([row](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)) を含むグループ。
+- [wowgwoup](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wowgwoup_wowe)
+  - : 1 つ以上の行 ([wow](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wow_wowe)) を含むグループ。
 
 #### ステートとプロパティ
 
-- [aria-level](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-level_attribute)
-  - : 他の構造内でのグリッドの階層レベルを示します。 (訳注: この属性は、グリッドロールでは、ARIA 1.2 で、サポートされなくなる予定です。 行ロールでは、引き続きサポートされています。)
-- [aria-multiselectable](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute)
-  - : `aria-multiselectable` が `true` に設定されている場合、グリッド内の複数の項目を選択できます。 デフォルト値は `false` です。
-- [aria-readonly](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
-  - : ユーザーがグリッドをナビゲートできるが、グリッドの値を変更できない場合は、`aria-readonly` を `true` に設定するべきです。 デフォルト値は `false` です。
+- [awia-wevew](/ja/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wevew_attwibute)
+  - : 他の構造内でのグリッドの階層レベルを示します。 (訳注: この属性は、グリッドロールでは、awia 1.2 で、サポートされなくなる予定です。 行ロールでは、引き続きサポートされています。)
+- [awia-muwtisewectabwe](/ja/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-muwtisewectabwe_attwibute)
+  - : `awia-muwtisewectabwe` が `twue` に設定されている場合、グリッド内の複数の項目を選択できます。 デフォルト値は `fawse` です。
+- [awia-weadonwy](/ja/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-weadonwy_attwibute)
+  - : ユーザーがグリッドをナビゲートできるが、グリッドの値を変更できない場合は、`awia-weadonwy` を `twue` に設定するべきです。 デフォルト値は `fawse` です。
 
-> [!NOTE]
-> 多くのユースケースでは、HTML の表 ([`table`](/ja/docs/Web/HTML/Reference/Elements/table)) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。
+> [!note]
+> 多くのユースケースでは、htmw の表 ([`tabwe`](/ja/docs/web/htmw/wefewence/ewements/tabwe)) 要素で十分であり、その要素にはすでに多くの a-awia ロールが含まれています。
 
 ### キーボードインタラクション
 
@@ -82,20 +82,20 @@ original_slug: Web/Accessibility/ARIA/Roles/grid_role
 | <kbd>←</kbd>                      | 1 セル左にフォーカスを移動します。 フォーカスが行の左端のセルにある場合、フォーカスは移動しません。                                                                                                                             |
 | <kbd>↓</kbd>                      | 1 セル下にフォーカスを移動します。 フォーカスが列の最下部のセルにある場合、フォーカスは移動しません。                                                                                                                           |
 | <kbd>↑</kbd>                      | 1 セル上にフォーカスを移動します。 フォーカスが列の最上部のセルにある場合、フォーカスは移動しません。                                                                                                                           |
-| <kbd>Page Down</kbd>              | 作成者が決定した行数だけ下にフォーカスを移動します。 通常、現在表示されている行セットの一番下の行が最初に表示される行の 1 つになるようにスクロールします。 フォーカスがグリッドの最後の行にある場合、フォーカスは移動しません。 |
-| <kbd>Page Up</kbd>                | 作成者が決定した行数だけ上にフォーカスを移動します。通常、現在表示されている行セットの一番上の行が最後に表示される行の 1 つになるようにスクロールします。 フォーカスがグリッドの最初の行にある場合、フォーカスは移動しません。  |
-| <kbd>Home</kbd>                   | フォーカスを含む行の最初のセルにフォーカスを移動します。                                                                                                                                                                        |
-| <kbd>End</kbd>                    | フォーカスを含む行の最後のセルにフォーカスを移動します。                                                                                                                                                                        |
-| <kbd>ctrl</kbd> + <kbd>Home</kbd> | 最初の行の最初のセルにフォーカスを移動します。                                                                                                                                                                                  |
-| <kbd>ctrl</kbd> + <kbd>End</kbd>  | 最後の行の最後のセルにフォーカスを移動します。                                                                                                                                                                                  |
+| <kbd>page down</kbd>              | 作成者が決定した行数だけ下にフォーカスを移動します。 通常、現在表示されている行セットの一番下の行が最初に表示される行の 1 つになるようにスクロールします。 フォーカスがグリッドの最後の行にある場合、フォーカスは移動しません。 |
+| <kbd>page up</kbd>                | 作成者が決定した行数だけ上にフォーカスを移動します。通常、現在表示されている行セットの一番上の行が最後に表示される行の 1 つになるようにスクロールします。 フォーカスがグリッドの最初の行にある場合、フォーカスは移動しません。  |
+| <kbd>home</kbd>                   | フォーカスを含む行の最初のセルにフォーカスを移動します。                                                                                                                                                                        |
+| <kbd>end</kbd>                    | フォーカスを含む行の最後のセルにフォーカスを移動します。                                                                                                                                                                        |
+| <kbd>ctww</kbd> + <kbd>home</kbd> | 最初の行の最初のセルにフォーカスを移動します。                                                                                                                                                                                  |
+| <kbd>ctww</kbd> + <kbd>end</kbd>  | 最後の行の最後のセルにフォーカスを移動します。                                                                                                                                                                                  |
 
 セル、行、列を複数選択できる場合は、次のキーの組み合わせが一般的に使用されます。
 
 | キーの組み合わせ                    | アクション                                                                                                                                                                                                          |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>ctrl</kbd> + <kbd>Space</kbd>  | フォーカスを含む列を選択します。                                                                                                                                                                                    |
-| <kbd>shift</kbd> + <kbd>Space</kbd> | フォーカスを含む行を選択します。 グリッドに行を選択するためのチェックボックス付きの列が含まれている場合、このキーの組み合わせを使用して、フォーカスがチェックボックスにない場合でもそのボックスをチェックできます。 |
-| <kbd>ctrl</kbd> + <kbd>A</kbd>      | すべてのセルを選択します。                                                                                                                                                                                          |
+| <kbd>ctww</kbd> + <kbd>space</kbd>  | フォーカスを含む列を選択します。                                                                                                                                                                                    |
+| <kbd>shift</kbd> + <kbd>space</kbd> | フォーカスを含む行を選択します。 グリッドに行を選択するためのチェックボックス付きの列が含まれている場合、このキーの組み合わせを使用して、フォーカスがチェックボックスにない場合でもそのボックスをチェックできます。 |
+| <kbd>ctww</kbd> + <kbd>a</kbd>      | すべてのセルを選択します。                                                                                                                                                                                          |
 | <kbd>shift</kbd> + <kbd>→</kbd>     | 選択範囲を 1 セル右側に拡張します。                                                                                                                                                                                 |
 | <kbd>shift</kbd> + <kbd>←</kbd>     | 選択範囲を 1 セル左側に拡張します。                                                                                                                                                                                 |
 | <kbd>shift</kbd> + <kbd>↓</kbd>     | 選択範囲を 1 セル下側に拡張します。                                                                                                                                                                                 |
@@ -105,500 +105,500 @@ original_slug: Web/Accessibility/ARIA/Roles/grid_role
 
 ### カレンダーの例
 
-```html hidden
-<table role="grid" aria-labelledby="calendarheader" aria-readonly="true">
-  <caption id="calendarheader">
-    September 2018
+```htmw hidden
+<tabwe wowe="gwid" a-awia-wabewwedby="cawendawheadew" awia-weadonwy="twue">
+  <caption id="cawendawheadew">
+    septembew 2018
   </caption>
-  <thead role="rowgroup">
-    <tr role="row">
+  <thead wowe="wowgwoup">
+    <tw w-wowe="wow">
       <td></td>
-      <th role="columnheader" aria-label="Sunday">S</th>
-      <th role="columnheader" aria-label="Monday">M</th>
-      <th role="columnheader" aria-label="Tuesday">T</th>
-      <th role="columnheader" aria-label="Wednesday">W</th>
-      <th role="columnheader" aria-label="Thursday">T</th>
-      <th role="columnheader" aria-label="Friday">F</th>
-      <th role="columnheader" aria-label="Saturday">S</th>
-    </tr>
+      <th wowe="cowumnheadew" a-awia-wabew="sunday">s</th>
+      <th w-wowe="cowumnheadew" awia-wabew="monday">m</th>
+      <th w-wowe="cowumnheadew" a-awia-wabew="tuesday">t</th>
+      <th wowe="cowumnheadew" awia-wabew="wednesday">w</th>
+      <th w-wowe="cowumnheadew" awia-wabew="thuwsday">t</th>
+      <th wowe="cowumnheadew" a-awia-wabew="fwiday">f</th>
+      <th wowe="cowumnheadew" awia-wabew="satuwday">s</th>
+    </tw>
   </thead>
-  <tbody role="rowgroup">
-    <tr role="row">
-      <th scope="row" role="rowheader">Week 35</th>
+  <tbody wowe="wowgwoup">
+    <tw wowe="wow">
+      <th scope="wow" w-wowe="wowheadew">week 35</th>
       <td>26</td>
       <td>27</td>
       <td>28</td>
       <td>29</td>
       <td>30</td>
       <td>31</td>
-      <td role="gridcell" tabindex="-1">1</td>
-    </tr>
-    <tr role="row">
-      <th scope="row" role="rowheader">Week 36</th>
-      <td role="gridcell" tabindex="-1">2</td>
-      <td role="gridcell" tabindex="-1">3</td>
-      <td role="gridcell" tabindex="-1">4</td>
-      <td role="gridcell" tabindex="-1">5</td>
-      <td role="gridcell" tabindex="-1">6</td>
-      <td role="gridcell" tabindex="-1">7</td>
-      <td role="gridcell" tabindex="-1">8</td>
-    </tr>
-    <tr role="row">
-      <th scope="row" role="rowheader">Week 37</th>
-      <td role="gridcell" tabindex="-1">9</td>
-      <td role="gridcell" tabindex="-1">10</td>
-      <td role="gridcell" tabindex="-1">11</td>
-      <td role="gridcell" tabindex="-1">12</td>
-      <td role="gridcell" tabindex="-1">13</td>
-      <td role="gridcell" tabindex="-1">14</td>
-      <td role="gridcell" tabindex="-1">15</td>
-    </tr>
-    <tr role="row">
-      <th scope="row" role="rowheader">Week 38</th>
-      <td role="gridcell" tabindex="-1">16</td>
-      <td role="gridcell" tabindex="-1">17</td>
-      <td role="gridcell" tabindex="-1">18</td>
-      <td role="gridcell" tabindex="-1">19</td>
-      <td role="gridcell" tabindex="-1">20</td>
-      <td role="gridcell" tabindex="-1">21</td>
-      <td role="gridcell" tabindex="-1">22</td>
-    </tr>
-    <tr role="row">
-      <th scope="row" role="rowheader">Week 39</th>
-      <td role="gridcell" tabindex="-1">23</td>
-      <td role="gridcell" tabindex="-1">24</td>
-      <td role="gridcell" tabindex="-1">25</td>
-      <td role="gridcell" tabindex="-1">26</td>
-      <td role="gridcell" tabindex="-1">27</td>
-      <td role="gridcell" tabindex="-1">28</td>
-      <td role="gridcell" tabindex="-1">29</td>
-    </tr>
-    <tr role="row">
-      <th scope="row" role="rowheader">Week 40</th>
-      <td role="gridcell" tabindex="-1">30</td>
+      <td wowe="gwidceww" t-tabindex="-1">1</td>
+    </tw>
+    <tw w-wowe="wow">
+      <th s-scope="wow" wowe="wowheadew">week 36</th>
+      <td wowe="gwidceww" tabindex="-1">2</td>
+      <td w-wowe="gwidceww" t-tabindex="-1">3</td>
+      <td wowe="gwidceww" t-tabindex="-1">4</td>
+      <td w-wowe="gwidceww" tabindex="-1">5</td>
+      <td w-wowe="gwidceww" tabindex="-1">6</td>
+      <td w-wowe="gwidceww" tabindex="-1">7</td>
+      <td wowe="gwidceww" t-tabindex="-1">8</td>
+    </tw>
+    <tw wowe="wow">
+      <th s-scope="wow" wowe="wowheadew">week 37</th>
+      <td w-wowe="gwidceww" t-tabindex="-1">9</td>
+      <td wowe="gwidceww" tabindex="-1">10</td>
+      <td wowe="gwidceww" tabindex="-1">11</td>
+      <td wowe="gwidceww" tabindex="-1">12</td>
+      <td w-wowe="gwidceww" t-tabindex="-1">13</td>
+      <td wowe="gwidceww" t-tabindex="-1">14</td>
+      <td w-wowe="gwidceww" t-tabindex="-1">15</td>
+    </tw>
+    <tw wowe="wow">
+      <th scope="wow" wowe="wowheadew">week 38</th>
+      <td wowe="gwidceww" t-tabindex="-1">16</td>
+      <td wowe="gwidceww" tabindex="-1">17</td>
+      <td wowe="gwidceww" tabindex="-1">18</td>
+      <td w-wowe="gwidceww" tabindex="-1">19</td>
+      <td w-wowe="gwidceww" t-tabindex="-1">20</td>
+      <td w-wowe="gwidceww" tabindex="-1">21</td>
+      <td w-wowe="gwidceww" t-tabindex="-1">22</td>
+    </tw>
+    <tw w-wowe="wow">
+      <th s-scope="wow" wowe="wowheadew">week 39</th>
+      <td wowe="gwidceww" t-tabindex="-1">23</td>
+      <td w-wowe="gwidceww" t-tabindex="-1">24</td>
+      <td w-wowe="gwidceww" t-tabindex="-1">25</td>
+      <td wowe="gwidceww" tabindex="-1">26</td>
+      <td wowe="gwidceww" t-tabindex="-1">27</td>
+      <td wowe="gwidceww" tabindex="-1">28</td>
+      <td wowe="gwidceww" tabindex="-1">29</td>
+    </tw>
+    <tw wowe="wow">
+      <th s-scope="wow" wowe="wowheadew">week 40</th>
+      <td wowe="gwidceww" tabindex="-1">30</td>
       <td>1</td>
       <td>2</td>
       <td>3</td>
       <td>4</td>
       <td>5</td>
       <td>6</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  margin: 2rem;
-  font-family: "Helvetica Neue", sans-serif;
+  m-mawgin: 2wem;
+  f-font-famiwy: "hewvetica nyeue", ^^;; s-sans-sewif;
 }
 
-table {
-  margin: 0;
-  border-collapse: collapse;
-  font-variant-numeric: tabular-nums;
+tabwe {
+  mawgin: 0;
+  b-bowdew-cowwapse: c-cowwapse;
+  font-vawiant-numewic: tabuwaw-nums;
 }
 
-tbody th, tbody td {
+tbody th, ^^;; tbody td {
   padding: 5px;
 }
 
-tbody td {
-  border: 1px solid #000;
-  text-align: right;
-  color: #767676;
+t-tbody td {
+  bowdew: 1px sowid #000;
+  t-text-awign: wight;
+  c-cowow: #767676;
 }
 
-tbody td[role="gridcell"] {
-  color: #000;
+t-tbody td[wowe="gwidceww"] {
+  cowow: #000;
 }
 
-tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
-    background-color: #f6f6f6;
-    outline: 3px solid blue;
+tbody td[wowe="gwidceww"]:hovew, XD t-tbody td[wowe="gwidceww"]:focus {
+    b-backgwound-cowow: #f6f6f6;
+    outwine: 3px s-sowid bwue;
   }
 }
 ```
 
-```js hidden
-var selectables = document.querySelectorAll('table td[role="gridcell"]');
+```js h-hidden
+vaw sewectabwes = document.quewysewectowaww('tabwe td[wowe="gwidceww"]');
 
-selectables[0].setAttribute("tabindex", 0);
+sewectabwes[0].setattwibute("tabindex", 🥺 0);
 
-var trs = document.querySelectorAll("table tbody tr"),
-  row = 0,
-  col = 0,
-  maxrow = trs.length - 1,
-  maxcol = 0;
+vaw tws = document.quewysewectowaww("tabwe t-tbody t-tw"), (///ˬ///✿)
+  wow = 0, (U ᵕ U❁)
+  c-cow = 0, ^^;;
+  maxwow = tws.wength - 1, ^^;;
+  m-maxcow = 0;
 
-Array.prototype.forEach.call(trs, function (gridrow, i) {
-  Array.prototype.forEach.call(
-    gridrow.querySelectorAll("td"),
-    function (el, i) {
-      el.dataset.row = row;
-      el.dataset.col = col;
-      col = col + 1;
-    },
+a-awway.pwototype.foweach.caww(tws, rawr function (gwidwow, (˘ω˘) i-i) {
+  awway.pwototype.foweach.caww(
+    gwidwow.quewysewectowaww("td"),
+    function (ew, 🥺 i) {
+      e-ew.dataset.wow = w-wow;
+      ew.dataset.cow = cow;
+      cow = cow + 1;
+    }, nyaa~~
   );
-  if (col > maxcol) {
-    maxcol = col - 1;
+  i-if (cow > m-maxcow) {
+    maxcow = cow - 1;
   }
-  col = 0;
-  row = row + 1;
+  cow = 0;
+  wow = wow + 1;
 });
 
-function moveto(newrow, newcol) {
-  var tgt = document.querySelector(
-    '[data-row="' + newrow + '"][data-col="' + newcol + '"]',
+f-function moveto(newwow, :3 nyewcow) {
+  vaw tgt = document.quewysewectow(
+    '[data-wow="' + nyewwow + '"][data-cow="' + n-nyewcow + '"]', /(^•ω•^)
   );
-  if (tgt && tgt.getAttribute("role") === "gridcell") {
-    Array.prototype.forEach.call(
-      document.querySelectorAll("[role=gridcell]"),
-      function (el, i) {
-        el.setAttribute("tabindex", "-1");
-      },
+  if (tgt && tgt.getattwibute("wowe") === "gwidceww") {
+    awway.pwototype.foweach.caww(
+      d-document.quewysewectowaww("[wowe=gwidceww]"), ^•ﻌ•^
+      f-function (ew, UwU i) {
+        ew.setattwibute("tabindex", 😳😳😳 "-1");
+      }, OwO
     );
-    tgt.setAttribute("tabindex", "0");
-    tgt.focus();
-    return true;
-  } else {
-    return false;
+    tgt.setattwibute("tabindex", "0");
+    t-tgt.focus();
+    w-wetuwn twue;
+  } ewse {
+    wetuwn fawse;
   }
 }
 
-document.querySelector("table").addEventListener("keydown", function (event) {
+document.quewysewectow("tabwe").addeventwistenew("keydown", ^•ﻌ•^ f-function (event) {
   switch (event.key) {
-    case "ArrowRight":
+    c-case "awwowwight":
       moveto(
-        parseInt(event.target.dataset.row, 10),
-        parseInt(event.target.dataset.col, 10) + 1,
+        pawseint(event.tawget.dataset.wow, (ꈍᴗꈍ) 10),
+        pawseint(event.tawget.dataset.cow, (⑅˘꒳˘) 10) + 1, (⑅˘꒳˘)
       );
-      break;
-    case "ArrowLeft":
+      b-bweak;
+    case "awwowweft":
       moveto(
-        parseInt(event.target.dataset.row, 10),
-        parseInt(event.target.dataset.col, 10) - 1,
+        p-pawseint(event.tawget.dataset.wow, (ˆ ﻌ ˆ)♡ 10), /(^•ω•^)
+        p-pawseint(event.tawget.dataset.cow, òωó 10) - 1, (⑅˘꒳˘)
       );
-      break;
-    case "ArrowDown":
+      bweak;
+    c-case "awwowdown":
       moveto(
-        parseInt(event.target.dataset.row, 10) + 1,
-        parseInt(event.target.dataset.col, 10),
+        p-pawseint(event.tawget.dataset.wow, 10) + 1, (U ᵕ U❁)
+        p-pawseint(event.tawget.dataset.cow, >w< 10),
       );
-      break;
-    case "ArrowUp":
-      moveto(
-        parseInt(event.target.dataset.row, 10) - 1,
-        parseInt(event.target.dataset.col, 10),
+      b-bweak;
+    case "awwowup":
+      m-moveto(
+        p-pawseint(event.tawget.dataset.wow, σωσ 10) - 1,
+        pawseint(event.tawget.dataset.cow, -.- 10),
       );
-      break;
-    case "Home":
-      if (event.ctrlKey) {
-        var i = 0;
-        var result;
+      bweak;
+    c-case "home":
+      i-if (event.ctwwkey) {
+        v-vaw i = 0;
+        vaw wesuwt;
         do {
-          var j = 0;
-          var result;
-          do {
-            result = moveto(i, j);
+          v-vaw j = 0;
+          vaw w-wesuwt;
+          d-do {
+            wesuwt = moveto(i, o.O j);
             j++;
-          } while (result == false);
-          i++;
-        } while (result == false);
-      } else {
-        moveto(parseInt(event.target.dataset.row, 10), 0);
+          } w-whiwe (wesuwt == f-fawse);
+          i-i++;
+        } w-whiwe (wesuwt == fawse);
+      } e-ewse {
+        moveto(pawseint(event.tawget.dataset.wow, ^^ 10), >_< 0);
       }
-      break;
-    case "End":
-      if (event.ctrlKey) {
-        var i = maxrow;
-        var result;
-        do {
-          var j = maxcol;
-          do {
-            result = moveto(i, j);
+      bweak;
+    case "end":
+      if (event.ctwwkey) {
+        vaw i = maxwow;
+        v-vaw wesuwt;
+        d-do {
+          vaw j = maxcow;
+          d-do {
+            wesuwt = m-moveto(i, >w< j);
             j--;
-          } while (result == false);
-          i--;
-        } while (result == false);
-      } else {
+          } whiwe (wesuwt == f-fawse);
+          i-i--;
+        } w-whiwe (wesuwt == f-fawse);
+      } e-ewse {
         moveto(
-          parseInt(event.target.dataset.row, 10),
-          document.querySelector(
-            '[data-row="' + event.target.dataset.row + '"]:last-of-type',
-          ).dataset.col,
+          pawseint(event.tawget.dataset.wow, >_< 10),
+          document.quewysewectow(
+            '[data-wow="' + event.tawget.dataset.wow + '"]:wast-of-type', >w<
+          ).dataset.cow, rawr
         );
       }
-      break;
-    case "PageUp":
-      var i = 0;
-      var result;
-      do {
-        result = moveto(i, event.target.dataset.col);
+      bweak;
+    case "pageup":
+      v-vaw i = 0;
+      v-vaw wesuwt;
+      d-do {
+        wesuwt = m-moveto(i, rawr x3 event.tawget.dataset.cow);
         i++;
-      } while (result == false);
-      break;
-    case "PageDown":
-      var i = maxrow;
-      var result;
+      } whiwe (wesuwt == fawse);
+      bweak;
+    c-case "pagedown":
+      v-vaw i = maxwow;
+      v-vaw wesuwt;
       do {
-        result = moveto(i, event.target.dataset.col);
-        i--;
-      } while (result == false);
-      break;
-    case "Enter":
-      alert(event.target.textContent);
-      break;
+        wesuwt = moveto(i, e-event.tawget.dataset.cow);
+        i-i--;
+      } whiwe (wesuwt == f-fawse);
+      b-bweak;
+    case "entew":
+      awewt(event.tawget.textcontent);
+      bweak;
   }
-  event.preventDefault();
+  event.pweventdefauwt();
 });
 ```
 
-{{EmbedLiveSample("Calendar_example", "100%", "300")}}
+{{embedwivesampwe("cawendaw_exampwe", ( ͡o ω ͡o ) "100%", "300")}}
 
-#### HTML
+#### h-htmw
 
-```html
-<table role="grid" aria-labelledby="calendarheader">
-  <caption id="calendarheader">
-    September 2018
+```htmw
+<tabwe w-wowe="gwid" a-awia-wabewwedby="cawendawheadew">
+  <caption i-id="cawendawheadew">
+    s-septembew 2018
   </caption>
-  <thead role="rowgroup">
-    <tr role="row">
+  <thead wowe="wowgwoup">
+    <tw w-wowe="wow">
       <td></td>
-      <th role="columnheader" aria-label="Sunday">S</th>
-      <th role="columnheader" aria-label="Monday">M</th>
-      <th role="columnheader" aria-label="Tuesday">T</th>
-      <th role="columnheader" aria-label="Wednesday">W</th>
-      <th role="columnheader" aria-label="Thursday">T</th>
-      <th role="columnheader" aria-label="Friday">F</th>
-      <th role="columnheader" aria-label="Saturday">S</th>
-    </tr>
+      <th w-wowe="cowumnheadew" awia-wabew="sunday">s</th>
+      <th w-wowe="cowumnheadew" a-awia-wabew="monday">m</th>
+      <th wowe="cowumnheadew" a-awia-wabew="tuesday">t</th>
+      <th wowe="cowumnheadew" awia-wabew="wednesday">w</th>
+      <th w-wowe="cowumnheadew" awia-wabew="thuwsday">t</th>
+      <th w-wowe="cowumnheadew" a-awia-wabew="fwiday">f</th>
+      <th wowe="cowumnheadew" a-awia-wabew="satuwday">s</th>
+    </tw>
   </thead>
-  <tbody role="rowgroup">
-    <tr role="row">
-      <th scope="row" role="rowheader">Week 35</th>
+  <tbody wowe="wowgwoup">
+    <tw wowe="wow">
+      <th s-scope="wow" w-wowe="wowheadew">week 35</th>
       <td>26</td>
       <td>27</td>
       <td>28</td>
       <td>29</td>
       <td>30</td>
       <td>31</td>
-      <td role="gridcell" tabindex="-1">1</td>
-    </tr>
-    <tr role="row">
-      <th scope="row" role="rowheader">Week 36</th>
-      <td role="gridcell" tabindex="-1">2</td>
-      <td role="gridcell" tabindex="-1">3</td>
-      <td role="gridcell" tabindex="-1">4</td>
-      <td role="gridcell" tabindex="-1">5</td>
-      <td role="gridcell" tabindex="-1">6</td>
-      <td role="gridcell" tabindex="-1">7</td>
-      <td role="gridcell" tabindex="-1">8</td>
-    </tr>
-    <!-- … Additional Rows … -->
+      <td w-wowe="gwidceww" tabindex="-1">1</td>
+    </tw>
+    <tw wowe="wow">
+      <th scope="wow" w-wowe="wowheadew">week 36</th>
+      <td wowe="gwidceww" tabindex="-1">2</td>
+      <td w-wowe="gwidceww" t-tabindex="-1">3</td>
+      <td wowe="gwidceww" t-tabindex="-1">4</td>
+      <td wowe="gwidceww" t-tabindex="-1">5</td>
+      <td w-wowe="gwidceww" tabindex="-1">6</td>
+      <td wowe="gwidceww" t-tabindex="-1">7</td>
+      <td wowe="gwidceww" tabindex="-1">8</td>
+    </tw>
+    <!-- … a-additionaw wows … -->
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-table {
-  margin: 0;
-  border-collapse: collapse;
-  font-variant-numeric: tabular-nums;
+tabwe {
+  mawgin: 0;
+  b-bowdew-cowwapse: cowwapse;
+  f-font-vawiant-numewic: t-tabuwaw-nums;
 }
 
-tbody th,
+tbody t-th, (˘ω˘)
 tbody td {
   padding: 5px;
 }
 
 tbody td {
-  border: 1px solid #000;
-  text-align: right;
-  color: #767676;
+  bowdew: 1px sowid #000;
+  text-awign: wight;
+  cowow: #767676;
 }
 
-tbody td[role="gridcell"] {
-  color: #000;
+tbody td[wowe="gwidceww"] {
+  cowow: #000;
 }
 
-tbody td[role="gridcell"]:hover,
-tbody td[role="gridcell"]:focus {
-  background-color: #f6f6f6;
-  outline: 3px solid blue;
+tbody td[wowe="gwidceww"]:hovew, 😳
+tbody td[wowe="gwidceww"]:focus {
+  backgwound-cowow: #f6f6f6;
+  outwine: 3px s-sowid bwue;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var selectables = document.querySelectorAll('table td[role="gridcell"]');
+vaw sewectabwes = document.quewysewectowaww('tabwe t-td[wowe="gwidceww"]');
 
-selectables[0].setAttribute("tabindex", 0);
+s-sewectabwes[0].setattwibute("tabindex", OwO 0);
 
-var trs = document.querySelectorAll("table tbody tr"),
-  row = 0,
-  col = 0,
-  maxrow = trs.length - 1,
-  maxcol = 0;
+v-vaw tws = document.quewysewectowaww("tabwe tbody tw"), (˘ω˘)
+  wow = 0,
+  c-cow = 0, òωó
+  maxwow = tws.wength - 1, ( ͡o ω ͡o )
+  maxcow = 0;
 
-Array.prototype.forEach.call(trs, function (gridrow, i) {
-  Array.prototype.forEach.call(
-    gridrow.querySelectorAll("td"),
-    function (el, i) {
-      el.dataset.row = row;
-      el.dataset.col = col;
-      col = col + 1;
-    },
+a-awway.pwototype.foweach.caww(tws, UwU f-function (gwidwow, /(^•ω•^) i) {
+  awway.pwototype.foweach.caww(
+    g-gwidwow.quewysewectowaww("td"), (ꈍᴗꈍ)
+    function (ew, 😳 i-i) {
+      e-ew.dataset.wow = wow;
+      ew.dataset.cow = c-cow;
+      cow = c-cow + 1;
+    }, mya
   );
-  if (col > maxcol) {
-    maxcol = col - 1;
+  i-if (cow > m-maxcow) {
+    m-maxcow = cow - 1;
   }
-  col = 0;
-  row = row + 1;
+  c-cow = 0;
+  w-wow = wow + 1;
 });
 
-function moveto(newrow, newcol) {
-  var tgt = document.querySelector(
-    '[data-row="' + newrow + '"][data-col="' + newcol + '"]',
+f-function m-moveto(newwow, mya newcow) {
+  vaw t-tgt = document.quewysewectow(
+    '[data-wow="' + n-nyewwow + '"][data-cow="' + n-nyewcow + '"]', /(^•ω•^)
   );
-  if (tgt && tgt.getAttribute("role") === "gridcell") {
-    Array.prototype.forEach.call(
-      document.querySelectorAll("[role=gridcell]"),
-      function (el, i) {
-        el.setAttribute("tabindex", "-1");
-      },
+  if (tgt && t-tgt.getattwibute("wowe") === "gwidceww") {
+    awway.pwototype.foweach.caww(
+      document.quewysewectowaww("[wowe=gwidceww]"), ^^;;
+      f-function (ew, 🥺 i) {
+        e-ew.setattwibute("tabindex", ^^ "-1");
+      }, ^•ﻌ•^
     );
-    tgt.setAttribute("tabindex", "0");
-    tgt.focus();
-    return true;
-  } else {
-    return false;
+    t-tgt.setattwibute("tabindex", /(^•ω•^) "0");
+    t-tgt.focus();
+    wetuwn twue;
+  } e-ewse {
+    wetuwn fawse;
   }
 }
 
-document.querySelector("table").addEventListener("keydown", function (event) {
-  switch (event.key) {
-    case "ArrowRight":
+d-document.quewysewectow("tabwe").addeventwistenew("keydown", ^^ function (event) {
+  s-switch (event.key) {
+    case "awwowwight":
       moveto(
-        parseInt(event.target.dataset.row, 10),
-        parseInt(event.target.dataset.col, 10) + 1,
+        p-pawseint(event.tawget.dataset.wow, 🥺 10),
+        pawseint(event.tawget.dataset.cow, (U ᵕ U❁) 10) + 1, 😳😳😳
       );
-      break;
-    case "ArrowLeft":
+      bweak;
+    case "awwowweft":
       moveto(
-        parseInt(event.target.dataset.row, 10),
-        parseInt(event.target.dataset.col, 10) - 1,
+        pawseint(event.tawget.dataset.wow, nyaa~~ 10),
+        p-pawseint(event.tawget.dataset.cow, (˘ω˘) 10) - 1, >_<
       );
-      break;
-    case "ArrowDown":
+      bweak;
+    case "awwowdown":
+      m-moveto(
+        p-pawseint(event.tawget.dataset.wow, XD 10) + 1, rawr x3
+        pawseint(event.tawget.dataset.cow, ( ͡o ω ͡o ) 10), :3
+      );
+      bweak;
+    case "awwowup":
       moveto(
-        parseInt(event.target.dataset.row, 10) + 1,
-        parseInt(event.target.dataset.col, 10),
+        p-pawseint(event.tawget.dataset.wow, mya 10) - 1, σωσ
+        pawseint(event.tawget.dataset.cow, (ꈍᴗꈍ) 10), OwO
       );
-      break;
-    case "ArrowUp":
-      moveto(
-        parseInt(event.target.dataset.row, 10) - 1,
-        parseInt(event.target.dataset.col, 10),
-      );
-      break;
-    case "Home":
-      if (event.ctrlKey) {
-        var i = 0;
-        var result;
-        do {
-          var j = 0;
-          var result;
+      b-bweak;
+    c-case "home":
+      i-if (event.ctwwkey) {
+        vaw i = 0;
+        vaw wesuwt;
+        d-do {
+          v-vaw j = 0;
+          v-vaw wesuwt;
           do {
-            result = moveto(i, j);
+            wesuwt = m-moveto(i, o.O j);
             j++;
-          } while (result == false);
+          } w-whiwe (wesuwt == f-fawse);
           i++;
-        } while (result == false);
-      } else {
-        moveto(parseInt(event.target.dataset.row, 10), 0);
+        } w-whiwe (wesuwt == fawse);
+      } ewse {
+        moveto(pawseint(event.tawget.dataset.wow, 😳😳😳 10), 0);
       }
-      break;
-    case "End":
-      if (event.ctrlKey) {
-        var i = maxrow;
-        var result;
-        do {
-          var j = maxcol;
-          do {
-            result = moveto(i, j);
-            j--;
-          } while (result == false);
+      bweak;
+    c-case "end":
+      i-if (event.ctwwkey) {
+        v-vaw i = m-maxwow;
+        vaw wesuwt;
+        d-do {
+          v-vaw j = maxcow;
+          d-do {
+            wesuwt = m-moveto(i, /(^•ω•^) j-j);
+            j-j--;
+          } w-whiwe (wesuwt == f-fawse);
           i--;
-        } while (result == false);
-      } else {
+        } w-whiwe (wesuwt == fawse);
+      } e-ewse {
         moveto(
-          parseInt(event.target.dataset.row, 10),
-          document.querySelector(
-            '[data-row="' + event.target.dataset.row + '"]:last-of-type',
-          ).dataset.col,
+          p-pawseint(event.tawget.dataset.wow, OwO 10),
+          d-document.quewysewectow(
+            '[data-wow="' + e-event.tawget.dataset.wow + '"]:wast-of-type', ^^
+          ).dataset.cow,
         );
       }
-      break;
-    case "PageUp":
-      var i = 0;
-      var result;
-      do {
-        result = moveto(i, event.target.dataset.col);
+      bweak;
+    case "pageup":
+      vaw i-i = 0;
+      vaw w-wesuwt;
+      d-do {
+        wesuwt = moveto(i, (///ˬ///✿) event.tawget.dataset.cow);
         i++;
-      } while (result == false);
-      break;
-    case "PageDown":
-      var i = maxrow;
-      var result;
+      } w-whiwe (wesuwt == f-fawse);
+      bweak;
+    case "pagedown":
+      v-vaw i = maxwow;
+      v-vaw wesuwt;
       do {
-        result = moveto(i, event.target.dataset.col);
-        i--;
-      } while (result == false);
-      break;
-    case "Enter":
-      alert(event.target.textContent);
-      break;
+        wesuwt = moveto(i, (///ˬ///✿) event.tawget.dataset.cow);
+        i-i--;
+      } w-whiwe (wesuwt == f-fawse);
+      b-bweak;
+    case "entew":
+      awewt(event.tawget.textcontent);
+      b-bweak;
   }
-  event.preventDefault();
+  e-event.pweventdefauwt();
 });
 ```
 
 ### より多くの例
 
-- [データグリッドの例](https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html) (英語)
-- [レイアウトグリッドの例](https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html) (英語)
-- [W3C/WAI チュートリアル: 表](https://www.w3.org/WAI/tutorials/tables/) (英語)
+- [データグリッドの例](https://www.w3.owg/tw/wai-awia-pwactices-1.1/exampwes/gwid/datagwids.htmw) (英語)
+- [レイアウトグリッドの例](https://www.w3.owg/tw/wai-awia-pwactices/exampwes/gwid/wayoutgwids.htmw) (英語)
+- [w3c/wai チュートリアル: 表](https://www.w3.owg/wai/tutowiaws/tabwes/) (英語)
 
 ## アクセシビリティに関する懸念
 
-[キーボードインタラクション](#keyboard_interactions)が適切に実装されていても、矢印キーを使用しなければならないことに気づかないユーザーもいます。 グリッド (`grid`) ロールを使用して、必要な機能性とインタラクションが最もよく達成できることを確認してください。
+[キーボードインタラクション](#keyboawd_intewactions)が適切に実装されていても、矢印キーを使用しなければならないことに気づかないユーザーもいます。 グリッド (`gwid`) ロールを使用して、必要な機能性とインタラクションが最もよく達成できることを確認してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## スクリーンリーダーのサポート
 
-TBD
+tbd
 
 ## 関連情報
 
-- [ARIA composite ロール](/ja/docs/Web/Accessibility/ARIA/Roles/composite_Role)
-- [ARIA table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
-- [ARIA treegrid ロール](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_Role)
-- [ARIA row ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-- [ARIA rowgroup ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-- [ARIA: gridcell ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [ARIA: rowheader ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role)
-- [ARIA: columnheader ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)
-- [HTML の表要素](/ja/docs/Web/HTML/Reference/Elements/table)
-- aria-level
-- aria-multiselectable
-- aria-readonly
+- [awia composite ロール](/ja/docs/web/accessibiwity/awia/wowes/composite_wowe)
+- [awia t-tabwe ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabwe_wowe)
+- [awia tweegwid ロール](/ja/docs/web/accessibiwity/awia/wowes/tweegwid_wowe)
+- [awia wow ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wow_wowe)
+- [awia wowgwoup ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wowgwoup_wowe)
+- [awia: g-gwidceww ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/gwidceww_wowe)
+- [awia: wowheadew ロール](/ja/docs/web/accessibiwity/awia/wowes/wowheadew_wowe)
+- [awia: c-cowumnheadew ロール](/ja/docs/web/accessibiwity/awia/wowes/cowumnheadew_wowe)
+- [htmw の表要素](/ja/docs/web/htmw/wefewence/ewements/tabwe)
+- a-awia-wevew
+- awia-muwtisewectabwe
+- awia-weadonwy
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. (///ˬ///✿) [**wai-awia ロール**](/ja/docs/web/accessibiwity/awia/wefewence/wowes){{wistsubpagesfowsidebaw("/ja/docs/web/accessibiwity/awia/wowes")}}

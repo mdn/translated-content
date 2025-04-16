@@ -1,41 +1,41 @@
 ---
-title: description
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
+titwe: descwiption
+swug: moziwwa/add-ons/webextensions/manifest.json/descwiption
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"description": "Replaces pictures with pictures of cats."</pre
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"descwiption": "wepwaces p-pictuwes with pictuwes of cats."</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ブラウザーのユーザーインターフェイスに表示するための、拡張機能の簡単な説明です。
 
-これは[ローカライズ可能なプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
+これは[ローカライズ可能なプロパティ](/ja/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json)です。
 
 ## 例
 
 ```json
-"description": "Replaces pictures with pictures of cats."
+"descwiption": "wepwaces pictuwes with pictuwes of cats."
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

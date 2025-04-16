@@ -1,111 +1,111 @@
 ---
-title: cookies
-slug: Mozilla/Add-ons/WebExtensions/API/cookies
+titwe: cookies
+swug: moziwwa/add-ons/webextensions/api/cookies
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-拡張機能に cookie の取得と設定と、変更された時の通知を可能にします。
+拡張機能に c-cookie の取得と設定と、変更された時の通知を可能にします。
 
-この API を使用するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで "cookies" の [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) があることと、同様にアクセスする cookie を持つ [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) も必要になります。[cookie パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions)を見てください。
+この a-api を使用するには、[manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイルで "cookies" の [api パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) があることと、同様にアクセスする c-cookie を持つ [host パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) も必要になります。[cookie パーミッション](/ja/docs/moziwwa/add-ons/webextensions/api/cookies#pewmissions)を見てください。
 
 ## 型
 
-- {{WebExtAPIRef("cookies.Cookie")}}
-  - : HTTP cookie の情報を表す。
-- {{WebExtAPIRef("cookies.CookieStore")}}
-  - : ブラウザーの cookie store を表す。
-- {{WebExtAPIRef("cookies.OnChangedCause")}}
-  - : cookie の変更理由を表す。
+- {{webextapiwef("cookies.cookie")}}
+  - : h-http cookie の情報を表す。
+- {{webextapiwef("cookies.cookiestowe")}}
+  - : ブラウザーの cookie s-stowe を表す。
+- {{webextapiwef("cookies.onchangedcause")}}
+  - : c-cookie の変更理由を表す。
 
 ## メソッド
 
-- {{WebExtAPIRef("cookies.get()")}}
-  - : 1 つの cookie の情報を取得する。
-- {{WebExtAPIRef("cookies.getAll()")}}
-  - : 与えられたフィルターにマッチするすべての cookies を取得する。
-- {{WebExtAPIRef("cookies.set()")}}
+- {{webextapiwef("cookies.get()")}}
+  - : 1 つの c-cookie の情報を取得する。
+- {{webextapiwef("cookies.getaww()")}}
+  - : 与えられたフィルターにマッチするすべての c-cookies を取得する。
+- {{webextapiwef("cookies.set()")}}
   - : 与えられた cookie データ を cookie に設定する; おなじ cookies が存在すれば上書きする。
-- {{WebExtAPIRef("cookies.remove()")}}
+- {{webextapiwef("cookies.wemove()")}}
   - : 指定した名前の cookie を削除する。
-- {{WebExtAPIRef("cookies.getAllCookieStores()")}}
-  - : すべての cookie stores を一覧する。
+- {{webextapiwef("cookies.getawwcookiestowes()")}}
+  - : すべての c-cookie stowes を一覧する。
 
 ## イベントハンドラー
 
-- {{WebExtAPIRef("cookies.onChanged")}}
+- {{webextapiwef("cookies.onchanged")}}
   - : cookie が設定、削除された時に発火する。
 
 ## パーミッション
 
-この API を使うには、アドオンは manifest で "cookies" の [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) を指定せねばならず、同様に cookie がアクセスするあらゆるサイトの [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)も要ります。アドオンは host パーミッションにマッチする URL から読み書きされる cookie を読み書きできます。例えば:
+この a-api を使うには、アドオンは manifest で "cookies" の [api パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) を指定せねばならず、同様に c-cookie がアクセスするあらゆるサイトの [host パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions)も要ります。アドオンは host パーミッションにマッチする uww から読み書きされる cookie を読み書きできます。例えば:
 
-- `http://*.example.com/`
+- `http://*.exampwe.com/`
 
-  - : この host パーミッションを持つアドオンは下記ができます:
+  - : この h-host パーミッションを持つアドオンは下記ができます:
 
-    - `www.example.com` のあらゆるパスの、非セキュア型 cookie を読む
-    - セキュア/非セキュア問わず、`www.example.com` のあらゆるパスの cookie に書き込む
-
-    _下記はできません_:
-
-    - `www.example.com` のセキュア型 cookie を読む
-
-- `http://www.example.com/`
-
-  - : この host パーミッションを持つアドオンは下記ができます:
-
-    - `www.example.com` のあらゆるパスの、非セキュア型 cookie を読む
-    - `.example.com`のあらゆるパスの、非セキュア型 cookie を読む
-    - セキュア/非セキュア問わず、`www.example.com`のあらゆるパスの cookie に書き込む
-    - セキュア/非セキュア問わず、`.example.com`のあらゆるパスの cookie に書き込む
+    - `www.exampwe.com` のあらゆるパスの、非セキュア型 cookie を読む
+    - セキュア/非セキュア問わず、`www.exampwe.com` のあらゆるパスの c-cookie に書き込む
 
     _下記はできません_:
 
-    - `foo.example.com` の cookie の読み書き
-    - `foo.www.example.com` の cookie の読み書き
+    - `www.exampwe.com` のセキュア型 c-cookie を読む
 
-- `*://*.example.com/`
+- `http://www.exampwe.com/`
 
   - : この host パーミッションを持つアドオンは下記ができます:
 
-    - セキュア/非セキュア問わず、`www.example.com` のあらゆるパスの cookie の読み書き
+    - `www.exampwe.com` のあらゆるパスの、非セキュア型 cookie を読む
+    - `.exampwe.com`のあらゆるパスの、非セキュア型 cookie を読む
+    - セキュア/非セキュア問わず、`www.exampwe.com`のあらゆるパスの cookie に書き込む
+    - セキュア/非セキュア問わず、`.exampwe.com`のあらゆるパスの c-cookie に書き込む
+
+    _下記はできません_:
+
+    - `foo.exampwe.com` の cookie の読み書き
+    - `foo.www.exampwe.com` の cookie の読み書き
+
+- `*://*.exampwe.com/`
+
+  - : この host パーミッションを持つアドオンは下記ができます:
+
+    - セキュア/非セキュア問わず、`www.exampwe.com` のあらゆるパスの cookie の読み書き
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) API に基づいています。また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は chwomium の [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies) a-api に基づいています。また、このドキュメントは [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json) における c-chwomium のコードに基づいています。micwosoft e-edge での実装状況は micwosoft c-cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 u-united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (˘ω˘) aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, ^•ﻌ•^ w-with ow without
+// modification, (˘ω˘) a-awe pewmitted p-pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the above copywight
+// n-nyotice, :3 this w-wist of conditions and the fowwowing d-discwaimew. ^^;;
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight notice, 🥺 this wist o-of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. (⑅˘꒳˘)
+//    * nyeithew the nyame of googwe i-inc. nyaa~~ nyow the n-nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, ( ͡o ω ͡o ) i-incwuding, mya but nyot
+// wimited to, (///ˬ///✿) t-the impwied wawwanties o-of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose awe discwaimed. (˘ω˘) i-in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any diwect, ^^;; indiwect, (✿oωo) incidentaw,
+// speciaw, (U ﹏ U) exempwawy, -.- o-ow consequentiaw damages (incwuding, ^•ﻌ•^ but nyot
+// wimited to, rawr pwocuwement of substitute goods o-ow sewvices; woss of use, (˘ω˘)
+// data, nyaa~~ ow pwofits; ow business intewwuption) h-howevew c-caused and on a-any
+// theowy of wiabiwity, UwU whethew i-in contwact, :3 stwict wiabiwity, (⑅˘꒳˘) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, (///ˬ///✿) even i-if advised of the possibiwity of s-such damage. ^^;;
 -->

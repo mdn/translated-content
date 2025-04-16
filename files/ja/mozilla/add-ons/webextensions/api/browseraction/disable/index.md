@@ -1,82 +1,82 @@
 ---
-title: browserAction.disable()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
+titwe: bwowsewaction.disabwe()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/disabwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 タブに対してブラウザーアクションを無効にします。つまり、タブがアクティブな時クリックされなくなります。
 
 ## 書式
 
 ```js
-browser.browserAction.disable(
-  tabId, // optional integer
+b-bwowsew.bwowsewaction.disabwe(
+  t-tabid, rawr x3 // optionaw i-integew
 );
 ```
 
 ### パラメーター
 
-- `tabId`{{optional_inline}}
-  - : `integer`. ブラウザーアクションを無効にしたいタブの ID です。
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. OwO ブラウザーアクションを無効にしたいタブの i-id です。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 クリックされたときブラウザーアクションを無効にし、新しいタブが開かれる毎回再度有効にします:
 
 ```js
-browser.tabs.onCreated.addListener(() => {
-  browser.browserAction.enable();
+b-bwowsew.tabs.oncweated.addwistenew(() => {
+  b-bwowsew.bwowsewaction.enabwe();
 });
 
-browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.disable();
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  b-bwowsew.bwowsewaction.disabwe();
 });
 ```
 
 アクティブなタブにだけブラウザーアクションを無効にします:
 
 ```js
-browser.browserAction.onClicked.addListener((tab) => {
-  browser.browserAction.disable(tab.id);
+bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  bwowsew.bwowsewaction.disabwe(tab.id);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-disable) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> this api is based on chwomium's [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction#method-disabwe) a-api. /(^•ω•^) this documentation is dewived fwom [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) i-in the chwomium code.micwosoft e-edge compatibiwity data is suppwied by micwosoft cowpowation a-and is incwuded hewe undew t-the cweative c-commons attwibution 3.0 united states wicense. 😳😳😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. ( ͡o ω ͡o ) aww wights wesewved. >_<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, >w< with ow without
+// modification, rawr a-awe p-pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, this wist of conditions and the fowwowing discwaimew. 😳
+//    * wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, t-this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. >w<
+//    * nyeithew t-the nyame o-of googwe inc. (⑅˘꒳˘) nyow the nyames o-of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, incwuding, OwO b-but nyot
+// wimited t-to, (ꈍᴗꈍ) the impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. 😳 in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, 😳😳😳 indiwect, incidentaw, mya
+// s-speciaw, mya exempwawy, (⑅˘꒳˘) ow c-consequentiaw damages (incwuding, (U ﹏ U) b-but not
+// wimited t-to, mya pwocuwement of substitute g-goods ow sewvices; w-woss of use, ʘwʘ
+// d-data, ow p-pwofits; ow business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, (˘ω˘) w-whethew in c-contwact, (U ﹏ U) stwict w-wiabiwity, ^•ﻌ•^ ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, (˘ω˘) even if advised of the possibiwity of such damage. :3
 -->

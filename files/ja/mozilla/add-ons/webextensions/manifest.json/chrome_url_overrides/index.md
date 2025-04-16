@@ -1,55 +1,55 @@
 ---
-title: chrome_url_overrides
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
+titwe: chwome_uww_ovewwides
+swug: moziwwa/add-ons/webextensions/manifest.json/chwome_uww_ovewwides
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-  "chrome_url_overrides" : {
-    "newtab": "my-new-tab.html"
-  }</pre
+        <pwe c-cwass="bwush: j-json no-wine-numbews">
+  "chwome_uww_ovewwides" : {
+    "newtab": "my-new-tab.htmw"
+  }</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`chrome_url_overrides` キーを使って、通常はブラウザー自身が行っているいろいろなページへの文書の置き換えをカスタムすることができます。
+`chwome_uww_ovewwides` キーを使って、通常はブラウザー自身が行っているいろいろなページへの文書の置き換えをカスタムすることができます。
 
 ## 構文
 
-`chrome_url_overrides` キーは次のプロパティを持つオブジェクトです:
+`chwome_uww_ovewwides` キーは次のプロパティを持つオブジェクトです:
 
 | 名前       | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `bookmark` | `String` | ブックマークに出てくるページへの置き換えを提供します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `history`  | `String` | 履歴に出てくるページへの置き換えを提供します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `newtab`   | `String` | "新規タブ" ページに出てくる文書の置き換えを提供します。これはユーザーが新しいタブを開いてまだ文書を読み込んでない時のページです: 例えば、 <kbd>Ctrl</kbd>/<kbd>Command</kbd>+<kbd>T</kbd> のキーボードショートカットで。置き換えは HTML ファイルへの URL として与えられます。ファイルは拡張機能に同梱する必要があります: ここにはリモートの URL を指定できません。拡張機能のルートフォルダーから相対的に、次のように指定できます: "path/to/newtab.html".文書は通常のウェブページと同様に CSS と JavaScript をロードできます。 ページ内で実行する JavaScript はバックグラウンドスクリプトと同じように [privileged "browser.\*" APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/API) のアクセスを得ます。ページに [\<title>](/ja/docs/Web/HTML/Reference/Elements/title) を入れるのは良い習慣で、そうしないとタブのタイトルは "moz-extension://..." の URL になるでしょう。よくあるユースケースはユーザーに新しいタブページを定義できるようにすることです: これをするには、ユーザーが定義したページにナビゲートするカスタムの新規タブページを提供します。2 つ以上の拡張機能がいずれもカスタムの新規タブページを定義する場合、インストールや有効化された最後の分の値を使われます。ブラウザーのホームページを上書きするには、代わりに"[chrome_settings_overrides](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)" を使います。 |
+| `bookmawk` | `stwing` | ブックマークに出てくるページへの置き換えを提供します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `histowy`  | `stwing` | 履歴に出てくるページへの置き換えを提供します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `newtab`   | `stwing` | "新規タブ" ページに出てくる文書の置き換えを提供します。これはユーザーが新しいタブを開いてまだ文書を読み込んでない時のページです: 例えば、 <kbd>ctww</kbd>/<kbd>command</kbd>+<kbd>t</kbd> のキーボードショートカットで。置き換えは h-htmw ファイルへの uww として与えられます。ファイルは拡張機能に同梱する必要があります: ここにはリモートの uww を指定できません。拡張機能のルートフォルダーから相対的に、次のように指定できます: "path/to/newtab.htmw".文書は通常のウェブページと同様に css と javascwipt をロードできます。 ページ内で実行する j-javascwipt はバックグラウンドスクリプトと同じように [pwiviweged "bwowsew.\*" apis](/ja/docs/moziwwa/add-ons/webextensions/api) のアクセスを得ます。ページに [\<titwe>](/ja/docs/web/htmw/wefewence/ewements/titwe) を入れるのは良い習慣で、そうしないとタブのタイトルは "moz-extension://..." の uww になるでしょう。よくあるユースケースはユーザーに新しいタブページを定義できるようにすることです: これをするには、ユーザーが定義したページにナビゲートするカスタムの新規タブページを提供します。2 つ以上の拡張機能がいずれもカスタムの新規タブページを定義する場合、インストールや有効化された最後の分の値を使われます。ブラウザーのホームページを上書きするには、代わりに"[chwome_settings_ovewwides](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/chwome_settings_ovewwides)" を使います。 |
 
-すべてのプロパティは[ローカライズ可能です](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)。
+すべてのプロパティは[ローカライズ可能です](/ja/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json)。
 
 ## 例
 
 ```json
-"chrome_url_overrides" : {
-  "newtab": "my-new-tab.html"
+"chwome_uww_ovewwides" : {
+  "newtab": "my-new-tab.htmw"
 }
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

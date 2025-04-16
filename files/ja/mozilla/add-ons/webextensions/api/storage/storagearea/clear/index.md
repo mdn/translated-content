@@ -1,21 +1,21 @@
 ---
-title: StorageArea.clear()
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
+titwe: stowageawea.cweaw()
+swug: m-moziwwa/add-ons/webextensions/api/stowage/stowageawea/cweaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 全てのアイテムをストレージ領域から削除します。
 
-この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+この関数は [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返す非同期関数です。
 
 ## 構文
 
 ```js
-var clearing = browser.storage.<storageType>.clear()
+v-vaw cweawing = b-bwowsew.stowage.<stowagetype>.cweaw()
 ```
 
-`<storageType>` は {{WebExtAPIRef("storage.sync")}} または {{WebExtAPIRef("storage.local")}} の書き込み可能なストレージタイプです。
+`<stowagetype>` は {{webextapiwef("stowage.sync")}} または {{webextapiwef("stowage.wocaw")}} の書き込み可能なストレージタイプです。
 
 ### 引数
 
@@ -23,28 +23,28 @@ var clearing = browser.storage.<storageType>.clear()
 
 ### 返り値
 
-成功時は引数の無い [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
+成功時は引数の無い [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返します。 失敗した場合 p-pwomise はエラーメッセージと共にリジェクトされます。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 ```js
-function onCleared() {
-  console.log("OK");
+function o-oncweawed() {
+  c-consowe.wog("ok");
 }
 
-function onError(e) {
-  console.log(e);
+f-function o-onewwow(e) {
+  consowe.wog(e);
 }
 
-var clearStorage = browser.storage.local.clear();
-clearStorage.then(onCleared, onError);
+vaw cweawstowage = bwowsew.stowage.wocaw.cweaw();
+cweawstowage.then(oncweawed, >_< o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は chwomium の [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage) a-api に基づいています。また、このドキュメントは [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) における chwomium のコードに基づいています。micwosoft e-edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative c-commons attwibution 3.0 united states w-wicense に従っています。

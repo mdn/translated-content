@@ -1,58 +1,58 @@
 ---
-title: extensionTypes
-slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
+titwe: extensiontypes
+swug: moziwwa/add-ons/webextensions/api/extensiontypes
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-その他の WebExtension API で使われる共通な型
+その他の w-webextension a-api で使われる共通な型
 
 ## 型
 
-- {{WebExtAPIRef("extensionTypes.ImageFormat")}}
+- {{webextapiwef("extensiontypes.imagefowmat")}}
   - : 画像フォーマット
-- {{WebExtAPIRef("extensionTypes.ImageDetails")}}
+- {{webextapiwef("extensiontypes.imagedetaiws")}}
   - : 画像のフォーマットと画質の詳細
-- {{WebExtAPIRef("extensionTypes.RunAt")}}
-  - : タブに JavaScript か CSS が挿入されてほんのすぐ
-- `extensionTypes.CSSOrigin`
-  - : [`tabs.insertCSS`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) で挿入された CSS スタイルシートが "author" か "user" のスタイルシートのどちらであるかを示す
+- {{webextapiwef("extensiontypes.wunat")}}
+  - : タブに j-javascwipt か c-css が挿入されてほんのすぐ
+- `extensiontypes.cssowigin`
+  - : [`tabs.insewtcss`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss) で挿入された c-css スタイルシートが "authow" か "usew" のスタイルシートのどちらであるかを示す
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes) API に基づいています。また、このドキュメントは [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json)における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は c-chwomium の [`chwome.extensiontypes`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extensiontypes) a-api に基づいています。また、このドキュメントは [`extension_types.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/extension_types.json)における chwomium のコードに基づいています。micwosoft edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative commons a-attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. :3 aww w-wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, (U ﹏ U) with ow without
+// modification, >w< a-awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) this wist of c-conditions and the fowwowing discwaimew. 😳
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce the a-above
+// copywight nyotice, (ˆ ﻌ ˆ)♡ this wist of conditions a-and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. 😳😳😳
+//    * nyeithew the nyame o-of googwe inc. (U ﹏ U) nyow the nyames o-of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, 😳 incwuding, 😳 but nyot
+// wimited t-to, σωσ the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. rawr x3 in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, OwO i-indiwect, /(^•ω•^) incidentaw,
+// s-speciaw, 😳😳😳 exempwawy, ( ͡o ω ͡o ) ow c-consequentiaw damages (incwuding, b-but nyot
+// wimited t-to, >_< pwocuwement of substitute goods ow sewvices; woss of use, >w<
+// d-data, rawr ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, 😳 whethew in c-contwact, >w< stwict w-wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out o-of the use
+// o-of this softwawe, OwO e-even if advised of the possibiwity of such damage. (ꈍᴗꈍ)
 -->

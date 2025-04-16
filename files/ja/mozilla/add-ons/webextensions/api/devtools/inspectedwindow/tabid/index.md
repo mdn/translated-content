@@ -1,74 +1,74 @@
 ---
-title: devtools.inspectedWindow.tabId
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
+titwe: devtoows.inspectedwindow.tabid
+swug: moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/tabid
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-devtools のこのインスタンスがアタッチされる {{WebExtAPIRef("tabs.Tab", "tab")}} の ID。番号で表されます。
+d-devtoows のこのインスタンスがアタッチされる {{webextapiwef("tabs.tab", 😳😳😳 "tab")}} の i-id。番号で表されます。
 
-これは拡張機能のバックグラウンドページに送信できるため、バックグラウンドページは {{WebExtAPIRef("tabs")}} API を使用してタブと対話できます:
+これは拡張機能のバックグラウンドページに送信できるため、バックグラウンドページは {{webextapiwef("tabs")}} a-api を使用してタブと対話できます:
 
 ```js
-// devtools-panel.js
+// d-devtoows-panew.js
 
-const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
+c-const s-scwipttoattach = "document.body.innewhtmw = 'hi f-fwom the devtoows';";
 
-attachContentScriptButton.addEventListener("click", () => {
-  browser.runtime.sendMessage({
-    tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach,
+a-attachcontentscwiptbutton.addeventwistenew("cwick", ( ͡o ω ͡o ) () => {
+  bwowsew.wuntime.sendmessage({
+    tabid: bwowsew.devtoows.inspectedwindow.tabid, >_<
+    scwipt: s-scwipttoattach, >w<
   });
 });
 ```
 
 ```js
-// background.js
+// backgwound.js
 
-function handleMessage(request, sender, sendResponse) {
-  browser.tabs.executeScript(request.tabId, {
-    code: request.script,
+function h-handwemessage(wequest, sendew, rawr s-sendwesponse) {
+  bwowsew.tabs.exekawaii~scwipt(wequest.tabid, 😳 {
+    code: wequest.scwipt, >w<
   });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
 ## ブラウザーの対応状況
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API に基づいています。Microsoft Edge の互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に含まれています。
+> [!note]
+> この a-api は chwomium の [`chwome.devtoows`](https://devewopew.chwome.com/extensions/devtoows) a-api に基づいています。micwosoft e-edge の互換性データは micwosoft cowpowation によって提供され、cweative commons attwibution 3.0 united s-states wicense に含まれています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (⑅˘꒳˘) aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in s-souwce and binawy f-fowms, OwO with o-ow without
+// modification, (ꈍᴗꈍ) a-awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, 😳 this wist of conditions and the f-fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce the a-above
+// copywight nyotice, mya this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. mya
+//    * n-nyeithew the nyame o-of googwe inc. nyow the nyames of its
+// contwibutows m-may be used to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, (U ﹏ U) incwuding, b-but nyot
+// wimited t-to, mya the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, ʘwʘ i-indiwect, (˘ω˘) incidentaw,
+// s-speciaw, (U ﹏ U) e-exempwawy, ^•ﻌ•^ ow consequentiaw damages (incwuding, (˘ω˘) b-but nyot
+// wimited t-to, :3 pwocuwement o-of substitute g-goods ow sewvices; woss of use, ^^;;
+// data, 🥺 ow p-pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// t-theowy of wiabiwity, (⑅˘꒳˘) whethew in contwact, nyaa~~ stwict wiabiwity, :3 ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, ( ͡o ω ͡o ) even if advised o-of the possibiwity of such damage. mya
 -->

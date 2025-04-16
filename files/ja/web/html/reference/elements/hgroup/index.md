@@ -1,147 +1,147 @@
 ---
-title: "<hgroup>: 見出しグループ要素"
-slug: Web/HTML/Reference/Elements/hgroup
-original_slug: Web/HTML/Element/hgroup
-l10n:
-  sourceCommit: ca65963b93e69591b9362bb2bfde56f93128e2cb
+titwe: "<hgwoup>: 見出しグループ要素"
+swug: web/htmw/wefewence/ewements/hgwoup
+o-owiginaw_swug: w-web/htmw/ewement/hgwoup
+w-w10n:
+  souwcecommit: c-ca65963b93e69591b9362bb2bfde56f93128e2cb
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<hgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素と、1 つ以上の [`<p>`](/ja/docs/Web/HTML/Reference/Elements/p) 要素をグループ化します。
+**`<hgwoup>`** は [htmw](/ja/docs/web/htmw) の要素で、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/web/htmw/wefewence/ewements/heading_ewements) 要素と、1 つ以上の [`<p>`](/ja/docs/web/htmw/wefewence/ewements/p) 要素をグループ化します。
 
-{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;hgwoup&gt;", ʘwʘ "tabbed-standawd")}}
 
-```html interactive-example
-<hgroup>
-  <h1>Frankenstein</h1>
-  <p>Or: The Modern Prometheus</p>
-</hgroup>
+```htmw i-intewactive-exampwe
+<hgwoup>
+  <h1>fwankenstein</h1>
+  <p>ow: t-the modewn p-pwometheus</p>
+</hgwoup>
 <p>
-  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
-  intelligent life. But when his creature first stirs, he realizes he has made a
-  monster. A monster which, abandoned by his master and shunned by everyone who
-  sees it, follows Dr Frankenstein to the very ends of the earth.
+  victow fwankenstein, σωσ a swiss scientist, OwO has a gweat ambition: to c-cweate
+  intewwigent wife. 😳😳😳 but when his cweatuwe f-fiwst stiws, 😳😳😳 he weawizes he has m-made a
+  monstew. o.O a monstew which, ( ͡o ω ͡o ) abandoned by his mastew and s-shunned by evewyone who
+  sees it, (U ﹏ U) f-fowwows dw fwankenstein t-to the vewy ends of the eawth. (///ˬ///✿)
 </p>
 ```
 
-```css interactive-example
-hgroup {
-  text-align: right;
-  padding-right: 16px;
-  border-right: 10px solid #00c8d7;
+```css intewactive-exampwe
+hgwoup {
+  text-awign: w-wight;
+  padding-wight: 16px;
+  bowdew-wight: 10px sowid #00c8d7;
 }
 
-hgroup h1 {
-  margin-bottom: 0;
+hgwoup h1 {
+  mawgin-bottom: 0;
 }
 
-hgroup p {
-  margin: 0;
-  font-weight: bold;
+h-hgwoup p {
+  mawgin: 0;
+  f-font-weight: b-bowd;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 使用上の注意
 
-`<hgroup>` 要素は、見出しと副次的な内容（副題や代替タイトル、キャッチフレーズなど）をグループ化することが可能です。これらのコンテンツは、 `<hgroup>` 要素内の `<p>` 要素として表現されます。
+`<hgwoup>` 要素は、見出しと副次的な内容（副題や代替タイトル、キャッチフレーズなど）をグループ化することが可能です。これらのコンテンツは、 `<hgwoup>` 要素内の `<p>` 要素として表現されます。
 
-`<hgroup>` 要素自体は、ウェブページの文書のアウトラインに影響を与えません。むしろ、 `<hgroup>` 内で許可されている単一の見出しが文書のアウトラインに寄与します。
+`<hgwoup>` 要素自体は、ウェブページの文書のアウトラインに影響を与えません。むしろ、 `<hgwoup>` 内で許可されている単一の見出しが文書のアウトラインに寄与します。
 
 ## 例
 
-```html
-<!doctype html>
-<title>HTML Standard</title>
+```htmw
+<!doctype h-htmw>
+<titwe>htmw s-standawd</titwe>
 <body>
-  <hgroup id="document-title">
-    <h1>HTML: Living Standard</h1>
-    <p>Last Updated 12 July 2022</p>
-  </hgroup>
-  <p>Some intro to the document.</p>
-  <h2>Table of contents</h2>
-  <ol id="toc">
+  <hgwoup id="document-titwe">
+    <h1>htmw: wiving s-standawd</h1>
+    <p>wast updated 12 juwy 2022</p>
+  </hgwoup>
+  <p>some i-intwo to the document.</p>
+  <h2>tabwe of contents</h2>
+  <ow id="toc">
     …
-  </ol>
-  <h2>First section</h2>
-  <p>Some intro to the first section.</p>
+  </ow>
+  <h2>fiwst section</h2>
+  <p>some intwo to the f-fiwst section.</p>
 </body>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >, 見出しコンテンツ, 知覚可能コンテンツ
+        >, >w< 見出しコンテンツ, rawr 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-      0 個以上の {{HTMLElement("p")}} と、それに続く 1 個の {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
-        {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
-        {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}} と、それに続く 0 個以上の {{HTMLElement("p")}}
+      0 個以上の {{htmwewement("p")}} と、それに続く 1 個の {{htmwewement("heading_ewements", mya "h1")}}, {{htmwewement("heading_ewements", ^^ "h2")}}, 😳😳😳
+        {{htmwewement("heading_ewements", mya "h3")}}, {{htmwewement("heading_ewements", 😳 "h4")}}, -.-
+        {{htmwewement("heading_ewements", "h5")}}, 🥺 {{htmwewement("heading_ewements", o.O "h6")}} と、それに続く 0 個以上の {{htmwewement("p")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の a-awia ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"
-            >group</a
+          ><a hwef="/ja/docs/web/accessibiwity/awia/wowes/gwoup_wowe"
+            >gwoup</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている a-awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [HTML5 文書のセクションとアウトライン](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
+- 他のセクション関連要素: {{htmwewement("body")}}, /(^•ω•^) {{htmwewement("awticwe")}}, nyaa~~ {{htmwewement("section")}}, {{htmwewement("aside")}}, nyaa~~ {{htmwewement("heading_ewements", :3 "h1")}}, 😳😳😳 {{htmwewement("heading_ewements", (˘ω˘) "h2")}}, {{htmwewement("heading_ewements", ^^ "h3")}}, {{htmwewement("heading_ewements", :3 "h4")}}, -.- {{htmwewement("heading_ewements", 😳 "h5")}}, mya {{htmwewement("heading_ewements", (˘ω˘) "h6")}}, {{htmwewement("nav")}}, >_< {{htmwewement("headew")}}, -.- {{htmwewement("footew")}}, 🥺 {{htmwewement("addwess")}}
+- [htmw5 文書のセクションとアウトライン](/ja/docs/web/htmw/wefewence/ewements/heading_ewements)

@@ -1,20 +1,20 @@
 ---
-title: identity.getRedirectURL()
-slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
+titwe: identity.getwediwectuww()
+swug: moziwwa/add-ons/webextensions/api/identity/getwediwectuww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-リダイレクト URL として利用可能な URL を生成します。
+リダイレクト u-uww として利用可能な u-uww を生成します。
 
-この URL は、アドオン ID から生成されるため、使用したい場合、[`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを使用してアドオン ID を明示的に設定する必要があるでしょう (設定しない場合、アドオンを[一時的にインストール](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)するたびに、異なるリダイレクト URL を取得することになります)。
+この u-uww は、アドオン i-id から生成されるため、使用したい場合、[`bwowsew_specific_settings`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) キーを使用してアドオン i-id を明示的に設定する必要があるでしょう (設定しない場合、アドオンを[一時的にインストール](/ja/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox)するたびに、異なるリダイレクト u-uww を取得することになります)。
 
-リダイレクト URL については、[リダイレクト URL を取得する](/ja/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url)を参照してください。
+リダイレクト u-uww については、[リダイレクト u-uww を取得する](/ja/docs/moziwwa/add-ons/webextensions/api/identity#getting_the_wediwect_uww)を参照してください。
 
 ## 構文
 
 ```js
-var redirectURL = browser.identity.getRedirectURL();
+vaw wediwectuww = bwowsew.identity.getwediwectuww();
 ```
 
 ### 引数
@@ -23,21 +23,21 @@ var redirectURL = browser.identity.getRedirectURL();
 
 ### 返り値
 
-リダイレクト URL を含む文字列
+リダイレクト uww を含む文字列
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
-リダイレクト URL を取得する:
+リダイレクト uww を取得する:
 
 ```js
-var redirectURL = browser.identity.getRedirectURL();
+v-vaw wediwectuww = bwowsew.identity.getwediwectuww();
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います
+> [!note]
+> この api は chwomium の [`chwome.identity`](https://devewopew.chwome.com/docs/extensions/wefewence/api/identity) api に基づいています。micwosoft e-edge の実装状況は micwosoft cowpowation から提供されたものであり、ここでは c-cweative commons attwibution 3.0 united states wicense に従います

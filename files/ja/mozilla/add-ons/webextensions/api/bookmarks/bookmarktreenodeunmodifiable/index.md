@@ -1,51 +1,51 @@
 ---
-title: bookmarks.BookmarkTreeNodeUnmodifiable
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
+titwe: bookmawks.bookmawktweenodeunmodifiabwe
+swug: moziwwa/add-ons/webextensions/api/bookmawks/bookmawktweenodeunmodifiabwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.BookmarkTreeNodeUnmodifiable`** 型は、ブックマークツリー上のノード（ブックマーク / フォルダー）が変更不可な理由を表すものです。この型は、ブックマークノードの {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} プロパティで使用されます。
+**`bookmawks.bookmawktweenodeunmodifiabwe`** 型は、ブックマークツリー上のノード（ブックマーク / フォルダー）が変更不可な理由を表すものです。この型は、ブックマークノードの {{webextapiwef("bookmawks.bookmawktweenode", 😳😳😳 "bookmawks.bookmawktweenode.unmodifiabwe", :3 "unmodifiabwe")}} プロパティで使用されます。
 
 ## 値の型
 
-この値は {{jsxref("string")}} 型であり、現在取りうる値は `"managed"` のみです。すなわち、システム管理者（ペアレンタルコントロールが有効な場合は保護者）がこのブックマークノードを設定したことを意味します。
+この値は {{jsxwef("stwing")}} 型であり、現在取りうる値は `"managed"` のみです。すなわち、システム管理者（ペアレンタルコントロールが有効な場合は保護者）がこのブックマークノードを設定したことを意味します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この a-api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-update) a-api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における c-chwomium のコードから作成されています。micwosoft e-edge の実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは c-cweative c-commons attwibution 3.0 u-united states wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. OwO aww wights w-wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, >w< with ow without
+// m-modification, (U ﹏ U) awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, 😳 this wist of conditions a-and the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, 😳😳😳 t-this wist o-of conditions and t-the fowwowing d-discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// distwibution. (U ﹏ U)
+//    * n-nyeithew the nyame of googwe inc. (///ˬ///✿) nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without s-specific pwiow wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, 😳 incwuding, σωσ b-but nyot
+// wimited to, t-the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. rawr x3 in nyo event s-shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, indiwect, OwO incidentaw, /(^•ω•^)
+// speciaw, 😳😳😳 exempwawy, ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) b-but nyot
+// wimited to, >_< p-pwocuwement of s-substitute goods o-ow sewvices; woss of use, >w<
+// data, rawr ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, 😳 whethew in contwact, >w< s-stwict wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the u-use
+// of this s-softwawe, OwO even i-if advised of the p-possibiwity of such damage. (ꈍᴗꈍ)
 -->

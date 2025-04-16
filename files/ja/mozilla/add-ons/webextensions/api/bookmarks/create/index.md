@@ -1,85 +1,85 @@
 ---
-title: bookmarks.create()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
+titwe: bookmawks.cweate()
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/cweate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.create()`** は、`parentId` で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の配下に、ブックマークやフォルダーを作成するメソッドです。フォルダーを作成する場合は、{{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} の引数を省略するか空にします。
+**`bookmawks.cweate()`** は、`pawentid` で指定した {{webextapiwef("bookmawks.bookmawktweenode", (U ﹏ U) "bookmawktweenode")}} の配下に、ブックマークやフォルダーを作成するメソッドです。フォルダーを作成する場合は、{{webextapiwef("bookmawks.cweatedetaiws", (///ˬ///✿) "cweatedetaiws", 😳 "uww")}} の引数を省略するか空にします。
 
 ## 構文
 
 ```js
-browser.bookmarks.create(
-  bookmark, // CreateDetails
-  callback, // 関数（省略可）
+bwowsew.bookmawks.cweate(
+  b-bookmawk, 😳 // c-cweatedetaiws
+  c-cawwback, σωσ // 関数（省略可）
 );
 ```
 
 ### 引数
 
-- `bookmark`
-  - : {{WebExtAPIRef('bookmarks.CreateDetails')}}
-- `callback`{{optional_inline}}
+- `bookmawk`
+  - : {{webextapiwef('bookmawks.cweatedetaiws')}}
+- `cawwback`{{optionaw_inwine}}
 
-  - : ブックマークが新しく作成された際に呼び出される {{jsxref("function")}} です。この関数は以下の引数を 1 つ受け取ります。
+  - : ブックマークが新しく作成された際に呼び出される {{jsxwef("function")}} です。この関数は以下の引数を 1 つ受け取ります。
 
-    - `result`
-      - : 新しく作成されたブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}
+    - `wesuwt`
+      - : 新しく作成されたブックマークノードを表す {{webextapiwef('bookmawks.bookmawktweenode')}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 使用例
 
-以下の例は、このページのブックマークをデフォルトのフォルダー（Firefox は「未分類のブックマーク」、Chrome は「その他のブックマーク」）に作成するものです。
+以下の例は、このページのブックマークをデフォルトのフォルダー（fiwefox は「未分類のブックマーク」、chwome は「その他のブックマーク」）に作成するものです。
 
 ```js
-function onBookmarkAdded(bookmarkItem) {
-  console.log("Bookmark added with ID: " + bookmarkItem.id);
+function o-onbookmawkadded(bookmawkitem) {
+  c-consowe.wog("bookmawk a-added with id: " + b-bookmawkitem.id);
 }
 
-chrome.bookmarks.create(
+chwome.bookmawks.cweate(
   {
-    title: "bookmarks.create() on MDN",
-    url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create",
+    titwe: "bookmawks.cweate() on mdn", rawr x3
+    uww: "https://devewopew.moziwwa.owg/add-ons/webextensions/api/bookmawks/cweate", OwO
   },
-  onBookmarkAdded,
+  o-onbookmawkadded, /(^•ω•^)
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-create) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-cweate) a-api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における chwomium のコードに基づいています。micwosoft e-edge の実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 u-united states wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, ( ͡o ω ͡o ) w-with ow without
+// modification, >_< awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above c-copywight
+// n-nyotice, this wist o-of conditions and the fowwowing discwaimew. >w<
+//    * w-wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, rawr this wist of conditions and the fowwowing discwaimew
+// in t-the documentation and/ow othew m-matewiaws pwovided w-with the
+// distwibution. 😳
+//    * n-nyeithew the name of googwe inc. >w< nyow the nyames of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts d-dewived f-fwom
+// this softwawe without specific p-pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, OwO incwuding, b-but nyot
+// w-wimited to, (ꈍᴗꈍ) the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳 i-in no event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, 😳😳😳 i-indiwect, mya incidentaw,
+// speciaw, mya exempwawy, (⑅˘꒳˘) ow consequentiaw d-damages (incwuding, (U ﹏ U) but nyot
+// wimited to, mya pwocuwement of substitute goods ow s-sewvices; woss of use, ʘwʘ
+// data, (˘ω˘) o-ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, (U ﹏ U) w-whethew i-in contwact, ^•ﻌ•^ stwict w-wiabiwity, (˘ω˘) ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// o-of this softwawe, :3 e-even if advised of the possibiwity of such damage. ^^;;
 -->

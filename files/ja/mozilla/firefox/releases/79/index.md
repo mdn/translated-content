@@ -1,13 +1,13 @@
 ---
-title: Firefox 79 for developers
-slug: Mozilla/Firefox/Releases/79
+titwe: fiwefox 79 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/79
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 79 の変更点をまとめています。Firefox 79 は、2020 年 7 月 28 日にリリースされました。
+このページでは、開発者に影響する f-fiwefox 79 の変更点をまとめています。fiwefox 79 は、2020 年 7 月 28 日にリリースされました。
 
-Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new tooling, and platform updates](https://hacks.mozilla.org/2020/07/firefox-79/)」もご覧ください。
+m-moziwwa h-hacks の記事「[fiwefox 79: t-the safe wetuwn o-of shawed memowy, n-nyew toowing, a-and pwatfowm updates](https://hacks.moziwwa.owg/2020/07/fiwefox-79/)」もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -15,101 +15,101 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 #### コンソール
 
-- レスポンスコードが 400-499 および 500-599 の範囲にあるネットワークメッセージを、エラーとみなすようになりました。また、[要求や XHR のフィルターが無効であっても](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#filtering_by_category) 表示するようになりました ([Firefox バグ 1635460](https://bugzil.la/1635460))。
-- (ブラウザーや拡張機能によって) ブロックされた要求のネットワークメッセージが、[コンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html) で "禁止" アイコンがつくようになりました ([Firefox バグ 1629875](https://bugzil.la/1629875))。
+- レスポンスコードが 400-499 および 500-599 の範囲にあるネットワークメッセージを、エラーとみなすようになりました。また、[要求や xhw のフィルターが無効であっても](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/consowe_messages/index.htmw#fiwtewing_by_categowy) 表示するようになりました ([fiwefox バグ 1635460](https://bugziw.wa/1635460))。
+- (ブラウザーや拡張機能によって) ブロックされた要求のネットワークメッセージが、[コンソール](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/consowe_messages/index.htmw) で "禁止" アイコンがつくようになりました ([fiwefox バグ 1629875](https://bugziw.wa/1629875))。
 
 #### デバッガー
 
-- [ソースファイルを "ブラックボックス化"](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignore_a_source/index.html) を、ソースファイルを "無視" と呼ぶようになりました ([Firefox バグ 1642811](https://bugzil.la/1642811))。
-- [例外](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/breaking_on_exceptions/index.html) でインラインプレビューが可能になりました ([Firefox バグ 1581708](https://bugzil.la/1581708))。
-- 監視式やスコープのセクションにある項目にマウスポインターを載せると、それらの値を表示するツールチップが現れるようになりました ([Firefox バグ 1631545](https://bugzil.la/1631545))。
-- [コールスタックセクション](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#call_stack) のコンテキストメニューの項目に、現在のスタックフレームをはじめから実行する **フレームを再実行** を追加しました ([Firefox バグ 1594467](https://bugzil.la/1594467))。
+- [ソースファイルを "ブラックボックス化"](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/ignowe_a_souwce/index.htmw) を、ソースファイルを "無視" と呼ぶようになりました ([fiwefox バグ 1642811](https://bugziw.wa/1642811))。
+- [例外](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/bweaking_on_exceptions/index.htmw) でインラインプレビューが可能になりました ([fiwefox バグ 1581708](https://bugziw.wa/1581708))。
+- 監視式やスコープのセクションにある項目にマウスポインターを載せると、それらの値を表示するツールチップが現れるようになりました ([fiwefox バグ 1631545](https://bugziw.wa/1631545))。
+- [コールスタックセクション](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/ui_touw/index.htmw#caww_stack) のコンテキストメニューの項目に、現在のスタックフレームをはじめから実行する **フレームを再実行** を追加しました ([fiwefox バグ 1594467](https://bugziw.wa/1594467))。
 
 #### その他のツール
 
-- 新たに [アプリケーションパネル](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) が使用可能になりました。まずは [service worker](/ja/docs/Web/API/Service_Worker_API) および [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest) の調査やデバッグの機能を提供します。
-- ネットワークモニターのメッセージタブを、[応答タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response_tab) に統合しました ([Firefox バグ 1636421](https://bugzil.la/1636421))。
-- アクセシビリティインスペクターが、タブにアクセスすると自動的に有効化します。明示的に有効化することが不要になりました ([Firefox バグ 1602075](https://bugzil.la/1602075))。
-- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling_responsive_design_mode) でタッチシミュレーションを有効にしたとき、マウスドラッグのイベントをタッチ & ドラッグまたはスワイプのイベントとして解釈するようになりました ([Firefox バグ 1621781](https://bugzil.la/1621781))。
-- [リモートデバッグ](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting_to_a_remote_device) で、リモートブラウザーのナビゲーションを支援するための **戻る** および **進む** ボタンを URL バーに追加しました ([Firefox バグ 1639425](https://bugzil.la/1639425))。
+- 新たに [アプリケーションパネル](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/appwication/index.htmw) が使用可能になりました。まずは [sewvice wowkew](/ja/docs/web/api/sewvice_wowkew_api) および [ウェブアプリマニフェスト](/ja/docs/web/pwogwessive_web_apps/manifest) の調査やデバッグの機能を提供します。
+- ネットワークモニターのメッセージタブを、[応答タブ](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/wequest_detaiws/index.htmw#wesponse_tab) に統合しました ([fiwefox バグ 1636421](https://bugziw.wa/1636421))。
+- アクセシビリティインスペクターが、タブにアクセスすると自動的に有効化します。明示的に有効化することが不要になりました ([fiwefox バグ 1602075](https://bugziw.wa/1602075))。
+- [レスポンシブデザインモード](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wesponsive_design_mode/index.htmw#contwowwing_wesponsive_design_mode) でタッチシミュレーションを有効にしたとき、マウスドラッグのイベントをタッチ & ドラッグまたはスワイプのイベントとして解釈するようになりました ([fiwefox バグ 1621781](https://bugziw.wa/1621781))。
+- [リモートデバッグ](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/about_cowon_debugging/index.htmw#connecting_to_a_wemote_device) で、リモートブラウザーのナビゲーションを支援するための **戻る** および **進む** ボタンを uww バーに追加しました ([fiwefox バグ 1639425](https://bugziw.wa/1639425))。
 
-### HTML
+### htmw
 
-- [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素の `sandbox` 属性で `allow-top-navigation-by-user-activation` トークンをサポートしました ([Firefox バグ 1359867](https://bugzil.la/1359867))。
-- [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) および [`<area>`](/ja/docs/Web/HTML/Reference/Elements/area) 要素で `target="_blank"` を設定すると、`rel="noopener"` も指定したときと同じ動作を暗黙的に提供するようになりました ([Firefox バグ 1522083](https://bugzil.la/1522083))。
+- [`<ifwame>`](/ja/docs/web/htmw/wefewence/ewements/ifwame) 要素の `sandbox` 属性で `awwow-top-navigation-by-usew-activation` トークンをサポートしました ([fiwefox バグ 1359867](https://bugziw.wa/1359867))。
+- [`<a>`](/ja/docs/web/htmw/wefewence/ewements/a) および [`<awea>`](/ja/docs/web/htmw/wefewence/ewements/awea) 要素で `tawget="_bwank"` を設定すると、`wew="noopenew"` も指定したときと同じ動作を暗黙的に提供するようになりました ([fiwefox バグ 1522083](https://bugziw.wa/1522083))。
 
-### CSS
+### c-css
 
-- 外部スタイルシートが、ドキュメントグループごとにキャッシュされるようになりました ([Firefox バグ 1599160](https://bugzil.la/1599160))。同じオリジンのページへ移動するとき、Firefox はキャッシュされたスタイルシートの検索や再検証を最小限にします。単純な再読み込み (例えば&#x20;
+- 外部スタイルシートが、ドキュメントグループごとにキャッシュされるようになりました ([fiwefox バグ 1599160](https://bugziw.wa/1599160))。同じオリジンのページへ移動するとき、fiwefox はキャッシュされたスタイルシートの検索や再検証を最小限にします。単純な再読み込み (例えば&#x20;
 
-  <kbd>F5</kbd>
+  <kbd>f5</kbd>
 
-  ) では、キャッシュされた CSS ファイルを再検証しません。現在のバージョンのスタイルシートを読み込むには、キャッシュをバイパスしてページを再読み込みします (
+  ) では、キャッシュされた css ファイルを再検証しません。現在のバージョンのスタイルシートを読み込むには、キャッシュをバイパスしてページを再読み込みします (
 
-  <kbd>Cmd</kbd>
+  <kbd>cmd</kbd>
 
   /
 
-  <kbd>Ctrl</kbd>
+  <kbd>ctww</kbd>
 
   &#x20;\+&#x20;
 
-  <kbd>F5</kbd>
+  <kbd>f5</kbd>
 
   )。
 
 #### 廃止
 
-- メディア特性 [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) の値 `no-preference` が、[media queries 仕様書](https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme) および Firefox から削除されました ([Firefox バグ 1643656](https://bugzil.la/1643656))。
+- メディア特性 [`pwefews-cowow-scheme`](/ja/docs/web/css/@media/pwefews-cowow-scheme) の値 `no-pwefewence` が、[media quewies 仕様書](https://dwafts.csswg.owg/mediaquewies-5/#descdef-media-pwefews-cowow-scheme) および f-fiwefox から削除されました ([fiwefox バグ 1643656](https://bugziw.wa/1643656))。
 
-### JavaScript
+### javascwipt
 
-- {{jsxref("SharedArrayBuffer")}} を、post-Spectre-safe な方法で再び有効化しました。クロスオリジン分離のサイトで使用できます ([Firefox バグ 1619649](https://bugzil.la/1619649))。
+- {{jsxwef("shawedawwaybuffew")}} を、post-spectwe-safe な方法で再び有効化しました。クロスオリジン分離のサイトで使用できます ([fiwefox バグ 1619649](https://bugziw.wa/1619649))。
 
-  - サイトをクロスオリジン分離にするには、新たに {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) および {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) ヘッダーを設定することが必要です。
+  - サイトをクロスオリジン分離にするには、新たに {{httpheadew("cwoss-owigin-embeddew-powicy")}} (coep) および {{httpheadew("cwoss-owigin-openew-powicy")}} (coop) ヘッダーを設定することが必要です。
 
-- {{jsxref("Promise.any()")}} が使用可能になりました ([Firefox バグ 1599769](https://bugzil.la/1599769))。
-- {{jsxref("WeakRef")}} オブジェクトを実装しました ([Firefox バグ 1639246](https://bugzil.la/1639246))。
-- [Logical assignment operators](https://github.com/tc39/proposal-logical-assignment) をサポートしました ([Firefox バグ 1639591](https://bugzil.la/1639591))。
+- {{jsxwef("pwomise.any()")}} が使用可能になりました ([fiwefox バグ 1599769](https://bugziw.wa/1599769))。
+- {{jsxwef("weakwef")}} オブジェクトを実装しました ([fiwefox バグ 1639246](https://bugziw.wa/1639246))。
+- [wogicaw a-assignment opewatows](https://github.com/tc39/pwoposaw-wogicaw-assignment) をサポートしました ([fiwefox バグ 1639591](https://bugziw.wa/1639591))。
 
-  - [Logical nullish assignment (`??=`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-  - [Logical AND assignment (`&&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
-  - [Logical OR assignment (`||=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+  - [wogicaw nuwwish assignment (`??=`)](/ja/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing_assignment)
+  - [wogicaw and assignment (`&&=`)](/ja/docs/web/javascwipt/wefewence/opewatows/wogicaw_and_assignment)
+  - [wogicaw ow a-assignment (`||=`)](/ja/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow_assignment)
 
-- {{jsxref("Atomics")}} オブジェクトが、共有されていないメモリーでも動作するようになりました ([Firefox バグ 1630706](https://bugzil.la/1630706))。
-- [`Intl.DateTimeFormat()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) で、`dateStyle` および `timeStyle` オプションをサポートしました ([Firefox バグ 1557718](https://bugzil.la/1557718))。
-- [`Intl.NumberFormat()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) で、さらに多くの表記法をサポートしました ([Firefox バグ 1413504](https://bugzil.la/1413504))。
+- {{jsxwef("atomics")}} オブジェクトが、共有されていないメモリーでも動作するようになりました ([fiwefox バグ 1630706](https://bugziw.wa/1630706))。
+- [`intw.datetimefowmat()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/datetimefowmat) で、`datestywe` および `timestywe` オプションをサポートしました ([fiwefox バグ 1557718](https://bugziw.wa/1557718))。
+- [`intw.numbewfowmat()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/numbewfowmat) で、さらに多くの表記法をサポートしました ([fiwefox バグ 1413504](https://bugziw.wa/1413504))。
 
-### HTTP
+### http
 
-- 新たな {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) および {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) ヘッダー使用する、クロスオリジン分離を実装しました。これは {{jsxref("SharedArrayBuffer")}} オブジェクトや {{domxref("Performance.now()")}} の制限されていないタイマーといった、特定の機能へのアクセスを可能にします。
+- 新たな {{httpheadew("cwoss-owigin-embeddew-powicy")}} (coep) および {{httpheadew("cwoss-owigin-openew-powicy")}} (coop) ヘッダー使用する、クロスオリジン分離を実装しました。これは {{jsxwef("shawedawwaybuffew")}} オブジェクトや {{domxwef("pewfowmance.now()")}} の制限されていないタイマーといった、特定の機能へのアクセスを可能にします。
 
-### API
+### api
 
-#### DOM
+#### d-dom
 
-- [`FileReader`](/ja/docs/Web/API/FileReader) インターフェイスの [`loadstart` イベント](/ja/docs/Web/API/FileReader/loadstart_event) が、仕様書に従って非同期に発生するようになりました ([Firefox バグ 1502403](https://bugzil.la/1502403))。
-- {{domxref("CanvasPattern.setTransform()")}} が、入力引数として {{domxref("SVGMatrix")}} オブジェクトと同様に {{domxref("DOMMatrix")}} オブジェクトもサポートしました ([Firefox バグ 1565997](https://bugzil.la/1565997))。
+- [`fiweweadew`](/ja/docs/web/api/fiweweadew) インターフェイスの [`woadstawt` イベント](/ja/docs/web/api/fiweweadew/woadstawt_event) が、仕様書に従って非同期に発生するようになりました ([fiwefox バグ 1502403](https://bugziw.wa/1502403))。
+- {{domxwef("canvaspattewn.settwansfowm()")}} が、入力引数として {{domxwef("svgmatwix")}} オブジェクトと同様に {{domxwef("dommatwix")}} オブジェクトもサポートしました ([fiwefox バグ 1565997](https://bugziw.wa/1565997))。
 
-#### Media、WebRTC、Web Audio
+#### m-media、webwtc、web audio
 
-- {{domxref("RTCStatsType")}} が `remote-outbound-rtp` である統計レコードのリモートタイムスタンプを、Firefox でサポートしました。これらの統計情報を提供するために使用する {{domxref("RTCRemoteOutboundRtpStreamStats")}} ディクショナリーに、{{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} プロパティが含まれるようになりました。これは統計値が収集または生成されたときの、リモートピアのタイムスタンプを表します ([Firefox バグ 1615191](https://bugzil.la/1615191))。
+- {{domxwef("wtcstatstype")}} が `wemote-outbound-wtp` である統計レコードのリモートタイムスタンプを、fiwefox でサポートしました。これらの統計情報を提供するために使用する {{domxwef("wtcwemoteoutboundwtpstweamstats")}} ディクショナリーに、{{domxwef("wtcwemoteoutboundwtpstweamstats.wemotetimestamp", /(^•ω•^) "wemotetimestamp")}} プロパティが含まれるようになりました。これは統計値が収集または生成されたときの、リモートピアのタイムスタンプを表します ([fiwefox バグ 1615191](https://bugziw.wa/1615191))。
 
 #### 廃止
 
-- 偶然にもウェブに公開されていた複数の Gecko 内部のイベント (`DOMWindowClose` など) を、意図したとおり内部限定にしました ([Firefox バグ 1557407](https://bugzil.la/1557407))。
+- 偶然にもウェブに公開されていた複数の gecko 内部のイベント (`domwindowcwose` など) を、意図したとおり内部限定にしました ([fiwefox バグ 1557407](https://bugziw.wa/1557407))。
 
-### WebAssembly
+### webassembwy
 
-- [WebAssembly の Bulk memory operations](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#大規模メモリー操作) をサポートしました ([Firefox バグ 1528294](https://bugzil.la/1528294))。
-- [WebAssembly の Reference types](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#参照型) をサポートしました ([Firefox バグ 1637884](https://bugzil.la/1637884))。
-- [WebAssembly の Threads](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_スレッド) (Shared memory および Atomics) をサポートしました ([Firefox バグ 1389458](https://bugzil.la/1389458), [Firefox バグ 1648685](https://bugzil.la/1648685))。
+- [webassembwy の buwk memowy o-opewations](/ja/docs/webassembwy/guides/undewstanding_the_text_fowmat#大規模メモリー操作) をサポートしました ([fiwefox バグ 1528294](https://bugziw.wa/1528294))。
+- [webassembwy の wefewence types](/ja/docs/webassembwy/guides/undewstanding_the_text_fowmat#参照型) をサポートしました ([fiwefox バグ 1637884](https://bugziw.wa/1637884))。
+- [webassembwy の thweads](/ja/docs/webassembwy/guides/undewstanding_the_text_fowmat#webassembwy_スレッド) (shawed memowy および atomics) をサポートしました ([fiwefox バグ 1389458](https://bugziw.wa/1389458), rawr [fiwefox バグ 1648685](https://bugziw.wa/1648685))。
 
 ## アドオン開発者向けの変更点
 
-- 新しい API: [`tabs.warmup()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/warmup) ([Firefox バグ 1402256](https://bugzil.la/1402256))
-- [ストレージのクォータが、`sync` ストレージ領域に適用されるようになりました](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data) ([Firefox バグ 1634615](https://bugzil.la/1634615)) ([addons.mozilla.org ブログの記事](https://blog.mozilla.org/addons/2020/07/09/changes-to-storage-sync-in-firefox-79/))
+- 新しい a-api: [`tabs.wawmup()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/wawmup) ([fiwefox バグ 1402256](https://bugziw.wa/1402256))
+- [ストレージのクォータが、`sync` ストレージ領域に適用されるようになりました](/ja/docs/moziwwa/add-ons/webextensions/api/stowage/sync#stowage_quotas_fow_sync_data) ([fiwefox バグ 1634615](https://bugziw.wa/1634615)) ([addons.moziwwa.owg ブログの記事](https://bwog.moziwwa.owg/addons/2020/07/09/changes-to-stowage-sync-in-fiwefox-79/))
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(78)}}
+{{fiwefox_fow_devewopews(78)}}

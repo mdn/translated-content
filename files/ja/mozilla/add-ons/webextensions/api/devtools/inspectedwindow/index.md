@@ -1,62 +1,62 @@
 ---
-title: devtools.inspectedWindow
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
+titwe: devtoows.inspectedwindow
+swug: moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis) を見てください。
+> [!note]
+> このページは f-fiwefox 54 に存在する w-webextensions d-devtoows apis を記述しています。この a-api は [chwome d-devtoows apis](https://devewopew.chwome.com/extensions/devtoows) に基づいていますが、fiwefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [wimitations o-of the devtoows a-apis](/ja/docs/moziwwa/add-ons/webextensions/using_the_devtoows_apis#wimitations_of_the_devtoows_apis) を見てください。
 
-`devtools.inspectedWindow` API によって開発ツール拡張機能では開発ツールが割当てられたウィンドウと相互作用できます。
+`devtoows.inspectedwindow` a-api によって開発ツール拡張機能では開発ツールが割当てられたウィンドウと相互作用できます。
 
-すべての `devtools` API と同様に、この API は manifest.json [devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えば拡張機能が作ったパネル自身のドキュメント)の中だけでコードを利用できます。詳細は [developer tools の拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) を見てください。
+すべての `devtoows` api と同様に、この api は manifest.json [devtoows_page](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page) キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えば拡張機能が作ったパネル自身のドキュメント)の中だけでコードを利用できます。詳細は [devewopew toows の拡張](/ja/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows) を見てください。
 
 ## プロパティ
 
-- [`devtools.inspectedWindow.tabId`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId)
-  - : 開発ツールが付属しているウィンドウの ID
+- [`devtoows.inspectedwindow.tabid`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/tabid)
+  - : 開発ツールが付属しているウィンドウの id
 
-## Functions
+## functions
 
-- [`devtools.inspectedWindow.eval()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval)
-  - : ターゲットウィンドウ内の JavaScript を評価する
-- [`devtools.inspectedWindow.reload()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload)
+- [`devtoows.inspectedwindow.evaw()`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/evaw)
+  - : ターゲットウィンドウ内の j-javascwipt を評価する
+- [`devtoows.inspectedwindow.wewoad()`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows.inspectedwindow/wewoad)
   - : ターゲットウィンドウのドキュメントを再読み込みする
 
 ## ブラウザーの互換性
 
-{{Compat}}{{WebExtExamples("h2")}}
+{{compat}}{{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/extensions/devtools_inspectedWindow) API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は chwomium の [`chwome.devtoows.inspectedwindow`](https://devewopew.chwome.com/extensions/devtoows_inspectedwindow) a-api に基づいています。また、このドキュメントは bookmawks.json における c-chwomium のコードに基づいています。micwosoft edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは c-cweative commons attwibution 3.0 u-united states w-wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and binawy fowms, with ow without
+// modification, 😳 awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must w-wetain the above c-copywight
+// nyotice, σωσ this wist of conditions a-and the fowwowing discwaimew. rawr x3
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, OwO this wist of conditions and t-the fowwowing discwaimew
+// in t-the documentation a-and/ow othew m-matewiaws pwovided with the
+// distwibution. /(^•ω•^)
+//    * nyeithew the name of googwe i-inc. 😳😳😳 nyow the nyames o-of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific p-pwiow wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, >_< incwuding, but nyot
+// wimited to, >w< the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. rawr in no event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 😳 indiwect, >w< incidentaw,
+// speciaw, (⑅˘꒳˘) e-exempwawy, OwO ow consequentiaw damages (incwuding, (ꈍᴗꈍ) but nyot
+// wimited to, 😳 pwocuwement o-of substitute goods ow s-sewvices; woss o-of use, 😳😳😳
+// data, o-ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// t-theowy of wiabiwity, mya w-whethew in contwact, mya stwict wiabiwity, (⑅˘꒳˘) o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, (U ﹏ U) even if advised of the possibiwity o-of such damage. mya
 -->

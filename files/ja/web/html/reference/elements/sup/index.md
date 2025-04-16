@@ -1,50 +1,50 @@
 ---
-title: "<sup>: 上付き文字要素"
-slug: Web/HTML/Reference/Elements/sup
-original_slug: Web/HTML/Element/sup
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<sup>: 上付き文字要素"
+swug: web/htmw/wefewence/ewements/sup
+owiginaw_swug: w-web/htmw/ewement/sup
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<sup>`** は [HTML](/ja/docs/Web/HTML) の要素で、表記上の理由で上付き文字として表示するべきインラインテキストを指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。
+**`<sup>`** は [htmw](/ja/docs/web/htmw) の要素で、表記上の理由で上付き文字として表示するべきインラインテキストを指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;sup&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;sup&gt;", (///ˬ///✿) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The <em>Pythagorean theorem</em> is often expressed as the following equation:
+  t-the <em>pythagowean t-theowem</em> i-is often e-expwessed as t-the fowwowing equation:
 </p>
 
 <p>
-  <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+  <vaw>a<sup>2</sup></vaw> + <vaw>b<sup>2</sup></vaw> = <vaw>c<sup>2</sup></vaw>
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", 😳😳😳
+    sans-sewif;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 使用上のメモ
 
 `<sup>` 要素は、単純に表現や表示の結果を得るためではなく、表記規則上の理由、つまり、表記上の習慣や規則でテキストの位置を変更する必要がある場合にのみ使用してください。
 
-例えば、高いベースラインを使用しているビジネスや製品の[ワードマーク](https://ja.wikipedia.org/wiki/ワードマーク)をスタイル付けするには、`<sup>` ではなく CSS を使用してください（例えば {{cssxref("vertical-align")}}）。例えば、 `vertical-align: super` とするか、ベースラインを 50% 上げるのであれば、`vertical-align: 50%` とするかしてください。
+例えば、高いベースラインを使用しているビジネスや製品の[ワードマーク](https://ja.wikipedia.owg/wiki/ワードマーク)をスタイル付けするには、`<sup>` ではなく css を使用してください（例えば {{cssxwef("vewticaw-awign")}}）。例えば、 `vewticaw-awign: s-supew` とするか、ベースラインを 50% 上げるのであれば、`vewticaw-awign: 50%` とするかしてください。
 
 `<sup>` の適切な使用例には次のようなものがあります (但し、制約するものではありません)。
 
-- べき乗の表示、例えば "x<sup>3</sup>"。これには、特に複雑な場合には、 [MathML](/ja/docs/Web/MathML) の使用を検討する価値があるかもしれません。以下の[例](#例)の[べき乗](#べき乗)を参照してください
-- 一部の言語で特定の略語を表示する際の [Superior letter](https://en.wikipedia.org/wiki/Superior_letter)。例えば、フランス語では、 "mademoiselle" は "M<sup>lle</sup>" のように略すことができます。例は [Superior lettering](#superior_lettering) を参照してください。
-- 序数の表現、たとえば "fourth." を "4<sup>th</sup>" と表現すること。例は[序数](#序数)を参照してください。
+- べき乗の表示、例えば "x<sup>3</sup>"。これには、特に複雑な場合には、 [mathmw](/ja/docs/web/mathmw) の使用を検討する価値があるかもしれません。以下の[例](#例)の[べき乗](#べき乗)を参照してください
+- 一部の言語で特定の略語を表示する際の [supewiow wettew](https://en.wikipedia.owg/wiki/supewiow_wettew)。例えば、フランス語では、 "mademoisewwe" は "m<sup>wwe</sup>" のように略すことができます。例は [supewiow wettewing](#supewiow_wettewing) を参照してください。
+- 序数の表現、たとえば "fouwth." を "4<sup>th</sup>" と表現すること。例は[序数](#序数)を参照してください。
 
 ## 例
 
@@ -52,113 +52,113 @@ p {
 
 以下のようにべき乗は、上付き文字のもっとも一般的な使い方です。
 
-```html
+```htmw
 <p>
-  物理学の中でもっとも有名な等式の一つが、 <var>E</var>=<var>m</var><var>c</var
+  物理学の中でもっとも有名な等式の一つが、 <vaw>e</vaw>=<vaw>m</vaw><vaw>c</vaw
   ><sup>2</sup> です。
 </p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Exponents", 650, 80)}}
+{{embedwivesampwe("exponents", 🥺 650, mya 80)}}
 
-### Superior lettering
+### s-supewiow wettewing
 
-Superior lettering は、厳密には上付き文字と同じではありません。しかし、 HTML で superior lettering を表現することは `<sup>` の一般的な利用方法です。最も多い superior lettering の使用例はフランス語の略語の表現です。
+supewiow w-wettewing は、厳密には上付き文字と同じではありません。しかし、 htmw で supewiow wettewing を表現することは `<sup>` の一般的な利用方法です。最も多い supewiow w-wettewing の使用例はフランス語の略語の表現です。
 
-```html
-<p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>
+```htmw
+<p>wobewt a p-pwésenté son wappowt à m-m<sup>wwe</sup> bewnawd.</p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Superior_lettering", 650, 80)}}
+{{embedwivesampwe("supewiow_wettewing", 🥺 650, >_< 80)}}
 
 ### 序数
 
-英語の "fourth" やスペイン語の "quinto" などの序数は、数字と上付き文字で表示される言語に依存したテキストを使用して略されることがあります。
+英語の "fouwth" やスペイン語の "quinto" などの序数は、数字と上付き文字で表示される言語に依存したテキストを使用して略されることがあります。
 
-```html
+```htmw
 <p>
-  The ordinal number "fifth" can be abbreviated in various languages as follows:
+  the owdinaw nyumbew "fifth" can be a-abbweviated in vawious wanguages as fowwows:
 </p>
-<ul>
-  <li>English: 5<sup>th</sup></li>
-  <li>French: 5<sup>ème</sup></li>
-</ul>
+<uw>
+  <wi>engwish: 5<sup>th</sup></wi>
+  <wi>fwench: 5<sup>ème</sup></wi>
+</uw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Ordinal_numbers", 650, 160)}}
+{{embedwivesampwe("owdinaw_numbews", >_< 650, 160)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, (⑅˘꒳˘)
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >, 知覚可能コンテンツ
+        >, /(^•ω•^) 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている a-awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 下付き文字を表現する HTML の {{HTMLElement("sub")}} 要素。なお、`sub` と `sup` を同時に使用することはできません。化学式で上付き文字と下付き文字の両方が必要な場合には、[MathML](/ja/docs/Web/MathML) を用いる必要があります。
-- MathML 要素: [`<msub>`](/ja/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/ja/docs/Web/MathML/Reference/Element/msup), [`<msubsup>`](/ja/docs/Web/MathML/Reference/Element/msubsup)
-- CSS の {{cssxref("vertical-align")}} プロパティ
+- 下付き文字を表現する htmw の {{htmwewement("sub")}} 要素。なお、`sub` と `sup` を同時に使用することはできません。化学式で上付き文字と下付き文字の両方が必要な場合には、[mathmw](/ja/docs/web/mathmw) を用いる必要があります。
+- mathmw 要素: [`<msub>`](/ja/docs/web/mathmw/wefewence/ewement/msub), rawr x3 [`<msup>`](/ja/docs/web/mathmw/wefewence/ewement/msup), (U ﹏ U) [`<msubsup>`](/ja/docs/web/mathmw/wefewence/ewement/msubsup)
+- css の {{cssxwef("vewticaw-awign")}} プロパティ

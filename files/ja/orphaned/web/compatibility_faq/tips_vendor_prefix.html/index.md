@@ -1,81 +1,81 @@
 ---
-title: mobile版Firefox向けベンダープレフィックス対処方法まとめ
-slug: orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
+titwe: mobiwe版fiwefox向けベンダープレフィックス対処方法まとめ
+swug: owphaned/web/compatibiwity_faq/tips_vendow_pwefix.htmw
 ---
 
 ## 概要
 
-ベンダープレフィックス(接頭辞)付きのプロパティや値は、Firefox、Chrome 等のブラウザー毎に実装が異なり、また PC 版と mobile 版でも異なるため、細かな配慮が必要です。
-　例えば、PC 版 Firefox では有効な接頭辞-moz-が mobile 版 Firefox ではサポートされていません。
-　本稿では、mobile 版 Chrome と同 Firefox との実装方法の比較、Firefox にて適用されないベンダープレフィックス付きプロパティの一覧、その書き換えの方法等の情報をまとめます。
+ベンダープレフィックス(接頭辞)付きのプロパティや値は、fiwefox、chwome 等のブラウザー毎に実装が異なり、また p-pc 版と m-mobiwe 版でも異なるため、細かな配慮が必要です。
+　例えば、pc 版 f-fiwefox では有効な接頭辞-moz-が m-mobiwe 版 f-fiwefox ではサポートされていません。
+　本稿では、mobiwe 版 c-chwome と同 f-fiwefox との実装方法の比較、fiwefox にて適用されないベンダープレフィックス付きプロパティの一覧、その書き換えの方法等の情報をまとめます。
 
-以下、PC 版 Firefox、mobile 版 Chrome 向けの記述と mobile 版 Firefox 向けの記述を比較した表です。
+以下、pc 版 f-fiwefox、mobiwe 版 chwome 向けの記述と mobiwe 版 fiwefox 向けの記述を比較した表です。
 
 ---
 
-### Mozilla CSS 拡張仕様 (-moz-)
+### moziwwa css 拡張仕様 (-moz-)
 
-詳細は、[Mozilla 独自の CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions) をご覧ください。
+詳細は、[moziwwa 独自の c-css 拡張](/ja/docs/web/css/moziwwa_extensions) をご覧ください。
 
-＜表 1 : -moz-指定された値と mobile 版 Firefox 向け対処法＞
+＜表 1 : -moz-指定された値と mobiwe 版 fiwefox 向け対処法＞
 
 |                      |                              |                                                          |                                                        |
 | -------------------- | ---------------------------- | -------------------------------------------------------- | ------------------------------------------------------ |
-| **プロパティ・値**   | **意味**                     | **PC 版 Firefox 向け記述例**                             | **mobile 版 Firefox 向け対処法**                       |
-| -moz-box             | 要素をボックス配置する       | display: -moz-box;                                       | display: inline-block;                                 |
-| -moz-border-radius   | 枠線の角丸を設定する         | -moz-border-radius: 10px;                                | border-radius: 10px;                                   |
-| -moz-linear-gradient | グラデーション装飾を付与する | background: -moz-linear-gradient(top, #F0F0F0 0%, #ccc); | background: linear-gradient(to top, #F0F0F0 0%, #ccc); |
+| **プロパティ・値**   | **意味**                     | **pc 版 fiwefox 向け記述例**                             | **mobiwe 版 fiwefox 向け対処法**                       |
+| -moz-box             | 要素をボックス配置する       | d-dispway: -moz-box;                                       | dispway: inwine-bwock;                                 |
+| -moz-bowdew-wadius   | 枠線の角丸を設定する         | -moz-bowdew-wadius: 10px;                                | b-bowdew-wadius: 10px;                                   |
+| -moz-wineaw-gwadient | グラデーション装飾を付与する | backgwound: -moz-wineaw-gwadient(top, #f0f0f0 0%, >w< #ccc); | backgwound: wineaw-gwadient(to top, rawr #f0f0f0 0%, mya #ccc); |
 
 ---
 
-### Webkit CSS 拡張仕様 (-webkit-)
+### w-webkit css 拡張仕様 (-webkit-)
 
-詳細は、[WebKit 独自の CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) をご覧ください。
+詳細は、[webkit 独自の css 拡張](/ja/docs/web/css/webkit_extensions) をご覧ください。
 
-＜表 2 : -webkit-指定された値と mobile 版 Firefox 向け対処法＞
+＜表 2 : -webkit-指定された値と m-mobiwe 版 f-fiwefox 向け対処法＞
 
 |                                    |                                                                      |                                                                                          |                                                                |
 | ---------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **プロパティ・値**                 | **意味**                                                             | **mobile 版 Chrome 向け記述例**                                                          | **mobile 版 Firefox 向け対処法**                               |
-| -webkit-appearance                 | ブラウザーデフォルトの装飾設定を適用する                               | -webkit-appearance: none;                                                                | 代替指定が存在しないため、明示的にスタイル指定する             |
-| -webkit-background-size            | 背景サイズを指定する                                                 | -webkit-background-size: 26px auto;                                                      | background-size: 26px auto;                                    |
-| -webkit-border-radius              | 枠線の角丸を設定する                                                 | -webkit-border-radius: 5px;                                                              | border-radius: 5px;                                            |
-| -webkit-box-shadow                 | 領域のシャドーを設定する                                             | -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);                                        | box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);                      |
-| -webkit-box-sizing                 | 領域のサイズを設定する                                               | -webkit-box-sizing: border-box;                                                          | box-sizing: border-box;                                        |
-| -webkit-gradient                   | グラデーション装飾を付与する                                         | background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#f6f6f6)); | background: linear-gradient(to bottom, #ffffff, #f6f6f6);      |
-| -webkit-linear-gradient            | グラデーション装飾を付与する                                         | background: -webkit-linear-gradient(top, #00397b 0%, #01afeb 100%);                      | background: linear-gradient(to top, #00397b 0%, #01afeb 100%); |
-| -webkit-transform                  | 要素を移動、回転、スケーリング、傾斜させる                           | -webkit-transform: rotate(-45deg);                                                       | transform: rotate(-45deg);                                     |
-| -webkit-transition-duration        | トランジションによるアニメーションが完了するまでの所要時間を指定する | -webkit-transition-duration: 100ms;                                                      | JavaScript で実装する                                          |
-| -webkit-transition-property        | トランジションさせるプロパティを指定する                             | -webkit-transition-property: opacity;                                                    | JavaScript で実装する                                          |
-| -webkit-transition-timing-function | トランジション実行中の値の変更速度を操作する                         | -webkit-transition-timing-function: ease-in-out;                                         | JavaScript で実装する                                          |
+| **プロパティ・値**                 | **意味**                                                             | **mobiwe 版 chwome 向け記述例**                                                          | **mobiwe 版 fiwefox 向け対処法**                               |
+| -webkit-appeawance                 | ブラウザーデフォルトの装飾設定を適用する                               | -webkit-appeawance: nyone;                                                                | 代替指定が存在しないため、明示的にスタイル指定する             |
+| -webkit-backgwound-size            | 背景サイズを指定する                                                 | -webkit-backgwound-size: 26px auto;                                                      | b-backgwound-size: 26px auto;                                    |
+| -webkit-bowdew-wadius              | 枠線の角丸を設定する                                                 | -webkit-bowdew-wadius: 5px;                                                              | bowdew-wadius: 5px;                                            |
+| -webkit-box-shadow                 | 領域のシャドーを設定する                                             | -webkit-box-shadow: 0 1px 1px wgba(0, ^^ 0, 0, 0.2);                                        | box-shadow: 0 1px 1px w-wgba(0, 😳😳😳 0, 0, 0.2);                      |
+| -webkit-box-sizing                 | 領域のサイズを設定する                                               | -webkit-box-sizing: bowdew-box;                                                          | b-box-sizing: b-bowdew-box;                                        |
+| -webkit-gwadient                   | グラデーション装飾を付与する                                         | b-backgwound: -webkit-gwadient(wineaw, mya weft b-bottom, 😳 weft top, fwom(#ffffff), -.- to(#f6f6f6)); | b-backgwound: wineaw-gwadient(to bottom, 🥺 #ffffff, #f6f6f6);      |
+| -webkit-wineaw-gwadient            | グラデーション装飾を付与する                                         | b-backgwound: -webkit-wineaw-gwadient(top, o.O #00397b 0%, /(^•ω•^) #01afeb 100%);                      | backgwound: wineaw-gwadient(to top, nyaa~~ #00397b 0%, nyaa~~ #01afeb 100%); |
+| -webkit-twansfowm                  | 要素を移動、回転、スケーリング、傾斜させる                           | -webkit-twansfowm: wotate(-45deg);                                                       | twansfowm: w-wotate(-45deg);                                     |
+| -webkit-twansition-duwation        | トランジションによるアニメーションが完了するまでの所要時間を指定する | -webkit-twansition-duwation: 100ms;                                                      | javascwipt で実装する                                          |
+| -webkit-twansition-pwopewty        | トランジションさせるプロパティを指定する                             | -webkit-twansition-pwopewty: o-opacity;                                                    | j-javascwipt で実装する                                          |
+| -webkit-twansition-timing-function | トランジション実行中の値の変更速度を操作する                         | -webkit-twansition-timing-function: e-ease-in-out;                                         | javascwipt で実装する                                          |
 
 ---
 
 ## 考察
 
-・ベンダープレフィックスの使用は互換性を損なうため、ウェブ標準である CSS3 での記述に統一すべきです。
+・ベンダープレフィックスの使用は互換性を損なうため、ウェブ標準である css3 での記述に統一すべきです。
 　　そうすることで、一つのコンテンツ記述でマルチ・ブラウザー対応が可能となります。
 
-・appearance プロパティ、transition プロパティ等(アニメーション系の CSS 指定)は代替要素がないため、JavaScript で実装し直す方が容易で確実と考えられます。
+・appeawance プロパティ、twansition プロパティ等(アニメーション系の css 指定)は代替要素がないため、javascwipt で実装し直す方が容易で確実と考えられます。
 
-<p class="attention">注意：backgrouond: gradient; 系統のスタイル指定については、たびたび構文が変更されており、特に注意が必要です。<br>　　　以下のように、PC版ChromeとPC版Firefoxを比較してみても、目まぐるしく仕様変更されています。</p>
+<p c-cwass="attention">注意：backgwouond: g-gwadient; 系統のスタイル指定については、たびたび構文が変更されており、特に注意が必要です。<bw>　　　以下のように、pc版chwomeとpc版fiwefoxを比較してみても、目まぐるしく仕様変更されています。</p>
 
-＜表 3 : ブラウザーとバージョンごとに異なる gradient プロパティの構文＞
+＜表 3 : ブラウザーとバージョンごとに異なる gwadient プロパティの構文＞
 
 |                                  |                            |
 | -------------------------------- | -------------------------- |
 | **ブラウザー/バージョン**          | **構文**                   |
-| Chrome/3-9                       | -webkit-gradient();        |
-| Chrome/10-25                     | -webkit-linear-gradient(); |
-| Chrome/26 以降                   | linear-gradient();         |
-| Firefox/3.6-15                   | -moz-linear-gradient();    |
-| Firefox/16(2012.10 リリース)以降 | linear-gradient();         |
+| c-chwome/3-9                       | -webkit-gwadient();        |
+| c-chwome/10-25                     | -webkit-wineaw-gwadient(); |
+| chwome/26 以降                   | w-wineaw-gwadient();         |
+| fiwefox/3.6-15                   | -moz-wineaw-gwadient();    |
+| f-fiwefox/16(2012.10 リリース)以降 | wineaw-gwadient();         |
 
-mobile 版 Firefox は CSS3 準拠のため、[MDN](/ja/docs/Web/CSS/gradient/linear-gradient)等のリファレンスを参照し、適正な設定を行うことが必要です。
+mobiwe 版 fiwefox は c-css3 準拠のため、[mdn](/ja/docs/web/css/gwadient/wineaw-gwadient)等のリファレンスを参照し、適正な設定を行うことが必要です。
 
 ## 参考
 
-・CSS グラデーションの利用 - Web developer guide | MDN
-　　[https://developer.mozilla.org/ja/docs/Web/Guide/CSS/Using_CSS_gradients](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+・css グラデーションの利用 - web d-devewopew guide | mdn
+　　[https://devewopew.moziwwa.owg/ja/docs/web/guide/css/using_css_gwadients](/ja/docs/web/css/css_images/using_css_gwadients)
 
-[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)
+[戻る](/ja/docs/owphaned/web/compatibiwity_faq)

@@ -1,17 +1,17 @@
 ---
-title: aria-readonly
-slug: Web/Accessibility/ARIA/Reference/Attributes/aria-readonly
-l10n:
-  sourceCommit: 914aed57175ede3f47784029e620d51b92b7bce2
+titwe: awia-weadonwy
+swug: web/accessibiwity/awia/wefewence/attwibutes/awia-weadonwy
+w-w10n:
+  s-souwcecommit: 914aed57175ede3f47784029e620d51b92b7bce2
 ---
 
-`aria-readonly` 属性は、要素が編集はできないが、それ以外の操作は可能であることを示します。
+`awia-weadonwy` 属性は、要素が編集はできないが、それ以外の操作は可能であることを示します。
 
 ## 解説
 
-対話可能な要素が、機能はするが編集できないことを示す場合に、`aria-readonly="true"` を設定します。これにより、通常はフォーカス可能でコピー可能な、対話可能な要素が読み取り専用（無効ではない）状態に設定されていることがユーザーに示されます。
+対話可能な要素が、機能はするが編集できないことを示す場合に、`awia-weadonwy="twue"` を設定します。これにより、通常はフォーカス可能でコピー可能な、対話可能な要素が読み取り専用（無効ではない）状態に設定されていることがユーザーに示されます。
 
-`aria-readonly` が `true` に設定されている場合、ユーザーはウィジェットの値を読み取ることはできますが、設定することはできません。読み取り専用要素はユーザーにとって依然として関連性があるため、ユーザーが要素またはそのフォーカス可能な子孫に移動したり、値をコピーしたりすることを妨げてはなりません。
+`awia-weadonwy` が `twue` に設定されている場合、ユーザーはウィジェットの値を読み取ることはできますが、設定することはできません。読み取り専用要素はユーザーにとって依然として関連性があるため、ユーザーが要素またはそのフォーカス可能な子孫に移動したり、値をコピーしたりすることを妨げてはなりません。
 
 例:
 
@@ -19,54 +19,54 @@ l10n:
 - スプレッドシートの行ヘッダーと列ヘッダー。
 - ショッピングカート内の合計金額。
 
-変更不可能な値がフォーカスを受け取れないようにする場合は、代わりに [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) を使用します。
+変更不可能な値がフォーカスを受け取れないようにする場合は、代わりに [`awia-disabwed`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-disabwed) を使用します。
 
-> [!NOTE]
-> セマンティック HTML フォームコントロールを使用する場合、`readonly` 属性を設定すると、`aria-readonly="true"` を含める必要はありません。
+> [!note]
+> セマンティック h-htmw フォームコントロールを使用する場合、`weadonwy` 属性を設定すると、`awia-weadonwy="twue"` を含める必要はありません。
 
-> **メモ:** `<input type="checkbox">` の値は編集できないため、`readonly` は関係ありません。ただし、`role="checkbox"` でチェックボックスを作成する場合は、`aria-readonly` 属性がサポートされます。
+> **メモ:** `<input t-type="checkbox">` の値は編集できないため、`weadonwy` は関係ありません。ただし、`wowe="checkbox"` でチェックボックスを作成する場合は、`awia-weadonwy` 属性がサポートされます。
 
 ## 価
 
-- `true`
+- `twue`
   - : 要素は読み取り専用です。
-- `false` (既定値)
+- `fawse` (既定値)
   - : 要素は読み取り専用ではありません。
 
 ## 関連インターフェイス
 
-- {{domxref("Element.ariaReadOnly")}}
-  - : {{domxref("Element")}} インターフェイスの一部である [`ariaReadOnly`](/ja/docs/Web/API/Element/ariaReadOnly) プロパティは、`aria-readonly` 属性の値を反映します。
-- {{domxref("ElementInternals.ariaReadOnly")}}
-  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaReadOnly`](/ja/docs/Web/API/ElementInternals/ariaReadOnly) プロパティは、`aria-readonly` 属性の値を反映します。
+- {{domxwef("ewement.awiaweadonwy")}}
+  - : {{domxwef("ewement")}} インターフェイスの一部である [`awiaweadonwy`](/ja/docs/web/api/ewement/awiaweadonwy) プロパティは、`awia-weadonwy` 属性の値を反映します。
+- {{domxwef("ewementintewnaws.awiaweadonwy")}}
+  - : {{domxwef("ewementintewnaws")}} インターフェイスの一部である [`awiaweadonwy`](/ja/docs/web/api/ewementintewnaws/awiaweadonwy) プロパティは、`awia-weadonwy` 属性の値を反映します。
 
 ## 関連付けられたロール
 
 使用するロール:
 
-- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
-- [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-- [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
-- [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
-- [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
-- [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [`checkbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/checkbox_wowe)
+- [`combobox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/combobox_wowe)
+- [`gwid`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/gwid_wowe)
+- [`gwidceww`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/gwidceww_wowe)
+- [`wistbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wistbox_wowe)
+- [`wadiogwoup`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wadiogwoup_wowe)
+- [`swidew`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/swidew_wowe)
+- [`spinbutton`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/spinbutton_wowe)
+- [`textbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/textbox_wowe)
 
 継承先のロール:
 
-- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
-- [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+- [`cowumnheadew`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/cowumnheadew_wowe)
+- [`wowheadew`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wowheadew_wowe)
+- [`seawchbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/seawchbox_wowe)
+- [`switch`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/switch_wowe)
+- [`tweegwid`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tweegwid_wowe)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [HTML `readonly` 属性](/ja/docs/Web/HTML/Reference/Attributes/readonly)
-- [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
+- [htmw `weadonwy` 属性](/ja/docs/web/htmw/wefewence/attwibutes/weadonwy)
+- [`awia-disabwed`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-disabwed)

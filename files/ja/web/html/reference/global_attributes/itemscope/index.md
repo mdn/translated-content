@@ -1,263 +1,263 @@
 ---
-title: itemscope
-slug: Web/HTML/Reference/Global_attributes/itemscope
-original_slug: Web/HTML/Global_attributes/itemscope
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: itemscope
+swug: web/htmw/wefewence/gwobaw_attwibutes/itemscope
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/itemscope
+w-w10n:
+  s-souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`itemscope`** は論理[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope`** 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
+**`itemscope`** は論理[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope`** 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
 
-関連する属性である [`itemtype`](/ja/docs/Web/HTML/Reference/Global_attributes/itemtype) は、アイテムおよびそのプロパティのコンテキストを記述する語彙（[schema.org](https://schema.org/) など）の有効な URL を指定するために使用されます。以下のそれぞれの例では、 [schema.org](https://schema.org/) からの語彙を使用しています。
+関連する属性である [`itemtype`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itemtype) は、アイテムおよびそのプロパティのコンテキストを記述する語彙（[schema.owg](https://schema.owg/) など）の有効な u-uww を指定するために使用されます。以下のそれぞれの例では、 [schema.owg](https://schema.owg/) からの語彙を使用しています。
 
-あらゆる HTML 要素に `itemscope` 属性を設定することができます。 `itemscope` 要素が `itemtype` を持たない場合は、関連付けられた `itemref` を持つ必要があります。
+あらゆる h-htmw 要素に `itemscope` 属性を設定することができます。 `itemscope` 要素が `itemtype` を持たない場合は、関連付けられた `itemwef` を持つ必要があります。
 
-> **メモ:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
+> **メモ:** `itemtype` 属性についての詳細は、 <https://schema.owg/thing> をご覧ください
 
-### itemscope の id 属性
+### i-itemscope の id 属性
 
-ある要素に `itemscope` 属性を指定すると、新しいアイテムが作成されます。アイテムは名前と値の組のグループから構成されます。 `itemscope` 属性と `itemtype` 属性を持つ要素では、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性も指定することができます。 `id` 属性を使用すると、新しいアイテムにグローバルな識別子を設定することができます。グローバルな識別子によって、そのアイテムはウェブ上のページで見られる他のアイテムに関連付けることができます。
+ある要素に `itemscope` 属性を指定すると、新しいアイテムが作成されます。アイテムは名前と値の組のグループから構成されます。 `itemscope` 属性と `itemtype` 属性を持つ要素では、 [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) 属性も指定することができます。 `id` 属性を使用すると、新しいアイテムにグローバルな識別子を設定することができます。グローバルな識別子によって、そのアイテムはウェブ上のページで見られる他のアイテムに関連付けることができます。
 
 ## 例
 
 ### 映画の構造化データの表現
 
-以下の例では、 `itemscope` 属性を指定しています。この例では `itemtype` を "http://schema.org/Movie" に設定し、 3 つの関連する `itemprop` 属性を定義します。
+以下の例では、 `itemscope` 属性を指定しています。この例では `itemtype` を "http://schema.owg/movie" に設定し、 3 つの関連する `itempwop` 属性を定義します。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td rowspan="6">itemscope</td>
-      <td>Itemtype</td>
-      <td colspan="2">Movie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>(itemprop name)</td>
-      <td>(itemprop value)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>director</td>
-      <td>James Cameron</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>genre</td>
-      <td>Science Fiction</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    <tw>
+      <td wowspan="6">itemscope</td>
+      <td>itemtype</td>
+      <td cowspan="2">movie</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>(itempwop n-nyame)</td>
+      <td>(itempwop vawue)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>diwectow</td>
+      <td>james camewon</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>genwe</td>
+      <td>science f-fiction</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Avatar</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>https://youtu.be/0AY1XIkX7bY</td>
-      <td>Trailer</td>
-    </tr>
+      <td>avataw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>https://youtu.be/0ay1xikx7by</td>
+      <td>twaiwew</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-```html
-<div itemscope itemtype="https://schema.org/Movie">
-  <h1 itemprop="name">Avatar</h1>
+```htmw
+<div itemscope itemtype="https://schema.owg/movie">
+  <h1 i-itempwop="name">avataw</h1>
   <span
-    >Director: <span itemprop="director">James Cameron</span> (born August 16,
+    >diwectow: <span itempwop="diwectow">james camewon</span> (bown august 16, OwO
     1954)</span
   >
-  <span itemprop="genre">Science fiction</span>
-  <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
+  <span i-itempwop="genwe">science fiction</span>
+  <a h-hwef="https://youtu.be/0ay1xikx7by" i-itempwop="twaiwew">twaiwew</a>
 </div>
 ```
 
 ### レシピの構造化データの表現
 
-以下の例には 4 つの `itemscope` 属性があります。それぞれの `itemscope` 属性は、対応する `itemtype` 属性のスコープを設定しています。以下の例にある `Recipe`, `AggregateRating`, `NutritionInformation` の `itemtype` は、レシピのための [schema.org](www.schema.org) 構造化データの一部であり、最初の `itemtype`, `http://schema.org/Recipe` として定義されています。
+以下の例には 4 つの `itemscope` 属性があります。それぞれの `itemscope` 属性は、対応する `itemtype` 属性のスコープを設定しています。以下の例にある `wecipe`, (ꈍᴗꈍ) `aggwegatewating`, 😳 `nutwitioninfowmation` の `itemtype` は、レシピのための [schema.owg](www.schema.owg) 構造化データの一部であり、最初の `itemtype`, 😳😳😳 `http://schema.owg/wecipe` として定義されています。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td rowspan="14">itemscope</td>
+    <tw>
+      <td wowspan="14">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2">Recipe</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td cowspan="2">wecipe</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Grandma's Holiday Apple Pie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td>gwandma's howiday appwe p-pie</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>image</td>
-      <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>datePublished</td>
+      <td>https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>datepubwished</td>
       <td>2022-11-05</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>description</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>descwiption</td>
       <td>
-        This is my grandmother's apple pie recipe. I like to add a dash of
-        nutmeg.
+        this is my gwandmothew's appwe pie wecipe. mya i wike to add a dash o-of
+        nyutmeg. mya
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>prepTime</td>
-      <td>PT30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>cookTime</td>
-      <td>PT1H</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>totalTime</td>
-      <td>PT1H30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeYield</td>
-      <td>1 9" pie (8 servings)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>Thinly-sliced apples: 6 cups</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>White sugar: 3/4 cup</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeInstructions</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pweptime</td>
+      <td>pt30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cooktime</td>
+      <td>pt1h</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>totawtime</td>
+      <td>pt1h30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeyiewd</td>
+      <td>1 9" pie (8 sewvings)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient</td>
+      <td>thinwy-swiced a-appwes: 6 c-cups</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient</td>
+      <td>white s-sugaw: 3/4 c-cup</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeinstwuctions</td>
       <td>
-        1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
-        for tart apples .
+        1. (⑅˘꒳˘) cut and peew appwes 2. mix sugaw a-and cinnamon. (U ﹏ U) use additionaw sugaw
+        fow t-tawt appwes . mya
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td colspan="2">author [Person]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td cowspan="2">authow [pewson]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Carol Smith</td>
-    </tr>
-    <tr>
-      <td rowspan="3">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2">aggregateRating [AggregateRating]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>ratingValue</td>
+      <td>cawow smith</td>
+    </tw>
+    <tw>
+      <td wowspan="3">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2">aggwegatewating [aggwegatewating]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>watingvawue</td>
       <td>4.0</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>reviewCount</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>weviewcount</td>
       <td>35</td>
-    </tr>
-    <tr>
-      <td rowspan="4">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2">nutrition [NutritionInformation]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>servingSize</td>
-      <td>1 medium slice</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>calories</td>
-      <td>250 cal</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>fatContent</td>
-      <td>12 g</td>
-    </tr>
+    </tw>
+    <tw>
+      <td wowspan="4">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2">nutwition [nutwitioninfowmation]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>sewvingsize</td>
+      <td>1 m-medium swice</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cawowies</td>
+      <td>250 c-caw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>fatcontent</td>
+      <td>12 g-g</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
+> [!note]
+> 手軽に h-htmw からマイクロデータを抽出するには、 googwe の[リッチリザルトテストツール](https://seawch.googwe.com/test/wich-wesuwts)が便利です。上の htmw で試してみてください。
 
 </div>
 
-#### HTML
+#### htmw
 
-```html
-<div itemscope itemtype="https://schema.org/Recipe">
-  <h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
+```htmw
+<div itemscope i-itemtype="https://schema.owg/wecipe">
+  <h2 i-itempwop="name">gwandma's howiday appwe pie</h2>
   <img
-    itemprop="image"
-    src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg"
+    i-itempwop="image"
+    s-swc="https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg"
     width="50"
-    height="50" />
+    h-height="50" />
   <p>
-    By
-    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-      <span itemprop="name">Carol Smith</span>
+    by
+    <span i-itempwop="authow" itemscope itemtype="https://schema.owg/pewson">
+      <span itempwop="name">cawow s-smith</span>
     </span>
   </p>
   <p>
-    Published:
-    <time datetime="2022-11-05" itemprop="datePublished"
-      >November 5, 20022</time
+    pubwished:
+    <time d-datetime="2022-11-05" itempwop="datepubwished"
+      >novembew 5, ʘwʘ 20022</time
     >
   </p>
-  <span itemprop="description"
-    >This is my grandmother's apple pie recipe. I like to add a dash of
-    nutmeg.</span
+  <span i-itempwop="descwiption"
+    >this i-is my gwandmothew's appwe pie wecipe. (˘ω˘) i wike to add a dash of
+    nyutmeg.</span
   >
-  <br />
+  <bw />
   <span
-    itemprop="aggregateRating"
+    itempwop="aggwegatewating"
     itemscope
-    itemtype="https://schema.org/AggregateRating">
-    <span itemprop="ratingValue">4.0</span> stars based on
-    <span itemprop="reviewCount">35</span> reviews
+    itemtype="https://schema.owg/aggwegatewating">
+    <span i-itempwop="watingvawue">4.0</span> s-staws based on
+    <span i-itempwop="weviewcount">35</span> w-weviews
   </span>
-  <br />
-  Prep time: <time datetime="PT30M" itemprop="prepTime">30 min</time>
-  <br />
-  Cook time: <time datetime="PT1H" itemprop="cookTime">1 hour</time>
-  <br />
-  Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time>
-  <br />
-  Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span>
-  <br />
+  <bw />
+  p-pwep time: <time datetime="pt30m" itempwop="pweptime">30 min</time>
+  <bw />
+  cook t-time: <time datetime="pt1h" itempwop="cooktime">1 houw</time>
+  <bw />
+  totaw t-time: <time datetime="pt1h30m" itempwop="totawtime">1 h-houw 30 m-min</time>
+  <bw />
+  y-yiewd: <span itempwop="wecipeyiewd">1 9" p-pie (8 sewvings)</span>
+  <bw />
   <span
-    itemprop="nutrition"
-    itemscope
-    itemtype="https://schema.org/NutritionInformation">
-    Serving size: <span itemprop="servingSize">1 medium slice</span><br />
-    Calories per serving: <span itemprop="calories">250 cal</span><br />
-    Fat per serving: <span itemprop="fatContent">12 g</span><br />
+    i-itempwop="nutwition"
+    i-itemscope
+    i-itemtype="https://schema.owg/nutwitioninfowmation">
+    sewving size: <span i-itempwop="sewvingsize">1 m-medium s-swice</span><bw />
+    c-cawowies p-pew sewving: <span itempwop="cawowies">250 caw</span><bw />
+    fat pew sewving: <span i-itempwop="fatcontent">12 g</span><bw />
   </span>
   <p>
-    Ingredients:<br />
-    <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br /></span>
-    <span itemprop="recipeIngredient">White sugar: 3/4 cup<br /></span>
+    ingwedients:<bw />
+    <span itempwop="wecipeingwedient">thinwy-swiced appwes: 6 cups<bw /></span>
+    <span i-itempwop="wecipeingwedient">white sugaw: 3/4 cup<bw /></span>
     …
   </p>
-  Directions: <br />
-  <div itemprop="recipeInstructions">
-    1. Cut and peel apples<br />
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br />
+  diwections: <bw />
+  <div itempwop="wecipeinstwuctions">
+    1. (U ﹏ U) cut and peew appwes<bw />
+    2. ^•ﻌ•^ m-mix sugaw and cinnamon. (˘ω˘) u-use additionaw s-sugaw fow tawt appwes. :3 <bw />
     …
   </div>
 </div>
@@ -265,22 +265,22 @@ l10n:
 
 #### 結果
 
-{{EmbedLiveSample('Representing structured data for a recipe', '', '550')}}
+{{embedwivesampwe('wepwesenting stwuctuwed d-data fow a wecipe', ^^;; '', '550')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [他のグローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
+- [他のグローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)
 - マイクロデータに関連する他のグローバル属性:
 
-  - [`itemid`](/ja/docs/Web/HTML/Reference/Global_attributes/itemid)
-  - [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop)
-  - [`itemref`](/ja/docs/Web/HTML/Reference/Global_attributes/itemref)
-  - [`itemtype`](/ja/docs/Web/HTML/Reference/Global_attributes/itemtype)
+  - [`itemid`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itemid)
+  - [`itempwop`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itempwop)
+  - [`itemwef`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itemwef)
+  - [`itemtype`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itemtype)

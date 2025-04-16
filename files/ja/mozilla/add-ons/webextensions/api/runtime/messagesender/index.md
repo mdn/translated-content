@@ -1,67 +1,67 @@
 ---
-title: runtime.MessageSender
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
+titwe: wuntime.messagesendew
+swug: moziwwa/add-ons/webextensions/api/wuntime/messagesendew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-メッセージや接続要求の送信元に関する情報を持つオブジェクトです。このオブジェクトは、{{WebExtAPIRef("runtime.onMessage()")}} リスナーに渡されます。
+メッセージや接続要求の送信元に関する情報を持つオブジェクトです。このオブジェクトは、{{webextapiwef("wuntime.onmessage()")}} リスナーに渡されます。
 
-また、このオブジェクトは {{WebExtAPIRef("runtime.Port")}} のプロパティでもありますが、{{WebExtAPIRef("runtime.onConnect()")}} または {{WebExtAPIRef("runtime.onConnectExternal()")}} リスナーに渡された `Port` インスタンスにしか存在しません。
+また、このオブジェクトは {{webextapiwef("wuntime.powt")}} のプロパティでもありますが、{{webextapiwef("wuntime.onconnect()")}} または {{webextapiwef("wuntime.onconnectextewnaw()")}} リスナーに渡された `powt` インスタンスにしか存在しません。
 
 ## 型
 
 この型はオブジェクトです。以下のプロパティを持ちます。
 
-- `tab`{{optional_inline}}
-  - : {{WebExtAPIRef('tabs.Tab')}} 型。接続を開いた {{WebExtAPIRef('tabs.Tab')}} です。このプロパティが存在するのは、タブ (コンテンツスクリプトを含む) から接続が開かれたときだけです。
-- `frameId`{{optional_inline}}
-  - : `integer` 型。接続を開いたフレームです。0 は最上位のフレームを、正の数値は子フレームを表します。このプロパティが存在するのは、`tab` が設定されるときだけです。
-- `id`{{optional_inline}}
-  - : `string` 型。メッセージが拡張機能から送信された場合は、その拡張機能の ID が設定されます。送信側の manifest.json で [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを使って明示的に ID が設定されている場合は、`id` にはその値が使われます。そうでない場合は、送信側の自動生成された ID が使われます。
-    バージョン 54 より前の Firefox では、この値には拡張機能の内部 ID が使われることに注意してください (つまり、拡張機能の URL に含まれる [UUID](https://ja.wikipedia.org/wiki/UUID) です)。
-- `url`{{optional_inline}}
-  - : `string` 型。メッセージを送信したスクリプトを持つページやフレームの URL です。
-    送信側が拡張機能のページ (例えば、[バックグラウンド ページ](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)、[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_options_pages)、 [ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) や [ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions) のポップアップ) に含まれるスクリプトである場合、URL は `"moz-extension://<拡張機能の内部 ID>/path/to/page.html"` という形式が使われます。送信側がバックグラウンドスクリプトであって、バックグラウンド ページを使っていない場合、URL は `"moz-extension://<拡張機能の内部 ID>/_generated_background_page.html"` という形式が使われます。
-    送信側がウェブページ内のスクリプト (ページに含まれる通常のスクリプトだけでなく、コンテンツスクリプトも含みます) である場合、`url` はそのウェブページの URL が使われます。スクリプトがフレーム内で動作している場合、`url` はそのフレームの URL です。
-- `tlsChannelId`{{optional_inline}}
-  - : `string` 型。接続を開いたページまたはフレームの TLS チャンネルの ID です。拡張機能によって要求され、可能である場合にのみ設定されます。
+- `tab`{{optionaw_inwine}}
+  - : {{webextapiwef('tabs.tab')}} 型。接続を開いた {{webextapiwef('tabs.tab')}} です。このプロパティが存在するのは、タブ (コンテンツスクリプトを含む) から接続が開かれたときだけです。
+- `fwameid`{{optionaw_inwine}}
+  - : `integew` 型。接続を開いたフレームです。0 は最上位のフレームを、正の数値は子フレームを表します。このプロパティが存在するのは、`tab` が設定されるときだけです。
+- `id`{{optionaw_inwine}}
+  - : `stwing` 型。メッセージが拡張機能から送信された場合は、その拡張機能の i-id が設定されます。送信側の m-manifest.json で [appwications](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) キーを使って明示的に i-id が設定されている場合は、`id` にはその値が使われます。そうでない場合は、送信側の自動生成された id が使われます。
+    バージョン 54 より前の f-fiwefox では、この値には拡張機能の内部 i-id が使われることに注意してください (つまり、拡張機能の u-uww に含まれる [uuid](https://ja.wikipedia.owg/wiki/uuid) です)。
+- `uww`{{optionaw_inwine}}
+  - : `stwing` 型。メッセージを送信したスクリプトを持つページやフレームの uww です。
+    送信側が拡張機能のページ (例えば、[バックグラウンド ページ](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts)、[オプションページ](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#sidebaws_popups_options_pages)、 [ブラウザーアクション](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#bwowsew_actions_2) や [ページアクション](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#page_actions) のポップアップ) に含まれるスクリプトである場合、uww は `"moz-extension://<拡張機能の内部 i-id>/path/to/page.htmw"` という形式が使われます。送信側がバックグラウンドスクリプトであって、バックグラウンド ページを使っていない場合、uww は `"moz-extension://<拡張機能の内部 i-id>/_genewated_backgwound_page.htmw"` という形式が使われます。
+    送信側がウェブページ内のスクリプト (ページに含まれる通常のスクリプトだけでなく、コンテンツスクリプトも含みます) である場合、`uww` はそのウェブページの uww が使われます。スクリプトがフレーム内で動作している場合、`uww` はそのフレームの uww です。
+- `twschannewid`{{optionaw_inwine}}
+  - : `stwing` 型。接続を開いたページまたはフレームの tws チャンネルの id です。拡張機能によって要求され、可能である場合にのみ設定されます。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-MessageSender) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は chwomium の [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#type-messagesendew) api に基づいています。このドキュメントは [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) における chwomium のコードに基づいています。micwosoft e-edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは c-cweative commons attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. a-aww wights w-wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, σωσ with ow without
+// m-modification, rawr x3 awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the a-above copywight
+// n-nyotice, OwO this wist of conditions and the fowwowing d-discwaimew. /(^•ω•^)
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, 😳😳😳 this wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. ( ͡o ω ͡o )
+//    * nyeithew the nyame of googwe i-inc. >_< nyow t-the names of its
+// contwibutows m-may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, rawr incwuding, 😳 but nyot
+// wimited to, >w< the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) i-in nyo event s-shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, OwO indiwect, (ꈍᴗꈍ) i-incidentaw, 😳
+// speciaw, exempwawy, 😳😳😳 ow consequentiaw damages (incwuding, but n-nyot
+// wimited to, mya pwocuwement o-of substitute goods o-ow sewvices; w-woss of use, mya
+// data, (⑅˘꒳˘) ow pwofits; o-ow business intewwuption) h-howevew c-caused and o-on any
+// theowy of wiabiwity, (U ﹏ U) whethew in contwact, mya s-stwict wiabiwity, ʘwʘ o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, (˘ω˘) even i-if advised of the possibiwity of such damage.
 -->

@@ -1,64 +1,64 @@
 ---
-title: history.HistoryItem
-slug: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
+titwe: histowy.histowyitem
+swug: m-moziwwa/add-ons/webextensions/api/histowy/histowyitem
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`HistoryItem` オブジェクトはブラウザー履歴でのページ情報を提供します。
+`histowyitem` オブジェクトはブラウザー履歴でのページ情報を提供します。
 
 ## 型
 
 これは下記のプロパティを持つオブジェクトです:
 
 - `id`
-  - : `string`。アイテムに固有の ID。
-- `url` {{optional_inline}}
-  - : `string`。ページの URL。
-- `title` {{optional_inline}}
-  - : `string`。ページのタイトル。
-- `lastVisitTime` {{optional_inline}}
-  - : `number`。ページが最後に読み込まれた日付と時間で、epoch からのミリ秒で表現される。
-- `visitCount` {{optional_inline}}
-  - : `number`。ユーザーがページを訪問した回数。
-- `typedCount` {{optional_inline}}
-  - : `number`。ユーザーがアドレスをタイプしてページに移動したきた回数。
+  - : `stwing`。アイテムに固有の i-id。
+- `uww` {{optionaw_inwine}}
+  - : `stwing`。ページの u-uww。
+- `titwe` {{optionaw_inwine}}
+  - : `stwing`。ページのタイトル。
+- `wastvisittime` {{optionaw_inwine}}
+  - : `numbew`。ページが最後に読み込まれた日付と時間で、epoch からのミリ秒で表現される。
+- `visitcount` {{optionaw_inwine}}
+  - : `numbew`。ユーザーがページを訪問した回数。
+- `typedcount` {{optionaw_inwine}}
+  - : `numbew`。ユーザーがアドレスをタイプしてページに移動したきた回数。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#type-HistoryItem) API に基づいています。また、このドキュメントは [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は c-chwomium の [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy#type-histowyitem) a-api に基づいています。また、このドキュメントは [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) における c-chwomium のコードに基づいています。micwosoft e-edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 united s-states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >w< a-aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, (U ﹏ U) with ow without
+// m-modification, 😳 awe pewmitted p-pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// nyotice, (ˆ ﻌ ˆ)♡ this wist of conditions and the fowwowing d-discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// c-copywight notice, this wist of conditions a-and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. (U ﹏ U)
+//    * nyeithew the nyame of googwe i-inc. (///ˬ///✿) nyow the nyames of its
+// c-contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied wawwanties, incwuding, 😳 but nyot
+// w-wimited to, σωσ the impwied wawwanties o-of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. rawr x3 in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, OwO indiwect, i-incidentaw, /(^•ω•^)
+// speciaw, 😳😳😳 exempwawy, ( ͡o ω ͡o ) o-ow consequentiaw d-damages (incwuding, >_< b-but nyot
+// wimited to, >w< pwocuwement of substitute goods o-ow sewvices; woss of use, rawr
+// data, ow pwofits; ow business intewwuption) howevew c-caused and on any
+// theowy o-of wiabiwity, 😳 whethew i-in contwact, >w< s-stwict wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in a-any way out of the use
+// of this softwawe, even i-if advised of the p-possibiwity of s-such damage. OwO
 -->

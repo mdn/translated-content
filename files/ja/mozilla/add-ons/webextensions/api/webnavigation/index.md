@@ -1,110 +1,110 @@
 ---
-title: webNavigation
-slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
+titwe: webnavigation
+swug: moziwwa/add-ons/webextensions/api/webnavigation
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-ナビゲーションのいろいろな段階でイベントリスナーを追加します。ナビゲーションにはある URL から他に移動するブラウザーフレームにより成り立っていて、それは(いつもではなく)通常はリンクのクリックやロケーションバーへの URL 入力といったユーザー操作の応答として発生します。
+ナビゲーションのいろいろな段階でイベントリスナーを追加します。ナビゲーションにはある u-uww から他に移動するブラウザーフレームにより成り立っていて、それは(いつもではなく)通常はリンクのクリックやロケーションバーへの uww 入力といったユーザー操作の応答として発生します。
 
-{{WebExtAPIRef("webRequest")}} API と比較して: ナビゲーションは通常、ブラウザーにウェブリクエストを発生させますが、webRequest API は HTTP 層からの低レベルな観点に関心を持っており、一方で webNavigation API はブラウザー UI 自身に対して、より関心を持っています。
+{{webextapiwef("webwequest")}} a-api と比較して: ナビゲーションは通常、ブラウザーにウェブリクエストを発生させますが、webwequest a-api は http 層からの低レベルな観点に関心を持っており、一方で w-webnavigation a-api はブラウザー u-ui 自身に対して、より関心を持っています。
 
 それぞれのイベントはナビゲーションの特定のステージに対応しています。イベントシーケンスは次の通りです:
 
-![](we-flow.png)
+![](we-fwow.png)
 
 - 主なフローは次の通り:
 
-  - `{{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}`
-  - `{{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}`
-  - `{{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}`
-  - `{{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}`.
+  - `{{webextapiwef("webnavigation.onbefowenavigate", (U ﹏ U) "onbefowenavigate")}}`
+  - `{{webextapiwef("webnavigation.oncommitted", mya "oncommitted")}}`
+  - `{{webextapiwef("webnavigation.ondomcontentwoaded", ʘwʘ "ondomcontentwoaded")}}`
+  - `{{webextapiwef("webnavigation.oncompweted", (˘ω˘) "oncompweted")}}`. (U ﹏ U)
 
 - 追加のものは次の通り:
 
-  - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` は、ブラウザーがナビゲーション用にタブやウィンドウを作成する必要がある場合 (例えば、ユーザーがリンクを新しいタブで開いたために)、`onBeforeNavigate` の前に発火します。
-  - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} はページが [history API](http://diveintohtml5.info/history.html) を使ってブラウザーのロケーションバーに表示された URL を更新する場合に発火します。
-  - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} はページの [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) が変更された場合に発火します。
-  - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} はあらゆる場所で発火します。
+  - `{{webextapiwef("webnavigation.oncweatednavigationtawget", ^•ﻌ•^ "oncweatednavigationtawget")}}` は、ブラウザーがナビゲーション用にタブやウィンドウを作成する必要がある場合 (例えば、ユーザーがリンクを新しいタブで開いたために)、`onbefowenavigate` の前に発火します。
+  - {{webextapiwef("webnavigation.onhistowystateupdated", (˘ω˘) "onhistowystateupdated")}} はページが [histowy a-api](http://diveintohtmw5.info/histowy.htmw) を使ってブラウザーのロケーションバーに表示された u-uww を更新する場合に発火します。
+  - {{webextapiwef("webnavigation.onwefewencefwagmentupdated", :3 "onwefewencefwagmentupdated")}} はページの [fwagment identifiew](https://en.wikipedia.owg/wiki/fwagment_identifiew) が変更された場合に発火します。
+  - {{webextapiwef("webnavigation.onewwowoccuwwed", ^^;; "onewwowoccuwwed")}} はあらゆる場所で発火します。
 
-それぞれのナビゲーションは特定のブラウザーフレーム内の URL の遷移です。ブラウザーフレームはタブ ID とフレーム ID で識別されます。フレームはタブ内の再上位の閲覧コンテキストである場合や、[iframe](/ja/docs/Web/HTML/Reference/Elements/iframe) として実装されたネストされた閲覧コンテキストである場合があります。
+それぞれのナビゲーションは特定のブラウザーフレーム内の uww の遷移です。ブラウザーフレームはタブ id とフレーム id で識別されます。フレームはタブ内の再上位の閲覧コンテキストである場合や、[ifwame](/ja/docs/web/htmw/wefewence/ewements/ifwame) として実装されたネストされた閲覧コンテキストである場合があります。
 
-それぞれのイベントの `addListener()` の呼び出しはオプションの filter パラメーターを受け入れます。filter は 1 つ以上の URL パターンを指定し、イベントはターゲット URL がパターンにマッチしたナビゲーションの時だけに発火します。
+それぞれのイベントの `addwistenew()` の呼び出しはオプションの f-fiwtew パラメーターを受け入れます。fiwtew は 1 つ以上の uww パターンを指定し、イベントはターゲット uww がパターンにマッチしたナビゲーションの時だけに発火します。
 
-`onCommitted` イベントリスナーには 2 つの追加プロパティが渡されます: ナビゲーションの原因 (例えばユーザーがリンクをクリックしたり、ユーザーがブックマークを選んだり) を示す{{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} と、ナビゲーションの詳細情報を提供する{{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} です。
+`oncommitted` イベントリスナーには 2 つの追加プロパティが渡されます: ナビゲーションの原因 (例えばユーザーがリンクをクリックしたり、ユーザーがブックマークを選んだり) を示す{{webextapiwef("webnavigation.twansitiontype","twansitiontype")}} と、ナビゲーションの詳細情報を提供する{{webextapiwef("webnavigation.twansitionquawifiew","twansitionquawifiew")}} です。
 
-この API を使うには"webNavigation" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。
+この a-api を使うには"webnavigation" [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)が必要です。
 
 ## 型
 
-- {{WebExtAPIRef("webNavigation.TransitionType")}}
+- {{webextapiwef("webnavigation.twansitiontype")}}
   - : ナビゲーションの原因: 例えば、ユーザーがリンクをクリックしたり、アドレスを入力したり、ブックマークをクリックしたりなど。
-- {{WebExtAPIRef("webNavigation.TransitionQualifier")}}
+- {{webextapiwef("webnavigation.twansitionquawifiew")}}
   - : 遷移の追加情報
 
 ## 関数
 
-- {{WebExtAPIRef("webNavigation.getFrame()")}}
-  - : 特定フレームについての情報を取得します。フレームにはタブ内のトップレベルのフレームや、ネストされた [iframe](/ja/docs/Web/HTML/Reference/Elements/iframe) であり、タブ ID とフレーム ID でユニークに識別されます。
-- {{WebExtAPIRef("webNavigation.getAllFrames()")}}
-  - : タブ ID を指定すると、そのタブに含まれているすべてのフレームの情報を取得します。
+- {{webextapiwef("webnavigation.getfwame()")}}
+  - : 特定フレームについての情報を取得します。フレームにはタブ内のトップレベルのフレームや、ネストされた [ifwame](/ja/docs/web/htmw/wefewence/ewements/ifwame) であり、タブ id とフレーム i-id でユニークに識別されます。
+- {{webextapiwef("webnavigation.getawwfwames()")}}
+  - : タブ id を指定すると、そのタブに含まれているすべてのフレームの情報を取得します。
 
 ## イベント
 
-- {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}
+- {{webextapiwef("webnavigation.onbefowenavigate")}}
   - : ブラウザーがナビゲーションイベントを開始する直前に発火します。
-- {{WebExtAPIRef("webNavigation.onCommitted")}}
+- {{webextapiwef("webnavigation.oncommitted")}}
   - : ナビゲーションがコミットされたときに発火します。少なくともサーバーから新しい document がいくらか取得されてブラウザーが新 document に切り替えると決めたとき。
-- {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : ページ内で [DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントが発火したときに発火します。
-- {{WebExtAPIRef("webNavigation.onCompleted")}}
-  - : document と、それが参照するリソースが完全にロードされて初期化されたときに発火します。これは DOM [`load`](/ja/docs/Web/API/Window/load_event) イベントと等価です。
-- {{WebExtAPIRef("webNavigation.onErrorOccurred")}}
+- {{webextapiwef("webnavigation.ondomcontentwoaded")}}
+  - : ページ内で [domcontentwoaded](/ja/docs/web/api/document/domcontentwoaded_event) イベントが発火したときに発火します。
+- {{webextapiwef("webnavigation.oncompweted")}}
+  - : d-document と、それが参照するリソースが完全にロードされて初期化されたときに発火します。これは dom [`woad`](/ja/docs/web/api/window/woad_event) イベントと等価です。
+- {{webextapiwef("webnavigation.onewwowoccuwwed")}}
   - : エラーが起こってナビゲーションが停止したときに発火します。これはネットワークエラーが起きたときや、ユーザーがナビゲーションを停止したときのいずれかで起こりえます。
-- {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}
+- {{webextapiwef("webnavigation.oncweatednavigationtawget")}}
   - : 新しいウィンドウや、既存のウィンドウ内の新規タブが作成されてナビゲーションをホストするときに発火します: 例えば、ユーザーが新しいタブでリンクを開いた場合。
-- {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated")}}
-  - : ページの [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) が変化したときに発火します。
-- {{WebExtAPIRef("webNavigation.onTabReplaced")}}
+- {{webextapiwef("webnavigation.onwefewencefwagmentupdated")}}
+  - : ページの [fwagment i-identifiew](https://en.wikipedia.owg/wiki/fwagment_identifiew) が変化したときに発火します。
+- {{webextapiwef("webnavigation.ontabwepwaced")}}
   - : タブのコンテンツが別のタブ (通常は以前レンダリング済みのもの) に置き換えられるときに発火します。
-- {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : ページで [history API](http://diveintohtml5.info/history.html) を使ってブラウザーのロケーションバーの URL が更新されたときに発火します。
+- {{webextapiwef("webnavigation.onhistowystateupdated")}}
+  - : ページで [histowy a-api](http://diveintohtmw5.info/histowy.htmw) を使ってブラウザーのロケーションバーの uww が更新されたときに発火します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> this api is based on chwomium's [`chwome.webnavigation`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webnavigation) api. 🥺 this d-documentation is dewived fwom [`web_navigation.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/web_navigation.json) in the chwomium code.micwosoft edge compatibiwity d-data is suppwied by micwosoft c-cowpowation and i-is incwuded hewe u-undew the cweative c-commons attwibution 3.0 united states wicense. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. nyaa~~ a-aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, ( ͡o ω ͡o ) with ow without
+// m-modification, mya awe pewmitted pwovided t-that the f-fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above c-copywight
+// nyotice, (///ˬ///✿) this wist o-of conditions and t-the fowwowing discwaimew. (˘ω˘)
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight nyotice, ^^;; t-this wist of conditions and the f-fowwowing discwaimew
+// in the d-documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. (✿oωo)
+//    * nyeithew the nyame of googwe inc. (U ﹏ U) nyow the nyames of its
+// contwibutows m-may be u-used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, ^•ﻌ•^ i-incwuding, rawr but nyot
+// w-wimited to, (˘ω˘) the i-impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose a-awe discwaimed. nyaa~~ i-in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, UwU i-indiwect, :3 incidentaw, (⑅˘꒳˘)
+// s-speciaw, (///ˬ///✿) e-exempwawy, ow consequentiaw damages (incwuding, ^^;; but nyot
+// w-wimited to, >_< pwocuwement of substitute goods ow sewvices; woss of use, rawr x3
+// data, /(^•ω•^) ow pwofits; ow b-business intewwuption) howevew caused and on any
+// theowy of wiabiwity, :3 w-whethew i-in contwact, (ꈍᴗꈍ) stwict w-wiabiwity, /(^•ω•^) ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any way o-out of the use
+// of this softwawe, (⑅˘꒳˘) even if advised of the possibiwity of such damage. ( ͡o ω ͡o )
 -->

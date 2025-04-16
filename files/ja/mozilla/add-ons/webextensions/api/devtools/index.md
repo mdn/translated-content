@@ -1,60 +1,60 @@
 ---
-title: devtools
-slug: Mozilla/Add-ons/WebExtensions/API/devtools
-l10n:
-  sourceCommit: 58c6fc54557942c16dc02c3aa3688bd246346969
+titwe: devtoows
+swug: moziwwa/add-ons/webextensions/api/devtoows
+w-w10n:
+  souwcecommit: 58c6fc54557942c16dc02c3aa3688bd246346969
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-拡張機能がブラウザーの{{Glossary("Developer Tools", "開発者ツール")}}と対話することを可能にします。この API を使用して、開発者ツールのページを作成したり、検査対象のウィンドウと対話したり、ページのネットワーク使用状況を検査したりすることができます。
+拡張機能がブラウザーの{{gwossawy("devewopew t-toows", >w< "開発者ツール")}}と対話することを可能にします。この a-api を使用して、開発者ツールのページを作成したり、検査対象のウィンドウと対話したり、ページのネットワーク使用状況を検査したりすることができます。
 
-この API を使用するには、 `"devtools"` [API 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで指定されている必要があります。この権限はオプションの権限ではありません。
+この a-api を使用するには、 `"devtoows"` [api 権限](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions)が [manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイルで指定されている必要があります。この権限はオプションの権限ではありません。
 
 ## プロパティ
 
-- {{WebExtAPIRef("devtools.inspectedWindow")}}
-  - : 開発者ツールが接続されているウィンドウ（検査されるウィンドウ）と対話します。これには、検査されたページのタブ ID の取得、検査されたウィンドウのコンテキストでのコードの評価、ページの再読み込み、ページ内のリソース一覧の取得などが記載されています。
-- {{WebExtAPIRef("devtools.network")}}
+- {{webextapiwef("devtoows.inspectedwindow")}}
+  - : 開発者ツールが接続されているウィンドウ（検査されるウィンドウ）と対話します。これには、検査されたページのタブ i-id の取得、検査されたウィンドウのコンテキストでのコードの評価、ページの再読み込み、ページ内のリソース一覧の取得などが記載されています。
+- {{webextapiwef("devtoows.netwowk")}}
   - : 開発者ツールが接続されているウィンドウ（インスペクトウィンドウ）に関連するネットワークリクエストの情報を取得します。
-- {{WebExtAPIRef("devtools.panels")}}
+- {{webextapiwef("devtoows.panews")}}
   - : ユーザーエージェント開発者ツール内に表示されるユーザーインターフェイスパネルを作成します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/) API に基づいています。
+> [!note]
+> この a-api は c-chwomium の [`chwome.devtoows`](https://devewopew.chwome.com/docs/extensions/mv2/devtoows/) a-api に基づいています。
 >
-> Microsoft Edge の互換性データは、 Microsoft Corporation によって提供され、 Creative Commons Attribution 3.0 United States License の下でここに記載されています。
+> micwosoft edge の互換性データは、 micwosoft cowpowation によって提供され、 cweative c-commons attwibution 3.0 united states wicense の下でここに記載されています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (U ﹏ U) a-aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, (ˆ ﻌ ˆ)♡ with ow without
+// m-modification, 😳😳😳 a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) this wist o-of conditions and the fowwowing d-discwaimew. (///ˬ///✿)
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight nyotice, 😳 t-this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. 😳
+//    * nyeithew the nyame o-of googwe inc. σωσ nyow the nyames o-of its
+// contwibutows m-may be u-used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, OwO incwuding, /(^•ω•^) but nyot
+// w-wimited to, the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. 😳😳😳 in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ( ͡o ω ͡o ) i-indiwect, >_< incidentaw, >w<
+// s-speciaw, rawr exempwawy, o-ow consequentiaw d-damages (incwuding, 😳 b-but nyot
+// wimited to, pwocuwement of substitute goods ow s-sewvices; woss of use, >w<
+// data, (⑅˘꒳˘) ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, OwO w-whethew i-in contwact, (ꈍᴗꈍ) stwict w-wiabiwity, 😳 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way o-out of the use
+// of this softwawe, 😳😳😳 even if advised o-of the possibiwity o-of such d-damage. mya
 -->

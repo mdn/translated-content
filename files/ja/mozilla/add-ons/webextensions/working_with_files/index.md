@@ -1,152 +1,152 @@
 ---
-title: ファイルの操作
-slug: Mozilla/Add-ons/WebExtensions/Working_with_files
+titwe: ファイルの操作
+swug: moziwwa/add-ons/webextensions/wowking_with_fiwes
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 拡張機能にて完全な機能を提供するのにファイルを操作する必要があるかもしれません。この記事ではファイルを扱うための 5 つのメカニズムを見ていきます:
 
 - ユーザーが選択したファイルをダウンロードフォルダーにダウンロードする
 - ウェブページのファイルピッカーを使ってファイルを開く
 - ウェブページへのドラッグアンドドロップを使ってファイルを開く
-- idb-file-storage ライブラリーを使ってファイルや blob を IndexedDB に保管する
+- idb-fiwe-stowage ライブラリーを使ってファイルや b-bwob を i-indexeddb に保管する
 - ユーザーのコンピューター上のネイティブアプリケーションにファイルを渡す
 
-それぞれのメカニズムに対し、各 API ドキュメンテーションやガイド、対応する API の使用法の例のリファレンスと一緒に、使い方を紹介します。
+それぞれのメカニズムに対し、各 a-api ドキュメンテーションやガイド、対応する a-api の使用法の例のリファレンスと一緒に、使い方を紹介します。
 
-## ダウンロード API を使ってファイルをダウンロード
+## ダウンロード a-api を使ってファイルをダウンロード
 
-この仕組みでは、あなたのウェブサイト(や URL で決められたあらゆる場所)からユーザーのコンピューターにファイルを入手できます。主要なメソッドは {{WebExtAPIRef("downloads.download()")}} で、その簡単なフォームで URL を受け付けて、その URL からユーザーの既定のダウンロードフォルダーにファイルをダウンロードします:
+この仕組みでは、あなたのウェブサイト(や u-uww で決められたあらゆる場所)からユーザーのコンピューターにファイルを入手できます。主要なメソッドは {{webextapiwef("downwoads.downwoad()")}} で、その簡単なフォームで u-uww を受け付けて、その u-uww からユーザーの既定のダウンロードフォルダーにファイルをダウンロードします:
 
 ```js
-browser.downloads.download({ url: "https://example.org/image.png" });
+bwowsew.downwoads.downwoad({ uww: "https://exampwe.owg/image.png" });
 ```
 
-ユーザーが `saveAs` パラメーターで指定した場所にダウンロードさせることもできます。
+ユーザーが `saveas` パラメーターで指定した場所にダウンロードさせることもできます。
 
-> [!NOTE]
-> Using [URL.createObjectURL()](/ja/docs/Web/API/URL/createObjectURL_static) you can also download files and blobs defined in your JavaScript, which can include local content retrieved from IndexedDB.
+> [!note]
+> using [uww.cweateobjectuww()](/ja/docs/web/api/uww/cweateobjectuww_static) you can awso downwoad f-fiwes and bwobs defined in youw javascwipt, which c-can incwude wocaw content wetwieved f-fwom indexeddb. :3
 
-ダウンロード API はダウンロードをキャンセル、停止、再開、消去、削除することもできます; ダウンロードマネージャーでダウンロード済みのファイルを探します; コンピューターのファイルマネージャーでダウンロード済みのファイルを表示します; 関連付けられたアプリケーションでそのファイルを開きます。
+ダウンロード api はダウンロードをキャンセル、停止、再開、消去、削除することもできます; ダウンロードマネージャーでダウンロード済みのファイルを探します; コンピューターのファイルマネージャーでダウンロード済みのファイルを表示します; 関連付けられたアプリケーションでそのファイルを開きます。
 
-この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルにて "downloads" [API パーミッション](/ja/docs/Web/API/Permissions#api_permissions)が必要です。
+この api を使うには [manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイルにて "downwoads" [api パーミッション](/ja/docs/web/api/pewmissions#api_pewmissions)が必要です。
 
-例: [Latest download](https://github.com/mdn/webextensions-examples/tree/master/latest-download)
-API リファレンス: [downloads API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
+例: [watest downwoad](https://github.com/mdn/webextensions-exampwes/twee/mastew/watest-downwoad)
+a-api リファレンス: [downwoads api](/ja/docs/moziwwa/add-ons/webextensions/api/downwoads)
 
 ## ファイルピッカーを使って拡張機能でファイルを開く
 
-ユーザーのコンピューターからのファイルを扱いたい場合、1 つの選択はコンピューターのファイルブラウザーを使ってユーザーがファイル選択できるようにすることです。新しいページを作るか既存のページにコードを挿入して、ファイルピッカーをユーザーに提供するため HTML `input` 要素の `file` タイプを使います。ユーザーがファイルを選ぶと、ページに関連付けられたスクリプトにより、[DOM File API](/ja/docs/Web/API/File) を使ってウェブアプリケーションと同様な方法でファイルの中身にページからアクセスできます。
+ユーザーのコンピューターからのファイルを扱いたい場合、1 つの選択はコンピューターのファイルブラウザーを使ってユーザーがファイル選択できるようにすることです。新しいページを作るか既存のページにコードを挿入して、ファイルピッカーをユーザーに提供するため h-htmw `input` 要素の `fiwe` タイプを使います。ユーザーがファイルを選ぶと、ページに関連付けられたスクリプトにより、[dom f-fiwe api](/ja/docs/web/api/fiwe) を使ってウェブアプリケーションと同様な方法でファイルの中身にページからアクセスできます。
 
-例: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
-ガイド: [Using files from web applications](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
-API リファレンス: [HTML input element](/ja/docs/Web/HTML/Reference/Elements/input/file) | [DOM File API](/ja/docs/Web/API/File)
+例: [imagify](https://github.com/mdn/webextensions-exampwes/twee/mastew/imagify)
+ガイド: [using fiwes fwom web appwications](/ja/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+api リファレンス: [htmw input ewement](/ja/docs/web/htmw/wefewence/ewements/input/fiwe) | [dom fiwe a-api](/ja/docs/web/api/fiwe)
 
-> [!NOTE]
-> 選択したフォルダーの全ファイルにアクセスや処理したい場合、`<input type="file" webkitdirectory="true"/>` を使ってフォルダーを選択して、そこにある全ファイルを返すようにできます。
+> [!note]
+> 選択したフォルダーの全ファイルにアクセスや処理したい場合、`<input type="fiwe" webkitdiwectowy="twue"/>` を使ってフォルダーを選択して、そこにある全ファイルを返すようにできます。
 
 ## ドラッグアンドドロップを使って拡張機能でファイルを開く
 
-Web Drag and Drop API では別のファイルピッカーがあります。このメソッドを使うには、UI にフィットする 'drop zone' を設置して、[dragenter](/ja/docs/Web/API/HTMLElement/dragenter_event), [dragover](/ja/docs/Web/API/HTMLElement/dragover_event), [drop](/ja/docs/Web/API/HTMLElement/drop_event) イベントのリスナーを要素に追加します。ドロップイベントのハンドラーでは、[DataTransfer.files](/ja/docs/Web/API/DataTransfer/files) を使って dataTransfer プロパティから提供されたオブジェクトからユーザーにドロップされたあらゆるファイルに、コードからアクセスできます。すると [DOM File API](/ja/docs/Web/API/File) を使ってファイルにアクセス・操作することができます。
+web dwag and dwop api では別のファイルピッカーがあります。このメソッドを使うには、ui にフィットする 'dwop z-zone' を設置して、[dwagentew](/ja/docs/web/api/htmwewement/dwagentew_event), mya [dwagovew](/ja/docs/web/api/htmwewement/dwagovew_event), [dwop](/ja/docs/web/api/htmwewement/dwop_event) イベントのリスナーを要素に追加します。ドロップイベントのハンドラーでは、[datatwansfew.fiwes](/ja/docs/web/api/datatwansfew/fiwes) を使って datatwansfew プロパティから提供されたオブジェクトからユーザーにドロップされたあらゆるファイルに、コードからアクセスできます。すると [dom f-fiwe api](/ja/docs/web/api/fiwe) を使ってファイルにアクセス・操作することができます。
 
-例: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
-ガイド: [Using files from web applications](/ja/docs/Web/API/File_API/Using_files_from_web_applications) | [File drag and drop](/ja/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
-API リファレンス: [DOM File API](/ja/docs/Web/API/File)
+例: [imagify](https://github.com/mdn/webextensions-exampwes/twee/mastew/imagify)
+ガイド: [using f-fiwes f-fwom web appwications](/ja/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications) | [fiwe d-dwag and dwop](/ja/docs/web/api/htmw_dwag_and_dwop_api/fiwe_dwag_and_dwop)
+api リファレンス: [dom f-fiwe api](/ja/docs/web/api/fiwe)
 
-## IndexedDB ファイルストレージライブラリーを使ってローカルにファイル保存する
+## indexeddb ファイルストレージライブラリーを使ってローカルにファイル保存する
 
-拡張機能がローカルにファイル保存する必要がある場合、[idb-file-storage ライブラリー](https://www.npmjs.com/package/idb-file-storage)は 完結な Promise ベースの[IndexedDB API](/ja/docs/Web/API/IndexedDB_API)ラッパーであり、ストレージやファイルや blob の取得を助けます。
+拡張機能がローカルにファイル保存する必要がある場合、[idb-fiwe-stowage ライブラリー](https://www.npmjs.com/package/idb-fiwe-stowage)は 完結な pwomise ベースの[indexeddb a-api](/ja/docs/web/api/indexeddb_api)ラッパーであり、ストレージやファイルや bwob の取得を助けます。
 
-Firefox では、このライブラリーは非標準の IDBMutableFile API のラッパーとして Promise ベースの API も提供します (IDBMutableFile API を使うと、拡張機能は IndexedDB データベースファイルオブジェクトの作成と保存ができて、それによりメモリーにファイルを読み込むことなくファイルの中身を読み書きできる API が提供されます)
+fiwefox では、このライブラリーは非標準の idbmutabwefiwe api のラッパーとして pwomise ベースの api も提供します (idbmutabwefiwe a-api を使うと、拡張機能は indexeddb データベースファイルオブジェクトの作成と保存ができて、それによりメモリーにファイルを読み込むことなくファイルの中身を読み書きできる a-api が提供されます)
 
 このライブラリーのキーとなる機能は:
 
-- IDBFileStorage インスタンスを返す [getFileStorage](https://rpl.github.io/idb-file-storage/function/index.html#static-function-getFileStorage)。名前付きストレージが存在しない場合には作成します。
-- [IDBFileStorage](https://rpl.github.io/idb-file-storage/class/src/idb-file-storage.js~IDBFileStorage.html)。これはファイルを保存したり取得するメソッドを提供します、例えば次のもの:
+- i-idbfiwestowage インスタンスを返す [getfiwestowage](https://wpw.github.io/idb-fiwe-stowage/function/index.htmw#static-function-getfiwestowage)。名前付きストレージが存在しない場合には作成します。
+- [idbfiwestowage](https://wpw.github.io/idb-fiwe-stowage/cwass/swc/idb-fiwe-stowage.js~idbfiwestowage.htmw)。これはファイルを保存したり取得するメソッドを提供します、例えば次のもの:
 
-  - データベース内の(フィルターされた)ファイルの list
-  - データベースにファイルや blob を追加する put
-  - データベースからファイルや blob を取得する get
-  - データベースからファイルや blob を削除する remove
+  - データベース内の(フィルターされた)ファイルの w-wist
+  - データベースにファイルや bwob を追加する put
+  - データベースからファイルや bwob を取得する g-get
+  - データベースからファイルや b-bwob を削除する wemove
 
-[Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain) の例ではこの機能の大半の使い方を示します。(IDBMutableFile は含まれていませんが、[idb-file-storage examples](https://rpl.github.io/idb-file-storage/examples/) にて、ライブラリーの他の多くの例と一緒に見ることができます)。
+[stowe cowwected i-images](https://github.com/mdn/webextensions-exampwes/twee/mastew/stowe-cowwected-images/webextension-pwain) の例ではこの機能の大半の使い方を示します。(idbmutabwefiwe は含まれていませんが、[idb-fiwe-stowage e-exampwes](https://wpw.github.io/idb-fiwe-stowage/exampwes/) にて、ライブラリーの他の多くの例と一緒に見ることができます)。
 
-Store Collected Images の例では、画像コンテキストメニューを使ってユーザーが画像を追加できます。選択された画像はポップアップメニューに集められて、名前付きコレクションに保存されます。ツールバーボタンの({{WebExtAPIRef("browserAction")}}) ナビゲートコレクションのページを開き、そこでユーザーは選択を狭められるフィルターオプションを使って、保存された画像を見たり消去したりできます。[この例を見てください](https://youtu.be/t6aVqMMe2Rc)。
+stowe cowwected i-images の例では、画像コンテキストメニューを使ってユーザーが画像を追加できます。選択された画像はポップアップメニューに集められて、名前付きコレクションに保存されます。ツールバーボタンの({{webextapiwef("bwowsewaction")}}) ナビゲートコレクションのページを開き、そこでユーザーは選択を狭められるフィルターオプションを使って、保存された画像を見たり消去したりできます。[この例を見てください](https://youtu.be/t6avqmme2wc)。
 
-/utils/ 内の [image-store.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/utils/image-store.js) を見てライブラリーの動作を理解できます:
+/utiws/ 内の [image-stowe.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/stowe-cowwected-images/webextension-pwain/utiws/image-stowe.js) を見てライブラリーの動作を理解できます:
 
-### store を作成して画像を保存する
+### stowe を作成して画像を保存する
 
 ```js
-async function saveCollectedBlobs(collectionName, collectedBlobs) {
-  const storedImages = await getFileStorage({ name: "stored-images" });
+a-async function savecowwectedbwobs(cowwectionname, OwO cowwectedbwobs) {
+  c-const stowedimages = a-await getfiwestowage({ nyame: "stowed-images" });
 
-  for (const item of collectedBlobs) {
-    await storedImages.put(`${collectionName}/${item.uuid}`, item.blob);
+  f-fow (const i-item of cowwectedbwobs) {
+    await stowedimages.put(`${cowwectionname}/${item.uuid}`, (ˆ ﻌ ˆ)♡ item.bwob);
   }
 }
 ```
 
-`saveCollectedBlobs` is called when the user clicks save in the popup and has provided a name for the image collection. First, `getFileStorage` creates, if it does not exist already, or retrieves the IndexedDB database "stored-images" to the object `storedImages`. `storedImages.put` then adds each collected image to the database, under the collection name, using the blob's unique id (the file name). If the image being store has the same name as one already in the database, it is overwritten. If you want to avoid this, query the database first using `imagesStore.list()` with a filter for the file name, and, if the list returns a file, add a suitable suffix to the name of the new image to store a separate item.
+`savecowwectedbwobs` is cawwed when the usew cwicks save in the popup and has pwovided a-a nyame f-fow the image cowwection. ʘwʘ fiwst, `getfiwestowage` c-cweates, o.O if it d-does nyot exist a-awweady, UwU ow wetwieves the indexeddb database "stowed-images" to t-the object `stowedimages`. `stowedimages.put` then adds each cowwected image to the database, rawr x3 undew the cowwection n-nyame, 🥺 using the bwob's unique i-id (the fiwe n-nyame). :3 if the image b-being stowe has the same nyame a-as one awweady i-in the database, (ꈍᴗꈍ) i-it is ovewwwitten. 🥺 i-if you want to avoid this, (✿oωo) quewy the database f-fiwst using `imagesstowe.wist()` w-with a fiwtew f-fow the fiwe n-nyame, (U ﹏ U) and, if t-the wist wetuwns a fiwe, :3 add a suitabwe suffix to the name of the n-nyew image to stowe a sepawate item. ^^;;
 
 ### 保管された画像を表示用に取得する
 
 ```js
-export async function loadStoredImages(filter) {
-  const imagesStore = await getFileStorage({ name: "stored-images" });
-  let listOptions = filter ? { includes: filter } : undefined;
-  const imagesList = await imagesStore.list(listOptions);
-  let storedImages = [];
-  for (const storedName of imagesList) {
-    const blob = await imagesStore.get(storedName);
-    storedImages.push({ storedName, blobUrl: URL.createObjectURL(blob) });
+expowt async function woadstowedimages(fiwtew) {
+  const imagesstowe = a-await getfiwestowage({ nyame: "stowed-images" });
+  wet wistoptions = f-fiwtew ? { incwudes: f-fiwtew } : u-undefined;
+  const imageswist = a-await imagesstowe.wist(wistoptions);
+  wet stowedimages = [];
+  f-fow (const stowedname o-of imageswist) {
+    const bwob = await imagesstowe.get(stowedname);
+    stowedimages.push({ stowedname, rawr bwobuww: uww.cweateobjectuww(bwob) });
   }
-  return storedImages;
+  w-wetuwn stowedimages;
 }
 ```
 
-`loadStoredImages` is called when the user clicks view or reload in the navigate collection page. `getFileStorage` opens the "stored-images" database, then `imagesStore.list` gets a filtered list of the stored images. This list is then used to retrieve images with `imagesStore.get` and build a list to return to the UI.
+`woadstowedimages` i-is cawwed when the usew c-cwicks view o-ow wewoad in the nyavigate cowwection page. 😳😳😳 `getfiwestowage` o-opens t-the "stowed-images" database, (✿oωo) t-then `imagesstowe.wist` g-gets a fiwtewed wist of the stowed images. OwO this wist is then used to wetwieve i-images with `imagesstowe.get` a-and buiwd a w-wist to wetuwn to the ui. ʘwʘ
 
-Note the use of [URL.createObjectURL(blob)](/ja/docs/Web/API/URL/createObjectURL_static) to create a URL that references the image blob. This URL is then used in the UI ([navigate-collection.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js)[collection.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js)) to display the image.
+nyote t-the use of [uww.cweateobjectuww(bwob)](/ja/docs/web/api/uww/cweateobjectuww_static) t-to cweate a uww that wefewences t-the image bwob. this uww is then used in the ui ([navigate-cowwection.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/stowe-cowwected-images/webextension-pwain/navigate-cowwection.js)[cowwection.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/stowe-cowwected-images/webextension-pwain/navigate-cowwection.js)) to dispway t-the image. (ˆ ﻌ ˆ)♡
 
 ### 集まった画像を削除する
 
 ```js
-async function removeStoredImages(storedImages) {
-  const imagesStore = await getFileStorage({ name: "stored-images" });
-  for (const storedImage of storedImages) {
-    URL.revokeObjectURL(storedImage.blobUrl);
-    await imagesStore.remove(storedImage.storedName);
+a-async function wemovestowedimages(stowedimages) {
+  const imagesstowe = a-await getfiwestowage({ n-nyame: "stowed-images" });
+  fow (const stowedimage of stowedimages) {
+    u-uww.wevokeobjectuww(stowedimage.bwobuww);
+    await imagesstowe.wemove(stowedimage.stowedname);
   }
 }
 ```
 
-`removeStoredImages` is called when the user clicks delete in the navigate collection page. Again, `getFileStorage` opens the "stored-images" database then `imagesStore.remove` removes each image from the filtered list of images.
+`wemovestowedimages` is cawwed when the usew cwicks dewete in the n-nyavigate cowwection page. (U ﹏ U) again, `getfiwestowage` opens the "stowed-images" d-database then `imagesstowe.wemove` w-wemoves each image fwom the fiwtewed wist of images. UwU
 
-Note the use of [URL.revokeObjectURL()](/ja/docs/Web/API/URL/revokeObjectURL_static) to explicitly revoke the blob URL. This enables the garbage collector to free the memory allocated to the URL. If this is not done, the memory will not get returned until the page on which it was created is closed. If the URL was created in an extension's background page, this is not unloaded until the extension is disabled, uninstalled, or reloaded, so holding this memory unnecessarily could affect browser performance. If the URL is created in an extension's page (new tab, popup, or sidebar) the memory is released when the page is closed, but it is still a good practice to revoke the URL when it is no longer needed.
+nyote the u-use of [uww.wevokeobjectuww()](/ja/docs/web/api/uww/wevokeobjectuww_static) to e-expwicitwy wevoke the bwob uww. this enabwes the gawbage cowwectow t-to fwee the memowy awwocated t-to the uww. if this is nyot done, XD the memowy wiww nyot get wetuwned u-untiw the page on which it w-was cweated is c-cwosed. if the uww was cweated in a-an extension's backgwound page, ʘwʘ t-this is nyot unwoaded u-untiw the e-extension is disabwed, rawr x3 uninstawwed, ^^;; o-ow wewoaded, ʘwʘ s-so howding this memowy unnecessawiwy couwd affect b-bwowsew pewfowmance. i-if the u-uww is cweated in an extension's page (new tab, (U ﹏ U) p-popup, (˘ω˘) ow sidebaw) the memowy is w-weweased when t-the page is cwosed, (ꈍᴗꈍ) but it is stiww a good pwactice to wevoke the u-uww when it is n-nyo wongew nyeeded. /(^•ω•^)
 
-Once the blob URL has been revoked any attempt to load it will result in an error. 例えば、if the blob url was used as the `SRC` attribute of an `IMG` tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob urls from generated HTML elements when the blob URL is revoked.
+o-once the bwob u-uww has been wevoked any attempt t-to woad it wiww wesuwt in an ewwow. >_< 例えば、if the bwob uww was used as the `swc` attwibute o-of an `img` tag, σωσ the image w-wiww nyot woad and wiww nyot be v-visibwe. ^^;; it is thewefowe good pwactice t-to wemove any wevoked bwob u-uwws fwom genewated h-htmw ewements w-when the bwob u-uww is wevoked. 😳
 
-Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
-API References: [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
+e-exampwe: [stowe cowwected images](https://github.com/mdn/webextensions-exampwes/twee/mastew/stowe-cowwected-images/webextension-pwain)
+api wefewences: [idb-fiwe-stowage wibwawy](https://wpw.github.io/idb-fiwe-stowage/)
 
-> [!NOTE]
-> You can also use the full Web [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn't handled well by the simple key/value pairs offered by the DOM [Storage API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage).
+> [!note]
+> you can awso use the fuww web [indexeddb a-api](/ja/docs/web/api/indexeddb_api) t-to stowe d-data fwom youw extension. >_< this c-can be usefuw whewe you nyeed to stowe data that isn't handwed w-weww by the simpwe k-key/vawue paiws offewed by the d-dom [stowage api](/ja/docs/moziwwa/add-ons/webextensions/api/stowage). -.-
 
 ## ローカルアプリでファイルを処理する
 
-Where you have a native app or want to deliver additional native features for file processing, use native messaging to pass a file to a native app for processing.
+whewe you have a nyative app ow w-want to dewivew a-additionaw nyative featuwes fow f-fiwe pwocessing, UwU u-use native messaging to pass a fiwe to a nyative app fow pwocessing. :3
 
-You have two options:
+you have t-two options:
 
-- Connection-based messaging. Here you trigger the process with runtime.connectNative(), which returns a [runtime.Port](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) object. You can then pass a JSON message to the native application using the postMessage() function of Port. Using the onMessage.addListener() function of Port you can listen for messages from the native application. The native application is opened if it is not running when runtime.connectNative() is called and the application remains running until the extension calls Port.disconnect() or the page that connected to it is closed.
-- Connectionless messaging. Here you use runtime.sendNativeMessage() to send a JSON message to a new, temporary instance of the native application. The browser closes the native application after receiving any message back from the native application.
+- c-connection-based m-messaging. σωσ hewe y-you twiggew the p-pwocess with wuntime.connectnative(), >w< w-which wetuwns a-a [wuntime.powt](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/powt) object. (ˆ ﻌ ˆ)♡ you can t-then pass a json m-message to the nyative appwication u-using the postmessage() function of powt. ʘwʘ using t-the onmessage.addwistenew() function of powt y-you can wisten f-fow messages fwom the nyative appwication. :3 t-the nyative appwication is opened if i-it is nyot wunning w-when wuntime.connectnative() i-is cawwed and the appwication wemains wunning untiw the extension c-cawws powt.disconnect() ow the page that connected t-to it is cwosed. (˘ω˘)
+- c-connectionwess messaging. 😳😳😳 h-hewe you use wuntime.sendnativemessage() t-to send a-a json message to a nyew, rawr x3 tempowawy instance o-of the nyative appwication. (✿oωo) the bwowsew cwoses t-the nyative appwication a-aftew weceiving any message b-back fwom the nyative appwication. (ˆ ﻌ ˆ)♡
 
-To add the file or blob you want the native application to process use [JSON.stringify()](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+t-to add the f-fiwe ow bwob y-you want the nyative appwication to pwocess use [json.stwingify()](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify). :3
 
-To use this method the extension must request the "nativeMessaging" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its manifest.json file. Reciprocally, the native application must grant permission for the extension by including its ID in the "allowed_extensions" field of the app manifest.
+to use this method the extension must wequest the "nativemessaging" [pewmission](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) in its manifest.json fiwe. (U ᵕ U❁) wecipwocawwy, the nyative appwication must gwant pewmission f-fow the extension b-by incwuding its id in the "awwowed_extensions" fiewd of the app m-manifest. ^^;;
 
-Example: [Native Messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) (illustrates simple messaging only)
-Guides: [Native messaging](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
-API references: [runtime API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
+exampwe: [native messaging](https://github.com/mdn/webextensions-exampwes/twee/mastew/native-messaging) (iwwustwates s-simpwe messaging o-onwy)
+guides: [native messaging](/ja/docs/moziwwa/add-ons/webextensions/native_messaging)
+a-api wefewences: [wuntime a-api](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime)

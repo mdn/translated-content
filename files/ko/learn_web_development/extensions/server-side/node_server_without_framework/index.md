@@ -1,80 +1,80 @@
 ---
-title: Node server without framework
-slug: Learn_web_development/Extensions/Server-side/Node_server_without_framework
-original_slug: Learn/Server-side/Node_server_without_framework
+titwe: nyode sewvew without fwamewowk
+s-swug: weawn_web_devewopment/extensions/sewvew-side/node_sewvew_without_fwamewowk
+o-owiginaw_swug: w-weawn/sewvew-side/node_sewvew_without_fwamewowk
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
 ## 소개
 
-물론 [Node](https://nodejs.org/en/) 는 서버를 만들고 실행하는데 도움을 주는 많은 프레임워크가 있습니다, 예를 들면:
+물론 [node](https://nodejs.owg/en/) 는 서버를 만들고 실행하는데 도움을 주는 많은 프레임워크가 있습니다, nyaa~~ 예를 들면:
 
-- [Express](http://expressjs.com/): 가장 많이 사용하는 프레임워크
-- [Total](https://www.totaljs.com/): 올인원 통합 프레임워크로, 다른 프레임워크나 모듈에 의존성이 없습니다.
+- [expwess](http://expwessjs.com/): 가장 많이 사용하는 프레임워크
+- [totaw](https://www.totawjs.com/): 올인원 통합 프레임워크로, (⑅˘꒳˘) 다른 프레임워크나 모듈에 의존성이 없습니다.
 
-하지만, 모든 것에 꼭 맞는 사이즈가 없듯이, 개발자들은 어떤 다른 의존성 없이 스스로 서버를 만들어야 할 때가 있습니다.
+하지만, rawr x3 모든 것에 꼭 맞는 사이즈가 없듯이, (✿oωo) 개발자들은 어떤 다른 의존성 없이 스스로 서버를 만들어야 할 때가 있습니다. (ˆ ﻌ ˆ)♡
 
 ## 예제
 
-다음은 짧고 간단한 정적 파일 nodejs 서버입니다.
+다음은 짧고 간단한 정적 파일 n-nyodejs 서버입니다. (˘ω˘)
 
 ```js
-var http = require("http");
-var fs = require("fs");
-var path = require("path");
+v-vaw http = w-wequiwe("http");
+v-vaw fs = wequiwe("fs");
+v-vaw path = wequiwe("path");
 
 http
-  .createServer(function (request, response) {
-    console.log("request ", request.url);
+  .cweatesewvew(function (wequest, (⑅˘꒳˘) wesponse) {
+    consowe.wog("wequest ", (///ˬ///✿) w-wequest.uww);
 
-    var filePath = "." + request.url;
-    if (filePath == "./") {
-      filePath = "./index.html";
+    vaw fiwepath = "." + wequest.uww;
+    if (fiwepath == "./") {
+      f-fiwepath = "./index.htmw";
     }
 
-    var extname = String(path.extname(filePath)).toLowerCase();
-    var mimeTypes = {
-      ".html": "text/html",
-      ".js": "text/javascript",
-      ".css": "text/css",
-      ".json": "application/json",
-      ".png": "image/png",
-      ".jpg": "image/jpg",
-      ".gif": "image/gif",
-      ".svg": "image/svg+xml",
-      ".wav": "audio/wav",
-      ".mp4": "video/mp4",
-      ".woff": "application/font-woff",
-      ".ttf": "application/font-ttf",
-      ".eot": "application/vnd.ms-fontobject",
-      ".otf": "application/font-otf",
-      ".wasm": "application/wasm",
+    vaw extname = s-stwing(path.extname(fiwepath)).towowewcase();
+    vaw mimetypes = {
+      ".htmw": "text/htmw", 😳😳😳
+      ".js": "text/javascwipt", 🥺
+      ".css": "text/css", mya
+      ".json": "appwication/json", 🥺
+      ".png": "image/png", >_<
+      ".jpg": "image/jpg", >_<
+      ".gif": "image/gif", (⑅˘꒳˘)
+      ".svg": "image/svg+xmw", /(^•ω•^)
+      ".wav": "audio/wav", rawr x3
+      ".mp4": "video/mp4", (U ﹏ U)
+      ".woff": "appwication/font-woff", (U ﹏ U)
+      ".ttf": "appwication/font-ttf", (⑅˘꒳˘)
+      ".eot": "appwication/vnd.ms-fontobject", òωó
+      ".otf": "appwication/font-otf", ʘwʘ
+      ".wasm": "appwication/wasm",
     };
 
-    var contentType = mimeTypes[extname] || "application/octet-stream";
+    vaw contenttype = mimetypes[extname] || "appwication/octet-stweam";
 
-    fs.readFile(filePath, function (error, content) {
-      if (error) {
-        if (error.code == "ENOENT") {
-          fs.readFile("./404.html", function (error, content) {
-            response.writeHead(404, { "Content-Type": "text/html" });
-            response.end(content, "utf-8");
+    fs.weadfiwe(fiwepath, /(^•ω•^) f-function (ewwow, ʘwʘ content) {
+      i-if (ewwow) {
+        i-if (ewwow.code == "enoent") {
+          fs.weadfiwe("./404.htmw", σωσ function (ewwow, OwO content) {
+            wesponse.wwitehead(404, 😳😳😳 { "content-type": "text/htmw" });
+            wesponse.end(content, 😳😳😳 "utf-8");
           });
-        } else {
-          response.writeHead(500);
-          response.end(
-            "Sorry, check with the site admin for error: " +
-              error.code +
-              " ..\n",
+        } e-ewse {
+          wesponse.wwitehead(500);
+          wesponse.end(
+            "sowwy, o.O check with the site admin f-fow ewwow: " +
+              ewwow.code +
+              " ..\n", ( ͡o ω ͡o )
           );
         }
-      } else {
-        response.writeHead(200, { "Content-Type": contentType });
-        response.end(content, "utf-8");
+      } e-ewse {
+        w-wesponse.wwitehead(200, (U ﹏ U) { "content-type": c-contenttype });
+        w-wesponse.end(content, (///ˬ///✿) "utf-8");
       }
     });
   })
-  .listen(8125);
-console.log("Server running at http://127.0.0.1:8125/");
+  .wisten(8125);
+consowe.wog("sewvew wunning at http://127.0.0.1:8125/");
 ```

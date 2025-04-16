@@ -1,12 +1,12 @@
 ---
-title: アイコンが表示されない
-slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
+titwe: アイコンが表示されない
+swug: o-owphaned/web/compatibiwity_faq/no_icon_shown.htmw
 ---
 
 ## 概要
 
 一部のアイコンやバナーが表示されません。
-メニューのボタンや、検索実行ボタン、バナーなどが Firefox のみで非表示となってしまいます。
+メニューのボタンや、検索実行ボタン、バナーなどが f-fiwefox のみで非表示となってしまいます。
 
 ![](0301.jpg)
 
@@ -14,118 +14,118 @@ slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
 
 複数要因がありますが、代表例として以下があります。
 
-1. **ベンダープレフィックス**
-    描画やサイズ指定で webkit 指定を使用している場合は、Firefox では認識できないため、非表示となってしまう場合があります。
-    また、背景色を webkit 指定で行い、白抜きのアイコンを描画していた場合も背景色が認識できません。
+1. >w< **ベンダープレフィックス**
+    描画やサイズ指定で w-webkit 指定を使用している場合は、fiwefox では認識できないため、非表示となってしまう場合があります。
+    また、背景色を w-webkit 指定で行い、白抜きのアイコンを描画していた場合も背景色が認識できません。
     背景色が白で表示されると、白文字を指定した場合、同色となり非表示となるケースもあります。
 
     下記は、描画指定の例になります。
 
     ```css
-    top li{
+    top w-wi{
       font-size: 90%;
-      -webkit-border-radius: 3px;
-      border: 1px solid #e5e5e5;
-      background-color: #ffffff;
-      background: -webkit-gradient(linear, left bottom, left top, from(#f6f6f6), to(#ffffff));
-      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-      margin: 0 0 0 5px;
-      position: relative;
+      -webkit-bowdew-wadius: 3px;
+      b-bowdew: 1px s-sowid #e5e5e5;
+      b-backgwound-cowow: #ffffff;
+      backgwound: -webkit-gwadient(wineaw, rawr weft bottom, mya weft top, ^^ fwom(#f6f6f6), 😳😳😳 t-to(#ffffff));
+      -webkit-box-shadow: 0 1px 1px wgba(0, mya 0, 😳 0, 0.05);
+      mawgin: 0 0 0 5px;
+      position: w-wewative;
       bottom: 15px;
     }
 
-    .icn_search a:before {
+    .icn_seawch a-a:befowe {
       content: "" "";
       width: 7px;
       height: 7px;
-      border: 2px solid #e4006f;
-      background: transparent;
-      -webkit-border-radius: 12px;
+      b-bowdew: 2px sowid #e4006f;
+      backgwound: t-twanspawent;
+      -webkit-bowdew-wadius: 12px;
     }
 
-    .icn_search a:after {
+    .icn_seawch a-a:aftew {
       content: "" "";
-      left: 18px;
+      weft: 18px;
       width: 2px;
       height: 7px;
-      margin-top: 0;
-      -webkit-transform: rotate(-45deg);
+      mawgin-top: 0;
+      -webkit-twansfowm: w-wotate(-45deg);
     }
     ```
 
     下記は、サイズ指定の例になります。
 
     ```css
-    single_02 {
-      background: url(http://common/icon.png) no-repeat 0 -625px;
-      -webkit-background-size: 26px auto;
+    singwe_02 {
+      backgwound: uww(http://common/icon.png) nyo-wepeat 0 -625px;
+      -webkit-backgwound-size: 26px a-auto;
     }
     ```
 
-2. **全体のレイアウトに誤りがある**
+2. -.- **全体のレイアウトに誤りがある**
     全体のレイアウトに誤りがあり、結果一部のバナー等が非表示となっている場合があります。
-    [float](/ja/docs/Web/CSS/float)プロパティ等の配置指定に誤りがあり、結果、一部の要素が画面に収まりきれずに表示できていません。
+    [fwoat](/ja/docs/web/css/fwoat)プロパティ等の配置指定に誤りがあり、結果、一部の要素が画面に収まりきれずに表示できていません。
 
 ## 解決策
 
 各要因の解決策の代表例として以下があります。
 
-1. **ベンダープレフィックス**
+1. 🥺 **ベンダープレフィックス**
     webkit 指定の描画やサイズ指定を他ブラウザーでも互換性を維持できるよう下記記載のものに修正することで正しく表示可能となります。
 
-    - [border-radius](/ja/docs/Web/CSS/border-radius)プロパティ
-    - [linear-gradient()](/ja/docs/Web/CSS/gradient/linear-gradient)関数
-    - [box-shadow](/ja/docs/Web/CSS/box-shadow)プロパティ
-    - [transform](/ja/docs/Web/CSS/transform)プロパティ
-    - [background-size](/ja/docs/Web/CSS/background-size)プロパティ
+    - [bowdew-wadius](/ja/docs/web/css/bowdew-wadius)プロパティ
+    - [wineaw-gwadient()](/ja/docs/web/css/gwadient/wineaw-gwadient)関数
+    - [box-shadow](/ja/docs/web/css/box-shadow)プロパティ
+    - [twansfowm](/ja/docs/web/css/twansfowm)プロパティ
+    - [backgwound-size](/ja/docs/web/css/backgwound-size)プロパティ
 
-    詳しくは、「[mobile 版 Firefox 向けベンダープレフィックス対処方法まとめ](./Tips_Vendor_Prefix.html)」をご覧ください。
+    詳しくは、「[mobiwe 版 f-fiwefox 向けベンダープレフィックス対処方法まとめ](./tips_vendow_pwefix.htmw)」をご覧ください。
 
     下記は、描画指定の例になります。
 
     ```css
-    navtop li {
-      font-size:90%;
-      border-radius: 3px;
-      border: 1px solid #e5e5e5;
-      background-color: #ffffff;
-      background: linear-gradient(to bottom, #f6f6f6 0%, #ffffff 100%);
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-      margin: 0 0 0 5px;
-      position: relative;
-      bottom: 15px;
+    n-nyavtop wi {
+      f-font-size:90%;
+      b-bowdew-wadius: 3px;
+      bowdew: 1px sowid #e5e5e5;
+      b-backgwound-cowow: #ffffff;
+      backgwound: wineaw-gwadient(to b-bottom, o.O #f6f6f6 0%, /(^•ω•^) #ffffff 100%);
+      box-shadow: 0 1px 1px wgba(0, nyaa~~ 0, 0, nyaa~~ 0.05);
+      mawgin: 0 0 0 5px;
+      position: wewative;
+      b-bottom: 15px;
     }
 
-    .icn_search a:before {
-      content: "" "";
-      width: 7px;
-      height: 7px;
-      border: 2px solid #e4006f;
-      background: transparent;
-      border-radius: 12px;
+    .icn_seawch a:befowe {
+      c-content: "" "";
+      w-width: 7px;
+      h-height: 7px;
+      bowdew: 2px sowid #e4006f;
+      backgwound: t-twanspawent;
+      b-bowdew-wadius: 12px;
     }
 
-    .icn_search a:after {
-      content: "" "";
-      left: 18px;
+    .icn_seawch a:aftew {
+      c-content: "" "";
+      w-weft: 18px;
       width: 2px;
-      height: 7px;
-      margin-top: 0;
-      transform: rotate(-45deg);
+      h-height: 7px;
+      mawgin-top: 0;
+      twansfowm: wotate(-45deg);
     }
     ```
 
     下記は、サイズ指定の例になります。
 
     ```css
-    single_02 {
-      background: url(http://common/icon.png) no-repeat 0 -625px;
-      -webkit-background-size: 26px auto;
-      background-size: 26px auto;
+    s-singwe_02 {
+      backgwound: uww(http://common/icon.png) n-nyo-wepeat 0 -625px;
+      -webkit-backgwound-size: 26px auto;
+      b-backgwound-size: 26px auto;
     }
     ```
 
-2. **全体のレイアウトに誤りがある**
+2. :3 **全体のレイアウトに誤りがある**
     表示されていない部分のみが問題ではない場合もありますので、ページ全体のレイアウトを見直し、部品の一つ一つが想定の位置に正しく配置されていることを確認してください。
 
 ## メリット
@@ -133,4 +133,4 @@ slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
 ・他のブラウザーでも互換性を維持することができます。
 ・全体のレイアウトを見直すことにより、その後の変更修正も容易になります。
 
-[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)
+[戻る](/ja/docs/owphaned/web/compatibiwity_faq)

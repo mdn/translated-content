@@ -1,226 +1,226 @@
 ---
-title: "<ul>: 順序なしリスト要素"
-slug: Web/HTML/Reference/Elements/ul
-original_slug: Web/HTML/Element/ul
-l10n:
-  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
+titwe: "<uw>: 順序なしリスト要素"
+swug: w-web/htmw/wefewence/ewements/uw
+o-owiginaw_swug: w-web/htmw/ewement/uw
+w-w10n:
+  souwcecommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<ul>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。
+**`<uw>`** は [htmw](/ja/docs/web/htmw) の要素で、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。
 
-{{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;uw&gt;", ( ͡o ω ͡o ) "tabbed-standawd")}}
 
-```html interactive-example
-<ul>
-  <li>Milk</li>
-  <li>
-    Cheese
-    <ul>
-      <li>Blue cheese</li>
-      <li>Feta</li>
-    </ul>
-  </li>
-</ul>
+```htmw i-intewactive-exampwe
+<uw>
+  <wi>miwk</wi>
+  <wi>
+    c-cheese
+    <uw>
+      <wi>bwue cheese</wi>
+      <wi>feta</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-```css interactive-example
-li {
-  list-style-type: circle;
+```css i-intewactive-exampwe
+wi {
+  wist-stywe-type: ciwcwe;
 }
 
-li li {
-  list-style-type: square;
+wi wi {
+  wist-stywe-type: squawe;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `compact` {{Deprecated_inline}}
+- `compact` {{depwecated_inwine}}
 
-  - : この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。
+  - : この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{gwossawy("usew a-agent", (U ﹏ U) "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。
 
-    > [!WARNING]
-    > この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
+    > [!wawning]
+    > この属性は非推奨になっているため、使用しないでください。代わりに [css](/ja/docs/web/css) を使用してください。 `compact` 属性と同様の効果を得るには、 css の {{cssxwef("wine-height")}} プロパティを用い、その値として `80%` を指定します。
 
-- `type` {{Deprecated_inline}}
+- `type` {{depwecated_inwine}}
 
-  - : リストの行頭記号の形状を指定するために用います。 HTML3.2 および HTML 4.0/4.01 tranditional で定義されていた値は以下の通りです。
+  - : リストの行頭記号の形状を指定するために用います。 htmw3.2 および htmw 4.0/4.01 twanditionaw で定義されていた値は以下の通りです。
 
-    - `circle`
+    - `ciwcwe`
     - `disc`
-    - `square`
+    - `squawe`
 
-    4 つ目の行頭記号の形状として、WebTV インターフェイスで `triangle` が定義されていますが、すべてのブラウザーが対応しているわけではありません。
+    4 つ目の行頭記号の形状として、webtv インターフェイスで `twiangwe` が定義されていますが、すべてのブラウザーが対応しているわけではありません。
 
-    この属性が存在せず、[CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティがその要素に適用されていない場合は、ユーザーエージェントが行頭記号の種類を、リストの入れ子階層に応じて選択します。
+    この属性が存在せず、[css](/ja/docs/web/css) の {{ cssxwef("wist-stywe-type") }} プロパティがその要素に適用されていない場合は、ユーザーエージェントが行頭記号の種類を、リストの入れ子階層に応じて選択します。
 
-    > [!WARNING]
-    > この属性は非推奨なので使用しないでください。代替として [CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティを使用してください。
+    > [!wawning]
+    > この属性は非推奨なので使用しないでください。代替として [css](/ja/docs/web/css) の {{ c-cssxwef("wist-stywe-type") }} プロパティを使用してください。
 
 ## 使用上のメモ
 
-- `<ul>` 要素は、数的な順序がなく、その配置順に意味を持たない項目を持つリストを表します。通常、順序なしリストの項目はドット、円形、四角形などいくつかの形式による行頭記号を伴って描画されます。行頭記号のスタイルは HTML 仕様書のページでは定義されていませんが、 CSS の {{ cssxref("list-style-type") }} プロパティを用いて変更することが可能です。
-- `<ul>` 要素と {{HTMLElement("ol")}} 要素は、必要なだけ深く入れ子にすることができます。さらに言えば、入れ子になったリストが `<ol>` と `<ul>` の間で変化することに制限はありません。
-- {{ HTMLElement("ol") }} と `<ul>` は、どちらも項目のリストを表します。両者の違いは、 {{ HTMLElement("ol") }} 要素では順序に意味があることです。使い分けの目安としては、項目の順序を変更してみてください。意味が変わるようであれば {{ HTMLElement("ol") }} 要素を使用し、そうでない場合は `<ul>` 要素を使用することができます。
+- `<uw>` 要素は、数的な順序がなく、その配置順に意味を持たない項目を持つリストを表します。通常、順序なしリストの項目はドット、円形、四角形などいくつかの形式による行頭記号を伴って描画されます。行頭記号のスタイルは htmw 仕様書のページでは定義されていませんが、 c-css の {{ cssxwef("wist-stywe-type") }} プロパティを用いて変更することが可能です。
+- `<uw>` 要素と {{htmwewement("ow")}} 要素は、必要なだけ深く入れ子にすることができます。さらに言えば、入れ子になったリストが `<ow>` と `<uw>` の間で変化することに制限はありません。
+- {{ htmwewement("ow") }} と `<uw>` は、どちらも項目のリストを表します。両者の違いは、 {{ htmwewement("ow") }} 要素では順序に意味があることです。使い分けの目安としては、項目の順序を変更してみてください。意味が変わるようであれば {{ htmwewement("ow") }} 要素を使用し、そうでない場合は `<uw>` 要素を使用することができます。
 
 ## 例
 
 ### シンプルな例
 
-```html
-<ul>
-  <li>first item</li>
-  <li>second item</li>
-  <li>third item</li>
-</ul>
+```htmw
+<uw>
+  <wi>fiwst i-item</wi>
+  <wi>second item</wi>
+  <wi>thiwd i-item</wi>
+</uw>
 ```
 
 次のように出力されます。
 
-{{EmbedLiveSample("Simple_example", 400, 120)}}
+{{embedwivesampwe("simpwe_exampwe", (///ˬ///✿) 400, 120)}}
 
 ### 入れ子になったリスト
 
-```html
-<ul>
-  <li>first item</li>
-  <li>
+```htmw
+<uw>
+  <wi>fiwst i-item</wi>
+  <wi>
     second item
-    <!-- 閉じタグの </li> がここにはない -->
-    <ul>
-      <li>second item first subitem</li>
-      <li>
-        second item second subitem
+    <!-- 閉じタグの </wi> がここにはない -->
+    <uw>
+      <wi>second item fiwst subitem</wi>
+      <wi>
+        second item second s-subitem
         <!-- 入れ子になった第二の順序なしリストでも同じ -->
-        <ul>
-          <li>second item second subitem first sub-subitem</li>
-          <li>second item second subitem second sub-subitem</li>
-          <li>second item second subitem third sub-subitem</li>
-        </ul>
-      </li>
-      <!-- 三番目の順序なしリストを含む li の
-                  閉じタグ </li> -->
-      <li>second item third subitem</li>
-    </ul>
-    <!-- ここに閉じタグ </li> -->
-  </li>
-  <li>third item</li>
-</ul>
+        <uw>
+          <wi>second item second subitem fiwst sub-subitem</wi>
+          <wi>second item second subitem second sub-subitem</wi>
+          <wi>second i-item second subitem thiwd sub-subitem</wi>
+        </uw>
+      </wi>
+      <!-- 三番目の順序なしリストを含む w-wi の
+                  閉じタグ </wi> -->
+      <wi>second i-item t-thiwd subitem</wi>
+    </uw>
+    <!-- ここに閉じタグ </wi> -->
+  </wi>
+  <wi>thiwd i-item</wi>
+</uw>
 ```
 
 次のように出力されます。
 
-{{EmbedLiveSample("Nesting_a_list", 400, 340)}}
+{{embedwivesampwe("nesting_a_wist", >w< 400, 340)}}
 
-### \<ul> と \<ol> のネスト
+### \<uw> と \<ow> のネスト
 
-```html
-<ul>
-  <li>first item</li>
-  <li>
+```htmw
+<uw>
+  <wi>fiwst item</wi>
+  <wi>
     second item
-    <!-- ここには <li> の閉じタグはない -->
-    <ol>
-      <li>second item first subitem</li>
-      <li>second item second subitem</li>
-      <li>second item third subitem</li>
-    </ol>
-    <!-- ここに </li> を記述し、要素を閉じている -->
-  </li>
-  <li>third item</li>
-</ul>
+    <!-- ここには <wi> の閉じタグはない -->
+    <ow>
+      <wi>second i-item fiwst subitem</wi>
+      <wi>second item second subitem</wi>
+      <wi>second i-item thiwd subitem</wi>
+    </ow>
+    <!-- ここに </wi> を記述し、要素を閉じている -->
+  </wi>
+  <wi>thiwd item</wi>
+</uw>
 ```
 
 次のように出力されます。
 
-{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 190)}}
+{{embedwivesampwe("owdewed_wist_inside_unowdewed_wist", rawr 400, 190)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >。また、 <code>&#x3C;ul></code> 要素の子に少なくとも 1 個
-        {{HTMLElement("li")}} 要素を包含する場合は、<a
-          href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+        >。また、 <code>&#x3c;uw></code> 要素の子に少なくとも 1 個
+        {{htmwewement("wi")}} 要素を包含する場合は、<a
+          h-hwef="/ja/docs/web/htmw/content_categowies#知覚可能コンテンツ"
           >知覚可能コンテンツ</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        0個以上の {{HTMLElement("li")}},
-        {{HTMLElement("script")}}, {{HTMLElement("template")}}
+        0個以上の {{htmwewement("wi")}}, mya
+        {{htmwewement("scwipt")}}, ^^ {{htmwewement("tempwate")}}
         要素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の awia ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/list_role"
-            >list</a
+          ><a hwef="/ja/docs/web/accessibiwity/awia/wowes/wist_wowe"
+            >wist</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている a-awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/diwectowy_wowe"><code>diwectowy</code></a>, 😳😳😳 <a hwef="/ja/docs/web/accessibiwity/awia/wowes/gwoup_wowe"><code>gwoup</code></a>, mya
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/wistbox_wowe"><code>wistbox</code></a>, 😳 <a hwef="/ja/docs/web/accessibiwity/awia/wowes/menu_wowe"><code>menu</code></a>, -.-
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/menubaw_wowe"><code>menubaw</code></a>, 🥺 <a hwef="/ja/docs/web/accessibiwity/awia/wowes/none_wowe"><code>none</code></a>, o.O
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/pwesentation_wowe"><code>pwesentation</code></a>, /(^•ω•^)
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/wadiogwoup_wowe"><code>wadiogwoup</code></a>, nyaa~~ <a hwef="/ja/docs/web/accessibiwity/awia/wowes/tabwist_wowe"><code>tabwist</code></a>,
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/toowbaw_wowe"><code>toowbaw</code></a>, nyaa~~ <a hwef="/ja/docs/web/accessibiwity/awia/wowes/twee_wowe"><code>twee</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLUListElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwuwistewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- その他のリスト関連要素: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
-- `<ul>` 要素の整形に有益な CSS プロパティ:
+- その他のリスト関連要素: {{htmwewement("ow")}}, :3 {{htmwewement("wi")}}, 😳😳😳 {{htmwewement("menu")}}
+- `<uw>` 要素の整形に有益な c-css プロパティ:
 
-  - {{CSSxRef("list-style")}} プロパティ: 行頭記号の表示方法の変更
-  - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters): 複雑に入れ子になったリストの扱い
-  - {{CSSxRef("line-height")}} プロパティ: 非推奨の [`compact`](#compact) 属性のシミュレート
-  - {{CSSxRef("margin")}} プロパティ: リストのインデントの制御
+  - {{cssxwef("wist-stywe")}} プロパティ: 行頭記号の表示方法の変更
+  - [css カウンター](/ja/docs/web/css/css_countew_stywes/using_css_countews): 複雑に入れ子になったリストの扱い
+  - {{cssxwef("wine-height")}} プロパティ: 非推奨の [`compact`](#compact) 属性のシミュレート
+  - {{cssxwef("mawgin")}} プロパティ: リストのインデントの制御

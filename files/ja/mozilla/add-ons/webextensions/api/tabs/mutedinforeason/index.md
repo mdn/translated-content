@@ -1,9 +1,9 @@
 ---
-title: tabs.MutedInfoReason
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
+titwe: tabs.mutedinfoweason
+swug: moziwwa/add-ons/webextensions/api/tabs/mutedinfoweason
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 タブがミュート・アンミュートになった理由を指定します。
 
@@ -11,48 +11,48 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 
 値のタイプは文字列型です。可能な値:
 
-- "capture"
+- "captuwe"
   - : タブのキャプチャが開始され、ミュート状態に強いられました。
 - "extension"
-  - : 拡張機能がミュート状態に設定しました。もしこれが理由なら、{{WebExtAPIRef("tabs.mutedInfo")}}の`extensionId`が責任のある拡張機能の ID を含んでいます。
-- "user"
+  - : 拡張機能がミュート状態に設定しました。もしこれが理由なら、{{webextapiwef("tabs.mutedinfo")}}の`extensionid`が責任のある拡張機能の i-id を含んでいます。
+- "usew"
   - : ユーザーがミュート状態に設定しました。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-MutedInfoReason) API に基づいています。このドキュメントは Chromium コードの[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
+> [!note]
+> この a-api は chwomium の[`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#type-mutedinfoweason) a-api に基づいています。このドキュメントは c-chwomium コードの[`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)から派生したものです。micwosoft e-edge の互換性データは m-micwosoft c-cowpowation から提供されており、cweative c-commons attwibution 3.0 united states wicense のもとにここに含まれています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. (✿oωo) aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy f-fowms, (ˆ ﻌ ˆ)♡ with ow without
+// modification, 😳😳😳 awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, :3 t-this wist of conditions and the fowwowing discwaimew. OwO
+//    * wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, (U ﹏ U) this w-wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution.
+//    * n-nyeithew the nyame of googwe inc. >w< nyow the nyames of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, 😳 incwuding, b-but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ the impwied w-wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. in nyo event shaww the c-copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, 😳😳😳 indiwect, (U ﹏ U) incidentaw,
+// speciaw, (///ˬ///✿) exempwawy, 😳 ow consequentiaw damages (incwuding, 😳 b-but nyot
+// wimited t-to, σωσ pwocuwement of substitute g-goods ow sewvices; w-woss of use, rawr x3
+// d-data, ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, OwO whethew in contwact, /(^•ω•^) stwict wiabiwity, ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out o-of the use
+// o-of this softwawe, 😳😳😳 even if advised o-of the possibiwity o-of such damage. ( ͡o ω ͡o )
 -->

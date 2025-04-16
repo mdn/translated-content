@@ -1,187 +1,187 @@
 ---
-title: Example
-slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example
-original_slug: Learn/Forms/How_to_structure_a_web_form/Example
-l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+titwe: exampwe
+swug: weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm/exampwe
+o-owiginaw_swug: w-weawn/fowms/how_to_stwuctuwe_a_web_fowm/exampwe
+w-w10n:
+  souwcecommit: b-bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-[HTML 폼 구성 방법](/ko/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)의 기본 결제 폼 예제 입니다.
+[htmw 폼 구성 방법](/ko/docs/weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm)의 기본 결제 폼 예제 입니다. (ˆ ﻌ ˆ)♡
 
 ## 결제 폼
 
-### HTML
+### h-htmw
 
-```html-nolint
-<form method="post">
-  <h1>Payment form</h1>
+```htmw-nowint
+<fowm m-method="post">
+  <h1>payment fowm</h1>
   <p>
-    Required fields are followed by
-    <strong><span aria-label="required">*</span></strong>.
+    w-wequiwed fiewds a-awe fowwowed by
+    <stwong><span awia-wabew="wequiwed">*</span></stwong>. 😳😳😳
   </p>
   <section>
-    <h2>Contact information</h2>
-    <fieldset>
-      <legend>Title</legend>
-      <ul>
-        <li>
-          <label for="title_1">
-            <input type="radio" id="title_1" name="title" value="A" />
-            Ace
-          </label>
-        </li>
-        <li>
-          <label for="title_2">
-            <input type="radio" id="title_2" name="title" value="K" />
-            King
-          </label>
-        </li>
-        <li>
-          <label for="title_3">
-            <input type="radio" id="title_3" name="title" value="Q" />
-            Queen
-          </label>
-        </li>
-      </ul>
-    </fieldset>
+    <h2>contact infowmation</h2>
+    <fiewdset>
+      <wegend>titwe</wegend>
+      <uw>
+        <wi>
+          <wabew fow="titwe_1">
+            <input t-type="wadio" id="titwe_1" nyame="titwe" v-vawue="a" />
+            ace
+          </wabew>
+        </wi>
+        <wi>
+          <wabew f-fow="titwe_2">
+            <input type="wadio" id="titwe_2" nyame="titwe" vawue="k" />
+            k-king
+          </wabew>
+        </wi>
+        <wi>
+          <wabew fow="titwe_3">
+            <input t-type="wadio" i-id="titwe_3" nyame="titwe" vawue="q" />
+            queen
+          </wabew>
+        </wi>
+      </uw>
+    </fiewdset>
     <p>
-      <label for="name">
-        <span>Name: </span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
-      <input type="text" id="name" name="username" />
+      <wabew fow="name">
+        <span>name: </span>
+        <stwong><span awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
+      <input type="text" id="name" n-nyame="usewname" />
     </p>
     <p>
-      <label for="mail">
-        <span>Email: </span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
-      <input type="email" id="mail" name="usermail" />
+      <wabew fow="maiw">
+        <span>emaiw: </span>
+        <stwong><span awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
+      <input type="emaiw" id="maiw" n-name="usewmaiw" />
     </p>
     <p>
-      <label for="pwd">
-        <span>Password: </span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
-      <input type="password" id="pwd" name="password" />
+      <wabew fow="pwd">
+        <span>passwowd: </span>
+        <stwong><span a-awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
+      <input t-type="passwowd" i-id="pwd" n-nyame="passwowd" />
     </p>
   </section>
   <section>
-    <h2>Payment information</h2>
+    <h2>payment infowmation</h2>
     <p>
-      <label for="card">
-        <span>Card type:</span>
-      </label>
-      <select id="card" name="usercard">
-        <option value="visa">Visa</option>
-        <option value="mc">Mastercard</option>
-        <option value="amex">American Express</option>
-      </select>
+      <wabew fow="cawd">
+        <span>cawd t-type:</span>
+      </wabew>
+      <sewect id="cawd" nyame="usewcawd">
+        <option v-vawue="visa">visa</option>
+        <option vawue="mc">mastewcawd</option>
+        <option vawue="amex">amewican expwess</option>
+      </sewect>
     </p>
     <p>
-      <label for="number">
-        <span>Card number:</span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
-      <input type="tel" id="number" name="cardnumber" />
+      <wabew fow="numbew">
+        <span>cawd nyumbew:</span>
+        <stwong><span a-awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
+      <input type="tew" i-id="numbew" n-nyame="cawdnumbew" />
     </p>
     <p>
-      <label for="expiration">
-        <span>Expiration date:</span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
+      <wabew f-fow="expiwation">
+        <span>expiwation date:</span>
+        <stwong><span awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
       <input
         type="text"
-        id="expiration"
-        required="true"
-        placeholder="MM/YY"
-        pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+        i-id="expiwation"
+        w-wequiwed="twue"
+        pwacehowdew="mm/yy"
+        p-pattewn="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
     </p>
   </section>
   <section>
-    <p><button type="submit">Validate the payment</button></p>
+    <p><button t-type="submit">vawidate the payment</button></p>
   </section>
-</form>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
 h1 {
-  margin-top: 0;
+  mawgin-top: 0;
 }
 
-ul {
-  margin: 0;
+u-uw {
+  mawgin: 0;
   padding: 0;
-  list-style: none;
+  wist-stywe: nyone;
 }
 
-form {
-  margin: 0 auto;
-  width: 400px;
+f-fowm {
+  mawgin: 0 auto;
+  w-width: 400px;
   padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
+  b-bowdew: 1px s-sowid #ccc;
+  bowdew-wadius: 1em;
 }
 
 div + div {
-  margin-top: 1em;
+  mawgin-top: 1em;
 }
 
-label span {
-  display: inline-block;
+wabew span {
+  dispway: inwine-bwock;
   width: 120px;
-  text-align: right;
+  text-awign: wight;
 }
 
-input,
-textarea {
-  font: 1em sans-serif;
+input, (U ﹏ U)
+textawea {
+  f-font: 1em s-sans-sewif;
   width: 250px;
-  box-sizing: border-box;
-  border: 1px solid #999;
+  b-box-sizing: bowdew-box;
+  b-bowdew: 1px s-sowid #999;
 }
 
 input[type="checkbox"],
-input[type="radio"] {
+input[type="wadio"] {
   width: auto;
-  border: none;
+  b-bowdew: nyone;
 }
 
-input:focus,
-textarea:focus {
-  border-color: #000;
+input:focus, (///ˬ///✿)
+textawea:focus {
+  bowdew-cowow: #000;
 }
 
-textarea {
-  vertical-align: top;
-  height: 5em;
-  resize: vertical;
+textawea {
+  v-vewticaw-awign: top;
+  h-height: 5em;
+  w-wesize: vewticaw;
 }
 
-fieldset {
+f-fiewdset {
   width: 250px;
-  box-sizing: border-box;
-  margin-left: 136px;
-  border: 1px solid #999;
+  b-box-sizing: bowdew-box;
+  m-mawgin-weft: 136px;
+  b-bowdew: 1px sowid #999;
 }
 
-button {
-  margin: 20px 0 0 124px;
+b-button {
+  mawgin: 20px 0 0 124px;
 }
 
-label {
-  position: relative;
+wabew {
+  position: w-wewative;
 }
 
-label em {
-  position: absolute;
-  right: 5px;
-  top: 20px;
+w-wabew em {
+  p-position: absowute;
+  w-wight: 5px;
+  t-top: 20px;
 }
 ```
 
 ### 결과
 
-{{ EmbedLiveSample('A_payment_form', '100%', 620) }}
+{{ embedwivesampwe('a_payment_fowm', 😳 '100%', 620) }}

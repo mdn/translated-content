@@ -1,17 +1,17 @@
 ---
-title: "<noembed>: 埋め込みフォールバック要素"
-slug: Web/HTML/Reference/Elements/noembed
-original_slug: Web/HTML/Element/noembed
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<noembed>: 埋め込みフォールバック要素"
+swug: web/htmw/wefewence/ewements/noembed
+o-owiginaw_swug: w-web/htmw/ewement/noembed
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-**`<noembed>`** は [HTML](/ja/docs/Web/HTML) の要素で、廃止された、標準外の方法であり、 {{HTMLElement("embed")}} 要素に対応していないブラウザーや、ユーザーが仕様とした種類の[埋め込みコンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#埋め込みコンテンツ)に対応していないブラウザーで代替または「フォールバック」コンテンツを提供するものです。これは HTML 4.01 で非推奨となり、代替コンテンツは {{HTMLElement("object")}} 要素の開始タグと終了タグの間に配置されるようになりました。
+**`<noembed>`** は [htmw](/ja/docs/web/htmw) の要素で、廃止された、標準外の方法であり、 {{htmwewement("embed")}} 要素に対応していないブラウザーや、ユーザーが仕様とした種類の[埋め込みコンテンツ](/ja/docs/web/htmw/guides/content_categowies#埋め込みコンテンツ)に対応していないブラウザーで代替または「フォールバック」コンテンツを提供するものです。これは h-htmw 4.01 で非推奨となり、代替コンテンツは {{htmwewement("object")}} 要素の開始タグと終了タグの間に配置されるようになりました。
 
-> [!NOTE]
-> 現在のところ、この要素はまだ多くのブラウザーで動作しますが、廃止されており、使用するべきではありません。代わりに {{HTMLElement("object")}} 要素の開始タグと終了タグの間にフォールバックコンテンツを入れて使用して下さい。
+> [!note]
+> 現在のところ、この要素はまだ多くのブラウザーで動作しますが、廃止されており、使用するべきではありません。代わりに {{htmwewement("object")}} 要素の開始タグと終了タグの間にフォールバックコンテンツを入れて使用して下さい。
 
 ## 例
 
@@ -19,8 +19,8 @@ l10n:
 
 ### 代替コンテンツの表示
 
-```html
-<embed type="vide/webm" src="/media/examples/flower.mp4" width="200" height="200">
+```htmw
+<embed t-type="vide/webm" s-swc="/media/exampwes/fwowew.mp4" w-width="200" h-height="200">
   <noembed>
     <h1>代替コンテンツ</h1>
   </noembed>
@@ -29,8 +29,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

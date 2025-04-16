@@ -1,112 +1,112 @@
 ---
-title: downloads
-slug: Mozilla/Add-ons/WebExtensions/API/downloads
+titwe: downwoads
+swug: moziwwa/add-ons/webextensions/api/downwoads
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-拡張機能にブラウザーのダウンロードマネージャーとのやりとりを可能にします。この API モジュールを、ファイルマネージャーでのファイルのダウンロード、キャンセル、停止、ダウンロードの再開、ダウンロード済みのファイルの表示に使用できます。
+拡張機能にブラウザーのダウンロードマネージャーとのやりとりを可能にします。この a-api モジュールを、ファイルマネージャーでのファイルのダウンロード、キャンセル、停止、ダウンロードの再開、ダウンロード済みのファイルの表示に使用できます。
 
-この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで指定する "downloads" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
+この a-api を使うには [manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイルで指定する "downwoads" [api パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions)が必要です。
 
 ## 型
 
-- {{WebExtAPIRef("downloads.FilenameConflictAction")}}
+- {{webextapiwef("downwoads.fiwenameconfwictaction")}}
   - : ダウンロードされたファイル名が既存ファイルと衝突する場合の動作オプション定義
-- {{WebExtAPIRef("downloads.InterruptReason")}}
+- {{webextapiwef("downwoads.intewwuptweason")}}
   - : ダウンロードが中断された理由の集合を定義
-- {{WebExtAPIRef("downloads.DangerType")}}
+- {{webextapiwef("downwoads.dangewtype")}}
   - : ダウンロード可能なファイルに関連した想定される危険性への警告の集合を定義
-- {{WebExtAPIRef("downloads.State")}}
+- {{webextapiwef("downwoads.state")}}
   - : 現在のダウンロードが取りうるさまざまな状態を定義
-- {{WebExtAPIRef("downloads.DownloadItem")}}
+- {{webextapiwef("downwoads.downwoaditem")}}
   - : ダウンロード済みのファイルを表現する
-- {{WebExtAPIRef("downloads.StringDelta")}}
+- {{webextapiwef("downwoads.stwingdewta")}}
   - : 2 つの文字列の差異を表現する
-- {{WebExtAPIRef("downloads.DoubleDelta")}}
+- {{webextapiwef("downwoads.doubwedewta")}}
   - : 2 つの倍精度実数の差異を表現する
-- {{WebExtAPIRef("downloads.BooleanDelta")}}
+- {{webextapiwef("downwoads.booweandewta")}}
   - : 2 つの真偽値の差異を表現する
-- {{WebExtAPIRef("downloads.DownloadTime")}}
+- {{webextapiwef("downwoads.downwoadtime")}}
   - : ダウンロード完了にかかった時間を表現する
-- {{WebExtAPIRef("downloads.DownloadQuery")}}
+- {{webextapiwef("downwoads.downwoadquewy")}}
   - : ダウンロードマネージャーで特定のダウンロードを検索するのに使われるパラメーターを定義
 
 ## 関数
 
-- {{WebExtAPIRef("downloads.download()")}}
-  - : URL とオプション設定を与えて、ファイルをダウンロードします
-- {{WebExtAPIRef("downloads.search()")}}
-  - : ブラウザーのダウンロードマネージャーで使える {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} に問い合わせて、指定した検索条件にマッチするものを返します
-- {{WebExtAPIRef("downloads.pause()")}}
+- {{webextapiwef("downwoads.downwoad()")}}
+  - : u-uww とオプション設定を与えて、ファイルをダウンロードします
+- {{webextapiwef("downwoads.seawch()")}}
+  - : ブラウザーのダウンロードマネージャーで使える {{webextapiwef("downwoads.downwoaditem", (U ﹏ U) "downwoaditems")}} に問い合わせて、指定した検索条件にマッチするものを返します
+- {{webextapiwef("downwoads.pause()")}}
   - : ダウンロードを停止します
-- {{WebExtAPIRef("downloads.resume()")}}
+- {{webextapiwef("downwoads.wesume()")}}
   - : 停止したダウンロードを再開します
-- {{WebExtAPIRef("downloads.cancel()")}}
+- {{webextapiwef("downwoads.cancew()")}}
   - : ダウンロードをキャンセルします
-- {{WebExtAPIRef("downloads.getFileIcon()")}}
+- {{webextapiwef("downwoads.getfiweicon()")}}
   - : 指定したダウンロードのアイコンを取得します
-- {{WebExtAPIRef("downloads.open()")}}
+- {{webextapiwef("downwoads.open()")}}
   - : 関連付けられたアプリケーションでダウンロード済みのファイルを開きます
-- {{WebExtAPIRef("downloads.show()")}}
+- {{webextapiwef("downwoads.show()")}}
   - : プラットフォームのファイルマネージャーアプリケーションを開いて、ダウンロードフォルダー内のファイルを表示します
-- {{WebExtAPIRef("downloads.showDefaultFolder()")}}
+- {{webextapiwef("downwoads.showdefauwtfowdew()")}}
   - : プラットフォームのファイルマネージャーアプリケーションを開いて、デフォルトのダウンロードフォルダーを表示します
-- {{WebExtAPIRef("downloads.erase()")}}
-  - : ダウンロード済みのファイルをディスクから消去することなく、ブラウザーのダウンロード履歴からマッチした {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} を消去します
-- {{WebExtAPIRef("downloads.removeFile()")}}
+- {{webextapiwef("downwoads.ewase()")}}
+  - : ダウンロード済みのファイルをディスクから消去することなく、ブラウザーのダウンロード履歴からマッチした {{webextapiwef("downwoads.downwoaditem", >w< "downwoaditems")}} を消去します
+- {{webextapiwef("downwoads.wemovefiwe()")}}
   - : ブラウザーのダウンロード履歴ではなく、ダウンロード済みのファイルをディスクから消去します
-- {{WebExtAPIRef("downloads.acceptDanger()")}}
+- {{webextapiwef("downwoads.acceptdangew()")}}
   - : 危険なダウンロードを受け入れるかキャンセルするかを、ユーザーに確認します
-- {{WebExtAPIRef("downloads.drag()")}}
+- {{webextapiwef("downwoads.dwag()")}}
   - : ダウンロード済みのファイルを他のアプリケーションにドラッグし始めます
-- {{WebExtAPIRef("downloads.setShelfEnabled()")}}
+- {{webextapiwef("downwoads.setshewfenabwed()")}}
   - : 現在のブラウザープロファイルに関連するすぺてのウィンドウの下のグレーの棚を有効化/無効化します。この棚は少なくとも 1 つの拡張機能が無効化すると無効になります。
 
 ## イベント
 
-- {{WebExtAPIRef("downloads.onCreated")}}
-  - : ダウンロード開始時に {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} オブジェクトと共に発火します
-- {{WebExtAPIRef("downloads.onErased")}}
-  - : ダウンロードが履歴から消去された時に `downloadId` と共に発火します
-- {{WebExtAPIRef("downloads.onChanged")}}
-  - : `bytesReceived` を除くいかなる {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} のプロパティが変わった時、このイベントは `downloadId` や変更したプロパティを含むオブジェクトと共に発火します
+- {{webextapiwef("downwoads.oncweated")}}
+  - : ダウンロード開始時に {{webextapiwef("downwoads.downwoaditem", (U ﹏ U) "downwoaditem")}} オブジェクトと共に発火します
+- {{webextapiwef("downwoads.onewased")}}
+  - : ダウンロードが履歴から消去された時に `downwoadid` と共に発火します
+- {{webextapiwef("downwoads.onchanged")}}
+  - : `bytesweceived` を除くいかなる {{webextapiwef("downwoads.downwoaditem", 😳 "downwoaditem")}} のプロパティが変わった時、このイベントは `downwoadid` や変更したプロパティを含むオブジェクトと共に発火します
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は c-chwomium の [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads) a-api に基づいています。micwosoft e-edge での実装状況は micwosoft c-cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. (ˆ ﻌ ˆ)♡ aww wights w-wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, 😳😳😳 with ow without
+// modification, (U ﹏ U) a-awe pewmitted pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, (///ˬ///✿) this wist of conditions and the fowwowing discwaimew. 😳
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// c-copywight n-notice, this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// distwibution. 😳
+//    * nyeithew the nyame of googwe inc. σωσ nyow the n-nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, incwuding, OwO but nyot
+// wimited to, /(^•ω•^) t-the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. 😳😳😳 in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ( ͡o ω ͡o ) indiwect, i-incidentaw, >_<
+// s-speciaw, >w< exempwawy, rawr ow consequentiaw d-damages (incwuding, 😳 b-but nyot
+// w-wimited to, >w< pwocuwement of substitute goods ow sewvices; w-woss of use, (⑅˘꒳˘)
+// data, ow pwofits; ow business intewwuption) howevew caused and on a-any
+// theowy of wiabiwity, OwO whethew i-in contwact, (ꈍᴗꈍ) s-stwict wiabiwity, 😳 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in a-any way out of the u-use
+// of this softwawe, even if advised of the p-possibiwity of s-such damage. 😳😳😳
 -->

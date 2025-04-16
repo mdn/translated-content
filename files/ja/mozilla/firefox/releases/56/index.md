@@ -1,68 +1,68 @@
 ---
-title: Firefox 56 for developers
-slug: Mozilla/Firefox/Releases/56
-l10n:
-  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+titwe: fiwefox 56 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/56
+w-w10n:
+  souwcecommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされました。このページでは、開発者に影響する Firefox 56 の変更点をまとめています。
+f-fiwefox 56 は、米国時間 2017 年 9 月 28 日にリリースされました。このページでは、開発者に影響する f-fiwefox 56 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- CSS グリッドインスペクターで負の行数を表示するようになりました ([Firefox バグ 1369942](https://bugzil.la/1369942))。
-- 新しい CSS グリッドレイアウトパネルが使用可能になり、CSS グリッドのデバッグの容易さが向上しました ([Firefox バグ 1181227](https://bugzil.la/1181227))。詳しくは [Powerful New Additions to the CSS Grid Inspector in Firefox Nightly](https://hacks.mozilla.org/2017/06/new-css-grid-layout-panel-in-firefox-nightly/) をご覧ください。
+- c-css グリッドインスペクターで負の行数を表示するようになりました ([fiwefox バグ 1369942](https://bugziw.wa/1369942))。
+- 新しい c-css グリッドレイアウトパネルが使用可能になり、css グリッドのデバッグの容易さが向上しました ([fiwefox バグ 1181227](https://bugziw.wa/1181227))。詳しくは [powewfuw n-nyew additions t-to the css gwid inspectow in fiwefox nyightwy](https://hacks.moziwwa.owg/2017/06/new-css-gwid-wayout-panew-in-fiwefox-nightwy/) をご覧ください。
 
-### HTML
+### htmw
 
-- ラベル付け可能なフォームコントロールに `labels` プロパティを実装しました。例えば {{domxref("HTMLInputElement.labels")}} です ([Firefox バグ 556743](https://bugzil.la/556743))。
-- `<link rel="preload">` を実装しました。詳しくは [リンク種別: preload](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) をご覧ください ([Firefox バグ 1222633](https://bugzil.la/1222633))。現在は Firefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
+- ラベル付け可能なフォームコントロールに `wabews` プロパティを実装しました。例えば {{domxwef("htmwinputewement.wabews")}} です ([fiwefox バグ 556743](https://bugziw.wa/556743))。
+- `<wink wew="pwewoad">` を実装しました。詳しくは [リンク種別: p-pwewoad](/ja/docs/web/htmw/wefewence/attwibutes/wew/pwewoad) をご覧ください ([fiwefox バグ 1222633](https://bugziw.wa/1222633))。現在は fiwefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
 
-### CSS
+### css
 
-- Mozilla の独自仕様である {{cssxref("&lt;color&gt;")}} 値 `-moz-win-accentcolor` と `-moz-win-accentcolortext` ([Firefox バグ 1344910](https://bugzil.la/1344910))、および独自仕様のメディアクエリーである [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) を実装しました ([Firefox バグ 1379938](https://bugzil.la/1379938))。
+- moziwwa の独自仕様である {{cssxwef("&wt;cowow&gt;")}} 値 `-moz-win-accentcowow` と `-moz-win-accentcowowtext` ([fiwefox バグ 1344910](https://bugziw.wa/1344910))、および独自仕様のメディアクエリーである [`-moz-windows-accent-cowow-in-titwebaw`](/ja/docs/web/css/css_media_quewies/using_media_quewies#-moz-windows-accent-cowow-in-titwebaw) を実装しました ([fiwefox バグ 1379938](https://bugziw.wa/1379938))。
 
-### SVG
-
-_変更なし。_
-
-### JavaScript
-
-- [Intl API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl) を、Android 版 Firefox で有効化しました ([Firefox バグ 1344625](https://bugzil.la/1344625))。
-
-### API
-
-#### 新規 API
+### s-svg
 
 _変更なし。_
 
-#### DOM
+### javascwipt
 
-- Mac で別の半透明ではないアプリケーションの背後にウィンドウがあるとき、{{domxref("Document.hidden")}} が true を返すようになりました ([Firefox バグ 1236512](https://bugzil.la/1236512))。
-- {{domxref("Gamepad.displayId")}} プロパティを実装しました ([Firefox バグ 1375816](https://bugzil.la/1375816))。
-- {{domxref("PerformanceTiming.secureConnectionStart")}} プロパティを実装しました ([Firefox バグ 772589](https://bugzil.la/772589))。
-- Firefox は `iso-2022-jp` の {{domxref("TextDecoder.TextDecoder","TextDecoder()")}} がインスタンス化されたときに黙って `iso-2022-jp-2` シーケンスを受け入れていました。しかし他のブラウザーはこれに対応しておらず、またこれを使用するページもないようですので、API を単純化するためにこの動作を削除しました ([Firefox バグ 715833](https://bugzil.la/715833))。
-- {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} の 4ms 制限の動作を、[Timeouts throttled to >=4ms](/ja/docs/Web/API/Window/setTimeout#timeouts_throttled_to_%3e4ms) で説明しているとおり、他のブラウザーに合わせるよう更新しました ([Firefox バグ 1378586](https://bugzil.la/1378586))。
-- [ページ可視性 API](/ja/docs/Web/API/Page_Visibility_API) の {{domxref("Document.onvisibilitychange")}} ハンドラーを追加しました ([Firefox バグ 1333912](https://bugzil.la/1333912))。
-- {{domxref("Window.showModalDialog()")}} メソッドを削除しました ([Firefox バグ 981796](https://bugzil.la/981796))。
-- {{domxref("HTMLFormElement.action")}}、{{domxref("HTMLInputElement.formAction")}}、{{domxref("HTMLButtonElement.formAction")}} プロパティの実装を、仕様書に従って正しい形式のサブミッション URL を返すように変更しました ([Firefox バグ 1366361](https://bugzil.la/1366361))。
+- [intw a-api](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw) を、andwoid 版 fiwefox で有効化しました ([fiwefox バグ 1344625](https://bugziw.wa/1344625))。
 
-#### DOM イベント
+### api
 
-- `onwheel` が {{domxref("HTMLElement.onwheel", "HTMLElement")}} で使用可能になりました。以前は使用不可でした ([Firefox バグ 1370550](https://bugzil.la/1370550))。
+#### 新規 api
 
-#### メディアと WebRTC
+_変更なし。_
 
-- 設定変更の管理を支援するため、接続のローカル側およびリモート側の現行および未実行の構成を調査することが可能な {{domxref("RTCPeerConnection")}} のプロパティを Firefox でサポートしました: {{domxref("RTCPeerConnection.currentLocalDescription", "currentLocalDescription")}}、{{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}}、{{domxref("RTCPeerConnection.currentRemoteDescription", "currentRemoteDescription")}}、{{domxref("RTCPeerConnection.pendingRemoteDescription", "pendingRemoteDescription")}}。
-- Android で、メディアのハードウェアエンコーディングを既定で有効化しました。Firefox 55 でも使用可能でしたが、デフォルトで無効でした ([Firefox バグ 1386974](https://bugzil.la/1386974))。VP8 メディアのエンコードをサポートするデバイスでは、高効率なエンコーディングが可能になります。これはユーザーのデバイスのバッテリーやプロセッサーの消費を節約して、一般的にパフォーマンスが向上します。
+#### dom
 
-#### Canvas と WebGL
+- m-mac で別の半透明ではないアプリケーションの背後にウィンドウがあるとき、{{domxwef("document.hidden")}} が twue を返すようになりました ([fiwefox バグ 1236512](https://bugziw.wa/1236512))。
+- {{domxwef("gamepad.dispwayid")}} プロパティを実装しました ([fiwefox バグ 1375816](https://bugziw.wa/1375816))。
+- {{domxwef("pewfowmancetiming.secuweconnectionstawt")}} プロパティを実装しました ([fiwefox バグ 772589](https://bugziw.wa/772589))。
+- f-fiwefox は `iso-2022-jp` の {{domxwef("textdecodew.textdecodew","textdecodew()")}} がインスタンス化されたときに黙って `iso-2022-jp-2` シーケンスを受け入れていました。しかし他のブラウザーはこれに対応しておらず、またこれを使用するページもないようですので、api を単純化するためにこの動作を削除しました ([fiwefox バグ 715833](https://bugziw.wa/715833))。
+- {{domxwef("settimeout()")}} および {{domxwef("setintewvaw()")}} の 4ms 制限の動作を、[timeouts t-thwottwed to >=4ms](/ja/docs/web/api/window/settimeout#timeouts_thwottwed_to_%3e4ms) で説明しているとおり、他のブラウザーに合わせるよう更新しました ([fiwefox バグ 1378586](https://bugziw.wa/1378586))。
+- [ページ可視性 api](/ja/docs/web/api/page_visibiwity_api) の {{domxwef("document.onvisibiwitychange")}} ハンドラーを追加しました ([fiwefox バグ 1333912](https://bugziw.wa/1333912))。
+- {{domxwef("window.showmodawdiawog()")}} メソッドを削除しました ([fiwefox バグ 981796](https://bugziw.wa/981796))。
+- {{domxwef("htmwfowmewement.action")}}、{{domxwef("htmwinputewement.fowmaction")}}、{{domxwef("htmwbuttonewement.fowmaction")}} プロパティの実装を、仕様書に従って正しい形式のサブミッション uww を返すように変更しました ([fiwefox バグ 1366361](https://bugziw.wa/1366361))。
 
-- {{domxref("CanvasRenderingContext2D.drawImage()")}} メソッドを、`imageSmoothingEnabled` が `false` であってもダウンスケーリングする際にスムージングを行うよう更新しました。これは仕様書では必須にされていませんが、Chrome の動作に合わせています。[Firefox バグ 1360415](https://bugzil.la/1360415) をご覧ください。
-- {{domxref("SVGImageElement")}} を {{domxref("CanvasImageSource")}} として使用可能になりました。例えば {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} を呼び出すときに画像リソースとして使用できます ([Firefox バグ 1382027](https://bugzil.la/1382027))。
+#### dom イベント
+
+- `onwheew` が {{domxwef("htmwewement.onwheew", (˘ω˘) "htmwewement")}} で使用可能になりました。以前は使用不可でした ([fiwefox バグ 1370550](https://bugziw.wa/1370550))。
+
+#### メディアと w-webwtc
+
+- 設定変更の管理を支援するため、接続のローカル側およびリモート側の現行および未実行の構成を調査することが可能な {{domxwef("wtcpeewconnection")}} のプロパティを fiwefox でサポートしました: {{domxwef("wtcpeewconnection.cuwwentwocawdescwiption", "cuwwentwocawdescwiption")}}、{{domxwef("wtcpeewconnection.pendingwocawdescwiption", (⑅˘꒳˘) "pendingwocawdescwiption")}}、{{domxwef("wtcpeewconnection.cuwwentwemotedescwiption", (///ˬ///✿) "cuwwentwemotedescwiption")}}、{{domxwef("wtcpeewconnection.pendingwemotedescwiption", 😳😳😳 "pendingwemotedescwiption")}}。
+- andwoid で、メディアのハードウェアエンコーディングを既定で有効化しました。fiwefox 55 でも使用可能でしたが、デフォルトで無効でした ([fiwefox バグ 1386974](https://bugziw.wa/1386974))。vp8 メディアのエンコードをサポートするデバイスでは、高効率なエンコーディングが可能になります。これはユーザーのデバイスのバッテリーやプロセッサーの消費を節約して、一般的にパフォーマンスが向上します。
+
+#### canvas と webgw
+
+- {{domxwef("canvaswendewingcontext2d.dwawimage()")}} メソッドを、`imagesmoothingenabwed` が `fawse` であってもダウンスケーリングする際にスムージングを行うよう更新しました。これは仕様書では必須にされていませんが、chwome の動作に合わせています。[fiwefox バグ 1360415](https://bugziw.wa/1360415) をご覧ください。
+- {{domxwef("svgimageewement")}} を {{domxwef("canvasimagesouwce")}} として使用可能になりました。例えば {{domxwef("canvaswendewingcontext2d.dwawimage","dwawimage()")}} を呼び出すときに画像リソースとして使用できます ([fiwefox バグ 1382027](https://bugziw.wa/1382027))。
 
 ### セキュリティ
 
@@ -70,61 +70,61 @@ _変更なし。_
 
 ### プラグイン
 
-- Android 版 Firefox で、すべてのプラグインのサポートを廃止しました ([bug 1381916](https://bugzilla.mozilla.org/show_bug.cgi?id=1381916))。
+- a-andwoid 版 fiwefox で、すべてのプラグインのサポートを廃止しました ([bug 1381916](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1381916))。
 
 ### その他
 
-- URL エンコーディングの問題を避けるため、Gecko は URL を内部で [punycode](https://ja.wikipedia.org/wiki/Punycode) としてエンコードするようになりました ([Firefox バグ 945240](https://bugzil.la/945240) および [Firefox バグ 942074](https://bugzil.la/942074) の議論を参照)。
-- Windows および macOS 版の Firefox で、`-headless` フラグを使用して [ヘッドレスモード](/ja/docs/Mozilla/Firefox/Headless_mode) で実行することが可能になりました ([Firefox バグ 1355150](https://bugzil.la/1355150) および [Firefox バグ 1355147](https://bugzil.la/1355147))。
+- uww エンコーディングの問題を避けるため、gecko は u-uww を内部で [punycode](https://ja.wikipedia.owg/wiki/punycode) としてエンコードするようになりました ([fiwefox バグ 945240](https://bugziw.wa/945240) および [fiwefox バグ 942074](https://bugziw.wa/942074) の議論を参照)。
+- windows および m-macos 版の fiwefox で、`-headwess` フラグを使用して [ヘッドレスモード](/ja/docs/moziwwa/fiwefox/headwess_mode) で実行することが可能になりました ([fiwefox バグ 1355150](https://bugziw.wa/1355150) および [fiwefox バグ 1355147](https://bugziw.wa/1355147))。
 
 ## ウェブプラットフォームから廃止
 
-### HTML
+### h-htmw
 
-- {{htmlelement("isindex")}} 要素を HTML パーサーおよびフォーム送信から削除しました([Firefox バグ 1266495](https://bugzil.la/1266495))。
-- {{htmlelement("applet")}} 要素を削除しました ([Firefox バグ 1279218](https://bugzil.la/1279218))。
+- {{htmwewement("isindex")}} 要素を h-htmw パーサーおよびフォーム送信から削除しました([fiwefox バグ 1266495](https://bugziw.wa/1266495))。
+- {{htmwewement("appwet")}} 要素を削除しました ([fiwefox バグ 1279218](https://bugziw.wa/1279218))。
 
-### API
-
-_変更なし。_
-
-### SVG
+### api
 
 _変更なし。_
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+### svg
 
-### WebExtensions
+_変更なし。_
 
-- [browsingData.RemovalOptions](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions) に、Cookie のための "hostnames" オプションを追加しました。
-- [browsingData.settings()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/settings) および [browsingData.removeCookies()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies) を、Android 版 Firefox でサポートしました。
-- [browserSettings.cacheEnabled](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled) をサポートしました。
-- [browser_style](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) の使用方法を変更しました。
-- [chrome_settings_overrides.search_provider.is_default](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) をサポートしました。
-- contextMenus を [menus](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) に改名しました。
-- [cookies.set()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies/set) および [cookies.remove()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies/remove) がプライベートブラウジングモードで動作するようになりました。
-- [devtools.panels.elements.onSelectionChanged](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged) をサポートしました。
-- [downloads.open()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/open) が、ユーザーアクションから呼び出すことのみ可能になりました。
-- [FindProxyForURL の戻り値 "DIRECT" が、引数をとらないようになりました](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy#pac_file_environment)。
-- [history.onVisited](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) が、既知の場合に限ってページのタイトルを持つようになりました。
-- [management.get()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/management/get) および [management.getAll()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/management/getAll) をサポートしました。
-- [menus](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) で "tools_menu" コンテキストをサポートしました。
-- [menus.OnClickData](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/OnClickData) が "linkText" を持つようになりました。
-- [menus.create()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) が ["icons"](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus#icons) オプションを持つようになりました。
-- [notifications.onShown](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown) をサポートしました。
-- [pageAction.show()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) および [pageAction.hide()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) を、Android 版 Firefox でサポートしました。
-- [permissions](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) で "unlimitedStorage" をサポートしました。
-- [privacy.services](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/services) が passwordSavingEnabled プロパティを持つようになりました。
-- [privacy.websites.referrersEnabled](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites) をサポートしました。
-- [protocol_handlers](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) で "gopher" をサポートしました。
-- proxy.registerProxyScript() を [proxy.register()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) に改名しました。
-- [proxy.unregister()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) をサポートしました。
-- [runtime.onInstalled](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) で `temporary` フラグをサポートしました。
-- [tabs.print()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/print)、[tabs.PageSettings](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings)、[tabs.printPreview()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/printPreview)、[tabs.saveAsPDF()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) をサポートしました。
-- [tabs.Tab.lastAccessed](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) をサポートしました。
-- [theme.reset()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme/reset) をサポートしました。
-- [windows.create()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) および [windows.update()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/update) で、ウィンドウの初期タイトルをサポートしました。
+## アドオン開発者と moziwwa 開発者向けの変更点
+
+### w-webextensions
+
+- [bwowsingdata.wemovawoptions](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsingdata/wemovawoptions) に、cookie のための "hostnames" オプションを追加しました。
+- [bwowsingdata.settings()](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsingdata/settings) および [bwowsingdata.wemovecookies()](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsingdata/wemovecookies) を、andwoid 版 fiwefox でサポートしました。
+- [bwowsewsettings.cacheenabwed](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/cacheenabwed) をサポートしました。
+- [bwowsew_stywe](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes) の使用方法を変更しました。
+- [chwome_settings_ovewwides.seawch_pwovidew.is_defauwt](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/chwome_settings_ovewwides) をサポートしました。
+- contextmenus を [menus](/ja/docs/moziwwa/add-ons/webextensions/api/menus) に改名しました。
+- [cookies.set()](/ja/docs/moziwwa/add-ons/webextensions/api/cookies/set) および [cookies.wemove()](/ja/docs/moziwwa/add-ons/webextensions/api/cookies/wemove) がプライベートブラウジングモードで動作するようになりました。
+- [devtoows.panews.ewements.onsewectionchanged](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/ewementspanew/onsewectionchanged) をサポートしました。
+- [downwoads.open()](/ja/docs/moziwwa/add-ons/webextensions/api/downwoads/open) が、ユーザーアクションから呼び出すことのみ可能になりました。
+- [findpwoxyfowuww の戻り値 "diwect" が、引数をとらないようになりました](/ja/docs/moziwwa/add-ons/webextensions/api/pwoxy#pac_fiwe_enviwonment)。
+- [histowy.onvisited](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/onvisited) が、既知の場合に限ってページのタイトルを持つようになりました。
+- [management.get()](/ja/docs/moziwwa/add-ons/webextensions/api/management/get) および [management.getaww()](/ja/docs/moziwwa/add-ons/webextensions/api/management/getaww) をサポートしました。
+- [menus](/ja/docs/moziwwa/add-ons/webextensions/api/menus) で "toows_menu" コンテキストをサポートしました。
+- [menus.oncwickdata](/ja/docs/moziwwa/add-ons/webextensions/api/menus/oncwickdata) が "winktext" を持つようになりました。
+- [menus.cweate()](/ja/docs/moziwwa/add-ons/webextensions/api/menus/cweate) が ["icons"](/ja/docs/moziwwa/add-ons/webextensions/api/menus#icons) オプションを持つようになりました。
+- [notifications.onshown](/ja/docs/moziwwa/add-ons/webextensions/api/notifications/onshown) をサポートしました。
+- [pageaction.show()](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction/show) および [pageaction.hide()](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction/hide) を、andwoid 版 fiwefox でサポートしました。
+- [pewmissions](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) で "unwimitedstowage" をサポートしました。
+- [pwivacy.sewvices](/ja/docs/moziwwa/add-ons/webextensions/api/pwivacy/sewvices) が p-passwowdsavingenabwed プロパティを持つようになりました。
+- [pwivacy.websites.wefewwewsenabwed](/ja/docs/moziwwa/add-ons/webextensions/api/pwivacy/websites) をサポートしました。
+- [pwotocow_handwews](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pwotocow_handwews) で "gophew" をサポートしました。
+- pwoxy.wegistewpwoxyscwipt() を [pwoxy.wegistew()](/ja/docs/moziwwa/add-ons/webextensions/api/pwoxy) に改名しました。
+- [pwoxy.unwegistew()](/ja/docs/moziwwa/add-ons/webextensions/api/pwoxy) をサポートしました。
+- [wuntime.oninstawwed](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/oninstawwed) で `tempowawy` フラグをサポートしました。
+- [tabs.pwint()](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/pwint)、[tabs.pagesettings](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/pagesettings)、[tabs.pwintpweview()](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/pwintpweview)、[tabs.saveaspdf()](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/saveaspdf) をサポートしました。
+- [tabs.tab.wastaccessed](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/tab) をサポートしました。
+- [theme.weset()](/ja/docs/moziwwa/add-ons/webextensions/api/theme/weset) をサポートしました。
+- [windows.cweate()](/ja/docs/moziwwa/add-ons/webextensions/api/windows/cweate) および [windows.update()](/ja/docs/moziwwa/add-ons/webextensions/api/windows/update) で、ウィンドウの初期タイトルをサポートしました。
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(55)}}
+{{fiwefox_fow_devewopews(55)}}

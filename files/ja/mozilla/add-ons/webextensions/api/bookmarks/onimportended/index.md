@@ -1,92 +1,92 @@
 ---
-title: bookmarks.onImportEnded
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
+titwe: bookmawks.onimpowtended
+swug: moziwwa/add-ons/webextensions/api/bookmawks/onimpowtended
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 ブックマークのインポートが終了した際に発火します。
 
-{{WebExtAPIRef("bookmarks.onImportBegan")}} も参照してください。
+{{webextapiwef("bookmawks.onimpowtbegan")}} も参照してください。
 
 ## 構文
 
 ```js
-browser.bookmarks.onImportEnded.addListener(function() {...})
-browser.bookmarks.onImportEnded.removeListener(listener)
-browser.bookmarks.onImportEnded.hasListener(listener)
+b-bwowsew.bookmawks.onimpowtended.addwistenew(function() {...})
+b-bwowsew.bookmawks.onimpowtended.wemovewistenew(wistenew)
+b-bwowsew.bookmawks.onimpowtended.haswistenew(wistenew)
 ```
 
 このイベントには 3 つのメソッドが用意されています。
 
-- `addListener(callback)`
+- `addwistenew(cawwback)`
   - : イベントリスナーを追加します。
-- `removeListener(listener)`
-  - : イベントリスナーを削除します。引数 `listener` には削除したいリスナーを指定します。
-- `hasListener(listener)`
-  - : `listener` がイベントリスナーとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
+- `wemovewistenew(wistenew)`
+  - : イベントリスナーを削除します。引数 `wistenew` には削除したいリスナーを指定します。
+- `haswistenew(wistenew)`
+  - : `wistenew` がイベントリスナーとして登録されているか確認します。登録されていれば `twue` を、それ以外の場合は `fawse` を返します。
 
-## addListener の構文
+## a-addwistenew の構文
 
 ### 引数
 
-- `callback`
+- `cawwback`
   - : イベントが発火した際に呼び出される関数を指定します。この関数に渡される引数はありません。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 使用例
 
 ```js
-function handleImportBegan() {
-  console.log("Importing...");
+f-function h-handweimpowtbegan() {
+  c-consowe.wog("impowting...");
 }
 
-function handleImportEnded() {
-  console.log("...finished.");
+f-function handweimpowtended() {
+  consowe.wog("...finished.");
 }
 
-function handleClick() {
-  chrome.bookmarks.onImportBegan.addListener(handleImportBegan);
-  chrome.bookmarks.onImportEnded.addListener(handleImportEnded);
+function handwecwick() {
+  c-chwome.bookmawks.onimpowtbegan.addwistenew(handweimpowtbegan);
+  chwome.bookmawks.onimpowtended.addwistenew(handweimpowtended);
 }
 
-chrome.browserAction.onClicked.addListener(handleClick);
+chwome.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-update) api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における chwomium のコードから作成されています。micwosoft e-edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 u-united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. (U ﹏ U) aww wights wesewved. (///ˬ///✿)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in s-souwce and binawy fowms, 😳 with ow without
+// modification, 😳 awe pewmitted pwovided t-that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce c-code must wetain the above copywight
+// nyotice, σωσ t-this wist of conditions and the fowwowing discwaimew. rawr x3
+//    * wedistwibutions in b-binawy fowm must wepwoduce the above
+// copywight nyotice, OwO this wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow o-othew matewiaws p-pwovided with the
+// distwibution. /(^•ω•^)
+//    * nyeithew the nyame of g-googwe inc. 😳😳😳 nyow t-the nyames of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, >_< incwuding, >w< but nyot
+// wimited to, the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. rawr in nyo e-event shaww the c-copywight
+// ownew o-ow contwibutows be wiabwe fow any diwect, indiwect, 😳 incidentaw, >w<
+// s-speciaw, (⑅˘꒳˘) exempwawy, ow consequentiaw damages (incwuding, OwO but nyot
+// wimited to, (ꈍᴗꈍ) pwocuwement o-of substitute goods ow sewvices; w-woss of use, 😳
+// d-data, 😳😳😳 ow pwofits; o-ow business intewwuption) h-howevew caused a-and on any
+// theowy o-of wiabiwity, mya w-whethew in contwact, mya stwict wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out o-of the use
+// of t-this softwawe, (U ﹏ U) even if advised of the possibiwity of such damage. mya
 -->

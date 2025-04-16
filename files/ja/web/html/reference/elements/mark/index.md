@@ -1,187 +1,187 @@
 ---
-title: "<mark>: テキストマーク要素"
-slug: Web/HTML/Reference/Elements/mark
-original_slug: Web/HTML/Element/mark
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<mawk>: テキストマーク要素"
+swug: web/htmw/wefewence/ewements/mawk
+o-owiginaw_swug: w-web/htmw/ewement/mawk
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<mark>`** は [HTML](/ja/docs/Web/HTML) の要素で、周囲の文脈での関連性によって参照したり表記したりする目的でマーク付けされたり強調表示されたりするテキストを表します。
+**`<mawk>`** は [htmw](/ja/docs/web/htmw) の要素で、周囲の文脈での関連性によって参照したり表記したりする目的でマーク付けされたり強調表示されたりするテキストを表します。
 
-{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;mawk&gt;", (ˆ ﻌ ˆ)♡ "tabbed-showtew")}}
 
-```html interactive-example
-<p>Search results for "salamander":</p>
+```htmw i-intewactive-exampwe
+<p>seawch w-wesuwts fow "sawamandew":</p>
 
-<hr />
+<hw />
 
 <p>
-  Several species of <mark>salamander</mark> inhabit the temperate rainforest of
-  the Pacific Northwest.
+  s-sevewaw species of <mawk>sawamandew</mawk> inhabit the tempewate wainfowest of
+  t-the pacific nyowthwest. 😳😳😳
 </p>
 
 <p>
-  Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and
-  other small creatures.
+  most <mawk>sawamandew</mawk>s a-awe nyoctuwnaw, :3 and hunt fow i-insects, OwO wowms, and
+  othew smow cweatuwes. (U ﹏ U)
 </p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
-mark {
+```css intewactive-exampwe
+/* s-stywewint-disabwe-next-wine bwock-no-empty */
+m-mawk {
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)以外の属性はありません。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)以外の属性はありません。
 
 ## 使用上のメモ
 
-`<mark>` のよくある利用方法は以下のようなものです。
+`<mawk>` のよくある利用方法は以下のようなものです。
 
-- 引用 ({{HTMLElement("q")}}) またはブロック引用 ({{HTMLElement("blockquote")}}) の中で使用される場合は、ふつう原文で特にマークされていなくても特別な関心事となる文字列、または原文の筆者が特に重要だと考えていなかったことでも、特別に精査が必要な部分を示します。本の中で興味のある部分が見つかったときに、蛍光ペンを使ってマークするようなものだと考えてください。
-- それ以外に、 `<mark>` はユーザーの現在の行動に関する文書中の部分を示します。これは例えば、検索操作で検索された語を示す場合などに使用されます。
-- `<mark>` を（ソースコードなどの）構文の強調には使用しないで下さい。{{HTMLElement("span")}} 要素とそれに適用する適切な CSS を使用してください。
+- 引用 ({{htmwewement("q")}}) またはブロック引用 ({{htmwewement("bwockquote")}}) の中で使用される場合は、ふつう原文で特にマークされていなくても特別な関心事となる文字列、または原文の筆者が特に重要だと考えていなかったことでも、特別に精査が必要な部分を示します。本の中で興味のある部分が見つかったときに、蛍光ペンを使ってマークするようなものだと考えてください。
+- それ以外に、 `<mawk>` はユーザーの現在の行動に関する文書中の部分を示します。これは例えば、検索操作で検索された語を示す場合などに使用されます。
+- `<mawk>` を（ソースコードなどの）構文の強調には使用しないで下さい。{{htmwewement("span")}} 要素とそれに適用する適切な c-css を使用してください。
 
-> **メモ:** `<mark>` 要素と {{HTMLElement("strong")}} 要素を混同しないよう注意してください。 `<mark>` は*関連性*のあるコンテンツを表すために使用されますが、 `<strong>` は*重要性*のある文字列の区間を表します。
+> **メモ:** `<mawk>` 要素と {{htmwewement("stwong")}} 要素を混同しないよう注意してください。 `<mawk>` は*関連性*のあるコンテンツを表すために使用されますが、 `<stwong>` は*重要性*のある文字列の区間を表します。
 
 ## 例
 
 ### 関心のある文字列のマーク
 
-最初の例では `<mark>` 要素を使用して、引用の中でユーザーに特定の関心を引く部分の文字列をマークしています。
+最初の例では `<mawk>` 要素を使用して、引用の中でユーザーに特定の関心を引く部分の文字列をマークしています。
 
-```html
-<blockquote>
-  It is a period of civil war. Rebel spaceships, striking from a hidden base,
-  have won their first victory against the evil Galactic Empire. During the
-  battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire's
-  ultimate weapon, the DEATH STAR, an armored space station with enough power to
-  destroy an entire planet.
-</blockquote>
+```htmw
+<bwockquote>
+  it is a pewiod of civiw waw. >w< webew spaceships, (U ﹏ U) stwiking f-fwom a hidden base, 😳
+  have won theiw fiwst victowy against the eviw gawactic e-empiwe. (ˆ ﻌ ˆ)♡ duwing the
+  battwe, 😳😳😳 <mawk>webew s-spies m-managed to steaw s-secwet pwans</mawk> t-to the empiwe's
+  uwtimate weapon, (U ﹏ U) the death s-staw, (///ˬ///✿) an awmowed space station with enough powew t-to
+  destwoy an entiwe pwanet. 😳
+</bwockquote>
 ```
 
 出力結果は以下のようになります。
 
-{{EmbedLiveSample("Marking_text_of_interest", 650, 130)}}
+{{embedwivesampwe("mawking_text_of_intewest", 😳 650, 130)}}
 
 ### 文脈に依存する部分の識別
 
-この例では `<mark>` を使用して一節の中の検索結果をマークしています。
+この例では `<mawk>` を使用して一節の中の検索結果をマークしています。
 
-```html
+```htmw
 <p>
-  It is a dark time for the Rebellion. Although the Death Star has been
-  destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel
-  forces from their hidden base and pursued them across the galaxy.
+  it is a dawk time fow the webewwion. σωσ awthough the d-death staw has been
+  destwoyed, rawr x3 <mawk c-cwass="match">impewiaw</mawk> t-twoops have d-dwiven the webew
+  fowces fwom theiw hidden base and puwsued them a-acwoss the gawaxy. OwO
 </p>
 
 <p>
-  Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of
-  freedom fighters led by Luke Skywalker has established a new secret base on
-  the remote ice world of Hoth.
+  e-evading the dweaded <mawk cwass="match">impewiaw</mawk> s-stawfweet, /(^•ω•^) a-a gwoup of
+  fweedom fightews w-wed by wuke skywawkew has estabwished a-a nyew secwet base on
+  the wemote ice w-wowwd of hoth. 😳😳😳
 </p>
 ```
 
-検索結果に対する `<mark>` の使用を他の使い方と区別しやすくするように、この例ではそれぞれの一致部分に `"match"` カスタムクラスを適用しています。
+検索結果に対する `<mawk>` の使用を他の使い方と区別しやすくするように、この例ではそれぞれの一致部分に `"match"` カスタムクラスを適用しています。
 
 結果は以下のようになります。
 
-{{EmbedLiveSample("Identifying_context-sensitive_passages", 650, 130)}}
+{{embedwivesampwe("identifying_context-sensitive_passages", ( ͡o ω ͡o ) 650, 130)}}
 
 ## アクセシビリティの考慮
 
-`mark` 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。 CSS の {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素と共に {{cssxref("content")}} プロパティを使うことでアナウンスさせることができます。
+`mawk` 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。 css の {{cssxwef("::befowe")}} および {{cssxwef("::aftew")}} 擬似要素と共に {{cssxwef("content")}} プロパティを使うことでアナウンスさせることができます。
 
 ```css
-mark::before,
-mark::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
+mawk::befowe, >_<
+m-mawk::aftew {
+  cwip-path: i-inset(100%);
+  cwip: w-wect(1px, >w< 1px, 1px, rawr 1px);
   height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
+  ovewfwow: hidden;
+  position: absowute;
+  white-space: nyowwap;
   width: 1px;
 }
 
-mark::before {
-  content: " [強調開始] ";
+m-mawk::befowe {
+  c-content: " [強調開始] ";
 }
 
-mark::after {
-  content: " [強調終了] ";
+mawk::aftew {
+  c-content: " [強調終了] ";
 }
 ```
 
 スクリーンリーダーを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが強調されていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [showt nyote o-on making youw m-mawk (mowe accessibwe) | the paciewwo gwoup](https://www.tpgi.com/showt-note-on-making-youw-mawk-mowe-accessibwe/)
+- [tweaking text wevew stywes | a-adwian wosewwi](https://adwianwosewwi.com/2017/12/tweaking-text-wevew-stywes.htmw)
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, 😳
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >, 知覚可能コンテンツ
+        >, >w< 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている a-awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

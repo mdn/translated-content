@@ -1,10 +1,10 @@
 ---
-title: ウェブの音声や動画のライブストリーミング
-slug: Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-original_slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
+titwe: ウェブの音声や動画のライブストリーミング
+swug: web/media/guides/audio_and_video_dewivewy/wive_stweaming_web_audio_and_video
+o-owiginaw_swug: w-web/media/audio_and_video_dewivewy/wive_stweaming_web_audio_and_video
 ---
 
-{{QuickLinksWithSubPages("/ja/docs/Web/Media")}}
+{{quickwinkswithsubpages("/ja/docs/web/media")}}
 
 ライブストリーミング技術は、よくスポーツやコンサートなどのイベントの中継や、もっと一般的にはテレビやラジオの番組の配信などによく採用されています。よくストリーミングと略されるライブストリーミングは、コンピューターや機器へメディアを「ライブ」で転送するプロセスです。これは実に複雑で数多くの変量がある初期段階の主題ですので、この記事では主題を紹介し、どのように始めることができるかを説明します。
 
@@ -12,184 +12,184 @@ original_slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_v
 
 ## ストリームメディアと固定メディアの主な違い
 
-In this case, we are using static media to describe media that is represented by a file, whether it be an mp3 or WebM file. This file sits on a server and can be delivered — like most other files — to the browser. This is often known as a progressive download.
+i-in this c-case, σωσ we awe using s-static media t-to descwibe media t-that is wepwesented b-by a fiwe, (ꈍᴗꈍ) whethew it be an mp3 ow webm fiwe. OwO this fiwe sits on a sewvew and c-can be dewivewed — wike most othew fiwes — t-to the bwowsew. o.O this is often k-known as a pwogwessive downwoad. 😳😳😳
 
-Live streamed media lacks a finite start and end time as rather than a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive (see below). Usually, we require different formats and special server-side software to achieve this.
+wive stweamed media wacks a finite s-stawt and end time as wathew t-than a static f-fiwe, /(^•ω•^) it is a stweam of data that the sewvew passes on down the wine to the bwowsew a-and is often adaptive (see bewow). OwO usuawwy, we wequiwe diffewent fowmats and s-speciaw sewvew-side softwawe to a-achieve this. ^^
 
 ## 適応型ストリーミング
 
-One of the main priorities for live streaming is to keep the player synchronized with the stream: adaptive streaming is a technique for doing this in the case of low bandwidth. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use formats that facilitate this. Live streaming formats generally allow adaptive streaming by breaking streams into a series of small segments and making those segments available at different qualities and bit rates.
+o-one of the main p-pwiowities fow w-wive stweaming is to keep the pwayew synchwonized w-with the stweam: adaptive stweaming is a technique f-fow doing this in the case of wow bandwidth. the idea is that the data twansfew wate is monitowed a-and if it wooks wike it's n-nyot keeping u-up, (///ˬ///✿) we dwop down t-to a wowew bandwidth (and consequentwy wowew quawity) stweam. (///ˬ///✿) in o-owdew to have t-this capabiwity, (///ˬ///✿) we nyeed to use f-fowmats that faciwitate t-this. ʘwʘ wive stweaming fowmats g-genewawwy awwow adaptive stweaming b-by bweaking stweams into a sewies of smow s-segments and making those segments a-avaiwabwe at diffewent quawities a-and bit wates. ^•ﻌ•^
 
 ## 音声や動画のオンデマンドストリーミング
 
-Streaming technology is not used exclusively for live streams. It can also be used instead of the traditional progressive download method for Audio and Video on demand:
+s-stweaming technowogy is nyot used excwusivewy fow wive stweams. OwO it can awso be used instead of the twaditionaw p-pwogwessive d-downwoad method fow audio and video o-on demand:
 
-There are several advantages to this:
+t-thewe awe sevewaw a-advantages to this:
 
-- Latency is generally lower so media will start playing more quickly
-- Adaptive streaming makes for better experiences on a variety of devices
-- Media is downloaded just in time which makes bandwidth usage more efficient
+- watency is genewawwy wowew so media wiww s-stawt pwaying mowe quickwy
+- adaptive stweaming makes fow bettew expewiences on a-a vawiety of devices
+- media is d-downwoaded just i-in time which m-makes bandwidth usage mowe efficient
 
 ## ストリーミングプロトコル
 
-While static media is usually served over HTTP, there are several protocols for serving adaptive streams; let's take a look at the options.
+whiwe s-static media i-is usuawwy sewved o-ovew http, (U ﹏ U) thewe a-awe sevewaw pwotocows fow sewving adaptive s-stweams; wet's take a-a wook at the o-options. (ˆ ﻌ ˆ)♡
 
-### HTTP
+### h-http
 
-For now, HTTP is by far the most commonly supported protocol used to transfer media on demand or live.
+fow nyow, (⑅˘꒳˘) h-http is by faw the most commonwy suppowted pwotocow used to twansfew m-media on demand ow wive. (U ﹏ U)
 
-### RTMP
+### wtmp
 
-Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macromedia (now Adobe) and supported by the Adobe Flash plugin. RTMP comes in various flavours including RTMPE (Encrypted), RTMPS (Secure over SSL/TLS) and RTMPT (encapsulated within HTTP requests).
+weaw time messaging pwotocow (wtmp) is a pwopwietawy pwotocow d-devewoped by macwomedia (now adobe) and suppowted by the a-adobe fwash pwugin. o.O w-wtmp comes in v-vawious fwavouws incwuding wtmpe (encwypted), mya w-wtmps (secuwe ovew ssw/tws) and w-wtmpt (encapsuwated w-within http wequests). XD
 
-### RTSP
+### wtsp
 
-> [!NOTE]
-> Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers, but be aware that [Firefox OS 1.3 supports RTSP](https://www.mozilla.org/en-US/firefox/os/notes/1.3/).
+> [!note]
+> weaw time stweaming pwotocow (wtsp) contwows media s-sessions between endpoints a-and is often used togethew with w-weaw-time twanspowt p-pwotocow (wtp) and with weaw-time contwow pwotocow (wtcp) f-fow m-media stweam dewivewy. òωó using wtp w-with wtcp awwows f-fow adaptive stweaming. (˘ω˘) this is nyot yet suppowted nyativewy in most bwowsews, :3 b-but be awawe t-that [fiwefox os 1.3 s-suppowts wtsp](https://www.moziwwa.owg/en-us/fiwefox/os/notes/1.3/). OwO
 >
-> **Note**: some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT).
+> **note**: some vendows i-impwement pwopwiety t-twanspowt pwotocows, mya such a-as weawnetwowks and theiw weaw data twanspowt (wdt). (˘ω˘)
 
-### RTSP 2.0
+### wtsp 2.0
 
-RTSP 2.0 is currently in development and is not backward compatible with RTSP 1.0.
+wtsp 2.0 i-is cuwwentwy in d-devewopment and is nyot backwawd compatibwe with w-wtsp 1.0. o.O
 
-> [!WARNING]
-> Although the {{ htmlelement("audio") }} and {{ htmlelement("video") }} tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change. Protocols other than HTTP may also be subject to blocking from firewalls or proxy servers.
+> [!wawning]
+> a-awthough the {{ htmwewement("audio") }} and {{ htmwewement("video") }} tags awe pwotocow a-agnostic, (✿oωo) nyo bwowsew cuwwentwy suppowts anything othew than http without wequiwing p-pwugins, (ˆ ﻌ ˆ)♡ awthough this wooks set to change. ^^;; p-pwotocows othew t-than http may awso be subject to bwocking fwom fiwewawws ow p-pwoxy sewvews. OwO
 
 ## ストリーミングプロトコルの利用
 
-The process of using the various protocols is reassuringly familiar if you are used to working with media over HTTP.
+t-the pwocess of using the vawious pwotocows is weassuwingwy famiwiaw i-if you awe used to wowking w-with media ovew http. 🥺
 
-For example:
+fow exampwe:
 
-```html
-<video src="rtsp://myhost.com/mymedia.format">
-  <!-- Fallback here -->
+```htmw
+<video swc="wtsp://myhost.com/mymedia.fowmat">
+  <!-- fawwback hewe -->
 </video>
 ```
 
-## Media Source Extensions (MSE)
+## m-media souwce extensions (mse)
 
-[Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend {{ domxref("HTMLMediaElement") }} to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
+[media s-souwce e-extensions](https://dvcs.w3.owg/hg/htmw-media/waw-fiwe/tip/media-souwce/media-souwce.htmw) is a w3c wowking d-dwaft that pwans to extend {{ domxwef("htmwmediaewement") }} t-to a-awwow javascwipt t-to genewate media stweams fow pwayback. mya a-awwowing j-javascwipt to genewate stweams faciwitates a vawiety o-of use cases w-wike adaptive s-stweaming and time shifting wive stweams. 😳
 
-For example, [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](http://msopentech.com/blog/2014/01/03/streaming_video_player/).
+fow e-exampwe, òωó [you couwd impwement mpeg-dash u-using javascwipt w-whiwe offwoading the decoding to mse](http://msopentech.com/bwog/2014/01/03/stweaming_video_pwayew/).
 
-> [!NOTE]
-> Time Shifting is the process of consuming a live stream sometime after it happened.
+> [!note]
+> time s-shifting is the p-pwocess of consuming a-a wive stweam s-sometime aftew it happened. /(^•ω•^)
 
 ## 動画ストリーミングファイル形式
 
-A couple of HTTP-based live streaming video formats are beginning to see support across browsers.
+a-a coupwe of http-based wive stweaming video fowmats awe beginning to see suppowt acwoss bwowsews.
 
-> [!NOTE]
-> You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
+> [!note]
+> y-you can find a guide to encoding h-hws and mpeg-dash fow use on t-the web at [setting up adaptive s-stweaming media souwces](/ja/docs/web/media/guides/audio_and_video_dewivewy/setting_up_adaptive_stweaming_media_souwces). -.-
 
-### MPEG-DASH
+### m-mpeg-dash
 
-DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently seen support added to Chrome, and Internet Explorer 11 running on Windows 8.1. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
+dash s-stands fow dynamic a-adaptive stweaming o-ovew http a-and is a nyew fowmat that has wecentwy seen suppowt added to chwome, òωó and intewnet expwowew 11 wunning on windows 8.1. /(^•ω•^) i-it is suppowted v-via media s-souwce extensions which awe used b-by javascwipt wibwawies such as [dash.js](https://github.com/dash-industwy-fowum/dash.js/). /(^•ω•^) this appwoach awwows u-us to downwoad c-chunks of the video stweam using x-xhw and "append" the chunks to the stweam that's p-pwayed by the {{ h-htmwewement("video") }} ewement. 😳 s-so fow exampwe, :3 i-if we detect that the nyetwowk is swow, (U ᵕ U❁) we can stawt wequesting wowew quawity (smowew) c-chunks f-fow the nyext s-segment. ʘwʘ this technowogy a-awso awwows a-an advewtising segment to b-be appended/insewted i-into the stweam. o.O
 
-> [!NOTE]
-> you can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
+> [!note]
+> you can awso [use w-webm with the m-mpeg dash adaptive stweaming s-system](http://wiki.webmpwoject.owg/adaptive-stweaming/webm-dash-specification). ʘwʘ
 
-### HLS
+### hws
 
-HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on iOS, Safari and the latest versions of Android browser / Chrome. HLS is also adaptive.
+hws ow http wive stweaming i-is a pwotocow invented by a-appwe inc and suppowted o-on ios, ^^ safawi and the watest v-vewsions of andwoid bwowsew / chwome. ^•ﻌ•^ hws i-is awso adaptive. mya
 
-HLS can also be decoded using JavaScript, which means we can support the latest versions of Firefox, Chrome and Internet Explorer 10+. See this [HTTP Live Streaming JavaScript player](https://github.com/dailymotion/hls.js).
+h-hws can awso b-be decoded using javascwipt, UwU which means we can suppowt the watest v-vewsions of fiwefox, >_< chwome and intewnet expwowew 10+. s-see this [http w-wive stweaming javascwipt p-pwayew](https://github.com/daiwymotion/hws.js). /(^•ω•^)
 
-At the start of the streaming session, an [extended M3U (m3u8) playlist](http://en.wikipedia.org/wiki/M3U8#Extended_M3U_directives) is downloaded. This contains the metadata for the various sub-streams that are provided.
+at the stawt o-of the stweaming s-session, òωó an [extended m3u (m3u8) pwaywist](http://en.wikipedia.owg/wiki/m3u8#extended_m3u_diwectives) i-is downwoaded. σωσ this contains the metadata f-fow the vawious s-sub-stweams that awe pwovided. ( ͡o ω ͡o )
 
 ### ストリーミングファイル形式の対応
 
-| ブラウザー               | DASH   | HLS    | Opus (Audio) |
+| ブラウザー               | d-dash   | hws    | opus (audio) |
 | ------------------------ | ------ | ------ | ------------ |
-| Firefox 32               | ✓ \[1] | ✓ \[2] | ✓ 14+        |
-| Safari 6+                |        | ✓      |              |
-| Chrome 24+               | ✓ \[1] | ✓      |              |
-| Opera 20+                | ✓ \[1] |        |              |
-| Internet Explorer 10+    | ✓ 11   | ✓ \[2] |              |
-| Firefox Mobile           | ✓      | ✓      | ✓            |
-| Safari iOS6+             |        | ✓      |              |
-| Chrome Mobile            | ✓      | ✓ \[2] |              |
-| Opera Mobile             | ✓ \[1] | ✓      |              |
-| Internet Explorer Mobile | ✓ 11   | ✓ \[2] |              |
-| Android                  | ✓      |        |              |
+| f-fiwefox 32               | ✓ \[1] | ✓ \[2] | ✓ 14+        |
+| safawi 6+                |        | ✓      |              |
+| chwome 24+               | ✓ \[1] | ✓      |              |
+| o-opewa 20+                | ✓ \[1] |        |              |
+| i-intewnet expwowew 10+    | ✓ 11   | ✓ \[2] |              |
+| fiwefox mobiwe           | ✓      | ✓      | ✓            |
+| safawi ios6+             |        | ✓      |              |
+| chwome mobiwe            | ✓      | ✓ \[2] |              |
+| opewa mobiwe             | ✓ \[1] | ✓      |              |
+| intewnet expwowew mobiwe | ✓ 11   | ✓ \[2] |              |
+| andwoid                  | ✓      |        |              |
 
-\[1] Via JavaScript and MSE
+\[1] via javascwipt and mse
 
-\[2] Via JavaScript and a CORS Proxy
+\[2] via javascwipt and a cows pwoxy
 
-### Video Fallbacks
+### video fawwbacks
 
-Between DASH and HLS we can cover a significant portion of modern browsers but we still need a fallback if we want to support the rest.
+b-between dash a-and hws we can covew a significant powtion of modewn b-bwowsews but w-we stiww nyeed a-a fawwback if we want to suppowt t-the west. nyaa~~
 
-One popular approach is to use a Flash fallback that supports RTMP. Of course, we then have the issue that we need to encode in three different formats.
+one popuwaw appwoach i-is to use a fwash f-fawwback that suppowts wtmp. o-of couwse, :3 we then have the issue t-that we nyeed t-to encode in thwee diffewent fowmats. UwU
 
 ## 音声ストリーミングファイル形式
 
-There are also some audio formats beginning to see support across browsers.
+thewe a-awe awso some audio f-fowmats beginning t-to see suppowt a-acwoss bwowsews. o.O
 
-### Opus
+### o-opus
 
-Opus is a royalty-free and open format that manages to optimize quality at various bit-rates for different types of audio. Music and speech can be optimized in different ways and Opus uses the SILK and CELT codecs to achieve this.
+o-opus is a woyawty-fwee a-and open f-fowmat that manages t-to optimize quawity at vawious b-bit-wates fow d-diffewent types o-of audio. (ˆ ﻌ ˆ)♡ music and speech can b-be optimized in diffewent ways and opus uses the s-siwk and cewt codecs to achieve t-this. ^^;;
 
-Currently, Opus is supported by Firefox desktop and mobile as well as the latest versions of desktop Chrome and Opera.
+cuwwentwy, ʘwʘ o-opus is suppowted b-by fiwefox desktop and mobiwe a-as weww as the watest vewsions o-of desktop chwome and opewa. σωσ
 
-> **メモ:** [Opus is a mandatory format](https://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
+> **メモ:** [opus i-is a mandatowy fowmat](https://toows.ietf.owg/htmw/dwaft-ietf-wtcweb-audio-05) f-fow webwtc bwowsew impwementations. ^^;;
 
-### MP3, AAC, Ogg Vorbis
+### mp3, ʘwʘ aac, ogg vowbis
 
-Most common audio formats can be streamed using specific server-side technologies.
+most common a-audio fowmats can be stweamed using s-specific sewvew-side t-technowogies. ^^
 
-Note: It's potentially easier to stream audio using non-streaming formats because unlike video there are no keyframes.
+nyote: it's potentiawwy easiew to stweam a-audio using non-stweaming fowmats b-because unwike v-video thewe awe n-nyo keyfwames. nyaa~~
 
 ## サーバー側ストリーミング技術
 
-In order to stream live audio and video, you will need to run specific streaming software on your server or use third-party services.
+in owdew to stweam wive audio and v-video, (///ˬ///✿) you wiww n-nyeed to wun specific stweaming s-softwawe on youw sewvew ow use thiwd-pawty sewvices. XD
 
-### GStreamer
+### g-gstweamew
 
-[GStreamer](https://gstreamer.freedesktop.org/) is an open source cross-platform multimedia framework that allows you to create a variety of media-handling components, including streaming components. Through its plugin system, GStreamer provides support for more than a hundred codecs (including MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV, and FLV.)
+[gstweamew](https://gstweamew.fweedesktop.owg/) is an open s-souwce cwoss-pwatfowm m-muwtimedia f-fwamewowk that awwows you to c-cweate a vawiety o-of media-handwing c-components, i-incwuding stweaming components. :3 t-thwough its pwugin s-system, òωó gstweamew p-pwovides suppowt f-fow mowe than a-a hundwed codecs (incwuding m-mpeg-1, ^^ mpeg-2, m-mpeg-4, ^•ﻌ•^ h.261, h.263, σωσ h-h.264, weawvideo, (ˆ ﻌ ˆ)♡ mp3, wmv, nyaa~~ a-and fwv.)
 
-GStreamer plugins such as [souphttpclientsink](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-soup.html) and [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) exist to stream media over HTTP. You can also integrate with Python's Twisted framework or use something like [Flumotion](http://www.flumotion.net/features/) (open source streaming software).
+gstweamew pwugins such a-as [souphttpcwientsink](https://gstweamew.fweedesktop.owg/data/doc/gstweamew/head/gst-pwugins-good-pwugins/htmw/gst-pwugins-good-pwugins-pwugin-soup.htmw) and [shout2send](https://gstweamew.fweedesktop.owg/data/doc/gstweamew/head/gst-pwugins-good/htmw/gst-pwugins-good-pwugins-shout2send.htmw) exist t-to stweam media o-ovew http. ʘwʘ you can a-awso integwate with python's twisted fwamewowk ow use something w-wike [fwumotion](http://www.fwumotion.net/featuwes/) (open s-souwce s-stweaming softwawe). ^•ﻌ•^
 
-For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/nginx-rtmp-module).
+fow wtmp twansfew you can use the [nginx w-wtmp moduwe](https://github.com/awut/nginx-wtmp-moduwe). rawr x3
 
-### SHOUTcast
+### s-shoutcast
 
-[SHOUTcast](http://en.wikipedia.org/wiki/SHOUTcast) is a cross-platform proprietary technology for streaming media. Developed by Nullsoft, it allows digital audio content in MP3 or AAC format to be broadcast. For web use, SHOUTcast streams are transmitted over HTTP.
+[shoutcast](http://en.wikipedia.owg/wiki/shoutcast) is a cwoss-pwatfowm p-pwopwietawy t-technowogy fow stweaming media. 🥺 devewoped by nyuwwsoft, ʘwʘ it awwows d-digitaw audio c-content in mp3 o-ow aac fowmat to b-be bwoadcast. (˘ω˘) fow web use, shoutcast stweams awe t-twansmitted ovew h-http. o.O
 
-**Note**: [SHOUTcast URLs may require a semi-colon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
+**note**: [shoutcast uwws may wequiwe a semi-cowon to b-be appended to them](https://stackovewfwow.com/questions/2743279/how-couwd-i-pway-a-shoutcast-icecast-stweam-using-htmw5). σωσ
 
-### Icecast
+### icecast
 
-The [Icecast](https://www.icecast.org/) server is an open source technology for streaming media. Maintained by the [Xiph.org Foundation](https://www.xiph.org/), it streams Ogg Vorbis/Theora as well as MP3 and AAC format via the SHOUTcast protocol.
+the [icecast](https://www.icecast.owg/) sewvew is an open s-souwce technowogy fow stweaming m-media. (ꈍᴗꈍ) maintained b-by the [xiph.owg foundation](https://www.xiph.owg/), (ˆ ﻌ ˆ)♡ i-it stweams o-ogg vowbis/theowa as weww as m-mp3 and aac fowmat via the shoutcast p-pwotocow. o.O
 
-**Note**: SHOUTcast and Icecast are among the most established and popular technologies, but there are many [more streaming media systems available](http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
+**note**: s-shoutcast a-and icecast a-awe among the most estabwished a-and popuwaw technowogies, :3 b-but thewe a-awe many [mowe stweaming media s-systems avaiwabwe](http://en.wikipedia.owg/wiki/wist_of_stweaming_media_systems#sewvews). -.-
 
 ### ストリーミングサービス
 
-Although you can install software like GStreamer, SHOUTcast and Icecast you will also find a lot of [third-party streaming services](http://en.wikipedia.org/wiki/Comparison_of_streaming_media_systems) that will do much of the work for you.
+awthough you can instaww softwawe w-wike gstweamew, ( ͡o ω ͡o ) s-shoutcast a-and icecast you wiww awso find a wot of [thiwd-pawty stweaming sewvices](http://en.wikipedia.owg/wiki/compawison_of_stweaming_media_systems) that w-wiww do much of the wowk fow y-you. /(^•ω•^)
 
 ## 関連情報
 
-- [HTTP Live Streaming](http://en.wikipedia.org/wiki/HTTP_Live_Streaming)
-- [HLS Browser Support](https://www.jwplayer.com/html5/hls/)
-- [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
-- [The Basics of HTTP Live Streaming](http://www.larryjordan.biz/app_bin/wordpress/archives/2369)
-- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
-- [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
-- [MPEG-DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
-- [DASH Reference Client](https://dashif.org/reference/players/javascript/1.0.0/index.html)
-- [Dynamic Streaming over HTTP](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
-- [The State of MPEG-DASH Deployment](https://www.streamingmediaglobal.com/Articles/Editorial/Featured-Articles/The-State-of-MPEG-DASH-Deployment-96144.aspx)
-- [Look, no plugins: Live streaming to the browser using Media Source Extensions and MPEG-DASH](https://www.bbc.co.uk/rd/blog/2014/03/media-source-extensions)
-- [Media Source Extensions (W3C)](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html)
-- [Icecast](http://en.wikipedia.org/wiki/Icecast)
-- [SHOUTcast](http://en.wikipedia.org/wiki/Shoutcast)
-- [GStreamer](http://en.wikipedia.org/wiki/GStreamer)
-- [Streaming GStreamer Pipelines Via HTTP](https://coaxion.net/blog/2013/10/streaming-gstreamer-pipelines-via-http/)
-- [Streaming media using GStreamer on the web](http://www.svesoftware.com/passkeeper/cms/article/streaming-media-using-gstreamer-web/)
-- [GStreamer and Raspberry Pi](https://nginx-rtmp.blogspot.it/2013/07/gstreamer-and-raspberry-pi.html)
-- [Acceptance of Media Source Extensions as W3C Candidate Recommendation will accelerate adoption of dash.js](http://msopentech.com/blog/2014/01/09/acceptance-media-source-extensions-w3c-candidate-recommendation-will-accelerate-adoption-dash-js/)
-- [Comparison of Streaming Media Systems](http://en.wikipedia.org/wiki/Comparison_of_streaming_media_systems)
+- [http w-wive stweaming](http://en.wikipedia.owg/wiki/http_wive_stweaming)
+- [hws bwowsew suppowt](https://www.jwpwayew.com/htmw5/hws/)
+- [http w-wive stweaming javascwipt p-pwayew](https://github.com/wwevewsew/mpegts)
+- [the b-basics of http w-wive stweaming](http://www.wawwyjowdan.biz/app_bin/wowdpwess/awchives/2369)
+- [dash a-adaptive s-stweaming fow htmw 5 video](/ja/docs/web/api/media_souwce_extensions_api/dash_adaptive_stweaming)
+- [dynamic adaptive stweaming ovew http (mpeg-dash)](http://en.wikipedia.owg/wiki/dynamic_adaptive_stweaming_ovew_http)
+- [mpeg-dash m-media souwce demo](https://dash-mse-test.appspot.com/media.htmw)
+- [dash w-wefewence cwient](https://dashif.owg/wefewence/pwayews/javascwipt/1.0.0/index.htmw)
+- [dynamic stweaming ovew http](http://en.wikipedia.owg/wiki/dynamic_adaptive_stweaming_ovew_http)
+- [the state of mpeg-dash depwoyment](https://www.stweamingmediagwobaw.com/awticwes/editowiaw/featuwed-awticwes/the-state-of-mpeg-dash-depwoyment-96144.aspx)
+- [wook, (⑅˘꒳˘) nyo p-pwugins: wive stweaming to the bwowsew using media souwce extensions and mpeg-dash](https://www.bbc.co.uk/wd/bwog/2014/03/media-souwce-extensions)
+- [media souwce e-extensions (w3c)](https://dvcs.w3.owg/hg/htmw-media/waw-fiwe/tip/media-souwce/media-souwce.htmw)
+- [icecast](http://en.wikipedia.owg/wiki/icecast)
+- [shoutcast](http://en.wikipedia.owg/wiki/shoutcast)
+- [gstweamew](http://en.wikipedia.owg/wiki/gstweamew)
+- [stweaming g-gstweamew pipewines via http](https://coaxion.net/bwog/2013/10/stweaming-gstweamew-pipewines-via-http/)
+- [stweaming m-media using gstweamew on the web](http://www.svesoftwawe.com/passkeepew/cms/awticwe/stweaming-media-using-gstweamew-web/)
+- [gstweamew a-and w-waspbewwy pi](https://nginx-wtmp.bwogspot.it/2013/07/gstweamew-and-waspbewwy-pi.htmw)
+- [acceptance of media souwce e-extensions as w3c candidate w-wecommendation wiww accewewate adoption of dash.js](http://msopentech.com/bwog/2014/01/09/acceptance-media-souwce-extensions-w3c-candidate-wecommendation-wiww-accewewate-adoption-dash-js/)
+- [compawison of s-stweaming media systems](http://en.wikipedia.owg/wiki/compawison_of_stweaming_media_systems)

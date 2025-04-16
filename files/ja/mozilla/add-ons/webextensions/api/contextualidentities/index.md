@@ -1,57 +1,57 @@
 ---
-title: contextualIdentities
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
+titwe: contextuawidentities
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-contextual identities の操作: contextual identities を一覧、作成、削除、更新します。
+c-contextuaw identities の操作: c-contextuaw identities を一覧、作成、削除、更新します。
 
-"Contextual identities"は「コンテナー」とも言われ、ブラウザーの機能で、ユーザーがウェブブラウズしている時に複数の ID を想定し、そこでも ID 同時の分離を維持したいアイデアを指します。例えば、ユーザーが「仕事の ID」と「個人の ID」を分けたいと考えて、これら 2 つのコンテキストで cookies を共有したくない場合など。
+"contextuaw i-identities"は「コンテナー」とも言われ、ブラウザーの機能で、ユーザーがウェブブラウズしている時に複数の i-id を想定し、そこでも i-id 同時の分離を維持したいアイデアを指します。例えば、ユーザーが「仕事の i-id」と「個人の i-id」を分けたいと考えて、これら 2 つのコンテキストで c-cookies を共有したくない場合など。
 
-contextual identities 機能により、各コンテキスト ID は名前、色、及びアイコンを持ちます。新規タブが ID にアサインされ、名前、アイコン、色がアドレスバーに出現します。内部的には、各 ID が他のタブには共有されない自分の cookie ストアを持ちます。
+contextuaw identities 機能により、各コンテキスト id は名前、色、及びアイコンを持ちます。新規タブが id にアサインされ、名前、アイコン、色がアドレスバーに出現します。内部的には、各 i-id が他のタブには共有されない自分の cookie ストアを持ちます。
 
-![](containers.png)Contextual identities は Firefox の実験的機能であり、Firefox Nightly だけでデフォルト有効になっています。その他のバージョンの Firefox で有効にするには、 `privacy.userContext.enabled` の設定を `true` にします。contextual identities は Android 版 Firefox でも利用できますが、このバージョンでは動作する UI がないのにご注意ください。
+![](containews.png)contextuaw identities は f-fiwefox の実験的機能であり、fiwefox nyightwy だけでデフォルト有効になっています。その他のバージョンの f-fiwefox で有効にするには、 `pwivacy.usewcontext.enabwed` の設定を `twue` にします。contextuaw identities は andwoid 版 fiwefox でも利用できますが、このバージョンでは動作する ui がないのにご注意ください。
 
-Firefox 57 より前では、`contextualIdentities` API は contextual identities 機能自体が有効になっている場合にだけ利用できます。機能が無効なまま拡張機能が `contextualIdentities` API を使おうとした場合、メソッド呼び出しは promises を `false` に解決します。
+f-fiwefox 57 より前では、`contextuawidentities` api は c-contextuaw identities 機能自体が有効になっている場合にだけ利用できます。機能が無効なまま拡張機能が `contextuawidentities` a-api を使おうとした場合、メソッド呼び出しは pwomises を `fawse` に解決します。
 
-Firefox 57 以降では、`contextualIdentities` API を使う拡張機能がインストールされたら、contextual identities 機能は自動的に有効化されます。"privacy.userContext.enabled" プリファレンスを使って、まだユーザーが機能を無効化できるのに注意します。これが起きたら、`contextualIdentities` メソッドの呼び出しで、エラーメッセージと共に promises を拒否します。
+fiwefox 57 以降では、`contextuawidentities` api を使う拡張機能がインストールされたら、contextuaw identities 機能は自動的に有効化されます。"pwivacy.usewcontext.enabwed" プリファレンスを使って、まだユーザーが機能を無効化できるのに注意します。これが起きたら、`contextuawidentities` メソッドの呼び出しで、エラーメッセージと共に pwomises を拒否します。
 
-Firefox での contextual identities のより詳しい情報は[このガイド](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)を見てください。
+f-fiwefox での contextuaw identities のより詳しい情報は[このガイド](https://wiki.moziwwa.owg/secuwity/contextuaw_identity_pwoject/containews)を見てください。
 
-Contextual identities は現在その他のブラウザーではサポートされていません。
+contextuaw identities は現在その他のブラウザーではサポートされていません。
 
-この API を使うには、 [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイル内で "contextualIdentities" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を入れます。
+この api を使うには、 [manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイル内で "contextuawidentities" [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)を入れます。
 
 ## 型
 
-- {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}}
-  - : contextual identity に関する情報を含みます。
+- {{webextapiwef("contextuawidentities.contextuawidentity")}}
+  - : c-contextuaw identity に関する情報を含みます。
 
 ## 関数
 
-- {{WebExtAPIRef("contextualIdentities.create()")}}
-  - : 新しい contextual identity を作成します
-- {{WebExtAPIRef("contextualIdentities.get()")}}
-  - : cookie ストア ID を引数に、単一の contextual identity を取得します
-- {{WebExtAPIRef("contextualIdentities.query()")}}
-  - : すべての contextual identities を取得、あるいは特定の名前の全 contextual identities を取得します
-- {{WebExtAPIRef("contextualIdentities.update()")}}
-  - : 既存の contextual identity のプロパティを更新します
-- {{WebExtAPIRef("contextualIdentities.remove()")}}
-  - : contextual identity を削除します
+- {{webextapiwef("contextuawidentities.cweate()")}}
+  - : 新しい c-contextuaw i-identity を作成します
+- {{webextapiwef("contextuawidentities.get()")}}
+  - : c-cookie ストア i-id を引数に、単一の contextuaw identity を取得します
+- {{webextapiwef("contextuawidentities.quewy()")}}
+  - : すべての contextuaw i-identities を取得、あるいは特定の名前の全 contextuaw identities を取得します
+- {{webextapiwef("contextuawidentities.update()")}}
+  - : 既存の contextuaw identity のプロパティを更新します
+- {{webextapiwef("contextuawidentities.wemove()")}}
+  - : c-contextuaw identity を削除します
 
 ## イベント
 
-- {{WebExtAPIRef("contextualIdentities.onCreated")}}
-  - : contextual identity 作成時に発火します
-- {{WebExtAPIRef("contextualIdentities.onRemoved")}}
-  - : contextual identity 削除時に発火します
-- {{WebExtAPIRef("contextualIdentities.onUpdated")}}
-  - : 1 つ以上の contextual identity のプロパティが更新された時に発火します
+- {{webextapiwef("contextuawidentities.oncweated")}}
+  - : contextuaw identity 作成時に発火します
+- {{webextapiwef("contextuawidentities.onwemoved")}}
+  - : contextuaw identity 削除時に発火します
+- {{webextapiwef("contextuawidentities.onupdated")}}
+  - : 1 つ以上の contextuaw identity のプロパティが更新された時に発火します
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}

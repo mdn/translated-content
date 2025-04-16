@@ -1,176 +1,176 @@
 ---
-title: "<div>: コンテンツ区分要素"
-slug: Web/HTML/Reference/Elements/div
-original_slug: Web/HTML/Element/div
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<div>: コンテンツ区分要素"
+swug: web/htmw/wefewence/ewements/div
+o-owiginaw_swug: w-web/htmw/ewement/div
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<div>`** は [HTML](/ja/docs/Web/HTML) の要素で、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる（例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などの何らかのレイアウトモデルが適用されるなど）までは、コンテンツやレイアウトには影響を与えません。
+**`<div>`** は [htmw](/ja/docs/web/htmw) の要素で、フローコンテンツの汎用コンテナーです。 {{gwossawy("css")}} を用いて何らかのスタイル付けがされる（例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/web/css/css_fwexibwe_box_wayout)などの何らかのレイアウトモデルが適用されるなど）までは、コンテンツやレイアウトには影響を与えません。
 
-{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;div&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
-<div class="warning">
+```htmw i-intewactive-exampwe
+<div c-cwass="wawning">
   <img
-    src="/shared-assets/images/examples/leopard.jpg"
-    alt="An intimidating leopard." />
-  <p>Beware of the leopard</p>
+    s-swc="/shawed-assets/images/exampwes/weopawd.jpg"
+    awt="an intimidating weopawd." />
+  <p>bewawe of the weopawd</p>
 </div>
 ```
 
-```css interactive-example
-.warning {
-  border: 10px ridge #f00;
-  background-color: #ff0;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
+```css intewactive-exampwe
+.wawning {
+  b-bowdew: 10px widge #f00;
+  backgwound-cowow: #ff0;
+  p-padding: 0.5wem;
+  dispway: fwex;
+  f-fwex-diwection: cowumn;
 }
 
-.warning img {
+.wawning img {
   width: 100%;
 }
 
-.warning p {
-  font: small-caps bold 1.2rem sans-serif;
-  text-align: center;
+.wawning p-p {
+  font: smow-caps bowd 1.2wem s-sans-sewif;
+  t-text-awign: centew;
 }
 ```
 
-「純粋」なコンテナーとして、`<div>` 要素は本質的には何も表しません。その代わり、 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) や [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を（[`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性を使用して）示したりするために使用します。
+「純粋」なコンテナーとして、`<div>` 要素は本質的には何も表しません。その代わり、 [`cwass`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass) や [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を（[`wang`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/wang) 属性を使用して）示したりするために使用します。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-> **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や [CSS フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
+> **メモ:** `awign` 属性は廃止されたので、使用しないでください。代わりに、 css のプロパティを使用したり、 [css グリッド](/ja/docs/web/css/css_gwid_wayout)や [css フレックスボックス](/ja/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
 
 ## 使用上の注意
 
-- `<div>` 要素は、他に適切な意味的要素（{{HTMLElement("article")}} や {{HTMLElement("nav")}} など）がない場合に限り使用してください。
+- `<div>` 要素は、他に適切な意味的要素（{{htmwewement("awticwe")}} や {{htmwewement("nav")}} など）がない場合に限り使用してください。
 
 ## アクセシビリティの考慮
 
-`<div>` 要素は [`generic` の暗黙のロール](https://www.w3.org/TR/wai-aria-1.2/#generic)を持っており、まったくない訳ではありません。これは、特定の役割を持つ直接の子孫要素が適切に機能することを期待する、特定の ARIA の組み合わせ宣言に影響を与える可能性があります。
+`<div>` 要素は [`genewic` の暗黙のロール](https://www.w3.owg/tw/wai-awia-1.2/#genewic)を持っており、まったくない訳ではありません。これは、特定の役割を持つ直接の子孫要素が適切に機能することを期待する、特定の awia の組み合わせ宣言に影響を与える可能性があります。
 
 ## 例
 
 ### 単純な例
 
-```html
+```htmw
 <div>
   <p>
-    Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!
+    any k-kind of content hewe. ʘwʘ such as &wt;p&gt;, σωσ &wt;tabwe&gt;. OwO you nyame it! 😳😳😳
   </p>
 </div>
 ```
 
 結果はこのようになります。
 
-{{EmbedLiveSample("A_simple_example", 650, 60)}}
+{{embedwivesampwe("a_simpwe_exampwe", 😳😳😳 650, 60)}}
 
 ### スタイル付けを行う例
 
-この例では CSS を用いて `<div>` にスタイルを適用することで、影付きのボックスを作成します。なお、 `<div>` 要素に [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性を使用して、 `"shadowbox"` という名前のスタイルを要素に適用します。
+この例では css を用いて `<div>` にスタイルを適用することで、影付きのボックスを作成します。なお、 `<div>` 要素に [`cwass`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass) 属性を使用して、 `"shadowbox"` という名前のスタイルを要素に適用します。
 
-#### HTML
+#### htmw
 
-```html
-<div class="shadowbox">
-  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
+```htmw
+<div c-cwass="shadowbox">
+  <p>hewe's a vewy intewesting n-nyote dispwayed i-in a wuvwy shadowed b-box.</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .shadowbox {
   width: 15em;
-  border: 1px solid #333;
+  bowdew: 1px s-sowid #333;
   box-shadow: 8px 8px 5px #444;
   padding: 8px 12px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  b-backgwound-image: wineaw-gwadient(180deg, o.O #fff, #ddd 40%, ( ͡o ω ͡o ) #ccc);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("A_styled_example", 650, 120)}}
+{{embedwivesampwe("a_stywed_exampwe", (U ﹏ U) 650, 120)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >, <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>
+        >, (///ˬ///✿) <a hwef="/ja/docs/web/htmw/content_categowies#知覚可能コンテンツ">知覚可能コンテンツ</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >。<br />または ({{glossary("WHATWG")}} HTML において) 親要素が
-        {{HTMLElement("dl")}} である場合: 1つ以上の
-        {{HTMLElement("dt")}} 要素と、それに続く1つ以上の
-        {{HTMLElement("dd")}} 要素、さらに任意で
-        {{HTMLElement("script")}} 要素や
-        {{HTMLElement("template")}} 要素が混在。
+        >。<bw />または ({{gwossawy("naniwg")}} h-htmw において) 親要素が
+        {{htmwewement("dw")}} である場合: 1つ以上の
+        {{htmwewement("dt")}} 要素と、それに続く1つ以上の
+        {{htmwewement("dd")}} 要素、さらに任意で
+        {{htmwewement("scwipt")}} 要素や
+        {{htmwewement("tempwate")}} 要素が混在。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >
-        を受け入れるすべての要素。<br />または ({{glossary("WHATWG")}}
-        HTML において) {{HTMLElement("dl")}} 要素。
+        を受け入れるすべての要素。<bw />または ({{gwossawy("naniwg")}}
+        htmw において) {{htmwewement("dw")}} 要素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている a-awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLDivElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwdivewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 意味論的な区分要素: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}
-- 記述コンテンツのスタイル付け用の {{HTMLElement("span")}} 要素
+- 意味論的な区分要素: {{htmwewement("section")}}, >w< {{htmwewement("awticwe")}}, rawr {{htmwewement("nav")}}, mya {{htmwewement("headew")}}, ^^ {{htmwewement("footew")}}
+- 記述コンテンツのスタイル付け用の {{htmwewement("span")}} 要素

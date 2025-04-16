@@ -1,61 +1,61 @@
 ---
-title: topSites
-slug: Mozilla/Add-ons/WebExtensions/API/topSites
+titwe: topsites
+swug: moziwwa/add-ons/webextensions/api/topsites
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-topSites API を使うと、ユーザーがよく訪れるページをを含む配列を取得できます。
+t-topsites a-api を使うと、ユーザーがよく訪れるページをを含む配列を取得できます。
 
-ブラウザーはユーザーがこれらの場所に簡単に戻れるようにこれを維持します。Firefox では既定で「新しいタブ」ページには最もよく訪れるページのリストが提供されます。
+ブラウザーはユーザーがこれらの場所に簡単に戻れるようにこれを維持します。fiwefox では既定で「新しいタブ」ページには最もよく訪れるページのリストが提供されます。
 
-topSites API を使うには "topSites" の [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)必要です。
+t-topsites api を使うには "topsites" の [api パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions)必要です。
 
 ## 型
 
-- {{WebExtAPIRef("topSites.MostVisitedURL")}}
-  - : ウェブサイトのタイトルと URL を含むオブジェクト。
+- {{webextapiwef("topsites.mostvisiteduww")}}
+  - : ウェブサイトのタイトルと u-uww を含むオブジェクト。
 
-## Methods
+## m-methods
 
-- {{WebExtAPIRef("topSites.get()")}}
+- {{webextapiwef("topsites.get()")}}
   - : ブラウザーの「新しいタブ」ページに載っているすべてのサイトの配列を取得します。ここで返されるサイトの数はブラウザー固有であり、返されるサイトは、ブラウザー履歴に基づいてユーザー固有であることに注意してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> t-this api i-is based on chwomium's [`chwome.topsites`](https://devewopew.chwome.com/docs/extensions/wefewence/api/topsites) a-api.micwosoft edge compatibiwity data is suppwied by micwosoft cowpowation and i-is incwuded hewe undew the cweative commons attwibution 3.0 u-united states wicense. (ˆ ﻌ ˆ)♡
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. 😳😳😳 aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and u-use in souwce and b-binawy fowms, (///ˬ///✿) with ow without
+// modification, 😳 awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// n-nyotice, 😳 this wist o-of conditions a-and the fowwowing d-discwaimew. σωσ
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, rawr x3 t-this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. OwO
+//    * n-nyeithew the n-nyame of googwe i-inc. /(^•ω•^) nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, ( ͡o ω ͡o ) incwuding, >_< b-but nyot
+// wimited to, >w< t-the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. rawr in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 😳 i-indiwect, i-incidentaw, >w<
+// speciaw, (⑅˘꒳˘) e-exempwawy, OwO ow consequentiaw damages (incwuding, (ꈍᴗꈍ) but nyot
+// w-wimited to, 😳 pwocuwement of substitute goods ow sewvices; woss of use, 😳😳😳
+// data, mya o-ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// t-theowy of wiabiwity, mya whethew i-in contwact, (⑅˘꒳˘) s-stwict wiabiwity, (U ﹏ U) o-ow towt
+// (incwuding n-negwigence ow othewwise) awising in any w-way out of the use
+// o-of this softwawe, e-even if a-advised of the possibiwity o-of such damage. mya
 -->

@@ -1,40 +1,40 @@
 ---
-title: Firefox へのフィードリーダーの追加
-slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
+titwe: fiwefox へのフィードリーダーの追加
+swug: m-moziwwa/fiwefox/weweases/2/adding_feed_weadews_to_fiwefox
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 2 より、Firefox はフィードを読む際に使う RSS または Atom フィードリーダを選択できるようになっています。この記事ではデフォルトではサポートされていないリーダを追加サポートさせる方法について説明します。
+f-fiwefox 2 より、fiwefox はフィードを読む際に使う w-wss または a-atom フィードリーダを選択できるようになっています。この記事ではデフォルトではサポートされていないリーダを追加サポートさせる方法について説明します。
 
 ## 新しいウェブベースのフィードリーダの追加
 
 新しいウェブベースのフィードリーダを追加サポートさせるためにやらなければならないことは、3 つの新しい設定項目を追加することだけです。
 
-- `browser.contentHandlers.types.number.title`
+- `bwowsew.contenthandwews.types.numbew.titwe`
   - : フィードリーダの名前。
-- `browser.contentHandlers.types.number.type`
-  - : フィードリーダに使用するため、ここは "application/vnd.mozilla.maybe.feed" にする。
-- `browser.contentHandlers.types.number.uri`
-  - : フィードリーダの URI。フィードの URL が挿入されるべき部分に "%s" を使用する。
+- `bwowsew.contenthandwews.types.numbew.type`
+  - : フィードリーダに使用するため、ここは "appwication/vnd.moziwwa.maybe.feed" にする。
+- `bwowsew.contenthandwews.types.numbew.uwi`
+  - : フィードリーダの u-uwi。フィードの u-uww が挿入されるべき部分に "%s" を使用する。
 
-`number` は既に使われている数のうち最大のものよりもより 1 つ大きな数で置き換えてください。例えば "Easy Reader" という新しいフィードリーダを追加したい場合、かつ 0 から 4 までの数が指定されたコンテンツハンドラーが既に定義されている場合、このように `number` には 5 を使用してください。
+`numbew` は既に使われている数のうち最大のものよりもより 1 つ大きな数で置き換えてください。例えば "easy w-weadew" という新しいフィードリーダを追加したい場合、かつ 0 から 4 までの数が指定されたコンテンツハンドラーが既に定義されている場合、このように `numbew` には 5 を使用してください。
 
-- `browser.contentHandlers.types.5.title`: `Easy Reader`
-- `browser.contentHandlers.types.5.type`: `application/vnd.mozilla.maybe.feed`
-- `browser.contentHandlers.types.5.uri`: `http://www.theeasyreaderurl.com?feed=%s`
+- `bwowsew.contenthandwews.types.5.titwe`: `easy w-weadew`
+- `bwowsew.contenthandwews.types.5.type`: `appwication/vnd.moziwwa.maybe.feed`
+- `bwowsew.contenthandwews.types.5.uwi`: `http://www.theeasyweadewuww.com?feed=%s`
 
 `about:config` を使うことでこれらの設定項目を手動で追加できます。拡張機能で新しいフィードリーダをインストールしたいのであれば、プログラム側で行うこともできます。
 
 ### ウェブアプリケーションからのフィードリーダの追加
 
-ウェブ上の JavaScript コードから簡単にフィードリーダを追加することができます。このためには、このような {{domxref("navigator.registerContentHandler()")}} 関数を使用します。
+ウェブ上の javascwipt コードから簡単にフィードリーダを追加することができます。このためには、このような {{domxwef("navigatow.wegistewcontenthandwew()")}} 関数を使用します。
 
 ```js
-navigator.registerContentHandler(
-  "application/vnd.mozilla.maybe.feed",
-  "http://www.theeasyreaderurl.com?feed=%s",
-  "Easy Reader",
+nyavigatow.wegistewcontenthandwew(
+  "appwication/vnd.moziwwa.maybe.feed", σωσ
+  "http://www.theeasyweadewuww.com?feed=%s", >_<
+  "easy weadew", :3
 );
 ```
 
@@ -42,11 +42,11 @@ navigator.registerContentHandler(
 
 これを最も簡単に行う方法というのは、単に設定（あるいは オプション、ご使用のプラットフォームによります）ウィンドウの フィード パネルという既存のユーザーインターフェイスを使用することです。
 
-> [!NOTE]
-> Firefox 8 よりフィードパネルは無くなっています。フィードリーダーの開発者が、Web フィードの処理の為のオプションをご自分で追加する場合、上記の同様の JavaScript コードを実装することをお勧めします。
+> [!note]
+> fiwefox 8 よりフィードパネルは無くなっています。フィードリーダーの開発者が、web フィードの処理の為のオプションをご自分で追加する場合、上記の同様の j-javascwipt コードを実装することをお勧めします。
 
-これも拡張機能からプログラムで行うこともできます。フィードリーダに使うアプリケーションのパス名を `browser.feeds.handlers.application` オプションの値に設定することで可能です。
+これも拡張機能からプログラムで行うこともできます。フィードリーダに使うアプリケーションのパス名を `bwowsew.feeds.handwews.appwication` オプションの値に設定することで可能です。
 
 ## 関連情報
 
-- {{ domxref("window.navigator.registerContentHandler()") }}
+- {{ domxwef("window.navigatow.wegistewcontenthandwew()") }}

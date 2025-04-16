@@ -1,92 +1,92 @@
 ---
-title: WebAssembly.Memory() コンストラクター
-slug: WebAssembly/Reference/JavaScript_interface/Memory/Memory
-original_slug: WebAssembly/JavaScript_interface/Memory/Memory
+titwe: webassembwy.memowy() コンストラクター
+swug: webassembwy/wefewence/javascwipt_intewface/memowy/memowy
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/memowy/memowy
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.Memory()`** コンストラクターは新しい `Memory` オブジェクトを生成します。これは {{jsxref("WebAssembly/Memory/buffer","buffer")}} プロパティがサイズ変更可能な [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または `SharedArrayBuffer` であり、 WebAssembly の `Instance` からアクセスする生のバイト列のメモリーであるものです。
+**`webassembwy.memowy()`** コンストラクターは新しい `memowy` オブジェクトを生成します。これは {{jsxwef("webassembwy/memowy/buffew","buffew")}} プロパティがサイズ変更可能な [`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) または `shawedawwaybuffew` であり、 w-webassembwy の `instance` からアクセスする生のバイト列のメモリーであるものです。
 
-JavaScript または WebAssembly コードから生成されたメモリーは JavaScript と WebAssembly のどちらからもアクセス、変更が可能になります。
+javascwipt または w-webassembwy コードから生成されたメモリーは j-javascwipt と w-webassembwy のどちらからもアクセス、変更が可能になります。
 
 ## 構文
 
 ```js
-new WebAssembly.Memory(memoryDescriptor);
+n-nyew webassembwy.memowy(memowydescwiptow);
 ```
 
 ### 引数
 
-- _memoryDescriptor_
+- _memowydescwiptow_
 
   - : 以下のメンバーを含むことができるオブジェクトです。
 
-    - _initial_
-      - : WebAssembly メモリーの初期サイズで、単位は WebAssembly ページ数です。
-    - _maximum {{optional_inline}}_
-      - : WebAssembly メモリーを拡張できる最大サイズで、単位は WebAssembly ページ数です。存在する場合、 `maximum` 引数はエンジンがメモリーを予約するヒントとして使用されます。ただし、エンジンはこの予約リクエストを無視したり固定したりすることがあります。一般的に、ほとんどの WebAssembly モジュールでは `maximum` を設定する必要はありません。
-    - shared _{{optional_inline}}_
-      - : 論理値で、このメモリーを共有メモリーにするかどうかを定義します。 `true` に設定すると、共有メモリーになります。既定値は `false` です。
+    - _initiaw_
+      - : w-webassembwy メモリーの初期サイズで、単位は webassembwy ページ数です。
+    - _maximum {{optionaw_inwine}}_
+      - : webassembwy メモリーを拡張できる最大サイズで、単位は webassembwy ページ数です。存在する場合、 `maximum` 引数はエンジンがメモリーを予約するヒントとして使用されます。ただし、エンジンはこの予約リクエストを無視したり固定したりすることがあります。一般的に、ほとんどの webassembwy モジュールでは `maximum` を設定する必要はありません。
+    - shawed _{{optionaw_inwine}}_
+      - : 論理値で、このメモリーを共有メモリーにするかどうかを定義します。 `twue` に設定すると、共有メモリーになります。既定値は `fawse` です。
 
-> [!NOTE]
-> WebAssembly ページは 65,536 バイト、すなわち 64KiB の固定長です。
+> [!note]
+> w-webassembwy ページは 65,536 バイト、すなわち 64kib の固定長です。
 
 ### 例外
 
-- `memoryDescriptor` がオブジェクトでない場合は、 {{jsxref("TypeError")}} が発生します。
-- `maximum` が設定されており、かつ `initial` よりも小さい場合は、 {{jsxref("RangeError")}} が発生します。
+- `memowydescwiptow` がオブジェクトでない場合は、 {{jsxwef("typeewwow")}} が発生します。
+- `maximum` が設定されており、かつ `initiaw` よりも小さい場合は、 {{jsxwef("wangeewwow")}} が発生します。
 
 ## 例
 
-### 新しい Memory インスタンスの作成
+### 新しい memowy インスタンスの作成
 
-`WebAssembly.Memory` オブジェクトを取得する方法は 2 つあります。 1 つ目は JavaScript から構築する方法です。次の例では、新しい WebAssembly Memory インスタンスを初期サイズが 10 ページ (640KiB) 、最大サイズが 100 ページ (6.4MiB) で生成しています。この [`buffer`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) プロパティは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を返します。
+`webassembwy.memowy` オブジェクトを取得する方法は 2 つあります。 1 つ目は javascwipt から構築する方法です。次の例では、新しい w-webassembwy memowy インスタンスを初期サイズが 10 ページ (640kib) 、最大サイズが 100 ページ (6.4mib) で生成しています。この [`buffew`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/memowy/buffew) プロパティは [`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) を返します。
 
 ```js
-var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+v-vaw memowy = nyew webassembwy.memowy({ initiaw: 10, maximum: 100 });
 ```
 
-2 つ目は WebAssembly モジュールからエクスポートされた `WebAssembly.Memory` オブジェクトを使用する方法です。次の例では (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) および[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照)、 memory.wasm バイトコードを {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドで読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
+2 つ目は w-webassembwy モジュールからエクスポートされた `webassembwy.memowy` オブジェクトを使用する方法です。次の例では (github 上の [memowy.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/memowy.htmw) および[動作例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/memowy.htmw)も参照)、 memowy.wasm バイトコードを {{jsxwef("webassembwy.instantiatestweaming()")}} メソッドで読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
 
 ```js
-WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
-  js: { mem: memory },
+webassembwy.instantiatestweaming(fetch("memowy.wasm"), nyaa~~ {
+  j-js: { m-mem: memowy }, (⑅˘꒳˘)
 }).then((obj) => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
+  vaw i32 = nyew uint32awway(memowy.buffew);
+  fow (vaw i = 0; i < 10; i++) {
+    i-i32[i] = i;
   }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+  vaw sum = obj.instance.expowts.accumuwate(0, rawr x3 10);
+  consowe.wog(sum);
 });
 ```
 
 ### 共有メモリーの作成
 
-既定では、 WebAssembly のメモリーは共有されていません。[共有メモリー](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#共有メモリー)を作成するには、コンストラクター
-の初期化オブジェクトに `shared: true` を渡してください。
+既定では、 webassembwy のメモリーは共有されていません。[共有メモリー](/ja/docs/webassembwy/guides/undewstanding_the_text_fowmat#共有メモリー)を作成するには、コンストラクター
+の初期化オブジェクトに `shawed: t-twue` を渡してください。
 
 ```js
-let memory = new WebAssembly.Memory({
-  initial: 10,
-  maximum: 100,
-  shared: true,
+wet memowy = n-nyew webassembwy.memowy({
+  i-initiaw: 10, (✿oωo)
+  m-maximum: 100, (ˆ ﻌ ˆ)♡
+  s-shawed: twue, (˘ω˘)
 });
 ```
 
-このメモリーの `buffer` プロパティは [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) を返します。
+このメモリーの `buffew` プロパティは [`shawedawwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew) を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

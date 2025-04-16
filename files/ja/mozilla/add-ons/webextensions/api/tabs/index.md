@@ -1,186 +1,186 @@
 ---
-title: tabs
-slug: Mozilla/Add-ons/WebExtensions/API/tabs
+titwe: tabs
+swug: moziwwa/add-ons/webextensions/api/tabs
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 ブラウザーのタブシステムとやりとりします。
 
-この API を使って開いているタブの一覧を取得したり、いろいろな条件でフィルターしたり、タブを開き、更新し、移動し、再読み込みし、削除できます。この API ではタブのコンテンツに直接アクセスできませんが、JavaScript と CSS をタブに挿入することは、{{WebExtAPIRef("tabs.executeScript()")}} や {{WebExtAPIRef("tabs.insertCSS()")}} API を使ってできます。
+この a-api を使って開いているタブの一覧を取得したり、いろいろな条件でフィルターしたり、タブを開き、更新し、移動し、再読み込みし、削除できます。この a-api ではタブのコンテンツに直接アクセスできませんが、javascwipt と c-css をタブに挿入することは、{{webextapiwef("tabs.exekawaii~scwipt()")}} や {{webextapiwef("tabs.insewtcss()")}} a-api を使ってできます。
 
-この API の大半の使用に特別なパーミッションは要りませんが:
+この a-api の大半の使用に特別なパーミッションは要りませんが:
 
-- `Tab.url` `Tab.title` `Tab.favIconUrl`, のアクセスには "tabs" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。また Firefox では URL による{{WebExtAPIRef("tabs.query", "問い合わせ")}}をするのにも "tabs" が必要です。
-- {{WebExtAPIRef("tabs.executeScript()")}} や {{WebExtAPIRef("tabs.insertCSS()")}} を使うには、そのタブの [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)が必要です。
+- `tab.uww` `tab.titwe` `tab.faviconuww`, OwO のアクセスには "tabs" [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)が必要です。また f-fiwefox では u-uww による{{webextapiwef("tabs.quewy", (ꈍᴗꈍ) "問い合わせ")}}をするのにも "tabs" が必要です。
+- {{webextapiwef("tabs.exekawaii~scwipt()")}} や {{webextapiwef("tabs.insewtcss()")}} を使うには、そのタブの [host パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions)が必要です。
 
-あるいは、これらのパーミッションを一時的に取得することもできますが、それは現在アクティブなタブで明示的なユーザーアクションへの応答する場合のみで、["activeTab" パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)を要求することで可能です。
+あるいは、これらのパーミッションを一時的に取得することもできますが、それは現在アクティブなタブで明示的なユーザーアクションへの応答する場合のみで、["activetab" パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission)を要求することで可能です。
 
-タブ操作の多くはタブ ID を使います。タブ ID はブラウザーセッションの単一のタブごとにユニークである保証がされています。ブラウザーが再起動したら、タブ ID を再利用できて、実際そうします。ブラウザーの再起動をまたいでタブ情報を関連づけるには {{WebExtAPIRef("sessions.setTabValue()")}} を使います。
+タブ操作の多くはタブ i-id を使います。タブ id はブラウザーセッションの単一のタブごとにユニークである保証がされています。ブラウザーが再起動したら、タブ id を再利用できて、実際そうします。ブラウザーの再起動をまたいでタブ情報を関連づけるには {{webextapiwef("sessions.settabvawue()")}} を使います。
 
 ## 型
 
-- {{WebExtAPIRef("tabs.MutedInfoReason")}}
+- {{webextapiwef("tabs.mutedinfoweason")}}
   - : タブがミュートされている、またはミュートが解除されている理由を示す。
-- {{WebExtAPIRef("tabs.MutedInfo")}}
+- {{webextapiwef("tabs.mutedinfo")}}
   - : タブがミュートされているかを示す真理値と、最後の変更の理由からなるオブジェクト。
-- {{WebExtAPIRef("tabs.PageSettings")}}
-  - : [`tabs.saveAsPDF()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF)メソッドにおいて、どのように PDF を描画するかを制御する。
-- {{WebExtAPIRef("tabs.Tab")}}
+- {{webextapiwef("tabs.pagesettings")}}
+  - : [`tabs.saveaspdf()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/saveaspdf)メソッドにおいて、どのように pdf を描画するかを制御する。
+- {{webextapiwef("tabs.tab")}}
   - : タブについての情報を含む。
-- {{WebExtAPIRef("tabs.TabStatus")}}
+- {{webextapiwef("tabs.tabstatus")}}
   - : タブの読み込み状況を示す。
-- {{WebExtAPIRef("tabs.WindowType")}}
+- {{webextapiwef("tabs.windowtype")}}
   - : タブを所有しているウィンドウのタイプを示す。
-- {{WebExtAPIRef("tabs.ZoomSettingsMode")}}
+- {{webextapiwef("tabs.zoomsettingsmode")}}
   - : ズームがブラウザーによるものか、拡張機能によるものか、またはズームが許可されていないのかを示す。
-- {{WebExtAPIRef("tabs.ZoomSettingsScope")}}
+- {{webextapiwef("tabs.zoomsettingsscope")}}
   - : あるページのズームが、同一生成元の別ページにも適用されるか、タブ内でのみかを示す。
-- {{WebExtAPIRef("tabs.ZoomSettings")}}
-  - : ズーム設定{{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}とデフォルトのズーム要因を示す。
+- {{webextapiwef("tabs.zoomsettings")}}
+  - : ズーム設定{{webextapiwef("tabs.zoomsettingsmode", 😳 "mode")}}, 😳😳😳 {{webextapiwef("tabs.zoomsettingsscope", mya "scope")}}とデフォルトのズーム要因を示す。
 
 ## プロパティ
 
-- {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
-  - : ブラウザーのタブでないタブに対する特殊な ID（Windows の開発ツールなど）。
+- {{webextapiwef("tabs.tab_id_none")}}
+  - : ブラウザーのタブでないタブに対する特殊な id（windows の開発ツールなど）。
 
 ## 関数
 
-- {{WebExtAPIRef("tabs.captureTab()")}}
-  - : あるタブの可視エリアの画像をエンコードしたデータ URI を作成します。
-- {{WebExtAPIRef("tabs.captureVisibleTab()")}}
-  - : 特定のウィンドウのアクティブなタブの可視エリアの画像をエンコードしたデータ URI を作成します。
-- {{WebExtAPIRef("tabs.connect()")}}
-  - : あるタブにおいて、バックグラウンドスクリプト（またはその他ポップアップやオプションページのスクリプトなど特権スクリプト）と [content scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 間でのメッセージのやり取り用の経路を確保します。
-- {{WebExtAPIRef("tabs.create()")}}
+- {{webextapiwef("tabs.captuwetab()")}}
+  - : あるタブの可視エリアの画像をエンコードしたデータ u-uwi を作成します。
+- {{webextapiwef("tabs.captuwevisibwetab()")}}
+  - : 特定のウィンドウのアクティブなタブの可視エリアの画像をエンコードしたデータ uwi を作成します。
+- {{webextapiwef("tabs.connect()")}}
+  - : あるタブにおいて、バックグラウンドスクリプト（またはその他ポップアップやオプションページのスクリプトなど特権スクリプト）と [content scwipts](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts) 間でのメッセージのやり取り用の経路を確保します。
+- {{webextapiwef("tabs.cweate()")}}
   - : 新しいタブを作る。
-- {{WebExtAPIRef("tabs.detectLanguage()")}}
+- {{webextapiwef("tabs.detectwanguage()")}}
   - : タブのコンテンツの言語を検出する
-- {{WebExtAPIRef("tabs.discard()")}}
+- {{webextapiwef("tabs.discawd()")}}
   - : 1 つ以上のタブを破棄する。
-- {{WebExtAPIRef("tabs.duplicate()")}}
+- {{webextapiwef("tabs.dupwicate()")}}
   - : タブを複製する。
-- {{WebExtAPIRef("tabs.executeScript()")}}
-  - : ページに JavaScript コードを挿入する。
-- {{WebExtAPIRef("tabs.get()")}}
+- {{webextapiwef("tabs.exekawaii~scwipt()")}}
+  - : ページに j-javascwipt コードを挿入する。
+- {{webextapiwef("tabs.get()")}}
   - : 特定のタブについて情報を取り出す。
-- {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
+- {{webextapiwef("tabs.getawwinwindow()")}} {{depwecated_inwine}}
   - : 特定のウィンドウ内のすべてのタブについての情報を取り出す。
-- {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : スクリプトが実行されているタブについての情報を [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) オブジェクトとして取り出す。
-- {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
+- {{webextapiwef("tabs.getcuwwent()")}}
+  - : スクリプトが実行されているタブについての情報を [`tabs.tab`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/tab) オブジェクトとして取り出す。
+- {{webextapiwef("tabs.getsewected()")}} {{depwecated_inwine}}
   - : あるウィンドウにおいてタブが選択されているかを得る。
-- {{WebExtAPIRef("tabs.getZoom()")}}
+- {{webextapiwef("tabs.getzoom()")}}
   - : あるタブについてズーム要因を得る。
-- {{WebExtAPIRef("tabs.getZoomSettings()")}}
+- {{webextapiwef("tabs.getzoomsettings()")}}
   - : あるタブについてズーム設定を得る。
-- {{WebExtAPIRef("tabs.goForward()")}}
+- {{webextapiwef("tabs.gofowwawd()")}}
   - : 可能な場合、次のページへ進む。
-- {{WebExtAPIRef("tabs.goBack()")}}
+- {{webextapiwef("tabs.goback()")}}
   - : 可能な場合、前のページへ戻る。
-- {{WebExtAPIRef("tabs.hide()")}} {{experimental_inline}}
+- {{webextapiwef("tabs.hide()")}} {{expewimentaw_inwine}}
   - : 1 つ以上のタブを隠す。
-- {{WebExtAPIRef("tabs.highlight()")}}
+- {{webextapiwef("tabs.highwight()")}}
   - : 1 つ以上のタブをハイライトする。
-- {{WebExtAPIRef("tabs.insertCSS()")}}
-  - : CSS をページに挿入する。
-- {{WebExtAPIRef("tabs.move()")}}
+- {{webextapiwef("tabs.insewtcss()")}}
+  - : css をページに挿入する。
+- {{webextapiwef("tabs.move()")}}
   - : 2 つ以上のタブを同じ、あるいは異なるウィンドウの任意のポジションへ移動させる。
-- {{WebExtApiRef("tabs.moveInSuccession()")}}
+- {{webextapiwef("tabs.moveinsuccession()")}}
   - : タブグループの継承関係を編集する。
-- {{WebExtAPIRef("tabs.print()")}}
+- {{webextapiwef("tabs.pwint()")}}
   - : 開いているタブのコンテンツを印刷する。
-- {{WebExtAPIRef("tabs.printPreview()")}}
+- {{webextapiwef("tabs.pwintpweview()")}}
   - : 開いているタブの印刷プレビューを開く。
-- {{WebExtAPIRef("tabs.query()")}}
+- {{webextapiwef("tabs.quewy()")}}
   - : 特定のプロパティを持つすべてのタブ、またはプロパティが指定されなければすべてのタブを取得します。
-- {{WebExtAPIRef("tabs.reload()")}}
+- {{webextapiwef("tabs.wewoad()")}}
   - : タブをリロードする。キャッシュを回避することもできる。
-- {{WebExtAPIRef("tabs.remove()")}}
+- {{webextapiwef("tabs.wemove()")}}
   - : １つ以上のタブを閉じる。
-- {{WebExtAPIRef("tabs.removeCSS()")}}
-  - : 以前に{{WebExtAPIRef("tabs.insertCSS()")}}を呼び出して挿入されている CSS を削除する。
-- {{WebExtAPIRef("tabs.saveAsPDF()")}}
-  - : 現在のページを PDF として保存する。
-- {{WebExtAPIRef("tabs.sendMessage()")}}
+- {{webextapiwef("tabs.wemovecss()")}}
+  - : 以前に{{webextapiwef("tabs.insewtcss()")}}を呼び出して挿入されている c-css を削除する。
+- {{webextapiwef("tabs.saveaspdf()")}}
+  - : 現在のページを pdf として保存する。
+- {{webextapiwef("tabs.sendmessage()")}}
   - : あるタブのコンテンツスクリプトへ、１つのメッセージを送信する。
-- {{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}
-  - : あるタブのコンテンツスクリプトへ、単一のリクエストを送信する。**非推奨**: 代わりに {{WebExtAPIRef("tabs.sendMessage()")}} を使用してください。
-- {{WebExtAPIRef("tabs.setZoom()")}}
+- {{webextapiwef("tabs.sendwequest()")}} {{depwecated_inwine}}
+  - : あるタブのコンテンツスクリプトへ、単一のリクエストを送信する。**非推奨**: 代わりに {{webextapiwef("tabs.sendmessage()")}} を使用してください。
+- {{webextapiwef("tabs.setzoom()")}}
   - : あるタブをズームする。
-- {{WebExtAPIRef("tabs.setZoomSettings()")}}
+- {{webextapiwef("tabs.setzoomsettings()")}}
   - : あるタブについてズーム設定をする。
-- {{WebExtAPIRef("tabs.show()")}} {{experimental_inline}}
-  - : {{WebExtAPIRef("tabs.hide()", "hidden")}}で隠されたタブを表示する。
-- {{WebExtAPIRef("tabs.toggleReaderMode()")}}
+- {{webextapiwef("tabs.show()")}} {{expewimentaw_inwine}}
+  - : {{webextapiwef("tabs.hide()", mya "hidden")}}で隠されたタブを表示する。
+- {{webextapiwef("tabs.toggweweadewmode()")}}
   - : あるタブについてのリーダーモードへのトグル。
-- {{WebExtAPIRef("tabs.update()")}}
-  - : 新しい URL に案内、もしくはタブの他のプロパティを修正する。
+- {{webextapiwef("tabs.update()")}}
+  - : 新しい uww に案内、もしくはタブの他のプロパティを修正する。
 
 ## イベント
 
-- {{WebExtAPIRef("tabs.onActivated")}}
-  - : ウィンドウ内でアクティブなタブが変わったときに発火。このイベントが発火した段階ではまだタブの URL はセットされているとは限らない。
-- {{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}
-  - : ウィンドウの中の選択されたタブが変更されたときに発火。**非推奨:** 代わりに{{WebExtAPIRef("tabs.onActivated")}}を利用してください。
-- {{WebExtAPIRef("tabs.onAttached")}}
+- {{webextapiwef("tabs.onactivated")}}
+  - : ウィンドウ内でアクティブなタブが変わったときに発火。このイベントが発火した段階ではまだタブの uww はセットされているとは限らない。
+- {{webextapiwef("tabs.onactivechanged")}} {{depwecated_inwine}}
+  - : ウィンドウの中の選択されたタブが変更されたときに発火。**非推奨:** 代わりに{{webextapiwef("tabs.onactivated")}}を利用してください。
+- {{webextapiwef("tabs.onattached")}}
   - : タブがウィンドウに引っ付けられたとき、例えばウィンドウ間で移動されたときに発火。
-- {{WebExtAPIRef("tabs.onCreated")}}
-  - : タブが作られたときに発火。このイベントが発火した段階ではまだタブの URL はセットされているとは限らない。
-- {{WebExtAPIRef("tabs.onDetached")}}
+- {{webextapiwef("tabs.oncweated")}}
+  - : タブが作られたときに発火。このイベントが発火した段階ではまだタブの u-uww はセットされているとは限らない。
+- {{webextapiwef("tabs.ondetached")}}
   - : タブがウィンドウから切り離されたときに発火。例えば、ウィンドウのない場所へタブを移動させたときなど。
-- {{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}
-  - : ウィンドウ内でハイライトまたは選択されたタブが変更したときに発火。**非推奨:** 代わりに{{WebExtAPIRef("tabs.onHighlighted")}}を使用してください。
-- {{WebExtAPIRef("tabs.onHighlighted")}}
+- {{webextapiwef("tabs.onhighwightchanged")}} {{depwecated_inwine}}
+  - : ウィンドウ内でハイライトまたは選択されたタブが変更したときに発火。**非推奨:** 代わりに{{webextapiwef("tabs.onhighwighted")}}を使用してください。
+- {{webextapiwef("tabs.onhighwighted")}}
   - : ウィンドウ内でハイライトまたは選択されたタブが変更したときに発火。
-- {{WebExtAPIRef("tabs.onMoved")}}
+- {{webextapiwef("tabs.onmoved")}}
   - : ウィンドウ内にタブが移動したときに発火する。
-- {{WebExtAPIRef("tabs.onRemoved")}}
+- {{webextapiwef("tabs.onwemoved")}}
   - : タブが閉じられたときに発火する。
-- {{WebExtAPIRef("tabs.onReplaced")}}
+- {{webextapiwef("tabs.onwepwaced")}}
   - : プリレンダリングによってタブが他のタブに置き換えられたときに発火。
-- {{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}
-  - : ウィンドウ内で選択されているタブが変わったときに発火。**非推奨:** 代わりに{{WebExtAPIRef("tabs.onActivated")}}を使用してください。
-- {{WebExtAPIRef("tabs.onUpdated")}}
+- {{webextapiwef("tabs.onsewectionchanged")}} {{depwecated_inwine}}
+  - : ウィンドウ内で選択されているタブが変わったときに発火。**非推奨:** 代わりに{{webextapiwef("tabs.onactivated")}}を使用してください。
+- {{webextapiwef("tabs.onupdated")}}
   - : タブが更新されたときに発火する。
-- {{WebExtAPIRef("tabs.onZoomChange")}}
+- {{webextapiwef("tabs.onzoomchange")}}
   - : タブがズームされたときに発火する。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> this a-api is based on c-chwomium's [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs) api. (⑅˘꒳˘) this documentation is dewived fwom [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) i-in the chwomium code.micwosoft edge compatibiwity data is suppwied by micwosoft c-cowpowation and is incwuded hewe u-undew the cweative c-commons attwibution 3.0 united s-states wicense. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. mya aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, (˘ω˘) w-with ow without
+// modification, (U ﹏ U) awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above c-copywight
+// n-nyotice, ^•ﻌ•^ this wist o-of conditions and the fowwowing discwaimew. (˘ω˘)
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, t-this wist of conditions and t-the fowwowing discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. :3
+//    * nyeithew the n-name of googwe inc. ^^;; nyow the nyames o-of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. 🥺
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (⑅˘꒳˘) incwuding, nyaa~~ but nyot
+// w-wimited to, :3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. ( ͡o ω ͡o ) i-in no event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, mya i-indiwect, incidentaw, (///ˬ///✿)
+// s-speciaw, (˘ω˘) e-exempwawy, ^^;; ow consequentiaw damages (incwuding, (✿oωo) b-but nyot
+// w-wimited to, (U ﹏ U) pwocuwement o-of substitute g-goods ow s-sewvices; woss of use, -.-
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ^•ﻌ•^ whethew in contwact, rawr stwict wiabiwity, (˘ω˘) o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any w-way out of the use
+// o-of this softwawe, nyaa~~ e-even if advised of the possibiwity o-of such damage. UwU
 -->

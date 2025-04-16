@@ -1,16 +1,16 @@
 ---
-title: Findbar API
-slug: orphaned/Findbar_API
+titwe: findbaw api
+swug: owphaned/findbaw_api
 ---
 
-Mozilla 1.9 から検索バー機能が拡張や XULRunner アプリケーション向けに toolkit xul ウィジットとして利用可能になります。
+m-moziwwa 1.9 から検索バー機能が拡張や x-xuwwunnew アプリケーション向けに t-toowkit xuw ウィジットとして利用可能になります。
 
-### API
+### a-api
 
-findbar 要素は次のいずれかの方法で特定の browser 要素に追加されます。
+f-findbaw 要素は次のいずれかの方法で特定の b-bwowsew 要素に追加されます。
 
-- findbar 要素が紐づけられる前に `browserid` 属性を browser 要素の id に設定する。
-- `browser` プロパティを browser 要素そのものに設定する
+- f-findbaw 要素が紐づけられる前に `bwowsewid` 属性を b-bwowsew 要素の id に設定する。
+- `bwowsew` プロパティを bwowsew 要素そのものに設定する
 
 #### 公開メソッド
 
@@ -18,60 +18,60 @@ findbar 要素は次のいずれかの方法で特定の browser 要素に追加
 
   - : 検索バーを開く。
 
-    - aMode - 使う検索モード。`FIND_NORMAL` か `FIND_TYPEAHEAD`、`FIND_LINKS` のどれか。指定されなければ最後の検索モードか、それもなければ `FIND_NORMAL` が使われます。
+    - amode - 使う検索モード。`find_nowmaw` か `find_typeahead`、`find_winks` のどれか。指定されなければ最後の検索モードか、それもなければ `find_nowmaw` が使われます。
 
-- close
+- c-cwose
   - : 検索バーを閉じる。
-- startFind
+- stawtfind
   - : 検索バーを開き、検索フィールドにフォーカスをあて中身を選択します。このメソッドを呼ぶと最初に検索バーが使われるときに内容を空にします。
 
-    - aMode - 使う検索モード。`FIND_NORMAL` か `FIND_TYPEAHEAD`、`FIND_LINKS` のどれか。指定されなければ最後の検索モードか それもなければ `FIND_NORMAL` が使われます。
+    - amode - 使う検索モード。`find_nowmaw` か `find_typeahead`、`find_winks` のどれか。指定されなければ最後の検索モードか それもなければ `find_nowmaw` が使われます。
 
     通常、ウィンドウの検索コマンドはこのメソッドにマップされるべきです。例えば
 
 ```
-<command name="cmd_find" oncommand="gFindBar.startFind(gFindBar.FIND_NORMAL);"/>
+<command n-nyame="cmd_find" oncommand="gfindbaw.stawtfind(gfindbaw.find_nowmaw);"/>
 ```
 
-- onFindAgainCommand
+- o-onfindagaincommand
 
   - : ウィンドウの次を検索か前を検索にはこのメソッドを使ってください。
 
-    - aFindPrevious - 前を検索なら true, それ以外なら false。
+    - afindpwevious - 前を検索なら twue, rawr それ以外なら fawse。
 
 <!---->
 
-- toggleHighlight
+- toggwehighwight
 
   - : ハイライトの有効/無効を切替える。
 
-    - aHighlight (boolean) - ハイライトを有効にするかどうか。
+    - a-ahighwight (boowean) - ハイライトを有効にするかどうか。
 
 #### プロパティ
 
-- findMode (読み込みのみ)
+- findmode (読み込みのみ)
   - : アクティブな検索モード
-- browser
-  - : findbar がアタッチされる browser 要素
+- b-bwowsew
+  - : f-findbaw がアタッチされる bwowsew 要素
 
 #### 属性
 
-- browserid
-  - : 検索バーがアタッチする browser 要素の id。この属性は検索バーが組み立てるときにのみ使われます。スクリプトから設定したり読み出すには `browser` プロパティを使うことになるでしょう。
+- bwowsewid
+  - : 検索バーがアタッチする bwowsew 要素の id。この属性は検索バーが組み立てるときにのみ使われます。スクリプトから設定したり読み出すには `bwowsew` プロパティを使うことになるでしょう。
 
 ##### アクセスキー属性
 
-検索バーの UI 要素への標準アクセスキーは findebar.dtd で与えられれます。しかし以下の属性を使うことで上書き可能です。
+検索バーの u-ui 要素への標準アクセスキーは findebaw.dtd で与えられれます。しかし以下の属性を使うことで上書き可能です。
 
 - findnextaccesskey
-  - : 「次を検索」ツールバーボタン(toolbarbutton)のアクセスキー
-- findpreviousaccesskey
-  - : 「前を検索」ツールバーボタン(toolbarbutton)のアクセスキー
-- highlightaccesskey
-  - : 「ハイライト」ツールバーボタン(toolbarbutton)のアクセスキー
-- matchcaseaccesskey
-  - : 「大文字/小文字を区別」ツールバーボタン(toolbarbutton)のアクセスキー
+  - : 「次を検索」ツールバーボタン(toowbawbutton)のアクセスキー
+- findpweviousaccesskey
+  - : 「前を検索」ツールバーボタン(toowbawbutton)のアクセスキー
+- highwightaccesskey
+  - : 「ハイライト」ツールバーボタン(toowbawbutton)のアクセスキー
+- m-matchcaseaccesskey
+  - : 「大文字/小文字を区別」ツールバーボタン(toowbawbutton)のアクセスキー
 
-#### Find-as-you-type-beahavior
+#### find-as-you-type-beahaviow
 
 #### テーマ

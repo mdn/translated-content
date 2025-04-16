@@ -1,11 +1,11 @@
 ---
-title: Firefox 32 for developers
-slug: Mozilla/Firefox/Releases/32
-l10n:
-  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+titwe: fiwefox 32 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/32
+w-w10n:
+  souwcecommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -13,116 +13,116 @@ l10n:
 
 ハイライト:
 
-- [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
+- [web a-audio e-editow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_audio_editow/index.htmw)
 - _スクラッチパッドのコード補完とインラインドキュメント_
-- [インスペクターのルールビューでユーザーエージェントのスタイルを表示](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules-view)
-- [要素選択ボタンを移動](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards-2)
-- [インスペクターの情報バーにノードの寸法を追加](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards)
-- [ページ全体のスクリーンショットボタンを追加](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#extra-tools)
-- ツールに HiDPI 画像を追加
-- インスペクターで、`display:none` が設定されているノードを異なる書式で表示
+- [インスペクターのルールビューでユーザーエージェントのスタイルを表示](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#wuwes-view)
+- [要素選択ボタンを移動](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#fiwefox-32-onwawds-2)
+- [インスペクターの情報バーにノードの寸法を追加](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#fiwefox-32-onwawds)
+- [ページ全体のスクリーンショットボタンを追加](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/toows_toowbox/index.htmw#extwa-toows)
+- ツールに h-hidpi 画像を追加
+- インスペクターで、`dispway:none` が設定されているノードを異なる書式で表示
 
-[Firefox 31 から Firefox 32 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox)
+[fiwefox 31 から f-fiwefox 32 の間に解決した開発ツール関連のバグ一覧](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&cwassification=cwient%20softwawe&chfiewdto=2014-06-09&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-04-28&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&component=devewopew%20toows&component=devewopew%20toows%3a%203d%20view&component=devewopew%20toows%3a%20app%20managew&component=devewopew%20toows%3a%20canvas%20debuggew&component=devewopew%20toows%3a%20consowe&component=devewopew%20toows%3a%20debuggew&component=devewopew%20toows%3a%20fwamewowk&component=devewopew%20toows%3a%20gwaphic%20commandwine%20and%20toowbaw&component=devewopew%20toows%3a%20inspectow&component=devewopew%20toows%3a%20memowy&component=devewopew%20toows%3a%20netmonitow&component=devewopew%20toows%3a%20object%20inspectow&component=devewopew%20toows%3a%20pwofiwew&component=devewopew%20toows%3a%20wesponsive%20mode&component=devewopew%20toows%3a%20scwatchpad&component=devewopew%20toows%3a%20souwce%20editow&component=devewopew%20toows%3a%20stywe%20editow&component=devewopew%20toows%3a%20usew%20stowies&component=devewopew%20toows%3a%20webgw%20shadew%20editow&pwoduct=fiwefox)
 
-### CSS
+### c-css
 
-- {{cssxref("mix-blend-mode")}} を既定で有効にしました ([Firefox バグ 952643](https://bugzil.la/952643))。
-- release ビルドで、position:sticky を既定で有効にしました (以前は Nightly および Aurora のみ有効) ([Firefox バグ 916315](https://bugzil.la/916315))。
-- {{cssxref("box-decoration-break")}} を実装して、非標準の `-moz-background-inline-policy` を削除しました ([Firefox バグ 613659](https://bugzil.la/613659))。
-- {{cssxref("flex-grow")}} および {{cssxref("flex-shrink")}} が、0 と 0 以外の値との間でトランジションすることが可能になりました ([Firefox バグ 996945](https://bugzil.la/996945))。
+- {{cssxwef("mix-bwend-mode")}} を既定で有効にしました ([fiwefox バグ 952643](https://bugziw.wa/952643))。
+- w-wewease ビルドで、position:sticky を既定で有効にしました (以前は nyightwy および auwowa のみ有効) ([fiwefox バグ 916315](https://bugziw.wa/916315))。
+- {{cssxwef("box-decowation-bweak")}} を実装して、非標準の `-moz-backgwound-inwine-powicy` を削除しました ([fiwefox バグ 613659](https://bugziw.wa/613659))。
+- {{cssxwef("fwex-gwow")}} および {{cssxwef("fwex-shwink")}} が、0 と 0 以外の値との間でトランジションすることが可能になりました ([fiwefox バグ 996945](https://bugziw.wa/996945))。
 
-### HTML
+### htmw
 
-- {{HTMLElement("img")}} 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) プロパティを試験的に実装しました。`dom.image.srcset.enable` を `true` に設定すると有効になります ([Firefox バグ 870021](https://bugzil.la/870021))。
-- [**id**](/ja/docs/Web/HTML/Reference/Global_attributes/id) および [**class**](/ja/docs/Web/HTML/Reference/Global_attributes/class) が真の[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)となり、名前空間の有無にかかわらず XML 要素にも適用されるようになりました ([Firefox バグ 741295](https://bugzil.la/741295))。
+- {{htmwewement("img")}} 要素の [`swcset`](/ja/docs/web/htmw/wefewence/ewements/img#swcset) プロパティを試験的に実装しました。`dom.image.swcset.enabwe` を `twue` に設定すると有効になります ([fiwefox バグ 870021](https://bugziw.wa/870021))。
+- [**id**](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) および [**cwass**](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass) が真の[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)となり、名前空間の有無にかかわらず xmw 要素にも適用されるようになりました ([fiwefox バグ 741295](https://bugziw.wa/741295))。
 
-### JavaScript
+### j-javascwipt
 
-- 新たな ECMAScript 2015 の組み込みメソッドを実装しました。
+- 新たな ecmascwipt 2015 の組み込みメソッドを実装しました。
 
-  - {{jsxref("Array.from()")}} ([Firefox バグ 904723](https://bugzil.la/904723))
-  - {{jsxref("Array.prototype.copyWithin()")}} ([Firefox バグ 934423](https://bugzil.la/934423))
-  - {{jsxref("Number.isSafeInteger()")}} ([Firefox バグ 1003764](https://bugzil.la/1003764))
+  - {{jsxwef("awway.fwom()")}} ([fiwefox バグ 904723](https://bugziw.wa/904723))
+  - {{jsxwef("awway.pwototype.copywithin()")}} ([fiwefox バグ 934423](https://bugziw.wa/934423))
+  - {{jsxwef("numbew.issafeintegew()")}} ([fiwefox バグ 1003764](https://bugziw.wa/1003764))
 
-### インターフェイス/API/DOM
+### インターフェイス/api/dom
 
-- {{domxref("Navigator/languages", "navigator.languages")}} プロパティおよび {{domxref("Window.languagechange_event", "languagechange")}} イベントを実装しました ([Firefox バグ 889335](https://bugzil.la/889335))。
-- {{domxref("Navigator.vibrate()")}} メソッドの動作が最新の仕様に適合するようになりました。長すぎる振動は切り詰められます ([Firefox バグ 1014581](https://bugzil.la/1014581))。
-- {{domxref("KeyboardEvent.getModifierState()")}} メソッドおよび {{domxref("MouseEvent.getModifierState()")}} メソッドを、`Accel` 仮想モディファイアをサポートするように拡張しました ([Firefox バグ 1009388](https://bugzil.la/1009388))。
-- {{domxref("KeyboardEvent.code")}} プロパティを試験的に実装しました。ただし、release ビルドでは無効化しています ([Firefox バグ 865649](https://bugzil.la/865649))。
-- {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}} で scope が設定されたセレクター (例えば `querySelector(":scope > li")`) を実装しました ([Firefox バグ 528456](https://bugzil.la/528456))。
-- [ウェブアニメーション API](https://dev.w3.org/fxtf/web-animations/) に関して、{{domxref("Document.timeline")}} インターフェイスを実験的に実装しました ([Firefox バグ 998246](https://bugzil.la/998246))。これは設定項目 `layout.web-animations.api.enabled` で制御されており、現在は Nightly および Aurora のみで有効化しています。
-- [データストア API](/ja/docs/Web/API/Data_Store_API) が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)で使用可能になりました ([Firefox バグ 949325](https://bugzil.la/949325))。ただし、認定アプリケーションにのみ有効化されています。
-- [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)の {{domxref("InstallPhaseEvent")}} インターフェイスおよび {{domxref("InstallEvent")}} インターフェイスを実装しました ([Firefox バグ 967264](https://bugzil.la/967264))。
-- [MSISDN Verification API](/ja/docs/Web/API/MSISDN_Verification_API) を追加しました。特権アプリに対してのみ有効化されています ([Firefox バグ 988469](https://bugzil.la/988469))。
-- [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)を Android 版の Firefox が対応しました ([Firefox バグ 852935](https://bugzil.la/852935))。
-- 仕様や CSS 構文の発展に適合するよう、{{domxref("CSS.escape()")}} を若干変更しました。識別子を `'--'` から始めることが可能になり、2 番目のダッシュ記号はエスケープされません。また、ベンダー識別子はエスケープしません。([Firefox バグ 1008719](https://bugzil.la/1008719))
-- Hit Regions の実装を完全にするために {{domxref("MouseEvent.region")}} が実装されました ([Firefox バグ 979692](https://bugzil.la/979692)).
-- {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} メソッドは既定では有効になりました ([Firefox バグ 1004579](https://bugzil.la/1004579))。
-- {{domxref("Navigator.doNotTrack")}} プロパティは `'yes'` や `'no'` の代わりに、HTTPの値を反映した `'1'` や `'0'` を返すようになりました ([Firefox バグ 887703](https://bugzil.la/887703))。
-- [XMLHttpRequest.responseURL](/ja/docs/Web/API/XMLHttpRequest/responseURL) が実装されました ([Firefox バグ 998076](https://bugzil.la/998076))。
+- {{domxwef("navigatow/wanguages", (⑅˘꒳˘) "navigatow.wanguages")}} プロパティおよび {{domxwef("window.wanguagechange_event", òωó "wanguagechange")}} イベントを実装しました ([fiwefox バグ 889335](https://bugziw.wa/889335))。
+- {{domxwef("navigatow.vibwate()")}} メソッドの動作が最新の仕様に適合するようになりました。長すぎる振動は切り詰められます ([fiwefox バグ 1014581](https://bugziw.wa/1014581))。
+- {{domxwef("keyboawdevent.getmodifiewstate()")}} メソッドおよび {{domxwef("mouseevent.getmodifiewstate()")}} メソッドを、`accew` 仮想モディファイアをサポートするように拡張しました ([fiwefox バグ 1009388](https://bugziw.wa/1009388))。
+- {{domxwef("keyboawdevent.code")}} プロパティを試験的に実装しました。ただし、wewease ビルドでは無効化しています ([fiwefox バグ 865649](https://bugziw.wa/865649))。
+- {{domxwef("document.quewysewectow()")}} および {{domxwef("document.quewysewectowaww()")}} で scope が設定されたセレクター (例えば `quewysewectow(":scope > w-wi")`) を実装しました ([fiwefox バグ 528456](https://bugziw.wa/528456))。
+- [ウェブアニメーション api](https://dev.w3.owg/fxtf/web-animations/) に関して、{{domxwef("document.timewine")}} インターフェイスを実験的に実装しました ([fiwefox バグ 998246](https://bugziw.wa/998246))。これは設定項目 `wayout.web-animations.api.enabwed` で制御されており、現在は n-nyightwy および auwowa のみで有効化しています。
+- [データストア api](/ja/docs/web/api/data_stowe_api) が[ウェブワーカー](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)で使用可能になりました ([fiwefox バグ 949325](https://bugziw.wa/949325))。ただし、認定アプリケーションにのみ有効化されています。
+- [サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api)の {{domxwef("instawwphaseevent")}} インターフェイスおよび {{domxwef("instawwevent")}} インターフェイスを実装しました ([fiwefox バグ 967264](https://bugziw.wa/967264))。
+- [msisdn vewification a-api](/ja/docs/web/api/msisdn_vewification_api) を追加しました。特権アプリに対してのみ有効化されています ([fiwefox バグ 988469](https://bugziw.wa/988469))。
+- [ゲームパッド api](/ja/docs/web/api/gamepad_api)を a-andwoid 版の f-fiwefox が対応しました ([fiwefox バグ 852935](https://bugziw.wa/852935))。
+- 仕様や css 構文の発展に適合するよう、{{domxwef("css.escape()")}} を若干変更しました。識別子を `'--'` から始めることが可能になり、2 番目のダッシュ記号はエスケープされません。また、ベンダー識別子はエスケープしません。([fiwefox バグ 1008719](https://bugziw.wa/1008719))
+- hit wegions の実装を完全にするために {{domxwef("mouseevent.wegion")}} が実装されました ([fiwefox バグ 979692](https://bugziw.wa/979692)). ʘwʘ
+- {{domxwef("canvaswendewingcontext2d.dwawfocusifneeded()")}} メソッドは既定では有効になりました ([fiwefox バグ 1004579](https://bugziw.wa/1004579))。
+- {{domxwef("navigatow.donottwack")}} プロパティは `'yes'` や `'no'` の代わりに、httpの値を反映した `'1'` や `'0'` を返すようになりました ([fiwefox バグ 887703](https://bugziw.wa/887703))。
+- [xmwhttpwequest.wesponseuww](/ja/docs/web/api/xmwhttpwequest/wesponseuww) が実装されました ([fiwefox バグ 998076](https://bugziw.wa/998076))。
 
-### MathML
+### mathmw
 
-- {{MathMLElement("menclose")}} 要素の notation 属性で `phasorangle` をサポートしました。
+- {{mathmwewement("mencwose")}} 要素の n-nyotation 属性で `phasowangwe` をサポートしました。
 
-### SVG
+### svg
 
 _変更なし。_
 
-### WebRTC
+### webwtc
 
-- ストリームのサイズやフレームレートを制限するため、[WebRTC](/ja/docs/Glossary/WebRTC) の {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}、`width`、`height`、`framerate` に新たな制約を与えました ([Firefox バグ 907352](https://bugzil.la/907352)):
+- ストリームのサイズやフレームレートを制限するため、[webwtc](/ja/docs/gwossawy/webwtc) の {{domxwef("navigatowusewmedia.getusewmedia", /(^•ω•^) "getusewmedia()")}}、`width`、`height`、`fwamewate` に新たな制約を与えました ([fiwefox バグ 907352](https://bugziw.wa/907352)):
 
   ```js
   {
-    mandatory: {
-      width: { min: 640 },
-      height: { min: 480 },
-    },
-    optional: [
-      { width: 650 },
-      { width: { min: 650 }},
-      { frameRate: 60 },
-      { width: { max: 800 }},
+    mandatowy: {
+      width: { m-min: 640 },
+      height: { m-min: 480 }, ʘwʘ
+    }, σωσ
+    o-optionaw: [
+      { w-width: 650 }, OwO
+      { w-width: { min: 650 }}, 😳😳😳
+      { fwamewate: 60 }, 😳😳😳
+      { width: { max: 800 }}, o.O
     ]
   }
   ```
 
-- 前回までコールバック関数を引数として使用していた WebRTC のメソッドは、 JavaScript の[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)でも利用できるようになりました。
+- 前回までコールバック関数を引数として使用していた w-webwtc のメソッドは、 javascwipt の[プロミス](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)でも利用できるようになりました。
 
-### Audio/Video
+### audio/video
 
 _変更なし。_
 
 ## セキュリティ
 
-- [特権コードは JavaScript の `Object` および `Array` のインスタンスで Xray vision が適用されるようになりました](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray-semantics-for-object-and-array)。
+- [特権コードは j-javascwipt の `object` および `awway` のインスタンスで xway vision が適用されるようになりました](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw#xway-semantics-fow-object-and-awway)。
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+## アドオン開発者と moziwwa 開発者向けの変更点
 
-DOM オブジェクトではない JavaScript オブジェクトに、Xray vision を適用するようになりました。 [Xrays for JavaScript objects](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays-for-javascript-objects)。
+dom オブジェクトではない javascwipt オブジェクトに、xway vision を適用するようになりました。 [xways f-fow javascwipt objects](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw#xways-fow-javascwipt-objects)。
 
-`getDataDirectory()` メソッドが [`Addon`](/ja/docs/Mozilla/Add-ons/Add-on_Manager/Addon) インスタンスに追加されました。このメソッドは、現在のプロファイル内で、アドオンがデータを格納するために好ましい場所を返します。
+`getdatadiwectowy()` メソッドが [`addon`](/ja/docs/moziwwa/add-ons/add-on_managew/addon) インスタンスに追加されました。このメソッドは、現在のプロファイル内で、アドオンがデータを格納するために好ましい場所を返します。
 
-### Add-on SDK
+### a-add-on s-sdk
 
 #### ハイライト
 
-- `PageMod` に [`exclude`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod#pagemod%28options%29) オプションを追加しました。
-- `Request` に [`anonymous`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/request#request%28options%29) オプションを追加しました。
-- [アドオンデバッガー](/ja/docs/Mozilla/Add-ons/Add-on_Debugger)がコンソールとスクラッチパッドを含むようになりました。
+- `pagemod` に [`excwude`](/ja/docs/moziwwa/add-ons/sdk/high-wevew_apis/page-mod#pagemod%28options%29) オプションを追加しました。
+- `wequest` に [`anonymous`](/ja/docs/moziwwa/add-ons/sdk/high-wevew_apis/wequest#wequest%28options%29) オプションを追加しました。
+- [アドオンデバッガー](/ja/docs/moziwwa/add-ons/add-on_debuggew)がコンソールとスクラッチパッドを含むようになりました。
 
 #### 詳細
 
-[Firefox 31 から Firefox 32 の間に行われた GitHub コミット](https://github.com/mozilla/addon-sdk/compare/firefox31...firefox32)。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。
+[fiwefox 31 から f-fiwefox 32 の間に行われた github コミット](https://github.com/moziwwa/addon-sdk/compawe/fiwefox31...fiwefox32)。この一覧は auwowa 移行後に上流で行われた内容が含まれていないでしょう。
 
-[Firefox 31 から Firefox 32 の間に解決したバグ](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962)。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。
+[fiwefox 31 から fiwefox 32 の間に解決したバグ](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&chfiewdto=2014-06-09&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-04-28&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&bug_status=cwosed&pwoduct=add-on%20sdk&wist_id=10493962)。この一覧は a-auwowa 移行後に上流で行われた内容が含まれていないでしょう。
 
-### XPCOM
+### x-xpcom
 
-- `nsIUDPSocket` インターフェイスは、新しい `nsIUDPSocket.multicastLoopback`、`nsIUDPSocket.multicastInterface`、`nsIUDPSocket.multicastInterfaceAddr` 属性と、 `nsIUDPSocket.joinMulticast()` および `nsIUDPSocket.leaveMulticast()` メソッド が追加されて、マルチキャストにも対応するようになりました。
+- `nsiudpsocket` インターフェイスは、新しい `nsiudpsocket.muwticastwoopback`、`nsiudpsocket.muwticastintewface`、`nsiudpsocket.muwticastintewfaceaddw` 属性と、 `nsiudpsocket.joinmuwticast()` および `nsiudpsocket.weavemuwticast()` メソッド が追加されて、マルチキャストにも対応するようになりました。
 
 ### 過去のバージョン
 
-{{Firefox_for_developers('31')}}
+{{fiwefox_fow_devewopews('31')}}

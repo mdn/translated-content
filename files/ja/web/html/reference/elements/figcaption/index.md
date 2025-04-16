@@ -1,120 +1,120 @@
 ---
-title: "<figcaption>: 図キャプション要素"
-slug: Web/HTML/Reference/Elements/figcaption
-original_slug: Web/HTML/Element/figcaption
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<figcaption>: 図キャプション要素"
+swug: web/htmw/wefewence/ewements/figcaption
+o-owiginaw_swug: w-web/htmw/ewement/figcaption
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<figcaption>`** は [HTML](/ja/docs/Web/HTML) の要素で、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
+**`<figcaption>`** は [htmw](/ja/docs/web/htmw) の要素で、親の {{htmwewement("figuwe")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
 
-{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figcaption&gt;", (ˆ ﻌ ˆ)♡ "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw i-intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    s-swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    a-awt="ewephant at sunset" />
+  <figcaption>an ewephant at sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
-  padding: 5px;
+```css intewactive-exampwe
+f-figuwe {
+  bowdew: thin #c0c0c0 sowid;
+  d-dispway: fwex;
+  fwex-fwow: cowumn;
+  p-padding: 5px;
   max-width: 220px;
-  margin: auto;
+  mawgin: auto;
 }
 
 img {
-  max-width: 220px;
+  m-max-width: 220px;
   max-height: 150px;
 }
 
-figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
+f-figcaption {
+  b-backgwound-cowow: #222;
+  cowow: #fff;
+  font: itawic smowew sans-sewif;
   padding: 3px;
-  text-align: center;
+  t-text-awign: centew;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 例
 
-`<figcaption>` の例については、 {{HTMLElement("figure")}} のページを参照して下さい。
+`<figcaption>` の例については、 {{htmwewement("figuwe")}} のページを参照して下さい。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        {{HTMLElement("figure")}} 要素。
-        <code>&#x3C;figcaption></code>
+        {{htmwewement("figuwe")}} 要素。
+        <code>&#x3c;figcaption></code>
         要素は最初または最後の子要素でなければなりません。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている a-awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/gwoup_wowe"><code>gwoup</code></a>, (˘ω˘) <a hwef="/ja/docs/web/accessibiwity/awia/wowes/none_wowe"><code>none</code></a>, (⑅˘꒳˘)
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/pwesentation_wowe"><code>pwesentation</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("figure")}} 要素
+- {{htmwewement("figuwe")}} 要素

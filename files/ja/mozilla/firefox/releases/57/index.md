@@ -1,22 +1,22 @@
 ---
-title: Firefox 57 (Quantum) for developers
-slug: Mozilla/Firefox/Releases/57
-l10n:
-  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+titwe: fiwefox 57 (quantum) fow devewopews
+swug: m-moziwwa/fiwefox/weweases/57
+w-w10n:
+  souwcecommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 57 の変更点をまとめています。
+f-fiwefox 57 (別名 f-fiwefox q-quantum) は、米国時間 2017 年 11 月 14 日にリリースされました。このページでは、開発者に影響する f-fiwefox 57 の変更点をまとめています。
 
-## Firefox 57 === Firefox Quantum
+## f-fiwefox 57 === f-fiwefox quantum
 
-Firefox 57 は、Firefox を徹底的に再構築してパフォーマンス、安定性、外見を大きく向上させることを目指す [Firefox Quantum](https://wiki.mozilla.org/Quantum) エンジニアリングプロジェクトにちなんで **Quantum** というリリース名が与えられました。Firefox 57 はこれらの改善点の一部をリリースする最初のバージョンであり、祝福を求めていました。
+fiwefox 57 は、fiwefox を徹底的に再構築してパフォーマンス、安定性、外見を大きく向上させることを目指す [fiwefox quantum](https://wiki.moziwwa.owg/quantum) エンジニアリングプロジェクトにちなんで **quantum** というリリース名が与えられました。fiwefox 57 はこれらの改善点の一部をリリースする最初のバージョンであり、祝福を求めていました。
 
-> [!NOTE]
-> このリリースの Quantum の特徴について詳しくは、Dan Callahan による記事 [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) をご覧ください。
+> [!note]
+> このリリースの quantum の特徴について詳しくは、dan cawwahan による記事 [fiwefox q-quantum devewopew edition: the fastest fiwefox e-evew with photon ui and bettew t-toowing](https://hacks.moziwwa.owg/2017/09/fiwefox-quantum-devewopew-edition-fastest-fiwefox-evew/) をご覧ください。
 
-[Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/)、別名 **Quantum CSS** または **Stylo** はデスクトップ版の Firefox 57 でデフォルトで有効であり、モバイル版の Firefox は追って有効化します。多くのパフォーマンス向上は別として、開発者が何らかの大きな違いに気づくことがあってはいけません。Stylo には多くの小規模な機能差がありますが、Gecko で取り除くべき非標準の動作を修正するために実装したものです。このような差異は、適宜リファレンスのページやリリースノートに掲載します ([Quantum CSS に関する補足](#quantum_css_に関する補足) を参照)。
+[fiwefox's nyew pawawwew css engine](https://hacks.moziwwa.owg/2017/08/inside-a-supew-fast-css-engine-quantum-css-aka-stywo/)、別名 **quantum css** または **stywo** はデスクトップ版の f-fiwefox 57 でデフォルトで有効であり、モバイル版の fiwefox は追って有効化します。多くのパフォーマンス向上は別として、開発者が何らかの大きな違いに気づくことがあってはいけません。stywo には多くの小規模な機能差がありますが、gecko で取り除くべき非標準の動作を修正するために実装したものです。このような差異は、適宜リファレンスのページやリリースノートに掲載します ([quantum c-css に関する補足](#quantum_css_に関する補足) を参照)。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -24,84 +24,84 @@ Firefox 57 は、Firefox を徹底的に再構築してパフォーマンス、�
 
 _変更なし。_
 
-### HTML
+### h-htmw
 
-- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Reference/Elements/input/date) および [time](/ja/docs/Web/HTML/Reference/Elements/input/time) 型が、すべてのビルドで有効になりました ([Firefox バグ 1399036](https://bugzil.la/1399036))。
+- {{htmwewement("input")}} の [date](/ja/docs/web/htmw/wefewence/ewements/input/date) および [time](/ja/docs/web/htmw/wefewence/ewements/input/time) 型が、すべてのビルドで有効になりました ([fiwefox バグ 1399036](https://bugziw.wa/1399036))。
 
-### CSS
+### css
 
-- [`display-mode`](/ja/docs/Web/CSS/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Progressive_web_apps/Manifest#display) もご覧ください。
-- `grid-row-gap` および `grid-column-gap` プロパティが、{{CSSxRef("grid")}} ショートハンドプロパティでリセットされないようになりました ([Firefox バグ 1387410](https://bugzil.la/1387410))。
-- 設定項目 `layout.css.clip-path-shapes.enabled` を削除しました ([Firefox バグ 1399767](https://bugzil.la/1399767))。この設定項目で、{{CSSxRef("clip-path")}} の {{cssxref("&lt;basic-shape&gt;")}} のサポートを無効化できました。これは Firefox 54 で導入されたものであり、今後は無効化できません。
+- [`dispway-mode`](/ja/docs/web/css/@media/dispway-mode) メディアクエリーの値 `minimaw-ui` および `standawone` をサポートしました ([fiwefox バグ 1369815](https://bugziw.wa/1369815))。[ウェブアプリマニフェストの `dispway` フィールド](/ja/docs/web/pwogwessive_web_apps/manifest#dispway) もご覧ください。
+- `gwid-wow-gap` および `gwid-cowumn-gap` プロパティが、{{cssxwef("gwid")}} ショートハンドプロパティでリセットされないようになりました ([fiwefox バグ 1387410](https://bugziw.wa/1387410))。
+- 設定項目 `wayout.css.cwip-path-shapes.enabwed` を削除しました ([fiwefox バグ 1399767](https://bugziw.wa/1399767))。この設定項目で、{{cssxwef("cwip-path")}} の {{cssxwef("&wt;basic-shape&gt;")}} のサポートを無効化できました。これは fiwefox 54 で導入されたものであり、今後は無効化できません。
 
-#### Quantum CSS に関する補足
+#### quantum css に関する補足
 
-Quantum で以下の不具合を修正しました。
+quantum で以下の不具合を修正しました。
 
-- 以前の Gecko のスタイルシステムでは `radial-gradient(circle gold,red)` のような放射状のグラデーションが、`circle` と `gold` の間にカンマがないため動作すべきではないにもかかわらず、動作していました ([Firefox バグ 1383323](https://bugzil.la/1383323))。
-- オフスクリーンの要素をオンスクリーンにアニメーションするときに遅延を指定すると、Gecko は Windows など一部のプラットフォームで再描画を行いません ([Firefox バグ 1383239](https://bugzil.la/1383239))。
-- Gecko では、{{htmlelement("details")}} 要素で {{CSSxRef("animation")}} をアクティブにすると `open` 属性を使用して既定で開かせることができません ([Firefox バグ 1382124](https://bugzil.la/1382124))。
-- Gecko では、色を指定した {{CSSxRef("text-shadow")}} から色を指定しない `text-shadow` へ遷移する場合に{{cssxref("transition", "トランジション", "", 1)}}が動作しません ([Firefox バグ 726550](https://bugzil.la/726550))。
-- Gecko ではアニメーションのフィリングをキャンセルする (例えば `animation-fill-mode: forwards` を設定) と、1 回だけですが同じ要素に設定したトランジションを発生させられます (詳しくは [Firefox バグ 1192592](https://bugzil.la/1192592) および [こちらのテストケース](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) をご覧ください)。一般的に、宣言的なアニメーションがトランジションを発生させるべきではありません。
-- Gecko では em 単位を使用するアニメーションが、アニメーションする要素の親で {{CSSxRef("font-size")}} を変更しても影響を受けませんが、実際は影響を受けるべきです ([Firefox バグ 1254424](https://bugzil.la/1254424))。
-- Gecko と Quantum CSS では `font-size` の継承が異なっており、Gecko では一部の言語設定で継承したフォントのサイズが想定より小さくなります ([Firefox バグ 1391341](https://bugzil.la/1391341))。
-- Gecko では {{CSSxRef("@document", "@-moz-document")}} 規則の `domain()` あるいは `url-prefix()` URL マッチング関数で解析するときに、URL トークンの解析と同じ仕組みを再使用します。Quantum CSS は同じ仕組みを使用せず、括弧や引用符を含む場合にトークンを無効とみなしません ([Firefox バグ 1362333](https://bugzil.la/1362333))。
-- Gecko では canvas 2D コンテキストの {{DOMxRef("CanvasRenderingContext2D.font", "font")}} の値としてシステムフォント (例えば `menu`) を設定すると、期待するフォントが返りません (何も返りません)。Quantum でこの不具合を修正しました ([Firefox バグ 1374885](https://bugzil.la/1374885))。
-- Gecko では、切り離されたサブツリー (例えば {{DOMxRef("Document.createElement","createElement()")}} を使用して作成した、DOM に未挿入の {{htmlelement("div")}}) を作成すると、サブツリーのルート要素がブロックレベル要素として設定されます。Quantum CSS では仕様書に従って、インラインとして設定します ([Firefox バグ 1374994](https://bugzil.la/1374994))。
-- Gecko では {{CSSxRef("calc", "calc()")}} 式を {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}} の半径の構成要素として使用すると、式が拒否されて値が無効になります ([Firefox バグ 1376019](https://bugzil.la/1376019))。
-- Gecko では `calc(1*2*3)` が正しく解析されません。Quantum CSS でこの不具合を修正しました ([Firefox バグ 1379467](https://bugzil.la/1379467))。
-- Quantum CSS では、[`calc()` を仕様書で説明されているとおり全面的にサポートしています](https://drafts.csswg.org/css-values-3/#calc-notation) ([Firefox バグ 1350857](https://bugzil.la/1350857))。Gecko はそうではありません。
-- Gecko は {{CSSxRef("::before")}} および {{CSSxRef("::after")}} 擬似要素で、{{CSSxRef("content")}} プロパティの値が `normal` や `none` であっても擬似要素を生成する不具合があります。仕様書によると、このようにするべきではありません ([Firefox バグ 1387931](https://bugzil.la/1387931))。
-- Gecko は {{CSSxRef("background-position")}} プロパティで、異なる数の {{CSSxRef("&lt;position&gt;")}} 値を持つ 2 つの値の間 (例えば `background-position: 10px 10px;` と `background-position: 20px 20px, 30px 30px;`) でトランジションを行えない不具合があります ([Firefox バグ 1390446](https://bugzil.la/1390446))。
+- 以前の g-gecko のスタイルシステムでは `wadiaw-gwadient(ciwcwe gowd,wed)` のような放射状のグラデーションが、`ciwcwe` と `gowd` の間にカンマがないため動作すべきではないにもかかわらず、動作していました ([fiwefox バグ 1383323](https://bugziw.wa/1383323))。
+- オフスクリーンの要素をオンスクリーンにアニメーションするときに遅延を指定すると、gecko は windows など一部のプラットフォームで再描画を行いません ([fiwefox バグ 1383239](https://bugziw.wa/1383239))。
+- gecko では、{{htmwewement("detaiws")}} 要素で {{cssxwef("animation")}} をアクティブにすると `open` 属性を使用して既定で開かせることができません ([fiwefox バグ 1382124](https://bugziw.wa/1382124))。
+- gecko では、色を指定した {{cssxwef("text-shadow")}} から色を指定しない `text-shadow` へ遷移する場合に{{cssxwef("twansition", mya "トランジション", >w< "", 1)}}が動作しません ([fiwefox バグ 726550](https://bugziw.wa/726550))。
+- gecko ではアニメーションのフィリングをキャンセルする (例えば `animation-fiww-mode: f-fowwawds` を設定) と、1 回だけですが同じ要素に設定したトランジションを発生させられます (詳しくは [fiwefox バグ 1192592](https://bugziw.wa/1192592) および [こちらのテストケース](https://bug1192592.bmoattachments.owg/attachment.cgi?id=8843824) をご覧ください)。一般的に、宣言的なアニメーションがトランジションを発生させるべきではありません。
+- gecko では e-em 単位を使用するアニメーションが、アニメーションする要素の親で {{cssxwef("font-size")}} を変更しても影響を受けませんが、実際は影響を受けるべきです ([fiwefox バグ 1254424](https://bugziw.wa/1254424))。
+- g-gecko と quantum c-css では `font-size` の継承が異なっており、gecko では一部の言語設定で継承したフォントのサイズが想定より小さくなります ([fiwefox バグ 1391341](https://bugziw.wa/1391341))。
+- g-gecko では {{cssxwef("@document", nyaa~~ "@-moz-document")}} 規則の `domain()` あるいは `uww-pwefix()` uww マッチング関数で解析するときに、uww トークンの解析と同じ仕組みを再使用します。quantum css は同じ仕組みを使用せず、括弧や引用符を含む場合にトークンを無効とみなしません ([fiwefox バグ 1362333](https://bugziw.wa/1362333))。
+- g-gecko では canvas 2d コンテキストの {{domxwef("canvaswendewingcontext2d.font", (✿oωo) "font")}} の値としてシステムフォント (例えば `menu`) を設定すると、期待するフォントが返りません (何も返りません)。quantum でこの不具合を修正しました ([fiwefox バグ 1374885](https://bugziw.wa/1374885))。
+- gecko では、切り離されたサブツリー (例えば {{domxwef("document.cweateewement","cweateewement()")}} を使用して作成した、dom に未挿入の {{htmwewement("div")}}) を作成すると、サブツリーのルート要素がブロックレベル要素として設定されます。quantum css では仕様書に従って、インラインとして設定します ([fiwefox バグ 1374994](https://bugziw.wa/1374994))。
+- g-gecko では {{cssxwef("cawc", ʘwʘ "cawc()")}} 式を {{cssxwef("gwadient/wadiaw-gwadient", "wadiaw-gwadient()")}} の半径の構成要素として使用すると、式が拒否されて値が無効になります ([fiwefox バグ 1376019](https://bugziw.wa/1376019))。
+- gecko では `cawc(1*2*3)` が正しく解析されません。quantum css でこの不具合を修正しました ([fiwefox バグ 1379467](https://bugziw.wa/1379467))。
+- quantum css では、[`cawc()` を仕様書で説明されているとおり全面的にサポートしています](https://dwafts.csswg.owg/css-vawues-3/#cawc-notation) ([fiwefox バグ 1350857](https://bugziw.wa/1350857))。gecko はそうではありません。
+- gecko は {{cssxwef("::befowe")}} および {{cssxwef("::aftew")}} 擬似要素で、{{cssxwef("content")}} プロパティの値が `nowmaw` や `none` であっても擬似要素を生成する不具合があります。仕様書によると、このようにするべきではありません ([fiwefox バグ 1387931](https://bugziw.wa/1387931))。
+- g-gecko は {{cssxwef("backgwound-position")}} プロパティで、異なる数の {{cssxwef("&wt;position&gt;")}} 値を持つ 2 つの値の間 (例えば `backgwound-position: 10px 10px;` と `backgwound-position: 20px 20px, (ˆ ﻌ ˆ)♡ 30px 30px;`) でトランジションを行えない不具合があります ([fiwefox バグ 1390446](https://bugziw.wa/1390446))。
 
-### SVG
-
-_変更なし。_
-
-### JavaScript
-
-- 非標準の {{JSxRef("Statements/for_each...in", "for each...in")}} (E4X) ループを廃止しました。代わりに {{JSxRef("Statements/for...of", "for...of")}} を使用してください。また、移行の助けになる [Warning: JavaScript 1.6's for-each-in loops are deprecated](/ja/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) をご覧ください。([Firefox バグ 1083470](https://bugzil.la/1083470))
-- {{JSxRef("Object.prototype.watch()")}} および {{JSxRef("Object.unwatch", "unwatch()")}} メソッドが非推奨になり、使用すると警告が発生します。また、将来削除する予定です ([Firefox バグ 934669](https://bugzil.la/934669))。
-- 非標準の {{JSxRef("Iterator")}} および {{JSxRef("StopIteration")}} オブジェクトと、古いイテレーションプロトコルを廃止しました ([Firefox バグ 1098412](https://bugzil.la/1098412))。
-- 非同期ジェネレーターを有効化しました ([Firefox バグ 1352312](https://bugzil.la/1352312))。
-- for await (... of ...) 構文を有効化しました ([Firefox バグ 1352312](https://bugzil.la/1352312))。
-
-### API
-
-#### 新規 API
-
-- {{DOMxRef("PerformanceObserver")}} API をデフォルトで有効にしました ([Firefox バグ 1386021](https://bugzil.la/1386021))。
-- {{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイス (Abort API) を追加しました。必要に応じて、DOM リクエスト ([fetch リクエスト](/ja/docs/Web/API/Window/fetch) など) を中止できます ([Firefox バグ 1378342](https://bugzil.la/1378342))。
-- [Storage API](/ja/docs/Web/API/Storage_API) を実装して、デフォルトで有効にしました ([Firefox バグ 1399038](https://bugzil.la/1399038))。
-
-#### DOM
-
-- [Selection API](/ja/docs/Web/API/Selection_API) の {{DOMxRef("Selection.type")}} プロパティを実装しました ([Firefox バグ 1359157](https://bugzil.la/1359157))。
-- {{DOMxRef("Document.createEvent", "Document.createEvent('FocusEvent')")}} をサポートしました ([Firefox バグ 1388069](https://bugzil.la/1388069))。
-- {{DOMxRef("HTMLInputElement")}} インターフェイスの `files` プロパティが設定可能になりました ([Firefox バグ 1384030](https://bugzil.la/1384030))。
-- `HTMLDocument.getSelection()` メソッドを {{DOMxRef("Document.getSelection","Document")}} インターフェイスに移動して、XML ドキュメントで使用可能になりました ([Firefox バグ 718711](https://bugzil.la/718711))。
-- `messageerror` イベントを実装して、メッセージターゲットで実装したイベントハンドラーの発動に反応して実行するコードを持つことが可能になりました。{{DOMxRef("MessagePort.messageerror_event")}}、{{DOMxRef("DedicatedWorkerGlobalScope.messageerror_event")}}、{{DOMxRef("Worker.messageerror_event")}}、{{DOMxRef("BroadcastChannel.messageerror_event")}}、{{DOMxRef("Window.messageerror_event")}} をご覧ください ([Firefox バグ 1359017](https://bugzil.la/1359017))。
-- {{DOMxRef("Headers")}} の値で反復処理を行うとき、値を自動的に辞書順で整列して、さらに重複するヘッダー名の値を結合するようになりました ([Firefox バグ 1396848](https://bugzil.la/1396848))。
-
-#### DOM イベント
+### svg
 
 _変更なし。_
 
-#### メディアと WebRTC
+### j-javascwipt
 
-- SCTP メッセージの end-of-record (EOR) フラグを使用することにより、{{DOMxRef("RTCDataChannel")}} で任意のサイズ (256kiB が相互運用性が高いのですが、最大 1GiB まで) のメッセージをサポートしました。詳しくは [Understanding message size limits](/ja/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) をご覧ください ([Firefox バグ 979417](https://bugzil.la/979417))。
+- 非標準の {{jsxwef("statements/fow_each...in", 😳😳😳 "fow e-each...in")}} (e4x) ループを廃止しました。代わりに {{jsxwef("statements/fow...of", :3 "fow...of")}} を使用してください。また、移行の助けになる [wawning: j-javascwipt 1.6's fow-each-in woops awe depwecated](/ja/docs/web/javascwipt/wefewence/ewwows/fow-each-in_woops_awe_depwecated) をご覧ください。([fiwefox バグ 1083470](https://bugziw.wa/1083470))
+- {{jsxwef("object.pwototype.watch()")}} および {{jsxwef("object.unwatch", OwO "unwatch()")}} メソッドが非推奨になり、使用すると警告が発生します。また、将来削除する予定です ([fiwefox バグ 934669](https://bugziw.wa/934669))。
+- 非標準の {{jsxwef("itewatow")}} および {{jsxwef("stopitewation")}} オブジェクトと、古いイテレーションプロトコルを廃止しました ([fiwefox バグ 1098412](https://bugziw.wa/1098412))。
+- 非同期ジェネレーターを有効化しました ([fiwefox バグ 1352312](https://bugziw.wa/1352312))。
+- fow await (... o-of ...) 構文を有効化しました ([fiwefox バグ 1352312](https://bugziw.wa/1352312))。
 
-  > [!NOTE]
-  > Firefox は、複数のソースの SCTP メッセージを多重化する機能を提供する SCTP ndata プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての SCTP 通信で著しい遅延が発生する可能性があります。Firefox の ndata サポートの実装および展開の進捗を追跡するには、[Firefox バグ 1381145](https://bugzil.la/1381145) をご覧ください。
+### a-api
 
-- {{DOMxRef("RTCDataChannel.send()")}} メソッドで、送信しようとしたメッセージのサイズが受信側の {{Glossary("user agent","ユーザーエージェント")}} と互換性がない場合に `TypeError` 例外を発生できるようになりました (これは [Firefox バグ 979417](https://bugzil.la/979417) の一部として実装しました)。
-- [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) を更新し、録画中に発生した問題を報告するために送信される {{domxref("MediaRecorder/error_event", "error")}} イベントを一般的なイベントから {{DOMxRef("MediaRecorderErrorEvent")}} 型にしました。
-- {{DOMxRef("OfflineAudioContext")}} のコンストラクターで引数のリストに加えてオブジェクトを指定可能になったため、関連文書を更新しました ([Firefox バグ 1388591](https://bugzil.la/1388591))。
+#### 新規 api
+
+- {{domxwef("pewfowmanceobsewvew")}} a-api をデフォルトで有効にしました ([fiwefox バグ 1386021](https://bugziw.wa/1386021))。
+- {{domxwef("abowtcontwowwew")}} および {{domxwef("abowtsignaw")}} インターフェイス (abowt a-api) を追加しました。必要に応じて、dom リクエスト ([fetch リクエスト](/ja/docs/web/api/window/fetch) など) を中止できます ([fiwefox バグ 1378342](https://bugziw.wa/1378342))。
+- [stowage api](/ja/docs/web/api/stowage_api) を実装して、デフォルトで有効にしました ([fiwefox バグ 1399038](https://bugziw.wa/1399038))。
+
+#### d-dom
+
+- [sewection api](/ja/docs/web/api/sewection_api) の {{domxwef("sewection.type")}} プロパティを実装しました ([fiwefox バグ 1359157](https://bugziw.wa/1359157))。
+- {{domxwef("document.cweateevent", (U ﹏ U) "document.cweateevent('focusevent')")}} をサポートしました ([fiwefox バグ 1388069](https://bugziw.wa/1388069))。
+- {{domxwef("htmwinputewement")}} インターフェイスの `fiwes` プロパティが設定可能になりました ([fiwefox バグ 1384030](https://bugziw.wa/1384030))。
+- `htmwdocument.getsewection()` メソッドを {{domxwef("document.getsewection","document")}} インターフェイスに移動して、xmw ドキュメントで使用可能になりました ([fiwefox バグ 718711](https://bugziw.wa/718711))。
+- `messageewwow` イベントを実装して、メッセージターゲットで実装したイベントハンドラーの発動に反応して実行するコードを持つことが可能になりました。{{domxwef("messagepowt.messageewwow_event")}}、{{domxwef("dedicatedwowkewgwobawscope.messageewwow_event")}}、{{domxwef("wowkew.messageewwow_event")}}、{{domxwef("bwoadcastchannew.messageewwow_event")}}、{{domxwef("window.messageewwow_event")}} をご覧ください ([fiwefox バグ 1359017](https://bugziw.wa/1359017))。
+- {{domxwef("headews")}} の値で反復処理を行うとき、値を自動的に辞書順で整列して、さらに重複するヘッダー名の値を結合するようになりました ([fiwefox バグ 1396848](https://bugziw.wa/1396848))。
+
+#### d-dom イベント
+
+_変更なし。_
+
+#### メディアと webwtc
+
+- sctp メッセージの end-of-wecowd (eow) フラグを使用することにより、{{domxwef("wtcdatachannew")}} で任意のサイズ (256kib が相互運用性が高いのですが、最大 1gib まで) のメッセージをサポートしました。詳しくは [undewstanding m-message size wimits](/ja/docs/web/api/webwtc_api/using_data_channews#undewstanding_message_size_wimits) をご覧ください ([fiwefox バグ 979417](https://bugziw.wa/979417))。
+
+  > [!note]
+  > f-fiwefox は、複数のソースの sctp メッセージを多重化する機能を提供する s-sctp n-nydata プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての sctp 通信で著しい遅延が発生する可能性があります。fiwefox の nydata サポートの実装および展開の進捗を追跡するには、[fiwefox バグ 1381145](https://bugziw.wa/1381145) をご覧ください。
+
+- {{domxwef("wtcdatachannew.send()")}} メソッドで、送信しようとしたメッセージのサイズが受信側の {{gwossawy("usew agent","ユーザーエージェント")}} と互換性がない場合に `typeewwow` 例外を発生できるようになりました (これは [fiwefox バグ 979417](https://bugziw.wa/979417) の一部として実装しました)。
+- [mediastweam wecowding api](/ja/docs/web/api/mediastweam_wecowding_api) を更新し、録画中に発生した問題を報告するために送信される {{domxwef("mediawecowdew/ewwow_event", >w< "ewwow")}} イベントを一般的なイベントから {{domxwef("mediawecowdewewwowevent")}} 型にしました。
+- {{domxwef("offwineaudiocontext")}} のコンストラクターで引数のリストに加えてオブジェクトを指定可能になったため、関連文書を更新しました ([fiwefox バグ 1388591](https://bugziw.wa/1388591))。
 
 ### セキュリティ
 
-- `resource://` URL が情報を漏えいしないようになりました ([Firefox バグ 863246](https://bugzil.la/863246))。
-- Data URI のオリジンが、ナビゲーションの責任がある設定オブジェクトのオリジンを継承するのではなく、一意の opaque origin として扱うようになりました ([Firefox バグ 1324406](https://bugzil.la/1324406))。
+- `wesouwce://` uww が情報を漏えいしないようになりました ([fiwefox バグ 863246](https://bugziw.wa/863246))。
+- d-data uwi のオリジンが、ナビゲーションの責任がある設定オブジェクトのオリジンを継承するのではなく、一意の o-opaque owigin として扱うようになりました ([fiwefox バグ 1324406](https://bugziw.wa/1324406))。
 
 ### プラグイン
 
@@ -109,137 +109,137 @@ _変更なし。_
 
 ### その他
 
-- Firefox の [ヘッドレスモード](/ja/docs/Mozilla/Firefox/Headless_mode) に、コマンドラインからウェブサイトのスクリーンショットを直接取得することを可能にする `-screenshot` フラグを追加しました ([Firefox バグ 1378010](https://bugzil.la/1378010))。
+- f-fiwefox の [ヘッドレスモード](/ja/docs/moziwwa/fiwefox/headwess_mode) に、コマンドラインからウェブサイトのスクリーンショットを直接取得することを可能にする `-scweenshot` フラグを追加しました ([fiwefox バグ 1378010](https://bugziw.wa/1378010))。
 
 ## ウェブプラットフォームから廃止
 
-### HTML
+### htmw
 
-- さまざまなウェブ互換性の問題があるため、Firefox 57 で `<link rel="preload">` ([Preloading content with rel="preload"](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) をご覧ください) を無効化しました ([Firefox バグ 1405761](https://bugzil.la/1405761))。キャッシュ不可のリソース向けに改良したバージョンを Firefox 58 に搭載する予定です。
+- さまざまなウェブ互換性の問題があるため、fiwefox 57 で `<wink w-wew="pwewoad">` ([pwewoading c-content with wew="pwewoad"](/ja/docs/web/htmw/wefewence/attwibutes/wew/pwewoad) をご覧ください) を無効化しました ([fiwefox バグ 1405761](https://bugziw.wa/1405761))。キャッシュ不可のリソース向けに改良したバージョンを fiwefox 58 に搭載する予定です。
 
-### API
+### api
 
-- Mozilla 独自仕様 [ソーシャル API](/ja/docs/Archive/Social_API) を完全に削除しました ([Firefox バグ 1388902](https://bugzil.la/1388902))。
+- m-moziwwa 独自仕様 [ソーシャル api](/ja/docs/awchive/sociaw_api) を完全に削除しました ([fiwefox バグ 1388902](https://bugziw.wa/1388902))。
 
-### SVG
+### svg
 
 _変更なし。_
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+## アドオン開発者と moziwwa 開発者向けの変更点
 
-> [!NOTE]
-> Firefox 57 より、XPCOM ベースのアドオンのサポートを全面的に廃止します。すべての拡張機能は新しい [ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions) (WebExtensions としても知られています) への移行が必要であり、そうしなければ動作しません。
+> [!note]
+> fiwefox 57 より、xpcom ベースのアドオンのサポートを全面的に廃止します。すべての拡張機能は新しい [ブラウザー拡張機能](/ja/docs/moziwwa/add-ons/webextensions) (webextensions としても知られています) への移行が必要であり、そうしなければ動作しません。
 
-### WebExtensions
+### w-webextensions
 
-以下の API を追加または拡張しました:
+以下の api を追加または拡張しました:
 
-- [`bookmarks`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
+- [`bookmawks`](/ja/docs/moziwwa/add-ons/webextensions/api/bookmawks)
 
-  - [`bookmarks.BookmarkTreeNodeType`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType) でセパレーターをサポートしました。
+  - [`bookmawks.bookmawktweenodetype`](/ja/docs/moziwwa/add-ons/webextensions/api/bookmawks/bookmawktweenodetype) でセパレーターをサポートしました。
 
-- [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`bwowsew_action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action)
 
-  - light/dark テーマアイコンのための `theme_icons` プロパティ
+  - w-wight/dawk テーマアイコンのための `theme_icons` プロパティ
 
-- [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
+- [`bwowsewaction`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewaction)
 
-  - [`browserAction.openPopup()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup)
+  - [`bwowsewaction.openpopup()`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewaction/openpopup)
 
-- [`browserSettings`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
+- [`bwowsewsettings`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings)
 
-  - [`allowPopupsForUserEvents`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents)
-  - [`homepageOverride`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
-  - [`imageAnimationBehavior`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior)
-  - [`newTabPageOverride`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride)
+  - [`awwowpopupsfowusewevents`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/awwowpopupsfowusewevents)
+  - [`homepageovewwide`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/homepageovewwide)
+  - [`imageanimationbehaviow`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/imageanimationbehaviow)
+  - [`newtabpageovewwide`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/newtabpageovewwide)
 
-- [`browsingData`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
+- [`bwowsingdata`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsingdata)
 
-  - [`browsingData.removeLocalStorage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage)
+  - [`bwowsingdata.wemovewocawstowage()`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsingdata/wemovewocawstowage)
 
-- [`clipboard`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
+- [`cwipboawd`](/ja/docs/moziwwa/add-ons/webextensions/api/cwipboawd)
 
-  - [`setImageData()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData)
+  - [`setimagedata()`](/ja/docs/moziwwa/add-ons/webextensions/api/cwipboawd/setimagedata)
 
-- [`contextualIdentities`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
+- [`contextuawidentities`](/ja/docs/moziwwa/add-ons/webextensions/api/contextuawidentities)
 
-  - [`onCreated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated)
-  - [`onRemoved`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved)
-  - [`onUpdated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
-  - [`contextualIdentitities.ContextualIdentity`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity) の `colorCode` および `iconUrl`
+  - [`oncweated`](/ja/docs/moziwwa/add-ons/webextensions/api/contextuawidentities/oncweated)
+  - [`onwemoved`](/ja/docs/moziwwa/add-ons/webextensions/api/contextuawidentities/onwemoved)
+  - [`onupdated`](/ja/docs/moziwwa/add-ons/webextensions/api/contextuawidentities/onupdated)
+  - [`contextuawidentitities.contextuawidentity`](/ja/docs/moziwwa/add-ons/webextensions/api/contextuawidentities/contextuawidentity) の `cowowcode` および `iconuww`
 
-- [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
+- [`devtoows.panews`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/panews)
 
-  - [`devtools.panels.ElementsPanel.createSidebarPane()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
+  - [`devtoows.panews.ewementspanew.cweatesidebawpane()`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/ewementspanew/cweatesidebawpane)
 
-- [`downloads`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
+- [`downwoads`](/ja/docs/moziwwa/add-ons/webextensions/api/downwoads)
 
-  - [`downloads.download()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download) の `incognito` オプション
-  - [`downloads.DownloadItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem) の `estimatedEndTime` プロパティ
+  - [`downwoads.downwoad()`](/ja/docs/moziwwa/add-ons/webextensions/api/downwoads/downwoad) の `incognito` オプション
+  - [`downwoads.downwoaditem`](/ja/docs/moziwwa/add-ons/webextensions/api/downwoads/downwoaditem) の `estimatedendtime` プロパティ
 
-- [`find`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find)
+- [`find`](/ja/docs/moziwwa/add-ons/webextensions/api/find)
 
-  - [`find()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
-  - [`highlightResults()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
-  - [`removeHighlighting()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
+  - [`find()`](/ja/docs/moziwwa/add-ons/webextensions/api/find/find)
+  - [`highwightwesuwts()`](/ja/docs/moziwwa/add-ons/webextensions/api/find/highwightwesuwts)
+  - [`wemovehighwighting()`](/ja/docs/moziwwa/add-ons/webextensions/api/find/wemovehighwighting)
 
-- [`pageAction.openPopup()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
-- [`privacy`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
+- [`pageaction.openpopup()`](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction/openpopup)
+- [`pwivacy`](/ja/docs/moziwwa/add-ons/webextensions/api/pwivacy/websites)
 
-  - [`websites.trackingProtectionMode`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
+  - [`websites.twackingpwotectionmode`](/ja/docs/moziwwa/add-ons/webextensions/api/pwivacy/websites)
 
-- [`proxy`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+- [`pwoxy`](/ja/docs/moziwwa/add-ons/webextensions/api/pwoxy)
 
-  - `FindProxyForURL()` がオブジェクトを返せるようになりました
+  - `findpwoxyfowuww()` がオブジェクトを返せるようになりました
 
-- [`runtime`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
+- [`wuntime`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime)
 
-  - [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) を Android でサポート
+  - [`wuntime.openoptionspage()`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/openoptionspage) を a-andwoid でサポート
 
-- [`sessions`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
+- [`sessions`](/ja/docs/moziwwa/add-ons/webextensions/api/sessions)
 
-  - [`setTabValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue)
-  - [`getTabValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue)
-  - [`removeTabValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue)
-  - [`setWindowValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue)
-  - [`getWindowValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue)
-  - [`removeWindowValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue)
+  - [`settabvawue()`](/ja/docs/moziwwa/add-ons/webextensions/api/sessions/settabvawue)
+  - [`gettabvawue()`](/ja/docs/moziwwa/add-ons/webextensions/api/sessions/gettabvawue)
+  - [`wemovetabvawue()`](/ja/docs/moziwwa/add-ons/webextensions/api/sessions/wemovetabvawue)
+  - [`setwindowvawue()`](/ja/docs/moziwwa/add-ons/webextensions/api/sessions/setwindowvawue)
+  - [`getwindowvawue()`](/ja/docs/moziwwa/add-ons/webextensions/api/sessions/getwindowvawue)
+  - [`wemovewindowvawue()`](/ja/docs/moziwwa/add-ons/webextensions/api/sessions/wemovewindowvawue)
 
-- [`sidebarAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
+- [`sidebawaction`](/ja/docs/moziwwa/add-ons/webextensions/api/sidebawaction)
 
-  - [`sidebarAction.open()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open)
+  - [`sidebawaction.open()`](/ja/docs/moziwwa/add-ons/webextensions/api/sidebawaction/open)
 
-- [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage)
+- [`stowage`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage)
 
-  - [`storage.managed`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed)
+  - [`stowage.managed`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage/managed)
 
-- [`tabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+- [`tabs`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs)
 
-  - [`tabs.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update) の `loadReplace` オプション
-  - [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)、[`tabs.onUpdated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated)、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) の `discarded` プロパティ
-  - [`tabs.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) で "view-source:" URL を開くことが可能になりました
-  - [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)、[`tabs.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create)、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)、[`tabs.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update) の `openerTabId` プロパティ
+  - [`tabs.update()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/update) の `woadwepwace` オプション
+  - [`tabs.tab`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/tab)、[`tabs.onupdated`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/onupdated)、[`tabs.quewy()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/quewy) の `discawded` プロパティ
+  - [`tabs.cweate()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/cweate) で "view-souwce:" u-uww を開くことが可能になりました
+  - [`tabs.tab`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/tab)、[`tabs.cweate()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/cweate)、[`tabs.quewy()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/quewy)、[`tabs.update()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/update) の `openewtabid` プロパティ
 
-- [`theme`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
+- [`theme`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/theme)
 
-  - `colors.toolbar`
-  - `colors.toolbar_field`
-  - `colors.toolbar_field_text`
-  - `colors.toolbar_text`
+  - `cowows.toowbaw`
+  - `cowows.toowbaw_fiewd`
+  - `cowows.toowbaw_fiewd_text`
+  - `cowows.toowbaw_text`
 
-- [`theme`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme)
+- [`theme`](/ja/docs/moziwwa/add-ons/webextensions/api/theme)
 
-  - [`theme.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) の `windowId` オプション
+  - [`theme.update()`](/ja/docs/moziwwa/add-ons/webextensions/api/theme/update) の `windowid` オプション
 
-- [`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
+- [`webwequest`](/ja/docs/moziwwa/add-ons/webextensions/api/webwequest)
 
-  - [`filterResponseData()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData)
-  - [`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) イベントの `proxyInfo` プロパティ
+  - [`fiwtewwesponsedata()`](/ja/docs/moziwwa/add-ons/webextensions/api/webwequest/fiwtewwesponsedata)
+  - [`webwequest`](/ja/docs/moziwwa/add-ons/webextensions/api/webwequest) イベントの `pwoxyinfo` プロパティ
 
-- [`windows`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows)
+- [`windows`](/ja/docs/moziwwa/add-ons/webextensions/api/windows)
 
-  - [`windows.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) の `allowScriptsToClose` プロパティ
+  - [`windows.cweate()`](/ja/docs/moziwwa/add-ons/webextensions/api/windows/cweate) の `awwowscwiptstocwose` プロパティ
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(56)}}
+{{fiwefox_fow_devewopews(56)}}

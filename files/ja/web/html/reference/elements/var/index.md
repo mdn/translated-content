@@ -1,58 +1,58 @@
 ---
-title: "<var>: 変数要素"
-slug: Web/HTML/Reference/Elements/var
-original_slug: Web/HTML/Element/var
-l10n:
-  sourceCommit: 4de810dd8ec0d4a2a62f63991a6897fb5f5ac3e3
+titwe: "<vaw>: 変数要素"
+swug: web/htmw/wefewence/ewements/vaw
+o-owiginaw_swug: w-web/htmw/ewement/vaw
+w-w10n:
+  s-souwcecommit: 4de810dd8ec0d4a2a62f63991a6897fb5f5ac3e3
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<var>`** は [HTML](/ja/docs/Web/HTML) の要素で、数式やプログラムコード内の変数の名前を表します。挙動はブラウザーに依存しますが、通常は現在のフォントのイタリック体を使って表示されます。
+**`<vaw>`** は [htmw](/ja/docs/web/htmw) の要素で、数式やプログラムコード内の変数の名前を表します。挙動はブラウザーに依存しますが、通常は現在のフォントのイタリック体を使って表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;vaw&gt;", (///ˬ///✿) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
-  <var>l</var> represents the length, <var>w</var> the width and
-  <var>h</var> the height of the box.
+  t-the v-vowume of a box is <vaw>w</vaw> × <vaw>w</vaw> × <vaw>h</vaw>, 😳😳😳 whewe
+  <vaw>w</vaw> wepwesents the wength, 🥺 <vaw>w</vaw> t-the width and
+  <vaw>h</vaw> the height o-of the box. mya
 </p>
 ```
 
-```css interactive-example
-var {
-  font-weight: bold;
+```css intewactive-exampwe
+vaw {
+  font-weight: b-bowd;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 使用上のメモ
 
 ### 関連する要素
 
-`<var>` がよく使われる文脈でよく使われる他の要素には、次のようなものがあります。
+`<vaw>` がよく使われる文脈でよく使われる他の要素には、次のようなものがあります。
 
-- {{HTMLElement("code")}}: HTML コード要素
-- {{HTMLElement("kbd")}}: HTML キーボード入力要素
-- {{HTMLElement("samp")}}: HTML サンプル出力要素
+- {{htmwewement("code")}}: htmw コード要素
+- {{htmwewement("kbd")}}: htmw キーボード入力要素
+- {{htmwewement("samp")}}: htmw サンプル出力要素
 
-もし、意味的な目的ではなく装飾目的で `<var>` が誤って使用されているのを見かけた場合は、{{HTMLElement("span")}} と適切な CSS を使用するか、次のような適切な意味の要素を使用するかしてください。
+もし、意味的な目的ではなく装飾目的で `<vaw>` が誤って使用されているのを見かけた場合は、{{htmwewement("span")}} と適切な css を使用するか、次のような適切な意味の要素を使用するかしてください。
 
-- {{HTMLElement("em")}}
-- {{HTMLElement("i")}}
-- {{HTMLElement("q")}}
+- {{htmwewement("em")}}
+- {{htmwewement("i")}}
+- {{htmwewement("q")}}
 
 ### 既定のスタイル
 
-多くのブラウザーは `<var>` の表示時に {{cssxref("font-style")}} に `"italic"` を適用します。これは次のように CSS で上書きできます。
+多くのブラウザーは `<vaw>` の表示時に {{cssxwef("font-stywe")}} に `"itawic"` を適用します。これは次のように c-css で上書きできます。
 
 ```css
-var {
-  font-style: normal;
+vaw {
+  f-font-stywe: n-nyowmaw;
 }
 ```
 
@@ -60,105 +60,105 @@ var {
 
 ### 基本的な例
 
-これは、 `<var>` を使用して数式の変数名を記述した単純な例です。
+これは、 `<vaw>` を使用して数式の変数名を記述した単純な例です。
 
-```html
-<p>単純な数式: <var>x</var> = <var>y</var> + 2</p>
+```htmw
+<p>単純な数式: <vaw>x</vaw> = <vaw>y</vaw> + 2</p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Basic_example", 650,80)}}
+{{embedwivesampwe("basic_exampwe", 🥺 650,80)}}
 
 ### 既定のスタイルの上書き
 
-CSS を使用して、 `<var>` 要素の既定のスタイルを上書きすることができます。この例では、 Courier フォントがあれば、それを使って太字で表示し、なければ既定の等幅フォントに代替されます。
+css を使用して、 `<vaw>` 要素の既定のスタイルを上書きすることができます。この例では、 couwiew フォントがあれば、それを使って太字で表示し、なければ既定の等幅フォントに代替されます。
 
-#### CSS
+#### css
 
 ```css
-var {
+vaw {
   font:
-    bold 15px "Courier",
-    "Courier New",
+    b-bowd 15px "couwiew", >_<
+    "couwiew nyew",
     monospace;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html-nolint
+```htmw-nowint
 <p>
-  <var>minSpeed</var> と <var>maxSpeed</var> 変数は、端末の最低速度と最高速度を分当たりの回転数 (RPM) で制御します。
+  <vaw>minspeed</vaw> と <vaw>maxspeed</vaw> 変数は、端末の最低速度と最高速度を分当たりの回転数 (wpm) で制御します。
 </p>
 ```
 
-この HTML では、2 つの変数名を `<var>` を使用して囲んでいます。
+この htmw では、2 つの変数名を `<vaw>` を使用して囲んでいます。
 
 #### 結果
 
-{{EmbedLiveSample("Overriding_the_default_style", 650, 140)}}
+{{embedwivesampwe("ovewwiding_the_defauwt_stywe", >_< 650, 140)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, (⑅˘꒳˘)
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >, 知覚可能コンテンツ
+        >, /(^•ω•^) 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

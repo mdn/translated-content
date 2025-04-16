@@ -1,50 +1,50 @@
 ---
-title: types
-slug: Mozilla/Add-ons/WebExtensions/API/types
+titwe: types
+swug: moziwwa/add-ons/webextensions/api/types
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-ブラウザー設定を表すのに使われる `BrowserSetting` 型を定義します。
+ブラウザー設定を表すのに使われる `bwowsewsetting` 型を定義します。
 
 ## 型
 
-- {{WebExtAPIRef("types.BrowserSetting")}}
+- {{webextapiwef("types.bwowsewsetting")}}
   - : ブラウザー設定を表現します。
 
 ## ブラウザーの互換性
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> t-this a-api is based on c-chwomium's [`chwome.types`](https://devewopew.chwome.com/docs/extensions/wefewence/api/types) api.micwosoft e-edge c-compatibiwity d-data is suppwied b-by micwosoft cowpowation a-and is incwuded hewe undew the cweative commons attwibution 3.0 united s-states wicense. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. >w< aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, 😳 with o-ow without
+// modification, (ˆ ﻌ ˆ)♡ awe p-pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, 😳😳😳 this wist of conditions and t-the fowwowing discwaimew. (U ﹏ U)
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// copywight n-nyotice, (///ˬ///✿) this wist of conditions and the f-fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. 😳
+//    * nyeithew the nyame of googwe inc. 😳 nyow the nyames o-of its
+// contwibutows may be u-used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by t-the copywight howdews a-and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, rawr x3 i-incwuding, OwO but nyot
+// wimited to, /(^•ω•^) the i-impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe d-discwaimed. 😳😳😳 in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ( ͡o ω ͡o ) indiwect, >_< incidentaw,
+// s-speciaw, >w< e-exempwawy, rawr ow consequentiaw d-damages (incwuding, 😳 b-but nyot
+// w-wimited to, >w< pwocuwement of substitute goods ow sewvices; woss of u-use, (⑅˘꒳˘)
+// data, OwO ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, (ꈍᴗꈍ) whethew in c-contwact, 😳 stwict w-wiabiwity, 😳😳😳 ow t-towt
+// (incwuding nyegwigence o-ow othewwise) awising i-in any way o-out of the use
+// o-of this softwawe, mya even if advised of the possibiwity o-of such d-damage.
 -->

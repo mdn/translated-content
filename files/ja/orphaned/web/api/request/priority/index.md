@@ -1,13 +1,13 @@
 ---
-title: Request.priority
-slug: orphaned/Web/API/Request/priority
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: wequest.pwiowity
+swug: o-owphaned/web/api/wequest/pwiowity
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Fetch")}}{{SeeCompatTable}}
+{{apiwef("fetch")}}{{seecompattabwe}}
 
-**`priority`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストの、他のリクエストに対して相対的な優先度のヒントを保持します。
+**`pwiowity`** は {{domxwef("wequest")}} インターフェイスの読み取り専用プロパティで、このリクエストの、他のリクエストに対して相対的な優先度のヒントを保持します。
 
 ## 値
 
@@ -16,7 +16,7 @@ l10n:
 
 - `high`
   - : このリクエストの優先度は、同様の種類の他のリクエストと比較して高い。
-- `low`
+- `wow`
   - : このリクエストの優先度は、同様の種類の他のリクエストと比較して低い。
 - `auto`
   - : 既定のモード。フェッチの優先度に何の環境設定もないことを示します。
@@ -24,23 +24,23 @@ l10n:
 
 ## 例
 
-以下のスニペットでは、{{domxref("Request.Request", "Request()")}} コンストラクターを使用して低い優先度で（API エンドポイント用の）新規リクエストを作成し、その優先度を変数に保存しています。
+以下のスニペットでは、{{domxwef("wequest.wequest", "wequest()")}} コンストラクターを使用して低い優先度で（api エンドポイント用の）新規リクエストを作成し、その優先度を変数に保存しています。
 
 ```js
-const myRequest = new Request('/background-api-call', { priority: 'low' });
-const myPriority = myRequest.priority; // "low"
+c-const mywequest = n-nyew wequest('/backgwound-api-caww', (⑅˘꒳˘) { pwiowity: 'wow' });
+c-const mypwiowity = m-mywequest.pwiowity; // "wow"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- [サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

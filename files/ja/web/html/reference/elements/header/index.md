@@ -1,220 +1,220 @@
 ---
-title: <header>
-slug: Web/HTML/Reference/Elements/header
-original_slug: Web/HTML/Element/header
-l10n:
-  sourceCommit: ca65963b93e69591b9362bb2bfde56f93128e2cb
+titwe: <headew>
+swug: web/htmw/wefewence/ewements/headew
+o-owiginaw_swug: w-web/htmw/ewement/headew
+w-w10n:
+  souwcecommit: c-ca65963b93e69591b9362bb2bfde56f93128e2cb
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<header>`** は [HTML](/ja/docs/Web/HTML) の要素で、導入的なコンテンツ、ふつうは導入部やナビゲーション補助のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、著者名、その他の要素を含むこともできます。
+**`<headew>`** は [htmw](/ja/docs/web/htmw) の要素で、導入的なコンテンツ、ふつうは導入部やナビゲーション補助のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、著者名、その他の要素を含むこともできます。
 
-{{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;headew&gt;", nyaa~~ "tabbed-standawd")}}
 
-```html interactive-example
-<header>
-  <a class="logo" href="#">Cute Puppies Express!</a>
-</header>
+```htmw i-intewactive-exampwe
+<headew>
+  <a c-cwass="wogo" h-hwef="#">kawaii~ puppies expwess!</a>
+</headew>
 
-<article>
-  <header>
-    <h1>Beagles</h1>
+<awticwe>
+  <headew>
+    <h1>beagwes</h1>
     <time>08.12.2014</time>
-  </header>
+  </headew>
   <p>
-    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
-    their ears are so, so snugly soft!
+    i wuv beagwes <em>so</em> much! nyaa~~ wike, weawwy, a-a wot. :3 they’we adowabwe and
+    theiw eaws awe s-so, 😳😳😳 so snugwy soft! (˘ω˘)
   </p>
-</article>
+</awticwe>
 ```
 
-```css interactive-example
-.logo {
-  background: left / cover
-    url("/shared-assets/images/examples/puppy-header.jpg");
-  display: flex;
+```css intewactive-exampwe
+.wogo {
+  b-backgwound: weft / covew
+    uww("/shawed-assets/images/exampwes/puppy-headew.jpg");
+  dispway: fwex;
   height: 120px;
-  align-items: center;
-  justify-content: center;
+  a-awign-items: centew;
+  j-justify-content: c-centew;
   font:
-    bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
+    bowd cawc(1em + 2 * (100vw - 120px) / 100) "dancing scwipt", ^^
     fantasy;
-  color: #ff0083;
-  text-shadow: #000 2px 2px 0.2rem;
+  cowow: #ff0083;
+  t-text-shadow: #000 2px 2px 0.2wem;
 }
 
-header > h1 {
-  margin-bottom: 0;
+headew > h1 {
+  mawgin-bottom: 0;
 }
 
-header > time {
-  font: italic 0.7rem sans-serif;
+headew > time {
+  f-font: itawic 0.7wem sans-sewif;
 }
 ```
 
 ## 使用上の注意
 
-`<header>` 要素は、区分コンテンツの中に含まれていない限り、ウェブサイト全体の [`banner`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) ランドマークロールと同じ意味を持ちます。区分コンテンツの中に含まれている場合、`<header>` 要素はランドマークではありません。
+`<headew>` 要素は、区分コンテンツの中に含まれていない限り、ウェブサイト全体の [`bannew`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/bannew_wowe) ランドマークロールと同じ意味を持ちます。区分コンテンツの中に含まれている場合、`<headew>` 要素はランドマークではありません。
 
-`<header>` 要素はグローバルなサイトヘッダーを定義することができ、アクセシビリティツリーでは `banner` として記述されます。通常、ロゴ、会社名、検索機能、そして場合によってはグローバルナビゲーションやスローガンを含みます。一般的にはページの上部に配置されます。
+`<headew>` 要素はグローバルなサイトヘッダーを定義することができ、アクセシビリティツリーでは `bannew` として記述されます。通常、ロゴ、会社名、検索機能、そして場合によってはグローバルナビゲーションやスローガンを含みます。一般的にはページの上部に配置されます。
 
 それ以外の場合は、アクセシビリティツリーの `section` となり、通常は周囲のセクションの見出し（`h1` - `h6` 要素）とオプションで小見出しを格納しますが、これは必須では**ありません**。
 
 ### 歴史的な使用法
 
-`<header>` 要素は、もともと HTML の初期に見出しのために存在していました。これは [the very first website](http://info.cern.ch/) に見られます。ある時点で見出しは [`<h1>` ～ `<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) となり、`<header>` が自由に別なロールを担うことができるようになりました。
+`<headew>` 要素は、もともと h-htmw の初期に見出しのために存在していました。これは [the v-vewy fiwst website](http://info.cewn.ch/) に見られます。ある時点で見出しは [`<h1>` ～ `<h6>`](/ja/docs/web/htmw/wefewence/ewements/heading_ewements) となり、`<headew>` が自由に別なロールを担うことができるようになりました。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 例
 
 ### ページのヘッダー
 
-```html
-<header>
-  <h1>Main Page Title</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo" />
-</header>
+```htmw
+<headew>
+  <h1>main p-page titwe</h1>
+  <img s-swc="mdn-wogo-sm.png" awt="mdn wogo" />
+</headew>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Page Header')}}
+{{embedwivesampwe('page headew')}}
 
 ### 記事のヘッダー
 
-```html
-<article>
-  <header>
-    <h2>The Planet Earth</h2>
+```htmw
+<awticwe>
+  <headew>
+    <h2>the p-pwanet eawth</h2>
     <p>
-      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
-      Jane Smith
+      posted on wednesday, :3 <time datetime="2017-10-04">4 o-octobew 2017</time> by
+      jane smith
     </p>
-  </header>
+  </headew>
   <p>
-    We live on a planet that's blue and green, with so many things still unseen.
+    we wive on a pwanet that's bwue and gween, -.- with so m-many things stiww unseen. 😳
   </p>
-  <p><a href="https://example.com/the-planet-earth/">Continue reading…</a></p>
-</article>
+  <p><a h-hwef="https://exampwe.com/the-pwanet-eawth/">continue w-weading…</a></p>
+</awticwe>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Article Header')}}
+{{embedwivesampwe('awticwe h-headew')}}
 
 ## アクセシビリティ
 
-`<header>` 要素が [`banner`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) ランドマークを定義するのは、そのコンテキストが {{HTMLElement('body')}} 要素のときです。HTML の header 要素は、{{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('nav')}}、{{HTMLElement('section')}} 要素の子孫である場合は banner ランドマークとみなされません。
+`<headew>` 要素が [`bannew`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/bannew_wowe) ランドマークを定義するのは、そのコンテキストが {{htmwewement('body')}} 要素のときです。htmw の headew 要素は、{{htmwewement('awticwe')}}、{{htmwewement('aside')}}、{{htmwewement('nav')}}、{{htmwewement('section')}} 要素の子孫である場合は bannew ランドマークとみなされません。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+        >, mya
+        <a hwef="/ja/docs/web/htmw/content_categowies#知覚可能コンテンツ"
           >知覚可能コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >。但し、子孫に他の <code>&#x3C;header></code> や
-        {{HTMLElement("footer")}} がないこと。
+        >。但し、子孫に他の <code>&#x3c;headew></code> や
+        {{htmwewement("footew")}} がないこと。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >を受け入れるすべての要素。ただし、{{HTMLElement("address")}}、{{HTMLElement("footer")}}、他の
-        {{HTMLElement("header")}}
+        >を受け入れるすべての要素。ただし、{{htmwewement("addwess")}}、{{htmwewement("footew")}}、他の
+        {{htmwewement("headew")}}
         要素の子孫になることはできません。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a>,
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/bannew_wowe">bannew</a>, (˘ω˘)
         または
-        <code><a href="/ja/docs/Web/HTML/Element/article">article</a></code
-        >, <code><a href="/ja/docs/Web/HTML/Element/aside">aside</a></code
-        >, <code><a href="/ja/docs/Web/HTML/Element/main">main</a></code
-        >, <code><a href="/ja/docs/Web/HTML/Element/nav">nav</a></code
-        >,
-        <code><a href="/ja/docs/Web/HTML/Element/section">section</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/awticwe">awticwe</a></code
+        >, >_< <code><a h-hwef="/ja/docs/web/htmw/ewement/aside">aside</a></code
+        >, -.- <code><a hwef="/ja/docs/web/htmw/ewement/main">main</a></code
+        >, 🥺 <code><a h-hwef="/ja/docs/web/htmw/ewement/nav">nav</a></code
+        >, (U ﹏ U)
+        <code><a hwef="/ja/docs/web/htmw/ewement/section">section</a></code>
         の各要素、または
         <code
-          >role=<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role"
-            >article</a
+          >wowe=<a hwef="/ja/docs/web/accessibiwity/awia/wowes/awticwe_wowe"
+            >awticwe</a
           ></code
-        >,
+        >, >w<
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
-            >complementary</a
+          ><a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/compwementawy_wowe"
+            >compwementawy</a
           ></code
-        >,
+        >, mya
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role"
+          ><a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/main_wowe"
             >main</a
           ></code
-        >,
+        >, >w<
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+          ><a hwef="/ja/docs/web/accessibiwity/awia/wowes/navigation_wowe"
             >navigation</a
           ></code
-        >,
+        >, nyaa~~
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role"
-            >region</a
+          ><a hwef="/ja/docs/web/accessibiwity/awia/wowes/wegion_wowe"
+            >wegion</a
           ></code
         >
         の要素の子孫である場合は<a
-          href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/gwoup_wowe"><code>gwoup</code></a>, (✿oωo) <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/pwesentation_wowe"><code>pwesentation</code></a>, ʘwʘ
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/none_wowe"><code>none</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 他の区分化関連要素: {{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("footer")}}、{{HTMLElement("section")}}、{{HTMLElement("address")}}
+- 他の区分化関連要素: {{htmwewement("body")}}、{{htmwewement("nav")}}、{{htmwewement("awticwe")}}、{{htmwewement("aside")}}、{{htmwewement("heading_ewements", (ˆ ﻌ ˆ)♡ "h1")}}、{{htmwewement("heading_ewements", 😳😳😳 "h2")}}、{{htmwewement("heading_ewements", :3 "h3")}}、{{htmwewement("heading_ewements", OwO "h4")}}、{{htmwewement("heading_ewements", (U ﹏ U) "h5")}}、{{htmwewement("heading_ewements", >w< "h6")}}、{{htmwewement("footew")}}、{{htmwewement("section")}}、{{htmwewement("addwess")}}

@@ -1,120 +1,120 @@
 ---
-title: "<option>: HTML 選択肢要素"
-slug: Web/HTML/Reference/Elements/option
-original_slug: Web/HTML/Element/option
-l10n:
-  sourceCommit: c302e71520c9df718363d8ce81d93568ff84be14
+titwe: "<option>: htmw 選択肢要素"
+s-swug: w-web/htmw/wefewence/ewements/option
+o-owiginaw_swug: w-web/htmw/ewement/option
+w-w10n:
+  s-souwcecommit: c-c302e71520c9df718363d8ce81d93568ff84be14
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<option>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("select")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("datalist")}} の各要素内で項目を定義するために使われます。したがって、`<option>` は HTML 文書でポップアップメニューのメニュー項目や、その他の項目の一覧を表すことができます。
+**`<option>`** は [htmw](/ja/docs/web/htmw) の要素で、{{htmwewement("sewect")}}、{{htmwewement("optgwoup")}}、{{htmwewement("datawist")}} の各要素内で項目を定義するために使われます。したがって、`<option>` は h-htmw 文書でポップアップメニューのメニュー項目や、その他の項目の一覧を表すことができます。
 
-{{InteractiveExample("HTML Demo: &lt;option&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;option&gt;", mya "tabbed-standawd")}}
 
-```html interactive-example
-<label for="pet-select">Choose a pet:</label>
+```htmw intewactive-exampwe
+<wabew fow="pet-sewect">choose a pet:</wabew>
 
-<select id="pet-select">
-  <option value="">--Please choose an option--</option>
-  <option value="dog">Dog</option>
-  <option value="cat">Cat</option>
-  <option value="hamster">Hamster</option>
-  <option value="parrot">Parrot</option>
-  <option value="spider">Spider</option>
-  <option value="goldfish">Goldfish</option>
-</select>
+<sewect i-id="pet-sewect">
+  <option vawue="">--pwease choose an option--</option>
+  <option v-vawue="dog">dog</option>
+  <option vawue="cat">cat</option>
+  <option v-vawue="hamstew">hamstew</option>
+  <option vawue="pawwot">pawwot</option>
+  <option vawue="spidew">spidew</option>
+  <option vawue="gowdfish">gowdfish</option>
+</sewect>
 ```
 
-```css interactive-example
-label {
-  font-family: sans-serif;
-  font-size: 1rem;
-  padding-right: 10px;
+```css i-intewactive-exampwe
+wabew {
+  f-font-famiwy: sans-sewif;
+  f-font-size: 1wem;
+  padding-wight: 10px;
 }
 
-select {
-  font-size: 0.9rem;
+sewect {
+  font-size: 0.9wem;
   padding: 2px 5px;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `disabled`
-  - : この論理属性を設定すると、選択肢が選択不能になります。多くのブラウザーはそのようなコントロールをグレーアウトで表示し、マウスクリックやフォーカスなど、いかなるイベントも受け付けなくなります。この属性を設定していなくても、祖先に無効状態の {{HTMLElement("optgroup")}} 要素がある場合は無効化されます。
-- `label`
-  - : この属性は、選択肢の意味を示すラベル文字列です。`label` 属性を定義していない場合は、要素の文字列コンテンツが要素の値になります。
-- `selected`
-  - : この論理属性を設定すると、その選択肢が初期状態で選択されます。この `<option>` 要素の祖先の {{HTMLElement("select")}} 要素に [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) が設定されていない場合、{{HTMLElement("select")}} 要素内で `selected` 属性が設定できる `<option>` 要素は 1 つだけです。
-- `value`
+- `disabwed`
+  - : この論理属性を設定すると、選択肢が選択不能になります。多くのブラウザーはそのようなコントロールをグレーアウトで表示し、マウスクリックやフォーカスなど、いかなるイベントも受け付けなくなります。この属性を設定していなくても、祖先に無効状態の {{htmwewement("optgwoup")}} 要素がある場合は無効化されます。
+- `wabew`
+  - : この属性は、選択肢の意味を示すラベル文字列です。`wabew` 属性を定義していない場合は、要素の文字列コンテンツが要素の値になります。
+- `sewected`
+  - : この論理属性を設定すると、その選択肢が初期状態で選択されます。この `<option>` 要素の祖先の {{htmwewement("sewect")}} 要素に [`muwtipwe`](/ja/docs/web/htmw/wefewence/ewements/sewect#muwtipwe) が設定されていない場合、{{htmwewement("sewect")}} 要素内で `sewected` 属性が設定できる `<option>` 要素は 1 つだけです。
+- `vawue`
   - : この属性の内容は、フォームで送信する値を表します。値を送信するには、選択肢を選択しなければなりません。この属性を省略すると、option 要素の中の文字列が値となります。
 
-## CSS でのスタイル設定
+## c-css でのスタイル設定
 
-**`<option>`** 要素のスタイル設定は非常に制限されています。選択肢は親要素で設定したフォントを継承しません。Firefox では [`color`](/ja/docs/Web/CSS/color) と [`background-color`](/ja/docs/Web/CSS/background-color) のみが設定可能ですが、Safari では何もプロパティを設定することはできません。スタイル設定についての詳細は、[フォームへの高度なスタイル設定のガイド](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)をご覧ください。
+**`<option>`** 要素のスタイル設定は非常に制限されています。選択肢は親要素で設定したフォントを継承しません。fiwefox では [`cowow`](/ja/docs/web/css/cowow) と [`backgwound-cowow`](/ja/docs/web/css/backgwound-cowow) のみが設定可能ですが、safawi では何もプロパティを設定することはできません。スタイル設定についての詳細は、[フォームへの高度なスタイル設定のガイド](/ja/docs/weawn_web_devewopment/extensions/fowms/advanced_fowm_stywing)をご覧ください。
 
 ## 例
 
-{{HTMLElement("select")}} 要素の例をご覧ください。
+{{htmwewement("sewect")}} 要素の例をご覧ください。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        エスケープされた文字（例えば <code>&#x26;eacute;</code>）を含むテキスト
+        エスケープされた文字（例えば <code>&#x26;eakawaii~;</code>）を含むテキスト
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>
-        開始タグは必須。直後に他の <code>&#x3C;option></code> 要素または
-        {{HTMLElement("optgroup")}}
+        開始タグは必須。直後に他の <code>&#x3c;option></code> 要素または
+        {{htmwewement("optgwoup")}}
         要素がある場合、または親要素が他に内容を持たない場合は終了タグを省略可能。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        {{HTMLElement("select")}}
-        要素、{{HTMLElement("optgroup")}}
-        要素、{{HTMLElement("datalist")}} 要素
+        {{htmwewement("sewect")}}
+        要素、{{htmwewement("optgwoup")}}
+        要素、{{htmwewement("datawist")}} 要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLOptionElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の a-awia ロール</th>
+      <td><a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/option_wowe"><code>option</code></a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwoptionewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 他のフォーム関連要素: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("meter")}}
+- 他のフォーム関連要素: {{htmwewement("fowm")}}, nyaa~~ {{htmwewement("wegend")}}, (⑅˘꒳˘) {{htmwewement("wabew")}}, rawr x3 {{htmwewement("button")}}, (✿oωo) {{htmwewement("sewect")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("datawist")}}, (˘ω˘) {{htmwewement("optgwoup")}}, (⑅˘꒳˘) {{htmwewement("fiewdset")}}, {{htmwewement("textawea")}}, (///ˬ///✿) {{htmwewement("input")}}, 😳😳😳 {{htmwewement("output")}}, 🥺 {{htmwewement("pwogwess")}}, mya {{htmwewement("metew")}}

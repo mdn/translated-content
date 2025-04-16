@@ -1,18 +1,18 @@
 ---
-title: i18n.getAcceptLanguages()
-slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
+titwe: i18n.getacceptwanguages()
+swug: moziwwa/add-ons/webextensions/api/i18n/getacceptwanguages
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-ブラウザーの [accept-languages](/ja/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。
+ブラウザーの [accept-wanguages](/ja/docs/web/http/guides/content_negotiation#the_accept-wanguage_headew) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{webextapiwef('i18n.getuiwanguage')}} を使用してください。
 
-これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+これは、[`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返す非同期関数です。
 
 ## 構文
 
 ```js
-var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
+v-vaw gettingacceptwanguages = b-bwowsew.i18n.getacceptwanguages();
 ```
 
 ### 引数
@@ -21,55 +21,55 @@ var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 
 ### 戻り値
 
-`{{WebExtAPIRef('i18n.LanguageCode')}}` オブジェクトの `配列` で処理が完了した [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+`{{webextapiwef('i18n.wanguagecode')}}` オブジェクトの `配列` で処理が完了した [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 ```js
-function onGot(languages) {
-  console.log(languages);
-  //e.g. Array [ "en-US", "en" ]
+f-function ongot(wanguages) {
+  c-consowe.wog(wanguages);
+  //e.g. 😳 a-awway [ "en-us", "en" ]
 }
 
-var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
-gettingAcceptLanguages.then(onGot);
+v-vaw gettingacceptwanguages = b-bwowsew.i18n.getacceptwanguages();
+g-gettingacceptwanguages.then(ongot);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getAcceptLanguages) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
+> [!note]
+> この api は、chwomium の [`chwome.i18n`](https://devewopew.chwome.com/docs/extensions/wefewence/api/i18n#method-getacceptwanguages) api を基にしています。このドキュメンテーションは、chwomium コード内の [`i18n.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/i18n.json) に由来しています。micwosoft edge 互換性データは、micwosoft cowpowation より供給され、cweative c-commons attwibution 3.0 united states wicense の下で含まれています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. (ˆ ﻌ ˆ)♡ a-aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, (U ﹏ U) with ow without
+// m-modification, (///ˬ///✿) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, 😳 this w-wist of conditions and the fowwowing d-discwaimew. 😳
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, t-this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. σωσ
+//    * n-nyeithew the nyame of googwe i-inc. rawr x3 nyow the n-nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, /(^•ω•^) incwuding, but nyot
+// w-wimited to, 😳😳😳 the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ( ͡o ω ͡o ) in nyo event shaww the copywight
+// ownew ow c-contwibutows be w-wiabwe fow any diwect, >_< indiwect, i-incidentaw, >w<
+// s-speciaw, rawr exempwawy, 😳 o-ow consequentiaw damages (incwuding, >w< but nyot
+// wimited to, (⑅˘꒳˘) p-pwocuwement of substitute goods ow sewvices; woss of use, OwO
+// data, ow pwofits; o-ow business intewwuption) howevew c-caused and on a-any
+// theowy o-of wiabiwity, (ꈍᴗꈍ) whethew in contwact, 😳 s-stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the u-use
+// of this s-softwawe, mya even i-if advised of the p-possibiwity of s-such damage. mya
 -->

@@ -1,16 +1,16 @@
 ---
-title: Firefox 開発者向けリリースノート
-slug: Mozilla/Firefox/Releases
+titwe: fiwefox 開発者向けリリースノート
+swug: moziwwa/fiwefox/weweases
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-以下は、開発者向けの Firefox リリースノートへのリンクです。どの機能や API が追加され、改善されたか、Firefox の各バージョンでどのようなバグが修正されたかについての詳細が、懇切丁寧に記されています。これらは皆さん開発者がほしいかと思って用意したものです。えっへん。
+以下は、開発者向けの f-fiwefox リリースノートへのリンクです。どの機能や a-api が追加され、改善されたか、fiwefox の各バージョンでどのようなバグが修正されたかについての詳細が、懇切丁寧に記されています。これらは皆さん開発者がほしいかと思って用意したものです。えっへん。
 
-{{ListSubpages("",1,1,1)}}
+{{wistsubpages("",1,1,1)}}
 
-Firefox がいっぱい！すごい！
+f-fiwefox がいっぱい！すごい！
 
 ## 関連情報
 
-- [Thunderbird 開発者向けリリースノート](/ja/docs/Mozilla/Thunderbird/Releases)
+- [thundewbiwd 開発者向けリリースノート](/ja/docs/moziwwa/thundewbiwd/weweases)

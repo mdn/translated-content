@@ -1,73 +1,73 @@
 ---
-title: "<center>: 中央揃えテキスト要素"
-slug: Web/HTML/Reference/Elements/center
-original_slug: Web/HTML/Element/center
-l10n:
-  sourceCommit: 6f886b9147b7f62bacfa1e740a3ea288168a58aa
+titwe: "<centew>: 中央揃えテキスト要素"
+swug: web/htmw/wefewence/ewements/centew
+o-owiginaw_swug: w-web/htmw/ewement/centew
+w-w10n:
+  souwcecommit: 6f886b9147b7f62bacfa1e740a3ea288168a58aa
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-**`<center>`** は [HTML](/ja/docs/Web/HTML) の要素で、中に含まれるブロックレベルまたはインラインコンテンツを中央揃えして表示する[ブロックレベル要素](/ja/docs/Glossary/Block-level_content)です。コンテナーはふつう {{HTMLElement("body")}} ですが、必ずしもそうとは限りません。
+**`<centew>`** は [htmw](/ja/docs/web/htmw) の要素で、中に含まれるブロックレベルまたはインラインコンテンツを中央揃えして表示する[ブロックレベル要素](/ja/docs/gwossawy/bwock-wevew_content)です。コンテナーはふつう {{htmwewement("body")}} ですが、必ずしもそうとは限りません。
 
-このタグは HTML 4（および XHTML 1）で非推奨要素に指定され、[CSS](/ja/docs/Web/CSS) の {{Cssxref("text-align")}} プロパティを {{HTMLElement("div")}} 要素に適用するか、それぞれの {{HTMLElement("p")}} 要素に適用する方式が採用されました。ブロックを中央揃えするには、別な CSS プロパティである {{Cssxref("margin-left")}} および {{Cssxref("margin-right")}} など用いて、値を `auto` に設定してください（または、 {{Cssxref("margin")}} を `0 auto` に設定してください）。
+このタグは h-htmw 4（および x-xhtmw 1）で非推奨要素に指定され、[css](/ja/docs/web/css) の {{cssxwef("text-awign")}} プロパティを {{htmwewement("div")}} 要素に適用するか、それぞれの {{htmwewement("p")}} 要素に適用する方式が採用されました。ブロックを中央揃えするには、別な c-css プロパティである {{cssxwef("mawgin-weft")}} および {{cssxwef("mawgin-wight")}} など用いて、値を `auto` に設定してください（または、 {{cssxwef("mawgin")}} を `0 a-auto` に設定してください）。
 
-## DOM インターフェイス
+## d-dom インターフェイス
 
-この要素は {{domxref("HTMLElement")}} インターフェイスを実装しています。
+この要素は {{domxwef("htmwewement")}} インターフェイスを実装しています。
 
 ## 例 1
 
-```html
-<center>
-  This text will be centered.
-  <p>So will this paragraph.</p>
-</center>
+```htmw
+<centew>
+  this text wiww be centewed. mya
+  <p>so wiww this pawagwaph.</p>
+</centew>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example 1")}}
+{{embedwivesampwe("exampwe 1")}}
 
-## 例 2 （CSS での方法）
+## 例 2 （css での方法）
 
-```html
-<div style="text-align:center">
-  This text will be centered.
-  <p>So will this paragraph.</p>
+```htmw
+<div s-stywe="text-awign:centew">
+  this text wiww be centewed. mya
+  <p>so w-wiww this pawagwaph.</p>
 </div>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example 2 (CSS alternative)")}}
+{{embedwivesampwe("exampwe 2 (css awtewnative)")}}
 
-## 例 3 （CSS での方法）
+## 例 3 （css での方法）
 
-```html
-<p style="text-align:center">
-  This line will be centered.<br />
-  And so will this line.
+```htmw
+<p s-stywe="text-awign:centew">
+  this wine wiww be centewed.<bw />
+  and so wiww this w-wine. 😳
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example 3 (CSS alternative)")}}
+{{embedwivesampwe("exampwe 3 (css awtewnative)")}}
 
-> **メモ:** {{Cssxref("text-align")}}`:center` を {{HTMLElement("div")}} または {{HTMLElement("p")}} 要素に適用すると、その*コンテンツ*を中央揃えにしますが、コンテンツの寸法はどれも変更されません。
+> **メモ:** {{cssxwef("text-awign")}}`:centew` を {{htmwewement("div")}} または {{htmwewement("p")}} 要素に適用すると、その*コンテンツ*を中央揃えにしますが、コンテンツの寸法はどれも変更されません。
 
-<!-- ## Technical summary -->
+<!-- ## t-technicaw s-summawy -->
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("text-align")}}
-- {{Cssxref("display")}}
+- {{cssxwef("text-awign")}}
+- {{cssxwef("dispway")}}

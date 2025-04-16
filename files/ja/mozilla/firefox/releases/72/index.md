@@ -1,129 +1,129 @@
 ---
-title: Firefox 72 for Developers
-slug: Mozilla/Firefox/Releases/72
-l10n:
-  sourceCommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
+titwe: fiwefox 72 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/72
+w-w10n:
+  souwcecommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 72 は、米国時間 2020 年 1 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 72 の変更点をまとめています。
+f-fiwefox 72 は、米国時間 2020 年 1 月 7 日にリリースされました。このページでは、開発者に影響する f-fiwefox 72 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-[コンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html):
+[コンソール](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw):
 
-- [インタラクティブ JS インタープリターのマルチラインモード](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode) で、キーボードショートカット `Ctrl` + `O` および `Ctrl` + `S` を使用してファイルを開いたり保存したりできるようになりました ([Firefox バグ 1592308](https://bugzil.la/1592308))。
-- [非同期メッセージを視覚的に分ける設定](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#async-stack-frames) が可能になりました ([Firefox バグ 1592969](https://bugzil.la/1592969))。
+- [インタラクティブ j-js インタープリターのマルチラインモード](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/the_command_wine_intewpwetew/index.htmw#muwti-wine-mode) で、キーボードショートカット `ctww` + `o` および `ctww` + `s` を使用してファイルを開いたり保存したりできるようになりました ([fiwefox バグ 1592308](https://bugziw.wa/1592308))。
+- [非同期メッセージを視覚的に分ける設定](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/consowe_messages/index.htmw#async-stack-fwames) が可能になりました ([fiwefox バグ 1592969](https://bugziw.wa/1592969))。
 
-[JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html):
+[javascwipt デバッガー](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/index.htmw):
 
-- スコープパネルでオブジェクトを右クリックまたは `Ctrl` を押しながらクリックして*プロパティの設定* または _プロパティの取得_ を選択すると、[ウォッチポイント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_watchpoints/index.html#set-a-watchpoint)を設定できます ([Firefox バグ 1574192](https://bugzil.la/1574192))。
+- スコープパネルでオブジェクトを右クリックまたは `ctww` を押しながらクリックして*プロパティの設定* または _プロパティの取得_ を選択すると、[ウォッチポイント](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_watchpoints/index.htmw#set-a-watchpoint)を設定できます ([fiwefox バグ 1574192](https://bugziw.wa/1574192))。
 
-[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html):
+[ネットワークモニター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw):
 
-- タイミングタブで、それぞれのリソースの [Queued、Started、Downloaded](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#queued-started-downloaded) 時間を表示するようになりました ([Firefox バグ 1580431](https://bugzil.la/1580431))。
+- タイミングタブで、それぞれのリソースの [queued、stawted、downwoaded](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/wequest_detaiws/index.htmw#queued-stawted-downwoaded) 時間を表示するようになりました ([fiwefox バグ 1580431](https://bugziw.wa/1580431))。
 
-[インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html):
+[インスペクター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw):
 
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディア特性のさまざまな値の [シミュレーターを有効化する設定](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-color-scheme-preference) が可能になりました ([Firefox バグ 1550804](https://bugzil.la/1550804))。
+- [`pwefews-cowow-scheme`](/ja/docs/web/css/@media/pwefews-cowow-scheme) メディア特性のさまざまな値の [シミュレーターを有効化する設定](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_and_edit_css/index.htmw#view-media-wuwes-fow-cowow-scheme-pwefewence) が可能になりました ([fiwefox バグ 1550804](https://bugziw.wa/1550804))。
 
 #### 廃止
 
-- _スクラッチパッド_ を削除しました ([Firefox バグ 1519103](https://bugzil.la/1519103))。
+- _スクラッチパッド_ を削除しました ([fiwefox バグ 1519103](https://bugziw.wa/1519103))。
 
-### HTML
+### h-htmw
 
 _変更なし。_
 
-### CSS
+### c-css
 
-- CSS Shadow Parts が有効になりました。これは [`part` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/part) や [`::part` 擬似要素](/ja/docs/Web/CSS/::part) が含まれており、スタイル設定のためにシャドウホストが自身のシャドウツリーから選択した要素を選択的に出力ページへ公開できます ([Firefox バグ 1559074](https://bugzil.la/1559074))。
-- [CSS モーションパス](/ja/docs/Web/CSS/CSS_motion_path) を実装しました ([Firefox バグ 1582554](https://bugzil.la/1582554) および [実装目的](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc) をご覧ください)。以下のプロパティが含まれます。
+- css s-shadow pawts が有効になりました。これは [`pawt` 属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/pawt) や [`::pawt` 擬似要素](/ja/docs/web/css/::pawt) が含まれており、スタイル設定のためにシャドウホストが自身のシャドウツリーから選択した要素を選択的に出力ページへ公開できます ([fiwefox バグ 1559074](https://bugziw.wa/1559074))。
+- [css モーションパス](/ja/docs/web/css/css_motion_path) を実装しました ([fiwefox バグ 1582554](https://bugziw.wa/1582554) および [実装目的](https://gwoups.googwe.com/fowum/#!topic/moziwwa.dev.pwatfowm/nooiwsuxvuc) をご覧ください)。以下のプロパティが含まれます。
 
-  - {{cssxref("offset")}}
-  - {{cssxref("offset-path")}}
-  - {{cssxref("offset-anchor")}}
-  - {{cssxref("offset-distance")}}
-  - {{cssxref("offset-rotate")}}
+  - {{cssxwef("offset")}}
+  - {{cssxwef("offset-path")}}
+  - {{cssxwef("offset-anchow")}}
+  - {{cssxwef("offset-distance")}}
+  - {{cssxwef("offset-wotate")}}
 
-- 個々の座標変換関連プロパティ ({{cssxref("scale")}}、{{cssxref("rotate")}}、{{cssxref("translate")}}) を既定で有効にしました ([Firefox バグ 1424900](https://bugzil.la/1424900))。
+- 個々の座標変換関連プロパティ ({{cssxwef("scawe")}}、{{cssxwef("wotate")}}、{{cssxwef("twanswate")}}) を既定で有効にしました ([fiwefox バグ 1424900](https://bugziw.wa/1424900))。
 
 #### 廃止
 
-### SVG
+### svg
 
 _変更なし。_
 
-### JavaScript
+### javascwipt
 
-- [Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) を実装しました ([Firefox バグ 1566141](https://bugzil.la/1566141))。
+- [nuww 合体演算子](/ja/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing) を実装しました ([fiwefox バグ 1566141](https://bugziw.wa/1566141))。
 
-### API
+### api
 
-#### 新規 API
+#### 新規 api
 
-- {{domxref("FormDataEvent")}} および [イベントに基づくフォームへの関与](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects#formdata_イベントの使用)を既定で有効にしました ([Firefox バグ 1594708](https://bugzil.la/1594708))。
-- {{domxref("Window.crossOriginIsolated")}} プロパティおよび {{domxref("WorkerGlobalScope.crossOriginIsolated")}} プロパティに対応しました ([Firefox バグ 1591892](https://bugzil.la/1591892))。
+- {{domxwef("fowmdataevent")}} および [イベントに基づくフォームへの関与](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects#fowmdata_イベントの使用)を既定で有効にしました ([fiwefox バグ 1594708](https://bugziw.wa/1594708))。
+- {{domxwef("window.cwossowiginisowated")}} プロパティおよび {{domxwef("wowkewgwobawscope.cwossowiginisowated")}} プロパティに対応しました ([fiwefox バグ 1591892](https://bugziw.wa/1591892))。
 
-#### DOM
+#### d-dom
 
-- 最近の仕様変更に応じて、[位置情報 API](/ja/docs/Web/API/Geolocation_API) でいくつかのインターフェイス名を更新しました ([Firefox バグ 1575144](https://bugzil.la/1575144)):
+- 最近の仕様変更に応じて、[位置情報 api](/ja/docs/web/api/geowocation_api) でいくつかのインターフェイス名を更新しました ([fiwefox バグ 1575144](https://bugziw.wa/1575144)):
 
-  - `Coordinates` を {{domxref("GeolocationCoordinates")}} に変更しました。
-  - `Position` を {{domxref("GeolocationPosition")}} に変更しました。
-  - `PositionError` を {{domxref("GeolocationPositionError")}} に変更しました。
+  - `coowdinates` を {{domxwef("geowocationcoowdinates")}} に変更しました。
+  - `position` を {{domxwef("geowocationposition")}} に変更しました。
+  - `positionewwow` を {{domxwef("geowocationpositionewwow")}} に変更しました。
 
-- いくつかのプロパティを、標準の文字列化子を使用するように更新しました ([Firefox バグ 824857](https://bugzil.la/824857))。
+- いくつかのプロパティを、標準の文字列化子を使用するように更新しました ([fiwefox バグ 824857](https://bugziw.wa/824857))。
 
-  - {{domxref("DOMTokenList.value")}}
-  - {{domxref("HTMLAnchorElement.href")}}
-  - {{domxref("Location.href")}}
-  - {{domxref("MediaList.mediaText")}}
-  - {{domxref("URL.href")}}
-  - {{domxref("WorkerLocation.href")}}
+  - {{domxwef("domtokenwist.vawue")}}
+  - {{domxwef("htmwanchowewement.hwef")}}
+  - {{domxwef("wocation.hwef")}}
+  - {{domxwef("mediawist.mediatext")}}
+  - {{domxwef("uww.hwef")}}
+  - {{domxwef("wowkewwocation.hwef")}}
 
-#### DOM イベント
+#### dom イベント
 
-- {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} および {{domxref("PushManager.subscribe()")}} が、[`click`](/ja/docs/Web/API/Element/click_event) イベントのようなユーザー操作に応じてのみ呼び出せるようになりました ([Firefox バグ 1593644](https://bugzil.la/1593644))。
+- {{domxwef("notification.wequestpewmission_static", /(^•ω•^) "notification.wequestpewmission()")}} および {{domxwef("pushmanagew.subscwibe()")}} が、[`cwick`](/ja/docs/web/api/ewement/cwick_event) イベントのようなユーザー操作に応じてのみ呼び出せるようになりました ([fiwefox バグ 1593644](https://bugziw.wa/1593644))。
 
-#### メディア、Web Audio、WebRTC
+#### メディア、web a-audio、webwtc
 
-- {{domxref("MediaDevices.getDisplayMedia()")}} メソッドが、[`click`](/ja/docs/Web/API/Element/click_event) イベントのようなユーザー操作に応じてのみ呼び出せるようになりました ([Firefox バグ 1580944](https://bugzil.la/1580944))。
-- `RTCRtpContributingSource` 辞書が `rtpTimestamp` プロパティを持てるようになりました。これはパケットのメディアが生成またはサンプリングされた時点の source-generated time です ([Firefox バグ 1583867](https://bugzil.la/1583867))。
+- {{domxwef("mediadevices.getdispwaymedia()")}} メソッドが、[`cwick`](/ja/docs/web/api/ewement/cwick_event) イベントのようなユーザー操作に応じてのみ呼び出せるようになりました ([fiwefox バグ 1580944](https://bugziw.wa/1580944))。
+- `wtcwtpcontwibutingsouwce` 辞書が `wtptimestamp` プロパティを持てるようになりました。これはパケットのメディアが生成またはサンプリングされた時点の souwce-genewated t-time です ([fiwefox バグ 1583867](https://bugziw.wa/1583867))。
 
 #### 廃止
 
-- 非標準の `window.mozPaintCount` プロパティを削除しました ([Firefox バグ 1591968](https://bugzil.la/1591968))。
-- {{domxref("BatteryManager")}} インターフェイスはウェブコンテンツで使用できなくなりました ([Firefox バグ 1441976](https://bugzil.la/1441976))。
-- {{domxref("Navigator.vibrate()")}} は別オリジンの {{htmlelement("iframe")}} でサポートされなくなりました ([Firefox バグ 1591113](https://bugzil.la/1591113))。
-- WebRTC は `simulcast` で `rid=` および `pt=` の引数に対応しなくなりました。"`a=simulcast: send rid=7 recv rid=8`" のような行の新しい構文は "`a=simulcast: send 7 recv 8`" です。新しい構文は Firefox 68 から対応しており、古い構文の対応を廃止する時期になりました ([Firefox バグ 1470568](https://bugzil.la/1470568))。
+- 非標準の `window.mozpaintcount` プロパティを削除しました ([fiwefox バグ 1591968](https://bugziw.wa/1591968))。
+- {{domxwef("battewymanagew")}} インターフェイスはウェブコンテンツで使用できなくなりました ([fiwefox バグ 1441976](https://bugziw.wa/1441976))。
+- {{domxwef("navigatow.vibwate()")}} は別オリジンの {{htmwewement("ifwame")}} でサポートされなくなりました ([fiwefox バグ 1591113](https://bugziw.wa/1591113))。
+- webwtc は `simuwcast` で `wid=` および `pt=` の引数に対応しなくなりました。"`a=simuwcast: send wid=7 wecv wid=8`" のような行の新しい構文は "`a=simuwcast: send 7 w-wecv 8`" です。新しい構文は fiwefox 68 から対応しており、古い構文の対応を廃止する時期になりました ([fiwefox バグ 1470568](https://bugziw.wa/1470568))。
 
 ### セキュリティ
 
-- {{HTTPHeader("X-Content-Type-Options")}} を使用した MIME スニッフィングのオプトアウトを、{{HTTPHeader("Content-type")}} が提供されていれば、最上位の文書でも適用するようになりました。HTML ウェブページを `text/html` 以外の MIME タイプで提供するとき、表示する代わりにダウンロードさせることができます。両方のヘッダーを正しく設定するようにしてください ([Firefox バグ 1591932](https://bugzil.la/1591932))。
-- 採択率の低さと相互運用性の問題のため、HTTP Public Key Pinning (HPKP) の対応を廃止しました。`Public-Key-Pins` および `Public-Key-Pins-Report-Only` ヘッダーは黙って無視されるようになりました ([Firefox バグ 1412438](https://bugzil.la/1412438))。
+- {{httpheadew("x-content-type-options")}} を使用した m-mime スニッフィングのオプトアウトを、{{httpheadew("content-type")}} が提供されていれば、最上位の文書でも適用するようになりました。htmw ウェブページを `text/htmw` 以外の m-mime タイプで提供するとき、表示する代わりにダウンロードさせることができます。両方のヘッダーを正しく設定するようにしてください ([fiwefox バグ 1591932](https://bugziw.wa/1591932))。
+- 採択率の低さと相互運用性の問題のため、http pubwic key pinning (hpkp) の対応を廃止しました。`pubwic-key-pins` および `pubwic-key-pins-wepowt-onwy` ヘッダーは黙って無視されるようになりました ([fiwefox バグ 1412438](https://bugziw.wa/1412438))。
 
 ### プラグイン
 
 _変更なし。_
 
-### WebDriver conformance (Marionette)
+### webdwivew confowmance (mawionette)
 
-- `WebDriver:FindElement` および `WebDriver:FindElements` コマンドから、`Anon` および `AnonAttribute` ストラテジーを削除しました ([Firefox バグ 1587627](https://bugzil.la/1587627))。
-- `Webdriver:TakeScreenshot` が、キャプチャーされた領域が canvas の幅、高さ、サイズの最大上限値を超えても失敗しないようになりました ([Firefox バグ 1590064](https://bugzil.la/1590064))。
+- `webdwivew:findewement` および `webdwivew:findewements` コマンドから、`anon` および `anonattwibute` ストラテジーを削除しました ([fiwefox バグ 1587627](https://bugziw.wa/1587627))。
+- `webdwivew:takescweenshot` が、キャプチャーされた領域が c-canvas の幅、高さ、サイズの最大上限値を超えても失敗しないようになりました ([fiwefox バグ 1590064](https://bugziw.wa/1590064))。
 
 ## アドオン開発者向けの変更点
 
-### API の変更点
+### api の変更点
 
-- [`browserSettings.ftpProtocolEnabled`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled) プロパティを実装しました ([Firefox バグ 1592687](https://bugzil.la/1592687))。
-- [`BrowserSetting.onChange`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange) イベントを実装しました ([Firefox バグ 1410412](https://bugzil.la/1410412))。
-- [`captivePortal.canonicalURL`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL) プロパティを実装しました ([Firefox バグ 1592932](https://bugzil.la/1592932))。
-- [`browserAction.onClicked`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked) および [`pageAction.onClicked`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked) イベントのコールバック関数が、キーボードモディファイアとともに押されたマウスボタンを示すプロパティを持つオブジェクトを含む、`OnClickData` プロパティを含むようになりました ([Firefox バグ 1405031](https://bugzil.la/1405031))。これは、付加的な種類のマウスクリックのサポートを可能にします。
-- {{WebExtAPIRef("browserSettings.tlsVersionRestrictionConfig")}} プロパティが実装され、ブラウザーの対応している TLS の最高バージョンと最低バージョンを読み取ることができるようになりました ([Firefox バグ 1593635](https://bugzil.la/1593635))。
+- [`bwowsewsettings.ftppwotocowenabwed`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/ftppwotocowenabwed) プロパティを実装しました ([fiwefox バグ 1592687](https://bugziw.wa/1592687))。
+- [`bwowsewsetting.onchange`](/ja/docs/moziwwa/add-ons/webextensions/api/types/bwowsewsetting/onchange) イベントを実装しました ([fiwefox バグ 1410412](https://bugziw.wa/1410412))。
+- [`captivepowtaw.canonicawuww`](/ja/docs/moziwwa/add-ons/webextensions/api/captivepowtaw/canonicawuww) プロパティを実装しました ([fiwefox バグ 1592932](https://bugziw.wa/1592932))。
+- [`bwowsewaction.oncwicked`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewaction/oncwicked) および [`pageaction.oncwicked`](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction/oncwicked) イベントのコールバック関数が、キーボードモディファイアとともに押されたマウスボタンを示すプロパティを持つオブジェクトを含む、`oncwickdata` プロパティを含むようになりました ([fiwefox バグ 1405031](https://bugziw.wa/1405031))。これは、付加的な種類のマウスクリックのサポートを可能にします。
+- {{webextapiwef("bwowsewsettings.twsvewsionwestwictionconfig")}} プロパティが実装され、ブラウザーの対応している tws の最高バージョンと最低バージョンを読み取ることができるようになりました ([fiwefox バグ 1593635](https://bugziw.wa/1593635))。
 
 ### マニフェストの変更点
 
@@ -131,8 +131,8 @@ _変更なし。_
 
 ## 関連情報
 
-- Hacks ブログのリリース記事: [Firefox 72 — our first song of 2020](https://hacks.mozilla.org/2020/01/firefox-72-our-first-song-of-2020/)
+- hacks ブログのリリース記事: [fiwefox 72 — ouw fiwst song o-of 2020](https://hacks.moziwwa.owg/2020/01/fiwefox-72-ouw-fiwst-song-of-2020/)
 
 ## 過去のバージョン
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

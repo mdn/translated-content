@@ -1,19 +1,19 @@
 ---
-title: ThunderbirdにおけるWebExtensionsによるアドイン開発
-slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
+titwe: thundewbiwdにおけるwebextensionsによるアドイン開発
+swug: m-moziwwa/add-ons/webextensions/devewoping_webextensions_fow_thundewbiwd
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Thunderbird のアドイン開発は Firefox と同様の方法でコーディングすることが可能です。
+t-thundewbiwd のアドイン開発は f-fiwefox と同様の方法でコーディングすることが可能です。
 テキストエディターや、あなたの選んだコーディングツールで。
 
-## API の違い
+## a-api の違い
 
-両者とも Gecko ベースであるため、いくつかの違いはあるものの、Thunderbird では、Firefox で使える API の多くをサポートしています。
-詳細は、[browser compatibility for manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) と [browser support for JavaScript APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)を参照してください。
+両者とも g-gecko ベースであるため、いくつかの違いはあるものの、thundewbiwd では、fiwefox で使える a-api の多くをサポートしています。
+詳細は、[bwowsew c-compatibiwity f-fow manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) と [bwowsew suppowt fow javascwipt apis](/ja/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis)を参照してください。
 
 ## 参考
 
-- [Browser support for JavaScript APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-- [Browser compatibility for manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
+- [bwowsew suppowt fow javascwipt apis](/ja/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis)
+- [bwowsew c-compatibiwity fow manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json)

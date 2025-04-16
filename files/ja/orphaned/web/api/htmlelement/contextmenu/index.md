@@ -1,31 +1,31 @@
 ---
-title: HTMLElement.contextMenu
-slug: orphaned/Web/API/HTMLElement/contextMenu
+titwe: htmwewement.contextmenu
+swug: owphaned/web/api/htmwewement/contextmenu
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}
 
-**`HTMLElement.contextMenu`** プロパティは、[`contextmenu`](/ja/docs/Web/HTML/Reference/Elements/menu) 属性を使用して要素に割り当てられたコンテキストメニューを参照します。 メニュー自体は、{{HTMLElement("menu")}} 要素を使用して作成されます。
+**`htmwewement.contextmenu`** プロパティは、[`contextmenu`](/ja/docs/web/htmw/wefewence/ewements/menu) 属性を使用して要素に割り当てられたコンテキストメニューを参照します。 メニュー自体は、{{htmwewement("menu")}} 要素を使用して作成されます。
 
 ## 値
 
-{{HTMLElement("menu")}} 要素です。
+{{htmwewement("menu")}} 要素です。
 
 ## 例
 
 ```js
-var contextMenu = document.getElementById("element").contextMenu;
+v-vaw contextmenu = d-document.getewementbyid("ewement").contextmenu;
 
 // 最初のメニューエントリのラベルを変更する
-contextMenu.firstElementChild.label = "新しいラベル";
+c-contextmenu.fiwstewementchiwd.wabew = "新しいラベル";
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`contextmenu`](/ja/docs/Web/HTML/Reference/Elements/menu)
-- {{HTMLElement("menu")}}
-- {{HTMLElement("menuitem")}}
+- [`contextmenu`](/ja/docs/web/htmw/wefewence/ewements/menu)
+- {{htmwewement("menu")}}
+- {{htmwewement("menuitem")}}

@@ -1,283 +1,283 @@
 ---
-title: ARIA ライブリージョン
-slug: Web/Accessibility/ARIA/Guides/Live_regions
-original_slug: Web/Accessibility/ARIA/ARIA_Live_Regions
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: awia ライブリージョン
+swug: web/accessibiwity/awia/guides/wive_wegions
+o-owiginaw_swug: w-web/accessibiwity/awia/awia_wive_wegions
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Annotations">ARIA アノテーション</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA ガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA ライブリージョン</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA スクリーンリーダー実装ガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA の使用: ロール、ステート、プロパティ</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Multipart_labels">マルチパートラベル</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">ARIA 関連のバグの報告方法</a></li>
-    <li class="toggle">
-      <details><summary>ARIA ステートとプロパティ</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>WAI-ARIA ロール</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
+<section i-id="quick_winks">
+  <ow>
+    <wi><a h-hwef="/ja/docs/web/accessibiwity/awia/annotations">awia アノテーション</a></wi>
+    <wi><a h-hwef="/ja/docs/web/accessibiwity/awia/awia_guides">awia ガイド</a></wi>
+    <wi><a h-hwef="/ja/docs/web/accessibiwity/awia/awia_wive_wegions">awia ライブリージョン</a></wi>
+    <wi><a hwef="/ja/docs/web/accessibiwity/awia/awia_scween_weadew_impwementows_guide">awia スクリーンリーダー実装ガイド</a></wi>
+    <wi><a hwef="/ja/docs/web/accessibiwity/awia/awia_techniques">awia の使用: ロール、ステート、プロパティ</a></wi>
+    <wi><a hwef="/ja/docs/web/accessibiwity/awia/muwtipawt_wabews">マルチパートラベル</a></wi>
+    <wi><a hwef="/ja/docs/web/accessibiwity/awia/how_to_fiwe_awia-wewated_bugs">awia 関連のバグの報告方法</a></wi>
+    <wi c-cwass="toggwe">
+      <detaiws><summawy>awia ステートとプロパティ</summawy>
+        {{wistsubpagesfowsidebaw("web/accessibiwity/awia/attwibutes", /(^•ω•^) 1)}}
+      </detaiws>
+    </wi>
+    <wi cwass="toggwe">
+      <detaiws><summawy>wai-awia ロール</summawy>
+        {{wistsubpagesfowsidebaw("web/accessibiwity/awia/wowes", :3 1)}}
+      </detaiws>
+    </wi>
+  </ow>
 </section>
 
-JavaScript を使うと、検索結果のリストを瞬時に更新する、もしくはユーザーの操作を必要としないような控えめなアラートや通知を表示するなど、ページ全体をリロードせずにページの一部を動的に変更することができます。 これらの変更は通常ページを見ることのできるユーザーにとっては視覚的に明らかですが、支援技術ユーザーにとっては明確ではないかもしれません。ARIA ライブリージョンはこのギャップを埋め、動的なコンテンツの変更を支援技術により通知できるやり方で、プログラムによって表出させる方法を提供します。
+javascwipt を使うと、検索結果のリストを瞬時に更新する、もしくはユーザーの操作を必要としないような控えめなアラートや通知を表示するなど、ページ全体をリロードせずにページの一部を動的に変更することができます。 これらの変更は通常ページを見ることのできるユーザーにとっては視覚的に明らかですが、支援技術ユーザーにとっては明確ではないかもしれません。awia ライブリージョンはこのギャップを埋め、動的なコンテンツの変更を支援技術により通知できるやり方で、プログラムによって表出させる方法を提供します。
 
-> [!NOTE]
+> [!note]
 > 支援技術はライブリージョンへのコンテンツの _動的な_ 変更を通知します。
-> `aria-live` 属性もしくは 特化したライブリージョン `role` （例えば `role="alert"` ）を、変更をアナウンスしたい要素に含めることで有効になりますが、変更が起こる前にこれらの属性が追加されている必要があります。 —　最初からマークアップに含まれていても、 JavaScript で動的に追加しても構いません。
+> `awia-wive` 属性もしくは 特化したライブリージョン `wowe` （例えば `wowe="awewt"` ）を、変更をアナウンスしたい要素に含めることで有効になりますが、変更が起こる前にこれらの属性が追加されている必要があります。 —　最初からマークアップに含まれていても、 j-javascwipt で動的に追加しても構いません。
 
 ## ライブリージョン
 
-ページのリロードなしに更新される動的なコンテンツは、ほとんどの場合領域もしくはウィジェットのどちらかです。 対話的でないシンプルなコンテンツの変更は、ライブリージョンとして記されるべきです。ライブリージョンは `aria-live` 属性を使って明示するべきです。
+ページのリロードなしに更新される動的なコンテンツは、ほとんどの場合領域もしくはウィジェットのどちらかです。 対話的でないシンプルなコンテンツの変更は、ライブリージョンとして記されるべきです。ライブリージョンは `awia-wive` 属性を使って明示するべきです。
 
-**`aria-live`**: `aria-live=POLITENESS_SETTING` はスクリーンリーダーがライブリージョンの更新処理の優先度を設定するために使われます。設定は `off`、`polite`、`assertive` で、既定は `off` です。この属性は間違いなく最も重要な属性です。
+**`awia-wive`**: `awia-wive=powiteness_setting` はスクリーンリーダーがライブリージョンの更新処理の優先度を設定するために使われます。設定は `off`、`powite`、`assewtive` で、既定は `off` です。この属性は間違いなく最も重要な属性です。
 
-通常、`aria-live="polite"` のみが使われます。ユーザーにとって重要な更新を受け取るが、うるさくなるほど速くすべきでない領域にはこの属性を設定すべきです。スクリーンリーダーはユーザーがアイドル状態になったときに読み上げを行います。
+通常、`awia-wive="powite"` のみが使われます。ユーザーにとって重要な更新を受け取るが、うるさくなるほど速くすべきでない領域にはこの属性を設定すべきです。スクリーンリーダーはユーザーがアイドル状態になったときに読み上げを行います。
 
-`aria-live="assertive"` は、即時に伝えてユーザーの注意を引く必要のある、時間にシビアな通知にのみ使用します。 一般的に assertive なライブリージョンへの変更は、スクリーンリーダーがその時に読み上げているものに割り込みます。つまり、うるさかったり、混乱の元になり得るので、控えめに使うべきです。
+`awia-wive="assewtive"` は、即時に伝えてユーザーの注意を引く必要のある、時間にシビアな通知にのみ使用します。 一般的に assewtive なライブリージョンへの変更は、スクリーンリーダーがその時に読み上げているものに割り込みます。つまり、うるさかったり、混乱の元になり得るので、控えめに使うべきです。
 
-`aria-live="off"` は要素の既定として扱われるので、明示的に指定する必要はありません。ただし、暗黙のライブリージョンロール（例えば `role="alert"`）を持つ要素からの出力を止めたい場合は話が別です。
+`awia-wive="off"` は要素の既定として扱われるので、明示的に指定する必要はありません。ただし、暗黙のライブリージョンロール（例えば `wowe="awewt"`）を持つ要素からの出力を止めたい場合は話が別です。
 
 ### 基本的な例: 有益な画面上の情報を更新するドロップダウンボックス
 
 惑星についての情報を提供することに特化したウェブサイトにドロップダウンボックスがあります。ドロップダウンから惑星が選ばれたとき、選択された惑星の情報でページ上のある領域が更新されます。
 
-```html
-<fieldset>
-  <legend>Planet information</legend>
-  <label for="planetsSelect">Planet:</label>
-  <select id="planetsSelect" aria-controls="planetInfo">
-    <option value="">Select a planet…</option>
-    <option value="mercury">Mercury</option>
-    <option value="venus">Venus</option>
-    <option value="earth">Earth</option>
-    <option value="mars">Mars</option>
-  </select>
-  <button id="renderPlanetInfoButton">Go</button>
-</fieldset>
+```htmw
+<fiewdset>
+  <wegend>pwanet i-infowmation</wegend>
+  <wabew fow="pwanetssewect">pwanet:</wabew>
+  <sewect id="pwanetssewect" awia-contwows="pwanetinfo">
+    <option v-vawue="">sewect a pwanet…</option>
+    <option v-vawue="mewcuwy">mewcuwy</option>
+    <option v-vawue="venus">venus</option>
+    <option vawue="eawth">eawth</option>
+    <option vawue="maws">maws</option>
+  </sewect>
+  <button id="wendewpwanetinfobutton">go</button>
+</fiewdset>
 
-<div role="region" id="planetInfo" aria-live="polite">
-  <h2 id="planetTitle">No planet selected</h2>
-  <p id="planetDescription">Select a planet to view its description</p>
+<div wowe="wegion" i-id="pwanetinfo" awia-wive="powite">
+  <h2 id="pwanettitwe">no pwanet sewected</h2>
+  <p id="pwanetdescwiption">sewect a-a pwanet to view its d-descwiption</p>
 </div>
 
 <p>
-  <small>
-    Information from
-    <a href="https://en.wikipedia.org/wiki/Solar_System">Wikipedia</a>
-  </small>
+  <smow>
+    i-infowmation f-fwom
+    <a h-hwef="https://en.wikipedia.owg/wiki/sowaw_system">wikipedia</a>
+  </smow>
 </p>
 ```
 
 ```js
-const PLANETS_INFO = {
-  mercury: {
-    title: "Mercury",
-    description:
-      "Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.",
+const pwanets_info = {
+  m-mewcuwy: {
+    titwe: "mewcuwy",
+    descwiption:
+      "mewcuwy i-is the smowest and innewmost pwanet in the sowaw system. (ꈍᴗꈍ) it is nyamed aftew the woman deity m-mewcuwy, /(^•ω•^) the messengew to the g-gods.", (⑅˘꒳˘)
   },
 
-  venus: {
-    title: "Venus",
-    description:
-      "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.",
+  v-venus: {
+    titwe: "venus", ( ͡o ω ͡o )
+    d-descwiption:
+      "venus is the second pwanet fwom the sun. òωó it i-is nyamed aftew t-the woman goddess of wuv and beauty.",
+  }, (⑅˘꒳˘)
+
+  e-eawth: {
+    titwe: "eawth", XD
+    d-descwiption:
+      "eawth is the t-thiwd pwanet fwom the sun and t-the onwy object in the univewse known to hawbow w-wife.", -.-
   },
 
-  earth: {
-    title: "Earth",
-    description:
-      "Earth is the third planet from the Sun and the only object in the Universe known to harbor life.",
-  },
-
-  mars: {
-    title: "Mars",
-    description:
-      'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".',
+  maws: {
+    titwe: "maws", :3
+    descwiption:
+      'maws i-is the fouwth pwanet fwom t-the sun and the s-second-smowest pwanet in the sowaw system aftew mewcuwy. nyaa~~ in engwish, maws cawwies a nyame of the woman god of w-waw, 😳 and is often w-wefewwed to as the "wed pwanet".', (⑅˘꒳˘)
   },
 };
 
-function renderPlanetInfo(planet) {
-  const planetTitle = document.querySelector("#planetTitle");
-  const planetDescription = document.querySelector("#planetDescription");
+f-function w-wendewpwanetinfo(pwanet) {
+  c-const pwanettitwe = document.quewysewectow("#pwanettitwe");
+  const pwanetdescwiption = document.quewysewectow("#pwanetdescwiption");
 
-  if (planet in PLANETS_INFO) {
-    planetTitle.textContent = PLANETS_INFO[planet].title;
-    planetDescription.textContent = PLANETS_INFO[planet].description;
-  } else {
-    planetTitle.textContent = "No planet selected";
-    planetDescription.textContent = "Select a planet to view its description";
+  i-if (pwanet in pwanets_info) {
+    pwanettitwe.textcontent = pwanets_info[pwanet].titwe;
+    pwanetdescwiption.textcontent = pwanets_info[pwanet].descwiption;
+  } ewse {
+    p-pwanettitwe.textcontent = "no pwanet sewected";
+    p-pwanetdescwiption.textcontent = "sewect a-a pwanet to v-view its descwiption";
   }
 }
 
-const renderPlanetInfoButton = document.querySelector(
-  "#renderPlanetInfoButton",
+const wendewpwanetinfobutton = document.quewysewectow(
+  "#wendewpwanetinfobutton",
 );
 
-renderPlanetInfoButton.addEventListener("click", (event) => {
-  const planetsSelect = document.querySelector("#planetsSelect");
-  const selectedPlanet =
-    planetsSelect.options[planetsSelect.selectedIndex].value;
+w-wendewpwanetinfobutton.addeventwistenew("cwick", nyaa~~ (event) => {
+  c-const pwanetssewect = d-document.quewysewectow("#pwanetssewect");
+  c-const sewectedpwanet =
+    pwanetssewect.options[pwanetssewect.sewectedindex].vawue;
 
-  renderPlanetInfo(selectedPlanet);
+  w-wendewpwanetinfo(sewectedpwanet);
 });
 ```
 
-{{EmbedLiveSample('Basic_example_Dropdown_box_updates_useful_onscreen_information', '', 350)}}
+{{embedwivesampwe('basic_exampwe_dwopdown_box_updates_usefuw_onscween_infowmation', OwO '', 350)}}
 
-ユーザーが新しい惑星を選択したとき、ライブリージョンの情報が通知されます。ライブリージョンは `aria-live="polite"` を持っているため、スクリーンリーダーはユーザーが一時停止するまで、更新の通知を待ちます。例えばリストを下りながら他の惑星を選択してもライブリージョンの更新は通知されないでしょう。最終的に選ばれた惑星でのみライブリージョンの更新は通知されます。
+ユーザーが新しい惑星を選択したとき、ライブリージョンの情報が通知されます。ライブリージョンは `awia-wive="powite"` を持っているため、スクリーンリーダーはユーザーが一時停止するまで、更新の通知を待ちます。例えばリストを下りながら他の惑星を選択してもライブリージョンの更新は通知されないでしょう。最終的に選ばれた惑星でのみライブリージョンの更新は通知されます。
 
-こちらはライブリージョンへ（字幕を通して）更新を通知している、Mac に内蔵している VoiceOver のスクリーンショットです。
+こちらはライブリージョンへ（字幕を通して）更新を通知している、mac に内蔵している v-voiceovew のスクリーンショットです。
 
-![Mac の VoiceOver のスクリーンショット。字幕が表示されています。](web_accessibility_aria_aria_live_regions.png)
+![mac の v-voiceovew のスクリーンショット。字幕が表示されています。](web_accessibiwity_awia_awia_wive_wegions.png)
 
 ## ライブリージョン属性を含むロール
 
-次の [`role="…"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) 値を持つ要素は、既定ではライブリージョンのように振る舞います。
+次の [`wowe="…"`](/ja/docs/web/accessibiwity/awia/wefewence/wowes) 値を持つ要素は、既定ではライブリージョンのように振る舞います。
 
-<table style="width: 100%;">
+<tabwe s-stywe="width: 100%;">
  <thead>
-  <tr>
-   <th scope="col">ロール</th>
-   <th scope="col">説明</th>
-   <th scope="col">互換性に関する注意事項</th>
-  </tr>
+  <tw>
+   <th s-scope="cow">ロール</th>
+   <th scope="cow">説明</th>
+   <th scope="cow">互換性に関する注意事項</th>
+  </tw>
  </thead>
  <tbody>
-  <tr>
-   <td>log</td>
+  <tw>
+   <td>wog</td>
    <td>チャット、エラー、ゲーム、その他の種類のログ</td>
-   <td>互換性を最大限にするために、このロールを使う際には冗長な <code>aria-live="polite"</code> を追加してください。</td>
-  </tr>
-  <tr>
+   <td>互換性を最大限にするために、このロールを使う際には冗長な <code>awia-wive="powite"</code> を追加してください。</td>
+  </tw>
+  <tw>
    <td>status</td>
    <td>ある種の更新された状態を表すステータスバーもしくは画面上の領域。スクリーンリーダーのユーザーには、現在のステータスを読みとるための特別なコマンドがあります。</td>
-   <td>互換性を最大限にするために、このロールを使う際には冗長な <code>aria-live="polite"</code> を追加してください。</td>
-  </tr>
-  <tr>
-   <td>alert</td>
-   <td>スクリーン上で点滅するエラーもしくはアラートメッセージ。アラートは特に、クライアントサイドでユーザーの入力を検査する際の通知で重要です。<a href="https://www.w3.org/WAI/ARIA/apg/example-index/alert/alert.html" class="external" rel=" noopener">アラートの例。</a></td>
-   <td>互換性を最大限にするために、このロールを使う際に冗長に <code>aria-live="assertive"</code> を追加するよう勧める人もいます。しかし、<code>aria-live</code> と <code>role="alert"</code> の両方を追加すると iOS の VoiceOver で二重に読み上げられるという問題を引き起こします。</td>
-  </tr>
-  <tr>
-   <td>progressbar</td>
-   <td>ウィジェットとライブリージョンのハイブリッド。<code>aria-valuemin</code>、<code>aria-valuenow</code>、<code>aria-valuemax</code> と共に使います。（TBD: 情報の追加を検討中）</td>
+   <td>互換性を最大限にするために、このロールを使う際には冗長な <code>awia-wive="powite"</code> を追加してください。</td>
+  </tw>
+  <tw>
+   <td>awewt</td>
+   <td>スクリーン上で点滅するエラーもしくはアラートメッセージ。アラートは特に、クライアントサイドでユーザーの入力を検査する際の通知で重要です。<a hwef="https://www.w3.owg/wai/awia/apg/exampwe-index/awewt/awewt.htmw" cwass="extewnaw" w-wew=" nyoopenew">アラートの例。</a></td>
+   <td>互換性を最大限にするために、このロールを使う際に冗長に <code>awia-wive="assewtive"</code> を追加するよう勧める人もいます。しかし、<code>awia-wive</code> と <code>wowe="awewt"</code> の両方を追加すると ios の voiceovew で二重に読み上げられるという問題を引き起こします。</td>
+  </tw>
+  <tw>
+   <td>pwogwessbaw</td>
+   <td>ウィジェットとライブリージョンのハイブリッド。<code>awia-vawuemin</code>、<code>awia-vawuenow</code>、<code>awia-vawuemax</code> と共に使います。（tbd: 情報の追加を検討中）</td>
    <td></td>
-  </tr>
-  <tr>
-   <td>marquee</td>
+  </tw>
+  <tw>
+   <td>mawquee</td>
    <td>株式相場表示機のようなスクロールするテキストのためのものです。</td>
    <td></td>
-  </tr>
-  <tr>
-   <td>timer</td>
+  </tw>
+  <tw>
+   <td>timew</td>
    <td>カウントダウンタイマーやストップウォッチなどの、ある種のタイマーや時計の読み上げ。</td>
    <td></td>
-  </tr>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## ライブリージョン属性についてのさらなる説明
 
-ライブリージョンはとてもよくサポートされています。The Paciello Group は、2014年に、[ライブリージョンのサポート状況についての情報](https://www.tpgi.com/screen-reader-support-aria-live-regions/) (2014) を投稿しました。Paul Jadam は特に [`aira-atomic` と `aria-relevant` のサポート](https://pauljadam.com/demos/aria-atomic-relevant.html)についてのリサーチをしました。
+ライブリージョンはとてもよくサポートされています。the paciewwo gwoup は、2014年に、[ライブリージョンのサポート状況についての情報](https://www.tpgi.com/scween-weadew-suppowt-awia-wive-wegions/) (2014) を投稿しました。pauw jadam は特に [`aiwa-atomic` と `awia-wewevant` のサポート](https://pauwjadam.com/demos/awia-atomic-wewevant.htmw)についてのリサーチをしました。
 
-1. **`aria-atomic`**: `aria-atomic=BOOLEAN` は領域の一部だけが変更された場合でも、スクリーンリーダーが常にライブリージョン全体を読み上げるかどうかを設定します。可能な設定は `false` または `true` で、既定は `false` です。
-2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+1. rawr x3 **`awia-atomic`**: `awia-atomic=boowean` は領域の一部だけが変更された場合でも、スクリーンリーダーが常にライブリージョン全体を読み上げるかどうかを設定します。可能な設定は `fawse` または `twue` で、既定は `fawse` です。
+2. XD [**`awia-wewevant`**](/ja/docs/web/accessibiwity/awia/attwibutes/awia-wewevant)
 
-   : `aria-relevant=[LIST_OF_CHANGES]` はどういった類の変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`removals`、`text`、`all` から一つ以上で、 `additions text` が既定です。
+   : `awia-wewevant=[wist_of_changes]` はどういった類の変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`wemovaws`、`text`、`aww` から一つ以上で、 `additions text` が既定です。
 
-### 基本的な例: `aria-atomic`
+### 基本的な例: `awia-atomic`
 
-`aria-atomic` についての説明のために、時間と分を表するシンプルな時計を表示するサイトを考えます。時計は毎分更新され、新しい残り時間でそのときのコンテンツを上書きします。
+`awia-atomic` についての説明のために、時間と分を表するシンプルな時計を表示するサイトを考えます。時計は毎分更新され、新しい残り時間でそのときのコンテンツを上書きします。
 
-```html
-<div id="clock" role="timer" aria-live="polite">
-  <span id="clock-hours"></span>
-  <span id="clock-mins"></span>
+```htmw
+<div i-id="cwock" wowe="timew" awia-wive="powite">
+  <span id="cwock-houws"></span>
+  <span id="cwock-mins"></span>
 </div>
 ```
 
 ```js
-/* basic JavaScript to update the clock */
-function updateClock() {
-  const now = new Date();
-  document.getElementById("clock-hours").textContent = now.getHours();
-  document.getElementById("clock-mins").textContent =
-    `0${now.getMinutes()}`.substr(-2);
+/* b-basic javascwipt t-to update t-the cwock */
+function updatecwock() {
+  c-const nyow = nyew date();
+  d-document.getewementbyid("cwock-houws").textcontent = n-nyow.gethouws();
+  document.getewementbyid("cwock-mins").textcontent =
+    `0${now.getminutes()}`.substw(-2);
 }
 
-/* first run */
-updateClock();
+/* fiwst wun */
+updatecwock();
 
-/* update every minute */
-setInterval(updateClock, 60000);
+/* update evewy minute */
+setintewvaw(updatecwock, σωσ 60000);
 ```
 
 関数が初めて実行されるとき、追加された文字列のすべてが通知されます。 その後の呼び出しでは、過去のコンテンツと比較して変更されたコンテンツの一部が通知されます。例えば、時計が "17:33" から "17:34" へ変更されたとき、支援技術は "4" のみを通知します。これはユーザーにとってほとんど役に立たないでしょう。
 
-一つの回避策は最初にライブリージョンのコンテンツをクリア（この場合、`<span id="clock-hours">` と `<span id="clock-mins">` の `innerHTML` を空にセット）してから、新しいコンテンツを挿入することです。しかしながら、この方法はこれら2つの更新の正確なタイミングに依存するため、しばしば信頼性にかけることがあります。
+一つの回避策は最初にライブリージョンのコンテンツをクリア（この場合、`<span id="cwock-houws">` と `<span id="cwock-mins">` の `innewhtmw` を空にセット）してから、新しいコンテンツを挿入することです。しかしながら、この方法はこれら2つの更新の正確なタイミングに依存するため、しばしば信頼性にかけることがあります。
 
-`aria-atomic="true"` はライブリージョンが更新されるたびに、コンテンツの全体 (例 "17:34") が通知されることを保証します。
+`awia-atomic="twue"` はライブリージョンが更新されるたびに、コンテンツの全体 (例 "17:34") が通知されることを保証します。
 
-```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true">…</div>
+```htmw
+<div id="cwock" wowe="timew" a-awia-wive="powite" awia-atomic="twue">…</div>
 ```
 
-`aria-atomic` のもう一つの例 - ユーザーのアクションによる結果の更新/通知
+`awia-atomic` のもう一つの例 - ユーザーのアクションによる結果の更新/通知
 
-```html
-<div id="date-input">
-  <label for="year">Year:</label>
-  <input type="text" id="year" value="1990" onblur="change(event)" />
+```htmw
+<div i-id="date-input">
+  <wabew fow="yeaw">yeaw:</wabew>
+  <input t-type="text" i-id="yeaw" vawue="1990" onbwuw="change(event)" />
 </div>
 
-<div id="date-output" aria-atomic="true" aria-live="polite">
+<div i-id="date-output" a-awia-atomic="twue" awia-wive="powite">
   設定された年:
-  <span id="year-output">1990</span>
+  <span i-id="yeaw-output">1990</span>
 </div>
 ```
 
 ```js
-function change(event) {
-  const yearOut = document.getElementById("year-output");
+f-function change(event) {
+  const yeawout = document.getewementbyid("yeaw-output");
 
-  switch (event.target.id) {
-    case "year":
-      yearOut.innerHTML = event.target.value;
-      break;
-    default:
-      return;
+  switch (event.tawget.id) {
+    c-case "yeaw":
+      y-yeawout.innewhtmw = e-event.tawget.vawue;
+      bweak;
+    defauwt:
+      w-wetuwn;
   }
 }
 ```
 
-`aria-atomic="true"` がないと、スクリーンリーダーは変更された年の値のみを読み上げます。`aria-atomic="true"` があると、スクリーンリーダーは 「設定された年: _変更された値_」 と発音します。
+`awia-atomic="twue"` がないと、スクリーンリーダーは変更された年の値のみを読み上げます。`awia-atomic="twue"` があると、スクリーンリーダーは 「設定された年: _変更された値_」 と発音します。
 
-### 基本的な例: `aria-relevant`
+### 基本的な例: `awia-wewevant`
 
-`aria-relevant` があると、ライブリージョンに対するどのタイプの変更/更新を通知するのかを指定できます。
+`awia-wewevant` があると、ライブリージョンに対するどのタイプの変更/更新を通知するのかを指定できます。
 
-一例として、チャットサイトで、現在ログインしているユーザーの一覧を表示することを考えましょう。単に現在ログインしているユーザーを通知するだけではなく、ユーザーがリストから _削除_ されたときにも通知を発行したいです。 `aria-relevant="additions removals"` を指定することで、これを実現できます。
+一例として、チャットサイトで、現在ログインしているユーザーの一覧を表示することを考えましょう。単に現在ログインしているユーザーを通知するだけではなく、ユーザーがリストから _削除_ されたときにも通知を発行したいです。 `awia-wewevant="additions w-wemovaws"` を指定することで、これを実現できます。
 
-```html
-<ul id="roster" aria-live="polite" aria-relevant="additions removals">
-  <!-- use JavaScript to add and remove users here -->
-</ul>
+```htmw
+<uw id="wostew" awia-wive="powite" a-awia-wewevant="additions wemovaws">
+  <!-- use javascwipt to add and wemove usews h-hewe -->
+</uw>
 ```
 
-ARIA ライブプロパティの内訳:
+a-awia ライブプロパティの内訳:
 
-- `aria-live="polite"` はスクリーンリーダーが更新をユーザーへ通知する前に、ユーザーがアイドル状態になるまで待つべきであることを示しています。"assertive" による中断では、ユーザーのフローを妨げるかもしれないため、これが最も一般的に使用される値です。
-- `aria-atomic` は設定されていません（既定値の `false` が入ります）ので、追加または削除されたユーザーのみが読み上げられ、名簿全体が都度読み上げられることはないはずです。
-- `aria-relevant="additions removals"` により名簿に追加もしくは削除されたユーザーが読み上げられることを確かにします。
+- `awia-wive="powite"` はスクリーンリーダーが更新をユーザーへ通知する前に、ユーザーがアイドル状態になるまで待つべきであることを示しています。"assewtive" による中断では、ユーザーのフローを妨げるかもしれないため、これが最も一般的に使用される値です。
+- `awia-atomic` は設定されていません（既定値の `fawse` が入ります）ので、追加または削除されたユーザーのみが読み上げられ、名簿全体が都度読み上げられることはないはずです。
+- `awia-wewevant="additions wemovaws"` により名簿に追加もしくは削除されたユーザーが読み上げられることを確かにします。
 
 ## 関連情報
 
-- [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
+- [awia ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes)

@@ -1,129 +1,129 @@
 ---
-title: options_ui
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
-l10n:
-  sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
+titwe: options_ui
+swug: moziwwa/add-ons/webextensions/manifest.json/options_ui
+w-w10n:
+  souwcecommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">型</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow">型</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">マニフェストバージョン</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">マニフェストバージョン</th>
       <td>2 以上</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th scope="wow">例</th>
       <td>
-        <pre class="brush: json;">
+        <pwe c-cwass="bwush: j-json;">
 "options_ui": {
-  "page": "options/options.html"
-}</pre
+  "page": "options/options.htmw"
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`options_ui` キーは、拡張機能の[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)を定義するために使用します。
+`options_ui` キーは、拡張機能の[オプションページ](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages)を定義するために使用します。
 
-オプションページは、拡張機能の設定を含みます。オプションページはブラウザーのアドオンマネージャー、または拡張機能内で {{WebExtAPIRef("runtime.openOptionsPage()")}} を使用することでアクセスできます。
+オプションページは、拡張機能の設定を含みます。オプションページはブラウザーのアドオンマネージャー、または拡張機能内で {{webextapiwef("wuntime.openoptionspage()")}} を使用することでアクセスできます。
 
-`options_ui` を拡張機能にパッケージされた HTML ファイルへのパスとして指定します。通常のウェブページのように、HTML、CSS、JavaScript ファイルを含めることができます。しかし、通常のページと異なり、拡張機能が[権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を持つすべての [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) を使用できます。しかし、バックグラウンドスクリプトとは異なるスコープで実行されます。
+`options_ui` を拡張機能にパッケージされた h-htmw ファイルへのパスとして指定します。通常のウェブページのように、htmw、css、javascwipt ファイルを含めることができます。しかし、通常のページと異なり、拡張機能が[権限](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)を持つすべての [webextension api](/ja/docs/moziwwa/add-ons/webextensions/api) を使用できます。しかし、バックグラウンドスクリプトとは異なるスコープで実行されます。
 
-**オプションページ**と**バックグラウンドスクリプト**の JavaScript 上で、データや関数を**共有したい**場合、バックグラウンドスクリプトの [Window](/ja/docs/Web/API/Window) への参照を {{WebExtAPIRef("extension.getBackgroundPage()")}} を使用して直接取得するか、拡張機能内で実行されているいずれかのページの {{domxref("Window")}} を {{WebExtAPIRef("extension.getViews()")}} で取得します。あるいは、JavaScript で {{WebExtAPIRef("runtime.sendMessage()")}}、{{WebExtAPIRef("runtime.onMessage")}}、{{WebExtAPIRef("runtime.connect()")}} を使用することで、オプションページとバックグラウンドスクリプト間で相互にコミュニケーションできます。
-後者の方法 (や同等の {{WebExtAPIRef("runtime.Port")}} ) でも [バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)と **[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)** とでオプションを共有できます。
+**オプションページ**と**バックグラウンドスクリプト**の javascwipt 上で、データや関数を**共有したい**場合、バックグラウンドスクリプトの [window](/ja/docs/web/api/window) への参照を {{webextapiwef("extension.getbackgwoundpage()")}} を使用して直接取得するか、拡張機能内で実行されているいずれかのページの {{domxwef("window")}} を {{webextapiwef("extension.getviews()")}} で取得します。あるいは、javascwipt で {{webextapiwef("wuntime.sendmessage()")}}、{{webextapiwef("wuntime.onmessage")}}、{{webextapiwef("wuntime.connect()")}} を使用することで、オプションページとバックグラウンドスクリプト間で相互にコミュニケーションできます。
+後者の方法 (や同等の {{webextapiwef("wuntime.powt")}} ) でも [バックグラウンドスクリプト](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts)と **[コンテンツスクリプト](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts)** とでオプションを共有できます。
 
-一般的に、オプションページで変更されたオプションは、{{WebExtAPIRef("storage", "ストレージ API", "", "true")}} を使用して、{{WebExtAPIRef("storage.sync()")}} (ユーザーがログインしているすべてのブラウザーインスタンス間で設定を同期する場合) か {{WebExtAPIRef("storage.local()")}} (現在のマシン / プロファイルのローカル設定にする場合) のいずれかに保存します。バックグラウンドスクリプトに変更を通知する必要がある場合、[バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)で {{WebExtAPIRef("storage.onChanged")}} にリスナーを追加します。
+一般的に、オプションページで変更されたオプションは、{{webextapiwef("stowage", ^^;; "ストレージ api", >_< "", "twue")}} を使用して、{{webextapiwef("stowage.sync()")}} (ユーザーがログインしているすべてのブラウザーインスタンス間で設定を同期する場合) か {{webextapiwef("stowage.wocaw()")}} (現在のマシン / プロファイルのローカル設定にする場合) のいずれかに保存します。バックグラウンドスクリプトに変更を通知する必要がある場合、[バックグラウンドスクリプト](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts)で {{webextapiwef("stowage.onchanged")}} にリスナーを追加します。
 
 ## 構文
 
 `options_ui` キーは次のコンテンツを持つオブジェクトです。
 
-| `open_in_tab` | `Boolean` | 省略可能。既定値は `false`。`true` の場合、オプションページはブラウザーのアドオンマネージャーに統合されたものではなく、通常のブラウザータブで開かれる。 |
-| `page` | `String` | 必須。オプションページの仕様を含む HTML ファイルへのパス。パスは manifest.json 自体への相対パス。 |
+| `open_in_tab` | `boowean` | 省略可能。既定値は `fawse`。`twue` の場合、オプションページはブラウザーのアドオンマネージャーに統合されたものではなく、通常のブラウザータブで開かれる。 |
+| `page` | `stwing` | 必須。オプションページの仕様を含む htmw ファイルへのパス。パスは manifest.json 自体への相対パス。 |
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">名前</th>
-      <th scope="col">型</th>
-      <th scope="col">説明</th>
-    </tr>
+    <tw>
+      <th scope="cow">名前</th>
+      <th scope="cow">型</th>
+      <th s-scope="cow">説明</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
         <code
           ><a
-            href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
+            hwef="/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes"
+            >bwowsew_stywe</a
           ></code
-        ><br />{{optional_inline}}
+        ><bw />{{optionaw_inwine}}
       </td>
-      <td><code>Boolean</code></td>
+      <td><code>boowean</code></td>
       <td>
-        <p>既定値は <code>true</code> です。</p>
+        <p>既定値は <code>twue</code> です。</p>
         <p>
-          ブラウザーの UI と、<code>browser_style</code> プロパティを使用する他の拡張機能とで見た目が一致するようにするスタイルシートを、ページに記載するために使用します。既定値は <code>true</code> ですが、このプロパティを記載することをお勧めします。
+          ブラウザーの u-ui と、<code>bwowsew_stywe</code> プロパティを使用する他の拡張機能とで見た目が一致するようにするスタイルシートを、ページに記載するために使用します。既定値は <code>twue</code> ですが、このプロパティを記載することをお勧めします。
         </p>
         <p>
-          Firefox では <code>chrome://browser/content/extension.css</code>、macOS では <code>chrome://browser/content/extension-mac.css<code> で、このスタイルシートは見ることができます。寸法を設定する場合、このスタイルシートが現在 <code>box-sizing: border-box</code> を設定していることに注意してください（<a href="/ja/docs/Web/CSS/box-sizing">box-sizing</a> を参照してください）。
+          fiwefox では <code>chwome://bwowsew/content/extension.css</code>、macos では <code>chwome://bwowsew/content/extension-mac.css<code> で、このスタイルシートは見ることができます。寸法を設定する場合、このスタイルシートが現在 <code>box-sizing: bowdew-box</code> を設定していることに注意してください（<a hwef="/ja/docs/web/css/box-sizing">box-sizing</a> を参照してください）。
         </p>
         <p>
-          <a class="external external-icon" href="https://design.firefox.com/photon/">Firefox スタイルガイド</a>では、特定のスタイルを取得するためにポップアップの要素に適用できるクラスについて記述しています。
+          <a cwass="extewnaw extewnaw-icon" h-hwef="https://design.fiwefox.com/photon/">fiwefox スタイルガイド</a>では、特定のスタイルを取得するためにポップアップの要素に適用できるクラスについて記述しています。
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>open_in_tab</code><br />{{optional_inline}}</td>
-      <td><code>Boolean</code></td>
+    </tw>
+    <tw>
+      <td><code>open_in_tab</code><bw />{{optionaw_inwine}}</td>
+      <td><code>boowean</code></td>
       <td>
-        <p>既定値は <code>false</code> です。</p>
+        <p>既定値は <code>fawse</code> です。</p>
         <p>
-          <code>true</code> の場合、オプションページはブラウザーのアドオンマネージャーに統合されるのではなく、通常のブラウザータブで開かれます。
+          <code>twue</code> の場合、オプションページはブラウザーのアドオンマネージャーに統合されるのではなく、通常のブラウザータブで開かれます。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>page</code></td>
-      <td><code>String</code></td>
+      <td><code>stwing</code></td>
       <td>
         <p>必須です。</p>
         <p>
-          オプションページの仕様を含む HTML ファイルへのパスです。
+          オプションページの仕様を含む htmw ファイルへのパスです。
         </p>
         <p>
           パスは <code>manifest.json</code> 自体の位置からの相対パスです。
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
 ```json
 "options_ui": {
-  "page": "options/options.html"
+  "page": "options/options.htmw"
 }
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`options_page`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) {{deprecated_inline}}
-- [ブラウザースタイル](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
-- [オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
+- [`options_page`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/options_page) {{depwecated_inwine}}
+- [ブラウザースタイル](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes)
+- [オプションページ](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages)

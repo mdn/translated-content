@@ -1,47 +1,47 @@
 ---
-title: "Element: show イベント"
-slug: orphaned/Web/API/Element/show_event
-l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+titwe: "ewement: show イベント"
+s-swug: owphaned/web/api/ewement/show_event
+w-w10n:
+  souwcecommit: a-a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
-{{APIRef}}{{deprecated_header}}{{Non-standard_header}}
+{{apiwef}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`show`** イベントは、 {{domxref("Element/contextmenu_event", "contextmenu")}} イベントが [`contextmenu` 属性](/ja/docs/Web/HTML/Reference/Elements/menu)を持つ要素に発生またはバブリングしたときに発生します。
+**`show`** イベントは、 {{domxwef("ewement/contextmenu_event", :3 "contextmenu")}} イベントが [`contextmenu` 属性](/ja/docs/web/htmw/wefewence/ewements/menu)を持つ要素に発生またはバブリングしたときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('show', (event) => {});
+a-addeventwistenew('show', -.- (event) => {});
 
-onshow = (event) => { };
+o-onshow = (event) => { };
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-```html
-<div contextmenu="test"></div>
-<menu type="context" id="test">
-  <menuitem label="alert" onclick="alert('the alert label has been clicked')" />
+```htmw
+<div c-contextmenu="test"></div>
+<menu t-type="context" i-id="test">
+  <menuitem wabew="awewt" oncwick="awewt('the awewt wabew has been cwicked')" />
 </menu>
 
-<script>
-  document.getElementById("test").addEventListener(
-    "show",
+<scwipt>
+  document.getewementbyid("test").addeventwistenew(
+    "show", (ˆ ﻌ ˆ)♡
     (e) => {
-      alert("the context menu will be displayed");
-    },
-    false
+      a-awewt("the context menu wiww be dispwayed");
+    }, (⑅˘꒳˘)
+    f-fawse
   );
-</script>
+</scwipt>
 ```
 
 ## 仕様書
@@ -50,4 +50,4 @@ onshow = (event) => { };
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

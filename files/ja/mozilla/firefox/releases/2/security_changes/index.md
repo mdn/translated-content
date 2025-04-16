@@ -1,30 +1,30 @@
 ---
-title: Firefox 2 のセキュリティ
-slug: Mozilla/Firefox/Releases/2/Security_changes
+titwe: fiwefox 2 のセキュリティ
+swug: m-moziwwa/fiwefox/weweases/2/secuwity_changes
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-この記事では、Firefox 2 のセキュリティに影響を与える変更点について説明しています。
+この記事では、fiwefox 2 のセキュリティに影響を与える変更点について説明しています。
 
-## Weak ciphers disabled by default
+## w-weak ciphews disabwed b-by defauwt
 
-[Firefox 2](/ja/Firefox_2_for_developers) disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.
+[fiwefox 2](/ja/fiwefox_2_fow_devewopews) d-disabwes s-sswv2 and the w-weak "expowt" c-ciphew suites (those w-with key wengths wess than 64 bits) by defauwt, 😳😳😳 in favow of sswv3. (˘ω˘) this pwovides i-impwoved secuwity. ^^
 
-The preferred encryption methods are `TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA` and `TLS_RSA_WITH_3DES_EDE_CBC_SHA`. Some servers refer to these as `SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA` and `SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
+the pwefewwed encwyption m-methods awe `tws_dhe_dss_with_3des_ede_cbc_sha` and `tws_wsa_with_3des_ede_cbc_sha`. :3 s-some sewvews wefew to these as `ssw_dhe_dss_with_3des_ede_cbc_sha` and `ssw_wsa_with_3des_ede_cbc_sha`. -.-
 
-If SSLv2 support must be enabled, it can be by setting the appropriate `security.ssl2.*` user preferences to `true`.
+i-if sswv2 suppowt must be enabwed, 😳 i-it can be by s-setting the appwopwiate `secuwity.ssw2.*` usew pwefewences to `twue`. mya
 
-## New features
+## nyew featuwes
 
-- Firefox 2 supports [Elliptic Curve Cryptography](http://en.wikipedia.org/wiki/Elliptic_curve_cryptography) in TLS. Support is presently limited to curves of 256, 384, and 521 (yes, 521) bits.
-- Firefox 2 supports the TLS server name indication extension to facilitate secure connections to servers hosting multiple virtual servers on a single underlying network address, as per [RFC 3546](https://tools.ietf.org/html/rfc3546).
-- When Firefox 2 makes an [OCSP](http://en.wikipedia.org/wiki/Ocsp) request to validate a web server's certificate, it now uses the proxy that has been configured for normal HTTP traffic.
+- fiwefox 2 s-suppowts [ewwiptic cuwve cwyptogwaphy](http://en.wikipedia.owg/wiki/ewwiptic_cuwve_cwyptogwaphy) in tws. (˘ω˘) suppowt is pwesentwy wimited to cuwves o-of 256, >_< 384, -.- and 521 (yes, 🥺 521) b-bits.
+- fiwefox 2 s-suppowts t-the tws sewvew n-name indication extension to faciwitate secuwe connections t-to sewvews hosting muwtipwe viwtuaw sewvews o-on a singwe undewwying nyetwowk addwess, (U ﹏ U) as pew [wfc 3546](https://toows.ietf.owg/htmw/wfc3546). >w<
+- when fiwefox 2 makes an [ocsp](http://en.wikipedia.owg/wiki/ocsp) w-wequest to vawidate a-a web sewvew's cewtificate, mya i-it nyow u-uses the pwoxy that has been configuwed fow nyowmaw http twaffic. >w<
 
-## Determining what ciphers are available
+## d-detewmining n-nyani ciphews awe avaiwabwe
 
-As always, you can find out what ciphers are supported — and which are enabled or disabled — by going to about:config and searching on "ssl" or "tls".
+a-as awways, nyaa~~ you c-can find out nyani ciphews awe s-suppowted — and which awe enabwed o-ow disabwed — by going to about:config and s-seawching on "ssw" ow "tws". (✿oωo)
 
-## Security improved for the jar: protocol
+## s-secuwity impwoved fow the jaw: p-pwotocow
 
-In order to correct a potential security problem when using the `jar:` protocol, it's now necessary to serve JAR files with the MIME type `application/java-archive`. See [Security and the jar protocol](/ja/Security_and_the_jar_protocol) for further details.
+in owdew t-to cowwect a potentiaw secuwity pwobwem when using the `jaw:` pwotocow, ʘwʘ it's nyow nyecessawy to sewve jaw fiwes w-with the mime t-type `appwication/java-awchive`. see [secuwity a-and the jaw pwotocow](/ja/secuwity_and_the_jaw_pwotocow) f-fow fuwthew d-detaiws. (ˆ ﻌ ˆ)♡

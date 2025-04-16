@@ -1,81 +1,81 @@
 ---
-title: 参考文献
-slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
-original_slug: Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
-l10n:
-  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
+titwe: 参考文献
+swug: web/xmw/xswt/guides/twansfowming_xmw_with_xswt/fow_fuwthew_weading
+o-owiginaw_swug: web/xswt/guides/twansfowming_xmw_with_xswt/fow_fuwthew_weading
+w-w10n:
+  s-souwcecommit: e-e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-[« XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
+[« x-xswt による x-xmw の変換](/ja/docs/web/xmw/xswt/guides/twansfowming_xmw_with_xswt)
 
 ## 印刷物
 
 ### 書籍
 
-- **XSLT: Programmer's Reference, Second Edition**
+- **xswt: p-pwogwammew's w-wefewence, (⑅˘꒳˘) second edition**
 
-  - **著者**: Michael H. Kay
+  - **著者**: michaew h. /(^•ω•^) kay
   - **ページ数**: 992 pages
-  - **出版社**: Wrox; 2 edition (May 3, 2001)
-  - **ISBN**: 0764543814
+  - **出版社**: wwox; 2 e-edition (may 3, rawr x3 2001)
+  - **isbn**: 0764543814
 
-    - Michael Kay は W3C XSL ワーキンググループのメンバーであり、オープンソース XSLT プロセッサーである Saxon の開発者です。彼はまた、このテーマに関する第 2 版に達した唯一の本の著者でもあります。これは XSLT ストーリーのすべての可能なベースを網羅している非常に大きな本です。うまくレイアウトされています。
+    - michaew kay は w3c x-xsw ワーキンググループのメンバーであり、オープンソース xswt プロセッサーである s-saxon の開発者です。彼はまた、このテーマに関する第 2 版に達した唯一の本の著者でもあります。これは xswt ストーリーのすべての可能なベースを網羅している非常に大きな本です。うまくレイアウトされています。
 
-<https://www.amazon.com/XSLT-Programmers-Reference-Programmer/dp/0764543814>
+<https://www.amazon.com/xswt-pwogwammews-wefewence-pwogwammew/dp/0764543814>
 
-- **XSLT**
+- **xswt**
 
-  - **著者**: Doug Tidwell
+  - **著者**: doug tidweww
   - **ページ数**: 473 pages
-  - **出版社**: O'Reilly Media; 1 edition (August 15, 2001)
-  - **ISBN**: 0596000537
+  - **出版社**: o-o'weiwwy media; 1 edition (august 15, (U ﹏ U) 2001)
+  - **isbn**: 0596000537
 
-    - Doug Tidwell は IBM の上級開発者であり、一般に XML 技術の著名なエバンジェリストです。彼は IBM の幅広い XML 開発者サイトで、XML のさまざまな側面に関するいくつかの記事とチュートリアルの著者です。この本はマイケル・ケイのものよりもいくぶん包括的ではありませんが、基礎をうまくカバーし、興味深い例を提供しています。
+    - d-doug t-tidweww は ibm の上級開発者であり、一般に xmw 技術の著名なエバンジェリストです。彼は ibm の幅広い xmw 開発者サイトで、xmw のさまざまな側面に関するいくつかの記事とチュートリアルの著者です。この本はマイケル・ケイのものよりもいくぶん包括的ではありませんが、基礎をうまくカバーし、興味深い例を提供しています。
 
-<https://www.amazon.com/Xslt-Doug-Tidwell/dp/0596000537>
+<https://www.amazon.com/xswt-doug-tidweww/dp/0596000537>
 
-- **Learning XML, Second Edition**
+- **weawning xmw, (U ﹏ U) second edition**
 
-  - **著者**: Erik T. Ray
+  - **著者**: e-ewik t. way
   - **ページ数**: 432 pages
-  - **出版社**: O'Reilly Media; 2 edition (September 22, 2003)
-  - **ISBN**: 0596004206
+  - **出版社**: o'weiwwy media; 2 edition (septembew 22, 2003)
+  - **isbn**: 0596004206
 
-    - タイトルが示すように、これは一般的に XML の概要です。第 6 章は特に XSLT に専念しています。
+    - タイトルが示すように、これは一般的に xmw の概要です。第 6 章は特に x-xswt に専念しています。
 
-<https://www.amazon.com/gp/product/0596004206>
+<https://www.amazon.com/gp/pwoduct/0596004206>
 
 ## デジタル
 
 ### ウェブサイト
 
-- **World Wide Web Consortium**
+- **wowwd wide w-web consowtium**
 
-  - **W3C ホームページ**: <https://www.w3.org>
-  - **メインの XSL ページ**: <https://www.w3.org/Style/XSL/>
-  - **XSLT specifications overview**: <https://www.w3.org/TR/xslt/>
-  - **Archive of public style (CSS and XSLT) discussions**: [https://lists.w3.org/Archives/Public/www-style/](https://lists.w3.org/Archives/Public/www-style/)
-  - **XPath specifications overview**: <https://www.w3.org/TR/xpath/>
+  - **w3c ホームページ**: <https://www.w3.owg>
+  - **メインの x-xsw ページ**: <https://www.w3.owg/stywe/xsw/>
+  - **xswt s-specifications o-ovewview**: <https://www.w3.owg/tw/xswt/>
+  - **awchive of pubwic stywe (css and xswt) discussions**: [https://wists.w3.owg/awchives/pubwic/www-stywe/](https://wists.w3.owg/awchives/pubwic/www-stywe/)
+  - **xpath s-specifications ovewview**: <https://www.w3.owg/tw/xpath/>
 
-    - World Wide Web Consortium は、多くがデファクトスタンダードとなる多くのウェブベースの技術のための勧告を公表する機関です。
+    - wowwd w-wide web consowtium は、多くがデファクトスタンダードとなる多くのウェブベースの技術のための勧告を公表する機関です。
 
 ### 記事
 
-- [Hands-on XSL](https://developer.ibm.com/technologies/web-development/) by Don R. Day
-- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) by G. Ken Holman
+- [hands-on xsw](https://devewopew.ibm.com/technowogies/web-devewopment/) by don w. (⑅˘꒳˘) day
+- [nani is xswt?](https://www.xmw.com/pub/a/2000/08/howman/index.htmw) by g. òωó ken howman
 
 ### チュートリアル/例
 
-- [Jeni's XSLT Pages](https://www.jenitennison.com/xslt/)
-- [XMLPitstop.com](https://web.archive.org/web/20211209064736/https://www.xmlpitstop.com/default_datatype_SSC.html)
-- [XSL Tutorial](https://nwalsh.com/docs/tutorials/xsl/)
+- [jeni's x-xswt pages](https://www.jenitennison.com/xswt/)
+- [xmwpitstop.com](https://web.awchive.owg/web/20211209064736/https://www.xmwpitstop.com/defauwt_datatype_ssc.htmw)
+- [xsw t-tutowiaw](https://nwawsh.com/docs/tutowiaws/xsw/)
 
 ### その他
 
-- [Extensible Stylesheet Language (XSL)](https://xml.coverpages.org/xsl.html)
-- **XSL-List**
+- [extensibwe s-stywesheet w-wanguage (xsw)](https://xmw.covewpages.owg/xsw.htmw)
+- **xsw-wist**
 
-  - **参加**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
-  - **アーカイブ**: <https://www.biglist.com/lists/xsl-list/archives/>
+  - **参加**: <https://www.muwbewwytech.com/xsw/xsw-wist/index.htmw>
+  - **アーカイブ**: <https://www.bigwist.com/wists/xsw-wist/awchives/>

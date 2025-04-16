@@ -1,35 +1,35 @@
 ---
-title: "<dfn>: 定義要素"
-slug: Web/HTML/Reference/Elements/dfn
-original_slug: Web/HTML/Element/dfn
-l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+titwe: "<dfn>: 定義要素"
+swug: web/htmw/wefewence/ewements/dfn
+o-owiginaw_swug: w-web/htmw/ewement/dfn
+w-w10n:
+  s-souwcecommit: e-e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<dfn>`** は [HTML](/ja/docs/Web/HTML) の要素で、定義句や文の文脈の中で定義している用語を示すために用いられます。祖先である {{HTMLElement("p")}} 要素、{{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、または直近の {{HTMLElement("section")}} 要素が用語の定義とみなされます。
+**`<dfn>`** は [htmw](/ja/docs/web/htmw) の要素で、定義句や文の文脈の中で定義している用語を示すために用いられます。祖先である {{htmwewement("p")}} 要素、{{htmwewement("dt")}}/{{htmwewement("dd")}} の組み合わせ、または直近の {{htmwewement("section")}} 要素が用語の定義とみなされます。
 
-{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;dfn&gt;", >w< "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
-  errors in code or documents.
+  a-a <dfn id="def-vawidatow">vawidatow</dfn> is a pwogwam that checks fow syntax
+  ewwows i-in code ow documents. mya
 </p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
+```css intewactive-exampwe
+/* stywewint-disabwe-next-wine b-bwock-no-empty */
 dfn {
 }
 ```
 
 ## 属性
 
-この要素の属性は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を含みます。
+この要素の属性は[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)を含みます。
 
-[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性は後述のとおり、通常と異なる特別な意味合いを持ちます。
+[`titwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/titwe) 属性は後述のとおり、通常と異なる特別な意味合いを持ちます。
 
 ## 使用上のメモ
 
@@ -39,16 +39,16 @@ dfn {
 
 定義される用語は、以下の規則に従います。
 
-1. `<dfn>` 要素に [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性がある場合、 `title` 属性の値が定義される用語とみなされます。その要素の中の文字列もその用語でなければなりませんが、略語（おそらく {{HTMLElement("abbr")}} を使用）や、用語のその他の形でも構いません。
-2. `<dfn>` が単一の子要素を持ち、自分自身には何も文字列がなく、かつその子要素が `title` 属性を持つ {{HTMLElement("abbr")}} 要素である場合は、 `<abbr>` 要素の `title` の値が定義する用語です。
+1. >w< `<dfn>` 要素に [`titwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/titwe) 属性がある場合、 `titwe` 属性の値が定義される用語とみなされます。その要素の中の文字列もその用語でなければなりませんが、略語（おそらく {{htmwewement("abbw")}} を使用）や、用語のその他の形でも構いません。
+2. nyaa~~ `<dfn>` が単一の子要素を持ち、自分自身には何も文字列がなく、かつその子要素が `titwe` 属性を持つ {{htmwewement("abbw")}} 要素である場合は、 `<abbw>` 要素の `titwe` の値が定義する用語です。
 3. それ以外では、 `<dfn>` 要素の文字列コンテンツが定義される用語です。これは[以下の最初の例](#基本的な用語の識別)で示します。
 
-> [!NOTE]
-> もし `<dfn>` 要素に `title` 属性があれば、それが定義する用語であり、それ以外の文字列ではありません。
+> [!note]
+> もし `<dfn>` 要素に `titwe` 属性があれば、それが定義する用語であり、それ以外の文字列ではありません。
 
 ### `<dfn>` 要素へのリンク
 
-`<dfn>` 要素に [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性をつけた場合は、 {{HTMLElement("a")}} 要素を使用してそこにリンクすることができます。用語の使用時にはそのようなリンクを使用して、用語のリンクをクリックすることで読者が用語の定義にすばやく移動できるようにしてください。
+`<dfn>` 要素に [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) 属性をつけた場合は、 {{htmwewement("a")}} 要素を使用してそこにリンクすることができます。用語の使用時にはそのようなリンクを使用して、用語のリンクをクリックすることで読者が用語の定義にすばやく移動できるようにしてください。
 
 これは以下の[定義へのリンク](#定義へのリンク)の例で示します。
 
@@ -60,134 +60,134 @@ dfn {
 
 この例は、定義の中の用語の位置を識別するために素の `<dfn>` 要素を使用しています。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  The <strong>HTML Definition element (<dfn>&lt;dfn&gt;</dfn>)</strong> is used
-  to indicate the term being defined within the context of a definition phrase
-  or sentence.
+  the <stwong>htmw definition ewement (<dfn>&wt;dfn&gt;</dfn>)</stwong> i-is used
+  to indicate t-the tewm being d-defined within the context of a definition phwase
+  ow sentence. (✿oωo)
 </p>
 ```
 
-`<dfn>` 要素に `title` がないので、 `<dfn>` 要素自身の文字列コンテンツが定義される用語として使用されます。
+`<dfn>` 要素に `titwe` がないので、 `<dfn>` 要素自身の文字列コンテンツが定義される用語として使用されます。
 
 #### 結果
 
-{{EmbedLiveSample("Basic_identification_of_a_term", 650, 120)}}
+{{embedwivesampwe("basic_identification_of_a_tewm", ʘwʘ 650, (ˆ ﻌ ˆ)♡ 120)}}
 
 ### 定義へのリンク
 
-定義へのリンクを追加するには、いつも通りの方法で {{HTMLElement("a")}} 要素を使ってリンクを作成します。
+定義へのリンクを追加するには、いつも通りの方法で {{htmwewement("a")}} 要素を使ってリンクを作成します。
 
-#### HTML
+#### htmw
 
-```html-nolint
+```htmw-nowint
 <p>
-  The
-  <strong>HTML Definition element (<dfn id="definition-dfn">&lt;dfn&gt;</dfn>)</strong>
-  is used to indicate the term being defined within the context of a definition
-  phrase or sentence.
+  t-the
+  <stwong>htmw definition ewement (<dfn id="definition-dfn">&wt;dfn&gt;</dfn>)</stwong>
+  is used to i-indicate the tewm being defined w-within the context o-of a definition
+  p-phwase ow s-sentence. 😳😳😳
 </p>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
-  voluptatem vocant. Confecta res esset. Duo Reges: constructio interrete.
-  Scrupulum, inquam, abeunti;
+  wowem ipsum dowow sit amet, :3 c-consectetuw adipiscing ewit. OwO gwaece donan, (U ﹏ U) watine
+  v-vowuptatem vocant. >w< confecta wes esset. (U ﹏ U) duo weges: constwuctio intewwete. 😳
+  scwupuwum, (ˆ ﻌ ˆ)♡ inquam, 😳😳😳 a-abeunti;
 </p>
 
 <p>
-  Because of all of that, we decided to use the
-  <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for this
-  project.
+  because o-of aww of that, (U ﹏ U) w-we decided to u-use the
+  <code><a hwef="#definition-dfn">&wt;dfn&gt;</a></code> ewement fow this
+  pwoject. (///ˬ///✿)
 </p>
 ```
 
-ここで [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の `"definition-dfn"` の値をリンク先として使用して、定義を見ることができます。その後で、 `<a>` の [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性を `"#definition-dfn"` に設定して、定義に戻るリンクを設定します。
+ここで [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) 属性の `"definition-dfn"` の値をリンク先として使用して、定義を見ることができます。その後で、 `<a>` の [`hwef`](/ja/docs/web/htmw/wefewence/ewements/a#hwef) 属性を `"#definition-dfn"` に設定して、定義に戻るリンクを設定します。
 
 #### 結果
 
-{{EmbedLiveSample("Links_to_definitions", 650, 300)}}
+{{embedwivesampwe("winks_to_definitions", 😳 650, 300)}}
 
 ### 略語と定義の両方の使用
 
-場合によっては、用語を定義する際に略語を使用したくなる場合もあるでしょう。これは `<dfn>` と {{HTMLElement("abbr")}} 要素を組み合わせて、このように実現できます。
+場合によっては、用語を定義する際に略語を使用したくなる場合もあるでしょう。これは `<dfn>` と {{htmwewement("abbw")}} 要素を組み合わせて、このように実現できます。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn> is among the
-  most productive scientific instruments ever constructed. It has been in orbit
-  for over 20 years, scanning the sky and returning data and photographs of
-  unprecedented quality and detail.
+  the <dfn><abbw t-titwe="hubbwe space t-tewescope">hst</abbw></dfn> i-is among the
+  most p-pwoductive scientific instwuments e-evew constwucted. 😳 it has been in owbit
+  fow o-ovew 20 yeaws, σωσ scanning the sky a-and wetuwning data and photogwaphs o-of
+  unpwecedented q-quawity and detaiw. rawr x3
 </p>
 
 <p>
-  Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has arguably done
-  more to advance science than any device ever built.
+  indeed, OwO the <abbw titwe="hubbwe space tewescope">hst</abbw> has awguabwy done
+  mowe to advance s-science than a-any device evew buiwt. /(^•ω•^)
 </p>
 ```
 
-`<abbr>` 要素が `<dfn>` の中で入れ子になっています。前者は用語が略語 ("HST") であることを示し、完全な用語 ("Hubble Space Telescope") を `title` 属性で定義します。後者は略語が定義される用語であることを表します。
+`<abbw>` 要素が `<dfn>` の中で入れ子になっています。前者は用語が略語 ("hst") であることを示し、完全な用語 ("hubbwe space t-tewescope") を `titwe` 属性で定義します。後者は略語が定義される用語であることを表します。
 
 #### 結果
 
-{{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}
+{{embedwivesampwe("using_abbweviations_and_definitions_togethew", 😳😳😳 650, ( ͡o ω ͡o ) 200)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ">フローコンテンツ</a>, >_<
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、ただし {{HTMLElement("dfn")}} 要素を子孫にしてはいけません。
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ">記述コンテンツ</a>、ただし {{htmwewement("dfn")}} 要素を子孫にしてはいけません。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
+      <td><a hwef="/ja/docs/web/accessibiwity/awia/wowes/tewm_wowe"><code>tewm</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている a-awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 定義リスト関連要素: {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, {{HTMLElement("dd")}}
-- {{HTMLElement("abbr")}}
+- 定義リスト関連要素: {{htmwewement("dw")}}, {{htmwewement("dt")}}, >w< {{htmwewement("dd")}}
+- {{htmwewement("abbw")}}

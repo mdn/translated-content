@@ -1,56 +1,56 @@
 ---
-title: storage.StorageChange
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
+titwe: stowage.stowagechange
+swug: moziwwa/add-ons/webextensions/api/stowage/stowagechange
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`StorageChange` はストレージ領域の変更を表すオブジェクトです。
+`stowagechange` はストレージ領域の変更を表すオブジェクトです。
 
 ## 型
 
-`StorageChange` オブジェクトは以下のプロパティを持ちます。
+`stowagechange` オブジェクトは以下のプロパティを持ちます。
 
-- `oldValue`{{optional_inline}}
+- `owdvawue`{{optionaw_inwine}}
   - : アイテムの変更前の値が存在すれば、この中に入ります。データ型は特定されておらず、何らかのデータ型が入ります。
-- `newValue`{{optional_inline}}
+- `newvawue`{{optionaw_inwine}}
   - : アイテムの変更後の値があれば、この中に入ります。データ型は特定されておらず、何らかのデータ型が入ります。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は chwomium の [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage) a-api に基づいています。また、このドキュメントは [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) における chwomium のコードに基づいています。micwosoft e-edge での実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは c-cweative c-commons attwibution 3.0 united s-states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. mya aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, nyaa~~ with ow w-without
+// modification, (✿oωo) awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, ʘwʘ this wist of conditions and the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, 😳😳😳 this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow o-othew matewiaws pwovided with the
+// distwibution. :3
+//    * n-nyeithew the nyame of googwe inc. OwO nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the copywight howdews and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, >w< incwuding, (U ﹏ U) b-but not
+// wimited t-to, 😳 the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in nyo e-event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, 😳😳😳 indiwect, i-incidentaw, (U ﹏ U)
+// speciaw, (///ˬ///✿) exempwawy, 😳 ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, pwocuwement of substitute g-goods ow sewvices; w-woss of use, σωσ
+// data, rawr x3 ow pwofits; o-ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, OwO whethew in contwact, /(^•ω•^) s-stwict wiabiwity, 😳😳😳 ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, ( ͡o ω ͡o ) e-even if advised o-of the possibiwity o-of such damage.
 -->

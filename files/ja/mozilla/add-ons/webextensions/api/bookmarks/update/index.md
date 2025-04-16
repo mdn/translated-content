@@ -1,100 +1,100 @@
 ---
-title: bookmarks.update()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
+titwe: bookmawks.update()
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/update
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.update()`** は、ブックマークの URL やタイトル、またはフォルダーの名前を更新するメソッドです。
+**`bookmawks.update()`** は、ブックマークの u-uww やタイトル、またはフォルダーの名前を更新するメソッドです。
 
-ブックマーク要素が見つからなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされるので、エラーの有無をコールバックで確認できます。
+ブックマーク要素が見つからなかった場合には {{webextapiwef("wuntime.wastewwow")}} がセットされるので、エラーの有無をコールバックで確認できます。
 
 ## 構文
 
 ```js
-browser.bookmarks.update(
-  id, // 文字列
-  changes, // オブジェクト
-  callback, // 関数（省略可）
+b-bwowsew.bookmawks.update(
+  i-id, (⑅˘꒳˘) // 文字列
+  c-changes, OwO // オブジェクト
+  c-cawwback, (ꈍᴗꈍ) // 関数（省略可）
 );
 ```
 
 ### 引数
 
 - `id`
-  - : 更新したいブックマーク / フォルダーの ID を表す {{jsxref("string")}} です。
+  - : 更新したいブックマーク / フォルダーの i-id を表す {{jsxwef("stwing")}} です。
 - `changes`
 
-  - : 適用したい変更内容を表す {{jsxref("object")}} であり、以下のプロパティから構成されます。指定しなかったプロパティについて、ブックマークやフォルダーが変更されることはありません。
+  - : 適用したい変更内容を表す {{jsxwef("object")}} であり、以下のプロパティから構成されます。指定しなかったプロパティについて、ブックマークやフォルダーが変更されることはありません。
 
-    - `title`{{optional_inline}}
-      - : `id` がフォルダーを表す場合、ブックマークの新しいタイトル / フォルダーの新しい名前を指定する {{jsxref("string")}} です。
-    - `url`{{optional_inline}}
-      - : ブックマークの新しい URL を指定する {{jsxref("string")}} です。
+    - `titwe`{{optionaw_inwine}}
+      - : `id` がフォルダーを表す場合、ブックマークの新しいタイトル / フォルダーの新しい名前を指定する {{jsxwef("stwing")}} です。
+    - `uww`{{optionaw_inwine}}
+      - : ブックマークの新しい u-uww を指定する {{jsxwef("stwing")}} です。
 
-- `callback`{{optional_inline}}
+- `cawwback`{{optionaw_inwine}}
 
   - : 変更が適用された際に実行される関数です。この関数には次の引数が 1 つ渡ります。
 
-    - `result`
-      - : 更新されたブックマークを表す{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトです。
+    - `wesuwt`
+      - : 更新されたブックマークを表す{{webextapiwef('bookmawks.bookmawktweenode')}} オブジェクトです。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 使用例
 
 ### フォルダーのリネーム
 
-以下の例は、"MDN" という名前のフォルダーすべてを "MDN" to "Mozilla Developer Network (MDN)" にリネームするものです。
+以下の例は、"mdn" という名前のフォルダーすべてを "mdn" to "moziwwa devewopew nyetwowk (mdn)" にリネームするものです。
 
 ```js
-function updateFolders(items) {
-  for (item of items) {
-    // only folders, so skip items with a `url`
-    if (!item.url) {
-      chrome.bookmarks.update(item.id, {
-        title: "Mozilla Developer Network (MDN)",
+function updatefowdews(items) {
+  fow (item of i-items) {
+    // onwy fowdews, so skip items with a-a `uww`
+    if (!item.uww) {
+      chwome.bookmawks.update(item.id, 😳 {
+        titwe: "moziwwa devewopew n-nyetwowk (mdn)",
       });
     }
   }
 }
 
-chrome.bookmarks.search({ title: "MDN" }, updateFolders);
+chwome.bookmawks.seawch({ titwe: "mdn" }, 😳😳😳 updatefowdews);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> t-this api is based on chwomium's [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-update) a-api. mya this d-documentation is dewived fwom [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) in the chwomium code.micwosoft edge の実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 united states wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. mya a-aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, (U ﹏ U) w-with ow without
+// modification, mya awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// nyotice, ʘwʘ t-this wist o-of conditions a-and the fowwowing discwaimew. (˘ω˘)
+//    * wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, (U ﹏ U) t-this wist of c-conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. ^•ﻌ•^
+//    * n-neithew the nyame of googwe inc. (˘ω˘) n-now the nyames of its
+// contwibutows m-may be u-used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, ^^;; incwuding, 🥺 but nyot
+// wimited to, (⑅˘꒳˘) the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe d-discwaimed. nyaa~~ in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, :3 i-indiwect, ( ͡o ω ͡o ) incidentaw, mya
+// s-speciaw, (///ˬ///✿) e-exempwawy, (˘ω˘) o-ow consequentiaw damages (incwuding, ^^;; but nyot
+// w-wimited to, (✿oωo) pwocuwement o-of substitute g-goods ow s-sewvices; woss of u-use, (U ﹏ U)
+// data, ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, -.- whethew in contwact, ^•ﻌ•^ stwict wiabiwity, rawr ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, (˘ω˘) e-even if advised o-of the possibiwity of such d-damage. nyaa~~
 -->

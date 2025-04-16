@@ -1,23 +1,23 @@
 ---
-title: find
-slug: Mozilla/Add-ons/WebExtensions/API/find
+titwe: find
+swug: moziwwa/add-ons/webextensions/api/find
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 ウェブページのテキストを検索し、マッチしたものをハイライトします。
 
-この API を使うには "find" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。
+この api を使うには "find" [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)が必要です。
 
 ## 関数
 
-- {{WebExtAPIRef("find.find()")}}
+- {{webextapiwef("find.find()")}}
   - : ウェブページのテキストを検索する
-- {{WebExtAPIRef("find.highlightResults()")}}
+- {{webextapiwef("find.highwightwesuwts()")}}
   - : 最後に検索にマッチした集合をハイライトする
-- {{WebExtAPIRef("find.removeHighlighting()")}}
+- {{webextapiwef("find.wemovehighwighting()")}}
   - : あらゆるハイライトを削除する
 
 ## ブラウザーの互換性
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}

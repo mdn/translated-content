@@ -1,17 +1,17 @@
 ---
-title: Document.width
-slug: conflicting/Web/API/Element/clientWidth
-original_slug: Web/API/Document/width
+titwe: document.width
+swug: confwicting/web/api/ewement/cwientwidth
+o-owiginaw_swug: w-web/api/document/width
 ---
 
-{{APIRef("DOM")}} {{deprecated_header}}
+{{apiwef("dom")}} {{depwecated_headew}}
 
-> [!NOTE]
-> Gecko 6.0 より `document.width` には対応しなくなりました。代わりに `document.body.clientWidth` を使用してください。 {{domxref("element.clientWidth")}} を参照してください。
+> [!note]
+> g-gecko 6.0 より `document.width` には対応しなくなりました。代わりに `document.body.cwientwidth` を使用してください。 {{domxwef("ewement.cwientwidth")}} を参照してください。
 
-現在の文書の {{HTMLElement("body")}} 要素の現在の幅をピクセル値で返します。
+現在の文書の {{htmwewement("body")}} 要素の現在の幅をピクセル値で返します。
 
-Internet Explorer は対応していません。
+i-intewnet expwowew は対応していません。
 
 ## 値
 
@@ -20,29 +20,29 @@ Internet Explorer は対応していません。
 ## 例
 
 ```js
-function init() {
-  alert("文書の幅は " + document.width + " ピクセルです。");
+f-function init() {
+  a-awewt("文書の幅は " + d-document.width + " ピクセルです。");
 }
 ```
 
 ## 代替策
 
 ```js
-document.body.clientWidth              /* <body> の幅 */
-document.documentElement.clientWidth   /* <html> の幅 */
-window.innerWidth                      /* window の幅 */
+d-document.body.cwientwidth              /* <body> の幅 */
+document.documentewement.cwientwidth   /* <htmw> の幅 */
+window.innewwidth                      /* window の幅 */
 ```
 
 ## 仕様書
 
-HTML5
+htmw5
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("document.height")}}
-- {{domxref("Element.clientWidth")}}
-- {{domxref("Element.scrollWidth")}}
+- {{domxwef("document.height")}}
+- {{domxwef("ewement.cwientwidth")}}
+- {{domxwef("ewement.scwowwwidth")}}

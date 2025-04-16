@@ -1,64 +1,64 @@
 ---
-title: Firefox 19 for developers
-slug: Mozilla/Firefox/Releases/19
+titwe: fiwefox 19 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/19
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Gecko 19 を搭載した Firefox 19 は米国時間 2013 年 2 月 19 日にリリースされました。このページでは、開発者に影響する Firefox 19 の変更点をまとめています。
+gecko 19 を搭載した f-fiwefox 19 は米国時間 2013 年 2 月 19 日にリリースされました。このページでは、開発者に影響する f-fiwefox 19 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
-### JavaScript
+### j-javascwipt
 
-- [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトおよび [`Set`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set) オブジェクトは、`size()` メソッドを持つオブジェクトから `size` プロパティを持つオブジェクトに変わりました。([Firefox バグ 807001](https://bugzil.la/807001))
-- [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトおよび [`Set`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set) オブジェクトに `clear()` メソッドが追加されました。([Firefox バグ 805003](https://bugzil.la/805003))
+- [`map`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/map) オブジェクトおよび [`set`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/set) オブジェクトは、`size()` メソッドを持つオブジェクトから `size` プロパティを持つオブジェクトに変わりました。([fiwefox バグ 807001](https://bugziw.wa/807001))
+- [`map`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/map) オブジェクトおよび [`set`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/set) オブジェクトに `cweaw()` メソッドが追加されました。([fiwefox バグ 805003](https://bugziw.wa/805003))
 
-### CSS
+### c-css
 
-- Viewport に対して相対的な {{cssxref("&lt;length&gt;")}} の単位である `vh`、`vw`、`vmin`、および `vmax` をサポートしました ([Firefox バグ 503720](https://bugzil.la/503720))。
-- CSS Flexbox の接頭辞を外しましたが、引き続きデフォルトでは無効にしています ([Firefox バグ 801098](https://bugzil.la/801098))。
-- `-moz-initial` 値の接頭辞を外しました ([Firefox バグ 806068](https://bugzil.la/806068))。`-moz-initial` は当分の間、エイリアスとして残します。しかし、ウェブ開発者は `initial` に移行することを強く推奨します。
-- CSS の {{ cssxref("text-transform")}} プロパティで、日本語や中国語など固定幅の表意文字を使用したテキスト内にラテン文字をなめらかに追加できるようにするためのキーワードである `full-width` をサポートしました([Firefox バグ 774560](https://bugzil.la/774560))。
-- CSS の {{ cssxref("page-break-inside")}} を実装しました ([Firefox バグ 685012](https://bugzil.la/685012))。
-- CSS の {{ cssxref("calc", "calc()")}} 関数を、({{cssxref("&lt;gradient&gt;")}} の) `<color-stop>` で使用できるようになりました。
-- CSS の {{ cssxref("@page") }} @-規則をサポートしました ([Firefox バグ 115199](https://bugzil.la/115199))。擬似クラス {{cssxref(":first")}}、{{cssxref(":right")}}、および {{cssxref(":left")}} はまだ実装されていないことに注意してください。
-- 擬似クラス {{ cssxref(":-moz-placeholder") }} は、擬似*要素* {{ cssxref("::-moz-placeholder") }} に置き換えられました ([Firefox バグ 737786](https://bugzil.la/737786))。
+- v-viewpowt に対して相対的な {{cssxwef("&wt;wength&gt;")}} の単位である `vh`、`vw`、`vmin`、および `vmax` をサポートしました ([fiwefox バグ 503720](https://bugziw.wa/503720))。
+- c-css fwexbox の接頭辞を外しましたが、引き続きデフォルトでは無効にしています ([fiwefox バグ 801098](https://bugziw.wa/801098))。
+- `-moz-initiaw` 値の接頭辞を外しました ([fiwefox バグ 806068](https://bugziw.wa/806068))。`-moz-initiaw` は当分の間、エイリアスとして残します。しかし、ウェブ開発者は `initiaw` に移行することを強く推奨します。
+- c-css の {{ cssxwef("text-twansfowm")}} プロパティで、日本語や中国語など固定幅の表意文字を使用したテキスト内にラテン文字をなめらかに追加できるようにするためのキーワードである `fuww-width` をサポートしました([fiwefox バグ 774560](https://bugziw.wa/774560))。
+- css の {{ cssxwef("page-bweak-inside")}} を実装しました ([fiwefox バグ 685012](https://bugziw.wa/685012))。
+- css の {{ cssxwef("cawc", ^^;; "cawc()")}} 関数を、({{cssxwef("&wt;gwadient&gt;")}} の) `<cowow-stop>` で使用できるようになりました。
+- c-css の {{ cssxwef("@page") }} @-規則をサポートしました ([fiwefox バグ 115199](https://bugziw.wa/115199))。擬似クラス {{cssxwef(":fiwst")}}、{{cssxwef(":wight")}}、および {{cssxwef(":weft")}} はまだ実装されていないことに注意してください。
+- 擬似クラス {{ cssxwef(":-moz-pwacehowdew") }} は、擬似*要素* {{ c-cssxwef("::-moz-pwacehowdew") }} に置き換えられました ([fiwefox バグ 737786](https://bugziw.wa/737786))。
 
-### DOM
+### dom
 
-- {{ domxref("element.getElementsByTagName") }} メソッドは `HTMLCollection` を返すようになりました ([Firefox バグ 799464](https://bugzil.la/799464))。
-- {{domxref("File")}} に `mozLastModifiedDate` プロパティを実装しました ([Firefox バグ 793955](https://bugzil.la/793955))。
-- {{domxref("File")}} の `lastModifiedDate` プロパティは、最終更新日が不明である場合に現在の日付を返すようになりました。([Firefox バグ 793459](https://bugzil.la/793459))
-- {{domxref("CanvasRenderingContext2D")}} に `isPointInStroke` メソッドを実装しました ([Firefox バグ 803124](https://bugzil.la/803124))。
-- {{domxref("HTMLCanvasElement")}} の `toBlob` メソッドを実装しました ([Firefox バグ 648610](https://bugzil.la/648610))。
-- {{domxref("Node.isSupported")}} メソッドおよび {{domxref("document.implementation", "document.implementation.hasFeature()")}} メソッドは、常に `true` を返すように変更しました ([Firefox バグ 801425](https://bugzil.la/801425))。
-- `document.createElement(null)` を呼び出すと、`null` は文字列化されて `document.createElement("null")` であるかのように動作します。
+- {{ domxwef("ewement.getewementsbytagname") }} メソッドは `htmwcowwection` を返すようになりました ([fiwefox バグ 799464](https://bugziw.wa/799464))。
+- {{domxwef("fiwe")}} に `mozwastmodifieddate` プロパティを実装しました ([fiwefox バグ 793955](https://bugziw.wa/793955))。
+- {{domxwef("fiwe")}} の `wastmodifieddate` プロパティは、最終更新日が不明である場合に現在の日付を返すようになりました。([fiwefox バグ 793459](https://bugziw.wa/793459))
+- {{domxwef("canvaswendewingcontext2d")}} に `ispointinstwoke` メソッドを実装しました ([fiwefox バグ 803124](https://bugziw.wa/803124))。
+- {{domxwef("htmwcanvasewement")}} の `tobwob` メソッドを実装しました ([fiwefox バグ 648610](https://bugziw.wa/648610))。
+- {{domxwef("node.issuppowted")}} メソッドおよび {{domxwef("document.impwementation", "document.impwementation.hasfeatuwe()")}} メソッドは、常に `twue` を返すように変更しました ([fiwefox バグ 801425](https://bugziw.wa/801425))。
+- `document.cweateewement(nuww)` を呼び出すと、`nuww` は文字列化されて `document.cweateewement("nuww")` であるかのように動作します。
 
-### XForms
+### x-xfowms
 
-Firefox 19 で、[XForms](/ja/docs/XForms) のサポートを[**削除しました**](http://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms/)。
+fiwefox 19 で、[xfowms](/ja/docs/xfowms) のサポートを[**削除しました**](http://www.phiwipp-wagnew.com/bwog/2011/07/the-futuwe-of-moziwwa-xfowms/)。
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+## アドオン開発者と moziwwa 開発者向けの変更点
 
-> [!NOTE]
-> Firefox 19 での重要な変更点は、[`nsresult`](/ja/docs/XPCOM_API_Reference/nsresult) が強い型付けになったことです。これは戻り値の処理ミスによって発生するバグの発見を容易にしますが、この点を誤って仮定している場合に既存のコードで不具合が発生する可能性があります。
+> [!note]
+> fiwefox 19 での重要な変更点は、[`nswesuwt`](/ja/docs/xpcom_api_wefewence/nswesuwt) が強い型付けになったことです。これは戻り値の処理ミスによって発生するバグの発見を容易にしますが、この点を誤って仮定している場合に既存のコードで不具合が発生する可能性があります。
 
-- `getBrowserSelection()` が、テキスト入力フィールドで選択されているテキストを返すようになりました。このため、ユーザーがパスワードフィールドではないテキスト入力フィールドでテキストを選択したときに、`gContextMenu.isTextSelected` が `true` になります ([Firefox バグ 565717](https://bugzil.la/565717))。
-- [Dict.jsm](/ja/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/ja/docs/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) が JSON 文字列を受け入れるようになりました。[`Dict.toJSON()`](</ja/docs/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON()>) メソッドが追加され、これは JSON 文字列を返します ([Firefox バグ 727967](https://bugzil.la/727967))。
+- `getbwowsewsewection()` が、テキスト入力フィールドで選択されているテキストを返すようになりました。このため、ユーザーがパスワードフィールドではないテキスト入力フィールドでテキストを選択したときに、`gcontextmenu.istextsewected` が `twue` になります ([fiwefox バグ 565717](https://bugziw.wa/565717))。
+- [dict.jsm](/ja/docs/moziwwa/javascwipt_code_moduwes/dict.jsm): [`dict()`](/ja/docs/moziwwa/javascwipt_code_moduwes/dict.jsm#cweating_a_dictionawy) が j-json 文字列を受け入れるようになりました。[`dict.tojson()`](</ja/docs/moziwwa/javascwipt_code_moduwes/dict.jsm#tojson()>) メソッドが追加され、これは json 文字列を返します ([fiwefox バグ 727967](https://bugziw.wa/727967))。
 
 ### インターフェイスの変更点
 
-- `nsIImgLoadingContent`
-  - : `addObserver()` メソッドの引数 (aObserver) が `imgIDecoderObserver` から `imgINotificationObserver` に替わりました。`imgINotificationObserver` の `notify()` メソッドはスクリプト可能ではありませんので、`imgITools` の `createScriptedObserver()` を使用しなければなりません。
-- `nsIChannel`
-  - : `contentLength` プロパティの型を `long` から `int64_t` に変更しました。
+- `nsiimgwoadingcontent`
+  - : `addobsewvew()` メソッドの引数 (aobsewvew) が `imgidecodewobsewvew` から `imginotificationobsewvew` に替わりました。`imginotificationobsewvew` の `notify()` メソッドはスクリプト可能ではありませんので、`imgitoows` の `cweatescwiptedobsewvew()` を使用しなければなりません。
+- `nsichannew`
+  - : `contentwength` プロパティの型を `wong` から `int64_t` に変更しました。
 
 ## 関連情報
 
-- [Firefox 19 リリースノート](http://www.mozilla.jp/firefox/19.0/releasenotes/)
-- [Firefox 19 のアドオン互換性に関わる修正のまとめ](https://dev.mozilla.jp/2013/02/firefox-19-addon-compatibility/)
+- [fiwefox 19 リリースノート](http://www.moziwwa.jp/fiwefox/19.0/weweasenotes/)
+- [fiwefox 19 のアドオン互換性に関わる修正のまとめ](https://dev.moziwwa.jp/2013/02/fiwefox-19-addon-compatibiwity/)
 
 ### 過去のバージョン
 
-{{Firefox_for_developers('18')}}
+{{fiwefox_fow_devewopews('18')}}

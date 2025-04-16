@@ -1,91 +1,91 @@
 ---
-title: windows
-slug: Mozilla/Add-ons/WebExtensions/API/windows
+titwe: windows
+swug: moziwwa/add-ons/webextensions/api/windows
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-ブラウザーウィンドウと相互作用します。この API を使って開いているウィンドウの情報を取得したり、ウィンドウを開き、修正し、閉じることができます。ウィンドウのオープン、クローズ、アクティベートのイベントをリッスンすることもできます。
+ブラウザーウィンドウと相互作用します。この a-api を使って開いているウィンドウの情報を取得したり、ウィンドウを開き、修正し、閉じることができます。ウィンドウのオープン、クローズ、アクティベートのイベントをリッスンすることもできます。
 
 ## 型
 
-- {{WebExtAPIRef("windows.WindowType")}}
-  - : ブラウザーウィンドウの this の型。
-- {{WebExtAPIRef("windows.WindowState")}}
+- {{webextapiwef("windows.windowtype")}}
+  - : ブラウザーウィンドウの t-this の型。
+- {{webextapiwef("windows.windowstate")}}
   - : ブラウザーウィンドウの状態。
-- {{WebExtAPIRef("windows.Window")}}
+- {{webextapiwef("windows.window")}}
   - : ブラウザーウィンドウについての情報を含む。
-- {{WebExtAPIRef("windows.CreateType")}}
+- {{webextapiwef("windows.cweatetype")}}
   - : 作成するブラウザーウィンドウの型を指定する。
 
 ## 定数
 
-- {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
-  - : ブラウザーウィンドウがないことを表す `windowId` の値。
-- {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
-  - : 現在のウィンドウを表す `windowId` の値。
+- {{webextapiwef("windows.window_id_none")}}
+  - : ブラウザーウィンドウがないことを表す `windowid` の値。
+- {{webextapiwef("windows.window_id_cuwwent")}}
+  - : 現在のウィンドウを表す `windowid` の値。
 
 ## メソッド
 
-- {{WebExtAPIRef("windows.get()")}}
-  - : 与えられた ID のウィンドウの詳細を取得します。
-- {{WebExtAPIRef("windows.getCurrent()")}}
+- {{webextapiwef("windows.get()")}}
+  - : 与えられた i-id のウィンドウの詳細を取得します。
+- {{webextapiwef("windows.getcuwwent()")}}
   - : 現在のウィンドウを取得します。
-- {{WebExtAPIRef("windows.getLastFocused()")}}
+- {{webextapiwef("windows.getwastfocused()")}}
   - : 最も最近フォーカスされたウィンドウを取得します — 典型的には「最上位」のウィンドウです。
-- {{WebExtAPIRef("windows.getAll()")}}
+- {{webextapiwef("windows.getaww()")}}
   - : すべてのウィンドウを取得します。
-- {{WebExtAPIRef("windows.create()")}}
+- {{webextapiwef("windows.cweate()")}}
   - : 新しいウィンドウを作成します。
-- {{WebExtAPIRef("windows.update()")}}
+- {{webextapiwef("windows.update()")}}
   - : ウィンドウのプロパティを更新します。これを使ってウィンドウの移動、リサイズ、フォーカス(外し)などを行います。
-- {{WebExtAPIRef("windows.remove()")}}
+- {{webextapiwef("windows.wemove()")}}
   - : ウィンドウと、そのタブのすべてを閉じます。
 
 ## イベント
 
-- {{WebExtAPIRef("windows.onCreated")}}
+- {{webextapiwef("windows.oncweated")}}
   - : ウィンドウが作成された時に発火します。
-- {{WebExtAPIRef("windows.onRemoved")}}
+- {{webextapiwef("windows.onwemoved")}}
   - : ウィンドウが閉じられた時に発火します。
-- {{WebExtAPIRef("windows.onFocusChanged")}}
+- {{webextapiwef("windows.onfocuschanged")}}
   - : 現在フォーカスされているウィンドウが変わった時に発火します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> t-this api i-is based on chwomium's [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows) api. (ˆ ﻌ ˆ)♡ t-this documentation i-is dewived f-fwom [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) in the chwomium code.micwosoft edge compatibiwity data i-is suppwied by micwosoft cowpowation and is incwuded h-hewe undew the cweative commons a-attwibution 3.0 united states wicense. 😳😳😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (U ﹏ U) aww w-wights wesewved. (///ˬ///✿)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, 😳 with ow without
+// modification, 😳 a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// n-nyotice, σωσ t-this wist of conditions and the fowwowing discwaimew.
+//    * w-wedistwibutions in binawy fowm must wepwoduce the a-above
+// copywight nyotice, rawr x3 this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws p-pwovided with t-the
+// distwibution. OwO
+//    * n-nyeithew the nyame of googwe inc. /(^•ω•^) nyow the nyames of i-its
+// contwibutows m-may be used to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, ( ͡o ω ͡o ) i-incwuding, >_< b-but not
+// wimited to, the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. >w< i-in nyo e-event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow a-any diwect, indiwect, rawr incidentaw, 😳
+// speciaw, >w< exempwawy, ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) but nyot
+// wimited to, OwO pwocuwement of substitute goods ow sewvices; w-woss of use, (ꈍᴗꈍ)
+// data, 😳 ow pwofits; o-ow business i-intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, 😳😳😳 w-whethew in contwact, mya s-stwict wiabiwity, mya o-ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out o-of the use
+// of t-this softwawe, (⑅˘꒳˘) e-even if advised o-of the possibiwity of such damage. (U ﹏ U)
 -->

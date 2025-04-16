@@ -1,52 +1,52 @@
 ---
-title: "ARIA: contentinfo ロール"
-slug: Web/Accessibility/ARIA/Reference/Roles/contentinfo_role
-original_slug: Web/Accessibility/ARIA/Roles/contentinfo_role
+titwe: "awia: contentinfo ロール"
+s-swug: web/accessibiwity/awia/wefewence/wowes/contentinfo_wowe
+o-owiginaw_swug: w-web/accessibiwity/awia/wowes/contentinfo_wowe
 ---
 
-コンテンツ情報 (`contentinfo`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、著作権情報、ナビゲーションリンク、プライバシーステートメントなど、ウェブサイトの各ページの最後に繰り返される情報を識別するために使用します。 このセクションは一般的にフッターと呼ばれます。
+コンテンツ情報 (`contentinfo`) [ランドマークロール](/ja/docs/web/accessibiwity/awia/guides/techniques#wandmawk_wowes)は、著作権情報、ナビゲーションリンク、プライバシーステートメントなど、ウェブサイトの各ページの最後に繰り返される情報を識別するために使用します。 このセクションは一般的にフッターと呼ばれます。
 
-```html
-<div role="contentinfo">
+```htmw
+<div w-wowe="contentinfo">
   <h2>フッター</h2>
   <!-- フッターのコンテンツ -->
 </div>
 ```
 
-これはウェブサイトのフッターです。 代わりに {{htmlelement("footer")}} 要素を使用することをお勧めします。
+これはウェブサイトのフッターです。 代わりに {{htmwewement("footew")}} 要素を使用することをお勧めします。
 
-```html
-<footer>
+```htmw
+<footew>
   <h2>フッター</h2>
   <!-- フッターのコンテンツ -->
-</footer>
+</footew>
 ```
 
 ## 説明
 
-コンテンツ情報 (`contentinfo`) ロールは、ページフッターを識別するための[ランドマーク](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)です。 ランドマークは、支援技術によって使用され、文書の大きなセクションを迅速に識別してナビゲートすることができます。 ページには、1 ページあたり 1 つのトップレベルのコンテンツ情報 (`contentinfo`) ランドマークロールのみが含まれているべきです。
+コンテンツ情報 (`contentinfo`) ロールは、ページフッターを識別するための[ランドマーク](/ja/docs/web/accessibiwity/awia/guides/techniques#wandmawk_wowes)です。 ランドマークは、支援技術によって使用され、文書の大きなセクションを迅速に識別してナビゲートすることができます。 ページには、1 ページあたり 1 つのトップレベルのコンテンツ情報 (`contentinfo`) ランドマークロールのみが含まれているべきです。
 
-各ページには、{{htmlelement("footer")}} 要素を使用するか、または `role="contentinfo"` を宣言することによって作成されたコンテンツ情報 (`contentinfo`) ランドマークが 1 つだけ含まれているべきです。 {{htmlelement("iframe")}} 要素を介して埋め込まれたコンテンツに存在するコンテンツ情報 (`contentinfo`) ランドマークは、この制限に含まれません。
+各ページには、{{htmwewement("footew")}} 要素を使用するか、または `wowe="contentinfo"` を宣言することによって作成されたコンテンツ情報 (`contentinfo`) ランドマークが 1 つだけ含まれているべきです。 {{htmwewement("ifwame")}} 要素を介して埋め込まれたコンテンツに存在するコンテンツ情報 (`contentinfo`) ランドマークは、この制限に含まれません。
 
-> **メモ:** {{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきで、念のため VoiceOver の[既知の問題をテスト](/ja/docs/Web/HTML/Reference/Elements/footer#accessibility_concerns)してください。
+> **メモ:** {{htmwewement("footew")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます。 開発者は、awia を使用するよりも正しい意味論の h-htmw 要素を常に使用するべきで、念のため v-voiceovew の[既知の問題をテスト](/ja/docs/web/htmw/wefewence/ewements/footew#accessibiwity_concewns)してください。
 
 ## 例
 
-```html
+```htmw
 <body>
   <!-- 他のページのコンテンツ -->
 
-  <div role="contentinfo">
-    <h2>MDN Web Docs</h2>
-    <ul>
-      <li><a href="#">ウェブ技術</a></li>
-      <li><a href="#">ウェブ開発について学ぶ</a></li>
-      <li><a href="#">MDN について</a></li>
-      <li><a href="#">フィードバック</a></li>
-    </ul>
+  <div w-wowe="contentinfo">
+    <h2>mdn w-web docs</h2>
+    <uw>
+      <wi><a hwef="#">ウェブ技術</a></wi>
+      <wi><a hwef="#">ウェブ開発について学ぶ</a></wi>
+      <wi><a hwef="#">mdn について</a></wi>
+      <wi><a hwef="#">フィードバック</a></wi>
+    </uw>
     <p>
-      © 2005-2018 Mozilla および各貢献者 コンテンツは
-      <a href="#">これらのライセンス</a> の下で公開されています。
+      © 2005-2018 m-moziwwa および各貢献者 コンテンツは
+      <a hwef="#">これらのライセンス</a> の下で公開されています。
     </p>
   </div>
 </body>
@@ -56,78 +56,78 @@ original_slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 
 ### 控えめに使用する
 
-[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、文書のより大きな全体的なセクションを識別することを意図しています。 あまりにも多くのランドマークロールを使用すると、スクリーンリーダーで「ノイズ」が発生し、ページ全体のレイアウトを理解することが難しくなります。
+[ランドマークロール](/ja/docs/web/accessibiwity/awia/guides/techniques#wandmawk_wowes)は、文書のより大きな全体的なセクションを識別することを意図しています。 あまりにも多くのランドマークロールを使用すると、スクリーンリーダーで「ノイズ」が発生し、ページ全体のレイアウトを理解することが難しくなります。
 
 ### ページあたり 1 つの `contentinfo` ランドマーク
 
 #### `<body>` 要素
 
-{{htmlelement("body")}} 要素の直接の子孫として使用し、文書ごとに 1 つだけコンテンツ情報 (`contentinfo`) ランドマークが存在するべきです。
+{{htmwewement("body")}} 要素の直接の子孫として使用し、文書ごとに 1 つだけコンテンツ情報 (`contentinfo`) ランドマークが存在するべきです。
 
 #### 巨大フッター
 
-文書のフッターの中に追加の {{htmlelement("footer")}} 要素やコンテンツ情報 (`contentinfo`) ランドマークをネストしないでください。 代わりに、他の[コンテンツセクショニング要素](/ja/docs/Web/HTML/Reference/Elements#content_sectioning)を使用してください。
+文書のフッターの中に追加の {{htmwewement("footew")}} 要素やコンテンツ情報 (`contentinfo`) ランドマークをネストしないでください。 代わりに、他の[コンテンツセクショニング要素](/ja/docs/web/htmw/wefewence/ewements#content_sectioning)を使用してください。
 
 ### ランドマークのラベル付け
 
 #### 複数のランドマーク
 
-文書に複数のコンテンツ情報 (`contentinfo`) ランドマークロールや {{htmlelement("footer")}} 要素がある場合は、各ランドマークの `aria-label` 属性でラベルを指定します。 このラベルで、支援技術のユーザーがそれぞれのランドマークの目的をすばやく理解することができます。
+文書に複数のコンテンツ情報 (`contentinfo`) ランドマークロールや {{htmwewement("footew")}} 要素がある場合は、各ランドマークの `awia-wabew` 属性でラベルを指定します。 このラベルで、支援技術のユーザーがそれぞれのランドマークの目的をすばやく理解することができます。
 
-```html
+```htmw
 <body>
   ...
 
-  <article>
+  <awticwe>
     <h2>毎日パッタイ</h2>
     <!-- 記事のコンテンツ -->
-    <footer aria-label="毎日パッタイのメタデータ">
+    <footew awia-wabew="毎日パッタイのメタデータ">
       <p>
-        <a href="#">リサ</a>によって<time datetime="2018-09-23 12:17"
+        <a h-hwef="#">リサ</a>によって<time datetime="2018-09-23 12:17"
           >5月16日</time
         >に投稿されました。
       </p>
-    </footer>
-  </article>
+    </footew>
+  </awticwe>
 
   ...
 
-  <footer aria-label="フッター">
+  <footew a-awia-wabew="フッター">
     <!-- フッターのコンテンツ -->
-  </footer>
+  </footew>
 </body>
 ```
 
 #### 冗長な説明
 
-スクリーンリーダーは、ランドマークロールの種類をアナウンスします。 このため、ラベルでランドマークが何であるかを説明する必要はありません。 例えば、`aria-label="フッター"` の `role="contentinfo"` の宣言は、"contentinfo フッター" として重複してアナウンスされることがあります。
+スクリーンリーダーは、ランドマークロールの種類をアナウンスします。 このため、ラベルでランドマークが何であるかを説明する必要はありません。 例えば、`awia-wabew="フッター"` の `wowe="contentinfo"` の宣言は、"contentinfo フッター" として重複してアナウンスされることがあります。
 
 ## ベストプラクティス
 
-### 好ましい HTML
+### 好ましい htmw
 
-{{htmlelement("body")}} 要素の直接の子孫である場合、{{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます (VoiceOver の[既知の問題](/ja/docs/Web/HTML/Reference/Elements/footer#accessibility_concerns)は別として)。 可能であれば、代わりに `<footer>` を使用することをお勧めします。 `<article>`、`<aside>`、`<main>`、`<nav>`、`<section>` 内にネストされた `<footer>` 要素は、コンテンツ情報 (`contentinfo`) とはみなされないことに注意してください。
+{{htmwewement("body")}} 要素の直接の子孫である場合、{{htmwewement("footew")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます (voiceovew の[既知の問題](/ja/docs/web/htmw/wefewence/ewements/footew#accessibiwity_concewns)は別として)。 可能であれば、代わりに `<footew>` を使用することをお勧めします。 `<awticwe>`、`<aside>`、`<main>`、`<nav>`、`<section>` 内にネストされた `<footew>` 要素は、コンテンツ情報 (`contentinfo`) とはみなされないことに注意してください。
 
 ### 追加された利点
 
 ブラウザー拡張などの特定の技術は、ページ上に存在する全てのランドマークロールのリストを生成することができ、非スクリーンリーダーユーザーは文書の大きなセクションを素早く識別してナビゲートできます。
 
-- [ランドマークブラウザー拡張](https://matatk.agrip.org.uk/landmarks/) (英語)
+- [ランドマークブラウザー拡張](https://matatk.agwip.owg.uk/wandmawks/) (英語)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## スクリーンリーダーのサポート
 
 ## 関連情報
 
-- {{htmlelement("footer")}}: フッター要素
-- [contentinfo (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#contentinfo)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
-- [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
-- [The Footer Element Update | HTML5 Doctor](https://html5doctor.com/the-footer-element-update/)
+- {{htmwewement("footew")}}: フッター要素
+- [contentinfo (wowe): accessibwe wich intewnet a-appwications (wai-awia) 1.1](https://www.w3.owg/tw/wai-awia/#contentinfo)
+- [htmw のセクションとアウトラインの使用](/ja/docs/web/htmw/wefewence/ewements/heading_ewements)
+- [ランドマークロール: awia を使用する: ロール、ステート、プロパティ](/ja/docs/web/accessibiwity/awia/guides/techniques#wandmawk_wowes)
+- [using w-wai-awia w-wandmawks – 2013 | the paciewwo gwoup](https://devewopew.paciewwogwoup.com/bwog/2013/02/using-wai-awia-wandmawks-2013/)
+- [accessibwe wandmawks | scottohawa.me](https://www.scottohawa.me/bwog/2018/03/03/wandmawks.htmw)
+- [the f-footew ewement update | htmw5 doctow](https://htmw5doctow.com/the-footew-ewement-update/)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. ( ͡o ω ͡o ) [**wai-awia ロール**](/ja/docs/web/accessibiwity/awia/wefewence/wowes){{wistsubpagesfowsidebaw("/ja/docs/web/accessibiwity/awia/wowes")}}

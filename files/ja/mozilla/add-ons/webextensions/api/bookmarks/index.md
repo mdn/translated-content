@@ -1,104 +1,104 @@
 ---
-title: bookmarks
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
+titwe: bookmawks
+swug: moziwwa/add-ons/webextensions/api/bookmawks
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-[WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API を利用すると、拡張機能からブラウザーのブックマークシステムにアクセスしたり、操作することができます。ページをブックマークしたり、既存のブックマークを取得したり、ブックマークを編集・削除・整理することが可能です。
+[webextensions](/ja/docs/moziwwa/add-ons/webextensions) {{webextapiwef("bookmawks")}} a-api を利用すると、拡張機能からブラウザーのブックマークシステムにアクセスしたり、操作することができます。ページをブックマークしたり、既存のブックマークを取得したり、ブックマークを編集・削除・整理することが可能です。
 
-この API を使用する際は、拡張機能の [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで "bookmarks" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を指定する必要があります。
+この a-api を使用する際は、拡張機能の [`manifest.json`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイルで "bookmawks" [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) を指定する必要があります。
 
-拡張機能ではブックマークツリーのルートノードではブックマークを作成・編集・削除できません。それをしようとすると次のエラーになります: "_The bookmark root cannot be modified_"
+拡張機能ではブックマークツリーのルートノードではブックマークを作成・編集・削除できません。それをしようとすると次のエラーになります: "_the b-bookmawk w-woot cannot be m-modified_"
 
 ## 関連する値の型
 
-- {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
+- {{webextapiwef("bookmawks.bookmawktweenode")}}
   - : ブックマークツリー上のブックマークやフォルダーを表します。
-- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
-  - : ツリー内のノードがブックマークかフォルダーかセパレーターかを表す {{jsxref("string")}} の列挙型です。
-- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
-  - : ブックマークやフォルダーが変更不可である理由を表す {{jsxref("string")}} の列挙型です。
-- {{WebExtAPIRef("bookmarks.CreateDetails")}}
-  - : 新しいブックマークを作成する際、{{WebExtAPIRef("bookmarks.create()")}} メソッドに渡す情報を含みます。
+- {{webextapiwef("bookmawks.bookmawktweenodetype")}}
+  - : ツリー内のノードがブックマークかフォルダーかセパレーターかを表す {{jsxwef("stwing")}} の列挙型です。
+- {{webextapiwef("bookmawks.bookmawktweenodeunmodifiabwe")}}
+  - : ブックマークやフォルダーが変更不可である理由を表す {{jsxwef("stwing")}} の列挙型です。
+- {{webextapiwef("bookmawks.cweatedetaiws")}}
+  - : 新しいブックマークを作成する際、{{webextapiwef("bookmawks.cweate()")}} メソッドに渡す情報を含みます。
 
 ## 関数
 
-- {{WebExtAPIRef("bookmarks.create()")}}
+- {{webextapiwef("bookmawks.cweate()")}}
   - : ブックマークやフォルダーを作成します。
-- {{WebExtAPIRef("bookmarks.get()")}}
-  - : ブックマークの ID や ID の配列を指定し、1 つ以上の {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode(s)")}} を取得します。
-- {{WebExtAPIRef("bookmarks.getChildren()")}}
-  - : 指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の子要素を取得します。
-- {{WebExtAPIRef("bookmarks.getRecent()")}}
+- {{webextapiwef("bookmawks.get()")}}
+  - : ブックマークの i-id や id の配列を指定し、1 つ以上の {{webextapiwef("bookmawks.bookmawktweenode", rawr x3 "bookmawktweenode(s)")}} を取得します。
+- {{webextapiwef("bookmawks.getchiwdwen()")}}
+  - : 指定した {{webextapiwef("bookmawks.bookmawktweenode", OwO "bookmawktweenode")}} の子要素を取得します。
+- {{webextapiwef("bookmawks.getwecent()")}}
   - : 最近追加されたブックマークを取得します。
-- {{WebExtAPIRef("bookmarks.getSubTree()")}}
+- {{webextapiwef("bookmawks.getsubtwee()")}}
   - : 指定したノードを起点とする、ブックマークツリーの部分木を取得します。
-- {{WebExtAPIRef("bookmarks.getTree()")}}
-  - : ブックマークのツリー全体を {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} オブジェクトの配列として取得します。
-- {{WebExtAPIRef("bookmarks.move()")}}
-  - : 指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} を所望の場所に移します。
-- {{WebExtAPIRef("bookmarks.remove()")}}
-  - : ノードの ID を指定し、ブックマークや空のブックマークフォルダーを削除します。
-- {{WebExtAPIRef("bookmarks.removeTree()")}}
-  - : ブックマークのフォルダーを再帰的に削除します。すなわち、フォルダーノードの ID を指定し、そのノードと子要素すべてを削除します。
-- {{WebExtAPIRef("bookmarks.search()")}}
-  - : 与えた条件に一致する {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNodes")}} を検索します。
-- {{WebExtAPIRef("bookmarks.update()")}}
-  - : ブックマークの ID を指定し、ブックマークの URL やタイトル、またはフォルダーの名前を更新します。
+- {{webextapiwef("bookmawks.gettwee()")}}
+  - : ブックマークのツリー全体を {{webextapiwef("bookmawks.bookmawktweenode", /(^•ω•^) "bookmawktweenode")}} オブジェクトの配列として取得します。
+- {{webextapiwef("bookmawks.move()")}}
+  - : 指定した {{webextapiwef("bookmawks.bookmawktweenode", 😳😳😳 "bookmawktweenode")}} を所望の場所に移します。
+- {{webextapiwef("bookmawks.wemove()")}}
+  - : ノードの i-id を指定し、ブックマークや空のブックマークフォルダーを削除します。
+- {{webextapiwef("bookmawks.wemovetwee()")}}
+  - : ブックマークのフォルダーを再帰的に削除します。すなわち、フォルダーノードの i-id を指定し、そのノードと子要素すべてを削除します。
+- {{webextapiwef("bookmawks.seawch()")}}
+  - : 与えた条件に一致する {{webextapiwef("bookmawks.bookmawktweenode", ( ͡o ω ͡o ) "bookmawktweenodes")}} を検索します。
+- {{webextapiwef("bookmawks.update()")}}
+  - : ブックマークの id を指定し、ブックマークの uww やタイトル、またはフォルダーの名前を更新します。
 
-## Events
+## events
 
-- {{WebExtAPIRef("bookmarks.onCreated")}}
+- {{webextapiwef("bookmawks.oncweated")}}
   - : ブックマークやフォルダーが作成された際に発火します。
-- {{WebExtAPIRef("bookmarks.onRemoved")}}
+- {{webextapiwef("bookmawks.onwemoved")}}
   - : ブックマークやフォルダーが削除された際に発火します。フォルダーが再帰的に削除された場合は、そのフォルダーに対して一回だけ発火し、フォルダーの中身については発火しません。
-- {{WebExtAPIRef("bookmarks.onChanged")}}
-  - : ブックマークやフォルダーが変更された際に発火します。現在は `title` と url の変更に対してのみ発火します。
-- {{WebExtAPIRef("bookmarks.onMoved")}}
+- {{webextapiwef("bookmawks.onchanged")}}
+  - : ブックマークやフォルダーが変更された際に発火します。現在は `titwe` と uww の変更に対してのみ発火します。
+- {{webextapiwef("bookmawks.onmoved")}}
   - : 異なる親フォルダーへ、または同じフォルダー内の異なる場所へブックマークやフォルダーが移された際に発火します。
-- {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
-  - : UI で表示されている順序に伴って子フォルダーの順序も変更された際に発火します。{{WebExtAPIRef("bookmarks.move", "move()")}} の実行後には発火しません。
-- {{WebExtAPIRef("bookmarks.onImportBegan")}}
-  - : ブックマークのインポートが開始した際に発火します。パフォーマンスが重要である場合、イベントのオブザーバーは {{WebExtAPIRef("bookmarks.onImportEnded")}} が発火するまで {{WebExtAPIRef("bookmarks.onCreated")}} を無視すべきでしょう。その場合であっても、オブザーバーは他のイベントについては即座に処理すべきでしょう。
-- {{WebExtAPIRef("bookmarks.onImportEnded")}}
+- {{webextapiwef("bookmawks.onchiwdwenweowdewed")}}
+  - : u-ui で表示されている順序に伴って子フォルダーの順序も変更された際に発火します。{{webextapiwef("bookmawks.move", >_< "move()")}} の実行後には発火しません。
+- {{webextapiwef("bookmawks.onimpowtbegan")}}
+  - : ブックマークのインポートが開始した際に発火します。パフォーマンスが重要である場合、イベントのオブザーバーは {{webextapiwef("bookmawks.onimpowtended")}} が発火するまで {{webextapiwef("bookmawks.oncweated")}} を無視すべきでしょう。その場合であっても、オブザーバーは他のイベントについては即座に処理すべきでしょう。
+- {{webextapiwef("bookmawks.onimpowtended")}}
   - : ブックマークのインポートが終了した際に発火します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks) a-api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における chwomium のコードに基づいています。micwosoft e-edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative commons a-attwibution 3.0 united states w-wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. >w< aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, 😳 with ow without
+// modification, a-awe pewmitted pwovided that the f-fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above c-copywight
+// nyotice, >w< this wist of conditions a-and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight nyotice, OwO this wist of c-conditions and t-the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. (ꈍᴗꈍ)
+//    * n-nyeithew the nyame of googwe i-inc. nyow the nyames o-of its
+// contwibutows may b-be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, 😳😳😳 incwuding, but nyot
+// wimited to, mya the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. mya i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, (⑅˘꒳˘) indiwect, (U ﹏ U) incidentaw,
+// speciaw, mya exempwawy, ʘwʘ ow consequentiaw d-damages (incwuding, (˘ω˘) but nyot
+// w-wimited to, (U ﹏ U) p-pwocuwement of substitute g-goods ow sewvices; woss o-of use, ^•ﻌ•^
+// data, (˘ω˘) o-ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// theowy of w-wiabiwity, :3 whethew i-in contwact, ^^;; s-stwict wiabiwity, 🥺 o-ow towt
+// (incwuding n-negwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, (⑅˘꒳˘) even if advised of the possibiwity of such damage. nyaa~~
 -->

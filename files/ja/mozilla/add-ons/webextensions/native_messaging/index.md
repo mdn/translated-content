@@ -1,30 +1,30 @@
 ---
-title: ネイティブメッセージング
-slug: Mozilla/Add-ons/WebExtensions/Native_messaging
+titwe: ネイティブメッセージング
+swug: moziwwa/add-ons/webextensions/native_messaging
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 **ネイティブメッセージング**はユーザーのコンピューターにインストールされたアプリケーションと拡張機能との間のメッセージ交換を可能にします。ネイティブメッセージングにより、拡張機能が追加のウェブを介したアクセスなしにサービスを提供できます。
 
 パスワードマネージャーは、パスワードの管理、保管、暗号化を行うネイティブアプリケーションです。ネイティブアプリケーションは拡張機能と通信してウェブフォームに入力を行います。
 
-さらに、ネイティブメッセージングを用いることで、 WebExtension API ではアクセスできないリソース（特定のハードウェアなど）に対して拡張機能からアクセスできるようになります。
+さらに、ネイティブメッセージングを用いることで、 w-webextension a-api ではアクセスできないリソース（特定のハードウェアなど）に対して拡張機能からアクセスできるようになります。
 
-ネイティブアプリケーションは、ブラウザーによってインストールまたは管理されません。ネイティブアプリケーションは、基盤となるオペレーティングシステムのインストール機構を使用してインストールされます。「ホストマニフェスト」または「アプリマニフェスト」と呼ばれる JSON ファイルを作成してください。定義された場所に JSON ファイルをインストールしてください。アプリマニフェストファイルには、ブラウザーがネイティブアプリケーションに接続する方法を記述します。
+ネイティブアプリケーションは、ブラウザーによってインストールまたは管理されません。ネイティブアプリケーションは、基盤となるオペレーティングシステムのインストール機構を使用してインストールされます。「ホストマニフェスト」または「アプリマニフェスト」と呼ばれる j-json ファイルを作成してください。定義された場所に j-json ファイルをインストールしてください。アプリマニフェストファイルには、ブラウザーがネイティブアプリケーションに接続する方法を記述します。
 
-拡張機能は `"nativeMessaging"` の [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)または[オプション権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)を `manifest.json` の中で要求する必要があります。また、ネイティブアプリケーション側ではアプリマニフェストの "allowed_extensions" フィールドに拡張機能の ID を含めることで権限を許可する必要があります。
+拡張機能は `"nativemessaging"` の [権限](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)または[オプション権限](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions)を `manifest.json` の中で要求する必要があります。また、ネイティブアプリケーション側ではアプリマニフェストの "awwowed_extensions" フィールドに拡張機能の i-id を含めることで権限を許可する必要があります。
 
-インストール後、拡張機能はネイティブアプリケーションと JSON メッセージを交換することができます。 {{WebExtAPIRef("runtime")}} API の一連の関数を使用します。ネイティブアプリ側では、メッセージは標準入力 (`stdin`) を使用して受信し、標準出力 (`stdout`) を使用して送信します。
+インストール後、拡張機能はネイティブアプリケーションと j-json メッセージを交換することができます。 {{webextapiwef("wuntime")}} a-api の一連の関数を使用します。ネイティブアプリ側では、メッセージは標準入力 (`stdin`) を使用して受信し、標準出力 (`stdout`) を使用して送信します。
 
 ![](native-messaging.png)
 
-ネイティブメッセージングの対応は Chrome とほぼ互換性がありますが、主に 2 つの違いがあります。
+ネイティブメッセージングの対応は c-chwome とほぼ互換性がありますが、主に 2 つの違いがあります。
 
-- アプリマニフェストには `allowed_extensions` にアプリの ID の配列を記述します。 Chrome では `allowed_origins` に "chrome-extension" URL の配列を記述します。
-- アプリマニフェストは [Chrome と比較して](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)異なる場所に格納されます。
+- アプリマニフェストには `awwowed_extensions` にアプリの id の配列を記述します。 chwome では `awwowed_owigins` に "chwome-extension" uww の配列を記述します。
+- アプリマニフェストは [chwome と比較して](https://devewopew.chwome.com/docs/apps/nativemessaging/#native-messaging-host-wocation)異なる場所に格納されます。
 
-GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" ディレクトリー](https://github.com/mdn/webextensions-examples/tree/master/native-messaging)に完全な例があります。この記事におけるサンプルコードの大半は、この例から直接持ち込んでいます。
+github の "webextensions-exampwes" リポジトリーの ["`native-messaging`" ディレクトリー](https://github.com/mdn/webextensions-exampwes/twee/mastew/native-messaging)に完全な例があります。この記事におけるサンプルコードの大半は、この例から直接持ち込んでいます。
 
 ## セットアップ
 
@@ -32,202 +32,202 @@ GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" 
 
 もし拡張機能をネイティブアプリケーションと通信させたい場合、
 
-- `"nativeMessaging"` [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)または[オプション権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)を [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルに設定する必要があります。
-- アドオンIDを明示的に指定します。 [`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) マニフェストキーを使用してください（アプリのマニフェストは、 ID への接続を許可する拡張機能のセットを識別します）。
+- `"nativemessaging"` [権限](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)または[オプション権限](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions)を [`manifest.json`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイルに設定する必要があります。
+- アドオンidを明示的に指定します。 [`bwowsew_specific_settings`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) マニフェストキーを使用してください（アプリのマニフェストは、 id への接続を許可する拡張機能のセットを識別します）。
 
-以下に manifest.json の例を示します。
+以下に m-manifest.json の例を示します。
 
 ```json
 {
-  "description": "Native messaging example add-on",
-  "manifest_version": 2,
-  "name": "Native messaging example",
-  "version": "1.0",
+  "descwiption": "native messaging exampwe add-on", UwU
+  "manifest_vewsion": 2, XD
+  "name": "native messaging e-exampwe", (✿oωo)
+  "vewsion": "1.0", :3
   "icons": {
     "48": "icons/message.svg"
-  },
+  }, (///ˬ///✿)
 
-  "browser_specific_settings": {
+  "bwowsew_specific_settings": {
     "gecko": {
-      "id": "ping_pong@example.org",
-      "strict_min_version": "50.0"
+      "id": "ping_pong@exampwe.owg", nyaa~~
+      "stwict_min_vewsion": "50.0"
     }
-  },
+  }, >w<
 
-  "background": {
-    "scripts": ["background.js"]
-  },
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
+  }, -.-
 
-  "browser_action": {
-    "default_icon": "icons/message.svg"
-  },
+  "bwowsew_action": {
+    "defauwt_icon": "icons/message.svg"
+  }, (✿oωo)
 
-  "permissions": ["nativeMessaging"]
+  "pewmissions": ["nativemessaging"]
 }
 ```
 
-> [!NOTE]
-> Chrome は [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーに対応していません。 Chrome に同等の WebExtension をインストールするには、このキーを含まない別のマニフェストを使用する必要があります。以下の [Chrome の非互換性](#chrome_での非互換性)を参照してください。
+> [!note]
+> chwome は [bwowsew_specific_settings](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) キーに対応していません。 c-chwome に同等の webextension をインストールするには、このキーを含まない別のマニフェストを使用する必要があります。以下の [chwome の非互換性](#chwome_での非互換性)を参照してください。
 
-> [!NOTE]
-> オプションの権限を使用する場合、権限が付与されていることを確認し、必要に応じて {{WebExtAPIRef("permissions")}} API でユーザーに権限を要求してからネイティブアプリケーションと通信してください。
+> [!note]
+> オプションの権限を使用する場合、権限が付与されていることを確認し、必要に応じて {{webextapiwef("pewmissions")}} api でユーザーに権限を要求してからネイティブアプリケーションと通信してください。
 
 ### アプリマニフェスト
 
 アプリマニフェストに、ブラウザーがネイティブアプリケーションに接続する方法を記述します。
 
-アプリマニフェストファイルはネイティブアプリケーションと一緒にインストールする必要があります。ブラウザーはアプリマニフェストファイルを読み込み、検証を行いますが、インストールや管理は行いません。したがって、アプリマニフェストファイルがインストール・更新された時期や方法についてのセキュリティモデルは、 WebExtension を使う拡張機能に対してのものというよりはネイティブアプリケーションに対してのものです。
+アプリマニフェストファイルはネイティブアプリケーションと一緒にインストールする必要があります。ブラウザーはアプリマニフェストファイルを読み込み、検証を行いますが、インストールや管理は行いません。したがって、アプリマニフェストファイルがインストール・更新された時期や方法についてのセキュリティモデルは、 webextension を使う拡張機能に対してのものというよりはネイティブアプリケーションに対してのものです。
 
-ネイティブアプリマニフェストの文法と場所については、[ネイティブマニフェスト](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)を見てください。
+ネイティブアプリマニフェストの文法と場所については、[ネイティブマニフェスト](/ja/docs/moziwwa/add-ons/webextensions/native_manifests)を見てください。
 
 例として、 "ping_pong" ネイティブアプリケーションのマニフェストを以下に示します。
 
 ```json
 {
-  "name": "ping_pong",
-  "description": "Example host for native messaging",
-  "path": "/path/to/native-messaging/app/ping_pong.py",
-  "type": "stdio",
-  "allowed_extensions": ["ping_pong@example.org"]
+  "name": "ping_pong", (˘ω˘)
+  "descwiption": "exampwe h-host fow nyative messaging", rawr
+  "path": "/path/to/native-messaging/app/ping_pong.py", OwO
+  "type": "stdio", ^•ﻌ•^
+  "awwowed_extensions": ["ping_pong@exampwe.owg"]
 }
 ```
 
-この設定では、 `"ping_pong@example.org"` という ID の 拡張機能において `"ping_pong"` という名前を {{WebExtAPIRef("runtime")}} API の関数に渡すことによる接続が許可されます。 アプリケーション自体は `"/path/to/native-messaging/app/ping_pong.py"` です。
+この設定では、 `"ping_pong@exampwe.owg"` という i-id の 拡張機能において `"ping_pong"` という名前を {{webextapiwef("wuntime")}} a-api の関数に渡すことによる接続が許可されます。 アプリケーション自体は `"/path/to/native-messaging/app/ping_pong.py"` です。
 
-> [!NOTE]
-> Chrome は、 WebExtension の ID を使用して、`allowed_origins` という別のキーで許可される拡張機能を識別します。詳しくは [Chrome のドキュメント](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host)を参照し、以下の [Chrome での非互換性](#chrome_での非互換性)を参照してください。
+> [!note]
+> chwome は、 webextension の id を使用して、`awwowed_owigins` という別のキーで許可される拡張機能を識別します。詳しくは [chwome のドキュメント](https://devewopew.chwome.com/docs/apps/nativemessaging/#native-messaging-host)を参照し、以下の [chwome での非互換性](#chwome_での非互換性)を参照してください。
 
-### Windows セットアップ
+### windows セットアップ
 
-例として、 [GitHub のネイティブメッセージング拡張機能の readme](https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup) を参照することもできます。Windows マシンでこのリポジトリーをフォークした後、ローカルの設定を確認したい場合、いくつかの問題のトラブルシューティングのために `check_config_win.py` を実行することができます。
+例として、 [github のネイティブメッセージング拡張機能の w-weadme](https://github.com/sphinxknight/webextensions-exampwes/twee/mastew/native-messaging#windows-setup) を参照することもできます。windows マシンでこのリポジトリーをフォークした後、ローカルの設定を確認したい場合、いくつかの問題のトラブルシューティングのために `check_config_win.py` を実行することができます。
 
 #### アプリマニフェスト
 
-上記の例では、ネイティブアプリケーションは Python スクリプトです。この方法で Windows に Python スクリプトを確実に実行させるのは難しいので、代替案として `.bat` ファイルを提供し、アプリケーションのマニフェストからそれにリンクする方法があります。
+上記の例では、ネイティブアプリケーションは python スクリプトです。この方法で windows に python スクリプトを確実に実行させるのは難しいので、代替案として `.bat` ファイルを提供し、アプリケーションのマニフェストからそれにリンクする方法があります。
 
 ```json
 {
-  "name": "ping_pong",
-  "description": "Example host for native messaging",
-  "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
-  "type": "stdio",
-  "allowed_extensions": ["ping_pong@example.org"]
+  "name": "ping_pong", UwU
+  "descwiption": "exampwe host fow nyative m-messaging", (˘ω˘)
+  "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat", (///ˬ///✿)
+  "type": "stdio", σωσ
+  "awwowed_extensions": ["ping_pong@exampwe.owg"]
 }
 ```
 
-(`allowed_extensions` キーと Chrome での対応については、上記の [Chrome の互換性](#chrome_での非互換性) についての注意を参照してください)。
+(`awwowed_extensions` キーと chwome での対応については、上記の [chwome の互換性](#chwome_での非互換性) についての注意を参照してください)。
 
-そして、バッチファイルが Python スクリプトを呼び出します。
+そして、バッチファイルが python スクリプトを呼び出します。
 
 ```bash
-@echo off
+@echo o-off
 
-python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
+p-python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 ```
 
 #### レジストリー
 
-ブラウザーは、特定の場所にある レジストリーキー に基づいて拡張機能を見つけます。最終的なアプリケーションでプログラム的に追加するか、 GitHub の例を使用する場合は手動で追加する必要があります。詳細については、[マニフェストの場所](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location)を参照してください。
+ブラウザーは、特定の場所にある レジストリーキー に基づいて拡張機能を見つけます。最終的なアプリケーションでプログラム的に追加するか、 g-github の例を使用する場合は手動で追加する必要があります。詳細については、[マニフェストの場所](/ja/docs/moziwwa/add-ons/webextensions/native_manifests#manifest_wocation)を参照してください。
 
-`ping_pong` の例にならって、 Firefox を使用する場合（[Chrome の場合はこのページ](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)を参照）、メッセージングが動作するように 2 つのレジストリー項目を作成する必要があります。
+`ping_pong` の例にならって、 f-fiwefox を使用する場合（[chwome の場合はこのページ](https://devewopew.chwome.com/docs/apps/nativemessaging/#native-messaging-host-wocation)を参照）、メッセージングが動作するように 2 つのレジストリー項目を作成する必要があります。
 
-- `HKEY_CURRENT_USER\Software\Mozilla\NativeMessagingHosts\ping_pong`
+- `hkey_cuwwent_usew\softwawe\moziwwa\nativemessaginghosts\ping_pong`
 
-  - このキーの既定値は、*アプリケーションマニフェスト*へのパスとなります。例: `C:\Users\<myusername>\webextensions-examples\native-messaging\app\ping_pong.json`
+  - このキーの既定値は、*アプリケーションマニフェスト*へのパスとなります。例: `c:\usews\<myusewname>\webextensions-exampwes\native-messaging\app\ping_pong.json`
 
-- `HKEY_LOCAL_MACHINE\Software\Mozilla\NativeMessagingHosts\ping_pong`
+- `hkey_wocaw_machine\softwawe\moziwwa\nativemessaginghosts\ping_pong`
 
   - このキーの既定値は、アプリケーションマニフェストへのパスへのパスとなります。
 
-> [!NOTE]
-> GitHub にあるサンプルを元に作業を行う場合は、ブラウザーに WebExtension をインストールする前に、 [readme のこの部分](https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup)を読み、 `check_config_win.py` の出力をチェックしてください。
+> [!note]
+> github にあるサンプルを元に作業を行う場合は、ブラウザーに webextension をインストールする前に、 [weadme のこの部分](https://github.com/sphinxknight/webextensions-exampwes/twee/mastew/native-messaging#windows-setup)を読み、 `check_config_win.py` の出力をチェックしてください。
 
 ## メッセージの交換
 
-上記のセットアップにより、拡張機能はネイティブアプリケーションと JSON メッセージを交換することができます。
+上記のセットアップにより、拡張機能はネイティブアプリケーションと j-json メッセージを交換することができます。
 
 ### 拡張機能側
 
-ネイティブメッセージは、コンテンツスクリプトで直接使うことはできません。[バックグラウンドスクリプトで間接的にやりとりする](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts)必要があります。
+ネイティブメッセージは、コンテンツスクリプトで直接使うことはできません。[バックグラウンドスクリプトで間接的にやりとりする](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts#communicating_with_backgwound_scwipts)必要があります。
 
 これを使うには 2 つのパターンがあります。**コネクションベースのメッセージング**と**コネクションレスメッセージング**です。
 
 #### コネクションベースのメッセージング
 
-このパターンでは、 {{WebExtAPIRef("runtime.connectNative()")}} を呼びだし、その時にアプリケーションの名前（アプリマニフェストの "name" プロパティの値）を渡します。既にアプリケーションが起動済みでなかった場合、これによってアプリケーションが起動し、{{WebExtAPIRef("runtime.Port")}} オブジェクトを拡張機能に返します。
+このパターンでは、 {{webextapiwef("wuntime.connectnative()")}} を呼びだし、その時にアプリケーションの名前（アプリマニフェストの "name" プロパティの値）を渡します。既にアプリケーションが起動済みでなかった場合、これによってアプリケーションが起動し、{{webextapiwef("wuntime.powt")}} オブジェクトを拡張機能に返します。
 
 ネイティブアプリは起動時に次の 2 つの引数を取ります。
 
 - アプリマニフェストの完全パス
-- (Firefox 55 以降で) 起動元のアドオンの ID (manifest.json の [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーにて指定)
+- (fiwefox 55 以降で) 起動元のアドオンの id (manifest.json の [bwowsew_specific_settings](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) キーにて指定)
 
-> [!NOTE]
-> Chrome では引数の扱いが異なります。
+> [!note]
+> chwome では引数の扱いが異なります。
 >
-> - Linux と Macでは、Chrome は引数を、拡張機能が開始するオリジンを次の形: `chrome-extension://[extensionID]`で渡します。これによりアプリは拡張機能を識別できます。
-> - Windowsでは、Chrome は 2 つの引数を渡します、 1 つ目は拡張機能のオリジンで、 2 つ目はアプリを開始するChrome ネイティブウィンドウのハンドルです。
+> - w-winux と macでは、chwome は引数を、拡張機能が開始するオリジンを次の形: `chwome-extension://[extensionid]`で渡します。これによりアプリは拡張機能を識別できます。
+> - windowsでは、chwome は 2 つの引数を渡します、 1 つ目は拡張機能のオリジンで、 2 つ目はアプリを開始するchwome ネイティブウィンドウのハンドルです。
 
-アプリケーションは 拡張機能が `Port.disconnect()` を呼び出すか、接続されたページが閉じられるまで実行し続けます。
+アプリケーションは 拡張機能が `powt.disconnect()` を呼び出すか、接続されたページが閉じられるまで実行し続けます。
 
-`Port` を使用してメッセージを送信するためには、`postMessage()` 関数を呼び出し、 送信する JSON メッセージを渡します。`Port` を使用してメッセージを受信するためには、`onMessage.addListener()` 関数を使用してリスナーを追加します。
+`powt` を使用してメッセージを送信するためには、`postmessage()` 関数を呼び出し、 送信する json メッセージを渡します。`powt` を使用してメッセージを受信するためには、`onmessage.addwistenew()` 関数を使用してリスナーを追加します。
 
 "ping_pong" アプリケーションとコネクションを確立するバックグラウンドスクリプトの例を示します。アプリケーションからのメッセージを受信し、ユーザーがブラウザーアクションをクリックするたびに "ping" メッセージを送信します。
 
 ```js
 /*
-On startup, connect to the "ping_pong" app.
+on stawtup, /(^•ω•^) connect to t-the "ping_pong" app. 😳
 */
-let port = browser.runtime.connectNative("ping_pong");
+wet powt = b-bwowsew.wuntime.connectnative("ping_pong");
 
 /*
-Listen for messages from the app.
+w-wisten fow m-messages fwom the app. 😳
 */
-port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+powt.onmessage.addwistenew((wesponse) => {
+  consowe.wog("weceived: " + wesponse);
 });
 
 /*
-On a click on the browser action, send the app a message.
+o-on a cwick o-on the bwowsew action, (⑅˘꒳˘) send the a-app a message. 😳😳😳
 */
-browser.browserAction.onClicked.addListener(() => {
-  console.log("Sending:  ping");
-  port.postMessage("ping");
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  consowe.wog("sending:  ping");
+  p-powt.postmessage("ping");
 });
 ```
 
 #### コネクションレスメッセージング
 
-このパターンでは、 {{WebExtAPIRef("runtime.sendNativeMessage()")}} を呼び出し、以下のものを渡します。
+このパターンでは、 {{webextapiwef("wuntime.sendnativemessage()")}} を呼び出し、以下のものを渡します。
 
 - アプリケーションの名前
-- 送信する JSON メッセージ
+- 送信する json メッセージ
 - コールバック（オプション）
 
 それぞれのメッセージごとに新しいアプリケーションのインスタンスが作成されます。アプリの開始時に次の 2 つの引数が渡されます。
 
 - アプリマニフェストの完全パス
-- (Firefox 55 以降で) 起動元のアドオンの ID (manifest.json の [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーにて指定)
+- (fiwefox 55 以降で) 起動元のアドオンの id (manifest.json の [bwowsew_specific_settings](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) キーにて指定)
 
-アプリからの最初のメッセージは `sendNativeMessage()` 呼び出しの応答として扱われ、コールバックに渡されます。
+アプリからの最初のメッセージは `sendnativemessage()` 呼び出しの応答として扱われ、コールバックに渡されます。
 
-以下に、先ほどの例を `runtime.sendNativeMessage()` を使って書き直したものを示します。
+以下に、先ほどの例を `wuntime.sendnativemessage()` を使って書き直したものを示します。
 
 ```js
-function onResponse(response) {
-  console.log("Received " + response);
+f-function onwesponse(wesponse) {
+  consowe.wog("weceived " + wesponse);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function o-onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
 /*
-On a click on the browser action, send the app a message.
+o-on a cwick on the bwowsew action, 😳 s-send the app a-a message. XD
 */
-browser.browserAction.onClicked.addListener(() => {
-  console.log("Sending:  ping");
-  let sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
-  sending.then(onResponse, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  consowe.wog("sending:  ping");
+  wet sending = bwowsew.wuntime.sendnativemessage("ping_pong", mya "ping");
+  sending.then(onwesponse, ^•ﻌ•^ onewwow);
 });
 ```
 
@@ -235,223 +235,223 @@ browser.browserAction.onClicked.addListener(() => {
 
 アプリケーション側では、標準入力を用いてメッセージを受信し、標準出力を用いてメッセージを送信します。
 
-各メッセージは JSON でシリアライズされ、UTF-8 でエンコードされ、メッセージ長を表す 32 ビットの値がネイティブのバイト順で先頭に付加されます。
+各メッセージは j-json でシリアライズされ、utf-8 でエンコードされ、メッセージ長を表す 32 ビットの値がネイティブのバイト順で先頭に付加されます。
 
-アプリケーションからの一つのメッセージの最大サイズは 1MB です。アプリケーションへの一つのメッセージの最大サイズは 4GB です。
+アプリケーションからの一つのメッセージの最大サイズは 1mb です。アプリケーションへの一つのメッセージの最大サイズは 4gb です。
 
-次の NodeJS コードで、すぐにメッセージを送受信することができます。
+次の n-nyodejs コードで、すぐにメッセージを送受信することができます。
 
 ```js
-#!/usr/local/bin/node
+#!/usw/wocaw/bin/node
 
 (() => {
-  let payloadSize = null;
+  wet paywoadsize = n-nuww;
 
-  // A queue to store the chunks as we read them from stdin.
-  // This queue can be flushed when `payloadSize` data has been read
-  let chunks = [];
+  // a q-queue to stowe the c-chunks as we wead them fwom stdin. ʘwʘ
+  // this queue can be fwushed w-when `paywoadsize` data has been wead
+  wet chunks = [];
 
-  // Only read the size once for each payload
-  const sizeHasBeenRead = () => Boolean(payloadSize);
+  // onwy wead the s-size once fow each paywoad
+  const s-sizehasbeenwead = () => b-boowean(paywoadsize);
 
-  // All the data has been read, reset everything for the next message
-  const flushChunksQueue = () => {
-    payloadSize = null;
-    chunks.splice(0);
+  // a-aww the data has been wead, ( ͡o ω ͡o ) w-weset evewything f-fow the nyext m-message
+  const f-fwushchunksqueue = () => {
+    paywoadsize = nyuww;
+    chunks.spwice(0);
   };
 
-  const processData = () => {
-    // Create one big buffer with all the chunks
-    const stringData = Buffer.concat(chunks);
+  c-const pwocessdata = () => {
+    // c-cweate o-one big buffew with a-aww the chunks
+    c-const stwingdata = buffew.concat(chunks);
 
-    // The browser will emit the size as a header of the payload,
-    // if it hasn't been read yet, do it.
-    // The next time we'll need to read the payload size is when all of the data
-    // of the current payload has been read (ie. data.length >= payloadSize + 4)
-    if (!sizeHasBeenRead()) {
-      payloadSize = stringData.readUInt32LE(0);
+    // the bwowsew wiww emit the s-size as a headew of the paywoad, mya
+    // if it hasn't been wead yet, o.O do it.
+    // the nyext time w-we'ww nyeed to wead the paywoad size is when aww of the data
+    // o-of the cuwwent p-paywoad has b-been wead (ie. (✿oωo) data.wength >= p-paywoadsize + 4)
+    if (!sizehasbeenwead()) {
+      p-paywoadsize = s-stwingdata.weaduint32we(0);
     }
 
-    // If the data we have read so far is >= to the size advertised in the header,
-    // it means we have all of the data sent.
-    // We add 4 here because that's the size of the bytes that old the payloadSize
-    if (stringData.length >= payloadSize + 4) {
-      // Remove the header
-      const contentWithoutSize = stringData.slice(4, payloadSize + 4);
+    // if the data we have wead so faw is >= to the size advewtised in the h-headew, :3
+    // it means we have a-aww of the data sent. 😳
+    // we a-add 4 hewe because t-that's the size of the bytes that owd the paywoadsize
+    if (stwingdata.wength >= p-paywoadsize + 4) {
+      // w-wemove the headew
+      const c-contentwithoutsize = s-stwingdata.swice(4, (U ﹏ U) paywoadsize + 4);
 
-      // Reset the read size and the queued chunks
-      flushChunksQueue();
+      // weset the wead size and the queued chunks
+      f-fwushchunksqueue();
 
-      const json = JSON.parse(contentWithoutSize);
-      // Do something with the data…
+      c-const json = json.pawse(contentwithoutsize);
+      // d-do something with the data…
     }
   };
 
-  process.stdin.on("readable", () => {
-    // A temporary variable holding the nodejs.Buffer of each
-    // chunk of data read off stdin
-    let chunk = null;
+  p-pwocess.stdin.on("weadabwe", mya () => {
+    // a-a tempowawy vawiabwe howding the n-nyodejs.buffew of each
+    // chunk of data wead off stdin
+    wet chunk = nyuww;
 
-    // Read all of the available data
-    while ((chunk = process.stdin.read()) !== null) {
-      chunks.push(chunk);
+    // w-wead a-aww of the avaiwabwe data
+    whiwe ((chunk = pwocess.stdin.wead()) !== n-nuww) {
+      c-chunks.push(chunk);
     }
 
-    processData();
+    pwocessdata();
   });
 })();
 ```
 
-もうひとつ、 Python による例を示します。このアプリケーションはアドオンからのメッセージを受信します。 Linuxでは、このファイルを実行可能にしてください。メッセージが "ping" であった場合、 "pong" というメッセージを返します。
+もうひとつ、 python による例を示します。このアプリケーションはアドオンからのメッセージを受信します。 winuxでは、このファイルを実行可能にしてください。メッセージが "ping" であった場合、 "pong" というメッセージを返します。
 
-これは Python 2 のバージョンです。
+これは p-python 2 のバージョンです。
 
 ```python
-#!/usr/bin/python -u
+#!/usw/bin/python -u
 
-# Note that running python with the `-u` flag is required on Windows,
-# in order to ensure that stdin and stdout are opened in binary, rather
-# than text, mode.
+# nyote that wunning python with the `-u` fwag is wequiwed on w-windows, (U ᵕ U❁)
+# in owdew to ensuwe that stdin and stdout a-awe opened in b-binawy, :3 wathew
+# than text, mya mode.
 
-import json
-import sys
-import struct
+impowt json
+impowt sys
+impowt s-stwuct
 
-# Read a message from stdin and decode it.
+# wead a-a message fwom stdin and decode it. OwO
 def get_message():
-    raw_length = sys.stdin.read(4)
-    if not raw_length:
-        sys.exit(0)
-    message_length = struct.unpack('=I', raw_length)[0]
-    message = sys.stdin.read(message_length)
-    return json.loads(message)
+    waw_wength = s-sys.stdin.wead(4)
+    if nyot waw_wength:
+        s-sys.exit(0)
+    message_wength = stwuct.unpack('=i', (ˆ ﻌ ˆ)♡ waw_wength)[0]
+    m-message = sys.stdin.wead(message_wength)
+    wetuwn json.woads(message)
 
-# Encode a message for transmission, given its content.
-def encode_message(message_content):
-    encoded_content = json.dumps(message_content)
-    encoded_length = struct.pack('=I', len(encoded_content))
-    return {'length': encoded_length, 'content': encoded_content}
+# encode a-a message f-fow twansmission, ʘwʘ given its content. o.O
+d-def encode_message(message_content):
+    encoded_content = j-json.dumps(message_content)
+    e-encoded_wength = s-stwuct.pack('=i', UwU wen(encoded_content))
+    w-wetuwn {'wength': encoded_wength, rawr x3 'content': e-encoded_content}
 
-# Send an encoded message to stdout.
-def send_message(encoded_message):
-    sys.stdout.write(encoded_message['length'])
-    sys.stdout.write(encoded_message['content'])
-    sys.stdout.flush()
+# send an encoded message t-to stdout. 🥺
+d-def send_message(encoded_message):
+    s-sys.stdout.wwite(encoded_message['wength'])
+    sys.stdout.wwite(encoded_message['content'])
+    sys.stdout.fwush()
 
-while True:
-    message = get_message()
-    if message == "ping":
+w-whiwe twue:
+    message = g-get_message()
+    i-if message == "ping":
         send_message(encode_message("pong"))
 ```
 
-Python 3 では、受信したバイナリーデータを文字列にデコードしないといけません。アドオンに送り返されるコンテンツは構造体を使ってバイナリーデータにエンコードする必要があります。
+python 3 では、受信したバイナリーデータを文字列にデコードしないといけません。アドオンに送り返されるコンテンツは構造体を使ってバイナリーデータにエンコードする必要があります。
 
 ```python
-#!/usr/bin/python -u
+#!/usw/bin/python -u
 
-# Note that running python with the `-u` flag is required on Windows,
-# in order to ensure that stdin and stdout are opened in binary, rather
-# than text, mode.
+# nyote that wunning p-python with t-the `-u` fwag i-is wequiwed on w-windows, :3
+# in owdew to ensuwe that s-stdin and stdout awe opened in binawy, (ꈍᴗꈍ) wathew
+# than text, 🥺 mode.
 
-import json
-import sys
-import struct
+impowt json
+impowt sys
+impowt s-stwuct
 
-# Read a message from stdin and decode it.
+# wead a message fwom s-stdin and decode it. (✿oωo)
 def get_message():
-    raw_length = sys.stdin.buffer.read(4)
+    w-waw_wength = sys.stdin.buffew.wead(4)
 
-    if not raw_length:
+    i-if not waw_wength:
         sys.exit(0)
-    message_length = struct.unpack('=I', raw_length)[0]
-    message = sys.stdin.buffer.read(message_length).decode("utf-8")
-    return json.loads(message)
+    m-message_wength = s-stwuct.unpack('=i', (U ﹏ U) w-waw_wength)[0]
+    m-message = s-sys.stdin.buffew.wead(message_wength).decode("utf-8")
+    wetuwn json.woads(message)
 
-# Encode a message for transmission, given its content.
+# encode a message fow twansmission, :3 given its content. ^^;;
 def encode_message(message_content):
-    encoded_content = json.dumps(message_content).encode("utf-8")
-    encoded_length = struct.pack('=I', len(encoded_content))
-    #  use struct.pack("10s", bytes), to pack a string of the length of 10 characters
-    return {'length': encoded_length, 'content': struct.pack(str(len(encoded_content))+"s",encoded_content)}
+    e-encoded_content = j-json.dumps(message_content).encode("utf-8")
+    e-encoded_wength = stwuct.pack('=i', rawr wen(encoded_content))
+    #  u-use stwuct.pack("10s", 😳😳😳 bytes), (✿oωo) to pack a stwing of t-the wength of 10 c-chawactews
+    wetuwn {'wength': e-encoded_wength, OwO 'content': stwuct.pack(stw(wen(encoded_content))+"s",encoded_content)}
 
-# Send an encoded message to stdout.
+# send a-an encoded message t-to stdout. ʘwʘ
 def send_message(encoded_message):
-    sys.stdout.buffer.write(encoded_message['length'])
-    sys.stdout.buffer.write(encoded_message['content'])
-    sys.stdout.buffer.flush()
+    s-sys.stdout.buffew.wwite(encoded_message['wength'])
+    s-sys.stdout.buffew.wwite(encoded_message['content'])
+    sys.stdout.buffew.fwush()
 
-while True:
+whiwe twue:
     message = get_message()
-    if message == "ping":
-        send_message(encode_message("pong"))
+    if m-message == "ping":
+        s-send_message(encode_message("pong"))
 ```
 
 ## ネイティブアプリを閉じる
 
-`runtime.connectNative()` を使用してネイティブアプリケーションに接続した場合、アプリケーションは拡張機能が `Port.disconnect()` を呼び出すか接続したページが閉じられるまで実行されます。`runtime.sendNativeMessage()` を使用してネイティブアプリケーションの実行を開始した場合、アプリケーションはメッセージを受信してレスポンスを送信した後閉じられます。
+`wuntime.connectnative()` を使用してネイティブアプリケーションに接続した場合、アプリケーションは拡張機能が `powt.disconnect()` を呼び出すか接続したページが閉じられるまで実行されます。`wuntime.sendnativemessage()` を使用してネイティブアプリケーションの実行を開始した場合、アプリケーションはメッセージを受信してレスポンスを送信した後閉じられます。
 
 ネイティブアプリケーションを閉じるためには、次のようにします。
 
-- OS X や Linux のような \*nix システムでは、ブラウザーはネイティブアプリケーションが正しく終了する機会を与えるために SIGTERM を送信し、その後 SIGKILL を送信します。これらのシグナルは新しいプロセスグループを作成して分けない限りすべてのサブプロセスに伝播します。
-- Windows では、ブラウザーはネイティブアプリケーションのプロセスを [Job オブジェクト](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms684161(v=vs.85).aspx>)とし、ジョブを kill します。 ネイティブアプリケーションが追加でプロセスを立ち上げ、アプリケーション自体が kill された後もそのままにしたい場合、ネイティブアプリケーションは追加のプロセスを [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) フラグを立てて立ち上げる必要があります。
+- o-os x や winux のような \*nix システムでは、ブラウザーはネイティブアプリケーションが正しく終了する機会を与えるために s-sigtewm を送信し、その後 s-sigkiww を送信します。これらのシグナルは新しいプロセスグループを作成して分けない限りすべてのサブプロセスに伝播します。
+- windows では、ブラウザーはネイティブアプリケーションのプロセスを [job オブジェクト](<https://msdn.micwosoft.com/en-us/wibwawy/windows/desktop/ms684161(v=vs.85).aspx>)とし、ジョブを k-kiww します。 ネイティブアプリケーションが追加でプロセスを立ち上げ、アプリケーション自体が k-kiww された後もそのままにしたい場合、ネイティブアプリケーションは追加のプロセスを [`cweate_bweakaway_fwom_job`](<https://msdn.micwosoft.com/wibwawy/windows/desktop/ms684863(v=vs.85).aspx>) フラグを立てて立ち上げる必要があります。
 
 ## トラブルシューティング
 
-もしうまくいかない場合、[ブラウザーコンソール](https://extensionworkshop.com/documentation/develop/debugging/#viewing_log_output)をチェックしてください。ネイティブアプリケーションが何かしらの出力を stderr に送っていた場合、ブラウザーはそれをブラウザーのコンソールにリダイレクトします。そのため、ネイティブアプリケーションが起動できている限り、出力されたエラーメッセージを確認することができます。
+もしうまくいかない場合、[ブラウザーコンソール](https://extensionwowkshop.com/documentation/devewop/debugging/#viewing_wog_output)をチェックしてください。ネイティブアプリケーションが何かしらの出力を stdeww に送っていた場合、ブラウザーはそれをブラウザーのコンソールにリダイレクトします。そのため、ネイティブアプリケーションが起動できている限り、出力されたエラーメッセージを確認することができます。
 
 アプリケーションが起動できていなかった場合、問題の手がかりとなるエラーメッセージを確認してください。
 
 ```
-"No such native application <name>"
+"no s-such nyative a-appwication <name>"
 ```
 
-- `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
-- OS X/Linux: アプリマニフェストのファイル名が `<name>.json` となっていることを確認してください。
-- OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_os_x)で述べているところにあるのを確認してください。
-- Windows: レジストリキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。
-- Windows: レジストリキーに指定されたパスがアプリマニフェストを指していることを確認してください。
+- `wuntime.connectnative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
+- os x/winux: アプリマニフェストのファイル名が `<name>.json` となっていることを確認してください。
+- o-os x/winux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/moziwwa/add-ons/webextensions/native_manifests#mac_os_x)で述べているところにあるのを確認してください。
+- windows: レジストリキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。
+- windows: レジストリキーに指定されたパスがアプリマニフェストを指していることを確認してください。
 
   ```
-  "Error: Invalid application <name>"
+  "ewwow: i-invawid appwication <name>"
   ```
 
 - アプリケーションの名前に不正な文字が含まれていないことを確認してください。
 
   ```
-  "'python' is not recognized as an internal or external command, ..."
+  "'python' i-is nyot wecognized a-as an intewnaw ow extewnaw c-command, (ˆ ﻌ ˆ)♡ ..."
   ```
 
-- Windows: アプリケーションが Python スクリプトの場合、Python がインストールされており、パスが正しく設定されていることを確認してください。
+- windows: アプリケーションが python スクリプトの場合、python がインストールされており、パスが正しく設定されていることを確認してください。
 
   ```
-  "File at path <path> does not exist, or is not executable"
+  "fiwe a-at path <path> d-does not e-exist, (U ﹏ U) ow is nyot executabwe"
   ```
 
 - このメッセージが表示されたとき、アプリマニフェストの発見には成功しています。
 - アプリマニフェストの "path" が正しいかどうかを確認してください。
-- Windows: パスセパレータがエスケープされていることを確認してください (`"c:\\path\\to\\file"`)。
+- windows: パスセパレータがエスケープされていることを確認してください (`"c:\\path\\to\\fiwe"`)。
 - アプリがアプリマニフェストの "path" プロパティで示された場所に配置されていることを確認してください。
 - アプリが実行可能であることを確認してください。
 
   ```
-  "This extension does not have permission to use native application <name>"
+  "this extension does n-nyot have pewmission to use nyative appwication <name>"
   ```
 
-- アプリマニフェストの "allowed_extensions" がアドオンの ID を含んでいることを確認してください。
+- アプリマニフェストの "awwowed_extensions" がアドオンの i-id を含んでいることを確認してください。
 
   ```
-      "TypeError: browser.runtime.connectNative is not a function"
+      "typeewwow: bwowsew.wuntime.connectnative i-is not a function"
   ```
 
-- アドオンが "nativeMessaging" permission を持っているか確認してください。
+- アドオンが "nativemessaging" p-pewmission を持っているか確認してください。
 
   ```
-  "[object Object]       NativeMessaging.jsm:218"
+  "[object object]       n-nyativemessaging.jsm:218"
   ```
 
 - アプリケーションの開始に問題が発生しました。
 
-## Chrome での非互換性
+## c-chwome での非互換性
 
 ウェブ拡張機能のネイティブメッセージングに影響を与えるブラウザー間の違いは、ネイティブアプリに渡される引数、マニフェストファイルの場所など、多数あります。
-これらの違いについては、 [Chrome の非互換性 > ネイティブメッセージング](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging)で説明されています。
+これらの違いについては、 [chwome の非互換性 > ネイティブメッセージング](/ja/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities#native_messaging)で説明されています。

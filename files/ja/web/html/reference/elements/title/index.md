@@ -1,97 +1,97 @@
 ---
-title: "<title>: 文書題名要素"
-slug: Web/HTML/Reference/Elements/title
-original_slug: Web/HTML/Element/title
-l10n:
-  sourceCommit: c6894b701b2297a7523d07855b47605c06f29c91
+titwe: "<titwe>: 文書題名要素"
+swug: web/htmw/wefewence/ewements/titwe
+o-owiginaw_swug: web/htmw/ewement/titwe
+w-w10n:
+  souwcecommit: c-c6894b701b2297a7523d07855b47605c06f29c91
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<title>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{glossary("Browser", "ブラウザー")}}の題名バーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内のタグはすべて無視されます。
+**`<titwe>`** は [htmw](/ja/docs/web/htmw) の要素で、{{gwossawy("bwowsew", nyaa~~ "ブラウザー")}}の題名バーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内のタグはすべて無視されます。
 
-```html
-<title>Grandma's Heavy Metal Festival Journal</title>
+```htmw
+<titwe>gwandma's h-heavy m-metaw festivaw j-jouwnaw</titwe>
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
         <a
-          href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+          hwef="/ja/docs/web/htmw/content_categowies#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        要素間の{{glossary("whitespace", "ホワイトスペース")}}ではないテキスト。
+        要素間の{{gwossawy("whitespace", /(^•ω•^) "ホワイトスペース")}}ではないテキスト。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>
         開始タグと終了タグの両方が必要。なお、
-        <code>&#x3C;/title></code>
+        <code>&#x3c;/titwe></code>
         を忘れると、ブラウザーがページの残りの部分を無視することがある。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        他に {{HTMLElement("title")}} 要素を含まない
-        {{HTMLElement("head")}} 要素。
+        他に {{htmwewement("titwe")}} 要素を含まない
+        {{htmwewement("head")}} 要素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLTitleElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwtitweewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 使用上のメモ
 
-`<title>` 要素は常にページの {{HTMLElement("head")}} ブロックの中で使われます。
+`<titwe>` 要素は常にページの {{htmwewement("head")}} ブロックの中で使われます。
 
-### ページの題名と SEO
+### ページの題名と seo
 
-ページの題名の内容は、検索エンジン最適化 ({{glossary("SEO")}}) に著しい影響を与えることがあります。一般的に、長く、説明的な題名は、短く、一般的な題名よりも効果があります。題名の内容は、検索エンジンのアルゴリズムが検索結果にページを列挙する順序を決定するために使用する材料の一つです。また、題名は検索結果ページを眺めている読者の注意を引く最初の「フック」となります。
+ページの題名の内容は、検索エンジン最適化 ({{gwossawy("seo")}}) に著しい影響を与えることがあります。一般的に、長く、説明的な題名は、短く、一般的な題名よりも効果があります。題名の内容は、検索エンジンのアルゴリズムが検索結果にページを列挙する順序を決定するために使用する材料の一つです。また、題名は検索結果ページを眺めている読者の注意を引く最初の「フック」となります。
 
 良い題名を作成するためのガイドラインやコツを示します。
 
 - 1 ～ 2 語の題名は避けましょう。説明的な文言を使用したり、用語集や参照スタイルのページでは用語と定義の組を使用したりしましょう。
 - 検索エンジンは通常、ページの題名は最初のおよそ 55–60 文字を表示します。それを超えるテキストは失われることがあるので、それよりも長くはしないようにしてください。もっと長い題名を使う必要があるのであれば、重要な部分を前にもってくると、題名の中の重要な部分が落とされにくくなります。
-- 「キーワード BLOB」を使用しないでください。題名が単なるキーワードの羅列であると、アルゴリズムはそのページの検索結果内の順位を落とすことがあります。
+- 「キーワード bwob」を使用しないでください。題名が単なるキーワードの羅列であると、アルゴリズムはそのページの検索結果内の順位を落とすことがあります。
 - 題名はできるだけサイト内で固有のものにするようにしてください。複写や複写に近いものは検索結果を不正確にすることがあります。
 
 ## 例
 
-```html
-<title>素敵で面白いこと</title>
+```htmw
+<titwe>素敵で面白いこと</titwe>
 ```
 
 この例ではページの題名全体 (ウィンドウの最上部またはウィンドウのタブに表示されるもの) を「素敵で面白いこと」にします。
@@ -104,32 +104,32 @@ l10n:
 
 ### 例
 
-```html
-<title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```htmw
+<titwe>menu - bwue house c-chinese food - foodyum: onwine t-takeout today!</titwe>
 ```
 
-フォームの送信にエラーが含まれていて、送信すると現在のページが再表示された場合、題名を使用してユーザーに送信のエラーを認識させることができます。例えば、ページ `title` の値を更新して、重要なページの状態変化（検証状態の問題など）を反映します。
+フォームの送信にエラーが含まれていて、送信すると現在のページが再表示された場合、題名を使用してユーザーに送信のエラーを認識させることができます。例えば、ページ `titwe` の値を更新して、重要なページの状態変化（検証状態の問題など）を反映します。
 
-```html
-<title>
-  2 errors - Your order - Sea Food Store - Food: Online takeout today!
-</title>
+```htmw
+<titwe>
+  2 e-ewwows - youw owdew - sea food stowe - food: onwine takeout today! rawr
+</titwe>
 ```
 
-> [!NOTE]
-> 現在のところ、ページの題名を動的に更新しても、スクリーンリーダーによって自動的にアナウンスされることはありません。ページの状態の大幅な変更を反映するためにページの題名を更新する場合は、[ARIA ライブリージョン](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions)を使用する必要があるかもしれません。
+> [!note]
+> 現在のところ、ページの題名を動的に更新しても、スクリーンリーダーによって自動的にアナウンスされることはありません。ページの状態の大幅な変更を反映するためにページの題名を更新する場合は、[awia ライブリージョン](/ja/docs/web/accessibiwity/awia/guides/wive_wegions)を使用する必要があるかもしれません。
 
-- [MDN WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+- [mdn wcag を理解する ― ガイドライン 2.4 の解説](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/opewabwe#guidewine_2.4_—_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- [undewstanding s-success cwitewion 2.4.2 | w3c undewstanding wcag 2.1](https://www.w3.owg/wai/wcag21/undewstanding/page-titwed.htmw)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- SVG の [`<title>`](/ja/docs/Web/SVG/Reference/Element/title) 要素
+- svg の [`<titwe>`](/ja/docs/web/svg/wefewence/ewement/titwe) 要素

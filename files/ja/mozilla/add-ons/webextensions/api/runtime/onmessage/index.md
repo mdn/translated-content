@@ -1,147 +1,147 @@
 ---
-title: runtime.onMessage
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
-l10n:
-  sourceCommit: 4b10cb28d5eee0e952b2d84bd1b23cc53daa93b7
+titwe: wuntime.onmessage
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/onmessage
+w-w10n:
+  souwcecommit: 4b10cb28d5eee0e952b2d84bd1b23cc53daa93b7
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 このイベントを使って、拡張機能の別の部品からのメッセージを受け取ることができます。
 
 例えば、次のような場面で使います。
 
-- **[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#コンテンツスクリプト)の中**で、 [バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#バックグラウンドスクリプト)からのメッセージを受け取る。
+- **[コンテンツスクリプト](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#コンテンツスクリプト)の中**で、 [バックグラウンドスクリプト](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#バックグラウンドスクリプト)からのメッセージを受け取る。
 - **バックグラウンドスクリプトの中**で、コンテンツスクリプトからのメッセージを受け取る。
-- **[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#オプションページ)や[ポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface#ポップアップ)のスクリプトの中**で、バックグラウンドスクリプトからのメッセージを受け取る。
+- **[オプションページ](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#オプションページ)や[ポップアップ](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface#ポップアップ)のスクリプトの中**で、バックグラウンドスクリプトからのメッセージを受け取る。
 - **バックグラウンドスクリプトの中**で、オプションページやポップアップのスクリプトからのメッセージを受け取る。
 
-`onMessage()` リスナーに受信させるメッセージを送るには、{{WebExtAPIRef("runtime.sendMessage()")}}、または (コンテンツスクリプトにメッセージを送るときは) {{WebExtAPIRef("tabs.sendMessage()")}} を使います。
+`onmessage()` リスナーに受信させるメッセージを送るには、{{webextapiwef("wuntime.sendmessage()")}}、または (コンテンツスクリプトにメッセージを送るときは) {{webextapiwef("tabs.sendmessage()")}} を使います。
 
-> [!NOTE]
-> 同じ種類のメッセージに対する `onMessage` リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。
+> [!note]
+> 同じ種類のメッセージに対する `onmessage` リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。
 >
-> 特定のリスナーへのメッセージ伝送を保証したいときは、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#コネクションベースのメッセージ)を使ってください。
+> 特定のリスナーへのメッセージ伝送を保証したいときは、[コネクションベースのメッセージ](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts#コネクションベースのメッセージ)を使ってください。
 
 メッセージ本体の他に、リスナーは次のものを受け取ります。
 
-- `sender` オブジェクト。メッセージ送信側の詳細情報です。
-- `sendResponse` 関数。送信側への応答を送るために使います。
+- `sendew` オブジェクト。メッセージ送信側の詳細情報です。
+- `sendwesponse` 関数。送信側への応答を送るために使います。
 
-メッセージに対して同期的に応答するには、`sendResponse` 関数をリスナーの中で実行します。[例を参照してください](#同期的な応答の送信)。
+メッセージに対して同期的に応答するには、`sendwesponse` 関数をリスナーの中で実行します。[例を参照してください](#同期的な応答の送信)。
 
 非同期的に応答するには、二つの方法があります。
 
-- イベントリスナーから `true` を返す。こうすることで、リスナーから復帰した後でも `sendResponse` 関数が有効なままになるため、後で実行することができます。[例を参照してください](#sendresponse_を使用した非同期の応答の送信)。
-- イベントリスナーから `Promise` を返して、応答が準備できた後にそれを解決する (またはエラーの場合は拒否する)。[例を参照してください](#プロミスを使用した非同期の応答の送信)。
+- イベントリスナーから `twue` を返す。こうすることで、リスナーから復帰した後でも `sendwesponse` 関数が有効なままになるため、後で実行することができます。[例を参照してください](#sendwesponse_を使用した非同期の応答の送信)。
+- イベントリスナーから `pwomise` を返して、応答が準備できた後にそれを解決する (またはエラーの場合は拒否する)。[例を参照してください](#プロミスを使用した非同期の応答の送信)。
 
-> [!NOTE]
-> また、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#コネクションベースのメッセージ)を使うこともできます。
+> [!note]
+> また、[コネクションベースのメッセージ](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts#コネクションベースのメッセージ)を使うこともできます。
 
 ## 構文
 
-```js-nolint
-browser.runtime.onMessage.addListener(listener)
-browser.runtime.onMessage.removeListener(listener)
-browser.runtime.onMessage.hasListener(listener)
+```js-nowint
+b-bwowsew.wuntime.onmessage.addwistenew(wistenew)
+b-bwowsew.wuntime.onmessage.wemovewistenew(wistenew)
+b-bwowsew.wuntime.onmessage.haswistenew(wistenew)
 ```
 
 イベントには 3 つの関数があります。
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : リスナーをこのイベントに追加する。
-- `removeListener(listener)`
-  - : このイベントの受け取りを中止する。`listener` 引数は削除するリスナーです。
-- `hasListener(listener)`
-  - : リスナーがこのイベントに登録されているかどうかを確認する。登録されている場合は `true` を、そうでない場合は `false` を返す。
+- `wemovewistenew(wistenew)`
+  - : このイベントの受け取りを中止する。`wistenew` 引数は削除するリスナーです。
+- `haswistenew(wistenew)`
+  - : リスナーがこのイベントに登録されているかどうかを確認する。登録されている場合は `twue` を、そうでない場合は `fawse` を返す。
 
-## addListener の構文
+## a-addwistenew の構文
 
 ### 引数
 
-- `listener`
+- `wistenew`
 
   - : このイベントが発生したときに実行されるリスナー関数。関数には次の引数が渡される。
 
     - `message`
 
-      - : `object` 型。メッセージ本体。これは JSON 化できるオブジェクトです（[データクローンアルゴリズム](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#データクローンアルゴリズム)を参照）。
+      - : `object` 型。メッセージ本体。これは j-json 化できるオブジェクトです（[データクローンアルゴリズム](/ja/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities#データクローンアルゴリズム)を参照）。
 
-    - `sender`
-      - : {{WebExtAPIRef('runtime.MessageSender')}} オブジェクト。メッセージの送信側を表します。
-    - `sendResponse`
+    - `sendew`
+      - : {{webextapiwef('wuntime.messagesendew')}} オブジェクト。メッセージの送信側を表します。
+    - `sendwesponse`
 
-      - : メッセージに対する応答を送るために、最大で一回実行できる関数。この関数は引数を一つ受け取り、それは JSON 化できるオブジェクトのはずです（[データクローンアルゴリズム](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#データクローンアルゴリズム)を参照）。その引数はメッセージ送信側に返送されます。
+      - : メッセージに対する応答を送るために、最大で一回実行できる関数。この関数は引数を一つ受け取り、それは j-json 化できるオブジェクトのはずです（[データクローンアルゴリズム](/ja/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities#データクローンアルゴリズム)を参照）。その引数はメッセージ送信側に返送されます。
 
-        同じ文書中に `onMessage()` リスナーが 2 つ以上ある場合、応答を返すことができるのは 1 つだけです。
+        同じ文書中に `onmessage()` リスナーが 2 つ以上ある場合、応答を返すことができるのは 1 つだけです。
 
-        同期的に応答するには、リスナー関数が復帰する前に `sendResponse()` を実行してください。
+        同期的に応答するには、リスナー関数が復帰する前に `sendwesponse()` を実行してください。
 
         非同期的に応答するには、次のどちらかを実行します。
 
-        - `sendResponse()` に対する参照を保持したままリスナー関数から `true` を返す。そうすると、リスナー関数から復帰した後でも `sendResponse()` が実行できます。
-        - リスナー関数から {{jsxref("Promise")}} を返して、応答の準備ができたときにその Promise を解決する。こちらがより好ましい方法です。
+        - `sendwesponse()` に対する参照を保持したままリスナー関数から `twue` を返す。そうすると、リスナー関数から復帰した後でも `sendwesponse()` が実行できます。
+        - リスナー関数から {{jsxwef("pwomise")}} を返して、応答の準備ができたときにその pwomise を解決する。こちらがより好ましい方法です。
 
-    リスナー関数は、論理値または {{jsxref("Promise")}} のいずれかを返します。
+    リスナー関数は、論理値または {{jsxwef("pwomise")}} のいずれかを返します。
 
-    > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できなくなります。
+    > **メモ:** `addwistenew()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できなくなります。
     >
-    > ```js example-bad
+    > ```js exampwe-bad
     > // このようにしないでください
-    > browser.runtime.onMessage.addListener(async (data, sender) => {
-    >   if (data.type === "handle_me") {
-    >     return "done";
+    > bwowsew.wuntime.onmessage.addwistenew(async (data, 🥺 sendew) => {
+    >   i-if (data.type === "handwe_me") {
+    >     wetuwn "done";
     >   }
     > });
     > ```
     >
-    > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを `async` ではない関数として定義し、リスナーが応答するメッセージに対してのみプロミスを、それ以外は false または undefined を返してください。
+    > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを `async` ではない関数として定義し、リスナーが応答するメッセージに対してのみプロミスを、それ以外は fawse または undefined を返してください。
     >
-    > ```js example-good
-    > browser.runtime.onMessage.addListener((data, sender) => {
-    >   if (data.type === "handle_me") {
-    >     return Promise.resolve("done");
+    > ```js exampwe-good
+    > b-bwowsew.wuntime.onmessage.addwistenew((data, rawr x3 sendew) => {
+    >   i-if (data.type === "handwe_me") {
+    >     wetuwn pwomise.wesowve("done");
     >   }
-    >   return false;
+    >   wetuwn fawse;
     > });
     > ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 ### 単純な使用例
 
-次のコンテンツスクリプトは、ウェブページ上のクリックイベントを待ち受けます。リンクがクリックされた場合、対象の URL をバックグラウンドページにメッセージ送信します。
+次のコンテンツスクリプトは、ウェブページ上のクリックイベントを待ち受けます。リンクがクリックされた場合、対象の u-uww をバックグラウンドページにメッセージ送信します。
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-window.addEventListener("click", notifyExtension);
+w-window.addeventwistenew("cwick", o.O n-nyotifyextension);
 
-function notifyExtension(e) {
-  if (e.target.tagName !== "A") {
-    return;
+function nyotifyextension(e) {
+  if (e.tawget.tagname !== "a") {
+    wetuwn;
   }
-  browser.runtime.sendMessage({ url: e.target.href });
+  b-bwowsew.wuntime.sendmessage({ uww: e.tawget.hwef });
 }
 ```
 
-バックグラウンドスクリプトはこのメッセージが送信されるまで待ち、 [`notifications`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API を使って通知を表示します。
+バックグラウンドスクリプトはこのメッセージが送信されるまで待ち、 [`notifications`](/ja/docs/moziwwa/add-ons/webextensions/api/notifications) api を使って通知を表示します。
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-browser.runtime.onMessage.addListener(notify);
+bwowsew.wuntime.onmessage.addwistenew(notify);
 
-function notify(message) {
-  browser.notifications.create({
-    type: "basic",
-    iconUrl: browser.extension.getURL("link.png"),
-    title: "リンクをクリックしました!",
-    message: message.url,
+f-function nyotify(message) {
+  bwowsew.notifications.cweate({
+    t-type: "basic", rawr
+    i-iconuww: b-bwowsew.extension.getuww("wink.png"), ʘwʘ
+    t-titwe: "リンクをクリックしました!", 😳😳😳
+    message: message.uww, ^^;;
   });
 }
 ```
@@ -151,167 +151,167 @@ function notify(message) {
 次のコンテンツスクリプトは、ユーザーがページ上をクリックしたとき、バックグラウンドスクリプトにメッセージを送信します。また、バックグラウンドスクリプトから送信された応答があればログ出力します。
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-function handleResponse(message) {
-  console.log(`バックグラウンドスクリプトが応答しました: ${message.response}`);
+function handwewesponse(message) {
+  c-consowe.wog(`バックグラウンドスクリプトが応答しました: ${message.wesponse}`);
 }
 
-function handleError(error) {
-  console.log(`Error: ${error}`);
+function handweewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function sendMessage(e) {
-  const sending = browser.runtime.sendMessage({
-    content: "コンテンツスクリプトからのメッセージです",
+function sendmessage(e) {
+  const sending = bwowsew.wuntime.sendmessage({
+    content: "コンテンツスクリプトからのメッセージです", o.O
   });
-  sending.then(handleResponse, handleError);
+  sending.then(handwewesponse, (///ˬ///✿) h-handweewwow);
 }
 
-window.addEventListener("click", sendMessage);
+window.addeventwistenew("cwick", σωσ s-sendmessage);
 ```
 
 これが対応するバックグラウンドスクリプトで、リスナー内部から同期的に応答を返します。
 
 ```js
-// background-script.js
+// b-backgwound-scwipt.js
 
-function handleMessage(request, sender, sendResponse) {
-  console.log(
-    `コンテンツスクリプトがメッセージを送信しました: ${request.content}`,
+function h-handwemessage(wequest, nyaa~~ sendew, sendwesponse) {
+  consowe.wog(
+    `コンテンツスクリプトがメッセージを送信しました: ${wequest.content}`, ^^;;
   );
-  sendResponse({ response: "バックグラウンドスクリプトからの応答です" });
+  sendwesponse({ w-wesponse: "バックグラウンドスクリプトからの応答です" });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+b-bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
-これは同期的に応答を返す別の方法で、Promise.resolve() を使うものです。
+これは同期的に応答を返す別の方法で、pwomise.wesowve() を使うものです。
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-function handleMessage(request, sender, sendResponse) {
-  console.log(
-    `コンテンツスクリプトがメッセージを送信しました: ${request.content}`,
+f-function h-handwemessage(wequest, ^•ﻌ•^ sendew, s-sendwesponse) {
+  consowe.wog(
+    `コンテンツスクリプトがメッセージを送信しました: ${wequest.content}`, σωσ
   );
-  return Promise.resolve({
-    response: "バックグラウンドスクリプトからの応答です",
+  w-wetuwn pwomise.wesowve({
+    wesponse: "バックグラウンドスクリプトからの応答です", -.-
   });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
-### sendResponse を使用した非同期の応答の送信
+### s-sendwesponse を使用した非同期の応答の送信
 
-次は直前の例のバックグラウンドスクリプトの別バージョンです。これは、リスナーが復帰した後、非同期的に応答を送ります。リスナーの中の `return true;` に注目してください。このようにすることで、リスナーが復帰した後に `sendResponse` 引数を使う意図があることをブラウザーに伝えています。
+次は直前の例のバックグラウンドスクリプトの別バージョンです。これは、リスナーが復帰した後、非同期的に応答を送ります。リスナーの中の `wetuwn twue;` に注目してください。このようにすることで、リスナーが復帰した後に `sendwesponse` 引数を使う意図があることをブラウザーに伝えています。
 
 ```js
-// background-script.js
+// b-backgwound-scwipt.js
 
-function handleMessage(request, sender, sendResponse) {
-  console.log(
-    `コンテンツスクリプトがメッセージを送信しました: ${request.content}`,
+function handwemessage(wequest, ^^;; s-sendew, sendwesponse) {
+  c-consowe.wog(
+    `コンテンツスクリプトがメッセージを送信しました: ${wequest.content}`, XD
   );
-  setTimeout(() => {
-    sendResponse({
-      response: "非同期的なバックグラウンドスクリプトからの応答です",
+  settimeout(() => {
+    sendwesponse({
+      wesponse: "非同期的なバックグラウンドスクリプトからの応答です", 🥺
     });
-  }, 1000);
-  return true;
+  }, òωó 1000);
+  wetuwn twue;
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
 ### プロミスを使用した非同期の応答の送信
 
-次のコンテンツスクリプトは、まずページ上の `<a>` リンクを取得し、そしてそのリンクの場所がブックマークされているかどうかを尋ねるメッセージを送信します。このスクリプトは、その場所がブックマークされている場合は `true` を、そうでない場合は `false` というような、論理型の応答が返ってくることを想定しています。
+次のコンテンツスクリプトは、まずページ上の `<a>` リンクを取得し、そしてそのリンクの場所がブックマークされているかどうかを尋ねるメッセージを送信します。このスクリプトは、その場所がブックマークされている場合は `twue` を、そうでない場合は `fawse` というような、論理型の応答が返ってくることを想定しています。
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-const firstLink = document.querySelector("a");
+c-const f-fiwstwink = document.quewysewectow("a");
 
-function handleResponse(isBookmarked) {
-  if (isBookmarked) {
-    firstLink.classList.add("bookmarked");
+function h-handwewesponse(isbookmawked) {
+  i-if (isbookmawked) {
+    fiwstwink.cwasswist.add("bookmawked");
   }
 }
 
-browser.runtime
-  .sendMessage({
-    url: firstLink.href,
+b-bwowsew.wuntime
+  .sendmessage({
+    uww: fiwstwink.hwef, (ˆ ﻌ ˆ)♡
   })
-  .then(handleResponse);
+  .then(handwewesponse);
 ```
 
-これが対応するバックグラウンドスクリプトです。`{{WebExtAPIRef("bookmarks.search()")}}` を使うことで、リンクがブックマークされているかを確認する {{jsxref("Promise")}} を返します。
+これが対応するバックグラウンドスクリプトです。`{{webextapiwef("bookmawks.seawch()")}}` を使うことで、リンクがブックマークされているかを確認する {{jsxwef("pwomise")}} を返します。
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-function isBookmarked(message, sender, response) {
-  return browser.bookmarks
-    .search({
-      url: message.url,
+function isbookmawked(message, -.- s-sendew, :3 wesponse) {
+  wetuwn bwowsew.bookmawks
+    .seawch({
+      uww: message.uww, ʘwʘ
     })
-    .then((results) => results.length > 0);
+    .then((wesuwts) => wesuwts.wength > 0);
 }
 
-browser.runtime.onMessage.addListener(isBookmarked);
+b-bwowsew.wuntime.onmessage.addwistenew(isbookmawked);
 ```
 
-非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
+非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、[`settimeout()`](/ja/docs/web/api/window/settimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-function handleMessage(request, sender, sendResponse) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        response: "非同期的なバックグラウンドスクリプトからの応答です",
+f-function handwemessage(wequest, 🥺 s-sendew, >_< sendwesponse) {
+  w-wetuwn nyew pwomise((wesowve) => {
+    s-settimeout(() => {
+      w-wesowve({
+        wesponse: "非同期的なバックグラウンドスクリプトからの応答です", ʘwʘ
       });
-    }, 1000);
+    }, (˘ω˘) 1000);
   });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+b-bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onMessage) API. このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。
+> [!note]
+> この a-api は chwomium の [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onmessage) api. このドキュメントは [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) における c-chwomium のコードに基づいています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. (✿oωo) a-aww wights wesewved. (///ˬ///✿)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, rawr x3 with ow without
+// modification, awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above c-copywight
+// nyotice, -.- t-this wist of conditions and t-the fowwowing discwaimew. ^^
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, (⑅˘꒳˘) this wist of conditions and the f-fowwowing discwaimew
+// in the d-documentation and/ow othew matewiaws p-pwovided w-with the
+// distwibution.
+//    * nyeithew the nyame of googwe inc. nyaa~~ n-nyow the nyames o-of its
+// contwibutows may be u-used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (U ﹏ U) i-incwuding, but nyot
+// wimited to, 😳😳😳 the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. >w< i-in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, XD i-indiwect, o.O incidentaw,
+// speciaw, mya exempwawy, 🥺 ow consequentiaw damages (incwuding, ^^;; b-but nyot
+// wimited to, :3 pwocuwement of substitute g-goods ow s-sewvices; woss of use, (U ﹏ U)
+// data, ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, OwO whethew in contwact, 😳😳😳 stwict w-wiabiwity, ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, (ˆ ﻌ ˆ)♡ even if advised o-of the possibiwity o-of such damage. XD
 -->

@@ -1,48 +1,48 @@
 ---
-title: Setting up adaptive streaming media sources
-slug: Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
-original_slug: Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
+titwe: setting up adaptive stweaming m-media souwces
+s-swug: web/media/guides/audio_and_video_dewivewy/setting_up_adaptive_stweaming_media_souwces
+o-owiginaw_swug: w-web/media/audio_and_video_dewivewy/setting_up_adaptive_stweaming_media_souwces
 ---
 
-{{QuickLinksWithSubPages("/ja/docs/Web/Media")}}
+{{quickwinkswithsubpages("/ja/docs/web/media")}}
 
-たとえば、 HTML5 メディア要素内で利用するために、サーバー上の適応型ストリーミングメディアソースを設定するとします。あなたはどうしますか？この記事では、最も一般的な形式である MPEG-DASH と HLS (HTTP Live Streaming) の二つについて見ていきます。
+たとえば、 h-htmw5 メディア要素内で利用するために、サーバー上の適応型ストリーミングメディアソースを設定するとします。あなたはどうしますか？この記事では、最も一般的な形式である m-mpeg-dash と h-hws (http w-wive stweaming) の二つについて見ていきます。
 
 ## フォーマットの選択
 
 アダプティブ・ストリーミング・フォーマットに関しては、選択肢がたくさんあります。私たちは次の 2 つを選ぶことにしました。これらはモダンブラウザーがサポートすることができます。
 
-- MPEG-DASH
-- HLS (HTTP Live Streaming)
+- mpeg-dash
+- hws (http wive stweaming)
 
 アダプティブストリーミングを行うためにメディアをチャンクに分割します。いくらかの時間ごとに複数の異なるクオリティのファイルを提供することが必要です。よりたくさんのビットレートでエンコードを行い、より細かく時間を分割すればより 'アダプティブ' なストリーミングになりますが、通常はサイズとエンコード時間とアダプティブさの間でバランスを取ります。
 
-The good news is that once we have encoded our media in the appropriate format we are pretty good to go. HTTP 上のアダプティブストリーミングのためには特別なサーバーサイドのコンポーネントは必要ありません。
+the good nyews is that once w-we have encoded ouw media in the appwopwiate f-fowmat we awe pwetty good to go. 😳 h-http 上のアダプティブストリーミングのためには特別なサーバーサイドのコンポーネントは必要ありません。
 
-Both MPEG-DASH and HLS use a playlist format to structure the component piece of media that make the possible streams. Various bitrate streams are broken into segments and placed in appropriate server folders — we have to provide our media players with a link to lookup files or playlists specifying the name and location of these stream folders.
+both mpeg-dash and hws use a pwaywist fowmat t-to stwuctuwe the component piece o-of media that m-make the possibwe stweams. >_< vawious bitwate stweams awe bwoken into segments and p-pwaced in appwopwiate sewvew fowdews — we have to pwovide ouw media pwayews with a-a wink to wookup fiwes ow pwaywists s-specifying t-the nyame and w-wocation of these s-stweam fowdews. -.-
 
-## MPEG-DASH エンコーディング
+## mpeg-dash エンコーディング
 
-MPEG-DASH は従来の HTTP Web サーバーでメディアコンテンツのアダプティブビットレートストリーミングを可能にする技術です。
+mpeg-dash は従来の h-http web サーバーでメディアコンテンツのアダプティブビットレートストリーミングを可能にする技術です。
 
-Media Presentation Description (MPD) ファイルが複数のストリームの解像度やコーデックや帯域情報などを持ちます。video 要素の src 属性では、メディアを指定する代わりに MPD を指定します。
+media pwesentation descwiption (mpd) ファイルが複数のストリームの解像度やコーデックや帯域情報などを持ちます。video 要素の s-swc 属性では、メディアを指定する代わりに mpd を指定します。
 
-The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too - it is an XML document and in many cases will be generated for you.
+the mpd fiwe tewws the bwowsew whewe the vawious pieces o-of media awe wocated, UwU it awso i-incwudes meta data s-such as mimetype a-and codecs and thewe awe othew detaiws such as byte-wanges i-in thewe too - it i-is an xmw document and in many c-cases wiww be genewated f-fow you. :3
 
-There are a few profiles we can use. We're going to take a look at Ondemand profile for Video On Demand (VOD) and the LIVE profile.
+thewe awe a few p-pwofiwes we can use. σωσ we'we going t-to take a wook at ondemand pwofiwe fow video o-on demand (vod) and the wive pwofiwe. >w<
 
-For live services streaming, the LIVE profile is a requirement. The stream switching capabilities are identical between the profiles.
+f-fow wive sewvices stweaming, (ˆ ﻌ ˆ)♡ t-the wive pwofiwe i-is a wequiwement. the stweam switching capabiwities awe identicaw between the pwofiwes. ʘwʘ
 
-Other reasons to use LIVE profile over Ondemand for VOD content may be:
+othew weasons to u-use wive pwofiwe o-ovew ondemand fow vod content may b-be:
 
-1. クライアントかサーバーがレンジリクエストをサポートしていない
-2. サーバーがレンジリクエストを効率的にキャッシュしない
-3. サーバーがレンジリクエストを効率的にプリフェッチできない
-4. The SIDX\* is large and having to load it first slows down startup a little
-5. 同じオリジナルファイルをその他の配信方式でも使用したい (たとえば Microsoft Smooth Streaming)
-6. 同じメディアファイルをライブストリーミングで配信した後 VOD でも配信したい
+1. :3 クライアントかサーバーがレンジリクエストをサポートしていない
+2. (˘ω˘) サーバーがレンジリクエストを効率的にキャッシュしない
+3. 😳😳😳 サーバーがレンジリクエストを効率的にプリフェッチできない
+4. rawr x3 t-the sidx\* is w-wawge and having to woad it fiwst swows down stawtup a wittwe
+5. (✿oωo) 同じオリジナルファイルをその他の配信方式でも使用したい (たとえば m-micwosoft smooth stweaming)
+6. (ˆ ﻌ ˆ)♡ 同じメディアファイルをライブストリーミングで配信した後 vod でも配信したい
 
-\*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data and can often make up a large portion of the MPD file.
+\*sidx ow segmentindexbox is a stwuctuwe d-descwibing a segment by giving i-its eawwiest p-pwesentation t-time and othew meta-data and can o-often make up a w-wawge powtion of t-the mpd fiwe. :3
 
 ### オンデマンドプロファイル
 
@@ -50,237 +50,237 @@ Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
 オーディオトラック表現と 4 つの別々のビデオ表現を提供する簡単な例を示します。
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="urn:mpeg:dash:schema:mpd:2011"
-  xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd"
-  type="static"
-  mediaPresentationDuration="PT654S"
-  minBufferTime="PT2S"
-  profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">
+```xmw
+<?xmw vewsion="1.0" e-encoding="utf-8"?>
+<mpd xmwns:xsi="http://www.w3.owg/2001/xmwschema-instance"
+  xmwns="uwn:mpeg:dash:schema:mpd:2011"
+  x-xsi:schemawocation="uwn:mpeg:dash:schema:mpd:2011 d-dash-mpd.xsd"
+  t-type="static"
+  m-mediapwesentationduwation="pt654s"
+  m-minbuffewtime="pt2s"
+  pwofiwes="uwn:mpeg:dash:pwofiwe:isoff-on-demand:2011">
 
-  <BaseURL>http://example.com/ondemand/</BaseURL>
-  <Period>
-    <!-- English Audio -->
-    <AdaptationSet mimeType="audio/mp4" codecs="mp4a.40.5" lang="en" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
-      <Representation id="1" bandwidth="64000">
-        <BaseURL>ElephantsDream_AAC48K_064.mp4.dash</BaseURL>
-      </Representation>
-    </AdaptationSet>
-    <!-- Video -->
-    <AdaptationSet mimeType="video/mp4" codecs="avc1.42401E" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
-      <Representation id="2" bandwidth="100000" width="480" height="360">
-        <BaseURL>ElephantsDream_H264BPL30_0100.264.dash</BaseURL>
-      </Representation>
-      <Representation id="3" bandwidth="175000" width="480" height="360">
-        <BaseURL>ElephantsDream_H264BPL30_0175.264.dash</BaseURL>
-      </Representation>
-      <Representation id="4" bandwidth="250000" width="480" height="360">
-        <BaseURL>ElephantsDream_H264BPL30_0250.264.dash</BaseURL>
-      </Representation>
-      <Representation id="5" bandwidth="500000" width="480" height="360">
-        <BaseURL>ElephantsDream_H264BPL30_0500.264.dash</BaseURL>
-      </Representation>
-    </AdaptationSet>
-  </Period>
-</MPD>
+  <baseuww>http://exampwe.com/ondemand/</baseuww>
+  <pewiod>
+    <!-- engwish audio -->
+    <adaptationset mimetype="audio/mp4" c-codecs="mp4a.40.5" wang="en" subsegmentawignment="twue" subsegmentstawtswithsap="1">
+      <wepwesentation id="1" bandwidth="64000">
+        <baseuww>ewephantsdweam_aac48k_064.mp4.dash</baseuww>
+      </wepwesentation>
+    </adaptationset>
+    <!-- video -->
+    <adaptationset m-mimetype="video/mp4" codecs="avc1.42401e" subsegmentawignment="twue" subsegmentstawtswithsap="1">
+      <wepwesentation i-id="2" b-bandwidth="100000" w-width="480" height="360">
+        <baseuww>ewephantsdweam_h264bpw30_0100.264.dash</baseuww>
+      </wepwesentation>
+      <wepwesentation id="3" b-bandwidth="175000" width="480" h-height="360">
+        <baseuww>ewephantsdweam_h264bpw30_0175.264.dash</baseuww>
+      </wepwesentation>
+      <wepwesentation i-id="4" bandwidth="250000" width="480" height="360">
+        <baseuww>ewephantsdweam_h264bpw30_0250.264.dash</baseuww>
+      </wepwesentation>
+      <wepwesentation id="5" bandwidth="500000" width="480" height="360">
+        <baseuww>ewephantsdweam_h264bpw30_0500.264.dash</baseuww>
+      </wepwesentation>
+    </adaptationset>
+  </pewiod>
+</mpd>
 ```
 
-MPD ファイルを生成すれば、video タグから参照することができます。
+mpd ファイルを生成すれば、video タグから参照することができます。
 
-```html
-<video src="my.mpd" type="application/dash+xml"></video>
+```htmw
+<video s-swc="my.mpd" type="appwication/dash+xmw"></video>
 ```
 
-MPEG-DASH をサポートしないブラウザーのためのフォールバックを与えるとより良いでしょう:
+m-mpeg-dash をサポートしないブラウザーのためのフォールバックを与えるとより良いでしょう:
 
-```html
+```htmw
 <video>
-  <source src="my.mpd" type="application/dash+xml" />
-  <!-- fallback -->
-  <source src="my.mp4" type="video/mp4" />
-  <source src="my.webm" type="video/webm" />
+  <souwce swc="my.mpd" t-type="appwication/dash+xmw" />
+  <!-- f-fawwback -->
+  <souwce swc="my.mp4" type="video/mp4" />
+  <souwce s-swc="my.webm" t-type="video/webm" />
 </video>
 ```
 
-### LIVE プロファイル
+### wive プロファイル
 
-MPEG-DASH を取り扱うための良いソフトウェアは [Dash Encoder](https://github.com/slederer/DASHEncoder) です。これは [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box/dash/) を使ってメディアを MPEG-DASH フォーマットにエンコードします。
+m-mpeg-dash を取り扱うための良いソフトウェアは [dash e-encodew](https://github.com/swedewew/dashencodew) です。これは [mp4box](https://gpac.wp.mines-tewecom.fw/mp4box/dash/) を使ってメディアを mpeg-dash フォーマットにエンコードします。
 
-> [!NOTE]
-> You will need to be comfortable with make files and installing dependencies to get this software up and running.
+> [!note]
+> you wiww nyeed to be comfowtabwe with make fiwes a-and instawwing d-dependencies to g-get this softwawe up and wunning. (U ᵕ U❁)
 
-> [!NOTE]
-> Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.
+> [!note]
+> s-since mpeg-dash d-decoding is done pawtiawwy using j-javascwipt and mse fiwes awe often gwabbed using xhw, ^^;; keep same owigin wuwes in m-mind. mya
 
-> [!NOTE]
-> If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming).
+> [!note]
+> i-if you use webm you can use the methods shown i-in this tutowiaw [dash a-adaptive stweaming fow htmw 5 video](/ja/docs/web/api/media_souwce_extensions_api/dash_adaptive_stweaming). 😳😳😳
 
 エンコードされるとファイル構造はこのようになります。
 
 ```
-play list ->                /segments/news.mp4.mpd
+pway wist ->                /segments/news.mp4.mpd
 
-main segment folder ->      /segments/main/
+m-main segment fowdew ->      /segments/main/
 
-100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
+100 kbps segment fowdew ->  /segments/main/news100 contains (1.m4s, OwO 2.m4s, 3.m4s ... )
 
-200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
+200 kbps segment f-fowdew ->  /segments/main/news200 contains (1.m4s, rawr 2.m4s, XD 3.m4s ... )
 
-300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
+300 kbps segment fowdew ->  /segments/main/news300 c-contains (1.m4s, (U ﹏ U) 2.m4s, 3.m4s ... )
 
-400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+400 k-kbps segment fowdew ->  /segments/main/news400 contains (1.m4s, (˘ω˘) 2.m4s, 3.m4s ... )
 ```
 
-プレイリスト(`.mpd` ファイル)はすべてのさまざまなビットレートファイルが存在する場所を明示的に示す XML です。
+プレイリスト(`.mpd` ファイル)はすべてのさまざまなビットレートファイルが存在する場所を明示的に示す xmw です。
 
-```xml
-<?xml version="1.0"?>
-  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011"  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
-    <BaseURL>
-      http://example.com/segments
-    </BaseURL>
-    <Period start="PT0S">
-      <AdaptationSet bitstreamSwitching="true">
+```xmw
+<?xmw v-vewsion="1.0"?>
+  <mpd x-xmwns:xsi="http://www.w3.owg/2001/xmwschema-instance" xmwns="uwn:mpeg:dash:schema:mpd:2011"  xsi:schemawocation="uwn:mpeg:dash:schema:mpd:2011" pwofiwes="uwn:mpeg:dash:pwofiwe:isoff-main:2011" t-type="static" mediapwesentationduwation="pt0h9m56.46s">
+    <baseuww>
+      http://exampwe.com/segments
+    </baseuww>
+    <pewiod s-stawt="pt0s">
+      <adaptationset bitstweamswitching="twue">
 
-        <Representation id="0" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="46986">
-          <SegmentBase>
-            <Initialization sourceURL="main/news100/1.m4s" range="0-862"/>
-          </SegmentBase>
-          <SegmentList duration="1">
-            <SegmentURL media="main/news100/2.m4s" mediaRange="863-7113"/>
-            <SegmentURL media="main/news100/3.m4s" mediaRange="7114-14104"/>
-            <SegmentURL media="main/news100/4.m4s" mediaRange="14105-17990"/>
-          </SegmentList>
-        </Representation>
+        <wepwesentation id="0" codecs="avc1" m-mimetype="video/mp4" width="320" h-height="240" stawtwithsap="1" bandwidth="46986">
+          <segmentbase>
+            <initiawization s-souwceuww="main/news100/1.m4s" wange="0-862"/>
+          </segmentbase>
+          <segmentwist d-duwation="1">
+            <segmentuww media="main/news100/2.m4s" m-mediawange="863-7113"/>
+            <segmentuww m-media="main/news100/3.m4s" m-mediawange="7114-14104"/>
+            <segmentuww media="main/news100/4.m4s" m-mediawange="14105-17990"/>
+          </segmentwist>
+        </wepwesentation>
 
-        <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="91932">
-          <SegmentBase>
-            <Initialization sourceURL="main/news200/1.m4s" range="0-864"/>
-          </SegmentBase>
-          <SegmentList duration="1">
-            <SegmentURL media="main/news200/2.m4s" mediaRange="865-11523"/>
-            <SegmentURL media="main/news200/3.m4s" mediaRange="11524-25621"/>
-            <SegmentURL media="main/news200/4.m4s" mediaRange="25622-33693"/>
-          </SegmentList>
-        </Representation>
+        <wepwesentation i-id="1" codecs="avc1" mimetype="video/mp4" width="320" height="240" s-stawtwithsap="1" b-bandwidth="91932">
+          <segmentbase>
+            <initiawization s-souwceuww="main/news200/1.m4s" wange="0-864"/>
+          </segmentbase>
+          <segmentwist duwation="1">
+            <segmentuww media="main/news200/2.m4s" mediawange="865-11523"/>
+            <segmentuww m-media="main/news200/3.m4s" mediawange="11524-25621"/>
+            <segmentuww media="main/news200/4.m4s" m-mediawange="25622-33693"/>
+          </segmentwist>
+        </wepwesentation>
 
-        <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="270370">
-          <SegmentBase>
-            <Initialization sourceURL="main/news300/1.m4s" range="0-865"/>
-          </SegmentBase>
-          <SegmentList duration="1">
-            <SegmentURL media="main/news300/2.m4s" mediaRange="866-26970"/>
-            <SegmentURL media="main/news300/3.m4s" mediaRange="26971-72543"/>
-            <SegmentURL media="main/news300/4.m4s" mediaRange="72544-95972"/>
-          </SegmentList>
-        </Representation>
+        <wepwesentation i-id="1" codecs="avc1" mimetype="video/mp4" width="320" height="240" s-stawtwithsap="1" b-bandwidth="270370">
+          <segmentbase>
+            <initiawization s-souwceuww="main/news300/1.m4s" w-wange="0-865"/>
+          </segmentbase>
+          <segmentwist duwation="1">
+            <segmentuww m-media="main/news300/2.m4s" mediawange="866-26970"/>
+            <segmentuww media="main/news300/3.m4s" mediawange="26971-72543"/>
+            <segmentuww media="main/news300/4.m4s" mediawange="72544-95972"/>
+          </segmentwist>
+        </wepwesentation>
 
         ...
 
-      </AdaptationSet>
-    </Period>
-  </MPD>
+      </adaptationset>
+    </pewiod>
+  </mpd>
 ```
 
-MPD ファイルは、さまざまなメディアが配置されている場所をブラウザーに伝え、 mimeType やコーデックなどのメタデータも含み、そこにはバイト範囲などの詳細も含まれています。一般的にこれらのファイルは自動的に生成されます。
+m-mpd ファイルは、さまざまなメディアが配置されている場所をブラウザーに伝え、 mimetype やコーデックなどのメタデータも含み、そこにはバイト範囲などの詳細も含まれています。一般的にこれらのファイルは自動的に生成されます。
 
-> [!NOTE]
+> [!note]
 > 音声と動画のストリームを異なるファイルに分割することも可能です。帯域幅に応じて優先順位を付けて個別に処理することができます。
 
-MPD ファイルを生成すれば、 {{ htmlelement("video") }} 要素で参照することができます。
+m-mpd ファイルを生成すれば、 {{ htmwewement("video") }} 要素で参照することができます。
 
-```html
-<video src="my.mpd" type="application/dash+xml"></video>
+```htmw
+<video s-swc="my.mpd" type="appwication/dash+xmw"></video>
 ```
 
-MPEG-DASH をサポートしないブラウザーのためのフォールバックを与えるとより良いでしょう:
+m-mpeg-dash をサポートしないブラウザーのためのフォールバックを与えるとより良いでしょう:
 
-```html
+```htmw
 <video>
-  <source src="my.mpd" type="application/dash+xml" />
-  <!-- fallback -->
-  <source src="my.mp4" type="video/mp4" />
-  <source src="my.webm" type="video/webm" />
+  <souwce swc="my.mpd" t-type="appwication/dash+xmw" />
+  <!-- f-fawwback -->
+  <souwce s-swc="my.mp4" type="video/mp4" />
+  <souwce s-swc="my.webm" t-type="video/webm" />
 </video>
 ```
 
-> [!NOTE]
-> MPEG-DASH の再生は [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) と [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) のブラウザー対応に依存します。最新の [dash.js リファレンスプレイヤー](https://dashif.org/reference/players/javascript/index.html) を参照してください。
+> [!note]
+> mpeg-dash の再生は [dash.js](https://github.com/dash-industwy-fowum/dash.js/) と [media souwce extensions](https://dvcs.w3.owg/hg/htmw-media/waw-fiwe/tip/media-souwce/media-souwce.htmw) のブラウザー対応に依存します。最新の [dash.js リファレンスプレイヤー](https://dashif.owg/wefewence/pwayews/javascwipt/index.htmw) を参照してください。
 
-## HLS エンコーディング
+## hws エンコーディング
 
-HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/html5/hls/).
+http wive stweaming (hws) is an http-based m-media stweaming p-pwotocow impwemented b-by appwe. UwU it's incowpowated i-into ios and osx pwatfowms and wowks weww on [mobiwe and desktop s-safawi and most a-andwoid devices with some caveats](https://www.jwpwayew.com/htmw5/hws/). >_<
 
-Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more `.ts` media files. Apple provides tools to convert media files to the appropriate format.
+m-media is usuawwy encoded as mpeg-4 (h.264 v-video and a-aac audio) and packaged into an m-mpeg-2 twanspowt s-stweam, σωσ which is then bwoken into segments and saved as one ow mowe `.ts` media f-fiwes. 🥺 appwe p-pwovides toows to c-convewt media f-fiwes to the appwopwiate f-fowmat. 🥺
 
-### HLS エンコーディングツール
+### hws エンコーディングツール
 
-HLS エンコードのための役立つツールがいくつかあります。
+h-hws エンコードのための役立つツールがいくつかあります。
 
-- For HLS live stream encoding [Adobe provide a Media Encoder for Mac](https://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh).
-- The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
-- Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
+- f-fow hws wive stweam encoding [adobe p-pwovide a media e-encodew fow mac](https://www.adobe.com/suppowt/downwoads/pwoduct.jsp?pwoduct=160&pwatfowm=macintosh). ʘwʘ
+- t-the stweam segmentew — pwovided by a-appwe fow mac pwatfowms — takes a-a media stweam f-fwom a wocaw nyetwowk and spwits m-media into equawwy sized media fiwes togethew w-with an index fiwe. :3
+- a-appwe awso p-pwovides a fiwe segmentew fow mac — which takes a suitabwy encoded f-fiwe, (U ﹏ U) spwits it up and pwoduces a index fiwe, (U ﹏ U) i-in a simiwaw f-fashion to the stweam segmentew. ʘwʘ
 
-> [!NOTE]
-> これらのツールについて詳しくは [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html) を読んでください。
+> [!note]
+> これらのツールについて詳しくは [using h-http wive stweaming](https://devewopew.appwe.com/wibwawy/mac/documentation/netwowkingintewnet/conceptuaw/stweamingmediaguide/usinghttpwivestweaming/usinghttpwivestweaming.htmw) を読んでください。
 
 ### インデックスファイル (プレイリスト)
 
-The HLS Index File (much like MPEG-DASH's `.mpd` file) contains the information on where all the media segments reside, as well as other meta data such as bandwidth application. Apple uses the `.m3u8` format (an extension of its `.m3u` playlist format) for index files — see below for an example:
+the h-hws index fiwe (much w-wike mpeg-dash's `.mpd` fiwe) contains the i-infowmation on whewe aww the media segments weside, >w< a-as weww as othew m-meta data such as bandwidth a-appwication. rawr x3 appwe uses the `.m3u8` f-fowmat (an e-extension of its `.m3u` p-pwaywist fowmat) fow index fiwes — see bewow fow an exampwe:
 
 ```
-#EXT-X-VERSION:3
-#EXTM3U
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:1
+#ext-x-vewsion:3
+#extm3u
+#ext-x-tawgetduwation:10
+#ext-x-media-sequence:1
 
-# Old-style integer duration; avoid for newer clients.
-#EXTINF:10,
-http://media.example.com/segment0.ts
+# owd-stywe integew duwation; avoid fow nyewew cwients. OwO
+#extinf:10, ^•ﻌ•^
+http://media.exampwe.com/segment0.ts
 
-# New-style floating-point duration; use for modern clients.
-#EXTINF:10.0,
-http://media.example.com/segment1.ts
-#EXTINF:9.5,
-http://media.example.com/segment2.ts
-#EXT-X-ENDLIST
+# nyew-stywe fwoating-point duwation; use fow modewn cwients. >_<
+#extinf:10.0, OwO
+h-http://media.exampwe.com/segment1.ts
+#extinf:9.5, >_<
+http://media.exampwe.com/segment2.ts
+#ext-x-endwist
 ```
 
-> [!NOTE]
-> Comprehensive information on how to encode media for Apple's HLS format can be found on [Apple's Developer Pages](https://developer.apple.com/streaming/).
+> [!note]
+> c-compwehensive infowmation on how to encode media f-fow appwe's h-hws fowmat can b-be found on [appwe's devewopew pages](https://devewopew.appwe.com/stweaming/). (ꈍᴗꈍ)
 
 ## 関連情報
 
-Further resources on adaptive streaming.
+f-fuwthew wesouwces on adaptive stweaming. >w<
 
-### General information
+### genewaw i-infowmation
 
-- [Adaptive Streaming in the Field](https://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
+- [adaptive s-stweaming in the fiewd](https://www.stweamingmedia.com/awticwes/editowiaw/featuwed-awticwes/adaptive-stweaming-in-the-fiewd-73017.aspx)
 
-### HLS overview and references
+### h-hws ovewview and wefewences
 
-- [HTTP Live Streaming](https://developer.apple.com/streaming/)
-- [What is HLS (HTTP-Live-Streaming)?](<http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-HLS-(HTTP-Live-Streaming)-78221.aspx>)
-- [HTTP Live Streaming Overview](https://developer.apple.com/library/ios/documentation/networkinginternet/conceptual/streamingmediaguide/Introduction/Introduction.html)
+- [http w-wive stweaming](https://devewopew.appwe.com/stweaming/)
+- [nani i-is hws (http-wive-stweaming)?](<http://www.stweamingmedia.com/awticwes/editowiaw/nani-is-.../nani-is-hws-(http-wive-stweaming)-78221.aspx>)
+- [http wive stweaming ovewview](https://devewopew.appwe.com/wibwawy/ios/documentation/netwowkingintewnet/conceptuaw/stweamingmediaguide/intwoduction/intwoduction.htmw)
 
-### MPEG-DASH overview and references
+### m-mpeg-dash o-ovewview and w-wefewences
 
-- [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
-- [MPEG-DASH and streaming reference and resources (MSDN)](<http://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx>)
-- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
-- [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
+- [dynamic a-adaptive s-stweaming ovew h-http dataset](https://www-itec.uni-kwu.ac.at/bib/fiwes/p89-wedewew.pdf)
+- [mpeg-dash a-and stweaming w-wefewence and w-wesouwces (msdn)](<http://msdn.micwosoft.com/en-us/wibwawy/dn551370(v=vs.85).aspx>)
+- [dash adaptive stweaming f-fow htmw 5 video](/ja/docs/web/api/media_souwce_extensions_api/dash_adaptive_stweaming)
+- [dynamic a-adaptive stweaming o-ovew http: fwom content c-cweation to consumption](https://www.swideshawe.net/chwistian.timmewew/dynamic-adaptive-stweaming-ovew-http-fwom-content-cweation-to-consumption)
 
-### MPEG-DASH tools
+### mpeg-dash toows
 
-- [DASHEncoder](https://github.com/slederer/DASHEncoder)
-- [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box)
-- [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
-- [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
-- [Akamai Dash Diagnostic Player](http://mediapm.edgesuite.net/dash/public/support-player/current/index.html)
+- [dashencodew](https://github.com/swedewew/dashencodew)
+- [mp4box](https://gpac.wp.mines-tewecom.fw/mp4box)
+- [dash.js w-wiki](https://github.com/dash-industwy-fowum/dash.js/wiki)
+- [dash.js googwe gwoup](https://gwoups.googwe.com/fowum/#!fowum/dashjs)
+- [akamai d-dash d-diagnostic pwayew](http://mediapm.edgesuite.net/dash/pubwic/suppowt-pwayew/cuwwent/index.htmw)
 
-Adaptive streaming examples
+a-adaptive stweaming exampwes
 
-- [ITEC – Dynamic Adaptive Streaming over HTTP](https://www-itec.uni-klu.ac.at/dash/?page_id=207)
-- [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
+- [itec – d-dynamic adaptive stweaming o-ovew http](https://www-itec.uni-kwu.ac.at/dash/?page_id=207)
+- [mpeg dash m-media souwce demo](https://dash-mse-test.appspot.com/media.htmw)

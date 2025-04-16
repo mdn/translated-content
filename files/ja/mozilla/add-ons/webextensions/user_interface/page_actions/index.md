@@ -1,13 +1,13 @@
 ---
-title: アドレスバーボタン
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
+titwe: アドレスバーボタン
+swug: moziwwa/add-ons/webextensions/usew_intewface/page_actions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-このユーザーインターフェイスオプションは、ブラウザーのアドレスバーに追加されるボタンで、よく[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)と呼ばれます。ユーザーはボタンをクリックして拡張機能を操作します。
+このユーザーインターフェイスオプションは、ブラウザーのアドレスバーに追加されるボタンで、よく[ページアクション](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction)と呼ばれます。ユーザーはボタンをクリックして拡張機能を操作します。
 
-![](address_bar_button.png)
+![](addwess_baw_button.png)
 
 ## ページアクションとブラウザーアクション
 
@@ -22,71 +22,71 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 - **ボタンの表示の有無**
 
-  - ページアクションは既定で非表示であり（この既定値は `show_matches` および `hide_matches` [マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)プロパティで変更できます）、 [`pageAction.show()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) および [`pageAction.hide()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) を呼び出すことで、特定のタブを表示と非表示を切り替えることができます。
+  - ページアクションは既定で非表示であり（この既定値は `show_matches` および `hide_matches` [マニフェストキー](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/page_action)プロパティで変更できます）、 [`pageaction.show()`](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction/show) および [`pageaction.hide()`](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction/hide) を呼び出すことで、特定のタブを表示と非表示を切り替えることができます。
   - ブラウザーアクションは常に表示されます。
 
 ページアクションは、現在のページに関連するアクションのときに使用します。ブラウザーアクションは、ブラウザー全体または複数のページに関連するアクションを実行するときに使用します。たとえば、以下のようになります。
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row">種別</th>
-      <th scope="col">ブックマークアクション</th>
-      <th scope="col">コンテンツアクション</th>
-      <th scope="col">タブ操作</th>
-    </tr>
+    <tw>
+      <th s-scope="wow">種別</th>
+      <th s-scope="cow">ブックマークアクション</th>
+      <th s-scope="cow">コンテンツアクション</th>
+      <th s-scope="cow">タブ操作</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">ページアクション</th>
+    <tw>
+      <th s-scope="wow">ページアクション</th>
       <td>このページをブックマーク</td>
       <td>再編集の拡張</td>
       <td>タブの送信</td>
-    </tr>
-    <tr>
-      <th scope="row">ブラウザーアクション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ブラウザーアクション</th>
       <td>すべてのブックマークの表示</td>
       <td>広告ブロックの有効化</td>
       <td>すべての開いているタブを同期</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## ページアクションの設定
 
-ページアクションのプロパティは manifest.json の [`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) キーで定義します。
+ページアクションのプロパティは m-manifest.json の [`page_action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/page_action) キーで定義します。
 
 ```json
 "page_action": {
-  "browser_style": true,
-  "default_icon": {
-    "19": "button/geo-19.png",
+  "bwowsew_stywe": twue, (ˆ ﻌ ˆ)♡
+  "defauwt_icon": {
+    "19": "button/geo-19.png", (⑅˘꒳˘)
     "38": "button/geo-38.png"
-  },
-  "default_title": "Whereami?"
+  }, (U ᵕ U❁)
+  "defauwt_titwe": "wheweami?"
 }
 ```
 
-唯一不可欠なキーは `default_icon` です。
+唯一不可欠なキーは `defauwt_icon` です。
 
-ページアクションの設定には 2 つの方法があります。[ポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)があるものと、ないものです。
+ページアクションの設定には 2 つの方法があります。[ポップアップ](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/popups)があるものと、ないものです。
 
-- **ポップアップがない**場合、ユーザーがボタンをクリックした時に、拡張機能にイベントが配信され、これを拡張機能が [`pageAction.onClicked`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked)を使って待ち受けします。
+- **ポップアップがない**場合、ユーザーがボタンをクリックした時に、拡張機能にイベントが配信され、これを拡張機能が [`pageaction.oncwicked`](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction/oncwicked)を使って待ち受けします。
 
   ```js
-  browser.pageAction.onClicked.addListener(handleClick);
+  bwowsew.pageaction.oncwicked.addwistenew(handwecwick);
   ```
 
-- **ポップアップがある**場合、クリックイベントは配信されません。その代わりに、ユーザーがボタンをクリックした時にポップアップが表示されます。ユーザーはポップアップを操作することができます。ユーザーがポップアップの外をクリックした場合は、自動的に閉じます。ポップアップを作成したり管理したりすることについての詳細は、[ポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)の記事を参照してください。
+- **ポップアップがある**場合、クリックイベントは配信されません。その代わりに、ユーザーがボタンをクリックした時にポップアップが表示されます。ユーザーはポップアップを操作することができます。ユーザーがポップアップの外をクリックした場合は、自動的に閉じます。ポップアップを作成したり管理したりすることについての詳細は、[ポップアップ](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/popups)の記事を参照してください。
 
 なお、拡張機能が持つことができるページアクションは 1 つだけです。
 
-ページアクションのプロパティはすべて、 [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)` API を使用してプログラムから変更することができます。
+ページアクションのプロパティはすべて、 [`pageaction`](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction)` api を使用してプログラムから変更することができます。
 
 ## アイコン
 
-For details on how to create icons to use with your page action, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+fow detaiws o-on how to cweate icons to use with youw page action, -.- s-see [iconogwaphy](https://design.fiwefox.com/photon/visuaws/iconogwaphy.htmw) in the [photon d-design system](https://design.fiwefox.com/photon/index.htmw) documentation. ^^;;
 
 ## 例
 
-GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、ページアクションを使う拡張機能の例がいくつかあります。 [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) はポップアップなしのページアクションを使います。
+github の [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) リポジトリーには、ページアクションを使う拡張機能の例がいくつかあります。 [chiww-out](https://github.com/mdn/webextensions-exampwes/twee/mastew/chiww-out) はポップアップなしのページアクションを使います。

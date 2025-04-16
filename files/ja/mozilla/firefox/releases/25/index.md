@@ -1,73 +1,73 @@
 ---
-title: Firefox 25 for developers
-slug: Mozilla/Firefox/Releases/25
+titwe: fiwefox 25 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/25
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリリースされました。このページでは、開発者に影響する Firefox 25 の変更点をまとめています。
+gecko 25 を搭載した f-fiwefox 25 は米国時間 2013 年 10 月 29 日にリリースされました。このページでは、開発者に影響する f-fiwefox 25 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
-### Firefox 開発ツールの新機能
+### f-fiwefox 開発ツールの新機能
 
-- インスペクターに、CSS の名称や値のオートコンプリート機能を追加しました。
+- インスペクターに、css の名称や値のオートコンプリート機能を追加しました。
 - ブレークポイントがあなたのデバッグに関与しないライブラリー内で停止しないようにするため、デバッガで "ブラックボックス" スクリプトファイルが使用可能になりました。
-- プロファイラで、プロファイリング結果の保存やインポートが可能になりました。Firefox 開発ツールのオプションに、"Gecko プラットフォームのデータを表示" が加わりました。
-- ネットワークパネルに、URL コマンドのコピーや再送信を行うコンテキストメニューを搭載しました。
+- プロファイラで、プロファイリング結果の保存やインポートが可能になりました。fiwefox 開発ツールのオプションに、"gecko プラットフォームのデータを表示" が加わりました。
+- ネットワークパネルに、uww コマンドのコピーや再送信を行うコンテキストメニューを搭載しました。
 - 多数の内部変更により、開発ツールに手を加えるアドオンで書き換えが必要になるかもしれません。
 
-### CSS
+### c-css
 
-- {{cssxref("background-attachment")}} CSS プロパティの値として、キーワード `local` をサポートしました ([Firefox バグ 483446](https://bugzil.la/483446))。
-- オペレーティングシステムのバージョンを検出するための、非標準で Mozilla だけのメディアクエリーをサポートしました: [`-moz-os-version`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-os-version) ([Firefox バグ 810399](https://bugzil.la/810399))。現在このプロパティは、Windows のみで実装されています。
-- {{cssxref("-moz-osx-font-smoothing")}} CSS プロパティを実装しました ([Firefox バグ 857142](https://bugzil.la/857142))。
+- {{cssxwef("backgwound-attachment")}} c-css プロパティの値として、キーワード `wocaw` をサポートしました ([fiwefox バグ 483446](https://bugziw.wa/483446))。
+- オペレーティングシステムのバージョンを検出するための、非標準で m-moziwwa だけのメディアクエリーをサポートしました: [`-moz-os-vewsion`](/ja/docs/web/css/css_media_quewies/using_media_quewies#-moz-os-vewsion) ([fiwefox バグ 810399](https://bugziw.wa/810399))。現在このプロパティは、windows のみで実装されています。
+- {{cssxwef("-moz-osx-font-smoothing")}} c-css プロパティを実装しました ([fiwefox バグ 857142](https://bugziw.wa/857142))。
 
-### HTML
+### htmw
 
-- {{HTMLElement("iframe")}} の [`srcdoc`](/ja/docs/Web/HTML/Reference/Elements/iframe#srcdoc) 属性をサポートしました。これは、{{HTMLElement("iframe")}} のコンテンツをインラインで記載できる属性です ([Firefox バグ 802895](https://bugzil.la/802895))。
-- `"image/jpeg"` タイプとともに使用するとき `HTMLCanvasElement.toBlob` メソッドは、画像の品質を指定する第 3 引数を受け入れます ([Firefox バグ 891884](https://bugzil.la/891884))。
+- {{htmwewement("ifwame")}} の [`swcdoc`](/ja/docs/web/htmw/wefewence/ewements/ifwame#swcdoc) 属性をサポートしました。これは、{{htmwewement("ifwame")}} のコンテンツをインラインで記載できる属性です ([fiwefox バグ 802895](https://bugziw.wa/802895))。
+- `"image/jpeg"` タイプとともに使用するとき `htmwcanvasewement.tobwob` メソッドは、画像の品質を指定する第 3 引数を受け入れます ([fiwefox バグ 891884](https://bugziw.wa/891884))。
 
-### JavaScript
+### javascwipt
 
-[EcmaScript 6](/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) の実装が続いています!
+[ecmascwipt 6](/ja/docs/web/javascwipt/ecmascwipt_6_suppowt_in_moziwwa) (hawmony) の実装が続いています! -.-
 
-- [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) に {{jsxref("Array.of()")}} メソッドを実装しました ([Firefox バグ 866849](https://bugzil.la/866849))。
-- {{jsxref("Array.prototype.find()")}} メソッドおよび {{jsxref("Array.prototype.findIndex()")}} メソッドをサポートしました ([Firefox バグ 885553](https://bugzil.la/885553))。
-- {{jsxref("Global_Objects/Number/parseInt", "Number.parseInt()")}} および {{jsxref("Global_Objects/Number/parseFloat", "Number.parseFloat()")}} メソッドを実装しました ([Firefox バグ 886949](https://bugzil.la/886949))。
-- `Map.prototype.forEach()` メソッドおよび `Set.prototype.forEach()` メソッドを実装しました ([Firefox バグ 866847](https://bugzil.la/866847))。
-- [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) へ新たに、数学的なメソッドを追加しました: `Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.trunc()`, `Math.sign()` and `Math.cbrt()` ([Firefox バグ 717379](https://bugzil.la/717379)).
-- 2 進数および 8 進数の整数リテラルをサポートしました: `0b10101010`, `0B1010`, `0o777`, `0O237` が有効になりました ([Firefox バグ 894026](https://bugzil.la/894026))。
-- 計算機イプシロン定数 (1 に追加することで 1 ではなくなる、表現可能な最小の値) を {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} として使用できます ([Firefox バグ 885798](https://bugzil.la/885798))。
+- [`awway`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway) に {{jsxwef("awway.of()")}} メソッドを実装しました ([fiwefox バグ 866849](https://bugziw.wa/866849))。
+- {{jsxwef("awway.pwototype.find()")}} メソッドおよび {{jsxwef("awway.pwototype.findindex()")}} メソッドをサポートしました ([fiwefox バグ 885553](https://bugziw.wa/885553))。
+- {{jsxwef("gwobaw_objects/numbew/pawseint", (ˆ ﻌ ˆ)♡ "numbew.pawseint()")}} および {{jsxwef("gwobaw_objects/numbew/pawsefwoat", (⑅˘꒳˘) "numbew.pawsefwoat()")}} メソッドを実装しました ([fiwefox バグ 886949](https://bugziw.wa/886949))。
+- `map.pwototype.foweach()` メソッドおよび `set.pwototype.foweach()` メソッドを実装しました ([fiwefox バグ 866847](https://bugziw.wa/866847))。
+- [`math`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math) へ新たに、数学的なメソッドを追加しました: `math.wog10()`, (U ᵕ U❁) `math.wog2()`, -.- `math.wog1p()`, ^^;; `math.expm1()`, >_< `math.cosh()`, mya `math.sinh()`, mya `math.tanh()`, 😳 `math.acosh()`, XD `math.asinh()`, :3 `math.atanh()`, 😳😳😳 `math.twunc()`, -.- `math.sign()` and `math.cbwt()` ([fiwefox バグ 717379](https://bugziw.wa/717379)). ( ͡o ω ͡o )
+- 2 進数および 8 進数の整数リテラルをサポートしました: `0b10101010`, rawr x3 `0b1010`, nyaa~~ `0o777`, `0o237` が有効になりました ([fiwefox バグ 894026](https://bugziw.wa/894026))。
+- 計算機イプシロン定数 (1 に追加することで 1 ではなくなる、表現可能な最小の値) を {{jsxwef("gwobaw_objects/numbew/epsiwon", /(^•ω•^) "numbew.epsiwon")}} として使用できます ([fiwefox バグ 885798](https://bugziw.wa/885798))。
 
-### インターフェイス/API/DOM
+### インターフェイス/api/dom
 
-- [Web Audio API](/ja/docs/Web/API/Web_Audio_API) をサポートしました。以前は不完全な実装を、設定のもとで使用できました ([Firefox バグ 779297](https://bugzil.la/779297))。
-- Windows の IME に関するキーの一部を `KeyboardEvent.key` でサポートしました ([Firefox バグ 865565](https://bugzil.la/865565))。詳しくは[キー名の表](/ja/docs/Web/API/KeyboardEvent#key_names_and_char_values)をご覧ください。
-- Metro 版 Firefox が、デスクトップ版と同じ方法でキーイベントを発生させるようになりました ([Firefox バグ 843236](https://bugzil.la/843236))。
-- 前の `keydown` イベントの `preventDefault()` が呼び出された場合は`keypress` イベントが発生しないようになりました ([Firefox バグ 501496](https://bugzil.la/501496))。詳しくは [`keydown` イベントのドキュメント](</ja/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event> "Web/Reference/Events/keydown#preventDefault()_of_keydown_event")をご覧ください。
-- `Future` インターフェイスの名称を `Promise` に変更しました ([Firefox バグ 884279](https://bugzil.la/884279))。
-- {{domxref("HTMLIFrameElement")}} インターフェイスで `srcDoc`プロパティをサポートしました。これは、{{HTMLElement("iframe")}} のコンテンツをインラインで記載できるプロパティです ([Firefox バグ 802895](https://bugzil.la/802895))。
-- {{domxref("HTMLTableElement")}} インターフェイスで `createTBody()` メソッドをサポートしました。これは、`createTBody()` の取得を可能にします ([Firefox バグ 813034](https://bugzil.la/813034))。
-- 仕様書で定められているように、{{domxref("Range.collapse()")}} メソッドの引数 `toStart` は省略可能になり、また既定値が `false` になりました ([Firefox バグ 891340](https://bugzil.la/891340))。
-- {{domxref("Document")}} および {{domxref("DocumentFragment")}} で {{domxref("ParentNode")}} インターフェイスをサポートしました ([Firefox バグ 895974](https://bugzil.la/895974))。
-- `previousElementSibling` および `nextElementSibling` を、{{domxref("Element")}} オブジェクトだけでなく {{domxref("CharacterData")}} オブジェクトや {{domxref("DocumentType")}} オブジェクトでも呼び出せるようにするため、{{domxref("ChildNode")}} に移転しました ([Firefox バグ 895974](https://bugzil.la/895974))。
-- `navigator.geolocation` プロパティを、仕様書に合致するよう更新しました。`null` を返さないようになります。設定 `geo.enabled` が `false` であるときは、`undefined` を返します ([Firefox バグ 884921](https://bugzil.la/884921))。
-- {{domxref("HTMLVideoElement")}} インターフェイスの `videoPlaybackQuality` 属性を、`getVideoPlaybackQuality` メソッドに変更しました ([Firefox バグ 889205](https://bugzil.la/889205))。
+- [web audio api](/ja/docs/web/api/web_audio_api) をサポートしました。以前は不完全な実装を、設定のもとで使用できました ([fiwefox バグ 779297](https://bugziw.wa/779297))。
+- w-windows の ime に関するキーの一部を `keyboawdevent.key` でサポートしました ([fiwefox バグ 865565](https://bugziw.wa/865565))。詳しくは[キー名の表](/ja/docs/web/api/keyboawdevent#key_names_and_chaw_vawues)をご覧ください。
+- metwo 版 f-fiwefox が、デスクトップ版と同じ方法でキーイベントを発生させるようになりました ([fiwefox バグ 843236](https://bugziw.wa/843236))。
+- 前の `keydown` イベントの `pweventdefauwt()` が呼び出された場合は`keypwess` イベントが発生しないようになりました ([fiwefox バグ 501496](https://bugziw.wa/501496))。詳しくは [`keydown` イベントのドキュメント](</ja/docs/web/wefewence/events/keydown#pweventdefauwt()_of_keydown_event> "web/wefewence/events/keydown#pweventdefauwt()_of_keydown_event")をご覧ください。
+- `futuwe` インターフェイスの名称を `pwomise` に変更しました ([fiwefox バグ 884279](https://bugziw.wa/884279))。
+- {{domxwef("htmwifwameewement")}} インターフェイスで `swcdoc`プロパティをサポートしました。これは、{{htmwewement("ifwame")}} のコンテンツをインラインで記載できるプロパティです ([fiwefox バグ 802895](https://bugziw.wa/802895))。
+- {{domxwef("htmwtabweewement")}} インターフェイスで `cweatetbody()` メソッドをサポートしました。これは、`cweatetbody()` の取得を可能にします ([fiwefox バグ 813034](https://bugziw.wa/813034))。
+- 仕様書で定められているように、{{domxwef("wange.cowwapse()")}} メソッドの引数 `tostawt` は省略可能になり、また既定値が `fawse` になりました ([fiwefox バグ 891340](https://bugziw.wa/891340))。
+- {{domxwef("document")}} および {{domxwef("documentfwagment")}} で {{domxwef("pawentnode")}} インターフェイスをサポートしました ([fiwefox バグ 895974](https://bugziw.wa/895974))。
+- `pweviousewementsibwing` および `nextewementsibwing` を、{{domxwef("ewement")}} オブジェクトだけでなく {{domxwef("chawactewdata")}} オブジェクトや {{domxwef("documenttype")}} オブジェクトでも呼び出せるようにするため、{{domxwef("chiwdnode")}} に移転しました ([fiwefox バグ 895974](https://bugziw.wa/895974))。
+- `navigatow.geowocation` プロパティを、仕様書に合致するよう更新しました。`nuww` を返さないようになります。設定 `geo.enabwed` が `fawse` であるときは、`undefined` を返します ([fiwefox バグ 884921](https://bugziw.wa/884921))。
+- {{domxwef("htmwvideoewement")}} インターフェイスの `videopwaybackquawity` 属性を、`getvideopwaybackquawity` メソッドに変更しました ([fiwefox バグ 889205](https://bugziw.wa/889205))。
 
-### MathML
+### mathmw
 
 _変更なし。_
 
-### SVG
+### s-svg
 
 _変更なし。_
 
 ## 関連情報
 
-- [Firefox 25 リリースノート](http://www.mozilla.jp/firefox/25.0/releasenotes/)
-- [Firefox 25 アドオン互換性情報](https://dev.mozilla.jp/2013/10/firefox-25-addon-compatibility/)
+- [fiwefox 25 リリースノート](http://www.moziwwa.jp/fiwefox/25.0/weweasenotes/)
+- [fiwefox 25 アドオン互換性情報](https://dev.moziwwa.jp/2013/10/fiwefox-25-addon-compatibiwity/)
 
 ### 過去のバージョン
 
-{{Firefox_for_developers('24')}}
+{{fiwefox_fow_devewopews('24')}}

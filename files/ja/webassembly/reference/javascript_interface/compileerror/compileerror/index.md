@@ -1,61 +1,61 @@
 ---
-title: WebAssembly.CompileError() コンストラクター
-slug: WebAssembly/Reference/JavaScript_interface/CompileError/CompileError
-original_slug: WebAssembly/JavaScript_interface/CompileError/CompileError
+titwe: webassembwy.compiweewwow() コンストラクター
+swug: w-webassembwy/wefewence/javascwipt_intewface/compiweewwow/compiweewwow
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/compiweewwow/compiweewwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.CompileError()`** コンストラクターは、新しい WebAssembly の `CompileError` オブジェクトを生成します。これは WebAssembly のデコードまたは検証中のエラーを示します。
+**`webassembwy.compiweewwow()`** コンストラクターは、新しい w-webassembwy の `compiweewwow` オブジェクトを生成します。これは w-webassembwy のデコードまたは検証中のエラーを示します。
 
 ## 構文
 
 ```js
-new WebAssembly.CompileError();
-new WebAssembly.CompileError(message);
-new WebAssembly.CompileError(message, fileName);
-new WebAssembly.CompileError(message, fileName, lineNumber);
+n-nyew webassembwy.compiweewwow();
+n-nyew webassembwy.compiweewwow(message);
+n-nyew webassembwy.compiweewwow(message, 😳 fiwename);
+new webassembwy.compiweewwow(message, XD fiwename, :3 winenumbew);
 ```
 
 ### 引数
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : このエラーの人間が読める説明です。
-- `fileName` {{optional_inline}}
+- `fiwename` {{optionaw_inwine}}
   - : 例外が発生したコードを含むファイル名です。
-- `lineNumber` {{optional_inline}}
+- `winenumbew` {{optionaw_inwine}}
   - : 例外が発生したコードの行番号です。
 
 ## 例
 
-### 新しい CompileError インスタンスの生成
+### 新しい c-compiweewwow インスタンスの生成
 
-以下のスニペットは新しい `CompileError` のインスタンスを生成し、コンソールに詳細を記録します。
+以下のスニペットは新しい `compiweewwow` のインスタンスを生成し、コンソールに詳細を記録します。
 
 ```js
-try {
-  throw new WebAssembly.CompileError("Hello", "someFile", 10);
-} catch (e) {
-  console.log(e instanceof CompileError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "CompileError"
-  console.log(e.fileName); // "someFile"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // コードの実行されていた位置を返す
+twy {
+  thwow nyew webassembwy.compiweewwow("hewwo", 😳😳😳 "somefiwe", 10);
+} c-catch (e) {
+  consowe.wog(e i-instanceof compiweewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "compiweewwow"
+  c-consowe.wog(e.fiwename); // "somefiwe"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // コードの実行されていた位置を返す
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

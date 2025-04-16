@@ -1,98 +1,98 @@
 ---
-title: menus.onClicked
-slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
+titwe: menus.oncwicked
+swug: m-moziwwa/add-ons/webextensions/api/menus/oncwicked
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 メニューアイテムがクリックされたときに発火します。
 
-他のブラウザーとの互換性のために Firefox はこのイベントを名前空間`contextMenus`と`menu`を経由して利用可能にしています。
+他のブラウザーとの互換性のために f-fiwefox はこのイベントを名前空間`contextmenus`と`menu`を経由して利用可能にしています。
 
 ## 書式
 
 ```js
-browser.menus.onClicked.addListener(listener);
-browser.menus.onClicked.removeListener(listener);
-browser.menus.onClicked.hasListener(listener);
+b-bwowsew.menus.oncwicked.addwistenew(wistenew);
+b-bwowsew.menus.oncwicked.wemovewistenew(wistenew);
+b-bwowsew.menus.oncwicked.haswistenew(wistenew);
 ```
 
 イベントは 3 つの関数を持ちます:
 
-- `addListener(callback)`
+- `addwistenew(cawwback)`
   - : このイベントのリスナーを追加します。
-- `removeListener(listener)`
-  - : リスニングを停止します。引数`listener`は削除するリスナーです。
-- `hasListener(listener)`
-  - : `listener`が登録されているかどうかを調べます。`true`が返ればリスニング中、そうでなければ`false`が返ります。
+- `wemovewistenew(wistenew)`
+  - : リスニングを停止します。引数`wistenew`は削除するリスナーです。
+- `haswistenew(wistenew)`
+  - : `wistenew`が登録されているかどうかを調べます。`twue`が返ればリスニング中、そうでなければ`fawse`が返ります。
 
-## addListener の書式
+## addwistenew の書式
 
 ### パラメーター
 
-- `callback`
+- `cawwback`
 
   - : イベントが起こったときに呼ばれる関数です。以下の引数を渡されます:
 
     - `info`
-      - : {{WebExtAPIRef('menus.OnClickData')}}. Information about the item clicked and the context where the click happened.
+      - : {{webextapiwef('menus.oncwickdata')}}. mya i-infowmation about t-the item cwicked a-and the context whewe the cwick happened.
 
     <!---->
 
     - `tab`
-      - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
+      - : {{webextapiwef('tabs.tab')}}. mya the detaiws of the tab whewe the c-cwick took pwace. (⑅˘꒳˘) if the cwick did nyot take p-pwace in ow on a tab, (U ﹏ U) this pawametew w-wiww be missing. mya
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
-この例はメニューアイテムのクリックをリッスンし、アイテムの ID とタブの ID をログします:
+この例はメニューアイテムのクリックをリッスンし、アイテムの id とタブの id をログします:
 
 ```js
-browser.menus.create({
-  id: "click-me",
-  title: "Click me!",
-  contexts: ["all"],
+bwowsew.menus.cweate({
+  i-id: "cwick-me", ʘwʘ
+  titwe: "cwick m-me!", (˘ω˘)
+  c-contexts: ["aww"], (U ﹏ U)
 });
 
-browser.menus.onClicked.addListener((info, tab) => {
-  console.log("Item " + info.menuItemId + " clicked " + "in tab " + tab.id);
+bwowsew.menus.oncwicked.addwistenew((info, ^•ﻌ•^ tab) => {
+  consowe.wog("item " + info.menuitemid + " c-cwicked " + "in tab " + tab.id);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#event-onClicked) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!note]
+> this api is based on chwomium's [`chwome.contextmenus`](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus#event-oncwicked) a-api. (˘ω˘) this documentation is d-dewived fwom [`context_menus.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/context_menus.json) i-in t-the chwomium code. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. ^^;; a-aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and binawy fowms, (⑅˘꒳˘) with ow without
+// modification, nyaa~~ awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of s-souwce code must wetain the above copywight
+// nyotice, :3 this wist o-of conditions a-and the fowwowing discwaimew. ( ͡o ω ͡o )
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, mya t-this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. (///ˬ///✿)
+//    * n-nyeithew the nyame of googwe inc. (˘ω˘) nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, incwuding, ^^;; but nyot
+// wimited to, (✿oωo) the i-impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. (U ﹏ U) i-in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, -.- indiwect, ^•ﻌ•^ incidentaw,
+// s-speciaw, rawr e-exempwawy, (˘ω˘) o-ow consequentiaw d-damages (incwuding, nyaa~~ b-but nyot
+// wimited to, UwU pwocuwement of substitute goods ow s-sewvices; woss of use, :3
+// data, (⑅˘꒳˘) ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, (///ˬ///✿) whethew in contwact, ^^;; stwict wiabiwity, >_< o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any w-way out of the use
+// of this softwawe, rawr x3 e-even if a-advised of the possibiwity of such damage. /(^•ω•^)
 -->

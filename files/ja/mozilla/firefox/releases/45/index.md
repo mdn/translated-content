@@ -1,11 +1,11 @@
 ---
-title: Firefox 45 for developers
-slug: Mozilla/Firefox/Releases/45
+titwe: fiwefox 45 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/45
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox の最新の開発者向け機能を試すには、 Firefox Developer Edition をインストールしてください。Firefox 45 は、米国時間 2016 年 3 月 8 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
+fiwefox の最新の開発者向け機能を試すには、 f-fiwefox d-devewopew edition をインストールしてください。fiwefox 45 は、米国時間 2016 年 3 月 8 日にリリースされました。この記事では、ウェブ開発者だけでなく、 f-fiwefox や g-gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -13,138 +13,138 @@ Firefox の最新の開発者向け機能を試すには、 Firefox Developer Ed
 
 主要なもの:
 
-- [ページインスペクターでの全文検索](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#searching)
-- [メモリーツールでのヒープスナップショットの差分](https://firefox-source-docs.mozilla.org/devtools-user/memory/basic_operations/index.html#comparing-snapshots)
-- [DomContentLoaded と load イベントのネットワークモニタへの表示](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#timeline)
-- [アニメーションインスペクターの改良](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
+- [ページインスペクターでの全文検索](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_and_edit_htmw/index.htmw#seawching)
+- [メモリーツールでのヒープスナップショットの差分](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/memowy/basic_opewations/index.htmw#compawing-snapshots)
+- [domcontentwoaded と w-woad イベントのネットワークモニタへの表示](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw#timewine)
+- [アニメーションインスペクターの改良](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/wowk_with_animations/index.htmw)
 
-[Firefox 43 と Firefox 44 の間で修正された開発ツールのすべてのバグ。](https://bugzilla.mozilla.org/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&chfield=resolution&chfieldfrom=2015-10-29&chfieldto=2015-12-14&chfieldvalue=FIXED&classification=Client%20Software&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&resolution=FIXED&list_id=12753878)
+[fiwefox 43 と f-fiwefox 44 の間で修正された開発ツールのすべてのバグ。](https://bugziwwa.moziwwa.owg/bugwist.cgi?bug_status=wesowved&bug_status=vewified&chfiewd=wesowution&chfiewdfwom=2015-10-29&chfiewdto=2015-12-14&chfiewdvawue=fixed&cwassification=cwient%20softwawe&component=devewopew%20toows&component=devewopew%20toows%3a%203d%20view&component=devewopew%20toows%3a%20about%3adebugging&component=devewopew%20toows%3a%20animation%20inspectow&component=devewopew%20toows%3a%20canvas%20debuggew&component=devewopew%20toows%3a%20computed%20stywes%20inspectow&component=devewopew%20toows%3a%20consowe&component=devewopew%20toows%3a%20css%20wuwes%20inspectow&component=devewopew%20toows%3a%20debuggew&component=devewopew%20toows%3a%20font%20inspectow&component=devewopew%20toows%3a%20fwamewowk&component=devewopew%20toows%3a%20gwaphic%20commandwine%20and%20toowbaw&component=devewopew%20toows%3a%20inspectow&component=devewopew%20toows%3a%20json%20viewew&component=devewopew%20toows%3a%20memowy&component=devewopew%20toows%3a%20netmonitow&component=devewopew%20toows%3a%20object%20inspectow&component=devewopew%20toows%3a%20pewfowmance%20toows%20%28pwofiwew%2ftimewine%29&component=devewopew%20toows%3a%20wesponsive%20mode&component=devewopew%20toows%3a%20scwatchpad&component=devewopew%20toows%3a%20souwce%20editow&component=devewopew%20toows%3a%20stowage%20inspectow&component=devewopew%20toows%3a%20stywe%20editow&component=devewopew%20toows%3a%20usew%20stowies&component=devewopew%20toows%3a%20web%20audio%20editow&component=devewopew%20toows%3a%20webgw%20shadew%20editow&component=devewopew%20toows%3a%20webide&pwoduct=fiwefox&wesowution=fixed&wist_id=12753878)
 
-### HTML
+### h-htmw
 
-- Content Security Policy を {{HTMLElement("meta")}} 要素で直接設定できるようになりました ([Firefox バグ 663570](https://bugzil.la/663570))。
-- {{HTMLElement("img")}} 要素、{{HTMLElement("area")}} 要素、{{HTMLElement("a")}} 要素、{{HTMLElement("iframe")}} 要素の `referrer` 属性を、`referrerpolicy` に改名しました ([Firefox バグ 1187357](https://bugzil.la/1187357))。
-- ビューポートの変化やリサイズにより `<img srcset>` のレスポンシブ画像の再選択が発生するようになりました ([Firefox バグ 1166138](https://bugzil.la/1166138))。
+- content secuwity powicy を {{htmwewement("meta")}} 要素で直接設定できるようになりました ([fiwefox バグ 663570](https://bugziw.wa/663570))。
+- {{htmwewement("img")}} 要素、{{htmwewement("awea")}} 要素、{{htmwewement("a")}} 要素、{{htmwewement("ifwame")}} 要素の `wefewwew` 属性を、`wefewwewpowicy` に改名しました ([fiwefox バグ 1187357](https://bugziw.wa/1187357))。
+- ビューポートの変化やリサイズにより `<img swcset>` のレスポンシブ画像の再選択が発生するようになりました ([fiwefox バグ 1166138](https://bugziw.wa/1166138))。
 
-### CSS
+### css
 
-- {{cssxref("word-spacing")}} でパーセント値に対応しました ([Firefox バグ 1038663](https://bugzil.la/1038663))。
-- CSS グリッドの実装が向上し、実験的な状態ではないと判断しました。これらを Nightly および Developer Edition で既定で有効にしましたが、Beta および Release では無効です ([Firefox バグ 1000592](https://bugzil.la/1000592))。
+- {{cssxwef("wowd-spacing")}} でパーセント値に対応しました ([fiwefox バグ 1038663](https://bugziw.wa/1038663))。
+- css グリッドの実装が向上し、実験的な状態ではないと判断しました。これらを n-nyightwy および devewopew edition で既定で有効にしましたが、beta および wewease では無効です ([fiwefox バグ 1000592](https://bugziw.wa/1000592))。
 
-  - 溝 (`grid-column-gap`, `grid-row-gap`, `grid-gap` プロパティ) を実装しました ([Firefox バグ 1176792](https://bugzil.la/1176792))。
-  - グリッドアイテムの最小サイズ ({{cssxref("min-width")}} や {{cssxref("min-height")}} の値 `auto` の特殊な動作) を実装しました ([Firefox バグ 1176775](https://bugzil.la/1176775))。
-  - グリッドレイアウトで {{cssxref("align-self")}} および {{cssxref("justify-self")}} に対応しました ([Firefox バグ 1151213](https://bugzil.la/1151213))。
-  - グリッドレイアウトで {{cssxref("align-content")}} および {{cssxref("justify-content")}} に対応しました ([Firefox バグ 1151214](https://bugzil.la/1151214))。
-  - grid-template-columns、grid-template-rows の解決値の単位がピクセルになりました ([Firefox バグ 978212](https://bugzil.la/978212))。
-  - 関連機能である {{cssxref("display")}}: contents は [Firefox 37](/ja/docs/Mozilla/Firefox/Releases/37) から対応しています。
+  - 溝 (`gwid-cowumn-gap`, rawr x3 `gwid-wow-gap`, (U ﹏ U) `gwid-gap` プロパティ) を実装しました ([fiwefox バグ 1176792](https://bugziw.wa/1176792))。
+  - グリッドアイテムの最小サイズ ({{cssxwef("min-width")}} や {{cssxwef("min-height")}} の値 `auto` の特殊な動作) を実装しました ([fiwefox バグ 1176775](https://bugziw.wa/1176775))。
+  - グリッドレイアウトで {{cssxwef("awign-sewf")}} および {{cssxwef("justify-sewf")}} に対応しました ([fiwefox バグ 1151213](https://bugziw.wa/1151213))。
+  - グリッドレイアウトで {{cssxwef("awign-content")}} および {{cssxwef("justify-content")}} に対応しました ([fiwefox バグ 1151214](https://bugziw.wa/1151214))。
+  - g-gwid-tempwate-cowumns、gwid-tempwate-wows の解決値の単位がピクセルになりました ([fiwefox バグ 978212](https://bugziw.wa/978212))。
+  - 関連機能である {{cssxwef("dispway")}}: contents は [fiwefox 37](/ja/docs/moziwwa/fiwefox/weweases/37) から対応しています。
 
-- CSS グリッド向けの CSS ボックス配置に完全対応するため、 `start`、`end`、`self-start`、`self-end`、`left`、`right`、`last-baseline`、`space-evenly` ([Firefox バグ 1176782](https://bugzil.la/1176782))。現在、 CSS ボックス配置は CSS フレックスボックスおよび CSS グリッドにのみ適用されています。
-- \[css-grid]\[css-flexbox] \<fieldset> のグリッドレイアウトおよびフレックスレイアウトを実装しました ([Firefox バグ 1230207](https://bugzil.la/1230207))。
-- {{cssxref("float")}} および {{cssxref("clear")}} で、値 `inline-start` および `inline-end` に対応しました ([Firefox バグ 1122918](https://bugzil.la/1122918))。Nightly、Aurora (Dev edition)、Firefox OS では、既定で有効です。Release および Beta で有効化するには設定項目 `layout.css.float-logical-values.enabled` を `true` に変更してください。
-- {{cssxref("text-emphasis")}}、{{cssxref("text-emphasis-style")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-emphasis-position")}} を実装しました。既定値は無効です (有効化するには `layout.css.text-emphasis.enabled` を true に設定してください) ([Firefox バグ 1040668](https://bugzil.la/1040668))。
-- ウェブの互換性のためにいくつかの `-webkit` 接頭辞付きプロパティおよび値に対応しました設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です。
+- c-css グリッド向けの css ボックス配置に完全対応するため、 `stawt`、`end`、`sewf-stawt`、`sewf-end`、`weft`、`wight`、`wast-basewine`、`space-evenwy` ([fiwefox バグ 1176782](https://bugziw.wa/1176782))。現在、 css ボックス配置は css フレックスボックスおよび c-css グリッドにのみ適用されています。
+- \[css-gwid]\[css-fwexbox] \<fiewdset> のグリッドレイアウトおよびフレックスレイアウトを実装しました ([fiwefox バグ 1230207](https://bugziw.wa/1230207))。
+- {{cssxwef("fwoat")}} および {{cssxwef("cweaw")}} で、値 `inwine-stawt` および `inwine-end` に対応しました ([fiwefox バグ 1122918](https://bugziw.wa/1122918))。nightwy、auwowa (dev edition)、fiwefox o-os では、既定で有効です。wewease および b-beta で有効化するには設定項目 `wayout.css.fwoat-wogicaw-vawues.enabwed` を `twue` に変更してください。
+- {{cssxwef("text-emphasis")}}、{{cssxwef("text-emphasis-stywe")}}、{{cssxwef("text-emphasis-cowow")}}、{{cssxwef("text-emphasis-position")}} を実装しました。既定値は無効です (有効化するには `wayout.css.text-emphasis.enabwed` を twue に設定してください) ([fiwefox バグ 1040668](https://bugziw.wa/1040668))。
+- ウェブの互換性のためにいくつかの `-webkit` 接頭辞付きプロパティおよび値に対応しました設定項目 `wayout.css.pwefixes.webkit` で制御しており、既定値は `fawse` です。
 
-  - ウェブ互換性のため、 `-webkit-backface-visibility`, `-webkit-perspective`, `-webkit-perspective-origin` を追加しました。設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です ([Firefox バグ 1179444](https://bugzil.la/1179444))。
+  - ウェブ互換性のため、 `-webkit-backface-visibiwity`, (U ﹏ U) `-webkit-pewspective`, (⑅˘꒳˘) `-webkit-pewspective-owigin` を追加しました。設定項目 `wayout.css.pwefixes.webkit` で制御しており、既定値は `fawse` です ([fiwefox バグ 1179444](https://bugziw.wa/1179444))。
 
-### JavaScript
+### javascwipt
 
-- ES2015 (ES6) の [クラス](/ja/docs/Web/JavaScript/Reference/Classes) を既定で有効にしました ([Firefox バグ 1197932](https://bugzil.la/1197932))。
-- {{jsxref("Operators/Expression_closures", "式クロージャ", "", 1)}} が非推奨になり、コンソールに警告を表示するようになりました ([Firefox バグ 995610](https://bugzil.la/995610))。
-- {{jsxref("String.prototype.replace")}} は関数の引数を実行した後、{{jsxref("Global_Objects/RegExp/n", "RegExp の静的プロパティ", "", 1)}} に値を復元しないようになりました ([Firefox バグ 1226936](https://bugzil.la/1226936))。
-- {{jsxref("Math.random()")}} を XorShift128+ アルゴリズムにアップグレードしました ([Firefox バグ 322529](https://bugzil.la/322529))。
+- es2015 (es6) の [クラス](/ja/docs/web/javascwipt/wefewence/cwasses) を既定で有効にしました ([fiwefox バグ 1197932](https://bugziw.wa/1197932))。
+- {{jsxwef("opewatows/expwession_cwosuwes", òωó "式クロージャ", ʘwʘ "", 1)}} が非推奨になり、コンソールに警告を表示するようになりました ([fiwefox バグ 995610](https://bugziw.wa/995610))。
+- {{jsxwef("stwing.pwototype.wepwace")}} は関数の引数を実行した後、{{jsxwef("gwobaw_objects/wegexp/n", /(^•ω•^) "wegexp の静的プロパティ", "", ʘwʘ 1)}} に値を復元しないようになりました ([fiwefox バグ 1226936](https://bugziw.wa/1226936))。
+- {{jsxwef("math.wandom()")}} を xowshift128+ アルゴリズムにアップグレードしました ([fiwefox バグ 322529](https://bugziw.wa/322529))。
 
-### インターフェイス/API/DOM
+### インターフェイス/api/dom
 
-#### DOM & HTML DOM
+#### dom & htmw dom
 
-- 互換性のため、標準外のプロパティ [`Node.innerText`](/ja/docs/Web/API/HTMLElement/innerText) を実装しました ([Firefox バグ 264412](https://bugzil.la/264412))。
-- {{domxref("HTMLImageElement.srcset")}} がリサイズやビューポートの変化に反応しない問題を修正しました ([Firefox バグ 1166138](https://bugzil.la/1166138))。
-- {{domxref("Element.getAttributeNames()")}} を実装しました ([Firefox バグ 1228634](https://bugzil.la/1228634))。
+- 互換性のため、標準外のプロパティ [`node.innewtext`](/ja/docs/web/api/htmwewement/innewtext) を実装しました ([fiwefox バグ 264412](https://bugziw.wa/264412))。
+- {{domxwef("htmwimageewement.swcset")}} がリサイズやビューポートの変化に反応しない問題を修正しました ([fiwefox バグ 1166138](https://bugziw.wa/1166138))。
+- {{domxwef("ewement.getattwibutenames()")}} を実装しました ([fiwefox バグ 1228634](https://bugziw.wa/1228634))。
 
-#### WebGL
+#### w-webgw
 
-WebGL2 の実装が進展しました。
+webgw2 の実装が進展しました。
 
-- プログラムやシェーダーに対応しました ([Firefox バグ 1048743](https://bugzil.la/1048743))。
-- ユニフォームや属性に対応しました ([Firefox バグ 1048745](https://bugzil.la/1048745))。
-- Framebuffer オブジェクトを実装しました ([Firefox バグ 1048732](https://bugzil.la/1048732))。
-- Renderbuffer オブジェクトを実装しました ([Firefox バグ 1048733](https://bugzil.la/1048733))。
+- プログラムやシェーダーに対応しました ([fiwefox バグ 1048743](https://bugziw.wa/1048743))。
+- ユニフォームや属性に対応しました ([fiwefox バグ 1048745](https://bugziw.wa/1048745))。
+- fwamebuffew オブジェクトを実装しました ([fiwefox バグ 1048732](https://bugziw.wa/1048732))。
+- wendewbuffew オブジェクトを実装しました ([fiwefox バグ 1048733](https://bugziw.wa/1048733))。
 
-#### IndexedDB
+#### indexeddb
 
 _変更なし。_
 
 #### サービスワーカー
 
-- {{domxref("Clients.get()")}} および {{domxref("FetchEvent.clientId")}} を実装しました ([Firefox バグ 1222464](https://bugzil.la/1222464))。
-- {{domxref("Clients.openWindow()")}} を実装しました ([Firefox バグ 1172870](https://bugzil.la/1172870))。
-- {{domxref("Clients.matchAll()")}} を呼び出す際に引数として渡すことができる options オブジェクトに、`includeUncontrolled` プロパティを含めることが可能になりました。これは論理値です。`true` を設定すると、比較操作により現在のサービスワーカーと同じオリジンを共有するすべてのサービスワーカークライアントを返します。それ以外の場合は、サービスワーカーによって制御されるサービスワーカークライアントのみを返します。既定値は `false` です。
+- {{domxwef("cwients.get()")}} および {{domxwef("fetchevent.cwientid")}} を実装しました ([fiwefox バグ 1222464](https://bugziw.wa/1222464))。
+- {{domxwef("cwients.openwindow()")}} を実装しました ([fiwefox バグ 1172870](https://bugziw.wa/1172870))。
+- {{domxwef("cwients.matchaww()")}} を呼び出す際に引数として渡すことができる o-options オブジェクトに、`incwudeuncontwowwed` プロパティを含めることが可能になりました。これは論理値です。`twue` を設定すると、比較操作により現在のサービスワーカーと同じオリジンを共有するすべてのサービスワーカークライアントを返します。それ以外の場合は、サービスワーカーによって制御されるサービスワーカークライアントのみを返します。既定値は `fawse` です。
 
-#### WebRTC
+#### webwtc
 
 _変更なし。_
 
-#### 新規 API
+#### 新規 api
 
 _変更なし。_
 
 #### その他
 
-- [ウェブ音声合成 API](/ja/docs/Web/API/Web_Speech_API) を、デスクトップ版 Firefox で実装しました ([Firefox バグ 1003439](https://bugzil.la/1003439))。
-- {{domxref("Window.onstorage")}} イベントハンドラーを追加しました。
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の実験的な実装で、{{domxref("ComputedTiming")}} インターフェイスを追加しました ([Firefox バグ 1108055](https://bugzil.la/1108055))。
-- {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} イベントハンドラーを追加しました ([Firefox バグ 1231193](https://bugzil.la/1231193))。
-- {{domxref("MediaStream.removeTrack()")}} を呼び出してメディアストリームから映像トラックを削除した後に、{{domxref("MediaStream.addTrack()")}} を使用して別の映像トラックを追加して、再生することが可能になりました ([Firefox バグ 1223696](https://bugzil.la/1223696))。
+- [ウェブ音声合成 a-api](/ja/docs/web/api/web_speech_api) を、デスクトップ版 f-fiwefox で実装しました ([fiwefox バグ 1003439](https://bugziw.wa/1003439))。
+- {{domxwef("window.onstowage")}} イベントハンドラーを追加しました。
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api) の実験的な実装で、{{domxwef("computedtiming")}} インターフェイスを追加しました ([fiwefox バグ 1108055](https://bugziw.wa/1108055))。
+- {{domxwef("gwobaweventhandwews/onsewectionchange", σωσ "document.onsewectionchange")}} イベントハンドラーを追加しました ([fiwefox バグ 1231193](https://bugziw.wa/1231193))。
+- {{domxwef("mediastweam.wemovetwack()")}} を呼び出してメディアストリームから映像トラックを削除した後に、{{domxwef("mediastweam.addtwack()")}} を使用して別の映像トラックを追加して、再生することが可能になりました ([fiwefox バグ 1223696](https://bugziw.wa/1223696))。
 
-### MathML
+### m-mathmw
 
 _変更なし。_
 
-### SVG
+### svg
 
-- Moz2D のバックエンドが cairo であるときに、 SVG stroke hit-testing でバグが多い問題を修正しました ([Firefox バグ 676001](https://bugzil.la/676001))。
-- transform / translate の値が大きい要素と対話できない問題を修正しました ([Firefox バグ 1217012](https://bugzil.la/1217012))。
+- moz2d のバックエンドが caiwo であるときに、 s-svg stwoke hit-testing でバグが多い問題を修正しました ([fiwefox バグ 676001](https://bugziw.wa/676001))。
+- twansfowm / twanswate の値が大きい要素と対話できない問題を修正しました ([fiwefox バグ 1217012](https://bugziw.wa/1217012))。
 
-### Audio/Video
+### a-audio/video
 
-- 修正: 再生時間の丸め誤差により、音声再生が途切れることがある不具合（Firefox 41 以降）。 ([Firefox バグ 1222866](https://bugzil.la/1222866))。
+- 修正: 再生時間の丸め誤差により、音声再生が途切れることがある不具合（fiwefox 41 以降）。 ([fiwefox バグ 1222866](https://bugziw.wa/1222866))。
 
-## HTTP
+## http
 
-- ウェブコンテンツにアクセスした際に、`jar:` プロトコルが既定で無効になりました。`jar:` プロトコルを有効化したい場合は、設定項目 `network.jar.block-remote-files` を `false` に変更してください ([Firefox バグ 1215235](https://bugzil.la/1215235))。
+- ウェブコンテンツにアクセスした際に、`jaw:` プロトコルが既定で無効になりました。`jaw:` プロトコルを有効化したい場合は、設定項目 `netwowk.jaw.bwock-wemote-fiwes` を `fawse` に変更してください ([fiwefox バグ 1215235](https://bugziw.wa/1215235))。
 
 ## セキュリティ
 
-- {{HTTPHeader("Content-Security-Policy")}} を {{HTMLElement("meta")}} 要素で指定できるようになりました ([Firefox バグ 663570](https://bugzil.la/663570))。
-- CSP のポリシーディレクティブ {{CSP("child-src")}} を実装しました ([Firefox バグ 1045891](https://bugzil.la/1045891))。
-- 有効期間が 27 か月を超える EV 証明書は、DV 証明書として判断され、取り扱われるようになりました ([Firefox バグ 1222903](https://bugzil.la/1222903))。
+- {{httpheadew("content-secuwity-powicy")}} を {{htmwewement("meta")}} 要素で指定できるようになりました ([fiwefox バグ 663570](https://bugziw.wa/663570))。
+- csp のポリシーディレクティブ {{csp("chiwd-swc")}} を実装しました ([fiwefox バグ 1045891](https://bugziw.wa/1045891))。
+- 有効期間が 27 か月を超える ev 証明書は、dv 証明書として判断され、取り扱われるようになりました ([fiwefox バグ 1222903](https://bugziw.wa/1222903))。
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+## アドオン開発者と moziwwa 開発者向けの変更点
 
 ### インターフェイス
 
 _変更なし。_
 
-### XUL
+### xuw
 
-- タブグループを [削除しました](https://support.mozilla.org/kb/tab-groups-removal)。
+- タブグループを [削除しました](https://suppowt.moziwwa.owg/kb/tab-gwoups-wemovaw)。
 
-### JavaScript コードモジュール
+### j-javascwipt コードモジュール
 
 _変更なし。_
 
-### XPCOM
+### xpcom
 
 _変更なし。_
 
 ### 検索プラグイン
 
-- Firefox 45 より、ユーザープロファイルの `searchplugins` ディレクトリー内にある検索プラグインは起動時に自動的に読み込みません。代わりにユーザーがインストールしたプラグインの一覧が整備され、リスト内にあるプラグインのみ読み込みます。事実上、新たな検索プラグインをインストールする方法は、Firefox の UX でユーザーがインストールする (例えば [OpenSearch による検出](/ja/docs/Mozilla/Add-ons/Creating_OpenSearch_plugins_for_Firefox)) か、アドオンによるインストールに限られます。また新しいプラグインをインストールしたとき、プロファイルのデバッグやクリーニングツールで将来使用するために、プラグインのインストール元に関する付加情報を記録します。
+- f-fiwefox 45 より、ユーザープロファイルの `seawchpwugins` ディレクトリー内にある検索プラグインは起動時に自動的に読み込みません。代わりにユーザーがインストールしたプラグインの一覧が整備され、リスト内にあるプラグインのみ読み込みます。事実上、新たな検索プラグインをインストールする方法は、fiwefox の u-ux でユーザーがインストールする (例えば [openseawch による検出](/ja/docs/moziwwa/add-ons/cweating_openseawch_pwugins_fow_fiwefox)) か、アドオンによるインストールに限られます。また新しいプラグインをインストールしたとき、プロファイルのデバッグやクリーニングツールで将来使用するために、プラグインのインストール元に関する付加情報を記録します。
 
 ### その他
 
-- chrome コンテキストでは、WebIDL コンストラクターを [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子なしで呼び出せました。Firefox 30 より、ウェブコンテンツではそのようなコードで [`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError) が発生するようになりました。例えば `var req = XMLHttpRequest();` は `var req = new XMLHttpRequest();` としなければなりません。
+- c-chwome コンテキストでは、webidw コンストラクターを [`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) 演算子なしで呼び出せました。fiwefox 30 より、ウェブコンテンツではそのようなコードで [`typeewwow`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) が発生するようになりました。例えば `vaw weq = xmwhttpwequest();` は `vaw weq = nyew xmwhttpwequest();` としなければなりません。
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(44)}}
+{{fiwefox_fow_devewopews(44)}}

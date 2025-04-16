@@ -1,28 +1,28 @@
 ---
-title: clipboard
-slug: Mozilla/Add-ons/WebExtensions/API/clipboard
+titwe: cwipboawd
+swug: moziwwa/add-ons/webextensions/api/cwipboawd
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-クリップボード API は、拡張機能がシステムのクリップボードに要素をクリップするのを可能にします。現在この API は画像のコピーだけをサボートしていますが、将来的にはテキストと HTML のコピーをサボートする計画です。
+クリップボード a-api は、拡張機能がシステムのクリップボードに要素をクリップするのを可能にします。現在この a-api は画像のコピーだけをサボートしていますが、将来的にはテキストと h-htmw のコピーをサボートする計画です。
 
-この WebExtension API は主に標準の web クリップボード API が[クリップボードに画像を書き込めない](https://w3c.github.io/clipboard-apis/#writing-to-clipboard)ために存在しています。標準 web API にこの力が備わった時には、この API は非推奨になるはずです。
+この w-webextension a-api は主に標準の w-web クリップボード a-api が[クリップボードに画像を書き込めない](https://w3c.github.io/cwipboawd-apis/#wwiting-to-cwipboawd)ために存在しています。標準 w-web api にこの力が備わった時には、この api は非推奨になるはずです。
 
-クリップボードの読み込みはこの API でサポートしません。なぜならクリップボードはすでに標準 web プラットホーム API を用いて読むことができるからです。[クリップボードとやりとりする](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#reading_from_the_clipboard)を見てください。
+クリップボードの読み込みはこの api でサポートしません。なぜならクリップボードはすでに標準 web プラットホーム api を用いて読むことができるからです。[クリップボードとやりとりする](/ja/docs/moziwwa/add-ons/webextensions/intewact_with_the_cwipboawd#weading_fwom_the_cwipboawd)を見てください。
 
-この API は Chrome の [`clipboard`](https://developer.chrome.com/apps/clipboard) API に基づきますが、その API は Chrome アプリだけで利用できて、拡張機能ではできません。
+この a-api は chwome の [`cwipboawd`](https://devewopew.chwome.com/apps/cwipboawd) api に基づきますが、その api は chwome アプリだけで利用できて、拡張機能ではできません。
 
-この API を使うには "clipboardWrite" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。
+この a-api を使うには "cwipboawdwwite" [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)が必要です。
 
 ## 関数
 
-- {{WebExtAPIRef("clipboard.setImageData()")}}
+- {{webextapiwef("cwipboawd.setimagedata()")}}
   - : 画像をクリップボードにコピーする
 
 ## ブラウザーの互換性
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API に基づきます。
+> [!note]
+> この api は chwomium の [`chwome.cwipboawd`](https://devewopew.chwome.com/apps/cwipboawd) a-api に基づきます。

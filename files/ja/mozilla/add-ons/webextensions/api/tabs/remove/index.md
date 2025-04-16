@@ -1,98 +1,98 @@
 ---
-title: tabs.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
+titwe: tabs.wemove()
+swug: moziwwa/add-ons/webextensions/api/tabs/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 １つ以上のタブを閉じます。
 
-この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+この関数は [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返す非同期関数です。
 
 ## 構文
 
 ```js
-var removing = browser.tabs.remove(
-  tabIds, // integer or integer array
+v-vaw wemoving = b-bwowsew.tabs.wemove(
+  t-tabids, (˘ω˘) // i-integew ow i-integew awway
 );
 ```
 
 ### パラメーター
 
-- `tabIds`
-  - : `integer` または `array of integer`. 閉じるタブの ID を指定します。
+- `tabids`
+  - : `integew` または `awway o-of integew`. :3 閉じるタブの i-id を指定します。
 
 ### 戻り値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise will be rejected with an error message.
+a-a [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) that wiww be fuwfiwwed with nyo awguments when aww t-the specified tabs have been wemoved ow theiw `befoweunwoad` p-pwompts have been handwed. ^^;; i-if any ewwow occuws, 🥺 the pwomise wiww be wejected with an e-ewwow message. (⑅˘꒳˘)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 タブを１つだけ閉じる場合：
 
 ```js
-function onRemoved() {
-  console.log(`Removed`);
+function onwemoved() {
+  c-consowe.wog(`wemoved`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var removing = browser.tabs.remove(2);
-removing.then(onRemoved, onError);
+vaw wemoving = bwowsew.tabs.wemove(2);
+wemoving.then(onwemoved, nyaa~~ o-onewwow);
 ```
 
 複数のタブを閉じる場合：
 
 ```js
-function onRemoved() {
-  console.log(`Removed`);
+function onwemoved() {
+  consowe.wog(`wemoved`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var removing = browser.tabs.remove([15, 14, 1]);
-removing.then(onRemoved, onError);
+vaw wemoving = b-bwowsew.tabs.wemove([15, 14, :3 1]);
+w-wemoving.then(onwemoved, ( ͡o ω ͡o ) o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-remove) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は chwomium の [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-wemove) api に基づいています。 this documentation i-is dewived fwom [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) in the c-chwomium code.micwosoft edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. mya aww w-wights wesewved. (///ˬ///✿)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, (˘ω˘) with o-ow without
+// modification, ^^;; a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, (✿oωo) t-this wist of conditions and the f-fowwowing discwaimew. (U ﹏ U)
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight nyotice, -.- this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow o-othew matewiaws pwovided with t-the
+// distwibution. ^•ﻌ•^
+//    * n-nyeithew t-the nyame of googwe inc. rawr nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the c-copywight howdews and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, nyaa~~ i-incwuding, UwU but not
+// wimited to, :3 the impwied w-wawwanties o-of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. (⑅˘꒳˘) in nyo event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow any diwect, (///ˬ///✿) indiwect, ^^;; incidentaw, >_<
+// speciaw, rawr x3 exempwawy, ow consequentiaw d-damages (incwuding, /(^•ω•^) but nyot
+// wimited to, :3 pwocuwement of substitute g-goods ow sewvices; w-woss of use, (ꈍᴗꈍ)
+// d-data, /(^•ω•^) ow pwofits; ow business i-intewwuption) howevew caused a-and on any
+// theowy o-of wiabiwity, (⑅˘꒳˘) whethew in contwact, ( ͡o ω ͡o ) stwict wiabiwity, òωó ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, (⑅˘꒳˘) even if advised o-of the possibiwity o-of such damage. XD
 -->

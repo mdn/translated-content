@@ -1,131 +1,131 @@
 ---
-title: "<code>: インラインコード要素"
-slug: Web/HTML/Reference/Elements/code
-original_slug: Web/HTML/Element/code
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<code>: インラインコード要素"
+swug: web/htmw/wefewence/ewements/code
+o-owiginaw_swug: w-web/htmw/ewement/code
+w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<code>`** は [HTML](/ja/docs/Web/HTML) の要素で、コンピューターコードの短い断片の文字列であると識別できるような外見のコンテンツを表示します。既定では、中の文字列が{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントを使用して表示されます。
+**`<code>`** は [htmw](/ja/docs/web/htmw) の要素で、コンピューターコードの短い断片の文字列であると識別できるような外見のコンテンツを表示します。既定では、中の文字列が{{gwossawy("usew a-agent", rawr x3 "ユーザーエージェント")}}の既定の等幅フォントを使用して表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;code&gt;", (✿oωo) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The <code>push()</code> method adds one or more elements to the end of an
-  array and returns the new length of the array.
+  t-the <code>push()</code> m-method adds one ow mowe ewements to the end of an
+  awway and wetuwns the n-nyew wength of the awway. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-```css interactive-example
-code {
-  background-color: #eee;
-  border-radius: 3px;
-  font-family: courier, monospace;
+```css intewactive-exampwe
+c-code {
+  backgwound-cowow: #eee;
+  bowdew-wadius: 3px;
+  f-font-famiwy: couwiew, (˘ω˘) monospace;
   padding: 0 3px;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)以外の属性はありません。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)以外の属性はありません。
 
 ## 例
 
 `<code>` を含むテキストの段落です。
 
-```html
+```htmw
 <p>
-  The function <code>selectAll()</code> highlights all the text in the input
-  field so the user can, for example, copy or delete the text.
+  the function <code>sewectaww()</code> h-highwights aww the text i-in the input
+  f-fiewd so the usew can, (⑅˘꒳˘) fow exampwe, (///ˬ///✿) copy ow dewete the text. 😳😳😳
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", 640, 70)}}
+{{embedwivesampwe("exampwe", 🥺 640, mya 70)}}
 
 ## 補足
 
-複数行のコードを表すには、 `<code>` 要素を {{HTMLElement("pre")}} 要素の中に入れてください。 `<code>` 要素自身は、コードの単一のフレーズや 1 行のみを表します。
+複数行のコードを表すには、 `<code>` 要素を {{htmwewement("pwe")}} 要素の中に入れてください。 `<code>` 要素自身は、コードの単一のフレーズや 1 行のみを表します。
 
-CSS のルールによって、`code` セレクターを定義して、ブラウザーの既定のフォントを上書きすることができます。ユーザーによる設定を CSS による指定より優先させることもできます。
+css のルールによって、`code` セレクターを定義して、ブラウザーの既定のフォントを上書きすることができます。ユーザーによる設定を c-css による指定より優先させることもできます。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, 🥺
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >, 知覚可能コンテンツ
+        >, >_< 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている a-awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
       <td>
-        {{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4)
-        以前では、この要素には {{domxref("HTMLSpanElement")}}
+        {{domxwef("htmwewement")}}。gecko 1.9.2 (fiwefox 4)
+        以前では、この要素には {{domxwef("htmwspanewement")}}
         インターフェイスが実装されています。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("samp")}}
-- {{HTMLElement("kbd")}}
-- {{HTMLElement("var")}}
-- {{HTMLElement("pre")}}
+- {{htmwewement("samp")}}
+- {{htmwewement("kbd")}}
+- {{htmwewement("vaw")}}
+- {{htmwewement("pwe")}}

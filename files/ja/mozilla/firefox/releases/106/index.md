@@ -1,39 +1,39 @@
 ---
-title: Firefox 106 for developers
-slug: Mozilla/Firefox/Releases/106
-l10n:
-  sourceCommit: b326fb5b00ea2f881ae6786338671d7fbd2745b6
+titwe: fiwefox 106 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/106
+w-w10n:
+  s-souwcecommit: b326fb5b00ea2f881ae6786338671d7fbd2745b6
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 106 の変更点をまとめています。Firefox 106 は、米国時間 2022 年 10 月 18 日にリリースされました。
+このページでは、開発者に影響する f-fiwefox 106 の変更点をまとめています。fiwefox 106 は、米国時間 2022 年 10 月 18 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
-### HTML
+### htmw
 
-- {{HTMLElement("source")}} 要素が、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Reference/Elements/source#attr-height) および [`width`](/ja/docs/Web/HTML/Reference/Elements/source#attr-width) 属性をサポートするようになりました。
-  これは、`dom.picture_source_dimension_attributes.enabled` の [設定](/ja/docs/Mozilla/Firefox/Experimental_features#height_width_attributes_for_source) を使用して有効にする実験的機能です ([Firefox バグ 1694741](https://bugzil.la/1694741))。
-
-#### 廃止
-
-### MathML
-
-- MathML の [`<semantics>`](/ja/docs/Web/MathML/Reference/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Reference/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました ([Firefox バグ 1588733](https://bugzil.la/1588733))。
-
-### CSS
-
-- [@supports](/ja/docs/Web/CSS/@supports) アットルールで `font-tech()` および `font-format()` 関数をサポートしました。
-  これらの関数で、指定したフォント技術やフォント形式をブラウザーがサポートしているかを確認できます。また、確認結果に基づいて CSS スタイルを適用できます ([Firefox バグ 1786493](https://bugzil.la/1786493))。
+- {{htmwewement("souwce")}} 要素が、{{htmwewement("pictuwe")}} 要素の子要素であるときに [`height`](/ja/docs/web/htmw/wefewence/ewements/souwce#attw-height) および [`width`](/ja/docs/web/htmw/wefewence/ewements/souwce#attw-width) 属性をサポートするようになりました。
+  これは、`dom.pictuwe_souwce_dimension_attwibutes.enabwed` の [設定](/ja/docs/moziwwa/fiwefox/expewimentaw_featuwes#height_width_attwibutes_fow_souwce) を使用して有効にする実験的機能です ([fiwefox バグ 1694741](https://bugziw.wa/1694741))。
 
 #### 廃止
 
-### JavaScript
+### m-mathmw
+
+- mathmw の [`<semantics>`](/ja/docs/web/mathmw/wefewence/ewement/semantics) および [`<maction>`](/ja/docs/web/mathmw/wefewence/ewement/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました ([fiwefox バグ 1588733](https://bugziw.wa/1588733))。
+
+### c-css
+
+- [@suppowts](/ja/docs/web/css/@suppowts) アットルールで `font-tech()` および `font-fowmat()` 関数をサポートしました。
+  これらの関数で、指定したフォント技術やフォント形式をブラウザーがサポートしているかを確認できます。また、確認結果に基づいて c-css スタイルを適用できます ([fiwefox バグ 1786493](https://bugziw.wa/1786493))。
 
 #### 廃止
 
-### HTTP
+### j-javascwipt
+
+#### 廃止
+
+### http
 
 #### 廃止
 
@@ -41,45 +41,45 @@ l10n:
 
 #### 廃止
 
-### API
+### api
 
-#### DOM
+#### dom
 
-- [`HTMLMetaElement.media`](/ja/docs/Web/API/HTMLMetaElement/media) プロパティをサポートしました。このプロパティは、`media` の値 (例: `max-width: 600px`) に応じてさまざまなテーマカラーを設定できます。
-  `media` プロパティを持つ meta 要素を使用すると、ブラウザーは指定したメディアクエリー向けのページまたは UI の色を設定するために、`theme-color` と合わせて `content` の値を使用できます ([Firefox バグ 1706179](https://bugzil.la/1706179))。
+- [`htmwmetaewement.media`](/ja/docs/web/api/htmwmetaewement/media) プロパティをサポートしました。このプロパティは、`media` の値 (例: `max-width: 600px`) に応じてさまざまなテーマカラーを設定できます。
+  `media` プロパティを持つ meta 要素を使用すると、ブラウザーは指定したメディアクエリー向けのページまたは ui の色を設定するために、`theme-cowow` と合わせて `content` の値を使用できます ([fiwefox バグ 1706179](https://bugziw.wa/1706179))。
 
-#### Media、WebRTC、Web Audio
-
-#### 廃止
-
-### WebAssembly
+#### m-media、webwtc、web audio
 
 #### 廃止
 
-### WebDriver conformance (WebDriver BiDi, Marionette)
+### webassembwy
 
-#### WebDriver BiDi
+#### 廃止
 
-- `script.getRealms` の基本的なサポートを追加しました。現在は、window レルムと sandbox レルムを含む `WindowRealmInfo` 型に限定されています ([Firefox バグ 1766240](https://bugzil.la/1766240))。
+### w-webdwivew confowmance (webdwivew bidi, mya mawionette)
 
-- `browsingContext.load` イベントをサポートしました。これは、閲覧コンテキストのウィンドウの `load` イベントをきっかけにして発生します ([Firefox バグ 1756619](https://bugzil.la/1756619))。
+#### w-webdwivew bidi
 
-- シリアライズしたリモートの値向けの強い参照を保持するための、オブジェクト参照ストアを追加しました ([Firefox バグ 1770736](https://bugzil.la/1770736))。
+- `scwipt.getweawms` の基本的なサポートを追加しました。現在は、window レルムと sandbox レルムを含む `windowweawminfo` 型に限定されています ([fiwefox バグ 1766240](https://bugziw.wa/1766240))。
 
-- オブジェクト参照ストアで作成したリモート参照のデシリアライズをサポートしました ([Firefox バグ 1788124](https://bugzil.la/1788124))。
+- `bwowsingcontext.woad` イベントをサポートしました。これは、閲覧コンテキストのウィンドウの `woad` イベントをきっかけにして発生します ([fiwefox バグ 1756619](https://bugziw.wa/1756619))。
 
-- `script.evaluate`、`script.callFunction`、`script.disown` コマンドを完全サポートしました ([Firefox バグ 1778976](https://bugzil.la/1778976))。
+- シリアライズしたリモートの値向けの強い参照を保持するための、オブジェクト参照ストアを追加しました ([fiwefox バグ 1770736](https://bugziw.wa/1770736))。
 
-#### Marionette
+- オブジェクト参照ストアで作成したリモート参照のデシリアライズをサポートしました ([fiwefox バグ 1788124](https://bugziw.wa/1788124))。
 
-- [Actions](https://w3c.github.io/webdriver/webdriver-spec.html#actions) 向けに `wheel` 入力ソースをサポートしました。これはホイールタイプの入力デバイスに関連づけられます ([Firefox バグ 1746601](https://bugzil.la/1746601))。
+- `scwipt.evawuate`、`scwipt.cawwfunction`、`scwipt.disown` コマンドを完全サポートしました ([fiwefox バグ 1778976](https://bugziw.wa/1778976))。
 
-- GeckoView ベースのアプリケーション (例: Android 版 Firefox) のタブを開くおよび閉じる操作をサポートしました ([Firefox バグ 1506782](https://bugzil.la/1506782))。
+#### mawionette
+
+- [actions](https://w3c.github.io/webdwivew/webdwivew-spec.htmw#actions) 向けに `wheew` 入力ソースをサポートしました。これはホイールタイプの入力デバイスに関連づけられます ([fiwefox バグ 1746601](https://bugziw.wa/1746601))。
+
+- g-geckoview ベースのアプリケーション (例: andwoid 版 f-fiwefox) のタブを開くおよび閉じる操作をサポートしました ([fiwefox バグ 1506782](https://bugziw.wa/1506782))。
 
 ## アドオン開発者向けの変更点一覧
 
-- [`"background"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) マニフェストキーの `"persistent"` プロパティを `false` に設定することが、Manifest V2 において (バックグラウンドページを非永続化するため) デフォルトで可能になりました。
-- `"content_security_policy"` マニフェストキーの `object-src` ディレクティブが省略可能になりました ([Firefox バグ 1766881](https://bugzil.la/1766881))。詳しくは `"content_security_policy"` のページで [object-src ディレクティブ](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive) をご覧ください。
+- [`"backgwound"`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/backgwound) マニフェストキーの `"pewsistent"` プロパティを `fawse` に設定することが、manifest v-v2 において (バックグラウンドページを非永続化するため) デフォルトで可能になりました。
+- `"content_secuwity_powicy"` マニフェストキーの `object-swc` ディレクティブが省略可能になりました ([fiwefox バグ 1766881](https://bugziw.wa/1766881))。詳しくは `"content_secuwity_powicy"` のページで [object-swc ディレクティブ](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/content_secuwity_powicy#object-swc_diwective) をご覧ください。
 
 ### 廃止
 
@@ -87,4 +87,4 @@ l10n:
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(105)}}
+{{fiwefox_fow_devewopews(105)}}

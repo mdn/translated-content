@@ -1,148 +1,148 @@
 ---
-title: Chrome との非互換性
-slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
+titwe: chwome との非互換性
+swug: moziwwa/add-ons/webextensions/chwome_incompatibiwities
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Webextension を用いた拡張機能は Chrome や Opera の拡張機能と互換性があるように設計されています。可能な限り、それぞれのブラウザー向けに書かれた拡張機能は最低限の変更で Firefox で実行できるように設計されています。
+w-webextension を用いた拡張機能は c-chwome や opewa の拡張機能と互換性があるように設計されています。可能な限り、それぞれのブラウザー向けに書かれた拡張機能は最低限の変更で f-fiwefox で実行できるように設計されています。
 
-しかしながら、Firefox は現在、Chrome と Opera でサポートされている機能と API の限られたセットのみをサポートしています。もっと多く機能を追加しようと努めていますが、まだサポートされていない機能もたくさんあり、まったくサポートしないものもいくつかあります。
+しかしながら、fiwefox は現在、chwome と o-opewa でサポートされている機能と a-api の限られたセットのみをサポートしています。もっと多く機能を追加しようと努めていますが、まだサポートされていない機能もたくさんあり、まったくサポートしないものもいくつかあります。
 
-## JavaScript APIs
+## j-javascwipt a-apis
 
-### コールバックと chrome.\* ネームスペース
+### コールバックと c-chwome.\* ネームスペース
 
-Chrome では、拡張機能は `chrome` ネームスペースを使って特権 JavaScript API にアクセスします:
+chwome では、拡張機能は `chwome` ネームスペースを使って特権 javascwipt api にアクセスします:
 
 ```js
-chrome.browserAction.setIcon({ path: "path/to/icon.png" });
+chwome.bwowsewaction.seticon({ path: "path/to/icon.png" });
 ```
 
-WebExtensions は同等の API に `browser` ネームスペースを使ってアクセスします:
+w-webextensions は同等の api に `bwowsew` ネームスペースを使ってアクセスします:
 
 ```js
-browser.browserAction.setIcon({ path: "path/to/icon.png" });
+bwowsew.bwowsewaction.seticon({ p-path: "path/to/icon.png" });
 ```
 
-多くの API は非同期です。 Chrome では、非同期 API はコールバックを使用して値を返し、{{WebExtAPIRef("runtime.lastError")}}がエラーを通知します:
+多くの api は非同期です。 c-chwome では、非同期 api はコールバックを使用して値を返し、{{webextapiwef("wuntime.wastewwow")}}がエラーを通知します:
 
 ```js
-function logCookie(c) {
-  if (chrome.extension.lastError) {
-    console.error(chrome.extension.lastError);
-  } else {
-    console.log(c);
+function wogcookie(c) {
+  if (chwome.extension.wastewwow) {
+    c-consowe.ewwow(chwome.extension.wastewwow);
+  } ewse {
+    consowe.wog(c);
   }
 }
 
-chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
+c-chwome.cookies.set({ u-uww: "https://devewopew.moziwwa.owg/" }, (U ﹏ U) wogcookie);
 ```
 
-同様の WebExtensions API では [promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を利用します:
+同様の webextensions api では [pwomises](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を利用します:
 
 ```js
-function logCookie(c) {
-  console.log(c);
+function w-wogcookie(c) {
+  consowe.wog(c);
 }
 
-function logError(e) {
-  console.error(e);
+function wogewwow(e) {
+  consowe.ewwow(e);
 }
 
-var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
-setCookie.then(logCookie, logError);
+vaw setcookie = b-bwowsew.cookies.set({ uww: "https://devewopew.moziwwa.owg/" });
+s-setcookie.then(wogcookie, (///ˬ///✿) w-wogewwow);
 ```
 
-### Firefox は`chrome`と`browser`の両方のネームスペースをサポート
+### f-fiwefox は`chwome`と`bwowsew`の両方のネームスペースをサポート
 
-移植の助けとして、WebExtensions の Firefox 実装は、コールバックを使用した`chrome`を、promise を使用した`browser`と同様にサポートします。これは、多くの Chrome 拡張機能が Firefox でそのまま動作することを意味します。ただし、これは WebExtensions 標準の一部ではなく、準拠するすべてのブラウザーでサポートされているとは限りません。
+移植の助けとして、webextensions の f-fiwefox 実装は、コールバックを使用した`chwome`を、pwomise を使用した`bwowsew`と同様にサポートします。これは、多くの chwome 拡張機能が fiwefox でそのまま動作することを意味します。ただし、これは w-webextensions 標準の一部ではなく、準拠するすべてのブラウザーでサポートされているとは限りません。
 
-`browser` と promise を使って拡張機能を書いている場合、Chrome でも動かせるようにする polyfill を開発しました: <https://github.com/mozilla/webextension-polyfill>.
+`bwowsew` と pwomise を使って拡張機能を書いている場合、chwome でも動かせるようにする powyfiww を開発しました: <https://github.com/moziwwa/webextension-powyfiww>. 😳
 
-### 部分的にサポートされている API
+### 部分的にサポートされている api
 
-[ブラウザーの JavaScript API サポート](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)のページには、Firefox でサポートされているすべての API の互換性テーブルが含まれています。特定の API アイテムのサポートに関する警告がある場合は、これらのテーブルにアスタリスク "\*" が表示され、API アイテムのリファレンスページにその警告が説明されています。
+[ブラウザーの j-javascwipt api サポート](/ja/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis)のページには、fiwefox でサポートされているすべての api の互換性テーブルが含まれています。特定の api アイテムのサポートに関する警告がある場合は、これらのテーブルにアスタリスク "\*" が表示され、api アイテムのリファレンスページにその警告が説明されています。
 
-このテーブルは、[GitHub で JSON ファイル](https://github.com/mdn/browser-compat-data)として保存された互換性データから生成されます。
+このテーブルは、[github で json ファイル](https://github.com/mdn/bwowsew-compat-data)として保存された互換性データから生成されます。
 
 このセクションの残りの部分では、テーブルにまだ取り込まれていない互換性の問題について説明します。
 
-#### [notifications](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications)
+#### [notifications](/ja/docs/moziwwa/add-ons/webextensions/api/notifications)
 
-- `notifications.create()`の `"basic"` [`type`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType)を指定した場合の、 `iconUrl` は Firefox では任意です。Chrome では必須です。
-- 通知はユーザーがクリックするとすぐに消去されます。 これは Chrome では当てはまりません。
-- `notifications.create()` を複数回連続して呼び出すと、Firefox が通知を一切表示しなくなることがあります。 `chrome.notifications.create()` のコールバック 関数内に入るまでの時間は、後続のスクリプトが実行されるまで待つほど十分な時間ではありません。
+- `notifications.cweate()`の `"basic"` [`type`](/ja/docs/moziwwa/add-ons/webextensions/api/notifications/tempwatetype)を指定した場合の、 `iconuww` は fiwefox では任意です。chwome では必須です。
+- 通知はユーザーがクリックするとすぐに消去されます。 これは c-chwome では当てはまりません。
+- `notifications.cweate()` を複数回連続して呼び出すと、fiwefox が通知を一切表示しなくなることがあります。 `chwome.notifications.cweate()` のコールバック 関数内に入るまでの時間は、後続のスクリプトが実行されるまで待つほど十分な時間ではありません。
 
-#### [proxy](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+#### [pwoxy](/ja/docs/moziwwa/add-ons/webextensions/api/pwoxy)
 
-- この API は Chrome API の設計とはまったく異なります。 Chrome の API を使用すると、拡張機能で PAC ファイルを登録できますが、明示的なプロキシールールを定義することもできます。これは拡張 PAC ファイルを使用しても可能であるため、この API は PAC ファイルのアプローチのみをサポートしています。 この API は Chrome の `proxy` API と互換性がないため、この API は `browser` の名前空間でのみ使用できます。
+- この api は chwome a-api の設計とはまったく異なります。 c-chwome の a-api を使用すると、拡張機能で pac ファイルを登録できますが、明示的なプロキシールールを定義することもできます。これは拡張 pac ファイルを使用しても可能であるため、この api は pac ファイルのアプローチのみをサポートしています。 この a-api は c-chwome の `pwoxy` api と互換性がないため、この a-api は `bwowsew` の名前空間でのみ使用できます。
 
-#### [tabs](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+#### [tabs](/ja/docs/moziwwa/add-ons/webextensions/api/tabs)
 
-- Firefox では、`tabs.executeScript()` または `tabs.insertCSS()` に渡される相対 URL は、現在のページ URL を基準として解決されます。 Chrome では、これらの URL は拡張機能のベース URL を基準として解決されます。 クロスブラウザーで動作するようにするには、拡張機能のルートから絶対 URL として次のように指定します:
+- fiwefox では、`tabs.exekawaii~scwipt()` または `tabs.insewtcss()` に渡される相対 u-uww は、現在のページ uww を基準として解決されます。 c-chwome では、これらの uww は拡張機能のベース u-uww を基準として解決されます。 クロスブラウザーで動作するようにするには、拡張機能のルートから絶対 uww として次のように指定します:
 
-  ```html
-  /path/to/script.js
+  ```htmw
+  /path/to/scwipt.js
   ```
 
 <!---->
 
-- Firefox では、`tabs.query()` を使用して URL でタブにクエリーを行うには、`"tabs"`権限が必要です。 Chrome では、`"tabs"`権限がなくても可能ですが、URL がホスト権限と一致するタブに制限されます。
-- Firefox では、`beforeunload` イベントの後に `tabs.remove()` の promise が実行されますが、Chrome では コールバック が `beforeunload` を待ちません。
+- fiwefox では、`tabs.quewy()` を使用して u-uww でタブにクエリーを行うには、`"tabs"`権限が必要です。 chwome では、`"tabs"`権限がなくても可能ですが、uww がホスト権限と一致するタブに制限されます。
+- f-fiwefox では、`befoweunwoad` イベントの後に `tabs.wemove()` の pwomise が実行されますが、chwome では コールバック が `befoweunwoad` を待ちません。
 
-#### [webRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
+#### [webwequest](/ja/docs/moziwwa/add-ons/webextensions/api/webwequest)
 
-- Firefox では、元の URL が`http:`または`https:`を使用する場合にのみ、リクエストをリダイレクトできます。
-- Firefox では、システム要求（拡張機能のアップグレードや検索バーの提案など）でイベントが発生しません。 Firefox 57 以降では、Firefox はプロキシー認証のために{{WebExtAPIRef("webRequest.onAuthRequired")}}を遮断する必要がある拡張機能の例外を生成します。{{WebExtAPIRef("webRequest.onAuthRequired")}}のドキュメントをご覧ください。
-- Firefox では、拡張機能が外部 URL (例 HTTPS) から[拡張機能ページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)にリダイレクトする場合、拡張機能の manifest.json ファイルは、その拡張機能ページの URL を一覧にした [web_accessible_resources](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) キーを含むことが必須です。 その URL にあらゆるウェブサイトからリンクやリダイレクトされる可能性があり、拡張機能は、入力データ(例えば POST データ) を、ただ通常のウェブページがそうするように、アントラステッドなソースからとして取り扱うべきであるのに注意します。
+- f-fiwefox では、元の u-uww が`http:`または`https:`を使用する場合にのみ、リクエストをリダイレクトできます。
+- fiwefox では、システム要求（拡張機能のアップグレードや検索バーの提案など）でイベントが発生しません。 fiwefox 57 以降では、fiwefox はプロキシー認証のために{{webextapiwef("webwequest.onauthwequiwed")}}を遮断する必要がある拡張機能の例外を生成します。{{webextapiwef("webwequest.onauthwequiwed")}}のドキュメントをご覧ください。
+- fiwefox では、拡張機能が外部 uww (例 https) から[拡張機能ページ](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/extension_pages)にリダイレクトする場合、拡張機能の manifest.json ファイルは、その拡張機能ページの u-uww を一覧にした [web_accessibwe_wesouwces](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces) キーを含むことが必須です。 その u-uww にあらゆるウェブサイトからリンクやリダイレクトされる可能性があり、拡張機能は、入力データ(例えば post データ) を、ただ通常のウェブページがそうするように、アントラステッドなソースからとして取り扱うべきであるのに注意します。
 
-#### [windows](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows)
+#### [windows](/ja/docs/moziwwa/add-ons/webextensions/api/windows)
 
-- Firefox では、`onFocusChanged` はフォーカス変更に対して複数回トリガされます。
+- f-fiwefox では、`onfocuschanged` はフォーカス変更に対して複数回トリガされます。
 
 ### その他の非互換性
 
-#### CSS 内の URL
+#### c-css 内の uww
 
-Firefox は、挿入されたページからではなく、CSS ファイル自体からの相対パスで、挿入された CSS ファイルの URL を解決します。
+f-fiwefox は、挿入されたページからではなく、css ファイル自体からの相対パスで、挿入された css ファイルの uww を解決します。
 
 #### 付加的な非互換性
 
-Firefox は、バックグラウンドページからの[`alert()`](/ja/docs/Web/API/Window/alert), [`confirm()`](/ja/docs/Web/API/Window/confirm) または [`prompt()`](/ja/docs/Web/API/Window/prompt)の使用をサポートしていません。
+fiwefox は、バックグラウンドページからの[`awewt()`](/ja/docs/web/api/window/awewt), [`confiwm()`](/ja/docs/web/api/window/confiwm) または [`pwompt()`](/ja/docs/web/api/window/pwompt)の使用をサポートしていません。
 
-#### web_accessible_resources
+#### w-web_accessibwe_wesouwces
 
-chrome では、リソースが web_accessible_resources にリストされている場合、`chrome-extension://<your-extension-id>/<path/to/resource>`としてアクセスできます。この場合 extension ID は、指定された拡張機能に対して固定されています。
+chwome では、リソースが web_accessibwe_wesouwces にリストされている場合、`chwome-extension://<youw-extension-id>/<path/to/wesouwce>`としてアクセスできます。この場合 extension id は、指定された拡張機能に対して固定されています。
 
-Firefox ではそうではなく、Firefox のすべてのインスタンスごとに異なるランダムな UUID を使用してアクセスできるように実装されています:`moz-extension://<random-UUID>/<path/to/resource>` このランダム性により、特定の拡張機能の URL を別のドメインの CSP ポリシーに追加するなど、いくつかのことをできなくなります。
+f-fiwefox ではそうではなく、fiwefox のすべてのインスタンスごとに異なるランダムな uuid を使用してアクセスできるように実装されています:`moz-extension://<wandom-uuid>/<path/to/wesouwce>` このランダム性により、特定の拡張機能の uww を別のドメインの c-csp ポリシーに追加するなど、いくつかのことをできなくなります。
 
 #### マニフェストの"key"プロパティ
 
-パッケージされていない拡張機能を使用する場合、Chrome はマニフェストに["key"プロパティ](https://developer.chrome.com/extensions/manifest/key)を追加して、異なるマシン間で extension ID を固定することができます。 これは主に web_accessible_resources で作業する場合に便利です。 Firefox は web_accessible_resources にランダムな UUID を使用するため、このプロパティはサポートされていません。
+パッケージされていない拡張機能を使用する場合、chwome はマニフェストに["key"プロパティ](https://devewopew.chwome.com/extensions/manifest/key)を追加して、異なるマシン間で e-extension i-id を固定することができます。 これは主に web_accessibwe_wesouwces で作業する場合に便利です。 f-fiwefox は web_accessibwe_wesouwces にランダムな u-uuid を使用するため、このプロパティはサポートされていません。
 
 #### コンテンツスクリプトのリクエストは、コンテンツページではなく、拡張機能のコンテキストで発生する
 
-chrome では、コンテンツスクリプトから`/api`のような相対 URL にリクエストが呼び出されたとき（たとえば、[`fetch()`](/ja/docs/Web/API/Fetch_API/Using_Fetch)を使用して）、`https://example.com/api`に送信されます。Firefox では、絶対 URL を指定する必要があります。
+c-chwome では、コンテンツスクリプトから`/api`のような相対 u-uww にリクエストが呼び出されたとき（たとえば、[`fetch()`](/ja/docs/web/api/fetch_api/using_fetch)を使用して）、`https://exampwe.com/api`に送信されます。fiwefox では、絶対 uww を指定する必要があります。
 
 ## manifest.json のキー
 
-メインの[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ページには、manifest.json のキーのブラウザーサポートを説明する表が含まれています。 特定のキーのサポートに関する警告がある場合、表にアスタリスク "\*"付きで示され、キーのリファレンスページには注意事項が説明されています。
+メインの[manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ページには、manifest.json のキーのブラウザーサポートを説明する表が含まれています。 特定のキーのサポートに関する警告がある場合、表にアスタリスク "\*"付きで示され、キーのリファレンスページには注意事項が説明されています。
 
-これらの表は、 [GitHub で JSON ファイル](https://github.com/mdn/browser-compat-data)として保存された互換性データから生成されます。
+これらの表は、 [github で j-json ファイル](https://github.com/mdn/bwowsew-compat-data)として保存された互換性データから生成されます。
 
 ## ネイティブメッセージング
 
 ### コマンドライン引数
 
-Linux と Mac では、Chrome は `chrome-extension://[extensionID]` の形式で、起動した拡張機能のオリジンとなる 1 つの引数をネイティブアプリに渡します。 これにより、アプリは拡張機能を識別できます。
+w-winux と mac では、chwome は `chwome-extension://[extensionid]` の形式で、起動した拡張機能のオリジンとなる 1 つの引数をネイティブアプリに渡します。 これにより、アプリは拡張機能を識別できます。
 
-Windows では、Chrome は 2 つの引数を受け取ります。1 つ目は拡張機能のオリジンで、2 つ目はアプリを起動した Chrome ネイティブウィンドウへのハンドルです。
+w-windows では、chwome は 2 つの引数を受け取ります。1 つ目は拡張機能のオリジンで、2 つ目はアプリを起動した c-chwome ネイティブウィンドウへのハンドルです。
 
-### allowed_extensions
+### a-awwowed_extensions
 
-Chrome では、アプリマニフェストの `allowed_extensions` キーは、代わりに`allowed_origins` と呼ばれています。
+chwome では、アプリマニフェストの `awwowed_extensions` キーは、代わりに`awwowed_owigins` と呼ばれています。
 
 ### アプリマニフェストの位置
 
-Chrome は、別の場所でアプリのマニフェストを見つけることを期待しています。 Chrome ドキュメントの[「ネイティブメッセージングホストの場所」](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location)をご覧ください。
+chwome は、別の場所でアプリのマニフェストを見つけることを期待しています。 chwome ドキュメントの[「ネイティブメッセージングホストの場所」](https://devewopew.chwome.com/docs/extensions/devewop/concepts/native-messaging#native-messaging-host-wocation)をご覧ください。

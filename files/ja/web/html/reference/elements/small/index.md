@@ -1,144 +1,144 @@
 ---
-title: "<small>: 附随コメント要素"
-slug: Web/HTML/Reference/Elements/small
-original_slug: Web/HTML/Element/small
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<smow>: 附随コメント要素"
+swug: w-web/htmw/wefewence/ewements/smow
+o-owiginaw_swug: w-web/htmw/ewement/smow
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<small>`** は [HTML](/ja/docs/Web/HTML) の要素で、スタイルの表現とは独立して、著作権表示や法的表記のような、注釈や小さく表示される文を表します。既定では、 `small` から `x-small` のように、一段階小さいフォントでテキストが表示されます。
+**`<smow>`** は [htmw](/ja/docs/web/htmw) の要素で、スタイルの表現とは独立して、著作権表示や法的表記のような、注釈や小さく表示される文を表します。既定では、 `smow` から `x-smow` のように、一段階小さいフォントでテキストが表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;smow&gt;", (⑅˘꒳˘) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  MDN Web Docs is a learning platform for Web technologies and the software that
-  powers the Web.
+  m-mdn web d-docs is a weawning pwatfowm fow web technowogies and the softwawe that
+  powews t-the web. rawr x3
 </p>
 
-<hr />
+<hw />
 
 <p>
-  <small
-    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
-    Generic License.</small
+  <smow
+    >the content is wicensed u-undew a cweative commons attwibution-shaweawike 2.5
+    g-genewic wicense.</smow
   >
 </p>
 ```
 
-```css interactive-example
-small {
-  font-size: 0.7em;
+```css intewactive-exampwe
+smow {
+  f-font-size: 0.7em;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 例
 
 ### 基本的な使用
 
-```html
+```htmw
 <p>
   これは最初の文です。
-  <small>この文は小さい文字で表記されています。</small>
+  <smow>この文は小さい文字で表記されています。</smow>
 </p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Basic_usage")}}
+{{embedwivesampwe("basic_usage")}}
 
-### CSS による代替
+### css による代替
 
-```html
+```htmw
 <p>
   これは最初の文です。
-  <span style="font-size:0.8em">この文は小さい文字で表記されています。</span>
+  <span s-stywe="font-size:0.8em">この文は小さい文字で表記されています。</span>
 </p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("CSS_alternative")}}
+{{embedwivesampwe("css_awtewnative")}}
 
 ## 注
 
-`<small>` 要素は {{htmlelement("b")}} 要素や {{htmlelement("i")}} 要素と同様に、構造と表現の分離の原則に反しますが、これら 3 つの要素は HTML で有効です。作者は `<small>` を使用するか CSS を使用するかを決める際に最良の判断を行うよう求められます。
+`<smow>` 要素は {{htmwewement("b")}} 要素や {{htmwewement("i")}} 要素と同様に、構造と表現の分離の原則に反しますが、これら 3 つの要素は h-htmw で有効です。作者は `<smow>` を使用するか css を使用するかを決める際に最良の判断を行うよう求められます。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">コンテンツカテゴリー</th>
+    <tw>
+      <th scope="wow">コンテンツカテゴリー</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, (✿oωo)
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>不可。開始タグと終了タグの両方が必要です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素、または<a
-          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている a-awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("b")}}
-- {{HTMLElement("sub")}} と {{HTMLElement("sup")}}
-- {{HTMLElement("font")}}
-- {{HTMLElement("style")}}
-- HTML 4.01 仕様書: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
+- {{htmwewement("b")}}
+- {{htmwewement("sub")}} と {{htmwewement("sup")}}
+- {{htmwewement("font")}}
+- {{htmwewement("stywe")}}
+- htmw 4.01 仕様書: [font s-stywes](https://www.w3.owg/tw/htmw4/pwesent/gwaphics.htmw#h-15.2)

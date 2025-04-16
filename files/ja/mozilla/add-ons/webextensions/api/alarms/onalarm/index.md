@@ -1,47 +1,47 @@
 ---
-title: alarms.onAlarm
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
+titwe: awawms.onawawm
+swug: moziwwa/add-ons/webextensions/api/awawms/onawawm
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 アドオンによってアラームが動作した際に発火します。
 
 ## 構文
 
 ```js
-browser.alarms.onAlarm.addListener(function(
-  alarm      // Alarm
+b-bwowsew.awawms.onawawm.addwistenew(function(
+  a-awawm      // a-awawm
 ) {...})
-browser.alarms.onAlarm.removeListener(listener)
-browser.alarms.onAlarm.hasListener(listener)
+b-bwowsew.awawms.onawawm.wemovewistenew(wistenew)
+b-bwowsew.awawms.onawawm.haswistenew(wistenew)
 ```
 
 このイベントには 3 つのメソッドが用意されています。
 
-- `addListener(callback)`
+- `addwistenew(cawwback)`
   - : イベントリスナーを追加します。
-- `removeListener(listener)`
-  - : イベントリスナーを削除します。引数 `listener` には削除したいリスナーを指定します。
-- `hasListener(listener)`
-  - : `listener` がイベントリスナーとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
+- `wemovewistenew(wistenew)`
+  - : イベントリスナーを削除します。引数 `wistenew` には削除したいリスナーを指定します。
+- `haswistenew(wistenew)`
+  - : `wistenew` がイベントリスナーとして登録されているか確認します。登録されていれば `twue` を、それ以外の場合は `fawse` を返します。
 
-## addListener の構文
+## a-addwistenew の構文
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
   - : このイベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
 
-    - `alarm`
-      - : 発火するアラーム {{WebExtAPIRef('alarms.Alarm')}} が入ります。発火したアラームを判別するには `Alarm.name` が利用できます。
+    - `awawm`
+      - : 発火するアラーム {{webextapiwef('awawms.awawm')}} が入ります。発火したアラームを判別するには `awawm.name` が利用できます。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API に基づいています。
+> [!note]
+> この a-api は c-chwomium の [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms) api に基づいています。

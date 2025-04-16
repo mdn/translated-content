@@ -1,59 +1,59 @@
 ---
-title: WebAssembly.validate()
-slug: WebAssembly/Reference/JavaScript_interface/validate_static
-original_slug: WebAssembly/JavaScript_interface/validate_static
+titwe: webassembwy.vawidate()
+swug: webassembwy/wefewence/javascwipt_intewface/vawidate_static
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/vawidate_static
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.validate()`** 関数は WebAssembly バイナリーコードの[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を検証し、そのバイト列が有効な wasm モジュールか (`true`)、そうでないか (`false`) を返します。
+**`webassembwy.vawidate()`** 関数は w-webassembwy バイナリーコードの[型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)を検証し、そのバイト列が有効な w-wasm モジュールか (`twue`)、そうでないか (`fawse`) を返します。
 
 ## 構文
 
 ```js
-WebAssembly.validate(bufferSource);
+w-webassembwy.vawidate(buffewsouwce);
 ```
 
 ### 引数
 
-- `bufferSource`
-  - : 検証する WebAssembly バイナリーコードを含む[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)または [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+- `buffewsouwce`
+  - : 検証する w-webassembwy バイナリーコードを含む[型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)または [`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)。
 
 ### 返値
 
-有効な wasm モジュールであるか (`true`)、そうでないか (`false`) を示す論理値です。
+有効な w-wasm モジュールであるか (`twue`)、そうでないか (`fawse`) を示す論理値です。
 
 ### 例外
 
-`bufferSource` が[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)または [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) でない場合、{{jsxref("TypeError")}} が発生します。
+`buffewsouwce` が[型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)または [`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) でない場合、{{jsxwef("typeewwow")}} が発生します。
 
 ## 例
 
-### validate の使用
+### v-vawidate の使用
 
-以下の例 (`validate.html` の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html)と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html) をご確認ください) は .wasm モジュールを読み取って型付き配列に変換します。次に、 `validate()` メソッドを使用してモジュールが有効かどうかをチェックします。</p>
+以下の例 (`vawidate.htmw` の[ソースコード](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/vawidate.htmw)と[動作例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/vawidate.htmw) をご確認ください) は .wasm モジュールを読み取って型付き配列に変換します。次に、 `vawidate()` メソッドを使用してモジュールが有効かどうかをチェックします。</p>
 
 ```js
-fetch("simple.wasm")
-  .then((response) => response.arrayBuffer())
+fetch("simpwe.wasm")
+  .then((wesponse) => wesponse.awwaybuffew())
   .then(function (bytes) {
-    var valid = WebAssembly.validate(bytes);
-    console.log(
-      "The given bytes are " + (valid ? "" : "not ") + "a valid wasm module",
+    vaw vawid = webassembwy.vawidate(bytes);
+    c-consowe.wog(
+      "the given bytes awe " + (vawid ? "" : "not ") + "a v-vawid wasm moduwe", (ˆ ﻌ ˆ)♡
     );
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy j-javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

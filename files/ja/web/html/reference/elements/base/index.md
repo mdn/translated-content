@@ -1,106 +1,106 @@
 ---
-title: "<base>: 文書の基底 URL 要素"
-slug: Web/HTML/Reference/Elements/base
-original_slug: Web/HTML/Element/base
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<base>: 文書の基底 uww 要素"
+swug: w-web/htmw/wefewence/ewements/base
+o-owiginaw_swug: w-web/htmw/ewement/base
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<base>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内におけるすべての*相対* URL の基点となる URL を指定します。 `<base>` 要素は、文書内に 1 つだけ置くことができます。
+**`<base>`** は [htmw](/ja/docs/web/htmw) の要素で、文書内におけるすべての*相対* u-uww の基点となる u-uww を指定します。 `<base>` 要素は、文書内に 1 つだけ置くことができます。
 
-文書に使われている基底 URL は、スクリプトから {{domxref('Node.baseURI')}} を使用して問い合わせることができます。文書に `<base>` 要素がなかった場合、 `baseURI` は既定で {{domxref("location.href")}} になります。
+文書に使われている基底 u-uww は、スクリプトから {{domxwef('node.baseuwi')}} を使用して問い合わせることができます。文書に `<base>` 要素がなかった場合、 `baseuwi` は既定で {{domxwef("wocation.hwef")}} になります。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>メタデータコンテンツ</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>なし。この要素は{{Glossary("void element", "空要素")}}です。</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
+      <td>なし。この要素は{{gwossawy("void e-ewement", rawr x3 "空要素")}}です。</td>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>終了タグを用いてはならない。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        {{HTMLElement("head")}} 要素で、他に {{HTMLElement("base")}} 要素を含んでいないもの。
+        {{htmwewement("head")}} 要素で、他に {{htmwewement("base")}} 要素を含んでいないもの。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">対応するロールなし</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th>DOM インターフェイス</th>
-      <td>{{domxref("HTMLBaseElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th>dom インターフェイス</th>
+      <td>{{domxwef("htmwbaseewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-> [!WARNING]
-> 以下の属性のいずれかが指定されている場合、この要素は URL の属性値を持つ他の要素、例えば {{HTMLElement("link")}} の `href` 属性などの前に置く**必要があります**。
+> [!wawning]
+> 以下の属性のいずれかが指定されている場合、この要素は uww の属性値を持つ他の要素、例えば {{htmwewement("wink")}} の `hwef` 属性などの前に置く**必要があります**。
 
-- `href`
-  - : 文書全体を通して相対 URL に使用される基底 URL です。絶対 URL と相対 URL が使用できます。
-- `target`
+- `hwef`
+  - : 文書全体を通して相対 uww に使用される基底 u-uww です。絶対 uww と相対 u-uww が使用できます。
+- `tawget`
 
-  - : **キーワード**または**作者が定義した名前**で、既定の{{Glossary("browsing context", "閲覧コンテキスト")}}を表し、 {{HTMLElement("a")}} または {{HTMLElement("form")}} 要素が明示的に `target` 属性を持たない場合に、移動の結果を表示する先として使用されます。以下のキーワードは特別な意味を持ちます。
+  - : **キーワード**または**作者が定義した名前**で、既定の{{gwossawy("bwowsing c-context", mya "閲覧コンテキスト")}}を表し、 {{htmwewement("a")}} または {{htmwewement("fowm")}} 要素が明示的に `tawget` 属性を持たない場合に、移動の結果を表示する先として使用されます。以下のキーワードは特別な意味を持ちます。
 
-    - `_self` （既定値）: 現在の閲覧コンテキストに結果を表示します。
-    - `_blank`: 新しい無名の閲覧コンテキストに結果を表示します。
-    - `_parent`: 現在のコンテキストの親の閲覧コンテキストに結果を表示します。親がない場合、このオプションは `_self` と同じ振る舞いをします。
-    - `_top`: 最上位の閲覧コンテキスト (現在のコンテキストの祖先で、それ以上の親をもたない閲覧コンテキスト）に結果を表示します。親がない場合、このオプションは `_self` と同じ振る舞いをします。
+    - `_sewf` （既定値）: 現在の閲覧コンテキストに結果を表示します。
+    - `_bwank`: 新しい無名の閲覧コンテキストに結果を表示します。
+    - `_pawent`: 現在のコンテキストの親の閲覧コンテキストに結果を表示します。親がない場合、このオプションは `_sewf` と同じ振る舞いをします。
+    - `_top`: 最上位の閲覧コンテキスト (現在のコンテキストの祖先で、それ以上の親をもたない閲覧コンテキスト）に結果を表示します。親がない場合、このオプションは `_sewf` と同じ振る舞いをします。
 
 ## 使用上の注意
 
 ### 複数の \<base> 要素
 
-複数の `<base>` 要素が使用された場合、最初の `href` と最初の `target` の値が使用され、他はすべて無視されます。
+複数の `<base>` 要素が使用された場合、最初の `hwef` と最初の `tawget` の値が使用され、他はすべて無視されます。
 
 ### ページ内アンカー
 
-文書内のフラグメントを指すリンク — 例えば `<a href="#some-id">` — は `<base>` を使用して解決され、基底 URL にフラグメントを付けて HTTP リクエストを発行します。
+文書内のフラグメントを指すリンク — 例えば `<a hwef="#some-id">` — は `<base>` を使用して解決され、基底 uww にフラグメントを付けて http リクエストを発行します。
 
-例えば、 `<base href="https://example.com/">` が指定され、`<a href="#anchor">To anchor</a>` というリンクがあったとします。リンク先は `https://example.com/#anchor` となります。
+例えば、 `<base hwef="https://exampwe.com/">` が指定され、`<a h-hwef="#anchow">to anchow</a>` というリンクがあったとします。リンク先は `https://exampwe.com/#anchow` となります。
 
-### Open Graph
+### open gwaph
 
-[Open Graph](https://ogp.me/) のメタタグは `<base>` を認識しないので、次のように常に完全 URL を使用してください。
+[open gwaph](https://ogp.me/) のメタタグは `<base>` を認識しないので、次のように常に完全 uww を使用してください。
 
-```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg" />
+```htmw
+<meta p-pwopewty="og:image" content="https://exampwe.com/thumbnaiw.jpg" />
 ```
 
 ## 例
 
-```html
-<base href="https://www.example.com/" />
-<base target="_blank" />
-<base target="_top" href="https://example.com/" />
+```htmw
+<base h-hwef="https://www.exampwe.com/" />
+<base t-tawget="_bwank" />
+<base t-tawget="_top" h-hwef="https://exampwe.com/" />
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

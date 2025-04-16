@@ -1,104 +1,104 @@
 ---
-title: runtime.lastError
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
+titwe: wuntime.wastewwow
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/wastewwow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-この値は、コールバック関数のある非同期 API でエラーメッセージを伝える時に使われます。拡張機能のコールバックベースの API を使っている時に便利です。
+この値は、コールバック関数のある非同期 a-api でエラーメッセージを伝える時に使われます。拡張機能のコールバックベースの a-api を使っている時に便利です。
 
-プロミスベースの API を使っている時にはこのプロパティは必要ありません。代わりにプロミスへエラーハンドラーを渡してください。
+プロミスベースの a-api を使っている時にはこのプロパティは必要ありません。代わりにプロミスへエラーハンドラーを渡してください。
 
 ```js
-const gettingCookies = browser.cookies.getAll();
-gettingCookies.then(onGot, onError);
+c-const gettingcookies = b-bwowsew.cookies.getaww();
+g-gettingcookies.then(ongot, >w< onewwow);
 ```
 
-`runtime.lastError` プロパティは、呼び出し元へ伝える必要のあるエラーを非同期関数が持っている時に設定されます。
+`wuntime.wastewwow` プロパティは、呼び出し元へ伝える必要のあるエラーを非同期関数が持っている時に設定されます。
 
-`lastError` が設定されるかもしれない非同期関数を呼び出すなら、関数の結果を扱う時にエラーチェックが期待されます。 `lastError` が設定されてコールバック関数内でエラーチェックしなかった場合、エラーが発生します。
+`wastewwow` が設定されるかもしれない非同期関数を呼び出すなら、関数の結果を扱う時にエラーチェックが期待されます。 `wastewwow` が設定されてコールバック関数内でエラーチェックしなかった場合、エラーが発生します。
 
 ## 構文
 
-```js-nolint
-let myError = browser.runtime.lastError;  // null or Error object
+```js-nowint
+wet m-myewwow = bwowsew.wuntime.wastewwow;  // nyuww ow ewwow object
 ```
 
 ### 値
 
-エラーを表す {{jsxref("Error")}} オブジェクトです。 {{jsxref("Error.message", "message")}} プロパティは、人間が読めるエラーの説明の `string` です。`lastError` が無かったら、値は `null` になります。
+エラーを表す {{jsxwef("ewwow")}} オブジェクトです。 {{jsxwef("ewwow.message", rawr "message")}} プロパティは、人間が読めるエラーの説明の `stwing` です。`wastewwow` が無かったら、値は `nuww` になります。
 
 ## 例
 
-Cookie を設定して、 Cookie の内容を出力するかエラーを伝えるコールバックを使う例です。
+cookie を設定して、 cookie の内容を出力するかエラーを伝えるコールバックを使う例です。
 
 ```js
-function logCookie(c) {
-  if (browser.runtime.lastError) {
-    console.error(browser.runtime.lastError);
-  } else {
-    console.log(c);
+f-function wogcookie(c) {
+  if (bwowsew.wuntime.wastewwow) {
+    consowe.ewwow(bwowsew.wuntime.wastewwow);
+  } e-ewse {
+    consowe.wog(c);
   }
 }
 
-browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
+bwowsew.cookies.set({ u-uww: "https://devewopew.moziwwa.owg/" }, 😳 wogcookie);
 ```
 
-同じ処理内容ですが、 `setCookie()` の結果を扱うプロミスを使う例です。
+同じ処理内容ですが、 `setcookie()` の結果を扱うプロミスを使う例です。
 
 ```js
-function logCookie(c) {
-  console.log(c);
+function wogcookie(c) {
+  c-consowe.wog(c);
 }
 
-function logError(e) {
-  console.error(e);
+function w-wogewwow(e) {
+  c-consowe.ewwow(e);
 }
 
-const setCookie = browser.cookies.set({
-  url: "https://developer.mozilla.org/",
+const setcookie = bwowsew.cookies.set({
+  uww: "https://devewopew.moziwwa.owg/", >w<
 });
 
-setCookie.then(logCookie, logError);
+setcookie.then(wogcookie, (⑅˘꒳˘) w-wogewwow);
 ```
 
-> **メモ:** `runtime.lastError` は {{WebExtAPIRef("extension.lastError")}} のエイリアスです。 2 つはセットになっており、どちらかだけを確認すればよいです。
+> **メモ:** `wuntime.wastewwow` は {{webextapiwef("extension.wastewwow")}} のエイリアスです。 2 つはセットになっており、どちらかだけを確認すればよいです。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#property-lastError) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium から作成されています。
+> [!note]
+> この api は chwomium の [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#pwopewty-wastewwow) api に基づいています。また、このドキュメントは [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) における chwomium から作成されています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. OwO a-aww wights wesewved. (ꈍᴗꈍ)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and u-use in souwce a-and binawy fowms, 😳 with ow without
+// modification, 😳😳😳 a-awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, mya this wist of conditions a-and the fowwowing discwaimew. mya
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, (⑅˘꒳˘) this wist o-of conditions and t-the fowwowing discwaimew
+// in t-the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. (U ﹏ U)
+//    * nyeithew the n-nyame of googwe inc. mya nyow the nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten pewmission. ʘwʘ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (˘ω˘) incwuding, (U ﹏ U) b-but nyot
+// w-wimited to, ^•ﻌ•^ t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. (˘ω˘) in nyo event shaww the copywight
+// ownew ow c-contwibutows be wiabwe fow any diwect, :3 i-indiwect, ^^;; i-incidentaw, 🥺
+// s-speciaw, (⑅˘꒳˘) exempwawy, ow consequentiaw d-damages (incwuding, nyaa~~ b-but nyot
+// w-wimited to, :3 p-pwocuwement of substitute goods ow sewvices; woss o-of use, ( ͡o ω ͡o )
+// data, o-ow pwofits; o-ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, mya whethew in contwact, (///ˬ///✿) s-stwict wiabiwity, (˘ω˘) ow towt
+// (incwuding negwigence ow othewwise) awising in any way out of the u-use
+// of this softwawe, ^^;; even if advised of the possibiwity of such d-damage.
 -->

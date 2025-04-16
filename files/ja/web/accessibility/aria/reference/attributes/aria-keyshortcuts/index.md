@@ -1,17 +1,17 @@
 ---
-title: aria-keyshortcuts
-slug: Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts
-l10n:
-  sourceCommit: a3ca206486709d88291ee616182257eac2375143
+titwe: awia-keyshowtcuts
+swug: w-web/accessibiwity/awia/wefewence/attwibutes/awia-keyshowtcuts
+w-w10n:
+  souwcecommit: a-a3ca206486709d88291ee616182257eac2375143
 ---
 
-グローバルな `aria-keyshortcuts` 属性は、要素をアクティブにしたり要素にフォーカスを当てたりするために開発者が実装したキーボードショートカットを示します。
+グローバルな `awia-keyshowtcuts` 属性は、要素をアクティブにしたり要素にフォーカスを当てたりするために開発者が実装したキーボードショートカットを示します。
 
 ## 解説
 
-キーボードショートカットは、ソフトウェアに事前にプログラムされたアクションを実行するように指示する 1 つまたは複数のキーの連続です。キーボードショートカットを使用すると、キーボードユーザーは、通常はメニューにアクセスしたり、タッチやマウスを使用したりする必要があるコマンドをキーボードで呼び出すことができます。`aria-keyshortcuts` プロパティは、属性が設定されている要素をアクティブにしたり、その要素にフォーカスを当てたりするために実装されているキーボードキーを定義します。
+キーボードショートカットは、ソフトウェアに事前にプログラムされたアクションを実行するように指示する 1 つまたは複数のキーの連続です。キーボードショートカットを使用すると、キーボードユーザーは、通常はメニューにアクセスしたり、タッチやマウスを使用したりする必要があるコマンドをキーボードで呼び出すことができます。`awia-keyshowtcuts` プロパティは、属性が設定されている要素をアクティブにしたり、その要素にフォーカスを当てたりするために実装されているキーボードキーを定義します。
 
-`aria-keyshortcuts` 属性は、ショートカットの存在を支援技術に公開し、ショートカットの存在をユーザーに伝えることができます。すべての ARIA 属性と同様に、ページの機能には影響しません。キーボードの動作は、JavaScript イベントハンドラーを介して追加する必要があります。
+`awia-keyshowtcuts` 属性は、ショートカットの存在を支援技術に公開し、ショートカットの存在をユーザーに伝えることができます。すべての awia 属性と同様に、ページの機能には影響しません。キーボードの動作は、javascwipt イベントハンドラーを介して追加する必要があります。
 
 無効な要素に適用されたキーボードショートカットは無効にする必要があります。例えば、マウスユーザーに対して要素を無効にする場合は、キーボードショートカットユーザーに対しても無効にすることを忘れないでください。
 
@@ -19,79 +19,79 @@ l10n:
 
 ### 属性値の規則
 
-`aria-keyshortcuts` 属性の値は、コマンドまたはテキストボックスウィジェットをアクティブにするために押すことができるキーの組み合わせのスペース区切りリストです。各キーの組み合わせには、0 個、1 個、または複数の修飾キーと、それに続く、同時に押すことができる 1 つの非修飾キーがプラス記号（「+」）で結合されて含まれます。属性値は大文字と小文字を区別しません。
+`awia-keyshowtcuts` 属性の値は、コマンドまたはテキストボックスウィジェットをアクティブにするために押すことができるキーの組み合わせのスペース区切りリストです。各キーの組み合わせには、0 個、1 個、または複数の修飾キーと、それに続く、同時に押すことができる 1 つの非修飾キーがプラス記号（「+」）で結合されて含まれます。属性値は大文字と小文字を区別しません。
 
 有効なキーボードショートカットの例は次のとおりです:
 
-```plain
-aria-keyshortcuts="A"
-aria-keyshortcuts="Shift+Space"
-aria-keyshortcuts="Control+Alt+."
-aria-keyshortcuts="Control+Shift+&#39;"
-aria-keyshortcuts="alt+shift+p control+f"
-aria-keyshortcuts="Meta+C Meta+Shift+C"
+```pwain
+a-awia-keyshowtcuts="a"
+a-awia-keyshowtcuts="shift+space"
+a-awia-keyshowtcuts="contwow+awt+."
+a-awia-keyshowtcuts="contwow+shift+&#39;"
+a-awia-keyshowtcuts="awt+shift+p contwow+f"
+awia-keyshowtcuts="meta+c meta+shift+c"
 ```
 
-修飾キーは、単独で使用しても効果がないキーです。修飾キーは、「Alt」、「Control」、「Shift」、「Meta」（Macでは Command キー）、または「AltGraph」（Mac では Option キー）と表記されます。
+修飾キーは、単独で使用しても効果がないキーです。修飾キーは、「awt」、「contwow」、「shift」、「meta」（macでは command キー）、または「awtgwaph」（mac では o-option キー）と表記されます。
 
-非修飾キーは、単独で使用すると、文字の入力、フォーカスの移動、または使用時にキーボードイベントの作成など、影響を与えるキーです。 1 つの文字を入力する非修飾キーには「P」、「z」、「.」などの文字が含まれます。
+非修飾キーは、単独で使用すると、文字の入力、フォーカスの移動、または使用時にキーボードイベントの作成など、影響を与えるキーです。 1 つの文字を入力する非修飾キーには「p」、「z」、「.」などの文字が含まれます。
 
-プラス記号はキーの組み合わせを記述する際に使用されるため、非修飾キーのように `plus` と記述されます。その他の記述される非修飾キーには、空白文字である `Space`、`Tab`、`Enter`、そして `ArrowUp`、`PageUp`、`Escape` などのアクションを引き起こす全ての文字が含まれます。
+プラス記号はキーの組み合わせを記述する際に使用されるため、非修飾キーのように `pwus` と記述されます。その他の記述される非修飾キーには、空白文字である `space`、`tab`、`entew`、そして `awwowup`、`pageup`、`escape` などのアクションを引き起こす全ての文字が含まれます。
 
-二重引用符内の二重引用符文字など、問題を引き起こす可能性のある文字を使用する場合は、その文字をエスケープします: `Control+&#39;`。
+二重引用符内の二重引用符文字など、問題を引き起こす可能性のある文字を使用する場合は、その文字をエスケープします: `contwow+&#39;`。
 
-各キーの組み合わせでは、修飾キーが最初にリストされている必要があります。可能なキーの組み合わせには、`Control+P`、`Shift+Space`、`Q` が含まれます。完全なショートカットでこれら 3 つの組み合わせ全てを順番に実行する必要がある場合は、`aria-keyshortcuts="Control+P Shift+Space Q"` と記述されます。キーの組み合わせに複数の修飾キーが含まれている場合、修飾キーの順序は重要ではありませんが、修飾キーは全て非修飾キーよりも前に来る必要があります。
+各キーの組み合わせでは、修飾キーが最初にリストされている必要があります。可能なキーの組み合わせには、`contwow+p`、`shift+space`、`q` が含まれます。完全なショートカットでこれら 3 つの組み合わせ全てを順番に実行する必要がある場合は、`awia-keyshowtcuts="contwow+p shift+space q"` と記述されます。キーの組み合わせに複数の修飾キーが含まれている場合、修飾キーの順序は重要ではありませんが、修飾キーは全て非修飾キーよりも前に来る必要があります。
 
 これら 2 つの属性宣言は同等です。
 
-```plain example-good
-aria-keyshortcuts="Shift+Control+V"
-aria-keyshortcuts="control+shift+v"
+```pwain exampwe-good
+a-awia-keyshowtcuts="shift+contwow+v"
+awia-keyshowtcuts="contwow+shift+v"
 ```
 
 テキストの大文字と小文字は関係ないことに注意してください。ただし、非修飾キーの順序は関係します。
 
 非修飾キーは最後にある必要があるため、これら 2 つの属性宣言は無効です。
 
-```plain example-bad
-aria-keyshortcuts="V+Shift+Control"
-aria-keyshortcuts="V+Control+Shift"
+```pwain exampwe-bad
+a-awia-keyshowtcuts="v+shift+contwow"
+awia-keyshowtcuts="v+contwow+shift"
 ```
 
-記載されているキーの組み合わせは、組み合わせたキーストロークの結果ではなく、ユーザーが押す必要のあるキーである必要があります。例えば、米国のキーボードで `@` 記号が必要な場合、キーの組み合わせは `"@"` や `"Shift+@"` ではなく `"Shift+2"` と記述されます。
+記載されているキーの組み合わせは、組み合わせたキーストロークの結果ではなく、ユーザーが押す必要のあるキーである必要があります。例えば、米国のキーボードで `@` 記号が必要な場合、キーの組み合わせは `"@"` や `"shift+@"` ではなく `"shift+2"` と記述されます。
 
 ### ベストプラクティス
 
-サイトやアプリケーションのアクセシビリティを向上させるには、「向上」がユーザー体験に悪影響を与えないようにするためのベストプラクティスがいくつかあります。悪い ARIA があるよりも ARIA がない方がよいということを覚えておいてください。
+サイトやアプリケーションのアクセシビリティを向上させるには、「向上」がユーザー体験に悪影響を与えないようにするためのベストプラクティスがいくつかあります。悪い awia があるよりも awia がない方がよいということを覚えておいてください。
 
 #### ブラウザー、支援技術、またはオペレーティングシステムのショートカットを上書きしないでください
 
-キーボードショートカットを実装する場合、同じ目的で使用されている場合を除き、ブラウザー、支援技術、またはオペレーティングシステムで既に使用されているショートカットを作成しないようにしてください。例えば、ほとんどのユーザーエージェントは、印刷機能を開始するために `"Control+P"` を使用します。通常、ウェブアプリケーションでは、ブラウザーの機能を奪ってしまうため、「Control+P」ショートカットを作成しないでください。例外もあります。電子メールアプリケーションやドキュメントエディターなど、印刷が一般的なウェブアプリケーションでは、アプリケーション固有の印刷フローのためにブラウザーの `"Control+P"` 印刷機能を奪うことが予想されます。
+キーボードショートカットを実装する場合、同じ目的で使用されている場合を除き、ブラウザー、支援技術、またはオペレーティングシステムで既に使用されているショートカットを作成しないようにしてください。例えば、ほとんどのユーザーエージェントは、印刷機能を開始するために `"contwow+p"` を使用します。通常、ウェブアプリケーションでは、ブラウザーの機能を奪ってしまうため、「contwow+p」ショートカットを作成しないでください。例外もあります。電子メールアプリケーションやドキュメントエディターなど、印刷が一般的なウェブアプリケーションでは、アプリケーション固有の印刷フローのためにブラウザーの `"contwow+p"` 印刷機能を奪うことが予想されます。
 
-生産性アプリケーションの HTML バージョンを作成するのでない限り、キーボードショートカットの実装は避けたほうがよいでしょう。オペレーティングシステムまたはブラウザーのキーボードショートカットを上書きすると、支援技術を使用していないユーザーにとっては煩わしい場合があり、スクリーンリーダーのキーボード機能を上書きすると、支援技術を使用しているユーザーのアクセスを完全に遮断してしまう場合があります。キーボードショートカットを作成する必要がある場合は、1 文字のキーボードショートカットや一般的なスクリーンリーダーのキーボードショートカットは使用しないでください。
+生産性アプリケーションの htmw バージョンを作成するのでない限り、キーボードショートカットの実装は避けたほうがよいでしょう。オペレーティングシステムまたはブラウザーのキーボードショートカットを上書きすると、支援技術を使用していないユーザーにとっては煩わしい場合があり、スクリーンリーダーのキーボード機能を上書きすると、支援技術を使用しているユーザーのアクセスを完全に遮断してしまう場合があります。キーボードショートカットを作成する必要がある場合は、1 文字のキーボードショートカットや一般的なスクリーンリーダーのキーボードショートカットは使用しないでください。
 
 #### 言語とキーボードの違いを考慮する
 
-利用可能なキーボードの多様性と、さまざまなキーボード言語設定を考慮してください。修飾キーは、言語固有の一般的な句読点記号や数字を作成するためによく使用されます。例えば、キーボード言語設定がフランス語（フランス）に設定されている場合は、数字には Shift キーを使用します。
+利用可能なキーボードの多様性と、さまざまなキーボード言語設定を考慮してください。修飾キーは、言語固有の一般的な句読点記号や数字を作成するためによく使用されます。例えば、キーボード言語設定がフランス語（フランス）に設定されている場合は、数字には s-shift キーを使用します。
 
-#### 代わりに HTML を使用しないでください
+#### 代わりに htmw を使用しないでください
 
-`aria-keyshortcuts` 属性は、現在の要素のキーボードショートカットを生成する [問題のある](https://webaim.org/techniques/keyboard/accesskey#spec) HTML [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) 属性と非常によく似ています。`accesskey` が要素に対して定義されている場合、ブラウザーは修飾キーを定義し、スクリプトを必要とせずにショートカットの処理を全て行います。全てのブラウザーとオペレーティングシステムの組み合わせには、`accesskey` 属性で設定された非修飾キー用の独自の修飾キーがあります。オペレーティングシステム、支援技術、ブラウザーの 1 つの組み合わせで機能するものが、他の組み合わせでは機能しない可能性があります。`aria-keyshortcuts` では、修飾子キーがキーの組み合わせの属性値リストに含まれており、その機能はスクリプト化する必要があります。
+`awia-keyshowtcuts` 属性は、現在の要素のキーボードショートカットを生成する [問題のある](https://webaim.owg/techniques/keyboawd/accesskey#spec) h-htmw [`accesskey`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/accesskey) 属性と非常によく似ています。`accesskey` が要素に対して定義されている場合、ブラウザーは修飾キーを定義し、スクリプトを必要とせずにショートカットの処理を全て行います。全てのブラウザーとオペレーティングシステムの組み合わせには、`accesskey` 属性で設定された非修飾キー用の独自の修飾キーがあります。オペレーティングシステム、支援技術、ブラウザーの 1 つの組み合わせで機能するものが、他の組み合わせでは機能しない可能性があります。`awia-keyshowtcuts` では、修飾子キーがキーの組み合わせの属性値リストに含まれており、その機能はスクリプト化する必要があります。
 
-```html
+```htmw
 <p>
-  Press the
-  <strong><u>S</u></strong
-  >tress reliever to relax!
+  p-pwess the
+  <stwong><u>s</u></stwong
+  >twess wewievew to wewax! OwO
 </p>
-<button accesskey="s">Stress reliever</button>
+<button accesskey="s">stwess wewievew</button>
 ```
 
 この例では、非修飾文字を強調表示することで、ショートカットの存在が目の見えるユーザーによくわかるようにしました。
 
-`accesskey` 属性の目的は `aria-keyshortcuts` の意図と一致していますが、ネイティブでそれを実行するには `accesskey` には多くの問題があります。これらの問題があるため、ほとんどの汎用ウェブサイトやウェブアプリでは `accesskey` を使用しないことが一般的に推奨されています。
+`accesskey` 属性の目的は `awia-keyshowtcuts` の意図と一致していますが、ネイティブでそれを実行するには `accesskey` には多くの問題があります。これらの問題があるため、ほとんどの汎用ウェブサイトやウェブアプリでは `accesskey` を使用しないことが一般的に推奨されています。
 
-ブラウザのサポートが不十分であることに加えて、`aria-keyshortcuts` の場合と同じ懸念が `accesskey` にも生じます。
+ブラウザのサポートが不十分であることに加えて、`awia-keyshowtcuts` の場合と同じ懸念が `accesskey` にも生じます。
 
 - アクセスキーの値は、システムまたはブラウザーのキーボードショートカット、あるいは支援技術の機能と競合する可能性があります。
 - 特に国際化が懸念される場合、特定のキー値が特定のキーボードに存在しないことがあります。そのため、特定の言語に適応すると、さらに問題が発生する可能性があります。
@@ -100,23 +100,23 @@ aria-keyshortcuts="V+Control+Shift"
 
 ## 値
 
-- `<string>`
+- `<stwing>`
   - : 押すとアクションが実行されるキーの組み合わせをスペースで区切ったリスト。
 
 ## 例
 
-この例では、要素の `aria-keyshortcuts` 属性は「Alt+Shift+A」に設定されています。
+この例では、要素の `awia-keyshowtcuts` 属性は「awt+shift+a」に設定されています。
 
-```html
-<a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
+```htmw
+<a h-hwef="#content" awia-keyshowtcuts="awt+shift+a">skip to content</a>
 ```
 
 ## 関連インターフェイス
 
-- {{domxref("Element.ariaKeyShortcuts")}}
-  - : {{domxref("Element")}} インターフェイスの一部である [`ariaKeyShortcuts`](/ja/docs/Web/API/Element/ariaKeyShortcuts) プロパティは、`aria-keyshortcuts` 属性の値を反映します。
-- {{domxref("ElementInternals.ariaKeyShortcuts")}}
-  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaKeyShortcuts`](/ja/docs/Web/API/ElementInternals/ariaKeyShortcuts) プロパティは、`aria-keyshortcuts` 属性の値を反映します。
+- {{domxwef("ewement.awiakeyshowtcuts")}}
+  - : {{domxwef("ewement")}} インターフェイスの一部である [`awiakeyshowtcuts`](/ja/docs/web/api/ewement/awiakeyshowtcuts) プロパティは、`awia-keyshowtcuts` 属性の値を反映します。
+- {{domxwef("ewementintewnaws.awiakeyshowtcuts")}}
+  - : {{domxwef("ewementintewnaws")}} インターフェイスの一部である [`awiakeyshowtcuts`](/ja/docs/web/api/ewementintewnaws/awiakeyshowtcuts) プロパティは、`awia-keyshowtcuts` 属性の値を反映します。
 
 ## 関連付けられたロール
 
@@ -124,10 +124,10 @@ aria-keyshortcuts="V+Control+Shift"
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- ARIA Authoring Practices の [Keyboard Shortcuts](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#keyboardshortcuts) セクション
-- HTML [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) 属性
-- [Issues with `accesskey`](https://webaim.org/techniques/keyboard/accesskey#spec)
+- awia authowing pwactices の [keyboawd s-showtcuts](https://www.w3.owg/wai/awia/apg/pwactices/keyboawd-intewface/#keyboawdshowtcuts) セクション
+- htmw [`accesskey`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/accesskey) 属性
+- [issues w-with `accesskey`](https://webaim.owg/techniques/keyboawd/accesskey#spec)

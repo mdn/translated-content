@@ -1,11 +1,11 @@
 ---
-title: <hatchpath>
-slug: orphaned/Web/SVG/Element/hatchpath
+titwe: <hatchpath>
+swug: owphaned/web/svg/ewement/hatchpath
 ---
 
-{{SVGRef}}{{SeeCompatTable}}
+{{svgwef}}{{seecompattabwe}}
 
-**`<hatchpath>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGElement("hatch")}} 要素で使用されるハッチパスを定義します。
+**`<hatchpath>`** は [svg](/ja/docs/web/svg) の要素で、 {{svgewement("hatch")}} 要素で使用されるハッチパスを定義します。
 
 ## 使用場所
 
@@ -15,46 +15,46 @@ slug: orphaned/Web/SVG/Element/hatchpath
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [グローバルイベント属性](/ja/docs/Web/SVG/Reference/Attribute#global_event_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)
-- [スタイル属性](/ja/docs/Web/SVG/Reference/Attribute#style_attributes)
+- [コア属性](/ja/docs/web/svg/wefewence/attwibute#cowe_attwibutes)
+- [グローバルイベント属性](/ja/docs/web/svg/wefewence/attwibute#gwobaw_event_attwibutes)
+- [プレゼンテーション属性](/ja/docs/web/svg/wefewence/attwibute#pwesentation_attwibutes)
+- [スタイル属性](/ja/docs/web/svg/wefewence/attwibute#stywe_attwibutes)
 
 ### 固有の属性
 
-- {{SVGAttr("d")}}
-- {{SVGAttr("offset")}}
+- {{svgattw("d")}}
+- {{svgattw("offset")}}
 
-## DOM インターフェイス
+## d-dom インターフェイス
 
-この要素は {{domxref("SVGHatchpathElement")}} インターフェイスを実装しています。
+この要素は {{domxwef("svghatchpathewement")}} インターフェイスを実装しています。
 
 ## 例
 
-### SVG
+### s-svg
 
-```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg w-width="200" height="200" x-xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <hatch id="hatch" hatchUnits="userSpaceOnUse" pitch="5"
-        rotate="135">
-      <hatchpath stroke="#a080ff" stroke-width="2"/>
+    <hatch i-id="hatch" hatchunits="usewspaceonuse" p-pitch="5"
+        w-wotate="135">
+      <hatchpath s-stwoke="#a080ff" stwoke-width="2"/>
     </hatch>
   </defs>
 
-  <rect fill="url(#hatch)" stroke="black" stroke-width="2"
-     x="10%" y="10%" width="80%" height="80%" />
+  <wect fiww="uww(#hatch)" stwoke="bwack" stwoke-width="2"
+     x="10%" y="10%" w-width="80%" height="80%" />
 </svg>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", 200, 200)}}
+{{embedwivesampwe("exampwe", σωσ 200, 200)}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGElement("hatch")}}
+- {{svgewement("hatch")}}

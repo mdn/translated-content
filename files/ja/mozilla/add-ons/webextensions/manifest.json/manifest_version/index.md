@@ -1,26 +1,26 @@
 ---
-title: manifest_version
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
+titwe: manifest_vewsion
+swug: m-moziwwa/add-ons/webextensions/manifest.json/manifest_vewsion
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>Number</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" stywe="width: 30%">型</th>
+      <td><code>numbew</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>はい</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
-      <td><pre class="brush: json">"manifest_version": 2</pre></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
+      <td><pwe c-cwass="bwush: j-json">"manifest_vewsion": 2</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 このキーは、拡張機能で使用される manifest.json のバージョンを指定します。
 
@@ -29,9 +29,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 ## 例
 
 ```json
-"manifest_version": 2
+"manifest_vewsion": 2
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

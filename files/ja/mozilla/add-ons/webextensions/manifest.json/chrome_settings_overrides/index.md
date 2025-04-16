@@ -1,179 +1,179 @@
 ---
-title: chrome_settings_overrides
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
+titwe: chwome_settings_ovewwides
+swug: moziwwa/add-ons/webextensions/manifest.json/chwome_settings_ovewwides
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`chrome_settings_overrides` キーを使ってブラウザー設定を上書きします。2 つの設定が利用できます:
+`chwome_settings_ovewwides` キーを使ってブラウザー設定を上書きします。2 つの設定が利用できます:
 
 - `"homepage"`、これによりブラウザーのホームページを上書きできます。
-- `"search_provider"`、これにより新しい検索エンジンを追加できます。
+- `"seawch_pwovidew"`、これにより新しい検索エンジンを追加できます。
 
 ```json
-"chrome_settings_overrides" : {
-  "homepage": "https://developer.mozilla.org/"
+"chwome_settings_ovewwides" : {
+  "homepage": "https://devewopew.moziwwa.owg/"
 }
 ```
 
 ```json
-"chrome_settings_overrides": {
-  "search_provider": {
-    "name": "Discogs",
-    "search_url": "https://www.discogs.com/search/?q={searchTerms}",
-    "keyword": "disc",
-    "favicon_url": "https://www.discogs.com/favicon.ico"
+"chwome_settings_ovewwides": {
+  "seawch_pwovidew": {
+    "name": "discogs", (U ﹏ U)
+    "seawch_uww": "https://www.discogs.com/seawch/?q={seawchtewms}", -.-
+    "keywowd": "disc", ^•ﻌ•^
+    "favicon_uww": "https://www.discogs.com/favicon.ico"
   }
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th colspan="2" scope="row">
-        マニフェストキー: <code>chrome_settings_overrides</code>
+    <tw>
+      <th cowspan="2" s-scope="wow">
+        マニフェストキー: <code>chwome_settings_ovewwides</code>
       </th>
-    </tr>
-    <tr>
-      <th scope="row">型</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
-      <td>No</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">型</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">必須</th>
+      <td>no</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 構文
 
-`chrome_settings_overrides` キーは次のプロパティを持つオブジェクトです:
+`chwome_settings_ovewwides` キーは次のプロパティを持つオブジェクトです:
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">名前</th>
-      <th scope="col">型</th>
-      <th scope="col">説明</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">名前</th>
+      <th scope="cow">型</th>
+      <th s-scope="cow">説明</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>homepage</code></td>
-      <td><code>String</code></td>
+      <td><code>stwing</code></td>
       <td>
-        <p>Defines the page to be used as the browser's homepage.</p>
-        <p>The replacement is given as a URL. The URL may:</p>
-        <ul>
-          <li>
-            point to a file bundled with the extension, in which case it is
-            given as a URL relative to the manifest.json file
-          </li>
-          <li>be a remote URL, such as "https://developer.mozilla.org/".</li>
-        </ul>
+        <p>defines t-the page to b-be used as the bwowsew's homepage.</p>
+        <p>the wepwacement is given as a uww. rawr the uww may:</p>
+        <uw>
+          <wi>
+            p-point to a fiwe bundwed with the extension, (˘ω˘) i-in which case it is
+            g-given as a uww wewative to the manifest.json fiwe
+          </wi>
+          <wi>be a-a wemote uww, nyaa~~ such a-as "https://devewopew.moziwwa.owg/".</wi>
+        </uw>
         <p>
-          If two or more extensions both set this value, then the setting from
-          the most recently installed one will take precedence.
+          i-if two ow mowe extensions both set this vawue, UwU then the setting fwom
+          t-the most wecentwy instawwed one wiww take pwecedence. :3
         </p>
         <p>
-          To override new tabs, use "<a
-            href="/ja/Add-ons/WebExtensions/manifest.json/chrome_url_overrides"
-            >chrome_url_overrides</a
-          >" instead.
+          to ovewwide n-nyew tabs, (⑅˘꒳˘) use "<a
+            hwef="/ja/add-ons/webextensions/manifest.json/chwome_uww_ovewwides"
+            >chwome_uww_ovewwides</a
+          >" i-instead. (///ˬ///✿)
         </p>
         <p>
-          This is a
+          t-this is a
           <a
-            href="/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >localizable property</a
-          >.
+            h-hwef="/ja/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >wocawizabwe p-pwopewty</a
+          >. ^^;;
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>search_provider</code></td>
-      <td><code>Object</code></td>
+    </tw>
+    <tw>
+      <td><code>seawch_pwovidew</code></td>
+      <td><code>object</code></td>
       <td>
-        <p>Defines a search provider to add to the browser.</p>
+        <p>defines a seawch pwovidew to add t-to the bwowsew.</p>
         <p>
-          The search provider has a name and a primary search URL. Alternative
-          URLs may be provided, including URLs for more specialized searches
-          like image search. In the URL you supply, use
-          "<code>{searchTerms}</code>" to interpolate the search term into the
-          URL, like:
-          <code>https://www.discogs.com/search/?q={searchTerms}</code>. You can
-          also provide POST parameters to be sent along with the search.
+          the seawch pwovidew has a-a nyame and a pwimawy seawch uww. >_< awtewnative
+          uwws may be pwovided, rawr x3 incwuding uwws f-fow mowe speciawized seawches
+          w-wike image s-seawch. /(^•ω•^) in the u-uww you suppwy, :3 use
+          "<code>{seawchtewms}</code>" to intewpowate the s-seawch tewm into t-the
+          uww, (ꈍᴗꈍ) wike:
+          <code>https://www.discogs.com/seawch/?q={seawchtewms}</code>. /(^•ω•^) y-you can
+          a-awso pwovide post pawametews t-to be sent awong with the seawch. (⑅˘꒳˘)
         </p>
         <p>
-          The search provider will be presented to the user alongside the
-          built-in providers. If you include the
-          <code>is_default</code> property and set it to <code>true</code>, the
-          new search provider will be the default option. By supplying the
-          <code>keyword</code> property, you enable the user to select your
-          search provider by typing the keyword into the search/address bar
-          before the search term.
+          t-the seawch pwovidew wiww be pwesented to the u-usew awongside the
+          b-buiwt-in pwovidews. ( ͡o ω ͡o ) if you incwude t-the
+          <code>is_defauwt</code> p-pwopewty and set it to <code>twue</code>, òωó the
+          new seawch pwovidew wiww be the defauwt option. (⑅˘꒳˘) by suppwying the
+          <code>keywowd</code> p-pwopewty, XD you enabwe t-the usew to sewect youw
+          s-seawch pwovidew b-by typing t-the keywowd into the seawch/addwess baw
+          befowe the seawch t-tewm.
         </p>
         <p>
-          This is an object with the properties listed below. All string
-          properties are
+          this is an object with the pwopewties wisted bewow. -.- aww stwing
+          p-pwopewties awe
           <a
-            href="/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >localizable</a
-          >.
+            h-hwef="/ja/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >wocawizabwe</a
+          >. :3
         </p>
-        <dl>
+        <dw>
           <dt><code>name</code></dt>
-          <dd>String: The search engine's name, displayed to the user.</dd>
-          <dt><code>search_url</code></dt>
+          <dd>stwing: t-the seawch e-engine's nyame, nyaa~~ dispwayed to the u-usew.</dd>
+          <dt><code>seawch_uww</code></dt>
           <dd>
-            String: URL used by the search engine. This must be an HTTPS URL.
+            s-stwing: uww used b-by the seawch e-engine. 😳 this must be an https uww. (⑅˘꒳˘)
           </dd>
-          <dt><code>is_default</code></dt>
+          <dt><code>is_defauwt</code></dt>
           <dd>
-            Boolean: True if the search engine should be the default choice.
+            boowean: t-twue if the seawch e-engine shouwd b-be the defauwt c-choice. nyaa~~
           </dd>
-          <dt><code>alternate_urls {{optional_inline}}</code></dt>
+          <dt><code>awtewnate_uwws {{optionaw_inwine}}</code></dt>
           <dd>
-            Array of String: An array of alternative URLs that can be used
-            instead of <code>search_url</code>.
+            a-awway of stwing: an awway of awtewnative uwws that can b-be used
+            instead of <code>seawch_uww</code>. OwO
           </dd>
-          <dt><code>encoding {{optional_inline}}</code></dt>
+          <dt><code>encoding {{optionaw_inwine}}</code></dt>
           <dd>
-            String: Encoding of the search term, specified as a
+            stwing: encoding of the seawch tewm, rawr x3 specified as a
             <a
-              href="https://www.iana.org/assignments/character-sets/character-sets.xhtml"
-              >standard character encoding name</a
-            >, such as "UTF-8".
+              h-hwef="https://www.iana.owg/assignments/chawactew-sets/chawactew-sets.xhtmw"
+              >standawd chawactew encoding nyame</a
+            >, XD such as "utf-8". σωσ
           </dd>
-          <dt><code>favicon_url {{optional_inline}}</code></dt>
+          <dt><code>favicon_uww {{optionaw_inwine}}</code></dt>
           <dd>
-            String: URL pointing to an icon for the search engine. This must be
-            a absolute HTTP or HTTPS URL.
+            s-stwing: u-uww pointing t-to an icon fow the seawch engine. (U ᵕ U❁) t-this must be
+            a absowute h-http ow https u-uww. (U ﹏ U)
           </dd>
-          <dt><code>image_url {{optional_inline}}</code></dt>
-          <dd>String: URL used for image search.</dd>
-          <dt><code>image_url_post_params {{optional_inline}}</code></dt>
-          <dd>String: POST parameters to send to <code>image_url</code>.</dd>
-          <dt><code>instant_url {{optional_inline}}</code></dt>
-          <dd>String: URL used for instant search.</dd>
-          <dt><code>instant_url_post_params {{optional_inline}}</code></dt>
-          <dd>String: POST parameters to send to <code>instant_url</code>.</dd>
-          <dt><code>keyword {{optional_inline}}</code></dt>
-          <dd>String: Address bar keyword for the search engine.</dd>
-          <dt><code>prepopulated_id {{optional_inline}}</code></dt>
-          <dd>The ID of a built-in search engine to use.</dd>
-          <dt><code>search_url_post_params {{optional_inline}}</code></dt>
-          <dd>String: POST parameters to send to <code>search_url</code>.</dd>
-          <dt><code>suggest_url {{optional_inline}}</code></dt>
-          <dd>String: URL used for search suggestions.</dd>
-          <dt><code>suggest_url_post_params {{optional_inline}}</code></dt>
-          <dd>String: POST parameters to send to <code>suggest_url</code>.</dd>
-        </dl>
+          <dt><code>image_uww {{optionaw_inwine}}</code></dt>
+          <dd>stwing: uww used fow image seawch.</dd>
+          <dt><code>image_uww_post_pawams {{optionaw_inwine}}</code></dt>
+          <dd>stwing: post pawametews to s-send to <code>image_uww</code>.</dd>
+          <dt><code>instant_uww {{optionaw_inwine}}</code></dt>
+          <dd>stwing: uww u-used fow instant seawch.</dd>
+          <dt><code>instant_uww_post_pawams {{optionaw_inwine}}</code></dt>
+          <dd>stwing: p-post pawametews t-to send to <code>instant_uww</code>.</dd>
+          <dt><code>keywowd {{optionaw_inwine}}</code></dt>
+          <dd>stwing: addwess baw keywowd f-fow the seawch engine.</dd>
+          <dt><code>pwepopuwated_id {{optionaw_inwine}}</code></dt>
+          <dd>the i-id of a buiwt-in seawch engine t-to use.</dd>
+          <dt><code>seawch_uww_post_pawams {{optionaw_inwine}}</code></dt>
+          <dd>stwing: post p-pawametews to send to <code>seawch_uww</code>.</dd>
+          <dt><code>suggest_uww {{optionaw_inwine}}</code></dt>
+          <dd>stwing: uww used fow seawch suggestions.</dd>
+          <dt><code>suggest_uww_post_pawams {{optionaw_inwine}}</code></dt>
+          <dd>stwing: p-post pawametews t-to send to <code>suggest_uww</code>.</dd>
+        </dw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

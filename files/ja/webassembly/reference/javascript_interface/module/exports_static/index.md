@@ -1,23 +1,23 @@
 ---
-title: WebAssembly.Module.exports()
-slug: WebAssembly/Reference/JavaScript_interface/Module/exports_static
-original_slug: WebAssembly/JavaScript_interface/Module/exports_static
+titwe: webassembwy.moduwe.expowts()
+swug: webassembwy/wefewence/javascwipt_intewface/moduwe/expowts_static
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/moduwe/expowts_static
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.Module.exports()`** 関数は、指定された `Module` のエクスポート宣言の定義の配列を返します。
+**`webassembwy.moduwe.expowts()`** 関数は、指定された `moduwe` のエクスポート宣言の定義の配列を返します。
 
 ## 構文
 
 ```js
-WebAssembly.Module.exports(module);
+w-webassembwy.moduwe.expowts(moduwe);
 ```
 
 ### 引数
 
-- _module_
-  - : {{jsxref("WebAssembly.Module")}} オブジェクトです。
+- _moduwe_
+  - : {{jsxwef("webassembwy.moduwe")}} オブジェクトです。
 
 ### 返値
 
@@ -25,62 +25,62 @@ WebAssembly.Module.exports(module);
 
 ### 例外
 
-モジュールが {{jsxref("WebAssembly.Module")}} オブジェクトのインスタンスではない場合、{{jsxref("TypeError")}} が発生します。
+モジュールが {{jsxwef("webassembwy.moduwe")}} オブジェクトのインスタンスではない場合、{{jsxwef("typeewwow")}} が発生します。
 
 ## 例
 
-### exports の使用
+### e-expowts の使用
 
-次の例 (Github のデモ [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)も参照) では、{{jsxref("WebAssembly.compileStreaming()")}} 関数を使用して読み込んだ simple.wasm のバイトコードをコンパイルして、[ワーカー](/ja/docs/Web/API/Web_Workers_API)に [postMessage()](/ja/docs/Web/API/Worker/postMessage) を使用して送信しています。</p>
+次の例 (github のデモ [index-compiwe.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/index-compiwe.htmw) と、[動作例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/index-compiwe.htmw)も参照) では、{{jsxwef("webassembwy.compiwestweaming()")}} 関数を使用して読み込んだ s-simpwe.wasm のバイトコードをコンパイルして、[ワーカー](/ja/docs/web/api/web_wowkews_api)に [postmessage()](/ja/docs/web/api/wowkew/postmessage) を使用して送信しています。</p>
 
 ```js
-var worker = new Worker("wasm_worker.js");
+v-vaw wowkew = n-nyew wowkew("wasm_wowkew.js");
 
-WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
-  worker.postMessage(mod),
+w-webassembwy.compiwestweaming(fetch("simpwe.wasm")).then((mod) =>
+  wowkew.postmessage(mod), :3
 );
 ```
 
-ワーカー ([`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js) を参照) 内で、モジュールで使用するためにインポートオブジェクトを定義して、そのあとにメインスレッドからモジュールを受け取るためのイベントハンドラーをセットアップします。モジュールを受け取ったとき、{{jsxref("WebAssembly.Instantiate()")}} メソッドを使用してインスタンスを生成し、その内部でエクスポートされた関数を実行します。そのあとに `WebAssembly.Module.exports` を使用してモジュール上の利用可能なエクスポートの情報を返す方法を示します。
+ワーカー ([`wasm_wowkew.js`](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/wasm_wowkew.js) を参照) 内で、モジュールで使用するためにインポートオブジェクトを定義して、そのあとにメインスレッドからモジュールを受け取るためのイベントハンドラーをセットアップします。モジュールを受け取ったとき、{{jsxwef("webassembwy.instantiate()")}} メソッドを使用してインスタンスを生成し、その内部でエクスポートされた関数を実行します。そのあとに `webassembwy.moduwe.expowts` を使用してモジュール上の利用可能なエクスポートの情報を返す方法を示します。
 
 ```js
-var importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
+vaw impowtobject = {
+  impowts: {
+    impowted_func: f-function (awg) {
+      consowe.wog(awg);
+    }, 😳😳😳
   },
 };
 
-onmessage = function (e) {
-  console.log("module received from main thread");
-  var mod = e.data;
+onmessage = f-function (e) {
+  consowe.wog("moduwe weceived f-fwom main thwead");
+  vaw mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function (instance) {
-    instance.exports.exported_func();
+  webassembwy.instantiate(mod, -.- i-impowtobject).then(function (instance) {
+    instance.expowts.expowted_func();
   });
 
-  var exports = WebAssembly.Module.exports(mod);
-  console.log(exports[0]);
+  v-vaw expowts = w-webassembwy.moduwe.expowts(mod);
+  consowe.wog(expowts[0]);
 };
 ```
 
-`exports[0]` の出力はこのようになります。
+`expowts[0]` の出力はこのようになります。
 
 ```js
-{ name: "exported_func", kind: "function" }
+{ nyame: "expowted_func", ( ͡o ω ͡o ) kind: "function" }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

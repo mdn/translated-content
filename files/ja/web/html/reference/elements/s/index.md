@@ -1,144 +1,144 @@
 ---
-title: "<s>: 取り消し要素"
-slug: Web/HTML/Reference/Elements/s
-original_slug: Web/HTML/Element/s
-l10n:
-  sourceCommit: fb6eaff788d19ad4013d57db0084f7c4f8e15a91
+titwe: "<s>: 取り消し要素"
+swug: web/htmw/wefewence/ewements/s
+o-owiginaw_swug: w-web/htmw/ewement/s
+w-w10n:
+  s-souwcecommit: f-fb6eaff788d19ad4013d57db0084f7c4f8e15a91
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<s>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストを取り消し線または打ち消し線つきで描画します。`<s>` 要素はすでに適切または正確ではなくなった事柄を表現するために使用してください。しかし、文書の修正を示す場合、 `<s>` 要素は適切ではありません。この場合は {{HTMLElement("del")}} と {{HTMLElement("ins")}} の方が適しているので、こちらを使用してください。
+**`<s>`** は [htmw](/ja/docs/web/htmw) の要素で、テキストを取り消し線または打ち消し線つきで描画します。`<s>` 要素はすでに適切または正確ではなくなった事柄を表現するために使用してください。しかし、文書の修正を示す場合、 `<s>` 要素は適切ではありません。この場合は {{htmwewement("dew")}} と {{htmwewement("ins")}} の方が適しているので、こちらを使用してください。
 
-{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;s&gt;", /(^•ω•^) "tabbed-showtew")}}
 
-```html interactive-example
-<p><s>There will be a few tickets available at the box office tonight.</s></p>
+```htmw i-intewactive-exampwe
+<p><s>thewe w-wiww be a few tickets avaiwabwe at the box office tonight.</s></p>
 
-<p>SOLD OUT!</p>
+<p>sowd out!</p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
+```css intewactive-exampwe
+/* s-stywewint-disabwe-next-wine bwock-no-empty */
 s {
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        >, rawr x3
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 例
 
 ```css
-.sold-out {
-  text-decoration: line-through;
+.sowd-out {
+  text-decowation: wine-thwough;
 }
 ```
 
-```html
-<s>本日のおすすめ: サーモン</s> 売り切れ<br />
-<span class="sold-out">本日のおすすめ: サーモン</span> 売り切れ
+```htmw
+<s>本日のおすすめ: サーモン</s> 売り切れ<bw />
+<span cwass="sowd-out">本日のおすすめ: サーモン</span> 売り切れ
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## アクセシビリティの考慮
 
-`s` 要素が存在することは、多くのスクリーンリーダー技術の既定の設定ではアナウンスされません。 CSS の {{cssxref("content")}} プロパティを、 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素と共に使うことでアナウンスさせることができます。
+`s` 要素が存在することは、多くのスクリーンリーダー技術の既定の設定ではアナウンスされません。 css の {{cssxwef("content")}} プロパティを、 {{cssxwef("::befowe")}} および {{cssxwef("::aftew")}} 擬似要素と共に使うことでアナウンスさせることができます。
 
 ```css
-s::before,
-s::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
+s::befowe, (U ﹏ U)
+s-s::aftew {
+  cwip-path: i-inset(100%);
+  c-cwip: wect(1px, (U ﹏ U) 1px, 1px, 1px);
+  h-height: 1px;
+  o-ovewfwow: hidden;
+  position: absowute;
+  white-space: n-nyowwap;
   width: 1px;
 }
 
-s::before {
-  content: " [取り消しテキスト開始] ";
+s::befowe {
+  c-content: " [取り消しテキスト開始] ";
 }
 
-s::after {
+s::aftew {
   content: " [取り消しテキスト終了] ";
 }
 ```
 
 スクリーンリーダーを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが取り消しされていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [showt nyote on making youw mawk (mowe accessibwe) | t-the paciewwo gwoup](https://www.tpgi.com/showt-note-on-making-youw-mawk-mowe-accessibwe/)
+- [tweaking t-text wevew s-stywes | adwian w-wosewwi](https://adwianwosewwi.com/2017/12/tweaking-text-wevew-stywes.htmw)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("strike")}} 要素は、{{HTMLElement("s")}} 要素の分身でしたが、廃止されており、もうウェブサイトで使用するべきではありません。
-- {{HTMLElement("del")}} 要素は、データが*削除された*場合に代わりに使用するべきものです。
-- CSS の {{cssxref("text-decoration-line")}} プロパティは、{{HTMLElement("s")}} 要素の以前の視覚効果を実現します。
+- {{htmwewement("stwike")}} 要素は、{{htmwewement("s")}} 要素の分身でしたが、廃止されており、もうウェブサイトで使用するべきではありません。
+- {{htmwewement("dew")}} 要素は、データが*削除された*場合に代わりに使用するべきものです。
+- css の {{cssxwef("text-decowation-wine")}} プロパティは、{{htmwewement("s")}} 要素の以前の視覚効果を実現します。

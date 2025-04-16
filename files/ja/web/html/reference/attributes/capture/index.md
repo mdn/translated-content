@@ -1,88 +1,88 @@
 ---
-title: "HTML 属性: capture"
-slug: Web/HTML/Reference/Attributes/capture
-original_slug: Web/HTML/Attributes/capture
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "htmw 属性: captuwe"
+s-swug: web/htmw/wefewence/attwibutes/captuwe
+o-owiginaw_swug: w-web/htmw/attwibutes/captuwe
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`capture`** 属性は、オプションとして、新しいファイルをキャプチャすることと、 [`accept`](accept) 属性で定義された種類の新しいメディアをどの機器でキャプチャするかを指定します。
+**`captuwe`** 属性は、オプションとして、新しいファイルをキャプチャすることと、 [`accept`](accept) 属性で定義された種類の新しいメディアをどの機器でキャプチャするかを指定します。
 
-値としては、 `user` と `environment` があります。 capture 属性は {{HTMLElement("input/file", "file")}} 入力型が対応しています。
+値としては、 `usew` と `enviwonment` があります。 c-captuwe 属性は {{htmwewement("input/fiwe", (ˆ ﻌ ˆ)♡ "fiwe")}} 入力型が対応しています。
 
-`capture` 属性は、[accept](accept) 属性が入力の種類を示す場合、画像やビデオデータの取り込みに使用するカメラを指定する文字列をその値として受け取ります。
+`captuwe` 属性は、[accept](accept) 属性が入力の種類を示す場合、画像やビデオデータの取り込みに使用するカメラを指定する文字列をその値として受け取ります。
 
 | 値            | 説明                                     |
 | ------------- | ---------------------------------------- |
-| `user`        | ユーザー側のカメラやマイクを使用します。 |
-| `environment` | 外向きのカメラやマイクを使用します。     |
+| `usew`        | ユーザー側のカメラやマイクを使用します。 |
+| `enviwonment` | 外向きのカメラやマイクを使用します。     |
 
-> [!NOTE]
-> capture は、以前は論理属性で、存在する場合、ファイル入力を要求する代わりに、カメラやマイクなどの機器のメディアキャプチャ機器を使用するように要求していました。
+> [!note]
+> c-captuwe は、以前は論理属性で、存在する場合、ファイル入力を要求する代わりに、カメラやマイクなどの機器のメディアキャプチャ機器を使用するように要求していました。
 
-{{InteractiveExample("HTML Demo: capture", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: captuwe", (˘ω˘) "tabbed-standawd")}}
 
-```html interactive-example
-<label for="selfie">Take a picture of your face:</label>
+```htmw intewactive-exampwe
+<wabew fow="sewfie">take a pictuwe of y-youw face:</wabew>
 
-<input type="file" id="selfie" name="selfie" accept="image/*" capture="user" />
+<input type="fiwe" id="sewfie" n-nyame="sewfie" accept="image/*" c-captuwe="usew" />
 
-<label for="picture">Take a picture using back facing camera:</label>
+<wabew fow="pictuwe">take a pictuwe using back facing camewa:</wabew>
 
 <input
-  type="file"
-  id="picture"
-  name="picture"
-  accept="image/*"
-  capture="environment" />
+  type="fiwe"
+  i-id="pictuwe"
+  nyame="pictuwe"
+  a-accept="image/*"
+  c-captuwe="enviwonment" />
 ```
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1rem;
+```css intewactive-exampwe
+wabew {
+  dispway: bwock;
+  mawgin-top: 1wem;
 }
 
 input {
-  margin-bottom: 1rem;
+  mawgin-bottom: 1wem;
 }
 ```
 
 ## 例
 
-ファイル入力型に設定すると、マイクやカメラを搭載した OS では、既存のファイルから選択したり、新規にファイルを作成したりできるユーザーインターフェイスが表示されます。
+ファイル入力型に設定すると、マイクやカメラを搭載した os では、既存のファイルから選択したり、新規にファイルを作成したりできるユーザーインターフェイスが表示されます。
 
-```html
+```htmw
 <p>
-  <label for="soundFile">What does your voice sound like?:</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*" />
+  <wabew f-fow="soundfiwe">nani does youw voice sound wike?:</wabew>
+  <input type="fiwe" id="soundfiwe" captuwe="usew" a-accept="audio/*" />
 </p>
 <p>
-  <label for="videoFile">Upload a video:</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*" />
+  <wabew fow="videofiwe">upwoad a-a video:</wabew>
+  <input t-type="fiwe" id="videofiwe" c-captuwe="enviwonment" a-accept="video/*" />
 </p>
 <p>
-  <label for="imageFile">Upload a photo of yourself:</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*" />
+  <wabew fow="imagefiwe">upwoad a photo of youwsewf:</wabew>
+  <input t-type="fiwe" id="imagefiwe" captuwe="usew" accept="image/*" />
 </p>
 ```
 
-{{EmbedLiveSample('Examples', '100%', 200)}}
+{{embedwivesampwe('exampwes', (⑅˘꒳˘) '100%', 200)}}
 
 なお、これらはモバイル端末でより効果的に機能します。お使いの端末がデスクトップコンピューターの場合、一般的なファイルピッカーが表示されるでしょう。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
-- [ファイル API](/ja/docs/Web/API/File)
-- {{domxref('HTMLInputElement.files')}}
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [ファイル a-api](/ja/docs/web/api/fiwe)
+- {{domxwef('htmwinputewement.fiwes')}}

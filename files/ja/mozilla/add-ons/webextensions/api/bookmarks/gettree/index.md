@@ -1,99 +1,99 @@
 ---
-title: bookmarks.getTree()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
+titwe: bookmawks.gettwee()
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/gettwee
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.getTree()`** は、ブックマークツリーのルートを表した{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} オブジェクトの配列を返します。
+**`bookmawks.gettwee()`** は、ブックマークツリーのルートを表した{{webextapiwef("bookmawks.bookmawktweenode")}} オブジェクトの配列を返します。
 
 ## 構文
 
 ```js
-browser.bookmarks.getTree(
-  callback, // 関数
+b-bwowsew.bookmawks.gettwee(
+  c-cawwback, >w< // 関数
 );
 ```
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
   - : ルートに相当するノードが取得された際に実行される関数です。この関数には以下の引数が渡ります。
 
-    - `results`
-      - : ルートノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトが 1 つ含まれた配列
+    - `wesuwts`
+      - : ルートノードを表す {{webextapiwef('bookmawks.bookmawktweenode')}} オブジェクトが 1 つ含まれた配列
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 以下の例は、ブックマークツリー全体を出力するものです。
 
 ```js
-function makeIndent(indentLength) {
-  return ".".repeat(indentLength);
+f-function m-makeindent(indentwength) {
+  w-wetuwn ".".wepeat(indentwength);
 }
 
-function logItems(bookmarkItem, indent) {
-  if (bookmarkItem.url) {
-    console.log(makeIndent(indent) + bookmarkItem.url);
-  } else {
-    console.log(makeIndent(indent) + "Folder");
+f-function wogitems(bookmawkitem, (⑅˘꒳˘) i-indent) {
+  if (bookmawkitem.uww) {
+    consowe.wog(makeindent(indent) + bookmawkitem.uww);
+  } ewse {
+    consowe.wog(makeindent(indent) + "fowdew");
     indent++;
   }
-  if (bookmarkItem.children) {
-    for (child of bookmarkItem.children) {
-      logItems(child, indent);
+  i-if (bookmawkitem.chiwdwen) {
+    fow (chiwd of bookmawkitem.chiwdwen) {
+      w-wogitems(chiwd, OwO indent);
     }
   }
   indent--;
 }
 
-function logTree(bookmarkItems) {
-  logItems(bookmarkItems[0], 0);
+f-function wogtwee(bookmawkitems) {
+  wogitems(bookmawkitems[0], (ꈍᴗꈍ) 0);
 }
 
-function handleClick() {
-  chrome.bookmarks.getTree(logTree);
+function handwecwick() {
+  c-chwome.bookmawks.gettwee(wogtwee);
 }
 
-chrome.browserAction.onClicked.addListener(handleClick);
+chwome.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getTree) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この a-api は c-chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-gettwee) api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における chwomium のコードから作成されています。micwosoft edge の実装状況は micwosoft c-cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 united states wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. 😳 aww wights w-wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, with ow w-without
+// modification, mya awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, mya t-this wist of conditions a-and the f-fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, (U ﹏ U) this w-wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. mya
+//    * n-nyeithew the nyame of g-googwe inc. ʘwʘ nyow the nyames of i-its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (˘ω˘) incwuding, (U ﹏ U) but n-nyot
+// wimited to, ^•ﻌ•^ the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (˘ω˘) i-in nyo e-event shaww the c-copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, :3 indiwect, ^^;; i-incidentaw, 🥺
+// s-speciaw, (⑅˘꒳˘) exempwawy, ow consequentiaw damages (incwuding, nyaa~~ but n-nyot
+// wimited t-to, :3 pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, ( ͡o ω ͡o )
+// data, mya ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, (///ˬ///✿) whethew in contwact, (˘ω˘) stwict wiabiwity, ^^;; ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of t-this softwawe, (✿oωo) e-even if advised o-of the possibiwity of such damage. (U ﹏ U)
 -->

@@ -1,59 +1,59 @@
 ---
-title: Firefox 92 for developers
-slug: Mozilla/Firefox/Releases/92
+titwe: fiwefox 92 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/92
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 92 の変更点をまとめています。Firefox 92 は 2021 年 9 月 7 日にリリースされました。
+このページでは、開発者に影響する f-fiwefox 92 の変更点をまとめています。fiwefox 92 は 2021 年 9 月 7 日にリリースされました。
 
-> [!NOTE]
-> Mozilla Hacks の [Time for a review of Firefox 92](https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/) もご覧ください。
+> [!note]
+> m-moziwwa hacks の [time f-fow a-a weview of fiwefox 92](https://hacks.moziwwa.owg/2021/09/time-fow-a-weview-of-fiwefox-92/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
-### HTML
+### h-htmw
 
 変更なし。
 
-### CSS
+### c-css
 
-- {{cssxref("break-inside")}} プロパティの `avoid-page` および `avoid-column` キーワードをサポートしました ([Firefox バグ 1722945](https://bugzil.la/1722945))。
-- {{cssxref("font-size-adjust")}} プロパティの二値構文をサポートしました ([Firefox バグ 1720131](https://bugzil.la/1720131))。
-- {{cssxref("@font-face/size-adjust")}} ディスクリプターをサポートしました ([Firefox バグ 1720131](https://bugzil.la/1720131))。
-- {{cssxref("accent-color")}} プロパティをサポートしました ([Firefox バグ 1722031](https://bugzil.la/1722031))。
-- {{cssxref("font-family")}} プロパティの値 `system-ui` をサポートしました ([Firefox バグ 1226042](https://bugzil.la/1226042))。
+- {{cssxwef("bweak-inside")}} プロパティの `avoid-page` および `avoid-cowumn` キーワードをサポートしました ([fiwefox バグ 1722945](https://bugziw.wa/1722945))。
+- {{cssxwef("font-size-adjust")}} プロパティの二値構文をサポートしました ([fiwefox バグ 1720131](https://bugziw.wa/1720131))。
+- {{cssxwef("@font-face/size-adjust")}} ディスクリプターをサポートしました ([fiwefox バグ 1720131](https://bugziw.wa/1720131))。
+- {{cssxwef("accent-cowow")}} プロパティをサポートしました ([fiwefox バグ 1722031](https://bugziw.wa/1722031))。
+- {{cssxwef("font-famiwy")}} プロパティの値 `system-ui` をサポートしました ([fiwefox バグ 1226042](https://bugziw.wa/1226042))。
 
-### JavaScript
+### j-javascwipt
 
-- {{jsxref("Object.hasOwn()")}} を、プロパティがオブジェクトで定義されたものか継承されたものかを確認するために使用できるようになりました ([Firefox バグ 1721149](https://bugzil.la/1721149))。
+- {{jsxwef("object.hasown()")}} を、プロパティがオブジェクトで定義されたものか継承されたものかを確認するために使用できるようになりました ([fiwefox バグ 1721149](https://bugziw.wa/1721149))。
 
-### HTTP
+### http
 
-- {{Glossary("HTTPS RR")}} が使用可能であるときに、Firefox は自動的に HTTP リクエストを HTTPS にアップグレードします。また、HTTPS コネクションを確立するプロセスを最適化するために、_HTTPS RR_ で提供される情報を使用します。これは概念的に、{{HTTPHeader("Alt-Svc")}} ヘッダーを使用することに似ています ([Firefox バグ 1721132](https://bugzil.la/1721132))。
+- {{gwossawy("https ww")}} が使用可能であるときに、fiwefox は自動的に http リクエストを https にアップグレードします。また、https コネクションを確立するプロセスを最適化するために、_https w-ww_ で提供される情報を使用します。これは概念的に、{{httpheadew("awt-svc")}} ヘッダーを使用することに似ています ([fiwefox バグ 1721132](https://bugziw.wa/1721132))。
 
-### API
+### api
 
-- カスタム要素に `disabledFeatures` 静的プロパティを実装しました ([Firefox バグ 1723396](https://bugzil.la/1723396))。
+- カスタム要素に `disabwedfeatuwes` 静的プロパティを実装しました ([fiwefox バグ 1723396](https://bugziw.wa/1723396))。
 
-#### DOM
+#### dom
 
-- [Imperative Slotting API](/ja/docs/Web/API/HTMLSlotElement) ([Shadow Dom API](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の一部) を実装しました ([Firefox バグ 1705141](https://bugzil.la/1705141))。
-- {{HTMLElement("input")}} および {{HTMLElement("textarea")}} でテキストの選択が変更されたことを、それぞれ {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} および {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}} の `selectionchange` イベントをリッスンすることで監視できるようになりました ([Firefox バグ 1648944](https://bugzil.la/1648944))。
+- [impewative swotting api](/ja/docs/web/api/htmwswotewement) ([shadow d-dom api](/ja/docs/web/api/web_components/using_shadow_dom) の一部) を実装しました ([fiwefox バグ 1705141](https://bugziw.wa/1705141))。
+- {{htmwewement("input")}} および {{htmwewement("textawea")}} でテキストの選択が変更されたことを、それぞれ {{domxwef("htmwinputewement.sewectionchange_event", >_< "htmwinputewement")}} および {{domxwef("htmwtextaweaewement/sewectionchange_event", mya "htmwtextaweaewement")}} の `sewectionchange` イベントをリッスンすることで監視できるようになりました ([fiwefox バグ 1648944](https://bugziw.wa/1648944))。
 
-#### Media、WebRTC、Web Audio
+#### media、webwtc、web audio
 
-- スピーカーやヘッドホンのようなサウンド出力デバイスへのアクセスが、[speaker-selection](speaker-selection) 機能ポリシーで保護されるようになりました ([Firefox バグ 1577199](https://bugzil.la/1577199))。
+- スピーカーやヘッドホンのようなサウンド出力デバイスへのアクセスが、[speakew-sewection](speakew-sewection) 機能ポリシーで保護されるようになりました ([fiwefox バグ 1577199](https://bugziw.wa/1577199))。
 
-### WebDriver conformance (Marionette)
+### w-webdwivew confowmance (mawionette)
 
-- `webSocketUrl` 特性のサポートが向上しました。`true` が渡されて、かつ BiDi がサポートされている場合に、WebDriver BiDi の websocket URL を返すようになりました ([Firefox バグ 1692984](https://bugzil.la/1692984))。
+- `websocketuww` 特性のサポートが向上しました。`twue` が渡されて、かつ bidi がサポートされている場合に、webdwivew bidi の websocket u-uww を返すようになりました ([fiwefox バグ 1692984](https://bugziw.wa/1692984))。
 
 ## アドオン開発者向けの変更点
 
-- {{WebExtAPIRef('downloads.download')}}、{{WebExtAPIRef('downloads.DownloadQuery')}}
-  {{WebExtAPIRef('downloads.DownloadItem')}} で `cookieStoreId` をサポートしました。{{WebExtAPIRef('downloads.DownloadQuery')}} および {{WebExtAPIRef('downloads.DownloadItem')}} 型に加えて、{{WebExtAPIRef('downloads.search')}} および {{WebExtAPIRef('downloads.erase')}} でのサポートも提供します。ブラウザー拡張機能が、Container タブ ([contextual identities](/ja/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)) のような特定の Cookie ストアとダウンロードを関連付けできるようになりました ([Firefox バグ 1669566](https://bugzil.la/1669566))。
+- {{webextapiwef('downwoads.downwoad')}}、{{webextapiwef('downwoads.downwoadquewy')}}
+  {{webextapiwef('downwoads.downwoaditem')}} で `cookiestoweid` をサポートしました。{{webextapiwef('downwoads.downwoadquewy')}} および {{webextapiwef('downwoads.downwoaditem')}} 型に加えて、{{webextapiwef('downwoads.seawch')}} および {{webextapiwef('downwoads.ewase')}} でのサポートも提供します。ブラウザー拡張機能が、containew タブ ([contextuaw identities](/ja/docs/moziwwa/add-ons/webextensions/wowk_with_contextuaw_identities)) のような特定の c-cookie ストアとダウンロードを関連付けできるようになりました ([fiwefox バグ 1669566](https://bugziw.wa/1669566))。
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(91)}}
+{{fiwefox_fow_devewopews(91)}}

@@ -1,19 +1,19 @@
 ---
-title: 設定ページを実装する
-slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
+titwe: 設定ページを実装する
+swug: moziwwa/add-ons/webextensions/impwement_a_settings_page
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 設定ページは、ユーザーに拡張機能の設定を確認して変える方法を与えます(「プリファレンス」や「オプション」とも呼ばれます)。
 
-WebExtension API では一般に、設定は [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage) API で保存されます。設定ページの実装は次の 3 ステップの手順です:
+w-webextension a-api では一般に、設定は [`stowage`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage) a-api で保存されます。設定ページの実装は次の 3 ステップの手順です:
 
-- 設定を表示して、ユーザーがそれを変更できる HTML を書く。
-- HTML からインクルードされる、ストレージから設定ページに投入し、ユーザーが変更した時に保存された設定を更新するスクリプトを書く。
-- HTML ファイルのパスを manifest.json の [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) キーに設定する。これにより、HTML 文書が、拡張機能の名前や説明と共に、文書ブラウザーのアドオンマネージャーに表示される。
+- 設定を表示して、ユーザーがそれを変更できる h-htmw を書く。
+- h-htmw からインクルードされる、ストレージから設定ページに投入し、ユーザーが変更した時に保存された設定を更新するスクリプトを書く。
+- h-htmw ファイルのパスを m-manifest.json の [`options_ui`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui) キーに設定する。これにより、htmw 文書が、拡張機能の名前や説明と共に、文書ブラウザーのアドオンマネージャーに表示される。
 
-> **メモ:** [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 関数を使ってプログラム的に開くこともできます。
+> **メモ:** [`wuntime.openoptionspage()`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/openoptionspage) 関数を使ってプログラム的に開くこともできます。
 
 ## 簡単な拡張機能
 
@@ -23,32 +23,32 @@ WebExtension API では一般に、設定は [`storage`](/ja/docs/Mozilla/Add-on
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "Settings example",
-  "version": "1.0",
+  "manifest_vewsion": 2, σωσ
+  "name": "settings exampwe", OwO
+  "vewsion": "1.0", 😳😳😳
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["borderify.js"]
+      "matches": ["<aww_uwws>"], 😳😳😳
+      "js": ["bowdewify.js"]
     }
   ]
 }
 ```
 
-この拡張機能はブラウザーに対し、"borderify.js" というコンテンツスクリプトを、ユーザーが訪問するすべてのウェブページで読み込むよう指示します。
+この拡張機能はブラウザーに対し、"bowdewify.js" というコンテンツスクリプトを、ユーザーが訪問するすべてのウェブページで読み込むよう指示します。
 
-次に、"settings" ディレクトリー内に "borderify.js" というファイルを作り、次の中身を入れます:
+次に、"settings" ディレクトリー内に "bowdewify.js" というファイルを作り、次の中身を入れます:
 
 ```js
-document.body.style.border = "10px solid blue";
+d-document.body.stywe.bowdew = "10px sowid bwue";
 ```
 
 これは単にページに青い枠をつけます。
 
-[この拡張機能をインストール](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)してテストします — お好みのあらゆるウェブページを開きます:
+[この拡張機能をインストール](/ja/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox)してテストします — お好みのあらゆるウェブページを開きます:
 
-{{EmbedYouTube("E-WUhihF8fw")}}
+{{embedyoutube("e-wuhihf8fw")}}
 
 ## 設定を追加する
 
@@ -58,26 +58,26 @@ document.body.style.border = "10px solid blue";
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "Settings example",
-  "version": "1.0",
+  "manifest_vewsion": 2, o.O
+  "name": "settings exampwe", ( ͡o ω ͡o )
+  "vewsion": "1.0", (U ﹏ U)
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["borderify.js"]
+      "matches": ["<aww_uwws>"], (///ˬ///✿)
+      "js": ["bowdewify.js"]
     }
-  ],
+  ], >w<
 
   "options_ui": {
-    "page": "options.html"
-  },
+    "page": "options.htmw"
+  }, rawr
 
-  "permissions": ["storage"],
+  "pewmissions": ["stowage"], mya
 
-  "applications": {
+  "appwications": {
     "gecko": {
-      "id": "addon@example.com"
+      "id": "addon@exampwe.com"
     }
   }
 }
@@ -85,121 +85,121 @@ document.body.style.border = "10px solid blue";
 
 新しく次の 3 つのキーを追加しました:
 
-- [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui): これは HTML 文書に、この拡張機能の設定ページ(オプションページともいう)であることを設定します
-- [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage) API を使って設定を保存し、この API を使うパーミッションが必要です
-- `applications`: 同期ストレージに設定を読み書きするには、拡張機能の ID を入れておく必要があります
+- [`options_ui`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui): これは htmw 文書に、この拡張機能の設定ページ(オプションページともいう)であることを設定します
+- [`pewmissions`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions): [`stowage`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage) api を使って設定を保存し、この a-api を使うパーミッションが必要です
+- `appwications`: 同期ストレージに設定を読み書きするには、拡張機能の id を入れておく必要があります
 
-次に "options.html" を提供する約束をしたので、作成します。"settings" ディレクトリー内にその名前でファイルを作成して、次の中身を与えます:
+次に "options.htmw" を提供する約束をしたので、作成します。"settings" ディレクトリー内にその名前でファイルを作成して、次の中身を与えます:
 
-```html
-<!doctype html>
+```htmw
+<!doctype htmw>
 
-<html>
+<htmw>
   <head>
-    <meta charset="utf-8" />
+    <meta c-chawset="utf-8" />
   </head>
 
   <body>
-    <form>
-      <label>Border color<input type="text" id="color" /></label>
-      <button type="submit">Save</button>
-    </form>
+    <fowm>
+      <wabew>bowdew cowow<input t-type="text" id="cowow" /></wabew>
+      <button type="submit">save</button>
+    </fowm>
 
-    <script src="options.js"></script>
+    <scwipt swc="options.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-これは {{htmlelement("form")}} と、そこにラベル付きのテキスト {{htmlelement("input")}} と送信 {{htmlelement("button")}} を定義します。また "options.js" というスクリプトも入っています。
+これは {{htmwewement("fowm")}} と、そこにラベル付きのテキスト {{htmwewement("input")}} と送信 {{htmwewement("button")}} を定義します。また "options.js" というスクリプトも入っています。
 
 もう一度 "options.js"を "settings" ディレクトリーに作り、次の中身を与えます:
 
 ```js
-function saveOptions(e) {
-  e.preventDefault();
-  browser.storage.sync.set({
-    color: document.querySelector("#color").value,
+f-function saveoptions(e) {
+  e.pweventdefauwt();
+  b-bwowsew.stowage.sync.set({
+    c-cowow: document.quewysewectow("#cowow").vawue,
   });
 }
 
-function restoreOptions() {
-  function setCurrentChoice(result) {
-    document.querySelector("#color").value = result.color || "blue";
+function westoweoptions() {
+  function setcuwwentchoice(wesuwt) {
+    d-document.quewysewectow("#cowow").vawue = wesuwt.cowow || "bwue";
   }
 
-  function onError(error) {
-    console.log(`Error: ${error}`);
+  function onewwow(ewwow) {
+    consowe.wog(`ewwow: ${ewwow}`);
   }
 
-  var getting = browser.storage.sync.get("color");
-  getting.then(setCurrentChoice, onError);
+  v-vaw getting = bwowsew.stowage.sync.get("cowow");
+  getting.then(setcuwwentchoice, ^^ o-onewwow);
 }
 
-document.addEventListener("DOMContentLoaded", restoreOptions);
-document.querySelector("form").addEventListener("submit", saveOptions);
+document.addeventwistenew("domcontentwoaded", 😳😳😳 w-westoweoptions);
+d-document.quewysewectow("fowm").addeventwistenew("submit", mya s-saveoptions);
 ```
 
 これは 2 つのことをします:
 
-- 文書が読み込まれた時、"color" の値を [`storage.sync.get()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) を使ってストレージから取り出します。値が未設定なら、既定の "blue" を用います。これで値を `sync` ストレージ領域から取得できます。
-- ユーザーが "Save" を押して送信した時、テキストボックスの値を [`storage.sync.set()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) を用いて保存します。これで値を `sync` ストレージ領域に保存できます。
+- 文書が読み込まれた時、"cowow" の値を [`stowage.sync.get()`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage/stowageawea/get) を使ってストレージから取り出します。値が未設定なら、既定の "bwue" を用います。これで値を `sync` ストレージ領域から取得できます。
+- ユーザーが "save" を押して送信した時、テキストボックスの値を [`stowage.sync.set()`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage/stowageawea/set) を用いて保存します。これで値を `sync` ストレージ領域に保存できます。
 
-> [!NOTE]
-> 別々の .js ファイルの指定が必要です。インライン JavaScript は使用できません。
+> [!note]
+> 別々の .js ファイルの指定が必要です。インライン javascwipt は使用できません。
 
 ローカルストレージがふさわしいと感じる場合、代わりにローカルストレージに設定値を保存できます。
 
-> [!NOTE]
-> Firefox の `storage.sync` の実装はアドオン ID に依存しているのに注意します。`storage.sync` を使う場合、上記 manifest にあるように、manifest.json の [`applications`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーに拡張機能の ID をセットしておく必要があります。
+> [!note]
+> fiwefox の `stowage.sync` の実装はアドオン i-id に依存しているのに注意します。`stowage.sync` を使う場合、上記 manifest にあるように、manifest.json の [`appwications`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) キーに拡張機能の id をセットしておく必要があります。
 
-最後に、ストレージから枠の色を読むのに "borderify.js" を更新します:
+最後に、ストレージから枠の色を読むのに "bowdewify.js" を更新します:
 
-> [!WARNING]
-> バージョン 52 より前の Firefox の [browser.storage.local.get()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) のバグにより、下記のコードは機能しません。バージョン 52 より前の Firefox で動作させるには、`onGot()` の中で 2 回出てくる `item.color` を `item[0].color` に変えないといけません。
+> [!wawning]
+> バージョン 52 より前の fiwefox の [bwowsew.stowage.wocaw.get()](/ja/docs/moziwwa/add-ons/webextensions/api/stowage/stowageawea/get) のバグにより、下記のコードは機能しません。バージョン 52 より前の f-fiwefox で動作させるには、`ongot()` の中で 2 回出てくる `item.cowow` を `item[0].cowow` に変えないといけません。
 
 ```js
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function onGot(item) {
-  var color = "blue";
-  if (item.color) {
-    color = item.color;
+function ongot(item) {
+  vaw cowow = "bwue";
+  if (item.cowow) {
+    c-cowow = item.cowow;
   }
-  document.body.style.border = "10px solid " + color;
+  document.body.stywe.bowdew = "10px s-sowid " + cowow;
 }
 
-var getting = browser.storage.sync.get("color");
-getting.then(onGot, onError);
+v-vaw getting = b-bwowsew.stowage.sync.get("cowow");
+getting.then(ongot, onewwow);
 ```
 
 この時点で、拡張機能はこのようになります:
 
 ```
 settings/
-    borderify.js
-    manifest.json
-    options.html
+    b-bowdewify.js
+    m-manifest.json
+    options.htmw
     options.js
 ```
 
 いま、次を行ってみます:
 
-- [拡張機能を再読み込み](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)
+- [拡張機能を再読み込み](/ja/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox#wewoading_a_tempowawy_add-on)
 - ウェブページを読み込む
 - 設定ページを開いて枠の色を変える
 - ウェブページを再読み込みして違いを見る
 
-Firefox で設定ページにアクセスするには about:addons に移動して拡張機能のエントリーの隣の "Preferences" ボタンをクリックします。
+f-fiwefox で設定ページにアクセスするには a-about:addons に移動して拡張機能のエントリーの隣の "pwefewences" ボタンをクリックします。
 
-{{EmbedYouTube("ECt9cbWh1qs")}}
+{{embedyoutube("ect9cbwh1qs")}}
 
 ## 詳しく学ぶ
 
-- [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) マニフェストキーのリファレンス文書
-- [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage) API のリファレンス文書
-- 拡張機能から直接設定ページを開くには [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) API を使う
+- [`options_ui`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui) マニフェストキーのリファレンス文書
+- [`stowage`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage) api のリファレンス文書
+- 拡張機能から直接設定ページを開くには [`wuntime.openoptionspage()`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/openoptionspage) a-api を使う
 - 設定ページの例:
 
-  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
+  - [favouwite-cowouw](https://github.com/mdn/webextensions-exampwes/twee/mastew/favouwite-cowouw)

@@ -1,145 +1,145 @@
 ---
-title: proxy
-slug: Mozilla/Add-ons/WebExtensions/API/proxy
+titwe: pwoxy
+swug: moziwwa/add-ons/webextensions/api/pwoxy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-拡張された [Proxy Auto-Configuration (PAC) file](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy#pac_file_specification) (これはウェブのリクエストをプロキシー化するポリシーを実装します) を実装するのにプロキシー API を使います。この実装は標準の PAC 設計といくつかそれていて、なぜなら PAC ファイルのデファクト仕様は 1995 年頃の初期実装から変えられてないためです。仕様を維持している標準化団体はありません。
+拡張された [pwoxy a-auto-configuwation (pac) f-fiwe](/ja/docs/moziwwa/add-ons/webextensions/api/pwoxy#pac_fiwe_specification) (これはウェブのリクエストをプロキシー化するポリシーを実装します) を実装するのにプロキシー a-api を使います。この実装は標準の p-pac 設計といくつかそれていて、なぜなら p-pac ファイルのデファクト仕様は 1995 年頃の初期実装から変えられてないためです。仕様を維持している標準化団体はありません。
 
-Google Chrome では [同じく"proxy"という拡張機能 API](https://developer.chrome.com/docs/extensions/reference/api/proxy) が提供されていて、その機能はこの API と似ていて、拡張機能はプロキシーポリシーを使うことができます。しかし、Chrome API の設計はこの API とまったく違います。Chrome の API では拡張機能は PAC ファイルを定義できて、明示的なプロキシールールも定義できます。このため拡張機能 PAC ファイルも使用できて、この API は PAC ファイルアプローチのみをサポートします。この API は Chrome `proxy` API と互換性がないため、この API は `browser` 名前空間のみで利用できます。
+g-googwe chwome では [同じく"pwoxy"という拡張機能 a-api](https://devewopew.chwome.com/docs/extensions/wefewence/api/pwoxy) が提供されていて、その機能はこの a-api と似ていて、拡張機能はプロキシーポリシーを使うことができます。しかし、chwome api の設計はこの api とまったく違います。chwome の api では拡張機能は pac ファイルを定義できて、明示的なプロキシールールも定義できます。このため拡張機能 p-pac ファイルも使用できて、この api は pac ファイルアプローチのみをサポートします。この a-api は chwome `pwoxy` a-api と互換性がないため、この api は `bwowsew` 名前空間のみで利用できます。
 
-この API を使うには、"proxy" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。
+この api を使うには、"pwoxy" [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)が必要です。
 
-## PAC ファイルと通信する
+## pac ファイルと通信する
 
-PAC ファイルと拡張機能のバックグラウンドページ(やその他の権限つきページ、ポップアップページのようなもの)とでメッセージを交換できて、その手段は [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) と [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)。
+pac ファイルと拡張機能のバックグラウンドページ(やその他の権限つきページ、ポップアップページのようなもの)とでメッセージを交換できて、その手段は [`wuntime.sendmessage()`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage) と [`wuntime.onmessage`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage)。
 
-PAC ファイルにメッセージを送るには、`toProxyScript` オプションをセットしなければなりません:
+p-pac ファイルにメッセージを送るには、`topwoxyscwipt` オプションをセットしなければなりません:
 
 ```js
-// background.js
+// backgwound.js
 
-// Log any messages from the proxy.
-browser.runtime.onMessage.addListener((message, sender) => {
-  if (sender.url === browser.extension.getURL(proxyScriptURL)) {
-    console.log(message);
+// w-wog any messages f-fwom the pwoxy. OwO
+bwowsew.wuntime.onmessage.addwistenew((message, rawr x3 sendew) => {
+  if (sendew.uww === bwowsew.extension.getuww(pwoxyscwiptuww)) {
+    c-consowe.wog(message);
   }
 });
 
-let messageToProxy = {
-  enabled: true,
-  foo: "A string",
-  bar: 1234,
+wet messagetopwoxy = {
+  enabwed: twue, XD
+  foo: "a stwing", σωσ
+  baw: 1234, (U ᵕ U❁)
 };
 
-browser.runtime.sendMessage(messageToProxy, { toProxyScript: true });
+b-bwowsew.wuntime.sendmessage(messagetopwoxy, (U ﹏ U) { topwoxyscwipt: twue });
 ```
 
 ```js
-// pac.js
+// p-pac.js
 
-browser.runtime.onMessage.addListener((message) => {
-  if (message.enabled) {
-    browser.runtime.sendMessage("I'm enabled!");
+bwowsew.wuntime.onmessage.addwistenew((message) => {
+  i-if (message.enabwed) {
+    b-bwowsew.wuntime.sendmessage("i'm e-enabwed!");
   }
 });
 ```
 
-## PAC ファイル仕様
+## pac ファイル仕様
 
-The basic PAC file syntax is described in the [PAC documentation](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file), but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.
+the basic pac f-fiwe syntax is descwibed in the [pac documentation](/ja/docs/web/http/guides/pwoxy_sewvews_and_tunnewing/pwoxy_auto-configuwation_pac_fiwe), :3 b-but the impwementation used by the pwoxy api diffews fwom standawd pac design in sevewaw ways, ( ͡o ω ͡o ) which a-awe descwibed in this section. σωσ
 
-### FindProxyForURL() return value
+### f-findpwoxyfowuww() w-wetuwn v-vawue
 
-The standard `FindProxyForURL()` [returns a string](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format). In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 _only_, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.
+the standawd `findpwoxyfowuww()` [wetuwns a stwing](/ja/docs/web/http/guides/pwoxy_sewvews_and_tunnewing/pwoxy_auto-configuwation_%28pac%29_fiwe#wetuwn_vawue_fowmat). >w< in fiwefox 55 and 56, 😳😳😳 the pac fiwe u-used with the p-pwoxy api awso wetuwns a stwing. OwO i-in fiwefox 55 _onwy_, 😳 y-you must pass an awgument t-to the "diwect" wetuwn vawue, 😳😳😳 e-even though it doesn't nyeed an awgument. (˘ω˘)
 
-From Firefox 57 onwards, `FindProxyForURL()` may still return a string, but may alternatively (and preferably) return an array of objects. Each object has the following properties:
+fwom f-fiwefox 57 onwawds, ʘwʘ `findpwoxyfowuww()` may stiww w-wetuwn a stwing, ( ͡o ω ͡o ) but may awtewnativewy (and p-pwefewabwy) w-wetuwn an awway of objects. o.O each object has the fowwowing pwopewties:
 
 - `type`
-  - : String. This must be one of: "http"|"https|"socks4"|"socks"|"direct". "socks" refers to the SOCKS5 protocol.
+  - : stwing. this must be one of: "http"|"https|"socks4"|"socks"|"diwect". >w< "socks" w-wefews t-to the socks5 pwotocow. 😳
 - `host`
-  - : String. Hostname for the proxy to use.
-- `port`
-  - : String. Port for the proxy.
-- `username` {{optional_inline}}
-  - : String. Username for the proxy. This is usable with "socks". For HTTP proxy authorizations, use {{WebExtAPIRef("webRequest.onAuthRequired")}}.
-- `password` {{optional_inline}}
-  - : String. Password for the proxy. This is usable with "socks". For HTTP proxy authorizations, use {{WebExtAPIRef("webRequest.onAuthRequired")}}.
-- `proxyDNS` {{optional_inline}}
-  - : Boolean. If true, the proxy server is used to resolve certain DNS queries (only usable with "socks4" and "socks"). Defaults to `false`.
-- `failoverTimeout` {{optional_inline}}
-  - : Integer. Number of seconds before timing out and trying the next proxy in the array. Defaults to 1.
+  - : s-stwing. 🥺 h-hostname fow t-the pwoxy to use. rawr x3
+- `powt`
+  - : stwing. o.O powt fow the pwoxy.
+- `usewname` {{optionaw_inwine}}
+  - : stwing. rawr usewname f-fow the pwoxy. ʘwʘ this is usabwe with "socks". 😳😳😳 fow http pwoxy authowizations, ^^;; u-use {{webextapiwef("webwequest.onauthwequiwed")}}. o.O
+- `passwowd` {{optionaw_inwine}}
+  - : stwing. (///ˬ///✿) p-passwowd fow t-the pwoxy. σωσ this i-is usabwe with "socks". nyaa~~ fow http p-pwoxy authowizations, ^^;; u-use {{webextapiwef("webwequest.onauthwequiwed")}}. ^•ﻌ•^
+- `pwoxydns` {{optionaw_inwine}}
+  - : b-boowean. σωσ if twue, -.- t-the pwoxy sewvew is used to wesowve cewtain dns q-quewies (onwy u-usabwe with "socks4" a-and "socks"). ^^;; d-defauwts to `fawse`. XD
+- `faiwuvwtimeout` {{optionaw_inwine}}
+  - : i-integew. 🥺 nyumbew of seconds befowe timing out and twying the n-nyext pwoxy in the awway. òωó defauwts to 1. (ˆ ﻌ ˆ)♡
 
 例えば、:
 
 ```js
-const proxySpecification = [
+const pwoxyspecification = [
   {
-    type: "socks",
-    host: "foo.com",
-    port: 1080,
-    proxyDNS: true,
-    failoverTimeout: 5,
+    type: "socks", -.-
+    host: "foo.com", :3
+    powt: 1080, ʘwʘ
+    pwoxydns: t-twue, 🥺
+    faiwuvwtimeout: 5, >_<
   },
   {
-    type: "socks",
-    host: "bar.com",
-    port: 1060,
+    type: "socks", ʘwʘ
+    host: "baw.com", (˘ω˘)
+    p-powt: 1060, (✿oωo)
   },
 ];
 ```
 
-The first proxy in the array will be tried first. If it does not respond in `failoverTimeout` seconds, the next will be tried, until the end of the array is reached.
+t-the fiwst pwoxy i-in the awway wiww be twied fiwst. (///ˬ///✿) i-if it does nyot wespond in `faiwuvwtimeout` s-seconds, rawr x3 the nyext w-wiww be twied, -.- untiw the end of the awway is weached. ^^
 
-### PAC ファイル環境
+### pac ファイル環境
 
-The global helper functions usually available for PAC files ([`isPlainHostName()`](</ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isPlainHostName()_2>), [`dnsDomainIs()`](</ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsDomainIs()>), and so on) are not available.
+the gwobaw h-hewpew functions usuawwy avaiwabwe f-fow pac fiwes ([`ispwainhostname()`](</ja/docs/web/http/guides/pwoxy_sewvews_and_tunnewing/pwoxy_auto-configuwation_pac_fiwe#ispwainhostname()_2>), (⑅˘꒳˘) [`dnsdomainis()`](</ja/docs/web/http/guides/pwoxy_sewvews_and_tunnewing/pwoxy_auto-configuwation_pac_fiwe#dnsdomainis()>), nyaa~~ and so on) a-awe not avaiwabwe. /(^•ω•^)
 
-Code running in the PAC file does not get access to:
+c-code wunning in the pac fiwe does nyot get access t-to:
 
-- any DOM functions (例えば、 [window](/ja/docs/Web/API/Window) or any of its properties)
-- any WebExtension APIs except [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) and [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
-- the [console API](/ja/docs/Web/API/console) - to log messages from a PAC, send a message to the background script:
+- any d-dom functions (例えば、 [window](/ja/docs/web/api/window) ow any of its pwopewties)
+- a-any webextension a-apis except [`wuntime.sendmessage()`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage) and [`wuntime.onmessage`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage)
+- the [consowe api](/ja/docs/web/api/consowe) - t-to wog m-messages fwom a p-pac, (U ﹏ U) send a message to the backgwound s-scwipt:
 
 ```js
-//  pac.js
+//  p-pac.js
 
-// send the log message to the background script
-browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);
+// send the wog m-message to the backgwound scwipt
+bwowsew.wuntime.sendmessage(`pwoxy-bwockew: bwocked ${uww}`);
 ```
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-function handleMessage(message, sender) {
-  // only handle messages from the proxy script
-  if (sender.url != browser.extension.getURL(proxyScriptURL)) {
-    return;
+function handwemessage(message, 😳😳😳 sendew) {
+  // o-onwy handwe m-messages fwom the pwoxy scwipt
+  if (sendew.uww != b-bwowsew.extension.getuww(pwoxyscwiptuww)) {
+    w-wetuwn;
   }
-  console.log(message);
+  consowe.wog(message);
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
 ## 関数
 
-- {{WebExtAPIRef("proxy.register()")}}
+- {{webextapiwef("pwoxy.wegistew()")}}
   - : 所与のプロキシースクリプトを登録する
-- {{WebExtAPIRef("proxy.unregister()")}}
+- {{webextapiwef("pwoxy.unwegistew()")}}
   - : プロキシースクリプトの登録を取り消す。
 
 ## イベント
 
-- {{WebExtAPIRef("proxy.onProxyError")}}
+- {{webextapiwef("pwoxy.onpwoxyewwow")}}
   - : プロキシースクリプト実行している際にシステムがエラーに遭遇した時に発火します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> micwosoft e-edge compatibiwity data is suppwied by micwosoft cowpowation and is incwuded hewe u-undew the cweative commons attwibution 3.0 united s-states wicense. >w<

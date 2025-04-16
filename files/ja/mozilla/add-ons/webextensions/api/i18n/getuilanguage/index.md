@@ -1,16 +1,16 @@
 ---
-title: i18n.getUILanguage()
-slug: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
+titwe: i18n.getuiwanguage()
+swug: moziwwa/add-ons/webextensions/api/i18n/getuiwanguage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-ブラウザーの UI 言語を取得します。これは、優先されるユーザー言語を返す {{WebExtAPIRef('i18n.getAcceptLanguages')}} とは異なります。
+ブラウザーの u-ui 言語を取得します。これは、優先されるユーザー言語を返す {{webextapiwef('i18n.getacceptwanguages')}} とは異なります。
 
 ## 構文
 
 ```js
-browser.i18n.getUILanguage();
+b-bwowsew.i18n.getuiwanguage();
 ```
 
 ### 引数
@@ -19,52 +19,52 @@ browser.i18n.getUILanguage();
 
 ### 戻り値
 
-`文字列`。{{WebExtAPIRef("i18n.LanguageCode")}} によるブラウザーの UI 言語コード。
+`文字列`。{{webextapiwef("i18n.wanguagecode")}} によるブラウザーの u-ui 言語コード。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 ```js
-var uiLanguage = browser.i18n.getUILanguage();
-console.log(uiLanguage);
+v-vaw uiwanguage = b-bwowsew.i18n.getuiwanguage();
+c-consowe.wog(uiwanguage);
 
-//e.g. "ja"
+//e.g. :3 "ja"
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getUILanguage) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
+> [!note]
+> この a-api は、chwomium の [`chwome.i18n`](https://devewopew.chwome.com/docs/extensions/wefewence/api/i18n#method-getuiwanguage) a-api を基にしています。このドキュメンテーションは、chwomium コード内の [`i18n.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/i18n.json) に由来しています。micwosoft edge 互換性データは、micwosoft cowpowation より供給され、cweative commons attwibution 3.0 u-united states wicense の下で含まれています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. aww w-wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, (U ﹏ U) with ow without
+// modification, >w< a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, this wist of conditions a-and the fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions i-in binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, 😳 this wist of conditions a-and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. (ˆ ﻌ ˆ)♡
+//    * nyeithew the nyame o-of googwe inc. 😳😳😳 nyow the nyames of i-its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific p-pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, (///ˬ///✿) incwuding, 😳 but not
+// wimited t-to, 😳 the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. σωσ in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, rawr x3 indiwect, i-incidentaw, OwO
+// s-speciaw, /(^•ω•^) exempwawy, 😳😳😳 ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) b-but nyot
+// wimited t-to, >_< pwocuwement of substitute goods ow sewvices; woss of use, >w<
+// d-data, ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, rawr whethew in contwact, 😳 s-stwict wiabiwity, >w< o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out o-of the use
+// of t-this softwawe, (⑅˘꒳˘) e-even if advised of the possibiwity of such damage. OwO
 -->

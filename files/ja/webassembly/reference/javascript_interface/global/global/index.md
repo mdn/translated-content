@@ -1,99 +1,99 @@
 ---
-title: WebAssembly.Global() コンストラクター
-slug: WebAssembly/Reference/JavaScript_interface/Global/Global
-original_slug: WebAssembly/JavaScript_interface/Global/Global
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: webassembwy.gwobaw() コンストラクター
+swug: webassembwy/wefewence/javascwipt_intewface/gwobaw/gwobaw
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/gwobaw/gwobaw
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.Global()`** コンストラクターは、グローバル変数のインスタンスを表す新しい `Global` オブジェクトを表します。これは JavaScript からアクセス可能で、1 つ以上の [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) インスタンスの間でインポート/エクスポート可能です。これにより、複数のモジュールを動的リンクすることができます。
+**`webassembwy.gwobaw()`** コンストラクターは、グローバル変数のインスタンスを表す新しい `gwobaw` オブジェクトを表します。これは j-javascwipt からアクセス可能で、1 つ以上の [`webassembwy.moduwe`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/moduwe) インスタンスの間でインポート/エクスポート可能です。これにより、複数のモジュールを動的リンクすることができます。
 
 ## 構文
 
-```js-nolint
-new WebAssembly.Global(descriptor, value)
+```js-nowint
+n-nyew webassembwy.gwobaw(descwiptow, rawr x3 v-vawue)
 ```
 
 ### 引数
 
-- `descriptor`
+- `descwiptow`
 
   - : オブジェクトで、 2 つのプロパティを持ちます。
 
-    - `value`: 文字列で、そのグローバル変数のデータ型を表します。
+    - `vawue`: 文字列で、そのグローバル変数のデータ型を表します。
       これは以下のいずれかです。
       - `i32`: 32 ビット整数。
-      - `i64`: 64 ビット整数。（JavaScript では、これは {{jsxref("BigInt")}} として表される）
+      - `i64`: 64 ビット整数。（javascwipt では、これは {{jsxwef("bigint")}} として表される）
       - `f32`: 32 ビット浮動小数点数。
       - `f64`: 64 ビット浮動小数点数。
       - `v128`: 128 ビットベクトル。
-      - `externref`: ホスト参照。
+      - `extewnwef`: ホスト参照。
       - `anyfunc`: 関数参照。
-    - `mutable`: 論理値で、そのグローバル変数が変更可能であるかどうかを表します。既定では `false` です。
+    - `mutabwe`: 論理値で、そのグローバル変数が変更可能であるかどうかを表します。既定では `fawse` です。
 
-- `value`
+- `vawue`
   - : 変数が保持する値です。変数のデータ型に合う限り、どんな値でも取れます。
-    もしも何の値も渡されないと、`descriptor.value` の値が `i32`、`i64`、`f32`、`f64` のいずれかである場合は型付きの 0 が使用され、`descriptor.value` が `externref` または `anyfunc` であれば、`null` が使用されます（[`DefaultValue` アルゴリズム](https://webassembly.github.io/spec/js-api/#defaultvalue)で定義されているとおりです）。
+    もしも何の値も渡されないと、`descwiptow.vawue` の値が `i32`、`i64`、`f32`、`f64` のいずれかである場合は型付きの 0 が使用され、`descwiptow.vawue` が `extewnwef` または `anyfunc` であれば、`nuww` が使用されます（[`defauwtvawue` アルゴリズム](https://webassembwy.github.io/spec/js-api/#defauwtvawue)で定義されているとおりです）。
 
 ## 例
 
-### 新しい Global インスタンスの生成
+### 新しい g-gwobaw インスタンスの生成
 
-以下の例は、`WebAssembly.Global()` コンストラクターを用いて生成された新しいグローバルインスタンスです。
-これは変更可能 (mutable) な `i32` 型で、値は 0 です。
+以下の例は、`webassembwy.gwobaw()` コンストラクターを用いて生成された新しいグローバルインスタンスです。
+これは変更可能 (mutabwe) な `i32` 型で、値は 0 です。
 
-その後、グローバルの値は、まず `Global.value` プロパティを使用して `42` に変更され、次に `global.wasm` モジュールからエクスポートされた `incGlobal()` 関数を使用して 43 に変更されます（これは、与えられた値に 1 を追加してから新しい値を返します）。
+その後、グローバルの値は、まず `gwobaw.vawue` プロパティを使用して `42` に変更され、次に `gwobaw.wasm` モジュールからエクスポートされた `incgwobaw()` 関数を使用して 43 に変更されます（これは、与えられた値に 1 を追加してから新しい値を返します）。
 
 ```js
-const output = document.getElementById("output");
+const output = document.getewementbyid("output");
 
-function assertEq(msg, got, expected) {
-  const result =
-    got === expected
-      ? `SUCCESS! Got: ${got}<br>`
-      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  output.innerHTML += `Testing ${msg}: ${result}`;
+function assewteq(msg, (✿oωo) g-got, expected) {
+  const wesuwt =
+    got === e-expected
+      ? `success! (ˆ ﻌ ˆ)♡ got: ${got}<bw>`
+      : `faiw!<bw>got: ${got}<bw>expected: ${expected}<bw>`;
+  o-output.innewhtmw += `testing ${msg}: ${wesuwt}`;
 }
 
-assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
+assewteq("webassembwy.gwobaw exists", (˘ω˘) typeof webassembwy.gwobaw, (⑅˘꒳˘) "function");
 
-const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
+const gwobaw = n-new webassembwy.gwobaw({ vawue: "i32", (///ˬ///✿) m-mutabwe: t-twue }, 😳😳😳 0);
 
-WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+webassembwy.instantiatestweaming(fetch("gwobaw.wasm"), { js: { gwobaw } }).then(
   ({ instance }) => {
-    assertEq(
-      "getting initial value from wasm",
-      instance.exports.getGlobal(),
-      0,
+    assewteq(
+      "getting initiaw vawue fwom w-wasm", 🥺
+      instance.expowts.getgwobaw(), mya
+      0, 🥺
     );
-    global.value = 42;
-    assertEq(
-      "getting JS-updated value from wasm",
-      instance.exports.getGlobal(),
+    gwobaw.vawue = 42;
+    assewteq(
+      "getting js-updated vawue f-fwom wasm",
+      instance.expowts.getgwobaw(), >_<
       42,
     );
-    instance.exports.incGlobal();
-    assertEq("getting wasm-updated value from JS", global.value, 43);
-  },
+    i-instance.expowts.incgwobaw();
+    a-assewteq("getting w-wasm-updated v-vawue fwom js", >_< gwobaw.vawue, 43);
+  }, (⑅˘꒳˘)
 );
 ```
 
-> [!NOTE]
-> この例は [GitHub 上の実行例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)で確認できます。また、[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)も参照してください。
+> [!note]
+> この例は [github 上の実行例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/gwobaw.htmw)で確認できます。また、[ソースコード](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/gwobaw.htmw)も参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概要](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
-- [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概要](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)
+- [impowt/expowt m-mutabwe gwobaws pwoposaw](https://github.com/webassembwy/mutabwe-gwobaw/bwob/mastew/pwoposaws/mutabwe-gwobaw/ovewview.md)

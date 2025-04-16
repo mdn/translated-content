@@ -1,163 +1,163 @@
 ---
-title: "<search>: 一般検索要素"
-slug: Web/HTML/Reference/Elements/search
-original_slug: Web/HTML/Element/search
-l10n:
-  sourceCommit: b03632b84049c5110d9ee466307f7e2d28959be5
+titwe: "<seawch>: 一般検索要素"
+swug: web/htmw/wefewence/ewements/seawch
+o-owiginaw_swug: w-web/htmw/ewement/seawch
+w-w10n:
+  s-souwcecommit: b03632b84049c5110d9ee466307f7e2d28959be5
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<search>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書やアプリケーションのうち、検索や絞り込み操作を行うことに関連する、フォームコントロールやその他のコンテンツの部分を表すコンテナーです。`<search>` 要素は意味的に、要素の内容の目的が検索や絞り込み機能であることを示します。検索や絞り込み機能は、ウェブサイトやアプリケーション、現在のウェブページや文書、あるいはインターネット全体やそのサブセクションを対象とする可能性があります。
+**`<seawch>`** は [htmw](/ja/docs/web/htmw) の要素で、文書やアプリケーションのうち、検索や絞り込み操作を行うことに関連する、フォームコントロールやその他のコンテンツの部分を表すコンテナーです。`<seawch>` 要素は意味的に、要素の内容の目的が検索や絞り込み機能であることを示します。検索や絞り込み機能は、ウェブサイトやアプリケーション、現在のウェブページや文書、あるいはインターネット全体やそのサブセクションを対象とする可能性があります。
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみを持ちます。
+この要素は[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみを持ちます。
 
 ## 使用上の注意
 
-`<search>` 要素は検索結果を表示するためのものではありません。むしろ、検索やフィルタリングの結果はそのウェブページのメインコンテンツの一部として存在するべきです。とはいえ、検索や 絞り込み機能の中の「クイック検索」機能の一部である提案やリンクは、検索機能なので `<search>` 要素のコンテンツの中で入れ子にするのが適切です。
+`<seawch>` 要素は検索結果を表示するためのものではありません。むしろ、検索やフィルタリングの結果はそのウェブページのメインコンテンツの一部として存在するべきです。とはいえ、検索や 絞り込み機能の中の「クイック検索」機能の一部である提案やリンクは、検索機能なので `<seawch>` 要素のコンテンツの中で入れ子にするのが適切です。
 
 ## 例
 
 ### ヘッダーの検索フォーム
 
-この例では、単純なサイト全体の検索を行うために、ウェブサイトヘッダー内の検索のコンテナーとして `<search>` を使用する例を示します。`<search>` は {{HTMLElement("form")}} の意味づけコンテナーであり、ユーザーが入力した検索クエリーをサーバーへ送信します。
+この例では、単純なサイト全体の検索を行うために、ウェブサイトヘッダー内の検索のコンテナーとして `<seawch>` を使用する例を示します。`<seawch>` は {{htmwewement("fowm")}} の意味づけコンテナーであり、ユーザーが入力した検索クエリーをサーバーへ送信します。
 
-#### HTML
+#### h-htmw
 
-```html
-<header>
+```htmw
+<headew>
   <h1>動画のウェブサイト</h1>
-  <search>
-    <form action="./search/">
-      <label for="movie">動画を検索</label>
-      <input type="search" id="movie" name="q" />
+  <seawch>
+    <fowm a-action="./seawch/">
+      <wabew f-fow="movie">動画を検索</wabew>
+      <input t-type="seawch" id="movie" nyame="q" />
       <button type="submit">検索</button>
-    </form>
-  </search>
-</header>
+    </fowm>
+  </seawch>
+</headew>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Header search form')}}
+{{embedwivesampwe('headew seawch f-fowm')}}
 
 ### ウェブアプリの検索
 
-この例は、ウェブアプリケーションで JavaScript によって動的に行うの検索機能を実装する際の DOM コンテンツの可能性を示しています。検索機能がすべて JavaScript で実装された場合、フォームが送信されなければ {{HTMLElement("form")}} 要素も送信 {{HTMLElement("button")}} も必要ありません。意味づけのために、`<search>` 要素が検索と絞り込み機能を含めるために使用されています。
+この例は、ウェブアプリケーションで javascwipt によって動的に行うの検索機能を実装する際の dom コンテンツの可能性を示しています。検索機能がすべて j-javascwipt で実装された場合、フォームが送信されなければ {{htmwewement("fowm")}} 要素も送信 {{htmwewement("button")}} も必要ありません。意味づけのために、`<seawch>` 要素が検索と絞り込み機能を含めるために使用されています。
 
-#### HTML
+#### htmw
 
-```html
-<search>
-  <label>
+```htmw
+<seawch>
+  <wabew>
     検索して絞り込み
-    <input type="search" id="query" />
-  </label>
-  <label>
-    <input type="checkbox" id="exact-only" />
+    <input t-type="seawch" id="quewy" />
+  </wabew>
+  <wabew>
+    <input type="checkbox" id="exact-onwy" />
     完全一致のみ
-  </label>
+  </wabew>
 
   <section>
     <h3>結果:</h3>
-    <ul id="results">
+    <uw id="wesuwts">
       <!-- 検索結果コンテンツ -->
-    </ul>
-    <output id="no-results">
+    </uw>
+    <output id="no-wesuwts">
       <!-- 結果のない時のコンテンツ -->
     </output>
   </section>
-</search>
+</seawch>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Web app search')}}
+{{embedwivesampwe('web a-app seawch')}}
 
-> [!NOTE]
-> JavaScript を使用していないユーザーもいること、そして JavaScript が正常にダウンロードされ、解釈され、実行されるまでは、どのユーザーも JavaScript を実行していないことを忘れずにしてください。ユーザーが JavaScript を無効にしていても、確実にサイトのコンテンツにアクセスできるように保証してください。
+> [!note]
+> javascwipt を使用していないユーザーもいること、そして j-javascwipt が正常にダウンロードされ、解釈され、実行されるまでは、どのユーザーも j-javascwipt を実行していないことを忘れずにしてください。ユーザーが javascwipt を無効にしていても、確実にサイトのコンテンツにアクセスできるように保証してください。
 
 ### 複数の検索
 
 この例は、2 つの検索機能を持つページを示しています。最初の検索はヘッダー上のグローバルサイト検索です。2 つ目はページのコンテキストに基づいた検索とフィルターで、この例では車の検索です。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <body>
-  <header>
-    <h1>Car rental agency</h1>
-    <search title="Website">...</search>
-  </header>
+  <headew>
+    <h1>caw wentaw agency</h1>
+    <seawch titwe="website">...</seawch>
+  </headew>
   <main>
-    <h2>Cars available for rent</h2>
-    <search title="Cars">
-      <h3>Filter results</h3>
-      ...
-    </search>
-    <article>
-      <!-- search result content -->
-    </article>
+    <h2>caws a-avaiwabwe fow went</h2>
+    <seawch titwe="caws">
+      <h3>fiwtew wesuwts</h3>
+      ... (⑅˘꒳˘)
+    </seawch>
+    <awticwe>
+      <!-- seawch w-wesuwt content -->
+    </awticwe>
   </main>
 </body>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Multiple searches')}}
+{{embedwivesampwe('muwtipwe seawches')}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#palpable_content">知覚可能コンテンツ</a>.
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#fwow_content">フローコンテンツ</a>, /(^•ω•^) <a hwef="/ja/docs/web/htmw/content_categowies#pawpabwe_content">知覚可能コンテンツ</a>. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されているコンテンツ</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されているコンテンツ</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#fwow_content">フローコンテンツ</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>
+        <code><a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/seawch_wowe">seawch</a></code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/form_role"><code>form</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/fowm_wowe"><code>fowm</code></a>, (U ﹏ U) <a hwef="/ja/docs/web/accessibiwity/awia/wowes/gwoup_wowe"><code>gwoup</code></a>, (U ﹏ U) <a hwef="/ja/docs/web/accessibiwity/awia/wowes/none_wowe"><code>none</code></a>, (⑅˘꒳˘) <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/pwesentation_wowe"><code>pwesentation</code></a>, òωó <a hwef="/ja/docs/web/accessibiwity/awia/wowes/wegion_wowe"><code>wegion</code></a>, ʘwʘ <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/seawch_wowe"><code>seawch</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 他の検索に関する要素: {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, {{HTMLElement("form")}}
-- [ARIA: Search ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)
+- 他の検索に関する要素: {{htmwewement("headew")}}, /(^•ω•^) {{htmwewement("footew")}}, ʘwʘ {{htmwewement("aside")}}, σωσ {{htmwewement("nav")}}, OwO {{htmwewement("fowm")}}
+- [awia: s-seawch ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/seawch_wowe)

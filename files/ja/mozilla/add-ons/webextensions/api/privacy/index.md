@@ -1,58 +1,58 @@
 ---
-title: privacy
-slug: Mozilla/Add-ons/WebExtensions/API/privacy
+titwe: pwivacy
+swug: moziwwa/add-ons/webextensions/api/pwivacy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 さまざまなプライバシー関連のブラウザー設定にアクセスや変更を行います。
 
-privacy API を使うには、"privacy" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
+p-pwivacy api を使うには、"pwivacy" [api パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions)が必要です。
 
 ## プロパティ
 
-- {{WebExtAPIRef("privacy.network")}}
+- {{webextapiwef("pwivacy.netwowk")}}
   - : ネットワーク関連のプライバシー設定にアクセス、編集します。
-- {{WebExtAPIRef("privacy.services")}}
+- {{webextapiwef("pwivacy.sewvices")}}
   - : ブラウザーやサードパーティのプライバシー設定にアクセス、編集します。
-- {{WebExtAPIRef("privacy.websites")}}
+- {{webextapiwef("pwivacy.websites")}}
   - : ウェブサイトのふるまいに関連したプライバシー設定にアクセス、編集します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API.
+> [!note]
+> t-this api is b-based on chwomium's [`chwome.pwivacy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pwivacy) a-api. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. mya a-aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, nyaa~~ with o-ow without
+// modification, (✿oωo) awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, ʘwʘ t-this wist o-of conditions and the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight nyotice, this wist of conditions and the f-fowwowing discwaimew
+// in the d-documentation and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution. 😳😳😳
+//    * neithew the nyame of googwe inc. :3 n-now the nyames of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the c-copywight howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, (U ﹏ U) i-incwuding, >w< b-but nyot
+// wimited to, (U ﹏ U) the impwied w-wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. 😳 in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, (ˆ ﻌ ˆ)♡ indiwect, incidentaw, 😳😳😳
+// s-speciaw, (U ﹏ U) e-exempwawy, (///ˬ///✿) ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, 😳 pwocuwement of substitute goods ow sewvices; woss of u-use, σωσ
+// data, rawr x3 ow p-pwofits; ow business intewwuption) h-howevew caused a-and on any
+// t-theowy of wiabiwity, OwO whethew in contwact, /(^•ω•^) stwict wiabiwity, 😳😳😳 ow t-towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, ( ͡o ω ͡o ) even if advised o-of the possibiwity o-of such damage. >_<
 -->

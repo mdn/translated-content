@@ -1,99 +1,99 @@
 ---
-title: "<track>: 埋め込みテキストトラック要素"
-slug: Web/HTML/Reference/Elements/track
-original_slug: Web/HTML/Element/track
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<twack>: 埋め込みテキストトラック要素"
+swug: web/htmw/wefewence/ewements/twack
+o-owiginaw_swug: w-web/htmw/ewement/twack
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<track>`** は [HTML](/ja/docs/Web/HTML) の要素で、メディア要素 ({{HTMLElement("audio")}} および {{HTMLElement("video")}}) の子として使用します。この要素は自動的に処理される字幕など、時間指定されたテキストトラック (または時系列データ) を指定することができます。トラックは [WebVTT 形式](/ja/docs/Web/API/WebVTT_API) (`.vtt` ファイル) を用います。
+**`<twack>`** は [htmw](/ja/docs/web/htmw) の要素で、メディア要素 ({{htmwewement("audio")}} および {{htmwewement("video")}}) の子として使用します。この要素は自動的に処理される字幕など、時間指定されたテキストトラック (または時系列データ) を指定することができます。トラックは [webvtt 形式](/ja/docs/web/api/webvtt_api) (`.vtt` ファイル) を用います。
 
-{{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;twack&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
-<video controls src="/shared-assets/videos/friday.mp4">
-  <track
-    default
+```htmw i-intewactive-exampwe
+<video c-contwows s-swc="/shawed-assets/videos/fwiday.mp4">
+  <twack
+    defauwt
     kind="captions"
-    srclang="en"
-    src="/shared-assets/misc/friday.vtt" />
-  Download the
-  <a href="/shared-assets/videos/friday.mp4">MP4</a>
-  video, and
-  <a href="/shared-assets/misc/friday.vtt">subtitles</a>.
+    swcwang="en"
+    swc="/shawed-assets/misc/fwiday.vtt" />
+  d-downwoad the
+  <a hwef="/shawed-assets/videos/fwiday.mp4">mp4</a>
+  video, nyaa~~ a-and
+  <a hwef="/shawed-assets/misc/fwiday.vtt">subtitwes</a>. nyaa~~
 </video>
 ```
 
-```css interactive-example
-video {
+```css intewactive-exampwe
+v-video {
   width: 250px;
 }
 
 video::cue {
-  font-size: 1rem;
+  font-size: 1wem;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>なし。この要素は{{Glossary("void element", "空要素")}}です。</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+      <td>none</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
+      <td>なし。この要素は{{gwossawy("void ewement", "空要素")}}です。</td>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>
         空要素であるため開始タグは必須、また終了タグを置いてはなりません。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
         <p>
-          メディア要素、 {{HTMLElement("audio")}} または {{HTMLElement("video")}}
+          メディア要素、 {{htmwewement("audio")}} または {{htmwewement("video")}}
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLTrackElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwtwackewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `default`
-  - : この属性は、別の track が適切であるとユーザーの設定が示さない限り有効にすべき track であることを表します。この属性はメディア要素ごとに 1 つの `track` 要素のみで使用できます。
+- `defauwt`
+  - : この属性は、別の twack が適切であるとユーザーの設定が示さない限り有効にすべき t-twack であることを表します。この属性はメディア要素ごとに 1 つの `twack` 要素のみで使用できます。
 - `kind`
 
-  - : どのように使用するトラックであるかをを表します。省略した場合、既定の種類は `subtitles` です。属性に無効な値が含まれている場合は `metadata` を使用します (バージョン 52 より前の Chrome は、無効な値を `subtitles` として扱っていました)。以下のキーワードが利用できます。
+  - : どのように使用するトラックであるかをを表します。省略した場合、既定の種類は `subtitwes` です。属性に無効な値が含まれている場合は `metadata` を使用します (バージョン 52 より前の chwome は、無効な値を `subtitwes` として扱っていました)。以下のキーワードが利用できます。
 
-    - `subtitles`
+    - `subtitwes`
 
       - 字幕は、視聴者が理解できないコンテンツの翻訳を提供します。例えば、英語の映画における英語以外の言語による会話やテキストです。
       - 字幕には追加コンテンツ、一般的には付加的な背景情報を含む場合があります。例えばスターウォーズの冒頭のテキストや、シーンの日時および場所です。
@@ -104,12 +104,12 @@ video::cue {
       - これは音楽のキューやサウンドエフェクトといった重要な非言語情報を含む場合があります。これはキューのソース (例: 音楽、テキスト、キャラクター) を示すでしょう。
       - 耳が不自由なユーザーや音声をミュートしている場合に適しています。
 
-    - `descriptions`
+    - `descwiptions`
 
       - テキストによる動画コンテンツの説明です。
       - 目が不自由なユーザーや動画を視聴できない場合に適しています。
 
-    - `chapters`
+    - `chaptews`
 
       - チャプタータイトルは、ユーザーがメディアリソースの操作を行う際に使用することを意図しています。
 
@@ -117,65 +117,65 @@ video::cue {
 
       - スクリプトが使用するトラック情報です。ユーザーには見えません。
 
-- `label`
+- `wabew`
   - : 使用可能なテキストトラックを一覧表示する際にブラウザーが使用する、ユーザーに見せるテキストトラックのタイトルです。
-- `src`
-  - : トラック（`.vtt` ファイル）のアドレスです。有効な URL であることが必要です。この属性は定義する必要があり、 URL の値は文書として — `track` 要素の親要素である {{HTMLElement("audio")}} または {{HTMLElement("video")}} が [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性を持たない限り — 同じオリジンを持たなければなりません。
-- `srclang`
-  - : テキストデータの言語です。有効な [BCP 47](https://r12a.github.io/app-subtags/) 言語タグであることが必要です。`kind` 属性に `subtitles` を設定した場合は、`srclang` 属性を定義しなければなりません。
+- `swc`
+  - : トラック（`.vtt` ファイル）のアドレスです。有効な u-uww であることが必要です。この属性は定義する必要があり、 u-uww の値は文書として — `twack` 要素の親要素である {{htmwewement("audio")}} または {{htmwewement("video")}} が [`cwossowigin`](/ja/docs/web/htmw/wefewence/attwibutes/cwossowigin) 属性を持たない限り — 同じオリジンを持たなければなりません。
+- `swcwang`
+  - : テキストデータの言語です。有効な [bcp 47](https://w12a.github.io/app-subtags/) 言語タグであることが必要です。`kind` 属性に `subtitwes` を設定した場合は、`swcwang` 属性を定義しなければなりません。
 
 ## 使用上の注意
 
 ### トラックのデータの種類
 
-`track` 要素でメディアに付加するデータの種類は `kind` 属性で設定します。使用できる値は `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` です。この要素は、ユーザーが付加データを要求した際にブラウザーが提供する、時間指定テキストを含むソースファイルを指示します。
+`twack` 要素でメディアに付加するデータの種類は `kind` 属性で設定します。使用できる値は `subtitwes`, :3 `captions`, `descwiptions`, 😳😳😳 `chaptews`, (˘ω˘) `metadata` です。この要素は、ユーザーが付加データを要求した際にブラウザーが提供する、時間指定テキストを含むソースファイルを指示します。
 
-メディア要素は `kind`、`srclang` および `label` が同一の `track` を複数持つことはできません。
+メディア要素は `kind`、`swcwang` および `wabew` が同一の `twack` を複数持つことはできません。
 
 ### キューの変更の検出
 
-配下にある {{domxref("TextTrack")}} は {{domxref("HTMLTrackElement.track", "track")}} プロパティで示され、現在表示されているキューが変更される度に `cuechange` イベントを受信します。これは、このトラックがメディア要素に関連付けられていない場合でも発生します。
+配下にある {{domxwef("texttwack")}} は {{domxwef("htmwtwackewement.twack", ^^ "twack")}} プロパティで示され、現在表示されているキューが変更される度に `cuechange` イベントを受信します。これは、このトラックがメディア要素に関連付けられていない場合でも発生します。
 
-このトラックがメディア要素に関連付けられている場合、 {{HTMLElement("track")}} を {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の子として使用すると、 `cuechange` イベントは {{domxref("HTMLTrackElement")}} にも送信されます。
+このトラックがメディア要素に関連付けられている場合、 {{htmwewement("twack")}} を {{htmwewement("audio")}} または {{htmwewement("video")}} 要素の子として使用すると、 `cuechange` イベントは {{domxwef("htmwtwackewement")}} にも送信されます。
 
 ```js
-let textTrackElem = document.getElementById("texttrack");
+w-wet texttwackewem = d-document.getewementbyid("texttwack");
 
-textTrackElem.addEventListener("cuechange", (event) => {
-  let cues = event.target.track.activeCues;
+texttwackewem.addeventwistenew("cuechange", (event) => {
+  wet cues = e-event.tawget.twack.activecues;
 });
 ```
 
 ## 例
 
-```html
-<video controls poster="/images/sample.gif">
-  <source src="sample.mp4" type="video/mp4" />
-  <source src="sample.ogv" type="video/ogv" />
-  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
-  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
-  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
-  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
-  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
-  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
-  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
-  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
-  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
-  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
-  <!-- Fallback -->
+```htmw
+<video contwows postew="/images/sampwe.gif">
+  <souwce swc="sampwe.mp4" t-type="video/mp4" />
+  <souwce swc="sampwe.ogv" type="video/ogv" />
+  <twack kind="captions" swc="sampwecaptions.vtt" swcwang="en" />
+  <twack k-kind="descwiptions" swc="sampwedescwiptions.vtt" s-swcwang="en" />
+  <twack k-kind="chaptews" s-swc="sampwechaptews.vtt" swcwang="en" />
+  <twack kind="subtitwes" swc="sampwesubtitwes_de.vtt" s-swcwang="de" />
+  <twack k-kind="subtitwes" swc="sampwesubtitwes_en.vtt" s-swcwang="en" />
+  <twack k-kind="subtitwes" swc="sampwesubtitwes_ja.vtt" s-swcwang="ja" />
+  <twack kind="subtitwes" s-swc="sampwesubtitwes_oz.vtt" swcwang="oz" />
+  <twack kind="metadata" swc="keystage1.vtt" s-swcwang="en" wabew="key s-stage 1" />
+  <twack kind="metadata" s-swc="keystage2.vtt" s-swcwang="en" wabew="key stage 2" />
+  <twack kind="metadata" swc="keystage3.vtt" swcwang="en" wabew="key s-stage 3" />
+  <!-- f-fawwback -->
   …
 </video>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVTT テキストトラック形式](/ja/docs/Web/API/WebVTT_API)
-- {{domxref("HTMLMediaElement.textTracks")}}
+- [webvtt テキストトラック形式](/ja/docs/web/api/webvtt_api)
+- {{domxwef("htmwmediaewement.texttwacks")}}

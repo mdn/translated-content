@@ -1,11 +1,11 @@
 ---
-title: Firefox 37 for developers
-slug: Mozilla/Firefox/Releases/37
+titwe: fiwefox 37 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/37
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 37 の変更点をまとめています。
+fiwefox 37 は、米国時間 2015 年 3 月 31 日にリリースされました。このページでは、開発者に影響する f-fiwefox 37 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -13,94 +13,94 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 
 ハイライト:
 
-- [ネットワークモニタの Security パネル](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#security)
-- [インスペクターのアニメーションパネル](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox_37)
-- [WebIDE でカスタムビルドステップの実行をサポート](/ja/docs/Tools/WebIDE/Running_and_debugging_apps#Running_a_custom_build_step)
+- [ネットワークモニタの s-secuwity パネル](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw#secuwity)
+- [インスペクターのアニメーションパネル](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/wowk_with_animations/index.htmw#fiwefox_37)
+- [webide でカスタムビルドステップの実行をサポート](/ja/docs/toows/webide/wunning_and_debugging_apps#wunning_a_custom_buiwd_step)
 
-[Firefox 36 から Firefox 37 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-01-12&chfield=resolution&query_format=advanced&chfieldfrom=2014-11-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=11892733)
+[fiwefox 36 から fiwefox 37 の間に解決した開発ツール関連のバグ一覧](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&cwassification=cwient%20softwawe&chfiewdto=2015-01-12&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-11-28&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&component=devewopew%20toows&component=devewopew%20toows%3a%203d%20view&component=devewopew%20toows%3a%20canvas%20debuggew&component=devewopew%20toows%3a%20consowe&component=devewopew%20toows%3a%20debuggew&component=devewopew%20toows%3a%20fwamewowk&component=devewopew%20toows%3a%20gwaphic%20commandwine%20and%20toowbaw&component=devewopew%20toows%3a%20inspectow&component=devewopew%20toows%3a%20memowy&component=devewopew%20toows%3a%20netmonitow&component=devewopew%20toows%3a%20object%20inspectow&component=devewopew%20toows%3a%20pwofiwew&component=devewopew%20toows%3a%20wesponsive%20mode&component=devewopew%20toows%3a%20scwatchpad&component=devewopew%20toows%3a%20souwce%20editow&component=devewopew%20toows%3a%20stowage%20inspectow&component=devewopew%20toows%3a%20stywe%20editow&component=devewopew%20toows%3a%20timewine&component=devewopew%20toows%3a%20usew%20stowies&component=devewopew%20toows%3a%20web%20audio%20editow&component=devewopew%20toows%3a%20webgw%20shadew%20editow&component=devewopew%20toows%3a%20webide&pwoduct=fiwefox&wist_id=11892733)
 
-### CSS
+### c-css
 
-- {{cssxref("display")}}`: contents` をデフォルトで有効にしました ([Firefox バグ 1102374](https://bugzil.la/1102374) および [Firefox バグ 1105369](https://bugzil.la/1105369))。
-- [CSS マルチカラムレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)が、{{cssxref("display")}}`: table-caption` を適用した要素で動作するようになりました ([Firefox バグ 1109571](https://bugzil.la/1109571))。
-- テーブルセルの相対配置 ({{cssxref("position")}}`: relative`) を実装しました ([Firefox バグ 35168](https://bugzil.la/35168))。
-- Quirks モードで、{{cssxref("empty-cells")}} の動作を削除しました。Standard モードと同様に、デフォルトが `show` になります ([Firefox バグ 1020400](https://bugzil.la/1020400))。
+- {{cssxwef("dispway")}}`: c-contents` をデフォルトで有効にしました ([fiwefox バグ 1102374](https://bugziw.wa/1102374) および [fiwefox バグ 1105369](https://bugziw.wa/1105369))。
+- [css マルチカラムレイアウト](/ja/docs/web/css/css_muwticow_wayout/using_muwticow_wayouts)が、{{cssxwef("dispway")}}`: t-tabwe-caption` を適用した要素で動作するようになりました ([fiwefox バグ 1109571](https://bugziw.wa/1109571))。
+- テーブルセルの相対配置 ({{cssxwef("position")}}`: w-wewative`) を実装しました ([fiwefox バグ 35168](https://bugziw.wa/35168))。
+- q-quiwks モードで、{{cssxwef("empty-cewws")}} の動作を削除しました。standawd モードと同様に、デフォルトが `show` になります ([fiwefox バグ 1020400](https://bugziw.wa/1020400))。
 
-### HTML
+### htmw
 
-- リンクを新しいタブで開く場合でも、`<a rel="noreferrer">` が機能するようになりました ([Firefox バグ 1031264](https://bugzil.la/1031264))。
-- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザーに提示するとき、指定した拡張子でフィルターします ([Firefox バグ 826176](https://bugzil.la/826176))。
+- リンクを新しいタブで開く場合でも、`<a wew="nowefewwew">` が機能するようになりました ([fiwefox バグ 1031264](https://bugziw.wa/1031264))。
+- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザーに提示するとき、指定した拡張子でフィルターします ([fiwefox バグ 826176](https://bugziw.wa/826176))。
 
-### JavaScript
+### javascwipt
 
-- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクターは、引数 iterable で値 null を無視するようになりました ([Firefox バグ 1092538](https://bugzil.la/1092538))。
-- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクターで、モンキーパッチを使用した `prototype.set` または `prototype.add` をサポートしました ([Firefox バグ 804279](https://bugzil.la/804279))。
-- 非標準の {{jsxref("String.quote","String.prototype.quote()")}} メソッドを削除しました ([Firefox バグ 1103181](https://bugzil.la/1103181))。
-- {{jsxref("RegExp.prototype.flags")}} プロパティを実装しました ([Firefox バグ 1108467](https://bugzil.la/1108467))。
-- {{jsxref("Array")}} のメソッドのいくつかを、[Typed Array](/ja/docs/Web/JavaScript/Guide/Typed_arrays) にも実装しました:
+- {{jsxwef("map")}}、{{jsxwef("set")}}、{{jsxwef("weakmap")}}、{{jsxwef("weakset")}} コンストラクターは、引数 i-itewabwe で値 nyuww を無視するようになりました ([fiwefox バグ 1092538](https://bugziw.wa/1092538))。
+- {{jsxwef("map")}}、{{jsxwef("set")}}、{{jsxwef("weakmap")}}、{{jsxwef("weakset")}} コンストラクターで、モンキーパッチを使用した `pwototype.set` または `pwototype.add` をサポートしました ([fiwefox バグ 804279](https://bugziw.wa/804279))。
+- 非標準の {{jsxwef("stwing.quote","stwing.pwototype.quote()")}} メソッドを削除しました ([fiwefox バグ 1103181](https://bugziw.wa/1103181))。
+- {{jsxwef("wegexp.pwototype.fwags")}} プロパティを実装しました ([fiwefox バグ 1108467](https://bugziw.wa/1108467))。
+- {{jsxwef("awway")}} のメソッドのいくつかを、[typed awway](/ja/docs/web/javascwipt/guide/typed_awways) にも実装しました:
 
-  - {{jsxref("TypedArray.every", "every()")}} および {{jsxref("TypedArray.some", "some()")}} メソッド ([Firefox バグ 1116390](https://bugzil.la/1116390))。
-  - {{jsxref("TypedArray.find", "find()")}} および {{jsxref("TypedArray.findIndex", "findIndex()")}} メソッド ([Firefox バグ 1078975](https://bugzil.la/1078975))。
-  - {{jsxref("TypedArray.fill", "fill()")}} メソッド ([Firefox バグ 1113722](https://bugzil.la/1113722))。
-  - {{jsxref("TypedArray.indexOf", "indexOf()")}} および {{jsxref("TypedArray.lastIndexOf", "lastIndexOf()")}} メソッド ([Firefox バグ 1107601](https://bugzil.la/1107601))。
-  - {{jsxref("TypedArray.join", "join()")}} メソッド ([Firefox バグ 1115817](https://bugzil.la/1115817))。
-  - {{jsxref("TypedArray.reduce", "reduce()")}} および {{jsxref("TypedArray.reduceRight", "reduceRight()")}} メソッド ([Firefox バグ 1117350](https://bugzil.la/1117350))。
-  - {{jsxref("TypedArray.reverse", "reverse()")}} メソッド ([Firefox バグ 1111516](https://bugzil.la/1111516))。
-  - {{jsxref("TypedArray.keys", "keys()")}}、{{jsxref("TypedArray.values", "values()")}}、{{jsxref("TypedArray.entries", "entries()")}} メソッド ([Firefox バグ 1119217](https://bugzil.la/1119217))。
+  - {{jsxwef("typedawway.evewy", /(^•ω•^) "evewy()")}} および {{jsxwef("typedawway.some", rawr "some()")}} メソッド ([fiwefox バグ 1116390](https://bugziw.wa/1116390))。
+  - {{jsxwef("typedawway.find", OwO "find()")}} および {{jsxwef("typedawway.findindex", (U ﹏ U) "findindex()")}} メソッド ([fiwefox バグ 1078975](https://bugziw.wa/1078975))。
+  - {{jsxwef("typedawway.fiww", >_< "fiww()")}} メソッド ([fiwefox バグ 1113722](https://bugziw.wa/1113722))。
+  - {{jsxwef("typedawway.indexof", rawr x3 "indexof()")}} および {{jsxwef("typedawway.wastindexof", mya "wastindexof()")}} メソッド ([fiwefox バグ 1107601](https://bugziw.wa/1107601))。
+  - {{jsxwef("typedawway.join", "join()")}} メソッド ([fiwefox バグ 1115817](https://bugziw.wa/1115817))。
+  - {{jsxwef("typedawway.weduce", nyaa~~ "weduce()")}} および {{jsxwef("typedawway.weducewight", (⑅˘꒳˘) "weducewight()")}} メソッド ([fiwefox バグ 1117350](https://bugziw.wa/1117350))。
+  - {{jsxwef("typedawway.wevewse", rawr x3 "wevewse()")}} メソッド ([fiwefox バグ 1111516](https://bugziw.wa/1111516))。
+  - {{jsxwef("typedawway.keys", "keys()")}}、{{jsxwef("typedawway.vawues", (✿oωo) "vawues()")}}、{{jsxwef("typedawway.entwies", (ˆ ﻌ ˆ)♡ "entwies()")}} メソッド ([fiwefox バグ 1119217](https://bugziw.wa/1119217))。
 
-- ES6 Proxy の {{jsxref("Global_Objects/Proxy/handler/enumerate", "enumerate")}} トラップを実装しました ([Firefox バグ 783829](https://bugzil.la/783829))。
-- ES6 仕様書に基づき、{{jsxref("Function.length")}} プロパティの `configurable` 属性を `true` に変更しました ([Firefox バグ 911142](https://bugzil.la/911142))。
-- [ParallelJS (PJS)](http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism) の開発を中止しました。将来性の乏しさ、関心の薄さ、コードの複雑さが理由です。`Array.prototype.mapPar`、`filterPar`、`reducePar` メソッドといった、Nightly チャンネルのみで有効であった実験的な実装は全面的に削除しました。
+- e-es6 pwoxy の {{jsxwef("gwobaw_objects/pwoxy/handwew/enumewate", (˘ω˘) "enumewate")}} トラップを実装しました ([fiwefox バグ 783829](https://bugziw.wa/783829))。
+- es6 仕様書に基づき、{{jsxwef("function.wength")}} プロパティの `configuwabwe` 属性を `twue` に変更しました ([fiwefox バグ 911142](https://bugziw.wa/911142))。
+- [pawawwewjs (pjs)](http://wiki.ecmascwipt.owg/doku.php?id=stwawman:data_pawawwewism) の開発を中止しました。将来性の乏しさ、関心の薄さ、コードの複雑さが理由です。`awway.pwototype.mappaw`、`fiwtewpaw`、`weducepaw` メソッドといった、nightwy チャンネルのみで有効であった実験的な実装は全面的に削除しました。
 
-### インターフェイス/API/DOM
+### インターフェイス/api/dom
 
-- {{domxref("StereoPannerNode")}} [Web Audio](/ja/docs/Web/API/Web_Audio_API) ノードを実装しました ([Firefox バグ 1100349](https://bugzil.la/1100349))。
-- {{jsxref("Promise")}} ベースの {{domxref("OfflineAudioContext")}} が使用可能になりました ([Firefox バグ 1087944](https://bugzil.la/1087944))。
-- [Service Worker](/ja/docs/Web/API/Service_Worker_API) の実験的な実装 (デフォルトで無効) を進めています。{{domxref("ServiceWorkerGlobalScope.update()")}} を実装しました ([Firefox バグ 1065366](https://bugzil.la/1065366))。
-- [Web workers](/ja/docs/Web/API/Web_Workers_API) で [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) を使用できるようになりました ([Firefox バグ 701634](https://bugzil.la/701634))。
-- WebGL 2.0 の実験的な実装を進めています!
+- {{domxwef("steweopannewnode")}} [web a-audio](/ja/docs/web/api/web_audio_api) ノードを実装しました ([fiwefox バグ 1100349](https://bugziw.wa/1100349))。
+- {{jsxwef("pwomise")}} ベースの {{domxwef("offwineaudiocontext")}} が使用可能になりました ([fiwefox バグ 1087944](https://bugziw.wa/1087944))。
+- [sewvice wowkew](/ja/docs/web/api/sewvice_wowkew_api) の実験的な実装 (デフォルトで無効) を進めています。{{domxwef("sewvicewowkewgwobawscope.update()")}} を実装しました ([fiwefox バグ 1065366](https://bugziw.wa/1065366))。
+- [web wowkews](/ja/docs/web/api/web_wowkews_api) で [indexeddb api](/ja/docs/web/api/indexeddb_api) を使用できるようになりました ([fiwefox バグ 701634](https://bugziw.wa/701634))。
+- w-webgw 2.0 の実験的な実装を進めています! (⑅˘꒳˘)
 
-  - バッファーオブジェクトへのアクセス機能を提供する、{{domxref("WebGL2RenderingContext.getBufferSubData()")}} メソッドを実装しました ([Firefox バグ 1048731](https://bugzil.la/1048731))。
+  - バッファーオブジェクトへのアクセス機能を提供する、{{domxwef("webgw2wendewingcontext.getbuffewsubdata()")}} メソッドを実装しました ([fiwefox バグ 1048731](https://bugziw.wa/1048731))。
 
-- `KeyboardEvent.key` のキー名の一部を、[最新の DOM Level 3 Events 仕様](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-key.html)に準拠するよう変更しました。[MDN で KeyboardEvent.key の値の一覧表](/ja/docs/Web/API/KeyboardEvent/key#key_values)をご覧ください。緑色のセルが新たな値です。また、紫色の値は変更される可能性があります。これらの値を使用する場合は注意してください (キー名の変更に関するメタバグは [Firefox バグ 900372](https://bugzil.la/900372) です)。
-- {{domxref("Console")}} インターフェイスが {{domxref("ServiceWorker")}} および {{domxref("SharedWorker")}} で動作するようになりました。これらは以前から使用できましたが、動作しない状態でした ([Firefox バグ 1058644](https://bugzil.la/1058644))。
+- `keyboawdevent.key` のキー名の一部を、[最新の dom wevew 3 e-events 仕様](https://dvcs.w3.owg/hg/dom3events/waw-fiwe/tip/htmw/dom3events-key.htmw)に準拠するよう変更しました。[mdn で k-keyboawdevent.key の値の一覧表](/ja/docs/web/api/keyboawdevent/key#key_vawues)をご覧ください。緑色のセルが新たな値です。また、紫色の値は変更される可能性があります。これらの値を使用する場合は注意してください (キー名の変更に関するメタバグは [fiwefox バグ 900372](https://bugziw.wa/900372) です)。
+- {{domxwef("consowe")}} インターフェイスが {{domxwef("sewvicewowkew")}} および {{domxwef("shawedwowkew")}} で動作するようになりました。これらは以前から使用できましたが、動作しない状態でした ([fiwefox バグ 1058644](https://bugziw.wa/1058644))。
 
-### MathML
+### mathmw
 
 _変更なし。_
 
-### SVG
+### svg
 
-- SVG2 の `<marker orient="auto-start-reverse">` を実装しました ([Firefox バグ 1107584](https://bugzil.la/1107584))。
+- svg2 の `<mawkew owient="auto-stawt-wevewse">` を実装しました ([fiwefox バグ 1107584](https://bugziw.wa/1107584))。
 
-### Audio/Video
+### audio/video
 
 _変更なし。_
 
 ## ネットワーク
 
-- WebSockets で `permessage` 圧縮法をサポートしました ([Firefox バグ 792831](https://bugzil.la/792831))。サーバーが対応していれば使用できます。
+- w-websockets で `pewmessage` 圧縮法をサポートしました ([fiwefox バグ 792831](https://bugziw.wa/792831))。サーバーが対応していれば使用できます。
 
 ## セキュリティ
 
-- SSL 3.0 や RC4 といった弱いプロトコルや暗号方式をサイトで使用していることを警告するため、それらが使用されたことをコンソールに記録するようになりました ([Firefox バグ 1092835](https://bugzil.la/1092835))。
-- [CSP](/ja/docs/Web/HTTP/Guides/CSP) 1.1 の `referrer` [ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)をサポートしました ([Firefox バグ 965727](https://bugzil.la/965727))。
+- ssw 3.0 や wc4 といった弱いプロトコルや暗号方式をサイトで使用していることを警告するため、それらが使用されたことをコンソールに記録するようになりました ([fiwefox バグ 1092835](https://bugziw.wa/1092835))。
+- [csp](/ja/docs/web/http/guides/csp) 1.1 の `wefewwew` [ディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy)をサポートしました ([fiwefox バグ 965727](https://bugziw.wa/965727))。
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+## アドオン開発者と moziwwa 開発者向けの変更点
 
-### Add-on SDK
+### add-on sdk
 
 _変更なし。_
 
-### XUL
+### x-xuw
 
 _変更なし。_
 
 ## 関連情報
 
-- [Firefox 37 リリースノート](http://www.mozilla.jp/firefox/37.0/releasenotes/)
-- [Firefox 37 アドオン互換性情報](https://dev.mozilla.jp/2015/02/firefox-37-addon-compatibility/)
+- [fiwefox 37 リリースノート](http://www.moziwwa.jp/fiwefox/37.0/weweasenotes/)
+- [fiwefox 37 アドオン互換性情報](https://dev.moziwwa.jp/2015/02/fiwefox-37-addon-compatibiwity/)
 
 ## 過去のバージョン
 
-{{Firefox_for_developers('36')}}
+{{fiwefox_fow_devewopews('36')}}

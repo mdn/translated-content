@@ -1,137 +1,137 @@
 ---
-title: StorageArea.get()
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
+titwe: stowageawea.get()
+swug: m-moziwwa/add-ons/webextensions/api/stowage/stowageawea/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 ストレージ領域から 1 つ以上のアイテムを取得します。
 
-この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+この関数は [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返す非同期関数です。
 
 ## 構文
 
 ```
-let gettingItem = browser.storage.<storageType>.get(
-  keys    // null, string, object or array of strings
+w-wet gettingitem = b-bwowsew.stowage.<stowagetype>.get(
+  keys    // n-nyuww, (˘ω˘) s-stwing, >_< object o-ow awway of stwings
 )
 ```
 
-`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) の書き込み可能なストレージタイプです。
+`<stowagetype>` は [`stowage.sync`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage/sync) または [`stowage.wocaw`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage/wocaw) の書き込み可能なストレージタイプです。
 
 ### 引数
 
 - `keys`
-  - : 取得したいアイテムのキー(文字列・文字列の配列またはデフォルト値を指定するオブジェクト)を指定します。空文字列・オブジェクト・配列を指定すると空のオブジェクトが取得できます。 `null` か未定義の値を指定するとストレージ全体のアイテムが取得できます。
+  - : 取得したいアイテムのキー(文字列・文字列の配列またはデフォルト値を指定するオブジェクト)を指定します。空文字列・オブジェクト・配列を指定すると空のオブジェクトが取得できます。 `nuww` か未定義の値を指定するとストレージ全体のアイテムが取得できます。
 
 ### 返り値
 
-成功時は `keys` で指定されたストレージ領域内のアイテム全てを含む `results` オブジェクトを引数に持つ [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
+成功時は `keys` で指定されたストレージ領域内のアイテム全てを含む `wesuwts` オブジェクトを引数に持つ [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返します。 失敗した場合 p-pwomise はエラーメッセージと共にリジェクトされます。
 
-> [!WARNING]
-> 52 より前の Firefox バージョンのコンテンツスクリプトで使用する場合、 `browser.storage.local.get()` で返される Promise は 1 つのオブジェクトを持つ配列を引数に持ちます。配列内のオブジェクトは上記に記述したようにストレージ領域内の `keys` を持っています。 The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
+> [!wawning]
+> 52 より前の f-fiwefox バージョンのコンテンツスクリプトで使用する場合、 `bwowsew.stowage.wocaw.get()` で返される pwomise は 1 つのオブジェクトを持つ配列を引数に持ちます。配列内のオブジェクトは上記に記述したようにストレージ領域内の `keys` を持っています。 the pwomise is cowwectwy fuwfiwwed with a-an object when used in the backgwound context (backgwound s-scwipts, -.- popups, 🥺 options p-pages, (U ﹏ U) etc.). when this api is used as `chwome.stowage.wocaw.get()`, >w< it cowwectwy p-passes an object to the c-cawwback function. mya
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 あらかじめストレージ領域に 2 つのアイテムを格納しておきます。
 
 ```js
-// "kitten" と "monster" を格納
-browser.storage.local.set({
-  kitten: { name: "Mog", eats: "mice" },
-  monster: { name: "Kraken", eats: "people" },
+// "kitten" と "monstew" を格納
+bwowsew.stowage.wocaw.set({
+  k-kitten: { nyame: "mog", >w< eats: "mice" }, nyaa~~
+  monstew: { nyame: "kwaken", (✿oωo) e-eats: "peopwe" }, ʘwʘ
 });
 ```
 
-次に promise で使う成功時と失敗時のハンドラーを定義しておきます。
+次に pwomise で使う成功時と失敗時のハンドラーを定義しておきます。
 
 ```js
-function onGot(item) {
-  console.log(item);
+function ongot(item) {
+  consowe.wog(item);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 ```
 
 `keys` を指定せずに呼び出すと全て取得します。
 
 ```js
-let gettingItem = browser.storage.local.get();
-gettingItem.then(onGot, onError);
+wet g-gettingitem = bwowsew.stowage.wocaw.get();
+g-gettingitem.then(ongot, (ˆ ﻌ ˆ)♡ o-onewwow);
 
-// -> Object { kitten: Object, monster: Object }
+// -> o-object { kitten: object, 😳😳😳 monstew: object }
 ```
 
 空のキーを指定すると何も返しません。
 
 ```js
 // 空の配列を指定すると何も返らない
-let gettingItem = browser.storage.local.get([]);
-gettingItem.then(onGot, onError);
+w-wet gettingitem = bwowsew.stowage.wocaw.get([]);
+gettingitem.then(ongot, :3 o-onewwow);
 
-// -> Object { }
+// -> object { }
 ```
 
 オブジェクト名を指定すると、合致するものを返します。
 
 ```js
-let gettingItem = browser.storage.local.get("kitten");
-gettingItem.then(onGot, onError);
+wet gettingitem = bwowsew.stowage.wocaw.get("kitten");
+gettingitem.then(ongot, OwO onewwow);
 
-// -> Object { kitten: Object }
+// -> o-object { kitten: object }
 ```
 
 オブジェクト名の配列を指定すると合致するものを全て返します。
 
 ```js
-let gettingItem = browser.storage.local.get([
-  "kitten",
-  "monster",
-  "grapefruit",
+w-wet gettingitem = b-bwowsew.stowage.wocaw.get([
+  "kitten", (U ﹏ U)
+  "monstew", >w<
+  "gwapefwuit", (U ﹏ U)
 ]);
-gettingItem.then(onGot, onError);
+g-gettingitem.then(ongot, 😳 onewwow);
 
-// -> Object { kitten: Object, monster: Object }
+// -> object { kitten: object, (ˆ ﻌ ˆ)♡ m-monstew: object }
 ```
 
-オブジェクト名をキー、デフォルト値を value に指定したオブジェクトを指定する場合
+オブジェクト名をキー、デフォルト値を v-vawue に指定したオブジェクトを指定する場合
 
 ```js
-let gettingItem = browser.storage.local.get({
-  kitten: "no kitten",
-  monster: "no monster",
-  grapefruit: {
-    name: "Grape Fruit",
-    eats: "Water",
+wet gettingitem = b-bwowsew.stowage.wocaw.get({
+  k-kitten: "no kitten", 😳😳😳
+  monstew: "no m-monstew", (U ﹏ U)
+  gwapefwuit: {
+    n-nyame: "gwape fwuit", (///ˬ///✿)
+    eats: "watew", 😳
   },
 });
 
-// -> Object { kitten: Object, monster: Object, grapefruit: Object }
+// -> o-object { kitten: object, 😳 monstew: o-object, gwapefwuit: object }
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-### Chrome での例
+### c-chwome での例
 
 ```js
-chrome.storage.local.get("kitten", function (items) {
-  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
+c-chwome.stowage.wocaw.get("kitten", σωσ function (items) {
+  consowe.wog(items.kitten); // -> {name:"mog", rawr x3 eats:"mice"}
 });
 ```
 
-Or with an arrow function
+ow with an awwow function
 
 ```js
-chrome.storage.local.get("kitten", (items) => {
-  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
+chwome.stowage.wocaw.get("kitten", OwO (items) => {
+  c-consowe.wog(items.kitten); // -> {name:"mog", /(^•ω•^) e-eats:"mice"}
 });
 ```
 
-> [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は c-chwomium の [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage) a-api に基づいています。また、このドキュメントは [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) における c-chwomium のコードに基づいています。micwosoft edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは c-cweative commons attwibution 3.0 united states wicense に従っています。

@@ -1,1971 +1,1971 @@
 ---
-title: Firefox における実験的機能
-slug: Mozilla/Firefox/Experimental_features
+titwe: fiwefox における実験的機能
+swug: m-moziwwa/fiwefox/expewimentaw_featuwes
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、提案されているまたは最先端のウェブプラットフォーム標準を含む、 Firefox の実験的かつ部分的に実装された機能を一覧にしています。また、それらの機能が搭載されているビルドの情報、「既定で」有効になっているかどうか、有効または無効にするためにどの*環境設定*を使用すべきかについても説明しています。
+このページでは、提案されているまたは最先端のウェブプラットフォーム標準を含む、 f-fiwefox の実験的かつ部分的に実装された機能を一覧にしています。また、それらの機能が搭載されているビルドの情報、「既定で」有効になっているかどうか、有効または無効にするためにどの*環境設定*を使用すべきかについても説明しています。
 これにより、機能がリリースされる前に、その機能をテストすることができます。
 
-新機能は、最初に [Firefox Nightly](https://www.mozilla.org/ja/firefox/channel/desktop/) ビルドに登場し、多くの場合、既定で有効化されます。
-その後、 [Firefox Developer Edition](https://www.mozilla.org/ja/firefox/developer/) に引き継がれ、最終的にはリリースビルドになります。
+新機能は、最初に [fiwefox n-nyightwy](https://www.moziwwa.owg/ja/fiwefox/channew/desktop/) ビルドに登場し、多くの場合、既定で有効化されます。
+その後、 [fiwefox d-devewopew e-edition](https://www.moziwwa.owg/ja/fiwefox/devewopew/) に引き継がれ、最終的にはリリースビルドになります。
 リリースビルドにおいて既定で有効化された機能は、もはや実験的なものではないので、このトピックから削除してください。
 
-実験的な機能は、 [Firefox 設定エディター](https://support.mozilla.org/ja/kb/about-config-editor-firefox) (Firefox のアドレスバーに `about:config` と入力) を使って、以下に示す関連する*設定*を変更することで、有効または無効にすることができます。
+実験的な機能は、 [fiwefox 設定エディター](https://suppowt.moziwwa.owg/ja/kb/about-config-editow-fiwefox) (fiwefox のアドレスバーに `about:config` と入力) を使って、以下に示す関連する*設定*を変更することで、有効または無効にすることができます。
 
-> [!NOTE]
-> 編集者の方へ - これらの表に機能を追加する際には、リンク `[Firefox バグ <number>](https://bugzil.la/<number>)` を使って関連するバグへのリンクを含めるようにしてください。
+> [!note]
+> 編集者の方へ - これらの表に機能を追加する際には、リンク `[fiwefox バグ <numbew>](https://bugziw.wa/<numbew>)` を使って関連するバグへのリンクを含めるようにしてください。
 
-## HTML
+## h-htmw
 
-### inert 属性
+### inewt 属性
 
-{{domxref("HTMLElement")}} の {{DOMxRef("HTMLElement.inert")}} プロパティは論理値で、存在する場合、ブラウザーが支援技術、ページ検索、テキスト選択から要素を「無視」するようになります。この機能の状態についての詳細は、 [Firefox バグ 1655722](https://bugzil.la/1655722) を参照してください。
+{{domxwef("htmwewement")}} の {{domxwef("htmwewement.inewt")}} プロパティは論理値で、存在する場合、ブラウザーが支援技術、ページ検索、テキスト選択から要素を「無視」するようになります。この機能の状態についての詳細は、 [fiwefox バグ 1655722](https://bugziw.wa/1655722) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>html5.inert.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2"><code>htmw5.inewt.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### input type="search" のレイアウト
+### input type="seawch" のレイアウト
 
-`input type="search"` のレイアウトが更新されました。これにより、何らかの入力を始めたときに、他のブラウザーの実装と同様にクリアアイコンが現れるようになります。 (詳しくは [Firefox バグ 558594](https://bugzil.la/558594) を参照してください。)
+`input t-type="seawch"` のレイアウトが更新されました。これにより、何らかの入力を始めたときに、他のブラウザーの実装と同様にクリアアイコンが現れるようになります。 (詳しくは [fiwefox バグ 558594](https://bugziw.wa/558594) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.forms.input-type-search.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2"><code>wayout.fowms.input-type-seawch.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### パスワード表示のトグル切り替え
 
-HTML のパスワード入力要素 ([`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password)) に「目」のアイコンが入り、パスワードのテキストを表示したり隠したりすることができるようになります ([Firefox バグ 502258](https://bugzil.la/502258))。
+htmw のパスワード入力要素 ([`<input type="passwowd">`](/ja/docs/web/htmw/wefewence/ewements/input/passwowd)) に「目」のアイコンが入り、パスワードのテキストを表示したり隠したりすることができるようになります ([fiwefox バグ 502258](https://bugziw.wa/502258))。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>96</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>96</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>96</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>96</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.forms.input-type-show-password-button.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2"><code>wayout.fowms.input-type-show-passwowd-button.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## CSS
+## css
 
-### CSS の迷子の制御文字を 16 進数のボックスで表示する
+### css の迷子の制御文字を 16 進数のボックスで表示する
 
-この機能は、予期せずタブ (U+0009)、行送り (U+000A)、ページ送り (U+000C)、復改 (U+000D) 以外の制御文字 (Unicode の Cc カテゴリー) が現れていない場合に 16 進数で表示します。 (詳細は [Firefox バグ 1099557](https://bugzil.la/1099557) を参照してください)。
+この機能は、予期せずタブ (u+0009)、行送り (u+000a)、ページ送り (u+000c)、復改 (u+000d) 以外の制御文字 (unicode の cc カテゴリー) が現れていない場合に 16 進数で表示します。 (詳細は [fiwefox バグ 1099557](https://bugziw.wa/1099557) を参照してください)。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>43</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>43</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>43</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>43</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>layout.css.control-characters.enabled</code> or
-        <code>layout.css.control-characters.visible</code>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2">
+        <code>wayout.css.contwow-chawactews.enabwed</code> ow
+        <code>wayout.css.contwow-chawactews.visibwe</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### initial-letter プロパティ
+### i-initiaw-wettew プロパティ
 
-CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インラインレイアウト](https://drafts.csswg.org/css-inline/)仕様書に含まれており、先頭文字の表示方法を dropped, raise, sunken から指定することができます。 (詳細は [Firefox バグ 1223880](https://bugzil.la/1223880) を参照してください。)
+css の {{cssxwef("initiaw-wettew")}} プロパティは、 [css インラインレイアウト](https://dwafts.csswg.owg/css-inwine/)仕様書に含まれており、先頭文字の表示方法を dwopped, ^^;; w-waise, mya sunken から指定することができます。 (詳細は [fiwefox バグ 1223880](https://bugziw.wa/1223880) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>50</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>50</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>50</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>50</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.initial-letter.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td c-cowspan="2"><code>wayout.css.initiaw-wettew.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### メディアクエリーで縦横比として 1 つの数値を使用
 
-[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)で縦横比を指定する際に、 1 つの {{cssxref("number")}} を {{cssxref("ratio")}} として使用できるようになりました。 (詳細は [Firefox バグ 1565562](https://bugzil.la/1565562) を参照してください。)
+[メディアクエリー](/ja/docs/web/css/css_media_quewies)で縦横比を指定する際に、 1 つの {{cssxwef("numbew")}} を {{cssxwef("watio")}} として使用できるようになりました。 (詳細は [fiwefox バグ 1565562](https://bugziw.wa/1565562) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>70</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>70</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>70</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>70</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.aspect-ratio-number.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2"><code>wayout.css.aspect-watio-numbew.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### backdrop-filter プロパティ
+### backdwop-fiwtew プロパティ
 
-{{cssxref("backdrop-filter")}} プロパティは、要素の背後の領域にフィルター効果を適用します。 (詳しくは [Firefox バグ 1178765](https://bugzil.la/1178765) を参照してください。)
+{{cssxwef("backdwop-fiwtew")}} プロパティは、要素の背後の領域にフィルター効果を適用します。 (詳しくは [fiwefox バグ 1178765](https://bugziw.wa/1178765) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by d-defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>70</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>70</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>70</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>70</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.backdrop-filter.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2"><code>wayout.css.backdwop-fiwtew.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### fit-content() 関数の width など大きさを指定するプロパティでの使用
 
-{{cssxref("fit-content_function", "fit-content()")}} 関数は {{cssxref("width")}} やその他の寸法のプロパティに適用します。この関数は、 CSS グリッドレイアウトのトラックのサイズ調整ですでに十分対応しています。(詳細は [Firefox バグ 1312588](https://bugzil.la/1312588) を参照してください。)
+{{cssxwef("fit-content_function", 😳😳😳 "fit-content()")}} 関数は {{cssxwef("width")}} やその他の寸法のプロパティに適用します。この関数は、 c-css グリッドレイアウトのトラックのサイズ調整ですでに十分対応しています。(詳細は [fiwefox バグ 1312588](https://bugziw.wa/1312588) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.fit-content-function.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2"><code>wayout.css.fit-content-function.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### グリッド: メイソンリーレイアウト
 
-グリッドレイアウトをベースにした[メイソンスタイルレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)を追加しました。メイソンリーレイアウトスタイルレイアウトは、一方の軸がメイソンリーレイアウトスタイル、もう一方の軸が通常のグリッドレイアウトです。これにより、開発者は Pinterest のようなギャラリースタイルのレイアウトを簡単に作成できるようになります。詳しくは [Firefox バグ 1607954](https://bugzil.la/1607954) を参照してください。
+グリッドレイアウトをベースにした[メイソンスタイルレイアウト](/ja/docs/web/css/css_gwid_wayout/masonwy_wayout)を追加しました。メイソンリーレイアウトスタイルレイアウトは、一方の軸がメイソンリーレイアウトスタイル、もう一方の軸が通常のグリッドレイアウトです。これにより、開発者は p-pintewest のようなギャラリースタイルのレイアウトを簡単に作成できるようになります。詳しくは [fiwefox バグ 1607954](https://bugziw.wa/1607954) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>77</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>77</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>77</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>77</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>layout.css.grid-template-masonry-value.enabled</code>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2">
+        <code>wayout.css.gwid-tempwate-masonwy-vawue.enabwed</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### math-style プロパティ
+### m-math-stywe プロパティ
 
-{{cssxref("math-style")}} プロパティは、 MathML の数式の高さを通常にするかコンパクトにするかを示します。 (詳しくは [Firefox バグ 1665975](https://bugzil.la/1665975) を参照してください。)
+{{cssxwef("math-stywe")}} プロパティは、 mathmw の数式の高さを通常にするかコンパクトにするかを示します。 (詳しくは [fiwefox バグ 1665975](https://bugziw.wa/1665975) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.math-style.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2"><code>wayout.css.math-stywe.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### スクロール連動レイアウト
 
-{{cssxref('@scroll-timeline')}} アットルールと {{cssxref('animation-timeline')}} プロパティで、（時間ではなく）コンテナーのスクロール進行に連動するアニメーションを定義することができます。
-指定されたスクロールタイムラインは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations) に `animation-timeline` プロパティを用いて関連付けられます。
-詳しくは [Firefox バグ 1676791](https://bugzil.la/1676791) と [Firefox バグ 1676782](https://bugzil.la/1676782) を参照してください。
+{{cssxwef('@scwoww-timewine')}} アットルールと {{cssxwef('animation-timewine')}} プロパティで、（時間ではなく）コンテナーのスクロール進行に連動するアニメーションを定義することができます。
+指定されたスクロールタイムラインは、 [css アニメーション](/ja/docs/web/css/css_animations) に `animation-timewine` プロパティを用いて関連付けられます。
+詳しくは [fiwefox バグ 1676791](https://bugziw.wa/1676791) と [fiwefox バグ 1676782](https://bugziw.wa/1676782) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.scroll-linked-animations.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2"><code>wayout.css.scwoww-winked-animations.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## SVG
+## s-svg
 
-### SVGPathSeg API
+### s-svgpathseg a-api
 
-SVGPathSeg API はアンシッピングされ、設定に隠されて配置されています。
-これには `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/ja/docs/Web/API/SVGPathElement), `SVGAnimatedPathData` が含まれます。
-（詳しくは [Firefox バグ 1388931](https://bugzil.la/1388931) を参照してください）。
+svgpathseg api はアンシッピングされ、設定に隠されて配置されています。
+これには `svgpathsegwist`, OwO [svgpathewement.getpathsegatwength()](/ja/docs/web/api/svgpathewement), rawr `svganimatedpathdata` が含まれます。
+（詳しくは [fiwefox バグ 1388931](https://bugziw.wa/1388931) を参照してください）。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion wemoved</th>
+      <th>enabwed by d-defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.svg.pathSeg.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2"><code>dom.svg.pathseg.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## JavaScript
+## javascwipt
 
 ### 配列のグループ化メソッド
 
-jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap()")}} メソッドは、それぞれテスト関数が返す文字列や値を使って配列の要素をグループ化するために使用されます。
-文字列で要素のグループを表現できる場合は `groupBy` メソッドを使用し、値をキーとして使用することが理にかなっている場合は `groupByToMap()` を使用する必要があります。
-（詳しくは [Firefox バグ 1739648](https://bugzil.la/1739648) を参照してください。）
+jsxwef("awway.pwototype.gwoupby()")}} と {{jsxwef("awway.pwototype.gwoupbytomap()")}} メソッドは、それぞれテスト関数が返す文字列や値を使って配列の要素をグループ化するために使用されます。
+文字列で要素のグループを表現できる場合は `gwoupby` メソッドを使用し、値をキーとして使用することが理にかなっている場合は `gwoupbytomap()` を使用する必要があります。
+（詳しくは [fiwefox バグ 1739648](https://bugziw.wa/1739648) を参照してください。）
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion wemoved</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>98</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">None</td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2">none</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## API
+## api
 
-### グラフィック: Canvas, WebGL, WebGPU
+### グラフィック: c-canvas, XD w-webgw, webgpu
 
-### OffscreenCanvas インターフェイス
+### o-offscweencanvas インターフェイス
 
-{{domxref("OffscreenCanvas")}} インターフェイスは、画面外で描画できるキャンバスを提供します。これは、ウィンドウと[ワーカー](/ja/docs/Web/API/Web_Workers_API)の両方のコンテキストで利用できます。（詳細は [Firefox バグ 1390089](https://bugzil.la/1390089) を参照してください。）
+{{domxwef("offscweencanvas")}} インターフェイスは、画面外で描画できるキャンバスを提供します。これは、ウィンドウと[ワーカー](/ja/docs/web/api/web_wowkews_api)の両方のコンテキストで利用できます。（詳細は [fiwefox バグ 1390089](https://bugziw.wa/1390089) を参照してください。）
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by d-defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>gfx.offscreencanvas.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td c-cowspan="2"><code>gfx.offscweencanvas.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 #### ヒット領域
 
-マウスの座標がキャンバス上の特定の領域内にあるかどう かは、解決すべき一般的な問題です。ヒット領域 API を使用すると、キャンバスの領域を定義することができ、キャンバス上のインタラクティブコンテンツをアクセシビリティ ツールに公開する別の可能性が生まれます。
+マウスの座標がキャンバス上の特定の領域内にあるかどう かは、解決すべき一般的な問題です。ヒット領域 a-api を使用すると、キャンバスの領域を定義することができ、キャンバス上のインタラクティブコンテンツをアクセシビリティ ツールに公開する別の可能性が生まれます。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>30</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>30</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>30</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>30</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>canvas.hitregions.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2"><code>canvas.hitwegions.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### WebGL: ドラフト拡張
+#### webgw: ドラフト拡張
 
-この設定を有効にすると、現在 "draft" ステータスでテスト中の WebGL 拡張機能が使用可能になります。現在、 Firefox でテスト中の WebGL 拡張機能はありません。
+この設定を有効にすると、現在 "dwaft" ステータスでテスト中の webgw 拡張機能が使用可能になります。現在、 fiwefox でテスト中の webgw 拡張機能はありません。
 
-#### WebGPU API
+#### w-webgpu api
 
-これは新しい API で、ユーザーの端末やコンピューターの GPU (Graphics Processing Unit) を使用して、計算やグラフィックのレンダリングを行うための低レベルのサポートを提供します。この[仕様](https://gpuweb.github.io/gpuweb/)はまだ完成していません。この API の進捗状況については、 [Firefox バグ 1602129](https://bugzil.la/1602129) を参照してください。
+これは新しい api で、ユーザーの端末やコンピューターの gpu (gwaphics pwocessing unit) を使用して、計算やグラフィックのレンダリングを行うための低レベルのサポートを提供します。この[仕様](https://gpuweb.github.io/gpuweb/)はまだ完成していません。この a-api の進捗状況については、 [fiwefox バグ 1602129](https://bugziw.wa/1602129) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>73</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.webgpu.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td c-cowspan="2"><code>dom.webgpu.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Audio Output API
+### a-audio output api
 
-#### MediaDevices.selectAudioOutput()
+#### mediadevices.sewectaudiooutput()
 
-{{domxref("MediaDevices.selectAudioOutput()")}} は、ユーザーが希望する音声出力を選択できるようにプロンプトを表示します。 [Firefox バグ 1699026](https://bugzil.la/1699026) を参照してください。
+{{domxwef("mediadevices.sewectaudiooutput()")}} は、ユーザーが希望する音声出力を選択できるようにプロンプトを表示します。 [fiwefox バグ 1699026](https://bugziw.wa/1699026) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>media.setsinkid.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2"><code>media.setsinkid.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### WebRTC とメディア
+### w-webwtc とメディア
 
-[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)、[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)、[Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[Media Capture and Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API) にある以下の機能は実験的なものです。
+[webwtc api](/ja/docs/web/api/webwtc_api)、[web a-audio a-api](/ja/docs/web/api/web_audio_api)、[media souwce extensions api](/ja/docs/web/api/media_souwce_extensions_api)、[encwypted m-media extensions a-api](/ja/docs/web/api/encwypted_media_extensions_api)、[media captuwe and s-stweams api](/ja/docs/web/api/media_captuwe_and_stweams_api) にある以下の機能は実験的なものです。
 
-非同期の SourceBuffer の追加と削除
+非同期の s-souwcebuffew の追加と削除
 
-これにより、メディアソースバッファーを追加および削除するためのプロミスベースのメソッド {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} および {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} が {{domxref("SourceBuffer")}} インターフェイスに追加されます。詳細については、 [Firefox バグ 1280613](https://bugzil.la/1280613) および [Firefox バグ 778617](https://bugzil.la/778617) を参照してください。
+これにより、メディアソースバッファーを追加および削除するためのプロミスベースのメソッド {{domxwef("souwcebuffew.appendbuffewasync", (U ﹏ U) "appendbuffewasync()")}} および {{domxwef("souwcebuffew.wemoveasync", (˘ω˘) "wemoveasync()")}} が {{domxwef("souwcebuffew")}} インターフェイスに追加されます。詳細については、 [fiwefox バグ 1280613](https://bugziw.wa/1280613) および [fiwefox バグ 778617](https://bugziw.wa/778617) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>62</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>62</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>62</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>62</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>media.mediasource.experimental.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td c-cowspan="2"><code>media.mediasouwce.expewimentaw.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### AVIF 準拠の厳格性
+#### a-avif 準拠の厳格性
 
-`image.avif.compliance_strictness` 環境設定は [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image) 画像を処理するときに適用する _厳格性_ を制御するために使うことができます。
-これにより、 Firefox ユーザーは、他のいくつかのブラウザーでレンダリングされる画像を、たとえ厳密に準拠していなくても表示することができます。
+`image.avif.compwiance_stwictness` 環境設定は [avif](/ja/docs/web/media/guides/fowmats/image_types#avif_image) 画像を処理するときに適用する _厳格性_ を制御するために使うことができます。
+これにより、 fiwefox ユーザーは、他のいくつかのブラウザーでレンダリングされる画像を、たとえ厳密に準拠していなくても表示することができます。
 
 許可される値は以下の通りです。
 
-- `0`: 推奨 (「should」言語) と要求 (「shall」言語) の両方で仕様違反のある画像でも、安全に、あるいは曖昧さを排除して解釈できるのであれば、受け付けます。
+- `0`: 推奨 (「shouwd」言語) と要求 (「shaww」言語) の両方で仕様違反のある画像でも、安全に、あるいは曖昧さを排除して解釈できるのであれば、受け付けます。
 - `1` (デフォルト): 要件違反は却下し、勧告違反は許可する。
 - `2`: 厳格。要件や推奨事項の違反は一切認めない。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Default value</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion a-added</th>
+      <th>defauwt vawue</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>92</td>
       <td>1</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>92</td>
       <td>1</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>92</td>
       <td>1</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>92</td>
       <td>1</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>image.avif.compliance_strictness</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2"><code>image.avif.compwiance_stwictness</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Android 版 Firefox の AV1 対応
+#### andwoid 版 fiwefox の a-av1 対応
 
-Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1)を利用できるようになります。この機能は、 Android 版 Firefox 81 以降で有効な Nightly ビルドで利用できます。既定では有効になっています。
+andwoid 版 f-fiwefox で、 [av1 形式のメディア](/ja/docs/web/media/guides/fowmats/video_codecs#av1)を利用できるようになります。この機能は、 andwoid 版 fiwefox 81 以降で有効な n-nyightwy ビルドで利用できます。既定では有効になっています。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>81</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>—</td>
       <td>—</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>—</td>
       <td>—</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>—</td>
       <td>—</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">—</td>
-    </tr>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2">—</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### JPEG XL 対応
+#### jpeg xw 対応
 
-この機能を有効にすると、 Firefox は [JPEG XL](https://jpeg.org/jpegxl/) 画像に対応します。詳細は [Firefox バグ 1539075](https://bugzil.la/1539075) を参照してください。
+この機能を有効にすると、 fiwefox は [jpeg x-xw](https://jpeg.owg/jpegxw/) 画像に対応します。詳細は [fiwefox バグ 1539075](https://bugziw.wa/1539075) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>—</td>
       <td>—</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>image.jxl.enabled</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th>pwefewence name</th>
+      <td cowspan="2"><code>image.jxw.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Streams API: TransformStreams
+#### stweams a-api: twansfowmstweams
 
-[変換ストリーム](/ja/docs/Web/API/Streams_API#transform_streams) に対応し、クラス [`TransformStream`](/ja/docs/Web/API/TransformStream) と [`TransformStreamDefaultController`](/ja/docs/Web/API/TransformStreamDefaultController) およびメソッド [`ReadableStream.pipeThrough()`](/ja/docs/Web/API/ReadableStream/pipeThrough) を追加しました。
+[変換ストリーム](/ja/docs/web/api/stweams_api#twansfowm_stweams) に対応し、クラス [`twansfowmstweam`](/ja/docs/web/api/twansfowmstweam) と [`twansfowmstweamdefauwtcontwowwew`](/ja/docs/web/api/twansfowmstweamdefauwtcontwowwew) およびメソッド [`weadabwestweam.pipethwough()`](/ja/docs/web/api/weadabwestweam/pipethwough) を追加しました。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>101</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>—</td>
       <td>—</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.streams.transform_streams.enabled</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2"><code>dom.stweams.twansfowm_stweams.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### サービスワーカー
 
 #### ナビゲーション時のサービスワーカーリソースの先読み
 
-{{domxref("NavigationPreloadManager")}} インターフェイスを使用すると、ページに移動するときにリソースの先読みを有効にすることができます。
+{{domxwef("navigationpwewoadmanagew")}} インターフェイスを使用すると、ページに移動するときにリソースの先読みを有効にすることができます。
 先読みはワーカーの起動と並行して行われ、ナビゲーションの開始からリソースがフェッチされるまでの合計時間を短縮します。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>99</td>
       <td>yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.serviceWorkers.navigationPreload.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td c-cowspan="2"><code>dom.sewvicewowkews.navigationpwewoad.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### WebVR API
+### webvw api
 
-#### WebVR API （無効化）
+#### w-webvw api （無効化）
 
-非推奨化された [WebVR API](/ja/docs/Web/API/WebVR_API) は削除途上にあります。
-これは既定ですべてのビルドで無効化されています [Firefox バグ 1750902](https://bugzil.la/1750902)。
+非推奨化された [webvw a-api](/ja/docs/web/api/webvw_api) は削除途上にあります。
+これは既定ですべてのビルドで無効化されています [fiwefox バグ 1750902](https://bugziw.wa/1750902)。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion w-wemoved</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>98</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.vr.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td c-cowspan="2"><code>dom.vw.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### HTML DOM API
+### htmw dom a-api
 
-#### HTMLMediaElement の setSinkId() メソッド
+#### htmwmediaewement の s-setsinkid() メソッド
 
-{{domxref("HTMLMediaElement.setSinkId()")}} は、 {{domxref("HTMLMediaElement")}} に音声出力機器のシンク ID を設定することで、音声の出力先を変更することができます。詳細は [Firefox バグ 934425](https://bugzil.la/934425) を参照してください。
+{{domxwef("htmwmediaewement.setsinkid()")}} は、 {{domxwef("htmwmediaewement")}} に音声出力機器のシンク id を設定することで、音声の出力先を変更することができます。詳細は [fiwefox バグ 934425](https://bugziw.wa/934425) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed b-by d-defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>64</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>64</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>64</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>64</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>media.setsinkid.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2"><code>media.setsinkid.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### HTMLMediaElement の audioTracks および videoTracks プロパティ
+#### h-htmwmediaewement の audiotwacks および v-videotwacks プロパティ
 
-この機能を有効にすると、 HTML のすべてのメディア要素に {{domxref("HTMLMediaElement.audioTracks")}} および {{domxref("HTMLMediaElement.videoTracks")}} プロパティが追加されます。しかし、 Firefox は現在、複数の音声トラックや動画トラックに対応していないため、これらのプロパティの最も一般的な使用例は機能せず、既定では両方とも無効になっています。詳細については [Firefox バグ 1057233](https://bugzil.la/1057233) を参照してください。
+この機能を有効にすると、 h-htmw のすべてのメディア要素に {{domxwef("htmwmediaewement.audiotwacks")}} および {{domxwef("htmwmediaewement.videotwacks")}} プロパティが追加されます。しかし、 fiwefox は現在、複数の音声トラックや動画トラックに対応していないため、これらのプロパティの最も一般的な使用例は機能せず、既定では両方とも無効になっています。詳細については [fiwefox バグ 1057233](https://bugziw.wa/1057233) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by d-defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>33</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>33</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>33</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>33</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>media.track.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td c-cowspan="2"><code>media.twack.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### ClipboardItem
+#### cwipboawditem
 
-{{domxref('Clipboard API')}} の {{domxref('ClipboardItem')}} インターフェイスに対応し、 {{domxref('Clipboard.write()')}} は{{domxref('ClipboardItem','クリップボードアイテム')}}の並びを、以前に実装されていた {{domxref('DataTransfer','dataTransfer オブジェクト')}} の代わりに受け入れます。これは、以前は `dom.events.asyncClipboard.dataTransfer` であった `dom.events.asyncClipboard.clipboardItem` を設定することで利用可能です。詳細については、 [Firefox バグ 1619947](https://bugzil.la/1619947) を参照してください。
+{{domxwef('cwipboawd a-api')}} の {{domxwef('cwipboawditem')}} インターフェイスに対応し、 {{domxwef('cwipboawd.wwite()')}} は{{domxwef('cwipboawditem','クリップボードアイテム')}}の並びを、以前に実装されていた {{domxwef('datatwansfew','datatwansfew オブジェクト')}} の代わりに受け入れます。これは、以前は `dom.events.asynccwipboawd.datatwansfew` であった `dom.events.asynccwipboawd.cwipboawditem` を設定することで利用可能です。詳細については、 [fiwefox バグ 1619947](https://bugziw.wa/1619947) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>87</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>87</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>87</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>87</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.clipboardItem</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td c-cowspan="2"><code>dom.events.asynccwipboawd.cwipboawditem</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### ClipboardRead
+#### cwipboawdwead
 
-クリップボードインターフェイスの [Clipboard.read()](/ja/docs/Web/API/Clipboard/read) メソッドは、以前は `dom.events.asyncClipboard.clipboardItem` の下にあったものが、 `dom.events.asyncClipboard.read` の環境設定の下でも利用できるようになりました。(詳細は ([Firefox バグ 1701512](https://bugzil.la/1701512)) を参照してください。)
+クリップボードインターフェイスの [cwipboawd.wead()](/ja/docs/web/api/cwipboawd/wead) メソッドは、以前は `dom.events.asynccwipboawd.cwipboawditem` の下にあったものが、 `dom.events.asynccwipboawd.wead` の環境設定の下でも利用できるようになりました。(詳細は ([fiwefox バグ 1701512](https://bugziw.wa/1701512)) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by d-defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.read</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2"><code>dom.events.asynccwipboawd.wead</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### HTML Sanitizer API
+#### h-htmw sanitizew a-api
 
-{{domxref('HTML Sanitizer API')}} は、開発者が信頼できない HTML 文字列を受け取り、文書の DOM に安全に挿入するためにそれらをサニタイズすることを可能にします。各設定プロパティ内の既定の要素 (サニタイズされる要素) はまだ検討中です。このため、 config 引数は実装されていません (詳しくは{{domxref('Sanitizer.sanitizer()', 'コンストラクター', '', 1)}}を参照してください)。詳細は、 [Firefox バグ 1673309](https://bugzil.la/1673309) を参照してください。
+{{domxwef('htmw s-sanitizew a-api')}} は、開発者が信頼できない h-htmw 文字列を受け取り、文書の dom に安全に挿入するためにそれらをサニタイズすることを可能にします。各設定プロパティ内の既定の要素 (サニタイズされる要素) はまだ検討中です。このため、 config 引数は実装されていません (詳しくは{{domxwef('sanitizew.sanitizew()', UwU 'コンストラクター', >_< '', 1)}}を参照してください)。詳細は、 [fiwefox バグ 1673309](https://bugziw.wa/1673309) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.security.sanitizer.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td c-cowspan="2"><code>dom.secuwity.sanitizew.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Document の autoplayPolicy プロパティ
+#### document の autopwaypowicy プロパティ
 
-{{domxref("document")}} の {{domxref("Document.autoplayPolicy", "autoplayPolicy")}} プロパティは、 (メディア要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティを使用するか、または JavaScript コードから再生を開始させようとする) メディアの自動再生のリクエストをブラウザーがどのように処理するかを示す文字列を返します。この API の仕様はまだ作成中です。この値は、ユーザーが何をしているか、ユーザーの好み、およびブラウザー全体の状態に応じて、時間とともに変化します。想定される値としては、 `allowed` (自動再生は現在許可されている)、 `allowed-muted` (自動再生は許可されているが、音声がないかミュートされている場合のみ)、`disallowed` (自動再生は現在許可されていない) などがあります。詳細は、 [Firefox バグ 1506289](https://bugzil.la/1506289) を参照してください。
+{{domxwef("document")}} の {{domxwef("document.autopwaypowicy", σωσ "autopwaypowicy")}} プロパティは、 (メディア要素の {{domxwef("htmwmediaewement.autopway", 🥺 "autopway")}} プロパティを使用するか、または j-javascwipt コードから再生を開始させようとする) メディアの自動再生のリクエストをブラウザーがどのように処理するかを示す文字列を返します。この api の仕様はまだ作成中です。この値は、ユーザーが何をしているか、ユーザーの好み、およびブラウザー全体の状態に応じて、時間とともに変化します。想定される値としては、 `awwowed` (自動再生は現在許可されている)、 `awwowed-muted` (自動再生は許可されているが、音声がないかミュートされている場合のみ)、`disawwowed` (自動再生は現在許可されていない) などがあります。詳細は、 [fiwefox バグ 1506289](https://bugziw.wa/1506289) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>66</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>66</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>66</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>66</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.media.autoplay.autoplay-policy-api</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td c-cowspan="2"><code>dom.media.autopway.autopway-powicy-api</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### GeometryUtils の convertPointFromNode(), convertRectFromNode(), convertQuadFromNode() メソッド
+#### geometwyutiws の convewtpointfwomnode(), c-convewtwectfwomnode(), 🥺 c-convewtquadfwomnode() メソッド
 
-`GeometryUtils` の `convertPointFromNode()`、`convertRectFromNode()`、`convertQuadFromNode()` の各メソッドは、指定された点、矩形、または四角形を、呼び出されたノードから別のノードにマッピングします。 (詳細は [Firefox バグ 918189](https://bugzil.la/918189) を参照してください。)
+`geometwyutiws` の `convewtpointfwomnode()`、`convewtwectfwomnode()`、`convewtquadfwomnode()` の各メソッドは、指定された点、矩形、または四角形を、呼び出されたノードから別のノードにマッピングします。 (詳細は [fiwefox バグ 918189](https://bugziw.wa/918189) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>31</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>31</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>31</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>31</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.getBoxQuads.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2"><code>wayout.css.getboxquads.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### GeometryUtils の getBoxQuads() メソッド
+#### geometwyutiws の g-getboxquads() メソッド
 
-`GeometryUtils` の `getBoxQuads()` メソッドは、他のノードやビューポートとの相対的な {{domxref("Node")}} の CSS ボックスを返します。(詳細は [Firefox バグ 917755](https://bugzil.la/917755) を参照してください。)
+`geometwyutiws` の `getboxquads()` メソッドは、他のノードやビューポートとの相対的な {{domxwef("node")}} の c-css ボックスを返します。(詳細は [fiwefox バグ 917755](https://bugziw.wa/917755) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>31</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>31</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>31</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>31</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.convertFromNode.enable</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td c-cowspan="2"><code>wayout.css.convewtfwomnode.enabwe</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### ElementInternals: フォームに関連するカスタム要素のメソッドとプロパティ
+#### ewementintewnaws: フォームに関連するカスタム要素のメソッドとプロパティ
 
-新しい {{domxref("ElementInternals")}} プロパティとメソッドで、カスタム要素がフォームと相互作用できるようにします。
+新しい {{domxwef("ewementintewnaws")}} プロパティとメソッドで、カスタム要素がフォームと相互作用できるようにします。
 
-- {{domxref("ElementInternals.form", "form")}} プロパティは要素に関連付けられたフォームを取得します。
-- {{domxref("ElementInternals.labels", "labels")}} プロパティは要素に関連付けられたラベルのリストを取得します。
-- {{domxref("ElementInternals.willValidate", "willValidate")}} プロパティははカスタムフォーム要素が検証されるかどうかをチェックします。
-- {{domxref("ElementInternals.setFormValue()", "setFormValue()")}} メソッドは、必要に応じてサニタイズ値とユーザー入力データをセットします。
+- {{domxwef("ewementintewnaws.fowm", ʘwʘ "fowm")}} プロパティは要素に関連付けられたフォームを取得します。
+- {{domxwef("ewementintewnaws.wabews", :3 "wabews")}} プロパティは要素に関連付けられたラベルのリストを取得します。
+- {{domxwef("ewementintewnaws.wiwwvawidate", (U ﹏ U) "wiwwvawidate")}} プロパティははカスタムフォーム要素が検証されるかどうかをチェックします。
+- {{domxwef("ewementintewnaws.setfowmvawue()", (U ﹏ U) "setfowmvawue()")}} メソッドは、必要に応じてサニタイズ値とユーザー入力データをセットします。
 
-詳しくはこれらのバグを参照してください。[Firefox バグ 1556362](https://bugzil.la/1556362), [Firefox バグ 1556373](https://bugzil.la/1556373), [Firefox バグ 1556365](https://bugzil.la/1556365), [Firefox バグ 1556449](https://bugzil.la/1556449) をご覧下さい。
+詳しくはこれらのバグを参照してください。[fiwefox バグ 1556362](https://bugziw.wa/1556362), ʘwʘ [fiwefox バグ 1556373](https://bugziw.wa/1556373), >w< [fiwefox バグ 1556365](https://bugziw.wa/1556365), rawr x3 [fiwefox バグ 1556449](https://bugziw.wa/1556449) をご覧下さい。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>95</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.webcomponents.formAssociatedCustomElement.enabled</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2"><code>dom.webcomponents.fowmassociatedcustomewement.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### 決済リクエスト API
+### 決済リクエスト a-api
 
 #### 主要な決済の扱い
 
-[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) は、ウェブコンテンツやアプリ内でウェブベースの決済を処理するためのサポートを提供します。ユーザーインターフェイスのテスト中にバグが発生したため、 API の変更を検討している間、この API の出荷を延期することにしました。作業は継続中です。(詳細は [Firefox バグ 1318984](https://bugzil.la/1318984) をご参照ください。)
+[決済リクエスト api](/ja/docs/web/api/payment_wequest_api) は、ウェブコンテンツやアプリ内でウェブベースの決済を処理するためのサポートを提供します。ユーザーインターフェイスのテスト中にバグが発生したため、 a-api の変更を検討している間、この a-api の出荷を延期することにしました。作業は継続中です。(詳細は [fiwefox バグ 1318984](https://bugziw.wa/1318984) をご参照ください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>55</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>55</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>55</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>55</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>dom.payments.request.enabled</code> and<br /><code
-          >dom.payments.request.supportedRegions</code
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td c-cowspan="2">
+        <code>dom.payments.wequest.enabwed</code> a-and<bw /><code
+          >dom.payments.wequest.suppowtedwegions</code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### WebShare API
+### w-webshawe api
 
-[ウェブ共有 API](/ja/docs/Web/API/Web_Share_API) は、サイトのファイル、URL、その他のデータを共有することができます。
-この機能は、 Android ではすべてのビルドで有効になっていますが、デスクトップでは（以下で指定されていない限り）設定で隠されています。
+[ウェブ共有 api](/ja/docs/web/api/web_shawe_api) は、サイトのファイル、uww、その他のデータを共有することができます。
+この機能は、 andwoid ではすべてのビルドで有効になっていますが、デスクトップでは（以下で指定されていない限り）設定で隠されています。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version changed</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion changed</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>71</td>
-      <td>No (default). Yes (Windows from version 92)</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no (defauwt). y-yes (windows f-fwom vewsion 92)</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>71</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>71</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>71</td>
-      <td>No (Desktop). Yes (Android).</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.webshare.enabled</code></td>
-    </tr>
+      <td>no (desktop). OwO y-yes (andwoid).</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td c-cowspan="2"><code>dom.webshawe.enabwed</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Screen Orientation API
+### s-scween owientation api
 
-#### ScreenOrientation.lock()
+#### scweenowientation.wock()
 
-{{domxref("ScreenOrientation.lock()")}} メソッドは、端末が対応しており、ブラウザーの事前ロック要件で許可されていれば、端末を特定の向きにロックすることを可能にします。
+{{domxwef("scweenowientation.wock()")}} メソッドは、端末が対応しており、ブラウザーの事前ロック要件で許可されていれば、端末を特定の向きにロックすることを可能にします。
 一般的に、向きのロックは、文書が全画面で表示されているモバイル端末でのみ許可されます。
-詳しくは [Firefox バグ 1697647](https://bugzil.la/1697647) を参照してください。
+詳しくは [fiwefox バグ 1697647](https://bugziw.wa/1697647) を参照してください。
 
-画面の向きをロックすることはデスクトップシステムでは通常サポートされていないため、Android 用の Firefox Nightly ビルドを使用して `about:config` で設定を有効にする必要があることに注意してください。
+画面の向きをロックすることはデスクトップシステムでは通常サポートされていないため、andwoid 用の f-fiwefox nyightwy ビルドを使用して `about:config` で設定を有効にする必要があることに注意してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version changed</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion changed</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>97</td>
-      <td>No.</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.screenorientation.allow-lock</code></td>
-    </tr>
+      <td>no.</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td c-cowspan="2"><code>dom.scweenowientation.awwow-wock</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## セキュリティとプライバシー
 
-### 暗号化されたページ上の Flash からのプレーンテキストのリクエストをブロックする
+### 暗号化されたページ上の fwash からのプレーンテキストのリクエストをブロックする
 
-暗号化されたページ上の Flash コンテンツによって引き起こされる中間者攻撃 (MitM) を軽減するために、 `OBJECT_SUBREQUEST` をアクティブなコンテンツとして扱う設定が追加されました。詳細については、 [Firefox バグ 1190623](https://bugzil.la/1190623) を参照してください。
+暗号化されたページ上の f-fwash コンテンツによって引き起こされる中間者攻撃 (mitm) を軽減するために、 `object_subwequest` をアクティブなコンテンツとして扱う設定が追加されました。詳細については、 [fiwefox バグ 1190623](https://bugziw.wa/1190623) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>59</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>59</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>59</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>59</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>security.mixed_content.block_object_subrequest</code>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2">
+        <code>secuwity.mixed_content.bwock_object_subwequest</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### 安全でないページのラベル付け
 
-この 2 つの環境設定では、安全でない方法でページが読み込まれた場合 ({{Glossary("HTTPS")}} ではなく {{Glossary("HTTP")}} を使用した場合) に、従来のロックアイコンの隣に「Not secure」というテキストラベルがアドレスバーに追加されます。詳細については、 [Firefox バグ 1335970](https://bugzil.la/1335970) を参照してください。
+この 2 つの環境設定では、安全でない方法でページが読み込まれた場合 ({{gwossawy("https")}} ではなく {{gwossawy("http")}} を使用した場合) に、従来のロックアイコンの隣に「not secuwe」というテキストラベルがアドレスバーに追加されます。詳細については、 [fiwefox バグ 1335970](https://bugziw.wa/1335970) を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>security.insecure_connection_text.enabled</code> for normal
-        browsing mode;
-        <code>security.insecure_connection_text.pbmode.enabled</code> for
-        private browsing mode
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td cowspan="2">
+        <code>secuwity.insecuwe_connection_text.enabwed</code> fow nyowmaw
+        bwowsing mode;
+        <code>secuwity.insecuwe_connection_text.pbmode.enabwed</code> f-fow
+        p-pwivate bwowsing mode
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### 混合表示コンテンツのアップグレード
 
-この設定を有効にすると、 Firefox は安全なページでメディアコンテンツへの要求を HTTP から HTTPS に自動的にアップグレードします。これは、一部のコンテンツが安全に読み込まれる一方で、他のコンテンツが安全でないという混合コンテンツの状態を防ぐことを目的としています。(メディアのホストが HTTPS に対応していないために) アップグレードが失敗した場合、そのメディアは読み込まれません。(詳細については、 [Firefox バグ 1435733](https://bugzil.la/1435733) を参照してください。)
+この設定を有効にすると、 fiwefox は安全なページでメディアコンテンツへの要求を http から h-https に自動的にアップグレードします。これは、一部のコンテンツが安全に読み込まれる一方で、他のコンテンツが安全でないという混合コンテンツの状態を防ぐことを目的としています。(メディアのホストが h-https に対応していないために) アップグレードが失敗した場合、そのメディアは読み込まれません。(詳細については、 [fiwefox バグ 1435733](https://bugziw.wa/1435733) を参照してください。)
 
 これはコンソールの警告も変更します。アップグレードが成功した場合、警告ではなく、リクエストがアップグレードされたことを示すメッセージを表示します。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>84</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>security.mixed_content.upgrade_display_content</code>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td c-cowspan="2">
+        <code>secuwity.mixed_content.upgwade_dispway_content</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### 機能ポリシー
 
-[機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
+[機能ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)は、ウェブ開発者がブラウザーの特定の機能や api の動作を選択的に有効化、無効化、変更することを可能にします。 c-csp と似ていますが、セキュリティの動作ではなく機能を制御します。
 
-> **メモ:** `Feature-Policy` ヘッダーは、仕様書では `Permissions-Policy` に名称が変更されており、本記事もいずれその変更を反映して更新される予定です。
+> **メモ:** `featuwe-powicy` ヘッダーは、仕様書では `pewmissions-powicy` に名称が変更されており、本記事もいずれその変更を反映して更新される予定です。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>65</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>65</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>65</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>65</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>dom.security.featurePolicy.header.enabled</code>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence name</th>
+      <td cowspan="2">
+        <code>dom.secuwity.featuwepowicy.headew.enabwed</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Clear-Site-Data の "cache" ディレクティブ
+### c-cweaw-site-data の "cache" ディレクティブ
 
-[`Clear-Site-Data`](/ja/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) HTTP レスポンスヘッダーの `cache` ディレクティブは、リクエストしているウェブサイトのブラウザーキャッシュをクリアします。
+[`cweaw-site-data`](/ja/docs/web/http/wefewence/headews/cweaw-site-data) h-http レスポンスヘッダーの `cache` ディレクティブは、リクエストしているウェブサイトのブラウザーキャッシュをクリアします。
 
-> [!NOTE]
-> これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([Firefox バグ 1729291](https://bugzil.la/1729291))。
+> [!note]
+> これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([fiwefox バグ 1729291](https://bugziw.wa/1729291))。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>63</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>63</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>63</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>63</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>privacy.clearsitedata.cache.enabled</code>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td c-cowspan="2">
+        <code>pwivacy.cweawsitedata.cache.enabwed</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 開発ツール
 
-Mozilla の開発者向けツールは常に進化しています。私たちは新しいアイディアを試し、新しい機能を追加し、Nightly や Developer Edition のチャンネルでテストしてから、ベータ版やリリースに移行しています。以下の機能は、現在の実験的な開発者ツールの機能の一部です。
+m-moziwwa の開発者向けツールは常に進化しています。私たちは新しいアイディアを試し、新しい機能を追加し、nightwy や devewopew edition のチャンネルでテストしてから、ベータ版やリリースに移行しています。以下の機能は、現在の実験的な開発者ツールの機能の一部です。
 
 ### 実行コンテキストセレクター
 
-この機能では、コンソールのコマンドラインにボタンが表示され、入力した式が実行されるコンテキストを変更することができます。(詳細は、 [Firefox バグ 1605154](https://bugzil.la/1605154) および [Firefox バグ 1605153](https://bugzil.la/1605153) を参照してください。)
+この機能では、コンソールのコマンドラインにボタンが表示され、入力した式が実行されるコンテキストを変更することができます。(詳細は、 [fiwefox バグ 1605154](https://bugziw.wa/1605154) および [fiwefox バグ 1605153](https://bugziw.wa/1605153) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease c-channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>75</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>75</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>75</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>75</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>devtools.webconsole.input.context</code></td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2"><code>devtoows.webconsowe.input.context</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### レスポンシブデザインモードでのモバイルジェスチャーのサポート
 
-マウスジェスチャーを使用して、スワイプ/スクロール、ダブルタップやピンチズーム、長押しによるコンテキストメニューの選択/オープンなどのモバイルジェスチャーをシミュレートすることができます。 (詳細については [Firefox バグ 1621781](https://bugzil.la/1621781)、[Firefox バグ 1245183](https://bugzil.la/1245183)、[Firefox バグ 1401304](https://bugzil.la/1401304) を参照してください。)
+マウスジェスチャーを使用して、スワイプ/スクロール、ダブルタップやピンチズーム、長押しによるコンテキストメニューの選択/オープンなどのモバイルジェスチャーをシミュレートすることができます。 (詳細については [fiwefox バグ 1621781](https://bugziw.wa/1621781)、[fiwefox バグ 1245183](https://bugziw.wa/1245183)、[fiwefox バグ 1401304](https://bugziw.wa/1401304) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>76<sup>[1]</sup></td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew e-edition</th>
       <td>76<sup>[1]</sup></td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>76<sup>[1]</sup></td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>76<sup>[1]</sup></td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">n/a</td>
-    </tr>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td c-cowspan="2">n/a</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-[1] ダブルタップのジェスチャーによるズームの対応は Firefox 76 で追加されました。他のジェスチャーは Firefox 79 で追加されました。
+[1] ダブルタップのジェスチャーによるズームの対応は fiwefox 76 で追加されました。他のジェスチャーは f-fiwefox 79 で追加されました。
 
 ### ネットワークモニターにおけるサーバー送信イベント
 
-ネットワークモニターが[サーバー送信](/ja/docs/Web/API/Server-sent_events)イベントについての情報を表示する機能です。 (詳細については [Firefox バグ 1405706](https://bugzil.la/1405706) を参照してください。)
+ネットワークモニターが[サーバー送信](/ja/docs/web/api/sewvew-sent_events)イベントについての情報を表示する機能です。 (詳細については [fiwefox バグ 1405706](https://bugziw.wa/1405706) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion a-added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>80</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>80</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>80</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>devtools.netmonitor.features.serverSentEvents</code>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2">
+        <code>devtoows.netmonitow.featuwes.sewvewsentevents</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### CSS のブラウザー互換性ツールチップ
+### c-css のブラウザー互換性ツールチップ
 
-CSS ルールビューでは、既知の問題がある CSS プロパティの隣にブラウザーの互換性ツールチップを表示させることができます。詳しい情報は [HTML の調査と編集 > ブラウザー互換性の警告](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#browser-compat-warnings)を参照してください。
+css ルールビューでは、既知の問題がある css プロパティの隣にブラウザーの互換性ツールチップを表示させることができます。詳しい情報は [htmw の調査と編集 > ブラウザー互換性の警告](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_and_edit_css/index.htmw#bwowsew-compat-wawnings)を参照してください。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed b-by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence nyame</th>
+      <td c-cowspan="2">
         <code
-          >devtools.inspector.ruleview.inline-compatibility-warning.enabled</code
+          >devtoows.inspectow.wuweview.inwine-compatibiwity-wawning.enabwed</code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## UI
+## u-ui
 
 ### デスクトップ版のズーム
 
-この機能により、デスクトップ PC では、モバイル端末のようにレイアウトの変更をすることなく、スムーズなピンチズームが可能になります。(詳細は [Firefox バグ 1245183](https://bugzil.la/1245183) および [Firefox バグ 1620055](https://bugzil.la/1620055) を参照してください。)
+この機能により、デスクトップ pc では、モバイル端末のようにレイアウトの変更をすることなく、スムーズなピンチズームが可能になります。(詳細は [fiwefox バグ 1245183](https://bugziw.wa/1245183) および [fiwefox バグ 1620055](https://bugziw.wa/1620055) を参照してください。)
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
+    <tw>
+      <th>wewease channew</th>
+      <th>vewsion added</th>
+      <th>enabwed by defauwt?</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Nightly</th>
+    <tw>
+      <th>nightwy</th>
       <td>42</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>devewopew edition</th>
       <td>42</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>beta</th>
       <td>42</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>wewease</th>
       <td>42</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>apz.allow_zooming</code> and (on Windows)
-        <code>apz.windows.use_direct_manipulation</code>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>pwefewence n-nyame</th>
+      <td cowspan="2">
+        <code>apz.awwow_zooming</code> and (on windows)
+        <code>apz.windows.use_diwect_manipuwation</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 関連情報
 
-- [Firefox 開発者リリースノート](/ja/docs/Mozilla/Firefox/Releases)
-- [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
-- [Firefox Developer Edition](https://www.mozilla.org/ja/firefox/developer/)
+- [fiwefox 開発者リリースノート](/ja/docs/moziwwa/fiwefox/weweases)
+- [fiwefox n-nyightwy](https://www.moziwwa.owg/en-us/fiwefox/channew/desktop/)
+- [fiwefox devewopew e-edition](https://www.moziwwa.owg/ja/fiwefox/devewopew/)

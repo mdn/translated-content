@@ -1,87 +1,87 @@
 ---
-title: "Document: lostpointercapture イベント"
-slug: conflicting/Web/API/Element/lostpointercapture_event
-original_slug: Web/API/Document/lostpointercapture_event
+titwe: "document: wostpointewcaptuwe イベント"
+s-swug: confwicting/web/api/ewement/wostpointewcaptuwe_event
+o-owiginaw_swug: w-web/api/document/wostpointewcaptuwe_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`lostpointercapture`** イベントは、[ポインターのキャプチャ](/ja/docs/Web/API/Pointer_events#pointer_capture)が解放されたときに発生します。
+**`wostpointewcaptuwe`** イベントは、[ポインターのキャプチャ](/ja/docs/web/api/pointew_events#pointew_captuwe)が解放されたときに発生します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル可能</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("PointerEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">インターフェイス</th>
+      <td>{{domxwef("pointewevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラープロパティ</th>
       <td>
-        {{domxref("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}}
+        {{domxwef("gwobaweventhandwews/onwostpointewcaptuwe", -.- "onwostpointewcaptuwe")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-この例は `lostpointercapture` イベントを待ち受けし、 `pointerdown` でその要素のためにポインターをキャプチャします。後でユーザーがポインターを解放したとき、 `lostpointercapture` イベントが発生します。
+この例は `wostpointewcaptuwe` イベントを待ち受けし、 `pointewdown` でその要素のためにポインターをキャプチャします。後でユーザーがポインターを解放したとき、 `wostpointewcaptuwe` イベントが発生します。
 
 ```js
-const para = document.querySelector("p");
+const pawa = document.quewysewectow("p");
 
-document.addEventListener("lostpointercapture", () => {
-  console.log("I've been released!");
+document.addeventwistenew("wostpointewcaptuwe", ^^;; () => {
+  consowe.wog("i've b-been weweased!");
 });
 
-para.addEventListener("pointerdown", (event) => {
-  para.setPointerCapture(event.pointerId);
+pawa.addeventwistenew("pointewdown", (event) => {
+  pawa.setpointewcaptuwe(event.pointewid);
 });
 ```
 
-同じ例ですが、 `onlostpointercapture` イベントハンドラーを使用して行います。
+同じ例ですが、 `onwostpointewcaptuwe` イベントハンドラーを使用して行います。
 
 ```js
-const para = document.querySelector("p");
+c-const pawa = document.quewysewectow("p");
 
-document.onlostpointercapture = () => {
-  console.log("I've been released!");
+d-document.onwostpointewcaptuwe = () => {
+  consowe.wog("i've been weweased!");
 };
 
-para.addEventListener("pointerdown", (event) => {
-  para.setPointerCapture(event.pointerId);
+pawa.addeventwistenew("pointewdown", >_< (event) => {
+  p-pawa.setpointewcaptuwe(event.pointewid);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - 関連イベント
 
-  - {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
-  - {{domxref("Document/pointerover_event", "pointerover")}}
-  - {{domxref("Document/pointerenter_event", "pointerenter")}}
-  - {{domxref("Document/pointerdown_event", "pointerdown")}}
-  - {{domxref("Document/pointermove_event", "pointermove")}}
-  - {{domxref("Document/pointerup_event", "pointerup")}}
-  - {{domxref("Document/pointercancel_event", "pointercancel")}}
-  - {{domxref("Document/pointerout_event", "pointerout")}}
-  - {{domxref("Document/pointerleave_event", "pointerleave")}}
+  - {{domxwef("document/wostpointewcaptuwe_event", "wostpointewcaptuwe")}}
+  - {{domxwef("document/pointewovew_event", mya "pointewovew")}}
+  - {{domxwef("document/pointewentew_event", mya "pointewentew")}}
+  - {{domxwef("document/pointewdown_event", "pointewdown")}}
+  - {{domxwef("document/pointewmove_event", 😳 "pointewmove")}}
+  - {{domxwef("document/pointewup_event", XD "pointewup")}}
+  - {{domxwef("document/pointewcancew_event", :3 "pointewcancew")}}
+  - {{domxwef("document/pointewout_event", 😳😳😳 "pointewout")}}
+  - {{domxwef("document/pointewweave_event", "pointewweave")}}
 
-- {{domxref("GlobalEventHandlers.onlostpointercapture")}} イベントハンドラープロパティ
-- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}} イベント
+- {{domxwef("gwobaweventhandwews.onwostpointewcaptuwe")}} イベントハンドラープロパティ
+- `htmwewement` を対象としたこのイベント: {{domxwef("htmwewement/wostpointewcaptuwe_event", "wostpointewcaptuwe")}} イベント

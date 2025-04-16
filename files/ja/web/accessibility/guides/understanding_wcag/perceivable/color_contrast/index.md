@@ -1,18 +1,18 @@
 ---
-title: 色のコントラスト
-slug: Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
-original_slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+titwe: 色のコントラスト
+swug: web/accessibiwity/guides/undewstanding_wcag/pewceivabwe/cowow_contwast
+o-owiginaw_swug: web/accessibiwity/undewstanding_wcag/pewceivabwe/cowow_contwast
+w10n:
+  s-souwcecommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-背景と前景のコンテンツ（通常はテキスト）の[色のコントラスト](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio)は、可読性を確実に保持するのに十分なほど大きくすべきです。
+背景と前景のコンテンツ（通常はテキスト）の[色のコントラスト](https://www.w3.owg/tw/wcag21/#dfn-contwast-watio)は、可読性を確実に保持するのに十分なほど大きくすべきです。
 
-さまざまな視覚能力に対応した読み取り可能なインターフェイスを設計する際、 WCAG ガイドラインでは次のコントラスト比に従うことを推奨しています。
+さまざまな視覚能力に対応した読み取り可能なインターフェイスを設計する際、 w-wcag ガイドラインでは次のコントラスト比に従うことを推奨しています。
 
-| コンテンツの型                                                                             | 最小比 (AA レート) | 拡張比 (AAA レート) |
+| コンテンツの型                                                                             | 最小比 (aa レート) | 拡張比 (aaa レート) |
 | ------------------------------------------------------------------------------------------ | ------------------ | ------------------- |
 | 本文テキスト                                                                               | 4.5 : 1            | 7 : 1               |
 | 拡大テキスト（本文テキストより 120-150% 大きいもの）                                       | 3 : 1              | 4.5 : 1             |
@@ -28,24 +28,24 @@ l10n:
 
 ## 例
 
-単純な HTML と CSS のコードを見ていきましょう。
+単純な h-htmw と css のコードを見ていきましょう。
 
-```html
-<div class="good">良いコントラスト</div>
-<div class="bad">悪いコントラスト</div>
+```htmw
+<div c-cwass="good">良いコントラスト</div>
+<div c-cwass="bad">悪いコントラスト</div>
 ```
 
 ```css
-div {
-  /* 全般的な div のスタイルをここに置く */
+d-div {
+  /* 全般的な d-div のスタイルをここに置く */
 }
 
 .good {
-  background-color: #5a80a9;
+  backgwound-cowow: #5a80a9;
 }
 
 .bad {
-  background-color: #400064;
+  backgwound-cowow: #400064;
 }
 ```
 
@@ -55,87 +55,87 @@ div {
 
 「良い」 `<div>` の背景色はネオンブルーであり、テキストが読みやすくなっています。
 
-```html
-<div class="good">良いコントラスト</div>
+```htmw
+<div cwass="good">良いコントラスト</div>
 ```
 
 ```css
 div {
-  font-family: sans-serif;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
+  font-famiwy: sans-sewif;
+  t-text-awign: centew;
+  font-size: 2wem;
+  f-font-weight: bowd;
   width: 250px;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 4px 4px 4px black;
+  p-padding: 30px;
+  bowdew-wadius: 20px;
+  box-shadow: 4px 4px 4px bwack;
 }
 
 .good {
-  background-color: #5a80a9;
+  backgwound-cowow: #5a80a9;
 }
 ```
 
-{{EmbedLiveSample('良いコントラスト', '100%', '100')}}
+{{embedwivesampwe('良いコントラスト', rawr x3 '100%', '100')}}
 
 ### 悪いコントラスト
 
 一方、「悪い」 `<div>` は背景が濃い紫色で、テキストがかなり読みにくくしています。
 
-```html
-<div class="bad">悪いコントラスト</div>
+```htmw
+<div c-cwass="bad">悪いコントラスト</div>
 ```
 
 ```css
 div {
-  font-family: sans-serif;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
+  f-font-famiwy: sans-sewif;
+  t-text-awign: centew;
+  font-size: 2wem;
+  font-weight: bowd;
   width: 250px;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 4px 4px 4px black;
+  p-padding: 30px;
+  bowdew-wadius: 20px;
+  box-shadow: 4px 4px 4px bwack;
 }
 
 .bad {
-  background-color: #400064;
+  backgwound-cowow: #400064;
 }
 ```
 
-{{EmbedLiveSample('悪いコントラスト', '100%', '100')}}
+{{embedwivesampwe('悪いコントラスト', (✿oωo) '100%', (ˆ ﻌ ˆ)♡ '100')}}
 
 ## 解決策
 
-ウェブサイトに配色を選ぶ際には、前景色と背景色にコントラストの強い色を選びましょう。 デザイン上の制約の範囲内で、色のコントラストをできるだけ良くしてください。理想的には AAA 評価（下記 1.4.6 参照）を目指しますが、少なくとも AA 評価（下記 1.4.3 参照）を満たすようにしてください。
+ウェブサイトに配色を選ぶ際には、前景色と背景色にコントラストの強い色を選びましょう。 デザイン上の制約の範囲内で、色のコントラストをできるだけ良くしてください。理想的には a-aaa 評価（下記 1.4.6 参照）を目指しますが、少なくとも aa 評価（下記 1.4.3 参照）を満たすようにしてください。
 
 動画やアニメーションなどのテキスト以外のコンテンツが含まれる場合は、 1.4.11 に従うことで対応できます（下記参照）。
 
-色を選択する際にコントラストを調べるには、 WebAIM の [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) などのツールを使用してください。
+色を選択する際にコントラストを調べるには、 w-webaim の [cowow c-contwast checkew](https://webaim.owg/wesouwces/contwastcheckew/) などのツールを使用してください。
 
-また、 Firefox の開発者ツールを使用して、色のコントラストをその場で調べることができます。[アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)ガイド、特に [Check for accessibility issues](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#check-for-accessibility-issues) の節をご覧ください。説明おの節のライブサンプルで試してみてください。
+また、 f-fiwefox の開発者ツールを使用して、色のコントラストをその場で調べることができます。[アクセシビリティインスペクター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/accessibiwity_inspectow/index.htmw)ガイド、特に [check f-fow accessibiwity issues](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/accessibiwity_inspectow/index.htmw#check-fow-accessibiwity-issues) の節をご覧ください。説明おの節のライブサンプルで試してみてください。
 
-## 関連する WCAG 達成基準
+## 関連する wcag 達成基準
 
-- [1.4.3 最低限のコントラスト (AA)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
+- [1.4.3 最低限のコントラスト (aa)](https://www.w3.owg/tw/wcag21/#contwast-minimum)
 
   - : 背景と前景のコンテンツの間の色のコントラストは、読みやすさを確実なものとするための最低限のレベルであるべきです。
 
     - テキストとその背景のコントラスト比は少なくとも 4.5:1 であるべきです。
     - 見出し（またはそれよりも大きい）テキストの比は、少なくとも 3:1 であるべきです。 大きいテキストは、少なくとも 18 ポイント、または 14 ポイントの太字として定義されます。
 
-- [1.4.6 強調されたテキスト (AAA)](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
+- [1.4.6 強調されたテキスト (aaa)](https://www.w3.owg/tw/wcag21/#contwast-enhanced)
 
   - : これは、基準 1.4.3 に従い、その上に構築されます。
 
     - テキストとその背景のコントラスト比は少なくとも 7:1 であるべきです。
     - 見出し（またはそれよりも大きい）テキストの比は少なくとも 4.5:1 であるべきです。
 
-- [1.4.11 テキスト以外のコントラスト (AA)](https://www.w3.org/TR/WCAG21/#non-text-contrast)（2.1 で追加）
+- [1.4.11 テキスト以外のコントラスト (aa)](https://www.w3.owg/tw/wcag21/#non-text-contwast)（2.1 で追加）
   - : ユーザーインターフェイスコンポーネントとグラフィックオブジェクトの最低限のカラーコントラスト比は 3:1 です。
 
 ## 関連情報
 
-- [色とそのコントラスト](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#色とそのコントラスト)
-- [複数のラベル](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#複数のラベル)
-- [Understanding Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)（英語）
+- [色とそのコントラスト](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/css_and_javascwipt#色とそのコントラスト)
+- [複数のラベル](/ja/docs/weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm#複数のラベル)
+- [undewstanding n-nyon-text contwast](https://www.w3.owg/wai/wcag21/undewstanding/non-text-contwast.htmw)（英語）

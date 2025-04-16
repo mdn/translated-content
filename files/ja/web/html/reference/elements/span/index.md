@@ -1,147 +1,147 @@
 ---
-title: "<span>: コンテンツ区間要素"
-slug: Web/HTML/Reference/Elements/span
-original_slug: Web/HTML/Element/span
-l10n:
-  sourceCommit: a46d4d15ea85b4bbb83df145228bc40f658868be
+titwe: "<span>: コンテンツ区間要素"
+swug: web/htmw/wefewence/ewements/span
+o-owiginaw_swug: w-web/htmw/ewement/span
+w-w10n:
+  s-souwcecommit: a-a46d4d15ea85b4bbb83df145228bc40f658868be
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<span>`** は [HTML](/ja/docs/Web/HTML) の要素で、記述コンテンツの汎用的なインラインコンテナーであり、何かを表すものではありません。スタイル付けのため（[`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を使用して）、または [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベルの要素](/ja/docs/Glossary/Block-level_content)であるのに対し、 `<span>` は[インラインレベルの要素](/ja/docs/Glossary/Inline-level_content)です。
+**`<span>`** は [htmw](/ja/docs/web/htmw) の要素で、記述コンテンツの汎用的なインラインコンテナーであり、何かを表すものではありません。スタイル付けのため（[`cwass`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass) または [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) 属性を使用して）、または [`wang`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/wang) のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{htmwewement("div")}} 要素ととても似ていますが、 {{htmwewement("div")}} が[ブロックレベルの要素](/ja/docs/gwossawy/bwock-wevew_content)であるのに対し、 `<span>` は[インラインレベルの要素](/ja/docs/gwossawy/inwine-wevew_content)です。
 
-{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;span&gt;", (˘ω˘) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  Add the <span class="ingredient">basil</span>,
-  <span class="ingredient">pine nuts</span> and
-  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+  a-add the <span cwass="ingwedient">basiw</span>, (⑅˘꒳˘)
+  <span cwass="ingwedient">pine nyuts</span> and
+  <span cwass="ingwedient">gawwic</span> t-to a bwendew and bwend into a paste. (///ˬ///✿)
 </p>
 
 <p>
-  Gradually add the <span class="ingredient">olive oil</span> while running the
-  blender slowly.
+  gwaduawwy add the <span c-cwass="ingwedient">owive oiw</span> whiwe w-wunning the
+  bwendew swowwy. 😳😳😳
 </p>
 ```
 
-```css interactive-example
-span.ingredient {
-  color: #f00;
+```css intewactive-exampwe
+span.ingwedient {
+  c-cowow: #f00;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 例
 
 ### 例 1
 
-#### HTML
+#### htmw
 
-```html
-<p><span>Some text</span></p>
+```htmw
+<p><span>some text</span></p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Example_1')}}
+{{embedwivesampwe('exampwe_1')}}
 
 ### 例 2
 
-#### HTML
+#### h-htmw
 
-```html
-<li>
+```htmw
+<wi>
   <span>
-    <a href="portfolio.html" target="_blank">See my portfolio</a>
+    <a h-hwef="powtfowio.htmw" tawget="_bwank">see my powtfowio</a>
   </span>
-</li>
+</wi>
 ```
 
-#### CSS
+#### css
 
 ```css
-li span {
-  background: gold;
+wi span {
+  b-backgwound: gowd;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Example_2')}}
+{{embedwivesampwe('exampwe_2')}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, 🥺
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素、または<a
-          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
       <td>
-        {{domxref("HTMLSpanElement")}}
+        {{domxwef("htmwspanewement")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の {{HTMLElement("div")}} 要素
+- htmw の {{htmwewement("div")}} 要素

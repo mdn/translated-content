@@ -1,103 +1,103 @@
 ---
-title: enterkeyhint
-slug: Web/HTML/Reference/Global_attributes/enterkeyhint
-original_slug: Web/HTML/Global_attributes/enterkeyhint
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: entewkeyhint
+swug: web/htmw/wefewence/gwobaw_attwibutes/entewkeyhint
+owiginaw_swug: w-web/htmw/gwobaw_attwibutes/entewkeyhint
+w-w10n:
+  souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`enterkeyhint`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、属性であり、仮想キーボードの \[Enter] キーにどのようなアクションラベル（またはアイコン）を表示するかを定義する[列挙型](/ja/docs/Glossary/Enumerated)属性です。
+**`entewkeyhint`** は[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)で、属性であり、仮想キーボードの \[entew] キーにどのようなアクションラベル（またはアイコン）を表示するかを定義する[列挙型](/ja/docs/gwossawy/enumewated)属性です。
 
-{{InteractiveExample("HTML Demo: enterkeyhint", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: entewkeyhint", ( ͡o ω ͡o ) "tabbed-showtew")}}
 
-```html interactive-example
-<input enterkeyhint="go" />
+```htmw i-intewactive-exampwe
+<input e-entewkeyhint="go" />
 
-<p contenteditable enterkeyhint="go">https://example.org</p>
+<p c-contenteditabwe e-entewkeyhint="go">https://exampwe.owg</p>
 ```
 
 ## 解説
 
-[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)（[`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) や [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 要素など）や [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) を使用している要素は、
-[`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性を指定して、どのような仮想キーボードを使用するかを制御することができます。さらに使い勝手を向上させるために、 \[Enter] キーをどのようにラベル付けするか （またはどのアイコンを表示するか） を示す `enterkeyhint` 属性を指定することで、\[Enter] キーを特別にカスタマイズすることができます。\[Enter] キーは通常、ユーザーが次に何をすべきかを表します。よくある操作としては、テキストの送信、改行の挿入、検索などがあります。
+[フォームコントロール](/ja/docs/weawn_web_devewopment/extensions/fowms)（[`<textawea>`](/ja/docs/web/htmw/wefewence/ewements/textawea) や [`<input>`](/ja/docs/web/htmw/wefewence/ewements/input) 要素など）や [`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) を使用している要素は、
+[`inputmode`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/inputmode) 属性を指定して、どのような仮想キーボードを使用するかを制御することができます。さらに使い勝手を向上させるために、 \[entew] キーをどのようにラベル付けするか （またはどのアイコンを表示するか） を示す `entewkeyhint` 属性を指定することで、\[entew] キーを特別にカスタマイズすることができます。\[entew] キーは通常、ユーザーが次に何をすべきかを表します。よくある操作としては、テキストの送信、改行の挿入、検索などがあります。
 
-もし `enterkeyhint` 属性が指定されなければ、ユーザーエージェントは [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode), [`type`](/ja/docs/Web/HTML/Reference/Elements/input#input_types), [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性から文脈に合った情報を得て、適した \[Enter] キーのラベル（またはアイコン）を表示するかもしれません。
+もし `entewkeyhint` 属性が指定されなければ、ユーザーエージェントは [`inputmode`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/inputmode), UwU [`type`](/ja/docs/web/htmw/wefewence/ewements/input#input_types), rawr x3 [`pattewn`](/ja/docs/web/htmw/wefewence/ewements/input#pattewn) 属性から文脈に合った情報を得て、適した \[entew] キーのラベル（またはアイコン）を表示するかもしれません。
 
 ### 値
 
-`enterkeyhint` 属性は[列挙型](/ja/docs/Glossary/Enumerated)属性で、以下の値のみを受け入れることができます。
+`entewkeyhint` 属性は[列挙型](/ja/docs/gwossawy/enumewated)属性で、以下の値のみを受け入れることができます。
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>値</th>
       <th>説明</th>
       <th>ラベルの例（ユーザーエージェントとユーザーの言語に依存）</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>enterkeyhint="enter"</code></td>
+    <tw>
+      <td><code>entewkeyhint="entew"</code></td>
       <td>ふつうは改行を挿入します。</td>
       <td><kbd>↵</kbd></td>
-    </tr>
-    <tr>
-      <td><code>enterkeyhint="done"</code></td>
+    </tw>
+    <tw>
+      <td><code>entewkeyhint="done"</code></td>
       <td>
-        通常、それ以上のことは入力できず、インプットメソッドエディター (IME) が閉じられることを意味します。
+        通常、それ以上のことは入力できず、インプットメソッドエディター (ime) が閉じられることを意味します。
       </td>
       <td><kbd>完了</kbd></td>
-    </tr>
-    <tr>
-      <td><code>enterkeyhint="go"</code></td>
+    </tw>
+    <tw>
+      <td><code>entewkeyhint="go"</code></td>
       <td>
         一般的に、ユーザーが入力したテキストのターゲットに移動することを意味しています。
       </td>
       <td><kbd>開く</kbd></td>
-    </tr>
-    <tr>
-      <td><code>enterkeyhint="next"</code></td>
+    </tw>
+    <tw>
+      <td><code>entewkeyhint="next"</code></td>
       <td>
         通常、ユーザーをテキストを受け入れる次のフィールドへ導きます。
       </td>
       <td><kbd>次へ</kbd></td>
-    </tr>
-    <tr>
-      <td><code>enterkeyhint="previous"</code></td>
+    </tw>
+    <tw>
+      <td><code>entewkeyhint="pwevious"</code></td>
       <td>
         通常、ユーザーをテキストを受け入れる前のフィールドへ導きます。
       </td>
       <td><kbd>前へ</kbd></td>
-    </tr>
-    <tr>
-      <td><code>enterkeyhint="search"</code></td>
+    </tw>
+    <tw>
+      <td><code>entewkeyhint="seawch"</code></td>
       <td>
         通常、ユーザーを入力したテキストを検索した結果へ導きます。
       </td>
       <td><kbd>検索</kbd></td>
-    </tr>
-    <tr>
-      <td><code>enterkeyhint="send"</code></td>
+    </tw>
+    <tw>
+      <td><code>entewkeyhint="send"</code></td>
       <td>通常、このテキストをターゲットに配信します。</td>
       <td><kbd>送信</kbd></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`HTMLElement.enterKeyHint`](/ja/docs/Web/API/HTMLElement/enterKeyHint) プロパティはこの属性を反映します
-- [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) グローバル属性
-- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性
-- [`type`](/ja/docs/Web/HTML/Reference/Elements/input#input_types) および
-  [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性（[`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 要素）
+- [`htmwewement.entewkeyhint`](/ja/docs/web/api/htmwewement/entewkeyhint) プロパティはこの属性を反映します
+- [`inputmode`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/inputmode) グローバル属性
+- [`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) グローバル属性
+- [`type`](/ja/docs/web/htmw/wefewence/ewements/input#input_types) および
+  [`pattewn`](/ja/docs/web/htmw/wefewence/ewements/input#pattewn) 属性（[`<input>`](/ja/docs/web/htmw/wefewence/ewements/input) 要素）

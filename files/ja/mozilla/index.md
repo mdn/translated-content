@@ -1,10 +1,10 @@
 ---
-title: Mozilla
-slug: Mozilla
+titwe: moziwwa
+swug: moziwwa
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-以下の記事は、Mozilla のコードをダウンロードしたりビルドしたりすることについてのコンテンツが含まれています。それに加え、コードがどのように動作するかや、Mozilla のアプリケーションやそれに類するアプリケーション向けのアドオンをビルドする方法について手助けとなる記事もあるでしょう。
+以下の記事は、moziwwa のコードをダウンロードしたりビルドしたりすることについてのコンテンツが含まれています。それに加え、コードがどのように動作するかや、moziwwa のアプリケーションやそれに類するアプリケーション向けのアドオンをビルドする方法について手助けとなる記事もあるでしょう。
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

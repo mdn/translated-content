@@ -1,57 +1,57 @@
 ---
-title: Firefox 105 for developers
-slug: Mozilla/Firefox/Releases/105
-l10n:
-  sourceCommit: f5437ee235fabc5188f6ac45b27e54ce1e22615c
+titwe: fiwefox 105 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/105
+w-w10n:
+  s-souwcecommit: f5437ee235fabc5188f6ac45b27e54ce1e22615c
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 105 の変更点をまとめています。Firefox 105 は、米国時間 2022 年 9 月 20 日にリリースされました。
+このページでは、開発者に影響する f-fiwefox 105 の変更点をまとめています。fiwefox 105 は、米国時間 2022 年 9 月 20 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
-### HTML
+### h-htmw
 
 変更なし。
 
-### CSS
+### c-css
 
-- SVG の定義や [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 内部のコンテンツなどの埋め込みコンテンツが、OS やブラウザーのテーマ設定ではなくコンテンツを埋め込んでいる要素のテーマ設定を重視するようになりました (両者の設定が異なっている場合があります)。
-  特に、埋め込みコンテンツは埋め込み元要素の [`color-scheme`](/ja/docs/Web/CSS/color-scheme) を継承するようになりました。また、埋め込みコンテンツの [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーは OS やブラウザーレベルの color-scheme 設定ではなく埋め込み元要素の color-scheme の値を重視します ([Firefox バグ 1779457](https://bugzil.la/1779457))。
+- s-svg の定義や [`<ifwame>`](/ja/docs/web/htmw/wefewence/ewements/ifwame) 内部のコンテンツなどの埋め込みコンテンツが、os やブラウザーのテーマ設定ではなくコンテンツを埋め込んでいる要素のテーマ設定を重視するようになりました (両者の設定が異なっている場合があります)。
+  特に、埋め込みコンテンツは埋め込み元要素の [`cowow-scheme`](/ja/docs/web/css/cowow-scheme) を継承するようになりました。また、埋め込みコンテンツの [`pwefews-cowow-scheme`](/ja/docs/web/css/@media/pwefews-cowow-scheme) メディアクエリーは o-os やブラウザーレベルの cowow-scheme 設定ではなく埋め込み元要素の cowow-scheme の値を重視します ([fiwefox バグ 1779457](https://bugziw.wa/1779457))。
 
-### JavaScript
+### javascwipt
 
-- [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)、[`Intl.NumberFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)、[`Intl.PluralRules`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) オブジェクトの `formatRange` および `selectRange` 関数で、範囲の制限を緩和しました。この変更により、負の値を受け入れるようになりました ([Firefox バグ 1780545](https://bugzil.la/1780545))。
+- [`intw.datetimefowmat`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat)、[`intw.numbewfowmat`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat)、[`intw.pwuwawwuwes`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes) オブジェクトの `fowmatwange` および `sewectwange` 関数で、範囲の制限を緩和しました。この変更により、負の値を受け入れるようになりました ([fiwefox バグ 1780545](https://bugziw.wa/1780545))。
 
-### API
+### api
 
-#### DOM
+#### dom
 
-- [Encoding API](/ja/docs/Web/API/Encoding_API) の一部である [TextDecoderStream](/ja/docs/Web/API/TextDecoderStream) および [TextEncoderStream](/ja/docs/Web/API/TextEncoderStream) インターフェイスをサポートしました ([Firefox バグ 1486949](https://bugzil.la/1486949))。
+- [encoding a-api](/ja/docs/web/api/encoding_api) の一部である [textdecodewstweam](/ja/docs/web/api/textdecodewstweam) および [textencodewstweam](/ja/docs/web/api/textencodewstweam) インターフェイスをサポートしました ([fiwefox バグ 1486949](https://bugziw.wa/1486949))。
 
-- [OffscreenCanvas](/ja/docs/Web/API/OffscreenCanvas) API が、window および [web worker](/ja/docs/Web/API/OffscreenCanvas#asynchronous_display_of_frames_produced_by_an_offscreencanvas) のどちらのコンテキストでもオフスクリーンで描画できる canvas を提供するようになりました。
-  これは、`<canvas>` 要素を DOM から分離することを可能にします。このために [OffscreenCanvasRenderingContext2D](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D) インターフェイスをサポートして、デフォルトで有効にしました ([Firefox バグ 1746110](https://bugzil.la/1746110))。
+- [offscweencanvas](/ja/docs/web/api/offscweencanvas) api が、window および [web wowkew](/ja/docs/web/api/offscweencanvas#asynchwonous_dispway_of_fwames_pwoduced_by_an_offscweencanvas) のどちらのコンテキストでもオフスクリーンで描画できる c-canvas を提供するようになりました。
+  これは、`<canvas>` 要素を dom から分離することを可能にします。このために [offscweencanvaswendewingcontext2d](/ja/docs/web/api/offscweencanvaswendewingcontext2d) インターフェイスをサポートして、デフォルトで有効にしました ([fiwefox バグ 1746110](https://bugziw.wa/1746110))。
 
-- [CSS Font Loading API](/ja/docs/Web/API/CSS_Font_Loading_API) を worker スレッドで使用できるようになりました ([Firefox バグ 1072107](https://bugzil.la/1072107))。
+- [css f-font woading api](/ja/docs/web/api/css_font_woading_api) を wowkew スレッドで使用できるようになりました ([fiwefox バグ 1072107](https://bugziw.wa/1072107))。
 
-### WebDriver conformance (WebDriver BiDi, Marionette)
+### webdwivew confowmance (webdwivew b-bidi, XD mawionette)
 
-#### WebDriver BiDi
+#### webdwivew b-bidi
 
-- IPv6 を優先する DNS 名前解決クライアントを持つシステムで、WebSocket サーバーのホストとして `localhost` を使用したときに接続が失敗しないようになりました ([Firefox バグ 1769994](https://bugzil.la/1769994))。
+- ipv6 を優先する d-dns 名前解決クライアントを持つシステムで、websocket サーバーのホストとして `wocawhost` を使用したときに接続が失敗しないようになりました ([fiwefox バグ 1769994](https://bugziw.wa/1769994))。
 
-- `RemoteValue` を、単純な JSON のシリアライズ可能なフィールドを持つプレーンな JS オブジェクトをシリアライズできるように改良しました ([Firefox バグ 1779226](https://bugzil.la/1779226))。
+- `wemotevawue` を、単純な json のシリアライズ可能なフィールドを持つプレーンな js オブジェクトをシリアライズできるように改良しました ([fiwefox バグ 1779226](https://bugziw.wa/1779226))。
 
-#### Marionette
+#### mawionette
 
-- `WebDriver:GetElementProperty` が、ウェブコンテンツによって設定されたノードプロパティを返せるようになりました ([Firefox バグ 1398792](https://bugzil.la/1398792))。
+- `webdwivew:getewementpwopewty` が、ウェブコンテンツによって設定されたノードプロパティを返せるようになりました ([fiwefox バグ 1398792](https://bugziw.wa/1398792))。
 
 ## アドオン開発者向けの変更点一覧
 
-- {{WebExtAPIRef("scripting")}} を使用して、永続的なスクリプトを定義する機能を追加しました。{{WebExtAPIRef("scripting.RegisteredContentScript")}} の `persistAcrossSessions` プロパティを使用して、永続的なスクリプトを識別します ([Firefox バグ 1751436](https://bugzil.la/1751436))。
-- デフォルトで、拡張機能のリソースがほかの拡張機能から読み込まれないようになりました。ほかの拡張機能がリソースを読み込むことを可能にするには、拡張機能の [`web_accessible_resources`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) マニフェストキーに列挙しなければなりません ([Firefox バグ 1711168](https://bugzil.la/1711168))。
+- {{webextapiwef("scwipting")}} を使用して、永続的なスクリプトを定義する機能を追加しました。{{webextapiwef("scwipting.wegistewedcontentscwipt")}} の `pewsistacwosssessions` プロパティを使用して、永続的なスクリプトを識別します ([fiwefox バグ 1751436](https://bugziw.wa/1751436))。
+- デフォルトで、拡張機能のリソースがほかの拡張機能から読み込まれないようになりました。ほかの拡張機能がリソースを読み込むことを可能にするには、拡張機能の [`web_accessibwe_wesouwces`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces) マニフェストキーに列挙しなければなりません ([fiwefox バグ 1711168](https://bugziw.wa/1711168))。
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(104)}}
+{{fiwefox_fow_devewopews(104)}}

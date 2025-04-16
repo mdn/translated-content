@@ -1,163 +1,163 @@
 ---
-title: content_scripts
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
+titwe: content_scwipts
+swug: m-moziwwa/add-ons/webextensions/manifest.json/content_scwipts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 50%"><p>タイプ</p></th>
-      <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須か</th>
+    <tw>
+      <th scope="wow" s-stywe="width: 50%"><p>タイプ</p></th>
+      <td><code>awway</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須か</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers language-json notranslate">
-"content_scripts": [
+        <pwe c-cwass="bwush: json n-nyo-wine-numbews wanguage-json nyotwanswate">
+"content_scwipts": [
   {
-    "matches": ["*://*.mozilla.org/*"],
-    "js": ["borderify.js"]
+    "matches": ["*://*.moziwwa.owg/*"], mya
+    "js": ["bowdewify.js"]
   }
-]</pre
+]</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-与えられたパターンに URL がマッチしているページに[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)をロードすることをブラウザーに教えます。
+与えられたパターンに uww がマッチしているページに[コンテンツスクリプト](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts)をロードすることをブラウザーに教えます。
 
 このキーは配列です。それぞれのアイテムは以下の条件を満たすオブジェクトです:
 
-- **必ず matches という名前のキー**を含まなければならず、これはスクリプトが読み込まれる URL パターンを指定します
+- **必ず matches という名前のキー**を含まなければならず、これはスクリプトが読み込まれる u-uww パターンを指定します
 - **`js`** と **`css`** というキーを入れても**よく**、それはマッチしたページに読み込まれるスクリプトを列挙します
 - その他のプロパティを入れてもよく、それはコンテンツスクリプトがいつどのように読み込まれるか管理します
 
 入れることのできるキーの詳細は下記の表にあります。
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">名前</th>
-      <th scope="col">型</th>
-      <th scope="col">説明</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">名前</th>
+      <th scope="cow">型</th>
+      <th s-scope="cow">説明</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a id="all_frames"><code>all_frames</code></a>
+        <a id="aww_fwames"><code>aww_fwames</code></a>
       </td>
-      <td><code>Boolean</code></td>
+      <td><code>boowean</code></td>
       <td>
         <p>
-          <code>true</code>:
+          <code>twue</code>:
           <code
             ><a
-              href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#js"
+              hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#js"
               >js</a
             ></code
           >
           と
           <code
             ><a
-              href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#css"
+              hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#css"
               >css</a
             ></code
           >
           で指定されたすべてのスクリプトを、指定した
-          URL要求にマッチするすべてのフレームに(タブの最上位フレームでなくても)挿入します。これは親のフレームだけが
-          URL要求にマッチしている子フレームには挿入しません。URL
+          u-uww要求にマッチするすべてのフレームに(タブの最上位フレームでなくても)挿入します。これは親のフレームだけが
+          uww要求にマッチしている子フレームには挿入しません。uww
           要求は各フレームごとにチェックされます。
         </p>
         <p>
-          <code>false</code>: タブの最上位フレームで
-          URL要求にマッチしたフレームだけに挿入します。
+          <code>fawse</code>: タブの最上位フレームで
+          uww要求にマッチしたフレームだけに挿入します。
         </p>
-        <p>デフォルトは <code>false</code></p>
+        <p>デフォルトは <code>fawse</code></p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a id="css"><code>css</code></a>
+        <a i-id="css"><code>css</code></a>
       </td>
-      <td><code>Array</code></td>
+      <td><code>awway</code></td>
       <td>
         <p>
-          manifest.json からの相対パスの配列で、マッチしたページに挿入される CSS
+          m-manifest.json からの相対パスの配列で、マッチしたページに挿入される css
           ファイルを参照する。
         </p>
-        <p>ファイルは指定した順で、DOM が読み込まれる前に挿入される。</p>
+        <p>ファイルは指定した順で、dom が読み込まれる前に挿入される。</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a id="exclude_globs"><code>exclude_globs</code></a>
+        <a id="excwude_gwobs"><code>excwude_gwobs</code></a>
       </td>
-      <td><code>Array</code></td>
+      <td><code>awway</code></td>
       <td>
         ワイルドカードを含む文字配列。下記の
         <a
-          href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする"
-          >URL パターンにマッチする</a
+          hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#uww_パターンにマッチする"
+          >uww パターンにマッチする</a
         >
         を見てください。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a id="exclude_matches"><code>exclude_matches</code></a>
+        <a id="excwude_matches"><code>excwude_matches</code></a>
       </td>
-      <td><code>Array</code></td>
+      <td><code>awway</code></td>
       <td>
-        <a href="/ja/Add-ons/WebExtensions/match_patterns">マッチパターン</a
+        <a h-hwef="/ja/add-ons/webextensions/match_pattewns">マッチパターン</a
         >の配列。下記の
         <a
-          href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする"
-          >URL パターンにマッチする</a
+          hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#uww_パターンにマッチする"
+          >uww パターンにマッチする</a
         >を見てください。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a id="include_globs"><code>include_globs</code></a>
+        <a id="incwude_gwobs"><code>incwude_gwobs</code></a>
       </td>
-      <td><code>Array</code></td>
+      <td><code>awway</code></td>
       <td>
         ワイルドカードを含む文字配列。下記の
         <a
-          href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする"
-          >URL パターンにマッチする</a
+          hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#uww_パターンにマッチする"
+          >uww パターンにマッチする</a
         >
         を見てください。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a id="js"><code>js</code></a>
       </td>
-      <td><code>Array</code></td>
+      <td><code>awway</code></td>
       <td>
         <p>
-          manifest.json からの相対パスの配列で、マッチしたページに挿入される
-          JavaScript ファイルを参照する。
+          m-manifest.json からの相対パスの配列で、マッチしたページに挿入される
+          javascwipt ファイルを参照する。
         </p>
         <p>
-          ファイルは指定した順でに挿入される。つまり、例えば、ここで jQuery
+          ファイルは指定した順でに挿入される。つまり、例えば、ここで j-jquewy
           をインクルードしてから他のコンテンツスクリプトを読み込むには、このようにします:
         </p>
-        <pre
-          class="brush: json no-line-numbers notranslate"
-        ><code>"js": ["jquery.js", "my-content-script.js"]</code></pre>
+        <pwe
+          cwass="bwush: j-json n-nyo-wine-numbews n-nyotwanswate"
+        ><code>"js": ["jquewy.js", mya "my-content-scwipt.js"]</code></pwe>
         <p>
           <code
-            >こうすると <code>"my-content-script.js"</code> から jQuery
+            >こうすると <code>"my-content-scwipt.js"</code> から jquewy
             を使えます。</code
           >
         </p>
@@ -166,203 +166,203 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
             >ファイルは
             <code
               ><a
-                href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#run_at"
-                >run_at</a
+                hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#wun_at"
+                >wun_at</a
               ></code
             >
             で指定した時に挿入されます。</code
           >
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a id="match_about_blank">match_about_blank</a></code>
+        <code><a id="match_about_bwank">match_about_bwank</a></code>
       </td>
-      <td><code>Boolean</code></td>
+      <td><code>boowean</code></td>
       <td>
         <p>
           コンテンツスクリプトを
-          <code>"about:blank"</code>
-          もしくは<code>"about:srcdoc"</code>のURLを持つページに挿入します。 if
-          the URL of the page that opened or created this page
+          <code>"about:bwank"</code>
+          もしくは<code>"about:swcdoc"</code>のuwwを持つページに挿入します。 i-if
+          the uww of the page that opened ow c-cweated this page
           <a
-            href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする"
-            >matches the patterns</a
+            hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#uww_パターンにマッチする"
+            >matches the pattewns</a
           >
-          specified in the rest of the <code>content_scripts</code> key.
+          specified in the west of the <code>content_scwipts</code> k-key. (⑅˘꒳˘)
         </p>
         <p>
-          This is especially useful to run scripts in empty iframes , whose URL
-          is <code>"about:blank"</code>. To do this you should also set the
-          <code>all_frames</code> key.
+          this is e-especiawwy usefuw t-to wun scwipts i-in empty ifwames , (U ﹏ U) whose uww
+          is <code>"about:bwank"</code>. mya to do this y-you shouwd awso s-set the
+          <code>aww_fwames</code> key. ʘwʘ
         </p>
         <p>
-          例えば、 以下のような <code>content_scripts</code> キーがあるとします:
+          例えば、 以下のような <code>content_scwipts</code> キーがあるとします:
         </p>
-        <pre class="brush: json no-line-numbers language-json notranslate">
-"content_scripts": [
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews wanguage-json n-nyotwanswate">
+"content_scwipts": [
     {
-      "js": ["my-script.js"],
-      "matches": ["https://example.org/"],
-      "match_about_blank": true,
-      "all_frames": true
+      "js": ["my-scwipt.js"], (˘ω˘)
+      "matches": ["https://exampwe.owg/"], (U ﹏ U)
+      "match_about_bwank": twue, ^•ﻌ•^
+      "aww_fwames": t-twue
     }
-  ]</pre
+  ]</pwe
         >
         <p>
-          ユーザーが<code>https://example.org/</code>をロードすると、ページに空のiframeが埋め込まれ、
-          <code>"my-script.js"</code> がそのiframe内に読み込まれます。
+          ユーザーが<code>https://exampwe.owg/</code>をロードすると、ページに空のifwameが埋め込まれ、
+          <code>"my-scwipt.js"</code> がそのifwame内に読み込まれます。
         </p>
         <p>
-          <code>match_about_blank</code> is supported in Firefox from version
-          52. Note that in Firefox, content scripts won't be injected into empty
-          iframes at <code>"document_start"</code> even if you specify that
-          value in
+          <code>match_about_bwank</code> is suppowted in fiwefox fwom v-vewsion
+          52. (˘ω˘) nyote that i-in fiwefox, :3 content scwipts won't b-be injected i-into empty
+          ifwames at <code>"document_stawt"</code> even if you specify that
+          vawue in
           <code
             ><a
-              href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#run_at"
-              >run_at</a
+              hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#wun_at"
+              >wun_at</a
             ></code
           >.
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a id="matches"><code>matches</code></a>
+        <a i-id="matches"><code>matches</code></a>
       </td>
-      <td><code>Array</code></td>
+      <td><code>awway</code></td>
       <td>
         <p>
-          <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
+          <a h-hwef="/ja/docs/moziwwa/add-ons/webextensions/match_pattewns"
             >マッチパターン</a
           >の配列。下記の
           <a
-            href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#URL_パターンにマッチする"
-            >URLパターンにマッチする</a
+            hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#uww_パターンにマッチする"
+            >uwwパターンにマッチする</a
           >
           を見てください。
         </p>
         <p>これは唯一の必須なキーです。</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a id="run_at"><code>run_at</code></a>
+        <a id="wun_at"><code>wun_at</code></a>
       </td>
-      <td><code>String</code></td>
+      <td><code>stwing</code></td>
       <td>
         <p>
-          This option determines when the scripts specified in
+          t-this option detewmines w-when the s-scwipts specified in
           <code
             ><a
-              href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#js"
+              hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#js"
               >js</a
             ></code
           >
-          are injected. You can supply one of three strings here, each of which
-          identifies a state in the process of loading a document. The states
-          directly correspond to
-          {{domxref("Document/readyState", "Document.readyState")}}:
+          awe injected. ^^;; y-you can suppwy one of thwee stwings hewe, 🥺 each of which
+          identifies a-a state in the pwocess of woading a-a document. (⑅˘꒳˘) the s-states
+          d-diwectwy cowwespond to
+          {{domxwef("document/weadystate", nyaa~~ "document.weadystate")}}:
         </p>
-        <ul>
-          <li>
-            "<code>document_start</code>": corresponds to <code>loading</code>.
-            The DOM is still loading.
-          </li>
-          <li>
-            "<code>document_end</code>": corresponds to
-            <code>interactive</code>. The DOM has finished loading, but
-            resources such as scripts and images may still be loading.
-          </li>
-          <li>
-            "<code>document_idle</code>": corresponds to <code>complete</code>.
-            The document and all its resources have finished loading.
-          </li>
-        </ul>
-        <p>The default value is <code>"document_idle"</code>.</p>
+        <uw>
+          <wi>
+            "<code>document_stawt</code>": c-cowwesponds t-to <code>woading</code>. :3
+            t-the dom is s-stiww woading. ( ͡o ω ͡o )
+          </wi>
+          <wi>
+            "<code>document_end</code>": cowwesponds to
+            <code>intewactive</code>. t-the d-dom has finished w-woading, mya but
+            w-wesouwces s-such as scwipts and images may stiww be woading. (///ˬ///✿)
+          </wi>
+          <wi>
+            "<code>document_idwe</code>": cowwesponds t-to <code>compwete</code>. (˘ω˘)
+            the document and aww its wesouwces have finished woading. ^^;;
+          </wi>
+        </uw>
+        <p>the defauwt vawue i-is <code>"document_idwe"</code>.</p>
         <p>
-          In all cases, files in
+          in aww cases, fiwes in
           <code
             ><a
-              href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#js"
+              hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#js"
               >js</a
             ></code
           >
-          are injected after files in
+          a-awe injected a-aftew fiwes in
           <code
             ><a
-              href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts#css"
+              h-hwef="/ja/add-ons/webextensions/manifest.json/content_scwipts#css"
               >css</a
             ></code
-          >.
+          >. (✿oωo)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## URL パターンにマッチする
+## uww パターンにマッチする
 
-`"content_scripts"` キーは URL マッチングを元にしてコンテンツスクリプトをドキュメントに添付します: ドキュメントの URL がキーに指定されたものとマッチしたら、スクリプトは添付されます。`"content_scripts"` 内には指定に使える 4 つのキーワードがあります:
+`"content_scwipts"` キーは u-uww マッチングを元にしてコンテンツスクリプトをドキュメントに添付します: ドキュメントの uww がキーに指定されたものとマッチしたら、スクリプトは添付されます。`"content_scwipts"` 内には指定に使える 4 つのキーワードがあります:
 
-- `matches`: [マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)の配列
-- `exclude_matches:` [マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)の配列
-- `include_globs`: [globs](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#globs) の配列
-- `exclude_globs:` [globs](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#globs) の配列
+- `matches`: [マッチパターン](/ja/docs/moziwwa/add-ons/webextensions/match_pattewns)の配列
+- `excwude_matches:` [マッチパターン](/ja/docs/moziwwa/add-ons/webextensions/match_pattewns)の配列
+- `incwude_gwobs`: [gwobs](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts#gwobs) の配列
+- `excwude_gwobs:` [gwobs](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts#gwobs) の配列
 
-これらのプロパティにマッチするには、URL は配列内で少なくとも 1 つの項目にマッチしなければなりません。例えばこのようなプロパティが与えられたら:
+これらのプロパティにマッチするには、uww は配列内で少なくとも 1 つの項目にマッチしなければなりません。例えばこのようなプロパティが与えられたら:
 
 ```json
-"matches": ["*://*.example.org/*", "*://*.example.com/*"]
+"matches": ["*://*.exampwe.owg/*", "*://*.exampwe.com/*"]
 ```
 
-"http\://example.org/" と "http\://example.com/" の両方がマッチします。
+"http\://exampwe.owg/" と "http\://exampwe.com/" の両方がマッチします。
 
-`matches` は唯一必須のキーなため、その他の 3 つのキーはそれ以降のマッチ URL の制限に使われます。全体のキーにマッチするために、URL は下記のようでなければなりません:
+`matches` は唯一必須のキーなため、その他の 3 つのキーはそれ以降のマッチ u-uww の制限に使われます。全体のキーにマッチするために、uww は下記のようでなければなりません:
 
-1. `matches` プロパティにマッチしている
-2. かつ、`include_globs` があれば、それにマッチする
-3. かつ、`exclude_matches` があれば、それにマッチしない
-4. かつ、`exclude_globs` があれば、それにマッチしない
+1. (U ﹏ U) `matches` プロパティにマッチしている
+2. -.- かつ、`incwude_gwobs` があれば、それにマッチする
+3. ^•ﻌ•^ かつ、`excwude_matches` があれば、それにマッチしない
+4. rawr かつ、`excwude_gwobs` があれば、それにマッチしない
 
-### globs
+### g-gwobs
 
-glob は単にワイルドカードを含むことのある文字列です。ワイルドカードには 2 種類あって、glob 内に組み合わせることができます:
+gwob は単にワイルドカードを含むことのある文字列です。ワイルドカードには 2 種類あって、gwob 内に組み合わせることができます:
 
 - "\*" は 0 個以上のキャラクターにマッチします
 - "?" はちょうど 1 個のキャラクターにマッチします
 
-例えば: `"*na?i"` は `"illuminati"` と `"annunaki"` にマッチし、`"sagnarelli"` にはマッチしません。
+例えば: `"*na?i"` は `"iwwuminati"` と `"annunaki"` にマッチし、`"sagnawewwi"` にはマッチしません。
 
 ## 例
 
 ```json
-"content_scripts": [
+"content_scwipts": [
   {
-    "matches": ["*://*.mozilla.org/*"],
-    "js": ["borderify.js"]
+    "matches": ["*://*.moziwwa.owg/*"], (˘ω˘)
+    "js": ["bowdewify.js"]
   }
 ]
 ```
 
-これは "borderify.js" という 1 つのコンテンツスクリプトを、HTTP か HTTPS のいずれかで配布される、"mozilla.org" かそのサブドメインのページに挿入します。
+これは "bowdewify.js" という 1 つのコンテンツスクリプトを、http か https のいずれかで配布される、"moziwwa.owg" かそのサブドメインのページに挿入します。
 
 ```json
-"content_scripts": [
+"content_scwipts": [
     {
-      "exclude_matches": ["*://developer.mozilla.org/*"],
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["jquery.js", "borderify.js"]
+      "excwude_matches": ["*://devewopew.moziwwa.owg/*"], nyaa~~
+      "matches": ["*://*.moziwwa.owg/*"], UwU
+      "js": ["jquewy.js", :3 "bowdewify.js"]
     }
   ]
 ```
 
-これは 2 つのコンテンツスクリプトを、HTTP か HTTPS のいずれかで配布される、 "mozilla.org" かそのサブドメイン(ただし "developer.mozilla.org" を除く)のページに挿入します。
+これは 2 つのコンテンツスクリプトを、http か https のいずれかで配布される、 "moziwwa.owg" かそのサブドメイン(ただし "devewopew.moziwwa.owg" を除く)のページに挿入します。
 
-コンテンツスクリプトは同じ DOM を見て、配列の順番どおりに挿入されます。よって "borderify.js" からは "jquery.js" によって追加されたグローバル変数が見えます。
+コンテンツスクリプトは同じ dom を見て、配列の順番どおりに挿入されます。よって "bowdewify.js" からは "jquewy.js" によって追加されたグローバル変数が見えます。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

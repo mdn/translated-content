@@ -1,43 +1,43 @@
 ---
-title: homepage_url
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
+titwe: homepage_uww
+swug: moziwwa/add-ons/webextensions/manifest.json/homepage_uww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th scope="wow">例</th>
       <td>
-        <pre class="brush: json">
-"homepage_url": "https://example.org/my-addon"</pre
+        <pwe c-cwass="bwush: j-json">
+"homepage_uww": "https://exampwe.owg/my-addon"</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-拡張機能のホームページの URL です。
+拡張機能のホームページの uww です。
 
-[developer](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) キーが提供されていて、そこに "url" プロパティが含まれている場合、homepage_url キーは上書きされます。
+[devewopew](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/devewopew) キーが提供されていて、そこに "uww" プロパティが含まれている場合、homepage_uww キーは上書きされます。
 
-これは[国際化できるプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
+これは[国際化できるプロパティ](/ja/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json)です。
 
 ## 例
 
 ```json
-"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+"homepage_uww": "https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify"
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

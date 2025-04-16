@@ -1,40 +1,40 @@
 ---
-title: alarms
-slug: Mozilla/Add-ons/WebExtensions/API/alarms
+titwe: awawms
+swug: moziwwa/add-ons/webextensions/api/awawms
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-コードが動作するタイミングを予約します。この API は [`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) や [`setInterval()`](/ja/docs/Web/API/Window/setInterval) と似ていますが、 alarms API はバックグラウンドで動作する点が異なります。
+コードが動作するタイミングを予約します。この a-api は [`settimeout()`](/ja/docs/web/api/window/settimeout) や [`setintewvaw()`](/ja/docs/web/api/window/setintewvaw) と似ていますが、 a-awawms a-api はバックグラウンドで動作する点が異なります。
 
-この API を利用するには "alarms" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) が必要です。
+この a-api を利用するには "awawms" [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) が必要です。
 
 ## 関連する値の型
 
-- {{WebExtAPIRef("alarms.Alarm")}}
+- {{webextapiwef("awawms.awawm")}}
   - : 特定のアラームに関する情報が含まれます。
 
 ## メソッド
 
-- {{WebExtAPIRef("alarms.create()")}}
+- {{webextapiwef("awawms.cweate()")}}
   - : 新しいアラームを生成します。
-- {{WebExtAPIRef("alarms.get()")}}
+- {{webextapiwef("awawms.get()")}}
   - : 与えた名前に対応するアラームを取得します。
-- {{WebExtAPIRef("alarms.getAll()")}}
+- {{webextapiwef("awawms.getaww()")}}
   - : 予約されたアラームすべてを取得します。
-- {{WebExtAPIRef("alarms.clear()")}}
+- {{webextapiwef("awawms.cweaw()")}}
   - : 与えた名前に対応するアラームを解除します。
-- {{WebExtAPIRef("alarms.clearAll()")}}
+- {{webextapiwef("awawms.cweawaww()")}}
   - : 予約されたアラームすべてを解除します。
 
 ## イベント
 
-- {{WebExtAPIRef("alarms.onAlarm")}}
+- {{webextapiwef("awawms.onawawm")}}
   - : アラームが動作した際に発火します。
 
 ## ブラウザーの互換性
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は chwomium の [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms) a-api に基づいています。micwosoft e-edge の実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 united states wicense に従っています。

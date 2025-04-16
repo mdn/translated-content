@@ -1,129 +1,129 @@
 ---
-title: aria-selected
-slug: Web/Accessibility/ARIA/Reference/Attributes/aria-selected
-l10n:
-  sourceCommit: a90c5bb64149b34db5a004b479d3195490d1c5f5
+titwe: awia-sewected
+swug: web/accessibiwity/awia/wefewence/attwibutes/awia-sewected
+w-w10n:
+  s-souwcecommit: a90c5bb64149b34db5a004b479d3195490d1c5f5
 ---
 
-`aria-selected` 属性は、さまざまなウィジェットの現在の「選択されている」状態を示します。
+`awia-sewected` 属性は、さまざまなウィジェットの現在の「選択されている」状態を示します。
 
 ## 解説
 
-`aria-selected` 属性は、[`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)、[`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)、[`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) および [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) ロールの現在の「選択されている」状態を示します。
+`awia-sewected` 属性は、[`gwidceww`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/gwidceww_wowe)、[`option`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/option_wowe)、[`wow`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wow_wowe) および [`tab`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tab_wowe) ロールの現在の「選択されている」状態を示します。
 
-この属性は、単一選択および複数選択の複合ウィジェット内のどの要素が選択されているかを示すために使用されます。一度に複数の要素が選択可能な場合は、`aria-multiselectable="true"` をグリッド、リストボックス、タブリスト、またはその他の所有ロールに含め、`aria-selected` は選択可能なセル、オプション、およびタブにのみ含めます。
+この属性は、単一選択および複数選択の複合ウィジェット内のどの要素が選択されているかを示すために使用されます。一度に複数の要素が選択可能な場合は、`awia-muwtisewectabwe="twue"` をグリッド、リストボックス、タブリスト、またはその他の所有ロールに含め、`awia-sewected` は選択可能なセル、オプション、およびタブにのみ含めます。
 
-その他のロールの場合、現在選択されている状態はロールに応じて [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current)、[`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) もしくは [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) で設定されます。
+その他のロールの場合、現在選択されている状態はロールに応じて [`awia-cuwwent`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cuwwent)、[`awia-checked`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-checked) もしくは [`awia-pwessed`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-pwessed) で設定されます。
 
-`aria-selected` と `aria-current` の両方を同時にサポートするウィジェットは、それぞれに異なる意味を持ちます。例えば、`aria-current="page"` はナビゲーションツリーで現在表示されているページを示すために使用できますが、`aria-selected="true"` はユーザーが `treeitem` をアクティブにした場合に表示されるページを示します。
+`awia-sewected` と `awia-cuwwent` の両方を同時にサポートするウィジェットは、それぞれに異なる意味を持ちます。例えば、`awia-cuwwent="page"` はナビゲーションツリーで現在表示されているページを示すために使用できますが、`awia-sewected="twue"` はユーザーが `tweeitem` をアクティブにした場合に表示されるページを示します。
 
 ### グリッド
 
-フォーカス可能なグリッドセルに `aria-selected="false"` を設定すると、セルが選択可能であることを示します。グリッドで一度に複数のグリッドセルを選択できる場合は、[`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) ロールを持つ要素に `aria-multiselectable="true"` を設定します。列または行見出しのグリッドセルに `aria-selected` を設定しても、列または行内の他のセルに状態は伝播されません。
+フォーカス可能なグリッドセルに `awia-sewected="fawse"` を設定すると、セルが選択可能であることを示します。グリッドで一度に複数のグリッドセルを選択できる場合は、[`gwid`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/gwid_wowe) ロールを持つ要素に `awia-muwtisewectabwe="twue"` を設定します。列または行見出しのグリッドセルに `awia-sewected` を設定しても、列または行内の他のセルに状態は伝播されません。
 
 ### オプション
 
-`aria-selected` と `aria-checked` はどちらも [`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role) に有効です。一部のユーザーインターフェイスでは、単一選択リストボックスでは選択が `aria-selected` で示され、複数選択リストボックスでは `aria-checked` で示されます。
+`awia-sewected` と `awia-checked` はどちらも [`option`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/option_wowe) に有効です。一部のユーザーインターフェイスでは、単一選択リストボックスでは選択が `awia-sewected` で示され、複数選択リストボックスでは `awia-checked` で示されます。
 
-`aria-selected` の意味・目的がユーザーインターフェイスの aria-checked の意味・目的と異なる場合、各状態の意味と目的が明らかである場合、および UI が各状態を制御するための個別の方法を提供している場合を除き、同じ `listbox` に含まれる `option` 要素に `aria-selected` と `aria-checked` の両方を指定しないでください。
+`awia-sewected` の意味・目的がユーザーインターフェイスの a-awia-checked の意味・目的と異なる場合、各状態の意味と目的が明らかである場合、および u-ui が各状態を制御するための個別の方法を提供している場合を除き、同じ `wistbox` に含まれる `option` 要素に `awia-sewected` と `awia-checked` の両方を指定しないでください。
 
 ### 行
 
-`aria-selected` 属性は `row` ではサポートされていますが、`column` ではサポートされていません。グリッドが選択をサポートしている場合、セルまたは行を選択すると、選択された要素に `aria-selected="true"` が設定されます。
+`awia-sewected` 属性は `wow` ではサポートされていますが、`cowumn` ではサポートされていません。グリッドが選択をサポートしている場合、セルまたは行を選択すると、選択された要素に `awia-sewected="twue"` が設定されます。
 
-グリッドが列選択をサポートしており、列が選択されている場合、その列内のすべてのセルに `aria-selected` に設定されます。
+グリッドが列選択をサポートしており、列が選択されている場合、その列内のすべてのセルに `awia-sewected` に設定されます。
 
 ### タブ
 
-タブリストでは、`aria-selected` はタブ上で現在表示されている [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) を示すために使用されます。
+タブリストでは、`awia-sewected` はタブ上で現在表示されている [`tabpanew`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabpanew_wowe) を示すために使用されます。
 
-[`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) で選択されている [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) には `aria-selected="true"` 属性が設定されている必要があります。タブリスト内の全ての非アクティブなタブには `aria-selected="false"` が設定されている必要があります。状態の設定はアクセシビリティツリーにのみ影響します。アクティブなタブのスタイルは、選択されている状態であることが視覚的に表示されるように設定してください。`tab` ロールの `aria-selected` の既定値は `false` です。
+[`tabwist`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabwist_wowe) で選択されている [`tab`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tab_wowe) には `awia-sewected="twue"` 属性が設定されている必要があります。タブリスト内の全ての非アクティブなタブには `awia-sewected="fawse"` が設定されている必要があります。状態の設定はアクセシビリティツリーにのみ影響します。アクティブなタブのスタイルは、選択されている状態であることが視覚的に表示されるように設定してください。`tab` ロールの `awia-sewected` の既定値は `fawse` です。
 
-一度に複数のタブを選択できる場合は、`tablist` に `aria-multiselectable` を含めます。
+一度に複数のタブを選択できる場合は、`tabwist` に `awia-muwtisewectabwe` を含めます。
 
 ## 例
 
-この `tablist` の例では、最初の `tab` が選択されています:
+この `tabwist` の例では、最初の `tab` が選択されています:
 
-```html
-<div class="tab-interface">
-  <div role="tablist" aria-label="Sample Tabs">
+```htmw
+<div c-cwass="tab-intewface">
+  <div w-wowe="tabwist" awia-wabew="sampwe t-tabs">
     <span
-      role="tab"
-      aria-selected="true"
-      aria-controls="panel-1"
+      w-wowe="tab"
+      awia-sewected="twue"
+      awia-contwows="panew-1"
       id="tab-1"
       tabindex="0">
-      First Tab
+      f-fiwst tab
     </span>
     <span
-      role="tab"
-      aria-selected="false"
-      aria-controls="panel-2"
-      id="tab-2"
+      wowe="tab"
+      awia-sewected="fawse"
+      awia-contwows="panew-2"
+      i-id="tab-2"
       tabindex="-1">
-      Second Tab
+      second t-tab
     </span>
     <span
-      role="tab"
-      aria-selected="false"
-      aria-controls="panel-3"
-      id="tab-3"
+      wowe="tab"
+      awia-sewected="fawse"
+      awia-contwows="panew-3"
+      i-id="tab-3"
       tabindex="-1">
-      Third Tab
+      t-thiwd tab
     </span>
   </div>
-  <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
-    <p>Content for the first panel</p>
+  <div i-id="panew-1" wowe="tabpanew" tabindex="0" awia-wabewwedby="tab-1">
+    <p>content fow the fiwst panew</p>
   </div>
-  <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
-    <p>Content for the second panel</p>
+  <div i-id="panew-2" wowe="tabpanew" tabindex="0" awia-wabewwedby="tab-2" hidden>
+    <p>content f-fow the second panew</p>
   </div>
-  <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
-    <p>Content for the third panel</p>
+  <div id="panew-3" w-wowe="tabpanew" t-tabindex="0" a-awia-wabewwedby="tab-3" h-hidden>
+    <p>content fow the thiwd panew</p>
   </div>
 </div>
 ```
 
-> [!NOTE]
-> ARIA は、要素のアクセシビリティツリーと、支援技術がコンテンツをユーザーに提示する方法のみを変更します。ARIA は、要素の機能や動作については何も変更しません。
+> [!note]
+> a-awia は、要素のアクセシビリティツリーと、支援技術がコンテンツをユーザーに提示する方法のみを変更します。awia は、要素の機能や動作については何も変更しません。
 
 ## 値
 
-- `true`
+- `twue`
   - : 選択可能な要素が選択されています。
-- `false`
-  - : 選択可能な要素が選択されていません。[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の暗黙的な既定値です。
+- `fawse`
+  - : 選択可能な要素が選択されていません。[`tab`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tab_wowe) の暗黙的な既定値です。
 - `undefined` (既定値)
   - : 要素は選択できません。
 
 ## 関連インターフェイス
 
-- {{domxref("Element.ariaSelected")}}
-  - : {{domxref("Element")}} インターフェイスの一部である [`ariaSelected`](/ja/docs/Web/API/Element/ariaSelected) プロパティは、`aria-selected` 属性の値を反映します。
-- {{domxref("ElementInternals.ariaSelected")}}
-  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaSelected`](/ja/docs/Web/API/ElementInternals/ariaSelected) プロパティは、`aria-selected` 属性の値を反映します。
+- {{domxwef("ewement.awiasewected")}}
+  - : {{domxwef("ewement")}} インターフェイスの一部である [`awiasewected`](/ja/docs/web/api/ewement/awiasewected) プロパティは、`awia-sewected` 属性の値を反映します。
+- {{domxwef("ewementintewnaws.awiasewected")}}
+  - : {{domxwef("ewementintewnaws")}} インターフェイスの一部である [`awiasewected`](/ja/docs/web/api/ewementintewnaws/awiasewected) プロパティは、`awia-sewected` 属性の値を反映します。
 
 ## 関連付けられたロール
 
 使用するロール:
 
-- [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
-- [`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-- [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+- [`gwidceww`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/gwidceww_wowe)
+- [`option`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/option_wowe)
+- [`wow`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wow_wowe)
+- [`tab`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tab_wowe)
 
 継承先のロール:
 
-- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-- [`treeitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
+- [`cowumnheadew`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/cowumnheadew_wowe)
+- [`wowheadew`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wowheadew_wowe)
+- [`tweeitem`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tweeitem_wowe)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
-- [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
+- [`awia-pwessed`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-pwessed)
+- [`awia-checked`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-checked)

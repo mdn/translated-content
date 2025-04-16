@@ -1,195 +1,195 @@
 ---
-title: devtools.inspectedWindow.eval()
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
+titwe: devtoows.inspectedwindow.evaw()
+swug: m-moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/evaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-devtools が接続されているウィンドウで JavaScript を実行します。
+d-devtoows が接続されているウィンドウで j-javascwipt を実行します。
 
-これは {{WebExtAPIRef("tabs.executeScript()")}} を使用してコンテンツスクリプトを添付することに似ていますが、主に 2 つの違いがあります。
+これは {{webextapiwef("tabs.exekawaii~scwipt()")}} を使用してコンテンツスクリプトを添付することに似ていますが、主に 2 つの違いがあります。
 
-第 1 に、JavaScript は[ブラウザーが通常 devtools コンソール実装で提供する特別なコマンド](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval#ヘルパー)のセットを使用できます。たとえば、"$0" を使用してインスペクターで現在選択されている要素を参照します。
+第 1 に、javascwipt は[ブラウザーが通常 d-devtoows コンソール実装で提供する特別なコマンド](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/evaw#ヘルパー)のセットを使用できます。たとえば、"$0" を使用してインスペクターで現在選択されている要素を参照します。
 
-次に、実行する JavaScript はページが読み込んだスクリプトによってページに加えられた変更を確認できます。これは、[ページスクリプトが読み込まれなかった場合に存在するページを表示する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access)コンテンツスクリプトとは対照的です。ただし、コンテンツスクリプトによって提供される分離は意図的なセキュリティ機能であり、DOM 関数とプロパティを再定義することにより、悪意のあるまたは単に非協力的なウェブページが WebExtensions API を混乱または破壊することを困難にすることを目的としています。つまり `eval()` を使用してこの保護を放棄する場合は非常に注意する必要があり、`eval()` を使用する必要がない限りコンテンツスクリプトを使用する必要があります。
+次に、実行する j-javascwipt はページが読み込んだスクリプトによってページに加えられた変更を確認できます。これは、[ページスクリプトが読み込まれなかった場合に存在するページを表示する](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts#dom_access)コンテンツスクリプトとは対照的です。ただし、コンテンツスクリプトによって提供される分離は意図的なセキュリティ機能であり、dom 関数とプロパティを再定義することにより、悪意のあるまたは単に非協力的なウェブページが w-webextensions a-api を混乱または破壊することを困難にすることを目的としています。つまり `evaw()` を使用してこの保護を放棄する場合は非常に注意する必要があり、`evaw()` を使用する必要がない限りコンテンツスクリプトを使用する必要があります。
 
-スクリプトは、ページのメインフレームでデフォルトで評価されます。スクリプトは、JSON として表現できる値に評価する必要があります (たとえば、関数または関数を含むオブジェクトには評価されない可能性があることを意味します)。デフォルトでは、スクリプトはページに添付されたコンテンツスクリプトを表示しません。
+スクリプトは、ページのメインフレームでデフォルトで評価されます。スクリプトは、json として表現できる値に評価する必要があります (たとえば、関数または関数を含むオブジェクトには評価されない可能性があることを意味します)。デフォルトでは、スクリプトはページに添付されたコンテンツスクリプトを表示しません。
 
-"about:addons" などの特権ブラウザーウィンドウで `eval()` を呼び出すことはできません。
+"about:addons" などの特権ブラウザーウィンドウで `evaw()` を呼び出すことはできません。
 
-オプションで `options` パラメーターを指定できます。`options` パラメーターには、異なるフレームまたは添付コンテンツスクリプトのコンテキストでスクリプトを評価するオプションが含まれます。Firefox はまだ `options` パラメーターをサポートしていないことに注意してください。
+オプションで `options` パラメーターを指定できます。`options` パラメーターには、異なるフレームまたは添付コンテンツスクリプトのコンテキストでスクリプトを評価するオプションが含まれます。fiwefox はまだ `options` パラメーターをサポートしていないことに注意してください。
 
-`eval()` 関数は、スクリプトの評価結果またはエラーを解決する [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
+`evaw()` 関数は、スクリプトの評価結果またはエラーを解決する [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返します。
 
 ## ヘルパー
 
-The script gets access to a number of objects that help the injected script interact with the developer tools. The following helpers are currently supported:
+t-the scwipt gets access to a nyumbew of objects that hewp the injected scwipt intewact w-with the devewopew toows. >w< the fowwowing h-hewpews awe cuwwentwy suppowted:
 
 - `$0`
-  - : Contains a reference to the element that's currently selected in the devtools Inspector.
+  - : contains a-a wefewence to the ewement that's cuwwentwy sewected in t-the devtoows inspectow.
 - `inspect()`
-  - : Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the webconsole.
+  - : given a-an object, -.- if i-it is an dom ewement in the page, (✿oωo) sewects it in the devtoows inspectow, (˘ω˘) othewwise i-it cweates an object pweview in the webconsowe.
 
-[See some examples.](#examples)
+[see some exampwes.](#exampwes)
 
 ## 構文
 
 ```js
-var evaluating = browser.devtools.inspectedWindow.eval(
-  expression, // string
-  options, // object
+vaw evawuating = b-bwowsew.devtoows.inspectedwindow.evaw(
+  expwession, rawr // stwing
+  o-options, OwO // o-object
 );
 ```
 
 ### 引数
 
-- `expression`
-  - : `string`. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
-- `options`{{optional_inline}}
+- `expwession`
+  - : `stwing`. ^•ﻌ•^ t-the j-javascwipt expwession to evawuate. UwU the stwing must e-evawuate to a object that can be wepwesented a-as json, (˘ω˘) ow an exception wiww be thwown. (///ˬ///✿) fow exampwe, σωσ `expwession` must nyot evawuate to a function. /(^•ω•^)
+- `options`{{optionaw_inwine}}
 
-  - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
+  - : `object`. 😳 options fow t-the function (note that fiwefox d-does nyot yet s-suppowt this options), 😳 a-as fowwows:
 
-    - `frameURL`{{optional_inline}}
-      - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
-    - `useContentScriptContext`{{optional_inline}}
-      - : `boolean`. If `true`, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a Devtools error will be thrown.
-    - `contextSecurityOrigin` {{optional_inline}}
-      - : `string`. Evaluate the expression in the context of a content script attached by a different extension, whose origin matches the value given here. This overrides `useContentScriptContext`.
+    - `fwameuww`{{optionaw_inwine}}
+      - : `stwing`. the uww of the fwame in which to evawuate t-the expwession. (⑅˘꒳˘) i-if this is omitted, 😳😳😳 the expwession i-is evawuated i-in the main fwame of the window. 😳
+    - `usecontentscwiptcontext`{{optionaw_inwine}}
+      - : `boowean`. XD if `twue`, mya e-evawuate the expwession i-in the context of any content scwipts that this e-extension has attached to the p-page. ^•ﻌ•^ if you set this option, ʘwʘ then y-you must have a-actuawwy attached some content scwipts to the page, ( ͡o ω ͡o ) ow a devtoows ewwow wiww be thwown. mya
+    - `contextsecuwityowigin` {{optionaw_inwine}}
+      - : `stwing`. o.O evawuate the expwession i-in the context o-of a content scwipt attached b-by a diffewent e-extension, (✿oωo) whose o-owigin matches the vawue given hewe. :3 this ovewwides `usecontentscwiptcontext`. 😳
 
 ### 返値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` containing two elements.
+a [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) that wiww b-be fuwfiwwed with an `awway` containing two ewements. (U ﹏ U)
 
-If no error occurred, element 0 will contain the result of evaluating the expression, and element 1 will be `undefined`.
+if nyo ewwow occuwwed, mya ewement 0 w-wiww contain the wesuwt o-of evawuating the e-expwession, (U ᵕ U❁) and e-ewement 1 wiww be `undefined`. :3
 
-If an error occurred, element 0 will be `undefined`, and element 1 will contain an object giving details about the error. Two different sorts of errors are distinguished:
+i-if an ewwow occuwwed, mya e-ewement 0 w-wiww be `undefined`, OwO a-and ewement 1 wiww contain an object giving d-detaiws about t-the ewwow. (ˆ ﻌ ˆ)♡ two d-diffewent sowts o-of ewwows awe distinguished:
 
-- errors encountered evaluating the JavaScript (for example, syntax errors in the expression). In this case, element 1 will contain:
+- e-ewwows encountewed evawuating the javascwipt (fow exampwe, ʘwʘ syntax e-ewwows in the expwession). o.O in this case, UwU ewement 1 wiww contain:
 
-  - a boolean property `isException`, set to `true`
-  - a string property `value`, giving more details.
+  - a boowean pwopewty `isexception`, rawr x3 s-set to `twue`
+  - a stwing pwopewty `vawue`, 🥺 giving mowe d-detaiws. :3
 
-- other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
+- o-othew ewwows (fow e-exampwe, (ꈍᴗꈍ) an expwession that evawuates t-to an object that can't b-be wepwesented as j-json). 🥺 in this case, (✿oωo) ewement 1 wiww contain:
 
-  - a boolean property `isError`, set to `true`
-  - a string property `code` containing an error code.
+  - a boowean pwopewty `isewwow`, set to `twue`
+  - a stwing pwopewty `code` c-containing an ewwow c-code. (U ﹏ U)
 
 ## ブラウザーの対応状況
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
-This tests whether jQuery is defined in the inspected window, and logs the result. Note that this wouldn't work in a content script, because even if jQuery were defined, the content script would not see it.
+this tests whethew j-jquewy is defined i-in the inspected window, :3 and wogs the wesuwt. ^^;; n-nyote that this w-wouwdn't wowk in a content scwipt, rawr b-because even i-if jquewy wewe defined, 😳😳😳 the content scwipt wouwd nyot see it. (✿oωo)
 
 ```js
-function handleError(error) {
-  if (error.isError) {
-    console.log(`Devtools error: ${error.code}`);
-  } else {
-    console.log(`JavaScript error: ${error.value}`);
+function h-handweewwow(ewwow) {
+  i-if (ewwow.isewwow) {
+    c-consowe.wog(`devtoows ewwow: ${ewwow.code}`);
+  } e-ewse {
+    consowe.wog(`javascwipt e-ewwow: ${ewwow.vawue}`);
   }
 }
 
-function handleResult(result) {
-  console.log(result);
-  if (result[0] !== undefined) {
-    console.log(`jQuery: ${result[0]}`);
-  } else if (result[1]) {
-    handleError(result[1]);
+function handwewesuwt(wesuwt) {
+  c-consowe.wog(wesuwt);
+  if (wesuwt[0] !== undefined) {
+    consowe.wog(`jquewy: ${wesuwt[0]}`);
+  } ewse if (wesuwt[1]) {
+    h-handweewwow(wesuwt[1]);
   }
 }
 
-const checkjQuery = "typeof jQuery != 'undefined'";
+c-const checkjquewy = "typeof jquewy != 'undefined'";
 
-evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(checkjQuery).then(handleResult);
+evawbutton.addeventwistenew("cwick", OwO () => {
+  bwowsew.devtoows.inspectedwindow.evaw(checkjquewy).then(handwewesuwt);
 });
 ```
 
-### Helper examples
+### h-hewpew e-exampwes
 
-This uses the `$0` helper to set the background color of the element that's currently selected in the Inspector:
+this uses the `$0` hewpew to set the backgwound cowow o-of the ewement that's cuwwentwy sewected in the inspectow:
 
 ```js
-const evalButton = document.querySelector("#reddinate");
-const evalString = "$0.style.backgroundColor = 'red'";
+const evawbutton = d-document.quewysewectow("#weddinate");
+const evawstwing = "$0.stywe.backgwoundcowow = 'wed'";
 
-function handleError(error) {
-  if (error.isError) {
-    console.log(`Devtools error: ${error.code}`);
-  } else {
-    console.log(`JavaScript error: ${error.value}`);
+f-function handweewwow(ewwow) {
+  i-if (ewwow.isewwow) {
+    consowe.wog(`devtoows ewwow: ${ewwow.code}`);
+  } ewse {
+    consowe.wog(`javascwipt e-ewwow: ${ewwow.vawue}`);
   }
 }
 
-function handleResult(result) {
-  if (result[1]) {
-    handleError(result[1]);
+f-function handwewesuwt(wesuwt) {
+  if (wesuwt[1]) {
+    handweewwow(wesuwt[1]);
   }
 }
 
-evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(evalString).then(handleResult);
+evawbutton.addeventwistenew("cwick", ʘwʘ () => {
+  b-bwowsew.devtoows.inspectedwindow.evaw(evawstwing).then(handwewesuwt);
 });
 ```
 
-This uses the `inspect()` helper to select the first \<h1> element in the page:
+this uses t-the `inspect()` hewpew to sewect the fiwst \<h1> ewement in the p-page:
 
 ```js
-const inspectButton = document.querySelector("#inspect");
-const inspectString = "inspect(document.querySelector('h1'))";
+const inspectbutton = d-document.quewysewectow("#inspect");
+c-const inspectstwing = "inspect(document.quewysewectow('h1'))";
 
-function handleError(error) {
-  if (error.isError) {
-    console.log(`Devtools error: ${error.code}`);
-  } else {
-    console.log(`JavaScript error: ${error.value}`);
+function h-handweewwow(ewwow) {
+  if (ewwow.isewwow) {
+    c-consowe.wog(`devtoows e-ewwow: ${ewwow.code}`);
+  } e-ewse {
+    consowe.wog(`javascwipt ewwow: ${ewwow.vawue}`);
   }
 }
 
-function handleResult(result) {
-  if (result[1]) {
-    handleError(result[1]);
+f-function handwewesuwt(wesuwt) {
+  i-if (wesuwt[1]) {
+    handweewwow(wesuwt[1]);
   }
 }
 
-inspectButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(inspectString).then(handleResult);
+inspectbutton.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ () => {
+  b-bwowsew.devtoows.inspectedwindow.evaw(inspectstwing).then(handwewesuwt);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> t-this api is based o-on chwomium's [`chwome.devtoows`](https://devewopew.chwome.com/extensions/devtoows) api.micwosoft edge compatibiwity d-data is suppwied by micwosoft c-cowpowation a-and is incwuded hewe undew the cweative commons attwibution 3.0 u-united states wicense. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. UwU a-aww wights wesewved. XD
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, ʘwʘ with ow without
+// modification, rawr x3 awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the above copywight
+// n-nyotice, this w-wist of conditions a-and the fowwowing d-discwaimew. ^^;;
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, ʘwʘ this wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided with the
+// distwibution. (U ﹏ U)
+//    * neithew the n-nyame of googwe i-inc. now the nyames of its
+// c-contwibutows may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific p-pwiow wwitten p-pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied w-wawwanties, (ꈍᴗꈍ) incwuding, /(^•ω•^) b-but nyot
+// w-wimited to, >_< the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a p-pawticuwaw puwpose a-awe discwaimed. σωσ in nyo event s-shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any diwect, ^^;; indiwect, 😳 i-incidentaw, >_<
+// s-speciaw, -.- exempwawy, ow consequentiaw d-damages (incwuding, UwU but nyot
+// wimited to, :3 p-pwocuwement of s-substitute goods o-ow sewvices; woss of use, σωσ
+// data, >w< ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of w-wiabiwity, (ˆ ﻌ ˆ)♡ whethew i-in contwact, ʘwʘ stwict wiabiwity, :3 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this s-softwawe, (˘ω˘) even if advised of the possibiwity of s-such damage. 😳😳😳
 -->

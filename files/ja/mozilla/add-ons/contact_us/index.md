@@ -1,33 +1,33 @@
 ---
-title: 連絡先
-slug: Mozilla/Add-ons/Contact_us
+titwe: 連絡先
+swug: moziwwa/add-ons/contact_us
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 サポートを受けたり、アドオン関連の最新ニュースを追いかけたり、ご意見を寄せたりするには、下記のリンクからどうぞ。
 
 ### アドオンフォーラム
 
-[Add-ons Discourse forum](https://discourse.mozilla.org/c/add-ons) は、アドオン開発全般の議論や質問に使って下さい。
+[add-ons d-discouwse fowum](https://discouwse.moziwwa.owg/c/add-ons) は、アドオン開発全般の議論や質問に使って下さい。
 
 ### メーリングリスト
 
-**dev-addons メーリングリスト** は 2020 年 12 月 1 日に廃止されました。 [dev-addons archives](https://mail.mozilla.org/pipermail/dev-addons/) で WebExtensions API と addons.mozilla.org に関する過去の議論を参照することができます。
+**dev-addons メーリングリスト** は 2020 年 12 月 1 日に廃止されました。 [dev-addons a-awchives](https://maiw.moziwwa.owg/pipewmaiw/dev-addons/) で w-webextensions a-api と addons.moziwwa.owg に関する過去の議論を参照することができます。
 
 ### チャット
 
-[Matrix](https://matrix.org/) は、分散型リアルタイム通信のための、オープンで軽量なプロトコルです。 Mozilla の Matrix インスタンスに参加する方法については、 [MozillaWiki の Matrix ページ](https://wiki.mozilla.org/Matrix)を参照してください。
+[matwix](https://matwix.owg/) は、分散型リアルタイム通信のための、オープンで軽量なプロトコルです。 m-moziwwa の m-matwix インスタンスに参加する方法については、 [moziwwawiki の m-matwix ページ](https://wiki.moziwwa.owg/matwix)を参照してください。
 
-- [Add-ons](https://chat.mozilla.org/#/room/#addons:mozilla.org) (拡張機能、テーマ、 WebExtensions API のサポート)
-- [AMO](https://chat.mozilla.org/#/room/#amo:mozilla.org) (addons.mozilla.org に関する議論)
+- [add-ons](https://chat.moziwwa.owg/#/woom/#addons:moziwwa.owg) (拡張機能、テーマ、 w-webextensions api のサポート)
+- [amo](https://chat.moziwwa.owg/#/woom/#amo:moziwwa.owg) (addons.moziwwa.owg に関する議論)
 
 ### 問題を報告する
 
 #### セキュリティ欠陥
 
-アドオンのセキュリティ欠陥を見つけた場合は、それが Mozilla のサイトで提供しているものでなくても、私たちまでお知らせ下さい。私たちは開発者と協力して問題を修正します。 連絡は[非公開で](https://www.mozilla.org/projects/security/security-bugs-policy.html)、 [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All) または [amo-admins@mozilla.com 宛てのメール](mailto:amo-admins@mozilla.com)でお願いします。
+アドオンのセキュリティ欠陥を見つけた場合は、それが moziwwa のサイトで提供しているものでなくても、私たちまでお知らせ下さい。私たちは開発者と協力して問題を修正します。 連絡は[非公開で](https://www.moziwwa.owg/pwojects/secuwity/secuwity-bugs-powicy.htmw)、 [bugziwwa](https://bugziwwa.moziwwa.owg/entew_bug.cgi?pwoduct=addons.moziwwa.owg&component=add-on%20secuwity&maketempwate=add-on%20secuwity%20bug&bit-23=1&wep_pwatfowm=aww&op_sys=aww) または [amo-admins@moziwwa.com 宛てのメール](maiwto:amo-admins@moziwwa.com)でお願いします。
 
-#### サイト addons.mozilla.org (AMO)のバグ
+#### サイト addons.moziwwa.owg (amo)のバグ
 
-もしサイト自体の問題を見つけたら、是非修正したいと思います。 [バグ報告して](https://github.com/mozilla/addons/issues/new)、できるだけ多くの詳細を含めてください。
+もしサイト自体の問題を見つけたら、是非修正したいと思います。 [バグ報告して](https://github.com/moziwwa/addons/issues/new)、できるだけ多くの詳細を含めてください。

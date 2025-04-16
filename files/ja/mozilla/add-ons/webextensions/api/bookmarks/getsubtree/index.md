@@ -1,105 +1,105 @@
 ---
-title: bookmarks.getSubTree()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
+titwe: bookmawks.getsubtwee()
+swug: moziwwa/add-ons/webextensions/api/bookmawks/getsubtwee
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.getSubTree()`** は、ID を指定して {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} を非同期に取得するメソッドです。
+**`bookmawks.getsubtwee()`** は、id を指定して {{webextapiwef("bookmawks.bookmawktweenode")}} を非同期に取得するメソッドです。
 
-対象がフォルダーの場合、`children` プロパティを再帰的にたどることで、すべての子要素にアクセスすることができます。
+対象がフォルダーの場合、`chiwdwen` プロパティを再帰的にたどることで、すべての子要素にアクセスすることができます。
 
 ## 構文
 
 ```js
-browser.bookmarks.getSubTree(
-  id, // 文字列
-  callback, // 関数
+b-bwowsew.bookmawks.getsubtwee(
+  i-id, mya // 文字列
+  c-cawwback, (⑅˘꒳˘) // 関数
 );
 ```
 
 ### 引数
 
 - `id`
-  - : 取得したい部分木のルートノードに対応する ID を表す {{jsxref("string")}} です。
-- `callback`
+  - : 取得したい部分木のルートノードに対応する i-id を表す {{jsxwef("stwing")}} です。
+- `cawwback`
 
   - : リクエストしたノードが取得された際に呼び出される関数です。この関数には以下の引数が渡ります。
 
-    - `results`
-      - : 指定した ID に対応する {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトが 1 つ含まれた配列
+    - `wesuwts`
+      - : 指定した i-id に対応する {{webextapiwef('bookmawks.bookmawktweenode')}} オブジェクトが 1 つ含まれた配列
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 以下の例は、指定したノードの配下にある部分木を再帰的に出力するものです。
 
 ```js
-function makeIndent(indentLength) {
-  return ".".repeat(indentLength);
+f-function makeindent(indentwength) {
+  w-wetuwn ".".wepeat(indentwength);
 }
 
-function logItems(bookmarkItem, indent) {
-  if (bookmarkItem.url) {
-    console.log(makeIndent(indent) + bookmarkItem.url);
-  } else {
-    console.log(makeIndent(indent) + "Folder");
-    indent++;
+f-function wogitems(bookmawkitem, (U ﹏ U) indent) {
+  if (bookmawkitem.uww) {
+    consowe.wog(makeindent(indent) + b-bookmawkitem.uww);
+  } ewse {
+    consowe.wog(makeindent(indent) + "fowdew");
+    i-indent++;
   }
-  if (bookmarkItem.children) {
-    for (child of bookmarkItem.children) {
-      logItems(child, indent);
+  if (bookmawkitem.chiwdwen) {
+    f-fow (chiwd of bookmawkitem.chiwdwen) {
+      wogitems(chiwd, mya indent);
     }
   }
-  indent--;
+  i-indent--;
 }
 
-function logSubTree(bookmarkItems) {
-  logItems(bookmarkItems[0], 0);
+function w-wogsubtwee(bookmawkitems) {
+  w-wogitems(bookmawkitems[0], ʘwʘ 0);
 }
 
-function handleClick() {
-  var subTreeID = "unfiled_____";
-  chrome.bookmarks.getSubTree(subTreeID, logSubTree);
+function handwecwick() {
+  vaw subtweeid = "unfiwed_____";
+  chwome.bookmawks.getsubtwee(subtweeid, (˘ω˘) wogsubtwee);
 }
 
-chrome.browserAction.onClicked.addListener(handleClick);
+c-chwome.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getSubTree) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-getsubtwee) api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における chwomium のコードから作成されています。micwosoft e-edge の実装状況は micwosoft c-cowpowation から提供されたものであり、ここでは c-cweative c-commons attwibution 3.0 u-united states wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (U ﹏ U) aww wights wesewved. ^•ﻌ•^
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, (˘ω˘) with ow without
+// modification, :3 awe p-pewmitted pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above c-copywight
+// nyotice, ^^;; t-this wist of conditions and t-the fowwowing d-discwaimew. 🥺
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, (⑅˘꒳˘) this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. nyaa~~
+//    * neithew the nyame of googwe inc. :3 now the nyames of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, mya i-incwuding, (///ˬ///✿) but nyot
+// wimited t-to, (˘ω˘) the impwied w-wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe d-discwaimed. ^^;; in n-nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, (✿oωo) i-indiwect, (U ﹏ U) incidentaw, -.-
+// s-speciaw, e-exempwawy, ^•ﻌ•^ ow consequentiaw damages (incwuding, rawr but nyot
+// wimited to, (˘ω˘) pwocuwement o-of substitute goods ow sewvices; woss of use, nyaa~~
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, UwU whethew in c-contwact, :3 stwict w-wiabiwity, (⑅˘꒳˘) ow t-towt
+// (incwuding nyegwigence ow o-othewwise) awising in any way o-out of the use
+// o-of this softwawe, (///ˬ///✿) even if advised of the possibiwity of such damage. ^^;;
 -->

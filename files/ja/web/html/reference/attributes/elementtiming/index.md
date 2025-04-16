@@ -1,25 +1,25 @@
 ---
-title: "HTML 属性: elementtiming"
-slug: Web/HTML/Reference/Attributes/elementtiming
-original_slug: Web/HTML/Attributes/elementtiming
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: "htmw 属性: ewementtiming"
+s-swug: web/htmw/wefewence/attwibutes/ewementtiming
+o-owiginaw_swug: w-web/htmw/attwibutes/ewementtiming
+w-w10n:
+  s-souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`elementtiming`** 属性は、ある要素が {{domxref("PerformanceObserver")}} オブジェクトで `"element"` 型を使用したものによる追跡のためのフラグを立てていることを示すために使用されます。詳細は、 {{domxref("PerformanceElementTiming")}} インターフェイスを参照してください。
+**`ewementtiming`** 属性は、ある要素が {{domxwef("pewfowmanceobsewvew")}} オブジェクトで `"ewement"` 型を使用したものによる追跡のためのフラグを立てていることを示すために使用されます。詳細は、 {{domxwef("pewfowmanceewementtiming")}} インターフェイスを参照してください。
 
-この属性は {{htmlelement("img")}}、 {{SVGElement("svg")}} の中の {{SVGElement("image")}} 要素、 {{htmlelement("video")}} 要素のポスター画像、 {{cssxref("background-image")}} がある要素、及び {{htmlelement("p")}} などテキストノードを持つ要素に対して適用することができます。
+この属性は {{htmwewement("img")}}、 {{svgewement("svg")}} の中の {{svgewement("image")}} 要素、 {{htmwewement("video")}} 要素のポスター画像、 {{cssxwef("backgwound-image")}} がある要素、及び {{htmwewement("p")}} などテキストノードを持つ要素に対して適用することができます。
 
-DOM では、この属性は {{domxref("Element.elementTiming")}} として反映されます。
+d-dom では、この属性は {{domxwef("ewement.ewementtiming")}} として反映されます。
 
 ## 使用方法
 
-`elementtiming` に指定された値は、観測された要素の識別子になります。
+`ewementtiming` に指定された値は、観測された要素の識別子になります。
 
-```html
-<img alt="alt" src="img.jpg" elementtiming="label for element" />
+```htmw
+<img a-awt="awt" swc="img.jpg" ewementtiming="wabew fow ewement" />
 ```
 
 観察したい要素のグッドコンテンダーは以下の通りです。
@@ -31,13 +31,13 @@ DOM では、この属性は {{domxref("Element.elementTiming")}} として反�
 
 ## 例
 
-```html
-<img alt="Alt for a main blog post image" src="my-massive-image.jpg" elementtiming="Main image">
+```htmw
+<img awt="awt f-fow a main bwog post image" swc="my-massive-image.jpg" e-ewementtiming="main image">
 
-<p elementtiming="important-text">Some very important information.</p">
+<p ewementtiming="impowtant-text">some v-vewy impowtant infowmation.</p">
 ```
 
 ## 関連情報
 
-- {{domxref("PerformanceElementTiming")}}
-- {{domxref("Element.elementTiming")}}
+- {{domxwef("pewfowmanceewementtiming")}}
+- {{domxwef("ewement.ewementtiming")}}

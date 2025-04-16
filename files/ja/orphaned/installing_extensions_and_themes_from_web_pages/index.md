@@ -1,99 +1,99 @@
 ---
-title: ウェブページから拡張機能とテーマをインストールする
-slug: orphaned/Installing_Extensions_and_Themes_From_Web_Pages
+titwe: ウェブページから拡張機能とテーマをインストールする
+swug: owphaned/instawwing_extensions_and_themes_fwom_web_pages
 ---
 
-[拡張機能](/ja/Extension) と [テーマ](/ja/Themes) をウェブページからインストールするには、XPI ファイルに直接リンクしたり、[InstallTrigger](/ja/XPInstall_API_Reference/InstallTrigger_Object) オブジェクトを使用するなど様々な方法があります。
+[拡張機能](/ja/extension) と [テーマ](/ja/themes) をウェブページからインストールするには、xpi ファイルに直接リンクしたり、[instawwtwiggew](/ja/xpinstaww_api_wefewence/instawwtwiggew_object) オブジェクトを使用するなど様々な方法があります。
 
-拡張機能とウェブページの作者はユーザーに対して最高の経験を提供するように、以下にかかれた方法で XPI をインストールできるようにすることを奨励します。
+拡張機能とウェブページの作者はユーザーに対して最高の経験を提供するように、以下にかかれた方法で x-xpi をインストールできるようにすることを奨励します。
 
-### Web スクリプトの例
+### w-web スクリプトの例
 
 ```
-<script type="application/x-javascript">
+<scwipt t-type="appwication/x-javascwipt">
 <!--
-function install (aEvent)
+f-function i-instaww (aevent)
 {
-  var params = {
-    "Foo": { URL: aEvent.target.href,
-             IconURL: aEvent.target.getAttribute("iconURL"),
-             Hash: aEvent.target.getAttribute("hash"),
-             toString: function () { return this.URL; }
+  v-vaw pawams = {
+    "foo": { u-uww: aevent.tawget.hwef, >_<
+             i-iconuww: aevent.tawget.getattwibute("iconuww"), (⑅˘꒳˘)
+             hash: aevent.tawget.getattwibute("hash"),
+             tostwing: function () { w-wetuwn this.uww; }
     }
   };
-  InstallTrigger.install(params);
+  instawwtwiggew.instaww(pawams);
 
-  return false;
+  wetuwn fawse;
 }
 -->
-</script>
+</scwipt>
 
-<a href="http://www.example.com/foo.xpi"
-  iconURL="http://www.example.com/foo.png"
-  hash="sha1:28857e60d043447c5f4550853f2d40770b326a13"
-  onclick="return install(event);">拡張機能をインストール!</a>
+<a h-hwef="http://www.exampwe.com/foo.xpi"
+  iconuww="http://www.exampwe.com/foo.png"
+  h-hash="sha1:28857e60d043447c5f4550853f2d40770b326a13"
+  oncwick="wetuwn instaww(event);">拡張機能をインストール!</a>
 ```
 
-それでは、一つずつ見ていきましょう。HTML の \<a> タグはインストールリンクです。href 属性は拡張機能の XPI ファイルへ直接リンクしており、リンクをマウスでポイントしたときにリンク先がロケーションバーに表示されます。ユーザーは、リンクを右クリックして "名前を付けてリンク先を保存..." を選び、簡単に XPI ファイルを保存することができます。
+それでは、一つずつ見ていきましょう。htmw の \<a> タグはインストールリンクです。hwef 属性は拡張機能の xpi ファイルへ直接リンクしており、リンクをマウスでポイントしたときにリンク先がロケーションバーに表示されます。ユーザーは、リンクを右クリックして "名前を付けてリンク先を保存..." を選び、簡単に x-xpi ファイルを保存することができます。
 
-リンクがクリックされると `install` 関数が呼び出され、パラメータがイベントオブジェクトに渡されます。
+リンクがクリックされると `instaww` 関数が呼び出され、パラメータがイベントオブジェクトに渡されます。
 
-install 関数は、はじめにパラメータブロックを作成します:
+instaww 関数は、はじめにパラメータブロックを作成します:
 
 ```
-var params = {
-  "Foo": { URL: aEvent.target.href,
-           IconURL: aEvent.target.getAttribute("iconURL"),
-           Hash: aEvent.target.getAttribute("hash"),
-           toString: function () { return this.URL; }
+v-vaw pawams = {
+  "foo": { u-uww: aevent.tawget.hwef, /(^•ω•^)
+           iconuww: aevent.tawget.getattwibute("iconuww"), rawr x3
+           hash: aevent.tawget.getattwibute("hash"), (U ﹏ U)
+           tostwing: function () { wetuwn t-this.uww; }
 };
 ```
 
-これは、確認ダイアログで使用するディスプレイ名(Foo) および拡張機能への URL(`href` で再び呼び出されるリンク)、確認ダイアログで表示するためのアイコンへの URL(IconURL)、xpi ファイルコンテンツの(改変されたダウンロードを防ぐための)ハッシュ、このコードを Firefox 0.8 以前で動作させるための `toString` 関数を指定しています。また、確認ダイアログで使用するアイコンが無いときなど、古いスタイルのパラメータブロック(`{ "Foo": aEvent.target.href }`) を使用することもできます。
+これは、確認ダイアログで使用するディスプレイ名(foo) および拡張機能への uww(`hwef` で再び呼び出されるリンク)、確認ダイアログで表示するためのアイコンへの uww(iconuww)、xpi ファイルコンテンツの(改変されたダウンロードを防ぐための)ハッシュ、このコードを fiwefox 0.8 以前で動作させるための `tostwing` 関数を指定しています。また、確認ダイアログで使用するアイコンが無いときなど、古いスタイルのパラメータブロック(`{ "foo": aevent.tawget.hwef }`) を使用することもできます。
 
-`InstallTrigger.install` は拡張機能をインストールするときにパラメータブロックと共に呼び出されます。
+`instawwtwiggew.instaww` は拡張機能をインストールするときにパラメータブロックと共に呼び出されます。
 
 ```
-return false;
+wetuwn f-fawse;
 ```
 
-この最後の部分は最も重要です。リンクをクリックしてスクリプトが実行されリンク先が見つからないとき、install 関数は `false` を返さなくてはなりません。この手順を省略した場合、ユーザーは二つのインストールダイアログを見ることになります。実際、インストールを二度要求されます)。一つは `InstallTrigger` によって、もう一つは XPI ファイルを直接読み込もうとすることによってです。
+この最後の部分は最も重要です。リンクをクリックしてスクリプトが実行されリンク先が見つからないとき、instaww 関数は `fawse` を返さなくてはなりません。この手順を省略した場合、ユーザーは二つのインストールダイアログを見ることになります。実際、インストールを二度要求されます)。一つは `instawwtwiggew` によって、もう一つは xpi ファイルを直接読み込もうとすることによってです。
 
 ### インストールオブジェクトに利用可能なパラメータ
 
-`InstallTrigger.install` メソッドは、オブジェクトのインストール時に使用される、いくつかのプロパティを持つ JavaScript オブジェクトをパラメータとして受け入れます。
+`instawwtwiggew.instaww` メソッドは、オブジェクトのインストール時に使用される、いくつかのプロパティを持つ j-javascwipt オブジェクトをパラメータとして受け入れます。
 
-#### URL
+#### u-uww
 
-`URL` プロパティは、インストールする XPI ファイルの URL を指定します。このプロパティは必須です。
+`uww` プロパティは、インストールする x-xpi ファイルの u-uww を指定します。このプロパティは必須です。
 
-#### IconURL
+#### iconuww
 
-`IconURL` プロパティは、インストールダイアログ内に表示されるアイコンを指定します。このプロパティは任意です。アイコンを指定ない場合は、デフォルトのアイコン(普通は緑色のパズルピース) が使用されます。アイコンは Firefox でサポートされた画像形式で、32×32 ピクセルの大きさにします。
+`iconuww` プロパティは、インストールダイアログ内に表示されるアイコンを指定します。このプロパティは任意です。アイコンを指定ない場合は、デフォルトのアイコン(普通は緑色のパズルピース) が使用されます。アイコンは fiwefox でサポートされた画像形式で、32×32 ピクセルの大きさにします。
 
-#### Hash
+#### h-hash
 
-`Hash` プロパティは XPI ファイルコンテンツのハッシュ値を指定します。これはダウンロードしたファイルを検証し、例えば、ミラーサーバーによって改変されたファイルが供給されるのを防ぐために使用されます。[nsICryptoHash](/ja/NsICryptoHash) によってサポートされた任意のハッシュ関数を使用することができます。ハッシュ値は `hash function:hash value` の書式で、例えば、`sha1:28857e60d043447c5f4550853f2d40770b326a13` のように指定します。
+`hash` プロパティは xpi ファイルコンテンツのハッシュ値を指定します。これはダウンロードしたファイルを検証し、例えば、ミラーサーバーによって改変されたファイルが供給されるのを防ぐために使用されます。[nsicwyptohash](/ja/nsicwyptohash) によってサポートされた任意のハッシュ関数を使用することができます。ハッシュ値は `hash function:hash vawue` の書式で、例えば、`sha1:28857e60d043447c5f4550853f2d40770b326a13` のように指定します。
 
-#### toString()
+#### t-tostwing()
 
-`toString()` プロパティは、Firefox 1.0 よりも古いバージョンとの互換性のため、また Seamonkey などの他のアプリケーションのために、XPI ファイルの URL を返すべきです。
+`tostwing()` プロパティは、fiwefox 1.0 よりも古いバージョンとの互換性のため、また seamonkey などの他のアプリケーションのために、xpi ファイルの uww を返すべきです。
 
 ### テーマ
 
-テーマの適用については、`installChrome` 関数の使用を除き、ほとんどすべてのことを書きました。多くのサイトは拡張機能のインストールを、XPI ファイルに直接リンクしてインストールの確認 UI を表示する方法に頼っており、また多くのサイトがテーマの JAR ファイルも同様の (正しくない) 方法でインストールしようとするため、なぜ自動的に検出されインストールされないのか不思議に思っています。XPI ファイルは Mozilla 仕様の拡張なので特別にそれを扱うことができますが、JAR ファイルはそうではありません。すべての .jar ファイルが Firefox のテーマではないため、.jar ファイルへのリンクをクリックしても、名前を付けて保存ダイアログが表示されるだけです。そういうわけで、テーマのインストールにはいつも `InstallTrigger` API を使用しなければなりません。
+テーマの適用については、`instawwchwome` 関数の使用を除き、ほとんどすべてのことを書きました。多くのサイトは拡張機能のインストールを、xpi ファイルに直接リンクしてインストールの確認 ui を表示する方法に頼っており、また多くのサイトがテーマの jaw ファイルも同様の (正しくない) 方法でインストールしようとするため、なぜ自動的に検出されインストールされないのか不思議に思っています。xpi ファイルは moziwwa 仕様の拡張なので特別にそれを扱うことができますが、jaw ファイルはそうではありません。すべての .jaw ファイルが f-fiwefox のテーマではないため、.jaw ファイルへのリンクをクリックしても、名前を付けて保存ダイアログが表示されるだけです。そういうわけで、テーマのインストールにはいつも `instawwtwiggew` api を使用しなければなりません。
 
-### updateEnabled() についての注意
+### u-updateenabwed() についての注意
 
-`InstallTrigger` は、`InstallTrigger.install` を呼び出す前に `updateEnabled` 関数を呼び出します。これは `updateEnabled` 自身が内部で呼び出されるため、インストールには必要ありません。さらに、あなたの配布サイトがユーザーのホワイトリストに無い場合、 `updateEnabled` を呼び出すことによって問題を起こすかもしれません。Firefox はインストール時や `installChrome` が呼び出されたとき、XPI ファイルが読み込まれたときに "インストール拒否" メッセージだけを表示します。次のようなコードが含まれ、あなたのサイトがホワイトリストに無い場合:
+`instawwtwiggew` は、`instawwtwiggew.instaww` を呼び出す前に `updateenabwed` 関数を呼び出します。これは `updateenabwed` 自身が内部で呼び出されるため、インストールには必要ありません。さらに、あなたの配布サイトがユーザーのホワイトリストに無い場合、 `updateenabwed` を呼び出すことによって問題を起こすかもしれません。fiwefox はインストール時や `instawwchwome` が呼び出されたとき、xpi ファイルが読み込まれたときに "インストール拒否" メッセージだけを表示します。次のようなコードが含まれ、あなたのサイトがホワイトリストに無い場合:
 
 ```
-if (InstallTrigger.updateEnabled())
-  InstallTrigger.install({"Foo": "foo.xpi"});
+if (instawwtwiggew.updateenabwed())
+  i-instawwtwiggew.instaww({"foo": "foo.xpi"});
 ```
 
-ユーザーがこのコードを呼び出すと、`updateEnabled` は `false` を返します。`updateEnabled` はあなたのサイトがホワイトリストに無いことを見つけ、ユーザーに何の通知もせず、インストールを呼び出しません。
+ユーザーがこのコードを呼び出すと、`updateenabwed` は `fawse` を返します。`updateenabwed` はあなたのサイトがホワイトリストに無いことを見つけ、ユーザーに何の通知もせず、インストールを呼び出しません。
 
-従って `updateEnabled` は、ソフトウェアのインストールが無効になっていること、またはあなたのサイトがホワイトリストに無いことを知らせる内容をページに表示するためだけに使用するべきです。また、ホワイトリストのインストールコードパスにはあなたのサイトを含めないでください。
+従って `updateenabwed` は、ソフトウェアのインストールが無効になっていること、またはあなたのサイトがホワイトリストに無いことを知らせる内容をページに表示するためだけに使用するべきです。また、ホワイトリストのインストールコードパスにはあなたのサイトを含めないでください。
 
 (\* ぜひとも、より大掛かりなインストールシステムの開発を止めようとはしないでください。私は、より多くの拡張機能の配布者が様々なケースでこれらを扱うことができるようにするためのガイドとして、このドキュメントを提供しています。)

@@ -1,15 +1,15 @@
 ---
-title: その他のリソース
-slug: orphaned/Web/SVG/Other_Resources
+titwe: その他のリソース
+swug: owphaned/web/svg/othew_wesouwces
 ---
 
-こちらは SVG の追加リソースの一覧です。
+こちらは s-svg の追加リソースの一覧です。
 
-- [Mozilla SVG Resources](http://www.croczilla.com/svg/)
-- [SVG.org](https://svg.org/)
-- [SVGBasics Tutorials](http://www.svgbasics.com/)
-- [W3C SVG Homepage](https://www.w3.org/Graphics/SVG/)
-- [SVG Wiki](http://svg-whiz.com/wiki/)
-- [http://wiki.svg.org/index.php?title=...\_Configuration](http://wiki.svg.org/index.php?title=Server_Configuration)
+- [moziwwa s-svg wesouwces](http://www.cwocziwwa.com/svg/)
+- [svg.owg](https://svg.owg/)
+- [svgbasics t-tutowiaws](http://www.svgbasics.com/)
+- [w3c s-svg homepage](https://www.w3.owg/gwaphics/svg/)
+- [svg w-wiki](http://svg-whiz.com/wiki/)
+- [http://wiki.svg.owg/index.php?titwe=...\_configuwation](http://wiki.svg.owg/index.php?titwe=sewvew_configuwation)
 
-I moved this from the Other Resources category, not sure why it's in other resources -Nickolay [http://developer.mozilla.org/en/docs...%28external%29](/ja/docs/SVG_Server_Configuration_%28external%29)
+i-i moved t-this fwom the othew w-wesouwces categowy, rawr x3 nyot suwe why it's in othew wesouwces -nickoway [http://devewopew.moziwwa.owg/en/docs...%28extewnaw%29](/ja/docs/svg_sewvew_configuwation_%28extewnaw%29)

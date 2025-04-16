@@ -1,115 +1,115 @@
 ---
-title: "<dd>: 詳細説明要素"
-slug: Web/HTML/Reference/Elements/dd
-original_slug: Web/HTML/Element/dd
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<dd>: 詳細説明要素"
+swug: web/htmw/wefewence/ewements/dd
+o-owiginaw_swug: w-web/htmw/ewement/dd
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<dd>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リスト要素 ({{HTMLElement("dl")}}) 内で、その前の用語 ({{HTMLElement("dt")}}) の説明、定義、値などを示します。
+**`<dd>`** は [htmw](/ja/docs/web/htmw) の要素で、説明リスト要素 ({{htmwewement("dw")}}) 内で、その前の用語 ({{htmwewement("dt")}}) の説明、定義、値などを示します。
 
-{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;dd&gt;", rawr x3 "tabbed-standawd")}}
 
-```html interactive-example
-<p>Cryptids of Cornwall:</p>
+```htmw i-intewactive-exampwe
+<p>cwyptids o-of cownwaww:</p>
 
-<dl>
-  <dt>Beast of Bodmin</dt>
-  <dd>A large feline inhabiting Bodmin Moor.</dd>
+<dw>
+  <dt>beast o-of bodmin</dt>
+  <dd>a wawge fewine inhabiting bodmin moow.</dd>
 
-  <dt>Morgawr</dt>
-  <dd>A sea serpent.</dd>
+  <dt>mowgaww</dt>
+  <dd>a s-sea sewpent.</dd>
 
-  <dt>Owlman</dt>
-  <dd>A giant owl-like creature.</dd>
-</dl>
+  <dt>owwman</dt>
+  <dd>a giant oww-wike cweatuwe.</dd>
+</dw>
 ```
 
-```css interactive-example
-p,
+```css i-intewactive-exampwe
+p, nyaa~~
 dt {
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 
-dl,
+dw, /(^•ω•^)
 dd {
-  font-size: 0.9rem;
+  font-size: 0.9wem;
 }
 
 dd {
-  margin-bottom: 1em;
+  m-mawgin-bottom: 1em;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `nowrap` {{Non-standard_inline}}
+- `nowwap` {{non-standawd_inwine}}
   - : この属性の値が `yes` とされた場合、定義部分のテキストは改行されません。既定値は `no` です。
 
 ## 例
 
-例については、[`<dl>` 要素で提供されている例](/ja/docs/Web/HTML/Reference/Elements/dl#例)を参照してください。
+例については、[`<dw>` 要素で提供されている例](/ja/docs/web/htmw/wefewence/ewements/dw#例)を参照してください。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>
-        開始タグは必須。この要素の直後に他の <code>&#x3C;dd></code> 要素または {{HTMLElement("dt")}} 要素がある場合、もしくは親要素内で後続する内容物がない場合は、終了タグが省略可能となる。
+        開始タグは必須。この要素の直後に他の <code>&#x3c;dd></code> 要素または {{htmwewement("dt")}} 要素がある場合、もしくは親要素内で後続する内容物がない場合は、終了タグが省略可能となる。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        {{HTMLElement("dl")}} 要素または {{HTMLElement("dl")}} 要素内にある {{HTMLElement("div")}} 要素。<br />この要素は {{HTMLElement("dt")}} または他の {{HTMLElement("dd")}} の後に使うことができます。
+        {{htmwewement("dw")}} 要素または {{htmwewement("dw")}} 要素内にある {{htmwewement("div")}} 要素。<bw />この要素は {{htmwewement("dt")}} または他の {{htmwewement("dd")}} の後に使うことができます。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/definition_role"><code>definition</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
+      <td><a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/definition_wowe"><code>definition</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("dl")}}
-- {{HTMLElement("dt")}}
+- {{htmwewement("dw")}}
+- {{htmwewement("dt")}}

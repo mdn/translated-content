@@ -1,23 +1,23 @@
 ---
-title: StorageArea.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
+titwe: stowageawea.wemove()
+swug: moziwwa/add-ons/webextensions/api/stowage/stowageawea/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 1 つ以上のアイテムをストレージ領域から削除します。
 
-この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+この関数は [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返す非同期関数です。
 
 ## 構文
 
 ```js
-let removingItem = browser.storage.<storageType>.remove(
-  keys             // string, or array of strings
+wet w-wemovingitem = b-bwowsew.stowage.<stowagetype>.wemove(
+  k-keys             // s-stwing, 😳 o-ow awway of s-stwings
 )
 ```
 
-`<storageType>` は {{WebExtAPIRef("storage.sync")}} または {{WebExtAPIRef("storage.local")}} の書き込み可能なストレージタイプです。
+`<stowagetype>` は {{webextapiwef("stowage.sync")}} または {{webextapiwef("stowage.wocaw")}} の書き込み可能なストレージタイプです。
 
 ### 引数
 
@@ -26,30 +26,30 @@ let removingItem = browser.storage.<storageType>.remove(
 
 ### 返り値
 
-成功時は引数の無い [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
+成功時は引数の無い [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返します。 失敗した場合 p-pwomise はエラーメッセージと共にリジェクトされます。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 1 つのアイテムを削除する例です。
 
 ```js
-function onRemoved() {
-  console.log("OK");
+f-function onwemoved() {
+  consowe.wog("ok");
 }
 
-function onError(e) {
-  console.log(e);
+function onewwow(e) {
+  consowe.wog(e);
 }
 
-let removeKitten = browser.storage.remove("kitten");
-removeKitten.then(onRemoved, onError);
+w-wet wemovekitten = bwowsew.stowage.wemove("kitten");
+wemovekitten.then(onwemoved, XD o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は c-chwomium の [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage) api に基づいています。また、このドキュメントは [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) における chwomium のコードに基づいています。micwosoft edge での実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは c-cweative commons a-attwibution 3.0 united states wicense に従っています。

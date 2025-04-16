@@ -1,26 +1,26 @@
 ---
-title: browserSettings.newTabPageOverride
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
+titwe: bwowsewsettings.newtabpageovewwide
+swug: m-moziwwa/add-ons/webextensions/api/bwowsewsettings/newtabpageovewwide
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} オブジェクトを使用すると「新規タブ」ページ、つまりユーザーが新しい空のタブを開いたときのページを表す URL を取得することができます。
+{{webextapiwef("types.bwowsewsetting", òωó "bwowsewsetting")}} オブジェクトを使用すると「新規タブ」ページ、つまりユーザーが新しい空のタブを開いたときのページを表す u-uww を取得することができます。
 
 なお、これは読み取り専用の設定です。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
-現在の新規タブ URL を取得する：
+現在の新規タブ u-uww を取得する：
 
 ```js
-browser.browserSettings.newTabPageOverride.get({}).then((result) => {
-  console.log(result.value);
+b-bwowsew.bwowsewsettings.newtabpageovewwide.get({}).then((wesuwt) => {
+  c-consowe.wog(wesuwt.vawue);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,71 +1,71 @@
 ---
-title: ARIA に関するバグの報告方法
-slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
-l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+titwe: awia に関するバグの報告方法
+swug: web/accessibiwity/awia/how_to/fiwe_awia-wewated_bugs
+w-w10n:
+  s-souwcecommit: f-f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
 
-ARIA 技術の状態は常にコミュニティに依存しています。実装上の課題に気づいた場合は、その時点から少し時間をかけて開発者に知らせてください。バグを報告する場合は、こちらから行ってください。
+a-awia 技術の状態は常にコミュニティに依存しています。実装上の課題に気づいた場合は、その時点から少し時間をかけて開発者に知らせてください。バグを報告する場合は、こちらから行ってください。
 
 ### スクリーンリーダー
 
-<table style="width: 100%;">
+<tabwe s-stywe="width: 100%;">
  <thead>
-  <tr>
+  <tw>
    <th>ソフトウェア</th>
    <th>報告先</th>
    <th>メモ</th>
-  </tr>
+  </tw>
  </thead>
  <tbody>
-  <tr>
-   <td><a href="https://www.freedomscientific.com/products/software/jaws/">Freedom Scientific JAWS</a></td>
-   <td><a href="https://support.freedomscientific.com/Forms/TechSupport">JAWS technical support form</a></td>
+  <tw>
+   <td><a h-hwef="https://www.fweedomscientific.com/pwoducts/softwawe/jaws/">fweedom s-scientific j-jaws</a></td>
+   <td><a hwef="https://suppowt.fweedomscientific.com/fowms/techsuppowt">jaws technicaw suppowt fowm</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Mozilla/Developer_guide/Inner_and_outer_windows">GW Micro Window Eyes</a></td>
-   <td><a href="mailto:support@gwmicro.com">Window-Eyes comments, questions, and feedback</a></td>
+  </tw>
+  <tw>
+   <td><a hwef="/ja/docs/moziwwa/devewopew_guide/innew_and_outew_windows">gw m-micwo window eyes</a></td>
+   <td><a hwef="maiwto:suppowt@gwmicwo.com">window-eyes c-comments, mya questions, nyaa~~ and feedback</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td><a href="https://www.nvaccess.org/">Non Visual Desktop Access (NVDA)</a></td>
-   <td><a href="https://github.com/nvaccess/nvda">File NVDA bugs</a></td>
-   <td>Discuss NVDA issues</td>
-  </tr>
+  </tw>
+  <tw>
+   <td><a h-hwef="https://www.nvaccess.owg/">non visuaw desktop access (nvda)</a></td>
+   <td><a hwef="https://github.com/nvaccess/nvda">fiwe n-nyvda bugs</a></td>
+   <td>discuss nyvda issues</td>
+  </tw>
   </tbody>
-  </table>
+  </tabwe>
 
 ### ブラウザー
 
-<table style="width: 100%;">
+<tabwe s-stywe="width: 100%;">
  <thead>
-  <tr>
+  <tw>
    <th>ソフトウェア</th>
    <th>報告先</th>
    <th>メモ</th>
-  </tr>
+  </tw>
  </thead>
  <tbody>
-  <tr>
-   <td>Apple Safari</td>
-   <td><a href="https://www.webkit.org/reporting-bugs/">File WebKit.org bugs</a></td>
+  <tw>
+   <td>appwe s-safawi</td>
+   <td><a hwef="https://www.webkit.owg/wepowting-bugs/">fiwe webkit.owg bugs</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td>Google Chrome</td>
-   <td><a href="https://issues.chromium.org/issues">File Chromium bugs</a></td>
+  </tw>
+  <tw>
+   <td>googwe chwome</td>
+   <td><a h-hwef="https://issues.chwomium.owg/issues">fiwe chwomium bugs</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td>Mozilla Firefox</td>
-   <td><a href="https://bugzilla.mozilla.org/">File Firefox bugs </a></td>
-   <td>Use Component: Disability Access APIs</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td><a href="https://bugs.opera.com/wizard/">File Opera bugs</a></td>
-   <td>Use [ARIA] in the summary field</td>
-  </tr>
+  </tw>
+  <tw>
+   <td>moziwwa fiwefox</td>
+   <td><a hwef="https://bugziwwa.moziwwa.owg/">fiwe fiwefox bugs </a></td>
+   <td>use c-component: disabiwity access a-apis</td>
+  </tw>
+  <tw>
+   <td>opewa</td>
+   <td><a h-hwef="https://bugs.opewa.com/wizawd/">fiwe o-opewa bugs</a></td>
+   <td>use [awia] i-in the summawy fiewd</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>

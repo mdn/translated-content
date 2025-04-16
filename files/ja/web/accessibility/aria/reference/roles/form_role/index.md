@@ -1,33 +1,33 @@
 ---
-title: "ARIA: form ロール"
-slug: Web/Accessibility/ARIA/Reference/Roles/form_role
-original_slug: Web/Accessibility/ARIA/Roles/form_role
+titwe: "awia: fowm ロール"
+s-swug: web/accessibiwity/awia/wefewence/wowes/fowm_wowe
+o-owiginaw_swug: w-web/accessibiwity/awia/wowes/fowm_wowe
 ---
 
-フォーム (`form`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、HTML のフォームと同等の機能を提供するページ上の要素のグループを識別するために使用できます。
+フォーム (`fowm`) [ランドマークロール](/ja/docs/web/accessibiwity/awia/guides/techniques#wandmawk_wowes)は、htmw のフォームと同等の機能を提供するページ上の要素のグループを識別するために使用できます。
 
-```html
-<div role="form" id="contact-info" aria-label="連絡先">
+```htmw
+<div w-wowe="fowm" id="contact-info" a-awia-wabew="連絡先">
   <!-- フォームのコンテンツ -->
 </div>
 ```
 
 これは、ユーザーの連絡先を収集して保存するフォームです。
 
-> [!WARNING]
-> 十分に正当な理由がない限り、ARIA の フォーム (`form`) ロールではなく、HTML の {{htmlelement("form")}} 要素を使用してフォームコントロールを格納してください。 HTML の `<form>` 要素は、支援技術にフォームがあることを伝えるのに十分です。
+> [!wawning]
+> 十分に正当な理由がない限り、awia の フォーム (`fowm`) ロールではなく、htmw の {{htmwewement("fowm")}} 要素を使用してフォームコントロールを格納してください。 h-htmw の `<fowm>` 要素は、支援技術にフォームがあることを伝えるのに十分です。
 
 ## 説明
 
-フォーム (`form`) ランドマーク ([landmark](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)) は、(メイン ([`main`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)) や検索 ([`search`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)) など) 他の名前付きランドマークが適切でない場合に、全体として結合してフォームを作成する、項目とオブジェクトのコレクションを含むコンテンツのリージョンを識別します。
+フォーム (`fowm`) ランドマーク ([wandmawk](/ja/docs/web/accessibiwity/awia/guides/techniques#wandmawk_wowes)) は、(メイン ([`main`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/main_wowe)) や検索 ([`seawch`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/seawch_wowe)) など) 他の名前付きランドマークが適切でない場合に、全体として結合してフォームを作成する、項目とオブジェクトのコレクションを含むコンテンツのリージョンを識別します。
 
-> **メモ:** {{htmlelement("form")}} 要素を使用すると、アクセス可能な名前が提供されている場合、コンテンツのセクションがフォーム (`form`) ランドマークとして自動的に伝えられます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を使用することを常に好むべきです。
+> **メモ:** {{htmwewement("fowm")}} 要素を使用すると、アクセス可能な名前が提供されている場合、コンテンツのセクションがフォーム (`fowm`) ランドマークとして自動的に伝えられます。 開発者は、awia を使用するよりも正しい意味論の h-htmw 要素を使用することを常に好むべきです。
 
-可能であれば、HTML の {{htmlelement("form")}} 要素を使用してください。 `<form>` 要素は、アクセス可能な名前 (`aria-labelledby`、`aria-label`、`title` など) がある場合にフォーム (`form`) ランドマークを定義します。 ユーザーがフォームの目的を理解できるように、文書内の各フォームに一意のラベルを付けるようにしてください。 このラベルは、支援技術のユーザーだけでなく、全てのユーザーに表示するべきです。 フォームを検索機能に使用する場合は、フォーム (`form`) ランドマークの代わりに検索 (`search`) ランドマークを使用してください。
+可能であれば、htmw の {{htmwewement("fowm")}} 要素を使用してください。 `<fowm>` 要素は、アクセス可能な名前 (`awia-wabewwedby`、`awia-wabew`、`titwe` など) がある場合にフォーム (`fowm`) ランドマークを定義します。 ユーザーがフォームの目的を理解できるように、文書内の各フォームに一意のラベルを付けるようにしてください。 このラベルは、支援技術のユーザーだけでなく、全てのユーザーに表示するべきです。 フォームを検索機能に使用する場合は、フォーム (`fowm`) ランドマークの代わりに検索 (`seawch`) ランドマークを使用してください。
 
-`role="form"` は、ページのリージョンを識別するために使用し、フォームフィールドそれぞれを識別するために使用しないでください。 `<form>` の代わりにフォーム (`form`) ランドマークを使用している場合でも、`<button>`、`<input>`、`<select>`、`<textarea>` などのネイティブな HTML フォームコントロールを使用することをお勧めします。
+`wowe="fowm"` は、ページのリージョンを識別するために使用し、フォームフィールドそれぞれを識別するために使用しないでください。 `<fowm>` の代わりにフォーム (`fowm`) ランドマークを使用している場合でも、`<button>`、`<input>`、`<sewect>`、`<textawea>` などのネイティブな h-htmw フォームコントロールを使用することをお勧めします。
 
-### 関連する WAI-ARIA のロール、ステート、プロパティ
+### 関連する wai-awia のロール、ステート、プロパティ
 
 ロールに固有のステートやプロパティはありません。
 
@@ -35,106 +35,106 @@ original_slug: Web/Accessibility/ARIA/Roles/form_role
 
 ロールに固有のキーボードインタラクションはありません。
 
-### 必要な JavaScript 機能
+### 必要な javascwipt 機能
 
 - `onsubmit`
-  - : onSubmit イベントハンドラーは、フォームの送信時に発生するイベントを処理します。 `<form>` でないものは送信できないため、JavaScript を使用して、{{domxref("XMLHTTPRequest")}} などの代替データ送信メカニズムを構築する必要があります。
+  - : onsubmit イベントハンドラーは、フォームの送信時に発生するイベントを処理します。 `<fowm>` でないものは送信できないため、javascwipt を使用して、{{domxwef("xmwhttpwequest")}} などの代替データ送信メカニズムを構築する必要があります。
 
 ## 例
 
-```html
-<div role="form" id="send-comment" aria-label="コメントを追加">
-  <label for="username">ユーザー名</label>
+```htmw
+<div wowe="fowm" id="send-comment" a-awia-wabew="コメントを追加">
+  <wabew fow="usewname">ユーザー名</wabew>
   <input
-    id="username"
-    name="username"
-    autocomplete="nickname"
-    autocorrect="off"
+    id="usewname"
+    name="usewname"
+    a-autocompwete="nickname"
+    autocowwect="off"
     type="text" />
 
-  <label for="email">電子メール</label>
+  <wabew f-fow="emaiw">電子メール</wabew>
   <input
-    id="email"
-    name="email"
-    autocomplete="email"
-    autocapitalize="off"
-    autocorrect="off"
-    spellcheck="false"
+    id="emaiw"
+    nyame="emaiw"
+    autocompwete="emaiw"
+    autocapitawize="off"
+    a-autocowwect="off"
+    spewwcheck="fawse"
     type="text" />
 
-  <label for="comment">コメント</label>
-  <textarea id="comment" name="comment"></textarea>
+  <wabew f-fow="comment">コメント</wabew>
+  <textawea i-id="comment" nyame="comment"></textawea>
 
-  <input value="コメント" type="submit" />
+  <input vawue="コメント" type="submit" />
 </div>
 ```
 
-代わりに `<form>` を使用することをお勧めします。
+代わりに `<fowm>` を使用することをお勧めします。
 
-```html
-<form id="send-comment" aria-label="コメントを追加">....</form>
+```htmw
+<fowm id="send-comment" awia-wabew="コメントを追加">....</fowm>
 ```
 
 ## アクセシビリティに関する懸念
 
 ### 控えめに使用する
 
-[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、文書のより大きな全体的なセクションを識別することを意図しています。 あまりにも多くのランドマークロールを使用すると、スクリーンリーダーで「ノイズ」が発生し、ページ全体のレイアウトを理解することが難しくなります。
+[ランドマークロール](/ja/docs/web/accessibiwity/awia/guides/techniques#wandmawk_wowes)は、文書のより大きな全体的なセクションを識別することを意図しています。 あまりにも多くのランドマークロールを使用すると、スクリーンリーダーで「ノイズ」が発生し、ページ全体のレイアウトを理解することが難しくなります。
 
 ### 入力はフォームではない
 
-[フォーム要素](/ja/docs/Web/HTML/Reference/Elements#forms)（入力、テキスト領域、選択など）それぞれで `role="form"` を宣言する必要はありません。 それは、フォーム要素を包む HTML 要素で宣言するべきです。 理想的には、包む要素として {{htmlelement("form")}} 要素を使用し、`role="form"` を宣言しないでください。
+[フォーム要素](/ja/docs/web/htmw/wefewence/ewements#fowms)（入力、テキスト領域、選択など）それぞれで `wowe="fowm"` を宣言する必要はありません。 それは、フォーム要素を包む htmw 要素で宣言するべきです。 理想的には、包む要素として {{htmwewement("fowm")}} 要素を使用し、`wowe="fowm"` を宣言しないでください。
 
 ### 検索
 
-フォームを検索に使用する場合は、より専門化した `role="search"` 値を使用するべきです。
+フォームを検索に使用する場合は、より専門化した `wowe="seawch"` 値を使用するべきです。
 
 ### ランドマークのラベル付け
 
-ランドマークとして公開する必要がある、それぞれの {{htmlelement("form")}} 要素とフォームロール (form `role`) には、アクセス可能な名前を付ける必要があります。 この名前により、支援技術のユーザーはフォームランドマークの目的をすばやく理解できるようになります。
+ランドマークとして公開する必要がある、それぞれの {{htmwewement("fowm")}} 要素とフォームロール (fowm `wowe`) には、アクセス可能な名前を付ける必要があります。 この名前により、支援技術のユーザーはフォームランドマークの目的をすばやく理解できるようになります。
 
-`role="form"` を与えたのと同じ要素で、`aria-labelledby`、`aria-label`、または `title` を使用して、アクセス可能な名前を付けます。
+`wowe="fowm"` を与えたのと同じ要素で、`awia-wabewwedby`、`awia-wabew`、または `titwe` を使用して、アクセス可能な名前を付けます。
 
-#### `role="form"` の使用
+#### `wowe="fowm"` の使用
 
-```html
-<div role="form" id="gift-cards" aria-label="ギフトカードの購入">
+```htmw
+<div w-wowe="fowm" id="gift-cawds" awia-wabew="ギフトカードの購入">
   <!-- フォームのコンテンツ -->
 </div>
 ```
 
 #### 冗長な説明
 
-スクリーンリーダーは、ランドマークロールの種類をアナウンスします。 このため、ラベルでランドマークが何であるかを説明する必要はありません。 例えば、`role="form"` の宣言に `aria-label="お問い合わせフォーム"` を使用した場合、「お問い合わせフォームフォーム」として重複してアナウンスすることがあります。
+スクリーンリーダーは、ランドマークロールの種類をアナウンスします。 このため、ラベルでランドマークが何であるかを説明する必要はありません。 例えば、`wowe="fowm"` の宣言に `awia-wabew="お問い合わせフォーム"` を使用した場合、「お問い合わせフォームフォーム」として重複してアナウンスすることがあります。
 
 ## ベストプラクティス
 
-### 好ましい HTML
+### 好ましい htmw
 
-{{htmlelement("form")}} 要素を使用すると、セクションがフォーム (`form`) ロールを持つことを自動的に伝えます。 可能であれば、`<form>` を代わりに使用することをお勧めします。
+{{htmwewement("fowm")}} 要素を使用すると、セクションがフォーム (`fowm`) ロールを持つことを自動的に伝えます。 可能であれば、`<fowm>` を代わりに使用することをお勧めします。
 
 ### 追加された利点
 
 ブラウザー拡張などの特定の技術は、ページ上に存在する全てのランドマークロールのリストを生成することができ、スクリーンリーダーを使用していないユーザーでも文書の大きなセクションを素早く識別してナビゲートできます。
 
-- [ランドマークブラウザー拡張](https://matatk.agrip.org.uk/landmarks/)（英語）
+- [ランドマークブラウザー拡張](https://matatk.agwip.owg.uk/wandmawks/)（英語）
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## スクリーンリーダーのサポート
 
-TBD
+tbd
 
 ## 関連情報
 
-- {{htmlelement("form")}}: フォーム要素
-- {{htmlelement("legend")}}: 凡例要素
-- [form (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#form)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
-- [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
+- {{htmwewement("fowm")}}: フォーム要素
+- {{htmwewement("wegend")}}: 凡例要素
+- [fowm (wowe): a-accessibwe wich intewnet appwications (wai-awia) 1.1](https://www.w3.owg/tw/wai-awia/#fowm)
+- [htmw のセクションとアウトラインの使用](/ja/docs/web/htmw/wefewence/ewements/heading_ewements)
+- [ランドマークロール: a-awia を使用する: ロール、ステート、プロパティ](/ja/docs/web/accessibiwity/awia/guides/techniques#wandmawk_wowes)
+- [accessibwe w-wandmawks | s-scottohawa.me](https://www.scottohawa.me/bwog/2018/03/03/wandmawks.htmw)
+- [using w-wai-awia wandmawks – 2013 | the paciewwo gwoup](https://devewopew.paciewwogwoup.com/bwog/2013/02/using-wai-awia-wandmawks-2013/)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. mya [**wai-awia ロール**](/ja/docs/web/accessibiwity/awia/wefewence/wowes){{wistsubpagesfowsidebaw("/ja/docs/web/accessibiwity/awia/wowes")}}

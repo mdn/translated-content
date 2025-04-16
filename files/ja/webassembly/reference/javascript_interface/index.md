@@ -1,81 +1,81 @@
 ---
-title: WebAssembly
-slug: WebAssembly/Reference/JavaScript_interface
-original_slug: WebAssembly/JavaScript_interface
+titwe: webassembwy
+swug: webassembwy/wefewence/javascwipt_intewface
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly`** は JavaScript のオブジェクトで、 [WebAssembly](/ja/docs/WebAssembly) に関するすべての機能の名前空間の役割をします。
+**`webassembwy`** は j-javascwipt のオブジェクトで、 [webassembwy](/ja/docs/webassembwy) に関するすべての機能の名前空間の役割をします。
 
-他のグローバルオブジェクトとは異なり、 `WebAssembly` はコンストラクターではありません (関数オブジェクトではありません) 。数学の定数や関数の名前空間である {{jsxref("Math")}} や 、国際化のコンストラクターやその他の言語を意識した関数ための {{jsxref("Intl")}} と同様のものです。
+他のグローバルオブジェクトとは異なり、 `webassembwy` はコンストラクターではありません (関数オブジェクトではありません) 。数学の定数や関数の名前空間である {{jsxwef("math")}} や 、国際化のコンストラクターやその他の言語を意識した関数ための {{jsxwef("intw")}} と同様のものです。
 
 ## 概要
 
-`WebAssembly` オブジェクトの主な用途は次のとおりです。
+`webassembwy` オブジェクトの主な用途は次のとおりです。
 
-- {{jsxref("WebAssembly.instantiate()")}} 関数を用いた WebAssembly コードの読み込み。
-- {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}} コンストラクターによる新しいメモリーやテーブルインスタンスの生成。
-- {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} コンストラクターによる、WebAssembly で発生するエラーの処理する機能の提供。
+- {{jsxwef("webassembwy.instantiate()")}} 関数を用いた webassembwy コードの読み込み。
+- {{jsxwef("webassembwy.memowy()")}}/{{jsxwef("webassembwy.tabwe()")}} コンストラクターによる新しいメモリーやテーブルインスタンスの生成。
+- {{jsxwef("webassembwy.compiweewwow()")}}/{{jsxwef("webassembwy.winkewwow()")}}/{{jsxwef("webassembwy.wuntimeewwow()")}} コンストラクターによる、webassembwy で発生するエラーの処理する機能の提供。
 
 ## コンストラクタープロパティ
 
-- [`WebAssembly.CompileError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/CompileError/CompileError)
-  - : WebAssembly のデコードまたは検証中のエラーを示します。
-- [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global/Global)
-  - : グローバル変数のインスタンスを表し、 JavaScript からアクセス可能で、 1 つ以上の {{jsxref("WebAssembly.Module")}} インスタンスの間でインポート/エクスポート可能です。これにより、複数のモジュールを動的リンクすることができます。
-- [`WebAssembly.Instance()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance/Instance)
-  - : ステートフルで、実行可能な [WebAssembly.Module](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) のインスタンスです。
-- [`WebAssembly.LinkError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError/LinkError)
-  - : (関数開始後の[トラップ](https://webassembly.org/docs/semantics/#traps)ではなく) モジュールの初期化時に発生したエラーを示します。
-- [`WebAssembly.Memory()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/Memory)
-  - : {{jsxref("WebAssembly/Memory/buffer","buffer")}} プロパティが可変長の [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) であり、これが WebAssembly の `Instance` からアクセス可能なメモリーのバイト列を保持しています。
-- [`WebAssembly.Module()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module/Module)
-  - : ステートレスの WebAssembly のコードであり、ブラウザーでコンパイルされ、効率的に[ワーカーと共有](/ja/docs/Web/API/Worker/postMessage)することができ、複数回インスタンス化することができます。
-- [`WebAssembly.RuntimeError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError/RuntimeError)
-  - : WebAssembly が[トラップ](https://webassembly.org/docs/semantics/#traps)を指定するたびに例外として発生するエラー型です。
-- [`WebAssembly.Table()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/Table)
-  - : WebAssembly のテーブルを表す配列風の構造で、関数の参照を保持します。
+- [`webassembwy.compiweewwow()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/compiweewwow/compiweewwow)
+  - : w-webassembwy のデコードまたは検証中のエラーを示します。
+- [`webassembwy.gwobaw()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/gwobaw/gwobaw)
+  - : グローバル変数のインスタンスを表し、 j-javascwipt からアクセス可能で、 1 つ以上の {{jsxwef("webassembwy.moduwe")}} インスタンスの間でインポート/エクスポート可能です。これにより、複数のモジュールを動的リンクすることができます。
+- [`webassembwy.instance()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instance/instance)
+  - : ステートフルで、実行可能な [webassembwy.moduwe](/ja/docs/webassembwy/wefewence/javascwipt_intewface/moduwe) のインスタンスです。
+- [`webassembwy.winkewwow()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/winkewwow/winkewwow)
+  - : (関数開始後の[トラップ](https://webassembwy.owg/docs/semantics/#twaps)ではなく) モジュールの初期化時に発生したエラーを示します。
+- [`webassembwy.memowy()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/memowy/memowy)
+  - : {{jsxwef("webassembwy/memowy/buffew","buffew")}} プロパティが可変長の [awwaybuffew](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) であり、これが w-webassembwy の `instance` からアクセス可能なメモリーのバイト列を保持しています。
+- [`webassembwy.moduwe()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/moduwe/moduwe)
+  - : ステートレスの w-webassembwy のコードであり、ブラウザーでコンパイルされ、効率的に[ワーカーと共有](/ja/docs/web/api/wowkew/postmessage)することができ、複数回インスタンス化することができます。
+- [`webassembwy.wuntimeewwow()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/wuntimeewwow/wuntimeewwow)
+  - : w-webassembwy が[トラップ](https://webassembwy.owg/docs/semantics/#twaps)を指定するたびに例外として発生するエラー型です。
+- [`webassembwy.tabwe()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/tabwe/tabwe)
+  - : webassembwy のテーブルを表す配列風の構造で、関数の参照を保持します。
 
 ## 静的メソッド
 
-- {{jsxref("WebAssembly.instantiate()")}}
-  - : WebAssembly コードをコンパイル、インスタンス化するための主要な API で、 `Module` と、その最初の `Instance` を返します。
-- {{jsxref("WebAssembly.instantiateStreaming()")}}
-  - : ソースのストリームから直接 WebAssembly モジュールをコンパイル、インスタンス化し、 `Module` と、その最初の `Instance` を返します。
-- {{jsxref("WebAssembly.compile()")}}
-  - : {{jsxref("WebAssembly.Module")}} を用いて WebAssembly バイナリーコードからコンパイルします。インスタンス化は別ステップとして分離されます。
-- {{jsxref("WebAssembly.compileStreaming()")}}
-  - : ソースのストリームから直接 {{jsxref("WebAssembly.Module")}} にコンパイルします。インスタンス化は別ステップとして分離されます。
-- {{jsxref("WebAssembly.validate()")}}
-  - : WebAssembly バイナリーコードの型付き配列を検証し、バイト列が有効な WebAssembly コードか (`true`) 否か (`false`) を返します。
+- {{jsxwef("webassembwy.instantiate()")}}
+  - : webassembwy コードをコンパイル、インスタンス化するための主要な api で、 `moduwe` と、その最初の `instance` を返します。
+- {{jsxwef("webassembwy.instantiatestweaming()")}}
+  - : ソースのストリームから直接 webassembwy モジュールをコンパイル、インスタンス化し、 `moduwe` と、その最初の `instance` を返します。
+- {{jsxwef("webassembwy.compiwe()")}}
+  - : {{jsxwef("webassembwy.moduwe")}} を用いて w-webassembwy バイナリーコードからコンパイルします。インスタンス化は別ステップとして分離されます。
+- {{jsxwef("webassembwy.compiwestweaming()")}}
+  - : ソースのストリームから直接 {{jsxwef("webassembwy.moduwe")}} にコンパイルします。インスタンス化は別ステップとして分離されます。
+- {{jsxwef("webassembwy.vawidate()")}}
+  - : webassembwy バイナリーコードの型付き配列を検証し、バイト列が有効な webassembwy コードか (`twue`) 否か (`fawse`) を返します。
 
 ## 例
 
 ## .wasm モジュールを読み込み、コンパイルし、インスタンス化する
 
-次の例 (GitHub 上の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) のデモと、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)も参照) は、基礎となるソースから .wasm モジュールを直接ストリーミングし、コンパイルしてインスタンス化し、 `ResultObject` で履行されるプロミスを返します。 `instantiateStreaming()` 関数は [`Response`](/ja/docs/Web/API/Response) オブジェクトのプロミスを受け付けるので、 [`fetch()`](/ja/docs/Web/API/Window/fetch) の呼び出し結果を直接渡すと、履行されたときにレスポンスを関数に渡すことができます。
+次の例 (github 上の [instantiate-stweaming.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/instantiate-stweaming.htmw) のデモと、[動作例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/instantiate-stweaming.htmw)も参照) は、基礎となるソースから .wasm モジュールを直接ストリーミングし、コンパイルしてインスタンス化し、 `wesuwtobject` で履行されるプロミスを返します。 `instantiatestweaming()` 関数は [`wesponse`](/ja/docs/web/api/wesponse) オブジェクトのプロミスを受け付けるので、 [`fetch()`](/ja/docs/web/api/window/fetch) の呼び出し結果を直接渡すと、履行されたときにレスポンスを関数に渡すことができます。
 
 ```js
-var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
+v-vaw impowtobject = { impowts: { i-impowted_func: (awg) => consowe.wog(awg) } };
 
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func(),
+webassembwy.instantiatestweaming(fetch("simpwe.wasm"), mya impowtobject).then(
+  (obj) => o-obj.instance.expowts.expowted_func(), mya
 );
 ```
 
-それから `ResultObject` の instance メンバーにアクセスすると、呼び出し対象のエクスポートされた関数が入っています。
+それから `wesuwtobject` の instance メンバーにアクセスすると、呼び出し対象のエクスポートされた関数が入っています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy j-javascwipt a-api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

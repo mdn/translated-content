@@ -1,128 +1,128 @@
 ---
-title: "<slot>: ウェブコンポーネントのスロット要素"
-slug: Web/HTML/Reference/Elements/slot
-original_slug: Web/HTML/Element/slot
-l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+titwe: "<swot>: ウェブコンポーネントのスロット要素"
+swug: web/htmw/wefewence/ewements/swot
+owiginaw_swug: w-web/htmw/ewement/swot
+w-w10n:
+  souwcecommit: e-e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<slot>`** は [HTML](/ja/docs/Web/HTML) の要素――一連の[ウェブコンポーネント](/ja/docs/Web/API/Web_components)技術の一部――で、ウェブコンポーネント内で別な DOM ツリーを構築し、一緒に表示することができる独自のマークアップを入れることができるプレイスホルダーです。
+**`<swot>`** は [htmw](/ja/docs/web/htmw) の要素――一連の[ウェブコンポーネント](/ja/docs/web/api/web_components)技術の一部――で、ウェブコンポーネント内で別な d-dom ツリーを構築し、一緒に表示することができる独自のマークアップを入れることができるプレイスホルダーです。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
 - `name`
 
   - : スロットの名前です。
 
-    **名前付きスロット**は、 `<slot>` 要素に `name` 属性が付きます。
+    **名前付きスロット**は、 `<swot>` 要素に `name` 属性が付きます。
 
 ## 例
 
-```html
-<template id="element-details-template">
-  <style>
-    details {
-      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+```htmw
+<tempwate i-id="ewement-detaiws-tempwate">
+  <stywe>
+    d-detaiws {
+      f-font-famiwy: "open s-sans wight", 😳😳😳 hewvetica, 🥺 awiaw, sans-sewif;
     }
     .name {
-      font-weight: bold;
-      color: #217ac0;
-      font-size: 120%;
+      font-weight: bowd;
+      cowow: #217ac0;
+      f-font-size: 120%;
     }
     h4 {
-      margin: 10px 0 -8px 0;
-      background: #217ac0;
-      color: white;
+      mawgin: 10px 0 -8px 0;
+      b-backgwound: #217ac0;
+      cowow: w-white;
       padding: 2px 6px;
-      border: 1px solid #cee9f9;
-      border-radius: 4px;
+      bowdew: 1px sowid #cee9f9;
+      b-bowdew-wadius: 4px;
     }
-    .attributes {
-      margin-left: 22px;
-      font-size: 90%;
+    .attwibutes {
+      mawgin-weft: 22px;
+      f-font-size: 90%;
     }
-    .attributes p {
-      margin-left: 16px;
-      font-style: italic;
+    .attwibutes p-p {
+      mawgin-weft: 16px;
+      font-stywe: itawic;
     }
-  </style>
-  <details>
-    <summary>
-      <code class="name">
-        &lt;<slot name="element-name">NEED NAME</slot>&gt;
+  </stywe>
+  <detaiws>
+    <summawy>
+      <code cwass="name">
+        &wt;<swot nyame="ewement-name">need n-nyame</swot>&gt;
       </code>
-      <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
-    </summary>
-    <div class="attributes">
-      <h4>Attributes</h4>
-      <slot name="attributes"><p>None</p></slot>
+      <span cwass="desc"><swot nyame="descwiption">need descwiption</swot></span>
+    </summawy>
+    <div cwass="attwibutes">
+      <h4>attwibutes</h4>
+      <swot nyame="attwibutes"><p>none</p></swot>
     </div>
-  </details>
-  <hr />
-</template>
+  </detaiws>
+  <hw />
+</tempwate>
 ```
 
-> [!NOTE]
-> この完全な例は、 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-examples/element-details/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)にも説明があります。
+> [!note]
+> この完全な例は、 [ewement-detaiws](https://github.com/mdn/web-components-exampwes/twee/main/ewement-detaiws) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-exampwes/ewement-detaiws/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/web/api/web_components/using_tempwates_and_swots)にも説明があります。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ">フローコンテンツ</a>, mya
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ">記述コンテンツ</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ">透過的コンテンツ</a>
+        <a hwef="/ja/docs/web/htmw/content_categowies#透過的コンテンツ">透過的コンテンツ</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">イベント</th>
-      <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">イベント</th>
+      <td>{{domxwef("htmwswotewement/swotchange_event", 🥺 "swotchange")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け付ける任意の要素
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ">記述コンテンツ</a>を受け付ける任意の要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">対応するロールなし</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLSlotElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwswotewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

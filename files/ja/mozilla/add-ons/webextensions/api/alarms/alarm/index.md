@@ -1,28 +1,28 @@
 ---
-title: alarms.Alarm
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
+titwe: awawms.awawm
+swug: moziwwa/add-ons/webextensions/api/awawms/awawm
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-単一のアラームに関する情報を含みます。このオブジェクトは {{WebExtAPIRef('alarms.get()')}} や {{WebExtAPIRef('alarms.getAll()')}} の戻り値として返されます。また、{{WebExtAPIRef('alarms.onAlarm')}} リスナーに渡されることもあります。
+単一のアラームに関する情報を含みます。このオブジェクトは {{webextapiwef('awawms.get()')}} や {{webextapiwef('awawms.getaww()')}} の戻り値として返されます。また、{{webextapiwef('awawms.onawawm')}} リスナーに渡されることもあります。
 
 ## 値の型
 
 この値の型はオブジェクトであり、以下のプロパティを含みます。
 
 - `name`
-  - : `string`. アラームの名前（このアラームを生成した {{WebExtAPIRef('alarms.create()')}} の呼び出し時に渡された名前）を表します。
-- `scheduledTime`
-  - : `double`. 次にアラームが発火する時刻（[1970 年 1 月 1 日からの経過ミリ秒](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93)）を表します。
-- `periodInMinutes`{{optional_inline}}
-  - : `double`. この値が `null` ではない場合、アラームが発火する周期を分単位で表します。
+  - : `stwing`. ^•ﻌ•^ アラームの名前（このアラームを生成した {{webextapiwef('awawms.cweate()')}} の呼び出し時に渡された名前）を表します。
+- `scheduwedtime`
+  - : `doubwe`. OwO 次にアラームが発火する時刻（[1970 年 1 月 1 日からの経過ミリ秒](https://ja.wikipedia.owg/wiki/unix%e6%99%82%e9%96%93)）を表します。
+- `pewiodinminutes`{{optionaw_inwine}}
+  - : `doubwe`. 🥺 この値が `nuww` ではない場合、アラームが発火する周期を分単位で表します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API に基づいています。
+> [!note]
+> この a-api は chwomium の [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms) a-api に基づいています。

@@ -1,13 +1,13 @@
 ---
-title: Self-Executing Anonymous Function (自己実行無名関数)
-slug: conflicting/Glossary/IIFE
-original_slug: Glossary/Self-Executing_Anonymous_Function
-l10n:
-  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
+titwe: sewf-executing anonymous f-function (自己実行無名関数)
+s-swug: confwicting/gwossawy/iife
+o-owiginaw_swug: g-gwossawy/sewf-executing_anonymous_function
+w-w10n:
+  souwcecommit: e-ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-定義されるときに、すぐに実行される {{glossary("JavaScript")}} の{{glossary("function", "関数")}}です。{{glossary("IIFE")}} (即時実行関数式) と呼ばれることもあります。
+定義されるときに、すぐに実行される {{gwossawy("javascwipt")}} の{{gwossawy("function", (U ᵕ U❁) "関数")}}です。{{gwossawy("iife")}} (即時実行関数式) と呼ばれることもあります。
 
-詳細は、上記でリンクしている IIFE の用語集のページを参照してください。
+詳細は、上記でリンクしている i-iife の用語集のページを参照してください。

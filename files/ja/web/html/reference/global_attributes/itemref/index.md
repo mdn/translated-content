@@ -1,69 +1,69 @@
 ---
-title: itemref
-slug: Web/HTML/Reference/Global_attributes/itemref
-original_slug: Web/HTML/Global_attributes/itemref
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: itemwef
+swug: web/htmw/wefewence/gwobaw_attwibutes/itemwef
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/itemwef
+w-w10n:
+  souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope) 属性を持つ要素の子孫でないプロパティは、[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) **`itemref`** を使用してアイテムに関連付けることができます。
+[`itemscope`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itemscope) 属性を持つ要素の子孫でないプロパティは、[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes) **`itemwef`** を使用してアイテムに関連付けることができます。
 
-`itemref` は文書内のどこかにある追加のプロパティがある要素の ID （`itemid` ではない）のリストを提供します。
+`itemwef` は文書内のどこかにある追加のプロパティがある要素の i-id （`itemid` ではない）のリストを提供します。
 
-`itemref` 属性は `itemscope` 属性が指定された要素のみで指定することができます。
+`itemwef` 属性は `itemscope` 属性が指定された要素のみで指定することができます。
 
-> **メモ:** `itemref` 属性は、マイクロデータのデータモデルの一部ではありません。注釈づけるデータが扱いやすいツリー構造に従っていないページにおいて、注釈を追加することを助けるための単なる構文構造です。例えば、テーブル内のデータをマークアップするために、セル内のプロパティを維持しながらそれぞれの列に別々なアイテムを定義することができます。
+> **メモ:** `itemwef` 属性は、マイクロデータのデータモデルの一部ではありません。注釈づけるデータが扱いやすいツリー構造に従っていないページにおいて、注釈を追加することを助けるための単なる構文構造です。例えば、テーブル内のデータをマークアップするために、セル内のプロパティを維持しながらそれぞれの列に別々なアイテムを定義することができます。
 
 ## 例
 
 ### バンドの構造化データの表現
 
-この例では、マイクロデータ属性を使用して、次の構造化データを（[JSON-LD](https://json-ld.org/) 形式で）表現しています。
+この例では、マイクロデータ属性を使用して、次の構造化データを（[json-wd](https://json-wd.owg/) 形式で）表現しています。
 
 ```json
 {
-  "@id": "amanda",
-  "name": "Amanda",
+  "@id": "amanda", (U ᵕ U❁)
+  "name": "amanda", -.-
   "band": {
-    "@id": "b",
-    "name": "Jazz Band",
+    "@id": "b", ^^;;
+    "name": "jazz band",
     "size": 12
   }
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span></p>
-<div id="b" itemprop="band" itemscope itemref="c"></div>
+```htmw
+<div i-itemscope i-id="amanda" itemwef="a b"></div>
+<p id="a">name: <span itempwop="name">amanda</span></p>
+<div id="b" itempwop="band" i-itemscope itemwef="c"></div>
 <div id="c">
-  <p>Band: <span itemprop="name">Jazz Band</span></p>
-  <p>Size: <span itemprop="size">12</span> players</p>
+  <p>band: <span i-itempwop="name">jazz band</span></p>
+  <p>size: <span i-itempwop="size">12</span> pwayews</p>
 </div>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Representing structured data for a band')}}
+{{embedwivesampwe('wepwesenting stwuctuwed data fow a band')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [他のグローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
+- [他のグローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)
 - マイクロデータに関連する他のグローバル属性:
 
-  - [`itemid`](/ja/docs/Web/HTML/Reference/Global_attributes/itemid)
-  - [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop)
-  - [`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope)
-  - [`itemtype`](/ja/docs/Web/HTML/Reference/Global_attributes/itemtype)
+  - [`itemid`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itemid)
+  - [`itempwop`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itempwop)
+  - [`itemscope`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itemscope)
+  - [`itemtype`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/itemtype)

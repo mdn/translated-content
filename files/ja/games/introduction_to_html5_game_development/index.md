@@ -1,105 +1,105 @@
 ---
-title: HTML5 ゲーム開発入門
-slug: Games/Introduction_to_HTML5_Game_Development
+titwe: htmw5 ゲーム開発入門
+swug: games/intwoduction_to_htmw5_game_devewopment
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
 ## 長所
 
-1. HTML5 で作られたゲームはスマートフォン、タブレット、PC、スマート TV で動作します。
-2. 他のメディアと同様に、ウェブ全体でゲームを広告、宣伝することができます。
-3. 支払い。好きな支払い処理サービスを使って課金できます。
+1. >_< h-htmw5 で作られたゲームはスマートフォン、タブレット、pc、スマート t-tv で動作します。
+2. rawr x3 他のメディアと同様に、ウェブ全体でゲームを広告、宣伝することができます。
+3. mya 支払い。好きな支払い処理サービスを使って課金できます。
 4. 好きな時にゲームを更新できます。
-5. 自身のアナリティクスを集められます。
-6. 顧客ともっと身近に繋がれます。
-7. プレイヤーはいつでもどこでもゲームをプレイできます。
+5. nyaa~~ 自身のアナリティクスを集められます。
+6. (⑅˘꒳˘) 顧客ともっと身近に繋がれます。
+7. rawr x3 プレイヤーはいつでもどこでもゲームをプレイできます。
 
 ## ウェブ技術
 
-<table class="no-markdown standard-table">
+<tabwe c-cwass="no-mawkdown s-standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><strong>機能</strong></th>
-      <th scope="col"><strong>技術</strong></th>
-    </tr>
+    <tw>
+      <th s-scope="cow"><stwong>機能</stwong></th>
+      <th s-scope="cow"><stwong>技術</stwong></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><strong>オーディオ</strong></td>
-      <td><a href="/ja/docs/Web/API/Web_Audio_API">ウェブオーディオ API</a></td>
-    </tr>
-    <tr>
-   <td><strong>グラフィック</strong></td>
+    <tw>
+      <td><stwong>オーディオ</stwong></td>
+      <td><a h-hwef="/ja/docs/web/api/web_audio_api">ウェブオーディオ a-api</a></td>
+    </tw>
+    <tw>
+   <td><stwong>グラフィック</stwong></td>
       <td>
-        <a href="/ja/docs/Web/API/WebGL_API">WebGL</a> (<a
-          href="https://www.khronos.org/opengles/"
-          >OpenGL ES</a
+        <a hwef="/ja/docs/web/api/webgw_api">webgw</a> (<a
+          hwef="https://www.khwonos.owg/opengwes/"
+          >opengw es</a
         >
         2.0)
       </td>
-    </tr>
-    <tr>
-      <td><strong>入力</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>入力</stwong></td>
       <td>
-        <a href="/ja/docs/Web/API/Touch_events">タッチイベント</a>、
-        <a href="/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Gamepad API</a>、端末センサー、<a href="/ja/docs/Web/API/WebRTC_API">WebRTC</a>、<a href="/ja/docs/Web/API/Fullscreen_API">全画面 API</a>、<a href="/ja/docs/Web/API/Pointer_Lock_API">ポインターロック API</a>
+        <a hwef="/ja/docs/web/api/touch_events">タッチイベント</a>、
+        <a h-hwef="/ja/docs/web/api/gamepad_api/using_the_gamepad_api">gamepad api</a>、端末センサー、<a hwef="/ja/docs/web/api/webwtc_api">webwtc</a>、<a hwef="/ja/docs/web/api/fuwwscween_api">全画面 a-api</a>、<a hwef="/ja/docs/web/api/pointew_wock_api">ポインターロック api</a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>言語</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>言語</stwong></td>
       <td>
-        <a href="/ja/docs/Web/JavaScript">JavaScript</a> (<a href="https://github.com/emscripten-core/emscripten/wiki">Emscripten</a> を使って C/C++ を JavaScript にコンパイルする)
+        <a hwef="/ja/docs/web/javascwipt">javascwipt</a> (<a h-hwef="https://github.com/emscwipten-cowe/emscwipten/wiki">emscwipten</a> を使って c/c++ を javascwipt にコンパイルする)
       </td>
-    </tr>
-    <tr>
-      <td><strong>ネットワーク</strong></td>
-      <td><a href="/ja/docs/Web/API/WebRTC_API">WebRTC</a> や <a href="/ja/docs/Web/API/WebSockets_API">WebSockets</a></td>
-    </tr>
-    <tr>
-      <td><strong>ストレージ</strong></td>
-      <td><a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a> や「クラウド」</td>
-    </tr>
-    <tr>
-      <td><strong>ウェブ</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>ネットワーク</stwong></td>
+      <td><a hwef="/ja/docs/web/api/webwtc_api">webwtc</a> や <a h-hwef="/ja/docs/web/api/websockets_api">websockets</a></td>
+    </tw>
+    <tw>
+      <td><stwong>ストレージ</stwong></td>
+      <td><a hwef="/ja/docs/web/api/indexeddb_api">indexeddb</a> や「クラウド」</td>
+    </tw>
+    <tw>
+      <td><stwong>ウェブ</stwong></td>
       <td>
-        <a href="/ja/docs/Web/HTML">HTML</a>,
-        <a href="/ja/docs/Web/CSS">CSS</a>,
-        <a href="/ja/docs/Web/SVG">SVG</a>,
-        <a href="/ja/docs/Social_API">ソーシャル API</a> (およびその他いろいろ！)
+        <a h-hwef="/ja/docs/web/htmw">htmw</a>, (✿oωo)
+        <a h-hwef="/ja/docs/web/css">css</a>, (ˆ ﻌ ˆ)♡
+        <a hwef="/ja/docs/web/svg">svg</a>, (˘ω˘)
+        <a hwef="/ja/docs/sociaw_api">ソーシャル api</a> (およびその他いろいろ！)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
+- [全画面 api](/ja/docs/web/api/fuwwscween_api)
   - : 全画面のゲームプレイに使います。
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [gamepad a-api](/ja/docs/web/api/gamepad_api/using_the_gamepad_api)
   - : ゲームパッドやゲームコントローラーを使用します。
-- [HTML](/ja/docs/Web/HTML) および [CSS](/ja/docs/Web/CSS)
+- [htmw](/ja/docs/web/htmw) および [css](/ja/docs/web/css)
   - : ゲームのユーザーインターフェイスを構築し、装飾し、レイアウトします。
-- [HTML audio](/ja/docs/Web/HTML/Reference/Elements/audio)
+- [htmw audio](/ja/docs/web/htmw/wefewence/ewements/audio)
   - : 簡単な効果音や音楽を簡単に再生することができます。
-- [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
+- [indexeddb](/ja/docs/web/api/indexeddb_api)
   - : ユーザーデータを自分のコンピューターや 端末に保存します。
-- [JavaScript](/ja/docs/Web/JavaScript)
+- [javascwipt](/ja/docs/web/javascwipt)
   - : ゲームのコードを書くための高速ウェブプログラミング言語です。
-    簡単に既存のゲームを移植するには、 [Emscripten](https://github.com/emscripten-core/emscripten/wiki) や [Asm.js](http://asmjs.org/spec/latest/) を使用します。
-- [ポインターロック API](/ja/docs/Web/API/Pointer_Lock_API)
+    簡単に既存のゲームを移植するには、 [emscwipten](https://github.com/emscwipten-cowe/emscwipten/wiki) や [asm.js](http://asmjs.owg/spec/watest/) を使用します。
+- [ポインターロック api](/ja/docs/web/api/pointew_wock_api)
   - : マウスなどのポインティングデバイスをゲームのインターフェイス内にロックします。
-- [SVG](/ja/docs/Web/SVG) (Scalable Vector Graphics)
+- [svg](/ja/docs/web/svg) (scawabwe vectow gwaphics)
   - : ユーザーの画面の大きさや解像度に関わらず、滑らかに拡大縮小できるベクターグラフィックを構築することができます。
-- [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
-  - : JavaScript から生のバイナリーデータにアクセスし、GLテクスチャやゲームデータなど、あらゆるものを操作することができます。
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+- [型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)
+  - : j-javascwipt から生のバイナリーデータにアクセスし、gwテクスチャやゲームデータなど、あらゆるものを操作することができます。
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)
   - : オーディオの再生、合成、操作をリアルタイムに制御します。
-- [WebGL](/ja/docs/Web/API/WebGL_API)
-  - : 高性能でハードウェアアクセラレーションに優れた三次元（および二次元）グラフィックを作成することができます。[OpenGL ES](https://www.khronos.org/opengles/) 2.0。
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- [webgw](/ja/docs/web/api/webgw_api)
+  - : 高性能でハードウェアアクセラレーションに優れた三次元（および二次元）グラフィックを作成することができます。[opengw e-es](https://www.khwonos.owg/opengwes/) 2.0。
+- [webwtc](/ja/docs/web/api/webwtc_api)
   - : 電話会議やチャットのように 2 人のユーザー間で他のアプリケーションのデータをやり取りするなど、音声や映像データを制御するリアルタイム通信です。
-- [WebSockets](/ja/docs/Web/API/WebSockets_API)
+- [websockets](/ja/docs/web/api/websockets_api)
   - : アプリやサイトをサーバーに接続し、データをリアルタイムに送受信します。マルチプレイヤーゲームアクションやチャットサービスなどに最適です。
-- [Web Workers](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
-  - : マルチコアプロセッサーのために、独自の JavaScript コードを実行するバックグラウンドスレッドを生成します。
-- [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) および [ファイル API](/ja/docs/DOM/File_API)
+- [web w-wowkews](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)
+  - : マルチコアプロセッサーのために、独自の javascwipt コードを実行するバックグラウンドスレッドを生成します。
+- [xmwhttpwequest](/ja/docs/web/api/xmwhttpwequest) および [ファイル a-api](/ja/docs/dom/fiwe_api)
   - : 新しいゲームレベルやアートワークのダウンロード、非リアルタイムのゲームステータス情報の送信など、ウェブサーバーから必要なあらゆるデータを送受信することができます。

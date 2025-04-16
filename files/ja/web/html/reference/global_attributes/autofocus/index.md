@@ -1,22 +1,22 @@
 ---
-title: autofocus
-slug: Web/HTML/Reference/Global_attributes/autofocus
-original_slug: Web/HTML/Global_attributes/autofocus
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: autofocus
+swug: web/htmw/wefewence/gwobaw_attwibutes/autofocus
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/autofocus
+w-w10n:
+  s-souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`autofocus`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は論理属性で、ページ読み込み時、またはその要素が属する {{HTMLElement("dialog")}} が表示されたときに、その要素にフォーカスを当てるべきことを示す属性です。
+**`autofocus`** [グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)は論理属性で、ページ読み込み時、またはその要素が属する {{htmwewement("diawog")}} が表示されたときに、その要素にフォーカスを当てるべきことを示す属性です。
 
-```html
-<input name="q" autofocus />
+```htmw
+<input n-nyame="q" a-autofocus />
 ```
 
-文書またはダイアログ内の複数の要素に autofocus 属性を設定することはできません。複数の要素に適用された場合、最初のものにフォーカスが当たります。
+文書またはダイアログ内の複数の要素に a-autofocus 属性を設定することはできません。複数の要素に適用された場合、最初のものにフォーカスが当たります。
 
-> **メモ:** `autofocus` 属性は、フォームコントロールだけでなく、すべての要素に適用されます。例えば、これは [contenteditable](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) の領域で使用されるかもしれません。
+> **メモ:** `autofocus` 属性は、フォームコントロールだけでなく、すべての要素に適用されます。例えば、これは [contenteditabwe](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) の領域で使用されるかもしれません。
 
 ## アクセシビリティの考慮
 
@@ -26,8 +26,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

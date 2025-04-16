@@ -1,149 +1,149 @@
 ---
-title: "<blockquote>: ブロック引用要素"
-slug: Web/HTML/Reference/Elements/blockquote
-original_slug: Web/HTML/Element/blockquote
-l10n:
-  sourceCommit: 610522d12e27fc70bcfd67d183c7ab1f38956a62
+titwe: "<bwockquote>: ブロック引用要素"
+swug: web/htmw/wefewence/ewements/bwockquote
+o-owiginaw_swug: web/htmw/ewement/bwockquote
+w-w10n:
+  s-souwcecommit: 610522d12e27fc70bcfd67d183c7ab1f38956a62
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<blockquote>`** は [HTML](/ja/docs/Web/HTML) 要素で、内包する要素のテキストが引用文であることを示します。通常、字下げして表示されます（整形方法については[注意](#使用上の注意)の項を参照してください）。引用元の URL は `cite` 属性により与えることができ、引用元のテキスト表現は {{HTMLElement("cite")}} 要素を用いて与えることができます。
+**`<bwockquote>`** は [htmw](/ja/docs/web/htmw) 要素で、内包する要素のテキストが引用文であることを示します。通常、字下げして表示されます（整形方法については[注意](#使用上の注意)の項を参照してください）。引用元の u-uww は `cite` 属性により与えることができ、引用元のテキスト表現は {{htmwewement("cite")}} 要素を用いて与えることができます。
 
-{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;bwockquote&gt;", 🥺 "tabbed-standawd")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <div>
-  <blockquote cite="https://www.huxley.net/bnw/four.html">
+  <bwockquote c-cite="https://www.huxwey.net/bnw/fouw.htmw">
     <p>
-      Words can be like X-rays, if you use them properly—they’ll go through
-      anything. You read and you’re pierced.
+      w-wowds can be wike x-ways, o.O if you use them pwopewwy—they’ww go thwough
+      anything. /(^•ω•^) you w-wead and you’we piewced. nyaa~~
     </p>
-  </blockquote>
-  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+  </bwockquote>
+  <p>—awdous huxwey, nyaa~~ <cite>bwave n-nyew wowwd</cite></p>
 </div>
 ```
 
-```css interactive-example
-div:has(> blockquote) {
-  background-color: #ededed;
-  margin: 10px auto;
+```css intewactive-exampwe
+d-div:has(> bwockquote) {
+  backgwound-cowow: #ededed;
+  mawgin: 10px auto;
   padding: 15px;
-  border-radius: 5px;
+  b-bowdew-wadius: 5px;
 }
 
-blockquote p::before {
-  content: "\201C";
+bwockquote p-p::befowe {
+  c-content: "\201c";
 }
 
-blockquote p::after {
-  content: "\201D";
+bwockquote p::aftew {
+  content: "\201d";
 }
 
-blockquote + p {
-  text-align: right;
+bwockquote + p {
+  text-awign: w-wight;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
 - `cite`
-  - : 引用元の文書の URL、または引用元の情報に関するメッセージを示します。この属性は、引用文の背景や出典についての説明を指し示すためのものです。
+  - : 引用元の文書の uww、または引用元の情報に関するメッセージを示します。この属性は、引用文の背景や出典についての説明を指し示すためのものです。
 
 ## 使用上の注意
 
-引用された文字列に適用される字下げを変更するには、 {{Glossary("CSS")}} の {{cssxref("margin-left")}} や {{cssxref("margin-right")}} プロパティ、または一括指定の {{cssxref("margin")}} プロパティを使用してください。
+引用された文字列に適用される字下げを変更するには、 {{gwossawy("css")}} の {{cssxwef("mawgin-weft")}} や {{cssxwef("mawgin-wight")}} プロパティ、または一括指定の {{cssxwef("mawgin")}} プロパティを使用してください。
 
-独立したブロックというより行内の短い引用を行うには、 {{HTMLElement("q")}} (Quotation) 要素を使用してください。
+独立したブロックというより行内の短い引用を行うには、 {{htmwewement("q")}} (quotation) 要素を使用してください。
 
 ## 例
 
-この例は {{RFC(1149)}}, A Standard for the Transmission of IP Datagrams on Avian Carriers からの文言を引用するために `<blockquote>` 要素を使用する例です。
+この例は {{wfc(1149)}}, :3 a standawd fow the twansmission of ip datagwams o-on avian cawwiews からの文言を引用するために `<bwockquote>` 要素を使用する例です。
 
-```html
-<blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
+```htmw
+<bwockquote cite="https://datatwackew.ietf.owg/doc/htmw/wfc1149">
   <p>
-    Avian carriers can provide high delay, low throughput, and low altitude
-    service. The connection topology is limited to a single point-to-point path
-    for each carrier, used with standard carriers, but many carriers can be used
-    without significant interference with each other, outside early spring. This
-    is because of the 3D ether space available to the carriers, in contrast to
-    the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
-    avoidance system, which increases availability.
+    a-avian cawwiews c-can pwovide h-high deway, 😳😳😳 wow t-thwoughput, (˘ω˘) and wow awtitude
+    sewvice. ^^ the connection t-topowogy is wimited to a singwe point-to-point p-path
+    fow each cawwiew, used with standawd cawwiews, :3 but many cawwiews can be used
+    w-without significant intewfewence w-with each othew, -.- o-outside eawwy s-spwing. 😳 this
+    is because of the 3d ethew space avaiwabwe to t-the cawwiews, mya i-in contwast to
+    the 1d ethew u-used by ieee802.3. (˘ω˘) t-the cawwiews have an intwinsic c-cowwision
+    avoidance system, w-which incweases avaiwabiwity.
   </p>
-</blockquote>
+</bwockquote>
 ```
 
 以下のように出力されます。
 
-{{EmbedLiveSample("Examples", 640, 180)}}
+{{embedwivesampwe("exampwes", >_< 640, 180)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >, 区分化ルート, 知覚可能コンテンツ
+        >, -.- 区分化ルート, 🥺 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLQuoteElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwquoteewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("q")}}: インラインの引用のための要素
-- {{HTMLElement("cite")}}: 情報源の引用のための要素
+- {{htmwewement("q")}}: インラインの引用のための要素
+- {{htmwewement("cite")}}: 情報源の引用のための要素

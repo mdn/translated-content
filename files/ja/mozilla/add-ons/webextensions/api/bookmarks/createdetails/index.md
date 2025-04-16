@@ -1,63 +1,63 @@
 ---
-title: bookmarks.CreateDetails
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
+titwe: bookmawks.cweatedetaiws
+swug: moziwwa/add-ons/webextensions/api/bookmawks/cweatedetaiws
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`CreateDetails` 型は、新しいブックマークやフォルダーのプロパティを表すためのオブジェクト型です。{{WebExtAPIRef("bookmarks.create()")}} メソッドの呼び出し時に渡します。
+`cweatedetaiws` 型は、新しいブックマークやフォルダーのプロパティを表すためのオブジェクト型です。{{webextapiwef("bookmawks.cweate()")}} メソッドの呼び出し時に渡します。
 
-> [!NOTE]
+> [!note]
 > 現在、ブックマークリストのセパレータをこのオブジェクト型で表すことはできません。
 
 ## 値の型
 
-以下のプロパティを含む {{jsxref("object")}} です。
+以下のプロパティを含む {{jsxwef("object")}} です。
 
-- `parentId`{{optional_inline}}
-  - : 新しいブックマーク / フォルダーの親フォルダーを指定する {{jsxref("string")}} です。デフォルト値はブラウザーによって異なり、Chrome の場合は「その他のブックマーク」、Firefox の場合は「未分類のブックマーク」です。
-- `index`{{optional_inline}}
-  - : 親要素の配下における、新しいブックマーク / フォルダーの位置を指定する {{jsxref("number")}} です。値が 0 の場合、リストの先頭に置かれます。
-- `title`{{optional_inline}}
-  - : `作成する`ブックマークのタイトルやフォルダーの名前を指定する {{jsxref("string")}} です。値を省略した場合、タイトルは `""` になります。
-- `url`{{optional_inline}}
-  - : ブックマークの URL を指定する {{jsxref("string")}} です。値を省略するか `null` を指定した場合、ブックマークではなくフォルダーが作成されます。
+- `pawentid`{{optionaw_inwine}}
+  - : 新しいブックマーク / フォルダーの親フォルダーを指定する {{jsxwef("stwing")}} です。デフォルト値はブラウザーによって異なり、chwome の場合は「その他のブックマーク」、fiwefox の場合は「未分類のブックマーク」です。
+- `index`{{optionaw_inwine}}
+  - : 親要素の配下における、新しいブックマーク / フォルダーの位置を指定する {{jsxwef("numbew")}} です。値が 0 の場合、リストの先頭に置かれます。
+- `titwe`{{optionaw_inwine}}
+  - : `作成する`ブックマークのタイトルやフォルダーの名前を指定する {{jsxwef("stwing")}} です。値を省略した場合、タイトルは `""` になります。
+- `uww`{{optionaw_inwine}}
+  - : ブックマークの u-uww を指定する {{jsxwef("stwing")}} です。値を省略するか `nuww` を指定した場合、ブックマークではなくフォルダーが作成されます。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この a-api は c-chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-update) a-api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における c-chwomium のコードから作成されています。micwosoft e-edge の実装状況は m-micwosoft c-cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 united states wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. :3 aww wights w-wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, (U ﹏ U) with ow without
+// modification, >w< a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, (U ﹏ U) this wist of conditions and the fowwowing discwaimew. 😳
+//    * w-wedistwibutions in b-binawy fowm must w-wepwoduce the a-above
+// copywight n-nyotice, (ˆ ﻌ ˆ)♡ this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. 😳😳😳
+//    * nyeithew the nyame of googwe inc. (U ﹏ U) nyow t-the nyames of its
+// contwibutows m-may be used t-to endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, 😳 incwuding, but nyot
+// wimited t-to, 😳 the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. σωσ in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, rawr x3 indiwect, i-incidentaw, OwO
+// s-speciaw, /(^•ω•^) exempwawy, 😳😳😳 ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) but n-nyot
+// wimited t-to, >_< pwocuwement of substitute goods ow sewvices; woss of use, >w<
+// d-data, ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, rawr whethew in contwact, 😳 s-stwict wiabiwity, >w< o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising i-in any way out o-of the use
+// of t-this softwawe, (⑅˘꒳˘) e-even if advised of the possibiwity of such damage. OwO
 -->

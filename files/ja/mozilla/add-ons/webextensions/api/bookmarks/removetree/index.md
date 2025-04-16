@@ -1,87 +1,87 @@
 ---
-title: bookmarks.removeTree()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
+titwe: bookmawks.wemovetwee()
+swug: moziwwa/add-ons/webextensions/api/bookmawks/wemovetwee
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.removeTree()`** は、ブックマークフォルダーやその要素を再帰的に削除するメソッドです。
+**`bookmawks.wemovetwee()`** は、ブックマークフォルダーやその要素を再帰的に削除するメソッドです。
 
-ブックマークが見つからなかった場合は {{WebExtAPIRef("runtime.lastError")}} がセットされ、エラーの有無はコールバック内で確認できます。
+ブックマークが見つからなかった場合は {{webextapiwef("wuntime.wastewwow")}} がセットされ、エラーの有無はコールバック内で確認できます。
 
 ## 構文
 
 ```js
-browser.bookmarks.removeTree(
-  id, // 文字列
-  callback, // 関数（省略可）
+b-bwowsew.bookmawks.wemovetwee(
+  i-id, /(^•ω•^) // 文字列
+  c-cawwback, 😳😳😳 // 関数（省略可）
 );
 ```
 
 ### 引数
 
 - `id`
-  - : 子要素とともに削除されるフォルダーノードの ID を表す {{jsxref("string")}} です。
-- `callback`{{optional_inline}}
+  - : 子要素とともに削除されるフォルダーノードの i-id を表す {{jsxwef("stwing")}} です。
+- `cawwback`{{optionaw_inwine}}
   - : ノードが削除された際に実行される関数です。この関数に渡される引数はありません。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 使用例
 
-以下の例は、"MDN" という名前のフォルダーを探し、それ自身とその子要素をすべて削除するものです。
+以下の例は、"mdn" という名前のフォルダーを探し、それ自身とその子要素をすべて削除するものです。
 
 ```js
-function onRemoved() {
-  if (chrome.runtime.lastError) {
-    console.log(chrome.runtime.lastError);
-  } else {
-    console.log("bookmark item removed!");
+f-function o-onwemoved() {
+  i-if (chwome.wuntime.wastewwow) {
+    c-consowe.wog(chwome.wuntime.wastewwow);
+  } ewse {
+    consowe.wog("bookmawk item wemoved!");
   }
 }
 
-function removeMDN(searchResults) {
-  if (searchResults.length) {
-    chrome.bookmarks.removeTree(searchResults[0].id, onRemoved);
+function w-wemovemdn(seawchwesuwts) {
+  if (seawchwesuwts.wength) {
+    chwome.bookmawks.wemovetwee(seawchwesuwts[0].id, ( ͡o ω ͡o ) o-onwemoved);
   }
 }
 
-chrome.bookmarks.search({ title: "MDN" }, removeMDN);
+chwome.bookmawks.seawch({ t-titwe: "mdn" }, >_< wemovemdn);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-update) a-api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における chwomium のコードから作成されています。micwosoft e-edge の実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 united states w-wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >w< aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in s-souwce and binawy f-fowms, 😳 with ow w-without
+// modification, a-awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, >w< this wist of conditions and the f-fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight n-nyotice, OwO this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided with the
+// d-distwibution.
+//    * nyeithew t-the nyame of googwe inc. (ꈍᴗꈍ) nyow t-the nyames of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, 😳😳😳 i-incwuding, mya but nyot
+// wimited t-to, mya the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow a-any diwect, (U ﹏ U) indiwect, incidentaw, mya
+// s-speciaw, ʘwʘ e-exempwawy, (˘ω˘) ow consequentiaw d-damages (incwuding, (U ﹏ U) but nyot
+// wimited t-to, ^•ﻌ•^ pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, (˘ω˘)
+// data, ow pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// theowy o-of wiabiwity, :3 w-whethew in contwact, ^^;; stwict wiabiwity, 🥺 ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, (⑅˘꒳˘) even if advised of the possibiwity o-of such damage. nyaa~~
 -->

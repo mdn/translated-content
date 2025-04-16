@@ -1,107 +1,107 @@
 ---
-title: aria-errormessage
-slug: Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage
-original_slug: Web/Accessibility/ARIA/Attributes/aria-errormessage
-l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+titwe: awia-ewwowmessage
+swug: w-web/accessibiwity/awia/wefewence/attwibutes/awia-ewwowmessage
+o-owiginaw_swug: web/accessibiwity/awia/attwibutes/awia-ewwowmessage
+w-w10n:
+  souwcecommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-オブジェクトの `aria-errormessage` 属性は、そのオブジェクトのエラーメッセージを表示する要素を特定します。
+オブジェクトの `awia-ewwowmessage` 属性は、そのオブジェクトのエラーメッセージを表示する要素を特定します。
 
 ## 解説
 
-ユーザーが作成したエラーがある場合、その存在を知らせ、修正する方法を指示したいものです。 2 つの属性を使用する必要があります。 [`aria-invalid="true"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) を設定してオブジェクトがエラー状態であることを定義し、そして、 `aria-errormessage` 属性を追加し、その値としてそのオブジェクトのエラーメッセージテキストを格納する要素の `id` を指定します。
+ユーザーが作成したエラーがある場合、その存在を知らせ、修正する方法を指示したいものです。 2 つの属性を使用する必要があります。 [`awia-invawid="twue"`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-invawid) を設定してオブジェクトがエラー状態であることを定義し、そして、 `awia-ewwowmessage` 属性を追加し、その値としてそのオブジェクトのエラーメッセージテキストを格納する要素の `id` を指定します。
 
-`aria-errormessage` 属性は、オブジェクトの値が有効でない場合、すなわち [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) が `true` に設定されている場合にのみ使用しましょう。
-オブジェクトが有効で `aria-errormessage` 属性を記載する場合は、参照する要素が非表示であり、そこに含まれるメッセージには関連がないことを確認してください。
+`awia-ewwowmessage` 属性は、オブジェクトの値が有効でない場合、すなわち [`awia-invawid`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-invawid) が `twue` に設定されている場合にのみ使用しましょう。
+オブジェクトが有効で `awia-ewwowmessage` 属性を記載する場合は、参照する要素が非表示であり、そこに含まれるメッセージには関連がないことを確認してください。
 
-`aria-errormessage` が関連する場合、参照する要素はユーザーがエラーメッセージを見たり聞いたりできるように可視でなければなりません。
+`awia-ewwowmessage` が関連する場合、参照する要素はユーザーがエラーメッセージを見たり聞いたりできるように可視でなければなりません。
 
-多くの場合、エラーメッセージを持つ要素は [ARIA ライブ領域](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions)であることが望まれます。例えば、ユーザーが無効な値を指定した後にエラーメッセージが表示される場合などです。エラーメッセージは、何が間違っているかを記述し、オブジェクトを有効にするために何が必要かをユーザーに通知する必要があります。 ARIA ライブ領域としてエラーメッセージを追加することは、エラーメッセージが他の方法でユーザーに伝えられなくても、エラーメッセージのコンテンツからユーザーが好ましいことを支援技術に知らせます。
+多くの場合、エラーメッセージを持つ要素は [awia ライブ領域](/ja/docs/web/accessibiwity/awia/guides/wive_wegions)であることが望まれます。例えば、ユーザーが無効な値を指定した後にエラーメッセージが表示される場合などです。エラーメッセージは、何が間違っているかを記述し、オブジェクトを有効にするために何が必要かをユーザーに通知する必要があります。 a-awia ライブ領域としてエラーメッセージを追加することは、エラーメッセージが他の方法でユーザーに伝えられなくても、エラーメッセージのコンテンツからユーザーが好ましいことを支援技術に知らせます。
 
-失敗が視覚的に明らかで、エラーの明示的な説明が必要な場合は、目に見えるエラーメッセージを記載し、 `aria-errormessage` 属性で不正なオブジェクトにリンクしてください。
+失敗が視覚的に明らかで、エラーの明示的な説明が必要な場合は、目に見えるエラーメッセージを記載し、 `awia-ewwowmessage` 属性で不正なオブジェクトにリンクしてください。
 
 ## 例
 
 いくつかのスタイルを作成します。
 
-1. すべてのエラーメッセージを非表示にします。
-2. 不正なオブジェクトを不正な外観にします。
-3. 不正なオブジェクトの後に来る兄弟要素のエラーメッセージを表示させます。
+1. >_< すべてのエラーメッセージを非表示にします。
+2. mya 不正なオブジェクトを不正な外観にします。
+3. mya 不正なオブジェクトの後に来る兄弟要素のエラーメッセージを表示させます。
 
-`aria-invalid="true"` を使用して、不正なオブジェクトを識別します。
+`awia-invawid="twue"` を使用して、不正なオブジェクトを識別します。
 
 ```css
-.errormessage {
-  visibility: hidden;
+.ewwowmessage {
+  v-visibiwity: h-hidden;
 }
 
-[aria-invalid="true"] {
-  outline: 2px solid red;
+[awia-invawid="twue"] {
+  outwine: 2px s-sowid w-wed;
 }
 
-[aria-invalid="true"] ~ .errormessage {
-  visibility: visible;
+[awia-invawid="twue"] ~ .ewwowmessage {
+  visibiwity: visibwe;
 }
 ```
 
-オブジェクトが不正な場合は、 JavaScript を使用して `aria-invalid="true"` を追加します。上記の CSS は、不正なオブジェクト以下の `.errormessage` が見えるようにします。
+オブジェクトが不正な場合は、 javascwipt を使用して `awia-invawid="twue"` を追加します。上記の css は、不正なオブジェクト以下の `.ewwowmessage` が見えるようにします。
 
-```html
+```htmw
 <p>
-  <label for="email">メールアドレス:</label>
+  <wabew f-fow="emaiw">メールアドレス:</wabew>
   <input
-    type="email"
-    name="email"
-    id="email"
-    aria-invalid="true"
-    aria-errormessage="err1" />
-  <span id="err1" class="errormessage"
+    type="emaiw"
+    nyame="emaiw"
+    i-id="emaiw"
+    awia-invawid="twue"
+    a-awia-ewwowmessage="eww1" />
+  <span id="eww1" cwass="ewwowmessage"
     >有効なメールアドレスを入力してください</span
   >
 </p>
 ```
 
-有効から不正になったとき、この例での JavaScript の変更は、メール入力オブジェクトの `aria-invalid` への更新だけでした。エラーメッセージは入力に従うことで、アクセシビリティツリー上で可視化され利用できるようになるため、この例を単純に保つことができます。また、 [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) プロパティを適用したり、 [`alert`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) のようなライブ領域のロールを使用することもできました。
+有効から不正になったとき、この例での javascwipt の変更は、メール入力オブジェクトの `awia-invawid` への更新だけでした。エラーメッセージは入力に従うことで、アクセシビリティツリー上で可視化され利用できるようになるため、この例を単純に保つことができます。また、 [`awia-wive`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wive) プロパティを適用したり、 [`awewt`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/awewt_wowe) のようなライブ領域のロールを使用することもできました。
 
 ## 値
 
-- `id` reference
+- `id` w-wefewence
   - : 現在の要素のエラーメッセージを格納する要素の `id` の値。
 
 ## 関連するロール
 
 使用しているロール:
 
-- [`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
-- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
-- [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
-- [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
-- [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- [`tree`](/ja/docs/Web/Accessibility/ARIA/Roles/tree_role)
+- [`appwication`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/appwication_wowe)
+- [`checkbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/checkbox_wowe)
+- [`combobox`](/ja/docs/web/accessibiwity/awia/wowes/combobox_wowe)
+- [`gwidceww`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/gwidceww_wowe)
+- [`wistbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wistbox_wowe)
+- [`wadiogwoup`](/ja/docs/web/accessibiwity/awia/wowes/wadiogwoup_wowe)
+- [`swidew`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/swidew_wowe)
+- [`spinbutton`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/spinbutton_wowe)
+- [`textbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/textbox_wowe)
+- [`twee`](/ja/docs/web/accessibiwity/awia/wowes/twee_wowe)
 
 継承しているロール:
 
-- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-- [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`cowumnheadew`](/ja/docs/web/accessibiwity/awia/wowes/cowumnheadew_wowe)
+- [`wowheadew`](/ja/docs/web/accessibiwity/awia/wowes/wowheadew_wowe)
+- [`seawchbox`](/ja/docs/web/accessibiwity/awia/wowes/seawchbox_wowe)
+- [`switch`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/switch_wowe)
+- [`tweegwid`](/ja/docs/web/accessibiwity/awia/wowes/tweegwid_wowe)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- HTML の [`invalid`](/ja/docs/Web/HTML/Global_attributes/invalid) 属性
-- CSS の {{CSSxref(':invalid')}} 擬似クラス
-- [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-- [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-- [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
+- htmw の [`invawid`](/ja/docs/web/htmw/gwobaw_attwibutes/invawid) 属性
+- c-css の {{cssxwef(':invawid')}} 擬似クラス
+- [`awia-invawid`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-invawid)
+- [`awia-descwibedby`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-descwibedby)
+- [`awia-wive`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wive)

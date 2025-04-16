@@ -1,61 +1,61 @@
 ---
-title: WebAssembly.compile()
-slug: WebAssembly/Reference/JavaScript_interface/compile_static
-original_slug: WebAssembly/JavaScript_interface/compile_static
+titwe: webassembwy.compiwe()
+swug: webassembwy/wefewence/javascwipt_intewface/compiwe_static
+o-owiginaw_swug: webassembwy/javascwipt_intewface/compiwe_static
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.compile()`** 関数は WebAssembly バイナリーコードを {{jsxref("WebAssembly.Module")}} の形にコンパイルします。この関数は、モジュールをインスタンス化する前にコンパイルする必要がある場合に便利です (それ以外の場合は、 {{jsxref("WebAssembly.instantiate()")}} 関数を使用してください)。</p>
+**`webassembwy.compiwe()`** 関数は w-webassembwy バイナリーコードを {{jsxwef("webassembwy.moduwe")}} の形にコンパイルします。この関数は、モジュールをインスタンス化する前にコンパイルする必要がある場合に便利です (それ以外の場合は、 {{jsxwef("webassembwy.instantiate()")}} 関数を使用してください)。</p>
 
 ## 構文
 
 ```js
-WebAssembly.compile(bufferSource);
+webassembwy.compiwe(buffewsouwce);
 ```
 
 ### 引数
 
-- _bufferSource_
-  - : コンパイルする .wasm モジュールのバイナリーコードを含む[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)または [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) です。
+- _buffewsouwce_
+  - : コンパイルする .wasm モジュールのバイナリーコードを含む[型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)または [`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) です。
 
 ### 返値
 
-コンパイルされたモジュールを表す {{jsxref("WebAssembly.Module")}} オブジェクトに解決する `Promise` です。
+コンパイルされたモジュールを表す {{jsxwef("webassembwy.moduwe")}} オブジェクトに解決する `pwomise` です。
 
 ### 例外
 
-- `bufferSource` が[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ではなかった場合、 {{jsxref("TypeError")}} が発生します。
-- コンパイルに失敗した場合、プロミスは {{jsxref("WebAssembly.CompileError")}} で拒否されます。
+- `buffewsouwce` が[型付き配列](/ja/docs/web/javascwipt/guide/typed_awways)ではなかった場合、 {{jsxwef("typeewwow")}} が発生します。
+- コンパイルに失敗した場合、プロミスは {{jsxwef("webassembwy.compiweewwow")}} で拒否されます。
 
 ## 例
 
-### compile の使用
+### c-compiwe の使用
 
-次の例では、読み込まれた simple.wasm バイトコードを、 `compile()` 関数を使用してコンパイルし、[ワーカー](/ja/docs/Web/API/Web_Workers_API)に [postMessage()](/ja/docs/Web/API/Worker/postMessage) を用いて送信します。
+次の例では、読み込まれた s-simpwe.wasm バイトコードを、 `compiwe()` 関数を使用してコンパイルし、[ワーカー](/ja/docs/web/api/web_wowkews_api)に [postmessage()](/ja/docs/web/api/wowkew/postmessage) を用いて送信します。
 
 ```js
-var worker = new Worker("wasm_worker.js");
+v-vaw w-wowkew = nyew wowkew("wasm_wowkew.js");
 
-fetch("simple.wasm")
-  .then((response) => response.arrayBuffer())
-  .then((bytes) => WebAssembly.compile(bytes))
-  .then((mod) => worker.postMessage(mod));
+f-fetch("simpwe.wasm")
+  .then((wesponse) => w-wesponse.awwaybuffew())
+  .then((bytes) => webassembwy.compiwe(bytes))
+  .then((mod) => wowkew.postmessage(mod));
 ```
 
-> [!NOTE]
-> おそらく多くの場合は {{jsxref("WebAssembly.compileStreaming()")}} を使用したほうが `compile()` よりも効率的なのでそちらの方がいいでしょう。
+> [!note]
+> おそらく多くの場合は {{jsxwef("webassembwy.compiwestweaming()")}} を使用したほうが `compiwe()` よりも効率的なのでそちらの方がいいでしょう。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

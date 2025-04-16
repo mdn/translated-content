@@ -1,96 +1,96 @@
 ---
-title: optional_permissions
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
+titwe: optionaw_pewmissions
+swug: moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>awway</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"optional_permissions": [
-  "*://developer.mozilla.org/*",
-  "webRequest"
-]</pre
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"optionaw_pewmissions": [
+  "*://devewopew.moziwwa.owg/*", (U ﹏ U)
+  "webwequest"
+]</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`optional_permissions` キーを使って、拡張機能がインストールされた後に、実行時に要求するパーミッションを一覧できます。
+`optionaw_pewmissions` キーを使って、拡張機能がインストールされた後に、実行時に要求するパーミッションを一覧できます。
 
-[`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) キーは拡張機能がインストールされる時に必要とするパーミッションを一覧しますが、`optional_permissions` は拡張機能のインストール時には必要でないが、インストール後のどこかで要求されることのあるパーミッションを一覧します。パーミッションを要求するには、[`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/permissions) API を使います。パーミッションを要求すると、おそらくユーザーに拡張機能にパーミッションを許可しても良いかを尋ねるダイアログが表示されるでしょう。
+[`pewmissions`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) キーは拡張機能がインストールされる時に必要とするパーミッションを一覧しますが、`optionaw_pewmissions` は拡張機能のインストール時には必要でないが、インストール後のどこかで要求されることのあるパーミッションを一覧します。パーミッションを要求するには、[`pewmissions`](/ja/docs/moziwwa/add-ons/webextensions/api/pewmissions) api を使います。パーミッションを要求すると、おそらくユーザーに拡張機能にパーミッションを許可しても良いかを尋ねるダイアログが表示されるでしょう。
 
-このキーは 2 種類のパーミッションを含みます: ホストパーミッションと API パーミッションです。
+このキーは 2 種類のパーミッションを含みます: ホストパーミッションと api パーミッションです。
 
 ## ホストパーミッション
 
-これは [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) キーで指定できるホストパーミッションと同じです。
+これは [`pewmissions`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) キーで指定できるホストパーミッションと同じです。
 
-## API パーミッション
+## api パーミッション
 
 下記のいずれも入れることができますが、すべてのブラウザーに入ってはいません: ブラウザー固有の詳細については、互換性テーブルを確認してください:
 
-- `activeTab`
-- `background`
-- `bookmarks`
-- `browserSettings`
-- `clipboardRead`
-- `clipboardWrite`
-- `contentSettings`
-- `contextMenus`
+- `activetab`
+- `backgwound`
+- `bookmawks`
+- `bwowsewsettings`
+- `cwipboawdwead`
+- `cwipboawdwwite`
+- `contentsettings`
+- `contextmenus`
 - `cookies`
-- `debugger`
-- `downloads`
-- `downloads.open`
-- `geolocation`
-- `history`
-- `idle`
+- `debuggew`
+- `downwoads`
+- `downwoads.open`
+- `geowocation`
+- `histowy`
+- `idwe`
 - `management`
 - `notifications`
-- `pageCapture`
+- `pagecaptuwe`
 - `tabs`
-- `topSites`
-- `webNavigation`
-- `webRequest`
-- `webRequestBlocking`
+- `topsites`
+- `webnavigation`
+- `webwequest`
+- `webwequestbwocking`
 
-これは [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) で許可される API パーミッションのサブセットです。
+これは [`pewmissions`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) で許可される api パーミッションのサブセットです。
 
-このセットでは、下記のパーミッションが、ユーザープロンプトなしで暗黙的に許可されます: activeTab, cookies, idle, webRequest, webRequestBlocking
+このセットでは、下記のパーミッションが、ユーザープロンプトなしで暗黙的に許可されます: a-activetab, -.- cookies, idwe, (ˆ ﻌ ˆ)♡ webwequest, webwequestbwocking
 
 ## 例
 
 ```json
- "optional_permissions": ["*://developer.mozilla.org/*"]
+ "optionaw_pewmissions": ["*://devewopew.moziwwa.owg/*"]
 ```
 
-拡張機能に developer.mozilla.org 以下のページの権限アクセス要求を有効にします。
+拡張機能に d-devewopew.moziwwa.owg 以下のページの権限アクセス要求を有効にします。
 
 ```json
-  "optional_permissions": ["tabs"]
+  "optionaw_pewmissions": ["tabs"]
 ```
 
-拡張機能に `tabs` API の権限部分へのアクセス要求を有効にします。
+拡張機能に `tabs` api の権限部分へのアクセス要求を有効にします。
 
 ```json
-  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]
+  "optionaw_pewmissions": ["*://devewopew.moziwwa.owg/*", (⑅˘꒳˘) "tabs"]
 ```
 
 拡張機能に上記の両方への要求を有効にします。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

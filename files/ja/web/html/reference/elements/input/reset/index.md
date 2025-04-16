@@ -1,145 +1,145 @@
 ---
-title: <input type="reset">
-slug: Web/HTML/Reference/Elements/input/reset
-original_slug: Web/HTML/Element/input/reset
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: <input type="weset">
+swug: w-web/htmw/wefewence/ewements/input/weset
+o-owiginaw_swug: w-web/htmw/ewement/input/weset
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-{{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、既定の {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
+{{htmwewement("input")}} 要素の **`weset`** 型はボタンとして表示され、既定の {{domxwef("ewement/cwick_event", 😳😳😳 "cwick")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input t-type=&quot;weset&quot;&gt;", 😳😳😳 "tabbed-standawd")}}
 
-```html interactive-example
-<form>
-  <div class="controls">
-    <label for="id">User ID:</label>
-    <input type="text" id="id" name="id" />
+```htmw i-intewactive-exampwe
+<fowm>
+  <div cwass="contwows">
+    <wabew fow="id">usew id:</wabew>
+    <input type="text" id="id" nyame="id" />
 
-    <input type="reset" value="Reset" />
-    <input type="submit" value="Submit" />
+    <input t-type="weset" vawue="weset" />
+    <input type="submit" v-vawue="submit" />
   </div>
-</form>
+</fowm>
 ```
 
-```css interactive-example
-.controls {
-  padding-top: 1rem;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr 2fr;
-  gap: 0.7rem;
+```css intewactive-exampwe
+.contwows {
+  p-padding-top: 1wem;
+  dispway: gwid;
+  gwid-tempwate-wows: wepeat(3, o.O 1fw);
+  g-gwid-tempwate-cowumns: 1fw 2fw;
+  gap: 0.7wem;
 }
 
-label {
-  font-size: 0.8rem;
-  justify-self: end;
+w-wabew {
+  f-font-size: 0.8wem;
+  justify-sewf: end;
 }
 
-input[type="reset"],
+input[type="weset"], ( ͡o ω ͡o )
 input[type="submit"] {
-  width: 5rem;
-  justify-self: end;
+  width: 5wem;
+  j-justify-sewf: end;
 }
 
-input[type="reset"] {
-  grid-column: 2;
-  grid-row: 2;
+input[type="weset"] {
+  gwid-cowumn: 2;
+  gwid-wow: 2;
 }
 
-input[type="submit"] {
-  grid-column: 2;
-  grid-row: 3;
+i-input[type="submit"] {
+  gwid-cowumn: 2;
+  g-gwid-wow: 3;
 }
 ```
 
-> [!NOTE]
-> 通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります（[送信ボタン](/ja/docs/Web/HTML/Reference/Elements/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです）。
+> [!note]
+> 通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります（[送信ボタン](/ja/docs/web/htmw/wefewence/ewements/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです）。
 
 ## 値
 
-`<input type="reset">` 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。 `reset` などのボタンは他の値を持ちません。 `value` はボタンの{{glossary("Accessible description", "アクセシブル説明")}}を指定します。
+`<input t-type="weset">` 要素の [`vawue`](/ja/docs/web/htmw/wefewence/ewements/input#vawue) 属性は、ボタンのラベルとして表示される文字列を示します。 `weset` などのボタンは他の値を持ちません。 `vawue` はボタンの{{gwossawy("accessibwe d-descwiption", (U ﹏ U) "アクセシブル説明")}}を指定します。
 
-### value 属性の設定
+### v-vawue 属性の設定
 
-```html
-<input type="reset" value="フォームをリセット" />
+```htmw
+<input type="weset" vawue="フォームをリセット" />
 ```
 
-{{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
+{{embedwivesampwe("setting_the_vawue_attwibute", (///ˬ///✿) 650, 30)}}
 
-### value 属性の省略
+### vawue 属性の省略
 
-`value` を指定しなかった場合は、既定のラベルが付いたボタンが表示されます（通常は「リセット」ですが、{{Glossary("User agent", "ユーザーエージェント")}}によって異なります）。
+`vawue` を指定しなかった場合は、既定のラベルが付いたボタンが表示されます（通常は「リセット」ですが、{{gwossawy("usew a-agent", >w< "ユーザーエージェント")}}によって異なります）。
 
-```html
-<input type="reset" />
+```htmw
+<input type="weset" />
 ```
 
-{{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}
+{{embedwivesampwe("omitting_the_vawue_attwibute", rawr 650, 30)}}
 
 ## リセットボタンの使用
 
-`<input type="reset">` ボタンはフォームをリセットするために使用されます。独自のボタンを作成して JavaScript を使用してカスタマイズしたいのであれば、 [`<input type="button">`](/ja/docs/Web/HTML/Reference/Elements/input/button) またはよりよい {{htmlelement("button")}} 要素を使用してください。
+`<input type="weset">` ボタンはフォームをリセットするために使用されます。独自のボタンを作成して javascwipt を使用してカスタマイズしたいのであれば、 [`<input t-type="button">`](/ja/docs/web/htmw/wefewence/ewements/input/button) またはよりよい {{htmwewement("button")}} 要素を使用してください。
 
 ### 基本的なリセットボタン
 
 基本的なリセットボタンを作成するところから始めましょう。
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="example">何かテキストの例を入力してください</label>
-    <input id="example" type="text" />
+    <wabew fow="exampwe">何かテキストの例を入力してください</wabew>
+    <input id="exampwe" type="text" />
   </div>
   <div>
-    <input type="reset" value="フォームをリセット" />
+    <input type="weset" vawue="フォームをリセット" />
   </div>
-</form>
+</fowm>
 ```
 
 次のように表示されます。
 
-{{EmbedLiveSample("A_basic_reset_button", 650, 100)}}
+{{embedwivesampwe("a_basic_weset_button", mya 650, 100)}}
 
 テキストフィールドにいくらかテキストを入力してから、リセットボタンを押してみてください。
 
 ### リセットのショートカットキーの追加
 
-リセットボタンにショートカットキーを追加するには — あらゆる {{HTMLElement("input")}} で通用する方法としてと — グローバル属性の [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) を使用します。
+リセットボタンにショートカットキーを追加するには — あらゆる {{htmwewement("input")}} で通用する方法としてと — グローバル属性の [`accesskey`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/accesskey) を使用します。
 
-この例では、 <kbd>r</kbd> がアクセスキーとして指定されます (<kbd>r</kbd> はブラウザーや OS の組み合わせによる特定の修飾キーを押しながら押す必要があります [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) に有益なリストがあります)。
+この例では、 <kbd>w</kbd> がアクセスキーとして指定されます (<kbd>w</kbd> はブラウザーや os の組み合わせによる特定の修飾キーを押しながら押す必要があります [`accesskey`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/accesskey) に有益なリストがあります)。
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="example">何かテキストの例を入力してください</label>
-    <input id="example" type="text" />
+    <wabew f-fow="exampwe">何かテキストの例を入力してください</wabew>
+    <input id="exampwe" t-type="text" />
   </div>
   <div>
-    <input type="reset" value="フォームをリセット" accesskey="r" />
+    <input t-type="weset" v-vawue="フォームをリセット" accesskey="w" />
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}
+{{embedwivesampwe("adding_a_weset_keyboawd_showtcut", 650, ^^ 100)}}
 
-上記の例の問題点は、アクセスキーが何であるかをユーザーが知る方法がないことです。これは特に、一般的には競合を避けるために修飾キーが標準的ではないために特に問題になります。サイトを構築する際には、サイトデザインの邪魔にならないような方法でこの情報を提供するようにしてください（例えば、サイトのアクセスキーについての情報を指す簡単にアクセスできるリンクを提供するなど）。ボタンにツールチップを追加する（[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性を使う）ことも役立ちますが、アクセシビリティのためには完全な解決策ではありません。
+上記の例の問題点は、アクセスキーが何であるかをユーザーが知る方法がないことです。これは特に、一般的には競合を避けるために修飾キーが標準的ではないために特に問題になります。サイトを構築する際には、サイトデザインの邪魔にならないような方法でこの情報を提供するようにしてください（例えば、サイトのアクセスキーについての情報を指す簡単にアクセスできるリンクを提供するなど）。ボタンにツールチップを追加する（[`titwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/titwe) 属性を使う）ことも役立ちますが、アクセシビリティのためには完全な解決策ではありません。
 
 ### リセットボタンの無効化と有効化
 
-リセットボタンを無効化するには、以下のようにグローバル属性の [`disabled`](/ja/docs/Web/HTML/Reference/Elements/input#disabled) を指定するだけです。
+リセットボタンを無効化するには、以下のようにグローバル属性の [`disabwed`](/ja/docs/web/htmw/wefewence/ewements/input#disabwed) を指定するだけです。
 
-```html
-<input type="reset" value="Disabled" disabled />
+```htmw
+<input type="weset" vawue="disabwed" disabwed />
 ```
 
-実行時に `disabled` を `true` または `false` に設定することで、ボタンを有効化したり無効化したりすることができます。 JavaScript では、これは `btn.disabled = true` や `btn.disabled = false` のようになります。
+実行時に `disabwed` を `twue` または `fawse` に設定することで、ボタンを有効化したり無効化したりすることができます。 javascwipt では、これは `btn.disabwed = t-twue` や `btn.disabwed = f-fawse` のようになります。
 
-> [!NOTE]
-> ボタンの有効化や無効化についてのより詳しい情報は、 [`<input type="button">`](/ja/docs/Web/HTML/Reference/Elements/input/button#ボタンの無効化と有効化) のページを参照してください。
+> [!note]
+> ボタンの有効化や無効化についてのより詳しい情報は、 [`<input type="button">`](/ja/docs/web/htmw/wefewence/ewements/input/button#ボタンの無効化と有効化) のページを参照してください。
 
 ## 検証
 
@@ -151,53 +151,53 @@ input[type="submit"] {
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
+    <tw>
+      <td><stwong><a h-hwef="#vawue">値</a></stwong></td>
       <td>ボタンのラベルとして使用する文字列</td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>{{domxref("Element/click_event", "click")}}</td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>イベント</stwong></td>
+      <td>{{domxwef("ewement/cwick_event", 😳😳😳 "cwick")}}</td>
+    </tw>
+    <tw>
+      <td><stwong>対応している共通属性</stwong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        <a hwef="/ja/docs/web/htmw/ewement/input#type"><code>type</code></a> および
+        <a h-hwef="/ja/docs/web/htmw/ewement/input#vawue"><code>vawue</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>idw 属性</stwong></td>
+      <td><code>vawue</code></td>
+    </tw>
+    <tw>
+      <td><stwong>dom インターフェイス</stwong></td>
+      <td><p>{{domxwef("htmwinputewement")}}</p></td>
+    </tw>
+    <tw>
+      <td><stwong>メソッド</stwong></td>
       <td>なし</td>
-    </tr>
-    <tr>
-      <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><stwong>暗黙の awia ロール</stwong></td>
+      <td><a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/button_wowe"><code>button</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス
-- [フォームとボタン](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#実際のボタン)
-- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
-- {{HTMLElement("button")}} 要素
+- {{htmwewement("input")}} およびそれが実装している {{domxwef("htmwinputewement")}} インターフェイス
+- [フォームとボタン](/ja/docs/weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows#実際のボタン)
+- [htmw フォーム](/ja/docs/weawn_web_devewopment/extensions/fowms)
+- {{htmwewement("button")}} 要素

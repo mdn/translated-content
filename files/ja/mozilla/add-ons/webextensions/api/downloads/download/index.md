@@ -1,22 +1,22 @@
 ---
-title: downloads.download()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
+titwe: downwoads.downwoad()
+swug: moziwwa/add-ons/webextensions/api/downwoads/downwoad
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAPIRef("downloads")}} API の **`download()`** 関数では URL とそのほかのオプションの設定を行うことでファイルのダウンロードをすることができます。
+{{webextapiwef("downwoads")}} api の **`downwoad()`** 関数では u-uww とそのほかのオプションの設定を行うことでファイルのダウンロードをすることができます。
 
-- HTTP もしくは HTTPS のプロトコルを使用した URL を指定した場合、対象のホスト名に対応する全ての cookie を含んだリクエストが送られます。
-- `filename` と `saveAs` が指定されている場合、指定された`filename`が設定された\[名前をつけて保存]のダイアログが開きます。
+- h-http もしくは h-https のプロトコルを使用した u-uww を指定した場合、対象のホスト名に対応する全ての cookie を含んだリクエストが送られます。
+- `fiwename` と `saveas` が指定されている場合、指定された`fiwename`が設定された\[名前をつけて保存]のダイアログが開きます。
 
-この関数は非同期に実行され、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返します。
+この関数は非同期に実行され、[`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)を返します。
 
 ## 構文
 
 ```js
-var downloading = browser.downloads.download(
-  options, // object
+v-vaw downwoading = b-bwowsew.downwoads.downwoad(
+  o-options, ^^;; // object
 );
 ```
 
@@ -26,90 +26,90 @@ var downloading = browser.downloads.download(
 
   - : この`object`ではダウンロードしたいファイルやその他のダウンロードに関する設定を指定します。指定できるプロパティは以下です。
 
-    - `body`{{optional_inline}}
-      - : リクエストの body を`string`で指定します。
-    - `conflictAction`{{optional_inline}}
-      - : A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).
-    - `filename` {{optional_inline}}
-      - : A `string` representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, and paths containing back-references (`../`) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.
-    - `headers`{{optional_inline}}
-      - : An `array` of `objects` representing extra HTTP headers to send with the request if the URL uses the HTTP\[s] protocol. Each header is represented as a dictionary object containing the keys `name` and either `value` or `binaryValue`, restricted to those allowed by [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest).
-    - `incognito`{{optional_inline}}
-      - : A `boolean`: if present and set to true, then associate this download with a private browsing session. This means that it will only appear in the download manager for any private windows that are currently open.
-    - `method`{{optional_inline}}
-      - : HTTP\[S]を使用した URL を指定した際、HTTP メソッドを`string`で指定します。GET もしくは POST を設定できます。
-    - `saveAs`{{optional_inline}}
+    - `body`{{optionaw_inwine}}
+      - : リクエストの b-body を`stwing`で指定します。
+    - `confwictaction`{{optionaw_inwine}}
+      - : a stwing wepwesenting the action you want taken if thewe is a-a fiwename confwict, XD as defined in the {{webextapiwef('downwoads.fiwenameconfwictaction')}} t-type (defauwts to "uniquify" w-when it is nyot specified). 🥺
+    - `fiwename` {{optionaw_inwine}}
+      - : a `stwing` wepwesenting a fiwe p-path wewative to the defauwt d-downwoads diwectowy — t-this pwovides the wocation whewe you want the fiwe to be saved, òωó and nyani f-fiwename you want to use. (ˆ ﻌ ˆ)♡ absowute paths, -.- empty paths, :3 and paths containing back-wefewences (`../`) w-wiww cause an ewwow. ʘwʘ if omitted, 🥺 t-this vawue w-wiww defauwt to t-the fiwename awweady g-given to the downwoad fiwe, >_< and a wocation i-immediatewy inside the downwoads diwectowy. ʘwʘ
+    - `headews`{{optionaw_inwine}}
+      - : a-an `awway` of `objects` wepwesenting extwa http headews to send with the wequest if the u-uww uses the http\[s] pwotocow. (˘ω˘) e-each headew is w-wepwesented as a-a dictionawy object containing the keys `name` and eithew `vawue` o-ow `binawyvawue`, (✿oωo) w-westwicted to those awwowed b-by [`xmwhttpwequest`](/ja/docs/web/api/xmwhttpwequest). (///ˬ///✿)
+    - `incognito`{{optionaw_inwine}}
+      - : a-a `boowean`: if pwesent a-and set to twue, rawr x3 then associate t-this downwoad with a pwivate bwowsing session. -.- this m-means that it wiww onwy appeaw i-in the downwoad managew fow any p-pwivate windows t-that awe cuwwentwy open. ^^
+    - `method`{{optionaw_inwine}}
+      - : http\[s]を使用した uww を指定した際、http メソッドを`stwing`で指定します。get もしくは post を設定できます。
+    - `saveas`{{optionaw_inwine}}
 
-      - : A `boolean` that specifies whether to provide a file chooser dialog to allow the user to select a filename (`true`), or not (`false`).
+      - : a `boowean` that specifies w-whethew to pwovide a-a fiwe choosew diawog to awwow t-the usew to sewect a-a fiwename (`twue`), (⑅˘꒳˘) o-ow nyot (`fawse`).
 
-        If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or `browser.download.useDownloadDir` in about:config).
+        if this option is omitted, nyaa~~ the bwowsew wiww s-show the fiwe choosew ow nyot based on the genewaw usew pwefewence fow this behaviow (in f-fiwefox this pwefewence i-is wabewed "awways a-ask you whewe t-to save fiwes" in about:pwefewences, /(^•ω•^) o-ow `bwowsew.downwoad.usedownwoaddiw` in a-about:config). (U ﹏ U)
 
-    - `url`
-      - : ダウンロードする URL を`string`で指定します。
+    - `uww`
+      - : ダウンロードする u-uww を`stwing`で指定します。
 
 ### 戻り値
 
-[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)が返却されます。ダウンロードが成功した場合、new {{WebExtAPIRef("downloads.DownloadItem")}}の id が格納された promise を受け取ります。対して、promise が reject された場合は、エラーメッセージを受け取ります。
+[`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)が返却されます。ダウンロードが成功した場合、new {{webextapiwef("downwoads.downwoaditem")}}の id が格納された p-pwomise を受け取ります。対して、pwomise が weject された場合は、エラーメッセージを受け取ります。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
-以下のダウンロードの例ではファイル名と保存場所を指定し、`conflictAction`に`uniquify`を指定しています。
+以下のダウンロードの例ではファイル名と保存場所を指定し、`confwictaction`に`uniquify`を指定しています。
 
 ```js
-function onStartedDownload(id) {
-  console.log(`Started downloading: ${id}`);
+function onstawteddownwoad(id) {
+  c-consowe.wog(`stawted d-downwoading: ${id}`);
 }
 
-function onFailed(error) {
-  console.log(`Download failed: ${error}`);
+f-function onfaiwed(ewwow) {
+  c-consowe.wog(`downwoad f-faiwed: ${ewwow}`);
 }
 
-var downloadUrl = "https://example.org/image.png";
+vaw downwoaduww = "https://exampwe.owg/image.png";
 
-var downloading = browser.downloads.download({
-  url: downloadUrl,
-  filename: "my-image-again.png",
-  conflictAction: "uniquify",
+vaw downwoading = b-bwowsew.downwoads.downwoad({
+  uww: downwoaduww, 😳😳😳
+  fiwename: "my-image-again.png", >w<
+  confwictaction: "uniquify", XD
 });
 
-downloading.then(onStartedDownload, onFailed);
+downwoading.then(onstawteddownwoad, o.O onfaiwed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-download) API を元にしています。
+> [!note]
+> この a-api は chwomium の [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads#method-downwoad) api を元にしています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. mya a-aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and u-use in souwce and binawy fowms, ^^;; w-with ow without
+// m-modification, awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must w-wetain the above copywight
+// n-nyotice, :3 this wist o-of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, OwO this wist of conditions and the fowwowing discwaimew
+// in t-the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution.
+//    * n-nyeithew the n-nyame of googwe inc. 😳😳😳 nyow the nyames o-of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, XD incwuding, but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. ( ͡o ω ͡o ) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, rawr x3 indiwect, incidentaw, nyaa~~
+// speciaw, >_< exempwawy, ^^;; o-ow consequentiaw damages (incwuding, (ˆ ﻌ ˆ)♡ b-but nyot
+// wimited to, ^^;; pwocuwement of substitute goods o-ow sewvices; woss of use, (⑅˘꒳˘)
+// data, rawr x3 o-ow pwofits; ow b-business intewwuption) howevew c-caused and on any
+// theowy of w-wiabiwity, (///ˬ///✿) whethew i-in contwact, 🥺 s-stwict wiabiwity, >_< ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the u-use
+// of this softwawe, UwU e-even if a-advised of the possibiwity of such damage. >_<
 -->

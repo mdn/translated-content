@@ -1,52 +1,52 @@
 ---
-title: WebAssembly.Instance.prototype.exports
-slug: WebAssembly/Reference/JavaScript_interface/Instance/exports
-original_slug: WebAssembly/JavaScript_interface/Instance/exports
+titwe: webassembwy.instance.pwototype.expowts
+swug: webassembwy/wefewence/javascwipt_intewface/instance/expowts
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/instance/expowts
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`exports`** は {{jsxref("WebAssembly.Instance")}} オブジェクトプロトタイプの読み取り専用プロパティで、 WebAssembly モジュールインスタンスからエクスポートされたすべての関数をメンバ－として持つオブジェクトを返します。これらは、 JavaScript からアクセスして使用することができます。
+**`expowts`** は {{jsxwef("webassembwy.instance")}} オブジェクトプロトタイプの読み取り専用プロパティで、 w-webassembwy モジュールインスタンスからエクスポートされたすべての関数をメンバ－として持つオブジェクトを返します。これらは、 j-javascwipt からアクセスして使用することができます。
 
 ```js
-instance.exports;
+i-instance.expowts;
 ```
 
 ## 例
 
-### exports の使用
+### e-expowts の使用
 
-fetch を使用して WebAssembly バイトコードを読み取った後、 {{jsxref("WebAssembly.instantiateStreaming()")}} 関数を使用してモジュールをコンパイルし、インスタンス化し、 JavaScript 関数をそのプロセスの WebAssembly モジュールにインポートします。その後、 `Instance` からエクスポートされた[エクスポート済み WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)を呼び出します。
+f-fetch を使用して w-webassembwy バイトコードを読み取った後、 {{jsxwef("webassembwy.instantiatestweaming()")}} 関数を使用してモジュールをコンパイルし、インスタンス化し、 javascwipt 関数をそのプロセスの webassembwy モジュールにインポートします。その後、 `instance` からエクスポートされた[エクスポート済み webassembwy 関数](/ja/docs/webassembwy/guides/expowted_functions)を呼び出します。
 
 ```js
-var importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
+vaw impowtobject = {
+  i-impowts: {
+    impowted_func: function (awg) {
+      c-consowe.wog(awg);
+    }, (U ᵕ U❁)
   },
 };
 
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func(),
+webassembwy.instantiatestweaming(fetch("simpwe.wasm"), -.- i-impowtobject).then(
+  (obj) => obj.instance.expowts.expowted_func(), ^^;;
 );
 ```
 
-> [!NOTE]
-> この例は GitHub 上の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) ([実行例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) で見ることができます。</p>
+> [!note]
+> この例は github 上の [instantiate-stweaming.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/instantiate-stweaming.htmw) ([実行例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/instantiate-stweaming.htmw)) で見ることができます。</p>
 
 </div>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

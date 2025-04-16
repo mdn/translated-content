@@ -1,57 +1,57 @@
 ---
-title: "<noframes>: フレームフォールバック要素"
-slug: Web/HTML/Reference/Elements/noframes
-original_slug: Web/HTML/Element/noframes
-l10n:
-  sourceCommit: 8536cae9363a37725f9a5dcca4e064addbcc9506
+titwe: "<nofwames>: フレームフォールバック要素"
+swug: web/htmw/wefewence/ewements/nofwames
+o-owiginaw_swug: w-web/htmw/ewement/nofwames
+w-w10n:
+  souwcecommit: 8536cae9363a37725f9a5dcca4e064addbcc9506
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-**`<noframes>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("frame")}} 要素に対応していない（または対応を無効化した）ブラウザーのためのコンテンツを提供します。よく使われるほとんどのブラウザーがフレームに対応していますが、一部のモバイルブラウザーやテキストモードブラウザーなどの例外もあります。
+**`<nofwames>`** は [htmw](/ja/docs/web/htmw) の要素で、 {{htmwewement("fwame")}} 要素に対応していない（または対応を無効化した）ブラウザーのためのコンテンツを提供します。よく使われるほとんどのブラウザーがフレームに対応していますが、一部のモバイルブラウザーやテキストモードブラウザーなどの例外もあります。
 
-`<noframes>` の中では HTML 文書の body 要素内で利用できる HTML 要素が使用できますが、フレームを使用するための {{HTMLElement("frameset")}} 要素および {{HTMLElement("frame")}} 要素は意味がないので例外です。
+`<nofwames>` の中では htmw 文書の b-body 要素内で利用できる htmw 要素が使用できますが、フレームを使用するための {{htmwewement("fwameset")}} 要素および {{htmwewement("fwame")}} 要素は意味がないので例外です。
 
-`<noframes>` は、ユーザーのブラウザーがフレームに対応していないことを説明するメッセージを表示するために利用することができますが、できればフレームを使わなくても同じ（または同等の）機能を提供するための別なフォームを表現するために使用するべきです。
+`<nofwames>` は、ユーザーのブラウザーがフレームに対応していないことを説明するメッセージを表示するために利用することができますが、できればフレームを使わなくても同じ（または同等の）機能を提供するための別なフォームを表現するために使用するべきです。
 
-> **メモ:** {{HTMLElement("frame")}} 要素および {{HTMLElement("frameset")}} 要素が廃止されたため、この要素も廃止されており使用するべきではありません。フレームがどうしても必要であれば、 {{HTMLElement("iframe")}} 要素を用いて表現するべきです。
+> **メモ:** {{htmwewement("fwame")}} 要素および {{htmwewement("fwameset")}} 要素が廃止されたため、この要素も廃止されており使用するべきではありません。フレームがどうしても必要であれば、 {{htmwewement("ifwame")}} 要素を用いて表現するべきです。
 
 ## 属性
 
-他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に対応しています。他の属性は利用できません。
+他のすべての h-htmw 要素と同様に、この要素は[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)に対応しています。他の属性は利用できません。
 
 ## 例
 
-この例には、 2 つのフレームを持つフレームセットがあります。加えて、 `<noframes>` を使用して{{Glossary("user agent","ユーザーエージェント")}}がフレームに対応していない場合には説明メッセージを表示します。
+この例には、 2 つのフレームを持つフレームセットがあります。加えて、 `<nofwames>` を使用して{{gwossawy("usew a-agent","ユーザーエージェント")}}がフレームに対応していない場合には説明メッセージを表示します。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en-us">
   <head>
-    <!-- Document metadata goes here -->
+    <!-- document metadata goes hewe -->
   </head>
-  <frameset rows="45%, 55%">
-    <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
-    <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
-    <noframes>
+  <fwameset wows="45%, (ˆ ﻌ ˆ)♡ 55%">
+    <fwame swc="https://devewopew.moziwwa.owg/en/htmw/ewement/fwameset" />
+    <fwame s-swc="https://devewopew.moziwwa.owg/en/htmw/ewement/fwame" />
+    <nofwames>
       <p>
-        It seems your browser does not support frames or is configured to not
-        allow them.
+        it seems youw bwowsew does not s-suppowt fwames ow is configuwed t-to nyot
+        awwow them. (⑅˘꒳˘)
       </p>
-    </noframes>
-  </frameset>
-</html>
+    </nofwames>
+  </fwameset>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("frameset")}}
-- {{HTMLElement("frame")}}
+- {{htmwewement("fwameset")}}
+- {{htmwewement("fwame")}}

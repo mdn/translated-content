@@ -1,71 +1,71 @@
 ---
-title: Firefox 23 for developers
-slug: Mozilla/Firefox/Releases/23
+titwe: fiwefox 23 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/23
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリリースされました。このページでは、開発者に影響する Firefox 23 の変更点をまとめています。
+gecko 23 を搭載した f-fiwefox 23 は米国時間 2013 年 8 月 6 日にリリースされました。このページでは、開発者に影響する f-fiwefox 23 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### セキュリティ
 
-- Mixed content のブロック。Firefox はセキュアな (https) ページでセキュアでない (http) リソースを読み込みません ([Firefox バグ 834836](https://bugzil.la/834836))。
-- [CSP](/ja/docs/Web/HTTP/Guides/CSP) 1.0 ポリシーの標準的な構文を実装して、デフォルトで施行します。
+- m-mixed content のブロック。fiwefox はセキュアな (https) ページでセキュアでない (http) リソースを読み込みません ([fiwefox バグ 834836](https://bugziw.wa/834836))。
+- [csp](/ja/docs/web/http/guides/csp) 1.0 ポリシーの標準的な構文を実装して、デフォルトで施行します。
 
 ### 開発者ツール
 
 - 開発者ツールにネットワークパネルを追加しました。これは、ウェブコンソールの "ネットワーク" ビューより詳細なツールです。
 - ウェブコンソールを "コンソール" に改名して、セキュリティのエラーや警告をフィルタリングする設定を追加しました。
-- ツールボックスの新たな設定項目によって機能の無効化、Light/Dark テーマの切り替え、Chrome/Remote デバッグの有効化が可能になりました。
+- ツールボックスの新たな設定項目によって機能の無効化、wight/dawk テーマの切り替え、chwome/wemote デバッグの有効化が可能になりました。
 
-### HTML
+### h-htmw
 
-- `<blink>` 要素のサポートを完全に廃止しました。`<blink>` タグは {{domxref("HTMLUnknownElement")}} インターフェイスを実装します ([Firefox バグ 857820](https://bugzil.la/857820))。
-- {{HTMLElement("input")}} 要素の `range` ステート (`<input type="range">`) を、デフォルトで有効にしました ([Firefox バグ 841950](https://bugzil.la/841950))。
+- `<bwink>` 要素のサポートを完全に廃止しました。`<bwink>` タグは {{domxwef("htmwunknownewement")}} インターフェイスを実装します ([fiwefox バグ 857820](https://bugziw.wa/857820))。
+- {{htmwewement("input")}} 要素の `wange` ステート (`<input t-type="wange">`) を、デフォルトで有効にしました ([fiwefox バグ 841950](https://bugziw.wa/841950))。
 
-### JavaScript
+### j-javascwipt
 
-- [`Object.defineProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) メソッドが、[`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) オブジェクトの `length` プロパティの再定義に使用できるようになりました。
-- ウィンドウの移動やコンテキストメニューの置き換えを含む、JavaScript を無効化する選択項目を削除しました。about:config で設定項目 "javascript.enabled" をダブルクリックすることで、JavaScript を無効化できます。
+- [`object.definepwopewty`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty) メソッドが、[`awway`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway) オブジェクトの `wength` プロパティの再定義に使用できるようになりました。
+- ウィンドウの移動やコンテキストメニューの置き換えを含む、javascwipt を無効化する選択項目を削除しました。about:config で設定項目 "javascwipt.enabwed" をダブルクリックすることで、javascwipt を無効化できます。
 
-### DOM
+### d-dom
 
-- D3E の [`KeyboardEvent.key`](/ja/docs/Web/API/KeyboardEvent#key_names_and_char_values) を、文字入力可能ではないキーについてのみサポートしました ([Firefox バグ 842927](https://bugzil.la/842927))。
-- {{domxref("DOMImplementation.createHTMLDocument")}} の引数 `title` は、更新された DOM 仕様書のとおり省略可能になりました。
-- サイドバーパネルを追加する機能 (`window.sidebar.addPanel`) を削除しました ([Firefox バグ 691647](https://bugzil.la/691647))。
-- 接頭辞なしの {{domxref("window.requestAnimationFrame")}}、{{domxref("window.cancelAnimationFrame")}} メソッドが追加されました ([Firefox バグ 704063](https://bugzil.la/704063))。
-- 接頭辞のない版で {{domxref("Window.requestAnimationFrame")}} のコールバックは、詳細度が低い {{domxref("DOMTimeStamp")}} に代わり {{domxref("DOMHighResTimeStamp")}} を引数として受け取ります ([Firefox バグ 753453](https://bugzil.la/753453))。
-- {{domxref("window.alert")}} および {{domxref("window.confirm")}} のテキスト引数が省略可能になりました ([Firefox バグ 861605](https://bugzil.la/861605))。
-- 仕様書から削除された {{domxref("HTMLMediaElement.initialTime")}} プロパティのサポートを廃止しました ([Firefox バグ 742537](https://bugzil.la/742537))。
-- {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} コンストラクターを追加しました ([Firefox バグ 848293](https://bugzil.la/848293))。
-- {{domxref("AnimationEvent.pseudoElement")}} プロパティを実装しました ([Firefox バグ 848293](https://bugzil.la/848293))。
-- {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} コンストラクターを追加しました ([Firefox バグ 848291](https://bugzil.la/848291))。
-- {{domxref("TransitionEvent.pseudoElement")}} プロパティを実装しました ([Firefox バグ 848291](https://bugzil.la/848291))。
-- 非標準の {{domxref("TransitionEvent.initTransitionEvent()")}} および {{domxref("AnimationEvent.initAnimationEvent()")}} を削除しました ([Firefox バグ 868751](https://bugzil.la/868751))。
+- d3e の [`keyboawdevent.key`](/ja/docs/web/api/keyboawdevent#key_names_and_chaw_vawues) を、文字入力可能ではないキーについてのみサポートしました ([fiwefox バグ 842927](https://bugziw.wa/842927))。
+- {{domxwef("domimpwementation.cweatehtmwdocument")}} の引数 `titwe` は、更新された dom 仕様書のとおり省略可能になりました。
+- サイドバーパネルを追加する機能 (`window.sidebaw.addpanew`) を削除しました ([fiwefox バグ 691647](https://bugziw.wa/691647))。
+- 接頭辞なしの {{domxwef("window.wequestanimationfwame")}}、{{domxwef("window.cancewanimationfwame")}} メソッドが追加されました ([fiwefox バグ 704063](https://bugziw.wa/704063))。
+- 接頭辞のない版で {{domxwef("window.wequestanimationfwame")}} のコールバックは、詳細度が低い {{domxwef("domtimestamp")}} に代わり {{domxwef("domhighwestimestamp")}} を引数として受け取ります ([fiwefox バグ 753453](https://bugziw.wa/753453))。
+- {{domxwef("window.awewt")}} および {{domxwef("window.confiwm")}} のテキスト引数が省略可能になりました ([fiwefox バグ 861605](https://bugziw.wa/861605))。
+- 仕様書から削除された {{domxwef("htmwmediaewement.initiawtime")}} プロパティのサポートを廃止しました ([fiwefox バグ 742537](https://bugziw.wa/742537))。
+- {{domxwef("animationevent.animationevent", (U ﹏ U) "animationevent()")}} コンストラクターを追加しました ([fiwefox バグ 848293](https://bugziw.wa/848293))。
+- {{domxwef("animationevent.pseudoewement")}} プロパティを実装しました ([fiwefox バグ 848293](https://bugziw.wa/848293))。
+- {{domxwef("twansitionevent.twansitionevent", -.- "twansitionevent()")}} コンストラクターを追加しました ([fiwefox バグ 848291](https://bugziw.wa/848291))。
+- {{domxwef("twansitionevent.pseudoewement")}} プロパティを実装しました ([fiwefox バグ 848291](https://bugziw.wa/848291))。
+- 非標準の {{domxwef("twansitionevent.inittwansitionevent()")}} および {{domxwef("animationevent.initanimationevent()")}} を削除しました ([fiwefox バグ 868751](https://bugziw.wa/868751))。
 
-### CSS
+### css
 
-- `text-decoration: blink;` の点滅効果を廃止しましたが、値そのものは現在も有効です ([Firefox バグ 857820](https://bugzil.la/857820))。
-- フロー内の {{cssxref("::after")}} 擬似要素や {{cssxref("::before")}} 擬似要素は、flex アイテムになりました ([Firefox バグ 867454](https://bugzil.la/867454))。
+- `text-decowation: bwink;` の点滅効果を廃止しましたが、値そのものは現在も有効です ([fiwefox バグ 857820](https://bugziw.wa/857820))。
+- フロー内の {{cssxwef("::aftew")}} 擬似要素や {{cssxwef("::befowe")}} 擬似要素は、fwex アイテムになりました ([fiwefox バグ 867454](https://bugziw.wa/867454))。
 
-### MathML
+### m-mathmw
 
-- {{MathMLElement("mspace")}} 要素でマイナスの幅を実装しました ([Firefox バグ 717546](https://bugzil.la/717546))。
-- {{MathMLElement("semantics")}} 要素は MathML3 仕様で述べられているとおりに、表示する子要素を決めるようになりました。
+- {{mathmwewement("mspace")}} 要素でマイナスの幅を実装しました ([fiwefox バグ 717546](https://bugziw.wa/717546))。
+- {{mathmwewement("semantics")}} 要素は mathmw3 仕様で述べられているとおりに、表示する子要素を決めるようになりました。
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+## アドオン開発者と moziwwa 開発者向けの変更点
 
-### Firefox 開発者ツール
+### f-fiwefox 開発者ツール
 
-chrome://browser/content/debugger.xul にオーバーレイするアドオンは、chrome://browser/content/devtools/debugger.xul. へのオーバーレイが必要になりました。互換性のため、chrome.manifest でこれら両方への参照を追加してもさしつかえありません。
+chwome://bwowsew/content/debuggew.xuw にオーバーレイするアドオンは、chwome://bwowsew/content/devtoows/debuggew.xuw. (ˆ ﻌ ˆ)♡ へのオーバーレイが必要になりました。互換性のため、chwome.manifest でこれら両方への参照を追加してもさしつかえありません。
 
 ## 関連情報
 
-- [Firefox 23 リリースノート](http://www.mozilla.jp/firefox/23.0/releasenotes/)
-- [Firefox 23 アドオン互換性情報](https://dev.mozilla.jp/2013/07/firefox-23-addon-compatibility/)
+- [fiwefox 23 リリースノート](http://www.moziwwa.jp/fiwefox/23.0/weweasenotes/)
+- [fiwefox 23 アドオン互換性情報](https://dev.moziwwa.jp/2013/07/fiwefox-23-addon-compatibiwity/)
 
 ### 過去のバージョン
 
-{{Firefox_for_developers('22')}}
+{{fiwefox_fow_devewopews('22')}}

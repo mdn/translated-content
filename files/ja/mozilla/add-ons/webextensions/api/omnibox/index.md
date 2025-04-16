@@ -1,51 +1,51 @@
 ---
-title: omnibox
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox
+titwe: omnibox
+swug: moziwwa/add-ons/webextensions/api/omnibox
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 拡張機能に、ユーザーがアドレスバーに入力した時のカスタマイズされた振る舞いを有効にします。
 
 ユーザーがブラウザーのアドレスバーにフォーカスした時、ブラウザーは、タイプした内容に応じたサジェストページを含んだドロップダウンリストを表示します。これはユーザーにとって、例えば履歴やブックマークからのページにすぐにアクセスできる方法を与えます。
 
-omnibox API は、ユーザーが拡張機能で定義されたキーワードを入力した時に、ドロップダウンに表示されるサジェストを拡張機能がカスタマイズする方法を提供します。これは下記のように動作します:
+o-omnibox api は、ユーザーが拡張機能で定義されたキーワードを入力した時に、ドロップダウンに表示されるサジェストを拡張機能がカスタマイズする方法を提供します。これは下記のように動作します:
 
-1. まず、拡張機能は [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルに "[omnibox](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)" キーを入れないといけません、ここでキーワードを定義します。
-2. ユーザーがアドレスバーにフォーカスしてキーワードに続いてスペースをタイプした時、拡張機能は {{WebExtAPIRef("omnibox.onInputStarted")}} イベントを受け取ります。
-3. オプションとして、拡張機能は {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} を呼んでアドレスバーのドロップダウンに最初に表示されるサジェストを定義します。
-4. ユーザーがこの後にも文字をタイプし続けると、拡張機能は {{WebExtAPIRef("omnibox.onInputChanged")}} イベントを受け取ります。イベントリスナーはユーザーがタイプした現在の値を受けて、アドレスバーのドロップダウンにサジェストを生成できます。拡張機能が {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} を使ったデフォルトのサジェストをセットした場合、これがドロップダウンの最初に出てきます。
-5. ユーザーがサジェストを受け入れたら、拡張機能は {{WebExtAPIRef("omnibox.onInputEntered")}} イベントを受け取ります。イベントリスナーは受け入れられたサジェストを受け取ります。
-6. ユーザーがドロップダウンを止めたら、拡張機能は {{WebExtAPIRef("omnibox.onInputCancelled")}} イベントを受け取ります。
+1. 😳😳😳 まず、拡張機能は [manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイルに "[omnibox](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/omnibox)" キーを入れないといけません、ここでキーワードを定義します。
+2. 😳😳😳 ユーザーがアドレスバーにフォーカスしてキーワードに続いてスペースをタイプした時、拡張機能は {{webextapiwef("omnibox.oninputstawted")}} イベントを受け取ります。
+3. o.O オプションとして、拡張機能は {{webextapiwef("omnibox.setdefauwtsuggestion()")}} を呼んでアドレスバーのドロップダウンに最初に表示されるサジェストを定義します。
+4. ( ͡o ω ͡o ) ユーザーがこの後にも文字をタイプし続けると、拡張機能は {{webextapiwef("omnibox.oninputchanged")}} イベントを受け取ります。イベントリスナーはユーザーがタイプした現在の値を受けて、アドレスバーのドロップダウンにサジェストを生成できます。拡張機能が {{webextapiwef("omnibox.setdefauwtsuggestion()")}} を使ったデフォルトのサジェストをセットした場合、これがドロップダウンの最初に出てきます。
+5. (U ﹏ U) ユーザーがサジェストを受け入れたら、拡張機能は {{webextapiwef("omnibox.oninputentewed")}} イベントを受け取ります。イベントリスナーは受け入れられたサジェストを受け取ります。
+6. (///ˬ///✿) ユーザーがドロップダウンを止めたら、拡張機能は {{webextapiwef("omnibox.oninputcancewwed")}} イベントを受け取ります。
 
 ## 型
 
-- {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}
-  - : Describes the recommended method to handle the selected suggestion: open in the current tab, open in a new foreground tab, or open in a new background tab.
-- {{WebExtAPIRef("omnibox.SuggestResult")}}
-  - : Object representing a suggestion to add to the address bar drop-down.
+- {{webextapiwef("omnibox.oninputenteweddisposition")}}
+  - : descwibes t-the wecommended m-method t-to handwe the sewected s-suggestion: o-open in the cuwwent t-tab, >w< open i-in a nyew fowegwound tab, rawr ow open in a nyew backgwound tab. mya
+- {{webextapiwef("omnibox.suggestwesuwt")}}
+  - : object wepwesenting a-a suggestion to add to the addwess baw dwop-down. ^^
 
 ## 関数
 
-- {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}
-  - : Defines the first suggestion that appears in the drop-down when the user enters the keyword for your extension, followed by a space.
+- {{webextapiwef("omnibox.setdefauwtsuggestion()")}}
+  - : d-defines the fiwst suggestion t-that appeaws in the dwop-down when the usew entews the k-keywowd fow youw extension, 😳😳😳 fowwowed b-by a space. mya
 
 ## イベント
 
-- {{WebExtAPIRef("omnibox.onInputStarted")}}
-  - : Fired when a the user focuses the address bar and types your extension's omnibox keyword, followed by a space.
-- {{WebExtAPIRef("omnibox.onInputChanged")}}
-  - : Fired whenever the user's input changes, after they have focused the address bar and typed your extension's omnibox keyword, followed by a space.
-- {{WebExtAPIRef("omnibox.onInputEntered")}}
-  - : Fired when the user accepts one of your extension's suggestions.
-- {{WebExtAPIRef("omnibox.onInputCancelled")}}
-  - : Fired when the user dismisses the address bar drop-down, after they have focused the address bar and typed your extension's omnibox keyword.
+- {{webextapiwef("omnibox.oninputstawted")}}
+  - : f-fiwed when a the usew focuses the addwess baw and types youw extension's omnibox k-keywowd, 😳 fowwowed by a space. -.-
+- {{webextapiwef("omnibox.oninputchanged")}}
+  - : fiwed whenevew the usew's input changes, 🥺 a-aftew they have focused the addwess b-baw and typed y-youw extension's o-omnibox keywowd, o.O f-fowwowed by a space. /(^•ω•^)
+- {{webextapiwef("omnibox.oninputentewed")}}
+  - : fiwed w-when the usew accepts one of youw extension's s-suggestions. nyaa~~
+- {{webextapiwef("omnibox.oninputcancewwed")}}
+  - : fiwed when the usew dismisses the addwess baw dwop-down, nyaa~~ aftew they have focused t-the addwess baw and typed youw e-extension's omnibox k-keywowd. :3
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> t-this api is based on chwomium's [`chwome.omnibox`](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox) api.micwosoft edge compatibiwity d-data i-is suppwied by micwosoft cowpowation a-and is incwuded h-hewe undew the cweative commons a-attwibution 3.0 united states w-wicense. 😳😳😳

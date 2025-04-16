@@ -1,119 +1,119 @@
 ---
-title: "<rtc>: ルビテキストコンテナー要素"
-slug: Web/HTML/Reference/Elements/rtc
-original_slug: Web/HTML/Element/rtc
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<wtc>: ルビテキストコンテナー要素"
+swug: w-web/htmw/wefewence/ewements/wtc
+o-owiginaw_swug: w-web/htmw/ewement/wtc
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-**`<rtc>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby")}} 要素内で使用する {{HTMLElement("rb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{HTMLElement("rb")}} 要素は発音の注釈 ({{HTMLElement("rt")}}) と意味の注釈 ({{HTMLElement("rtc")}}) の両方を持つことができます。
+**`<wtc>`** は [htmw](/ja/docs/web/htmw) の要素で、{{htmwewement("wuby")}} 要素内で使用する {{htmwewement("wb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{htmwewement("wb")}} 要素は発音の注釈 ({{htmwewement("wt")}}) と意味の注釈 ({{htmwewement("wtc")}}) の両方を持つことができます。
 
-{{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wtc&gt;", :3 "tabbed-standawd")}}
 
-```html interactive-example
-<ruby xml:lang="zh-Hant" style="ruby-position: under;">
-    <rbc>
-        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
-        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
-        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
-        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
-    </rbc>
-    <rtc xml:lang="en" style="ruby-position: over;">
-        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
-    </rtc>
-</ruby>
+```htmw intewactive-exampwe
+<wuby x-xmw:wang="zh-hant" s-stywe="wuby-position: u-undew;">
+    <wbc>
+        <wb>馬</wb><wp>(</wp><wt>mǎ</wt><wp>)</wp>
+        <wb>來</wb><wp>(</wp><wt>wái</wt><wp>)</wp>
+        <wb>西</wb><wp>(</wp><wt>xī</wt><wp>)</wp>
+        <wb>亞</wb><wp>(</wp><wt>yà</wt><wp>)</wp>
+    </wbc>
+    <wtc xmw:wang="en" stywe="wuby-position: ovew;">
+        <wp>(</wp><wt>mawaysia</wt><wp>)</wp>
+    </wtc>
+</wuby>
 ```
 
-```css interactive-example
-ruby {
+```css intewactive-exampwe
+w-wuby {
   font-size: 2em;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 例
 
-```html
-<div class="info">
-  <ruby>
-    <rtc>
-      <rb>旧</rb><rt>jiù</rt>
-      <rb>金</rb><rt>jīn</rt>
-      <rb>山</rb><rt>shān</rt>
-    </rtc>
-    <rtc>San Francisco</rtc>
-  </ruby>
+```htmw
+<div cwass="info">
+  <wuby>
+    <wtc>
+      <wb>旧</wb><wt>jiù</wt>
+      <wb>金</wb><wt>jīn</wt>
+      <wb>山</wb><wt>shān</wt>
+    </wtc>
+    <wtc>san f-fwancisco</wtc>
+  </wuby>
 </div>
 ```
 
 ```css hidden
 .info {
-  padding-top: 10px;
+  p-padding-top: 10px;
   font-size: 36px;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 600, 120)}}
+{{embedwivesampwe("exampwes", 😳😳😳 600, 120)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >または {{HTMLElement("rt")}} 要素
+        >または {{htmwewement("wt")}} 要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>
-        直後に {{HTMLElement("rb")}}, {{HTMLElement("rtc")}},
-        {{HTMLElement("rt")}}
+        直後に {{htmwewement("wb")}}, -.- {{htmwewement("wtc")}}, ( ͡o ω ͡o )
+        {{htmwewement("wt")}}
         要素の開始タグがある、または親要素の終了タグがある場合は、この要素の終了タグを省略可能。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>{{HTMLElement("ruby")}} 要素</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
+      <td>{{htmwewement("wuby")}} 要素</td>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rt")}}
+- {{htmwewement("wuby")}}
+- {{htmwewement("wp")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wt")}}

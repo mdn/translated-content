@@ -1,171 +1,171 @@
 ---
-title: "<body>: 文書本体要素"
-slug: Web/HTML/Reference/Elements/body
-original_slug: Web/HTML/Element/body
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<body>: 文書本体要素"
+swug: web/htmw/wefewence/ewements/body
+o-owiginaw_swug: w-web/htmw/ewement/body
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<body>`** は [HTML](/ja/docs/Web/HTML) の要素で、 HTML 文書のコンテンツを示す要素です。 `<body>` 要素は文書中に一つだけ配置できます。
+**`<body>`** は [htmw](/ja/docs/web/htmw) の要素で、 h-htmw 文書のコンテンツを示す要素です。 `<body>` 要素は文書中に一つだけ配置できます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
+        <a hwef="/ja/docs/web/htmw/ewement/heading_ewements#sectioning_woots"
           >区分化ルート</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>
-        開始タグは、内容の先頭が空白文字、コメント、 {{HTMLElement("script")}} 要素、 {{HTMLElement("style")}} 要素でない場合は省略可能です。終了タグは、 <code>&#x3C;body></code> 要素に内容または開始タグがあり、かつ、直後のノードがコメントでない場合は省略可能です。
+        開始タグは、内容の先頭が空白文字、コメント、 {{htmwewement("scwipt")}} 要素、 {{htmwewement("stywe")}} 要素でない場合は省略可能です。終了タグは、 <code>&#x3c;body></code> 要素に内容または開始タグがあり、かつ、直後のノードがコメントでない場合は省略可能です。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        {{HTMLElement("html")}} 要素の子要素でなければなりません。
+        {{htmwewement("htmw")}} 要素の子要素でなければなりません。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Generic_role"
-            >generic</a
+          ><a hwef="/ja/docs/web/accessibiwity/awia/wowes/genewic_wowe"
+            >genewic</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている a-awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
       <td>
-        {{domxref("HTMLBodyElement")}}
-        <ul>
-          <li>
-            <code>&#x3C;body></code> 要素は {{domxref("HTMLBodyElement")}} インターフェイスを提供します。
-          </li>
-          <li>
-            <code>&#x3C;body></code> 要素は {{domxref("document.body")}} プロパティからアクセス可能です。
-          </li>
-        </ul>
+        {{domxwef("htmwbodyewement")}}
+        <uw>
+          <wi>
+            <code>&#x3c;body></code> 要素は {{domxwef("htmwbodyewement")}} インターフェイスを提供します。
+          </wi>
+          <wi>
+            <code>&#x3c;body></code> 要素は {{domxwef("document.body")}} プロパティからアクセス可能です。
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `alink` {{deprecated_inline}}
-  - : ハイパーリンクの選択時の文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref("color")}} プロパティを {{cssxref(":active")}} 擬似クラスで使用してください。**
-- `background` {{deprecated_inline}}
-  - : 背景画像の URI です。**この属性を使用しないでください。代わりに CSS の {{cssxref("background")}} プロパティを使用してください。**
-- `bgcolor` {{deprecated_inline}}
-  - : 文書の背景色です。**この属性を使用しないでください。代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。**
-- `bottommargin` {{deprecated_inline}}
-  - : body の下マージンです。**この属性を使用しないでください。代わりに CSS の {{cssxref("margin-bottom")}} プロパティを使用してください。**
-- `leftmargin` {{deprecated_inline}}
-  - : body の左マージンです。**この属性を使用しないでください。代わりに CSS の {{cssxref("margin-left")}} プロパティを使用してください。**
-- `link` {{deprecated_inline}}
-  - : 未訪問のハイパーリンクの文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref("color")}} プロパティを {{cssxref(":link")}} 擬似クラスで使用してください。**
-- `onafterprint`
+- `awink` {{depwecated_inwine}}
+  - : ハイパーリンクの選択時の文字色です。**この属性を使用しないでください。代わりに c-css の {{cssxwef("cowow")}} プロパティを {{cssxwef(":active")}} 擬似クラスで使用してください。**
+- `backgwound` {{depwecated_inwine}}
+  - : 背景画像の uwi です。**この属性を使用しないでください。代わりに css の {{cssxwef("backgwound")}} プロパティを使用してください。**
+- `bgcowow` {{depwecated_inwine}}
+  - : 文書の背景色です。**この属性を使用しないでください。代わりに css の {{cssxwef("backgwound-cowow")}} プロパティを使用してください。**
+- `bottommawgin` {{depwecated_inwine}}
+  - : b-body の下マージンです。**この属性を使用しないでください。代わりに css の {{cssxwef("mawgin-bottom")}} プロパティを使用してください。**
+- `weftmawgin` {{depwecated_inwine}}
+  - : b-body の左マージンです。**この属性を使用しないでください。代わりに c-css の {{cssxwef("mawgin-weft")}} プロパティを使用してください。**
+- `wink` {{depwecated_inwine}}
+  - : 未訪問のハイパーリンクの文字色です。**この属性を使用しないでください。代わりに css の {{cssxwef("cowow")}} プロパティを {{cssxwef(":wink")}} 擬似クラスで使用してください。**
+- `onaftewpwint`
   - : ユーザーによる印刷データ作成直後に呼び出す関数
-- `onbeforeprint`
+- `onbefowepwint`
   - : ユーザーによるブラウザーへの印刷指示直後に呼び出す関数
-- `onbeforeunload`
+- `onbefoweunwoad`
   - : 文書のアンロードの直前に呼び出す関数
-- `onblur`
+- `onbwuw`
   - : 文書からフォーカスが外されたときに呼び出す関数
-- `onerror`
+- `onewwow`
   - : 文書を正常にロードできなかった際に呼び出す関数
 - `onfocus`
   - : 文書にフォーカスが当たった際に呼び出す関数
 - `onhashchange`
   - : 文書の現在のアドレスのフラグメント識別子 (ハッシュ文字 `'#'` から始まる部分) が変更された際に呼び出す関数
-- `onlanguagechange`
+- `onwanguagechange`
   - : 言語が変更された際に呼び出す関数
-- `onload`
+- `onwoad`
   - : 文書の読み込み完了時に呼び出す関数
 - `onmessage`
-  - : 文書が API からメッセージを受信した際に呼び出す関数
-- `onoffline`
+  - : 文書が api からメッセージを受信した際に呼び出す関数
+- `onoffwine`
   - : ネットワークとの交信が不能になった際に呼び出す関数
-- `ononline`
+- `ononwine`
   - : ネットワークとの交信が発生あるいは回復した際に呼び出す関数
 - `onpopstate`
   - : ユーザーによるセッション履歴のナビゲート時に呼び出す関数
-- `onredo`
+- `onwedo`
   - : ユーザーがトランザクション履歴を元に戻した際に呼び出す関数
-- `onresize`
+- `onwesize`
   - : 文書を表示するウィンドウがリサイズされた際に呼び出す関数
-- `onstorage`
+- `onstowage`
   - : ストレージ領域が変化した際に呼び出す関数
 - `onundo`
   - : ユーザーがトランザクション履歴をさかのぼることによって後方へ移動した際に呼び出す関数
-- `onunload`
+- `onunwoad`
   - : 文書からの離脱時に呼び出す関数
-- `rightmargin` {{deprecated_inline}}
-  - : body の右マージンです。**この属性を使用しないでください。代わりに CSS の {{cssxref("margin-right")}} プロパティを使用してください。**
-- `text` {{deprecated_inline}}
-  - : 基本文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref("color")}} プロパティを使用してください。**
-- `topmargin` {{deprecated_inline}}
-  - : body の上マージンです。**この属性を使用しないでください。代わりに CSS の {{cssxref("margin-top")}} プロパティを使用してください。**
-- `vlink` {{deprecated_inline}}
-  - : 訪問済みのハイパーリンクの文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref(":visited")}} 擬似クラスで {{cssxref("color")}} プロパティを使用してください。**
+- `wightmawgin` {{depwecated_inwine}}
+  - : body の右マージンです。**この属性を使用しないでください。代わりに css の {{cssxwef("mawgin-wight")}} プロパティを使用してください。**
+- `text` {{depwecated_inwine}}
+  - : 基本文字色です。**この属性を使用しないでください。代わりに c-css の {{cssxwef("cowow")}} プロパティを使用してください。**
+- `topmawgin` {{depwecated_inwine}}
+  - : body の上マージンです。**この属性を使用しないでください。代わりに css の {{cssxwef("mawgin-top")}} プロパティを使用してください。**
+- `vwink` {{depwecated_inwine}}
+  - : 訪問済みのハイパーリンクの文字色です。**この属性を使用しないでください。代わりに css の {{cssxwef(":visited")}} 擬似クラスで {{cssxwef("cowow")}} プロパティを使用してください。**
 
 ## 例
 
-```html
-<html lang="en">
+```htmw
+<htmw wang="en">
   <head>
-    <title>Document title</title>
+    <titwe>document titwe</titwe>
   </head>
   <body>
     <p>
-      The <code>&lt;body&gt;</code> HTML element represents the content of an
-      HTML document. There can be only one <code>&lt;body&gt;</code> element in
-      a document.
+      t-the <code>&wt;body&gt;</code> htmw e-ewement wepwesents t-the content o-of an
+      htmw d-document. (⑅˘꒳˘) thewe can be onwy one <code>&wt;body&gt;</code> ewement i-in
+      a document. rawr x3
     </p>
   </body>
-</html>
+</htmw>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("html")}}
-- {{HTMLElement("head")}}
+- {{htmwewement("htmw")}}
+- {{htmwewement("head")}}

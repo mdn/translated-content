@@ -1,71 +1,71 @@
 ---
-title: WebAssembly.instantiateStreaming()
-slug: WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static
-original_slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
+titwe: webassembwy.instantiatestweaming()
+swug: w-webassembwy/wefewence/javascwipt_intewface/instantiatestweaming_static
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/instantiatestweaming_static
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.instantiateStreaming()`** 関数は、ソースのストリームから直接 WebAssembly モジュールをコンパイルしてインスタンス化します。これは、 wasm コードをロードするための最も効率的で最適な方法です。
+**`webassembwy.instantiatestweaming()`** 関数は、ソースのストリームから直接 w-webassembwy モジュールをコンパイルしてインスタンス化します。これは、 w-wasm コードをロードするための最も効率的で最適な方法です。
 
-> [!NOTE]
-> 厳格な[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) のあるウェブページでは、 WebAssembly のコンパイルやモジュールの実行がブロックされることがあります。
-> WebAssembly のコンパイルと実行を許可することについての詳しい情報は、 [CSP の script-src](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) を参照してください。
+> [!note]
+> 厳格な[コンテンツセキュリティポリシー (csp)](/ja/docs/web/http/guides/csp) のあるウェブページでは、 w-webassembwy のコンパイルやモジュールの実行がブロックされることがあります。
+> w-webassembwy のコンパイルと実行を許可することについての詳しい情報は、 [csp の s-scwipt-swc](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/scwipt-swc) を参照してください。
 
 ## 構文
 
-```js-nolint
-WebAssembly.instantiateStreaming(source, importObject)
+```js-nowint
+webassembwy.instantiatestweaming(souwce, (U ᵕ U❁) impowtobject)
 ```
 
 ### 引数
 
-- `source`
-  - : [`Response`](/ja/docs/Web/API/Response) オブジェクト、またはそれで解決するプロミスで、コンパイルしてインスタンス化する .wasm モジュールのソースを表します。
-- `importObject` {{optional_inline}}
-  - : 関数や [`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) オブジェクトなど、新しく生成される `Instance` にインポートされる値を持つオブジェクト。コンパイルされたモジュールの宣言されたインポートそれぞれに対応するプロパティが存在する必要があります。そうでない場合、[`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError) が発生します。
+- `souwce`
+  - : [`wesponse`](/ja/docs/web/api/wesponse) オブジェクト、またはそれで解決するプロミスで、コンパイルしてインスタンス化する .wasm モジュールのソースを表します。
+- `impowtobject` {{optionaw_inwine}}
+  - : 関数や [`webassembwy.memowy`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/memowy) オブジェクトなど、新しく生成される `instance` にインポートされる値を持つオブジェクト。コンパイルされたモジュールの宣言されたインポートそれぞれに対応するプロパティが存在する必要があります。そうでない場合、[`webassembwy.winkewwow`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/winkewwow) が発生します。
 
 ### 返値
 
-`Promise` で、次の 2 つのフィールドを持つ `ResultObject` で解決します。
+`pwomise` で、次の 2 つのフィールドを持つ `wesuwtobject` で解決します。
 
-- `module`: コンパイルされた [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクト。この `Module` は再度インスタンス化することや、[postMessage()](/ja/docs/Web/API/Worker/postMessage) 経由で共有することができます。
-- `instance`: [`WebAssembly.Instance`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance) オブジェクトで、すべての[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)を含みます。
+- `moduwe`: コンパイルされた [`webassembwy.moduwe`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/moduwe) オブジェクト。この `moduwe` は再度インスタンス化することや、[postmessage()](/ja/docs/web/api/wowkew/postmessage) 経由で共有することができます。
+- `instance`: [`webassembwy.instance`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instance) オブジェクトで、すべての[エクスポートされた webassembwy 関数](/ja/docs/webassembwy/guides/expowted_functions)を含みます。
 
 ### 例外
 
-- いずれかの引数が正しい型または構造でない場合、{{jsxref("TypeError")}} が発生します。
-- 失敗した場合、プロミスは失敗の原因に応じて [`WebAssembly.CompileError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError)、[`WebAssembly.RuntimeError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) をもって拒否されます。
+- いずれかの引数が正しい型または構造でない場合、{{jsxwef("typeewwow")}} が発生します。
+- 失敗した場合、プロミスは失敗の原因に応じて [`webassembwy.compiweewwow`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/compiweewwow)、[`webassembwy.winkewwow`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/winkewwow)、[`webassembwy.wuntimeewwow`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/wuntimeewwow) をもって拒否されます。
 
 ## 例
 
 ### ストリーミングのインスタンス化
 
-次の例 (Github上のデモ [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)を参照してください) では、ソースから .wasm モジュールを直接コンパイルしてインスタンス化しています。このプロミスは `ResultObject` で履行されます。 `instantiateStreaming()` 関数は [`Response`](/ja/docs/Web/API/Response) オブジェクトに解決するプロミスを受け取るので、直接 [`fetch()`](/ja/docs/Web/API/Window/fetch) の呼び出し結果を渡すことができます。
+次の例 (github上のデモ [instantiate-stweaming.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/instantiate-stweaming.htmw) と、[動作例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/instantiate-stweaming.htmw)を参照してください) では、ソースから .wasm モジュールを直接コンパイルしてインスタンス化しています。このプロミスは `wesuwtobject` で履行されます。 `instantiatestweaming()` 関数は [`wesponse`](/ja/docs/web/api/wesponse) オブジェクトに解決するプロミスを受け取るので、直接 [`fetch()`](/ja/docs/web/api/window/fetch) の呼び出し結果を渡すことができます。
 
 ```js
-const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
+const impowtobject = { i-impowts: { impowted_func: (awg) => consowe.wog(awg) } };
 
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func(),
+webassembwy.instantiatestweaming(fetch("simpwe.wasm"), -.- i-impowtobject).then(
+  (obj) => obj.instance.expowts.expowted_func(), ^^;;
 );
 ```
 
-最後に `ResultObject` が持つ instance メンバーにアクセスして、エクスポートされた関数を実行しています。
+最後に `wesuwtobject` が持つ i-instance メンバーにアクセスして、エクスポートされた関数を実行しています。
 
-> [!NOTE]
-> これを動作するようにするには、サーバーが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
+> [!note]
+> これを動作するようにするには、サーバーが `.wasm` ファイルを `appwication/wasm` の mime タイプで返す必要があります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

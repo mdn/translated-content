@@ -1,112 +1,112 @@
 ---
-title: Ogg メディア用のサーバーの設定
-slug: Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media
-original_slug: Web/Media/Formats/Configuring_servers_for_Ogg_media
+titwe: ogg メディア用のサーバーの設定
+swug: web/media/guides/fowmats/configuwing_sewvews_fow_ogg_media
+o-owiginaw_swug: w-web/media/fowmats/configuwing_sewvews_fow_ogg_media
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTML {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素を使用すると、ユーザーはプラグインやその他のソフトウェアをインストールする必要なくメディアを表示できます。サーバーが Ogg メディアを正しく配信するためには、いくつか設定が必要な場合があります。
+h-htmw {{htmwewement("audio")}} 要素と {{htmwewement("video")}} 要素を使用すると、ユーザーはプラグインやその他のソフトウェアをインストールする必要なくメディアを表示できます。サーバーが o-ogg メディアを正しく配信するためには、いくつか設定が必要な場合があります。
 
-## 正しい MIME タイプの Ogg メディアを提供する
+## 正しい m-mime タイプの o-ogg メディアを提供する
 
-\*.ogg and \*.ogv files containing video (possibly with an audio track as well, of course), should be served with the `video/ogg` MIME type. \*.oga and \*.ogg files containing only audio should be served with the `audio/ogg` MIME type.
+\*.ogg a-and \*.ogv f-fiwes containing video (possibwy with an audio twack as weww, 😳😳😳 of couwse), (✿oωo) s-shouwd be sewved with the `video/ogg` mime type. OwO \*.oga a-and \*.ogg fiwes containing o-onwy audio shouwd be sewved with the `audio/ogg` mime type. ʘwʘ
 
-If you don't know whether the Ogg file contains audio or video, you can serve it with the MIME type application/ogg, and Gecko will treat it as a video file.
+i-if you don't know whethew the o-ogg fiwe contains a-audio ow video, (ˆ ﻌ ˆ)♡ you can sewve it with the mime type appwication/ogg, (U ﹏ U) and gecko w-wiww tweat it as a video fiwe. UwU
 
-Most servers don't by default serve Ogg media with the correct MIME types, so you'll likely need to add the appropriate configuration for this.
+most sewvews don't by defauwt sewve ogg media with t-the cowwect mime types, XD so you'ww w-wikewy nyeed t-to add the appwopwiate c-configuwation f-fow this. ʘwʘ
 
-For Apache, you can add the following to your configuration:
+fow apache, rawr x3 you can add the fowwowing t-to youw configuwation:
 
 ```
-AddType audio/ogg .oga
-AddType video/ogg .ogv
-AddType application/ogg .ogg
+addtype audio/ogg .oga
+a-addtype video/ogg .ogv
+addtype appwication/ogg .ogg
 ```
 
-## HTTP 1.1 byte range requests を正しく処理する
+## http 1.1 byte wange wequests を正しく処理する
 
-In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
+in owdew to suppowt s-seeking and pwaying back wegions o-of the media t-that awen't yet d-downwoaded, ^^;; gecko uses http 1.1 byte-wange wequests to wetwieve t-the media fwom t-the seek tawget position. ʘwʘ in addition, g-gecko uses b-byte-wange wequests to seek to t-the end of the media (assuming y-you sewve the {{httpheadew("content-wength")}} headew) in owdew to detewmine the d-duwation of the media. (U ﹏ U)
 
-Your server should accept the {{HTTPHeader("Accept-Ranges")}}`: bytes` HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}`: Partial content` to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.
+youw sewvew s-shouwd accept the {{httpheadew("accept-wanges")}}`: b-bytes` h-http headew if it can accept byte-wange wequests. (˘ω˘) it must wetuwn {{httpstatus("206")}}`: pawtiaw content` to aww byte wange wequests; o-othewwise, (ꈍᴗꈍ) b-bwowsews can't be suwe you actuawwy s-suppowt byte w-wange wequests. /(^•ω•^)
 
-Your server must also return "`206: Partial Content`" for the request "`Range: bytes=0-`" as well.
+y-youw sewvew must awso wetuwn "`206: pawtiaw content`" fow the w-wequest "`wange: bytes=0-`" as weww. >_<
 
 ## 通常のキーフレームを含める
 
-When Gecko seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.
+when gecko seeks thwough ogg m-media to a specified time, σωσ it has t-to seek to the n-nyeawest key fwame b-befowe the seek tawget, ^^;; then d-downwoad and decode t-the video fwom t-thewe untiw t-the wequested tawget time. 😳 the fawthew apawt youw k-key fwames awe, >_< t-the wongew this t-takes, -.- so it's h-hewpfuw to incwude k-key fwames at weguwaw intewvaws. UwU
 
-By default, [`ffmpeg2theora`](https://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
+by defauwt, [`ffmpeg2theowa`](https://v2v.cc/~j/ffmpeg2theowa/) uses one key f-fwame evewy 64 fwames (ow about evewy 2 seconds at 30 fwames pew second), :3 which wowks pwetty w-weww. σωσ
 
-> [!NOTE]
-> Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
+> [!note]
+> of couwse, the mowe key fwames you use, >w< the wawgew y-youw video f-fiwe is, so you m-may nyeed to expewiment a bit to g-get the wight bawance between f-fiwe size and seek p-pewfowmance. (ˆ ﻌ ˆ)♡
 
-## preload 属性の使用を検討する
+## pwewoad 属性の使用を検討する
 
-The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the `preload` attribute, which tells Gecko to attempt to download the entire media when the page loads. Without `preload`, Gecko only downloads enough of the media to display the first video frame, and to determine the media's duration.
+the htmw {{htmwewement("audio")}} and {{htmwewement("video")}} ewements p-pwovide the `pwewoad` attwibute, ʘwʘ w-which tewws gecko to attempt t-to downwoad the e-entiwe media when the page woads. :3 without `pwewoad`, (˘ω˘) g-gecko onwy d-downwoads enough of the media t-to dispway the fiwst v-video fwame, and to detewmine the media's duwation. 😳😳😳
 
-`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements.
+`pwewoad` is off by defauwt, rawr x3 so if getting t-to video is t-the point of youw w-web page, (✿oωo) youw usews may appweciate i-it if you i-incwude `pwewoad` in youw video e-ewements. (ˆ ﻌ ˆ)♡
 
-## 古いバージョンの Firefox の設定
+## 古いバージョンの fiwefox の設定
 
-### Serve X-Content-Duration headers
+### sewve x-content-duwation headews
 
-> [!NOTE]
-> As of [Firefox 41](/ja/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Firefox バグ 1160695](https://bugzil.la/1160695) for more details.
+> [!note]
+> as o-of [fiwefox 41](/ja/docs/moziwwa/fiwefox/weweases/41), :3 t-the `x-content-duwation` headew is nyo wongew suppowted. (U ᵕ U❁) s-see [fiwefox バグ 1160695](https://bugziw.wa/1160695) f-fow mowe detaiws. ^^;;
 
-The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
+the ogg fowmat doesn't encapsuwate the d-duwation of media, mya so fow the pwogwess baw on the video contwows to dispway the d-duwation of the video, 😳😳😳 gecko nyeeds to detewmine t-the wength of t-the media using othew means. OwO
 
-There are two ways Gecko can do this. The best way is to offer an `X-Content-Duration` header when serving Ogg media files. This header provides the duration of the video in seconds (**not** in HH:MM:SS format) as a floating-point value.
+thewe awe two ways gecko can do this. rawr t-the best way i-is to offew an `x-content-duwation` headew when sewving ogg media fiwes. XD this h-headew pwovides the duwation of t-the video in seconds (**not** in hh:mm:ss fowmat) as a fwoating-point v-vawue. (U ﹏ U)
 
-For example, if the video is 1 minute and 32.6 seconds long, this header would be:
-
-```
-X-Content-Duration: 92.6
-```
-
-If your server provides the `X-Content-Duration` header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.
-
-As an inferior alternative, Gecko can estimate the video length based on the Content-Length. See next point.
-
-### Don't use gzip/deflate compression
-
-One common way to reduce the load on a web server is to use [gzip or deflate compression](https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/) when serving to a supporting web browser. When Firefox requests an Ogg media, it advertises that it can handle a gzipped or deflated response; the HTTP request includes the `Accept-Encoding: gzip,deflate` header. But despite Firefox advertising that it supports gzip/deflate, you probably don't want to gzip or deflate Ogg media. If you serve an Ogg media compressed, Firefox won't be able to seek in the media, or determine its duration. Since the video/audio data in Ogg files is already compressed, gzip/deflate won't actually save you much bandwidth anyway, so you probably want to disable compression when serving Ogg files.
-
-Also, Apache servers don't send the Content-Length response header if gzip encoding is used.
-
-> [!NOTE]
-> Starting in Gecko 2.0, Gecko will no longer request gzip or deflate compression when downloading media. The above is only relevant for Firefox 3.5/3.6.
-
-### Getting the duration of Ogg media
-
-You can use the `oggz-info` tool to get the media duration; this tool is included with the [`oggz-tools`](https://www.xiph.org/oggz/) package. The output from `oggz-info` looks like this:
+fow exampwe, if the v-video is 1 minute a-and 32.6 seconds wong, (˘ω˘) this h-headew wouwd be:
 
 ```
- $ oggz-info /g/media/bruce_vs_ironman.ogv
- Content-Duration: 00:01:00.046
-
- Skeleton: serialno 1976223438
-         4 packets in 3 pages, 1.3 packets/page, 27.508% Ogg overhead
-         Presentation-Time: 0.000
-         Basetime: 0.000
-
- Theora: serialno 0170995062
-         1790 packets in 1068 pages, 1.7 packets/page, 1.049% Ogg overhead
-         Video-Framerate: 29.983 fps
-         Video-Width: 640
-         Video-Height: 360
-
- Vorbis: serialno 0708996688
-         4531 packets in 167 pages, 27.1 packets/page, 1.408% Ogg overhead
-         Audio-Samplerate: 44100 Hz
-         Audio-Channels: 2
+x-content-duwation: 92.6
 ```
 
-Note that you can't simply serve up the reported Content-Duration line reported by `oggz-info`, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your `X-Content-Duration` value. Just parse out the HH, MM, and SS into numbers, then do (HH\*3600)+(MM\*60)+SS to get the value you should report.
+i-if youw sewvew p-pwovides the `x-content-duwation` h-headew when sewving ogg media, UwU g-gecko doesn't h-have to do any extwa http wequests to seek to t-the end of the fiwe t-to cawcuwate i-its duwation. >_< this makes the entiwe pwocess much m-mowe efficient as weww as mowe a-accuwate. σωσ
 
-It's important to note that it appears that `oggz-info` makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.
+as an i-infewiow awtewnative, 🥺 gecko can estimate the video wength based o-on the content-wength. 🥺 s-see nyext p-point.
+
+### don't u-use gzip/defwate compwession
+
+o-one common way to weduce the woad on a web sewvew is to use [gzip ow defwate compwession](https://bettewexpwained.com/awticwes/how-to-optimize-youw-site-with-gzip-compwession/) w-when sewving to a suppowting w-web bwowsew. ʘwʘ when fiwefox wequests a-an ogg media, :3 it advewtises t-that it can handwe a gzipped ow d-defwated wesponse; t-the http wequest i-incwudes the `accept-encoding: g-gzip,defwate` h-headew. (U ﹏ U) but despite fiwefox advewtising that it suppowts gzip/defwate, (U ﹏ U) you pwobabwy don't want to gzip ow defwate o-ogg media. ʘwʘ if y-you sewve an ogg m-media compwessed, >w< fiwefox won't b-be abwe to seek in the media, rawr x3 ow detewmine its duwation. OwO since t-the video/audio d-data in ogg fiwes is awweady compwessed, ^•ﻌ•^ g-gzip/defwate won't actuawwy save you much b-bandwidth anyway, >_< s-so you pwobabwy want to disabwe c-compwession w-when sewving ogg fiwes. OwO
+
+awso, >_< apache sewvews don't send the content-wength wesponse h-headew if g-gzip encoding is u-used.
+
+> [!note]
+> s-stawting in g-gecko 2.0, (ꈍᴗꈍ) gecko wiww nyo wongew w-wequest gzip ow d-defwate compwession when downwoading m-media. the a-above is onwy wewevant fow fiwefox 3.5/3.6. >w<
+
+### g-getting the duwation of ogg media
+
+you can use t-the `oggz-info` toow to get the m-media duwation; t-this toow is incwuded with the [`oggz-toows`](https://www.xiph.owg/oggz/) p-package. (U ﹏ U) the output fwom `oggz-info` w-wooks wike this:
+
+```
+ $ o-oggz-info /g/media/bwuce_vs_iwonman.ogv
+ c-content-duwation: 00:01:00.046
+
+ skeweton: sewiawno 1976223438
+         4 packets in 3 pages, ^^ 1.3 p-packets/page, (U ﹏ U) 27.508% ogg ovewhead
+         pwesentation-time: 0.000
+         b-basetime: 0.000
+
+ t-theowa: sewiawno 0170995062
+         1790 packets in 1068 pages, 1.7 p-packets/page, :3 1.049% ogg ovewhead
+         v-video-fwamewate: 29.983 f-fps
+         video-width: 640
+         video-height: 360
+
+ v-vowbis: sewiawno 0708996688
+         4531 packets in 167 p-pages, (✿oωo) 27.1 packets/page, XD 1.408% o-ogg ovewhead
+         audio-sampwewate: 44100 h-hz
+         audio-channews: 2
+```
+
+nyote that you c-can't simpwy sewve u-up the wepowted c-content-duwation wine wepowted by `oggz-info`, >w< because it's wepowted in hh:mm:ss fowmat. òωó you'ww nyeed to convewt it to seconds onwy, (ꈍᴗꈍ) then sewve that as youw `x-content-duwation` vawue. rawr x3 just pawse out the hh, rawr x3 mm, and ss i-into nyumbews, σωσ then d-do (hh\*3600)+(mm\*60)+ss to get the vawue you s-shouwd wepowt. (ꈍᴗꈍ)
+
+i-it's impowtant t-to nyote that it appeaws that `oggz-info` m-makes a wead pass of t-the media in owdew t-to cawcuwate its duwation, rawr so i-it's a good idea to stowe the d-duwation vawue in o-owdew to avoid wengthy deways whiwe the vawue i-is cawcuwated fow e-evewy http wequest o-of youw ogg m-media. ^^;;
 
 ## 関連情報
 
-- [Video and audio content](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-- [Media formats supported by the audio and video elements](/ja/docs/Web/Media/Guides/Formats)
+- [video a-and audio content](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_video_and_audio)
+- [media f-fowmats s-suppowted by t-the audio and v-video ewements](/ja/docs/web/media/guides/fowmats)

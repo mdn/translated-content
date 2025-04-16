@@ -1,1351 +1,1351 @@
 ---
-title: HTML 属性リファレンス
-short-title: 属性
-slug: Web/HTML/Reference/Attributes
-original_slug: Web/HTML/Attributes
-l10n:
-  sourceCommit: 56cbe48e4426172461d9297523b68716922690e5
+titwe: htmw 属性リファレンス
+showt-titwe: 属性
+s-swug: w-web/htmw/wefewence/attwibutes
+o-owiginaw_swug: web/htmw/attwibutes
+w-w10n:
+  souwcecommit: 56cbe48e4426172461d9297523b68716922690e5
 ---
 
-{{HTMLSidebar("Attributes")}}
+{{htmwsidebaw("attwibutes")}}
 
-HTML 要素には**属性**が存在します。これは、ユーザーが求める基準を満たすために、要素を構成したり、さまざまな方法で動作を調整したりするための追加の値です。
+h-htmw 要素には**属性**が存在します。これは、ユーザーが求める基準を満たすために、要素を構成したり、さまざまな方法で動作を調整したりするための追加の値です。
 
 ## 属性一覧
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
+    <tw>
       <th>属性名</th>
       <th>要素</th>
       <th>説明</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/accept">accept</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/accept">accept</a></code>
       </td>
       <td>
-        {{ HTMLElement("form") }}, {{ HTMLElement("input") }}
+        {{ h-htmwewement("fowm") }}, 😳 {{ htmwewement("input") }}
       </td>
       <td>サーバーの受容する型のリストです。ふつうはファイル形式です。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/fowm#accept-chawset">accept-chawset</a></code>
       </td>
-      <td>{{ HTMLElement("form") }}</td>
-      <td>文字集合であり、指定した場合は <code>"UTF-8"</code> でなければなりません。</td>
-    </tr>
-    <tr>
+      <td>{{ htmwewement("fowm") }}</td>
+      <td>文字集合であり、指定した場合は <code>"utf-8"</code> でなければなりません。</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/accesskey">accesskey</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/accesskey">accesskey</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>要素をアクティブ化したり、フォーカスを与えたりするためのショートカットキーです。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#action">action</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/fowm#action">action</a></code>
       </td>
-      <td>{{ HTMLElement("form") }}</td>
+      <td>{{ htmwewement("fowm") }}</td>
       <td>
-        フォーム経由で送信される情報を処理するプログラムの URI です。
+        フォーム経由で送信される情報を処理するプログラムの u-uwi です。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>align</code> {{deprecated_inline}}
+        <code>awign</code> {{depwecated_inwine}}
       </td>
       <td>
-        {{ HTMLElement("caption") }}, {{ HTMLElement("col") }},
-        {{ HTMLElement("colgroup") }},
-        {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
-        {{ HTMLElement("img") }}, {{ HTMLElement("table") }},
-        {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }},
-        {{ HTMLElement("tfoot") }}, {{ HTMLElement("th") }},
-        {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}
+        {{ htmwewement("caption") }}, o.O {{ htmwewement("cow") }}, ^^;;
+        {{ h-htmwewement("cowgwoup") }}, ( ͡o ω ͡o )
+        {{ htmwewement("hw") }}, ^^;; {{ h-htmwewement("ifwame") }}, ^^;;
+        {{ htmwewement("img") }}, XD {{ htmwewement("tabwe") }}, 🥺
+        {{ htmwewement("tbody") }}, (///ˬ///✿) {{ h-htmwewement("td") }}, (U ᵕ U❁)
+        {{ htmwewement("tfoot") }}, ^^;; {{ h-htmwewement("th") }}, ^^;;
+        {{ h-htmwewement("thead") }}, rawr {{ htmwewement("tw") }}
       </td>
       <td>要素の水平方向の配置を指定します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#allow">allow</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/ifwame#awwow">awwow</a></code>
       </td>
-      <td>{{ HTMLElement("iframe") }}</td>
-      <td>iframe の機能ポリシーを指定します。</td>
-    </tr>
-    <tr>
+      <td>{{ htmwewement("ifwame") }}</td>
+      <td>ifwame の機能ポリシーを指定します。</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/alt">alt</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/awt">awt</a></code>
       </td>
       <td>
-        {{ HTMLElement("area") }},
-        {{ HTMLElement("img") }}, {{ HTMLElement("input") }}
+        {{ h-htmwewement("awea") }}, (˘ω˘)
+        {{ htmwewement("img") }}, 🥺 {{ htmwewement("input") }}
       </td>
       <td>画像が表示できない場合の代替テキストです。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/link#as">as</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/wink#as">as</a></code>
       </td>
       <td>
-        {{ HTMLElement("link") }}
+        {{ htmwewement("wink") }}
       </td>
       <td>リンクで読み込むコンテンツの種類を指定します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/script#async">async</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/scwipt#async">async</a></code>
       </td>
-      <td>{{ HTMLElement("script") }}</td>
+      <td>{{ htmwewement("scwipt") }}</td>
       <td>スクリプトを非同期で実行します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/autocapitalize">autocapitalize</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/autocapitawize">autocapitawize</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>
         ユーザーによる入力が入力欄で自動的に大文字化されるかどうかを設定します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/autocompwete">autocompwete</a></code>
       </td>
       <td>
-        {{ HTMLElement("form") }}, {{ HTMLElement("input") }},
-        {{ HTMLElement("select") }},
-        {{ HTMLElement("textarea") }}
+        {{ h-htmwewement("fowm") }}, nyaa~~ {{ h-htmwewement("input") }}, :3
+        {{ h-htmwewement("sewect") }}, /(^•ω•^)
+        {{ htmwewement("textawea") }}
       </td>
       <td>
         このフォーム内のコントロールが、ブラウザーによる値の自動補完を既定で許容するかを示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/autoplay">autoplay</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/autopway">autopway</a></code>
       </td>
       <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("video") }}
+        {{ h-htmwewement("audio") }}, ^•ﻌ•^
+        {{ htmwewement("video") }}
       </td>
       <td>オーディオやビデオが再生可能になった時点で自動再生を開始します。</td>
-    </tr>
-    <tr>
-      <td><code>background</code></td>
+    </tw>
+    <tw>
+      <td><code>backgwound</code></td>
       <td>
-        {{ HTMLElement("body") }}, {{ HTMLElement("table") }},
-        {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
+        {{ htmwewement("body") }}, UwU {{ h-htmwewement("tabwe") }}, 😳😳😳
+        {{ htmwewement("td") }}, OwO {{ htmwewement("th") }}
       </td>
       <td>
-        画像ファイルの URL を指定します。
-        <div class="note notecard">
+        画像ファイルの uww を指定します。
+        <div cwass="note nyotecawd">
           <p>
-            <strong>メモ:</strong> ブラウザーや電子メールクライアントはまだこの属性に対応していますが、廃止済みです。代わりに CSS の {{ Cssxref("background-image") }} を使用してください。
+            <stwong>メモ:</stwong> ブラウザーや電子メールクライアントはまだこの属性に対応していますが、廃止済みです。代わりに css の {{ c-cssxwef("backgwound-image") }} を使用してください。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>bgcolor</code></td>
+    </tw>
+    <tw>
+      <td><code>bgcowow</code></td>
       <td>
-        {{ HTMLElement("body") }}, {{ HTMLElement("col") }},
-        {{ HTMLElement("colgroup") }},
-        {{ HTMLElement("marquee") }},
-        {{ HTMLElement("table") }},
-        {{ HTMLElement("tbody") }},
-        {{ HTMLElement("tfoot") }}, {{ HTMLElement("td") }},
-        {{ HTMLElement("th") }}, {{ HTMLElement("tr") }}
+        {{ htmwewement("body") }}, ^•ﻌ•^ {{ h-htmwewement("cow") }}, (ꈍᴗꈍ)
+        {{ h-htmwewement("cowgwoup") }}, (⑅˘꒳˘)
+        {{ h-htmwewement("mawquee") }}, (⑅˘꒳˘)
+        {{ htmwewement("tabwe") }},
+        {{ htmwewement("tbody") }}, (ˆ ﻌ ˆ)♡
+        {{ htmwewement("tfoot") }}, /(^•ω•^) {{ h-htmwewement("td") }}, òωó
+        {{ h-htmwewement("th") }}, (⑅˘꒳˘) {{ htmwewement("tw") }}
       </td>
       <td>
         <p>要素の背景色です。</p>
-        <div class="note notecard">
+        <div c-cwass="note n-nyotecawd">
           <p>
-            <strong>メモ:</strong> これは古い属性です。代わりに CSS の {{ Cssxref("background-color") }} プロパティを使用してください。
+            <stwong>メモ:</stwong> これは古い属性です。代わりに css の {{ c-cssxwef("backgwound-cowow") }} プロパティを使用してください。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>border</code></td>
+    </tw>
+    <tw>
+      <td><code>bowdew</code></td>
       <td>
-        {{ HTMLElement("img") }}, {{ HTMLElement("object") }},
-        {{ HTMLElement("table") }}
+        {{ htmwewement("img") }}, (U ᵕ U❁) {{ h-htmwewement("object") }}, >w<
+        {{ htmwewement("tabwe") }}
       </td>
       <td>
         <p>境界線の幅です。</p>
-        <div class="note notecard">
+        <div cwass="note n-nyotecawd">
           <p>
-            <strong>メモ:</strong> これは古い属性です。代わりに CSS の {{ Cssxref("border") }} プロパティを使用してください。
+            <stwong>メモ:</stwong> これは古い属性です。代わりに css の {{ cssxwef("bowdew") }} プロパティを使用してください。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/capture">capture</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/captuwe">captuwe</a></code>
       </td>
-      <td>{{ HTMLElement("input") }}</td>
+      <td>{{ htmwewement("input") }}</td>
       <td>
-        <a href="https://w3c.github.io/html-media-capture/#the-capture-attribute">Media Capture 仕様書</a>から、キャプチャできる新しいファイルを指定します。
+        <a h-hwef="https://w3c.github.io/htmw-media-captuwe/#the-captuwe-attwibute">media c-captuwe 仕様書</a>から、キャプチャできる新しいファイルを指定します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meta#charset">charset</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/meta#chawset">chawset</a></code>
       </td>
       <td>
-        {{ HTMLElement("meta") }}
+        {{ htmwewement("meta") }}
       </td>
       <td>ページまたはスクリプトの文字エンコーディングを宣言します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/input#checked">checked</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/input#checked">checked</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }}
+        {{ htmwewement("input") }}
       </td>
       <td>ページ読み込み時に要素にチェックを入れておくかどうかを指定します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/cite">cite</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/cite">cite</a></code>
       </td>
       <td>
-        {{ HTMLElement("blockquote") }},
-        {{ HTMLElement("del") }}, {{ HTMLElement("ins") }},
-        {{ HTMLElement("q") }}
+        {{ htmwewement("bwockquote") }}, σωσ
+        {{ h-htmwewement("dew") }}, -.- {{ h-htmwewement("ins") }}, o.O
+        {{ htmwewement("q") }}
       </td>
-      <td>引用元または変更点の情報源を指す URI を格納します。</td>
-    </tr>
-    <tr>
+      <td>引用元または変更点の情報源を指す u-uwi を格納します。</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/class">class</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/cwass">cwass</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
-      <td>よく使われるプロパティで要素にスタイルを適用するために CSS と共によく用いられます。</td>
-    </tr>
-    <tr>
-      <td><code>color</code></td>
+      <td>よく使われるプロパティで要素にスタイルを適用するために css と共によく用いられます。</td>
+    </tw>
+    <tw>
+      <td><code>cowow</code></td>
       <td>
-        {{ HTMLElement("font") }}, {{ HTMLElement("hr") }}
+        {{ htmwewement("font") }}, {{ htmwewement("hw") }}
       </td>
       <td>
         <p>
-          この属性は色名または16進数の #RRGGBB 形式を用いて文字色を設定します。
+          この属性は色名または16進数の #wwggbb 形式を用いて文字色を設定します。
         </p>
-        <div class="note notecard">
+        <div c-cwass="note nyotecawd">
           <p>
-            <strong>メモ:</strong> これは古い属性です。代わりに CSS の {{ Cssxref("color") }} プロパティを使用して下さい。
+            <stwong>メモ:</stwong> これは古い属性です。代わりに css の {{ cssxwef("cowow") }} プロパティを使用して下さい。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/textarea#cols">cols</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/textawea#cows">cows</a></code>
       </td>
-      <td>{{ HTMLElement("textarea") }}</td>
+      <td>{{ htmwewement("textawea") }}</td>
       <td>テキストエリアの桁数 (水平方向の文字数) を定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/colspan">colspan</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/cowspan">cowspan</a></code>
       </td>
       <td>
-        {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
+        {{ h-htmwewement("td") }}, ^^ {{ htmwewement("th") }}
       </td>
       <td>
-        colspan 属性はテーブルのセルを結合する列数を定義します。
+        c-cowspan 属性はテーブルのセルを結合する列数を定義します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meta#content">content</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/meta#content">content</a></code>
       </td>
-      <td>{{ HTMLElement("meta") }}</td>
+      <td>{{ h-htmwewement("meta") }}</td>
       <td>
         状況に応じて、 <code>http-equiv</code> または <code>name</code> に関連した値です。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/contenteditabwe">contenteditabwe</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>要素の内容が編集可能であるかどうかを示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/controls">controls</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/contwows">contwows</a></code>
       </td>
       <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("video") }}
+        {{ h-htmwewement("audio") }}, >_<
+        {{ h-htmwewement("video") }}
       </td>
       <td>
         再生コントロールをユーザーに表示すべきかどうかを示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/area#coords">coords</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/awea#coowds">coowds</a></code>
       </td>
-      <td>{{ HTMLElement("area") }}</td>
+      <td>{{ htmwewement("awea") }}</td>
       <td>
         ホットスポット領域の座標を指定するための値のセットです。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/cwossowigin">cwossowigin</a></code>
       </td>
       <td>
-        {{ HTMLElement("audio") }}, {{ HTMLElement("img") }},
-        {{ HTMLElement("link") }}, {{ HTMLElement("script") }},
-        {{ HTMLElement("video") }}
+        {{ h-htmwewement("audio") }}, >w< {{ h-htmwewement("img") }}, >_<
+        {{ htmwewement("wink") }}, >w< {{ h-htmwewement("scwipt") }},
+        {{ htmwewement("video") }}
       </td>
       <td>要素がオリジン間リクエストをどう扱うか</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/API/HTMLIFrameElement/csp">csp</a></code>
-        {{experimental_inline}}
+        <code><a h-hwef="/ja/docs/web/api/htmwifwameewement/csp">csp</a></code>
+        {{expewimentaw_inwine}}
       </td>
-      <td>{{ HTMLElement("iframe") }}</td>
+      <td>{{ htmwewement("ifwame") }}</td>
       <td>
         埋め込まれた文書が管理されるためのコンテンツセキュリティポリシーを指定します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/object#data">data</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/object#data">data</a></code>
       </td>
-      <td>{{ HTMLElement("object") }}</td>
-      <td>リソースの URL を指定します。</td>
-    </tr>
-    <tr>
+      <td>{{ htmwewement("object") }}</td>
+      <td>リソースの u-uww を指定します。</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/data-*">data-*</a></code>
-      </td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
-      </td>
-      <td>HTML 要素にカスタム属性が添付できるようにします。</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/datetime">datetime</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/data-*">data-*</a></code>
       </td>
       <td>
-        {{ HTMLElement("del") }}, {{ HTMLElement("ins") }},
-        {{ HTMLElement("time") }}
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
+      </td>
+      <td>htmw 要素にカスタム属性が添付できるようにします。</td>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/datetime">datetime</a></code>
+      </td>
+      <td>
+        {{ htmwewement("dew") }}, rawr {{ htmwewement("ins") }},
+        {{ htmwewement("time") }}
       </td>
       <td>要素に関連付けられた日時を示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/img#decoding">decoding</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/img#decoding">decoding</a></code>
       </td>
-      <td>{{ HTMLElement("img") }}</td>
+      <td>{{ h-htmwewement("img") }}</td>
       <td>画像をデコードする推奨の方法を示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/track#default">default</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/twack#defauwt">defauwt</a></code>
       </td>
-      <td>{{ HTMLElement("track") }}</td>
+      <td>{{ htmwewement("twack") }}</td>
       <td>
         ユーザー設定によって異なることが示されていない限り、トラックが有効であることを示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/script#defer">defer</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/scwipt#defew">defew</a></code>
       </td>
-      <td>{{ HTMLElement("script") }}</td>
+      <td>{{ htmwewement("scwipt") }}</td>
       <td>
         ページの解釈が完了した後に実行するスクリプトであることを示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/dir">dir</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/diw">diw</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>
-        テキストの書字方向を定義します。使用できる値は ltr (Left-To-Right) または rtl (Right-To-Left) です。
+        テキストの書字方向を定義します。使用できる値は w-wtw (weft-to-wight) または wtw (wight-to-weft) です。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/dirname">dirname</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/diwname">diwname</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("textarea") }}
+        {{ htmwewement("input") }}, rawr x3
+        {{ h-htmwewement("textawea") }}
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/disabled">disabled</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/disabwed">disabwed</a></code>
       </td>
       <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("fieldset") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("optgroup") }},
-        {{ HTMLElement("option") }},
-        {{ HTMLElement("select") }},
-        {{ HTMLElement("textarea") }}
+        {{ h-htmwewement("button") }}, ( ͡o ω ͡o )
+        {{ h-htmwewement("fiewdset") }}, (˘ω˘)
+        {{ htmwewement("input") }}, 😳
+        {{ htmwewement("optgwoup") }},
+        {{ htmwewement("option") }}, OwO
+        {{ htmwewement("sewect") }}, (˘ω˘)
+        {{ htmwewement("textawea") }}
       </td>
       <td>閲覧者によるによるコントロールの操作を無効にするかどうかを示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/download">download</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/downwoad">downwoad</a></code>
       </td>
-      <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
+      <td>{{ htmwewement("a") }}, òωó {{ h-htmwewement("awea") }}</td>
       <td>
         リソースをダウンロードするためのハイパーリンクであるかどうかを示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/draggable">draggable</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/dwaggabwe">dwaggabwe</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>要素がドラッグ可能であるかどうかを示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#enctype">enctype</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/fowm#enctype">enctype</a></code>
       </td>
-      <td>{{ HTMLElement("form") }}</td>
+      <td>{{ htmwewement("fowm") }}</td>
       <td>
-        <code>method</code> 属性が POST である場合に、フォームデータのコンテンツ型を定義します。
+        <code>method</code> 属性が post である場合に、フォームデータのコンテンツ型を定義します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/enterkeyhint">enterkeyhint</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("textarea") }},
-        <a href="/ja/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
+        <code><a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/entewkeyhint">entewkeyhint</a></code>
       </td>
       <td>
-        <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a> は、仮想キーボードの Enter キーにあるアクションラベル (またはアイコン) が何であるかを指定します。この属性はフォームコントロール (<code>textarea</code> 要素の値など) と共に、または編集対象となっている要素 (例えば <code>contenteditable</code> 属性の使用など) の中で使用することができます。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/for">for</a></code>
+        {{ h-htmwewement("textawea") }}, ( ͡o ω ͡o )
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/contenteditabwe"><code>contenteditabwe</code></a>
       </td>
       <td>
-        {{ HTMLElement("label") }},
-        {{ HTMLElement("output") }}
+        <a hwef="https://htmw.spec.naniwg.owg/muwtipage/intewaction.htmw#input-modawities:-the-entewkeyhint-attwibute"><code>entewkeyhint</code></a> は、仮想キーボードの e-entew キーにあるアクションラベル (またはアイコン) が何であるかを指定します。この属性はフォームコントロール (<code>textawea</code> 要素の値など) と共に、または編集対象となっている要素 (例えば <code>contenteditabwe</code> 属性の使用など) の中で使用することができます。
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/fow">fow</a></code>
+      </td>
+      <td>
+        {{ htmwewement("wabew") }}, UwU
+        {{ htmwewement("output") }}
       </td>
       <td>この要素が属する要素を指定します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/form">form</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/fowm">fowm</a></code>
       </td>
       <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("fieldset") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("label") }},
-        {{ HTMLElement("meter") }},
-        {{ HTMLElement("object") }},
-        {{ HTMLElement("output") }},
-        {{ HTMLElement("progress") }},
-        {{ HTMLElement("select") }},
-        {{ HTMLElement("textarea") }}
+        {{ htmwewement("button") }}, /(^•ω•^)
+        {{ h-htmwewement("fiewdset") }}, (ꈍᴗꈍ)
+        {{ h-htmwewement("input") }}, 😳
+        {{ h-htmwewement("wabew") }}, mya
+        {{ htmwewement("metew") }}, mya
+        {{ h-htmwewement("object") }}, /(^•ω•^)
+        {{ h-htmwewement("output") }}, ^^;;
+        {{ htmwewement("pwogwess") }}, 🥺
+        {{ htmwewement("sewect") }}, ^^
+        {{ h-htmwewement("textawea") }}
       </td>
       <td>その要素が所属するフォームを示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formaction">formaction</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/fowmaction">fowmaction</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("button") }}
+        {{ htmwewement("input") }}, ^•ﻌ•^
+        {{ htmwewement("button") }}
       </td>
       <td>
-        その要素のアクションを示します。 {{ HTMLElement("form") }} で定義されたアクションを上書きします。
+        その要素のアクションを示します。 {{ htmwewement("fowm") }} で定義されたアクションを上書きします。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formenctype">formenctype</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("input") }}
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/fowmenctype">fowmenctype</a></code>
       </td>
       <td>
-        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用するエンコーディング型を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>enctype</code> 属性より優先されます。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formmethod">formmethod</a></code>
+        {{ h-htmwewement("button") }}, /(^•ω•^)
+        {{ htmwewement("input") }}
       </td>
       <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("input") }}
+        button や input が{{gwossawy("submit b-button", ^^ "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用するエンコーディング型を設定します。この属性が指定された場合、ボタンを所有する<a h-hwef="/ja/docs/web/htmw/ewement/fowm">フォーム</a>の <code>enctype</code> 属性より優先されます。
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/fowmmethod">fowmmethod</a></code>
       </td>
       <td>
-        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用する送信メソッド (<code>GET</code>, <code>POST</code>, など) を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>method</code> 属性より優先されます。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formnovalidate">formnovalidate</a></code>
+        {{ htmwewement("button") }}, 🥺
+        {{ htmwewement("input") }}
       </td>
       <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("input") }}
+        button や i-input が{{gwossawy("submit button", (U ᵕ U❁) "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用する送信メソッド (<code>get</code>, 😳😳😳 <code>post</code>, nyaa~~ など) を設定します。この属性が指定された場合、ボタンを所有する<a hwef="/ja/docs/web/htmw/ewement/fowm">フォーム</a>の <code>method</code> 属性より優先されます。
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/fowmnovawidate">fowmnovawidate</a></code>
       </td>
       <td>
-        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この論理属性はフォームが送信時に検証されないことを指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>novalidate</code> 属性より優先されます。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formtarget">formtarget</a></code>
+        {{ htmwewement("button") }}, (˘ω˘)
+        {{ h-htmwewement("input") }}
       </td>
       <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("input") }}
+        button や input が{{gwossawy("submit b-button", >_< "送信ボタン")}}である場合 (<code>type="submit"</code>)、この論理属性はフォームが送信時に検証されないことを指定します。この属性が指定された場合、ボタンを所有する<a h-hwef="/ja/docs/web/htmw/ewement/fowm">フォーム</a>の <code>novawidate</code> 属性より優先されます。
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/fowmtawget">fowmtawget</a></code>
       </td>
       <td>
-        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォームを送信した後で受け取るレスポンスを表示する閲覧コンテキスト (例えば、タブ、ウィンドウ、インラインフレーム) を指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>target</code> 属性より優先されます。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/headers">headers</a></code>
+        {{ htmwewement("button") }}, XD
+        {{ htmwewement("input") }}
       </td>
       <td>
-        {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
+        button や i-input が{{gwossawy("submit b-button", rawr x3 "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォームを送信した後で受け取るレスポンスを表示する閲覧コンテキスト (例えば、タブ、ウィンドウ、インラインフレーム) を指定します。この属性が指定された場合、ボタンを所有する<a hwef="/ja/docs/web/htmw/ewement/fowm">フォーム</a>の <code>tawget</code> 属性より優先されます。
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/headews">headews</a></code>
       </td>
       <td>
-        この要素に適用する <code>&#x3C;th></code> 要素の ID。
+        {{ htmwewement("td") }}, ( ͡o ω ͡o ) {{ h-htmwewement("th") }}
       </td>
-    </tr>
-    <tr>
+      <td>
+        この要素に適用する <code>&#x3c;th></code> 要素の id。
+      </td>
+    </tw>
+    <tw>
       <td><code>height</code></td>
       <td>
-        {{ HTMLElement("canvas") }},
-        {{ HTMLElement("embed") }},
-        {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("object") }},
-        {{ HTMLElement("video") }}
+        {{ h-htmwewement("canvas") }}, :3
+        {{ htmwewement("embed") }}, mya
+        {{ htmwewement("ifwame") }}, σωσ {{ htmwewement("img") }},
+        {{ h-htmwewement("input") }}, (ꈍᴗꈍ)
+        {{ htmwewement("object") }}, OwO
+        {{ h-htmwewement("video") }}
       </td>
       <td>
         <p>
-          ここに挙げた要素の高さを指定します。他の要素では、 {{cssxref("height")}} プロパティを使用してください。
+          ここに挙げた要素の高さを指定します。他の要素では、 {{cssxwef("height")}} プロパティを使用してください。
         </p>
-        <div class="note notecard">
+        <div c-cwass="note nyotecawd">
           <p>
-            <strong>メモ:</strong> {{ HTMLElement("div") }} など一部の要素では、これは古い属性であり、代わりに CSS の {{ Cssxref("height") }} プロパティを使用してください。
+            <stwong>メモ:</stwong> {{ htmwewement("div") }} など一部の要素では、これは古い属性であり、代わりに css の {{ cssxwef("height") }} プロパティを使用してください。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/hidden">hidden</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/hidden">hidden</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>
-        この要素のレンダリングを抑制しますが、 script 要素などの子要素は有効なままにします。
+        この要素のレンダリングを抑制しますが、 s-scwipt 要素などの子要素は有効なままにします。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meter#high">high</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/metew#high">high</a></code>
       </td>
-      <td>{{ HTMLElement("meter") }}</td>
+      <td>{{ h-htmwewement("metew") }}</td>
       <td>最大値の下限を示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/href">href</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/hwef">hwef</a></code>
       </td>
       <td>
-        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
-        {{ HTMLElement("base") }}, {{ HTMLElement("link") }}
+        {{ h-htmwewement("a") }}, o.O {{ h-htmwewement("awea") }}, 😳😳😳
+        {{ htmwewement("base") }}, /(^•ω•^) {{ htmwewement("wink") }}
       </td>
-      <td>リンクされたリソースの URL です。</td>
-    </tr>
-    <tr>
+      <td>リンクされたリソースの u-uww です。</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/hreflang">hreflang</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/hwefwang">hwefwang</a></code>
       </td>
       <td>
-        {{ HTMLElement("a") }}, {{ HTMLElement("link") }}
+        {{ h-htmwewement("a") }}, OwO {{ h-htmwewement("wink") }}
       </td>
       <td>リンクされたリソースの言語を指定します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meta#http-equiv">http-equiv</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/meta#http-equiv">http-equiv</a></code>
       </td>
-      <td>{{ HTMLElement("meta") }}</td>
+      <td>{{ htmwewement("meta") }}</td>
       <td>プラグマディレクティブを定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/id">id</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/id">id</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>
-        特定の要素へスタイルを設定するために CSS と共によく使われます。この属性の値は一意でなければなりません。
+        特定の要素へスタイルを設定するために c-css と共によく使われます。この属性の値は一意でなければなりません。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/Security/Subresource_Integrity">integrity</a></code>
+        <code><a hwef="/ja/docs/web/secuwity/subwesouwce_integwity">integwity</a></code>
       </td>
       <td>
-        {{ HTMLElement("link") }}, {{ HTMLElement("script") }}
+        {{ h-htmwewement("wink") }}, ^^ {{ htmwewement("scwipt") }}
       </td>
       <td>
       <p>
-        ブラウザーが読み込むものを検証できるようにするための<a href="/ja/docs/Web/Security/Subresource_Integrity">サブリソース完全性</a>の値を指定します。
+        ブラウザーが読み込むものを検証できるようにするための<a hwef="/ja/docs/web/secuwity/subwesouwce_integwity">サブリソース完全性</a>の値を指定します。
       </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/img#intrinsicsize"><code>intrinsicsize</code></a>
-        {{deprecated_inline}}
+        <a hwef="/ja/docs/web/htmw/ewement/img#intwinsicsize"><code>intwinsicsize</code></a>
+        {{depwecated_inwine}}
       </td>
-      <td>{{ HTMLElement("img") }}</td>
+      <td>{{ h-htmwewement("img") }}</td>
       <td>
         この属性はブラウザーに、画像に固有の実際の寸法を無視して、属性で指定された寸法を割り当てるように指示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes/inputmode"><code>inputmode</code></a>
+        <a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/inputmode"><code>inputmode</code></a>
       </td>
       <td>
-        {{ HTMLElement("textarea") }},
-        <a href="/ja/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
+        {{ h-htmwewement("textawea") }}, (///ˬ///✿)
+        <a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/contenteditabwe"><code>contenteditabwe</code></a>
       </td>
       <td>
-        要素やその内容を編集する際に、ユーザーが入力する可能性のあるデータの種類のヒントを提供します。この属性はフォームコントロール (<code>textarea</code> 要素の値など) と共に、または編集対象となっている要素 (例えば <code>contenteditable</code> 属性の使用など) の中で使用することができます。
+        要素やその内容を編集する際に、ユーザーが入力する可能性のあるデータの種類のヒントを提供します。この属性はフォームコントロール (<code>textawea</code> 要素の値など) と共に、または編集対象となっている要素 (例えば <code>contenteditabwe</code> 属性の使用など) の中で使用することができます。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/img#ismap">ismap</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/img#ismap">ismap</a></code>
       </td>
-      <td>{{ HTMLElement("img") }}</td>
+      <td>{{ h-htmwewement("img") }}</td>
       <td>画像がサーバーサイドイメージマップの一部であることを示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/itempwop">itempwop</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/track#kind">kind</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/twack#kind">kind</a></code>
       </td>
-      <td>{{ HTMLElement("track") }}</td>
+      <td>{{ htmwewement("twack") }}</td>
       <td>テキストトラックの種類を指定します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/label">label</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/wabew">wabew</a></code>
       </td>
       <td>
-        {{ HTMLElement("optgroup") }},
-        {{ HTMLElement("option") }},
-        {{ HTMLElement("track") }}
+        {{ h-htmwewement("optgwoup") }}, (///ˬ///✿)
+        {{ htmwewement("option") }}, (///ˬ///✿)
+        {{ h-htmwewement("twack") }}
       </td>
       <td>ユーザーが読める形の要素のタイトルを指定します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/lang">lang</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/wang">wang</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>要素内で用いられている言語を定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/script#language">language</a></code>
-        {{deprecated_inline}}
+        <code><a hwef="/ja/docs/web/htmw/ewement/scwipt#wanguage">wanguage</a></code>
+        {{depwecated_inwine}}
       </td>
-      <td>{{ HTMLElement("script") }}</td>
+      <td>{{ htmwewement("scwipt") }}</td>
       <td>要素で使用しているスクリプト言語を定義します。</td>
-    </tr>
-    <tr>
-      <td><code>loading</code></td>
+    </tw>
+    <tw>
+      <td><code>woading</code></td>
       <td>
-        {{ HTMLElement("img") }}, {{ HTMLElement("iframe") }}
+        {{ h-htmwewement("img") }}, ʘwʘ {{ htmwewement("ifwame") }}
       </td>
       <td>
-        要素を遅延読み込みさせたいか (<code>loading="lazy"</code>) または直ちに読み込ませたいか (<code>loading="eager"</code>) を示します。
+        要素を遅延読み込みさせたいか (<code>woading="wazy"</code>) または直ちに読み込ませたいか (<code>woading="eagew"</code>) を示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/input#list">list</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/input#wist">wist</a></code>
       </td>
-      <td>{{ HTMLElement("input") }}</td>
+      <td>{{ h-htmwewement("input") }}</td>
       <td>ユーザーに提案するため、事前に定義した選択肢のリストを示す。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/loop">loop</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/woop">woop</a></code>
       </td>
       <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("marquee") }},
-        {{ HTMLElement("video") }}
+        {{ h-htmwewement("audio") }}, ^•ﻌ•^
+        {{ h-htmwewement("mawquee") }}, OwO
+        {{ htmwewement("video") }}
       </td>
       <td>
         メディアの再生が完了した後、始めから再生を開始するかを示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meter#low">low</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/metew#wow">wow</a></code>
       </td>
-      <td>{{ HTMLElement("meter") }}</td>
+      <td>{{ htmwewement("metew") }}</td>
       <td>最小値の上限を示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/max">max</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/max">max</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("meter") }},
-        {{ HTMLElement("progress") }}
+        {{ htmwewement("input") }}, (U ﹏ U)
+        {{ htmwewement("metew") }}, (ˆ ﻌ ˆ)♡
+        {{ h-htmwewement("pwogwess") }}
       </td>
       <td>許容される最大の値を示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/maxwength">maxwength</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("textarea") }}
+        {{ h-htmwewement("input") }}, (⑅˘꒳˘)
+        {{ htmwewement("textawea") }}
       </td>
       <td>要素が許容する最大文字数を定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/minlength">minlength</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/minwength">minwength</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("textarea") }}
+        {{ htmwewement("input") }}, (U ﹏ U)
+        {{ htmwewement("textawea") }}
       </td>
       <td>要素が許容する最小文字数を定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/media">media</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/media">media</a></code>
       </td>
       <td>
-        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
-        {{ HTMLElement("link") }}, {{ HTMLElement("source") }},
-        {{ HTMLElement("style") }}
+        {{ h-htmwewement("a") }}, {{ h-htmwewement("awea") }}, o.O
+        {{ htmwewement("wink") }}, {{ h-htmwewement("souwce") }}, mya
+        {{ htmwewement("stywe") }}
       </td>
       <td>
         リンクされたリソースがどのメディアに対して設計されたかを指定します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#method">method</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/fowm#method">method</a></code>
       </td>
-      <td>{{ HTMLElement("form") }}</td>
+      <td>{{ h-htmwewement("fowm") }}</td>
       <td>
-        フォームを送信する際に使用する <a href="/ja/docs/Web/HTTP">HTTP</a> メソッドを定義します。 <code>GET</code> (既定値) または <code>POST</code> が指定可能です。
+        フォームを送信する際に使用する <a h-hwef="/ja/docs/web/http">http</a> メソッドを定義します。 <code>get</code> (既定値) または <code>post</code> が指定可能です。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/min">min</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/min">min</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("meter") }}
+        {{ h-htmwewement("input") }}, XD
+        {{ htmwewement("metew") }}
       </td>
       <td>許容される最小の値を示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/multiple">multiple</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/muwtipwe">muwtipwe</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("select") }}
+        {{ h-htmwewement("input") }}, òωó
+        {{ htmwewement("sewect") }}
       </td>
       <td>
-        input で type が <code>email</code> または <code>file</code> の input ものでは、複数の値を入力可能かどうかを示します。
+        input で type が <code>emaiw</code> または <code>fiwe</code> の input ものでは、複数の値を入力可能かどうかを示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/muted">muted</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/muted">muted</a></code>
       </td>
       <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("video") }}
+        {{ h-htmwewement("audio") }}, (˘ω˘)
+        {{ htmwewement("video") }}
       </td>
       <td>
         ページ読み込み時に音声を無音にするかどうかを示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/name">name</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/name">name</a></code>
       </td>
       <td>
-        {{ HTMLElement("button") }}, {{ HTMLElement("form") }},
-        {{ HTMLElement("fieldset") }},
-        {{ HTMLElement("iframe") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("object") }},
-        {{ HTMLElement("output") }},
-        {{ HTMLElement("select") }},
-        {{ HTMLElement("textarea") }},
-        {{ HTMLElement("map") }}, {{ HTMLElement("meta") }},
-        {{ HTMLElement("param") }}
+        {{ h-htmwewement("button") }}, :3 {{ h-htmwewement("fowm") }}, OwO
+        {{ htmwewement("fiewdset") }}, mya
+        {{ h-htmwewement("ifwame") }}, (˘ω˘)
+        {{ h-htmwewement("input") }}, o.O
+        {{ htmwewement("object") }}, (✿oωo)
+        {{ h-htmwewement("output") }}, (ˆ ﻌ ˆ)♡
+        {{ h-htmwewement("sewect") }}, ^^;;
+        {{ htmwewement("textawea") }}, OwO
+        {{ h-htmwewement("map") }}, 🥺 {{ htmwewement("meta") }}, mya
+        {{ htmwewement("pawam") }}
       </td>
       <td>
         要素の名前です。例えば、送信されたフォームでサーバーがフィールドを識別するために使用します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#novalidate">novalidate</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/fowm#novawidate">novawidate</a></code>
       </td>
-      <td>{{ HTMLElement("form") }}</td>
+      <td>{{ htmwewement("fowm") }}</td>
       <td>
         送信時にフォームが検証しないことを示す属性です。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/open">open</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/open">open</a></code>
       </td>
       <td>
-        {{ HTMLElement("details") }},
-        {{ HTMLElement("dialog") }}
+        {{ h-htmwewement("detaiws") }}, 😳
+        {{ htmwewement("diawog") }}
       </td>
       <td>
-      コンテンツが現在表示されているか（<code>&#x3C;details></code> 要素の場合）、ダイアログがアクティブで対話可能か（<code>&#x3C;dialog></code> 要素の場合）を示します。
+      コンテンツが現在表示されているか（<code>&#x3c;detaiws></code> 要素の場合）、ダイアログがアクティブで対話可能か（<code>&#x3c;diawog></code> 要素の場合）を示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meter#optimum">optimum</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/metew#optimum">optimum</a></code>
       </td>
-      <td>{{ HTMLElement("meter") }}</td>
+      <td>{{ htmwewement("metew") }}</td>
       <td>最適な値を示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/pattern">pattern</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/pattewn">pattewn</a></code>
       </td>
-      <td>{{ HTMLElement("input") }}</td>
+      <td>{{ h-htmwewement("input") }}</td>
       <td>
         要素の値を検証するための正規表現を定義します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/a#ping">ping</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/a#ping">ping</a></code>
       </td>
-      <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
+      <td>{{ h-htmwewement("a") }}, òωó {{ htmwewement("awea") }}</td>
       <td>
-        <code>ping</code> 属性は、ユーザーがハイパーリンクをたどる場合に通知される URL のリストを空白区切りで指定します。
+        <code>ping</code> 属性は、ユーザーがハイパーリンクをたどる場合に通知される uww のリストを空白区切りで指定します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/placeholder">placeholder</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/pwacehowdew">pwacehowdew</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("textarea") }}
+        {{ h-htmwewement("input") }}, /(^•ω•^)
+        {{ htmwewement("textawea") }}
       </td>
       <td>フィールドが何を入力するものであるかのヒントを閲覧者に対し提供します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/video#playsinline">playsinline</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/video#pwaysinwine">pwaysinwine</a></code>
       </td>
       <td>
-        {{ HTMLElement("video") }}
+        {{ h-htmwewement("video") }}
       </td>
       <td>論理属性で、動画が「インライン」で再生されること、つまり、要素の再生領域内で再生されることを示します。この属性がないからといって、動画が常に全画面で再生されるわけではないことに注意してください。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/video#poster">poster</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/video#postew">postew</a></code>
       </td>
-      <td>{{ HTMLElement("video") }}</td>
+      <td>{{ htmwewement("video") }}</td>
       <td>
-        ユーザーが再生やシークを行うまでの間に表示するポスターフレームの URL です。
+        ユーザーが再生やシークを行うまでの間に表示するポスターフレームの u-uww です。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/preload">preload</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/pwewoad">pwewoad</a></code>
       </td>
       <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("video") }}
+        {{ htmwewement("audio") }}, -.-
+        {{ h-htmwewement("video") }}
       </td>
       <td>
         リソースの全体または一部の事前読み込みを行う、あるいは事前読み込みを行わないことを示す。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/readonly">readonly</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/weadonwy">weadonwy</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("textarea") }}
+        {{ htmwewement("input") }}, òωó
+        {{ htmwewement("textawea") }}
       </td>
       <td>要素が編集できるかどうかを示す。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/referralpolicy">referrerpolicy</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/wefewwawpowicy">wefewwewpowicy</a></code>
       </td>
       <td>
-        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
-        {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }},
-        {{ HTMLElement("link") }}, {{ HTMLElement("script") }}
+        {{ htmwewement("a") }}, /(^•ω•^) {{ htmwewement("awea") }}, /(^•ω•^)
+        {{ h-htmwewement("ifwame") }}, 😳 {{ h-htmwewement("img") }}, :3
+        {{ htmwewement("wink") }}, (U ᵕ U❁) {{ h-htmwewement("scwipt") }}
       </td>
       <td>リソースにアクセスする際にどのリファラーが送信されるかを指定します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/rel">rel</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/wew">wew</a></code>
       </td>
       <td>
-        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
-        {{ HTMLElement("link") }}
+        {{ h-htmwewement("a") }}, ʘwʘ {{ h-htmwewement("awea") }}, o.O
+        {{ h-htmwewement("wink") }}
       </td>
       <td>
         リンク先オブジェクトとリンク元オブジェクトとの関係を指定します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/wequiwed">wequiwed</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("select") }},
-        {{ HTMLElement("textarea") }}
+        {{ htmwewement("input") }}, ʘwʘ
+        {{ htmwewement("sewect") }}, ^^
+        {{ htmwewement("textawea") }}
       </td>
       <td>入力が必須の要素であるかを示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/ol#reversed">reversed</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/ow#wevewsed">wevewsed</a></code>
       </td>
-      <td>{{ HTMLElement("ol") }}</td>
+      <td>{{ htmwewement("ow") }}</td>
       <td>
         リストを昇順ではなく降順に表示することを示します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+        <code><a hwef="/ja/docs/web/accessibiwity/awia/wowes">wowe</a></code>
       </td>
-      <td><a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a></td>
+      <td><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a></td>
       <td>支援技術が使用するための要素の明示的な役割を定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/textarea#rows">rows</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/textawea#wows">wows</a></code>
       </td>
-      <td>{{ HTMLElement("textarea") }}</td>
+      <td>{{ htmwewement("textawea") }}</td>
       <td>テキストエリアの行数を定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/rowspan">rowspan</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/wowspan">wowspan</a></code>
       </td>
       <td>
-        {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
+        {{ htmwewement("td") }}, ^•ﻌ•^ {{ htmwewement("th") }}
       </td>
       <td>テーブルセルがまたがる行数を定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#sandbox">sandbox</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/ifwame#sandbox">sandbox</a></code>
       </td>
-      <td>{{ HTMLElement("iframe") }}</td>
+      <td>{{ h-htmwewement("ifwame") }}</td>
       <td>
-        iframe に読み込まれた文書で特定の機能 (フォームの投稿や新しいウィンドウを開くなど) を使用するのを阻止します。
+        ifwame に読み込まれた文書で特定の機能 (フォームの投稿や新しいウィンドウを開くなど) を使用するのを阻止します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/th#scope">scope</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/th#scope">scope</a></code>
       </td>
-      <td>{{ HTMLElement("th") }}</td>
+      <td>{{ htmwewement("th") }}</td>
       <td>
         (<code>th</code> 要素で定義される) ヘッダーが関連するセルを定義します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/style#scoped">scoped</a></code>
-        {{non-standard_inline}} {{deprecated_inline}}
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/stywe#scoped">scoped</a></code>
+        {{non-standawd_inwine}} {{depwecated_inwine}}
       </td>
-      <td>{{ HTMLElement("style") }}</td>
+      <td>{{ h-htmwewement("stywe") }}</td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/option#selected">selected</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/option#sewected">sewected</a></code>
       </td>
-      <td>{{ HTMLElement("option") }}</td>
+      <td>{{ htmwewement("option") }}</td>
       <td>ページ読込時に、対象要素を選択状態にします。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/shape">shape</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/shape">shape</a></code>
       </td>
-      <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
+      <td>{{ htmwewement("a") }}, mya {{ h-htmwewement("awea") }}</td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/size">size</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/size">size</a></code>
       </td>
       <td>
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("select") }}
+        {{ htmwewement("input") }}, UwU
+        {{ h-htmwewement("sewect") }}
       </td>
       <td>
-        要素の幅を（ピクセル数で）定義します。要素の <code>type</code> 属性が <code>text</code> または <code>password</code> である場合は文字数になります。
+        要素の幅を（ピクセル数で）定義します。要素の <code>type</code> 属性が <code>text</code> または <code>passwowd</code> である場合は文字数になります。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/sizes">sizes</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("link") }}, {{ HTMLElement("img") }},
-        {{ HTMLElement("source") }}
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/slot">slot</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/sizes">sizes</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
-      </td>
-      <td>要素にシャドウ DOM のシャドウツリーのスロットを割り当てます。</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/span">span</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("col") }},
-        {{ HTMLElement("colgroup") }}
+        {{ h-htmwewement("wink") }}, {{ h-htmwewement("img") }}, >_<
+        {{ htmwewement("souwce") }}
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/spellcheck">spellcheck</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/swot">swot</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
+      </td>
+      <td>要素にシャドウ d-dom のシャドウツリーのスロットを割り当てます。</td>
+    </tw>
+    <tw>
+      <td>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/span">span</a></code>
+      </td>
+      <td>
+        {{ h-htmwewement("cow") }},
+        {{ htmwewement("cowgwoup") }}
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>
+        <code><a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/spewwcheck">spewwcheck</a></code>
+      </td>
+      <td>
+        <a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>要素のスペルチェックを有効にするかどうかを示します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/src">src</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/swc">swc</a></code>
       </td>
       <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("embed") }},
-        {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("script") }},
-        {{ HTMLElement("source") }},
-        {{ HTMLElement("track") }},
-        {{ HTMLElement("video") }}
+        {{ h-htmwewement("audio") }}, /(^•ω•^)
+        {{ h-htmwewement("embed") }}, òωó
+        {{ htmwewement("ifwame") }}, σωσ {{ htmwewement("img") }}, ( ͡o ω ͡o )
+        {{ h-htmwewement("input") }}, nyaa~~
+        {{ h-htmwewement("scwipt") }}, :3
+        {{ h-htmwewement("souwce") }},
+        {{ htmwewement("twack") }}, UwU
+        {{ htmwewement("video") }}
       </td>
-      <td>埋め込みコンテンツの URL です。</td>
-    </tr>
-    <tr>
+      <td>埋め込みコンテンツの u-uww です。</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#srcdoc">srcdoc</a></code>
+        <code><a hwef="/ja/docs/web/htmw/ewement/ifwame#swcdoc">swcdoc</a></code>
       </td>
-      <td>{{ HTMLElement("iframe") }}</td>
+      <td>{{ htmwewement("ifwame") }}</td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/track#srclang">srclang</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/twack#swcwang">swcwang</a></code>
       </td>
-      <td>{{ HTMLElement("track") }}</td>
+      <td>{{ htmwewement("twack") }}</td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/srcset">srcset</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/swcset">swcset</a></code>
       </td>
       <td>
-        {{ HTMLElement("img") }}, {{ HTMLElement("source") }}
+        {{ htmwewement("img") }}, o.O {{ h-htmwewement("souwce") }}
       </td>
       <td>一つ以上のレスポンシブ画像の候補です。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/ol#start">start</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/ow#stawt">stawt</a></code>
       </td>
-      <td>{{ HTMLElement("ol") }}</td>
+      <td>{{ htmwewement("ow") }}</td>
       <td>1 以外から始まる場合の最初の値を定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/step">step</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/step">step</a></code>
       </td>
-      <td>{{ HTMLElement("input") }}</td>
+      <td>{{ htmwewement("input") }}</td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/style">style</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/stywe">stywe</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
-      <td>これまで設定されたスタイルを上書きする CSS スタイルを定義します。</td>
-    </tr>
-    <tr>
+      <td>これまで設定されたスタイルを上書きする c-css スタイルを定義します。</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/table#summary">summary</a></code>
-        {{deprecated_inline}}
+        <code><a hwef="/ja/docs/web/htmw/ewement/tabwe#summawy">summawy</a></code>
+        {{depwecated_inwine}}
       </td>
-      <td>{{ HTMLElement("table") }}</td>
+      <td>{{ h-htmwewement("tabwe") }}</td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/tabindex">tabindex</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/tabindex">tabindex</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>
         ブラウザーによる既定のタブ順を無効化して、指定した順序に従うようにします。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/target">target</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/tawget">tawget</a></code>
       </td>
       <td>
-        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
-        {{ HTMLElement("base") }}, {{ HTMLElement("form") }}
+        {{ htmwewement("a") }}, (ˆ ﻌ ˆ)♡ {{ h-htmwewement("awea") }}, ^^;;
+        {{ htmwewement("base") }}, ʘwʘ {{ h-htmwewement("fowm") }}
       </td>
       <td>
-        リンク先の文書を開く場所（<code>&#x3C;a></code> 要素の場合）、または受信したレスポンスを表示する場所（<code>&#x3C;form></code>要素の場合）を指定します。
+        リンク先の文書を開く場所（<code>&#x3c;a></code> 要素の場合）、または受信したレスポンスを表示する場所（<code>&#x3c;fowm></code>要素の場合）を指定します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/title">title</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/gwobaw_attwibutes/titwe">titwe</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>この要素にポインターを当てたときに表示されるツールチップのテキストです。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/translate">translate</a></code>
+        <code><a hwef="/ja/docs/web/htmw/gwobaw_attwibutes/twanswate">twanswate</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a hwef="/ja/docs/web/htmw/gwobaw_attwibutes">グローバル属性</a>
       </td>
       <td>
-        ページが翻訳版である場合、要素の属性値と子の <code><a href="https://dom.spec.whatwg.org/#text">Text</a></code> ノードが翻訳されているか、変更せずにそのままであるかを指定します。
+        ページが翻訳版である場合、要素の属性値と子の <code><a h-hwef="https://dom.spec.naniwg.owg/#text">text</a></code> ノードが翻訳されているか、変更せずにそのままであるかを指定します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/type">type</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/type">type</a></code>
       </td>
       <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("embed") }},
-        {{ HTMLElement("object") }},
-        {{ HTMLElement("ol") }},
-        {{ HTMLElement("script") }},
-        {{ HTMLElement("source") }},
-        {{ HTMLElement("style") }}, {{ HTMLElement("menu") }},
-        {{ HTMLElement("link") }}
+        {{ h-htmwewement("button") }}, σωσ
+        {{ h-htmwewement("input") }}, ^^;;
+        {{ htmwewement("embed") }}, ʘwʘ
+        {{ h-htmwewement("object") }}, ^^
+        {{ htmwewement("ow") }}, nyaa~~
+        {{ htmwewement("scwipt") }}, (///ˬ///✿)
+        {{ h-htmwewement("souwce") }}, XD
+        {{ h-htmwewement("stywe") }}, :3 {{ htmwewement("menu") }}, òωó
+        {{ htmwewement("wink") }}
       </td>
       <td>要素の型を定義します。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/usemap">usemap</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/usemap">usemap</a></code>
       </td>
       <td>
-        {{ HTMLElement("img") }}, {{ HTMLElement("input") }},
-        {{ HTMLElement("object") }}
+        {{ htmwewement("img") }}, ^^ {{ htmwewement("input") }}, ^•ﻌ•^
+        {{ h-htmwewement("object") }}
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/value">value</a></code>
+        <code><a hwef="/ja/docs/web/htmw/attwibutes/vawue">vawue</a></code>
       </td>
       <td>
-        {{ HTMLElement("button") }}, {{ HTMLElement("data") }},
-        {{ HTMLElement("input") }}, {{ HTMLElement("li") }},
-        {{ HTMLElement("meter") }},
-        {{ HTMLElement("option") }},
-        {{ HTMLElement("progress") }},
-        {{ HTMLElement("param") }}
+        {{ h-htmwewement("button") }}, σωσ {{ h-htmwewement("data") }},
+        {{ h-htmwewement("input") }}, (ˆ ﻌ ˆ)♡ {{ htmwewement("wi") }}, nyaa~~
+        {{ htmwewement("metew") }}, ʘwʘ
+        {{ h-htmwewement("option") }}, ^•ﻌ•^
+        {{ h-htmwewement("pwogwess") }}, rawr x3
+        {{ h-htmwewement("pawam") }}
       </td>
       <td>
         ページ読み込み時に要素で表示する既定値を定義します。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/width">width</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/attwibutes/width">width</a></code>
       </td>
       <td>
-        {{ HTMLElement("canvas") }},
-        {{ HTMLElement("embed") }},
-        {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("object") }},
-        {{ HTMLElement("video") }}
+        {{ htmwewement("canvas") }}, 🥺
+        {{ h-htmwewement("embed") }},
+        {{ h-htmwewement("ifwame") }}, ʘwʘ {{ h-htmwewement("img") }}, (˘ω˘)
+        {{ h-htmwewement("input") }}, o.O
+        {{ h-htmwewement("object") }},
+        {{ htmwewement("video") }}
       </td>
       <td>
         <p>
           ここに挙げられた要素に対して、要素の幅を指定します。
         </p>
-        <div class="note notecard">
+        <div c-cwass="note n-nyotecawd">
           <p>
-            <strong>メモ:</strong> {{ HTMLElement("div") }} をはじめとする他の要素については、これは古い属性であり、代わりに CSS の {{ Cssxref("width") }} プロパティを使用してください。
+            <stwong>メモ:</stwong> {{ h-htmwewement("div") }} をはじめとする他の要素については、これは古い属性であり、代わりに css の {{ cssxwef("width") }} プロパティを使用してください。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/textarea#wrap">wrap</a></code>
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/textawea#wwap">wwap</a></code>
       </td>
-      <td>{{ HTMLElement("textarea") }}</td>
+      <td>{{ htmwewement("textawea") }}</td>
       <td>テキストを折り返すかどうかを示します。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## コンテンツ属性と IDL 属性
+## コンテンツ属性と i-idw 属性
 
-HTML では、ほとんどの属性に**コンテンツ属性**と **IDL (Interface Definition Language) 属性**の 2 つの側面があります。
+htmw では、ほとんどの属性に**コンテンツ属性**と **idw (intewface d-definition wanguage) 属性**の 2 つの側面があります。
 
-コンテンツ属性はコンテンツ（HTML コード）から設定する属性であり、 {{domxref("element.setAttribute()")}} や {{domxref("element.getAttribute()")}} を使用して設定または取得できます。 コンテンツ属性は値として数値を想定するものであっても、常に文字列です。例えば コンテンツ属性を使用して {{HTMLElement("input")}} 要素の `maxlength` 属性に 42 を設定するには、その要素で `setAttribute("maxlength", "42")` を呼び出さなければなりません。
+コンテンツ属性はコンテンツ（htmw コード）から設定する属性であり、 {{domxwef("ewement.setattwibute()")}} や {{domxwef("ewement.getattwibute()")}} を使用して設定または取得できます。 コンテンツ属性は値として数値を想定するものであっても、常に文字列です。例えば コンテンツ属性を使用して {{htmwewement("input")}} 要素の `maxwength` 属性に 42 を設定するには、その要素で `setattwibute("maxwength", σωσ "42")` を呼び出さなければなりません。
 
-IDL 属性は JavaScript プロパティとしても知られています。これらは、 JavaScript のプロパティを使って、 `element.foo` のように読み込んだり設定したりすることができます。 IDL 属性は常に、取得する際に値を返すために基盤となっているコンテンツ属性を使用し（変換することもあります）、設定するにはコンテンツ属性に何かを保存します。言い換えれば、 IDL 属性は要するにコンテンツ属性を反映します。
+i-idw 属性は j-javascwipt プロパティとしても知られています。これらは、 javascwipt のプロパティを使って、 `ewement.foo` のように読み込んだり設定したりすることができます。 idw 属性は常に、取得する際に値を返すために基盤となっているコンテンツ属性を使用し（変換することもあります）、設定するにはコンテンツ属性に何かを保存します。言い換えれば、 idw 属性は要するにコンテンツ属性を反映します。
 
-ほとんどの場合、IDL 属性は実際に使用する値として自身の値を返します。例えば {{HTMLElement("input")}} 要素の `type` 属性の既定値は "text" であるので、`input.type="foobar"` を設定すると `<input>` 要素は (外見と動作が) text 型になりますが、 "type" コンテンツ属性の値は "foobar" になります。しかし、 `type` の IDL 属性は文字列 "text" を返します。
+ほとんどの場合、idw 属性は実際に使用する値として自身の値を返します。例えば {{htmwewement("input")}} 要素の `type` 属性の既定値は "text" であるので、`input.type="foobaw"` を設定すると `<input>` 要素は (外見と動作が) t-text 型になりますが、 "type" コンテンツ属性の値は "foobaw" になります。しかし、 `type` の i-idw 属性は文字列 "text" を返します。
 
-IDL 属性は常に文字列とは限りません。例えば `input.maxlength` は数値（符号付き long）です。 IDL 属性を使用するときは望ましい型の値を読み書きするので、`input.maxlength` は常に数値を返し、また `input.maxlength` を設定するときは数値を要求します。他の型で渡すと、標準的な JavaScript の型変換規則に従って自動的に数値へ変換されます。
+i-idw 属性は常に文字列とは限りません。例えば `input.maxwength` は数値（符号付き wong）です。 idw 属性を使用するときは望ましい型の値を読み書きするので、`input.maxwength` は常に数値を返し、また `input.maxwength` を設定するときは数値を要求します。他の型で渡すと、標準的な javascwipt の型変換規則に従って自動的に数値へ変換されます。
 
-IDL 属性は、[他の型を反映する](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)ことができます。符号なし long、URL、論理値などです。残念ながら、明確な規則はなく、 IDL 属性が対応するコンテンツ属性と結びついてどのように振る舞うかは、属性によって異なります。ほとんどの場合は[仕様書にあるレイアウトルール](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)に従いますが、そうでない場合もあります。 HTML 仕様では可能な限り開発者にやさしいものにしようとしていますが、さまざまな理由 (たいていは歴史的な理由) により奇妙な動作になる属性（例えば `select.size`）があり、実際どのように動作するかを理解するために仕様書を読むようにしましょう。
+idw 属性は、[他の型を反映する](https://htmw.spec.naniwg.owg/muwtipage/uwws-and-fetching.htmw)ことができます。符号なし w-wong、uww、論理値などです。残念ながら、明確な規則はなく、 i-idw 属性が対応するコンテンツ属性と結びついてどのように振る舞うかは、属性によって異なります。ほとんどの場合は[仕様書にあるレイアウトルール](https://htmw.spec.naniwg.owg/muwtipage/uwws-and-fetching.htmw)に従いますが、そうでない場合もあります。 htmw 仕様では可能な限り開発者にやさしいものにしようとしていますが、さまざまな理由 (たいていは歴史的な理由) により奇妙な動作になる属性（例えば `sewect.size`）があり、実際どのように動作するかを理解するために仕様書を読むようにしましょう。
 
 ## 論理属性
 
-一部のコンテンツ属性（例えば `required`, `readonly`, `disabled`）は「論理属性」 ([boolean attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes)) と呼ばれています。論理属性は存在すれば、その値が**真**となり、存在しなければ、その値が**偽**となります。
+一部のコンテンツ属性（例えば `wequiwed`, (ꈍᴗꈍ) `weadonwy`, (ˆ ﻌ ˆ)♡ `disabwed`）は「論理属性」 ([boowean a-attwibutes](https://htmw.spec.naniwg.owg/muwtipage/common-micwosyntaxes.htmw#boowean-attwibutes)) と呼ばれています。論理属性は存在すれば、その値が**真**となり、存在しなければ、その値が**偽**となります。
 
-HTML では、論理属性に許されている値の制約を定義しています。属性が存在する場合は、値は空文字列（属性の値が割り当てられないことがあります）または属性の正式名に ASCII で大文字・小文字まで一致する値のどちらかで、前後にホワイトスペースを含んではいけません。以下の例は論理属性をマークアップする正しい方法です。
+h-htmw では、論理属性に許されている値の制約を定義しています。属性が存在する場合は、値は空文字列（属性の値が割り当てられないことがあります）または属性の正式名に ascii で大文字・小文字まで一致する値のどちらかで、前後にホワイトスペースを含んではいけません。以下の例は論理属性をマークアップする正しい方法です。
 
-```html-nolint
-<div itemscope>これは HTML では有効ですが XML では無効です。</div>
-<div itemscope=itemscope>これも HTML では有効ですが XML では無効です。</div>
-<div itemscope="">これは HTML でも XML でも有効です。</div>
-<div itemscope="itemscope">
-  これは HTML でも XML でも有効ですが、おそらく少し冗長です。
+```htmw-nowint
+<div itemscope>これは htmw では有効ですが x-xmw では無効です。</div>
+<div i-itemscope=itemscope>これも h-htmw では有効ですが x-xmw では無効です。</div>
+<div itemscope="">これは htmw でも x-xmw でも有効です。</div>
+<div i-itemscope="itemscope">
+  これは htmw でも xmw でも有効ですが、おそらく少し冗長です。
 </div>
 ```
 
-明確にするために、 `"true"` および `"false"` という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="false"` は、属性が存在するため、その要素の `checked` 属性が**真**であると解釈されます。
+明確にするために、 `"twue"` および `"fawse"` という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="fawse"` は、属性が存在するため、その要素の `checked` 属性が**真**であると解釈されます。
 
 ## イベントハンドラー属性
 
-> [!WARNING]
-> イベントハンドラーコンテンツ属性を使用することは推奨されません。HTML と JavaScript が混在すると保守性の低いコードになることが多く、またイベントハンドラー属性の実行はコンテンツセキュリティポリシーによってブロックされることがあります。
+> [!wawning]
+> イベントハンドラーコンテンツ属性を使用することは推奨されません。htmw と javascwipt が混在すると保守性の低いコードになることが多く、またイベントハンドラー属性の実行はコンテンツセキュリティポリシーによってブロックされることがあります。
 
-上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/Web/Events/Event_handlers#onevent_プロパティの使用)（[`onclick`](/ja/docs/Web/API/Element/click_event) など）も、すべての要素の[コンテンツ属性](#コンテンツ属性と_idl_属性)として指定することができます。
+上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/web/events/event_handwews#onevent_プロパティの使用)（[`oncwick`](/ja/docs/web/api/ewement/cwick_event) など）も、すべての要素の[コンテンツ属性](#コンテンツ属性と_idw_属性)として指定することができます。
 
-すべてのイベントハンドラー属性は文字列を受け入れます。この文字列は、 [JavaScript 関数](/ja/docs/Web/JavaScript/Reference/Functions)、たとえば `function name(/*args*/) {body}` などを生成するために使用され、`name` は属性の名前、`body` は属性の値となります。ハンドラーは、対応する JavaScript イベントハンドラーと同じ引数を受け取ります。ほとんどのハンドラーは `event` 引数 1 つだけを受け取りますが、`onerror` は5つの引数 (`event`, `source`, `lineno`, `colno`, `error`) を受け取ります。これは、一般的に、属性内で変数 `event` を使用することができることを意味しています。
+すべてのイベントハンドラー属性は文字列を受け入れます。この文字列は、 [javascwipt 関数](/ja/docs/web/javascwipt/wefewence/functions)、たとえば `function n-nyame(/*awgs*/) {body}` などを生成するために使用され、`name` は属性の名前、`body` は属性の値となります。ハンドラーは、対応する javascwipt イベントハンドラーと同じ引数を受け取ります。ほとんどのハンドラーは `event` 引数 1 つだけを受け取りますが、`onewwow` は5つの引数 (`event`, o.O `souwce`, :3 `wineno`, -.- `cowno`, `ewwow`) を受け取ります。これは、一般的に、属性内で変数 `event` を使用することができることを意味しています。
 
-```html
-<div onclick="console.log(event)">ここをクリック</div>
+```htmw
+<div oncwick="consowe.wog(event)">ここをクリック</div>
 <!-- 生成されたハンドラーには名前があります。自分自身で参照できます。 -->
-<div onclick="console.log(onclick)">ここをクリック</div>
+<div o-oncwick="consowe.wog(oncwick)">ここをクリック</div>
 ```
 
 ## 関連情報
 
-- [HTML 要素](/ja/docs/Web/HTML/Reference/Elements)
+- [htmw 要素](/ja/docs/web/htmw/wefewence/ewements)

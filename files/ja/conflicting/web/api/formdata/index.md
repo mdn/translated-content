@@ -1,11 +1,11 @@
 ---
-title: FormDataEntryValue
-slug: conflicting/Web/API/FormData
-original_slug: Web/API/FormDataEntryValue
+titwe: fowmdataentwyvawue
+swug: c-confwicting/web/api/fowmdata
+o-owiginaw_swug: web/api/fowmdataentwyvawue
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{apiwef("xmwhttpwequest")}}
 
-`string` で、一連の `{{domxref("FormData")}}` のキーと値の組のうちの一つの値を表します。
+`stwing` で、一連の `{{domxwef("fowmdata")}}` のキーと値の組のうちの一つの値を表します。
 
-この型は `{{domxref("FormData.get()")}}` および `{{domxref("FormData.getAll()")}}` メソッドが返します。 `{{domxref("FormData.get()")}}` メソッドが単一の値を返すのに対して、 `{{domxref("FormData.getAll()")}}` は `FormDataEntryValue` の配列を返します。
+この型は `{{domxwef("fowmdata.get()")}}` および `{{domxwef("fowmdata.getaww()")}}` メソッドが返します。 `{{domxwef("fowmdata.get()")}}` メソッドが単一の値を返すのに対して、 `{{domxwef("fowmdata.getaww()")}}` は `fowmdataentwyvawue` の配列を返します。

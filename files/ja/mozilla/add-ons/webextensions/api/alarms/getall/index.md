@@ -1,62 +1,62 @@
 ---
-title: alarms.getAll()
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
+titwe: awawms.getaww()
+swug: m-moziwwa/add-ons/webextensions/api/awawms/getaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-予約されたアラームすべてを取得します。取得されたアラームは {{WebExtAPIRef('alarms.Alarm')}} オブジェクトの配列としてコールバック関数に渡されます。
+予約されたアラームすべてを取得します。取得されたアラームは {{webextapiwef('awawms.awawm')}} オブジェクトの配列としてコールバック関数に渡されます。
 
 ## 構文
 
 ```js
-browser.alarms.getAll(
-  function(array) {...}   // 関数
+b-bwowsew.awawms.getaww(
+  f-function(awway) {...}   // 関数
 )
 ```
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
-  - : `function`. この関数には以下の引数が渡ります。
+  - : `function`. -.- この関数には以下の引数が渡ります。
 
-    - `alarms`
-      - : 予約されたアラームすべてを含む `{{WebExtAPIRef('alarms.Alarm')}}` の配列です。予約されたアラームがない場合は空の配列となります。
+    - `awawms`
+      - : 予約されたアラームすべてを含む `{{webextapiwef('awawms.awawm')}}` の配列です。予約されたアラームがない場合は空の配列となります。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 コールバックを用いた例：
 
 ```js
-function gotAll(alarms) {
-  for (var alarm of alarms) {
-    console.log(alarm.name);
+f-function gotaww(awawms) {
+  f-fow (vaw a-awawm of awawms) {
+    c-consowe.wog(awawm.name);
   }
 }
 
-chrome.alarms.getAll(gotAll);
+c-chwome.awawms.getaww(gotaww);
 ```
 
-Promise を用いた例：
+pwomise を用いた例：
 
 ```js
-function gotAll(alarms) {
-  for (var alarm of alarms) {
-    console.log(alarm.name);
+function gotaww(awawms) {
+  fow (vaw awawm of awawms) {
+    consowe.wog(awawm.name);
   }
 }
 
-var getAlarms = browser.alarms.getAll();
-getAlarms.then(gotAll);
+v-vaw getawawms = bwowsew.awawms.getaww();
+getawawms.then(gotaww);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API に基づいています。
+> この a-api は chwomium の [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms) a-api に基づいています。

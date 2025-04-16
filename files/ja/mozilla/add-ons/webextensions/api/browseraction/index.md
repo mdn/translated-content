@@ -1,101 +1,101 @@
 ---
-title: browserAction
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction
+titwe: bwowsewaction
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 ブラウザーのツールバーにボタンを追加します。
 
-[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)はブラウザーのツールバー内のボタンです。
+[ブラウザーアクション](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button)はブラウザーのツールバー内のボタンです。
 
-これをボタンつきポップアップと関連付けられます。ポップアップは通常のウェブページ同様に、HTML, CSS, JavaScript を使って指定できます。ポップアップの中で動く JavaScript はバックグラウンドスクリプトとすべて同じ WebExtension API にアクセスできますが、グローバルコンテキストはブラウザーに表示される現在のページではなく、ポップアップになります。ウェブページに影響するには [messages](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging) 経由で通信する必要があります。
+これをボタンつきポップアップと関連付けられます。ポップアップは通常のウェブページ同様に、htmw, >w< c-css, javascwipt を使って指定できます。ポップアップの中で動く j-javascwipt はバックグラウンドスクリプトとすべて同じ w-webextension api にアクセスできますが、グローバルコンテキストはブラウザーに表示される現在のページではなく、ポップアップになります。ウェブページに影響するには [messages](/ja/docs/moziwwa/add-ons/webextensions/modify_a_web_page#messaging) 経由で通信する必要があります。
 
 ユーザーがアイコンをクリックした時に、ポップアップを指定していると、表示され — そしてコンテンツが読み込まれるでしょう 。ポップアップを指定していない時は、ユーザーがアイコンをクリックした時、拡張機能にイベントがディスパッチされます。
 
-たいていのブラウザーアクションのプロパティは、manifest.json 内の [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) キーを用いて宣言的に定義できます。
+たいていのブラウザーアクションのプロパティは、manifest.json 内の [`bwowsew_action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) キーを用いて宣言的に定義できます。
 
-`browserAction` API では、次が可能です:
+`bwowsewaction` a-api では、次が可能です:
 
-- {{WebExtAPIRef("browserAction.onClicked")}} を使ってアイコンのクリックをリッスンする
-- アイコンのプロパティ — アイコン、タイトル、ポップアップなど、の取得、設定。これはすべてのタブを通してグローバルにも、またはタブの ID を追加引数で渡すことで特定のタブだけにも取得、設定できます。
+- {{webextapiwef("bwowsewaction.oncwicked")}} を使ってアイコンのクリックをリッスンする
+- アイコンのプロパティ — アイコン、タイトル、ポップアップなど、の取得、設定。これはすべてのタブを通してグローバルにも、またはタブの i-id を追加引数で渡すことで特定のタブだけにも取得、設定できます。
 
 ## 型
 
-- {{WebExtAPIRef("browserAction.ColorArray")}}
-  - : RGBA 色を決める 0-255 の範囲の 4 整数の配列
-- {{WebExtAPIRef("browserAction.ImageDataType")}}
-  - : 画像のピクセルデータ。[`ImageData`](/ja/docs/Web/API/ImageData) オブジェクト (例えば {{htmlelement("canvas")}} 要素から) でないといけない。
+- {{webextapiwef("bwowsewaction.cowowawway")}}
+  - : w-wgba 色を決める 0-255 の範囲の 4 整数の配列
+- {{webextapiwef("bwowsewaction.imagedatatype")}}
+  - : 画像のピクセルデータ。[`imagedata`](/ja/docs/web/api/imagedata) オブジェクト (例えば {{htmwewement("canvas")}} 要素から) でないといけない。
 
 ## 関数
 
-- {{WebExtAPIRef("browserAction.setTitle()")}}
+- {{webextapiwef("bwowsewaction.settitwe()")}}
   - : ブラウザーアクションのタイトルをセットする。ツールチップに表示される。
-- {{WebExtAPIRef("browserAction.getTitle()")}}
+- {{webextapiwef("bwowsewaction.gettitwe()")}}
   - : ブラウザーアクションのタイトルを取得します。
-- {{WebExtAPIRef("browserAction.setIcon()")}}
+- {{webextapiwef("bwowsewaction.seticon()")}}
   - : ブラウザーアクションのアイコンをセットします。
-- {{WebExtAPIRef("browserAction.setPopup()")}}
-  - : ユーザーがブラウザーアクションのアイコンをクリックした時に表示されるポップアップの HTML 文書をセットします。
-- {{WebExtAPIRef("browserAction.getPopup()")}}
-  - : ブラウザーアクションのポップアップとしてセットされた HTML 文書を取得します。
-- {{WebExtAPIRef("browserAction.openPopup()")}}
+- {{webextapiwef("bwowsewaction.setpopup()")}}
+  - : ユーザーがブラウザーアクションのアイコンをクリックした時に表示されるポップアップの h-htmw 文書をセットします。
+- {{webextapiwef("bwowsewaction.getpopup()")}}
+  - : ブラウザーアクションのポップアップとしてセットされた h-htmw 文書を取得します。
+- {{webextapiwef("bwowsewaction.openpopup()")}}
   - : ブラウザーアクションのポップアップを開きます。
-- {{WebExtAPIRef("browserAction.setBadgeText()")}}
+- {{webextapiwef("bwowsewaction.setbadgetext()")}}
   - : ブラウザーアクションのバッジテキストをセットします。バッジはアイコンの上部に表示されます。
-- {{WebExtAPIRef("browserAction.getBadgeText()")}}
+- {{webextapiwef("bwowsewaction.getbadgetext()")}}
   - : ブラウザーアクションのバッジのテキストを取得します。
-- {{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}
+- {{webextapiwef("bwowsewaction.setbadgebackgwoundcowow()")}}
   - : バッジの背景色を指定します。
-- {{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}
+- {{webextapiwef("bwowsewaction.getbadgebackgwoundcowow()")}}
   - : バッジの背景色を取得します。
-- {{WebExtAPIRef("browserAction.enable()")}}
+- {{webextapiwef("bwowsewaction.enabwe()")}}
   - : タブのブラウザーアクションを有効にします。既定では、ブラウザーアクションはすべてのタブで有効です。
-- {{WebExtAPIRef("browserAction.disable()")}}
+- {{webextapiwef("bwowsewaction.disabwe()")}}
   - : タブのブラウザーアクションを無効にします。つまりタブがアクティブでもクリックできません。
-- {{WebExtAPIRef("browserAction.isEnabled()")}}
+- {{webextapiwef("bwowsewaction.isenabwed()")}}
   - : ブラウザーアクションが有効か否かをチェックします。
 
 ## イベント
 
-- {{WebExtAPIRef("browserAction.onClicked")}}
+- {{webextapiwef("bwowsewaction.oncwicked")}}
   - : ブラウザーアクションがクリックされた時に発火します。このイベントはブラウザーアクションがポップアップ付きでない場合は発火しません。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) API に基づいています。この文書は Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) から得ています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は chwomium の [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction) api に基づいています。この文書は chwomium コードの [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) から得ています。micwosoft edge の実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは cweative commons a-attwibution 3.0 united states w-wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (U ﹏ U) aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy fowms, (ˆ ﻌ ˆ)♡ w-with ow without
+// modification, 😳😳😳 awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) this wist o-of conditions and the fowwowing d-discwaimew. (///ˬ///✿)
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, 😳 t-this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. 😳
+//    * nyeithew the n-name of googwe inc. σωσ nyow the nyames o-of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, OwO incwuding, /(^•ω•^) but nyot
+// w-wimited to, 😳😳😳 the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. ( ͡o ω ͡o ) in no event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, >_< i-indiwect, >w< incidentaw, rawr
+// s-speciaw, 😳 exempwawy, o-ow consequentiaw d-damages (incwuding, >w< b-but nyot
+// wimited to, (⑅˘꒳˘) pwocuwement of substitute goods ow s-sewvices; woss of use, OwO
+// data, (ꈍᴗꈍ) ow pwofits; ow business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, w-whethew i-in contwact, 😳 stwict w-wiabiwity, 😳😳😳 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, mya even if a-advised of the possibiwity o-of such d-damage. mya
 -->

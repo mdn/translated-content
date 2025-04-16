@@ -1,31 +1,31 @@
 ---
-title: Firefox 104 for developers
-slug: Mozilla/Firefox/Releases/104
+titwe: fiwefox 104 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/104
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 104 の変更点をまとめています。Firefox 104 は、2022 年 8 月 23 日にリリースされました。
+このページでは、開発者に影響する f-fiwefox 104 の変更点をまとめています。fiwefox 104 は、2022 年 8 月 23 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
-### HTML
+### h-htmw
 
 変更なし。
 
-### CSS
+### c-css
 
-### JavaScript
+### j-javascwipt
 
-- {{jsxref("Array.prototype.findLast()")}}、{{jsxref("Array.prototype.findLastIndex()")}}、{{jsxref("TypedArray.prototype.findLast()")}}、{{jsxref("TypedArray.prototype.findLastIndex()")}} メソッドをサポートしました。
-  これらはそれぞれ、{{jsxref("Array")}} または {{jsxref("TypedArray")}} で、与えたテスト関数にマッチする最後の要素の値または添字を発見するために使用します。
-  (詳しくは [Firefox バグ 1775026](https://bugzil.la/1775026) をご覧ください)
+- {{jsxwef("awway.pwototype.findwast()")}}、{{jsxwef("awway.pwototype.findwastindex()")}}、{{jsxwef("typedawway.pwototype.findwast()")}}、{{jsxwef("typedawway.pwototype.findwastindex()")}} メソッドをサポートしました。
+  これらはそれぞれ、{{jsxwef("awway")}} または {{jsxwef("typedawway")}} で、与えたテスト関数にマッチする最後の要素の値または添字を発見するために使用します。
+  (詳しくは [fiwefox バグ 1775026](https://bugziw.wa/1775026) をご覧ください)
 
-- [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) および [`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) で [ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) を使用したとき、シリアライズした結果に (`stack` を持つエラーの型で) [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
-  [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) など、ほかの API を使用してエラーを送信する場合は、まだ `stack` をシリアライズしません
-  (詳しくは [Firefox バグ 1774866](https://bugzil.la/1774866) をご覧ください)。
+- [`window.postmessage()`](/ja/docs/web/api/window/postmessage) および [`stwuctuwedcwone()`](/ja/docs/web/api/window/stwuctuwedcwone) で [ネイティブなエラーの型](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow#ewwow_types) を使用したとき、シリアライズした結果に (`stack` を持つエラーの型で) [`stack`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/stack) プロパティも含まれるようになりました。
+  [`wowkew.postmessage()`](/ja/docs/web/api/wowkew/postmessage) など、ほかの a-api を使用してエラーを送信する場合は、まだ `stack` をシリアライズしません
+  (詳しくは [fiwefox バグ 1774866](https://bugziw.wa/1774866) をご覧ください)。
 
-### HTTP
+### h-http
 
 変更なし。
 
@@ -33,48 +33,48 @@ slug: Mozilla/Firefox/Releases/104
 
 変更なし。
 
-### API
+### a-api
 
-#### DOM
+#### dom
 
-- [`HTMLElement.focus()`](/ja/docs/Web/API/HTMLElement/focus) で引数 [`option.focusVisible`](/ja/docs/Web/API/HTMLElement/focus#focusvisible) をサポートしました。これは要素にフォーカスした後に、視覚的な表示をブラウザーに強制するために使用できます。
+- [`htmwewement.focus()`](/ja/docs/web/api/htmwewement/focus) で引数 [`option.focusvisibwe`](/ja/docs/web/api/htmwewement/focus#focusvisibwe) をサポートしました。これは要素にフォーカスした後に、視覚的な表示をブラウザーに強制するために使用できます。
   ブラウザーの実装でアクセシビリティが向上すると判断した場合に、フォーカスした要素へ自動的に視覚的な表示を行う可能性があることに注意してください。
-  (詳しくは [Firefox バグ 1765083](https://bugzil.la/1765083) をご覧ください)
+  (詳しくは [fiwefox バグ 1765083](https://bugziw.wa/1765083) をご覧ください)
 
-#### Canvas
+#### canvas
 
-- `fontKerning` プロパティを [`CanvasRenderingContext2D`](/ja/docs/Web/API/CanvasRenderingContext2D/fontKerning) および [`OffscreenCanvasRenderingContext2D`](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D) でサポートしました。canvas やオフスクリーン canvas で、文字を描画するときにカーニングをどのように使用するかを開発者が指定できます ([Firefox バグ 1778908](https://bugzil.la/1778908))。
+- `fontkewning` プロパティを [`canvaswendewingcontext2d`](/ja/docs/web/api/canvaswendewingcontext2d/fontkewning) および [`offscweencanvaswendewingcontext2d`](/ja/docs/web/api/offscweencanvaswendewingcontext2d) でサポートしました。canvas やオフスクリーン canvas で、文字を描画するときにカーニングをどのように使用するかを開発者が指定できます ([fiwefox バグ 1778908](https://bugziw.wa/1778908))。
 
-#### Media、WebRTC、Web Audio
+#### media、webwtc、web audio
 
-#### SVG
+#### svg
 
-- SVG の style 要素を有効・無効にしたり、要素の無効状態を確認したりするために使用する、[`SVGStyleElement.disabled`](/ja/docs/Web/API/SVGStyleElement/disabled) プロパティが使用可能になりました。
-  これは [`HTMLStyleElement.disabled`](/ja/docs/Web/API/HTMLStyleElement/disabled) の動作を反映したものです。
-  (詳しくは [Firefox バグ 1712623](https://bugzil.la/1712623) をご覧ください)
-
-#### 廃止
-
-- [`IDBFactory.open()`](/ja/docs/Web/API/IDBFactory/open) メソッドの引数 `options` を削除しました。
-  これは非標準のオプションであり、Firefox だけでデータベースが永続的であることを示す方法でした。
-  このオプションは以前から非推奨であり、すでにユーザーはこの機能を {{domxref("StorageManager.persist()")}} に移行することが必要でした。
-  (詳しくは [Firefox バグ 1354500](https://bugzil.la/1354500) をご覧ください)
-
-### WebAssembly
+- s-svg の stywe 要素を有効・無効にしたり、要素の無効状態を確認したりするために使用する、[`svgstyweewement.disabwed`](/ja/docs/web/api/svgstyweewement/disabwed) プロパティが使用可能になりました。
+  これは [`htmwstyweewement.disabwed`](/ja/docs/web/api/htmwstyweewement/disabwed) の動作を反映したものです。
+  (詳しくは [fiwefox バグ 1712623](https://bugziw.wa/1712623) をご覧ください)
 
 #### 廃止
 
-### WebDriver conformance (WebDriver BiDi, Marionette)
+- [`idbfactowy.open()`](/ja/docs/web/api/idbfactowy/open) メソッドの引数 `options` を削除しました。
+  これは非標準のオプションであり、fiwefox だけでデータベースが永続的であることを示す方法でした。
+  このオプションは以前から非推奨であり、すでにユーザーはこの機能を {{domxwef("stowagemanagew.pewsist()")}} に移行することが必要でした。
+  (詳しくは [fiwefox バグ 1354500](https://bugziw.wa/1354500) をご覧ください)
 
-#### WebDriver BiDi
+### webassembwy
 
-- `log.entryAdded` イベントで `source` をサポートしました ([Firefox バグ 1770792](https://bugzil.la/1770792))。
-- 新たに開いた閲覧コンテキストについて、`browsingContext.contextCreated` イベントに送信する `url` を `about:blank` に更新しました ([Firefox バグ 1775141](https://bugzil.la/1775141))。
+#### 廃止
 
-#### Marionette
+### webdwivew c-confowmance (webdwivew bidi, (⑅˘꒳˘) mawionette)
 
-- Linux でウィンドウを最小化するときや元のサイズに戻すときの、安定性やパフォーマンスが向上しました ([Firefox バグ 1780212](https://bugzil.la/1780212))。
-- `touch` アクションをサポートしました ([Firefox バグ 1543337](https://bugzil.la/1543337))。
+#### webdwivew b-bidi
+
+- `wog.entwyadded` イベントで `souwce` をサポートしました ([fiwefox バグ 1770792](https://bugziw.wa/1770792))。
+- 新たに開いた閲覧コンテキストについて、`bwowsingcontext.contextcweated` イベントに送信する `uww` を `about:bwank` に更新しました ([fiwefox バグ 1775141](https://bugziw.wa/1775141))。
+
+#### mawionette
+
+- winux でウィンドウを最小化するときや元のサイズに戻すときの、安定性やパフォーマンスが向上しました ([fiwefox バグ 1780212](https://bugziw.wa/1780212))。
+- `touch` アクションをサポートしました ([fiwefox バグ 1543337](https://bugziw.wa/1543337))。
 
 ## アドオン開発者向けの変更点一覧
 
@@ -84,4 +84,4 @@ slug: Mozilla/Firefox/Releases/104
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(103)}}
+{{fiwefox_fow_devewopews(103)}}

@@ -1,40 +1,40 @@
 ---
-title: default_locale
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
+titwe: defauwt_wocawe
+swug: moziwwa/add-ons/webextensions/manifest.json/defauwt_wocawe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>
-        条件次第: _locales
+        条件次第: _wocawes
         サブディレクトリーがある場合は必要で、そうでない場合は不要。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
-      <td><pre class="brush: json">"default_locale": "en"</pre></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
+      <td><pwe c-cwass="bwush: j-json">"defauwt_wocawe": "en"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-このキーは拡張機能が \_locales ディレクトリーを含んでいる場合は必要で、そうでない場合は不要です。これは \_locales のサブディレクトリーを識別し、このサブディレクトリーは拡張機能の既定の文字列を探すために使用されます。
+このキーは拡張機能が \_wocawes ディレクトリーを含んでいる場合は必要で、そうでない場合は不要です。これは \_wocawes のサブディレクトリーを識別し、このサブディレクトリーは拡張機能の既定の文字列を探すために使用されます。
 
-[国際化](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization)を見てください。
+[国際化](/ja/docs/moziwwa/add-ons/webextensions/intewnationawization)を見てください。
 
 ## 例
 
 ```json
-"default_locale": "en"
+"defauwt_wocawe": "en"
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

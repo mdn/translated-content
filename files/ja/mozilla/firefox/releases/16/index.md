@@ -1,86 +1,86 @@
 ---
-title: Firefox 16 for developers
-slug: Mozilla/Firefox/Releases/16
+titwe: fiwefox 16 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/16
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
+fiwefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、fiwefox や g-gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 
 ## ウェブ開発者向けの変更点一覧
 
-### HTML
+### h-htmw
 
-- {{HTMLElement("meter")}} 要素をサポートしました。
-- HTML Microdata API のサポートが追加されました。([bug 591467](https://bugzilla.mozilla.org/show_bug.cgi?id=591467))
-- {{ HTMLElement("canvas") }} が CSS の `currentColor` をすべての場合でサポートするようになりました。([Firefox バグ 629882](https://bugzil.la/629882))
-- {{HTMLElement("input")}} で、`accept` 属性の任意の MIME タイプに基づくフィルタリングが可能になりました。([Firefox バグ 565274](https://bugzil.la/565274))
-- 2 個の属性 `width` および `height` が {{HTMLElement("input")}} 要素に追加されました ([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855))
+- {{htmwewement("metew")}} 要素をサポートしました。
+- h-htmw micwodata a-api のサポートが追加されました。([bug 591467](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=591467))
+- {{ h-htmwewement("canvas") }} が c-css の `cuwwentcowow` をすべての場合でサポートするようになりました。([fiwefox バグ 629882](https://bugziw.wa/629882))
+- {{htmwewement("input")}} で、`accept` 属性の任意の m-mime タイプに基づくフィルタリングが可能になりました。([fiwefox バグ 565274](https://bugziw.wa/565274))
+- 2 個の属性 `width` および `height` が {{htmwewement("input")}} 要素に追加されました ([bug 683855](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=683855))
 
-### CSS
+### css
 
-- 標準の、接頭辞無しのバージョンの [CSS Animations](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations) が使えるようになりました。([bug 762302](https://bugzilla.mozilla.org/show_bug.cgi?id=762302))
-- アニメーションの方向の逆転（{{ cssxref("animation-direction") }} プロパティの `reverse` と `alternate-reverse` キーワード）のサポートが追加されました。([bug 655920](https://bugzilla.mozilla.org/show_bug.cgi?id=655920))
-- CSS の {{cssxref("height")}} および {{cssxref("width")}} プロパティのアニメーションが可能になりました。
-- {{ cssxref("animation-duration") }} および {{ cssxref("transition-duration") }} の CSS プロパティが、負の値を拒絶するようになりました (さらに、そのような値はもはや `0s` として扱われません)。([bug 773102](https://bugzilla.mozilla.org/show_bug.cgi?id=773102))
-- 標準の、接頭辞無しのバージョンの [CSS Transforms](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) が使えるようになりました。([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523))
-- 標準の、接頭辞無しのバージョンの [CSS Gradients](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients) が使えるようになりました。接頭辞付きのバージョンから構文がかなり変わっていますので、よく学んでおくとよいでしょう。 ([bug 752187](https://bugzilla.mozilla.org/show_bug.cgi?id=752187))
-- {{ cssxref("box-sizing", "-moz-box-sizing") }} の実装がテーブルのセルにも適用されるように更新されました。([bug 338554](https://bugzilla.mozilla.org/show_bug.cgi?id=338554))
-- 標準の、接頭辞無しの {{ cssxref("calc") }} が使えるようになりました。([bug 771678](https://bugzilla.mozilla.org/show_bug.cgi?id=771678))
-- {{cssxref("&lt;resolution&gt;")}} CSS データタイプが拡張され、`dppx` がサポートされるようになりました。([bug 741644](https://bugzilla.mozilla.org/show_bug.cgi?id=741644))
-- 画面上で、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries) のために、`dppx`、`dpi`、および `dpcm` が物理単位ではなく、CSS ピクセル単位で再表現されるようになりました。 ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390))
-- 特定の状態にある {{HTMLElement("meter")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの擬似クラス `:-moz-meter-optimum`、`:-moz-meter-sub-optimum`、`:-moz-meter-sub-sub-optimum` を追加しました。([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238))
-- {{cssxref("-moz-appearance")}} プロパティが新たに 2 つの値を取り入れました : `meterbar` および `meterchunk`。これらは、{{HTMLElement("meter")}} 要素内部のコンポーネントを表します。([bug 659999](https://bugzilla.mozilla.org/show_bug.cgi?id=659999))
-- {{cssxref("min-width")}} および {{cssxref("min-height")}} で、flex item のための `auto` キーワードをサポートしました (他のアイテムでは `0` と解釈します)。([Firefox バグ 763689](https://bugzil.la/763689))
+- 標準の、接頭辞無しのバージョンの [css animations](/ja/docs/web/css/css_animations/using_css_animations) が使えるようになりました。([bug 762302](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=762302))
+- アニメーションの方向の逆転（{{ cssxwef("animation-diwection") }} プロパティの `wevewse` と `awtewnate-wevewse` キーワード）のサポートが追加されました。([bug 655920](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=655920))
+- css の {{cssxwef("height")}} および {{cssxwef("width")}} プロパティのアニメーションが可能になりました。
+- {{ cssxwef("animation-duwation") }} および {{ c-cssxwef("twansition-duwation") }} の css プロパティが、負の値を拒絶するようになりました (さらに、そのような値はもはや `0s` として扱われません)。([bug 773102](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=773102))
+- 標準の、接頭辞無しのバージョンの [css twansfowms](/ja/docs/web/css/css_twansfowms/using_css_twansfowms) が使えるようになりました。([bug 745523](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=745523))
+- 標準の、接頭辞無しのバージョンの [css g-gwadients](/ja/docs/web/css/css_images/using_css_gwadients) が使えるようになりました。接頭辞付きのバージョンから構文がかなり変わっていますので、よく学んでおくとよいでしょう。 ([bug 752187](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=752187))
+- {{ cssxwef("box-sizing", 😳😳😳 "-moz-box-sizing") }} の実装がテーブルのセルにも適用されるように更新されました。([bug 338554](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=338554))
+- 標準の、接頭辞無しの {{ cssxwef("cawc") }} が使えるようになりました。([bug 771678](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=771678))
+- {{cssxwef("&wt;wesowution&gt;")}} c-css データタイプが拡張され、`dppx` がサポートされるようになりました。([bug 741644](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=741644))
+- 画面上で、[メディアクエリー](/ja/docs/web/css/css_media_quewies) のために、`dppx`、`dpi`、および `dpcm` が物理単位ではなく、css ピクセル単位で再表現されるようになりました。 ([bug 771390](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=771390))
+- 特定の状態にある {{htmwewement("metew")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの擬似クラス `:-moz-metew-optimum`、`:-moz-metew-sub-optimum`、`:-moz-metew-sub-sub-optimum` を追加しました。([bug 660238](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=660238))
+- {{cssxwef("-moz-appeawance")}} プロパティが新たに 2 つの値を取り入れました : `metewbaw` および `metewchunk`。これらは、{{htmwewement("metew")}} 要素内部のコンポーネントを表します。([bug 659999](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=659999))
+- {{cssxwef("min-width")}} および {{cssxwef("min-height")}} で、fwex item のための `auto` キーワードをサポートしました (他のアイテムでは `0` と解釈します)。([fiwefox バグ 763689](https://bugziw.wa/763689))
 
-### API/DOM
+### api/dom
 
-- `width` と `height` の 2 つの新しいプロパティが {{ domxref("HTMLInputElement") }} インターフェイスに追加されました。([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855))
-- IndexedDB プロパティとメソッドが接頭辞無しになりました。([bug 726378](https://bugzilla.mozilla.org/show_bug.cgi?id=726378))
-- [Battery API](/ja/docs/Web/API/Navigator/getBattery) が接頭辞なしになりました。
-- Vibration API が接頭辞なしになりました。
-- 現在も接頭辞付きの `mozKeyboard` である {{domxref("Keyboard")}} インターフェイスが、{{domxref("Keyboard.setSelectedOption()")}} および {{domxref("Keyboard.setValue()")}} メソッドと {{domxref("Keyboard.onfocuschange")}} プロパティを持つようになりました。
-- `Window.java` および `Window.packages` 属性を削除しました。これらは文書化されたことがなく、おそらく皆さんは使用していないでしょう!
-- {{ domxref("CSSNamespaceRule") }} に結びつけられている `CSSRule.type` を、`UNKNOWN_RULE` (`0`) から `NAMESPACE_RULE` (`10`) に更新しました。([bug 765590](https://bugzilla.mozilla.org/show_bug.cgi?id=765590))
-- WebSMS API: {{domxref("SmsRequest")}} は、より一般的な {{domxref("DOMRequest")}} に置き換えられました。
-- 非標準の {{domxref("Element.scrollTopMax")}} および {{domxref("Element.scrollLeftMax")}} 読み取り専用プロパティが追加されました ([Firefox バグ 766937](https://bugzil.la/766937))。
-- {{domxref("Blob.blob", "Blob()")}} の第 2 引数に `null` または `undefined` をセットした場合、空ディレクトリーとして扱われるようになりました ([Firefox バグ 7691119](https://bugzil.la/7691119))。
+- `width` と `height` の 2 つの新しいプロパティが {{ domxwef("htmwinputewement") }} インターフェイスに追加されました。([bug 683855](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=683855))
+- i-indexeddb プロパティとメソッドが接頭辞無しになりました。([bug 726378](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=726378))
+- [battewy api](/ja/docs/web/api/navigatow/getbattewy) が接頭辞なしになりました。
+- v-vibwation a-api が接頭辞なしになりました。
+- 現在も接頭辞付きの `mozkeyboawd` である {{domxwef("keyboawd")}} インターフェイスが、{{domxwef("keyboawd.setsewectedoption()")}} および {{domxwef("keyboawd.setvawue()")}} メソッドと {{domxwef("keyboawd.onfocuschange")}} プロパティを持つようになりました。
+- `window.java` および `window.packages` 属性を削除しました。これらは文書化されたことがなく、おそらく皆さんは使用していないでしょう!
+- {{ domxwef("cssnamespacewuwe") }} に結びつけられている `csswuwe.type` を、`unknown_wuwe` (`0`) から `namespace_wuwe` (`10`) に更新しました。([bug 765590](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=765590))
+- websms api: {{domxwef("smswequest")}} は、より一般的な {{domxwef("domwequest")}} に置き換えられました。
+- 非標準の {{domxwef("ewement.scwowwtopmax")}} および {{domxwef("ewement.scwowwweftmax")}} 読み取り専用プロパティが追加されました ([fiwefox バグ 766937](https://bugziw.wa/766937))。
+- {{domxwef("bwob.bwob", 🥺 "bwob()")}} の第 2 引数に `nuww` または `undefined` をセットした場合、空ディレクトリーとして扱われるようになりました ([fiwefox バグ 7691119](https://bugziw.wa/7691119))。
 
-### JavaScript
+### javascwipt
 
-- [`Number`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number) オブジェクトに `isFinite()`、`toInteger()`、`isInteger()` メソッドを追加しました。([bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=761480), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=761495))
-- Harmony の [spread 演算子](http://wiki.ecmascript.org/doku.php?id=harmony:spread)を [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) オブジェクトに追加しました。([bug 574130](https://bugzilla.mozilla.org/show_bug.cgi?id=574130))
-- 実験的な {{jsxref("TypedArray.prototype.move()")}} メソッドが追加されました (Aurora および Nightly チャンネルのみで利用可能) ([Firefox バグ 730873](https://bugzil.la/730873))。
+- [`numbew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) オブジェクトに `isfinite()`、`tointegew()`、`isintegew()` メソッドを追加しました。([bug 761480](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=761480), mya [bug 761495](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=761495))
+- h-hawmony の [spwead 演算子](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:spwead)を [`awway`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway) オブジェクトに追加しました。([bug 574130](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=574130))
+- 実験的な {{jsxwef("typedawway.pwototype.move()")}} メソッドが追加されました (auwowa および nyightwy チャンネルのみで利用可能) ([fiwefox バグ 730873](https://bugziw.wa/730873))。
 
-### WebGL
-
-_変更なし。_
-
-### SVG
+### webgw
 
 _変更なし。_
 
-### MathML
+### svg
 
-- {{ MathMLElement("mo") }} の `lspace` および `rspace` 属性の初期値が、正しく `thickmathspace` になります。
+_変更なし。_
+
+### mathmw
+
+- {{ mathmwewement("mo") }} の `wspace` および `wspace` 属性の初期値が、正しく `thickmathspace` になります。
 
 ### ネットワーク
 
 ### 開発者ツール
 
-- 便利な開発ツールバーを実装しており、ツール > ウェブ開発 > 開発ツールバー から、あるいは Ctrl-Shift-V (Mac OS X では Cmd-Opt-V) を押して呼び出すことができます。このツールバーは、ボタンと同じように便利なツールをすばやく呼び出せるコマンドラインインターフェイスを提供します。Graphical command line interface ([GCLI](/ja/docs/Tools/GCLI)) は、将来の拡張やコマンドの追加が容易であると期待されています。"help" と入力すると、サポートしているコマンドの一覧を得られます。
+- 便利な開発ツールバーを実装しており、ツール > ウェブ開発 > 開発ツールバー から、あるいは c-ctww-shift-v (mac os x では cmd-opt-v) を押して呼び出すことができます。このツールバーは、ボタンと同じように便利なツールをすばやく呼び出せるコマンドラインインターフェイスを提供します。gwaphicaw c-command w-wine intewface ([gcwi](/ja/docs/toows/gcwi)) は、将来の拡張やコマンドの追加が容易であると期待されています。"hewp" と入力すると、サポートしているコマンドの一覧を得られます。
 - ウェブコンソールがエラーの回数を表示するようになり、この先あなたの作業がどれだけあるかをすばやく見ることができます。
 - スクラッチパッドが、最近開いたファイルの一覧を提供するようになりました。
 
-## Open Web App 開発者向けの変更点
+## o-open w-web app 開発者向けの変更点
 
-- Initial [Open Web App support](/ja/docs/Web/Apps/Getting_Started) has been implemented in the desktop versions of Firefox (that is, on Windows, Mac OS X, and Linux).
+- initiaw [open web app suppowt](/ja/docs/web/apps/getting_stawted) h-has been impwemented in the desktop vewsions o-of fiwefox (that is, 🥺 on windows, >_< mac os x, and winux). >_<
 
-## アドオンと Mozilla 開発者向け
+## アドオンと moziwwa 開発者向け
 
 ### インターフェイスの変更点
 
-`nsIPrivateDOMEvent` が `nsIDOMEvent` に併合されました ([Firefox バグ 761613](https://bugzil.la/761613))。
+`nsipwivatedomevent` が `nsidomevent` に併合されました ([fiwefox バグ 761613](https://bugziw.wa/761613))。
 
 #### 新しいインターフェイス
 

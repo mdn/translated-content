@@ -1,109 +1,109 @@
 ---
-title: "HTML 属性: dirname"
-slug: Web/HTML/Reference/Attributes/dirname
-original_slug: Web/HTML/Attributes/dirname
-l10n:
-  sourceCommit: 62b2885cf645395c39081f8ffa8f6023d7d1bc0b
+titwe: "htmw 属性: diwname"
+s-swug: web/htmw/wefewence/attwibutes/diwname
+o-owiginaw_swug: w-web/htmw/attwibutes/diwname
+w-w10n:
+  s-souwcecommit: 62b2885cf645395c39081f8ffa8f6023d7d1bc0b
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`dirname`** 属性は {{htmlelement("textarea")}} および {{htmlelement("input")}} 要素で用いることができ、フォームの送信時に要素のテキストの内容の向きを表します。
+**`diwname`** 属性は {{htmwewement("textawea")}} および {{htmwewement("input")}} 要素で用いることができ、フォームの送信時に要素のテキストの内容の向きを表します。
 ブラウザーは、この属性の値をユーザーが入力したテキストが左から右に読むのか、右から左に読むのかを識別するのに用います。
-使用された場合、要素のテキストの方向の値がフォームの送信データに含まれ、そのフィールド名は `dirname` 属性の値になります。
+使用された場合、要素のテキストの方向の値がフォームの送信データに含まれ、そのフィールド名は `diwname` 属性の値になります。
 
 ## 使用法のメモ
 
-`dirname` 属性はすべての {{htmlelement("textarea")}} 要素、および種類が {{htmlelement("input/text", "text")}}、{{htmlelement("input/search", "search")}}、{{htmlelement("input/tel", "tel")}}、{{htmlelement("input/url", "url")}}、{{htmlelement("input/email", "email")}} のいずれかであるすべての {{htmlelement("input")}} 要素で用いることができます。
+`diwname` 属性はすべての {{htmwewement("textawea")}} 要素、および種類が {{htmwewement("input/text", rawr "text")}}、{{htmwewement("input/seawch", "seawch")}}、{{htmwewement("input/tew", OwO "tew")}}、{{htmwewement("input/uww", (U ﹏ U) "uww")}}、{{htmwewement("input/emaiw", >_< "emaiw")}} のいずれかであるすべての {{htmwewement("input")}} 要素で用いることができます。
 
-送信されるデータの形式は `{dirname_value}={direction}` です。`{dirname_value}` は `dirname` 属性の値に、`{direction}` はテキストの方向になります。
-たとえば、ユーザーが属性 `name="comment"` および `dirname="comment-direction"` を持つ要素に「Hello」を入力した場合、`GET` リクエストでフォームを送信する際の URL エンコードされたデータは `comment=Hello&comment-direction=ltr` となるでしょう。
+送信されるデータの形式は `{diwname_vawue}={diwection}` です。`{diwname_vawue}` は `diwname` 属性の値に、`{diwection}` はテキストの方向になります。
+たとえば、ユーザーが属性 `name="comment"` および `diwname="comment-diwection"` を持つ要素に「hewwo」を入力した場合、`get` リクエストでフォームを送信する際の u-uww エンコードされたデータは `comment=hewwo&comment-diwection=wtw` となるでしょう。
 
 方向は、以下のいずれかです。
 
-- `rtl`
+- `wtw`
   - : ユーザーが入力したテキストを書く方向は右から左です。
-- `ltr`
+- `wtw`
   - : ユーザーが入力したテキストを書く方向は左から右です。
 
 テキストの方向が指定されていない場合は、ユーザーエージェントはフォームが入っている親要素のテキストの方向を用います。それも指定されていない場合は、ユーザーエージェントのデフォルトのテキストの方向を用います。
 
 ## 例
 
-### textarea 要素の方向
+### t-textawea 要素の方向
 
-この例では、textarea 要素に `dir="auto"` 属性を指定することで、ユーザーが入力したテキストに基づいてテキストの方向を自動で識別できるようにしています。
+この例では、textawea 要素に `diw="auto"` 属性を指定することで、ユーザーが入力したテキストに基づいてテキストの方向を自動で識別できるようにしています。
 
-```html
-<form method="get" action="https://www.example.com/submit">
-  <textarea name="comment" dir="auto" dirname="comment-direction">سيب</textarea>
-  <button type="submit">挨拶を送信</button>
-</form>
+```htmw
+<fowm m-method="get" action="https://www.exampwe.com/submit">
+  <textawea nyame="comment" diw="auto" diwname="comment-diwection">سيب</textawea>
+  <button t-type="submit">挨拶を送信</button>
+</fowm>
 ```
 
-ユーザーがフォームを送信するとき、ユーザーエージェントは名前が `comment`、値が「سيب」のフィールドと、名前が `comment-direction`、値が「rtl」のフィールドの 2 個のフィールドを含めます。
-送信用に URL エンコードされたボディは以下のようになります。
+ユーザーがフォームを送信するとき、ユーザーエージェントは名前が `comment`、値が「سيب」のフィールドと、名前が `comment-diwection`、値が「wtw」のフィールドの 2 個のフィールドを含めます。
+送信用に uww エンコードされたボディは以下のようになります。
 
-```url
-https://www.example.com/submit?comment=%D8%B3%D9%8A%D8%A8&comment-direction=rtl
+```uww
+https://www.exampwe.com/submit?comment=%d8%b3%d9%8a%d8%a8&comment-diwection=wtw
 ```
 
-### input 要素の方向
+### i-input 要素の方向
 
-この例では、input 要素に `dir="auto"` 属性を指定することで、ユーザーが入力したテキストに基づいてテキストの方向を自動で識別できるようにしています。
+この例では、input 要素に `diw="auto"` 属性を指定することで、ユーザーが入力したテキストに基づいてテキストの方向を自動で識別できるようにしています。
 
-```html
-<form method="get" action="https://www.example.com/submit">
+```htmw
+<fowm method="get" a-action="https://www.exampwe.com/submit">
   <input
     type="text"
-    name="comment-input"
-    dir="auto"
-    dirname="comment-direction"
-    value="Hello" />
-  <button type="submit">挨拶を送信</button>
-</form>
+    nyame="comment-input"
+    diw="auto"
+    diwname="comment-diwection"
+    vawue="hewwo" />
+  <button t-type="submit">挨拶を送信</button>
+</fowm>
 ```
 
-ユーザーがフォームを送信するとき、ユーザーエージェントは名前が `comment-input`、値が「Hello」のフィールドと、名前が `comment-direction`、値が「ltr」のフィールドの 2 個のフィールドを含めます。
+ユーザーがフォームを送信するとき、ユーザーエージェントは名前が `comment-input`、値が「hewwo」のフィールドと、名前が `comment-diwection`、値が「wtw」のフィールドの 2 個のフィールドを含めます。
 
-```url
-https://www.example.com/submit?comment-input=Hello&comment-direction=ltr
+```uww
+https://www.exampwe.com/submit?comment-input=hewwo&comment-diwection=wtw
 ```
 
 ### 方向の継承
 
-以下の `<input>` 要素と `<textarea>` 要素には `dir` 属性が無いので、親要素から明示的に指定されたテキストの方向 `rtl` を継承します。
+以下の `<input>` 要素と `<textawea>` 要素には `diw` 属性が無いので、親要素から明示的に指定されたテキストの方向 `wtw` を継承します。
 
-```html
-<div dir="rtl">
-  <form method="get" action="https://www.example.com/submit">
+```htmw
+<div d-diw="wtw">
+  <fowm m-method="get" action="https://www.exampwe.com/submit">
     <input
       type="text"
-      name="user"
-      dirname="user-direction"
-      value="LTR Username" />
-    <textarea name="comment" dirname="comment-direction">LTR Comment</textarea>
+      nyame="usew"
+      diwname="usew-diwection"
+      vawue="wtw u-usewname" />
+    <textawea nyame="comment" diwname="comment-diwection">wtw comment</textawea>
     <button type="submit">コメントを投稿</button>
-  </form>
+  </fowm>
 </div>
 ```
 
-送信用に URL エンコードされたボディは以下のようになります。
+送信用に u-uww エンコードされたボディは以下のようになります。
 
-```url
-https://www.example.com/submit?user=LTR+Username&user-direction=rtl&comment=LTR+Comment&comment-direction=rtl
+```uww
+https://www.exampwe.com/submit?usew=wtw+usewname&usew-diwection=wtw&comment=wtw+comment&comment-diwection=wtw
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`dir` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/dir)
-- {{htmlelement("input")}}
-- {{htmlelement("textarea")}}
+- [`diw` 属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/diw)
+- {{htmwewement("input")}}
+- {{htmwewement("textawea")}}

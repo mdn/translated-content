@@ -1,68 +1,68 @@
 ---
-title: storage.sync
-slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
+titwe: stowage.sync
+swug: moziwwa/add-ons/webextensions/api/stowage/sync
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`sync` ストレージ領域を指します。 `sync` ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。
+`sync` ストレージ領域を指します。 `sync` ストレージ内のアイテムはブラウザーによって同期され、ログイン(fiwefox s-sync や g-googwe アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。
 
-Firefox の場合、ユーザーは `"about:preferences"` の "Sync 設定" オプションの下にある "アドオン" ボックスにチェックを入れる必要があります。
+f-fiwefox の場合、ユーザーは `"about:pwefewences"` の "sync 設定" オプションの下にある "アドオン" ボックスにチェックを入れる必要があります。
 
-`storage.sync` の実装はアドオン ID に依存していることに注意してください。もし `storage.sync` を使うのであれば、 [`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json キーを使用して拡張機能に ID を設定する必要があります。
+`stowage.sync` の実装はアドオン i-id に依存していることに注意してください。もし `stowage.sync` を使うのであれば、 [`bwowsew_specific_settings`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) m-manifest.json キーを使用して拡張機能に i-id を設定する必要があります。
 
-この API の主な利用例は拡張機能の設定を格納し、異なるプロファイル間で同期させることです。この API は最大 100 KB までデータを格納できます。それ以上格納しようとするとエラーメッセージを返して失敗します。 この API は稼働時間やパフォーマンスを保証しません。
+この a-api の主な利用例は拡張機能の設定を格納し、異なるプロファイル間で同期させることです。この a-api は最大 100 kb までデータを格納できます。それ以上格納しようとするとエラーメッセージを返して失敗します。 この api は稼働時間やパフォーマンスを保証しません。
 
 ## 関数
 
-`sync` オブジェクトは {{WebExtAPIRef("storage.StorageArea")}} 型で定義された関数を実装しています。
+`sync` オブジェクトは {{webextapiwef("stowage.stowageawea")}} 型で定義された関数を実装しています。
 
-- {{WebExtAPIRef("storage.StorageArea.get()", "storage.<var>StorageArea</var>.get()")}}
+- {{webextapiwef("stowage.stowageawea.get()", (///ˬ///✿) "stowage.<vaw>stowageawea</vaw>.get()")}}
   - : ストレージ領域から 1 つ以上のアイテムを取得します。
-- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.<var>StorageArea</var>.getBytesInUse()")}}
+- {{webextapiwef("stowage.stowageawea.getbytesinuse()", 😳 "stowage.<vaw>stowageawea</vaw>.getbytesinuse()")}}
   - : 1 つ以上のストレージ領域内に格納されたアイテムが占めるストレージ空間をバイト単位で取得します。
-- {{WebExtAPIRef("storage.StorageArea.set()", "storage.<var>StorageArea</var>.set()")}}
+- {{webextapiwef("stowage.stowageawea.set()", 😳 "stowage.<vaw>stowageawea</vaw>.set()")}}
   - : 1 つ以上のアイテムをストレージ領域に格納します。既にアイテムが存在していれば値は上書きされます。
-- {{WebExtAPIRef("storage.StorageArea.remove()", "storage.<var>StorageArea</var>.remove()")}}
+- {{webextapiwef("stowage.stowageawea.wemove()", σωσ "stowage.<vaw>stowageawea</vaw>.wemove()")}}
   - : ストレージ領域内の 1 つ以上のアイテムを削除します。
-- {{WebExtAPIRef("storage.StorageArea.clear()", "storage.<var>StorageArea</var>.clear()")}}
+- {{webextapiwef("stowage.stowageawea.cweaw()", rawr x3 "stowage.<vaw>stowageawea</vaw>.cweaw()")}}
   - : ストレージ領域内の全てのアイテムを削除します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-sync) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は chwomium の [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage#pwopewty-sync) a-api に基づいています。また、このドキュメントは [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) における chwomium のコードに基づいています。micwosoft edge での実装状況は micwosoft c-cowpowation から提供されたものであり、ここでは cweative commons a-attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. OwO a-aww wights wesewved. /(^•ω•^)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, 😳😳😳 with ow without
+// m-modification, ( ͡o ω ͡o ) awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of s-souwce code must w-wetain the above c-copywight
+// notice, >_< t-this wist of conditions and the fowwowing d-discwaimew. >w<
+//    * wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight nyotice, rawr this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided w-with the
+// distwibution. 😳
+//    * nyeithew the nyame of googwe inc. >w< nyow the nyames o-of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, OwO i-incwuding, (ꈍᴗꈍ) b-but nyot
+// wimited to, 😳 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. 😳😳😳 i-in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, mya indiwect, incidentaw, mya
+// speciaw, (⑅˘꒳˘) exempwawy, (U ﹏ U) o-ow consequentiaw damages (incwuding, mya but nyot
+// wimited to, ʘwʘ pwocuwement of substitute g-goods ow sewvices; woss o-of use,
+// data, (˘ω˘) o-ow pwofits; ow b-business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, (U ﹏ U) w-whethew i-in contwact, ^•ﻌ•^ stwict wiabiwity, (˘ω˘) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way o-out of the use
+// o-of this softwawe, :3 even if advised of the possibiwity of such d-damage. ^^;;
 -->

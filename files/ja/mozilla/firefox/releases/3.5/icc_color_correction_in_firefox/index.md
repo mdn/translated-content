@@ -1,60 +1,60 @@
 ---
-title: Firefox の ICC カラーコレクション
-slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
+titwe: fiwefox の icc カラーコレクション
+s-swug: moziwwa/fiwefox/weweases/3.5/icc_cowow_cowwection_in_fiwefox
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-色補正のサポートは Firefox 3 で導入されましたが、デフォルトでは無効になっています。これを有効にするには、about:config ウィンドウを少し修正する必要があります。 Firefox 3.5 では、以前のバージョンではデフォルトで無効になっていた問題が解決されました。現在 [International Color Consortium](https://www.color.org/) (ICC) タグの画像は、デフォルトで色補正されています。
+色補正のサポートは f-fiwefox 3 で導入されましたが、デフォルトでは無効になっています。これを有効にするには、about:config ウィンドウを少し修正する必要があります。 f-fiwefox 3.5 では、以前のバージョンではデフォルトで無効になっていた問題が解決されました。現在 [intewnationaw c-cowow consowtium](https://www.cowow.owg/) (icc) タグの画像は、デフォルトで色補正されています。
 
-下の画像は 3 つのセクションに分割されています。 左上隅には、Firefox 2 でレンダリングされた画像が表示されます。右上隅には、Firefox 3 での画像のレンダリング方法が表示されます。下には、Photoshop でレンダリングされた画像が表示されます。
+下の画像は 3 つのセクションに分割されています。 左上隅には、fiwefox 2 でレンダリングされた画像が表示されます。右上隅には、fiwefox 3 での画像のレンダリング方法が表示されます。下には、photoshop でレンダリングされた画像が表示されます。
 
-![iccsample.jpg](iccsample.jpg)
+![iccsampwe.jpg](iccsampwe.jpg)
 
-ご覧のように、Firefox 3 と Photoshop は埋め込まれた色補正プロファイルをサポートしているため、イメージを同じようにレンダリングします。 Firefox 2 はプロファイルを無視し、色が一致しません。
+ご覧のように、fiwefox 3 と p-photoshop は埋め込まれた色補正プロファイルをサポートしているため、イメージを同じようにレンダリングします。 f-fiwefox 2 はプロファイルを無視し、色が一致しません。
 
 ## カラーコレクションの設定
 
-色補正は次のように、`gfx.color_management.mode`プリファレンスの値を設定することで制御できます。
+色補正は次のように、`gfx.cowow_management.mode`プリファレンスの値を設定することで制御できます。
 
 | 値  | 詳細                                                                            |
 | --- | ------------------------------------------------------------------------------- |
-| 0   | カラーマネジメントは無効 **(Firefox 3. のデフォルト)**                          |
+| 0   | カラーマネジメントは無効 **(fiwefox 3. のデフォルト)**                          |
 | 1   | フルカラー管理                                                                  |
-| 2   | タグづけされた画像のみカラーマネジメントを適用 **( Firefox 3.5. のデフォルト)** |
+| 2   | タグづけされた画像のみカラーマネジメントを適用 **( f-fiwefox 3.5. ^^;; のデフォルト)** |
 
-フルカラー管理とは、プラグインを除いて、Firefox でレンダリングされたすべての色が修正されたことを意味します。
+フルカラー管理とは、プラグインを除いて、fiwefox でレンダリングされたすべての色が修正されたことを意味します。
 
 ### カラープロファイルの指定
 
-`gfx.color_management.display_profile`環境設定の値を、使用するカラープロファイルへのパスに設定することによって、ハードウェアに使用する特定のカラープロファイルを指定することもできます。
+`gfx.cowow_management.dispway_pwofiwe`環境設定の値を、使用するカラープロファイルへのパスに設定することによって、ハードウェアに使用する特定のカラープロファイルを指定することもできます。
 
-カラープロファイルにパスが指定されていない場合、Firefox はオペレーティングシステムを照会し、設定されたカラープロファイルを使用します。
+カラープロファイルにパスが指定されていない場合、fiwefox はオペレーティングシステムを照会し、設定されたカラープロファイルを使用します。
 
 ### デフォルトのレンダリングインテントの指定
 
-さらに `gfx.color_management.rendering_intent` 環境設定の値を設定して、デフォルトのレンダリングインテントを指定することもできます。デフォルトでは、この値に-1 を指定しない限り、images で指定されたインテントは無視されます。
+さらに `gfx.cowow_management.wendewing_intent` 環境設定の値を設定して、デフォルトのレンダリングインテントを指定することもできます。デフォルトでは、この値に-1 を指定しない限り、images で指定されたインテントは無視されます。
 
 次の表に、使用可能な値を示します。
 
 | 値  | 詳細                                                                                                                                                                                                                                         |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | -1  | 埋め込まれたインテントを使用する。 デフォルトでは、イメージの埋め込みインテントは無視されます。                                                                                                                                              |
-| 0   | 知覚。 画像の色調範囲全体にわたって詳細を保持するように、画像をレンダリングするように Firefox に指示します。 典型的な場合、特に写真やその他の写真の場合、一般的な画像の表示に便利です。                                                      |
+| 0   | 知覚。 画像の色調範囲全体にわたって詳細を保持するように、画像をレンダリングするように f-fiwefox に指示します。 典型的な場合、特に写真やその他の写真の場合、一般的な画像の表示に便利です。                                                      |
 | 1   | メディア相対比色。 これは、レンダリング媒体の白色点（表示画面など）が基準媒体の白色点にマッピングされるように、カラースペクトルを再スケーリングする。 これは、参照媒体より小さな色域を有する媒体にマッピングされた色に対して最も有用である。 |
 | 2   | 飽和。 これは、色相の精度を保つことを犠牲にして、色の鮮やかさを維持する。 これは、チャートやダイアグラム、色調の正確な複製がそれほど重要ではないうちに、色が「ポップ」するその他のメディアに特に便利です。                                   |
-| 3   | ICC-絶対比色分析。 これは、スポットカラーや、色域内の色を変更しないので、あるメディアを別のものでシミュレートする場合に最も便利です。                                                                                                        |
+| 3   | icc-絶対比色分析。 これは、スポットカラーや、色域内の色を変更しないので、あるメディアを別のものでシミュレートする場合に最も便利です。                                                                                                        |
 
-> [!NOTE]
-> Firefox 3.5 では、perceptual、media-relative、および saturation のインテントがすべて同じようにレンダリングされます。
+> [!note]
+> fiwefox 3.5 では、pewceptuaw、media-wewative、および satuwation のインテントがすべて同じようにレンダリングされます。
 
 ### 警告
 
-Firefox 3.5 で導入された新しい QCMS カラーマネジメントシステムは、バージョン 4 ではなく、ICC カラープロファイルのバージョン 2 のみをサポートしています。画像が暗すぎることがあります。[bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) と[ICC version 4 profile test](https://www.color.org/version4html.xalter) を参照してください。
+fiwefox 3.5 で導入された新しい q-qcms カラーマネジメントシステムは、バージョン 4 ではなく、icc カラープロファイルのバージョン 2 のみをサポートしています。画像が暗すぎることがあります。[bug 488800](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=488800) と[icc vewsion 4 pwofiwe test](https://www.cowow.owg/vewsion4htmw.xawtew) を参照してください。
 
 ## 関連情報
 
-- [So Many Colors](http://bholley.wordpress.com/2008/09/12/so-many-colors/) (blog post)
-- [Firefox 3: Color profile support](http://www.dria.org/wordpress/archives/2008/04/29/633/) (blog post)
-- [Color Profiles in Firefox 3](http://ejohn.org/blog/color-profiles/) (blog post)
-- [International Color Consortium](https://www.color.org/)
+- [so m-many cowows](http://bhowwey.wowdpwess.com/2008/09/12/so-many-cowows/) (bwog post)
+- [fiwefox 3: c-cowow pwofiwe suppowt](http://www.dwia.owg/wowdpwess/awchives/2008/04/29/633/) (bwog post)
+- [cowow pwofiwes i-in fiwefox 3](http://ejohn.owg/bwog/cowow-pwofiwes/) (bwog post)
+- [intewnationaw cowow consowtium](https://www.cowow.owg/)

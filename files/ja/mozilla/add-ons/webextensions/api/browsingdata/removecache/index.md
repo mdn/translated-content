@@ -1,84 +1,84 @@
 ---
-title: browsingData.removeCache()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
+titwe: bwowsingdata.wemovecache()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovecache
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 ブラウザーのキャッシュを消去します。
 
-この関数は{{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクトを引数に取りますが無視されます。そのためこの関数を使うとすべてのキャッシュが消去されるため注意してください。
+この関数は{{webextapiwef("bwowsingdata.wemovawoptions")}} オブジェクトを引数に取りますが無視されます。そのためこの関数を使うとすべてのキャッシュが消去されるため注意してください。
 
-この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+この関数は [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返す非同期関数です。
 
 ## 構文
 
 ```js
-var removing = browser.browsingData.removeCache(
-  removalOptions, // RemovalOptions オブジェクト
+v-vaw wemoving = b-bwowsew.bwowsingdata.wemovecache(
+  w-wemovawoptions, 😳 // w-wemovawoptions オブジェクト
 );
 ```
 
 ### 引数
 
-- `removalOptions` {{optional_inline}}
-  - : {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクト このパラメーターは無視されます。
+- `wemovawoptions` {{optionaw_inwine}}
+  - : {{webextapiwef("bwowsingdata.wemovawoptions")}} オブジェクト このパラメーターは無視されます。
 
 ### 返り値
 
-消去が完了した後に実行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) が返されます。この Promise は引数を持ちません。エラーが発生した場合はエラーメッセージを引数にして reject を呼び出します。
+消去が完了した後に実行される [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) が返されます。この p-pwomise は引数を持ちません。エラーが発生した場合はエラーメッセージを引数にして w-weject を呼び出します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 ブラウザーキャッシュを消去します。
 
 ```js
-function onRemoved() {
-  console.log("removed");
+f-function onwemoved() {
+  c-consowe.wog("wemoved");
 }
 
-function onError(error) {
-  console.error(error);
+function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeCache({}).then(onRemoved, onError);
+bwowsew.bwowsingdata.wemovecache({}).then(onwemoved, 😳 onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は chwomium の [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata) api に基づいています。micwosoft edge の実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは c-cweative commons attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. σωσ a-aww wights wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, OwO w-with ow without
+// modification, awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of s-souwce code must w-wetain the above c-copywight
+// nyotice, /(^•ω•^) this wist of conditions a-and the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, ( ͡o ω ͡o ) this wist of conditions and t-the fowwowing discwaimew
+// in t-the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution.
+//    * nyeithew the nyame of googwe i-inc. >_< nyow the nyames o-of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific p-pwiow wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, rawr incwuding, but nyot
+// wimited to, 😳 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. >w< in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, (⑅˘꒳˘) indiwect, OwO incidentaw,
+// speciaw, (ꈍᴗꈍ) e-exempwawy, 😳 ow consequentiaw damages (incwuding, 😳😳😳 but nyot
+// wimited to, mya p-pwocuwement of substitute goods o-ow sewvices; woss o-of use, mya
+// data, o-ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// t-theowy of w-wiabiwity, (⑅˘꒳˘) whethew in contwact, (U ﹏ U) stwict wiabiwity, mya o-ow towt
+// (incwuding n-negwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, ʘwʘ even if advised of the possibiwity o-of such damage. (˘ω˘)
 -->

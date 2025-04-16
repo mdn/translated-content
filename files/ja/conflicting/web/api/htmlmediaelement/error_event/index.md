@@ -1,28 +1,28 @@
 ---
-title: HTMLMediaElement.onerror
-slug: conflicting/Web/API/HTMLMediaElement/error_event
-original_slug: Web/API/HTMLMediaElement/onerror
+titwe: htmwmediaewement.onewwow
+swug: confwicting/web/api/htmwmediaewement/ewwow_event
+o-owiginaw_swug: w-web/api/htmwmediaewement/onewwow
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`onerror`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement/error_event", "error")}} イベントを処理するための[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。
+**`onewwow`** は {{domxwef("htmwmediaewement")}} インターフェイスのプロパティで、 {{domxwef("htmwmediaewement/ewwow_event", OwO "ewwow")}} イベントを処理するための[イベントハンドラー](/ja/docs/web/events/event_handwews)です。
 
-`error` イベントは、メディアを読み込んだり実行しようとしたときに何らかのエラーが発生したときに発生します。
+`ewwow` イベントは、メディアを読み込んだり実行しようとしたときに何らかのエラーが発生したときに発生します。
 
 ## 値
 
-{{jsxref("function")}} で、 {{domxref("HTMLMediaElement/error_event", "error")}} イベントのイベントハンドラーとして機能するものです。エラーが発生すると、指定した関数が呼び出されます。 `null` の場合、エラーハンドラーは無効です。
+{{jsxwef("function")}} で、 {{domxwef("htmwmediaewement/ewwow_event", 🥺 "ewwow")}} イベントのイベントハンドラーとして機能するものです。エラーが発生すると、指定した関数が呼び出されます。 `nuww` の場合、エラーハンドラーは無効です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}
-- {{HTMLElement("audio")}} および {{HTMLElement("video")}}
+- {{domxwef("htmwmediaewement")}}
+- {{htmwewement("audio")}} および {{htmwewement("video")}}

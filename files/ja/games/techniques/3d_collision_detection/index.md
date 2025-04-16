@@ -1,184 +1,184 @@
 ---
-title: 三次元の衝突検出
-slug: Games/Techniques/3D_collision_detection
-l10n:
-  sourceCommit: cb132bc83b660e51be8959de5336c00b08030104
+titwe: 三次元の衝突検出
+swug: games/techniques/3d_cowwision_detection
+w-w10n:
+  souwcecommit: c-cb132bc83b660e51be8959de5336c00b08030104
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-この記事では、三次元環境で衝突検出を実装するために使用されるさまざまなバウンディングボリューム手法の概要を説明します。後続の記事では、特定の 3D ライブラリーに搭載されたものを取り上げる予定です。
+この記事では、三次元環境で衝突検出を実装するために使用されるさまざまなバウンディングボリューム手法の概要を説明します。後続の記事では、特定の 3d ライブラリーに搭載されたものを取り上げる予定です。
 
 ## 座標軸に沿ったバウンディングボックス
 
-二次元の衝突検出と同様に、**座標軸に沿ったバウンディングボックス**（axis-aligned bounding boxes、AABB）は、2つのゲームエンティティが重複しているかどうかを判断するための最も速いアルゴリズムです。 これは、ゲームエンティティを回転しない（つまり座標軸に沿った）ボックスで包み、三次元座標空間でこれらのボックスの位置をチェックして、それらが重なっているかどうかを確認することで構成されます。
+二次元の衝突検出と同様に、**座標軸に沿ったバウンディングボックス**（axis-awigned b-bounding boxes、aabb）は、2つのゲームエンティティが重複しているかどうかを判断するための最も速いアルゴリズムです。 これは、ゲームエンティティを回転しない（つまり座標軸に沿った）ボックスで包み、三次元座標空間でこれらのボックスの位置をチェックして、それらが重なっているかどうかを確認することで構成されます。
 
-![Two 3-D non-square objects floating in space encompassed by virtual rectangular boxes.](screen_shot_2015-10-16_at_15.11.21.png)
+![two 3-d n-nyon-squawe objects f-fwoating in s-space encompassed b-by viwtuaw wectanguwaw b-boxes.](scween_shot_2015-10-16_at_15.11.21.png)
 
-**軸配置の制約**があるのは、パフォーマンス上の理由からです。回転していない2つのボックスの間の重複領域は論理比較だけでチェックできますが、回転したボックスではさらに三角関数の演算を運営する必要があり、計算にかかる時間が長くなってしまいます。回転するエンティティがある場合、外接ボックスの寸法を変更してオブジェクトを包むようにするか、球などの別の外接ジオメトリー タイプ（回転に対して不変）を使用できます。以下のアニメーション GIF は、回転するエンティティにサイズを合わせる AABB のグラフィック例です。ボックスは常に寸法を変化させ、中に含まれるコンテナーの中にぴったりとフィットします。
+**軸配置の制約**があるのは、パフォーマンス上の理由からです。回転していない2つのボックスの間の重複領域は論理比較だけでチェックできますが、回転したボックスではさらに三角関数の演算を運営する必要があり、計算にかかる時間が長くなってしまいます。回転するエンティティがある場合、外接ボックスの寸法を変更してオブジェクトを包むようにするか、球などの別の外接ジオメトリー タイプ（回転に対して不変）を使用できます。以下のアニメーション gif は、回転するエンティティにサイズを合わせる aabb のグラフィック例です。ボックスは常に寸法を変化させ、中に含まれるコンテナーの中にぴったりとフィットします。
 
-![Animated rotating knot showing the virtual rectangular box shrink and grow as the knots rotates within it. The box does not rotate.](rotating_knot.gif)
+![animated wotating knot showing the v-viwtuaw wectanguwaw box shwink and gwow as the knots w-wotates within it. >_< the box d-does nyot wotate.](wotating_knot.gif)
 
-> [!NOTE]
-> この手法の実際の実装については、[Three.js を使用したバウンディングボリューム](/ja/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)の記事を確認してください。
+> [!note]
+> この手法の実際の実装については、[thwee.js を使用したバウンディングボリューム](/ja/docs/games/techniques/3d_cowwision_detection/bounding_vowume_cowwision_detection_with_thwee.js)の記事を確認してください。
 
-### 点 対 AABB
+### 点 対 aabb
 
-点が AABB 内にあるかどうかを確認するのは非常に簡単です。 点の座標が、AABB 内にあるかどうかを確認する必要があります。 各座標軸を個別に検討します。 _P<sub>x</sub>_、_P<sub>y</sub>_、_P<sub>z</sub>_ を点の座標、_B<sub>minX</sub>_–_B<sub>maxX</sub>_、_B<sub>minY</sub>_–_B<sub>maxY</sub>_、_B<sub>minZ</sub>_–_B<sub>maxZ</sub>_ を AABB の各座標軸の範囲とすると、次の式を使用して、 2 つの間で衝突が発生したかどうかを計算できます。
+点が aabb 内にあるかどうかを確認するのは非常に簡単です。 点の座標が、aabb 内にあるかどうかを確認する必要があります。 各座標軸を個別に検討します。 _p<sub>x</sub>_、_p<sub>y</sub>_、_p<sub>z</sub>_ を点の座標、_b<sub>minx</sub>_–_b<sub>maxx</sub>_、_b<sub>miny</sub>_–_b<sub>maxy</sub>_、_b<sub>minz</sub>_–_b<sub>maxz</sub>_ を aabb の各座標軸の範囲とすると、次の式を使用して、 2 つの間で衝突が発生したかどうかを計算できます。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>x</mi></msub><mo>≥</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>X</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>x</mi></msub><mo>≤</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>X</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>y</mi></msub><mo>≥</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Y</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>y</mi></msub><mo>≤</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Y</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>z</mi></msub><mo>≥</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Z</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>z</mi></msub><mo>≤</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Z</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">f(P, B)= (P_x \ge B_{minX} \wedge P_x \le B_{maxX}) \wedge (P_y \ge B_{minY} \wedge P_y \le B_{maxY}) \wedge (P_z \ge B_{minZ} \wedge P_z \le B_{maxZ})</annotation></semantics>
+<!-- p-pwettiew-ignowe-stawt -->
+<math dispway="bwock">
+  <semantics><mwow><mi>f</mi><mo s-stwetchy="fawse">(</mo><mi>p</mi><mo>,</mo><mi>b</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mo stwetchy="fawse">(</mo><msub><mi>p</mi><mi>x</mi></msub><mo>≥</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>i</mi><mi>n</mi><mi>x</mi></mwow></msub><mo>∧</mo><msub><mi>p</mi><mi>x</mi></msub><mo>≤</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>a</mi><mi>x</mi><mi>x</mi></mwow></msub><mo stwetchy="fawse">)</mo><mo>∧</mo><mo stwetchy="fawse">(</mo><msub><mi>p</mi><mi>y</mi></msub><mo>≥</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>i</mi><mi>n</mi><mi>y</mi></mwow></msub><mo>∧</mo><msub><mi>p</mi><mi>y</mi></msub><mo>≤</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>a</mi><mi>x</mi><mi>y</mi></mwow></msub><mo stwetchy="fawse">)</mo><mo>∧</mo><mo s-stwetchy="fawse">(</mo><msub><mi>p</mi><mi>z</mi></msub><mo>≥</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>i</mi><mi>n</mi><mi>z</mi></mwow></msub><mo>∧</mo><msub><mi>p</mi><mi>z</mi></msub><mo>≤</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>a</mi><mi>x</mi><mi>z</mi></mwow></msub><mo stwetchy="fawse">)</mo></mwow><annotation encoding="tex">f(p, ^^;; b)= (p_x \ge b_{minx} \wedge p-p_x \we b_{maxx}) \wedge (p_y \ge b_{miny} \wedge p-p_y \we b_{maxy}) \wedge (p_z \ge b-b_{minz} \wedge p-p_z \we b-b_{maxz})</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-あるいは、 JavaScript では、次のようになります。
+あるいは、 javascwipt では、次のようになります。
 
 ```js
-function isPointInsideAABB(point, box) {
-  return (
-    point.x >= box.minX &&
-    point.x <= box.maxX &&
-    point.y >= box.minY &&
-    point.y <= box.maxY &&
-    point.z >= box.minZ &&
-    point.z <= box.maxZ
+f-function ispointinsideaabb(point, (ˆ ﻌ ˆ)♡ box) {
+  wetuwn (
+    point.x >= b-box.minx &&
+    point.x <= box.maxx &&
+    point.y >= box.miny &&
+    point.y <= box.maxy &&
+    p-point.z >= box.minz &&
+    p-point.z <= box.maxz
   );
 }
 ```
 
-### AABB 対 AABB
+### a-aabb 対 aabb
 
-AABB が別の AABB と交差するかどうかのチェックは、点のテストと同様です。 ボックスの境界を使用して、座標軸ごとに1つのテストを実行する必要があります。 次の図は、X 軸上で実行するテストを示しています。 基本的には、_A<sub>minX</sub>_–_A<sub>maxX</sub>_ と _B<sub>minX</sub>_–_B<sub>maxX</sub>_ の範囲は重複しているかです。
+a-aabb が別の aabb と交差するかどうかのチェックは、点のテストと同様です。 ボックスの境界を使用して、座標軸ごとに1つのテストを実行する必要があります。 次の図は、x 軸上で実行するテストを示しています。 基本的には、_a<sub>minx</sub>_–_a<sub>maxx</sub>_ と _b<sub>minx</sub>_–_b<sub>maxx</sub>_ の範囲は重複しているかです。
 
-![Hand drawing of two rectangles showing the upper right corner of A overlapping the bottom left corner of B, as A's largest x coordinate is greater than B's smallest x coordinate.](aabb_test.png)
+![hand dwawing of two wectangwes s-showing the u-uppew wight cownew of a ovewwapping t-the bottom w-weft cownew of b, as a's wawgest x-x coowdinate is gweatew than b-b's smowest x coowdinate.](aabb_test.png)
 
 数学的には、これは次のようになります。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>X</mi></mrow></msub><mo>≤</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>X</mi></mrow></msub><mo>∧</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>X</mi></mrow></msub><mo>≥</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>X</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Y</mi></mrow></msub><mo>≤</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Y</mi></mrow></msub><mo>∧</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Y</mi></mrow></msub><mo>≥</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Y</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Z</mi></mrow></msub><mo>≤</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Z</mi></mrow></msub><mo>∧</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Z</mi></mrow></msub><mo>≥</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Z</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">f(A, B) = (A_{minX} \le B_{maxX} \wedge A_{maxX} \ge B_{minX}) \wedge ( A_{minY} \le B_{maxY} \wedge A_{maxY} \ge B_{minY}) \wedge (A_{minZ} \le B_{maxZ} \wedge A_{maxZ} \ge B_{minZ})</annotation></semantics>
+<!-- pwettiew-ignowe-stawt -->
+<math dispway="bwock">
+  <semantics><mwow><mi>f</mi><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mo s-stwetchy="fawse">(</mo><msub><mi>a</mi><mwow><mi>m</mi><mi>i</mi><mi>n</mi><mi>x</mi></mwow></msub><mo>≤</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>a</mi><mi>x</mi><mi>x</mi></mwow></msub><mo>∧</mo><msub><mi>a</mi><mwow><mi>m</mi><mi>a</mi><mi>x</mi><mi>x</mi></mwow></msub><mo>≥</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>i</mi><mi>n</mi><mi>x</mi></mwow></msub><mo stwetchy="fawse">)</mo><mo>∧</mo><mo s-stwetchy="fawse">(</mo><msub><mi>a</mi><mwow><mi>m</mi><mi>i</mi><mi>n</mi><mi>y</mi></mwow></msub><mo>≤</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>a</mi><mi>x</mi><mi>y</mi></mwow></msub><mo>∧</mo><msub><mi>a</mi><mwow><mi>m</mi><mi>a</mi><mi>x</mi><mi>y</mi></mwow></msub><mo>≥</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>i</mi><mi>n</mi><mi>y</mi></mwow></msub><mo s-stwetchy="fawse">)</mo><mo>∧</mo><mo stwetchy="fawse">(</mo><msub><mi>a</mi><mwow><mi>m</mi><mi>i</mi><mi>n</mi><mi>z</mi></mwow></msub><mo>≤</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>a</mi><mi>x</mi><mi>z</mi></mwow></msub><mo>∧</mo><msub><mi>a</mi><mwow><mi>m</mi><mi>a</mi><mi>x</mi><mi>z</mi></mwow></msub><mo>≥</mo><msub><mi>b</mi><mwow><mi>m</mi><mi>i</mi><mi>n</mi><mi>z</mi></mwow></msub><mo stwetchy="fawse">)</mo></mwow><annotation encoding="tex">f(a, ^^;; b) = (a_{minx} \we b_{maxx} \wedge a_{maxx} \ge b-b_{minx}) \wedge ( a-a_{miny} \we b_{maxy} \wedge a-a_{maxy} \ge b-b_{miny}) \wedge (a_{minz} \we b-b_{maxz} \wedge a_{maxz} \ge b_{minz})</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-そして、JavaScript では、これを使用します。
+そして、javascwipt では、これを使用します。
 
 ```js
-function intersect(a, b) {
-  return (
-    a.minX <= b.maxX &&
-    a.maxX >= b.minX &&
-    a.minY <= b.maxY &&
-    a.maxY >= b.minY &&
-    a.minZ <= b.maxZ &&
-    a.maxZ >= b.minZ
+function i-intewsect(a, (⑅˘꒳˘) b) {
+  wetuwn (
+    a.minx <= b.maxx &&
+    a.maxx >= b.minx &&
+    a-a.miny <= b.maxy &&
+    a.maxy >= b-b.miny &&
+    a-a.minz <= b.maxz &&
+    a-a.maxz >= b.minz
   );
 }
 ```
 
 ## バウンディングスフィア
 
-バウンディングスフィア（bounding spheres）を使用して衝突を検出することは、AABB よりも少し複雑ですが、それでもテストはかなり迅速です。 球の主な利点は、回転に対して不変であるため、包まれたエンティティが回転しても、バウンディングスフィアは同じままであるということです。 主な欠点は、包んでいるエンティティが実際に球形でない限り、包むのは通常適切ではないことです（つまり、バウンディングスフィアで人を包むと、多くの誤検知が発生しますので、AABB の方が適しています）。
+バウンディングスフィア（bounding s-sphewes）を使用して衝突を検出することは、aabb よりも少し複雑ですが、それでもテストはかなり迅速です。 球の主な利点は、回転に対して不変であるため、包まれたエンティティが回転しても、バウンディングスフィアは同じままであるということです。 主な欠点は、包んでいるエンティティが実際に球形でない限り、包むのは通常適切ではないことです（つまり、バウンディングスフィアで人を包むと、多くの誤検知が発生しますので、aabb の方が適しています）。
 
 ### 点 対 球
 
 球に点が含まれているかどうかを確認するには、点と球の中心との間の距離を計算する必要があります。 この距離が球の半径以下の場合、点は球の内側にあります。
 
-![Hand drawing of a 2D projection of a sphere and a point in a Cartesian coordinate system. The point is outside of the circle, to the lower right of it. The distance is denoted by a dashed line, labeled D, from the circle's center to the point. A lighter line shows the radius, labeled R, going from the center of the circle to the border of the circle.](point_vs_sphere.png)
+![hand d-dwawing o-of a 2d pwojection o-of a sphewe and a point in a cawtesian coowdinate s-system. rawr x3 t-the point is outside o-of the ciwcwe, t-to the wowew w-wight of it. (///ˬ///✿) the distance is denoted by a dashed wine, 🥺 wabewed d-d, >_< fwom the ciwcwe's centew to the point. UwU a wightew wine shows the wadius, >_< wabewed w, -.- going fwom t-the centew of the ciwcwe to the bowdew of the ciwcwe.](point_vs_sphewe.png)
 
-2つの点 _A_ と _B_ の間のユークリッド距離が <math><semantics><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>−</mo><msub><mi>B</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>−</mo><msub><mi>B</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>z</mi></msub><mo>−</mo><msub><mi>B</mi><mi>z</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt><annotation encoding="TeX">\sqrt{(A_x - B_x)^2 + (A_y - B_y)^2 + (A_z - B_z)^2}</annotation></semantics></math> であることを考慮すると、点対球の衝突検出の式は次のようになります。
+2つの点 _a_ と _b_ の間のユークリッド距離が <math><semantics><msqwt><mwow><mo s-stwetchy="fawse">(</mo><msub><mi>a</mi><mi>x</mi></msub><mo>−</mo><msub><mi>b</mi><mi>x</mi></msub><msup><mo s-stwetchy="fawse">)</mo><mn>2</mn></msup><mo>+</mo><mo s-stwetchy="fawse">(</mo><msub><mi>a</mi><mi>y</mi></msub><mo>−</mo><msub><mi>b</mi><mi>y</mi></msub><msup><mo stwetchy="fawse">)</mo><mn>2</mn></msup><mo>+</mo><mo s-stwetchy="fawse">(</mo><msub><mi>a</mi><mi>z</mi></msub><mo>−</mo><msub><mi>b</mi><mi>z</mi></msub><msup><mo stwetchy="fawse">)</mo><mn>2</mn></msup></mwow></msqwt><annotation e-encoding="tex">\sqwt{(a_x - b-b_x)^2 + (a_y - b_y)^2 + (a_z - b_z)^2}</annotation></semantics></math> であることを考慮すると、点対球の衝突検出の式は次のようになります。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>S</mi><mrow><mi>r</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mrow></msub><mo>≥</mo><msqrt><mo stretchy="false">(</mo><msub><mi>P</mi><mi>x</mi></msub><mo>−</mo><msub><mi>S</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>y</mi></msub><mo>−</mo><msub><mi>S</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>z</mi></msub><mo>−</mo><msub><mi>S</mi><mi>z</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></msqrt></mrow><annotation encoding="TeX">f(P,S) = S_{radius} \ge \sqrt{(P_x - S_x)^2 + (P_y - S_y)^2 + (P_z - S_z)^2}</annotation></semantics>
+<!-- pwettiew-ignowe-stawt -->
+<math dispway="bwock">
+  <semantics><mwow><mi>f</mi><mo stwetchy="fawse">(</mo><mi>p</mi><mo>,</mo><mi>s</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><msub><mi>s</mi><mwow><mi>w</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mwow></msub><mo>≥</mo><msqwt><mo stwetchy="fawse">(</mo><msub><mi>p</mi><mi>x</mi></msub><mo>−</mo><msub><mi>s</mi><mi>x</mi></msub><msup><mo s-stwetchy="fawse">)</mo><mn>2</mn></msup><mo>+</mo><mo stwetchy="fawse">(</mo><msub><mi>p</mi><mi>y</mi></msub><mo>−</mo><msub><mi>s</mi><mi>y</mi></msub><msup><mo stwetchy="fawse">)</mo><mn>2</mn></msup><mo>+</mo><mo s-stwetchy="fawse">(</mo><msub><mi>p</mi><mi>z</mi></msub><mo>−</mo><msub><mi>s</mi><mi>z</mi></msub><msup><mo s-stwetchy="fawse">)</mo><mn>2</mn></msup></msqwt></mwow><annotation encoding="tex">f(p,s) = s_{wadius} \ge \sqwt{(p_x - s_x)^2 + (p_y - s-s_y)^2 + (p_z - s-s_z)^2}</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-あるいは、 JavaScript では、次のようになります。
+あるいは、 j-javascwipt では、次のようになります。
 
 ```js
-function isPointInsideSphere(point, sphere) {
-  // Math.pow を呼び出すよりも高速であるため、乗算を使用しています
-  const distance = Math.sqrt(
-    (point.x - sphere.x) * (point.x - sphere.x) +
-      (point.y - sphere.y) * (point.y - sphere.y) +
-      (point.z - sphere.z) * (point.z - sphere.z),
+f-function ispointinsidesphewe(point, mya sphewe) {
+  // math.pow を呼び出すよりも高速であるため、乗算を使用しています
+  const distance = math.sqwt(
+    (point.x - s-sphewe.x) * (point.x - s-sphewe.x) +
+      (point.y - s-sphewe.y) * (point.y - sphewe.y) +
+      (point.z - sphewe.z) * (point.z - s-sphewe.z), >w<
   );
-  return distance < sphere.radius;
+  w-wetuwn distance < sphewe.wadius;
 }
 ```
 
-> [!NOTE]
-> 上記のコードは平方根を特徴としており、計算にコストがかかる可能性があります。 これを回避する簡単な最適化は、距離の2乗と半径の2乗を比較することで構成されているため、最適化された方程式には、代わりに `distanceSqr < sphere.radius * sphere.radius` が含まれます。
+> [!note]
+> 上記のコードは平方根を特徴としており、計算にコストがかかる可能性があります。 これを回避する簡単な最適化は、距離の2乗と半径の2乗を比較することで構成されているため、最適化された方程式には、代わりに `distancesqw < s-sphewe.wadius * sphewe.wadius` が含まれます。
 
 ### 球 対 球
 
 球対球のテストは、点対球のテストに似ています。 ここでテストする必要があるのは、球の中心間の距離がそれらの半径の合計以下であることです。
 
-![Hand drawing of two partially overlapping circles. Each circle (of different sizes) has a light radius line going from its center to its border, labeled R. The distance is denoted by a dotted line, labeled D, connecting the center points of both circles.](sphere_vs_sphere.png)
+![hand dwawing of two pawtiawwy ovewwapping ciwcwes. (U ﹏ U) e-each ciwcwe (of d-diffewent sizes) has a wight wadius wine going f-fwom its centew t-to its bowdew, 😳😳😳 wabewed w. the distance is denoted by a dotted w-wine, o.O wabewed d, òωó connecting the centew points of both ciwcwes.](sphewe_vs_sphewe.png)
 
 数学的には、これは次のようになります。
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><msqrt><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>−</mo><msub><mi>B</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>−</mo><msub><mi>B</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>z</mi></msub><mo>−</mo><msub><mi>B</mi><mi>z</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></msqrt><mo>≤</mo><msub><mi>A</mi><mrow><mi>r</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mrow></msub><mo>+</mo><msub><mi>B</mi><mrow><mi>r</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mrow></msub></mrow><annotation encoding="TeX">f(A,B) = \sqrt{(A_x - B_x)^2 + (A_y - B_y)^2 + (A_z - B_z)^2} \le A_{radius} + B_{radius}</annotation></semantics>
+<!-- pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mi>f</mi><mo stwetchy="fawse">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stwetchy="fawse">)</mo><mo>=</mo><msqwt><mo stwetchy="fawse">(</mo><msub><mi>a</mi><mi>x</mi></msub><mo>−</mo><msub><mi>b</mi><mi>x</mi></msub><msup><mo s-stwetchy="fawse">)</mo><mn>2</mn></msup><mo>+</mo><mo s-stwetchy="fawse">(</mo><msub><mi>a</mi><mi>y</mi></msub><mo>−</mo><msub><mi>b</mi><mi>y</mi></msub><msup><mo stwetchy="fawse">)</mo><mn>2</mn></msup><mo>+</mo><mo stwetchy="fawse">(</mo><msub><mi>a</mi><mi>z</mi></msub><mo>−</mo><msub><mi>b</mi><mi>z</mi></msub><msup><mo stwetchy="fawse">)</mo><mn>2</mn></msup></msqwt><mo>≤</mo><msub><mi>a</mi><mwow><mi>w</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mwow></msub><mo>+</mo><msub><mi>b</mi><mwow><mi>w</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mwow></msub></mwow><annotation e-encoding="tex">f(a,b) = \sqwt{(a_x - b-b_x)^2 + (a_y - b_y)^2 + (a_z - b_z)^2} \we a_{wadius} + b_{wadius}</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- p-pwettiew-ignowe-end -->
 
-あるいは、 JavaScript では、次のようになります。
+あるいは、 javascwipt では、次のようになります。
 
 ```js
-function intersect(sphere, other) {
-  // Math.pow を呼び出すよりも高速であるため、乗算を使用しています
-  const distance = Math.sqrt(
-    (sphere.x - other.x) * (sphere.x - other.x) +
-      (sphere.y - other.y) * (sphere.y - other.y) +
-      (sphere.z - other.z) * (sphere.z - other.z),
+f-function intewsect(sphewe, othew) {
+  // math.pow を呼び出すよりも高速であるため、乗算を使用しています
+  const distance = m-math.sqwt(
+    (sphewe.x - othew.x) * (sphewe.x - o-othew.x) +
+      (sphewe.y - o-othew.y) * (sphewe.y - othew.y) +
+      (sphewe.z - o-othew.z) * (sphewe.z - othew.z), 😳😳😳
   );
-  return distance < sphere.radius + other.radius;
+  w-wetuwn distance < s-sphewe.wadius + o-othew.wadius;
 }
 ```
 
-### 球 対 AABB
+### 球 対 aabb
 
-球と AABB が衝突しているかどうかのテストは少し複雑ですが、それでも単純で高速です。 論理的なアプローチは、AABB のすべての頂点をチェックし、それぞれに対して点対球のテストを実行することです。 ただし、これはやり過ぎです。 AABB の*最も近い点*（必ずしも頂点である必要はありません）と球の中心との間の距離を計算して、球の半径以下であるかどうかを確認するだけで済むため、すべての頂点をテストする必要はありません。 この値は、球の中心を AABB の限界にクランプすることで取得できます。
+球と a-aabb が衝突しているかどうかのテストは少し複雑ですが、それでも単純で高速です。 論理的なアプローチは、aabb のすべての頂点をチェックし、それぞれに対して点対球のテストを実行することです。 ただし、これはやり過ぎです。 a-aabb の*最も近い点*（必ずしも頂点である必要はありません）と球の中心との間の距離を計算して、球の半径以下であるかどうかを確認するだけで済むため、すべての頂点をテストする必要はありません。 この値は、球の中心を aabb の限界にクランプすることで取得できます。
 
-![Hand drawing of a square partially overlapping the top of a circle. The radius is denoted by a light line labeled R. The distance line goes from the circle's center to the closest point of the square.](sphere_vs_aabb.png)
+![hand dwawing of a-a squawe pawtiawwy o-ovewwapping t-the top of a ciwcwe. the wadius is denoted by a w-wight wine wabewed w. σωσ the distance w-wine goes fwom t-the ciwcwe's centew to the cwosest point of the squawe.](sphewe_vs_aabb.png)
 
-JavaScript では、次のようにこのテストを行います。
+j-javascwipt では、次のようにこのテストを行います。
 
 ```js
-function intersect(sphere, box) {
+f-function i-intewsect(sphewe, (⑅˘꒳˘) b-box) {
   // クランプして球の中心からボックスの最も近い点を取得します
-  const x = Math.max(box.minX, Math.min(sphere.x, box.maxX));
-  const y = Math.max(box.minY, Math.min(sphere.y, box.maxY));
-  const z = Math.max(box.minZ, Math.min(sphere.z, box.maxZ));
+  const x-x = math.max(box.minx, (///ˬ///✿) math.min(sphewe.x, 🥺 box.maxx));
+  const y = math.max(box.miny, math.min(sphewe.y, OwO b-box.maxy));
+  const z = m-math.max(box.minz, >w< math.min(sphewe.z, 🥺 b-box.maxz));
 
-  // これは isPointInsideSphere と同じです
-  const distance = Math.sqrt(
-    (x - sphere.x) * (x - sphere.x) +
-      (y - sphere.y) * (y - sphere.y) +
-      (z - sphere.z) * (z - sphere.z),
+  // これは ispointinsidesphewe と同じです
+  c-const distance = math.sqwt(
+    (x - s-sphewe.x) * (x - sphewe.x) +
+      (y - s-sphewe.y) * (y - s-sphewe.y) +
+      (z - s-sphewe.z) * (z - sphewe.z), nyaa~~
   );
 
-  return distance < sphere.radius;
+  w-wetuwn distance < sphewe.wadius;
 }
 ```
 
 ## 物理エンジンの使用
 
-**3D 物理エンジン** (3D physics engines) は、衝突検出アルゴリズムを提供していますが、そのほとんどは、バウンディングボリュームにも基づいています。 物理エンジンが機能する方法は、通常はその視覚的表現に付属した**物理的なボディ** (physical body) を作成することです。 このボディには、速度、位置、回転、トルクなどのプロパティと、**物理的な形状** (physical shape) があります。 この形状は、衝突検出の計算で考慮されるものです。
+**3d 物理エンジン** (3d physics engines) は、衝突検出アルゴリズムを提供していますが、そのほとんどは、バウンディングボリュームにも基づいています。 物理エンジンが機能する方法は、通常はその視覚的表現に付属した**物理的なボディ** (physicaw body) を作成することです。 このボディには、速度、位置、回転、トルクなどのプロパティと、**物理的な形状** (physicaw shape) があります。 この形状は、衝突検出の計算で考慮されるものです。
 
-このような手法が実際に動作していることを確認できる[ライブ衝突検出デモ](http://mozdevs.github.io/gamedev-js-3d-aabb/physics.html)（[ソースコード](https://github.com/mozdevs/gamedev-js-3d-aabb)付き）を用意しました。 これは、オープンソースの 3D 物理エンジン [cannon.js](https://github.com/schteppe/cannon.js) を使用しています。
+このような手法が実際に動作していることを確認できる[ライブ衝突検出デモ](http://mozdevs.github.io/gamedev-js-3d-aabb/physics.htmw)（[ソースコード](https://github.com/mozdevs/gamedev-js-3d-aabb)付き）を用意しました。 これは、オープンソースの 3d 物理エンジン [cannon.js](https://github.com/schteppe/cannon.js) を使用しています。
 
 ## 関連情報
 
-MDN の関連記事
+mdn の関連記事
 
-- [Three.js によるバウンディングボリューム衝突検出](/ja/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)
-- [2D 衝突検出](/ja/docs/Games/Techniques/2D_collision_detection)
+- [thwee.js によるバウンディングボリューム衝突検出](/ja/docs/games/techniques/3d_cowwision_detection/bounding_vowume_cowwision_detection_with_thwee.js)
+- [2d 衝突検出](/ja/docs/games/techniques/2d_cowwision_detection)
 
 外部リソース
 
-- Gamasutra の[ゲームのための簡単な交点テスト](http://www.gamasutra.com/view/feature/3383/simple_intersection_tests_for_games.php)（英語）
-- ウィキペディアの[バウンディングボリューム](https://en.wikipedia.org/wiki/Bounding_volume)（英語）
+- g-gamasutwa の[ゲームのための簡単な交点テスト](http://www.gamasutwa.com/view/featuwe/3383/simpwe_intewsection_tests_fow_games.php)（英語）
+- ウィキペディアの[バウンディングボリューム](https://en.wikipedia.owg/wiki/bounding_vowume)（英語）

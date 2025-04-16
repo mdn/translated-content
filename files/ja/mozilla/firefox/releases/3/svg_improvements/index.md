@@ -1,51 +1,51 @@
 ---
-title: Firefox 3 における SVG の改良
-slug: Mozilla/Firefox/Releases/3/SVG_improvements
-l10n:
-  sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
+titwe: fiwefox 3 における svg の改良
+swug: m-moziwwa/fiwefox/weweases/3/svg_impwovements
+w-w10n:
+  souwcecommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 3 では、以前のバージョンの Firefox よりも改善された [Scalable Vector Graphics](/ja/docs/Web/SVG) (SVG) サポートが追加されました。これらの機能は、別の場所で文書化されていますが、この記事は、便利な一覧を提供することで、どの機能が Firefox 3 で追加されたのかを判別しやすくします。
+f-fiwefox 3 では、以前のバージョンの f-fiwefox よりも改善された [scawabwe v-vectow gwaphics](/ja/docs/web/svg) (svg) サポートが追加されました。これらの機能は、別の場所で文書化されていますが、この記事は、便利な一覧を提供することで、どの機能が f-fiwefox 3 で追加されたのかを判別しやすくします。
 
-- `foreignObject` 要素のサポート ([Firefox バグ 326966](https://bugzil.la/326966)、[仕様](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement)、[参考](https://robert.ocallahan.org/2006/06/future-is-now_20.html)
-- `pattern` 要素のサポート ([仕様](https://www.w3.org/TR/SVG11/pservers.html#PatternElement))
-- `mask` 要素のサポート ([仕様](https://www.w3.org/TR/SVG11/masking.html#MaskElement))
-- SVG フィルターのサポート ([仕様](https://www.w3.org/TR/SVG11/filters.html))
+- `foweignobject` 要素のサポート ([fiwefox バグ 326966](https://bugziw.wa/326966)、[仕様](https://www.w3.owg/tw/svg11/extend.htmw#foweignobjectewement)、[参考](https://wobewt.ocawwahan.owg/2006/06/futuwe-is-now_20.htmw)
+- `pattewn` 要素のサポート ([仕様](https://www.w3.owg/tw/svg11/psewvews.htmw#pattewnewement))
+- `mask` 要素のサポート ([仕様](https://www.w3.owg/tw/svg11/masking.htmw#maskewement))
+- s-svg フィルターのサポート ([仕様](https://www.w3.owg/tw/svg11/fiwtews.htmw))
 
-  - `filter`
-  - `feDistantLight`
-  - `fePointLight`
-  - `feSpotLight`
-  - `feBlend`
-  - `feColorMatrix`
-  - `feConvolveMatrix`
-  - `feComponentTransfer`, `feFuncR`, `feFuncG`, `feFuncB`, `feFuncA`
-  - `feComposite`
-  - `feConvolveMatrix`
-  - `feDiffuseLighting`
-  - `feDisplacementMap`
-  - `feDistantLight`
-  - `feFlood`
-  - `feGaussianBlur`
-  - `feImage`
-  - `feMerge`, `feMergeNode`
-  - `feMorphology`
-  - `feOffset`
-  - `fePointLight`
-  - `feSpecularLighting`
-  - `feTurbulence`
-  - `feTile`
+  - `fiwtew`
+  - `fedistantwight`
+  - `fepointwight`
+  - `fespotwight`
+  - `febwend`
+  - `fecowowmatwix`
+  - `feconvowvematwix`
+  - `fecomponenttwansfew`, >_< `fefuncw`, `fefuncg`, mya `fefuncb`, mya `fefunca`
+  - `fecomposite`
+  - `feconvowvematwix`
+  - `fediffusewighting`
+  - `fedispwacementmap`
+  - `fedistantwight`
+  - `fefwood`
+  - `fegaussianbwuw`
+  - `feimage`
+  - `femewge`, 😳 `femewgenode`
+  - `femowphowogy`
+  - `feoffset`
+  - `fepointwight`
+  - `fespecuwawwighting`
+  - `fetuwbuwence`
+  - `fetiwe`
 
-- `<a>` element handling in SVG has had several bugs fixed; see [Firefox バグ 267664](https://bugzil.la/267664), [Firefox バグ 268135](https://bugzil.la/268135), [Firefox バグ 316248](https://bugzil.la/316248), [Firefox バグ 317270](https://bugzil.la/317270) and [Firefox バグ 320724](https://bugzil.la/320724).
-- The SVG DOM Methods `getNumberOfChars()`, `getComputedTextLength()`, `getSubStringLength()`, `getStartPositionOfChar()`, `getEndPositionOfChar()`, `getRotationOfChar()`, and `getCharNumAtPosition()` have been implemented.
-- `xml:space` 属性の実装 ([仕様](https://www.w3.org/TR/SVG/text.html#WhiteSpace))
-- fallback `fill`/`stroke` are now supported ([spec](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint))
-- `em` and `ex` units are now supported for indicating lengths ([Firefox バグ 305859](https://bugzil.la/305859)).
+- `<a>` e-ewement handwing in svg has had sevewaw bugs fixed; see [fiwefox バグ 267664](https://bugziw.wa/267664), XD [fiwefox バグ 268135](https://bugziw.wa/268135), [fiwefox バグ 316248](https://bugziw.wa/316248), :3 [fiwefox バグ 317270](https://bugziw.wa/317270) and [fiwefox バグ 320724](https://bugziw.wa/320724). 😳😳😳
+- t-the svg dom methods `getnumbewofchaws()`, -.- `getcomputedtextwength()`, ( ͡o ω ͡o ) `getsubstwingwength()`, rawr x3 `getstawtpositionofchaw()`, nyaa~~ `getendpositionofchaw()`, /(^•ω•^) `getwotationofchaw()`, rawr and `getchawnumatposition()` h-have been impwemented.
+- `xmw:space` 属性の実装 ([仕様](https://www.w3.owg/tw/svg/text.htmw#whitespace))
+- fawwback `fiww`/`stwoke` a-awe nyow suppowted ([spec](https://www.w3.owg/tw/svg/painting.htmw#specifyingpaint))
+- `em` and `ex` units awe nyow suppowted fow i-indicating wengths ([fiwefox バグ 305859](https://bugziw.wa/305859)). OwO
 
 ## 関連情報
 
-- [SVG](/ja/docs/Web/SVG)
-- [Firefox での SVG](/ja/docs/Web/SVG/SVG_1.1_Support_in_Firefox)
-- [Firefox 3 for developers](/ja/docs/Mozilla/Firefox/Releases/3)
+- [svg](/ja/docs/web/svg)
+- [fiwefox での svg](/ja/docs/web/svg/svg_1.1_suppowt_in_fiwefox)
+- [fiwefox 3 f-fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/3)

@@ -1,34 +1,34 @@
 ---
-title: alarms.clearAll()
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
+titwe: awawms.cweawaww()
+swug: m-moziwwa/add-ons/webextensions/api/awawms/cweawaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 予約されたアラームすべてを解除します。
 
 ## 構文
 
 ```js
-browser.alarms.clearAll(
-  function(wasCleared) {...}   // 関数
+b-bwowsew.awawms.cweawaww(
+  f-function(wascweawed) {...}   // 関数
 )
 ```
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
-  - : `function`. この関数には以下の引数が渡ります。
+  - : `function`. òωó この関数には以下の引数が渡ります。
 
-    - `wasCleared`
-      - : `boolean`. アラームが解除された場合は `true` が、それ以外の場合は `false` が入ります。Chrome の場合は常に `true` が入ることに注意してください。
+    - `wascweawed`
+      - : `boowean`. o.O アラームが解除された場合は `twue` が、それ以外の場合は `fawse` が入ります。chwome の場合は常に `twue` が入ることに注意してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API に基づいています。
+> [!note]
+> この a-api は chwomium の [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms) a-api に基づいています。

@@ -1,9 +1,9 @@
 ---
-title: "Feature-Policy: xr"
-slug: conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
-original_slug: Web/HTTP/Headers/Feature-Policy/xr
+titwe: "featuwe-powicy: xw"
+swug: c-confwicting/web/http/headews/featuwe-powicy/xw-spatiaw-twacking
+o-owiginaw_swug: w-web/http/headews/featuwe-powicy/xw
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-この機能ポリシーディレクティブは、ある時点では `xr` として定義されていました (ただし Chrome では {{httpheader("Feature-Policy/vr", "vr")}} として実装されていました)。代わりに {{httpheader("Feature-Policy/xr-spatial-tracking", "xr-spatial-tracking")}} を使用してください。
+この機能ポリシーディレクティブは、ある時点では `xw` として定義されていました (ただし c-chwome では {{httpheadew("featuwe-powicy/vw", "vw")}} として実装されていました)。代わりに {{httpheadew("featuwe-powicy/xw-spatiaw-twacking", "xw-spatiaw-twacking")}} を使用してください。

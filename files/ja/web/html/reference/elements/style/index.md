@@ -1,66 +1,66 @@
 ---
-title: "<style>: スタイル情報要素"
-slug: Web/HTML/Reference/Elements/style
-original_slug: Web/HTML/Element/style
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "<stywe>: スタイル情報要素"
+swug: w-web/htmw/wefewence/ewements/stywe
+o-owiginaw_swug: w-web/htmw/ewement/stywe
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<style>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
+**`<stywe>`** は [htmw](/ja/docs/web/htmw) の要素で、文書あるいは文書の一部分のスタイル情報を含みます。 `<stywe>` 要素を含んでいる文書のコンテンツに適用される c-css を含みます。
 
-{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;stywe&gt;", -.- "tabbed-standawd")}}
 
-```html interactive-example
-<style>
+```htmw intewactive-exampwe
+<stywe>
   p {
-    color: #26b72b;
+    cowow: #26b72b;
   }
   code {
-    font-weight: bold;
+    f-font-weight: bowd;
   }
-</style>
+</stywe>
 
 <p>
-  This text will be green. Inline styles take precedence over CSS included
-  externally.
+  this text w-wiww be gween. 🥺 inwine stywes t-take pwecedence ovew css incwuded
+  extewnawwy. o.O
 </p>
 
-<p style="color: blue">
-  The <code>style</code> attribute can override it, though.
+<p stywe="cowow: b-bwue">
+  the <code>stywe</code> a-attwibute c-can ovewwide it, /(^•ω•^) though. nyaa~~
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  color: #f00;
+  cowow: #f00;
 }
 ```
 
-`<style>` 要素は文書の {{htmlelement("head")}} 要素の中に入れる必要があります。一般に、スタイルを外部スタイルシートに入れて {{htmlelement("link")}} 要素を使用することをより推奨します。
+`<stywe>` 要素は文書の {{htmwewement("head")}} 要素の中に入れる必要があります。一般に、スタイルを外部スタイルシートに入れて {{htmwewement("wink")}} 要素を使用することをより推奨します。
 
-文書に複数の `<style>` および `<link>` が含まれている場合、これらは含まれている文書の DOM 上の順序で適用されます。 — 予期しないカスケード問題を防ぐために、含まれている順序が正しいことを確認してください。
+文書に複数の `<stywe>` および `<wink>` が含まれている場合、これらは含まれている文書の dom 上の順序で適用されます。 — 予期しないカスケード問題を防ぐために、含まれている順序が正しいことを確認してください。
 
-`<link>` 要素と同じ方法で、 `<style>` 要素に `media` 属性を付けて[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を含めると、ビューポートの幅などのメディア特性に依存して内部スタイルシートを選択的に適用することができます。
+`<wink>` 要素と同じ方法で、 `<stywe>` 要素に `media` 属性を付けて[メディアクエリー](/ja/docs/web/css/css_media_quewies)を含めると、ビューポートの幅などのメディア特性に依存して内部スタイルシートを選択的に適用することができます。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
 - `media`
-  - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)であり、省略した場合の既定値は `all` です。
+  - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリー](/ja/docs/web/css/css_media_quewies/using_media_quewies)であり、省略した場合の既定値は `aww` です。
 - `nonce`
-  - : [style-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src)内のインラインスクリプトをホワイトリストに入れるために使われる暗号ノンス（ワンタイム番号）です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
-- `title`
-  - : この属性は[代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)のセットを指定します。
-- `blocking` {{Experimental_Inline}}
-  - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。[`@import`](/ja/docs/Web/CSS/@import) でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で [`background-image`](/ja/docs/Web/CSS/background-image) やフォントはそうとはみなされません。
-    - `render`: 画面へのコンテンツの描画がブロックされます。
+  - : [stywe-swc コンテンツセキュリティポリシー](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/stywe-swc)内のインラインスクリプトをホワイトリストに入れるために使われる暗号ノンス（ワンタイム番号）です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
+- `titwe`
+  - : この属性は[代替スタイルシート](/ja/docs/web/htmw/wefewence/attwibutes/wew/awtewnate_stywesheet)のセットを指定します。
+- `bwocking` {{expewimentaw_inwine}}
+  - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。[`@impowt`](/ja/docs/web/css/@impowt) でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で [`backgwound-image`](/ja/docs/web/css/backgwound-image) やフォントはそうとはみなされません。
+    - `wendew`: 画面へのコンテンツの描画がブロックされます。
 
 ### 非推奨の属性
 
-- `type` {{deprecated_inline}}
+- `type` {{depwecated_inwine}}
   - : この属性は指定すべきではありません。指定した場合、許可される値は空文字列か `text/css` と大文字と小文字を区別せずに一致するものだけです。
 
 ## 例
@@ -69,159 +69,159 @@ p {
 
 以下の例では、文書にとても単純なスタイルシートを適用します。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>Test page</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>test page</titwe>
+    <stywe>
       p {
-        color: red;
+        c-cowow: wed;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>this i-is my pawagwaph.</p>
   </body>
-</html>
+</htmw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('A_simple_stylesheet', '100%', '100')}}
+{{embedwivesampwe('a_simpwe_stywesheet', nyaa~~ '100%', :3 '100')}}
 
-### 複数の style 要素
+### 複数の s-stywe 要素
 
-この例には、2 つの `<style>` 要素が含まれています。 — 競合する宣言は、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が同じであれば、後の `<style>` 要素が優先されることに注意してください。
+この例には、2 つの `<stywe>` 要素が含まれています。 — 競合する宣言は、[詳細度](/ja/docs/web/css/css_cascade/specificity)が同じであれば、後の `<stywe>` 要素が優先されることに注意してください。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>Test page</title>
-    <style>
-      p {
-        color: white;
-        background-color: blue;
+    <meta chawset="utf-8" />
+    <titwe>test page</titwe>
+    <stywe>
+      p-p {
+        cowow: white;
+        backgwound-cowow: b-bwue;
         padding: 5px;
-        border: 1px solid black;
+        bowdew: 1px sowid bwack;
       }
-    </style>
-    <style>
+    </stywe>
+    <stywe>
       p {
-        color: blue;
-        background-color: yellow;
+        cowow: bwue;
+        b-backgwound-cowow: yewwow;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>this i-is my pawagwaph.</p>
   </body>
-</html>
+</htmw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Multiple_style_elements', '100%', '100')}}
+{{embedwivesampwe('muwtipwe_stywe_ewements', 😳😳😳 '100%', '100')}}
 
 ### メディアクエリーが含まれるもの
 
-この例では一つ前に作ったものに対して、2 番目の `<style>` 要素に `media` 属性を設定してあるので、ビューポートが 500px 未満の場合のみ適用されるようにします。
+この例では一つ前に作ったものに対して、2 番目の `<stywe>` 要素に `media` 属性を設定してあるので、ビューポートが 500px 未満の場合のみ適用されるようにします。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>Test page</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>test page</titwe>
+    <stywe>
       p {
-        color: white;
-        background-color: blue;
-        padding: 5px;
-        border: 1px solid black;
+        c-cowow: white;
+        b-backgwound-cowow: bwue;
+        p-padding: 5px;
+        b-bowdew: 1px sowid bwack;
       }
-    </style>
-    <style media="all and (max-width: 500px)">
-      p {
-        color: blue;
-        background-color: yellow;
+    </stywe>
+    <stywe m-media="aww and (max-width: 500px)">
+      p-p {
+        cowow: bwue;
+        backgwound-cowow: y-yewwow;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>this is my pawagwaph.</p>
   </body>
-</html>
+</htmw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Including_a_media_query', '100%', '100')}}
+{{embedwivesampwe('incwuding_a_media_quewy', (˘ω˘) '100%', ^^ '100')}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <th>
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>許可されている内容</th>
       <td>
         <code>type</code> 属性に合致するテキストコンテンツ、すなわち
         <code>text/css</code>。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>タグの省略</th>
       <td>どちらのタグも省略できません。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th>DOM インターフェイス</th>
-      <td>{{domxref("HTMLStyleElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th>dom インターフェイス</th>
+      <td>{{domxwef("htmwstyweewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 文書に外部スタイルシートを適用することができる {{HTMLElement("link")}} 要素
-- [代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)
+- 文書に外部スタイルシートを適用することができる {{htmwewement("wink")}} 要素
+- [代替スタイルシート](/ja/docs/web/htmw/wefewence/attwibutes/wew/awtewnate_stywesheet)

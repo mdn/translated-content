@@ -1,82 +1,82 @@
 ---
-title: bookmarks.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
+titwe: bookmawks.wemove()
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.remove()`** は、ブックマークや空のブックマークフォルダーを削除するメソッドです。
+**`bookmawks.wemove()`** は、ブックマークや空のブックマークフォルダーを削除するメソッドです。
 
-ブックマークが見つからなかった、またはフォルダーが空ではなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされ、エラーの有無はコールバック内で確認できます。
+ブックマークが見つからなかった、またはフォルダーが空ではなかった場合には {{webextapiwef("wuntime.wastewwow")}} がセットされ、エラーの有無はコールバック内で確認できます。
 
 ## 構文
 
 ```js
-browser.bookmarks.remove(
-  id, // 文字列
-  callback, // 関数（省略可）
+b-bwowsew.bookmawks.wemove(
+  i-id, 😳 // 文字列
+  c-cawwback, 😳 // 関数（省略可）
 );
 ```
 
 ### 引数
 
 - `id`
-  - : 削除したいブックマーク / 空フォルダーの ID を指定する {{jsxref("string")}} です。
-- `callback`{{optional_inline}}
+  - : 削除したいブックマーク / 空フォルダーの i-id を指定する {{jsxwef("stwing")}} です。
+- `cawwback`{{optionaw_inwine}}
   - : ブックマークやフォルダーが削除された際に実行される関数です。この関数に渡される引数はありません。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 使用例
 
 以下の例はブックマークを削除するものです。
 
 ```js
-function onRemoved() {
-  if (chrome.runtime.lastError) {
-    console.log(chrome.runtime.lastError);
-  } else {
-    console.log("bookmark item removed!");
+f-function onwemoved() {
+  i-if (chwome.wuntime.wastewwow) {
+    c-consowe.wog(chwome.wuntime.wastewwow);
+  } ewse {
+    consowe.wog("bookmawk item wemoved!");
   }
 
 }
 
-chrome.bookmarks.remove(bookmarkItemId");
+c-chwome.bookmawks.wemove(bookmawkitemid");
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-update) a-api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における chwomium のコードから作成されています。micwosoft e-edge の実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative commons a-attwibution 3.0 united states w-wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. σωσ aww wights wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, OwO with ow without
+// modification, /(^•ω•^) awe pewmitted p-pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, 😳😳😳 this wist of conditions and the f-fowwowing discwaimew. ( ͡o ω ͡o )
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, >_< this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. >w<
+//    * n-nyeithew t-the nyame of googwe inc. rawr nyow t-the nyames of i-its
+// contwibutows may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, >w< incwuding, (⑅˘꒳˘) but not
+// wimited to, the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. OwO i-in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe fow a-any diwect, (ꈍᴗꈍ) indiwect, incidentaw, 😳
+// speciaw, 😳😳😳 exempwawy, ow consequentiaw damages (incwuding, mya b-but nyot
+// wimited to, mya pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, (⑅˘꒳˘)
+// data, (U ﹏ U) ow pwofits; o-ow business i-intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, mya whethew in contwact, ʘwʘ s-stwict wiabiwity, o-ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of this softwawe, (˘ω˘) even if advised o-of the possibiwity of such damage. (U ﹏ U)
 -->

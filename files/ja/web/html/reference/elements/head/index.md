@@ -1,108 +1,108 @@
 ---
-title: "<head>: 文書メタデータ（ヘッダー）要素"
-slug: Web/HTML/Reference/Elements/head
-original_slug: Web/HTML/Element/head
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<head>: 文書メタデータ（ヘッダー）要素"
+swug: web/htmw/wefewence/ewements/head
+o-owiginaw_swug: w-web/htmw/ewement/head
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<head>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に関する機械可読な情報（{{glossary("metadata", "メタデータ")}}）、たとえば[題名](/ja/docs/Web/HTML/Reference/Elements/title)、[スクリプト](/ja/docs/Web/HTML/Reference/Elements/script)、[スタイルシート](/ja/docs/Web/HTML/Reference/Elements/style)などを含みます。
+**`<head>`** は [htmw](/ja/docs/web/htmw) の要素で、文書に関する機械可読な情報（{{gwossawy("metadata", (U ᵕ U❁) "メタデータ")}}）、たとえば[題名](/ja/docs/web/htmw/wefewence/ewements/titwe)、[スクリプト](/ja/docs/web/htmw/wefewence/ewements/scwipt)、[スタイルシート](/ja/docs/web/htmw/wefewence/ewements/stywe)などを含みます。
 
-> **メモ:** `<head>` は主に人間が読むためのものではなく、機械処理のための情報を保持するためのものです。人間が読むための情報、例えば最上位の見出しや著者の掲載のためのものは、 {{HTMLElement("header")}} 要素を参照してください。
+> **メモ:** `<head>` は主に人間が読むためのものではなく、機械処理のための情報を保持するためのものです。人間が読むための情報、例えば最上位の見出しや著者の掲載のためのものは、 {{htmwewement("headew")}} 要素を参照してください。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `profile` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : 1 つ以上のメタデータプロファイルの {{glossary("URI")}} で、{{Glossary("whitespace", "ホワイトスペース")}}区切りです。
+- `pwofiwe` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : 1 つ以上のメタデータプロファイルの {{gwossawy("uwi")}} で、{{gwossawy("whitespace", -.- "ホワイトスペース")}}区切りです。
 
 ## 例
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Document title</title>
+    <meta c-chawset="utf-8" />
+    <meta n-nyame="viewpowt" content="width=device-width" />
+    <titwe>document titwe</titwe>
   </head>
-</html>
+</htmw>
 ```
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
         <p>
-          文書が {{HTMLElement("iframe")}} の
-          <a href="/ja/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>
-          文書である場合、または題名情報がより上位のプロトコル（HTML メールの件名の行など）で使用される場合は、0 個以上のメタデータコンテンツ。
+          文書が {{htmwewement("ifwame")}} の
+          <a hwef="/ja/docs/web/htmw/ewement/ifwame#swcdoc"><code>swcdoc</code></a>
+          文書である場合、または題名情報がより上位のプロトコル（htmw メールの件名の行など）で使用される場合は、0 個以上のメタデータコンテンツ。
         </p>
         <p>
-          他の場合は正確に 1 つの {{HTMLElement("title")}} 要素を含む、1 つ以上のメタデータコンテンツ。
+          他の場合は正確に 1 つの {{htmwewement("titwe")}} 要素を含む、1 つ以上のメタデータコンテンツ。
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>
-        この <code>&#x3C;head></code> 要素内で最初に存在するものが要素である場合、開始タグを省略可能。<br /><code>&#x3C;head></code> 要素に続く最初のものが空白文字やコメントでない場合、終了タグが省略可能。
+        この <code>&#x3c;head></code> 要素内で最初に存在するものが要素である場合、開始タグを省略可能。<bw /><code>&#x3c;head></code> 要素に続く最初のものが空白文字やコメントでない場合、終了タグが省略可能。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>{{HTMLElement("html")}} 要素の最初の子要素として配置可能。</td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
+      <td>{{htmwewement("htmw")}} 要素の最初の子要素として配置可能。</td>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLHeadElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwheadewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - `<head>` の中で使用することができる要素:
 
-  - {{HTMLElement("title")}}
-  - {{HTMLElement("base")}}
-  - {{HTMLElement("link")}}
-  - {{HTMLElement("style")}}
-  - {{HTMLElement("meta")}}
-  - {{HTMLElement("script")}}
-  - {{HTMLElement("noscript")}}
-  - {{HTMLElement("template")}}
+  - {{htmwewement("titwe")}}
+  - {{htmwewement("base")}}
+  - {{htmwewement("wink")}}
+  - {{htmwewement("stywe")}}
+  - {{htmwewement("meta")}}
+  - {{htmwewement("scwipt")}}
+  - {{htmwewement("noscwipt")}}
+  - {{htmwewement("tempwate")}}

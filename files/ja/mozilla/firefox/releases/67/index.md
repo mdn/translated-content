@@ -1,11 +1,11 @@
 ---
-title: Firefox 67 for developers
-slug: Mozilla/Firefox/Releases/67
+titwe: fiwefox 67 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/67
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされました。このページでは、開発者に影響する Firefox 67 の変更点をまとめています。
+fiwefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされました。このページでは、開発者に影響する f-fiwefox 67 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -13,137 +13,137 @@ Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされまし�
 
 - デバッガーの更新:
 
-  - [カラムブレークポイント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html) で、デバッガーに一時停止させたい行の特定の箇所 (またはカラム) を選択できます ([Firefox バグ 1528417](https://bugzil.la/1528417))。
-  - [ログポイント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_a_logpoint/index.html) で、コードの実行を一時停止したりコードを変更することなく、実行中に特定の情報をコンソールに記録できます。
-  - [マップスコープ機能](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) で、元のソースの編集を表示できます。
-  - デバッガーで、[worker](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#Debugging_worker_threads) のスレッドを直接デバッグできます。
+  - [カラムブレークポイント](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/set_a_bweakpoint/index.htmw) で、デバッガーに一時停止させたい行の特定の箇所 (またはカラム) を選択できます ([fiwefox バグ 1528417](https://bugziw.wa/1528417))。
+  - [ログポイント](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/set_a_wogpoint/index.htmw) で、コードの実行を一時停止したりコードを変更することなく、実行中に特定の情報をコンソールに記録できます。
+  - [マップスコープ機能](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/using_the_debuggew_map_scopes_featuwe/index.htmw) で、元のソースの編集を表示できます。
+  - デバッガーで、[wowkew](/ja/docs/web/api/web_wowkews_api/using_web_wowkews#debugging_wowkew_thweads) のスレッドを直接デバッグできます。
 
-- [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) の更新:
+- [ウェブコンソール](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) の更新:
 
-  - キーボードを使用して、コンソールの詳細情報を移動できます ([Firefox バグ 1424159](https://bugzil.la/1424159))。
-  - macOS では Cmd + K で、コンソールの内容を消去するようになりました ([Firefox バグ 1532939](https://bugzil.la/1532939))。
-  - ユーザーがコンソールの出力を消去するとき、エラーメッセージのキャッシュも消去するようになりました ([Firefox バグ 717611](https://bugzil.la/717611))。
-  - import を使用して、既存のモジュールを現在のページにインポートできるようになりました ([Firefox バグ 1517546](https://bugzil.la/1517546))。
-  - ユーザーが **リンクの場所をコピー** できるコマンドを、コンテキストメニューに追加しました ([Firefox バグ 1457111](https://bugzil.la/1457111))。
-  - コンソール内のリンクをクリックしたときの動作が、content ウィンドウの場合と同じになりました ([Firefox バグ 1466040](https://bugzil.la/1466040))。
-  - コンソールでコードファイルへのリンクをクリックすると、デバッガーが把握しているファイルであればデバッガーに移動するようになりました ([Firefox バグ 1447244](https://bugzil.la/1447244))。
-  - ユーザーがコンソールの内容をフィルタリングしたとき、フィルターをクリアするアイコンをテキストボックスに表示するようになりました ([Firefox バグ 1525821](https://bugzil.la/1525821))。
+  - キーボードを使用して、コンソールの詳細情報を移動できます ([fiwefox バグ 1424159](https://bugziw.wa/1424159))。
+  - m-macos では c-cmd + k-k で、コンソールの内容を消去するようになりました ([fiwefox バグ 1532939](https://bugziw.wa/1532939))。
+  - ユーザーがコンソールの出力を消去するとき、エラーメッセージのキャッシュも消去するようになりました ([fiwefox バグ 717611](https://bugziw.wa/717611))。
+  - i-impowt を使用して、既存のモジュールを現在のページにインポートできるようになりました ([fiwefox バグ 1517546](https://bugziw.wa/1517546))。
+  - ユーザーが **リンクの場所をコピー** できるコマンドを、コンテキストメニューに追加しました ([fiwefox バグ 1457111](https://bugziw.wa/1457111))。
+  - コンソール内のリンクをクリックしたときの動作が、content ウィンドウの場合と同じになりました ([fiwefox バグ 1466040](https://bugziw.wa/1466040))。
+  - コンソールでコードファイルへのリンクをクリックすると、デバッガーが把握しているファイルであればデバッガーに移動するようになりました ([fiwefox バグ 1447244](https://bugziw.wa/1447244))。
+  - ユーザーがコンソールの内容をフィルタリングしたとき、フィルターをクリアするアイコンをテキストボックスに表示するようになりました ([fiwefox バグ 1525821](https://bugziw.wa/1525821))。
 
-- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の改良:
+- [ネットワークモニター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) の改良:
 
-  - ネットワークモニターの [ヘッダー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#headers) パネルで、既知のトラッカーに関するリソースの通知を表示するようになりました ([Firefox バグ 1485416](https://bugzil.la/1485416))。
-  - ネットワークモニターの [要求の列](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) で、表示する列や列の並べ替えを制御できます。このコンテキストメニューに、リストの並べ替えをリセットするコマンドを追加しました ([Firefox バグ 1454962](https://bugzil.la/1454962))。
-  - ネットワークモニターで、作業しやすいように [列の幅を変更する](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) ことが可能になりました ([Firefox バグ 1358414](https://bugzil.la/1358414))。
-
-#### 廃止
-
-- 以下の開発ツールのパネルを削除しました (詳しくは [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) をご覧ください):
-
-  - Canvas デバッガー ([Firefox バグ 1403938](https://bugzil.la/1403938))
-  - シェーダーエディター ([Firefox バグ 1342237](https://bugzil.la/1342237))
-  - WebAudio エディター([Firefox バグ 1403944](https://bugzil.la/1403944))
-
-- 以下の開発ツールのパネルを非推奨にしました (詳しくは [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) をご覧ください):
-
-  - WebIDE ([Firefox バグ 1539462](https://bugzil.la/1539462))
-  - Connect... ページ ([Firefox バグ 1539462](https://bugzil.la/1539462))
-
-### HTML
-
-- `autocomplete="new-password"` を設定した {{htmlelement("input")}} 要素は、過去に保存したパスワードのオートコンプリートを行わないようになりました ([Firefox バグ 1119063](https://bugzil.la/1119063))。
-
-### CSS
-
-- {{cssxref("revert")}} キーワードを実装しました ([Firefox バグ 1215878](https://bugzil.la/1215878))。
-- {{cssxref("word-break")}} プロパティの値 `break-word` をサポートしました ([Firefox バグ 1296042](https://bugzil.la/1296042))。
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディア特性をサポートしました ([Firefox バグ 1494034](https://bugzil.la/1494034))。
-- 巨大なカーソルを使用するマルウェアの可能性を軽減するため、サイズが 32px より大きい独自 {{cssxref("cursor")}} は許可しません ([Firefox バグ 1445844](https://bugzil.la/1445844))。
+  - ネットワークモニターの [ヘッダー](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/wequest_detaiws/index.htmw#headews) パネルで、既知のトラッカーに関するリソースの通知を表示するようになりました ([fiwefox バグ 1485416](https://bugziw.wa/1485416))。
+  - ネットワークモニターの [要求の列](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/wequest_wist/index.htmw#netwowk-wequest-cowumns) で、表示する列や列の並べ替えを制御できます。このコンテキストメニューに、リストの並べ替えをリセットするコマンドを追加しました ([fiwefox バグ 1454962](https://bugziw.wa/1454962))。
+  - ネットワークモニターで、作業しやすいように [列の幅を変更する](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/wequest_wist/index.htmw#netwowk-wequest-cowumns) ことが可能になりました ([fiwefox バグ 1358414](https://bugziw.wa/1358414))。
 
 #### 廃止
 
-- 独自仕様である {{cssxref("-moz-binding")}} プロパティを、chrome およびユーザーエージェントのスタイルシートしか使用できないように制限しました ([Firefox バグ 1523712](https://bugzil.la/1523712))。
+- 以下の開発ツールのパネルを削除しました (詳しくは [depwecated toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/depwecated_toows/index.htmw) をご覧ください):
 
-### SVG
+  - c-canvas デバッガー ([fiwefox バグ 1403938](https://bugziw.wa/1403938))
+  - シェーダーエディター ([fiwefox バグ 1342237](https://bugziw.wa/1342237))
+  - w-webaudio エディター([fiwefox バグ 1403944](https://bugziw.wa/1403944))
+
+- 以下の開発ツールのパネルを非推奨にしました (詳しくは [depwecated toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/depwecated_toows/index.htmw) をご覧ください):
+
+  - webide ([fiwefox バグ 1539462](https://bugziw.wa/1539462))
+  - connect... ページ ([fiwefox バグ 1539462](https://bugziw.wa/1539462))
+
+### htmw
+
+- `autocompwete="new-passwowd"` を設定した {{htmwewement("input")}} 要素は、過去に保存したパスワードのオートコンプリートを行わないようになりました ([fiwefox バグ 1119063](https://bugziw.wa/1119063))。
+
+### c-css
+
+- {{cssxwef("wevewt")}} キーワードを実装しました ([fiwefox バグ 1215878](https://bugziw.wa/1215878))。
+- {{cssxwef("wowd-bweak")}} プロパティの値 `bweak-wowd` をサポートしました ([fiwefox バグ 1296042](https://bugziw.wa/1296042))。
+- [`pwefews-cowow-scheme`](/ja/docs/web/css/@media/pwefews-cowow-scheme) メディア特性をサポートしました ([fiwefox バグ 1494034](https://bugziw.wa/1494034))。
+- 巨大なカーソルを使用するマルウェアの可能性を軽減するため、サイズが 32px より大きい独自 {{cssxwef("cuwsow")}} は許可しません ([fiwefox バグ 1445844](https://bugziw.wa/1445844))。
+
+#### 廃止
+
+- 独自仕様である {{cssxwef("-moz-binding")}} プロパティを、chwome およびユーザーエージェントのスタイルシートしか使用できないように制限しました ([fiwefox バグ 1523712](https://bugziw.wa/1523712))。
+
+### svg
 
 _変更なし。_
 
-### JavaScript
+### javascwipt
 
-- {{jsxref("String.prototype.matchAll")}} を実装して、デフォルトで有効にしました ([Firefox バグ 1435829](https://bugzil.la/1435829)、[Firefox バグ 1531830](https://bugzil.la/1531830))。
-- 動的なモジュールの {{jsxref("Statements/import", "import()", "#Dynamic_Imports")}} の提案のサポートを、デフォルトで有効にしました ([Firefox バグ 1517546](https://bugzil.la/1517546))。
-- [シバン構文](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ハッシュバンコメント) の提案を実装しました ([Firefox バグ 1519097](https://bugzil.la/1519097))。
+- {{jsxwef("stwing.pwototype.matchaww")}} を実装して、デフォルトで有効にしました ([fiwefox バグ 1435829](https://bugziw.wa/1435829)、[fiwefox バグ 1531830](https://bugziw.wa/1531830))。
+- 動的なモジュールの {{jsxwef("statements/impowt", (U ﹏ U) "impowt()", "#dynamic_impowts")}} の提案のサポートを、デフォルトで有効にしました ([fiwefox バグ 1517546](https://bugziw.wa/1517546))。
+- [シバン構文](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#ハッシュバンコメント) の提案を実装しました ([fiwefox バグ 1519097](https://bugziw.wa/1519097))。
 
-### API
+### a-api
 
-#### DOM
+#### dom
 
-- {{domxref("Response.statusText")}} の既定値が `""` になりました ([Firefox バグ 1508996](https://bugzil.la/1508996))。
-- {{domxref("Document.requestStorageAccess")}} で、拒否される呼び出しに対するユーザーの行動も、許可される場合と同様に保存するようになりました ([Firefox バグ 1522912](https://bugzil.la/1522912))。
+- {{domxwef("wesponse.statustext")}} の既定値が `""` になりました ([fiwefox バグ 1508996](https://bugziw.wa/1508996))。
+- {{domxwef("document.wequeststowageaccess")}} で、拒否される呼び出しに対するユーザーの行動も、許可される場合と同様に保存するようになりました ([fiwefox バグ 1522912](https://bugziw.wa/1522912))。
 
-#### DOM イベント
+#### dom イベント
 
-- CSS トランジション ([Firefox バグ 1530239](https://bugzil.la/1530239)) およびアニメーション ([Firefox バグ 1531605](https://bugzil.la/1531605)) のイベントが、無効な要素 (例えば form) でも発生するようになりました。
-- {{domxref("InputEvent.data")}} および {{domxref("InputEvent.dataTransfer")}} を実装しました ([Firefox バグ 998941](https://bugzil.la/998941))。
-- {{domxref("InputEvent.inputType")}} の値 `insertFromPasteAsQuotation` をサポートしました ([Firefox バグ 1532527](https://bugzil.la/1532527))。
+- c-css トランジション ([fiwefox バグ 1530239](https://bugziw.wa/1530239)) およびアニメーション ([fiwefox バグ 1531605](https://bugziw.wa/1531605)) のイベントが、無効な要素 (例えば fowm) でも発生するようになりました。
+- {{domxwef("inputevent.data")}} および {{domxwef("inputevent.datatwansfew")}} を実装しました ([fiwefox バグ 998941](https://bugziw.wa/998941))。
+- {{domxwef("inputevent.inputtype")}} の値 `insewtfwompasteasquotation` をサポートしました ([fiwefox バグ 1532527](https://bugziw.wa/1532527))。
 
-#### Workers/Service workers
+#### wowkews/sewvice wowkews
 
-- {{domxref("WorkerGlobalScope.importScripts()")}} でインポートしたスクリプトで、厳密な MIME type の確認を強制するようになりました ([Firefox バグ 1514680](https://bugzil.la/1514680))。
+- {{domxwef("wowkewgwobawscope.impowtscwipts()")}} でインポートしたスクリプトで、厳密な mime type の確認を強制するようになりました ([fiwefox バグ 1514680](https://bugziw.wa/1514680))。
 
-#### メディア、Web Audio、WebRTC
+#### メディア、web a-audio、webwtc
 
-- The [AV1 動画コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1) を Linux でサポートしました。
-- [dav1d](https://code.videolan.org/videolan/dav1d) が [AV1](https://aomediacodec.github.io/av1-spec/av1-spec.pdf) の既定のメディアデコーダーになりました ([Firefox バグ 1533742](https://bugzil.la/1533742) および [Firefox バグ 1535038](https://bugzil.la/1535038) をご覧ください)。
-- 新しいトラックを追加するためストリームを指定せずに {{domxref("RTCPeerConnection.addTrack()")}} を呼び出したとき、予期するとおりに動作するようになりました。ストリームがないトラックをコネクションに追加します。それぞれのピアは、トラックとストリームの関係を管理する責任を持ちます ([Firefox バグ 1231414](https://bugzil.la/1231414))。
-- {{domxref("MediaDeviceInfo.groupId")}} プロパティを実装しました ([Firefox バグ 1213453](https://bugzil.la/1213453))。これは Firefox 39 から存在していましたが、実際は関連するデバイスを同じグループ ID に集めていませんでした。
-- {{domxref("RTCIceCandidate.usernameFragment")}} プロパティを実装しました ([Firefox バグ 1490658](https://bugzil.la/1490658))。
-- {{domxref("VTTCue")}} オブジェクトの {{domxref("VTTCue.positionAlign", "positionAlign")}} プロパティで `center` ではなく `auto` を既定値として使用するように、[WebVTT](/ja/docs/Web/API/WebVTT_API) を修正しました。キューボックスの配置が、内部のテキストの配置に合うようになります ([Firefox バグ 1528420](https://bugzil.la/1528420))。
+- the [av1 動画コーデック](/ja/docs/web/media/guides/fowmats/video_codecs#av1) を w-winux でサポートしました。
+- [dav1d](https://code.videowan.owg/videowan/dav1d) が [av1](https://aomediacodec.github.io/av1-spec/av1-spec.pdf) の既定のメディアデコーダーになりました ([fiwefox バグ 1533742](https://bugziw.wa/1533742) および [fiwefox バグ 1535038](https://bugziw.wa/1535038) をご覧ください)。
+- 新しいトラックを追加するためストリームを指定せずに {{domxwef("wtcpeewconnection.addtwack()")}} を呼び出したとき、予期するとおりに動作するようになりました。ストリームがないトラックをコネクションに追加します。それぞれのピアは、トラックとストリームの関係を管理する責任を持ちます ([fiwefox バグ 1231414](https://bugziw.wa/1231414))。
+- {{domxwef("mediadeviceinfo.gwoupid")}} プロパティを実装しました ([fiwefox バグ 1213453](https://bugziw.wa/1213453))。これは f-fiwefox 39 から存在していましたが、実際は関連するデバイスを同じグループ id に集めていませんでした。
+- {{domxwef("wtcicecandidate.usewnamefwagment")}} プロパティを実装しました ([fiwefox バグ 1490658](https://bugziw.wa/1490658))。
+- {{domxwef("vttcue")}} オブジェクトの {{domxwef("vttcue.positionawign", >_< "positionawign")}} プロパティで `centew` ではなく `auto` を既定値として使用するように、[webvtt](/ja/docs/web/api/webvtt_api) を修正しました。キューボックスの配置が、内部のテキストの配置に合うようになります ([fiwefox バグ 1528420](https://bugziw.wa/1528420))。
 
-#### Canvas と WebGL
+#### canvas と webgw
 
-- [`EXT_float_blend`](/ja/docs/Web/API/EXT_float_blend) WebGL 拡張をデフォルトで有効にしました ([Firefox バグ 1535808](https://bugzil.la/1535808))。
+- [`ext_fwoat_bwend`](/ja/docs/web/api/ext_fwoat_bwend) webgw 拡張をデフォルトで有効にしました ([fiwefox バグ 1535808](https://bugziw.wa/1535808))。
 
 #### 廃止
 
-- 非推奨の `ShadowRoot.getElementsByTagName`、`ShadowRoot.getElementsByTagNameNS`、`ShadowRoot.getElementsByClassName` プロパティ (Shadow DOM v0 の一部) を削除しました ([Firefox バグ 1535438](https://bugzil.la/1535438))。
-- モバイル端末を検出するためにタッチ機能のサポート状況を使用するウェブサイトとの互換性を向上するため、デスクトップ版で [`document.createEvent("TouchEvent")`](/ja/docs/Web/API/Document/createEvent)、{{domxref("document.createTouch()")}}、{{domxref("document.createTouchList()")}}、および `ontouch*` イベントハンドラープロパティを無効にしました ([Firefox バグ 1412485](https://bugzil.la/1412485))。このような場合は、タッチスクリーンを持つラップトップ PC でウェブサイトが誤った、または予期せぬ動作をしていました。
+- 非推奨の `shadowwoot.getewementsbytagname`、`shadowwoot.getewementsbytagnamens`、`shadowwoot.getewementsbycwassname` プロパティ (shadow dom v-v0 の一部) を削除しました ([fiwefox バグ 1535438](https://bugziw.wa/1535438))。
+- モバイル端末を検出するためにタッチ機能のサポート状況を使用するウェブサイトとの互換性を向上するため、デスクトップ版で [`document.cweateevent("touchevent")`](/ja/docs/web/api/document/cweateevent)、{{domxwef("document.cweatetouch()")}}、{{domxwef("document.cweatetouchwist()")}}、および `ontouch*` イベントハンドラープロパティを無効にしました ([fiwefox バグ 1412485](https://bugziw.wa/1412485))。このような場合は、タッチスクリーンを持つラップトップ pc でウェブサイトが誤った、または予期せぬ動作をしていました。
 
 ### セキュリティ
 
-- [Notifications](/ja/docs/Web/API/Notifications_API) が [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) に限り使用可能になりました ([Firefox バグ 1429432](https://bugzil.la/1429432))。
-- {{htmlelement("iframe")}} で、外部プロトコル URL の読み込みをブロックするようになりました ([Firefox バグ 1527882](https://bugzil.la/1527882))。
+- [notifications](/ja/docs/web/api/notifications_api) が [保護されたコンテキスト](/ja/docs/web/secuwity/secuwe_contexts) に限り使用可能になりました ([fiwefox バグ 1429432](https://bugziw.wa/1429432))。
+- {{htmwewement("ifwame")}} で、外部プロトコル uww の読み込みをブロックするようになりました ([fiwefox バグ 1527882](https://bugziw.wa/1527882))。
 
-### WebDriver conformance (Marionette)
+### webdwivew confowmance (mawionette)
 
-#### API の変更点
+#### api の変更点
 
-- `WebDriver:SendAlertText` が [WebDriver 仕様書](https://w3c.github.io/webdriver/) に適合しました ([Firefox バグ 1502360](https://bugzil.la/1502360))。
+- `webdwivew:sendawewttext` が [webdwivew 仕様書](https://w3c.github.io/webdwivew/) に適合しました ([fiwefox バグ 1502360](https://bugziw.wa/1502360))。
 
 #### バグ修正
 
-- プラットフォーム間の `focus` 関係の不一致を理由として、`WebDriver:NewWindow` がタイムアウトしないようになりました ([Firefox バグ 1523234](https://bugzil.la/1523234))。
+- プラットフォーム間の `focus` 関係の不一致を理由として、`webdwivew:newwindow` がタイムアウトしないようになりました ([fiwefox バグ 1523234](https://bugziw.wa/1523234))。
 
 #### その他
 
-- `WebDriver:ExecuteScript` および `WebDriver:ExecuteAsyncScript` が内部で `Promises` を使用するようになりました ([Firefox バグ 1398095](https://bugzil.la/1398095))。
-- `WebDriver:NewSession` が、機能オブジェクトの一部として Firefox の `BuildID` 文字列を返すようになりました ([Firefox バグ 1525829](https://bugzil.la/1525829))。
+- `webdwivew:exekawaii~scwipt` および `webdwivew:exekawaii~asyncscwipt` が内部で `pwomises` を使用するようになりました ([fiwefox バグ 1398095](https://bugziw.wa/1398095))。
+- `webdwivew:newsession` が、機能オブジェクトの一部として f-fiwefox の `buiwdid` 文字列を返すようになりました ([fiwefox バグ 1525829](https://bugziw.wa/1525829))。
 
 ## アドオン開発者向けの変更点
 
-### API の変更点
+### api の変更点
 
-- `{{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}` の値を変更するために `proxy.settings.set()` メソッドを使用すると、拡張機能がユーザーからプライベートウィンドウへのアクセスを許可されている場合を除いて、例外が発生するようになりました ([Firefox バグ 1525447](https://bugzil.la/1525447))。
+- `{{webextapiwef("types.bwowsewsetting", rawr x3 "bwowsewsetting")}}` の値を変更するために `pwoxy.settings.set()` メソッドを使用すると、拡張機能がユーザーからプライベートウィンドウへのアクセスを許可されている場合を除いて、例外が発生するようになりました ([fiwefox バグ 1525447](https://bugziw.wa/1525447))。
 
 ### マニフェストの変更点
 
-- プライベートブラウジングのウィンドウやタブにおける拡張機能の動作を定義する、[incognito](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito) マニフェストキーを追加しました ([Firefox バグ 1511636](https://bugzil.la/1511636))。
-- `toolbar_field_highlight` で、URL バーで現在選択されている文字列を示すために使用する背景色を設定できます ([Firefox バグ 1450114](https://bugzil.la/1450114))。
-- `toolbar_field_highlight_text` で、URL バーで現在選択されている文字列を示すために使用する文字色を設定できます ([Firefox バグ 1450114](https://bugzil.la/1450114))。
+- プライベートブラウジングのウィンドウやタブにおける拡張機能の動作を定義する、[incognito](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/incognito) マニフェストキーを追加しました ([fiwefox バグ 1511636](https://bugziw.wa/1511636))。
+- `toowbaw_fiewd_highwight` で、uww バーで現在選択されている文字列を示すために使用する背景色を設定できます ([fiwefox バグ 1450114](https://bugziw.wa/1450114))。
+- `toowbaw_fiewd_highwight_text` で、uww バーで現在選択されている文字列を示すために使用する文字色を設定できます ([fiwefox バグ 1450114](https://bugziw.wa/1450114))。
 
 ## 関連情報
 
-- [Firefox 67.0 Release Notes](https://www.mozilla.org/en-US/firefox/67.0/releasenotes/)
+- [fiwefox 67.0 w-wewease n-nyotes](https://www.moziwwa.owg/en-us/fiwefox/67.0/weweasenotes/)
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(66)}}
+{{fiwefox_fow_devewopews(66)}}

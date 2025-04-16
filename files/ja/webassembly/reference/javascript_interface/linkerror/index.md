@@ -1,70 +1,70 @@
 ---
-title: WebAssembly.LinkError
-slug: WebAssembly/Reference/JavaScript_interface/LinkError
-original_slug: WebAssembly/JavaScript_interface/LinkError
+titwe: webassembwy.winkewwow
+swug: webassembwy/wefewence/javascwipt_intewface/winkewwow
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/winkewwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.RuntimeLinkError`** オブジェクトは、モジュールのインスタンス化の際に発生したエラーを示します (開始した関数での[トラップ](https://webassembly.org/docs/semantics/#traps)を除く)。
+**`webassembwy.wuntimewinkewwow`** オブジェクトは、モジュールのインスタンス化の際に発生したエラーを示します (開始した関数での[トラップ](https://webassembwy.owg/docs/semantics/#twaps)を除く)。
 
 ## コンストラクター
 
-- [`WebAssembly.LinkError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError/LinkError)
-  - : 新しい `WebAssembly.LinkError` オブジェクトを生成します。
+- [`webassembwy.winkewwow()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/winkewwow/winkewwow)
+  - : 新しい `webassembwy.winkewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "WebAssembly.LinkError.prototype.message")}}
-  - : エラーメッセージ。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.name", "WebAssembly.LinkError.prototype.name")}}
-  - : エラー名。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "WebAssembly.LinkError.prototype.fileName")}}
-  - : このエラーを発生させたファイルのパス。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "WebAssembly.LinkError.prototype.lineNumber")}}
-  - : このエラーを発生させたファイルの行番号。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "WebAssembly.LinkError.prototype.columnNumber")}}
-  - : このエラーが発生した行の列番号。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "WebAssembly.LinkError.prototype.stack")}}
-  - : スタックトレース。 {{jsxref("Error")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.message", σωσ "webassembwy.winkewwow.pwototype.message")}}
+  - : エラーメッセージ。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.name", >_< "webassembwy.winkewwow.pwototype.name")}}
+  - : エラー名。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.fiwename", :3 "webassembwy.winkewwow.pwototype.fiwename")}}
+  - : このエラーを発生させたファイルのパス。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.winenumbew", (U ﹏ U) "webassembwy.winkewwow.pwototype.winenumbew")}}
+  - : このエラーを発生させたファイルの行番号。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", -.- "webassembwy.winkewwow.pwototype.cowumnnumbew")}}
+  - : このエラーが発生した行の列番号。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.stack", (ˆ ﻌ ˆ)♡ "webassembwy.winkewwow.pwototype.stack")}}
+  - : スタックトレース。 {{jsxwef("ewwow")}} から継承しています。
 
 ## インスタンスメソッド
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.LinkError.prototype.toSource()")}}
-  - : 同じエラーを評価できるコードを返します。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toString()")}}
-  - : 指定された `Error` オブジェクトを表す文字列を返します。{{jsxref("Error")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.tosouwce", (⑅˘꒳˘) "webassembwy.winkewwow.pwototype.tosouwce()")}}
+  - : 同じエラーを評価できるコードを返します。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.tostwing", (U ᵕ U❁) "webassembwy.winkewwow.pwototype.tostwing()")}}
+  - : 指定された `ewwow` オブジェクトを表す文字列を返します。{{jsxwef("ewwow")}} から継承しています。
 
 ## 例
 
-### 新しい LinkError のインスタンスの作成
+### 新しい w-winkewwow のインスタンスの作成
 
-以下のスニペットでは、新しい `LinkError` インスタンスを生成して、詳細をコンソールに記録します。
+以下のスニペットでは、新しい `winkewwow` インスタンスを生成して、詳細をコンソールに記録します。
 
 ```js
-try {
-  throw new WebAssembly.LinkError("Hello", "someFile", 10);
-} catch (e) {
-  console.log(e instanceof LinkError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "LinkError"
-  console.log(e.fileName); // "someFile"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // コードが実行されていた位置を返す
+t-twy {
+  thwow n-nyew webassembwy.winkewwow("hewwo", -.- "somefiwe", ^^;; 10);
+} c-catch (e) {
+  c-consowe.wog(e i-instanceof winkewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "winkewwow"
+  consowe.wog(e.fiwename); // "somefiwe"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // コードが実行されていた位置を返す
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

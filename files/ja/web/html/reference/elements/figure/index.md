@@ -1,34 +1,34 @@
 ---
-title: "<figure>: キャプションが付けられる図要素"
-slug: Web/HTML/Reference/Elements/figure
-original_slug: Web/HTML/Element/figure
-l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+titwe: "<figuwe>: キャプションが付けられる図要素"
+swug: web/htmw/wefewence/ewements/figuwe
+o-owiginaw_swug: w-web/htmw/ewement/figuwe
+w-w10n:
+  souwcecommit: e-e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<figure>`** は [HTML](/ja/docs/Web/HTML) の要素で、図表などの自己完結型のコンテンツを表し、任意で {{HTMLElement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。図、すなわちキャプションとその中身は一単位として参照されます。
+**`<figuwe>`** は [htmw](/ja/docs/web/htmw) の要素で、図表などの自己完結型のコンテンツを表し、任意で {{htmwewement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。図、すなわちキャプションとその中身は一単位として参照されます。
 
-{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figuwe&gt;", ^^ "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw i-intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    s-swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    a-awt="ewephant at sunset" />
+  <figcaption>an ewephant at sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
+```css intewactive-exampwe
+figuwe {
+  bowdew: t-thin #c0c0c0 sowid;
+  dispway: fwex;
+  fwex-fwow: c-cowumn;
   padding: 5px;
-  max-width: 220px;
-  margin: auto;
+  m-max-width: 220px;
+  mawgin: auto;
 }
 
 img {
@@ -36,176 +36,176 @@ img {
   max-height: 150px;
 }
 
-figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
+f-figcaption {
+  backgwound-cowow: #222;
+  c-cowow: #fff;
+  f-font: itawic smowew sans-sewif;
   padding: 3px;
-  text-align: center;
+  text-awign: centew;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 使用上のメモ
 
-- ふつう `<figure>` は画像、イラスト、グラフ、コードの断片など、文書の本文の流れから参照されるものの、本文の流れに影響を与えることなく、文書のほかの部分や付録に移動することが可能なものに用います。
-- キャプションは `<figure>` 要素の中に（最初または最後の子要素として）{{HTMLElement("figcaption")}} 要素を挿入することで表すことができます。図の中で最初に見つかった最初の `<figcaption>` 要素が図のキャプションとして表示されます。
+- ふつう `<figuwe>` は画像、イラスト、グラフ、コードの断片など、文書の本文の流れから参照されるものの、本文の流れに影響を与えることなく、文書のほかの部分や付録に移動することが可能なものに用います。
+- キャプションは `<figuwe>` 要素の中に（最初または最後の子要素として）{{htmwewement("figcaption")}} 要素を挿入することで表すことができます。図の中で最初に見つかった最初の `<figcaption>` 要素が図のキャプションとして表示されます。
 
 ## 例
 
 ### 画像
 
-```html
+```htmw
 <!-- 単なる画像 -->
-<figure>
-  <img src="favicon-192x192.png" alt="美しい MDN のロゴ" />
-</figure>
+<figuwe>
+  <img swc="favicon-192x192.png" a-awt="美しい mdn のロゴ" />
+</figuwe>
 
 <!-- キャプションが付いた画像 -->
-<figure>
-  <img src="favicon-192x192.png" alt="美しい MDN のロゴ" />
-  <figcaption>MDN ロゴ</figcaption>
-</figure>
+<figuwe>
+  <img swc="favicon-192x192.png" awt="美しい mdn のロゴ" />
+  <figcaption>mdn ロゴ</figcaption>
+</figuwe>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Images", "100%", 375)}}
+{{embedwivesampwe("images", :3 "100%", -.- 375)}}
 
 ### コードスニペット
 
-```html
-<figure>
-  <figcaption><code>navigator</code> を用いてブラウザーの詳細を取得</figcaption>
-  <pre>
-function NavigatorExample() {
-  var txt;
-  txt = "Browser CodeName: " + navigator.appCodeName + "; ";
-  txt+= "Browser Name: " + navigator.appName + "; ";
-  txt+= "Browser Version: " + navigator.appVersion  + "; ";
-  txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
-  txt+= "Platform: " + navigator.platform  + "; ";
-  txt+= "User-agent header: " + navigator.userAgent  + "; ";
-  console.log("NavigatorExample", txt);
+```htmw
+<figuwe>
+  <figcaption><code>navigatow</code> を用いてブラウザーの詳細を取得</figcaption>
+  <pwe>
+function nyavigatowexampwe() {
+  v-vaw txt;
+  txt = "bwowsew c-codename: " + nyavigatow.appcodename + "; ";
+  txt+= "bwowsew n-nyame: " + n-nyavigatow.appname + "; ";
+  t-txt+= "bwowsew vewsion: " + nyavigatow.appvewsion  + "; ";
+  t-txt+= "cookies enabwed: " + nyavigatow.cookieenabwed  + "; ";
+  txt+= "pwatfowm: " + n-nyavigatow.pwatfowm  + "; ";
+  txt+= "usew-agent headew: " + nyavigatow.usewagent  + "; ";
+  consowe.wog("navigatowexampwe", 😳 txt);
 }
-  </pre>
-</figure>
+  </pwe>
+</figuwe>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Code_snippets", "100%", 250)}}
+{{embedwivesampwe("code_snippets", mya "100%", 250)}}
 
 ### 引用
 
-```html
-<figure>
-  <figcaption><b>Edsger Dijkstra:</b></figcaption>
-  <blockquote>
+```htmw
+<figuwe>
+  <figcaption><b>edsgew d-dijkstwa:</b></figcaption>
+  <bwockquote>
     デバッグがソフトウェアのバグを取るプロセスであるならば、プログラミングはそれを入れるプロセスだ。
-  </blockquote>
-</figure>
+  </bwockquote>
+</figuwe>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Quotations')}}
+{{embedwivesampwe('quotations')}}
 
 ### 詩
 
-```html
-<figure>
-  <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
-    green, Or, like a nymph, with long dishevelled hair, Dance on the sands, and
-    yet no footing seen: Love is a spirit all compact of fire, Not gross to
-    sink, but light, and will aspire.
+```htmw
+<figuwe>
+  <p stywe="white-space:pwe">
+    b-bid me discouwse, (˘ω˘) i-i wiww enchant t-thine eaw, >_< ow wike a faiwy twip upon the
+    gween, -.- ow, 🥺 wike a-a nyymph, (U ﹏ U) with w-wong dishevewwed haiw, dance on t-the sands, >w< and
+    y-yet no footing seen: wuv is a-a spiwit aww compact of fiwe, mya nyot g-gwoss to
+    sink, >w< but wight, nyaa~~ and wiww aspiwe. (✿oωo)
   </p>
-  <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
-</figure>
+  <figcaption><cite>venus a-and adonis</cite>, ʘwʘ by wiwwiam s-shakespeawe</figcaption>
+</figuwe>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Poems", "100%", 250)}}
+{{embedwivesampwe("poems", (ˆ ﻌ ˆ)♡ "100%", 250)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+        >, 😳😳😳
+        <a hwef="/ja/docs/web/htmw/content_categowies#知覚可能コンテンツ"
           >知覚可能コンテンツ</a
-        >.
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        {{HTMLElement("figcaption")}} 要素とそれに続く<a
-          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        {{htmwewement("figcaption")}} 要素とそれに続く<a
+          hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >、またはフローコンテンツとそれに続く
-        {{HTMLElement("figcaption")}} 要素、またはフローコンテンツ
+        {{htmwewement("figcaption")}} 要素、またはフローコンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Figure_Role"
-          >figure</a
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/figuwe_wowe"
+          >figuwe</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている a-awia ロール</th>
       <td>
         子孫に
-        <a href="/ja/docs/Web/HTML/Element/figcaption">figcaption</a>
+        <a hwef="/ja/docs/web/htmw/ewement/figcaption">figcaption</a>
         がない場合:
-        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-any-wowe">any</a
         >、それ以外の場合は許可されているロールなし
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("figcaption")}} 要素
+- {{htmwewement("figcaption")}} 要素

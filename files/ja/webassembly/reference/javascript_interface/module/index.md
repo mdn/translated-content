@@ -1,72 +1,72 @@
 ---
-title: WebAssembly.Module
-slug: WebAssembly/Reference/JavaScript_interface/Module
-original_slug: WebAssembly/JavaScript_interface/Module
+titwe: webassembwy.moduwe
+swug: w-webassembwy/wefewence/javascwipt_intewface/moduwe
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/moduwe
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.Module`** オブジェクトには、ブラウザーでコンパイルされたステートレスな WebAssembly コードが含まれています。これを効率的に[ワーカー間で共有](/ja/docs/Web/API/Worker/postMessage)したり、複数回インスタンス化したりすることができます。
+**`webassembwy.moduwe`** オブジェクトには、ブラウザーでコンパイルされたステートレスな w-webassembwy コードが含まれています。これを効率的に[ワーカー間で共有](/ja/docs/web/api/wowkew/postmessage)したり、複数回インスタンス化したりすることができます。
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/WebAssembly/Module/Module", "WebAssembly.Module()")}}
-  - : 新しい `Module` オブジェクトを生成します。
+- {{jsxwef("gwobaw_objects/webassembwy/moduwe/moduwe", "webassembwy.moduwe()")}}
+  - : 新しい `moduwe` オブジェクトを生成します。
 
 ## 静的プロパティ
 
-- {{jsxref("Global_Objects/WebAssembly/Module/customSections", "WebAssembly.Module.customSections()")}}
-  - : `Module` と文字列を指定すると、モジュール内の与えられた文字列を名前に持つすべてのカスタムセクションの内容を返します。
-- {{jsxref("Global_Objects/WebAssembly/Module/exports", "WebAssembly.Module.exports()")}}
-  - : `Module` を指定すると、エクスポート宣言の情報を配列として返します。
-- {{jsxref("Global_Objects/WebAssembly/Module/imports", "WebAssembly.Module.imports()")}}
-  - : `Module` を指定すると、インポート宣言の情報を配列として返します。
+- {{jsxwef("gwobaw_objects/webassembwy/moduwe/customsections", mya "webassembwy.moduwe.customsections()")}}
+  - : `moduwe` と文字列を指定すると、モジュール内の与えられた文字列を名前に持つすべてのカスタムセクションの内容を返します。
+- {{jsxwef("gwobaw_objects/webassembwy/moduwe/expowts", mya "webassembwy.moduwe.expowts()")}}
+  - : `moduwe` を指定すると、エクスポート宣言の情報を配列として返します。
+- {{jsxwef("gwobaw_objects/webassembwy/moduwe/impowts", 😳 "webassembwy.moduwe.impowts()")}}
+  - : `moduwe` を指定すると、インポート宣言の情報を配列として返します。
 
 ## 例
 
 ### コンパイル済みのモジュールをワーカーに送信
 
-以下の例では (GitHub 上の [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) および[実行例](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)も参照)、読み込まれた `simple.wasm` のバイトコードを {{jsxref("WebAssembly.compileStreaming()")}} メソッドでコンパイルし、結果の `Module` インスタンスを[ワーカー](/ja/docs/Web/API/Web_Workers_API)へ、 {{domxref("Worker/postMessage", "postMessage()")}} を使用して送信します。
+以下の例では (github 上の [index-compiwe.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/index-compiwe.htmw) および[実行例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/index-compiwe.htmw)も参照)、読み込まれた `simpwe.wasm` のバイトコードを {{jsxwef("webassembwy.compiwestweaming()")}} メソッドでコンパイルし、結果の `moduwe` インスタンスを[ワーカー](/ja/docs/web/api/web_wowkews_api)へ、 {{domxwef("wowkew/postmessage", XD "postmessage()")}} を使用して送信します。
 
 ```js
-var worker = new Worker("wasm_worker.js");
+v-vaw w-wowkew = nyew w-wowkew("wasm_wowkew.js");
 
-WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
-  worker.postMessage(mod),
+w-webassembwy.compiwestweaming(fetch("simpwe.wasm")).then((mod) =>
+  wowkew.postmessage(mod), :3
 );
 ```
 
-ワーカー内では ([`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js) を参照)、モジュールを使用するための import オブジェクトを定義し、メインスレッドからモジュールを受け取るためのイベントハンドラーをセットアップします。モジュールを受け取ったら、 {{jsxref("WebAssembly.instantiate()")}} メソッドを使ってインスタンスを作成し、その中からエクスポートされた関数を呼び出します。
+ワーカー内では ([`wasm_wowkew.js`](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/wasm_wowkew.js) を参照)、モジュールを使用するための impowt オブジェクトを定義し、メインスレッドからモジュールを受け取るためのイベントハンドラーをセットアップします。モジュールを受け取ったら、 {{jsxwef("webassembwy.instantiate()")}} メソッドを使ってインスタンスを作成し、その中からエクスポートされた関数を呼び出します。
 
 ```js
-var importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
-  },
+vaw impowtobject = {
+  impowts: {
+    i-impowted_func: function (awg) {
+      consowe.wog(awg);
+    }, 😳😳😳
+  }, -.-
 };
 
-onmessage = function (e) {
-  console.log("module received from main thread");
-  var mod = e.data;
+o-onmessage = function (e) {
+  consowe.wog("moduwe w-weceived fwom main thwead");
+  vaw mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function (instance) {
-    instance.exports.exported_func();
+  webassembwy.instantiate(mod, ( ͡o ω ͡o ) i-impowtobject).then(function (instance) {
+    instance.expowts.expowted_func();
   });
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy j-javascwipt a-api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

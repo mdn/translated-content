@@ -1,125 +1,125 @@
 ---
-title: tabs.create()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
+titwe: tabs.cweate()
+swug: moziwwa/add-ons/webextensions/api/tabs/cweate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 新しいタブを作ります。
 
-これは[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返す非同期関数です.
+これは[`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)を返す非同期関数です. (U ﹏ U)
 
 ## 構文
 
 ```js
-var creating = browser.tabs.create(
-  createProperties, // object
+v-vaw cweating = b-bwowsew.tabs.cweate(
+  c-cweatepwopewties, mya // o-object
 );
 ```
 
 ### パラメーター
 
-- `createProperties`
+- `cweatepwopewties`
 
-  - : 新しいタブについてのプロパティを与える`オブジェクト`。これらのプロパティについて詳しくは{{WebExtAPIRef("tabs.Tab")}}を参照してください。
+  - : 新しいタブについてのプロパティを与える`オブジェクト`。これらのプロパティについて詳しくは{{webextapiwef("tabs.tab")}}を参照してください。
 
-    - `active`{{optional_inline}}
-      - : タブをアクティブにするかどうかを`真理値`で指定します。ウィンドウがフォーカスされているかには影響されません({{WebExtAPIRef('windows.update')}}も参照)。デフォルト値は`true`.
-    - `cookieStoreId` {{optional_inline}}
-      - : `文字列` 。タブの cookie store ID が`cookieStoreId`のタブを作るときに使用します。このオプションは拡張機能が`"cookies"` [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を持つときのみ使用できます。
-    - `index`{{optional_inline}}
+    - `active`{{optionaw_inwine}}
+      - : タブをアクティブにするかどうかを`真理値`で指定します。ウィンドウがフォーカスされているかには影響されません({{webextapiwef('windows.update')}}も参照)。デフォルト値は`twue`. ʘwʘ
+    - `cookiestoweid` {{optionaw_inwine}}
+      - : `文字列` 。タブの c-cookie stowe i-id が`cookiestoweid`のタブを作るときに使用します。このオプションは拡張機能が`"cookies"` [pewmission](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)を持つときのみ使用できます。
+    - `index`{{optionaw_inwine}}
       - : `整数値`。ウィンドウ中のタブの位置を指定します。数値はゼロからウィンドウ内のタブの数までです。
-    - `openerTabId`{{optional_inline}}
-      - : `整数値`。開くタブの ID を指定します。指定した場合、開く側のタブは新しいタブと同じウィンドウにある必要があります。
-    - `openInReaderMode`{{optional_inline}}
-      - : `真理値`。もし`true`であれば[リーダーモード](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で開かれます。 デフォルトは`false`。
-    - `pinned`{{optional_inline}}
-      - : `真理値`。タブをピン留めするかを指定します。デフォルトは`false`。
-    - `selected`{{optional_inline}}
+    - `openewtabid`{{optionaw_inwine}}
+      - : `整数値`。開くタブの i-id を指定します。指定した場合、開く側のタブは新しいタブと同じウィンドウにある必要があります。
+    - `openinweadewmode`{{optionaw_inwine}}
+      - : `真理値`。もし`twue`であれば[リーダーモード](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/toggweweadewmode)で開かれます。 デフォルトは`fawse`。
+    - `pinned`{{optionaw_inwine}}
+      - : `真理値`。タブをピン留めするかを指定します。デフォルトは`fawse`。
+    - `sewected`{{optionaw_inwine}}
 
-      - : `真理値`。ウィンドウ内で選択されるかどうかを指定します。デフォルトは`true`。
+      - : `真理値`。ウィンドウ内で選択されるかどうかを指定します。デフォルトは`twue`。
 
-        > [!WARNING]
-        > このプロパティは非推奨です。Firefox ではサポートされません。代わりに`active`を使用してください。
+        > [!wawning]
+        > このプロパティは非推奨です。fiwefox ではサポートされません。代わりに`active`を使用してください。
 
-    - `url`{{optional_inline}}
+    - `uww`{{optionaw_inwine}}
 
-      - : `文字列`。はじめに開く URL を指定します。デフォルトは新しいタブ。
-        スキームを含む完全な URL を指定します。(例えば 'www\.google.com' → 'http\://www\.google.com').
-        セキュリティの観点から Firefox では特権 URL は使用できません。
+      - : `文字列`。はじめに開く u-uww を指定します。デフォルトは新しいタブ。
+        スキームを含む完全な uww を指定します。(例えば 'www\.googwe.com' → 'http\://www\.googwe.com'). (˘ω˘)
+        セキュリティの観点から fiwefox では特権 uww は使用できません。
 
-        - chrome: URL
-        - javascript: URL
-        - data: URL
-        - file: URL(ファイルシステム上のファイルなど。拡張機能内にパッケージ化されたファイルは指定できます。下部を参照してください)
-        - 特権 about: URL (例、 `about:config`, `about:addons`, `about:debugging`)。ただし非特権 URL (`about:blank`) は使用できます。
-        - 新しいタブ (`about:newtab`) は URL を指定しなければ開かれます。
+        - chwome: u-uww
+        - javascwipt: uww
+        - data: u-uww
+        - fiwe: uww(ファイルシステム上のファイルなど。拡張機能内にパッケージ化されたファイルは指定できます。下部を参照してください)
+        - 特権 a-about: uww (例、 `about:config`, (U ﹏ U) `about:addons`, ^•ﻌ•^ `about:debugging`)。ただし非特権 uww (`about:bwank`) は使用できます。
+        - 新しいタブ (`about:newtab`) は uww を指定しなければ開かれます。
 
-        拡張機能内のファイルをロードするためには manifest.json ファイルからの絶対パスで指定します。（例: '/path/to/my-page.html'）。もし'/'を省略すると相対パスとして解釈されます。またブラウザーによっては、また異なった絶対パスとして解釈されます。
+        拡張機能内のファイルをロードするためには manifest.json ファイルからの絶対パスで指定します。（例: '/path/to/my-page.htmw'）。もし'/'を省略すると相対パスとして解釈されます。またブラウザーによっては、また異なった絶対パスとして解釈されます。
 
-    - `windowId`{{optional_inline}}
+    - `windowid`{{optionaw_inwine}}
       - : `整数値`。新しくタブを作るウィンドウを指定します。デフォルトは現在開いているウィンドウ。
 
 ### 返り値
 
-新しく作ったタブに関する{{WebExtAPIRef('tabs.Tab')}}オブジェクトを引数に持つ[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)が返されます。URL が特権 URL であるなどして、タブが作られなかった場合は promise はエラーメッセージとともに reject されます。
+新しく作ったタブに関する{{webextapiwef('tabs.tab')}}オブジェクトを引数に持つ[`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)が返されます。uww が特権 uww であるなどして、タブが作られなかった場合は p-pwomise はエラーメッセージとともに weject されます。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
-"https\://example.org" を新しいタブで開きます
+"https\://exampwe.owg" を新しいタブで開きます
 
 ```js
-function onCreated(tab) {
-  console.log(`Created new tab: ${tab.id}`);
+f-function oncweated(tab) {
+  c-consowe.wog(`cweated nyew tab: ${tab.id}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var creating = browser.tabs.create({
-    url: "https://example.org",
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  vaw cweating = bwowsew.tabs.cweate({
+    uww: "https://exampwe.owg", (˘ω˘)
   });
-  creating.then(onCreated, onError);
+  cweating.then(oncweated, :3 o-onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-create) API に基づいています。 このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は chwomium の[`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-cweate) a-api に基づいています。 このドキュメントは [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) における c-chwomium のコードに基づいています。micwosoft e-edge での実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは cweative commons a-attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. ^^;; aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, (⑅˘꒳˘) with ow without
+// modification, nyaa~~ a-awe p-pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above copywight
+// n-nyotice, :3 t-this wist of conditions and t-the fowwowing discwaimew. ( ͡o ω ͡o )
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, mya this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. (˘ω˘) nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow p-pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, (✿oωo) i-incwuding, (U ﹏ U) b-but nyot
+// wimited t-to, -.- the impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. ^•ﻌ•^ in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, rawr i-indiwect, (˘ω˘) incidentaw, nyaa~~
+// speciaw, UwU exempwawy, ow consequentiaw damages (incwuding, :3 b-but nyot
+// wimited to, (⑅˘꒳˘) pwocuwement of substitute goods ow sewvices; woss of use, (///ˬ///✿)
+// data, ow p-pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, ^^;; w-whethew in c-contwact, >_< stwict wiabiwity, rawr x3 ow t-towt
+// (incwuding nyegwigence ow o-othewwise) awising i-in any way out of the use
+// of this softwawe, /(^•ω•^) even if advised of the possibiwity of such damage. :3
 -->

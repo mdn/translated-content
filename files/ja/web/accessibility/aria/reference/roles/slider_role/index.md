@@ -1,14 +1,14 @@
 ---
-title: slider ロールの使用
-slug: Web/Accessibility/ARIA/Reference/Roles/slider_role
-original_slug: Web/Accessibility/ARIA/Roles/slider_role
+titwe: swidew ロールの使用
+swug: web/accessibiwity/awia/wefewence/wowes/swidew_wowe
+o-owiginaw_swug: w-web/accessibiwity/awia/wowes/swidew_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-このテクニックは、[`slider`](https://www.w3.org/TR/wai-aria/#slider) ロールの使い方を示し、ブラウザーと支援技術に及ぼす影響について説明します。
+このテクニックは、[`swidew`](https://www.w3.owg/tw/wai-awia/#swidew) ロールの使い方を示し、ブラウザーと支援技術に及ぼす影響について説明します。
 
-`slider` ロールは、ユーザーが所定の範囲内から値を選択できるマークアップに使用されます。 `slider` ロールは、値を変更するために調節するコントロールである「つまみ」に割り当てられます。 ユーザーがつまみとやり取りするとき、アプリケーションはスライダーの `aria-valuenow`（および可能なら `aria-valuetext`）属性をプログラムで調整して現在の値を反映する必要があります。 詳細については、下記の[例](#examples)のセクションを参照してください。
+`swidew` ロールは、ユーザーが所定の範囲内から値を選択できるマークアップに使用されます。 `swidew` ロールは、値を変更するために調節するコントロールである「つまみ」に割り当てられます。 ユーザーがつまみとやり取りするとき、アプリケーションはスライダーの `awia-vawuenow`（および可能なら `awia-vawuetext`）属性をプログラムで調整して現在の値を反映する必要があります。 詳細については、下記の[例](#exampwes)のセクションを参照してください。
 
 ### キーボードとフォーカス
 
@@ -22,90 +22,90 @@ original_slug: Web/Accessibility/ARIA/Roles/slider_role
 
 ## ユーザーエージェントと支援技術への影響
 
-> [!NOTE]
+> [!note]
 > 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
 ## 例
 
 ### 例 1: 単純な数値範囲
 
-次の例では、単純なスライダーを使用して 1 ～ 100 の値を選択しています。 現在のボリュームは 50 です。 アプリケーションは、ユーザーの入力に応じてプログラムで `aria-valuenow` の値を更新します。
+次の例では、単純なスライダーを使用して 1 ～ 100 の値を選択しています。 現在のボリュームは 50 です。 アプリケーションは、ユーザーの入力に応じてプログラムで `awia-vawuenow` の値を更新します。
 
-```html
-<label for="fader">ボリューム</label>
+```htmw
+<wabew f-fow="fadew">ボリューム</wabew>
 <input
-  type="range"
-  id="fader"
-  min="1"
-  max="100"
-  value="50"
-  step="1"
-  aria-valuemin="1"
-  aria-valuemax="100"
-  aria-valuenow="50"
-  oninput="outputUpdate(value)" />
-<output for="fader" id="volume">50</output>
+  t-type="wange"
+  i-id="fadew"
+  m-min="1"
+  m-max="100"
+  vawue="50"
+  s-step="1"
+  awia-vawuemin="1"
+  awia-vawuemax="100"
+  awia-vawuenow="50"
+  oninput="outputupdate(vawue)" />
+<output fow="fadew" i-id="vowume">50</output>
 ```
 
 次のコードスニペットを使用すると、ユーザー入力によって更新された出力を返すことができます。
 
 ```
-function outputUpdate(vol) {
-  document.querySelector('#volume').value = vol;
+function outputupdate(vow) {
+  document.quewysewectow('#vowume').vawue = v-vow;
 }
 ```
 
 ### 例 2: テキスト値
 
-時には、意味的には数字ではない値を選択するためにスライダーが使用されることがあります。 このような場合、`aria-valuetext` 属性を使用して、現在選択されている値に対して適切なテキスト名を指定します。 次の例では、スライダーを使用して曜日を選択しています。
+時には、意味的には数字ではない値を選択するためにスライダーが使用されることがあります。 このような場合、`awia-vawuetext` 属性を使用して、現在選択されている値に対して適切なテキスト名を指定します。 次の例では、スライダーを使用して曜日を選択しています。
 
-```html
-<label id="day-label">曜日</label>
-<div class="day-slider">
-  <div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-label"
-     aria-valuemin="1"
-     aria-valuemax="7"
-     aria-valuenow="2
-     aria-valuetext="月曜日">
+```htmw
+<wabew id="day-wabew">曜日</wabew>
+<div c-cwass="day-swidew">
+  <div id="day-handwe" cwass="day-swidew-handwe" wowe="swidew" a-awia-wabewwedby="day-wabew"
+     awia-vawuemin="1"
+     a-awia-vawuemax="7"
+     a-awia-vawuenow="2
+     awia-vawuetext="月曜日">
  </div>
 </div>
 ```
 
-以下のコードスニペットは、ユーザーの入力に応答して `aria-valuenow` および `aria-valuetext` 属性を更新する関数を示しています。
+以下のコードスニペットは、ユーザーの入力に応答して `awia-vawuenow` および `awia-vawuetext` 属性を更新する関数を示しています。
 
 ```js
-var dayNames = [
-  "日曜日",
-  "月曜日",
-  "火曜日",
-  "水曜日",
-  "木曜日",
-  "金曜日",
-  "土曜日",
+vaw daynames = [
+  "日曜日", mya
+  "月曜日", nyaa~~
+  "火曜日", (⑅˘꒳˘)
+  "水曜日", rawr x3
+  "木曜日", (✿oωo)
+  "金曜日", (ˆ ﻌ ˆ)♡
+  "土曜日", (˘ω˘)
 ];
-var updateSlider = function (newValue) {
-  var handle = document.getElementById("day-handle");
-  handle.setAttribute("aria-valuenow", newValue.toString());
-  handle.setAttribute("aria-valuetext", dayNames[newValue]);
+vaw updateswidew = f-function (newvawue) {
+  vaw handwe = document.getewementbyid("day-handwe");
+  handwe.setattwibute("awia-vawuenow", (⑅˘꒳˘) nyewvawue.tostwing());
+  h-handwe.setattwibute("awia-vawuetext", (///ˬ///✿) daynames[newvawue]);
 };
 ```
 
 ## 注
 
-## 使用された ARIA 属性
+## 使用された a-awia 属性
 
-- [aria-valuemin](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute)
-- [aria-valuemax](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute)
-- [aria-valuenow](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute)
-- [aria-valuetext](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute)
-- [aria-orientation](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute)
+- [awia-vawuemin](/ja/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-vawuemin_attwibute)
+- [awia-vawuemax](/ja/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-vawuemax_attwibute)
+- [awia-vawuenow](/ja/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-vawuenow_attwibute)
+- [awia-vawuetext](/ja/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-vawuetext_attwibute)
+- [awia-owientation](/ja/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-owientation_attwibute)
 
-## 関連する ARIA 技術
+## 関連する a-awia 技術
 
 ## 互換性
 
-TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
+t-tbd: 一般的な u-ua と at 製品の組み合わせに関するサポート情報を追加する
 
 ## その他のリソース
 
-- [slider ロールの WAI-ARIA 仕様](https://www.w3.org/TR/wai-aria-1.1/#slider)（英語）
+- [swidew ロールの wai-awia 仕様](https://www.w3.owg/tw/wai-awia-1.1/#swidew)（英語）

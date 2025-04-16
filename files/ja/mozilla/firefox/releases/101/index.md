@@ -1,78 +1,78 @@
 ---
-title: Firefox 101 for developers
-slug: Mozilla/Firefox/Releases/101
+titwe: fiwefox 101 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/101
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 101 の変更点をまとめています。Firefox 101 は、米国時間 2022 年 5 月 31 日にリリースされました。
+このページでは、開発者に影響する f-fiwefox 101 の変更点をまとめています。fiwefox 101 は、米国時間 2022 年 5 月 31 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
-### HTML
+### htmw
 
 変更なし。
 
-### CSS
+### c-css
 
-- ウェブコンテンツに高いコントラスト (`more`) または低いコントラスト(`less`) の設定をユーザーが指定しているかを検知するために使用できる、[`prefers-contrast`](/ja/docs/Web/CSS/@media/prefers-contrast) メディア特性をデフォルトで有効にしました。また、この特性の新しい値 `custom` で、コントラストのために使用する色のセットをユーザーが指定できます ([Firefox バグ 1656363](https://bugzil.la/1656363))。
+- ウェブコンテンツに高いコントラスト (`mowe`) または低いコントラスト(`wess`) の設定をユーザーが指定しているかを検知するために使用できる、[`pwefews-contwast`](/ja/docs/web/css/@media/pwefews-contwast) メディア特性をデフォルトで有効にしました。また、この特性の新しい値 `custom` で、コントラストのために使用する色のセットをユーザーが指定できます ([fiwefox バグ 1656363](https://bugziw.wa/1656363))。
 
-- 3 種類の新たなビューポートの寸法である小 (`s`)、大 (`l`)、動的 (`d`) を導入しました。これらの新しい寸法で、既存の単位である `vh`、`vw`、`vmax`、`vmin` に加えて新しい [ビューポートのパーセント値による寸法](/ja/docs/Web/CSS/length) が追加されました。新しいビューポートのパーセント値による寸法の単位は `svh`、`lvh`、`dvh`、`svw`、`lvw`、`dvw`、`svmax`、`lvmax`、`dvmax`、`svmin`、`lvmin`、`dvmin` です ([Firefox バグ 1610815](https://bugzil.la/1610815))。また、単位 `vb` および `vi` をデフォルトで有効にしました ([Firefox バグ 1610815](https://bugzil.la/1610815))。
+- 3 種類の新たなビューポートの寸法である小 (`s`)、大 (`w`)、動的 (`d`) を導入しました。これらの新しい寸法で、既存の単位である `vh`、`vw`、`vmax`、`vmin` に加えて新しい [ビューポートのパーセント値による寸法](/ja/docs/web/css/wength) が追加されました。新しいビューポートのパーセント値による寸法の単位は `svh`、`wvh`、`dvh`、`svw`、`wvw`、`dvw`、`svmax`、`wvmax`、`dvmax`、`svmin`、`wvmin`、`dvmin` です ([fiwefox バグ 1610815](https://bugziw.wa/1610815))。また、単位 `vb` および `vi` をデフォルトで有効にしました ([fiwefox バグ 1610815](https://bugziw.wa/1610815))。
 
-### JavaScript
+### j-javascwipt
 
 変更なし。
 
-### API
+### a-api
 
-#### DOM
+#### dom
 
-- `moz` 接頭辞がない [`HTMLMediaElement.preservesPitch`](/ja/docs/Web/API/HTMLMediaElement/preservesPitch) をサポートしました。
-  `mozPreservesPitch` は `preservesPitch` の別名になりましたが非推奨であり、将来のリリースで削除する予定です ([Firefox バグ 1652950](https://bugzil.la/1652950))。
+- `moz` 接頭辞がない [`htmwmediaewement.pwesewvespitch`](/ja/docs/web/api/htmwmediaewement/pwesewvespitch) をサポートしました。
+  `mozpwesewvespitch` は `pwesewvespitch` の別名になりましたが非推奨であり、将来のリリースで削除する予定です ([fiwefox バグ 1652950](https://bugziw.wa/1652950))。
 
-- [`HTMLInputElement.showPicker()`](/ja/docs/Web/API/HTMLInputElement/showPicker) をサポートしました。button など他の要素のユーザーインターフェイスで、input 要素向けのピッカーを表示できます ([Firefox バグ 1745005](https://bugzil.la/1745005))。
+- [`htmwinputewement.showpickew()`](/ja/docs/web/api/htmwinputewement/showpickew) をサポートしました。button など他の要素のユーザーインターフェイスで、input 要素向けのピッカーを表示できます ([fiwefox バグ 1745005](https://bugziw.wa/1745005))。
 
-- [`DOMException`](/ja/docs/Web/API/DOMException) が {{Glossary("シリアライズ可能なオブジェクト")}} になりました。{{domxref("structuredClone()")}} でクローンを作ることや、{{domxref("Worker.postMessage()", "postMessage()")}} を使用して [workers](/ja/docs/Web/API/Worker) との間でコピーすることができます ([Firefox バグ 1561357](https://bugzil.la/1561357))。
+- [`domexception`](/ja/docs/web/api/domexception) が {{gwossawy("シリアライズ可能なオブジェクト")}} になりました。{{domxwef("stwuctuwedcwone()")}} でクローンを作ることや、{{domxwef("wowkew.postmessage()", OwO "postmessage()")}} を使用して [wowkews](/ja/docs/web/api/wowkew) との間でコピーすることができます ([fiwefox バグ 1561357](https://bugziw.wa/1561357))。
 
-- [`RTCRtpEncodingParameters.maxFramerate`](/ja/docs/Web/API/RTCRtpSender/setParameters) で、({{domxref("RTCPeerConnection.addTransceiver()")}} および {{domxref("RTCRtpSender.setParameters()" )}} で送信時のエンコードで使用する最大フレームレートを設定できるようになりました。
-  0 は有効なフレームレートの値ですが、Firefox は "フレームレート制限なし" と解釈しますので注意してください。
-  詳しくは [Firefox バグ 1611957](https://bugzil.la/1611957) をご覧ください。
+- [`wtcwtpencodingpawametews.maxfwamewate`](/ja/docs/web/api/wtcwtpsendew/setpawametews) で、({{domxwef("wtcpeewconnection.addtwansceivew()")}} および {{domxwef("wtcwtpsendew.setpawametews()" )}} で送信時のエンコードで使用する最大フレームレートを設定できるようになりました。
+  0 は有効なフレームレートの値ですが、fiwefox は "フレームレート制限なし" と解釈しますので注意してください。
+  詳しくは [fiwefox バグ 1611957](https://bugziw.wa/1611957) をご覧ください。
 
-- _Constructable stylesheets_ をサポートしました。[Shadow DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) とともに使用する、再使用可能なスタイルシートをとても簡単に作成できます。
-  この更新には新しいスタイルシートを作成する [`CSSStyleSheet()` コンストラクター](/ja/docs/Web/API/CSSStyleSheet/CSSStyleSheet) や、スタイルシートに CSS 規則を追加するために使用できる {{domxref("CSSStyleSheet.replace()")}} および {{domxref("CSSStyleSheet.replaceSync()")}} メソッドが含まれます。
-  詳しくは [Firefox バグ 1520690](https://bugzil.la/1520690) をご覧ください。
+- _constwuctabwe s-stywesheets_ をサポートしました。[shadow d-dom](/ja/docs/web/api/web_components/using_shadow_dom) とともに使用する、再使用可能なスタイルシートをとても簡単に作成できます。
+  この更新には新しいスタイルシートを作成する [`cssstywesheet()` コンストラクター](/ja/docs/web/api/cssstywesheet/cssstywesheet) や、スタイルシートに c-css 規則を追加するために使用できる {{domxwef("cssstywesheet.wepwace()")}} および {{domxwef("cssstywesheet.wepwacesync()")}} メソッドが含まれます。
+  詳しくは [fiwefox バグ 1520690](https://bugziw.wa/1520690) をご覧ください。
 
-#### Media、WebRTC、Web Audio
+#### media、webwtc、web audio
 
-- [AV1 コーデックのパラメーター](/ja/docs/Web/Media/Formats/codecs_parameter#av1) が、メディアサポートクエリーで適切に解析されるようになりました。
-  これは [`MediaCapabilities.decodingInfo()`](/ja/docs/Web/API/MediaCapabilities/decodingInfo)、[`HTMLMediaElement.canPlayType()`](/ja/docs/Web/API/HTMLMediaElement/canPlayType)、[`MediaSource.isTypeSupported()`](/ja/docs/Web/API/MediaSource/isTypeSupported_static) が、与えられたコーデックパラメーターに基づいた AV1 ソースの再生を正確に報告することを意味します。
-  [`MediaCapabilities.decodingInfo()`](/ja/docs/Web/API/MediaCapabilities/decodingInfo) も、AV1 動画の "効率的なデコード" を正確に報告するためにこの情報を使用します。
-  詳しくは [Firefox バグ 1757861](https://bugzil.la/1757861) をご覧ください。
+- [av1 コーデックのパラメーター](/ja/docs/web/media/fowmats/codecs_pawametew#av1) が、メディアサポートクエリーで適切に解析されるようになりました。
+  これは [`mediacapabiwities.decodinginfo()`](/ja/docs/web/api/mediacapabiwities/decodinginfo)、[`htmwmediaewement.canpwaytype()`](/ja/docs/web/api/htmwmediaewement/canpwaytype)、[`mediasouwce.istypesuppowted()`](/ja/docs/web/api/mediasouwce/istypesuppowted_static) が、与えられたコーデックパラメーターに基づいた av1 ソースの再生を正確に報告することを意味します。
+  [`mediacapabiwities.decodinginfo()`](/ja/docs/web/api/mediacapabiwities/decodinginfo) も、av1 動画の "効率的なデコード" を正確に報告するためにこの情報を使用します。
+  詳しくは [fiwefox バグ 1757861](https://bugziw.wa/1757861) をご覧ください。
 
-### WebDriver conformance (WebDriver BiDi, Marionette)
+### webdwivew confowmance (webdwivew b-bidi, (U ﹏ U) mawionette)
 
-このリリースの Firefox から、[WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) プロトコルがデフォルトで有効になりました。WebDriver BiDi セッションは WebDriver クラシック (geckodriver、Marionette) を使用して、新しい WebDriver セッションを生成するときに [`webSocketURL` capability](/ja/docs/Web/WebDriver/Capabilities/webSocketUrl) を `true` に設定することで要求できます。同じ機能に、BiDi クライアントが接続するための WebSocket エンドポイントも含まれています。
+このリリースの fiwefox から、[webdwivew bidi](https://wiki.moziwwa.owg/webdwivew/wemotepwotocow/webdwivew_bidi) プロトコルがデフォルトで有効になりました。webdwivew b-bidi セッションは webdwivew クラシック (geckodwivew、mawionette) を使用して、新しい w-webdwivew セッションを生成するときに [`websocketuww` capabiwity](/ja/docs/web/webdwivew/capabiwities/websocketuww) を `twue` に設定することで要求できます。同じ機能に、bidi クライアントが接続するための websocket エンドポイントも含まれています。
 
 以下のコマンドやイベントを使用できます:
 
-- イベントをグローバルにサブスクライブするコマンド ([`session.subscribe`](https://w3c.github.io/webdriver-bidi/#command-session-subscribe)) およびサブスクライブを解除するコマンド ([`session.unsubscribe`](https://w3c.github.io/webdriver-bidi/#command-session-unsubscribe)) の部分的な実装と、WebDriver クラシックを使用しないときに WebDriver BiDi セッションを直接作成する機能 ([`session.new`](https://w3c.github.io/webdriver-bidi/#command-session-new)) を含む、[`session` モジュール](https://w3c.github.io/webdriver-bidi/#module-session) を追加しました。
+- イベントをグローバルにサブスクライブするコマンド ([`session.subscwibe`](https://w3c.github.io/webdwivew-bidi/#command-session-subscwibe)) およびサブスクライブを解除するコマンド ([`session.unsubscwibe`](https://w3c.github.io/webdwivew-bidi/#command-session-unsubscwibe)) の部分的な実装と、webdwivew クラシックを使用しないときに webdwivew bidi セッションを直接作成する機能 ([`session.new`](https://w3c.github.io/webdwivew-bidi/#command-session-new)) を含む、[`session` モジュール](https://w3c.github.io/webdwivew-bidi/#moduwe-session) を追加しました。
 
-- 新しいタブやウィンドウを開くコマンド ([`browsingContext.create`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create)) や閉じるコマンド ([`browsingContext.close`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-close))、開いている閲覧コンテキストを取得するコマンド ([`browsingContext.getTree`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-getTree))、閲覧コンテキスト内でナビゲーションするコマンド ([`browsingContext.navigate`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-navigate)) を含む [`browsingContext` モジュール](https://w3c.github.io/webdriver-bidi/#module-browsingContext) を追加しました。これらは、閲覧コンテキストが作成されたときのイベント ([`browsingContext.contextCreated`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextCreated)) もサポートします。
+- 新しいタブやウィンドウを開くコマンド ([`bwowsingcontext.cweate`](https://w3c.github.io/webdwivew-bidi/#command-bwowsingcontext-cweate)) や閉じるコマンド ([`bwowsingcontext.cwose`](https://w3c.github.io/webdwivew-bidi/#command-bwowsingcontext-cwose))、開いている閲覧コンテキストを取得するコマンド ([`bwowsingcontext.gettwee`](https://w3c.github.io/webdwivew-bidi/#command-bwowsingcontext-gettwee))、閲覧コンテキスト内でナビゲーションするコマンド ([`bwowsingcontext.navigate`](https://w3c.github.io/webdwivew-bidi/#command-bwowsingcontext-navigate)) を含む [`bwowsingcontext` モジュール](https://w3c.github.io/webdwivew-bidi/#moduwe-bwowsingcontext) を追加しました。これらは、閲覧コンテキストが作成されたときのイベント ([`bwowsingcontext.contextcweated`](https://w3c.github.io/webdwivew-bidi/#event-bwowsingcontext-contextcweated)) もサポートします。
 
-- ログのイベント ([`log.entryAdded`](https://w3c.github.io/webdriver-bidi/#event-log-entryAdded)) をサポートする [`log` モジュール](https://w3c.github.io/webdriver-bidi/#module-log) を追加しました。
+- ログのイベント ([`wog.entwyadded`](https://w3c.github.io/webdwivew-bidi/#event-wog-entwyadded)) をサポートする [`wog` モジュール](https://w3c.github.io/webdwivew-bidi/#moduwe-wog) を追加しました。
 
-詳しくは、[すべてのバグの一覧](https://bugzilla.mozilla.org/buglist.cgi?component=Agent&component=Marionette&component=WebDriver%20BiDi&v1=fixed&query_format=advanced&f1=cf_status_firefox101&o1=equals&product=Remote%20Protocol&product=Testing&j_top=OR&list_id=16095473&resolution=FIXED) をご覧ください。
+詳しくは、[すべてのバグの一覧](https://bugziwwa.moziwwa.owg/bugwist.cgi?component=agent&component=mawionette&component=webdwivew%20bidi&v1=fixed&quewy_fowmat=advanced&f1=cf_status_fiwefox101&o1=equaws&pwoduct=wemote%20pwotocow&pwoduct=testing&j_top=ow&wist_id=16095473&wesowution=fixed) をご覧ください。
 
 ## アドオン開発者向けの変更点一覧
 
-- {{WebExtAPIRef("scripting")}} API を追加しました。スクリプトの実行、CSS の挿入と削除、コンテンツスクリプトの登録管理の機能を提供します ([Firefox バグ 1687764](https://bugzil.la/1687764))。この API は Manifest V3 拡張機能で使用可能であり、スクリプトの実行や CSS の挿入・削除の機能を {{WebExtAPIRef("tabs")}} API から引き継いでいます。
-- {{WebExtAPIRef("action")}} API を追加しました。Manifest V3 拡張機能で {{WebExtAPIRef("browserAction")}} API の機能を引き継いでいます。[`"action"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) マニフェストキーの追加も対応しています。{{WebExtAPIRef("browserAction")}} API および [`"action"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) マニフェストキーは Manifest V2 拡張機能だけで使用可能であることに注意してください。
-- [`"background"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) マニフェストキーの `"persistent"` を、設定項目による制御で `false` に設定できます。Manifest V2 の設定項目は <code>extensions.eventPages.enabled</code>、Manifest V3 の設定項目は <code>extensions.manifestV3.enabled</code> です。
-- [`"host_permissions"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) マニフェストキーを追加しました。これは Manifest V3 拡張機能で使用できます。
-- Manifest V3 拡張機能向けのコンテンツスクリプト実行環境を変更しました:
-  - コンテンツスクリプトのオリジン間リクエストが、ホストの許可に依存できなくなりました。コンテンツスクリプトのオリジン間リクエストは、[CORS](/ja/docs/Web/HTTP/Guides/CORS) で実行可能です。
-  - `content` オブジェクト (`content.fetch`、`content.XMLHttpRequest`、`content.WebSocket` で提供される) が、コンテンツスクリプトの実行環境から削除されました。
+- {{webextapiwef("scwipting")}} a-api を追加しました。スクリプトの実行、css の挿入と削除、コンテンツスクリプトの登録管理の機能を提供します ([fiwefox バグ 1687764](https://bugziw.wa/1687764))。この api は manifest v-v3 拡張機能で使用可能であり、スクリプトの実行や c-css の挿入・削除の機能を {{webextapiwef("tabs")}} api から引き継いでいます。
+- {{webextapiwef("action")}} api を追加しました。manifest v3 拡張機能で {{webextapiwef("bwowsewaction")}} api の機能を引き継いでいます。[`"action"`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/action) マニフェストキーの追加も対応しています。{{webextapiwef("bwowsewaction")}} a-api および [`"action"`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) マニフェストキーは manifest v2 拡張機能だけで使用可能であることに注意してください。
+- [`"backgwound"`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/backgwound) マニフェストキーの `"pewsistent"` を、設定項目による制御で `fawse` に設定できます。manifest v2 の設定項目は <code>extensions.eventpages.enabwed</code>、manifest v3 の設定項目は <code>extensions.manifestv3.enabwed</code> です。
+- [`"host_pewmissions"`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/host_pewmissions) マニフェストキーを追加しました。これは manifest v-v3 拡張機能で使用できます。
+- manifest v-v3 拡張機能向けのコンテンツスクリプト実行環境を変更しました:
+  - コンテンツスクリプトのオリジン間リクエストが、ホストの許可に依存できなくなりました。コンテンツスクリプトのオリジン間リクエストは、[cows](/ja/docs/web/http/guides/cows) で実行可能です。
+  - `content` オブジェクト (`content.fetch`、`content.xmwhttpwequest`、`content.websocket` で提供される) が、コンテンツスクリプトの実行環境から削除されました。
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(100)}}
+{{fiwefox_fow_devewopews(100)}}

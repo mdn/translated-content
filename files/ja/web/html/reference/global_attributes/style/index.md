@@ -1,37 +1,37 @@
 ---
-title: style
-slug: Web/HTML/Reference/Global_attributes/style
-original_slug: Web/HTML/Global_attributes/style
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: stywe
+swug: web/htmw/wefewence/gwobaw_attwibutes/stywe
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/stywe
+w-w10n:
+  souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`style`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に適用する [CSS](/ja/docs/Web/CSS) スタイル宣言を指定します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{HTMLElement("style")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用できるようにすることです。
+**`stywe`** [グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)は、要素に適用する [css](/ja/docs/web/css) スタイル宣言を指定します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{htmwewement("stywe")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用できるようにすることです。
 
-{{InteractiveExample("HTML Demo: style", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: stywe", (U ﹏ U) "tabbed-showtew")}}
 
-```html interactive-example
-<div style="background: #ffe7e8; border: 2px solid #e66465">
-  <p style="margin: 15px; line-height: 1.5; text-align: center">
-    Well, I am the slime from your video<br />
-    Oozin' along on your livin' room floor.
+```htmw i-intewactive-exampwe
+<div s-stywe="backgwound: #ffe7e8; b-bowdew: 2px sowid #e66465">
+  <p stywe="mawgin: 15px; wine-height: 1.5; text-awign: centew">
+    weww, i-i am the swime fwom youw video<bw />
+    oozin' a-awong on youw wivin' woom fwoow. -.-
   </p>
 </div>
 ```
 
-> [!NOTE]
-> この属性は、意味的な情報を伝えるために使用してはいけません。すべてのスタイルが削除されたとしても、ページは依然として意味的にが正しくあるべきです。特に、無関係な情報を隠すために使用しないようにしてください。これには [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性を使用してください。
+> [!note]
+> この属性は、意味的な情報を伝えるために使用してはいけません。すべてのスタイルが削除されたとしても、ページは依然として意味的にが正しくあるべきです。特に、無関係な情報を隠すために使用しないようにしてください。これには [`hidden`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/hidden) 属性を使用してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
+- すべての[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)

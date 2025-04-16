@@ -1,85 +1,85 @@
 ---
-title: Firefox 114 for developers
-slug: Mozilla/Firefox/Releases/114
-l10n:
-  sourceCommit: 7f74644d98484c67817c1dd556a6e394f5a26a6f
+titwe: fiwefox 114 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/114
+w-w10n:
+  s-souwcecommit: 7f74644d98484c67817c1dd556a6e394f5a26a6f
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 114 の変更点をまとめています。Firefox 114 は、米国時間 2023 年 6 月 6 日にリリースされました。
+このページでは、開発者に影響する f-fiwefox 114 の変更点をまとめています。fiwefox 114 は、米国時間 2023 年 6 月 6 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- [アクセシビリティ調査ツール](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) が、要素の ARIA ロールを正しく表示しない不具合を修正しました。これは、[landmark ロール](/ja/docs/Web/Accessibility/ARIA/Roles/landmark_role) の表示に影響します。
-  ARIA にマッピングできないロールは、Gecko の内部ロール名を使用します ([Firefox bug 1572512](https://bugzil.la/1572512))。
+- [アクセシビリティ調査ツール](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/accessibiwity_inspectow/index.htmw) が、要素の a-awia ロールを正しく表示しない不具合を修正しました。これは、[wandmawk ロール](/ja/docs/web/accessibiwity/awia/wowes/wandmawk_wowe) の表示に影響します。
+  a-awia にマッピングできないロールは、gecko の内部ロール名を使用します ([fiwefox b-bug 1572512](https://bugziw.wa/1572512))。
 
-### HTML
-
-変更なし。
-
-### CSS
-
-- [`:lang()`](/ja/docs/Web/CSS/:lang) 擬似クラスで、言語コードのマッチングに接頭辞マッチング方式に代わって、文字列マッチング方式 (`*` ワイルドカードを含む) を使用するようになりました。
-  また、複数の言語にマッチする、カンマ区切りの言語リストをサポートしました ([Firefox bug 1121792](https://bugzil.la/1121792))。
-- 文字を記号に置き換えることができる、[-webkit-text-security](/ja/docs/Web/CSS/-webkit-text-security) プロパティをサポートしました。このプロパティを使用して、伏せ字の表現を制御できます ([Firefox bug 1826629](https://bugzil.la/1826629))。
-- [`calc()`](/ja/docs/Web/CSS/calc) 関数内で、定数 `infinity` および `NaN` をサポートしました ([Firefox bug 1830759](https://bugzil.la/1830759))。
-
-### JavaScript
-
-- [ワーカー](/ja/docs/Web/API/Web_Workers_API) で [ECMAScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules) の読み込みをサポートしました。
-  [`Worker`](/ja/docs/Web/API/Worker/Worker#type) および [`SharedWorker` コンストラクター](/ja/docs/Web/API/SharedWorker/SharedWorker#type) で `{type: "module"}` オプションを指定すると、ワーカーにモジュールを読み込めます。
-  また、[`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) および [`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import) を使用して、ワーカースクリプトへ静的および動的にモジュールをインポートできます ([Firefox bug 1812591](https://bugzil.la/1812591))。
-- [ワークレット](/ja/docs/Web/API/Worklet) で、[ECMAscript/JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules) を静的にインポートする [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) が使用可能になりました ([Firefox bug 1812591](https://bugzil.la/1812591))。
-
-### SVG
-
-- [`image`](/ja/docs/Web/SVG/Reference/Element/image) および [`feImage`](/ja/docs/Web/SVG/Reference/Element/feImage) 要素で [`crossorigin`](/ja/docs/Web/SVG/Reference/Attribute/crossorigin) 属性をサポートしました ([Firefox bug 1240357](https://bugzil.la/1240357))。
-
-### API
-
-- [`Window.print()`](/ja/docs/Web/API/Window/print) が Android 版 Firefox で印刷ダイアログを開くようになり、現行の文書を印刷できるようになりました ([Firefox bug 1809922](https://bugzil.la/1809922))。
-- [WebTransport API](/ja/docs/Web/API/WebTransport_API) をサポートしました。[`WebTransport`](/ja/docs/Web/API/WebTransport)、[`WebTransportBidirectionalStream`](/ja/docs/Web/API/WebTransportBidirectionalStream)、[`WebTransportDatagramDuplexStream`](/ja/docs/Web/API/WebTransportDatagramDuplexStream)、[`WebTransportReceiveStream`](/ja/docs/Web/API/WebTransportReceiveStream)、[`WebTransportDatagramDuplexStream`](/ja/docs/Web/API/WebTransportDatagramDuplexStream)、[`WebTransportError`](/ja/docs/Web/API/WebTransportError) インターフェイスをサポートしています。
-  詳しくは [Firefox bug 1692754](https://bugzil.la/1692754)、[Firefox bug 1818754](https://bugzil.la/1818754)、[Firefox bug 1791835](https://bugzil.la/1791835) をご覧ください。
-
-- {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) を使用するときに指定した `supports()` 条件を取得する、[`CSSImportRule.supportsText`](/ja/docs/Web/API/CSSImportRule/supportsText) が使用可能になりました ([Firefox bug 1829590](https://bugzil.la/1829590))。
-
-#### DOM
+### h-htmw
 
 変更なし。
 
-#### Media、WebRTC、Web Audio
+### css
+
+- [`:wang()`](/ja/docs/web/css/:wang) 擬似クラスで、言語コードのマッチングに接頭辞マッチング方式に代わって、文字列マッチング方式 (`*` ワイルドカードを含む) を使用するようになりました。
+  また、複数の言語にマッチする、カンマ区切りの言語リストをサポートしました ([fiwefox bug 1121792](https://bugziw.wa/1121792))。
+- 文字を記号に置き換えることができる、[-webkit-text-secuwity](/ja/docs/web/css/-webkit-text-secuwity) プロパティをサポートしました。このプロパティを使用して、伏せ字の表現を制御できます ([fiwefox bug 1826629](https://bugziw.wa/1826629))。
+- [`cawc()`](/ja/docs/web/css/cawc) 関数内で、定数 `infinity` および `nan` をサポートしました ([fiwefox bug 1830759](https://bugziw.wa/1830759))。
+
+### j-javascwipt
+
+- [ワーカー](/ja/docs/web/api/web_wowkews_api) で [ecmascwipt モジュール](/ja/docs/web/javascwipt/guide/moduwes) の読み込みをサポートしました。
+  [`wowkew`](/ja/docs/web/api/wowkew/wowkew#type) および [`shawedwowkew` コンストラクター](/ja/docs/web/api/shawedwowkew/shawedwowkew#type) で `{type: "moduwe"}` オプションを指定すると、ワーカーにモジュールを読み込めます。
+  また、[`impowt`](/ja/docs/web/javascwipt/wefewence/statements/impowt) および [`impowt()`](/ja/docs/web/javascwipt/wefewence/opewatows/impowt) を使用して、ワーカースクリプトへ静的および動的にモジュールをインポートできます ([fiwefox bug 1812591](https://bugziw.wa/1812591))。
+- [ワークレット](/ja/docs/web/api/wowkwet) で、[ecmascwipt/javascwipt モジュール](/ja/docs/web/javascwipt/guide/moduwes) を静的にインポートする [`impowt`](/ja/docs/web/javascwipt/wefewence/statements/impowt) が使用可能になりました ([fiwefox bug 1812591](https://bugziw.wa/1812591))。
+
+### s-svg
+
+- [`image`](/ja/docs/web/svg/wefewence/ewement/image) および [`feimage`](/ja/docs/web/svg/wefewence/ewement/feimage) 要素で [`cwossowigin`](/ja/docs/web/svg/wefewence/attwibute/cwossowigin) 属性をサポートしました ([fiwefox bug 1240357](https://bugziw.wa/1240357))。
+
+### a-api
+
+- [`window.pwint()`](/ja/docs/web/api/window/pwint) が andwoid 版 fiwefox で印刷ダイアログを開くようになり、現行の文書を印刷できるようになりました ([fiwefox bug 1809922](https://bugziw.wa/1809922))。
+- [webtwanspowt api](/ja/docs/web/api/webtwanspowt_api) をサポートしました。[`webtwanspowt`](/ja/docs/web/api/webtwanspowt)、[`webtwanspowtbidiwectionawstweam`](/ja/docs/web/api/webtwanspowtbidiwectionawstweam)、[`webtwanspowtdatagwamdupwexstweam`](/ja/docs/web/api/webtwanspowtdatagwamdupwexstweam)、[`webtwanspowtweceivestweam`](/ja/docs/web/api/webtwanspowtweceivestweam)、[`webtwanspowtdatagwamdupwexstweam`](/ja/docs/web/api/webtwanspowtdatagwamdupwexstweam)、[`webtwanspowtewwow`](/ja/docs/web/api/webtwanspowtewwow) インターフェイスをサポートしています。
+  詳しくは [fiwefox b-bug 1692754](https://bugziw.wa/1692754)、[fiwefox bug 1818754](https://bugziw.wa/1818754)、[fiwefox b-bug 1791835](https://bugziw.wa/1791835) をご覧ください。
+
+- {{cssxwef("@impowt")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe) を使用するときに指定した `suppowts()` 条件を取得する、[`cssimpowtwuwe.suppowtstext`](/ja/docs/web/api/cssimpowtwuwe/suppowtstext) が使用可能になりました ([fiwefox b-bug 1829590](https://bugziw.wa/1829590))。
+
+#### dom
+
+変更なし。
+
+#### media、webwtc、web audio
 
 変更なし。
 
 #### 廃止
 
-- 非推奨かつ非標準の `mozImageSmoothingEnabled` プロパティを完全に削除しました。
-  スケーリングされた画像の平滑化については、[`imageSmoothingEnabled`](/ja/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled) プロパティをご覧ください ([Firefox bug 1228850](https://bugzil.la/1228850))。
+- 非推奨かつ非標準の `mozimagesmoothingenabwed` プロパティを完全に削除しました。
+  スケーリングされた画像の平滑化については、[`imagesmoothingenabwed`](/ja/docs/web/api/canvaswendewingcontext2d/imagesmoothingenabwed) プロパティをご覧ください ([fiwefox bug 1228850](https://bugziw.wa/1228850))。
 
-### WebDriver conformance (WebDriver BiDi, Marionette)
+### w-webdwivew confowmance (webdwivew bidi, (✿oωo) mawionette)
 
-#### WebDriver BiDi
+#### webdwivew bidi
 
-- `input.performActions` および `input.releaseActions` コマンドをサポートしました。これらは、ウェブページ上の要素と対話するユーザー入力のエミュレーションに使用できます。Marionette と同様に、WebDriver の仕様で利用できるすべての入力ソース `key`、`pointer`、`wheel` をサポートしています ([Firefox bug 1832380](https://bugzil.la/1832380))。
-- ブラウザー対クライアントの独自のメッセージをサポートしました。過去に `script.addPreloadScript` でインストールしたスクリプトから `script.message` イベントを発信できます ([Firefox bug 1824187](https://bugzil.la/1824187))。
-- `script.evaluate` および `script.callFunction` で、`RemoteValue` のシリアライズを設定するための引数 `serializationOptions` をサポートしました ([Firefox bug 1824953](https://bugzil.la/1824953))。
-- `script.evaluate` および `script.callFunction` コマンドで、拒否されたプロミスのスタックトレースが含まれず、また例外の詳細情報を適切に構築しない不具合を修正しました ([Firefox bug 1829630](https://bugzil.la/1829630))。
-- `browsingContext.domContentLoaded` および `browsingContext.load` イベントで、ページで `<base>` メタタグを定義した場合に `url` が正しく報告されない不具合を修正しました ([Firefox bug 1825634](https://bugzil.la/1825634))。
+- `input.pewfowmactions` および `input.weweaseactions` コマンドをサポートしました。これらは、ウェブページ上の要素と対話するユーザー入力のエミュレーションに使用できます。mawionette と同様に、webdwivew の仕様で利用できるすべての入力ソース `key`、`pointew`、`wheew` をサポートしています ([fiwefox bug 1832380](https://bugziw.wa/1832380))。
+- ブラウザー対クライアントの独自のメッセージをサポートしました。過去に `scwipt.addpwewoadscwipt` でインストールしたスクリプトから `scwipt.message` イベントを発信できます ([fiwefox bug 1824187](https://bugziw.wa/1824187))。
+- `scwipt.evawuate` および `scwipt.cawwfunction` で、`wemotevawue` のシリアライズを設定するための引数 `sewiawizationoptions` をサポートしました ([fiwefox b-bug 1824953](https://bugziw.wa/1824953))。
+- `scwipt.evawuate` および `scwipt.cawwfunction` コマンドで、拒否されたプロミスのスタックトレースが含まれず、また例外の詳細情報を適切に構築しない不具合を修正しました ([fiwefox bug 1829630](https://bugziw.wa/1829630))。
+- `bwowsingcontext.domcontentwoaded` および `bwowsingcontext.woad` イベントで、ページで `<base>` メタタグを定義した場合に `uww` が正しく報告されない不具合を修正しました ([fiwefox b-bug 1825634](https://bugziw.wa/1825634))。
 
-#### Marionette
+#### m-mawionette
 
-- `WebDriver:GetComputedRole` コマンドが、正しい WAI-ARIA ロールを返さない不具合を修正しました ([Firefox bug 1822112](https://bugzil.la/1822112))。
-- 同じ `WebDriver:ElementSendKeys` コマンドで修飾キーを再び使用したときに、修飾キーがリセットされない不具合を修正しました ([Firefox bug 1776190](https://bugzil.la/1776190))。
+- `webdwivew:getcomputedwowe` コマンドが、正しい w-wai-awia ロールを返さない不具合を修正しました ([fiwefox b-bug 1822112](https://bugziw.wa/1822112))。
+- 同じ `webdwivew:ewementsendkeys` コマンドで修飾キーを再び使用したときに、修飾キーがリセットされない不具合を修正しました ([fiwefox bug 1776190](https://bugziw.wa/1776190))。
 
 ## アドオン開発者向けの変更点一覧
 
 ### 廃止
 
-- Manifest V3 拡張機能で、[`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action)、[`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)、[`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)、[`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) マニフェストキーの [`browser_style`](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) を非推奨にしました ([Firefox bug 1827910](https://bugzil.la/1827910))。Manifest V3 拡張機能の `browser_style` からの移行に関する情報は、[Manifest v3 migration](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) をご覧ください。
+- manifest v3 拡張機能で、[`action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/action)、[`options_ui`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui)、[`page_action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/page_action)、[`sidebaw_action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/sidebaw_action) マニフェストキーの [`bwowsew_stywe`](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes) を非推奨にしました ([fiwefox b-bug 1827910](https://bugziw.wa/1827910))。manifest v3 拡張機能の `bwowsew_stywe` からの移行に関する情報は、[manifest v3 migwation](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes#manifest_v3_migwation) をご覧ください。
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(113)}}
+{{fiwefox_fow_devewopews(113)}}

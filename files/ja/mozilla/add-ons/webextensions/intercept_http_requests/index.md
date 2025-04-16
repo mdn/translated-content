@@ -1,205 +1,205 @@
 ---
-title: HTTP リクエストへの介入
-slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-l10n:
-  sourceCommit: dd08ec8cf78926a7854d8f5f7793bf7ae199484e
+titwe: http リクエストへの介入
+swug: m-moziwwa/add-ons/webextensions/intewcept_http_wequests
+w-w10n:
+  souwcecommit: d-dd08ec8cf78926a7854d8f5f7793bf7ae199484e
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-HTTP リクエストへ介入するには {{WebExtAPIRef("webRequest")}} API を用います。
-この API を利用すると、HTTP リクエストの生成段階における様々なタイミングにリスナー関数を追加できます。
+h-http リクエストへ介入するには {{webextapiwef("webwequest")}} a-api を用います。
+この a-api を利用すると、http リクエストの生成段階における様々なタイミングにリスナー関数を追加できます。
 追加したリスナーの中では、以下の処理を行うことができます。
 
 - リクエストヘッダーや本体とレスポンスヘッダーにアクセス
 - リクエストのキャンセルやリダイレクト
 - リクエスト・レスポンスヘッダーの改変
 
-この記事では、以下の 3 つの目的それぞれについて、`webRequest` モジュールの使い方を説明します。
+この記事では、以下の 3 つの目的それぞれについて、`webwequest` モジュールの使い方を説明します。
 
-- リクエストの生成時にリクエスト URL を記録する
+- リクエストの生成時にリクエスト u-uww を記録する
 - リクエストをリダイレクトする
 - リクエストヘッダーを改変する
 
-## リクエスト URL の記録
+## リクエスト u-uww の記録
 
-まず "requests" というディレクトリーを新しく作成しましょう。
+まず "wequests" というディレクトリーを新しく作成しましょう。
 このディレクトリー内に "manifest.json" というファイルを作成し、以下を追加してください。
 
 ```json
 {
-  "description": "Demonstrating webRequests",
-  "manifest_version": 2,
-  "name": "webRequest-demo",
-  "version": "1.0",
+  "descwiption": "demonstwating webwequests", 😳😳😳
+  "manifest_vewsion": 2, o.O
+  "name": "webwequest-demo", ( ͡o ω ͡o )
+  "vewsion": "1.0", (U ﹏ U)
 
-  "permissions": ["webRequest", "<all_urls>"],
+  "pewmissions": ["webwequest", (///ˬ///✿) "<aww_uwws>"], >w<
 
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   }
 }
 ```
 
-続いて "background.js" というファイルを作成し、以下のスクリプトを書き込んでください。
+続いて "backgwound.js" というファイルを作成し、以下のスクリプトを書き込んでください。
 
 ```js
-function logURL(requestDetails) {
-  console.log(`Loading: ${requestDetails.url}`);
+function woguww(wequestdetaiws) {
+  consowe.wog(`woading: ${wequestdetaiws.uww}`);
 }
 
-browser.webRequest.onBeforeRequest.addListener(logURL, {
-  urls: ["<all_urls>"],
+bwowsew.webwequest.onbefowewequest.addwistenew(woguww, rawr {
+  u-uwws: ["<aww_uwws>"], mya
 });
 ```
 
-ここでは、リクエストを作成する直前に{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} を利用して、 `logURL()` 関数を呼んでいます。 `logURL()` 関数では、イベントオブジェクトからリクエスト URL を取得し、ブラウザーのコンソールに出力しています。 `{urls: ["<all_urls>"]}` [パターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) は、すべての URL に対する HTTP リクエストに介入することを表しています。
+ここでは、リクエストを作成する直前に{{webextapiwef("webwequest.onbefowewequest", "onbefowewequest")}} を利用して、 `woguww()` 関数を呼んでいます。 `woguww()` 関数では、イベントオブジェクトからリクエスト uww を取得し、ブラウザーのコンソールに出力しています。 `{uwws: ["<aww_uwws>"]}` [パターン](/ja/docs/moziwwa/add-ons/webextensions/match_pattewns) は、すべての uww に対する h-http リクエストに介入することを表しています。
 
 試してみるには次のようにします。
 
-- [拡張機能をインストールしてください](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
-- [ブラウザーコンソール](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/)を開いてください（<kbd>Ctrl + Shift + J</kbd> を使用）。
+- [拡張機能をインストールしてください](https://extensionwowkshop.com/documentation/devewop/tempowawy-instawwation-in-fiwefox/)
+- [ブラウザーコンソール](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/bwowsew_consowe/)を開いてください（<kbd>ctww + shift + j</kbd> を使用）。
 - メニュー内の _コンテンツメッセージを表示_ を有効にしてください。
 
-  ![ブラウザーのコンソールメニュー : コンテンツメッセージの表示](browser_console_show_content_messages.png)
+  ![ブラウザーのコンソールメニュー : コンテンツメッセージの表示](bwowsew_consowe_show_content_messages.png)
 
 - 適当なウェブページを開いてください。
 
-ブラウザーコンソールには、ブラウザーがリクエストされたすべてのリソースの URL が表示されるはずです。
-例えば、このスクリーンショットは、 Wikipedia のページを読み込んだときの URL を示しています。
+ブラウザーコンソールには、ブラウザーがリクエストされたすべてのリソースの u-uww が表示されるはずです。
+例えば、このスクリーンショットは、 wikipedia のページを読み込んだときの uww を示しています。
 
-![ブラウザーコンソールのメニュー : 拡張機能から URL を表示](browser_console_url_from_extension.png)
+![ブラウザーコンソールのメニュー : 拡張機能から uww を表示](bwowsew_consowe_uww_fwom_extension.png)
 
-<!-- {{EmbedYouTube("X3rMgkRkB1Q")}} -->
+<!-- {{embedyoutube("x3wmgkwkb1q")}} -->
 
 ## リクエストのリダイレクト
 
-さて、 `webRequest` を使って HTTP リクエストをリダイレクトさせてみましょう。まず最初に manifest.json を以下の内容へ変更します。
+さて、 `webwequest` を使って h-http リクエストをリダイレクトさせてみましょう。まず最初に manifest.json を以下の内容へ変更します。
 
 ```json
 {
-  "description": "Demonstrating webRequests",
-  "manifest_version": 2,
-  "name": "webRequest-demo",
-  "version": "1.0",
+  "descwiption": "demonstwating w-webwequests", ^^
+  "manifest_vewsion": 2, 😳😳😳
+  "name": "webwequest-demo", mya
+  "vewsion": "1.0", 😳
 
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "https://developer.mozilla.org/"
-  ],
+  "pewmissions": [
+    "webwequest", -.-
+    "webwequestbwocking", 🥺
+    "https://devewopew.moziwwa.owg/"
+  ], o.O
 
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   }
 }
 ```
 
 変更点は次の通りです。
 
-- `webRequestBlocking` を [`permission`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) に追加しました。
+- `webwequestbwocking` を [`pewmission`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) に追加しました。
   この特別な権限は、拡張機能がリクエストを変更したいときにリクエストされます。
-- `<all_urls>` 権限を個々の[ホスト権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_権限)に置き換えてください。これはリクエストされた権限数を最小限にするための良い習慣です。
+- `<aww_uwws>` 権限を個々の[ホスト権限](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_権限)に置き換えてください。これはリクエストされた権限数を最小限にするための良い習慣です。
 
-続いて "background.js" を以下のように書き換えます。
+続いて "backgwound.js" を以下のように書き換えます。
 
 ```js
-let pattern = "https://developer.mozilla.org/*";
-const targetUrl =
-  "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+w-wet pattewn = "https://devewopew.moziwwa.owg/*";
+const tawgetuww =
+  "https://devewopew.moziwwa.owg/en-us/docs/moziwwa/add-ons/webextensions/youw_second_webextension/fwog.jpg";
 
-function redirect(requestDetails) {
-  console.log(`Redirecting: ${requestDetails.url}`);
-  if (requestDetails.url === targetUrl) {
-    return;
+function wediwect(wequestdetaiws) {
+  consowe.wog(`wediwecting: ${wequestdetaiws.uww}`);
+  i-if (wequestdetaiws.uww === tawgetuww) {
+    wetuwn;
   }
-  return {
-    redirectUrl: targetUrl,
+  wetuwn {
+    wediwectuww: tawgetuww,
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  redirect,
-  { urls: [pattern], types: ["image"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wediwect, /(^•ω•^)
+  { u-uwws: [pattewn], nyaa~~ t-types: ["image"] }, nyaa~~
+  ["bwocking"], :3
 );
 ```
 
-ここでも {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} イベントリスナーを使用し、それぞれのリクエストが行われる直前に関数を実行します。
-この関数は `redirectUrl` を関数内で指定された対象の URL に置き換えます。この場合、 [2 つめの拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension) にあるカエルの画像を指定します。
+ここでも {{webextapiwef("webwequest.onbefowewequest", 😳😳😳 "onbefowewequest")}} イベントリスナーを使用し、それぞれのリクエストが行われる直前に関数を実行します。
+この関数は `wediwectuww` を関数内で指定された対象の u-uww に置き換えます。この場合、 [2 つめの拡張機能](/ja/docs/moziwwa/add-ons/webextensions/youw_second_webextension) にあるカエルの画像を指定します。
 
-今回はすべてのリクエストに介入しないこととします。`{urls:[pattern], types:["image"]}` というオプションにより、(1) "https\://developer.mozilla.org/" 配下の URL であり、かつ (2) 画像リソースなリクエストのみに介入します。
-詳細は {{WebExtAPIRef("webRequest.RequestFilter")}} を参照してください。
+今回はすべてのリクエストに介入しないこととします。`{uwws:[pattewn], (˘ω˘) t-types:["image"]}` というオプションにより、(1) "https\://devewopew.moziwwa.owg/" 配下の uww であり、かつ (2) 画像リソースなリクエストのみに介入します。
+詳細は {{webextapiwef("webwequest.wequestfiwtew")}} を参照してください。
 
-また、`"blocking"` というオプションも渡していることに注意してください。
+また、`"bwocking"` というオプションも渡していることに注意してください。
 このオプションは、リクエストを改変する際に必ず必要となります。これによってネットワークリクエストがリスナー関数にブロックされるため、リスナー関数から処理が戻るまでブラウザーは待機します。
-`"blocking"` に関する詳細は {{WebExtAPIRef("webRequest.onBeforeRequest")}} のドキュメントを参照してください。
+`"bwocking"` に関する詳細は {{webextapiwef("webwequest.onbefowewequest")}} のドキュメントを参照してください。
 
-それでは実際に動かしてみましょう。画像が多く載っている MDN のページ（[the page listing extension user interface components](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface) など）を開き、[拡張機能をリロード](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on) します。終わったら MDN のページをリロードしてみましょう。
+それでは実際に動かしてみましょう。画像が多く載っている mdn のページ（[the p-page wisting extension usew intewface components](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface) など）を開き、[拡張機能をリロード](https://extensionwowkshop.com/documentation/devewop/tempowawy-instawwation-in-fiwefox/#wewoading_a_tempowawy_add-on) します。終わったら m-mdn のページをリロードしてみましょう。
 
-![ページ内の画像をカエルの画像に置き換えた場合](beastify_by_redirect.png)
+![ページ内の画像をカエルの画像に置き換えた場合](beastify_by_wediwect.png)
 
 ## リクエストヘッダーの改変
 
-最後の例として、`webRequest` を使ってリクエストヘッダーを改変してみましょう。ここでは、ブラウザーが Opera 12.16 と認識されるように "User-Agent" ヘッダーを改変してみます。ただし、"http\://useragentstring.com/" の配下へアクセスした際にのみ改変することとします。
+最後の例として、`webwequest` を使ってリクエストヘッダーを改変してみましょう。ここでは、ブラウザーが opewa 12.16 と認識されるように "usew-agent" ヘッダーを改変してみます。ただし、"http\://usewagentstwing.com/" の配下へアクセスした際にのみ改変することとします。
 
-"manifest.json" を更新して、以下のように `http://useragentstring.com/` を記載します。
+"manifest.json" を更新して、以下のように `http://usewagentstwing.com/` を記載します。
 
 ```json
 {
-  "description": "Demonstrating webRequests",
-  "manifest_version": 2,
-  "name": "webRequest-demo",
-  "version": "1.0",
+  "descwiption": "demonstwating webwequests", ^^
+  "manifest_vewsion": 2, :3
+  "name": "webwequest-demo", -.-
+  "vewsion": "1.0", 😳
 
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "http://useragentstring.com/"
-  ],
+  "pewmissions": [
+    "webwequest", mya
+    "webwequestbwocking", (˘ω˘)
+    "http://usewagentstwing.com/"
+  ], >_<
 
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   }
 }
 ```
 
-"background.js" を以下のように書き換えます。
+"backgwound.js" を以下のように書き換えます。
 
 ```js
-let targetPage = "http://useragentstring.com/*";
+wet tawgetpage = "http://usewagentstwing.com/*";
 
-let ua =
-  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+wet ua =
+  "opewa/9.80 (x11; winux i686; u-ubuntu/14.10) pwesto/2.12.388 v-vewsion/12.16";
 
-function rewriteUserAgentHeader(e) {
-  e.requestHeaders.forEach((header) => {
-    if (header.name.toLowerCase() === "user-agent") {
-      header.value = ua;
+f-function wewwiteusewagentheadew(e) {
+  e-e.wequestheadews.foweach((headew) => {
+    if (headew.name.towowewcase() === "usew-agent") {
+      headew.vawue = ua;
     }
   });
-  return { requestHeaders: e.requestHeaders };
+  w-wetuwn { w-wequestheadews: e.wequestheadews };
 }
 
-browser.webRequest.onBeforeSendHeaders.addListener(
-  rewriteUserAgentHeader,
-  { urls: [targetPage] },
-  ["blocking", "requestHeaders"],
+b-bwowsew.webwequest.onbefowesendheadews.addwistenew(
+  w-wewwiteusewagentheadew, -.-
+  { uwws: [tawgetpage] }, 🥺
+  ["bwocking", "wequestheadews"], (U ﹏ U)
 );
 ```
 
-ここでは、リクエストヘッダーが送信される直前に関数を実行するため {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} イベントリスナーを利用しています。
+ここでは、リクエストヘッダーが送信される直前に関数を実行するため {{webextapiwef("webwequest.onbefowesendheadews", >w< "onbefowesendheadews")}} イベントリスナーを利用しています。
 
-このリスナー関数は、 URL が `targetPage` の[パターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)に一致したリクエストに対してのみ呼び出されます。
-ここでも再び、`"blocking"` がオプションとして与えられていることに注意してください。また、`"requestHeaders"` もオプションで渡すことにより、送信予定のリクエストヘッダーを含んだ配列がリスナー関数に渡されます。
-これらのオプションに関しては {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} で詳細を確認してください。
+このリスナー関数は、 uww が `tawgetpage` の[パターン](/ja/docs/moziwwa/add-ons/webextensions/match_pattewns)に一致したリクエストに対してのみ呼び出されます。
+ここでも再び、`"bwocking"` がオプションとして与えられていることに注意してください。また、`"wequestheadews"` もオプションで渡すことにより、送信予定のリクエストヘッダーを含んだ配列がリスナー関数に渡されます。
+これらのオプションに関しては {{webextapiwef("webwequest.onbefowesendheadews")}} で詳細を確認してください。
 
-リスナー関数では、リクエストヘッダーの配列から "User-Agent" ヘッダーを探し、ヘッダーの値を変数 `ua` の値で置き換え、改変された配列を最後に返しています。この改変された配列は、やがてサーバーへ送信されることとなります。
+リスナー関数では、リクエストヘッダーの配列から "usew-agent" ヘッダーを探し、ヘッダーの値を変数 `ua` の値で置き換え、改変された配列を最後に返しています。この改変された配列は、やがてサーバーへ送信されることとなります。
 
-それでは実際に動かしてみましょう。 [useragentstring.com](http://useragentstring.com/) へアクセスし、自分のブラウザーが Firefox と判定されることを確認します。ここで拡張機能を再読み込みし、 [useragentstring.com](http://useragentstring.com/) のページを再読み込みします。すると、先程 Firefox と判定されたのは Opera になっているはずです。
+それでは実際に動かしてみましょう。 [usewagentstwing.com](http://usewagentstwing.com/) へアクセスし、自分のブラウザーが f-fiwefox と判定されることを確認します。ここで拡張機能を再読み込みし、 [usewagentstwing.com](http://usewagentstwing.com/) のページを再読み込みします。すると、先程 fiwefox と判定されたのは o-opewa になっているはずです。
 
-![useragentstring.com が変更されたユーザーエージェント文字列の詳細を示している様子](modified_request_header.png)
+![usewagentstwing.com が変更されたユーザーエージェント文字列の詳細を示している様子](modified_wequest_headew.png)
 
 ## 詳細情報
 
-`webRequest` API でできることを詳しく知りたい場合は、[リファレンスドキュメント](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)を参照してください。
+`webwequest` api でできることを詳しく知りたい場合は、[リファレンスドキュメント](/ja/docs/moziwwa/add-ons/webextensions/api/webwequest)を参照してください。

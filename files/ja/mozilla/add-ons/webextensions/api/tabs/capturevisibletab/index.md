@@ -1,88 +1,88 @@
 ---
-title: tabs.captureVisibleTab()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
+titwe: tabs.captuwevisibwetab()
+swug: moziwwa/add-ons/webextensions/api/tabs/captuwevisibwetab
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-指定ウィンドウの選択タブの表示領域の画像をエンコードしたデータ URI を作成します。このメソッドを使うには `<all_urls>` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) が必要です (Chrome の場合、`activeTab` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) があり、ユーザーが許可の操作を行えば、このメソッドを使うことができます)。
+指定ウィンドウの選択タブの表示領域の画像をエンコードしたデータ u-uwi を作成します。このメソッドを使うには `<aww_uwws>` [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) が必要です (chwome の場合、`activetab` [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) があり、ユーザーが許可の操作を行えば、このメソッドを使うことができます)。
 
-これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+これは、[`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返す非同期関数です。
 
 ## 構文
 
 ```js
-var capturing = browser.tabs.captureVisibleTab(
-  windowId, // optional integer
-  options, // optional extensionTypes.ImageDetails
+v-vaw captuwing = b-bwowsew.tabs.captuwevisibwetab(
+  w-windowid, /(^•ω•^) // o-optionaw i-integew
+  options, 😳😳😳 // o-optionaw extensiontypes.imagedetaiws
 );
 ```
 
 ### 引数
 
-- `windowId`{{optional_inline}}
-  - : `integer` 型。対象となるウィンドウ。デフォルトは現在のウィンドウ。
-- `options`{{optional_inline}}
-  - : {{WebExtAPIRef('extensionTypes.ImageDetails')}} 型。
+- `windowid`{{optionaw_inwine}}
+  - : `integew` 型。対象となるウィンドウ。デフォルトは現在のウィンドウ。
+- `options`{{optionaw_inwine}}
+  - : {{webextapiwef('extensiontypes.imagedetaiws')}} 型。
 
 ### 戻り値
 
-[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) であり、キャプチャーされたタブの表示領域の画像をエンコードしたデータ URL で fulfilled 状態にされる。このデータ URL は、HTML イメージ要素の 'src' 属性に設定することで、画像を表示できる。もし何らかのエラーが発生した場合、Promise はエラーメッセージによって rejected 状態にされる。
+[`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) であり、キャプチャーされたタブの表示領域の画像をエンコードしたデータ u-uww で fuwfiwwed 状態にされる。このデータ uww は、htmw イメージ要素の 'swc' 属性に設定することで、画像を表示できる。もし何らかのエラーが発生した場合、pwomise はエラーメッセージによって wejected 状態にされる。
 
 ## 使用例
 
 現在のウィンドウの選択されたタブの画像を、デフォルト設定でキャプチャーする。
 
 ```js
-function onCaptured(imageUri) {
-  console.log(imageUri);
+function oncaptuwed(imageuwi) {
+  c-consowe.wog(imageuwi);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var capturing = browser.tabs.captureVisibleTab();
-  capturing.then(onCaptured, onError);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  vaw c-captuwing = bwowsew.tabs.captuwevisibwetab();
+  captuwing.then(oncaptuwed, ( ͡o ω ͡o ) onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-captureVisibleTab) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は chwomium の [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-captuwevisibwetab) a-api に基づいています。このドキュメントは [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) における chwomium のコードに基づいています。micwosoft e-edge での実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 united states w-wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >_< aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and binawy fowms, rawr w-with ow without
+// m-modification, 😳 a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above copywight
+// n-nyotice, >w< this wist of conditions and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, OwO t-this wist o-of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided with the
+// distwibution. (ꈍᴗꈍ)
+//    * n-nyeithew the n-name of googwe inc. 😳 nyow the nyames o-of its
+// contwibutows may b-be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific p-pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, mya incwuding, but nyot
+// w-wimited to, mya t-the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. (⑅˘꒳˘) in no event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (U ﹏ U) indiwect, mya incidentaw,
+// speciaw, ʘwʘ e-exempwawy, (˘ω˘) ow consequentiaw d-damages (incwuding, (U ﹏ U) b-but nyot
+// w-wimited to, ^•ﻌ•^ pwocuwement of substitute g-goods ow s-sewvices; woss o-of use, (˘ω˘)
+// data, :3 o-ow pwofits; ow business intewwuption) howevew c-caused and on any
+// t-theowy of wiabiwity, ^^;; w-whethew i-in contwact, 🥺 stwict w-wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, nyaa~~ even if advised of the possibiwity of such d-damage. :3
 -->

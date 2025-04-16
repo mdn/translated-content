@@ -1,83 +1,83 @@
 ---
-title: bookmarks.onCreated
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
+titwe: bookmawks.oncweated
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/oncweated
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 ブックマークやフォルダーが作成された際に発火します。
 
 ## 構文
 
 ```js
-browser.bookmarks.onCreated.addListener(function(
-  id,      // 文字列
-  bookmark // BookmarkTreeNode
+b-bwowsew.bookmawks.oncweated.addwistenew(function(
+  i-id,      // 文字列
+  b-bookmawk // b-bookmawktweenode
 ) {...})
-browser.bookmarks.onCreated.removeListener(listener)
-browser.bookmarks.onCreated.hasListener(listener)
+b-bwowsew.bookmawks.oncweated.wemovewistenew(wistenew)
+b-bwowsew.bookmawks.oncweated.haswistenew(wistenew)
 ```
 
 このイベントには 3 つのメソッドが用意されています。
 
-- `addListener(callback)`
+- `addwistenew(cawwback)`
   - : イベントリスナーを追加します。
-- `removeListener(listener)`
-  - : イベントリスナーを削除します。引数 `listener` には削除したいリスナーを指定します。
-- `hasListener(listener)`
-  - : `listener` がイベントリスナーとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
+- `wemovewistenew(wistenew)`
+  - : イベントリスナーを削除します。引数 `wistenew` には削除したいリスナーを指定します。
+- `haswistenew(wistenew)`
+  - : `wistenew` がイベントリスナーとして登録されているか確認します。登録されていれば `twue` を、それ以外の場合は `fawse` を返します。
 
-## addListener の構文
+## a-addwistenew の構文
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
-  - : イベントが発火した際に呼び出される {{jsxref("function")}} です。この関数には以下の引数が渡ります。
+  - : イベントが発火した際に呼び出される {{jsxwef("function")}} です。この関数には以下の引数が渡ります。
 
     - `id`
-      - : `string`.
+      - : `stwing`. 😳😳😳
 
     <!---->
 
-    - `bookmark`
-      - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}.
+    - `bookmawk`
+      - : {{webextapiwef('bookmawks.bookmawktweenode')}}. (U ﹏ U)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-update) api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における chwomium のコードから作成されています。micwosoft edge の実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは cweative commons a-attwibution 3.0 united states wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. (///ˬ///✿) aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce a-and binawy fowms, w-with ow without
+// modification, 😳 awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, σωσ this w-wist of conditions a-and the fowwowing d-discwaimew. rawr x3
+//    * w-wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight nyotice, OwO this wist o-of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. /(^•ω•^)
+//    * n-nyeithew t-the nyame of googwe i-inc. 😳😳😳 nyow the names of its
+// contwibutows may be used to e-endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, >_< incwuding, but n-nyot
+// wimited t-to, >w< the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. rawr in nyo event s-shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any d-diwect, 😳 indiwect, >w< i-incidentaw, (⑅˘꒳˘)
+// speciaw, exempwawy, OwO ow consequentiaw damages (incwuding, (ꈍᴗꈍ) b-but nyot
+// wimited to, 😳 pwocuwement of substitute goods ow sewvices; w-woss of use, 😳😳😳
+// data, ow pwofits; o-ow business intewwuption) h-howevew c-caused and on any
+// theowy o-of wiabiwity, mya whethew i-in contwact, mya s-stwict wiabiwity, (⑅˘꒳˘) o-ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in a-any way out of t-the use
+// of this s-softwawe, (U ﹏ U) even i-if advised of the possibiwity of such damage. mya
 -->

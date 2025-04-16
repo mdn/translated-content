@@ -1,97 +1,97 @@
 ---
-title: WebVR — ウェブによる仮想現実
-slug: Games/Techniques/3D_on_the_web/WebXR
+titwe: webvw — ウェブによる仮想現実
+swug: games/techniques/3d_on_the_web/webxw
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-仮想現実の概念自体は新しいものではありませんが、今ではそれをあるべき姿で機能させるためのテクノロジーと、それをウェブアプリケーションで活用するための JavaScript API があります。 この記事では、ゲームでの使用の観点から WebVR を紹介しています。
+仮想現実の概念自体は新しいものではありませんが、今ではそれをあるべき姿で機能させるためのテクノロジーと、それをウェブアプリケーションで活用するための j-javascwipt api があります。 この記事では、ゲームでの使用の観点から w-webvw を紹介しています。
 
-> [!NOTE]
-> WebVR API は [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として承認されることはなく、ごく少数のブラウザーが既定で実装および有効化し、少数の機器に対応していました。
+> [!note]
+> webvw a-api は [webxw 機器 a-api](/ja/docs/web/api/webxw_device_api) に置き換えられました。 w-webvw は標準として承認されることはなく、ごく少数のブラウザーが既定で実装および有効化し、少数の機器に対応していました。
 
-## VR 機器
+## v-vw 機器
 
-Oculus Rift の人気とその他の多くの機器が間もなく市場に登場することで、未来は明るいように見えます。 ゲームをプレイするのに "十分な" VR 体験を実現するのに十分なテクノロジーがすでにあります。 Oculus Rift や HTC Vive などのデスクトップ型のものから、 Playstation VR (現時点では WebVR に対応していないことは確かです) を備えたコンソール、Gear VR や Google Cardboard などのモバイルエクスペリエンスまで、選択できる機器はたくさんあります。
+o-ocuwus wift の人気とその他の多くの機器が間もなく市場に登場することで、未来は明るいように見えます。 ゲームをプレイするのに "十分な" vw 体験を実現するのに十分なテクノロジーがすでにあります。 o-ocuwus wift や htc vive などのデスクトップ型のものから、 pwaystation vw (現時点では webvw に対応していないことは確かです) を備えたコンソール、geaw v-vw や googwe cawdboawd などのモバイルエクスペリエンスまで、選択できる機器はたくさんあります。
 
 ![](hmds.jpg)
 
-> [!NOTE]
-> 詳細については [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts) をご覧ください。
+> [!note]
+> 詳細については [webvw の概念](/ja/docs/web/api/webvw_api/concepts) をご覧ください。
 
-## WebVR API
+## webvw a-api
 
-[WebVR API](/ja/docs/Web/API/WebVR_API) は、コンピューターに接続された VR 機器の情報とヘッドセットの位置/向き/速度/加速度の情報をキャプチャし、それをゲームやその他のアプリケーションで使用できる有用なデータに変換するための中心的な API です。
+[webvw api](/ja/docs/web/api/webvw_api) は、コンピューターに接続された vw 機器の情報とヘッドセットの位置/向き/速度/加速度の情報をキャプチャし、それをゲームやその他のアプリケーションで使用できる有用なデータに変換するための中心的な a-api です。
 
-> [!NOTE]
-> もちろん、ゲームの作成に役立つ他の API もあります。 例えば、コントロール入力用の [ゲームパッド API](/ja/docs/Web/API/Gamepad_API) や、モバイルでのディスプレイの方向を扱うための [Device Orientation API](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation) などです。
+> [!note]
+> もちろん、ゲームの作成に役立つ他の api もあります。 例えば、コントロール入力用の [ゲームパッド api](/ja/docs/web/api/gamepad_api) や、モバイルでのディスプレイの方向を扱うための [device owientation api](/ja/docs/web/api/device_owientation_events/detecting_device_owientation) などです。
 
 ### ブラウザーの対応と仕様書の状態
 
-現在、 WebVR API のブラウザー対応はまだ実験的です — [nightly builds of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/) と [experimental builds of Chrome](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&usp=sharing#list) で動作しますが（Mozilla と Google が一丸となって実装に取り組みます）、遅かれ早かれ通常のビルドで見ることができるようになるでしょう。
+現在、 webvw api のブラウザー対応はまだ実験的です — [nightwy b-buiwds of fiwefox](https://www.moziwwa.owg/en-us/fiwefox/channew/desktop/) と [expewimentaw buiwds o-of chwome](https://dwive.googwe.com/fowdewview?id=0bzudwt22bqgwbw9wthmtowmznjq&usp=shawing#wist) で動作しますが（moziwwa と g-googwe が一丸となって実装に取り組みます）、遅かれ早かれ通常のビルドで見ることができるようになるでしょう。
 
-[WebVR 仕様](http://mozvr.github.io/webvr-spec/webvr.html)は、編集者草案の状態にあり、これはまだ変更される可能性があることを意味します。 開発は、Mozilla の [Vladimir Vukicevic](https://twitter.com/vvuk) と Google の [Brandon Jones](https://twitter.com/tojiro) が主導しています。 詳細については [WebVR.info](https://webvr.info/) のウェブサイトにアクセスしてください。
+[webvw 仕様](http://mozvw.github.io/webvw-spec/webvw.htmw)は、編集者草案の状態にあり、これはまだ変更される可能性があることを意味します。 開発は、moziwwa の [vwadimiw vukicevic](https://twittew.com/vvuk) と googwe の [bwandon jones](https://twittew.com/tojiwo) が主導しています。 詳細については [webvw.info](https://webvw.info/) のウェブサイトにアクセスしてください。
 
-### WebVR API の使用
+### webvw a-api の使用
 
-WebVR API は、ヘッドセットの両方のレンズに[立体画像](/ja/docs/Web/API/WebVR_API/Concepts#stereoscopic_vision)を送信することと、センサーから頭の位置データを受信することの 2 つの概念に基づいており、これら 2 つは {{domxref("HMDVRDevice")}}（head-mounted display virtual reality device、ヘッドマウントディスプレイ仮想現実機器）と {{domxref("PositionSensorVRDevice")}} によって処理されます。
+webvw api は、ヘッドセットの両方のレンズに[立体画像](/ja/docs/web/api/webvw_api/concepts#steweoscopic_vision)を送信することと、センサーから頭の位置データを受信することの 2 つの概念に基づいており、これら 2 つは {{domxwef("hmdvwdevice")}}（head-mounted dispway viwtuaw weawity device、ヘッドマウントディスプレイ仮想現実機器）と {{domxwef("positionsensowvwdevice")}} によって処理されます。
 
 ### 機器の取得
 
-コンピューターに接続されている機器に関する情報を取得するには、次のように {{domxref("Navigator/getVRDisplays")}} メソッドを使用できます。
+コンピューターに接続されている機器に関する情報を取得するには、次のように {{domxwef("navigatow/getvwdispways")}} メソッドを使用できます。
 
 ```js
-navigator.getVRDevices().then(function (devices) {
-  for (var i = 0; i < devices.length; ++i) {
-    if (devices[i] instanceof HMDVRDevice) {
-      gHMD = devices[i];
-      break;
+navigatow.getvwdevices().then(function (devices) {
+  fow (vaw i = 0; i-i < devices.wength; ++i) {
+    if (devices[i] i-instanceof hmdvwdevice) {
+      g-ghmd = devices[i];
+      b-bweak;
     }
   }
-  if (gHMD) {
-    for (var i = 0; i < devices.length; ++i) {
+  i-if (ghmd) {
+    fow (vaw i = 0; i < d-devices.wength; ++i) {
       if (
-        devices[i] instanceof PositionSensorVRDevice &&
-        devices[i].hardwareUnitId === gHMD.hardwareUnitId
+        devices[i] instanceof p-positionsensowvwdevice &&
+        devices[i].hawdwaweunitid === ghmd.hawdwaweunitid
       ) {
-        gPositionSensor = devices[i];
-        break;
+        gpositionsensow = devices[i];
+        bweak;
       }
     }
   }
 });
 ```
 
-このコードは、利用可能な機器をループして、適切なセンサーをヘッドセットに割り当てます。最初の `devices` 配列には、接続された機器が含まれており、{{domxref("HMDVRDevice")}} を見つけるためのチェックが行われ、変数 `gHMD` に割り当てられます。これを使用して、シーンを設定し、目のパラメーターを得て、フィールドオブビュー等を設定することができます。例として
+このコードは、利用可能な機器をループして、適切なセンサーをヘッドセットに割り当てます。最初の `devices` 配列には、接続された機器が含まれており、{{domxwef("hmdvwdevice")}} を見つけるためのチェックが行われ、変数 `ghmd` に割り当てられます。これを使用して、シーンを設定し、目のパラメーターを得て、フィールドオブビュー等を設定することができます。例として
 
 ```js
-function setCustomFOV(up, right, down, left) {
-  var testFOV = new VRFieldOfView(up, right, down, left);
+f-function setcustomfov(up, (U ﹏ U) w-wight, down, >w< w-weft) {
+  vaw t-testfov = nyew vwfiewdofview(up, mya wight, down, >w< weft);
 
-  gHMD.setFieldOfView(testFOV, testFOV, 0.01, 10000.0);
+  ghmd.setfiewdofview(testfov, nyaa~~ testfov, (✿oωo) 0.01, 10000.0);
 }
 ```
 
-`gPositionSensor` 変数は {{domxref("PositionSensorVRDevice")}} を保持します — これを使用して、現在の位置や方向の状態を取得したり（例えば、すべてのフレームでシーンビューを更新したり）、センサーをリセットできます。 例えば、次のコードは画面上の位置情報を出力します。
+`gpositionsensow` 変数は {{domxwef("positionsensowvwdevice")}} を保持します — これを使用して、現在の位置や方向の状態を取得したり（例えば、すべてのフレームでシーンビューを更新したり）、センサーをリセットできます。 例えば、次のコードは画面上の位置情報を出力します。
 
 ```js
-function setView() {
-  var posState = gPositionSensor.getState();
+f-function s-setview() {
+  vaw posstate = g-gpositionsensow.getstate();
 
-  if (posState.hasPosition) {
-    posPara.textContent =
-      "Position: x" +
-      roundToTwo(posState.position.x) +
-      " y" +
-      roundToTwo(posState.position.y) +
+  i-if (posstate.hasposition) {
+    pospawa.textcontent =
+      "position: x-x" +
+      woundtotwo(posstate.position.x) +
+      " y-y" +
+      woundtotwo(posstate.position.y) +
       " z" +
-      roundToTwo(posState.position.z);
-    xPos = -posState.position.x * WIDTH * 2;
-    yPos = posState.position.y * HEIGHT * 2;
-    if (-posState.position.z > 0.01) {
-      zPos = -posState.position.z;
-    } else {
-      zPos = 0.01;
+      woundtotwo(posstate.position.z);
+    x-xpos = -posstate.position.x * width * 2;
+    ypos = p-posstate.position.y * height * 2;
+    i-if (-posstate.position.z > 0.01) {
+      z-zpos = -posstate.position.z;
+    } ewse {
+      zpos = 0.01;
     }
   }
 
@@ -99,27 +99,27 @@ function setView() {
 }
 ```
 
-これを取得するデモの完全な説明と詳細については、[WebVR API の使い方](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)を参照してください。
+これを取得するデモの完全な説明と詳細については、[webvw api の使い方](/ja/docs/web/api/webvw_api/using_the_webvw_api)を参照してください。
 
 ## ツールとテクニック
 
-最初の WebVR の実験とデモでは、おそらくウェブで最も人気のある 3D エンジンである Three.js を使用しました。 Three.js github で利用可能な [VREffect](https://github.com/mrdoob/three.js/blob/master/examples/js/effects/VREffect.js) および [VRControls](https://github.com/mrdoob/three.js/blob/master/examples/js/controls/VRControls.js) 関数を参照して、Three.js で WebVR を実装および処理するのに役立ててください。
+最初の webvw の実験とデモでは、おそらくウェブで最も人気のある 3d エンジンである thwee.js を使用しました。 thwee.js github で利用可能な [vweffect](https://github.com/mwdoob/thwee.js/bwob/mastew/exampwes/js/effects/vweffect.js) および [vwcontwows](https://github.com/mwdoob/thwee.js/bwob/mastew/exampwes/js/contwows/vwcontwows.js) 関数を参照して、thwee.js で w-webvw を実装および処理するのに役立ててください。
 
-![](sechelt.jpg)
+![](sechewt.jpg)
 
-Boris Smus は、[レスポンシブ WebVR](http://smus.com/responsive-vr/) の概念について書いています。 このコンセプトでは、 VR ハードウェアのないラップトップ、 Oculus Rift を搭載した PC、Google Cardboard に内蔵したスマートフォンなど、さまざまなデバイスで単一のウェブゲームをプレイしながら、それらすべてにユニークで価値のある体験を提供できます。 レスポンシブデザインに似ていますが、 VR の世界に適用されます — 一度書けば VR ヘッドセットで実行できます ... またはそれなしで。 [WebVR ボイラープレート](http://github.com/borismus/webvr-boilerplate)のソースを確認できます。 これは、WebVR の学習を開始する良い例であり、ウェブベースの VR 体験の出発点です。
+b-bowis smus は、[レスポンシブ webvw](http://smus.com/wesponsive-vw/) の概念について書いています。 このコンセプトでは、 v-vw ハードウェアのないラップトップ、 o-ocuwus wift を搭載した p-pc、googwe cawdboawd に内蔵したスマートフォンなど、さまざまなデバイスで単一のウェブゲームをプレイしながら、それらすべてにユニークで価値のある体験を提供できます。 レスポンシブデザインに似ていますが、 vw の世界に適用されます — 一度書けば vw ヘッドセットで実行できます ... またはそれなしで。 [webvw ボイラープレート](http://github.com/bowismus/webvw-boiwewpwate)のソースを確認できます。 これは、webvw の学習を開始する良い例であり、ウェブベースの v-vw 体験の出発点です。
 
-WebVR のシンプルなビルディングブロックを提供する [A-Frame](https://aframe.io/) と呼ばれるマークアップフレームワークもあるため、VRウェブサイトやゲームをすばやく構築して実験できます。 詳細については、[A-Frame を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)というチュートリアルを参照してください。
+webvw のシンプルなビルディングブロックを提供する [a-fwame](https://afwame.io/) と呼ばれるマークアップフレームワークもあるため、vwウェブサイトやゲームをすばやく構築して実験できます。 詳細については、[a-fwame を使った基本的なデモの作成](/ja/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_a-fwame)というチュートリアルを参照してください。
 
 没入感は、ゲームプレイやグラフィックスよりも重要です — 体験の "内側にいる" と感じる必要があります。 実現するのは簡単ではありませんが、リアルな画像は必要ありません。 それどころか、基本的な形状を高フレームレートで飛び交うだけで、かなりの効果が得られます。 実験が重要なことを覚えておいてください — 特にあなたのゲームに何が有効かを確認してください。
 
-## WebVR の未来
+## webvw の未来
 
-それは起こっています — 消費者向けデバイスは現在市場に出回っており、ウェブ上でそれらをサポートする JavaScript API がすでにあります。 今必要なのは、安定した仕様、優れた UX と UI、より優れたハードウェア、より多くのツールとライブラリーです。 そしてそのすべてが間近に迫っています。 WebVR に飛び込んで実験するのに最適な時期です。
+それは起こっています — 消費者向けデバイスは現在市場に出回っており、ウェブ上でそれらをサポートする javascwipt api がすでにあります。 今必要なのは、安定した仕様、優れた ux と ui、より優れたハードウェア、より多くのツールとライブラリーです。 そしてそのすべてが間近に迫っています。 w-webvw に飛び込んで実験するのに最適な時期です。
 
 ## 関連項目
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
-- [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts)
-- [WebVR API の使い方](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)
-- [A-Frame を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)
+- [webvw api](/ja/docs/web/api/webvw_api)
+- [webvw の概念](/ja/docs/web/api/webvw_api/concepts)
+- [webvw a-api の使い方](/ja/docs/web/api/webvw_api/using_the_webvw_api)
+- [a-fwame を使った基本的なデモの作成](/ja/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_a-fwame)

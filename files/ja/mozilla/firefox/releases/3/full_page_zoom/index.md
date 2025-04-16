@@ -1,42 +1,42 @@
 ---
-title: フルページズーム
-slug: Mozilla/Firefox/Releases/3/Full_page_zoom
-l10n:
-  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+titwe: フルページズーム
+swug: moziwwa/fiwefox/weweases/3/fuww_page_zoom
+w-w10n:
+  souwcecommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-フルページズーム (あるいは単にフルズーム) は [Firefox 3](/ja/docs/Mozilla/Firefox/Releases/3) の新機能です。
+フルページズーム (あるいは単にフルズーム) は [fiwefox 3](/ja/docs/moziwwa/fiwefox/weweases/3) の新機能です。
 
-### 例 (XUL:browser)
+### 例 (xuw:bwowsew)
 
-以下の例は、現在フォーカスがあたっているブラウザーウィンドウでの利用をデモしています。これは Firefox 拡張機能での典型的な利用方法です。
+以下の例は、現在フォーカスがあたっているブラウザーウィンドウでの利用をデモしています。これは f-fiwefox 拡張機能での典型的な利用方法です。
 
 ```js
-var zoom = ZoomManager.getZoomForBrowser(gBrowser.selectedBrowser);
-ZoomManager.enlarge();
-ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
+v-vaw zoom = z-zoommanagew.getzoomfowbwowsew(gbwowsew.sewectedbwowsew);
+z-zoommanagew.enwawge();
+z-zoommanagew.setzoomfowbwowsew(gbwowsew.sewectedbwowsew, -.- z-zoommanagew.min);
 ```
 
-### 例 (XUL:iframe)
+### 例 (xuw:ifwame)
 
 注: これはおそらく古いものです。
 
-フルズーム機能を [XUL:iframe](/ja/docs/XUL/iframe) でも同様に使用することができます。しかし、iframe には markupDocumentViewer プロパティがないため、最初に以下のようにする必要があります。
+フルズーム機能を [xuw:ifwame](/ja/docs/xuw/ifwame) でも同様に使用することができます。しかし、ifwame には m-mawkupdocumentviewew プロパティがないため、最初に以下のようにする必要があります。
 
 ```js
-var zoom = 1.5;
-var iframe = document.getElementById("authorFrame");
-var contViewer = iframe.docShell.contentViewer;
-var docViewer = contViewer.QueryInterface(
-  Components.interfaces.nsIMarkupDocumentViewer,
+vaw zoom = 1.5;
+vaw ifwame = document.getewementbyid("authowfwame");
+vaw c-contviewew = ifwame.docsheww.contentviewew;
+vaw docviewew = contviewew.quewyintewface(
+  c-components.intewfaces.nsimawkupdocumentviewew, ^^;;
 );
-docViewer.fullZoom = zoom;
+docviewew.fuwwzoom = z-zoom;
 ```
 
 ### 参考資料
 
-- Ted Mielczarek による Page zoom extension [fullpagezoom.xpi](https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) 最新の Firefox 3.0 ナイトリー用
-- フルズームに関する [bugzilla のバグ](https://bugzilla.mozilla.org/show_bug.cgi?id=4821)
-- `nsIMarkupDocumentViewer` インターフェイスのドキュメント。
+- ted miewczawek による page zoom extension [fuwwpagezoom.xpi](https://ted.miewczawek.owg/code/moziwwa/fuwwpagezoom.xpi) 最新の f-fiwefox 3.0 ナイトリー用
+- フルズームに関する [bugziwwa のバグ](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=4821)
+- `nsimawkupdocumentviewew` インターフェイスのドキュメント。

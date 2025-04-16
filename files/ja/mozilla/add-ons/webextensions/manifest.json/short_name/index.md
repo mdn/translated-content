@@ -1,41 +1,41 @@
 ---
-title: short_name
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
+titwe: showt_name
+swug: moziwwa/add-ons/webextensions/manifest.json/showt_name
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"short_name": "My Extension"</pre
+        <pwe c-cwass="bwush: json n-nyo-wine-numbews">
+"showt_name": "my extension"</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-拡張機能の短い名前。与えられた場合、これは [name](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) 項目が長過ぎるコンテキストで使われます。短い名前は 12 文字を超えないことが推奨されます。manifest.json に短い名前が入ってない場合、name が代わりに使われて切り捨てられることがあります。
+拡張機能の短い名前。与えられた場合、これは [name](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/name) 項目が長過ぎるコンテキストで使われます。短い名前は 12 文字を超えないことが推奨されます。manifest.json に短い名前が入ってない場合、name が代わりに使われて切り捨てられることがあります。
 
-これは[ローカライズ可能なプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
+これは[ローカライズ可能なプロパティ](/ja/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json)です。
 
 ## 例
 
 ```json
-"short_name": "My Extension"
+"showt_name": "my extension"
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

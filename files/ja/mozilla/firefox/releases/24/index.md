@@ -1,57 +1,57 @@
 ---
-title: Firefox 24 for developers
-slug: Mozilla/Firefox/Releases/24
+titwe: fiwefox 24 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/24
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Gecko 24 を搭載した Firefox 24 は米国時間 2013 年 9 月 17 日にリリースされました。このページでは、開発者に影響する Firefox 24 の変更点をまとめています。
+gecko 24 を搭載した f-fiwefox 24 は米国時間 2013 年 9 月 17 日にリリースされました。このページでは、開発者に影響する f-fiwefox 24 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
-### CSS
+### c-css
 
-- {{cssxref("cursor")}} プロパティの値のうち `-moz-zoom-in` と `-moz-zoom-out` の 2 つは、接頭辞を外して `zoom-in` および `zoom-out` になりました ([Firefox バグ 772153](https://bugzil.la/772153))。
+- {{cssxwef("cuwsow")}} プロパティの値のうち `-moz-zoom-in` と `-moz-zoom-out` の 2 つは、接頭辞を外して `zoom-in` および `zoom-out` になりました ([fiwefox バグ 772153](https://bugziw.wa/772153))。
 
-### HTML
+### h-htmw
 
-- `media.webvtt.enabled` 設定のもとに、{{HTMLElement("track")}} 要素を実装しました ([Firefox バグ 833385](https://bugzil.la/833385))。
+- `media.webvtt.enabwed` 設定のもとに、{{htmwewement("twack")}} 要素を実装しました ([fiwefox バグ 833385](https://bugziw.wa/833385))。
 
-### JavaScript
+### j-javascwipt
 
-- `"use strict"` により明示的に要求される場合を除き、[Arrow functions](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) は自動的に strict モードにならないようにしました。([Firefox バグ 852762](https://bugzil.la/852762))
-- [`String.prototype.repeat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) JS メソッドを実装しました ([Firefox バグ 815431](https://bugzil.la/815431))。
+- `"use s-stwict"` により明示的に要求される場合を除き、[awwow f-functions](/ja/docs/web/javascwipt/wefewence/functions/awwow_functions) は自動的に stwict モードにならないようにしました。([fiwefox バグ 852762](https://bugziw.wa/852762))
+- [`stwing.pwototype.wepeat`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepeat) js メソッドを実装しました ([fiwefox バグ 815431](https://bugziw.wa/815431))。
 
-### DOM
+### dom
 
-- {{domxref("Range.Range", "Range()")}} コンストラクターをサポートしました ([Firefox バグ 868999](https://bugzil.la/868999))。
-- {{domxref("Text.Text", "Text()")}} コンストラクターをサポートしました ([Firefox バグ 869000](https://bugzil.la/869000))。
-- {{domxref("Comment.Comment", "Comment()")}} コンストラクターをサポートしました ([Firefox バグ 869006](https://bugzil.la/869006))。
-- {{domxref("DocumentFragment.DocumentFragment", "DocumentFragment()")}} コンストラクターをサポートしました ([Firefox バグ 869002](https://bugzil.la/869002))。
-- {{domxref("FocusEvent")}} インターフェイスを実装しました ([Firefox バグ 855741](https://bugzil.la/855741))。
-- {{domxref("ChildNode.remove()")}} メソッドをサポートしました ([Firefox バグ 856629](https://bugzil.la/856629))。
-- {{HTMLElement("track")}} 要素に関するインターフェイスである {{domxref("HTMLTrackElement")}}、{{domxref("TextTrack")}}、{{domxref("TextTrackCue")}}、{{domxref("TextTrackList")}}、{{domxref("TextTrackCueList")}} を、既定値が `false` である設定 `media.webvtt.enabled` のもとに実装しました ([Firefox バグ 833385](https://bugzil.la/833385))。
-- {{domxref("Gamepad")}} インターフェイスと {{domxref("Navigator.getGamepads")}} を、既定値が `false` である設定 `dom.gamepad.enabled` のもとに実装しました ([Firefox バグ 690935](https://bugzil.la/690935))。
-- デスクトップ版 Firefox に限り、`HTMLCanvasElement.getContext()` の値として `experimental-webgl` に加えて `webgl` をとれるようになりました ([Firefox バグ 870232](https://bugzil.la/870232))。
-- {{domxref("HTMLMediaElement")}} の非標準メソッド `mozLoadFrom()` を削除しました ([Firefox バグ 877135](https://bugzil.la/877135))。
+- {{domxwef("wange.wange", >_< "wange()")}} コンストラクターをサポートしました ([fiwefox バグ 868999](https://bugziw.wa/868999))。
+- {{domxwef("text.text", :3 "text()")}} コンストラクターをサポートしました ([fiwefox バグ 869000](https://bugziw.wa/869000))。
+- {{domxwef("comment.comment", (U ﹏ U) "comment()")}} コンストラクターをサポートしました ([fiwefox バグ 869006](https://bugziw.wa/869006))。
+- {{domxwef("documentfwagment.documentfwagment", -.- "documentfwagment()")}} コンストラクターをサポートしました ([fiwefox バグ 869002](https://bugziw.wa/869002))。
+- {{domxwef("focusevent")}} インターフェイスを実装しました ([fiwefox バグ 855741](https://bugziw.wa/855741))。
+- {{domxwef("chiwdnode.wemove()")}} メソッドをサポートしました ([fiwefox バグ 856629](https://bugziw.wa/856629))。
+- {{htmwewement("twack")}} 要素に関するインターフェイスである {{domxwef("htmwtwackewement")}}、{{domxwef("texttwack")}}、{{domxwef("texttwackcue")}}、{{domxwef("texttwackwist")}}、{{domxwef("texttwackcuewist")}} を、既定値が `fawse` である設定 `media.webvtt.enabwed` のもとに実装しました ([fiwefox バグ 833385](https://bugziw.wa/833385))。
+- {{domxwef("gamepad")}} インターフェイスと {{domxwef("navigatow.getgamepads")}} を、既定値が `fawse` である設定 `dom.gamepad.enabwed` のもとに実装しました ([fiwefox バグ 690935](https://bugziw.wa/690935))。
+- デスクトップ版 fiwefox に限り、`htmwcanvasewement.getcontext()` の値として `expewimentaw-webgw` に加えて `webgw` をとれるようになりました ([fiwefox バグ 870232](https://bugziw.wa/870232))。
+- {{domxwef("htmwmediaewement")}} の非標準メソッド `mozwoadfwom()` を削除しました ([fiwefox バグ 877135](https://bugziw.wa/877135))。
 
 ### 開発者ツール
 
-- ネットワークインスペクターで、コンテンツタイプ (CSS/画像/フォント など) による絞り込みと、絞り込み結果についてサイズや読み込み時間を確認できるようになりました。
-- 左側にある開発ツールのオプションパネルで、JavaScript を一時的に無効化/有効化できるようになりました。
-- 拡張機能の開発者は chrome レベルのスクリプトに対して、新たに[ブラウザーコンソール](http://www.robodesign.ro/mihai/blog/the-browser-console-is-replacing-the-error-console)を使用できるようになりました (エラーコンソールを置き換えます)。
+- ネットワークインスペクターで、コンテンツタイプ (css/画像/フォント など) による絞り込みと、絞り込み結果についてサイズや読み込み時間を確認できるようになりました。
+- 左側にある開発ツールのオプションパネルで、javascwipt を一時的に無効化/有効化できるようになりました。
+- 拡張機能の開発者は c-chwome レベルのスクリプトに対して、新たに[ブラウザーコンソール](http://www.wobodesign.wo/mihai/bwog/the-bwowsew-consowe-is-wepwacing-the-ewwow-consowe)を使用できるようになりました (エラーコンソールを置き換えます)。
 
-### MathML
+### mathmw
 
-- 例えば {{MathMLElement("math")}} 要素や {{MathMLElement("mrow")}} 要素で、式の書字方向を制御する `dir` 属性が、{{cssxref("direction")}} CSS プロパティを使用することと同等になりました。
-- 等号 ("=") を[引き延ばすことが可能](/ja/docs/Web/MathML/Reference/Element/mo#attr-stretchy)になりました。
-- {{MathMLElement("menclose")}} 要素で、`notation` 属性に値 "`updiagonalarrow`" を追加しました。
+- 例えば {{mathmwewement("math")}} 要素や {{mathmwewement("mwow")}} 要素で、式の書字方向を制御する `diw` 属性が、{{cssxwef("diwection")}} css プロパティを使用することと同等になりました。
+- 等号 ("=") を[引き延ばすことが可能](/ja/docs/web/mathmw/wefewence/ewement/mo#attw-stwetchy)になりました。
+- {{mathmwewement("mencwose")}} 要素で、`notation` 属性に値 "`updiagonawawwow`" を追加しました。
 
 ## 関連情報
 
-- [Firefox 24 リリースノート](http://www.mozilla.jp/firefox/24.0/releasenotes/)
-- [Firefox 24 アドオン互換性情報](https://dev.mozilla.jp/2013/09/firefox-24-addon-compatibility/)
+- [fiwefox 24 リリースノート](http://www.moziwwa.jp/fiwefox/24.0/weweasenotes/)
+- [fiwefox 24 アドオン互換性情報](https://dev.moziwwa.jp/2013/09/fiwefox-24-addon-compatibiwity/)
 
 ### 過去のバージョン
 
-{{Firefox_for_developers('23')}}
+{{fiwefox_fow_devewopews('23')}}

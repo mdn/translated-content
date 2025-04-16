@@ -1,43 +1,43 @@
 ---
-title: Updating extensions for Firefox 3.1
-slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
+titwe: updating extensions fow f-fiwefox 3.1
+swug: m-moziwwa/fiwefox/weweases/3.5/updating_extensions
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-この記事は、自分の拡張機能を Firefox 3.1 で正しく動作するよう更新しようとしている拡張機能開発者のために役立つ情報を提供します。
+この記事は、自分の拡張機能を f-fiwefox 3.1 で正しく動作するよう更新しようとしている拡張機能開発者のために役立つ情報を提供します。
 
 ## 更新の基本
 
-この節では、Firefox の新しいバージョンに向けて拡張機能を更新する際に必ず行わなければならないことの基本を説明します。
+この節では、fiwefox の新しいバージョンに向けて拡張機能を更新する際に必ず行わなければならないことの基本を説明します。
 
 ### 拡張機能のテスト
 
-まずはじめに、拡張機能の `install.rdf` ファイルを編集して、(Firefox 3.1 beta 2 でテストを行っている場合は) `maxVersion` を 3.1b2 に更新し、それに合わせて `version` を上げましょう。
+まずはじめに、拡張機能の `instaww.wdf` ファイルを編集して、(fiwefox 3.1 b-beta 2 でテストを行っている場合は) `maxvewsion` を 3.1b2 に更新し、それに合わせて `vewsion` を上げましょう。
 
-Firefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 Firefox が含まれるディレクトリーに移動して、以下のコマンドを実行します。
-
-```
-firefox -createProfile testBeta2
-```
-
-Mac では、Firefox のアプリケーションバンドル内へはるばる移動する必要があります。
+f-fiwefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 f-fiwefox が含まれるディレクトリーに移動して、以下のコマンドを実行します。
 
 ```
-cd /Applications/Firefox.app/Contents/MacOS/
-firefox -createProfile testBeta2
+f-fiwefox -cweatepwofiwe t-testbeta2
 ```
 
-コマンドライン上で以下のコマンドを実行し、新規プロファイルで Firefox を起動します。
+mac では、fiwefox のアプリケーションバンドル内へはるばる移動する必要があります。
 
 ```
-firefox -P testBeta2
+cd /appwications/fiwefox.app/contents/macos/
+fiwefox -cweatepwofiwe testbeta2
 ```
 
-自分の拡張機能を徹底的にテストします。 JavaScript のあらゆる警告や例外を通知するために、以下の設定項目を true に設定しておくことをお勧めします。
+コマンドライン上で以下のコマンドを実行し、新規プロファイルで fiwefox を起動します。
 
-- `javascript.options.strict`
-- `javascript.options.showInConsole`
+```
+f-fiwefox -p testbeta2
+```
+
+自分の拡張機能を徹底的にテストします。 javascwipt のあらゆる警告や例外を通知するために、以下の設定項目を twue に設定しておくことをお勧めします。
+
+- `javascwipt.options.stwict`
+- `javascwipt.options.showinconsowe`
 
 ### 拡張機能の更新
 
@@ -45,87 +45,87 @@ firefox -P testBeta2
 
 テストが完了したら、今度は常用のプロファイルを使って、再度その拡張機能を使ってみます。 この作業は、保存されている既存のデータとの互換性を確認するのに役立ちます。
 
-### addons.mozilla.org に登録されている拡張機能の更新
+### a-addons.moziwwa.owg に登録されている拡張機能の更新
 
-ついに、更新した拡張機能を公開するときが来ました。 もし自分の拡張機能に一切コードの変更が必要ない場合は、AMO のダッシュボードにログインして、互換性のあるバージョンを更新するだけで済みます。 何らかの変更を加えた場合は、新しいバージョンを AMO にアップロードする必要があります。
+ついに、更新した拡張機能を公開するときが来ました。 もし自分の拡張機能に一切コードの変更が必要ない場合は、amo のダッシュボードにログインして、互換性のあるバージョンを更新するだけで済みます。 何らかの変更を加えた場合は、新しいバージョンを amo にアップロードする必要があります。
 
-詳しくは [AMO へのアドオンの登録](/ja/Submitting_an_add-on_to_AMO) を参照してください。
+詳しくは [amo へのアドオンの登録](/ja/submitting_an_add-on_to_amo) を参照してください。
 
-## Places データベースへのアクセス
+## p-pwaces データベースへのアクセス
 
-Firefox 3.1 以前は、[Storage API](/ja/Storage) を使って Places データベースへ直接アクセスする場合、以下のように少々工夫が必要でした。
+fiwefox 3.1 以前は、[stowage api](/ja/stowage) を使って pwaces データベースへ直接アクセスする場合、以下のように少々工夫が必要でした。
 
 ```js
-var places = Components.classes["@mozilla.org/file/directory_service;1"]
-  .getService(Components.interfaces.nsIProperties)
-  .get("ProfD", Components.interfaces.nsIFile);
-places.append("places.sqlite");
-var db = Components.classes["@mozilla.org/storage/service;1"]
-  .getService(Components.interfaces.mozIStorageService)
-  .openDatabase(places);
+v-vaw pwaces = components.cwasses["@moziwwa.owg/fiwe/diwectowy_sewvice;1"]
+  .getsewvice(components.intewfaces.nsipwopewties)
+  .get("pwofd", rawr x3 c-components.intewfaces.nsifiwe);
+p-pwaces.append("pwaces.sqwite");
+vaw db = components.cwasses["@moziwwa.owg/stowage/sewvice;1"]
+  .getsewvice(components.intewfaces.mozistowagesewvice)
+  .opendatabase(pwaces);
 ```
 
-これは `places.sqlite` データベースファイルへのパスを自力で作成し、Storage アクセスのためのファイルを開くものでした。
+これは `pwaces.sqwite` データベースファイルへのパスを自力で作成し、stowage アクセスのためのファイルを開くものでした。
 
-Firefox 3.1 には、Places データベースへアクセスするための便利な方法を提供する、専用のサービスが追加されており、上記の方法は Firefox 3.1 以降では機能しません。
+fiwefox 3.1 には、pwaces データベースへアクセスするための便利な方法を提供する、専用のサービスが追加されており、上記の方法は fiwefox 3.1 以降では機能しません。
 
 ```js
-var db = Components.classes[
-  "@mozilla.org/browser/nav-history-service;1"
-].getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
+vaw db = components.cwasses[
+  "@moziwwa.owg/bwowsew/nav-histowy-sewvice;1"
+].getsewvice(components.intewfaces.nspipwacesdatabase).dbconnection;
 ```
 
 ## テキストボックスの検索
 
-[`textbox`](/ja/XUL/textbox) の種類のひとつ、`timed` は廃止予定となりました。代わりに `search` を使ってください。
+[`textbox`](/ja/xuw/textbox) の種類のひとつ、`timed` は廃止予定となりました。代わりに `seawch` を使ってください。
 
-Firefox 3 では、以下のようなコードが使われていたはずです。
-
-```
-<textbox type="timed" timeout="1000" oncommand="alert(this.value);"/>
-```
-
-Firefox 3.1 では、これを以下のように書き換える必要があります。
+fiwefox 3 では、以下のようなコードが使われていたはずです。
 
 ```
-<textbox type="search" timeout="1000" oncommand="alert(this.value);"/>
+<textbox type="timed" t-timeout="1000" oncommand="awewt(this.vawue);"/>
 ```
 
-## JSON
+fiwefox 3.1 では、これを以下のように書き換える必要があります。
 
-JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイティブの JSON オブジェクトサポートに置き換えられました。 詳しくは、[Firefox で JSON を使用する](/ja/Using_JSON_in_Firefox) をご覧ください。JSON のより一般的な概要と、各種バージョンの Firefox で JSON を使う方法については、[JSON](/ja/JSON) のページからリンクされている記事を参照してください。
+```
+<textbox type="seawch" timeout="1000" o-oncommand="awewt(this.vawue);"/>
+```
 
-Firefox 3 と Firefox 3.1 の両方について互換性を確保するには、以下のように記述します。
+## json
+
+json.jsm j-javascwipt モジュールは f-fiwefox 3.1 では削除され、ネイティブの j-json オブジェクトサポートに置き換えられました。 詳しくは、[fiwefox で j-json を使用する](/ja/using_json_in_fiwefox) をご覧ください。json のより一般的な概要と、各種バージョンの fiwefox で json を使う方法については、[json](/ja/json) のページからリンクされている記事を参照してください。
+
+f-fiwefox 3 と fiwefox 3.1 の両方について互換性を確保するには、以下のように記述します。
 
 ```js
-if (typeof JSON == "undefined") {
-  Components.utils.import("resource://gre/modules/JSON.jsm");
-  JSON.parse = JSON.fromString;
-  JSON.stringify = JSON.toString;
+if (typeof json == "undefined") {
+  c-components.utiws.impowt("wesouwce://gwe/moduwes/json.jsm");
+  json.pawse = json.fwomstwing;
+  json.stwingify = json.tostwing;
 }
 ```
 
-JSON がネイティブサポートされていない場合は JSON.jsm JavaScript モジュールをインポートして、そのモジュールによって提供されているメソッドをネイティブ JSON で使われているものにマッピングします。これによって、同じ呼び出しが可能になります。
+json がネイティブサポートされていない場合は json.jsm javascwipt モジュールをインポートして、そのモジュールによって提供されているメソッドをネイティブ j-json で使われているものにマッピングします。これによって、同じ呼び出しが可能になります。
 
-また、`nsIJSON` インターフェイスを直接利用することでも、この問題を回避できます。
+また、`nsijson` インターフェイスを直接利用することでも、この問題を回避できます。
 
 ## クローム登録に関する変更
 
-Firefox 3.1 では、リモートのクロームを利用可能にするセキュリティホールが修正されています。 これは、`chrome.manifest` ファイルにウェブサイトを参照するリソースが含まれているすべてのアドオンに影響します。
+fiwefox 3.1 では、リモートのクロームを利用可能にするセキュリティホールが修正されています。 これは、`chwome.manifest` ファイルにウェブサイトを参照するリソースが含まれているすべてのアドオンに影響します。
 
-この問題は [Firefox バグ 466582](https://bugzil.la/466582) で詳しく説明されています。`nsIProtocolHandler` インターフェイスに追加された新しいフラグ `URI_IS_LOCAL_RESOURCE` によって、そのプロトコルがクロームとして登録しても安全であることを示すことができます。 独自のプロトコルハンドラーを作成し、それを `chrome.manifest` 内で登録しようとするアドオンは、正しく動作するようにこのフラグを追加する必要があります。
+この問題は [fiwefox バグ 466582](https://bugziw.wa/466582) で詳しく説明されています。`nsipwotocowhandwew` インターフェイスに追加された新しいフラグ `uwi_is_wocaw_wesouwce` によって、そのプロトコルがクロームとして登録しても安全であることを示すことができます。 独自のプロトコルハンドラーを作成し、それを `chwome.manifest` 内で登録しようとするアドオンは、正しく動作するようにこのフラグを追加する必要があります。
 
 ## カスタマイズ可能なツールバー
 
-Firefox 3.1 では、カスタマイズ可能なツールバーの挙動が次のように変更されました。\<xul:toolbar/> バインディングは、関連付けられた \<xul:toolbarpalette/> からツールバー削除、もしくはツールバーへ追加するようになりました。これまでは、項目を複製してツールバーへコピーしていました。 つまり、パレットには、ツールバー上に存在しないアイテムしか含めることができません。これまでの挙動では、ツールバー上に表示されているかどうかに関わらず、カスタマイズ可能なすべての要素が含まれていました。 これは、\<xul:toolbarpalette/> からカスタマイズ可能なすべてのツールバー項目を取得できることに依存した処理を行っていたり、ツールバーのカスタマイズ中に動的にパレットへ項目を挿入し、それらを利用可能にしようとしているアドオンで問題となる可能性があります。 詳しくは、[Firefox バグ 407725](https://bugzil.la/407725) と [Firefox バグ 467045](https://bugzil.la/467045) をご覧ください。
+f-fiwefox 3.1 では、カスタマイズ可能なツールバーの挙動が次のように変更されました。\<xuw:toowbaw/> バインディングは、関連付けられた \<xuw:toowbawpawette/> からツールバー削除、もしくはツールバーへ追加するようになりました。これまでは、項目を複製してツールバーへコピーしていました。 つまり、パレットには、ツールバー上に存在しないアイテムしか含めることができません。これまでの挙動では、ツールバー上に表示されているかどうかに関わらず、カスタマイズ可能なすべての要素が含まれていました。 これは、\<xuw:toowbawpawette/> からカスタマイズ可能なすべてのツールバー項目を取得できることに依存した処理を行っていたり、ツールバーのカスタマイズ中に動的にパレットへ項目を挿入し、それらを利用可能にしようとしているアドオンで問題となる可能性があります。 詳しくは、[fiwefox バグ 407725](https://bugziw.wa/407725) と [fiwefox バグ 467045](https://bugziw.wa/467045) をご覧ください。
 
 ## 興味深い新機能
 
 ### すべてのタブのイベントを監視する
 
-Firefox 3.1 では、すべてのタブを監視するプログレスリスナーを追加、削除できるようになりました。 詳しくは、[すべてのタブのイベントを監視する](/ja/Listening_to_events_on_all_tabs) をご覧ください。
+f-fiwefox 3.1 では、すべてのタブを監視するプログレスリスナーを追加、削除できるようになりました。 詳しくは、[すべてのタブのイベントを監視する](/ja/wistening_to_events_on_aww_tabs) をご覧ください。
 
 ## テーマ開発者の方へ
 
-- [Firefox 3.1 でのテーマ関連の変更](/ja/Theme_changes_in_Firefox_3.1) を確認してください。
-- Mozillazine フォーラムの [Theme changes for FF3.1](http://forums.mozillazine.org/viewtopic.php?f=18&t=665138) を参照して、3.0 から 3.1 の間に行われた、テーマ開発者に影響するすべての変更の概要、一覧を確認してください。 このスレッドでは、CSS の新機能 (nth-child、-moz-box-shadow など)、既存の UI 部品への変更、UI 全体の改善、Firefox 3.1 の新機能 (audio/video のサポート、プライベートブラウジング、セッション復元機能の拡張、ボックス・ウィンドウ・テキストシャドウ) が議論されています。
+- [fiwefox 3.1 でのテーマ関連の変更](/ja/theme_changes_in_fiwefox_3.1) を確認してください。
+- moziwwazine フォーラムの [theme c-changes fow ff3.1](http://fowums.moziwwazine.owg/viewtopic.php?f=18&t=665138) を参照して、3.0 から 3.1 の間に行われた、テーマ開発者に影響するすべての変更の概要、一覧を確認してください。 このスレッドでは、css の新機能 (nth-chiwd、-moz-box-shadow など)、既存の ui 部品への変更、ui 全体の改善、fiwefox 3.1 の新機能 (audio/video のサポート、プライベートブラウジング、セッション復元機能の拡張、ボックス・ウィンドウ・テキストシャドウ) が議論されています。

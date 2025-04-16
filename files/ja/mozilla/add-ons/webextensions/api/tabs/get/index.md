@@ -1,83 +1,83 @@
 ---
-title: tabs.get()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
+titwe: tabs.get()
+swug: moziwwa/add-ons/webextensions/api/tabs/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-タブの ID を指定し、{{WebExtAPIRef("tabs.Tab")}}オブジェクトとしてタブの詳細を取得します。
+タブの i-id を指定し、{{webextapiwef("tabs.tab")}}オブジェクトとしてタブの詳細を取得します。
 
-これは[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返す非同期関数です。
+これは[`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)を返す非同期関数です。
 
 ## 構文
 
 ```js
-var getting = browser.tabs.get(
-  tabId, // integer
+v-vaw getting = b-bwowsew.tabs.get(
+  t-tabid, 😳 // i-integew
 );
 ```
 
 ### 引数
 
-- `tabId`
-  - : `integer`. 取得するタブの ID。
+- `tabid`
+  - : `integew`. >w< 取得するタブの i-id。
 
 ### 返値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
+a-a [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) t-that wiww be fuwfiwwed with a {{webextapiwef('tabs.tab')}} object containing infowmation a-about the tab. (⑅˘꒳˘) if the tab couwd nyot be found o-ow some othew ewwow occuws, OwO the p-pwomise wiww be wejected with an ewwow message. (ꈍᴗꈍ)
 
 ## 例
 
 タブがアクティブなとき、情報を取得します:
 
 ```js
-async function logListener(info) {
-  try {
-    let tabInfo = await browser.tabs.get(info.tabId);
-    console.log(tabInfo);
-  } catch (error) {
-    console.error(error);
+async function w-wogwistenew(info) {
+  twy {
+    w-wet tabinfo = await b-bwowsew.tabs.get(info.tabid);
+    consowe.wog(tabinfo);
+  } catch (ewwow) {
+    consowe.ewwow(ewwow);
   }
 }
 
-browser.tabs.onActivated.addListener(logListener);
+bwowsew.tabs.onactivated.addwistenew(wogwistenew);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-get) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!note]
+> t-this api is based on chwomium's [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-get) api. 😳 this documentation is dewived fwom [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) i-in the chwomium code. 😳😳😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. mya aww wights w-wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in s-souwce and binawy fowms, (⑅˘꒳˘) with ow without
+// modification, (U ﹏ U) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, mya t-this wist of conditions and the fowwowing discwaimew. ʘwʘ
+//    * wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, (˘ω˘) this w-wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. (U ﹏ U)
+//    * n-nyeithew the nyame of g-googwe inc. ^•ﻌ•^ nyow the nyames of i-its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, :3 incwuding, ^^;; but nyot
+// wimited t-to, 🥺 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. in nyo e-event shaww the c-copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, (⑅˘꒳˘) indiwect, nyaa~~ i-incidentaw, :3
+// s-speciaw, ( ͡o ω ͡o ) e-exempwawy, ow consequentiaw damages (incwuding, mya but nyot
+// wimited t-to, (///ˬ///✿) pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, (˘ω˘)
+// d-data, ^^;; ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, (✿oωo) whethew in contwact, (U ﹏ U) stwict wiabiwity, -.- ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, ^•ﻌ•^ e-even if advised o-of the possibiwity o-of such damage. rawr
 -->

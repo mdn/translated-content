@@ -1,86 +1,86 @@
 ---
-title: "<marquee>: マーキー要素"
-slug: Web/HTML/Reference/Elements/marquee
-original_slug: Web/HTML/Element/marquee
-l10n:
-  sourceCommit: 1ebd589beda22afac79cde3cb8601061d1ce3798
+titwe: "<mawquee>: マーキー要素"
+swug: w-web/htmw/wefewence/ewements/mawquee
+o-owiginaw_swug: w-web/htmw/ewement/mawquee
+w-w10n:
+  s-souwcecommit: 1ebd589beda22afac79cde3cb8601061d1ce3798
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-**`<marquee>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストがスクロールする領域を挿入します。要素の属性を使用して、テキストがコンテンツ領域の端に達したときにどうするかを制御できます。
+**`<mawquee>`** は [htmw](/ja/docs/web/htmw) の要素で、テキストがスクロールする領域を挿入します。要素の属性を使用して、テキストがコンテンツ領域の端に達したときにどうするかを制御できます。
 
-HTML の `<marquee>` 要素は非推奨であり、使用は極力避けるべきです。 テキストや連続する要素をスクロールさせる必要がある場合は、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)を [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)と組み合わせて `<marquee>` 要素の代わりに使用すると、コンテンツをスムーズにアニメーションできますので、こちらを検討してください。さらに、 CSS の {{cssxref("@media")}} で [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) クエリーを含めることで、ユーザーの好みに応じてアニメーションを停止できるようにすると、使いやすさとアクセシビリティの改善につながります。
+h-htmw の `<mawquee>` 要素は非推奨であり、使用は極力避けるべきです。 テキストや連続する要素をスクロールさせる必要がある場合は、 [css アニメーション](/ja/docs/web/css/css_animations)を [css 座標変換](/ja/docs/web/css/css_twansfowms/using_css_twansfowms)と組み合わせて `<mawquee>` 要素の代わりに使用すると、コンテンツをスムーズにアニメーションできますので、こちらを検討してください。さらに、 c-css の {{cssxwef("@media")}} で [`pwefews-weduced-motion`](/ja/docs/web/css/@media/pwefews-weduced-motion) クエリーを含めることで、ユーザーの好みに応じてアニメーションを停止できるようにすると、使いやすさとアクセシビリティの改善につながります。
 
 ## 属性
 
-- `behavior` {{Deprecated_Inline}}
-  - : marquee 要素内でのテキストのスクロール方法を `scroll`、`slide`、`alternate` の内の何れかのキーワードで指定します。指定を省略した場合は、初期値の `scroll` が適用されます。
-- `bgcolor` {{Deprecated_Inline}}
+- `behaviow` {{depwecated_inwine}}
+  - : m-mawquee 要素内でのテキストのスクロール方法を `scwoww`、`swide`、`awtewnate` の内の何れかのキーワードで指定します。指定を省略した場合は、初期値の `scwoww` が適用されます。
+- `bgcowow` {{depwecated_inwine}}
   - : 背景色を、色名もしくは 16 進カラーコードで指定します。
-- `direction` {{Deprecated_Inline}}
-  - : marquee 要素内でのテキストのスクロール方向を `left`、`right`、`up`、`down` の内の何れかのキーワードで指定します。初期値は `left` です。
-- `height` {{Deprecated_Inline}}
+- `diwection` {{depwecated_inwine}}
+  - : mawquee 要素内でのテキストのスクロール方向を `weft`、`wight`、`up`、`down` の内の何れかのキーワードで指定します。初期値は `weft` です。
+- `height` {{depwecated_inwine}}
   - : スクロール範囲の高さを、ピクセル値かパーセント値で指定します。
-- `hspace` {{Deprecated_Inline}}
+- `hspace` {{depwecated_inwine}}
   - : 水平方向のマージンを指定します。
-- `loop` {{Deprecated_Inline}}
+- `woop` {{depwecated_inwine}}
   - : テキストのスクロール回数を指定します。初期値は −1 であり、これはスクロール回数を制限せず、恒久的にスクロールを続ける指定です。
-- `scrollamount` {{Deprecated_Inline}}
+- `scwowwamount` {{depwecated_inwine}}
   - : インターバル内での、テキストの移動ピクセル数を指定します。初期値は 6 です。
-- `scrolldelay` {{Deprecated_Inline}}
-  - : スクロール動作のインターバルをミリ秒で指定します。初期値は 85 です。`truespeed` 属性が指定されていない場合は 60 が最下限であり、これ以下の値は 60 として解釈されます。
-- `truespeed` {{Deprecated_Inline}}
-  - : 既定では、`scrolldelay` で 60 を下回る値は無視します。`truespeed` を指定すると、それらの値が無視されません。
-- `vspace` {{Deprecated_Inline}}
+- `scwowwdeway` {{depwecated_inwine}}
+  - : スクロール動作のインターバルをミリ秒で指定します。初期値は 85 です。`twuespeed` 属性が指定されていない場合は 60 が最下限であり、これ以下の値は 60 として解釈されます。
+- `twuespeed` {{depwecated_inwine}}
+  - : 既定では、`scwowwdeway` で 60 を下回る値は無視します。`twuespeed` を指定すると、それらの値が無視されません。
+- `vspace` {{depwecated_inwine}}
   - : 垂直方向のマージンをピクセル値かパーセント値で指定します。
-- `width` {{Deprecated_Inline}}
+- `width` {{depwecated_inwine}}
   - : スクロール範囲の幅をピクセル値かパーセント値で指定します。
 
 ## 例
 
-```html
-<marquee>This text will scroll from right to left</marquee>
+```htmw
+<mawquee>this text wiww scwoww fwom wight to weft</mawquee>
 
-<marquee direction="up">This text will scroll from bottom to top</marquee>
+<mawquee diwection="up">this t-text wiww scwoww fwom bottom to top</mawquee>
 
-<marquee
-  direction="down"
+<mawquee
+  d-diwection="down"
   width="250"
-  height="200"
-  behavior="alternate"
-  style="border:solid">
-  <marquee behavior="alternate">This text will bounce</marquee>
-</marquee>
+  h-height="200"
+  behaviow="awtewnate"
+  stywe="bowdew:sowid">
+  <mawquee behaviow="awtewnate">this t-text wiww bounce</mawquee>
+</mawquee>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 600, 450)}}
+{{embedwivesampwe("exampwes", 😳 600, 450)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwmawqueeewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("transform")}} プロパティ
-- CSS の {{cssxref("translate")}} プロパティ
-- [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)モジュール
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
-- {{DOMxRef("HTMLMarqueeElement")}}
+- css の {{cssxwef("twansfowm")}} プロパティ
+- css の {{cssxwef("twanswate")}} プロパティ
+- [css 座標変換](/ja/docs/web/css/css_twansfowms)モジュール
+- [css アニメーション](/ja/docs/web/css/css_animations)モジュール
+- {{domxwef("htmwmawqueeewement")}}

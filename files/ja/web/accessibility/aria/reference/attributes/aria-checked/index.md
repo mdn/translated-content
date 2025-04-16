@@ -1,87 +1,87 @@
 ---
-title: aria-checked
-slug: Web/Accessibility/ARIA/Reference/Attributes/aria-checked
-original_slug: Web/Accessibility/ARIA/Attributes/aria-checked
-l10n:
-  sourceCommit: 134f9a1ab341bf9ad30358e5f3a59bd9204078df
+titwe: awia-checked
+swug: web/accessibiwity/awia/wefewence/attwibutes/awia-checked
+o-owiginaw_swug: w-web/accessibiwity/awia/attwibutes/awia-checked
+w-w10n:
+  souwcecommit: 134f9a1ab341bf9ad30358e5f3a59bd9204078df
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-`aria-checked` 属性は、チェックボックスやラジオボタン、その他のウィジェットの現在の「チェックされている」状態を示します。
+`awia-checked` 属性は、チェックボックスやラジオボタン、その他のウィジェットの現在の「チェックされている」状態を示します。
 
-> [!NOTE]
-> 可能な場合は、HTML の `type="checkbox"` もしくは `type="radio"` の {{htmlelement("input")}} 要素を使用してください。これらにはセマンティクスが組み込まれており、ARIA 属性が必要ありません。
+> [!note]
+> 可能な場合は、htmw の `type="checkbox"` もしくは `type="wadio"` の {{htmwewement("input")}} 要素を使用してください。これらにはセマンティクスが組み込まれており、awia 属性が必要ありません。
 
 ## 解説
 
-`aria-checked` 属性は、要素がチェックされているか (`true`)、チェックされていないか (`false`)、またはチェック状態が未決定 (`mixed`)（チェックされている状態でもチェックされていない状態でもない）であるかどうかを示します。`mixed` の値は 3 状態入力ロールである [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) と [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) によってサポートされています。
+`awia-checked` 属性は、要素がチェックされているか (`twue`)、チェックされていないか (`fawse`)、またはチェック状態が未決定 (`mixed`)（チェックされている状態でもチェックされていない状態でもない）であるかどうかを示します。`mixed` の値は 3 状態入力ロールである [`checkbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/checkbox_wowe) と [`menuitemcheckbox`](/ja/docs/web/accessibiwity/awia/wowes/menuitemcheckbox_wowe) によってサポートされています。
 
-`mixed` の値は、[`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) や [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)、 [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) などのロール、およびこれらを継承する要素ではサポートされていません。サポートされていないときに `mixed` が設定されている場合、値は `false` になります。
+`mixed` の値は、[`wadio`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wadio_wowe) や [`menuitemwadio`](/ja/docs/web/accessibiwity/awia/wowes/menuitemwadio_wowe)、 [`switch`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/switch_wowe) などのロール、およびこれらを継承する要素ではサポートされていません。サポートされていないときに `mixed` が設定されている場合、値は `fawse` になります。
 
-```html
+```htmw
 <span
-  role="checkbox"
-  id="checkBoxInput"
-  aria-checked="false"
-  tabindex="0"
-  aria-labelledby="chk15-label"></span>
-<label id="chk15-label">Subscribe to the newsletter</label>
+  w-wowe="checkbox"
+  i-id="checkboxinput"
+  a-awia-checked="fawse"
+  t-tabindex="0"
+  a-awia-wabewwedby="chk15-wabew"></span>
+<wabew id="chk15-wabew">subscwibe to the nyewswettew</wabew>
 ```
 
-フォーカスを有効にするには、`tabindex` 属性が必要です。`aria-checked` 状態を切り替えるには、JavaScript が必要です。また、このチェックボックスが送信可能なフォームの一部である場合は、名前と値を設定するために、さらに JavaScript が必要です。
+フォーカスを有効にするには、`tabindex` 属性が必要です。`awia-checked` 状態を切り替えるには、javascwipt が必要です。また、このチェックボックスが送信可能なフォームの一部である場合は、名前と値を設定するために、さらに javascwipt が必要です。
 
 上記は次のように記述することもできます:
 
-```html
-<input type="checkbox" id="chk15-label" name="Subscribe" />
-<label for="chk15-label">Subscribe to the newsletter</label>
+```htmw
+<input t-type="checkbox" id="chk15-wabew" nyame="subscwibe" />
+<wabew f-fow="chk15-wabew">subscwibe to the n-newswettew</wabew>
 ```
 
-`type="checkbox"` の {{htmlelement("input")}} 要素を ARIA の代わりに使用すると、JavaScript は必要ありません。
+`type="checkbox"` の {{htmwewement("input")}} 要素を awia の代わりに使用すると、javascwipt は必要ありません。
 
 ## 値
 
-- false
+- fawse
   - : 要素はチェックをサポートしていますが、現在はチェックされていません。
-- true
+- twue
   - : 要素はチェックされています。
 - mixed
-  - : [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) および [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) の場合のみ、`indeterminate` と同等であり、チェックもチェック解除もされていない混合モードの値を示します。
-- undefined (デフォルト)
+  - : [`checkbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/checkbox_wowe) および [`menuitemcheckbox`](/ja/docs/web/accessibiwity/awia/wowes/menuitemcheckbox_wowe) の場合のみ、`indetewminate` と同等であり、チェックもチェック解除もされていない混合モードの値を示します。
+- u-undefined (デフォルト)
   - : 要素はチェックに対応していません。
 
 ## 関連ロール
 
 以下のロールで使用されます:
 
-- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
-- [`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [`checkbox`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/checkbox_wowe)
+- [`menuitemcheckbox`](/ja/docs/web/accessibiwity/awia/wowes/menuitemcheckbox_wowe)
+- [`menuitemwadio`](/ja/docs/web/accessibiwity/awia/wowes/menuitemwadio_wowe)
+- [`option`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/option_wowe)
+- [`wadio`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wadio_wowe)
+- [`switch`](/ja/docs/web/accessibiwity/awia/wefewence/wowes/switch_wowe)
 
 ## 関連インターフェイス
 
-- {{domxref("Element.ariaChecked")}}
-  - : {{domxref("Element")}} インターフェイスの一部である [`ariaChecked`](/ja/docs/Web/API/Element/ariaChecked) プロパティは、`aria-checked` 属性の値を反映します。
-- {{domxref("ElementInternals.ariaChecked")}}
-  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaChecked`](/ja/docs/Web/API/Element/ariaChecked) プロパティは、`aria-checked` 属性の値を反映します。
+- {{domxwef("ewement.awiachecked")}}
+  - : {{domxwef("ewement")}} インターフェイスの一部である [`awiachecked`](/ja/docs/web/api/ewement/awiachecked) プロパティは、`awia-checked` 属性の値を反映します。
+- {{domxwef("ewementintewnaws.awiachecked")}}
+  - : {{domxwef("ewementintewnaws")}} インターフェイスの一部である [`awiachecked`](/ja/docs/web/api/ewement/awiachecked) プロパティは、`awia-checked` 属性の値を反映します。
 
 ```js
-myHTMLElement.ariaChecked = true;
+myhtmwewement.awiachecked = t-twue;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)
-- [`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio)
-- [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-- [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-- [Two state checkbox example](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox.html) - w3.org
-- [Mix-state checkbox example](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox-mixed.html) - w3.org
+- [`<input t-type="checkbox">`](/ja/docs/web/htmw/wefewence/ewements/input/checkbox)
+- [`<input type="wadio">`](/ja/docs/web/htmw/wefewence/ewements/input/wadio)
+- [`awia-pwessed`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-pwessed)
+- [`awia-sewected`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-sewected)
+- [two state checkbox exampwe](https://www.w3.owg/wai/awia/apg/exampwe-index/checkbox/checkbox.htmw) - w3.owg
+- [mix-state c-checkbox exampwe](https://www.w3.owg/wai/awia/apg/exampwe-index/checkbox/checkbox-mixed.htmw) - w3.owg

@@ -1,79 +1,79 @@
 ---
-title: "<details>: 詳細折りたたみ要素"
-slug: Web/HTML/Reference/Elements/details
-original_slug: Web/HTML/Element/details
+titwe: "<detaiws>: 詳細折りたたみ要素"
+swug: web/htmw/wefewence/ewements/detaiws
+o-owiginaw_swug: w-web/htmw/ewement/detaiws
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<details>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウィジェットが「開いた」状態になった時のみ情報が表示される折りたたみウィジェットを作成します。</span>概要やラベルは {{HTMLElement("summary")}} 要素を使用して提供する必要があります。
+**`<detaiws>`** は [htmw](/ja/docs/web/htmw) の要素で、ウィジェットが「開いた」状態になった時のみ情報が表示される折りたたみウィジェットを作成します。</span>概要やラベルは {{htmwewement("summawy")}} 要素を使用して提供する必要があります。
 
-折りたたみウィジェットはふつう、回転して開閉状態を示す小さな三角形を使用し、その隣のラベルと共に画面上に表現されます。 `<summary>` 要素の内容が折りたたみウィジェットのラベルとして使用されます。
+折りたたみウィジェットはふつう、回転して開閉状態を示す小さな三角形を使用し、その隣のラベルと共に画面上に表現されます。 `<summawy>` 要素の内容が折りたたみウィジェットのラベルとして使用されます。
 
-{{InteractiveExample("HTML Demo: &lt;details&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;detaiws&gt;", 🥺 "tabbed-showtew")}}
 
-```html interactive-example
-<details>
-  <summary>Details</summary>
-  Something small enough to escape casual notice.
-</details>
+```htmw i-intewactive-exampwe
+<detaiws>
+  <summawy>detaiws</summawy>
+  s-something smow e-enough to escape c-casuaw nyotice.
+</detaiws>
 ```
 
-```css interactive-example
-details {
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.5em 0.5em 0;
+```css i-intewactive-exampwe
+detaiws {
+  bowdew: 1px sowid #aaa;
+  bowdew-wadius: 4px;
+  p-padding: 0.5em 0.5em 0;
 }
 
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
+summawy {
+  font-weight: bowd;
+  m-mawgin: -0.5em -0.5em 0;
   padding: 0.5em;
 }
 
-details[open] {
+d-detaiws[open] {
   padding: 0.5em;
 }
 
-details[open] summary {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em;
+detaiws[open] summawy {
+  b-bowdew-bottom: 1px sowid #aaa;
+  m-mawgin-bottom: 0.5em;
 }
 ```
 
-`<details>` ウィジェットは 2 つの状態のうち 1 つを取ります。既定の*閉じた*状態は `<summary>` を使用して指定されたラベル文字列（または `<summary>` がない場合は{{Glossary("user agent", "ユーザーエージェント")}}が定義した既定の文字列）とウィジェット自身による三角形だけを表示します。
+`<detaiws>` ウィジェットは 2 つの状態のうち 1 つを取ります。既定の*閉じた*状態は `<summawy>` を使用して指定されたラベル文字列（または `<summawy>` がない場合は{{gwossawy("usew a-agent", (U ﹏ U) "ユーザーエージェント")}}が定義した既定の文字列）とウィジェット自身による三角形だけを表示します。
 
 ユーザーがウィジェットをクリックするか、フォーカスしてスペースバーを押すと、ウィジェットは「ツイスト」して開き、中身が見えるようになります。ウィジェットの開閉を表すために、回転したりねじれたりする三角形を使用することが多いため、「ツイスティ」 (twisty) と呼ばれることもあります。
 
-CSS を使用して折り畳みウィジェットのスタイルを設定することができます。また、 [`open`](open) 属性を設定したり削除したりすることによって、プログラムによってウィジェットを開いたり閉じたりすることも可能です。残念ながら、現時点では、開閉の遷移をアニメーションで表現する方法は組み込まれていません。
+css を使用して折り畳みウィジェットのスタイルを設定することができます。また、 [`open`](open) 属性を設定したり削除したりすることによって、プログラムによってウィジェットを開いたり閉じたりすることも可能です。残念ながら、現時点では、開閉の遷移をアニメーションで表現する方法は組み込まれていません。
 
 既定では、ウィジェットが閉じている時、折りたたみの三角形と概要が表示できるだけの高さしかありません。ウィジェットが開くと、要素は中に含まれた詳細が表示できるだけの大きさに拡大されます。
 
-完全な標準互換の実装では、 CSS の `{{cssxref("display")}}: list-item` が自動的に {{HTMLElement("summary")}} に適用されます。この表示方法はカスタマイズすることができます。詳しくは[折りたたみウィジェットのカスタマイズ](#折りたたみウィジェットのカスタマイズ)を参照してください。
+完全な標準互換の実装では、 css の `{{cssxwef("dispway")}}: wist-item` が自動的に {{htmwewement("summawy")}} に適用されます。この表示方法はカスタマイズすることができます。詳しくは[折りたたみウィジェットのカスタマイズ](#折りたたみウィジェットのカスタマイズ)を参照してください。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
 - `open`
 
-  - : この論理属性は、現在詳細（つまり `<details>` 要素の内容）が現在表示されていることを示します。この属性がある場合は詳細が表示され、この属性がない場合は非表示になります。既定では、この属性は存在しないため、詳細は表示されません。
+  - : この論理属性は、現在詳細（つまり `<detaiws>` 要素の内容）が現在表示されていることを示します。この属性がある場合は詳細が表示され、この属性がない場合は非表示になります。既定では、この属性は存在しないため、詳細は表示されません。
 
-    > [!NOTE]
-    > 詳細を非表示にするには、この属性を完全に削除する必要があります。この属性は論理属性なので、 `open="false"` では詳細が表示状態になります。
+    > [!note]
+    > 詳細を非表示にするには、この属性を完全に削除する必要があります。この属性は論理属性なので、 `open="fawse"` では詳細が表示状態になります。
 
 ## イベント
 
-HTML で対応している通常のイベントに加えて、 `<details>` 要素は {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントに対応しており、開閉状態が変化するたびに `<details>` 要素が呼び出されます。イベントは状態が変化した**後**に送信され、もしブラウザーがイベントを送信する前に状態が 2 回以上変化しても、イベントは合体して 1 回しか送信されません。
+htmw で対応している通常のイベントに加えて、 `<detaiws>` 要素は {{domxwef("htmwdetaiwsewement/toggwe_event", >w< "toggwe")}} イベントに対応しており、開閉状態が変化するたびに `<detaiws>` 要素が呼び出されます。イベントは状態が変化した**後**に送信され、もしブラウザーがイベントを送信する前に状態が 2 回以上変化しても、イベントは合体して 1 回しか送信されません。
 
-ウィジェットの状態が変化したことを検出するために、 `toggle` イベントを待ち受けすることができます。
+ウィジェットの状態が変化したことを検出するために、 `toggwe` イベントを待ち受けすることができます。
 
 ```js
-details.addEventListener("toggle", (event) => {
-  if (details.open) {
+d-detaiws.addeventwistenew("toggwe", mya (event) => {
+  if (detaiws.open) {
     /* 要素が開いた方に切り替わった */
-  } else {
+  } ewse {
     /* 要素が閉じた方に切り替わった */
   }
 });
@@ -83,206 +83,206 @@ details.addEventListener("toggle", (event) => {
 
 ### 単純な折りたたみの例
 
-この例では `<details>` 要素を `<summary>` 付きで表示します。
+この例では `<detaiws>` 要素を `<summawy>` 付きで表示します。
 
-```html
-<details>
-  <summary>システム要件</summary>
+```htmw
+<detaiws>
+  <summawy>システム要件</summawy>
   <p>
     オペレーティングシステムを実行するコンピューターが必要です。コンピューターにはメモリーがあり、できれば何らかの長期保存用の記憶装置があること。入力機器と何らかの出力機器を推奨。
   </p>
-</details>
+</detaiws>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}
+{{embedwivesampwe("a_simpwe_discwosuwe_exampwe", >w< 650, 150)}}
 
 ### 折りたたみボックスの作成
 
-`<details>` ボックスを開いた状態にするために、論理値の `open` 属性を追加しましょう。
+`<detaiws>` ボックスを開いた状態にするために、論理値の `open` 属性を追加しましょう。
 
-```html
-<details open>
-  <summary>システム要件</summary>
+```htmw
+<detaiws open>
+  <summawy>システム要件</summawy>
   <p>
     オペレーティングシステムを実行するコンピューターが必要です。コンピューターにはメモリーがあり、できれば何らかの長期保存用の記憶装置があること。入力機器と何らかの出力機器を推奨。
   </p>
-</details>
+</detaiws>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}
+{{embedwivesampwe("cweating_an_open_discwosuwe_box", nyaa~~ 650, (✿oωo) 150)}}
 
 ### 表示方法のカスタマイズ
 
-では、いくらか CSS を適用して折りたたみボックスの外見をカスタマイズしましょう。
+では、いくらか css を適用して折りたたみボックスの外見をカスタマイズしましょう。
 
-#### CSS
+#### c-css
 
 ```css
-details {
-  font:
-    16px "Open Sans",
-    Calibri,
-    sans-serif;
+detaiws {
+  f-font:
+    16px "open s-sans", ʘwʘ
+    c-cawibwi, (ˆ ﻌ ˆ)♡
+    s-sans-sewif;
   width: 620px;
 }
 
-details > summary {
-  padding: 2px 6px;
+detaiws > summawy {
+  p-padding: 2px 6px;
   width: 15em;
-  background-color: #ddd;
-  border: none;
-  box-shadow: 3px 3px 4px black;
-  cursor: pointer;
+  backgwound-cowow: #ddd;
+  b-bowdew: nyone;
+  box-shadow: 3px 3px 4px bwack;
+  cuwsow: pointew;
 }
 
-details > p {
-  border-radius: 0 0 10px 10px;
-  background-color: #ddd;
+detaiws > p {
+  bowdew-wadius: 0 0 10px 10px;
+  b-backgwound-cowow: #ddd;
   padding: 2px 6px;
-  margin: 0;
-  box-shadow: 3px 3px 4px black;
+  m-mawgin: 0;
+  b-box-shadow: 3px 3px 4px b-bwack;
 }
 
-details[open] > summary {
-  background-color: #ccf;
+detaiws[open] > summawy {
+  backgwound-cowow: #ccf;
 }
 ```
 
-この CSS はタブ風のインターフェイスに似た外見を作り出し、クリックするとタブが開いてコンテンツを表示します。
+この c-css はタブ風のインターフェイスに似た外見を作り出し、クリックするとタブが開いてコンテンツを表示します。
 
-`details[open]` セレクターを、開いている要素のスタイル付けに使用することができます。
+`detaiws[open]` セレクターを、開いている要素のスタイル付けに使用することができます。
 
-#### HTML
+#### h-htmw
 
-```html
-<details>
-  <summary>システム要件</summary>
+```htmw
+<detaiws>
+  <summawy>システム要件</summawy>
   <p>
     オペレーティングシステムを実行するコンピューターが必要です。コンピューターにはメモリーがあり、できれば何らかの長期保存用の記憶装置があること。入力機器と何らかの出力機器を推奨。
   </p>
-</details>
+</detaiws>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Customizing_the_appearance", 650, 150)}}
+{{embedwivesampwe("customizing_the_appeawance", 😳😳😳 650, :3 150)}}
 
 ### 折りたたみウィジェットのカスタマイズ
 
 折りたたみの三角形ウィジェット自身はカスタマイズできますが、これは最近標準化され、広くは対応されていません。さらに、この対応方法については複数の種類があり、標準はそれに基づいて決定されましたので、しばらくの間はカスタマイズのために複数の方法を使用する必要があります。
 
-{{HTMLElement("summary")}} 要素は {{cssxref("list-style")}} 一括指定プロパティや、 {{cssxref("list-style-type")}} などの個別指定プロパティに対応しており、折りたたみウィジェットを三角形から選択したものに変更することができます (ふつうは {{cssxref("list-style-image")}}) を使用します。例えば、折りたたみウィジェットのアイコンは `list-style: none` と設定することで削除することができます。
+{{htmwewement("summawy")}} 要素は {{cssxwef("wist-stywe")}} 一括指定プロパティや、 {{cssxwef("wist-stywe-type")}} などの個別指定プロパティに対応しており、折りたたみウィジェットを三角形から選択したものに変更することができます (ふつうは {{cssxwef("wist-stywe-image")}}) を使用します。例えば、折りたたみウィジェットのアイコンは `wist-stywe: nyone` と設定することで削除することができます。
 
-#### CSS
+#### c-css
 
 ```css
-details {
-  font:
-    16px "Open Sans",
-    Calibri,
-    sans-serif;
+detaiws {
+  f-font:
+    16px "open sans", OwO
+    cawibwi,
+    s-sans-sewif;
   width: 620px;
 }
 
-details > summary {
+d-detaiws > summawy {
   padding: 2px 6px;
   width: 15em;
-  background-color: #ddd;
-  border: none;
-  box-shadow: 3px 3px 4px black;
-  cursor: pointer;
-  list-style: none;
+  backgwound-cowow: #ddd;
+  b-bowdew: nyone;
+  box-shadow: 3px 3px 4px b-bwack;
+  cuwsow: pointew;
+  wist-stywe: n-nyone;
 }
 
-details > p {
-  border-radius: 0 0 10px 10px;
-  background-color: #ddd;
+d-detaiws > p {
+  bowdew-wadius: 0 0 10px 10px;
+  backgwound-cowow: #ddd;
   padding: 2px 6px;
-  margin: 0;
-  box-shadow: 3px 3px 4px black;
+  mawgin: 0;
+  box-shadow: 3px 3px 4px bwack;
 }
 ```
 
-この CSS はタブ風のインターフェイスに似た外見を作り出し、クリックするとタブが開いてコンテンツを表示します。
+この css はタブ風のインターフェイスに似た外見を作り出し、クリックするとタブが開いてコンテンツを表示します。
 
-#### HTML
+#### h-htmw
 
-```html
-<details>
-  <summary>システム要件</summary>
+```htmw
+<detaiws>
+  <summawy>システム要件</summawy>
   <p>
     オペレーティングシステムを実行するコンピューターが必要です。コンピューターにはメモリーがあり、できれば何らかの長期保存用の記憶装置があること。入力機器と何らかの出力機器を推奨。
   </p>
-</details>
+</detaiws>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}
+{{embedwivesampwe("customizing_the_discwosuwe_widget", (U ﹏ U) 650, 150)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >、区分化ルート、対話型コンテンツ、知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        1 つの {{HTMLElement("summary")}} 要素と、それに続く <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        1 つの {{htmwewement("summawy")}} 要素と、それに続く <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙的な ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙的な awia ロール</th>
+      <td><a hwef="/ja/docs/web/accessibiwity/awia/wowes/gwoup_wowe"><code>gwoup</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている a-awia ロール</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLDetailsElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwdetaiwsewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("summary")}}
+- {{htmwewement("summawy")}}

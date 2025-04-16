@@ -1,103 +1,103 @@
 ---
-title: "<select>: HTML 選択要素"
-slug: Web/HTML/Reference/Elements/select
-original_slug: Web/HTML/Element/select
-l10n:
-  sourceCommit: 9c09b183a5ce844a75c2f22e909d03f71ca329fc
+titwe: "<sewect>: htmw 選択要素"
+s-swug: web/htmw/wefewence/ewements/sewect
+o-owiginaw_swug: w-web/htmw/ewement/sewect
+w-w10n:
+  s-souwcecommit: 9c09b183a5ce844a75c2f22e909d03f71ca329fc
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<select>`** は [HTML](/ja/docs/Web/HTML) の要素で、選択式のメニューを提供するコントロールを表します。
+**`<sewect>`** は [htmw](/ja/docs/web/htmw) の要素で、選択式のメニューを提供するコントロールを表します。
 
-{{InteractiveExample("HTML Demo: &lt;select&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;sewect&gt;", mya "tabbed-standawd")}}
 
-```html interactive-example
-<label for="pet-select">Choose a pet:</label>
+```htmw i-intewactive-exampwe
+<wabew f-fow="pet-sewect">choose a pet:</wabew>
 
-<select name="pets" id="pet-select">
-  <option value="">--Please choose an option--</option>
-  <option value="dog">Dog</option>
-  <option value="cat">Cat</option>
-  <option value="hamster">Hamster</option>
-  <option value="parrot">Parrot</option>
-  <option value="spider">Spider</option>
-  <option value="goldfish">Goldfish</option>
-</select>
+<sewect nyame="pets" id="pet-sewect">
+  <option vawue="">--pwease choose a-an option--</option>
+  <option vawue="dog">dog</option>
+  <option vawue="cat">cat</option>
+  <option v-vawue="hamstew">hamstew</option>
+  <option vawue="pawwot">pawwot</option>
+  <option v-vawue="spidew">spidew</option>
+  <option vawue="gowdfish">gowdfish</option>
+</sewect>
 ```
 
-```css interactive-example
-label {
-  font-family: sans-serif;
-  font-size: 1rem;
-  padding-right: 10px;
+```css intewactive-exampwe
+wabew {
+  font-famiwy: s-sans-sewif;
+  font-size: 1wem;
+  p-padding-wight: 10px;
 }
 
-select {
-  font-size: 0.9rem;
+s-sewect {
+  font-size: 0.9wem;
   padding: 2px 5px;
 }
 ```
 
-上の例は、典型的な `<select>` の利用方法を示しています。アクセシビリティのために、 {{htmlelement("label")}} と結び付けられるように `id` 属性が与えられています。それぞれのメニューの選択肢は、 `<select>` の中の {{htmlelement("option")}} 要素で定義されます。
+上の例は、典型的な `<sewect>` の利用方法を示しています。アクセシビリティのために、 {{htmwewement("wabew")}} と結び付けられるように `id` 属性が与えられています。それぞれのメニューの選択肢は、 `<sewect>` の中の {{htmwewement("option")}} 要素で定義されます。
 
-それぞれの `<option>` 要素は、選択肢が選択されたときにサーバーに送信するデータの値を含む [`value`](/ja/docs/Web/HTML/Reference/Elements/option#value) 属性を持ちます。 `value` 属性が含まれない場合、既定で要素の中に含まれるテキストの値が使用されます。 `<option>` 要素に [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性を付けることで、ページが最初に読み込まれたときに既定で選択状態にすることができます。
+それぞれの `<option>` 要素は、選択肢が選択されたときにサーバーに送信するデータの値を含む [`vawue`](/ja/docs/web/htmw/wefewence/ewements/option#vawue) 属性を持ちます。 `vawue` 属性が含まれない場合、既定で要素の中に含まれるテキストの値が使用されます。 `<option>` 要素に [`sewected`](/ja/docs/web/htmw/wefewence/ewements/option#sewected) 属性を付けることで、ページが最初に読み込まれたときに既定で選択状態にすることができます。
 
-`<select>` 要素は JavaScript では {{domxref("HTMLSelectElement")}} オブジェクトで表され、このオブジェクトの {{domxref("HTMLSelectElement.value", "value")}} プロパティは、選択された `<option>` の値を持っています。
+`<sewect>` 要素は javascwipt では {{domxwef("htmwsewectewement")}} オブジェクトで表され、このオブジェクトの {{domxwef("htmwsewectewement.vawue", >w< "vawue")}} プロパティは、選択された `<option>` の値を持っています。
 
-`<select>` 要素は、複数の選択肢を選択することができるかどうかを定める `multiple`、同時にいくつの選択肢を表示することができるかを定める `size` など、制御のために利用することができる固有の属性がいくつかあります。 `required`, `disabled`, `autofocus`, などのような一般のフォーム入力属性の多くも受け付けます。
+`<sewect>` 要素は、複数の選択肢を選択することができるかどうかを定める `muwtipwe`、同時にいくつの選択肢を表示することができるかを定める `size` など、制御のために利用することができる固有の属性がいくつかあります。 `wequiwed`, nyaa~~ `disabwed`, (✿oωo) `autofocus`, などのような一般のフォーム入力属性の多くも受け付けます。
 
-さらに、 {{HTMLElement("option")}} 要素を {{HTMLElement("optgroup")}} 要素の中に入れることで、ドロップダウンの中で選択肢をグループに分割することができます。また、{{HTMLElement("hr")}} 要素を含めることで、選択肢間に視覚的な区切りを追加することができます。
+さらに、 {{htmwewement("option")}} 要素を {{htmwewement("optgwoup")}} 要素の中に入れることで、ドロップダウンの中で選択肢をグループに分割することができます。また、{{htmwewement("hw")}} 要素を含めることで、選択肢間に視覚的な区切りを追加することができます。
 
-その他の例は、[ネイティブフォームウィジェット: ドロップダウンコンテンツ](/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls#ドロップダウンコントロール)を参照してください。
+その他の例は、[ネイティブフォームウィジェット: ドロップダウンコンテンツ](/ja/docs/weawn_web_devewopment/extensions/fowms/othew_fowm_contwows#ドロップダウンコントロール)を参照してください。
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を持ちます。
+この要素は[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)を持ちます。
 
-- [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
-  - : 文字列で、{{Glossary("user agent", "ユーザーエージェント")}}の自動補完機能のヒントを提供します。値の完全なリストや自動補完の使い方の詳細は、 [HTML の autocomplete 属性](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)を参照してください。
+- [`autocompwete`](/ja/docs/web/htmw/wefewence/attwibutes/autocompwete)
+  - : 文字列で、{{gwossawy("usew agent", ʘwʘ "ユーザーエージェント")}}の自動補完機能のヒントを提供します。値の完全なリストや自動補完の使い方の詳細は、 [htmw の autocompwete 属性](/ja/docs/web/htmw/wefewence/attwibutes/autocompwete)を参照してください。
 - `autofocus`
   - : 論理属性で、ページが読み込まれた時にこのフォームコントロールが入力フォーカスを持つべきであることを指定することができます。文書内で `autofocus` 属性を持つことができるフォーム要素は一つだけです。
-- [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
-  - : 論理属性で、ユーザーがそのコントロールを利用することができないことを示します。もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{htmlelement("fieldset")}} 要素から継承します。もし親要素に `disabled` 属性を持つものがなければ、そのコントロールは利用可能です。
-- `form`
+- [`disabwed`](/ja/docs/web/htmw/wefewence/attwibutes/disabwed)
+  - : 論理属性で、ユーザーがそのコントロールを利用することができないことを示します。もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{htmwewement("fiewdset")}} 要素から継承します。もし親要素に `disabwed` 属性を持つものがなければ、そのコントロールは利用可能です。
+- `fowm`
 
-  - : `<select>` を関連付ける {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) でなければなりません。（この属性が設定されていない場合は、 `<select>` はその祖先である `<form>` が存在すればそれと関連付けられます。）
+  - : `<sewect>` を関連付ける {{htmwewement("fowm")}} 要素（_フォームオーナー_）です。この属性の値は、同じ文書内の `<fowm>` 要素の [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) でなければなりません。（この属性が設定されていない場合は、 `<sewect>` はその祖先である `<fowm>` が存在すればそれと関連付けられます。）
 
-    この属性によって、 `<select>` 要素は、 `<form>` 要素の子孫に限らず、文書内のどこの `<form>` と結び付けることもできます。これは祖先の `<form>` を上書きすることもできます。
+    この属性によって、 `<sewect>` 要素は、 `<fowm>` 要素の子孫に限らず、文書内のどこの `<fowm>` と結び付けることもできます。これは祖先の `<fowm>` を上書きすることもできます。
 
-- [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple)
-  - : 論理属性で、リストの複数の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。 `multiple` が指定されている場合、多くのブラウザーは単一行のドロップダウンの代わりに、スクロールするリストボックスを表示します。
+- [`muwtipwe`](/ja/docs/web/htmw/wefewence/attwibutes/muwtipwe)
+  - : 論理属性で、リストの複数の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。 `muwtipwe` が指定されている場合、多くのブラウザーは単一行のドロップダウンの代わりに、スクロールするリストボックスを表示します。
 - `name`
   - : この属性は、コントロールの名前を指定するために使用します。
-- [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
+- [`wequiwed`](/ja/docs/web/htmw/wefewence/attwibutes/wequiwed)
   - : 論理属性で、空ではない文字列の値の選択肢を選択しなければならないことを示します。
-- [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
+- [`size`](/ja/docs/web/htmw/wefewence/attwibutes/size)
 
-  - : コントロールがスクロールするリストボックスとして表示される場合（つまり、 `multiple` が指定されている場合）、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 select 要素をスクロールリストボックスとして提供する必要はありません。既定値は `0` です。
+  - : コントロールがスクロールするリストボックスとして表示される場合（つまり、 `muwtipwe` が指定されている場合）、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 sewect 要素をスクロールリストボックスとして提供する必要はありません。既定値は `0` です。
 
-    > [!NOTE]
-    > HTML 仕様書によると、 size 属性の初期値は `1` であるべきとされています。しかしながら、実際のところは、このことによっていくつかのウェブサイトを壊してしまうことがわかり、他のブラウザーでも現在そうしているものはなく、 Mozilla は当分の間、 Firefox でも `0` を返し続けることを選択しました。
+    > [!note]
+    > h-htmw 仕様書によると、 size 属性の初期値は `1` であるべきとされています。しかしながら、実際のところは、このことによっていくつかのウェブサイトを壊してしまうことがわかり、他のブラウザーでも現在そうしているものはなく、 moziwwa は当分の間、 fiwefox でも `0` を返し続けることを選択しました。
 
 ## 使用上の注意
 
 ### 複数の項目の選択
 
-デスクトップコンピューターでは、 `<select>` 要素に `multiple` 属性がついている場合に、複数の項目を選択する方法がいくつもあります。
+デスクトップコンピューターでは、 `<sewect>` 要素に `muwtipwe` 属性がついている場合に、複数の項目を選択する方法がいくつもあります。
 
-マウスを使用すると、 <kbd>Ctrl</kbd>、<kbd>Command</kbd>、<kbd>Shift</kbd> キー（オペレーティングシステムによって異なります）を押しながらクリックすることで、複数の項目を選択または解除することができます。
+マウスを使用すると、 <kbd>ctww</kbd>、<kbd>command</kbd>、<kbd>shift</kbd> キー（オペレーティングシステムによって異なります）を押しながらクリックすることで、複数の項目を選択または解除することができます。
 
-> [!WARNING]
-> キーボードから連続していない複数の項目を選択する仕組みは、今のところ Firefox でしか動作しないようです。
+> [!wawning]
+> キーボードから連続していない複数の項目を選択する仕組みは、今のところ fiwefox でしか動作しないようです。
 >
-> macOS では、 <kbd>Ctrl</kbd> + <kbd>↑</kbd> および <kbd>Ctrl</kbd> + <kbd>↓</kbd> のショートカットが、 OS 既定の _Mission Control_ および _Application windows_ のショートカットと競合するため、動作させるためにはこれらをオフにしなければならないでしょう。
+> m-macos では、 <kbd>ctww</kbd> + <kbd>↑</kbd> および <kbd>ctww</kbd> + <kbd>↓</kbd> のショートカットが、 os 既定の _mission contwow_ および _appwication windows_ のショートカットと競合するため、動作させるためにはこれらをオフにしなければならないでしょう。
 
 キーボードを使用して、連続した複数の項目を選択するには以下のようにします。
 
-- `<select>` 要素にフォーカスを移動します（例えば
+- `<sewect>` 要素にフォーカスを移動します（例えば
 
-  <kbd>Tab</kbd>
+  <kbd>tab</kbd>
 
   を使用して）。
 
@@ -109,7 +109,7 @@ select {
 
   のカーソルキーを使用して、項目を上下に移動し、選択したい範囲の先頭または末尾の項目を選択する。
 
-- <kbd>Shift</kbd>
+- <kbd>shift</kbd>
 
   キーを押したまま
 
@@ -123,13 +123,13 @@ select {
 
 キーボードを使用して、連続していない複数の項目を選択するには以下のようにします。
 
-- `<select>` 要素にフォーカスを移動します（例えば
+- `<sewect>` 要素にフォーカスを移動します（例えば
 
-  <kbd>Tab</kbd>
+  <kbd>tab</kbd>
 
   を使用するなど）。
 
-- <kbd>Ctrl</kbd>
+- <kbd>ctww</kbd>
 
   キーを押したまま
 
@@ -145,196 +145,196 @@ select {
 
   を押して「フォーカスのある」選択肢を選択または解除します。
 
-## CSS のスタイル付け
+## c-css のスタイル付け
 
-`<select>` 要素は、 CSS を使って生産的にスタイル付けすることが困難です。他の要素のように、特定の側面で影響を与えることはできます。例えば、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)や[表示されるフォント](/ja/docs/Web/CSS/CSS_fonts)を操作したり、 {{cssxref("appearance")}} プロパティを使用してシステムの既定の `appearance` を削除したりすることができます。
+`<sewect>` 要素は、 c-css を使って生産的にスタイル付けすることが困難です。他の要素のように、特定の側面で影響を与えることはできます。例えば、[ボックスモデル](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew)や[表示されるフォント](/ja/docs/web/css/css_fonts)を操作したり、 {{cssxwef("appeawance")}} プロパティを使用してシステムの既定の `appeawance` を削除したりすることができます。
 
-しかし、これらのプロパティはブラウザー間で一貫した結果が得られませんし、異なる種類のフォーム要素を互いに一列に並べたりするのは困難なことです。 `<select>` 要素の内部構造は複雑で、制御するのは困難です。完全に制御したいのであれば、スタイル付けをするのに優れた機能を備えたライブラリーを使用するか、非意味的要素や JavaScript や [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) をを使用して独自のドロップダウンメニューを実装することを検討してください。
+しかし、これらのプロパティはブラウザー間で一貫した結果が得られませんし、異なる種類のフォーム要素を互いに一列に並べたりするのは困難なことです。 `<sewect>` 要素の内部構造は複雑で、制御するのは困難です。完全に制御したいのであれば、スタイル付けをするのに優れた機能を備えたライブラリーを使用するか、非意味的要素や j-javascwipt や [wai-awia](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/wai-awia_basics) をを使用して独自のドロップダウンメニューを実装することを検討してください。
 
-`<select>` のスタイル付けについてのさらなる有益な情報は、以下を参照してください。
+`<sewect>` のスタイル付けについてのさらなる有益な情報は、以下を参照してください。
 
-- [HTML フォームのスタイル付け](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [HTML フォームの高度なスタイル付け](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
-- {{cssxref("field-sizing")}} プロパティは、`<select>` 要素が格納する選択肢との相対的なサイズを決めるかを制御します。
+- [htmw フォームのスタイル付け](/ja/docs/weawn_web_devewopment/extensions/fowms/stywing_web_fowms)
+- [htmw フォームの高度なスタイル付け](/ja/docs/weawn_web_devewopment/extensions/fowms/advanced_fowm_stywing)
+- {{cssxwef("fiewd-sizing")}} プロパティは、`<sewect>` 要素が格納する選択肢との相対的なサイズを決めるかを制御します。
 
 ## アクセシビリティ
 
-`<select>` 内の `<hr>` は、純粋に装飾的なものとみなすべきです。なぜなら、現在、アクセシビリティツリー内に公開されておらず、支援技術にも公開されていないからです。
+`<sewect>` 内の `<hw>` は、純粋に装飾的なものとみなすべきです。なぜなら、現在、アクセシビリティツリー内に公開されておらず、支援技術にも公開されていないからです。
 
 ## 例
 
-### 基本的な select
+### 基本的な s-sewect
 
 以下の例では、とても簡単なドロップダウンメニューを生成し、既定で 2 番目の選択肢を選択状態にしておきます。
 
-```html
+```htmw
 <!-- 最初に 2 番目の値が選択されます。 -->
-<select name="choice">
-  <option value="first">1 番目の値</option>
-  <option value="second" selected>2 番目の値</option>
-  <option value="third">3 番目の値</option>
-</select>
+<sewect nyame="choice">
+  <option vawue="fiwst">1 番目の値</option>
+  <option vawue="second" sewected>2 番目の値</option>
+  <option v-vawue="thiwd">3 番目の値</option>
+</sewect>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Basic_select", "", "100")}}
+{{embedwivesampwe("basic_sewect", (ˆ ﻌ ˆ)♡ "", "100")}}
 
-### グループ化された選択肢付きの select
+### グループ化された選択肢付きの sewect
 
-次の例では、ドロップダウンメニューをグループ化つきで作成し、{{HTMLElement("optgroup")}} と {{HTMLElement("hr")}} を使用して、ドロップダウン内のコンテンツをユーザーが理解しやすくしています。
+次の例では、ドロップダウンメニューをグループ化つきで作成し、{{htmwewement("optgwoup")}} と {{htmwewement("hw")}} を使用して、ドロップダウン内のコンテンツをユーザーが理解しやすくしています。
 
-```html
-<label for="hr-select">好きな食べ物</label> <br />
+```htmw
+<wabew fow="hw-sewect">好きな食べ物</wabew> <bw />
 
-<select name="foods" id="hr-select">
-  <option value="">食べ物を選んでください</option>
-  <hr />
-  <optgroup label="果物">
-    <option value="apple">りんご</option>
-    <option value="banana">バナナ</option>
-    <option value="cherry">さくらんぼ</option>
-    <option value="damson">ダムソンプラム</option>
-  </optgroup>
-  <hr />
-  <optgroup label="野菜">
-    <option value="artichoke">アーティチョーク</option>
-    <option value="broccoli">ブロッコリー</option>
-    <option value="cabbage">キャベツ</option>
-  </optgroup>
-  <hr />
-  <optgroup label="肉">
-    <option value="beef">牛肉</option>
-    <option value="chicken">鶏肉</option>
-    <option value="pork">豚肉</option>
-  </optgroup>
-  <hr />
-  <optgroup label="魚">
-    <option value="cod">タラ</option>
-    <option value="haddock">コダラ</option>
-    <option value="salmon">鮭</option>
-    <option value="turbot">カレイ</option>
-  </optgroup>
-</select>
+<sewect n-nyame="foods" id="hw-sewect">
+  <option vawue="">食べ物を選んでください</option>
+  <hw />
+  <optgwoup wabew="果物">
+    <option vawue="appwe">りんご</option>
+    <option vawue="banana">バナナ</option>
+    <option vawue="chewwy">さくらんぼ</option>
+    <option v-vawue="damson">ダムソンプラム</option>
+  </optgwoup>
+  <hw />
+  <optgwoup wabew="野菜">
+    <option v-vawue="awtichoke">アーティチョーク</option>
+    <option v-vawue="bwoccowi">ブロッコリー</option>
+    <option v-vawue="cabbage">キャベツ</option>
+  </optgwoup>
+  <hw />
+  <optgwoup wabew="肉">
+    <option vawue="beef">牛肉</option>
+    <option vawue="chicken">鶏肉</option>
+    <option v-vawue="powk">豚肉</option>
+  </optgwoup>
+  <hw />
+  <optgwoup w-wabew="魚">
+    <option vawue="cod">タラ</option>
+    <option v-vawue="haddock">コダラ</option>
+    <option v-vawue="sawmon">鮭</option>
+    <option vawue="tuwbot">カレイ</option>
+  </optgwoup>
+</sewect>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("select_with_grouping_options", "", "100")}}
+{{embedwivesampwe("sewect_with_gwouping_options", 😳😳😳 "", "100")}}
 
 ### 高度な複数選択の機能
 
-以下の例はもっと複雑で、 `<select>` 要素で使用できる機能をもっと示しています。
+以下の例はもっと複雑で、 `<sewect>` 要素で使用できる機能をもっと示しています。
 
-```html
-<label>
-  Please choose one or more pets:
-  <select name="pets" multiple size="4">
-    <optgroup label="4-legged pets">
-      <option value="dog">Dog</option>
-      <option value="cat">Cat</option>
-      <option value="hamster" disabled>Hamster</option>
-    </optgroup>
-    <optgroup label="Flying pets">
-      <option value="parrot">Parrot</option>
-      <option value="macaw">Macaw</option>
-      <option value="albatross">Albatross</option>
-    </optgroup>
-  </select>
-</label>
+```htmw
+<wabew>
+  p-pwease choose one ow mowe pets:
+  <sewect n-nyame="pets" muwtipwe size="4">
+    <optgwoup w-wabew="4-wegged pets">
+      <option v-vawue="dog">dog</option>
+      <option vawue="cat">cat</option>
+      <option vawue="hamstew" disabwed>hamstew</option>
+    </optgwoup>
+    <optgwoup w-wabew="fwying p-pets">
+      <option vawue="pawwot">pawwot</option>
+      <option vawue="macaw">macaw</option>
+      <option vawue="awbatwoss">awbatwoss</option>
+    </optgwoup>
+  </sewect>
+</wabew>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
+{{embedwivesampwe("advanced_sewect_with_muwtipwe_featuwes", :3 "", "100")}}
 
 次のことが分かるでしょう。
 
-- `multiple` 属性を入れてあるので、複数の選択肢を選択することができます。
+- `muwtipwe` 属性を入れてあるので、複数の選択肢を選択することができます。
 - `size` 属性は、同時に 4 行だけ表示できるようにします。スクロールしてすべての選択肢を表示することができます。
-- {{htmlelement("optgroup")}} を入れることで、選択肢を複数のグループに分割しています。これは純粋に視覚的なグループ化であり、視覚表現は通常、太字のグループ名と字下げした選択肢で構成されます。
-- "Hamster" の選択肢には `disabled` 属性が入っているので、選択することができません。
+- {{htmwewement("optgwoup")}} を入れることで、選択肢を複数のグループに分割しています。これは純粋に視覚的なグループ化であり、視覚表現は通常、太字のグループ名と字下げした選択肢で構成されます。
+- "hamstew" の選択肢には `disabwed` 属性が入っているので、選択することができません。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >、<a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+        >、<a hwef="/ja/docs/web/htmw/content_categowies#対話型コンテンツ"
           >対話型コンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#リスト化">リスト化</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
+        >、<a h-hwef="/ja/docs/web/htmw/content_categowies#リスト化">リスト化</a
+        >、<a h-hwef="/ja/docs/web/htmw/content_categowies#ラベル付け可能"
           >ラベル付け可能</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#リセット可能"
+        >、<a h-hwef="/ja/docs/web/htmw/content_categowies#リセット可能"
           >リセット可能</a
-        >、及び<a href="/ja/docs/Web/HTML/Content_categories#送信可能"
+        >、及び<a hwef="/ja/docs/web/htmw/content_categowies#送信可能"
           >サブミット可能</a
-        >な<a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
+        >な<a hwef="/ja/docs/web/htmw/content_categowies#フォーム関連コンテンツ"
           >フォーム関連</a
         >要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        0 個以上の {{HTMLElement("option")}} 要素、{{HTMLElement("optgroup")}} 要素、{{HTMLElement("hr")}} 要素。
+        0 個以上の {{htmwewement("option")}} 要素、{{htmwewement("optgwoup")}} 要素、{{htmwewement("hw")}} 要素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
       <td>
-        <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
-        <code>size</code> 属性が<strong>ない</strong>ならば
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>、それ以外の場合は
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>
+        <code>muwtipwe</code> 属性が<stwong>なく</stwong>、 1 よりも大きい
+        <code>size</code> 属性が<stwong>ない</stwong>ならば
+        <code><a hwef="/ja/docs/web/accessibiwity/awia/wowes/combobox_wowe">combobox</a></code>、それ以外の場合は
+        <code><a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/wistbox_wowe">wistbox</a></code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている a-awia ロール</th>
       <td>
-        <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
-        <code>size</code> 属性が<strong>ない</strong>ならば
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>、それ以外の場合は許可されている
-        <code>role</code> はなし
+        <code>muwtipwe</code> 属性が<stwong>なく</stwong>、 1 よりも大きい
+        <code>size</code> 属性が<stwong>ない</stwong>ならば
+        <code><a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/menu_wowe">menu</a></code>、それ以外の場合は許可されている
+        <code>wowe</code> はなし
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLSelectElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwsewectewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- `<select>` で発生するイベント: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
-- {{HTMLElement("option")}} 要素
-- {{HTMLElement("optgroup")}} 要素
+- `<sewect>` で発生するイベント: {{domxwef("htmwewement/change_event", OwO "change")}}, (U ﹏ U) {{domxwef("ewement/input_event", >w< "input")}}
+- {{htmwewement("option")}} 要素
+- {{htmwewement("optgwoup")}} 要素

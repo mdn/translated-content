@@ -1,169 +1,169 @@
 ---
-title: Firefox 8 for developers
-slug: Mozilla/Firefox/Releases/8
+titwe: fiwefox 8 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/8
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 8 は 2011 年 11 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 8 の変更点をまとめています。
+f-fiwefox 8 は 2011 年 11 月 8 日にリリースされました。このページでは、開発者に影響する f-fiwefox 8 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
-### HTML
+### h-htmw
 
-- [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement) に `crossOrigin` プロパティが追加され、また [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素に [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/img#attr-crossorigin) 属性が追加されました。(参考: [バグ 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299))
-- [`HTMLSelectElement.add()`](</ja/docs/Web/API/HTMLSelectElement#add()>) メソッドの引数に、インデックスが追加されました。インデックスが指す要素の前に、新たな項目が挿入されます。このメソッドはこれまで、項目のみがサポートされていました。(参考: [バグ 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200))
-- `HTMLIsIndexElement` コンストラクターが削除されました。Firefox 4 以前から、どの要素もこのインターフェイスをインプリメントしていませんでした。
-- HTML5 のコンテキストメニュー機能 (contextmenu 属性) がサポートされました。この機能によって、要素固有のメニュー項目をネイティブのコンテキストメニューに追加できます。(この機能は HTML5 仕様の変更を待っている関係で、現時点では試験実装という扱いです。参考: [バグ 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)'))
-- すべての要素に [`accesskeylabel`](/ja/docs/Web/HTML/Global_attributes/accesskeylabel) 属性がサポートされました。
-- [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) と [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) に `selectionDirection` アトリビュートが追加されました。また、`setSelectionRange()` メソッドが選択方向を指定できるようになりました。
+- [`htmwimageewement`](/ja/docs/web/api/htmwimageewement) に `cwossowigin` プロパティが追加され、また [`<img>`](/ja/docs/web/htmw/wefewence/ewements/img) 要素に [`cwossowigin`](/ja/docs/web/htmw/wefewence/ewements/img#attw-cwossowigin) 属性が追加されました。(参考: [バグ 664299](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=664299))
+- [`htmwsewectewement.add()`](</ja/docs/web/api/htmwsewectewement#add()>) メソッドの引数に、インデックスが追加されました。インデックスが指す要素の前に、新たな項目が挿入されます。このメソッドはこれまで、項目のみがサポートされていました。(参考: [バグ 666200](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=666200))
+- `htmwisindexewement` コンストラクターが削除されました。fiwefox 4 以前から、どの要素もこのインターフェイスをインプリメントしていませんでした。
+- h-htmw5 のコンテキストメニュー機能 (contextmenu 属性) がサポートされました。この機能によって、要素固有のメニュー項目をネイティブのコンテキストメニューに追加できます。(この機能は h-htmw5 仕様の変更を待っている関係で、現時点では試験実装という扱いです。参考: [バグ 617528](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=617528 'fixed: i-impwement t-the htmw5 "context menu" featuwe (contextmenu attwibute)'))
+- すべての要素に [`accesskeywabew`](/ja/docs/web/htmw/gwobaw_attwibutes/accesskeywabew) 属性がサポートされました。
+- [`<input>`](/ja/docs/web/htmw/wefewence/ewements/input) と [`<textawea>`](/ja/docs/web/htmw/wefewence/ewements/textawea) に `sewectiondiwection` アトリビュートが追加されました。また、`setsewectionwange()` メソッドが選択方向を指定できるようになりました。
 - `tabindex` 属性でフォーカス可能になった要素にフォーカスしたとき、ほとんどの要素でフォーカスリングが描画されるようになりました。
 
-### DOM
+### dom
 
-- [`insertAdjacentHTML`](/ja/docs/Web/API/Element/insertAdjacentHTML) メソッドが実装されました。
-- [`BlobBuilder`](/ja/docs/Web/API/Blob) に `getFile()` メソッドが追加されました。このメソッドは blob の内容をファイルとして返します。
-- 入れ子になった [`<label>`](/ja/docs/Web/HTML/Reference/Elements/label) のイベントハンドリングが修正されました。
-- ウィンドウ間での [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) に [`File`](/ja/docs/Web/API/File) と [`FileList`](/ja/docs/Web/API/FileList) が使えるようになりました。
-- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、見出しで改行した際、もしくはリスト編集モードから 2 回開業して抜け出す際、段落が挿入されるようになりました。(これまでは[`<br>`](/ja/docs/Web/HTML/Reference/Elements/br)でしたが、これからは[`<p>`](/ja/docs/Web/HTML/Reference/Elements/p)が挿入されます。)
-- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、1 行目に均等割付を与えたときに適切な処理を妨げるバグを修正しました。
-- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域の最初で delete もしくは backspace を押した際に、前のブロックに影響するバグを修正しました。
-- [`document.getSelection()`](/ja/docs/Web/API/Document/getSelection "DOM の getSelection() メソッドは、 Window インターフェイス及び Document インターフェイスで利用可能です。
-詳細については window.getSelection() の頁を参照して下さい。") が文字列化ではなく、[`window.getSelection()`](/ja/docs/Web/API/Window/getSelection) と同じ `Selection` オブジェクトを返すようになりました。
-- HTML5 の `selectionDirection` プロパティが実装されました。編集可能テキストで選択した方向を指定できます。
-- [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement) の `seekable` プロパティが実装されました。このプロパティは [`TimeRanges`](/ja/docs/Web/API/TimeRanges) を返します。
-- [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement)`.preload` 属性が適切な _enumerated value_ を反映するようになりました。
-- [`crossOrigin` プロパティ](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) に不正な値が使われた場合は "Anonymous" と扱われるようになりました。
-- [`window.navigator.cookieEnabled`](/ja/docs/Web/API/Window/navigator/cookieEnabled) が、サイトごとの設定で Cookie の設定が上書きされている場合においても正しい情報を返すようになりました。
+- [`insewtadjacenthtmw`](/ja/docs/web/api/ewement/insewtadjacenthtmw) メソッドが実装されました。
+- [`bwobbuiwdew`](/ja/docs/web/api/bwob) に `getfiwe()` メソッドが追加されました。このメソッドは bwob の内容をファイルとして返します。
+- 入れ子になった [`<wabew>`](/ja/docs/web/htmw/wefewence/ewements/wabew) のイベントハンドリングが修正されました。
+- ウィンドウ間での [`window.postmessage()`](/ja/docs/web/api/window/postmessage) に [`fiwe`](/ja/docs/web/api/fiwe) と [`fiwewist`](/ja/docs/web/api/fiwewist) が使えるようになりました。
+- [`ewement.contenteditabwe`](/ja/docs/web/api/ewement/contenteditabwe) な領域において、見出しで改行した際、もしくはリスト編集モードから 2 回開業して抜け出す際、段落が挿入されるようになりました。(これまでは[`<bw>`](/ja/docs/web/htmw/wefewence/ewements/bw)でしたが、これからは[`<p>`](/ja/docs/web/htmw/wefewence/ewements/p)が挿入されます。)
+- [`ewement.contenteditabwe`](/ja/docs/web/api/ewement/contenteditabwe) な領域において、1 行目に均等割付を与えたときに適切な処理を妨げるバグを修正しました。
+- [`ewement.contenteditabwe`](/ja/docs/web/api/ewement/contenteditabwe) な領域の最初で d-dewete もしくは backspace を押した際に、前のブロックに影響するバグを修正しました。
+- [`document.getsewection()`](/ja/docs/web/api/document/getsewection "dom の getsewection() メソッドは、 w-window インターフェイス及び document インターフェイスで利用可能です。
+詳細については w-window.getsewection() の頁を参照して下さい。") が文字列化ではなく、[`window.getsewection()`](/ja/docs/web/api/window/getsewection) と同じ `sewection` オブジェクトを返すようになりました。
+- htmw5 の `sewectiondiwection` プロパティが実装されました。編集可能テキストで選択した方向を指定できます。
+- [`htmwmediaewement`](/ja/docs/web/api/htmwmediaewement) の `seekabwe` プロパティが実装されました。このプロパティは [`timewanges`](/ja/docs/web/api/timewanges) を返します。
+- [`htmwmediaewement`](/ja/docs/web/api/htmwmediaewement)`.pwewoad` 属性が適切な _enumewated vawue_ を反映するようになりました。
+- [`cwossowigin` プロパティ](/ja/docs/web/htmw/wefewence/attwibutes/cwossowigin) に不正な値が使われた場合は "anonymous" と扱われるようになりました。
+- [`window.navigatow.cookieenabwed`](/ja/docs/web/api/window/navigatow/cookieenabwed) が、サイトごとの設定で cookie の設定が上書きされている場合においても正しい情報を返すようになりました。
 
-### JavaScript
+### j-javascwipt
 
-- 引数なしで呼び出された [`RegExp.exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`RegExp.test()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) が文字列 "undefined" にマッチするようになりました。
-- 引数なし、もしくは `undefined` をとり呼び出された [`String.search()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/search), [`String.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match) が空文字列にマッチするようになり、つまりはすべての文字列にマッチするようになりました。
-- ウォッチリストのサポートが行われました。ウォッチリストは (非標準の) [`watch()`](/ja/docs/JavaScript/Reference/Global_Objects/Object/watch) メソッドおよび [`unwatch()`](/ja/docs/JavaScript/Reference/Global_Objects/Object/unwatch) メソッドから利用できます。
+- 引数なしで呼び出された [`wegexp.exec()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec), (ꈍᴗꈍ) [`wegexp.test()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/test) が文字列 "undefined" にマッチするようになりました。
+- 引数なし、もしくは `undefined` をとり呼び出された [`stwing.seawch()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/seawch), 😳 [`stwing.match()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match) が空文字列にマッチするようになり、つまりはすべての文字列にマッチするようになりました。
+- ウォッチリストのサポートが行われました。ウォッチリストは (非標準の) [`watch()`](/ja/docs/javascwipt/wefewence/gwobaw_objects/object/watch) メソッドおよび [`unwatch()`](/ja/docs/javascwipt/wefewence/gwobaw_objects/object/unwatch) メソッドから利用できます。
 
-### CSS
+### css
 
-- [`<resolution>`](/ja/docs/Web/CSS/resolution) が仕様に従い、[`<integer>`](/ja/docs/Web/CSS/integer) だけでなく [`<number>`](/ja/docs/Web/CSS/number) もサポートしました。
-- [`hyphens`](/ja/docs/Web/CSS/hyphens) 利用時のハイフネーション規則がより多くの言語でサポートされました。
-- [`background-size`](/ja/docs/Web/CSS/background-size) の処理が仕様により従ったものになりました。
-- これまで Quriks モードでの [`text-decoration`](/ja/docs/Web/CSS/text-decoration) は、太い線で描画され、また子孫要素のテキストに沿って描画されていました。Firefox 8 からは、標準モードにより近い表示になります。
-- 要素の水平方向への配置がより仕様に沿った実装になりました。この件に関するドキュメントを準備中ですが、今は [バグ 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780) のコメント 23 をお読みください。
-- [SVG 画像の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds) が背景画像においても適切に処理されるようになりました。
+- [`<wesowution>`](/ja/docs/web/css/wesowution) が仕様に従い、[`<integew>`](/ja/docs/web/css/integew) だけでなく [`<numbew>`](/ja/docs/web/css/numbew) もサポートしました。
+- [`hyphens`](/ja/docs/web/css/hyphens) 利用時のハイフネーション規則がより多くの言語でサポートされました。
+- [`backgwound-size`](/ja/docs/web/css/backgwound-size) の処理が仕様により従ったものになりました。
+- これまで q-quwiks モードでの [`text-decowation`](/ja/docs/web/css/text-decowation) は、太い線で描画され、また子孫要素のテキストに沿って描画されていました。fiwefox 8 からは、標準モードにより近い表示になります。
+- 要素の水平方向への配置がより仕様に沿った実装になりました。この件に関するドキュメントを準備中ですが、今は [バグ 682780](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=682780) のコメント 23 をお読みください。
+- [svg 画像の拡大縮小](/ja/docs/web/css/css_backgwounds_and_bowdews/scawing_of_svg_backgwounds) が背景画像においても適切に処理されるようになりました。
 
-### Network
+### n-nyetwowk
 
-- ダブルクォートが [RFC 2231](https://tools.ietf.org/html/rfc2231)/[RFC 5987](https://tools.ietf.org/html/rfc5987) エンコーディングの区切り子として利用できなくなりました。これはそれらの RFC への準拠によるものです。
-- MIME ヘッダーフィールドのパーサーは、引数に「=」が含まれない `Content-Disposition` ヘッダーを受け付けなくなりました。
-- JavaScript が無効な環境ではスクリプトファイルをダウンロードしないようになりました。
-- SSL 2.0 のサポートが打ち切られました。
+- ダブルクォートが [wfc 2231](https://toows.ietf.owg/htmw/wfc2231)/[wfc 5987](https://toows.ietf.owg/htmw/wfc5987) エンコーディングの区切り子として利用できなくなりました。これはそれらの wfc への準拠によるものです。
+- mime ヘッダーフィールドのパーサーは、引数に「=」が含まれない `content-disposition` ヘッダーを受け付けなくなりました。
+- javascwipt が無効な環境ではスクリプトファイルをダウンロードしないようになりました。
+- ssw 2.0 のサポートが打ち切られました。
 
-### WebSocket
+### websocket
 
-- WebSocket オブジェクトの [`send()`](</ja/docs/WebSockets/WebSockets_reference/WebSocket#send()> "WebSockets/WebSockets_reference/WebSocket#send()") メソッドが不適切に真偽値を返していた挙動が修正されました。
-- [`WebSocket`](/ja/docs/Web/API/WebSocket) オブジェクトの [`close()`](</ja/docs/WebSockets/WebSockets_reference/WebSocket#close()> "WebSockets/WebSockets_reference/WebSocket#close()") メソッドが現在の標準草案に従ったものになりました。また、クローズイベントが適切に [`CloseEvent`](/ja/docs/Web/API/CloseEvent) インターフェイスを利用するようになりました。
-- The [`WebSocket`](/ja/docs/Web/API/WebSocket) オブジェクトの `extensions` アトリビュートがサポートされました。
-- WebSocket コンストラクターがひとつのプロトコル文字列だけではなく、プロトコルの配列もサポートするようになりました。
-- SSL と 非 SSL の混在が WebSocket で認められなくなりました。
-- WebSocket の接続エラーが `onerror` ハンドラーをトリガーするようになりました。
-- [WebSocket](/ja/docs/Web/API/WebSockets_API) API が最新版の仕様に追従しました。(参考: [バグ 674890](https://bugzilla.mozilla.org/show_bug.cgi?id=674890), [バグ 674527](https://bugzilla.mozilla.org/show_bug.cgi?id=674527), [バグ 674716](https://bugzilla.mozilla.org/show_bug.cgi?id=674716))
-- WebSocket の deflate-stream 拡張が無効にされました。この拡張は非推奨とされており、またいくつかのウェブサイトとの互換性を損ねていました。
+- w-websocket オブジェクトの [`send()`](</ja/docs/websockets/websockets_wefewence/websocket#send()> "websockets/websockets_wefewence/websocket#send()") メソッドが不適切に真偽値を返していた挙動が修正されました。
+- [`websocket`](/ja/docs/web/api/websocket) オブジェクトの [`cwose()`](</ja/docs/websockets/websockets_wefewence/websocket#cwose()> "websockets/websockets_wefewence/websocket#cwose()") メソッドが現在の標準草案に従ったものになりました。また、クローズイベントが適切に [`cwoseevent`](/ja/docs/web/api/cwoseevent) インターフェイスを利用するようになりました。
+- the [`websocket`](/ja/docs/web/api/websocket) オブジェクトの `extensions` アトリビュートがサポートされました。
+- websocket コンストラクターがひとつのプロトコル文字列だけではなく、プロトコルの配列もサポートするようになりました。
+- ssw と 非 ssw の混在が websocket で認められなくなりました。
+- w-websocket の接続エラーが `onewwow` ハンドラーをトリガーするようになりました。
+- [websocket](/ja/docs/web/api/websockets_api) api が最新版の仕様に追従しました。(参考: [バグ 674890](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=674890), 😳😳😳 [バグ 674527](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=674527), mya [バグ 674716](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=674716))
+- w-websocket の d-defwate-stweam 拡張が無効にされました。この拡張は非推奨とされており、またいくつかのウェブサイトとの互換性を損ねていました。
 
-### WebGL
+### w-webgw
 
-- 他のドメインからのテクスチャ読み込みが再び可能になりました。ただし、CORS によってアクセスを許可されている場合に限ります。(参考: [Cross-domain textures](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL))
-- Cross-process rendering with Direct2D/Direct3D 10.
+- 他のドメインからのテクスチャ読み込みが再び可能になりました。ただし、cows によってアクセスを許可されている場合に限ります。(参考: [cwoss-domain t-textuwes](/ja/docs/web/api/webgw_api/tutowiaw/using_textuwes_in_webgw))
+- cwoss-pwocess wendewing w-with diwect2d/diwect3d 10. mya
 
-### MathML
+### mathmw
 
-- [`<math>`](/ja/docs/Web/MathML/Reference/Element/math) 要素に `displaystyle` 属性のサポートが追加されました。
-- [`<mtable>`](/ja/docs/Web/MathML/Reference/Element/mtable) 要素の `align` において、_負の行数_ の解釈が修正されました。
+- [`<math>`](/ja/docs/web/mathmw/wefewence/ewement/math) 要素に `dispwaystywe` 属性のサポートが追加されました。
+- [`<mtabwe>`](/ja/docs/web/mathmw/wefewence/ewement/mtabwe) 要素の `awign` において、_負の行数_ の解釈が修正されました。
 
 ### 開発者ツール
 
-- [`console`](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#the_console_object) オブジェクトが `dir()` メソッドをサポートしました。個のメソッドは指定したオブジェクトについて、インタラクティブなプロパティリストを表示します。
+- [`consowe`](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw#the_consowe_object) オブジェクトが `diw()` メソッドをサポートしました。個のメソッドは指定したオブジェクトについて、インタラクティブなプロパティリストを表示します。
 
-## Mozilla 開発者とアドオン開発者向けの変更点
+## moziwwa 開発者とアドオン開発者向けの変更点
 
-アドオンを Firefox 8 互換にする際に必要となりそうな変更点は [Updating add-ons for Firefox 8](/ja/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_8) にまとめられています。
+アドオンを fiwefox 8 互換にする際に必要となりそうな変更点は [updating a-add-ons fow fiwefox 8](/ja/docs/moziwwa/fiwefox/updating_add-ons_fow_fiwefox_8) にまとめられています。
 
-> [!NOTE]
-> Firefox 8 では、従来のメジャーリリースと同様に、バイナリーコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリーインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> [!note]
+> fiwefox 8 では、従来のメジャーリリースと同様に、バイナリーコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリーインターフェイス](/ja/docs/devewopew_guide/intewface_compatibiwity#binawy_intewfaces) をご覧ください。
 
-### XPCOM
+### xpcom
 
-- [`Components.utils`](/ja/docs/Components.utils)
-  - : 特定のコンパートメントでより簡単にオブジェクトを作成できるようにするため、新しいメソッド [`createObjectIn()`](/ja/docs/Components.utils.createObjectIn) と [`makeObjectPropsNormal()`](/ja/docs/Components.utils.makeObjectPropsNormal) が追加されました。
+- [`components.utiws`](/ja/docs/components.utiws)
+  - : 特定のコンパートメントでより簡単にオブジェクトを作成できるようにするため、新しいメソッド [`cweateobjectin()`](/ja/docs/components.utiws.cweateobjectin) と [`makeobjectpwopsnowmaw()`](/ja/docs/components.utiws.makeobjectpwopsnowmaw) が追加されました。
 
-#### その他の XPCOM 関連の変更
+#### その他の xpcom 関連の変更
 
-- You can now instantiate DOM [`File`](/ja/docs/Web/API/File) objects from component code by simply doing new File, instead of having to instantiate an [`nsIDOMFile`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile) directly.
-- The `nsTPtrArray` array type has been removed. Its functionality is now all available on `nsTArray`, which now offers the `SafeElementAt()` method when instantiated using a pointer type. See the section on [`SafeElementAt()`](/ja/docs/XPCOM_array_guide#Bounds-safe_access_to_elements) in the [XPCOM array guide](/ja/docs/XPCOM_array_guide) for more information.
+- you can now instantiate d-dom [`fiwe`](/ja/docs/web/api/fiwe) objects fwom c-component code b-by simpwy doing n-new fiwe, (⑅˘꒳˘) instead of having to instantiate an [`nsidomfiwe`](/ja/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidomfiwe) diwectwy. (U ﹏ U)
+- t-the `nstptwawway` a-awway type has been wemoved. mya i-its functionawity i-is nyow aww avaiwabwe on `nstawway`, ʘwʘ w-which now offews the `safeewementat()` m-method when instantiated using a pointew type. (˘ω˘) s-see the section on [`safeewementat()`](/ja/docs/xpcom_awway_guide#bounds-safe_access_to_ewements) i-in the [xpcom awway guide](/ja/docs/xpcom_awway_guide) f-fow mowe i-infowmation. (U ﹏ U)
 
-### Workers
+### wowkews
 
-ChromeWorkers から XPCOM オブジェクトにアクセスできなくなりました。XPConnect は [バグ 649537](https://bugzilla.mozilla.org/show_bug.cgi?id=649537) によりワーカーコンテキストで無効にされています。
+chwomewowkews から xpcom オブジェクトにアクセスできなくなりました。xpconnect は [バグ 649537](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=649537) によりワーカーコンテキストで無効にされています。
 
-### XUL
+### xuw
 
-- A bug in [`document.execCommand()`](/ja/docs/Web/API/Document/execCommand) that occurred when calling it on the value of `contentDocument` has been fixed. Since Firefox 3, this resulted in errors instead of working correctly.
-- [Bootstrapped add-ons](/ja/docs/Extensions/Bootstrapped_extensions) can now load chrome using a [`chrome.manifest`](/ja/docs/Chrome_Registration) file. See the section [Adding user interface with a chrome.manifest](/ja/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
+- a bug in [`document.execcommand()`](/ja/docs/web/api/document/execcommand) that occuwwed when cawwing i-it on the v-vawue of `contentdocument` has been f-fixed. ^•ﻌ•^ since f-fiwefox 3, (˘ω˘) this w-wesuwted in ewwows instead of wowking cowwectwy. :3
+- [bootstwapped add-ons](/ja/docs/extensions/bootstwapped_extensions) c-can nyow woad chwome using a [`chwome.manifest`](/ja/docs/chwome_wegistwation) fiwe. ^^;; see the section [adding u-usew intewface with a chwome.manifest](/ja/docs/extensions/bootstwapped_extensions#adding_usew_intewface_with_a_chwome.manifest) f-fow detaiws. 🥺
 
-### JavaScript コードモジュール
+### j-javascwipt コードモジュール
 
-#### ISO8601DateUtils.jsm
+#### i-iso8601dateutiws.jsm
 
-- このコードモジュールは削除されました。[`Date.parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) が ISO 8601 形式の日付を受け付けるようになり、新しい [`Date.toISOString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString) で ISO 形式の日付と時刻を出力できます。今後は ISO8601DateUtils.jsm の代わりにこれらのメソッドを使ってください。なお、今のところこれらは [タイムゾーンに対応していません](https://bugzilla.mozilla.org/show_bug.cgi?id=693077)。
+- このコードモジュールは削除されました。[`date.pawse()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/date/pawse) が iso 8601 形式の日付を受け付けるようになり、新しい [`date.toisostwing()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/date/toisostwing) で i-iso 形式の日付と時刻を出力できます。今後は i-iso8601dateutiws.jsm の代わりにこれらのメソッドを使ってください。なお、今のところこれらは [タイムゾーンに対応していません](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=693077)。
 
 ### ビルドシステムの変更
 
 - 以下のビルド設定オプションは削除されました。
 
-  - `--enable-timeline`
-  - `--disable-storage`
+  - `--enabwe-timewine`
+  - `--disabwe-stowage`
   - `--necko-disk-cache`
 
-- When compiling IDL files to headers, the header file `jspubtd.h` is automatically included when needed. Manual inclusions of `jspubtd.h` and/or `jsapi.h` in IDL files that use jsval or \[implicit_jscontext] are no longer necessary.
+- w-when compiwing i-idw fiwes to headews, (⑅˘꒳˘) the headew fiwe `jspubtd.h` i-is automaticawwy i-incwuded when n-needed. nyaa~~ manuaw i-incwusions of `jspubtd.h` a-and/ow `jsapi.h` in idw fiwes that use jsvaw ow \[impwicit_jscontext] a-awe nyo wongew nyecessawy. :3
 
 ### クロームの登録
 
-- Gecko のバージョン互換性を指定する [`platformversion`](/ja/docs/Chrome_Registration#platformversion) フラグが chrome.manifest でも使えるようになりました。
+- gecko のバージョン互換性を指定する [`pwatfowmvewsion`](/ja/docs/chwome_wegistwation#pwatfowmvewsion) フラグが chwome.manifest でも使えるようになりました。
 
 ### インターフェイスの変更
 
-- [`mozIJSSubScriptLoader.loadSubScript()`](/ja/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript%28%29) メソッドが、可能な場合、起動キャッシュからスクリプトを読み込むようになりました。
-- [`nsIAccessNode`](/ja/docs/XPCOM_Interface_Reference/NsIAccessNode) インターフェイスから `ownerWindow` 属性が削除されました。
-- [`nsIDOMStorageWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMStorageWindow) インターフェイスは [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インターフェイスへ統合されました。
-- [`nsIDOMWindowInternal`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowInternal) インターフェイスの全メンバーが [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インターフェイスへ移動されました。インターフェイス自体は互換性維持のため Firefox 9 まで (メンバーを持たない状態で) 残されます。
-- [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) の `KIND_MAPPED` 属性が廃止され、代わりに `KIND_NONHEAP` 属性と新しい単位型 `UNITS_COUNT_CUMULATIVE`、`UNITS_PERCENTAGE` が追加されました。
-- [`nsINetworkLinkService`](/ja/docs/XPCOM_Interface_Reference/nsINetworkLinkService) インターフェイスに `linkType` 属性が追加されました。この属性で使用中のネットワーク接続の種類を参照できます。ただし、今のところすべての OS で `LINK_TYPE_UNKNOWN` が返ります。Android 対応は、セキュリティの懸念が報告されたため、バックアウトされました。
-- [`nsISelection2`](/ja/docs/XPCOM_Interface_Reference/nsISelection2) インターフェイスは [`nsISelectionPrivate`](/ja/docs/XPCOM_Interface_Reference/nsISelectionPrivate) インターフェイスへ統合されました。
-- [`nsISelection3`](/ja/docs/XPCOM_Interface_Reference/nsISelection3) インターフェイスは [`nsISelection`](/ja/docs/Web/API/Selection) インターフェイスへ統合されました。
-- [`nsISessionStartup`](/ja/docs/XPCOM_Interface_Reference/nsISessionStartup) の属性の状態が、パフォーマンス上の理由から、文字列型ではなく [`jsval`](/ja/docs/SpiderMonkey/JSAPI_Reference/Jsval) 型になりました。
-- [`nsIDocShell`](/ja/docs/XPCOM_Interface_Reference/nsIDocShell) の `isActive` 属性は、最小化されたウィンドウでは `false` を返すようになりました。
+- [`mozijssubscwiptwoadew.woadsubscwipt()`](/ja/docs/xpcom_intewface_wefewence/mozijssubscwiptwoadew#woadsubscwipt%28%29) メソッドが、可能な場合、起動キャッシュからスクリプトを読み込むようになりました。
+- [`nsiaccessnode`](/ja/docs/xpcom_intewface_wefewence/nsiaccessnode) インターフェイスから `ownewwindow` 属性が削除されました。
+- [`nsidomstowagewindow`](/ja/docs/xpcom_intewface_wefewence/nsidomstowagewindow) インターフェイスは [`nsidomwindow`](/ja/docs/xpcom_intewface_wefewence/nsidomwindow) インターフェイスへ統合されました。
+- [`nsidomwindowintewnaw`](/ja/docs/xpcom_intewface_wefewence/nsidomwindowintewnaw) インターフェイスの全メンバーが [`nsidomwindow`](/ja/docs/xpcom_intewface_wefewence/nsidomwindow) インターフェイスへ移動されました。インターフェイス自体は互換性維持のため fiwefox 9 まで (メンバーを持たない状態で) 残されます。
+- [`nsimemowywepowtew`](/ja/docs/xpcom_intewface_wefewence/nsimemowywepowtew) の `kind_mapped` 属性が廃止され、代わりに `kind_nonheap` 属性と新しい単位型 `units_count_cumuwative`、`units_pewcentage` が追加されました。
+- [`nsinetwowkwinksewvice`](/ja/docs/xpcom_intewface_wefewence/nsinetwowkwinksewvice) インターフェイスに `winktype` 属性が追加されました。この属性で使用中のネットワーク接続の種類を参照できます。ただし、今のところすべての os で `wink_type_unknown` が返ります。andwoid 対応は、セキュリティの懸念が報告されたため、バックアウトされました。
+- [`nsisewection2`](/ja/docs/xpcom_intewface_wefewence/nsisewection2) インターフェイスは [`nsisewectionpwivate`](/ja/docs/xpcom_intewface_wefewence/nsisewectionpwivate) インターフェイスへ統合されました。
+- [`nsisewection3`](/ja/docs/xpcom_intewface_wefewence/nsisewection3) インターフェイスは [`nsisewection`](/ja/docs/web/api/sewection) インターフェイスへ統合されました。
+- [`nsisessionstawtup`](/ja/docs/xpcom_intewface_wefewence/nsisessionstawtup) の属性の状態が、パフォーマンス上の理由から、文字列型ではなく [`jsvaw`](/ja/docs/spidewmonkey/jsapi_wefewence/jsvaw) 型になりました。
+- [`nsidocsheww`](/ja/docs/xpcom_intewface_wefewence/nsidocsheww) の `isactive` 属性は、最小化されたウィンドウでは `fawse` を返すようになりました。
 
 #### 削除されたインターフェイス
 
 次のインターフェイスは内部で使用されていたもので、必要がなくなったため削除されました。
 
-- `nsITimelineService`
-- `nsIDOMHTMLIsIndexElement`
+- `nsitimewinesewvice`
+- `nsidomhtmwisindexewement`
 
-[`nsIWorkerFactory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWorkerFactory) インターフェイスも削除されました。ワーカーは `Worker`, `ChromeWorker` コンストラクターから生成可能です。
+[`nsiwowkewfactowy`](/ja/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiwowkewfactowy) インターフェイスも削除されました。ワーカーは `wowkew`, ( ͡o ω ͡o ) `chwomewowkew` コンストラクターから生成可能です。
 
 ### その他の変更
 
 - ウィンドウが最小化されたとき、最小化から復帰したとき、あるいは全画面表示と通常表示の切り替えが行われたときに、`window` が `sizemodechange` イベントを受け取るようになりました。
-- [`extensions.autoDisableScopes` 設定を使う](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#preventing_automatic_install_from_specific_locations) ことで、特定の場所からのアドオン自動インストールを無効化できるようになりました。
+- [`extensions.autodisabwescopes` 設定を使う](https://extensionwowkshop.com/documentation/pubwish/signing-and-distwibution-ovewview/#pweventing_automatic_instaww_fwom_specific_wocations) ことで、特定の場所からのアドオン自動インストールを無効化できるようになりました。
 
 ## 参考
 
-- [Firefox 7 for developers](/ja/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 for developers](/ja/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 for developers](/ja/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 for developers](/ja/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 for developers](/ja/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 for developers](/ja/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 for developers](/ja/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 for developers](/ja/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 for developers](/ja/docs/Mozilla/Firefox/Releases/1.5)
+- [fiwefox 7 f-fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/7)
+- [fiwefox 6 fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/6)
+- [fiwefox 5 fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/5)
+- [fiwefox 4 f-fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/4)
+- [fiwefox 3.6 f-fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/3.6)
+- [fiwefox 3.5 f-fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/3.5)
+- [fiwefox 3 f-fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/3)
+- [fiwefox 2 fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/2)
+- [fiwefox 1.5 f-fow devewopews](/ja/docs/moziwwa/fiwefox/weweases/1.5)

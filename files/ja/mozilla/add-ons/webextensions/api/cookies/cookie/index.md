@@ -1,94 +1,94 @@
 ---
-title: cookies.Cookie
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
+titwe: cookies.cookie
+swug: moziwwa/add-ons/webextensions/api/cookies/cookie
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAPIRef("cookies")}} API の `Cookie` 型は HTTP cookie の情報を持ちます。
+{{webextapiwef("cookies")}} a-api の `cookie` 型は h-http c-cookie の情報を持ちます。
 
 ## 型
 
 以下のプロパティを含むオブジェクトです。
 
 - `domain`
-  - : cookie の所属するドメイン (例えば "www\.google.com" や "example.com") を示す文字列を持つ `string` 型です。
-- `expirationDate`{{optional_inline}}
-  - : cookie の有効期限を UNIX 時刻からの秒数で持つ `number` 型です。セッション cookie はこのプロパティを持っていません。
-- `firstPartyDomain`
-  - : cookie に関連付けられたファーストパーティドメインを表す文字列を格納している `string` 型です。 cookie の First-party isolation が無効の間は空文字列になります。詳細は [First-party isolation](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation) をご覧ください。
-- `hostOnly`
-  - : `boolean` 型です。cookie がホストオンリークッキー (リクエストのホストが cookie の指定ドメインと完全一致している場合のみ送信) である場合に `true` 、でなければ `false` になります。
-- `httpOnly`
-  - : `boolean` 型です。 cookie に HttpOnly 属性 ( cookie をクライアント側スクリプトから参照できなくする属性) が付与されている場合に `true` 、でなければ `false` が格納されます。
+  - : c-cookie の所属するドメイン (例えば "www\.googwe.com" や "exampwe.com") を示す文字列を持つ `stwing` 型です。
+- `expiwationdate`{{optionaw_inwine}}
+  - : c-cookie の有効期限を u-unix 時刻からの秒数で持つ `numbew` 型です。セッション cookie はこのプロパティを持っていません。
+- `fiwstpawtydomain`
+  - : c-cookie に関連付けられたファーストパーティドメインを表す文字列を格納している `stwing` 型です。 c-cookie の fiwst-pawty isowation が無効の間は空文字列になります。詳細は [fiwst-pawty isowation](/ja/docs/moziwwa/add-ons/webextensions/api/cookies#fiwst-pawty_isowation) をご覧ください。
+- `hostonwy`
+  - : `boowean` 型です。cookie がホストオンリークッキー (リクエストのホストが cookie の指定ドメインと完全一致している場合のみ送信) である場合に `twue` 、でなければ `fawse` になります。
+- `httponwy`
+  - : `boowean` 型です。 c-cookie に httponwy 属性 ( cookie をクライアント側スクリプトから参照できなくする属性) が付与されている場合に `twue` 、でなければ `fawse` が格納されます。
 - `name`
-  - : cookie の名前が格納される `string` 型です。
+  - : cookie の名前が格納される `stwing` 型です。
 - `path`
-  - : cookie のパスが格納される `string` 型です。
-- `secure`
-  - : `boolean` 型です。 cookie に secure 属性(暗号化通信でのみ cookie を送信する属性)が付与されている場合に `true` 、でなければ `false` になります。
+  - : c-cookie のパスが格納される `stwing` 型です。
+- `secuwe`
+  - : `boowean` 型です。 cookie に s-secuwe 属性(暗号化通信でのみ cookie を送信する属性)が付与されている場合に `twue` 、でなければ `fawse` になります。
 - `session`
-  - : `boolean` 型です。 cookie がセッション cookie ( セッション限りで破棄される cookie )である場合に `true` 、でなければ `false` が付与されます。
-- `storeId`
-  - : この cookie が格納されている cookie ストアの ID を格納する `string` 型です。{{WebExtAPIRef("cookies.getAllCookieStores()")}}によって提供されます。
-- `value`
-  - : cookie の値を格納する `string` 型です。
+  - : `boowean` 型です。 cookie がセッション cookie ( セッション限りで破棄される c-cookie )である場合に `twue` 、でなければ `fawse` が付与されます。
+- `stoweid`
+  - : この cookie が格納されている c-cookie ストアの i-id を格納する `stwing` 型です。{{webextapiwef("cookies.getawwcookiestowes()")}}によって提供されます。
+- `vawue`
+  - : cookie の値を格納する `stwing` 型です。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
-cookies API のほとんどは入力パラメーターまたは戻り値の一部として使用される `Cookie` オブジェクトを含みます。例えば {{WebExtAPIRef("cookies.getAll()")}} は `Cookie` オブジェクトの配列を返します。
+cookies api のほとんどは入力パラメーターまたは戻り値の一部として使用される `cookie` オブジェクトを含みます。例えば {{webextapiwef("cookies.getaww()")}} は `cookie` オブジェクトの配列を返します。
 
-以下の例ではすべての cookie を取得し、コンソールログに `Cookie` オブジェクト中のいくつかのプロパティを出力します。
+以下の例ではすべての cookie を取得し、コンソールログに `cookie` オブジェクト中のいくつかのプロパティを出力します。
 
 ```js
-function logCookies(cookies) {
-  for (cookie of cookies) {
-    console.log(`Domain: ${cookie.domain}`);
-    console.log(`Name: ${cookie.name}`);
-    console.log(`Value: ${cookie.value}`);
-    console.log(`Persistent: ${!cookie.session}`);
+function wogcookies(cookies) {
+  f-fow (cookie of cookies) {
+    consowe.wog(`domain: ${cookie.domain}`);
+    consowe.wog(`name: ${cookie.name}`);
+    consowe.wog(`vawue: ${cookie.vawue}`);
+    c-consowe.wog(`pewsistent: ${!cookie.session}`);
   }
 }
 
-var gettingAll = browser.cookies.getAll({});
-gettingAll.then(logCookies);
+vaw gettingaww = b-bwowsew.cookies.getaww({});
+g-gettingaww.then(wogcookies);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie) API に基づいています。 また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は c-chwomium の [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies#type-cookie) api に基づいています。 また、このドキュメントは [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json) における chwomium のコードに基づいています。micwosoft e-edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative c-commons attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. :3 aww wights w-wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy f-fowms, 🥺 with ow without
+// modification, (⑅˘꒳˘) awe pewmitted pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the a-above copywight
+// nyotice, nyaa~~ this w-wist of conditions and the fowwowing discwaimew. :3
+//    * w-wedistwibutions in b-binawy fowm must wepwoduce the above
+// c-copywight n-nyotice, ( ͡o ω ͡o ) this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// d-distwibution. mya
+//    * nyeithew t-the nyame of g-googwe inc. (///ˬ///✿) nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied w-wawwanties, ^^;; i-incwuding, but n-nyot
+// wimited to, (✿oωo) the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. (U ﹏ U) i-in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, -.- indiwect, ^•ﻌ•^ incidentaw, rawr
+// speciaw, exempwawy, (˘ω˘) ow consequentiaw damages (incwuding, nyaa~~ b-but nyot
+// wimited to, UwU pwocuwement of substitute g-goods ow sewvices; w-woss of use, :3
+// d-data, (⑅˘꒳˘) ow pwofits; ow business i-intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, (///ˬ///✿) whethew in contwact, ^^;; stwict wiabiwity, >_< ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of t-the use
+// of this softwawe, rawr x3 even i-if advised of t-the possibiwity of such damage. /(^•ω•^)
 -->

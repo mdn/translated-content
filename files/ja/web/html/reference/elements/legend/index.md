@@ -1,115 +1,115 @@
 ---
-title: "<legend>: フィールドセット凡例要素"
-slug: Web/HTML/Reference/Elements/legend
-original_slug: Web/HTML/Element/legend
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<wegend>: フィールドセット凡例要素"
+swug: w-web/htmw/wefewence/ewements/wegend
+o-owiginaw_swug: w-web/htmw/ewement/wegend
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<legend>`** は [HTML](/ja/docs/Web/HTML) の要素で、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。
+**`<wegend>`** は [htmw](/ja/docs/web/htmw) の要素で、その親要素である {{htmwewement("fiewdset")}} の内容のキャプションを表します。
 
-{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wegend&gt;", (ˆ ﻌ ˆ)♡ "tabbed-standawd")}}
 
-```html interactive-example
-<fieldset>
-  <legend>Choose your favorite monster</legend>
+```htmw i-intewactive-exampwe
+<fiewdset>
+  <wegend>choose y-youw favowite monstew</wegend>
 
-  <input type="radio" id="kraken" name="monster" value="K" />
-  <label for="kraken">Kraken</label><br />
+  <input type="wadio" id="kwaken" nyame="monstew" v-vawue="k" />
+  <wabew fow="kwaken">kwaken</wabew><bw />
 
-  <input type="radio" id="sasquatch" name="monster" value="S" />
-  <label for="sasquatch">Sasquatch</label><br />
+  <input type="wadio" i-id="sasquatch" nyame="monstew" v-vawue="s" />
+  <wabew fow="sasquatch">sasquatch</wabew><bw />
 
-  <input type="radio" id="mothman" name="monster" value="M" />
-  <label for="mothman">Mothman</label>
-</fieldset>
+  <input type="wadio" id="mothman" n-nyame="monstew" vawue="m" />
+  <wabew f-fow="mothman">mothman</wabew>
+</fiewdset>
 ```
 
-```css interactive-example
-legend {
-  background-color: #000;
-  color: #fff;
+```css i-intewactive-exampwe
+wegend {
+  backgwound-cowow: #000;
+  cowow: #fff;
   padding: 3px 6px;
 }
 
-input {
-  margin: 0.4rem;
+i-input {
+  mawgin: 0.4wem;
 }
 ```
 
 ## 属性
 
-この要素には、[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)以外の属性はありません。
+この要素には、[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)以外の属性はありません。
 
 ## 例
 
-`<legend>` の使用例は、 {{HTMLElement("form")}} のページを参照してください。
+`<wegend>` の使用例は、 {{htmwewement("fowm")}} のページを参照してください。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
         および
-        <a href="/ja/docs/Web/HTML/Element/Heading_Elements">見出し</a>
+        <a h-hwef="/ja/docs/web/htmw/ewement/heading_ewements">見出し</a>
         （h1–h6 要素）
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        {{HTMLElement("fieldset")}} 要素。<code>&#x3C;legend></code>
+        {{htmwewement("fiewdset")}} 要素。<code>&#x3c;wegend></code>
         要素は
-        <code>&#x3C;fieldset></code>
+        <code>&#x3c;fiewdset></code>
         の最初の子要素として配置しなくてはならない。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLLegendElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwwegendewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: Form ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)
+- [awia: f-fowm ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/fowm_wowe)

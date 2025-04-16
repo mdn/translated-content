@@ -1,91 +1,91 @@
 ---
-title: "<param>: オブジェクト引数要素"
-slug: Web/HTML/Reference/Elements/param
-original_slug: Web/HTML/Element/param
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<pawam>: オブジェクト引数要素"
+swug: web/htmw/wefewence/ewements/pawam
+o-owiginaw_swug: w-web/htmw/ewement/pawam
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<param>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("object")}} 要素の引数を定義します。
+**`<pawam>`** は [htmw](/ja/docs/web/htmw) の要素で、{{htmwewement("object")}} 要素の引数を定義します。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `name` {{deprecated_inline}}
+- `name` {{depwecated_inwine}}
   - : 引数の名称。
-- `value` {{deprecated_inline}}
+- `vawue` {{depwecated_inwine}}
   - : 引数の値を指定します。
-- `type` {{deprecated_inline}}
-  - : `valuetype` が `ref` に設定されている場合にのみ指定可能。`value` の値で指定された URI に存在するオブジェクトの MIME タイプを指定します。
-- `valuetype` {{deprecated_inline}}
+- `type` {{depwecated_inwine}}
+  - : `vawuetype` が `wef` に設定されている場合にのみ指定可能。`vawue` の値で指定された u-uwi に存在するオブジェクトの m-mime タイプを指定します。
+- `vawuetype` {{depwecated_inwine}}
 
-  - : `value` 属性の型を指定します。指定可能な値は以下の通りです。
+  - : `vawue` 属性の型を指定します。指定可能な値は以下の通りです。
 
     - `data`: 既定値。値は文字列としてオブジェクトの実装に渡されます。
-    - `ref`: 値は、実行時の値が格納されているリソースへの URI です。
-    - `object`: 同一文書内の他の {{HTMLElement("object")}} 要素の ID です。
+    - `wef`: 値は、実行時の値が格納されているリソースへの u-uwi です。
+    - `object`: 同一文書内の他の {{htmwewement("object")}} 要素の i-id です。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
+      <td>なし。これは{{gwossawy("void ewement", (U ᵕ U❁) "空要素")}}です。</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>
         空要素であるため開始タグは必須、また終了タグを置いてはなりません。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        {{HTMLElement("object")}} の子として、他の<a
-          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        {{htmwewement("object")}} の子として、他の<a
+          hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >より前に配置可能。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLParamElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
+      <td>許可されている <code>wowe</code> なし</td>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwpawamewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("object")}}
+- {{htmwewement("object")}}

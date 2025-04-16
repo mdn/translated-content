@@ -1,19 +1,19 @@
 ---
-title: rel=manifest
-slug: Web/HTML/Reference/Attributes/rel/manifest
-original_slug: Web/HTML/Attributes/rel/manifest
-l10n:
-  sourceCommit: bcd35a10459880d8a818852311781ea35a7e3bf8
+titwe: wew=manifest
+swug: web/htmw/wefewence/attwibutes/wew/manifest
+o-owiginaw_swug: w-web/htmw/attwibutes/wew/manifest
+w-w10n:
+  s-souwcecommit: bcd35a10459880d8a818852311781ea35a7e3bf8
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`manifest`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に指定すると、ターゲットリソースが[ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)であることを示します。
+**`manifest`** キーワードを {{htmwewement("wink")}} 要素の [`wew`](/ja/docs/web/htmw/wefewence/ewements/wink#wew) 属性に指定すると、ターゲットリソースが[ウェブアプリマニフェスト](/ja/docs/web/pwogwessive_web_apps/manifest)であることを示します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

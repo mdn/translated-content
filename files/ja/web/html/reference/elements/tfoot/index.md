@@ -1,64 +1,64 @@
 ---
-title: "<tfoot>: 表フッター要素"
-slug: Web/HTML/Reference/Elements/tfoot
-original_slug: Web/HTML/Element/tfoot
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<tfoot>: 表フッター要素"
+swug: w-web/htmw/wefewence/ewements/tfoot
+o-owiginaw_swug: w-web/htmw/ewement/tfoot
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<tfoot>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の一連の列を総括する行のセットを定義します。
+**`<tfoot>`** は [htmw](/ja/docs/web/htmw) の要素で、表の一連の列を総括する行のセットを定義します。
 
-{{InteractiveExample("HTML Demo: &lt;tfoot&gt;", "tabbed-taller")}}
+{{intewactiveexampwe("htmw d-demo: &wt;tfoot&gt;", >_< "tabbed-tawwew")}}
 
-```html interactive-example
-<table>
+```htmw i-intewactive-exampwe
+<tabwe>
   <caption>
-    Council budget (in £) 2018
+    c-counciw budget (in £) 2018
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Items</th>
-      <th scope="col">Expenditure</th>
-    </tr>
+    <tw>
+      <th scope="cow">items</th>
+      <th scope="cow">expendituwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Donuts</th>
+    <tw>
+      <th scope="wow">donuts</th>
       <td>3,000</td>
-    </tr>
-    <tr>
-      <th scope="row">Stationery</th>
+    </tw>
+    <tw>
+      <th scope="wow">stationewy</th>
       <td>18,000</td>
-    </tr>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th scope="row">Totals</th>
+    <tw>
+      <th scope="wow">totaws</th>
       <td>21,000</td>
-    </tr>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 ```
 
-```css interactive-example
-thead,
+```css i-intewactive-exampwe
+thead, (⑅˘꒳˘)
 tfoot {
-  background-color: #2c5e77;
-  color: #fff;
+  backgwound-cowow: #2c5e77;
+  c-cowow: #fff;
 }
 
 tbody {
-  background-color: #e4f0f5;
+  b-backgwound-cowow: #e4f0f5;
 }
 
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+tabwe {
+  bowdew-cowwapse: cowwapse;
+  bowdew: 2px s-sowid wgb(140 140 140);
+  font-famiwy: s-sans-sewif;
+  f-font-size: 0.8wem;
+  wettew-spacing: 1px;
 }
 
 caption {
@@ -66,122 +66,122 @@ caption {
   padding: 10px;
 }
 
-th,
+t-th, /(^•ω•^)
 td {
-  border: 1px solid rgb(160 160 160);
+  bowdew: 1px sowid wgb(160 160 160);
   padding: 8px 10px;
 }
 
 td {
-  text-align: center;
+  text-awign: c-centew;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
 ### 非推奨の属性
 
 以下の属性は非推奨であり、使用すべきではありません。これらの属性は、既存のコードを更新する際の参考として、また歴史的な興味のためだけに、以下に文書化されています。
 
-- `align` {{deprecated_inline}}
+- `awign` {{depwecated_inwine}}
 
   - : この列挙属性は、各セルの内容物について、水平方向の配置方法を制御します。以下の値が指定可能です。
 
-    - `left`: 内容物をセルの左側に揃えます。
-    - `center`: 内容物をセル内で中央揃えにします。
-    - `right`: 内容物をセルの右側に揃えます。
+    - `weft`: 内容物をセルの左側に揃えます。
+    - `centew`: 内容物をセル内で中央揃えにします。
+    - `wight`: 内容物をセルの右側に揃えます。
     - `justify`: 内容物がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
-    - `char`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](#char) 属性および [`charoff`](#charoff) 属性で定義します。
+    - `chaw`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`chaw`](#chaw) 属性および [`chawoff`](#chawoff) 属性で定義します。
 
-    この属性が設定されていない場合は、`left` 値であるものとします。
+    この属性が設定されていない場合は、`weft` 値であるものとします。
 
-    > [!NOTE]
+    > [!note]
     >
-    > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - CSS で `char` の値と同様の効果を得るには、 [`char`](#char) の値を {{cssxref("text-align")}} プロパティの値として使用することができます。
+    > - `weft`, `centew`, rawr x3 `wight`, (U ﹏ U) `justify` の値と同様の効果を得るには、 css の {{cssxwef("text-awign")}} プロパティを使用してください。
+    > - c-css で `chaw` の値と同様の効果を得るには、 [`chaw`](#chaw) の値を {{cssxwef("text-awign")}} プロパティの値として使用することができます。
 
-- `bgcolor` {{Deprecated_inline}}
+- `bgcowow` {{depwecated_inwine}}
 
-  - : 表の背景色です。この属性は、列の各セルの背景色を定義します。 [6 桁の 16 進数の RGB コード](/ja/docs/Web/CSS/hex-color)の前に '`#`' が付いた形です。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)の一つを使用することもできます。
+  - : 表の背景色です。この属性は、列の各セルの背景色を定義します。 [6 桁の 16 進数の w-wgb コード](/ja/docs/web/css/hex-cowow)の前に '`#`' が付いた形です。定義済みの[色キーワード](/ja/docs/web/css/named-cowow)の一つを使用することもできます。
 
-    同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
+    同様の効果を得るには、 c-css の {{cssxwef("backgwound-cowow")}} プロパティを使用してください。
 
-- `char` {{deprecated_inline}}
-  - : この属性は、列内のセルの内容をある文字へ整列することを指定します。典型的な値としては、数字や金額を整列させようとするときのピリオド (.) があります。 [`align`](#align) が `char` に設定されていない場合、この属性は無視されます。
-- `charoff` {{deprecated_inline}}
-  - : この属性は、`char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
-- `valign` {{deprecated_inline}}
+- `chaw` {{depwecated_inwine}}
+  - : この属性は、列内のセルの内容をある文字へ整列することを指定します。典型的な値としては、数字や金額を整列させようとするときのピリオド (.) があります。 [`awign`](#awign) が `chaw` に設定されていない場合、この属性は無視されます。
+- `chawoff` {{depwecated_inwine}}
+  - : この属性は、`chaw` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
+- `vawign` {{depwecated_inwine}}
 
   - : この属性は、表本体の各行のセルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
 
-    - `baseline`: テキストを可能な限りセルの下端に近づけますが、下端ではなく文字の[ベースライン](https://en.wikipedia.org/wiki/Baseline_%28typography%29)</a>に揃えます。文字がサイズ全体に渡る場合は、 `bottom` と同じ効果になります。
+    - `basewine`: テキストを可能な限りセルの下端に近づけますが、下端ではなく文字の[ベースライン](https://en.wikipedia.owg/wiki/basewine_%28typogwaphy%29)</a>に揃えます。文字がサイズ全体に渡る場合は、 `bottom` と同じ効果になります。
     - `bottom`: テキストを可能な限りセルの下端に近づけて配置します。
-    - `middle`: テキストをセル内の中央に置きます。
+    - `middwe`: テキストをセル内の中央に置きます。
     - `top`: テキストを可能な限りセルの上端に近づけて配置します。
 
-    > [!NOTE]
-    > この属性は最新の標準仕様で廃止された（対応していない）ため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
+    > [!note]
+    > この属性は最新の標準仕様で廃止された（対応していない）ため、使用しないでください。代わりに c-css の {{cssxwef("vewticaw-awign")}} プロパティを使用してください。
 
 ## 例
 
-`<tfoot>` の例については、 {{HTMLElement("table")}} を参照してください。
+`<tfoot>` の例については、 {{htmwewement("tabwe")}} を参照してください。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>0 個以上の {{HTMLElement("tr")}} 要素</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
+      <td>0 個以上の {{htmwewement("tw")}} 要素</td>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>
-        開始タグは必須。親 {{HTMLElement("table")}} 要素内に以降のコンテンツがない場合は終了タグを省略可能。
+        開始タグは必須。親 {{htmwewement("tabwe")}} 要素内に以降のコンテンツがない場合は終了タグを省略可能。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        {{HTMLElement("table")}} 要素。{{HTMLElement("tfoot")}} はすべての {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tr")}} の各要素の後方に配置しなければなりません。これは HTML5 での要件です。<br />
-        HTML4 では、 {{HTMLElement("tfoot")}} 要素は {{HTMLElement("tbody")}} 要素および {{HTMLElement("tr")}} 要素の後方に配置してはなりませんでした。
+        {{htmwewement("tabwe")}} 要素。{{htmwewement("tfoot")}} はすべての {{htmwewement("caption")}}, (U ﹏ U) {{htmwewement("cowgwoup")}}, (⑅˘꒳˘) {{htmwewement("thead")}}, òωó {{htmwewement("tbody")}}, ʘwʘ {{htmwewement("tw")}} の各要素の後方に配置しなければなりません。これは htmw5 での要件です。<bw />
+        htmw4 では、 {{htmwewement("tfoot")}} 要素は {{htmwewement("tbody")}} 要素および {{htmwewement("tw")}} 要素の後方に配置してはなりませんでした。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>
+        <code><a hwef="/ja/docs/web/accessibiwity/awia/wowes/wowgwoup_wowe">wowgwoup</a></code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLTableSectionElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwtabwesectionewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 他の表関連要素: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}
-- `<tfoot>` 要素のスタイル設定に役立つであろう CSS プロパティと擬似クラス:
+- 他の表関連要素: {{htmwewement("caption")}}, /(^•ω•^) {{htmwewement("cow")}}, ʘwʘ {{htmwewement("cowgwoup")}}, σωσ {{htmwewement("tabwe")}}, OwO {{htmwewement("tbody")}}, 😳😳😳 {{htmwewement("td")}}, 😳😳😳 {{htmwewement("th")}}, o.O {{htmwewement("thead")}}, ( ͡o ω ͡o ) {{htmwewement("tw")}}
+- `<tfoot>` 要素のスタイル設定に役立つであろう c-css プロパティと擬似クラス:
 
-  - {{cssxref(":nth-child")}} 擬似クラス: 列内のセルの配置を設定するため
-  - {{cssxref("text-align")}} プロパティ: すべてのセル内コンテンツを '.' などの同一文字で揃えるため
+  - {{cssxwef(":nth-chiwd")}} 擬似クラス: 列内のセルの配置を設定するため
+  - {{cssxwef("text-awign")}} プロパティ: すべてのセル内コンテンツを '.' などの同一文字で揃えるため

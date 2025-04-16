@@ -1,391 +1,391 @@
 ---
-title: "<dialog>: ダイアログ要素"
-slug: Web/HTML/Reference/Elements/dialog
-original_slug: Web/HTML/Element/dialog
-l10n:
-  sourceCommit: be7cf520036291031985ab0b38c487539b1faa9d
+titwe: "<diawog>: ダイアログ要素"
+swug: w-web/htmw/wefewence/ewements/diawog
+o-owiginaw_swug: w-web/htmw/ewement/diawog
+w-w10n:
+  s-souwcecommit: b-be7cf520036291031985ab0b38c487539b1faa9d
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<dialog>`** は [HTML](/ja/docs/Web/HTML) の要素で、モーダルまたは非モーダルダイアログボックスや、それ以外の消すことができるアラート、インスペクター、サブウィンドウなどのような対話的コンポーネントを表します。
+**`<diawog>`** は [htmw](/ja/docs/web/htmw) の要素で、モーダルまたは非モーダルダイアログボックスや、それ以外の消すことができるアラート、インスペクター、サブウィンドウなどのような対話的コンポーネントを表します。
 
-HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モーダルダイアログボックスのどちらを作成する時にも使用します。 モーダルダイアログボックスは、ページの他の部分との操作を中断し、非モーダルダイアログボックスは、ページの他の部分との操作を許可します。
+h-htmw の `<diawog>` 要素は、モーダルダイアログボックスと非モーダルダイアログボックスのどちらを作成する時にも使用します。 モーダルダイアログボックスは、ページの他の部分との操作を中断し、非モーダルダイアログボックスは、ページの他の部分との操作を許可します。
 
-`<dialog>` 要素を表示するには、JavaScript を使用して下さい。モーダルダイアログを表示するには {{domxref("HTMLDialogElement.showModal()", ".showModal()")}} メソッドを、非モーダルダイアログを表示するには {{domxref("HTMLDialogElement.show()", ".show()")}} メソッドを使用して下さい。ダイアログボックスは {{domxref("HTMLDialogElement.close()", ".close()")}} メソッドを使用するか、または `<dialog>` 要素内に含まれる `<form>` フォームを送信する際に [`dialog`](/ja/docs/Web/HTML/Reference/Elements/form#method) メソッドを使用して閉じることができます。モーダルダイアログは、<kbd>Esc</kbd> キーを押すことでも閉じることができます。
+`<diawog>` 要素を表示するには、javascwipt を使用して下さい。モーダルダイアログを表示するには {{domxwef("htmwdiawogewement.showmodaw()", (⑅˘꒳˘) ".showmodaw()")}} メソッドを、非モーダルダイアログを表示するには {{domxwef("htmwdiawogewement.show()", nyaa~~ ".show()")}} メソッドを使用して下さい。ダイアログボックスは {{domxwef("htmwdiawogewement.cwose()", ".cwose()")}} メソッドを使用するか、または `<diawog>` 要素内に含まれる `<fowm>` フォームを送信する際に [`diawog`](/ja/docs/web/htmw/wefewence/ewements/fowm#method) メソッドを使用して閉じることができます。モーダルダイアログは、<kbd>esc</kbd> キーを押すことでも閉じることができます。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-> **警告:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。詳しく[使用上の注意](#使用上の注意)を参照してください。
+> **警告:** `tabindex` 属性を `<diawog>` 要素で使用してはいけません。詳しく[使用上の注意](#使用上の注意)を参照してください。
 
 - `open`
 
   - : ダイアログボックスがアクティブであり、操作できる状態であることを示します。 `open` が設定されていない場合、ダイアログボックスはユーザーに表示されません。
-    ダイアログを表示するには、`open` 属性ではなく `.show()` または `.showModal()` メソッドを使用することが推奨されます。もし `<dialog>` が `open` 属性を使用して開かれた場合、そのダイアログは非モーダルになります。
+    ダイアログを表示するには、`open` 属性ではなく `.show()` または `.showmodaw()` メソッドを使用することが推奨されます。もし `<diawog>` が `open` 属性を使用して開かれた場合、そのダイアログは非モーダルになります。
 
-    > [!NOTE]
+    > [!note]
     > モーダルではないダイアログボックスの開いた状態と閉じた状態を切り替えるには、`open` 属性の有無を切り替えることができますが、この手法は推奨されません。
 
 ## 使用上の注意
 
-- HTML の {{HTMLElement("form")}} 要素は、属性 method=「dialog」 を保有している場合、またはフォームを送信するボタンに [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input#formmethod) が設定されている場合に、ダイアログボックスを閉じることができます。 `<dialog>` 内の `<form>` が `dialog` メソッドで確定されると、ダイアログボックスが閉じられ、そのフォームコントロールの状態が保存されますが、送信はされません。また、 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} プロパティは、押されたボタンの値に設定されます。
-- CSS の {{cssxref('::backdrop')}} 擬似要素は、モーダルダイアログの背景をスタイル設定するために使用することができます。これは、{{domxref("HTMLDialogElement.showModal()")}} メソッドを使用してダイアログを表示した際に、`<dialog>` 要素の背後に表示されます。例えば、この擬似要素を使用して、モーダルダイアログの背後の無効なコンテンツをぼかしたり、暗くしたり、といった方法で分かりにくくすることができます。
-- [`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性を、モーダルダイアログが開いた直後にユーザーが操作することが想定される要素に追加すべきです。他に即座の操作が想定される要素がない場合は、`autofocus` をダイアログ内の［閉じる］ボタンに追加するか、ユーザーがクリック/アクティブにして閉じることが想定される場合はダイアログ自体に追加することをお勧めします。
-- `<dialog>` 要素に `tabindex` プロパティを追加しないでください。この要素は操作対象ではなく、フォーカスを受け取らないからです。ダイアログの内容は（ダイアログに含まれない閉じるボタンを含め）、フォーカスを受け取ることができ、操作対象となります。
+- h-htmw の {{htmwewement("fowm")}} 要素は、属性 method=「diawog」 を保有している場合、またはフォームを送信するボタンに [`fowmmethod="diawog"`](/ja/docs/web/htmw/wefewence/ewements/input#fowmmethod) が設定されている場合に、ダイアログボックスを閉じることができます。 `<diawog>` 内の `<fowm>` が `diawog` メソッドで確定されると、ダイアログボックスが閉じられ、そのフォームコントロールの状態が保存されますが、送信はされません。また、 {{domxwef("htmwdiawogewement.wetuwnvawue", /(^•ω•^) "wetuwnvawue")}} プロパティは、押されたボタンの値に設定されます。
+- css の {{cssxwef('::backdwop')}} 擬似要素は、モーダルダイアログの背景をスタイル設定するために使用することができます。これは、{{domxwef("htmwdiawogewement.showmodaw()")}} メソッドを使用してダイアログを表示した際に、`<diawog>` 要素の背後に表示されます。例えば、この擬似要素を使用して、モーダルダイアログの背後の無効なコンテンツをぼかしたり、暗くしたり、といった方法で分かりにくくすることができます。
+- [`autofocus`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/autofocus) 属性を、モーダルダイアログが開いた直後にユーザーが操作することが想定される要素に追加すべきです。他に即座の操作が想定される要素がない場合は、`autofocus` をダイアログ内の［閉じる］ボタンに追加するか、ユーザーがクリック/アクティブにして閉じることが想定される場合はダイアログ自体に追加することをお勧めします。
+- `<diawog>` 要素に `tabindex` プロパティを追加しないでください。この要素は操作対象ではなく、フォーカスを受け取らないからです。ダイアログの内容は（ダイアログに含まれない閉じるボタンを含め）、フォーカスを受け取ることができ、操作対象となります。
 
 ## アクセシビリティ
 
-ダイアログを実装する際には、ユーザーのフォーカスを設定する場所として最も適切な場所を検討することが重要です。{{domxref("HTMLDialogElement.showModal()")}} を用いて `<dialog>` を開いたとき、フォーカスは内部で最初のフォーカス可能な要素に設定されます。[`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性を使用して初期フォーカスの配置を明確に示すと、特定のダイアログに対して最適な初期フォーカスの配置とみなされる要素に初期フォーカスが設定するのに役立ちます。ダイアログの初期フォーカスがどこに設定されるか常にわからない場合、特にダイアログのコンテンツが呼び出されたときに動的に描画される場合、必要であれば `<dialog>` 要素そのものにフォーカスを当てることが、初期フォーカスの配置として最適と判断されるかもしれません。
+ダイアログを実装する際には、ユーザーのフォーカスを設定する場所として最も適切な場所を検討することが重要です。{{domxwef("htmwdiawogewement.showmodaw()")}} を用いて `<diawog>` を開いたとき、フォーカスは内部で最初のフォーカス可能な要素に設定されます。[`autofocus`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/autofocus) 属性を使用して初期フォーカスの配置を明確に示すと、特定のダイアログに対して最適な初期フォーカスの配置とみなされる要素に初期フォーカスが設定するのに役立ちます。ダイアログの初期フォーカスがどこに設定されるか常にわからない場合、特にダイアログのコンテンツが呼び出されたときに動的に描画される場合、必要であれば `<diawog>` 要素そのものにフォーカスを当てることが、初期フォーカスの配置として最適と判断されるかもしれません。
 
 ユーザーがダイアログを閉じることができる機構を確実に用意してください。すべてのユーザーが確実にダイアログを閉じることができるようにする最も確実な方法は、閉じるための明確なボタンを記載することです。例えば、確認、キャンセル、閉じるなどのボタンが適切です。
 
-既定では、`showModal()` メソッドによって呼び出されたダイアログは、<kbd>Esc</kbd> によって閉じることができます。非モーダルダイアログでは、既定では <kbd>Esc</kbd> キーで閉じませんし、非モーダルダイアログが表すものによっては、この動作が望ましくない場合があります。キーボードの利用者は、<kbd>Esc</kbd> キーでモーダルダイアログを閉じることを期待します。この動作が実装され、維持されていることを確認してください。複数のモーダルダイアログが開いている場合、<kbd>Esc</kbd> は最後に示されたダイアログのみを閉じるようにします。`<dialog>` を使用した場合、この動作はブラウザーによって提供されます。
+既定では、`showmodaw()` メソッドによって呼び出されたダイアログは、<kbd>esc</kbd> によって閉じることができます。非モーダルダイアログでは、既定では <kbd>esc</kbd> キーで閉じませんし、非モーダルダイアログが表すものによっては、この動作が望ましくない場合があります。キーボードの利用者は、<kbd>esc</kbd> キーでモーダルダイアログを閉じることを期待します。この動作が実装され、維持されていることを確認してください。複数のモーダルダイアログが開いている場合、<kbd>esc</kbd> は最後に示されたダイアログのみを閉じるようにします。`<diawog>` を使用した場合、この動作はブラウザーによって提供されます。
 
-ダイアログは他の要素を使用して作成することができますが、ネイティブの `<dialog>` 要素は、同様の目的で他の要素を使用する場合は再現しなければならないユーザビリティとアクセシビリティ機能を提供します。独自のダイアログ実装を作成する場合は、すべての期待される既定の動作に対応しており、適切なラベル付けの推奨事項に従うことを保証してください。
+ダイアログは他の要素を使用して作成することができますが、ネイティブの `<diawog>` 要素は、同様の目的で他の要素を使用する場合は再現しなければならないユーザビリティとアクセシビリティ機能を提供します。独自のダイアログ実装を作成する場合は、すべての期待される既定の動作に対応しており、適切なラベル付けの推奨事項に従うことを保証してください。
 
-`<dialog>` 要素は、ARIA の [role="dialog"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) 属性を使用した独自ダイアログと同じような形で、ブラウザーが提供します。`<dialog>` 要素が `showModal()` メソッドで呼び出された場合、暗黙のうちに [aria-modal="true"](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal) となり、一方 `<dialog>` が `show()` メソッド、または `open` 属性を使用して表示されたり `<dialog>` の既定の `display` を変更した場合は `[aria-modal="false"]` として表示されます。モーダルダイアログを実装する際には、`<dialog>` とそのコンテンツ以外は [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性を使って不活性化する必要があります。`<dialog>` を `HTMLDialogElement.showModal()` メソッドで使用した場合、この動作はブラウザーが提供します。
+`<diawog>` 要素は、awia の [wowe="diawog"](/ja/docs/web/accessibiwity/awia/wefewence/wowes/diawog_wowe) 属性を使用した独自ダイアログと同じような形で、ブラウザーが提供します。`<diawog>` 要素が `showmodaw()` メソッドで呼び出された場合、暗黙のうちに [awia-modaw="twue"](/ja/docs/web/accessibiwity/awia/attwibutes/awia-modaw) となり、一方 `<diawog>` が `show()` メソッド、または `open` 属性を使用して表示されたり `<diawog>` の既定の `dispway` を変更した場合は `[awia-modaw="fawse"]` として表示されます。モーダルダイアログを実装する際には、`<diawog>` とそのコンテンツ以外は [`inewt`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/inewt) 属性を使って不活性化する必要があります。`<diawog>` を `htmwdiawogewement.showmodaw()` メソッドで使用した場合、この動作はブラウザーが提供します。
 
 ## 例
 
-### HTML のみのダイアログ
+### htmw のみのダイアログ
 
-この例は、HTML のみを使用して、モーダルではないダイアログの作成方法を示しています。論理属性 `open` が `<dialog>` 要素にあるため、ページが読み込まれるとダイアログが開いた状態で表示されます。 `<form>` 要素の `method` 属性が `"dialog"` に設定されているため、ダイアログは［OK］ボタンをクリックすることで閉じることができます。 この場合、フォームを閉じるために JavaScript は必要ありません。
+この例は、htmw のみを使用して、モーダルではないダイアログの作成方法を示しています。論理属性 `open` が `<diawog>` 要素にあるため、ページが読み込まれるとダイアログが開いた状態で表示されます。 `<fowm>` 要素の `method` 属性が `"diawog"` に設定されているため、ダイアログは［ok］ボタンをクリックすることで閉じることができます。 この場合、フォームを閉じるために javascwipt は必要ありません。
 
-```html
-<dialog open>
-  <p>Greetings, one and all!</p>
-  <form method="dialog">
-    <button>OK</button>
-  </form>
-</dialog>
+```htmw
+<diawog o-open>
+  <p>gweetings, (U ﹏ U) one and aww!</p>
+  <fowm m-method="diawog">
+    <button>ok</button>
+  </fowm>
+</diawog>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("HTML-only_dialog", "100%", 200)}}
+{{embedwivesampwe("htmw-onwy_diawog", 😳😳😳 "100%", >w< 200)}}
 
-> [!NOTE]
+> [!note]
 > 出力結果をリセットするには、このページを再読み込みしてください。
 
-このダイアログは、`open` 属性が存在するために最初に開かれます。`open` 属性を使用して表示されるダイアログは、モーダルではありません。［OK］をクリックすると、ダイアログは閉じられ、結果フレームは空になります。ダイアログが閉じられた後、それを再度開くための方法は提供されていません。このため、モーダルではないダイアログを表示するには、 {{domxref("HTMLDialogElement.show()")}} メソッドを使用するのが推奨されます。論理属性である `open` を追加または削除することで、ダイアログの表示を切り替えることも可能ですが、推奨される方法ではありません。
+このダイアログは、`open` 属性が存在するために最初に開かれます。`open` 属性を使用して表示されるダイアログは、モーダルではありません。［ok］をクリックすると、ダイアログは閉じられ、結果フレームは空になります。ダイアログが閉じられた後、それを再度開くための方法は提供されていません。このため、モーダルではないダイアログを表示するには、 {{domxwef("htmwdiawogewement.show()")}} メソッドを使用するのが推奨されます。論理属性である `open` を追加または削除することで、ダイアログの表示を切り替えることも可能ですが、推奨される方法ではありません。
 
 ### モーダルダイアログの作成
 
-この例では、[グラデーション](/ja/docs/Web/CSS/gradient)の背景を持つモーダルダイアログを示しています。`.showModal()` メソッドは、［ダイアログを表示］ボタンが押された際に、モーダルダイアログを開くためのものです。ダイアログは、<kbd>Esc</kbd> キーを押すか、ダイアログ内の［閉じる］ボタンが押された際に `close()` メソッドを使用することで閉じることができます。
+この例では、[グラデーション](/ja/docs/web/css/gwadient)の背景を持つモーダルダイアログを示しています。`.showmodaw()` メソッドは、［ダイアログを表示］ボタンが押された際に、モーダルダイアログを開くためのものです。ダイアログは、<kbd>esc</kbd> キーを押すか、ダイアログ内の［閉じる］ボタンが押された際に `cwose()` メソッドを使用することで閉じることができます。
 
-ダイアログが開くと、既定では、ブラウザーはダイアログ内でフォーカス可能な最初の要素にフォーカスを当てます。この例では、 [`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性が［閉じる］ボタンに適用されており、このボタンにダイアログが開いたときにフォーカスが当たります。これは、ダイアログが開いた直後にユーザーが対話すると想定される要素だからです。
+ダイアログが開くと、既定では、ブラウザーはダイアログ内でフォーカス可能な最初の要素にフォーカスを当てます。この例では、 [`autofocus`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/autofocus) 属性が［閉じる］ボタンに適用されており、このボタンにダイアログが開いたときにフォーカスが当たります。これは、ダイアログが開いた直後にユーザーが対話すると想定される要素だからです。
 
-#### HTML
+#### htmw
 
-```html
-<dialog>
-  <button autofocus>閉じる</button>
+```htmw
+<diawog>
+  <button a-autofocus>閉じる</button>
   <p>このモーダルダイアログの背景はクールです！</p>
-</dialog>
+</diawog>
 <button>ダイアログを表示</button>
 ```
 
-#### CSS
+#### css
 
-ダイアログの背景は、{{cssxref('::backdrop')}} 擬似要素を使用してスタイル設定することができます。
+ダイアログの背景は、{{cssxwef('::backdwop')}} 擬似要素を使用してスタイル設定することができます。
 
 ```css
-::backdrop {
-  background-image: linear-gradient(
-    45deg,
-    magenta,
-    rebeccapurple,
-    dodgerblue,
-    green
+::backdwop {
+  backgwound-image: wineaw-gwadient(
+    45deg, XD
+    m-magenta, o.O
+    webeccapuwpwe, mya
+    d-dodgewbwue, 🥺
+    g-gween
   );
   opacity: 0.75;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
-ダイアログは、`.showModal()` メソッドを使用してモーダルに開かれ、`.close()` メソッドを使用して閉じられます。
+ダイアログは、`.showmodaw()` メソッドを使用してモーダルに開かれ、`.cwose()` メソッドを使用して閉じられます。
 
 ```js
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+const diawog = document.quewysewectow("diawog");
+const showbutton = d-document.quewysewectow("diawog + button");
+const cwosebutton = document.quewysewectow("diawog button");
 
 // ［ダイアログを表示］ボタンでダイアログがモーダルに開く
-showButton.addEventListener("click", () => {
-  dialog.showModal();
+s-showbutton.addeventwistenew("cwick", ^^;; () => {
+  diawog.showmodaw();
 });
 
 // ［閉じる］ボタンでダイアログを閉じる
-closeButton.addEventListener("click", () => {
-  dialog.close();
+c-cwosebutton.addeventwistenew("cwick", :3 () => {
+  d-diawog.cwose();
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Creating_a_modal_dialog", "100%", 200)}}
+{{embedwivesampwe("cweating_a_modaw_diawog", (U ﹏ U) "100%", 200)}}
 
 モーダルダイアログが表示されると、存在する他のダイアログの上に表示されます。モーダルダイアログの外側にあるものはすべて無効となり、ダイアログ外での操作はブロックされます。ダイアログが開いている間は、ダイアログ自体を除いて、文書内の操作は不可能であることに注意してください。［ダイアログを表示］ボタンは、ほとんど不透明なダイアログの背景によってほとんど隠されてしまい、無効となります。
 
 ### ダイアログからの返値を扱い
 
-この例では、`<dialog>` 要素の [`returnValue`](/ja/docs/Web/API/HTMLDialogElement/returnValue) と、フォームを使用してモーダルダイアログを閉じる方法を示しています。 既定では、`returnValue` は空文字列、または `<dialog>` 要素内にフォームを送信するボタンがある場合はその値となります。
+この例では、`<diawog>` 要素の [`wetuwnvawue`](/ja/docs/web/api/htmwdiawogewement/wetuwnvawue) と、フォームを使用してモーダルダイアログを閉じる方法を示しています。 既定では、`wetuwnvawue` は空文字列、または `<diawog>` 要素内にフォームを送信するボタンがある場合はその値となります。
 
-この例では、［ダイアログを表示］ボタンが押されるとモーダルダイアログが開きます。ダイアログには、{{HTMLElement("select")}} と 2 つの {{HTMLElement("button")}} 要素という形でフォームが含まれており、既定では `type="submit"` となっています。イベントリスナーは、選択オプションが変更された際に［確認］ボタンの値を更新します。［確認］ボタンがダイアログを閉じるために有効化された場合、ボタンの現在の値が返値となります。［キャンセル］ボタンが押されてダイアログが閉じられた場合、 `returnValue` は `cancel` となります。
+この例では、［ダイアログを表示］ボタンが押されるとモーダルダイアログが開きます。ダイアログには、{{htmwewement("sewect")}} と 2 つの {{htmwewement("button")}} 要素という形でフォームが含まれており、既定では `type="submit"` となっています。イベントリスナーは、選択オプションが変更された際に［確認］ボタンの値を更新します。［確認］ボタンがダイアログを閉じるために有効化された場合、ボタンの現在の値が返値となります。［キャンセル］ボタンが押されてダイアログが閉じられた場合、 `wetuwnvawue` は `cancew` となります。
 
-ダイアログが閉じられると、返値が［ダイアログを表示］ボタンの下に表示されます。 <kbd>Esc</kbd> キーを押してダイアログが閉じられた場合、 `returnValue` は更新されず、 `close` イベントも発生しないため、{{HTMLElement("output")}} 内のテキストは更新されません。
+ダイアログが閉じられると、返値が［ダイアログを表示］ボタンの下に表示されます。 <kbd>esc</kbd> キーを押してダイアログが閉じられた場合、 `wetuwnvawue` は更新されず、 `cwose` イベントも発生しないため、{{htmwewement("output")}} 内のテキストは更新されません。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <!-- フォームのあるモーダルダイアログ -->
-<dialog id="favDialog">
-  <form>
+<diawog i-id="favdiawog">
+  <fowm>
     <p>
-      <label>
+      <wabew>
         好きな動物は？
-        <select>
-          <option value="default">選択してください…</option>
+        <sewect>
+          <option vawue="defauwt">選択してください…</option>
           <option>ブラインシュリンプ</option>
           <option>レッサーパンダ</option>
           <option>クモザル</option>
-        </select>
-      </label>
+        </sewect>
+      </wabew>
     </p>
     <div>
-      <button value="cancel" formmethod="dialog">キャンセル</button>
-      <button id="confirmBtn" value="default">確認</button>
+      <button vawue="cancew" f-fowmmethod="diawog">キャンセル</button>
+      <button id="confiwmbtn" vawue="defauwt">確認</button>
     </div>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 <p>
-  <button id="showDialog">ダイアログを表示</button>
+  <button i-id="showdiawog">ダイアログを表示</button>
 </p>
 <output></output>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const showButton = document.getElementById("showDialog");
-const favDialog = document.getElementById("favDialog");
-const outputBox = document.querySelector("output");
-const selectEl = favDialog.querySelector("select");
-const confirmBtn = favDialog.querySelector("#confirmBtn");
+const showbutton = document.getewementbyid("showdiawog");
+const favdiawog = d-document.getewementbyid("favdiawog");
+const outputbox = d-document.quewysewectow("output");
+c-const sewectew = f-favdiawog.quewysewectow("sewect");
+const confiwmbtn = favdiawog.quewysewectow("#confiwmbtn");
 
-// "Show the dialog" ボタンで <dialog> をモーダルに開く
-showButton.addEventListener("click", () => {
-  favDialog.showModal();
+// "show the d-diawog" ボタンで <diawog> をモーダルに開く
+s-showbutton.addeventwistenew("cwick", OwO () => {
+  favdiawog.showmodaw();
 });
 
-// "Cancel" ボタンで [formmethod="dialog"] による送信を行わずにダイアログを閉じ、close イベントを発行する
-favDialog.addEventListener("close", (e) => {
-  outputBox.value =
-    favDialog.returnValue === "default"
-      ? "No return value."
-      : `ReturnValue: ${favDialog.returnValue}`; // 空文字列ではなく、既定値かどうかを調べる必要がある
+// "cancew" ボタンで [fowmmethod="diawog"] による送信を行わずにダイアログを閉じ、cwose イベントを発行する
+f-favdiawog.addeventwistenew("cwose", 😳😳😳 (e) => {
+  o-outputbox.vawue =
+    favdiawog.wetuwnvawue === "defauwt"
+      ? "no w-wetuwn vawue."
+      : `wetuwnvawue: ${favdiawog.wetuwnvawue}`; // 空文字列ではなく、既定値かどうかを調べる必要がある
 });
 
-// ［確認］ボタンが既定でフォームを送信しないようにし、`close()` メソッドでダイアログを閉じ、"close" イベントを発生させる
-confirmBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // この偽フォームを送信しない
-  favDialog.close(selectEl.value); // ここで選択ボックスの値を送る必要がある
+// ［確認］ボタンが既定でフォームを送信しないようにし、`cwose()` メソッドでダイアログを閉じ、"cwose" イベントを発生させる
+confiwmbtn.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ (event) => {
+  e-event.pweventdefauwt(); // この偽フォームを送信しない
+  favdiawog.cwose(sewectew.vawue); // ここで選択ボックスの値を送る必要がある
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Handling the return value from the dialog", "100%", 300)}}
+{{embedwivesampwe("handwing the wetuwn v-vawue fwom the diawog", XD "100%", (ˆ ﻌ ˆ)♡ 300)}}
 
 上記の例では、上記の例は、モーダルダイアログを閉じる次の 3 つのメソッドを示しています。
 
-- ダイアログフォーム内のフォームを、`dialog` メソッドを使用して確定することによって（例えば、[HTML のみの例](#html_のみのダイアログ)を参照）。
-- <kbd>Esc</kbd> キーを押すことよって。
-- {{domxref("HTMLDialogElement.close()")}} メソッドを呼び出すことによって（[モーダルの例](#モーダルダイアログの作成)にあるように）。
-  この例では、［キャンセル］ボタンはダイアログフォームメソッドを介してダイアログを閉じ、［確認］ボタンは {{domxref("HTMLDialogElement.close()")}} メソッドを介してダイアログを閉じます。
+- ダイアログフォーム内のフォームを、`diawog` メソッドを使用して確定することによって（例えば、[htmw のみの例](#htmw_のみのダイアログ)を参照）。
+- <kbd>esc</kbd> キーを押すことよって。
+- {{domxwef("htmwdiawogewement.cwose()")}} メソッドを呼び出すことによって（[モーダルの例](#モーダルダイアログの作成)にあるように）。
+  この例では、［キャンセル］ボタンはダイアログフォームメソッドを介してダイアログを閉じ、［確認］ボタンは {{domxwef("htmwdiawogewement.cwose()")}} メソッドを介してダイアログを閉じます。
 
-［キャンセル］ボタンには [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input/submit#formmethod) が含まれており、 {{HTMLElement("form")}} の既定の {{HTTPMethod("GET")}} メソッド ([`method`](/ja/docs/Web/HTML/Reference/Elements/form#method)) を上書きします。フォームのメソッドが [`dialog`](#usage_notes) の場合、フォームの状態は送信されずに保存され、ダイアログは閉じられます。
+［キャンセル］ボタンには [`fowmmethod="diawog"`](/ja/docs/web/htmw/wefewence/ewements/input/submit#fowmmethod) が含まれており、 {{htmwewement("fowm")}} の既定の {{httpmethod("get")}} メソッド ([`method`](/ja/docs/web/htmw/wefewence/ewements/fowm#method)) を上書きします。フォームのメソッドが [`diawog`](#usage_notes) の場合、フォームの状態は送信されずに保存され、ダイアログは閉じられます。
 
-`action` がない場合、既定の {{HTTPMethod("GET")}} メソッドでフォームを送信すると、ページの再読み込みが発生します。JavaScript を使用して、送信を阻止し、ダイアログを閉じるために、それぞれ {{domxref("event.preventDefault()")}} と {{domxref("HTMLDialogElement.close()")}} メソッドを使用しています。
+`action` がない場合、既定の {{httpmethod("get")}} メソッドでフォームを送信すると、ページの再読み込みが発生します。javascwipt を使用して、送信を阻止し、ダイアログを閉じるために、それぞれ {{domxwef("event.pweventdefauwt()")}} と {{domxwef("htmwdiawogewement.cwose()")}} メソッドを使用しています。
 
-すべての `dialog` 要素で閉じるための仕組みを提供することが重要です。既定では、非モーダルのダイアログは <kbd>Esc</kbd> キーでは閉じませんし、ユーザーが物理キーボードにアクセスすることも想定してはいけません（たとえば、キーボードにアクセスできないタッチ画面端末を使用している人もいます）。
+すべての `diawog` 要素で閉じるための仕組みを提供することが重要です。既定では、非モーダルのダイアログは <kbd>esc</kbd> キーでは閉じませんし、ユーザーが物理キーボードにアクセスすることも想定してはいけません（たとえば、キーボードにアクセスできないタッチ画面端末を使用している人もいます）。
 
 ### 必須フォーム入力付きのダイアログを閉じる
 
-ダイアログ内のフォームに必須入力項目がある場合、ユーザーエージェントは、必須入力項目に値が入力されるまで、ダイアログを閉じることができません。このようなダイアログを閉じるには、［閉じる］ボタンに [`formnovalidate`](/ja/docs/Web/HTML/Reference/Elements/input#formnovalidate) 属性を使用するか、［閉じる］ボタンがクリックされたときにダイアログオブジェクトの `close()` メソッドを呼び出すかしてください。
+ダイアログ内のフォームに必須入力項目がある場合、ユーザーエージェントは、必須入力項目に値が入力されるまで、ダイアログを閉じることができません。このようなダイアログを閉じるには、［閉じる］ボタンに [`fowmnovawidate`](/ja/docs/web/htmw/wefewence/ewements/input#fowmnovawidate) 属性を使用するか、［閉じる］ボタンがクリックされたときにダイアログオブジェクトの `cwose()` メソッドを呼び出すかしてください。
 
-```html
-<dialog id="dialog">
-  <form method="dialog">
+```htmw
+<diawog id="diawog">
+  <fowm m-method="diawog">
     <p>
-      <label>
+      <wabew>
         好きな動物は？
-        <input type="text" required />
-      </label>
+        <input type="text" w-wequiwed />
+      </wabew>
     </p>
     <div>
-      <input type="submit" id="normal-close" value="通常 閉じる" />
+      <input type="submit" i-id="nowmaw-cwose" vawue="通常 閉じる" />
       <input
         type="submit"
-        id="novalidate-close"
-        value="無検証 閉じる"
-        formnovalidate />
-      <input type="submit" id="js-close" value="JS 閉じる" />
+        id="novawidate-cwose"
+        vawue="無検証 閉じる"
+        fowmnovawidate />
+      <input type="submit" id="js-cwose" v-vawue="js 閉じる" />
     </div>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 <p>
-  <button id="show-dialog">ダイアログを表示</button>
+  <button i-id="show-diawog">ダイアログを表示</button>
 </p>
 <output></output>
 ```
 
 ```css hidden
 [type="submit"] {
-  margin-right: 1rem;
+  m-mawgin-wight: 1wem;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const showBtn = document.getElementById("show-dialog");
-const dialog = document.getElementById("dialog");
-const jsCloseBtn = dialog.querySelector("#js-close");
+c-const showbtn = document.getewementbyid("show-diawog");
+const diawog = document.getewementbyid("diawog");
+c-const jscwosebtn = diawog.quewysewectow("#js-cwose");
 
-showBtn.addEventListener("click", () => {
-  dialog.showModal();
+showbtn.addeventwistenew("cwick", ( ͡o ω ͡o ) () => {
+  diawog.showmodaw();
 });
 
-jsCloseBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  dialog.close();
+jscwosebtn.addeventwistenew("cwick", rawr x3 (e) => {
+  e-e.pweventdefauwt();
+  diawog.cwose();
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Closing a dialog with a required form input", "100%", 300)}}
+{{embedwivesampwe("cwosing a-a diawog w-with a wequiwed f-fowm input", nyaa~~ "100%", >_< 300)}}
 
-出力から、［通常 閉じる］ボタンを使用してダイアログを閉じることができないことが分かります。しかし、［無検証 閉じる］ボタンの `formnovalidate` 属性を使用してフォームの検証をバイパスすれば、ダイアログを閉じることができます。プログラム上では、`dialog.close()` を使用しても同様にダイアログを閉じることができます。
+出力から、［通常 閉じる］ボタンを使用してダイアログを閉じることができないことが分かります。しかし、［無検証 閉じる］ボタンの `fowmnovawidate` 属性を使用してフォームの検証をバイパスすれば、ダイアログを閉じることができます。プログラム上では、`diawog.cwose()` を使用しても同様にダイアログを閉じることができます。
 
 ### アニメーションするダイアログ
 
-`<dialog>` 要素は、非表示時には [`display: none;`](/ja/docs/Web/CSS/display) 表示時には `display: block;` と設定され、{{glossary("top layer","最上位レイヤー")}}および[アクセシビリティツリー](/ja/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree)から削除されたり、追加されたりします。したがって、 `<dialog>` 要素をアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション化する必要があります。[対応ブラウザー](/ja/docs/Web/CSS/display#ブラウザーの互換性)では、`display` プロパティを[離散的なアニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)で変化させてアニメーション化します。具体的には、ブラウザーは `none` と他の `display` 値を交互に切り替えることで、アニメーション化されたコンテンツがアニメーションの全期間にわたって表示されるようにします。
+`<diawog>` 要素は、非表示時には [`dispway: nyone;`](/ja/docs/web/css/dispway) 表示時には `dispway: bwock;` と設定され、{{gwossawy("top w-wayew","最上位レイヤー")}}および[アクセシビリティツリー](/ja/docs/web/pewfowmance/guides/how_bwowsews_wowk#buiwding_the_accessibiwity_twee)から削除されたり、追加されたりします。したがって、 `<diawog>` 要素をアニメーションさせるには、 {{cssxwef("dispway")}} プロパティをアニメーション化する必要があります。[対応ブラウザー](/ja/docs/web/css/dispway#ブラウザーの互換性)では、`dispway` プロパティを[離散的なアニメーション型](/ja/docs/web/css/css_animated_pwopewties#離散)で変化させてアニメーション化します。具体的には、ブラウザーは `none` と他の `dispway` 値を交互に切り替えることで、アニメーション化されたコンテンツがアニメーションの全期間にわたって表示されるようにします。
 
 例えば、
 
-- `display` を `none` から `block`（あるいは他の可視の `display` 値）にアニメーションする場合、アニメーション再生時間の `0%` で値が `block` に切り替わり、常に表示されます。
-- `display` の `block`（または他の可視の `display` 値）から `none` へのアニメーションでは、アニメーション再生時間の `100%` の時点で値が `none` に切り替わるため、全体を通して表示されます。
+- `dispway` を `none` から `bwock`（あるいは他の可視の `dispway` 値）にアニメーションする場合、アニメーション再生時間の `0%` で値が `bwock` に切り替わり、常に表示されます。
+- `dispway` の `bwock`（または他の可視の `dispway` 値）から `none` へのアニメーションでは、アニメーション再生時間の `100%` の時点で値が `none` に切り替わるため、全体を通して表示されます。
 
-> **メモ:** [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)でアニメーションを行う場合、この動作は既定では利用でき、同等の手順は必要ありません。
+> **メモ:** [css トランジション](/ja/docs/web/css/css_twansitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`twansition-behaviow: a-awwow-discwete`](/ja/docs/web/css/twansition-behaviow) を設定する必要があります。[css アニメーション](/ja/docs/web/css/css_animations)でアニメーションを行う場合、この動作は既定では利用でき、同等の手順は必要ありません。
 
-#### dialog 要素のトランジション
+#### d-diawog 要素のトランジション
 
-CSS トランジションで `<dialog>` をアニメーションさせる場合、以下の機能が要求されます。
+c-css トランジションで `<diawog>` をアニメーションさせる場合、以下の機能が要求されます。
 
-- [`@starting-style`](/ja/docs/Web/CSS/@starting-style) アットルール
-  - : `<dialog>` に設定されたプロパティの、開かれるたびにトランジションする開始値のセットを提供します。これは予期せぬ動作を避けるために必要です。既定では、CSS トランジションは、可視要素のプロパティが 1 つの値から別の値に変更された場合のみ発生します。要素の最初のスタイル更新時や、`display` の型が `none` から別の型に変更された場合には発生しません。
-- [`display`](/ja/docs/Web/CSS/display) プロパティ
-  - : トランジションのリストに `display` を追加すると、トランジションの再生時間中、`<dialog>` が `display: block`（またはダイアログが開いている状態として設定されている他の可視 `display` 値）のままになり、他にもトランジションが確実に表示されます。
-- [`overlay`](/ja/docs/Web/CSS/overlay) プロパティ
-  - : トランジションのリストに `overlay` が含まれていると、最上位レイヤーから `<dialog>` が確実に除去されるまでトランジションが完了するまで遅延され、トランジションが確実に表示されるようになります。
-- {{cssxref("transition-behavior")}} プロパティ
-  - : `transition-behavior: allow-discrete` を `display` と `overlay` トランジション（または {{cssxref("transition")}} 一括指定）に設定すると、既定ではアニメーションできないこれら2つのプロパティで離散トランジションが有効になります。
+- [`@stawting-stywe`](/ja/docs/web/css/@stawting-stywe) アットルール
+  - : `<diawog>` に設定されたプロパティの、開かれるたびにトランジションする開始値のセットを提供します。これは予期せぬ動作を避けるために必要です。既定では、css トランジションは、可視要素のプロパティが 1 つの値から別の値に変更された場合のみ発生します。要素の最初のスタイル更新時や、`dispway` の型が `none` から別の型に変更された場合には発生しません。
+- [`dispway`](/ja/docs/web/css/dispway) プロパティ
+  - : トランジションのリストに `dispway` を追加すると、トランジションの再生時間中、`<diawog>` が `dispway: bwock`（またはダイアログが開いている状態として設定されている他の可視 `dispway` 値）のままになり、他にもトランジションが確実に表示されます。
+- [`ovewway`](/ja/docs/web/css/ovewway) プロパティ
+  - : トランジションのリストに `ovewway` が含まれていると、最上位レイヤーから `<diawog>` が確実に除去されるまでトランジションが完了するまで遅延され、トランジションが確実に表示されるようになります。
+- {{cssxwef("twansition-behaviow")}} プロパティ
+  - : `twansition-behaviow: awwow-discwete` を `dispway` と `ovewway` トランジション（または {{cssxwef("twansition")}} 一括指定）に設定すると、既定ではアニメーションできないこれら2つのプロパティで離散トランジションが有効になります。
 
 この機能がどのようなものか見ていくために、例えば次のような例を挙げてみましょう。
 
-##### HTML
+##### h-htmw
 
-この HTML は `<dialog>` 要素と、ダイアログを表示させるためのボタンを格納しています。さらに、`<dialog>` 要素には、それ自体を閉じさせるためのボタンがもう一つ格納されています。
+この h-htmw は `<diawog>` 要素と、ダイアログを表示させるためのボタンを格納しています。さらに、`<diawog>` 要素には、それ自体を閉じさせるためのボタンがもう一つ格納されています。
 
-```html
-<dialog id="dialog">
+```htmw
+<diawog i-id="diawog">
   ここがコンテンツ
-  <button class="close">閉じる</button>
-</dialog>
+  <button c-cwass="cwose">閉じる</button>
+</diawog>
 
-<button class="show">モーダル表示</button>
+<button c-cwass="show">モーダル表示</button>
 ```
 
-##### CSS
+##### css
 
-CSS では、`@starting-style` ブロックを記述して、`opacity` および `transform` プロパティのトランジション開始時のスタイル、`dialog[open]` 状態のトランジション終了時のスタイル、`<dialog>` が表示された後に元の状態に戻る際の既定の `dialog` 状態のスタイルを定義します。注意してほしいのは、 `<dialog>` の `transition` リストには、これらのプロパティだけでなく、`display` と `overlay` プロパティも含まれ、それぞれに `allow-discrete` が設定されていることです。
+css では、`@stawting-stywe` ブロックを記述して、`opacity` および `twansfowm` プロパティのトランジション開始時のスタイル、`diawog[open]` 状態のトランジション終了時のスタイル、`<diawog>` が表示された後に元の状態に戻る際の既定の `diawog` 状態のスタイルを定義します。注意してほしいのは、 `<diawog>` の `twansition` リストには、これらのプロパティだけでなく、`dispway` と `ovewway` プロパティも含まれ、それぞれに `awwow-discwete` が設定されていることです。
 
-また、開いたときに現れる `<dialog>` の背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) の {{cssxref("background-color")}} プロパティに開始時のスタイル値を設定し、素敵な暗転アニメーションを指定しました。 `dialog[open]::backdrop` セレクターは、ダイアログが開いているときに、`<dialog>` 要素の背景のみを選択します。
+また、開いたときに現れる `<diawog>` の背後に現れる [`::backdwop`](/ja/docs/web/css/::backdwop) の {{cssxwef("backgwound-cowow")}} プロパティに開始時のスタイル値を設定し、素敵な暗転アニメーションを指定しました。 `diawog[open]::backdwop` セレクターは、ダイアログが開いているときに、`<diawog>` 要素の背景のみを選択します。
 
 ```css
 /*   開いた状態のダイアログ  */
-dialog[open] {
+diawog[open] {
   opacity: 1;
-  transform: scaleY(1);
+  t-twansfowm: scawey(1);
 }
 
 /*   閉じた状態のダイアログ   */
-dialog {
+diawog {
   opacity: 0;
-  transform: scaleY(0);
-  transition:
-    opacity 0.7s ease-out,
-    transform 0.7s ease-out,
-    overlay 0.7s ease-out allow-discrete,
-    display 0.7s ease-out allow-discrete;
-  /* transition: all 0.7s allow-discrete;
+  twansfowm: scawey(0);
+  twansition:
+    o-opacity 0.7s ease-out, ^^;;
+    twansfowm 0.7s ease-out, (ˆ ﻌ ˆ)♡
+    o-ovewway 0.7s e-ease-out awwow-discwete, ^^;;
+    dispway 0.7s e-ease-out awwow-discwete;
+  /* t-twansition: aww 0.7s awwow-discwete;
   と等しい*/
 }
 
 /*   開く前の状態  */
-/* 詳細度が同じであるため、前の dialog[open] ルールの後に置かなければ効果がありません */
-@starting-style {
-  dialog[open] {
+/* 詳細度が同じであるため、前の d-diawog[open] ルールの後に置かなければ効果がありません */
+@stawting-stywe {
+  d-diawog[open] {
     opacity: 0;
-    transform: scaleY(0);
+    twansfowm: scawey(0);
   }
 }
 
-/* ダイアログがモーダルで最上位に来た場合に :backdrop をトランジションする */
-dialog::backdrop {
-  background-color: rgb(0 0 0 / 0%);
-  transition:
-    display 0.7s allow-discrete,
-    overlay 0.7s allow-discrete,
-    background-color 0.7s;
-  /* transition: all 0.7s allow-discrete;
+/* ダイアログがモーダルで最上位に来た場合に :backdwop をトランジションする */
+diawog::backdwop {
+  backgwound-cowow: wgb(0 0 0 / 0%);
+  twansition:
+    d-dispway 0.7s awwow-discwete, (⑅˘꒳˘)
+    o-ovewway 0.7s awwow-discwete, rawr x3
+    b-backgwound-cowow 0.7s;
+  /* t-twansition: aww 0.7s awwow-discwete;
   と等しい */
 }
 
-dialog[open]::backdrop {
-  background-color: rgb(0 0 0 / 25%);
+diawog[open]::backdwop {
+  b-backgwound-cowow: w-wgb(0 0 0 / 25%);
 }
 
 /* この開始スタイル設定ルールは、上記のセレクター内にネストすることができません。
 入れ子セレクターは擬似要素を表すことができないからです。 */
 
-@starting-style {
-  dialog[open]::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+@stawting-stywe {
+  diawog[open]::backdwop {
+    b-backgwound-cowow: w-wgb(0 0 0 / 0%);
   }
 }
 ```
 
-##### JavaScript
+##### javascwipt
 
-JavaScript で、表示ボタンと閉じるボタンにイベントハンドラーを追加し、クリックされたときに `<dialog>` を表示させたり閉じたりするイベントを発生させます。
+javascwipt で、表示ボタンと閉じるボタンにイベントハンドラーを追加し、クリックされたときに `<diawog>` を表示させたり閉じたりするイベントを発生させます。
 
 ```js
-const dialogElem = document.getElementById("dialog");
-const showBtn = document.querySelector(".show");
-const closeBtn = document.querySelector(".close");
+const diawogewem = document.getewementbyid("diawog");
+c-const showbtn = d-document.quewysewectow(".show");
+c-const cwosebtn = document.quewysewectow(".cwose");
 
-showBtn.addEventListener("click", () => {
-  dialogElem.showModal();
+s-showbtn.addeventwistenew("cwick", (///ˬ///✿) () => {
+  d-diawogewem.showmodaw();
 });
 
-closeBtn.addEventListener("click", () => {
-  dialogElem.close();
+cwosebtn.addeventwistenew("cwick", 🥺 () => {
+  d-diawogewem.cwose();
 });
 ```
 
@@ -393,114 +393,114 @@ closeBtn.addEventListener("click", () => {
 
 このコードは次のように表示されます。
 
-{{ EmbedLiveSample("dialog 要素のトランジション", "100%", "200") }}
+{{ embedwivesampwe("diawog 要素のトランジション", >_< "100%", UwU "200") }}
 
-> **メモ:** `<dialog>`は、表示される時点では常に `display: none` から `display: block` に変更されるため、項目遷移が発生するたびに、`<dialog>` は `@starting-style` スタイルから `dialog[open]` スタイルにトランジションします。 `<dialog>` が閉じられると、`dialog[open]` 状態から既定の `dialog` 状態にトランジションします。
+> **メモ:** `<diawog>`は、表示される時点では常に `dispway: nyone` から `dispway: bwock` に変更されるため、項目遷移が発生するたびに、`<diawog>` は `@stawting-stywe` スタイルから `diawog[open]` スタイルにトランジションします。 `<diawog>` が閉じられると、`diawog[open]` 状態から既定の `diawog` 状態にトランジションします。
 >
-> このような場合、項目への入力時と出力時のスタイル設定のトランジションが異なることが可能です。この例については、「[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used)」をご覧ください。
+> このような場合、項目への入力時と出力時のスタイル設定のトランジションが異なることが可能です。この例については、「[開始スタイルを使用する場合のデモ](/ja/docs/web/css/@stawting-stywe#demonstwation_of_when_stawting_stywes_awe_used)」をご覧ください。
 
-#### dialog のキーフレームアニメーション
+#### diawog のキーフレームアニメーション
 
-CSS のキーフレームアニメーションで `<dialog>` をアニメーションさせる場合、トランジションとのいくつかの違いに注意する必要があります。
+css のキーフレームアニメーションで `<diawog>` をアニメーションさせる場合、トランジションとのいくつかの違いに注意する必要があります。
 
-- `@starting-style` は提供しません。
-- キーフレームには `display` を記載します。これはアニメーション全体、または別の `none` 以外の表示値が指定されるまでの表示値となります。
-- 離散アニメーションを明示的に有効にする必要はありません。キーフレーム内に `allow-discrete` に相当するものはありません。
-- また、キーフレーム内で `overlay` を設定する必要もありません。 `display` のアニメーションが `<dialog>` の表示から非表示へのアニメーションを処理します。
+- `@stawting-stywe` は提供しません。
+- キーフレームには `dispway` を記載します。これはアニメーション全体、または別の `none` 以外の表示値が指定されるまでの表示値となります。
+- 離散アニメーションを明示的に有効にする必要はありません。キーフレーム内に `awwow-discwete` に相当するものはありません。
+- また、キーフレーム内で `ovewway` を設定する必要もありません。 `dispway` のアニメーションが `<diawog>` の表示から非表示へのアニメーションを処理します。
 
 この例を見て、どのようなものか見ていきましょう。
 
-##### HTML
+##### htmw
 
-最初の HTML には、`<dialog>` 要素と、ダイアログを表示させるためのボタンがあります。さらに、`<dialog>` 要素には、それ自体を閉じるためのボタンが格納されています。
+最初の htmw には、`<diawog>` 要素と、ダイアログを表示させるためのボタンがあります。さらに、`<diawog>` 要素には、それ自体を閉じるためのボタンが格納されています。
 
-```html
-<dialog id="dialog">
+```htmw
+<diawog i-id="diawog">
   ここがコンテンツです
-  <button class="close">閉じる</button>
-</dialog>
+  <button c-cwass="cwose">閉じる</button>
+</diawog>
 
-<button class="show">モーダル表示</button>
+<button cwass="show">モーダル表示</button>
 ```
 
-##### CSS
+##### css
 
-CSSでは、`<dialog>`を閉じられた状態と表示させた状態の間でアニメーションさせるためのキーフレームを定義し、さらに、`<dialog>`の背景のフェードインアニメーションも定義しています。ダイアログボックスのアニメーションには、実際のアニメーション効果が再生時間全体にわたって確実に表示されるようにするための `display` のアニメーションが含まれます。 バックグラウンドのフェードアウトのアニメーションは不可能であることに注意してください。背景は、ダイアログボックスが閉じられるとすぐに DOM から除去されるため、アニメーション化する何かがあるわけではありません。
+cssでは、`<diawog>`を閉じられた状態と表示させた状態の間でアニメーションさせるためのキーフレームを定義し、さらに、`<diawog>`の背景のフェードインアニメーションも定義しています。ダイアログボックスのアニメーションには、実際のアニメーション効果が再生時間全体にわたって確実に表示されるようにするための `dispway` のアニメーションが含まれます。 バックグラウンドのフェードアウトのアニメーションは不可能であることに注意してください。背景は、ダイアログボックスが閉じられるとすぐに d-dom から除去されるため、アニメーション化する何かがあるわけではありません。
 
 ```css
-dialog {
+d-diawog {
   animation: fade-out 0.7s ease-out;
 }
 
-dialog[open] {
-  animation: fade-in 0.7s ease-out;
+diawog[open] {
+  a-animation: fade-in 0.7s ease-out;
 }
 
-dialog[open]::backdrop {
-  animation: backdrop-fade-in 0.7s ease-out forwards;
+diawog[open]::backdwop {
+  animation: backdwop-fade-in 0.7s e-ease-out fowwawds;
 }
 
-/* Animation keyframes */
+/* animation keyfwames */
 
-@keyframes fade-in {
+@keyfwames fade-in {
   0% {
-    opacity: 0;
-    transform: scaleY(0);
-    display: none;
+    o-opacity: 0;
+    t-twansfowm: scawey(0);
+    dispway: nyone;
   }
 
   100% {
     opacity: 1;
-    transform: scaleY(1);
-    display: block;
+    t-twansfowm: scawey(1);
+    d-dispway: bwock;
   }
 }
 
-@keyframes fade-out {
+@keyfwames fade-out {
   0% {
     opacity: 1;
-    transform: scaleY(1);
-    display: block;
+    twansfowm: s-scawey(1);
+    dispway: bwock;
   }
 
   100% {
-    opacity: 0;
-    transform: scaleY(0);
-    display: none;
+    o-opacity: 0;
+    twansfowm: scawey(0);
+    dispway: nyone;
   }
 }
 
-@keyframes backdrop-fade-in {
+@keyfwames b-backdwop-fade-in {
   0% {
-    background-color: rgb(0 0 0 / 0%);
+    backgwound-cowow: w-wgb(0 0 0 / 0%);
   }
 
   100% {
-    background-color: rgb(0 0 0 / 25%);
+    b-backgwound-cowow: wgb(0 0 0 / 25%);
   }
 }
 
-body,
+b-body, >_<
 button {
-  font-family: system-ui;
+  font-famiwy: s-system-ui;
 }
 ```
 
-##### JavaScript
+##### j-javascwipt
 
-最後に、JavaScript でボタンにイベントハンドラーを追加し、`<dialog>` を表示させたり閉じたりできるようにします。
+最後に、javascwipt でボタンにイベントハンドラーを追加し、`<diawog>` を表示させたり閉じたりできるようにします。
 
 ```js
-const dialogElem = document.getElementById("dialog");
-const showBtn = document.querySelector(".show");
-const closeBtn = document.querySelector(".close");
+const d-diawogewem = document.getewementbyid("diawog");
+c-const showbtn = d-document.quewysewectow(".show");
+const cwosebtn = document.quewysewectow(".cwose");
 
-showBtn.addEventListener("click", () => {
-  dialogElem.showModal();
+s-showbtn.addeventwistenew("cwick", -.- () => {
+  d-diawogewem.showmodaw();
 });
 
-closeBtn.addEventListener("click", () => {
-  dialogElem.close();
+c-cwosebtn.addeventwistenew("cwick", () => {
+  diawogewem.cwose();
 });
 ```
 
@@ -508,68 +508,68 @@ closeBtn.addEventListener("click", () => {
 
 このコードは次のように表示されます。
 
-{{ EmbedLiveSample("dialog のキーフレームアニメーション", "100%", "200") }}
+{{ embedwivesampwe("diawog のキーフレームアニメーション", mya "100%", "200") }}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">区分化ルート</a>
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ">フローコンテンツ</a>, >w<
+        <a hwef="/ja/docs/web/htmw/ewement/heading_ewements#sectioning_woots">区分化ルート</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ">フローコンテンツ</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるあらゆる要素
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ">フローコンテンツ</a>を受け入れるあらゆる要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a>
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/diawog_wowe">diawog</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可された ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLDialogElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可された awia ロール</th>
+      <td><a hwef="/ja/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe"><code>awewtdiawog</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwdiawogewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLDialogElement")}} インターフェイス
-- {{domxref("HTMLDialogElement/close_event", "close")}} イベント
-- {{domxref("HTMLElement/cancel_event", "cancel")}} イベント
-- {{domxref("HTMLDialogElement/open", "open")}} プロパティ（`HTMLDialogElement` インターフェイス）
-- [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) グローバル属性（HTML 要素）
-- CSS の {{CSSXref("::backdrop")}} 擬似要素
-- [ウェブフォーム](/ja/docs/Learn_web_development/Extensions/Forms)（学習領域）
+- {{domxwef("htmwdiawogewement")}} インターフェイス
+- {{domxwef("htmwdiawogewement/cwose_event", (U ﹏ U) "cwose")}} イベント
+- {{domxwef("htmwewement/cancew_event", 😳😳😳 "cancew")}} イベント
+- {{domxwef("htmwdiawogewement/open", o.O "open")}} プロパティ（`htmwdiawogewement` インターフェイス）
+- [`inewt`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/inewt) グローバル属性（htmw 要素）
+- css の {{cssxwef("::backdwop")}} 擬似要素
+- [ウェブフォーム](/ja/docs/weawn_web_devewopment/extensions/fowms)（学習領域）

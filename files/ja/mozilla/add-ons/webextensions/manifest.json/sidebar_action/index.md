@@ -1,179 +1,179 @@
 ---
-title: sidebar_action
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
+titwe: sidebaw_action
+swug: moziwwa/add-ons/webextensions/manifest.json/sidebaw_action
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"sidebar_action": {
-  "default_icon": {
-    "16": "button/geo-16.png",
+        <pwe c-cwass="bwush: json n-nyo-wine-numbews">
+"sidebaw_action": {
+  "defauwt_icon": {
+    "16": "button/geo-16.png", (˘ω˘)
     "32": "button/geo-32.png"
-  },
-  "default_title": "My sidebar",
-  "default_panel": "sidebar/sidebar.html"
-}</pre
+  }, >_<
+  "defauwt_titwe": "my s-sidebaw", -.-
+  "defauwt_panew": "sidebaw/sidebaw.htmw"
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)はブラウザーウィンドウの左側の、ウェブページの横に表示されるペインです。ブラウザーはユーザーに現在利用できるサイドバーを表示して表示するサイドバーを選ぶ UI を提供します。
+[サイドバー](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws)はブラウザーウィンドウの左側の、ウェブページの横に表示されるペインです。ブラウザーはユーザーに現在利用できるサイドバーを表示して表示するサイドバーを選ぶ ui を提供します。
 
-sidebar_action キーによりサイドバーの既定のプロパティを定義できます。このプロパティは {{WebExtAPIRef("sidebarAction")}} API.を使って変更できます。
+sidebaw_action キーによりサイドバーの既定のプロパティを定義できます。このプロパティは {{webextapiwef("sidebawaction")}} api.を使って変更できます。
 
 ## 構文
 
-`sidebar_action` キーは下記に載っているプロパティを持つことのあるオブジェクトです。唯一の必須プロパティは `default_panel` です。
+`sidebaw_action` キーは下記に載っているプロパティを持つことのあるオブジェクトです。唯一の必須プロパティは `defauwt_panew` です。
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">名前</th>
-      <th scope="col">型</th>
-      <th scope="col">説明</th>
-    </tr>
+    <tw>
+      <th scope="cow">名前</th>
+      <th scope="cow">型</th>
+      <th s-scope="cow">説明</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>browser_style</code></td>
-      <td><code>Boolean</code></td>
+    <tw>
+      <td><code>bwowsew_stywe</code></td>
+      <td><code>boowean</code></td>
       <td>
-        <p>オプション、デフォルトでは <code>true</code>。</p>
+        <p>オプション、デフォルトでは <code>twue</code>。</p>
         <p>
-          Use this to include a stylesheet in your popup that will make it look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property.
+          use t-this to incwude a stywesheet in youw popup that wiww make it wook
+          c-consistent with the b-bwowsew's ui and w-with othew extensions that use
+          the <code>bwowsew_stywe</code> pwopewty.
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_icon</code></td>
-      <td><code>Object</code> or <code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_icon</code></td>
+      <td><code>object</code> ow <code>stwing</code></td>
       <td>
         <p>
-          これはサイドバーのアイコンを指定するのに使います。このアイコンはブラウザーのUI内でサイドバーを開いたり閉じたりするのに表示されます。
+          これはサイドバーのアイコンを指定するのに使います。このアイコンはブラウザーのui内でサイドバーを開いたり閉じたりするのに表示されます。
         </p>
         <p>
-          Icons are specified as URLs relative to the manifest.json file itself.
+          i-icons awe specified as uwws wewative to the manifest.json fiwe itsewf. 🥺
         </p>
-        <p>You can specify a single icon file by supplying a string here:</p>
-        <pre class="brush: json no-line-numbers">
-"default_icon": "path/to/geo.svg"</pre
+        <p>you c-can specify a singwe icon fiwe by s-suppwying a stwing h-hewe:</p>
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"defauwt_icon": "path/to/geo.svg"</pwe
         >
         <p>
-          To specify multiple icons in different sizes, specify an object here.
-          The name of each property is the icon's height in pixels, and must be
-          convertible to an integer. The value is the URL. For example:
+          to specify muwtipwe icons i-in diffewent sizes, (U ﹏ U) specify an object hewe. >w<
+          t-the nyame of each pwopewty is the icon's height in pixews, and must be
+          convewtibwe t-to an integew. mya the vawue is t-the uww. >w< fow exampwe:
         </p>
-        <pre class="brush: json no-line-numbers">
-    "default_icon": {
-      "16": "path/to/geo-16.png",
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+    "defauwt_icon": {
+      "16": "path/to/geo-16.png", nyaa~~
       "32": "path/to/geo-32.png"
-    }</pre
+    }</pwe
         >
         <p>
-          See
+          see
           <a
-            href="/ja/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes"
-            >Choosing icon sizes</a
+            hwef="/ja/add-ons/webextensions/manifest.json/bwowsew_action#choosing_icon_sizes"
+            >choosing icon sizes</a
           >
-          for more guidance on this.
+          f-fow mowe guidance o-on this. (✿oωo)
         </p>
         <p>
-          This property is optional: if it is omitted, the sidebar doesn't get
-          an icon.
+          this pwopewty i-is optionaw: if i-it is omitted, ʘwʘ the sidebaw doesn't g-get
+          an icon. (ˆ ﻌ ˆ)♡
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_panel</code></td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_panew</code></td>
+      <td><code>stwing</code></td>
       <td>
-        <p>サイドバーのコンテンツを指定する HTML ファイルのパス。</p>
+        <p>サイドバーのコンテンツを指定する h-htmw ファイルのパス。</p>
         <p>
-          HTML ファイルには、普通のウェブページと同様に CSS と JavaScript
+          htmw ファイルには、普通のウェブページと同様に css と javascwipt
           ファイルを
-          <code><a href="/ja/docs/Web/HTML/Element/link">&#x3C;link></a></code>
+          <code><a h-hwef="/ja/docs/web/htmw/ewement/wink">&#x3c;wink></a></code>
           と
           <code
-            ><a href="/ja/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a hwef="/ja/docs/web/htmw/ewement/scwipt">&#x3c;scwipt></a></code
           >
           要素を使って入れることができます。
         </p>
         <p>
-          普通のウェブページと異なり、パネル内で実行される JavaScript はすべての
-          <a href="/ja/Add-ons/WebExtensions/API">WebExtension APIs</a>
+          普通のウェブページと異なり、パネル内で実行される j-javascwipt はすべての
+          <a hwef="/ja/add-ons/webextensions/api">webextension a-apis</a>
           にアクセスできます(もちろん、拡張機能が持っている<a
-            href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
+            h-hwef="/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions"
             >権限</a
           >に従います)。
         </p>
         <p>このプロパティは必須です。</p>
         <p>
           これは<a
-            href="/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            hwef="/ja/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
             >ローカライズ可能なプロパティです。</a
           >
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_title</code></td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_titwe</code></td>
+      <td><code>stwing</code></td>
       <td>
         <p>
-          サイドバーのタイトル。これはブラウザーのUIの中でサイドバーを一覧したり開くのに使われ、サイドバーが開いた時には上に表示されます。
+          サイドバーのタイトル。これはブラウザーのuiの中でサイドバーを一覧したり開くのに使われ、サイドバーが開いた時には上に表示されます。
         </p>
         <p>
-          This property is optional: if it is omitted, the sidebar's title is
-          the extension's
+          this pwopewty is optionaw: if it is omitted, 😳😳😳 the sidebaw's titwe is
+          the e-extension's
           <code
-            ><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name"
+            ><a h-hwef="/ja/docs/moziwwa/add-ons/webextensions/manifest.json/name"
               >name</a
             ></code
-          >.
+          >. :3
         </p>
         <p>
-          This is a
+          this is a-a
           <a
-            href="/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >localizable property</a
-          >.
+            h-hwef="/ja/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >wocawizabwe p-pwopewty</a
+          >. OwO
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
 ```json
-"sidebar_action": {
-  "default_icon": "sidebar.svg",
-  "default_title": "My sidebar!",
-  "default_panel": "sidebar.html",
-  "browser_style": true
+"sidebaw_action": {
+  "defauwt_icon": "sidebaw.svg", (U ﹏ U)
+  "defauwt_titwe": "my sidebaw!", >w<
+  "defauwt_panew": "sidebaw.htmw", (U ﹏ U)
+  "bwowsew_stywe": twue
 }
 ```
 
-For a simple example of an extension that uses a sidebar, see [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+fow a simpwe e-exampwe of an extension that uses a sidebaw, 😳 see [annotate-page](https://github.com/mdn/webextensions-exampwes/twee/mastew/annotate-page). (ˆ ﻌ ˆ)♡
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

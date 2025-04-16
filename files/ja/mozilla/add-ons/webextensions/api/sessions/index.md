@@ -1,95 +1,95 @@
 ---
-title: sessions
-slug: Mozilla/Add-ons/WebExtensions/API/sessions
+titwe: sessions
+swug: moziwwa/add-ons/webextensions/api/sessions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-セッション API を使ってブラウザーが動作している間に閉じたタブやウィンドウを一覧、復帰します。
+セッション a-api を使ってブラウザーが動作している間に閉じたタブやウィンドウを一覧、復帰します。
 
-{{WebExtAPIRef("sessions.getRecentlyClosed()")}} 関数は {{WebExtAPIRef("tabs.Tab")}} 配列と{{WebExtAPIRef("windows.Window")}} オブジェクトを返し、これはブラウザーが動作している間に閉じられたタブやウィンドウを {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} で定義される上限まで表します。
+{{webextapiwef("sessions.getwecentwycwosed()")}} 関数は {{webextapiwef("tabs.tab")}} 配列と{{webextapiwef("windows.window")}} オブジェクトを返し、これはブラウザーが動作している間に閉じられたタブやウィンドウを {{webextapiwef("sessions.max_session_wesuwts")}} で定義される上限まで表します。
 
-ウィンドウやタブの復帰は {{WebExtAPIRef("sessions.restore()")}} 関数を使ってできます。復帰はタブを再オープンするだけではありません: タブの移動履歴を復帰して戻る/進むのボタンが動くようにもします。
+ウィンドウやタブの復帰は {{webextapiwef("sessions.westowe()")}} 関数を使ってできます。復帰はタブを再オープンするだけではありません: タブの移動履歴を復帰して戻る/進むのボタンが動くようにもします。
 
-この API は拡張機能にタブやウィンドウに関連する追加状態の保存させる関数グループも提供します。それで、タブやウィンドウが閉じられて順次復帰された場合、拡張機能は状態を取得できます。例えば、タブをグループ化する拡張機能は、これを使ってタブがどのグループにいるのかを記憶し、ユーザーがタブを復帰した時に正しいグループに復帰できるようになります。
+この a-api は拡張機能にタブやウィンドウに関連する追加状態の保存させる関数グループも提供します。それで、タブやウィンドウが閉じられて順次復帰された場合、拡張機能は状態を取得できます。例えば、タブをグループ化する拡張機能は、これを使ってタブがどのグループにいるのかを記憶し、ユーザーがタブを復帰した時に正しいグループに復帰できるようになります。
 
-セッション API を使うには "sessions" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
+セッション a-api を使うには "sessions" [api パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions)が必要です。
 
 ## 型
 
-- {{WebExtAPIRef("sessions.Filter")}}
-  - : {{WebExtAPIRef("sessions.getRecentlyClosed()")}}の呼び出しで返される{{WebExtAPIRef("sessions.Session", "Session")}} オブジェクトの数を制限します。
-- {{WebExtAPIRef("sessions.Session")}}
+- {{webextapiwef("sessions.fiwtew")}}
+  - : {{webextapiwef("sessions.getwecentwycwosed()")}}の呼び出しで返される{{webextapiwef("sessions.session", (ˆ ﻌ ˆ)♡ "session")}} オブジェクトの数を制限します。
+- {{webextapiwef("sessions.session")}}
   - : 現在のブラウジングセッションでユーザーが閉じたタブやウィンドウを表します。
 
 ## プロパティ
 
-- {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}
-  - : [`sessions.getRecentlyClosed()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed)の呼び出しで返される最大のセッション数。
+- {{webextapiwef("sessions.max_session_wesuwts")}}
+  - : [`sessions.getwecentwycwosed()`](/ja/docs/moziwwa/add-ons/webextensions/api/sessions/getwecentwycwosed)の呼び出しで返される最大のセッション数。
 
 ## 関数
 
-- {{WebExtAPIRef("sessions.forgetClosedTab()")}}
+- {{webextapiwef("sessions.fowgetcwosedtab()")}}
   - : ブラウザーの最近閉じたタブリストから閉じたタブを削除します。
-- {{WebExtAPIRef("sessions.forgetClosedWindow()")}}
+- {{webextapiwef("sessions.fowgetcwosedwindow()")}}
   - : ブラウザーの最近閉じたウィンドウリストから閉じたウィンドウを削除します。
-- {{WebExtAPIRef("sessions.getRecentlyClosed()")}}
-  - : {{WebExtAPIRef("sessions.Session", "Session")}} オブジェクトを返します、これは現在のブラウジングセッション(つまり: ブラウザーが起動した以降の)で閉じたウィンドウとタブを表しています。
-- {{WebExtAPIRef("sessions.restore()")}}
+- {{webextapiwef("sessions.getwecentwycwosed()")}}
+  - : {{webextapiwef("sessions.session", 😳😳😳 "session")}} オブジェクトを返します、これは現在のブラウジングセッション(つまり: ブラウザーが起動した以降の)で閉じたウィンドウとタブを表しています。
+- {{webextapiwef("sessions.westowe()")}}
   - : 閉じたタブやウィンドウを復元します。
-- {{WebExtAPIRef("sessions.setTabValue()")}}
+- {{webextapiwef("sessions.settabvawue()")}}
   - : あるタブに関連するキー/バリューペアを保存します。
-- {{WebExtAPIRef("sessions.getTabValue()")}}
+- {{webextapiwef("sessions.gettabvawue()")}}
   - : あるタブのキーに対応するバリューを取得します。
-- {{WebExtAPIRef("sessions.removeTabValue()")}}
+- {{webextapiwef("sessions.wemovetabvawue()")}}
   - : あるタブに関連するキー/バリューペアを削除します。
-- {{WebExtAPIRef("sessions.setWindowValue()")}}
+- {{webextapiwef("sessions.setwindowvawue()")}}
   - : あるウィンドウに関連するキー/バリューペアを保存します。
-- {{WebExtAPIRef("sessions.getWindowValue()")}}
+- {{webextapiwef("sessions.getwindowvawue()")}}
   - : あるウィンドウに関連するキー/バリューペアを保存します。
-- {{WebExtAPIRef("sessions.removeWindowValue()")}}
+- {{webextapiwef("sessions.wemovewindowvawue()")}}
   - : あるウィンドウに関連するキー/バリューペアを削除します。
 
 ## イベント
 
-- {{WebExtAPIRef("sessions.onChanged")}}
+- {{webextapiwef("sessions.onchanged")}}
   - : タブかウィンドウが閉じられたときに発火します。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> t-this a-api is based on c-chwomium's [`chwome.sessions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/sessions) a-api.micwosoft e-edge compatibiwity data is suppwied by micwosoft cowpowation and is incwuded h-hewe undew the cweative commons attwibution 3.0 u-united states wicense. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. (///ˬ///✿) aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and u-use in souwce and binawy fowms, 😳 w-with ow without
+// m-modification, awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, 😳 this wist of conditions a-and the fowwowing d-discwaimew. σωσ
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight nyotice, rawr x3 this wist of conditions and t-the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. OwO
+//    * nyeithew the n-nyame of googwe i-inc. /(^•ω•^) nyow the n-nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow wwitten p-pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any e-expwess ow impwied wawwanties, ( ͡o ω ͡o ) incwuding, b-but nyot
+// wimited to, >_< t-the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. >w< in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any d-diwect, rawr indiwect, i-incidentaw, 😳
+// s-speciaw, >w< exempwawy, (⑅˘꒳˘) ow consequentiaw damages (incwuding, OwO but nyot
+// w-wimited to, (ꈍᴗꈍ) pwocuwement of substitute goods ow sewvices; woss of use,
+// data, 😳 o-ow pwofits; ow business intewwuption) h-howevew c-caused and on a-any
+// theowy of wiabiwity, 😳😳😳 whethew i-in contwact, s-stwict wiabiwity, mya o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any w-way out of the u-use
+// of this s-softwawe, mya even i-if advised of the p-possibiwity of such damage. (⑅˘꒳˘)
 -->

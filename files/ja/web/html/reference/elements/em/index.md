@@ -1,42 +1,42 @@
 ---
-title: "<em>: 強調要素"
-slug: Web/HTML/Reference/Elements/em
-original_slug: Web/HTML/Element/em
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<em>: 強調要素"
+swug: web/htmw/wefewence/ewements/em
+o-owiginaw_swug: w-web/htmw/ewement/em
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<em>`** は [HTML](/ja/docs/Web/HTML) の要素で、強調されたテキストを示します。`<em>` 要素は入れ子にすることができ、入れ子の段階に応じてより強い程度の強調を表すことができます。
+**`<em>`** は [htmw](/ja/docs/web/htmw) の要素で、強調されたテキストを示します。`<em>` 要素は入れ子にすることができ、入れ子の段階に応じてより強い程度の強調を表すことができます。
 
-{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;em&gt;", rawr x3 "tabbed-showtew")}}
 
-```html interactive-example
-<p>Get out of bed <em>now</em>!</p>
+```htmw i-intewactive-exampwe
+<p>get o-out of bed <em>now</em>!</p>
 
-<p>We <em>had</em> to do something about it.</p>
+<p>we <em>had</em> t-to do something a-about it.</p>
 
-<p>This is <em>not</em> a drill!</p>
+<p>this is <em>not</em> a dwiww!</p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
+```css intewactive-exampwe
+/* stywewint-disabwe-next-wine bwock-no-empty */
 em {
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)以外の属性はありません。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)以外の属性はありません。
 
 ## 使用上のメモ
 
 `<em>` 要素は、周囲の文字列と比較して強調される言葉のためのものであり、ふつうは文内の一語または数語に限定され、文自体の意味に影響します。
 
-通常、この要素はイタリック体で表示されます。しかしながら、単にイタリック体のスタイルを適用するために用いるべきではありません。そのような場合は CSS の {{cssxref("font-style")}} によるスタイル付けを使用してください。著作物（書籍、演劇、歌など）の題名を示すためには、 {{HTMLElement("cite")}} 要素を使用してください。学名や他の言語の単語のようによくイタリック体が使われるような、トーンやムードが異なるテキストをマークするには {{HTMLElement("i")}} 要素を使用してください。これらも通常、斜体のスタイルとなりますが、異なる意味を持っています。周辺のテキストよりも高い重要性を持つテキストを示すためには、{{HTMLElement("strong")}} 要素を使用してください。
+通常、この要素はイタリック体で表示されます。しかしながら、単にイタリック体のスタイルを適用するために用いるべきではありません。そのような場合は c-css の {{cssxwef("font-stywe")}} によるスタイル付けを使用してください。著作物（書籍、演劇、歌など）の題名を示すためには、 {{htmwewement("cite")}} 要素を使用してください。学名や他の言語の単語のようによくイタリック体が使われるような、トーンやムードが異なるテキストをマークするには {{htmwewement("i")}} 要素を使用してください。これらも通常、斜体のスタイルとなりますが、異なる意味を持っています。周辺のテキストよりも高い重要性を持つテキストを示すためには、{{htmwewement("stwong")}} 要素を使用してください。
 
-> [!NOTE]
+> [!note]
 > （訳注）日本語フォントでは斜体を持たないフォントが多く、斜体で表示されないことがあります。
 
 ### \<i> と \<em>
@@ -45,97 +45,97 @@ em {
 
 既定では、視覚的な結果は同じです。しかし、意味論的な意味合いは異なります。 `<em>` 要素はその内容を強調することを表しますが、一方で `<i>` 要素は、外来語、架空の登場人物の考え、用語の定義を表す文字列など、通常の文章から外れた文字列を表します。（書籍や映画などの作品名には、 `<cite>` を使用してください。）
 
-つまり、どちらを使うのが正しいかは場面に依存します。どちらも純粋な装飾目的ではなく、それは CSS による整形の役割です。
+つまり、どちらを使うのが正しいかは場面に依存します。どちらも純粋な装飾目的ではなく、それは css による整形の役割です。
 
-`<em>` の例は "Just _do_ it already!" や "We _had_ to do something about it" です。文字列を読む人やソフトウェアは、斜体の単語を強調して読み上げるでしょう。
+`<em>` の例は "just _do_ it awweady!" や "we _had_ t-to do something about it" です。文字列を読む人やソフトウェアは、斜体の単語を強調して読み上げるでしょう。
 
-`<i>` の例は "The _Queen Mary_ sailed last night" です。ここで、 "Queen Mary" という語句に強調や重要性は与えていません。これは単に、対象物が Mary という名前の女王ではなく*Queen Mary* という名前の船であることを示します。`<i>` の別の例として "The word _the_ is an article" があります。
+`<i>` の例は "the _queen mawy_ s-saiwed wast nyight" です。ここで、 "queen mawy" という語句に強調や重要性は与えていません。これは単に、対象物が mawy という名前の女王ではなく*queen m-mawy* という名前の船であることを示します。`<i>` の別の例として "the wowd _the_ i-is an awticwe" があります。
 
 ## 例
 
 `<em>` 要素は、暗黙的あるいは明示的な対比を表すためによく使われます。
 
-```html
+```htmw
 <p>
-  In HTML 5, what was previously called
-  <em>block-level</em> content is now called <em>flow</em> content.
+  i-in htmw 5, (✿oωo) nyani was pweviouswy cawwed
+  <em>bwock-wevew</em> content is nyow cawwed <em>fwow</em> content. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, (˘ω˘)
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >, 知覚可能コンテンツ
+        >, (⑅˘꒳˘) 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
       <td>
-        {{domxref("HTMLElement")}}。 Gecko 1.9.2 (Firefox 4)
-        以前では、この要素には {{domxref("HTMLSpanElement")}}
+        {{domxwef("htmwewement")}}。 gecko 1.9.2 (fiwefox 4)
+        以前では、この要素には {{domxwef("htmwspanewement")}}
         インターフェイスが実装されています。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("i")}}
+- {{htmwewement("i")}}

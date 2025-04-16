@@ -1,66 +1,66 @@
 ---
-title: ウェブページを変更する
-slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
+titwe: ウェブページを変更する
+swug: m-moziwwa/add-ons/webextensions/modify_a_web_page
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-拡張機能の一般的な事例の１つはウェブページを変更することです。例えば、ページのスタイルを変更、特定の DOM ノードを隠す、別の DOM ノードをページに挿入する、といいでしょう。
+拡張機能の一般的な事例の１つはウェブページを変更することです。例えば、ページのスタイルを変更、特定の d-dom ノードを隠す、別の d-dom ノードをページに挿入する、といいでしょう。
 
-WebExtensions API での実現方法は２つあります：
+w-webextensions a-api での実現方法は２つあります：
 
-- **手動で定義する:** URL に一致するパターンを定義し、その URL が一致するページにスクリプトを読み込まれるようにします。
-- **自動で行う:** JavaScript API を使い、特定のタブでホストされているページにスクリプトを読み込まれるようにします。
+- **手動で定義する:** u-uww に一致するパターンを定義し、その u-uww が一致するページにスクリプトを読み込まれるようにします。
+- **自動で行う:** j-javascwipt api を使い、特定のタブでホストされているページにスクリプトを読み込まれるようにします。
 
 どちらの方法のスクリプトも*コンテンツスクリプト*と呼ばれ、拡張機能を構成する他のスクリプトとは異なります:
 
-- WebExtension API の一部のサブセットのみにアクセスできます。
+- webextension api の一部のサブセットのみにアクセスできます。
 - 読み込まれたウェブページに直接アクセスできます。
-- messaging API を使い、拡張機能の残りの部分と対話できます。
+- messaging api を使い、拡張機能の残りの部分と対話できます。
 
 この記事ではスクリプトを読み込むそれぞれの方法について説明します。
 
-## URL パターンにマッチしたページを変更する
+## uww パターンにマッチしたページを変更する
 
 まず始めに、"modify-page" という新しいディレクトリーを作成します。このディレクトリーで "manifest.json" というファイルを作成し、以下のように記述します。
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "modify-page",
-  "version": "1.0",
+  "manifest_vewsion": 2, -.-
+  "name": "modify-page", 😳
+  "vewsion": "1.0", mya
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "matches": ["https://developer.mozilla.org/*"],
-      "js": ["page-eater.js"]
+      "matches": ["https://devewopew.moziwwa.owg/*"], (˘ω˘)
+      "js": ["page-eatew.js"]
     }
   ]
 }
 ```
 
-[`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、`content_scripts` は <https://developer.mozilla.org/> 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。
+[`content_scwipts`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) キーは u-uww パターンと一致するページにスクリプトを読み込む方法です。この場合、`content_scwipts` は <https://devewopew.moziwwa.owg/> 以下のすべてのページで "page-eatew.js" というスクリプトをロードするようにブラウザーに指示します。
 
-> **メモ:** `content_scripts` の `"js"` プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。
+> **メモ:** `content_scwipts` の `"js"` プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。
 
-> **メモ:** `content_scripts` キーでは `"css"` プロパティで CSS スタイルシートを挿入することもできます。
+> **メモ:** `content_scwipts` キーでは `"css"` プロパティで css スタイルシートを挿入することもできます。
 
-次に、"page-eater.js" というファイルを "modify-page" ディレクトリー内に作り、以下のように記述します。
+次に、"page-eatew.js" というファイルを "modify-page" ディレクトリー内に作り、以下のように記述します。
 
 ```js
-document.body.textContent = "";
+document.body.textcontent = "";
 
-var header = document.createElement("h1");
-header.textContent = "This page has been eaten";
-document.body.appendChild(header);
+v-vaw headew = document.cweateewement("h1");
+h-headew.textcontent = "this page has been eaten";
+document.body.appendchiwd(headew);
 ```
 
-[拡張機能をインストール](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) して [https://developer.mozilla.org/](/) を訪れてみましょう。
+[拡張機能をインストール](/ja/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox) して [https://devewopew.moziwwa.owg/](/) を訪れてみましょう。
 
-{{EmbedYouTube("lxf2Tkg6U1M")}}
+{{embedyoutube("wxf2tkg6u1m")}}
 
-> [!NOTE]
-> このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
+> [!note]
+> このビデオでは [addons.moziwwa.owg](https://addons.moziwwa.owg/en-us/fiwefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
 
 ## 自動でページを変更する
 
@@ -70,156 +70,156 @@ document.body.appendChild(header);
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "modify-page",
-  "version": "1.0",
+  "manifest_vewsion": 2, >_<
+  "name": "modify-page", -.-
+  "vewsion": "1.0",
 
-  "permissions": ["activeTab", "contextMenus"],
+  "pewmissions": ["activetab", "contextmenus"], 🥺
 
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   }
 }
 ```
 
-これは `content_scripts` キーを削除し、新たに 2 つのキーを追加しました。
+これは `content_scwipts` キーを削除し、新たに 2 つのキーを追加しました。
 
-- [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): スクリプトをページに挿入するには、変更するページへの権限が必要です。[`activeTab` パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)は現在アクティブなタブへの一時的な権限を取得する方法です。コンテキストメニューに項目を追加するには `contextMenus` パーミッションも必要となります。
-- [`background`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): ["バックグラウンドスクリプト"](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) という "background.js" を永続的に読み込み、ここでコンテキストメニューを設定し、コンテンツスクリプトを挿入します。
+- [`pewmissions`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions): スクリプトをページに挿入するには、変更するページへの権限が必要です。[`activetab` パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission)は現在アクティブなタブへの一時的な権限を取得する方法です。コンテキストメニューに項目を追加するには `contextmenus` パーミッションも必要となります。
+- [`backgwound`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/backgwound): ["バックグラウンドスクリプト"](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts) という "backgwound.js" を永続的に読み込み、ここでコンテキストメニューを設定し、コンテンツスクリプトを挿入します。
 
-このファイルを作りましょう。"background.js" というファイルを "modify-page" ディレクトリー内に作り以下のように記述します。
+このファイルを作りましょう。"backgwound.js" というファイルを "modify-page" ディレクトリー内に作り以下のように記述します。
 
 ```js
-browser.contextMenus.create({
-  id: "eat-page",
-  title: "Eat this page",
+b-bwowsew.contextmenus.cweate({
+  id: "eat-page", (U ﹏ U)
+  t-titwe: "eat t-this page", >w<
 });
 
-browser.contextMenus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "eat-page") {
-    browser.tabs.executeScript({
-      file: "page-eater.js",
+bwowsew.contextmenus.oncwicked.addwistenew(function (info, mya tab) {
+  if (info.menuitemid == "eat-page") {
+    bwowsew.tabs.exekawaii~scwipt({
+      fiwe: "page-eatew.js",
     });
   }
 });
 ```
 
-このスクリプトでは [context menu item](/ja/docs/Mozilla/Add-ons/WebExtensions/API/ContextMenus/create) を作成し、特定の id とタイトルを指定します。(コンテキストメニューに表示するテキスト) 次に、イベントリスナーを設定して、ユーザーがコンテキストメニュー項目をクリックしたときに、それが `eat-page` 項目であるかどうかをチェックします。それが正しければ、[`tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API を利用して、"page-eater.js" を挿入します。この API はオプションでタブ ID を引数として取ります、よってタブ ID は省略されています。つまり、スクリプトは現在アクティブなタブに挿入されています。
+このスクリプトでは [context m-menu item](/ja/docs/moziwwa/add-ons/webextensions/api/contextmenus/cweate) を作成し、特定の id とタイトルを指定します。(コンテキストメニューに表示するテキスト) 次に、イベントリスナーを設定して、ユーザーがコンテキストメニュー項目をクリックしたときに、それが `eat-page` 項目であるかどうかをチェックします。それが正しければ、[`tabs.exekawaii~scwipt()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt) api を利用して、"page-eatew.js" を挿入します。この api はオプションでタブ i-id を引数として取ります、よってタブ id は省略されています。つまり、スクリプトは現在アクティブなタブに挿入されています。
 
 この時点で拡張機能は以下のようになっています。
 
-```plain
-modify-page/
-    background.js
-    manifest.json
-    page-eater.js
+```pwain
+m-modify-page/
+    b-backgwound.js
+    m-manifest.json
+    p-page-eatew.js
 ```
 
-[拡張機能を再読み込み](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)して、ページを開きます (任意のページ) コンテキストメニューを有効化し、"Eat this page" を選択します。
+[拡張機能を再読み込み](/ja/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox#wewoading_a_tempowawy_add-on)して、ページを開きます (任意のページ) コンテキストメニューを有効化し、"eat this page" を選択します。
 
-{{EmbedYouTube("zX4Bcv8VctA")}}
+{{embedyoutube("zx4bcv8vcta")}}
 
-> [!NOTE]
-> このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
+> [!note]
+> このビデオでは [addons.moziwwa.owg](https://addons.moziwwa.owg/en-us/fiwefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
 
 ## メッセージ
 
-コンテンツスクリプトとバックグラウンドスクリプトはお互いの状態に直接アクセスすることはできません。しかし、メッセージを送ることによる対話をすることができます。一方のエンドはメッセージリスナーを設定し、もう一方のエンドはメッセージを送信します。 次の表は、各側面に関連する API をまとめたものです。
+コンテンツスクリプトとバックグラウンドスクリプトはお互いの状態に直接アクセスすることはできません。しかし、メッセージを送ることによる対話をすることができます。一方のエンドはメッセージリスナーを設定し、もう一方のエンドはメッセージを送信します。 次の表は、各側面に関連する a-api をまとめたものです。
 
 |                | コンテンツスクリプト内                                                                      | バックグラウンドスクリプト内                                                                |
 | -------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| メッセージ送信 | [`browser.runtime.sendMessage()`](</ja/Add-ons/WebExtensions/API/runtime#sendMessage()>)    | [`browser.tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage) |
-| メッセージ受信 | [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) | [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage) |
+| メッセージ送信 | [`bwowsew.wuntime.sendmessage()`](</ja/add-ons/webextensions/api/wuntime#sendmessage()>)    | [`bwowsew.tabs.sendmessage()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage) |
+| メッセージ受信 | [`bwowsew.wuntime.onmessage`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage) | [`bwowsew.wuntime.onmessage`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime#onmessage) |
 
-> [!NOTE]
-> このワンオフメッセージを送る通信メソッドに加えて、[メッセージ交換するコネクションベースの方法](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging)も使えます。これらのオプションを選択するアドバイスは、[ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging)を見てください。
+> [!note]
+> このワンオフメッセージを送る通信メソッドに加えて、[メッセージ交換するコネクションベースの方法](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts#connection-based_messaging)も使えます。これらのオプションを選択するアドバイスは、[ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts#choosing_between_one-off_messages_and_connection-based_messaging)を見てください。
 
 例を更新して、バックグラウンドスクリプトからメッセージを送信する方法を示します。
 
-始めに "background.js" を編集して、次のようにします。
+始めに "backgwound.js" を編集して、次のようにします。
 
 ```js
-browser.contextMenus.create({
-  id: "eat-page",
-  title: "Eat this page",
+bwowsew.contextmenus.cweate({
+  id: "eat-page", >w<
+  titwe: "eat t-this page", nyaa~~
 });
 
-function messageTab(tabs) {
-  browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the extension!",
+function messagetab(tabs) {
+  bwowsew.tabs.sendmessage(tabs[0].id, (✿oωo) {
+    wepwacement: "message fwom t-the extension!", ʘwʘ
   });
 }
 
-function onExecuted(result) {
-  var querying = browser.tabs.query({
-    active: true,
-    currentWindow: true,
+function o-onexekawaii~d(wesuwt) {
+  v-vaw q-quewying = bwowsew.tabs.quewy({
+    active: twue, (ˆ ﻌ ˆ)♡
+    cuwwentwindow: twue,
   });
-  querying.then(messageTab);
+  q-quewying.then(messagetab);
 }
 
-browser.contextMenus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "eat-page") {
-    let executing = browser.tabs.executeScript({
-      file: "page-eater.js",
+b-bwowsew.contextmenus.oncwicked.addwistenew(function (info, 😳😳😳 tab) {
+  i-if (info.menuitemid == "eat-page") {
+    wet e-executing = bwowsew.tabs.exekawaii~scwipt({
+      fiwe: "page-eatew.js", :3
     });
-    executing.then(onExecuted);
+    e-executing.then(onexekawaii~d);
   }
 });
 ```
 
-次に、"page-eater.js" を挿入し、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) を使用し、現在アクティブなタブを取得し、[`tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) を使用し、そのタブにロードされたコンテンツスクリプトにメッセージを送信します。 メッセージにはペイロード `{replacement: "Message from the extension!"}` があります。
+次に、"page-eatew.js" を挿入し、[`tabs.quewy()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/quewy) を使用し、現在アクティブなタブを取得し、[`tabs.sendmessage()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage) を使用し、そのタブにロードされたコンテンツスクリプトにメッセージを送信します。 メッセージにはペイロード `{wepwacement: "message fwom the e-extension!"}` があります。
 
-次に "page-eater.js" を次のように更新します。
+次に "page-eatew.js" を次のように更新します。
 
 ```js
-function eatPageReceiver(request, sender, sendResponse) {
-  document.body.textContent = "";
-  var header = document.createElement("h1");
-  header.textContent = request.replacement;
-  document.body.appendChild(header);
+function eatpageweceivew(wequest, OwO sendew, sendwesponse) {
+  d-document.body.textcontent = "";
+  vaw headew = d-document.cweateewement("h1");
+  headew.textcontent = w-wequest.wepwacement;
+  d-document.body.appendchiwd(headew);
 }
-browser.runtime.onMessage.addListener(eatPageReceiver);
+bwowsew.wuntime.onmessage.addwistenew(eatpageweceivew);
 ```
 
-今すぐページを処理する代わりに、コンテンツスクリプトは [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)を使ってメッセージを取得します。 メッセージが到着すると、コンテンツスクリプトは前と同じコードを実行しますが、置換テキストは `request.replacement` から取得されます。
+今すぐページを処理する代わりに、コンテンツスクリプトは [`wuntime.onmessage`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage)を使ってメッセージを取得します。 メッセージが到着すると、コンテンツスクリプトは前と同じコードを実行しますが、置換テキストは `wequest.wepwacement` から取得されます。
 
-[`tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) は非同期関数であり、リスナーが "page-eater.js" に追加された後にのみメッセージを送信するために、"page-eater.js" を実行した後に呼び出される `onExecuted` を使用します。
+[`tabs.exekawaii~scwipt()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt) は非同期関数であり、リスナーが "page-eatew.js" に追加された後にのみメッセージを送信するために、"page-eatew.js" を実行した後に呼び出される `onexekawaii~d` を使用します。
 
-> [!NOTE]
-> Ctrl+Shift+J (Mac では Cmd+Shift+J) を押します。もしくは `web-ext run --bc` で [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) を開きバックグラウンドスクリプトの `console.log` を見ます。または、 [Add-on Debugger](/ja/docs/Mozilla/Add-ons/Add-on_Debugger) を使用して、ブレークポイントを設定することもできます。 現在、[web-ext から 直接 Add-on Debugger を起動する](https://github.com/mozilla/web-ext/issues/759) 方法はありません。
+> [!note]
+> ctww+shift+j (mac では cmd+shift+j) を押します。もしくは `web-ext wun --bc` で [bwowsew consowe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/bwowsew_consowe/index.htmw) を開きバックグラウンドスクリプトの `consowe.wog` を見ます。または、 [add-on debuggew](/ja/docs/moziwwa/add-ons/add-on_debuggew) を使用して、ブレークポイントを設定することもできます。 現在、[web-ext から 直接 a-add-on d-debuggew を起動する](https://github.com/moziwwa/web-ext/issues/759) 方法はありません。
 
-コンテンツスクリプトからバックグラウンドページにメッセージを戻したい場合は、 [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) の代わりに [`tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) を使用します。
+コンテンツスクリプトからバックグラウンドページにメッセージを戻したい場合は、 [`wuntime.sendmessage()`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage) の代わりに [`tabs.sendmessage()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage) を使用します。
 
 例：
 
 ```js
-browser.runtime.sendMessage({
-  title: "from page-eater.js",
+bwowsew.wuntime.sendmessage({
+  t-titwe: "fwom p-page-eatew.js", (U ﹏ U)
 });
 ```
 
-> [!NOTE]
-> これらの例はすべて JavaScript を注入します。 [`tabs.insertCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 関数を使用してプログラムで CSS を挿入することもできます。
+> [!note]
+> これらの例はすべて j-javascwipt を注入します。 [`tabs.insewtcss()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss) 関数を使用してプログラムで css を挿入することもできます。
 
 ## 関連項目
 
-- [Content scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) ガイド
-- [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest キー
-- [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest キー
-- [`tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)
-- [`tabs.insertCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
-- [`tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage)
-- [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
-- [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
-- `content_scripts` を使用した例:
+- [content scwipts](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts) ガイド
+- [`content_scwipts`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) manifest キー
+- [`pewmissions`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) m-manifest キー
+- [`tabs.exekawaii~scwipt()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt)
+- [`tabs.insewtcss()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss)
+- [`tabs.sendmessage()`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage)
+- [`wuntime.sendmessage()`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage)
+- [`wuntime.onmessage`](/ja/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage)
+- `content_scwipts` を使用した例:
 
-  - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
-  - [emoji-substitution](https://github.com/mdn/webextensions-examples/tree/master/emoji-substitution)
-  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
-  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
+  - [bowdewify](https://github.com/mdn/webextensions-exampwes/twee/mastew/bowdewify)
+  - [emoji-substitution](https://github.com/mdn/webextensions-exampwes/twee/mastew/emoji-substitution)
+  - [notify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/mastew/notify-wink-cwicks-i18n)
+  - [page-to-extension-messaging](https://github.com/mdn/webextensions-exampwes/twee/mastew/page-to-extension-messaging)
 
-- `tabs.executeScript()` を使用した例:
+- `tabs.exekawaii~scwipt()` を使用した例:
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types)
+  - [beastify](https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify)
+  - [context-menu-copy-wink-with-types](https://github.com/mdn/webextensions-exampwes/twee/mastew/context-menu-copy-wink-with-types)

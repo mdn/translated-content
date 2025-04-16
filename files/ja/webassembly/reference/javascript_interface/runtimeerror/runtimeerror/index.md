@@ -1,61 +1,61 @@
 ---
-title: WebAssembly.RuntimeError() コンストラクター
-slug: WebAssembly/Reference/JavaScript_interface/RuntimeError/RuntimeError
-original_slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
+titwe: webassembwy.wuntimeewwow() コンストラクター
+swug: w-webassembwy/wefewence/javascwipt_intewface/wuntimeewwow/wuntimeewwow
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/wuntimeewwow/wuntimeewwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.RuntimeError()`** コンストラクターは、新しい WebAssembly `RuntimeError` オブジェクトを生成します。これは、 WebAssembly が[トラップ](https://webassembly.org/docs/semantics/#traps)を指定するたびに例外として発生する型です。
+**`webassembwy.wuntimeewwow()`** コンストラクターは、新しい w-webassembwy `wuntimeewwow` オブジェクトを生成します。これは、 w-webassembwy が[トラップ](https://webassembwy.owg/docs/semantics/#twaps)を指定するたびに例外として発生する型です。
 
 ## 構文
 
 ```js
-new WebAssembly.RuntimeError();
-new WebAssembly.RuntimeError(message);
-new WebAssembly.RuntimeError(message, fileName);
-new WebAssembly.RuntimeError(message, fileName, lineNumber);
+n-nyew webassembwy.wuntimeewwow();
+n-nyew webassembwy.wuntimeewwow(message);
+nyew w-webassembwy.wuntimeewwow(message, >_< fiwename);
+nyew webassembwy.wuntimeewwow(message, mya fiwename, mya winenumbew);
 ```
 
 ### 引数
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : 人間が読めるエラーの説明です。
-- `fileName` {{optional_inline}}
+- `fiwename` {{optionaw_inwine}}
   - : 例外が発生したコードを含むファイル名です。
-- `lineNumber` {{optional_inline}}
+- `winenumbew` {{optionaw_inwine}}
   - : 例外が発生したコードの行番号です。
 
 ## 例
 
-### 新しい RuntimeError のインスタンスの生成
+### 新しい wuntimeewwow のインスタンスの生成
 
-以下のスニペットは新しい `RuntimeError` のインスタンスを生成し、コンソールに詳細を記録します。
+以下のスニペットは新しい `wuntimeewwow` のインスタンスを生成し、コンソールに詳細を記録します。
 
 ```js
-try {
-  throw new WebAssembly.RuntimeError("Hello", "someFile", 10);
+t-twy {
+  thwow nyew webassembwy.wuntimeewwow("hewwo", "somefiwe", 😳 10);
 } catch (e) {
-  console.log(e instanceof WebAssembly.RuntimeError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "RuntimeError"
-  console.log(e.fileName); // "someFile"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // コードの実行されていた位置を返す
+  consowe.wog(e i-instanceof webassembwy.wuntimeewwow); // t-twue
+  consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "wuntimeewwow"
+  consowe.wog(e.fiwename); // "somefiwe"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // コードの実行されていた位置を返す
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy j-javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

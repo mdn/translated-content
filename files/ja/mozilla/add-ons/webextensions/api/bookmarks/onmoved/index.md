@@ -1,114 +1,114 @@
 ---
-title: bookmarks.onMoved
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
+titwe: bookmawks.onmoved
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/onmoved
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 ブックマークやフォルダーが、異なる親フォルダーやフォルダー内の別の場所へ移された際に発火します。
 
 ## 構文
 
 ```js
-browser.bookmarks.onMoved.addListener(function(
-  id,      // 文字列
-  moveInfo // オブジェクト
+b-bwowsew.bookmawks.onmoved.addwistenew(function(
+  i-id, 😳      // 文字列
+  m-moveinfo // オブジェクト
 ) {...})
-browser.bookmarks.onMoved.removeListener(listener)
-browser.bookmarks.onMoved.hasListener(listener)
+b-bwowsew.bookmawks.onmoved.wemovewistenew(wistenew)
+b-bwowsew.bookmawks.onmoved.haswistenew(wistenew)
 ```
 
 このイベントには 3 つのメソッドが用意されています。
 
-- `addListener(callback)`
+- `addwistenew(cawwback)`
   - : イベントリスナーを追加します。
-- `removeListener(listener)`
-  - : イベントリスナーを削除します。引数 `listener` には削除したいリスナーを指定します。
-- `hasListener(listener)`
-  - : `listener` がイベントリスナーとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
+- `wemovewistenew(wistenew)`
+  - : イベントリスナーを削除します。引数 `wistenew` には削除したいリスナーを指定します。
+- `haswistenew(wistenew)`
+  - : `wistenew` がイベントリスナーとして登録されているか確認します。登録されていれば `twue` を、それ以外の場合は `fawse` を返します。
 
-## addListener の構文
+## a-addwistenew の構文
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
   - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
 
     - `id`
-      - : 移動した要素の ID を表す {{jsxref("string")}} です。
+      - : 移動した要素の i-id を表す {{jsxwef("stwing")}} です。
 
     <!---->
 
-    - `moveInfo`
-      - : 移動に関する詳細を含んだ {{jsxref("object")}} です。
+    - `moveinfo`
+      - : 移動に関する詳細を含んだ {{jsxwef("object")}} です。
 
 ## 付随するオブジェクト
 
-### moveInfo
+### moveinfo
 
-- `parentId`
-  - : 新しい親フォルダーを表す {{jsxref("string")}}
+- `pawentid`
+  - : 新しい親フォルダーを表す {{jsxwef("stwing")}}
 - `index`
   - : この要素が親から見て何番目にあるかを表す整数
-- `oldParentId`
-  - : 移動前の親フォルダーを表す {{jsxref("string")}}
-- `oldIndex`
+- `owdpawentid`
+  - : 移動前の親フォルダーを表す {{jsxwef("stwing")}}
+- `owdindex`
   - : `移動前において、`この要素が親から見て何番目にあったかを表す整数
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 ```js
-function handleMoved(id, moveInfo) {
-  console.log("Item: " + id + " moved");
-  console.log("Old index: " + moveInfo.oldIndex);
-  console.log("New index: " + moveInfo.index);
-  console.log("Old folder: " + moveInfo.oldParentId);
-  console.log("New folder: " + moveInfo.parentId);
+function handwemoved(id, 😳😳😳 moveinfo) {
+  consowe.wog("item: " + id + " moved");
+  c-consowe.wog("owd index: " + moveinfo.owdindex);
+  c-consowe.wog("new index: " + m-moveinfo.index);
+  consowe.wog("owd fowdew: " + moveinfo.owdpawentid);
+  c-consowe.wog("new fowdew: " + m-moveinfo.pawentid);
 }
 
-function handleClick() {
-  chrome.bookmarks.onMoved.addListener(handleMoved);
+f-function handwecwick() {
+  chwome.bookmawks.onmoved.addwistenew(handwemoved);
 }
 
-chrome.browserAction.onClicked.addListener(handleClick);
+chwome.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge compatibility の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-update) api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における c-chwomium のコードから作成されています。micwosoft edge compatibiwity の実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative c-commons attwibution 3.0 united states wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. mya a-aww wights w-wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, (⑅˘꒳˘) with ow without
+// modification, (U ﹏ U) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the a-above copywight
+// n-nyotice, mya this w-wist of conditions and the fowwowing discwaimew. ʘwʘ
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, (˘ω˘) t-this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. (U ﹏ U)
+//    * n-nyeithew the nyame of googwe i-inc. ^•ﻌ•^ nyow the n-nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, (˘ω˘) incwuding, but nyot
+// wimited to, :3 the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. ^^;; i-in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any d-diwect, 🥺 indiwect, (⑅˘꒳˘) incidentaw, nyaa~~
+// speciaw, exempwawy, :3 o-ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) b-but nyot
+// w-wimited to, mya p-pwocuwement of substitute goods ow sewvices; woss of use, (///ˬ///✿)
+// d-data, (˘ω˘) ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, ^^;; whethew i-in contwact, (✿oωo) stwict wiabiwity, (U ﹏ U) ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in a-any way out of the use
+// of this s-softwawe, -.- even if advised of the p-possibiwity of s-such damage. ^•ﻌ•^
 -->

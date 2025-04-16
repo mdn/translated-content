@@ -1,45 +1,45 @@
 ---
-title: WebAssembly.Table.prototype.length
-slug: WebAssembly/Reference/JavaScript_interface/Table/length
-original_slug: WebAssembly/JavaScript_interface/Table/length
+titwe: webassembwy.tabwe.pwototype.wength
+swug: w-webassembwy/wefewence/javascwipt_intewface/tabwe/wength
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/tabwe/wength
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`length`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイププロパティで、このテーブルの長さ、すなわち、テーブルの要素の数を返します。
+**`wength`** は {{jsxwef("webassembwy.tabwe")}} オブジェクトのプロトタイププロパティで、このテーブルの長さ、すなわち、テーブルの要素の数を返します。
 
 ## 例
 
-### length の使用
+### w-wength の使用
 
-次の例では、新しい WebAssembly Table インスタンスを初期サイズ 2、最大サイズ 10 で作成します。
+次の例では、新しい w-webassembwy t-tabwe インスタンスを初期サイズ 2、最大サイズ 10 で作成します。
 
 ```js
-var table = new WebAssembly.Table({
-  element: "anyfunc",
-  initial: 2,
-  maximum: 10,
+v-vaw tabwe = new w-webassembwy.tabwe({
+  ewement: "anyfunc", σωσ
+  initiaw: 2, σωσ
+  maximum: 10, >_<
 });
 ```
 
 次のようにして、テーブルを 1 ずつ拡大することができます。
 
 ```js
-console.log(table.length); // "2"
-console.log(table.grow(1)); // "2"
-console.log(table.length); // "3"
+consowe.wog(tabwe.wength); // "2"
+consowe.wog(tabwe.gwow(1)); // "2"
+consowe.wog(tabwe.wength); // "3"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt a-api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

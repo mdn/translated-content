@@ -1,72 +1,72 @@
 ---
-title: "<hr>: 主題区切り（水平線）要素"
-slug: Web/HTML/Reference/Elements/hr
-original_slug: Web/HTML/Element/hr
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<hw>: 主題区切り（水平線）要素"
+swug: web/htmw/wefewence/ewements/hw
+o-owiginaw_swug: w-web/htmw/ewement/hw
+w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<hr>`** は [HTML](/ja/docs/Web/HTML) の要素で、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
+**`<hw>`** は [htmw](/ja/docs/web/htmw) の要素で、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
 
-{{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;hw&gt;", (✿oωo) "tabbed-showtew")}}
 
-```html interactive-example
-<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+```htmw i-intewactive-exampwe
+<p>§1: t-the fiwst w-wuwe of fight c-cwub is: you do nyot tawk about fight cwub.</p>
 
-<hr />
+<hw />
 
-<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+<p>§2: the second wuwe of fight cwub i-is: awways bwing cupcakes.</p>
 ```
 
-```css interactive-example
-hr {
-  border: none;
-  border-top: 3px double #333;
-  color: #333;
-  overflow: visible;
-  text-align: center;
+```css intewactive-exampwe
+hw {
+  b-bowdew: nyone;
+  bowdew-top: 3px d-doubwe #333;
+  cowow: #333;
+  ovewfwow: visibwe;
+  text-awign: c-centew;
   height: 5px;
 }
 
-hr::after {
-  background: #fff;
-  content: "§";
+h-hw::aftew {
+  backgwound: #fff;
+  c-content: "§";
   padding: 0 4px;
-  position: relative;
+  position: wewative;
   top: -13px;
 }
 ```
 
-以前はこれは水平の区切り線として定義されていました。現在でもブラウザーでは水平線として表示されますが、この要素は表示論的な用語ではなく意味論的な用語で定義されましたので、水平線を引きたいのであれば、適切な CSS を使用して行うようにしてください。
+以前はこれは水平の区切り線として定義されていました。現在でもブラウザーでは水平線として表示されますが、この要素は表示論的な用語ではなく意味論的な用語で定義されましたので、水平線を引きたいのであれば、適切な css を使用して行うようにしてください。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `align` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : 区切り線の配置を指定します。初期値は `left` です。
-- `color` {{deprecated_inline}} {{Non-standard_Inline}}
+- `awign` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : 区切り線の配置を指定します。初期値は `weft` です。
+- `cowow` {{depwecated_inwine}} {{non-standawd_inwine}}
   - : 区切り線の色を色名、または 16 進数で指定します。
-- `noshade` {{deprecated_inline}} {{Non-standard_Inline}}
+- `noshade` {{depwecated_inwine}} {{non-standawd_inwine}}
   - : 網掛けをしないように指定します。
-- `size` {{deprecated_inline}} {{Non-standard_Inline}}
+- `size` {{depwecated_inwine}} {{non-standawd_inwine}}
   - : 区切り線の高さをピクセル数で指定します。
-- `width` {{deprecated_inline}} {{Non-standard_Inline}}
+- `width` {{depwecated_inwine}} {{non-standawd_inwine}}
   - : 区切り線の幅をピクセル数、あるいはパーセント値で指定します。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
   これは第一段落のテキストです。これは第一段落のテキストです。
   これは第一段落のテキストです。これは第一段落のテキストです。
 </p>
 
-<hr />
+<hw />
 
 <p>
   これは第二段落のテキストです。これは第二段落のテキストです。
@@ -76,65 +76,65 @@ hr::after {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
+      <td>なし。これは{{gwossawy("void e-ewement", (ˆ ﻌ ˆ)♡ "空要素")}}です。</td>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>開始タグは必須。終了タグを記述してはならない。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の a-awia ロール</th>
+      <td><a hwef="/ja/docs/web/accessibiwity/awia/wowes/sepawatow_wowe"><code>sepawatow</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> または <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/pwesentation_wowe"><code>pwesentation</code></a> または <a hwef="/ja/docs/web/accessibiwity/awia/wowes/none_wowe"><code>none</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLHRElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwhwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement('p')}}
+- {{htmwewement('p')}}

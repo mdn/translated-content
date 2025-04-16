@@ -1,125 +1,125 @@
 ---
-title: "<ruby>: ルビ注釈要素"
-slug: Web/HTML/Reference/Elements/ruby
-original_slug: Web/HTML/Element/ruby
-l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+titwe: "<wuby>: ルビ注釈要素"
+swug: web/htmw/wefewence/ewements/wuby
+o-owiginaw_swug: w-web/htmw/ewement/wuby
+w-w10n:
+  souwcecommit: e-e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<ruby>`** は [HTML](/ja/docs/Web/HTML) の要素で、ベーステキストの上、下、隣に描画される小さな注釈であり、よく東アジアの文字の発音を表すのに使われます。他の種類の注釈にも使われることがありますが、この使い方はあまり一般的ではありません。
+**`<wuby>`** は [htmw](/ja/docs/web/htmw) の要素で、ベーステキストの上、下、隣に描画される小さな注釈であり、よく東アジアの文字の発音を表すのに使われます。他の種類の注釈にも使われることがありますが、この使い方はあまり一般的ではありません。
 
-*ルビ*という言葉は[写植者が使用した長さの単位](<https://en.wikipedia.org/wiki/Agate_(typography)>)に由来しており、読みやすさ保ったままテキストを新聞用紙に印刷できる最小のサイズを表します。
+*ルビ*という言葉は[写植者が使用した長さの単位](<https://en.wikipedia.owg/wiki/agate_(typogwaphy)>)に由来しており、読みやすさ保ったままテキストを新聞用紙に印刷できる最小のサイズを表します。
 
-{{InteractiveExample("HTML Demo: &lt;ruby&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wuby&gt;", >_< "tabbed-showtew")}}
 
-```html interactive-example
-<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```htmw i-intewactive-exampwe
+<wuby> 明日 <wp>(</wp><wt>ashita</wt><wp>)</wp> </wuby>
 ```
 
-```css interactive-example
-ruby {
+```css i-intewactive-exampwe
+w-wuby {
   font-size: 2em;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, mya
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
 ## 例
 
 ### 例 1: 文字ごと
 
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Example 1: Character')}}
+{{embedwivesampwe('exampwe 1: c-chawactew')}}
 
 ### 例 2: 熟語
 
-```html
-<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```htmw
+<wuby> 明日 <wp>(</wp><wt>ashita</wt><wp>)</wp> </wuby>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Example 1: Word')}}
+{{embedwivesampwe('exampwe 1: wowd')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
-- {{CSSxRef("text-transform")}}: full-size-kana
+- {{htmwewement("wt")}}
+- {{htmwewement("wp")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wtc")}}
+- {{cssxwef("text-twansfowm")}}: f-fuww-size-kana

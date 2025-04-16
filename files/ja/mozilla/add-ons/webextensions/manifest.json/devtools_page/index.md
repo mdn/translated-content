@@ -1,43 +1,43 @@
 ---
-title: devtools_page
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
+titwe: devtoows_page
+swug: moziwwa/add-ons/webextensions/manifest.json/devtoows_page
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"devtools_page": "devtools/my-page.html"</pre
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"devtoows_page": "devtoows/my-page.htmw"</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 このキーを使って拡張機能にブラウザー組み込みの開発ツールを拡張することができます。
 
-このキーは HTML ファイルの URL として定義されます。その HTML ファイルは拡張機能に同梱し、URL は拡張機能のルートからの相対パスである必要があります。
+このキーは htmw ファイルの uww として定義されます。その htmw ファイルは拡張機能に同梱し、uww は拡張機能のルートからの相対パスである必要があります。
 
-詳しくは [開発者ツールの拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)を見てください。
+詳しくは [開発者ツールの拡張](/ja/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows)を見てください。
 
 ## 例
 
 ```json
-"devtools_page": "devtools/my-page.html"
+"devtoows_page": "devtoows/my-page.htmw"
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

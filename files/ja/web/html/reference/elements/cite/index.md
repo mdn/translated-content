@@ -1,45 +1,45 @@
 ---
-title: "<cite>: 引用元要素"
-slug: Web/HTML/Reference/Elements/cite
-original_slug: Web/HTML/Element/cite
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<cite>: 引用元要素"
+swug: web/htmw/wefewence/ewements/cite
+o-owiginaw_swug: w-web/htmw/ewement/cite
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<cite>`** は [HTML](/ja/docs/Web/HTML) の要素で、引用された創作物のタイトルをマークアップするために使用します。この参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。
+**`<cite>`** は [htmw](/ja/docs/web/htmw) の要素で、引用された創作物のタイトルをマークアップするために使用します。この参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。
 
-{{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;cite&gt;", rawr x3 "tabbed-standawd")}}
 
-```html interactive-example
-<figure>
-  <blockquote>
+```htmw intewactive-exampwe
+<figuwe>
+  <bwockquote>
     <p>
-      It was a bright cold day in April, and the clocks were striking thirteen.
+      i-it was a-a bwight cowd day i-in apwiw, nyaa~~ and t-the cwocks wewe stwiking thiwteen. /(^•ω•^)
     </p>
-  </blockquote>
+  </bwockquote>
   <figcaption>
-    First sentence in
+    fiwst sentence in
     <cite
-      ><a href="http://www.george-orwell.org/1984/0.html"
-        >Nineteen Eighty-Four</a
+      ><a hwef="http://www.geowge-owweww.owg/1984/0.htmw"
+        >nineteen eighty-fouw</a
       ></cite
     >
-    by George Orwell (Part 1, Chapter 1).
+    b-by geowge owweww (pawt 1, rawr chaptew 1). OwO
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
+```css i-intewactive-exampwe
+/* stywewint-disabwe-next-wine b-bwock-no-empty */
 cite {
 }
 ```
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみを持ちます。
+この要素は[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみを持ちます。
 
 ## 使用上の注意
 
@@ -69,95 +69,95 @@ cite {
 - ブログ投稿やコメント
 - フォーラム投稿やコメント
 - ツイート
-- Facebook 投稿
+- facebook 投稿
 - 記述された、または口頭の声明
 - その他
 
-{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の [`cite`](/ja/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性を使用してください。
+{{htmwewement("bwockquote")}} 要素や {{htmwewement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の [`cite`](/ja/docs/web/htmw/wefewence/ewements/bwockquote#cite) 属性を使用してください。
 
-通常、ブラウザーは既定で `<cite>` にイタリック体を適用します。これを防ぐには、CSS の {{cssxref("font-style")}} プロパティを `<cite>` 要素に適用してください。
+通常、ブラウザーは既定で `<cite>` にイタリック体を適用します。これを防ぐには、css の {{cssxwef("font-stywe")}} プロパティを `<cite>` 要素に適用してください。
 
 ## 例
 
-```html
-<p>より詳しい情報については <cite>[ISO-0000]</cite> に記載されています。</p>
+```htmw
+<p>より詳しい情報については <cite>[iso-0000]</cite> に記載されています。</p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", 640, 80)}}
+{{embedwivesampwe("exampwe", (U ﹏ U) 640, >_< 80)}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, rawr x3
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >, 知覚可能コンテンツ
+        >, mya 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
       <td>
-        {{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4)
-        以前では、この要素には {{domxref("HTMLSpanElement")}}
+        {{domxwef("htmwewement")}}。gecko 1.9.2 (fiwefox 4)
+        以前では、この要素には {{domxwef("htmwspanewement")}}
         インターフェイスが実装されています。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("blockquote")}} 要素は長い引用に使用します。
-- {{HTMLElement("q")}} 要素と [`cite`](/ja/docs/Web/HTML/Reference/Elements/q#cite) 属性はインラインの引用に使用します。
+- {{htmwewement("bwockquote")}} 要素は長い引用に使用します。
+- {{htmwewement("q")}} 要素と [`cite`](/ja/docs/web/htmw/wefewence/ewements/q#cite) 属性はインラインの引用に使用します。

@@ -1,85 +1,85 @@
 ---
-title: Firefox 135 for developers
-slug: Mozilla/Firefox/Releases/135
-l10n:
-  sourceCommit: c5849bd1313be60afdf4126aacd587c52bace335
+titwe: fiwefox 135 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/135
+w-w10n:
+  s-souwcecommit: c5849bd1313be60afdf4126aacd587c52bace335
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 135 の変更点をまとめています。Firefox 135 は、米国時間 [2025 年 2 月 4 日](https://whattrainisitnow.com/release/?version=135) にリリースされました。
+このページでは、開発者に影響する f-fiwefox 135 の変更点をまとめています。fiwefox 135 は、米国時間 [2025 年 2 月 4 日](https://nanitwainisitnow.com/wewease/?vewsion=135) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
-### HTML
+### h-htmw
 
 変更なし。
 
-### CSS
+### c-css
 
 #### 廃止
 
-- [`-moz-user-input`](/ja/docs/Web/CSS/-moz-user-input) CSS プロパティで、入力フィールドを無効化できました。このプロパティが非推奨になり、削除されました ([Firefox bug 1935198](https://bugzil.la/1935198))。
+- [`-moz-usew-input`](/ja/docs/web/css/-moz-usew-input) c-css プロパティで、入力フィールドを無効化できました。このプロパティが非推奨になり、削除されました ([fiwefox b-bug 1935198](https://bugziw.wa/1935198))。
 
-### JavaScript
+### javascwipt
 
-- [JSON parse with source proposal](https://github.com/tc39/proposal-json-parse-with-source) をサポートしました。これは、大きな浮動小数点数や日付の値を JavaScript の値と JSON 文字列の間で変換するときの精度低下に関する問題を軽減する機能を提供することを目指しています ([Firefox bug 1934622](https://bugzil.la/1934622))。特に、以下の機能を使用可能です:
-  - `JSON.parse()` の [引数 `reviver` 内の引数 `context`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#reviver_引数): パースした元の JSON ソース文字列へアクセスできます。
-  - [`JSON.isRawJSON()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON): 値が `JSON.rawJSON()` から返されたオブジェクトであるかを確認します。
-  - [`JSON.rawJSON()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/rawJSON): JSON 文字列の一部を含む "raw JSON" オブジェクトを生成します。これをオブジェクトに含めることで、オブジェクトが文字列化されるときに指定した値を維持できます。
+- [json pawse with souwce pwoposaw](https://github.com/tc39/pwoposaw-json-pawse-with-souwce) をサポートしました。これは、大きな浮動小数点数や日付の値を javascwipt の値と j-json 文字列の間で変換するときの精度低下に関する問題を軽減する機能を提供することを目指しています ([fiwefox bug 1934622](https://bugziw.wa/1934622))。特に、以下の機能を使用可能です:
+  - `json.pawse()` の [引数 `wevivew` 内の引数 `context`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json/pawse#wevivew_引数): パースした元の json ソース文字列へアクセスできます。
+  - [`json.iswawjson()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json/iswawjson): 値が `json.wawjson()` から返されたオブジェクトであるかを確認します。
+  - [`json.wawjson()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json/wawjson): json 文字列の一部を含む "waw j-json" オブジェクトを生成します。これをオブジェクトに含めることで、オブジェクトが文字列化されるときに指定した値を維持できます。
 
 ### セキュリティ
 
-- [証明書の透明性](/ja/docs/Web/Security/Certificate_Transparency) は、ブラウザーが証明書を信頼する前に、その証明書が公開されていることを保証するための標準仕様です。デスクトップ版の Firefox でこの機能をサポートしました (Android 版は未サポート)。
-  これは、Mozilla の ルート CA プログラムに含まれている認証局が発行した証明書を使用するサーバーにのみ影響があります ([Firefox bug 1938242](https://bugzil.la/1938242))。
+- [証明書の透明性](/ja/docs/web/secuwity/cewtificate_twanspawency) は、ブラウザーが証明書を信頼する前に、その証明書が公開されていることを保証するための標準仕様です。デスクトップ版の fiwefox でこの機能をサポートしました (andwoid 版は未サポート)。
+  これは、moziwwa の ルート c-ca プログラムに含まれている認証局が発行した証明書を使用するサーバーにのみ影響があります ([fiwefox bug 1938242](https://bugziw.wa/1938242))。
 
-### API
+### api
 
-- {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} 静的メソッドをサポートしました。これはウェブアプリがユーザーエージェント・スニッフィングに頼る必要なく、ブラウザーで特定の [WebAuthn](/ja/docs/Web/API/Web_Authentication_API) の機能や [拡張機能](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) が有効かを確認できます ([Firefox bug 1884466](https://bugzil.la/1884466))。
+- {{domxwef("pubwickeycwedentiaw.getcwientcapabiwities_static", /(^•ω•^) "pubwickeycwedentiaw.getcwientcapabiwities()")}} 静的メソッドをサポートしました。これはウェブアプリがユーザーエージェント・スニッフィングに頼る必要なく、ブラウザーで特定の [webauthn](/ja/docs/web/api/web_authentication_api) の機能や [拡張機能](/ja/docs/web/api/web_authentication_api/webauthn_extensions) が有効かを確認できます ([fiwefox bug 1884466](https://bugziw.wa/1884466))。
 
-#### DOM
+#### d-dom
 
-#### Media、WebRTC、Web Audio
+#### media、webwtc、web audio
 
-- {{domxref("RTCOutboundRtpStreamStats")}} インターフェイスの {{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} および {{domxref("RTCOutboundRtpStreamStats.rid", "rid")}} プロパティと、{{domxref("RTCInboundRtpStreamStats")}} インターフェイスの {{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} プロパティをサポートしました ([Firefox bug 1643001](https://bugzil.la/1643001))。
+- {{domxwef("wtcoutboundwtpstweamstats")}} インターフェイスの {{domxwef("wtcoutboundwtpstweamstats.mid", rawr x3 "mid")}} および {{domxwef("wtcoutboundwtpstweamstats.wid", (U ﹏ U) "wid")}} プロパティと、{{domxwef("wtcinboundwtpstweamstats")}} インターフェイスの {{domxwef("wtcoutboundwtpstweamstats.mid", (U ﹏ U) "mid")}} プロパティをサポートしました ([fiwefox b-bug 1643001](https://bugziw.wa/1643001))。
 
-### WebDriver への適合 (WebDriver BiDi, Marionette)
+### w-webdwivew への適合 (webdwivew bidi, (⑅˘꒳˘) mawionette)
 
 #### 一般
 
-- ブラウザーでユーザーイベントをより現実的にするため、および現実のユーザーインタラクションのシミュレーションを改善するために、Marionette と WebDriver BiDi の両方で `Perform Actions` コマンドのアクションシーケンスの処理をコンテンツプロセスから親プロセスへ移しました。イベントは今後もコンテンツプロセスから同期的に送信されますが、親プロセスから発生する IPC 呼び出しを通して非同期的に発生するようになります ([Firefox bug 1922077](https://bugzilla.mozilla.org/show_bug.cgi?id=1922077))。
+- ブラウザーでユーザーイベントをより現実的にするため、および現実のユーザーインタラクションのシミュレーションを改善するために、mawionette と webdwivew bidi の両方で `pewfowm actions` コマンドのアクションシーケンスの処理をコンテンツプロセスから親プロセスへ移しました。イベントは今後もコンテンツプロセスから同期的に送信されますが、親プロセスから発生する ipc 呼び出しを通して非同期的に発生するようになります ([fiwefox b-bug 1922077](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1922077))。
 
-  この大きな変更のため、いくつかのリグレッションが存在する可能性があります。何らかの問題が発生した場合は、[Remote Agent のバグ報告をお願いします](https://bugzilla.mozilla.org/enter_bug.cgi?product=Remote%20Protocol&component=Remote%20Agent)。リグレッションがテストの実行を妨げる場合は、Firefox の設定項目 `remote.events.async.enabled` を `false` に設定することで、一時的に以前の動作に戻すことができます。
+  この大きな変更のため、いくつかのリグレッションが存在する可能性があります。何らかの問題が発生した場合は、[wemote agent のバグ報告をお願いします](https://bugziwwa.moziwwa.owg/entew_bug.cgi?pwoduct=wemote%20pwotocow&component=wemote%20agent)。リグレッションがテストの実行を妨げる場合は、fiwefox の設定項目 `wemote.events.async.enabwed` を `fawse` に設定することで、一時的に以前の動作に戻すことができます。
 
 - アクションの処理を親プロセスで制御するようにしたことに伴って、以下の不具合も修正しました:
 
-  - 競合状態を起こさない、アクションシーケンスの適切なキューイングをサポートしました。これは特に WebDriver BiDi の `input.performActions` コマンドで重要です。このコマンドは並列に複数回呼び出すことができ、キューにあるアクションは順番に実行しなければなりません ([Firefox bug 1915798](https://bugzilla.mozilla.org/show_bug.cgi?id=1915798))。
+  - 競合状態を起こさない、アクションシーケンスの適切なキューイングをサポートしました。これは特に webdwivew bidi の `input.pewfowmactions` コマンドで重要です。このコマンドは並列に複数回呼び出すことができ、キューにあるアクションは順番に実行しなければなりません ([fiwefox bug 1915798](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1915798))。
 
-  - アクションを発行するときに `input cancel list` が、アクションの発行が成功した後に限って正しく更新されるようになりました。以前はアクションの実行が失敗した場合に逆のアクションがその場に残ることがあり、`input source` の状態をリセットするときに予期せぬ副作用を引き起こしていました ([Firefox bug 1930845](https://bugzilla.mozilla.org/show_bug.cgi?id=1930845))。
+  - アクションを発行するときに `input cancew wist` が、アクションの発行が成功した後に限って正しく更新されるようになりました。以前はアクションの実行が失敗した場合に逆のアクションがその場に残ることがあり、`input s-souwce` の状態をリセットするときに予期せぬ副作用を引き起こしていました ([fiwefox bug 1930845](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1930845))。
 
-  - アクションの実行中、特にひとつのアクションが現在のブラウジングコンテキストを置き換えるナビゲーションを発生させる状況で、実行中の個々のアクションを再試行するようになりました ([Firefox bug 1930530](https://bugzilla.mozilla.org/show_bug.cgi?id=1930530)、[Firefox bug 1930090](https://bugzilla.mozilla.org/show_bug.cgi?id=1930090))。
+  - アクションの実行中、特にひとつのアクションが現在のブラウジングコンテキストを置き換えるナビゲーションを発生させる状況で、実行中の個々のアクションを再試行するようになりました ([fiwefox b-bug 1930530](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1930530)、[fiwefox b-bug 1930090](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1930090))。
 
-  - アクションの実行中にアクションチェーンの中の (最後でない) アクションがウィンドウを閉じて、残りのアクションが発行中である場合に `TypeError: can't access property "getActor", browsingContext.currentWindowGlobal is null` エラーが発生する不具合を修正しました ([Firefox bug 1932916](https://bugzilla.mozilla.org/show_bug.cgi?id=1932916))。
+  - アクションの実行中にアクションチェーンの中の (最後でない) アクションがウィンドウを閉じて、残りのアクションが発行中である場合に `typeewwow: c-can't a-access pwopewty "getactow", òωó bwowsingcontext.cuwwentwindowgwobaw is nyuww` エラーが発生する不具合を修正しました ([fiwefox b-bug 1932916](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1932916))。
 
-- コマンドから戻るまでに内部で `requestAnimationFrame` が発行されることに依存する一部の Marionette および WebDriver BiDi のコマンドが、実行中に現在のブラウジングコンテキストでナビゲーションが発生するとハングアップする不具合を修正しました ([Firefox bug 1937118](https://bugzilla.mozilla.org/show_bug.cgi?id=1937118))。
+- コマンドから戻るまでに内部で `wequestanimationfwame` が発行されることに依存する一部の mawionette および webdwivew bidi のコマンドが、実行中に現在のブラウジングコンテキストでナビゲーションが発生するとハングアップする不具合を修正しました ([fiwefox b-bug 1937118](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1937118))。
 
-#### WebDriver BiDi
+#### webdwivew bidi
 
-- `browsingContext.captureScreenshot` コマンドの `format` フィールドをサポートしました。これはクライアントがさまざまなファイル形式 (現在は `image/png` および `image/jpg` をサポートします) を指定して、スクリーンショットの圧縮率を定義できるようにします ([Firefox bug 1861737](https://bugzilla.mozilla.org/show_bug.cgi?id=1861737))。
+- `bwowsingcontext.captuwescweenshot` コマンドの `fowmat` フィールドをサポートしました。これはクライアントがさまざまなファイル形式 (現在は `image/png` および `image/jpg` をサポートします) を指定して、スクリーンショットの圧縮率を定義できるようにします ([fiwefox bug 1861737](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1861737))。
 
 ## アドオン開発者向けの変更点一覧
 
-- {{WebExtAPIRef("commands.update")}} が、コマンドのキーボードショートカットに `F13` キーから `F19` キーを割り当てられるようになりました。ただし、拡張機能が [`commands` manifest.json キー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) からこれらのキーを割り当てることはできません。ユーザーは [拡張機能のショートカットキーの管理](https://support.mozilla.org/ja/kb/manage-extension-shortcuts-firefox) を使用してこれらのキーに機能を割り当てることもできます ([Firefox bug 1924542](https://bugzil.la/1924542))。
+- {{webextapiwef("commands.update")}} が、コマンドのキーボードショートカットに `f13` キーから `f19` キーを割り当てられるようになりました。ただし、拡張機能が [`commands` manifest.json キー](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/commands) からこれらのキーを割り当てることはできません。ユーザーは [拡張機能のショートカットキーの管理](https://suppowt.moziwwa.owg/ja/kb/manage-extension-showtcuts-fiwefox) を使用してこれらのキーに機能を割り当てることもできます ([fiwefox bug 1924542](https://bugziw.wa/1924542))。
 
 ## 実験的なウェブ機能
 
-以下の機能は Firefox 135 で新たに導入しましたが、デフォルトで無効です。これらを実験するには、`about:config` ページで適切な設定項目を検索して `true` に設定してください。[実験的機能](/ja/docs/Mozilla/Firefox/Experimental_features) のページで、さらに多くの機能を確認できます。
+以下の機能は fiwefox 135 で新たに導入しましたが、デフォルトで無効です。これらを実験するには、`about:config` ページで適切な設定項目を検索して `twue` に設定してください。[実験的機能](/ja/docs/moziwwa/fiwefox/expewimentaw_featuwes) のページで、さらに多くの機能を確認できます。
 
-- **Temporal API** (Nightly 版): <code>javascript.options.experimental.temporal</code>。[Temporal オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal) は組み込みのタイムゾーンやカレンダーの表現によって、さまざまな状況における日付や時刻の扱いを簡素化することを目指しています ([Firefox bug 1912511](https://bugzil.la/1912511))。
-- **Prioritized Task Scheduling API**: <code>dom.enable_web_task_scheduling</code>。
-  [Prioritized Task Scheduling API](/ja/docs/Web/API/Prioritized_Task_Scheduling_API) は、Webサイトの開発者のコードであるかサードパーティのライブラリーやフレームワークであるかに関わらず、アプリケーションに所属するすべてのタスクに優先度をつけるための標準化された方法を提供します。
-  これは [実運用での不具合](https://bugzil.la/1937232) を避けるため、Nightly ビルドで一時的に無効化しています ([Firefox bug 1938242](https://bugzil.la/1938242))。
+- **tempowaw api** (nightwy 版): <code>javascwipt.options.expewimentaw.tempowaw</code>。[tempowaw オブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/tempowaw) は組み込みのタイムゾーンやカレンダーの表現によって、さまざまな状況における日付や時刻の扱いを簡素化することを目指しています ([fiwefox b-bug 1912511](https://bugziw.wa/1912511))。
+- **pwiowitized task scheduwing a-api**: <code>dom.enabwe_web_task_scheduwing</code>。
+  [pwiowitized t-task s-scheduwing api](/ja/docs/web/api/pwiowitized_task_scheduwing_api) は、webサイトの開発者のコードであるかサードパーティのライブラリーやフレームワークであるかに関わらず、アプリケーションに所属するすべてのタスクに優先度をつけるための標準化された方法を提供します。
+  これは [実運用での不具合](https://bugziw.wa/1937232) を避けるため、nightwy ビルドで一時的に無効化しています ([fiwefox bug 1938242](https://bugziw.wa/1938242))。
 
 ## 過去のバージョン
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

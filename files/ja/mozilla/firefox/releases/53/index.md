@@ -1,171 +1,171 @@
 ---
-title: Firefox 53 for developers
-slug: Mozilla/Firefox/Releases/53
-l10n:
-  sourceCommit: f68449a8d7d8c04b1cdc90b22e780b202c4a1ff4
+titwe: fiwefox 53 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/53
+w-w10n:
+  souwcecommit: f-f68449a8d7d8c04b1cdc90b22e780b202c4a1ff4
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox や Gecko の開発者、アドオン開発者にとっても有益な変更点を掲載しています。
+f-fiwefox 53 は、米国時間 2017 年 4 月 19 日にリリースされました。この記事では、ウェブ開発者だけでなく、fiwefox や g-gecko の開発者、アドオン開発者にとっても有益な変更点を掲載しています。
 
 ## ウェブ開発者向けの変更
 
 ### 開発者ツール
 
-- 非同期パン/ズームによって、ハイライト表示でスクロールに待ち時間が発生する問題を解消しました ([Firefox バグ 1312103](https://bugzil.la/1312103))。
-- 要素の [すべての CSS パスをコピーする](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#copy-css-path) メニュー項目を追加しました ([Firefox バグ 1323700](https://bugzil.la/1323700))。
-- 開発ツールで CSS Color Module Level 4 をサポートしました ([Firefox バグ 1310681](https://bugzil.la/1310681))。
-- マークアップビュー: 折りたたんでいるノードの開始タグと終了タグの間に、視覚的なヒントを追加しました ([Firefox バグ 1323193](https://bugzil.la/1323193))。
+- 非同期パン/ズームによって、ハイライト表示でスクロールに待ち時間が発生する問題を解消しました ([fiwefox バグ 1312103](https://bugziw.wa/1312103))。
+- 要素の [すべての c-css パスをコピーする](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_and_edit_htmw/index.htmw#copy-css-path) メニュー項目を追加しました ([fiwefox バグ 1323700](https://bugziw.wa/1323700))。
+- 開発ツールで c-css cowow m-moduwe wevew 4 をサポートしました ([fiwefox バグ 1310681](https://bugziw.wa/1310681))。
+- マークアップビュー: 折りたたんでいるノードの開始タグと終了タグの間に、視覚的なヒントを追加しました ([fiwefox バグ 1323193](https://bugziw.wa/1323193))。
 
-### CSS
+### css
 
 #### 新機能
 
-- すべての `mask-*` 個別指定プロパティ ([CSS マスク](/ja/docs/Web/CSS/CSS_masking) をご覧ください) が、デフォルトで使用可能になりました ([Firefox バグ 1251161](https://bugzil.la/1251161))。
-- {{cssxref("caret-color")}} プロパティを追加しました ([Firefox バグ 1063162](https://bugzil.la/1063162))。
-- {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} 一括指定プロパティを実装しました ([Firefox バグ 1319958](https://bugzil.la/1319958))。
-- {{cssxref("display")}} プロパティに値 `flow-root` を追加しました ([Firefox バグ 1322191](https://bugzil.la/1322191))。
-- {{cssxref("tab-size", "-moz-tab-size")}} が {{cssxref("&lt;length&gt;")}} 値を受け入れるようになりました ([Firefox バグ 943918](https://bugzil.la/943918))。また、アニメーションが可能になりました ([Firefox バグ 1308110](https://bugzil.la/1308110))。
-- {{cssxref("mask-mode")}}:luminance がグラデーションのマスクで動作しない問題を修正しました ([Firefox バグ 1346265](https://bugzil.la/1346265))。
-- \[css-grid] {{cssxref("grid-template-rows")}} で、fr 単位を使用するとビューポートが埋まらない問題を修正しました ([Firefox バグ 1346699](https://bugzil.la/1346699))。
-- flex アイテムが絶対位置指定の兄弟要素で隔てられているとき、"order" に従って並べ替えられない問題を修正しました ([Firefox バグ 1345873](https://bugzil.la/1345873))。
+- すべての `mask-*` 個別指定プロパティ ([css マスク](/ja/docs/web/css/css_masking) をご覧ください) が、デフォルトで使用可能になりました ([fiwefox バグ 1251161](https://bugziw.wa/1251161))。
+- {{cssxwef("cawet-cowow")}} プロパティを追加しました ([fiwefox バグ 1063162](https://bugziw.wa/1063162))。
+- {{cssxwef("pwace-items")}}/{{cssxwef("pwace-sewf")}}/{{cssxwef("pwace-content")}} 一括指定プロパティを実装しました ([fiwefox バグ 1319958](https://bugziw.wa/1319958))。
+- {{cssxwef("dispway")}} プロパティに値 `fwow-woot` を追加しました ([fiwefox バグ 1322191](https://bugziw.wa/1322191))。
+- {{cssxwef("tab-size", ʘwʘ "-moz-tab-size")}} が {{cssxwef("&wt;wength&gt;")}} 値を受け入れるようになりました ([fiwefox バグ 943918](https://bugziw.wa/943918))。また、アニメーションが可能になりました ([fiwefox バグ 1308110](https://bugziw.wa/1308110))。
+- {{cssxwef("mask-mode")}}:wuminance がグラデーションのマスクで動作しない問題を修正しました ([fiwefox バグ 1346265](https://bugziw.wa/1346265))。
+- \[css-gwid] {{cssxwef("gwid-tempwate-wows")}} で、fw 単位を使用するとビューポートが埋まらない問題を修正しました ([fiwefox バグ 1346699](https://bugziw.wa/1346699))。
+- fwex アイテムが絶対位置指定の兄弟要素で隔てられているとき、"owdew" に従って並べ替えられない問題を修正しました ([fiwefox バグ 1345873](https://bugziw.wa/1345873))。
 
 #### その他の変更点
 
-- mask 関係の個別指定プロパティを SVG 要素に対して有効化しました ([Firefox バグ 1319667](https://bugzil.la/1319667))。
-- \[css-grid] グリッドアイテムが `<table>` であるときに `align-self`/`justify-self:stretch`/`normal` が動作しない問題を修正しました ([Firefox バグ 1316051](https://bugzil.la/1316051))。
-- 大きなリファレンスボックスで半径をパーセンテージで示した `clip-path: circle()` が正しくレンダリングされない問題を修正しました ([Firefox バグ 1324713](https://bugzil.la/1324713))。
-- ギリシャ文字に対して {{cssxref("text-transform")}} の値 `uppercase` を適用したとき、単独のエータについたアクセント (ή) が取り除かれないようになりました ([Firefox バグ 1322989](https://bugzil.la/1322989))。
-- {{cssxref("display")}} の値 `contents` を使用できるかは、設定項目 `layout.css.display-contents.enabled` で制御していました。Firefox 53 でこの設定項目を削除しましたので常に有効になり、無効化できなくなりました ([Firefox バグ 1295788](https://bugzil.la/1295788))。
+- mask 関係の個別指定プロパティを svg 要素に対して有効化しました ([fiwefox バグ 1319667](https://bugziw.wa/1319667))。
+- \[css-gwid] グリッドアイテムが `<tabwe>` であるときに `awign-sewf`/`justify-sewf:stwetch`/`nowmaw` が動作しない問題を修正しました ([fiwefox バグ 1316051](https://bugziw.wa/1316051))。
+- 大きなリファレンスボックスで半径をパーセンテージで示した `cwip-path: c-ciwcwe()` が正しくレンダリングされない問題を修正しました ([fiwefox バグ 1324713](https://bugziw.wa/1324713))。
+- ギリシャ文字に対して {{cssxwef("text-twansfowm")}} の値 `uppewcase` を適用したとき、単独のエータについたアクセント (ή) が取り除かれないようになりました ([fiwefox バグ 1322989](https://bugziw.wa/1322989))。
+- {{cssxwef("dispway")}} の値 `contents` を使用できるかは、設定項目 `wayout.css.dispway-contents.enabwed` で制御していました。fiwefox 53 でこの設定項目を削除しましたので常に有効になり、無効化できなくなりました ([fiwefox バグ 1295788](https://bugziw.wa/1295788))。
 
-### JavaScript
+### javascwipt
 
-- {{jsxref("Function.name")}} プロパティの、ECMAScript 2015 のセマンティクスを実装しました。これは、無名関数で推測した名前 (`var foo = function() {}`) を含みます ([Firefox バグ 883377](https://bugzil.la/883377))。
-- closing iterators の、ECMAScript 2015 のセマンティクスを実装しました。これは、例えば [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループに影響があります ([Firefox バグ 1147371](https://bugzil.la/1147371))。
-- [タグ付けされたテンプレートリテラルでエスケープシーケンスの制限を取り去る](/ja/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals_and_escape_sequences)、[Template Literal Revision 提案](https://tc39.github.io/proposal-template-literal-revision/) を実装しました ([Firefox バグ 1317375](https://bugzil.la/1317375))。
-- 非標準の [String ジェネリック](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_generic_methods) について、コンソールで非推奨の警告を表示するようになりました。将来削除する予定ですので、今後は使用しないでください! ([Firefox バグ 1319926](https://bugzil.la/1319926))
-- {{jsxref("TypedArray")}} オブジェクトの静的なプロパティ `length` の値を、ES2016 に従って 3 から 0 に変更しました ([Firefox バグ 1317306](https://bugzil.la/1317306))。
-- {{jsxref("DataView")}} で {{jsxref("SharedArrayBuffer")}} が使用可能になりました ([Firefox バグ 1246597](https://bugzil.la/1246597))。
-- 旧版の仕様書では、{{jsxref("SharedArrayBuffer")}} オブジェクトは[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)の間に、明示的に転送しなければなりませんでした。新しい仕様では[移譲可能なオブジェクト](/ja/docs/Web/API/Transferable)ではなくなり、転送リストに含まれてはなりません。新しい動作について以前はコンソールで警告を表示するだけでしたが、今後はエラーが発生します ([Firefox バグ 1302037](https://bugzil.la/1302037))。
-- {{jsxref("ArrayBuffer")}} の長さを、{{jsxref("Number.MAX_SAFE_INTEGER")}}に制限しました (>= 2 \*\* 53) ([Firefox バグ 1255128](https://bugzil.la/1255128))。
-- {{jsxref("Error")}} やほかのネイティブエラーオブジェクトのプロトタイプ ({{jsxref("RangeError")}} など) が、固有の Error オブジェクトではなく通常のオブジェクトになりました (特に、`Object.prototype.toString.call(Error.prototype)` は `"[object Error]"` ではなく `"[object Object]"` になります) ([Firefox バグ 1213341](https://bugzil.la/1213341))。
+- {{jsxwef("function.name")}} プロパティの、ecmascwipt 2015 のセマンティクスを実装しました。これは、無名関数で推測した名前 (`vaw foo = function() {}`) を含みます ([fiwefox バグ 883377](https://bugziw.wa/883377))。
+- c-cwosing itewatows の、ecmascwipt 2015 のセマンティクスを実装しました。これは、例えば [`fow...of`](/ja/docs/web/javascwipt/wefewence/statements/fow...of) ループに影響があります ([fiwefox バグ 1147371](https://bugziw.wa/1147371))。
+- [タグ付けされたテンプレートリテラルでエスケープシーケンスの制限を取り去る](/ja/docs/web/javascwipt/wefewence/tempwate_witewaws#tagged_tempwate_witewaws_and_escape_sequences)、[tempwate witewaw wevision 提案](https://tc39.github.io/pwoposaw-tempwate-witewaw-wevision/) を実装しました ([fiwefox バグ 1317375](https://bugziw.wa/1317375))。
+- 非標準の [stwing ジェネリック](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#stwing_genewic_methods) について、コンソールで非推奨の警告を表示するようになりました。将来削除する予定ですので、今後は使用しないでください! ([fiwefox バグ 1319926](https://bugziw.wa/1319926))
+- {{jsxwef("typedawway")}} オブジェクトの静的なプロパティ `wength` の値を、es2016 に従って 3 から 0 に変更しました ([fiwefox バグ 1317306](https://bugziw.wa/1317306))。
+- {{jsxwef("dataview")}} で {{jsxwef("shawedawwaybuffew")}} が使用可能になりました ([fiwefox バグ 1246597](https://bugziw.wa/1246597))。
+- 旧版の仕様書では、{{jsxwef("shawedawwaybuffew")}} オブジェクトは[構造化複製](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)の間に、明示的に転送しなければなりませんでした。新しい仕様では[移譲可能なオブジェクト](/ja/docs/web/api/twansfewabwe)ではなくなり、転送リストに含まれてはなりません。新しい動作について以前はコンソールで警告を表示するだけでしたが、今後はエラーが発生します ([fiwefox バグ 1302037](https://bugziw.wa/1302037))。
+- {{jsxwef("awwaybuffew")}} の長さを、{{jsxwef("numbew.max_safe_integew")}}に制限しました (>= 2 \*\* 53) ([fiwefox バグ 1255128](https://bugziw.wa/1255128))。
+- {{jsxwef("ewwow")}} やほかのネイティブエラーオブジェクトのプロトタイプ ({{jsxwef("wangeewwow")}} など) が、固有の e-ewwow オブジェクトではなく通常のオブジェクトになりました (特に、`object.pwototype.tostwing.caww(ewwow.pwototype)` は `"[object ewwow]"` ではなく `"[object object]"` になります) ([fiwefox バグ 1213341](https://bugziw.wa/1213341))。
 
 ### イベント
 
-- CSS トランジション: {{domxref("Element/transitionstart_event", "transitionstart")}}、{{domxref("Element/transitionrun_event", "transitionrun")}}、{{domxref("Element/transitioncancel_event", "transitioncancel")}} イベントを実装しました ([Firefox バグ 1264125](https://bugzil.la/1264125)、[Firefox バグ 1287983](https://bugzil.la/1287983))。
-- {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} コンストラクターを実装しました ([Firefox バグ 1002256](https://bugzil.la/1002256))。
-- {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} の別名である {{domxref("MouseEvent.x")}} および {{domxref("MouseEvent.y")}} を実装しました ([Firefox バグ 424390](https://bugzil.la/424390))。
-- {{domxref("Element/auxclick_event", "auxclick")}} イベントと、これに対応するイベントハンドラーを実装しました ([Firefox バグ 1304044](https://bugzil.la/1304044))。
-- {{domxref("Element/transitioncancel_event", "transitioncancel")}} イベントが、[トランジション](/ja/docs/Web/CSS/CSS_transitions) をキャンセルした後に発生するようになりました。
+- css トランジション: {{domxwef("ewement/twansitionstawt_event", σωσ "twansitionstawt")}}、{{domxwef("ewement/twansitionwun_event", OwO "twansitionwun")}}、{{domxwef("ewement/twansitioncancew_event", 😳😳😳 "twansitioncancew")}} イベントを実装しました ([fiwefox バグ 1264125](https://bugziw.wa/1264125)、[fiwefox バグ 1287983](https://bugziw.wa/1287983))。
+- {{domxwef("compositionevent.compositionevent", 😳😳😳 "compositionevent")}} コンストラクターを実装しました ([fiwefox バグ 1002256](https://bugziw.wa/1002256))。
+- {{domxwef("mouseevent.cwientx")}}/{{domxwef("mouseevent.cwienty")}} の別名である {{domxwef("mouseevent.x")}} および {{domxwef("mouseevent.y")}} を実装しました ([fiwefox バグ 424390](https://bugziw.wa/424390))。
+- {{domxwef("ewement/auxcwick_event", o.O "auxcwick")}} イベントと、これに対応するイベントハンドラーを実装しました ([fiwefox バグ 1304044](https://bugziw.wa/1304044))。
+- {{domxwef("ewement/twansitioncancew_event", ( ͡o ω ͡o ) "twansitioncancew")}} イベントが、[トランジション](/ja/docs/web/css/css_twansitions) をキャンセルした後に発生するようになりました。
 
-### DOM
+### d-dom
 
-- 以前は {{domxref("HTMLHyperLinkElementUtils")}} の {{domxref("HTMLAnchorElement/pathname", "pathname")}} および {{domxref("HTMLAnchorElement/search", "search")}} プロパティが、URL の誤った部分を返していました。例えば `http://z.com/x?a=true&b=false` の URL について、`pathname` は "`/x`" ではなく "`/x?a=true&b=false`"、`search` は "`?a=true&b=false`" ではなく "" を返していました。これらを修正しました ([Firefox バグ 1310483](https://bugzil.la/1310483))。
-- {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} コンストラクターが、init オブジェクトとして文字列や一連の文字列を受け入れるようになりました ([Firefox バグ 1330678](https://bugzil.la/1330678))。
-- [Selection API](/ja/docs/Web/API/Selection_API) の {{domxref("Selection.setBaseAndExtent()")}} メソッドを実装しました ([Firefox バグ 1321623](https://bugzil.la/1321623))。
-- `file` 型の {{htmlelement("input")}} の `value` に["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) を追加する機能を、Gecko に実装しました。ほかのブラウザーと同等になります ([Firefox バグ 1274596](https://bugzil.la/1274596))。
-- 非推奨の {{domxref("Node.rootNode")}} プロパティを置き換える、{{domxref("Node.getRootNode()")}} を実装しました ([Firefox バグ 1269155](https://bugzil.la/1269155))。
-- {{domxref("Plugin")}} および {{domxref("PluginArray")}} オブジェクト特有のプロパティが、enumerable ではなくなりました ([Firefox バグ 1270366](https://bugzil.la/1270366))。
-- {{domxref("MimeTypeArray")}} オブジェクトの名前付きプロパティが、enumerable ではなくなりました ([Firefox バグ 1270364](https://bugzil.la/1270364))。
-- [権限 API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.query()")}} で使用するパーミッション名で、新たに `persistent-storage` が使用可能になりました ([Firefox バグ 1270038](https://bugzil.la/1270038))。これは [Storage API](https://storage.spec.whatwg.org/) による、持続的なボックス (すなわち [persistent storage](https://storage.spec.whatwg.org/#persistence)) をオリジンに許可します。
+- 以前は {{domxwef("htmwhypewwinkewementutiws")}} の {{domxwef("htmwanchowewement/pathname", (U ﹏ U) "pathname")}} および {{domxwef("htmwanchowewement/seawch", (///ˬ///✿) "seawch")}} プロパティが、uww の誤った部分を返していました。例えば `http://z.com/x?a=twue&b=fawse` の uww について、`pathname` は "`/x`" ではなく "`/x?a=twue&b=fawse`"、`seawch` は "`?a=twue&b=fawse`" ではなく "" を返していました。これらを修正しました ([fiwefox バグ 1310483](https://bugziw.wa/1310483))。
+- {{domxwef("uwwseawchpawams.uwwseawchpawams", >w< "uwwseawchpawams()")}} コンストラクターが、init オブジェクトとして文字列や一連の文字列を受け入れるようになりました ([fiwefox バグ 1330678](https://bugziw.wa/1330678))。
+- [sewection api](/ja/docs/web/api/sewection_api) の {{domxwef("sewection.setbaseandextent()")}} メソッドを実装しました ([fiwefox バグ 1321623](https://bugziw.wa/1321623))。
+- `fiwe` 型の {{htmwewement("input")}} の `vawue` に["fakepath"](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#fakepath-swswy) を追加する機能を、gecko に実装しました。ほかのブラウザーと同等になります ([fiwefox バグ 1274596](https://bugziw.wa/1274596))。
+- 非推奨の {{domxwef("node.wootnode")}} プロパティを置き換える、{{domxwef("node.getwootnode()")}} を実装しました ([fiwefox バグ 1269155](https://bugziw.wa/1269155))。
+- {{domxwef("pwugin")}} および {{domxwef("pwuginawway")}} オブジェクト特有のプロパティが、enumewabwe ではなくなりました ([fiwefox バグ 1270366](https://bugziw.wa/1270366))。
+- {{domxwef("mimetypeawway")}} オブジェクトの名前付きプロパティが、enumewabwe ではなくなりました ([fiwefox バグ 1270364](https://bugziw.wa/1270364))。
+- [権限 a-api](/ja/docs/web/api/pewmissions_api) の {{domxwef("pewmissions.quewy()")}} で使用するパーミッション名で、新たに `pewsistent-stowage` が使用可能になりました ([fiwefox バグ 1270038](https://bugziw.wa/1270038))。これは [stowage a-api](https://stowage.spec.naniwg.owg/) による、持続的なボックス (すなわち [pewsistent stowage](https://stowage.spec.naniwg.owg/#pewsistence)) をオリジンに許可します。
 
 ### ワーカーおよびサービスワーカー
 
-- [ネットワーク情報 API](/ja/docs/Web/API/Network_Information_API) が、ワーカーで使用可能になりました ([Firefox バグ 1323172](https://bugzil.la/1323172))。
-- [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events) がワーカーから使用可能になりました ([Firefox バグ 1267903](https://bugzil.la/1267903))。
-- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}} が、非同期呼び出し可能になりました ([Firefox バグ 1263304](https://bugzil.la/1263304))。
+- [ネットワーク情報 api](/ja/docs/web/api/netwowk_infowmation_api) が、ワーカーで使用可能になりました ([fiwefox バグ 1323172](https://bugziw.wa/1323172))。
+- [サーバー送信イベント](/ja/docs/web/api/sewvew-sent_events) がワーカーから使用可能になりました ([fiwefox バグ 1267903](https://bugziw.wa/1267903))。
+- {{domxwef("extendabweevent.waituntiw", rawr "extendabweevent.waituntiw()")}} が、非同期呼び出し可能になりました ([fiwefox バグ 1263304](https://bugziw.wa/1263304))。
 
-### WebGL
+### webgw
 
-- {{domxref("WEBGL_compressed_texture_astc")}} WebGL 拡張を実装しました ([Firefox バグ 1250077](https://bugzil.la/1250077))。
-- {{domxref("WEBGL_debug_renderer_info")}} WebGL 拡張をデフォルトで有効にしました ([Firefox バグ 1336645](https://bugzil.la/1336645))。
+- {{domxwef("webgw_compwessed_textuwe_astc")}} webgw 拡張を実装しました ([fiwefox バグ 1250077](https://bugziw.wa/1250077))。
+- {{domxwef("webgw_debug_wendewew_info")}} w-webgw 拡張をデフォルトで有効にしました ([fiwefox バグ 1336645](https://bugziw.wa/1336645))。
 
-### Audio/Video/Media
+### audio/video/media
 
 #### 全般
 
-- **Android 版 Firefox 53** より、マルチコアシステムでパフォーマンスを高めるため、メディアのデコードを外部プロセスで制御します ([Firefox バグ 1333323](https://bugzil.la/1333323))。
+- **andwoid 版 fiwefox 53** より、マルチコアシステムでパフォーマンスを高めるため、メディアのデコードを外部プロセスで制御します ([fiwefox バグ 1333323](https://bugziw.wa/1333323))。
 
 #### メディア要素
 
-- メディア要素でメディアの再生を開始するために使用する {{domxref("HTMLMediaElement.play()")}} メソッドが、{{jsxref("Promise")}} を返すようになりました。この Promise は再生を開始すると fulfilled 状態、エラーが発生すると rejected 状態になります ([Firefox バグ 1244768](https://bugzil.la/1244768))。
+- メディア要素でメディアの再生を開始するために使用する {{domxwef("htmwmediaewement.pway()")}} メソッドが、{{jsxwef("pwomise")}} を返すようになりました。この pwomise は再生を開始すると fuwfiwwed 状態、エラーが発生すると w-wejected 状態になります ([fiwefox バグ 1244768](https://bugziw.wa/1244768))。
 
-#### Web Audio API
+#### web a-audio api
 
-- {{domxref("AudioScheduledSourceNode")}} インターフェイスを実装して、{{domxref("AudioBufferSourceNode")}}、{{domxref("ConstantSourceNode")}}、{{domxref("OscillatorNode")}} インターフェイスはこのインターフェイスを基にするようになりました ([Firefox バグ 1324568](https://bugzil.la/1324568))。
+- {{domxwef("audioscheduwedsouwcenode")}} インターフェイスを実装して、{{domxwef("audiobuffewsouwcenode")}}、{{domxwef("constantsouwcenode")}}、{{domxwef("osciwwatownode")}} インターフェイスはこのインターフェイスを基にするようになりました ([fiwefox バグ 1324568](https://bugziw.wa/1324568))。
 
-#### WebRTC
+#### w-webwtc
 
-- {{domxref("RTCPeerConnection")}} の {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} および {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} メソッドが、{{domxref("RTCSessionDescription")}} を直接返すのではなく、{{domxref("RTCSessionDescriptionInit")}} 辞書に従うオブジェクトを返す {{jsxref("Promise")}} を返すようになりました。既存のコードは引き続き動作しますが、[新しいコードはよりシンプルに記述できます](/ja/docs/Web/API/RTCPeerConnection/setLocalDescription#About_the_session_description_parameter)。
-- 同様に、{{domxref("RTCPeerConnection")}} の {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} および {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} メソッドが、{{domxref("RTCSessionDescriptionInit")}} 辞書に従うオブジェクトを受け入れるようになりました。既存のコードは引き続き動作しますが、[シンプルにできます](/ja/docs/Web/API/RTCPeerConnection/setLocalDescription#About_the_session_description_parameter)。
-- {{domxref("RTCPeerConnection.addIceCandidate()")}} が、{{domxref("RTCIceCandidateInit")}} 辞書に従うオブジェクトを受け入れるようになりました。これは既存のコードと互換性がありますが、上記の変更点と並んで使用するとコードをよりシンプルに記述できます ([Firefox バグ 1263312](https://bugzil.la/1263312))。
-- {{domxref("RTCDTMFSender")}} を使用する {{Glossary("DTMF")}} のサポートを、デフォルトで有効にしました。詳細や動作について、[Using DTMF with WebRTC](/ja/docs/Web/API/WebRTC_API/Using_DTMF) をご覧ください。
+- {{domxwef("wtcpeewconnection")}} の {{domxwef("wtcpeewconnection.cweateoffew", mya "cweateoffew()")}} および {{domxwef("wtcpeewconnection.cweateanswew", ^^ "cweateanswew()")}} メソッドが、{{domxwef("wtcsessiondescwiption")}} を直接返すのではなく、{{domxwef("wtcsessiondescwiptioninit")}} 辞書に従うオブジェクトを返す {{jsxwef("pwomise")}} を返すようになりました。既存のコードは引き続き動作しますが、[新しいコードはよりシンプルに記述できます](/ja/docs/web/api/wtcpeewconnection/setwocawdescwiption#about_the_session_descwiption_pawametew)。
+- 同様に、{{domxwef("wtcpeewconnection")}} の {{domxwef("wtcpeewconnection.setwocawdescwiption", 😳😳😳 "setwocawdescwiption()")}} および {{domxwef("wtcpeewconnection.setwemotedescwiption", mya "setwemotedescwiption()")}} メソッドが、{{domxwef("wtcsessiondescwiptioninit")}} 辞書に従うオブジェクトを受け入れるようになりました。既存のコードは引き続き動作しますが、[シンプルにできます](/ja/docs/web/api/wtcpeewconnection/setwocawdescwiption#about_the_session_descwiption_pawametew)。
+- {{domxwef("wtcpeewconnection.addicecandidate()")}} が、{{domxwef("wtcicecandidateinit")}} 辞書に従うオブジェクトを受け入れるようになりました。これは既存のコードと互換性がありますが、上記の変更点と並んで使用するとコードをよりシンプルに記述できます ([fiwefox バグ 1263312](https://bugziw.wa/1263312))。
+- {{domxwef("wtcdtmfsendew")}} を使用する {{gwossawy("dtmf")}} のサポートを、デフォルトで有効にしました。詳細や動作について、[using d-dtmf with webwtc](/ja/docs/web/api/webwtc_api/using_dtmf) をご覧ください。
 
-### HTTP/ネットワーク
+### h-http/ネットワーク
 
-- {{HTTPHeader("Referrer-Policy")}} の既定値をユーザーが設定できる設定項目 `network.http.referer.userControlPolicy` を、Gecko の `about:config` に追加しました ([Firefox バグ 1304623](https://bugzil.la/1304623))。以下の値を使用できます:
+- {{httpheadew("wefewwew-powicy")}} の既定値をユーザーが設定できる設定項目 `netwowk.http.wefewew.usewcontwowpowicy` を、gecko の `about:config` に追加しました ([fiwefox バグ 1304623](https://bugziw.wa/1304623))。以下の値を使用できます:
 
-  - 0 — `no-referrer`
-  - 1 — `same-origin`
-  - 2 — `strict-origin-when-cross-origin`
-  - 3 — `no-referrer-when-downgrade` (既定値)
+  - 0 — `no-wefewwew`
+  - 1 — `same-owigin`
+  - 2 — `stwict-owigin-when-cwoss-owigin`
+  - 3 — `no-wefewwew-when-downgwade` (既定値)
 
-- [Application-Layer Protocol Negotiation](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation) (ALPN) を支持するため、Next Protocol Negotiation (NPN) のサポートを廃止しました ([Firefox バグ 1248198](https://bugzil.la/1248198))。
-- {{httpheader("Large-Allocation")}} HTTP ヘッダーをデフォルトで有効にして、設定で無効化しないようになりました ([Firefox バグ 1331083](https://bugzil.la/1331083))。
+- [appwication-wayew pwotocow nyegotiation](https://en.wikipedia.owg/wiki/appwication-wayew_pwotocow_negotiation) (awpn) を支持するため、next pwotocow nyegotiation (npn) のサポートを廃止しました ([fiwefox バグ 1248198](https://bugziw.wa/1248198))。
+- {{httpheadew("wawge-awwocation")}} h-http ヘッダーをデフォルトで有効にして、設定で無効化しないようになりました ([fiwefox バグ 1331083](https://bugziw.wa/1331083))。
 
-### SVG
+### svg
 
-- {{domxref("SVGGeometryElement")}} インターフェイスを部分的に実装しました ([Firefox バグ 1239100](https://bugzil.la/1239100))。
+- {{domxwef("svggeometwyewement")}} インターフェイスを部分的に実装しました ([fiwefox バグ 1239100](https://bugziw.wa/1239100))。
 
 ## ウェブプラットフォームから廃止
 
-### HTML/XML
+### htmw/xmw
 
-- 設定項目 `dom.details_element.enabled` (Firefox で {{htmlelement("details")}} および {{htmlelement("summary")}} 要素のサポートを有効化/無効化します) を `about:config` から削除しました。これらの要素 (Firefox 49 からデフォルトで有効化) は無効化できません。[Firefox バグ 1271549](https://bugzil.la/1271549) をご覧ください。
-- {{htmlelement("iframe")}} 要素および {{domxref("HTMLIFrameElement")}} インターフェイスの `mozapp` 属性を削除しました。これは、moz [Browser API](/ja/docs/Mozilla/Gecko/Chrome/API/Browser_API) の `<iframe>` に Firefox OS アプリを埋め込めるようにするために使用しました ([Firefox バグ 1310845](https://bugzil.la/1310845))。
-- {{domxref("HTMLIFrameElement.setInputMethodActive()")}} メソッドおよび `InputMethod` インターフェイス (Firefox OS アプリで IME を設定および制御するために使用しました) を削除しました ([Firefox バグ 1313169](https://bugzil.la/1313169))。
+- 設定項目 `dom.detaiws_ewement.enabwed` (fiwefox で {{htmwewement("detaiws")}} および {{htmwewement("summawy")}} 要素のサポートを有効化/無効化します) を `about:config` から削除しました。これらの要素 (fiwefox 49 からデフォルトで有効化) は無効化できません。[fiwefox バグ 1271549](https://bugziw.wa/1271549) をご覧ください。
+- {{htmwewement("ifwame")}} 要素および {{domxwef("htmwifwameewement")}} インターフェイスの `mozapp` 属性を削除しました。これは、moz [bwowsew api](/ja/docs/moziwwa/gecko/chwome/api/bwowsew_api) の `<ifwame>` に f-fiwefox os アプリを埋め込めるようにするために使用しました ([fiwefox バグ 1310845](https://bugziw.wa/1310845))。
+- {{domxwef("htmwifwameewement.setinputmethodactive()")}} メソッドおよび `inputmethod` インターフェイス (fiwefox os アプリで ime を設定および制御するために使用しました) を削除しました ([fiwefox バグ 1313169](https://bugziw.wa/1313169))。
 
-### CSS
+### css
 
-- {{cssxref(":dir", ":dir()")}} 擬似クラスの、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1270406](https://bugzil.la/1270406))。
-- {{cssxref("text-align-last")}} の、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1276808](https://bugzil.la/1276808))。
-- {{cssxref("calc", "calc()")}} メソッドの、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1331296](https://bugzil.la/1331296))。
-- 独自仕様である `-moz-samplesize` media fragment (メモリーが少ない Firefox OS 端末にダウンサンプリングした画像を提供することを支援するために追加しました。[Firefox バグ 854795](https://bugzil.la/854795) をご覧ください) を削除しました ([Firefox バグ 1311246](https://bugzil.la/1311246))。
+- {{cssxwef(":diw", 😳 ":diw()")}} 擬似クラスの、`-moz` 接頭辞がついた派生形を削除しました ([fiwefox バグ 1270406](https://bugziw.wa/1270406))。
+- {{cssxwef("text-awign-wast")}} の、`-moz` 接頭辞がついた派生形を削除しました ([fiwefox バグ 1276808](https://bugziw.wa/1276808))。
+- {{cssxwef("cawc", -.- "cawc()")}} メソッドの、`-moz` 接頭辞がついた派生形を削除しました ([fiwefox バグ 1331296](https://bugziw.wa/1331296))。
+- 独自仕様である `-moz-sampwesize` media fwagment (メモリーが少ない f-fiwefox os 端末にダウンサンプリングした画像を提供することを支援するために追加しました。[fiwefox バグ 854795](https://bugziw.wa/854795) をご覧ください) を削除しました ([fiwefox バグ 1311246](https://bugziw.wa/1311246))。
 
-### JavaScript
+### javascwipt
 
-- 非標準の {{jsxref("ArrayBuffer.slice()")}} を削除しました (ただし、標準化された {{jsxref("ArrayBuffer.prototype.slice()")}} を維持しています) ([Firefox バグ 1313112](https://bugzil.la/1313112))。
+- 非標準の {{jsxwef("awwaybuffew.swice()")}} を削除しました (ただし、標準化された {{jsxwef("awwaybuffew.pwototype.swice()")}} を維持しています) ([fiwefox バグ 1313112](https://bugziw.wa/1313112))。
 
-### API
+### a-api
 
-- [Wifi information API](/ja/docs/Archive/B2G_OS/API/WiFi_Information_API)、Speaker Manager API、Tethering API、[Settings API](/ja/docs/Archive/B2G_OS/API/Settings_API) をプラットフォームから削除しました ([Firefox バグ 1313788](https://bugzil.la/1313788)、[Firefox バグ 1317853](https://bugzil.la/1317853)、[Firefox バグ 1313789](https://bugzil.la/1313789)、[Firefox バグ 1313155](https://bugzil.la/1313155))。
+- [wifi i-infowmation api](/ja/docs/awchive/b2g_os/api/wifi_infowmation_api)、speakew m-managew api、tethewing api、[settings api](/ja/docs/awchive/b2g_os/api/settings_api) をプラットフォームから削除しました ([fiwefox バグ 1313788](https://bugziw.wa/1313788)、[fiwefox バグ 1317853](https://bugziw.wa/1317853)、[fiwefox バグ 1313789](https://bugziw.wa/1313789)、[fiwefox バグ 1313155](https://bugziw.wa/1313155))。
 
 ### その他
 
-- {{domxref("HTMLEmbedElement")}} および {{domxref("HTMLObjectElement")}} インターフェイスから `legacycaller` を削除しました ([Firefox バグ 909656](https://bugzil.la/909656))。
+- {{domxwef("htmwembedewement")}} および {{domxwef("htmwobjectewement")}} インターフェイスから `wegacycawwew` を削除しました ([fiwefox バグ 909656](https://bugziw.wa/909656))。
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+## アドオン開発者と m-moziwwa 開発者向けの変更点
 
-### WebExtensions
+### w-webextensions
 
-新規 API:
+新規 api:
 
-- [`browsingData`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-- [`identity`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/identity)
-- [`contextualIdentities`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
+- [`bwowsingdata`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsingdata)
+- [`identity`](/ja/docs/moziwwa/add-ons/webextensions/api/identity)
+- [`contextuawidentities`](/ja/docs/moziwwa/add-ons/webextensions/api/contextuawidentities)
 
-向上した API:
+向上した a-api:
 
-- [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync)
-- [`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) の [context タイプ](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) として `page_action`、`browser_action`、`password`, `tab`
-- [`webRequest.onBeforeRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) で `requestBody` をサポート
-- [`tabs.insertCSS`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) で `cssOrigin` をサポート。ユーザースタイルシートが挿入可能になります。
+- [`stowage.sync`](/ja/docs/moziwwa/add-ons/webextensions/api/stowage/sync)
+- [`contextmenus`](/ja/docs/moziwwa/add-ons/webextensions/api/menus) の [context タイプ](/ja/docs/moziwwa/add-ons/webextensions/api/menus/contexttype) として `page_action`、`bwowsew_action`、`passwowd`, 🥺 `tab`
+- [`webwequest.onbefowewequest`](/ja/docs/moziwwa/add-ons/webextensions/api/webwequest/onbefowewequest) で `wequestbody` をサポート
+- [`tabs.insewtcss`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss) で `cssowigin` をサポート。ユーザースタイルシートが挿入可能になります。
 
-### JavaScript コードモジュール
+### j-javascwipt コードモジュール
 
-- 非同期の [AddonManager API](/ja/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager) で、コールバックだけでなく {{jsxref("Promise")}} もサポートしました ([Firefox バグ 987512](https://bugzil.la/987512)。
+- 非同期の [addonmanagew api](/ja/docs/moziwwa/add-ons/add-on_managew/addonmanagew) で、コールバックだけでなく {{jsxwef("pwomise")}} もサポートしました ([fiwefox バグ 987512](https://bugziw.wa/987512)。
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(52)}}
+{{fiwefox_fow_devewopews(52)}}

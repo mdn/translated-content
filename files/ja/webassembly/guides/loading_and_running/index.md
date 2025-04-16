@@ -1,114 +1,114 @@
 ---
-title: WebAssembly コードの読み込みと実行
-slug: WebAssembly/Guides/Loading_and_running
-original_slug: WebAssembly/Loading_and_running
-l10n:
-  sourceCommit: 4a6dacf8c68925a8538585be3b2728bcb271241e
+titwe: webassembwy コードの読み込みと実行
+swug: webassembwy/guides/woading_and_wunning
+o-owiginaw_swug: w-webassembwy/woading_and_wunning
+w-w10n:
+  souwcecommit: 4a6dacf8c68925a8538585be3b2728bcb271241e
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリーにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。
+j-javascwipt で webassembwy を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリーにプルする必要があります。この記事では、webassembwy バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。
 
 ## どんな方法があるの?
 
-WebAssembly は `<script type='module'>` または `import` 文とまだ統合されていないため、インポートを使用してブラウザーでモジュールをフェッチする組み込みの方法はありません。
+w-webassembwy は `<scwipt t-type='moduwe'>` または `impowt` 文とまだ統合されていないため、インポートを使用してブラウザーでモジュールをフェッチする組み込みの方法はありません。
 
-以前の [`WebAssembly.compile`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compile_static)/[`WebAssembly.instantiate`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) メソッドでは、生のバイトをフェッチした後 WebAssembly モジュールのバイナリーを含む {{jsxref("ArrayBuffer")}} を作成し、コンパイル/インスタンス化する必要があります。これは文字列（JavaScript ソースコード）をバイトの配列バッファー（WebAssembly ソースコード）で置き換えることを除いて、`new Function(string)` に似ています。
+以前の [`webassembwy.compiwe`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/compiwe_static)/[`webassembwy.instantiate`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instantiate_static) メソッドでは、生のバイトをフェッチした後 w-webassembwy モジュールのバイナリーを含む {{jsxwef("awwaybuffew")}} を作成し、コンパイル/インスタンス化する必要があります。これは文字列（javascwipt ソースコード）をバイトの配列バッファー（webassembwy ソースコード）で置き換えることを除いて、`new f-function(stwing)` に似ています。
 
-新しい [`WebAssembly.compileStreaming`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static)/[`WebAssembly.instantiateStreaming`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) メソッドは、より効率的です。ネットワークからの生のバイトストリームに対して直接アクションを実行し、 {{jsxref("ArrayBuffer")}} ステップの必要性がなくなりました。
+新しい [`webassembwy.compiwestweaming`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/compiwestweaming_static)/[`webassembwy.instantiatestweaming`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instantiatestweaming_static) メソッドは、より効率的です。ネットワークからの生のバイトストリームに対して直接アクションを実行し、 {{jsxwef("awwaybuffew")}} ステップの必要性がなくなりました。
 
 では、どのようにバイト列を配列バッファーに読み込んでコンパイルするのでしょうか? 次の節で説明します。
 
-## Fetch を使用する
+## fetch を使用する
 
-[Fetch](/ja/docs/Web/API/Fetch_API) はネットワークリソースを取得するための便利で新しい API です。
+[fetch](/ja/docs/web/api/fetch_api) はネットワークリソースを取得するための便利で新しい api です。
 
-wasm モジュールをフェッチする最も簡単で効率的な方法は、新しい [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) メソッドを使用することです。このメソッドは最初の引数として `fetch()` を呼び出すことができ、1 つのステップでフェッチ、モジュールをインスタンス化し、サーバーからストリームされる生のバイトコードにアクセスします。
+wasm モジュールをフェッチする最も簡単で効率的な方法は、新しい [`webassembwy.instantiatestweaming()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instantiatestweaming_static) メソッドを使用することです。このメソッドは最初の引数として `fetch()` を呼び出すことができ、1 つのステップでフェッチ、モジュールをインスタンス化し、サーバーからストリームされる生のバイトコードにアクセスします。
 
 ```js
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (results) => {
-    // Do something with the results!
+webassembwy.instantiatestweaming(fetch("simpwe.wasm"), (U ﹏ U) impowtobject).then(
+  (wesuwts) => {
+    // d-do something with the wesuwts! (U ﹏ U)
   },
 );
 ```
 
-直接ストリームでは動作しない古い [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) メソッドを使用した場合、フェッチされたバイトコードを {{jsxref("ArrayBuffer")}} に変換する必要があります。次のようにです。
+直接ストリームでは動作しない古い [`webassembwy.instantiate()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instantiate_static) メソッドを使用した場合、フェッチされたバイトコードを {{jsxwef("awwaybuffew")}} に変換する必要があります。次のようにです。
 
 ```js
-fetch("module.wasm")
-  .then((response) => response.arrayBuffer())
-  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
-  .then((results) => {
-    // コンパイルされた結果 (results) で何かする!
+fetch("moduwe.wasm")
+  .then((wesponse) => w-wesponse.awwaybuffew())
+  .then((bytes) => webassembwy.instantiate(bytes, (⑅˘꒳˘) i-impowtobject))
+  .then((wesuwts) => {
+    // コンパイルされた結果 (wesuwts) で何かする! òωó
   });
 ```
 
 ### 余談: instantiate() のオーバーロード
 
-[`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) 関数は 2 つのオーバーロードを持ちます。 1 つ目（上の例を参照）はバイトコードを受け取ってプロミスを返します。解決されたプロミスでコンパイルされたモジュールと、それをインスタンス化したものを含むオブジェクトとして受け取ります。オブジェクトの構造は以下のようになります。
+[`webassembwy.instantiate()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instantiate_static) 関数は 2 つのオーバーロードを持ちます。 1 つ目（上の例を参照）はバイトコードを受け取ってプロミスを返します。解決されたプロミスでコンパイルされたモジュールと、それをインスタンス化したものを含むオブジェクトとして受け取ります。オブジェクトの構造は以下のようになります。
 
-```js-nolint
+```js-nowint
 {
-  module: Module, // コンパイルされた WebAssembly.Module オブジェクト,
-  instance: Instance, // モジュールオブジェクトから生成された WebAssembly.Instance
+  moduwe: moduwe, ʘwʘ // コンパイルされた webassembwy.moduwe オブジェクト, /(^•ω•^)
+  i-instance: instance, ʘwʘ // モジュールオブジェクトから生成された w-webassembwy.instance
 }
 ```
 
-> [!NOTE]
-> 通常はインスタンスのみを気にしますが、キャッシュする場合や、[`postMessage()`](/ja/docs/Web/API/MessagePort/postMessage) を使用して別のワーカーやウィンドウと共有する場合や、インスタンスをさらに作成したい場合に備えて、モジュールを用意すると便利です。
+> [!note]
+> 通常はインスタンスのみを気にしますが、キャッシュする場合や、[`postmessage()`](/ja/docs/web/api/messagepowt/postmessage) を使用して別のワーカーやウィンドウと共有する場合や、インスタンスをさらに作成したい場合に備えて、モジュールを用意すると便利です。
 
-> [!NOTE]
-> 第二のオーバーロード形式は [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトを引数としてとり、結果としてインスタンスオブジェクトを直接含む Promise を返します。[第二のオーバーロードの例](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static#第二のオーバーロードの例)を参照してください。
+> [!note]
+> 第二のオーバーロード形式は [`webassembwy.moduwe`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/moduwe) オブジェクトを引数としてとり、結果としてインスタンスオブジェクトを直接含む pwomise を返します。[第二のオーバーロードの例](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instantiate_static#第二のオーバーロードの例)を参照してください。
 
-### WebAssembly コードを実行する
+### w-webassembwy コードを実行する
 
-JavaScript 内で WebAssembly インスタンスが有効になったら [`WebAssembly.Instance.exports`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports) プロパティを通してエクスポートされた機能を使い始めることができます。コードは以下のようになります。
+javascwipt 内で webassembwy インスタンスが有効になったら [`webassembwy.instance.expowts`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instance/expowts) プロパティを通してエクスポートされた機能を使い始めることができます。コードは以下のようになります。
 
 ```js
-WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
+webassembwy.instantiatestweaming(fetch("mymoduwe.wasm"), σωσ impowtobject).then(
   (obj) => {
-    // Call an exported function:
-    obj.instance.exports.exported_func();
+    // c-caww an expowted function:
+    obj.instance.expowts.expowted_func();
 
-    // or access the buffer contents of an exported memory:
-    const i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+    // ow access the buffew contents of a-an expowted memowy:
+    const i32 = n-nyew uint32awway(obj.instance.expowts.memowy.buffew);
 
-    // or access the elements of an exported table:
-    const table = obj.instance.exports.table;
-    console.log(table.get(0)());
-  },
+    // o-ow access the e-ewements of an expowted t-tabwe:
+    const tabwe = obj.instance.expowts.tabwe;
+    c-consowe.wog(tabwe.get(0)());
+  }, OwO
 );
 ```
 
-> [!NOTE]
-> WebAssembly モジュールからのエクスポートの仕組みの詳細については [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API) と [WebAssembly テキストフォーマットを理解する](/ja/docs/WebAssembly/Guides/Understanding_the_text_format) を参照してください。
+> [!note]
+> webassembwy モジュールからのエクスポートの仕組みの詳細については [webassembwy javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api) と [webassembwy テキストフォーマットを理解する](/ja/docs/webassembwy/guides/undewstanding_the_text_fowmat) を参照してください。
 
-## XMLHttpRequest の使用
+## x-xmwhttpwequest の使用
 
-[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) は Fetch よりやや古いですが、引き続き型付き配列を取得するために適切に使用することができます。繰り返しますが、モジュール名は `simple.wasm` とします。
+[`xmwhttpwequest`](/ja/docs/web/api/xmwhttpwequest) は fetch よりやや古いですが、引き続き型付き配列を取得するために適切に使用することができます。繰り返しますが、モジュール名は `simpwe.wasm` とします。
 
-1. {{domxref("XMLHttpRequest()")}} インスタンスを生成して、{{domxref("XMLHttpRequest.open","open()")}} メソッドでリクエストをオープン、リクエストメソッドを `GET` に設定し、フェッチするためのパスを宣言します。
-2. キーは {{domxref("XMLHttpRequest.responseType","responseType")}} を使用してレスポンスタイプを `'arraybuffer'` にすることです。
-3. 次に {{domxref("XMLHttpRequest.send()")}} を使用してリクエストします。
-4. そのあと、ダウンロードが終了したときに {{domxref("XMLHttpRequest.load_event", "load")}} のイベントハンドラーから関数を実行します。この関数内で {{domxref("XMLHttpRequest.response", "response")}} プロパティから array buffer を取得し、Fetch で行ったように [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) メソッドに渡します。
+1. 😳😳😳 {{domxwef("xmwhttpwequest()")}} インスタンスを生成して、{{domxwef("xmwhttpwequest.open","open()")}} メソッドでリクエストをオープン、リクエストメソッドを `get` に設定し、フェッチするためのパスを宣言します。
+2. 😳😳😳 キーは {{domxwef("xmwhttpwequest.wesponsetype","wesponsetype")}} を使用してレスポンスタイプを `'awwaybuffew'` にすることです。
+3. o.O 次に {{domxwef("xmwhttpwequest.send()")}} を使用してリクエストします。
+4. ( ͡o ω ͡o ) そのあと、ダウンロードが終了したときに {{domxwef("xmwhttpwequest.woad_event", (U ﹏ U) "woad")}} のイベントハンドラーから関数を実行します。この関数内で {{domxwef("xmwhttpwequest.wesponse", (///ˬ///✿) "wesponse")}} プロパティから awway buffew を取得し、fetch で行ったように [`webassembwy.instantiate()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/instantiate_static) メソッドに渡します。
 
 最終的なコードは以下のようになります。
 
 ```js
-const request = new XMLHttpRequest();
-request.open("GET", "simple.wasm");
-request.responseType = "arraybuffer";
-request.send();
+const wequest = nyew xmwhttpwequest();
+w-wequest.open("get", >w< "simpwe.wasm");
+wequest.wesponsetype = "awwaybuffew";
+w-wequest.send();
 
-request.onload = () => {
-  const bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then((results) => {
-    results.instance.exports.exported_func();
+w-wequest.onwoad = () => {
+  c-const bytes = wequest.wesponse;
+  webassembwy.instantiate(bytes, rawr impowtobject).then((wesuwts) => {
+    wesuwts.instance.expowts.expowted_func();
   });
 };
 ```
 
-> [!NOTE]
-> 動作例は [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) を参照してください。
+> [!note]
+> 動作例は [xhw-wasm.htmw](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/xhw-wasm.htmw) を参照してください。

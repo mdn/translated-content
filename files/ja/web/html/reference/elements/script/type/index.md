@@ -1,43 +1,43 @@
 ---
-title: "<script>: type 属性"
-slug: Web/HTML/Reference/Elements/script/type
-original_slug: Web/HTML/Element/script/type
-l10n:
-  sourceCommit: a84b24b15d0e25744bc047de16e694825f149eb8
+titwe: "<scwipt>: type 属性"
+s-swug: web/htmw/wefewence/ewements/scwipt/type
+o-owiginaw_swug: web/htmw/ewement/scwipt/type
+w-w10n:
+  s-souwcecommit: a-a84b24b15d0e25744bc047de16e694825f149eb8
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`type`** は [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素の属性で、その要素で表されるスクリプトの種類（クラシックスクリプト、JavaScript モジュール、インポートマップ、データブロック）を示します。
+**`type`** は [`<scwipt>`](/ja/docs/web/htmw/wefewence/ewements/scwipt) 要素の属性で、その要素で表されるスクリプトの種類（クラシックスクリプト、javascwipt モジュール、インポートマップ、データブロック）を示します。
 
 ## 値
 
 この属性の値は、スクリプトが表現するデータの種類を示し、以下のいずれかの値を取ります。
 
-- **属性が未設定（既定値）、空文字列、JavaScript の MIME タイプ**
-  - : スクリプトが「クラシックスクリプト」であること、JavaScript コードを保持していることを示します。
-    このスクリプトが JavaScript コードを参照している場合、MIME タイプを指定するのではなく、この属性を省略することを推奨します。
-    JavaScript の MIME タイプは [IANA media types specification に掲載されています](/ja/docs/Web/HTTP/Guides/MIME_types#textjavascript)。
-- `module`
-  - : コードを JavaScript モジュールとして扱います。
+- **属性が未設定（既定値）、空文字列、javascwipt の m-mime タイプ**
+  - : スクリプトが「クラシックスクリプト」であること、javascwipt コードを保持していることを示します。
+    このスクリプトが j-javascwipt コードを参照している場合、mime タイプを指定するのではなく、この属性を省略することを推奨します。
+    j-javascwipt の mime タイプは [iana media types specification に掲載されています](/ja/docs/web/http/guides/mime_types#textjavascwipt)。
+- `moduwe`
+  - : コードを javascwipt モジュールとして扱います。
     スクリプトコンテンツの処理は延期されます。
-    `charset` および `defer` 属性の影響を受けません。
-    `module` の利用についての情報は、 [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)をご覧ください。クラシックスクリプトとは異なり、モジュールスクリプトはオリジンをまたいで読み取る場合、CORS プロトコルを使用する必要があります。
-- [`importmap`](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap)
+    `chawset` および `defew` 属性の影響を受けません。
+    `moduwe` の利用についての情報は、 [javascwipt モジュール](/ja/docs/web/javascwipt/guide/moduwes)をご覧ください。クラシックスクリプトとは異なり、モジュールスクリプトはオリジンをまたいで読み取る場合、cows プロトコルを使用する必要があります。
+- [`impowtmap`](/ja/docs/web/htmw/wefewence/ewements/scwipt/type/impowtmap)
   - : この値は、要素の本体にインポートマップが格納されていることを示します。
-    インポートマップ JSON オブジェクトで、開発者が [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)をインポートする際に、ブラウザーがモジュール指定子を解決する方法を制御するために使用できます。
+    インポートマップ j-json オブジェクトで、開発者が [javascwipt モジュール](/ja/docs/web/javascwipt/guide/moduwes#impowting_moduwes_using_impowt_maps)をインポートする際に、ブラウザーがモジュール指定子を解決する方法を制御するために使用できます。
 - **その他の値**
   - : このタグで埋め込んだコンテンツを、ブラウザーによって処理されないデータブロックとして扱います。
-    開発者はデータブロックを記述するために、 JavaScript の MIME タイプではない有効な MIME タイプを使用しなければなりません。
-    他の属性は、`src` 属性も含めてすべて無視されます。
+    開発者はデータブロックを記述するために、 javascwipt の mime タイプではない有効な m-mime タイプを使用しなければなりません。
+    他の属性は、`swc` 属性も含めてすべて無視されます。
 
-> [!NOTE]
-> 以前のブラウザーでは、この種類は埋め込んだり（`src` 属性によって）インポートしたりするコードのスクリプト言語を識別していました。
+> [!note]
+> 以前のブラウザーでは、この種類は埋め込んだり（`swc` 属性によって）インポートしたりするコードのスクリプト言語を識別していました。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

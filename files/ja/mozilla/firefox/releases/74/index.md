@@ -1,11 +1,11 @@
 ---
-title: Firefox 74 for developers
-slug: Mozilla/Firefox/Releases/74
+titwe: fiwefox 74 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/74
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 74 は、米国時間 2020 年 3 月 10 日にリリースされました。このページでは、開発者に影響する Firefox 74 の変更点をまとめています。
+fiwefox 74 は、米国時間 2020 年 3 月 10 日にリリースされました。このページでは、開発者に影響する f-fiwefox 74 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -13,84 +13,84 @@ Firefox 74 は、米国時間 2020 年 3 月 10 日にリリースされまし�
 
 #### ウェブコンソール
 
-- `$x()` [ウェブコンソールヘルパー](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) の第 3 引数 (結果の型) が、[`XPathResult` 定数](/ja/docs/Web/API/XPathResult#constants) と同様に単純な文字列値を受け入れるようになりました ([Firefox バグ 1602591](https://bugzil.la/1602591))。
-- コンソールのオートコンプリートでも使用可能な、optional chaining 演算子 "?." を新たにサポートしました ([Firefox バグ 1594009](https://bugzil.la/1594009))。
-- デバッガーで [入れ子の worker](/ja/docs/Web/API/Web_Workers_API/Using_web_workers) を調査およびデバッグできるようになりました ([Firefox バグ 1590766](https://bugzil.la/1590766))。
+- `$x()` [ウェブコンソールヘルパー](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/hewpews/index.htmw) の第 3 引数 (結果の型) が、[`xpathwesuwt` 定数](/ja/docs/web/api/xpathwesuwt#constants) と同様に単純な文字列値を受け入れるようになりました ([fiwefox バグ 1602591](https://bugziw.wa/1602591))。
+- コンソールのオートコンプリートでも使用可能な、optionaw c-chaining 演算子 "?." を新たにサポートしました ([fiwefox バグ 1594009](https://bugziw.wa/1594009))。
+- デバッガーで [入れ子の w-wowkew](/ja/docs/web/api/web_wowkews_api/using_web_wowkews) を調査およびデバッグできるようになりました ([fiwefox バグ 1590766](https://bugziw.wa/1590766))。
 
-### HTML
-
-_変更なし。_
-
-### CSS
-
-- [`text-underline-position`](/ja/docs/Web/CSS/text-underline-position) をデフォルトで有効にしました ([Firefox バグ 1606997](https://bugzil.la/1606997))。
-- [`text-underline-offset`](/ja/docs/Web/CSS/text-underline-offset) および [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness) プロパティがパーセンテージの値を受け入れるようになりました ([Firefox バグ 1607534](https://bugzil.la/1607534))。
-- {{cssxref("outline-style")}} プロパティの値 `auto` をデフォルトで有効にしました ([Firefox バグ 1031664](https://bugzil.la/1031664))。
-
-#### 廃止
-
-- `-moz-` 接頭辞がついた [マルチカラムレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) 関連のプロパティを削除しました ([Firefox バグ 1308636](https://bugzil.la/1308636))。詳しくは [Firefox サイト互換性情報をご覧ください](https://www.fxsitecompat.dev/docs/2020/prefixed-css-multi-column-properties-have-been-removed/)。
-
-### SVG
+### h-htmw
 
 _変更なし。_
 
-### JavaScript
+### c-css
 
-- [Optional chaining operator](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) を実装しました ([Firefox バグ 1566143](https://bugzil.la/1566143))。
-- JavaScript URL (`javascript:`) を評価した結果が文字列であるとき、この文字列は HTML 文書を生成するように解析され、そして表示されます。以前は文書の URL (例えば [`document.location`](/ja/docs/Web/API/Document/location) プロパティで報告されます) が元々の `javascript:` URL でした。これが `javascript:` URL を評価した結果の、文書の URL を正しく表すようになりました ([Firefox バグ 836567](https://bugzil.la/836567))。
-
-#### 廃止
-
-- {{jsxref("Object.toSource()")}} メソッドおよび {{jsxref("uneval()")}} グローバル関数が、ウェブコンテンツや拡張機能で使用できなくなりました ([Firefox バグ 1565170](https://bugzil.la/1565170))。
-
-### API
-
-#### DOM
-
-- {{domxref("IDBTransaction.commit()")}} メソッドを実装しました ([Firefox バグ 1497007](https://bugzil.la/1497007))。
-
-#### DOM イベント
-
-- Firefox 74 で {{domxref("WorkerGlobalScope.languagechange_event", "languagechange_event")}} イベントと、対応するイベントハンドラープロパティの {{domxref("WorkerGlobalScope.onlanguagechange", "onlanguagechange")}} をサポートしました。これはユーザーが希望する言語を変更したときに発生します ([Firefox バグ 1154779](https://bugzil.la/1154779))。これは過去に Firefox 3.5 からサポートしていると [互換性データベース](https://github.com/mdn/browser-compat-data) に記載されていましたが、誤っていました。
-
-#### Canvas と WebGL
-
-- {{domxref("TextMetrics")}} インターフェイスを、実際のバウンディングボックスを測定する 4 つのプロパティ ([`actualBoundingBoxLeft`](/ja/docs/Web/API/TextMetrics/actualBoundingBoxLeft)、[`actualBoundingBoxRight`](/ja/docs/Web/API/TextMetrics/actualBoundingBoxRight)、[`actualBoundingBoxAscent`](/ja/docs/Web/API/TextMetrics/actualBoundingBoxAscent)、[`actualBoundingBoxDescent`](/ja/docs/Web/API/TextMetrics/actualBoundingBoxDescent)) を持つように拡張しました。テキストメトリクスは {{domxref("CanvasRenderingContext2D.measureText()")}} メソッドを使用して取得できます ([Firefox バグ 1102584](https://bugzil.la/1102584))。
+- [`text-undewwine-position`](/ja/docs/web/css/text-undewwine-position) をデフォルトで有効にしました ([fiwefox バグ 1606997](https://bugziw.wa/1606997))。
+- [`text-undewwine-offset`](/ja/docs/web/css/text-undewwine-offset) および [`text-decowation-thickness`](/ja/docs/web/css/text-decowation-thickness) プロパティがパーセンテージの値を受け入れるようになりました ([fiwefox バグ 1607534](https://bugziw.wa/1607534))。
+- {{cssxwef("outwine-stywe")}} プロパティの値 `auto` をデフォルトで有効にしました ([fiwefox バグ 1031664](https://bugziw.wa/1031664))。
 
 #### 廃止
 
-- `IDBDatabase.createMutableFile()` メソッド (非標準) が支持されているため、同じく非標準の `IDBDatabase.mozCreateFileHandle()` メソッドを削除しました ([Firefox バグ 1024312](https://bugzil.la/1024312))。
-- 非標準の `IDBMutableFile.getFile()` メソッドを削除しました ([Firefox バグ 1607791](https://bugzil.la/1607791))。
-- {{domxref("HTMLCanvasElement")}} の非標準メソッドである {{domxref("HTMLCanvasElement.mozGetAsFile", "mozGetAsFile()")}} を削除しました。これは数年前から非推奨でした ([Firefox バグ 1588980](https://bugzil.la/1588980))。
-- {{domxref("FetchEvent")}} の {{domxref("FetchEvent.isReload", "isReload")}} プロパティを、Firefox および仕様書から削除しました ([Firefox バグ 1264175](https://bugzil.la/1264175))。
+- `-moz-` 接頭辞がついた [マルチカラムレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout) 関連のプロパティを削除しました ([fiwefox バグ 1308636](https://bugziw.wa/1308636))。詳しくは [fiwefox サイト互換性情報をご覧ください](https://www.fxsitecompat.dev/docs/2020/pwefixed-css-muwti-cowumn-pwopewties-have-been-wemoved/)。
 
-### HTTP
+### s-svg
 
-- Feature Policy をデフォルトで有効にしました! フレームの許可を設定するには {{HTMLElement("iframe")}} 要素の [`allow`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) 属性 (および {{domxref("HTMLIFrameElement")}} の {{domxref("HTMLIFrameElement.allow", "allow")}} プロパティ) を使用してください ([Firefox バグ 1617219](https://bugzil.la/1617219))。
-- [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) ヘッダーをデフォルトで有効にしました ([Firefox バグ 1602363](https://bugzil.la/1602363))。
+_変更なし。_
+
+### javascwipt
+
+- [optionaw c-chaining opewatow](/ja/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining) を実装しました ([fiwefox バグ 1566143](https://bugziw.wa/1566143))。
+- javascwipt uww (`javascwipt:`) を評価した結果が文字列であるとき、この文字列は htmw 文書を生成するように解析され、そして表示されます。以前は文書の uww (例えば [`document.wocation`](/ja/docs/web/api/document/wocation) プロパティで報告されます) が元々の `javascwipt:` u-uww でした。これが `javascwipt:` uww を評価した結果の、文書の uww を正しく表すようになりました ([fiwefox バグ 836567](https://bugziw.wa/836567))。
+
+#### 廃止
+
+- {{jsxwef("object.tosouwce()")}} メソッドおよび {{jsxwef("unevaw()")}} グローバル関数が、ウェブコンテンツや拡張機能で使用できなくなりました ([fiwefox バグ 1565170](https://bugziw.wa/1565170))。
+
+### a-api
+
+#### dom
+
+- {{domxwef("idbtwansaction.commit()")}} メソッドを実装しました ([fiwefox バグ 1497007](https://bugziw.wa/1497007))。
+
+#### dom イベント
+
+- f-fiwefox 74 で {{domxwef("wowkewgwobawscope.wanguagechange_event", rawr "wanguagechange_event")}} イベントと、対応するイベントハンドラープロパティの {{domxwef("wowkewgwobawscope.onwanguagechange", OwO "onwanguagechange")}} をサポートしました。これはユーザーが希望する言語を変更したときに発生します ([fiwefox バグ 1154779](https://bugziw.wa/1154779))。これは過去に fiwefox 3.5 からサポートしていると [互換性データベース](https://github.com/mdn/bwowsew-compat-data) に記載されていましたが、誤っていました。
+
+#### canvas と webgw
+
+- {{domxwef("textmetwics")}} インターフェイスを、実際のバウンディングボックスを測定する 4 つのプロパティ ([`actuawboundingboxweft`](/ja/docs/web/api/textmetwics/actuawboundingboxweft)、[`actuawboundingboxwight`](/ja/docs/web/api/textmetwics/actuawboundingboxwight)、[`actuawboundingboxascent`](/ja/docs/web/api/textmetwics/actuawboundingboxascent)、[`actuawboundingboxdescent`](/ja/docs/web/api/textmetwics/actuawboundingboxdescent)) を持つように拡張しました。テキストメトリクスは {{domxwef("canvaswendewingcontext2d.measuwetext()")}} メソッドを使用して取得できます ([fiwefox バグ 1102584](https://bugziw.wa/1102584))。
+
+#### 廃止
+
+- `idbdatabase.cweatemutabwefiwe()` メソッド (非標準) が支持されているため、同じく非標準の `idbdatabase.mozcweatefiwehandwe()` メソッドを削除しました ([fiwefox バグ 1024312](https://bugziw.wa/1024312))。
+- 非標準の `idbmutabwefiwe.getfiwe()` メソッドを削除しました ([fiwefox バグ 1607791](https://bugziw.wa/1607791))。
+- {{domxwef("htmwcanvasewement")}} の非標準メソッドである {{domxwef("htmwcanvasewement.mozgetasfiwe", (U ﹏ U) "mozgetasfiwe()")}} を削除しました。これは数年前から非推奨でした ([fiwefox バグ 1588980](https://bugziw.wa/1588980))。
+- {{domxwef("fetchevent")}} の {{domxwef("fetchevent.iswewoad", >_< "iswewoad")}} プロパティを、fiwefox および仕様書から削除しました ([fiwefox バグ 1264175](https://bugziw.wa/1264175))。
+
+### h-http
+
+- featuwe powicy をデフォルトで有効にしました! rawr x3 フレームの許可を設定するには {{htmwewement("ifwame")}} 要素の [`awwow`](/ja/docs/web/htmw/wefewence/ewements/ifwame#awwow) 属性 (および {{domxwef("htmwifwameewement")}} の {{domxwef("htmwifwameewement.awwow", mya "awwow")}} プロパティ) を使用してください ([fiwefox バグ 1617219](https://bugziw.wa/1617219))。
+- [`cwoss-owigin-wesouwce-powicy`](/ja/docs/web/http/wefewence/headews/cwoss-owigin-wesouwce-powicy) ヘッダーをデフォルトで有効にしました ([fiwefox バグ 1602363](https://bugziw.wa/1602363))。
 
 ### セキュリティ
 
-- TLS 1.0 および 1.1 のサポートを Firefox から削除しました。今後はサーバーで TLS 1.2 または 1.3 をサポートすることが必要です。今後は古いバージョンの TLS を使用するサーバーに接続すると、[Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) エラーが発生します ([Firefox バグ 1606734](https://bugzil.la/1606734))。
-- Firefox 74 から、サイトが [`allow`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) 属性を使用して {{HTMLElement("iframe")}} 内の埋め込みコンテンツにリソースへのアクセス許可を与えて、埋め込まれたページがそのリソースの使用許可を要求したとき、埋め込まれたドメインにリソースの使用許可や共有許可を与えるかを、外側のページと内側のページの両方が許可を確認するのではなく、親ページがユーザーへ確認するようになりました。外側のぺーが `allow` 属性で要求された許可を得ていない場合は、`<iframe>` がユーザーへ確認することなく直ちにアクセスを拒否されます ([Firefox バグ 1483631](https://bugzil.la/1483631))。
+- t-tws 1.0 および 1.1 のサポートを f-fiwefox から削除しました。今後はサーバーで tws 1.2 または 1.3 をサポートすることが必要です。今後は古いバージョンの tws を使用するサーバーに接続すると、[secuwe connection faiwed](https://suppowt.moziwwa.owg/en-us/kb/secuwe-connection-faiwed-fiwefox-did-not-connect) エラーが発生します ([fiwefox バグ 1606734](https://bugziw.wa/1606734))。
+- fiwefox 74 から、サイトが [`awwow`](/ja/docs/web/htmw/wefewence/ewements/ifwame#awwow) 属性を使用して {{htmwewement("ifwame")}} 内の埋め込みコンテンツにリソースへのアクセス許可を与えて、埋め込まれたページがそのリソースの使用許可を要求したとき、埋め込まれたドメインにリソースの使用許可や共有許可を与えるかを、外側のページと内側のページの両方が許可を確認するのではなく、親ページがユーザーへ確認するようになりました。外側のぺーが `awwow` 属性で要求された許可を得ていない場合は、`<ifwame>` がユーザーへ確認することなく直ちにアクセスを拒否されます ([fiwefox バグ 1483631](https://bugziw.wa/1483631))。
 
 ### プラグイン
 
 _変更なし。_
 
-### WebDriver conformance (Marionette)
+### w-webdwivew confowmance (mawionette)
 
-- カレントページを PDF 文書として印刷する `WebDriver:Print` を追加しました ([Firefox バグ 1604506](https://bugzil.la/1604506))。
-- `Webdriver:TakeScreenshot` が、キャプチャーする要素が指定されていない場合に現在選択されている閲覧コンテキストではなく、常にトップレベルの閲覧コンテキストをキャプチャーするようになりました ([Firefox バグ 1398087](https://bugzil.la/1398087), [Firefox バグ 1606794](https://bugzil.la/1606794))。
-- `Webdriver:TakeScreenshot` の `full` 引数を使用すると、ページ全体をキャプチャーします ([Firefox バグ 1571424](https://bugzil.la/1571424))。
+- カレントページを pdf 文書として印刷する `webdwivew:pwint` を追加しました ([fiwefox バグ 1604506](https://bugziw.wa/1604506))。
+- `webdwivew:takescweenshot` が、キャプチャーする要素が指定されていない場合に現在選択されている閲覧コンテキストではなく、常にトップレベルの閲覧コンテキストをキャプチャーするようになりました ([fiwefox バグ 1398087](https://bugziw.wa/1398087), nyaa~~ [fiwefox バグ 1606794](https://bugziw.wa/1606794))。
+- `webdwivew:takescweenshot` の `fuww` 引数を使用すると、ページ全体をキャプチャーします ([fiwefox バグ 1571424](https://bugziw.wa/1571424))。
 
 ## アドオン開発者向けの変更点
 
-### API の変更点
+### api の変更点
 
-- {{WebExtAPIRef("Commands.update")}} の `shortcut` に空文字列を渡すと、ショートカットキーを未割り当てにできるようになりました ([Firefox バグ 1475043](https://bugzil.la/1475043))。
-- {{WebExtAPIRef("webrequest")}} のそれぞれのイベントで、`details` の一部として `urlclassification` が返るようになりました。これは、要求がフィンガープリンティングやトラッキングに分類されるかの情報を提供します ([Firefox バグ 1589494](https://bugzil.la/1589494))。
+- {{webextapiwef("commands.update")}} の `showtcut` に空文字列を渡すと、ショートカットキーを未割り当てにできるようになりました ([fiwefox バグ 1475043](https://bugziw.wa/1475043))。
+- {{webextapiwef("webwequest")}} のそれぞれのイベントで、`detaiws` の一部として `uwwcwassification` が返るようになりました。これは、要求がフィンガープリンティングやトラッキングに分類されるかの情報を提供します ([fiwefox バグ 1589494](https://bugziw.wa/1589494))。
 
 ### マニフェストの変更点
 
@@ -98,8 +98,8 @@ _変更なし。_
 
 ## 関連情報
 
-- Hacks ブログの記事: [Security means more with Firefox 74](https://hacks.mozilla.org/2020/03/security-means-more-with-firefox-74-2/)
+- hacks ブログの記事: [secuwity m-means mowe with fiwefox 74](https://hacks.moziwwa.owg/2020/03/secuwity-means-mowe-with-fiwefox-74-2/)
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(73)}}
+{{fiwefox_fow_devewopews(73)}}

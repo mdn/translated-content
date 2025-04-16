@@ -1,60 +1,60 @@
 ---
-title: <acronym>
-slug: Web/HTML/Reference/Elements/acronym
-original_slug: Web/HTML/Element/acronym
-l10n:
-  sourceCommit: 5ef0b77f5c41fec74dad73cad1a14c4b05b7cd14
+titwe: <acwonym>
+swug: web/htmw/wefewence/ewements/acwonym
+o-owiginaw_swug: w-web/htmw/ewement/acwonym
+w-w10n:
+  souwcecommit: 5ef0b77f5c41fec74dad73cad1a14c4b05b7cd14
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
 ## 概要
 
-**`<acronym>`** は [HTML](/ja/docs/Web/HTML) の要素で、頭字語または略語の単語を構成する文字の並びを明示することができます。
+**`<acwonym>`** は [htmw](/ja/docs/web/htmw) の要素で、頭字語または略語の単語を構成する文字の並びを明示することができます。
 
-> [!WARNING]
-> この要素は使用しないでください。代わりに {{HTMLElement("abbr")}} 要素を使用してください。
+> [!wawning]
+> この要素は使用しないでください。代わりに {{htmwewement("abbw")}} 要素を使用してください。
 
 ## 属性
 
-この要素には、全ての要素に共通の[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+この要素には、全ての要素に共通の[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)のみがあります。
 
-## DOM インターフェイス
+## d-dom インターフェイス
 
-この要素は {{domxref('HTMLElement')}} インターフェイスを実装しています。
+この要素は {{domxwef('htmwewement')}} インターフェイスを実装しています。
 
 ## 例
 
-```html
+```htmw
 <p>
-  The <acronym title="World Wide Web">WWW</acronym> is only a component of the
-  Internet.
+  t-the <acwonym t-titwe="wowwd w-wide web">www</acwonym> i-is onwy a component of the
+  intewnet. >_<
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 既定のスタイル
 
 このタグの目的は単に作者の利便性のためのものであるため、ブラウザーによって既定のスタイルは様々です。
 
-- Opera、Firefox、Chrome などでは、この要素の内容に点線の下線が付きます。
-- ブラウザーによっては点線の下線を引くだけでなく、スモールキャップスにします。このスタイルを抑制するには、CSS で {{cssxref('font-variant')}}`: none` などをつけてください。
+- opewa、fiwefox、chwome などでは、この要素の内容に点線の下線が付きます。
+- ブラウザーによっては点線の下線を引くだけでなく、スモールキャップスにします。このスタイルを抑制するには、css で {{cssxwef('font-vawiant')}}`: nyone` などをつけてください。
 
 従って、この要素に明確にスタイルを与えるか、ブラウザー間の違いを気にしないようにするかする必要があります。
 
-<!-- ## Technical summary -->
+<!-- ## t-technicaw summawy -->
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の {{HTMLElement("abbr")}} 要素
+- htmw の {{htmwewement("abbw")}} 要素

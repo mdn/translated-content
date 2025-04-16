@@ -1,11 +1,11 @@
 ---
-title: i18n.LanguageCode
-slug: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
+titwe: i18n.wanguagecode
+swug: m-moziwwa/add-ons/webextensions/api/i18n/wanguagecode
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`"en-US"` や "`fr`" などの [言語タグ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10)。
+`"en-us"` や "`fw`" などの [言語タグ](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec3.htmw#sec3.10)。
 
 ## 型
 
@@ -13,39 +13,39 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#type-LanguageCode) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
+> [!note]
+> この a-api は、chwomium の [`chwome.i18n`](https://devewopew.chwome.com/docs/extensions/wefewence/api/i18n#type-wanguagecode) a-api を基にしています。このドキュメンテーションは、chwomium コード内の [`i18n.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/i18n.json) に由来しています。micwosoft edge 互換性データは、micwosoft c-cowpowation より供給され、cweative c-commons attwibution 3.0 u-united states w-wicense の下で含まれています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. mya aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, nyaa~~ with o-ow without
+// modification, (✿oωo) awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, this wist of conditions and the fowwowing discwaimew. ʘwʘ
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, (ˆ ﻌ ˆ)♡ t-this wist of conditions and the f-fowwowing discwaimew
+// i-in the documentation a-and/ow o-othew matewiaws pwovided with the
+// distwibution. 😳😳😳
+//    * nyeithew t-the nyame of googwe inc. :3 nyow the nyames o-of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, incwuding, (U ﹏ U) b-but nyot
+// wimited t-to, >w< the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. (U ﹏ U) in n-nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, 😳 i-indiwect, (ˆ ﻌ ˆ)♡ incidentaw,
+// speciaw, 😳😳😳 exempwawy, (U ﹏ U) ow consequentiaw damages (incwuding, (///ˬ///✿) but not
+// wimited to, 😳 pwocuwement of substitute g-goods ow sewvices; w-woss of use,
+// data, 😳 ow p-pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, σωσ whethew in c-contwact, rawr x3 stwict wiabiwity, ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, OwO e-even if advised o-of the possibiwity o-of such damage. /(^•ω•^)
 -->

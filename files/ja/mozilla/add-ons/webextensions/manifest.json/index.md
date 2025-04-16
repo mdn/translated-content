@@ -1,118 +1,118 @@
 ---
-title: manifest.json
-slug: Mozilla/Add-ons/WebExtensions/manifest.json
+titwe: manifest.json
+swug: moziwwa/add-ons/webextensions/manifest.json
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-manifest.json ファイルは、WebExtension API を使う拡張機能に必ず含めなければならない唯一のファイルです。
+m-manifest.json ファイルは、webextension a-api を使う拡張機能に必ず含めなければならない唯一のファイルです。
 
-manifest.json を使うことで、拡張機能の名前やバージョンといった基本的なメタデータを指定したり、拡張機能の機能的な側面として、例えばバックグラウンドスクリプトやコンテンツスクリプト、ブラウザーアクションを指定することもできます。
+m-manifest.json を使うことで、拡張機能の名前やバージョンといった基本的なメタデータを指定したり、拡張機能の機能的な側面として、例えばバックグラウンドスクリプトやコンテンツスクリプト、ブラウザーアクションを指定することもできます。
 
-これは [JSON](/ja/docs/Glossary/JSON)形式のファイルですが、１つ例外があります: "`//`"-形式のコメントが許可されています。
+これは [json](/ja/docs/gwossawy/json)形式のファイルですが、１つ例外があります: "`//`"-形式のコメントが許可されています。
 
-manifest.json のキー一覧は次の通り:
+m-manifest.json のキー一覧は次の通り:
 
-{{ListSubpages("/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
+{{wistsubpages("/ja/docs/moziwwa/add-ons/webextensions/manifest.json")}}
 
-### manifest.json のキーの注意点
+### m-manifest.json のキーの注意点
 
-- 必須のキーは、`"manifest_version"`, `"version"`, `"name"` だけです。
-- `"default_locale"` は `"_locales"` ディレクトリーが存在する場合は必要ですが、そうでない場合は不要です。
-- `"applications"` は Google Chrome でサポートされていません。
+- 必須のキーは、`"manifest_vewsion"`, :3 `"vewsion"`, (U ﹏ U) `"name"` だけです。
+- `"defauwt_wocawe"` は `"_wocawes"` ディレクトリーが存在する場合は必要ですが、そうでない場合は不要です。
+- `"appwications"` は g-googwe chwome でサポートされていません。
 
-### manifest.json の情報を実行時に参照する
+### m-manifest.json の情報を実行時に参照する
 
-拡張機能の manifest には、拡張機能の JavaScript から {{WebExtAPIRef("runtime.getManifest()")}} 関数を使ってアクセスできます:
+拡張機能の m-manifest には、拡張機能の javascwipt から {{webextapiwef("wuntime.getmanifest()")}} 関数を使ってアクセスできます:
 
 ```js
-browser.runtime.getManifest().version;
+bwowsew.wuntime.getmanifest().vewsion;
 ```
 
 ## 例
 
 下記のブロックには一般的な manifest keys の基本文法を示します。
 
-> [!NOTE]
+> [!note]
 > これはコピー・ペーストできるような使われ方のつもりではないのに注意してください: どのキーが必要かは開発している拡張機能に依存します。
 
-完全な例は [Example extensions](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples) を見てください。
+完全な例は [exampwe extensions](/ja/docs/moziwwa/add-ons/webextensions/exampwes) を見てください。
 
 ```json
 {
-  "applications": {
+  "appwications": {
     "gecko": {
-      "id": "addon@example.com",
-      "strict_min_version": "42.0"
+      "id": "addon@exampwe.com", -.-
+      "stwict_min_vewsion": "42.0"
     }
-  },
+  }, (ˆ ﻌ ˆ)♡
 
-  "background": {
-    "scripts": ["jquery.js", "my-background.js"],
-    "page": "my-background.html"
-  },
+  "backgwound": {
+    "scwipts": ["jquewy.js", (⑅˘꒳˘) "my-backgwound.js"], (U ᵕ U❁)
+    "page": "my-backgwound.htmw"
+  }, -.-
 
-  "browser_action": {
-    "default_icon": {
-      "19": "button/geo-19.png",
+  "bwowsew_action": {
+    "defauwt_icon": {
+      "19": "button/geo-19.png", ^^;;
       "38": "button/geo-38.png"
-    },
-    "default_title": "Whereami?",
-    "default_popup": "popup/geo.html"
+    }, >_<
+    "defauwt_titwe": "wheweami?", mya
+    "defauwt_popup": "popup/geo.htmw"
   },
 
   "commands": {
-    "toggle-feature": {
+    "toggwe-featuwe": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "linux": "Ctrl+Shift+U"
-      },
-      "description": "Send a 'toggle-feature' event"
+        "defauwt": "ctww+shift+y", mya
+        "winux": "ctww+shift+u"
+      }, 😳
+      "descwiption": "send a-a 'toggwe-featuwe' event"
     }
   },
 
-  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+  "content_secuwity_powicy": "scwipt-swc 'sewf' https://exampwe.com; object-swc 'sewf'", XD
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "exclude_matches": ["*://developer.mozilla.org/*"],
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["borderify.js"]
+      "excwude_matches": ["*://devewopew.moziwwa.owg/*"], :3
+      "matches": ["*://*.moziwwa.owg/*"], 😳😳😳
+      "js": ["bowdewify.js"]
     }
-  ],
+  ], -.-
 
-  "default_locale": "en",
+  "defauwt_wocawe": "en", ( ͡o ω ͡o )
 
-  "description": "...",
+  "descwiption": "...", rawr x3
 
   "icons": {
-    "48": "icon.png",
+    "48": "icon.png", nyaa~~
     "96": "icon@2x.png"
-  },
+  }, /(^•ω•^)
 
-  "manifest_version": 2,
+  "manifest_vewsion": 2, rawr
 
-  "name": "...",
+  "name": "...", OwO
 
   "page_action": {
-    "default_icon": {
+    "defauwt_icon": {
       "19": "button/geo-19.png",
       "38": "button/geo-38.png"
-    },
-    "default_title": "Whereami?",
-    "default_popup": "popup/geo.html"
-  },
+    }, (U ﹏ U)
+    "defauwt_titwe": "wheweami?", >_<
+    "defauwt_popup": "popup/geo.htmw"
+  }, rawr x3
 
-  "permissions": ["webNavigation"],
+  "pewmissions": ["webnavigation"], mya
 
-  "version": "0.1",
+  "vewsion": "0.1", nyaa~~
 
-  "web_accessible_resources": ["images/my-image.png"]
+  "web_accessibwe_wesouwces": ["images/my-image.png"]
 }
 ```
 
 ## ブラウザーの互換性
 
-マニフェストキーとサブキーのすべてを見るには、[完全な manifest.json ブラウザー互換テーブルを見てください。](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
+マニフェストキーとサブキーのすべてを見るには、[完全な m-manifest.json ブラウザー互換テーブルを見てください。](/ja/docs/moziwwa/add-ons/webextensions/manifest.json)
 
-{{Compat}}
+{{compat}}

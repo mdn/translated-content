@@ -1,81 +1,81 @@
 ---
-title: bookmarks.getRecent()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
+titwe: bookmawks.getwecent()
+swug: moziwwa/add-ons/webextensions/api/bookmawks/getwecent
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.getRecent()`** は、最近に追加されたブックマークを指定した最大個数まで取得し、{{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} オブジェクトの配列としてコールバック関数に渡します。
+**`bookmawks.getwecent()`** は、最近に追加されたブックマークを指定した最大個数まで取得し、{{webextapiwef('bookmawks.bookmawktweenode', (U ﹏ U) 'bookmawktweenode')}} オブジェクトの配列としてコールバック関数に渡します。
 
 ## 構文
 
 ```js
-browser.bookmarks.getRecent(
-  numberOfItems, // 整数
-  callback, // 関数
+b-bwowsew.bookmawks.getwecent(
+  numbewofitems, // 整数
+  c-cawwback, >w< // 関数
 );
 ```
 
 ### 引数
 
-- `numberOfItems`
+- `numbewofitems`
   - : 取得する要素の最大個数を指定する整数です。最近追加された要素のうち、ここで指定した個数までが戻り値のリストに含まれます。
-- `callback`
+- `cawwback`
 
   - : リストが取得された際に実行される関数です。この関数には以下の引数が渡ります。
 
-    - `results`
-      - : 各要素が 1 つのブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの {{jsxref("array")}}
+    - `wesuwts`
+      - : 各要素が 1 つのブックマークノードを表す {{webextapiwef('bookmawks.bookmawktweenode')}} オブジェクトの {{jsxwef("awway")}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 使用例
 
-以下の例は、直近に追加されたブックマークの URL を出力するものです。
+以下の例は、直近に追加されたブックマークの uww を出力するものです。
 
 ```js
-function gotMostRecent(bookmarkItems) {
-  if (bookmarkItems.length) {
-    console.log(bookmarkItems[0].url);
+f-function g-gotmostwecent(bookmawkitems) {
+  i-if (bookmawkitems.wength) {
+    c-consowe.wog(bookmawkitems[0].uww);
   }
 }
 
-chrome.bookmarks.getRecent(1, gotMostRecent);
+c-chwome.bookmawks.getwecent(1, (U ﹏ U) g-gotmostwecent);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getRecent) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいて作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!note]
+> この api は chwomium の [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks#method-getwecent) api に基づいています。また、このドキュメントは [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) における chwomium のコードに基づいて作成されています。micwosoft edge の実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは cweative commons attwibution 3.0 u-united states wicense に従います。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. 😳 aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and binawy fowms, 😳😳😳 w-with ow without
+// m-modification, (U ﹏ U) awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above copywight
+// nyotice, (///ˬ///✿) this wist of conditions a-and the fowwowing discwaimew.
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, 😳 this wist o-of conditions and the fowwowing discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided with the
+// distwibution. 😳
+//    * nyeithew the name of googwe i-inc. σωσ nyow the nyames of its
+// c-contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten p-pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, OwO incwuding, /(^•ω•^) but nyot
+// wimited to, t-the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. 😳😳😳 in no event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ( ͡o ω ͡o ) indiwect, >_< incidentaw, >w<
+// s-speciaw, rawr e-exempwawy, ow consequentiaw d-damages (incwuding, 😳 b-but nyot
+// w-wimited to, >w< pwocuwement of substitute goods ow sewvices; woss o-of use, (⑅˘꒳˘)
+// data, OwO ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, whethew i-in contwact, (ꈍᴗꈍ) stwict w-wiabiwity, 😳 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// o-of this softwawe, 😳😳😳 even if advised of the possibiwity o-of such d-damage. mya
 -->

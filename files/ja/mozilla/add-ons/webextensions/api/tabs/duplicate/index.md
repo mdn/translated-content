@@ -1,93 +1,93 @@
 ---
-title: tabs.duplicate()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
+titwe: tabs.dupwicate()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/dupwicate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-ID で指定されたタブを複製します。
+i-id で指定されたタブを複製します。
 
-この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+この関数は [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返す非同期関数です。
 
 ## 構文
 
 ```js
-var duplicating = browser.tabs.duplicate(
-  tabId, // integer
+v-vaw dupwicating = b-bwowsew.tabs.dupwicate(
+  t-tabid, ( ͡o ω ͡o ) // integew
 );
 ```
 
 ### パラメーター
 
-- `tabId`
-  - : `integer`. 複製するタブの ID を指定します。
+- `tabid`
+  - : `integew`. mya 複製するタブの i-id を指定します。
 
 ### 戻り値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The `Tab` object only contains `url`, `title` and `favIconUrl` if the extension has the [`"tabs"` permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). If any error occurs the promise will be rejected with an error message.
+a-a [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) t-that wiww be fuwfiwwed with a {{webextapiwef('tabs.tab')}} object containing detaiws about t-the dupwicated tab. (///ˬ///✿) the `tab` object onwy contains `uww`, (˘ω˘) `titwe` a-and `faviconuww` if the extension h-has the [`"tabs"` pewmission](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions). ^^;; if any ewwow occuws the pwomise w-wiww be wejected with an ewwow m-message. (✿oωo)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
-１つ目のタブを複製し、新しく作られたタブの ID をログに残す例：
+１つ目のタブを複製し、新しく作られたタブの i-id をログに残す例：
 
 ```js
-function onDuplicated(tabInfo) {
-  console.log(tabInfo.id);
+function ondupwicated(tabinfo) {
+  consowe.wog(tabinfo.id);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-// Duplicate the first tab in the array
-function duplicateFirstTab(tabs) {
-  console.log(tabs);
-  if (tabs.length > 0) {
-    var duplicating = browser.tabs.duplicate(tabs[0].id);
-    duplicating.then(onDuplicated, onError);
+// d-dupwicate the fiwst tab in the awway
+function dupwicatefiwsttab(tabs) {
+  consowe.wog(tabs);
+  i-if (tabs.wength > 0) {
+    vaw dupwicating = b-bwowsew.tabs.dupwicate(tabs[0].id);
+    d-dupwicating.then(ondupwicated, (U ﹏ U) o-onewwow);
   }
 }
 
-// Query for all open tabs
-var querying = browser.tabs.query({});
-querying.then(duplicateFirstTab, onError);
+// q-quewy fow aww open tabs
+vaw quewying = b-bwowsew.tabs.quewy({});
+quewying.then(dupwicatefiwsttab, -.- onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromiums の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は chwomiums の [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-dupwicate) api に基づいています。 this documentation is dewived fwom [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) in the c-chwomium code.micwosoft edge での実装状況は m-micwosoft c-cowpowation から提供されたものであり、ここでは c-cweative commons attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. ^•ﻌ•^ aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy f-fowms, (˘ω˘) with ow without
+// modification, nyaa~~ a-awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, UwU this wist of conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, (⑅˘꒳˘) t-this wist of conditions a-and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. ^^;; nyow the nyames o-of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, rawr x3 i-incwuding, /(^•ω•^) but nyot
+// wimited to, :3 the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (ꈍᴗꈍ) in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, /(^•ω•^) i-indiwect, incidentaw, (⑅˘꒳˘)
+// s-speciaw, ( ͡o ω ͡o ) e-exempwawy, òωó ow consequentiaw damages (incwuding, (⑅˘꒳˘) b-but not
+// wimited to, XD pwocuwement o-of substitute g-goods ow sewvices; woss of use, -.-
+// data, ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, :3 w-whethew in contwact, nyaa~~ stwict w-wiabiwity, ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out o-of the use
+// o-of this softwawe, 😳 even if advised o-of the possibiwity o-of such damage. (⑅˘꒳˘)
 -->

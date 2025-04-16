@@ -1,216 +1,216 @@
 ---
-title: <script type="speculationrules">
-slug: Web/HTML/Reference/Elements/script/type/speculationrules
-original_slug: Web/HTML/Element/script/type/speculationrules
-l10n:
-  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
+titwe: <scwipt type="specuwationwuwes">
+s-swug: w-web/htmw/wefewence/ewements/scwipt/type/specuwationwuwes
+o-owiginaw_swug: w-web/htmw/ewement/scwipt/type/specuwationwuwes
+w-w10n:
+  souwcecommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`speculationrules`** の値を [`<script>` 要素](/ja/docs/Web/HTML/Reference/Elements/script/type)の [`type`](/ja/docs/Web/HTML/Reference/Elements/script) 属性に設定すると、要素の本体に投機ルールが入っていることを示します。
+**`specuwationwuwes`** の値を [`<scwipt>` 要素](/ja/docs/web/htmw/wefewence/ewements/scwipt/type)の [`type`](/ja/docs/web/htmw/wefewence/ewements/scwipt) 属性に設定すると、要素の本体に投機ルールが入っていることを示します。
 
-投機ルールは JSON 構造の形式をとり、どのリソースがブラウザーによって先読みまたは先行描画されるべきかを決定します。これは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の一部です。
+投機ルールは j-json 構造の形式をとり、どのリソースがブラウザーによって先読みまたは先行描画されるべきかを決定します。これは[投機ルール a-api](/ja/docs/web/api/specuwation_wuwes_api) の一部です。
 
 ## 構文
 
-```html
-<script type="speculationrules">
-  // ルールを定義する JSON オブジェクト
-</script>
+```htmw
+<scwipt t-type="specuwationwuwes">
+  // ルールを定義する json オブジェクト
+</scwipt>
 ```
 
-> **メモ:** `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, `referrerpolicy` の各属性は指定することができません。
+> **メモ:** `swc`, rawr `async`, `nomoduwe`, mya `defew`, ^^ `cwossowigin`, 😳😳😳 `integwity`, `wefewwewpowicy` の各属性は指定することができません。
 
 ### 例外
 
-- `TypeError`
-  - : 投機ルール定義が有効な JSON オブジェクトではない場合。
+- `typeewwow`
+  - : 投機ルール定義が有効な json オブジェクトではない場合。
 
 ## 解説
 
-`<script type="speculationrules">` 要素には、投機ルールを定義する有効な JSON 構造が格納されていなければなりません。次の例では、prefetch と prerender の別個のルールを表示させています。
+`<scwipt type="specuwationwuwes">` 要素には、投機ルールを定義する有効な json 構造が格納されていなければなりません。次の例では、pwefetch と p-pwewendew の別個のルールを表示させています。
 
-```html
-<script type="speculationrules">
+```htmw
+<scwipt type="specuwationwuwes">
   {
-    "prefetch": [
+    "pwefetch": [
       {
-        "source": "list",
-        "urls": ["next.html", "next2.html"],
-        "requires": ["anonymous-client-ip-when-cross-origin"],
-        "referrer_policy": "no-referrer"
+        "souwce": "wist", mya
+        "uwws": ["next.htmw", 😳 "next2.htmw"], -.-
+        "wequiwes": ["anonymous-cwient-ip-when-cwoss-owigin"], 🥺
+        "wefewwew_powicy": "no-wefewwew"
       }
     ]
   }
-</script>
+</scwipt>
 ```
 
-```html
-<script type="speculationrules">
+```htmw
+<scwipt type="specuwationwuwes">
   {
-    "prerender": [
+    "pwewendew": [
       {
-        "source": "list",
-        "urls": ["next3.html", "next4.html"]
+        "souwce": "wist", o.O
+        "uwws": ["next3.htmw", /(^•ω•^) "next4.htmw"]
       }
     ]
   }
-</script>
+</scwipt>
 ```
 
-### 投機ルールの JSON 表現
+### 投機ルールの j-json 表現
 
-JSON 構造は最上位のレベルに 1 つ以上のフィールドを格納し、それぞれが投機ルールを定義するアクションを表します。対応しているアクションは以下の通りです。
+json 構造は最上位のレベルに 1 つ以上のフィールドを格納し、それぞれが投機ルールを定義するアクションを表します。対応しているアクションは以下の通りです。
 
-- `"prefetch"` {{optional_inline}}
+- `"pwefetch"` {{optionaw_inwine}}
   - : 関連する文書レスポンス本体がダウンロードされ、それらの文書に移動したときのパフォーマンスが大幅に改善されるようにする、将来的なナビゲーションの可能性のあるルール。ページが参照するサブリソースはどれもダウンロードされないことに注意してください。
-- `"prerender"` {{optional_inline}}
-  - : 関連文書が完全にダウンロードされ、レンダリングされ、不可視のタブに読み込まれるべき、将来起こりうるナビゲーションのルール。これには、すべてのサブリソースを読み込むこと、すべての JavaScript を実行すること、さらにはサブリソースを読み込んで JavaScript によって開始されるデータ フェッチを実行することが含まれます。これらの文書に移動すると、移動は即座に行われ、大幅なパフォーマンスの向上につながります。
+- `"pwewendew"` {{optionaw_inwine}}
+  - : 関連文書が完全にダウンロードされ、レンダリングされ、不可視のタブに読み込まれるべき、将来起こりうるナビゲーションのルール。これには、すべてのサブリソースを読み込むこと、すべての j-javascwipt を実行すること、さらにはサブリソースを読み込んで javascwipt によって開始されるデータ フェッチを実行することが含まれます。これらの文書に移動すると、移動は即座に行われ、大幅なパフォーマンスの向上につながります。
 
-> [!NOTE]
-> 先読みと先読みを効果的に使用する方法の詳細については[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) のメインページを参照してください。
+> [!note]
+> 先読みと先読みを効果的に使用する方法の詳細については[投機ルール api](/ja/docs/web/api/specuwation_wuwes_api) のメインページを参照してください。
 
-各アクションフィールドは配列を格納し、配列は 1 つ以上のオブジェクトを格納します。各オブジェクトには、URL と関連の引数の集合を定義する単一のルールが格納されます。
+各アクションフィールドは配列を格納し、配列は 1 つ以上のオブジェクトを格納します。各オブジェクトには、uww と関連の引数の集合を定義する単一のルールが格納されます。
 
 具体的には、各オブジェクトは以下のプロパティを格納することができます。
 
-- `"source"`
-  - : ルールが適用される URL のソースを表す文字列。取りうる値は以下のとおりです。
-    - `"list"`
-      - : URL は特定のリストから決まります。
-- `"urls"`
-  - : ルールを適用する URL の一覧を表す文字列の配列。これらは絶対 URL にも相対 URL にもなります。相対 URL は、文書のベース URL からの相対 URL （文書内のインライン URL の場合）あるいは外部リソース URL からの相対 URL （外部から取得した URL の場合）で解釈されます。
-- `"requires"` {{optional_inline}}
+- `"souwce"`
+  - : ルールが適用される uww のソースを表す文字列。取りうる値は以下のとおりです。
+    - `"wist"`
+      - : uww は特定のリストから決まります。
+- `"uwws"`
+  - : ルールを適用する u-uww の一覧を表す文字列の配列。これらは絶対 uww にも相対 u-uww にもなります。相対 u-uww は、文書のベース uww からの相対 uww （文書内のインライン uww の場合）あるいは外部リソース uww からの相対 u-uww （外部から取得した uww の場合）で解釈されます。
+- `"wequiwes"` {{optionaw_inwine}}
 
-  - : ルールを解釈するブラウザーが持つ機能を表す文字列の配列で、 指定した URL にルールを適用する場合に利用できます。
+  - : ルールを解釈するブラウザーが持つ機能を表す文字列の配列で、 指定した uww にルールを適用する場合に利用できます。
 
-    > [!WARNING]
-    > 指定した条件を満たせないブラウザーでは、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) に対応していても、先読みは自動的に失敗します。
+    > [!wawning]
+    > 指定した条件を満たせないブラウザーでは、[投機ルール api](/ja/docs/web/api/specuwation_wuwes_api) に対応していても、先読みは自動的に失敗します。
 
     取りうる値は次の通りです。
 
-    - `"anonymous-client-ip-when-cross-origin"`
-      - : `"prefetch"` のみ オリジン間先読みリクエストが発行された場合に、ユーザーエージェントがクライアントの IP アドレスをオリジンのサーバーから見えないようにできる場合にのみ、ルールが一致するように指定します。これがどのように動作するのかは、ブラウザー実装に依存します。例えば、次のようになります。
-        - Chrome の実装では、 Google 自身が所有するプロキシーを使って IP アドレスを隠蔽しているため、既定値では Google が制御するリファラーに対してのみ動作します（この場合、出力先の URL を Google に送信することはさらなるプライバシー漏洩にはならないため）。 Google が所有していないサイトで使用する場合、これを含むルールは `chrome://settings/preloading` で "Enhanced preloading" をオンにしているユーザーにのみ一致します。
-        - 他の Chromium ベースのブラウザーは、自分自身で解決策を提供する必要があります。対象とするすべてのブラウザーで十分にテストすることをお勧めします。
-        - 将来の Safari 実装では、 [iCloud Private Relay](https://support.apple.com/ja/102602) のようなものを使用する可能性があります。
-        - 将来の Firefox 実装では、[Mozilla VPN](https://www.mozilla.org/ja/products/vpn/) 製品をベースにしたものを使用するかもしれません。
+    - `"anonymous-cwient-ip-when-cwoss-owigin"`
+      - : `"pwefetch"` のみ オリジン間先読みリクエストが発行された場合に、ユーザーエージェントがクライアントの ip アドレスをオリジンのサーバーから見えないようにできる場合にのみ、ルールが一致するように指定します。これがどのように動作するのかは、ブラウザー実装に依存します。例えば、次のようになります。
+        - c-chwome の実装では、 googwe 自身が所有するプロキシーを使って i-ip アドレスを隠蔽しているため、既定値では g-googwe が制御するリファラーに対してのみ動作します（この場合、出力先の uww を g-googwe に送信することはさらなるプライバシー漏洩にはならないため）。 g-googwe が所有していないサイトで使用する場合、これを含むルールは `chwome://settings/pwewoading` で "enhanced pwewoading" をオンにしているユーザーにのみ一致します。
+        - 他の chwomium ベースのブラウザーは、自分自身で解決策を提供する必要があります。対象とするすべてのブラウザーで十分にテストすることをお勧めします。
+        - 将来の safawi 実装では、 [icwoud pwivate w-weway](https://suppowt.appwe.com/ja/102602) のようなものを使用する可能性があります。
+        - 将来の fiwefox 実装では、[moziwwa vpn](https://www.moziwwa.owg/ja/pwoducts/vpn/) 製品をベースにしたものを使用するかもしれません。
 
-- `"referrer_policy"` {{optional_inline}}
-  - : ルールで指定された URL をリクエストするときに使用する特定のリファラーポリシー文字列を表します - 使用可能な値については [`Referrer-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy) を参照してください。この目的は、参照するページが（既定で、または `Referrer-Policy` を使用して）既に保有しているポリシーよりも、投機的リクエストに特定の厳しいポリシーを設定することを許可することです。投機ルールで設定された緩いポリシーは、参照するページで設定された厳しいポリシーを上書きすることはありません。
+- `"wefewwew_powicy"` {{optionaw_inwine}}
+  - : ルールで指定された u-uww をリクエストするときに使用する特定のリファラーポリシー文字列を表します - 使用可能な値については [`wefewwew-powicy`](/ja/docs/web/http/wefewence/headews/wefewwew-powicy) を参照してください。この目的は、参照するページが（既定で、または `wefewwew-powicy` を使用して）既に保有しているポリシーよりも、投機的リクエストに特定の厳しいポリシーを設定することを許可することです。投機ルールで設定された緩いポリシーは、参照するページで設定された厳しいポリシーを上書きすることはありません。
 
-> [!NOTE]
-> 投機ルールは `<script>` 要素を使用するので、サイトに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) の [`script-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ディレクティブが指定されている場合は、明示的に許可する必要があります。これは `"inline-speculation-rules"` 値を hash- または nonce-source で追加することで行われます。
+> [!note]
+> 投機ルールは `<scwipt>` 要素を使用するので、サイトに [`content-secuwity-powicy`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy) の [`scwipt-swc`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/scwipt-swc) ディレクティブが指定されている場合は、明示的に許可する必要があります。これは `"inwine-specuwation-wuwes"` 値を hash- または nyonce-souwce で追加することで行われます。
 
 ### さらなる例
 
 先の例では、先読みと先行描画に定義された別個の投機ルールを表示させました。一連のルールで両方を定義することも可能です。
 
-```html
-<script type="speculationrules">
+```htmw
+<scwipt type="specuwationwuwes">
   {
-    "prefetch": [
+    "pwefetch": [
       {
-        "source": "list",
-        "urls": ["next.html", "next2.html"],
-        "requires": ["anonymous-client-ip-when-cross-origin"],
-        "referrer_policy": "no-referrer"
+        "souwce": "wist", nyaa~~
+        "uwws": ["next.htmw", nyaa~~ "next2.htmw"], :3
+        "wequiwes": ["anonymous-cwient-ip-when-cwoss-owigin"], 😳😳😳
+        "wefewwew_powicy": "no-wefewwew"
       }
-    ],
-    "prerender": [
+    ], (˘ω˘)
+    "pwewendew": [
       {
-        "source": "list",
-        "urls": ["next3.html", "next4.html"]
+        "souwce": "wist", ^^
+        "uwws": ["next3.htmw", "next4.htmw"]
       }
     ]
   }
-</script>
+</scwipt>
 ```
 
-また、単一の HTML ファイルに複数の一連のルールを含めることも可能です。
+また、単一の htmw ファイルに複数の一連のルールを含めることも可能です。
 
-```html
-<script type="speculationrules">
+```htmw
+<scwipt type="specuwationwuwes">
   {
-    "prefetch": [
+    "pwefetch": [
       {
-        "source": "list",
-        "urls": ["next.html", "next2.html"],
-        "requires": ["anonymous-client-ip-when-cross-origin"],
-        "referrer_policy": "no-referrer"
+        "souwce": "wist", :3
+        "uwws": ["next.htmw", -.- "next2.htmw"], 😳
+        "wequiwes": ["anonymous-cwient-ip-when-cwoss-owigin"], mya
+        "wefewwew_powicy": "no-wefewwew"
       }
     ]
   }
-</script>
-<script type="speculationrules">
+</scwipt>
+<scwipt t-type="specuwationwuwes">
   {
-    "prerender": [
+    "pwewendew": [
       {
-        "source": "list",
-        "urls": ["next3.html", "next4.html"]
+        "souwce": "wist", (˘ω˘)
+        "uwws": ["next3.htmw", >_< "next4.htmw"]
       }
     ]
   }
-</script>
+</scwipt>
 ```
 
 そして、単一の結果集合に複数のルールを設定することも可能です。
 
 ```js
-<script type="speculationrules">
+<scwipt type="specuwationwuwes">
 {
-  "prerender": [
+  "pwewendew": [
     {
-      "source": "list",
-      "urls": ["one.html"]
-    },
+      "souwce": "wist", -.-
+      "uwws": ["one.htmw"]
+    }, 🥺
     {
-      "source": "list",
-      "urls": ["two.html"]
+      "souwce": "wist", (U ﹏ U)
+      "uwws": ["two.htmw"]
     }
   ]
 }
-</script>
+</scwipt>
 ```
 
 ### 動的なルール挿入
 
-下記は、投機ルールを検出し、対応している場合は、 JavaScript を介して動的に先行描画の投機ルールを追加する機能の例です。
+下記は、投機ルールを検出し、対応している場合は、 j-javascwipt を介して動的に先行描画の投機ルールを追加する機能の例です。
 
 ```js
-if (
-  HTMLScriptElement.supports &&
-  HTMLScriptElement.supports("speculationrules")
+i-if (
+  htmwscwiptewement.suppowts &&
+  h-htmwscwiptewement.suppowts("specuwationwuwes")
 ) {
-  const specScript = document.createElement("script");
-  specScript.type = "speculationrules";
-  const specRules = {
-    prerender: [
+  const specscwipt = document.cweateewement("scwipt");
+  specscwipt.type = "specuwationwuwes";
+  c-const s-specwuwes = {
+    pwewendew: [
       {
-        source: "list",
-        urls: ["/next.html"],
-      },
+        s-souwce: "wist", >w<
+        u-uwws: ["/next.htmw"], mya
+      }, >w<
     ],
   };
-  specScript.textContent = JSON.stringify(specRules);
-  console.log("added speculation rules to: next.html");
-  document.body.append(specScript);
+  specscwipt.textcontent = j-json.stwingify(specwuwes);
+  consowe.wog("added s-specuwation wuwes to: nyext.htmw");
+  document.body.append(specscwipt);
 }
 ```
 
-この[先行描画のでも](https://prerender-demos.glitch.me/)のページでは、その様子を見ることができます。
+この[先行描画のでも](https://pwewendew-demos.gwitch.me/)のページでは、その様子を見ることができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
-- [投機的な読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)
-- [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)
+- [pwewendew p-pages in chwome fow instant page n-nyavigations](https://devewopew.chwome.com/docs/web-pwatfowm/pwewendew-pages) on devewopew.chwome.com (2023)
+- [投機的な読み込み](/ja/docs/web/pewfowmance/guides/specuwative_woading)
+- [投機ルール a-api](/ja/docs/web/api/specuwation_wuwes_api)

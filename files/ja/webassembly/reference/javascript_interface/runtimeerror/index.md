@@ -1,70 +1,70 @@
 ---
-title: WebAssembly.RuntimeError
-slug: WebAssembly/Reference/JavaScript_interface/RuntimeError
-original_slug: WebAssembly/JavaScript_interface/RuntimeError
+titwe: webassembwy.wuntimeewwow
+swug: webassembwy/wefewence/javascwipt_intewface/wuntimeewwow
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/wuntimeewwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.RuntimeError`** オブジェクトは、 WebAssembly が[トラップ](https://webassembly.org/docs/semantics/#traps)を指定するたびに例外として発生するエラー型です。
+**`webassembwy.wuntimeewwow`** オブジェクトは、 w-webassembwy が[トラップ](https://webassembwy.owg/docs/semantics/#twaps)を指定するたびに例外として発生するエラー型です。
 
 ## コンストラクター
 
-- [`WebAssembly.RuntimeError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError/RuntimeError)
-  - : 新しい `WebAssembly.RuntimeError` オブジェクトを生成します。
+- [`webassembwy.wuntimeewwow()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/wuntimeewwow/wuntimeewwow)
+  - : 新しい `webassembwy.wuntimeewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "WebAssembly.RuntimeError.prototype.message")}}
-  - : エラーメッセージ。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.name", "WebAssembly.RuntimeError.prototype.name")}}
-  - : エラー名。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "WebAssembly.RuntimeError.prototype.fileName")}}
-  - : このエラーを発生させたファイルのパス。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "WebAssembly.RuntimeError.prototype.lineNumber")}}
-  - : このエラーを発生させたファイルの行番号。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "WebAssembly.RuntimeError.prototype.columnNumber")}}
-  - : このエラーが発生した行の列番号。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "WebAssembly.RuntimeError.prototype.stack")}}
-  - : スタックトレース。 {{jsxref("Error")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.message", (ˆ ﻌ ˆ)♡ "webassembwy.wuntimeewwow.pwototype.message")}}
+  - : エラーメッセージ。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.name", (⑅˘꒳˘) "webassembwy.wuntimeewwow.pwototype.name")}}
+  - : エラー名。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.fiwename", (U ᵕ U❁) "webassembwy.wuntimeewwow.pwototype.fiwename")}}
+  - : このエラーを発生させたファイルのパス。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.winenumbew", -.- "webassembwy.wuntimeewwow.pwototype.winenumbew")}}
+  - : このエラーを発生させたファイルの行番号。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", ^^;; "webassembwy.wuntimeewwow.pwototype.cowumnnumbew")}}
+  - : このエラーが発生した行の列番号。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.stack", >_< "webassembwy.wuntimeewwow.pwototype.stack")}}
+  - : スタックトレース。 {{jsxwef("ewwow")}} から継承しています。
 
 ## インスタンスメソッド
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.RuntimeError.prototype.toSource()")}}
-  - : 同じエラーを評価できるコードを返します。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toString()")}}
-  - : 指定された `Error` オブジェクトを表す文字列を返します。{{jsxref("Error")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.tosouwce", mya "webassembwy.wuntimeewwow.pwototype.tosouwce()")}}
+  - : 同じエラーを評価できるコードを返します。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.tostwing", mya "webassembwy.wuntimeewwow.pwototype.tostwing()")}}
+  - : 指定された `ewwow` オブジェクトを表す文字列を返します。{{jsxwef("ewwow")}} から継承しています。
 
 ## 例
 
-### 新しい RuntimeError のインスタンスの作成
+### 新しい w-wuntimeewwow のインスタンスの作成
 
-以下のスニペットでは、新しい `RuntimeError` インスタンスを生成して、詳細をコンソールに記録します。
+以下のスニペットでは、新しい `wuntimeewwow` インスタンスを生成して、詳細をコンソールに記録します。
 
 ```js
-try {
-  throw new WebAssembly.RuntimeError("Hello", "someFile", 10);
-} catch (e) {
-  console.log(e instanceof WebAssembly.RuntimeError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "RuntimeError"
-  console.log(e.fileName); // "someFile"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // コードが実行されていた位置を返す
+t-twy {
+  t-thwow nyew w-webassembwy.wuntimeewwow("hewwo", 😳 "somefiwe", 10);
+} c-catch (e) {
+  consowe.wog(e instanceof webassembwy.wuntimeewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "wuntimeewwow"
+  consowe.wog(e.fiwename); // "somefiwe"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // コードが実行されていた位置を返す
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy j-javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

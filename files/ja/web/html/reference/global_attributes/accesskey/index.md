@@ -1,93 +1,93 @@
 ---
-title: accesskey
-slug: Web/HTML/Reference/Global_attributes/accesskey
-original_slug: Web/HTML/Global_attributes/accesskey
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: accesskey
+swug: web/htmw/wefewence/gwobaw_attwibutes/accesskey
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/accesskey
+w-w10n:
+  s-souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`accesskey`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、現在の要素のショートカットキーを生成するためのヒントを与えます。この属性は空白で区切った表示可能な文字（キーボードから生成できるアクセント付き文字やその他の文字を含む）から成ります。
+**`accesskey`** [グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)は、現在の要素のショートカットキーを生成するためのヒントを与えます。この属性は空白で区切った表示可能な文字（キーボードから生成できるアクセント付き文字やその他の文字を含む）から成ります。
 
-{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: accesskey", 😳 "tabbed-showtew")}}
 
-```html interactive-example
-<p>If you need to relax, press the <b>S</b>tress reliever!</p>
-<button accesskey="s">Stress reliever</button>
+```htmw i-intewactive-exampwe
+<p>if y-you nyeed to wewax, XD pwess the <b>s</b>twess wewievew!</p>
+<button accesskey="s">stwess w-wewievew</button>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 b {
-  text-decoration: underline;
+  text-decowation: undewwine;
 }
 ```
 
-> [!NOTE]
-> WHATWG の仕様書では、空白区切りの複数の文字を指定することができ、ブラウザーは対応する最初の一つを使用するとしています。しかし、これは多くのブラウザーでは動作しません。 IE や Edge は、他のコマンドと競合がない問題なく使用することができる最初の 1 つを使用します。
+> [!note]
+> n-nyaniwg の仕様書では、空白区切りの複数の文字を指定することができ、ブラウザーは対応する最初の一つを使用するとしています。しかし、これは多くのブラウザーでは動作しません。 ie や edge は、他のコマンドと競合がない問題なく使用することができる最初の 1 つを使用します。
 
 アクセスキーを有効にする方法は、ブラウザーやプラットフォームによって異なります。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th></th>
-      <th>Windows</th>
-      <th>Linux</th>
-      <th>Mac</th>
-    </tr>
-    <tr>
-      <th>Firefox</th>
-      <td colspan="2">
-        <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
+      <th>windows</th>
+      <th>winux</th>
+      <th>mac</th>
+    </tw>
+    <tw>
+      <th>fiwefox</th>
+      <td cowspan="2">
+        <kbd>awt</kbd> + <kbd>shift</kbd> + <kbd><em>key</em></kbd>
       </td>
       <td>
-        Firefox 57 以降では <kbd>Control</kbd> + <kbd>Option</kbd> +
-        <kbd><em>key</em></kbd> または <kbd>Control</kbd> + <kbd>Alt</kbd> +
+        fiwefox 57 以降では <kbd>contwow</kbd> + <kbd>option</kbd> +
+        <kbd><em>key</em></kbd> または <kbd>contwow</kbd> + <kbd>awt</kbd> +
         <kbd><em>key</em></kbd
-        ><br />Firefox 14 以降では <kbd>Control</kbd> + <kbd>Alt</kbd> +
+        ><bw />fiwefox 14 以降では <kbd>contwow</kbd> + <kbd>awt</kbd> +
         <kbd><em>key</em></kbd
-        ><br />Firefox 13 以前では <kbd>Control</kbd> + <kbd><em>key</em></kbd>
+        ><bw />fiwefox 13 以前では <kbd>contwow</kbd> + <kbd><em>key</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Edge</th>
-      <td>N/A</td>
-      <td rowspan="3">
-        <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd
-        ><br /><kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>Shift</kbd> +
+    </tw>
+    <tw>
+      <th>edge</th>
+      <td>n/a</td>
+      <td wowspan="3">
+        <kbd>contwow</kbd> + <kbd>option</kbd> + <kbd><em>key</em></kbd
+        ><bw /><kbd>contwow</kbd> + <kbd>option</kbd> + <kbd>shift</kbd> +
         <kbd><em>key</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Google Chrome</th>
+    </tw>
+    <tw>
+      <th>googwe c-chwome</th>
       <td>
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Safari</th>
-      <td colspan="2">N/A</td>
-    </tr>
-    <tr>
-      <th>Opera 15+</th>
-      <td colspan="2">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+    </tw>
+    <tw>
+      <th>safawi</th>
+      <td cowspan="2">n/a</td>
+    </tw>
+    <tw>
+      <th>opewa 15+</th>
+      <td c-cowspan="2">
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
       <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+        <kbd>contwow</kbd> + <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Opera 12</th>
-      <td colspan="3">
-        <kbd>Shift</kbd> + <kbd>Esc</kbd> で、accesskey
+    </tw>
+    <tw>
+      <th>opewa 12</th>
+      <td c-cowspan="3">
+        <kbd>shift</kbd> + <kbd>esc</kbd> で、accesskey
         でアクセスできるコンテンツの一覧を開きます。そして
         <kbd><em>key</em></kbd> を押すと、該当項目を選択できます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## アクセシビリティの考慮
 
@@ -100,19 +100,19 @@ b {
 
 これらの問題のため、一般用途のウェブサイトやウェブアプリの多くでは、 `accesskey` を使用しないよう一般的にアドバイスされています。
 
-- [WebAIM: Keyboard Accessibility - Accesskey](https://webaim.org/techniques/keyboard/accesskey#spec)
+- [webaim: keyboawd accessibiwity - accesskey](https://webaim.owg/techniques/keyboawd/accesskey#spec)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLElement.accessKey")}}
-- {{domxref("HTMLElement.accessKeyLabel")}}
-- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
-- [`aria-keyshortcuts`](https://www.w3.org/TR/wai-aria-1.1/#aria-keyshortcuts)
+- {{domxwef("htmwewement.accesskey")}}
+- {{domxwef("htmwewement.accesskeywabew")}}
+- すべての[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)
+- [`awia-keyshowtcuts`](https://www.w3.owg/tw/wai-awia-1.1/#awia-keyshowtcuts)

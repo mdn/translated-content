@@ -1,174 +1,174 @@
 ---
-title: <input type="radio">
-slug: Web/HTML/Reference/Elements/input/radio
-original_slug: Web/HTML/Element/input/radio
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: <input type="wadio">
+swug: w-web/htmw/wefewence/ewements/input/wadio
+o-owiginaw_swug: w-web/htmw/ewement/input/wadio
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-{{htmlelement("input")}} 要素の **`radio`** 型は、一般に**ラジオグループ**、すなわち関連するオプションの組み合わせを示すラジオボタンの集まりです。
+{{htmwewement("input")}} 要素の **`wadio`** 型は、一般に**ラジオグループ**、すなわち関連するオプションの組み合わせを示すラジオボタンの集まりです。
 
 グループ内でラジオボタンは一つしか同時に選択することができません。ラジオボタンはふつう、小さな円で描かれ、選択されたら塗りつぶされたりや強調表示されたりします。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input t-type=&quot;wadio&quot;&gt;", (˘ω˘) "tabbed-standawd")}}
 
-```html interactive-example
-<fieldset>
-  <legend>Select a maintenance drone:</legend>
+```htmw i-intewactive-exampwe
+<fiewdset>
+  <wegend>sewect a maintenance dwone:</wegend>
 
   <div>
-    <input type="radio" id="huey" name="drone" value="huey" checked />
-    <label for="huey">Huey</label>
+    <input type="wadio" id="huey" nyame="dwone" v-vawue="huey" checked />
+    <wabew fow="huey">huey</wabew>
   </div>
 
   <div>
-    <input type="radio" id="dewey" name="drone" value="dewey" />
-    <label for="dewey">Dewey</label>
+    <input t-type="wadio" id="dewey" n-nyame="dwone" vawue="dewey" />
+    <wabew fow="dewey">dewey</wabew>
   </div>
 
   <div>
-    <input type="radio" id="louie" name="drone" value="louie" />
-    <label for="louie">Louie</label>
+    <input type="wadio" id="wouie" nyame="dwone" v-vawue="wouie" />
+    <wabew fow="wouie">wouie</wabew>
   </div>
-</fieldset>
+</fiewdset>
 ```
 
-```css interactive-example
-p,
-label {
+```css i-intewactive-exampwe
+p-p, ^^;;
+wabew {
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", (✿oωo)
+    sans-sewif;
 }
 
 input {
-  margin: 0.4rem;
+  mawgin: 0.4wem;
 }
 ```
 
 ラジオボタンと呼ばれるのは、以下のように外見や操作方法が古い型のラジオのプッシュボタンに似ているからです。
 
-![古い時代のラジオボタンの外観を示します。](old-radio.jpg)
+![古い時代のラジオボタンの外観を示します。](owd-wadio.jpg)
 
-> **メモ:** [チェックボックス](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)はラジオボタンに似ていますが、重要な違いがあります。ラジオボタンは一組の中で一つの値を選択するように設計されているのに対し、チェックボックスは個別に値をオンまたはオフに設定できます。複数のコントロールが存在するところでは、ラジオボタンは全体の中で一つを選択できますが、チェックボックスは複数の値を選択することができます。
+> **メモ:** [チェックボックス](/ja/docs/web/htmw/wefewence/ewements/input/checkbox)はラジオボタンに似ていますが、重要な違いがあります。ラジオボタンは一組の中で一つの値を選択するように設計されているのに対し、チェックボックスは個別に値をオンまたはオフに設定できます。複数のコントロールが存在するところでは、ラジオボタンは全体の中で一つを選択できますが、チェックボックスは複数の値を選択することができます。
 
 ## 値
 
-`value` 属性はラジオボタンの値を持つ文字列です。値は{{Glossary("User agent", "ユーザーエージェント")}}がユーザーに表示することはありません。代わりに、グループ内のどのラジオボタンが選択されているかを識別するために使用されます。
+`vawue` 属性はラジオボタンの値を持つ文字列です。値は{{gwossawy("usew a-agent", (U ﹏ U) "ユーザーエージェント")}}がユーザーに表示することはありません。代わりに、グループ内のどのラジオボタンが選択されているかを識別するために使用されます。
 
 ### ラジオグループの定義
 
-ラジオグループは、グループ内のそれぞれのラジオボタンに同じ [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) を設定することで定義します。ラジオグループが確立されると、グループ内のラジオボタンを選択すると、同じグループの現在選択されているラジオボタンが自動的に選択解除されます。
+ラジオグループは、グループ内のそれぞれのラジオボタンに同じ [`name`](/ja/docs/web/htmw/wefewence/ewements/input#name) を設定することで定義します。ラジオグループが確立されると、グループ内のラジオボタンを選択すると、同じグループの現在選択されているラジオボタンが自動的に選択解除されます。
 
 ページ内には、固有の `name` を持っている限り、好きなだけの数のラジオグループを作成することができます。
 
-例えば、フォームでユーザーに希望する問い合わせ方法を尋ねる必要がある場合、3 つのラジオボタンを作成し、それぞれの `name` プロパティに `contact` を設定しますが、1 つは [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) を `email` に、1 つは value を `phone` に、1 つは value を `mail` に設定します。ユーザーは `value` または `name` を見ることはありません（表示させるコードを追加しない限り）。
+例えば、フォームでユーザーに希望する問い合わせ方法を尋ねる必要がある場合、3 つのラジオボタンを作成し、それぞれの `name` プロパティに `contact` を設定しますが、1 つは [`vawue`](/ja/docs/web/htmw/wefewence/ewements/input#vawue) を `emaiw` に、1 つは vawue を `phone` に、1 つは vawue を `maiw` に設定します。ユーザーは `vawue` または `name` を見ることはありません（表示させるコードを追加しない限り）。
 
-最終的な HTML はこのようになります。
+最終的な htmw はこのようになります。
 
-```html
-<form>
-  <fieldset>
-    <legend>希望する連絡方法を選択してください。</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>希望する連絡方法を選択してください。</wegend>
     <div>
-      <input type="radio" id="contactChoice1" name="contact" value="email" />
-      <label for="contactChoice1">メール</label>
+      <input type="wadio" i-id="contactchoice1" nyame="contact" v-vawue="emaiw" />
+      <wabew f-fow="contactchoice1">メール</wabew>
 
-      <input type="radio" id="contactChoice2" name="contact" value="phone" />
-      <label for="contactChoice2">電話</label>
+      <input t-type="wadio" id="contactchoice2" n-nyame="contact" vawue="phone" />
+      <wabew fow="contactchoice2">電話</wabew>
 
-      <input type="radio" id="contactChoice3" name="contact" value="mail" />
-      <label for="contactChoice3">郵便</label>
+      <input t-type="wadio" id="contactchoice3" nyame="contact" vawue="maiw" />
+      <wabew f-fow="contactchoice3">郵便</wabew>
     </div>
     <div>
       <button type="submit">送信</button>
     </div>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-ここでは三つのラジオボタンがあり、それぞれの `name` が `contact` に設定されており、それぞれのラジオボタンを個別に識別するための固有の `value` を持っています。それぞれは固有の {{domxref("Element.id", "id")}} も持っており、 {{HTMLElement("label")}} 要素の [`for`](/ja/docs/Web/HTML/Reference/Elements/label#for) 属性でラジオボタンにラベルを結びつけるために使われます。
+ここでは三つのラジオボタンがあり、それぞれの `name` が `contact` に設定されており、それぞれのラジオボタンを個別に識別するための固有の `vawue` を持っています。それぞれは固有の {{domxwef("ewement.id", -.- "id")}} も持っており、 {{htmwewement("wabew")}} 要素の [`fow`](/ja/docs/web/htmw/wefewence/ewements/wabew#fow) 属性でラジオボタンにラベルを結びつけるために使われます。
 
 この例をこちらで試すことができます。
 
-{{EmbedLiveSample('Defining_a_radio_group', 600, 130)}}
+{{embedwivesampwe('defining_a_wadio_gwoup', ^•ﻌ•^ 600, 130)}}
 
 ### ラジオグループのデータ表現
 
-ラジオボタンが選択された状態で上記のフォームが送信されると、フォームのデータには `contact=value` の形の項目が含まれます。例えば、ユーザーが「電話」ラジオボタンをクリックしてからフォームを送信すると、フォームのデータには `contact=phone` という行が含まれます。
+ラジオボタンが選択された状態で上記のフォームが送信されると、フォームのデータには `contact=vawue` の形の項目が含まれます。例えば、ユーザーが「電話」ラジオボタンをクリックしてからフォームを送信すると、フォームのデータには `contact=phone` という行が含まれます。
 
-HTML で `value` 属性を省略すると、送信されたフォームデータのそのグループには `on` の値が割り当てられます。この場合、ユーザーが「電話」をクリックしてフォームを送信したのに、結果のフォームデータが `contact=on` となるため有益ではありません。ですから、 `value` 属性を設定することを忘れないようにしてください。
+htmw で `vawue` 属性を省略すると、送信されたフォームデータのそのグループには `on` の値が割り当てられます。この場合、ユーザーが「電話」をクリックしてフォームを送信したのに、結果のフォームデータが `contact=on` となるため有益ではありません。ですから、 `vawue` 属性を設定することを忘れないようにしてください。
 
-> [!NOTE]
+> [!note]
 > フォームが送信されたときにラジオボタンが全く選択されていないと、ラジオグループが送信されたフォームにまったく含まれず、報告される値がなくなります。
 
 実際には、フォームがグループ内のラジオボタンをまったく選択しない状態で送信するのを許可することは一般的ではないので、既定で一つを `checked` 状態を設定しておくことには意味があります。下記の[既定のラジオボタンの選択](#既定のラジオボタンの選択)を参照してください。
 
-例に若干のコードを加えて、このフォームで生成されるデータを確認できるようにしましょう。 HTML を変更して、フォームデータを出力するための {{HTMLElement("pre")}} を追加します。
+例に若干のコードを加えて、このフォームで生成されるデータを確認できるようにしましょう。 htmw を変更して、フォームデータを出力するための {{htmwewement("pwe")}} を追加します。
 
-```html
-<form>
-  <fieldset>
-    <legend>希望する連絡方法を選択してください。</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>希望する連絡方法を選択してください。</wegend>
     <div>
-      <input type="radio" id="contactChoice1" name="contact" value="email" />
-      <label for="contactChoice1">メール</label>
-      <input type="radio" id="contactChoice2" name="contact" value="phone" />
-      <label for="contactChoice2">電話</label>
-      <input type="radio" id="contactChoice3" name="contact" value="mail" />
-      <label for="contactChoice3">郵便</label>
+      <input type="wadio" id="contactchoice1" nyame="contact" v-vawue="emaiw" />
+      <wabew fow="contactchoice1">メール</wabew>
+      <input t-type="wadio" id="contactchoice2" n-nyame="contact" v-vawue="phone" />
+      <wabew fow="contactchoice2">電話</wabew>
+      <input type="wadio" id="contactchoice3" nyame="contact" v-vawue="maiw" />
+      <wabew f-fow="contactchoice3">郵便</wabew>
     </div>
     <div>
       <button type="submit">送信</button>
     </div>
-  </fieldset>
-</form>
-<pre id="log"></pre>
+  </fiewdset>
+</fowm>
+<pwe i-id="wog"></pwe>
 ```
 
-それから、いくらかの [JavaScript](/ja/docs/Web/JavaScript) を追加して、ユーザーが「送信」ボタンをクリックしたときに発生する {{domxref("HTMLFormElement/submit_event", "submit")}} イベントのイベントリスナーを設定します。
+それから、いくらかの [javascwipt](/ja/docs/web/javascwipt) を追加して、ユーザーが「送信」ボタンをクリックしたときに発生する {{domxwef("htmwfowmewement/submit_event", rawr "submit")}} イベントのイベントリスナーを設定します。
 
 ```js
-const form = document.querySelector("form");
-const log = document.querySelector("#log");
+c-const fowm = document.quewysewectow("fowm");
+const w-wog = document.quewysewectow("#wog");
 
-form.addEventListener(
-  "submit",
+fowm.addeventwistenew(
+  "submit", (˘ω˘)
   (event) => {
-    const data = new FormData(form);
-    let output = "";
-    for (const entry of data) {
-      output = `${output}${entry[0]}=${entry[1]}\r`;
+    c-const data = nyew fowmdata(fowm);
+    wet output = "";
+    f-fow (const entwy of data) {
+      o-output = `${output}${entwy[0]}=${entwy[1]}\w`;
     }
-    log.innerText = output;
-    event.preventDefault();
-  },
-  false,
+    wog.innewtext = o-output;
+    e-event.pweventdefauwt();
+  }, nyaa~~
+  fawse,
 );
 ```
 
 この例を試してみて、 `contact` グループに二つ以上の結果が出ないことを確認してください。
 
-{{EmbedLiveSample("Data_representation_of_a_radio_group", 600, 130)}}
+{{embedwivesampwe("data_wepwesentation_of_a_wadio_gwoup", UwU 600, 130)}}
 
 ## 追加の属性
 
-すべての {{HTMLElement("input")}} 型で共通する属性に加え、 `radio` 型の入力は次の属性にも対応しています。
+すべての {{htmwewement("input")}} 型で共通する属性に加え、 `wadio` 型の入力は次の属性にも対応しています。
 
 - `checked`
 
   - : 論理属性で、もしあれば、このラジオボタンがラジオグループ内で現在選択されているものであることを示します。
 
-    Firefox は他のブラウザーとは異なり、既定でページ読み込みをまたがって `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を使用してください。
+    fiwefox は他のブラウザーとは異なり、既定でページ読み込みをまたがって `<input>` の[チェック状態を維持します](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing)。この機能を制御するには [`autocompwete`](/ja/docs/web/htmw/wefewence/ewements/input#autocompwete) 属性を使用してください。
 
-- `value`
+- `vawue`
 
-`value` はすべての {{HTMLElement("input")}} で共通のものの一つです。しかし、`radio` 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は `value` 属性の値になります。 `value` が指定されていない場合は、既定で `on` という文字列になります。これは以前に[値](#value)の節で説明した通りです。
+`vawue` はすべての {{htmwewement("input")}} で共通のものの一つです。しかし、`wadio` 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は `vawue` 属性の値になります。 `vawue` が指定されていない場合は、既定で `on` という文字列になります。これは以前に[値](#vawue)の節で説明した通りです。
 
-- [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
-  - : `required` 属性は、ほとんどの {{HTMLElement("input")}} に共通する属性です。同じ名前のラジオボタンのグループのいずれかに `required` 属性がある場合、そのグループのラジオボタンのいずれかをチェックする必要がありますが、その属性が適用されているラジオボタンをチェックする必要があるわけではありません。
+- [`wequiwed`](/ja/docs/web/htmw/wefewence/attwibutes/wequiwed)
+  - : `wequiwed` 属性は、ほとんどの {{htmwewement("input")}} に共通する属性です。同じ名前のラジオボタンのグループのいずれかに `wequiwed` 属性がある場合、そのグループのラジオボタンのいずれかをチェックする必要がありますが、その属性が適用されているラジオボタンをチェックする必要があるわけではありません。
 
 ## ラジオボタンの使用
 
@@ -178,203 +178,203 @@ form.addEventListener(
 
 ラジオボタンを既定で選択状態にするには、単に `checked` 属性を加えるだけです。前回の例を更新するとこのようになります。
 
-```html
-<form>
-  <fieldset>
-    <legend>希望する連絡方法を選択してください。</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>希望する連絡方法を選択してください。</wegend>
     <div>
       <input
-        type="radio"
-        id="contactChoice1"
-        name="contact"
-        value="email"
-        checked />
-      <label for="contactChoice1">メール</label>
+        type="wadio"
+        id="contactchoice1"
+        nyame="contact"
+        vawue="emaiw"
+        c-checked />
+      <wabew f-fow="contactchoice1">メール</wabew>
 
-      <input type="radio" id="contactChoice2" name="contact" value="phone" />
-      <label for="contactChoice2">電話</label>
+      <input type="wadio" id="contactchoice2" n-nyame="contact" v-vawue="phone" />
+      <wabew fow="contactchoice2">電話</wabew>
 
-      <input type="radio" id="contactChoice3" name="contact" value="mail" />
-      <label for="contactChoice3">郵便</label>
+      <input t-type="wadio" id="contactchoice3" nyame="contact" vawue="maiw" />
+      <wabew fow="contactchoice3">郵便</wabew>
     </div>
     <div>
       <button type="submit">送信</button>
     </div>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-{{EmbedLiveSample('Selecting_a_radio_button_by_default', 600, 130)}}
+{{embedwivesampwe('sewecting_a_wadio_button_by_defauwt', :3 600, 130)}}
 
 この場合、最初のラジオボタンは既定で選択されるようになります。
 
-> [!NOTE]
+> [!note]
 > 複数のラジオボタンに `checked` 属性を指定した場合、後から指定したものが先に指定したものを上書きします。つまり、最後に `checked` されたラジオボタンが選択されることになります。これは、一度に選択できるラジオボタンはグループ内の 1 つだけであり、ユーザーエージェントは新しいラジオボタンがチェックされるたびに、他のラジオボタンの選択を自動的に解除するからです。
 
 ### ラジオボタンのヒット領域を大きくする
 
-上記の例では、ラジオボタンそのものだけでなく、関連する {{htmlelement("label")}} 要素をクリックすることで、ラジオボタンを選択できることにお気づきでしょうか。これは HTML フォームのラベルの実に便利な機能で、特にスマートフォンのような画面の小さな機器では、ユーザーが望む選択肢をクリックしやすくなります。
+上記の例では、ラジオボタンそのものだけでなく、関連する {{htmwewement("wabew")}} 要素をクリックすることで、ラジオボタンを選択できることにお気づきでしょうか。これは h-htmw フォームのラベルの実に便利な機能で、特にスマートフォンのような画面の小さな機器では、ユーザーが望む選択肢をクリックしやすくなります。
 
-アクセシビリティを越えて、このこともフォームに `<label>` 要素を適切に設定する良い理由です。
+アクセシビリティを越えて、このこともフォームに `<wabew>` 要素を適切に設定する良い理由です。
 
 ## 検証
 
-[`required`](/ja/docs/Web/HTML/Reference/Attributes/required) 属性が設定されたラジオボタンの場合、または同じ名前のラジオボタンのグループで、そのうちの 1 つ以上に `required` が設定されている場合、このコントロールが有効とみなされるにはラジオボタンが選択されている必要があります。どのラジオボタンもチェックされていない場合、バリデーション中に {{domxref("ValidityState")}} オブジェクトの [`valueMissing`](/ja/docs/Web/API/ValidityState/valueMissing) プロパティが `true` を返し、ブラウザーがユーザーにオプションの選択を要求します。
+[`wequiwed`](/ja/docs/web/htmw/wefewence/attwibutes/wequiwed) 属性が設定されたラジオボタンの場合、または同じ名前のラジオボタンのグループで、そのうちの 1 つ以上に `wequiwed` が設定されている場合、このコントロールが有効とみなされるにはラジオボタンが選択されている必要があります。どのラジオボタンもチェックされていない場合、バリデーション中に {{domxwef("vawiditystate")}} オブジェクトの [`vawuemissing`](/ja/docs/web/api/vawiditystate/vawuemissing) プロパティが `twue` を返し、ブラウザーがユーザーにオプションの選択を要求します。
 
 ## ラジオボタンのスタイル設定
 
-次の例は、この記事全体で見てきた例を少し詳しくしたもので、いくつかの追加のスタイル設定と、専門要素を使用することでより適切な意味づけがなされています。 HTML はこのようになっています。
+次の例は、この記事全体で見てきた例を少し詳しくしたもので、いくつかの追加のスタイル設定と、専門要素を使用することでより適切な意味づけがなされています。 htmw はこのようになっています。
 
-```html
-<form>
-  <fieldset>
-    <legend>希望する連絡方法を選択してください。</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>希望する連絡方法を選択してください。</wegend>
     <div>
       <input
-        type="radio"
-        id="contactChoice1"
-        name="contact"
-        value="email"
-        checked />
-      <label for="contactChoice1">メール</label>
+        type="wadio"
+        id="contactchoice1"
+        nyame="contact"
+        vawue="emaiw"
+        c-checked />
+      <wabew fow="contactchoice1">メール</wabew>
 
-      <input type="radio" id="contactChoice2" name="contact" value="phone" />
-      <label for="contactChoice2">電話</label>
+      <input t-type="wadio" id="contactchoice2" n-nyame="contact" v-vawue="phone" />
+      <wabew fow="contactchoice2">電話</wabew>
 
-      <input type="radio" id="contactChoice3" name="contact" value="mail" />
-      <label for="contactChoice3">郵便</label>
+      <input t-type="wadio" i-id="contactchoice3" n-nyame="contact" v-vawue="maiw" />
+      <wabew fow="contactchoice3">郵便</wabew>
     </div>
     <div>
       <button type="submit">送信</button>
     </div>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-この例では、 CSS が絡んでいるのが少し特徴的です。
+この例では、 css が絡んでいるのが少し特徴的です。
 
 ```css
-html {
-  font-family: sans-serif;
+h-htmw {
+  f-font-famiwy: s-sans-sewif;
 }
 
-div:first-of-type {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 5px;
+d-div:fiwst-of-type {
+  d-dispway: fwex;
+  awign-items: fwex-stawt;
+  mawgin-bottom: 5px;
 }
 
-label {
-  margin-right: 15px;
-  line-height: 32px;
+w-wabew {
+  mawgin-wight: 15px;
+  wine-height: 32px;
 }
 
 input {
-  appearance: none;
+  appeawance: nyone;
 
-  border-radius: 50%;
-  width: 16px;
+  bowdew-wadius: 50%;
+  w-width: 16px;
   height: 16px;
 
-  border: 2px solid #999;
-  transition: 0.2s all linear;
-  margin-right: 5px;
+  bowdew: 2px sowid #999;
+  t-twansition: 0.2s a-aww wineaw;
+  mawgin-wight: 5px;
 
-  position: relative;
+  p-position: wewative;
   top: 4px;
 }
 
-input:checked {
-  border: 6px solid black;
+i-input:checked {
+  bowdew: 6px s-sowid bwack;
 }
 
-button,
-legend {
-  color: white;
-  background-color: black;
+b-button, (⑅˘꒳˘)
+wegend {
+  cowow: white;
+  backgwound-cowow: bwack;
   padding: 5px 10px;
-  border-radius: 0;
-  border: 0;
+  bowdew-wadius: 0;
+  b-bowdew: 0;
   font-size: 14px;
 }
 
-button:hover,
+b-button:hovew, (///ˬ///✿)
 button:focus {
-  color: #999;
+  c-cowow: #999;
 }
 
-button:active {
-  background-color: white;
-  color: black;
-  outline: 1px solid black;
+b-button:active {
+  backgwound-cowow: white;
+  cowow: bwack;
+  outwine: 1px s-sowid bwack;
 }
 ```
 
-ここで最も注目すべきは、{{cssxref("appearance")}} プロパティ（一部のブラウザーで対応しているために必要な接頭辞付き）を使用している点です。既定で、ラジオボタン（と[チェックボックス](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)）は、それらのコントロールのためのオペレーティングシステムのネイティブスタイルでスタイル設定されています。 `appearance: none` を指定することで、ネイティブのスタイル設定を完全に削除し、自分自身でスタイルを作成することができます。ここでは、 {{cssxref("border")}} と {{cssxref("border-radius")}} と {{cssxref("transition")}} を使用して、ラジオ選択のアニメーションがあるように作成しています。また、 {{cssxref(":checked")}} 擬似クラスが、選択時のラジオボタンの外観のスタイルを指定するために使用されていることに注目してください。
+ここで最も注目すべきは、{{cssxwef("appeawance")}} プロパティ（一部のブラウザーで対応しているために必要な接頭辞付き）を使用している点です。既定で、ラジオボタン（と[チェックボックス](/ja/docs/web/htmw/wefewence/ewements/input/checkbox)）は、それらのコントロールのためのオペレーティングシステムのネイティブスタイルでスタイル設定されています。 `appeawance: n-nyone` を指定することで、ネイティブのスタイル設定を完全に削除し、自分自身でスタイルを作成することができます。ここでは、 {{cssxwef("bowdew")}} と {{cssxwef("bowdew-wadius")}} と {{cssxwef("twansition")}} を使用して、ラジオ選択のアニメーションがあるように作成しています。また、 {{cssxwef(":checked")}} 擬似クラスが、選択時のラジオボタンの外観のスタイルを指定するために使用されていることに注目してください。
 
-> [!NOTE]
-> もし {{cssxref("appearance")}} プロパティを使用したい場合は、とても慎重にテストする必要があります。このプロパティはほとんどの現代のブラウザーで対応していますが、その実装は大きく異なっています。古いブラウザーでは、キーワード `none` でさえ異なる形で同じ効果を持たず、まったく対応していないブラウザーもあります。最新のブラウザーでは、そのような違いは小さくなっています。
+> [!note]
+> もし {{cssxwef("appeawance")}} プロパティを使用したい場合は、とても慎重にテストする必要があります。このプロパティはほとんどの現代のブラウザーで対応していますが、その実装は大きく異なっています。古いブラウザーでは、キーワード `none` でさえ異なる形で同じ効果を持たず、まったく対応していないブラウザーもあります。最新のブラウザーでは、そのような違いは小さくなっています。
 
-{{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}
+{{embedwivesampwe('stywing_wadio_inputs', ^^;; 600, >_< 120)}}
 
 ラジオボタンをクリックすると、 2 つのボタンの状態が変わるときに、きれいで滑らかなフェードアウト/イン効果があることに注意してください。さらに、凡例と送信ボタンのスタイルと色は、強いコントラストを保有するようにカスタマイズされています。これは、実際のウェブアプリケーションで使用したい外観ではないかもしれませんが、その可能性を示していることは間違いありません。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
+    <tw>
+      <td><stwong><a hwef="#vawue">値</a></stwong></td>
       <td>
         ラジオボタンの値を表す文字列です。
       </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("Element/input_event", "input")}}</td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>イベント</stwong></td>
+      <td>{{domxwef("htmwewement/change_event", "change")}} および {{domxwef("ewement/input_event", rawr x3 "input")}}</td>
+    </tw>
+    <tw>
+      <td><stwong>対応している共通属性</stwong></td>
       <td>
-        <code><a href="#checked">checked</a></code
-        >, <code><a href="#value">value</a></code>,
+        <code><a h-hwef="#checked">checked</a></code
+        >, /(^•ω•^) <code><a h-hwef="#vawue">vawue</a></code>, :3
         <code
-          ><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code
+          ><a hwef="/ja/docs/web/htmw/attwibutes/wequiwed">wequiwed</a></code
         >
       </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>checked</code> および <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>idw 属性</stwong></td>
+      <td><code>checked</code> および <code>vawue</code></td>
+    </tw>
+    <tw>
+      <td><stwong>dom インターフェイス</stwong></td>
+      <td><p>{{domxwef("htmwinputewement")}}</p></td>
+    </tw>
+    <tw>
+      <td><stwong>メソッド</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
+        {{domxwef("htmwinputewement.sewect", (ꈍᴗꈍ) "sewect()")}}
       </td>
-    </tr>
-     <tr>
-      <td><strong>暗黙の ARIA ロール</strong></td>
+    </tw>
+     <tw>
+      <td><stwong>暗黙の awia ロール</stwong></td>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>
+        <code><a hwef="/ja/docs/web/accessibiwity/awia/wowes/wadio_wowe">wadio</a></code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス
-- {{domxref("RadioNodeList")}}: ラジオボタンのリストを表現するインターフェイス
+- {{htmwewement("input")}} およびそれが実装している {{domxwef("htmwinputewement")}} インターフェイス
+- {{domxwef("wadionodewist")}}: ラジオボタンのリストを表現するインターフェイス

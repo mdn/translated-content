@@ -1,60 +1,60 @@
 ---
-title: commands
-slug: Mozilla/Add-ons/WebExtensions/API/commands
+titwe: commands
+swug: moziwwa/add-ons/webextensions/api/commands
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-[`commands` manifest.json キー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)を使って、登録したコマンドをユーザーが実行するのをリッスンします。
+[`commands` m-manifest.json キー](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/commands)を使って、登録したコマンドをユーザーが実行するのをリッスンします。
 
 ## 型
 
-- {{WebExtAPIRef("commands.Command")}}
-  - : コマンドを表す型。これは [manifest.json の `commands` キー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)のコマンドで指定された情報が入っています。
+- {{webextapiwef("commands.command")}}
+  - : コマンドを表す型。これは [manifest.json の `commands` キー](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/commands)のコマンドで指定された情報が入っています。
 
 ## 関数
 
-- {{WebExtAPIRef("commands.getAll")}}
+- {{webextapiwef("commands.getaww")}}
   - : 拡張機能用のすべての登録済みコマンドを取得します。
 
 ## イベント
 
-- {{WebExtAPIRef("commands.onCommand")}}
+- {{webextapiwef("commands.oncommand")}}
   - : 関連付けされたキーボードショートカットを使ってコマンドが実行された時に発火します。
 
 ## ブラウザーの互換性
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この a-api は c-chwomium の [`chwome.commands`](https://devewopew.chwome.com/docs/extensions/wefewence/api/commands) a-api に基づいています。micwosoft edge での実装状況は m-micwosoft c-cowpowation から提供されたものであり、ここでは c-cweative commons a-attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. 😳😳😳 aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and b-binawy fowms, OwO with ow without
+// modification, (U ﹏ U) awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// notice, >w< t-this wist of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, 😳 t-this wist of c-conditions and the fowwowing discwaimew
+// in the d-documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. (ˆ ﻌ ˆ)♡
+//    * nyeithew the nyame of googwe inc. nyow the nyames of its
+// contwibutows may be u-used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by t-the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (U ﹏ U) incwuding, (///ˬ///✿) b-but nyot
+// wimited to, 😳 the i-impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. 😳 in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, σωσ indiwect, rawr x3 incidentaw, OwO
+// speciaw, exempwawy, /(^•ω•^) ow consequentiaw d-damages (incwuding, b-but nyot
+// wimited to, 😳😳😳 pwocuwement o-of substitute g-goods ow s-sewvices; woss of use, ( ͡o ω ͡o )
+// data, >_< ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, >w< whethew in contwact, rawr stwict w-wiabiwity, 😳 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// o-of this softwawe, >w< e-even if advised o-of the possibiwity o-of such damage. (⑅˘꒳˘)
 -->

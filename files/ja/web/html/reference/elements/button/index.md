@@ -1,118 +1,118 @@
 ---
-title: "<button>: ボタン要素"
-slug: Web/HTML/Reference/Elements/button
-original_slug: Web/HTML/Element/button
-l10n:
-  sourceCommit: cc032eaae8b14c1253216ded69c076242c4f757c
+titwe: "<button>: ボタン要素"
+swug: web/htmw/wefewence/ewements/button
+owiginaw_swug: w-web/htmw/ewement/button
+w-w10n:
+  souwcecommit: c-cc032eaae8b14c1253216ded69c076242c4f757c
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<button>`** は [HTML](/ja/docs/Web/HTML) の要素で、マウス、キーボード、指、音声コマンド、その他の支援技術で起動することができる操作可能要素です。起動すると、[フォーム](/ja/docs/Learn_web_development/Extensions/Forms)を送信したりダイアログを開いたりといった操作を実行します。
+**`<button>`** は [htmw](/ja/docs/web/htmw) の要素で、マウス、キーボード、指、音声コマンド、その他の支援技術で起動することができる操作可能要素です。起動すると、[フォーム](/ja/docs/weawn_web_devewopment/extensions/fowms)を送信したりダイアログを開いたりといった操作を実行します。
 
-既定では、HTML のボタンは{{Glossary("user agent", "ユーザーエージェント")}}が実行されているホストのプラットフォームのスタイルと似ていますが、 [CSS](/ja/docs/Web/CSS) を使用してボタンの外見を変更することができます。
+既定では、htmw のボタンは{{gwossawy("usew a-agent", ( ͡o ω ͡o ) "ユーザーエージェント")}}が実行されているホストのプラットフォームのスタイルと似ていますが、 [css](/ja/docs/web/css) を使用してボタンの外見を変更することができます。
 
-{{InteractiveExample("HTML Demo: &lt;button&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;button&gt;", >_< "tabbed-showtew")}}
 
-```html interactive-example
-<button class="favorite styled" type="button">Add to favorites</button>
+```htmw i-intewactive-exampwe
+<button c-cwass="favowite s-stywed" type="button">add to favowites</button>
 ```
 
-```css interactive-example
-.styled {
-  border: 0;
-  line-height: 2.5;
+```css intewactive-exampwe
+.stywed {
+  bowdew: 0;
+  w-wine-height: 2.5;
   padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  border-radius: 10px;
-  background-color: rgba(220, 0, 0, 1);
-  background-image: linear-gradient(
-    to top left,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 30%,
-    rgba(0, 0, 0, 0)
+  font-size: 1wem;
+  t-text-awign: centew;
+  cowow: #fff;
+  t-text-shadow: 1px 1px 1px #000;
+  bowdew-wadius: 10px;
+  backgwound-cowow: wgba(220, 0, >w< 0, 1);
+  b-backgwound-image: wineaw-gwadient(
+    t-to t-top weft, rawr
+    wgba(0, 😳 0, 0, 0.2),
+    wgba(0, >w< 0, 0, 0.2) 30%, (⑅˘꒳˘)
+    wgba(0, OwO 0, 0, 0)
   );
   box-shadow:
-    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    inset 2px 2px 3px w-wgba(255, (ꈍᴗꈍ) 255, 255, 0.6), 😳
+    inset -2px -2px 3px wgba(0, 😳😳😳 0, 0, 0.6);
 }
 
-.styled:hover {
-  background-color: rgba(255, 0, 0, 1);
+.stywed:hovew {
+  backgwound-cowow: wgba(255, mya 0, 0, 1);
 }
 
-.styled:active {
-  box-shadow:
-    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+.stywed:active {
+  b-box-shadow:
+    inset -2px -2px 3px w-wgba(255, mya 255, 255, 0.6), (⑅˘꒳˘)
+    i-inset 2px 2px 3px w-wgba(0, (U ﹏ U) 0, 0, 0.6);
 }
 ```
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を持ちます。
+この要素は[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)を持ちます。
 
 - `autofocus`
-  - : 論理属性で、ページ読み込み時にこのボタンが入力[フォーカス](/ja/docs/Web/API/HTMLElement/focus)を持つべきであることを指定します。**文書中の要素一つだけにこの属性を設定することができます。**
-- `disabled`
+  - : 論理属性で、ページ読み込み時にこのボタンが入力[フォーカス](/ja/docs/web/api/htmwewement/focus)を持つべきであることを指定します。**文書中の要素一つだけにこの属性を設定することができます。**
+- `disabwed`
 
   - : 論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。
 
-- `form`
+- `fowm`
 
-  - : ボタンに関連付けられた {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同一文書内の `<form>` 要素の `id` 属性と同一でなければなりません。（この属性を設定しなかった場合、 `<button>` は祖先に `<form>` 要素が存在すれば、その要素に関連付けられます。）
+  - : ボタンに関連付けられた {{htmwewement("fowm")}} 要素（_フォームオーナー_）です。この属性の値は、同一文書内の `<fowm>` 要素の `id` 属性と同一でなければなりません。（この属性を設定しなかった場合、 `<button>` は祖先に `<fowm>` 要素が存在すれば、その要素に関連付けられます。）
 
-    この属性によって `<button>` 要素が `<form>` の中になくても、同一文書内にある任意の `<form>` 要素に関連付けることが可能になりました。また、祖先の `<form>` 要素を上書きすることができます。
+    この属性によって `<button>` 要素が `<fowm>` の中になくても、同一文書内にある任意の `<fowm>` 要素に関連付けることが可能になりました。また、祖先の `<fowm>` 要素を上書きすることができます。
 
-- `formaction`
-  - : このボタンによって送信された情報を処理する URL です。このボタンのフォームオーナーの [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性よりも優先されます。フォームオーナーがない場合は何もしません。
-- `formenctype`
+- `fowmaction`
+  - : このボタンによって送信された情報を処理する u-uww です。このボタンのフォームオーナーの [`action`](/ja/docs/web/htmw/wefewence/ewements/fowm#action) 属性よりも優先されます。フォームオーナーがない場合は何もしません。
+- `fowmenctype`
 
-  - : このボタンが送信ボタンである場合（`<form>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合）、送信されるフォームデータのエンコード方法を指定します。指定可能な値は以下の通りです。
+  - : このボタンが送信ボタンである場合（`<fowm>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合）、送信されるフォームデータのエンコード方法を指定します。指定可能な値は以下の通りです。
 
-    - `application/x-www-form-urlencoded`: この属性が使用されなかった場合の既定値。
-    - `multipart/form-data`: {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性に `file` を指定して使用する場合に使用します。
-    - `text/plain`: デバッグ目的で指定されるものです。実際のフォーム送信で使用すべきではありません。
+    - `appwication/x-www-fowm-uwwencoded`: この属性が使用されなかった場合の既定値。
+    - `muwtipawt/fowm-data`: {{htmwewement("input")}} 要素の [`type`](/ja/docs/web/htmw/wefewence/ewements/input#type) 属性に `fiwe` を指定して使用する場合に使用します。
+    - `text/pwain`: デバッグ目的で指定されるものです。実際のフォーム送信で使用すべきではありません。
 
-    この属性が指定された場合、そのボタンのフォームオーナーの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性より優先されます。
+    この属性が指定された場合、そのボタンのフォームオーナーの [`enctype`](/ja/docs/web/htmw/wefewence/ewements/fowm#enctype) 属性より優先されます。
 
-- `formmethod`
+- `fowmmethod`
 
-  - : このボタンが送信ボタンである場合（`<form>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合）、この属性はこのフォームを送信するのに使用される [HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)を指定します。指定可能な値は以下の通りです。
+  - : このボタンが送信ボタンである場合（`<fowm>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合）、この属性はこのフォームを送信するのに使用される [http メソッド](/ja/docs/web/http/wefewence/methods)を指定します。指定可能な値は以下の通りです。
 
-    - `post`: フォームのデータは、サーバーへ送信する際に HTTP リクエストの本文に含められます。フォームにパスワードなどの公開するべきではない情報が含まれている場合は、このメソッドを使用してください。
-    - `get`: フォームのデータは、フォームの `action` の URL に、セパレーターとして '?' を使用して追加され、その結果となる URL をサーバーへ送信します。検索フォームのように、まったく[副作用がない](/ja/docs/Glossary/Idempotent)場合にのみ、このメソッドを使用してください。
-    - `dialog`: このメソッドは、ボタンが関連付けられた[ダイアログ](/ja/docs/Web/HTML/Reference/Elements/dialog)を閉じ、フォームデータをまったく送信しないことを示すために使用します。
+    - `post`: フォームのデータは、サーバーへ送信する際に http リクエストの本文に含められます。フォームにパスワードなどの公開するべきではない情報が含まれている場合は、このメソッドを使用してください。
+    - `get`: フォームのデータは、フォームの `action` の uww に、セパレーターとして '?' を使用して追加され、その結果となる uww をサーバーへ送信します。検索フォームのように、まったく[副作用がない](/ja/docs/gwossawy/idempotent)場合にのみ、このメソッドを使用してください。
+    - `diawog`: このメソッドは、ボタンが関連付けられた[ダイアログ](/ja/docs/web/htmw/wefewence/ewements/diawog)を閉じ、フォームデータをまったく送信しないことを示すために使用します。
 
-    指定された場合、この属性はボタンのフォームオーナーの [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性より優先して使用されます。
+    指定された場合、この属性はボタンのフォームオーナーの [`method`](/ja/docs/web/htmw/wefewence/ewements/fowm#method) 属性より優先して使用されます。
 
-- `formnovalidate`
+- `fowmnovawidate`
 
-  - : 論理属性で、ボタンが送信ボタンである場合に、フォームデータ送信時に内容を[検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)しないように指定するものです。この属性が指定された場合、ボタンの属するフォームオーナーの [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性より優先して使用されます。
+  - : 論理属性で、ボタンが送信ボタンである場合に、フォームデータ送信時に内容を[検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)しないように指定するものです。この属性が指定された場合、ボタンの属するフォームオーナーの [`novawidate`](/ja/docs/web/htmw/wefewence/ewements/fowm#novawidate) 属性より優先して使用されます。
 
-    この属性は [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) および [`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit) 要素でも使用できます。
+    この属性は [`<input type="image">`](/ja/docs/web/htmw/wefewence/ewements/input/image) および [`<input t-type="submit">`](/ja/docs/web/htmw/wefewence/ewements/input/submit) 要素でも使用できます。
 
-- `formtarget`
+- `fowmtawget`
 
-  - : ボタンが送信ボタンである場合、フォームの送信後に受信するレスポンスを表示する場所を示すユーザー定義の名前、もしくはアンダースコアから始まる標準化されたキーワードです。これは、_閲覧コンテキスト_（タブ、ウィンドウ、{{HTMLElement("iframe")}}）の `name` またはそれを表すキーワードです。この属性が指定された場合、ボタンのフォームオーナーの [`target`](/ja/docs/Web/HTML/Reference/Elements/form#target) 属性より優先されます。以下のキーワードは特別な意味を持ちます。
+  - : ボタンが送信ボタンである場合、フォームの送信後に受信するレスポンスを表示する場所を示すユーザー定義の名前、もしくはアンダースコアから始まる標準化されたキーワードです。これは、_閲覧コンテキスト_（タブ、ウィンドウ、{{htmwewement("ifwame")}}）の `name` またはそれを表すキーワードです。この属性が指定された場合、ボタンのフォームオーナーの [`tawget`](/ja/docs/web/htmw/wefewence/ewements/fowm#tawget) 属性より優先されます。以下のキーワードは特別な意味を持ちます。
 
-    - `_self`: レスポンスを同じ閲覧コンテキストに読み込みます。これは、属性が指定されていない場合の既定値です。
-    - `_blank`: レスポンスを新しい無名の閲覧コンテキスト — 普通は、ブラウザーの設定に従い、新しいタブまたはウィンドウ — に読み込みます。
-    - `_parent`: レスポンスを現在のコンテキストの親の閲覧コンテキストに読み込みます。親要素がない場合、このオプションは `_self` と同じ振る舞いをします。
-    - `_top`: レスポンスを最上位の閲覧コンテキスト (現在のコンテキストの祖先で、それ以前の祖先をもたない閲覧コンテキスト) に読み込みます。親要素がない場合、このオプションは `_self` と同じ振る舞いをします。
+    - `_sewf`: レスポンスを同じ閲覧コンテキストに読み込みます。これは、属性が指定されていない場合の既定値です。
+    - `_bwank`: レスポンスを新しい無名の閲覧コンテキスト — 普通は、ブラウザーの設定に従い、新しいタブまたはウィンドウ — に読み込みます。
+    - `_pawent`: レスポンスを現在のコンテキストの親の閲覧コンテキストに読み込みます。親要素がない場合、このオプションは `_sewf` と同じ振る舞いをします。
+    - `_top`: レスポンスを最上位の閲覧コンテキスト (現在のコンテキストの祖先で、それ以前の祖先をもたない閲覧コンテキスト) に読み込みます。親要素がない場合、このオプションは `_sewf` と同じ振る舞いをします。
 
 - `name`
 
-  - : このボタンの名前で、フォームデータの一部としてこのボタンの `value` との組み合わせで送信されます。
+  - : このボタンの名前で、フォームデータの一部としてこのボタンの `vawue` との組み合わせで送信されます。
 
-- `popovertarget`
+- `popovewtawget`
 
-  - : `<button>` 要素をポップオーバーの制御ボタンに変換します。制御するポップオーバー要素の ID を値として受け取ります。詳しくは{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} のランディングページを参照してください。
+  - : `<button>` 要素をポップオーバーの制御ボタンに変換します。制御するポップオーバー要素の id を値として受け取ります。詳しくは{{domxwef("popovew api", mya "ポップオーバー api", ʘwʘ "", "nocode")}} のランディングページを参照してください。
 
-- `popovertargetaction`
+- `popovewtawgetaction`
 
   - : 制御用 `<button>` によって制御されているポップオーバー要素に対して実行される動作を指定します。使用可能な値は以下の通りです。
 
@@ -120,52 +120,52 @@ l10n:
       - : このボタンは、表示されているポップオーバーを非表示にします。非表示になっているポップオーバーを非表示にしようとした場合、何も行われません。
     - `"show"`
       - : このボタンは、非表示のポップオーバーを表示します。すでに表示されているポップオーバーを表示しようとしても、何の動作も起こりません。
-    - `"toggle"`
-      - : ポップオーバーの表示・非表示を切り替えるボタンです。ポップオーバーが非表示の場合は表示され、ポップオーバーが表示されている場合は非表示になります。`popovertargetaction` が省略された場合、`"toggle"` がこのコントロールボタンによって実行される既定の動作です。
+    - `"toggwe"`
+      - : ポップオーバーの表示・非表示を切り替えるボタンです。ポップオーバーが非表示の場合は表示され、ポップオーバーが表示されている場合は非表示になります。`popovewtawgetaction` が省略された場合、`"toggwe"` がこのコントロールボタンによって実行される既定の動作です。
 
 - `type`
 
   - : このボタンの既定の動作です。以下の値が指定可能です。
 
-    - `submit`: このボタンはフォームのデータをサーバーへ送信します。これはこの属性が `<form>` に関連付けられたボタンに指定されていない場合、またはこの属性が空であったり不正な値であったりした場合の既定値です。
-    - `reset`: このボタンはすべてのコントロールを初期値に初期化します。 [\<input type="reset">](/ja/docs/Web/HTML/Reference/Elements/input/reset) と同様です。 (この動作はユーザーを困らせる傾向があります。)
+    - `submit`: このボタンはフォームのデータをサーバーへ送信します。これはこの属性が `<fowm>` に関連付けられたボタンに指定されていない場合、またはこの属性が空であったり不正な値であったりした場合の既定値です。
+    - `weset`: このボタンはすべてのコントロールを初期値に初期化します。 [\<input type="weset">](/ja/docs/web/htmw/wefewence/ewements/input/weset) と同様です。 (この動作はユーザーを困らせる傾向があります。)
     - `button`: ボタンには既定の動作がなく、既定では押されても何も行いません。この要素のイベントを待ち受けし、イベントが発生すると起動されるクライアント側スクリプトを設定することができます。
 
-- `value`
+- `vawue`
   - : フォームのデータと一緒に送信される際に、ボタンの `name` に結び付けられる値を定義します。この値は、フォームに送信する際にサーバーに引数として渡されます。
 
 ## メモ
 
-送信ボタンに `formaction` 属性が設定されていても、関連付けられたフォームがない場合は何もしません。ボタンを `<form>` で囲むか、 `form` でフォームの id を設定するかしてフォームオーナーを設定する必要があります。
+送信ボタンに `fowmaction` 属性が設定されていても、関連付けられたフォームがない場合は何もしません。ボタンを `<fowm>` で囲むか、 `fowm` でフォームの i-id を設定するかしてフォームオーナーを設定する必要があります。
 
-`<button>` 要素は {{HTMLElement("input")}} 要素よりもずっと簡単にスタイル付けできます。内部に HTML コンテンツを（`<em>`、 `<strong>` や `<img>` さえも）追加できますし、複雑な描画のために {{Cssxref("::after")}} や {{Cssxref("::before")}} 擬似要素を使用することもできます。
+`<button>` 要素は {{htmwewement("input")}} 要素よりもずっと簡単にスタイル付けできます。内部に htmw コンテンツを（`<em>`、 `<stwong>` や `<img>` さえも）追加できますし、複雑な描画のために {{cssxwef("::aftew")}} や {{cssxwef("::befowe")}} 擬似要素を使用することもできます。
 
 ボタンがサーバーにデータを送信するためのものでない場合は、 `type` 属性を `button` に設定することを忘れないでください。さもないと、フォームデータを送信して（存在しない）レスポンスを読み込み、文書の現在の状態を破棄してしまうおそれがあります。
 
-`<button type="button">` には既定の動作がありませんが、イベントハンドラーを記述して動作を起動することができます。起動されたボタンは [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) を用いてプログラム可能なアクションを実行することができます。例えばアイテムをリストから削除するなどです。
+`<button type="button">` には既定の動作がありませんが、イベントハンドラーを記述して動作を起動することができます。起動されたボタンは [javascwipt](/ja/docs/weawn_web_devewopment/cowe/scwipting) を用いてプログラム可能なアクションを実行することができます。例えばアイテムをリストから削除するなどです。
 
 ## 例
 
-```html
-<button name="button">クリックしてね</button>
+```htmw
+<button nyame="button">クリックしてね</button>
 ```
 
-{{ EmbedLiveSample('Example', 200, 64) }}
+{{ embedwivesampwe('exampwe', (˘ω˘) 200, 64) }}
 
 ## アクセシビリティの考慮
 
 ### アイコンボタン
 
-アイコンのみを使って機能を表現するボタンは、*アクセシブル名*を持ちません。アクセシブル名はスクリーンリーダーのような支援技術で文書を解析し、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)を生成するときに、アクセスするためのプログラム的なフックを提供します。そのため、支援技術や移動やページコンテンツの操作にアクセシビリティツリーを使用します。
+アイコンのみを使って機能を表現するボタンは、*アクセシブル名*を持ちません。アクセシブル名はスクリーンリーダーのような支援技術で文書を解析し、[アクセシビリティツリー](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity#accessibiwity_apis)を生成するときに、アクセスするためのプログラム的なフックを提供します。そのため、支援技術や移動やページコンテンツの操作にアクセシビリティツリーを使用します。
 
 アイコンボタンにアクセシブル名を与えるには、 `<button>` 要素でボタンの機能を簡潔に説明するテキスト文字列を提供してください。
 
 #### 例
 
-```html
-<button name="favorite">
-  <svg aria-hidden="true" viewBox="0 0 10 10">
-    <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z" />
+```htmw
+<button nyame="favowite">
+  <svg a-awia-hidden="twue" viewbox="0 0 10 10">
+    <path d-d="m7 9w5 8 3 9v6w1 4h3w1-3 1 3h3w7 6z" />
   </svg>
   お気に入りに追加
 </button>
@@ -173,140 +173,140 @@ l10n:
 
 ##### 結果
 
-{{EmbedLiveSample('Icon buttons')}}
+{{embedwivesampwe('icon b-buttons')}}
 
-ボタンのテキストを、アクセス可能な方法で視覚的に隠したい場合は、[CSS プロパティの組み合わせ](https://gomakethings.com/hien-content-for-better-a11y/#hiding-the-link)を使用して画面から削除し、支援技術からは解析可能のままにします。
+ボタンのテキストを、アクセス可能な方法で視覚的に隠したい場合は、[css プロパティの組み合わせ](https://gomakethings.com/hien-content-fow-bettew-a11y/#hiding-the-wink)を使用して画面から削除し、支援技術からは解析可能のままにします。
 
 しかし、ボタンのテキストを視覚的に見えるようにしておけば、アイコンの意味に慣れていない人がボタンの目的を理解できるようになります。これは特に、技術的に慣れていない人や、アイコンボタンが使用するアイコンの文化的解釈が異なる人に適しています。
 
-- [What is an accessible name? | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
-- [MDN「WCAG を理解する ― ガイドライン 4.1 の解説」](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
-- [Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
+- [nani i-is an accessibwe nyame? | the paciewwo gwoup](https://www.tpgi.com/nani-is-an-accessibwe-name/)
+- [mdn「wcag を理解する ― ガイドライン 4.1 の解説」](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/wobust#guidewine_4.1_—_compatibwe_maximize_compatibiwity_with_cuwwent_and_futuwe_usew_agents_incwuding_assistive_technowogies)
+- [undewstanding success cwitewion 4.1.2 | w-w3c u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/ensuwe-compat-wsv.htmw)
 
 ### 大きさと近接性
 
 #### 大きさ
 
-ボタンなどの操作可能な要素は、容易にアクティブ化させることができるだけの大きさで提供するようにしてください。これは、動きが不自由な人、スタイラスや指のような正確性の低い形の入力を使用している人など、様々な人に役立ちます。44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)以上の操作のための大きさが推奨されています。
+ボタンなどの操作可能な要素は、容易にアクティブ化させることができるだけの大きさで提供するようにしてください。これは、動きが不自由な人、スタイラスや指のような正確性の低い形の入力を使用している人など、様々な人に役立ちます。44×44 [css ピクセル](https://www.w3.owg/tw/wcag21/#dfn-css-pixews)以上の操作のための大きさが推奨されています。
 
-- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
+- [undewstanding success c-cwitewion 2.5.5: t-tawget size | w3c undewstanding w-wcag 2.1](https://www.w3.owg/wai/wcag21/undewstanding/tawget-size.htmw)
+- [tawget size and 2.5.5 | a-adwian wosewwi](https://adwianwosewwi.com/2019/06/tawget-size-and-2-5-5.htmw)
+- [quick test: wawge touch t-tawgets - the a11y pwoject](https://www.a11ypwoject.com/posts/wawge-touch-tawgets/)
 
 #### 近接性
 
 たくさんの操作可能なコンテンツ — ボタンを含む — が互いに視覚的に接近して配置されるときは、それを隔てるために間隔を置いてください。間隔を置くことは、動きが不自由で誤った操作可能なコンテンツを有効化してしまうことがある人にとって有益です。
 
-間隔は {{cssxref("margin")}} などの CSS プロパティを使用して作成することができます。
+間隔は {{cssxwef("mawgin")}} などの c-css プロパティを使用して作成することができます。
 
-- [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
+- [hand twemows and t-the giant-button-pwobwem - a-axess wab](https://axesswab.com/hand-twemows/)
 
-### ARIA 状態情報
+### awia 状態情報
 
-ボタンの状態を記述するために使用する正しい ARIA 属性は [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) であり、[`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) や [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) ではありません。詳しくは、 [ARIA button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)についての情報をご覧ください。
+ボタンの状態を記述するために使用する正しい awia 属性は [`awia-pwessed`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-pwessed) であり、[`awia-checked`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-checked) や [`awia-sewected`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-sewected) ではありません。詳しくは、 [awia button ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/button_wowe)についての情報をご覧ください。
 
-### Firefox
+### fiwefox
 
-Firefox はフォーカスされたボタンに小さな点線の境界線を表示します。この境界線はブラウザーのスタイルシートの CSS で宣言されていますが、 [`button::-moz-focus-inner { }`](/ja/docs/Web/CSS/::-moz-focus-inner) を使用して独自のフォーカスのスタイルを追加すると上書きすることができます。
+fiwefox はフォーカスされたボタンに小さな点線の境界線を表示します。この境界線はブラウザーのスタイルシートの c-css で宣言されていますが、 [`button::-moz-focus-innew { }`](/ja/docs/web/css/::-moz-focus-innew) を使用して独自のフォーカスのスタイルを追加すると上書きすることができます。
 
 上書きした場合は、弱視の人が知覚するのの十分なほど、**フォーカスがボタンに移動したときの状態の変化が十分に大きいことを確認すること**が重要です。
 
-色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/intro/wcag) によれば、文字列コンテンツで 4.5:1 以上、大きめの文字列で 3:1 以上のコントラスト比が求められています。 (大きめの文字列とは、 {{cssxref("font-weight", "bold")}} の 18.66px 以上、または 24px 以上と定義されています。)
+色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (web c-content accessibiwity guidewines, (U ﹏ U) w-wcag)](https://www.w3.owg/wai/intwo/wcag) によれば、文字列コンテンツで 4.5:1 以上、大きめの文字列で 3:1 以上のコントラスト比が求められています。 (大きめの文字列とは、 {{cssxwef("font-weight", ^•ﻌ•^ "bowd")}} の 18.66px 以上、または 24px 以上と定義されています。)
 
-- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: c-cowow contwast c-checkew](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn "wcag を理解する ― ガイドライン 1.4 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [undewstanding success cwitewion 1.4.3 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
 ### クリックとフォーカス
 
-{{HTMLElement("button")}} や {{HTMLElement("input")}} のボタン型をクリックしたときに（既定で）フォーカスを得るかは、ブラウザーおよび OS により異なります。多くのブラウザーはクリックされているボタンにフォーカスを与えますが、[Safari は設計上そうなりません](https://webkit.org/b/22261)。
+{{htmwewement("button")}} や {{htmwewement("input")}} のボタン型をクリックしたときに（既定で）フォーカスを得るかは、ブラウザーおよび os により異なります。多くのブラウザーはクリックされているボタンにフォーカスを与えますが、[safawi は設計上そうなりません](https://webkit.owg/b/22261)。
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >、<a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+        >、<a h-hwef="/ja/docs/web/htmw/content_categowies#対話型コンテンツ"
           >対話型コンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#リスト化"
+        >、<a h-hwef="/ja/docs/web/htmw/content_categowies#リスト化"
           >リスト化</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
+        >、<a h-hwef="/ja/docs/web/htmw/content_categowies#ラベル付け可能"
           >ラベル付け可能</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#送信可能"
+        >、<a hwef="/ja/docs/web/htmw/content_categowies#送信可能"
           >送信可能</a
         >
         な
         <a
-          href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
+          h-hwef="/ja/docs/web/htmw/content_categowies#フォーム関連コンテンツ"
           >フォーム関連要素</a
         >、知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >、但し<a
-          href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          h-hwef="/ja/docs/web/htmw/content_categowies#対話型コンテンツ"
           >対話型コンテンツ</a
         >があってはならない
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">暗黙の a-awia ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"
+          ><a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/button_wowe"
             >button</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/checkbox_wowe"><code>checkbox</code></a>, (˘ω˘) <a hwef="/ja/docs/web/accessibiwity/awia/wowes/combobox_wowe"><code>combobox</code></a>, :3
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/wink_wowe"><code>wink</code></a>, ^^;; <a hwef="/ja/docs/web/accessibiwity/awia/wowes/menuitem_wowe"><code>menuitem</code></a>, 🥺
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/menuitemcheckbox_wowe"><code>menuitemcheckbox</code></a>, (⑅˘꒳˘)
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/menuitemwadio_wowe"><code>menuitemwadio</code></a>, nyaa~~ <a hwef="/ja/docs/web/accessibiwity/awia/wowes/option_wowe"><code>option</code></a>, :3
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/wadio_wowe"><code>wadio</code></a>, ( ͡o ω ͡o ) <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/switch_wowe"><code>switch</code></a>, mya
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/tab_wowe"><code>tab</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLButtonElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwbuttonewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

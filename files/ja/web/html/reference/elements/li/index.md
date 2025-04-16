@@ -1,186 +1,186 @@
 ---
-title: "<li>: リスト項目要素"
-slug: Web/HTML/Reference/Elements/li
-original_slug: Web/HTML/Element/li
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<wi>: リスト項目要素"
+swug: web/htmw/wefewence/ewements/wi
+o-owiginaw_swug: w-web/htmw/ewement/wi
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<li>`** は [HTML](/ja/docs/Web/HTML) の要素で、リストの項目を表すために用いられます。この要素は、その項目が属する順序付きリスト ({{HTMLElement("ol")}})、順序なしリスト ({{HTMLElement("ul")}})、メニュー ({{HTMLElement("menu")}}) のいずれかの子要素として配置する必要があります。メニュー要素および順序なしリスト内においては、リストの項目は通常、行頭文字を伴って表示されます。順序付きリスト内では、数字や文字による連番のリストマーカーを伴って表示されます。
+**`<wi>`** は [htmw](/ja/docs/web/htmw) の要素で、リストの項目を表すために用いられます。この要素は、その項目が属する順序付きリスト ({{htmwewement("ow")}})、順序なしリスト ({{htmwewement("uw")}})、メニュー ({{htmwewement("menu")}}) のいずれかの子要素として配置する必要があります。メニュー要素および順序なしリスト内においては、リストの項目は通常、行頭文字を伴って表示されます。順序付きリスト内では、数字や文字による連番のリストマーカーを伴って表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wi&gt;", >_< "tabbed-showtew")}}
 
-```html interactive-example
-<p>Apollo astronauts:</p>
+```htmw i-intewactive-exampwe
+<p>apowwo a-astwonauts:</p>
 
-<ul>
-  <li>Neil Armstrong</li>
-  <li>Alan Bean</li>
-  <li>Peter Conrad</li>
-  <li>Edgar Mitchell</li>
-  <li>Alan Shepard</li>
-</ul>
+<uw>
+  <wi>neiw a-awmstwong</wi>
+  <wi>awan b-bean</wi>
+  <wi>petew conwad</wi>
+  <wi>edgaw mitcheww</wi>
+  <wi>awan shepawd</wi>
+</uw>
 ```
 
-```css interactive-example
-p,
-li {
+```css intewactive-exampwe
+p-p, (⑅˘꒳˘)
+wi {
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", /(^•ω•^)
+    s-sans-sewif;
 }
 
 p {
-  font-weight: bold;
+  font-weight: b-bowd;
 }
 ```
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `value`
-  - : これは整数値の属性で、{{HTMLElement("ol")}} 要素で定義されたリスト項目の序数値を示します。リストがローマ数字や文字で表示される場合であっても、この属性は数値のみが指定できます。続くリスト項目は、その番号から続いて採番されます。順序なしリスト ({{HTMLElement("ul")}}) やメニュー ({{HTMLElement("menu")}}) では **value** 属性は意味がありません。
-- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
+- `vawue`
+  - : これは整数値の属性で、{{htmwewement("ow")}} 要素で定義されたリスト項目の序数値を示します。リストがローマ数字や文字で表示される場合であっても、この属性は数値のみが指定できます。続くリスト項目は、その番号から続いて採番されます。順序なしリスト ({{htmwewement("uw")}}) やメニュー ({{htmwewement("menu")}}) では **vawue** 属性は意味がありません。
+- `type` {{depwecated_inwine}} {{non-standawd_inwine}}
 
   - : 文字の属性で、表示するリストマーカーの種類を指定します。
 
     - `a`: 小文字
-    - `A`: 大文字
+    - `a`: 大文字
     - `i`: 小文字のローマ数字
-    - `I`: 大文字のローマ数字
+    - `i`: 大文字のローマ数字
     - `1`: 数字
 
-    もし親の {{HTMLElement("ol")}} 要素で使用されていた場合は、それよりも優先されます。
+    もし親の {{htmwewement("ow")}} 要素で使用されていた場合は、それよりも優先されます。
 
-    > [!NOTE]
-    > この属性は非推奨になっています。代わりに CSS の {{cssxref("list-style-type")}} プロパティを使用してください。
+    > [!note]
+    > この属性は非推奨になっています。代わりに css の {{cssxwef("wist-stywe-type")}} プロパティを使用してください。
 
 ## 例
 
-もっと詳細な例は、 {{htmlelement("ol")}} と {{htmlelement("ul")}} のページを参照してください。
+もっと詳細な例は、 {{htmwewement("ow")}} と {{htmwewement("uw")}} のページを参照してください。
 
 ### 番号付きリスト
 
-```html
-<ol>
-  <li>最初のリスト項目</li>
-  <li>二番目のリスト項目</li>
-  <li>三番目のリスト項目</li>
-</ol>
+```htmw
+<ow>
+  <wi>最初のリスト項目</wi>
+  <wi>二番目のリスト項目</wi>
+  <wi>三番目のリスト項目</wi>
+</ow>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Ordered_list")}}
+{{embedwivesampwe("owdewed_wist")}}
 
 ### カスタム値の付いた番号付きリスト
 
-```html
-<ol type="I">
-  <li value="3">third item</li>
-  <li>fourth item</li>
-  <li>fifth item</li>
-</ol>
+```htmw
+<ow type="i">
+  <wi vawue="3">thiwd i-item</wi>
+  <wi>fouwth item</wi>
+  <wi>fifth i-item</wi>
+</ow>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Ordered_list_with_a_custom_value")}}
+{{embedwivesampwe("owdewed_wist_with_a_custom_vawue")}}
 
 ### 順序なしリスト
 
-```html
-<ul>
-  <li>最初のリスト項目</li>
-  <li>二番目のリスト項目</li>
-  <li>三番目のリスト項目</li>
-</ul>
+```htmw
+<uw>
+  <wi>最初のリスト項目</wi>
+  <wi>二番目のリスト項目</wi>
+  <wi>三番目のリスト項目</wi>
+</uw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Unordered_list")}}
+{{embedwivesampwe("unowdewed_wist")}}
 
 ## 技術的概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/ja/docs/web/htmw/content_categowies">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>
-        直後に別の {{HTMLElement("li")}}
+        直後に別の {{htmwewement("wi")}}
         要素が続く場合、または他のリスト項目が続くことなく親要素が閉じられた場合は、終了タグが省略可能。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている親要素</th>
       <td>
-        {{HTMLElement("ul")}}、{{HTMLElement("ol")}}、{{HTMLElement("menu")}}。すでに廃止されているが、{{HTMLElement("dir")}}
+        {{htmwewement("uw")}}、{{htmwewement("ow")}}、{{htmwewement("menu")}}。すでに廃止されているが、{{htmwewement("diw")}}
         の子要素としても配置可能であった。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の awia ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
-            >listitem</a
+          ><a hwef="/ja/docs/web/accessibiwity/awia/wowes/wistitem_wowe"
+            >wistitem</a
           ></code
         >
-        when child of an
-        <code><a href="/ja/docs/Web/HTML/Element/ol">ol</a></code
-        >, <code><a href="/ja/docs/Web/HTML/Element/ul">ul</a></code> or
-        <code><a href="/ja/docs/Web/HTML/Element/menu">menu</a></code>
+        when chiwd o-of an
+        <code><a hwef="/ja/docs/web/htmw/ewement/ow">ow</a></code
+        >, rawr x3 <code><a h-hwef="/ja/docs/web/htmw/ewement/uw">uw</a></code> o-ow
+        <code><a h-hwef="/ja/docs/web/htmw/ewement/menu">menu</a></code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">許可されている awia ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/menuitem_wowe"><code>menuitem</code></a>,
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/menuitemcheckbox_wowe"><code>menuitemcheckbox</code></a>, (U ﹏ U)
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/menuitemwadio_wowe"><code>menuitemwadio</code></a>, (U ﹏ U) <a hwef="/ja/docs/web/accessibiwity/awia/wowes/option_wowe"><code>option</code></a>, (⑅˘꒳˘)
+        <a h-hwef="/ja/docs/web/accessibiwity/awia/wowes/none_wowe"><code>none</code></a>, òωó <a hwef="/ja/docs/web/accessibiwity/awia/wowes/pwesentation_wowe"><code>pwesentation</code></a>, ʘwʘ
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/wadio_wowe"><code>wadio</code></a>, /(^•ω•^) <a hwef="/ja/docs/web/accessibiwity/awia/wowes/sepawatow_wowe"><code>sepawatow</code></a>, ʘwʘ
+        <a hwef="/ja/docs/web/accessibiwity/awia/wowes/tab_wowe"><code>tab</code></a>, σωσ <a hwef="/ja/docs/web/accessibiwity/awia/wowes/tweeitem_wowe"><code>tweeitem</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLLIElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwwiewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 他のリスト関連 HTML 要素: {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}} および廃止された {{HTMLElement("dir")}}
-- `<li>` の整形に便利な CSS プロパティ:
+- 他のリスト関連 htmw 要素: {{htmwewement("uw")}}, OwO {{htmwewement("ow")}}, 😳😳😳 {{htmwewement("menu")}} および廃止された {{htmwewement("diw")}}
+- `<wi>` の整形に便利な c-css プロパティ:
 
-  - 箇条書き記号の表示を選択するための {{cssxref("list-style")}}
-  - 複雑な入れ子状リストを処理するのに使用できる [CSS counters](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - リスト項目のインデントの調整に用いることができる {{cssxref("margin")}}
+  - 箇条書き記号の表示を選択するための {{cssxwef("wist-stywe")}}
+  - 複雑な入れ子状リストを処理するのに使用できる [css c-countews](/ja/docs/web/css/css_countew_stywes/using_css_countews)
+  - リスト項目のインデントの調整に用いることができる {{cssxwef("mawgin")}}

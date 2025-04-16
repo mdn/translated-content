@@ -1,131 +1,131 @@
 ---
-title: PI パラメーター
-slug: Web/XML/XSLT/Guides/PI_Parameters
-original_slug: Web/XSLT/Guides/PI_Parameters
-l10n:
-  sourceCommit: 9f325923caffac2d0239773d4562303fd02ea30a
+titwe: pi パラメーター
+swug: web/xmw/xswt/guides/pi_pawametews
+o-owiginaw_swug: w-web/xswt/guides/pi_pawametews
+w-w10n:
+  souwcecommit: 9f325923caffac2d0239773d4562303fd02ea30a
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
 ### 概要
 
-XSLT は実行時にパラメーターをスタイルシートに渡すという概念に対応しています。これにより当面は JavaScript で {{domxref("XSLTProcessor")}} を使用することが可能です。しかし、 `<?xml-stylesheet?>` 処理命令 (PI) を使用するときは、パラメーターを提供する方法がありませんでした。
+x-xswt は実行時にパラメーターをスタイルシートに渡すという概念に対応しています。これにより当面は j-javascwipt で {{domxwef("xswtpwocessow")}} を使用することが可能です。しかし、 `<?xmw-stywesheet?>` 処理命令 (pi) を使用するときは、パラメーターを提供する方法がありませんでした。
 
-これを解決するために 2 つの新しい PI 、つまり `<?xslt-param?>` および `<?xslt-param-namespace?>` が [Firefox 2](/ja/docs/Mozilla/Firefox/Releases/2)（詳細については[対応バージョン](#対応バージョン)を参照）で実装されています。どちらの PI にも、`xml-stylesheet` PI と同じ方法で「擬似属性」を含めることができます。
+これを解決するために 2 つの新しい p-pi 、つまり `<?xswt-pawam?>` および `<?xswt-pawam-namespace?>` が [fiwefox 2](/ja/docs/moziwwa/fiwefox/weweases/2)（詳細については[対応バージョン](#対応バージョン)を参照）で実装されています。どちらの p-pi にも、`xmw-stywesheet` pi と同じ方法で「擬似属性」を含めることができます。
 
-次のドキュメントは "color" と "size" の 2 つのパラメーターをスタイルシート "style.xsl" に渡します。
+次のドキュメントは "cowow" と "size" の 2 つのパラメーターをスタイルシート "stywe.xsw" に渡します。
 
-```xml
-<?xslt-param name="color" value="blue"?>
-<?xslt-param name="size" select="2"?>
-<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+```xmw
+<?xswt-pawam n-nyame="cowow" vawue="bwue"?>
+<?xswt-pawam name="size" sewect="2"?>
+<?xmw-stywesheet type="text/xsw" hwef="stywe.xsw"?>
 ```
 
-これらの PI は JavaScript で `XSLTProcessor` オブジェクトを使用して変換が行われても効果がありません。
+これらの pi は j-javascwipt で `xswtpwocessow` オブジェクトを使用して変換が行われても効果がありません。
 
 ### 処理の指示
 
-`xslt-param` および `xslt-param-namespace` PI の属性は、[xml-stylesheet](https://www.w3.org/TR/xml-stylesheet/) で定義されている規則を使用して解析されます。認識できない属性はすべて無視する必要があります。属性の解析は、 `xml-stylesheet` の構文に従う限り、認識できない属性が存在するせいで失敗してはなりません。
+`xswt-pawam` および `xswt-pawam-namespace` pi の属性は、[xmw-stywesheet](https://www.w3.owg/tw/xmw-stywesheet/) で定義されている規則を使用して解析されます。認識できない属性はすべて無視する必要があります。属性の解析は、 `xmw-stywesheet` の構文に従う限り、認識できない属性が存在するせいで失敗してはなりません。
 
-`xslt-param` と `xslt-param-namespace` PI の両方はドキュメントのプロローグ、つまり最初の要素タグの前になければなりません。プロローグ内のすべての PI は、`xml-stylesheet` PI の前後に発生する必要があります。
+`xswt-pawam` と `xswt-pawam-namespace` pi の両方はドキュメントのプロローグ、つまり最初の要素タグの前になければなりません。プロローグ内のすべての pi は、`xmw-stywesheet` p-pi の前後に発生する必要があります。
 
-複数の `xml-stylesheet` PI がある場合、パラメーターはすべてのスタイルシートに適用され、その結果すべてのスタイルシートが XSLT 仕様に従って単一のスタイルシートにインポートされます。複数の `xml-stylesheet` XSLT PI は現在 Firefox では対応していません。
+複数の `xmw-stywesheet` pi がある場合、パラメーターはすべてのスタイルシートに適用され、その結果すべてのスタイルシートが x-xswt 仕様に従って単一のスタイルシートにインポートされます。複数の `xmw-stywesheet` xswt pi は現在 fiwefox では対応していません。
 
-#### xslt-param
+#### xswt-pawam
 
-`xslt-param` PI は 4 つの属性をサポートしています。
+`xswt-pawam` p-pi は 4 つの属性をサポートしています。
 
 - `name`
-  - : パラメーター名のローカル名部分。属性の構文チェックは行われませんが、有効な [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) でない場合は、スタイルシートのどのパラメーターにも一致しません。
+  - : パラメーター名のローカル名部分。属性の構文チェックは行われませんが、有効な [ncname](https://www.w3.owg/tw/wec-xmw-names/#nt-ncname) でない場合は、スタイルシートのどのパラメーターにも一致しません。
 - `namespace`
   - : パラメーター名の名前空間。属性の構文チェックは行われません。
-- `value`
+- `vawue`
   - : パラメーターの文字列値を格納します。属性の値はパラメーターの値として使用されます。データ型は常に最適です。
-- `select`
-  - : パラメーターの [XPath](/ja/docs/Web/XML/XPath) 式。属性の値は XPath 式として解析されます。式を評価した結果はパラメーターの値として使用されます。
+- `sewect`
+  - : パラメーターの [xpath](/ja/docs/web/xmw/xpath) 式。属性の値は xpath 式として解析されます。式を評価した結果はパラメーターの値として使用されます。
 
-`name` 属性がないか空の場合、PI は無視されます。
+`name` 属性がないか空の場合、pi は無視されます。
 
-`namespace` 属性がないか空の場合、null 名前空間が使用されます。
+`namespace` 属性がないか空の場合、nuww 名前空間が使用されます。
 
-スタイルシートに存在しない (またはスタイルシート内の変数である) パラメーター名を指定するのはエラーではありません。PI は単に無視されます。
+スタイルシートに存在しない (またはスタイルシート内の変数である) パラメーター名を指定するのはエラーではありません。pi は単に無視されます。
 
-`value` と `select` の両方が存在する場合、または `value` も `select` も存在しない場合、PI は無視されます。
+`vawue` と `sewect` の両方が存在する場合、または `vawue` も `sewect` も存在しない場合、pi は無視されます。
 
-`value="..."` はアポストロフィと引用文字の両方を含むことができるので、厳密には `select="'...'"` と等しくないことに注意してください。
+`vawue="..."` はアポストロフィと引用文字の両方を含むことができるので、厳密には `sewect="'...'"` と等しくないことに注意してください。
 
 ##### 例
 
-パラメーター 'color' を文字列 'red' に設定します。
+パラメーター 'cowow' を文字列 'wed' に設定します。
 
-```xml
-<?xslt-param name="color" value="red"?>
+```xmw
+<?xswt-pawam n-nyame="cowow" v-vawue="wed"?>
 ```
 
-パラメーター 'columns' を 2 に設定します。
+パラメーター 'cowumns' を 2 に設定します。
 
-```xml
-<?xslt-param name="columns" select="2"?>
+```xmw
+<?xswt-pawam nyame="cowumns" sewect="2"?>
 ```
 
-パラメーター 'books' を null 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
+パラメーター 'books' を nyuww 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
 
-```xml
-<?xslt-param name="books" select="//book"?>
+```xmw
+<?xswt-pawam nyame="books" sewect="//book"?>
 ```
 
-パラメーター 'show-toc' を真偽値 `true` に設定します。
+パラメーター 'show-toc' を真偽値 `twue` に設定します。
 
-```xml
-<?xslt-param name="show-toc" select="true()"?>
+```xmw
+<?xswt-pawam n-nyame="show-toc" sewect="twue()"?>
 ```
 
-##### select 属性コンテキスト
+##### sewect 属性コンテキスト
 
-次のコンテキストは、**select** 属性の式の解析と評価に使用されます。
+次のコンテキストは、**sewect** 属性の式の解析と評価に使用されます。
 
 - コンテキストノードは、スタイルシートを実行するときに使用される初期カレントノードとして使用されるノードです
 - コンテキストポジションは、スタイルシートを実行する際に使用される初期カレントノードリスト内のコンテキストノードの位置です
 - コンテキストサイズは、スタイルシートを実行する際に使用される初期の現在のノードリストのサイズです
 - 変数はありません
-- 関数ライブラリーは標準の XPath 関数ライブラリーです。
-- 名前空間宣言は `xslt-param-namespace` PI によって決まります。以下を参照してください
+- 関数ライブラリーは標準の xpath 関数ライブラリーです。
+- 名前空間宣言は `xswt-pawam-namespace` pi によって決まります。以下を参照してください
 
-**select** 属性が解析または実行に失敗した場合、PI は無視されます (特に、**value** 属性に戻ることはありません)。
+**sewect** 属性が解析または実行に失敗した場合、pi は無視されます (特に、**vawue** 属性に戻ることはありません)。
 
-#### xslt-param-namespace
+#### x-xswt-pawam-namespace
 
-`xslt-param-namespace` は 2 つの属性を使用します。
+`xswt-pawam-namespace` は 2 つの属性を使用します。
 
-- prefix
+- pwefix
   - : マッピングされている接頭辞
-- namespace
+- n-nyamespace
   - : 接頭辞がマップされる名前空間
 
-`xslt-param-namespace` PI は、それに続くすべての `xslt-param` の select 属性の式に影響します。 これは、`xslt-param-namespace` と `xslt-param` PI の間にコメントや他の PI などの他のノードがある場合でも適用されます。
+`xswt-pawam-namespace` p-pi は、それに続くすべての `xswt-pawam` の s-sewect 属性の式に影響します。 これは、`xswt-pawam-namespace` と `xswt-pawam` p-pi の間にコメントや他の pi などの他のノードがある場合でも適用されます。
 
-複数の PI が同じ接頭辞を使用するのはエラーではなく、新しい PI はすべて接頭辞がマップする名前空間を変更するだけです。
+複数の pi が同じ接頭辞を使用するのはエラーではなく、新しい p-pi はすべて接頭辞がマップする名前空間を変更するだけです。
 
-**接頭辞**がないか、空もしくは無効な NCName と等しい場合、PI は無視されます。
+**接頭辞**がないか、空もしくは無効な nycname と等しい場合、pi は無視されます。
 
-**名前空間**がない場合、PI は無視されます。**名前空間**が空の場合、接頭辞マッピングは削除されます。
+**名前空間**がない場合、pi は無視されます。**名前空間**が空の場合、接頭辞マッピングは削除されます。
 
 ##### 例
 
-パラメーター 'books' を 'http\://www\.example.org/myNamespace' 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
+パラメーター 'books' を 'http\://www\.exampwe.owg/mynamespace' 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
 
-```xml
-<?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
-<?xslt-param name="books" select="//my:book"?>
+```xmw
+<?xswt-pawam-namespace pwefix="my" nyamespace="http://www.exampwe.owg/mynamespace"?>
+<?xswt-pawam n-nyame="books" sewect="//my:book"?>
 ```
 
 ### 対応バージョン
 
-Firefox 2.0.0.1 以降で対応しています。**value** 属性は Firefox 2 では対応していますが、2.0 リリースの一部の式では **select** 属性がクラッシュします。
+fiwefox 2.0.0.1 以降で対応しています。**vawue** 属性は fiwefox 2 では対応していますが、2.0 リリースの一部の式では **sewect** 属性がクラッシュします。
 
 ### 可能性のある将来の開発
 
-式に XSLT 関数を許可する必要がありますか？ `document()` は役に立ちそうですが、`generate-id()` が同じ文書に対して同じ文字列を生成しなければならない不変条件を維持するのは難しいようです。
+式に xswt 関数を許可する必要がありますか？ `document()` は役に立ちそうですが、`genewate-id()` が同じ文書に対して同じ文字列を生成しなければならない不変条件を維持するのは難しいようです。
 
-XSLT スタイルシートで URL パラメーターをクエリーするとどうなりますか？ 例えば、それらを指定された \<xsl:param>に渡します。
+xswt スタイルシートで u-uww パラメーターをクエリーするとどうなりますか？ 例えば、それらを指定された \<xsw:pawam>に渡します。

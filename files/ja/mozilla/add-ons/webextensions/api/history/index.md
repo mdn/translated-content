@@ -1,97 +1,97 @@
 ---
-title: history
-slug: Mozilla/Add-ons/WebExtensions/API/history
+titwe: histowy
+swug: moziwwa/add-ons/webextensions/api/histowy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-ブラウザー履歴とやりとりする `history` API を使用します。
+ブラウザー履歴とやりとりする `histowy` a-api を使用します。
 
-> [!NOTE]
-> downloads は [`HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) オブジェクトとして扱われるのに注意します。このため、ダウンロードのために [`history.onVisited`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) も発火します。
+> [!note]
+> d-downwoads は [`histowyitem`](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/histowyitem) オブジェクトとして扱われるのに注意します。このため、ダウンロードのために [`histowy.onvisited`](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/onvisited) も発火します。
 
-ブラウザー履歴はユーザーが訪れたページの時間順の記録です。history API では次の事ができます:
+ブラウザー履歴はユーザーが訪れたページの時間順の記録です。histowy a-api では次の事ができます:
 
-- [ブラウザー履歴に出てくるページの検索](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/search)
-- [ブラウザー履歴から個々のページを削除](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteUrl)
-- [ブラウザー履歴にページを追加](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/addUrl)
-- [ブラウザー履歴から全ページを削除](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteAll)
+- [ブラウザー履歴に出てくるページの検索](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/seawch)
+- [ブラウザー履歴から個々のページを削除](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/deweteuww)
+- [ブラウザー履歴にページを追加](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/adduww)
+- [ブラウザー履歴から全ページを削除](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/deweteaww)
 
-しかしながら、ユーザーは１つのページを何度も訪問することがあるので、この API は「訪問数」の概念もあります。したがってこの API を次のようにも使えます:
+しかしながら、ユーザーは１つのページを何度も訪問することがあるので、この a-api は「訪問数」の概念もあります。したがってこの a-api を次のようにも使えます:
 
-- [ユーザーが特定のページを訪問した完全なセットを取得する](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/getVisits)
-- [所定の期間に訪問したあらゆるページの訪問を削除する](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteRange)
+- [ユーザーが特定のページを訪問した完全なセットを取得する](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/getvisits)
+- [所定の期間に訪問したあらゆるページの訪問を削除する](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/dewetewange)
 
-この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで指定する "history" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
+この a-api を使うには [manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイルで指定する "histowy" [パーミッション](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions)が必要です。
 
 ## 型
 
-- {{WebExtAPIRef("history.TransitionType")}}
+- {{webextapiwef("histowy.twansitiontype")}}
   - : ブラウザーがあるページにどのように移動したのかを記述
-- {{WebExtAPIRef("history.HistoryItem")}}
+- {{webextapiwef("histowy.histowyitem")}}
   - : ブラウザー履歴のあるページに関する情報を提供
-- {{WebExtAPIRef("history.VisitItem")}}
+- {{webextapiwef("histowy.visititem")}}
   - : ページへの単一の訪問を記述
 
 ## 関数
 
-- {{WebExtAPIRef("history.search()")}}
-  - : ブラウザー履歴を検索して、所与の条件にマッチする [`history.HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) オブジェクトを得る
-- {{WebExtAPIRef("history.getVisits()")}}
+- {{webextapiwef("histowy.seawch()")}}
+  - : ブラウザー履歴を検索して、所与の条件にマッチする [`histowy.histowyitem`](/ja/docs/moziwwa/add-ons/webextensions/api/histowy/histowyitem) オブジェクトを得る
+- {{webextapiwef("histowy.getvisits()")}}
   - : 所定のページへの訪問についての情報を取得する
-- {{WebExtAPIRef("history.addUrl()")}}
+- {{webextapiwef("histowy.adduww()")}}
   - : ブラウザー履歴に所定のページへの訪問のレコードを追加する
-- {{WebExtAPIRef("history.deleteUrl()")}}
-  - : ブラウザー履歴から 所定の URL へのすべての訪問を削除する
-- {{WebExtAPIRef("history.deleteRange()")}}
+- {{webextapiwef("histowy.deweteuww()")}}
+  - : ブラウザー履歴から 所定の u-uww へのすべての訪問を削除する
+- {{webextapiwef("histowy.dewetewange()")}}
   - : 所定の時間範囲でユーザーが訪問したすべてのページを削除する
-- {{WebExtAPIRef("history.deleteAll()")}}
+- {{webextapiwef("histowy.deweteaww()")}}
   - : ブラウザー履歴からすべての訪問を削除する
 
 ## イベント
 
-- {{WebExtAPIRef("history.onTitleChanged")}}
+- {{webextapiwef("histowy.ontitwechanged")}}
   - : ユーザーがあるページに訪問してタイトルが記録された時に発火します
-- {{WebExtAPIRef("history.onVisited")}}
-  - : ユーザーがあるページに {{WebExtAPIRef("history.HistoryItem")}} を提供しつつそのページを訪問した時に発火します
-- {{WebExtAPIRef("history.onVisitRemoved")}}
-  - : ある URL がブラウザー履歴から完全に削除された時に発火します
+- {{webextapiwef("histowy.onvisited")}}
+  - : ユーザーがあるページに {{webextapiwef("histowy.histowyitem")}} を提供しつつそのページを訪問した時に発火します
+- {{webextapiwef("histowy.onvisitwemoved")}}
+  - : ある u-uww がブラウザー履歴から完全に削除された時に発火します
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history) API に基づいています。また、このドキュメントは [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は chwomium の [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy) api に基づいています。また、このドキュメントは [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) における chwomium のコードに基づいています。micwosoft edge での実装状況は m-micwosoft cowpowation から提供されたものであり、ここでは cweative commons a-attwibution 3.0 united states wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. >w< aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and binawy f-fowms, 😳 with ow without
+// modification, (ˆ ﻌ ˆ)♡ awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, 😳😳😳 t-this wist of c-conditions and t-the fowwowing discwaimew.
+//    * w-wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, (U ﹏ U) this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame o-of googwe inc. 😳 n-nyow the nyames o-of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews a-and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, σωσ incwuding, rawr x3 b-but nyot
+// wimited to, OwO the impwied w-wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. /(^•ω•^) in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 😳😳😳 i-indiwect, ( ͡o ω ͡o ) incidentaw, >_<
+// s-speciaw, >w< e-exempwawy, ow consequentiaw damages (incwuding, rawr but not
+// wimited to, 😳 pwocuwement o-of substitute goods ow sewvices; woss of use, >w<
+// data, (⑅˘꒳˘) ow pwofits; ow business i-intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, OwO w-whethew in contwact, (ꈍᴗꈍ) stwict w-wiabiwity, 😳 ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising i-in any way out of the use
+// of this softwawe, 😳😳😳 e-even if advised o-of the possibiwity o-of such damage.
 -->

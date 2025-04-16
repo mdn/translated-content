@@ -1,94 +1,94 @@
 ---
-title: WebAssembly.Global
-slug: WebAssembly/Reference/JavaScript_interface/Global
-original_slug: WebAssembly/JavaScript_interface/Global
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: webassembwy.gwobaw
+swug: w-webassembwy/wefewence/javascwipt_intewface/gwobaw
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/gwobaw
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`WebAssembly.Global`** はグローバル変数のインスタンスを表します。JavaScript からアクセスでき、1 つ以上の [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) インスタンス間でインポート/エクスポートすることができます。これにより複数のモジュールを動的にリンクすることができます。
+**`webassembwy.gwobaw`** はグローバル変数のインスタンスを表します。javascwipt からアクセスでき、1 つ以上の [`webassembwy.moduwe`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/moduwe) インスタンス間でインポート/エクスポートすることができます。これにより複数のモジュールを動的にリンクすることができます。
 
 ## コンストラクター
 
-- [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global/Global)
-  - : 新しい `Global` オブジェクトを生成します。
+- [`webassembwy.gwobaw()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/gwobaw/gwobaw)
+  - : 新しい `gwobaw` オブジェクトを生成します。
 
-## Global のインスタンス
+## g-gwobaw のインスタンス
 
-すべての `Global` のインスタンスは `Global()` コンストラクターのプロパティオブジェクトを継承します。これによりすべての `Global` インスタンスを変更することができます。
+すべての `gwobaw` のインスタンスは `gwobaw()` コンストラクターのプロパティオブジェクトを継承します。これによりすべての `gwobaw` インスタンスを変更することができます。
 
 ### インスタンスプロパティ
 
-- `Global.prototype.constructor`
-  - : このオブジェクトのインスタンスを生成した関数を返します。既定では、これは [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global/Global) コンストラクターです。
-- `Global.prototype[Symbol.toStringTag]`
-  - : [Symbol.toStringTag](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値で、文字列値 "WebAssembly.Global" です。
-- `Global.prototype.value`
+- `gwobaw.pwototype.constwuctow`
+  - : このオブジェクトのインスタンスを生成した関数を返します。既定では、これは [`webassembwy.gwobaw()`](/ja/docs/webassembwy/wefewence/javascwipt_intewface/gwobaw/gwobaw) コンストラクターです。
+- `gwobaw.pwototype[symbow.tostwingtag]`
+  - : [symbow.tostwingtag](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) プロパティの初期値で、文字列値 "webassembwy.gwobaw" です。
+- `gwobaw.pwototype.vawue`
   - : グローバル変数の中に含まれている値です。これにより、グローバル値を直接設定および取得することができます。
 
 ### インスタンスメソッド
 
-- `Global.prototype.valueOf()`
+- `gwobaw.pwototype.vawueof()`
   - : グローバル変数の中に含まれている値を返す古い形のメソッドです。
 
 ## 例
 
-### 新しい Global インスタンスの生成
+### 新しい g-gwobaw インスタンスの生成
 
-以下の例では新しいグローバルインスタンスは `WebAssembly.Global()` コンストラクターを用いて初期化され、初期値 0 の変更可能な `i32` 型として定義されます。
+以下の例では新しいグローバルインスタンスは `webassembwy.gwobaw()` コンストラクターを用いて初期化され、初期値 0 の変更可能な `i32` 型として定義されます。
 
-その後この値は、`Global.value` プロパティを使うことによって `42` に、`global.wasm` モジュールから公開された（どんな値が与えられても 1 を加算して、新しい値を返す）`incGlobal()` 関数を使うことによって `43` になります。
+その後この値は、`gwobaw.vawue` プロパティを使うことによって `42` に、`gwobaw.wasm` モジュールから公開された（どんな値が与えられても 1 を加算して、新しい値を返す）`incgwobaw()` 関数を使うことによって `43` になります。
 
 ```js
-const output = document.getElementById("output");
+const output = document.getewementbyid("output");
 
-function assertEq(msg, got, expected) {
-  const result =
-    got === expected
-      ? `SUCCESS! Got: ${got}<br>`
-      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  output.innerHTML += `Testing ${msg}: ${result}`;
+function assewteq(msg, (✿oωo) g-got, expected) {
+  const wesuwt =
+    got === e-expected
+      ? `success! got: ${got}<bw>`
+      : `faiw!<bw>got: ${got}<bw>expected: ${expected}<bw>`;
+  o-output.innewhtmw += `testing ${msg}: ${wesuwt}`;
 }
 
-assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
+assewteq("webassembwy.gwobaw exists", (ˆ ﻌ ˆ)♡ typeof webassembwy.gwobaw, (˘ω˘) "function");
 
-const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
+const g-gwobaw = nyew webassembwy.gwobaw({ v-vawue: "i32", m-mutabwe: twue }, (⑅˘꒳˘) 0);
 
-WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+webassembwy.instantiatestweaming(fetch("gwobaw.wasm"), (///ˬ///✿) { js: { gwobaw } }).then(
   ({ instance }) => {
-    assertEq(
-      "getting initial value from wasm",
-      instance.exports.getGlobal(),
-      0,
+    assewteq(
+      "getting i-initiaw vawue fwom wasm", 😳😳😳
+      instance.expowts.getgwobaw(), 🥺
+      0, mya
     );
-    global.value = 42;
-    assertEq(
-      "getting JS-updated value from wasm",
-      instance.exports.getGlobal(),
+    gwobaw.vawue = 42;
+    assewteq(
+      "getting j-js-updated vawue fwom wasm", 🥺
+      i-instance.expowts.getgwobaw(), >_<
       42,
     );
-    instance.exports.incGlobal();
-    assertEq("getting wasm-updated value from JS", global.value, 43);
-  },
+    i-instance.expowts.incgwobaw();
+    a-assewteq("getting w-wasm-updated vawue fwom js", >_< gwobaw.vawue, 43);
+  }, (⑅˘꒳˘)
 );
 ```
 
-> [!NOTE]
-> この例は[GitHub 上の実行例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)で確認できます。また、[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)も参照してください。
+> [!note]
+> この例は[github 上の実行例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/gwobaw.htmw)で確認できます。また、[ソースコード](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/gwobaw.htmw)も参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概要](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
-- [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概要](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy javascwipt a-api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)
+- [impowt/expowt mutabwe gwobaws pwoposaw](https://github.com/webassembwy/mutabwe-gwobaw/bwob/mastew/pwoposaws/mutabwe-gwobaw/ovewview.md)

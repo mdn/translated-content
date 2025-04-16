@@ -1,56 +1,56 @@
 ---
-title: browserAction.ColorArray
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
+titwe: bwowsewaction.cowowawway
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/cowowawway
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 ## 型
 
-RGBA 色を定義する、4 つの 0 から 255 の整数の`配列`です。4 つの値は以下のチャネルを指定します:
+w-wgba 色を定義する、4 つの 0 から 255 の整数の`配列`です。4 つの値は以下のチャネルを指定します:
 
-1. 赤(Red)
-2. 緑(Green)
-3. 青(Blue)
-4. アルファ(Alpha) (不透明度)
+1. (✿oωo) 赤(wed)
+2. ʘwʘ 緑(gween)
+3. (ˆ ﻌ ˆ)♡ 青(bwue)
+4. 😳😳😳 アルファ(awpha) (不透明度)
 
-たとえば、不透明な赤は`[255, 0, 0, 255]`です。
+たとえば、不透明な赤は`[255, 0, :3 0, 255]`です。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#type-ColorArray) API に基づいています。このドキュメントは Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
+> [!note]
+> この a-api は chwomium の[`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction#type-cowowawway) a-api に基づいています。このドキュメントは c-chwomium コードの [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json)から派生したものです。micwosoft e-edge の互換性データは m-micwosoft c-cowpowation から提供されており、cweative c-commons attwibution 3.0 united states wicense のもとにここに含まれています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. OwO aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy f-fowms, >w< with ow without
+// modification, (U ﹏ U) awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, 😳 t-this wist of conditions and the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, 😳😳😳 this w-wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution.
+//    * n-nyeithew the nyame of googwe inc. (U ﹏ U) nyow the nyames of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, 😳 incwuding, b-but nyot
+// wimited to, 😳 the impwied w-wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. in nyo event shaww the c-copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, σωσ indiwect, rawr x3 incidentaw,
+// speciaw, OwO exempwawy, /(^•ω•^) ow consequentiaw damages (incwuding, 😳😳😳 b-but nyot
+// wimited t-to, ( ͡o ω ͡o ) pwocuwement of substitute g-goods ow sewvices; w-woss of use, >_<
+// d-data, ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, >w< whethew in contwact, rawr stwict wiabiwity, ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out o-of the use
+// o-of this softwawe, 😳 even if advised o-of the possibiwity o-of such damage. >w<
 -->

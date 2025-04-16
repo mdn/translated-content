@@ -1,103 +1,103 @@
 ---
-title: data-*
-slug: Web/HTML/Reference/Global_attributes/data-*
-original_slug: Web/HTML/Global_attributes/data-*
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: data-*
+swug: web/htmw/wefewence/gwobaw_attwibutes/data-*
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/data-*
+w-w10n:
+  souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`data-*`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は**カスタムデータ属性**と呼ばれる属性の組を作り、[HTML](/ja/docs/Web/HTML) と、スクリプトによる [DOM](/ja/docs/Web/API/Document_Object_Model) 表現との間で、固有の情報を交換できるようにします。
+**`data-*`** [グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes) は**カスタムデータ属性**と呼ばれる属性の組を作り、[htmw](/ja/docs/web/htmw) と、スクリプトによる [dom](/ja/docs/web/api/document_object_modew) 表現との間で、固有の情報を交換できるようにします。
 
-{{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: d-data-*", (U ﹏ U) "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Secret agents</h1>
+```htmw i-intewactive-exampwe
+<h1>secwet a-agents</h1>
 
-<ul>
-  <li data-id="10784">Jason Walters, 003: Found dead in "A View to a Kill".</li>
-  <li data-id="97865">
-    Alex Trevelyan, 006: Agent turned terrorist leader; James' nemesis in
-    "Goldeneye".
-  </li>
-  <li data-id="45732">
-    James Bond, 007: The main man; shaken but not stirred.
-  </li>
-</ul>
+<uw>
+  <wi data-id="10784">jason wawtews, (U ﹏ U) 003: found dead in "a view to a kiww".</wi>
+  <wi data-id="97865">
+    a-awex twevewyan, (⑅˘꒳˘) 006: agent tuwned tewwowist w-weadew; james' nemesis in
+    "gowdeneye". òωó
+  </wi>
+  <wi d-data-id="45732">
+    james bond, 007: the main man; shaken b-but nyot stiwwed. ʘwʘ
+  </wi>
+</uw>
 ```
 
-```css interactive-example
-h1 {
-  margin: 0;
+```css intewactive-exampwe
+h-h1 {
+  mawgin: 0;
 }
 
-ul {
-  margin: 10px 0 0;
+u-uw {
+  mawgin: 10px 0 0;
 }
 
-li {
-  position: relative;
+wi {
+  position: wewative;
   width: 200px;
-  padding-bottom: 10px;
+  p-padding-bottom: 10px;
 }
 
-li:after {
-  content: "Data ID: " attr(data-id);
-  position: absolute;
+wi:aftew {
+  content: "data id: " attw(data-id);
+  position: a-absowute;
   top: -22px;
-  left: 10px;
-  background: black;
-  color: white;
-  padding: 2px;
-  border: 1px solid #eee;
+  w-weft: 10px;
+  b-backgwound: bwack;
+  c-cowow: white;
+  p-padding: 2px;
+  bowdew: 1px sowid #eee;
   opacity: 0;
-  transition: 0.5s opacity;
+  t-twansition: 0.5s opacity;
 }
 
-li:hover:after {
-  opacity: 1;
+wi:hovew:aftew {
+  o-opacity: 1;
 }
 ```
 
-すべてのカスタムデータは、属性を設定した要素の {{domxref("HTMLElement")}} インターフェイスを通して使用できます。 {{domxref("HTMLElement.dataset")}} プロパティがそれらへのアクセス手段を提供します。
-`*` は、 [XML 名の作成規則](https://www.w3.org/TR/REC-xml/#NT-Name)に加えて以下の制約に従う名前に置き換えることができます。
+すべてのカスタムデータは、属性を設定した要素の {{domxwef("htmwewement")}} インターフェイスを通して使用できます。 {{domxwef("htmwewement.dataset")}} プロパティがそれらへのアクセス手段を提供します。
+`*` は、 [xmw 名の作成規則](https://www.w3.owg/tw/wec-xmw/#nt-name)に加えて以下の制約に従う名前に置き換えることができます。
 
-- 大文字小文字にかかわらず、名前を `xml` で始めてはならない。
+- 大文字小文字にかかわらず、名前を `xmw` で始めてはならない。
 - 名前にコロン (`:`) を含めてはならない。
 - 名前に大文字を含めてはならない。
 
-なお、 {{domxref("HTMLElement.dataset")}} プロパティは {{domxref("DOMStringMap")}} であり、またカスタムデータ属性名のハイフン (`U+002D`) はその次の文字を大文字化したもの（キャメルケース）に変換されるので、 _data-test-value_ は `HTMLElement.dataset.testValue` （または `HTMLElement.dataset["testValue"]`）としてアクセスできます。
+なお、 {{domxwef("htmwewement.dataset")}} プロパティは {{domxwef("domstwingmap")}} であり、またカスタムデータ属性名のハイフン (`u+002d`) はその次の文字を大文字化したもの（キャメルケース）に変換されるので、 _data-test-vawue_ は `htmwewement.dataset.testvawue` （または `htmwewement.dataset["testvawue"]`）としてアクセスできます。
 
 ### 使用方法
 
-`data-*` 属性を追加すると通常の HTML 要素でも、より複雑で強力なプログラムオブジェクトになります。例えばゲームで宇宙船の "[スプライト](<https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%97%E3%83%A9%E3%82%A4%E3%83%88_(%E6%98%A0%E5%83%8F%E6%8A%80%E8%A1%93)>)_"_ を、単純な {{HTMLElement("img")}} 要素に [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性といくつかの `data-*` 属性を設定したもので表すことができるでしょう。
+`data-*` 属性を追加すると通常の htmw 要素でも、より複雑で強力なプログラムオブジェクトになります。例えばゲームで宇宙船の "[スプライト](<https://ja.wikipedia.owg/wiki/%e3%82%b9%e3%83%97%e3%83%a9%e3%82%a4%e3%83%88_(%e6%98%a0%e5%83%8f%e6%8a%80%e8%a1%93)>)_"_ を、単純な {{htmwewement("img")}} 要素に [`cwass`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass) 属性といくつかの `data-*` 属性を設定したもので表すことができるでしょう。
 
-```html
+```htmw
 <img
-  class="spaceship cruiserX3"
-  src="shipX3.png"
+  cwass="spaceship cwuisewx3"
+  swc="shipx3.png"
   data-ship-id="324"
-  data-weapons="laserI laserII"
-  data-shields="72%"
-  data-x="414354"
-  data-y="85160"
+  d-data-weapons="wasewi wasewii"
+  d-data-shiewds="72%"
+  d-data-x="414354"
+  d-data-y="85160"
   data-z="31940"
-  onclick="spaceships[this.dataset.shipId].blasted()" />
+  oncwick="spaceships[this.dataset.shipid].bwasted()" />
 ```
 
-もっと深い HTML のデータ属性の使用については、[データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)を参照してください。
+もっと深い htmw のデータ属性の使用については、[データ属性の使用](/ja/docs/weawn_web_devewopment/howto/sowve_htmw_pwobwems/use_data_attwibutes)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
-- これらの値を読み書きできる {{domxref("HTMLElement.dataset")}} プロパティ
-- [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- すべての[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)
+- これらの値を読み書きできる {{domxwef("htmwewement.dataset")}} プロパティ
+- [データ属性の使用](/ja/docs/weawn_web_devewopment/howto/sowve_htmw_pwobwems/use_data_attwibutes)

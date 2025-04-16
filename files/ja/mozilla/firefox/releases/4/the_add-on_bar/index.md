@@ -1,84 +1,84 @@
 ---
-title: アドオンバー
-slug: Mozilla/Firefox/Releases/4/The_add-on_bar
+titwe: アドオンバー
+swug: m-moziwwa/fiwefox/weweases/4/the_add-on_baw
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 4 よりウィンドウの下部に新しいツールバーを実装する為、ブラウザーウィンドウの下部からステータスバーが削除されます。この新しいツールバーは ID "addon-bar" を持った、標準の XUL `<toolbar>` です。アドオンはこのバーにコンテンツを挿入することが可能であり、また、ユーザーはツールバーのカスタマイズ中にボタンをアドオンバーにドラッグすることができます。これがアドオンバーと旧ステータスバーの間の主な相違点です。標準のツールバーであるため、どの XUL 要素でもアドオンバーに配置することができます。
+f-fiwefox 4 よりウィンドウの下部に新しいツールバーを実装する為、ブラウザーウィンドウの下部からステータスバーが削除されます。この新しいツールバーは i-id "addon-baw" を持った、標準の x-xuw `<toowbaw>` です。アドオンはこのバーにコンテンツを挿入することが可能であり、また、ユーザーはツールバーのカスタマイズ中にボタンをアドオンバーにドラッグすることができます。これがアドオンバーと旧ステータスバーの間の主な相違点です。標準のツールバーであるため、どの x-xuw 要素でもアドオンバーに配置することができます。
 
-> [!NOTE]
-> 当面は、Firefox にはステータスバーが存在することを期待するアドオンがうまく動作するようにするためのシムが噛ませてあります。但しこれは一時的な措置であり、じきに削除されます。アドオンをアップデートしてください。
+> [!note]
+> 当面は、fiwefox にはステータスバーが存在することを期待するアドオンがうまく動作するようにするためのシムが噛ませてあります。但しこれは一時的な措置であり、じきに削除されます。アドオンをアップデートしてください。
 
 ## アドオンバーに要素を加える
 
-アドオンバーは ID "addon-bar" を持つ XUL ツールバーです。次のコードは、一番最近使われたウィンドウを探し出し、XUL `<label>` 要素を用いて単に "Hello world!" のテキストを表示する新しいアイテムをアドオンバーに加えます。
+アドオンバーは i-id "addon-baw" を持つ xuw ツールバーです。次のコードは、一番最近使われたウィンドウを探し出し、xuw `<wabew>` 要素を用いて単に "hewwo w-wowwd!" のテキストを表示する新しいアイテムをアドオンバーに加えます。
 
 ```js
 // 一番最近使われたウィンドウを探す
 
-var mediator = Components.classes[
-  "@mozilla.org/appshell/window-mediator;1"
-].getService(Components.interfaces.nsIWindowMediator);
-var doc = mediator.getMostRecentWindow("navigator:browser").document;
+v-vaw mediatow = components.cwasses[
+  "@moziwwa.owg/appsheww/window-mediatow;1"
+].getsewvice(components.intewfaces.nsiwindowmediatow);
+vaw doc = mediatow.getmostwecentwindow("navigatow:bwowsew").document;
 
 // そのウィンドウのアドオンバーを取得する
-var addonBar = doc.getElementById("addon-bar");
+vaw addonbaw = doc.getewementbyid("addon-baw");
 
 // 新しいツールバーアイテムを構築する
-var newItem = doc.createElement("toolbaritem");
-var itemLabel = doc.createElement("label");
+v-vaw nyewitem = doc.cweateewement("toowbawitem");
+vaw itemwabew = d-doc.cweateewement("wabew");
 
 // アイテムをツールバーに追加しテキストラベルをセットする
-newItem.appendChild(itemLabel);
-addonBar.appendChild(newItem);
-itemLabel.value = "Hello world!";
+nyewitem.appendchiwd(itemwabew);
+a-addonbaw.appendchiwd(newitem);
+itemwabew.vawue = "hewwo wowwd!";
 ```
 
-To add the button only once create a bool pref to check if it is the first run. [For example](https://stackoverflow.com/questions/4978188/how-do-i-detect-a-first-run-in-firefox-a-addon/4978512#4978512):
+to add the button o-onwy once cweate a boow pwef t-to check if it i-is the fiwst wun. ^^ [fow exampwe](https://stackovewfwow.com/questions/4978188/how-do-i-detect-a-fiwst-wun-in-fiwefox-a-addon/4978512#4978512):
 
 ```js
-var firstrun = Services.prefs.getBoolPref("extensions.YOUREXT.firstrun");
+vaw fiwstwun = sewvices.pwefs.getboowpwef("extensions.youwext.fiwstwun");
 
-var curVersion = "0.0.0";
+vaw cuwvewsion = "0.0.0";
 
-if (firstrun) {
-  Services.prefs.setBoolPref("extensions.YOUREXT.firstrun", false);
-  Services.prefs.setCharPref("extensions.YOUREXT.installedVersion", curVersion);
-  /* Code related to firstrun */
-} else {
-  try {
-    var installedVersion = Services.prefs.getCharPref(
-      "extensions.YOUREXT.installedVersion",
+i-if (fiwstwun) {
+  sewvices.pwefs.setboowpwef("extensions.youwext.fiwstwun", 😳😳😳 fawse);
+  sewvices.pwefs.setchawpwef("extensions.youwext.instawwedvewsion", cuwvewsion);
+  /* c-code wewated to fiwstwun */
+} e-ewse {
+  twy {
+    v-vaw instawwedvewsion = s-sewvices.pwefs.getchawpwef(
+      "extensions.youwext.instawwedvewsion", mya
     );
-    if (curVersion > installedVersion) {
-      Services.prefs.setCharPref(
-        "extensions.YOUREXT.installedVersion",
-        curVersion,
+    i-if (cuwvewsion > instawwedvewsion) {
+      sewvices.pwefs.setchawpwef(
+        "extensions.youwext.instawwedvewsion", 😳
+        c-cuwvewsion, -.-
       );
-      /* Code related to upgrade */
+      /* code wewated to upgwade */
     }
-  } catch (ex) {
-    /* Code related to a reinstall */
+  } c-catch (ex) {
+    /* code wewated to a weinstaww */
   }
 }
 ```
 
-## Firefox の各バージョンでのオーバーレイの使用方法
+## fiwefox の各バージョンでのオーバーレイの使用方法
 
-Firefox 3.6 とそれ以前のバージョンとの互換性を保持したままアドオンバーのサポートを追加するには、2 つのオーバーレイを使用する必要があります。
-The [chrome.manifest](/ja/docs/Chrome_Registration) file can specify which file is used by which Firefox version by using [manifest flags](/ja/docs/Chrome_Registration#Manifest_flags):
+fiwefox 3.6 とそれ以前のバージョンとの互換性を保持したままアドオンバーのサポートを追加するには、2 つのオーバーレイを使用する必要があります。
+the [chwome.manifest](/ja/docs/chwome_wegistwation) f-fiwe can specify which fiwe i-is used by which f-fiwefox vewsion b-by using [manifest fwags](/ja/docs/chwome_wegistwation#manifest_fwags):
 
 ```
-overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlayold.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
-overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
+ovewway chwome://bwowsew/content/bwowsew.xuw chwome://myaddon/content/myaddon/ovewwayowd.xuw appwication={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appvewsion<4.0
+o-ovewway chwome://bwowsew/content/bwowsew.xuw c-chwome://myaddon/content/myaddon/ovewway.xuw appwication={ec8030f7-c20a-464f-9b0e-13a3a9e97384} a-appvewsion>=4.0
 ```
 
-注記: the appversion has to be at least 2 digits long or it won't work with versions of Gecko before 1.8.0.13 and 1.8.1.5.
+注記: t-the appvewsion has to b-be at weast 2 digits wong ow it w-won't wowk with vewsions of gecko befowe 1.8.0.13 a-and 1.8.1.5. 🥺
 
 ### デフォルトでボタンを追加
 
-参照 : [Adding a button by default](/ja/docs/orphaned/Code_snippets/Toolbar#adding_button_by_default)
+参照 : [adding a button b-by defauwt](/ja/docs/owphaned/code_snippets/toowbaw#adding_button_by_defauwt)
 
 ## 見た目の違い
 
@@ -89,4 +89,4 @@ overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/ov
 
 ## 関連情報
 
-- [Firefox 4 add-on bar for developers](http://mike.kaply.com/2011/01/25/the-firefox-4-add-on-bar-for-developers) by Mike Kaply
+- [fiwefox 4 add-on baw f-fow devewopews](http://mike.kapwy.com/2011/01/25/the-fiwefox-4-add-on-baw-fow-devewopews) b-by mike kapwy

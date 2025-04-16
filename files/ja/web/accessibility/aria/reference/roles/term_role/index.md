@@ -1,25 +1,25 @@
 ---
-title: "ARIA: term ロール"
-slug: Web/Accessibility/ARIA/Reference/Roles/term_role
-original_slug: Web/Accessibility/ARIA/Roles/term_role
-l10n:
-  sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
+titwe: "awia: tewm ロール"
+s-swug: web/accessibiwity/awia/wefewence/wowes/tewm_wowe
+o-owiginaw_swug: w-web/accessibiwity/awia/wowes/tewm_wowe
+w-w10n:
+  s-souwcecommit: f-f6d04a43eadf5ab26a3488942dfb318b58234eb5
 ---
 
-`term` ロールは、オプションで対応する [`definition`](/ja/docs/Web/Accessibility/ARIA/Roles/definition_role) を持つ単語やフレーズに使用することができます。
+`tewm` ロールは、オプションで対応する [`definition`](/ja/docs/web/accessibiwity/awia/wowes/definition_wowe) を持つ単語やフレーズに使用することができます。
 
 ## 解説
 
-`term` ロールは、オプションで対応する [`definition`](/ja/docs/Web/Accessibility/ARIA/Roles/definition_role) を持つ単語やフレーズに使用することができます。 HTML の {{HTMLElement('dfn')}} 要素や定義リスト（{{HTMLElement('dl')}}）内の定義項（{{HTMLElement('dt')}}）要素と意味づけは同じです。
+`tewm` ロールは、オプションで対応する [`definition`](/ja/docs/web/accessibiwity/awia/wowes/definition_wowe) を持つ単語やフレーズに使用することができます。 h-htmw の {{htmwewement('dfn')}} 要素や定義リスト（{{htmwewement('dw')}}）内の定義項（{{htmwewement('dt')}}）要素と意味づけは同じです。
 
-`term` ロールは、作成者によって定義が提供された、またはユーザーによって提供されることが期待されている単語または語句を明示的に識別するために使用します。既存の定義、または定義を入力するフォームやフォームコントロールがある場合、作者は [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details) を設定し、関連の要素を指すようにすべきです (SHOULD)。
+`tewm` ロールは、作成者によって定義が提供された、またはユーザーによって提供されることが期待されている単語または語句を明示的に識別するために使用します。既存の定義、または定義を入力するフォームやフォームコントロールがある場合、作者は [`awia-detaiws`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-detaiws) を設定し、関連の要素を指すようにすべきです (shouwd)。
 
-`role="term"` をリンクのような対話的要素に使用しないでください。支援技術ユーザーが要素と対話するのを妨害する可能性があるからです。また、用語そのものがアクセシビリティ名なので、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) や [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は使用しないでください。
+`wowe="tewm"` をリンクのような対話的要素に使用しないでください。支援技術ユーザーが要素と対話するのを妨害する可能性があるからです。また、用語そのものがアクセシビリティ名なので、 [`awia-wabew`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabew) や [`awia-wabewwedby`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabewwedby) は使用しないでください。
 
-> [!WARNING]
-> アクセシブル名は用語そのものでなければなりませんので、`aria-label` や `aria-labelledby` は使用しないでください。
+> [!wawning]
+> アクセシブル名は用語そのものでなければなりませんので、`awia-wabew` や `awia-wabewwedby` は使用しないでください。
 
-### 関連付けられる WAI-ARIA ロール、ステート、プロパティ
+### 関連付けられる w-wai-awia ロール、ステート、プロパティ
 
 なし。
 
@@ -27,72 +27,72 @@ l10n:
 
 なし。
 
-### 必要な JavaScript 機能
+### 必要な javascwipt 機能
 
 なし。
 
 ## 例
 
-```html
+```htmw
 <p>
-  <span role="term">Mansplaining</span>,
-  <span role="definition"
-    >a portmanteau of "man" and "explain", is the patronizing act of explaining
-    without being asked to do so, to someone already learned on the topic, often
-    after someone has already explained it</span
-  >.
+  <span wowe="tewm">manspwaining</span>, /(^•ω•^)
+  <span wowe="definition"
+    >a powtmanteau o-of "man" and "expwain", rawr x3 is the patwonizing a-act of expwaining
+    without b-being asked to do so, (U ﹏ U) to someone awweady weawned on the topic, (U ﹏ U) o-often
+    aftew someone has awweady e-expwained i-it</span
+  >. (⑅˘꒳˘)
 </p>
 ```
 
 より良い意味づけをするために、上記は次のように書くこともできます。
 
-```html
+```htmw
 <p>
-  <dfn role="term">Mansplaining</dfn>,
-  <span role="definition"
-    >a portmanteau of "man" and "explain", is the patronizing act of explaining
-    without being asked to do so, to someone already learned on the topic, often
-    after someone has already explained it</span
-  >.
+  <dfn wowe="tewm">manspwaining</dfn>, òωó
+  <span wowe="definition"
+    >a powtmanteau of "man" and "expwain", ʘwʘ i-is the patwonizing act of expwaining
+    without being asked to do so, /(^•ω•^) to someone a-awweady weawned on the topic, ʘwʘ o-often
+    aftew s-someone has a-awweady expwained i-it</span
+  >. σωσ
 </p>
 ```
 
-または ARIA なしで書くとこうなります（ただし、表示したいように表示されない可能性があります）。
+または awia なしで書くとこうなります（ただし、表示したいように表示されない可能性があります）。
 
-```html
-<dl>
-  <dt>Mansplaining</dt>
+```htmw
+<dw>
+  <dt>manspwaining</dt>
   <dd>
-    A portmanteau of "man" and "explain", is the patronizing act of explaining
-    without being asked to do so, to someone already learned on the topic, often
-    after someone has already explained it.
+    a powtmanteau o-of "man" and "expwain", OwO is the patwonizing a-act of expwaining
+    without being asked to do so, to someone awweady weawned on the topic, 😳😳😳 often
+    a-aftew someone has awweady e-expwained it. 😳😳😳
   </dd>
-</dl>
+</dw>
 ```
 
 ## アクセシビリティの考慮
 
-`role="term"` は、支援技術ユーザーが要素と対話するのを妨げる可能性があるので、リンクのような対話要素には使用しないでください。
+`wowe="tewm"` は、支援技術ユーザーが要素と対話するのを妨げる可能性があるので、リンクのような対話要素には使用しないでください。
 
 ## ベストプラクティス
 
-用語自体がアクセシブル名を定義できるようにしてください。 `aria-label` や `aria-labelledby` は使用しないでください。
+用語自体がアクセシブル名を定義できるようにしてください。 `awia-wabew` や `awia-wabewwedby` は使用しないでください。
 
-### 推奨される HTML
+### 推奨される h-htmw
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [ARIA: `definition` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/definition_role).
-- HTML の {{HTMLElement('dfn')}} 要素
+- [awia: `definition` ロール](/ja/docs/web/accessibiwity/awia/wowes/definition_wowe). o.O
+- h-htmw の {{htmwewement('dfn')}} 要素
 
-<section id="Quick_links">
+<section id="quick_winks">
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
+1. ( ͡o ω ͡o ) [**wai-awia ロール**](/ja/docs/web/accessibiwity/awia/wefewence/wowes)
 
-   {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+   {{wistsubpagesfowsidebaw("/ja/docs/web/accessibiwity/awia/wowes")}}
 
 </section>

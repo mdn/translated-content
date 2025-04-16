@@ -1,37 +1,37 @@
 ---
-title: "ServiceWorkerContainer: error イベント"
-slug: conflicting/Web/API/ServiceWorker/error_event
-original_slug: Web/API/ServiceWorkerContainer/error_event
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: "sewvicewowkewcontainew: ewwow イベント"
+s-swug: confwicting/web/api/sewvicewowkew/ewwow_event
+o-owiginaw_swug: w-web/api/sewvicewowkewcontainew/ewwow_event
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Service Workers API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{apiwef("sewvice w-wowkews a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-`error` イベントは、サービスワーカーでエラーが発生したときに発生します。
+`ewwow` イベントは、サービスワーカーでエラーが発生したときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", rawr x3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", rawr (event) => {});
 
-onerror = (event) => {};
+onewwow = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-navigator.serviceWorker.onerror = (errorevent) => {
-  console.error(`受信したエラーメッセージ: ${errorevent.message}`);
+nyavigatow.sewvicewowkew.onewwow = (ewwowevent) => {
+  consowe.ewwow(`受信したエラーメッセージ: ${ewwowevent.message}`);
 };
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

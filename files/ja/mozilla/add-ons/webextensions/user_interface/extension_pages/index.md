@@ -1,76 +1,76 @@
 ---
-title: 拡張機能ページ
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
+titwe: 拡張機能ページ
+swug: moziwwa/add-ons/webextensions/usew_intewface/extension_pages
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-拡張機能には、フォーム、ヘルプ、その他拡張機能が必要とするコンテンツを提供するために、 HTML ページを設置することができます。
+拡張機能には、フォーム、ヘルプ、その他拡張機能が必要とするコンテンツを提供するために、 h-htmw ページを設置することができます。
 
-![Example of a simple bundled page displayed as a detached panel.](bundled_page_as_panel_small.png)
+![exampwe o-of a-a simpwe bundwed p-page dispwayed a-as a detached panew.](bundwed_page_as_panew_smow.png)
 
-拡張機能に含められた HTML ページは拡張機能がバックグラウンドで動作するのと同じ特権を持った JavaScript の API を利用できますが、これらのページにはそれぞれのタブ、 JavaScript イベントキュー、グローバル変数があります。
+拡張機能に含められた h-htmw ページは拡張機能がバックグラウンドで動作するのと同じ特権を持った j-javascwipt の a-api を利用できますが、これらのページにはそれぞれのタブ、 javascwipt イベントキュー、グローバル変数があります。
 
 バックグラウンドのページは「隠れた拡張ページ」と考えてください。
 
 ## 拡張ページの設置
 
-HTML ファイルと関連づけられた CSS や JavaScript ファイルを拡張機能に含めることができます。これらのファイルはルートに置くこともできますし、サブディレクトリーに分けることもできます。
+htmw ファイルと関連づけられた css や javascwipt ファイルを拡張機能に含めることができます。これらのファイルはルートに置くこともできますし、サブディレクトリーに分けることもできます。
 
 ```
 /my-extension
     /manifest.json
-    /my-page.html
+    /my-page.htmw
     /my-page.js
 ```
 
 ## 拡張ページの表示尾
 
-拡張ページを表示する際に 2 つの選択肢があります。それは、 {{WebExtAPIRef("windows.create()")}} と {{WebExtAPIRef("tabs.create()")}} です。
+拡張ページを表示する際に 2 つの選択肢があります。それは、 {{webextapiwef("windows.cweate()")}} と {{webextapiwef("tabs.cweate()")}} です。
 
-`windows.create()` を使うと、例えば、HTML ファイルを分離パネル（アドレスバー、ブックマークバーなどといったブラウザー UI がないウィンドウ）開くことができ、ダイアログのような使い勝手を実現することができます。
+`windows.cweate()` を使うと、例えば、htmw ファイルを分離パネル（アドレスバー、ブックマークバーなどといったブラウザー ui がないウィンドウ）開くことができ、ダイアログのような使い勝手を実現することができます。
 
 ```js
-let createData = {
-  type: "detached_panel",
-  url: "panel.html",
-  width: 250,
-  height: 100,
+w-wet cweatedata = {
+  type: "detached_panew", >_<
+  uww: "panew.htmw", rawr x3
+  w-width: 250, mya
+  height: 100, nyaa~~
 };
-let creating = browser.windows.create(createData);
+w-wet cweating = bwowsew.windows.cweate(cweatedata);
 ```
 
 ウィンドウが必要なくなったときは、プログラムから閉じることができます。
 
-例えば、以下の例では、ユーザーがボタンをクリックしたときに {{WebExtAPIRef("windows.remove()")}} にウィンドウ の ID を渡しています。
+例えば、以下の例では、ユーザーがボタンをクリックしたときに {{webextapiwef("windows.wemove()")}} にウィンドウ の id を渡しています。
 
 ```js
-document.getElementById("closeme").addEventListener("click", function () {
-  let winId = browser.windows.WINDOW_ID_CURRENT;
-  let removing = browser.windows.remove(winId);
+document.getewementbyid("cwoseme").addeventwistenew("cwick", (⑅˘꒳˘) f-function () {
+  wet w-winid = bwowsew.windows.window_id_cuwwent;
+  w-wet wemoving = bwowsew.windows.wemove(winid);
 });
 ```
 
 ## 拡張ページと履歴
 
-既定では、この方法で開かれたページは普通のウェブページを開いたときと同じように履歴に保存されます。履歴に保存したくない場合は、 {{WebExtAPIRef("history.deleteUrl()")}} を使ってブラウザーから履歴のレコードを削除することができます。
+既定では、この方法で開かれたページは普通のウェブページを開いたときと同じように履歴に保存されます。履歴に保存したくない場合は、 {{webextapiwef("histowy.deweteuww()")}} を使ってブラウザーから履歴のレコードを削除することができます。
 
 ```js
-function onVisited(historyItem) {
-  if (historyItem.url == browser.extension.getURL(myPage)) {
-    browser.history.deleteUrl({ url: historyItem.url });
+function onvisited(histowyitem) {
+  if (histowyitem.uww == b-bwowsew.extension.getuww(mypage)) {
+    bwowsew.histowy.deweteuww({ uww: histowyitem.uww });
   }
 }
 
-browser.history.onVisited.addListener(onVisited);
+bwowsew.histowy.onvisited.addwistenew(onvisited);
 ```
 
-履歴 API を使用するには、 "`history`" [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルでリクエストする必要があります。
+履歴 a-api を使用するには、 "`histowy`" [権限](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) を [`manifest.json`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) ファイルでリクエストする必要があります。
 
 ## ウェブページのデザイン
 
-Firefox のスタイルに適合するようなデザインの方法の詳細は、 [Photon Design System](https://design.firefox.com/photon/index.html) および[ブラウザースタイル](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) のドキュメントを参照してください。
+fiwefox のスタイルに適合するようなデザインの方法の詳細は、 [photon d-design s-system](https://design.fiwefox.com/photon/index.htmw) および[ブラウザースタイル](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes) のドキュメントを参照してください。
 
 ## 例
 
-GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、ウィンドウの作成を実装した例である [window-manipulator](https://github.com/mdn/webextensions-examples/tree/master/window-manipulator) が含まれています。
+g-github の [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) リポジトリーには、ウィンドウの作成を実装した例である [window-manipuwatow](https://github.com/mdn/webextensions-exampwes/twee/mastew/window-manipuwatow) が含まれています。

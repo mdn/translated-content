@@ -1,82 +1,82 @@
 ---
-title: devtools.panels
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
+titwe: devtoows.panews
+swug: m-moziwwa/add-ons/webextensions/api/devtoows/panews
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis) を見てください。
+> [!note]
+> この a-api は [chwome d-devtoows a-apis](https://devewopew.chwome.com/extensions/devtoows) に基づいていますが、fiwefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [wimitations o-of the d-devtoows apis](/ja/docs/moziwwa/add-ons/webextensions/using_the_devtoows_apis#wimitations_of_the_devtoows_apis) を見てください。
 
-`devtools.panels` API によって開発ツール拡張機能では開発ツールウィンドウ内のユーザーインターフェイスの定義ができます。
+`devtoows.panews` a-api によって開発ツール拡張機能では開発ツールウィンドウ内のユーザーインターフェイスの定義ができます。
 
-開発ツールウィンドウにはいくつもの個別のツールがあります - JavaScript デバッガー、ネットワークモニター、などが。最上位のタブの行でユーザーは色々なツールを切り替えられます。ツールの UI をホストするこのウィンドウは「パネル」と呼ばれます。
+開発ツールウィンドウにはいくつもの個別のツールがあります - j-javascwipt デバッガー、ネットワークモニター、などが。最上位のタブの行でユーザーは色々なツールを切り替えられます。ツールの ui をホストするこのウィンドウは「パネル」と呼ばれます。
 
-`devtools.panels` API にて開発ツールウィンドウ内の新規パネルを作成できます。
+`devtoows.panews` api にて開発ツールウィンドウ内の新規パネルを作成できます。
 
-すべての `devtools` API と同様に、この API は manifest.json [devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えばパネル自身のドキュメント)の中だけでコードを利用できます。これ以上は [開発ツールを拡張する](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)を見てください。
+すべての `devtoows` api と同様に、この api は manifest.json [devtoows_page](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page) キー内に定義されたドキュメントや、拡張機能が作成するその他の開発ツールドキュメント(例えばパネル自身のドキュメント)の中だけでコードを利用できます。これ以上は [開発ツールを拡張する](/ja/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows)を見てください。
 
 ## 型
 
-- [`devtools.panels.ElementsPanel`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel)
-  - : ブラウザーの開発ツールの HTML/CSS インスペクターを表す
-- [`devtools.panels.ExtensionPanel`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel)
+- [`devtoows.panews.ewementspanew`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows.panews/ewementspanew)
+  - : ブラウザーの開発ツールの h-htmw/css インスペクターを表す
+- [`devtoows.panews.extensionpanew`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows.panews/extensionpanew)
   - : 拡張機能によって作られた開発ツールパネルを表す
-- [`devtools.panels.ExtensionSidebarPane`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane)
-  - : ブラウザーの開発ツールの HTML/CSS インスペクターに、拡張機能が追加したペインを表す
+- [`devtoows.panews.extensionsidebawpane`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows.panews/extensionsidebawpane)
+  - : ブラウザーの開発ツールの htmw/css インスペクターに、拡張機能が追加したペインを表す
 
 ## プロパティ
 
-- [`devtools.panels.elements`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements)
-  - : [`ElementsPanel`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel) オブジェクトの参照
-- [`devtools.panels.themeName`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName)
+- [`devtoows.panews.ewements`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows.panews/ewements)
+  - : [`ewementspanew`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows.panews/ewementspanew) オブジェクトの参照
+- [`devtoows.panews.themename`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows.panews/themename)
   - : 現在の開発ツールテーマの名前
 
 ## 関数
 
-- [`devtools.panels.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/create)
+- [`devtoows.panews.cweate()`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows.panews/cweate)
   - : 開発ツールを作成する
 
 ## イベント
 
-- [`devtools.panels.onThemeChanged`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged)
+- [`devtoows.panews.onthemechanged`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows.panews/onthemechanged)
   - : 開発ツールテーマが変更された時に発火する
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> この API は Chromium の [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!note]
+> この api は c-chwomium の [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews) api に基づいています。micwosoft e-edge での実装状況は micwosoft cowpowation から提供されたものであり、ここでは cweative commons a-attwibution 3.0 united states w-wicense に従っています。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. σωσ aww wights wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, OwO with ow without
+// modification, /(^•ω•^) awe p-pewmitted pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above c-copywight
+// nyotice, this wist of conditions and t-the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, this wist of conditions a-and the f-fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. ( ͡o ω ͡o )
+//    * n-neithew the nyame of googwe inc. >_< n-now the nyames o-of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, incwuding, rawr but nyot
+// wimited to, 😳 the impwied w-wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe d-discwaimed. >w< in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, (⑅˘꒳˘) indiwect, incidentaw, OwO
+// speciaw, (ꈍᴗꈍ) exempwawy, 😳 ow c-consequentiaw damages (incwuding, 😳😳😳 but nyot
+// wimited t-to, mya pwocuwement o-of substitute g-goods ow sewvices; woss of u-use, mya
+// data, ow p-pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, (⑅˘꒳˘) w-whethew in c-contwact, (U ﹏ U) stwict w-wiabiwity, mya ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, ʘwʘ even if advised of the possibiwity of such damage. (˘ω˘)
 -->

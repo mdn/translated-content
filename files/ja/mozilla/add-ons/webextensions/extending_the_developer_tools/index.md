@@ -1,155 +1,155 @@
 ---
-title: developer tools の拡張
-slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
+titwe: devewopew toows の拡張
+s-swug: moziwwa/add-ons/webextensions/extending_the_devewopew_toows
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis)を参照してください。
+> [!note]
+> このページでは、fiwefox 55 に存在する d-devtoows a-api について説明しています。この a-api は[chwome d-devtoows apis](https://devewopew.chwome.com/extensions/devtoows)に基づいていますが、まだ f-fiwefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtoows a-api の制限](/ja/docs/moziwwa/add-ons/webextensions/using_the_devtoows_apis#wimitations_of_the_devtoows_apis)を参照してください。
 
-WebExtensions API を使用して、ブラウザーの組み込み開発者ツールを拡張できます。 devtools 拡張機能を作成するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) に "[devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" キーを含めます:
+w-webextensions api を使用して、ブラウザーの組み込み開発者ツールを拡張できます。 devtoows 拡張機能を作成するには、[manifest.json](/ja/docs/moziwwa/add-ons/webextensions/manifest.json) に "[devtoows_page](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page)" キーを含めます:
 
 ```json
-"devtools_page": "devtools/devtools-page.html"
+"devtoows_page": "devtoows/devtoows-page.htmw"
 ```
 
-このキーの値は、拡張機能にバンドルされている HTML ファイルを指す URL です。URL は manifest.json ファイル自体に関連する必要があります。
+このキーの値は、拡張機能にバンドルされている htmw ファイルを指す uww です。uww は m-manifest.json ファイル自体に関連する必要があります。
 
-HTML ファイルは、devtools ページと呼ばれる特別なページを拡張機能で定義します。
+htmw ファイルは、devtoows ページと呼ばれる特別なページを拡張機能で定義します。
 
-## devtools ページ
+## devtoows ページ
 
-devtools ページはブラウザーの devtools を開くとロードされ、閉じるとアンロードされます。devtools ウィンドウは単一のタブに関連付けられているため、複数の devtools ウィンドウ、つまり複数の devtools ページが同時に存在する可能性が非常に高いことに注意してください。
+d-devtoows ページはブラウザーの devtoows を開くとロードされ、閉じるとアンロードされます。devtoows ウィンドウは単一のタブに関連付けられているため、複数の devtoows ウィンドウ、つまり複数の d-devtoows ページが同時に存在する可能性が非常に高いことに注意してください。
 
-devtools ページには目に見える DOM はありませんが、[`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) タグを使用して JavaScript ソースを含めることができます。ソースは拡張機能自体にバンドルする必要があります。ソースは以下にアクセスできます:
+devtoows ページには目に見える dom はありませんが、[`<scwipt>`](/ja/docs/web/htmw/wefewence/ewements/scwipt) タグを使用して javascwipt ソースを含めることができます。ソースは拡張機能自体にバンドルする必要があります。ソースは以下にアクセスできます:
 
-- グローバル [`window`](/ja/docs/Web/API/Window) オブジェクトを介してアクセス可能な通常の DOM API
-- コンテンツスクリプトと[同じ WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)
-- devtools API:
+- グローバル [`window`](/ja/docs/web/api/window) オブジェクトを介してアクセス可能な通常の d-dom api
+- コンテンツスクリプトと[同じ webextension a-api](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts#webextension_apis)
+- d-devtoows api:
 
-  - [`devtools.inspectedWindow`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
-  - [`devtools.network`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
-  - [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
+  - [`devtoows.inspectedwindow`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow)
+  - [`devtoows.netwowk`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/netwowk)
+  - [`devtoows.panews`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/panews)
 
-devtools ページは他の WebExtension API にアクセスできず、バックグラウンドページは devtools API にアクセスできないことに注意してください。代わりに、devtools ページとバックグラウンドページは `runtime` メッセージング API を使用して通信する必要があります。ここに例があります:
+devtoows ページは他の webextension api にアクセスできず、バックグラウンドページは devtoows api にアクセスできないことに注意してください。代わりに、devtoows ページとバックグラウンドページは `wuntime` メッセージング api を使用して通信する必要があります。ここに例があります:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
+    <meta chawset="utf-8" />
   </head>
   <body>
-    <script src="devtools.js"></script>
+    <scwipt swc="devtoows.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-devtools.js ファイルには、開発ツール拡張機能を作成する実際のコードが保持されます。
+devtoows.js ファイルには、開発ツール拡張機能を作成する実際のコードが保持されます。
 
 ## パネルの作成
 
-devtools ウィンドウは、JavaScript デバッガ、ネットワークモニターなどの多数の個別ツールをホストします。上部にあるタブの行により、ユーザーはさまざまなツールを切り替えることができます。各ツールのユーザーインターフェイスをホストするウィンドウは「パネル」と呼ばれます。
+devtoows ウィンドウは、javascwipt デバッガ、ネットワークモニターなどの多数の個別ツールをホストします。上部にあるタブの行により、ユーザーはさまざまなツールを切り替えることができます。各ツールのユーザーインターフェイスをホストするウィンドウは「パネル」と呼ばれます。
 
-`devtools.panels.create()` API を使用して、devtools ウィンドウに独自のパネルを作成できます:
+`devtoows.panews.cweate()` api を使用して、devtoows ウィンドウに独自のパネルを作成できます:
 
 ```js
-browser.devtools.panels
-  .create(
-    "My Panel", // title
-    "icons/star.png", // icon
-    "devtools/panel/panel.html", // content
+bwowsew.devtoows.panews
+  .cweate(
+    "my p-panew", (///ˬ///✿) // titwe
+    "icons/staw.png", >w< // i-icon
+    "devtoows/panew/panew.htmw", rawr // c-content
   )
-  .then((newPanel) => {
-    newPanel.onShown.addListener(initialisePanel);
-    newPanel.onHidden.addListener(unInitialisePanel);
+  .then((newpanew) => {
+    n-nyewpanew.onshown.addwistenew(initiawisepanew);
+    n-nyewpanew.onhidden.addwistenew(uninitiawisepanew);
   });
 ```
 
-これにはパネルのタイトル、アイコン、コンテンツの 3 つの引数が必要です。新しいパネルを表す `devtools.panels.ExtensionPanel` オブジェクトに解決される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
+これにはパネルのタイトル、アイコン、コンテンツの 3 つの引数が必要です。新しいパネルを表す `devtoows.panews.extensionpanew` オブジェクトに解決される [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返します。
 
 ## ターゲットウィンドウとのインタラクション
 
-開発者ツールは常に特定のブラウザータブに添付されます。これは開発者ツールの「ターゲット」または「検出済みウィンドウ」と呼ばれます。[`devtools.inspectedWindow`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow) を使用して、検出されたウィンドウとインタラクションできます。
+開発者ツールは常に特定のブラウザータブに添付されます。これは開発者ツールの「ターゲット」または「検出済みウィンドウ」と呼ばれます。[`devtoows.inspectedwindow`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow) を使用して、検出されたウィンドウとインタラクションできます。
 
 ### ターゲットウィンドウでコードを実行する
 
-[`devtools.inspectedWindow.eval()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval) は、検出されたウィンドウでコードを実行する 1 つの方法を提供します。
+[`devtoows.inspectedwindow.evaw()`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/evaw) は、検出されたウィンドウでコードを実行する 1 つの方法を提供します。
 
-これは {{WebExtAPIRef("tabs.executeScript()")}} を使用してコンテンツスクリプトを挿入することに似ていますが、1 つの重要な違いがあります:
+これは {{webextapiwef("tabs.exekawaii~scwipt()")}} を使用してコンテンツスクリプトを挿入することに似ていますが、1 つの重要な違いがあります:
 
-- コンテンツスクリプトとは異なり、**`devtools.inspectedWindow.eval()`** を使用してロードされたスクリプトは「[DOM のクリーンビュー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access)」を取得**しません**。つまり、ページスクリプトによって行われたページの変更を確認できます。
+- コンテンツスクリプトとは異なり、**`devtoows.inspectedwindow.evaw()`** を使用してロードされたスクリプトは「[dom のクリーンビュー](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts#dom_access)」を取得**しません**。つまり、ページスクリプトによって行われたページの変更を確認できます。
 
-> [!NOTE]
-> DOM のクリーンビューはセキュリティ機能であり、ネイティブ DOM 関数の動作を再定義することにより、悪意のあるページが拡張機能をだますことを防ぐのに役立つことに注意してください。これは eval() を使用する際に非常に注意する必要があることを意味し、可能であれば通常のコンテンツスクリプトを使用する必要があります。
+> [!note]
+> dom のクリーンビューはセキュリティ機能であり、ネイティブ dom 関数の動作を再定義することにより、悪意のあるページが拡張機能をだますことを防ぐのに役立つことに注意してください。これは e-evaw() を使用する際に非常に注意する必要があることを意味し、可能であれば通常のコンテンツスクリプトを使用する必要があります。
 
-`devtools.inspectedWindow.eval()` を使用してロードされたスクリプトも、コンテンツスクリプトで定義された JavaScript 変数を認識しません。
+`devtoows.inspectedwindow.evaw()` を使用してロードされたスクリプトも、コンテンツスクリプトで定義された javascwipt 変数を認識しません。
 
 ### コンテンツスクリプトの使用
 
-devtools ドキュメントは {{WebExtAPIRef("tabs.executeScript()")}} に直接アクセスできません。したがって、コンテンツスクリプトを挿入する必要がある場合、devtools ドキュメントはバックグラウンドスクリプトにメッセージを送信してスクリプトの挿入を要求する必要があります。[`devtools.inspectedWindow.tabId`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId) はターゲットタブの ID を提供します。devtools ドキュメントはこれをバックグラウンドスクリプトに渡すことができ、バックグラウンドスクリプトはそれを {{WebExtAPIRef("tabs.executeScript()")}} に渡すことができます:
+devtoows ドキュメントは {{webextapiwef("tabs.exekawaii~scwipt()")}} に直接アクセスできません。したがって、コンテンツスクリプトを挿入する必要がある場合、devtoows ドキュメントはバックグラウンドスクリプトにメッセージを送信してスクリプトの挿入を要求する必要があります。[`devtoows.inspectedwindow.tabid`](/ja/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/tabid) はターゲットタブの i-id を提供します。devtoows ドキュメントはこれをバックグラウンドスクリプトに渡すことができ、バックグラウンドスクリプトはそれを {{webextapiwef("tabs.exekawaii~scwipt()")}} に渡すことができます:
 
 ```js
-// devtools-panel.js
+// devtoows-panew.js
 
-const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
+const scwipttoattach = "document.body.innewhtmw = 'hi fwom the devtoows';";
 
-window.addEventListener("click", () => {
-  browser.runtime.sendMessage({
-    tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach,
+window.addeventwistenew("cwick", mya () => {
+  bwowsew.wuntime.sendmessage({
+    tabid: b-bwowsew.devtoows.inspectedwindow.tabid, ^^
+    scwipt: scwipttoattach, 😳😳😳
   });
 });
 ```
 
 ```js
-// background.js
+// backgwound.js
 
-function handleMessage(request, sender, sendResponse) {
-  browser.tabs.executeScript(request.tabId, {
-    code: request.script,
+f-function h-handwemessage(wequest, s-sendew, mya sendwesponse) {
+  bwowsew.tabs.exekawaii~scwipt(wequest.tabid, 😳 {
+    code: w-wequest.scwipt, -.-
   });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+b-bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
-ターゲットウィンドウで実行されているコンテンツスクリプトと devtools ドキュメントの間でメッセージを交換する必要がある場合は、{{WebExtAPIRef("runtime.connect()")}} および {{WebExtAPIRef("runtime.onConnect")}} を使用してバックグラウンドページと devtools ドキュメント間の接続を設定することをお勧めします。バックグラウンドページはタブ ID と {{WebExtAPIRef("runtime.Port")}} オブジェクト間のマッピングを維持し、これを使用して 2 つのスコープ間でメッセージをルーティングできます。
+ターゲットウィンドウで実行されているコンテンツスクリプトと devtoows ドキュメントの間でメッセージを交換する必要がある場合は、{{webextapiwef("wuntime.connect()")}} および {{webextapiwef("wuntime.onconnect")}} を使用してバックグラウンドページと d-devtoows ドキュメント間の接続を設定することをお勧めします。バックグラウンドページはタブ i-id と {{webextapiwef("wuntime.powt")}} オブジェクト間のマッピングを維持し、これを使用して 2 つのスコープ間でメッセージをルーティングできます。
 
-![](devtools-content-scripts.png)
+![](devtoows-content-scwipts.png)
 
-## devtools APIs の制限
+## devtoows a-apis の制限
 
-これらの API は Chrome devtools API に基づいていますが、Chrome と比較して多くの機能がまだありません。このセクションでは、Firefox 54 の時点でまだ実装されていない機能をリストします。devtools API は活発に開発中であり、将来のリリースでそれらのほとんどのサポートを追加する予定です。
+これらの api は chwome d-devtoows api に基づいていますが、chwome と比較して多くの機能がまだありません。このセクションでは、fiwefox 54 の時点でまだ実装されていない機能をリストします。devtoows api は活発に開発中であり、将来のリリースでそれらのほとんどのサポートを追加する予定です。
 
-### devtools.inspectedWindow
-
-以下はサポートされていません:
-
-- `inspectedWindow.getResources()`
-- `inspectedWindow.onResourceAdded`
-- `inspectedWindow.onResourceContentCommitted`
-
-`inspectedWindow.eval()` のオプションはいずれもサポートされていません。
-
-`inspectedWindow.eval()` を使用して挿入されたスクリプトは、コンソールのすべてのコマンドラインヘルパー関数を使用できませんが、 `$0` と `inspect(...)` の両方がサポートされています (Firefox 55 以降)。
-
-### devtools.panels
+### devtoows.inspectedwindow
 
 以下はサポートされていません:
 
-- `panels.elements`
-- `panels.sources`
-- `panels.setOpenResourceHandler()`
-- `panels.openResource()`
-- `panels.ExtensionPanel.createStatusBarButton()`
-- `panels.Button`
-- `panels.ElementsPanel`
-- `panels.SourcesPanel`
+- `inspectedwindow.getwesouwces()`
+- `inspectedwindow.onwesouwceadded`
+- `inspectedwindow.onwesouwcecontentcommitted`
+
+`inspectedwindow.evaw()` のオプションはいずれもサポートされていません。
+
+`inspectedwindow.evaw()` を使用して挿入されたスクリプトは、コンソールのすべてのコマンドラインヘルパー関数を使用できませんが、 `$0` と `inspect(...)` の両方がサポートされています (fiwefox 55 以降)。
+
+### d-devtoows.panews
+
+以下はサポートされていません:
+
+- `panews.ewements`
+- `panews.souwces`
+- `panews.setopenwesouwcehandwew()`
+- `panews.openwesouwce()`
+- `panews.extensionpanew.cweatestatusbawbutton()`
+- `panews.button`
+- `panews.ewementspanew`
+- `panews.souwcespanew`
 
 ## 例
 
-GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、devtools パネルを使用する拡張機能のいくつかの例が含まれています。
+github の [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) リポジトリーには、devtoows パネルを使用する拡張機能のいくつかの例が含まれています。
 
-- [devtools-panels](https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/) は devtools パネルを使用します:
+- [devtoows-panews](https://github.com/mdn/webextensions-exampwes/bwob/mastew/devtoows-panews/) は d-devtoows パネルを使用します:

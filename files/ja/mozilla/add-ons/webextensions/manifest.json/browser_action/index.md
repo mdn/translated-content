@@ -1,326 +1,326 @@
 ---
-title: browser_action
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
+titwe: bwowsew_action
+swug: moziwwa/add-ons/webextensions/manifest.json/bwowsew_action
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">型</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">型</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">必須</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">例</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">例</th>
       <td>
-        <pre class="brush: json no-line-numbers notranslate">
-"browser_action": {
-  "browser_style": true,
-  "default_icon": {
-    "16": "button/geo-16.png",
+        <pwe c-cwass="bwush: json n-nyo-wine-numbews n-nyotwanswate">
+"bwowsew_action": {
+  "bwowsew_stywe": twue,
+  "defauwt_icon": {
+    "16": "button/geo-16.png", (ꈍᴗꈍ)
     "32": "button/geo-32.png"
-  },
-  "default_title": "Whereami?",
-  "default_popup": "popup/geo.html",
+  }, 🥺
+  "defauwt_titwe": "wheweami?", (✿oωo)
+  "defauwt_popup": "popup/geo.htmw", (U ﹏ U)
   "theme_icons": [{
-    "light": "icons/geo-16-light.png",
-    "dark": "icons/geo-16.png",
+    "wight": "icons/geo-16-wight.png", :3
+    "dawk": "icons/geo-16.png", ^^;;
     "size": 16
-  }, {
-    "light": "icons/geo-32-light.png",
-    "dark": "icons/geo-32.png",
+  }, rawr {
+    "wight": "icons/geo-32-wight.png", 😳😳😳
+    "dawk": "icons/geo-32.png", (✿oωo)
     "size": 32
   }]
-}</pre
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-browser action はあなたのブラウザーのツールバーに拡張機能のボタンを追加します。ボタンはアイコンと、オプションで HTML、CSS と JavaScript を使用した、ポップアップコンテンツを使用できます。
+bwowsew action はあなたのブラウザーのツールバーに拡張機能のボタンを追加します。ボタンはアイコンと、オプションで htmw、css と javascwipt を使用した、ポップアップコンテンツを使用できます。
 
-ポップアップを提供する場合は、ユーザーがボタンをクリックしたときポップアップが開かれ、ポップアップで実行されている JavaScript は、ユーザーの実行を処理できます。ポップアップを提供しない場合、ユーザーがボタンをクリックすると、クリックイベントが拡張機能の[バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)に送信されます。
+ポップアップを提供する場合は、ユーザーがボタンをクリックしたときポップアップが開かれ、ポップアップで実行されている j-javascwipt は、ユーザーの実行を処理できます。ポップアップを提供しない場合、ユーザーがボタンをクリックすると、クリックイベントが拡張機能の[バックグラウンドスクリプト](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts)に送信されます。
 
-You can also create and manipulate browser actions programmatically using the [browserAction API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
+you can awso cweate and manipuwate b-bwowsew actions pwogwammaticawwy u-using the [bwowsewaction api](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewaction). OwO
 
 ## 構文
 
-The `browser_action` key is an object that may have any of the following properties, all optional:
+the `bwowsew_action` key is an object t-that may have any of the fowwowing p-pwopewties, ʘwʘ a-aww optionaw:
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">名前</th>
-      <th scope="col">型</th>
-      <th scope="col">説明</th>
-    </tr>
+    <tw>
+      <th scope="cow">名前</th>
+      <th scope="cow">型</th>
+      <th scope="cow">説明</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>browser_style</code></td>
-      <td><code>Boolean</code></td>
+    <tw>
+      <td><code>bwowsew_stywe</code></td>
+      <td><code>boowean</code></td>
       <td>
-        <div>New in Firefox 48</div>
-        <p>Optional, defaulting to <code>false</code>.</p>
+        <div>new i-in fiwefox 48</div>
+        <p>optionaw, (ˆ ﻌ ˆ)♡ defauwting to <code>fawse</code>.</p>
         <p>
-          Use this to include a stylesheet in your popup that will make it look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property. Although this key defaults to
-          <code>false</code>, it's recommended that you include it and set it to
-          <code>true</code>.
+          use this to incwude a stywesheet in youw popup that w-wiww make it wook
+          consistent w-with the b-bwowsew's ui a-and with othew extensions t-that use
+          the <code>bwowsew_stywe</code> pwopewty. (U ﹏ U) a-awthough this key defauwts to
+          <code>fawse</code>, UwU i-it's wecommended that you incwude it and set it to
+          <code>twue</code>. XD
         </p>
         <p>
-          In Firefox, the stylesheet can be seen at
-          chrome://browser/content/extension.css, or
-          chrome://browser/content/extension-mac.css on OS X.
+          in fiwefox, ʘwʘ the stywesheet c-can be seen at
+          chwome://bwowsew/content/extension.css, rawr x3 o-ow
+          chwome://bwowsew/content/extension-mac.css o-on os x. ^^;;
         </p>
         <p>
-          The
-          <a href="https://firefoxux.github.io/StyleGuide/#/controls"
-            >Firefox Style Guide</a
+          t-the
+          <a hwef="https://fiwefoxux.github.io/styweguide/#/contwows"
+            >fiwefox stywe guide</a
           >
-          describes the classes you can apply to elements in the popup in order
-          to get particular styles.
+          descwibes t-the cwasses you c-can appwy to ewements in the p-popup in owdew
+          t-to get pawticuwaw stywes. ʘwʘ
         </p>
         <p>
-          The
+          t-the
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
-            >latest-download</a
+            hwef="https://github.com/mdn/webextensions-exampwes/twee/mastew/watest-downwoad"
+            >watest-downwoad</a
           >
-          example extension uses <code>browser_style</code> in its popup.
+          e-exampwe extension uses <code>bwowsew_stywe</code> in its p-popup. (U ﹏ U)
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_area</code></td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_awea</code></td>
+      <td><code>stwing</code></td>
       <td>
-        <div>New in Firefox 54</div>
+        <div>new in f-fiwefox 54</div>
         <p>
-          Defines the part of the browser in which the button is initially
-          placed. This is a string that may take one of four values:
+          defines t-the pawt of the b-bwowsew in which the button is initiawwy
+          pwaced. (˘ω˘) this is a stwing that may take one of fouw vawues:
         </p>
-        <ul>
-          <li>
-            "navbar": the button is placed in the main browser toolbar,
-            alongside the URL bar.
-          </li>
-          <li>"menupanel": the button is placed in a popup panel.</li>
-          <li>
-            "tabstrip": the button is placed in the toolbar that contains
-            browser tabs.
-          </li>
-          <li>
-            "personaltoolbar": the button is placed in the bookmarks toolbar.
-          </li>
-        </ul>
-        <p>This property is only supported in Firefox.</p>
-        <p>This property is optional, and defaults to "navbar".</p>
+        <uw>
+          <wi>
+            "navbaw": the b-button is pwaced i-in the main bwowsew toowbaw, (ꈍᴗꈍ)
+            a-awongside t-the uww baw. /(^•ω•^)
+          </wi>
+          <wi>"menupanew": t-the button is pwaced in a popup panew.</wi>
+          <wi>
+            "tabstwip": the button is pwaced i-in the toowbaw that contains
+            bwowsew tabs.
+          </wi>
+          <wi>
+            "pewsonawtoowbaw": the button i-is pwaced in the bookmawks t-toowbaw. >_<
+          </wi>
+        </uw>
+        <p>this p-pwopewty i-is onwy suppowted in fiwefox.</p>
+        <p>this p-pwopewty is optionaw, σωσ a-and defauwts t-to "navbaw".</p>
         <p>
-          An extension can't change the location of the button after it has been
-          installed, but the user may be able to move the button using the
-          browser's built-in UI customization mechanism.
+          a-an extension can't change the wocation o-of the button a-aftew it has been
+          i-instawwed, ^^;; b-but the u-usew may be abwe to move the button using the
+          bwowsew's b-buiwt-in ui customization mechanism. 😳
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_icon</code></td>
-      <td><code>Object</code> or <code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_icon</code></td>
+      <td><code>object</code> ow <code>stwing</code></td>
       <td>
         <p>
-          Use this to specify one or more icons for the browser action. The icon
-          is shown in the browser toolbar 既定では.
+          use this to specify one ow mowe icons fow t-the bwowsew action. >_< the icon
+          is shown in the bwowsew t-toowbaw 既定では. -.-
         </p>
         <p>
-          Icons are specified as URLs relative to the manifest.json file itself.
+          i-icons awe s-specified as uwws wewative to t-the manifest.json fiwe itsewf. UwU
         </p>
-        <p>You can specify a single icon file by supplying a string here:</p>
-        <pre class="brush: json no-line-numbers notranslate">
-"default_icon": "path/to/geo.svg"</pre
+        <p>you c-can s-specify a singwe icon fiwe by suppwying a stwing hewe:</p>
+        <pwe cwass="bwush: json nyo-wine-numbews n-nyotwanswate">
+"defauwt_icon": "path/to/geo.svg"</pwe
         >
         <p>
-          To specify multiple icons in different sizes, specify an object here.
-          The name of each property is the icon's height in pixels, and must be
-          convertible to an integer. The value is the URL. 例えば、:
+          to specify muwtipwe i-icons in diffewent sizes, :3 s-specify an object h-hewe. σωσ
+          the nyame of each pwopewty is t-the icon's height i-in pixews, >w< and must be
+          c-convewtibwe to a-an integew. (ˆ ﻌ ˆ)♡ the vawue is the uww. ʘwʘ 例えば、:
         </p>
-        <pre class="brush: json no-line-numbers notranslate">
-    "default_icon": {
-      "16": "path/to/geo-16.png",
+        <pwe cwass="bwush: json nyo-wine-numbews nyotwanswate">
+    "defauwt_icon": {
+      "16": "path/to/geo-16.png", :3
       "32": "path/to/geo-32.png"
-    }</pre
+    }</pwe
         >
         <p>
-          See
+          s-see
           <a
-            href="/ja/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes"
-            >Choosing icon sizes</a
+            h-hwef="/ja/add-ons/webextensions/manifest.json/bwowsew_action#choosing_icon_sizes"
+            >choosing i-icon sizes</a
           >
-          for more guidance on this.
+          fow m-mowe guidance on t-this. (˘ω˘)
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_popup</code></td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_popup</code></td>
+      <td><code>stwing</code></td>
       <td>
         <p>
-          The path to an HTML file containing the specification of the popup.
+          the path to an h-htmw fiwe containing the specification of the popup. 😳😳😳
         </p>
         <p>
-          The HTML file may include CSS and JavaScript files using
-          <code><a href="/ja/docs/Web/HTML/Element/link">&#x3C;link></a></code>
+          the htmw fiwe may incwude c-css and javascwipt f-fiwes using
+          <code><a hwef="/ja/docs/web/htmw/ewement/wink">&#x3c;wink></a></code>
           and
           <code
-            ><a href="/ja/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a hwef="/ja/docs/web/htmw/ewement/scwipt">&#x3c;scwipt></a></code
           >
-          elements, just like a normal web page.
+          e-ewements, rawr x3 just w-wike a nyowmaw web page. (✿oωo)
         </p>
         <p>
-          Unlike a normal web page, JavaScript running in the popup can access
-          all the
-          <a href="/ja/Add-ons/WebExtensions/API">WebExtension APIs</a>
-          (subject, of course, to the extension having the appropriate
+          unwike a nyowmaw web page, (ˆ ﻌ ˆ)♡ javascwipt w-wunning in the popup can access
+          aww the
+          <a hwef="/ja/add-ons/webextensions/api">webextension apis</a>
+          (subject, :3 o-of couwse, (U ᵕ U❁) to the extension having the appwopwiate
           <a
-            href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
-            >permissions</a
-          >).
+            h-hwef="/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions"
+            >pewmissions</a
+          >). ^^;;
         </p>
         <p>
           これは<a
-            href="/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            h-hwef="/ja/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
             >ローカライズ可能なプロパティ</a
           >です。
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_title</code></td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_titwe</code></td>
+      <td><code>stwing</code></td>
       <td>
         <p>
-          Tooltip for the button, displayed when the user moves their mouse over
-          it. If the button is added to the browser's menu panel, this is also
-          shown under the app icon.
+          toowtip fow the button, dispwayed w-when the usew moves t-theiw mouse ovew
+          it. mya if the button is added to the b-bwowsew's menu panew, 😳😳😳 this is awso
+          s-shown undew the app icon. OwO
         </p>
         <p>
           これは<a
-            href="/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            hwef="/ja/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
             >ローカライズ可能なプロパティ</a
           >です。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>theme_icons</code></td>
-      <td><code>Array</code></td>
+      <td><code>awway</code></td>
       <td>
         <p>
-          This property enables you to specify different icons for dark and
-          light themes.
+          t-this pwopewty enabwes you to specify d-diffewent i-icons fow dawk and
+          wight t-themes. rawr
         </p>
         <p>
-          If this property is present, it's an array containing at least one
-          <code>ThemeIcons</code> object. A <code>ThemeIcons</code> object
-          contains three properties, all mandatory:
+          if t-this pwopewty is p-pwesent, XD it's a-an awway containing at weast one
+          <code>themeicons</code> o-object. (U ﹏ U) a <code>themeicons</code> o-object
+          contains thwee pwopewties, (˘ω˘) a-aww mandatowy:
         </p>
-        <dl>
-          <dt><code>"dark"</code></dt>
+        <dw>
+          <dt><code>"dawk"</code></dt>
           <dd>
-            A URL pointing to an icon. This icon will be selected when themes
-            with dark text are active (e.g. Firefox's Light theme, and the
-            Default theme if no default_icon is specified).
+            a-a uww p-pointing to an icon. UwU this icon wiww be sewected w-when themes
+            with dawk t-text awe active (e.g. >_< f-fiwefox's wight theme, σωσ and the
+            defauwt theme i-if nyo defauwt_icon i-is specified). 🥺
           </dd>
-          <dt><code>"light"</code></dt>
+          <dt><code>"wight"</code></dt>
           <dd>
-            A URL pointing to an icon. This icon will be selected when themes
-            with light text are active (e.g. Firefox's Dark theme).
+            a-a uww pointing t-to an icon. 🥺 this icon wiww b-be sewected when themes
+            with wight text awe active (e.g. ʘwʘ fiwefox's dawk theme). :3
           </dd>
           <dt><code>"size"</code></dt>
-          <dd>The size of the two icons in pixels.</dd>
-        </dl>
+          <dd>the s-size of the two icons in p-pixews.</dd>
+        </dw>
         <p>
-          Icons are specified as URLs relative to the manifest.json file itself.
+          icons awe specified a-as uwws wewative to the manifest.json f-fiwe itsewf. (U ﹏ U)
         </p>
         <p>
-          You need to supply an <code>ThemeIcons</code> in size 16 and one in
-          size 32 (for retina display).
+          y-you n-nyeed to suppwy a-an <code>themeicons</code> i-in size 16 a-and one in
+          size 32 (fow wetina dispway). (U ﹏ U)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## アイコンサイズを選ぶ
 
-The browser action's icon may need to be displayed in different sizes in different contexts:
+the bwowsew action's icon may nyeed to be dispwayed in diffewent s-sizes in diffewent c-contexts:
 
-- The icon is displayed 既定では in the browser toolbar, but the user can move it into the browser's menu panel (the panel that opens when the user clicks the "hamburger" icon). The icon in the toolbar is smaller than the icon in the menu panel.
-- On a high-density display like a Retina screen, icons needs to be twice as big.
+- t-the icon is dispwayed 既定では i-in the bwowsew toowbaw, ʘwʘ but the usew can move it into the b-bwowsew's menu p-panew (the panew that opens when t-the usew cwicks the "hambuwgew" icon). >w< the icon i-in the toowbaw i-is smowew than the icon in the m-menu panew. rawr x3
+- on a-a high-density dispway wike a wetina scween, icons nyeeds to be twice as big. OwO
 
-If the browser can't find an icon of the right size in a given situation, it will pick the best match and scale it. Scaling may make the icon appear blurry, so it's important to choose icon sizes carefully.
+i-if the bwowsew can't f-find an icon o-of the wight size i-in a given situation, ^•ﻌ•^ i-it wiww pick the best m-match and scawe i-it. >_< scawing may make the icon appeaw b-bwuwwy, OwO so i-it's impowtant to choose icon sizes c-cawefuwwy. >_<
 
-There are two main approaches to this. You can supply a single icon as an SVG file, and it will be scaled correctly:
+thewe awe two main appwoaches to t-this. (ꈍᴗꈍ) you can suppwy a singwe icon a-as an svg fiwe, >w< a-and it wiww be scawed cowwectwy:
 
 ```json
-"default_icon": "path/to/geo.svg"
+"defauwt_icon": "path/to/geo.svg"
 ```
 
-Alternatively, you can supply several icons in different sizes, and the browser will pick the best match.
+a-awtewnativewy, (U ﹏ U) you can suppwy sevewaw icons i-in diffewent sizes, ^^ a-and the bwowsew w-wiww pick the best match. (U ﹏ U)
 
-In Firefox:
+in fiwefox:
 
-- The default height and width for icons in the toolbar is 16 \* [`window.devicePixelRatio`](/ja/docs/Web/API/Window/devicePixelRatio).
-- The default height and width for icons in the menu panel is 32 \* [`window.devicePixelRatio`](/ja/docs/Web/API/Window/devicePixelRatio).
+- the defauwt height a-and width fow icons in the toowbaw is 16 \* [`window.devicepixewwatio`](/ja/docs/web/api/window/devicepixewwatio). :3
+- t-the defauwt h-height and width fow icons in t-the menu panew is 32 \* [`window.devicepixewwatio`](/ja/docs/web/api/window/devicepixewwatio). (✿oωo)
 
-So you can specify icons that match exactly, on both normal and Retina displays, by supplying three icon files, and specifying them like this:
+s-so you can specify i-icons that match exactwy, XD on both nyowmaw and w-wetina dispways, >w< by suppwying thwee icon fiwes, òωó a-and specifying t-them wike this:
 
 ```json
-    "default_icon": {
-      "16": "path/to/geo-16.png",
-      "32": "path/to/geo-32.png",
+    "defauwt_icon": {
+      "16": "path/to/geo-16.png", (ꈍᴗꈍ)
+      "32": "path/to/geo-32.png", rawr x3
       "64": "path/to/geo-64.png"
     }
 ```
 
-If Firefox can't find an exact match for the size it wants, then it will pick the smallest icon specified that's bigger than the ideal size. If all icons are smaller than the ideal size, it will pick the biggest icon specified.
+if fiwefox can't f-find an exact match fow the size i-it wants, rawr x3 then i-it wiww pick the s-smowest icon specified that's biggew than the ideaw size. σωσ if aww icons awe smowew than the ideaw size, (ꈍᴗꈍ) it wiww pick the biggest icon specified.
 
 ## 例
 
 ```json
-"browser_action": {
-  "default_icon": {
-    "16": "button/geo-16.png",
+"bwowsew_action": {
+  "defauwt_icon": {
+    "16": "button/geo-16.png", rawr
     "32": "button/geo-32.png"
   }
 }
 ```
 
-A browser action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
+a bwowsew action with just an icon, ^^;; specified in 2 diffewent s-sizes. rawr x3 the extension's b-backgwound scwipts can weceive cwick events w-when the usew c-cwicks the icon u-using code wike this:
 
-browser.browseAction.onClicked.addListener(handleClick);
+bwowsew.bwowseaction.oncwicked.addwistenew(handwecwick);
 
 ```json
-"browser_action": {
-  "default_icon": {
-    "16": "button/geo-16.png",
+"bwowsew_action": {
+  "defauwt_icon": {
+    "16": "button/geo-16.png", (ˆ ﻌ ˆ)♡
     "32": "button/geo-32.png"
-  },
-  "default_title": "Whereami?",
-  "default_popup": "popup/geo.html"
+  }, σωσ
+  "defauwt_titwe": "wheweami?", (U ﹏ U)
+  "defauwt_popup": "popup/geo.htmw"
 }
 ```
 
-A browser action with an icon, a title, and a popup. The popup will be shown when the user clicks the button.
+a b-bwowsew action with an icon, >w< a t-titwe, σωσ and a popup. t-the popup wiww be shown when t-the usew cwicks the button. nyaa~~
 
-For a simple, but complete, extension that uses a browser action, see the [walkthrough tutorial](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
+fow a-a simpwe, 🥺 but c-compwete, rawr x3 extension that uses a bwowsew action, σωσ s-see the [wawkthwough t-tutowiaw](/ja/docs/moziwwa/add-ons/webextensions/youw_second_webextension). (///ˬ///✿)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

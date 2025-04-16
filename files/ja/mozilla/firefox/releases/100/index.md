@@ -1,50 +1,50 @@
 ---
-title: Firefox 100 for developers
-slug: Mozilla/Firefox/Releases/100
+titwe: fiwefox 100 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/100
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 100 の変更点をまとめています。Firefox 100 は、米国時間 2022 年 5 月 3 日にリリースされました。
+このページでは、開発者に影響する f-fiwefox 100 の変更点をまとめています。fiwefox 100 は、米国時間 2022 年 5 月 3 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
-### HTML
+### h-htmw
 
 変更なし。
 
-### CSS
+### c-css
 
-- [`dynamic-range`](/ja/docs/Web/CSS/@media/dynamic-range) および [`video-dynamic-range`](/ja/docs/Web/CSS/@media/video-dynamic-range) 向けの CSS メディア特性をサポートしました。`dynamic-range` を使用して、ユーザーエージェントや出力デバイスが輝度、コントラスト比、色深度の組み合わせをサポートしているかを確認できます。また `video-dynamic-range` は、ビデオプレーンで確認できます ([Firefox バグ 1751217](https://bugzil.la/1751217))。
+- [`dynamic-wange`](/ja/docs/web/css/@media/dynamic-wange) および [`video-dynamic-wange`](/ja/docs/web/css/@media/video-dynamic-wange) 向けの c-css メディア特性をサポートしました。`dynamic-wange` を使用して、ユーザーエージェントや出力デバイスが輝度、コントラスト比、色深度の組み合わせをサポートしているかを確認できます。また `video-dynamic-wange` は、ビデオプレーンで確認できます ([fiwefox バグ 1751217](https://bugziw.wa/1751217))。
 
-### JavaScript
+### j-javascwipt
 
 変更なし。
 
-### HTTP
+### h-http
 
 #### 廃止
 
-- 非標準の {{httpheader("Large-Allocation")}} HTTP ヘッダーを削除しました ([Firefox バグ 1598759](https://bugzil.la/1598759))。
+- 非標準の {{httpheadew("wawge-awwocation")}} h-http ヘッダーを削除しました ([fiwefox バグ 1598759](https://bugziw.wa/1598759))。
 
-### API
+### api
 
-- [`WritableStream`](/ja/docs/Web/API/WritableStream)、[`WritableStreamDefaultWriter`](/ja/docs/Web/API/WritableStreamDefaultWriter)、[`WritableStreamDefaultController`](/ja/docs/Web/API/WritableStreamDefaultController)、[`ReadableStream.pipeTo()`](/ja/docs/Web/API/ReadableStream/pipeTo) をサポートしました ([Firefox バグ 1759597](https://bugzil.la/1759597))。
+- [`wwitabwestweam`](/ja/docs/web/api/wwitabwestweam)、[`wwitabwestweamdefauwtwwitew`](/ja/docs/web/api/wwitabwestweamdefauwtwwitew)、[`wwitabwestweamdefauwtcontwowwew`](/ja/docs/web/api/wwitabwestweamdefauwtcontwowwew)、[`weadabwestweam.pipeto()`](/ja/docs/web/api/weadabwestweam/pipeto) をサポートしました ([fiwefox バグ 1759597](https://bugziw.wa/1759597))。
 
-#### DOM
+#### dom
 
-- コードで [`AbortSignal.timeout()`](/ja/docs/Web/API/AbortSignal/timeout_static) 静的メソッドが使用可能になりました。
-  これは、指定した時間の後に `TimeoutError` で操作を自動的に中止するために使用できる {{domxref("AbortSignal")}} を返します ([Firefox バグ 1753309](https://bugzil.la/1753309))。
+- コードで [`abowtsignaw.timeout()`](/ja/docs/web/api/abowtsignaw/timeout_static) 静的メソッドが使用可能になりました。
+  これは、指定した時間の後に `timeoutewwow` で操作を自動的に中止するために使用できる {{domxwef("abowtsignaw")}} を返します ([fiwefox バグ 1753309](https://bugziw.wa/1753309))。
 
-### WebAssembly
+### webassembwy
 
-- WebAssembly で、WebAssembly または Javascript (あるいは他のランタイム) のどちらかでスローおよびキャッチでき、処理されない場合は環境の境界を越える例外をサポートしました。
-  WebAssembly の例外を JavaScript で表したものが、[WebAssembly.Exception](/ja/docs/WebAssembly/JavaScript_interface/Exception) および [WebAssembly.Tag](/ja/docs/WebAssembly/JavaScript_interface/Tag) です ([Firefox バグ 1759217](https://bugzil.la/1759217))。
+- webassembwy で、webassembwy または j-javascwipt (あるいは他のランタイム) のどちらかでスローおよびキャッチでき、処理されない場合は環境の境界を越える例外をサポートしました。
+  webassembwy の例外を javascwipt で表したものが、[webassembwy.exception](/ja/docs/webassembwy/javascwipt_intewface/exception) および [webassembwy.tag](/ja/docs/webassembwy/javascwipt_intewface/tag) です ([fiwefox バグ 1759217](https://bugziw.wa/1759217))。
 
-### WebDriver conformance (Marionette)
+### w-webdwivew confowmance (mawionette)
 
-- Android でユーザープロンプト (たとえば `alert`) をサポートしました ([Firefox バグ 1708105](https://bugzil.la/1708105))。
+- andwoid でユーザープロンプト (たとえば `awewt`) をサポートしました ([fiwefox バグ 1708105](https://bugziw.wa/1708105))。
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(99)}}
+{{fiwefox_fow_devewopews(99)}}

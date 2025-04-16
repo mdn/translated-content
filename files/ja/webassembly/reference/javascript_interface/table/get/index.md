@@ -1,17 +1,17 @@
 ---
-title: WebAssembly.Table.prototype.get()
-slug: WebAssembly/Reference/JavaScript_interface/Table/get
-original_slug: WebAssembly/JavaScript_interface/Table/get
+titwe: webassembwy.tabwe.pwototype.get()
+swug: w-webassembwy/wefewence/javascwipt_intewface/tabwe/get
+o-owiginaw_swug: w-webassembwy/javascwipt_intewface/tabwe/get
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`get()`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイプメソッドで、指定された位置に格納されている関数参照を取得します。
+**`get()`** は {{jsxwef("webassembwy.tabwe")}} オブジェクトのプロトタイプメソッドで、指定された位置に格納されている関数参照を取得します。
 
 ## 構文
 
 ```js
-get(index);
+g-get(index);
 ```
 
 ### 引数
@@ -21,24 +21,24 @@ get(index);
 
 ### 返値
 
-関数参照を返します。これは[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)、wasm 関数を内在する JavaScript ラッパーです。</p>
+関数参照を返します。これは[エクスポートされた w-webassembwy 関数](/ja/docs/webassembwy/guides/expowted_functions)、wasm 関数を内在する j-javascwipt ラッパーです。</p>
 
 ### 例外
 
-_index_ が {{jsxref("WebAssembly/Table/length","Table.prototype.length")}} 以上であった場合、{{jsxref("RangeError")}} が発生します。
+_index_ が {{jsxwef("webassembwy/tabwe/wength","tabwe.pwototype.wength")}} 以上であった場合、{{jsxwef("wangeewwow")}} が発生します。
 
 ## 例
 
-### get の使用
+### g-get の使用
 
-次の例では (Github の [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)も確認してください)、 table.wasm バイトコードを
-{{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して読み取り、コンパイルしてインスタンス化しています。その後、エクスポートされたテーブルに格納された参照を取得します。
+次の例では (github の [tabwe.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/tabwe.htmw) と[動作例](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/tabwe.htmw)も確認してください)、 t-tabwe.wasm バイトコードを
+{{jsxwef("webassembwy.instantiatestweaming()")}} メソッドを使用して読み取り、コンパイルしてインスタンス化しています。その後、エクスポートされたテーブルに格納された参照を取得します。
 
 ```js
-WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
-  var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)()); // 13
-  console.log(tbl.get(1)()); // 42
+webassembwy.instantiatestweaming(fetch("tabwe.wasm")).then(function (obj) {
+  vaw tbw = obj.instance.expowts.tbw;
+  consowe.wog(tbw.get(0)()); // 13
+  consowe.wog(tbw.get(1)()); // 42
 });
 ```
 
@@ -46,14 +46,14 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/ja/docs/webassembwy) 概要ページ
+- [webassembwy の概念](/ja/docs/webassembwy/guides/concepts)
+- [webassembwy j-javascwipt api の使用](/ja/docs/webassembwy/guides/using_the_javascwipt_api)

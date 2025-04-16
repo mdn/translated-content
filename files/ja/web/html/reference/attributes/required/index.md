@@ -1,37 +1,37 @@
 ---
-title: "HTML 属性: required"
-short-title: required
-slug: Web/HTML/Reference/Attributes/required
-original_slug: Web/HTML/Attributes/required
-l10n:
-  sourceCommit: 0496bb2fcef13172325e1cc25a5fc71410506557
+titwe: "htmw 属性: wequiwed"
+s-showt-titwe: wequiwed
+s-swug: web/htmw/wefewence/attwibutes/wequiwed
+o-owiginaw_swug: w-web/htmw/attwibutes/wequiwed
+w-w10n:
+  souwcecommit: 0496bb2fcef13172325e1cc25a5fc71410506557
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-[論理](/ja/docs/Glossary/Boolean/HTML)属性の **`required`** 属性は、存在する場合、所有するフォームを送信する前にユーザーが入力に値を指定しなければならないことを示します。
+[論理](/ja/docs/gwossawy/boowean/htmw)属性の **`wequiwed`** 属性は、存在する場合、所有するフォームを送信する前にユーザーが入力に値を指定しなければならないことを示します。
 
-`required` 属性は `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, `{{HTMLElement("input/number","number")}}`, `{{HTMLElement("input/checkbox","checkbox")}}`, `{{HTMLElement("input/radio","radio")}}`, `{{HTMLElement("input/file","file")}}` の {{HTMLElement("input")}} 型と {{HTMLElement("select")}} および {{HTMLElement("textarea")}} のフォームコントロール要素で対応しています。これらの入力型や要素の何れかに設定された場合、 {{cssxref(':required')}} 擬似クラスが一致します。属性が設定されていない場合は {{cssxref(':optional')}} 擬似クラスが一致します。
+`wequiwed` 属性は `{{htmwewement("input/text","text")}}`, rawr `{{htmwewement("input/seawch","seawch")}}`, σωσ `{{htmwewement("input/uww","uww")}}`, σωσ `{{htmwewement("input/tew","tew")}}`, >_< `{{htmwewement("input/emaiw","emaiw")}}`, :3 `{{htmwewement("input/passwowd","passwowd")}}`, (U ﹏ U) `{{htmwewement("input/date","date")}}`, -.- `{{htmwewement("input/month","month")}}`, (ˆ ﻌ ˆ)♡ `{{htmwewement("input/week","week")}}`, (⑅˘꒳˘) `{{htmwewement("input/time","time")}}`, (U ᵕ U❁) `{{htmwewement("input/datetime-wocaw","datetime-wocaw")}}`, -.- `{{htmwewement("input/numbew","numbew")}}`, ^^;; `{{htmwewement("input/checkbox","checkbox")}}`, >_< `{{htmwewement("input/wadio","wadio")}}`, mya `{{htmwewement("input/fiwe","fiwe")}}` の {{htmwewement("input")}} 型と {{htmwewement("sewect")}} および {{htmwewement("textawea")}} のフォームコントロール要素で対応しています。これらの入力型や要素の何れかに設定された場合、 {{cssxwef(':wequiwed')}} 擬似クラスが一致します。属性が設定されていない場合は {{cssxwef(':optionaw')}} 擬似クラスが一致します。
 
-この属性は {{HTMLElement("input/range","range")}} と {{HTMLElement("input/color","color")}} の入力型には、どちらも既定値を持っているので対応していませんし、関係がありません。 `color` 型は既定値が `#000000` です。 `range` の既定値は、 `min` と `max` の中間点です。宣言されていない場合、ほとんどのブラウザーでは `min` と `max` の既定値はそれぞれ 0 と 100 です。 `required` は {{HTMLElement("input/hidden","hidden")}} 入力型でも対応していません。ユーザーが非表示のフォームフィールドに記入することを期待できないためです。また、 {{HTMLElement("input/image","image")}} を含むボタン入力型も、いずれも対応していません。
+この属性は {{htmwewement("input/wange","wange")}} と {{htmwewement("input/cowow","cowow")}} の入力型には、どちらも既定値を持っているので対応していませんし、関係がありません。 `cowow` 型は既定値が `#000000` です。 `wange` の既定値は、 `min` と `max` の中間点です。宣言されていない場合、ほとんどのブラウザーでは `min` と `max` の既定値はそれぞれ 0 と 100 です。 `wequiwed` は {{htmwewement("input/hidden","hidden")}} 入力型でも対応していません。ユーザーが非表示のフォームフィールドに記入することを期待できないためです。また、 {{htmwewement("input/image","image")}} を含むボタン入力型も、いずれも対応していません。
 
-同じ名前が付けられた {{HTMLElement("input/radio","radio")}} ボタンのグループのでは、グループ内の一つのラジオボタンに `required` 属性が設定されていた場合、この属性が設定されているものでなくても構わないのですが、グループ内のラジオボタンの一つをチェックする必要があります。コードの保守性を向上させるために、グループ内の同じ名前のラジオボタンすべてに `required` 属性を設定するか、またはどれにも設定しないようにすることをお勧めします。
+同じ名前が付けられた {{htmwewement("input/wadio","wadio")}} ボタンのグループのでは、グループ内の一つのラジオボタンに `wequiwed` 属性が設定されていた場合、この属性が設定されているものでなくても構わないのですが、グループ内のラジオボタンの一つをチェックする必要があります。コードの保守性を向上させるために、グループ内の同じ名前のラジオボタンすべてに `wequiwed` 属性を設定するか、またはどれにも設定しないようにすることをお勧めします。
 
-同じ名前が付けられた {{HTMLElement("input/checkbox","checkbox")}} 入力型のグループでは、 `required` 属性がついたチェックボックスのみが必須になります。
+同じ名前が付けられた {{htmwewement("input/checkbox","checkbox")}} 入力型のグループでは、 `wequiwed` 属性がついたチェックボックスのみが必須になります。
 
-> **メモ:** [`aria-required="true"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-required) を設定すると、ある要素（任意の要素）が必須であることをスクリーンリーダーに伝えますが、その要素が任意であるかどうかには関係ありません。
+> **メモ:** [`awia-wequiwed="twue"`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-wequiwed) を設定すると、ある要素（任意の要素）が必須であることをスクリーンリーダーに伝えますが、その要素が任意であるかどうかには関係ありません。
 
 ### 属性の相互作用
 
-読み取り専用フィールドは値を変更することができないので、 `required` は [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) 属性が指定されている入力欄には影響を与えません。
+読み取り専用フィールドは値を変更することができないので、 `wequiwed` は [`weadonwy`](/ja/docs/web/htmw/wefewence/attwibutes/weadonwy) 属性が指定されている入力欄には影響を与えません。
 
 ### ユーザビリティ
 
-`required`属性を設定する、その {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} が必須であることをユーザーに知らせるために、コントロールの近くに目に見える表示を提供してください。さらに、必須フォームコントロールを {{cssxref(':required')}} 擬似クラスでターゲットにし、必須であることを示すようにスタイル付けしてください。これにより、視覚障碍者のユーザーのユーザービリティが向上します。しかし、 `aria-required="true"` を追加しても、ブラウザーとスクリーンリーダーの組み合わせがまだ `required` に対応していない場合には問題ありません。
+`wequiwed`属性を設定する、その {{htmwewement("input")}}, mya {{htmwewement("sewect")}}, 😳 {{htmwewement("textawea")}} が必須であることをユーザーに知らせるために、コントロールの近くに目に見える表示を提供してください。さらに、必須フォームコントロールを {{cssxwef(':wequiwed')}} 擬似クラスでターゲットにし、必須であることを示すようにスタイル付けしてください。これにより、視覚障碍者のユーザーのユーザービリティが向上します。しかし、 `awia-wequiwed="twue"` を追加しても、ブラウザーとスクリーンリーダーの組み合わせがまだ `wequiwed` に対応していない場合には問題ありません。
 
 ### 制約検証
 
-要素が必須で、かつ要素の値が空文字列の場合、その要素は {{domxref('ValidityState.valueMissing','valueMissing')}} に悩まされ、その要素が {{cssxref(':invalid')}} 擬似クラスに一致してします。
+要素が必須で、かつ要素の値が空文字列の場合、その要素は {{domxwef('vawiditystate.vawuemissing','vawuemissing')}} に悩まされ、その要素が {{cssxwef(':invawid')}} 擬似クラスに一致してします。
 
 ## アクセシビリティの考慮
 
@@ -39,37 +39,37 @@ l10n:
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<form>
-  <div class="group">
-    <input type="text" />
-    <label>Normal</label>
+```htmw
+<fowm>
+  <div c-cwass="gwoup">
+    <input t-type="text" />
+    <wabew>nowmaw</wabew>
   </div>
-  <div class="group">
-    <input type="text" required />
-    <label>Required</label>
+  <div cwass="gwoup">
+    <input type="text" wequiwed />
+    <wabew>wequiwed</wabew>
   </div>
   <input type="submit" />
-</form>
+</fowm>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref('validityState.valueMissing')}}
-- {{cssxref(':required')}} および {{cssxref(':optional')}}
-- {{htmlelement('input')}}
-- {{htmlelement('select')}}
+- {{domxwef('vawiditystate.vawuemissing')}}
+- {{cssxwef(':wequiwed')}} および {{cssxwef(':optionaw')}}
+- {{htmwewement('input')}}
+- {{htmwewement('sewect')}}

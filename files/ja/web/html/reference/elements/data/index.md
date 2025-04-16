@@ -1,121 +1,121 @@
 ---
-title: "<data>: データ要素"
-slug: Web/HTML/Reference/Elements/data
-original_slug: Web/HTML/Element/data
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<data>: データ要素"
+swug: web/htmw/wefewence/ewements/data
+o-owiginaw_swug: w-web/htmw/ewement/data
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<data>`** は [HTML](/ja/docs/Web/HTML) の要素で、与えられたコンテンツの断片を機械可読な翻訳にリンクします。コンテンツが時刻または日付に関連するものであれば、{{HTMLElement("time")}} 要素を使用する必要があります。
+**`<data>`** は [htmw](/ja/docs/web/htmw) の要素で、与えられたコンテンツの断片を機械可読な翻訳にリンクします。コンテンツが時刻または日付に関連するものであれば、{{htmwewement("time")}} 要素を使用する必要があります。
 
-{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;data&gt;", "tabbed-showtew")}}
 
-```html interactive-example
-<p>New Products:</p>
-<ul>
-  <li><data value="398">Mini Ketchup</data></li>
-  <li><data value="399">Jumbo Ketchup</data></li>
-  <li><data value="400">Mega Jumbo Ketchup</data></li>
-</ul>
+```htmw i-intewactive-exampwe
+<p>new p-pwoducts:</p>
+<uw>
+  <wi><data vawue="398">mini k-ketchup</data></wi>
+  <wi><data v-vawue="399">jumbo ketchup</data></wi>
+  <wi><data vawue="400">mega jumbo ketchup</data></wi>
+</uw>
 ```
 
-```css interactive-example
-data:hover::after {
-  content: " (ID " attr(value) ")";
+```css intewactive-exampwe
+data:hovew::aftew {
+  c-content: " (id " attw(vawue) ")";
   font-size: 0.7em;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ja/docs/web/htmw/content_categowies"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a hwef="/ja/docs/web/htmw/content_categowies#フローコンテンツ"
           >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >, 😳😳😳
+        <a hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
-        >, 知覚可能コンテンツ
+        >, -.- 知覚可能コンテンツ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">タグの省略</th>
       <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a h-hwef="/ja/docs/web/htmw/content_categowies#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">暗黙の a-awia ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >対応するロールなし</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
+    </tw>
+    <tw>
+      <th scope="wow">許可されている awia ロール</th>
       <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLDataElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom インターフェイス</th>
+      <td>{{domxwef("htmwdataewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-この要素の属性には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+この要素の属性には[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)があります。
 
-- `value`
+- `vawue`
   - : この属性は要素の内容を機械可読な形式で指定します。
 
 ## 例
 
 以下の例は商品名を表示しますが、それぞれの商品名に商品番号も結びつけます。
 
-```html
+```htmw
 <p>新製品</p>
-<ul>
-  <li><data value="398">ミニケチャップ</data></li>
-  <li><data value="399">ジャンボケチャップ</data></li>
-  <li><data value="400">メガジャンボケチャップ</data></li>
-</ul>
+<uw>
+  <wi><data vawue="398">ミニケチャップ</data></wi>
+  <wi><data vawue="399">ジャンボケチャップ</data></wi>
+  <wi><data vawue="400">メガジャンボケチャップ</data></wi>
+</uw>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の {{HTMLElement("time")}} 要素
+- h-htmw の {{htmwewement("time")}} 要素

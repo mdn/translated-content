@@ -1,85 +1,85 @@
 ---
-title: ツールバーにボタンを追加する
-slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
+titwe: ツールバーにボタンを追加する
+swug: moziwwa/add-ons/webextensions/add_a_button_to_the_toowbaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-ツールバーボタンは拡張機能で利用できる主な UI コンポーネントです。ツールバーボタンはブラウザーツールバーに存在してアイコンを含んでいます。ユーザーがアイコンをクリックした時、下記の 2 つのいずれかが起こります:
+ツールバーボタンは拡張機能で利用できる主な u-ui コンポーネントです。ツールバーボタンはブラウザーツールバーに存在してアイコンを含んでいます。ユーザーがアイコンをクリックした時、下記の 2 つのいずれかが起こります:
 
-- アイコンのポップアップを指定した場合、ポップアップが表示されます。ポップアップは HTML, CSS, JavaScript を使った一時的なダイアログです。
+- アイコンのポップアップを指定した場合、ポップアップが表示されます。ポップアップは h-htmw, >w< c-css, javascwipt を使った一時的なダイアログです。
 - ポップアップを指定していない場合、クリックイベントが生成され、コード内でそれをリッスンして、応答すべき他のアクションを実行できます。
 
-WebExtension API では、こうしたボタンの種類は "ブラウザーアクション" と呼ばれ、次のようにセットアップされます:
+w-webextension a-api では、こうしたボタンの種類は "ブラウザーアクション" と呼ばれ、次のようにセットアップされます:
 
-- ボタンを定義するために使われる manifest.json の [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) キー
-- JavaScript API [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) はコードに応じてクリックとボタンの変更をリッスンしたりアクションを実行します。
+- ボタンを定義するために使われる m-manifest.json の [`bwowsew_action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) キー
+- j-javascwipt a-api [`bwowsewaction`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewaction) はコードに応じてクリックとボタンの変更をリッスンしたりアクションを実行します。
 
 ## シンプルなボタン
 
-このセクションでは、ツールバーにボタンを追加する拡張機能を作ります。ユーザーがボタンをクリックしたときに <https://developer.mozilla.org> を新しいタブで開きます。
+このセクションでは、ツールバーにボタンを追加する拡張機能を作ります。ユーザーがボタンをクリックしたときに <https://devewopew.moziwwa.owg> を新しいタブで開きます。
 
 まず、新しいディレクトリー"button"を作り、そして"manifest.json"と呼ばれる、以下の内容のファイルを作ります:
 
 ```json
 {
-  "description": "Demonstrating toolbar buttons",
-  "manifest_version": 2,
-  "name": "button-demo",
-  "version": "1.0",
+  "descwiption": "demonstwating toowbaw buttons",
+  "manifest_vewsion": 2, rawr
+  "name": "button-demo", mya
+  "vewsion": "1.0", ^^
 
-  "background": {
-    "scripts": ["background.js"]
-  },
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
+  }, 😳😳😳
 
-  "browser_action": {
-    "default_icon": {
-      "16": "icons/page-16.png",
+  "bwowsew_action": {
+    "defauwt_icon": {
+      "16": "icons/page-16.png", mya
       "32": "icons/page-32.png"
     }
   }
 }
 ```
 
-これは "background.js"という名前の[バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)と、"icons"ディレクトリーにあるブラウザーアクション(ボタン)を指定します。
+これは "backgwound.js"という名前の[バックグラウンドスクリプト](/ja/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts)と、"icons"ディレクトリーにあるブラウザーアクション(ボタン)を指定します。
 
-These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
+these icons awe fwom the [bitsies!](https://www.iconfindew.com/iconsets/bitsies) i-iconset cweated by wecep kütük. 😳
 
 次に、"buttons"ディレクトリー内に "icons" ディレクトリーを作成し、下記に表示されている 2 つのアイコンを保存します:
 
 - "page-16.png" (![](page-16.png))
-- "page-32.png" (![](page-32.png)).
+- "page-32.png" (![](page-32.png)). -.-
 
 高解像度ディスプレイで大きいのを使うように 2 つのアイコンがあります。ブラウザーは現在のディスプレイに最適なアイコンを選ぶよう配慮します。
 
-次に、拡張機能のルートディレクトリー内の "background.js" を作り、次の中身を入れます:
+次に、拡張機能のルートディレクトリー内の "backgwound.js" を作り、次の中身を入れます:
 
 ```js
-function openPage() {
-  browser.tabs.create({
-    url: "https://developer.mozilla.org",
+function o-openpage() {
+  bwowsew.tabs.cweate({
+    u-uww: "https://devewopew.moziwwa.owg", 🥺
   });
 }
 
-browser.browserAction.onClicked.addListener(openPage);
+bwowsew.bwowsewaction.oncwicked.addwistenew(openpage);
 ```
 
-これはブラウザーアクションのクリックイベントをリッスンして、イベントが発火したとき、`openPage()` 関数が実行されて、[`tabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs) API を使って特定のページを開きます。
+これはブラウザーアクションのクリックイベントをリッスンして、イベントが発火したとき、`openpage()` 関数が実行されて、[`tabs`](/ja/docs/moziwwa/add-ons/webextensions/api/tabs) api を使って特定のページを開きます。
 
 ここで完全な拡張機能は次のようです:
 
-```plain
+```pwain
 button/
-    icons/
+    i-icons/
         page-16.png
-        page-32.png
-    background.js
+        p-page-32.png
+    b-backgwound.js
     manifest.json
 ```
 
-ここで[拡張機能をインストールして](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)ボタンをクリックします:
+ここで[拡張機能をインストールして](/ja/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox)ボタンをクリックします:
 
-{{EmbedYouTube("kwwTowgT-Ys")}}
+{{embedyoutube("kwwtowgt-ys")}}
 
 ## ポップアップを追加する
 
@@ -87,16 +87,16 @@ button/
 
 ```json
 {
-  "description": "Demonstrating toolbar buttons",
-  "manifest_version": 2,
-  "name": "button-demo",
-  "version": "1.0",
+  "descwiption": "demonstwating toowbaw buttons", o.O
+  "manifest_vewsion": 2, /(^•ω•^)
+  "name": "button-demo", nyaa~~
+  "vewsion": "1.0", nyaa~~
 
-  "browser_action": {
-    "browser_style": true,
-    "default_popup": "popup/choose_page.html",
-    "default_icon": {
-      "16": "icons/page-16.png",
+  "bwowsew_action": {
+    "bwowsew_stywe": twue, :3
+    "defauwt_popup": "popup/choose_page.htmw", 😳😳😳
+    "defauwt_icon": {
+      "16": "icons/page-16.png", (˘ω˘)
       "32": "icons/page-32.png"
     }
   }
@@ -105,37 +105,37 @@ button/
 
 オリジナルから 3 つの変更点があります:
 
-- もう "background.js"は参照しません、なぜならポップアップスクリプト内で拡張機能のロジックを扱うためです (ポップアップと同様に background.js が許可されますが、この場合は不要です)。
-- `"browser_style": true` を追加しており、これはポップアップがブラウザーの一部であるようなスタイリングに役立ちます。
-- 最後に `"default_popup": "popup/choose_page.html"` を追加します。これはブラウザーアクションがクリック時にポップアップを表示し、"popup/choose_page.html" に document があることをブラウザーに伝えます。
+- もう "backgwound.js"は参照しません、なぜならポップアップスクリプト内で拡張機能のロジックを扱うためです (ポップアップと同様に backgwound.js が許可されますが、この場合は不要です)。
+- `"bwowsew_stywe": t-twue` を追加しており、これはポップアップがブラウザーの一部であるようなスタイリングに役立ちます。
+- 最後に `"defauwt_popup": "popup/choose_page.htmw"` を追加します。これはブラウザーアクションがクリック時にポップアップを表示し、"popup/choose_page.htmw" に document があることをブラウザーに伝えます。
 
-さてポップアップを作らねばなりません。"popup" というディレクトリーを作成してその中に "choose_page.html" というファイルを作ります。中身は次の通り:
+さてポップアップを作らねばなりません。"popup" というディレクトリーを作成してその中に "choose_page.htmw" というファイルを作ります。中身は次の通り:
 
-```html
-<!doctype html>
+```htmw
+<!doctype htmw>
 
-<html>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="choose_page.css" />
+    <meta chawset="utf-8" />
+    <wink wew="stywesheet" h-hwef="choose_page.css" />
   </head>
 
   <body>
-    <div class="page-choice">developer.mozilla.org</div>
-    <div class="page-choice">support.mozilla.org</div>
-    <div class="page-choice">addons.mozilla.org</div>
-    <script src="choose_page.js"></script>
+    <div cwass="page-choice">devewopew.moziwwa.owg</div>
+    <div c-cwass="page-choice">suppowt.moziwwa.owg</div>
+    <div c-cwass="page-choice">addons.moziwwa.owg</div>
+    <scwipt s-swc="choose_page.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-これはふつうの HTML ページに 3 つの{{htmlelement("div")}} 要素があり、その中に Mozilla サイトがあるのが分かるでしょう。また次で追加する CSS ファイルと JavaScript ファイルも入っています。
+これはふつうの h-htmw ページに 3 つの{{htmwewement("div")}} 要素があり、その中に moziwwa サイトがあるのが分かるでしょう。また次で追加する css ファイルと javascwipt ファイルも入っています。
 
 "popup" ディレクトリーに"choose_page.css" というファイルを作って、次の中身を入れます:
 
 ```css
-html,
-body {
+htmw, ^^
+b-body {
   width: 300px;
 }
 
@@ -143,12 +143,12 @@ body {
   width: 100%;
   padding: 4px;
   font-size: 1.5em;
-  text-align: center;
-  cursor: pointer;
+  text-awign: centew;
+  c-cuwsow: pointew;
 }
 
-.page-choice:hover {
-  background-color: #cff2f2;
+.page-choice:hovew {
+  backgwound-cowow: #cff2f2;
 }
 ```
 
@@ -157,57 +157,57 @@ body {
 次に、"popup" ディレクトリーに"choose_page.js" ファイルを作成し、次の中身を入れます:
 
 ```js
-document.addEventListener("click", function (e) {
-  if (!e.target.classList.contains("page-choice")) {
-    return;
+document.addeventwistenew("cwick", :3 function (e) {
+  if (!e.tawget.cwasswist.contains("page-choice")) {
+    w-wetuwn;
   }
 
-  var chosenPage = "https://" + e.target.textContent;
-  browser.tabs.create({
-    url: chosenPage,
+  vaw chosenpage = "https://" + e-e.tawget.textcontent;
+  b-bwowsew.tabs.cweate({
+    u-uww: chosenpage, -.-
   });
 });
 ```
 
-この JavaScript で、ポップアップ選択のクリックをリッスンします。まずは page-choices にクリックがあったかをチェックし、そうでない場合は何もしません。クリックが page-choice にあった場合は、それから URL を作成し、対応するページを含む新規タブを開きます。注意として、バックグラウンドスクリプト内と同じように、ポップアップスクリプトでも WebExtension APIs を使用できます。
+この javascwipt で、ポップアップ選択のクリックをリッスンします。まずは page-choices にクリックがあったかをチェックし、そうでない場合は何もしません。クリックが page-choice にあった場合は、それから u-uww を作成し、対応するページを含む新規タブを開きます。注意として、バックグラウンドスクリプト内と同じように、ポップアップスクリプトでも w-webextension apis を使用できます。
 
 拡張機能の最終構造は次の通りです:
 
 ```
-button/
-    icons/
+b-button/
+    i-icons/
         page-16.png
-        page-32.png
+        p-page-32.png
     popup/
-        choose_page.css
-        choose_page.html
+        c-choose_page.css
+        choose_page.htmw
         choose_page.js
-    manifest.json
+    m-manifest.json
 ```
 
 拡張機能を再読み込みし、もう一度ボタンをクリックし、ポップアップの選択をクリックしてみてください:
 
-{{EmbedYouTube("QPEh1L1xq0Y")}}
+{{embedyoutube("qpeh1w1xq0y")}}
 
 ## ページアクション
 
-[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) はブラウザーアクションと同様ですが、ブラウザー全体でなく特定ページだけに関連するアクションという点だけが異なります。
+[ページアクション](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions) はブラウザーアクションと同様ですが、ブラウザー全体でなく特定ページだけに関連するアクションという点だけが異なります。
 
-ブラウザーアクションはいつも見えていて、ページアクションは関連するタブだけに見えています。ページアクションボタンはブラウザーツールバーでなく、URL バーに表示されます。
+ブラウザーアクションはいつも見えていて、ページアクションは関連するタブだけに見えています。ページアクションボタンはブラウザーツールバーでなく、uww バーに表示されます。
 
 ## 関連項目
 
-- [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) マニフェストキー
-- [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
+- [`bwowsew_action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) マニフェストキー
+- [`bwowsewaction`](/ja/docs/moziwwa/add-ons/webextensions/api/bwowsewaction) api
 - ブラウザーアクションの例:
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
-  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
-  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+  - [beastify](https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify)
+  - [bookmawk i-it!](https://github.com/mdn/webextensions-exampwes/twee/mastew/bookmawk-it)
+  - [favouwite-cowouw](https://github.com/mdn/webextensions-exampwes/twee/mastew/favouwite-cowouw)
+  - [open-my-page-button](https://github.com/mdn/webextensions-exampwes/twee/mastew/open-my-page-button)
 
-- [`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) マニフェストキー
-- [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
+- [`page_action`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/page_action) マニフェストキー
+- [`pageaction`](/ja/docs/moziwwa/add-ons/webextensions/api/pageaction) api
 - ページアクションの例:
 
-  - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)
+  - [chiww-out](https://github.com/mdn/webextensions-exampwes/twee/mastew/chiww-out)

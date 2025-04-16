@@ -1,18 +1,18 @@
 ---
-title: runtime.openOptionsPage()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
+titwe: wuntime.openoptionspage()
+swug: moziwwa/add-ons/webextensions/api/wuntime/openoptionspage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-拡張機能に[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)が定義されている場合、このメソッドはそれを開きます。
+拡張機能に[オプションページ](/ja/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages)が定義されている場合、このメソッドはそれを開きます。
 
-これは [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
+これは [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) を返す非同期関数です。
 
 ## 構文
 
 ```js
-var openingPage = browser.runtime.openOptionsPage();
+v-vaw o-openingpage = bwowsew.wuntime.openoptionspage();
 ```
 
 ### パラメーター
@@ -21,60 +21,60 @@ var openingPage = browser.runtime.openOptionsPage();
 
 ### 返り値
 
-オプションページの作成が成功した時は、引数のない [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) で、操作が失敗した場合はエラーメッセージつきの rejected が返ります。
+オプションページの作成が成功した時は、引数のない [`pwomise`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) で、操作が失敗した場合はエラーメッセージつきの w-wejected が返ります。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 例
 
 ユーザーがブラウザーアクションのアイコンをクリックした時にオプションページを返します:
 
 ```js
-function onOpened() {
-  console.log(`Options page opened`);
+f-function onopened() {
+  c-consowe.wog(`options p-page opened`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var opening = browser.runtime.openOptionsPage();
-opening.then(onOpened, onError);
+vaw opening = bwowsew.wuntime.openoptionspage();
+opening.then(onopened, >w< onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!note]
+> t-this api is based on chwomium's [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#method-openoptionspage) a-api. rawr this documentation i-is dewived fwom [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) in the chwomium code.micwosoft edge c-compatibiwity data is suppwied b-by micwosoft cowpowation a-and is incwuded hewe undew the cweative commons attwibution 3.0 united s-states wicense. 😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >w< aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and binawy f-fowms, OwO with o-ow without
+// m-modification, (ꈍᴗꈍ) awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, 😳 this wist of conditions and t-the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, mya this wist of conditions and the f-fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. mya
+//    * n-nyeithew the nyame of googwe inc. n-nyow the nyames of its
+// contwibutows may be u-used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, (U ﹏ U) incwuding, b-but nyot
+// w-wimited to, mya the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. ʘwʘ in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, (˘ω˘) i-indiwect, (U ﹏ U) incidentaw,
+// s-speciaw, ^•ﻌ•^ e-exempwawy, (˘ω˘) ow consequentiaw d-damages (incwuding, :3 b-but nyot
+// w-wimited to, ^^;; pwocuwement o-of substitute goods ow sewvices; woss of u-use, 🥺
+// data, (⑅˘꒳˘) ow p-pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, nyaa~~ whethew in contwact, :3 stwict w-wiabiwity, ( ͡o ω ͡o ) ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, mya even if advised of the possibiwity of such d-damage. (///ˬ///✿)
 -->

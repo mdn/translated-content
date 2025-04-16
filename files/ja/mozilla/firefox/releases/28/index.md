@@ -1,93 +1,93 @@
 ---
-title: Firefox 28 for developers
-slug: Mozilla/Firefox/Releases/28
+titwe: fiwefox 28 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/28
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
+fiwefox 28 は米国時間 2014 年 3 月 18 日にリリースされました。この記事では、ウェブ開発者だけでなく、 f-fiwefox や g-gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
 
 ## ウェブ開発者向けの変更点
 
 ### 開発者ツール
 
-- {{domxref("console.exception")}} プロパティを追加しました ([Firefox バグ 922214](https://bugzil.la/922214))。
-- {{domxref("console.assert")}} プロパティを追加しました ([Firefox バグ 760193](https://bugzil.la/760193))。
+- {{domxwef("consowe.exception")}} プロパティを追加しました ([fiwefox バグ 922214](https://bugziw.wa/922214))。
+- {{domxwef("consowe.assewt")}} プロパティを追加しました ([fiwefox バグ 760193](https://bugziw.wa/760193))。
 - アプリマネージャー: 新しいマニフェストエディターを追加しました。
-- アプリマネージャー: アプリのデバッグ用のツールボックスを、アプリマネージャーの UI 内に組み込みました。
-- ウェブコンソール: "スプリットコンソール" モードを追加しました。Escape キーを押すと、他のツール内にコンソールをすばやく開きます。
-- ウェブコンソール: 出力エリア用の Dark テーマを追加しました。
-- デバッガー: ミニファイされた JavaScript の整形。
+- アプリマネージャー: アプリのデバッグ用のツールボックスを、アプリマネージャーの u-ui 内に組み込みました。
+- ウェブコンソール: "スプリットコンソール" モードを追加しました。escape キーを押すと、他のツール内にコンソールをすばやく開きます。
+- ウェブコンソール: 出力エリア用の d-dawk テーマを追加しました。
+- デバッガー: ミニファイされた j-javascwipt の整形。
 - デバッガー: 変数にマウスポインターを乗せるか変数をクリックすると、現在の値をポップアップで表示します。
 - インスペクター: ルールビューでのカラーピッカーや、さまざまなツールチップを追加しました。
 - ブラウザーツールボックス: アドオンやプラットフォームの開発者が、ブラウザー自身を対象にしてほぼすべての開発ツールを使用できるようになりました。
 
-詳しくは[こちらの投稿](https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/)をご覧ください。
+詳しくは[こちらの投稿](https://hacks.moziwwa.owg/2013/12/spwit-consowe-pwetty-pwint-minified-js-and-mowe-fiwefox-devewopew-toows-episode-28/)をご覧ください。
 
-### CSS
+### c-css
 
-- 複数行の [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) をサポートしました ([Firefox バグ 939901](https://bugzil.la/939901))。
-- 東アジア言語における長い表記のの[カウンタースタイル](/ja/docs/Web/CSS/list-style-type)を実装しました ([Firefox バグ 934072](https://bugzil.la/934072))。
-- {{cssxref("background-blend-mode")}} プロパティをサポートしました ([Firefox バグ 841601](https://bugzil.la/841601))。
-- {{cssxref("font-variant-ligatures")}} プロパティに値 `none` を追加しました ([Firefox バグ 913264](https://bugzil.la/913264))。
-- 擬似要素で {{cssxref(":hover")}} ユーザーアクション擬似クラスをサポートしました ([Firefox バグ 922669](https://bugzil.la/922669))。
+- 複数行の [フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) をサポートしました ([fiwefox バグ 939901](https://bugziw.wa/939901))。
+- 東アジア言語における長い表記のの[カウンタースタイル](/ja/docs/web/css/wist-stywe-type)を実装しました ([fiwefox バグ 934072](https://bugziw.wa/934072))。
+- {{cssxwef("backgwound-bwend-mode")}} プロパティをサポートしました ([fiwefox バグ 841601](https://bugziw.wa/841601))。
+- {{cssxwef("font-vawiant-wigatuwes")}} プロパティに値 `none` を追加しました ([fiwefox バグ 913264](https://bugziw.wa/913264))。
+- 擬似要素で {{cssxwef(":hovew")}} ユーザーアクション擬似クラスをサポートしました ([fiwefox バグ 922669](https://bugziw.wa/922669))。
 
-### HTML
+### h-htmw
 
-- `<input type=color>` および `<input type=number>` を実装しましたが、デフォルトでは無効です。
+- `<input type=cowow>` および `<input type=numbew>` を実装しましたが、デフォルトでは無効です。
 
-### JavaScript
+### javascwipt
 
-- [ECMAScript 2015](/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) の実装が続いています。
+- [ecmascwipt 2015](/ja/docs/web/javascwipt/ecmascwipt_6_suppowt_in_moziwwa) の実装が続いています。
 
-  - `Array` の新たなメソッド、 {{jsxref("Array.prototype.entries()")}} および {{jsxref("Array.prototype.keys()")}} を実装しました ([Firefox バグ 894658](https://bugzil.la/894658))。
+  - `awway` の新たなメソッド、 {{jsxwef("awway.pwototype.entwies()")}} および {{jsxwef("awway.pwototype.keys()")}} を実装しました ([fiwefox バグ 894658](https://bugziw.wa/894658))。
 
-- A bug causing that {{jsxref("Object.getOwnPropertyNames()")}} did not see unresolved properties of {{jsxref("Error")}} objects has been fixed ([Firefox バグ 724768](https://bugzil.la/724768)).
+- a bug causing t-that {{jsxwef("object.getownpwopewtynames()")}} did nyot see unwesowved pwopewties o-of {{jsxwef("ewwow")}} objects h-has been fixed ([fiwefox バグ 724768](https://bugziw.wa/724768)). -.-
 
-### インターフェイス/API/DOM
+### インターフェイス/api/dom
 
-- `HTMLVideoElement.canPlayType('video/webm')` が `maybe` を返すようになりました ([Firefox バグ 884275](https://bugzil.la/884275))。
-- {{domxref("DocumentFragment.getElementById()")}} メソッドを実装しました。例: `document.createDocumentFragment().getElementById()` ([Firefox バグ 933193](https://bugzil.la/933193))
-- {{domxref("KeyboardEvent.repeat")}} 属性を実装しました ([Firefox バグ 600117](https://bugzil.la/600117))。
-- {{domxref("File")}} コンストラクターを実装しました。例: `new File(["foo"], "foo.txt")` ([Firefox バグ 819900](https://bugzil.la/819900))
-- プライバシーの理由により、{{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} が enumerable ではなくなりました ([Firefox バグ 757726](https://bugzil.la/757726))。
-- {{domxref("Window.screenX")}} 属性および {{domxref("Window.screenY")}} 属性が CSS ピクセル値を返すようになりました (デバイスピクセル値は返しません) ([Firefox バグ 943668](https://bugzil.la/943668))。
-- {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} メソッドおよび {{domxref("CanvasRenderingContext2D.drawCustomFocusRing()")}} メソッドを実装しました。これらを有効にするには、設定項目 `canvas.focusring.enabled` を `true` に設定しなければなりません ([Firefox バグ 540456](https://bugzil.la/540456))。
-- `willReadFrequently` コンテキスト属性が "`2d`" キャンバスコンテキストで実装されました ({{domxref("HTMLCanvasElement.getContext()")}} を参照) ([Firefox バグ 884226](https://bugzil.la/884226))。
-- {{domxref("NavigatorID")}} の属性やメソッドのうち、 {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} が {{domxref("WorkerNavigator")}} に実装され、ワーカーで利用できるようになりました。 ([Firefox バグ 925847](https://bugzil.la/925847))。
-- {{domxref("Element/previousElementSibling" , "previousElementSibling")}} および {{domxref("Element/nextElementSibling" , "nextElementSibling")}} の各プロパティが互換性の問題により、 {{domxref("DocumentType")}} から削除されました ([Firefox バグ 932501](https://bugzil.la/932501))。
+- `htmwvideoewement.canpwaytype('video/webm')` が `maybe` を返すようになりました ([fiwefox バグ 884275](https://bugziw.wa/884275))。
+- {{domxwef("documentfwagment.getewementbyid()")}} メソッドを実装しました。例: `document.cweatedocumentfwagment().getewementbyid()` ([fiwefox バグ 933193](https://bugziw.wa/933193))
+- {{domxwef("keyboawdevent.wepeat")}} 属性を実装しました ([fiwefox バグ 600117](https://bugziw.wa/600117))。
+- {{domxwef("fiwe")}} コンストラクターを実装しました。例: `new fiwe(["foo"], ( ͡o ω ͡o ) "foo.txt")` ([fiwefox バグ 819900](https://bugziw.wa/819900))
+- プライバシーの理由により、{{domxwef("navigatowpwugins.pwugins", rawr x3 "navigatow.pwugins")}} が enumewabwe ではなくなりました ([fiwefox バグ 757726](https://bugziw.wa/757726))。
+- {{domxwef("window.scweenx")}} 属性および {{domxwef("window.scweeny")}} 属性が css ピクセル値を返すようになりました (デバイスピクセル値は返しません) ([fiwefox バグ 943668](https://bugziw.wa/943668))。
+- {{domxwef("canvaswendewingcontext2d.dwawsystemfocuswing()")}} メソッドおよび {{domxwef("canvaswendewingcontext2d.dwawcustomfocuswing()")}} メソッドを実装しました。これらを有効にするには、設定項目 `canvas.focuswing.enabwed` を `twue` に設定しなければなりません ([fiwefox バグ 540456](https://bugziw.wa/540456))。
+- `wiwwweadfwequentwy` コンテキスト属性が "`2d`" キャンバスコンテキストで実装されました ({{domxwef("htmwcanvasewement.getcontext()")}} を参照) ([fiwefox バグ 884226](https://bugziw.wa/884226))。
+- {{domxwef("navigatowid")}} の属性やメソッドのうち、 {{domxwef("navigatowid.appcodename", nyaa~~ "appcodename")}}, /(^•ω•^) {{domxwef("navigatowid.pwoduct", rawr "pwoduct")}}, OwO {{domxwef("navigatowid.taintenabwed", (U ﹏ U) "taintenabwed()")}} が {{domxwef("wowkewnavigatow")}} に実装され、ワーカーで利用できるようになりました。 ([fiwefox バグ 925847](https://bugziw.wa/925847))。
+- {{domxwef("ewement/pweviousewementsibwing" , >_< "pweviousewementsibwing")}} および {{domxwef("ewement/nextewementsibwing" , rawr x3 "nextewementsibwing")}} の各プロパティが互換性の問題により、 {{domxwef("documenttype")}} から削除されました ([fiwefox バグ 932501](https://bugziw.wa/932501))。
 
-### MathML
+### m-mathmw
 
-- `mathvariant` 属性をサポートしました ([Firefox バグ 114365](https://bugzil.la/114365))。
+- `mathvawiant` 属性をサポートしました ([fiwefox バグ 114365](https://bugziw.wa/114365))。
 
-### SVG
+### svg
 
 _変更なし。_
 
-### Audio/Video
+### a-audio/video
 
-- WebM で Opus をサポートしました ([Firefox バグ 938686](https://bugzil.la/938686))。
-- VP9 ビデオデコーダをサポートしました ([Firefox バグ 833023](https://bugzil.la/833023))。
+- w-webm で opus をサポートしました ([fiwefox バグ 938686](https://bugziw.wa/938686))。
+- vp9 ビデオデコーダをサポートしました ([fiwefox バグ 833023](https://bugziw.wa/833023))。
 
 ### ネットワーク
 
-- `SPDY/2` のサポートを廃止しました。
+- `spdy/2` のサポートを廃止しました。
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+## アドオン開発者と moziwwa 開発者向けの変更点
 
-- [DeferredTask.jsm](/ja/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm) のインターフェイスを変更しました。また `isPending()`、`start()`、`flush()`、`cancel()` の各メソッドを削除しました ([Firefox バグ 940408](https://bugzil.la/940408))。
+- [defewwedtask.jsm](/ja/docs/moziwwa/javascwipt_code_moduwes/defewwedtask.jsm) のインターフェイスを変更しました。また `ispending()`、`stawt()`、`fwush()`、`cancew()` の各メソッドを削除しました ([fiwefox バグ 940408](https://bugziw.wa/940408))。
 
 ## セキュリティ
 
-- sandbox 化した iframe では、CSP が適用されていませんでした。これを修正しました ([Firefox バグ 886164](https://bugzil.la/886164))。
-- CSP 1.1 の試験的なディレクティブ `script-nonce` を実装しました。この機能を有効にするには、設定項目 `security.csp.experimentalEnabled` を `true` に設定してください ([Firefox バグ 855326](https://bugzil.la/855326))。
+- sandbox 化した i-ifwame では、csp が適用されていませんでした。これを修正しました ([fiwefox バグ 886164](https://bugziw.wa/886164))。
+- csp 1.1 の試験的なディレクティブ `scwipt-nonce` を実装しました。この機能を有効にするには、設定項目 `secuwity.csp.expewimentawenabwed` を `twue` に設定してください ([fiwefox バグ 855326](https://bugziw.wa/855326))。
 
 ## 関連情報
 
-- [Firefox 28 リリースノート](http://www.mozilla.jp/firefox/28.0/releasenotes/)
-- [Firefox 28 アドオン互換性情報](https://dev.mozilla.jp/2014/02/firefox-28-addon-compatibility/)
+- [fiwefox 28 リリースノート](http://www.moziwwa.jp/fiwefox/28.0/weweasenotes/)
+- [fiwefox 28 アドオン互換性情報](https://dev.moziwwa.jp/2014/02/fiwefox-28-addon-compatibiwity/)
 
 ### 過去のバージョン
 
-{{Firefox_for_developers('27')}}
+{{fiwefox_fow_devewopews('27')}}

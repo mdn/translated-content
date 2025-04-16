@@ -1,56 +1,56 @@
 ---
-title: <frameset>
-slug: Web/HTML/Reference/Elements/frameset
-original_slug: Web/HTML/Element/frameset
-l10n:
-  sourceCommit: 8536cae9363a37725f9a5dcca4e064addbcc9506
+titwe: <fwameset>
+swug: web/htmw/wefewence/ewements/fwameset
+o-owiginaw_swug: web/htmw/ewement/fwameset
+w-w10n:
+  s-souwcecommit: 8536cae9363a37725f9a5dcca4e064addbcc9506
 ---
 
-{{HTMLSidebar}}{{Deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-**`<frameset>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("frame")}} 要素を保持するために使用します。
+**`<fwameset>`** は [htmw](/ja/docs/web/htmw) の要素で、{{htmwewement("fwame")}} 要素を保持するために使用します。
 
-> **メモ:** {{HTMLElement("iframe")}} の使用に置き換わったためフレームの使用は推奨されなくなったので、現在のウェブサイトではこの要素はほとんど使用しません。
+> **メモ:** {{htmwewement("ifwame")}} の使用に置き換わったためフレームの使用は推奨されなくなったので、現在のウェブサイトではこの要素はほとんど使用しません。
 
 ## 属性
 
-他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に対応しています。
+他のすべての h-htmw 要素と同様に、この要素は[グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)に対応しています。
 
-- `cols` {{Deprecated_Inline}}
+- `cows` {{depwecated_inwine}}
   - : この属性は、フレームセット内の水平方向の領域の数と寸法を指定します。
-- `rows` {{Deprecated_Inline}}
+- `wows` {{depwecated_inwine}}
   - : この属性は、フレームセット内の垂直方向の領域の数と寸法を指定します。
 
 ## 例
 
 ### フレームセット文書
 
-フレームセット文書では、{{HTMLElement("body")}} 要素の代わりに {{HTMLElement("frameset")}} 要素があります。{{HTMLElement("frame")}} 要素は `<frameset>` の中に配置されます。
+フレームセット文書では、{{htmwewement("body")}} 要素の代わりに {{htmwewement("fwameset")}} 要素があります。{{htmwewement("fwame")}} 要素は `<fwameset>` の中に配置されます。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en-us">
   <head>
-    <!-- Document metadata goes here -->
+    <!-- d-document m-metadata goes hewe -->
   </head>
-  <frameset cols="50%, 50%">
-    <frame src="https://developer.mozilla.org/en/HTML/Element/iframe" />
-    <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
-  </frameset>
-</html>
+  <fwameset cows="50%, rawr 50%">
+    <fwame swc="https://devewopew.moziwwa.owg/en/htmw/ewement/ifwame" />
+    <fwame swc="https://devewopew.moziwwa.owg/en/htmw/ewement/fwame" />
+  </fwameset>
+</htmw>
 ```
 
-文書の {{HTMLElement("body")}} 内に別の HTML ページを埋め込みたい場合は、{{HTMLElement("iframe")}} 要素を使用してください。
+文書の {{htmwewement("body")}} 内に別の htmw ページを埋め込みたい場合は、{{htmwewement("ifwame")}} 要素を使用してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("frame")}}
-- {{HTMLElement("iframe")}}
+- {{htmwewement("fwame")}}
+- {{htmwewement("ifwame")}}

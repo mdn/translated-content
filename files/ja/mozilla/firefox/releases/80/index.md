@@ -1,59 +1,59 @@
 ---
-title: Firefox 80 for developers
-slug: Mozilla/Firefox/Releases/80
-l10n:
-  sourceCommit: 1822cdf5a86574429c4c49883a402663ef16a4ef
+titwe: fiwefox 80 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/80
+w-w10n:
+  souwcecommit: 1822cdf5a86574429c4c49883a402663ef16a4ef
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-このページでは、開発者に影響する Firefox 80 の変更点をまとめています。Firefox 80 は、2020 年 8 月 25 日にリリースされました。
+このページでは、開発者に影響する fiwefox 80 の変更点をまとめています。fiwefox 80 は、2020 年 8 月 25 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- ウェブコンソールの [ヘルパーコマンド](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) `:block` および `:unblock` を使用して、ネットワーク要求をブロックおよびブロック解除できるようになりました ([Firefox バグ 1546394](https://bugzil.la/1546394))。
-- ページインスペクターのルールペインで要素に [クラスを追加](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-and-changing-classes-on-an-element) するとき、既存のクラスをオートコンプリートで提案するようになりました ([Firefox バグ 1492797](https://bugzil.la/1492797))。
-- デバッガーが [例外でブレークするとき](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/breaking_on_exceptions/index.html)、ソースペインのツールチップでスタックトレースを展開するための三角印を表示するようになりました ([Firefox バグ 1643633](https://bugzil.la/1643633))。
-- [ネットワークモニターのリスト](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) で、待ち時間のしきい値 (設定可能) を超える "遅い" リクエストに亀のアイコンを表示するようになりました ([Firefox バグ 1648373](https://bugzil.la/1648373))。
+- ウェブコンソールの [ヘルパーコマンド](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/hewpews/index.htmw) `:bwock` および `:unbwock` を使用して、ネットワーク要求をブロックおよびブロック解除できるようになりました ([fiwefox バグ 1546394](https://bugziw.wa/1546394))。
+- ページインスペクターのルールペインで要素に [クラスを追加](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_and_edit_css/index.htmw#viewing-and-changing-cwasses-on-an-ewement) するとき、既存のクラスをオートコンプリートで提案するようになりました ([fiwefox バグ 1492797](https://bugziw.wa/1492797))。
+- デバッガーが [例外でブレークするとき](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/bweaking_on_exceptions/index.htmw)、ソースペインのツールチップでスタックトレースを展開するための三角印を表示するようになりました ([fiwefox バグ 1643633](https://bugziw.wa/1643633))。
+- [ネットワークモニターのリスト](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/wequest_wist/index.htmw#netwowk-wequest-cowumns) で、待ち時間のしきい値 (設定可能) を超える "遅い" リクエストに亀のアイコンを表示するようになりました ([fiwefox バグ 1648373](https://bugziw.wa/1648373))。
 
-### HTML
+### h-htmw
 
 _変更なし。_
 
-### CSS
+### c-css
 
-- 標準化されて接頭辞がない {{CSSxRef("appearance", "appearance")}} プロパティをサポートしました。既存の `-moz-appearance` および `-webkit-appearance` は、接頭辞がないプロパティの別名になります ([Firefox バグ 1620467](https://bugzil.la/1620467))。
+- 標準化されて接頭辞がない {{cssxwef("appeawance", σωσ "appeawance")}} プロパティをサポートしました。既存の `-moz-appeawance` および `-webkit-appeawance` は、接頭辞がないプロパティの別名になります ([fiwefox バグ 1620467](https://bugziw.wa/1620467))。
 
-### JavaScript
+### j-javascwipt
 
-- ECMAScript 2021 の、[`export`](/ja/docs/Web/JavaScript/Reference/Statements/export) 文の `export * as namespace` 構文をサポートしました ([Firefox バグ 1496852](https://bugzil.la/1496852))。
+- e-ecmascwipt 2021 の、[`expowt`](/ja/docs/web/javascwipt/wefewence/statements/expowt) 文の `expowt * a-as nyamespace` 構文をサポートしました ([fiwefox バグ 1496852](https://bugziw.wa/1496852))。
 
-### HTTP
+### h-http
 
-- 以前は [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) に (`allow` 属性で) [fullscreen](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen) ディレクティブが適用されていたとき、`allowfullscreen` 属性も与えていなければ動作しませんでした。この問題を修正しました ([Firefox バグ 1608358](https://bugzil.la/1608358))。
+- 以前は [`<ifwame>`](/ja/docs/web/htmw/wefewence/ewements/ifwame) に (`awwow` 属性で) [fuwwscween](/ja/docs/web/http/wefewence/headews/pewmissions-powicy/fuwwscween) ディレクティブが適用されていたとき、`awwowfuwwscween` 属性も与えていなければ動作しませんでした。この問題を修正しました ([fiwefox バグ 1608358](https://bugziw.wa/1608358))。
 
-### API
+### api
 
-#### DOM
+#### dom
 
-- ウェブアニメーション API の合成操作をサポートしました。[`KeyframeEffect.composite`](/ja/docs/Web/API/KeyframeEffect/composite) および [`KeyframeEffect.iterationComposite`](/ja/docs/Web/API/KeyframeEffect/iterationComposite) をご覧ください ([Firefox バグ 1652676](https://bugzil.la/1652676))。
+- ウェブアニメーション api の合成操作をサポートしました。[`keyfwameeffect.composite`](/ja/docs/web/api/keyfwameeffect/composite) および [`keyfwameeffect.itewationcomposite`](/ja/docs/web/api/keyfwameeffect/itewationcomposite) をご覧ください ([fiwefox バグ 1652676](https://bugziw.wa/1652676))。
 
 #### 廃止
 
-- [`Window.open()`](/ja/docs/Web/API/Window/open) の`outerHeight` および `outerWidth` 機能を、ウェブコンテンツに公開しないようになりました ([Firefox バグ 1623826](https://bugzil.la/1623826))。
+- [`window.open()`](/ja/docs/web/api/window/open) の`outewheight` および `outewwidth` 機能を、ウェブコンテンツに公開しないようになりました ([fiwefox バグ 1623826](https://bugziw.wa/1623826))。
 
-### WebAssembly
+### webassembwy
 
-- アトミック操作を、非共有メモリーで許可しました ([Firefox バグ 1619196](https://bugzil.la/1619196))。
+- アトミック操作を、非共有メモリーで許可しました ([fiwefox バグ 1619196](https://bugziw.wa/1619196))。
 
-### WebDriver conformance (Marionette)
+### webdwivew confowmance (mawionette)
 
-- ヘッドレスモードでテストを実行するとき、新しいタブを開くために `WebDriver:NewWindow` を使用すると戻るのが早すぎる問題を修正しました ([Firefox バグ 1653281](https://bugzil.la/1653281))。
-- `WebDriver:SwitchToWindow` から引数 `name` を削除しました。これは W3C 準拠モードでサポートされておらず、使用するべきではありません ([Firefox バグ 1588424](https://bugzil.la/1588424))。
-- 以下のコマンドで Fission のサポートを始めました: `WebDriver:FindElement`、`WebDriver:FindElements`、`WebDriver:GetElementAttribute`、`WebDriver:GetElementProperty`。
-- **既知の問題**: `WebDriver:NewWindow` を使用するか、`window.open()` を呼び出す任意のスクリプトで新しいをタブを開くと、自動的に新しいウィンドウに切り替わります ([Firefox バグ 1661495](https://bugzil.la/1661495))。
+- ヘッドレスモードでテストを実行するとき、新しいタブを開くために `webdwivew:newwindow` を使用すると戻るのが早すぎる問題を修正しました ([fiwefox バグ 1653281](https://bugziw.wa/1653281))。
+- `webdwivew:switchtowindow` から引数 `name` を削除しました。これは w-w3c 準拠モードでサポートされておらず、使用するべきではありません ([fiwefox バグ 1588424](https://bugziw.wa/1588424))。
+- 以下のコマンドで fission のサポートを始めました: `webdwivew:findewement`、`webdwivew:findewements`、`webdwivew:getewementattwibute`、`webdwivew:getewementpwopewty`。
+- **既知の問題**: `webdwivew:newwindow` を使用するか、`window.open()` を呼び出す任意のスクリプトで新しいをタブを開くと、自動的に新しいウィンドウに切り替わります ([fiwefox バグ 1661495](https://bugziw.wa/1661495))。
 
 ## アドオン開発者向けの変更点
 
@@ -61,4 +61,4 @@ _変更なし。_
 
 ## 過去のバージョン
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

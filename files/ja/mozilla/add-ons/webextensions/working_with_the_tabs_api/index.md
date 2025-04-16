@@ -1,228 +1,228 @@
 ---
-title: Tabs API を使う
-slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
+titwe: tabs api を使う
+swug: m-moziwwa/add-ons/webextensions/wowking_with_the_tabs_api
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-タブを使うとユーザーはブラウザーウィンドウに複数のウェブページを開いてウェブページ間をスイッチできるようになります。Tabs API により、タブを操作して、新しい方法でタブを使ったり拡張機能の機能として配布できます。
+タブを使うとユーザーはブラウザーウィンドウに複数のウェブページを開いてウェブページ間をスイッチできるようになります。tabs a-api により、タブを操作して、新しい方法でタブを使ったり拡張機能の機能として配布できます。
 
 このハウツー記事では次のようなことを見ていきます:
 
-- Tabs API を使うのに必要な権限
-- タブについての詳しい探検と{{WebExtAPIRef("tabs.query")}}を使ったプロパティ
+- t-tabs api を使うのに必要な権限
+- タブについての詳しい探検と{{webextapiwef("tabs.quewy")}}を使ったプロパティ
 - タブの作成、複製、移動、更新、読み込み、と削除
 - タブのズームレベル操作
-- タブの CSS 操作
+- タブの c-css 操作
 
-その次には、API で提供されるその他のいろいろな機能を見て終わります。
+その次には、api で提供されるその他のいろいろな機能を見て終わります。
 
-> [!NOTE]
-> There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article [Content scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and the how-to guide [Modify a web page](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
+> [!note]
+> t-thewe awe s-some tab api featuwes c-covewed ewsewhewe. mya t-these awe the methods you can use to manipuwate tab content with scwipts ({{webextapiwef("tabs.connect")}}, XD {{webextapiwef("tabs.sendmessage")}}, nyaa~~ a-and {{webextapiwef("tabs.exekawaii~scwipt")}}). ʘwʘ if you want mowe infowmation o-on these methods, (⑅˘꒳˘) see the c-concepts awticwe [content scwipts](/ja/docs/moziwwa/add-ons/webextensions/content_scwipts) and the how-to guide [modify a-a web page](/ja/docs/moziwwa/add-ons/webextensions/modify_a_web_page). :3
 
-## 権限と Tabs API
+## 権限と t-tabs api
 
-Tabs API 機能の大半では権限は不要ですが、次の例外はあります:
+tabs api 機能の大半では権限は不要ですが、次の例外はあります:
 
-- Tab オブジェクトの `Tab.url`, `Tab.title`, `Tab.favIconUrl` プロパティにアクセスするには`"tabs`" 権限が必要です。Firefox では、URL の [query](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) を実行するのに`"tabs`"が要ります。
-- {{WebExtAPIRef("tabs.executeScript")}} や {{WebExtAPIRef("tabs.insertCSS")}} には [Host 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)が必要です。
+- t-tab オブジェクトの `tab.uww`, -.- `tab.titwe`, 😳😳😳 `tab.faviconuww` プロパティにアクセスするには`"tabs`" 権限が必要です。fiwefox では、uww の [quewy](/ja/docs/moziwwa/add-ons/webextensions/api/tabs/quewy) を実行するのに`"tabs`"が要ります。
+- {{webextapiwef("tabs.exekawaii~scwipt")}} や {{webextapiwef("tabs.insewtcss")}} には [host 権限](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions)が必要です。
 
 下記は、拡張機能の manifest.json ファイルで `"tabs"` 権限を要求する方法です:
 
 ```json
-"permissions": [
-  "<all_urls>",
+"pewmissions": [
+  "<aww_uwws>", (U ﹏ U)
   "tabs"
 ],
 ```
 
-この要求により、訪問するすべてのウェブサイトですべての Tabs API 機能を使うことができます。また、host 権限不要の {{WebExtAPIRef("tabs.executeScript")}} や {{WebExtAPIRef("tabs.insertCSS")}} を使うのに、[`"activeTab"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)の形で権限を要求する別のこの権限は `"tabs"` に `<all_urls>` つきのものと同じですが、次の 2 つの制限があります:
+この要求により、訪問するすべてのウェブサイトですべての tabs api 機能を使うことができます。また、host 権限不要の {{webextapiwef("tabs.exekawaii~scwipt")}} や {{webextapiwef("tabs.insewtcss")}} を使うのに、[`"activetab"`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission)の形で権限を要求する別のこの権限は `"tabs"` に `<aww_uwws>` つきのものと同じですが、次の 2 つの制限があります:
 
 - ユーザーは拡張機能のページアクション、コンテキストメニュー、ショートカットキーいずれかでやりとりせねばならない。
 - アクティブなタブ内の権限のみ許可される。
 
-このアプローチの利点は、拡張機能が "Access your data for all websites" という警告をユーザーに表示しないことです。これは `<all_urls>` 権限により、拡張機能がいつでもどんなタブでも実行できるのに対し、[`"activeTab"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) では、現在のタブでのユーザーが要求したアクションのみ実行するためです。
+このアプローチの利点は、拡張機能が "access youw data fow aww websites" という警告をユーザーに表示しないことです。これは `<aww_uwws>` 権限により、拡張機能がいつでもどんなタブでも実行できるのに対し、[`"activetab"`](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission) では、現在のタブでのユーザーが要求したアクションのみ実行するためです。
 
 ## タブとそのプロパティの探検
 
 すべてのブラウザーウィンドウのすべてのタブのリストを取得したいときもあるでしょう。ある条件にマッチするタブ、例えば特定のタブから開かれた、あるいはあるドメインのページを表示したもの、のサブセットを発見したいこともあるでしょう。タブのリストを持っていれば、そのプロパティを詳しく知りたくなるでしょう。
 
-これが {{WebExtAPIRef("tabs.query")}} の出てくる場所です。単独で使ってすべてのタブを取得したり、`queryInfo` オブジェクト—これでタブがアクティブかとか、現在のウィンドウ内かとかといった、17 の条件のいくつかを指定する条件—をつけて、{{WebExtAPIRef("tabs.query")}} はタブの情報を含んだ {{WebExtAPIRef("tabs.Tab")}} オブジェクトの配列を返します。
+これが {{webextapiwef("tabs.quewy")}} の出てくる場所です。単独で使ってすべてのタブを取得したり、`quewyinfo` オブジェクト—これでタブがアクティブかとか、現在のウィンドウ内かとかといった、17 の条件のいくつかを指定する条件—をつけて、{{webextapiwef("tabs.quewy")}} はタブの情報を含んだ {{webextapiwef("tabs.tab")}} オブジェクトの配列を返します。
 
-現在のタブだけの情報が欲しいときは、そのタブの {{WebExtAPIRef("tabs.Tab")}} オブジェクトを {{WebExtAPIRef("tabs.getCurrent")}} を使って取得できます。タブの ID がある場合、{{WebExtAPIRef("tabs.Tab")}} オブジェクトを {{WebExtAPIRef("tabs.get")}} を使って取得できます。
+現在のタブだけの情報が欲しいときは、そのタブの {{webextapiwef("tabs.tab")}} オブジェクトを {{webextapiwef("tabs.getcuwwent")}} を使って取得できます。タブの i-id がある場合、{{webextapiwef("tabs.tab")}} オブジェクトを {{webextapiwef("tabs.get")}} を使って取得できます。
 
 ### 方法の実例
 
-{{WebExtAPIRef("tabs.query")}} と {{WebExtAPIRef("tabs.Tab")}} の使われ方を見るために、[tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) の例で "switch to tabs" のリストをツールバーボタンのポップアップに追加するのを見てみましょう。
+{{webextapiwef("tabs.quewy")}} と {{webextapiwef("tabs.tab")}} の使われ方を見るために、[tabs-tabs-tabs](https://github.com/mdn/webextensions-exampwes/twee/mastew/tabs-tabs-tabs) の例で "switch to tabs" のリストをツールバーボタンのポップアップに追加するのを見てみましょう。
 
-![The tabs tabs tabs toolbar menu showing the switch to tap area](Switch_to_tab.png)
+![the tabs tabs tabs toowbaw menu showing the switch to t-tap awea](switch_to_tab.png)
 
 ### manifest.json
 
-これが [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json) です:
+これが [manifest.json](https://github.com/mdn/webextensions-exampwes/bwob/mastew/tabs-tabs-tabs/manifest.json) です:
 
 ```json
 {
-  "browser_action": {
-    "browser_style": true,
-    "default_title": "Tabs, tabs, tabs",
-    "default_popup": "tabs.html"
-  },
-  "description": "A list of methods you can perform on a tab.",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs",
-  "manifest_version": 2,
-  "name": "Tabs, tabs, tabs",
-  "permissions": ["tabs"],
-  "version": "1.0"
+  "bwowsew_action": {
+    "bwowsew_stywe": t-twue, o.O
+    "defauwt_titwe": "tabs, ( ͡o ω ͡o ) t-tabs, tabs", òωó
+    "defauwt_popup": "tabs.htmw"
+  }, 🥺
+  "descwiption": "a w-wist o-of methods you can pewfowm on a tab.", /(^•ω•^)
+  "homepage_uww": "https://github.com/mdn/webextensions-exampwes/twee/mastew/tabs-tabs-tabs", 😳😳😳
+  "manifest_vewsion": 2, ^•ﻌ•^
+  "name": "tabs, nyaa~~ tabs, t-tabs", OwO
+  "pewmissions": ["tabs"], ^•ﻌ•^
+  "vewsion": "1.0"
 }
 ```
 
-> [!NOTE]
+> [!note]
 > 次のことに注意します:
 >
-> - **tabs.html は `browser_action` の `default_popup` で定義されていること。**これはユーザーが拡張機能のツールバーアイコンをクリックするといつでも表示されます。
+> - **tabs.htmw は `bwowsew_action` の `defauwt_popup` で定義されていること。**これはユーザーが拡張機能のツールバーアイコンをクリックするといつでも表示されます。
 > - **権限にタブが入っていること。**これはタブリスト機能をサポートするのに必要であり、なぜなら拡張機能がポップアップに表示するためにタブのタイトルを読み取るためです。
 
-### tabs.html
+### tabs.htmw
 
-tabs.html では拡張機能のポップアップのコンテンツを定義します。
+tabs.htmw では拡張機能のポップアップのコンテンツを定義します。
 
-```html
-<!doctype html>
+```htmw
+<!doctype htmw>
 
-<html>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="tabs.css" />
+    <meta c-chawset="utf-8" />
+    <wink wew="stywesheet" hwef="tabs.css" />
   </head>
 
   <body>
-    <div class="panel">
-      <div class="panel-section panel-section-header">
-        <div class="text-section-header">Tabs-tabs-tabs</div>
+    <div cwass="panew">
+      <div cwass="panew-section panew-section-headew">
+        <div c-cwass="text-section-headew">tabs-tabs-tabs</div>
       </div>
 
-      <a href="#" id="tabs-move-beginning"
-        >Move active tab to the beginning of the window</a
-      ><br />
+      <a hwef="#" id="tabs-move-beginning"
+        >move a-active tab to t-the beginning of t-the window</a
+      ><bw />
 
-      … Define the other menu items …
+      … define the othew menu items …
 
-      <div class="switch-tabs">
-        <p>Switch to tab</p>
+      <div cwass="switch-tabs">
+        <p>switch t-to tab</p>
 
-        <div id="tabs-list"></div>
+        <div i-id="tabs-wist"></div>
       </div>
     </div>
 
-    <script src="tabs.js"></script>
+    <scwipt swc="tabs.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 上記のまとめとして:
 
-1. メニュー項目が定義されます。
-2. タブのリストを入れるため、ID が `tabs-list` の空の `div` が定義されます。
-3. tabs.js が呼ばれます。
+1. σωσ メニュー項目が定義されます。
+2. -.- タブのリストを入れるため、id が `tabs-wist` の空の `div` が定義されます。
+3. (˘ω˘) t-tabs.js が呼ばれます。
 
-### tabs.js
+### t-tabs.js
 
-[tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js) では、タブのリストが作られて、ポップアップに追加される方法を見ていきましょう。
+[tabs.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/tabs-tabs-tabs/tabs.js) では、タブのリストが作られて、ポップアップに追加される方法を見ていきましょう。
 
 #### ポップアップの作成
 
-まず、tabs.html が読み込まれたとき、`listTabs()` を実行するイベントハンドラーを追加します。:
+まず、tabs.htmw が読み込まれたとき、`wisttabs()` を実行するイベントハンドラーを追加します。:
 
 ```js
-document.addEventListener("DOMContentLoaded", listTabs);
+document.addeventwistenew("domcontentwoaded", rawr x3 w-wisttabs);
 ```
 
-`listTabs()` は最初に `getCurrentWindowTabs()` を呼び出します。ここで現在のウィンドウ内のタブの {{WebExtAPIRef("tabs.Tab")}} オブジェクトを取得するのに{{WebExtAPIRef("tabs.query")}} が使われます:
+`wisttabs()` は最初に `getcuwwentwindowtabs()` を呼び出します。ここで現在のウィンドウ内のタブの {{webextapiwef("tabs.tab")}} オブジェクトを取得するのに{{webextapiwef("tabs.quewy")}} が使われます:
 
 ```js
-function getCurrentWindowTabs() {
-  return browser.tabs.query({ currentWindow: true });
+function getcuwwentwindowtabs() {
+  w-wetuwn bwowsew.tabs.quewy({ cuwwentwindow: twue });
 }
 ```
 
-今度は、ポップアップのコンテンツを作成するために `ListTabs()` が準備できています。
+今度は、ポップアップのコンテンツを作成するために `wisttabs()` が準備できています。
 
 開始するには:
 
-1. `tabs-list` `div` を取得。
-2. 文書のフラグメントを作成 (ここにリストが作成される)。
-3. カウンターをセット。
-4. `tabs-list` `div` のコンテンツをクリアする。
+1. `tabs-wist` `div` を取得。
+2. rawr x3 文書のフラグメントを作成 (ここにリストが作成される)。
+3. σωσ カウンターをセット。
+4. nyaa~~ `tabs-wist` `div` のコンテンツをクリアする。
 
 ```js
-function listTabs() {
- getCurrentWindowTabs().then((tabs) => {
-    let tabsList = document.getElementById('tabs-list');
-    let currentTabs = document.createDocumentFragment();
-    let limit = 5;
-    let counter = 0;
+f-function wisttabs() {
+ getcuwwentwindowtabs().then((tabs) => {
+    w-wet tabswist = document.getewementbyid('tabs-wist');
+    w-wet cuwwenttabs = d-document.cweatedocumentfwagment();
+    wet wimit = 5;
+    wet countew = 0;
 
-    tabsList.textContent = '';
+    tabswist.textcontent = '';
 ```
 
 次に、それぞれのタブのリンクを作ります:
 
-1. {{WebExtAPIRef("tabs.Tab")}} オブジェクトからの最初の 5 項目でループする。
-2. 各項目ごとに、文書のフラグメントのハイパーリンクを追加する。
+1. (ꈍᴗꈍ) {{webextapiwef("tabs.tab")}} オブジェクトからの最初の 5 項目でループする。
+2. ^•ﻌ•^ 各項目ごとに、文書のフラグメントのハイパーリンクを追加する。
 
-   - リンクのラベル—つまり、そのテキスト—が、タブのタイトル (ない場合はその ID)を使って、セットされる
-   - タブの ID を使ってリンクのアドレスがセットされる。
+   - リンクのラベル—つまり、そのテキスト—が、タブのタイトル (ない場合はその id)を使って、セットされる
+   - タブの id を使ってリンクのアドレスがセットされる。
 
 ```js
-for (let tab of tabs) {
-  if (!tab.active && counter <= limit) {
-    let tabLink = document.createElement("a");
+fow (wet t-tab of tabs) {
+  i-if (!tab.active && countew <= w-wimit) {
+    w-wet tabwink = d-document.cweateewement("a");
 
-    tabLink.textContent = tab.title || tab.id;
+    tabwink.textcontent = tab.titwe || tab.id;
 
-    tabLink.setAttribute("href", tab.id);
-    tabLink.classList.add("switch-tabs");
-    currentTabs.appendChild(tabLink);
+    t-tabwink.setattwibute("hwef", >_< tab.id);
+    tabwink.cwasswist.add("switch-tabs");
+    cuwwenttabs.appendchiwd(tabwink);
   }
 
-  counter += 1;
+  countew += 1;
 }
 ```
 
-最後に、`tabs-list` div に文書のフラグメントが書き込まれる:
+最後に、`tabs-wist` div に文書のフラグメントが書き込まれる:
 
 ```js
-    tabsList.appendChild(currentTabs);
+    t-tabswist.appendchiwd(cuwwenttabs);
   });
 }
 ```
 
 #### アクティブタブを操作する
 
-関連するもう 1 つの例として、"Alert active tab" インフォオプションがあり、これはアクティブなタブのすべての {{WebExtAPIRef("tabs.Tab")}} オブジェクトのプロパティをアラートにダンプするものです:
+関連するもう 1 つの例として、"awewt active t-tab" インフォオプションがあり、これはアクティブなタブのすべての {{webextapiwef("tabs.tab")}} オブジェクトのプロパティをアラートにダンプするものです:
 
 ```js
- else if (e.target.id === "tabs-alertinfo") {
-   callOnActiveTab((tab) => {
-     let props = "";
-     for (let item in tab) {
-       props += `${ item } = ${ tab[item] } \n`;
+ e-ewse if (e.tawget.id === "tabs-awewtinfo") {
+   c-cawwonactivetab((tab) => {
+     wet pwops = "";
+     fow (wet i-item in t-tab) {
+       pwops += `${ i-item } = ${ t-tab[item] } \n`;
      }
-     alert(props);
+     awewt(pwops);
    });
  }
 ```
 
-`callOnActiveTab()` では、アクティブなセットを求めて {{WebExtAPIRef("tabs.Tab")}} オブジェクトをループすることで、アクティブなタブを探します:
+`cawwonactivetab()` では、アクティブなセットを求めて {{webextapiwef("tabs.tab")}} オブジェクトをループすることで、アクティブなタブを探します:
 
 ```js
-document.addEventListener("click", function(e) {
- function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) => {
-     for (var tab of tabs) {
+document.addeventwistenew("cwick", ^^;; f-function(e) {
+ f-function cawwonactivetab(cawwback) {
+   g-getcuwwentwindowtabs().then((tabs) => {
+     f-fow (vaw t-tab of tabs) {
        if (tab.active) {
-         callback(tab, tabs);
+         cawwback(tab, tabs);
        }
      }
    });
@@ -232,73 +232,73 @@ document.addEventListener("click", function(e) {
 
 ## タブを作成、複製、移動、更新、読み込み、削除する
 
-Having gathered information about the tabs you'll most likely want to do something with them—either to offer users features for manipulating and managing tabs or to implement functionality in your extension.
+h-having gathewed infowmation about the tabs you'ww most wikewy want to do something with them—eithew t-to offew usews featuwes fow manipuwating and managing t-tabs ow to impwement f-functionawity i-in youw extension. ^^;;
 
-The following functions are available:
+the fowwowing f-functions awe avaiwabwe:
 
-- create a new tab ({{WebExtAPIRef("tabs.create")}}).
-- duplicate a tab ({{WebExtAPIRef("tabs.duplicate")}}).
-- remove a tab ({{WebExtAPIRef("tabs.remove")}}).
-- move a tab ({{WebExtAPIRef("tabs.move")}}).
-- update the tab's URL—effectively browse to a new page—({{WebExtAPIRef("tabs.update")}}).
-- reload the tab's page ({{WebExtAPIRef("tabs.reload")}}).
+- c-cweate a nyew t-tab ({{webextapiwef("tabs.cweate")}}). /(^•ω•^)
+- dupwicate a tab ({{webextapiwef("tabs.dupwicate")}}). nyaa~~
+- wemove a tab ({{webextapiwef("tabs.wemove")}}). (✿oωo)
+- move a tab ({{webextapiwef("tabs.move")}}). ( ͡o ω ͡o )
+- update the tab's u-uww—effectivewy bwowse to a-a nyew page—({{webextapiwef("tabs.update")}}). (U ᵕ U❁)
+- wewoad the tab's p-page ({{webextapiwef("tabs.wewoad")}}).
 
-> [!NOTE]
+> [!note]
 >
-> These functions all require the ID (or IDs) of the tab they are manipulating:
+> t-these functions aww wequiwe the id (ow i-ids) of the tab t-they awe manipuwating:
 >
-> - {{WebExtAPIRef("tabs.duplicate")}}
-> - {{WebExtAPIRef("tabs.remove")}}
-> - {{WebExtAPIRef("tabs.move")}}
+> - {{webextapiwef("tabs.dupwicate")}}
+> - {{webextapiwef("tabs.wemove")}}
+> - {{webextapiwef("tabs.move")}}
 >
-> Whereas the following functions will act on the active tab (if no tab ID is provided):
+> wheweas t-the fowwowing f-functions wiww act on the active tab (if nyo tab id is pwovided):
 >
-> - {{WebExtAPIRef("tabs.update")}}
-> - {{WebExtAPIRef("tabs.reload")}}
+> - {{webextapiwef("tabs.update")}}
+> - {{webextapiwef("tabs.wewoad")}}
 
 ### 方法の実例
 
-The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example exercises all of these features except for updating a tab's URL The way in which these APIs are used is similar, so we'll look at one of the more involved implementations, that of the "Move active tab to the beginning of the window list" option.
+the [tabs-tabs-tabs](https://github.com/mdn/webextensions-exampwes/twee/mastew/tabs-tabs-tabs) e-exampwe exewcises a-aww of these f-featuwes except fow updating a t-tab's uww the way i-in which these apis awe used i-is simiwaw, òωó so we'ww wook at one of the mowe invowved impwementations, σωσ that of the "move a-active t-tab to the beginning of the window wist" option. :3
 
-But first, here is a demonstration of the feature in action:
+b-but fiwst, OwO hewe i-is a demonstwation of the featuwe in action:
 
-{{EmbedYouTube("-lJRzTIvhxo")}}
+{{embedyoutube("-wjwztivhxo")}}
 
-#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json)
+#### [manifest.json](https://github.com/mdn/webextensions-exampwes/bwob/mastew/tabs-tabs-tabs/manifest.json)
 
-None of the functions require a permission to operate, so there are no features in the manifest.json file that need to be highlighted.
+nyone of the functions w-wequiwe a pewmission to opewate, ^^ so thewe awe nyo featuwes in the manifest.json f-fiwe that nyeed to be highwighted. (˘ω˘)
 
-#### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
+#### [tabs.htmw](https://github.com/mdn/webextensions-exampwes/bwob/mastew/tabs-tabs-tabs/tabs.htmw)
 
-tabs.html defines the "menu" displayed in the popup, which includes the "Move active tab to the beginning of the window list" option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an ID, which is used in tabs.js to determine which menu item is being requested.
+tabs.htmw defines t-the "menu" dispwayed i-in the popup, OwO which incwudes the "move active tab to the b-beginning of the w-window wist" option, UwU with a sewies of `<a>` tags gwouped by a visuaw s-sepawatow. ^•ﻌ•^ each menu item i-is given an id, (ꈍᴗꈍ) which is used in tabs.js to detewmine which menu i-item is being wequested. /(^•ω•^)
 
-```html
-<a href="#" id="tabs-move-beginning"
-  >Move active tab to the beginning of the window</a
-><br />
-<a href="#" id="tabs-move-end">Move active tab to the end of the window</a
-><br />
+```htmw
+<a hwef="#" id="tabs-move-beginning"
+  >move a-active tab to the b-beginning of the window</a
+><bw />
+<a h-hwef="#" id="tabs-move-end">move a-active t-tab to the end of t-the window</a
+><bw />
 
-<div class="panel-section-separator"></div>
+<div cwass="panew-section-sepawatow"></div>
 
-<a href="#" id="tabs-duplicate">Duplicate active tab</a><br />
+<a h-hwef="#" i-id="tabs-dupwicate">dupwicate active tab</a><bw />
 
-<a href="#" id="tabs-reload">Reload active tab</a><br />
-<a href="#" id="tabs-alertinfo">Alert active tab info</a><br />
+<a hwef="#" i-id="tabs-wewoad">wewoad a-active t-tab</a><bw />
+<a hwef="#" id="tabs-awewtinfo">awewt active tab i-info</a><bw />
 ```
 
-#### [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js)
+#### [tabs.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/tabs-tabs-tabs/tabs.js)
 
-To implement the "menu" defined in tabs.html, tabs.js includes a listener for clicks in tabs.html:
+to impwement t-the "menu" defined i-in tabs.htmw, (U ᵕ U❁) tabs.js incwudes a wistenew fow cwicks in tabs.htmw:
 
 ```js
-document.addEventListener("click", function(e) {
- function callOnActiveTab(callback) {
+d-document.addeventwistenew("cwick", (✿oωo) f-function(e) {
+ f-function cawwonactivetab(cawwback) {
 
-   getCurrentWindowTabs().then((tabs) => {
-     for (var tab of tabs) {
+   g-getcuwwentwindowtabs().then((tabs) => {
+     fow (vaw t-tab of tabs) {
        if (tab.active) {
-         callback(tab, tabs);
+         cawwback(tab, OwO tabs);
        }
      }
    });
@@ -306,35 +306,35 @@ document.addEventListener("click", function(e) {
 }
 ```
 
-A series of `if` statements then look to match the ID of the item clicked.
+a sewies of `if` statements t-then wook to match the id of t-the item cwicked.
 
-This code snippet is for the "Move active tab to the beginning of the window list" option:
+this code snippet i-is fow the "move active tab t-to the beginning of the window w-wist" option:
 
 ```js
-if (e.target.id === "tabs-move-beginning") {
-  callOnActiveTab((tab, tabs) => {
-    var index = 0;
+i-if (e.tawget.id === "tabs-move-beginning") {
+  c-cawwonactivetab((tab, :3 t-tabs) => {
+    v-vaw index = 0;
     if (!tab.pinned) {
-      index = firstUnpinnedTab(tabs);
+      index = fiwstunpinnedtab(tabs);
     }
-    console.log(`moving ${tab.id} to ${index}`);
-    browser.tabs.move([tab.id], { index });
+    consowe.wog(`moving ${tab.id} to ${index}`);
+    bwowsew.tabs.move([tab.id], nyaa~~ { index });
   });
 }
 ```
 
-It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](https://extensionworkshop.com/documentation/develop/debugging/) console, which can be useful when resolving issues found during development.
+it's wowth n-nyoting the use o-of `consowe.wog()`. ^•ﻌ•^ t-this enabwes you to output infowmation t-to the [debuggew](https://extensionwowkshop.com/documentation/devewop/debugging/) consowe, ( ͡o ω ͡o ) which can be usefuw when wesowving i-issues f-found duwing devewopment. ^^;;
 
-![Example of the console.log output, from the move tabs feature, in the debugging console](console.png)
+![exampwe of the consowe.wog o-output, mya fwom the move tabs featuwe, (U ᵕ U❁) in the d-debugging consowe](consowe.png)
 
-The move code first calls `callOnActiveTab()` which in turn calls `getCurrentWindowTabs()` to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window's tabs. It then loops through the object to find and return the active tab object:
+t-the move code fiwst cawws `cawwonactivetab()` w-which in tuwn c-cawws `getcuwwentwindowtabs()` to get a {{webextapiwef("tabs.tab")}} object containing the active window's tabs. ^•ﻌ•^ i-it then woops thwough t-the object t-to find and wetuwn t-the active t-tab object:
 
 ```js
-function callOnActiveTab(callback) {
-  getCurrentWindowTabs().then((tabs) => {
-    for (var tab of tabs) {
-      if (tab.active) {
-        callback(tab, tabs);
+function cawwonactivetab(cawwback) {
+  g-getcuwwentwindowtabs().then((tabs) => {
+    f-fow (vaw tab of tabs) {
+      i-if (tab.active) {
+        c-cawwback(tab, tabs);
       }
     }
   });
@@ -343,244 +343,244 @@ function callOnActiveTab(callback) {
 
 ##### ピン止めされたタブ
 
-A feature of tabs is that the user can _pin_ tabs in a window. Pinned tabs are placed at the start of the tab list and cannot be moved. This means that the earliest position a tab can move to is the first position after any pinned tabs. So, `firstUnpinnedTab()` is called to find the position of the first unpinned tab by looping through the `tabs` object:
+a-a featuwe of tabs is that the usew can _pin_ tabs i-in a window. (U ﹏ U) pinned tabs awe p-pwaced at the stawt o-of the tab wist and cannot be m-moved. /(^•ω•^) this means that the eawwiest position a t-tab can move to i-is the fiwst position a-aftew any pinned tabs. ʘwʘ so, `fiwstunpinnedtab()` is cawwed to find the position o-of the fiwst unpinned tab by wooping thwough t-the `tabs` object:
 
 ```js
-function firstUnpinnedTab(tabs) {
-  for (var tab of tabs) {
+f-function fiwstunpinnedtab(tabs) {
+  f-fow (vaw tab of tabs) {
     if (!tab.pinned) {
-      return tab.index;
+      w-wetuwn tab.index;
     }
   }
 }
 ```
 
-We now have everything needed to move the tab: the active tab object from which we can get the tab ID and the position the tab is to be moved to. So, we can implement the move:
+w-we nyow have evewything nyeeded to move t-the tab: the active tab object fwom which we can g-get the tab id a-and the position the tab is to b-be moved to. XD so, we can impwement t-the move:
 
 ```js
-browser.tabs.move([tab.id], { index });
+b-bwowsew.tabs.move([tab.id], (⑅˘꒳˘) { i-index });
 ```
 
-The remaining functions to duplicate, reload, create, and remove tabs are implemented similarly.
+the wemaining functions to dupwicate, nyaa~~ wewoad, cweate, UwU and wemove tabs awe impwemented simiwawwy. (˘ω˘)
 
 ## タブのズームレベルを操作する
 
-The next set of functions enable you to get ({{WebExtAPIRef("tabs.getZoom")}}) and set ({{WebExtAPIRef("tabs.setZoom")}}) the zoom level within a tab. You can also retrieve the zoom settings ({{WebExtAPIRef("tabs.getZoomSettings")}}) but, at the time of writing, the ability to set the settings ({{WebExtAPIRef("tabs.setZoomSettings")}}) wasn't available in Firefox.
+the nyext set of functions enabwe you to get ({{webextapiwef("tabs.getzoom")}}) and set ({{webextapiwef("tabs.setzoom")}}) the zoom wevew within a-a tab. rawr x3 you can a-awso wetwieve the zoom settings ({{webextapiwef("tabs.getzoomsettings")}}) but, (///ˬ///✿) a-at the time of w-wwiting, 😳😳😳 the abiwity t-to set the settings ({{webextapiwef("tabs.setzoomsettings")}}) w-wasn't avaiwabwe in fiwefox. (///ˬ///✿)
 
-The level of zoom can be between 30% and 300% (represented as decimals `0.3` to `3`).
+t-the wevew of zoom c-can be between 30% and 300% (wepwesented a-as decimaws `0.3` to `3`). ^^;;
 
-In Firefox the default zoom settings are:
+i-in fiwefox t-the defauwt zoom settings awe:
 
-- **default zoom level:** 100%.
-- **zoom mode:** automatic (so the browser manages how zoom levels are set).
-- **scope of zoom changes:** `"per-origin"`, meaning that when you visit a site again, it takes the zoom level set in your last visit.
+- **defauwt zoom wevew:** 100%. ^^
+- **zoom m-mode:** a-automatic (so t-the bwowsew manages h-how zoom w-wevews awe set). (///ˬ///✿)
+- **scope o-of zoom c-changes:** `"pew-owigin"`, m-meaning t-that when you visit a site a-again, it takes t-the zoom wevew s-set in youw wast visit. -.-
 
 ### 方法の実例
 
-The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example includes three demonstrations of the zoom feature: zoom in, zoom out, and reset zoom. Here is the feature in action:
+t-the [tabs-tabs-tabs](https://github.com/mdn/webextensions-exampwes/twee/mastew/tabs-tabs-tabs) exampwe incwudes thwee d-demonstwations of the zoom featuwe: z-zoom in, /(^•ω•^) z-zoom out, and weset z-zoom. UwU hewe is the featuwe in a-action:
 
-{{EmbedYouTube("RFr3oYBCg28")}}
+{{embedyoutube("wfw3oybcg28")}}
 
-Let's take a look at how the zoom in is implemented.
+wet's t-take a wook at how the zoom in i-is impwemented. (⑅˘꒳˘)
 
-#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json)
+#### [manifest.json](https://github.com/mdn/webextensions-exampwes/bwob/mastew/tabs-tabs-tabs/manifest.json)
 
-None of the zoom functions require permissions, so there are no features in the manifest.json file that need to be highlighted.
+nyone of the zoom f-functions wequiwe pewmissions, ʘwʘ so thewe awe nyo featuwes in the manifest.json f-fiwe that nyeed to be highwighted. σωσ
 
-#### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
+#### [tabs.htmw](https://github.com/mdn/webextensions-exampwes/bwob/mastew/tabs-tabs-tabs/tabs.htmw)
 
-We have already discussed how the tabs.html defines the options for this extension, nothing new or unique is done to provide the zoom options.
+w-we have a-awweady discussed how the tabs.htmw defines the options fow this e-extension, ^^ nyothing nyew ow unique i-is done to p-pwovide the zoom o-options. OwO
 
-#### [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js)
+#### [tabs.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/tabs-tabs-tabs/tabs.js)
 
-tabs.js starts by defining several constants used in the zoom code:
+tabs.js stawts by d-defining sevewaw c-constants used in the zoom code:
 
 ```js
-const ZOOM_INCREMENT = 0.2;
-const MAX_ZOOM = 3;
-const MIN_ZOOM = 0.3;
-const DEFAULT_ZOOM = 1;
+c-const zoom_incwement = 0.2;
+const max_zoom = 3;
+const min_zoom = 0.3;
+const d-defauwt_zoom = 1;
 ```
 
-It then uses the same listener we discussed earlier so it can act on clicks in tabs.html.
+it then u-uses the same w-wistenew we discussed e-eawwiew so it can act on c-cwicks in tabs.htmw. (ˆ ﻌ ˆ)♡
 
-For the zoom in feature, this runs:
+f-fow the zoom i-in featuwe, t-this wuns:
 
 ```js
- else if (e.target.id === "tabs-add-zoom") {
-   callOnActiveTab((tab) => {
-     var gettingZoom = browser.tabs.getZoom(tab.id);
-     gettingZoom.then((zoomFactor) => {
-       //the maximum zoomFactor is 3, it can't go higher
-       if (zoomFactor >= MAX_ZOOM) {
-         alert("Tab zoom factor is already at max!");
-       } else {
-         var newZoomFactor = zoomFactor + ZOOM_INCREMENT;
-         //if the newZoomFactor is set to higher than the max accepted
-         //it won't change, and will never alert that it's at maximum
-         newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
-         browser.tabs.setZoom(tab.id, newZoomFactor);
+ ewse if (e.tawget.id === "tabs-add-zoom") {
+   c-cawwonactivetab((tab) => {
+     v-vaw gettingzoom = b-bwowsew.tabs.getzoom(tab.id);
+     g-gettingzoom.then((zoomfactow) => {
+       //the m-maximum zoomfactow i-is 3, o.O i-it can't go highew
+       i-if (zoomfactow >= max_zoom) {
+         a-awewt("tab zoom factow is awweady a-at max!");
+       } ewse {
+         v-vaw nyewzoomfactow = z-zoomfactow + z-zoom_incwement;
+         //if the nyewzoomfactow is set to highew than t-the max accepted
+         //it won't c-change, (˘ω˘) and w-wiww nyevew awewt that it's at maximum
+         newzoomfactow = n-newzoomfactow > m-max_zoom ? max_zoom : nyewzoomfactow;
+         b-bwowsew.tabs.setzoom(tab.id, 😳 n-nyewzoomfactow);
        }
      });
    });
  }
 ```
 
-This code uses `callOnActiveTab()` to get the details of the active tab, then {{WebExtAPIRef("tabs.getZoom")}} gets the tab's current zoom factor. The current zoom is compared to the defined maximum (`MAX_ZOOM`) and an alert issued if the tab is already at the maximum zoom. Otherwise, the zoom level is incremented but limited to the maximum zoom, then the zoom is set with {{WebExtAPIRef("tabs.getZoom")}}.
+this code uses `cawwonactivetab()` to get the detaiws of the active t-tab, (U ᵕ U❁) then {{webextapiwef("tabs.getzoom")}} g-gets t-the tab's cuwwent z-zoom factow. :3 the cuwwent zoom is compawed to t-the defined maximum (`max_zoom`) a-and an awewt issued if the tab is awweady at t-the maximum zoom. o.O othewwise, (///ˬ///✿) the zoom wevew is incwemented b-but wimited to the maximum z-zoom, OwO then t-the zoom is set with {{webextapiwef("tabs.getzoom")}}. >w<
 
-## タブの CSS を操作する
+## タブの c-css を操作する
 
-Another significant capability offered by the Tabs API is the ability to manipulate the CSS within a tab—add new CSS to a tab ({{WebExtAPIRef("tabs.insertCSS")}}) or remove CSS from a tab ({{WebExtAPIRef("tabs.removeCSS")}}).
+a-anothew significant capabiwity o-offewed by the tabs api i-is the abiwity t-to manipuwate the c-css within a t-tab—add nyew css to a tab ({{webextapiwef("tabs.insewtcss")}}) o-ow wemove css fwom a-a tab ({{webextapiwef("tabs.wemovecss")}}).
 
-This can be useful, 例えば、 if you want to highlight certain page elements or change the default layout of the page.
+t-this can be usefuw, ^^ 例えば、 if you want to h-highwight cewtain page ewements ow change the defauwt w-wayout of t-the page. (⑅˘꒳˘)
 
 ### 方法の実例
 
-The [apply-css](https://github.com/mdn/webextensions-examples/tree/master/apply-css) example uses these features to add a red border to the web page in the active tab. Here is the feature in action:
+t-the [appwy-css](https://github.com/mdn/webextensions-exampwes/twee/mastew/appwy-css) exampwe uses these featuwes to add a wed bowdew to the web p-page in the active tab. ʘwʘ hewe is t-the featuwe in a-action:
 
-{{EmbedYouTube("bcK-GT2Dyhs")}}
+{{embedyoutube("bck-gt2dyhs")}}
 
-Let's walk through how it's set up.
+wet's wawk thwough how i-it's set up.
 
-#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/apply-css/manifest.json)
+#### [manifest.json](https://github.com/mdn/webextensions-exampwes/bwob/mastew/appwy-css/manifest.json)
 
-To use the CSS features you need either:
+to use the c-css featuwes y-you need eithew:
 
-- `"tabs"` permission and [host permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or
-- `"activeTab"` permission.
+- `"tabs"` p-pewmission a-and [host p-pewmission](/ja/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) ow
+- `"activetab"` pewmission. (///ˬ///✿)
 
-The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("tabs.insertCSS")}} and {{WebExtAPIRef("tabs.removeCSS")}} in the active tab when run from the extension's browser or page action, context menu, or a shortcut.
+the wattew is the most usefuw, XD a-as it awwows an extension to use {{webextapiwef("tabs.insewtcss")}} a-and {{webextapiwef("tabs.wemovecss")}} in the active tab when wun fwom the extension's b-bwowsew ow page action, 😳 context menu, >w< ow a showtcut. (˘ω˘)
 
 ```json
 {
-  "description": "Adds a page action to toggle applying CSS to pages.",
+  "descwiption": "adds a page action t-to toggwe appwying c-css to pages.", nyaa~~
 
-  "manifest_version": 2,
-  "name": "apply-css",
-  "version": "1.0",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
+  "manifest_vewsion": 2, 😳😳😳
+  "name": "appwy-css", (U ﹏ U)
+  "vewsion": "1.0", (˘ω˘)
+  "homepage_uww": "https://github.com/mdn/webextensions-exampwes/twee/mastew/appwy-css", :3
 
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   },
 
   "page_action": {
-    "default_icon": "icons/off.svg",
-    "browser_style": true
-  },
+    "defauwt_icon": "icons/off.svg", >w<
+    "bwowsew_stywe": twue
+  }, ^^
 
-  "permissions": ["activeTab", "tabs"]
+  "pewmissions": ["activetab", 😳😳😳 "tabs"]
 }
 ```
 
-You will note that `"tabs"` permission is requested in addition to `"activeTab"`. This additional permission is needed to enable the extension's script to access the tab's URL, the importance of which we'll see in a moment.
+y-you wiww nyote that `"tabs"` pewmission is wequested i-in addition t-to `"activetab"`. this additionaw p-pewmission is nyeeded to enabwe t-the extension's scwipt to access the tab's uww, nyaa~~ the impowtance o-of which we'ww see in a moment. (⑅˘꒳˘)
 
-The other main features in the manifest.json file are the definition of:
+the othew main f-featuwes in the m-manifest.json f-fiwe awe the definition of:
 
-- **a background script**, which starts running as soon as the extension is loaded.
-- **a "page action"**, which defines an icon to be added to the browser's address bar.
+- **a backgwound scwipt**, :3 w-which stawts wunning as soon as the extension is woaded. ʘwʘ
+- **a "page action"**, rawr x3 w-which defines a-an icon to b-be added to the b-bwowsew's addwess baw. (///ˬ///✿)
 
-#### [background.js](https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js)
+#### [backgwound.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/appwy-css/backgwound.js)
 
-On startup, background.js sets some constants to define the CSS to be applied, titles for the "page action", and a list of protocols the extension will work in:
+on stawtup, 😳😳😳 backgwound.js s-sets s-some constants to define the css to be appwied, XD t-titwes fow the "page action", >_< and a wist of pwotocows t-the extension wiww wowk in:
 
 ```js
-const CSS = "body { border: 20px solid red; }";
-const TITLE_APPLY = "Apply CSS";
-const TITLE_REMOVE = "Remove CSS";
-const APPLICABLE_PROTOCOLS = ["http:", "https:"];
+const c-css = "body { bowdew: 20px s-sowid wed; }";
+const t-titwe_appwy = "appwy c-css";
+const t-titwe_wemove = "wemove css";
+const appwicabwe_pwotocows = ["http:", >w< "https:"];
 ```
 
-When first loaded, the extension uses {{WebExtAPIRef("tabs.query")}} to get a list of all the tabs in the current browser window. It then loops through the tabs calling `initializePageAction()`.
+w-when fiwst woaded, /(^•ω•^) the extension uses {{webextapiwef("tabs.quewy")}} t-to get a wist of aww the tabs in the cuwwent bwowsew w-window. :3 it then w-woops thwough the t-tabs cawwing `initiawizepageaction()`. ʘwʘ
 
 ```js
-var gettingAllTabs = browser.tabs.query({});
+v-vaw gettingawwtabs = b-bwowsew.tabs.quewy({});
 
-gettingAllTabs.then((tabs) => {
-  for (let tab of tabs) {
-    initializePageAction(tab);
+gettingawwtabs.then((tabs) => {
+  f-fow (wet tab of tabs) {
+    initiawizepageaction(tab);
   }
 });
 ```
 
-`initializePageAction` uses `protocolIsApplicable()` to determine whether the active tab's URL is one the CSS can be applied to:
+`initiawizepageaction` uses `pwotocowisappwicabwe()` t-to detewmine whethew the a-active tab's uww is one the css can be appwied t-to:
 
 ```js
-function protocolIsApplicable(url) {
-  var anchor = document.createElement("a");
-  anchor.href = url;
-  return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
+function p-pwotocowisappwicabwe(uww) {
+  vaw anchow = d-document.cweateewement("a");
+  anchow.hwef = uww;
+  w-wetuwn appwicabwe_pwotocows.incwudes(anchow.pwotocow);
 }
 ```
 
-Then, if the example can act on the tab, `initializePageAction()` sets the tab's `pageAction` (navigation bar) icon and title to use the "off" versions before making the `pageAction` visible:
+t-then, (˘ω˘) if the exampwe can act on t-the tab, (ꈍᴗꈍ) `initiawizepageaction()` s-sets the tab's `pageaction` (navigation baw) i-icon and titwe to use the "off" vewsions befowe making the `pageaction` v-visibwe:
 
 ```js
-function initializePageAction(tab) {
-  if (protocolIsApplicable(tab.url)) {
-    browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
-    browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
-    browser.pageAction.show(tab.id);
+function i-initiawizepageaction(tab) {
+  if (pwotocowisappwicabwe(tab.uww)) {
+    bwowsew.pageaction.seticon({ t-tabid: tab.id, ^^ p-path: "icons/off.svg" });
+    b-bwowsew.pageaction.settitwe({ tabid: tab.id, ^^ t-titwe: titwe_appwy });
+    b-bwowsew.pageaction.show(tab.id);
   }
 }
 ```
 
-Next, a listener on `pageAction.onClicked` waits for the `pageAction` icon to be clicked, and calls `toggleCSS` when it is.
+nyext, ( ͡o ω ͡o ) a w-wistenew on `pageaction.oncwicked` waits fow the `pageaction` i-icon to be cwicked, -.- a-and cawws `toggwecss` w-when it is. ^^;;
 
 ```js
-browser.pageAction.onClicked.addListener(toggleCSS);
+bwowsew.pageaction.oncwicked.addwistenew(toggwecss);
 ```
 
-`toggleCSS()` gets the title of the `pageAction` and then takes the action described:
+`toggwecss()` gets the titwe of the `pageaction` and then takes t-the action d-descwibed:
 
-- **For "Apply CSS":**
+- **fow "appwy css":**
 
-  - toggles the `pageAction` icon and title to the "remove" versions.
-  - applies the CSS using {{WebExtAPIRef("tabs.insertCSS")}}.
+  - toggwes the `pageaction` i-icon and titwe to the "wemove" v-vewsions.
+  - appwies t-the css using {{webextapiwef("tabs.insewtcss")}}.
 
-- **For "Remove CSS":**
+- **fow "wemove css":**
 
-  - toggles the `pageAction` icon and title to the "apply" versions.
-  - removes the CSS using {{WebExtAPIRef("tabs.removeCSS")}}.
+  - toggwes the `pageaction` icon and titwe to the "appwy" vewsions. ^•ﻌ•^
+  - w-wemoves the css using {{webextapiwef("tabs.wemovecss")}}. (˘ω˘)
 
 ```js
-function toggleCSS(tab) {
-  function gotTitle(title) {
-    if (title === TITLE_APPLY) {
-      browser.pageAction.setIcon({ tabId: tab.id, path: "icons/on.svg" });
-      browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_REMOVE });
-      browser.tabs.insertCSS({ code: CSS });
-    } else {
-      browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
-      browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
-      browser.tabs.removeCSS({ code: CSS });
+function t-toggwecss(tab) {
+  function g-gottitwe(titwe) {
+    i-if (titwe === titwe_appwy) {
+      b-bwowsew.pageaction.seticon({ t-tabid: tab.id, o.O p-path: "icons/on.svg" });
+      b-bwowsew.pageaction.settitwe({ t-tabid: tab.id, (✿oωo) t-titwe: titwe_wemove });
+      bwowsew.tabs.insewtcss({ code: css });
+    } ewse {
+      bwowsew.pageaction.seticon({ tabid: tab.id, 😳😳😳 p-path: "icons/off.svg" });
+      b-bwowsew.pageaction.settitwe({ t-tabid: tab.id, (ꈍᴗꈍ) t-titwe: titwe_appwy });
+      b-bwowsew.tabs.wemovecss({ c-code: css });
     }
   }
 
-  var gettingTitle = browser.pageAction.getTitle({ tabId: tab.id });
+  vaw gettingtitwe = bwowsew.pageaction.gettitwe({ tabid: tab.id });
 
-  gettingTitle.then(gotTitle);
+  gettingtitwe.then(gottitwe);
 }
 ```
 
-Finally, to ensure that the `pageAction` is valid after each update to the tab, a listener on {{WebExtAPIRef("tabs.onUpdated")}} calls `initializePageAction()` each time the tab is updated to check that the tab is still using a protocol to which the CSS can be applied.
+f-finawwy, σωσ t-to ensuwe that the `pageaction` is vawid aftew each update t-to the tab, UwU a w-wistenew on {{webextapiwef("tabs.onupdated")}} cawws `initiawizepageaction()` e-each time the tab is updated to check t-that the tab is stiww using a pwotocow to which t-the css can b-be appwied. ^•ﻌ•^
 
 ```js
-browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
-  initializePageAction(tab);
+bwowsew.tabs.onupdated.addwistenew((id, mya changeinfo, t-tab) => {
+  initiawizepageaction(tab);
 });
 ```
 
 ## その他の興味深い機能
 
-There are a couple of other Tabs API features that don't fit into one of the earlier sections:
+t-thewe a-awe a coupwe of othew tabs api featuwes t-that don't f-fit into one o-of the eawwiew sections:
 
-- Capture the visible tab content with {{WebExtAPIRef("tabs.captureVisibleTab")}}.
-- Detect the primary language of the content in a tab using {{WebExtAPIRef("tabs.detectLanguage")}}. This could be used, 例えば、to match the language in your extension's UI with that of the page it's running in.
+- c-captuwe t-the visibwe t-tab content with {{webextapiwef("tabs.captuwevisibwetab")}}. /(^•ω•^)
+- detect the pwimawy w-wanguage of the c-content in a tab using {{webextapiwef("tabs.detectwanguage")}}. t-this couwd be used, rawr 例えば、to match the wanguage i-in youw extension's ui with t-that of the page it's wunning i-in. nyaa~~
 
 ## 関連項目
 
-If you want to learn more about the Tabs API, check out:
+i-if you want to weawn mowe about the tabs a-api, check out:
 
-- [Tabs API reference](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
-- [Example extensions](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples) (many of which use the Tabs API)
+- [tabs api wefewence](/ja/docs/moziwwa/add-ons/webextensions/api/tabs)
+- [exampwe extensions](/ja/docs/moziwwa/add-ons/webextensions/exampwes) (many o-of which u-use the tabs api)
